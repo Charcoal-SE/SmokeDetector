@@ -26985,3 +26985,4 @@
 1612493908	cigien	the[\W_]*+hemp[\W_]*+nurse(?!\.com(?<=thehempnurse\.com))
 1612500594	cigien	technovert\.com
 1612502409	Ryan M	\d+\.onl(?<!100001\.onl)
+1612502536	Ryan M	thebusinessfuse\.com
