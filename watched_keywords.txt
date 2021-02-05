@@ -26976,3 +26976,4 @@
 1612455700	cigien	elabhouse(?!\.com)
 1612458972	Mast	ispirer[\W_]*+mnmtk
 1612462335	cigien	sewmisfits\.com
+1612473572	Ollie	sattamaster\.in
