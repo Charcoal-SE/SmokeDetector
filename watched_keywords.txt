@@ -27010,3 +27010,4 @@
 1612539261	Yatin	orioncarremoval\.com\.au
 1612539571	Spevacus	kranzjean(?#wanelo.co)
 1612540085	Spevacus	proffttega90(?:@gmail\.com)?
+1612540546	Xnero	direct\s*pest(?!\.co\.uk)
