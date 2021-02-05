@@ -26984,3 +26984,4 @@
 1612493536	cigien	ardas-it\.com
 1612493597	cigien	mylocationip\.com
 1612493691	cigien	thehempnurse\.com
+1612493908	cigien	the[\W_]*+hemp[\W_]*+nurse(?!\.com(?<=thehempnurse\.com))
