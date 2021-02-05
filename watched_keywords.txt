@@ -27002,3 +27002,4 @@
 1612520976	cigien	phil[\W_]*+mickelson[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1612522737	tripleee	adbangs\.com
 1612523019	Xnero	adbangs(?!\.com)
+1612525391	Xnero	buycoin\.cash
