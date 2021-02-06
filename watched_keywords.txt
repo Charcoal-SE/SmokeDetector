@@ -26427,7 +26427,6 @@
 1611031658	Makyen	tunepat(?!\.com)
 1611033571	cigien	maujitrip\.com
 1611033591	cigien	maujitrip(?!\.com)
-1611035864	tripleee	apnews\.com/press-release/kisspr
 1611038961	cigien	humboldts[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611040444	cigien	instantreviewsguide\.com
 1611041216	tripleee	customerservicehelp-number\.net
