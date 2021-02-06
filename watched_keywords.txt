@@ -27061,3 +27061,4 @@
 1612628944	Cody Gray	buy[\W_]*+yelp[\W_]*+reviews
 1612638170	cigien	coindeskcryptocurrencies(?:@(?:gmail|outlook)\.com)?
 1612638250	cigien	hpprinterhelps\.com
+1612638990	cigien	(?-i:z5JK9H)(?#kutt.it)
