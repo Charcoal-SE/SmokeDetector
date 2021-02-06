@@ -27065,3 +27065,4 @@
 1612639175	cigien	(?-i:39TY5s5)(?#bit.ly)
 1612644227	cigien	(?-i:txch7UBUpF7arUzR7)(?#forms.gle)
 1612654802	Makyen	elsafamaids\.net
+1612654820	Makyen	elsafa[\W_]*+maids(?!\.net(?<=elsafamaids\.net))
