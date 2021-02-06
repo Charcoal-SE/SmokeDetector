@@ -27031,7 +27031,6 @@
 1612593078	Makyen	geehii[\W_]*+brain(?:[\W_]*+(?:advanced|brain|formula|reviews|\d++|[\da-f]{5,}+)s?)*
 1612593111	Makyen	(?:dienlanh[\W_]*+)?nambachkhoa(?!\.wordpress\.com(?<=dienlanhnambachkhoa\.wordpress\.com))
 1612593127	Makyen	dienlanhnambachkhoa\.wordpress\.com
-1612593240	Cody Gray	movincle\.com/24748437
 1612593284	Cody Gray	(?-i:I7N_qHBPPfA)(?# YouTube)
 1612593562	cigien	tensile[\W_]*+structure[\W_]*+india(?!\.in(?<=tensilestructureindia\.in))
 1612593884	cigien	(?-i:uberit)(?#github)
