@@ -27036,3 +27036,4 @@
 1612593884	cigien	(?-i:uberit)(?#github)
 1612594185	cigien	carolina[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|price|\d++|[\da-f]{5,}+)s?)*
 1612595326	cigien	my[\W_]*+fitness[\W_]*+web(?!\.com(?<=myfitnessweb\.com))
+1612595530	cigien	movincle\.com
