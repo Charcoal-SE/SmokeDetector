@@ -27030,3 +27030,4 @@
 1612593005	Makyen	(?:dienlanh[\W_]*+)?nambachkhoa
 1612593027	Makyen	(?-i:UCfHIad-GGU56iAZpRN-RWSA)(?#YouTube channel)
 1612593049	Makyen	(?-i:oliviaemmons)(?#medium.com)
+1612593078	Makyen	geehii[\W_]*+brain(?:[\W_]*+(?:advanced|brain|formula|reviews|\d++|[\da-f]{5,}+)s?)*
