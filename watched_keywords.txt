@@ -27031,3 +27031,4 @@
 1612593049	Makyen	(?-i:oliviaemmons)(?#medium.com)
 1612593078	Makyen	geehii[\W_]*+brain(?:[\W_]*+(?:advanced|brain|formula|reviews|\d++|[\da-f]{5,}+)s?)*
 1612593111	Makyen	(?:dienlanh[\W_]*+)?nambachkhoa(?!\.wordpress\.com(?<=dienlanhnambachkhoa\.wordpress\.com))
+1612593127	Makyen	dienlanhnambachkhoa\.wordpress\.com
