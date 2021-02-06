@@ -418,7 +418,6 @@ Wes.ey\W*Atwood
 (?-i:^Anna21dj$)
 (?-i:^New J$)
 (?-i:^Ella Mark$)
-(?:y(?:ou?|[eé3_ëêẽ]).*|ban.*|c[4a]n\W*'?\W*n[0oøuüôöõ]?t.*)d[uü]des?$
 So face the music
 (?-i:^Franklin Josh$)
 (?-i:^gian tapia fuertes$)
