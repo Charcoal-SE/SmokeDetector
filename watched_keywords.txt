@@ -27038,3 +27038,4 @@
 1612595326	cigien	my[\W_]*+fitness[\W_]*+web(?!\.com(?<=myfitnessweb\.com))
 1612595530	cigien	movincle\.com
 1612596821	cigien	ts990\.com
+1612596910	cigien	(?-i:r99wh76gwxE)(?#youtu.be)
