@@ -27059,3 +27059,4 @@
 1612625075	Cody Gray	littleby-little\.com
 1612628913	Cody Gray	mangocityit\.net
 1612628944	Cody Gray	buy[\W_]*+yelp[\W_]*+reviews
+1612638170	cigien	coindeskcryptocurrencies(?:@(?:gmail|outlook)\.com)?
