@@ -27068,3 +27068,4 @@
 1612654820	Makyen	elsafa[\W_]*+maids(?!\.net(?<=elsafamaids\.net))
 1612658208	cigien	(?-i:AcA4A\.jpg)(?#imgur)
 1612675840	Makyen	jumprecruiter\.pk
+1612687080	cigien	infinidice
