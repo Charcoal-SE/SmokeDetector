@@ -31,12 +31,12 @@ if git_url[0:19] == "https://github.com/":
 
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%H%n%an%n%s', 'HEAD'],
+        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%h%n%H%n%an%n%s', 'HEAD'],
                                stderr=sp.STDOUT).decode('utf-8')
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
-    _, full_id, author, message = data.strip().split("\n")
-    return CommitInfo(id=full_id[:7], id_full=full_id, author=author, message=message)
+    _, abbrev_id, full_id, author, message = data.strip().split("\n")
+    return CommitInfo(id=abbrev_id, id_full=full_id, author=author, message=message)
 
 
 def git_ref():
