@@ -27073,3 +27073,4 @@
 1612728064	cigien	playtika\.com
 1612729631	cigien	indijobs4u\.in
 1612734312	cigien	lord[\W_]*+bubuza(?:[\W_]*+miracle[\W_]*+work)?(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?com)?
+1612734430	cigien	super-bowllive\.com
