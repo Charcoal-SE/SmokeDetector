@@ -23343,7 +23343,6 @@
 1600249638	Eliah Kagan	biofield\.health
 1600255428	Mast	the[\W_]*+top[\W_]*+selling
 1600255540	Mast	roku[\W_]*+streaming[\W_]*+player
-1600255559	Eliah Kagan	iasiso-middleeast\.com
 1600255870	Mast	unitedstateusadccovid19(?:@gmail\.com)?
 1600259617	Mast	lucep\.com
 1600261674	Mast	websenorllc\.com
