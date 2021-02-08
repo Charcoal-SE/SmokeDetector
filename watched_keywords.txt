@@ -17168,7 +17168,6 @@
 1581504566	Shree	proglobalbusinesssolutions\.com
 1581504642	Shree	mapsystemsindia\.com
 1581505851	tripleee	viril[\W_]*+xl
-1581507735	Byte Commander	itforsoftware\.com
 1581508389	tripleee	cforcbd\.com
 1581509745	tripleee	kumkumtv\.com
 1581521116	Das_Geek	god-does-not-play-dice\.net
