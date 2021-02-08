@@ -27085,3 +27085,4 @@
 1612792168	tripleee	buzztowns\.com
 1612780253	Yatin	helpline-australia\.com
 1612783495	Xnero	amtexenterprises\.net
+1612783603	Xnero	Amtex[\W_]*Enterprises(?!\.net)
