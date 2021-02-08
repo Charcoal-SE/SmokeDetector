@@ -27081,3 +27081,4 @@
 1612776691	tripleee	(?-i:2O8PcTb)(?# bit.ly)
 1612779389	cigien	reisedokumentbundes\.com
 1612785295	tripleee	offlineinstallersofts\.com
+1612791545	Xnero	Cloud[\W_]*Mounter(?!\.net)
