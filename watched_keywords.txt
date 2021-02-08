@@ -27087,3 +27087,4 @@
 1612783495	Xnero	amtexenterprises\.net
 1612783603	Xnero	Amtex[\W_]*Enterprises(?!\.net)
 1612792278	Xnero	buzztowns(?!\.com)
+1612780520	Xnero	helpline[\W_]*australia(?!\.com)
