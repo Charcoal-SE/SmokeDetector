@@ -2443,3 +2443,4 @@ boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 green[\W_]*+estates[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|review|\d++|[\da-f]{5,}+)s?)*
 cheyenne[\W_]*+valley(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
 d(?:octo)?r[\W_]*+tunde
+gayle[\W_]*+king[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
