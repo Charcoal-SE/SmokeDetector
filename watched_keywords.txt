@@ -27078,3 +27078,4 @@
 1612766098	cigien	scooterstudy\.com
 1612766524	Makyen	reviewsserviceusa1\.blogspot
 1612766734	Makyen	tommy[\W_]*+chong[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|pill|buy|order|price|\d++|[\da-f]{5,}+)s?)*
+1612767136	cigien	ti\.to
