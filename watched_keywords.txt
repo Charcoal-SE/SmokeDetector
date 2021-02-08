@@ -25579,13 +25579,13 @@
 1608271211	Makyen	(?-i:styphdxfirolreviews)(?#sites.google.com)
 1608272854	Cody Gray	soft365setup\.com
 1608275639	Makyen	homebuildmortgage\.com
-1608276882	Makyen	healing[\W_]*+green[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276908	Makyen	ceremony[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276918	Makyen	mark[\W_]*+levin[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276929	Makyen	canadian[\W_]*+extracts[\W_]*+hemp(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276945	Makyen	anderson[\W_]*+cooper[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276957	Makyen	organic[\W_]*+recover[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
-1608276970	Makyen	tommy[\W_]*+chong[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
+1608276882	Makyen	healing[\W_]*+green[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276908	Makyen	ceremony[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276918	Makyen	mark[\W_]*+levin[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276929	Makyen	canadian[\W_]*+extracts[\W_]*+hemp(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276945	Makyen	anderson[\W_]*+cooper[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276957	Makyen	organic[\W_]*+recover[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
+1608276970	Makyen	tommy[\W_]*+chong(?:[\W_]*+s)?[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|pill|price|\d++|[\da-f]{5,}+)s?)*
 1608271956	cigien	hnewyear\.com
 1608274631	cigien	ez2kmt\.com
 1608279490	cigien	(?-i:GFYGtlSY1yY)(?#YouTube)
@@ -27077,5 +27077,4 @@
 1612763343	cigien	thecloudxperts\.net
 1612766098	cigien	scooterstudy\.com
 1612766524	Makyen	reviewsserviceusa1\.blogspot
-1612766734	Makyen	tommy[\W_]*+chong[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|pill|buy|order|price|\d++|[\da-f]{5,}+)s?)*
 1612767136	cigien	ti\.to
