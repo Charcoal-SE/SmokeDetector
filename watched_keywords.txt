@@ -18809,7 +18809,6 @@
 1585596103	Makyen	nutritionidea\.com
 1585607455	Makyen	born2slay\.com
 1585610469	Makyen	todayssarkariresult\.com
-1585612606	Makyen	d(?:octo)?r[\W_]*+tunde
 1585616382	Makyen	trendinwealth\.com
 1585621223	Makyen	weinformed\.com
 1585626170	Makyen	d(?:octo)?r[\W_]*+oyinbo
