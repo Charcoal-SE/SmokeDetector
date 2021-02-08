@@ -27089,3 +27089,4 @@
 1612792278	Xnero	buzztowns(?!\.com)
 1612780520	Xnero	helpline[\W_]*australia(?!\.com)
 1612793308	Spevacus	power[\W_]*faucet(?:@gmail\.com)?
+1612802180	double-beep	critik\.in
