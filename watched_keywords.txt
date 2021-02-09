@@ -27152,3 +27152,4 @@
 1612891741	Makyen	survivalinnature\.com
 1612881392	Xnero	coffeeadder\.com
 1612880401	Xnero	Translation[\W_]*Services[\W_]*Phoenix
+1612881797	Xnero	digitalchandu\.in
