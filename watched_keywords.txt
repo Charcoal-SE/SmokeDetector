@@ -27095,3 +27095,4 @@
 1612811263	Spevacus	(?-i:zTu_voh9_NA)(?#youtu.be channel)
 1612813728	cigien	geomotiv\.com
 1612828391	cigien	embeddedcomputing\.com
+1612832386	cigien	efeinfo\.com
