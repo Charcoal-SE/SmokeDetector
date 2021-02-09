@@ -27122,3 +27122,4 @@
 1612856234	cigien	coastal[\W_]*+cosmetic[\W_]*+clinic(?!\.com\.au(?<=coastalcosmeticclinic\.com\.au))
 1612856580	tripleee	(?-i:o2krdf)(?# rb.gy redirector)
 1612856632	tripleee	(?-i:dQw4w9WgXcQ)(?# youtube)
+1612857732	Xnero	(?-i:36UasCq)(?#bit.ly)
