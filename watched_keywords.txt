@@ -27162,3 +27162,4 @@
 1612912324	cigien	theringtonesite\.com
 1612912347	cigien	the[\W_]*+ringtone[\W_]*+site(?!\.com(?<=theringtonesite\.com))
 1612913793	cigien	uvraylights\.com
+1612914026	cigien	bestfutonmattresstoday\.com
