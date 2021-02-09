@@ -27129,3 +27129,4 @@
 1612863754	cigien	(?-i:qnJC5\.jpg)(?#imgur)
 1612864385	Ryan M	fratres\.net
 1612864367	Xnero	inspanner\.com
+1612864445	Xnero	inspanner(?!\.com)
