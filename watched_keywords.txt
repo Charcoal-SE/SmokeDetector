@@ -27135,3 +27135,4 @@
 1612865968	Xnero	Calgary[\W_]*Escorts
 1612866290	Cody Gray	ben[\W_]*+smith[\W_]*+is[\W_]*+gay
 1612866908	tripleee	sriramakrishnahospital\.com
+1612867007	Xnero	(?:Sir [\W_]*)?Ramakrishna(?:[\W_]*Hospital)?(?!\.com)
