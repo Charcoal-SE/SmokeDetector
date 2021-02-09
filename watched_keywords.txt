@@ -27136,3 +27136,4 @@
 1612866290	Cody Gray	ben[\W_]*+smith[\W_]*+is[\W_]*+gay
 1612866908	tripleee	sriramakrishnahospital\.com
 1612868226	Ryan M	cloudbees[\W_]*+certified
+1612868533	Xnero	(?-i:Jenkins Engineer CCJE)
