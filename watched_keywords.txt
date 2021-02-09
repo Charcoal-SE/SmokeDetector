@@ -27111,3 +27111,4 @@
 1612849307	cigien	whatsappinstalling\.com
 1612849428	cigien	rob[\W_]*+gronkowski[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1612850307	Makyen	fmwhatsapp-apk-download
+1612850412	Makyen	prime[\W_]*+ext(?:[\W_]*+(?:review|official|pill|order|price|\d++|[\da-f]{5,}+)s?)*
