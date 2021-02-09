@@ -27145,3 +27145,4 @@
 1612874328	Ryan M	cracks\w{3}(?<!(?:mak|mox|waz|fab|war|all|kit|cam|ray|oul))\.com(?# campaign repeatedly adding new domains in this format, minus the ones we know already)
 1612877361	Ryan M	paseet\.com
 1612879357	Xnero	rahasyacommunity\.blogspot\.com
+1612881797	Xnero	digitalchandu\.in
