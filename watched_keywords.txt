@@ -27101,3 +27101,4 @@
 1612835205	Makyen	6976477152919564673(?#blogger.com)
 1612835228	Makyen	donhuhon\.tumblr\.com
 1612835246	Makyen	donhuhon(?!\.tumblr\.com)
+1612835264	Makyen	o[\W_]*+nhu[\W_]*+hon
