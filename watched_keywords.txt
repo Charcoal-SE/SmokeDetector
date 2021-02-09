@@ -27115,3 +27115,4 @@
 1612850475	Makyen	regional[\W_]*+college[\W_]*+of[\W_]*+management
 1612850951	Cody Gray	CASH[\W_]*+FOR[\W_]*+CARS[\W_]*+SYDNEY
 1612852309	cigien	dumpscompany\.com
+1612852377	cigien	dumps[\W_]*+company(?!\.com(?<=dumpscompany\.com))
