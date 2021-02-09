@@ -27159,3 +27159,4 @@
 1612908979	cigien	onlinepill\.shop
 1612911141	cigien	kankievuhic018(?<=medium\.com/@kankievuhic018)
 1612877537	Xnero	paseet(?!\.com)
+1612912324	cigien	theringtonesite\.com
