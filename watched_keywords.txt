@@ -27132,3 +27132,4 @@
 1612864445	Xnero	inspanner(?!\.com)
 1612864579	Xnero	Perth[\W_]*Escorts
 1612864514	Xnero	marsillpost(?!\.com)
+1612865968	Xnero	Calgary[\W_]*Escorts
