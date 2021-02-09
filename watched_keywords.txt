@@ -27157,3 +27157,4 @@
 1612904946	Ollie	blessedilluminatirecriutmemt\.it(?:@gmail\.com)?
 1612908320	cigien	webdesignvr\.com
 1612908979	cigien	onlinepill\.shop
+1612911141	cigien	kankievuhic018(?<=medium\.com/@kankievuhic018)
