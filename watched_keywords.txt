@@ -27153,3 +27153,4 @@
 1612880401	Xnero	Translation[\W_]*Services[\W_]*Phoenix
 1612881797	Xnero	digitalchandu\.in
 1612892468	Ollie	icipourgagner\.fr
+1612896508	cigien	qrmeister\.com
