@@ -27108,3 +27108,4 @@
 1612843313	cigien	ax2009live\.com
 1612847206	cigien	allianze[\W_]*+bpo[\W_]*+services(?!\.com(?<=allianzebposervices\.com))
 1612848615	cigien	debtadvices\.co\.uk
+1612849307	cigien	whatsappinstalling\.com
