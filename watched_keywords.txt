@@ -27106,3 +27106,4 @@
 1612841154	Makyen	33fb8ccek-858w4c2ysz-ob9gh(?#hop.clickbank.net)
 1612843147	cigien	staffingdebt\.com
 1612843313	cigien	ax2009live\.com
+1612847206	cigien	allianze[\W_]*+bpo[\W_]*+services(?!\.com(?<=allianzebposervices\.com))
