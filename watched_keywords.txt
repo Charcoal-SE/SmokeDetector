@@ -27100,3 +27100,4 @@
 1612835189	Makyen	donhuhonvniovn(?#facebook.com)
 1612835205	Makyen	6976477152919564673(?#blogger.com)
 1612835228	Makyen	donhuhon\.tumblr\.com
+1612835246	Makyen	donhuhon(?!\.tumblr\.com)
