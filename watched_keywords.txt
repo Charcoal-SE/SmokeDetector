@@ -27117,3 +27117,4 @@
 1612852309	cigien	dumpscompany\.com
 1612852377	cigien	dumps[\W_]*+company(?!\.com(?<=dumpscompany\.com))
 1612852932	Cody Gray	mpal\.app
+1612855134	cigien	pixigraphics\.com
