@@ -424,7 +424,6 @@ So face the music
 (?-i:^felishia green$)
 (?-i:^jys2020$)
 (?-i:^longpanda$)
-(?-i:^origamistudios$)
 (?-i:^upsaves energy$)
 (?-i:^RCMB Banglore$)
 (?-i:^Lovejit Chauhan$)
