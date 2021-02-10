@@ -27198,3 +27198,4 @@
 1612961360	cigien	goldessays\.com
 1612962607	double-beep	blog\.motasimfoad\.com
 1612963725	cigien	la[\W_]*+moda[\W_]*+kuwait(?!\.cf(?<=lamodakuwait\.cf))
+1612964005	cigien	clipartkind\.com
