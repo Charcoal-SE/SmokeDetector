@@ -27182,3 +27182,4 @@
 1612952524	tripleee	caliweed
 1612952805	tripleee	(?:boliv|colomb|peruv)ian[\W_]*+coke
 1612953101	tripleee	geekyflow\.com
+1612954209	tripleee	(?-i:72J6JEh4tPI)(?# youtube)
