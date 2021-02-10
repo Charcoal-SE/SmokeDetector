@@ -27170,3 +27170,4 @@
 1612939901	tripleee	trustedteller\.com
 1612939982	tripleee	postalcoder\.com
 1612945112	tripleee	edchart\.com
+1612947159	tripleee	lamodakuwait\.cf
