@@ -3910,4 +3910,4 @@ topcbdonline\.com
 itforsoftware\.com
 topbodyproducts\.com
 bizcommunity\.com
-ti\.to
+ti\.to(?<=\bti\.to)(?<![^\W_]-ti\.to)(?![.-][^\W_])\b
