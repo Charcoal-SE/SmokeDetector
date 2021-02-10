@@ -27187,3 +27187,4 @@
 1612956856	Xnero	stop-scam\.info
 1612956620	Xnero	fratres(?!\.net)
 1612957122	tripleee	minnit[\W_]*+chat
+1612957529	cigien	dash86\.net
