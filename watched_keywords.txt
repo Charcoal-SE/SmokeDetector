@@ -27192,3 +27192,4 @@
 1612957863	cigien	eascertification\.com
 1612958432	Ryan M	wordarchitect\.com
 1612958893	cigien	imax\.123movie-hd\.com
+1612959131	tripleee	/[a-z]+-[a-z]+-cbd-oil(?:$|[-/<])
