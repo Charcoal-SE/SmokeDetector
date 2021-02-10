@@ -27171,3 +27171,4 @@
 1612939982	tripleee	postalcoder\.com
 1612945112	tripleee	edchart\.com
 1612947159	tripleee	lamodakuwait\.cf
+1612947225	tripleee	la[\W_]*+moda(?:[\W_]*+(?:kuwait|\d+))*+
