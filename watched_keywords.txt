@@ -27197,3 +27197,4 @@
 1612959761	cigien	jason[\W_]*+momoa[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|\d++|[\da-f]{5,}+)s?)*
 1612961360	cigien	goldessays\.com
 1612962607	double-beep	blog\.motasimfoad\.com
+1612963725	cigien	la[\W_]*+moda[\W_]*+kuwait(?!\.cf(?<=lamodakuwait\.cf))
