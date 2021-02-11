@@ -27228,3 +27228,4 @@
 1613044181	tripleee	droneifa\.com\.au
 1613044197	Xnero	droneifa(?!\.com\.au)
 1613039893	Xnero	powermaxebike\.com
+1613038773	Xnero	lifam\.in
