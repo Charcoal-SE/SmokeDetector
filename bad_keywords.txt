@@ -2447,3 +2447,4 @@ humboldt(?:[\W_]*+s)?[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 creditquickfix\d*(?:@gmail\.com)?
 Origami Studios
 free[\W_]*+grab[\W_]*+app(?!\.com(?<=freegrabapp\.com))
+new[\W_]*+era[\W_]*+education(?!\.in(?<=neweraeducation\.in))
