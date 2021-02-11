@@ -27226,3 +27226,4 @@
 1613037425	Xnero	theesyfer(?:@gmail\.com)?
 1613044095	tripleee	dronacharya\.info
 1613044181	tripleee	droneifa\.com\.au
+1613044197	Xnero	droneifa(?!\.com\.au)
