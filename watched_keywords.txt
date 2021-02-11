@@ -27218,3 +27218,4 @@
 1613023107	tripleee	(?-i:^mahesh manish$)
 1613028038	cigien	peace[\W_]*+farms[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|price|\d++|[\da-f]{5,}+)s?)*
 1613028547	cigien	blog\.coinremitter\.com
+1613029249	cigien	tom[\W_]*+brady[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|price|\d++|[\da-f]{5,}+)s?)*
