@@ -27234,3 +27234,4 @@
 1613060202	Jeff Schaller	prestigefinsburyparkbangalore\.co\.in
 1613062669	cigien	solution-archive\.com
 1613064804	Machavity	allshayaristatus\.in
+1613065752	cigien	(?:security@)?crypto-support\.info
