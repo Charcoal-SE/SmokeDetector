@@ -27223,3 +27223,4 @@
 1613035084	tripleee	mbbsadmissioninrussia\.in
 1613035143	tripleee	webomaze\.com\.au
 1613033110	Xnero	mbbsadmissioninrussia\.in
+1613033141	Xnero	Mordovia[\W_]*State[\W_]*University
