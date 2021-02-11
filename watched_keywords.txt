@@ -27076,7 +27076,6 @@
 1612776691	tripleee	(?-i:2O8PcTb)(?# bit.ly)
 1612779389	cigien	reisedokumentbundes\.com
 1612785295	tripleee	offlineinstallersofts\.com
-1612791545	Xnero	Cloud[\W_]*Mounter(?!\.net)
 1612792168	tripleee	buzztowns\.com
 1612780253	Yatin	helpline-australia\.com
 1612783495	Xnero	amtexenterprises\.net
