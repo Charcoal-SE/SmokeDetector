@@ -13124,7 +13124,6 @@
 1569994813	Makyen	student-login\.info
 1570001845	tripleee	royal[\W_]*+developer(?!\.in(?<=royaldeveloper\.in))
 1570001846	tripleee	royaldeveloper\.in
-1570007787	tripleee	lovelyrani\.com
 1570010102	Shree	studywholenight\.com
 1570010404	tripleee	nguonhangtot\.com\.vn
 1570013292	tripleee	4rabet\.com
