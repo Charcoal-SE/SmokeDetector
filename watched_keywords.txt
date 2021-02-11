@@ -27221,3 +27221,4 @@
 1613029249	cigien	tom[\W_]*+brady[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|price|\d++|[\da-f]{5,}+)s?)*
 1613029821	cigien	gov[\W_]*+reports(?!\.com\.au(?<=govreports\.com\.au))
 1613035084	tripleee	mbbsadmissioninrussia\.in
+1613035143	tripleee	webomaze\.com\.au
