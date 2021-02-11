@@ -444,3 +444,4 @@ SpeakingAccent
 (?-i:^credit fixers$)
 ^(?-i:origamistudios?)$
 ^marsillpost(?:ada)?$
+(?-i:^emaillist$)
