@@ -27215,3 +27215,4 @@
 1613020619	cigien	linksys[\W_]*+extender[\W_]*+setup(?!\.com(?<=linksys-extendersetup\.com))
 1613021894	Makyen	rstlegal\.com
 1613022239	cigien	brotherprinterdrivers\.live
+1613023107	tripleee	(?-i:^mahesh manish$)
