@@ -27230,3 +27230,4 @@
 1613038773	Xnero	lifam\.in
 1613046424	Xnero	maxcorebitcoinrecovery\.com
 1613058174	double-beep	gplfreetheme\.com
+1613058206	Spevacus	Cloud[\W_]*Mounter(?!\.net)
