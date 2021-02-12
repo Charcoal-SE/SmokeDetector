@@ -27248,3 +27248,4 @@
 1613106173	Nisse Engström	tattoomagz\.com
 1613109445	tripleee	chengonthainguyen\.vn
 1613110132	Makyen	livefitpk\.com
+1613110304	Makyen	keto[\W_]*+fat[\W_]*+burner(?:[\W_]*+(?:ca|canada|review|official|\d++|[\da-f]{5,}+)s?)*
