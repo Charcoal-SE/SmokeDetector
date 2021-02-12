@@ -2448,4 +2448,3 @@ creditquickfix\d*(?:@gmail\.com)?
 Origami Studios
 free[\W_]*+grab[\W_]*+app(?!\.com(?<=freegrabapp\.com))
 new[\W_]*+era[\W_]*+education(?!\.in(?<=neweraeducation\.in))
-Cloud[\W_]*Mounter(?!\.net)
