@@ -27241,3 +27241,4 @@
 1613092566	cigien	d(?:octo)?r[\W_]*+wonders
 1613093764	cigien	indiahouselifting\.com
 1613099830	cigien	crackcook\.com
+1613100014	cigien	cerebralequation\.com
