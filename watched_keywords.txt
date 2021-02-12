@@ -27261,3 +27261,4 @@
 1613162287	Makyen	drukinfotech\.com
 1613118946	Xnero	creativemediatechnology\.com
 1613108670	Yatin	quick[\W_]+yahoo[\W_]+assistance
+1613119054	Xnero	luxurion[\W_]*world(?!\.com)
