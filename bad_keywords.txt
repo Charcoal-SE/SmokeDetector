@@ -1365,7 +1365,7 @@ retro\W?slim
 narvi\W?testo
 perfect\W?youth(?:\W?booster)?
 vital\W?x9
-keto\W?elite(?:\W?diet)?
+keto[\W_]*+elite(?:[\W_]*+(?:pill|review|official|diet|\d++|[\da-f]{5,}+)s?)*
 maestro\W?goslin
 phen375
 Navari\W?Testo
