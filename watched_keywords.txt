@@ -27242,3 +27242,4 @@
 1613093764	cigien	indiahouselifting\.com
 1613099830	cigien	crackcook\.com
 1613100014	cigien	cerebralequation\.com
+1613100044	cigien	cerebralequation(?!\.com)
