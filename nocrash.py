@@ -116,6 +116,9 @@ while not stoprunning:
         log('Pull in new updates')
         git.checkout('deploy')
         git.pull()
+        git.checkout('master')
+        git.pull()
+        git.checkout('deploy')
 
         count = 0
         crashcount = 0
