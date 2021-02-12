@@ -27253,3 +27253,4 @@
 1613112019	cigien	green[\W_]*+leaf[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1613114482	cigien	ihost\.com\.pk
 1613117961	tripleee	luxurionworld\.com
+1613118001	tripleee	newerashayari\.wordpress\.com
