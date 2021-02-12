@@ -468,7 +468,12 @@ class GitManager:
 
     @staticmethod
     def pull_remote():
+        # We need to pull both the master and deploy branches here in order to be in sync with GitHub.
+        git.checkout('deploy')
         git.pull()
+        git.checkout('master')
+        git.pull()
+        git.checkout('deploy')
 
     @classmethod
     def pull_local(cls):
