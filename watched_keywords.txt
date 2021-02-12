@@ -25010,7 +25010,6 @@
 1606078474	Makyen	iamladp\.org
 1606087705	Jeff Schaller	asadalishaukat\.com
 1606097655	Makyen	watamate\.com
-1606100921	Spevacus	crackother\.com
 1606108592	Makyen	ketogen[\W_]*+tropfen(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1606111971	Mast	chinatourstar\.com
 1606117743	tripleee	thecontentnew\.com
