@@ -27252,3 +27252,4 @@
 1613111757	cigien	the[\W_]*+business[\W_]*+fuse(?!\.com(?<=thebusinessfuse\.com))
 1613112019	cigien	green[\W_]*+leaf[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1613114482	cigien	ihost\.com\.pk
+1613117961	tripleee	luxurionworld\.com
