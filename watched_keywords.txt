@@ -27250,3 +27250,4 @@
 1613111092	cigien	td[\W_]*+jakes[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1613111340	cigien	cheviet\.vn
 1613111757	cigien	the[\W_]*+business[\W_]*+fuse(?!\.com(?<=thebusinessfuse\.com))
+1613112019	cigien	green[\W_]*+leaf[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
