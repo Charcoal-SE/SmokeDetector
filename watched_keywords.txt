@@ -27248,3 +27248,4 @@
 1613110132	Makyen	livefitpk\.com
 1613110304	Makyen	keto[\W_]*+fat[\W_]*+burner(?:[\W_]*+(?:ca|canada|review|official|\d++|[\da-f]{5,}+)s?)*
 1613111092	cigien	td[\W_]*+jakes[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+1613111340	cigien	cheviet\.vn
