@@ -27247,3 +27247,4 @@
 1613109445	tripleee	chengonthainguyen\.vn
 1613110132	Makyen	livefitpk\.com
 1613110304	Makyen	keto[\W_]*+fat[\W_]*+burner(?:[\W_]*+(?:ca|canada|review|official|\d++|[\da-f]{5,}+)s?)*
+1613111092	cigien	td[\W_]*+jakes[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
