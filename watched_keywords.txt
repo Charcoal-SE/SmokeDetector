@@ -27273,3 +27273,4 @@
 1613178432	cigien	youtubewala\.com
 1613178453	cigien	youtubewala(?!\.com)
 1613179263	cigien	pitalk\.xyz
+1613179353	cigien	pi[\W_]*+talk(?!\.xyz(?<=pitalk\.xyz))
