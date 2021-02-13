@@ -27281,3 +27281,4 @@
 1613197889	Yatin	passeidireto\.com
 1613198918	cigien	passei[\W_]*+direto(?!\.com(?<=passeidireto\.com))
 1613199433	cigien	ibtindia\.com
+1613199459	cigien	ibtenglish\.in
