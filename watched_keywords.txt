@@ -27276,3 +27276,4 @@
 1613179353	cigien	pi[\W_]*+talk(?!\.xyz(?<=pitalk\.xyz))
 1613179694	cigien	bestwasheranddryer2021\.com
 1613180226	cigien	illuminatiamglobal(?:@gmail\.com)?
+1613180330	cigien	(?-i:UCpDyXDfMpLlV2RZn8xThMkA)(?#youtube channel)
