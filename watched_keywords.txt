@@ -27279,3 +27279,4 @@
 1613197969	Makyen	tripoto\.com
 1613197982	Makyen	gaylekingcbdoil\.tumblr\.com
 1613197889	Yatin	passeidireto\.com
+1613198918	cigien	passei[\W_]*+direto(?!\.com(?<=passeidireto\.com))
