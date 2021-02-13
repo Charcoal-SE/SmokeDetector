@@ -27274,3 +27274,4 @@
 1613178453	cigien	youtubewala(?!\.com)
 1613179263	cigien	pitalk\.xyz
 1613179353	cigien	pi[\W_]*+talk(?!\.xyz(?<=pitalk\.xyz))
+1613179694	cigien	bestwasheranddryer2021\.com
