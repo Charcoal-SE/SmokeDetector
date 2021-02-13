@@ -27264,3 +27264,4 @@
 1613119054	Xnero	luxurion[\W_]*world(?!\.com)
 1613175959	cigien	aescloudhosting\.com
 1613176524	cigien	abcmoney\.co\.uk
+1613176734	cigien	garvi\.gujarat\.gov\.in
