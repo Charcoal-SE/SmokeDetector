@@ -27272,3 +27272,4 @@
 1613178227	cigien	seocalling\.com
 1613178432	cigien	youtubewala\.com
 1613178453	cigien	youtubewala(?!\.com)
+1613179263	cigien	pitalk\.xyz
