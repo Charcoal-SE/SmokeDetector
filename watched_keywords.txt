@@ -27263,3 +27263,4 @@
 1613108670	Yatin	quick[\W_]+yahoo[\W_]+assistance
 1613119054	Xnero	luxurion[\W_]*world(?!\.com)
 1613175959	cigien	aescloudhosting\.com
+1613176524	cigien	abcmoney\.co\.uk
