@@ -16137,7 +16137,7 @@
 1579108185	Makyen	sarkarinaukari
 1579108207	Makyen	sarkarinaukarirozana
 1579108224	Makyen	fmax[\W_]*+(?:enhancement|male)(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
-1579110830	Eliah Kagan	yasio
+1579110830	Eliah Kagan	yasio(?!$(?<=^yasio$))
 1579110887	Eliah Kagan	simdsoft
 1579116543	Eliah Kagan	songkick\.com
 1579119169	Eliah Kagan	aryana-group\.com
