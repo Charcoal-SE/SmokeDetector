@@ -27313,3 +27313,4 @@
 1613291085	cigien	the[\W_]*+university[\W_]*+expert(?!\.com(?<=theuniversityexpert\.com))
 1613291321	cigien	topbschooladmission\.in
 1613291339	cigien	top[\W_]*+b[\W_]*+school[\W_]*+admission(?!\.in(?<=topbschooladmission\.in))
+1613292675	cigien	coventry\.onlinesurveys\.ac\.uk
