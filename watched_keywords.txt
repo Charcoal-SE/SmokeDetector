@@ -27309,3 +27309,4 @@
 1613284542	cigien	d(?:octo)?r[\W_]*+aluya
 1613285169	cigien	johnboos\.com
 1613289399	cigien	btcfxcointrade\.com
+1613290449	cigien	freelanceforall\.tk
