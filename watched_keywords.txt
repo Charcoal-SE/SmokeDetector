@@ -27375,3 +27375,4 @@
 1613431183	cigien	recruitmentbeam\.com\.ng
 1613432792	cigien	castingagenciesdirectory\.com
 1613432810	cigien	casting[\W_]*+agencies[\W_]*+directory(?!\.com(?<=castingagenciesdirectory\.com))
+1613433330	cigien	gadgetstour\.com
