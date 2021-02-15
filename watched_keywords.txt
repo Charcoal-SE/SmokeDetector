@@ -27367,3 +27367,4 @@
 1613425102	cigien	(?-i:SchabanBo)(?#github)
 1613425622	cigien	(?-i:etZ0Bi)(?#gestyy.com)
 1613426467	cigien	cryptostockshop\.com
+1613426483	cigien	crypto[\W_]*+stock[\W_]*+shop(?!\.com(?<=cryptostockshop\.com))
