@@ -27359,3 +27359,4 @@
 1613411578	Yatin	(?-i:IuItl83477A)(?# youtube)
 1613412598	Spevacus	anblicks\.com
 1613414440	Yatin	v[\W_]+tight?[\W_]+t?gel
+1613423494	cigien	latest[\W_]*+jobs[\W_]*+alert(?!\.in(?<=latestjobsalert\.in))
