@@ -27364,3 +27364,4 @@
 1613423624	cigien	yashwebdev(?!\.in)
 1613424321	cigien	sirinsoftware\.com
 1613424398	cigien	fuzzycalc\.xyz
+1613425102	cigien	(?-i:SchabanBo)(?#github)
