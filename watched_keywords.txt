@@ -27343,3 +27343,4 @@
 1613379925	cigien	allianze[\W_]*+technologies(?!\.com(?<=allianzetechnologies\.com))
 1613381069	Yatin	rangapens\.com
 1613384012	cigien	agriculturereview\.com
+1613384692	Yatin	keto[\W_]+GT[\W_]+\d{15}
