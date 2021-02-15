@@ -27345,3 +27345,4 @@
 1613384012	cigien	agriculturereview\.com
 1613384692	Yatin	keto[\W_]+GT[\W_]+\d{15}
 1613384729	tripleee	kingauthorhackerlogs(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1613384895	Yatin	gentas\.nu
