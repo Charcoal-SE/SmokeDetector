@@ -27189,7 +27189,6 @@
 1612959131	tripleee	/[a-z]+-[a-z]+-cbd-oil(?:$|[-/<])
 1612959226	cigien	cs[\W_]*+web[\W_]*+solution(?!\.com(?<=cswebsolution\.com))
 1612959687	double-beep	inter188\.org
-1612959761	cigien	jason[\W_]*+momoa[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|\d++|[\da-f]{5,}+)s?)*
 1612961360	cigien	goldessays\.com
 1612962607	double-beep	blog\.motasimfoad\.com
 1612963725	cigien	la[\W_]*+moda[\W_]*+kuwait(?!\.cf(?<=lamodakuwait\.cf))
