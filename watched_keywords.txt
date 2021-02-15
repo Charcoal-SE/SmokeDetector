@@ -27339,3 +27339,4 @@
 1613378732	Yatin	allianzetechnologies\.com
 1613319281	Victor VosMottor	(?:mail@)?zabeelinstitue\.ae
 1613379715	tripleee	triotecdigital\.com
+1613379807	cigien	trio[\W_]*+tec[\W_]*+digital(?!\.com(?<=triotecdigital\.com))
