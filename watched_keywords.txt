@@ -27344,3 +27344,4 @@
 1613381069	Yatin	rangapens\.com
 1613384012	cigien	agriculturereview\.com
 1613384692	Yatin	keto[\W_]+GT[\W_]+\d{15}
+1613384729	tripleee	kingauthorhackerlogs(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
