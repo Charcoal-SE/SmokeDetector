@@ -27341,3 +27341,4 @@
 1613379715	tripleee	triotecdigital\.com
 1613379807	cigien	trio[\W_]*+tec[\W_]*+digital(?!\.com(?<=triotecdigital\.com))
 1613379925	cigien	allianze[\W_]*+technologies(?!\.com(?<=allianzetechnologies\.com))
+1613381069	Yatin	rangapens\.com
