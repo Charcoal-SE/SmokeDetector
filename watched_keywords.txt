@@ -26676,7 +26676,6 @@
 1611728443	cigien	gcbuying\.com
 1611728469	cigien	fizamemon4456(?:@gmail\.com)?
 1611729512	cigien	harrelson'?s[\W_]*+own(?:[\W_]*+(?:oil|cbd|buy|order|\d++|[\da-f]{5,}+)s?)*
-1611729845	cigien	ontario[\W_]*+farms(?:[\W_]*+(?:canada|ca|hemp|cbd|oil|buy|order|\d++|[\da-f]{5,}+)s?)*
 1611730079	cigien	vosshop(?!\.uk)
 1611734390	cigien	com\.free_vpn\.super_vpn\.safe_vpn(?#play.google.com)
 1611737188	Ryan M	eznpc\.com
