@@ -27399,3 +27399,4 @@
 1613480250	tripleee	para[\W_]*+tech(?:[\W_]*+soft)?
 1613482030	Victor VosMottor	ttmsite\.com
 1613497319	Makyen	freevfxdownload\.com
+1613498965	Spevacus	rebeliation\.com
