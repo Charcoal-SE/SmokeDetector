@@ -27384,3 +27384,4 @@
 1613454900	cigien	african[\W_]*+business[\W_]*+review(?!\.co\.za(?<=africanbusinessreview\.co\.za))
 1613455101	tripleee	sikarexpress\.com
 1613455233	cigien	sikar[\W_]*+express(?!\.com(?<=sikarexpress\.com))
+1613456071	tripleee	globaltrustopedia\.com
