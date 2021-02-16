@@ -27398,3 +27398,4 @@
 1613480204	tripleee	(?-i:3Hu6mwQ9Zc)(?# fb.watch)
 1613480250	tripleee	para[\W_]*+tech(?:[\W_]*+soft)?
 1613482030	Victor VosMottor	ttmsite\.com
+1613497319	Makyen	freevfxdownload\.com
