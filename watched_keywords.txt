@@ -27394,3 +27394,4 @@
 1613477307	tripleee	(?-i:BrG22snjzkZ0)(?# fwd.cx)
 1613477396	tripleee	codedfine(?# fiverr)
 1613478018	Xnero	(?-i:^Nodi Sarker$)
+1613480179	tripleee	paratech\.com\.pk
