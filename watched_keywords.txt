@@ -27385,3 +27385,4 @@
 1613455101	tripleee	sikarexpress\.com
 1613455233	cigien	sikar[\W_]*+express(?!\.com(?<=sikarexpress\.com))
 1613456071	tripleee	globaltrustopedia\.com
+1613458086	tripleee	james[\W_]*+smith[\W_]*+funds[\W_]*+loan(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
