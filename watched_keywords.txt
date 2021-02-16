@@ -26323,7 +26323,6 @@
 1610710008	Yatin	surveytoearn\.us
 1610711502	tripleee	netrack
 1610717218	Spevacus	swbeautybar\.ch
-1610717298	Spevacus	passfixer\.com
 1610717336	Spevacus	v2nwork\.com
 1610717510	Spevacus	pall-review\.com
 1610724548	Spevacus	classicgeneratorpower\.com
