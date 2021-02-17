@@ -27419,3 +27419,4 @@
 1613544159	tripleee	aspca\.org
 1613544191	tripleee	easycartcleaning\.co\.uk
 1613546674	Makyen	sildamax-in-uk\.com
+1613546741	Makyen	sildamax(?!-in-uk\.com(?<=sildamax-in-uk\.com))
