@@ -27409,3 +27409,4 @@
 1613533439	cigien	aichesscoach\.net
 1613534029	cigien	camobear\.ca
 1613535348	cigien	7bet-?(?:bola|slot|agents1)\.com
+1613535369	cigien	tujuhbola\.com
