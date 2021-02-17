@@ -27410,3 +27410,4 @@
 1613534029	cigien	camobear\.ca
 1613535348	cigien	7bet-?(?:bola|slot|agents1)\.com
 1613535369	cigien	tujuhbola\.com
+1613535429	cigien	opautoclick\.in
