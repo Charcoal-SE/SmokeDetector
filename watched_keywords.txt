@@ -6526,7 +6526,6 @@
 1542521718	Shree	textparagraph\.tk
 1542525636	Makyen	/AUTO_Techlife
 1542527157	Makyen	want\.page\.link
-1542561995	Makyen	i\.stack\.imgur\.com/JQCDj\.jpg
 1542594665	Tetsuya Yamamoto	alubaidiya\.com
 1542598538	Makyen	tingsu\.github\.io(?#posted in a request for users to take an off-site survey)
 1542608970	Tetsuya Yamamoto	besthvlpspraygun\.com
@@ -7296,7 +7295,6 @@
 1546757270	Makyen	quantinsti\.com
 1546767343	Shree	jasdomqq\.com
 1546767868	Makyen	coffeebaze\.com
-1546767894	Makyen	rN8Vj\.jpg(?#i.stack.imgur.com)
 1546768061	Makyen	itsthelaststraw\.com
 1546768087	Makyen	jasadomino\W*qq\d*
 1546771093	Nisse Engström	seo\.inforesumeedge\.com
@@ -8020,8 +8018,6 @@
 1550554491	Shree	cupidlove\.potenzaglobalsolutions\.com
 1550556816	Shree	nestvalonline\.org
 1550558330	Shree	picsurely\.com
-1550559951	Makyen	(?-i:u9Pve\.jpg)(?#i.stack.imgur.com spam)
-1550559959	Makyen	(?-i:WYuIl\.png)(?#i.stack.imgur.com spam)
 1550560279	Shree	txbrewing\.com
 1550562157	Makyen	littlegreenman93(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1550564390	Shree	marveledu\.com
@@ -8202,7 +8198,6 @@
 1551405754	Makyen	clippingpathperfectionist\.com
 1551413606	Makyen	mayankchandel\.co\.nf
 1551416212	iBug	indolytics(?:\.com)?
-1551416447	Makyen	(?-i:RlUNC\.jpg)(?#imgur)
 1551421131	Makyen	bharatfullmoviedownload\d*(?:\.[\w-]*\w)*
 1551421140	Makyen	avengers4endgamefullmoviedownload(?:\.[\w-]*\w)*
 1551421150	Makyen	musemumble\.in
@@ -8336,7 +8331,6 @@
 1552179354	Makyen	pest-control-hail
 1552179375	Makyen	watkinsheating\.com
 1552179391	Makyen	bassama2020a(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
-1552179399	Makyen	(?-i:sOQEf\.jpg)(?#i.stack.imgur.com)
 1552179408	Makyen	whynotgems\.com
 1552187845	Makyen	tuxfiles\.org
 1552196141	Makyen	dmitry\.bazhenovsky
@@ -8345,7 +8339,6 @@
 1552196174	Makyen	drohikhoboherbalcenter(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1552200907	Tetsuya Yamamoto	caliberhealth\.com
 1552201234	Tetsuya Yamamoto	hostens\.com
-1552206274	Makyen	j631q\.jpg(?#i.stack.imgur.com)
 1552206284	Makyen	Law_yong_jian@live\.com\.sg
 1552212306	doppelgreener	mycourses\.co\.za
 1552216181	doppelgreener	apexsettings\.net
@@ -9089,7 +9082,6 @@
 1555236228	Olivia	mr\W*(?:dot\W*)?vinodinsan1\W*(?:at\W*)?gmail\W*(?:dot\W*)?com
 1555240773	Olivia	phanmembuildingcare\.blogspot\.
 1555270210	Makyen	abegalejohnston20\.
-1555270249	Makyen	(?-i:U8iES\.jpg)(?#imgur)
 1555270308	Makyen	nadiri\.co
 1555278471	Makyen	herbalremedies21(?:@gmail\.com)?
 1555298498	Makyen	look\.djfiln\.com
@@ -10148,7 +10140,6 @@
 1559796374	tripleee	aobindia\.com
 1559798371	tripleee	emailnumbersupport\.com
 1559798537	Makyen	(?-i:ZGyOcrgRbQTgPg)
-1559801582	Makyen	(?-i:o7TSD\.png)(?#i.stack.imgur.com)
 1559801601	Makyen	jasonlong2007s(?:@gmail\.com)
 1559801619	Makyen	rocsalrow
 1559801676	Makyen	roadrunneremail-login\.com
@@ -17117,7 +17108,6 @@
 1581337745	Eliah Kagan	machhili\.com
 1581338172	tripleee	pulseroll\.com
 1581340384	Eliah Kagan	appspunditinfotech\.com
-1581340838	Eliah Kagan	(?-i:ZoU3V)(?#imgur)
 1581341947	tripleee	productlabel\.blogspot\.com
 1581341988	tripleee	ariy?an[\W_]*+packaging
 1581342563	Das_Geek	blogahp\.com
@@ -17261,7 +17251,6 @@
 1581681287	Shree	bettersolutions\.com
 1581682073	Shree	bizztrade\.com
 1581682372	Shree	worldvision\.in
-1581688988	Eliah Kagan	(?-i:VilAc)(?#imgur)
 1581689945	Eliah Kagan	haonatech\.com
 1581690375	Eliah Kagan	machupicchuhop\.com
 1581690459	Eliah Kagan	gyoby\.com
@@ -17365,7 +17354,6 @@
 1581943294	Eliah Kagan	btcprivkey468(?:@gmail\.com)?
 1581945294	Machavity	pengeluaransg\.com
 1581947480	Machavity	(?-i:UC7D7UHEBCFyks5kwMH-rV0Q)
-1581950737	Eliah Kagan	(?-i:vfyOa)(?#imgur)
 1581951009	Eliah Kagan	cloudpital
 1581951944	Das_Geek	wa­y­ofin­c­o­m­e­\.­c­o­m
 1581956354	Eliah Kagan	(?-i:AAAAAE5t61gt0pGDfsy6LA)(?#t.me)
@@ -17670,10 +17658,6 @@
 1582587023	Eliah Kagan	Ningbo\W*Godeson(?:\W*Instrument\W*Tech)?
 1582587691	Eliah Kagan	degreessymbolmac\.com
 1582587893	Eliah Kagan	nithinprasad\.com
-1582592822	Eliah Kagan	(?-i:6ifcg)(?#imgur)
-1582593587	Eliah Kagan	(?-i:Tav6H)(?#imgur)
-1582593891	Eliah Kagan	(?-i:aE5Zb)(?#imgur)
-1582594341	Eliah Kagan	(?-i:yWLdZ)(?#imgur)
 1582595281	Eliah Kagan	tran+(?:y|ie)s?
 1582595559	Eliah Kagan	mobdroinstalargratis\.com
 1582601987	Eliah Kagan	kolani\.ca
@@ -17721,10 +17705,7 @@
 1582704674	Makyen	curcumin[\W_]*+500
 1582712236	Makyen	(?-i:YHgktJQNXiB5Zgqw8)(?#forms.gle)
 1582716528	Eliah Kagan	(?-i:DBUThwPRJRByHz5Z9)(?#forms.gle)
-1582717786	Eliah Kagan	(?-i:YJe9y)(?#imgur)
 1582717963	Eliah Kagan	luckypatchers\.mobi
-1582719187	Eliah Kagan	(?-i:4H1DK)(?#imgur)
-1582719312	Eliah Kagan	(?-i:beMwq)(?#imgur)
 1582729681	Makyen	nishinegi\.com
 1582736827	Makyen	kokamera\.com
 1582738225	Makyen	shoutmeloud\.com
@@ -17752,7 +17733,6 @@
 1582798634	Eliah Kagan	(?-i:etmdl-uxx0Q)(?#youtu.be)
 1582798749	Eliah Kagan	internetvideoarchive\.userecho\.com
 1582798836	Eliah Kagan	(?-i:L2d4NxIuakI)(?#YouTube)
-1582799277	Eliah Kagan	(?-i:xjxFb)(?#imgur)
 1582799335	Eliah Kagan	(?-i:5PpCfO1OQFA)(?#youtu.be)
 1582799998	Eliah Kagan	tookaa\.ir
 1582800079	Eliah Kagan	(?-i:AyqaKY)(?#fiverr)
@@ -21421,11 +21401,9 @@
 1593766845	Daniil	Dr ezomo
 1593767496	Daniil	joescarrentalgoa\.com
 1593767532	Daniil	(?-i:Joes Self Drive Cars in Goa)
-1593768537	Eliah Kagan	(?-i:cjZsV\.jpg)(?#imgur)
 1593769673	Daniil	marketwebdesigner\.com
 1593769690	Daniil	(?-i:ydx8RsrZQ28)(?#YouTube)
 1593769769	Daniil	(?-i:App Developer Seattle)
-1593769750	Vogel612	(?-i:50jKN\.jpg)(?#imgur)
 1593772538	Daniil	awslagi\.com
 1593775183	Daniil	essaytigers\.co\.uk
 1593775272	Daniil	essaytigers(?!\.co\.uk)
@@ -26987,8 +26965,6 @@
 1612540951	Yatin	directpest\.co\.uk
 1612558719	cigien	(?-i:V8fJAz0B55k)(?#youtube.com)
 1612561264	cigien	bestaircompressorguru\.com
-1612562261	cigien	(?-i:suBZX\.gif)(?#imgur)
-1612562289	cigien	(?-i:t6Gan\.gif)(?#imgur)
 1612562396	cigien	masumshakh6699(?:@gmail\.com)?
 1612562453	cigien	seo2agency\.com
 1612581035	Yatin	sellaband\.com
@@ -27041,7 +27017,6 @@
 1612644227	cigien	(?-i:txch7UBUpF7arUzR7)(?#forms.gle)
 1612654802	Makyen	elsafamaids\.net
 1612654820	Makyen	elsafa[\W_]*+maids(?!\.net(?<=elsafamaids\.net))
-1612658208	cigien	(?-i:AcA4A\.jpg)(?#imgur)
 1612675840	Makyen	jumprecruiter\.pk
 1612687080	cigien	infinidice
 1612687213	cigien	(?-i:3iuLZbl)(?#bit.ly)
@@ -27109,8 +27084,6 @@
 1612857732	Xnero	(?-i:36UasCq)(?#bit.ly)
 1612861825	cigien	buznit\.com
 1612861982	Ryan M	binance\W?support
-1612863681	cigien	(?-i:xyXtU\.jpg)(?#imgur)
-1612863754	cigien	(?-i:qnJC5\.jpg)(?#imgur)
 1612864385	Ryan M	fratres\.net
 1612864367	Xnero	inspanner\.com
 1612864445	Xnero	inspanner(?!\.com)
