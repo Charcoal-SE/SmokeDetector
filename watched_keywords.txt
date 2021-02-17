@@ -27426,3 +27426,4 @@
 1613550528	Ryan M	appdupe\.com
 1613550952	Ryan M	(?-i:^Technovert Solutions$)
 1613558756	tripleee	sec-22
+1613557911	Xnero	speedcarsrental\.com
