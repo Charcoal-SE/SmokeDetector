@@ -27410,3 +27410,4 @@
 1613586205	Makyen	ampleebusiness\.com
 1613587266	cigien	ample[\W_]*+ebusiness(?!\.com(?<=ampleebusiness\.com))
 1613587871	cigien	denvertreeservices\.com
+1613588372	cigien	fast\.zmovies25\.com
