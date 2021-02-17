@@ -26422,7 +26422,6 @@
 1611051579	cigien	(?-i:3p1uFxo)(?#bit.ly)
 1611053441	cigien	speckpro\.com
 1611054229	tripleee	tespoin\.com
-1611056293	tripleee	6wresearch(?!\.com|(?-i:(?<=6Wresearch) Market Intelligence$))
 1611058685	tripleee	lasmarthome\.com
 1611060615	Yatin	mhapks\.com
 1611062815	tripleee	(?-i:ejPzhSb)(?# cutt.ly)
