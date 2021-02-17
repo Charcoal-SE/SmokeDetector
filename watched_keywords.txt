@@ -27399,3 +27399,4 @@
 1613498965	Spevacus	rebeliation\.com
 1613501384	Ryan M	axis[\W_]*+bank[\W_]*+customer[\W_]*+care
 1613503651	Ryan M	(?-i:^Amara Laurent$)
+1613530730	cigien	isqlplus\.com
