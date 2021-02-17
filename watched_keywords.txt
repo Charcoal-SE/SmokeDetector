@@ -27420,3 +27420,4 @@
 1613544191	tripleee	easycartcleaning\.co\.uk
 1613546674	Makyen	sildamax-in-uk\.com
 1613546741	Makyen	sildamax(?!-in-uk\.com(?<=sildamax-in-uk\.com))
+1613547817	Ryan M	(?-i:^Faststream Technologies$)
