@@ -2451,4 +2451,4 @@ new[\W_]*+era[\W_]*+education(?!\.in(?<=neweraeducation\.in))
 peace[\W_]*+farms[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|price|\d++|[\da-f]{5,}+)s?)*
 jason[\W_]*+momoa[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|\d++|[\da-f]{5,}+)s?)*
 ontario[\W_]*+farms(?:[\W_]*+(?:canada|ca|hemp|cbd|oil|buy|order|\d++|[\da-f]{5,}+)s?)*
-6wresearch(?!\.com|(?-i:(?<=6Wresearch) Market Intelligence$))
+6wresearch(?!\.com|(?-i:(?<=^6Wresearch) Market Intelligence$))
