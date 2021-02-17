@@ -27408,3 +27408,4 @@
 1613583479	Ollie	howtosavemoney\.ca
 1613583497	Ollie	creditcardgenius\.ca
 1613586205	Makyen	ampleebusiness\.com
+1613587266	cigien	ample[\W_]*+ebusiness(?!\.com(?<=ampleebusiness\.com))
