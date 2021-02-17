@@ -27424,3 +27424,4 @@
 1613549219	Ryan M	debtadvicehelp\.org
 1613549442	Ryan M	ESET GOLD
 1613550528	Ryan M	appdupe\.com
+1613550952	Ryan M	(?-i:^Technovert Solutions$)
