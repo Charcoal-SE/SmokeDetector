@@ -27404,3 +27404,4 @@
 1613559063	Xnero	nationwide[\W_]*+auto[\W_]*+transport(?!\.com(?<=nationwideunitedautotransport\.com))
 1613559415	tripleee	softghor\.com
 1613561938	Glorfindel	thebestmitersaw\.net
+1613584972	cigien	graphue\.com
