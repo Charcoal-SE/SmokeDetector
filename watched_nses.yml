@@ -1218,7 +1218,9 @@ items:
 - ns: hostomy.net.
 - ns: hosting24.com.
 - ns: nettigritty.net.
-- ns: c0d3host.com.
+- comment: 2021-02-17 NXDOMAIN
+  disable: true
+  ns: c0d3host.com.
 - ns: improvmx.com.
 - ns: paramountinfosystem.com.
 - ns: absas.net.
