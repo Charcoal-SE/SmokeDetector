@@ -446,4 +446,3 @@ SpeakingAccent
 ^marsillpost(?:ada)?$
 (?-i:^emaillist$)
 (?-i:Vladimir Artiukh$)
-^(?-i:Rita Scott)$
