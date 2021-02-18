@@ -12601,7 +12601,7 @@
 1568277942	Shree	bestcostsuppliers\.co
 1568298833	Machavity	cojective\.online
 1568298857	Machavity	sunflaker\.com
-1568301958	Daniil	haydash\.com
+1568301958	Xnero	haydash\.com
 1568323908	Makyen	golpokobitarkutir\.blogspot\.com
 1568323917	Makyen	gingersoftware\.com
 1568343280	Makyen	eventdex\.com
@@ -13801,7 +13801,7 @@
 1572749562	Makyen	solitaire\.onl
 1572749587	Makyen	shareit\.onl
 1572749612	Makyen	ucbrowser\.vip
-1572783665	Daniil	shoppingofferstoday\.com
+1572783665	Xnero	shoppingofferstoday\.com
 1572786491	double-beep	citywideseo\.com
 1572786628	double-beep	mindmankind\.com
 1572788762	Nisse Engström	vkaassociates\.com
@@ -13868,7 +13868,7 @@
 1572970588	Machavity	airswap\.io
 1572972347	Machavity	quieroserlibre\.com
 1572980444	Machavity	foxmovieshd\.com
-1572985655	Daniil	chatmynet\.org
+1572985655	Xnero	chatmynet\.org
 1573007032	Makyen	ongraph[\W_]*+technologies
 1573008943	Makyen	flowfusion122\.blogspot
 1573009848	Makyen	E3B8-E07D
@@ -13888,7 +13888,7 @@
 1573038378	Makyen	fitness[\W_]*+mega[\W_]*+mart(?!\.com)
 1573038393	Makyen	tumaf\.com
 1573038403	Makyen	spaceforrock(?:@gmail\.com)?
-1573063621	Daniil	solutiontemples\.com
+1573063621	Xnero	solutiontemples\.com
 1573071937	Machavity	aishakatuba33\W*(?:@\W*gmail\W*\.\W*com)
 1573083248	Machavity	riya-kapoor\.co\.in
 1573093351	Makyen	net\.marlove\.mockgps
@@ -13952,7 +13952,7 @@
 1573219806	tripleee	cloudendure\.com
 1573219848	double-beep	hiotron\.com
 1573220027	tripleee	ke[\W_]*one
-1573241193	Daniil	sexypuss\.com
+1573241193	Xnero	sexypuss\.com
 1573242732	Jenayah	therapidhelp\.com
 1573263642	Makyen	master[\W_]*+race
 1573267731	Makyen	in[\W_]*+front[\W_]*+of[\W_]*+new[\W_]*+york[\W_]*+city[\W_]*+hall(?#trolling)
@@ -17438,12 +17438,12 @@
 1582106079	Eliah Kagan	(?-i:JmxseJ3K7uA)(?#youtu.be)
 1582106312	Vogel612	intellectualspot\.com
 1582108843	Eliah Kagan	balavignaorganic\.com
-1582109784	Daniil Manokhin	theworldseverything\.com
+1582109784	Xnero	theworldseverything\.com
 1582111052	Eliah Kagan	envato\.market
 1582111797	Eliah Kagan	(?-i:do_WxkhB-lg)(?#youtu.be)
 1582111825	Eliah Kagan	uritoxmedicaltesting\.com
 1582114191	Eliah Kagan	thewebigirl\.com
-1582114392	Daniil Manokhin	procvaustralia\.com
+1582114392	Xnero	procvaustralia\.com
 1582122064	Eliah Kagan	igpublicalert\.ga
 1582122508	Eliah Kagan	dragonhaze(?!$)(?:@protonmail\.ch)?
 1582133564	Eliah Kagan	texspert\.com
@@ -17772,7 +17772,7 @@
 1582904574	Makyen	huffingtonpostdotcom\.blogspot
 1582907936	Makyen	zen[\W_]*+green(?:[\W_]*+(?:cbd|\d++|[\da-f]{4,}+))*
 1582908592	Makyen	businessindias\.com
-1582911965	Daniil Manokhin	github\.com/rakshitbharat/cleanify
+1582911965	Xnero	github\.com/rakshitbharat/cleanify
 1582917290	Makyen	escortsforlondon\.co\.uk
 1582919693	Makyen	fitness-allday\.com
 1582920292	Makyen	(?-i:KvmtVEAD140)(?#YouTube)
@@ -19335,7 +19335,7 @@
 1587468913	tripleee	faun\.se
 1587469736	tripleee	247geeky\.org
 1587473164	tripleee	tru[\W_]*+virility
-1587474381	Daniil	topadmissionessay\.com
+1587474381	Xnero	topadmissionessay\.com
 1587493596	Makyen	(?-i:2TlNEFM)(?#bit.ly)
 1587493622	Makyen	wewriteessay\.co\.uk
 1587495044	Makyen	(?-i:nxfXUhHg8Z4)(?#youtu.be)
@@ -19356,7 +19356,7 @@
 1587540608	Makyen	myassignmenthelpau(?!\.com)
 1587544466	tripleee	skyhidev\.com
 1587549006	Glorfindel	winatslotmachine\.com
-1587549216	Daniil	mytopcasino\.co\.uk
+1587549216	Xnero	mytopcasino\.co\.uk
 1587549725	Zoe	kalyanmatka\.me
 1587550980	Zoe	wemixwallet\.net
 1587552533	Shree	neolift\.in
@@ -19498,17 +19498,17 @@
 1587969424	tripleee	smilingpawspets\.com
 1587971877	tripleee	embetronicx\.com
 1587977073	tripleee	pythonprotectcode\.com
-1587979072	Daniil	mestlm@mail\.ru
+1587979072	Xnero	mestlm@mail\.ru
 1587979750	tripleee	tutorial4us\.com
-1587980422	Daniil	on88play\.net
+1587980422	Xnero	on88play\.net
 1587983199	tripleee	gosorentacar\.com
-1587981848	Daniil	trainingbasket\.in
+1587981848	Xnero	trainingbasket\.in
 1587987650	tripleee	roridoll\d*+(?!\.com)
-1587987614	Daniil	cmsfinance\.com
+1587987614	Xnero	cmsfinance\.com
 1587987726	tripleee	printerfaq\.com
-1587993433	Daniil	selectpdf\.com
-1587994119	Daniil	openio\.io
-1587994136	Daniil	presales@openio\.io
+1587993433	Xnero	selectpdf\.com
+1587994119	Xnero	openio\.io
+1587994136	Xnero	presales@openio\.io
 1587995899	rene	point59\.com
 1587997700	Machavity	dibbsto\.co\.uk
 1588000393	tripleee	topresourcing\.co\.uk
@@ -19516,7 +19516,7 @@
 1588002638	tripleee	impreza\.host
 1588004348	Machavity	netwareservices\.com
 1588009781	tripleee	olm[\W_]*+to[\W_]*+pst
-1588011240	Daniil	beingantique\.com
+1588011240	Xnero	beingantique\.com
 1588011633	tripleee	smallseotools\.link
 1588013385	double-beep	lemonyblog\.com
 1588030291	Makyen	gbojiespiritualtemple\.website2\.me
@@ -19539,8 +19539,8 @@
 1588079049	Glorfindel	opendllfiles\.com
 1588079281	Makyen	apoganablackmagic\.com
 1588079326	Makyen	apoganalovespell(?:@gmail\.com)?
-1588079947	Daniil	aajithinfotech@gmail\.com
-1588080299	Daniil	crmhub\.blogspot\.com
+1588079947	Xnero	aajithinfotech@gmail\.com
+1588080299	Xnero	crmhub\.blogspot\.com
 1588085591	tripleee	(?-i:wr6iIl_9hjw)(?# youtube)
 1588087708	Machavity	baybit\.io
 1588089941	Machavity	oldmanpublish\.com
@@ -19570,12 +19570,12 @@
 1588154245	Makyen	toolinspector\.com
 1588156247	tripleee	retailclouds\.com
 1588156286	tripleee	retail[\W_]*+cloud(?!\.com)s?\d*
-1588158822	Daniil	theblackhatcreator000@gmail\.com
-1588159318	Daniil	tom@lzjpcb\.com
-1588159370	Daniil	(?-i:Y-FvAWuI678 )(?# youtube )
-1588159609	Daniil	(?-i:pcb-zhao-6337471a6)(?# LinkedIn ID)
+1588158822	Xnero	theblackhatcreator000@gmail\.com
+1588159318	Xnero	tom@lzjpcb\.com
+1588159370	Xnero	(?-i:Y-FvAWuI678 )(?# youtube )
+1588159609	Xnero	(?-i:pcb-zhao-6337471a6)(?# LinkedIn ID)
 1588159628	tripleee	lzjpcb\.com
-1588162223	Daniil	dumpsforsure\.com
+1588162223	Xnero	dumpsforsure\.com
 1588163869	Glorfindel	filehippos\.net
 1588168274	Makyen	(?-i:Ultimateaffiliatemarketingcourse)(?#bit.ly)
 1588169639	Makyen	(?-i:digitalmaina)(?#fiverr.com)
@@ -19594,7 +19594,7 @@
 1588228182	Glorfindel	careerfinder4you\.blogspot\.com
 1588238607	tripleee	gemeiwaterpurifier\.com
 1588239853	Mithical	mt\.gox
-1588247283	Daniil	trakop\.com
+1588247283	Xnero	trakop\.com
 1588247514	Makyen	fleek[\W_]*+it[\W_]*+solutions(?!\.com(?<=fleekitsolutions\.com))
 1588247719	Makyen	(?-i:YNoI4\.jpg)
 1588247746	Makyen	blood[\W_]*+balance[\W_]*+formula(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
@@ -19615,8 +19615,8 @@
 1588303975	Makyen	ecsconn\.com
 1588306543	Makyen	escort-mannheim\.com
 1588308275	Makyen	learninjava\.com
-1588310696	Daniil	freerobuxgenerators\.org
-1588310734	Daniil	getfreerobux\.us
+1588310696	Xnero	freerobuxgenerators\.org
+1588310734	Xnero	getfreerobux\.us
 1588313072	Makyen	escortskolkata\.in
 1588313097	Makyen	mygenerationtechs\.com
 1588313144	Makyen	ravinandasana\.rf\.gd
@@ -19654,9 +19654,9 @@
 1588327006	Makyen	sabflix\.com
 1588327937	Makyen	(?-i:^Amna$)
 1588329179	Glorfindel	ninistutor\.com
-1588332957	Daniil	cyber\.lord1010@gmail\.com
+1588332957	Xnero	cyber\.lord1010@gmail\.com
 1588335559	Nisse Engström	thecakedelivery\.com
-1588339591	Daniil	digitalsigner\.pulkitsoft\.com
+1588339591	Xnero	digitalsigner\.pulkitsoft\.com
 1588347326	Machavity	helpstounderstand\.com
 1588350990	Makyen	illuminatiworldrich02(?:@gmail\.com)?
 1588351045	Makyen	(?-i:TvNWweQ9ZkA)(?#youtu.be)
@@ -19668,7 +19668,7 @@
 1588363344	Nisse Engström	researchproposals\.co\.uk
 1588378208	Makyen	gospelmusic2921\.org
 1588384965	Makyen	geotargetly\.com
-1588413790	Daniil	gem-registrations\.org
+1588413790	Xnero	gem-registrations\.org
 1588417462	Nisse Engström	greenwayproduct\.com
 1588417568	Nisse Engström	chefcap\.in
 1588435165	Nisse Engström	epibeans\.com
@@ -19736,10 +19736,10 @@
 1588565008	Makyen	(?-i:cS7wB0bRBY)
 1588578425	tripleee	options[\W_]*+xo
 1588578524	tripleee	realpdfdumps\.com
-1588587443	Daniil	everappz\.com
+1588587443	Xnero	everappz\.com
 1588587734	tripleee	smartfitnessaura\.com
 1588594887	Machavity	qurandb\.com
-1588595308	Daniil	(?-i:ketorinpills)
+1588595308	Xnero	(?-i:ketorinpills)
 1588595578	tripleee	bestservicepackers\.in
 1588617486	Makyen	(?-i:UCPDj\.png)
 1588618221	Machavity	pixelegg\.me
@@ -19782,7 +19782,7 @@
 1588675654	tripleee	bestmonitorwithspeakers\.com
 1588675770	Glorfindel	speedysep\.com
 1588677742	tripleee	utopia[\W_]*+n2n
-1588679535	Daniil	egyptluxuryprivatetours\.com
+1588679535	Xnero	egyptluxuryprivatetours\.com
 1588682948	tripleee	vervelogic\.com
 1588687873	Machavity	golffans\.net
 1588687995	Machavity	lifepage\.app\.link
@@ -19810,10 +19810,10 @@
 1588757253	tripleee	holisticdg\.com
 1588757588	tripleee	checkordering\.net
 1588757778	tripleee	property[\W_]*+hunters?
-1588758628	Daniil	mygreatlearning\.com
-1588759245	Daniil	kosei\.com\.vn
-1588761073	Daniil	(?-i:ketobodytoneisrael)
-1588762669	Daniil	earthhacker200(?:@gmail\.com)?
+1588758628	Xnero	mygreatlearning\.com
+1588759245	Xnero	kosei\.com\.vn
+1588761073	Xnero	(?-i:ketobodytoneisrael)
+1588762669	Xnero	earthhacker200(?:@gmail\.com)?
 1588766200	tripleee	deviceinindia\.com
 1588766398	Machavity	visit\.guide
 1588768654	Machavity	powerbankspoint\.com
@@ -19929,8 +19929,8 @@
 1589099093	Makyen	impactwrenchguides\.com
 1589099118	Makyen	code2test\.com
 1589122137	Glorfindel	flipepic
-1589122753	Daniil	helpdi\.in
-1589134738	Daniil	(?-i:tony-gutierrez)
+1589122753	Xnero	helpdi\.in
+1589134738	Xnero	(?-i:tony-gutierrez)
 1589136628	Makyen	alphahosting\.us
 1589136652	Makyen	alphahosting\.co\.in
 1589136678	Makyen	hetfield\.ig7(?:@gmail\.com)?
@@ -19942,7 +19942,7 @@
 1589142440	Makyen	(?-i:NqmJ75Lz-8M)(?#youtu.be)
 1589142928	Makyen	sqloptimize\.com
 1589156510	Makyen	chatsexocam\.com
-1589161440	Daniil	firstmicroprocessor\.com
+1589161440	Xnero	firstmicroprocessor\.com
 1589169566	Makyen	fabulaes\.com
 1589174730	Makyen	developerm\.dev
 1589174784	Makyen	(?-i:A0TU20PQzlo)(?#YouTube)
@@ -19974,12 +19974,12 @@
 1589189321	Makyen	customboxesmasters\.com
 1589189346	Makyen	enking[\W_]*+international
 1589190477	Makyen	(?-i:nbfGZ)(?#posts.gle)
-1589193683	Daniil	mark\.mygraphql\.com
+1589193683	Xnero	mark\.mygraphql\.com
 1589199579	tripleee	siliconeproduction\.com
 1589200665	tripleee	rttax\.com
-1589200994	Daniil	(?-i:DongGuan XuKai Handicrafts co\W*Ltd)
+1589200994	Xnero	(?-i:DongGuan XuKai Handicrafts co\W*Ltd)
 1589202119	Jenayah	astrocollection\.net
-1589204301	Daniil	javainhand\.com
+1589204301	Xnero	javainhand\.com
 1589212601	Glorfindel	theyogashopping\.com
 1589217322	Machavity	specry\.com
 1589218579	Machavity	fucktheprincess\.com
@@ -19999,13 +19999,13 @@
 1589276923	Glorfindel	icarview
 1589281693	tripleee	medjedel\.com
 1589285903	tripleee	(?-i:^jackson logan$)
-1589289012	Daniil	umama-construction\.com
+1589289012	Xnero	umama-construction\.com
 1589292747	Machavity	monkhouselaw\.com
 1589292772	Machavity	(?-i:MonkhouseLaw)
-1589293753	Daniil	(?-i:WBqbtDfxoLc)(?# youtube)
-1589297008	Daniil	(?-i:QZZMNx1whRg)(?# youtube)
+1589293753	Xnero	(?-i:WBqbtDfxoLc)(?# youtube)
+1589297008	Xnero	(?-i:QZZMNx1whRg)(?# youtube)
 1589298062	Machavity	cselectricalandelectronics\.com
-1589298654	Daniil	thelinuxpeoples\.com
+1589298654	Xnero	thelinuxpeoples\.com
 1589302987	Machavity	choudhary-repair-service\.in
 1589314517	Makyen	icarvisions\.com
 1589314541	Makyen	mqshealthsite\.com
@@ -20015,7 +20015,7 @@
 1589315320	Makyen	bonusterbukti(?#sites.google.com)
 1589315344	Makyen	irmarasika(?:@gmail\.com)?
 1589315367	Makyen	ayurani2019\.wixsite\.com
-1589321420	Daniil	swharden\.com
+1589321420	Xnero	swharden\.com
 1589344012	tripleee	theversetech\.com
 1589344287	tripleee	theugcnet\.blogspot\.com
 1589344373	tripleee	cstcbd\.com
@@ -20031,20 +20031,20 @@
 1589356194	tripleee	seo_service01(?# fiverr.com user name)
 1589356461	Makyen	quickseotools\.net
 1589356993	tripleee	dailyworx\.com
-1589359173	Daniil	xosoplus\.com
-1589359289	Daniil	electricalhindime\.in
+1589359173	Xnero	xosoplus\.com
+1589359289	Xnero	electricalhindime\.in
 1589360567	tripleee	xosoplus(?!\.com)
 1589367706	tripleee	online-stock-exchange\.com
-1589367963	Daniil	(?-i:2UDgPDm)(?# bit.ly spam link)
-1589368816	Daniil	locanta\.in
-1589368842	Daniil	expertacrepairdelhi\.com
-1589368871	Daniil	dehradunescorts\.net\.in
-1589368900	Daniil	hyderabadescorts\.net\.in
-1589368960	Daniil	chennaiescortservice\.co\.in
-1589369015	Daniil	callgirlshyderabad\.in
-1589369116	Daniil	ezeechat\.com
-1589370151	Daniil	matenut\.com
-1589371720	Daniil	nativecasinos\.de
+1589367963	Xnero	(?-i:2UDgPDm)(?# bit.ly spam link)
+1589368816	Xnero	locanta\.in
+1589368842	Xnero	expertacrepairdelhi\.com
+1589368871	Xnero	dehradunescorts\.net\.in
+1589368900	Xnero	hyderabadescorts\.net\.in
+1589368960	Xnero	chennaiescortservice\.co\.in
+1589369015	Xnero	callgirlshyderabad\.in
+1589369116	Xnero	ezeechat\.com
+1589370151	Xnero	matenut\.com
+1589371720	Xnero	nativecasinos\.de
 1589373480	tripleee	navdeeparora\.com
 1589374220	tripleee	(?-i:EogJiiHmvur1HaMxG8ID6F)(?# whatsapp chat link)
 1589374702	tripleee	restore\.media
@@ -20065,9 +20065,9 @@
 1589448441	tripleee	ketoproavis\.fr
 1589451305	tripleee	(?-i:MU_H-rgPDWo)(?# youtube)
 1589453682	rene	bloggersprout\.com
-1589454498	Daniil	(?-i:y8dw7kjt)(?# shortened URL)
+1589454498	Xnero	(?-i:y8dw7kjt)(?# shortened URL)
 1589457433	tripleee	phototechnolabs\.com
-1589458342	Daniil	beincert\.com
+1589458342	Xnero	beincert\.com
 1589458738	tripleee	prism-me\.com
 1589458844	tripleee	ufacetimeforpc\.com
 1589459760	tripleee	maya[\W_]*+developer_?(?# fiverr)
@@ -20091,7 +20091,7 @@
 1589526191	tripleee	chigaitoi
 1589529190	Shree	kindlehelpguides\.com
 1589529918	tripleee	vita[\W_]*+biogen
-1589537863	Daniil	netintegrity\.net
+1589537863	Xnero	netintegrity\.net
 1589542144	tripleee	emailmeform\.com
 1589556228	Machavity	circletranslations\.com
 1589560004	Machavity	mhrubel_41
@@ -20114,9 +20114,9 @@
 1589617915	Makyen	(?-i:EOEqj\.jpg)
 1589622558	Makyen	usmovies24\.com
 1589627431	Makyen	thestandarddaily\.com
-1589631083	Daniil	apetaminstore\.co\.uk
-1589631192	Daniil	(?-i:Apetamin)
-1589631509	Daniil	reynoldshelp\.ca
+1589631083	Xnero	apetaminstore\.co\.uk
+1589631192	Xnero	(?-i:Apetamin)
+1589631509	Xnero	reynoldshelp\.ca
 1589632091	Glorfindel	androidfist\.com
 1589640603	Machavity	trainings\.com
 1589644890	Makyen	funnypictures\.com\.ng
@@ -20132,13 +20132,13 @@
 1589699835	Nisse Engström	itechbeast\.com
 1589706374	Makyen	genesisconstruction\.com
 1589706399	Makyen	genesis[\W_]*+construction(?!\.com(?<=genesisconstruction\.com))
-1589720200	Daniil	karlut75(?:@gmail\.com)?
-1589721618	Daniil	elmosoft\.net
+1589720200	Xnero	karlut75(?:@gmail\.com)?
+1589721618	Xnero	elmosoft\.net
 1589726721	Makyen	drivethelife\.com
 1589726819	Makyen	labmaxca17(?#gumroad.com)
 1589726846	Makyen	crictime\.su
 1589727818	Makyen	getcompanydetails\.com
-1589730210	Daniil	nvcrack\.com
+1589730210	Xnero	nvcrack\.com
 1589751401	Makyen	(?-i:FRUSKOwL4mE)(?#youtu.be)
 1589753215	Makyen	(?-i:hw9HQwhdxnhtHRSL9)(?#forms.gle)
 1589759299	Makyen	(?-i:eFGiW9fzNcM)(?#YouTube)
@@ -20155,16 +20155,16 @@
 1589786316	Makyen	gyanmatrix\.com
 1589788314	tripleee	geek[\W_]*+squad(?:[\W_]*+(?:tech[\W_]*+)?support)?\d*
 1589791017	tripleee	pakansanat\.ir
-1589801192	Daniil	startuppaisa\.com
-1589801386	Daniil	fasilodream\.blogspot\.com
+1589801192	Xnero	startuppaisa\.com
+1589801386	Xnero	fasilodream\.blogspot\.com
 1589801914	tripleee	grouplinksrg\.in
 1589802594	tripleee	intersetmedia\.com
-1589804353	Daniil	pharmafranchiseworld\.com
+1589804353	Xnero	pharmafranchiseworld\.com
 1589804681	tripleee	tas\.co\.in
 1589805617	tripleee	(?-i:^Tushar Prajapati$)
 1589805888	tripleee	Paras[\W_]*+Anugrah
-1589809737	Daniil	sythe\.org
-1589810322	Daniil	techijournal\.com
+1589809737	Xnero	sythe\.org
+1589810322	Xnero	techijournal\.com
 1589818104	Zoe	buy-telegram-members\.com
 1589823301	Glorfindel	professional-ai\.com
 1589828125	Kulfy	thecoraltech\.com
@@ -20198,15 +20198,15 @@
 1589958980	tripleee	escortsgallery\.in
 1589959004	tripleee	nainitalescorts\.in
 1589959812	Glorfindel	coim\.in
-1589967648	Daniil	onesimcard\.com
-1589968349	Daniil	forum\.susudunia\.xyz
+1589967648	Xnero	onesimcard\.com
+1589968349	Xnero	forum\.susudunia\.xyz
 1589969072	Glorfindel	wns\.com
 1589969755	tripleee	kubet86\.asia
-1589970714	Daniil	homelight\.in
+1589970714	Xnero	homelight\.in
 1589977340	Machavity	jotform\.com/supplementreviews
 1589977829	double-beep	onlinesolution\.info
-1589978668	Daniil	connectinfosoft\.com
-1589981572	Daniil	kiddie\.in
+1589978668	Xnero	connectinfosoft\.com
+1589981572	Xnero	kiddie\.in
 1589983712	Machavity	3dprintbeginner\.com
 1589984030	Makyen	(?-i:fnHjl\.jpg)
 1589984060	Makyen	guys_software
@@ -20220,15 +20220,15 @@
 1590036399	Makyen	chinafreezers\.com
 1590041889	Makyen	flawless[\W_]*+lush[\W_]*+skin(?:[\W_]*+(?:official|buy|review|\d++|[\da-f]{4,}+))*
 1590042096	Makyen	mmcj[\W_]*+lynx[\W_]*+digitexz(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1590047468	Daniil	litiannut\.en\.alibaba\.com
+1590047468	Xnero	litiannut\.en\.alibaba\.com
 1590047595	double-beep	nut-china\.com
-1590049307	Daniil	Kumbhat[\W_]*+(bazaar|group|brothers|\d++|[\da-f]{4,}+)
-1590057596	Daniil	chinaglobalmobility\.org
+1590049307	Xnero	Kumbhat[\W_]*+(bazaar|group|brothers|\d++|[\da-f]{4,}+)
+1590057596	Xnero	chinaglobalmobility\.org
 1590064492	Machavity	wifi-extsetup\.com
 1590066233	Machavity	myamplifiers\.com
 1590068067	Machavity	192-168-11\.me
 1590075242	user12986714	dwnlds\.co
-1590075526	Daniil	deveondi\.com
+1590075526	Xnero	deveondi\.com
 1590090453	Makyen	uniccsshop\.io
 1590118391	Makyen	educationbygyan\.blogspot
 1590118419	Makyen	(?-i:s9uPt\.jpg)
@@ -20280,7 +20280,7 @@
 1590232323	Glorfindel	gi\W*tagged
 1590235205	Kulfy	biggboss14latestepisode\.com
 1590242786	A J 9	bhartiwale\.in
-1590247179	Daniil	chocolaty\.in
+1590247179	Xnero	chocolaty\.in
 1590252350	Makyen	pereykhrizjayce\.wixsite\.com
 1590254039	Makyen	henan[\W_]*+huawei(?:[\W_]*+(?:aluminum|co|ltd))*
 1590254064	Makyen	(?-i:HWALU)
@@ -20307,8 +20307,8 @@
 1590357191	Makyen	penningtonprimarycare\.com
 1590357219	Makyen	pennington[\W_]*+primary[\W_]*+care(?!\.com(?<=penningtonprimarycare\.com))
 1590357246	Makyen	techynickk\.com
-1590359083	Daniil	josesoal(?<=\bmedium\.com/@josesoal)
-1590364396	Daniil	pagerhackconsult[s_]*247(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1590359083	Xnero	josesoal(?<=\bmedium\.com/@josesoal)
+1590364396	Xnero	pagerhackconsult[s_]*247(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1590381943	tripleee	bytedance\.com
 1590381984	tripleee	tik[\W_]*+tok[\W_]*+monetization
 1590382042	tripleee	liu[\W_]*+rui[\W_]*+min
@@ -20324,11 +20324,11 @@
 1590394041	tripleee	it-seo\.pp\.ua
 1590397548	tripleee	yourdishwasherguide\.com
 1590407578	Makyen	american[\W_]*+liberty[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1590413364	Daniil	pixalive\.me
-1590415237	Daniil	nishant\.prasad(?<=medium\.com/@nishant\.prasad)
-1590416191	Daniil	treebayads\.com
+1590413364	Xnero	pixalive\.me
+1590415237	Xnero	nishant\.prasad(?<=medium\.com/@nishant\.prasad)
+1590416191	Xnero	treebayads\.com
 1590416337	Makyen	treebay[\W_]*+ads(?!\.com(?<=treebayads\.com))
-1590417356	Daniil	m\.shahiri\.m(?:@gmail\.com)?
+1590417356	Xnero	m\.shahiri\.m(?:@gmail\.com)?
 1590431730	Makyen	(?-i:paxguru)(?#bit.ly)
 1590431755	Makyen	paxful\.guru
 1590435976	Makyen	sandiptrivedi\.com
@@ -20343,7 +20343,7 @@
 1590438676	Makyen	247emergencyplumber\.ca
 1590438701	Makyen	marcoscravero2175(?#github.com)
 1590438727	Makyen	43140898(?<=\bacademia\.edu/43140898)
-1590447398	Daniil	assolutions\.ca
+1590447398	Xnero	assolutions\.ca
 1590456550	Makyen	patchmaker\.com
 1590453140	user12986714	justnobz\.com
 1590459786	Makyen	tokyoghoulmask\.com
@@ -20370,7 +20370,7 @@
 1590492836	tripleee	americanblogreaders\.blogspot\.com
 1590496022	tripleee	indiaeve(?!\.com)
 1590505043	Glorfindel	mt-koreatoto\.com
-1590515443	Daniil	sarkariwant\.com
+1590515443	Xnero	sarkariwant\.com
 1590516036	Machavity	catchfast\.in
 1590530648	Makyen	brainpills
 1590544590	user12986714	oraclehacksunlimited(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -20442,8 +20442,8 @@
 1590670780	Jeff Schaller	tellthebell\.one
 1590679184	Machavity	windows10pdf\.com
 1590681956	Machavity	(?-i:3eqElvy)(?#url shortener)
-1590684612	Daniil	divyansh\.singh(?:@jktech\.com)?
-1590685654	Daniil	befantastictoday\.com
+1590684612	Xnero	divyansh\.singh(?:@jktech\.com)?
+1590685654	Xnero	befantastictoday\.com
 1590714973	Makyen	readersmagnet\.com
 1590730212	Makyen	jasapkv168\.com
 1590730238	Makyen	jasapkv168(?!\.com)
@@ -20472,7 +20472,7 @@
 1590816712	Makyen	speedyvisaguru\.com
 1590818107	Makyen	pokerwan\.com
 1590824865	rene	imagesday\.com
-1590867888	Daniil	everlymap\.com
+1590867888	Xnero	everlymap\.com
 1590870817	Makyen	besthoverboardreview\.com
 1590871430	Makyen	european[\W_]*+finance[\W_]*+group
 1590875744	Makyen	meripustak\.com
@@ -20487,7 +20487,7 @@
 1590907593	Makyen	gx[\W_]*+smartwatch(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1590907685	Makyen	esalesanalyst\.com
 1590926047	Mithical	palmitate
-1590928839	Daniil	ptowifi\.com
+1590928839	Xnero	ptowifi\.com
 1590935075	user12986714	totaltechhub\.com
 1590834303	Jeff Schaller	shayari4you\.com
 1590937260	Jeff Schaller	allquestlimo\.com
@@ -20516,7 +20516,7 @@
 1590990536	tripleee	beingdhruv\.com
 1590992006	tripleee	progressandwin\.com
 1590993799	tripleee	aima\.in
-1591007818	Daniil	dubaistorageall\.com
+1591007818	Xnero	dubaistorageall\.com
 1591014063	tripleee	netspeed\.live
 1591017365	ArtOfCode	topmattressguide\.com
 1591019549	Makyen	wellbeing[\W_]*+labs
@@ -20544,7 +20544,7 @@
 1591084167	tripleee	sex\.vietnam\.net\.com
 1591084520	Makyen	toui69\.com
 1591096407	tripleee	vanshveda\.com
-1591102909	Daniil	exportgenius\.in
+1591102909	Xnero	exportgenius\.in
 1591103418	tripleee	export[\W_]*+genius(?!\.in)
 1591111703	Makyen	rex[\W_]*+md
 1591114605	double-beep	(?-i:UCY3RhICG9cp4IDkq9M-54hQ)(?#YouTube channel)
@@ -20597,7 +20597,7 @@
 1591213977	Makyen	contsorp\.com\.ng
 1591217901	Makyen	exoticfonts\.com
 1591220851	Makyen	gfinotify\.info
-1591226314	Daniil	fastesaletter\.com
+1591226314	Xnero	fastesaletter\.com
 1591227328	user12986714	real[\W_]*+estate[\W_]*+hunters?
 1591230568	Makyen	reliable[\W_]*+hacker
 1591243147	user12986714	better-talents\.com
@@ -20618,7 +20618,7 @@
 1591267612	tripleee	wellnesscarepills(?!\.com)[\W_]*+com
 1591267768	tripleee	thedatagiantgroup\.co\.uk
 1591272455	tripleee	clashcoder\.tech
-1591276711	Daniil	optimusfox\.com
+1591276711	Xnero	optimusfox\.com
 1591277447	tripleee	freeessaywriters\.net
 1591277583	tripleee	(?-i:fTxrlL7vjxk)(?# youtube)
 1591277693	tripleee	tekneed\.com
@@ -20648,16 +20648,16 @@
 1591344037	tripleee	sweepstakesoffers\.com
 1591345113	Makyen	(?-i:uI0CfX2ePD0)(?#youtu.be)
 1591345182	tripleee	cremotors\.com
-1591348773	Daniil	clippingpath360\.com
+1591348773	Xnero	clippingpath360\.com
 1591348893	Glorfindel	nepaltrekkingroutes\.com
-1591353167	Daniil	maxpanda\.com
+1591353167	Xnero	maxpanda\.com
 1591355166	tripleee	portalquery\.com
 1591355380	tripleee	tsangshu\.singapore(?# @medium)
 1591355642	tripleee	novocareindia\.com
 1591356934	tripleee	worthacoin\.com
 1591358000	Jeff Schaller	techismart\.in
 1591360991	tripleee	wordfinder\.tips
-1591363478	Daniil	(?-i:18180de7)(?#surveyhero)
+1591363478	Xnero	(?-i:18180de7)(?#surveyhero)
 1591369831	Makyen	luismiguelopera96(?:@hotmail\.com)?
 1591375788	Makyen	trangtriquangcao\.com
 1591377386	Makyen	freebitco\.in
@@ -20678,7 +20678,7 @@
 1591426836	Makyen	photoadking\.com
 1591430905	Makyen	123-hp-support-number\.com
 1591443163	Nisse Engström	camfordacademy\.com
-1591446353	Daniil	sfcable\.com
+1591446353	Xnero	sfcable\.com
 1591450615	doppelgreener	5efeats\.com
 1591457695	Makyen	timebox\.link
 1591453088	user12986714	towardanswer\.wordpress
@@ -20696,8 +20696,8 @@
 1591517274	Makyen	granite[\W_]*+me
 1591517300	Makyen	srs-gis\.ir
 1591522676	Makyen	ibikri\.com
-1591535229	Daniil	freebacklinkgenerator\.net
-1591545607	Daniil	techyez\.com
+1591535229	Xnero	freebacklinkgenerator\.net
+1591545607	Xnero	techyez\.com
 1591547691	Makyen	(?-i:aZn6QdzFXys)(?#youtu.be)
 1591547719	Makyen	wandalone(?#gumroad.com)
 1591547744	Makyen	201581196879064(?# form.jotform.com)
@@ -20729,9 +20729,9 @@
 1591605177	tripleee	ben[\W_]*+uk\d*(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1591605307	tripleee	jxcy\.dev
 1591605684	tripleee	pmp[\W_]*+certificat(?:e|ion)s?
-1591606512	Daniil	goexhib\.com
+1591606512	Xnero	goexhib\.com
 1591609709	Glorfindel	utopia\.fans
-1591611451	Daniil	exploretibet\.com
+1591611451	Xnero	exploretibet\.com
 1591617943	tripleee	gedeon[\W_]*+be[\W_]*focused
 1591619009	Machavity	popcornflix\.one
 1591619035	Machavity	khatrimaza\.fit
@@ -20762,8 +20762,8 @@
 1591697771	tripleee	butterflyayurveda\.com
 1591700907	tripleee	sweepstakesnew\.com
 1591702994	Glorfindel	gofundraising\.net
-1591703033	Daniil	purevpn\.com
-1591704232	Daniil	plusacademic\.com
+1591703033	Xnero	purevpn\.com
+1591704232	Xnero	plusacademic\.com
 1591705818	tripleee	globaltechhninza\.com
 1591706425	tripleee	clemens[\W_]*+dox
 1591713881	Machavity	aquilaclouds\.com
@@ -20823,19 +20823,19 @@
 1591862920	tripleee	health[\W_]*+stores\d*
 1591862953	tripleee	femme[\W_]*+genix
 1591863892	tripleee	howtoisolve\.com
-1591865785	Daniil	railrestro\.com
+1591865785	Xnero	railrestro\.com
 1591865800	tripleee	railmitra\.com
-1591866068	Daniil	RailRestro
+1591866068	Xnero	RailRestro
 1591869312	tripleee	glasgow-media\.biz
 1591869431	tripleee	clash[\W_]*+coder(?!\.tech)
-1591869545	Daniil	NextraOne
-1591874130	Daniil	Kilahzzcolourful(?:@gmail\.com)?
-1591874708	Daniil	modelinmumbai\.in
-1591874858	Daniil	123hp\.tech
-1591881074	Daniil	goindiatrade\.in
+1591869545	Xnero	NextraOne
+1591874130	Xnero	Kilahzzcolourful(?:@gmail\.com)?
+1591874708	Xnero	modelinmumbai\.in
+1591874858	Xnero	123hp\.tech
+1591881074	Xnero	goindiatrade\.in
 1591881616	Machavity	easy365manager\.com
-1591883008	Daniil	musici\.com
-1591883094	Daniil	Rock9ia
+1591883008	Xnero	musici\.com
+1591883094	Xnero	Rock9ia
 1591892638	user12986714	circularsawjudge\.com
 1591901998	Makyen	a0n3a00000fp1taua1(?#appexchange.salesforce.com)
 1591902015	Makyen	iranvisa24\.com
@@ -20843,7 +20843,7 @@
 1591908162	Machavity	siroccodustless\.com
 1591913385	user12986714	eldwar\.com
 1591914459	user12986714	hack into any atm machine
-1591925563	Daniil	quickbooksdiagnostic\.tools
+1591925563	Xnero	quickbooksdiagnostic\.tools
 1591929118	NobodyNada	bikini-bombshell\.com
 1591929157	NobodyNada	bikini\W*bombshell(?!\.com)
 1591935136	NobodyNada	soicau6868\.net
@@ -20894,8 +20894,8 @@
 1592058661	Makyen	virmarusa13
 1592058678	Makyen	bmaills\.com
 1592058694	Makyen	ketobodytonecymes(?#sites.google.com)
-1592062904	Daniil	oxbridgeassignments\.co\.uk
-1592062978	Daniil	(?-i:W1G 0DB)(?#Spammer postcode)
+1592062904	Xnero	oxbridgeassignments\.co\.uk
+1592062978	Xnero	(?-i:W1G 0DB)(?#Spammer postcode)
 1592070147	user12986714	(?-i:KRmd2sUxI98)(?#youtube.com)
 1592074820	user12986714	mysolutioncafe\.blogspot
 1592093904	Makyen	ranthamborenationalpark\.com
@@ -20925,14 +20925,14 @@
 1592143595	Glorfindel	5factum\.com
 1592143720	Byte Commander	nanowatch\.org
 1592173628	user12986714	kinotv\.net
-1592174489	Daniil	youronlinetricks\.com
+1592174489	Xnero	youronlinetricks\.com
 1592187078	Makyen	authenticoption\.com
 1592224947	Machavity	kanavancecbd\.blogspot\.com
 1592225058	Machavity	stillbonarticles\.com
 1592226179	Machavity	migrateemails\.com
 1592226355	Machavity	fixlocal\.co\.uk
-1592228992	Daniil	Fixlocal(?#no case sensitive flag as the user used this name with two different capitalisations)
-1592229378	Daniil	(?-i:ketosis)
+1592228992	Xnero	Fixlocal(?#no case sensitive flag as the user used this name with two different capitalisations)
+1592229378	Xnero	(?-i:ketosis)
 1592231725	Machavity	machinerypicks\.com
 1592234016	Makyen	watumie[\W_]*+uwapendao
 1592234031	Makyen	(?-i:0Ajvd\.gif)
@@ -20943,22 +20943,22 @@
 1592248654	Makyen	(?-i:ejoG0)(?#shorturl.at)
 1592248679	Makyen	nykdaily\.com
 1592248848	Makyen	cialixpillreviews(?#sites.google.com)
-1592251613	Daniil	trendyoo\.in
-1592251666	Daniil	trendyoo
+1592251613	Xnero	trendyoo\.in
+1592251666	Xnero	trendyoo
 1592252603	user12986714	lovespace
-1592253358	Daniil	Robinsonbuckler(?:[\W_]*+(?:at[\W_]*+)?yahoo(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-1592253552	Daniil	pflugfelder\.de
+1592253358	Xnero	Robinsonbuckler(?:[\W_]*+(?:at[\W_]*+)?yahoo(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1592253552	Xnero	pflugfelder\.de
 1592286880	Makyen	klevvrtech\.com
-1592298586	Daniil	issues\.wenzhixin\.net\.cn
-1592298967	Daniil	CoolCatCole(?:@earthlink\.net)?
-1592301416	Daniil	daftar-slotonline\.com
-1592308946	Daniil	ifacetimeapp\.com
+1592298586	Xnero	issues\.wenzhixin\.net\.cn
+1592298967	Xnero	CoolCatCole(?:@earthlink\.net)?
+1592301416	Xnero	daftar-slotonline\.com
+1592308946	Xnero	ifacetimeapp\.com
 1592318418	Machavity	marquix\.net
 1592319430	user12986714	mjackets\.com
-1592319721	Daniil	world-airport-database\.com
-1592319748	Daniil	richdad-poordad\.com
-1592319785	Daniil	airport-database\.net
-1592319805	Daniil	poordad-richdad\.com
+1592319721	Xnero	world-airport-database\.com
+1592319748	Xnero	richdad-poordad\.com
+1592319785	Xnero	airport-database\.net
+1592319805	Xnero	poordad-richdad\.com
 1592320000	user12986714	richdad
 1592320106	user12986714	caodangyduochcm\.vn
 1592252578	user12986714	bystored\.com
@@ -20972,14 +20972,14 @@
 1592363349	Makyen	(?-i:hOtuK\.png)
 1592377367	Makyen	adsct\.com\.au
 1592369128	user12986714	purchasetheme\.com
-1592381622	Daniil	appblaze\.com
-1592382294	Daniil	(?-i:Safestore)
-1592382338	Daniil	luggagehero\.com
-1592382436	Daniil	accessstorage\.com
+1592381622	Xnero	appblaze\.com
+1592382294	Xnero	(?-i:Safestore)
+1592382338	Xnero	luggagehero\.com
+1592382436	Xnero	accessstorage\.com
 1592385619	Makyen	neat-and-net\.com
-1592386858	Daniil	(?:info@)?citystasher\.com
-1592407907	Daniil	tezbox\.io
-1592407924	Daniil	tezbox\.com
+1592386858	Xnero	(?:info@)?citystasher\.com
+1592407907	Xnero	tezbox\.io
+1592407924	Xnero	tezbox\.com
 1592408419	Makyen	empirealcobrev\.in
 1592411122	Machavity	theforexbroker\.co\.uk
 1592415719	user12986714	blogintelugu\.com
@@ -21018,7 +21018,7 @@
 1592506476	Makyen	sartajseofreelancerinkolkata(?#sites.google.com)
 1592508675	Makyen	vitalca18(?#gumroad.com)
 1592511051	Makyen	conservationconstructionofhouston\.com
-1592511961	Daniil	dragonvape\.ca
+1592511961	Xnero	dragonvape\.ca
 1592521735	NobodyNada	airpods\.co\.ke
 1592526455	NobodyNada	Mirc_Coffee_World(?#t.me)
 1592536706	Makyen	btc[\W_]*+investment[\W_]*+funding(?:@gmail\.com)?
@@ -21029,19 +21029,19 @@
 1592551014	Makyen	hpprinterdrivers\.support
 1592551637	Makyen	aolmailx\.com
 1592551867	Makyen	echineselearning\.com
-1592554015	Daniil	stylishcostcalculator\.com
+1592554015	Xnero	stylishcostcalculator\.com
 1592555799	Makyen	google_ad_client(?=\s*+:)
 1592558436	Makyen	com\.slappslab\.street\.view\.findroutes\.nearbyplaces
 1592558493	Makyen	testo360[\W_]*+ultra(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1592566191	Daniil	atharvasystem\.com
+1592566191	Xnero	atharvasystem\.com
 1592567752	Makyen	(?-i:bestfinancialmarket)(?#t.me)
 1592568493	Makyen	assignment\.org\.uk
-1592586364	Daniil	bnson\.co\.uk
+1592586364	Xnero	bnson\.co\.uk
 1592591018	Makyen	(?-i:KTBIO\.jpg)
 1592594229	Nisse Engström	infilate\.com
-1592597254	Daniil	cricgenie\.in
-1592608300	Daniil	@cbb40292(?<=medium\.com/@cbb40292)
-1592612699	Daniil	(?-i:1NZ1-CDjmIA)(?#YouTube)
+1592597254	Xnero	cricgenie\.in
+1592608300	Xnero	@cbb40292(?<=medium\.com/@cbb40292)
+1592612699	Xnero	(?-i:1NZ1-CDjmIA)(?#YouTube)
 1592619999	Makyen	powerfulspellcast(?:@gmail\.com)?
 1592629850	Makyen	sapiyo\.com
 1592627057	user12986714	oppojobs\.com
@@ -21074,16 +21074,16 @@
 1592656594	Makyen	techomconsulting\.com
 1592656613	Makyen	reliablehacker\d+(?:@gmail\.com)?(?#seen: reliablehacker06)
 1592656660	Makyen	techom[\W_]*+consulting(?!\.com(?<=techomconsulting\.com))
-1592664000	Daniil	bxrank\.com
+1592664000	Xnero	bxrank\.com
 1592669033	Makyen	backgroundremover\.net
 1592669047	Makyen	placementmaster\.in
 1592669062	Makyen	cheapnotic\.com
-1592670614	Daniil	bxrank(?!\.com)
+1592670614	Xnero	bxrank(?!\.com)
 1592669996	user12986714	dubai car rental
 1592672775	user12986714	doctorjinasuka\.wordpress
 1592677770	Jeff Schaller	onlinemarketing-leben\.de
 1592684573	NobodyNada	rapidapi\.com\/(?:\w|[\-])*?api29(?:\w|[\-])*+
-1592684592	Daniil	samsungfirmware\.net
+1592684592	Xnero	samsungfirmware\.net
 1592693709	Makyen	techviewz\.com
 1592693900	Makyen	artelliq\.com
 1592696767	user12986714	\w{0,30}assign(?:ments?)?\W*+helps?\.[\w\.]*+
@@ -21095,13 +21095,13 @@
 1592715417	NobodyNada	google-services-api(?#pip package by Outscraper)
 1592723034	Makyen	topgistextra\.com
 1592726875	Makyen	cunhoalonso(?:@gmail\.com)?
-1592741326	Daniil	excelexpertblog\.blogspot\.com
-1592741341	Daniil	alljobalert\.info
-1592746146	Daniil	thestudyiq\.com
-1592746161	Daniil	(?-i:The Study IQ)
+1592741326	Xnero	excelexpertblog\.blogspot\.com
+1592741341	Xnero	alljobalert\.info
+1592746146	Xnero	thestudyiq\.com
+1592746161	Xnero	(?-i:The Study IQ)
 1592759823	user12986714	dosya\.pro
 1592764844	NobodyNada	mydigitalfiling\.in
-1592769322	Daniil	ericahess(?<=jotform\.com/ericahess)
+1592769322	Xnero	ericahess(?<=jotform\.com/ericahess)
 1592777506	Makyen	distancematrixapi\.com
 1592702885	user12986714	sambrano\d*+\.es
 1592801925	Makyen	emrpms\.blogspot
@@ -21118,11 +21118,11 @@
 1592826006	rene	todoecofriendly\.uk
 1592826044	rene	todoecofriendly\.es
 1592834623	Glorfindel	multimediabomb\.com
-1592835415	Daniil	yournewtyres\.co\.uk
-1592838090	Daniil	bangingtoolbox\.com
+1592835415	Xnero	yournewtyres\.co\.uk
+1592838090	Xnero	bangingtoolbox\.com
 1592841185	user12986714	noolulagam\.com
 1592842403	user12986714	infoseedcomputers\.com
-1592843503	Daniil	(?-i:QuickBooks UK VAT Dealer)
+1592843503	Xnero	(?-i:QuickBooks UK VAT Dealer)
 1592844359	user12986714	tagpk\.com
 1592850289	Machavity	originalweedshop\.com
 1592850319	user12986714	originalweedshop(?:@gmail\.com)?(?!\.com)
@@ -21143,13 +21143,13 @@
 1592879772	user12986714	mycountrydecor\.com
 1592887870	Makyen	128\.199\.192\.155
 1592897932	rene	wanshiyitex\.com
-1592900606	Daniil	lemarbet\.com
-1592900683	Daniil	qiuratu\.com
-1592900803	Daniil	iuse\.tech
-1592910229	Daniil	translator\.techzhackz\.com
-1592911368	Daniil	elektroniksigaravip2\.com
+1592900606	Xnero	lemarbet\.com
+1592900683	Xnero	qiuratu\.com
+1592900803	Xnero	iuse\.tech
+1592910229	Xnero	translator\.techzhackz\.com
+1592911368	Xnero	elektroniksigaravip2\.com
 1592913608	Jeff Schaller	thaisoccernews\.com
-1592915190	Daniil	hexmarkrecords\.com
+1592915190	Xnero	hexmarkrecords\.com
 1592918252	Machavity	amixr\.io
 1592918316	Machavity	miaomiao\.cool
 1592922511	Machavity	(?-i:ewEoHhWpI5M)(?#Youtube)
@@ -21170,7 +21170,7 @@
 1592983124	Makyen	٠٠٩٦٢٧٩٧٧٤٦٧٠٠
 1592984507	iBug	domachining\.com
 1592988134	Makyen	realdigitalmarketer\.blogspot
-1592990414	Daniil	monacosolicitors\.co\.uk
+1592990414	Xnero	monacosolicitors\.co\.uk
 1592990921	Makyen	hpsupportphonenumbers\.com
 1593001223	Machavity	how-to-generate-passive-income\.blogspot\.com
 1593000882	Jeff Schaller	gangoh\.com
@@ -21179,7 +21179,7 @@
 1593012561	Machavity	ustv247\.tv
 1592953785	Sonic the Masked Werehog	(?-i:^90 98$)
 1593018243	Makyen	send[\W_]*+money[\W_]*+to[\W_]*+ghana
-1593037513	Daniil	(?-i:Washington Guns)
+1593037513	Xnero	(?-i:Washington Guns)
 1593060680	Makyen	andwebtraffic\.org
 1593067419	Makyen	callgirlsinindia\.com
 1593067489	Glorfindel	techbams\.com
@@ -21203,25 +21203,25 @@
 1593093765	Makyen	acte\.in
 1593094481	Makyen	mmendescortes\.eti\.br
 1593094496	Makyen	mrtechsonu\.com
-1593099468	Daniil	kartit\.us
+1593099468	Xnero	kartit\.us
 1593104360	Machavity	ACE\WMoney\WTransfer
 1593104475	Makyen	palmastationery\.com
 1593105576	Machavity	(?-i:^William Penn$)
 1593112614	Machavity	(?-i:^nicklon khokhar$)
 1593140255	Machavity	(?-i:^Ahmed Aniss$)
 1593144138	Makyen	(?-i:j-mT3B2LPy4)(?#youtu.be)
-1593159177	Daniil	(?-i:End of (L|l)ease Melbourne)
-1593160084	Daniil	serhiipuzyrov\.com
-1593160110	Daniil	wesignature\.com
-1593160262	Daniil	wesignature(?!\.com)
-1593160531	Daniil	(?-i:ATTRACTION SPELLS & LOVE BINDING SPELLS)
-1593160553	Daniil	spiritualhealingpowers\.co\.za
-1593164366	Daniil	qqasean99\.com
+1593159177	Xnero	(?-i:End of (L|l)ease Melbourne)
+1593160084	Xnero	serhiipuzyrov\.com
+1593160110	Xnero	wesignature\.com
+1593160262	Xnero	wesignature(?!\.com)
+1593160531	Xnero	(?-i:ATTRACTION SPELLS & LOVE BINDING SPELLS)
+1593160553	Xnero	spiritualhealingpowers\.co\.za
+1593164366	Xnero	qqasean99\.com
 1593179336	Makyen	ultra[\W_]*+testo(?:[\W_]*+(?:extra|male|\d++|[\da-f]{5,}+)s?)*
 1593180104	Makyen	aolcustomercarenumberusa\.blogspot
 1593187067	Makyen	million[\W_]*+money(?:[\W_]*+(?:clone|script)s?)*
 1593191489	Makyen	indianwordpressexperts\.com
-1593194381	Daniil	(?-i:G3tr1ch)(?#Telegram)
+1593194381	Xnero	(?-i:G3tr1ch)(?#Telegram)
 1593196874	Makyen	ysmeds\.com
 1593196890	Makyen	priipharma\.com
 1593199024	Makyen	lagooffice(?!\.com)
@@ -21242,7 +21242,7 @@
 1593239741	Eliah Kagan	(?-i:OUSXsSQiYoo)(?#youtu.be)
 1593254712	Eliah Kagan	simplebackups\.io
 1593255111	Eliah Kagan	docmation\.com
-1593267814	Daniil	kalanchiyamtutorials\.com
+1593267814	Xnero	kalanchiyamtutorials\.com
 1593289368	Makyen	(?-i:FZf3YLTE8E77e508Vlk4Bo)(?#chat.whatsapp.com)
 1593292261	Makyen	(?-i:instapro-apk)(?#myapklab.com)
 1593293248	Makyen	lighthouseindia\.com
@@ -21253,14 +21253,14 @@
 1593325477	Makyen	nuturaltreehouse
 1593324611	user12986714	(?:used\W*+to\W*+|python(?:2|3)?\W*+(?:newbies?\W*+)?)troll(?:ing)?
 1593334530	Kulfy	talentfuturesservices\.com
-1593345551	Daniil	cervezascanarias\.es
-1593347191	Daniil	(?-i:6TQoSMBhE6k)(?#YouTube)
-1593347229	Daniil	(?-i:dCm-ABu4VEE)(?#YouTube)
-1593347295	Daniil	(?-i:EU2gXX3XUJI)(?#YouTube)
-1593354031	Daniil	(?-i:ozWlPFveG5g)(?#YouTube)
-1593354117	Daniil	(?-i:dCm-ABu4VE)(?#YouTube)
-1593354169	Daniil	(?-i:icSSkyvBsjg)(?#YouTube)
-1593373595	Daniil	Byaskuchi High school
+1593345551	Xnero	cervezascanarias\.es
+1593347191	Xnero	(?-i:6TQoSMBhE6k)(?#YouTube)
+1593347229	Xnero	(?-i:dCm-ABu4VEE)(?#YouTube)
+1593347295	Xnero	(?-i:EU2gXX3XUJI)(?#YouTube)
+1593354031	Xnero	(?-i:ozWlPFveG5g)(?#YouTube)
+1593354117	Xnero	(?-i:dCm-ABu4VE)(?#YouTube)
+1593354169	Xnero	(?-i:icSSkyvBsjg)(?#YouTube)
+1593373595	Xnero	Byaskuchi High school
 1593330554	user12986714	instahotstar\.com
 1593391453	user12986714	continualintegration\.com
 1593402968	tripleee	srangengineering\.com
@@ -21271,9 +21271,9 @@
 1593412015	Makyen	kickassanime\.rs
 1593412736	Makyen	onlineessayhelp\.co\.uk
 1593414724	Makyen	infatica\.io
-1593416537	Daniil	intellipaat\.com
-1593417467	Daniil	friv1000\.pro
-1593417494	Daniil	friv1000\.icu
+1593416537	Xnero	intellipaat\.com
+1593417467	Xnero	friv1000\.pro
+1593417494	Xnero	friv1000\.icu
 1593423982	tripleee	zw-cable\.com
 1593428247	tripleee	licechoice\.com
 1593428297	tripleee	rx-it\.com
@@ -21284,15 +21284,15 @@
 1593428948	tripleee	linuxploit(?!\.com)
 1593434391	tripleee	privateharleystreetclinic\.com
 1593434436	tripleee	(?-i:mhammad234)(?#fiverr)
-1593441494	Daniil	triclara\.com
-1593441524	Daniil	(?-i:dhyani solutions)
+1593441494	Xnero	triclara\.com
+1593441524	Xnero	(?-i:dhyani solutions)
 1593446086	Makyen	freybetgiris\.online
 1593446102	Makyen	freybet
 1593448767	user12986714	minervainstitute\.in
 1593449054	user12986714	technolaoder
 1593451097	user12986714	wodanio\.com
 1593450469	user12986714	onlinestreet\.co\.uk
-1593455731	Daniil	visit our website
+1593455731	Xnero	visit our website
 1593450095	user12986714	linux xploit
 1593450030	user12986714	(?-i:guP-N-B0vDE)(?#youtu.be)
 1593449850	user12986714	we\W*+provides?\W*+(?:\w*+(?:\W|\r|\n)*+){0,6}services?
@@ -21321,15 +21321,15 @@
 1593449678	user12986714	enterprises?\W*+resources?\W*+plan(?:ning)?
 1593450354	user12986714	covid\W*+(?:19\W*+)?test(?:ing)?\W*+kits?
 1593514653	tripleee	seamantravel\.club
-1593514753	Daniil	(?-i:Seaman Travel Club)
+1593514753	Xnero	(?-i:Seaman Travel Club)
 1593515140	Glorfindel	bitdroplet\.com
 1593515296	tripleee	(?-i:pooja shetty)
 1593515356	tripleee	(?-i:jrSY0)(?#shorturl.at)
 1593515374	tripleee	fullfun\.site
 1593516146	tripleee	atharveducation\.com
-1593526609	Daniil	(?-i:ZFlbNHagqHg)(?#YouTube)
+1593526609	Xnero	(?-i:ZFlbNHagqHg)(?#YouTube)
 1593533192	Thomas Ward	1x-rate\.com
-1593544533	Daniil	(?-i:indianStartupsss)(?#t.me)
+1593544533	Xnero	(?-i:indianStartupsss)(?#t.me)
 1593545604	Makyen	instantboostup\.com
 1593545645	Makyen	nationsilluminati4(?:@gmail\.com)?
 1593549521	user12986714	canoesurfer\.net
@@ -21342,9 +21342,9 @@
 1593592856	tripleee	acmecollinsschool\.com
 1593595528	tripleee	how-tofix\.com
 1593549180	user12986714	obidigbondubisi71(?:@gmail\.com)?
-1593601419	Daniil	code2engineer\.com
+1593601419	Xnero	code2engineer\.com
 1593604166	tripleee	usersadvice\.com
-1593610210	Daniil	chesssources\.com
+1593610210	Xnero	chesssources\.com
 1593611163	Machavity	(?-i:^Plus Academic$)
 1593616021	Makyen	mamere08libiran\.wixsite\.com
 1593616186	Machavity	mamere08libiran(?#wixsite)
@@ -21370,8 +21370,8 @@
 1593671974	rene	bsbroadcast\.com
 1593672116	Makyen	bs[\W_]*+broadcast(?!\.com(?<=bsbroadcast\.com))
 1593675683	Makyen	(?-i:IveFs0SiBXc)(?#youtu.be)
-1593676435	Daniil	makeourmoments\.com
-1593682807	Daniil	yalla-gomla\.com
+1593676435	Xnero	makeourmoments\.com
+1593682807	Xnero	yalla-gomla\.com
 1593683120	tripleee	(?-i:UCy6feo5KZ3vHtd3xcYEws6g)(?# youtube)
 1593683447	tripleee	codeo(?!token\.com|wallet\.online)[\W_]*?(?:token|wallet)
 1593683463	tripleee	codeotoken\.com
@@ -21398,28 +21398,28 @@
 1593760661	tripleee	etrolley(?!\.weebly)
 1593763370	tripleee	cherrywifarm\.com
 1593765244	Eliah Kagan	(?-i:lT9lewOUXUc)(?#youtu.be)
-1593766845	Daniil	Dr ezomo
-1593767496	Daniil	joescarrentalgoa\.com
-1593767532	Daniil	(?-i:Joes Self Drive Cars in Goa)
-1593769673	Daniil	marketwebdesigner\.com
-1593769690	Daniil	(?-i:ydx8RsrZQ28)(?#YouTube)
-1593769769	Daniil	(?-i:App Developer Seattle)
-1593772538	Daniil	awslagi\.com
-1593775183	Daniil	essaytigers\.co\.uk
-1593775272	Daniil	essaytigers(?!\.co\.uk)
-1593779103	Daniil	jazzcarrental\.com
-1593779174	Daniil	Rental( in)? Goa
+1593766845	Xnero	Dr ezomo
+1593767496	Xnero	joescarrentalgoa\.com
+1593767532	Xnero	(?-i:Joes Self Drive Cars in Goa)
+1593769673	Xnero	marketwebdesigner\.com
+1593769690	Xnero	(?-i:ydx8RsrZQ28)(?#YouTube)
+1593769769	Xnero	(?-i:App Developer Seattle)
+1593772538	Xnero	awslagi\.com
+1593775183	Xnero	essaytigers\.co\.uk
+1593775272	Xnero	essaytigers(?!\.co\.uk)
+1593779103	Xnero	jazzcarrental\.com
+1593779174	Xnero	Rental( in)? Goa
 1593779803	Eliah Kagan	dubaitranslationservice\.com
-1593783237	Daniil	traininginchennai\.co\.in
+1593783237	Xnero	traininginchennai\.co\.in
 1593789660	Eliah Kagan	mozark\.ai
 1593789740	Eliah Kagan	QAppAssure
 1593789842	Eliah Kagan	bikerentalingoa\.in
 1593790210	Eliah Kagan	QAppathon
-1593793926	Daniil	invest-my-money\.online
+1593793926	Xnero	invest-my-money\.online
 1593798562	Makyen	innovecs\.com
 1593798578	Makyen	gonyeaso@dslextreme\.com
 1593803246	Makyen	fun211211\.com
-1593803466	Daniil	myxml\.in/xml-utils\.html
+1593803466	Xnero	myxml\.in/xml-utils\.html
 1593820327	Makyen	776b4g2quo8w7ncuv6ycfufz23\.hop\.clickbank\.net
 1593820338	Makyen	56d6fj-d0neseueolpwdn10m2j\.hop\.clickbank\.net
 1593827511	Makyen	ratubola303\.net
@@ -21440,9 +21440,9 @@
 1593943304	Eliah Kagan	techyinvestor\.com
 1593943466	Eliah Kagan	debitcardgenerator\.com
 1593947961	Nisse Engström	intense-hosting\.com
-1593951813	Daniil	brainsphereit\.com
-1593951853	Daniil	(?-i:HostingSite)
-1593953491	Daniil	github\.com/AndyObtiva/
+1593951813	Xnero	brainsphereit\.com
+1593951853	Xnero	(?-i:HostingSite)
+1593953491	Xnero	github\.com/AndyObtiva/
 1593984393	Makyen	drakereherbalcure(?!\.wixsite\.com)(?:@gmail(?:\.com)?)?
 1593984412	Makyen	drakereremedy\.blogspot
 1593984427	Makyen	d(?:octo)?r[\W_]*+akere
@@ -21504,7 +21504,7 @@
 1594203580	Glorfindel	passionatefuturist\.com
 1594206389	Zoe	cooldrawingidea\.com
 1594207431	Eliah Kagan	soicau68\.com
-1594210021	Daniil	sohnisaiban\.com
+1594210021	Xnero	sohnisaiban\.com
 1594212215	Jeff Schaller	hokihdp365\.com
 1594222084	Makyen	novaco\.vn
 1594224664	Machavity	apprentus\.com
@@ -21546,18 +21546,18 @@
 1594360979	Makyen	yo1\.com
 1594360996	Makyen	ayurveda
 1594361154	Makyen	ravidhruv
-1594368747	Daniil	(?-i:UCHkPqeTrTlTvY23x3PwJzEA)(?#YouTube)
+1594368747	Xnero	(?-i:UCHkPqeTrTlTvY23x3PwJzEA)(?#YouTube)
 1594370679	Makyen	xổ\s*+số
 1594370700	Makyen	blog\.xsvn\.com
-1594370901	Daniil	digi\.uma\.ac\.id
+1594370901	Xnero	digi\.uma\.ac\.id
 1594371166	Makyen	bopmarket\.com
 1594374568	Glorfindel	thecarxpert\.com
-1594377615	Daniil	(?-i:nO7RFlecKyg)(?#YouTube)
-1594377633	Daniil	(?-i:zippilive)(?#Instagram)
-1594377656	Daniil	(?-i:zippichipwireless)(?#Facebook)
+1594377615	Xnero	(?-i:nO7RFlecKyg)(?#YouTube)
+1594377633	Xnero	(?-i:zippilive)(?#Instagram)
+1594377656	Xnero	(?-i:zippichipwireless)(?#Facebook)
 1594392711	Machavity	dignityrecoveryinc(?!\.org)
 1594392755	Machavity	dignityrecoveryinc\.org
-1594395970	Makyen	jotform\.com(?=/[\w-])(?!/(?:build|jsform|help|dropbox)[ /"])(?#Originally a straight domain watch by Daniil at 1592753988)
+1594395970	Makyen	jotform\.com(?=/[\w-])(?!/(?:build|jsform|help|dropbox)[ /"])(?#Originally a straight domain watch by Xnero at 1592753988)
 1594398293	Makyen	mcafeeweeb\.simplesite\.com
 1594410953	Machavity	apkfiles\.xyz
 1594414383	Makyen	greenmetric\.uma\.ac\.id
@@ -21595,7 +21595,7 @@
 1594562683	Nisse Engström	versatilehinditech\.com
 1594559463	Jeff Schaller	fbnquest\.com
 1594577889	Makyen	mastertophacker\.com
-1594586695	Daniil	bestmedico\.co
+1594586695	Xnero	bestmedico\.co
 1594593011	Makyen	test[\W_]*+bodz
 1594593045	Makyen	thomasoscarblackatmcard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1594600611	Makyen	animationboom\.net
@@ -21643,7 +21643,7 @@
 1594740687	Makyen	servernotfound\.es
 1594740705	Makyen	carpetcleaninghamiltonnz\.info
 1594740721	Makyen	savevideo\.guru
-1594743453	Daniil	tabij(?!\.com)
+1594743453	Xnero	tabij(?!\.com)
 1594750958	Machavity	libonomy(?!\.com)
 1594750976	Machavity	libonomy\.com
 1594756781	Machavity	pestcontrolbd\.net
@@ -21654,8 +21654,8 @@
 1594766275	Makyen	so_xcodes(?<=githelp\.io/h/so_xcodes)
 1594768030	user12986714	ihtambnafsak\.com
 1594770064	Machavity	cotter\.app
-1594772088	Daniil	(?-i:JkDp8ISSZJs)(?#YouTube)
-1594772149	Daniil	(?-i:M1SEMvu9ojE)(?#YouTube)
+1594772088	Xnero	(?-i:JkDp8ISSZJs)(?#YouTube)
+1594772149	Xnero	(?-i:M1SEMvu9ojE)(?#YouTube)
 1594773515	user12986714	haxwares\.com
 1594774800	Eliah Kagan	shopefe\.blogspot
 1594774845	Eliah Kagan	laptopunderbudget\.com
@@ -21665,40 +21665,40 @@
 1594788433	Makyen	pksongmp3\.in
 1594788454	Makyen	bluestonecraft\.com
 1594792181	Makyen	natnit\.net
-1594806944	Daniil	fixstation\.in
-1594806962	Daniil	ptvsportsmatch\.com
-1594807059	Daniil	estivasoftech\.com
-1594807080	Daniil	om\.prosignsglobal\.com
-1594807892	Daniil	mylescars\.com
+1594806944	Xnero	fixstation\.in
+1594806962	Xnero	ptvsportsmatch\.com
+1594807059	Xnero	estivasoftech\.com
+1594807080	Xnero	om\.prosignsglobal\.com
+1594807892	Xnero	mylescars\.com
 1594808131	John Dvorak	indiagift\.in
-1594808233	Daniil	mirandoacuenca\.es
-1594808251	Daniil	mirandoacuenca(?!\.com)
-1594808370	Daniil	newblogvip\.com
-1594808401	Daniil	cruxretail\.com
-1594808659	Daniil	stylesadviser\.com
+1594808233	Xnero	mirandoacuenca\.es
+1594808251	Xnero	mirandoacuenca(?!\.com)
+1594808370	Xnero	newblogvip\.com
+1594808401	Xnero	cruxretail\.com
+1594808659	Xnero	stylesadviser\.com
 1594815629	Machavity	youngevity\.me
-1594817257	Daniil	einfach-umzug\.com
-1594817302	Daniil	einfach\Wumzug(!\.com)
-1594817936	Daniil	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(#? obfuscated usmanovoilandgas60@mail.ru)
-1594818309	Daniil	fundayholidays\.com
-1594818599	Daniil	browseinfo\.in
-1594818616	Daniil	browseinfo(?!\.in)
+1594817257	Xnero	einfach-umzug\.com
+1594817302	Xnero	einfach\Wumzug(!\.com)
+1594817936	Xnero	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(#? obfuscated usmanovoilandgas60@mail.ru)
+1594818309	Xnero	fundayholidays\.com
+1594818599	Xnero	browseinfo\.in
+1594818616	Xnero	browseinfo(?!\.in)
 1594822520	Makyen	fbdon\.com
 1594822789	Makyen	d(?:octo)?r[\W_]*+okpodo
 1594822810	Makyen	dr\.okpodosolutionhome(?:@gmail\.com)?
 1594822828	Makyen	okpodosolutionhome\.blogspot
 1594822908	Machavity	evolinestore\.com
 1594822870	Jeff Schaller	technobridge\.in
-1594824361	Daniil	edailystar\.com
+1594824361	Xnero	edailystar\.com
 1594824475	Makyen	apnasandesh\.com
-1594827494	Daniil	dwall\.online
+1594827494	Xnero	dwall\.online
 1594825986	user12986714	finddatalab\.com
 1594833764	user12986714	sachinajmeraclasses\.com
 1594835032	Makyen	tarun\.singh(?=@coolbootsmedia\.com)
 1594835049	Makyen	coolbootsmedia\.com
-1594840955	Daniil	(?-i:2Zy7Ozc)(?#bit.ly)
-1594841230	Daniil	Qureka\W*Lite
-1594854945	Daniil	entersay\.com
+1594840955	Xnero	(?-i:2Zy7Ozc)(?#bit.ly)
+1594841230	Xnero	Qureka\W*Lite
+1594854945	Xnero	entersay\.com
 1594865355	Makyen	covid19hack\.devpost\.com
 1594865370	Makyen	gerialworld(?:@gmail\.com)?
 1594867810	Machavity	globalspytech(?:@gmail\.com)?
@@ -21706,52 +21706,52 @@
 1594874729	Makyen	ido\.kiwi
 1594874746	Makyen	pikakun19(?:@gmail\.com)?
 1594874813	Makyen	hellostake\.com
-1594886072	Daniil	sarandaforest\.in
-1594886173	Daniil	coinbreze
-1594886314	Daniil	75health\.com
-1594886374	Daniil	poecurrency\.com
-1594886841	Daniil	Askmeoffers(?!\.com)
-1594889771	Daniil	chronodivers\.com
-1594906863	Daniil	zaibis(?!\.com)
+1594886072	Xnero	sarandaforest\.in
+1594886173	Xnero	coinbreze
+1594886314	Xnero	75health\.com
+1594886374	Xnero	poecurrency\.com
+1594886841	Xnero	Askmeoffers(?!\.com)
+1594889771	Xnero	chronodivers\.com
+1594906863	Xnero	zaibis(?!\.com)
 1594927187	user12986714	198\.54\.115\.127
-1594973069	Daniil	(?-i:3eFRRLo)(?#bit.ly)
-1594973602	Daniil	brazilsoybeansuppliers\.com
+1594973069	Xnero	(?-i:3eFRRLo)(?#bit.ly)
+1594973602	Xnero	brazilsoybeansuppliers\.com
 1594967254	user12986714	salesdirector\.ai
 1594951367	user12986714	game79zone\.com
-1594979539	Daniil	edbalance\.com
-1594981160	Daniil	appsinvo\.com
-1594985589	Daniil	skncosmetics\.com
-1594985735	Daniil	kytero\.com
+1594979539	Xnero	edbalance\.com
+1594981160	Xnero	appsinvo\.com
+1594985589	Xnero	skncosmetics\.com
+1594985735	Xnero	kytero\.com
 1594987181	Machavity	shia[\W_]*asks
-1594987627	Daniil	form\.jotform\.com
+1594987627	Xnero	form\.jotform\.com
 1594988160	Jeff Schaller	ukrainiantvcompany\.com
-1594990041	Daniil	iairtickets\.com
-1594990060	Daniil	(?-i:Allegiant Airlines)
-1594993312	Daniil	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
+1594990041	Xnero	iairtickets\.com
+1594990060	Xnero	(?-i:Allegiant Airlines)
+1594993312	Xnero	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
 1594994918	Machavity	bestiefood\.com
-1594995601	Daniil	cboinfotech\.com
-1594997455	Daniil	amazing\.populiser\.com
+1594995601	Xnero	cboinfotech\.com
+1594997455	Xnero	amazing\.populiser\.com
 1595003517	Makyen	tehrankelaymer\.com
 1595011150	Makyen	(?-i:C3MJFLQ)(?#surveymonkey.com)
-1595024950	Daniil	bigteeth\.ltd
+1595024950	Xnero	bigteeth\.ltd
 1595047203	Makyen	nspgov\.in
 1595047218	Makyen	howtogetdealership\.in
 1595047098	user12986714	powertoolsgudie\.com
 1595056164	Makyen	jointn-11us\.blogspot
 1595061219	Makyen	testoultracostarica\.co\.cr
-1595078693	Daniil	houstonembroideryservice\.com
-1595078715	Daniil	theenterprisegroupllc\.com
-1595078813	Daniil	factocert(?!\.com)
-1595078828	Daniil	factocert\.com
-1595078859	Daniil	stevemindmagicien\.fr
-1595079582	Daniil	digitalgurunow\.co\.uk
+1595078693	Xnero	houstonembroideryservice\.com
+1595078715	Xnero	theenterprisegroupllc\.com
+1595078813	Xnero	factocert(?!\.com)
+1595078828	Xnero	factocert\.com
+1595078859	Xnero	stevemindmagicien\.fr
+1595079582	Xnero	digitalgurunow\.co\.uk
 1595080068	Eliah Kagan	recruitmentpastquestions\.com\.ng
 1595080084	Eliah Kagan	americainfoblog\.com
 1595084541	Eliah Kagan	lasercut24\.net
-1595086170	Daniil	rossmanngroup\.com
-1595086222	Daniil	whiteruntz\.co
-1595086255	Daniil	lasercut24(?!\.net)
-1595088058	Daniil	computerservicesltd\.com
+1595086170	Xnero	rossmanngroup\.com
+1595086222	Xnero	whiteruntz\.co
+1595086255	Xnero	lasercut24(?!\.net)
+1595088058	Xnero	computerservicesltd\.com
 1595107148	Makyen	harshvishwakarma\.xyz
 1595131477	Makyen	(?-i:32yv0is)(?#bit.ly)
 1595133093	Makyen	bestreview\w*
@@ -21762,7 +21762,7 @@
 1595149483	Makyen	msiafterburner\.site
 1595172960	Makyen	superdeveloppeur\.wordpress\.com
 1595172981	Makyen	(?-i:iOV_vZW52bk)(?#youtu.be)
-1595173685	Daniil	pikwy\.com
+1595173685	Xnero	pikwy\.com
 1595177135	Machavity	sprinkle[\W_]*+data(?!\.com(?<=sprinkledata\.com))
 1595176330	user12986714	printernational\.co\.uk
 1595095423	user12986714	mysfdcninja\.blogspot
@@ -21834,7 +21834,7 @@
 1595349687	user12986714	datagroomr
 1595350278	Machavity	(?-i:a0N3A00000FMagqUAD)(?#Salesforce app)
 1595350299	Makyen	(?-i:hbYVwoSan90)(?#youtu.be)
-1595351425	Daniil	Interteck Packaging
+1595351425	Xnero	Interteck Packaging
 1595351306	user12986714	interteckpackaging\.com
 1595352087	user12986714	innovationmerge\.com
 1595352098	user12986714	innovationmerge(?!\.com)
@@ -21919,7 +21919,7 @@
 1595769087	Jeff Schaller	lichamduong
 1595769310	Eliah Kagan	lichamduongcom\.livejournal\.com
 1595775153	Jeff Schaller	websitedesignercanada\.ca
-1595782185	Daniil	thphotographyworld\.blogspot\.com
+1595782185	Xnero	thphotographyworld\.blogspot\.com
 1595788669	Glorfindel	herku\.com
 1595791319	Ian Campbell	mygodimages\.com
 1595792657	Mast	colortarget\.wordpress\.com
@@ -21979,10 +21979,10 @@
 1596007158	tripleee	justnorton\.com
 1596007175	tripleee	smnorton\.com
 1596011096	tripleee	qdrusa\.com
-1596014514	Daniil	cabhoo\.co\.uk
-1596014987	Daniil	butterfliesofindia\.wordpress\.com
+1596014514	Xnero	cabhoo\.co\.uk
+1596014987	Xnero	butterfliesofindia\.wordpress\.com
 1596016135	tripleee	marketherono1(?# fiverr.com)
-1596018018	Daniil	couponhawkers\.com
+1596018018	Xnero	couponhawkers\.com
 1596022261	tripleee	bestfanhub\.com
 1596024064	tripleee	directorysolutions\.co\.uk
 1596031103	tripleee	isoconsult
@@ -21992,8 +21992,8 @@
 1596039637	tripleee	footbal91\.com
 1596039654	tripleee	explosiongame\.info
 1596039669	tripleee	bartarinbet\.com
-1596042544	Daniil	authenticonlinedocuments\.com
-1596049423	Daniil	gconnectpro\.com
+1596042544	Xnero	authenticonlinedocuments\.com
+1596049423	Xnero	gconnectpro\.com
 1596055683	Makyen	bigk30001(?:@gmail\.com)?
 1596062422	NobodyNada	workos\.com
 1596062528	Makyen	workos[\W_]*+inc
@@ -22009,15 +22009,15 @@
 1596093484	Sonic the Masked Werehog	pillsfact\.com
 1596095909	Makyen	bestcargurus\.com
 1596097828	Nisse Engström	indiancallgirlindubai\.com
-1596102390	Daniil	typingdna\.com
-1596102624	Daniil	(?-i:39F2BbY)(?#bit.ly)
-1596103445	Daniil	72dpiskillz\.com(?<!hello@72dpiskillz\.com)
-1596103510	Daniil	seo-snel\.nl
+1596102390	Xnero	typingdna\.com
+1596102624	Xnero	(?-i:39F2BbY)(?#bit.ly)
+1596103445	Xnero	72dpiskillz\.com(?<!hello@72dpiskillz\.com)
+1596103510	Xnero	seo-snel\.nl
 1596107248	tripleee	jcwebpros\.com
 1596108888	tripleee	justcabbie\.co\.uk
-1596113779	Daniil	eneblur\.com
-1596115548	Daniil	hello@72dpiskillz\.com
-1596119549	Daniil	treasurebox\.com
+1596113779	Xnero	eneblur\.com
+1596115548	Xnero	hello@72dpiskillz\.com
+1596119549	Xnero	treasurebox\.com
 1596136207	Machavity	publicfinanceinternational\.org
 1596146298	NobodyNada	butt? crack effluent
 1596174219	NobodyNada	techclipse\.com
@@ -22032,13 +22032,13 @@
 1596180956	Nisse Engström	pokerclick88\.coffeecup\.com
 1596181113	Nisse Engström	coffeecup\.com
 1596193546	Cody Gray	onlinehelpinhindi\.in
-1596194325	Daniil	ondersteuningnummer\.com
+1596194325	Xnero	ondersteuningnummer\.com
 1596196402	tripleee	healthtrendspills\.com
 1596196448	tripleee	mammoth[\W_]*+male
 1596196576	doppelgreener	franklinfencingcompany\.com
 1596203605	tripleee	tomedes\.com
 1596211202	Machavity	amasty\.com
-1596213427	Daniil	bulldogsbreeder\.company\.com
+1596213427	Xnero	bulldogsbreeder\.company\.com
 1596229257	NobodyNada	pmicert\.page\.tl
 1596229272	NobodyNada	pmpcert\.page\.tl
 1596241328	Makyen	(?-i:alihasan193)(?#fiverr.com)
@@ -22053,8 +22053,8 @@
 1596274198	Mast	dodungnoithat\.vn
 1596282168	Jeff Schaller	medhahosting\.com
 1596300329	Makyen	asiatechnova\.com
-1596307304	Daniil	(?-i:sp2728)(#?GitHub)
-1596307337	Daniil	saikiran1298(?:@gmail\.com)?
+1596307304	Xnero	(?-i:sp2728)(#?GitHub)
+1596307337	Xnero	saikiran1298(?:@gmail\.com)?
 1596325680	NobodyNada	impressorahpdrivers\.com
 1596345409	NobodyNada	Could\snot\sdetermine\sjava\sversion\sfrom\s'14\.0\.2'
 1596349603	Nisse Engström	techthebite\.com
@@ -22094,7 +22094,7 @@
 1596521589	tripleee	cookclickndevour\.com
 1596522125	Makyen	watchmoviesonline\.in
 1596529754	tripleee	icrypex\.com
-1596530870	Daniil	(?-i:lk-f-3CDU4w)(?#YouTube)
+1596530870	Xnero	(?-i:lk-f-3CDU4w)(?#YouTube)
 1596538539	tripleee	pamenar\.co
 1596540882	tripleee	eurofix\.io
 1596547145	Machavity	(?-i:wTmFilUkClY)(?#Youtube NAA pattern)
@@ -22123,7 +22123,7 @@
 1596618867	tripleee	kansasxpress\.com
 1596618949	tripleee	skoolwork\.co\.uk
 1596619115	tripleee	wealthyaffiliate\.com
-1596622810	Daniil	Tunelf Audio Converter
+1596622810	Xnero	Tunelf Audio Converter
 1596622903	tripleee	advologysolution\.com
 1596623124	tripleee	advology(?:[\W_]*+solution(?!\.com))?
 1596623578	tripleee	puravidabracelets\.com
@@ -22153,7 +22153,7 @@
 1596708340	tripleee	dr-seo\.ir
 1596711466	tripleee	mavisohbet\.org
 1596711863	tripleee	ozclean\.com\.au
-1596712520	Daniil	faxlistb\.com
+1596712520	Xnero	faxlistb\.com
 1596714828	tripleee	relationbingo\.com
 1596714922	tripleee	kevispaandlashbar\.com
 1596715894	tripleee	t-rex\.exchange
@@ -22205,8 +22205,8 @@
 1596903437	Nisse Engström	lyzafashion\.com
 1596906290	user12986714	chimeratool\W*+utility
 1596911885	Makyen	mahrima[\W_]*+brotherhood
-1596912182	Daniil	designserviceasia\.com
-1596919936	Daniil	v8propaganda\.com\.br
+1596912182	Xnero	designserviceasia\.com
+1596919936	Xnero	v8propaganda\.com\.br
 1596934973	Makyen	revealfortomorrow\.com
 1596934990	Makyen	(?-i:2PxRoRo)(?#bit.ly)
 1596935005	Makyen	(?-i:tD2Wn\.jpg)
@@ -22241,7 +22241,7 @@
 1597062049	Mast	knowscape\.org
 1597063717	tripleee	anytimestrength\.com
 1597063840	tripleee	anytimestrength(?!\.com)
-1597079048	Daniil	totosite365\.info
+1597079048	Xnero	totosite365\.info
 1597085956	Machavity	elwlid\.com
 1597108519	Eliah Kagan	expertcreditscore\.com
 1597118604	tripleee	amazingbloger\.com
@@ -22299,7 +22299,7 @@
 1597238732	Mast	discreetarmsdealer\.com
 1597233645	Mast	askdrdevu\.com
 1597238984	tripleee	attorneysinwestpalmbeach\.com
-1597239007	Daniil	discreetarmsdealer(?:@gmail\.com)?
+1597239007	Xnero	discreetarmsdealer(?:@gmail\.com)?
 1597243550	Spevacus	universalfumigationservice\.com
 1597252832	tripleee	shubhaarambhh\.com
 1597253287	tripleee	(?-i:0gp5AfRVBwk)(?# youtube)
@@ -22325,7 +22325,7 @@
 1597311893	tripleee	jsonapi\.co
 1597312369	tripleee	zoor\.co\.uk
 1597312677	Mast	kodihelp\.co
-1597313341	Daniil	ivd24immobilien\.de
+1597313341	Xnero	ivd24immobilien\.de
 1597315025	tripleee	archermech\.com
 1597315175	tripleee	archer[\W_]*mech(?!\.com|anical)\w*+
 1597317378	Mast	bcomtimetable\.in
@@ -22335,8 +22335,8 @@
 1597330159	Jeff Schaller	webgostarangilan\.com
 1597331390	Machavity	poseidonia\.healthcare
 1597333875	Makyen	bpmtechguru\.in
-1597334758	Daniil	webgostarangilan(?!\.com)
-1597335906	Daniil	cobufarms\.com
+1597334758	Xnero	webgostarangilan(?!\.com)
+1597335906	Xnero	cobufarms\.com
 1597336815	Mast	oreotv\.xyz
 1597338710	Mast	ausweiswebsite\.net
 1597342909	Machavity	strongsleepingpill\.com
@@ -22363,41 +22363,41 @@
 1597419771	Machavity	sharpandfellows\.com
 1597414586	Spevacus	cracksray\.com
 1597340810	Mast	teshuzi\.com
-1597420324	Daniil	sharp\s*(and|&)\s*fellows(?!\.com)
-1597420436	Daniil	technical instruction for (?:quality control|qc) and (?:quality assurance|qa)
-1597420720	Daniil	chmac\s*crack(?!\.com)
-1597420957	Daniil	cracksad\.com
-1597420973	Daniil	cracksad(?!\.com)
-1597421012	Daniil	zsactivatorskey\.com
-1597421028	Daniil	zsactivatorskey(?!\.com)
-1597421060	Daniil	fiicracks\.com
-1597421077	Daniil	fiicracks(?!\.com)
-1597421094	Daniil	cskeygen\.com
-1597421113	Daniil	cskeygen(?!\.com)
-1597421131	Daniil	zyanpc\.com
-1597421147	Daniil	zyanpc(?!\.com)
-1597421165	Daniil	cracksray(?!\.com)
-1597421224	Daniil	textellent(?!\.com)
-1597421254	Daniil	snl\s*virtual\s*assistance(?!\.com)
-1597421332	Daniil	limsophianicole\.wixsite\.com
-1597421359	Daniil	tanmaybagla(?:@gmail\.com)?
+1597420324	Xnero	sharp\s*(and|&)\s*fellows(?!\.com)
+1597420436	Xnero	technical instruction for (?:quality control|qc) and (?:quality assurance|qa)
+1597420720	Xnero	chmac\s*crack(?!\.com)
+1597420957	Xnero	cracksad\.com
+1597420973	Xnero	cracksad(?!\.com)
+1597421012	Xnero	zsactivatorskey\.com
+1597421028	Xnero	zsactivatorskey(?!\.com)
+1597421060	Xnero	fiicracks\.com
+1597421077	Xnero	fiicracks(?!\.com)
+1597421094	Xnero	cskeygen\.com
+1597421113	Xnero	cskeygen(?!\.com)
+1597421131	Xnero	zyanpc\.com
+1597421147	Xnero	zyanpc(?!\.com)
+1597421165	Xnero	cracksray(?!\.com)
+1597421224	Xnero	textellent(?!\.com)
+1597421254	Xnero	snl\s*virtual\s*assistance(?!\.com)
+1597421332	Xnero	limsophianicole\.wixsite\.com
+1597421359	Xnero	tanmaybagla(?:@gmail\.com)?
 1597427647	Mast	big\s+butts
 1597444360	Machavity	cashapphelp\.online
-1597445353	Daniil	drmavoospellscaster\.blogspot\.com
-1597445386	Daniil	doctormavoo\.com
-1597445409	Daniil	mariapiagratton\.com
-1597446333	Daniil	ahmednurjimale5(?:@gmail\.com)?
-1597453973	Daniil	sanjosedetailingpros\.com
+1597445353	Xnero	drmavoospellscaster\.blogspot\.com
+1597445386	Xnero	doctormavoo\.com
+1597445409	Xnero	mariapiagratton\.com
+1597446333	Xnero	ahmednurjimale5(?:@gmail\.com)?
+1597453973	Xnero	sanjosedetailingpros\.com
 1597455614	user12986714	qualtrics\.com\/jfe\/form(?=\/)(?#survey is spam)
 1597475048	Nisse Engström	vntalking\.com
 1597478010	Nisse Engström	remmanhdep\.com
 1597478335	Nisse Engström	iptvm3utoday\.com
-1597492617	Daniil	(?-i:UEb2ZTPxkcc)(?#YouTube)
+1597492617	Xnero	(?-i:UEb2ZTPxkcc)(?#YouTube)
 1597515908	Makyen	vst-torrent\.com
 1597515923	Makyen	thiscrack\.com
 1597515938	Makyen	pluginstorrents\.com
 1597515951	Makyen	whitecrack\.com
-1597516520	Daniil	onlinefreepharmacy\.com
+1597516520	Xnero	onlinefreepharmacy\.com
 1597547863	Eliah Kagan	judidadu88\.id
 1597564312	Makyen	(?:official[\W_]*+)?lunaire[\W_]*+keto(?:[\W_]*+(?:avis|regime|client|france|\d++|[\da-f]{5,}+)s?)*
 1597564444	Makyen	(?:zauramoa[\W_]*+)?madhaldija(?:[\W_]*+brotherhood)?
@@ -22423,8 +22423,8 @@
 1597473574	user12986714	Pedro Hugo Garcia Peláez
 1597659742	tripleee	tejar\.com
 1597660746	tripleee	colorexpertsindia\.com
-1597661295	Daniil	activationpage\.com
-1597661374	Daniil	(?:Install)? McAfee (?:with )?activation code
+1597661295	Xnero	activationpage\.com
+1597661374	Xnero	(?:Install)? McAfee (?:with )?activation code
 1597664024	Mast	vaibhav[\W_]*+inter[\W_]*+deco
 1597665184	tripleee	pritna\.com
 1597665236	tripleee	hebstreits\.com
@@ -22472,7 +22472,7 @@
 1597753527	tripleee	(?-i:^Solo Org$)
 1597753624	tripleee	magnific[\W_]*+training
 1597759651	Spevacus	healthpartners01\.blogspot
-1597768447	Daniil	astaqc\.com
+1597768447	Xnero	astaqc\.com
 1597782532	Makyen	illuminatitemple34solobest(?:@gmail\.com)?
 1597791458	Makyen	downtownbreeder\.company\.com
 1597807837	tripleee	sugardaddyallowance\.com
@@ -22499,8 +22499,8 @@
 1597851396	Spevacus	jaipurdentalimplants\.com
 1597852853	tripleee	ayushnigam[\W_]*+sairam(?:[\W_]*+gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1597860408	tripleee	(?-i:^San-Mak$)
-1597867003	Daniil	chessify\.me
-1597869061	Daniil	b-broma\.com
+1597867003	Xnero	chessify\.me
+1597869061	Xnero	b-broma\.com
 1597896959	Eliah Kagan	callgirlsberlin\.com
 1597897688	tripleee	bestwatersoftenerblog\.com
 1597897848	tripleee	rmlh771@gmail\.com
@@ -22541,7 +22541,7 @@
 1597989628	Mast	forcrack\.com
 1597989668	Mast	crackred\.com
 1597990484	tripleee	cpntradelines\.com
-1597999123	Daniil	(?-i:^Best\s*Agencies(?!\.co\.uk)$)
+1597999123	Xnero	(?-i:^Best\s*Agencies(?!\.co\.uk)$)
 1597997488	Mast	(?-i:^Laker Builders Merchant$)
 1597997227	Mast	minhaconexao\.net\.br
 1597997186	Mast	quixy\.com
@@ -22571,9 +22571,9 @@
 1598145958	Makyen	search[\W_]*+adaccount
 1598156420	Makyen	jimwalterilluminati(?:@gmail\.com)?
 1598173884	Mast	contact(?:[\W_]*+a)?(?:[\W_]*+reliable)?[\W_]*+hacker
-1598178550	Daniil	862843076(?:@qq\.com)?
-1598182273	Daniil	1916901490(?:@qq\.com)?
-1598187780	Daniil	Blockchainnexperts(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1598178550	Xnero	862843076(?:@qq\.com)?
+1598182273	Xnero	1916901490(?:@qq\.com)?
+1598187780	Xnero	Blockchainnexperts(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1598207695	Mast	sadero\.ir
 1598215470	ArtOfCode	ixxex\.me
 1598215491	ArtOfCode	leadsnonstop\.co\.uk
@@ -22640,14 +22640,14 @@
 1598356457	Makyen	nutrapharmex(?:[\W_]*+(?:keto|diet|and|tank|reviews|shark|\d++|[\da-f]{5,}+)s?)*
 1598356477	Makyen	nusabet\.cc
 1598356503	Makyen	urbantract(?!\.com)
-1598359678	Daniil	psychologymentorship\.slack\.com
+1598359678	Xnero	psychologymentorship\.slack\.com
 1598363312	Mast	(?-i:IlU-zDU6aQ0)(?# youtube)
 1598365424	Spevacus	forktestlab\.com
 1598370909	Mast	market-scanner\.ru
-1598371138	Daniil	ukraine\.com\.ua
-1598372588	Daniil	app\.candidatezip\.com
-1598372637	Daniil	candidatezip\.com(?<!app\.candidatezip\.com)
-1598386397	Daniil	(?-i:93sg5K8M5x4)(?#YouTube)
+1598371138	Xnero	ukraine\.com\.ua
+1598372588	Xnero	app\.candidatezip\.com
+1598372637	Xnero	candidatezip\.com(?<!app\.candidatezip\.com)
+1598386397	Xnero	(?-i:93sg5K8M5x4)(?#YouTube)
 1598402062	Makyen	a1plumbersbristol\.co\.uk
 1598402079	Makyen	agbaforspelltemple(?:@gmail\.com)?
 1598402114	Makyen	DrChi-herbal-home-108469790895204
@@ -22684,10 +22684,10 @@
 1598511963	tripleee	(?-i:^james rise$)
 1598515813	Makyen	mrcannabisshop\.com
 1598424585	Jenayah	namaztime\.xyz
-1598517040	Daniil	studypeep\.com
-1598517056	Daniil	studypeep(?!\.com)
-1598517364	Daniil	(?-i:iiHHD\.jpg)
-1598517468	Daniil	newstandardkeyboard\.com
+1598517040	Xnero	studypeep\.com
+1598517056	Xnero	studypeep(?!\.com)
+1598517364	Xnero	(?-i:iiHHD\.jpg)
+1598517468	Xnero	newstandardkeyboard\.com
 1598519424	Ryan M	entitysport\.com
 1598522212	tripleee	dumpsterrentalsandiegoca\.org
 1598528035	tripleee	raboninco\.com
@@ -22722,8 +22722,8 @@
 1598598533	Mast	snapdeal[\W_]*+lucky[\W_]*+draw[\W_]*+winners
 1598607384	Makyen	hiprofileescortahmedabad\.com
 1598607431	Makyen	madamsilpa1
-1598612666	Daniil	writeessaytoday\.com(?<!info@writeessaytoday\.com)
-1598613456	Daniil	info@writeessaytoday\.com
+1598612666	Xnero	writeessaytoday\.com(?<!info@writeessaytoday\.com)
+1598613456	Xnero	info@writeessaytoday\.com
 1598617574	Machavity	sports11team\.com
 1598626213	Machavity	cyberpank2077\.com
 1598624086	Mast	toptrendi\.com
@@ -22732,8 +22732,8 @@
 1598601722	Mast	physiogo\.com
 1598606471	Mast	researchcorridor\.com
 1598601862	Mast	kvm-avaustralia\.com\.au
-1598630532	Daniil	chikita\W*isaac(?:123)?(?:@gmail\.com)?
-1598634133	Daniil	(?-i:SRJ Roofing)
+1598630532	Xnero	chikita\W*isaac(?:123)?(?:@gmail\.com)?
+1598634133	Xnero	(?-i:SRJ Roofing)
 1598633879	Mast	bestrooferinwestonfl\.com
 1598633988	Mast	(?-i:_zaXQKFvf-Y)(?# youtube)
 1598644724	Makyen	graicifyd
@@ -22753,22 +22753,22 @@
 1598682450	Eliah Kagan	(?-i:BijgqxztEpg)(?#youtu.be)
 1598694017	Makyen	(?-i:ultrathermoketonz)(?#sites.google.com)
 1598694454	Makyen	le[\W_]*+regime[\W_]*+keto(?:[\W_]*+(?:avis|france|\d++|[\da-f]{5,}+)s?)*
-1598710166	Daniil	apksforfree(?!\.com)
-1598710347	Daniil	(?-i:bitcoineraapp)(?#Google Sites)
+1598710166	Xnero	apksforfree(?!\.com)
+1598710347	Xnero	(?-i:bitcoineraapp)(?#Google Sites)
 1598710193	Mast	court[\W_]*+case[\W_]*+spells
 1598709986	Mast	apksforfree\.com
 1598703175	Mast	greentrustcashapplication\.com
 1598701726	Mast	mywifiextsolutions\.com
-1598711107	Daniil	arabxn\.com
+1598711107	Xnero	arabxn\.com
 1598699903	Mast	talktoastro\.com
 1598699807	Mast	propkknowledge\.blogspot\.com
 1598699770	Mast	islamicwazifa\.hatenadiary\.com
 1598721058	Makyen	wpw3schools\.com
 1598722944	Makyen	rjspret\.com
-1598728760	Daniil	draft\W*beer\W*intelligence(?!\.com)
-1598728780	Daniil	draftbeerintelligence\.com
-1598730416	Daniil	chiuer(?!\.com)
-1598730883	Daniil	salesforcesas(?!\.home\.blog)
+1598728760	Xnero	draft\W*beer\W*intelligence(?!\.com)
+1598728780	Xnero	draftbeerintelligence\.com
+1598730416	Xnero	chiuer(?!\.com)
+1598730883	Xnero	salesforcesas(?!\.home\.blog)
 1598736171	Mast	uixlibrary\.com
 1598724934	Mast	professoralimanderaandmama(?:@gmail\.com)?
 1598716166	Mast	bwhelmet(?!\.com)
@@ -22825,11 +22825,11 @@
 1598895562	tripleee	beatpxm\.com
 1598907913	Mast	dotnetfollower\.com
 1598864178	Kulfy	windowstechupdates\.com
-1598913470	Daniil	chanakyamath[\W_]*+gmail[\W_]*+com
-1598913508	Daniil	dmessages(?!\.com)
+1598913470	Xnero	chanakyamath[\W_]*+gmail[\W_]*+com
+1598913508	Xnero	dmessages(?!\.com)
 1598914873	Spevacus	lattemachinehub\.com
-1598915930	Daniil	sealights\.io
-1598916102	Daniil	sealights(?!\.io)
+1598915930	Xnero	sealights\.io
+1598916102	Xnero	sealights(?!\.io)
 1598938750	tripleee	(?-i:jeyKLm)(?# fiverr)
 1598938785	tripleee	mmsoftwares\.com
 1598938777	Mast	(?-i:jpt41uDS8bY)(?# youtube)
@@ -22840,22 +22840,22 @@
 1598945128	Mast	techinpack\.com
 1598946440	tripleee	me88my\.com
 1598949434	Mast	powervolt[\W_]*+energy[\W_]*+saver[\W_]*+review
-1598949687	Daniil	(?-i:PowerVolt)
+1598949687	Xnero	(?-i:PowerVolt)
 1598951429	tripleee	onnextinterio\.com
 1598953828	Mast	bacancytechnology\.com
 1598954660	tripleee	kf12\.com
 1598954301	Mast	react[\W_]*+native[\W_]*+development[\W_]*+services
 1598957618	tripleee	whirlpoolwashingmachineservicecenterinhyderabad\.com
-1598957782	Daniil	whirlpool\W*washing\W*machine\W*service\W*centre\W*in\W*hyderabad(?!\.com)
-1598958335	Daniil	bulk\W*cheap\W*ammo(?!\.com)
-1598958622	Daniil	enjoyxoxo\.com
-1598958639	Daniil	enjoyxoxo(?!\.com)
-1598959074	Daniil	primoms\.com
+1598957782	Xnero	whirlpool\W*washing\W*machine\W*service\W*centre\W*in\W*hyderabad(?!\.com)
+1598958335	Xnero	bulk\W*cheap\W*ammo(?!\.com)
+1598958622	Xnero	enjoyxoxo\.com
+1598958639	Xnero	enjoyxoxo(?!\.com)
+1598959074	Xnero	primoms\.com
 1598960148	Mast	nortonproductkey\.com
 1598963239	tripleee	flat[\W_]*+belly[\W_]*+fix
 1598963259	tripleee	archicgi\.com
 1598964898	tripleee	bathroomdaily\.com
-1598970439	Daniil	(?-i:3gibwTu)(?#bit.ly)
+1598970439	Xnero	(?-i:3gibwTu)(?#bit.ly)
 1598990847	Mast	voh\.church
 1599015076	Machavity	outdoorballpro\.com
 1599019426	Nisse Engström	betasik\.com
@@ -22876,10 +22876,10 @@
 1599029942	Makyen	(?-i:ketoformulaeclipse)(?#sites.google.com)
 1599029953	Makyen	eclipse[\W_]*+keto[\W_]*+formula
 1599032194	Mast	mygradechecker\.com
-1599034548	Daniil	apkoptions\.com
+1599034548	Xnero	apkoptions\.com
 1599043361	tripleee	husys(?!\.com)
 1599044502	tripleee	sapnaescorts\.com
-1599046247	Daniil	(?-i:Logo\W*In\W*15\W*Minutes)(?!\.com)
+1599046247	Xnero	(?-i:Logo\W*In\W*15\W*Minutes)(?!\.com)
 1599048564	Makyen	(?-i:exceptionalketoofficials)(?#sites.google.com)
 1599050849	Andrew T.	jio4gvoiceapk\.in
 1599051288	Mast	biggboss14new\.com
@@ -22911,9 +22911,9 @@
 1599120197	Makyen	richestsoft\.com
 1599120357	Makyen	(?-i:ketoxpbhb)(?#sites.google.com)
 1599121068	Mast	(?-i:^RichestSoft$)
-1599122733	Daniil	(?-i:4XHPx\.jpg)
-1599122922	Daniil	memory\W*filming(?!\.co\.uk)
-1599122940	Daniil	memoryfilming\.co\.uk
+1599122733	Xnero	(?-i:4XHPx\.jpg)
+1599122922	Xnero	memory\W*filming(?!\.co\.uk)
+1599122940	Xnero	memoryfilming\.co\.uk
 1599124712	Makyen	nova[\W_]*+keto[\W_]*+france
 1599126007	Makyen	hardreset\.guru
 1599126152	tripleee	7zip\.pro
@@ -22921,7 +22921,7 @@
 1599128705	Mast	bhavyasteel\.in
 1599128451	Mast	ehealth102\.com
 1599125657	Mast	onlinereservationbooking\.com
-1599129095	Daniil	ehealth102(?!\.com)
+1599129095	Xnero	ehealth102(?!\.com)
 1599131189	Mast	cultfeeds\.com
 1599131976	tripleee	fuaktsoft
 1599135595	Spevacus	safemartshop\.com
@@ -22978,12 +22978,12 @@
 1599298392	Mast	fitnesscarenow\.com
 1599295738	Mast	helpdeskblockchain\.com
 1599295634	Mast	justspiel\.com
-1599300821	Daniil	singapore\W*airlines\W*cancellation\W*policy
+1599300821	Xnero	singapore\W*airlines\W*cancellation\W*policy
 1599331568	Makyen	moonbitcoins\.com
-1599344924	Daniil	jamesbrado304(?:@gmail\.com)?
-1599344941	Daniil	primexoptions
+1599344924	Xnero	jamesbrado304(?:@gmail\.com)?
+1599344941	Xnero	primexoptions
 1599375838	Makyen	invention-patent-drawings\.com
-1599391080	Daniil	(?-i:XfnHIqw0T5Y)(?#YouTube)
+1599391080	Xnero	(?-i:XfnHIqw0T5Y)(?#YouTube)
 1599414880	Mast	hayalsohbet\.net
 1599415407	Kulfy	technarrator\.com
 1599419537	Makyen	diyashetty\.com
@@ -23145,9 +23145,9 @@
 1599820800	double-beep	jslsleepers\.co\.uk
 1599818369	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb739)(?#apnews.com)
 1599840190	Machavity	downloadlinkedinvideo\.com
-1599842618	Daniil	hwrig\.com
-1599843373	Daniil	medzino\.com
-1599843390	Daniil	medzino(?!\.com)
+1599842618	Xnero	hwrig\.com
+1599843373	Xnero	medzino\.com
+1599843390	Xnero	medzino(?!\.com)
 1599851369	Thomas Ward	apnews\.com
 1599860735	Machavity	1tpe\.net
 1599875352	user12986714	prudvihub\.blogspot
@@ -23165,7 +23165,7 @@
 1599896488	Makyen	creditcard[\W_]*+top[\W_]*+deals(?!\.com(?<=creditcardtopdeals\.com))
 1599897349	Mast	lilachbullock\.com
 1599900949	Makyen	glucafix(?:[\W_]*+(?:review|price|ingredient|of|advanced|weight|loss|formula|pill|\d++|[\da-f]{5,}+)s?)*
-1599953635	Daniil	ielts\Wcertificates?(?! without exam)
+1599953635	Xnero	ielts\Wcertificates?(?! without exam)
 1599970923	Sonic the Masked Werehog	jobeducationbd\.com
 1599988270	tripleee	probolit
 1600001799	Jeff Schaller	cognitivebehaviourtherapytoronto\.com
@@ -23256,11 +23256,11 @@
 1600165056	Mast	ottobock\.in
 1600168909	tripleee	directmailadv\.com
 1600154361	Mast	webscreenscraping\.com
-1600180456	Daniil	sizznet\.online
-1600185116	Daniil	myphotorepair\.com
-1600185133	Daniil	my\W*photo\W*repair(?!\.com)
-1600185150	Daniil	jpeg-repair\.com
-1600185167	Daniil	jpeg-repair(?!\.com)
+1600180456	Xnero	sizznet\.online
+1600185116	Xnero	myphotorepair\.com
+1600185133	Xnero	my\W*photo\W*repair(?!\.com)
+1600185150	Xnero	jpeg-repair\.com
+1600185167	Xnero	jpeg-repair(?!\.com)
 1600155032	Mast	blogergoods\.com
 1600155136	Mast	blogergoods(?!\.com)
 1600168666	Ryan M	phpridles\.com
@@ -23321,10 +23321,10 @@
 1600265608	Mast	(?-i:webeelab)(?#t.me)
 1600273260	Mast	melhorsite\.xyz
 1600279720	Spevacus	avasystemssignals\.com
-1600285200	Daniil	cmdrecruitment\.com
+1600285200	Xnero	cmdrecruitment\.com
 1600287047	NobodyNada	beat(?:|s|ing)[\W_]*+[\w']*+[\W_]*meat
 1600283544	Rubiksmoose	jscurious\.com
-1600294510	Daniil	live:support_60864(?#Skype)
+1600294510	Xnero	live:support_60864(?#Skype)
 1600307681	Spevacus	rewa\.tech
 1600309289	Makyen	supremetechhacker(?:@gmail\.com)?
 1600312915	Ryan M	(?:pretty|very|super|kind(?:a| of)|(?:tha|i)t'?s|so)\W*+gay
