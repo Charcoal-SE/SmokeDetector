@@ -27430,3 +27430,4 @@
 1613662394	Spevacus	assignmentmaster\.org\.uk
 1613663439	Makyen	usquidditch\.org
 1613676913	cigien	smsbomberap\.com
+1613690611	Xnero	Alqanuni[\W_]*Advocates(?!\.com)
