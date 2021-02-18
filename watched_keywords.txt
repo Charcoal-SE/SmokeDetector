@@ -27422,3 +27422,4 @@
 1613635578	Glorfindel	bmi-calculator\.io
 1613640129	Ryan M	techroadmap\.in
 1613640167	Ryan M	fxreviews\.best
+1613644065	Yatin	friendztravel\.co\.uk
