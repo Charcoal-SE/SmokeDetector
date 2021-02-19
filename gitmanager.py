@@ -336,7 +336,7 @@ class GitManager:
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @classmethod
-    def merge_pull_request(cls, pr_id, has_code_permissions=False, comment=""):
+    def merge_pull_request(cls, pr_id, comment="", has_code_permissions=False):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
