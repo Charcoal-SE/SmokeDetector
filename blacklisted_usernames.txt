@@ -447,3 +447,4 @@ SpeakingAccent
 (?-i:^emaillist$)
 (?-i:Vladimir Artiukh$)
 (?-i:^Rita Scott$)
+(?-i:^InfiniD$)
