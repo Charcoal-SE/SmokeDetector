@@ -27465,3 +27465,4 @@
 1613762556	cigien	samptel[\W_]*+energy(?!\.com(?<=samptelenergy\.com))
 1613762703	cigien	hotbangaloreescortservice\.blogspot
 1613763159	cigien	aliceblueonline\.com
+1613763630	cigien	podchaser\.com
