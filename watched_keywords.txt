@@ -27467,3 +27467,4 @@
 1613763159	cigien	aliceblueonline\.com
 1613763630	cigien	podchaser\.com
 1613763768	cigien	lawrencemarket\.com
+1613764082	cigien	dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
