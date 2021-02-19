@@ -27463,3 +27463,4 @@
 1613760088	cigien	luatthanhmai\.com
 1613760258	cigien	assignmenthelp\.us
 1613762556	cigien	samptel[\W_]*+energy(?!\.com(?<=samptelenergy\.com))
+1613762703	cigien	hotbangaloreescortservice\.blogspot
