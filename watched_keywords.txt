@@ -7005,7 +7005,6 @@
 1544823761	Makyen	(?:buy\b(?<!<\/?code>.*?)(?!.*?<\/?code>)(?:[^b]|b(?!uy\b)|\wb){0,400}?<\/?a(?=(?: [^>]*|)>)[ >]\W*|a>(?<=<\/a>)(?<!<\/?code>.*?)(?!.*?<\/?code>)(?:[^>]|>(?<!<\/a>)){0,400}?\bbuy)(?#buy before, in, or after a link within 400 characters without code; when watched, was 3077/2878/194/14 minus 12/2/10/0: 2018-12-14T21:43Z, or so)
 1544859091	Sonic the Inclusive Hedgehog	theweddingfile\.in
 1544861515	Makyen	cartrends\.in
-1544861770	Makyen	iamhja\.com
 1544865425	Shree	registraboard@protonmail\.com
 1544865512	Shree	aptoidedownload\.in
 1544865630	Shree	allassignmenthelp\.org
