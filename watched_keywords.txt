@@ -27445,3 +27445,4 @@
 1613721771	cigien	patankar[\W_]*+farm[\W_]*+products(?!\.com(?<=patankarfarmproducts\.com))
 1613721814	Makyen	ahmedabadsolar\.com
 1613721877	Makyen	ahmedabad[\W_]*+solar(?!\.com(?<=ahmedabadsolar\.com))
+1613723985	cigien	smarthackworld\.com
