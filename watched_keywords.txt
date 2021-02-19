@@ -27468,3 +27468,4 @@
 1613772970	cigien	vishalweb\.site
 1613774075	cigien	callino[\W_]*+london(?!\.com(?<=callinolondon\.com))
 1613775061	cigien	wellnesscare24x7\.com
+1613775918	cigien	runerrandrun(?!\.com)
