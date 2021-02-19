@@ -27441,3 +27441,4 @@
 1613716643	cigien	sbc[\W_]*+global[\W_]*+help(?!\.com(?<=sbcglobal-help\.com))
 1613720529	Ryan M	seplite\.com
 1613720861	cigien	appsquadz(?!\.com)
+1613721661	cigien	patankarfarmproducts\.com
