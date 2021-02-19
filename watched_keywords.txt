@@ -27458,3 +27458,4 @@
 1613743277	cigien	webdevelopmentinindia\.com
 1613743439	cigien	web[\W_]*+development[\W_]*+in[\W_]*+india(?!\.com(?<=webdevelopmentinindia\.com))
 1613749380	Spevacus	cacuocdo\.com
+1613755759	Jeff Schaller	instagramdelete
