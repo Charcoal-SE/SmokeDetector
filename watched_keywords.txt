@@ -27438,3 +27438,4 @@
 1613716133	tripleee	himalayalandtreks\.com
 1613716237	Makyen	nayakam\.com
 1613716372	cigien	himalaya[\W_]*+land[\W_]*+treks(?!\.com(?<=himalayalandtreks\.com))
+1613716643	cigien	sbc[\W_]*+global[\W_]*+help(?!\.com(?<=sbcglobal-help\.com))
