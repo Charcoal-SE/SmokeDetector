@@ -448,3 +448,4 @@ SpeakingAccent
 (?-i:Vladimir Artiukh$)
 (?-i:^Rita Scott$)
 (?-i:^InfiniD$)
+(?-i:^Haider Jamal Abbasi$)
