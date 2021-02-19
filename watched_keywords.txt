@@ -27466,3 +27466,4 @@
 1613763768	cigien	lawrencemarket\.com
 1613764082	cigien	dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
 1613772970	cigien	vishalweb\.site
+1613774075	cigien	callino[\W_]*+london(?!\.com(?<=callinolondon\.com))
