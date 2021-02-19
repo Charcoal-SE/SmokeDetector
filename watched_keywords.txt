@@ -27437,3 +27437,4 @@
 1613711648	cigien	bob[\W_]*+chambers[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1613716133	tripleee	himalayalandtreks\.com
 1613716237	Makyen	nayakam\.com
+1613716372	cigien	himalaya[\W_]*+land[\W_]*+treks(?!\.com(?<=himalayalandtreks\.com))
