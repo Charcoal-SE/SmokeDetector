@@ -336,15 +336,13 @@ class GitManager:
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @classmethod
-    def merge_pull_request(cls, pr_id, comment=""):
+    def merge_pull_request(cls, pr_id, has_code_permissions=False, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
-        if pr_info["user"]["login"] != "SmokeDetector":
+        if pr_info["user"]["login"] != "SmokeDetector" and not has_code_permissions:
             raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
-        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer.")
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         ref = pr_info['head']['ref']
