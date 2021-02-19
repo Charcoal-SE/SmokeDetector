@@ -27447,3 +27447,4 @@
 1613723985	cigien	smarthackworld\.com
 1613724005	cigien	startflyingonline\.com
 1613724078	cigien	smart[\W_]*+hack[\W_]*+world(?!\.com(?<=smarthackworld\.com))
+1613727247	Ryan M	ZenTao
