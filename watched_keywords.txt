@@ -27446,3 +27446,4 @@
 1613721814	Makyen	ahmedabadsolar\.com
 1613721877	Makyen	ahmedabad[\W_]*+solar(?!\.com(?<=ahmedabadsolar\.com))
 1613723985	cigien	smarthackworld\.com
+1613724005	cigien	startflyingonline\.com
