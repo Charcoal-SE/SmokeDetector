@@ -27435,3 +27435,4 @@
 1613690451	Xnero	alqanuni-advocates\.com
 1613709539	Makyen	alqanuni[\W_]*+advocates(?!\.com(?<=alqanuni-advocates\.com))
 1613711648	cigien	bob[\W_]*+chambers[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+1613716133	tripleee	himalayalandtreks\.com
