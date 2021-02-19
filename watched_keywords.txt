@@ -27467,3 +27467,4 @@
 1613764082	cigien	dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
 1613772970	cigien	vishalweb\.site
 1613774075	cigien	callino[\W_]*+london(?!\.com(?<=callinolondon\.com))
+1613775061	cigien	wellnesscare24x7\.com
