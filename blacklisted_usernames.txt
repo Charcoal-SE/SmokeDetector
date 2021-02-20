@@ -449,3 +449,4 @@ SpeakingAccent
 (?-i:^Rita Scott$)
 (?-i:^InfiniD$)
 (?-i:^Haider Jamal Abbasi$)
+(?-i:^bryan pulisic$)
