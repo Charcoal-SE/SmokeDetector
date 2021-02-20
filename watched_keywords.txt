@@ -27487,3 +27487,4 @@
 1613802484	Makyen	tom[\W_]*+hanks[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:relief|from|mental|stress|buy|price|review|pill|order|\d++|[\da-f]{5,}+)s?)*
 1613803043	Makyen	mprog54@gmail\.com
 1613803060	Makyen	infinityfree\.net
+1613803075	Makyen	infinityfree(?!\.net)
