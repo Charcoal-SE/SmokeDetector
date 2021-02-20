@@ -27470,3 +27470,4 @@
 1613775061	cigien	wellnesscare24x7\.com
 1613775918	cigien	runerrandrun(?!\.com)
 1613780235	cigien	(?-i:9NwRjA)(?#fiverr)
+1613781575	cigien	tech\.pathgriho\.com
