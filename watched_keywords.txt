@@ -27477,3 +27477,4 @@
 1613787468	cigien	aliasharma\.in
 1613787525	cigien	sportsmatik\.com
 1613787546	cigien	sportsmatik(?!\.com)
+1613787740	cigien	goodcreditsfoundation(?:@gmail\.com)?
