@@ -2454,3 +2454,4 @@ ontario[\W_]*+farms(?:[\W_]*+(?:canada|ca|hemp|cbd|oil|buy|order|\d++|[\da-f]{5,
 6wresearch(?!\.com|(?-i:(?<=^6Wresearch) Market Intelligence$))
 integrated[\W_]*+assessment[\W_]*+services
 infinidice
+techcrownhacker(?:@gmail\.com)?

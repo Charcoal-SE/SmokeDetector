@@ -25155,7 +25155,6 @@
 1606801331	tripleee	contentrally\.com
 1606802898	tripleee	easymovelift\.com
 1606806280	Ryan M	sreyas\.com
-1606806912	Makyen	techcrownhacker(?:@gmail\.com)?
 1606806929	Makyen	moneyguides\.in
 1606806961	Makyen	(?-i:kfkQJ\.jpg)
 1606806979	Makyen	thapgiainhietliangchi\.com
