@@ -27479,3 +27479,4 @@
 1613787546	cigien	sportsmatik(?!\.com)
 1613787740	cigien	goodcreditsfoundation(?:@gmail\.com)?
 1613788098	cigien	docs\.indigitall\.com
+1613788259	cigien	slrshipping\.com
