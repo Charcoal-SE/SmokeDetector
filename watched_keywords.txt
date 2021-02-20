@@ -27481,3 +27481,4 @@
 1613788098	cigien	docs\.indigitall\.com
 1613788259	cigien	slrshipping\.com
 1613788377	cigien	v2soft\.com
+1613788394	cigien	v2soft(?!\.com)
