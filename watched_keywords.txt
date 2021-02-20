@@ -27500,3 +27500,4 @@
 1613862774	cigien	pro[\W_]*+nova[\W_]*+partners(?!\.com(?<=pronovapartners\.com))
 1613862896	cigien	igeotechgps\.com
 1613863118	cigien	fixxaphone\.com
+1613863873	cigien	ssdsolution\.ltd
