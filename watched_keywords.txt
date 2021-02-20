@@ -27474,3 +27474,4 @@
 1613782108	cigien	bioinformatics[\W_]*+india(?!\.com(?<=bioinformaticsindia\.com))
 1613782276	cigien	rizonesoft\.com
 1613787345	cigien	hallamshome\.com\.au
+1613787468	cigien	aliasharma\.in
