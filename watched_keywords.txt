@@ -26674,7 +26674,6 @@
 1611796691	cigien	spermieskalle84(?:@gmail\.com)?
 1611800173	cigien	fastnewsfree(?:@gmail\.com|\.blogspot)?
 1611812411	Cody Gray	happybelatedbirthdays\.com
-1611813104	cigien	joyce[\W_]*+meyer[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611813402	Cody Gray	thynkk\.com
 1611814364	cigien	tidohome\.com
 1611814636	Cody Gray	(?:info\.)?vuindia(?:@ecaglobal\.com(?:\.au)?)?
