@@ -541,7 +541,7 @@ def approve(msg, pr_id):
     # Forward this, because checks are better placed in gitmanager.py
     try:
         has_code_permissions = msg.owner.id in [62118, 66258, 73046, 121520, 145827, 156050] \
-                               and msg._client.host == "stackexchange.com"
+            and msg._client.host == "stackexchange.com"
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(
             msg._client.host, msg.owner.id)
