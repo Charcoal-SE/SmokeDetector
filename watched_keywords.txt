@@ -27483,3 +27483,4 @@
 1613788377	cigien	v2soft\.com
 1613788394	cigien	v2soft(?!\.com)
 1613788897	cigien	luckystars\.space
+1613790330	cigien	jashanempire\.com
