@@ -27484,3 +27484,4 @@
 1613788394	cigien	v2soft(?!\.com)
 1613788897	cigien	luckystars\.space
 1613790330	cigien	jashanempire\.com
+1613802484	Makyen	tom[\W_]*+hanks[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:relief|from|mental|stress|buy|price|review|pill|order|\d++|[\da-f]{5,}+)s?)*
