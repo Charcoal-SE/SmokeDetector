@@ -27471,3 +27471,4 @@
 1613775918	cigien	runerrandrun(?!\.com)
 1613780235	cigien	(?-i:9NwRjA)(?#fiverr)
 1613781575	cigien	tech\.pathgriho\.com
+1613782091	cigien	bioinformaticsindia\.com
