@@ -27496,3 +27496,4 @@
 1613855763	Yatin	karantina\.pertanian\.go\.id
 1613858703	cigien	zaawer\.com
 1613859446	cigien	earthplanetweb\.wordpress
+1613862759	cigien	pronovapartners\.com
