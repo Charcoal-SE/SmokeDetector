@@ -27512,3 +27512,4 @@
 1613927990	cigien	d(?:octo)?r[\W_]*+sacre
 1613928543	cigien	icompressedgames\.com
 1613928739	cigien	Aqua[\W_]*+City
+1613928967	cigien	moistreet\.com
