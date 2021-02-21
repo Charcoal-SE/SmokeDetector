@@ -27509,3 +27509,4 @@
 1613925138	Makyen	marascokim\.wixsite\.com
 1613927714	cigien	biomynt\.site
 1613927962	cigien	doctorsacrehealing(?:@gmail\.com)?
+1613927990	cigien	d(?:octo)?r[\W_]*+sacre
