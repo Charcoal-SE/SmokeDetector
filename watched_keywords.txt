@@ -27521,3 +27521,4 @@
 1613972226	Makyen	cash-app-customer-service\.com
 1613974098	Makyen	shannaany\.medium\.com
 1613974108	Makyen	oneshot-keto-pro\.medium\.com
+1613976030	Makyen	one[\W_]*+shot[\W_]*+pills?(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
