@@ -27537,3 +27537,4 @@
 1614000984	Spevacus	info@recentcarz\.com
 1614001041	Spevacus	kinsunpacking\.com
 1614001594	Spevacus	mayakanaturalclinic(?!\.com)
+1614001612	Spevacus	mayakanaturalclinic\.com
