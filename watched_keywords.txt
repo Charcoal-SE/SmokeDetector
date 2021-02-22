@@ -27528,3 +27528,4 @@
 1613978094	cigien	aquaproperties\.com
 1613978913	Ryan M	neurologysleepcentre\.com
 1613978931	cigien	knowledgesight\.com
+1613978952	cigien	knowledgesight(?!\.com)
