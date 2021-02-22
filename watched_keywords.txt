@@ -27541,3 +27541,4 @@
 1614002146	Xnero	globalhack247(?:@gmail\.com)?
 1614002346	Spevacus	pakshopify\.com
 1614004571	Spevacus	mobidax\.io
+1614004671	Spevacus	(?-i:MobiDAX)(?!\.io)
