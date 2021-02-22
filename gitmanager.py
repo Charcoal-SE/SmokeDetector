@@ -354,7 +354,7 @@ class GitManager:
                     raise ValueError("PR #{} modifies files other than the list files, so I can't approve it."
                                      .format(pr_id))
             if line_changes > 5:
-                raise ValueError("PR #{} imodifies more than 5 lines, so I can't approve it.".format(pr_id))  
+                raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))  
             if pr_info["mergeable"] != True:
                 raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))   
         if pr_info["state"] != "open":
