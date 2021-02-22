@@ -121,7 +121,6 @@ hrisikesh\W*+saloi?
 muralidharaB
 ^albertlee$
 ^Biplab Mahanta$
-^Sonam Agarwal$
 ^cnhonest$
 ^Victoria Tegg$
 (?-i:^Babar Nawaz$)
