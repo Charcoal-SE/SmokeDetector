@@ -342,9 +342,21 @@ class GitManager:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
         if pr_info["user"]["login"] != "SmokeDetector":
-            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
-        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer.")
+            response = requests.get("https://api.github.com/repos/{}/pulls/{}/files"
+                                    .format(GlobalVars.bot_repo_slug, pr_id))
+            pr_files = response.json()
+            list_files = ["watched_keywords.txt", "watched_numbers.txt", "bad_keywords.txt",
+                          "blacklisted_numbers.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt"]
+            line_changes = 0
+            for file in range (len(pr_files)):
+                line_changes += int(pr_files[file]["changes"])
+                if pr_files[file]["filename"] not in list_files:
+                    raise ValueError("PR #{} modifies files other than the list files, so I can't approve it."
+                                     .format(pr_id))
+            if line_changes > 5:
+                raise ValueError("PR #{} imodifies more than 5 lines, so I can't approve it.".format(pr_id))  
+            if pr_info["mergeable"] != True:
+                raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))   
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         ref = pr_info['head']['ref']
