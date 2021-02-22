@@ -360,24 +360,24 @@ class GitManager:
                 raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))
             if not pr_info["mergeable"]:
                 raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))
-            GitHub_checks = requests.get("https://api.github.com/repos/{}/pulls/{}/check-runs".
+            github_checks = requests.get("https://api.github.com/repos/{}/pulls/{}/check-runs".
                                          format(GlobalVars.bot_repo_slug, pr_id))
-            GitHub_checks = GitHub_checks.json()
-            GitHub_check_count = GitHub_checks["total_count"]
-            GitHub_checks = GitHub_checks["check_runs"]
-            for check in range(int(GitHub_check_count)):
-                if GitHub_checks[check]["conclusion"] != "success":
+            github_checks = github_checks.json()
+            github_check_count = github_checks["total_count"]
+            github_checks = github_checks["check_runs"]
+            for check in range(int(github_check_count)):
+                if github_checks[check]["conclusion"] != "success":
                     raise ValueError("PR #{} has failed one or more GitHub Actions, so I can't approve it."
                                      .format(pr_id))
-            CI_check = requests.get("https://api.github.com/repos/{}/commits/{}/status"
-                                    .format(GlobalVars.bot_repo_slug, pr_id, pr_sha))
-            CI_check = CI_check.json()
-            CI_check = CI_check["statuses"]
-            for check in range(int(len(CI_check))):
-                if CI_check[check]["context"] == "ci/circleci: build":
-                    if CI_check[check]["state"] != "success":
+            ci_check = requests.get("https://api.github.com/repos/{}/commits/{}/status"
+                                    .format(GlobalVars.bot_repo_slug, pr_sha))
+            ci_check = ci_check.json()
+            ci_check = ci_check["statuses"]
+            for check in range(int(len(ci_check))):
+                if ci_check[check]["context"] == "ci/circleci: build":
+                    if ci_check[check]["state"] != "success":
                         raise ValueError("PR #{} has failed one or more CI checks, so I can't approve it."
-                                     .format(pr_id))
+                                         .format(pr_id))
         ref = pr_info['head']['ref']
 
         if comment:  # yay we have comments now
