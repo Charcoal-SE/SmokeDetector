@@ -24475,7 +24475,6 @@
 1604233120	Victor VosMottor	incracked\.com
 1604325258	Machavity	microsoft\.com/[\w\-/]*/ftp-manager-pro
 1604325303	Machavity	deskshare\.com
-1604325813	tripleee	essaypapers\.reviews
 1604325830	tripleee	myyellowbiz\.com
 1604372280	Makyen	cyalix
 1604375144	Ryan M	mynet\.vn
