@@ -27552,3 +27552,4 @@
 1614022618	cigien	kinsun[\W_]*+packing(?!\.com(?<=kinsunpacking\.com))
 1614023797	cigien	testingxperts\.com
 1614023817	cigien	testingxperts(?!\.com)
+1614025885	cigien	powersellershop\.com
