@@ -27539,3 +27539,4 @@
 1614001594	Spevacus	mayakanaturalclinic(?!\.com)
 1614001612	Spevacus	mayakanaturalclinic\.com
 1614002146	Xnero	globalhack247(?:@gmail\.com)?
+1614002346	Spevacus	pakshopify\.com
