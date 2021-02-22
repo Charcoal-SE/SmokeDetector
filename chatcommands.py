@@ -358,7 +358,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = "; append `-force` if you really want to do that."
 
     pattern = get_pattern_from_content_source(msg)
-
+    # Remove any leading whitespaces
+    pattern = regex.sub(r"^\s*", "", pattern)
     has_u202d = ""
     if '\u202d' in pattern:
         has_u202d = (
