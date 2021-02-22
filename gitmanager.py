@@ -363,8 +363,9 @@ class GitManager:
             GitHub_checks = requests.get("https://api.github.com/repos/{}/pulls/{}/check-runs".
                                          format(GlobalVars.bot_repo_slug, pr_id))
             GitHub_checks = GitHub_checks.json()
+            GitHub_check_count = GitHub_checks["total_count"]
             GitHub_checks = GitHub_checks["check_runs"]
-            for check in range(int(GitHub_checks["total_count"])):
+            for check in range(int(GitHub_check_count)):
                 if GitHub_checks[check]["conclusion"] != "success":
                     raise ValueError("PR #{} has failed one or more GitHub check, so I can't approve it."
                                      .format(pr_id))
