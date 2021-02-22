@@ -2366,7 +2366,7 @@ oz\s*paper\s*help(?!\.com)
 dollar\W?rain
 cannativa(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
 a>\W*+my website will help you more
-one[\W_]*+shot[\W_]*+(?:keto|pills|au(?:stralia)?)\d*
+one[\W_]*+shot[\W_]*+keto(?:[\W_]*+(?:pro|review|upgrade|price|scam|ingredient|pill|au(?:stralia)?|update|it'?|scam|or|hoax|does|really|work|\d++|[\da-f]{5,}+)s?)*
 a href="https://charcoal-se.org/" rel="nofollow noreferrer">(?:<\w+>)*https://charcoal-se.org/(?:</\w+>)*</a
 mcafeecomactivation(?#sites.google.com)
 nulavance
