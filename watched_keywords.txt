@@ -27543,3 +27543,4 @@
 1614004571	Spevacus	mobidax\.io
 1614005149	Spevacus	mobidax(?!\.io)
 1614008280	Spevacus	fortmyersmobilemechanic\.com
+1614014267	Yatin	gimbaltop1\.com
