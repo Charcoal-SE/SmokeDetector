@@ -27519,3 +27519,4 @@
 1613941045	cigien	osmsushi\.com
 1613967404	Ryan M	ayurveda(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1613972226	Makyen	cash-app-customer-service\.com
+1613974098	Makyen	shannaany\.medium\.com
