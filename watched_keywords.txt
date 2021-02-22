@@ -27535,3 +27535,4 @@
 1613984349	cigien	ring[\W_]*+tones[\W_]*+fans(?!\.com(?<=ringtonesfans\.com))
 1613984667	Ryan M	peopleperhour\.com
 1613984645	Xnero	American[\W_]*songs[\W_]*ringtones
+1613995672	Xnero	 info@recentcarz\.com
