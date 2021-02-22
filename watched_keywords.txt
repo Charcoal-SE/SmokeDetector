@@ -27546,3 +27546,4 @@
 1614013413	Yatin	magedelight\.com
 1614014267	Yatin	gimbaltop1\.com
 1614019184	cigien	gimbal[\W_]*+top[\W_]*+\d*+(?!\.com(?<=gimbaltop1\.com))
+1614020903	cigien	ias-singapore\.com
