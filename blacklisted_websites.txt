@@ -1471,7 +1471,7 @@ vbagetech\.com
 browseplay\.com
 semmiami\.com
 office-comsetup\.com
-(?:customer|tech|technical)-?(?:support|service)(?<!photographerstechsupport)(?<!vbtechsupport)(?<!paypal-techsupport)\.com
+(?:customer|tech|technical)-?(?:support|service)(?<!\bphotographerstechsupport)(?<!\bvbtechsupport)(?<!\bpaypal-techsupport)(?<!\b404techsupport)\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 livetecs\.com
 obatpelancarhaidterbaik\.com
 el-watnya\.com
