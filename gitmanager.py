@@ -351,15 +351,23 @@ class GitManager:
             list_files = ["watched_keywords.txt", "watched_numbers.txt", "bad_keywords.txt",
                           "blacklisted_numbers.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt"]
             line_changes = 0
-            for file in range (len(pr_files)):
+            for file in range(len(pr_files)):
                 line_changes += int(pr_files[file]["changes"])
                 if pr_files[file]["filename"] not in list_files:
                     raise ValueError("PR #{} modifies files other than the list files, so I can't approve it."
                                      .format(pr_id))
             if line_changes > 5:
-                raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))  
-            if pr_info["mergeable"] != True:
+                raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))
+            if not pr_info["mergeable"]:
                 raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))
+            GitHub_checks = requests.get("https://api.github.com/repos/{}/pulls/{}/check-runs".
+                                         format(GlobalVars.bot_repo_slug, pr_id))
+            GitHub_checks = GitHub_checks.json()
+            GitHub_checks = GitHub_checks["check_runs"]
+            for check in range(int(GitHub_checks["total_count"])):
+                if GitHub_checks[check]["conclusion"] != "success":
+                    raise ValueError("PR #{} has failed one or more GitHub check, so I can't approve it."
+                                     .format(pr_id))
         ref = pr_info['head']['ref']
 
         if comment:  # yay we have comments now
