@@ -341,7 +341,10 @@ class GitManager:
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         if pr_info["user"]["login"] != "SmokeDetector":
+            pr_sha = pr_info["head"]["sha"]
             response = requests.get("https://api.github.com/repos/{}/pulls/{}/files"
                                     .format(GlobalVars.bot_repo_slug, pr_id))
             pr_files = response.json()
@@ -356,9 +359,7 @@ class GitManager:
             if line_changes > 5:
                 raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))  
             if pr_info["mergeable"] != True:
-                raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))   
-        if pr_info["state"] != "open":
-            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
+                raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))
         ref = pr_info['head']['ref']
 
         if comment:  # yay we have comments now
