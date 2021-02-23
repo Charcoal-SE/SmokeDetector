@@ -27568,3 +27568,4 @@
 1614073073	Kulfy	catamerica\.com
 1614085347	double-beep	cloveritservices\.com
 1614074418	Xnero	scottsdalegaragedoorsrepairs\.com
+1614074536	Xnero	Scottsdale[\W_]*Choice[\W_]*Garage[\W_]*Door(?:s)?[\W_]*Repair(?!\.com)
