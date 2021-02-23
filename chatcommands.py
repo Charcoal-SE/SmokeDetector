@@ -358,7 +358,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = "; append `-force` if you really want to do that."
 
     pattern = get_pattern_from_content_source(msg)
-    
+
     has_leading_whitespace = ""
     if regex.search(r"^\s*", "", pattern):
         has_leading_whitespace = "The regex contains a leading whitespace character."
@@ -410,7 +410,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         if has_leading_whitespace:
             raise CmdException(has_leading_whitespace + append_force_to_do)
- 
+
         if has_u202d:
             raise CmdException(has_u202d + has_unescaped_dot + append_force_to_do)
 
