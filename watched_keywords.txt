@@ -27571,3 +27571,4 @@
 1614074536	Xnero	Scottsdale[\W_]*Choice[\W_]*Garage[\W_]*Door(?:s)?[\W_]*Repair(?!\.com)
 1614078521	Xnero	tccons\.ae
 1614079766	Xnero	hqwhatsappstatus\.com
+1614079774	Xnero	hqwhatsappstatus(?!\.com)
