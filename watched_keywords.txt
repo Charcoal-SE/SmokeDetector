@@ -27573,5 +27573,4 @@
 1614079766	Xnero	hqwhatsappstatus\.com
 1614079774	Xnero	hqwhatsappstatus(?!\.com)
 1614082593	Xnero	(?-i:aH8pe)(?#oke.io)
-1614100063	Ollie	couadiomc(?:@gmail\.com)?
 1614112478	Spevacus	bedsforbuilders\.com
