@@ -356,8 +356,8 @@ class GitManager:
                 if pr_files[file]["filename"] not in list_files:
                     raise ValueError("PR #{} modifies files other than the list files, so I can't approve it."
                                      .format(pr_id))
-            if line_changes > 5:
-                raise ValueError("PR #{} modifies more than 5 lines, so I can't approve it.".format(pr_id))
+            if line_changes > 6:
+                raise ValueError("PR #{} modifies more than 6 lines, so I can't approve it.".format(pr_id))
             if not pr_info["mergeable"]:
                 raise ValueError("PR #{} is not mergeable, so I can't approve it.".format(pr_id))
             github_checks = requests.get("https://api.github.com/repos/{}/pulls/{}/check-runs".
