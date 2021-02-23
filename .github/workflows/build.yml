@@ -22,7 +22,7 @@ jobs:
     - name: Fetch branches
       run: |
         git remote set-branches --add origin deploy
-        git fetch --all --depth=5
+        git fetch --depth=5 origin master deploy
     - uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
