@@ -27574,3 +27574,4 @@
 1614079774	Xnero	hqwhatsappstatus(?!\.com)
 1614082593	Xnero	(?-i:aH8pe)(?#oke.io)
 1614112478	Spevacus	bedsforbuilders\.com
+1614119548	cigien	couadiomc(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
