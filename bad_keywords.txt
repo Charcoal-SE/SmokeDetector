@@ -2442,7 +2442,7 @@ boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 green[\W_]*+estates[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|review|\d++|[\da-f]{5,}+)s?)*
 cheyenne[\W_]*+valley(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
 d(?:octo)?r[\W_]*+tunde
-gayle[\W_]*+king[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+gayle[\W_]*+king[\W_]*+cbd[\W_]*+oil(?!\.tumblr\.com(?<=gaylekingcbdoil\.tumblr\.com))(?:[\W_]*+(?:buy|order|store|price|review|results|\d++|[\da-f]{5,}+)s?)*
 humboldt(?:[\W_]*+s)?[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 creditquickfix\d*(?:@gmail\.com)?
 Origami Studios
