@@ -27579,3 +27579,4 @@
 1614131868	Makyen	(?-i:^yufeifei$)
 1614131972	Makyen	kl-skyline-gen-9-monitor
 1614132519	cigien	meridianuae\.com
+1614132685	cigien	dev[\W_]*+dham[\W_]*+yatra
