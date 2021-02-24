@@ -27582,3 +27582,4 @@
 1614132685	cigien	dev[\W_]*+dham[\W_]*+yatra
 1614132755	cigien	askdba\.pro
 1614132994	cigien	blackmagicspecialistinindia\.com
+1614133208	cigien	bedsforbuilders(?!\.com)
