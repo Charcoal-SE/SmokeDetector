@@ -27623,3 +27623,4 @@
 1614192417	Victor VosMottor	telenote\.site
 1614192795	cigien	usa[\W_]*+quran[\W_]*+academy(?!\.com(?<=usaquranacademy\.com))
 1614196726	cigien	tinyhousefiyat\.com
+1614202791	Ryan M	serhatcelik\.wordpress\.com
