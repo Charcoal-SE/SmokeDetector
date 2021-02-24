@@ -219,7 +219,8 @@ class Metasmoke:
                 from_ms = from_ms.replace(": ",
                                           ", or the [SD wiki](//git.io/vyDZv)"
                                           " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
-                from_ms = from_ms.replace("https:", "")
+            # Use protocol-relative links
+            from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)
             chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "autoflag_fp" in message:
             event = message["autoflag_fp"]
