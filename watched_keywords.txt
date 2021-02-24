@@ -27624,3 +27624,4 @@
 1614192795	cigien	usa[\W_]*+quran[\W_]*+academy(?!\.com(?<=usaquranacademy\.com))
 1614196726	cigien	tinyhousefiyat\.com
 1614202791	Ryan M	serhatcelik\.wordpress\.com
+1614205435	cigien	hanonymous286(?:@gmail\.com)?
