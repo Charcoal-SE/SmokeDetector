@@ -27600,3 +27600,4 @@
 1614154516	Ryan M	theindianthreads\.com
 1614155420	Makyen	us-map\.co
 1614161825	Makyen	time-calculator\.co
+1614161845	Makyen	dien[\W_]*+lanh[\W_]*+thien[\W_]*+hoa(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
