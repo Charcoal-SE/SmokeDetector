@@ -2459,3 +2459,4 @@ regional[\W_]*+college[\W_]*+of[\W_]*+management
 tom[\W_]*+selleck[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|price|review|pill|order|\d++|[\da-f]{5,}+)s?)*
 joyce[\W_]*+meyer[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 peyton[\W_]*+manning[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+Erelive[\W_]*+(?:data[\W_]*+)?recovery
