@@ -27613,3 +27613,4 @@
 1614187961	cigien	drew[\W_]*+carey[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|improve|\d++|[\da-f]{5,}+)s?)*
 1614188206	cigien	uams\.in
 1614188304	cigien	kanakkupillai\.com
+1614188416	cigien	pntglobal\.com
