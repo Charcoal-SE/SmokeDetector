@@ -27602,3 +27602,4 @@
 1614161825	Makyen	time-calculator\.co
 1614161845	Makyen	dien[\W_]*+lanh[\W_]*+thien[\W_]*+hoa(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1614173995	Spevacus	hospitalityabudhabi\.com
+1614174017	Spevacus	slotegrator\.pro
