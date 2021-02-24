@@ -27611,3 +27611,4 @@
 1614183271	double-beep	klapty\.com
 1614183377	double-beep	usaquranacademy\.com
 1614187961	cigien	drew[\W_]*+carey[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|improve|\d++|[\da-f]{5,}+)s?)*
+1614188206	cigien	uams\.in
