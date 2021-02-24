@@ -27610,3 +27610,4 @@
 1614000960	Xnero	(?-i:^Amy[\W_]*Carter$)
 1614178280	Spevacus	roomme\.id
 1614180431	Spevacus	oliveservicedapartments\.com
+1614183271	double-beep	klapty\.com
