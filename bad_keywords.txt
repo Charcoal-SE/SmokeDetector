@@ -2460,3 +2460,4 @@ tom[\W_]*+selleck[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|price|review|pill|order|\d
 joyce[\W_]*+meyer[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 peyton[\W_]*+manning[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 Erelive[\W_]*+(?:data[\W_]*+)?recovery
+dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
