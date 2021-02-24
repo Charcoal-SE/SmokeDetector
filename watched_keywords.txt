@@ -27578,3 +27578,4 @@
 1614130842	cigien	feuerwehr-wettringen\.de
 1614131868	Makyen	(?-i:^yufeifei$)
 1614131972	Makyen	kl-skyline-gen-9-monitor
+1614132519	cigien	meridianuae\.com
