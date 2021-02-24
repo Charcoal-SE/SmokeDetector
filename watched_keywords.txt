@@ -27585,3 +27585,4 @@
 1614133208	cigien	bedsforbuilders(?!\.com)
 1614133340	cigien	tourbom\.com
 1614133357	cigien	tourbom(?!\.com)
+1614133658	cigien	pediatricpod\.com
