@@ -27606,3 +27606,5 @@
 1614174046	Spevacus	qualitypackagingsolutions\.co\.uk
 1614157568	Xnero	cheswins\.blogspot\.com
 1614165550	Xnero	updateerror\.co
+1613995672	Xnero	 info@recentcarz\.com
+1614000960	Xnero	(?-i:^Amy[\W_]*Carter$)
