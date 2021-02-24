@@ -27622,3 +27622,4 @@
 1614191919	cigien	mywifiextnetlogin\.com
 1614192007	cigien	slotegrator(?!\.pro)
 1614192417	Victor VosMottor	telenote\.site
+1614192795	cigien	usa[\W_]*+quran[\W_]*+academy(?!\.com(?<=usaquranacademy\.com))
