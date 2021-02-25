@@ -25348,7 +25348,6 @@
 1607521034	tripleee	apkdownloadhunt\.com
 1607523688	tripleee	belvg\.de
 1607526549	Spevacus	lemeilleurschoix\.com
-1607531601	Spevacus	if\W*+you\W*+don't\W*+(?:get\W*+rid\W*+of|remove|delete)\W*+the\W*+images\W*+mentioned
 1607535433	Makyen	123hp-setupus\.com
 1607535656	Spevacus	victoriamilan\.dk
 1607536778	Makyen	com\.seds\.tyrnik
