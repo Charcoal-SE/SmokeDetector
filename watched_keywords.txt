@@ -27648,3 +27648,4 @@
 1614249090	Ryan M	lowcostsmm\.com
 1614250010	Ryan M	smarttouch\.me
 1614251792	Ryan M	osiaffiliate\.com
+1614251884	Ryan M	Top[\W_]*+\w*+[\W_]*+hosting
