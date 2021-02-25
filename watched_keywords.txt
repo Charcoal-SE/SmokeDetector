@@ -27629,3 +27629,4 @@
 1614223545	Yatin	tiyamachine(?:@aliyun\.com)?
 1614226504	Makyen	anhui[\W_]*+hightech[\W_]*+agricultural[\W_]*+equipment(?:[\W_]*+(?:co|ltd|\d++|[\da-f]{5,}+)s?)*
 1614229003	Yatin	jasasaya\.com
+1614229009	Yatin	bayuberkahmandiri\.com
