@@ -27627,3 +27627,4 @@
 1614205435	cigien	hanonymous286(?:@gmail\.com)?
 1614223460	Yatin	htmachinerychina\.com
 1614223545	Yatin	tiyamachine(?:@aliyun\.com)?
+1614226504	Makyen	anhui[\W_]*+hightech[\W_]*+agricultural[\W_]*+equipment(?:[\W_]*+(?:co|ltd|\d++|[\da-f]{5,}+)s?)*
