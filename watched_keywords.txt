@@ -27634,3 +27634,4 @@
 1614233207	Yatin	jasasaya\.coma
 1614237118	Makyen	vipcracks\.com
 1614239039	Makyen	trendofcbd\.com
+1614239057	Makyen	ben[\W_]*+mulroney[\W_]*+cbd(?:[\W_]*+(?:ca(?:nada)?|oil|\d++|[\da-f]{5,}+)s?)*
