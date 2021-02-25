@@ -27634,3 +27634,4 @@
 1614239039	Makyen	trendofcbd\.com
 1614239057	Makyen	ben[\W_]*+mulroney[\W_]*+cbd(?:[\W_]*+(?:ca(?:nada)?|oil|\d++|[\da-f]{5,}+)s?)*
 1614241288	Makyen	me\.ukowapi2020(?:@gmail\.com)?
+1614243103	Yatin	fukatsoft\.com
