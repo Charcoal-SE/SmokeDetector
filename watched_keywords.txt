@@ -27663,3 +27663,4 @@
 1614271916	Makyen	(?-i:gSizhb12mh0)(?#YouTube)
 1614279627	Makyen	5728819(?#rutracker.org)
 1614280059	cigien	buyforpantry\.com
+1614285441	cigien	d(?:octo)?r[\W_]*+kuta
