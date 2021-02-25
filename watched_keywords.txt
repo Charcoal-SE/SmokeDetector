@@ -27656,3 +27656,4 @@
 1614256440	Glorfindel	chess-bot\.com
 1614261126	Spevacus	drkutaherbalcenter(?:@gmail\.com)?
 1614261779	Xnero	sparxitsolutions\.com
+1614261809	Xnero	Sparx[\W_]*IT[\W_]*Solutions(?!\.com)
