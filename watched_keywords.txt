@@ -27644,3 +27644,4 @@
 1614247619	Yatin	ootlah\.com
 1614248001	cigien	cardekho\.com
 1614248237	Yatin	goodcrypto\.app
+1614248288	cigien	richie[\W_]*+mccaw[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|relieve|joints|chronic|pain|\d++|[\da-f]{5,}+)s?)*
