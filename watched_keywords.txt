@@ -27659,3 +27659,4 @@
 1614261809	Xnero	Sparx[\W_]*IT[\W_]*Solutions(?!\.com)
 1614263678	Spevacus	ieltscertificatoonline\.com
 1614263852	Spevacus	verifiedielts770(?:@yahoo\.com)?
+1614268747	Yatin	(?-i:7e8630rjqftcyvad9bq0dvftew)(?# hop clickbank)
