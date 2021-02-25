@@ -450,3 +450,4 @@ SpeakingAccent
 (?-i:^Haider Jamal Abbasi$)
 (?-i:^bryan pulisic$)
 (?-i:Surbhi Nahta$)
+(?-i:^yufeifei$)
