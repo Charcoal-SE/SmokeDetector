@@ -27650,3 +27650,4 @@
 1614251792	Ryan M	osiaffiliate\.com
 1614251884	Ryan M	Top[\W_]*+\w*+[\W_]*+hosting
 1614254534	Ryan M	seosmmblog\.com
+1614253575	Xnero	Berrett[\W_]*Pest[\W_]*Control
