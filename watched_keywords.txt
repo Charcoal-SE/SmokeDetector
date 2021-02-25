@@ -27647,3 +27647,4 @@
 1614248288	cigien	richie[\W_]*+mccaw[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|relieve|joints|chronic|pain|\d++|[\da-f]{5,}+)s?)*
 1614249090	Ryan M	lowcostsmm\.com
 1614250010	Ryan M	smarttouch\.me
+1614251792	Ryan M	osiaffiliate\.com
