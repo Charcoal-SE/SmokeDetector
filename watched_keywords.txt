@@ -15951,7 +15951,6 @@
 1578766778	Makyen	seeckloveoot\.hatenablog\.com
 1578772579	tripleee	qubole\.com
 1578773029	tripleee	serialnumbersfree\.com
-1578773071	tripleee	manycam(?:[\W_]*+|%20)pro
 1578778632	Makyen	tennisshoesguides\.com
 1578778766	Makyen	butionfone\.hatenablog\.com
 1578778781	Makyen	healthfitness-weightloss\.hatenablog\.com
