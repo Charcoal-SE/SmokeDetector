@@ -27658,3 +27658,4 @@
 1614261779	Xnero	sparxitsolutions\.com
 1614261809	Xnero	Sparx[\W_]*IT[\W_]*Solutions(?!\.com)
 1614263678	Spevacus	ieltscertificatoonline\.com
+1614263852	Spevacus	verifiedielts770(?:@yahoo\.com)?
