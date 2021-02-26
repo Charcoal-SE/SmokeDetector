@@ -27679,3 +27679,4 @@
 1614318440	Makyen	officesetupp\.uk
 1614320579	Makyen	biosindia\.com
 1614321583	Makyen	aimoretech\.com
+1614322880	Makyen	jioprize\.com
