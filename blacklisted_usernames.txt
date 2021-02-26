@@ -451,3 +451,4 @@ SpeakingAccent
 (?-i:^bryan pulisic$)
 (?-i:Surbhi Nahta$)
 (?-i:^yufeifei$)
+(?-i:^ujoh kelvin$)
