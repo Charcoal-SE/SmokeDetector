@@ -27681,3 +27681,4 @@
 1614321583	Makyen	aimoretech\.com
 1614322880	Makyen	jioprize\.com
 1614323149	Makyen	jio(?!prize\.com\b)[\W_]*+(?:prize|lottery|winner|check|sim|head|office|kbc|official)s?(?:[\W_]*+(?:prize|lottery|winner|check|sim|head|office|kbc|official|\d++|[\da-f]{5,}+)s?)*
+1614323955	Makyen	bigmoviezoo\.com
