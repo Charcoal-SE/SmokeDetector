@@ -27680,4 +27680,3 @@
 1614320579	Makyen	biosindia\.com
 1614321583	Makyen	aimoretech\.com
 1614322880	Makyen	jioprize\.com
-1614323056	Makyen	jio[\W_]*+(?:prize|lottery|winner|check|sim|head|office|kbc|official)s?(?:[\W_]*+(?:prize|lottery|winner|check|sim|head|office|kbc|official|\d++|[\da-f]{5,}+)s?)*
