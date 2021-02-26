@@ -27666,3 +27666,4 @@
 1614285441	cigien	d(?:octo)?r[\W_]*+kuta
 1614286094	cigien	d(?:octo)?r[\W_]*+amigo
 1614304934	Yatin	kiemtien\.com
+1614305272	cigien	traderviet\.com
