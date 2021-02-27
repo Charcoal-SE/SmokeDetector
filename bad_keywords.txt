@@ -2464,3 +2464,4 @@ dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d+
 8[\W_]*+8[\W_]*+8[\W_]*+9[\W_]*+5[\W_]*+9[\W_]*+2[\W_]*+[O0][\W_]*+1[\W_]*+1
 kl-skyline-gen-9-monitor
 if[\W*]+you[\W*]+don't[\W*]+(get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+images[\W*]+mentioned
+dietary[\W_]+upgrade
