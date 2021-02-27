@@ -27707,3 +27707,4 @@
 1614443082	Makyen	rainiertamayo
 1614443998	Yatin	goketogenics\.com
 1614428016	Yatin	movetoslovenia\.eu
+1614424224	Yatin	(maa?dar|behen|randi)[\W]*chod
