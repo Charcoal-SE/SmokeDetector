@@ -27700,3 +27700,4 @@
 1614388433	Yatin	thomloanlendgroup(?:@gmail\.com)?
 1614397108	cigien	virtualtwigs\.com
 1614398913	cigien	codingblog\.ezyro\.com
+1614407485	Makyen	bangaloretrainingacademy\.com
