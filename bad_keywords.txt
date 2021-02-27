@@ -2465,3 +2465,4 @@ dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d+
 kl-skyline-gen-9-monitor
 if[\W*]+you[\W*]+don't[\W*]+(get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+images[\W*]+mentioned
 madarchod
+fat[\W_]+consuming[\W_]+supplement
