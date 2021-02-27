@@ -27703,3 +27703,4 @@
 1614407997	Makyen	organic[\W_]*+line[\W_]*+cbd(?:[\W_]*+(?:avis|oil|\d++|[\da-f]{5,}+)s?)*
 1614408028	Makyen	rijbewijskopen-online\.com
 1614408040	Makyen	advanced[\W_]*+keto(?:[\W_]*+(?:au|australia|ca|canada|\d++|[\da-f]{5,}+)s?)*
+1614428016	Yatin	movetoslovenia\.eu
