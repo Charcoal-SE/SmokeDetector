@@ -27705,3 +27705,4 @@
 1614408040	Makyen	advanced[\W_]*+keto(?:[\W_]*+(?:au|australia|ca|canada|\d++|[\da-f]{5,}+)s?)*
 1614443054	Makyen	techallay\.com
 1614443082	Makyen	rainiertamayo
+1614443779	Yatin	gladysgsuitos\.wixsite\.com
