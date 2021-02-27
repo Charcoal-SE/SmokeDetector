@@ -11628,7 +11628,6 @@
 1565150368	Makyen	tricksandtips\.ooo
 1565153018	Shree	kasturi-gold\.com
 1565153127	tripleee	zumiez\.com
-1565154209	Makyen	advanced\W*keto\W*canada(?:\W*\d+)?
 1565155533	tripleee	eVonTtvuVOg(?# youtube link)
 1565156779	tripleee	spyrosys\.com
 1565160010	Makyen	activator[\W_]*pro[\W_]*testosterone
