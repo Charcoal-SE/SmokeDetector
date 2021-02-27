@@ -27710,3 +27710,4 @@
 1614424224	Yatin	(maa?dar|behen|randi)[\W]*chod
 1614422273	Yatin	sites\.google\.com/view/webfixes1/home
 1614417021	Yatin	qualityplasterers\.co\.nz
+1614412538	Yatin	muscalaw\.com
