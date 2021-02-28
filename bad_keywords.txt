@@ -2467,3 +2467,4 @@ if[\W*]+you[\W*]+don't[\W*]+(get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+i
 madarchod
 fat[\W_]+consuming[\W_]+supplement
 dietary[\W_]+upgrade
+pharma[\W_]*+bloom(?:[\W_]*+(?:buy|cbd|oil|order|\d++|[\da-f]{5,}+)s?)*
