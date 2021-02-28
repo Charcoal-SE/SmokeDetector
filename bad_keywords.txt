@@ -2468,3 +2468,4 @@ madarchod
 fat[\W_]+consuming[\W_]+supplement
 dietary[\W_]+upgrade
 pharma[\W_]*+bloom(?:[\W_]*+(?:buy|cbd|oil|order|\d++|[\da-f]{5,}+)s?)*
+(?-i:z65ZY47ug0w|DfK7OxEDhc0)
