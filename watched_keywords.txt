@@ -27724,3 +27724,4 @@
 1614487782	cigien	sonyprize\.com
 1614489018	Yatin	icustomersupport\.co\.in
 1614490733	cigien	pharma[\W_]*+bloom(?:[\W_]*+cbd)?
+1614490905	cigien	vertoindia\.com
