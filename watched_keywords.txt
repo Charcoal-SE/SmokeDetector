@@ -27730,3 +27730,4 @@
 1614492613	cigien	minex\.world
 1614508081	double-beep	ahmedabuelnasr\.com
 1614508283	double-beep	limeartgroup\.com
+1614511539	Yatin	(?-i:(z65ZY47ug0w|DfK7OxEDhc0))(?# 2 youtube videos from the same channel, spammed 6 times total)
