@@ -27721,3 +27721,4 @@
 1614485376	cigien	dtonomy\.com
 1614485397	cigien	dtonomy(?!\.com)
 1614485818	cigien	umisons[\W_]*+industries
+1614487235	cigien	willie[\W_]*+nelson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|improve|immunity|system|\d++|[\da-f]{5,}+)s?)*
