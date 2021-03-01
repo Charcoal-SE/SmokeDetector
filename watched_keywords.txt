@@ -27762,3 +27762,4 @@
 1614603612	Yatin	(?-i:KHLYXSB)(?# surveymonkey)
 1614608249	Xnero	hometogo\.co\.uk
 1614608261	Xnero	hometogo(?!\.co\.uk)
+1614608645	Spevacus	dheeraj@advaana\.com
