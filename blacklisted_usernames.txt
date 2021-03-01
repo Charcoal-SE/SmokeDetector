@@ -405,7 +405,6 @@ Mar(?:ikya|y)\W*Skula
 (?-i:^gospeedcheck$)
 Wes.ey\W*Atwood
 ^harold\W*coyer$
-96\W*+94(?!<^user\d{5,})
 (?-i:^Ann Watson$)
 (?-i:^Wesley call me this way$)
 (?-i:^Welsey Atwood$)
