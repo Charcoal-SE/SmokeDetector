@@ -92,8 +92,16 @@ class BodyFetcher:
 
         site_base = d["siteBaseHostAddress"]
         post_id = d["id"]
-        if (post_id == 3122 or post_id == 51812) and site_base == "meta.stackexchange.com":
+
+        # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
+        ignored_mse_questions = [
+            3122,    # Formatting Sandbox
+            51812,   # The API sandbox
+            296077,  # Sandbox archive
+        ]
+        if post_id in ignored_mse_questions and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
+
         with self.queue_modify_lock:
             if site_base not in self.queue:
                 self.queue[site_base] = {}
