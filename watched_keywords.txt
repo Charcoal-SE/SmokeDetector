@@ -27750,3 +27750,4 @@
 1614593425	Makyen	algorrithm\.com
 1614605916	Yatin	omgmaths\.com
 1614607207	Yatin	click2book\.us
+1614607376	Xnero	click2book(?!\.us)
