@@ -27763,3 +27763,4 @@
 1614608249	Xnero	hometogo\.co\.uk
 1614608261	Xnero	hometogo(?!\.co\.uk)
 1614608645	Spevacus	dheeraj@advaana\.com
+1614534661	Yatin	(?-i:IRkR2eH6eZY&ab_channel=CodeGeeks)(?#Code Geeks youtube channel)
