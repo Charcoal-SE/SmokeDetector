@@ -27761,3 +27761,4 @@
 1614602844	Xnero	(?-i:UC2xSS7ppeWN4aRMobUDsUEg)(?#YouTube channel)
 1614603612	Yatin	(?-i:KHLYXSB)(?# surveymonkey)
 1614608249	Xnero	hometogo\.co\.uk
+1614608261	Xnero	hometogo(?!\.co\.uk)
