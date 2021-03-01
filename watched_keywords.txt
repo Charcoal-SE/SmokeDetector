@@ -27751,3 +27751,4 @@
 1614605916	Yatin	omgmaths\.com
 1614607207	Yatin	click2book\.us
 1614607376	Xnero	click2book(?!\.us)
+1614607952	Xnero	status\.saver\.story(?#Google Play WhatsApp status saver app)
