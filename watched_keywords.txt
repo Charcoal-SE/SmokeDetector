@@ -27748,3 +27748,4 @@
 1614585619	Glorfindel	jsonformatting\.com
 1614593406	Makyen	infobrez\.com
 1614593425	Makyen	algorrithm\.com
+1614604892	Yatin	8[^\d]*+8[^\d]*+8[^\d]*+9[^\d]*+5[^\d]*+9[^\d]*+2(?:[^\d]|0)*+1[^\d]*+1
