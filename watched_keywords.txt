@@ -27773,4 +27773,3 @@
 1614643278	Machavity	adspower\.net
 1614645237	cigien	(?-i:1PNis3zdZVogkRNf8)(?#forms.gle)
 1614648721	cigien	jackie[\W_]*+chan[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
-1614648905	cigien	(?-i:QSv7GWq9wN3v3RJS8)(?#forms.gel)
