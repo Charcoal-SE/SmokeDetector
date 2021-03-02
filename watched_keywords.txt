@@ -27794,6 +27794,5 @@
 1614693402	Spevacus	happysoftwareinternational\.com
 1614694337	Spevacus	happy[\W]*+software[\W]*+international(?!\.com)
 1614694725	Yatin	littleroboz\.co\.uk
-1614697550	Spevacus	garmin\.com
 1614700601	Xnero	littleroboz(?!\.co\.uk)
 1614700775	Xnero	Magento[\W_]*2[\W_]*Membership[\W_]*Pro
