@@ -27361,7 +27361,6 @@
 1613532190	cigien	faststreamtech\.com
 1613533275	cigien	ethicalcyber90(?:[\W_]*+(?:at[\W_]*+)?gm(?:ail)?[\W_]*+(?:dot[\W_]*+)?com)?
 1613533439	cigien	aichesscoach\.net
-1613534029	cigien	camobear\.ca
 1613535348	cigien	7bet-?(?:bola|slot|agents1)\.com
 1613535369	cigien	tujuhbola\.com
 1613535429	cigien	opautoclick\.in
