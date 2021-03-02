@@ -27770,3 +27770,4 @@
 1614612202	Spevacus	exclusiveleadsagency\.com
 1614612557	Xnero	Exclusive[\W_]*Leads[\W_]*Agency(?!\.com)
 1614619724	Ollie	 bitcoinrecovery2(?:@gmail\.com)?
+1614643278	Machavity	adspower\.net
