@@ -26902,7 +26902,6 @@
 1612429975	cigien	dataempires\.com
 1612430135	Ryan M	[asdfghjkl;' ]{10}(?! {10})[asdfghjkl;' ]{40,}(?<! {10})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1612430726	tripleee	data[\W_]*+empires(?!\.com)
-1612431273	cigien	natures?[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:uk|oil|australia|\d++|[\da-f]{5,}+)s?)*
 1612431707	cigien	oracledumpsfree\.com
 1612431966	cigien	yahoocustomersupport247\.com
 1612433255	cigien	(?-i:Zkjhl9Q)(?#cutt.ly)
