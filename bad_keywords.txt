@@ -2471,3 +2471,4 @@ pharma[\W_]*+bloom(?:[\W_]*+(?:buy|cbd|oil|order|\d++|[\da-f]{5,}+)s?)*
 (?-i:z65ZY47ug0w|DfK7OxEDhc0)
 richie[\W_]*+mccaw[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|relieve|joints|chronic|pain|gummies|new|zealand|\d++|[\da-f]{5,}+)s?)*
 natures[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:review|oil|price|uk|united|kingdom|australia|nz|new|zealand|gummies|\d++|[\da-f]{5,}+)s?)*
+Delta[\W]*+Airlines[\W]*+Customer[\W]*+Service(?:[\W]*+Number)?
