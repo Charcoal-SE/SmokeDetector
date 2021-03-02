@@ -27789,3 +27789,4 @@
 1614669081	Glorfindel	com\.instagames\.atv\.quadbike\.stunt\.racing
 1614669575	Makyen	satcrack\.com
 1614669599	Makyen	xcentricservices\.com
+1614673259	tripleee	(?-i:^live Ms$)
