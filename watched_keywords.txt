@@ -27794,3 +27794,4 @@
 1614693402	Spevacus	happysoftwareinternational\.com
 1614694337	Spevacus	happy[\W]*+software[\W]*+international(?!\.com)
 1614694725	Yatin	littleroboz\.co\.uk
+1614697550	Spevacus	garmin\.com
