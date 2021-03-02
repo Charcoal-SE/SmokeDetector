@@ -27786,3 +27786,4 @@
 1614662500	Ryan M	v2its\.com
 1614663815	Yatin	ketoadvanced1500\.splashthat\.com
 1614664351	Yatin	Garmin[\W_]+GPS[\W_]+Technical[\W_]+SUPPORT
+1614669081	Glorfindel	com\.instagames\.atv\.quadbike\.stunt\.racing
