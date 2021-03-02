@@ -27783,3 +27783,4 @@
 1614657732	cigien	elsueco\.com\.mx
 1614659926	Yatin	linztechnologies\.com
 1614658729	Yatin	electricflavor\.tech
+1614661419	Yatin	Garmin[\W_]+GPS[\W_]+Technical[\W_]+SUPPORT[\W_]+
