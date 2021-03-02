@@ -26855,7 +26855,6 @@
 1612328498	cigien	enstella\.com
 1612328784	cigien	fonezone\.ae
 1612330561	Makyen	gpcoders\.com
-1612330792	cigien	indiadataentryhelp\.com
 1612331543	cigien	howwiki\.org
 1612332460	cigien	caritashospital\.org
 1612332641	tripleee	caritas[\W_]*+hospital(?!\.org)
