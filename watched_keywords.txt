@@ -27810,3 +27810,4 @@
 1614748958	cigien	real[\W_]*+time[\W_]*+experts(?!\.in(?<=realtimeexperts\.in))
 1614749119	Makyen	abbestfashionhouse\.blogspot
 1614749239	cigien	c-metric\.com
+1614750926	cigien	toffyjar\.com
