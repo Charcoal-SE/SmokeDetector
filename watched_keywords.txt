@@ -27799,3 +27799,4 @@
 1614706049	Makyen	garmin\.com(?<![>"]https?://(?:[a-z\d-]\.)*garmin\.com)
 1614697550	Spevacus	garmin\.com
 1614701436	Yatin	emergency-dental-365\.com
+1614742827	cigien	soikeo\.com
