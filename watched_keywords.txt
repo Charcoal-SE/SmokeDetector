@@ -27808,3 +27808,4 @@
 1614748775	cigien	tripexel\.com
 1614748879	cigien	realtimeexperts\.in
 1614748958	cigien	real[\W_]*+time[\W_]*+experts(?!\.in(?<=realtimeexperts\.in))
+1614749119	Makyen	abbestfashionhouse\.blogspot
