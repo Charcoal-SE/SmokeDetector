@@ -27812,3 +27812,4 @@
 1614749239	cigien	c-metric\.com
 1614750926	cigien	toffyjar\.com
 1614751276	cigien	bestwoodglue\.info
+1614751563	cigien	serpwizard\.com
