@@ -27826,3 +27826,4 @@
 1614769362	tripleee	sohbetislam\.com
 1614770032	tripleee	splashprint\.com\.au
 1614776319	Yatin	(?-i:SPYGODR)(?:[\W_]*(?:at|@)[\W_]*gmail[\W_]*(?:\.|dot)[\W_]*com)?
+1614771355	Yatin	jptechnologiesllc\.com
