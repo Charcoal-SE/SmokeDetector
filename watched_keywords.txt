@@ -27841,3 +27841,4 @@
 1614804838	cigien	appliancecareindia\.in
 1614804907	cigien	appliance[\W_]*+care[\W_]*+india(?!\.in(?<=appliancecareindia\.in))
 1614808165	cigien	industrial[\W_]*+megamart
+1614808787	cigien	(?-i:JXOry46-fhZiN2I0)(?#t.me)
