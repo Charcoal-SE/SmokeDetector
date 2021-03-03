@@ -27821,3 +27821,4 @@
 1614765683	Ryan M	toolhub\.me
 1614765842	Ryan M	allbestmachete\.com
 1614766068	Ryan M	WeHeat(?!\.co\.uk)
+1614766099	Ryan M	wts[\W_]*+technologies
