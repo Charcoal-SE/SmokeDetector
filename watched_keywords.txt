@@ -26657,7 +26657,6 @@
 1611767739	cigien	origami-website\.netlify\.app
 1611768005	cigien	thetechiefind\.com
 1611771069	cigien	gold[\W_]*+top[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|store|order|\d++|[\da-f]{5,}+)s?)*
-1611771883	cigien	ajanabha(?!\.com)
 1611780649	Makyen	antiabenedicta\.medium\.com
 1611781550	Nisse Engström	macbookrepairsdubai\.ae
 1611793694	Cody Gray	ja398399(?:@gmail\.com)?
