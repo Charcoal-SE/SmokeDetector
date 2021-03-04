@@ -290,7 +290,6 @@ lustresparasala
 (?-i:^tvtxrwzg$)
 (?-i:^sexdollxing$)
 (?-i:^Marco Cappoli$)
-(?-i:^Manish Kushwaha$)
 (?-i:^Văn Đình Hưng$)
 (?-i:^neolift$)
 (?-i:^jammerwelt$)
