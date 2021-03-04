@@ -27863,3 +27863,4 @@
 1614863229	cigien	rick[\W_]*+simpson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1614864175	Yatin	taklaganja\.com
 1614864325	cigien	houston[\W_]*+seo[\W_]*+directory(?!\.com(?<=houstonseodirectory\.com))
+1614865749	cigien	ihmcsdelhi\.org
