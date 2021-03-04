@@ -452,3 +452,4 @@ SpeakingAccent
 (?-i:^ujoh kelvin$)
 ^96\s?94$
 (?-i:^TRUECODER(?:MACHATER)?$)
+(?-i:pyActiveEXE)
