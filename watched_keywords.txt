@@ -26647,7 +26647,6 @@
 1611745203	tripleee	extensionsninjas\.com
 1611746901	tripleee	designkug\.com
 1611748586	tripleee	legalyy\.com
-1611749943	tripleee	ajanabha\.com
 1611752411	Jeff Schaller	molkkidram\.com
 1611756657	tripleee	pragmaticnepal\.com
 1611759494	Machavity	wintonix\.com
