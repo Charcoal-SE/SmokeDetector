@@ -27864,3 +27864,4 @@
 1614864325	cigien	houston[\W_]*+seo[\W_]*+directory(?!\.com(?<=houstonseodirectory\.com))
 1614865749	cigien	ihmcsdelhi\.org
 1614866934	Yatin	(?-i:9E3B7313BD28F30080C8)(?#referralCode for udemy)
+1614868585	tripleee	swimmingpoolslides\.net
