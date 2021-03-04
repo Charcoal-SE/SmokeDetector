@@ -27861,3 +27861,4 @@
 1614855855	cigien	family[\W_]*+hair[\W_]*+and[\W_]*+beauty[\W_]*+salon(?!\.com\.au(?<=familyhairandbeautysalon\.com\.au))
 1614856024	cigien	articleevent\.com
 1614856284	tripleee	vouchersportal\.com
+1614861588	Yatin	malwareguide112\.com
