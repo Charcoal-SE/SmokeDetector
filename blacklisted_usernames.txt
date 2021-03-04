@@ -453,3 +453,4 @@ SpeakingAccent
 (?-i:^ujoh kelvin$)
 ^96\s?94$
 (?-i:^TRUECODER(?:MACHATER)?$)
+(?:Yg[\W_]+Ch|Chen[\W_]+Yg|Yg[\W_]+Chen)
