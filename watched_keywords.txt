@@ -27861,3 +27861,4 @@
 1614856024	cigien	articleevent\.com
 1614856284	tripleee	vouchersportal\.com
 1614863229	cigien	rick[\W_]*+simpson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+1614864175	Yatin	taklaganja\.com
