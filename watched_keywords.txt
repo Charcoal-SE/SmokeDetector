@@ -27880,3 +27880,4 @@
 1614910393	cigien	getphotoback\.com
 1614910878	cigien	internet-access-guide\.com
 1614911860	cigien	thuecanho123\.com
+1614912782	cigien	bitcoinitspecialist(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
