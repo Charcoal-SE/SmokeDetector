@@ -27904,3 +27904,4 @@
 1614947696	Yatin	sparity\.com
 1614950333	Yatin	nkclassic\.com
 1614944447	Yatin	complete[\W_]+vision[\W_]+formula
+1614941325	Yatin	ketoadvanced1500diets\.com
