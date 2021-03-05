@@ -27905,3 +27905,4 @@
 1614950333	Yatin	nkclassic\.com
 1614944447	Yatin	complete[\W_]+vision[\W_]+formula
 1614941325	Yatin	ketoadvanced1500diets\.com
+1614941336	Yatin	benefitsoflifechanges\.blogspot\.com
