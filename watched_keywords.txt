@@ -27906,3 +27906,4 @@
 1614944447	Yatin	complete[\W_]+vision[\W_]+formula
 1614941325	Yatin	ketoadvanced1500diets\.com
 1614941336	Yatin	benefitsoflifechanges\.blogspot\.com
+1614941346	Yatin	getketoadvanced1500\.medium\.com
