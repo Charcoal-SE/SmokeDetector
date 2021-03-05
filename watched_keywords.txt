@@ -27894,3 +27894,4 @@
 1614924891	tripleee	hygieneforall\.com
 1614924966	cigien	hygieneforall(?!\.com)
 1614926051	cigien	homedecotech\.com
+1614929022	tripleee	blogreviewbook\.com
