@@ -27897,3 +27897,4 @@
 1614929022	tripleee	blogreviewbook\.com
 1614932291	Makyen	wynonna[\W_]*+judd[\W_]*+cbd(?:[\W_]*+(?:buy|view|oil|having|sore|muscles|joints|\d++|[\da-f]{5,}+)s?)*
 1614932306	Makyen	mariatrens\.tumblr\.com
+1614932326	Makyen	(?-i:HG7HTPY)(?#surveymonkey.com)
