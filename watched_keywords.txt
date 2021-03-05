@@ -27892,3 +27892,4 @@
 1614924502	cigien	yessports\.in
 1614924778	cigien	yashtooling\.in
 1614924891	tripleee	hygieneforall\.com
+1614924966	cigien	hygieneforall(?!\.com)
