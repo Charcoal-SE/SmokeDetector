@@ -454,3 +454,4 @@ SpeakingAccent
 (?-i:^TRUECODER(?:MACHATER)?$)
 (?-i:pyActiveEXE)
 ^ulyanovsk[\W_]*state[\W_]*university$
+(?-i:^[A-Z]dtaxczfershj?d\w?$)
