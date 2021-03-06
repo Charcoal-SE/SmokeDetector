@@ -27919,3 +27919,4 @@
 1614973232	Spevacus	sunlightmata(?:@gmail\.com)?
 1615012303	Yatin	superbthemes\.com
 1615019197	Makyen	101blockchains\.com
+1615023091	Yatin	green[\W_]+lobster[\W_]+cbd[\W_]+oil
