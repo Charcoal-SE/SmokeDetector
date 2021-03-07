@@ -27720,7 +27720,6 @@
 1614511176	Yatin	receive-sms\.com
 1614513333	double-beep	satoshi-box\.com
 1614517334	Yatin	electricsmokers4u\.com
-1614550239	Makyen	geekatoms\.com
 1614565205	cigien	steampoweredgame\.com
 1614567187	cigien	mywifiextnet\.us
 1614567484	cigien	iascoachings\.com
