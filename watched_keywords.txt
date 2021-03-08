@@ -21732,7 +21732,6 @@
 1595078693	Xnero	houstonembroideryservice\.com
 1595078715	Xnero	theenterprisegroupllc\.com
 1595078813	Xnero	factocert(?!\.com)
-1595078828	Xnero	factocert\.com
 1595078859	Xnero	stevemindmagicien\.fr
 1595079582	Xnero	digitalgurunow\.co\.uk
 1595080068	Eliah Kagan	recruitmentpastquestions\.com\.ng
