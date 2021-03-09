@@ -456,3 +456,4 @@ SpeakingAccent
 ^ulyanovsk[\W_]*state[\W_]*university$
 (?-i:^[A-Z]dtaxczfershj?d\w?$)
 (?-i:^Office Webmaster352$)
+(?-i:^Cathy Wessel$)
