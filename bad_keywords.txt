@@ -2475,3 +2475,4 @@ natures[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:review|oil|price|uk|united|kingdom|au
 ajanabha(?!\.com)
 illuminatielives(?:@gmail\.com)?
 phil[\W_]*+mickelson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|order|price|\d++|[\da-f]{5,}+)s?)*
+(?:American|Delta|Alaska)[\W]*+Airlines[\W]*+Customer[\W]*+Service(?:[\W]*+Number)?
