@@ -27970,3 +27970,4 @@
 1615267353	Yatin	primalunitxlbuy\.tumblr\.com
 1615267553	cigien	locations[\W_]*+cloud(?!\.com(?<=locationscloud\.com))
 1615270071	Yatin	kvik\.co
+1615270586	Yatin	paktvdramas\.pk
