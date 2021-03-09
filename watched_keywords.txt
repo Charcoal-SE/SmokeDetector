@@ -27974,3 +27974,4 @@
 1615275609	Yatin	(?-i:OKExAPI)(?#telegram)
 1615276795	Yatin	pops\.vn
 1615281444	Makyen	lifafaz\.com
+1615298777	Spevacus	globalblock\.co\.uk
