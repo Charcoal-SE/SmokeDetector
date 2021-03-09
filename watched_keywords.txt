@@ -27971,3 +27971,4 @@
 1615270071	Yatin	kvik\.co
 1615270586	Yatin	paktvdramas\.pk
 1615271837	Yatin	heenaescortservice\.com
+1615275609	Yatin	(?-i:OKExAPI)(?#telegram)
