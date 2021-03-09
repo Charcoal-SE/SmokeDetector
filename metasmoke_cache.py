@@ -67,15 +67,21 @@ class MetasmokeCache:
             return None, 'MISS-NOGEN'
 
     @staticmethod
-    def fetch_from_api(key, uri, params=None, expiry=None):
+    def fetch_from_api(key, uri, params=None, expiry=None, property_as_list=None):
         """
         Retrive a cached value. Will regenerate expired values from the metasmoke API.
 
-        :param key:    The cache key for which to find a value.
-        :param uri:    The URI for the API route from which to regenerate an expired value.
-        :param params: Any parameters to be sent with the API request. The API key will be included automatically.
-        :param expiry: A value in seconds representing the TTL of the cache value. Only used if a fresh value
-                       needed to be generated, in which case the fresh value will have this TTL applied. Optional.
+        :param key:              The cache key for which to find a value.
+        :param uri:              The URI for the API route from which to regenerate an expired value.
+        :param params:           Any parameters to be sent with the API request. The API key will be included
+                                 automatically.  Optional.
+        :param expiry:           A value in seconds representing the TTL of the cache value. Only used if a fresh value
+                                 needed to be generated, in which case the fresh value will have this TTL applied.
+                                 Optional.
+        :param property_as_list: If provided, then we store a list of just that property's values, rather than a list
+                                 of dict values of all responses. This resuces processing if we're only interested
+                                 in a single value, rather than all the properties in the response items.
+                                 Optional.
         :returns: Tuple - [0] the cached value if it's available or generatable and in-date, otherwise None;
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, HIT-GENERATED, or MISS-NOGEN
         """
@@ -84,7 +90,7 @@ class MetasmokeCache:
             if params is None:
                 params = {'page': 1, 'key': globalvars.GlobalVars.metasmoke_key}
             else:
-                params = params.update({'page': 1, 'key': globalvars.GlobalVars.metasmoke_key})
+                params.update({'page': 1, 'key': globalvars.GlobalVars.metasmoke_key})
 
             items = []
             while True:
@@ -102,8 +108,10 @@ class MetasmokeCache:
                 if page['has_more'] is False:
                     break
                 params['page'] += 1
-
-            return items
+            if property_as_list is None:
+                return items
+            else:
+                return [x[property_as_list] for x in items]
 
         return MetasmokeCache.fetch(key, generator, expiry)
 
@@ -149,6 +157,9 @@ def dump_cache_data():
 
 
 def is_website_whitelisted(domain):
-    whitelist = MetasmokeCache.fetch_from_api('whitelisted-domains', '/api/v2.0/tags/name/whitelisted/domains',
-                                              params={'filter': 'HGGGFLHIHKIHOOH', 'per_page': '100'}, expiry=3600)
-    return len(whitelist) > 0 and isinstance(whitelist[0], dict) and domain in map(lambda x: x['domain'], whitelist)
+    whitelist, hit_info = MetasmokeCache.fetch_from_api('whitelisted-domains',
+                                                        '/api/v2.0/tags/name/whitelisted/domains',
+                                                        params={'filter': 'MFILNMJJGMMLLJ', 'per_page': '100'},
+                                                        expiry=3600,
+                                                        property_as_list='domain')
+    return len(whitelist) > 0 and isinstance(whitelist, list) and domain.lower() in whitelist
