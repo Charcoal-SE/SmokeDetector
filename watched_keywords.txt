@@ -19647,7 +19647,6 @@
 1588327006	Makyen	sabflix\.com
 1588327937	Makyen	(?-i:^Amna$)
 1588329179	Glorfindel	ninistutor\.com
-1588332957	Xnero	cyber\.lord1010@gmail\.com
 1588335559	Nisse Engström	thecakedelivery\.com
 1588339591	Xnero	digitalsigner\.pulkitsoft\.com
 1588347326	Machavity	helpstounderstand\.com
