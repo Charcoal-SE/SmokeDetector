@@ -2472,7 +2472,6 @@ pharma[\W_]*+bloom(?:[\W_]*+(?:buy|cbd|oil|order|\d++|[\da-f]{5,}+)s?)*
 richie[\W_]*+mccaw[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|relieve|joints|chronic|pain|gummies|new|zealand|\d++|[\da-f]{5,}+)s?)*
 natures[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:review|oil|price|uk|united|kingdom|australia|nz|new|zealand|gummies|\d++|[\da-f]{5,}+)s?)*
 (?-i:[I1]?\D{0,3}+8\D{0,3}+8\D{0,3}+8\D{0,3}+9\D{0,3}+5\D{0,3}+9\D{0,3}+2\D{0,3}+[0Oo]\D{0,3}+[I1]\D{0,3}+[I1])
-(?:American|Delta)[\W]*+Airlines[\W]*+Customer[\W]*+Service(?:[\W]*+Number)?
 ajanabha(?!\.com)
 illuminatielives(?:@gmail\.com)?
 phil[\W_]*+mickelson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|order|price|\d++|[\da-f]{5,}+)s?)*
