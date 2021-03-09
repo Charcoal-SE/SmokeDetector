@@ -27965,3 +27965,4 @@
 1615261996	cigien	mnv[\W_]*+auto[\W_]*+detailing(?!\.com(?<=mnvautodetailing\.com))
 1615262377	cigien	megaflash\.online
 1615262915	cigien	thecoldprince\.livejournal\.com
+1615262956	cigien	snowtimesphil\.blogspot
