@@ -27962,3 +27962,4 @@
 1615192338	Yatin	lenorawatfor\.tumblr\.com
 1615235004	cigien	(?-i:ta6llr)(?#snip.ly)
 1615244469	cigien	ankys\.wordpress\.com
+1615261996	cigien	mnv[\W_]*+auto[\W_]*+detailing(?!\.com(?<=mnvautodetailing\.com))
