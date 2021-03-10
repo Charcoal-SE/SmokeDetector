@@ -27913,7 +27913,6 @@
 1615046445	cigien	alolimo\.com
 1615046462	cigien	alolimo(?!\.com)
 1615024663	Yatin	online@gralmedical\.ro
-1615066449	cigien	green[\W_]*+lobster[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|scam|\d++|[\da-f]{5,}+)s?)*
 1615078055	cigien	noveltypay\.com
 1615092131	Yatin	top-legal-cannabinoids\.com
 1615102738	Nisse Engström	play-bazar\.xyz
