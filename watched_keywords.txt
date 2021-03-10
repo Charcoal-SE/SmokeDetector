@@ -28005,3 +28005,4 @@
 1615384565	Yatin	company\/42720259(?#linkedin company)
 1615384874	Yatin	akinhandicraft\.com
 1615385141	Yatin	handmade-tiles\.blogspot
+1615385580	Yatin	handmadewritings\.com
