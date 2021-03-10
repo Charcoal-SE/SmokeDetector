@@ -28002,3 +28002,4 @@
 1615383664	Yatin	(?-i:UCd-7f3RYWISHBT1i82nfHyQ)(?#youtube channel)
 1615384354	Yatin	passioncraftstore(?!\.com)
 1615384288	Yatin	passioncraftstore\.com
+1615384565	Yatin	company\/42720259(?#linkedin company)
