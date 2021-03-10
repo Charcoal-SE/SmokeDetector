@@ -27989,3 +27989,4 @@
 1615351729	Yatin	(?-i:iszN6)(?#shortened link)
 1615355076	Yatin	lavelledermacreamcanadabuy\.medium\.com
 1615355677	Makyen	code-android-example\.blogspot
+1615356010	cigien	programmergate\.com(?#this domain appears in a large number of deleted, but unreported posts on Stack Overflow)
