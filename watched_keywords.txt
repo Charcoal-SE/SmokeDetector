@@ -28000,3 +28000,4 @@
 1615383096	tripleee	mercy[\W_]*+side[\W_]*+hosp(?:ital)?
 1615383823	Spevacus	centerdl\.ir
 1615383664	Yatin	(?-i:UCd-7f3RYWISHBT1i82nfHyQ)(?#youtube channel)
+1615384565	Yatin	company\/42720259(?#linkedin company)
