@@ -28017,3 +28017,4 @@
 1615389099	Yatin	investor_shatha(?:@hotmail\.com)?
 1615390209	Yatin	(?-i:v=ppvrmuJ4Bns)(?#youtube)
 1615392328	Makyen	cut2cutimage\.com
+1615394693	Makyen	(?-i:whaletank)(?#t.me)
