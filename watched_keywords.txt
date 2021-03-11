@@ -28054,4 +28054,3 @@
 1615486005	Spevacus	asquarecloudhosting\.com
 1615491127	Makyen	patouk\.com
 1615498938	tripleee	cryptoforex345\.com
-1615501677	Makyen	como[\W_]*+programar[\W_]*+una[\W_]*+secuencia[\W_]*+en[\W_]*+python
