@@ -28033,3 +28033,4 @@
 1615452172	Yatin	digital[\W_]*manam(?!\.com)
 1615453011	tripleee	yourmedikart\.com
 1615453042	tripleee	trastuzumab[\W_]*+emtansine
+1615454353	tripleee	(?-i:^Chris Byrd$)
