@@ -28031,3 +28031,4 @@
 1615447232	cigien	o-lens\.co\.in
 1615452204	Yatin	sukritinfotech\.com
 1615452172	Yatin	digital[\W_]*manam(?!\.com)
+1615453011	tripleee	yourmedikart\.com
