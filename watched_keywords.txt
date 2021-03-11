@@ -28026,3 +28026,4 @@
 1615438512	cigien	freebooksmania\.com
 1615446215	Makyen	datalistsgroup\.com
 1615446231	Makyen	data[\W_]*+lists[\W_]*+group(?!\.com(?<=datalistsgroup\.com))
+1615447018	cigien	it-recycle\.uk
