@@ -28063,3 +28063,4 @@
 1615534471	double-beep	boundbuzz\.com
 1615556231	Spevacus	(?-i:3t8ZcLh)(?#bit.ly)
 1615545631	Yatin	real-wishes\.com
+1615545880	Yatin	nutritionwise\.medium\.com
