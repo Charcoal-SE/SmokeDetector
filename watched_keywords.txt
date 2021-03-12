@@ -24109,7 +24109,6 @@
 1603204249	Spevacus	(?-i:mitchildlanguageonline)(?#bit.ly)
 1603204268	Spevacus	(?-i:mitchildlanguage)(?#bit.ly)
 1603205494	Spevacus	bestsewingmachinereview\.com
-1603208786	NobodyNada	conservationconstructionofdallas\.com
 1603233989	Ryan M	food[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1603236671	Ryan M	(?:top|best).{0,50}in 20\d\d
 1603237467	Ryan M	alivegeek\.com
