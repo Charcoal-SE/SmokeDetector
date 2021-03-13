@@ -28089,3 +28089,4 @@
 1615664751	cigien	thelotteryresults\.uk
 1615664994	Yatin	(?:feedback@)?socialpoker\.club
 1615668468	cigien	b2bleadzone\.com
+1615668489	cigien	b2b[\W_]*+lead[\W_]*+zone(?!\.com(?<=b2bleadzone\.com))
