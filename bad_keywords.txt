@@ -2479,3 +2479,4 @@ phil[\W_]*+mickelson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|order|price|\d++|
 cyber\.lord1010@gmail\.com
 green[\W_]*+lobster[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|scam|\d++|[\da-f]{5,}+)s?)*
 pinoy\W?teleserye
+racha?el[\W_]*+ray[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|gummies|\d++|[\da-f]{5,}+)s?)*
