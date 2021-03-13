@@ -28069,3 +28069,4 @@
 1615600073	cigien	thebestmonitors\.com
 1615601616	cigien	foxtravels\.in
 1615603103	Yatin	gamee\.com
+1615603783	cigien	samuratellerspell(?:@gmail\.com)?
