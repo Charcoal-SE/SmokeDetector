@@ -28091,3 +28091,4 @@
 1615668468	cigien	b2bleadzone\.com
 1615668489	cigien	b2b[\W_]*+lead[\W_]*+zone(?!\.com(?<=b2bleadzone\.com))
 1615672808	cigien	highthcblunt\.com
+1615679665	cigien	(?-i:PDs46CGe)(?#discord)
