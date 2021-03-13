@@ -28088,3 +28088,4 @@
 1615662353	cigien	spellx\.ga
 1615664751	cigien	thelotteryresults\.uk
 1615664994	Yatin	(?:feedback@)?socialpoker\.club
+1615668468	cigien	b2bleadzone\.com
