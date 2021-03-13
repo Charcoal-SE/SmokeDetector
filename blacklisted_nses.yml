@@ -99,4 +99,6 @@ items:
   ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
-- ns: c67050.sgvps.net.
+- comment: NXDOMAIN 2021-03-13
+  disable: true
+  ns: c67050.sgvps.net.
