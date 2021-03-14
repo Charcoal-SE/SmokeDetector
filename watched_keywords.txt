@@ -28097,3 +28097,4 @@
 1615691260	Yatin	premier-aesthetics\.com
 1615704232	Nisse Engström	acedivino\.org
 1615704561	Makyen	giggs[\W_]*+meat(?!\.com(?<=giggsmeat\.com))
+1615708686	Yatin	solvedmcqs\.club
