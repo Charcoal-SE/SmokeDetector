@@ -28093,3 +28093,4 @@
 1615672808	cigien	highthcblunt\.com
 1615679665	cigien	(?-i:PDs46CGe)(?#discord)
 1615687465	cigien	eurogroove(?!\.in)
+1615687884	cigien	rapidsec\.com
