@@ -28098,6 +28098,4 @@
 1615704232	Nisse Engström	acedivino\.org
 1615704561	Makyen	giggs[\W_]*+meat(?!\.com(?<=giggsmeat\.com))
 1615710584	Makyen	ţ\.com
-1615710795	Makyen	solvedmcqs\.club
 1615724250	Yatin	(?-i:FzB4fYwEST4)(?#youtu.be)
-1615708686	Yatin	solvedmcqs\.club
