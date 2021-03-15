@@ -28135,3 +28135,4 @@
 1615829377	cigien	d(?:octo)?r[\W_]*+prince[\W_]*+idialu
 1615822635	Victor VosMottor	pampit\.ru
 1615830017	cigien	cybonetic\.com
+1615830497	cigien	ranchcomputing\.com
