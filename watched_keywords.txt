@@ -28140,3 +28140,4 @@
 1615838029	Spevacus	mychatcafe\.com
 1615838120	Spevacus	kingvapedubai\.com
 1615846296	cigien	packageslab\.com
+1615846486	cigien	king[\W_]*+vape[\W_]*+dubai(?!\.com(?<=kingvapedubai\.com))
