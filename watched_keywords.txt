@@ -28112,3 +28112,4 @@
 1615781323	cigien	bargcalendar\.com
 1615784787	Yatin	konvi\.app
 1615788919	Yatin	rks-cryptomining\.com
+1615789084	Yatin	abakeshop\.com
