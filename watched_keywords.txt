@@ -8190,7 +8190,6 @@
 1551349227	Makyen	mersad\W?web
 1551353310	tripleee	woodenstreet\.co\.uk
 1551362654	Nisse Engström	Fitbeauty365\.com
-1551380012	Glorfindel	dantri\.com
 1551392141	Makyen	americaloancompany242(?:@gmail\.com)?
 1551405754	Makyen	clippingpathperfectionist\.com
 1551413606	Makyen	mayankchandel\.co\.nf
