@@ -28108,3 +28108,4 @@
 1615750672	Makyen	indiecurator@yandex\.com
 1615757191	Makyen	smithhackingcompanyltd(?:@gmail\.com)?
 1615778311	Makyen	online[\W_]*+it[\W_]*+guru
+1615779044	cigien	ace[\W_]*+divino(?!\.org(?<=acedivino\.org))
