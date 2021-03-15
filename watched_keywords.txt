@@ -28111,3 +28111,4 @@
 1615779044	cigien	ace[\W_]*+divino(?!\.org(?<=acedivino\.org))
 1615781323	cigien	bargcalendar\.com
 1615784787	Yatin	konvi\.app
+1615788919	Yatin	rks-cryptomining\.com
