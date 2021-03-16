@@ -28143,3 +28143,4 @@
 1615854237	Makyen	keoni[\W_]*+cbd(?:[\W_]*+(?:gummies|reviews|price|cost|\d++|[\da-f]{5,}+)s?)*
 1615869868	cigien	judithkula(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?
 1615883327	tripleee	hypegist\.com
+1615884172	tripleee	realgroupchina\.com
