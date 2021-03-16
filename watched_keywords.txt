@@ -8136,7 +8136,6 @@
 1551124987	Machavity	turkiyedenshop\.online
 1551128957	doppelgreener	voir\-film1\.com
 1551132441	Nisse Engström	ledmyplace\.com
-1551153736	Shree	blockchainfirm\.io
 1551154488	Nisse Engström	forms\.legal
 1551154840	Makyen	easywayrentacar\.com
 1551154865	Makyen	c\W*y\W*b\W*e\W*r\W*s\W*p\W*y\W*c\W*l\W*o\W*w\W*n\W*(?:(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?
