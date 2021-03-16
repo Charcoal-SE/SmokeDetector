@@ -27561,7 +27561,6 @@
 1614161825	Makyen	time-calculator\.co
 1614161845	Makyen	dien[\W_]*+lanh[\W_]*+thien[\W_]*+hoa(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1614173995	Spevacus	hospitalityabudhabi\.com
-1614174017	Spevacus	slotegrator\.pro
 1614174046	Spevacus	qualitypackagingsolutions\.co\.uk
 1614157568	Xnero	cheswins\.blogspot\.com
 1614165550	Xnero	updateerror\.co
