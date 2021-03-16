@@ -26938,7 +26938,7 @@
 1612592485	Cody Gray	getslots\.com
 1612593027	Makyen	(?-i:UCfHIad-GGU56iAZpRN-RWSA)(?#YouTube channel)
 1612593049	Makyen	(?-i:oliviaemmons)(?#medium.com)
-1612593078	Makyen	geehii[\W_]*+brain(?:[\W_]*+(?:advanced|brain|formula|reviews|\d++|[\da-f]{5,}+)s?)*
+1612593078	Makyen	geehii[\W_]*+brain(?:[\W_]*+(?:advanced|brain|formula|review|pill|buy|boost|cognitive|strength|\d++|[\da-f]{5,}+)s?)*
 1612593111	Makyen	(?:dienlanh[\W_]*+)?nambachkhoa(?!\.wordpress\.com(?<=dienlanhnambachkhoa\.wordpress\.com))
 1612593127	Makyen	dienlanhnambachkhoa\.wordpress\.com
 1612593284	Cody Gray	(?-i:I7N_qHBPPfA)(?# YouTube)
