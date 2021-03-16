@@ -28156,3 +28156,4 @@
 1615899761	doppelgreener	key4crack\.com
 1615910094	cigien	officialblankatmservice(?:@gmail\.com)?
 1615916096	Spevacus	daiwainfo\.jp
+1615916115	Spevacus	daiwahouse\.jp
