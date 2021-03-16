@@ -28157,3 +28157,4 @@
 1615910094	cigien	officialblankatmservice(?:@gmail\.com)?
 1615916096	Spevacus	daiwainfo\.jp
 1615916115	Spevacus	daiwahouse\.jp
+1615936393	Makyen	buysalesprice\.com
