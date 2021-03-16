@@ -28142,3 +28142,4 @@
 1615846296	cigien	packageslab\.com
 1615846486	cigien	king[\W_]*+vape[\W_]*+dubai(?!\.com(?<=kingvapedubai\.com))
 1615848681	Makyen	bitcoinminingcorp\.com
+1615854237	Makyen	keoni[\W_]*+cbd(?:[\W_]*+(?:gummies|reviews|price|cost|\d++|[\da-f]{5,}+)s?)*
