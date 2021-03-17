@@ -26857,7 +26857,6 @@
 1612359427	Spevacus	dreamsoftinfotech\.com
 1612359734	Spevacus	computerspacebd\.com
 1612362928	cigien	bargainlow\.com
-1612362991	cigien	studentsfactory\.co
 1612364516	cigien	dealdrop\.com
 1612366050	cigien	spy[\W_]*+detective[\W_]*+agency(?!\.com(?<=spydetectiveagency\.com))
 1612366348	cigien	(?:info@)?originalandlegallyregistereddrivinglicense\.com
