@@ -28188,3 +28188,4 @@
 1616012284	double-beep	safetrading\.today
 1616014026	Mast	com\.streamalerts
 1616016210	cigien	(?-i:pr0f3ssor)(?#t.me)
+1616018908	cigien	tranny\.one
