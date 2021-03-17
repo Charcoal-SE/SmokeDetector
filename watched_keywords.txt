@@ -28160,3 +28160,4 @@
 1615936393	Makyen	buysalesprice\.com
 1615938687	Makyen	accessatmhackingcompany(?:@gmail\.com)?
 1615950895	cigien	dengmuming(?:@163\.com)?
+1615950968	cigien	macbookexpert\.com
