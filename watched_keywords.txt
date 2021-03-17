@@ -28175,3 +28175,4 @@
 1615961821	Yatin	kiwidefi\.com
 1615961909	Yatin	(?-i:KiwiDefi(?:Group)?)(?#telegram channel and group)
 1615965707	tripleee	novelvista\.com
+1615965903	tripleee	ccna-help\.com
