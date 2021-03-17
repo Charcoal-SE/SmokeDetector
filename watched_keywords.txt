@@ -28180,3 +28180,4 @@
 1615976127	tripleee	globusinfocom\.com
 1615978088	tripleee	trsitem\.com
 1615984422	Spevacus	ambii\.io
+1615984438	Spevacus	kadosaz\.com
