@@ -459,3 +459,4 @@ SpeakingAccent
 (?-i:^Cathy Wessel$)
 (?-i:^Nimble AppGenie$)
 (?-i:^jmhgkgmmf$)
+^satta king$
