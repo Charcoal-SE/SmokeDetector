@@ -28185,3 +28185,4 @@
 1615984499	Spevacus	trustedcaptain\.com
 1615992200	cigien	eshaalmart\.com
 1615992612	cigien	kevin[\W_]*+harvick[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|official|\d++|[\da-f]{5,}+)s?)*
+1615992880	cigien	kiwi[\W_]*+defi(?!\.com(?<=kiwidefi\.com))
