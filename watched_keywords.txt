@@ -28186,3 +28186,4 @@
 1615992880	cigien	kiwi[\W_]*+defi(?!\.com(?<=kiwidefi\.com))
 1615994310	cigien	edisbeefarm\.ca
 1616012284	double-beep	safetrading\.today
+1616014026	Mast	com\.streamalerts
