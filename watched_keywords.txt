@@ -28176,3 +28176,4 @@
 1615961909	Yatin	(?-i:KiwiDefi(?:Group)?)(?#telegram channel and group)
 1615965707	tripleee	novelvista\.com
 1615965903	tripleee	ccna-help\.com
+1615970229	double-beep	microlit\.us
