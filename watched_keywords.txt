@@ -28187,3 +28187,4 @@
 1615994310	cigien	edisbeefarm\.ca
 1616012284	double-beep	safetrading\.today
 1616014026	Mast	com\.streamalerts
+1616016210	cigien	(?-i:pr0f3ssor)(?#t.me)
