@@ -28190,3 +28190,4 @@
 1616016210	cigien	(?-i:pr0f3ssor)(?#t.me)
 1616018908	cigien	tranny\.one
 1616019153	cigien	weik[\W_]*+field(?!\.com(?<=weikfield\.com))
+1616019690	cigien	meblex\.rzeszow\.pl
