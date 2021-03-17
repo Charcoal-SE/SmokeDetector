@@ -26795,7 +26795,6 @@
 1612232450	cigien	awsbytes\.com
 1612241441	cigien	blitzist\.com
 1612241871	cigien	(?-i:3o6kq9s)(?#bit.ly)
-1612247029	cigien	vampireslords437(?:@gmail\.com)?
 1612247066	tripleee	diykeycap\.com
 1612247865	tripleee	langsoft\.ch
 1612249436	Cody Gray	avvalstock\.com
