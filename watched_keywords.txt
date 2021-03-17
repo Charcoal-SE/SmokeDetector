@@ -28166,3 +28166,4 @@
 1615959270	Makyen	mybad\.ca
 1615960138	Makyen	toptiontech\.com
 1615960152	Makyen	toption[\W_]*+instrument(?:[\W_]*+(?:co|ltd|\d++|[\da-f]{5,}+)s?)*
+1615961909	Yatin	(?-i:KiwiDefi(?:Group)?)(?#telegram channel and group)
