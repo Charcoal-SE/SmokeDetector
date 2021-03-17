@@ -28168,3 +28168,4 @@
 1615960152	Makyen	toption[\W_]*+instrument(?:[\W_]*+(?:co|ltd|\d++|[\da-f]{5,}+)s?)*
 1615964542	tripleee	testomentin(?:[\W_]*+pills)?
 1615962397	Yatin	edusolveedutech\.com
+1615962289	Yatin	livesearchtoday\.com
