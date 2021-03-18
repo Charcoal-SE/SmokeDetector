@@ -28213,3 +28213,4 @@
 1616068332	tripleee	vplayed\.com
 1615962589	Yatin	^edusolve[\W_]*edutech$
 1616068408	Yatin	ivanovation\.ro
+1616070022	Spevacus	startuphrtoolkit\.com
