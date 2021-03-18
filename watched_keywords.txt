@@ -28221,3 +28221,4 @@
 1616075090	Spevacus	civicfitness\.com
 1616075773	Spevacus	jobsheadlines\.com
 1616079891	Makyen	strive[\W_]*+nutrition(?:[\W_]*+(?:healthy|brain|pill|review|pro|con|price|of|memory|enhancer|pills|\d++|[\da-f]{5,}+)s?)*
+1616094072	Spevacus	pdccargo\.com
