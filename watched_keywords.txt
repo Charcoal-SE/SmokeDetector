@@ -28223,3 +28223,4 @@
 1616079891	Makyen	strive[\W_]*+nutrition(?:[\W_]*+(?:healthy|brain|pill|review|pro|con|price|of|memory|enhancer|pills|\d++|[\da-f]{5,}+)s?)*
 1616094072	Spevacus	pdccargo\.com
 1616094088	Spevacus	apkbeach\.com
+1616094105	Spevacus	megabyte\.ae
