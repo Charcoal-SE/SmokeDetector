@@ -16961,7 +16961,6 @@
 1580987110	Shree	bitts\.ca
 1580989661	tripleee	office[\W_]*+administration[\W_]*+course
 1580990016	tripleee	ravindercpa\.com
-1580990723	tripleee	netrack[\W_]*+india(?!\.com)
 1580996769	tripleee	assignmentjunkie\.co\.uk
 1581002623	Machavity	cards\.app
 1581012618	Das_Geek	domzik\.com
