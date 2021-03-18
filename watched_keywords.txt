@@ -28205,3 +28205,4 @@
 1616045850	Makyen	dnfastener\.com
 1616050975	tripleee	miscof\.com
 1616053713	tripleee	amazon\.com/mytv
+1616054454	tripleee	adweb[\W_]*+studio
