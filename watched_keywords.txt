@@ -28228,3 +28228,4 @@
 1616131772	Makyen	jos[eé][\W_]*+lima[\W_]*+250(?:@gmail\.com)?
 1616133455	Ryan M	doorbangla\.com
 1616132821	Sonic the Curiouser Hedgehog	totomonkey\.com
+1616134023	Makyen	binancesolution\.com
