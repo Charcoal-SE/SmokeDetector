@@ -2482,3 +2482,4 @@ pinoy\W?teleserye
 racha?el[\W_]*+ray[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|gummies|\d++|[\da-f]{5,}+)s?)*
 vampireslords437(?:@gmail\.com)?
 netrack(?:[\W_]*+india)?
+sigsync(?!\.com)
