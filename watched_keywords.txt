@@ -23364,7 +23364,6 @@
 1600497217	Makyen	abtextgenerator\.com
 1600497233	Makyen	abfancytext\.com
 1600497330	Makyen	bellacouve[\W_]*+cream
-1600497509	Makyen	sigsync(?!\.com)
 1600503537	Makyen	bahraichsoftware(?!\.pythonanywhere\.com)
 1600504068	Makyen	luxitools\.com
 1600507939	double-beep	vpnblade\.com
