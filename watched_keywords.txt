@@ -28247,3 +28247,4 @@
 1616173047	Yatin	use-together\.com
 1616185755	Makyen	edensherbals\.com
 1616188056	Ryan M	streetmedi\.com
+1616188165	Ryan M	buy\w*+[\W_]++\w+[\W_]*+\d++mg
