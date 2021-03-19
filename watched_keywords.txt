@@ -28240,3 +28240,4 @@
 1616148145	tripleee	chaingateway\.io
 1616148228	tripleee	letsolar\.com
 1616148750	tripleee	(?-i:^Mélanie DU$)
+1616149368	Yatin	^Best[\W_]+Office[\W_]+365[\W_]+email[\W_]+Signature[\W_]+software$
