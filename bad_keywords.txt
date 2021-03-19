@@ -2483,3 +2483,4 @@ racha?el[\W_]*+ray[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|gummies|\d++|[\da-f]{5,}+
 vampireslords437(?:@gmail\.com)?
 netrack(?:[\W_]*+india)?
 sigsync(?!\.com)
+sage[\W_]*elixir[\W_]*cbd[\W_]*oil
