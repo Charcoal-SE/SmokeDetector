@@ -28256,3 +28256,4 @@
 1616212378	Makyen	(?-i:sXZVkOH6hrA)(?#YouTube)
 1616215624	cigien	calgarygaragedoorfix\.com
 1616216773	cigien	renhotecic\.com
+1616216788	cigien	renhotec[\W_]*+ic(?!\.com(?<=renhotecic\.com))
