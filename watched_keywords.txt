@@ -28259,3 +28259,4 @@
 1616216788	cigien	renhotec[\W_]*+ic(?!\.com(?<=renhotecic\.com))
 1616217771	cigien	crackpatched\.com
 1616218390	cigien	kara(?:[\W_]*+s)?[\W_]*+orchards[\W_]*+cbd(?:[\W_]*+(?:gummies|oil|uk|united|kingdom|\d++|[\da-f]{5,}+)s?)*
+1616218699	cigien	wiculty\.com
