@@ -28290,3 +28290,4 @@
 1616345989	cigien	joseruela\.pt
 1616349939	cigien	tribe37\.com
 1616354348	Makyen	getresponse\.com/[^"\s><]*\ba=\w*
+1616354891	Makyen	p\.vowk(?!$(?<=^P\.Vowk$))
