@@ -28292,3 +28292,4 @@
 1616354348	Makyen	getresponse\.com/[^"\s><]*\ba=\w*
 1616354891	Makyen	p\.vowk(?!$(?<=^P\.Vowk$))
 1616354964	Makyen	(?-i:FREE[\W_]*+TRIAL)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1616356194	Makyen	(?-i:AFFILIATE[\W_]*+MARKETING)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
