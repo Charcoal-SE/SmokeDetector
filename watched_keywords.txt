@@ -28280,3 +28280,4 @@
 1616332812	Glorfindel	expelhares
 1616333461	Jeff Schaller	callgirlsnight\.com
 1616328430	Yatin	lincsquad(?!\.com)
+1616328262	Yatin	(?-i:gC2SDTeCDYs)(?#youtube video)
