@@ -2484,3 +2484,4 @@ vampireslords437(?:@gmail\.com)?
 netrack(?:[\W_]*+india)?
 sigsync(?!\.com)
 sage[\W_]*+elixir[\W_]*+cbd(?:[\W_]*+(?:work|oil|view|\d++|[\da-f]{5,}+)s?)*
+kevin[\W_]*+harvick[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|price|work|official|\d++|[\da-f]{5,}+)s?)*
