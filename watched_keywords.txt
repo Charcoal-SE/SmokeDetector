@@ -28293,3 +28293,4 @@
 1616354964	Makyen	(?-i:FREE[\W_]*+TRIAL)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1616356194	Makyen	(?-i:AFFILIATE[\W_]*+MARKETING)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1616358729	cigien	codingqueue\.com
+1616359728	Makyen	earn[\W_]*+commission(?=.{0,80}?<\/?a)
