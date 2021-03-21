@@ -28293,4 +28293,3 @@
 1616354891	Makyen	p\.vowk(?!$(?<=^P\.Vowk$))
 1616354964	Makyen	(?-i:FREE[\W_]*+TRIAL)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1616356194	Makyen	(?-i:AFFILIATE[\W_]*+MARKETING)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
-1616356259	Makyen	earn[\W_]*+commission\.{0,80}?<\/?a
