@@ -28299,3 +28299,4 @@
 1616380416	Makyen	candycrushsoda\.co
 1616383469	Spevacus	Himalayan[\W_]*+Frozen[\W_]*+Adventure
 1616384171	Spevacus	ruby[\W_]*+valley[\W_]*+trek
+1616385780	cigien	concreteleadsnow\.com
