@@ -28319,3 +28319,4 @@
 1616419352	Yatin	privettbuilders\.com
 1616419380	Yatin	privettbuilder(?!\.com)
 1616420864	Yatin	idmlover\.com
+1616425582	Spevacus	drjohnsoco(?:@outlook\.com|@gmail\.com)?
