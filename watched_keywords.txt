@@ -28320,3 +28320,4 @@
 1616419380	Yatin	privettbuilder(?!\.com)
 1616420864	Yatin	idmlover\.com
 1616425582	Spevacus	drjohnsoco(?:@outlook\.com|@gmail\.com)?
+1616433718	double-beep	digivibs\.com
