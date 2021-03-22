@@ -9475,7 +9475,6 @@
 1557047604	Makyen	serntz2019(?:@gmail\.com)?
 1557047618	Makyen	alice\W*a\W*digital\W*home\W*optimization\W*system
 1557066198	Olivia	fagget
-1557116947	Makyen	drjohnsoco(?:@outlook\.com)?
 1557117164	Makyen	/p/owdywq(?#coderwall.com)
 1557119485	tripleee	yakinzo
 1557121030	Shree	nvertisuniversity\.ac\.in
