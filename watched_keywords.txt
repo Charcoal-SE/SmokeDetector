@@ -28305,3 +28305,4 @@
 1616397942	tripleee	khosango(?!\.com)
 1616398547	Yatin	whitebazaar\.in
 1616399874	tripleee	homoeobazaar\.com
+1616401334	tripleee	myprofitcity\.com
