@@ -28318,3 +28318,4 @@
 1616418414	Yatin	gyanamconsultancy\.com
 1616418657	Yatin	(?-i:fMXK5bo82ko)(?#youtube video)
 1616419352	Yatin	privettbuilders\.com
+1616419380	Yatin	privettbuilder(?!\.com)
