@@ -28306,3 +28306,4 @@
 1616397942	tripleee	khosango(?!\.com)
 1616398547	Yatin	whitebazaar\.in
 1616399874	tripleee	homoeobazaar\.com
+1616400030	Yatin	(?:wheezal[\W_])?+jaborandi[\W_]+hair[\W_]+(?:treatment)?[\W_]+Oil
