@@ -28296,3 +28296,4 @@
 1616359728	Makyen	earn[\W_]*+commission(?=.{0,80}?<\/?a)
 1616367790	cigien	technologybutton\.com
 1616376979	Spevacus	dhohoo\.com
+1616380416	Makyen	candycrushsoda\.co
