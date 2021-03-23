@@ -460,3 +460,4 @@ SpeakingAccent
 (?-i:^Nimble AppGenie$)
 (?-i:^jmhgkgmmf$)
 ^satta king$
+(?-i:^maama zama$)
