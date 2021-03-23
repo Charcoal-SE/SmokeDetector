@@ -28326,3 +28326,4 @@
 1616453846	cigien	intel\.bet
 1616458824	cigien	ragnar51lothbrok\.clickfunnels\.com
 1616459061	cigien	zensly
+1616459170	Ryan M	card-sorting\.com
