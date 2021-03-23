@@ -28339,3 +28339,4 @@
 1616479909	tripleee	proxyjobsupport\.com
 1616480979	Makyen	pdfcandy\.com
 1616482604	tripleee	expressastra\.co
+1616483103	tripleee	bird[\W_]*+gel(?:[\W_]*+spikes?)?
