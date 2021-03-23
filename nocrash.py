@@ -99,11 +99,11 @@ while not stoprunning:
         persistent_arguments.append('standby')
 
     if 'pull_update' in exit_info:
-        log('Pull in new updates')
+        log("Re-checkout, but don't pull in new updates, as this is the MS instance.")
         git.checkout('deploy')
-        git.pull()
+        # git.pull()
         git.checkout('master')
-        git.merge('@{u}')
+        # git.merge('@{u}')
         git.checkout('deploy')
 
         count = 0
@@ -115,8 +115,8 @@ while not stoprunning:
         sleep(5)
 
         if crashcount == 2:
-            log('Crash count triggered reverted state')
-            git.checkout('HEAD~1')
+            log('Crash count should trigger reverted state, but not for the MS instance.')
+            # git.checkout('HEAD~1')
 
             count = 0
             crashcount = 0
