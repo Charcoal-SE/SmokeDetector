@@ -28333,4 +28333,3 @@
 1616461220	cigien	trackeasy\.fun
 1616462579	cigien	essaywriter\.fun
 1616462881	cigien	routerlogin\.uno
-1616464912	cigien	(?:wheezal[\W_]*+)?jaborandi[\W_]*+hair[\W_]*+(?:treatment)?[\W_]*+Oil
