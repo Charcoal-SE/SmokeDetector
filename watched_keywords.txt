@@ -28345,3 +28345,4 @@
 1616487939	tripleee	1000pipclimbersystem\.com
 1616488007	tripleee	scraping[\W_]*+intelligence
 1616489210	tripleee	swastika\.co\.in
+1616493392	tripleee	(?-i:^Hemapriya R$)
