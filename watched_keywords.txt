@@ -28344,3 +28344,4 @@
 1616487877	tripleee	(?-i:9RU2v)(?# 2u.pw)
 1616487939	tripleee	1000pipclimbersystem\.com
 1616488007	tripleee	scraping[\W_]*+intelligence
+1616489210	tripleee	swastika\.co\.in
