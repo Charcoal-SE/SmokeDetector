@@ -28341,3 +28341,4 @@
 1616483103	tripleee	bird[\W_]*+gel(?:[\W_]*+spikes?)?
 1616483723	Glorfindel	textanswer\.com
 1616484105	tripleee	(?-i:mwpv8tku)(?# tinyurl)
+1616487877	tripleee	(?-i:9RU2v)(?# 2u.pw)
