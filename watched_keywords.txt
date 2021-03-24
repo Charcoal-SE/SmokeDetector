@@ -28367,3 +28367,4 @@
 1616559161	Ryan M	prachiescort\.com
 1616559395	Ryan M	(?-i:^OpenData Synth$)
 1616564401	Yatin	ezeditors\.com
+1616564970	Ryan M	worldwiseinstitute\.com
