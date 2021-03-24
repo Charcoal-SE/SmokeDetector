@@ -28365,4 +28365,3 @@
 1616534629	Ryan M	putlockerme\.co
 1616534664	Ryan M	putlockers\.cr
 1616559161	Ryan M	prachiescort\.com
-1616559359	Ryan M	(?-i:OpenData Synth)
