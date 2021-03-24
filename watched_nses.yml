@@ -1126,7 +1126,9 @@ items:
 - ns: nanosupercloud.com.
 - ns: himalayanwebinfo.com.
 - ns: imanagewebs.com.
-- ns: xincache.com.
+- comment: no longer responding 2021-03-25
+  disable: true
+  ns: xincache.com.
 - ns: ui-dns.com.
 - ns: supercp.com.
 - ns: crystalregistry.com.
