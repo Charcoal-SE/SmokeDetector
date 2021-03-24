@@ -2488,3 +2488,4 @@ kevin[\W_]*+harvick[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|price|work|official|\d++
 lord[\W_]*+bubuza(?:[\W_]*+miracle[\W_]*+work)?(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?com)?
 lord[\W_]*+masuka(?:[\W_]*+spell[\W_]*+temple)?(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?com)?
 renhotec[\W_]*+ic(?!\.com(?<=renhotecic\.com))
+sunday[\W_]*+horizon[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
