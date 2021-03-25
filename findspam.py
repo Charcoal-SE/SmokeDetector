@@ -2573,7 +2573,7 @@ create_rule("potentially bad keyword in {}",
             r"(?i)(?:"
             r"(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*"
             r"(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*"
-            r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)?"
+            r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)"
             r")",
             all=True,
             username=True, body_summary=False, body=False, title=False,
