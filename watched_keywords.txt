@@ -28416,3 +28416,4 @@
 1616682385	Glorfindel	itech4mac\.net
 1616685477	Makyen	zmok\.io
 1616685498	Makyen	zmok[\W_]*+io(?<!zmok\.io)
+1616684032	Yatin	(?-i:8K3xk4)(?#Fiverr)
