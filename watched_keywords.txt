@@ -28389,3 +28389,4 @@
 1616644124	cigien	googlebbd\.com
 1616644581	cigien	atsdestinaire\.online
 1616644642	cigien	ats[\W_]*+destinaire(?!\.online(?<=atsdestinaire\.online))
+1616644710	cigien	shivkaalinfotech\.com
