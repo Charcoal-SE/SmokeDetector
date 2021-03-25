@@ -28391,3 +28391,4 @@
 1616644642	cigien	ats[\W_]*+destinaire(?!\.online(?<=atsdestinaire\.online))
 1616644710	cigien	shivkaalinfotech\.com
 1616645084	cigien	grundig\.shop
+1616645281	cigien	jaxononlinehackers(?:@gmail\.com)?
