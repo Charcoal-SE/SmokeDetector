@@ -461,3 +461,4 @@ SpeakingAccent
 (?-i:^jmhgkgmmf$)
 ^satta king$
 (?-i:^maama zama$)
+(?-i:kleidmi luu$)
