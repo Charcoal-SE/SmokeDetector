@@ -28425,3 +28425,4 @@
 1616727006	cigien	maxi[\W_]*+printing[\W_]*+services(?!\.com(?<=maxiprintingservices\.com))
 1616730879	cigien	4d-8\.com
 1616731575	cigien	phprouter\.com
+1616731683	cigien	nutriminimart\.com
