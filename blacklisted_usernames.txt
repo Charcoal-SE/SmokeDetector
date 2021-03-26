@@ -462,3 +462,4 @@ SpeakingAccent
 ^satta king$
 (?-i:^maama zama$)
 (?-i:kleidmi luu$)
+(?-i:Amara Laurent$)
