@@ -28423,3 +28423,4 @@
 1616722659	Yatin	bitmainasics\.com
 1616722725	Yatin	(?-i:Lost_Cryptofund_Recovery)(?#telegram)
 1616724507	Yatin	cobaltdigital\.marketing
+1616727006	cigien	maxi[\W_]*+printing[\W_]*+services(?!\.com(?<=maxiprintingservices\.com))
