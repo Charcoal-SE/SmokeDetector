@@ -28461,3 +28461,4 @@
 1616835565	cigien	sarkari[\W_]*+results(?!\.info(?<=sarkariresults\.info))
 1616836154	cigien	retirement\.org
 1616841446	Jeff Schaller	themeadowlaneecr\.com
+1616848011	Glorfindel	stackblogging\.com
