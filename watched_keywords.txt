@@ -28454,3 +28454,4 @@
 1616828875	cigien	ezy[\W_]*+cash[\W_]*+for[\W_]*+cars(?!\.com\.au(?<=ezycashforcars\.com\.au))
 1616829054	cigien	prism[\W_]*+lead[\W_]*+india(?!\.in(?<=prismleadindia\.in))
 1616832150	cigien	smsnotif\.id
+1616832489	cigien	gamestoremobi\.com
