@@ -27652,7 +27652,6 @@
 1614408040	Makyen	advanced[\W_]*+keto(?:[\W_]*+(?:au|australia|ca|canada|\d++|[\da-f]{5,}+)s?)*
 1614443054	Makyen	techallay\.com
 1614443082	Makyen	rainiertamayo
-1614443998	Yatin	goketogenics\.com
 1614428016	Yatin	movetoslovenia\.eu
 1614424224	Yatin	(maa?dar|behen|randi)[\W]*chod
 1614422273	Yatin	sites\.google\.com/view/webfixes1/home
