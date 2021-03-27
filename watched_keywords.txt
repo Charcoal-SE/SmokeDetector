@@ -8002,7 +8002,6 @@
 1550475362	Makyen	high[\W_]ranking[\W_]*solutions
 1550475581	Makyen	homeocare\.in
 1550476367	Zoe	rocketrentacars\.com
-1550477474	Glorfindel	sarkari\W*results
 1550478467	Zoe	stackoverflowchat\.chatango\.com
 1550482687	Shree	paykasaodeme\.com
 1550484685	Shree	iphongthuy\.net
