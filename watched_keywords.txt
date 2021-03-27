@@ -28353,7 +28353,6 @@
 1616522853	Spevacus	hindinews24x\.in
 1616522952	Spevacus	fernandkoko17(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1616526253	double-beep	networkingfunda\.com
-1616527856	cigien	IXBRAnalyst
 1616528256	cigien	beeco\.com\.au
 1616534610	Ryan M	putlocker\.onl
 1616534629	Ryan M	putlockerme\.co
