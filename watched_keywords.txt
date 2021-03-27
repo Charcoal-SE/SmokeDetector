@@ -28453,3 +28453,4 @@
 1616828731	cigien	ninos[\W_]*+it[\W_]*+solution(?!\.com(?<=ninositsolution\.com))
 1616828875	cigien	ezy[\W_]*+cash[\W_]*+for[\W_]*+cars(?!\.com\.au(?<=ezycashforcars\.com\.au))
 1616829054	cigien	prism[\W_]*+lead[\W_]*+india(?!\.in(?<=prismleadindia\.in))
+1616832150	cigien	smsnotif\.id
