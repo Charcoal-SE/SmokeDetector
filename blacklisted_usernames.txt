@@ -55,7 +55,6 @@ rosanna\W?cart
 annalee899
 evie\W?berge
 Brook Davis
-zixuan[0-9][0-9]
 emilie\W?larsen
 air\W?purifier\W?reviews
 Cum\W?Juice
