@@ -28481,3 +28481,4 @@
 1616907004	cigien	zixuan[0-9][0-9]
 1616907512	cigien	lizixuan199752
 1616912405	Glorfindel	forexmaxtrading\.com
+1616933741	Victor VosMottor	кацап(?:чик)?и?
