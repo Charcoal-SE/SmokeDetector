@@ -28476,3 +28476,4 @@
 1616895405	cigien	finelook[\W_]*+interior(?!\.com(?<=finelookinterior\.com))
 1616871396	Yatin	bprnusa\.com
 1616871401	Yatin	bpkb-ku\.com
+1616905283	cigien	(?-i:Hg7ErxKq9G9EUP5C7)(?#google form)
