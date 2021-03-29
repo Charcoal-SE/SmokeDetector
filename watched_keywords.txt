@@ -28496,3 +28496,4 @@
 1616988177	Makyen	naga[\W_]*+poker
 1616991355	Makyen	zebafeb(?:[\W_]*+(?:customer|care|number|\d++|[\da-f]{5,}+)s?)*
 1616993513	cigien	sinnrrr
+1616993545	cigien	ajmal0197
