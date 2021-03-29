@@ -28494,3 +28494,4 @@
 1616988080	Makyen	(?-i:32tYAVR)(?#bit.ly)
 1616988117	Makyen	199\.192\.31\.174
 1616988177	Makyen	naga[\W_]*+poker
+1616991355	Makyen	zebafeb(?:[\W_]*+(?:customer|care|number|\d++|[\da-f]{5,}+)s?)*
