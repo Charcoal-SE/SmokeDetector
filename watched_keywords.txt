@@ -28506,3 +28506,4 @@
 1617015109	tripleee	silo[\W_]*+path(?!\.com)
 1617017096	tripleee	topresumewritingservices\.com
 1617018312	tripleee	oliveraandjelkovic(?# linkedin)
+1617027999	Jeff Schaller	wimzyroses\.com
