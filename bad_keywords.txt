@@ -1767,7 +1767,7 @@ beam\W?skin
 levia\W?flex
 kalis\W?keto
 /(?<=\.\w{1,5}/)(?:\w++-keto|keto-\w+)(?=["/< ]|$)(?#product name like keto-xx in URL)
-gkjwb
+gkjwb-how-to-look-younger
 k[ae]lis\W?keto
 qpaf6
 beam\W?cream
