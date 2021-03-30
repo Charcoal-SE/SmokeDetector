@@ -466,3 +466,4 @@ SpeakingAccent
 (?-i:^thebusinessfuse$)
 (?-i:^wealthpro technologies$)
 (?-i:^Jamie92$)
+(?-i:^Dingbest$)
