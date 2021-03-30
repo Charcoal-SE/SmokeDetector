@@ -28520,3 +28520,4 @@
 1617083782	Makyen	nosara(?:[\W_]*+(?:gummies|cbd|australia|canada|ca|review|work|au|buy|\d++|[\da-f]{5,}+)s?)*
 1617083852	tripleee	timestamp[\W_]*+camera
 1617084797	Makyen	okhideblankatmcard(?:@gmail\.com)?
+1617085319	Yatin	dangkyquamang\.dkkd\.gov\.vn
