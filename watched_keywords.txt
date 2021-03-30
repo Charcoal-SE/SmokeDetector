@@ -28516,3 +28516,4 @@
 1617076167	cigien	littlealchemy\.io
 1617076358	cigien	cybr3rsploits(?:@protonmail\.com)?
 1617076451	cigien	canastaleaguofamerica\.com
+1617082972	Makyen	nosara(?:[\W_]*+(?:gummies|cbd|australia|review|work|au|buy|\d++|[\da-f]{5,}+)s?)*
