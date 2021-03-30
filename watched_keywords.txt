@@ -28535,3 +28535,4 @@
 1617104983	cigien	vampiretemple10(?:@gmail\.com)?
 1617105075	cigien	contemporaryco\.com\.au
 1617107359	Spevacus	nuxgame\.com
+1617113105	Spevacus	(?-i:TJzgV0MlnYmSoPV7)(?#t.me)
