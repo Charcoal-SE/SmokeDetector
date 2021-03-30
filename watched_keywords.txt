@@ -19116,7 +19116,6 @@
 1586748418	Shree	bajrangisoch\.com
 1586752105	Makyen	aw168b39\.aweberpages\.com
 1586752135	Makyen	valita[\W_]*+cleanse(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
-1586759045	Makyen	bravolaw\.vn
 1586759093	Makyen	allessaywriter\.com
 1586760853	Makyen	hbeautytips\.com
 1586760962	Makyen	vivid[\W_]*+glow[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
