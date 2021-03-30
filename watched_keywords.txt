@@ -28518,3 +28518,4 @@
 1617076451	cigien	canastaleaguofamerica\.com
 1617083758	tripleee	free[\W_]*+apk[\W_]*+pro(?!\.com)
 1617083782	Makyen	nosara(?:[\W_]*+(?:gummies|cbd|australia|canada|ca|review|work|au|buy|\d++|[\da-f]{5,}+)s?)*
+1617083852	tripleee	timestamp[\W_]*+camera
