@@ -28557,3 +28557,4 @@
 1617168849	cigien	samantacomputer\.com
 1617169182	cigien	sterlingcreditgroup\.net
 1617169253	cigien	sterling[\W_]*+credit[\W_]*+group(?!\.net(?<=sterlingcreditgroup\.net))
+1617170421	cigien	smartcityprestige\.gen\.in
