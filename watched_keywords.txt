@@ -28554,3 +28554,4 @@
 1617168520	Ryan M	rex[\W_]*+wealth[\W_]*+recovery
 1617168692	Makyen	coinrecoverytrack(?!\.wordpress\.com)(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1617168707	Makyen	coinrecoverytrack\.wordpress\.com
+1617168849	cigien	samantacomputer\.com
