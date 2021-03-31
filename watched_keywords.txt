@@ -28575,3 +28575,4 @@
 1617208402	cigien	activatenortonsetupinfo(?!\.com)
 1617208715	cigien	innodatatics\.ai
 1617212632	cigien	haui\.edu\.vn
+1617212771	cigien	store\.setubridge\.com
