@@ -28556,3 +28556,4 @@
 1617168707	Makyen	coinrecoverytrack\.wordpress\.com
 1617168849	cigien	samantacomputer\.com
 1617169182	cigien	sterlingcreditgroup\.net
+1617169253	cigien	sterling[\W_]*+credit[\W_]*+group(?!\.net(?<=sterlingcreditgroup\.net))
