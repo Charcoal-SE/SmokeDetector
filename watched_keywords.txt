@@ -28568,3 +28568,4 @@
 1617192712	Spevacus	apkpure\.vip
 1617193199	Spevacus	campuswardrobe\.com
 1617194776	Spevacus	coupongrabber\.org
+1617195268	Spevacus	vision-tools\.com
