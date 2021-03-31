@@ -19674,7 +19674,6 @@
 1588461350	Makyen	mhtrade\.herokuapp\.com
 1588466488	Makyen	mycryptoparadise\.com
 1588476684	Makyen	otherapk\.com
-1588481498	Makyen	d(?:octo)?r[\W_]*+ekpen
 1588482628	Makyen	(?-i:if745CpIr_Y)(?#youtu.be)
 1588484850	Nisse Engström	blogcaodep\.com
 1588485673	Nisse Engström	hanoitaxi\.net
