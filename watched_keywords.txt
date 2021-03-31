@@ -28576,3 +28576,4 @@
 1617208715	cigien	innodatatics\.ai
 1617212632	cigien	haui\.edu\.vn
 1617212771	cigien	store\.setubridge\.com
+1617218441	Spevacus	makemytables\.com
