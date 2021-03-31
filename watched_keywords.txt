@@ -28573,3 +28573,4 @@
 1617208211	cigien	24dollsde\.com
 1617208388	cigien	activatenortonsetupinfo\.com
 1617208402	cigien	activatenortonsetupinfo(?!\.com)
+1617208715	cigien	innodatatics\.ai
