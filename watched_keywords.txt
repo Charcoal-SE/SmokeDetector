@@ -28587,3 +28587,4 @@
 1617262324	Makyen	coin[\W_]*+recovery[\W_]*+track(?!\.wordpress\.com(?<=coinrecoverytrack\.wordpress\.com))(?:er)?(?:[\W_]*+(?:at[\W_]*+)(?:g|proton)mail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1617264436	Makyen	coin[\W_]*+revocery[\W_]*+track(?:er)?
 1617279114	Spevacus	thewritingplanet\.com
+1617279128	Spevacus	tts\.adcrew\.us
