@@ -28594,3 +28594,4 @@
 1617284395	Spevacus	riseseocompany\.com
 1617288343	Spevacus	izmirbike\.com
 1617291420	cigien	testingsoftwarecompany\.com
+1617291550	cigien	tabsnation\.com
