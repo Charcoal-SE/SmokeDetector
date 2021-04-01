@@ -28588,3 +28588,4 @@
 1617264436	Makyen	coin[\W_]*+revocery[\W_]*+track(?:er)?
 1617279114	Spevacus	thewritingplanet\.com
 1617279128	Spevacus	tts\.adcrew\.us
+1617279143	Spevacus	formnotice\.com
