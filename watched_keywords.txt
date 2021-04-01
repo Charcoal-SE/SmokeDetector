@@ -28585,3 +28585,4 @@
 1617255633	cigien	guruprakash-c
 1617255722	cigien	vijaytvpromo\.com
 1617262324	Makyen	coin[\W_]*+recovery[\W_]*+track(?!\.wordpress\.com(?<=coinrecoverytrack\.wordpress\.com))(?:er)?(?:[\W_]*+(?:at[\W_]*+)(?:g|proton)mail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1617264436	Makyen	coin[\W_]*+revocery[\W_]*+track(?:er)?
