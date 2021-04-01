@@ -28583,3 +28583,4 @@
 1617245430	Spevacus	shipsy\.io
 1617246147	cigien	cpbild\.co
 1617255304	Makyen	wish[\W_]*+lab[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:effective|result|wish|lab|cbd|oil|of|buy|price|\d++|[\da-f]{5,}+)s?)*
+1617255633	cigien	guruprakash-c
