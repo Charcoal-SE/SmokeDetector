@@ -28610,3 +28610,4 @@
 1617349295	Makyen	whole[\W_]*+keto[\W_]*+xtreme(?:[\W_]*+(?:australia|au|canada|ca|buy|price|review|\d++|[\da-f]{5,}+)s?)*
 1617349461	Makyen	servicebasketuae\.com
 1617349648	Makyen	healthfirstcenter\.in
+1617349665	Makyen	healthfirstcenter(?!\.in)
