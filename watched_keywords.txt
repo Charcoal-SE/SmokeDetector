@@ -27530,7 +27530,7 @@
 1614134261	cigien	(?-i:MV1en6Wu8XRf3u6W7)(?#forms.gle)
 1614134424	cigien	madisonmemorial\.org
 1614134869	cigien	(?-i:NdP7gy)(?#fiverr)
-1614139988	Ryan M	schoolsnews\.ng
+1614139988	Ryan M	(?:2f)?schoolsnews\.ng
 1614140085	Makyen	unicalevoters\.com
 1614144185	cigien	superior[\W_]*+vibes[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 1614145136	Ryan M	artapix\.ch
