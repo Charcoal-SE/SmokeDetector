@@ -28619,3 +28619,4 @@
 1617377344	Makyen	whole[\W_]*+keto[\W_]*+xtreme(?:[\W_]*+(?:australia|au|whole|pill|buy|price|review|canada|ca|\d++|[\da-f]{5,}+)s?)*
 1617385201	Makyen	dotcrack\.com
 1617386234	Makyen	shabunc(?=♦)
+1617398698	cigien	chargeitbacks\.com
