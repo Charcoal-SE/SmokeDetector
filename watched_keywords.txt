@@ -28611,3 +28611,4 @@
 1617349461	Makyen	servicebasketuae\.com
 1617349648	Makyen	healthfirstcenter\.in
 1617349665	Makyen	healthfirstcenter(?!\.in)
+1617352463	Makyen	1dv2ea4
