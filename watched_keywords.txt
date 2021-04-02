@@ -28605,3 +28605,4 @@
 1617326024	Makyen	เกมส์สล็อต
 1617326031	Makyen	สล็อต
 1617333373	cigien	192168111\.net
+1617334939	Makyen	beedev[\W_]*+solutions
