@@ -28627,3 +28627,4 @@
 1617422239	cigien	ebetterbooks\.com
 1617422309	cigien	bestsmartlocker\.com
 1617428786	Makyen	bhutani[\W_]*+cyberthum
+1617432285	Makyen	certifiedmedicine\.com
