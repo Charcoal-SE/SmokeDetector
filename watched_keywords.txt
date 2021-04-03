@@ -28639,3 +28639,4 @@
 1617466070	Makyen	speedtestnet\.io
 1617467194	cigien	mmachdesign\.com
 1617467413	Makyen	mmach[\W_]*+design(?!\.com(?<=mmachdesign\.com))
+1617471177	cigien	hacklordwiz(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
