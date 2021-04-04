@@ -28654,3 +28654,4 @@
 1617547545	cigien	drawingsof\.com
 1617555158	cigien	nicolasbremand\.fr
 1617555172	cigien	acadroit\.fr
+1617555186	cigien	acadroit(?!\.fr)
