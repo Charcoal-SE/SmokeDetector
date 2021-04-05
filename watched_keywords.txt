@@ -28669,3 +28669,4 @@
 1617618619	double-beep	wondomains\.com
 1617624304	Spevacus	malwareguide112\.com
 1617624654	Spevacus	unrivaledcandles(?!\.com)
+1617626351	Spevacus	learnhtml5atoz\.blogspot
