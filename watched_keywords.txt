@@ -28680,3 +28680,4 @@
 1617680559	cigien	chinowing\.com
 1617683056	cigien	ap-setup\.us
 1617684893	cigien	behangservicenederland\.com
+1617685576	cigien	wondomains(?!\.com)
