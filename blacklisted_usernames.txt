@@ -469,3 +469,4 @@ SpeakingAccent
 (?-i:^Dingbest$)
 (?-i:^Sam Derickson$)
 (?-i:^Jeremy Zucker$)
+(?-i:^pal patil$)
