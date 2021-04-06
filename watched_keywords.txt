@@ -28682,3 +28682,4 @@
 1617684893	cigien	behangservicenederland\.com
 1617685576	cigien	wondomains(?!\.com)
 1617685805	cigien	learningmilestone\.blogspot
+1617686784	cigien	nighthawkapp\.download
