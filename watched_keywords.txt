@@ -20835,7 +20835,6 @@
 1591949053	tripleee	vaishnu\.com
 1591949122	tripleee	prepaidgiftbalance\.net
 1591949922	Makyen	kasino
-1591950054	tripleee	(?-i:^Jeremy Zucker$)
 1591951717	Makyen	chethansairkishna(?:@gmail\.com)?
 1591953485	tripleee	mindcard\.in
 1591954417	tripleee	icdramatv\.com

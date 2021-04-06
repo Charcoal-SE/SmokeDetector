@@ -468,3 +468,4 @@ SpeakingAccent
 (?-i:^Jamie92$)
 (?-i:^Dingbest$)
 (?-i:^Sam Derickson$)
+(?-i:^Jeremy Zucker$)
