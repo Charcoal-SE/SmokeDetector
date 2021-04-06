@@ -28685,3 +28685,4 @@
 1617686784	cigien	nighthawkapp\.download
 1617686812	cigien	netgerext\.net
 1617687118	cigien	fulani\.co\.uk
+1617687155	cigien	fulani(?!\.co\.uk)
