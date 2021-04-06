@@ -467,3 +467,4 @@ SpeakingAccent
 (?-i:^wealthpro technologies$)
 (?-i:^Jamie92$)
 (?-i:^Dingbest$)
+(?-i:^Sam Derickson$)
