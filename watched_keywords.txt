@@ -28686,3 +28686,4 @@
 1617686812	cigien	netgerext\.net
 1617687118	cigien	fulani\.co\.uk
 1617687155	cigien	fulani(?!\.co\.uk)
+1617688350	cigien	strongholdbrotherhood(?:@gmail\.com)?
