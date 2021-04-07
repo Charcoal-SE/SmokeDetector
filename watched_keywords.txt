@@ -28713,3 +28713,4 @@
 1617772744	double-beep	adderallstore\.com
 1617774057	double-beep	maxdroid\.net
 1617774099	tripleee	bomb[\W_]*+it[\W_]*+up
+1617776666	tripleee	duplicatefilesfixer\.com
