@@ -28075,7 +28075,6 @@
 1615745753	cigien	halkalinakliyat\.org
 1615745780	cigien	sinopnakliyat\.gen\.tr
 1615747177	cigien	calmcbdbv\.com
-1615750654	Makyen	clearexam\.ac\.in
 1615750672	Makyen	indiecurator@yandex\.com
 1615757191	Makyen	smithhackingcompanyltd(?:@gmail\.com)?
 1615778311	Makyen	online[\W_]*+it[\W_]*+guru
