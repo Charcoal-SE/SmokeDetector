@@ -28637,7 +28637,6 @@
 1617480960	Mast	arham[\W_]*+ent
 1617482563	cigien	(?-i:X8Xu8G0yYtk)(?#youtube)
 1617482935	cigien	dawnmcqs\.com
-1617483511	cigien	knowthepills\.com
 1617484057	cigien	fuhrerscheinss\.com
 1617490465	Jeff Schaller	homeandfamily\.net
 1617498212	cigien	smilepant\.com
