@@ -28710,3 +28710,4 @@
 1617759151	cigien	autoshopping24\.com
 1617759318	cigien	casablancahotel\.reservations(?:@gmail\.com)?
 1617771943	tripleee	tplinkrepeaterssetup\.com
+1617772744	double-beep	adderallstore\.com
