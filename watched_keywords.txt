@@ -28742,3 +28742,4 @@
 1617864739	Makyen	smilz[\W_]*+delta[\W_]*+8[\W_]*+gummies[\W_]*+cherry[\W_]*+cubes
 1617865574	tripleee	designerbathroomstore\.co\.uk
 1617865601	tripleee	shoppias\.com
+1617865855	tripleee	(?-i:^carlojonty$)
