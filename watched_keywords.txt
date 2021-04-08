@@ -28739,3 +28739,4 @@
 1617857805	cigien	khabarme\.ir
 1617864714	Makyen	mgcaregroup\.com
 1617864730	Makyen	cosyjewelry\.com
+1617864739	Makyen	smilz[\W_]*+delta[\W_]*+8[\W_]*+gummies[\W_]*+cherry[\W_]*+cubes
