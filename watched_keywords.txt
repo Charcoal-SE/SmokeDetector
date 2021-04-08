@@ -28749,3 +28749,4 @@
 1617879292	double-beep	digitallinkspro\.com
 1617878133	Xnero	(?-i:AAinvestor)(?#Telegram)
 1617885352	Spevacus	specialrdp\.com
+1617886000	tripleee	(?-i:^jahanzeb locker$)
