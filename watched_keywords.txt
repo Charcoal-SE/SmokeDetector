@@ -28750,3 +28750,4 @@
 1617878133	Xnero	(?-i:AAinvestor)(?#Telegram)
 1617885352	Spevacus	specialrdp\.com
 1617886000	tripleee	(?-i:^jahanzeb locker$)
+1617887044	tripleee	just[\W_]*+join[\W_]*+it
