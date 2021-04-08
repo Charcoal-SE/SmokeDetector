@@ -28748,3 +28748,4 @@
 1617873965	double-beep	brothersexoticwoodsupplier\.com
 1617874762	double-beep	myyogateacher\.com
 1617879292	double-beep	digitallinkspro\.com
+1617878133	Xnero	(?-i:AAinvestor)(?#Telegram)
