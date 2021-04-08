@@ -28733,3 +28733,4 @@
 1617833795	Ryan M	guitarquarter\.com
 1617838745	Makyen	superimageltd\.co\.uk
 1617840620	cigien	netgearrouterlogincare\.com
+1617851763	cigien	boxym(?!\.com)
