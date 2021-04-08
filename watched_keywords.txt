@@ -19099,7 +19099,7 @@
 1586703510	Makyen	(?-i:C8-F_a2n78E)(?#youtu.be)
 1586703536	Makyen	(?-i:UhalDo7v60M)(?#youtu.be)
 1586703800	Makyen	(?-i:3Skgr\.jpg)
-1586703828	Makyen	agen[\W_]*+slot(?:[\W_]*+(?:online|\d++|[\da-f]{4,}+))*
+1586703828	Makyen	agen[\W_]*+slot(?!788\.online(?<=agenslot788\.online))(?!online\.link(?<=agenslotonline\.link))(?:[\W_]*+(?:online|\d++|[\da-f]{4,}+))*
 1586703882	Makyen	torajagroup
 1586703906	Makyen	toraja4d
 1586713273	Makyen	hubsmobile\.com
