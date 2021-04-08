@@ -470,3 +470,4 @@ SpeakingAccent
 (?-i:^Sam Derickson$)
 (?-i:^Jeremy Zucker$)
 (?-i:^pal patil$)
+(?-i:^Prediksi Parlayku$)
