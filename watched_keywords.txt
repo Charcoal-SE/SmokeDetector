@@ -28751,3 +28751,4 @@
 1617885352	Spevacus	specialrdp\.com
 1617886000	tripleee	(?-i:^jahanzeb locker$)
 1617887044	tripleee	just[\W_]*+join[\W_]*+it
+1617887061	tripleee	470356554205207(?# facebook event)
