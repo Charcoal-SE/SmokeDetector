@@ -28736,3 +28736,4 @@
 1617851763	cigien	boxym(?!\.com)
 1617852364	cigien	techifydt\.tech
 1617854865	cigien	ocxie
+1617857805	cigien	khabarme\.ir
