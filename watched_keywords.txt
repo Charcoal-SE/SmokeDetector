@@ -28761,3 +28761,4 @@
 1617936614	cigien	socialworldgroup(?!\.com)
 1617936810	cigien	hyderabad[\W_]*+force(?!\.com(?<=hyderabadforce\.com))
 1617938224	cigien	himexam\.com
+1617938785	cigien	castingspell01(?:@gmail\.com)?
