@@ -471,3 +471,4 @@ SpeakingAccent
 (?-i:^Jeremy Zucker$)
 (?-i:^pal patil$)
 (?-i:^Prediksi Parlayku$)
+(?-i:^Maksim Yaroslav$)
