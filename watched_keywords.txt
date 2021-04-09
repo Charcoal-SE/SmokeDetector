@@ -28775,3 +28775,4 @@
 1617964841	Jeff Schaller	delimp\.com
 1617971570	Spevacus	kbcgame\.biz
 1617972132	Spevacus	adm[\W_]+sneezeguards
+1617974024	Spevacus	bpbonline\.com
