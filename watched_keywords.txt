@@ -28769,3 +28769,4 @@
 1617952723	double-beep	tabletshablet\.com
 1617953914	tripleee	onsurity\.com
 1617956491	tripleee	(?-i:fcVOILX)(?# cutt.ly)
+1617956520	tripleee	netprosoft\.com
