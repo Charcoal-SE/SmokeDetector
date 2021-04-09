@@ -28457,7 +28457,6 @@
 1616864584	Yatin	happymod\.com
 1616860171	Yatin	agen138
 1616877244	Makyen	launchsite\.co\.za
-1616879640	Makyen	jimuberservices(?:@gmail\.com)?
 1616879893	Makyen	kyze#9011
 1616894002	cigien	1news\.top
 1616894653	cigien	d(?:octo)?r[\W_]*+obo(?:healinghome1411(?:@gmail\.com)?)?
