@@ -28781,3 +28781,4 @@
 1617988655	Nisse Engström	clig\.dev
 1617999088	cigien	illini[\W_]*+foundry(?!\.com(?<=illinifoundry\.com))
 1618000848	cigien	delimp(?!\.com)
+1618000907	cigien	behealthyideas\.com
