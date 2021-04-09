@@ -28758,3 +28758,4 @@
 1617935994	cigien	dldolls\.com
 1617936333	cigien	detechnical\.com
 1617936596	cigien	socialworldgroup\.com
+1617936614	cigien	socialworldgroup(?!\.com)
