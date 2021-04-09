@@ -28783,3 +28783,4 @@
 1618000848	cigien	delimp(?!\.com)
 1618000907	cigien	behealthyideas\.com
 1618001352	cigien	websitescraper\.com
+1618003437	cigien	discountpartner\.co\.uk
