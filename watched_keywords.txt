@@ -28799,3 +28799,4 @@
 1618035641	cigien	exotic[\W_]*+parrot[\W_]*+store(?!\.com(?<=exoticparrotstore\.com))
 1618036563	cigien	bellzonefreight\.com
 1618042542	Nisse Engström	jobsrod\.com
+1618049528	double-beep	twinsdaily\.com
