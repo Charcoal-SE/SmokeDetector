@@ -28797,3 +28797,4 @@
 1618033924	cigien	d(?:octo)?r[\W_]*+okpara
 1618035479	cigien	hutchbug\.com
 1618035641	cigien	exotic[\W_]*+parrot[\W_]*+store(?!\.com(?<=exoticparrotstore\.com))
+1618036563	cigien	bellzonefreight\.com
