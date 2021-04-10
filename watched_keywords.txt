@@ -28801,3 +28801,4 @@
 1618042542	Nisse Engström	jobsrod\.com
 1618049528	double-beep	twinsdaily\.com
 1618049575	double-beep	technfy\.blogspot
+1618053711	Jeff Schaller	daftarjudibola\.wildapricot\.org
