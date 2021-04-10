@@ -28808,3 +28808,4 @@
 1618078845	cigien	d(?:octo)?r[\W_]*+ogedegbe
 1618078886	cigien	dr\.ogedegbe6(?:@gmail\.com)?
 1618081874	Makyen	github\.com/k-karlovic(?#user over-promoting their project on SO)
+1618085287	cigien	iptaletmek\.com
