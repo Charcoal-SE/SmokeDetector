@@ -28794,3 +28794,4 @@
 1618033136	cigien	perfectcv\.ae
 1618033242	cigien	lfsite\.net
 1618033867	cigien	okparacure(?:@gmail\.com)?
+1618033924	cigien	d(?:octo)?r[\W_]*+okpara
