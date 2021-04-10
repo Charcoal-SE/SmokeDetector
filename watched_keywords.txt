@@ -28793,3 +28793,4 @@
 1618030688	cigien	listoftech\.com
 1618033136	cigien	perfectcv\.ae
 1618033242	cigien	lfsite\.net
+1618033867	cigien	okparacure(?:@gmail\.com)?
