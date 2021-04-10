@@ -28790,3 +28790,4 @@
 1618029153	cigien	sudutdesa\.club
 1618029780	cigien	sevencoders\.com
 1618030473	cigien	softtechdiary\.com
+1618030688	cigien	listoftech\.com
