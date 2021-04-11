@@ -1291,7 +1291,9 @@ items:
 - ns: wyservers.com.
 - ns: w3gb.com.
 - ns: ekkum.com.
-- ns: practicetestnetworks.com.
+- comment: no longer resolves 2021-04-10
+  disable: true
+  ns: practicetestnetworks.com.
 - ns: quantilytics.org.
 - ns: netmagicians.com.
 - ns: cloudns.io.
