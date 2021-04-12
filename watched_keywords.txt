@@ -28824,3 +28824,4 @@
 1618209925	tripleee	capitalmanage-inc\.com
 1618211265	tripleee	(?-i:nexF)(#? zurl.co redirect)
 1618212349	Makyen	ricky[\W_]*+gervais[\W_]*+cbd(?:[\W_]*+(?:gum|gummies|price|buy|review|\d++|[\da-f]{5,}+)s?)*
+1618212483	Makyen	easyshiksha\.com
