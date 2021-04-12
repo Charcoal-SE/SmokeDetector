@@ -28822,3 +28822,4 @@
 1618198073	cigien	krtech\.in
 1618209074	tripleee	techtipsguru\.com
 1618209925	tripleee	capitalmanage-inc\.com
+1618211265	tripleee	(?-i:nexF)(#? zurl.co redirect)
