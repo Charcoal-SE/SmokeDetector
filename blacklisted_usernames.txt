@@ -472,3 +472,4 @@ SpeakingAccent
 (?-i:^pal patil$)
 (?-i:^Prediksi Parlayku$)
 (?-i:^Maksim Yaroslav$)
+(?-i:^Aggrey Ng'aya$)
