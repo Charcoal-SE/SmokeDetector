@@ -28828,3 +28828,4 @@
 1618218254	tripleee	TNHH[\W_]*+DANY
 1618223682	tripleee	moveradbell\.co\.nz
 1618225483	Jeff Schaller	gmcheatingcooling\.com
+1618228255	tripleee	iovulationcalculator\.com
