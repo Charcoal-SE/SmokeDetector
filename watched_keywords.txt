@@ -28837,3 +28837,4 @@
 1618268511	cigien	drbenjaminfinance(?:@gmail\.com)?
 1618268527	cigien	licensecracked\.com
 1618269954	cigien	noithatgiasi\.net\.vn
+1618270216	cigien	moveradbell(?!\.co\.nz)
