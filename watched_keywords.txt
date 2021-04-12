@@ -28826,3 +28826,4 @@
 1618212349	Makyen	ricky[\W_]*+gervais[\W_]*+cbd(?:[\W_]*+(?:gum|gummies|price|buy|review|\d++|[\da-f]{5,}+)s?)*
 1618212483	Makyen	easyshiksha\.com
 1618218254	tripleee	TNHH[\W_]*+DANY
+1618223682	tripleee	moveradbell\.co\.nz
