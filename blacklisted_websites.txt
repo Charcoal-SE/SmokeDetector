@@ -3980,3 +3980,4 @@ prediksiparlay788\.xyz
 kit\.co(?<=\bkit\.co)(?<![^\W_]-kit\.co)(?![.-][^\W_])\b
 softtechdiary\.com
 stickservicespro\.com
+whetscience\.com
