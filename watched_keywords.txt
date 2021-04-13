@@ -28854,3 +28854,4 @@
 1618297832	double-beep	fineforenergy\.com
 1618298226	Makyen	wellbeingcbdgummieswhy\.medium\.com
 1618298236	Makyen	well[\W_]*+being[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|price|review|why|\d++|[\da-f]{5,}+)s?)*
+1618301061	Makyen	visas-hub\.com
