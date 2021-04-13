@@ -28849,3 +28849,4 @@
 1618290942	tripleee	deveondi(?!\.com)
 1618294832	Makyen	safetysignsdirect\.co\.nz
 1618294961	Makyen	zelfina[\W_]*+skin[\W_]*+cream
+1618294971	Makyen	(?-i:zelfinaskincreamwork)(?#sites.google.com)
