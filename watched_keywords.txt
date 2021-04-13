@@ -28850,3 +28850,4 @@
 1618294832	Makyen	safetysignsdirect\.co\.nz
 1618294961	Makyen	zelfina[\W_]*+skin[\W_]*+cream
 1618294971	Makyen	(?-i:zelfinaskincreamwork)(?#sites.google.com)
+1618296935	Makyen	smilz[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|price|review|\d++|[\da-f]{5,}+)s?)*
