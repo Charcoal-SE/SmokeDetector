@@ -28859,3 +28859,4 @@
 1618306086	Makyen	tumeric[\W_]*+penis[\W_]*+growth
 1618311700	Jeff Schaller	prestigecity\.gen\.in
 1618316820	Spevacus	talkenglish\.com
+1618316847	Spevacus	hdfs\.msu\.edu
