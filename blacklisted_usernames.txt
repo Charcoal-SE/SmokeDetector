@@ -473,3 +473,4 @@ SpeakingAccent
 (?-i:^Prediksi Parlayku$)
 (?-i:^Maksim Yaroslav$)
 (?-i:^Aggrey Ng'aya$)
+(?-i:^Fast Custom Boxes$)
