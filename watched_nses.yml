@@ -1313,7 +1313,9 @@ items:
   ns: megabytesserver.com.
 - ns: cms500.com.
 - ns: servers800.com.
-- ns: our-websites.com.
+- comment: 2021-04-14 NXDOMAIN
+  disable: true
+  ns: our-websites.com.
 - ns: 100ws.com.
 - ns: exaltedsolutions.com.
 - ns: za-dns.com.
