@@ -28875,3 +28875,4 @@
 1618377995	Makyen	slendivan[\W_]*+enhanced[\W_]*+keto(?:[\W_]*+(?:pill|buy|price|review|\d++|[\da-f]{5,}+)s?)*
 1618382599	tripleee	biggboss15watch\.live
 1618382675	tripleee	chatiw\.chat
+1618382696	tripleee	bazoocam\.link
