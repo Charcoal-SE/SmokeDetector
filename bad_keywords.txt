@@ -2491,3 +2491,4 @@ renhotec[\W_]*+ic(?!\.com(?<=renhotecic\.com))
 sunday[\W_]*+horizon[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 IXBRAnalyst
 jimuberservices(?:@gmail\.com)?
+cyber[\W_]*+lord\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
