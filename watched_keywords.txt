@@ -28872,3 +28872,4 @@
 1618375773	Makyen	162\.0\.236\.7
 1618377052	tripleee	(?-i:^Krystal Calhounlog$)
 1618377311	tripleee	jobsflyer\.com
+1618377995	Makyen	slendivan[\W_]*+enhanced[\W_]*+keto(?:[\W_]*+(?:pill|buy|price|review|\d++|[\da-f]{5,}+)s?)*
