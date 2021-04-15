@@ -28899,3 +28899,4 @@
 1618481405	double-beep	us\.barkershoes\.com
 1618482588	Glorfindel	ioncares
 1618482605	double-beep	amrutum\.co\.in
+1618482625	tripleee	promotive\.co\.in
