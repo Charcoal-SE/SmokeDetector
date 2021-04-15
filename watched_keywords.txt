@@ -28897,3 +28897,4 @@
 1618478321	tripleee	yourmp3converter\.com
 1618479322	double-beep	tripidaysegytours\.com
 1618481405	double-beep	us\.barkershoes\.com
+1618482588	Glorfindel	ioncares
