@@ -28921,3 +28921,4 @@
 1618549540	cigien	fjn\.vn
 1618550421	cigien	exoticwoodzone\.com
 1618550437	cigien	exotic[\W_]*+wood[\W_]*+zone(?!\.com(?<=exoticwoodzone\.com))
+1618550628	cigien	advgyan\.com
