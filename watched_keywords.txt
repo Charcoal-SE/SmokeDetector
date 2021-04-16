@@ -28930,3 +28930,4 @@
 1618554617	cigien	drsamueljosphthehabalist(?:@gmail\.com)?
 1618554750	cigien	tekniko[\W_]*+global(?!\.com(?<=teknikoglobal\.com))
 1618567146	Mast	1921681881\.com
+1618569391	double-beep	kuchesarfort\.com
