@@ -28928,3 +28928,4 @@
 1618552246	cigien	sudhakarind\.com
 1618552348	cigien	websitemakers\.xyz
 1618554617	cigien	drsamueljosphthehabalist(?:@gmail\.com)?
+1618554750	cigien	tekniko[\W_]*+global(?!\.com(?<=teknikoglobal\.com))
