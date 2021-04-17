@@ -28947,3 +28947,4 @@
 1618645385	Ryan M	vanangroup\.com\.vn
 1618647705	Nisse Engström	tii\.ai
 1618647757	Nisse Engström	reliableinfotechsolutions\.com\.au
+1618657267	Nisse Engström	loresult\.com
