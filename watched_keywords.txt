@@ -28937,3 +28937,4 @@
 1618607317	Makyen	d(?:octo)?r[\W_]*+ojeabulu
 1618607331	Makyen	ojeabulusolutionhome(?:@gmail\.com)?
 1618607347	Makyen	drojeabulusolutionhome\.wordpress\.com
+1618621634	Spevacus	bitcoinrecoverytools\.com
