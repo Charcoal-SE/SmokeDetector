@@ -2143,17 +2143,19 @@ def false(feedback, msg, comment, alias_used="false"):
 
     user = get_user_from_url(owner_url)
 
-    if user is not None:
+    result = "Registered " + post_type + " as false positive"
+    if user is None:
+        if feedback_type.blacklist:
+            # The command was to bloacklist the user, but we're unable to determine the user.
+            raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
+    else:
         if feedback_type.blacklist:
             add_whitelisted_user(user)
-            result = "Registered " + post_type + " as false positive and whitelisted user."
+            result += " and whitelisted user"
         elif is_blacklisted_user(user):
             remove_blacklisted_user(user)
-            result = "Registered " + post_type + " as false positive and removed user from the blacklist."
-        else:
-            result = "Registered " + post_type + " as false positive."
-    else:
-        result = "Registered " + post_type + " as false positive."
+            result += " and removed user from the blacklist"
+    result += "."
 
     try:
         if msg.room.id != 11540:
@@ -2247,22 +2249,25 @@ def true(feedback, msg, comment, alias_used="true"):
     feedback_type.send(post_url, feedback)
 
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
+    result = "Registered " + post_type + " as true positive"
+    cant_get_user_command_exception_text = result + ', but could not get user from URL: `{0!r}`'.format(owner_url)
     try:
         user = get_user_from_url(owner_url)
     except TypeError as e:
-        raise CmdException('Could not get user from URL {0!r}'.format(owner_url))
+        raise CmdException(cant_get_user_command_exception_text)
 
-    if user is not None:
+    if user is None:
+        if feedback_type.blacklist:
+            raise CmdException(cant_get_user_command_exception_text)
+    else:
         if feedback_type.blacklist:
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_url)
 
-            result = "Registered " + post_type + " as true positive and blacklisted user."
+            result += " and blacklisted user"
         else:
-            result = "Registered " + post_type + " as true positive. If you want to "\
-                     "blacklist the poster, use `trueu` or `tpu`."
-    else:
-        result = "Registered " + post_type + " as true positive."
+            result += ". If you want to blacklist the poster, use `trueu` or `tpu`"
+    result += "."
 
     if comment:
         Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
