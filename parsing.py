@@ -12,6 +12,8 @@ def rebuild_str(s):
 
 # noinspection PyBroadException,PyMissingTypeHints
 def get_user_from_url(url):
+    if url is None:
+        return None
     match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
     if match is None:
         return None
