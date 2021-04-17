@@ -28884,7 +28884,6 @@
 1618414950	cigien	doctorspiritthehabalist12(?:@gmail\.com)?
 1618414968	cigien	d(?:octo)?r[\W_]*+spirit
 1618417439	Ollie	teknikoglobal\.com
-1618430274	Machavity	csharp\.specialschools\.in
 1618433344	Glorfindel	metropolitanenglish\.com
 1618439512	Makyen	essaywriter\.nyc
 1618456621	Makyen	myguitarpicks\.com
