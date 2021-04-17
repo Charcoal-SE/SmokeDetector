@@ -2493,3 +2493,4 @@ jimuberservices(?:@gmail\.com)?
 cyber[\W_]*+lord\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 smilz[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|price|review|\d++|[\da-f]{5,}+)s?)*
 h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+i[\W_]*+n[\W_]*+g[\W_]*+l[\W_]*+o[\W_]*+o[\W_]*+p[\W_]*+(?:\d[\W_]*+)*(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?(?#obfuscated email and/or text: "hackingloop6")
+Sonu Yadav\W*+Software Developer
