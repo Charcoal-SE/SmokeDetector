@@ -28966,3 +28966,4 @@
 1618711844	cigien	pedigrine\.com
 1618711921	cigien	buytechgifts\.com
 1618712189	cigien	alhayyatgroup\.com
+1618716733	cigien	tu[\W_]*+van[\W_]*+marketing(?:[\W_]*+fiex)?
