@@ -28969,3 +28969,4 @@
 1618716733	cigien	tu[\W_]*+van[\W_]*+marketing(?:[\W_]*+fiex)?
 1618717928	cigien	d(?:octo)?r[\W_]*+akhigbe
 1618718027	cigien	(?-i:GLDHtm6nPq)(?#t.co)
+1618718158	cigien	ustechportal\.com
