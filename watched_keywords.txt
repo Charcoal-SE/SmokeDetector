@@ -28960,3 +28960,4 @@
 1618702144	cigien	pianov\.nz
 1618702273	cigien	myguitarpicks(?!\.com)
 1618705446	cigien	bestgoodarticle\.com
+1618706357	cigien	sofijakokalj(?:@yandex\.com)?
