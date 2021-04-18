@@ -28961,3 +28961,4 @@
 1618702273	cigien	myguitarpicks(?!\.com)
 1618705446	cigien	bestgoodarticle\.com
 1618706357	cigien	sofijakokalj(?:@yandex\.com)?
+1618706581	cigien	softwaresforlinux\.wordpress\.com
