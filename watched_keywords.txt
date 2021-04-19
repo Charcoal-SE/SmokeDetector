@@ -28995,3 +28995,4 @@
 1618844060	double-beep	keyboardcutter\.com
 1618849194	Mast	painterselgin\.com
 1618850153	Makyen	(?-i:janisrandy)(?<=\bfiverr\.com/janisrandy)(?#fiverr.com)
+1618852341	Mast	glider\.ai
