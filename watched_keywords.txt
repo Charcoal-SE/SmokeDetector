@@ -28982,3 +28982,4 @@
 1618790000	Nick	autoguardtracking\.com
 1618804980	Makyen	daytodayworld\.com
 1618805223	cigien	techprodata\.com
+1618805341	cigien	startcup\.in
