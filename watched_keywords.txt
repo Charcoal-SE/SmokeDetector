@@ -29003,3 +29003,4 @@
 1618881643	cigien	khamphukhoatphcm\.info
 1618881707	cigien	xoffencer\.com
 1618882124	cigien	yasushiuzawa(?:@yahoo\.co\.uk)?
+1618882819	cigien	roofscool\.com
