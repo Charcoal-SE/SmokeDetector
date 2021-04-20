@@ -3986,3 +3986,4 @@ csharp\.specialschools\.in
 programgrab\.com
 updateerror\.co
 cleariitmedical\.com
+(?-i:Y13vQ)(?<=\bzilo\.app/Y13vQ)
