@@ -28997,3 +28997,4 @@
 1618850153	Makyen	(?-i:janisrandy)(?<=\bfiverr\.com/janisrandy)(?#fiverr.com)
 1618852341	Mast	glider\.ai
 1618877197	cigien	vin-enterprises\.com
+1618877551	cigien	dt[\W_]*+modern[\W_]*+tech
