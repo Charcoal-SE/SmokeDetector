@@ -476,3 +476,4 @@ SpeakingAccent
 (?-i:^Fast Custom Boxes$)
 (?-i:^DGal World$)
 (?-i:^kevinmalone01$)
+^lovekesh jayant$
