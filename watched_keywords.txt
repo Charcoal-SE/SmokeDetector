@@ -28561,7 +28561,6 @@
 1617212771	cigien	store\.setubridge\.com
 1617218441	Spevacus	makemytables\.com
 1617241005	cigien	chinaorganicbeeswax\.com
-1617241056	cigien	aludoorwindows\.com
 1617244536	cigien	lee\.jerry5555(?:@gmail\.com)?
 1617245430	Spevacus	shipsy\.io
 1617246147	cigien	cpbild\.co
