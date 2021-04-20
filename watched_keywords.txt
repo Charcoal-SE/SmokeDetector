@@ -29004,3 +29004,4 @@
 1618882124	cigien	yasushiuzawa(?:@yahoo\.co\.uk)?
 1618882819	cigien	roofscool\.com
 1618882837	cigien	shahidbrothers\.com
+1618888551	Makyen	koyowater(?!\.com)
