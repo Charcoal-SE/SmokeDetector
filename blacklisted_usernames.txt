@@ -475,3 +475,4 @@ SpeakingAccent
 (?-i:^Aggrey Ng'aya$)
 (?-i:^Fast Custom Boxes$)
 (?-i:^DGal World$)
+(?-i:^kevinmalone01$)
