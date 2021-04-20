@@ -3989,3 +3989,4 @@ cleariitmedical\.com
 (?-i:Y13vQ)(?<=\bzilo\.app/Y13vQ)
 aludoorwindows\.com
 livesearchtoday\.com
+specialschools\.in
