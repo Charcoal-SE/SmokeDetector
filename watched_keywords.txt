@@ -28999,3 +28999,4 @@
 1618877197	cigien	vin-enterprises\.com
 1618877551	cigien	dt[\W_]*+modern[\W_]*+tech
 1618878145	cigien	(?-i:QkEc3bUe7m)(?#discord)
+1618881504	cigien	flowersbeautyacademy\.in
