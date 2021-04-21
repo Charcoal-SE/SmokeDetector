@@ -29011,7 +29011,6 @@
 1618900146	Makyen	(?-i:^Valerie G\. Juan$)
 1618901559	double-beep	lifecoachingmastery\.net
 1618904974	Makyen	(?-i:duLVQsYj_Eo)(?#YouTube)
-1618907908	double-beep	thebddaily\.xyz
 1618912043	double-beep	rplforaustralia\.com
 1618912072	double-beep	techowiser\.com
 1618914027	Zoe	888sport\.es
