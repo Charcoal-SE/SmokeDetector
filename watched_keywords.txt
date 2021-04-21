@@ -29049,3 +29049,4 @@
 1619014994	Makyen	option[\W_]*+strategies[\W_]*+insider(?!\.com(?<=optionstrategiesinsider\.com))
 1619015016	Makyen	supplements4fitness\.com
 1619015031	Makyen	ulixy[\W_]*+cbd[\W_]*+gummies
+1619026367	Ollie	doramy-smotret\.ru
