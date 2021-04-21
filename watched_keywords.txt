@@ -29040,3 +29040,4 @@
 1618999218	Makyen	pletheon[\W_]*+consulting(?!\.com(?<=pletheonconsulting\.com))
 1619000774	Makyen	myproteinnutrition\.com
 1619005325	Jeff Schaller	taxaceindia\.in
+1619008052	Jeff Schaller	mltut\.com
