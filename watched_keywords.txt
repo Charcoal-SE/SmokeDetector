@@ -29037,3 +29037,4 @@
 1618994296	Makyen	eunomia\.co\.nz
 1618995385	Glorfindel	forexbot\.reviews
 1618999200	Makyen	pletheonconsulting\.com
+1618999218	Makyen	pletheon[\W_]*+consulting(?!\.com(?<=pletheonconsulting\.com))
