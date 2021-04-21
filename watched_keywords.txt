@@ -29038,3 +29038,4 @@
 1618995385	Glorfindel	forexbot\.reviews
 1618999200	Makyen	pletheonconsulting\.com
 1618999218	Makyen	pletheon[\W_]*+consulting(?!\.com(?<=pletheonconsulting\.com))
+1619000774	Makyen	myproteinnutrition\.com
