@@ -29035,3 +29035,4 @@
 1618994263	Makyen	tinytechindia\.com
 1618994279	Makyen	autocar\.co\.nz
 1618994296	Makyen	eunomia\.co\.nz
+1618995385	Glorfindel	forexbot\.reviews
