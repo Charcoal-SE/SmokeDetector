@@ -29047,3 +29047,4 @@
 1619014935	Makyen	omeglerandomchat\.com
 1619014953	Makyen	omegle\.world
 1619014971	Makyen	optionstrategiesinsider\.com
+1619014994	Makyen	option[\W_]*+strategies[\W_]*+insider(?!\.com(?<=optionstrategiesinsider\.com))
