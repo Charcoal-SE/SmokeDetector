@@ -29054,3 +29054,4 @@
 1619042409	Makyen	mushkmahal\.com
 1619047565	cigien	indirimkuponu\.com\.tr
 1619050913	cigien	fanaronline\.com
+1619051847	cigien	taxace[\W_]*+india(?!\.in(?<=taxaceindia\.in))
