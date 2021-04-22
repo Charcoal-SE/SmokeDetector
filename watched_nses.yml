@@ -1244,7 +1244,9 @@ items:
   disable: true
   ns: usm1804.sgded.com.
 - ns: stackdns.com.
-- ns: permainanceme.online.
+- comment: no longer resolves 2021-4-22
+  disable: true
+  ns: permainanceme.online.
 - ns: resourcesofnet.net.
 - comment: 5/9 over 7 months, all TPs overlap with other rules (2020-08-18)
   disable: true
