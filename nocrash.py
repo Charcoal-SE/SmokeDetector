@@ -114,11 +114,14 @@ while not stoprunning:
 
     if 'pull_update' in exit_info:
         log('Pull in new updates')
+        git.remote.update()
         git.checkout('deploy')
-        git.pull()
-        git.checkout('master')
-        git.pull()
-        git.checkout('deploy')
+        git.merge('--ff-only', '@{u}')
+
+        remote_master = git('rev-parse', '--abbrev-ref', '--symbolic-full-name', 'master@{u}').strip()
+        s = git('merge-base', '--is-ancestor', 'master', remote_master, _ok_code=[0, 1])
+        if s.exit_code == 0:
+            git('update-ref', 'master', remote_master)
 
         count = 0
         crashcount = 0
@@ -148,7 +151,6 @@ while not stoprunning:
 
     elif 'checkout_deploy' in exit_info:
         log('Checkout deploy')
-        # print "[NoCrash] Checkout Deploy"
         git.checkout('deploy')
 
         count = 0

@@ -11,6 +11,16 @@ if 'windows' not in platform.platform().lower():
 GitError = sp.CalledProcessError
 
 
+# Mock git(something).exit_code behavior from amoffat/sh
+class CompletedGitCommand:
+    def __init__(self, stdout="", exit_code=0):
+        self.stdout = stdout
+        self.exit_code = exit_code
+
+    def __getattr__(self, name):
+        return getattr(self.stdout, name)
+
+
 def _call_process(execcmd, _ok_code=None, return_data=True, return_tuple=False):
     execcmd = ('git',) + execcmd
     proc = sp.Popen(execcmd, stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
@@ -25,7 +35,7 @@ def _call_process(execcmd, _ok_code=None, return_data=True, return_tuple=False):
         to_return = (stdout, stderr, retcode)
         return to_return
     if return_data:
-        to_return = stdout.decode("utf-8")
+        to_return = CompletedGitCommand(stdout.decode("utf-8"), retcode)
         return to_return
 
 
@@ -70,7 +80,7 @@ class Git(object):
 
 git = Git()
 git_version = git.version(return_data=True).strip()
-if ('indows' not in git_version):
+if 'windows' not in git_version.lower():
     raise NotImplementedError('The git program being used, ' + git_version + ', is not a Windows based version.'
                               ' Be sure you installed Git for Windows and that it is in your path before any'
                               ' other versions (e.g. before Cygwin).')
