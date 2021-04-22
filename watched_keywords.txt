@@ -29057,3 +29057,4 @@
 1619051847	cigien	taxace[\W_]*+india(?!\.in(?<=taxaceindia\.in))
 1619053466	cigien	jaysonbrown867(?:@gmail\.com)?
 1619053780	cigien	maipdf(?!\.com)
+1619056124	cigien	gringalicious\.com
