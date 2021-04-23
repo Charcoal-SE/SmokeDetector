@@ -29106,3 +29106,4 @@
 1619164547	Makyen	shapemyskills\.in
 1619164569	Makyen	shapemyskills(?!\.in)
 1619166716	tripleee	(?-i:[Jj]ennifer [Ll]orax$)
+1619170474	tripleee	mawazna\.com
