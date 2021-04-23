@@ -29096,3 +29096,4 @@
 1619145008	cigien	walsh[\W_]*+imaging(?!\.com(?<=walshimaging\.com))
 1619145120	cigien	rforrestemily4\.wordpress\.com
 1619145234	cigien	amazing[\W_]*+smiles[\W_]*+orthodontics
+1619153180	tripleee	phanmembanhang\.com
