@@ -29113,3 +29113,4 @@
 1619193975	Makyen	868h\.biz
 1619193991	Makyen	868h[\W_]*+sports?
 1619194058	Makyen	oaks[\W_]*+overseas(?!\.com(?<=oaksoverseas\.com))
+1619195092	Makyen	ustreama\.com
