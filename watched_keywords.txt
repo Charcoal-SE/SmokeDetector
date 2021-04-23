@@ -29115,3 +29115,4 @@
 1619194058	Makyen	oaks[\W_]*+overseas(?!\.com(?<=oaksoverseas\.com))
 1619195092	Makyen	ustreama\.com
 1619216324	Makyen	clickbankproductreviews\.org
+1619222004	Jeff Schaller	babaumzugetransport\.com
