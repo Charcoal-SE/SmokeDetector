@@ -29102,3 +29102,4 @@
 1619160931	tripleee	saiglobal\.com
 1619161085	tripleee	ifs[\W_]*+(?:certificat(?:e|ion)s?|affirm(?:ation|ed)|guidelines?|standards?|reviewers?)
 1619161227	tripleee	golowketoreviewsbuy
+1619161318	Makyen	the[\W_]*+green[\W_]*+nursery(?!\.com(?<=thegreennursery\.com))
