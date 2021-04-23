@@ -29100,3 +29100,4 @@
 1619157803	Makyen	fax-token\.business\.site
 1619160868	tripleee	thegreennursery\.com
 1619160931	tripleee	saiglobal\.com
+1619161085	tripleee	ifs[\W_]*+(?:certificat(?:e|ion)s?|affirm(?:ation|ed)|guidelines?|standards?|reviewers?)
