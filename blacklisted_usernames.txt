@@ -477,3 +477,4 @@ SpeakingAccent
 (?-i:^DGal World$)
 (?-i:^kevinmalone01$)
 ^lovekesh jayant$
+(?-i:^mbbs in russia$)
