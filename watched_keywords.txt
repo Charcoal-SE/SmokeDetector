@@ -29086,3 +29086,4 @@
 1619134769	Makyen	targetedjustice\.com
 1619136286	cigien	mindk\.com
 1619136972	cigien	fiexmarketing\.com
+1619137022	cigien	fiex[\W_]*+marketing(?!\.com(?<=fiexmarketing\.com))
