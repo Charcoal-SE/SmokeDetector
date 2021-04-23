@@ -117,7 +117,7 @@ while not stoprunning:
         git.checkout('deploy')
         git.pull()
         git.checkout('master')
-        git.merge('--ff-only', '@{u}')
+        git.merge('@{u}')
         git.checkout('deploy')
 
         count = 0
