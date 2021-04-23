@@ -29089,3 +29089,4 @@
 1619137022	cigien	fiex[\W_]*+marketing(?!\.com(?<=fiexmarketing\.com))
 1619137725	cigien	hermesrecoveryfirm(?:@protonmail\.com)?
 1619140402	cigien	theprimearticle\.com
+1619140590	cigien	writemypaperbro\.com
