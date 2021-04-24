@@ -3132,7 +3132,6 @@
 1525692623	Glorfindel	contactassistance\.com
 1525695761	Glorfindel	dexpatent\.com
 1525696163	tripleee	hub\.lk
-1525706648	Zoe	analyticsmania\.com
 1525711087	WELZ	jasakontraktorlapangan\.com
 1525714290	Glorfindel	successmessages\.net
 1525717121	Thomas Ward	vencore\.com
