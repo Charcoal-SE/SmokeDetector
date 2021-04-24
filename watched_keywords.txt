@@ -29125,3 +29125,4 @@
 1619225733	cigien	sevenb\.io
 1619225905	cigien	vedcraft\.com
 1619227167	cigien	xportfiles\.com
+1619227257	cigien	pivoi(?!\.com)
