@@ -29119,3 +29119,4 @@
 1619223382	cigien	forum-fabb\.com
 1619224237	cigien	herbalisthealer090(?:@gmail\.com)?
 1619224296	cigien	d(?:octo)?r[\W_]*+khandi
+1619224411	cigien	dailytechnologyupdate\.com
