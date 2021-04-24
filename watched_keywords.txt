@@ -29141,3 +29141,4 @@
 1619294204	cigien	campuslabs(?!\.in)
 1619294662	cigien	axestrack\.com
 1619296283	cigien	18\.139\.218\.157
+1619296599	cigien	utilitybills\.pk
