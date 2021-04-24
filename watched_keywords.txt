@@ -29126,3 +29126,4 @@
 1619227167	cigien	xportfiles\.com
 1619227257	cigien	pivoi(?!\.com)
 1619227439	cigien	thundershare\.net
+1619256080	Mast	mohavedailynews\.com
