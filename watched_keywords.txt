@@ -27432,7 +27432,6 @@
 1613918883	Mast	(?-i:bg4hVuFhKgU)(?# youtube)
 1613920904	Mast	best[\W_]*+and[\W_]*+trusted
 1613925138	Makyen	marascokim\.wixsite\.com
-1613927714	cigien	biomynt\.site
 1613927962	cigien	doctorsacrehealing(?:@gmail\.com)?
 1613927990	cigien	d(?:octo)?r[\W_]*+sacre
 1613928543	cigien	icompressedgames\.com
