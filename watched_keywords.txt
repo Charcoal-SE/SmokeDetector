@@ -29139,3 +29139,4 @@
 1619293943	cigien	best[\W_]*+custom[\W_]*+screens(?!\.com(?<=bestcustomscreens\.com))
 1619294012	cigien	escortqueen\.in
 1619294204	cigien	campuslabs(?!\.in)
+1619294662	cigien	axestrack\.com
