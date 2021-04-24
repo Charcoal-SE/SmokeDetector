@@ -23,7 +23,7 @@ Nitroxin
 Bowtrol
 slim\W?genix
 cleanse\W?efx
-Alpha\W?(?:x\W?)?(?:Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
+alpha(?!\s*[=*()]\s*max)(?<!\(alpha)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)
 exoslim
 blackline\W?elite
 testcore\W?pro
