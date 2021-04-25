@@ -29161,3 +29161,4 @@
 1619367404	cigien	yours[\W_]*+icy[\W_]*+jetty
 1619367704	cigien	inspxtrc\.com
 1619373575	Makyen	looklottery\.com
+1619375051	Makyen	ooo\.cards
