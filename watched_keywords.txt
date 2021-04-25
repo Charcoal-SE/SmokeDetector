@@ -29153,3 +29153,4 @@
 1619363234	cigien	tecnofie\.in
 1619364232	cigien	iwebcode\.design
 1619364249	cigien	iwebcode(?!\.design)
+1619365026	cigien	omninos\.in
