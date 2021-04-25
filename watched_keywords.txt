@@ -29164,3 +29164,4 @@
 1619375051	Makyen	ooo\.cards
 1619377248	cigien	011\.video
 1619378704	cigien	crackwizard\.net
+1619378720	cigien	crack[\W_]*+wizard(?!\.net(?<=crackwizard\.net))
