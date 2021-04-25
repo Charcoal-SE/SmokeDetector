@@ -29148,3 +29148,4 @@
 1619325224	Makyen	idprositusqq\.com
 1619325240	Makyen	id[\W_]*+pro[\W_]*+situs[\W_]*+qq(?!\.com(?<=idprositusqq\.com))
 1619348480	double-beep	carsplan\.com
+1619355979	Makyen	yourmailorderbride\.com
