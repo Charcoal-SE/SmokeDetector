@@ -29166,3 +29166,4 @@
 1619378720	cigien	crack[\W_]*+wizard(?!\.net(?<=crackwizard\.net))
 1619386238	cigien	rb-financeltd\.co\.uk
 1619399613	Makyen	felixbourque(?:@gmail\.com)?
+1619402235	Makyen	928bet\.vip
