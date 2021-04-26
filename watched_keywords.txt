@@ -29170,3 +29170,4 @@
 1619414334	Ryan M	sharkfeeds\.xyz
 1619414713	Ryan M	anji[\W_]*+safety[\W_]*+n[et]{2}s
 1619415518	Ryan M	Andromo(?!\.com)
+1619415779	Ryan M	mypixieset\.com
