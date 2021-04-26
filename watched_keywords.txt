@@ -29205,3 +29205,4 @@
 1619474876	cigien	onlinedealsmart\.com
 1619474991	cigien	maytapi\.com
 1619475234	cigien	whitehatarmy(?!\.com)
+1619476217	cigien	ebetterbooks(?!\.com)
