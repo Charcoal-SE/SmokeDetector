@@ -17838,7 +17838,6 @@
 1583160591	Das_Geek	cryptoatmhacker(?:@gmail\.com)?
 1583162757	Das_Geek	indiaastrologyfoundation\.in
 1583173454	Eliah Kagan	you\s+idiots?
-1583186145	Makyen	leewilliam664(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1583188895	Makyen	take-screenshot\.com
 1583192814	Eliah Kagan	somsripaperscoltd(?:@gmail\.com)?
 1583192853	Eliah Kagan	Somsri
