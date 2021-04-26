@@ -317,6 +317,11 @@ stackexchange.com:
       - site-pt.stackoverflow.com
       - site-ja.stackoverflow.com
       - site-es.stackoverflow.com
+      #- experimental-site-rus.stackexchange.com
+      #- experimental-site-ru.stackoverflow.com
+      #- experimental-site-pt.stackoverflow.com
+      #- experimental-site-ja.stackoverflow.com
+      - experimental-site-es.stackoverflow.com
       - delay
       - offensive-mask
 
