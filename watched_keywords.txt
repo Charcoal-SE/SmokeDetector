@@ -29206,3 +29206,4 @@
 1619474991	cigien	maytapi\.com
 1619475234	cigien	whitehatarmy(?!\.com)
 1619476217	cigien	ebetterbooks(?!\.com)
+1619480272	Makyen	woww[\W_]*+news(?!\.com(?<=wowwnews\.com))
