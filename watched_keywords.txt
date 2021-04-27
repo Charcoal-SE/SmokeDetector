@@ -29210,3 +29210,4 @@
 1619482293	cigien	xiaomitrends\.com
 1619482310	cigien	xiaomi[\W_]*+trends(?!\.com(?<=xiaomitrends\.com))
 1619484248	cigien	soulwritempire\.com
+1619492270	Ryan M	speechtronic\.com
