@@ -29211,3 +29211,4 @@
 1619482310	cigien	xiaomi[\W_]*+trends(?!\.com(?<=xiaomitrends\.com))
 1619484248	cigien	soulwritempire\.com
 1619492270	Ryan M	speechtronic\.com
+1619495620	Ryan M	apcapple\.com
