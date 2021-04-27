@@ -29208,3 +29208,4 @@
 1619476217	cigien	ebetterbooks(?!\.com)
 1619480272	Makyen	woww[\W_]*+news(?!\.com(?<=wowwnews\.com))
 1619482293	cigien	xiaomitrends\.com
+1619482310	cigien	xiaomi[\W_]*+trends(?!\.com(?<=xiaomitrends\.com))
