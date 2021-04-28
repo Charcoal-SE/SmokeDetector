@@ -29232,3 +29232,4 @@
 1619575631	cigien	magedelight\.com
 1619577857	cigien	tucankin(?!\.com)
 1619580608	cigien	muskanshayari\.in
+1619580684	cigien	rack[\W_]*+finity(?!\.com(?<=rackfinity\.com))
