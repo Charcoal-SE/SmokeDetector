@@ -29242,3 +29242,4 @@
 1619591114	Ryan M	exonlinecalculator\.com
 1619594639	tripleee	(?:iptv[\W_]*+)?xtrix
 1619598630	Makyen	offshoreindiadataentry\.com
+1619601016	tripleee	wolfonlinekingdom\.com
