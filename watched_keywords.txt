@@ -29229,3 +29229,4 @@
 1619573595	cigien	esupplier[\W_]*+pk(?!(?<=esupplier\.pk))
 1619574448	cigien	homebtb\.com
 1619574463	cigien	homebtb(?!\.com)
+1619575539	hyper-neutrino	lapak303
