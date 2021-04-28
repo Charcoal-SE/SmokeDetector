@@ -478,3 +478,4 @@ SpeakingAccent
 (?-i:^kevinmalone01$)
 ^lovekesh jayant$
 (?-i:^mbbs in russia$)
+(?-i:^jangan gawat$)
