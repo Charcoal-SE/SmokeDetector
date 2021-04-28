@@ -29236,3 +29236,4 @@
 1619589610	Ryan M	canondriverbest\.com
 1619589821	Ryan M	fertility[\W_]*+(?:\w++[\W_]*+)?in[\W_]*+\L<city>
 1619589885	Ryan M	ivf[\W_]*+(?:\w++[\W_]*+)?in[\W_]*+\L<city>
+1619589920	Makyen	mba[\W_]*+rendezvous(?!\.com(?<=mbarendezvous\.com))
