@@ -29253,4 +29253,3 @@
 1619619020	Spevacus	techgape\.com
 1619626191	cigien	d(?:octo)?r[\W_]*+moses
 1619652951	Makyen	blogimize\.com
-1619652971	Makyen	greengeeks\.com
