@@ -29233,3 +29233,4 @@
 1619580608	cigien	muskanshayari\.in
 1619580684	cigien	rack[\W_]*+finity(?!\.com(?<=rackfinity\.com))
 1619588898	Ryan M	aimsfertility\.com
+1619589610	Ryan M	canondriverbest\.com
