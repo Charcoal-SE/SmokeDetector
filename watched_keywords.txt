@@ -29228,3 +29228,4 @@
 1619566091	cigien	ixpoe\.com
 1619573595	cigien	esupplier[\W_]*+pk(?!(?<=esupplier\.pk))
 1619574448	cigien	homebtb\.com
+1619574463	cigien	homebtb(?!\.com)
