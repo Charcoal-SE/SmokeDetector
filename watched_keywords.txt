@@ -29238,3 +29238,4 @@
 1619589885	Ryan M	ivf[\W_]*+(?:\w++[\W_]*+)?in[\W_]*+\L<city>
 1619589920	Makyen	mba[\W_]*+rendezvous(?!\.com(?<=mbarendezvous\.com))
 1619589952	Ryan M	mobile-accessories\.co\.uk
+1619590638	Ryan M	atolla\.us
