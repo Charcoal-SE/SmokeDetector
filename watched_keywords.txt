@@ -29230,3 +29230,4 @@
 1619574448	cigien	homebtb\.com
 1619574463	cigien	homebtb(?!\.com)
 1619575539	hyper-neutrino	lapak303
+1619575631	cigien	magedelight\.com
