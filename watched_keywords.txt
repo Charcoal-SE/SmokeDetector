@@ -23375,7 +23375,6 @@
 1600602978	Makyen	skinception(?:[\W_]*+(?:reviews|wrinkle|ointments|and|lotions|for|women|\d++|[\da-f]{5,}+)s?)*
 1600602998	Makyen	agingquitwrinkl
 1600615672	Makyen	123bet(?:t*ing)?
-1600619812	Machavity	fortunebusinessinsights\.com
 1600624453	Mast	wpflips\.com
 1600662815	Makyen	expertsieltsdocument\.com
 1600670005	Mast	freetiktok\.com
