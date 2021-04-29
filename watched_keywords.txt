@@ -29258,3 +29258,4 @@
 1619677884	tripleee	artoongames\.com
 1619677908	tripleee	aargoev\.com
 1619678191	tripleee	aar(?:go(?:ev)?|power(?:solutions)?)(?!\.com)
+1619679726	tripleee	(?-i:3aLNKOI)(?# bit.ly)
