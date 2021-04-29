@@ -29264,3 +29264,4 @@
 1619687764	tripleee	ablesales\.com\.au
 1619687781	tripleee	(?-i:^Dazy Shuu Blog$)
 1619696842	Jeff Schaller	muslimsholytravel\.co\.uk
+1619696872	Jeff Schaller	jaipurescortagency\.com
