@@ -29259,3 +29259,4 @@
 1619677908	tripleee	aargoev\.com
 1619678191	tripleee	aar(?:go(?:ev)?|power(?:solutions)?)(?!\.com)
 1619679726	tripleee	(?-i:3aLNKOI)(?# bit.ly)
+1619681278	Ryan M	incriveltech\.com
