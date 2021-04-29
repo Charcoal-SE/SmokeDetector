@@ -29254,3 +29254,4 @@
 1619626191	cigien	d(?:octo)?r[\W_]*+moses
 1619652951	Makyen	blogimize\.com
 1619653236	Makyen	theisko(?#greengeeks.com affiliate ID for tracking)
+1619675124	Ryan M	bestonamusementequipment\.com
