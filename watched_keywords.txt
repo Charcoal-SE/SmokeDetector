@@ -29295,3 +29295,4 @@
 1619809970	Mast	bestdishwasherguides\.com
 1619813433	Makyen	rejuv[\W_]*+boost[\W_]*+cbd[\W_]*+gummies
 1619814924	Mast	bestrecreations\.com
+1619825326	Mast	cornerstone\.edu\.in
