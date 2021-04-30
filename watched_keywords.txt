@@ -29271,3 +29271,4 @@
 1619717057	Ollie	pughomelovers\.com
 1619741807	cigien	postureperfector\.com
 1619743086	cigien	restoreclinics(?!\.in)
+1619743377	cigien	(?:cmodel@)?sedruck\.de
