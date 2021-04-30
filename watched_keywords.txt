@@ -29283,3 +29283,4 @@
 1619757121	tripleee	peoplebuildingpeace\.org
 1619759848	Makyen	cainnepal\.com
 1619760158	tripleee	mymonograph\.com
+1619760180	tripleee	mymonograph(?!\.com)
