@@ -29286,3 +29286,4 @@
 1619760180	tripleee	mymonograph(?!\.com)
 1619781271	Jeff Schaller	gigacars\.com
 1619781504	Jeff Schaller	elkharttrees\.com
+1619781572	Jeff Schaller	24inside\.com
