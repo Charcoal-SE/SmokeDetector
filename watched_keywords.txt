@@ -29306,3 +29306,4 @@
 1619848186	Makyen	123hpprinterssetup\.com
 1619848394	Makyen	hp[\W_]*+easy[\W_]*+scan[\W_]*+app
 1619855939	Ryan M	cbd[\W_]*+avis
+1619878855	Mast	gitsys\.in
