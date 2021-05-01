@@ -26126,7 +26126,7 @@
 1610420184	Spevacus	topwellwrite\.com
 1610431705	tripleee	mit[\W_]*+to[\W_]*+pink
 1610431723	tripleee	noithathttl
-1610434681	Makyen	rejuv[\W_]*+boost[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1610434681	Makyen	rejuv[\W_]*+boost(?!cbdgummies\.wixsite\.com(?<=rejuvboostcbdgummies\.wixsite\.com))(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|[\da-f]{5,}+)s?)*
 1610434750	tripleee	surveyz\.onl
 1610378875	cigien	PMP Exam Questions(?#Skype-ID)
 1610412741	cigien	repas[\W_]*+keto(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
@@ -29293,7 +29293,6 @@
 1619800337	Mast	(?-i:9zG4oY)(?# fiverr)
 1619805218	Makyen	diabacore
 1619809970	Mast	bestdishwasherguides\.com
-1619813433	Makyen	rejuv[\W_]*+boost[\W_]*+cbd[\W_]*+gummies
 1619814924	Mast	bestrecreations\.com
 1619825326	Mast	cornerstone\.edu\.in
 1619828114	cigien	shens\.in
