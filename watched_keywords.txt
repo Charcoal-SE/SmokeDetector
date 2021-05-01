@@ -29301,3 +29301,4 @@
 1619830196	Makyen	samercherif\.com
 1619833915	Makyen	aldamam\.com
 1619841220	Nick	hellopixels\.com
+1619841700	cigien	hello[\W_]*+pixels(?!\.com(?<=hellopixels\.com))
