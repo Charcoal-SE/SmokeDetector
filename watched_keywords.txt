@@ -29313,3 +29313,4 @@
 1619888876	Makyen	green[\W_]*+canyon(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|[\da-f]{5,}+)s?)*
 1619888895	Makyen	therealestaterenderingcompany\.com
 1619888913	Makyen	techntune\.com
+1619888928	Makyen	rejuvboostcbdgummies\.wixsite\.com
