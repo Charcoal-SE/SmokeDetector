@@ -29302,3 +29302,4 @@
 1619833915	Makyen	aldamam\.com
 1619841220	Nick	hellopixels\.com
 1619841700	cigien	hello[\W_]*+pixels(?!\.com(?<=hellopixels\.com))
+1619846762	Makyen	joy[\W_]*+organics(?:[\W_]*+(?:oil|cbd|buy|review|\d++|[\da-f]{5,}+)s?)*
