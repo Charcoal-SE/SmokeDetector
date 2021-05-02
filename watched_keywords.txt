@@ -29328,3 +29328,4 @@
 1619925496	cigien	elkharttrees(?!\.com)
 1619925774	cigien	softwaresb\.com
 1619926177	cigien	nuansamusik\.com
+1619926230	cigien	gts[\W_]*+info[\W_]*+soft
