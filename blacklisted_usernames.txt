@@ -480,3 +480,4 @@ SpeakingAccent
 (?-i:^mbbs in russia$)
 (?-i:^jangan gawat$)
 (?-i:^Shakib Khan$)
+(?-i:^Mim Khatun$)
