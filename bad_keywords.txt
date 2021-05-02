@@ -2497,3 +2497,4 @@ Sonu Yadav\W*+Software Developer
 78/hourly
 leewilliam664(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 ultimate[\W_]*+health[\W_]*+home(?:@gmail\.com)?
+kevin[\W_]*+costner[\W_]*+cbd(?:[\W_]*+(?:buy|gumm(?:y|ie)|oil|review|\d++|[\da-f]{5,}+)s?)*
