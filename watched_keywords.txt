@@ -29330,3 +29330,4 @@
 1619926177	cigien	nuansamusik\.com
 1619926230	cigien	gts[\W_]*+info[\W_]*+soft
 1619929209	Makyen	miraks\.biz
+1619933910	Makyen	skstonesusa\.com
