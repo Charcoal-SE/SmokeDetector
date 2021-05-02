@@ -29331,3 +29331,4 @@
 1619926230	cigien	gts[\W_]*+info[\W_]*+soft
 1619929209	Makyen	miraks\.biz
 1619933910	Makyen	skstonesusa\.com
+1619966538	Makyen	generic[\W_]*+ambien[\W_]*+online(?!\.com(?<=genericambienonline\.com))
