@@ -29326,3 +29326,4 @@
 1619923930	cigien	24inside(?!\.com)
 1619923956	cigien	gigacars(?!\.com)
 1619925496	cigien	elkharttrees(?!\.com)
+1619925774	cigien	softwaresb\.com
