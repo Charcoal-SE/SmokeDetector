@@ -29324,3 +29324,4 @@
 1619923453	cigien	zeolitemin\.com
 1619923630	cigien	oldstreet\.co
 1619923930	cigien	24inside(?!\.com)
+1619923956	cigien	gigacars(?!\.com)
