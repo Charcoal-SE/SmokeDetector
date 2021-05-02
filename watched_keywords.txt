@@ -29323,3 +29323,4 @@
 1619922675	cigien	dentalmarketo\.com
 1619923453	cigien	zeolitemin\.com
 1619923630	cigien	oldstreet\.co
+1619923930	cigien	24inside(?!\.com)
