@@ -29348,3 +29348,4 @@
 1620026637	tripleee	minit61
 1620031057	tripleee	fommy\.com
 1620037018	tripleee	arabicdawateislami\.net
+1620039989	tripleee	amplify\.sa
