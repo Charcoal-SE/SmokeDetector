@@ -29341,3 +29341,4 @@
 1620006982	Makyen	phongkhamovinhphuc\.webflow\.io
 1620007168	cigien	bestscourses\.com
 1620019544	tripleee	parshamkala\.ir
+1620022321	tripleee	wrapunzel\.com
