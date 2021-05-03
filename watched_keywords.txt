@@ -29351,3 +29351,4 @@
 1620039989	tripleee	amplify\.sa
 1620040824	tripleee	wemovers\.ae
 1620046005	Spevacus	coworking-valencia\.com
+1620050799	Glorfindel	^paul olambo$
