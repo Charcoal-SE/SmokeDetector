@@ -2498,3 +2498,4 @@ Sonu Yadav\W*+Software Developer
 leewilliam664(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 ultimate[\W_]*+health[\W_]*+home(?:@gmail\.com)?
 kevin[\W_]*+costner[\W_]*+cbd(?:[\W_]*+(?:buy|gumm(?:y|ie)|oil|review|\d++|[\da-f]{5,}+)s?)*
+kara(?:[\W_]*+s)?[\W_]*+orchards[\W_]*+cbd(?:[\W_]*+(?:gummies|oil|uk|united|kingdom|\d++|[\da-f]{5,}+)s?)*
