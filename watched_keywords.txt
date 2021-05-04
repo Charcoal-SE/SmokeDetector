@@ -17960,7 +17960,6 @@
 1583397514	tripleee	visasforindia\.in
 1583402014	Shree	laloge\.com
 1583406573	tripleee	futureconnectgroup\.com
-1583406602	tripleee	future[\W_]*+connect(?:[\W_]*+training)?
 1583407300	Shree	canticleindia\.com
 1583408431	Shree	itworx\.com
 1583411138	Shree	bestgearsreview\.com
