@@ -479,7 +479,6 @@ SpeakingAccent
 ^lovekesh jayant$
 (?-i:^mbbs in russia$)
 (?-i:^jangan gawat$)
-(?-i:^Shakib Khan$)
 (?-i:^Mim Khatun$)
 (?-i:^unrivaledcandles$)
 (?-i:^Katrin Kunze$)
