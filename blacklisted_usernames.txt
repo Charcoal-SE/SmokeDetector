@@ -482,3 +482,4 @@ SpeakingAccent
 (?-i:^Shakib Khan$)
 (?-i:^Mim Khatun$)
 (?-i:^unrivaledcandles$)
+(?-i:^Katrin Kunze$)
