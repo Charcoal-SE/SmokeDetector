@@ -4010,3 +4010,4 @@ waptechs\.com
 bunlongheng\.com
 123hpprinterssetup\.com
 sites\.google\.com/\w+/(?:id)?(?:\d{10,25}|\w*)/(?:\w+/)*\w+\?\w+=(?:\d{10,25}|\w*)
+pulsehyip\.com
