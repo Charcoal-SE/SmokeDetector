@@ -29356,3 +29356,4 @@
 1620087449	cigien	future[\W_]*+connect[\W_]*+training
 1620087838	cigien	cospringsfencing\.com
 1620089817	cigien	waterfilterinsight\.com
+1620096267	cigien	panen138
