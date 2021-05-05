@@ -29386,3 +29386,4 @@
 1620174181	cigien	docsandslides\.com
 1620174307	cigien	stz[\W_]*+gists(?!\.com(?<=stzgists\.com))
 1620175524	cigien	acalculator\.net
+1620175634	cigien	mygenerix\.com
