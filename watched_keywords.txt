@@ -29399,3 +29399,4 @@
 1620190964	tripleee	(?-i:c99q51)(?# bitly.com.vn)
 1620198129	tripleee	zoopindia\.com
 1620210280	tripleee	paperwriter\.pro
+1620220086	cigien	onliveinfotech\.com
