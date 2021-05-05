@@ -29404,3 +29404,4 @@
 1620235024	Ollie	devonrexcattery\.company\.com
 1620236147	cigien	timelyproduct\.com
 1620236233	cigien	timely[\W_]*+product(?!\.com(?<=timelyproduct\.com))
+1620236413	cigien	medical3dmodels\.com
