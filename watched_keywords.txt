@@ -29393,3 +29393,4 @@
 1620187674	Ryan M	thehomedekor\.in
 1620188127	cigien	the[\W_]*+home[\W_]*+dekor(?!\.in(?<=thehomedekor\.in))
 1620188166	cigien	(?-i:Xpj3dD8hBgpghiWTA)(?#google form)
+1620189306	Ryan M	mqdirections\.com
