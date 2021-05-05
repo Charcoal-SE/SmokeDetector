@@ -29384,3 +29384,4 @@
 1620164414	cigien	buyassignmentservice\.com
 1620167737	Makyen	tdameritrade077(?:@gmail\.com)?
 1620174181	cigien	docsandslides\.com
+1620174307	cigien	stz[\W_]*+gists(?!\.com(?<=stzgists\.com))
