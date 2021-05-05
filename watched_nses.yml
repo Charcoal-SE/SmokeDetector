@@ -161,6 +161,9 @@ items:
   - fay.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
+  - clay.ns.cloudflare.com.
+- ns:
+  - aron.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
