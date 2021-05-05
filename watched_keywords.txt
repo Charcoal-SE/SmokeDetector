@@ -29391,3 +29391,4 @@
 1620179975	cigien	sck\.io
 1620181418	Makyen	(?-i:jdHycWcN)(?#sck.io)
 1620187674	Ryan M	thehomedekor\.in
+1620188127	cigien	the[\W_]*+home[\W_]*+dekor(?!\.in(?<=thehomedekor\.in))
