@@ -29413,3 +29413,4 @@
 1620262482	Makyen	hackerethique
 1620267495	Ryan M	aeebde2a32d909ac(?# skype/live account)
 1620271575	Ryan M	coco[\W_]*+village
+1620271610	Ryan M	(?-i:^Gary Swiercz Chicago$)
