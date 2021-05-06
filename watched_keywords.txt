@@ -29418,3 +29418,4 @@
 1620277147	Ryan M	pennsylvaniaskills\.com
 1620277286	tripleee	singhmovers\.com\.au
 1620280629	Makyen	dragons[\W_]*+den[\W_]*+cbd(?:[\W_]*+(?:oil|gumm(?:y|ie)|uk|buy|price|review|\d++|[\da-f]{5,}+)s?)*
+1620285408	tripleee	rootpointers\.com
