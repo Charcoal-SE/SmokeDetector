@@ -29430,3 +29430,4 @@
 1620300823	tripleee	swaterjet\.com
 1620301054	tripleee	(?-i:^redis caraj$)
 1620303728	tripleee	auxesisinfotech\.com
+1620304076	Spevacus	logomagicians\.com
