@@ -29448,3 +29448,4 @@
 1620340468	cigien	topone-power\.com
 1620342905	cigien	allupsltd\.co\.uk
 1620343107	cigien	healthcareszone\.wordpress\.com
+1620343411	cigien	singh[\W_]*+movers(?!\.com\.au(?<=singhmovers\.com\.au))
