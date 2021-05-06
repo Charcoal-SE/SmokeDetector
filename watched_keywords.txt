@@ -29415,3 +29415,4 @@
 1620271575	Ryan M	coco[\W_]*+village
 1620272491	Ryan M	Gary Swiercz Chicago(?!$(?<=^(?-i:Gary Swiercz Chicago)))
 1620276365	tripleee	gogoanime\.vc
+1620277147	Ryan M	pennsylvaniaskills\.com
