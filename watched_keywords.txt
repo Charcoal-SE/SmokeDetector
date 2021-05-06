@@ -29439,3 +29439,4 @@
 1620323600	Makyen	my-hpdrivers\.com
 1620331260	cigien	mobilesworld\.xyz
 1620331424	cigien	onlineessaywritingservice\.review
+1620332364	cigien	clipping[\W_]*+path[\W_]*+editing(?!\.com(?<=clippingpathediting\.com))
