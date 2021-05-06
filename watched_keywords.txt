@@ -29431,3 +29431,4 @@
 1620301054	tripleee	(?-i:^redis caraj$)
 1620303728	tripleee	auxesisinfotech\.com
 1620304076	Spevacus	logomagicians\.com
+1620305472	Spevacus	divyaji\.com
