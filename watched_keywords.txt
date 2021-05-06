@@ -29446,3 +29446,4 @@
 1620340046	cigien	dreambodycenters\.com
 1620340340	cigien	coin[\W_]*+rabbit(?!\.io(?<=coinrabbit\.io))
 1620340468	cigien	topone-power\.com
+1620342905	cigien	allupsltd\.co\.uk
