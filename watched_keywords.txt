@@ -29441,3 +29441,4 @@
 1620331424	cigien	onlineessaywritingservice\.review
 1620332364	cigien	clipping[\W_]*+path[\W_]*+editing(?!\.com(?<=clippingpathediting\.com))
 1620339855	cigien	homify\.com
+1620339973	cigien	mtaq\.com\.au
