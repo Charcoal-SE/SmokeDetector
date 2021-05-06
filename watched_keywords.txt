@@ -29444,3 +29444,4 @@
 1620339973	cigien	mtaq\.com\.au
 1620340014	cigien	ecosusi(?!\.com)
 1620340046	cigien	dreambodycenters\.com
+1620340340	cigien	coin[\W_]*+rabbit(?!\.io(?<=coinrabbit\.io))
