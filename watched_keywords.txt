@@ -29428,3 +29428,4 @@
 1620294124	Ryan M	gamegreek\.com
 1620300791	tripleee	soeglobal\.com
 1620300823	tripleee	swaterjet\.com
+1620301054	tripleee	(?-i:^redis caraj$)
