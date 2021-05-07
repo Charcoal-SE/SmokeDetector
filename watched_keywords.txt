@@ -29405,7 +29405,6 @@
 1620236233	cigien	timely[\W_]*+product(?!\.com(?<=timelyproduct\.com))
 1620236413	cigien	medical3dmodels\.com
 1620236439	cigien	(?-i:UCY-FfMPWSon8k9Po5OBDpIA)(?#youtube channel)
-1620245958	Makyen	effuel
 1620257537	Makyen	bathguides\.com
 1620259493	Ryan M	cloudhostingservicesus\.wordpress
 1620262423	Makyen	webroothacker(?:@gmail\.com)?
