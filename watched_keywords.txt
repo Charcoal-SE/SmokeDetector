@@ -29491,3 +29491,4 @@
 1620454457	Makyen	devatrim(?:[\W_]*+(?:keto|review|buy|pill|price|ingredient|\d++|[\da-f]{5,}+)s?)*
 1620455209	double-beep	aestheticsmilesindia\.com
 1620455454	double-beep	bestongroup\.com
+1620460950	Nisse Engström	loggix\.com
