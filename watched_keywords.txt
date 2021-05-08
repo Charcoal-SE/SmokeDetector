@@ -29487,3 +29487,4 @@
 1620439573	Makyen	pt\.hfxcfiberoptic\.com
 1620441887	Makyen	ghienchoibai\.com
 1620441905	Makyen	ghienchoibai(?!\.com)
+1620448313	Nick	etrendsnow\.com
