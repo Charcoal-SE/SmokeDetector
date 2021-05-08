@@ -29500,3 +29500,4 @@
 1620475795	Mast	rahacopier\.com
 1620483237	cigien	filepuma\.com
 1620484823	cigien	solwininfotech\.com
+1620484840	cigien	solwin[\W_]*+infotech(?!\.com(?<=solwininfotech\.com))
