@@ -29505,3 +29505,4 @@
 1620492418	cigien	cotmesa\.es
 1620490378	Xnero	sarkariepress\.com
 1620490387	Xnero	sarkariepress(?!\.com)
+1620494582	cigien	genu[\W_]*+venue(?!\.com(?<=genuvenue\.com))
