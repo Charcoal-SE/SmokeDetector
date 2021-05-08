@@ -29479,3 +29479,4 @@
 1620433862	cigien	leomi\.in
 1620435364	cigien	sobha[\W_]*+town[\W_]*+park(?!\.info(?<=sobhatownpark\.info))
 1620435530	cigien	ticswipe\.com
+1620435631	cigien	computersoftware410578901\.wordpress\.com
