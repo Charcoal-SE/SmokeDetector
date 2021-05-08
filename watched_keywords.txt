@@ -29502,3 +29502,4 @@
 1620484823	cigien	solwininfotech\.com
 1620484840	cigien	solwin[\W_]*+infotech(?!\.com(?<=solwininfotech\.com))
 1620490161	Makyen	(?-i:iamamar747)(?#fiverr.com)
+1620492418	cigien	cotmesa\.es
