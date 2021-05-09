@@ -29511,3 +29511,4 @@
 1620504162	cigien	drgeetika\.org\.in
 1620504442	cigien	ketonutritiondiets\.com
 1620535799	Makyen	readblackclover\.net
+1620535820	Makyen	readblackclover(?!\.net)
