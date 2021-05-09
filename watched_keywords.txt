@@ -29512,3 +29512,4 @@
 1620504442	cigien	ketonutritiondiets\.com
 1620535799	Makyen	readblackclover\.net
 1620535820	Makyen	readblackclover(?!\.net)
+1620549449	Nick	munchkinskitty\.company\.com
