@@ -4012,3 +4012,4 @@ sites\.google\.com/\w+/(?:id)?(?:\d{10,25}|\w*)/(?:\w+/)*\w+\?\w+=(?:\d{10,25}|\
 pulsehyip\.com
 unrivaledcandles\.com
 ccosplay\.com
+hotmail-loginx\.com
