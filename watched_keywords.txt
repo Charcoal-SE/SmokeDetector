@@ -29563,3 +29563,4 @@
 1620723178	Nick	crabnetwork\.in
 1620735324	Nick	meilleurcomparateurdeprix\.com
 1620735944	Spevacus	couponvampire\.com
+1620735978	Spevacus	charterglobal\.com
