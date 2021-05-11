@@ -29564,3 +29564,4 @@
 1620735324	Nick	meilleurcomparateurdeprix\.com
 1620735944	Spevacus	couponvampire\.com
 1620735978	Spevacus	charterglobal\.com
+1620737099	Spevacus	webdesignvancouver\.net
