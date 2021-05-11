@@ -29553,3 +29553,4 @@
 1620711847	Ryan M	(?-i:^Kurt Grosse$)
 1620711964	tripleee	(?-i:^suzane williams$)
 1620712639	Nick	juicewrldmerchshop\.com
+1620713175	Makyen	juice[\W_]*+wrld[\W_]*+(?:\d+[\W_]*+)?hoodie
