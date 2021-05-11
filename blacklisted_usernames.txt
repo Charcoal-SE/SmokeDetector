@@ -485,3 +485,4 @@ SpeakingAccent
 (?-i:^TheRobloxGamer$)
 (?-i:^Gary Swiercz Chicago$)
 (?-i:^Amara watt$)
+(?-i:^Dazy Shuu Blog$)
