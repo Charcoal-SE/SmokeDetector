@@ -29556,3 +29556,4 @@
 1620713191	Makyen	juice[\W_]*+wrld[\W_]*+merch[\W_]*+shop(?!\.com(?<=juicewrldmerchshop\.com))
 1620714174	Ryan M	tutorialshut\.com
 1620714663	Ryan M	krugerpower\.com\.au
+1620714950	tripleee	(?-i:^dazzsherly$)
