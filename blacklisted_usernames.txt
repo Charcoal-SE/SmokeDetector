@@ -484,3 +484,4 @@ SpeakingAccent
 (?-i:^Katrin Kunze$)
 (?-i:^TheRobloxGamer$)
 (?-i:^Gary Swiercz Chicago$)
+(?-i:^Amara watt$)
