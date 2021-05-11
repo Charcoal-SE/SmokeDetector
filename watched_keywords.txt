@@ -29554,3 +29554,4 @@
 1620711964	tripleee	(?-i:^suzane williams$)
 1620712639	Nick	juicewrldmerchshop\.com
 1620713175	Makyen	juice[\W_]*+wrld[\W_]*+(?:\d+[\W_]*+)?hoodie
+1620713191	Makyen	juice[\W_]*+wrld[\W_]*+merch[\W_]*+shop(?!\.com(?<=juicewrldmerchshop\.com))
