@@ -29584,3 +29584,4 @@
 1620822522	Ryan M	opentext[\W_]*+managed[\W_]*+services
 1620824596	Spevacus	escaperoom\.com
 1620838946	Spevacus	voicedocs\.com
+1620857856	Spevacus	oyuntakip\.com
