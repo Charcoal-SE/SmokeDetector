@@ -29576,3 +29576,4 @@
 1620790248	Ryan M	cosyjewelry(?!\.com(?<=cosyjewelry\.com))
 1620790536	Ryan M	loginmojo\.com
 1620799130	Ryan M	ptetutorials\.com
+1620800877	Ryan M	bhubaneswaroffice\.com
