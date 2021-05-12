@@ -29578,4 +29578,3 @@
 1620799130	Ryan M	ptetutorials\.com
 1620800877	Ryan M	bhubaneswaroffice\.com
 1620803507	Ryan M	45\.120\.149\.188
-1620810364	Ryan M	bongdalu(?!\.com(?<=bongdalu\.com))
