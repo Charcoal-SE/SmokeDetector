@@ -409,7 +409,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                     "; in addition, " + has_leading_whitespace.lower()) if has_leading_whitespace else ""
                 raise CmdException(
                     "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d + 
+                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d +
                     has_leading_whitespace + append_force_to_do)
 
         if has_leading_whitespace:
