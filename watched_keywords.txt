@@ -29585,3 +29585,4 @@
 1620824596	Spevacus	escaperoom\.com
 1620838946	Spevacus	voicedocs\.com
 1620857856	Spevacus	oyuntakip\.com
+1620867181	cigien	oyuntakip(?!\.com)
