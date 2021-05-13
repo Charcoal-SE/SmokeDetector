@@ -29597,3 +29597,4 @@
 1620877337	cigien	pte[\W_]*+tutorials(?!\.com(?<=ptetutorials\.com))
 1620877710	cigien	j[\W_]*+k[\W_]*+rowling[\W_]*+cbd(?:[\W_]*+(?:oil|gumm(?:y|ie)|uk|buy|price|review|\d++|[\da-f]{5,}+)s?)*
 1620878532	Makyen	topbestblog\.com
+1620878687	cigien	joepfanning\.com
