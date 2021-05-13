@@ -22192,7 +22192,6 @@
 1597052920	tripleee	(?-i:^Naeem Ahmad$)
 1597055304	tripleee	fizfy(?!\.com| Solutions)
 1597055721	tripleee	techbylws\.com
-1597055763	tripleee	le[\W_]*+regime(?:[\W_]*+keto)?
 1597060924	tripleee	india-iws\.in
 1597062049	Mast	knowscape\.org
 1597063717	tripleee	anytimestrength\.com
