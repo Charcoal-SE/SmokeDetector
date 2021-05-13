@@ -486,3 +486,4 @@ SpeakingAccent
 (?-i:^Gary Swiercz Chicago$)
 (?-i:^Amara watt$)
 (?-i:^Dazy Shuu Blog$)
+(?-i:^Lohithakshan\. N\. K$)
