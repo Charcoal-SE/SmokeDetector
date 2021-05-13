@@ -29598,3 +29598,4 @@
 1620877710	cigien	j[\W_]*+k[\W_]*+rowling[\W_]*+cbd(?:[\W_]*+(?:oil|gumm(?:y|ie)|uk|buy|price|review|\d++|[\da-f]{5,}+)s?)*
 1620878532	Makyen	topbestblog\.com
 1620878687	cigien	joepfanning\.com
+1620878762	Makyen	exxnn(?=\.)(?<=https://i\.stack\.imgur\.com/exxnn)
