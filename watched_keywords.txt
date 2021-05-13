@@ -29618,3 +29618,4 @@
 1620921397	Makyen	officialhackingcompany(?:@gmail\.com)?
 1620925099	cigien	electricalgang\.com
 1620925210	cigien	bhalla[\W_]*+fasteners(?!\.com(?<=bhallafasteners\.com))
+1620925374	cigien	digiboxx(?!\.com)
