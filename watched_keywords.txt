@@ -29599,3 +29599,4 @@
 1620878532	Makyen	topbestblog\.com
 1620878687	cigien	joepfanning\.com
 1620878762	Makyen	exxnn(?=\.)(?<=https://i\.stack\.imgur\.com/exxnn)
+1620879100	cigien	wprulz\.com
