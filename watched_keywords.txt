@@ -29619,3 +29619,4 @@
 1620925210	cigien	bhalla[\W_]*+fasteners(?!\.com(?<=bhallafasteners\.com))
 1620925374	cigien	digiboxx(?!\.com)
 1620926627	Ryan M	le[\W_]*+regime[\W_]*+keto
+1620927264	cigien	7datarecovery\.com
