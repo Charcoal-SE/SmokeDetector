@@ -29586,3 +29586,4 @@
 1620838946	Spevacus	voicedocs\.com
 1620857856	Spevacus	oyuntakip\.com
 1620867181	cigien	oyuntakip(?!\.com)
+1620868406	cigien	murphylightwork\.wordpress\.com
