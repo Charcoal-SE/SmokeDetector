@@ -29588,3 +29588,4 @@
 1620867181	cigien	oyuntakip(?!\.com)
 1620868406	cigien	murphylightwork\.wordpress\.com
 1620870120	cigien	medyatakipcileri\.com
+1620870802	cigien	finoin\.com
