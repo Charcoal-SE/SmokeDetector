@@ -29590,3 +29590,4 @@
 1620870120	cigien	medyatakipcileri\.com
 1620870802	cigien	finoin\.com
 1620873677	cigien	globalatmhackingservice(?:@gmail\.com)?
+1620875096	cigien	earthyskin(?!\.com)
