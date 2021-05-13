@@ -29593,3 +29593,4 @@
 1620875096	cigien	earthyskin(?!\.com)
 1620876205	cigien	nileex\.io
 1620876493	Ryan M	Hugh[\W_]*+Janus
+1620876712	cigien	bhubaneswar[\W_]*+office(?!\.com(?<=bhubaneswaroffice\.com))
