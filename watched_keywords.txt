@@ -29606,3 +29606,4 @@
 1620896959	Ryan M	arapahoehouse\.org
 1620897140	Ryan M	toxin[\W_]*+rid
 1620897192	Ryan M	test[\W_]*+clear[\W_]*+ultra[\W_]*+clean(?:[\W_]*+shampoo)?
+1620906581	Ryan M	lifetodayhistory\.com
