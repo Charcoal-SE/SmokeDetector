@@ -13784,7 +13784,6 @@
 1572717339	Makyen	igsinstitute\.in
 1572736530	Machavity	tardodty\.com
 1572749562	Makyen	solitaire\.onl
-1572749587	Makyen	shareit\.onl
 1572749612	Makyen	ucbrowser\.vip
 1572783665	Xnero	shoppingofferstoday\.com
 1572786491	double-beep	citywideseo\.com
