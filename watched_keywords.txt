@@ -29601,3 +29601,4 @@
 1620878762	Makyen	exxnn(?=\.)(?<=https://i\.stack\.imgur\.com/exxnn)
 1620879100	cigien	wprulz\.com
 1620879144	cigien	wprulz(?!\.com)
+1620881842	lyxal	amritsardigitalacademy\.in
