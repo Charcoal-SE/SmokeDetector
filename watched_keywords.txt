@@ -29625,3 +29625,4 @@
 1620965193	Nick	chuyenphatnhanhdhlhcm\.vn
 1620975127	Ryan M	midnightchef\.in
 1620975174	Makyen	smilz[\W_]*+cbd(?:[\W_]*+(?:broad|spectrum|gumm(?:y|ie)|reviews|benefits|\d++|[\da-f]{5,}+)s?)*
+1620975196	Ryan M	midnight[\W_]*+chef(?!\.in(?<=midnightchef\.in))
