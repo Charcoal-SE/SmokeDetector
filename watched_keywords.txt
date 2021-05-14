@@ -29635,3 +29635,4 @@
 1620994529	Spevacus	149\.28\.159\.193
 1620994682	Spevacus	free-robuxnoverification\.com
 1620997202	Nick	tutohelps\.com
+1620997285	Spevacus	tutohelps(?!\.com)
