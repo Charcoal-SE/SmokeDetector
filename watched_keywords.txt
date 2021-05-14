@@ -29629,3 +29629,4 @@
 1620975212	Xnero	bitcasino\.com
 1620975821	Makyen	credit[\W_]*+cooperative[\W_]*+software(?!\.com(?<=creditcooperativesoftware\.com))
 1620978000	lyxal	filezipo\.io
+1620993905	Spevacus	yfin\.one
