@@ -29660,3 +29660,4 @@
 1621095307	cigien	visual[\W_]*+birds(?!\.com(?<=visualbirds\.com))
 1621111339	Xnero	hackerztrickz\.com
 1621111406	Xnero	hackerztrickz(?!\.com)
+1621116172	cigien	cpstest\.us
