@@ -29654,3 +29654,4 @@
 1621090562	Makyen	0b961ed8[\W_]*+a3e1[\W_]*+4a6c[\W_]*+9828[\W_]*+8b9aa4bbeae1
 1621090580	Makyen	stellar[\W_]*+pst
 1621090595	Makyen	wallet\. secure393@protonmail\.com
+1621090609	Makyen	sandakphu[\W_]*+tour[\W_]*+(?:and[\W_]*+)?trekking(?:[\W_]*+(?:package|from|manebhanjan|\d++|[\da-f]{5,}+)s?)*
