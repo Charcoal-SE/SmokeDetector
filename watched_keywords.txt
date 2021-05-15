@@ -29652,3 +29652,4 @@
 1621090523	Makyen	woodprix(?!\.com)
 1621090539	Makyen	klusster\.com
 1621090562	Makyen	0b961ed8[\W_]*+a3e1[\W_]*+4a6c[\W_]*+9828[\W_]*+8b9aa4bbeae1
+1621090580	Makyen	stellar[\W_]*+pst
