@@ -29637,3 +29637,4 @@
 1620997202	Nick	tutohelps\.com
 1620997285	Spevacus	tutohelps(?!\.com)
 1621041171	Makyen	assetrefundteam(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1621049265	cigien	shiva[\W_]*+heater(?!\.com(?<=shivaheater\.com))
