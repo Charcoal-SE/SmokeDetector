@@ -29650,3 +29650,4 @@
 1621087511	Machavity	meghsundar\.com
 1621090506	Makyen	adorable[\W_]*+silkroute(?!\.com(?<=adorablesilkroute\.com))
 1621090523	Makyen	woodprix(?!\.com)
+1621090539	Makyen	klusster\.com
