@@ -29657,3 +29657,4 @@
 1621090609	Makyen	sandakphu[\W_]*+tour[\W_]*+(?:and[\W_]*+)?trekking(?:[\W_]*+(?:package|from|manebhanjan|\d++|[\da-f]{5,}+)s?)*
 1621090754	Makyen	leastread\.com
 1621092568	Machavity	visualbirds\.com
+1621095307	cigien	visual[\W_]*+birds(?!\.com(?<=visualbirds\.com))
