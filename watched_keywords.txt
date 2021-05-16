@@ -29663,3 +29663,4 @@
 1621121260	Makyen	diplomacy-development\.blogspot
 1621137362	cigien	bglamhairstudio\.com
 1621137413	cigien	bglam[\W_]*+hair[\W_]*+studio(?!\.com(?<=bglamhairstudio\.com))
+1621137720	cigien	fixsquad\.ae
