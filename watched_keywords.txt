@@ -29678,3 +29678,4 @@
 1621189274	cigien	gameb29\.download
 1621197354	cigien	stealthhealthstore\.com
 1621207570	cigien	luckyspelltemple513(?:@gmail\.com)?
+1621207699	cigien	d(?:octo)?r[\W_]*+lucky
