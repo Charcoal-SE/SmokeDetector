@@ -29693,3 +29693,4 @@
 1621242890	Nick	bestnutrichoice\.com
 1621242906	Nick	shapersolvitaketowork\.medium\.com
 1621260740	cigien	nygci\.com
+1621260769	cigien	nygci(?!\.com)
