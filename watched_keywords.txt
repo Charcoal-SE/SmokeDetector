@@ -29703,3 +29703,4 @@
 1621288086	cigien	cars[\W_]*+wreckers(?!\.co\.nz(?<=carswreckers\.co\.nz))
 1621288192	cigien	tiles[\W_]*+services(?!\.com(?<=tilesservices\.com))
 1621294618	cigien	vidhema\.com
+1621294865	cigien	the-essays\.com
