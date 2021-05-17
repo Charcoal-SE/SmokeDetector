@@ -29694,3 +29694,4 @@
 1621242906	Nick	shapersolvitaketowork\.medium\.com
 1621260740	cigien	nygci\.com
 1621260769	cigien	nygci(?!\.com)
+1621261354	Spevacus	(?-i:y1SqOV1nFRI)(?#youtu.be)
