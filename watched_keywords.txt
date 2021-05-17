@@ -29684,3 +29684,4 @@
 1621222530	lyxal	139\.99\.22\.22
 1621236923	Makyen	smoresup\.com
 1621240979	tripleee	vedamayurveda\.co\.in
+1621242906	Nick	shapersolvitaketowork\.medium\.com
