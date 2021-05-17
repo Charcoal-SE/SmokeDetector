@@ -27922,7 +27922,6 @@
 1615355677	Makyen	code-android-example\.blogspot
 1615356010	cigien	programmergate\.com(?#this domain appears in a large number of deleted, but unreported posts on Stack Overflow)
 1615355412	Yatin	mbarendezvous\.com
-1615357171	Yatin	takeoffprojects\.com
 1615358284	tripleee	clippingpathcompanyint\.com
 1615361035	Yatin	industrialmegamart\.com
 1615361965	cigien	digitalmarketinginfo286878533\.wordpress\.com
