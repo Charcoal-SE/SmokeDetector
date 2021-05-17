@@ -29679,3 +29679,4 @@
 1621197354	cigien	stealthhealthstore\.com
 1621207570	cigien	luckyspelltemple513(?:@gmail\.com)?
 1621207699	cigien	d(?:octo)?r[\W_]*+lucky
+1621228721	Makyen	staytokei\.com
