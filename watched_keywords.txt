@@ -29691,3 +29691,4 @@
 1621253911	Glorfindel	^Алексей\d+$
 1621256536	Mast	diverselynx\.com
 1621242890	Nick	bestnutrichoice\.com
+1621242906	Nick	shapersolvitaketowork\.medium\.com
