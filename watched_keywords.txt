@@ -29740,3 +29740,4 @@
 1621360024	cigien	send[\W_]*+wish[\W_]*+online(?!\.com(?<=sendwishonline\.com))
 1621360313	cigien	liangroup\.net
 1621363071	Makyen	armourguardfence\.ca
+1621363293	Xnero	Armour[\W_]*Guard[\W_]*Fence(?!\.ca)
