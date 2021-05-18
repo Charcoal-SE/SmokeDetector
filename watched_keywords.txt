@@ -29709,3 +29709,4 @@
 1621307818	cigien	theimpossible-quizbest\.com
 1621313653	Ryan M	gripelectric(?!\.net(?<=gripelectric\.net))
 1621314544	Ryan M	customprintingonboxes\.wordpress
+1621314663	Ryan M	boxes[\W_]*+xpert[\W_]*+hub(?!\.us(?<=boxesxperthub\.us))
