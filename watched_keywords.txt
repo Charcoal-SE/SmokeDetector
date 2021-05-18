@@ -29708,3 +29708,4 @@
 1621304614	cigien	(?-i:bgMvJ9BUgj4PrASz8)(?#google form)
 1621307818	cigien	theimpossible-quizbest\.com
 1621313495	Ryan M	gripelectric\.net
+1621313653	Ryan M	gripelectric(?!\.net(?<=gripelectric\.net))
