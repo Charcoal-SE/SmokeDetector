@@ -29711,3 +29711,4 @@
 1621314544	Ryan M	customprintingonboxes\.wordpress
 1621314663	Ryan M	boxes[\W_]*+xpert[\W_]*+hub(?!\.us(?<=boxesxperthub\.us))
 1621315863	Ryan M	cuure\.com
+1621316662	lyxal	advocateinlahore\.com
