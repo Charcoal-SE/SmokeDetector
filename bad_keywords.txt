@@ -2502,3 +2502,4 @@ kara(?:[\W_]*+s)?[\W_]*+orchards[\W_]*+cbd(?:[\W_]*+(?:gummies|oil|uk|united|kin
 effuel
 verifiedielts770(?:@yahoo\.com)?
 bongdalu(?!\.com(?<=bongdalu\.com))
+Village[\W_]*+Talkies
