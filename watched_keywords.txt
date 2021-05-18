@@ -29730,3 +29730,4 @@
 1621346602	cigien	nonnyblog(?!\.com)
 1621346788	cigien	apnsettingsandroid\.com
 1621348658	cigien	(?-i:icuBZz7bzEbDrtodA)(?#google form)
+1621349426	Makyen	essayintl\.com
