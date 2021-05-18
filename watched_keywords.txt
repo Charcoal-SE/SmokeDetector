@@ -29716,3 +29716,4 @@
 1621319990	Makyen	nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1621323861	Makyen	loansprofit\.co\.uk
 1621326537	tripleee	appoloacademy\.com
+1621329613	Ryan M	thesagame1688\.com
