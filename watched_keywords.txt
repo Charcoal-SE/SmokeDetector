@@ -29728,3 +29728,4 @@
 1621345205	Spevacus	TinniFix
 1621346051	cigien	lazerhoff(?:@gmail\.com)?
 1621346602	cigien	nonnyblog(?!\.com)
+1621346788	cigien	apnsettingsandroid\.com
