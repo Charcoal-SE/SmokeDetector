@@ -29743,3 +29743,4 @@
 1621363293	Xnero	Armour[\W_]*Guard[\W_]*Fence(?!\.ca)
 1621375784	cigien	zainbo\.com
 1621375803	cigien	zainbo(?!\.com)
+1621375976	cigien	sheraton[\W_]*+luxuries(?!\.com(?<=sheratonluxuries\.com))
