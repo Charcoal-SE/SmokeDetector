@@ -29736,3 +29736,4 @@
 1621355234	Makyen	(?-i:3tSf8S6)(?#bit.ly)
 1621358974	Xnero	4khdmovies\.online
 1621359685	cigien	regain[\W_]*+dental[\W_]*+care(?!\.com(?<=regaindentalcare\.com))
+1621359969	cigien	sendwishonline\.com
