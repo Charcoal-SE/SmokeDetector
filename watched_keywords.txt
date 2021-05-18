@@ -29713,3 +29713,4 @@
 1621315863	Ryan M	cuure\.com
 1621316662	lyxal	advocateinlahore\.com
 1621318328	lyxal	sheratonluxuries\.com
+1621319990	Makyen	nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
