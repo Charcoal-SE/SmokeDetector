@@ -29738,3 +29738,4 @@
 1621359685	cigien	regain[\W_]*+dental[\W_]*+care(?!\.com(?<=regaindentalcare\.com))
 1621359969	cigien	sendwishonline\.com
 1621360024	cigien	send[\W_]*+wish[\W_]*+online(?!\.com(?<=sendwishonline\.com))
+1621360313	cigien	liangroup\.net
