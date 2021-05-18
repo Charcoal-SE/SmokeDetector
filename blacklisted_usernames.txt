@@ -487,3 +487,4 @@ SpeakingAccent
 (?-i:^Amara watt$)
 (?-i:^Dazy Shuu Blog$)
 (?-i:^Lohithakshan\. N\. K$)
+(?-i:^gripelectric$)
