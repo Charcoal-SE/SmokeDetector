@@ -29565,7 +29565,6 @@
 1620763082	cigien	hiranandanicommunities\.com
 1620769982	cigien	theplanet60\.com
 1620770264	cigien	yesweed\.com
-1620784929	Nick	Nirvashare
 1620790248	Ryan M	cosyjewelry(?!\.com(?<=cosyjewelry\.com))
 1620790536	Ryan M	loginmojo\.com
 1620799130	Ryan M	ptetutorials\.com
