@@ -29782,3 +29782,4 @@
 1621434769	double-beep	vedulabs\.com
 1621436235	cigien	vedulabs(?!\.com)
 1621436369	cigien	arc4life\.com
+1621442366	Makyen	xl[\W_]*+real[\W_]*+muscle[\W_]*+gainer(?:[\W_]*+(?:buy|review|benefit|ingredients|fact|\d++|[\da-f]{5,}+)s?)*
