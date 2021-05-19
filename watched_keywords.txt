@@ -29777,3 +29777,4 @@
 1621428215	cigien	key\.words\.run
 1621428432	tripleee	zappysys\.com
 1621428570	cigien	azinseo\.blogspot
+1621428680	cigien	az[\W_]*+in[\W_]*+seo(?!\.blogspot(?<=azinseo\.blogspot))
