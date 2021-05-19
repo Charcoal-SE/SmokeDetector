@@ -29781,3 +29781,4 @@
 1621428875	cigien	filmorapro1\.blogspot
 1621430057	Spevacus	cysque\.com
 1621434769	double-beep	vedulabs\.com
+1621436235	cigien	vedulabs(?!\.com)
