@@ -29782,3 +29782,4 @@
 1621430057	Spevacus	cysque\.com
 1621434769	double-beep	vedulabs\.com
 1621436235	cigien	vedulabs(?!\.com)
+1621436369	cigien	arc4life\.com
