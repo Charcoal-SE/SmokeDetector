@@ -29762,3 +29762,4 @@
 1621416790	Ryan M	customketodiet4week(?# sites.google.com)
 1621417048	Ryan M	khadmatys\.com
 1621419671	Glorfindel	<strong>\s*<a href="https://sites\.google\.com/
+1621419878	Glorfindel	<a href="https://sites\.google\.com/[^>]*>\s*<strong>
