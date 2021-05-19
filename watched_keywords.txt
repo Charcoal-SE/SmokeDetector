@@ -29749,3 +29749,4 @@
 1621391897	lyxal	superhotplace\.com
 1621393510	Spevacus	theblogmagic\.com
 1621394022	Makyen	superhotplace(?!\.com)
+1621404157	Ryan M	kapdec\.com
