@@ -29785,3 +29785,4 @@
 1621442366	Makyen	xl[\W_]*+real[\W_]*+muscle[\W_]*+gainer(?:[\W_]*+(?:buy|review|benefit|ingredients|fact|\d++|[\da-f]{5,}+)s?)*
 1621442380	Makyen	natures[\W_]*+boost[\W_]*+tinnitus(?:[\W_]*+(?:gummies|\d++|[\da-f]{5,}+)s?)*
 1621442394	Makyen	green[\W_]*+mountain[\W_]*+cbd(?:[\W_]*+(?:gummies|\d++|[\da-f]{5,}+)s?)*
+1621442482	Makyen	bangalore[\W_]*+care[\W_]*+takers
