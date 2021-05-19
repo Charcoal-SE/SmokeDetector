@@ -29780,3 +29780,4 @@
 1621428680	cigien	az[\W_]*+in[\W_]*+seo(?!\.blogspot(?<=azinseo\.blogspot))
 1621428875	cigien	filmorapro1\.blogspot
 1621430057	Spevacus	cysque\.com
+1621434769	double-beep	vedulabs\.com
