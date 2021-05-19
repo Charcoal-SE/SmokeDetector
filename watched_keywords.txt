@@ -29764,3 +29764,4 @@
 1621419671	Glorfindel	<strong>\s*<a href="https://sites\.google\.com/
 1621419878	Glorfindel	<a href="https://sites\.google\.com/[^>]*>\s*<strong>
 1621420267	tripleee	allsaintsu\.org
+1621420475	Jeff Schaller	prophecymarketinsights\.com
