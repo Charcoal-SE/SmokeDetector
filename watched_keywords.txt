@@ -29792,3 +29792,4 @@
 1621460395	cigien	indirimkuponu(?!\.com\.tr)
 1621468126	cigien	escort[\W_]*+models(?!\.org(?<=escortmodels\.org))
 1621468545	cigien	benjamin\.caile(?:@ukho\.gov\.uk)?
+1621469734	cigien	jannthony476(?:@gmail\.com)?
