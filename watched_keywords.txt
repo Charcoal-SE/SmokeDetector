@@ -29812,3 +29812,4 @@
 1621516160	Spevacus	nitsinformatics\.com
 1621486976	lyxal	mtfxgroup\.com
 1621520653	cigien	meilleur[\W_]*+comparateur[\W_]*+de[\W_]*+prix(?!\.com(?<=meilleurcomparateurdeprix\.com))
+1621520889	cigien	elektrikliarabafiyatlari\.com
