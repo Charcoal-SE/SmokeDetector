@@ -483,7 +483,6 @@ SpeakingAccent
 (?-i:^unrivaledcandles$)
 (?-i:^Katrin Kunze$)
 (?-i:^TheRobloxGamer$)
-(?-i:^Gary Swiercz Chicago$)
 (?-i:^Amara watt$)
 (?-i:^Dazy Shuu Blog$)
 (?-i:^Lohithakshan\. N\. K$)
