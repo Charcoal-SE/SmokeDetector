@@ -487,3 +487,4 @@ SpeakingAccent
 (?-i:^Dazy Shuu Blog$)
 (?-i:^Lohithakshan\. N\. K$)
 (?-i:^gripelectric$)
+williamriver
