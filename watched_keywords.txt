@@ -29831,3 +29831,4 @@
 1621567585	cigien	yeu\.cafe
 1621568135	cigien	taskvio\.com
 1621568151	cigien	taskvio(?!\.com)
+1621569322	cigien	tourvietnambooking\.wordpress\.com
