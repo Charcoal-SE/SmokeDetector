@@ -29850,3 +29850,4 @@
 1621581860	lyxal	cutefashionart\.com
 1621601492	Spevacus	smartposweb\.com
 1621604454	double-beep	newyorkcables\.com
+1621604834	Spevacus	new[\W_]*+york[\W_]*+cables(?!\.com(?<=newyorkcables\.com))
