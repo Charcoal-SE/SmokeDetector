@@ -29818,3 +29818,4 @@
 1621528253	Makyen	vsudo\.net
 1621529627	Spevacus	sourcedefender\.co\.uk/signup\?src=\w*
 1621550400	Makyen	ternmitehacking(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1621555439	lyxal	ultimatelifeclinic\.com
