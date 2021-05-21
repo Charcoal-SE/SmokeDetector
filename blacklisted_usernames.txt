@@ -488,3 +488,4 @@ SpeakingAccent
 (?-i:^Lohithakshan\. N\. K$)
 (?-i:^gripelectric$)
 williamriver
+(?-i:^FULLERKREG$)
