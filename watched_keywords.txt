@@ -29830,3 +29830,4 @@
 1621567565	cigien	renrich\.com
 1621567585	cigien	yeu\.cafe
 1621568135	cigien	taskvio\.com
+1621568151	cigien	taskvio(?!\.com)
