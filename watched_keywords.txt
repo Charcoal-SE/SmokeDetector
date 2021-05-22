@@ -29862,3 +29862,4 @@
 1621643939	cigien	phanmemvip\.net
 1621643954	cigien	phanmemvip(?!\.net)
 1621644129	cigien	84[\W_]*+degrees[\W_]*+east(?!\.co\.uk(?<=84degreeseast\.co\.uk))
+1621651550	cigien	eminence-top\.com
