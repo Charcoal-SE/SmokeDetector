@@ -29859,3 +29859,4 @@
 1621643250	cigien	animestream\.in
 1621643801	cigien	growth[\W_]*+wizards
 1621643876	cigien	bsg[\W_]*+glass[\W_]*+chip(?!\.com(?<=bsgglasschip\.com))
+1621643939	cigien	phanmemvip\.net
