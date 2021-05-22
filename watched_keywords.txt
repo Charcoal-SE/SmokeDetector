@@ -29860,3 +29860,4 @@
 1621643801	cigien	growth[\W_]*+wizards
 1621643876	cigien	bsg[\W_]*+glass[\W_]*+chip(?!\.com(?<=bsgglasschip\.com))
 1621643939	cigien	phanmemvip\.net
+1621643954	cigien	phanmemvip(?!\.net)
