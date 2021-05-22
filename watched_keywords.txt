@@ -29868,3 +29868,4 @@
 1621687553	Xnero	sign\.ipasign\.cc
 1621691273	Jeff Schaller	setupyouraccounts\.com
 1621680972	Xnero	apillz\.com
+1621693840	cigien	pest[\W_]*+control[\W_]*+hyderabad(?!\.com(?<=pestcontrolhyderabad\.com))
