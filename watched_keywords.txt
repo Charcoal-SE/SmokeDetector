@@ -29864,3 +29864,4 @@
 1621644129	cigien	84[\W_]*+degrees[\W_]*+east(?!\.co\.uk(?<=84degreeseast\.co\.uk))
 1621651550	cigien	eminence-top\.com
 1621658131	Makyen	khotheviet\.com
+1621676023	Makyen	dranitasingh\.co\.in
