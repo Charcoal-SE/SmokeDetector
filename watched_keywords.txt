@@ -29861,3 +29861,4 @@
 1621643876	cigien	bsg[\W_]*+glass[\W_]*+chip(?!\.com(?<=bsgglasschip\.com))
 1621643939	cigien	phanmemvip\.net
 1621643954	cigien	phanmemvip(?!\.net)
+1621644129	cigien	84[\W_]*+degrees[\W_]*+east(?!\.co\.uk(?<=84degreeseast\.co\.uk))
