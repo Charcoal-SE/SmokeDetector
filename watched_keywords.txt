@@ -29891,3 +29891,4 @@
 1621773347	Makyen	bestfishkeeping\.com
 1621776074	Makyen	pfizer[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1621780874	Xnero	bediroglunakliye\.com
+1621780888	Xnero	69pot\.com
