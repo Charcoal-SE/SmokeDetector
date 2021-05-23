@@ -29879,3 +29879,4 @@
 1621720679	Spevacus	whitescreen\.org
 1621730992	Makyen	bangla\.rcn24bd\.com
 1621736324	cigien	dai[\W_]*+software(?!\.com(?<=daisoftware\.com))
+1621736378	cigien	(?:swapnil@)?turtleturbine\.com
