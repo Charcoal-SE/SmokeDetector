@@ -29881,3 +29881,4 @@
 1621736324	cigien	dai[\W_]*+software(?!\.com(?<=daisoftware\.com))
 1621736378	cigien	(?:swapnil@)?turtleturbine\.com
 1621736421	cigien	ownthecart\.com
+1621736516	cigien	sarkariresult\.org\.in
