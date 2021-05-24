@@ -29904,3 +29904,4 @@
 1621827542	cigien	mcezone(?!\.com)
 1621827697	cigien	hosting[\W_]*+by[\W_]*+ali[\W_]*+tech(?!\.com(?<=hostingbyalitech\.com))
 1621827889	cigien	smartlivingidea\.com
+1621833638	Nick	igudhilu\.com
