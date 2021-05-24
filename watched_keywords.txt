@@ -29900,3 +29900,4 @@
 1621815547	Makyen	perfect[\W_]*+btc[\W_]*+recovery
 1621815965	cigien	uzynski[\W_]*+digital(?!\.com(?<=uzynskidigital\.com))
 1621816664	cigien	inevitableyogendra\.blogspot
+1621817118	cigien	programmersportal\.com
