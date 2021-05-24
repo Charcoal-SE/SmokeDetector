@@ -29894,7 +29894,6 @@
 1621780888	Xnero	69pot\.com
 1621787630	Makyen	connecteddots\.digital
 1621796631	Xnero	uzynskidigital\.com
-1621796641	Xnero	uzynskidigital(?!\.com)
 1621814894	cigien	miles\.edu
 1621814908	cigien	universitycollege\.asu\.edu
 1621814995	cigien	Gael8ex
