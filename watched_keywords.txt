@@ -29924,3 +29924,4 @@
 1621855354	Glorfindel	l2ladyal\.com
 1621843204	Xnero	aetmaad(?!\.com)
 1621844988	Xnero	excel[\W_]*strategies(?!\.in)
+1621859108	double-beep	mateshwaritours\.com
