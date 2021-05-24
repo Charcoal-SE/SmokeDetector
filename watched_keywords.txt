@@ -29926,3 +29926,4 @@
 1621844988	Xnero	excel[\W_]*strategies(?!\.in)
 1621859108	double-beep	mateshwaritours\.com
 1621864209	cigien	digitalmediasapiens\.com
+1621864925	cigien	klaritykratom\.com
