@@ -29898,3 +29898,4 @@
 1621814908	cigien	universitycollege\.asu\.edu
 1621814995	cigien	Gael8ex
 1621815547	Makyen	perfect[\W_]*+btc[\W_]*+recovery
+1621815965	cigien	uzynski[\W_]*+digital(?!\.com(?<=uzynskidigital\.com))
