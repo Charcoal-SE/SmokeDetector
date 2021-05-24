@@ -29902,3 +29902,4 @@
 1621816664	cigien	inevitableyogendra\.blogspot
 1621817118	cigien	programmersportal\.com
 1621827542	cigien	mcezone(?!\.com)
+1621827697	cigien	hosting[\W_]*+by[\W_]*+ali[\W_]*+tech(?!\.com(?<=hostingbyalitech\.com))
