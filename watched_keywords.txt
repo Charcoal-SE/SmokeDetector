@@ -29936,3 +29936,4 @@
 1621907004	cigien	crackgreen\.com
 1621907022	cigien	crackgreen(?!\.com)
 1621907279	cigien	nature[\W_]*+wood[\W_]*+homes(?!\.com(?<=naturewoodhomes\.com))
+1621907295	cigien	articleconstruction\.icu
