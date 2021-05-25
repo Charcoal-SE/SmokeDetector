@@ -29932,3 +29932,4 @@
 1621872678	Xnero	mateshwari[\W_]*tours(?!\.com)
 1621846481	Xnero	clockon(?!\.com\.au)
 1621886194	cigien	rushmoon\.finance
+1621900980	10 Rep	imprimirfactura\.online
