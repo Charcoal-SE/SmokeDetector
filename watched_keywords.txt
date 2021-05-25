@@ -29948,3 +29948,4 @@
 1621932101	Ryan M	tibacademy\.in
 1621938940	tripleee	(?-i:^Prestige City$)
 1621939514	tripleee	(?-i:^George Thomas$)
+1621940155	tripleee	takshilalearning\.com
