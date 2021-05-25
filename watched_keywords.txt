@@ -29955,3 +29955,4 @@
 1621945088	Spevacus	(?-i:^belindaluna$)
 1621947207	Spevacus	likeshigh\.com
 1621947224	Spevacus	likeshigh(?!\.com)
+1621950735	Spevacus	digitaltrainee\.com
