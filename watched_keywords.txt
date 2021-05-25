@@ -29951,3 +29951,4 @@
 1621940155	tripleee	takshilalearning\.com
 1621940174	tripleee	takshila[\W_]*+learning(?!\.com)
 1621940738	tripleee	tech[\W_]*´cloud[\W_]*+erp
+1621944063	tripleee	truepush
