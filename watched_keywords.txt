@@ -29954,3 +29954,4 @@
 1621944063	tripleee	truepush
 1621945088	Spevacus	(?-i:^belindaluna$)
 1621947207	Spevacus	likeshigh\.com
+1621947224	Spevacus	likeshigh(?!\.com)
