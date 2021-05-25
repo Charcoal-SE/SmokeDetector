@@ -29940,3 +29940,4 @@
 1621909988	Nick	reviewbooknet\.com
 1621911802	Nick	business\s+voip\s+service
 1621912676	cigien	199\.192\.31\.242
+1621921225	Nick	vietnamta\.vn
