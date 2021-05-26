@@ -29982,3 +29982,4 @@
 1622039128	Spevacus	gohotcontent\.com
 1622044436	Makyen	hacktruth(?:[\W_]*+(?:team|\d++|[\da-f]{5,}+)s?)*
 1622049859	Xnero	itrackings\.net
+1622049751	Xnero	neha-gupta\.in
