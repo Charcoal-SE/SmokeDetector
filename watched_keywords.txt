@@ -29978,3 +29978,4 @@
 1622031264	Spevacus	fitnessquotesformotivation\.blogspot
 1622033865	Nick	parkobility\.com
 1622035030	Xnero	adspyder\.io
+1622035474	Xnero	ad[\W_]*spyder(?!\.io)
