@@ -29969,3 +29969,4 @@
 1621995143	cigien	music-mad\.com
 1621995274	cigien	megatechshop(?!\.com)
 1621995388	cigien	winfo[\W_]*+solutions(?!\.com(?<=winfosolutions\.com))
+1621995526	cigien	atomsinfinity\.com
