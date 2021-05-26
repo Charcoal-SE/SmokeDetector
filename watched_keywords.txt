@@ -29981,3 +29981,4 @@
 1622035474	Xnero	ad[\W_]*spyder(?!\.io)
 1622039128	Spevacus	gohotcontent\.com
 1622044436	Makyen	hacktruth(?:[\W_]*+(?:team|\d++|[\da-f]{5,}+)s?)*
+1622049859	Xnero	itrackings\.net
