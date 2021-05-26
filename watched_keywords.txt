@@ -29971,3 +29971,4 @@
 1621995541	cigien	atoms[\W_]*+infinity(?!\.com(?<=atomsinfinity\.com))
 1622003633	tripleee	fergus[\W_]*+the[\W_]*+frog
 1622010909	Ryan M	knockaround\.com
+1622014123	Nick	silverstreetjewellers\.ca
