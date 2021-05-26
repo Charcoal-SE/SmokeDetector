@@ -29966,3 +29966,4 @@
 1621993721	cigien	digital[\W_]*+trainee(?!\.com(?<=digitaltrainee\.com))
 1621994714	cigien	sdc watch tech[\W_]*+cloud[\W_]*+erp
 1621994989	cigien	prestige[\W_]*+city(?!\.gen\.in(?<=prestigecity\.gen\.in))
+1621995143	cigien	music-mad\.com
