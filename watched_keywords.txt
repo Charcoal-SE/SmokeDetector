@@ -29972,3 +29972,4 @@
 1622003633	tripleee	fergus[\W_]*+the[\W_]*+frog
 1622010909	Ryan M	knockaround\.com
 1622014123	Nick	silverstreetjewellers\.ca
+1622014475	tripleee	learninggears\.in
