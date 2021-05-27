@@ -489,3 +489,4 @@ SpeakingAccent
 (?-i:^gripelectric$)
 williamriver
 (?-i:^FULLERKREG$)
+(?-i:^ADM Sneezeguards$)
