@@ -29991,3 +29991,4 @@
 1622078186	cigien	brigade[\W_]*+utopia(?!\.org\.in(?<=brigadeutopia\.org\.in))
 1622079190	cigien	magentobyabhiojha\.blogspot
 1622080282	cigien	voip[\W_]*+business(?!\.com(?<=voipbusiness\.com))
+1622080432	cigien	clipping[\W_]*+world(?!\.com(?<=clippingworld\.com))
