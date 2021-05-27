@@ -29992,3 +29992,4 @@
 1622079190	cigien	magentobyabhiojha\.blogspot
 1622080282	cigien	voip[\W_]*+business(?!\.com(?<=voipbusiness\.com))
 1622080432	cigien	clipping[\W_]*+world(?!\.com(?<=clippingworld\.com))
+1622080683	cigien	julizar\.id
