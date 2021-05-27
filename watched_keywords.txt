@@ -30003,3 +30003,4 @@
 1622082558	cigien	myfeltpet(?!\.com)
 1622085531	lyxal	binaryoptionsolutiontrade
 1622090437	Nick	eyeleveloptical\.com
+1622091836	tripleee	donn?a?[\W_]*+a?l[\W_]*+bright\d*
