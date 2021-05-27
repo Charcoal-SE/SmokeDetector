@@ -30000,3 +30000,4 @@
 1622081005	Spevacus	je76138119(?:@gmail\.com)?
 1622081241	cigien	supermario-bros\.co
 1622082535	cigien	myfeltpet\.com
+1622082558	cigien	myfeltpet(?!\.com)
