@@ -2506,3 +2506,4 @@ nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 social[\W_]*+prachar(?!\.com(?<=socialprachar\.com))
 Gary Swiercz Chicago
 download it (?:right )?now and check this out for yourself(?#photo copyright scam)
+adm[\W_]*+sneezeguards
