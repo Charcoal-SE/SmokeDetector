@@ -30002,3 +30002,4 @@
 1622082535	cigien	myfeltpet\.com
 1622082558	cigien	myfeltpet(?!\.com)
 1622085531	lyxal	binaryoptionsolutiontrade
+1622090437	Nick	eyeleveloptical\.com
