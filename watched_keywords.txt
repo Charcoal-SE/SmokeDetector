@@ -29997,3 +29997,4 @@
 1622080731	cigien	haubiendafuka\.net
 1622080748	cigien	haubiendafuka\.com
 1622080910	cigien	learninggears(?!\.in)
+1622081005	Spevacus	je76138119(?:@gmail\.com)?
