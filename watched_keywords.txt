@@ -29986,3 +29986,4 @@
 1622053082	Xnero	e8722d80e8852ac2(?#Skype ID)
 1622053007	Xnero	topdeveloper1999(?:@outlook\.com)?
 1622076908	cigien	rohutech\.com
+1622076928	cigien	rohutech(?!\.com)
