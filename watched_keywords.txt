@@ -29996,3 +29996,4 @@
 1622080714	cigien	haubiendafuka\.livejournal\.com
 1622080731	cigien	haubiendafuka\.net
 1622080748	cigien	haubiendafuka\.com
+1622080910	cigien	learninggears(?!\.in)
