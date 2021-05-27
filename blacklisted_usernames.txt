@@ -491,3 +491,4 @@ williamriver
 (?-i:^FULLERKREG$)
 (?-i:^ADM Sneezeguards$)
 (?-i:^belindaluna$)
+(?-i:^Nancy R\. Vinci$)
