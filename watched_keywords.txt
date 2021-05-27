@@ -30012,3 +30012,4 @@
 1622106748	tripleee	aromaeasy\.com
 1622110092	Mast	(?-i:^AromaEasy$)
 1622110911	tripleee	aldakavlilearningcenter\.org
+1622118557	Spevacus	studies-overseas\.com
