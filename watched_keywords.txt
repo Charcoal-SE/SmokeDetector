@@ -30030,3 +30030,4 @@
 1622175333	cigien	fima\.ub\.edu
 1622179568	tripleee	amped-wireless-setup\.com
 1622183769	tripleee	typingpoint\.com
+1622183824	tripleee	techyinfo\.tech
