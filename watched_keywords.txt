@@ -30024,3 +30024,4 @@
 1622173018	cigien	myinfo\.pk
 1622173819	cigien	thebestlog\.com
 1622173894	cigien	checkmybest(?!\.com)
+1622173996	cigien	thedeezerpremiumapk\.com
