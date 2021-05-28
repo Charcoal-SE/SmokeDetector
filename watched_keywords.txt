@@ -30026,3 +30026,4 @@
 1622173894	cigien	checkmybest(?!\.com)
 1622173996	cigien	thedeezerpremiumapk\.com
 1622174098	cigien	guessingtrick\.com
+1622174389	cigien	spacestrek\.wordpress\.com
