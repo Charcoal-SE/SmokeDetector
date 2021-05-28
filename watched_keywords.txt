@@ -30038,3 +30038,4 @@
 1622184626	Ryan M	CoronaVirusDeFi
 1622184643	Ryan M	CoronaCryptoOfficial
 1622184665	Ryan M	coronacryptochannel
+1622184688	Ryan M	corona[\W_]*+crypto
