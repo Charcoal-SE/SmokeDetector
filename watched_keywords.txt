@@ -30017,3 +30017,4 @@
 1622170864	cigien	punekarnews\.in
 1622170983	cigien	EXPERTDREAMTRADE\.com
 1622119086	Xnero	support\.crowdin\.com
+1622172480	cigien	coinmarketbag\.com
