@@ -492,3 +492,4 @@ williamriver
 (?-i:^ADM Sneezeguards$)
 (?-i:^belindaluna$)
 (?-i:^Nancy R\. Vinci$)
+(?-i:^Jacqueline L\. Pollock$)
