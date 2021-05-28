@@ -30018,3 +30018,4 @@
 1622170983	cigien	EXPERTDREAMTRADE\.com
 1622119086	Xnero	support\.crowdin\.com
 1622172480	cigien	coinmarketbag\.com
+1622172741	cigien	trust[\W_]*+wallet
