@@ -30019,3 +30019,4 @@
 1622119086	Xnero	support\.crowdin\.com
 1622172480	cigien	coinmarketbag\.com
 1622172741	cigien	trust[\W_]*+wallet
+1622172804	cigien	leonyu9703(?:@gmail\.com)?
