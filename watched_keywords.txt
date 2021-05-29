@@ -30071,3 +30071,4 @@
 1622267331	cigien	cfd[\W_]*+streamline(?!\.com(?<=cfdstreamline\.com))
 1622267785	cigien	my[\W_]*+digi[\W_]*+menu(?!\.com(?<=mydigimenu\.com))
 1622268562	cigien	caldepo(?!\.com)
+1622269621	Makyen	markhallvoice\.com
