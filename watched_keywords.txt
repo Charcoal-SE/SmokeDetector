@@ -30080,3 +30080,4 @@
 1622286349	Makyen	davinzcruz(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1622286363	Makyen	lucent[\W_]*+valley[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|reviews|\d++|[\da-f]{5,}+)s?)*
 1622286383	Makyen	(?-i:STATA17MP)(?#bit.ly)
+1622286403	Makyen	omarfouad\.net(?:@gmail\.com)?
