@@ -30077,3 +30077,4 @@
 1622285037	double-beep	chandrahair\.com
 1622286311	Makyen	truewebsolutions\.in
 1622286328	Makyen	truewebsolutions(?!\.in)
+1622286349	Makyen	davinzcruz(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
