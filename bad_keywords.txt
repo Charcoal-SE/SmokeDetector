@@ -2508,3 +2508,4 @@ Gary Swiercz Chicago
 download it (?:right )?now and check this out for yourself(?#photo copyright scam)
 adm[\W_]*+sneezeguards
 fiverrcpa
+green[\W_]*+ape[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|ie)|oil|\d++|[\da-f]{5,}+)s?)*
