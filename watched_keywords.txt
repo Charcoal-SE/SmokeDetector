@@ -30060,3 +30060,4 @@
 1622248405	Makyen	digitalhumanities\.berkeley\.edu
 1622255791	cigien	safehousepg\.in
 1622256205	cigien	h2[\W_]*+life[\W_]*+ch(?!\.com(?<=h2lifech\.com))
+1622257852	10 Rep	xuonggodep\.vn
