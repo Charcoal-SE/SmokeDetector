@@ -30066,3 +30066,4 @@
 1622260829	cigien	bestnewname\.com
 1622261790	cigien	rofer\.org
 1622261828	cigien	rofer(?!\.org)
+1622263290	cigien	akashmittal\.com
