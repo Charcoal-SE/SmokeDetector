@@ -30078,3 +30078,4 @@
 1622286311	Makyen	truewebsolutions\.in
 1622286328	Makyen	truewebsolutions(?!\.in)
 1622286349	Makyen	davinzcruz(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1622286363	Makyen	lucent[\W_]*+valley[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|reviews|\d++|[\da-f]{5,}+)s?)*
