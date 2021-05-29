@@ -30061,3 +30061,4 @@
 1622255791	cigien	safehousepg\.in
 1622256205	cigien	h2[\W_]*+life[\W_]*+ch(?!\.com(?<=h2lifech\.com))
 1622257852	10 Rep	xuonggodep\.vn
+1622258586	10 Rep	zem\.xpert(?:@gmail\.com)?
