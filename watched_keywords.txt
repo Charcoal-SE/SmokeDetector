@@ -30088,3 +30088,4 @@
 1622307645	10 Rep	yourcodeway\.com
 1622307889	cigien	indaddy(?!\.net)
 1622308346	cigien	thegerminate\.com
+1622308477	cigien	stata[\W_]*+17[\W_]*+mp
