@@ -30086,3 +30086,4 @@
 1622293377	Makyen	jameshenryhome(?:@gmail\.com)?
 1622307535	cigien	payrequest\.io
 1622307645	10 Rep	yourcodeway\.com
+1622307889	cigien	indaddy(?!\.net)
