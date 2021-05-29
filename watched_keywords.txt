@@ -30070,3 +30070,4 @@
 1622264987	cigien	(?-i:Gz54kZcAhqkFk9HB7)(?#google forms)
 1622266559	Makyen	parsebox\.io
 1622267331	cigien	cfd[\W_]*+streamline(?!\.com(?<=cfdstreamline\.com))
+1622267785	cigien	my[\W_]*+digi[\W_]*+menu(?!\.com(?<=mydigimenu\.com))
