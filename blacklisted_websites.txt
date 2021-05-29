@@ -4037,3 +4037,4 @@ jdailytalk\.com
 sites\.google\.com/(?:view|site)/\w*+(?:-\w*+)?/(?:\w+/)*+(?:download|storage|file)(?:s)?\?\w++=\w*+
 reecoupons\.com
 199\.192\.31\.83
+fita\.in
