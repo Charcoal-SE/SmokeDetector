@@ -30065,3 +30065,4 @@
 1622258586	10 Rep	zem\.xpert(?:@gmail\.com)?
 1622260829	cigien	bestnewname\.com
 1622261790	cigien	rofer\.org
+1622261828	cigien	rofer(?!\.org)
