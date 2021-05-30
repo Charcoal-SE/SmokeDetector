@@ -29865,7 +29865,6 @@
 1621711284	Makyen	flstudio-mobileapk\.com
 1621714378	Makyen	maryjohnson9700(?:@gmail\.com)?
 1621714422	Makyen	bizop\.org
-1621720679	Spevacus	whitescreen\.org
 1621730992	Makyen	bangla\.rcn24bd\.com
 1621736324	cigien	dai[\W_]*+software(?!\.com(?<=daisoftware\.com))
 1621736378	cigien	(?:swapnil@)?turtleturbine\.com
