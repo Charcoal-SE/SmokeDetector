@@ -30112,3 +30112,4 @@
 1622394349	Xnero	mauricioaguilar(?:@utexas\.edu)?
 1622400355	cigien	(?:dr\.)?noahmedicalcenter(?:@gmail\.com)?
 1622401120	Makyen	accountspva\.com
+1622401523	cigien	best[\W_]*+professional[\W_]*+chainsaw(?!\.com(?<=bestprofessionalchainsaw\.com))
