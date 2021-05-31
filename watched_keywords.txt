@@ -30168,3 +30168,4 @@
 1622497559	Makyen	uslegitchemstore\.com
 1622497573	Makyen	uslegitchemstore(?!\.com)
 1622500020	cigien	skstonesus\.com
+1622500098	cigien	sk[\W_]*+stones[\W_]*+us(?!\.com(?<=skstonesus\.com))
