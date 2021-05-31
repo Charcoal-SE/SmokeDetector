@@ -30152,3 +30152,4 @@
 1622465193	tripleee	hugheseducation\.com
 1622465138	Nick	ecoboxfab\.com
 1622465286	Nick	Takeoff\s*Projects(?!\.com)
+1622465148	Nick	ecoboxfab(?!\.com)
