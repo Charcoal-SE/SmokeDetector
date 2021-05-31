@@ -30167,3 +30167,4 @@
 1622489027	Spevacus	compralobueno\.com
 1622497559	Makyen	uslegitchemstore\.com
 1622497573	Makyen	uslegitchemstore(?!\.com)
+1622500020	cigien	skstonesus\.com
