@@ -30162,3 +30162,4 @@
 1622486380	cigien	esnpc\.blogspot
 1622486733	cigien	sanwells\.ga
 1622486751	cigien	sanwells(?!\.ga)
+1622486819	JJJ	eonclinics\.com
