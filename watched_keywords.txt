@@ -30160,3 +30160,4 @@
 1622485932	cigien	techbusinessnews\.com\.au
 1622485952	cigien	articleforge\.com
 1622486380	cigien	esnpc\.blogspot
+1622486733	cigien	sanwells\.ga
