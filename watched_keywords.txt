@@ -30126,3 +30126,4 @@
 1622415259	Ryan M	guaranteed[\W_]*+trust[\W_]*+recovery
 1622419990	cigien	birrhukuk\.com
 1622426806	cigien	cryptomarketpool\.com
+1622426907	cigien	thesoynutritioninstitute\.com
