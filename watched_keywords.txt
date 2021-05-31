@@ -3875,7 +3875,6 @@
 1529585199	iBug	cerebral\W?boost
 1529585426	tripleee	timberavenue\.com
 1529591649	tripleee	recoverfilesdata\.com
-1529635429	NobodyNada	leawo(?:\.org)?
 1529649106	Makyen	bsrpro\.hop\.clickbank\.net
 1529649141	Makyen	bestsellerrankingpro\.com
 1529649150	Makyen	jfgsu8945639dg7gnk
