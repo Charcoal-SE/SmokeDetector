@@ -30135,3 +30135,4 @@
 1622442032	Nick	fubeauy\.vn
 1622442204	gparyani	fubeauty\.vn
 1622446235	tripleee	yongxin-packaging\.com
+1622448440	tripleee	leawo(?!\.org)
