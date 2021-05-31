@@ -30137,3 +30137,4 @@
 1622448463	tripleee	xmovies8\.today
 1622449249	tripleee	katprotech\.com
 1622450058	Nick	esteemhost\.com
+1622450077	Nick	esteem\s*host(?!\.com)
