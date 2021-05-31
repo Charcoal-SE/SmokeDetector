@@ -30125,3 +30125,4 @@
 1622408991	cigien	the-best-recipes\.com
 1622415259	Ryan M	guaranteed[\W_]*+trust[\W_]*+recovery
 1622419990	cigien	birrhukuk\.com
+1622426806	cigien	cryptomarketpool\.com
