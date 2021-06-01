@@ -30215,3 +30215,4 @@
 1622578550	cigien	talsmart(?!\.com)
 1622578668	cigien	lention\.com
 1622578802	cigien	skale[\W_]*+fitness(?!\.com(?<=skalefitness\.com))
+1622585469	Ryan M	jpeeiclinic\.com
