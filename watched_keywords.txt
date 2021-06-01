@@ -30195,6 +30195,5 @@
 1622548992	Xnero	tcsbaroda\.com
 1622549168	tripleee	chathub\.online
 1622549192	tripleee	talktostrangers\.online
-1622549757	tripleee	ometv\.online
 1622550906	Spevacus	solocabs\.com
 1622550989	tripleee	(?-i:^David Karonline$)
