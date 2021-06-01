@@ -30178,3 +30178,4 @@
 1622520267	double-beep	shailybeautytips\.com
 1622522888	tripleee	skalefitness\.com
 1622527656	tripleee	savefrom\.net
+1622528550	tripleee	(?-i:^perez daniel$)
