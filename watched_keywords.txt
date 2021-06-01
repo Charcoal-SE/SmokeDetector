@@ -30187,10 +30187,8 @@
 1622543275	tripleee	teknonauts\.com
 1622547841	tripleee	certswarrior\.com
 1622548692	tripleee	chathub\.chat
-1622548713	tripleee	talktostrangers\.online
 1622548752	tripleee	omeglerandomvideochat\.com
 1622548834	tripleee	freerandomvideochat\.com
-1622548679	Xnero	talktostrangers\.online
 1622548668	Xnero	chatrandombox\.com
 1622548663	Xnero	yuyyutv\.com
 1622548674	Xnero	omegle\.space
