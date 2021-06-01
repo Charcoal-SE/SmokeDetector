@@ -30171,3 +30171,4 @@
 1622500098	cigien	sk[\W_]*+stones[\W_]*+us(?!\.com(?<=skstonesus\.com))
 1622504009	cigien	poe4sale\.com
 1622515473	cigien	healthshop24x7\.com
+1622515812	cigien	seoasoorm\.com
