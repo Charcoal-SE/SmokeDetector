@@ -30212,3 +30212,4 @@
 1622577801	cigien	autopartsfair\.com
 1622577818	cigien	hdautospart\.com
 1622577880	cigien	perfect[\W_]*+wallet[\W_]*+recovery
+1622578550	cigien	talsmart(?!\.com)
