@@ -30177,3 +30177,4 @@
 1622516964	cigien	kid[\W_]*+wise(?!\.in(?<=kidwise\.in))
 1622520267	double-beep	shailybeautytips\.com
 1622522888	tripleee	skalefitness\.com
+1622527656	tripleee	savefrom\.net
