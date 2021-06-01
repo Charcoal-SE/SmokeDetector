@@ -30181,3 +30181,4 @@
 1622528550	tripleee	(?-i:^perez daniel$)
 1622529331	tripleee	talsmart\.com
 1622532681	tripleee	a-fold\.com
+1622534874	tripleee	rudhrasoft\.com
