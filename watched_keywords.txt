@@ -28943,7 +28943,6 @@
 1618877551	cigien	dt[\W_]*+modern[\W_]*+tech
 1618878145	cigien	(?-i:QkEc3bUe7m)(?#discord)
 1618881504	cigien	flowersbeautyacademy\.in
-1618881542	cigien	alwin\.io
 1618881643	cigien	khamphukhoatphcm\.info
 1618881707	cigien	xoffencer\.com
 1618882124	cigien	yasushiuzawa(?:@yahoo\.co\.uk)?
