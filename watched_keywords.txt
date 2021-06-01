@@ -30204,3 +30204,4 @@
 1622574973	cigien	techbethink\.com
 1622575520	cigien	apkwind(?!\.com)
 1622575712	cigien	aquarologic\.wordpress\.com
+1622575810	cigien	raviyatechnical\.blogspot
