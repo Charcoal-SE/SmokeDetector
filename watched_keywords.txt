@@ -28989,7 +28989,6 @@
 1619013260	Mast	msyd43208(?:@gmail\.com)?
 1619014901	Makyen	blackurban\.com
 1619014935	Makyen	omeglerandomchat\.com
-1619014953	Makyen	omegle\.world
 1619014971	Makyen	optionstrategiesinsider\.com
 1619014994	Makyen	option[\W_]*+strategies[\W_]*+insider(?!\.com(?<=optionstrategiesinsider\.com))
 1619015031	Makyen	ulixy[\W_]*+cbd[\W_]*+gummies
