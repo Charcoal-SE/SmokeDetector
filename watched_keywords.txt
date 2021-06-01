@@ -30202,3 +30202,4 @@
 1622564322	Ollie	bendep\.net
 1622574626	cigien	josephkhan\.me
 1622574973	cigien	techbethink\.com
+1622575520	cigien	apkwind(?!\.com)
