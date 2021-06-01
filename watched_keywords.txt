@@ -30209,3 +30209,4 @@
 1622576355	cigien	lake[\W_]*+brains(?!\.com(?<=lakebrains\.com))
 1622576648	cigien	file[\W_]*+zipo(?!\.io(?<=filezipo\.io))
 1622577216	cigien	henk-reints\.nl
+1622577801	cigien	autopartsfair\.com
