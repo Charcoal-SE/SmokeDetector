@@ -30198,3 +30198,4 @@
 1622549726	tripleee	ometv\.best
 1622549757	tripleee	ometv\.online
 1622550906	Spevacus	solocabs\.com
+1622550989	tripleee	(?-i:^David Karonline$)
