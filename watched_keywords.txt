@@ -30180,3 +30180,4 @@
 1622527656	tripleee	savefrom\.net
 1622528550	tripleee	(?-i:^perez daniel$)
 1622529331	tripleee	talsmart\.com
+1622532681	tripleee	a-fold\.com
