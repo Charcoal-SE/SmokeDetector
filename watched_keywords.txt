@@ -30179,3 +30179,4 @@
 1622522888	tripleee	skalefitness\.com
 1622527656	tripleee	savefrom\.net
 1622528550	tripleee	(?-i:^perez daniel$)
+1622529331	tripleee	talsmart\.com
