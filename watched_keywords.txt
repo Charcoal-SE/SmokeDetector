@@ -30175,3 +30175,4 @@
 1622516316	cigien	hiokurl\.com
 1622516421	JJJ	blackrockcanines\.com
 1622516964	cigien	kid[\W_]*+wise(?!\.in(?<=kidwise\.in))
+1622520267	double-beep	shailybeautytips\.com
