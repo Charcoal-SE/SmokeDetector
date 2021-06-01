@@ -30206,3 +30206,4 @@
 1622575712	cigien	aquarologic\.wordpress\.com
 1622575810	cigien	raviyatechnical\.blogspot
 1622575857	cigien	raviya[\W_]*+technical(?!\.blogspot(?<=raviyatechnical\.blogspot))
+1622576355	cigien	lake[\W_]*+brains(?!\.com(?<=lakebrains\.com))
