@@ -30197,3 +30197,4 @@
 1622549192	tripleee	talktostrangers\.online
 1622550906	Spevacus	solocabs\.com
 1622550989	tripleee	(?-i:^David Karonline$)
+1622554198	Spevacus	pokerlistings\.com\.br
