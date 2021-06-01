@@ -30174,3 +30174,4 @@
 1622515812	cigien	seoasoorm\.com
 1622516316	cigien	hiokurl\.com
 1622516421	JJJ	blackrockcanines\.com
+1622516964	cigien	kid[\W_]*+wise(?!\.in(?<=kidwise\.in))
