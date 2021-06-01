@@ -30203,3 +30203,4 @@
 1622574626	cigien	josephkhan\.me
 1622574973	cigien	techbethink\.com
 1622575520	cigien	apkwind(?!\.com)
+1622575712	cigien	aquarologic\.wordpress\.com
