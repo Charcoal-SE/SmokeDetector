@@ -30217,3 +30217,4 @@
 1622578802	cigien	skale[\W_]*+fitness(?!\.com(?<=skalefitness\.com))
 1622585469	Ryan M	jpeeiclinic\.com
 1622590721	cigien	jpeei[\W_]*+clinic(?!\.com(?<=jpeeiclinic\.com))
+1622599815	cigien	kenhtuyensinh24h\.com
