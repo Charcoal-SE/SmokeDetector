@@ -30232,3 +30232,4 @@
 1622663817	Spevacus	winestorageexpert\.com
 1622665346	Ryan M	adver\.in\.ua
 1622666173	Ryan M	techtalent(?!\.ro)
+1622666255	Ryan M	techtalent\.ro
