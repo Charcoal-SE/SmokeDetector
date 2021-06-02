@@ -30227,3 +30227,4 @@
 1622603555	10 Rep	convrtx\.com
 1622643989	cigien	theme\.bitrixinfotech\.com
 1622648532	cigien	filologi\.lv
+1622651092	Ginger	bartshmatthew\.medium\.com
