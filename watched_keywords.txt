@@ -30218,3 +30218,4 @@
 1622585469	Ryan M	jpeeiclinic\.com
 1622590721	cigien	jpeei[\W_]*+clinic(?!\.com(?<=jpeeiclinic\.com))
 1622599815	cigien	kenhtuyensinh24h\.com
+1622614077	tripleee	themoviecharge\.blogspot\.com
