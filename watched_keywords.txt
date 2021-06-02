@@ -30226,3 +30226,4 @@
 1622635997	tripleee	b2kholdings\.co\.uk
 1622603555	10 Rep	convrtx\.com
 1622643989	cigien	theme\.bitrixinfotech\.com
+1622648532	cigien	filologi\.lv
