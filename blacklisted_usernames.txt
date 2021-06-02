@@ -494,3 +494,4 @@ williamriver
 (?-i:^Nancy R\. Vinci$)
 (?-i:^Jacqueline L\. Pollock$)
 (?-i:^D J Sims$)
+^ayesha exopic$
