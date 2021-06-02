@@ -30231,3 +30231,4 @@
 1622662639	Ryan M	infinixdesigns\.com
 1622663817	Spevacus	winestorageexpert\.com
 1622665346	Ryan M	adver\.in\.ua
+1622666173	Ryan M	techtalent(?!\.ro)
