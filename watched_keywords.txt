@@ -30245,3 +30245,4 @@
 1622716429	Ryan M	paypallogindesk(?# sites.google.com)
 1622716590	Ryan M	login(?<=\w login)(?=</a>)
 1622717662	tripleee	mygamesetup\.com
+1622717709	tripleee	electronics-club\.com
