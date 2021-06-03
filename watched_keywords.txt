@@ -30244,3 +30244,4 @@
 1622716235	Xnero	thehotcontent\.com
 1622716429	Ryan M	paypallogindesk(?# sites.google.com)
 1622716590	Ryan M	login(?<=\w login)(?=</a>)
+1622717662	tripleee	mygamesetup\.com
