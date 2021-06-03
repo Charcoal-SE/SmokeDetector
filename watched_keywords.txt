@@ -30236,3 +30236,4 @@
 1622678657	cigien	numericard\.fr
 1622684194	cigien	hartseals\.com
 1622684212	cigien	hartseals(?!\.com)
+1622696459	tripleee	emegamartindia\.com
