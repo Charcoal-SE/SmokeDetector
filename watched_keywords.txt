@@ -30248,3 +30248,4 @@
 1622717709	tripleee	electronics-club\.com
 1622720688	tripleee	amitkk\.com
 1622720723	tripleee	whizzinator\.com
+1622720767	tripleee	whizzinator(?!\.com)
