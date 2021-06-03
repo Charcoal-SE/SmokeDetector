@@ -30237,3 +30237,4 @@
 1622684194	cigien	hartseals\.com
 1622684212	cigien	hartseals(?!\.com)
 1622696459	tripleee	emegamartindia\.com
+1622700786	tripleee	emegamartindia(?!\.com)
