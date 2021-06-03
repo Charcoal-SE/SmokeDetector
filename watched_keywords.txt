@@ -30249,3 +30249,4 @@
 1622720688	tripleee	amitkk\.com
 1622720723	tripleee	whizzinator\.com
 1622720767	tripleee	whizzinator(?!\.com)
+1622723419	cigien	amitkk(?!\.com)
