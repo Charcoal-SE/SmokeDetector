@@ -26329,7 +26329,6 @@
 1611082343	Spevacus	drivernvehiclelicensing\.com
 1611084579	Spevacus	livetheorangelife\.me
 1611094862	Makyen	(?-i:yeasirshohag)(?#fiverr.com)
-1611097318	cigien	legalwiser\.in
 1611097556	cigien	drogunsnya(?:@gmail\.com)?
 1611098238	cigien	enochpreciousadeboye\.medium\.com
 1611099930	Ollie	turkiyeyapayzeka\.com
