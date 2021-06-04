@@ -4049,3 +4049,4 @@ ometv\.best
 ometv\.online
 infobrez\.com
 taskvio\.com
+thinkpalm\.com

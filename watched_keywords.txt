@@ -18653,7 +18653,6 @@
 1585204593	tripleee	kana[\W_]*+bears?
 1585207952	tripleee	gummies(?<!(?:cbd|chill\Wplus|chill|halo\Whair)\Wgummies)
 1585220506	tripleee	akplumbers\.com
-1585220552	tripleee	thinkpalm\.com
 1585224800	Jenayah	webkites\.in
 1585225579	tripleee	bethlahemstay\.com
 1585226093	Machavity	bigrock\.in
