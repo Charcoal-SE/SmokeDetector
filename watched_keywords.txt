@@ -30262,4 +30262,3 @@
 1622782712	Makyen	linksyssmartwifi\.com
 1622788251	Nisse Engström	kcrconsultants\.com
 1622788507	Makyen	kcr[\W_]*+consultants(?!\.com(?<=kcrconsultants\.com))
-1622793109	Ryan M	bestessaywritingservicereview(?# sites.google.com)
