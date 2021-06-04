@@ -30259,3 +30259,4 @@
 1622777769	cigien	mmenterprises\.co\.in
 1622779426	Makyen	matkaoffice\.net
 1622782584	tripleee	linksysvelopsupport\.com
+1622782695	Makyen	linksysvelopsupport(?!\.com)
