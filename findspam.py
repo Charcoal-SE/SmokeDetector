@@ -2309,7 +2309,7 @@ create_rule("link following arrow in {}",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
 create_rule("link at end of {}",
-            r'(?is)(?<=^.{0,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
+            r'(?is)<a href="https?://(?<=^.{0,368})(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
             r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
             r'|\[/url\]\W*</p>\s*$',
             sites=["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
@@ -2332,7 +2332,7 @@ create_rule("pattern-matching website in {}",
             title=False, question=False)
 # non-linked site at the end of a short answer
 create_rule("link at end of {}",
-            r'(?is)(?<=^.{0,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$',
+            r'(?is)\b\w{6,}+\.(?:com?|co\.uk|in|io|html?|onl|nl|ir)(?<=^.{0,365})(?:</strong>)?\W*</p>\s*$',
             title=False, question=False)
 # Shortened URL near the end of question
 create_rule("shortened URL in {}",
@@ -2381,7 +2381,7 @@ create_rule("URL-only title",
 # Category: Suspicious contact information
 # Phone number in post
 create_rule("phone number detected in {}",
-            r"(?s)(?<=^.{0,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b",
+            r"(?s)\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b(?<=^.{0,267})",
             sites=["math.stackexchange.com"],
             title=False, stripcodeblocks=False)
 # Email check for answers on selected sites
