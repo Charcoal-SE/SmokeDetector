@@ -30260,3 +30260,4 @@
 1622779426	Makyen	matkaoffice\.net
 1622782584	tripleee	linksysvelopsupport\.com
 1622782695	Makyen	linksysvelopsupport(?!\.com)
+1622782712	Makyen	linksyssmartwifi\.com
