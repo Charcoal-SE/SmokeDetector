@@ -30263,3 +30263,4 @@
 1622788251	Nisse Engström	kcrconsultants\.com
 1622788507	Makyen	kcr[\W_]*+consultants(?!\.com(?<=kcrconsultants\.com))
 1622793586	tripleee	evimshahane\.com
+1622793736	tripleee	Dr[\W_]*+Cheryl[\W_]*+Pruitt
