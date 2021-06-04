@@ -30262,3 +30262,4 @@
 1622782695	Makyen	linksysvelopsupport(?!\.com)
 1622782712	Makyen	linksyssmartwifi\.com
 1622788251	Nisse Engström	kcrconsultants\.com
+1622788507	Makyen	kcr[\W_]*+consultants(?!\.com(?<=kcrconsultants\.com))
