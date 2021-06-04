@@ -30264,3 +30264,4 @@
 1622788507	Makyen	kcr[\W_]*+consultants(?!\.com(?<=kcrconsultants\.com))
 1622793586	tripleee	evimshahane\.com
 1622793736	tripleee	Dr[\W_]*+Cheryl[\W_]*+Pruitt
+1622794495	tripleee	(?-i:^Jacob Ethan$)
