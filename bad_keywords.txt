@@ -2510,3 +2510,4 @@ adm[\W_]*+sneezeguards
 fiverrcpa
 green[\W_]*+ape[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|ie)|oil|\d++|[\da-f]{5,}+)s?)*
 taruhan(?:[\W_]*+online)?
+luxy[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|review|store|work|\d++|[\da-f]{5,}+)s?)*
