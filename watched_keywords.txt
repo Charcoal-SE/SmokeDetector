@@ -30261,3 +30261,4 @@
 1622782584	tripleee	linksysvelopsupport\.com
 1622782695	Makyen	linksysvelopsupport(?!\.com)
 1622782712	Makyen	linksyssmartwifi\.com
+1622788251	Nisse Engström	kcrconsultants\.com
