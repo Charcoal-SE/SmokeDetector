@@ -30290,3 +30290,4 @@
 1622905548	cigien	soscanhelp\.com
 1622906398	cigien	contentspotlight\.org
 1622906474	cigien	content[\W_]*+spotlight(?!\.org(?<=contentspotlight\.org))
+1622908316	Makyen	esgenv\.com
