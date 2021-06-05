@@ -30289,3 +30289,4 @@
 1622905481	cigien	outsourcinghelp\.net
 1622905548	cigien	soscanhelp\.com
 1622906398	cigien	contentspotlight\.org
+1622906474	cigien	content[\W_]*+spotlight(?!\.org(?<=contentspotlight\.org))
