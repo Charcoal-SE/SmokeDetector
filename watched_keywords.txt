@@ -30296,3 +30296,4 @@
 1622909654	Ryan M	help-desk-migration\.com
 1622917348	cigien	elecarda\.com
 1622917585	cigien	securion[\W_]*+pay
+1622921396	cigien	vashikaranspecialistrk15\.com
