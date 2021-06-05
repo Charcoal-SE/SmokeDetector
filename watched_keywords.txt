@@ -30269,3 +30269,4 @@
 1622849904	Jeff Schaller	freedombra\.shop
 1622852410	cigien	copidal\.com
 1622853056	cigien	evim[\W_]*+shahane(?!\.com(?<=evimshahane\.com))
+1622853085	cigien	legalfiles\.com
