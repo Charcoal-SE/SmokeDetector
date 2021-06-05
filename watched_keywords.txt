@@ -30270,3 +30270,4 @@
 1622852410	cigien	copidal\.com
 1622853056	cigien	evim[\W_]*+shahane(?!\.com(?<=evimshahane\.com))
 1622853085	cigien	legalfiles\.com
+1622853659	cigien	saltcityharvest\.farm
