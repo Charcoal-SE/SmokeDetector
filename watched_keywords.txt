@@ -30285,3 +30285,4 @@
 1622904124	cigien	catpointers(?!\.com)
 1622904167	cigien	askariappslabs\.blogspot
 1622904285	cigien	askari[\W_]*+apps[\W_]*+labs(?!\.blogspot(?<=askariappslabs\.blogspot))
+1622904952	cigien	holycypress\.blogspot
