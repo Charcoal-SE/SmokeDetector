@@ -30286,3 +30286,4 @@
 1622904167	cigien	askariappslabs\.blogspot
 1622904285	cigien	askari[\W_]*+apps[\W_]*+labs(?!\.blogspot(?<=askariappslabs\.blogspot))
 1622904952	cigien	holycypress\.blogspot
+1622905481	cigien	outsourcinghelp\.net
