@@ -30282,3 +30282,4 @@
 1622903904	cigien	edugeeksclub\.com
 1622904055	cigien	sfdcfileexporter\.com
 1622904107	cigien	catpointers\.com
+1622904124	cigien	catpointers(?!\.com)
