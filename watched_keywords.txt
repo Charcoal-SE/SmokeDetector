@@ -23228,7 +23228,6 @@
 1600218381	Machavity	^jack\W*meoff$
 1600221545	Ian Campbell	lifecoachlj\.com
 1600228541	Makyen	lifecoachlj(?!\.com)
-1600228557	Makyen	 warriorplus\.com
 1600230161	Makyen	(?-i:9GwBDe)(?#fiverr.com)
 1600230430	Mast	himalayanadventuretreks\.com
 1600235809	tripleee	jubablanglamare(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
