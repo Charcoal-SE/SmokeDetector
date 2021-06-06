@@ -30312,3 +30312,4 @@
 1622997054	Makyen	cupoma58\.ru
 1622998011	cigien	eye[\W_]*+mantra(?!\.in(?<=eyemantra\.in))
 1622998511	cigien	nasilbe\.com
+1622998536	cigien	nasilbe(?!\.com)
