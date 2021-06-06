@@ -23595,7 +23595,7 @@
 1601380526	Mast	exactlly\.com
 1601382951	Mast	dogcrib\.com
 1601383377	Mast	accountsprovider\.com
-1601383932	Suraj Rao	 automationinja\.com
+1601383932	Suraj Rao	automationinja\.com
 1601384804	Spevacus	dotssy\.com
 1601399890	tripleee	volgatigris\.com
 1601439884	Undo	betfame\.com
@@ -27495,7 +27495,7 @@
 1614173995	Spevacus	hospitalityabudhabi\.com
 1614174046	Spevacus	qualitypackagingsolutions\.co\.uk
 1614157568	Xnero	cheswins\.blogspot\.com
-1613995672	Xnero	 info@recentcarz\.com
+1613995672	Xnero	info@recentcarz\.com
 1614000960	Xnero	(?-i:^Amy[\W_]*Carter$)
 1614178280	Spevacus	roomme\.id
 1614183271	double-beep	klapty\.com
@@ -27657,7 +27657,7 @@
 1614595462	Yatin	ifixmywindows\.com
 1614612202	Spevacus	exclusiveleadsagency\.com
 1614612557	Xnero	Exclusive[\W_]*Leads[\W_]*Agency(?!\.com)
-1614619724	Ollie	 bitcoinrecovery2(?:@gmail\.com)?
+1614619724	Ollie	bitcoinrecovery2(?:@gmail\.com)?
 1614643278	Machavity	adspower\.net
 1614645237	cigien	(?-i:1PNis3zdZVogkRNf8)(?#forms.gle)
 1614648721	cigien	jackie[\W_]*+chan[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
