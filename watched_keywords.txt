@@ -30308,3 +30308,4 @@
 1622988560	Cody Gray	machinescraft\.com
 1622988613	Cody Gray	best[\W_]*+embroidery[\W_]*+machine
 1622988690	Cody Gray	vloggingsetup\.com
+1622988791	Cody Gray	best[\W_]*+vlogging[\W_]*+cameras[\W_]*+
