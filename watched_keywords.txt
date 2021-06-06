@@ -30298,3 +30298,4 @@
 1622917585	cigien	securion[\W_]*+pay
 1622921396	cigien	vashikaranspecialistrk15\.com
 1622950383	cigien	smartphonescompare\.in
+1622968812	Cody Gray	ifundcities\.com
