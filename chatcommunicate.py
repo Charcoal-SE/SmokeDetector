@@ -74,7 +74,7 @@ def init(username, password, try_cookies=True):
 
         if try_cookies:
             if GlobalVars.cookies is None:
-                datahandling._remove_pickle("cookies.p")
+                datahandling.remove_pickle("cookies.p")
                 GlobalVars.cookies = {}
             else:
                 cookies = GlobalVars.cookies
@@ -111,9 +111,9 @@ def init(username, password, try_cookies=True):
     if not GlobalVars.standby_mode:
         join_command_rooms()
 
-    if datahandling._has_pickle("messageData.p"):
+    if datahandling.has_pickle("messageData.p"):
         try:
-            _last_messages = datahandling._load_pickle("messageData.p")
+            _last_messages = datahandling.load_pickle("messageData.p")
         except EOFError:
             pass
 
@@ -201,7 +201,7 @@ def pickle_last_messages():
         _pickle_run.wait()
         _pickle_run.clear()
 
-        datahandling._dump_pickle("messageData.p", _last_messages)
+        datahandling.dump_pickle("messageData.p", _last_messages)
 
 
 def send_messages():

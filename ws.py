@@ -24,7 +24,7 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import _load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts
+from datahandling import load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
@@ -107,7 +107,7 @@ def load_ms_cache_data():
     :returns: None
     """
     if os.path.isfile(os.path.join(PICKLE_STORAGE, 'metasmokeCacheData.p')):
-        data = _load_pickle('metasmokeCacheData.p')
+        data = load_pickle('metasmokeCacheData.p')
         MetasmokeCache._cache = data['cache']
         MetasmokeCache._expiries = data['expiries']
 

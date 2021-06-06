@@ -35,8 +35,8 @@ class DeletionWatcher:
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
 
-        if datahandling._has_pickle(PICKLE_FILENAME):
-            pickle_data = datahandling._load_pickle(PICKLE_FILENAME)
+        if datahandling.has_pickle(PICKLE_FILENAME):
+            pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
             for post in DeletionWatcher._check_batch(pickle_data):
                 self.subscribe(post, pickle=False)
             self._save()
@@ -114,7 +114,7 @@ class DeletionWatcher:
             else:
                 pickle_output[post_site].append(post_id)
 
-        datahandling._dump_pickle(PICKLE_FILENAME, pickle_output)
+        datahandling.dump_pickle(PICKLE_FILENAME, pickle_output)
 
     @staticmethod
     def _check_batch(saved):
