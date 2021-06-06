@@ -7,7 +7,6 @@ import collections
 import itertools
 import os
 import os.path
-import pickle
 import queue
 import regex
 import requests
@@ -112,12 +111,11 @@ def init(username, password, try_cookies=True):
     if not GlobalVars.standby_mode:
         join_command_rooms()
 
-    if os.path.isfile("messageData.p"):
-        with open("messageData.p", "rb") as messages_file:
-            try:
-                _last_messages = pickle.load(messages_file)
-            except EOFError:
-                pass
+    if datahandling._has_pickle("messageData.p"):
+        try:
+            _last_messages = datahandling._load_pickle("messageData.p")
+        except EOFError:
+            pass
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
@@ -203,8 +201,7 @@ def pickle_last_messages():
         _pickle_run.wait()
         _pickle_run.clear()
 
-        with open("messageData.p", "wb") as pickle_file:
-            pickle.dump(_last_messages, pickle_file)
+        datahandling._dump_pickle("messageData.p", _last_messages)
 
 
 def send_messages():
