@@ -365,6 +365,12 @@ def do_blacklist(blacklist_type, msg, force=False):
             "The pattern contains an invisible U+202D whitespace character;"
             " - in most cases, you don't want that")
 
+    has_leading_whitespace = ""
+    if regex.search(r"^\s+", pattern):
+        has_leading_whitespace = (
+            "That pattern starts with whitespace;"
+            " in most cases, you don't want that")
+
     has_unescaped_dot = ""
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
@@ -399,9 +405,15 @@ def do_blacklist(blacklist_type, msg, force=False):
             if reasons:
                 has_u202d = "; in addition, " + has_u202d.lower() if has_u202d else ""
                 has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
+                has_leading_whitespace = (
+                    "; in addition, " + has_leading_whitespace.lower()) if has_leading_whitespace else ""
                 raise CmdException(
                     "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d + append_force_to_do)
+                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d +
+                    has_leading_whitespace + append_force_to_do)
+
+        if has_leading_whitespace:
+            raise CmdException(has_leading_whitespace + has_unescaped_dot + has_u202d + append_force_to_do)
 
         if has_u202d:
             raise CmdException(has_u202d + has_unescaped_dot + append_force_to_do)
