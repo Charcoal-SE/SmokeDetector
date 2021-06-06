@@ -30285,7 +30285,6 @@
 1622905548	cigien	soscanhelp\.com
 1622906398	cigien	contentspotlight\.org
 1622906474	cigien	content[\W_]*+spotlight(?!\.org(?<=contentspotlight\.org))
-1622908316	Makyen	esgenv\.com
 1622908333	Makyen	maxsales\.com
 1622908790	Makyen	proose\.com
 1622909654	Ryan M	help-desk-migration\.com
