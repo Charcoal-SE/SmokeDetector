@@ -30304,3 +30304,4 @@
 1622974701	Glorfindel	cash44\.club
 1622976474	Cody Gray	indigo[\W_]*+(ga[mn]e[\W_]*+)*production
 1622977244	Cody Gray	(?-i:Aw4g1\.jpg)(?# Spirulina on stack imgur)
+1622979971	Cody Gray	(?-i:xqcf4\.jpg)(?# crypto spam on stack imgur)
