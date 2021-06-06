@@ -30314,3 +30314,4 @@
 1622998511	cigien	nasilbe\.com
 1622998536	cigien	nasilbe(?!\.com)
 1622998591	cigien	banglanotice\.com
+1622998640	cigien	bangla[\W_]*+notice(?!\.com(?<=banglanotice\.com))
