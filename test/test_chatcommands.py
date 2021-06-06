@@ -6,7 +6,7 @@ from apigetpost import api_get_post
 from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
-from datahandling import _remove_pickle
+from datahandling import remove_pickle
 
 import datetime
 import os
@@ -521,7 +521,7 @@ def test_blacklisted_users():
             "Error: Could not find the given site."
     finally:
         # Cleanup
-        _remove_pickle("blacklistedUsers.p")
+        remove_pickle("blacklistedUsers.p")
 
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
@@ -589,7 +589,7 @@ def test_whitelisted_users():
             "Error: Could not find the given site."
     except:
         # Cleanup
-        _remove_pickle("whitelistedUsers.p")
+        remove_pickle("whitelistedUsers.p")
 
 
 def test_metasmoke():
@@ -717,7 +717,7 @@ def test_notifications():
             "That notification configuration is already registered."
     finally:
         # Cleanup
-        _remove_pickle("notifications.p")
+        remove_pickle("notifications.p")
 
 
 def test_inqueue():

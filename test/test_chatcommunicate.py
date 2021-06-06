@@ -2,7 +2,7 @@
 import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
-from datahandling import _remove_pickle
+from datahandling import has_pickle, remove_pickle
 
 import collections
 import io
@@ -155,9 +155,9 @@ def test_init(room_config, client_constructor, thread):
     assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
 
 
-@pytest.mark.skipif(os.path.isfile("messageData.p"), reason="shouldn't overwrite file")
-@patch("chatcommunicate.pickle.dump")
-def test_pickle_rick(dump):
+@pytest.mark.skipif(has_pickle("messageData.p"), reason="shouldn't overwrite file")
+@patch("datahandling.dump_pickle")
+def test_pickle_rick(dump_pickle):
     try:
         threading.Thread(target=chatcommunicate.pickle_last_messages, daemon=True).start()
 
@@ -167,13 +167,13 @@ def test_pickle_rick(dump):
         while len(chatcommunicate._pickle_run._cond._waiters) == 0:
             time.sleep(0)
 
-        assert dump.call_count == 1
+        assert dump_pickle.call_count == 1
 
-        call, _ = dump.call_args_list[0]
-        assert isinstance(call[0], chatcommunicate.LastMessages)
-        assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
+        call, _ = dump_pickle.call_args_list[0]
+        assert call[0] == "messageData.p"
+        assert isinstance(call[1], chatcommunicate.LastMessages)
     finally:
-        _remove_pickle("messageData.p")
+        remove_pickle("messageData.p")
 
 
 @patch("chatcommunicate._pickle_run")
