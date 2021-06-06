@@ -1,7 +1,6 @@
 # coding=utf-8
 import json
 import os.path
-import pickle
 import requests
 import time
 import threading
@@ -19,6 +18,9 @@ from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
 
 
+PICKLE_FILENAME = "deletionIDs.p"
+
+
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
 class DeletionWatcher:
     next_request_time = time.time() - 1
@@ -33,12 +35,11 @@ class DeletionWatcher:
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
 
-        if os.path.exists("deletionIDs.p"):
-            with open("deletionIDs.p", "rb") as fh:
-                for post in DeletionWatcher._check_batch(pickle.load(fh)):
-                    self.subscribe(post, pickle=False)
-
-                self._save()
+        if datahandling._has_pickle(PICKLE_FILENAME):
+            pickle_data = datahandling._load_pickle(PICKLE_FILENAME)
+            for post in DeletionWatcher._check_batch(pickle_data):
+                self.subscribe(post, pickle=False)
+            self._save()
 
         threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
 
@@ -113,8 +114,7 @@ class DeletionWatcher:
             else:
                 pickle_output[post_site].append(post_id)
 
-        with open("deletionIDs.p", "wb") as pickle_file:
-            pickle.dump(pickle_output, pickle_file)
+        datahandling._dump_pickle(PICKLE_FILENAME, pickle_output)
 
     @staticmethod
     def _check_batch(saved):
