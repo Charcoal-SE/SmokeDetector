@@ -41,6 +41,9 @@ import chatcommands
 
 
 MAX_SE_WEBSOCKET_RETRIES = 5
+MIN_PYTHON_VERSION = (3, 5, 0)
+RECOMMENDED_PYTHON_VERSION = (3, 6, 0)
+THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
 
 if os.path.isfile("plugin.py"):
     try:
@@ -68,15 +71,17 @@ else:
     Helpers.min_log_level = 0
 
 # Python 3.5.0 is the bare minimum needed to run SmokeDetector
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
-    raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
+if THIS_PYTHON_VERSION < MIN_PYTHON_VERSION:
+    msg = "SmokeDetector requires Python version {0}.{1}.{2} or newer to run.".format(*MIN_PYTHON_VERSION)
+    raise RuntimeError(msg)
 
-# However, we're considering the potential to deprecate 3.5 so we need to prepare
-# from this with a warning in the logs about it.
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 6, 0):
-    log('warning', 'SmokeDetector may remove support for versions of Python before '
-                   '3.6.0 in the future, please consider upgrading your instances of '
-                   'SmokeDetector to use Python 3.6 or newer.')
+# However, 3.5 is already deprecated so we need to prepare for this
+# with a warning in the logs about it.
+if THIS_PYTHON_VERSION < RECOMMENDED_PYTHON_VERSION:
+    msg = 'SmokeDetector may remove support for versions of Python before ' \
+          '{0}.{1}.{2} in the future, please consider upgrading your instances of ' \
+          'SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*RECOMMENDED_PYTHON_VERSION)
+    log('warning', msg)
 
 if not GlobalVars.metasmoke_host:
     log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
@@ -113,32 +118,27 @@ Tasks.later(restart_automatically, after=21600)
 try:
     update_tld_names()
 except TldIOError as ioerr:
-    with open('errorLogs.txt', 'a', encoding="utf-8") as errlogs:
-        if "permission denied:" in str(ioerr).lower():
-            if "/usr/local/lib/python" in str(ioerr) and "/dist-packages/" in str(ioerr):
-                errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
-                              "user-level installed.  Skipping TLD names update. \n")
+    # That we were unable to update the TLD names isn't actually a fatal error, so just log it and continue.
+    strerror = str(ioerr)
+    if "permission denied:" in strerror.lower():
+        if "/usr/local/lib/python" in strerror and "/dist-packages/" in strerror:
+            err_msg = "WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not " \
+                      "user-level installed.  Skipping TLD names update. \n"
 
-            if "/home/" in str(ioerr) and ".local/lib/python" in str(ioerr) and "/site-packages/tld/" in str(ioerr):
-                errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
-                              "path.  Skipping TLD names update. \n")
-
-            errlogs.close()
-            pass
-
-        elif "certificate verify failed" in str(ioerr).lower():
-            # Ran into this error in testing on Windows, best to throw a warn if we get this...
-            errlogs.write("WARNING: Cannot verify SSL connection for TLD names update; skipping TLD names update.")
-            errlogs.close()
-            pass
+        if "/home/" in strerror and ".local/lib/python" in strerror and "/site-packages/tld/" in strerror:
+            err_msg = "WARNING: Cannot read/write to user-space `tld` installation, check permissions on the " \
+                      "path.  Skipping TLD names update. \n"
 
         else:
-            # That we were unable to update the TLD names isn't actually a fatal error, so just log it and continue.
-            error_text = str(ioerr)
-            errlogs.write("WARNING: {}".format(error_text))
-            errlogs.close()
-            log('warning', error_text)
-            pass
+            err_msg = strerror
+
+    elif "certificate verify failed" in strerror.lower():
+        # Ran into this error in testing on Windows, best to throw a warn if we get this...
+        err_msg = "WARNING: Cannot verify SSL connection for TLD names update; skipping TLD names update."
+
+    else:
+        err_msg = strerror
+    log_exception(type(ioerr), ioerr, err_msg, True, level="warning")
 
 if "ChatExchangeU" in os.environ:
     log('debug', "ChatExchange username loaded from environment")

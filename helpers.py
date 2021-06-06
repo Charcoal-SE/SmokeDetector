@@ -107,23 +107,24 @@ def expand_shorthand_link(s):
     return s
 
 
-def redact_passwords(value):
-    def redact(text, redact_str, replace_with):
-        if redact_str:
-            return text.replace(redact_str, replace_with) \
-                       .replace(quote(redact_str), replace_with) \
-                       .replace(quote_plus(redact_str), replace_with)
-        return text
+def redact_text(text, redact_str, replace_with):
+    if redact_str:
+        return text.replace(redact_str, replace_with) \
+                   .replace(quote(redact_str), replace_with) \
+                   .replace(quote_plus(redact_str), replace_with)
+    return text
 
+
+def redact_passwords(value):
     value = str(value)
     # Generic redaction of URLs with http, https, and ftp schemes
     value = regex.sub(r"((?:https?|ftp):\/\/)[^@:\/]*:[^@:\/]*(?=@)", r"\1[REDACTED URL USERNAME AND PASSWORD]", value)
     # In case these are somewhere else.
-    value = redact(value, GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]")
-    value = redact(value, GlobalVars.github_access_token, "[GITHUB ACCESS TOKEN REDACTED]")
-    value = redact(value, GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]")
-    value = redact(value, GlobalVars.metasmoke_key, "[METASMOKE KEY REDACTED]")
-    value = redact(value, GlobalVars.perspective_key, "[PERSPECTIVE KEY REDACTED]")
+    value = redact_text(value, GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]")
+    value = redact_text(value, GlobalVars.github_access_token, "[GITHUB ACCESS TOKEN REDACTED]")
+    value = redact_text(value, GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]")
+    value = redact_text(value, GlobalVars.metasmoke_key, "[METASMOKE KEY REDACTED]")
+    value = redact_text(value, GlobalVars.perspective_key, "[PERSPECTIVE KEY REDACTED]")
     return value
 
 
@@ -142,9 +143,9 @@ def log(log_level, *args, f=False):
         return
 
     color = levels[log_level][1] if log_level in levels else 'white'
-    log_str = redact_passwords("{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
-                                                      color, attrs=['bold']),
-                                              "  ".join([str(x) for x in args])))
+    log_str = "{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
+                                     color, attrs=['bold']),
+                             redact_passwords("  ".join([str(x) for x in args])))
     print(log_str, file=sys.stderr)
 
     if level == 3:
@@ -171,13 +172,13 @@ def log_file(log_level, *args):
         print(log_str, file=f)
 
 
-def log_exception(exctype, value, tb, f=False):
+def log_exception(exctype, value, tb, f=False, *, level='error'):
     now = datetime.utcnow()
     tr = ''.join(traceback.format_tb(tb))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     # Redacting passwords happens in log() and ErrorLogs.add().
-    log('error', logged_msg, f=f)
+    log(level, logged_msg, f=f)
     ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
 
