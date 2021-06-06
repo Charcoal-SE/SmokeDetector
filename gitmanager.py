@@ -455,9 +455,9 @@ class GitManager:
     def get_remote_diff():
         git.fetch()
         if GlobalVars.on_windows:
-            return git.diff_filenames("HEAD", "origin/deploy")
+            return git.diff_filenames("HEAD", "deploy@{u}")
         else:
-            return git.diff("--name-only", "HEAD", "origin/deploy")
+            return git.diff("--name-only", "HEAD", "deploy@{u}")
 
     @staticmethod
     def get_local_diff():
