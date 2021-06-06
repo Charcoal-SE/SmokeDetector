@@ -1,13 +1,16 @@
-#!/bin/bash
-echo  name: Lint tests
-echo python3 -m flake8 --config=tox_tests.ini ./test/
+#!/bin/sh
+
+# Abusing the shell no-op (colon) for outputting
+set -x
+
+: Lint tests
 python3 -m flake8 --config=tox_tests.ini ./test/
-echo  name: Lint classes
-echo python3 -m flake8 --config=tox_classes.ini ./classes/
+
+: Lint classes
 python3 -m flake8 --config=tox_classes.ini ./classes/
-echo  name: Lint code
-echo python3 -m flake8 ./
+
+: Lint code
 python3 -m flake8 ./
-echo  name: Pytest
-echo python3 -W default::Warning -m pytest test
+
+: Pytest
 python3 -W default::Warning -m pytest test
