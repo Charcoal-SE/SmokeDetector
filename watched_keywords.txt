@@ -30299,3 +30299,4 @@
 1622921396	cigien	vashikaranspecialistrk15\.com
 1622950383	cigien	smartphonescompare\.in
 1622968812	Cody Gray	ifundcities\.com
+1622969166	Cody Gray	construction[\W_]*+loans
