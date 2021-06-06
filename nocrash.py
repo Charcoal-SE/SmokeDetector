@@ -60,20 +60,6 @@ def error(message):
     logging.error('[NoCrash] {}'.format(message))
 
 
-# if 'no-git-user-check' in persistent_arguments:
-#     persistent_arguments.remove('no-git-user-check')
-# else:
-#     git_name = git.config('--get', 'user.name', _ok_code=[0, 1])
-#     if git_name != "SmokeDetector":
-#         logging.error('git config user.name "{0}" is wrong; '
-#                       'use no-git-user-check to ignore'.format(git_name))
-#         exit(122)
-#     git_mail = git.config('--get', 'user.email', _ok_code=[0, 1])
-#     if git_mail != "smokey@erwaysoftware.com":
-#         logging.error('git config user.email "{0}" is wrong'.format(git_mail))
-#         exit(121)
-
-
 while not stoprunning:
     log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
 
