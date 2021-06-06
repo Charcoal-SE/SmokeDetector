@@ -11774,7 +11774,6 @@
 1565664049	Makyen	vanchuyenachau\.com\.vn
 1565674132	Makyen	fortexi
 1565674808	tripleee	TheCloseInternet\.com
-1565674872	Makyen	onmogul\.com
 1565674881	Makyen	http-www-supplementsell-com
 1565674891	Makyen	althomorrow
 1565676653	tripleee	7startips\.com
@@ -17710,7 +17709,6 @@
 1582800079	Eliah Kagan	(?-i:AyqaKY)(?#fiverr)
 1582801498	Eliah Kagan	aka-office\.com
 1582801521	Eliah Kagan	ww-norton\.com
-1582801587	Eliah Kagan	sitemcafee\.com
 1582801651	Eliah Kagan	firstmcafee\.com
 1582801880	Eliah Kagan	infinityhs\.ae
 1582802250	Eliah Kagan	ezzus\.com
@@ -19127,7 +19125,6 @@
 1586852496	Byte Commander	echothroughme\.com
 1586853706	tripleee	toptricky\.com
 1586858828	tripleee	bookkit\.org
-1586859084	tripleee	ht-guide\.com
 1586859114	tripleee	simuwufurnace\.com
 1586859534	Glorfindel	once-tech\.com
 1586862807	tripleee	ldstrading\.com
@@ -27495,7 +27492,6 @@
 1614173995	Spevacus	hospitalityabudhabi\.com
 1614174046	Spevacus	qualitypackagingsolutions\.co\.uk
 1614157568	Xnero	cheswins\.blogspot\.com
-1613995672	Xnero	info@recentcarz\.com
 1614000960	Xnero	(?-i:^Amy[\W_]*Carter$)
 1614178280	Spevacus	roomme\.id
 1614183271	double-beep	klapty\.com
