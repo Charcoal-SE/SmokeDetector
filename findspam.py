@@ -432,7 +432,10 @@ class Rule:
 
     def match(self, post):
         """
-        Run this rule against a post. Returns a list of 3 tuples, each in (match, reason, why) format
+        Run this rule against a post.
+
+        Returns a list of 3 tuples for [result_title, result_username, result_body],
+        each in (match, reason, why) format
         """
         if not self.filter.match(post):
             # Post not matching the filter
@@ -440,10 +443,10 @@ class Rule:
 
         body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                  .replace("\u200B", "").replace("\u200C", "")
-        body_name = "body" if not post.is_answer else "answer"
+        body_type = "body" if not post.is_answer else "answer"
         reason_title = self.reason.replace("{}", "title")
         reason_username = self.reason.replace("{}", "username")
-        reason_body = self.reason.replace("{}", body_name)
+        reason_body = self.reason.replace("{}", body_type)
 
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "linked punctuation" on code-only links
@@ -452,7 +455,7 @@ class Rule:
         if self.reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
-        matched_title, matched_body, matched_username = False, False, False
+        matched_title, matched_username, matched_body = False, False, False
         result_title, result_username, result_body = None, None, None
         if self.func:  # Functional check takes precedence over regex check
             if self.whole_post:
@@ -483,7 +486,7 @@ class Rule:
                     result_body = (matched_body, reason_body,
                                    reason_body.capitalize() + " - " + why_text)
                 elif self.body_summary and post.body_is_summary:
-                    matched_body, useless = self.func(body_to_check, post.post_site)
+                    matched_body, _ = self.func(body_to_check, post.post_site)
                     result_body = (matched_body, "", "")
                 else:
                     result_body = (False, "", "")
