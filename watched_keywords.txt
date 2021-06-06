@@ -30311,3 +30311,4 @@
 1622988791	Cody Gray	best[\W_]*+vlogging[\W_]*+cameras[\W_]*+
 1622989666	Cody Gray	cloudyali\.io
 1622997054	Makyen	cupoma58\.ru
+1622998011	cigien	eye[\W_]*+mantra(?!\.in(?<=eyemantra\.in))
