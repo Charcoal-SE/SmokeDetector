@@ -30342,3 +30342,4 @@
 1623073542	cigien	todaytechhelp(?!\.com)
 1623073970	cigien	fridaynightfunkin\.co
 1623073995	cigien	krunkeronline\.com
+1623074532	cigien	marik-marek\.medium\.com
