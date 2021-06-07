@@ -28521,7 +28521,6 @@
 1617291420	cigien	testingsoftwarecompany\.com
 1617291550	cigien	tabsnation\.com
 1617291755	cigien	alexheath363(?:@gmail\.com)?
-1617299616	cigien	airtviptv\.shop
 1617301960	cigien	pagalstatus\.com
 1617306565	Makyen	الدكتور احمد ابو النصر
 1617308267	Makyen	freefontslike\.com
