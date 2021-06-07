@@ -30321,3 +30321,4 @@
 1623015865	cigien	mvrconsulting\.com
 1623016188	cigien	bep[\W_]*+20[\W_]*+generator
 1623032652	Spevacus	urdolls\.com
+1623032669	Spevacus	urdolls(?!\.com)
