@@ -495,3 +495,4 @@ williamriver
 (?-i:^Jacqueline L\. Pollock$)
 (?-i:^D J Sims$)
 ^ayesha exopic$
+(?-i:^Mia Cross$)
