@@ -30324,3 +30324,4 @@
 1623032669	Spevacus	urdolls(?!\.com)
 1623038299	cigien	drowoherbs(?:@gmail\.com)?
 1623038332	cigien	d(?:octo)?r[\W_]*+owo
+1623051934	tripleee	https://docs\.microsoft\.com/en-us/dotnet/csharp/language-reference/keywords/static
