@@ -30258,7 +30258,6 @@
 1622797463	tripleee	snapsave\.app
 1622798949	tripleee	thestashandco\.com
 1622799354	tripleee	xedapdiencuvietcuong\.com
-1622817409	cigien	heal-nature\.com
 1622849904	Jeff Schaller	freedombra\.shop
 1622852410	cigien	copidal\.com
 1622853056	cigien	evim[\W_]*+shahane(?!\.com(?<=evimshahane\.com))
