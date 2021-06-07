@@ -30334,3 +30334,4 @@
 1623058929	tripleee	hanopro\.com
 1623059489	tripleee	accidentchirowa\.com
 1623063203	Jeff Schaller	larsonmedicalaesthetics\.com
+1623063311	Xnero	larson[\W_]*medical(?:[\W_]*aesthetics)?(?!\.com)
