@@ -30339,3 +30339,4 @@
 1623068606	Spevacus	seosprendimai\.lt
 1623073361	cigien	beezzly\.com
 1623073518	cigien	todaytechhelp\.com
+1623073542	cigien	todaytechhelp(?!\.com)
