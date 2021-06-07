@@ -30322,3 +30322,4 @@
 1623016188	cigien	bep[\W_]*+20[\W_]*+generator
 1623032652	Spevacus	urdolls\.com
 1623032669	Spevacus	urdolls(?!\.com)
+1623038299	cigien	drowoherbs(?:@gmail\.com)?
