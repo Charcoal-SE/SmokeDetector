@@ -30364,3 +30364,4 @@
 1623143620	tripleee	swastiklifesciences\.com
 1623144662	Xnero	startelelogicofficial\.medium\.com
 1622625240	Xnero	mtfx(?:[\W]*group)?(?!\.com)
+1623098466	Xnero	sophia143(?#medium)
