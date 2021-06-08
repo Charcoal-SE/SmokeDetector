@@ -30363,3 +30363,4 @@
 1623143526	tripleee	digimarkagency\.com
 1623143620	tripleee	swastiklifesciences\.com
 1623144662	Xnero	startelelogicofficial\.medium\.com
+1622625240	Xnero	mtfx(?:[\W]*group)?(?!\.com)
