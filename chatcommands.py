@@ -355,37 +355,34 @@ def do_blacklist(blacklist_type, msg, force=False):
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
-    append_force_to_do = "; append `-force` if you really want to do that."
+    append_force_to_do = " Append `-force` to the command if you really want to add this pattern."
 
     pattern = get_pattern_from_content_source(msg)
 
-    has_u202d = ""
+    other_issues = []
     if '\u202d' in pattern:
-        has_u202d = (
-            "The pattern contains an invisible U+202D whitespace character;"
-            " - in most cases, you don't want that")
+        other_issues.append("The pattern contains an invisible U+202D whitespace character.")
 
-    has_leading_whitespace = ""
     if regex.search(r"^\s+", pattern):
-        has_leading_whitespace = (
-            "That pattern starts with whitespace;"
-            " in most cases, you don't want that")
+        other_issues.append("The pattern starts with whitespace.")
 
-    has_unescaped_dot = ""
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
         # Remove character sets, where . doesn't need to be escaped.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", test_for_unescaped_dot)
         if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
-            has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
+            other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
 
         try:
             r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
-            raise CmdException("That pattern is probably too broad, refusing to commit.")
+            raise CmdException("That pattern is probably too broad, refusing to commit." +
+                               " If you really want to add this pattern, you will need to manually submit a PR.")
+
+    other_issues_text = ' '.join(other_issues)
 
     if not force:
         if "number" in blacklist_type or \
@@ -395,31 +392,17 @@ def do_blacklist(blacklist_type, msg, force=False):
             is_phone = False
 
         is_watchlist = bool("watch" in blacklist_type)
-
         concretized_pattern = get_test_text_from_regex(pattern)
 
         for username in False, True:
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
-
             if reasons:
-                has_u202d = "; in addition, " + has_u202d.lower() if has_u202d else ""
-                has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
-                has_leading_whitespace = (
-                    "; in addition, " + has_leading_whitespace.lower()) if has_leading_whitespace else ""
-                raise CmdException(
-                    "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d +
-                    has_leading_whitespace + append_force_to_do)
+                raise CmdException("That pattern looks like it's already caught by " +
+                                   format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
 
-        if has_leading_whitespace:
-            raise CmdException(has_leading_whitespace + has_unescaped_dot + has_u202d + append_force_to_do)
-
-        if has_u202d:
-            raise CmdException(has_u202d + has_unescaped_dot + append_force_to_do)
-
-        if has_unescaped_dot:
-            raise CmdException(has_unescaped_dot + append_force_to_do)
+        if other_issues_text:
+            raise CmdException(other_issues_text + append_force_to_do)
 
     metasmoke_down = False
 
