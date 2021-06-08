@@ -30375,3 +30375,4 @@
 1623166994	cigien	perfectcem(?!\.com)
 1623167353	cigien	swastik[\W_]*+life[\W_]*+sciences(?!\.com(?<=swastiklifesciences\.com))
 1623167551	cigien	laserprotective\.com
+1623171677	Spevacus	honorgunshop\.com
