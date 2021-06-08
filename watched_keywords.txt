@@ -9692,7 +9692,6 @@
 1557962569	Makyen	bcalanza@delegata\.com
 1557962588	Makyen	delegata\.com(?<!bcalanza@delegata\.com)
 1557981197	tripleee	codecondo\.com
-1557983355	Shree	abbssm\.edu\.in
 1557852448	double-beep	^Alex(?:andre)? Bat(?:ts)?
 1557744548	double-beep	atallcures\.com
 1557987265	Makyen	75engebook
