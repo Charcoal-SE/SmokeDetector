@@ -30353,3 +30353,4 @@
 1623116980	Spevacus	patentediguidavalida\.com
 1623119312	Spevacus	dr\.eromonsele(?:@gmail\.com)?
 1623128487	tripleee	cpasytes\.com
+1623130634	Cody Gray	[Aa]darsh[\W_]*[Ss]olar
