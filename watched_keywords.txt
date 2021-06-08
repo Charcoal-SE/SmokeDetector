@@ -30372,3 +30372,4 @@
 1623160978	Ollie	mydresshut\.com
 1623166782	cigien	sepio[\W_]*+products(?!\.com(?<=sepioproducts\.com))
 1623166831	cigien	kingessays\.com
+1623166994	cigien	perfectcem(?!\.com)
