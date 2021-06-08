@@ -30365,3 +30365,4 @@
 1622625240	Xnero	mtfx(?:[\W]*group)?(?!\.com)
 1623098466	Xnero	sophia143(?#medium)
 1623150414	tripleee	ascendmarketingnow\.com
+1623150518	Xnero	ascend[\W_]*marketing(?:[\W_]*now)?(?!\.com)
