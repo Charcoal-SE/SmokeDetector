@@ -30351,3 +30351,4 @@
 1623099565	cigien	guaranteed\.software
 1623103451	cigien	usbankreliacard\.com
 1623116980	Spevacus	patentediguidavalida\.com
+1623119312	Spevacus	dr\.eromonsele(?:@gmail\.com)?
