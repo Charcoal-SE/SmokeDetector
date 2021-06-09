@@ -3113,7 +3113,6 @@ foreignexchange\.llc
 downwritehonest\.com
 pst-splitter\.com
 transcriptionnow\.com
-dio\d+\W*(?:,|\.)\W*n\W*e\W*t
 출장마사지(?#needs to not have the \b, even the Unicode \b version)
 콜걸(?#call girl; needs to not be \b bookended)
 supplementvilla\.com
