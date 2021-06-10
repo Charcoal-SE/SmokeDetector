@@ -30412,3 +30412,4 @@
 1623306238	cigien	wise\.deals
 1623306307	Ryan M	(?:full|tai)phanmem(?!\.com(?<=fullphanmem\.com))
 1623307178	cigien	mssg\.me
+1623308489	Ryan M	okjet\.com'
