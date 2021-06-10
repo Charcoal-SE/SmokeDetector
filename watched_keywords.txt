@@ -30410,3 +30410,4 @@
 1623304036	cigien	Spore[\W_]*+Metabolic[\W_]*+Boost
 1623305987	cigien	fullphanmem\.com
 1623306238	cigien	wise\.deals
+1623306307	Ryan M	(?:full|tai)phanmem(?!\.com(?<=fullphanmem\.com))
