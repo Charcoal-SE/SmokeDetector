@@ -30410,3 +30410,4 @@
 1623304036	cigien	Spore[\W_]*+Metabolic[\W_]*+Boost
 1623305987	cigien	fullphanmem\.com
 1623306119	Cody Gray	(full|tai)phanmem
+1623306238	cigien	wise\.deals
