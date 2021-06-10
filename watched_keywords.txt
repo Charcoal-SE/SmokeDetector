@@ -30425,3 +30425,4 @@
 1623327442	Cody Gray	addmecart\.com
 1623327553	Cody Gray	refurbished[\W_]*(?:jio[\W_]*)*router
 1623333477	Spevacus	contentwriting\.us
+1623336257	Spevacus	saveelectric\.ir
