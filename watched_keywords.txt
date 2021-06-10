@@ -30408,3 +30408,4 @@
 1623299327	cigien	40billion\.com
 1623299955	tripleee	donghochat8668(?!\.com)\w*
 1623304036	cigien	Spore[\W_]*+Metabolic[\W_]*+Boost
+1623305987	cigien	fullphanmem\.com
