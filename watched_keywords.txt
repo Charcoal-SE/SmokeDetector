@@ -4629,7 +4629,6 @@
 1533354816	Makyen	kupiti\W*vozačku\W*dozvolu
 1533354824	Makyen	kupiti\W*putovnicu
 1533360328	Suraj Rao	wirelessdisplay\.cn
-1533362252	iBug	dataentryexport\.com
 1533362486	Makyen	rodfinancing3\.wixsite\.com
 1533363208	iBug	UCwkpKdiW4S4CGTg60Xky30Q
 1533364051	iBug	worldwidedocuments7(?:\W*gmail\.com)?
