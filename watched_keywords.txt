@@ -30457,3 +30457,4 @@
 1623421758	cigien	absolutereviewer\.co\.in
 1623437790	cigien	billingfreedom\.com
 1623437843	cigien	billing[\W_]*+freedom(?!\.com(?<=billingfreedom\.com))
+1623438161	Makyen	apolloe\.com
