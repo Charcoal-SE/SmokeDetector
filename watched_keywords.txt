@@ -30456,3 +30456,4 @@
 1623420630	cigien	batteriesandchargers\.com
 1623421758	cigien	absolutereviewer\.co\.in
 1623437790	cigien	billingfreedom\.com
+1623437843	cigien	billing[\W_]*+freedom(?!\.com(?<=billingfreedom\.com))
