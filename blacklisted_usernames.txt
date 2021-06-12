@@ -496,3 +496,4 @@ williamriver
 (?-i:^D J Sims$)
 ^ayesha exopic$
 (?-i:^Mia Cross$)
+(?-i:^Dai Software$)
