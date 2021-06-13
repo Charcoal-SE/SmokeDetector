@@ -30395,7 +30395,6 @@
 1623234709	Xnero	vitecloud\.com
 1623239227	Xnero	nerdclump\.com
 1623240780	Xnero	multimeter[\W_]*tools(?!\.com)
-1623241680	tripleee	pillsinfo24x7\.com
 1623242408	Xnero	myhalo\.life
 1623245842	Spevacus	mudra\.website
 1623266769	cigien	rifemachinebuilder\.com
