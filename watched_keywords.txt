@@ -30473,3 +30473,4 @@
 1623551519	cigien	evbex\.com
 1623567470	cigien	sapnokipari\.com
 1623568592	cigien	textgun\.io
+1623598069	cigien	cyberspysolution(?:[\W_]*+(?:at[\W_]*+)?gm(?:ail)?(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
