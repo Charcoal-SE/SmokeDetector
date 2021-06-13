@@ -25483,7 +25483,6 @@
 1608287853	Cody Gray	zsport-shop\.ir
 1608288107	tripleee	yomck(?# lst.to redirect)
 1608288321	tripleee	mywifiiextnet\.com
-1608288489	tripleee	sattaking-sattaking\.com
 1608290170	tripleee	9o93789l42
 1608290189	tripleee	musician[\W_]*+choice
 1608291030	tripleee	allinstoreindia\.blogspot\.com
