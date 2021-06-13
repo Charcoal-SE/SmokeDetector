@@ -30475,3 +30475,4 @@
 1623598069	cigien	cyberspysolution(?:[\W_]*+(?:at[\W_]*+)?gm(?:ail)?(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1623598917	cigien	batas\.kz
 1623598984	cigien	zarfino\.com
+1623599126	cigien	allowess\.com
