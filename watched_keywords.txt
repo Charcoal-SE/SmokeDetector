@@ -13505,7 +13505,6 @@
 1571662668	Machavity	batteryengineers\.co\.in
 1571662738	Machavity	kubet\.win
 1571662778	Machavity	(?-i:77Kx0\.jpg)
-1571662993	Machavity	denochearing\.com
 1571664173	Machavity	productmsoffice\.com
 1571664199	Machavity	aumcafee\.com
 1571667420	Machavity	(?-i:^amazingsummer$)
