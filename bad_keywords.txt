@@ -1085,7 +1085,7 @@ reducelant
 lipovyn
 trilixton
 slim\W?trim
-mrx(?<=[/?]mrx)[-/"<]
+mrx[\W_]*+(?:male|red)
 suplementodiet
 tevida(?:[\W_]*+(?:canada|never|underestimate|the|influence|\d++|[\da-f]{4,}+)s?)*
 total\W?radiance
