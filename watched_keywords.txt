@@ -30500,3 +30500,4 @@
 1623674767	Spevacus	ceoreviewmagazine\.com
 1623664733	Xnero	charbhujatiles\.com
 1623675947	tripleee	iq-global-test\.com
+1623679216	cigien	(?:noah\.simon@)?lorienglobal\.com
