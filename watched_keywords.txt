@@ -30500,3 +30500,4 @@
 1623673653	double-beep	mightywarner\.ae
 1623674767	Spevacus	ceoreviewmagazine\.com
 1623664733	Xnero	charbhujatiles\.com
+1623675947	tripleee	iq-global-test\.com
