@@ -30505,3 +30505,4 @@
 1623706422	cigien	klimaservise\.com
 1623706437	Makyen	eprescribing
 1623706458	Makyen	(?-i:5FBr2WLoiWI)(?#YouTube)
+1623706482	Makyen	compscripts(?!\.com)
