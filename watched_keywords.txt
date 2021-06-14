@@ -30487,3 +30487,4 @@
 1623640659	Makyen	linuxbuz\.com
 1623649980	tripleee	musiclab\.chromeexperiments\.com
 1623654473	tripleee	(?-i:^ahujareeta9$)
+1623654594	tripleee	comparium\.app
