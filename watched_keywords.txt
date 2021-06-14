@@ -24564,7 +24564,6 @@
 1604916780	tripleee	portabledownloads\.com
 1604919035	tripleee	rodeonfr\.blogspot\.com
 1604920522	tripleee	acconpit\.com
-1604920710	tripleee	justcol\.com
 1604921801	tripleee	remotehub\.com
 1604923809	tripleee	thepetitionsite\.com
 1604926161	Victor VosMottor	loanerjovita\.loanlender\.org(?:@gmail\.com)
