@@ -30521,3 +30521,4 @@
 1623784613	Makyen	klinik[\W_]*+konsultasi
 1623784632	Makyen	spesialisaborsi\.webnode\.com
 1623784649	Makyen	(?-i:4nCkI\.jpg)
+1623788193	cigien	phonicy\.ir
