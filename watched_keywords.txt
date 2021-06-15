@@ -30519,3 +30519,4 @@
 1623773692	cigien	bathroomremodelingashburnva\.com
 1623779556	cigien	thementalhappiness\.com
 1623784613	Makyen	klinik[\W_]*+konsultasi
+1623784632	Makyen	spesialisaborsi\.webnode\.com
