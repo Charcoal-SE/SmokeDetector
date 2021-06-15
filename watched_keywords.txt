@@ -24827,7 +24827,6 @@
 1605722576	Makyen	learn-game-development-with-pygame
 1605761412	tripleee	viredfinance\.com
 1605767044	tripleee	docpulse\.com
-1605771680	tripleee	zeusbtc\.com
 1605771911	tripleee	water[\W_]*+level[\W_]*+controllers?
 1605771933	tripleee	kavitha[\W_]*+ktronics
 1605772705	tripleee	apparelnbags\.com
