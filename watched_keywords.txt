@@ -30523,3 +30523,4 @@
 1623784649	Makyen	(?-i:4nCkI\.jpg)
 1623788193	cigien	phonicy\.ir
 1623788603	cigien	(?-i:ywt813LAL_Y)(?#youtu.be)
+1623799232	Xnero	vite[\W_]*cloud(?:[\W_]*solutions)?(?!\.com)
