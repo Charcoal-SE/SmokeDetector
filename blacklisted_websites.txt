@@ -4068,4 +4068,3 @@ denochearing\.com
 servicemycar\.ae
 immunebytes\.com
 buyucoin\.com(?<!api\.buyucoin\.com)
-zeusbtc\.com
