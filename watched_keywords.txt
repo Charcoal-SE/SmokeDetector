@@ -30525,3 +30525,4 @@
 1623788603	cigien	(?-i:ywt813LAL_Y)(?#youtu.be)
 1623800133	cigien	olubasolutiontemple(?:@gmail\.com)?
 1623800149	cigien	d(?:octo)?r[\W_]*+oluba
+1623801550	cigien	cyber02(?:[\W_]*+(?:dot[\W_]*+)?)?hack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
