@@ -30510,3 +30510,4 @@
 1623727074	cigien	(?:hanh\.nguyen@)?encapital\.io
 1623727975	cigien	ready4tech\.com
 1623735570	cigien	runbearing\.com
+1623735594	cigien	runbearing(?!\.com)
