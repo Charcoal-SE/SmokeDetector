@@ -30506,3 +30506,4 @@
 1623706437	Makyen	eprescribing
 1623706458	Makyen	(?-i:5FBr2WLoiWI)(?#YouTube)
 1623706482	Makyen	compscripts(?!\.com)
+1623718544	Makyen	cybergodess903(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
