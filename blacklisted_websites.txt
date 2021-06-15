@@ -4069,3 +4069,4 @@ servicemycar\.ae
 immunebytes\.com
 buyucoin\.com(?<!api\.buyucoin\.com)
 nhanluckienvang\.com
+comparium\.app
