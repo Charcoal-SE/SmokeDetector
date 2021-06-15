@@ -30508,3 +30508,4 @@
 1623706482	Makyen	compscripts(?!\.com)
 1623718544	Makyen	cybergodess903(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1623727074	cigien	(?:hanh\.nguyen@)?encapital\.io
+1623727975	cigien	ready4tech\.com
