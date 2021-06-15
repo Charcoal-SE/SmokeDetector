@@ -30513,3 +30513,4 @@
 1623741710	tripleee	(?-i:Jaime_Corbett$)
 1623742011	double-beep	dmocoz\.com
 1623746004	tripleee	zeusbtc\.com
+1623747965	Xnero	icecube[\W_]*digital(?!\.com)
