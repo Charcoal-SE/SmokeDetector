@@ -4067,3 +4067,4 @@ justcol\.com
 denochearing\.com
 servicemycar\.ae
 immunebytes\.com
+buyucoin\.com(?<!api\.buyucoin\.com)
