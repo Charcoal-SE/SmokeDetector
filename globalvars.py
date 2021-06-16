@@ -7,7 +7,7 @@ from datetime import datetime
 from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
-from configparser import NoOptionError, RawConfigParser
+from configparser import NoOptionError, ConfigParser
 import threading
 # noinspection PyCompatibility
 import regex
@@ -161,7 +161,7 @@ class GlobalVars:
                 GlobalVars.PostScanStat.num_posts_scanned = 0
                 GlobalVars.PostScanStat.post_scan_time = 0
 
-    config_parser = RawConfigParser()
+    config_parser = ConfigParser(interpolation=None)
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
         config_parser.read('config')
