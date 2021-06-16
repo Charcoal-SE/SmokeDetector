@@ -30536,3 +30536,4 @@
 1623824199	tripleee	thailandphuket\.holiday
 1623824216	tripleee	phuketsalegarden\.com
 1623824232	tripleee	phuketland\.site
+1623824252	tripleee	phukethomevillas\.live
