@@ -30548,3 +30548,4 @@
 1623830316	tripleee	lalaland\.pk
 1623834238	Xnero	rvtechnologies\.com
 1623834898	tripleee	(?-i:^The Router Help$)
+1623838121	tripleee	UIJRT(?!\.com)
