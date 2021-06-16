@@ -183,7 +183,8 @@ class GlobalVars:
     # thread-safe cache as part of dnspython's resolver system as init options,
     # control cleanup interval based on **TIME** like a regular DNS server does.
     dns_cache_enabled = setuptools.dist.strtobool(config.get("dns_cache_enabled", 'True'))
-    dns_cache_interval = float(config.get("dns_cache_cleanup_interval"))
+    dns_cache_interval = float(config.get("dns_cache_cleanup_interval", "300.0"))
+
     if config.get("dns_resolver", "system").lower() == "system":
         # Use System DNS - this is the default.
         if dns_cache_enabled:
