@@ -1,6 +1,5 @@
 # coding=utf-8
 import json
-from helpers import log
 import html
 from typing import AnyStr, Union
 
@@ -78,9 +77,8 @@ class Post:
 
         try:
             data = json.loads(text_data)
-        except ValueError:
-            log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
-            return
+        except ValueError as err:
+            raise ValueError("ValueError processing data: {}\n{}".format(str(err), json_data))
 
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:

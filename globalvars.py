@@ -180,7 +180,7 @@ class GlobalVars:
 
     # Use a global DNS resolver for all DNS resolution needs, allow for it to be configured
     # from the configuration file.
-    if config.get("dns_resolver", "system") == "system":
+    if config.get("dns_resolver", "system").lower() == "system":
         # Use System DNS - this is the default.
         dns = DNSResolver(configure=True)
     else:
