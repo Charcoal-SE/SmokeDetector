@@ -183,9 +183,9 @@ class GlobalVars:
     # thread-safe cache as part of dnspython's resolver system as init options,
     # control cleanup interval based on **TIME** like a regular DNS server does.
     #
-    # # Explicitly defining fallback= for fallback values, in order to avoid
-    # #   IDE complaint issues -- tward
-    dns_nameservers = config.get("dns_resolver", fallback="system").lower()
+    # # Explicitly defining fallback= for fallback values in bool and float getters, in order to
+    # #    avoid IDE complaints -- tward
+    dns_nameservers = config.get("dns_resolver", "system").lower()
     dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
     dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
