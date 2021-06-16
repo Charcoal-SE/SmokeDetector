@@ -30552,3 +30552,4 @@
 1623838139	tripleee	uijrt\.com
 1623842203	tripleee	(?-i:^Britannia 2000 Holdings$)
 1623842220	tripleee	websitepandas\.com
+1623842361	tripleee	readyrdp\.com
