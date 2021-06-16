@@ -32,5 +32,7 @@ location=location_here
 # For dns_resolver, 'system' is the default, use a comma separated list of IPs if you want other
 # DNS resolvers for the DNS functions.
 # For dns_cache_enabled, 'True' is the default, use 'False' to disable DNS Caching
+# For dns_cache_cleanup_interval, default is 300.0 (5 minutes), but this is a Float value.
 dns_resolver=system
 dns_cache_enabled=True
+dns_cache_cleanup_interval=300.0

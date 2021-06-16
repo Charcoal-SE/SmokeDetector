@@ -178,18 +178,28 @@ class GlobalVars:
 
     location = config.get("location", "Continuous Integration")
 
-    # Use a global DNS resolver for all DNS resolution needs, allow for it to be configured
-    # from the configuration file.
+    # DNS Configuration
+    # Configure resolver based on config options, or System, configure DNS Cache in
+    # thread-safe cache as part of dnspython's resolver system as init options,
+    # control cleanup interval based on **TIME** like a regular DNS server does.
+    dns_cache_enabled = setuptools.dist.strtobool(config.get("dns_cache_enabled", 'True'))
+    dns_cache_interval = float(config.get("dns_cache_cleanup_interval"))
     if config.get("dns_resolver", "system").lower() == "system":
         # Use System DNS - this is the default.
-        dns = DNSResolver(configure=True)
+        if dns_cache_enabled:
+            dns = DNSResolver(configure=True, enable_cache=True,
+                              cache_cleanup_interval=dns_cache_interval)
+        else:
+            dns = DNSResolver(configure=True)
     else:
-        # Use specified DNS resolvers if configured.
-        dns = DNSResolver(configure=False,
-                          nameservers=config.get("dns_resolver").split(','))
-    # In addition to DNS resolver configuraiton, permit enable/disable of
-    # the DNS Cache system in SmokeDetector
-    dns_cache_enabled = setuptools.dist.strtobool(config.get("dns_cache_enabled", 'True'))
+        # Use nameservers specified in the config
+        if dns_cache_enabled:
+            dns = DNSResolver(configure=False,
+                              nameservers=config.get("dns_resolver").split(','),
+                              enable_cache=True, cache_cleanup_interval=dns_cache_interval)
+        else:
+            dns = DNSResolver(configure=False,
+                              nameservers=config.get("dns_resolver").split(','))
 
     class MSStatus:
         """ Tracking metasmoke status """

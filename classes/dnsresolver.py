@@ -7,7 +7,9 @@ from typing import Union, List
 class DNSResolver(dns.resolver.Resolver):
 
     def __init__(self, filename='/etc/resolv.conf', configure=False,
-                 nameservers: Union[str, List[str]] = None):
+                 nameservers: Union[str, List[str]] = None,
+                 enable_cache: bool = False,
+                 cache_cleanup_interval: float = 300.0):
         # Run the dns.resolver.Resolver superclass init call to configure
         # the object. Then, depending on the value in configure argument,
         # do something with the nameservers argument, which is unique to this
@@ -21,6 +23,11 @@ class DNSResolver(dns.resolver.Resolver):
                 self.nameservers = nameservers
             else:
                 self.nameservers = ['8.8.8.8, 8.8.4.4']
+
+        if enable_cache:
+            self.cache = dns.resolver.Cache(cache_cleanup_interval)
+        else:
+            self.cache = None
 
 
 def dns_resolve(domain: str, resolver: DNSResolver = DNSResolver(configure=True)) -> list:
