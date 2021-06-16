@@ -1,6 +1,7 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
+from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
+    is_privileged, message, \
     tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
@@ -31,7 +32,7 @@ from helpers import exit_mode, only_blacklists_changed, only_modules_changed, lo
     reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
-from classes.dnsresolver import dns_resolve
+from classes.dns import dns_resolve
 from tasks import Tasks
 
 
