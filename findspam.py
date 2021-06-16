@@ -18,7 +18,7 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
-import dns.resolver
+import dns.exception
 import requests
 import chatcommunicate
 
@@ -1220,14 +1220,18 @@ def purge_cache(cachevar, limit):
 
 
 def dns_query(label, qtype):
-    global DNS_CACHE
-    if (label, qtype) in DNS_CACHE:
-        log('debug', 'dns_query: returning cached {0} value for {1}'.format(
-            qtype, label))
-        return DNS_CACHE[(label, qtype)]['result']
+    # Allow DNS cache to be disabled via config argument
+    if GlobalVars.dns_cache_enabled:
+        global DNS_CACHE
+        if (label, qtype) in DNS_CACHE:
+            log('debug', 'dns_query: returning cached {0} value for {1}'.format(
+                qtype, label))
+            return DNS_CACHE[(label, qtype)]['result']
+
+    # If there's no cache then assume *now* is important
     try:
         starttime = datetime.utcnow()
-        answer = dns.resolver.resolve(label, qtype, search=True)
+        answer = GlobalVars.dns.resolve(label, qtype, search=True)
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
@@ -1237,14 +1241,16 @@ def dns_query(label, qtype):
                 exc, endtime - starttime))
         return None
     endtime = datetime.utcnow()
-    log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
-    DNS_CACHE[(label, qtype)] = {'result': answer, 'timestamp': endtime}
-    # Periodic amortized cache cleanup: clean out oldest 1000 entries
-    if len(DNS_CACHE.keys()) >= 1500:
-        log('debug', 'Initiating cleanup of DNS_CACHE')
-        purge_cache(DNS_CACHE, 1000)
-        log('debug', 'DNS cleanup took an additional {0} seconds'.format(
-            datetime.utcnow() - endtime))
+    if GlobalVars.dns_cache_enabled:
+        log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
+        DNS_CACHE[(label, qtype)] = {'result': answer, 'timestamp': endtime}
+        # Periodic amortized cache cleanup: clean out oldest 1000 entries
+        # Not needed if caching is disabled, of course.
+        if len(DNS_CACHE.keys()) >= 1500:
+            log('debug', 'Initiating cleanup of DNS_CACHE')
+            purge_cache(DNS_CACHE, 1000)
+            log('debug', 'DNS cleanup took an additional {0} seconds'.format(
+                datetime.utcnow() - endtime))
     return answer
 
 

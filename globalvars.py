@@ -12,11 +12,14 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
+from classes.dnsresolver import DNSResolver
 import platform
+import setuptools.dist
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
     from _Git_Windows import git, GitError
 else:
+    # noinspection PyUnresolvedReferences
     from sh.contrib import git
 
 
@@ -174,6 +177,19 @@ class GlobalVars:
     post_site_id_to_question = {}
 
     location = config.get("location", "Continuous Integration")
+
+    # Use a global DNS resolver for all DNS resolution needs, allow for it to be configured
+    # from the configuration file.
+    if config.get("dns_resolver", "system") == "system":
+        # Use System DNS - this is the default.
+        dns = DNSResolver(configure=True)
+    else:
+        # Use specified DNS resolvers if configured.
+        dns = DNSResolver(configure=False,
+                          nameservers=config.get("dns_resolver").split(','))
+    # In addition to DNS resolver configuraiton, permit enable/disable of
+    # the DNS Cache system in SmokeDetector
+    dns_cache_enabled = setuptools.dist.strtobool(config.get("dns_cache_enabled", 'True'))
 
     class MSStatus:
         """ Tracking metasmoke status """
