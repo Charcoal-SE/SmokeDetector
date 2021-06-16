@@ -30542,3 +30542,4 @@
 1623824433	tripleee	phuketpoolvilla\.net
 1623824451	tripleee	puketrealestate\.news
 1623824537	tripleee	phuket\.house
+1623824559	tripleee	propertysmile\.net
