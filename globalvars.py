@@ -182,21 +182,12 @@ class GlobalVars:
     # Configure resolver based on config options, or System, configure DNS Cache in
     # thread-safe cache as part of dnspython's resolver system as init options,
     # control cleanup interval based on **TIME** like a regular DNS server does.
-    dns_nameservers = config.get("dns_resolver", "system").lower()
-    try:
-        # json.loads will convert whatever value we get here to a corresponding value
-        # in Python.  'true' for instance returns True as a bool, 'false' as False similarly.
-        # If the variable is not a boolean object, then an invalid string was provided at
-        # the configuration time, and we should abort.
-        # Empty values will default to 'true' which converts to True
-        dns_cache_enabled = json.loads(config.get("dns_cache_enabled", 'true').lower())
-        if not isinstance(dns_cache_enabled, bool):
-            raise ValueError
-    except NameError:
-        raise ValueError("dns_cache_enabled must be either True or False, "
-                         "no other values accepted.")
-
-    dns_cache_interval = float(config.get("dns_cache_cleanup_interval", "300.0"))
+    #
+    # # Explicitly defining fallback= for fallback values, in order to avoid
+    # #   IDE complaint issues -- tward
+    dns_nameservers = config.get("dns_resolver", fallback="system").lower()
+    dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
+    dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
     class MSStatus:
         """ Tracking metasmoke status """
