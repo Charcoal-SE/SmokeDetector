@@ -387,6 +387,10 @@ stackexchange.com:
         - experimental-site-travel.meta.stackexchange.com
         - no-offensive-mask
 
+    privileges:
+      - 17078244 # Xnero
+      # NOTICE: please don't add new users until you have Room Owner approval
+
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
