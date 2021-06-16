@@ -4070,3 +4070,4 @@ immunebytes\.com
 buyucoin\.com(?<!api\.buyucoin\.com)
 nhanluckienvang\.com
 comparium\.app
+inkitt\.com
