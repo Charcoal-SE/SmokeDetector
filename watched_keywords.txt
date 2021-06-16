@@ -30545,3 +30545,4 @@
 1623824559	tripleee	propertysmile\.net
 1623824579	tripleee	phuketresthome\.com
 1623825760	cigien	globaltradeplaza\.com
+1623825829	cigien	global[\W_]*+trade[\W_]*+plaza(?!\.com(?<=globaltradeplaza\.com))
