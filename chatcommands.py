@@ -2326,7 +2326,7 @@ def dig(domain):
     :param domain: the domain to get DNS records for
     :return: A comma-separated string of IPs
     """
-    results = dns_resolve(domain)
+    results = dns_resolve(domain, resolver=GlobalVars.dns)
     if results:
         return ", ".join(result for result in results)
     else:
