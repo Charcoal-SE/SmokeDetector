@@ -31,6 +31,7 @@ from deletionwatcher import DeletionWatcher
 import json
 import time
 import requests
+import dns.resolver
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 from helpers import exit_mode, log, Helpers, log_exception
@@ -90,6 +91,13 @@ if not GlobalVars.metasmoke_key:
     log('info', "No metasmoke key found, which is okay if both are running on the same host")
 if not GlobalVars.metasmoke_ws_host:
     log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
+
+# Initiate DNS
+if GlobalVars.config.dns_nameservers != 'system':
+    dns.resolver.get_default_resolver().nameservers = GlobalVars.config.dns_nameservers.split(',')
+
+if GlobalVars.dns_cache_enabled:
+    dns.resolver.get_default_resolver().cache = dns.resolver.Cache(GlobalVars.dns_cache_interval)
 
 
 # noinspection PyProtectedMember

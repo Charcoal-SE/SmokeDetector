@@ -182,25 +182,9 @@ class GlobalVars:
     # Configure resolver based on config options, or System, configure DNS Cache in
     # thread-safe cache as part of dnspython's resolver system as init options,
     # control cleanup interval based on **TIME** like a regular DNS server does.
+    dns_nameservers = config.get("dns_resolver", "system").lower()
     dns_cache_enabled = setuptools.dist.strtobool(config.get("dns_cache_enabled", 'True'))
     dns_cache_interval = float(config.get("dns_cache_cleanup_interval", "300.0"))
-
-    if config.get("dns_resolver", "system").lower() == "system":
-        # Use System DNS - this is the default.
-        if dns_cache_enabled:
-            dns = DNSResolver(configure=True, enable_cache=True,
-                              cache_cleanup_interval=dns_cache_interval)
-        else:
-            dns = DNSResolver(configure=True)
-    else:
-        # Use nameservers specified in the config
-        if dns_cache_enabled:
-            dns = DNSResolver(configure=False,
-                              nameservers=config.get("dns_resolver").split(','),
-                              enable_cache=True, cache_cleanup_interval=dns_cache_interval)
-        else:
-            dns = DNSResolver(configure=False,
-                              nameservers=config.get("dns_resolver").split(','))
 
     class MSStatus:
         """ Tracking metasmoke status """
