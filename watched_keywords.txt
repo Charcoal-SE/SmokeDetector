@@ -30553,3 +30553,4 @@
 1623842203	tripleee	(?-i:^Britannia 2000 Holdings$)
 1623842220	tripleee	websitepandas\.com
 1623842361	tripleee	readyrdp\.com
+1623845436	Spevacus	apksdesk\.com
