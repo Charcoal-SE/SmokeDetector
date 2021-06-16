@@ -12,7 +12,6 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
-from classes.dnsresolver import DNSResolver
 import platform
 import setuptools.dist
 if 'windows' in platform.platform().lower():
