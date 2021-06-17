@@ -30594,3 +30594,4 @@
 1623934147	cigien	thevitafoamstore\.com\.ng
 1623934164	cigien	idealnews\.com\.ng
 1623934545	cigien	knoxvillepressurewash\.net
+1623934820	cigien	sadguru[\W_]*+pest[\W_]*+control(?!\.com(?<=sadgurupestcontrol\.com))
