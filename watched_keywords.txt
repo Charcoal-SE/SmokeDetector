@@ -30600,3 +30600,4 @@
 1623936667	cigien	high[\W_]*+biz[\W_]*+attestation(?!\.com(?<=highbizattestation\.com))
 1623938329	Ollie	7daysfashionschool\.com
 1623954203	Jeff Schaller	quill-bot\.com
+1623963514	hyper-neutrino	youtu\.be/cpB2pbXma8Q
