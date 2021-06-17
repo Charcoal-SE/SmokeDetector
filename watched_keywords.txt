@@ -30585,3 +30585,4 @@
 1623664454	Xnero	wooden[\W_]*street(?!\.com)
 1623926671	tripleee	nashamuktikendranearby\.com
 1623926833	Ryan M	hotspot\.co\.in
+1623926911	Ryan M	contact us \w+ WhatsApp
