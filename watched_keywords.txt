@@ -30592,3 +30592,4 @@
 1623931789	tripleee	codingbd\.com
 1623934123	cigien	ev-safewestelectricalservices\.pantheonsite\.io
 1623934147	cigien	thevitafoamstore\.com\.ng
+1623934164	cigien	idealnews\.com\.ng
