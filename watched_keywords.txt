@@ -30599,3 +30599,4 @@
 1623936613	cigien	highbizattestation\.com
 1623936667	cigien	high[\W_]*+biz[\W_]*+attestation(?!\.com(?<=highbizattestation\.com))
 1623938329	Ollie	7daysfashionschool\.com
+1623954203	Jeff Schaller	quill-bot\.com
