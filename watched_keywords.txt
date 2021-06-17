@@ -30583,3 +30583,4 @@
 1623926173	Xnero	sadgurupestcontrol\.com
 1623664766	Xnero	charbhuja[\W_]*tiles(?!\.com)
 1623664454	Xnero	wooden[\W_]*street(?!\.com)
+1623926671	tripleee	nashamuktikendranearby\.com
