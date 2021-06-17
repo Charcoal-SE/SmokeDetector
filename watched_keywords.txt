@@ -30597,3 +30597,4 @@
 1623934820	cigien	sadguru[\W_]*+pest[\W_]*+control(?!\.com(?<=sadgurupestcontrol\.com))
 1623935890	Rob	nodezap
 1623936613	cigien	highbizattestation\.com
+1623936667	cigien	high[\W_]*+biz[\W_]*+attestation(?!\.com(?<=highbizattestation\.com))
