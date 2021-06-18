@@ -30611,4 +30611,3 @@
 1624009498	Cody Gray	zhihu\.com
 1624013360	tripleee	springgalaxy\.com
 1624018682	Spevacus	admsneezeguardsusa\.wordpress
-1624019303	Spevacus	hacker4wise[\W_*]+com
