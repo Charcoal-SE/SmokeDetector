@@ -18,7 +18,7 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
-import dns.exception
+import dns.resolver
 import requests
 import chatcommunicate
 

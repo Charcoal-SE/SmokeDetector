@@ -12,7 +12,6 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
-import json
 import platform
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming

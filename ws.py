@@ -93,7 +93,7 @@ if not GlobalVars.metasmoke_ws_host:
     log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
 # Initiate DNS
-if GlobalVars.config.dns_nameservers != 'system':
+if GlobalVars.dns_nameservers != 'system':
     dns.resolver.get_default_resolver().nameservers = GlobalVars.config.dns_nameservers.split(',')
 
 if GlobalVars.dns_cache_enabled:
