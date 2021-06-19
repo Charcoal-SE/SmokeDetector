@@ -29239,7 +29239,6 @@
 1619881605	Mast	extremeinfiltrators(?:@gmail\.com)?
 1619883995	cigien	jayweller\.com
 1619884135	cigien	erfan_113(?:@yahoo\.com)?
-1619888876	Makyen	green[\W_]*+canyon(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|[\da-f]{5,}+)s?)*
 1619888895	Makyen	therealestaterenderingcompany\.com
 1619888913	Makyen	techntune\.com
 1619888928	Makyen	rejuvboostcbdgummies\.wixsite\.com

@@ -2511,3 +2511,4 @@ green[\W_]*+ape[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|ie)|oil|\d++|[\da-f]{5,}+)s?)*
 taruhan(?:[\W_]*+online)?
 luxy[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|review|store|work|\d++|[\da-f]{5,}+)s?)*
 j[\W_]*+k[\W_]*+rowling[\W_]*+cbd(?:[\W_]*+(?:oil|gumm(?:y|ie)|uk|buy|price|review|\d++|[\da-f]{5,}+)s?)*
+green[\W_]*+canyon(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|[\da-f]{5,}+)s?)*
