@@ -30620,3 +30620,4 @@
 1624056610	cigien	scholarshipdoor\.com
 1624057166	cigien	richbrotherhoodofwealth(?:@gmail\.com)?
 1624069438	cigien	allweishop\.myshopify\.com
+1624071922	cigien	drwilsonherbs(?:@gmail\.com)?
