@@ -78,7 +78,7 @@ class Post:
 
         try:
             data = json.loads(text_data)
-        except ValueError as err:
+        except ValueError:
             log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
             return
 
