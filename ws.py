@@ -93,6 +93,12 @@ if not GlobalVars.metasmoke_ws_host:
     log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
 # Initiate DNS
+#
+# Based on additional research, at this point in the code *nothing* has done anything from a
+# DNS or network resolution perspective - not for WebSockets nor for dnspython and the
+# default resolver in it.  Since this activates and initializes the DNS *long* before
+# the chat or metasmoke websockets have been initiated, this is a 'safe space' to
+# begin initialization of the DNS data.
 if GlobalVars.dns_nameservers != 'system':
     dns.resolver.get_default_resolver().nameservers = GlobalVars.config.dns_nameservers.split(',')
 
