@@ -30627,3 +30627,4 @@
 1624090775	Mast	rameshwaramarts\.co\.in
 1624092094	Mast	drsumannag\.in
 1624093137	Makyen	charlie[\W_]*+stayt[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|reviews|\d++|[\da-f]{5,}+)s?)*
+1624093149	Makyen	charlie-stayt-cbd\.wixsite\.com
