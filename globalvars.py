@@ -17,6 +17,7 @@ if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
     from _Git_Windows import git, GitError
 else:
+    # noinspection PyUnresolvedReferences
     from sh.contrib import git
 
 
@@ -44,7 +45,8 @@ def git_ref():
     return git_cp.stdout.decode("utf-8").strip()  # not on branch = empty output
 
 
-# We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
+# We don't need strip_escape_chars() anymore, see commit message
+# of 1931d30804a675df07887ce0466e558167feae57
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
@@ -174,6 +176,17 @@ class GlobalVars:
     post_site_id_to_question = {}
 
     location = config.get("location", "Continuous Integration")
+
+    # DNS Configuration
+    # Configure resolver based on config options, or System, configure DNS Cache in
+    # thread-safe cache as part of dnspython's resolver system as init options,
+    # control cleanup interval based on **TIME** like a regular DNS server does.
+    #
+    # # Explicitly defining fallback= for fallback values in bool and float getters, in order to
+    # #    avoid IDE complaints -- tward
+    dns_nameservers = config.get("dns_resolver", "system").lower()
+    dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
+    dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
     class MSStatus:
         """ Tracking metasmoke status """
