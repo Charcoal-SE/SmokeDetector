@@ -30619,4 +30619,3 @@
 1624056571	cigien	vitalistfood\.com
 1624056610	cigien	scholarshipdoor\.com
 1624057166	cigien	richbrotherhoodofwealth(?:@gmail\.com)?
-1624064086	Thomas Ward	this\.will\.never\.match\.example\.com
