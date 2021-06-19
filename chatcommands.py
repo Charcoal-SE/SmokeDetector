@@ -34,6 +34,7 @@ from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
 from tasks import Tasks
+import dns.resolver
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -2332,3 +2333,32 @@ def dig(domain):
         return ", ".join(result for result in results)
     else:
         return "No data found."
+
+
+@command(str, privileged=True)
+def dnscheck(domain) -> str:
+    """
+    Runs a DNS query using dnspython and Google DNS, and
+    checks for any discrepancies
+    :param domain: the domain to get DNS records for, and to compare.
+    :return: A comparison of domain data if data doesn't match, or "No discrepancy"
+    """
+    # Initialize Google resolver
+    google = dns.resolver.Resolve(configure=False)
+    google.nameservers = ['8.8.8.8', '8.8.4.4']
+    google.cache = None
+
+    sdresolver = dns.resolver.get_default_resolver()
+
+    googleres = google.query(domain)
+    sdres = sdresolver.query(domain)
+
+    if googleres.rrset != sdres.rrset:
+        response = "**Differing DNS Results for {}!**\n\nGoogle DNS:\n{}" \
+                   "\n\nSmokeDetector:{}".format(domain, googleres.rrset, sdres.rrset)
+    else:
+        response = "There is no discrepancy between the DNS records for {} based on " \
+                   "a comparison of the current DNS used by SmokeDetector and Google DNS.\n\n" \
+                   "{}".format(domain, sdres.rrset)
+
+    return response
