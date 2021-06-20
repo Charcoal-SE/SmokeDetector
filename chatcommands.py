@@ -2344,7 +2344,7 @@ def dnscheck(domain) -> str:
     :return: A comparison of domain data if data doesn't match, or "No discrepancy"
     """
     # Initialize Google resolver
-    google = dns.resolver.Resolve(configure=False)
+    google = dns.resolver.Resolver(configure=False)
     google.nameservers = ['8.8.8.8', '8.8.4.4']
     google.cache = None
 
