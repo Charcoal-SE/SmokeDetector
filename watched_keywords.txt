@@ -30664,3 +30664,4 @@
 1624198521	cigien	isikkarot\.com
 1624198963	cigien	best[\W_]*+rdp[\W_]*+service(?!\.com(?<=bestrdpservice\.com))
 1624199226	cigien	thegioiremviet\.vn
+1624199473	Makyen	sarah_offcial_s
