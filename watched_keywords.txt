@@ -30659,3 +30659,4 @@
 1624190704	Cody Gray	one[\W_]*way[\W_]*taxi
 1624192361	Cody Gray	bestrdpservice\.com
 1624192960	Cody Gray	autowranglersecrets\.com
+1624193054	Cody Gray	Auto[\W_]*Wranglers?
