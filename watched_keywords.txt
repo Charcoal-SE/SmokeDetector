@@ -30661,3 +30661,4 @@
 1624192960	Cody Gray	autowranglersecrets\.com
 1624193054	Cody Gray	Auto[\W_]*Wranglers?
 1624198466	Cody Gray	easymarks\.org
+1624198521	cigien	isikkarot\.com
