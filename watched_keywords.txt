@@ -30682,3 +30682,4 @@
 1624260203	tripleee	gothotnews\.com
 1624260232	tripleee	wp_expert_basir
 1624261152	tripleee	geometrydash-best\.com
+1624261981	tripleee	satellite[\W_]*+debris
