@@ -30685,3 +30685,4 @@
 1624261981	tripleee	satellite[\W_]*+debris
 1624262004	tripleee	glowsmiles\.in
 1624262947	tripleee	purepay\.eu
+1624268414	tripleee	wuxiaworldsite\.co
