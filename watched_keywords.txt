@@ -30737,3 +30737,4 @@
 1624388824	10 Rep	(?:visuals@)?adwise\.cz
 1624394761	Makyen	dr\.zubbysolutionhome(?:@gmail\.com)?
 1624394779	Makyen	d(?:octo)?r[\W_]*+zubby
+1624394795	Makyen	drzubbyherbalcure\.weebly\.com
