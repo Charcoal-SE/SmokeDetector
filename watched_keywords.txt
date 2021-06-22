@@ -30701,3 +30701,4 @@
 1624332190	Ryan M	hotnewsbox\.com
 1624332212	Ryan M	hotnewsbox(?!\.com)
 1624332387	cigien	playezu\.com
+1624335189	Ryan M	linksys-smartwi-fi\.com
