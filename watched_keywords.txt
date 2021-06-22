@@ -30725,3 +30725,4 @@
 1624358653	tripleee	cryptocurrencyscript\.com
 1624361320	tripleee	eyeweb\.com
 1624361426	tripleee	(?-i:^Eyeglasses Online$)
+1624362164	tripleee	gajarts\.com
