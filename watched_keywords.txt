@@ -30718,3 +30718,4 @@
 1624349843	tripleee	clownfishvoicechanger\.xyz
 1624349872	tripleee	deltanetextranet\.co
 1624350895	tripleee	phoneagent007\.com
+1624350970	Cody Gray	[Tt]ype[\W_]*[Oo]f[\W_]*[A]pps[\W_]*[Ss]hould[\W_]*[Pp]arents[\W_]*[Ii]nstall[\W_]*[Ii]n[\W_]*[Tt]heir-[Kk]ids[\W_]*[Pp]hones
