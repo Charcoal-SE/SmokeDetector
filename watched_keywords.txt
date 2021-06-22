@@ -30730,3 +30730,4 @@
 1624365738	Spevacus	getwiser\.ai
 1624366426	tripleee	twin[\W_]*+poker\d*
 1624366443	tripleee	joker[\W_]*+banting
+1624366459	tripleee	95\.111\.196\.17
