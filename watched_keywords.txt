@@ -30724,3 +30724,4 @@
 1624356065	tripleee	ampedwirelessmart\.com
 1624358653	tripleee	cryptocurrencyscript\.com
 1624361320	tripleee	eyeweb\.com
+1624361426	tripleee	(?-i:^Eyeglasses Online$)
