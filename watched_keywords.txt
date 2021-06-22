@@ -30728,3 +30728,4 @@
 1624362164	tripleee	gajarts\.com
 1624363508	Cody Gray	(?-i:UCV-Efe1tQSocG9JCbBdgnww)(?#YouTube channel)
 1624363542	Cody Gray	code[\W_]*it[\W_]*with[\W_]*ak
+1624365738	Spevacus	getwiser\.ai
