@@ -30304,7 +30304,7 @@
 1623032669	Spevacus	urdolls(?!\.com)
 1623038299	cigien	drowoherbs(?:@gmail\.com)?
 1623038332	cigien	d(?:octo)?r[\W_]*+owo
-1623051934	tripleee	https://docs\.microsoft\.com/en-us/dotnet/csharp/language-reference/keywords/static
+1623051934	tripleee	https://docs\.microsoft\.com/en-us/dotnet/csharp/(?:language-reference/keywords/static|programming-guide/classes-and-structs/ref-returns)
 1623055334	tripleee	skyworth\.net
 1623055407	tripleee	cairdana\.com
 1623055475	tripleee	rtdev\.xyz
