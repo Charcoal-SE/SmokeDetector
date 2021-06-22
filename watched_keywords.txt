@@ -30740,3 +30740,4 @@
 1624394795	Makyen	drzubbyherbalcure\.weebly\.com
 1624396542	cigien	investitwisely\.com
 1624402343	cigien	smmvaly\.com
+1624402360	cigien	smmvaly(?!\.com)
