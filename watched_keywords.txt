@@ -30722,3 +30722,4 @@
 1624353376	Cody Gray	website[\W_]*designs[\W_]*company
 1624355321	tripleee	(?-i:3w ?ZPhtX)(?# bit.ly)
 1624356065	tripleee	ampedwirelessmart\.com
+1624358653	tripleee	cryptocurrencyscript\.com
