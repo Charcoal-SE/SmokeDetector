@@ -30764,3 +30764,4 @@
 1624434263	Cody Gray	url-opener\.com
 1624434719	Ryan M	agenterbooks\.com
 1624435273	Ryan M	gosocials\.net
+1624439165	Glorfindel	product-notices-for-woocommerce
