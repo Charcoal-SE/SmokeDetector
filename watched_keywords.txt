@@ -30753,3 +30753,4 @@
 1624427596	Ryan M	best[\W_]*+immigration[\W_]*+consultants
 1624427651	double-beep	laserhairremovaldelhi\.com
 1624427747	Ryan M	laser[\W_]*+hair[\W_]*+removal[\W_]*+clinic
+1624427781	Ryan M	best[\W_]*+laser[\W_]*+hair[\W_]*+removal
