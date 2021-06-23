@@ -30779,3 +30779,4 @@
 1624457668	tripleee	takipcenneti\.net
 1624463556	cigien	elextutorial\.com
 1624464195	cigien	vashikaranspecialistbabaji\.com
+1624464516	Cody Gray	fer(?:nando)?[\W_]*carranza
