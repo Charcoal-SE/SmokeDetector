@@ -30752,3 +30752,4 @@
 1624426737	Ryan M	everestedu\.co\.in
 1624427596	Ryan M	best[\W_]*+immigration[\W_]*+consultants
 1624427651	double-beep	laserhairremovaldelhi\.com
+1624427747	Ryan M	laser[\W_]*+hair[\W_]*+removal[\W_]*+clinic
