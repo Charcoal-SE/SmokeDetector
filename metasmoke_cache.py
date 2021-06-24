@@ -152,7 +152,7 @@ def dump_cache_data():
 
     :returns: None
     """
-    datahandling._dump_pickle('metasmokeCacheData.p',
+    datahandling.dump_pickle('metasmokeCacheData.p',
                               {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
 
 
