@@ -888,7 +888,7 @@ simply\W?flawless\W?cream
 trim\W?fit
 apple\W?stem\W?cell
 hdt[\W_]*+male[\W_]*+enhancement
-(?<=/)vcor(?=[-/<"]|$)
+vcore(?<=/vcor)(?=[-/<"]|$)
 brain\W?360
 rejuvilane
 (?:1\W*+)?408\W*+818\W*+9369
@@ -1522,7 +1522,7 @@ love\Wspells?
 (?:regenerative\W*+medicine|stem\W*+cell\W*+therapy)\W*+houston
 keto\W?bhb(?:\W?\d+)?
 [a-z_]*+(?:1_*+)?844[\W_]*+617[\W_]*+9531[a-z_]*+
-(?<=/)yahoo-email
+yahoo-email(?<=/yahoo-email)
 VitalityTech(?:\W?Testosterone)?(?!\.com)
 terrapure\W?cbd
 retinollift\W?dk
@@ -1598,7 +1598,7 @@ healthsupplementfordiet
 ultra\W*+last(?:\W*+xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo\W?drive
-(?<=/)apple-id
+apple-id(?<=/apple-id)
 毕业证
 学历认证
 レーザーポインター
@@ -1784,7 +1784,7 @@ kamadex
 advcnd
 (?:oasis[\W_]*+)?trim[\W_]*+keto(?:[\W_]*+(?:fast|\d++|[\da-f]{4,}+))*
 velocity\W?trim
-(?<=/)ketosis(?:-\w+)+
+ketosis(?<=/ketosis)(?:-\w+)+
 thepilpedia(?!\.com)
 alka\W*+tone(?:\W*+keto)?
 viril\W?pump
@@ -1943,7 +1943,7 @@ super\W*+cut\W*+keto(?:\W*+\d+)?
 keto\W*+dietz(?!\.com(?<=ketodietz\.com))(?:\W*+\d++)?
 slim\W*+linic\W*+keto(?:\W*+(?:web|\d++))*
 prime\W*+x\W*+Factor
-(?<=>)https?://(?:www\.)?4cashpath\.com(?:/[\w/-]*)?(?=</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
+http(?<=>http)s?://(?:www\.)?4cashpath\.com(?:/[\w/-]*)?(?=</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
 keto\W*+plan\W*+classic\W*+formula
 primo\W*+boost\W*+keto(?:\W*+\d++)?
 com\.CRE8\.LudoChat
