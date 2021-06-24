@@ -30806,3 +30806,4 @@
 1624516994	Cody Gray	esther[\W_]*rantzen[\W_]*cbd
 1624521483	Cody Gray	springsconcretepros\.com
 1624521897	tripleee	chicadragon\.com
+1624527355	tripleee	reviews4health\.com
