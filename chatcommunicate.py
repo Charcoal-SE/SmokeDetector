@@ -19,7 +19,7 @@ import shlex
 import datahandling
 import metasmoke
 import classes.feedback
-from helpers import log
+from helpers import log, redact_passwords
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -321,6 +321,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     global _rooms
 
     msg = msg.rstrip()
+    msg = redact_passwords(msg)
     target_rooms = set()
 
     # Go through the list of properties in "has" and add all rooms which have any of those properties
