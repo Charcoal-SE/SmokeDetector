@@ -153,7 +153,7 @@ def dump_cache_data():
     :returns: None
     """
     datahandling.dump_pickle('metasmokeCacheData.p',
-                              {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
+                             {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
 
 
 def is_website_whitelisted(domain):
