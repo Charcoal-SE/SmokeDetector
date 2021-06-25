@@ -30832,3 +30832,4 @@
 1624626082	Spevacus	m\.multimining\.website
 1624552289	Ollie	sahten\.com
 1624552610	Ollie	abris-box-chevaux\.fr
+1624626532	Spevacus	Alpine[\W_]*+Ramble(?:[\W_]*+Treks)?(?!\.com)
