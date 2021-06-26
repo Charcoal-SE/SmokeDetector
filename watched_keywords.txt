@@ -30861,3 +30861,4 @@
 1624724996	Makyen	420[\W_]*+kushlife(?!\.com(?<=420kushlife\.com))
 1624725017	Makyen	(?-i:JXMSEY)
 1624725038	Makyen	deepneuron
+1624735298	Glorfindel	smart-orion
