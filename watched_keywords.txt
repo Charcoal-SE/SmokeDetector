@@ -30859,3 +30859,4 @@
 1624724358	cigien	quickfox\.com\.cn
 1624724422	cigien	bestsarkariyojana\.com
 1624724996	Makyen	420[\W_]*+kushlife(?!\.com(?<=420kushlife\.com))
+1624725017	Makyen	(?-i:JXMSEY)
