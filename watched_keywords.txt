@@ -30875,3 +30875,4 @@
 1624808382	cigien	naviera101\.com
 1624808542	cigien	tech[\W_]*+specs[\W_]*+mart(?!\.com(?<=techspecsmart\.com))
 1624810161	cigien	drogberaese54(?:@gmail\.com)?
+1624811323	Mast	(?-i:UC3bRqB9FlS49wCt5cEybKDw)(?#YouTube channel)
