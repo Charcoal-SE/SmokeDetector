@@ -30867,3 +30867,4 @@
 1624747641	cigien	freestrem\.com
 1624798477	Makyen	factsofindonesia[\W_]*+com
 1624803527	cigien	iconluxuryhotels\.com
+1624803758	cigien	tech-tweet\.com
