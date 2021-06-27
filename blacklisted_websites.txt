@@ -4080,3 +4080,4 @@ therouterhelp\.com
 cronj\.com
 satmodo\.com
 bimcadweb\.com
+sattaking\w\.in
