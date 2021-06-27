@@ -30877,3 +30877,4 @@
 1624810161	cigien	drogberaese54(?:@gmail\.com)?
 1624811323	Mast	(?-i:UC3bRqB9FlS49wCt5cEybKDw)(?#YouTube channel)
 1624815512	Cody Gray	jacobrosstalent\.com
+1624815581	Cody Gray	Jacob[\W_]*Ross[\W_]*Talent
