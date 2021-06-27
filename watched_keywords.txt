@@ -30874,3 +30874,4 @@
 1624808366	cigien	techspecsmart\.com
 1624808382	cigien	naviera101\.com
 1624808542	cigien	tech[\W_]*+specs[\W_]*+mart(?!\.com(?<=techspecsmart\.com))
+1624810161	cigien	drogberaese54(?:@gmail\.com)?
