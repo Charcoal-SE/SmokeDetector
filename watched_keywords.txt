@@ -30876,3 +30876,4 @@
 1624808542	cigien	tech[\W_]*+specs[\W_]*+mart(?!\.com(?<=techspecsmart\.com))
 1624810161	cigien	drogberaese54(?:@gmail\.com)?
 1624811323	Mast	(?-i:UC3bRqB9FlS49wCt5cEybKDw)(?#YouTube channel)
+1624815512	Cody Gray	jacobrosstalent\.com
