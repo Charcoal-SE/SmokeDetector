@@ -30868,3 +30868,4 @@
 1624798477	Makyen	factsofindonesia[\W_]*+com
 1624803527	cigien	iconluxuryhotels\.com
 1624803758	cigien	tech-tweet\.com
+1624803866	cigien	thetechnodiary\.com
