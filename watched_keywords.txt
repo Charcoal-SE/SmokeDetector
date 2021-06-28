@@ -30885,3 +30885,4 @@
 1624858263	cigien	scr99thai\.com
 1624859269	Makyen	dbglider\.com
 1624862045	cigien	dbglider(?!\.com|\sinc\.)
+1624862606	cigien	physician-data\.com
