@@ -30902,3 +30902,4 @@
 1624884132	tripleee	abestguide\.in
 1624884822	Makyen	undetectedcounterfeits\.com
 1624884845	Makyen	undetectedcounterfeits(?!\.com)
+1624887175	Ollie	chimpare\.com
