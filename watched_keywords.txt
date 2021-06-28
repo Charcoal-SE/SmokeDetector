@@ -30884,3 +30884,4 @@
 1624857855	cigien	forbesmagazine\.net
 1624858263	cigien	scr99thai\.com
 1624859269	Makyen	dbglider\.com
+1624862045	cigien	dbglider(?!\.com|\sinc\.)
