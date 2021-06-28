@@ -30880,3 +30880,4 @@
 1624815581	Cody Gray	Jacob[\W_]*Ross[\W_]*Talent
 1624815641	Cody Gray	ryan\.jones(?:@jacobrosstalent\.com)?
 1624840018	cigien	supremespellssolutions(?:@gmail\.com)?
+1624840289	cigien	thaonhi\.com\.vn
