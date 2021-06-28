@@ -30881,3 +30881,4 @@
 1624815641	Cody Gray	ryan\.jones(?:@jacobrosstalent\.com)?
 1624840018	cigien	supremespellssolutions(?:@gmail\.com)?
 1624840289	cigien	thaonhi\.com\.vn
+1624857855	cigien	forbesmagazine\.net
