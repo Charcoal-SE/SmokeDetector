@@ -30928,3 +30928,4 @@
 1624963382	tripleee	app-bizz\.blogspot\.com
 1624964283	tripleee	foursquareoutdoors\.com
 1624972169	Spevacus	zoshdigitate\.com
+1624986765	cigien	brandergroup\.net
