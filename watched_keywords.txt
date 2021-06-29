@@ -30920,3 +30920,4 @@
 1624948911	tripleee	crore[\W_]*+gtd
 1624949148	tripleee	velaninfo\.com
 1624949378	tripleee	tuteehub\.com
+1624952565	tripleee	cyberbahntas\.com
