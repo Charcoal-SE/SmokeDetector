@@ -30915,3 +30915,4 @@
 1624939330	tripleee	(?-i:AVERAGE[\W_]*+MAN)
 1624942619	cigien	thejeweljar\.com
 1624943764	cigien	ieqsgroup\.com
+1624943857	cigien	m2ysafety\.com
