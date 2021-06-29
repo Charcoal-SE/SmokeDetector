@@ -30913,3 +30913,4 @@
 1624939164	tripleee	(?-i:3y4ESxa)(?# bit.ly)
 1624939287	tripleee	theultimateencryption(?:[\W_]*+(?:at[\W_]*+)protonmail[\W_]*+(?:dot[\W_]*+)com)?
 1624939330	tripleee	(?-i:AVERAGE[\W_]*+MAN)
+1624942619	cigien	thejeweljar\.com
