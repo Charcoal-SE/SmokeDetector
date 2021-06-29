@@ -30918,3 +30918,4 @@
 1624944737	cigien	lavnalocks\.com
 1624948647	tripleee	deileromier(?# medium)
 1624948911	tripleee	crore[\W_]*+gtd
+1624949148	tripleee	velaninfo\.com
