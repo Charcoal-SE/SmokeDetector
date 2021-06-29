@@ -219,7 +219,7 @@ def setup_websocket(attempt, max_attempts):
         ws.send("155-questions-active")
         return ws
     except websocket.WebSocketException:
-        log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
+        log('warning', 'WS failed to create SE websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
 
 
@@ -242,7 +242,8 @@ def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
     return ws
 
 
-ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
+if not GlobalVars.no_se_activity_scan:
+    ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
@@ -288,7 +289,8 @@ while not GlobalVars.no_se_activity_scan:
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             exit_mode("early_exception")
-        ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
+        if not GlobalVars.no_se_activity_scan:
+            ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
 
         chatcommunicate.tell_rooms_with("debug", "{}: SE WebSocket: recovered from `{}`"
                                                  .format(GlobalVars.location, exception_only))
