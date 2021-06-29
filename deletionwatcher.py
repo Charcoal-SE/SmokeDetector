@@ -26,6 +26,8 @@ class DeletionWatcher:
     next_request_time = time.time() - 1
 
     def __init__(self):
+        if GlobalVars.no_deletion_watcher:
+            return
         DeletionWatcher.update_site_id_list()
         self.posts = {}
 
@@ -72,6 +74,8 @@ class DeletionWatcher:
                             pass
 
     def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
+        if GlobalVars.no_deletion_watcher:
+            return
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
@@ -151,6 +155,8 @@ class DeletionWatcher:
 
     @staticmethod
     def update_site_id_list():
+        if GlobalVars.no_deletion_watcher:
+            return
         soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
                              "html.parser")
         site_id_dict = {}

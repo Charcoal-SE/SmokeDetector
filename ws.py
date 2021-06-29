@@ -186,6 +186,7 @@ filter_auto_ignored_posts()
 
 GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
+GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
