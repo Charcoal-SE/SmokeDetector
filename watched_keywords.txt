@@ -30909,3 +30909,4 @@
 1624909889	Makyen	kitchensalty\.com
 1624914606	cigien	community\.rainbird\.ai
 1624915102	cigien	hauerpower\.com
+1624931177	cigien	(?:info@)?oraclecms\.com
