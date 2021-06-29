@@ -30917,3 +30917,4 @@
 1624943857	cigien	m2ysafety\.com
 1624944737	cigien	lavnalocks\.com
 1624948647	tripleee	deileromier(?# medium)
+1624948911	tripleee	crore[\W_]*+gtd
