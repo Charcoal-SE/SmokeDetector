@@ -30961,3 +30961,4 @@
 1625069745	cigien	worldcelebritynews\.com
 1625069761	cigien	digitalvadodara\.com
 1625070115	cigien	svrglobalsolutions\.com
+1625070138	cigien	svr[\W_]*+global[\W_]*+solutions(?!\.com(?<=svrglobalsolutions\.com))
