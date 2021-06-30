@@ -30935,3 +30935,4 @@
 1625005249	cigien	seokaos\.com
 1625016117	cigien	jqueenwatchwinders\.co\.uk
 1625025657	cigien	youtreex\.com
+1625025676	cigien	youtreex(?!\.com)
