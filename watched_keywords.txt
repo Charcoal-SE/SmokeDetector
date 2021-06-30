@@ -21463,7 +21463,6 @@
 1594230428	Makyen	geekdroids\.com
 1594230446	Makyen	drmawaylovespell\.com
 1594230462	Makyen	laddertopic\.com
-1594230478	Makyen	mcafeepro\.com
 1594230494	Makyen	rajeshmewawalla\.com
 1594230640	Makyen	rajesh[\W_]*+mewawalla(?!\.com(?<=rajeshmewawalla\.com))(?!(?<=^rajesh[\W_]*+mewawalla)$)
 1594243813	Makyen	buyblade\.com
