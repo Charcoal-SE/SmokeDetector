@@ -30952,3 +30952,4 @@
 1625042803	tripleee	red-gate\.com
 1625044144	tripleee	techzoan\.com
 1625051886	Glorfindel	myadultdaycare\.com
+1625068018	cigien	credit[\W_]*+saint[\W_]*+specialist(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
