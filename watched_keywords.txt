@@ -30958,3 +30958,4 @@
 1625069174	cigien	masterbundles\.com
 1625069705	cigien	timetocount\.com
 1625069721	cigien	atomchat\.com
+1625069745	cigien	worldcelebritynews\.com
