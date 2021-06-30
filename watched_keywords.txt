@@ -30937,3 +30937,4 @@
 1625025657	cigien	youtreex\.com
 1625025676	cigien	youtreex(?!\.com)
 1625028759	Cody Gray	togelsingapore4d
+1625028836	Cody Gray	a1togel(?:online)?(?#twitter/instagram)
