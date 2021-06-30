@@ -30951,3 +30951,4 @@
 1625040706	tripleee	create\.kulfyapp\.com
 1625042803	tripleee	red-gate\.com
 1625044144	tripleee	techzoan\.com
+1625051886	Glorfindel	myadultdaycare\.com
