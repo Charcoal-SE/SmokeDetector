@@ -30963,3 +30963,4 @@
 1625070138	cigien	svr[\W_]*+global[\W_]*+solutions(?!\.com(?<=svrglobalsolutions\.com))
 1625071113	cigien	redgate\.research\.net
 1625074250	10 Rep	gbapps\.in
+1625072144	10 Rep	blogspotexchange\.blogspot\.com
