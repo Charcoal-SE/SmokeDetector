@@ -30976,3 +30976,4 @@
 1625119551	tripleee	(?-i:^Transformerind$)
 1625119623	tripleee	indiatransformer(?!\.com)
 1625122178	tripleee	chocomachinery\.com
+1625122256	tripleee	newhotplaza\.com
