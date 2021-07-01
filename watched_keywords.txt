@@ -30979,3 +30979,4 @@
 1625122623	tripleee	usaxoom\.com
 1625122821	tripleee	t10kwithshahin\.blogspot\.com
 1625130354	tripleee	periodix\.net
+1625130386	tripleee	periodix(?!\.net)
