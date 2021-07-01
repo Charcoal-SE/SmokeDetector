@@ -30997,3 +30997,4 @@
 1625163553	cigien	buddhalovespell(?:@gmail\.com)?
 1625169261	cigien	waterbaike\.blogspot
 1625178438	cigien	wengpu\.net
+1625182165	Makyen	wengpu(?!\.net)
