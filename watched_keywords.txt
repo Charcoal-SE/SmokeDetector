@@ -31008,3 +31008,4 @@
 1625224265	double-beep	shoreintel\.com
 1625231839	tripleee	onnisonwiteegreencoltd\.com
 1625236822	cigien	tcc-pronto\.com
+1625237433	cigien	onni[\W_]*+sonwitee[\W_]*+green[\W_]*+co[\W_]*+ltd(?!\.com(?<=onnisonwiteegreencoltd\.com))
