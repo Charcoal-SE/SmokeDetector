@@ -31015,3 +31015,4 @@
 1625238138	cigien	qualityzoneinfotech\.com
 1625238155	cigien	quality[\W_]*+zone[\W_]*+infotech(?!\.com(?<=qualityzoneinfotech\.com))
 1625238422	cigien	678\.vn
+1625238458	cigien	mahziba\.com
