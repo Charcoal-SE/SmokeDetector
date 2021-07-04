@@ -31083,3 +31083,4 @@
 1625413298	cigien	lisanik_bot(?#t.me)
 1625413422	cigien	vexagame\.com
 1625413658	cigien	biographydiary\.com
+1625413709	cigien	notjournals\.com
