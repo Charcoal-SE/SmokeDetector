@@ -31067,3 +31067,4 @@
 1625355927	cigien	iptv-prof\.com
 1625358443	cigien	sniffingnose(?:[\W_]*+(?:at[\W_]*+)?repairman(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1625375684	Nisse Engström	bestindoordrone\.com
+1625386020	Cody Gray	minitechtips\.com
