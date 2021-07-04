@@ -31070,7 +31070,6 @@
 1625386020	Cody Gray	minitechtips\.com
 1625386043	Cody Gray	gurubuilds\.com
 1625386064	Cody Gray	mavericsolution\.com
-1625388152	Cody Gray	((?:ho(?:(?:me)|(?:use))s?)|(?:villas?)?)phuket[\W_]*(?1)
 1625391855	Cody Gray	pineapple#9999
 1625396831	Cody Gray	uuWind
 1625397329	Mast	charmsphere\.com
