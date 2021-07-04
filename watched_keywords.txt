@@ -31072,3 +31072,4 @@
 1625386064	Cody Gray	mavericsolution\.com
 1625388152	Cody Gray	((?:ho(?:(?:me)|(?:use))s?)|(?:villas?)?)phuket[\W_]*(?1)
 1625391855	Cody Gray	pineapple#9999
+1625396831	Cody Gray	uuWind
