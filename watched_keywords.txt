@@ -31080,3 +31080,4 @@
 1625401338	Makyen	phuketsalehome\.com
 1625401357	Makyen	anvelope\.md
 1625401374	Makyen	charmsphere(?!\.com)
+1625413298	cigien	lisanik_bot(?#t.me)
