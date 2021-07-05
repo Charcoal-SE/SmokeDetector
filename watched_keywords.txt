@@ -31113,3 +31113,4 @@
 1625490903	Machavity	serpapi
 1625492136	cigien	keoso\.tv
 1625492627	cigien	tech\.esearchlogix\.com
+1625492690	cigien	semreseller\.com
