@@ -31106,3 +31106,4 @@
 1625486848	Makyen	linhdan\.vn
 1625486865	Makyen	shentongroup\.co\.uk
 1625486887	Makyen	emergencysystems-inc\.com
+1625486901	Makyen	verma[\W_]*+farms[\W_]*+cbd[\W_]*+gummies
