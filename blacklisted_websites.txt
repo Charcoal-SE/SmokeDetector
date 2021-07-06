@@ -4097,3 +4097,4 @@ tripoto\.com
 homify\.in
 transparencymarketresearch\.com
 login2explore\.com
+apl\.ninja
