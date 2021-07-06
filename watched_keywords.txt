@@ -31053,7 +31053,6 @@
 1625313072	Cody Gray	lifesport\.vn
 1625316201	Cody Gray	blusteak\.com
 1625317687	Cody Gray	CBD[\W_]*Hero
-1625321984	cigien	login2explore\.com
 1625326880	cigien	thecarplaza\.com
 1625326902	cigien	elpasopressurewash\.com
 1625326961	cigien	kkrlinens\.com
