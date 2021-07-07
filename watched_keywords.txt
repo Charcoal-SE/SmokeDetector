@@ -31173,3 +31173,4 @@
 1625672234	cigien	clippingpathgenius\.com
 1625672271	cigien	goodhometime\.com
 1625672697	cigien	creativerats\.com
+1625675616	cigien	caninejournal\.com
