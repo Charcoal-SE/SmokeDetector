@@ -31205,3 +31205,4 @@
 1625754913	cigien	asap[\W_]*+holidays(?!\.com(?<=asapholidays\.com))
 1625755460	cigien	fatafatsewa\.com
 1625756496	cigien	iogames\.onl
+1625761879	Makyen	d(?:octo)?r[\W_]*+mrinalini[\W_]*+sharma(?!\.com(?<=drmrinalinisharma\.com))
