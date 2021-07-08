@@ -31190,3 +31190,4 @@
 1625738162	Makyen	herbivore[\W_]*+cbd[\W_]*+gummies
 1625738243	Makyen	ketoavis[\W_]*+com(?<!ketoavis\.com)
 1625738705	Cody Gray	marketingratna\.com
+1625739215	Cody Gray	gdgoenkarohini\.edu\.in
