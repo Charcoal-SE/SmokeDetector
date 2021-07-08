@@ -31180,3 +31180,4 @@
 1625726315	Cody Gray	thehotsite\.com
 1625731285	Cody Gray	jinnbyte\.com
 1625731307	Cody Gray	Jinn[\W_]*Byte
+1625731539	Cody Gray	communicationcrafts\.com
