@@ -31187,3 +31187,4 @@
 1625735353	Cody Gray	thexploretech\.com
 1625735483	Cody Gray	thetopnew\.com
 1625736567	Cody Gray	gradschoolgenius\.com
+1625738162	Makyen	herbivore[\W_]*+cbd[\W_]*+gummies
