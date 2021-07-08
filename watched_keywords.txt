@@ -31182,3 +31182,4 @@
 1625731750	Cody Gray	communicationcrafts\.com
 1625732117	Cody Gray	magento[\W_]*dropshipping[\W_]*(?:services)?
 1625733029	Cody Gray	fdpmoldremediation\.com
+1625734790	Cody Gray	applatide\.com
