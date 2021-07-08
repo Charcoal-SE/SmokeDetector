@@ -31188,4 +31188,3 @@
 1625735483	Cody Gray	thetopnew\.com
 1625736567	Cody Gray	gradschoolgenius\.com
 1625738162	Makyen	herbivore[\W_]*+cbd[\W_]*+gummies
-1625738179	Makyen	ketoavis[\W_]*+com
