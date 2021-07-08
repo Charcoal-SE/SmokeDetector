@@ -31191,3 +31191,4 @@
 1625738243	Makyen	ketoavis[\W_]*+com(?<!ketoavis\.com)
 1625738705	Cody Gray	marketingratna\.com
 1625739215	Cody Gray	gdgoenkarohini\.edu\.in
+1625739432	Cody Gray	planete-cocoon\.com
