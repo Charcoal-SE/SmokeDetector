@@ -31216,3 +31216,4 @@
 1625811739	Cody Gray	Esthetic[\W_]*pediatric[\W_]*crowns?
 1625812604	Cody Gray	(?-i:0NZ-AO832JI)(?#YouTube spam)
 1625815196	Makyen	huptechweb\.com
+1625817694	Cody Gray	bestnewsfast\.com
