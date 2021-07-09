@@ -31231,3 +31231,4 @@
 1625824468	Ryan M	monarch-innovation\.com
 1625827706	double-beep	millercoupons\.com
 1625832366	Cody Gray	Shore[\W_]*Intel(?!\.com(?<=shoreintel\.com))
+1625833991	cigien	essaygator\.com
