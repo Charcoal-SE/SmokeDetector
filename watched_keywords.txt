@@ -31225,3 +31225,4 @@
 1625822789	Cody Gray	wemcafeecomactivate(?#sites.google.com)
 1625823011	double-beep	blogsvin\.com
 1625823276	Ryan M	doorsstudio\.com
+1625823334	Ryan M	doors[\W_]*+studio(?!\.com(?<=doorsstudio\.com))
