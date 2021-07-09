@@ -31234,3 +31234,4 @@
 1625833991	cigien	essaygator\.com
 1625834130	cigien	aeyec\.com
 1625834413	cigien	suachualuudienups\.com
+1625834505	cigien	blogsvin(?!\.com)
