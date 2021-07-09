@@ -31228,3 +31228,4 @@
 1625823334	Ryan M	doors[\W_]*+studio(?!\.com(?<=doorsstudio\.com))
 1625823447	Ryan M	indecalinsieutoc(?:tphcm)?
 1625823627	Ryan M	TPHCM
+1625824468	Ryan M	monarch-innovation\.com
