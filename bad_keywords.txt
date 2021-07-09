@@ -2515,3 +2515,4 @@ green[\W_]*+canyon(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|
 (?:(?:ij|start)[\W_]*+)++can+on(?:[\W_]*+(?:ij|start))*+\w{0,5}(?<!ij\.start\.canon)
 (?-i:CronJ)
 (?:buy|purchase|order)[\W_]*ambien[\W_]*(?:\d*[\W_]*mg)?[\W_]*(?:online)?
+wilesdoro(?:@gmail\.com)?
