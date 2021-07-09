@@ -31232,3 +31232,4 @@
 1625827706	double-beep	millercoupons\.com
 1625832366	Cody Gray	Shore[\W_]*Intel(?!\.com(?<=shoreintel\.com))
 1625833991	cigien	essaygator\.com
+1625834130	cigien	aeyec\.com
