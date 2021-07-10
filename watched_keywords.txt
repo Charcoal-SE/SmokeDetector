@@ -31249,3 +31249,4 @@
 1625903821	Makyen	spineseo\.com
 1625903839	Makyen	spineseo(?!\.com)
 1625903889	Makyen	5g-male\.company\.site
+1625903910	Makyen	pechakucha\.com
