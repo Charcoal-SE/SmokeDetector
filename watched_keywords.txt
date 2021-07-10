@@ -31245,7 +31245,6 @@
 1625893678	Makyen	logo[\W_]*+agency24
 1625893693	Makyen	7kR4(?#shortened URL with t.ly goes to fiverr.com/logoagency24)
 1625893710	Makyen	khoa\.la@outlook\.com
-1625901225	Makyen	hkrtrainings\.com
 1625903821	Makyen	spineseo\.com
 1625903839	Makyen	spineseo(?!\.com)
 1625903889	Makyen	5g-male\.company\.site
