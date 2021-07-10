@@ -31267,3 +31267,4 @@
 1625920952	cigien	sasystems\.solutions
 1625929187	cigien	adarshsharmaphotography\.com
 1625930147	cigien	czcymotor\.com
+1625930172	cigien	czcymotor(?!\.com)
