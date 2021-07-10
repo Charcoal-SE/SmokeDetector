@@ -31247,3 +31247,4 @@
 1625893710	Makyen	khoa\.la@outlook\.com
 1625901225	Makyen	hkrtrainings\.com
 1625903821	Makyen	spineseo\.com
+1625903839	Makyen	spineseo(?!\.com)
