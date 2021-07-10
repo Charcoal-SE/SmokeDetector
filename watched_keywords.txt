@@ -31245,3 +31245,4 @@
 1625893678	Makyen	logo[\W_]*+agency24
 1625893693	Makyen	7kR4(?#shortened URL with t.ly goes to fiverr.com/logoagency24)
 1625893710	Makyen	khoa\.la@outlook\.com
+1625901225	Makyen	hkrtrainings\.com
