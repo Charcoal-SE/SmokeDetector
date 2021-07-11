@@ -31281,3 +31281,4 @@
 1625974266	cigien	wpxpo\.com
 1625977249	cigien	ethud57(?:@yahoo\.com)?
 1626007748	cigien	jiangren\.com\.au
+1626007854	cigien	yalla\.deals
