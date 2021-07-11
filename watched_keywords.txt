@@ -31284,3 +31284,4 @@
 1626007854	cigien	yalla\.deals
 1626008523	cigien	wangye3452(?#t.me)
 1626008655	cigien	wallet\.matic\.network
+1626008720	cigien	fitoont\.com
