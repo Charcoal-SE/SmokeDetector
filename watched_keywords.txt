@@ -31313,3 +31313,4 @@
 1626100068	cigien	alyssa1990
 1626100431	Makyen	realtrainings\.com
 1626105309	Spevacus	transcriberry\.com
+1626105432	Makyen	us[\W_]*+pro[\W_]*+(?:card|phone[\W_]*+number)
