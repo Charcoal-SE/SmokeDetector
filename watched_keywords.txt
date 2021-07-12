@@ -31295,3 +31295,4 @@
 1626065360	Makyen	keto[\W_]*+trulean(?:[\W_]*+(?:\d++|[\da-f]{5,}+))*
 1626065558	cigien	googleopinionrewards\.page\.link
 1626086171	Jeff Schaller	brandmanifestors\.com
+1626089247	Glorfindel	happywheelsunblocked\.io
