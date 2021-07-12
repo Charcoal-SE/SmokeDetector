@@ -31306,3 +31306,4 @@
 1626098312	cigien	brand[\W_]*+manifestors(?!\.com(?<=brandmanifestors\.com))
 1626098410	cigien	zoopgo\.com
 1626098545	cigien	emiratesvisa\.org
+1626098564	cigien	meoutsourcing\.com
