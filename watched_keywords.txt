@@ -31304,3 +31304,4 @@
 1626098125	cigien	(?:1[\W_]*+)?8[\W_]*+[O0][\W_]*+8[\W_]*+8[\W_]*+[O0][\W_]*+[O0][\W_]*+8[\W_]*+1[\W_]*+5[\W_]*+5
 1626098227	cigien	dr-razmara\.com
 1626098312	cigien	brand[\W_]*+manifestors(?!\.com(?<=brandmanifestors\.com))
+1626098410	cigien	zoopgo\.com
