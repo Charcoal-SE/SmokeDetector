@@ -31294,3 +31294,4 @@
 1626064677	Makyen	rootkits[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
 1626065360	Makyen	keto[\W_]*+trulean(?:[\W_]*+(?:\d++|[\da-f]{5,}+))*
 1626065558	cigien	googleopinionrewards\.page\.link
+1626086171	Jeff Schaller	brandmanifestors\.com
