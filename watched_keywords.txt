@@ -31315,3 +31315,4 @@
 1626105309	Spevacus	transcriberry\.com
 1626105432	Makyen	us[\W_]*+pro[\W_]*+(?:card|phone[\W_]*+number)
 1626107146	Makyen	coinbase(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
+1626106423	Ollie	flashfinancialguide\.com
