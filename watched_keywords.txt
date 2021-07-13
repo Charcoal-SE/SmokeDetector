@@ -31336,3 +31336,4 @@
 1626179912	cigien	soultatva\.com
 1626179970	cigien	dhakasports\.com\.bd
 1626180386	cigien	360techexplorer\.com
+1626180619	cigien	nuvectra[\W_]*+medical(?!\.com(?<=nuvectramedical\.com))
