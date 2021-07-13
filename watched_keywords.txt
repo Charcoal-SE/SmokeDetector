@@ -31338,3 +31338,4 @@
 1626180386	cigien	360techexplorer\.com
 1626180619	cigien	nuvectra[\W_]*+medical(?!\.com(?<=nuvectramedical\.com))
 1626180882	cigien	waytomongolia\.com
+1626180920	Spevacus	indidigital\.in
