@@ -31291,7 +31291,6 @@
 1626055861	cigien	mathimatika\.webflow\.io
 1626055919	cigien	(?-i:mSFNTRFTtyKtVgk87)(?#google forms)
 1626062560	cigien	learndiversified\.com
-1626064677	Makyen	rootkits[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
 1626065360	Makyen	keto[\W_]*+trulean(?:[\W_]*+(?:\d++|[\da-f]{5,}+))*
 1626065558	cigien	googleopinionrewards\.page\.link
 1626086171	Jeff Schaller	brandmanifestors\.com
