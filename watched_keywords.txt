@@ -31349,3 +31349,4 @@
 1626233362	cigien	articlesboxes\.com
 1626233378	cigien	articlesboxes(?!\.com)
 1626234998	Makyen	vipcontentshop\.com
+1626235175	Makyen	ingoodpost\.com
