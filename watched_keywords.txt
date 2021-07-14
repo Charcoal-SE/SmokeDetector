@@ -31356,3 +31356,4 @@
 1626252446	tripleee	thecowboychannel\.com
 1626252535	tripleee	wboc\.com
 1626259504	Makyen	bharath[\W_]*+ortho(?:pa?edics?(?!\.com(?<=bharathorthopaedics\.com)))?(?:[\W_]*+hospital)?
+1626259526	Makyen	d(?:octo)?r[\W_]*+bharath
