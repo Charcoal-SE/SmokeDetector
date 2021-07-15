@@ -31411,3 +31411,4 @@
 1626344259	Ryan M	judocoder\.com
 1626346137	Ryan M	jbbatteryfrance\.com
 1626346293	Mast	market[\W_]*+was[\W_]*+valued[\W_]*+at[\W_]*+USD
+1626350567	Jeff Schaller	whitehacker
