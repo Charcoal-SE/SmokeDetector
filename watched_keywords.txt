@@ -31400,3 +31400,4 @@
 1626334543	Ryan M	mapdriving-directions\.info
 1626334871	Ryan M	fireboyand-watergirl\.com
 1626334939	Ryan M	fireboy[\W_]*+and[\W_]*+watergirl(?!\.com(?<=fireboyand-watergirl\.com))
+1626336019	Ryan M	autoaim\.tech
