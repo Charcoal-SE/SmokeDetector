@@ -30217,7 +30217,6 @@
 1622733567	cigien	prorevibe(?!\.com)
 1622736188	Ollie	askyourprofessional\.com
 1622764195	cigien	illuminatihood132(?:@gmail\.com)?
-1622777611	cigien	designveloper\.com
 1622777769	cigien	mmenterprises\.co\.in
 1622779426	Makyen	matkaoffice\.net
 1622782584	tripleee	linksysvelopsupport\.com
