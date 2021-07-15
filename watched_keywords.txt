@@ -31405,3 +31405,4 @@
 1626339780	Ryan M	vershinin\.biz
 1626340507	Ryan M	terrariablog\.com
 1626341257	Ryan M	explainermojo\.com
+1626341372	Ryan M	explainer[\W_]*+video[\W_]*+company
