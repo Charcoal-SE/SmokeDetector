@@ -31407,3 +31407,4 @@
 1626341257	Ryan M	explainermojo\.com
 1626341372	Ryan M	explainer[\W_]*+video[\W_]*+company
 1626341956	Ryan M	cincinnatiproshoponline\.com
+1626342265	Ryan M	arunseo\.com
