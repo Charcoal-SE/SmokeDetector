@@ -31402,3 +31402,4 @@
 1626334939	Ryan M	fireboy[\W_]*+and[\W_]*+watergirl(?!\.com(?<=fireboyand-watergirl\.com))
 1626336019	Ryan M	autoaim\.tech
 1626336576	Ryan M	anandcontrol\.in
+1626339780	Ryan M	vershinin\.biz
