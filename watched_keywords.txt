@@ -31436,3 +31436,4 @@
 1626438010	Jeff Schaller	smartdigitizers\.com
 1626439738	Spevacus	medimagic\.com
 1626444481	Spevacus	pankajsubedi2\.blogspot
+1626445926	Spevacus	androidapplicationsblogs\.blogspot
