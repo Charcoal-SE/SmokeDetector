@@ -31453,3 +31453,4 @@
 1626534771	cigien	cyber[\W_]*+credit[\W_]*+guru(?:@gmail\.com)?
 1626535353	cigien	livedownloading\.com
 1626538817	Spevacus	(?-i:Hannah[\W_]*+J[\W_]*+Parrish)
+1626543216	cigien	tools\.kidsghor\.com
