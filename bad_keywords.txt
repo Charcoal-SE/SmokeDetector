@@ -2520,3 +2520,4 @@ JEE\-IIT
 rootkits[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
 8[\W_]*+[O0][\W_]*+8[\W_]*+6[\W_]*+9[\W_]*+8[\W_]*+[O0][\W_]*+[O0][\W_]*+[O0][\W_]*+7
 TunesKit(?!\.com)
+lija\.akter
