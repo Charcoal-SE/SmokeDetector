@@ -31483,3 +31483,4 @@
 1626692578	Makyen	webomaze\.com
 1626692610	Makyen	parkprestigefinsbury\.gumroad\.com
 1626692633	Makyen	crowdcar\.com
+1626692667	Makyen	crowdcar(?!\.com)
