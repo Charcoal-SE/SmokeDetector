@@ -31485,3 +31485,4 @@
 1626692633	Makyen	crowdcar\.com
 1626692667	Makyen	crowdcar(?!\.com)
 1626693996	Makyen	slideshare\.net
+1626694104	Makyen	studio45\.in
