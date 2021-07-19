@@ -31495,3 +31495,4 @@
 1626705011	Makyen	amazon[\W_]*+prime[\W_]*+phone[\W_]*+numbers?[^s]{0,60}+support
 1626710476	Makyen	sofiaspells\.webnode\.com
 1626710495	Makyen	sofia[\W_]*+(?:s[\W_]*+)?spells(?!\.webnode\.com(?<=sofiaspells\.webnode\.com))(?:@gmail\.com)?
+1626708041	Xnero	@Ojo8898(?#Telegram)
