@@ -31490,3 +31490,4 @@
 1626694592	Makyen	xmediasolution\.com
 1626694610	Makyen	x[\W_]*+media[\W_]*+solution(?!\.com(?<=xmediasolution\.com))s?
 1626697241	Xnero	seoevrimachicago\.com
+1626684702	Xnero	designpluz\.com\.au
