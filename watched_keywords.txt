@@ -31476,3 +31476,4 @@
 1626658180	cigien	fawesil\.com
 1626674547	Ryan M	cncintel
 1626675547	Ryan M	lass[\W_]*+naturals(?!\.com)
+1626681046	Ryan M	vlonebrand\.com
