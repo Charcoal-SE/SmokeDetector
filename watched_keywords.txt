@@ -31478,3 +31478,4 @@
 1626675547	Ryan M	lass[\W_]*+naturals(?!\.com)
 1626681046	Ryan M	vlonebrand\.com
 1626682295	Ryan M	tapdoanvset\.com
+1626682820	Ryan M	renkeer\.com
