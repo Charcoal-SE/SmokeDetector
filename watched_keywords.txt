@@ -31475,3 +31475,4 @@
 1626651374	cigien	navanblogs\.blogspot
 1626658180	cigien	fawesil\.com
 1626674547	Ryan M	cncintel
+1626675547	Ryan M	lass[\W_]*+naturals(?!\.com)
