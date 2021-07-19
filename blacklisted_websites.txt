@@ -4103,3 +4103,4 @@ signalscv\.com
 hkrtrainings\.com
 ketoavis[\W_]*+com
 designveloper\.com
+gamesd\.app
