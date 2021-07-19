@@ -4104,3 +4104,4 @@ hkrtrainings\.com
 ketoavis[\W_]*+com
 designveloper\.com
 gamesd\.app
+asquarecloudhosting\.com
