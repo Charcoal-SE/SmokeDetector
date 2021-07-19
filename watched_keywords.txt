@@ -31497,3 +31497,4 @@
 1626710495	Makyen	sofia[\W_]*+(?:s[\W_]*+)?spells(?!\.webnode\.com(?<=sofiaspells\.webnode\.com))(?:@gmail\.com)?
 1626708041	Xnero	@Ojo8898(?#Telegram)
 1626718550	Spevacus	boomxl\.com
+1626720636	10 Rep	RobotLAB\.com
