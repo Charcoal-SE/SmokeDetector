@@ -31493,3 +31493,4 @@
 1626684702	Xnero	designpluz\.com\.au
 1626702114	Xnero	(?-i:VT8SLZ5n2vs)(?#YouTube)
 1626705011	Makyen	amazon[\W_]*+prime[\W_]*+phone[\W_]*+numbers?[^s]{0,60}+support
+1626710476	Makyen	sofiaspells\.webnode\.com
