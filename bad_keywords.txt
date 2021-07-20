@@ -2524,3 +2524,4 @@ lija\.akter
 seo[\W_]*+exparte[\W_]*+team
 market[\W_]*+was[\W_]*+valued[\W_]*+at[\W_]*+USD
 sunlightmata(?:@gmail\.com)?
+ f[\W_]*a[\W_]*r[\W_]*m[\W_]*s[\W_]*c[\W_]*b[\W_]*d[\W_]*o[\W_]*i[\W_]*l(?!(?:[\W_]*\.)?[\W_]*c[\W_]*o[\W_]*m)
