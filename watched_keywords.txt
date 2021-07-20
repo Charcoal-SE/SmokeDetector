@@ -31519,3 +31519,4 @@
 1626801618	Spevacus	(?-i:xjBAlFC_s-g)(?#youtube.com)
 1626817500	Makyen	groupbuyanytool\.com
 1626817522	Makyen	groupbuyanytool(?!\.com)
+1626822886	cigien	smarthomeconfigurator\.com
