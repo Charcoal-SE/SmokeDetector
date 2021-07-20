@@ -4104,3 +4104,5 @@ ketoavis[\W_]*+com
 designveloper\.com
 gamesd\.app
 asquarecloudhosting\.com
+farmscbdoil\.com
+farms[\W_]*+cbd[\W_]*+oil[\W_]*+com
