@@ -31521,3 +31521,4 @@
 1626817522	Makyen	groupbuyanytool(?!\.com)
 1626822886	cigien	smarthomeconfigurator\.com
 1626822969	cigien	smart[\W_]*+home[\W_]*+configurator(?!\.com(?<=smarthomeconfigurator\.com))
+1626822989	cigien	datastructurex\.com
