@@ -31522,3 +31522,4 @@
 1626822969	cigien	smart[\W_]*+home[\W_]*+configurator(?!\.com(?<=smarthomeconfigurator\.com))
 1626822989	cigien	datastructurex\.com
 1626831529	cigien	advicer\.xyz
+1626834247	cigien	Ojo8898(?#Telegram)
