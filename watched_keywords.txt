@@ -30487,7 +30487,6 @@
 1623735594	cigien	runbearing(?!\.com)
 1623741710	tripleee	(?-i:Jaime_Corbett$)
 1623742011	double-beep	dmocoz\.com
-1623746004	tripleee	zeusbtc\.com
 1623747937	Xnero	icecubedigital\.com
 1623751548	double-beep	indiaenigma\.com
 1623753059	tripleee	(?-i:^gacon\.050201$)

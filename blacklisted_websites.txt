@@ -4107,3 +4107,4 @@ asquarecloudhosting\.com
 farmscbdoil\.com
 farms[\W_]*+cbd[\W_]*+oil[\W_]*+com
 smsgateway24\.com
+zeusbtc\.com
