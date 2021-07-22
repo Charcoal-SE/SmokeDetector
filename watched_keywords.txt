@@ -28528,7 +28528,6 @@
 1617444102	double-beep	documentromanesc\.com
 1617444122	double-beep	documenteverywhere\.com
 1617459144	Mast	riktigt[\W_]och[\W_]falskt[\W_]körkort
-1617461529	Jeff Schaller	homesforsale\.vegas
 1617462833	Makyen	shagunrana@sangamindia\.in
 1617463360	Mast	cbicaribbean\.com
 1617466070	Makyen	speedtestnet\.io
