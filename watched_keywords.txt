@@ -31540,3 +31540,4 @@
 1626910613	cigien	pickedbox\.com
 1626917644	cigien	truthtablegenerator\.com
 1626917696	cigien	overnightdelivery\.us
+1626930546	cigien	garminmapsupdate\.org
