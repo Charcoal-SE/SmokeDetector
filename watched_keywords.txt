@@ -31539,3 +31539,4 @@
 1626882490	Spevacus	buzztify\.com
 1626886456	Spevacus	(?-i:DeCpfMsFNlU)(?#youtu.be)
 1626910613	cigien	pickedbox\.com
+1626917644	cigien	truthtablegenerator\.com
