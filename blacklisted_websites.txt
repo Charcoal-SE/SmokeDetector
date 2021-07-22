@@ -4108,3 +4108,4 @@ farms[\W_]*+cbd[\W_]*+oil[\W_]*+com
 smsgateway24\.com
 zeusbtc\.com
 vit\.edu\.au
+alpinecredits\.ca
