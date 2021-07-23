@@ -498,3 +498,4 @@ williamriver
 (?-i:^Mia Cross$)
 (?-i:^Dai Software$)
 (?-i:^Bryan Wagan$)
+(?-i:^Lass Naturals$)
