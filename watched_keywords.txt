@@ -31561,3 +31561,4 @@
 1626999377	cigien	digitalowl\.top
 1626999558	cigien	bharat[\W_]*+kranti(?!\.com(?<=bharatkranti\.com))
 1627000067	cigien	darultahqiq\.com
+1627000256	cigien	37\.59\.213\.242
