@@ -31578,3 +31578,4 @@
 1627046774	Spevacus	i2iexports\.com
 1627046995	cigien	i2i[\W_]*+exports(?!\.com(?<=i2iexports\.com))
 1627049559	cigien	gsdcouncil\.org
+1627054826	Spevacus	iptvboxpro\.cam
