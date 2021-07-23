@@ -31577,3 +31577,4 @@
 1627046729	Jeff Schaller	learncodezone\.com
 1627046774	Spevacus	i2iexports\.com
 1627046995	cigien	i2i[\W_]*+exports(?!\.com(?<=i2iexports\.com))
+1627049559	cigien	gsdcouncil\.org
