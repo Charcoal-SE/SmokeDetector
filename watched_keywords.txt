@@ -31559,3 +31559,4 @@
 1626985759	Makyen	newusafunding\.com
 1626985796	Makyen	mr[\W_]*+boggitel[\W_]*+llc
 1626999377	cigien	digitalowl\.top
+1626999558	cigien	bharat[\W_]*+kranti(?!\.com(?<=bharatkranti\.com))
