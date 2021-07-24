@@ -31586,3 +31586,4 @@
 1627107734	Makyen	solutionbuggy\.com
 1627107750	Makyen	solutionbuggy(?!\.com)
 1627107766	Makyen	food[\W_]*+technology[\W_]*+consultants
+1627107782	Ryan M	yoonet\.in
