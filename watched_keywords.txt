@@ -31595,3 +31595,4 @@
 1627136057	Makyen	jeeneetqna\.in
 1627136175	Makyen	teex\.org
 1627136194	Makyen	pims\.edu
+1627136210	Makyen	fairtradecampaigns\.org
