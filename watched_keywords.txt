@@ -31602,3 +31602,4 @@
 1627220917	Makyen	chienthancantho(?:@gmail\.com)?
 1627220935	Makyen	dekhisugireal
 1627223087	Makyen	upswift\.io
+1627223103	Makyen	upswift(?!\.io)
