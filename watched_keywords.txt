@@ -18758,7 +18758,6 @@
 1585662605	tripleee	k9erp\.com
 1585669222	Jenayah	safetydoggiecollars\.com
 1585676876	tripleee	raging[\W_]*+leo
-1585687156	Makyen	cryptotabbrowser\.com
 1585691185	Makyen	(?:contact|offer|join)(?<=^.{0,207}).{0,99}?\d{9}(?=.{0,99}+$)
 1585706146	Makyen	iponwire\.com
 1585709388	Makyen	vseti
