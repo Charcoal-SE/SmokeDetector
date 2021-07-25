@@ -31604,3 +31604,4 @@
 1627223087	Makyen	upswift\.io
 1627223103	Makyen	upswift(?!\.io)
 1627224997	cigien	reshukumari120\.medium\.com
+1627225843	cigien	afnanksa\.com
