@@ -499,3 +499,4 @@ williamriver
 (?-i:^Dai Software$)
 (?-i:^Bryan Wagan$)
 (?-i:^Lass Naturals$)
+(?-i:^Roee Alfasi$)
