@@ -31634,3 +31634,4 @@
 1627302055	tripleee	/quickbooks-error-\d+
 1627311229	cigien	intellimindz(?!\.com)
 1627313464	cigien	opencartbot\.com
+1627320197	cigien	(?-i:VvNpg6m96fM)(?#youtube)
