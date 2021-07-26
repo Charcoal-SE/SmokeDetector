@@ -31632,3 +31632,4 @@
 1627300563	Jeff Schaller	bittenbook\.com
 1627301939	tripleee	^joy alex$
 1627302055	tripleee	/quickbooks-error-\d+
+1627311229	cigien	intellimindz(?!\.com)
