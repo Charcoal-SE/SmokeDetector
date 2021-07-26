@@ -2526,3 +2526,4 @@ market[\W_]*+was[\W_]*+valued[\W_]*+at[\W_]*+USD
 sunlightmata(?:@gmail\.com)?
 lass[\W_]*+naturals(?!\.com)(?!$(?<=(?-i:^Lass Naturals$)))
 d(?:octo)?r[\W_]*+ojie
+^<p>I\b[^\.]+\bus(?:e|ing)\b[^\.]+\bComparium(?=\.)
