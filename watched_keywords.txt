@@ -31627,3 +31627,4 @@
 1627284257	tripleee	citizenship[\W_]*+by[\W_]*+investment
 1627284496	tripleee	homify\.ca
 1627295425	tripleee	bernhelmets\.com
+1627299350	Glorfindel	srkinnovations\.com
