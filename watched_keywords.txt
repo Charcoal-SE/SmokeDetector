@@ -31624,3 +31624,4 @@
 1627283138	Ryan M	topratedanything\.com
 1627284124	tripleee	thesupertop\.com
 1627284158	tripleee	^aamir[\W_]*+yasin$
+1627284257	tripleee	citizenship[\W_]*+by[\W_]*+investment
