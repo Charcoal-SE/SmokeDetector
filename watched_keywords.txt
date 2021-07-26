@@ -31619,4 +31619,3 @@
 1627269964	cigien	aobongdathietke\.vn
 1627274734	Makyen	dawaibazar\.co\.in
 1627279319	tripleee	rcc[\W_]*+india
-1627279389	tripleee	recreate[\W_]*+credit[\W_&]*+collections
