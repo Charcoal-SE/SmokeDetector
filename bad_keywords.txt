@@ -2522,7 +2522,6 @@ rootkits[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
 TunesKit(?!\.com)
 lija\.akter
 seo[\W_]*+exparte[\W_]*+team
-market[\W_]*+was[\W_]*+valued[\W_]*+at[\W_]*+USD
 sunlightmata(?:@gmail\.com)?
 lass[\W_]*+naturals(?!\.com)(?!$(?<=(?-i:^Lass Naturals$)))
 d(?:octo)?r[\W_]*+ojie
