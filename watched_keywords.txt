@@ -31664,3 +31664,4 @@
 1627388619	Ryan M	vpn[\W_]*+pro
 1627388840	tripleee	(?-i:^Code Leaks$)
 1627394651	Spevacus	chothuexuong\.com\.vn
+1627403663	Machavity	Stellar\W*(?:Repair|Data\WRecovery)
