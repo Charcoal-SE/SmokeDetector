@@ -31641,3 +31641,4 @@
 1627350379	cigien	aligfits\.com
 1627355785	cigien	(?-i:^K Rje$)
 1627362893	tripleee	metamask[\W_]*+(?:(?:customer|support|help(?:line)?|service|contact|(?:tele)?phone)[\W_]*+)*number
+1627365828	tripleee	artarax\.com
