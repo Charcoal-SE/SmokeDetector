@@ -2528,3 +2528,4 @@ d(?:octo)?r[\W_]*+ojie
 ^<p>I\b[^\.]+\bus(?:e|ing)\b[^\.]+\bComparium(?=\.)
 research-paper-writing
 hostnet[\W_]*+india(?!\.com(?<=hostnetindia\.com))
+was[\W_]*+valued[\W_]*+at[\W_]*+USD
