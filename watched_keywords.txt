@@ -31654,3 +31654,4 @@
 1627383564	Ryan M	meregate\.com
 1627384323	tripleee	exodus[\W_]*+(?:(?:customer|care|service|support|help(?:line)?|contact|(?:toll[\W_]*+)free|(?:tele)?phone)[\W_]*+)*number
 1627384367	tripleee	quickbooks[\W_]*+(?:(?:customer|care|service|support|help(?:line)?|contact|(?:toll[\W_]*+)free|(?:tele)?phone)[\W_]*+)*number
+1627384420	Ryan M	com\.arumcomm\.androiddevinfo
