@@ -2528,3 +2528,4 @@ lass[\W_]*+naturals(?!\.com)(?!$(?<=(?-i:^Lass Naturals$)))
 d(?:octo)?r[\W_]*+ojie
 ^<p>I\b[^\.]+\bus(?:e|ing)\b[^\.]+\bComparium(?=\.)
 research-paper-writing
+hostnet[\W_]*+india(?!\.com(?<=hostnetindia\.com))
