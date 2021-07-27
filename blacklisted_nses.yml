@@ -65,6 +65,9 @@ items:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
+  - noah.ns.cloudflare.com.
+  - ophelia.ns.cloudflare.com.
+- ns:
   - stan.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:
