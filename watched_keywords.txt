@@ -30778,7 +30778,6 @@
 1624512363	tripleee	(?-i:^Sonu Singhal$)
 1624513356	tripleee	blankstyle\.com
 1624516723	tripleee	hashengines\.com
-1624516745	tripleee	wallarm\.com
 1624516994	Cody Gray	esther[\W_]*rantzen[\W_]*cbd
 1624521483	Cody Gray	springsconcretepros\.com
 1624521897	tripleee	chicadragon\.com
