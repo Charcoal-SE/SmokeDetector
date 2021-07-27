@@ -31663,3 +31663,4 @@
 1627387631	Ryan M	certification-training
 1627388619	Ryan M	vpn[\W_]*+pro
 1627388840	tripleee	(?-i:^Code Leaks$)
+1627394651	Spevacus	chothuexuong\.com\.vn
