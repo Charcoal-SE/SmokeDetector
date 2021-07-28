@@ -31677,3 +31677,4 @@
 1627449547	Makyen	believersias\.com
 1627449607	Makyen	thestudenthelpline\.com
 1627449624	Makyen	the[\W_]*+student[\W_]*+helpline(?!\.com(?<=thestudenthelpline\.com))
+1627450026	cigien	apkfun\.com
