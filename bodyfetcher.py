@@ -282,10 +282,12 @@ class BodyFetcher:
             message_hq = ""
             with GlobalVars.apiquota_rw_lock:
                 if "quota_remaining" in response:
-                    if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
+                    quota_remaining = response["quota_remaining"]
+                    if quota_remaining - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0 \
+                            and quota_remaining > 19980:
                         tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
                                                  "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                              response["quota_remaining"]))
+                                                                              quota_remaining))
 
                         sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
                                                        reverse=True)
@@ -297,13 +299,13 @@ class BodyFetcher:
 
                         tell_rooms_with("debug", api_quota_used_per_site)
                         clear_api_data()
-                    if response["quota_remaining"] == 0:
+                    if quota_remaining == 0:
                         tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
                         tell_rooms_with("debug", str(response))  # No code format for now?
                     if GlobalVars.apiquota == -1:
                         tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                                 .format(quota=response["quota_remaining"]))
-                    GlobalVars.apiquota = response["quota_remaining"]
+                                                 .format(quota=quota_remaining))
+                    GlobalVars.apiquota = quota_remaining
                 else:
                     message_hq = "The quota_remaining property was not in the API response."
 
