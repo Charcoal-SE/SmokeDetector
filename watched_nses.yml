@@ -672,6 +672,9 @@ items:
   - jerry.ns.cloudflare.com.
   - nicole.ns.cloudflare.com.
 - ns:
+  - jerry.ns.cloudflare.com.
+  - val.ns.cloudflare.com.
+- ns:
   - jessica.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
