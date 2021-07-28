@@ -31685,3 +31685,4 @@
 1627464756	Xnero	promosimple\.com
 1627465067	tripleee	digitalsoftwaremarket\.com
 1627465943	tripleee	buysellonline247\.com
+1627466002	tripleee	(?-i:3rryzl8)(?# bit.ly)
