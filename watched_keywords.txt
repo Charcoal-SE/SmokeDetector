@@ -31684,3 +31684,4 @@
 1627461537	Ryan M	web[\W_]*+design[\W_]*+company[\W_]*+in
 1627461732	tripleee	(?-i:^johnmartin$)
 1627464756	Xnero	promosimple\.com
+1627465067	tripleee	digitalsoftwaremarket\.com
