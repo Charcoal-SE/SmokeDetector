@@ -1096,7 +1096,9 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
-- ns: jawatankosong.biz.
+- comment: no longer responding 2021-07-27
+  disable: true
+  ns: jawatankosong.biz.
 - ns: isnpk.com.
 - comment: no longer responding 2020-10-15
   disable: true
