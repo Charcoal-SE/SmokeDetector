@@ -4115,3 +4115,4 @@ cryptotabbrowser\.com
 quickbooksupdate\.com
 wallarm\.com(?<!docs\.wallarm\.com)
 hostnetindia\.com
+apolloe\.com
