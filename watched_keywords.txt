@@ -31689,3 +31689,4 @@
 1627466026	tripleee	(?-i:3xZ1O19)(?# amzn.to)
 1627472151	tripleee	ppcexpo\.com
 1627472179	tripleee	apkgrand\.com
+1627472306	tripleee	webmobtech\.com
