@@ -31680,3 +31680,4 @@
 1627450076	cigien	getclat\.com
 1627455200	tripleee	(?-i:^Maria Costa$)
 1627456628	tripleee	apollo-e
+1627460304	Ryan M	maixuanviet\.com
