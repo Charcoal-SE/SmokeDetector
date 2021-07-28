@@ -31690,3 +31690,4 @@
 1627472151	tripleee	ppcexpo\.com
 1627472179	tripleee	apkgrand\.com
 1627472306	tripleee	webmobtech\.com
+1627472368	tripleee	softwareistic\.com
