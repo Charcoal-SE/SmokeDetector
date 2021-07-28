@@ -31687,3 +31687,4 @@
 1627465943	tripleee	buysellonline247\.com
 1627466002	tripleee	(?-i:3rryzl8)(?# bit.ly)
 1627466026	tripleee	(?-i:3xZ1O19)(?# amzn.to)
+1627472151	tripleee	ppcexpo\.com
