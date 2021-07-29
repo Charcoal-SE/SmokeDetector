@@ -31714,3 +31714,4 @@
 1627560667	Spevacus	lowcostsmm(?!\.com)
 1627564941	Spevacus	emailauth\.io
 1627567176	Makyen	sniper\.net\.in
+1627567191	Makyen	roshiniind(?:@gmail\.com)?
