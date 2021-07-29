@@ -31706,3 +31706,4 @@
 1627536668	Mast	(?-i:X7yv75)(?#fiverr)
 1627540792	Ryan M	saswath[\W_]*+academy(?<!saswath\.academy)
 1627559451	Mast	daprofitclub\.com
+1627560270	Spevacus	amithabbachankbccontactnumber\.com
