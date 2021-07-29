@@ -386,6 +386,10 @@ stackexchange.com:
         - site-travel.meta.stackexchange.com
         - experimental-site-travel.stackexchange.com
         - experimental-site-travel.meta.stackexchange.com
+        - site-outdoors.stackexchange.com
+        - site-outdoors.meta.stackexchange.com
+        - experimental-site-outdoors.stackexchange.com
+        - experimental-site-outdoors.meta.stackexchange.com
         - no-offensive-mask
 
     privileges:
