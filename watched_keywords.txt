@@ -31748,3 +31748,4 @@
 1627650858	Spevacus	haysatar\.com
 1627658997	Spevacus	startprototyping\.com
 1627659176	Makyen	jbbattery\w*+(?:\.com)?
+1627667638	Spevacus	all-for-skin-beauty\.com
