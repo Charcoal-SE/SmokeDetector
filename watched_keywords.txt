@@ -31750,3 +31750,4 @@
 1627659176	Makyen	jbbattery\w*+(?:\.com)?
 1627667638	Spevacus	all-for-skin-beauty\.com
 1627667677	Spevacus	jasonmolding\.com
+1627667893	Spevacus	automaticchina\.com
