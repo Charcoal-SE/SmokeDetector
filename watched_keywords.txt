@@ -31758,3 +31758,4 @@
 1627690914	cigien	chennai[\W_]*+aqua[\W_]*+pure(?!\.com(?<=chennaiaquapure\.com))
 1627690998	cigien	techwrath\.com\.au
 1627691751	cigien	robustpharma\.com
+1627692269	cigien	mrdeluofficial\.com
