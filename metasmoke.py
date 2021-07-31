@@ -577,7 +577,7 @@ class Metasmoke:
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
-        if not GlobalVars.metasmoke_key:
+        if not GlobalVars.metasmoke_key or not GlobalVars.metasmoke_host or GlobalVars.MSStatus.is_down():
             return None
 
         payload = {

@@ -552,16 +552,14 @@ def append_pings(original_message, names):
 
 
 def has_community_bumped_post(post_url, post_content):
-    if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
-        try:
-            ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
-            if not ms_posts:
-                return False
+    try:
+        ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
+        if not ms_posts:
+            return False
 
-            return any(post['body'] == post_content for post in ms_posts)
-        except (requests.exceptions.ConnectionError, ValueError):
-            return False  # MS is down, so assume it is not bumped
-    return False
+        return any(post['body'] == post_content for post in ms_posts)
+    except (requests.exceptions.ConnectionError, ValueError):
+        return False  # MS is down, so assume it is not bumped
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
 # (to avoid SmokeDetector's chat messages to be rate-limited too much)
