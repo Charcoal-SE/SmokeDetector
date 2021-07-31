@@ -31773,3 +31773,4 @@
 1627731939	Makyen	d(?:octo)?r[\W_]*+ado(?:[\W_]*+spiritual[\W_]*+temple)?
 1627731983	Makyen	dradospiritualsolutions\.com
 1627732000	Makyen	dradospiritualsolutions(?!\.com)(?:@gmail\.com)?
+1627742956	Zoe	veetechnologies\.com
