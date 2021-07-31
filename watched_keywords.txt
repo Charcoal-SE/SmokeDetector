@@ -31755,3 +31755,4 @@
 1627674400	Makyen	unionwell\w*+\.com
 1627686261	Makyen	ashleyelton83(?:@gmail\.com)?
 1627690750	cigien	javatoo\.com
+1627690914	cigien	chennai[\W_]*+aqua[\W_]*+pure(?!\.com(?<=chennaiaquapure\.com))
