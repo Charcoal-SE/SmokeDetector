@@ -31772,3 +31772,4 @@
 1627731907	Nisse Engström	srisakthidentalclinic\.in
 1627731939	Makyen	d(?:octo)?r[\W_]*+ado(?:[\W_]*+spiritual[\W_]*+temple)?
 1627731983	Makyen	dradospiritualsolutions\.com
+1627732000	Makyen	dradospiritualsolutions(?!\.com)(?:@gmail\.com)?
