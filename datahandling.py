@@ -227,8 +227,6 @@ def resolve_ms_link(post_url):
             ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
                 GlobalVars.metasmoke_ids[identifier])
             return ms_url
-        elif GlobalVars.metasmoke_ids[identifier] is None:
-            return None
         else:
             del GlobalVars.metasmoke_ids[identifier]
 
