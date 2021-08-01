@@ -31791,3 +31791,4 @@
 1627835092	Makyen	freeskinsblog\.com
 1627850139	Makyen	allianceminers\.com
 1627853925	Makyen	safeabortionsclinic\.com
+1627862343	Makyen	guarantee[\W_]*+trust[\W_]*+finance
