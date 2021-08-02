@@ -73,6 +73,9 @@ items:
   - alaric.ns.cloudflare.com.
   - aria.ns.cloudflare.com.
 - ns:
+  - alec.ns.cloudflare.com.
+  - roxy.ns.cloudflare.com.
+- ns:
   - alex.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
