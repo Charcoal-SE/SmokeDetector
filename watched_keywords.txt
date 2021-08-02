@@ -31767,7 +31767,6 @@
 1627725703	Nisse Engström	marketo\.com
 1627727925	Jeff Schaller	gorrifpumps\.com
 1627730915	Nisse Engström	bpmcounters\.com
-1627730931	Nisse Engström	bpmcounter\.blogspot\.com
 1627731907	Nisse Engström	srisakthidentalclinic\.in
 1627731939	Makyen	d(?:octo)?r[\W_]*+ado(?:[\W_]*+spiritual[\W_]*+temple)?
 1627731983	Makyen	dradospiritualsolutions\.com
