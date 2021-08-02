@@ -31794,3 +31794,4 @@
 1627862343	Makyen	guarantee[\W_]*+trust[\W_]*+finance
 1627862364	Makyen	johnleemill12345(?:@gmail\.com)?
 1627863772	cigien	freerobuxtips\.com
+1627863963	cigien	mirkainvest\.com
