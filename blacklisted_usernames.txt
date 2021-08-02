@@ -502,3 +502,4 @@ williamriver
 (?-i:^Roee Alfasi$)
 (?-i:^Scarlett Young$)
 (?-i:^Antier Solutions$)
+(?-i:^Dupuy Michael$)
