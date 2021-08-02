@@ -31808,3 +31808,4 @@
 1627887706	tripleee	(?-i:3BkKQw2)(?# bit.ly)
 1627889472	tripleee	trishuldefenceacademy\.com
 1627889526	tripleee	(?-i:lq-fnePNhuM)(?# youtube)
+1627890425	tripleee	celery[\W_]*+wallet[\W_]*+(?:(?:customer|care|service|support|help(?:line)?|contact|(?:toll[\W_]*+)free|(?:tele)?phone)[\W_]*+)*number
