@@ -4117,3 +4117,4 @@ wallarm\.com(?<!docs\.wallarm\.com)
 hostnetindia\.com
 apolloe\.com
 qwikaid\.com
+gologica\.com
