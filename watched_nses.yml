@@ -1250,7 +1250,9 @@ items:
 - ns: webhost.pro.
 - ns: inet.vn.
 - ns: visiondns.net.
-- ns: matkaparivar.in.
+- comment: 2021-08-03 SERVFAIL
+  disable: true
+  ns: matkaparivar.in.
 - ns: vdns.vn.
 - ns: ocyber.us.
 - ns: layerip.com.
