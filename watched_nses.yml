@@ -1375,4 +1375,4 @@ items:
 - ns: vicerocks.com.
 - ns: noc40.com.
 - ns: cloudns.net.
-- ns: auth-ns.sonic.net.
+- ns: sonic.net.
