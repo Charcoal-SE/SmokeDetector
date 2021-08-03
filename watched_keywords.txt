@@ -31831,3 +31831,4 @@
 1627949289	cigien	magentostore\.co\.in
 1627950690	cigien	zeligzwebstore\.com
 1627956703	cigien	clothoo\.com
+1627958038	Makyen	clothoo(?!\.com)
