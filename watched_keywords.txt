@@ -31872,4 +31872,3 @@
 1628070198	tripleee	squadsnews\.com
 1628070332	tripleee	(?-i: bPFm2)(?# urlzs.com)
 1628073514	tripleee	(?-i:^Suhel Ahmad$)
-1628075001	tripleee	regards, *\n[A-Z][a-z]+(?: [A-Z][a-z]+)+</p><p>\d{2}/\d{2}/\d{4}</p>\Z
