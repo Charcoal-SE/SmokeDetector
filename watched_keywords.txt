@@ -31879,3 +31879,4 @@
 1628076592	Jeff Schaller	camaliclinic\.com
 1628077578	tripleee	infallibletechie\.com
 1628078615	tripleee	yugasa\.com
+1628078628	tripleee	yugasa(?!\.com)
