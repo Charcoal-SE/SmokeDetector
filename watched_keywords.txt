@@ -31864,3 +31864,4 @@
 1628038236	cigien	pogo-help\.com
 1628043594	cigien	jayamm\.com
 1628043612	cigien	letsspeak\.co\.in
+1628052662	tripleee	(?-i:^john fobra$)
