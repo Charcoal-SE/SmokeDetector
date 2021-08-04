@@ -31880,3 +31880,4 @@
 1628077578	tripleee	infallibletechie\.com
 1628078615	tripleee	yugasa\.com
 1628078628	tripleee	yugasa(?!\.com)
+1628078702	tripleee	logodesigningdubai\.ae
