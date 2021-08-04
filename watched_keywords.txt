@@ -31874,3 +31874,4 @@
 1628073514	tripleee	(?-i:^Suhel Ahmad$)
 1628075073	tripleee	regards, *\n[A-Z][a-z]+(?: [A-Z][a-z]+)+</p> *\n<p>\d{2}/\d{2}/\d{4}</p>\Z
 1628075204	tripleee	(?:full)?b[dr]rips?
+1628075292	tripleee	cheapestessaywritingservice\.com
