@@ -31911,3 +31911,4 @@
 1628160719	tripleee	イスラーム
 1628160734	tripleee	ムハンマド
 1628160750	tripleee	クルアーン
+1628160843	tripleee	(?-i:^Islam$)
