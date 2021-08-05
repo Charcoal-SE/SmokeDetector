@@ -31922,3 +31922,4 @@
 1628179119	Ryan M	airriflehunting\.com
 1628180024	Ryan M	plansoutdoor\.com
 1628180077	Ryan M	wildgearz\.com
+1628180373	Ryan M	(?-i:^Seo Hawks$)
