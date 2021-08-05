@@ -31897,3 +31897,4 @@
 1628141792	Ryan M	freecricketbettingtips\.net
 1628142431	Nisse Engström	maurya\.om
 1628143689	Makyen	d(?:octo)?r[\W_]*+corobo
+1628143715	Makyen	miyahealth\.com
