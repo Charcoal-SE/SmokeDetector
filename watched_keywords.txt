@@ -18268,7 +18268,6 @@
 1584205513	Makyen	dr[\W_]*+aggarwal(?!sclinic\.com(?<=draggarwalsclinic\.com))(?:[\W_]*+s[\W_]*+clinic)?
 1584205592	Makyen	(?-i:FOH6_LNKMX4)(?#youtu.be)
 1584205619	Makyen	amazontrialcom(?#sites.google.com)
-1584205644	Makyen	crunchbase\.com
 1584205664	Makyen	bellariva[\W_]*+skincare[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584205797	Makyen	ultra[\W_]*+force[\W_]*+male[\W_]*+enhancement(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584205822	Makyen	evianne[\W_]*+skin[\W_]*+avis(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
