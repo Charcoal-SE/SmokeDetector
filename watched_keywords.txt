@@ -21954,7 +21954,6 @@
 1596174831	NobodyNada	smartlife\.nz
 1596175224	Nisse Engström	uptoider\.com
 1596178227	Nisse Engström	sana-khan\.com
-1596178984	tripleee	(?:prime\W*+)?chauffeur\W*+(?:service|cars?)?
 1596180528	Nisse Engström	bepcongnghiep\.com
 1596180631	Nisse Engström	bonusbigpoker88\.com
 1596180921	Nisse Engström	ceriabet\.coffeecup\.com
