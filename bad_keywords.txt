@@ -2531,3 +2531,4 @@ hostnet[\W_]*+india(?!\.com(?<=hostnetindia\.com))
 was[\W_]*+valued[\W_]*+at[\W_]*+USD
 coinbase(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
 antier[\W_]*+solutions
+audext(?!\.com)
