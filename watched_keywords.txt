@@ -31940,3 +31940,4 @@
 1628224296	tripleee	thegreatretainingwallsofsantamonica\.com
 1628233120	tripleee	linatran\.vn
 1628233400	tripleee	helmetdon\.in
+1628235369	tripleee	(?-i:^Prestige Great Acres$)
