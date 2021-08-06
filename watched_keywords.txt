@@ -31956,3 +31956,4 @@
 1628291537	cigien	allprinter-setup\.com
 1628291652	cigien	realdumpspedia\.com
 1628291687	cigien	ekomovers\.com
+1628291720	cigien	ekomovers(?!\.com)
