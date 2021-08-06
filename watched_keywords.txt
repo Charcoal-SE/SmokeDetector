@@ -28509,7 +28509,6 @@
 1617422239	cigien	ebetterbooks\.com
 1617422309	cigien	bestsmartlocker\.com
 1617428786	Makyen	bhutani[\W_]*+cyberthum
-1617432285	Makyen	certifiedmedicine\.com
 1617434365	double-beep	shopghumakkad\.com
 1617443285	Jeff Schaller	nikithabangaloreescorts\.com
 1617444102	double-beep	documentromanesc\.com
