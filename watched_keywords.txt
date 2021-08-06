@@ -31950,3 +31950,4 @@
 1628247853	Ryan M	best[\W_]++\w+[\W_]++developers?
 1628253060	Spevacus	diligenttek\.com
 1628254098	Spevacus	techentganga\.blogspot
+1628254490	Ryan M	equitechsoftwares\.com
