@@ -31942,3 +31942,4 @@
 1628235369	tripleee	(?-i:^Prestige Great Acres$)
 1628237206	Makyen	pygment\.shop
 1628242269	Ryan M	squidooit\.com
+1628242282	Ryan M	vacfurnace\.com
