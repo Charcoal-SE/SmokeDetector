@@ -31949,3 +31949,4 @@
 1628247691	Ryan M	Dave's Brother Technology
 1628247853	Ryan M	best[\W_]++\w+[\W_]++developers?
 1628253060	Spevacus	diligenttek\.com
+1628254074	Spevacus	techentganga\.blogspot\.com
