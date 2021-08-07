@@ -31960,3 +31960,4 @@
 1628297488	cigien	180\.215\.15\.112
 1628298862	cigien	thietbicodien\.vn
 1628302135	Makyen	(?-i:GkT2zFpyNcg)
+1628302149	Makyen	cloudinfrastructureservices\.co\.uk
