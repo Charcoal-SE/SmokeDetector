@@ -1532,7 +1532,6 @@ htx[ -]me
 better\W?strength\W?maximizer
 rapid\W?spot
 surgexon
-green\W?coffee\W?grano
 lojesete
 top\Wshelf\Waaa\Wbuds
 nuvi
@@ -1729,7 +1728,7 @@ hydralyft
 hydra\W?life
 viral\W?rx
 <a href="https://compitionpoint\.com/[^"]*+" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>
-green\W?coffee(?:(?:5k\W?)?diet)?
+green[\W_]*+coffee(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano(?!\.in(?<=greencoffeegrano\.in))|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|\d++|[\da-f]{5,}+)s?)+
 waist\.click
 gracinia
 (?:k\d\W?)?slim\W?keto
