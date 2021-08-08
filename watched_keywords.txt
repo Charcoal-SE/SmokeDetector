@@ -31980,3 +31980,4 @@
 1628428856	Ryan M	(?-i:YsdHWT-hA4k)(?# YouTube)
 1628439400	Makyen	green[\W_]*+coffee(?!(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|\d++|[\da-f]{5,}+)s?)+)
 1628440809	cigien	iexplorefacts\.com
+1628444893	cigien	sgautoassist\.com
