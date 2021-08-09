@@ -289,9 +289,6 @@ items:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
-  - candy.ns.cloudflare.com.
-  - karl.ns.cloudflare.com.
-- ns:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
