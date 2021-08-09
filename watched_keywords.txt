@@ -31997,3 +31997,4 @@
 1628510364	tripleee	(?-i:^Baccalaureate Classes$)
 1628537373	cigien	johnsoncountychemdry\.com
 1628546482	cigien	hr-integratedsolutions\.com
+1628550636	cigien	iptv-tech\.com
