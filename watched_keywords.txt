@@ -31998,3 +31998,4 @@
 1628537373	cigien	johnsoncountychemdry\.com
 1628546482	cigien	hr-integratedsolutions\.com
 1628550636	cigien	iptv-tech\.com
+1628552761	Makyen	iptv[\W_]*+tech(?!\.com)
