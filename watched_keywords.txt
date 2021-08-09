@@ -31994,3 +31994,4 @@
 1628504633	Jeff Schaller	digialba\.com
 1628508464	tripleee	akwatersolution\.com
 1628509468	tripleee	rhinoxusa\.com
+1628510364	tripleee	(?-i:^Baccalaureate Classes$)
