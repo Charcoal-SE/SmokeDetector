@@ -591,6 +591,9 @@ items:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - howard.ns.cloudflare.com.
+  - jill.ns.cloudflare.com.
+- ns:
   - hugh.ns.cloudflare.com.
   - lina.ns.cloudflare.com.
 - ns:
