@@ -31986,3 +31986,4 @@
 1628457453	cigien	app\.nftmall\.io
 1628459020	cigien	spiderguru\.in
 1628490740	tripleee	deby[\W_]*+financing(?:[\W_]*+loans?(?:[\W_]*+company)?)?
+1628492001	tripleee	jinjiuyi\.net
