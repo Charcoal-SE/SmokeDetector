@@ -32001,3 +32001,4 @@
 1628552761	Makyen	iptv[\W_]*+tech(?!\.com)
 1628560518	cigien	diyhardware\.ph
 1628561938	cigien	iwantatrophyhome\.com
+1628574331	tripleee	^andy[\W_]*+stuart$
