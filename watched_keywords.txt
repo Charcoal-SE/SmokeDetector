@@ -1487,7 +1487,6 @@
 1510901220	tripleee	everydayhero\.com
 1510905001	tripleee	(?:1\W*)?888\W*886\W*0477
 1510905155	tripleee	atlasdpack\.com
-1510907582	Glorfindel	purchasesharesonline\.com
 1510912261	tripleee	726226983
 1510912649	tripleee	pcb-forum\.com
 1510918202	Glorfindel	carloanstudent\.com
