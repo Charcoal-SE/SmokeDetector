@@ -32037,3 +32037,4 @@
 1628674974	tripleee	(?-i:^Rehan bhutto$)
 1628675072	tripleee	(?-i:A0NWQ5)(?# fiverr)
 1628676595	tripleee	shaadiwish\.com
+1628677040	tripleee	chimecustomerservice\.us
