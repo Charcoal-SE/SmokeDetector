@@ -32056,3 +32056,4 @@
 1628702279	Spevacus	upmarketresearch\.com
 1628703009	Makyen	chongthamhcm\.com
 1628703039	Makyen	chongthamhcm(?!\.com)
+1628709467	cigien	aspirecot\.com
