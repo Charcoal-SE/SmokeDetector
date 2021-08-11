@@ -31698,7 +31698,6 @@
 1627560323	Makyen	brightscholar\.org
 1627560342	Makyen	programing456\.blogspot
 1627560667	Spevacus	lowcostsmm(?!\.com)
-1627564941	Spevacus	emailauth\.io
 1627567176	Makyen	sniper\.net\.in
 1627567191	Makyen	roshiniind(?:@gmail\.com)?
 1627568382	Makyen	bestrelationshipguideforladies\.blogspot
