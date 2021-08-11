@@ -32032,3 +32032,4 @@
 1628668930	tripleee	python[\W_]*+(?:kings?[\W_]*+)?brother(?:s|hood)(?:[\W_]*+(?:oc)?cult)?(?:[\W_]*+fraternity)?
 1628670257	tripleee	mobiledatabase\.club
 1628671574	tripleee	motadata\.com
+1628671587	tripleee	mindarray[\W_]*+systems
