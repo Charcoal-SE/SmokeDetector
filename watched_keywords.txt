@@ -32034,3 +32034,4 @@
 1628671587	tripleee	mindarray[\W_]*+systems
 1628672021	tripleee	mindarraysystems\.com
 1628674940	Ryan M	stainely\.com
+1628674974	tripleee	(?-i:^Rehan bhutto$)
