@@ -32075,3 +32075,4 @@
 1628767902	tripleee	qdexi[\W_]*+technology(?!\.com)
 1628769282	tripleee	richardcarr\.org
 1628770565	Ryan M	enfieldtowingservices\.com
+1628770879	Ryan M	allbetsg\.com
