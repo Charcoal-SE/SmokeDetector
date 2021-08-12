@@ -10286,7 +10286,6 @@
 1560514487	tripleee	raysrender\.com
 1560514870	tripleee	bepanahpyaartv\.net
 1560507495	double-beep	roslynlimousine\.com
-1560508254	double-beep	qdexitechnology\.com
 1560540679	Nisse Engström	officesoffice\.com
 1560541733	Nisse Engström	sitesnorton\.com
 1560541792	Nisse Engström	get-office-2019\.com
