@@ -32081,3 +32081,4 @@
 1628771674	Ryan M	findjobs1\.cf
 1628771990	Ryan M	hair[\W_]*+transplants?
 1628772196	tripleee	rich70\.com
+1628772239	tripleee	(?-i:^Horit33548$)
