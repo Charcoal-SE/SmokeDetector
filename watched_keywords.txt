@@ -25219,7 +25219,6 @@
 1607413301	tripleee	(?-i:37J52tN)(?# bit.ly)
 1607413354	tripleee	madanswer\.com
 1607416821	tripleee	(?-i:3n8JLAh)(?# bit.ly)
-1607420004	Makyen	pennysaviour\.com
 1607420100	Makyen	nefoundations\.com
 1607421553	Jeff Schaller	crave\.menu
 1607432904	Spevacus	clippingpathview\.com
