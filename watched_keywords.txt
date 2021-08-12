@@ -32062,3 +32062,4 @@
 1628739442	Makyen	thearticlesreview\.com
 1628741526	Ryan M	newsreviewbooks\.com
 1628745595	tripleee	(?-i:^Rude Warner$)
+1628745702	tripleee	(?-i:^whotplace$)
