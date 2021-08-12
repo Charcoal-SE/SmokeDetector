@@ -32084,3 +32084,4 @@
 1628772239	tripleee	(?-i:^Horit33548$)
 1628776141	Spevacus	pharmastuff\.org\.in
 1628776169	Spevacus	ttct\.net
+1628779934	cigien	videoexpertsgroup\.com
