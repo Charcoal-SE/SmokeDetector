@@ -30144,7 +30144,7 @@
 1622577216	cigien	henk-reints\.nl
 1622577801	cigien	autopartsfair\.com
 1622577818	cigien	hdautospart\.com
-1622577880	cigien	perfect[\W_]*+wallet[\W_]*+recovery
+1622577880	cigien	perfect[\W_]*+wallet[\W_]*+recovery(?!(?:[\W_]*+dot)?[\W_]*+com)(?:[\W_]*+(?:\w?at[\W_]*+)?g.{0,9}?(?:[\W_]*+dot)?[\W_]*+com)?
 1622578550	cigien	talsmart(?!\.com)
 1622578668	cigien	lention\.com
 1622578802	cigien	skale[\W_]*+fitness(?!\.com(?<=skalefitness\.com))
