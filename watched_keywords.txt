@@ -32104,3 +32104,4 @@
 1628840912	tripleee	killerdumps\.com
 1628842233	tripleee	1921681240setup\.com
 1628842374	tripleee	[/.]192168\d+[-\w]+[-\d\w]*\.
+1628842441	tripleee	gutdolls\.com
