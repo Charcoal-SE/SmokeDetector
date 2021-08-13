@@ -32103,3 +32103,4 @@
 1628838063	tripleee	healthymaster\.in
 1628840355	tripleee	hard[\W_]*+water[\W_]*+treatment
 1628840498	tripleee	shilajit[\W_]*+(?:products|capsules?)
+1628840912	tripleee	killerdumps\.com
