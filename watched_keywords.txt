@@ -32093,3 +32093,4 @@
 1628817285	Makyen	perfect[\W_]*+wallet[\W_]*+recovery(?:[\W_]*+dot)?[\W_]*+com
 1628818727	Jeff Schaller	P\.W\.R
 1628822094	Spevacus	automexico\.com
+1628822520	Spevacus	couponduos\.com
