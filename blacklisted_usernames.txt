@@ -504,3 +504,4 @@ williamriver
 (?-i:^Antier Solutions$)
 (?-i:^Dupuy Michael$)
 (?-i:^Aspire Software Consultancy$)
+(?-i:^Hannah J ?Parrish$)
