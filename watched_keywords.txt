@@ -32102,3 +32102,4 @@
 1628837272	tripleee	kashmironlinestore\.com
 1628838063	tripleee	healthymaster\.in
 1628840355	tripleee	hard[\W_]*+water[\W_]*+treatment
+1628840498	tripleee	shilajit[\W_]*+(?:products|capsules?)
