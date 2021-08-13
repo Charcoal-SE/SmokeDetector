@@ -1328,7 +1328,9 @@ items:
 - ns: netmagicians.com.
 - ns: cloudns.io.
 - ns: stablehost.com.
-- ns: dedaddy.com.
+- comment: no longer resolves 2021-08-13
+  disable: true
+  ns: dedaddy.com.
 - ns: i2waves.com.
 - ns: myhostadmin.net.
 - ns: pcerror-fix.com.
