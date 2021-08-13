@@ -31417,7 +31417,6 @@
 1626510386	Mast	certificationscenter\.com
 1626534771	cigien	cyber[\W_]*+credit[\W_]*+guru(?:@gmail\.com)?
 1626535353	cigien	livedownloading\.com
-1626538817	Spevacus	(?-i:Hannah[\W_]*+J[\W_]*+Parrish)
 1626543216	cigien	tools\.kidsghor\.com
 1626546406	Makyen	ytmp4converter\.com
 1626554008	cigien	juli-art\.co\.il
