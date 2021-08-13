@@ -1212,7 +1212,6 @@ items:
   ns: aakibuki.com.
 - ns: cloudhostdns.net.
 - ns: elsner.com.
-- ns: dnschamp.com.
 - comment: no longer resolves 2020-08-27
   disable: true
   ns: gohostgator.com.

@@ -108,3 +108,4 @@ items:
 - comment: NXDOMAIN 2021-03-13
   disable: true
   ns: c67050.sgvps.net.
+- ns: dnschamp.com.
