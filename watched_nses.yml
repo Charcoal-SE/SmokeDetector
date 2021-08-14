@@ -1383,7 +1383,9 @@ items:
 - ns: noc40.com.
 - ns: cloudns.net.
 - ns: sonic.net.
-- ns: stabletransit.com.
+- comment: 0/9 over 10 days 2021-08-14
+  disable: true
+  ns: stabletransit.com.
 - ns: essaywritingforme.com.
 - ns: dotvndns.vn.
 - ns: dmtwebhosting.com.
