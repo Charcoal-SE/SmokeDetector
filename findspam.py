@@ -2570,5 +2570,11 @@ create_rule("potentially bad keyword in {}",
             all=True,
             username=True, body_summary=False, body=False, title=False,
             max_rep=33, max_score=1)
+# Politics: specific content; requested by mods
+create_rule("potentially bad keyword in {}",
+            r"،",
+            all=False, sites=["politics.stackexchange.com", "politics.meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=93, max_score=1)
 
 FindSpam.reload_blacklists()
