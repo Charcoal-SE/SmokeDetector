@@ -32140,3 +32140,4 @@
 1628957859	cigien	tenniswaresguide\.com
 1628958106	cigien	maheshfoundation\.org
 1628963540	cigien	ratetrade\.ca
+1628982757	Makyen	up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
