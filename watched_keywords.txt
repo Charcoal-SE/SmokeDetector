@@ -32142,3 +32142,4 @@
 1628963540	cigien	ratetrade\.ca
 1628982757	Makyen	up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
 1629005493	cigien	uiweb\.sg
+1629031554	Makyen	programmerdost\.com
