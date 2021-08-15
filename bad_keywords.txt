@@ -2532,3 +2532,4 @@ coinbase(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
 antier[\W_]*+solutions
 audext(?!\.com)
 ultimatespell666
+m(?:iste)?r[\W_]*+jim[\W_]*+uber
