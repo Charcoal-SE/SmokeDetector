@@ -32143,3 +32143,4 @@
 1628982757	Makyen	up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
 1629005493	cigien	uiweb\.sg
 1629031554	Makyen	programmerdost\.com
+1629031639	Jeff Schaller	top5shoppers\.blogspot\.com
