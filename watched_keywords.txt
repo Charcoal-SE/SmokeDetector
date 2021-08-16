@@ -32157,3 +32157,4 @@
 1629098413	Ryan M	shreetripadasms\.com
 1629100013	tripleee	(?-i:^Andrew Ronald$)
 1629101054	tripleee	pokegoaccount\.com
+1629101814	tripleee	(?!arkasoftwares\.com)arka[\W_]*+softwares?
