@@ -32156,3 +32156,4 @@
 1629097189	Ryan M	leotechnosoft\.net
 1629098365	Ryan M	appotube\.com
 1629098413	Ryan M	shreetripadasms\.com
+1629100013	tripleee	(?-i:^Andrew Ronald$)
