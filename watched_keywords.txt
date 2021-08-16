@@ -27493,7 +27493,6 @@
 1614253575	Xnero	Berrett[\W_]*Pest[\W_]*Control
 1614254987	Xnero	(?-i:EJ4ZJWCVEdA)(?#YouTube)
 1614255766	Ryan M	manycam-crack
-1614255994	Ryan M	gramvio\.com
 1614256440	Glorfindel	chess-bot\.com
 1614261126	Spevacus	drkutaherbalcenter(?:@gmail\.com)?
 1614261779	Xnero	sparxitsolutions\.com
