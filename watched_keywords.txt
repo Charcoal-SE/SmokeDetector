@@ -32163,3 +32163,4 @@
 1629114076	tripleee	novsights\.com
 1629115108	tripleee	saveon\.co\.in
 1629115152	tripleee	todossaude\.com\.br
+1629117292	tripleee	cibtglobal\.com
