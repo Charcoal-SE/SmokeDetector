@@ -31094,7 +31094,6 @@
 1625576666	cigien	lord[\W_]*+shaibu
 1625576793	cigien	luckyluxx\.com
 1625576892	cigien	picture\.live
-1625578470	cigien	techno-pm\.com
 1625579091	Cody Gray	xhamsterlive\.com
 1625579615	cigien	ufaboxing\.com
 1625580657	Makyen	escorts?[\W_]*+(?:in[\W_]*+)?\L<city>
