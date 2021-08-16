@@ -29739,7 +29739,6 @@
 1621567395	cigien	omninos\.com
 1621567565	cigien	renrich\.com
 1621567585	cigien	yeu\.cafe
-1621568151	cigien	taskvio(?!\.com)
 1621569322	cigien	tourvietnambooking\.wordpress\.com
 1621569344	cigien	vietnambooking\.com
 1621569412	cigien	phoneringtones\.info
