@@ -119,6 +119,9 @@ items:
   - cass.ns.cloudflare.com.
 - ns:
   - amy.ns.cloudflare.com.
+  - cody.ns.cloudflare.com.
+- ns:
+  - amy.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
   - anastasia.ns.cloudflare.com.
