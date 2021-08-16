@@ -2535,3 +2535,4 @@ ultimatespell666
 m(?:iste)?r[\W_]*+jim[\W_]*+uber
 up[\W_]++market[\W_]++research
 garmin[\W_]*+map[\W_]*+update
+garmin[\W_]*+(?:map|gps)[\W_]*+update
