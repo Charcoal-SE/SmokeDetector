@@ -32149,3 +32149,4 @@
 1629047262	cigien	wikifirmware\.com
 1629065247	cigien	hireacherrypicker\.com
 1629086084	cigien	arkasoftwares\.com
+1629091953	tripleee	(?-i:^Eva Smith$)
