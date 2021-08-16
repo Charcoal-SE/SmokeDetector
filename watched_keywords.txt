@@ -32171,3 +32171,4 @@
 1629132366	cigien	henrykdot\.com
 1629137965	Makyen	yesauto(?!\.de)(?!\.co\.uk)(?:[\W_]*+de)?
 1629137979	Makyen	yesauto\.co\.uk
+1629137991	cigien	refugeacupuncture\.com
