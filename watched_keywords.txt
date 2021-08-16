@@ -32169,3 +32169,4 @@
 1629124518	Ollie	freelancetopic\.com
 1629131140	cigien	homeofapk\.com
 1629132366	cigien	henrykdot\.com
+1629137965	Makyen	yesauto(?!\.de)(?!\.co\.uk)(?:[\W_]*+de)?
