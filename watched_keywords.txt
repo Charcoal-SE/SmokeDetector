@@ -32155,3 +32155,4 @@
 1629096929	tripleee	task[\W_]*+vio(?!\.com)
 1629097189	Ryan M	leotechnosoft\.net
 1629098365	Ryan M	appotube\.com
+1629098413	Ryan M	shreetripadasms\.com
