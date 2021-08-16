@@ -139,6 +139,9 @@ items:
   - anna.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
+  - anuj.ns.cloudflare.com.
+  - surina.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - karsyn.ns.cloudflare.com.
 - ns:
