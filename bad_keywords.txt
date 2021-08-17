@@ -2536,3 +2536,4 @@ m(?:iste)?r[\W_]*+jim[\W_]*+uber
 garmin[\W_]*+(?:map|gps)[\W_]*+update
 up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
 apptim(?!\.com)
+typeset\.io
