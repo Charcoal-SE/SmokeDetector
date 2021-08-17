@@ -32190,3 +32190,4 @@
 1629185914	tripleee	gynecology[\W_]*+(?:medical[\W_]*+)?billing
 1629188719	tripleee	itsupportcell\.com
 1629188739	tripleee	netf9\.com
+1629189695	tripleee	nail[\W_]*+(?:art[\W]*+)?(?:institute|course)s?
