@@ -32175,3 +32175,4 @@
 1629139504	cigien	paddockrentacar\.com
 1629151510	cigien	scriptlock\.com
 1629169436	Makyen	shortstoryproject\.com
+1629169533	Makyen	medi[\W_]*+greens(?:[\W_]*+(?:cbd|reviews|gumm(?:y|ie)|price|oil|cost|hemp|benefits|side|effects|ingredients|legit|or|scam|\d++|[\da-f]{5,}+)s?)*
