@@ -32177,3 +32177,4 @@
 1629169436	Makyen	shortstoryproject\.com
 1629169533	Makyen	medi[\W_]*+greens(?:[\W_]*+(?:cbd|reviews|gumm(?:y|ie)|price|oil|cost|hemp|benefits|side|effects|ingredients|legit|or|scam|\d++|[\da-f]{5,}+)s?)*
 1629173308	cigien	haptictechnology\.in
+1629177209	tripleee	(?-i:^Sarah William$)
