@@ -32192,3 +32192,4 @@
 1629189695	tripleee	nail[\W_]*+(?:art[\W]*+)?(?:institute|course)s?
 1629189715	tripleee	vioz[\W_]*+academy
 1629190505	tripleee	aothethaothietke\.com
+1629192774	tripleee	(?-i:^Deion Adel$)
