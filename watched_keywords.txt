@@ -32193,3 +32193,4 @@
 1629189715	tripleee	vioz[\W_]*+academy
 1629190505	tripleee	aothethaothietke\.com
 1629192774	tripleee	(?-i:^Deion Adel$)
+1629193668	tripleee	asiaheavens\.com
