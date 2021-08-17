@@ -32180,5 +32180,4 @@
 1629177209	tripleee	(?-i:^Sarah William$)
 1629180073	tripleee	(?-i:^johnelbert0100$)
 1629180184	tripleee	/web-hosting$
-1629181132	tripleee	pellerex\.com
 1629181320	tripleee	marketingpulp\.com
