@@ -32187,3 +32187,4 @@
 1629185543	tripleee	aurogra
 1629185662	tripleee	neem[\W_]*+(?:tree|leaf)
 1629185757	tripleee	medicalcoder\.io
+1629185914	tripleee	gynecology[\W_]*+(?:medical[\W_]*+)?billing
