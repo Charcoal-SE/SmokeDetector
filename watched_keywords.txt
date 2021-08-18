@@ -32220,3 +32220,4 @@
 1629273275	tripleee	hotnewcontent\.com
 1629273369	tripleee	ncr[\W_]*+mate[\W_]*+alma
 1629273411	tripleee	alma[\W_]*+mate
+1629274273	tripleee	theworkar\.com
