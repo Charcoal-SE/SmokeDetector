@@ -32218,3 +32218,4 @@
 1629269646	Ryan M	denvertowing\.net
 1629271117	tripleee	webpays\.com
 1629273275	tripleee	hotnewcontent\.com
+1629273369	tripleee	ncr[\W_]*+mate[\W_]*+alma
