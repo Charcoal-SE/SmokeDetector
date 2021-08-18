@@ -32222,3 +32222,4 @@
 1629273411	tripleee	alma[\W_]*+mate
 1629274273	tripleee	theworkar\.com
 1629276546	tripleee	digitalholic\.tumblr\.com
+1629277057	tripleee	(?-i:lwDGH)(?# shorturl.at)
