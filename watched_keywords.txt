@@ -29656,7 +29656,6 @@
 1621394022	Makyen	superhotplace(?!\.com)
 1621404157	Ryan M	kapdec\.com
 1621404815	Ryan M	139\.99\.22\.18
-1621405693	tripleee	geogebra\.org
 1621405714	tripleee	luhurianstream\.xyz
 1621407491	tripleee	viper\.pk
 1621407846	Ryan M	capitansmm\.com
