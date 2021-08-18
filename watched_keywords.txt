@@ -15711,7 +15711,6 @@
 1578344129	Machavity	(?-i:^Jimmy Johnson$)
 1578350457	Makyen	drgurulovespelltemple(?:@yahoo\.com)?
 1578362696	Makyen	erikfinman@aol\.com
-1578362785	Makyen	nhacaionline\.com
 1578371811	Makyen	itedred\.hatenablog\.com
 1578371831	Makyen	ketoburnxtremescam\.page\.tl
 1578371849	Makyen	itedcv\.tumblr\.com
