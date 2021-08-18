@@ -32226,3 +32226,4 @@
 1629283516	tripleee	eso-garden\.com
 1629284168	Jeff Schaller	profitlist\.site
 1629285071	tripleee	saptutorials\.in
+1629289924	Spevacus	myappgurus\.com
