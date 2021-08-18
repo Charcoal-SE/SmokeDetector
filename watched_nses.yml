@@ -1061,7 +1061,6 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: puredownloads.website.
-- ns: hostblast.net.
 - ns: webhouse.sk.
 - ns: guzelhosting.com.
 - ns: solidhosting.pro.
