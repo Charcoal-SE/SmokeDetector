@@ -506,3 +506,4 @@ williamriver
 (?-i:^Aspire Software Consultancy$)
 (?-i:^Hannah J ?Parrish$)
 (?-i:^crowdcar$)
+(?-i:^Aquatec Innovative$)
