@@ -32224,3 +32224,4 @@
 1629277057	tripleee	(?-i:lwDGH)(?# shorturl.at)
 1629277309	tripleee	scidiagnose\.com
 1629277879	tripleee	tinhoctuoitreviet\.com
+1629278368	tripleee	marketingunfolded\.com
