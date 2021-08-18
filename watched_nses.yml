@@ -658,6 +658,9 @@ items:
   - lou.ns.cloudflare.com.
 - ns:
   - jean.ns.cloudflare.com.
+  - kurt.ns.cloudflare.com.
+- ns:
+  - jean.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - jean.ns.cloudflare.com.
