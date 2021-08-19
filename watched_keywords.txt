@@ -32252,3 +32252,4 @@
 1629355298	tripleee	finddhindi\.com
 1629355356	tripleee	thelegaldocumentassistant\.com
 1629355414	tripleee	thelegaldocumentassistant(?!\.com)
+1629358636	tripleee	gulfvisasjobs\.com
