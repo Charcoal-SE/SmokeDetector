@@ -1243,6 +1243,7 @@ items:
 - comment: timeout 2020-04-02
   disable: true
   ns: dns-parking.net.
+- ns: dns-parking.com.
 - ns: host.com.pk.
 - ns: genxwhosting.com.
 - ns: phase8.net.
