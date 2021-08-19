@@ -32251,3 +32251,4 @@
 1629354797	tripleee	(?-i:^Joseph Donahue$)
 1629355298	tripleee	finddhindi\.com
 1629355356	tripleee	thelegaldocumentassistant\.com
+1629355414	tripleee	thelegaldocumentassistant(?!\.com)
