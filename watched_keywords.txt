@@ -32259,3 +32259,4 @@
 1629366247	tripleee	company\.site
 1629366276	tripleee	educatorpages\.com
 1629368986	tripleee	(?-i:^ShaadiWish$)
+1629369343	tripleee	maxcatchfishing\.com
