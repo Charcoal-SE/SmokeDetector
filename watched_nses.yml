@@ -286,6 +286,9 @@ items:
   - brianna.ns.cloudflare.com.
   - walt.ns.cloudflare.com.
 - ns:
+  - bristol.ns.cloudflare.com.
+  - hasslo.ns.cloudflare.com.
+- ns:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
