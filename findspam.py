@@ -326,7 +326,27 @@ URL_REGEX = regex.compile(
     r"""|\b(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
-NUMBER_REGEX = regex.compile(r'(?<=\D|^)\+?(?:\d[\W_]*){8,19}\d(?=\D|$)', regex.U | regex.I)
+# The NUMBER_REGEXES are used to obtain strings within a post which are considered to be a single "number". While
+#   it would be nice to be able to just use a single regular expression like:
+#     r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
+#   Doing so won't get us all the possible matches of different lengths which start from the same character, even
+#   when using the regex package's overlapped=True option. In order to get all different possible lengths,
+#   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
+#   interested and then combine the results.
+NUMBER_REGEXES = []
+# The minimum number of digits to be considered a "number":
+NUMBER_REGEX_MINIMUM_DIGITS = 9
+# The maximum number of digits to be considered a "number":
+NUMBER_REGEX_MAXIMUM_DIGITS = 20
+NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
+NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
+for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
+    NUMBER_REGEXES.append(regex.compile(r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){{{}}}\d(?=\D|$)'
+                                        .format(number_regex_length), regex.U | regex.I))
+# The NUMBER_REGEX will return at least one match in any string which will match the set of NUMBER_REGEXES.
+#   It can be used as a test to see if the set of NUMBER_REGEXES will return any results (e.g. verify !!/watch-number).
+NUMBER_REGEX = regex.compile(r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){{{},{}}}\d(?=\D|$)'
+                             .format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH), regex.U | regex.I)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
@@ -933,7 +953,11 @@ def check_numbers(s, numlist, numlist_normalized=None):
     """
     numlist_normalized = numlist_normalized or set()
     matches = []
-    for number_candidate in NUMBER_REGEX.findall(s):
+    # Get all the strings within the text to test which might be considered a single "number".
+    number_candidates = set()
+    for number_regex in NUMBER_REGEXES:
+        number_candidates.update(number_regex.findall(s, overlapped=True))
+    for number_candidate in number_candidates:
         if number_candidate in numlist:
             matches.append('{0} found verbatim'.format(number_candidate))
             continue
