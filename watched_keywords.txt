@@ -32245,3 +32245,4 @@
 1629337575	cigien	labhdaivastu(?!\.com)
 1629337744	cigien	topsmartservices\.com
 1629344712	cigien	thearticlereview\.com
+1629346637	cigien	agile-now\.net
