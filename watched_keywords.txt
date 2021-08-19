@@ -32269,3 +32269,4 @@
 1629374897	tripleee	upzilla\.com
 1629377785	tripleee	desk[\W_]*+☕️™.{0,10}\d
 1629378487	Spevacus	aiouhub\.com
+1629391055	Ollie	lucidgen\.com
