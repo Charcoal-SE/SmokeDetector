@@ -32253,3 +32253,4 @@
 1629355356	tripleee	thelegaldocumentassistant\.com
 1629355414	tripleee	thelegaldocumentassistant(?!\.com)
 1629358636	tripleee	gulfvisasjobs\.com
+1629358737	tripleee	gunsatlantic\.com
