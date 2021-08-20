@@ -31647,7 +31647,6 @@
 1627460729	tripleee	aolemailsupports\.com
 1627461537	Ryan M	web[\W_]*+design[\W_]*+company[\W_]*+in
 1627461732	tripleee	(?-i:^johnmartin$)
-1627464756	Xnero	promosimple\.com
 1627465067	tripleee	digitalsoftwaremarket\.com
 1627465943	tripleee	buysellonline247\.com
 1627466002	tripleee	(?-i:3rryzl8)(?# bit.ly)
