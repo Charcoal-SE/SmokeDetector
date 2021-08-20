@@ -32296,3 +32296,4 @@
 1629491033	Jeff Schaller	918657399601(?#Whatsapp)
 1629498673	cigien	thearbor-al\.com
 1629499146	cigien	kothiwal[\W_]*+dental[\W_]*+college(?!\.com(?<=kothiwaldentalcollege\.com))
+1629499596	cigien	printresetter\.com
