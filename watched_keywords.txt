@@ -32277,3 +32277,4 @@
 1629424030	cigien	xyzsport\.net
 1629439390	tripleee	(?-i:yA2b65)(?# fiverr)
 1629439508	tripleee	wolkenburg\.in
+1629439704	tripleee	sohel[\W_]*+seo(?:[\W_]*+expert)?
