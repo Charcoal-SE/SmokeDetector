@@ -3,11 +3,41 @@
 
 import yaml
 from os import unlink
+import regex
+from globalvars import GlobalVars
 
 import pytest
 
-from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS
+from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
 from helpers import files_changed, blacklist_integrity_check
+from findspam import NUMBER_REGEX, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
+
+
+def test_number_lists():
+    errors = []
+
+    def test_a_number_list(list_type, number_list):
+        line_number = 0
+        for pattern in number_list:
+            line_number += 1
+            digit_count = len(regex.findall(r'\d', pattern))
+            digit_count_text = ""
+            if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
+                digit_count_text = " {} digits is not > {} and < {}".format(digit_count,
+                                                                            NUMBER_REGEX_MINIMUM_DIGITS,
+                                                                            NUMBER_REGEX_MAXIMUM_DIGITS)
+            if not NUMBER_REGEX.search(pattern):
+                errors.append("{} number ({}): {}: fails NUMBER_REGEX.".format(list_type, line_number, digit_count_text))
+
+    load_blacklists()
+    test_a_number_list("watched", GlobalVars.watched_numbers)
+    test_a_number_list("blacklisted", GlobalVars.blacklisted_numbers)
+    error_count = len(errors)
+    if error_count > 0:
+        if error_count == 1:
+            pytest.fail(errors[0])
+        else:
+            pytest.fail("\n\t".join(["{} errors have occurred:".format(error_count)] + errors))
 
 
 def test_blacklist_integrity():
@@ -16,7 +46,7 @@ def test_blacklist_integrity():
     if len(errors) == 1:
         pytest.fail(errors[0])
     elif len(errors) > 1:
-        pytest.fail("\n\t".join(["{} errors has occurred:".format(len(errors))] + errors))
+        pytest.fail("\n\t".join(["{} errors have occurred:".format(len(errors))] + errors))
 
 
 def test_remote_diff():
