@@ -32281,3 +32281,4 @@
 1629443343	tripleee	bestnewssocial\.com
 1629443773	cigien	aiouhub\.con
 1629445500	cigien	fsmbuddy\.com
+1629446199	cigien	zabtechnologies\.net
