@@ -32279,3 +32279,4 @@
 1629439508	tripleee	wolkenburg\.in
 1629439704	tripleee	sohel[\W_]*+seo(?:[\W_]*+expert)?
 1629443343	tripleee	bestnewssocial\.com
+1629443773	cigien	aiouhub\.con
