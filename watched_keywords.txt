@@ -32316,3 +32316,4 @@
 1629565461	cigien	onlinemedicalimages\.com
 1629565671	cigien	dallastaxi247\.com
 1629568046	cigien	techrizwa\.com
+1629568265	cigien	advance[\W_]*+hydrau[\W_]*+tech(?!\.com(?<=advancehydrautech\.com))
