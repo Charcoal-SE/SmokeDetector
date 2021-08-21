@@ -32298,3 +32298,4 @@
 1629499146	cigien	kothiwal[\W_]*+dental[\W_]*+college(?!\.com(?<=kothiwaldentalcollege\.com))
 1629499596	cigien	printresetter\.com
 1629499715	cigien	blog\.letscodeofficial\.com
+1629510885	Ryan M	creatorchain\.network
