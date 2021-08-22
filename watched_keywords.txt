@@ -32318,3 +32318,4 @@
 1629568046	cigien	techrizwa\.com
 1629568265	cigien	advance[\W_]*+hydrau[\W_]*+tech(?!\.com(?<=advancehydrautech\.com))
 1629571626	Spevacus	showcrack\.com
+1629592382	Makyen	(?-i:vfHZJvsgwo4)(?#YouTube)
