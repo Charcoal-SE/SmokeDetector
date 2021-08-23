@@ -20765,7 +20765,6 @@
 1591866068	Xnero	RailRestro
 1591869312	tripleee	glasgow-media\.biz
 1591869431	tripleee	clash[\W_]*+coder(?!\.tech)
-1591869545	Xnero	NextraOne
 1591874130	Xnero	Kilahzzcolourful(?:@gmail\.com)?
 1591874708	Xnero	modelinmumbai\.in
 1591874858	Xnero	123hp\.tech
