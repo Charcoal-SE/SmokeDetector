@@ -32339,3 +32339,4 @@
 1629722349	Spevacus	NextraOne(?!\.com)
 1629712964	Xnero	northwaydrivingschool\.com\.au
 1629724479	Spevacus	energyrenovationcenter\.com
+1629724817	cigien	aptodwn\.com
