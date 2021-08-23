@@ -32336,3 +32336,4 @@
 1629715418	Jeff Schaller	vibrodynamics\.com
 1629722034	Spevacus	fujiroboticsindia\.com
 1629722141	Spevacus	aistechnolabs\.com
+1629722317	Spevacus	nextraone\.com
