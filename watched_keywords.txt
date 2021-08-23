@@ -32336,3 +32336,4 @@
 1629722034	Spevacus	fujiroboticsindia\.com
 1629722141	Spevacus	aistechnolabs\.com
 1629722317	Spevacus	nextraone\.com
+1629722349	Spevacus	NextraOne(?!\.com)
