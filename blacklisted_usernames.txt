@@ -13,7 +13,6 @@ Dr\.? Madonna
 Pro Max
 ^hl12
 defort essid
-^pus+y?$
 radlelgl
 Anonymous\WTeacher
 Satyajay\WMandal
