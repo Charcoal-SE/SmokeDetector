@@ -32353,3 +32353,4 @@
 1629774475	cigien	wp[\W_]*+agents?(?!s?\.com)
 1629774487	cigien	wp-agents\.com
 1629776016	cigien	napmuctannoi\.com
+1629777363	Makyen	fiheroe\.com
