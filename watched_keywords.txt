@@ -32347,3 +32347,4 @@
 1629771839	cigien	juniorpeves\.notion\.site
 1629772156	cigien	binaryexpertrecovery\d*+(?:@gmail\.com)?
 1629772853	cigien	vibro[\W_]*+dynamics(?!\.com(?<=vibrodynamics\.com))
+1629773428	cigien	urfut\.com
