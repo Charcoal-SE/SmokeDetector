@@ -340,13 +340,23 @@ NUMBER_REGEX_MINIMUM_DIGITS = 9
 NUMBER_REGEX_MAXIMUM_DIGITS = 20
 NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
 NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
+NUMBER_REGEX_START_TEXT = r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+'
+NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d[\W_]*+){{{}}}'
+NUMBER_REGEX_END_TEXT = r'\d(?=\D|$)'
+
+
+def get_number_regex_with_quantfier(quantifier):
+    return NUMBER_REGEX_START_TEXT + NUMBER_REGEX_MIDDLE_TEXT.format(quantifier) + NUMBER_REGEX_END_TEXT
+
+
 for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
-    NUMBER_REGEXES.append(regex.compile(r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){{{}}}\d(?=\D|$)'
-                                        .format(number_regex_length), regex.U | regex.I))
-# The NUMBER_REGEX will return at least one match in any string which will match the set of NUMBER_REGEXES.
-#   It can be used as a test to see if the set of NUMBER_REGEXES will return any results (e.g. verify !!/watch-number).
-NUMBER_REGEX = regex.compile(r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){{{},{}}}\d(?=\D|$)'
-                             .format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH), regex.U | regex.I)
+    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), regex.U | regex.I))
+# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected by
+#   the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
+NUMBER_REGEX_RANGE_TEXT = "{},{}".format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH)
+NUMBER_REGEX = regex.compile(get_number_regex_with_quantfier(NUMBER_REGEX_RANGE_TEXT), regex.U | regex.I)
+NUMBER_REGEX_START = regex.compile(r'^' + NUMBER_REGEX_START_TEXT, regex.U | regex.I)
+NUMBER_REGEX_END = regex.compile(NUMBER_REGEX_END_TEXT + r'$', regex.U | regex.I)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)

@@ -21,13 +21,13 @@ def test_number_lists():
         for pattern in number_list:
             line_number += 1
             digit_count = len(regex.findall(r'\d', pattern))
-            digit_count_text = ""
+            digit_count_text = " ({} digits is within the acceptable range)".format(digit_count)
             if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
-                digit_count_text = " {} digits is not > {} and < {}".format(digit_count,
-                                                                            NUMBER_REGEX_MINIMUM_DIGITS,
-                                                                            NUMBER_REGEX_MAXIMUM_DIGITS)
+                digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count,
+                                                                               NUMBER_REGEX_MINIMUM_DIGITS,
+                                                                               NUMBER_REGEX_MAXIMUM_DIGITS)
             if not NUMBER_REGEX.search(pattern):
-                errors.append("{} number ({}): {}: fails NUMBER_REGEX.".format(list_type, line_number, digit_count_text))
+                errors.append("{} number ({}): fails NUMBER_REGEX{}".format(list_type, line_number, digit_count_text))
 
     load_blacklists()
     test_a_number_list("watched", GlobalVars.watched_numbers)

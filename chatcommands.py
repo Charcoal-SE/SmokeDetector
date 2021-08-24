@@ -398,6 +398,11 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                            findspam.NUMBER_REGEX_MAXIMUM_DIGITS, digit_count)
             raise CmdException("That pattern can't be detected by a number detection. Number detections must match" +
                                "the NUMBER_REGEX in findspam.py." + digit_count_text)
+        if not findspam.NUMBER_REGEX_START.search(pattern):
+            other_issues.append('In order for a "number" to make an exact match, the pattern must begin with a digit' +
+                                ' or a "+" immediately followed by a digit.')
+        if not findspam.NUMBER_REGEX_END.search(pattern):
+            other_issues.append('In order for a "number" to make an exact match, the pattern must end with a digit.')
 
     other_issues_text = ' '.join(other_issues)
 
