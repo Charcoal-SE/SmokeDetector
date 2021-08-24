@@ -32350,3 +32350,4 @@
 1629773428	cigien	urfut\.com
 1629773678	cigien	pals-grossisten\.com
 1629773877	cigien	royalmhotels\.com
+1629773927	cigien	genericpharmamall\.com
