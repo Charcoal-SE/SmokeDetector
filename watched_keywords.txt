@@ -28041,7 +28041,6 @@
 1615992200	cigien	eshaalmart\.com
 1615992880	cigien	kiwi[\W_]*+defi(?!\.com(?<=kiwidefi\.com))
 1615994310	cigien	edisbeefarm\.ca
-1616012284	double-beep	safetrading\.today
 1616014026	Mast	com\.streamalerts
 1616016210	cigien	(?-i:pr0f3ssor)(?#t.me)
 1616018908	cigien	tranny\.one
