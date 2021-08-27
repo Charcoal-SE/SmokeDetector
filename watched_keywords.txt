@@ -32422,3 +32422,4 @@
 1630041690	cigien	videosdk\.live
 1630045451	cigien	sreemoneybuilders\.com
 1630049487	tripleee	sketchfab\.com
+1630050754	tripleee	mnbsoft\.com
