@@ -11,6 +11,9 @@ items:
   - adrian.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
 - ns:
+  - adrian.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:

@@ -52,9 +52,6 @@ items:
   - adrian.ns.cloudflare.com.
   - amit.ns.cloudflare.com.
 - ns:
-  - adrian.ns.cloudflare.com.
-  - nick.ns.cloudflare.com.
-- ns:
   - aida.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:
