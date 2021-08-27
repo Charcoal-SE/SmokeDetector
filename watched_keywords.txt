@@ -32431,3 +32431,4 @@
 1630062475	tripleee	instituterank\.com
 1630064941	tripleee	exigoent\.com
 1630067173	tripleee	disha[\W_]*+global[\W_]*+tours(?!\.com)
+1630074635	Spevacus	sathwicksolutions\.com
