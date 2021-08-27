@@ -32415,3 +32415,4 @@
 1630027607	cigien	(?-i:Q62353)(?#fiverrr)
 1630027768	cigien	dynamics365academy\.com
 1630027798	cigien	cinnematastic\.blogspot
+1630028044	cigien	arlofirmwareupdate\.com
