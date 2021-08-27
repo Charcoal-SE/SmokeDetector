@@ -32418,3 +32418,4 @@
 1630028044	cigien	arlofirmwareupdate\.com
 1630029675	cigien	chamnha\.com
 1630029706	cigien	chamnha(?!\.com)
+1630035562	cigien	hustleways\.com
