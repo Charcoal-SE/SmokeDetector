@@ -32433,3 +32433,4 @@
 1630067173	tripleee	disha[\W_]*+global[\W_]*+tours(?!\.com)
 1630074635	Spevacus	sathwicksolutions\.com
 1630074650	Spevacus	marlabs\.com
+1630077160	Spevacus	realinterviewquestions\.com
