@@ -32425,3 +32425,4 @@
 1630050754	tripleee	mnbsoft\.com
 1630051798	cigien	dkog\.com\.au
 1630055458	tripleee	gastrogynae\.com
+1630058155	tripleee	(?-i:^hasara$)
