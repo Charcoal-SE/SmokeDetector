@@ -32430,4 +32430,3 @@
 1630061157	tripleee	(?-i:^Sufia Arsala$)
 1630062475	tripleee	instituterank\.com
 1630064941	tripleee	exigoent\.com
-1630067139	tripleee	disha[\W_]*+global[\W_]*+tours
