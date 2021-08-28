@@ -32462,3 +32462,4 @@
 1630168958	Makyen	guidelang(?!\.com\.ua)
 1630182470	Makyen	highway1\.co\.nz
 1630186434	cigien	offbeatsolutions\.site
+1630194086	Makyen	imarah[\W_]*+real[\W_]*+estate[\W_]*+marketing
