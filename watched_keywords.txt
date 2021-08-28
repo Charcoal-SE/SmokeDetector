@@ -32460,3 +32460,4 @@
 1630166721	cigien	pistolzone\.com
 1630166741	cigien	rwandaugandagorillasafaris\.com
 1630168942	Makyen	guidelang\.com\.ua
+1630168958	Makyen	guidelang(?!\.com\.ua)
