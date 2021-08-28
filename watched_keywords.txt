@@ -30477,7 +30477,6 @@
 1623825829	cigien	global[\W_]*+trade[\W_]*+plaza(?!\.com(?<=globaltradeplaza\.com))
 1623826693	cigien	allgenericpills\.com
 1623828944	tripleee	162\.0\.236\.18
-1623829166	tripleee	(?-i:^elizabeth$)
 1623830316	tripleee	lalaland\.pk
 1623834238	Xnero	rvtechnologies\.com
 1623834898	tripleee	(?-i:^The Router Help$)
