@@ -4103,7 +4103,6 @@
 1530807021	Makyen	incentivized\W*social\W*networking
 1530818315	Makyen	hackmarvel(?:[0-35-9]\d*)?
 1530853876	Makyen	drugpillstore\.us
-1530853918	Makyen	cenforce(?:\W*medication)?
 1530856176	Makyen	impotence
 1530856188	Makyen	erections?
 1530856208	Makyen	Genius\W*IT\W*(?:Solutions|training)?
