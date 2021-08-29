@@ -32465,3 +32465,4 @@
 1630194086	Makyen	imarah[\W_]*+real[\W_]*+estate[\W_]*+marketing
 1630194099	Makyen	imarahmarketing\.com
 1630203955	Makyen	(?-i:ca710nlq)(?#shrinke.me)
+1630226251	Makyen	salamuae\.ae
