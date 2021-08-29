@@ -32479,3 +32479,4 @@
 1630261114	Makyen	amazon[\W_]*+review[\W_]*+exporter
 1630263459	cigien	everymenuprices\.com
 1630263503	cigien	besturdubook\.com
+1630265774	cigien	animalsss\.com
