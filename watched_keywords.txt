@@ -32471,3 +32471,4 @@
 1630251553	Spevacus	best7product\.com
 1630252931	cigien	neuralnetlab\.com
 1630253183	cigien	dwops\.com
+1630253207	cigien	tibetfocus\.travel
