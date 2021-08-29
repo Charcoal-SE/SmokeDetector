@@ -32473,3 +32473,4 @@
 1630253183	cigien	dwops\.com
 1630253207	cigien	tibetfocus\.travel
 1630254298	cigien	feedcheck\.co
+1630257839	cigien	kockpit(?!\.in)
