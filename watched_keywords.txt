@@ -32476,3 +32476,4 @@
 1630257839	cigien	kockpit(?!\.in)
 1630258234	Makyen	mct2cochin(?:@gmail\.com)?
 1630258252	Makyen	96892319520
+1630261114	Makyen	amazon[\W_]*+review[\W_]*+exporter
