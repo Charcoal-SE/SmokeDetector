@@ -32494,3 +32494,4 @@
 1630318677	tripleee	softsbucket\.com
 1630319167	tripleee	(?-i:^Soft Name$)
 1630319556	tripleee	primotechy\.com
+1630319756	tripleee	(?-i:a2n academy$)
