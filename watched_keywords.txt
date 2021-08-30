@@ -32493,3 +32493,4 @@
 1630318018	tripleee	mamywszystko\.net
 1630318677	tripleee	softsbucket\.com
 1630319167	tripleee	(?-i:^Soft Name$)
+1630319556	tripleee	primotechy\.com
