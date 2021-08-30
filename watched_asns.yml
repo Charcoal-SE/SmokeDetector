@@ -6,6 +6,7 @@ items:
   comment: 122/284 over 1 year
   disable: true
 - asn: '3595'
+- asn: '8455'
 - asn: '8622'
 - asn: '12488'
 - asn: '16509'
