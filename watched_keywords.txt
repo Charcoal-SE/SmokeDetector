@@ -32490,3 +32490,4 @@
 1630312030	tripleee	dainikcircle\.com
 1630314754	tripleee	742306\.129(?# linksynergy campaign redirect)
 1630315257	tripleee	dajoko\.com
+1630318018	tripleee	mamywszystko\.net
