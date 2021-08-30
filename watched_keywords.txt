@@ -32516,3 +32516,4 @@
 1630325114	tripleee	silivriescort\.xyz
 1630325130	tripleee	sultanbeyliescort\.xyz
 1630325147	tripleee	zeytinburnuescort\.xyz
+1630326076	tripleee	wikiaboutworld\.com
