@@ -32485,3 +32485,4 @@
 1630276059	cigien	datarecoveryexpert\.ca
 1630292828	cigien	kazurtip(?#telegram)
 1630306184	tripleee	openpr\.com
+1630310624	tripleee	edureka(?!\.co)
