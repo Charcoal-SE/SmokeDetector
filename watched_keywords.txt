@@ -32483,3 +32483,4 @@
 1630273358	cigien	finansweb\.net
 1630273492	cigien	maticpunks\.net
 1630276059	cigien	datarecoveryexpert\.ca
+1630292828	cigien	kazurtip(?#telegram)
