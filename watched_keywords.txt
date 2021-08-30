@@ -32487,3 +32487,4 @@
 1630306184	tripleee	openpr\.com
 1630310624	tripleee	edureka(?!\.co)
 1630311508	tripleee	ytconvertmp3\.com
+1630312030	tripleee	dainikcircle\.com
