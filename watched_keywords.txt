@@ -32496,3 +32496,4 @@
 1630319556	tripleee	primotechy\.com
 1630319756	tripleee	(?-i:a2n academy$)
 1630321183	tripleee	suncartstore\.com
+1630323175	tripleee	(?-i:^oscarjack463$)
