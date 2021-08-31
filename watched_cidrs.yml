@@ -1486,6 +1486,7 @@ items:
 - comment: lots of *.myshopify.com sites, some legit / FP
   ip: 23.227.38.64
 - ip: 23.227.38.65
+- ip: 23.227.38.67
 - ip: 23.229.0.146
 - ip: 23.229.180.169
 - ip: 23.229.186.105
