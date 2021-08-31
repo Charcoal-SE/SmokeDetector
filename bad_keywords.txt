@@ -2537,3 +2537,4 @@ garmin[\W_]*+(?:map|gps)[\W_]*+update
 up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
 apptim(?!\.com)
 (?:[1i][\W_]*+)?833[\W_]*+363[\W_]*+[o0]559
+cdyera
