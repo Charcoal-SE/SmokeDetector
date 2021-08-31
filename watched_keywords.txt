@@ -32540,3 +32540,4 @@
 1630404476	tripleee	(?-i:3gMhrlX)(?# bit.ly)
 1630404837	tripleee	getresponse\.com
 1630404852	tripleee	getresponse(?!\.com)
+1630408297	tripleee	tdupy\.com
