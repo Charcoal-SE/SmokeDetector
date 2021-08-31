@@ -32532,3 +32532,4 @@
 1630371226	cigien	ritwik-69146\.medium\.com
 1630371635	cigien	2we1ve\.com
 1630371980	cigien	abbasiandcompany\.com
+1630385350	tripleee	(?-i:^Fannyipcb$)
