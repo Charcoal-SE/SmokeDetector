@@ -512,3 +512,4 @@ williamriver
 (?-i:^jabbar huusain$)
 (?-i:^Deion Adel$)
 (?-i:^hasara$)
+(?-i:^CustomBoxesWorld$)
