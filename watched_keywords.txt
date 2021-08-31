@@ -32531,3 +32531,4 @@
 1630371060	cigien	gamesd\.?app(?!(?<=gamesd\.app))
 1630371226	cigien	ritwik-69146\.medium\.com
 1630371635	cigien	2we1ve\.com
+1630371980	cigien	abbasiandcompany\.com
