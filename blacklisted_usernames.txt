@@ -511,3 +511,4 @@ williamriver
 (?-i:^Jaime_Corbett$)
 (?-i:^jabbar huusain$)
 (?-i:^Deion Adel$)
+(?-i:^hasara$)
