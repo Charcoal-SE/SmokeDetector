@@ -3725,7 +3725,6 @@
 1528845465	Makyen	dr\W*ogbefun
 1528864430	tripleee	netgear\W?powerline
 1528865529	tripleee	mindvalley\.com
-1528868535	Makyen	list\.com\.pk
 1528868548	Makyen	kr4wmqws4wgr@facebookmail\.com
 1528868569	Makyen	karlaguadalupe13@outlook\.es
 1528869332	Makyen	miss9900\W*com

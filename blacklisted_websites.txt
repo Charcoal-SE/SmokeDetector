@@ -4163,3 +4163,4 @@ safetrading\.today
 stzgists\.com
 azcleard\.com
 learnwithmuhammadimran\.com
+list\.com\.pk
