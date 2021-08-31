@@ -32538,3 +32538,4 @@
 1630391387	cigien	drbacsi\.com
 1630392165	Makyen	vakilkaro\.com
 1630394095	tripleee	biggboss15todayepisode\.com
+1630394857	tripleee	(?-i:^Haris Institute$)
