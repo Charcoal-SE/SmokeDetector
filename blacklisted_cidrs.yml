@@ -74,6 +74,13 @@ items:
 - ip: 192.64.118.108
 - ip: 194.59.164.77
 - ip: 198.102.31.58
+- ip: 198.187.29.107
+  comment: >
+    was watched with the comment:
+    46/456, do not blacklist again!
+    but I can find no evidence of that;
+    https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&why=198.187.29.107
+    currently gets me 538/538
 - ip: 198.187.29.122
 - ip: 198.187.29.22
 - ip: 198.187.29.252
