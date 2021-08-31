@@ -32542,3 +32542,4 @@
 1630408297	tripleee	tdupy\.com
 1630408398	tripleee	my[\W_]*+bill[\W_]*+book(?!\.in)
 1630409851	tripleee	solutiondoodz\.blogspot\.com
+1630412532	tripleee	sportsshow\.net
