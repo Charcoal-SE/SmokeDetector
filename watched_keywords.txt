@@ -32565,3 +32565,4 @@
 1630482595	tripleee	copyblocksai\.blogspot\.com
 1630487380	tripleee	csss\.es
 1630487492	tripleee	(?-i:^Rahul Gehlaut$)
+1630487900	tripleee	(?-i:^tech village$)
