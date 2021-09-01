@@ -32568,3 +32568,4 @@
 1630487900	tripleee	(?-i:^tech village$)
 1630489969	tripleee	guitaa\.com
 1630490037	tripleee	jobsuraksha\.in
+1630491107	tripleee	trickstricker\.blogspot\.com
