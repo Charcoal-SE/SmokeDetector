@@ -513,3 +513,4 @@ williamriver
 (?-i:^Deion Adel$)
 (?-i:^hasara$)
 (?-i:^CustomBoxesWorld$)
+(?-i:^Scott McDaniel$)
