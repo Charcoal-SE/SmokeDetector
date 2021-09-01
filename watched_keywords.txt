@@ -32558,3 +32558,4 @@
 1630473246	cigien	elitehighschool\.com
 1630474132	cigien	businesssitelist\.com
 1630475603	tripleee	(?-i:^kWaK$)
+1630477077	tripleee	bacsikhai\.com
