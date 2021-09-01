@@ -67,6 +67,9 @@ items:
   - aiden.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - ainsley.ns.cloudflare.com.
+  - morgan.ns.cloudflare.com.
+- ns:
   - ajay.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
