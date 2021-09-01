@@ -32570,3 +32570,4 @@
 1630490037	tripleee	jobsuraksha\.in
 1630491107	tripleee	trickstricker\.blogspot\.com
 1630491985	Ryan M	creativemediahouse\.ae
+1630493238	tripleee	(?-i:^Hemendra Singh$)
