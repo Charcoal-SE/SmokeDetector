@@ -419,6 +419,9 @@ items:
   - melinda.ns.cloudflare.com.
 - ns:
   - dawn.ns.cloudflare.com.
+  - dimitris.ns.cloudflare.com.
+- ns:
+  - dawn.ns.cloudflare.com.
   - dom.ns.cloudflare.com.
 - ns:
   - dean.ns.cloudflare.com.
