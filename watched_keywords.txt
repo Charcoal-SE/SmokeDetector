@@ -32560,3 +32560,4 @@
 1630475603	tripleee	(?-i:^kWaK$)
 1630477077	tripleee	bacsikhai\.com
 1630477315	Makyen	reeme\.com\.vn
+1630479927	tripleee	saba-batri\.com
