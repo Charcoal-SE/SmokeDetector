@@ -514,3 +514,4 @@ williamriver
 (?-i:^hasara$)
 (?-i:^CustomBoxesWorld$)
 (?-i:^Scott McDaniel$)
+(?-i:^Duc Hoang$)
