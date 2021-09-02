@@ -32601,3 +32601,4 @@
 1630578714	tripleee	file[\W_]*+zipo(?!\.io(?<=filezipo\.io|(?-i:FileZIPO$)))
 1630578988	tripleee	(?-i:a0N4V00000G5xfiUAB)(?# appexchange.salesforce.com)
 1630579173	tripleee	alltakesolutions\.com
+1630582780	tripleee	adcure\.co
