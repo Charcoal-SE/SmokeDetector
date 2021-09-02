@@ -515,3 +515,4 @@ williamriver
 (?-i:^CustomBoxesWorld$)
 (?-i:^Scott McDaniel$)
 (?-i:^Duc Hoang$)
+(?-i:^FileZIPO$)
