@@ -32610,3 +32610,4 @@
 1630592173	Spevacus	fontsmonster\.com
 1630592580	tripleee	os-system\.medium\.com
 1630592950	tripleee	webindia[\W_]*+cloud(?!\.com)
+1630593433	Spevacus	pruthvivilla\.com
