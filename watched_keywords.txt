@@ -32598,3 +32598,4 @@
 1630577343	tripleee	etechnog\.com
 1630577443	tripleee	skillslash\.com
 1630577529	tripleee	elmkarate\.ir
+1630578714	tripleee	file[\W_]*+zipo(?!\.io(?<=filezipo\.io|(?-i:FileZIPO$)))
