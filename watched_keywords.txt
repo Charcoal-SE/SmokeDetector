@@ -30223,7 +30223,6 @@
 1622998536	cigien	nasilbe(?!\.com)
 1622998591	cigien	banglanotice\.com
 1622998640	cigien	bangla[\W_]*+notice(?!\.com(?<=banglanotice\.com))
-1622998709	cigien	bignewsnetwork\.com
 1623001704	cigien	drainkingplumbers\.ca
 1623001744	cigien	freebetbahis\.casino
 1623015690	cigien	(?-i:NPnzyqH4wtXfMi7P8)(?#google form)
