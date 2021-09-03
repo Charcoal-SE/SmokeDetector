@@ -32624,3 +32624,4 @@
 1630634569	cigien	rapidmovers\.pk
 1630649321	tripleee	(?-i:^Rupal Hospital$)
 1630649339	tripleee	wavlinksetup\.site
+1630649444	tripleee	noobs2pro\.com
