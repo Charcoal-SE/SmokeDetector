@@ -32621,3 +32621,4 @@
 1630649339	tripleee	wavlinksetup\.site
 1630649444	tripleee	noobs2pro\.com
 1630651712	tripleee	(?!(?-i:^pest control$))pest[\W_]*+control
+1630654544	Ryan M	gustavo[\W_]*+de[\W_]*+arístegui
