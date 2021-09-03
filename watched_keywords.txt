@@ -13682,7 +13682,6 @@
 1572360720	Machavity	vse-klienty\.ru
 1572363012	Machavity	ibcliga\.xyz
 1572364705	Das_Geek	editx\.eu
-1572368679	double-beep	familytreemakersupport\.com
 1572379478	Das_Geek	visa4uk\.ru
 1572379737	Machavity	try[\w\s]*g1ant
 1572412780	Makyen	agenslotidn\.com
