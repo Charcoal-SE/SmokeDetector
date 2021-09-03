@@ -32624,5 +32624,4 @@
 1630655626	Ryan M	divistik\.com
 1630655648	Ryan M	zapable
 1630655842	Ryan M	dev\.to/sjain
-1630656884	tripleee	Arístegui
 1630657043	tripleee	(?-i:^Mansoor Ahmed$)
