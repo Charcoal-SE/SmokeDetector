@@ -32629,3 +32629,4 @@
 1630663884	tripleee	illuminz(?!\.com)
 1630664970	tripleee	emotio-design-group\.co\.uk
 1630666228	tripleee	freeactivationkeys\.org
+1630666243	tripleee	freeactivationkeys(?!\.org)
