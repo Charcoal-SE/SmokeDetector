@@ -516,3 +516,4 @@ williamriver
 (?-i:^Scott McDaniel$)
 (?-i:^Duc Hoang$)
 (?-i:^FileZIPO$)
+(?-i:^pest control$)
