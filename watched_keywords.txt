@@ -32597,7 +32597,6 @@
 1630578988	tripleee	(?-i:a0N4V00000G5xfiUAB)(?# appexchange.salesforce.com)
 1630579173	tripleee	alltakesolutions\.com
 1630582780	tripleee	adcure\.co
-1630585139	tripleee	cannaverda
 1630585453	tripleee	irlmediasolutions\.com
 1630586747	tripleee	torrez\.market
 1630586815	tripleee	techvoke\.com
