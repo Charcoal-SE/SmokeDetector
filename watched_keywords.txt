@@ -29754,7 +29754,6 @@
 1621687553	Xnero	sign\.ipasign\.cc
 1621691273	Jeff Schaller	setupyouraccounts\.com
 1621680972	Xnero	apillz\.com
-1621693840	cigien	pest[\W_]*+control[\W_]*+hyderabad(?!\.com(?<=pestcontrolhyderabad\.com))
 1621685729	Xnero	(?-i:UwbdCsW6Z0s)(?#YouTube)
 1621699240	double-beep	bbnc\.in
 1621711251	Makyen	vbuckgenerators\.com
