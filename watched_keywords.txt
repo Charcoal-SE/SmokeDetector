@@ -32627,3 +32627,4 @@
 1630657043	tripleee	(?-i:^Mansoor Ahmed$)
 1630661783	tripleee	leadrebel\.io
 1630663869	tripleee	illuminz\.com
+1630663884	tripleee	illuminz(?!\.com)
