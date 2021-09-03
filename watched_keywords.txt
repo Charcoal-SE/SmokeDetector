@@ -32452,7 +32452,6 @@
 1630194099	Makyen	imarahmarketing\.com
 1630203955	Makyen	(?-i:ca710nlq)(?#shrinke.me)
 1630226251	Makyen	salamuae\.ae
-1630227136	Nisse Engström	addressbazar\.com
 1630231134	Makyen	addressbazar(?!\.com)
 1630251553	Spevacus	best7product\.com
 1630252931	cigien	neuralnetlab\.com
