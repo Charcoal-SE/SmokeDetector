@@ -32619,3 +32619,4 @@
 1630623243	cigien	recyclean\.in
 1630623604	cigien	routerlogin-passwordip\.com
 1630628872	Makyen	d(?:octo)?r[\W_]*+isiramen(?:@hotmail\.com)?
+1630629462	cigien	irl[\W_]*+media[\W_]*+solutions(?!\.com(?<=irlmediasolutions\.com))
