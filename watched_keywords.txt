@@ -32621,3 +32621,4 @@
 1630629462	cigien	irl[\W_]*+media[\W_]*+solutions(?!\.com(?<=irlmediasolutions\.com))
 1630629742	cigien	(?-i:3kR6S2f)(?#bit.ly)
 1630629783	cigien	jobcash9\.com
+1630634569	cigien	rapidmovers\.pk
