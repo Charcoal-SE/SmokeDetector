@@ -32630,3 +32630,4 @@
 1630666228	tripleee	freeactivationkeys\.org
 1630666243	tripleee	freeactivationkeys(?!\.org)
 1630668523	tripleee	(?-i:^Linda cooper$)
+1630674492	Jeff Schaller	(?-i:UC7KdqBerOBZxekah6U2RyGQ)(?#YouTube)
