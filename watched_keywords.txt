@@ -32623,3 +32623,4 @@
 1630651712	tripleee	(?!(?-i:^pest control$))pest[\W_]*+control
 1630654544	Ryan M	gustavo[\W_]*+de[\W_]*+arístegui
 1630655626	Ryan M	divistik\.com
+1630655648	Ryan M	zapable
