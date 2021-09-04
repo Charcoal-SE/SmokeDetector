@@ -29845,7 +29845,6 @@
 1621991908	cigien	(?-i:t3Hxdkg6jgpB98Ht9)(?#google form)
 1621993721	cigien	digital[\W_]*+trainee(?!\.com(?<=digitaltrainee\.com))
 1621994714	cigien	sdc watch tech[\W_]*+cloud[\W_]*+erp
-1621994989	cigien	prestige[\W_]*+city(?!\.gen\.in(?<=prestigecity\.gen\.in))
 1621995143	cigien	music-mad\.com
 1621995274	cigien	megatechshop(?!\.com)
 1621995388	cigien	winfo[\W_]*+solutions(?!\.com(?<=winfosolutions\.com))
