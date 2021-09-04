@@ -32654,3 +32654,4 @@
 1630786759	Makyen	(?-i:UCUqQRR3TKlV4TqlrwQ9P7CA)(?#YouTube channel)
 1630786772	Makyen	tmarketing\.vn
 1630786786	Makyen	tmarketing(?!\.vn\b)(?:[\W_]*+(?:agency|vn|v|dma|\d++|[\da-f]{5,}+)s?)*
+1630789099	Makyen	trampa\.hr
