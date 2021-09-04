@@ -32645,3 +32645,4 @@
 1630746711	Makyen	blessed[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:uk|\d++|[\da-f]{5,}+)s?)*
 1630746725	Makyen	chashmay\.com\.pk
 1630747557	Ryan M	zjdtrendz\.com
+1630760250	Jeff Schaller	themoviefashion\.com
