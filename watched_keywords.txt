@@ -32652,3 +32652,4 @@
 1630784591	Makyen	dr\.umaherbalcenter(?:@gmail\.com)?
 1630784623	Makyen	d(?:octo)?r[\W_]*+uma
 1630786759	Makyen	(?-i:UCUqQRR3TKlV4TqlrwQ9P7CA)(?#YouTube channel)
+1630786772	Makyen	tmarketing\.vn
