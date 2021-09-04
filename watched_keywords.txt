@@ -32643,3 +32643,4 @@
 1630735340	Ryan M	ytmp3[\W_]*+\.[\W_]*+cc
 1630746697	Ryan M	combegins\.com
 1630746711	Makyen	blessed[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:uk|\d++|[\da-f]{5,}+)s?)*
+1630746725	Makyen	chashmay\.com\.pk
