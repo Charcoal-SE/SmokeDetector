@@ -32655,3 +32655,4 @@
 1630786772	Makyen	tmarketing\.vn
 1630786786	Makyen	tmarketing(?!\.vn\b)(?:[\W_]*+(?:agency|vn|v|dma|\d++|[\da-f]{5,}+)s?)*
 1630789099	Makyen	trampa\.hr
+1630789113	Makyen	iskustva\.hr
