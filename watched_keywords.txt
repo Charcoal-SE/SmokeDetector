@@ -32670,3 +32670,4 @@
 1630859650	cigien	vconomics\.vn
 1630859708	cigien	padmarecruiter(?:@gmail\.com)?
 1630859893	cigien	d(?:octo)?r[\W_]*+olokun(?:temple)?(?:@gmail\.com)?
+1630860021	cigien	918kissapk
