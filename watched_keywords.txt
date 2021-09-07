@@ -32710,3 +32710,4 @@
 1631012708	tripleee	(?-i:^Reach360 Digital$)
 1631012749	tripleee	(?-i:^rumi janson$)
 1631016573	tripleee	mytekiz\.com
+1631016926	tripleee	appicial\.com
