@@ -326,6 +326,7 @@ URL_REGEX = regex.compile(
     r"""|\b(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
+
 # The NUMBER_REGEXES are used to obtain strings within a post which are considered to be a single "number". While
 #   it would be nice to be able to just use a single regular expression like:
 #     r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
@@ -333,6 +334,11 @@ TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 #   when using the regex package's overlapped=True option. In order to get all different possible lengths,
 #   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
 #   interested and then combine the results.
+# The use of separate Unicode and ASCII flagged versions of the regexes is also because they can result in different
+#   resulting start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
+#   NUMBER_REGEX_START, and NUMBER_REGEX_END in order to not have a separate source for a combined regex. This
+#   does result in our CI testing being a bit slower, but is a trade-off for not using two separate regexes, which
+#   would reduce maintainability.
 NUMBER_REGEXES = []
 # The minimum number of digits to be considered a "number":
 NUMBER_REGEX_MINIMUM_DIGITS = 7
@@ -350,13 +356,24 @@ def get_number_regex_with_quantfier(quantifier):
 
 
 for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
-    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), regex.U | regex.I))
-# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected by
-#   the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
+    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), flags=regex.ASCII))
+    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), flags=regex.UNICODE))
+# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected
+#   by the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
 NUMBER_REGEX_RANGE_TEXT = "{},{}".format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH)
-NUMBER_REGEX = regex.compile(get_number_regex_with_quantfier(NUMBER_REGEX_RANGE_TEXT), regex.U | regex.I)
-NUMBER_REGEX_START = regex.compile(r'^' + NUMBER_REGEX_START_TEXT, regex.U | regex.I)
-NUMBER_REGEX_END = regex.compile(NUMBER_REGEX_END_TEXT + r'$', regex.U | regex.I)
+NUMBER_REGEXTEXT_WITH_RANGE = get_number_regex_with_quantfier(NUMBER_REGEX_RANGE_TEXT)
+NUMBER_REGEX = {
+    'unicode': regex.compile(NUMBER_REGEXTEXT_WITH_RANGE, flags=regex.UNICODE),
+    'ascii': regex.compile(NUMBER_REGEXTEXT_WITH_RANGE, flags=regex.ASCII)
+}
+NUMBER_REGEX_START = {
+    'unicode': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.UNICODE),
+    'ascii': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.ASCII)
+}
+NUMBER_REGEX_END = {
+    'unicode': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.UNICODE),
+    'ascii': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.ASCII)
+}
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)

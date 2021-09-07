@@ -9,7 +9,7 @@ from globalvars import GlobalVars
 import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
-from helpers import files_changed, blacklist_integrity_check
+from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
 from findspam import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
 
 
@@ -25,13 +25,13 @@ def test_number_lists():
             digit_count_text = " ({} digits is OK)".format(digit_count)
             if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
                 digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS)
-            if not NUMBER_REGEX.search(pattern):
+            if not_regex_search_ascii_and_unicode(NUMBER_REGEX, pattern):
                 errors.append("{} number ({}): fails NUMBER_REGEX{}::{}".format(list_type, line_number, digit_count_text, pattern))
             else:
                 this_no_exacts = []
-                if not NUMBER_REGEX_START.search(pattern):
+                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_START, pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_START.")
-                if not NUMBER_REGEX_END.search(pattern):
+                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_END, pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_END.")
                 if len(this_no_exacts) > 0:
                     no_exact = "{} number ({}): ".format(list_type, line_number)
