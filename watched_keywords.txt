@@ -32708,3 +32708,4 @@
 1631004371	tripleee	(?-i:a0N3u00000OMscFEAT)(?# appexchange.salesforce.com)
 1631004746	tripleee	CAGR of XX%
 1631012708	tripleee	(?-i:^Reach360 Digital$)
+1631012749	tripleee	(?-i:^rumi janson$)
