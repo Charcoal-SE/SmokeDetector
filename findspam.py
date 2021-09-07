@@ -335,7 +335,7 @@ TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 #   interested and then combine the results.
 NUMBER_REGEXES = []
 # The minimum number of digits to be considered a "number":
-NUMBER_REGEX_MINIMUM_DIGITS = 9
+NUMBER_REGEX_MINIMUM_DIGITS = 7
 # The maximum number of digits to be considered a "number":
 NUMBER_REGEX_MAXIMUM_DIGITS = 20
 NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
