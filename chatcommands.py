@@ -400,7 +400,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                "the NUMBER_REGEX in findspam.py." + digit_count_text)
         if not findspam.NUMBER_REGEX_START.search(pattern):
             other_issues.append('In order for a "number" to make an exact match, the pattern must begin with a digit' +
-                                ' or a "+" immediately followed by a digit.')
+                                ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
         if not findspam.NUMBER_REGEX_END.search(pattern):
             other_issues.append('In order for a "number" to make an exact match, the pattern must end with a digit.')
 
