@@ -1526,6 +1526,7 @@ items:
 - ip: 23.229.186.105
 - ip: 23.229.233.231
 - ip: 23.235.199.26
+- ip: 23.235.218.237
 - comment: random spam sites but many FPs
   disable: true
   ip: 23.236.62.147
