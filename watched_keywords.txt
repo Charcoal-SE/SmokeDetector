@@ -32712,3 +32712,4 @@
 1631016573	tripleee	mytekiz\.com
 1631016926	tripleee	appicial\.com
 1631017456	Spevacus	plamereplasmatraining\.com
+1631017471	Spevacus	rogers\.consulting
