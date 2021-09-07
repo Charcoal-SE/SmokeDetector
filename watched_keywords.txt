@@ -32723,3 +32723,4 @@
 1631041290	cigien	nordamappliance\.com
 1631041403	cigien	kundu[\W_]*+digital
 1631041616	cigien	blog\.spacrun\.com
+1631042301	cigien	spanishpropertyinsight\.com
