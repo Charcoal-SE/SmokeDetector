@@ -32720,3 +32720,4 @@
 1631027134	Makyen	kratomgator\.com
 1631028596	tripleee	watch mayr[\W_]*+method
 1631028769	tripleee	(?-i:^Timdrave$)
+1631041290	cigien	nordamappliance\.com
