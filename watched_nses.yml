@@ -346,6 +346,9 @@ items:
   - chip.ns.cloudflare.com.
   - cruz.ns.cloudflare.com.
 - ns:
+  - chip.ns.cloudflare.com.
+  - mimi.ns.cloudflare.com.
+- ns:
   - chloe.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
