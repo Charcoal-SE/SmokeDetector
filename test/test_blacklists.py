@@ -10,34 +10,45 @@ import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
 from helpers import files_changed, blacklist_integrity_check
-from findspam import NUMBER_REGEX, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
+from findspam import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
 
 
 def test_number_lists():
     errors = []
+    no_exacts = []
 
     def test_a_number_list(list_type, number_list):
         line_number = 0
         for pattern in number_list:
             line_number += 1
             digit_count = len(regex.findall(r'\d', pattern))
-            digit_count_text = " ({} digits is within the acceptable range)".format(digit_count)
+            digit_count_text = " ({} digits is OK)".format(digit_count)
             if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
-                digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count,
-                                                                               NUMBER_REGEX_MINIMUM_DIGITS,
-                                                                               NUMBER_REGEX_MAXIMUM_DIGITS)
+                digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS)
             if not NUMBER_REGEX.search(pattern):
-                errors.append("{} number ({}): fails NUMBER_REGEX{}".format(list_type, line_number, digit_count_text))
+                errors.append("{} number ({}): fails NUMBER_REGEX{}::{}".format(list_type, line_number, digit_count_text, pattern))
+            else:
+                this_no_exacts = []
+                if not NUMBER_REGEX_START.search(pattern):
+                    this_no_exacts.append("Does not match NUMBER_REGEX_START.")
+                if not NUMBER_REGEX_END.search(pattern):
+                    this_no_exacts.append("Does not match NUMBER_REGEX_END.")
+                if len(this_no_exacts) > 0:
+                    no_exact = "{} number ({}): ".format(list_type, line_number)
+                    no_exact += " ".join(this_no_exacts) + digit_count_text + "::" + pattern
+                    no_exacts.append(no_exact)
 
     load_blacklists()
     test_a_number_list("watched", GlobalVars.watched_numbers)
     test_a_number_list("blacklisted", GlobalVars.blacklisted_numbers)
+    no_exacts_count = len(no_exacts)
+    if (no_exacts_count > 0):
+        pluralize = "" if no_exacts_count == 1 else "s"
+        print("\n\t".join(["{} pattern{} can't match exactly:".format(no_exacts_count, pluralize)] + no_exacts))
     error_count = len(errors)
     if error_count > 0:
-        if error_count == 1:
-            pytest.fail(errors[0])
-        else:
-            pytest.fail("\n\t".join(["{} errors have occurred:".format(error_count)] + errors))
+        pluralize = "" if error_count == 1 else "s"
+        pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + errors))
 
 
 def test_blacklist_integrity():
