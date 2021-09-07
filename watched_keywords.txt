@@ -32722,3 +32722,4 @@
 1631028769	tripleee	(?-i:^Timdrave$)
 1631041290	cigien	nordamappliance\.com
 1631041403	cigien	kundu[\W_]*+digital
+1631041616	cigien	blog\.spacrun\.com
