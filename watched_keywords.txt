@@ -32762,3 +32762,4 @@
 1631112811	Makyen	com\.kmzclouds\.kmzvpn
 1631120816	cigien	aporia\.com
 1631120897	cigien	tutorialmastery\.com
+1631121251	cigien	beacleaner\.com
