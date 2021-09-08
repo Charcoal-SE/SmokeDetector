@@ -32756,3 +32756,4 @@
 1631100905	tripleee	the[\W_]*+design[\W_]*+trip(?!\.com(?<=thedesigntrip\.com))
 1631102215	tripleee	(?-i:^Kelsi Monore$)
 1631103397	tripleee	airfleetrating\.com
+1631105024	tripleee	(?-i:^Addify CO$)
