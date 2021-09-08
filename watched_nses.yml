@@ -371,6 +371,9 @@ items:
   - felicity.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
+  - hugh.ns.cloudflare.com.
+- ns:
+  - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
