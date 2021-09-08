@@ -32727,3 +32727,4 @@
 1631042530	cigien	addify\.co
 1631043807	cigien	html5animationtogif\.com
 1631051207	cigien	softhier\.com
+1631059268	cigien	astucesmobiles\.com
