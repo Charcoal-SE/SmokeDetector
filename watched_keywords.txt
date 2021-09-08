@@ -32764,3 +32764,4 @@
 1631120897	cigien	tutorialmastery\.com
 1631121251	cigien	beacleaner\.com
 1631125098	cigien	arscientia\.com\.br
+1631125249	cigien	validcardgenerator\.com
