@@ -17837,7 +17837,6 @@
 1583241246	Eliah Kagan	bcrconstructions\.com
 1583241273	Eliah Kagan	webtrica\.com
 1583241566	Eliah Kagan	simplyexplainer\.com
-1583241589	Eliah Kagan	cryptogeek\.info
 1583241621	Eliah Kagan	cryptogeek(?!\.info)
 1583241702	Eliah Kagan	barmingdentalcentre\.co\.uk
 1583242078	Eliah Kagan	(?-i:mZr9G)(?#murl)
