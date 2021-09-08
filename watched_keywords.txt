@@ -32744,3 +32744,4 @@
 1631087310	tripleee	scoop\.it
 1631087546	tripleee	(?-i:^Jayabal$)
 1631090199	Ryan M	tipcrewblog\.com
+1631090727	Ryan M	firstdigiadd\.com
