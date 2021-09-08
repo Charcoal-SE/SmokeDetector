@@ -32734,3 +32734,4 @@
 1631072969	cigien	wizardharry[\W_]*+programmer\.net
 1631078807	Makyen	syt\.bacgiang\.gov\.vn
 1631078924	Makyen	ovaq1
+1631078937	Makyen	spermq
