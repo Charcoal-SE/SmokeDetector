@@ -32753,3 +32753,4 @@
 1631099135	tripleee	(?-i:^Noah Centineo$)
 1631099356	tripleee	thehomedekor\.com\.au
 1631099451	tripleee	the[\W_]*+home[\W_]*+dekor(?!\.(?:in|com\.au)(?<=thehomedekor\.(?:in|com\.au)))
+1631100905	tripleee	the[\W_]*+design[\W_]*+trip(?!\.com(?<=thedesigntrip\.com))
