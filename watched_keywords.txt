@@ -32805,3 +32805,4 @@
 1631206876	Ryan M	bestvpnprovider\.co
 1631209924	tripleee	ennel[\W_]*+foods
 1631211559	tripleee	xpense\.pro
+1631217202	Makyen	plugnpureairpurifier\.com
