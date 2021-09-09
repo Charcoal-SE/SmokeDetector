@@ -201,7 +201,6 @@ quickbooks
 (?-i:Eva Wei$)
 \bcunt\d*\b
 (?-i:^usbullionreserve$)
-(?-i:^khadim hussain$)
 (?-i:^stevensegui$)
 (^-i:^Jivendro Adriaans$)
 (?-i:^aliinam$)
