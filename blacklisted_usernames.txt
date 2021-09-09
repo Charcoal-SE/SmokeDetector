@@ -206,7 +206,6 @@ quickbooks
 (?-i:^aliinam$)
 (?-i:^Scarlet\s*Grace$)
 (?-i:^nanny5557$)
-(?-i:^k.?h?a.?d.?.?i.?m h.?u.?s.?s.?a.?i[mn]$)
 (?-i:^Mary Skula$)
 (?-i:^Pandora Service$)
 (?-i:^Angela Yui$)
