@@ -32772,3 +32772,4 @@
 1631155644	cigien	bipp\.io
 1631164617	tripleee	(?-i:^clippingpath$)
 1631166519	tripleee	zaara[\W_]*+dental(?:[\W_]*+clinic)?
+1631166738	tripleee	directfbhelpdesk@outlook\.com
