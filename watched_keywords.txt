@@ -32770,3 +32770,4 @@
 1631150529	cigien	elmostajadat\.com
 1631154876	cigien	extrieve
 1631155644	cigien	bipp\.io
+1631164617	tripleee	(?-i:^clippingpath$)
