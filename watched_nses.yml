@@ -1164,7 +1164,6 @@ items:
 - comment: no longer responding 2020-10-15
   disable: true
   ns: tigerexpertz.com.
-- ns: cloudnstools.com.
 - ns: turnkeywebspace.com.
 - ns: namedc.com.
 - ns: hostinger.in.
