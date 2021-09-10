@@ -809,6 +809,7 @@ items:
 - ip: 139.59.83.45
 - ip: 139.99.130.132
 - ip: 14.225.7.19
+- ip: 141.136.39.13
 - comment: mostly FP, mainly developer sites
   disable: true
   ip: 142.250.188.51
