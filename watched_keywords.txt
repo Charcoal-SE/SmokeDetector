@@ -32819,3 +32819,4 @@
 1631261650	tripleee	telegra\.ph
 1631261802	tripleee	windshieldsolution\.in
 1631262697	double-beep	windshieldshatterfix\.com
+1631262925	tripleee	(?-i:^shivamaggarwal$)
