@@ -27691,7 +27691,6 @@
 1614878303	Ollie	tjmart\.pk
 1614881832	Spevacus	mullerwanda51(?:@yahoo\.com)?
 1614881766	Ollie	fastestdocs247\.com
-1614882193	Spevacus	codeexampler\.com
 1614886168	Spevacus	chunked\.io
 1614889304	Mast	wellguider\.com
 1614902249	cigien	ovglass\.com
