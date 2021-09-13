@@ -32879,3 +32879,4 @@
 1631511072	tripleee	ionia\.com\.vn
 1631512803	cigien	updatetomtommaps\.com
 1631517218	tripleee	sportstoto365\.com
+1631517450	tripleee	(?-i:^bufs$)
