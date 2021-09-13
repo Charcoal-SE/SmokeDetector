@@ -32880,3 +32880,4 @@
 1631512803	cigien	updatetomtommaps\.com
 1631517218	tripleee	sportstoto365\.com
 1631517450	tripleee	(?-i:^bufs$)
+1631518589	tripleee	freedmovie\.com
