@@ -32900,3 +32900,4 @@
 1631559924	Jeff Schaller	advantisglobal\.com
 1631562055	Jeff Schaller	webtechsolution\.co
 1631562389	Makyen	e-havuzmarket\.com
+1631562421	Makyen	e[\W_]*+havuz[\W_]*+market(?!\.com(?<=e-havuzmarket\.com))
