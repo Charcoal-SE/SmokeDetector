@@ -32889,3 +32889,4 @@
 1631532887	tripleee	cwgmarkets\.com
 1631533856	Jeff Schaller	automaticcoating\.com
 1631535143	tripleee	deboxglobal\.com
+1631536614	tripleee	(?-i:^Software Crafts97$)
