@@ -32922,3 +32922,4 @@
 1631616274	tripleee	tylko\.com
 1631617310	Jeff Schaller	softekpro\.com
 1631617356	Jeff Schaller	softechpro\.in
+1631618611	tripleee	(?-i:^Electric Smokers 4u$)
