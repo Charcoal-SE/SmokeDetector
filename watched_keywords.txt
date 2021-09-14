@@ -32902,3 +32902,4 @@
 1631562389	Makyen	e-havuzmarket\.com
 1631562421	Makyen	e[\W_]*+havuz[\W_]*+market(?!\.com(?<=e-havuzmarket\.com))
 1631573506	Makyen	aaapoolmaintenance\.com
+1631581490	cigien	msprojectholidaycalendars\.com
