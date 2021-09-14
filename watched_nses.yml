@@ -83,6 +83,9 @@ items:
   - aria.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
+  - nicole.ns.cloudflare.com.
+- ns:
+  - alec.ns.cloudflare.com.
   - roxy.ns.cloudflare.com.
 - ns:
   - alex.ns.cloudflare.com.
