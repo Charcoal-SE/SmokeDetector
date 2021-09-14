@@ -50,6 +50,9 @@ items:
   - clark.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
+  - dawn.ns.cloudflare.com.
+  - dimitris.ns.cloudflare.com.
+- ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
