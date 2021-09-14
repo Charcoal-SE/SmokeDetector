@@ -397,6 +397,15 @@ stackexchange.com:
       - 17078244 # Xnero
       # NOTICE: please don't add new users until you have Room Owner approval
 
+  129590:  # CGCC Mod Office
+    commands: true
+    msg_types:
+      - site-codegolf.stackexchange.com
+      - site-codegolf.meta.stackexchange.com
+      - experimental-site-codegolf.stackexchange.com
+      - experimental-site-codegolf.meta.stackexchange.com
+      - no-offensive-mask
+
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
