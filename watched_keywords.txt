@@ -32916,5 +32916,4 @@
 1631610253	tripleee	acetaminophen[\W_]*+tablets?
 1631610310	tripleee	rhinox(?:usa)?
 1631610351	tripleee	american[\W_]*+iron[\W_]*+and[\W_]*+steel[\W_]*+institute
-1631610374	tripleee	<strong>Get A Free Sample Report:
 1631612661	tripleee	htvront\.com
