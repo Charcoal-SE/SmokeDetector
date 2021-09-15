@@ -32956,3 +32956,4 @@
 1631702287	tripleee	aalogics\.com
 1631704497	Makyen	vanchrfid\.blogspot
 1631704512	Makyen	vanchrfid\.wordpress\.com
+1631704534	Makyen	vanchrfid(?!\.blogspot\b)(?!\.wordpress\.com)
