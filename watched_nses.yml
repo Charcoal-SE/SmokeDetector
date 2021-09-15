@@ -900,9 +900,6 @@ items:
   - malcolm.ns.cloudflare.com.
   - sureena.ns.cloudflare.com.
 - ns:
-  - maria.ns.cloudflare.com.
-  - sri.ns.cloudflare.com.
-- ns:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
