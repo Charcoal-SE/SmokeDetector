@@ -32940,3 +32940,4 @@
 1631674440	Ryan M	vipcontentonline\.com
 1631675953	Makyen	vipcontentonline(?!\.com)
 1631676682	cigien	postarticleonline\.com
+1631679313	cigien	bigben\.academy
