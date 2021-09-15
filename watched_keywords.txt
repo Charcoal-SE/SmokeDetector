@@ -32959,3 +32959,4 @@
 1631704534	Makyen	vanchrfid(?!\.blogspot\b)(?!\.wordpress\.com)
 1631704551	Makyen	dionys[\W_]*+sneaker
 1631710577	tripleee	cannabudstore\.com
+1631710598	tripleee	rovecartsnation\.com
