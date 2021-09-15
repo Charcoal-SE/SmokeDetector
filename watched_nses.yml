@@ -1090,8 +1090,7 @@ items:
   ns: fatcow.com.
 - ns: vedigitize.us.
 - ns: serverpars.com.
-- comment: no longer responding 2020-04-02
-  disable: true
+- comment: disabled as "no longer responding" 2020-04-02 but added back; flapping
   ns: namedc.com.
 - ns: wixdns.net.
 - ns: a2hosting.com.
@@ -1165,7 +1164,6 @@ items:
   disable: true
   ns: tigerexpertz.com.
 - ns: turnkeywebspace.com.
-- ns: namedc.com.
 - ns: hostinger.in.
 - ns: idhostinger.com.
 - ns: site5.com.
