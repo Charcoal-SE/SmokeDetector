@@ -32938,3 +32938,4 @@
 1631668299	Ryan M	getdone\.co
 1631673087	Makyen	НАХУЙ|НИХУЯ|ДОЛБАЕБ ТЫ|ЕБАНЫЙ|БЛЯТЬ
 1631674440	Ryan M	vipcontentonline\.com
+1631675953	Makyen	vipcontentonline(?!\.com)
