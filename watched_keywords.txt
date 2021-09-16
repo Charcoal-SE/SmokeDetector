@@ -32967,3 +32967,4 @@
 1631761186	Makyen	p>\d\d[/-]\d\d[/-]\d{4}</p>$
 1631761929	cigien	incurablescure\.blogspot
 1631763439	cigien	ladangtani\.com
+1631763455	cigien	prevent\.my\.id
