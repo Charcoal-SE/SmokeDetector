@@ -32978,3 +32978,4 @@
 1631778293	tripleee	stradivaristrings\.com
 1631782845	tripleee	(?-i:^Robert frost$)
 1631787736	tripleee	api2cart\.com
+1631788425	Ryan M	api2cart(?!\.com)
