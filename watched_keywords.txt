@@ -32981,3 +32981,4 @@
 1631788991	Ryan M	webtech[\W_]*+solutions
 1631789684	Ryan M	is one of those processes that you may discover running in your Windows
 1631789867	Ryan M	faraborduav\.com
+1631790066	tripleee	^.{0,20}\bha[vw]in\b.{0,20}$
