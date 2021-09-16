@@ -32983,3 +32983,4 @@
 1631789867	Ryan M	faraborduav\.com
 1631790066	tripleee	^.{0,20}\bha[vw]in\b.{0,20}$
 1631793337	Ryan M	lcbs\.edu\.in
+1631798288	tripleee	tiptopcleaning\.com\.au
