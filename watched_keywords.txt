@@ -32680,7 +32680,6 @@
 1630958015	Makyen	collate\.live
 1630960487	cigien	ioctrl\.com
 1630971464	cigien	parttimejobs2u\.com
-1630981557	Makyen	kriptocent\.com
 1630987997	Makyen	customersurveys\.xyz
 1630991882	tripleee	newblogclub\.com
 1630995062	Makyen	tania4you\.com
