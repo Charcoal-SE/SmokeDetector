@@ -4196,4 +4196,3 @@ getdone\.co
 arrowmeds\.com
 mynewsdesk\.com
 kriptocent\.com
-api2cart\.com(?<!docs\.api2cart\.com)
