@@ -32973,3 +32973,4 @@
 1631767038	cigien	bestvashikaranspecialistinindia\.com
 1631774676	tripleee	entegrowthmarketreports\.com
 1631774861	tripleee	Himadritech
+1631774908	tripleee	himadri[\W_]*+technology
