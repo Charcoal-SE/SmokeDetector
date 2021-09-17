@@ -33011,3 +33011,4 @@
 1631869430	Makyen	terraleaf-cbd-oil\.wixsite\.com
 1631875609	tripleee	fastbusinessranking\.com
 1631875972	tripleee	lotteryage\.com
+1631876588	tripleee	(?-i:^Zanna Kirania$)
