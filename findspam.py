@@ -1866,8 +1866,9 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     r"(?: certification)? (?:courses?|training)(?=.{0,25}</a>)",
 
     r"(?:"
-    "" r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
+    "" r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|experts?|institutes?|classes|schools?"
     "" r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
+    "" r"|services?|maintenance"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
     r"(?:\b.{1,8}\b)?\L<city>\b",
