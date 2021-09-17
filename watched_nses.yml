@@ -765,6 +765,9 @@ items:
   - jocelyn.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
+  - john.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
+- ns:
   - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
