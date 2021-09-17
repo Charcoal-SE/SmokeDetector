@@ -33015,3 +33015,4 @@
 1631876780	tripleee	(?-i:^tentv$)
 1631876906	tripleee	geniusgeeks\.com
 1631893055	cigien	signaturesoftware\.in
+1631893512	cigien	solvery\.us
