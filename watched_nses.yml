@@ -166,6 +166,9 @@ items:
   - apollo.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - apollo.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
+- ns:
   - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
