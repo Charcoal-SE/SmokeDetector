@@ -1475,3 +1475,8 @@ items:
 - ns: leytewebhost.com.
 - ns: epizy.com.
 - ns: hostingmadeeasy.com.
+- ns:
+  - ns-1061.awsdns-04.org.
+  - ns-107.awsdns-13.com.
+  - ns-1845.awsdns-38.co.uk.
+  - ns-722.awsdns-26.net.
