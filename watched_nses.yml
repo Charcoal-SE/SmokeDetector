@@ -576,6 +576,9 @@ items:
   - felicity.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
+  - felipe.ns.cloudflare.com.
+  - molly.ns.cloudflare.com.
+- ns:
   - fiona.ns.cloudflare.com.
   - nash.ns.cloudflare.com.
 - ns:
