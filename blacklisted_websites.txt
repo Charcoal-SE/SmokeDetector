@@ -4200,3 +4200,4 @@ api2cart\.com(?<!(?:docs|api)\.api2cart\.com)
 freeactivationkeys\.org
 opencloudmanifesto\.org
 getmacos\.org
+tejar\.pk
