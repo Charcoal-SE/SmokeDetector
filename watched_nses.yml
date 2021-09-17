@@ -145,6 +145,9 @@ items:
   - andy.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - angela.ns.cloudflare.com.
+  - austin.ns.cloudflare.com.
+- ns:
   - anirban.ns.cloudflare.com.
   - dee.ns.cloudflare.com.
 - ns:
