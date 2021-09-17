@@ -891,13 +891,9 @@ items:
 - comment: lots of FPs, including api.flutter.dev
   disable: true
   ip: 151.101.1.195
-- ip: 151.101.130.9
-- ip: 151.101.194.9
-- ip: 151.101.2.9
 - comment: lots of FPs, including api.flutter.dev
   disable: true
   ip: 151.101.65.195
-- ip: 151.101.66.9
 - ip: 151.106.116.152
 - ip: 151.106.121.149
 - ip: 151.106.98.45
