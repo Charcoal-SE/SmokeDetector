@@ -20367,7 +20367,6 @@
 1590670780	Jeff Schaller	tellthebell\.one
 1590679184	Machavity	windows10pdf\.com
 1590681956	Machavity	(?-i:3eqElvy)(?#url shortener)
-1590684612	Xnero	divyansh\.singh(?:@jktech\.com)?
 1590685654	Xnero	befantastictoday\.com
 1590714973	Makyen	readersmagnet\.com
 1590730212	Makyen	jasapkv168\.com
