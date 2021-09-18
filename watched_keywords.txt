@@ -33031,3 +33031,4 @@
 1631986038	Makyen	(?-i:3y37ZAk)(?#bit.ly)
 1631986160	cigien	todayindiavoice\.com
 1631986179	cigien	techactives\.com
+1631987298	cigien	howtakescreenshot\.org
