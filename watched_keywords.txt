@@ -33047,3 +33047,4 @@
 1632070453	cigien	digital-mediahub\.com
 1632072573	cigien	itmaster-soft\.com
 1632079404	cigien	housemap\.link
+1632082307	cigien	buysneed\.com
