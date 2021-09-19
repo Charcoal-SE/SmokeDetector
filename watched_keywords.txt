@@ -33039,3 +33039,4 @@
 1632020390	cigien	dailyqh88\.org
 1632034070	Makyen	joseph(?<=>joseph)[\W_]*+donahue(?=</a>)
 1632037728	Makyen	strawpoll\.me/\d+
+1632037740	Makyen	45649351
