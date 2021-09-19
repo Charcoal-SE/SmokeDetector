@@ -33034,3 +33034,4 @@
 1631987298	cigien	howtakescreenshot\.org
 1631989839	cigien	sleekfood\.com
 1632016323	cigien	crowdsentry\.io
+1632016568	cigien	globalatmcardhackingservice(?:@gmail\.com)?
