@@ -33038,3 +33038,4 @@
 1632016767	cigien	michaelsmith8895(?:@gmail\.com)?
 1632020390	cigien	dailyqh88\.org
 1632034070	Makyen	joseph(?<=>joseph)[\W_]*+donahue(?=</a>)
+1632037728	Makyen	strawpoll\.me/\d+
