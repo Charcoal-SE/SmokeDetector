@@ -33051,3 +33051,4 @@
 1632087962	Makyen	dick[\W_]*+kickem
 1632108609	Makyen	batterybhai\.com
 1632108623	Makyen	battery[\W_]*+bhai(?!\.com(?<=batterybhai\.com))
+1632116338	tripleee	luckyvip77\.com
