@@ -33056,3 +33056,4 @@
 1632120055	tripleee	energenicbatteries\.com
 1632120071	tripleee	faritaz\.ml
 1632129448	tripleee	(?-i:^Royal Continental Hotels$)
+1632129550	tripleee	sitarganjtv\.com
