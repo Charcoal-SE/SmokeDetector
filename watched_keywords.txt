@@ -33052,3 +33052,4 @@
 1632108609	Makyen	batterybhai\.com
 1632108623	Makyen	battery[\W_]*+bhai(?!\.com(?<=batterybhai\.com))
 1632116338	tripleee	luckyvip77\.com
+1632117500	Makyen	(?-i:usmanrajpoot_0)(?#fiverr.com)
