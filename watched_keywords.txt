@@ -33058,3 +33058,4 @@
 1632129448	tripleee	(?-i:^Royal Continental Hotels$)
 1632129550	tripleee	sitarganjtv\.com
 1632132045	tripleee	mudassirchughtai\.com
+1632132680	tripleee	timesofmart\.com
