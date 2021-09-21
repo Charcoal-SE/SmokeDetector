@@ -4203,3 +4203,4 @@ getmacos\.org
 tejar\.pk
 evelynn\.tech
 ourtutorials\.in
+macsoftware\.org
