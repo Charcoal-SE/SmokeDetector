@@ -33083,3 +33083,4 @@
 1632208608	Ryan M	brainytechz\.com
 1632208631	Ryan M	thetechub\.us
 1632208762	Ryan M	development[\W_]*+company[\W_]*+in(?=[\W_]*+\w++)
+1632215557	tripleee	cronitor\.io
