@@ -33122,4 +33122,3 @@
 1632301207	tripleee	pronewsreviews\.com
 1632301251	tripleee	stopthebreaks\.com
 1632303920	tripleee	thecryptoape\.com
-1632307319	tripleee	novotel[\W_]*+rechpark
