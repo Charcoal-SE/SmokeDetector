@@ -33124,3 +33124,4 @@
 1632307348	tripleee	novotel[\W_]*+techpark
 1632309388	tripleee	domyhomework\.club
 1632309681	tripleee	videohunt\.net
+1632310655	Jeff Schaller	writing-an-essay-for-college-application\.builder\.hemsida24\.se
