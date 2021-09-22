@@ -33116,3 +33116,4 @@
 1632292160	tripleee	online4hindi\.com
 1632292197	tripleee	eitbiz\.com
 1632293970	tripleee	netmaxims\.com
+1632294891	Makyen	(?:world[\W_]*+escorts?[\W_]*+hub)+(?!\.com(?<=\bworldescortshub\.com))
