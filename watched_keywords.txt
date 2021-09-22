@@ -32974,7 +32974,6 @@
 1631799694	cigien	biladiadv\.com
 1631799721	cigien	gcelab\.com
 1631799749	cigien	autocom\.swiss
-1631806667	tripleee	(?-i:^Vicky$)
 1631806957	cigien	haldenluxury\.com
 1631821354	Ollie	himalayacab\.com
 1631821523	Ollie	crm-masters\.com
