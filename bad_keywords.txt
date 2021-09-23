@@ -2546,3 +2546,4 @@ tạp[\W_]*+vụ[\W_]*+văn[\W_]*+phòng
 ve[\W_]*+sinh[\W_]*+nha[\W_]*+cua
 binaryexpertrecovery\d*+(?:@gmail\.com)?
 dụng[\W_]*+khác(?# "household appliances" in Vietnamese)
+^<p>[\W_]*+(?:(?:lol(?:ol)*+|lmao|rofl)[\W_]*){3,}[\W_]*</p>$
