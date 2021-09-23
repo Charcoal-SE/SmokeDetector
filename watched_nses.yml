@@ -382,6 +382,9 @@ items:
   - cleo.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - clyde.ns.cloudflare.com.
+  - dalary.ns.cloudflare.com.
+- ns:
   - coco.ns.cloudflare.com.
   - duke.ns.cloudflare.com.
 - ns:
