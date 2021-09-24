@@ -92,9 +92,9 @@ class GitManager:
     @staticmethod
     def get_origin_or_auth():
         git_url = git.config("--get", "remote.origin.url").strip()
-        if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_password:
+        if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_access_token:
             preformat_url = ('https://{}:{}@github.com/' + git_url[19:])
-            return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_password))
+            return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_access_token))
         else:
             return "origin"
 
