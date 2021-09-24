@@ -33180,3 +33180,4 @@
 1632475008	tripleee	dllnkloc\.com
 1632482063	tripleee	camella\.com\.ph
 1632482168	tripleee	chalaang
+1632487965	Makyen	educationdigest\.com
