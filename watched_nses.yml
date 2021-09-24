@@ -508,6 +508,9 @@ items:
   - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - donald.ns.cloudflare.com.
+  - tina.ns.cloudflare.com.
+- ns:
   - dora.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
