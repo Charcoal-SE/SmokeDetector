@@ -33206,4 +33206,3 @@
 1632569593	Jeff Schaller	invitescafe\.com
 1632569644	Jeff Schaller	affordablemag\.com
 1632587459	cigien	ppscdailyquiz\.com
-1632587721	Makyen	pad[\W_]*+store
