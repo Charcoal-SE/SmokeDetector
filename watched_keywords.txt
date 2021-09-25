@@ -33206,3 +33206,4 @@
 1632562892	Ryan M	padstore
 1632562936	Ryan M	padstorevn
 1632569593	Jeff Schaller	invitescafe\.com
+1632569644	Jeff Schaller	affordablemag\.com
