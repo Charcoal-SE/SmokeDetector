@@ -332,6 +332,9 @@ items:
   - mira.ns.cloudflare.com.
 - ns:
   - buck.ns.cloudflare.com.
+  - lola.ns.cloudflare.com
+- ns:
+  - buck.ns.cloudflare.com
   - lorna.ns.cloudflare.com.
 - ns:
   - burt.ns.cloudflare.com.
