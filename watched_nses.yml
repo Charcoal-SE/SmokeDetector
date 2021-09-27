@@ -52,6 +52,9 @@ items:
   - adrian.ns.cloudflare.com.
   - amit.ns.cloudflare.com.
 - ns:
+  - adrian.ns.cloudflare.com.
+  - kanye.ns.cloudflare.com.
+- ns:
   - agustin.ns.cloudflare.com.
   - dora.ns.cloudflare.com.
 - ns:
