@@ -33243,3 +33243,4 @@
 1632764772	Ollie	wordfeudhelper\.org
 1632774292	cigien	(?-i:WilC-IMxBwo)(?#youtu.be)
 1632779712	cigien	colorswall\.com
+1632781873	cigien	tradingselim\.com
