@@ -33231,3 +33231,4 @@
 1632737380	tripleee	maeonlabs\.in
 1632737439	tripleee	ctmc\.ae
 1632739897	tripleee	barocrack\.com
+1632739961	tripleee	(?-i:^Sophia Grace$)
