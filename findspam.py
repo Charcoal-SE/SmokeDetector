@@ -1287,8 +1287,14 @@ def get_ns_ips(domain):
     Extract IP addresses of name server(s) for a domain
     """
     ns_ips = []
-    nameservers = dns_query(domain, 'ns')
+    dom = tld.get_tld(
+        domain, fix_protocol=True, as_object=True, fail_silently=True)
+    if not dom:
+        log('info', 'Could not get domain for %s' % (domain))
+        return []
+    nameservers = dns_query(dom.fld, 'ns')
     if nameservers is not None:
+        log('info', 'Name servers: %s' % sorted(str(n) for n in nameservers))
         for ns in nameservers:
             this_ns_ips = dns_query(str(ns), 'a')
             if this_ns_ips is not None:
