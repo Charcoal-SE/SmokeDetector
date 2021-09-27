@@ -32717,7 +32717,6 @@
 1631094217	tripleee	cracktosofts\.com
 1631094827	tripleee	codersera\.com
 1631097624	tripleee	editpapa\.com
-1631097651	tripleee	sixtimesanhour\.com
 1631097973	tripleee	waytoeasylearn\.com
 1631099135	tripleee	(?-i:^Noah Centineo$)
 1631099356	tripleee	thehomedekor\.com\.au
