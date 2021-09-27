@@ -4218,3 +4218,4 @@ deskflex\.com
 wboc\.com
 padstorevn
 verzdesign\.com
+anycaptcha[\W_]*+com
