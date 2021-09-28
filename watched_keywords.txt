@@ -33254,3 +33254,4 @@
 1632819080	tripleee	embedcard\.com
 1632825163	tripleee	yopals\.com
 1632826165	tripleee	(?-i:^KamalPage$)
+1632826556	tripleee	(?-i:bed page$)
