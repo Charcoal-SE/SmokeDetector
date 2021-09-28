@@ -4223,3 +4223,4 @@ reservationbuy\.com
 djangobabu\.com
 sixtimesanhour\.com
 prepcsolution\.com
+astera\.com
