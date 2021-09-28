@@ -33254,3 +33254,4 @@
 1632818539	tripleee	git\.arch\.info\.mie-u\.ac\.jp
 1632819080	tripleee	embedcard\.com
 1632825163	tripleee	yopals\.com
+1632826165	tripleee	(?-i:^KamalPage$)
