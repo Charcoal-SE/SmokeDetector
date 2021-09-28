@@ -33268,3 +33268,4 @@
 1632836670	cigien	oposicionesya\.com
 1632836698	tripleee	fire[\W_]*+stick(?:[\W_]*+usa)?
 1632837003	cigien	gzgutters\.com
+1632837784	tripleee	recampus\.ning\.com
