@@ -1510,3 +1510,6 @@ items:
 - ns: w2iserver.com.
 - ns: weblink.in.
 - ns: cp-in-18.hostgatorwebservers.com.
+- ns:
+  - ns61.worldnic.com.
+  - ns62.worldnic.com.
