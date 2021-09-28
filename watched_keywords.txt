@@ -33262,3 +33262,4 @@
 1632832086	Spevacus	topcbdmart\.com
 1632832511	tripleee	(?-i:^rahul argalon$)
 1632832573	tripleee	(?-i:^Twinkle Khatri$)
+1632832743	tripleee	leolist
