@@ -33278,3 +33278,4 @@
 1632844126	Makyen	fire[\W_]*+stick[\W_]*+usa
 1632844140	Makyen	fire[\W_]*+stick[\W_]*+us
 1632845362	cigien	crowdfunder\.co\.uk
+1632845384	cigien	designspiration\.com
