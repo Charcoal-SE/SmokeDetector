@@ -1223,7 +1223,11 @@ def dns_query(label, qtype):
     # If there's no cache then assume *now* is important
     try:
         starttime = datetime.utcnow()
-        answer = dns.resolver.resolve(label, qtype, search=True)
+        # Extenmd lifetime if we are running a test
+        extra_params = dict()
+        if "pytest" in sys.modules:
+            extra_params['lifetime'] = 60
+        answer = dns.resolver.resolve(label, qtype, search=True, **extra_params)
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
