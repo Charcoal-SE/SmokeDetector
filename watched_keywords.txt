@@ -33248,3 +33248,4 @@
 1632808345	Makyen	onehub[\W_]*+chennai
 1632808371	Makyen	capitaland\.com
 1632810375	Makyen	aerinababy\.com
+1632810437	Makyen	netmaxims(?!\.com)
