@@ -697,6 +697,9 @@ items:
   - theo.ns.cloudflare.com.
 - ns:
   - irma.ns.cloudflare.com.
+  - matteo.ns.cloudflare.com.
+- ns:
+  - irma.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
   - isaac.ns.cloudflare.com.
