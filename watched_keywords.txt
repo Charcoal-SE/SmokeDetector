@@ -33295,3 +33295,4 @@
 1632901797	tripleee	(?-i:^Colbin Gracie$)
 1632902591	tripleee	(?-i:^DeskFlex$)
 1632902710	tripleee	chansis\.com
+1632904417	tripleee	thewellnessway\.com
