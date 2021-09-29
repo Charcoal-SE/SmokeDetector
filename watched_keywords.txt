@@ -33294,3 +33294,4 @@
 1632901781	tripleee	grillpartsreplacement\.com
 1632901797	tripleee	(?-i:^Colbin Gracie$)
 1632902591	tripleee	(?-i:^DeskFlex$)
+1632902710	tripleee	chansis\.com
