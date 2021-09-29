@@ -33293,3 +33293,4 @@
 1632899529	Ryan M	best[\W_]*+shoes[\W_]*+for[\W_]*+restaurant[\W_]*+workers
 1632901781	tripleee	grillpartsreplacement\.com
 1632901797	tripleee	(?-i:^Colbin Gracie$)
+1632902591	tripleee	(?-i:^DeskFlex$)
