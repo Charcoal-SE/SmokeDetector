@@ -33312,3 +33312,4 @@
 1632921196	Spevacus	vkeyhometuitionservices\.in
 1632921733	tripleee	iwebcamapp\.com
 1632921784	tripleee	(?-i:^palag argalon$)
+1632922102	tripleee	zigiwave\.com
