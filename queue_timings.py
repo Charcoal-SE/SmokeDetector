@@ -6,14 +6,30 @@
 import os.path
 # noinspection PyPep8Naming
 import pickle
+import warnings
 import math
 
 
 def main():
+    queue_data = {}
+    if os.path.isfile("bodyfetcherQueueTimings.txt"):
+        with open("bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8") as stat_file:
+            for stat_line in stat_file:
+                time_str, site_str = stat_line.split(" ", 1)
+                site = site_str[:-1]
+                time_in_queue = float(time_str)
+                if site in queue_data:
+                    queue_data[site].append(time_in_queue)
+                else:
+                    queue_data[site] = [time_in_queue]
     if os.path.isfile("bodyfetcherQueueTimings.p"):
+        warnings.warn("Timing data in pickle format is deprecated; use the plain text format instead.",
+                      DeprecationWarning)
         try:
             with open("bodyfetcherQueueTimings.p", "rb") as f:
-                queue_data = pickle.load(f)
+                pickle_queue_data = pickle.load(f)
+            for site in pickle_queue_data:
+                queue_data[site].extend(pickle_queue_data[site])
         except EOFError:
             print("Hit EOFError while reading file. Smokey handles this by deleting the file.")
             resp = input("Delete? (y/n)").lower()
@@ -40,7 +56,7 @@ def main():
                           q3, stddev, len(times), min98, max98))
 
     else:
-        print("bodyfetcherQueueTimings.p doesn't exist. No data to analyse.")
+        print("bodyfetcherQueueTimings.txt doesn't exist. No data to analyse.")
 
 
 if __name__ == "__main__":
