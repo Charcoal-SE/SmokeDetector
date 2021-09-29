@@ -14,7 +14,6 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
-import atexit
 import platform
 # noinspection PyPackageRequirements
 import websocket
@@ -106,8 +105,6 @@ if GlobalVars.dns_nameservers != 'system':
 
 if GlobalVars.dns_cache_enabled:
     dns.resolver.get_default_resolver().cache = dns.resolver.Cache(GlobalVars.dns_cache_interval)
-# Register actually_add_queue_timings_data hook
-atexit.register(actually_add_queue_timings_data)
 
 
 # noinspection PyProtectedMember
