@@ -775,6 +775,9 @@ items:
   - wesley.ns.cloudflare.com.
 - ns:
   - jim.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
+  - jim.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
   - jo.ns.cloudflare.com.
