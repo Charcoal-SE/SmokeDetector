@@ -33302,3 +33302,4 @@
 1632913354	tripleee	(?-i:^argalon techno$)
 1632913424	tripleee	argalon
 1632918191	Spevacus	learnbay\.co
+1632918225	Spevacus	allinoneservicenumber\.com
