@@ -135,6 +135,7 @@ def test_findspam(title, body, username, site, body_is_summary, is_answer, expec
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, expected_spam", [
     ('A title', '<p><a href="https://triple.ee/ns-test">foo</a>', 'tripleee', True),
+    ('A title', '<p><a href="https://www.triple.ee/ns-test">foo</a>', 'tripleee', True),
     ('A title', '<p><a href="https://charcoal-se.org/ns-test">foo</a>', 'tripleee', False),
 ])
 def test_ns(title, body, username, expected_spam):
