@@ -33308,3 +33308,4 @@
 1632920126	tripleee	headhuntersonline\.es
 1632920464	tripleee	vizdeals\.com
 1632920484	tripleee	thepsp\.in
+1632920834	tripleee	(?-i:^Data Science$)
