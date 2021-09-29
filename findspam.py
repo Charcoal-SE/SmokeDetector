@@ -329,13 +329,13 @@ TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 
 # The NUMBER_REGEXES are used to obtain strings within a post which are considered to be a single "number". While
 #   it would be nice to be able to just use a single regular expression like:
-#     r'(?:\+\d|\d(?<=[^\d+]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
+#     r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
 #   Doing so won't get us all the possible matches of different lengths which start from the same character, even
 #   when using the regex package's overlapped=True option. In order to get all different possible lengths,
 #   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
 #   interested and then combine the results.
 # The use of separate Unicode and ASCII flagged versions of the regexes is also because they can result in different
-#   resulting start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
+#   start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
 #   NUMBER_REGEX_START, and NUMBER_REGEX_END in order to not have a separate source for a combined regex. This
 #   does result in our CI testing being a bit slower, but is a trade-off for not using two separate regexes, which
 #   would reduce maintainability.
