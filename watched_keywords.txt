@@ -33290,3 +33290,4 @@
 1632888212	tripleee	jadroo\.com
 1632899118	Ryan M	shoeexpres\.com
 1632899416	Ryan M	bhitmagazine\.com\.ng
+1632899529	Ryan M	best[\W_]*+shoes[\W_]*+for[\W_]*+restaurant[\W_]*+workers
