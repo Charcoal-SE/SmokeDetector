@@ -125,8 +125,6 @@ def load_files():
         GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if has_pickle("bodyfetcherMaxIds.p"):
         GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
-    if has_pickle("bodyfetcherQueueTimings.p"):
-        GlobalVars.bodyfetcher.queue_timings = load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
     if has_pickle("codePrivileges.p"):
         GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
     if has_pickle("reasonWeights.p"):
