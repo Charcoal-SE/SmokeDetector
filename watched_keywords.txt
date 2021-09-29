@@ -33296,3 +33296,4 @@
 1632902591	tripleee	(?-i:^DeskFlex$)
 1632902710	tripleee	chansis\.com
 1632904417	tripleee	thewellnessway\.com
+1632905962	tripleee	(?-i:SAkuznetsova)(?# t.me)
