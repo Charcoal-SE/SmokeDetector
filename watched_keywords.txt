@@ -31735,7 +31735,6 @@
 1627950690	cigien	zeligzwebstore\.com
 1627956703	cigien	clothoo\.com
 1627958038	Makyen	clothoo(?!\.com)
-1627964475	Ryan M	multivitamincare[\W_]*+org
 1627964777	Ryan M	multivitamincare(?![\W_]*+org\b)
 1627969295	tripleee	caramel\.la
 1627971313	tripleee	phresheez\.com
