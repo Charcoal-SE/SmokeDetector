@@ -518,3 +518,4 @@ williamriver
 (?-i:^Emily Wiliam$)
 (?-i:^surbhijain$)
 (?-i:^Donn Moo$)
+(?-i:^Sophia Grace$)
