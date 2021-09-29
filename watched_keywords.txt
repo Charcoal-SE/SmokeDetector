@@ -33309,3 +33309,4 @@
 1632920464	tripleee	vizdeals\.com
 1632920484	tripleee	thepsp\.in
 1632920834	tripleee	(?-i:^Data Science$)
+1632921196	Spevacus	vkeyhometuitionservices\.in
