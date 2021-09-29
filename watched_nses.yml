@@ -670,6 +670,9 @@ items:
   - jill.ns.cloudflare.com.
 - ns:
   - hugh.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
+  - hugh.ns.cloudflare.com.
   - lina.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
