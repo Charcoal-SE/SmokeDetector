@@ -370,8 +370,8 @@ def add_queue_timing_data(site, time_in_queue):
 
 def actually_add_queue_timings_data():
     # Use .txt for cross platform compatibility
-    with open("bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
-        stat_file.write("\n".join(queue_timings_data))
+    with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+        stat_file.write("\n".join(queue_timings_data) + "\n")
 
 
 # methods that help avoiding reposting alerts:
