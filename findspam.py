@@ -1000,7 +1000,7 @@ def check_numbers(s, numlist, numlist_normalized=None):
 
 def process_numlist(numlist):
     processed = set(numlist)  # Sets are faster than Hong Kong journalists!
-    normalized = {regex.sub(r"\D", "", entry) for entry in numlist}
+    normalized = {regex.sub(r"(?a)\D", "", entry) for entry in numlist}
     return processed, normalized
 
 
