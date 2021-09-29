@@ -33289,3 +33289,4 @@
 1632887589	tripleee	(?:sua[\W_]*+chua[\W_]*+)?phuc[\W_]*+thinh\d*
 1632888212	tripleee	jadroo\.com
 1632899118	Ryan M	shoeexpres\.com
+1632899416	Ryan M	bhitmagazine\.com\.ng
