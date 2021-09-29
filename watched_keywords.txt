@@ -33251,7 +33251,6 @@
 1632825163	tripleee	yopals\.com
 1632826165	tripleee	(?-i:^KamalPage$)
 1632826556	tripleee	(?-i:bed page$)
-1632827489	tripleee	Are you looking for Leolist
 1632827588	tripleee	graphketing\.com
 1632827834	tripleee	renyor\.com
 1632832049	Spevacus	endlesscontainerpool\.com
