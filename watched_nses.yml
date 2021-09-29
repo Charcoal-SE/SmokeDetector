@@ -1518,6 +1518,11 @@ items:
   - ns-1217.awsdns-24.org.
   - ns-1920.awsdns-48.co.uk.
   - ns-841.awsdns-41.net.
+- ns:
+  - ns-1208.awsdns-23.org.
+  - ns-1606.awsdns-08.co.uk.
+  - ns-452.awsdns-56.com.
+  - ns-533.awsdns-02.net.
 - ns: webhostingbuzz.com.
 - ns: symbolhost.com.
 - ns: w2iserver.com.
