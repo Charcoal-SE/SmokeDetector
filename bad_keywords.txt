@@ -23,7 +23,7 @@ Nitroxin
 Bowtrol
 slim\W?genix
 cleanse\W?efx
-Alpha\W?(?:x\W?)?(?:Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
+alpha(?!\s*[=*()]\s*max)(?<!\(alpha)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)
 exoslim
 blackline\W?elite
 testcore\W?pro
@@ -44,9 +44,9 @@ service\W?solahart
 junisse
 profactor\W?t
 (?:fake|novelty|quality|buy(?:ing)?|sell(?:ing)?|offer|comprar|fabricante|vender|venta).{0,20}(?:passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts|pasaportes|licencias[\W_]*+de[\W_]*+conducir|tarjetas[\W_]*+de[\W_]*+identificación)s?
-(?:support|service|helpline)(?:\W?phone)?\W?number(?<=^.{0,225})
+(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})(?#If this is changed, it also needs to be changed in findspam.py customer_support_phrase)
 [a-z_]*+(?:1_*+)?866[\W_]*+978[\W_]*+(?:6819|6762)[a-z_]*+
-(?:mcafee|hotmail|gmail|outlook|yahoo|lexmark (?:printer)?) ?(?:password(?: recovery)?|tech)? ?(?:(?:customer|technical) (?:support|service))? (?:support|contact|telephone|help(?:line)?|phone) number
+(?:mcafee|hotmail|gmail|outlook|yahoo|lexmark (?:printer)?) ?(?:password(?: recovery)?|tech)? ?(?:(?:customer|technical) (?:support|service))? (?:support|contact|telephone|help(?:line)?|phone) numbers?
 kitchen for sale
 pdftoexcelconverter
 keepbrowsersafe
@@ -122,7 +122,6 @@ cialis
 slotobit
 (?:putlocker.{0,100}?\b(?:movies?|watch)|(?:movies?|watch)\b.{0,100}?putlocker\w*)
 vimax
-(?:contact|call) us (?:today|now)
 Thierno[ _]?M.[ _]Sow
 maxtropin
 geniux
@@ -148,7 +147,7 @@ call\W?girls?
 youth\W?serum
 explosive\W?muscles?
 zyntix
-genbrain
+genbrain(?:[\W_]*+(?:review|pills|\d++|[\da-f]{5,}+)s?)*
 (?:teeth|tooth)\W(?:lighten|whiten|brighten|shin)(?:er|ing)?
 (?:lighten|whiten|brighten|shin)(?:e|er|ing|ed)?\W(?:teeth|tooth|kit)
 xtest\W(?:muscle|reviews?)
@@ -179,10 +178,8 @@ image\Wrevive
 cognishield
 spartagen
 blackcore
-xiphos
 muscle\Wforce\Wfx
 vitanoria
-obat
 vlamorous
 erect\Wxl
 hl\Wslim
@@ -221,7 +218,6 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-234\W*+[89][01]\d\W*+\d{3}\W*+\d{4,10}(?#comment:234\W*+(?:8032214238|8167873816|8102960248|8149470344|8133873774|8073673757|9055637784|8135790702|9051442970)
 vividermix
 dsn\Wpre\Wworkout
 1(?<=\+1)5402277725
@@ -341,7 +337,7 @@ male\Wenhancement
 tl900\Wheadlamp
 zytek(?:xl)?
 biodermrx
-le\Wreel
+le[\W_]*+reel(?:(?:[\W_]*+(?:site|review|serum|skin)s?)|(?=<(?<=>le\sreel<)))(?:[\W_]*+(?:site|review|serum|skin|\d++|[\da-f]{5,}+)s?)*
 epifresh
 snail\Wsecret
 pensida
@@ -353,7 +349,6 @@ retinolla
 focused\Win\Wbrain
 wrinkle\Wreducer?
 active\Wbrightening
-alpha\W?male(?:\W?ex)?
 hotcyberlord
 luxlift
 erectimax
@@ -378,7 +373,6 @@ cynergy\Wtk
 fitness\W?xtreme
 revella\Wlash
 celebrity\W?net\W?worth
-phone\Wremotely
 jolique
 clemix
 nuavive
@@ -538,7 +532,6 @@ power\W?testo
 alpha[\W_]*testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?!-boost-x\.com(?<=alpha-testo-boost-x\.com))(?:[\W_]*(?:boost?|male|size|enhancement|formula|x|\d+|[\da-f]{4,}))*
 alpha[\W_]*+testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?!-boost-x\.com(?<=alpha-testo-boost-x\.com))(?:[\W_]*+(?:boost?|male|size|enhancement|formula|\d+|[\da-f]{4,}+))*
 clevastin
-xymax
 neuro\W?boost
 prostagenix
 shred\W?(?:fx|xl)
@@ -587,7 +580,6 @@ avantor
 monitor\Wany\Wphone
 iq\W?genex
 com\.applop
-Deepak\W?Ahirwar
 grovitex
 annibol
 renewiderm
@@ -671,7 +663,7 @@ lumaslim
 glow\W?eternal
 apex\W?booty
 performx
-avan\W?derm(?:\W?nu)?
+avan\W?derm\W?nu
 derm\W?naturale
 keravin
 vita\W?cup(?:\W?coffee)?
@@ -729,7 +721,6 @@ lejuve
 endozyn
 boost\W?rx
 euphoria\W?anti\W?aging
-r\Whub
 liquid\W?tree
 le\W?juve
 Pure\W?Radiance
@@ -860,7 +851,6 @@ clarity\W?x
 derma\W?mira
 rapid\W?boost
 grs\W?ultra
-donna\W?belle
 max\W?trim(?:\W?365)?
 ultra\Wboost
 revital\W?eyes
@@ -897,8 +887,8 @@ royal\W?kiraz
 simply\W?flawless\W?cream
 trim\W?fit
 apple\W?stem\W?cell
-(?<=/)hdt(?=[-/<"]|$)
-(?<=/)vcor(?=[-/<"]|$)
+hdt[\W_]*+male[\W_]*+enhancement
+vcore(?<=/vcor)(?=[-/<"]|$)
 brain\W?360
 rejuvilane
 (?:1\W*+)?408\W*+818\W*+9369
@@ -1095,7 +1085,7 @@ reducelant
 lipovyn
 trilixton
 slim\W?trim
-mrx(?<=[/?]mrx)[-/"<]
+mrx[\W_]*+(?:male|red)
 suplementodiet
 tevida(?:[\W_]*+(?:canada|never|underestimate|the|influence|\d++|[\da-f]{4,}+)s?)*
 total\W?radiance
@@ -1184,12 +1174,11 @@ bellamia
 xr\W?nutrition\W?clarity
 9982201414
 /dubai-city[/"<]
-/test\W?x[-"</]
+test(?<=\b/test)[\W_]*+x[-"</]\w++
 sumer\W?kolcak
 eagle security
 bold\W?mass
 luna\W?trim
-binance\W?support
 (?:1\W*+)?844\W*+816\W*+0231
 keto\W?choice
 bella\W?derm
@@ -1325,7 +1314,6 @@ vigenix
 salus\W?defense
 livali
 slim\W?force
-/g-suite/"
 (?:black\W?)?cumin\W?oil
 grow\W?ultra
 dxn\W?code\W?strike
@@ -1362,7 +1350,7 @@ pyrazine
 alpha\W?rise
 premier\W?diet(?:\W?keto)?
 intelliboost\W?iq
-delhi\W*+escort
+delhi[\W_]*+escorts?
 sphere\W?labs
 epson-printer(?!-utility)
 norton-setup
@@ -1376,11 +1364,11 @@ retro\W?slim
 narvi\W?testo
 perfect\W?youth(?:\W?booster)?
 vital\W?x9
-keto\W?elite(?:\W?diet)?
+keto[\W_]*+elite(?:[\W_]*+(?:pill|review|official|diet|\d++|[\da-f]{5,}+)s?)*
 maestro\W?goslin
 phen375
 Navari\W?Testo
-spectrum\W?cbd
+(?:full[\W_]*+)?spectrum[\W_]*+cbd(?:[\W_]*+oil)?
 testo\W?e\W?force
 btcc?ngame
 [a-z_]*+(?:1_*+)?404[\W_]*+400[\W_]*+4210[a-z_]*+
@@ -1390,7 +1378,6 @@ keto\W?kara
 XexLift
 [a-z_]*+(?:1_*+)?800[\W_]*+277[\W_]*+6571[a-z_]*+
 naturnica
-g\W?force\W?x
 radiantly\W?slim
 hocasino
 [a-z_]*+(?:1_*+)?877[\W_]*+521[\W_]*+2086[a-z_]*+
@@ -1535,7 +1522,7 @@ love\Wspells?
 (?:regenerative\W*+medicine|stem\W*+cell\W*+therapy)\W*+houston
 keto\W?bhb(?:\W?\d+)?
 [a-z_]*+(?:1_*+)?844[\W_]*+617[\W_]*+9531[a-z_]*+
-(?<=/)yahoo-email
+yahoo-email(?<=/yahoo-email)
 VitalityTech(?:\W?Testosterone)?(?!\.com)
 terrapure\W?cbd
 retinollift\W?dk
@@ -1545,7 +1532,6 @@ htx[ -]me
 better\W?strength\W?maximizer
 rapid\W?spot
 surgexon
-green\W?coffee\W?grano
 lojesete
 top\Wshelf\Waaa\Wbuds
 nuvi
@@ -1611,7 +1597,7 @@ healthsupplementfordiet
 ultra\W*+last(?:\W*+xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo\W?drive
-(?<=/)apple-id
+apple-id(?<=/apple-id)
 毕业证
 学历认证
 レーザーポインター
@@ -1652,7 +1638,7 @@ veda\W?soothie
 nutri\W?sleep(?:\W?rx)?
 geno\W?drive
 naturalherbalgardens
-(?<=:?//(?:[\w-]*\.)*[\w-]*(?<![./](?:stackexchange|stackoverflow)\.com)(?<![.\/]serverfault\.com)(?<![.\/](?:superuser|askubuntu|stackapps)\.com)(?<![.\/]mathoverflow\.net)(?<![.\/](?:costco|lenovo|github)\.com)(?<![.\/](?:imgur|epson|canon|apple)\.com)(?<![.\/]asus\.com)(?<![.\/]ibm\.com)(?<![.\/]bestbuy\.com)(?<![.\/]cnet\.com)(?<![.\/]drivereasy\.com)(?<![.\/]example\.com)(?<![.\/]flipkart\.com)(?<![.\/]localserver)(?<![.\/]michael-peeters\.blogspot\.ca)(?<![.\/]microsoft\.com)(?<![.\/]needrom\.com)(?<![.\/]paytmmall\.com)(?<![.\/]projektar\.hu)(?<![.\/]r1\.ilikewallpaper\.net)(?<![.\/]usccb\.org)(?<![.\/]robsworldoftech\.blogspot\.com\.au)(?<![.\/]www\.amazon\.co\.uk)(?<![.\/]www\.amazon\.in)(?<![.\/]www\.ebay\.com)(?<![.\/]www\.ebay\.fr)(?<![.\/]www\.johnlewis\.com)(?<![.\/]zoom\.cnews\.ru)(?:/[\w-]*)*)/(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lenovo|lexmark|quickbooks)-(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#XXX)
+/(?<=:?//(?:[\w-]*\.)*[\w-]*(?<![./](?:stackexchange|stackoverflow)\.com)(?<![.\/]serverfault\.com)(?<![.\/](?:superuser|askubuntu|stackapps)\.com)(?<![.\/]mathoverflow\.net)(?<![.\/](?:costco|lenovo|github)\.com)(?<![.\/](?:imgur|epson|canon|apple)\.com)(?<![.\/]asus\.com)(?<![.\/]ibm\.com)(?<![.\/]bestbuy\.com)(?<![.\/]cnet\.com)(?<![.\/]drivereasy\.com)(?<![.\/]example\.com)(?<![.\/]flipkart\.com)(?<![.\/]localserver)(?<![.\/]michael-peeters\.blogspot\.ca)(?<![.\/]microsoft\.com)(?<![.\/]needrom\.com)(?<![.\/]paytmmall\.com)(?<![.\/]projektar\.hu)(?<![.\/]r1\.ilikewallpaper\.net)(?<![.\/]usccb\.org)(?<![.\/]robsworldoftech\.blogspot\.com\.au)(?<![.\/]www\.amazon\.co\.uk)(?<![.\/]www\.amazon\.in)(?<![.\/]www\.ebay\.com)(?<![.\/]www\.ebay\.fr)(?<![.\/]www\.johnlewis\.com)(?<![.\/]zoom\.cnews\.ru)/(?:[\w-]*/)*)(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lenovo|lexmark|quickbooks)-(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#XXX)
 allavsoft(?!\.com)
 Apx\W?Me
 bella\W?pelle
@@ -1703,7 +1689,6 @@ capillique
 sera\W?chews
 best *+offer\W*<a href
 keto\W?supply
-treasurebox
 andro\W?boost(?:\W?x)?
 pro\W?testo\W?elite
 urogenx
@@ -1743,7 +1728,7 @@ hydralyft
 hydra\W?life
 viral\W?rx
 <a href="https://compitionpoint\.com/[^"]*+" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>
-green\W?coffee(?:(?:5k\W?)?diet)?
+green[\W_]*+coffee(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano(?!\.in(?<=greencoffeegrano\.in))|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|\d++|[\da-f]{5,}+)s?)+
 waist\.click
 gracinia
 (?:k\d\W?)?slim\W?keto
@@ -1780,7 +1765,7 @@ beam\W?skin
 levia\W?flex
 kalis\W?keto
 /(?<=\.\w{1,5}/)(?:\w++-keto|keto-\w+)(?=["/< ]|$)(?#product name like keto-xx in URL)
-gkjwb
+gkjwb-how-to-look-younger
 k[ae]lis\W?keto
 qpaf6
 beam\W?cream
@@ -1792,13 +1777,13 @@ alpha\W?hrd
 pods\W?vape
 idermabalm
 livewave\W*+tv\W*+antenna
-infatica
+infatica(?!\.io)
 king\W?servers
 kamadex
 advcnd
 (?:oasis[\W_]*+)?trim[\W_]*+keto(?:[\W_]*+(?:fast|\d++|[\da-f]{4,}+))*
 velocity\W?trim
-(?<=/)ketosis(?:-\w+)+
+ketosis(?<=/ketosis)(?:-\w+)+
 thepilpedia(?!\.com)
 alka\W*+tone(?:\W*+keto)?
 viril\W?pump
@@ -1852,7 +1837,6 @@ slimlook
 1kdaily
 holistic\W?bliss(?:\W?keto)?
 rod\W?financing\d*+
-lucky\W?patcher
 radiant\W?farms(?:\W?keto)?
 binfer(?!\.com)
 black\W?latte
@@ -1892,7 +1876,6 @@ errorcode0x(?:\.com)(?#abuse keyword blacklist to get 3 detections on persistent
 elijahcapitals(?:@gmail.com)?
 pure\W?life\W?keto
 power\W*+efficiency\W*+guide(?:\W?system)(?:\W*+reviews?)?
-peak\W?x(?:\W?keto)?
 keto\W?xcg
 cbd\W?nutrition(?:\W?(?:gummies|tincture\W?oil))?
 best\W?forex
@@ -1944,7 +1927,6 @@ gracesmithluv772(?:@gmail\.com)?
 nerotenze
 opti\W?farms(?:\W?keto)?
 keto\W*+mode
-Social\W*+Prachar
 green\W*+vibe\W*+keto
 krygen[\W_]*+xl(?:[\W_]*+(?:male|enhancement|united|kingdom|herbal|douleur|enhancement|pill|\d++|[\da-f]{4,}+)s?)*
 radiant[\W_]*+swift(?:[\W_]*+(?:keto|fit|\d++|[\da-f]{4,}+))*
@@ -1960,7 +1942,7 @@ super\W*+cut\W*+keto(?:\W*+\d+)?
 keto\W*+dietz(?!\.com(?<=ketodietz\.com))(?:\W*+\d++)?
 slim\W*+linic\W*+keto(?:\W*+(?:web|\d++))*
 prime\W*+x\W*+Factor
-(?<=>)https?://(?:www\.)?4cashpath\.com(?:/[\w/-]*)?(?=</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
+http(?<=>http)s?://(?:www\.)?4cashpath\.com(?:/[\w/-]*)?(?=</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
 keto\W*+plan\W*+classic\W*+formula
 primo\W*+boost\W*+keto(?:\W*+\d++)?
 com\.CRE8\.LudoChat
@@ -1974,7 +1956,7 @@ cyberhelp\d*+(?:\W*+(?:(?:at|via)\W*+)?gmail(?:\W*+(?:dot\W*+)?com)?)?
 (?:simply|simple)[\W_]*+fit\W*+keto(?:[\W_]*+\d++)*
 alpha[\W_]*+femme(?:[\W_]*+(?:keto|genix|ca|united|kingdom|uk|com|pill|\d++|[\da-f]{4,}+)s?)*
 keto\W*+jolt(?:\W*+(?:favorings?|reviews?|diet|\d+))*
-keto[\W_]*+body(?!tone\.com(?<=keto-bodytone\.com))(?!toneofficial\.com(?<=ketobodytoneofficial\.com))(?!toneofficielfrance(?<=facebook\.com/ketobodytoneofficielfrance))(?!toneofficialpage(?<=facebook\.com/ketobodytoneofficialpage))(?!toneusa(?<=sites\.google\.com/site/ketobodytoneusa))(?!toneofficialfrance\.tumblr\.com(?<=ketobodytoneofficialfrance\.tumblr\.com))(?:[\W_]*+(?:tone|avis|france|fr|web|review|offici[ae]l|page|usa|\d++|[\da-f]{4,}+))*
+keto[\W_]*+body(?!tone\.com(?<=keto-bodytone\.com))(?!toneofficial\.com(?<=ketobodytoneofficial\.com))(?!toneofficielfrance(?<=facebook\.com/ketobodytoneofficielfrance))(?!toneofficialpage(?<=facebook\.com/ketobodytoneofficialpage))(?!toneusa(?<=sites\.google\.com/site/ketobodytoneusa))(?!toneofficialfrance\.tumblr\.com(?<=ketobodytoneofficialfrance\.tumblr\.com))(?:[\W_]*+(?:tone|avis|france|fr|web|review|offici[ae]l|page|usa|pill|\d++|[\da-f]{4,}+)s?)*
 safe\W*+meds\W*+keto(?:\W*+burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*+(?:keto|prior|\d++))*
@@ -2002,7 +1984,6 @@ keto[\W_]*+10x
 active[\W_]*+lean(?:[\W_]*+keto)?
 body[\W_]*+start[\W_]*+keto
 keto[\W_]*+extra[\W_]*+strength
-peak[\W_]*+surge
 https-walgreensdiet-com
 control[\W_]*+x[\W_]*+keto(?:[\W_]*+(?:review|web|fit|\d++)s?)*(?!\.aircus\.com(?<=controlxketoreview\.aircus\.com))(?!\.bravesites\.com(?<=controlxketoweb\.bravesites\.com))(?!-x-keto\.jigsy\.com(?<=control-x-keto\.jigsy\.com))(?!\.health\.blog(?<=controlxketoreview\.health\.blog))
 abrielle(?:[\W_]*+(?:ageless|face|cream|\d+))*
@@ -2087,13 +2068,13 @@ rezola(?!growth\.info(?<=rezolagrowth\.info))(?:[\W_]*+(?:growth|hair|\d+))*
 aqualeva(?:[\W_]*+(?:cream|face|skin|anti|wrinkle|serum|\d+|[\da-f]{4,})s?)*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*
 evaria
-doctorekpen\w*+(?:@gmail\.com)?
+d(?:octo)?r[\W_]*+ekpen\w*+(?:@gmail\.com)?
 atmmachine\d+(?:@gmail\.com)?
 clinxx
 vitariche
 new[\W_]*+user[\W_]*+peasants?
 insta[\W_]*+keto
-intelliflare[\W_]*+iq
+intelliflare[\W_]*+iq(?:[\W_]*+booster)?
 2019/10/31/what-is-simple-linear-model/
 ogbefunhearlingtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 cyberfiles\.hacker(?:@gmail\.com)?
@@ -2190,7 +2171,7 @@ fithub
 moore\W*+finance
 shareit[\W_]++for[\W_]++pc
 vasoplexx
-Joyoshare
+Joyoshare(?!\.com)
 satta[\W_]*+king(?!\.care)(?:[\W_]*+care)?
 (?:super\W*+)?vidalista
 susancampbel11(?#telegram)
@@ -2212,13 +2193,13 @@ n1gg3r
 blackline[\W_]*+edge(?:[\W_]*+(?:uk|australia|\d++|[\da-f]{4,}+))*
 gladwev(?!\.com)
 d(?:octo)?r[\W_]*oduduwa
-liebespuppen
-sexpuppen
+liebespuppen?
+sexpuppen?
 oxy[\W_]*+br(?:ea?)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
 oko[\W_]*+watt
 kehamilan
 d(?:octo)?r[\W_]*+olorun(?:@gmail\.com)?
-slimy[\W_]*+meds?
+slimy[\W_]*+meds?(?:[\W_]*+(?:premium|austria|weight|decrease|phenomenon|\d++|[\da-f]{5,}+)s?)*
 störsender
 churchofilluminatiinitiation(?:@gmail\.com)?
 bangalore[\W_]*+university
@@ -2235,7 +2216,7 @@ hyper[\W_]*+plus
 emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
 arouza?(?:[\W_]*+ultimate)?
 bitcoin[\W_]*+revolution
-(?-i:iDealshare[\W_]++VideoGo)
+(?:iDealshare|VideoGo)(?:[\W_]*+(?:iDealshare|VideoGo))*
 formax[\W_]*+lean
 thedigizones(?!\.com)
 Regional\s+College\s+of\s+Management\s+Bangalore
@@ -2257,11 +2238,10 @@ cygucciferhigh(?:@gmail\.com)?
 emagtramina
 (?-i:a99d8\.jpg)
 Kamagra
-primal[\W_]*+grow(?:[\W_]*+pro)?
+primal[\W_]*+grow(?:[\W_]*+(?:pro|p|male|enhancement|usa?|\d++|[\da-f]{4,}+))*
 (?-i:2VjqXm9)(?#on.mktw.net)
 (?-i:j0qcnz)(?# tiny.cc)
 phalogenics
-barxbuddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 unichrone(?!\.(?:com|net))
 thermosense[\W_]*+thermometer(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 ieltswithoutexam\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
@@ -2287,7 +2267,6 @@ veyomax(?:[\W_]*+rx)?
 hemp[\W_]*+max[\W_]*+lab
 trim[\W_]*+fast[\W_]*+keto(?:[\W_]*+(?:australia|au|shark|tank|\d++|[\da-f]{4,}+))*
 ketokor
-vision[\W_]*+20
 vir?maxryn(?:[\W_]*+(?:review|malep?|enhancement|upgrade|\d++|[\da-f]{4,}+)s?)*
 Priest Ade
 arovanti(?:[\W_]*+(?:cream|creme|review|\d++|[\da-f]{4,}+))*
@@ -2299,4 +2278,277 @@ gedeon[\W_]*+keto
 keto[\W_]*+gedeon
 vital[\W_]*+synergy(?:[\W_]*+keto)?
 sadda[\W_]*+truck(?!\.com(?<=saddatruck\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-virtus
+besthackersworld58(?:@gmail\.com)?
+silikonpuppe
+robinson\W*buckler
+Elsner\WTechnologies
+car\W*+(?:rental\W*+)?dubai
+outscraper(?!\.com)
+pip3?\W*+install\W*+google-services-api
+(?-i:google-services-api-pyhton)
+(?:get[\W_]*+)?vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
+(?-i:cru70e)
+blaux[\W_]*+(?:portable[\W_]*+)?ac
+sonoma[\W_]*+valley[\W_]*+cbd
+barx[\W_]*+buddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
+knightwood
+fyers[\W_]*+demat(?:[\W_]*+(?:account|free|investment|online|trading|platform)s?)*
+dectaphin\W*+rx
+ultra[\W_]*+thermo(?:[\W_]*+(?:keto|diet|review|cleanse|\d++|[\da-f]{4,}+)s?)*
+peak[\W_]*+wellness\d*+
+r\Whub(?!\.io)
+Brindavan\W*College
+vigxex
+wellness[\W_]*+cbd
+hair[\W_]*+la[\W_]*+vie
+oscarwhitehackersworld(?:@gmail\.com)?
+I want to join occult for money ritual
+SPIRITUAL[\W_]*+GRANDMASTER
+eclipse[\W_]*+keto[\W_]*+avis
+provitalize
+nutrabodz[\W_]*+keto
+surge(?:r(?:y|ies)|ons?)\W*+(?:\w*+\W*+){0,10}assault(?:s|ing|ed)?
+(?-i:IELTS certificate without exam)(?#Please leave the "without exam" on this blacklist as there are legitimate cases where an "IELTS certificate" may be asked about, e.g. on Travel.SE or Academia.SE)
+magnum[\W_]*+xt
+trim[\W_]*+maxx[\W_]*+keto(?:[\W_]*+(?:ingredients|\d++|[\da-f]{5,}+)s?)*
+canzana
+canzana[\W_]*+cbd[\W_]*+(?:uk[\W_]*)?oil(?:[\W_]*+uk)?
+summadx
+Bruleur
+virtus(?:[\W_]*+(?:strong|testo|boost|pro|ca|canada))+
+shed[\W_]*+(?:\d{0,2})?[\W_]*+pounds[\W_]*+rapidly
+(?:official[\W_]*+)?mill[\W_]*+creek[\W_]*+keto
+dewa[\W_]*+poker
+7z\W*password\W*recovery
+invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
+endocannabinoid[\W_]*+framework
+androxene(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{5,}+)s?)*
+lush[\W_]*+lift
+alpha[\W_]*+male[\W_]*+ex
+logixgenetics
+(?-i:myunbiasedreview)(?#sites.google.com)
+blood[\W_]*+balance[\W_]*+advanced?[\W_]*+formula
+probio[\W_]*+lite(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
+viapro[\W_]*+maxx
+fabuloushacker\d*+@gmail\.com
+(?-i:ISO OMAN)
+keto[\W_]*+body[\W_]*+trim(?:[\W_]*+(?:ca(?:nada)?|diet[\W_]*+pill|review|\d++|[\da-f]{5,}+)s?)*
+edb[\W_]*+recovery[\W_]*+software
+lepto[\W_]*+connect
+kurtis?[\W_]*+manufacturers?
+coinjoker
+ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*
+(?-i:ISO BAHRAIN)
+hacking[\W_]*+services
+devops[\W_]*+online[\W_]*+training
+hosting[\W_]*+ultraso(?!\.com)
+semenax
+streetinsider\.com\/(FMR\+Wire\/|(SI|CDN)\+Newswire)
+w3softech(?!\.com)
+anti[\W_]*+ageing[\W_]*+cream
+ayurvedic[\W_]*+treatments?
+invigor[\W_]*+zen
+money\s*ritual
+algon[\W_]*+korah[\W_]*+brotherhood
+(?-i:3kHoUSQ)(?#bit.ly)
+newsronic(?!\.com)
+heathbliss(?!\.com)
+samsmithcyberhost(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+(?:get[\W_]*+)?keto[\W_]*+premiere(?!\.info(?<=ketopremiere\.info))(?:[\W_]*+(?:sweden|south|africa|guru|pill|price|sale|for|finland|updated|fl|malaysia|nederland|review|france|ireland|nz|new|zealand|za|united|kingdom|capsule|supplement|diet(?:ary)?|in|australia|dischem|espana|spain|visit|web|site|and|tank|shark|\d++|[\da-f]{5,}+)s?)*
+max[\W_]*+force[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+kgx[\W_]*+keto(?:ne)?(?:[\W_]*+(?:advanced|w|pill|review|read|diet|ingredients|where|to|buy|usa|number|one|no1|loss|weight|in|price|offer|special|benefit|can|reduce|new|and|keto(?:ne)?|kgx|\d++|[\da-f]{4,}+)s?)*
+open-(?<=openfileextension\.com\/open-)\w++-file
+escorts?[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
+oz\s*paper\s*help(?!\.com)
+dollar\W?rain
+cannativa(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
+a>\W*+my website will help you more
+one[\W_]*+shot[\W_]*+keto(?:[\W_]*+(?:pro|review|upgrade|price|scam|ingredient|pill|au(?:stralia)?|update|it'?|scam|or|hoax|does|really|work|\d++|[\da-f]{5,}+)s?)*
+a href="https://charcoal-se.org/" rel="nofollow noreferrer">(?:<\w+>)*https://charcoal-se.org/(?:</\w+>)*</a
+mcafeecomactivation(?#sites.google.com)
+nulavance
+hackingsetting50(?:@gmail\.com)?
+/g-suite/"(?<=bol7\.com/g-suite/")
+234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5}
+edb[\W_]*+mails
+jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|oil|result|\d++|[\da-f]{5,}+)s?)*
+cenforce
+fast[\W_]*+fit(?:[\W_]*+(?:keto|buy|reviews?|\d+))*
+(?-i:FCkUJ3FOB1I)(?#youtu.be)
+visage[\W_]*+pur(?!cream\.wixsite\.com(?<=visagepurcream\.wixsite\.com))(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
+(?:contact|call) us (?:today|now)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+obat(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+truvalast(?:[\W_]*+(?:australia|new|zealand|south|africa|az|za|uk|enhancement|male|testo|booster|avis|pill|review|buy|\d++|[\da-f]{5,}+)s?)*
+/(?<=\.\w{1,5}/)(?!(?:\w+-keto|keto-\w+\b)(?:["/< ]|$))(?:[^<?&\/ "]+\/)*(?:[\w-]+-keto[\w-]*|keto-[\w-]+)[^<?& "]*(?=["/< ]|$)(?#expanded product name like keto-xx in URL path)(?#Was watched on 1561929557: 2019-06-30T14:19:17Z)
+mentally[\W_]*+ill[\W_]*+rogue[\W_]*+moderator
+force[\W_]*+windows[\W_]*+defender[\W_]*+to[\W_]*+scan[\W_]*+a[\W_]*+single[\W_]*+file[\W_]*+instead[\W_]*+of[\W_]*+scanning[\W_]*+the[\W_]*+entire[\W_]*+system
+donna belle
+diva[\W_]*trim(?:[\W_]*+keto)?
+cannagenix
+cheif[\W_]*+oduduwa
+dr[\W_]*+oselumen(?:@gmail\.com)?
+h(?:oe?|ö)hle[\W_]*+der[\W_]*+l(?:oe?|ö)wen
+(?:buzzer)?huntbuzzer
+viaradaxx(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
+vialophin
+this is \w+ and I am an? \w+ (?:photographer|illustrator)(?:and (?:photographer|illustrator))?
+erecerxyn
+cybertechhub100(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+cogni[\W_]*+brain(?:[\W_]*+max)?
+synapse[\W_]*+xt
+dominxt(?:[\W_]*+(?:muscle|building|review|buy|\d++|[\da-f]{5,}+)s?)*
+(?-i:fLVNy)(?#bit.do)
+(?:get[\W_]*+)?savage[\W_]*+grow[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+epson[\W_]*+error[\W_]*+code[\W_]*+0x[\da-f]{2}
+atm\.tecnology(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+(?-i:sFbK)(?#v.ht)
+primal[\W_]*+trt
+vytalyze(?:[\W_]*+(?:cbd|order|buy|oil|\d++|[\da-f]{5,}+)s?)*
+[\s.>]*⚡⚡+\W*
+[\s.>]*✅✅+\W*
+ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
+bloom[\W_]*+green(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
+don[\W_]*+lemon[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|\d++|[\da-f]{5,}+)s?)*
+(?:keanu[\W_]*+)?reeves[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+cannaful[\W_]*+valley[\W_]*+cbd(?:[\W_]*+(?:review|oil|buy|\d++|[\da-f]{5,}+)s?)*
+hack\.truth77(?:@gmail\.com)?
+peace[\W_]*+cbd[\W_]*+oil
+(?-i:ceb0476c868ecb2836afb52dd3f000ed)(?#apnews.com)
+khalifklenton(?:@gmail\.com)?
+isoverge[\W_]*+keto(?:[\W_]*+(?:genic|buy|order|official|diet|review|pill|\d++|[\da-f]{5,}+)s?)*
+herbal[\W_]*+native[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+herbal[\W_]*+grown[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|price|\d++|[\da-f]{5,}+)s?)*
+xcellerate(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)+
+templeofanswer(?:@hotmail\.co\.uk)?
+whenri18@googlemail\.com
+^Which B-schools are the best for MBA\?$
+annabiol[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|price|avis|fr|france|uk|united|kingdom|belgium|pharmacie|en|\d++|[\da-f]{5,}+)s?)*
+ten[\W_]*+acres[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+peak\W?x\W?keto
+max\W?peak\W?xl
+vital\W?peak\W?xt
+real[\W_]*+tone[\W_]*+keto(?:[\W_]*+(?:canada|ca|diet|review|buy|order|\d++|[\da-f]{5,}+)s?)*
+slim[\W_]*+origin(?:[\W_]*+keto)?(?:[\W_]*+pills?)?(?:[\W_]*+offers?)?(?:[\W_]*+official[\W_]*+web[\W_]*+site)?
+infinite[\W_]*+force[\W_]*+xl
+green[\W_]*+vibration[\W_]*+keto(?:[\W_]*+(?:pill|diet|\d++|[\da-f]{5,}+)s?)*
+geehii[\W_]*+keto(?:[\W_]*+(?:pill|review|\d++|[\da-f]{5,}+)s?)*
+jocosa[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+joel[\W_]*+osteen[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\buy|order|d++|[\da-f]{5,}+)s?)*
+georgbednorzhackers(?:@gmail\.com)?
+boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+green[\W_]*+estates[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|review|\d++|[\da-f]{5,}+)s?)*
+cheyenne[\W_]*+valley(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
+d(?:octo)?r[\W_]*+tunde
+gayle[\W_]*+king[\W_]*+cbd[\W_]*+oil(?!\.tumblr\.com(?<=gaylekingcbdoil\.tumblr\.com))(?:[\W_]*+(?:buy|order|store|price|review|results|\d++|[\da-f]{5,}+)s?)*
+humboldt(?:[\W_]*+s)?[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+creditquickfix\d*(?:@gmail\.com)?
+Origami Studios
+free[\W_]*+grab[\W_]*+app(?!\.com(?<=freegrabapp\.com))
+new[\W_]*+era[\W_]*+education(?!\.in(?<=neweraeducation\.in))
+peace[\W_]*+farms[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|price|\d++|[\da-f]{5,}+)s?)*
+jason[\W_]*+momoa[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|health|\d++|[\da-f]{5,}+)s?)*
+ontario[\W_]*+farms(?:[\W_]*+(?:canada|ca|hemp|cbd|oil|buy|order|\d++|[\da-f]{5,}+)s?)*
+6wresearch(?!\.com|(?-i:(?<=^6Wresearch) Market Intelligence$))
+integrated[\W_]*+assessment[\W_]*+services
+infinidice
+techcrownhacker(?:@gmail\.com)?
+regional[\W_]*+college[\W_]*+of[\W_]*+management
+tom[\W_]*+selleck[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|price|review|pill|order|\d++|[\da-f]{5,}+)s?)*
+joyce[\W_]*+meyer[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+peyton[\W_]*+manning[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+Erelive[\W_]*+(?:data[\W_]*+)?recovery
+dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
+8\D{0,20}+8\D{0,20}+8\D{0,20}+9\D{0,20}+5\D{0,20}+9\D{0,20}+2\D{0,20}+(?:0\D{0,20}+)?1\D{0,20}+1
+kl-skyline-gen-9-monitor
+if[\W*]+you[\W*]+don't[\W*]+(get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+images[\W*]+mentioned
+madarchod
+fat[\W_]+consuming[\W_]+supplement
+dietary[\W_]+upgrade
+pharma[\W_]*+bloom(?:[\W_]*+(?:buy|cbd|oil|order|\d++|[\da-f]{5,}+)s?)*
+(?-i:z65ZY47ug0w|DfK7OxEDhc0)
+richie[\W_]*+mccaw[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|relieve|joints|chronic|pain|gummies|new|zealand|\d++|[\da-f]{5,}+)s?)*
+natures[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:review|oil|price|uk|united|kingdom|australia|nz|new|zealand|gummies|\d++|[\da-f]{5,}+)s?)*
+(?-i:[I1]?\D{0,3}+8\D{0,3}+8\D{0,3}+8\D{0,3}+9\D{0,3}+5\D{0,3}+9\D{0,3}+2\D{0,3}+[0Oo]\D{0,3}+[I1]\D{0,3}+[I1])
+ajanabha(?!\.com)
+illuminatielives(?:@gmail\.com)?
+phil[\W_]*+mickelson[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|order|price|\d++|[\da-f]{5,}+)s?)*
+(?:American|Delta|Alaska)[\W]*+Airlines[\W]*+Customer[\W]*+Service(?:[\W]*+Number)?
+green[\W_]*+lobster[\W_]*+cbd(?:[\W_]*+(?:buy|oil|work|review|scam|\d++|[\da-f]{5,}+)s?)*
+pinoy\W?teleserye
+racha?el[\W_]*+ray[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|gummies|\d++|[\da-f]{5,}+)s?)*
+vampireslords437(?:@gmail\.com)?
+netrack(?:[\W_]*+india)?
+sigsync(?!\.com)
+sage[\W_]*+elixir[\W_]*+cbd(?:[\W_]*+(?:work|oil|view|\d++|[\da-f]{5,}+)s?)*
+kevin[\W_]*+harvick[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|price|work|official|\d++|[\da-f]{5,}+)s?)*
+lord[\W_]*+bubuza(?:[\W_]*+miracle[\W_]*+work)?(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?com)?
+lord[\W_]*+masuka(?:[\W_]*+spell[\W_]*+temple)?(?:[\W_]*+(?:at[\W_]*+)?hotmail[\W_]*+(?:dot[\W_]*+)?com)?
+renhotec[\W_]*+ic(?!\.com(?<=renhotecic\.com))
+sunday[\W_]*+horizon[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
+IXBRAnalyst
+jimuberservices(?:@gmail\.com)?
+cyber[\W_]*+lord\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+smilz[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|price|review|\d++|[\da-f]{5,}+)s?)*
+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+i[\W_]*+n[\W_]*+g[\W_]*+l[\W_]*+o[\W_]*+o[\W_]*+p[\W_]*+(?:\d[\W_]*+)*(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?(?#obfuscated email and/or text: "hackingloop6")
+Sonu Yadav\W*+Software Developer
+78/hourly
+leewilliam664(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+ultimate[\W_]*+health[\W_]*+home(?:@gmail\.com)?
+kevin[\W_]*+costner[\W_]*+cbd(?:[\W_]*+(?:buy|gumm(?:y|ie)|oil|review|\d++|[\da-f]{5,}+)s?)*
+kara(?:[\W_]*+s)?[\W_]*+orchards[\W_]*+cbd(?:[\W_]*+(?:gummies|oil|uk|united|kingdom|\d++|[\da-f]{5,}+)s?)*
+effuel
+verifiedielts770(?:@yahoo\.com)?
+bongdalu(?!\.com(?<=bongdalu\.com))
+Village[\W_]*+Talkies
+nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+social[\W_]*+prachar(?!\.com(?<=socialprachar\.com))
+Gary Swiercz Chicago
+download it (?:right )?now and check this out for yourself(?#photo copyright scam)
+adm[\W_]*+sneezeguards
+fiverrcpa
+green[\W_]*+ape[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|ie)|oil|\d++|[\da-f]{5,}+)s?)*
+taruhan(?:[\W_]*+online)?
+luxy[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|review|store|work|\d++|[\da-f]{5,}+)s?)*
+j[\W_]*+k[\W_]*+rowling[\W_]*+cbd(?:[\W_]*+(?:oil|gumm(?:y|ie)|uk|buy|price|review|\d++|[\da-f]{5,}+)s?)*
+green[\W_]*+canyon(?:[\W_]*+(?:gumm(?:y|ie)|oil|cbd|review|buy|price|order|\d++|[\da-f]{5,}+)s?)*
+(?:(?:ij|start)[\W_]*+)++can+on(?:[\W_]*+(?:ij|start))*+\w{0,5}(?<!ij\.start\.canon)
+(?-i:CronJ)
+(?:buy|purchase|order)[\W_]*ambien[\W_]*(?:\d*[\W_]*mg)?[\W_]*(?:online)?
+wilesdoro(?:@gmail\.com)?
+JEE\-IIT
+rootkits[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
+8[\W_]*+[O0][\W_]*+8[\W_]*+6[\W_]*+9[\W_]*+8[\W_]*+[O0][\W_]*+[O0][\W_]*+[O0][\W_]*+7
+TunesKit(?!\.com)
+lija\.akter
+seo[\W_]*+exparte[\W_]*+team
+sunlightmata(?:@gmail\.com)?
+lass[\W_]*+naturals(?!\.com)(?!$(?<=(?-i:^Lass Naturals$)))
+d(?:octo)?r[\W_]*+ojie
+^<p>I\b[^\.]+\bus(?:e|ing)\b[^\.]+\bComparium(?=\.)
+research-paper-writing
+hostnet[\W_]*+india(?!\.com(?<=hostnetindia\.com))
+was[\W_]*+valued[\W_]*+at[\W_]*+USD
+coinbase(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
+antier[\W_]*+solutions
+audext(?!\.com)
+ultimatespell666
+m(?:iste)?r[\W_]*+jim[\W_]*+uber
+garmin[\W_]*+(?:map|gps)[\W_]*+update
+up[\W_]*+market[\W_]*+research(?!\.com(?<=upmarketresearch\.com))
+apptim(?!\.com)
+(?:[1i][\W_]*+)?833[\W_]*+363[\W_]*+[o0]559
+cdyera
+mariajosh651(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+cannaverda
+all[\W_]*+assignment[\W_]*+help(?!\.co\.uk(?<=allassignmenthelp\.co\.uk))
+prestige[\W_]*+city(?!\.gen\.in(?<=prestigecity\.gen\.in))
+tạp[\W_]*+vụ[\W_]*+văn[\W_]*+phòng
+ve[\W_]*+sinh[\W_]*+nha[\W_]*+cua
+binaryexpertrecovery\d*+(?:@gmail\.com)?
+dụng[\W_]*+khác(?# "household appliances" in Vietnamese)
+^<p>[\W_]*+(?:(?:lol(?:ol)*+|lmao|rofl)[\W_]*){3,}[\W_]*</p>$
+pad[\W_]*+store
+hacksolution7(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
+dr\W*oba
+Are you looking for Leolist
+multivitamincare[\W_]*+org

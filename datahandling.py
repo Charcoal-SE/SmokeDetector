@@ -16,7 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import ErrorLogs, log, log_exception
+from helpers import ErrorLogs, log, log_exception, redact_passwords
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -39,7 +39,7 @@ def _save_problem_pickle(path):
         os.rename(path, errorpath)
 
 
-def _load_pickle(path, encoding='utf-8'):
+def load_pickle(path, encoding='utf-8'):
     newpath = os.path.join(PICKLE_STORAGE, path)
     if os.path.isfile(newpath):
         path = newpath
@@ -63,7 +63,7 @@ def _load_pickle(path, encoding='utf-8'):
         raise
 
 
-def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
+def dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
     if not os.path.isdir(PICKLE_STORAGE):
         os.mkdir(PICKLE_STORAGE)
     if os.path.isfile(path):  # Remove old one
@@ -73,7 +73,7 @@ def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
         pickle.dump(item, f, protocol=protocol)
 
 
-def _remove_pickle(path):
+def remove_pickle(path):
     try:
         os.remove(path)
     except OSError:
@@ -85,7 +85,7 @@ def _remove_pickle(path):
         pass
 
 
-def _has_pickle(path):
+def has_pickle(path):
     newpath = os.path.join(PICKLE_STORAGE, path)
     return os.path.isfile(newpath) or os.path.isfile(path)
 
@@ -93,38 +93,48 @@ def _has_pickle(path):
 # methods to load files and filter data in them:
 # load_blacklists() is defined in a separate module blacklists.py, though
 def load_files():
-    if _has_pickle("falsePositives.p"):
-        GlobalVars.false_positives = _load_pickle("falsePositives.p", encoding='utf-8')
-    if _has_pickle("whitelistedUsers.p"):
-        GlobalVars.whitelisted_users = _load_pickle("whitelistedUsers.p", encoding='utf-8')
+    if has_pickle("falsePositives.p"):
+        GlobalVars.false_positives = load_pickle("falsePositives.p", encoding='utf-8')
+    if has_pickle("whitelistedUsers.p"):
+        GlobalVars.whitelisted_users = load_pickle("whitelistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.whitelisted_users, set):
             GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
-    if _has_pickle("blacklistedUsers.p"):
-        GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
+    if has_pickle("blacklistedUsers.p"):
+        GlobalVars.blacklisted_users = load_pickle("blacklistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.blacklisted_users, dict):
             GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
-    if _has_pickle("ignoredPosts.p"):
-        GlobalVars.ignored_posts = _load_pickle("ignoredPosts.p", encoding='utf-8')
-    if _has_pickle("autoIgnoredPosts.p"):
-        GlobalVars.auto_ignored_posts = _load_pickle("autoIgnoredPosts.p", encoding='utf-8')
-    if _has_pickle("notifications.p"):
-        GlobalVars.notifications = _load_pickle("notifications.p", encoding='utf-8')
-    if _has_pickle("whyData.p"):
-        GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
-    if _has_pickle("apiCalls.p"):
-        GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
-    if _has_pickle("bodyfetcherQueue.p"):
-        GlobalVars.bodyfetcher.queue = _load_pickle("bodyfetcherQueue.p", encoding='utf-8')
-    if _has_pickle("bodyfetcherMaxIds.p"):
-        GlobalVars.bodyfetcher.previous_max_ids = _load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
-    if _has_pickle("codePrivileges.p"):
-        GlobalVars.code_privileged_users = _load_pickle("codePrivileges.p", encoding='utf-8')
-    if _has_pickle("reasonWeights.p"):
-        GlobalVars.reason_weights = _load_pickle("reasonWeights.p", encoding='utf-8')
-    if _has_pickle("cookies.p"):
-        GlobalVars.cookies = _load_pickle("cookies.p", encoding='utf-8')
-    if _has_pickle("metasmokePostIds.p"):
-        GlobalVars.metasmoke_ids = _load_pickle("metasmokePostIds.p", encoding='utf-8')
+    if has_pickle("ignoredPosts.p"):
+        GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding='utf-8')
+    if has_pickle("autoIgnoredPosts.p"):
+        GlobalVars.auto_ignored_posts = load_pickle("autoIgnoredPosts.p", encoding='utf-8')
+    if has_pickle("notifications.p"):
+        GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
+    if has_pickle("whyData.p"):
+        GlobalVars.why_data = load_pickle("whyData.p", encoding='utf-8')
+    # Switch from apiCalls.pickle to apiCalls.p
+    # Correction was on 2020-11-02. Handling the apiCalls.pickle file should be able to be removed shortly thereafter.
+    if has_pickle("apiCalls.pickle"):
+        GlobalVars.api_calls_per_site = load_pickle("apiCalls.pickle", encoding='utf-8')
+        # Remove the incorrectly named pickle file.
+        remove_pickle("apiCalls.pickle")
+        # Put the pickle in the "correct" file, from which it will be immediately reloaded.
+        dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
+    if has_pickle("apiCalls.p"):
+        GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding='utf-8')
+    if has_pickle("bodyfetcherQueue.p"):
+        GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
+    if has_pickle("bodyfetcherMaxIds.p"):
+        GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
+    if has_pickle("bodyfetcherQueueTimings.p"):
+        GlobalVars.bodyfetcher.queue_timings = load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
+    if has_pickle("codePrivileges.p"):
+        GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
+    if has_pickle("reasonWeights.p"):
+        GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
+    if has_pickle("cookies.p"):
+        GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
+    if has_pickle("metasmokePostIds.p"):
+        GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -138,7 +148,7 @@ def filter_auto_ignored_posts():
             to_remove.append(aip)
     for tr in to_remove:
         GlobalVars.auto_ignored_posts.remove(tr)
-    _dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
+    dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
 
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
@@ -180,15 +190,26 @@ def is_auto_ignored_post(postid_site_tuple):
 
 def update_code_privileged_users_list():
     metasmoke.Metasmoke.update_code_privileged_users_list()
-    _dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
+    # GlobalVars.code_privileged_users can now be a set, or may still be None.
+    if GlobalVars.code_privileged_users is None:
+        if len(GlobalVars.config_blacklisters) > 0:
+            # Only change away from None if there are pre-configured blacklisters
+            GlobalVars.code_privileged_users = set(GlobalVars.config_blacklisters)
+    else:
+        # Add the users in the config file, if any
+        GlobalVars.code_privileged_users.update(GlobalVars.config_blacklisters)
+    dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
 
 
 def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         update_code_privileged_users_list()
 
-    # For now, disable the moderator override on code/blacklist changes
-    return (site, user_id) in GlobalVars.code_privileged_users
+    try:
+        # For now, disable the moderator override on code/blacklist changes
+        return (site, user_id) in GlobalVars.code_privileged_users
+    except TypeError:
+        return False
 
 
 def update_reason_weights():
@@ -199,7 +220,7 @@ def update_reason_weights():
     for item in items:
         d[item['reason_name'].lower()] = item['weight']
     GlobalVars.reason_weights = d
-    _dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
+    dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 
 
 def resolve_ms_link(post_url):
@@ -209,8 +230,6 @@ def resolve_ms_link(post_url):
             ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
                 GlobalVars.metasmoke_ids[identifier])
             return ms_url
-        elif GlobalVars.metasmoke_ids[identifier] is None:
-            return None
         else:
             del GlobalVars.metasmoke_ids[identifier]
 
@@ -222,7 +241,7 @@ def resolve_ms_link(post_url):
         ms_post_id = max([post['id'] for post in ms_posts])
         ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
     GlobalVars.metasmoke_ids[identifier] = ms_post_id  # Store numeric IDs, strings are hard to handle
-    _dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
+    dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
     return ms_url
 
 
@@ -234,28 +253,28 @@ def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
     GlobalVars.whitelisted_users.add(user)
-    _dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
+    dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
 
 
 def add_blacklisted_user(user, message_url, post_url):
     if is_blacklisted_user(user) or user is None:
         return
     GlobalVars.blacklisted_users[user] = (message_url, post_url)
-    _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
 
 
 def add_auto_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or is_auto_ignored_post(postid_site_tuple):
         return
     GlobalVars.auto_ignored_posts.append(postid_site_tuple)
-    _dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
+    dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
 
 
 def add_false_positive(site_post_id_tuple):
     if site_post_id_tuple is None or site_post_id_tuple in GlobalVars.false_positives:
         return
     GlobalVars.false_positives.append(site_post_id_tuple)
-    _dump_pickle("falsePositives.p", GlobalVars.false_positives)
+    dump_pickle("falsePositives.p", GlobalVars.false_positives)
 
     global last_feedbacked
     last_feedbacked = (site_post_id_tuple, time.time() + 60)
@@ -266,7 +285,7 @@ def add_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
         return
     GlobalVars.ignored_posts.append(postid_site_tuple)
-    _dump_pickle("ignoredPosts.p", GlobalVars.ignored_posts)
+    dump_pickle("ignoredPosts.p", GlobalVars.ignored_posts)
 
     global last_feedbacked
     last_feedbacked = (postid_site_tuple, time.time() + 60)
@@ -277,7 +296,7 @@ def remove_blacklisted_user(user):
     if not blacklisted_user_data:
         return False
     GlobalVars.blacklisted_users.pop(blacklisted_user_data[0])
-    _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
     return True
 
 
@@ -286,7 +305,7 @@ def remove_whitelisted_user(user):
     if user not in GlobalVars.whitelisted_users:
         return False
     GlobalVars.whitelisted_users.remove(user)
-    _dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
+    dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
     return True
 
 
@@ -295,7 +314,7 @@ def add_why(site, post_id, why):
     why_data_tuple = (key, why)
     GlobalVars.why_data.append(why_data_tuple)
     filter_why()
-    _dump_pickle("whyData.p", GlobalVars.why_data)
+    dump_pickle("whyData.p", GlobalVars.why_data)
 
 
 def get_why(site, post_id):
@@ -325,20 +344,20 @@ def add_or_update_api_data(site):
         GlobalVars.api_calls_per_site[site] += 1
     else:
         GlobalVars.api_calls_per_site[site] = 1
-    _dump_pickle("apiCalls.pickle", GlobalVars.api_calls_per_site)
+    dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def clear_api_data():
     GlobalVars.api_calls_per_site = {}
-    _dump_pickle("apiCalls.pickle", GlobalVars.api_calls_per_site)
+    dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def store_bodyfetcher_queue():
-    _dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
+    dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
 
 
 def store_bodyfetcher_max_ids():
-    _dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
+    dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
 
 
 def add_queue_timing_data(site, time_in_queue):
@@ -390,7 +409,7 @@ def fetch_lines_from_error_log(count):
             name, message, tb)
         for time, name, message, tb in logs])
     if s:
-        return s
+        return redact_passwords(s)
     else:
         return "The fetched log is empty."
 
@@ -452,7 +471,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=T
     if notification_tuple in GlobalVars.notifications:
         return -1, None
     GlobalVars.notifications.append((int(user_id), chat_site, int(room_id), se_site, always_ping))
-    _dump_pickle("notifications.p", GlobalVars.notifications)
+    dump_pickle("notifications.p", GlobalVars.notifications)
     return 0, se_site
 
 
@@ -466,7 +485,7 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     if notification_tuple not in GlobalVars.notifications:
         return False
     GlobalVars.notifications.remove(notification_tuple)
-    _dump_pickle("notifications.p", GlobalVars.notifications)
+    dump_pickle("notifications.p", GlobalVars.notifications)
     return True
 
 
@@ -546,16 +565,14 @@ def append_pings(original_message, names):
 
 
 def has_community_bumped_post(post_url, post_content):
-    if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
-        try:
-            ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
-            if not ms_posts:
-                return False
+    try:
+        ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
+        if not ms_posts:
+            return False
 
-            return any(post['body'] == post_content for post in ms_posts)
-        except (requests.exceptions.ConnectionError, ValueError):
-            return False  # MS is down, so assume it is not bumped
-    return False
+        return any(post['body'] == post_content for post in ms_posts)
+    except (requests.exceptions.ConnectionError, ValueError):
+        return False  # MS is down, so assume it is not bumped
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
 # (to avoid SmokeDetector's chat messages to be rate-limited too much)
@@ -585,7 +602,7 @@ def can_report_now(user_id, chat_host):
 
 
 def dump_cookies():
-    _dump_pickle("cookies.p", GlobalVars.cookies)
+    dump_pickle("cookies.p", GlobalVars.cookies)
 
 
 class SmokeyTransfer:

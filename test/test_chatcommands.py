@@ -6,7 +6,7 @@ from apigetpost import api_get_post
 from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
-from datahandling import _remove_pickle
+from datahandling import remove_pickle
 
 import datetime
 import os
@@ -16,7 +16,7 @@ import types
 import requests
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git
+    from _Git_Windows import git
 else:
     from sh.contrib import git
 
@@ -62,10 +62,6 @@ def test_wut():
 
 def test_alive():
     assert chatcommands.alive() in chatcommands.ALIVE_MSG
-
-
-def test_location():
-    assert chatcommands.location() == GlobalVars.location
 
 
 def test_version():
@@ -134,7 +130,7 @@ def test_info():
     assert chatcommands.info() == "I'm " + GlobalVars.chatmessage_prefix +\
         ", a bot that detects spam and offensive posts on the network and"\
         " posts alerts to chat."\
-        " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
+        " [A command list is available here](https://git.io/SD-Commands)."
 
 
 def test_blame():
@@ -266,6 +262,32 @@ def test_approve(monkeypatch):
         assert chatcommands.approve(8888, original_msg=msg) == "Cannot connect to GitHub API"
         m.setattr("requests.get", original_get)
     assert chatcommands.approve(2518, original_msg=msg)[:8] in {"PR #2518", "Cannot c"}
+
+
+def test_reject(monkeypatch):
+    msg = Fake({
+        "_client": {
+            "host": "stackexchange.com",
+        },
+        "id": 88888888,
+        "owner": {"name": "ArtOfCode", "id": 121520},
+        "room": {"id": 11540, "name": "Continuous Integration", "_client": None},
+        "content_source": '!!/reject 8888',
+    })
+    msg.room._client = msg._client
+
+    # Prevent from attempting to check privileges with Metasmoke
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
+    assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject").startswith("You need blacklist manager privileges")
+
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
+    with monkeypatch.context() as m:
+        # Oh no GitHub is down
+        original_get = requests.get
+        m.setattr("requests.get", lambda *args, **kwargs: None)
+        assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject-force") == "Cannot connect to GitHub API"
+        m.setattr("requests.get", original_get)
+    assert chatcommands.reject('2518 "test"', original_msg=msg, alias_used="close").startswith("Please provide")
 
 
 @patch("chatcommands.handle_spam")
@@ -499,7 +521,7 @@ def test_blacklisted_users():
             "Error: Could not find the given site."
     finally:
         # Cleanup
-        _remove_pickle("blacklistedUsers.p")
+        remove_pickle("blacklistedUsers.p")
 
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
@@ -567,7 +589,7 @@ def test_whitelisted_users():
             "Error: Could not find the given site."
     except:
         # Cleanup
-        _remove_pickle("whitelistedUsers.p")
+        remove_pickle("whitelistedUsers.p")
 
 
 def test_metasmoke():
@@ -695,7 +717,7 @@ def test_notifications():
             "That notification configuration is already registered."
     finally:
         # Cleanup
-        _remove_pickle("notifications.p")
+        remove_pickle("notifications.p")
 
 
 def test_inqueue():

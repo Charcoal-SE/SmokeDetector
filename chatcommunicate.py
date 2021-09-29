@@ -7,7 +7,6 @@ import collections
 import itertools
 import os
 import os.path
-import pickle
 import queue
 import regex
 import requests
@@ -20,7 +19,7 @@ import shlex
 import datahandling
 import metasmoke
 import classes.feedback
-from helpers import log
+from helpers import log, redact_passwords
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -75,7 +74,7 @@ def init(username, password, try_cookies=True):
 
         if try_cookies:
             if GlobalVars.cookies is None:
-                datahandling._remove_pickle("cookies.p")
+                datahandling.remove_pickle("cookies.p")
                 GlobalVars.cookies = {}
             else:
                 cookies = GlobalVars.cookies
@@ -112,12 +111,11 @@ def init(username, password, try_cookies=True):
     if not GlobalVars.standby_mode:
         join_command_rooms()
 
-    if os.path.isfile("messageData.p"):
-        with open("messageData.p", "rb") as messages_file:
-            try:
-                _last_messages = pickle.load(messages_file)
-            except EOFError:
-                pass
+    if datahandling.has_pickle("messageData.p"):
+        try:
+            _last_messages = datahandling.load_pickle("messageData.p")
+        except EOFError:
+            pass
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
@@ -203,8 +201,7 @@ def pickle_last_messages():
         _pickle_run.wait()
         _pickle_run.clear()
 
-        with open("messageData.p", "wb") as pickle_file:
-            pickle.dump(_last_messages, pickle_file)
+        datahandling.dump_pickle("messageData.p", _last_messages)
 
 
 def send_messages():
@@ -296,7 +293,7 @@ def on_msg(msg, client):
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif message.content.startswith("!!/"):
+    elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
         result = dispatch_command(message)
 
         if result:
@@ -324,6 +321,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     global _rooms
 
     msg = msg.rstrip()
+    msg = redact_passwords(msg)
     target_rooms = set()
 
     # Go through the list of properties in "has" and add all rooms which have any of those properties
@@ -514,6 +512,14 @@ def get_message(id, host="stackexchange.com"):
 
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
+    try:
+        if command_parts[0] == 'sdc':
+            command_parts = command_parts[1].split(" ", 1)
+        else:
+            command_parts[0] = command_parts[0][3:]
+    except IndexError:
+        return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" +\
+               " to run command `cmd_name`."
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -521,10 +527,10 @@ def dispatch_command(msg):
         cmd, = command_parts
         args = ""
 
-    if len(cmd) == 3:
+    if cmd == "":
         return
 
-    command_name = cmd[3:].lower()
+    command_name = cmd.lower()
 
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name).replace("_", "-")

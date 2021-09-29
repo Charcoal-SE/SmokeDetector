@@ -14,7 +14,7 @@ on_windows = 'windows' in platform.platform().lower()
 
 if on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git
+    from _Git_Windows import git
 else:
     from sh.contrib import git
 
@@ -38,8 +38,8 @@ console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(logging.Formatter(logging_format_string))
 logging.getLogger().addHandler(console_logger)
 
-# options = {"standby", "--loglevel", "no_se_activity_scan", "no-git-user-check"}
-options = {"standby", "--loglevel", "no_se_activity_scan"}
+# options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher", "no-git-user-check"}
+options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher"}
 persistent_arguments = sys.argv
 
 count = 0
@@ -58,20 +58,6 @@ def warn(message):
 
 def error(message):
     logging.error('[NoCrash] {}'.format(message))
-
-
-# if 'no-git-user-check' in persistent_arguments:
-#     persistent_arguments.remove('no-git-user-check')
-# else:
-#     git_name = git.config('--get', 'user.name', _ok_code=[0, 1])
-#     if git_name != "SmokeDetector":
-#         logging.error('git config user.name "{0}" is wrong; '
-#                       'use no-git-user-check to ignore'.format(git_name))
-#         exit(122)
-#     git_mail = git.config('--get', 'user.email', _ok_code=[0, 1])
-#     if git_mail != "smokey@erwaysoftware.com":
-#         logging.error('git config user.email "{0}" is wrong'.format(git_mail))
-#         exit(121)
 
 
 while not stoprunning:
@@ -116,6 +102,9 @@ while not stoprunning:
         log('Pull in new updates')
         git.checkout('deploy')
         git.pull()
+        git.checkout('master')
+        git.merge('@{u}')
+        git.checkout('deploy')
 
         count = 0
         crashcount = 0

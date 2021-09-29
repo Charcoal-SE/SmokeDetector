@@ -1,6 +1,7 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
+from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
+    is_privileged, message, \
     tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
@@ -22,6 +23,7 @@ import sys
 import os
 import time
 import collections
+import subprocess
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
@@ -30,7 +32,9 @@ from helpers import exit_mode, only_blacklists_changed, only_modules_changed, lo
     reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
+from classes.dns import dns_resolve
 from tasks import Tasks
+import dns.resolver
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -50,7 +54,7 @@ def null():
 @command(str, whole_msg=True, privileged=True)
 def addblu(msg, user):
     """
-    Adds a user to site whitelist
+    Adds a user to site blacklist
     :param msg: ChatExchange message
     :param user:
     :return: A string
@@ -207,7 +211,11 @@ def get_pattern_from_content_source(msg):
     :return: A string
     """
     try:
-        return msg.content_source.split(" ", 1)[1]
+        msg_parts = msg.content_source.split(" ", 1)
+        if msg_parts[0] == "sdc":
+            return msg_parts[1].split(" ", 1)[1]
+        else:
+            return msg_parts[1]
     except IndexError:
         # If there's nothing after the space, then raise an error. The chat message may have been edited or deleted,
         # but the deleted case is normally handled in minimally_validate_content_source(), which should be called first.
@@ -349,26 +357,34 @@ def do_blacklist(blacklist_type, msg, force=False):
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
-    append_force_to_do = "; append `-force` if you really want to do that."
+    append_force_to_do = " Append `-force` to the command if you really want to add this pattern."
 
     pattern = get_pattern_from_content_source(msg)
 
-    has_unescaped_dot = ""
+    other_issues = []
+    if '\u202d' in pattern:
+        other_issues.append("The pattern contains an invisible U+202D whitespace character.")
+
+    if regex.search(r"^\s+", pattern):
+        other_issues.append("The pattern starts with whitespace.")
+
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
         # Remove character sets, where . doesn't need to be escaped.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", test_for_unescaped_dot)
         if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
-            has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
+            other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
 
         try:
-            r = regex.compile(findspam.format_with_city_list(pattern))
-            # r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
+            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
-            raise CmdException("That pattern is probably too broad, refusing to commit.")
+            raise CmdException("That pattern is probably too broad, refusing to commit." +
+                               " If you really want to add this pattern, you will need to manually submit a PR.")
+
+    other_issues_text = ' '.join(other_issues)
 
     if not force:
         if "number" in blacklist_type or \
@@ -378,21 +394,17 @@ def do_blacklist(blacklist_type, msg, force=False):
             is_phone = False
 
         is_watchlist = bool("watch" in blacklist_type)
-
         concretized_pattern = get_test_text_from_regex(pattern)
 
         for username in False, True:
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
-
             if reasons:
-                has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
-                raise CmdException(
-                    "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unescaped_dot + append_force_to_do)
+                raise CmdException("That pattern looks like it's already caught by " +
+                                   format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
 
-        if has_unescaped_dot:
-            raise CmdException(has_unescaped_dot + append_force_to_do)
+        if other_issues_text:
+            raise CmdException(other_issues_text + append_force_to_do)
 
     metasmoke_down = False
 
@@ -517,7 +529,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
-@command(int, privileged=True, whole_msg=True)
+@command(int, privileged=True, whole_msg=True, aliases=["accept"])
 def approve(msg, pr_id):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
@@ -548,6 +560,49 @@ def approve(msg, pr_id):
                 return None
             except Exception:
                 pass
+        return message
+    except Exception as e:
+        raise CmdException(str(e))
+
+
+@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
+def reject(msg, args, alias_used="reject"):
+    argsraw = args.split(' "', 1)
+    try:
+        pr_id = int(argsraw[0].split(' ')[0])
+    except ValueError:
+        reason = ''
+        pr_id = int(args.split(' ')[2])
+    try:
+        # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
+        if argsraw[1][-1] == '"':
+            reason = argsraw[1][:-1]
+        else:
+            reason = argsraw[1]
+    except IndexError:
+        reason = ''
+    force = alias_used.split("-")[-1] == "force"
+    code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    if not code_permissions:
+        raise CmdException("You need blacklist manager privileges to reject pull requests")
+    if len(reason) < 20 and not force:
+        raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
+                           " can learn from their mistakes. Use `-force` to force the reject")
+    rejected_image = "https://camo.githubusercontent.com/" \
+                     "77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a" \
+                     "2f2f7261737465722e736869656c64732e696f2f62616467652f626c6" \
+                     "1636b6c6973746572732d72656a65637465642d7265642e706e67"
+    message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+    chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
+    rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
+                                                                  chat_user_profile_link, msg.room.name)
+    reject_reason_text = " No rejection reason was provided.\n\n"
+    if reason:
+        reject_reason_text = " Reason: '{}'".format(reason)
+    reject_reason_image_text = "\n\n![Rejected with SmokeyReject]({})".format(rejected_image)
+    comment = rejected_by_text + reject_reason_text + reject_reason_image_text
+    try:
+        message = GitManager.reject_pull_request(pr_id, comment)
         return message
     except Exception as e:
         raise CmdException(str(e))
@@ -815,7 +870,7 @@ def info():
     return "I'm " + GlobalVars.chatmessage_prefix +\
            ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
-           " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
+           " [A command list is available here](https://git.io/SD-Commands)."
 
 
 # noinspection PyIncorrectDocstring
@@ -835,16 +890,6 @@ def welcome(msg, other_user):
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
-
-
-# noinspection PyIncorrectDocstring
-@command()
-def location():
-    """
-    Returns the current location the application is running from
-    :return: A string with current location
-    """
-    return GlobalVars.location
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
@@ -1248,10 +1293,10 @@ def test(content, alias_used="test"):
 
 def bisect_regex(s, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
-    formatted_regex = findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes])))
+    formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
     start_time = time.time()
     try:
-        compiled = regex.compile(formatted_regex)
+        compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
         match = compiled.search(s, timeout=timeout)
     except Exception:
         # Log wich regex caused the error:
@@ -1279,7 +1324,7 @@ def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     results = []
     for expresion in regexes:
-        compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format(expresion[0])))
+        compiled = regex.compile(regex_to_format.format(expresion[0]), city=findspam.city_list, ignore_unused=True)
         match = compiled.search(test_text, timeout=timeout)
         if match:
             results.append(expresion)
@@ -1306,7 +1351,8 @@ def bisect(msg, s):
     bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
     bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
-    minimally_validate_content_source(msg)
+    if msg is not None:
+        minimally_validate_content_source(msg)
 
     try:
         s = rebuild_str(get_pattern_from_content_source(msg))
@@ -1398,7 +1444,7 @@ def threads():
 
 
 # noinspection PyIncorrectDocstring
-@command(aliases=["rev", "ver"])
+@command(aliases=["rev", "ver", "location"])
 def version():
     """
     Returns the current version of the application
@@ -1741,7 +1787,7 @@ def allspam(msg, url):
         # Fetch posts
         request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
         params = {
-            'filter': '!)Q4RrMH0DC96Y4g9yVzuwUrW',
+            'filter': '!fsv5ng(IaK_MBkZYCDWuA.U2DqLwdl*YEL_',
             'key': api_key,
             'site': u_site
         }
@@ -1820,14 +1866,17 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
     """
     Reports a list of URLs
     :param urls: A list of URLs
-    :param reported_by_owner: The chatexchange User record for the user that reported the URLs.
+    :param reported_by_owner: The chatexchange User record for the user that reported the URLs, or a str.
     :param reported_in: The name of the room in which the URLs were reported, or True if reported by the MS API.
     :param blacklist_by: String of the URL for the transcript of the chat message causing the report.
     :param operation: String of which operation is being performed (e.g. report, scan, report-force, scan-force)
     :param custom_reason: String of the custom reason why the URLs are being reported.
     :return: String: the in-chat repsponse
     """
-    reported_by_name = reported_by_owner.name
+    # Use reported_by_owner.name (ChatExchange user record) unless reported_by_owner is a
+    # str (e.g.  reports from the MS WebSocket).  If reported_by_owner isn't a ChatExchange
+    # user record, we can't add the custom_reason as an MS comment later.
+    reported_by_name = reported_by_owner if type(reported_by_owner) is str else reported_by_owner.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
     if operation == "scan-force":
@@ -1927,7 +1976,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
         if scan_spam and operation != "report-direct":
             comment = report_info + scan_why.lstrip()
             handle_spam(post=post, reasons=scan_reasons, why=comment)
-            if custom_reason:
+            if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
@@ -1947,7 +1996,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             handle_spam(post=post,
                         reasons=["Manually reported " + post_data.post_type + batch],
                         why=comment)
-            if custom_reason:
+            if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
@@ -2038,10 +2087,9 @@ def delete(msg):
     :return: None
     """
 
-    post_data = get_report_data(msg)
-    if post_data and msg.room.id == 11540:
-        return "Reports from SmokeDetector in Charcoal HQ are generally kept "\
-               "as records. If you really need to delete a report, please use "\
+    if msg.room.id == 11540:
+        return "Messages/reports from SmokeDetector in Charcoal HQ are generally kept "\
+               "as records. If you really need to delete a message, please use "\
                "`sd delete-force`. See [this note on message deletion]"\
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
@@ -2092,17 +2140,19 @@ def false(feedback, msg, comment, alias_used="false"):
 
     user = get_user_from_url(owner_url)
 
-    if user is not None:
+    result = "Registered " + post_type + " as false positive"
+    if user is None:
+        if feedback_type.blacklist:
+            # The command was to bloacklist the user, but we're unable to determine the user.
+            raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
+    else:
         if feedback_type.blacklist:
             add_whitelisted_user(user)
-            result = "Registered " + post_type + " as false positive and whitelisted user."
+            result += " and whitelisted user"
         elif is_blacklisted_user(user):
             remove_blacklisted_user(user)
-            result = "Registered " + post_type + " as false positive and removed user from the blacklist."
-        else:
-            result = "Registered " + post_type + " as false positive."
-    else:
-        result = "Registered " + post_type + " as false positive."
+            result += " and removed user from the blacklist"
+    result += "."
 
     try:
         if msg.room.id != 11540:
@@ -2196,22 +2246,25 @@ def true(feedback, msg, comment, alias_used="true"):
     feedback_type.send(post_url, feedback)
 
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
+    result = "Registered " + post_type + " as true positive"
+    cant_get_user_command_exception_text = result + ', but could not get user from URL: `{0!r}`'.format(owner_url)
     try:
         user = get_user_from_url(owner_url)
     except TypeError as e:
-        raise CmdException('Could not get user from URL {0!r}'.format(owner_url))
+        raise CmdException(cant_get_user_command_exception_text)
 
-    if user is not None:
+    if user is None:
+        if feedback_type.blacklist:
+            raise CmdException(cant_get_user_command_exception_text)
+    else:
         if feedback_type.blacklist:
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_url)
 
-            result = "Registered " + post_type + " as true positive and blacklisted user."
+            result += " and blacklisted user"
         else:
-            result = "Registered " + post_type + " as true positive. If you want to "\
-                     "blacklist the poster, use `trueu` or `tpu`."
-    else:
-        result = "Registered " + post_type + " as true positive."
+            result += ". If you want to blacklist the poster, use `trueu` or `tpu`"
+    result += "."
 
     if comment:
         Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
@@ -2264,3 +2317,48 @@ def autoflagged(msg):
         return "That post was automatically flagged, using flags from: {}.".format(", ".join(names))
     else:
         return "That post was **not** automatically flagged by metasmoke."
+
+
+# noinspection PyMissingTypeHints
+@command(str, privileged=True)
+def dig(domain):
+    """
+    Runs a DNS query using pydns and returns the
+    list of A and AAAA records as output.
+    :param domain: the domain to get DNS records for
+    :return: A comma-separated string of IPs
+    """
+    results = dns_resolve(domain)
+    if results:
+        return ", ".join(result for result in results)
+    else:
+        return "No data found."
+
+
+@command(str, privileged=True)
+def dnscheck(domain) -> str:
+    """
+    Runs a DNS query using dnspython and Google DNS, and
+    checks for any discrepancies
+    :param domain: the domain to get DNS records for, and to compare.
+    :return: A comparison of domain data if data doesn't match, or "No discrepancy"
+    """
+    # Initialize Google resolver
+    google = dns.resolver.Resolver(configure=False)
+    google.nameservers = ['8.8.8.8', '8.8.4.4']
+    google.cache = None
+
+    sdresolver = dns.resolver.get_default_resolver()
+
+    googleres = google.query(domain)
+    sdres = sdresolver.query(domain)
+
+    if googleres.rrset != sdres.rrset:
+        response = "**Differing DNS Results for {}!**\n\nGoogle DNS:\n{}" \
+                   "\n\nSmokeDetector:{}".format(domain, googleres.rrset, sdres.rrset)
+    else:
+        response = "There is no discrepancy between the DNS records for {} based on " \
+                   "a comparison of the current DNS used by SmokeDetector and Google DNS.\n\n" \
+                   "{}".format(domain, sdres.rrset)
+
+    return response

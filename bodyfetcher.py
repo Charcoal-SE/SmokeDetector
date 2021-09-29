@@ -21,17 +21,51 @@ class BodyFetcher:
     queue = {}
     previous_max_ids = {}
 
+    # special_cases are the minimum number of posts, for each of the specified sites, which
+    # need to be in the queue prior to feching posts.
+    # The number of questions we fetch each day per site is the total of
+    #   new questions + new answers + edits.
+    # Stack Overflow is handled specially. It's know that some SO edits/new posts don't
+    #   appear on the WebSocket.
+    # Queue depths were last comprehensively adjusted on 2015-12-30.
     special_cases = {
-        "pt.stackoverflow.com": 10,
-        "ru.stackoverflow.com": 10,
-        "blender.stackexchange.com": 5,
-        "codereview.stackexchange.com": 5,
-        "es.stackoverflow.com": 5,
-        "stackoverflow.com": 3,
-        "stats.stackexchange.com": 5,
-        "tex.stackexchange.com": 5,
-        "magento.stackexchange.com": 3,
-        "gis.stackexchange.com": 3
+        # 2020-11-02:
+        # Request numbers pre 2020-11-02 are very low due to a now fixed bug.
+        #
+        #                                                                pre                   sum of requests
+        #                                               questions    2020-11-02   2020-02-19    2020-10-28 to
+        #                                                per day       setting     requests      2020-11-02
+        "stackoverflow.com": 3,                     # _  6,816            3          360            4,365
+        "math.stackexchange.com": 2,                # _    596            1          473            6,346
+        # "ru.stackoverflow.com": 2,                # _    230           10           13              145
+        # "askubuntu.com": ,                        # _    140            1           88            1,199
+        # "es.stackoverflow.com": 2,                # _    138            5           25              225
+        # "superuser.com": ,                        # _    122            1           87            1,038
+        # "physics.stackexchange.com": ,            # _     90            1           76            1,161
+        # "stats.stackexchange.com": 2,             # _     82            5           16              151
+        # "pt.stackoverflow.com": 2,                # _     73           10            7               75
+        # "unix.stackexchange.com": ,               # _     72            1           76              772
+        # "electronics.stackexchange.com": ,        # _     69            1           46              723
+        # "serverfault.com": ,                      # _     62            1           43              582
+        # "tex.stackexchange.com": 2,               # _     60            5            8               98
+        # "blender.stackexchange.com": 2,           # _     59            5            8               85
+        # "salesforce.stackexchange.com": ,         # _     49            1           47              472
+        # "gis.stackexchange.com": 2,               # _     46            3           15              166
+        # "mathoverflow.net" (time_sensitive)       # _     37            -           33              511
+        # "english.stackexchange.com": ,            # _     36            1           34              382
+        # "magento.stackexchange.com": 2,           # _     34            3            5               93
+        # "ell.stackexchange.com": ,                # _     33            1           24              365
+        # "wordpress.stackexchange.com": ,          # _     29            1           30              283
+        # "apple.stackexchange.com": ,              # _     29            1           46              294
+        # "diy.stackexchange.com": ,                # _     26            1           24              306
+        # "mathematica.stackexchange.com": ,        # _     25            1           21              384
+        # "dba.stackexchange.com": ,                # _     23            1           31              343
+        # "datascience.stackexchange.com": ,        # _     21            1           17              220
+        # "chemistry.stackexchange.com": ,          # _     20            1           20              140
+        # "security.stackexchange.com": ,           # _     18            1           15              238
+        # "codereview.stackexchange.com": ,         # _     18            5            2               39
+        #  The only reason this is the cut-off is that it was the last in the existing list
+        #    as of 2020-11-01.
     }
 
     time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
@@ -57,8 +91,16 @@ class BodyFetcher:
 
         site_base = d["siteBaseHostAddress"]
         post_id = d["id"]
-        if (post_id == 3122 or post_id == 51812) and site_base == "meta.stackexchange.com":
+
+        # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
+        ignored_mse_questions = [
+            3122,    # Formatting Sandbox
+            51812,   # The API sandbox
+            296077,  # Sandbox archive
+        ]
+        if post_id in ignored_mse_questions and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
+
         with self.queue_modify_lock:
             if site_base not in self.queue:
                 self.queue[site_base] = {}
@@ -149,7 +191,7 @@ class BodyFetcher:
                 # We don't want to go over the 100-post API cutoff, so take the last
                 # (100-len(new_post_ids)) from intermediate_posts
 
-                intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
+                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)):]
 
                 # new_post_ids could contain edited posts, so merge it back in
                 combined = chain(intermediate_posts, new_post_ids)
@@ -199,7 +241,7 @@ class BodyFetcher:
 
         url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
         params = {
-            'filter': '!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*',
+            'filter': '!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa',
             'key': 'IAkbitmze4B8KpacUfLqkw((',
             'site': site
         }
@@ -231,10 +273,12 @@ class BodyFetcher:
             message_hq = ""
             with GlobalVars.apiquota_rw_lock:
                 if "quota_remaining" in response:
-                    if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
+                    quota_remaining = response["quota_remaining"]
+                    if quota_remaining - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0 \
+                            and quota_remaining > 19980:
                         tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
                                                  "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                              response["quota_remaining"]))
+                                                                              quota_remaining))
 
                         sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
                                                        reverse=True)
@@ -246,13 +290,13 @@ class BodyFetcher:
 
                         tell_rooms_with("debug", api_quota_used_per_site)
                         clear_api_data()
-                    if response["quota_remaining"] == 0:
+                    if quota_remaining == 0:
                         tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
                         tell_rooms_with("debug", str(response))  # No code format for now?
                     if GlobalVars.apiquota == -1:
                         tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                                 .format(quota=response["quota_remaining"]))
-                    GlobalVars.apiquota = response["quota_remaining"]
+                                                 .format(quota=quota_remaining))
+                    GlobalVars.apiquota = quota_remaining
                 else:
                     message_hq = "The quota_remaining property was not in the API response."
 
@@ -269,7 +313,10 @@ class BodyFetcher:
                     GlobalVars.api_backoff_time = time.time() + response["backoff"]
 
         if len(message_hq) > 0 and "site is required" not in message_hq:
-            tell_rooms_with("debug", message_hq.strip())
+            message_hq = message_hq.strip()
+            if len(message_hq) > 500:
+                message_hq = "\n" + message_hq
+            tell_rooms_with("debug", message_hq)
 
         if "items" not in response:
             return

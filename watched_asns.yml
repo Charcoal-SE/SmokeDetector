@@ -6,6 +6,7 @@ items:
   comment: 122/284 over 1 year
   disable: true
 - asn: '3595'
+- asn: '8455'
 - asn: '8622'
 - asn: '12488'
 - asn: '16509'
@@ -31,6 +32,7 @@ items:
   disable: true
 - asn: '24778'
 - asn: '27176'
+- asn: '29066'
 - asn: '29073'
 - asn: '31083'
   comment: 21/97 over a year
@@ -55,6 +57,7 @@ items:
 - asn: '36352'
   comment: 48/140 over a year
   disable: true
+- asn: '40021'
 - asn: '40676'
   comment: 61/132 over a year
   disable: true
@@ -80,7 +83,9 @@ items:
 - asn: '55002'
   comment: 11/100 over a yeasr
   disable: true
+- asn: '55470'
 - asn: '56110'
+- asn: '58640'
 - asn: '59253'
 - asn: '59922'
 - asn: '62134'
@@ -89,6 +94,8 @@ items:
 - asn: '63410'
 - asn: '133296'
 - asn: '133711'
+- asn: '135822'
+- asn: '140576'
 - asn: '197695'
 - asn: '200000'
 - asn: '203226'
@@ -96,3 +103,4 @@ items:
 - asn: '262254'
 - asn: '393960'
 - asn: '395970'
+- asn: '397373'

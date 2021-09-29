@@ -16,7 +16,7 @@ from urllib.parse import quote
 from globalvars import GlobalVars
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git, GitError
+    from _Git_Windows import git, GitError
 else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
@@ -34,8 +34,24 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
-    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
-    repo = GlobalVars.bot_repo_slug
+    still_using_usernames = GlobalVars.github_access_token is None
+
+    if still_using_usernames:
+        still_using_usernames_nudge = " By the way, tell my owner to [set up personal access tokens]" \
+                                      "(//chat.stackexchange.com/transcript/message/55007870#55007870)" \
+                                      " when they have time :)"
+        auth_args = {"auth": HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)}
+    else:
+        still_using_usernames_nudge = ""
+        auth_args = {"headers": {'Authorization': 'token {}'.format(GlobalVars.github_access_token)}}
+
+    @classmethod
+    def call_api(cls, method, route, payload):
+        """ Perform API calls. """
+        if isinstance(payload, dict):
+            payload = json.dumps(payload)
+        response = requests.request(method, route, data=payload, **cls.auth_args)
+        return response
 
     @classmethod
     def create_pull_request(cls, payload):
@@ -44,28 +60,41 @@ class GitHubManager:
         """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
-                                 auth=cls.auth, data=payload)
+        response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
+                                 data=payload, **cls.auth_args)
         return response.json()
 
     @classmethod
     def comment_on_thread(cls, thread_id, body):
-        url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
+        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, thread_id)
         payload = json.dumps({'body': body})
-        response = requests.post(url, auth=cls.auth, data=payload)
+        response = requests.post(url, data=payload, **cls.auth_args)
         return response.json()
 
+    @classmethod
+    def get_pull_request(cls, pr_id, payload):
+        """ Get pull requests info. """
+        url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
+        return cls.call_api("GET", url, payload)
+
+    @classmethod
+    def update_pull_request(cls, pr_id, payload):
+        """ Update pull requests' status (open/closed). """
+        url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
+        return cls.call_api("PATCH", url, payload)
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
+
+
 class GitManager:
     gitmanager_lock = Lock()
 
     @staticmethod
     def get_origin_or_auth():
         git_url = git.config("--get", "remote.origin.url").strip()
-        if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_password:
+        if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_access_token:
             preformat_url = ('https://{}:{}@github.com/' + git_url[19:])
-            return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_password))
+            return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_access_token))
         else:
             return "origin"
 
@@ -159,8 +188,9 @@ class GitManager:
                 git.push(origin_or_auth, branch)
                 git.checkout("master")
 
-                if GlobalVars.github_username is None or GlobalVars.github_password is None:
-                    return (False, "Tell someone to set a GH password")
+                if ((GlobalVars.github_username is None or GlobalVars.github_password is None)
+                        and (GlobalVars.github_access_token is None)):
+                    return (False, "Tell someone to set a GH token")
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
@@ -183,15 +213,17 @@ class GitManager:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url, pr_num = response["html_url"], response["number"]
+
                     if metasmoke_down:
                         return (True,
                                 "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
-                                "I've [created PR#{1} for you]({0}).".format(
-                                    url, pr_num))
+                                "I've [created PR#{1} for you]({0}).{2}".format(
+                                    url, pr_num, GitHubManager.still_using_usernames_nudge))
                     else:
                         return (True,
-                                "You don't have blacklist manager privileges, but I've [created PR#{1} for you]({0})."
-                                .format(url, pr_num))
+                                "You don't have blacklist manager privileges, "
+                                "but I've [created PR#{1} for you]({0}).{2}"
+                                .format(url, pr_num, GitHubManager.still_using_usernames_nudge))
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
@@ -343,6 +375,36 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
+    @classmethod
+    def reject_pull_request(cls, pr_id, comment=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't reject it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't reject it.".format(pr_id))
+        ref = pr_info['head']['ref']
+
+        if comment:  # yay we have comments now
+            GitHubManager.comment_on_thread(pr_id, comment)
+
+        with cls.gitmanager_lock:
+            origin_or_auth = cls.get_origin_or_auth()
+            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+            payload = {"state": "closed"}
+            response = GitHubManager.update_pull_request(pr_id, payload)
+            if response:
+                if response.json()["state"] == "closed":
+                    git.push('-d', origin_or_auth, ref)
+                    return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                        pr_id, GlobalVars.bot_repo_slug)
+
+        raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
+
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
         try:
@@ -393,9 +455,9 @@ class GitManager:
     def get_remote_diff():
         git.fetch()
         if GlobalVars.on_windows:
-            return git.diff_filenames("HEAD", "origin/deploy")
+            return git.diff_filenames("HEAD", "deploy@{u}")
         else:
-            return git.diff("--name-only", "HEAD", "origin/deploy")
+            return git.diff("--name-only", "HEAD", "deploy@{u}")
 
     @staticmethod
     def get_local_diff():
@@ -406,7 +468,12 @@ class GitManager:
 
     @staticmethod
     def pull_remote():
+        # We need to pull both the master and deploy branches here in order to be in sync with GitHub.
+        git.checkout('deploy')
         git.pull()
+        git.checkout('master')
+        git.pull()
+        git.checkout('deploy')
 
     @classmethod
     def pull_local(cls):

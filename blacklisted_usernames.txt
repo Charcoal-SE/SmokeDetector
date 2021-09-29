@@ -13,7 +13,6 @@ Dr\.? Madonna
 Pro Max
 ^hl12
 defort essid
-^pus+y?$
 radlelgl
 Anonymous\WTeacher
 Satyajay\WMandal
@@ -43,7 +42,6 @@ shitfuck
 ^ling xing$
 printers?\W?driver
 ^689 Cloud$
-JoeClark
 ^Gracia\W?Ryan\d*$
 ^Juliet Bell$
 ^Prasanta Shee$
@@ -56,7 +54,6 @@ rosanna\W?cart
 annalee899
 evie\W?berge
 Brook Davis
-zixuan[0-9][0-9]
 emilie\W?larsen
 air\W?purifier\W?reviews
 Cum\W?Juice
@@ -88,7 +85,6 @@ heinrich\W*+(?:luitpold\W*+)?himmler
 ante\W*+paveli[cć]
 ^LGBT representative$
 muh[ae]mm[ae]d\W*+the\W*+pa?edophile
-^eray$
 ^autolinkpk$
 ^PCBindex$
 ^Vico\W*Peißker$
@@ -123,7 +119,6 @@ hrisikesh\W*+saloi?
 muralidharaB
 ^albertlee$
 ^Biplab Mahanta$
-^Sonam Agarwal$
 ^cnhonest$
 ^Victoria Tegg$
 (?-i:^Babar Nawaz$)
@@ -154,7 +149,6 @@ prestige\W?smart\W?city
 hostingride
 bestchange
 ^Semo Diaz$
-^(?-i:preeti agarwal)$
 ^gchristophergloss$
 ^Saad Aziz$
 ^Charlene Eudora$
@@ -203,21 +197,18 @@ quickbooks
 (?-i:^Tripnexts$)
 (?-i:^Arun A K$)
 (?-i:^ForeignExchange$)
-(?-i:^Jacob Ethan$)
 (?-i:^CoolGuy6969$)
 (?-i:Eva Wei$)
 \bcunt\d*\b
 (?-i:^usbullionreserve$)
-(?-i:^khadim hussain$)
 (?-i:^stevensegui$)
 (^-i:^Jivendro Adriaans$)
 (?-i:^aliinam$)
 (?-i:^Scarlet\s*Grace$)
 (?-i:^nanny5557$)
-(?-i:^k.?h?a.?d.?.?i.?m h.?u.?s.?s.?a.?i[mn]$)
 (?-i:^Mary Skula$)
 (?-i:^Pandora Service$)
-(?-i:^Angela Yui‭$)
+(?-i:^Angela Yui$)
 (?-i:^mari devleadz$)
 (?-i:^khadim$)
 (-i:^Vishnu Jangid$)
@@ -254,12 +245,11 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^rockzzz ajay$)
 (?-i:^insightssuccess$)
 (?-i:^Daniel Pham$)
-(?-i:^Sunday$)
 (?-i:^sowmya g$)
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
 omysexydoll
-sexdollxing‭
+sexdollxing
 oxybr(?:ea?)?th(?:(?<=\Boxybr(?:ea?)?th)|\B)
 (?-i:^Dhara Jain$)
 (?-i:^meemu jose$)
@@ -279,13 +269,11 @@ DailyRaiseQuestion
 (?-i:^barbieshrimp$)
 ^Imaginea$
 (?-i:^Manglada Tech$)
-(?-i:^abhishek jain$)
 (?-i:^Alex Tony$)
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
-(?-i:^Kavita$)
 (?-i:^Leeten Smith$)
-^bert[\W_]*+linsheng‭$
+^bert[\W_]*+linsheng$
 (?-i:^keyword out$)
 (?-i:^mehdi rezghi$)
 (?-i:^Renu KumAri$)
@@ -298,7 +286,6 @@ lustresparasala
 (?-i:^tvtxrwzg$)
 (?-i:^sexdollxing$)
 (?-i:^Marco Cappoli$)
-(?-i:^Manish Kushwaha$)
 (?-i:^Văn Đình Hưng$)
 (?-i:^neolift$)
 (?-i:^jammerwelt$)
@@ -311,7 +298,6 @@ lustresparasala
 (?-i:^Marieromig$)
 (?-i:^wperror500$)
 ^retail[\W_]*+clouds?$
-(?-i:^Tony Wong$)
 (?-i:^Add Hunters$)
 ^techmartin$
 (?-i:^Rathva Dinesh$)
@@ -331,3 +317,205 @@ lustresparasala
 (?-i:^wyd1014$)
 ^sadda[\W_]*+truck(?:\.com)?$
 (?-i:^Jake Syd$)
+^(?-i:jeffrey)\W*(?-i:cage)$
+(?-i:^Digital India$)
+(?-i:^Gitpac Consultancy Service$)
+(?-i:^Yogesh Sambare$)
+(?-i:^Wowdesk Inc$)
+(?-i:^ASH Green$)
+(?-i:(^Bike Rental in|(Joes|Jazz) Car Rental) Goa$)
+(?-i:^Faina Dsouza$)
+(?-i:^Linden Goorge$)
+(?-i:^vanaja nsr$)
+(?-i:^svrtechnologies$)
+(?-i:^bon bon$)
+drivingdirectionss\.com
+(?-i:^Shiv Gupta$)
+(?-i:^olive allen$)
+(?-i:^Alexavier Miller$)
+^lovejit$
+(?-i:^Stefanie Mills$)
+(?-i:^xosoplus$)
+(?-i:^kobedoll$)
+(?-i:^ghostrifles01$)
+(?-i:^shreyasehgal$)
+(?-i:^Hank Sauri$)
+(?-i:^Danush Shetty$)
+(?-i:^Sri Ramana$)
+(?-i:^Sharath Raju$)
+(?-i:^Niko Tech$)
+(?-i:^jack henry$)
+(?-i:^IAS QATAR$)
+(?-i:^Aman Samadhiya$)
+(?-i:^zodiac208$)
+(?-i:^Fizfy Solutions$)
+(?-i:^Denni Jenni$)
+(?-i:^Iso KUWAIT$)
+(?-i:^Marco Desouza$)
+(?-i:^Ankit Rathi$)
+(?-i:^zega logo$)
+(?-i:^sehgalshreya$)
+Pound\W*define\W*MACRO
+(?-i:^Anthony\W*+Dwayne\W*+Chapelle$)
+(?-i:^Stoersender Gps$)
+(?-i:^Sheligiibs40$)
+(?-i:^ISO UAE$)
+(?-i:^sofia jonas$)
+(?-i:^Bella Gorden$)
+(?-i:^Languager$)
+(?-i:^PURUSOTTAM NATH$)
+(?-i:^Bakera IT$)
+(?-i:^Akansha Yadav$)
+(?-i:^priya submissions$)
+(?-i:^sunny garg$)
+(?-i:^Newsronic$)
+(?-i:^jack miller$)
+(?-i:^ctrustglobal$)
+(?-i:^aryaan khan$)
+^90\W*+98$
+(?-i:^Petter Bell$)
+^(?-i:HAGASU)$
+(?-i:^sudharshan V$)
+(?-i:^adrian awadis$)
+(?-i:^Mia Walker$)
+^charcoal(?:[\W_]*+(?:hq|project))?$
+(?-i:^DariaMonsk$)
+^optimus[\W_]*+fox$
+(?-i:^M sohail$)
+(?-i:^salman khushi$)
+(?-i:^GamesDApp$)
+(?-i:^Chhotes Indian Food$)
+(?-i:^aleena12345$)
+(?-i:^keygen bro$)
+(?-i:^Amile Institute$)
+(?-i:^tritansolutions$)
+Mar(?:ikya|y)\W*Skula
+(?-i:^user266417$)
+(?-i:^key gen$)
+^(?-i:JoeClark)$
+^w11stop\.com$
+(?-i:^salihagenter$)
+(?-i:^joy clark$)
+(?-i:^Rabitechno$)
+(?-i:^gospeedcheck$)
+Wes.ey\W*Atwood
+^harold\W*coyer$
+(?-i:^Ann Watson$)
+(?-i:^Wesley call me this way$)
+(?-i:^Welsey Atwood$)
+(?-i:^TracySaree$)
+(?-i:^Ayush Antiwal$)
+[s5]+[3eé]*c(?:[uü]|\[_\])*r[1i]*t.*\W*(?:t[4h]*r[0oøuüôöõ]*[uü]*g[4h]*|p[aåâäã]r \W*[l1]?'?)\W*(?:[o0øuüôöõ]*(?:b|13)*[s5]+?c[uü]*r[1i]*t[yé]*|.*W\.?A)
+(?-i:^Cann0t pr0v1d3 4 n4m3$)
+(?-i:^J\. David Velleman$)
+(?-i:^Anna21dj$)
+(?-i:^New J$)
+(?-i:^Ella Mark$)
+So face the music
+(?-i:^Franklin Josh$)
+(?-i:^gian tapia fuertes$)
+(?-i:^felishia green$)
+(?-i:^jys2020$)
+(?-i:^longpanda$)
+(?-i:^upsaves energy$)
+(?-i:^RCMB Banglore$)
+(?-i:^Lovejit Chauhan$)
+(?-i:^Khalif Klenton swifts$)
+(?-i:^eSoftToolsNSFtoPSTConvert$)
+(?-i:^franca calab$)
+(?-i:^Sagar Maurya$)
+(?-i:^6Wresearch Market Intelligence$)
+(?-i:cheapjammer$)
+(?-i:^precisejammers$)
+^treasurebox$
+(?-i:^Internetto Trollio$)
+(?-i:^Joke Biden$)
+(?-i:^contact4help$)
+\b(?:y(?:ou?|[eé3_ëêẽ]).*|ban.*|c[4a]n\W*'?\W*n[0oøuüôöõ]?t.*)d[uü]des?$
+(?-i:^digipro$)
+SpeakingAccent
+(?-i:^credit fixers$)
+^(?-i:origamistudios?)$
+^marsillpost(?:ada)?$
+(?-i:^emaillist$)
+(?-i:Vladimir Artiukh$)
+(?-i:^Rita Scott$)
+(?-i:^InfiniD$)
+(?-i:^Haider Jamal Abbasi$)
+(?-i:^bryan pulisic$)
+(?-i:Surbhi Nahta$)
+(?-i:^yufeifei$)
+(?-i:^ujoh kelvin$)
+^96\s?94$
+(?-i:^TRUECODER(?:MACHATER)?$)
+(?-i:pyActiveEXE)
+^ulyanovsk[\W_]*state[\W_]*university$
+(?-i:^[A-Z]dtaxczfershj?d\w?$)
+(?-i:^Office Webmaster352$)
+(?-i:^Cathy Wessel$)
+(?-i:^Nimble AppGenie$)
+(?-i:^jmhgkgmmf$)
+^satta king$
+(?-i:^maama zama$)
+(?-i:kleidmi luu$)
+(?-i:Amara Laurent$)
+(?-i:^Joshua Babashola$)
+(?-i:^thebusinessfuse$)
+(?-i:^wealthpro technologies$)
+(?-i:^Jamie92$)
+(?-i:^Dingbest$)
+(?-i:^Sam Derickson$)
+(?-i:^Jeremy Zucker$)
+(?-i:^pal patil$)
+(?-i:^Prediksi Parlayku$)
+(?-i:^Maksim Yaroslav$)
+(?-i:^Aggrey Ng'aya$)
+(?-i:^Fast Custom Boxes$)
+(?-i:^DGal World$)
+(?-i:^kevinmalone01$)
+^lovekesh jayant$
+(?-i:^mbbs in russia$)
+(?-i:^jangan gawat$)
+(?-i:^Mim Khatun$)
+(?-i:^unrivaledcandles$)
+(?-i:^Katrin Kunze$)
+(?-i:^TheRobloxGamer$)
+(?-i:^Amara watt$)
+(?-i:^Dazy Shuu Blog$)
+(?-i:^Lohithakshan\. N\. K$)
+(?-i:^gripelectric$)
+williamriver
+(?-i:^FULLERKREG$)
+(?-i:^ADM Sneezeguards$)
+(?-i:^belindaluna$)
+(?-i:^Nancy R\. Vinci$)
+(?-i:^Jacqueline L\. Pollock$)
+(?-i:^D J Sims$)
+^ayesha exopic$
+(?-i:^Mia Cross$)
+(?-i:^Dai Software$)
+(?-i:^Bryan Wagan$)
+(?-i:^Lass Naturals$)
+(?-i:^Roee Alfasi$)
+(?-i:^Scarlett Young$)
+(?-i:^Antier Solutions$)
+(?-i:^Dupuy Michael$)
+(?-i:^Aspire Software Consultancy$)
+(?-i:^Hannah J ?Parrish$)
+(?-i:^crowdcar$)
+(?-i:^Aquatec Innovative$)
+(?-i:^gacon\.050201$)
+(?-i:^Eva Smith$)
+(?-i:^Jaime_Corbett$)
+(?-i:^jabbar huusain$)
+(?-i:^Deion Adel$)
+(?-i:^hasara$)
+(?-i:^CustomBoxesWorld$)
+(?-i:^Scott McDaniel$)
+(?-i:^Duc Hoang$)
+(?-i:^FileZIPO$)
+(?-i:^pest control$)
+(?-i:^Emily Wiliam$)
+(?-i:^surbhijain$)
+(?-i:^Donn Moo$)
+(?-i:^Sophia Grace$)

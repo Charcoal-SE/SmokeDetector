@@ -94,6 +94,7 @@ errorLogs.db
 errorLogs.txt
 errorLogs.txt.*
 errorlog.txt
+errorLog.txt
 
 # Swap files
 *.swp

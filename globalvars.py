@@ -7,7 +7,7 @@ from datetime import datetime
 from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
-from configparser import NoOptionError, RawConfigParser
+from configparser import NoOptionError, ConfigParser
 import threading
 # noinspection PyCompatibility
 import regex
@@ -15,8 +15,9 @@ import subprocess as sp
 import platform
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git, GitError
+    from _Git_Windows import git, GitError
 else:
+    # noinspection PyUnresolvedReferences
     from sh.contrib import git
 
 
@@ -31,12 +32,12 @@ if git_url[0:19] == "https://github.com/":
 
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%H%n%an%n%s', 'HEAD'],
+        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%h%n%H%n%an%n%s', 'HEAD'],
                                stderr=sp.STDOUT).decode('utf-8')
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
-    _, full_id, author, message = data.strip().split("\n")
-    return CommitInfo(id=full_id[:7], id_full=full_id, author=author, message=message)
+    _, abbrev_id, full_id, author, message = data.strip().split("\n")
+    return CommitInfo(id=abbrev_id, id_full=full_id, author=author, message=message)
 
 
 def git_ref():
@@ -44,7 +45,8 @@ def git_ref():
     return git_cp.stdout.decode("utf-8").strip()  # not on branch = empty output
 
 
-# We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
+# We don't need strip_escape_chars() anymore, see commit message
+# of 1931d30804a675df07887ce0466e558167feae57
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
@@ -125,6 +127,7 @@ class GlobalVars:
     standby_message = ""
     standby_mode = False
     no_se_activity_scan = False
+    no_deletion_watcher = False
 
     api_request_lock = threading.Lock()  # Get this lock before making API requests
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
@@ -161,7 +164,7 @@ class GlobalVars:
                 GlobalVars.PostScanStat.num_posts_scanned = 0
                 GlobalVars.PostScanStat.post_scan_time = 0
 
-    config_parser = RawConfigParser()
+    config_parser = ConfigParser(interpolation=None)
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
         config_parser.read('config')
@@ -174,6 +177,17 @@ class GlobalVars:
     post_site_id_to_question = {}
 
     location = config.get("location", "Continuous Integration")
+
+    # DNS Configuration
+    # Configure resolver based on config options, or System, configure DNS Cache in
+    # thread-safe cache as part of dnspython's resolver system as init options,
+    # control cleanup interval based on **TIME** like a regular DNS server does.
+    #
+    # # Explicitly defining fallback= for fallback values in bool and float getters, in order to
+    # #    avoid IDE complaints -- tward
+    dns_nameservers = config.get("dns_resolver", "system").lower()
+    dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
+    dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
     class MSStatus:
         """ Tracking metasmoke status """
@@ -248,6 +262,7 @@ class GlobalVars:
 
     github_username = config.get("github_username")
     github_password = config.get("github_password")
+    github_access_token = config.get("github_access_token")
 
     perspective_key = config.get("perspective_key")
 
@@ -257,6 +272,25 @@ class GlobalVars:
     # Miscellaneous
     log_time_format = config.get("log_time_format", "%H:%M:%S")
 
+    # Blacklist privileged users from config
+    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(",")
+    mse_blacklisters = regex.sub(r"[^\d,]", "", config.get("mse_blacklisters", "")).split(",")
+    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(",")
+
+    # Create a set of blacklisters equivalent to what's used in code_privileged_users.
+    config_blacklisters = set()
+    for id in se_blacklisters:
+        if id:
+            config_blacklisters.add(("stackexchange.com", int(id)))
+
+    for id in mse_blacklisters:
+        if id:
+            config_blacklisters.add(("meta.stackexchange.com", int(id)))
+
+    for id in so_blacklisters:
+        if id:
+            config_blacklisters.add(("stackoverflow.com", int(id)))
+
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
     bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
@@ -265,15 +299,15 @@ class GlobalVars:
 
     valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 
-    @staticmethod
-    def reload():
-        GlobalVars.commit = commit = git_commit_info()
+    @classmethod
+    def reload(cls):
+        cls.commit = commit = git_commit_info()
 
-        GlobalVars.commit_with_author = "`{}` ({}: {})".format(
+        cls.commit_with_author = "`{}` ({}: {})".format(
             commit.id, commit.author, commit.message)
 
         # We don't want to escape `[` and `]` when they are within code.
-        split_commit_with_author = GlobalVars.commit_with_author.split('`')
+        split_commit_with_author = cls.commit_with_author.split('`')
         split_length = len(split_commit_with_author)
         for index in range(0, split_length, 2):
             split_commit_with_author[index] = split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
@@ -282,32 +316,32 @@ class GlobalVars:
         if not split_length % 2:
             split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
 
-        GlobalVars.commit_with_author_escaped = '`'.join(split_commit_with_author)
+        cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
-        GlobalVars.on_branch = git_ref()
-        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-            GlobalVars.commit.id, GlobalVars.location, platform.python_version())
-        GlobalVars.s_reverted = \
+        cls.on_branch = git_ref()
+        cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
+            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+            cls.commit.id, cls.location, platform.python_version())
+        cls.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart_blacklists = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.s_norestart_blacklists = \
             "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart_findspam = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.s_norestart_findspam = \
             "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.standby_message = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
 
 
 GlobalVars.PostScanStat.reset_stat()

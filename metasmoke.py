@@ -25,17 +25,19 @@ import spamhandling
 import classes
 import chatcommunicate
 from helpers import log, exit_mode, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_modules
+    only_modules_changed, blacklist_integrity_check, reload_modules, log_exception
 from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
 import metasmoke_cache
 
 
-MAX_MS_WEBSOCKET_RETRIES = 5
+MS_WEBSOCKET_LONG_INTERVAL = 60
+MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL = 5
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
-NO_ACTIVITY_PINGS_TO_STANDBY = 8
-NO_ACTIVITY_PINGS_TO_REPORT = 4
+NO_ACTIVITY_PINGS_TO_REBOOT = 4
+NO_ACTIVITY_PINGS_TO_STANDBY = 5  # This is effectively disabled
+NO_ACTIVITY_PINGS_TO_REPORT = 3
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -66,10 +68,10 @@ class Metasmoke:
                GlobalVars.MSStatus.is_up() and current_auto:
                 log("warning", "Last {} connection(s) to metasmoke failed".format(current_counter) +
                                " Setting metasmoke status to down.")
-                chatcommunicate.tell_rooms_with("debug", "**Warning**. {}: ".format(GlobalVars.location) +
+                chatcommunicate.tell_rooms_with("debug", "**Warning**: {}: ".format(GlobalVars.location) +
                                                          "Last {} connection(s) to metasmoke".format(current_counter) +
                                                          " failed. Setting metasmoke status to **down**.")
-                Metasmoke.set_ms_down()
+                Metasmoke.set_ms_down(tell=False)
 
         @staticmethod
         def ping_succeeded():
@@ -88,10 +90,10 @@ class Metasmoke:
                 # Why use warning? Because some action may be needed if people don't think metasmoke is up.
                 log("warning", "Last {} connection(s) to metasmoke succeeded".format(current_counter) +
                                " Setting metasmoke status to up.")
-                chatcommunicate.tell_rooms_with("debug", "**Notice**. {}: ".format(GlobalVars.location) +
+                chatcommunicate.tell_rooms_with("debug", "**Notice**: {}: ".format(GlobalVars.location) +
                                                          "Last {} connection(s) to metasmoke".format(current_counter) +
                                                          " succeeded. Setting metasmoke status to **up**.")
-                Metasmoke.set_ms_up()
+                Metasmoke.set_ms_up(tell=False)
 
         @staticmethod
         def enable_autoswitch(to_enable):
@@ -121,29 +123,31 @@ class Metasmoke:
                 Metasmoke.AutoSwitch.autoswitch_is_on = True
 
     @staticmethod
-    def set_ms_up():
+    def set_ms_up(tell=True):
         """ Switch metasmoke status to up """
-        ms_up_msg = ""
+        # We must first set metasmoke to up, then say that metasmoke is up, not the other way around.
+        ms_msg = ""
         if GlobalVars.MSStatus.is_down():
-            ms_up_msg = "Metasmoke status is now set to up."
+            ms_msg = "Metasmoke status: set to up."
             GlobalVars.MSStatus.set_up()
 
-        # We must first set metasmoke to up, then say that metasmoke is up, not the other way around.
-        if ms_up_msg:
-            log("info", ms_up_msg)
-            chatcommunicate.tell_rooms_with("debug", ms_up_msg)
+        if ms_msg:
+            log("info", ms_msg)
+            if tell:
+                chatcommunicate.tell_rooms_with("debug", "{}: {}".format(GlobalVars.location, ms_msg))
 
     @staticmethod
-    def set_ms_down():
+    def set_ms_down(tell=True):
         """ Switch metasmoke status to down """
-        ms_down_msg = ""
+        ms_msg = ""
         if GlobalVars.MSStatus.is_up():
-            ms_down_msg = "Metasmoke status is now set to down."
+            ms_msg = "Metasmoke status: set to down."
             GlobalVars.MSStatus.set_down()
 
-        if ms_down_msg:
-            log("info", ms_down_msg)
-            chatcommunicate.tell_rooms_with("debug", ms_down_msg)
+        if ms_msg:
+            log("info", ms_msg)
+            if tell:
+                chatcommunicate.tell_rooms_with("debug", "{}: {}".format(GlobalVars.location, ms_msg))
 
     @staticmethod
     def connect_websocket():
@@ -169,24 +173,26 @@ class Metasmoke:
                         data = json.loads(a)
                         Metasmoke.handle_websocket_data(data)
                         GlobalVars.MSStatus.succeeded()
+                        failed_connection_attempts = 0
                     except ConnectionError:
                         raise
                     except Exception as e:
-                        Metasmoke.connect_websocket()
+                        log('error', '{}: {}'.format(type(e).__name__, e))
+                        log_exception(*sys.exc_info())
                         GlobalVars.MSStatus.failed()
-                        log('error', e, f=True)
-                        traceback.print_exc()
+                        Metasmoke.connect_websocket()
             except Exception:
                 GlobalVars.MSStatus.failed()
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     failed_connection_attempts += 1
-                    if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
-                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket." +
-                                                        "  Manual `!!/reboot` is required once MS is up")
-                        log('warning', "Cannot initiate MS websocket." +
-                            " init_websocket() in metasmoke.py is terminating.")
-                        break
+                    if failed_connection_attempts == MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket."
+                                                                 " Continuing to retry at longer intervals.")
+                        log('warning', "Cannot initiate MS websocket."
+                                       " Continuing to retry at longer intervals.")
+                    if failed_connection_attempts >= MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
+                        time.sleep(MS_WEBSOCKET_LONG_INTERVAL)
                     else:
                         # Wait and hopefully network issues will be solved
                         time.sleep(10)
@@ -205,7 +211,17 @@ class Metasmoke:
             return
 
         if "message" in message:
-            chatcommunicate.tell_rooms_with("metasmoke", message['message'])
+            # Temporarily allow this to be handled by the MS relay instance
+            return
+            from_ms = message['message']
+            if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
+                                   " continuous-integration/travis-ci/push")):
+                from_ms = from_ms.replace(": ",
+                                          ", or the [SD wiki](//git.io/vyDZv)"
+                                          " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
+            # Use protocol-relative links
+            from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)
+            chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "autoflag_fp" in message:
             event = message["autoflag_fp"]
 
@@ -301,7 +317,7 @@ class Metasmoke:
                 metasmoke_cache.MetasmokeCache.delete('whitelisted-domains')
 
     @staticmethod
-    def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
+    def send_stats_on_post(title, link, reasons, body, markdown, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
@@ -316,8 +332,8 @@ class Metasmoke:
             if len(why) > 4096:
                 why = why[:2048] + ' ... ' + why[-2043:]  # Basic maths
 
-            post = {'title': title, 'link': link, 'reasons': reasons,
-                    'body': body, 'username': username, 'user_link': user_link,
+            post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'markdown': markdown,
+                    'username': username, 'user_link': user_link,
                     'why': why, 'user_reputation': owner_rep, 'score': post_score,
                     'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
@@ -561,7 +577,7 @@ class Metasmoke:
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
-        if not GlobalVars.metasmoke_key:
+        if not GlobalVars.metasmoke_key or not GlobalVars.metasmoke_host or GlobalVars.MSStatus.is_down():
             return None
 
         payload = {
@@ -572,6 +588,13 @@ class Metasmoke:
         try:
             response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
         except AttributeError:
+            return None
+        except Exception as e:
+            log('error', '{}: {}'.format(type(e).__name__, e))
+            log_exception(*sys.exc_info())
+            exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
+            chatcommunicate.tell_rooms_with("debug", "{}: In getting MS post information, recovered from `{}`"
+                                                     .format(GlobalVars.location, exception_only))
             return None
 
         return response['items']
@@ -632,23 +655,30 @@ class Metasmoke:
 
     @staticmethod
     def send_status_ping_and_verify_scanning_if_active():
+        def reboot_or_standby(action):
+            error_message = "There's been no scan activity for {} status pings. Going to {}." \
+                            .format(Metasmoke.status_pings_since_scan_activity, action)
+            log('error', error_message)
+            chatcommunicate.tell_rooms_with("debug", error_message)
+            if action == "standby":
+                GlobalVars.standby_mode = True
+            # Let MS know immediately, to lessen potential wait time (e.g. if we fail to reboot).
+            Metasmoke.send_status_ping()
+            time.sleep(8)
+            exit_mode(action)
+
         in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
         if not in_standby_mode:
             # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
             if GlobalVars.PostScanStat.get_stat() == Metasmoke.scan_stat_snapshot:
                 # There's been no actvity since the last ping.
                 Metasmoke.status_pings_since_scan_activity += 1
-                if Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_STANDBY:
+                if Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REBOOT:
                     # Assume something is very wrong. Report to debug rooms and go into standby mode.
-                    error_message = "There's been no scan activity for {} status pings. Going into standby." \
-                                    .format(Metasmoke.status_pings_since_scan_activity)
-                    log('error', error_message)
-                    chatcommunicate.tell_rooms_with("debug", error_message)
-                    GlobalVars.standby_mode = True
-                    # Let MS know immediately, to lessen potential wait time (e.g. if we fail to reboot).
-                    Metasmoke.send_status_ping()
-                    time.sleep(8)
-                    exit_mode("standby")
+                    reboot_or_standby("reboot")
+                elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_STANDBY:
+                    # Assume something is very wrong. Report to debug rooms and go into standby mode.
+                    reboot_or_standby("standby")
                 elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REPORT:
                     # Something might be wrong. Let people in debug rooms know.
                     status_message = "There's been no scan activity for {} status pings. There may be a problem." \

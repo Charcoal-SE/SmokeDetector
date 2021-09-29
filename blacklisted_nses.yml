@@ -8,6 +8,12 @@ items:
   - ns1.md-99.bigrockservers.com.
   - ns2.md-99.bigrockservers.com.
 - ns:
+  - adrian.ns.cloudflare.com.
+  - ben.ns.cloudflare.com.
+- ns:
+  - adrian.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
@@ -17,14 +23,23 @@ items:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
+  - bart.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
   - braden.ns.cloudflare.com.
   - georgia.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - boyd.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
+- ns:
+  - candy.ns.cloudflare.com.
+  - karl.ns.cloudflare.com.
 - ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
@@ -34,6 +49,9 @@ items:
 - ns:
   - clark.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
+- ns:
+  - dawn.ns.cloudflare.com.
+  - dimitris.ns.cloudflare.com.
 - ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
@@ -47,12 +65,29 @@ items:
   - lee.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
+  - linda.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
+- ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - maria.ns.cloudflare.com.
+  - sri.ns.cloudflare.com.
+- ns:
+  - ned.ns.cloudflare.com.
+  - paris.ns.cloudflare.com.
+- ns:
+  - noah.ns.cloudflare.com.
+  - ophelia.ns.cloudflare.com.
+- ns:
+  - stan.ns.cloudflare.com.
+  - vera.ns.cloudflare.com.
+- ns:
   - terin.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
-- ns: 247support-number.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: 247support-number.com.
 - ns: promoocodes.com.
 - ns: myassignmenthelp.co.uk.
 - ns: socialmonkee.com.
@@ -74,6 +109,17 @@ items:
 - ns: pakihosting.com.
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
-- ns: my-wifiextnet.net.
+- comment: no longer in DNS 2020-12-30
+  disable: true
+  ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
+- comment: NXDOMAIN 2021-03-13
+  disable: true
+  ns: c67050.sgvps.net.
+- ns: dnschamp.com.
+- ns: hostblast.net.
+- ns: cetpainfotech.com.
+- ns: mycyberhosting.com.
+- ns: thesecurededicatedserver.com.
+- ns: cloudnstools.com.

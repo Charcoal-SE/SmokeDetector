@@ -1,7 +1,6 @@
 # coding=utf-8
 import json
 import os.path
-import pickle
 import requests
 import time
 import threading
@@ -19,11 +18,16 @@ from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
 
 
+PICKLE_FILENAME = "deletionIDs.p"
+
+
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
 class DeletionWatcher:
     next_request_time = time.time() - 1
 
     def __init__(self):
+        if GlobalVars.no_deletion_watcher:
+            return
         DeletionWatcher.update_site_id_list()
         self.posts = {}
 
@@ -33,12 +37,11 @@ class DeletionWatcher:
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
 
-        if os.path.exists("deletionIDs.p"):
-            with open("deletionIDs.p", "rb") as fh:
-                for post in DeletionWatcher._check_batch(pickle.load(fh)):
-                    self.subscribe(post, pickle=False)
-
-                self._save()
+        if datahandling.has_pickle(PICKLE_FILENAME):
+            pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
+            for post in DeletionWatcher._check_batch(pickle_data):
+                self.subscribe(post, pickle=False)
+            self._save()
 
         threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
 
@@ -71,6 +74,8 @@ class DeletionWatcher:
                             pass
 
     def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
+        if GlobalVars.no_deletion_watcher:
+            return
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
@@ -113,8 +118,7 @@ class DeletionWatcher:
             else:
                 pickle_output[post_site].append(post_id)
 
-        with open("deletionIDs.p", "wb") as pickle_file:
-            pickle.dump(pickle_output, pickle_file)
+        datahandling.dump_pickle(PICKLE_FILENAME, pickle_output)
 
     @staticmethod
     def _check_batch(saved):
@@ -151,6 +155,8 @@ class DeletionWatcher:
 
     @staticmethod
     def update_site_id_list():
+        if GlobalVars.no_deletion_watcher:
+            return
         soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
                              "html.parser")
         site_id_dict = {}

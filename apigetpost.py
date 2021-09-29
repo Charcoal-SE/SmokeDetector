@@ -17,6 +17,7 @@ class PostData:
         self.owner_rep = None
         self.title = None
         self.body = None
+        self.body_markdown = None
         self.score = None
         self.up_vote_count = None
         self.down_vote_count = None
@@ -30,6 +31,7 @@ class PostData:
         dictdata = {
             'title': self.title,
             'body': self.body,
+            'body_markdown': self.body_markdown,
             'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
             'site': self.site,
             'question_id': self.post_id,
@@ -62,10 +64,11 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
     if post_type == "answer":
-        api_filter = r"!FdmhxNRjn0vYtGOu3FfS5xSwvL"
+        api_filter = r"!4z6S)cPO)zvpuDWsWTAUW(kaV6K6thsqi1tlYa"
+    elif post_type == "question":
+        api_filter = r"!m)9.UaQrI5-DZXtlTpWhv2HroYRgS3dPhv.2vxV7fpGT*27rEHM.BKV1"
     else:
-        assert post_type == "question"
-        api_filter = r"!DEPw4-PqDduRmCwMBNAxrCdSZl81364qitC3TebCzqyF4-y*r2L"
+        raise ValueError("Unknown post type: {}".format(post_type))
 
     request_url = "https://api.stackexchange.com/2.2/{}s/{}".format(post_type, post_id)
     params = {
@@ -98,6 +101,7 @@ def api_get_post(post_url):
         post_data.owner_rep = 1
     post_data.site = site
     post_data.body = item['body']
+    post_data.body_markdown = item['body_markdown']
     post_data.score = item['score']
     post_data.up_vote_count = item['up_vote_count']
     post_data.down_vote_count = item['down_vote_count']

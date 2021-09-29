@@ -27,6 +27,8 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     ('http://codegolf.stackexchange.com/users/9275', get_user_from_url, ('9275', 'codegolf.stackexchange.com')),
     ('https://codegolf.stackexchange.com/users/9275/', get_user_from_url, ('9275', 'codegolf.stackexchange.com')),
     ('//stackoverflow.com/users/1/jeff-atwood', get_user_from_url, ('1', 'stackoverflow.com')),
+    (None, get_user_from_url, None),
+    ('Some text without a URL in it', get_user_from_url, None),
     ('https://stackoverflow.com/users/0/test', get_user_from_list_command, ('0', 'stackoverflow.com')),
     ('https://codegolf.stackexchange.com/users/9275/programfox', get_user_from_list_command, ('9275', 'codegolf.stackexchange.com')),
     ('https://mathoverflow.net/users/66/ben-webster', get_user_from_list_command, ('66', 'mathoverflow.net')),
@@ -112,7 +114,10 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     (test_data_inputs[16], fetch_owner_url_from_msg_content, '//drupal.stackexchange.com/u/73447')
 ])
 def test_parsing(input_data, parse_method, expected):
-    assert parse_method(input_data.strip()) == expected
+    if isinstance(input_data, str):
+        assert parse_method(input_data.strip()) == expected
+    else:
+        assert parse_method(input_data) == expected
 
 
 # noinspection PyMissingTypeHints

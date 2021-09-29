@@ -17,3 +17,22 @@ location=location_here
 # git_useremail=smokey@erwaysoftware.com
 # github_username=username@domain.com
 # github_password=p@55w0rd
+# github_access_token=some_token
+
+# Perspective API key
+# perspective_key=some_key
+
+# Manually add blacklist privileged users (primarily for testing):
+# se_blacklisters=<comma separated list of user IDs on chat.stackexchange>
+# mse_blacklisters=<comma separated list of user IDs on meta.chat.stackexchange>
+# so_blacklisters=<comma separated list of user IDs on chat.stackoverflow>
+
+# DNS settings can be adjusted here. This contains DNS cache functionality to enable/disable
+# the DNS cache, or to tweak the DNS cache rules.  This also controls which DNS resolver to use.
+# For dns_resolver, 'system' is the default, use a comma separated list of IPs if you want other
+# DNS resolvers for the DNS functions.
+# For dns_cache_enabled, 'True' is the default, use 'False' to disable DNS Caching
+# For dns_cache_cleanup_interval, default is 300.0 (5 minutes), but this is a Float value.
+dns_resolver=system
+dns_cache_enabled=True
+dns_cache_cleanup_interval=300.0

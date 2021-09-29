@@ -2,7 +2,7 @@ New contributors are always welcome to Charcoal projects. Contributions to Charc
 code contributions. You could also:
 
  - write documentation
- - [feed back](https://charcoal-se.org/smokey/Feedback-Guidance) on spam detections in
+ - give [feedback](https://charcoal-se.org/smokey/Feedback-Guidance) on spam detections in
    [Charcoal HQ](https://chat.stackexchange.com/rooms/11540)
  - [review](https://metasmoke.erwaysoftware.com/review/posts) old spam detections
  - help [maintain our blacklists](https://charcoal-se.org/smokey/Privileges#code-admin-aka-blacklister-ms)
@@ -22,3 +22,12 @@ able to contribute to more easily:
  - we have a bunch of [userscripts](https://github.com/Charcoal-SE/userscripts) that we use - those are in JavaScript
  
 TL;DR: If you'd like to help out with Charcoal, drop into chat and we'll be able to find you something to do.
+
+**If you are making a pull request for code changes** you must adhere to specific guidelines.  Please refer to the 
+`CONTRIBUTING_PULLREQS.md` file for details on what we require in pull requests for code changes to properly review the request. Pull 
+requests without these requirements may be rejected or require additional information from the original filer until we get details about 
+the request
+
+**If you believe you have found a security flaw**, then report the flaw to security@charcoal-se.org with details of what you believe the 
+flaw is and how you came to the conclusion.  **DO NOT** share any issues that are potentially security vulnerabilitites as public issues 
+or through public unsecure mediums.

@@ -25,7 +25,7 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import (_load_pickle, PICKLE_STORAGE, load_files,
+from datahandling import (load_pickle, PICKLE_STORAGE, load_files,
                           filter_auto_ignored_posts, actually_add_queue_timings_data)
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
@@ -33,6 +33,7 @@ from deletionwatcher import DeletionWatcher
 import json
 import time
 import requests
+import dns.resolver
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 from helpers import exit_mode, log, Helpers, log_exception
@@ -43,6 +44,9 @@ import chatcommands
 
 
 MAX_SE_WEBSOCKET_RETRIES = 5
+MIN_PYTHON_VERSION = (3, 5, 0)
+RECOMMENDED_PYTHON_VERSION = (3, 6, 0)
+THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
 
 if os.path.isfile("plugin.py"):
     try:
@@ -70,15 +74,17 @@ else:
     Helpers.min_log_level = 0
 
 # Python 3.5.0 is the bare minimum needed to run SmokeDetector
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
-    raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
+if THIS_PYTHON_VERSION < MIN_PYTHON_VERSION:
+    msg = "SmokeDetector requires Python version {0}.{1}.{2} or newer to run.".format(*MIN_PYTHON_VERSION)
+    raise RuntimeError(msg)
 
-# However, we're considering the potential to deprecate 3.5 so we need to prepare
-# from this with a warning in the logs about it.
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 6, 0):
-    log('warning', 'SmokeDetector may remove support for versions of Python before '
-                   '3.6.0 in the future, please consider upgrading your instances of '
-                   'SmokeDetector to use Python 3.6 or newer.')
+# However, 3.5 is already deprecated so we need to prepare for this
+# with a warning in the logs about it.
+if THIS_PYTHON_VERSION < RECOMMENDED_PYTHON_VERSION:
+    msg = 'SmokeDetector may remove support for versions of Python before ' \
+          '{0}.{1}.{2} in the future, please consider upgrading your instances of ' \
+          'SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*RECOMMENDED_PYTHON_VERSION)
+    log('warning', msg)
 
 if not GlobalVars.metasmoke_host:
     log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
@@ -90,6 +96,19 @@ if not GlobalVars.metasmoke_ws_host:
 
 # Register actually_add_queue_timings_data hook
 atexit.register(actually_add_queue_timings_data)
+
+# Initiate DNS
+#
+# Based on additional research, at this point in the code *nothing* has done anything from a
+# DNS or network resolution perspective - not for WebSockets nor for dnspython and the
+# default resolver in it.  Since this activates and initializes the DNS *long* before
+# the chat or metasmoke websockets have been initiated, this is a 'safe space' to
+# begin initialization of the DNS data.
+if GlobalVars.dns_nameservers != 'system':
+    dns.resolver.get_default_resolver().nameservers = GlobalVars.config.dns_nameservers.split(',')
+
+if GlobalVars.dns_cache_enabled:
+    dns.resolver.get_default_resolver().cache = dns.resolver.Cache(GlobalVars.dns_cache_interval)
 
 
 # noinspection PyProtectedMember
@@ -107,7 +126,7 @@ def load_ms_cache_data():
     :returns: None
     """
     if os.path.isfile(os.path.join(PICKLE_STORAGE, 'metasmokeCacheData.p')):
-        data = _load_pickle('metasmokeCacheData.p')
+        data = load_pickle('metasmokeCacheData.p')
         MetasmokeCache._cache = data['cache']
         MetasmokeCache._expiries = data['expiries']
 
@@ -118,32 +137,27 @@ Tasks.later(restart_automatically, after=21600)
 try:
     update_tld_names()
 except TldIOError as ioerr:
-    with open('errorLogs.txt', 'a', encoding="utf-8") as errlogs:
-        if "permission denied:" in str(ioerr).lower():
-            if "/usr/local/lib/python" in str(ioerr) and "/dist-packages/" in str(ioerr):
-                errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
-                              "user-level installed.  Skipping TLD names update. \n")
+    # That we were unable to update the TLD names isn't actually a fatal error, so just log it and continue.
+    strerror = str(ioerr)
+    if "permission denied:" in strerror.lower():
+        if "/usr/local/lib/python" in strerror and "/dist-packages/" in strerror:
+            err_msg = "WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not " \
+                      "user-level installed.  Skipping TLD names update. \n"
 
-            if "/home/" in str(ioerr) and ".local/lib/python" in str(ioerr) and "/site-packages/tld/" in str(ioerr):
-                errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
-                              "path.  Skipping TLD names update. \n")
-
-            errlogs.close()
-            pass
-
-        elif "certificate verify failed" in str(ioerr).lower():
-            # Ran into this error in testing on Windows, best to throw a warn if we get this...
-            errlogs.write("WARNING: Cannot verify SSL connection for TLD names update; skipping TLD names update.")
-            errlogs.close()
-            pass
+        if "/home/" in strerror and ".local/lib/python" in strerror and "/site-packages/tld/" in strerror:
+            err_msg = "WARNING: Cannot read/write to user-space `tld` installation, check permissions on the " \
+                      "path.  Skipping TLD names update. \n"
 
         else:
-            # That we were unable to update the TLD names isn't actually a fatal error, so just log it and continue.
-            error_text = str(ioerr)
-            errlogs.write("WARNING: {}".format(error_text))
-            errlogs.close()
-            log('warning', error_text)
-            pass
+            err_msg = strerror
+
+    elif "certificate verify failed" in strerror.lower():
+        # Ran into this error in testing on Windows, best to throw a warn if we get this...
+        err_msg = "WARNING: Cannot verify SSL connection for TLD names update; skipping TLD names update."
+
+    else:
+        err_msg = strerror
+    log_exception(type(ioerr), ioerr, err_msg, True, level="warning")
 
 if "ChatExchangeU" in os.environ:
     log('debug', "ChatExchange username loaded from environment")
@@ -177,6 +191,7 @@ filter_auto_ignored_posts()
 
 GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
+GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
@@ -210,7 +225,7 @@ def setup_websocket(attempt, max_attempts):
         ws.send("155-questions-active")
         return ws
     except websocket.WebSocketException:
-        log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
+        log('warning', 'WS failed to create SE websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
 
 
@@ -233,7 +248,8 @@ def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
     return ws
 
 
-ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
+if not GlobalVars.no_se_activity_scan:
+    ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
@@ -279,9 +295,11 @@ while not GlobalVars.no_se_activity_scan:
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             exit_mode("early_exception")
-        ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
+        if not GlobalVars.no_se_activity_scan:
+            ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
 
-        chatcommunicate.tell_rooms_with("debug", "Recovered from `" + exception_only + "`")
+        chatcommunicate.tell_rooms_with("debug", "{}: SE WebSocket: recovered from `{}`"
+                                                 .format(GlobalVars.location, exception_only))
 
 while GlobalVars.no_se_activity_scan:
     # Sleep for longer than the automatic restart

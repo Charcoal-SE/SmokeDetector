@@ -131,8 +131,8 @@ def handle_spam(post, reasons, why):
             username = post.user_name.strip()
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
-                 post.title_ignore_type, post_url, reasons, post.body, username,
-                 post.user_link, why, post.owner_rep, post.post_score,
+                 post.title_ignore_type, post_url, reasons, post.body, post.markdown,
+                 username, post.user_link, why, post.owner_rep, post.post_score,
                  post.up_vote_count, post.down_vote_count)
 
         offensive_mask = 'offensive title detected' in reasons
