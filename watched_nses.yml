@@ -1068,6 +1068,9 @@ items:
   - ns15.domaincontrol.com.
   - ns16.domaincontrol.com.
 - ns:
+  - ns21.domaincontrol.com.
+  - ns22.domaincontrol.com.
+- ns:
   - ns27.domaincontrol.com.
   - ns28.domaincontrol.com.
 - ns:
