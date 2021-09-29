@@ -499,6 +499,9 @@ items:
   - desi.ns.cloudflare.com.
   - terry.ns.cloudflare.com.
 - ns:
+  - destiny.ns.cloudflare.com.
+  - igor.ns.cloudflare.com.
+- ns:
   - dilbert.ns.cloudflare.com.
   - meg.ns.cloudflare.com.
 - ns:
