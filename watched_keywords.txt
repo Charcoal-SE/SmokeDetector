@@ -33305,3 +33305,4 @@
 1632918225	Spevacus	allinoneservicenumber\.com
 1632918239	Spevacus	apkreach\.com
 1632918271	Spevacus	uptodriver\.com
+1632918302	Spevacus	in-globalknowledge-jp\.qwiklabs\.com
