@@ -33342,3 +33342,4 @@
 1632997743	tripleee	bestmacuninstaller\.com
 1632998629	tripleee	(?-i:2op0VQr)(?# bit.ly)
 1632998651	tripleee	(?-i:3o5IAER)(?# bit.ly)
+1633001832	Jeff Schaller	tickarise\.com
