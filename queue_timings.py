@@ -12,7 +12,21 @@ import math
 
 def main():
     queue_data = {}
+    found_timing = False
+    if os.path.isfile("bodyfetcherQueueTimings.p"):
+        warnings.warn("Timing data in pickle format is deprecated; use the plain text format instead.",
+                      DeprecationWarning)
+        found_timing = True
+        try:
+            with open("bodyfetcherQueueTimings.p", "rb") as f:
+                queue_data = pickle.load(f)
+        except EOFError:
+            print("Hit EOFError while reading file. Smokey handles this by deleting the file.")
+            resp = input("Delete? (y/n)").lower()
+            if resp == "y":
+                os.remove("bodyfetcherQueueTimings.p")
     if os.path.isfile("bodyfetcherQueueTimings.txt"):
+        found_timing = True
         with open("bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8") as stat_file:
             for stat_line in stat_file:
                 time_str, site_str = stat_line.split(" ", 1)
@@ -22,20 +36,8 @@ def main():
                     queue_data[site].append(time_in_queue)
                 else:
                     queue_data[site] = [time_in_queue]
-    if os.path.isfile("bodyfetcherQueueTimings.p"):
-        warnings.warn("Timing data in pickle format is deprecated; use the plain text format instead.",
-                      DeprecationWarning)
-        try:
-            with open("bodyfetcherQueueTimings.p", "rb") as f:
-                pickle_queue_data = pickle.load(f)
-            for site in pickle_queue_data:
-                queue_data[site].extend(pickle_queue_data[site])
-        except EOFError:
-            print("Hit EOFError while reading file. Smokey handles this by deleting the file.")
-            resp = input("Delete? (y/n)").lower()
-            if resp == "y":
-                os.remove("bodyfetcherQueueTimings.p")
 
+    if found_timing:
         print("SITE,MIN,MAX,AVG,Q1,MEDIAN,Q3,STDDEV,COUNT,98P_MIN,98P_MAX")
         # noinspection PyUnboundLocalVariable
         for site, times in queue_data.items():
