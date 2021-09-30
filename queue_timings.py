@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding=utf-8
 # queue_timings.py
-# Analysis script for bodyfetcher queue timings. Call from the command line using Python 3.
+# Analysis script for bodyfetcher queue timings. Call from the command line using Python 3 in the pickles directory.
 
 import os.path
 # noinspection PyPep8Naming
