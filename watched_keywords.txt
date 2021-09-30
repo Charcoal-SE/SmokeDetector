@@ -33339,3 +33339,4 @@
 1632994518	tripleee	capterra\.com
 1632995983	tripleee	(?-i:CUO1_akIp2J)(?# instagram)
 1632996002	tripleee	(?-i:CUO2I6XIm-Z)(?# instagram)
+1632997743	tripleee	bestmacuninstaller\.com
