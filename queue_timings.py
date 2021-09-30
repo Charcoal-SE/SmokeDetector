@@ -29,8 +29,7 @@ def main():
         found_timing = True
         with open("bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8") as stat_file:
             for stat_line in stat_file:
-                time_str, site_str = stat_line.split(" ", 1)
-                site = site_str[:-1]
+                site, time_str = stat_line.split(" ", 1)
                 time_in_queue = float(time_str)
                 if site in queue_data:
                     queue_data[site].append(time_in_queue)
