@@ -33357,3 +33357,4 @@
 1633020631	Ollie	bizistech\.com
 1633022274	Ollie	(?-i:DotnetCoreWithAngular)(?# za.gl)
 1633031525	cigien	(?-i:LmveWnSdV7Q)(?#youtu.be)
+1633037123	cigien	lucata\.com
