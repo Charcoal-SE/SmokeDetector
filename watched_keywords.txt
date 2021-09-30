@@ -33325,3 +33325,4 @@
 1632955698	cigien	m3u8player\.lantianye3\.top
 1632961629	cigien	(?-i:Mg2GRyiitI0)(?#youtube)
 1632963805	cigien	fasttechhacker(?:@gmail\.com)?
+1632969238	cigien	bestnewsshop\.com
