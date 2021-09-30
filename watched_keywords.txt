@@ -33333,3 +33333,4 @@
 1632984179	tripleee	(?:Dr)?LiMengYan
 1632984299	tripleee	Guo(?<=#Guo)[\W_]*+Wengui
 1632985543	tripleee	easywordunscrambler\.com
+1632986540	tripleee	(?-i:^james dale$)
