@@ -21,6 +21,9 @@ from helpers import ErrorLogs, log, log_exception, redact_passwords
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
 
+queue_timings_data = list()
+FLUSH_TIMINGS_THRES = 128
+
 
 class Any:
     def __eq__(self, _):
@@ -122,8 +125,6 @@ def load_files():
         GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if has_pickle("bodyfetcherMaxIds.p"):
         GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
-    if has_pickle("bodyfetcherQueueTimings.p"):
-        GlobalVars.bodyfetcher.queue_timings = load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
     if has_pickle("codePrivileges.p"):
         GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
     if has_pickle("reasonWeights.p"):
@@ -357,8 +358,20 @@ def store_bodyfetcher_max_ids():
     dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
 
 
-def store_queue_timings():
-    dump_pickle("bodyfetcherQueueTimings.p", GlobalVars.bodyfetcher.queue_timings)
+def add_queue_timing_data(site, time_in_queue):
+    global queue_timings_data
+    queue_timings_data.append("{} {}".format(site, time_in_queue))
+    # time_in_queue comes first as it is an integer
+    # and hence won't contain any whitespace or trailing ones
+    if len(queue_timings_data) >= FLUSH_TIMINGS_THRES:
+        actually_add_queue_timings_data()
+        queue_timings_data = list()
+
+
+def actually_add_queue_timings_data():
+    # Use .txt for cross platform compatibility
+    with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+        stat_file.write("\n".join(queue_timings_data) + "\n")
 
 
 # methods that help avoiding reposting alerts:

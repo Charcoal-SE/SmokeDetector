@@ -30,6 +30,17 @@ def exit_mode(*args, code=0):
     with open("exit.txt", "w", encoding="utf-8") as f:
         print("\n".join(args), file=f)
     log('debug', 'Exiting with args: {}'.format(', '.join(args) or 'None'))
+
+    # Flush any buffered queue timing data
+    import datahandling  # this must not be a top-level import in order to avoid a circular import
+    datahandling.actually_add_queue_timings_data()
+
+    # We have to use '_exit' here, because 'sys.exit' only exits the current
+    # thread (not the current process).  Unfortunately, this results in
+    # 'atexit' handlers not being called. All exit calls in SmokeDetector go
+    # through this function, so any necessary cleanup can happen here (though
+    # keep in mind that this function isn't called when terminating due to a
+    # Ctrl-C or other signal).
     os._exit(code)
 
 
