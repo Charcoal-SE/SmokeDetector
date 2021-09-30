@@ -33329,3 +33329,4 @@
 1632975211	cigien	printerfield\.com
 1632978414	cigien	ubitrack\.com
 1632980952	tripleee	rosebodyspa\.com
+1632981015	tripleee	jack[\W_]*+studios
