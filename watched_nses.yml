@@ -910,6 +910,9 @@ items:
   - miki.ns.cloudflare.com.
 - ns:
   - lex.ns.cloudflare.com.
+  - mona.ns.cloudflare.com.
+- ns:
+  - lex.ns.cloudflare.com.
   - tori.ns.cloudflare.com.
 - ns:
   - lia.ns.cloudflare.com.
