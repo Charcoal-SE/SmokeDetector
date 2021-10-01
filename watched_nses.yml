@@ -714,6 +714,9 @@ items:
   - isla.ns.cloudflare.com.
   - jeremy.ns.cloudflare.com.
 - ns:
+  - isla.ns.cloudflare.com.
+  - quinton.ns.cloudflare.com.
+- ns:
   - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
