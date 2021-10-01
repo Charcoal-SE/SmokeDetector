@@ -33379,3 +33379,4 @@
 1633119884	Makyen	value[\W_]*+market[\W_]*+research(?!\.com(?<=valuemarketresearch\.com))
 1633124077	cigien	encodingcompiler\.com
 1633130335	cigien	crewdaily\.com
+1633130348	cigien	instant-eulicense\.com
