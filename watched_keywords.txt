@@ -33380,3 +33380,4 @@
 1633124077	cigien	encodingcompiler\.com
 1633130335	cigien	crewdaily\.com
 1633130348	cigien	instant-eulicense\.com
+1633130367	cigien	assistedexit\.com
