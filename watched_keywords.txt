@@ -33377,3 +33377,4 @@
 1633106610	cigien	kissflow\.com
 1633110987	Ollie	amazingcreationsblogs\.com
 1633119884	Makyen	value[\W_]*+market[\W_]*+research(?!\.com(?<=valuemarketresearch\.com))
+1633124077	cigien	encodingcompiler\.com
