@@ -33383,3 +33383,4 @@
 1633130367	cigien	assistedexit\.com
 1633141023	cigien	vamcommunity8(?:@gmail\.com)?
 1633148313	cigien	projuktiponno\.com
+1633157153	Mast	call[\W_]*+or[\W_]*+whats[\W_]*+app
