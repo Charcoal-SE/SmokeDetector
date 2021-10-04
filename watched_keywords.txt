@@ -33425,3 +33425,4 @@
 1633321864	cigien	cad24x7\.com
 1633324933	tripleee	(?-i:^Pooja Sharma$)
 1633325013	tripleee	hire[\W_]+(?:wordpress|react[\W_]*+js)[\W_]+dev(?:eloper)?s?
+1633326524	tripleee	maharanidesigner\.com
