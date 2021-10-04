@@ -30849,7 +30849,6 @@
 1625068018	cigien	credit[\W_]*+saint[\W_]*+specialist(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1625068121	cigien	vinpit\.com
 1625069049	cigien	kryptoworlds\.com
-1625069174	cigien	masterbundles\.com
 1625069705	cigien	timetocount\.com
 1625069721	cigien	atomchat\.com
 1625069745	cigien	worldcelebritynews\.com
