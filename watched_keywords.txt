@@ -28691,7 +28691,6 @@
 1618301061	Makyen	visas-hub\.com
 1618303429	Makyen	canna[\W_]*+organic[\W_]*+cbd(?:[\W_]*+(?:gummies|buy|price|review|\d++|[\da-f]{5,}+)s?)*
 1618306086	Makyen	tumeric[\W_]*+penis[\W_]*+growth
-1618311700	Jeff Schaller	prestigecity\.gen\.in
 1618316820	Spevacus	talkenglish\.com
 1618316847	Spevacus	hdfs\.msu\.edu
 1618318215	Spevacus	askmeflight\.com
