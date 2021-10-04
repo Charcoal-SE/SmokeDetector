@@ -33426,3 +33426,4 @@
 1633325013	tripleee	hire[\W_]+(?:wordpress|react[\W_]*+js)[\W_]+dev(?:eloper)?s?
 1633326524	tripleee	maharanidesigner\.com
 1633331210	tripleee	ammaruchis\.com
+1633341690	tripleee	digitalagencyreseller\.com
