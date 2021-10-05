@@ -14778,7 +14778,6 @@
 1575990785	Machavity	earning\W*money\W*part\W*time\W*online
 1575992119	Machavity	cnswebtechnologies\.com
 1575993656	Machavity	smartseoagency\.aircus\.com
-1575998216	Machavity	M\W*O\W*R\W*G\W*A\W*N\W*J\W*I\W*M\W*C\W*R\W*Y\W*P\W*T\W*O\W*N\W*A\W*R\W*Y\W*@\W*G\W*M\W*A\W*I\W*L\W*\.\W*C\W*O\W*M
 1576002830	Machavity	pkmkb
 1576003056	Machavity	movies2kstream\.info
 1576009908	Makyen	greatowen(?<=@greatowen)
