@@ -170,6 +170,9 @@ items:
   - michelle.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
+  - nelly.ns.cloudflare.com.
+- ns:
+  - apollo.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
