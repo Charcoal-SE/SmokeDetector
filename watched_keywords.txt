@@ -33460,3 +33460,4 @@
 1633411402	cigien	jawliner\.us
 1633411669	cigien	bizzeonline\.com
 1633411890	cigien	bizzeonline(?!\.com)
+1633412358	Ryan M	ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
