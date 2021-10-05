@@ -11883,7 +11883,6 @@
 1566097589	Makyen	dr\W*okosun
 1566097746	Makyen	drakuzaodiagbe01(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1566101378	Makyen	uniquelunarseer(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
-1566103247	Makyen	morganjimcryptonary(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1566107576	Makyen	adixbathfittings\.com
 1566141361	Makyen	flexuline-93\.webself\.net
 1566141404	Makyen	dr\W*sangare
