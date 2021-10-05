@@ -33463,3 +33463,4 @@
 1633412358	Ryan M	ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
 1633415678	tripleee	(?-i:UiWjet8DBjk)(?# youtube)
 1633417756	tripleee	(?-i:KBvNpl)(?# fiverr)
+1633417849	tripleee	polo[\W_]*+organic[\W_]*+cow[\W_]*+farm
