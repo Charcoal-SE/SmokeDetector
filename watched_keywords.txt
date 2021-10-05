@@ -33466,3 +33466,4 @@
 1633417849	tripleee	polo[\W_]*+organic[\W_]*+cow[\W_]*+farm
 1633423680	tripleee	blockcube\.co
 1633423843	tripleee	dol\.vn
+1633423890	tripleee	printersinflorida\.com
