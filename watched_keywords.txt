@@ -33480,3 +33480,4 @@
 1633432965	tripleee	icantcu\.com
 1633433455	Makyen	medtel\.io
 1633434098	Ryan M	stradivari[\W_]*+strings(?!\.com(?<=stradivaristrings\.com))
+1633439051	Spevacus	critterfamilylove(?:@gmail\.com)?
