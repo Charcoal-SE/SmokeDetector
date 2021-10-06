@@ -521,3 +521,4 @@ williamriver
 (?-i:^Sophia Grace$)
 (?-i:^rahul argalon$)
 (?-i:^Reach360 Digital$)
+(?-i:^ruby dav$)
