@@ -33500,3 +33500,4 @@
 1633501635	tripleee	(?-i:^ruby dav$)
 1633502026	tripleee	sharemarketprofile\.com
 1633502040	tripleee	sharemarketprofile(?!\.com)
+1633503303	tripleee	sanjosetruckingcompany\.com
