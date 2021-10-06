@@ -32112,7 +32112,6 @@
 1629188739	tripleee	netf9\.com
 1629189695	tripleee	nail[\W_]*+(?:art[\W]*+)?(?:institute|course)s?
 1629189715	tripleee	vioz[\W_]*+academy
-1629190505	tripleee	aothethaothietke\.com
 1629193668	tripleee	asiaheavens\.com
 1629195258	tripleee	irontshirt\.com
 1629195728	tripleee	(?-i:^Soumya Ranjan$)
