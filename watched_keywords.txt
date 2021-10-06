@@ -33497,7 +33497,7 @@
 1633502040	tripleee	sharemarketprofile(?!\.com)
 1633503303	tripleee	sanjosetruckingcompany\.com
 1633505308	tripleee	dukcontainerpools\.com
-1633505609	tripleee	dukcontainerpools\d*(?:@gmail\.com)?
+1633505609	tripleee	dukcontainerpools(?!\.com)\d*(?:@gmail\.com)?
 1633506642	tripleee	deyorcamps\.com
 1633506695	tripleee	jewelsintime\.com
 1633515407	tripleee	zopiclonebuy\.com
