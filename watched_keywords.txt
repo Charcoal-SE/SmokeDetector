@@ -29372,7 +29372,6 @@
 1620583581	cigien	fox24\.io
 1620583911	cigien	spokanekitchenremodel\.com
 1620594407	Makyen	fitnessrecumbentbike\.com
-1620614511	Makyen	fraudoll\.com
 1620616600	Makyen	w888\.com\.vn
 1620616621	Makyen	w888[\W_]*+comvn
 1620616639	Makyen	9785458720115
