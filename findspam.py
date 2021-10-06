@@ -334,6 +334,9 @@ TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 #   when using the regex package's overlapped=True option. In order to get all different possible lengths,
 #   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
 #   interested and then combine the results.
+#   In order to make it more efficient, we combine those into a single regular expression using lookaheads and
+#   capture groups, which will put all of the different possibilites into capture groups, along with empty strings
+#   for each length which didn't match.
 # The use of separate Unicode and ASCII flagged versions of the regexes is also because they can result in different
 #   start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
 #   NUMBER_REGEX_START, and NUMBER_REGEX_END in order to not have a separate source for a combined regex. This
@@ -355,16 +358,23 @@ def get_number_regex_with_quantfier(quantifier):
     return NUMBER_REGEX_START_TEXT + NUMBER_REGEX_MIDDLE_TEXT.format(quantifier) + NUMBER_REGEX_END_TEXT
 
 
-for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
-    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), flags=regex.ASCII))
-    NUMBER_REGEXES.append(regex.compile(get_number_regex_with_quantfier(number_regex_length), flags=regex.UNICODE))
-# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected
-#   by the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
 NUMBER_REGEX_RANGE_TEXT = "{},{}".format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH)
 NUMBER_REGEXTEXT_WITH_RANGE = get_number_regex_with_quantfier(NUMBER_REGEX_RANGE_TEXT)
+# Starting the regex with a pattern for the entire range limits the rest of the overall regex to only being tested
+# on characters where there's going to be a match.
+NUMBER_REGEX_TEXT = r'(?={})'.format(NUMBER_REGEXTEXT_WITH_RANGE)
+
+for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
+    # These lookaheads all have an empty pattern as a second option. This causes all of them to
+    # always match, which results in the capture group having the capture and not causing evaluation
+    # of the regex to stop.
+    NUMBER_REGEX_TEXT += r'(?=({})|)'.format(get_number_regex_with_quantfier(number_regex_length))
+
+# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected
+#   by the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
 NUMBER_REGEX = {
-    'unicode': regex.compile(NUMBER_REGEXTEXT_WITH_RANGE, flags=regex.UNICODE),
-    'ascii': regex.compile(NUMBER_REGEXTEXT_WITH_RANGE, flags=regex.ASCII)
+    'unicode': regex.compile(NUMBER_REGEX_TEXT, flags=regex.UNICODE),
+    'ascii': regex.compile(NUMBER_REGEX_TEXT, flags=regex.ASCII)
 }
 NUMBER_REGEX_START = {
     'unicode': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.UNICODE),
@@ -981,15 +991,21 @@ def check_numbers(s, numlist, numlist_normalized=None):
     numlist_normalized = numlist_normalized or set()
     matches = []
     # Get all the strings within the text to test which might be considered a single "number".
-    number_candidates = set()
-    for number_regex in NUMBER_REGEXES:
-        number_candidates.update(number_regex.findall(s, overlapped=True))
-    for number_candidate in number_candidates:
+    # The difficulty here is that we want all the different permutations (restricted to the original order)
+    # which can match with any number of digits within our range.
+    ascii_findall = NUMBER_REGEX['ascii'].findall(s, overlapped=True)
+    numbers = [number for lst in ascii_findall for number in lst if number != '']
+    # We only want the ones which consider Unicode digits which are not included with only ASCII digits.
+    # Considering the non-ASCII Unicode numbers may result in number candidates which start or end at different points.
+    unicode_findall = NUMBER_REGEX['unicode'].findall(s, overlapped=True)
+    numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
+    numbers = set(numbers)
+    for number_candidate in numbers:
         if number_candidate in numlist:
             matches.append('{0} found verbatim'.format(number_candidate))
             continue
         # else
-        normalized_candidate = regex.sub(r"[^\d]", "", number_candidate)
+        normalized_candidate = regex.sub(r"(?a)\D", "", number_candidate)
         if normalized_candidate in numlist_normalized:
             matches.append('{0} found normalized'.format(normalized_candidate))
     if matches:
