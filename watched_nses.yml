@@ -446,6 +446,9 @@ items:
   - jerome.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
+  - josh.ns.cloudflare.com.
+- ns:
+  - dana.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
