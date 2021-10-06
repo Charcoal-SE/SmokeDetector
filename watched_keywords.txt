@@ -33505,3 +33505,4 @@
 1633515407	tripleee	zopiclonebuy\.com
 1633515779	tripleee	cables\.com
 1633521663	tripleee	error[\W_]*+sidcraft
+1633521982	tripleee	made-in-pakistan\.com\.pk
