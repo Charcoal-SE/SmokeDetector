@@ -33533,3 +33533,4 @@
 1633592631	Ryan M	skill[\W_]*+slash(?!\.com(?<=skillslash\.com))
 1633595387	cigien	abadbuilders\.com
 1633595978	cigien	themrl\.com
+1633596805	tripleee	xosotv\.com
