@@ -13951,7 +13951,6 @@
 1573499712	Stormblessed	skyalerts\.io
 1573502685	Makyen	casino[\W_]*+oyunlarından
 1573513672	Makyen	dr[\W_]*+ige[\W_]*+ajayi
-1573516087	Makyen	sfxporn\.com
 1573520308	Makyen	sayeedhossen018
 1573520323	Makyen	256852(?<=lesse\.com\.br/limesurvey/index\.php/256852)
 1573520339	Makyen	lesse\.com\.br/limesurvey
