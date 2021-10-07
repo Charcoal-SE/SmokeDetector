@@ -7552,7 +7552,6 @@
 1548211946	Tetsuya Yamamoto	filmpow\.com
 1548212126	Tetsuya Yamamoto	jaipurdentists\.com
 1548212215	Tetsuya Yamamoto	makeml\.app
-1548213549	tripleee	quang\W?vinh
 1548214062	Tetsuya Yamamoto	govslive\.de
 1548218019	Tetsuya Yamamoto	digitalfloats\.com
 1548222145	Tetsuya Yamamoto	tatiliks\.com
