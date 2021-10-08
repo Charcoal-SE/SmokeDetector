@@ -1005,6 +1005,9 @@ items:
   - max.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
+  - may.ns.cloudflare.com.
+  - merlin.ns.cloudflare.com.
+- ns:
   - meera.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
