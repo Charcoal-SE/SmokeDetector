@@ -1568,3 +1568,6 @@ items:
 - ns: protondns.net.
 - ns: shapemyskills.in.
 - ns: hoststud.com.
+- ns:
+  - cdns.ovh.net.
+  - temp.secureserver.net.
