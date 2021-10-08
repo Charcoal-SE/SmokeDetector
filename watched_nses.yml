@@ -1018,6 +1018,9 @@ items:
   - rajeev.ns.cloudflare.com.
 - ns:
   - melissa.ns.cloudflare.com.
+  - merlin.ns.cloudflare.com.
+- ns:
+  - melissa.ns.cloudflare.com.
   - nash.ns.cloudflare.com.
 - ns:
   - merlin.ns.cloudflare.com.
