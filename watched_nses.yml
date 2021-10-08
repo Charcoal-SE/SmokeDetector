@@ -1023,6 +1023,9 @@ items:
   - merlin.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
+  - merlin.ns.cloudflare.com.
+  - treasure.ns.cloudflare.com.
+- ns:
   - michelle.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
