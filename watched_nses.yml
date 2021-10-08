@@ -927,6 +927,9 @@ items:
   - lee.ns.cloudflare.com.
   - megan.ns.cloudflare.com.
 - ns:
+  - lee.ns.cloudflare.com.
+  - roxy.ns.cloudflare.com.
+- ns:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
