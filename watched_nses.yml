@@ -317,9 +317,6 @@ items:
   - curt.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
-  - merlin.ns.cloudflare.com.
-- ns:
-  - brenda.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
   - brett.ns.cloudflare.com.
