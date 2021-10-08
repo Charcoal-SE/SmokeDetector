@@ -1571,6 +1571,5 @@ items:
 - ns: protondns.net.
 - ns: shapemyskills.in.
 - ns: hoststud.com.
-- ns:
-  - cdns.ovh.net.
-  - comment: two different domains weirdly also announce nonexistent temp.secureserver.net.
+- comment: two different domains weirdly also announce nonexistent temp.secureserver.net.
+  ns: cdns.ovh.net.
