@@ -2555,3 +2555,4 @@ multivitamincare[\W_]*+org
 embroidered[\W_]*+patches
 money[\W_]*+spells
 m[\W_]*+o[\W_]*+r[\W_]*+g[\W_]*+a[\W_]*+n[\W_]*+j[\W_]*+i[\W_]*+m[\W_]*+c[\W_]*+r[\W_]*+y[\W_]*+p[\W_]*+t[\W_]*+o[\W_]*+n[\W_]*+a[\W_]*+r[\W_]*+y(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
+(?-i:WdfZnr6VbAE)(?#youtube)
