@@ -669,6 +669,9 @@ items:
   - guy.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
+  - gwen.ns.cloudflare.com.
+  - lee.ns.cloudflare.com.
+- ns:
   - hal.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
