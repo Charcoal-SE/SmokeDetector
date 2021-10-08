@@ -1570,4 +1570,4 @@ items:
 - ns: hoststud.com.
 - ns:
   - cdns.ovh.net.
-  - temp.secureserver.net.
+  - comment: two different domains weirdly also announce nonexistent temp.secureserver.net.
