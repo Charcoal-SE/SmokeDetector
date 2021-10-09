@@ -266,6 +266,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "raspberrytips.com",
     "rcompanion.org",
     "reactivex.io",
+    "readme.md",
     "regexstorm.net",
     "relevantcodes.com",
     "repairwin.com",
