@@ -33159,7 +33159,6 @@
 1632488295	Makyen	wellnessaire
 1632490971	Ollie	masterforpc\.com
 1632491743	Ollie	niclosam\.com
-1632492053	cigien	dumpsboss\.com
 1632492266	cigien	betting1010\.com
 1632492869	cigien	rohaniways\.com
 1632494234	tripleee	(?-i:^Rvphilip$)
