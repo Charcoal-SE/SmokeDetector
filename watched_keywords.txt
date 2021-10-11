@@ -33629,3 +33629,4 @@
 1633927847	cigien	simplicity\.net\.au
 1633928882	cigien	bictreeindia\.com
 1633931537	cigien	topcreatorsites\.com
+1633931688	cigien	top[\W_]*+creator[\W_]*+sites(?!\.com(?<=topcreatorsites\.com))
