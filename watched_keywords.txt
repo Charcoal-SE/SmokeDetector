@@ -33631,3 +33631,4 @@
 1633931537	cigien	topcreatorsites\.com
 1633931688	cigien	top[\W_]*+creator[\W_]*+sites(?!\.com(?<=topcreatorsites\.com))
 1633935970	cigien	techmumma\.com
+1633937226	cigien	writemyessay\.services
