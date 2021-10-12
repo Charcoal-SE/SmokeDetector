@@ -33657,3 +33657,4 @@
 1634023747	Makyen	xenangtrungquocts\.blogspot
 1634023762	Makyen	xenang5tanhangcha\.blogspot
 1634023778	Makyen	linhthienson\.blogspot
+1634023942	Makyen	alfa[\W_]*+chemistry
