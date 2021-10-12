@@ -30262,9 +30262,9 @@
 1623221961	Ryan M	top10pcsoftware\.com
 1623222075	cigien	mayboommachine\.com
 1623222311	Cody Gray	xenangthienson\.com
-1623222375	Cody Gray	xe[\W_]*nang[\W_]*dau[\W_]*3[\W_]*tan
+1623222375	Cody Gray	xe[\W_]*+nang[\W_]*+dau[\W_]*+3[\W_]*+tan(?!\.blogspot(?<=xenangdau3tan\.blogspot))
 1623224148	cigien	kubetno1\.net
-1623225998	Cody Gray	Kim[\W_]*Dimarco
+1623225998	Cody Gray	kim[\W_]*+dimarco
 1623226022	Cody Gray	TPzhacH9j7TRQpcr8N3HnRt39BwM3DyXNf
 1623227136	tripleee	english-today-bandung\.com
 1623228648	tripleee	gunsforsale\.tech
@@ -30274,7 +30274,7 @@
 1623235655	tripleee	igaonline\.com\.au
 1623234709	Xnero	vitecloud\.com
 1623239227	Xnero	nerdclump\.com
-1623240780	Xnero	multimeter[\W_]*tools(?!\.com)
+1623240780	Xnero	multimeter[\W_]*+tools(?!\.com)
 1623242408	Xnero	myhalo\.life
 1623245842	Spevacus	mudra\.website
 1623266769	cigien	rifemachinebuilder\.com
@@ -30298,7 +30298,7 @@
 1623324558	double-beep	medstudies\.in
 1623327184	Xnero	saadahsan\.com
 1623327442	Cody Gray	addmecart\.com
-1623327553	Cody Gray	refurbished[\W_]*(?:jio[\W_]*)*router
+1623327553	Cody Gray	refurbished[\W_]*+(?:jio[\W_]*+)*router
 1623333477	Spevacus	contentwriting\.us
 1623336257	Spevacus	saveelectric\.ir
 1623350573	Ryan M	indacocoats\.com
@@ -30308,7 +30308,7 @@
 1623360185	cigien	micropediaglobal\.com
 1623384801	cigien	compscripts\.com
 1623385037	cigien	premiumjane\.com
-1623386363	Cody Gray	#?Fruits[\W_]*Supplie[\W_]*Delhi
+1623386363	Cody Gray	Fruits[\W_]*+Supplie[\W_]*+Delhi
 1623386502	cigien	rotonn\.in
 1623391372	cigien	telemediaonline\.co\.uk
 1623392501	Cody Gray	perfectxml\.com
@@ -30318,9 +30318,9 @@
 1623395534	cigien	re2\.edu\.my
 1623395551	cigien	rebrand\.com\.my
 1623400222	Cody Gray	goweatherforecast\.com
-1623400277	Cody Gray	how[\W_]*to[\W_]*keep[\W_]*your[\W_]*phone[\W_]*warm[\W_]*in[\W_]*cold-weather[\W_]*
+1623400277	Cody Gray	how[\W_]*+to[\W_]*+keep[\W_]*+your[\W_]*+phone[\W_]*+warm[\W_]*+in[\W_]*+cold-weather[\W_]*
 1623400852	Cody Gray	testbook\.com
-1623401670	Cody Gray	get[\W_]*mobdro\.com
+1623401670	Cody Gray	get[\W_]*+mobdro\.com
 1623401876	Cody Gray	opensourcejegan(?:@gmail\.com)?
 1623401931	Cody Gray	(?-i:UCHLDYlE3MZccKdUH1g0FdgQ)(?# YouTube channel)
 1623403429	Cody Gray	codeforhunger\.com
