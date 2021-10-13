@@ -33704,3 +33704,4 @@
 1634114275	Ryan M	wallet[\W_]*+hack(?:ers?)?
 1634114763	Ryan M	cyber[\W_]*+investigator
 1634119179	Ryan M	minew\.com
+1634124848	Jeff Schaller	shaquillecbdgummies\.wixsite\.com
