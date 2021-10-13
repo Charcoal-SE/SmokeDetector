@@ -30084,7 +30084,6 @@
 1622599815	cigien	kenhtuyensinh24h\.com
 1622614077	tripleee	themoviecharge\.blogspot\.com
 1622617505	tripleee	(?-i:TS4lDvBrdzY)(?# youtu.be)
-1622622747	tripleee	ateamsoftsolutions\.com
 1622626566	tripleee	mywifiext\.xyz
 1622628087	tripleee	tikkamasala\.us
 1622628110	tripleee	mumbai[\W_]*+coworking
