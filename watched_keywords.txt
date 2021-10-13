@@ -33681,3 +33681,4 @@
 1634081496	Makyen	d(?:octo)?r[\W_]*+isedu
 1634093251	Ryan M	aiktashafwaihtaraf\.com
 1634093275	Ryan M	mikrotik-educ\.blogspot
+1634095195	cigien	theopump\.com
