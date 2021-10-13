@@ -65,7 +65,6 @@ orignalsoft\.com
 diabacordoesitwork
 mixresult\.com
 win-ipad\.
-mecharithm\.com
 healthy?(?:advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)
 hyperglycemiaabout
 waffor\.com
