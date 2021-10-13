@@ -33702,3 +33702,4 @@
 1634114089	Ryan M	recover[\W_]*+cryptocurrency
 1634114162	Ryan M	trustworthy[\W_]*+hacker
 1634114275	Ryan M	wallet[\W_]*+hack(?:ers?)?
+1634114763	Ryan M	cyber[\W_]*+investigator
