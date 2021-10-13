@@ -33700,5 +33700,4 @@
 1634112311	Cody Gray	Astera[\W_]*ReportMiner
 1634114055	Ryan M	bestrecoverbinaryservice05
 1634114089	Ryan M	recover[\W_]*+cryptocurrency
-1634114116	Ryan M	wallet[\W_]*+hackers
 1634114162	Ryan M	trustworthy[\W_]*+hacker
