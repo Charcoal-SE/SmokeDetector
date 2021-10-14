@@ -33721,3 +33721,4 @@
 1634173049	cigien	local[\W_]*+plumbing[\W_]*+sunshine[\W_]*+coast(?!\.com\.au(?<=localplumbingsunshinecoast\.com\.au))
 1634175079	cigien	coin\.crypoptionfx
 1634175094	Makyen	georgewebeck(?:@gmail\.com)?
+1634183650	cigien	(?-i:3AEzUbd)(?#bit.ly)
