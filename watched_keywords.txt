@@ -33656,7 +33656,6 @@
 1634024786	Cody Gray	(?-i:f738e80838)(?# fiverr)
 1634025757	Ryan M	eschool\.pk
 1634031729	Ryan M	eworld-websolutions\.com
-1634033685	Ryan M	jiviya\.com
 1634034316	Glorfindel	buy\W*yohimbine
 1634037090	Glorfindel	klantenservicenetherlands\.blogspot\.com
 1634039573	Cody Gray	Aanha[\W_]*Services
