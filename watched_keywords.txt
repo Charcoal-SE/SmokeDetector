@@ -33725,3 +33725,4 @@
 1634187405	cigien	groupy\.travel
 1634187658	cigien	dedicatedhosting4u(?!\.com)
 1634188387	cigien	customerinterations\.com
+1634190252	cigien	astrothoughts\.in
