@@ -33730,3 +33730,4 @@
 1634191186	Makyen	kbz[\W_]*+food(?!\.com(?<=kbzfood\.com))
 1634192077	Ryan M	cruisepro\.us
 1634193815	Makyen	clothesbazaar\.com\.pk
+1634194012	Makyen	usamedilife\.com
