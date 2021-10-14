@@ -33719,3 +33719,4 @@
 1634150046	cigien	gentlepaw\.ca
 1634152410	cigien	jedahh\.com
 1634173049	cigien	local[\W_]*+plumbing[\W_]*+sunshine[\W_]*+coast(?!\.com\.au(?<=localplumbingsunshinecoast\.com\.au))
+1634175079	cigien	coin\.crypoptionfx
