@@ -33746,3 +33746,4 @@
 1634242146	Makyen	amazonrefundcustomercarenumber\.wordpress\.com
 1634242161	Makyen	helpmeshnd\.wordpress\.com
 1634242176	Makyen	amzcxsupportl\.wordpress\.com
+1634242191	Makyen	amazonprimerefundax\.wordpress\.com
