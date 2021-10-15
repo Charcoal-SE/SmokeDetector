@@ -9,6 +9,7 @@ class PostParseError(Exception):
     """
     Error raised when a JSON entry could not be parsed.
     """
+
     pass
 
 
@@ -29,12 +30,14 @@ class Post:
         self._title = ""
         self._user_name = ""
         self._user_url = ""
-        self._votes = {'downvotes': None, 'upvotes': None}
+        self._votes = {"downvotes": None, "upvotes": None}
         self._edited = False
 
         if parent is not None:
             if not isinstance(parent, Post):
-                raise TypeError("Parent object for a Post object must also be a Post object.")
+                raise TypeError(
+                    "Parent object for a Post object must also be a Post object."
+                )
             else:
                 self._parent = parent
 
@@ -43,17 +46,27 @@ class Post:
         elif api_response is not None:
             self._parse_api_post(api_response)
         else:
-            raise PostParseError("Must provide either JSON Data or an API Response object for Post object.")
+            raise PostParseError(
+                "Must provide either JSON Data or an API Response object for Post object."
+            )
 
         return  # Required for PEP484 compliance
 
     def __repr__(self):
         type_name = type(self).__name__
-        dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
-                   'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
-                   'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
-                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
-        return "%s(%s)" % (type_name, ', '.join(dataset))
+        dataset = [
+            "title=" + self.title,
+            "body=" + self.body,
+            "user_name=" + self.user_name,
+            "user_url=" + self.user_url,
+            "post_site=" + self.post_site,
+            "post_id=" + self.post_id,
+            "is_answer=" + str(self.is_answer),
+            "body_is_summary=" + str(self.body_is_summary),
+            "owner_rep=" + str(self.owner_rep),
+            "post_score=" + str(self.post_score),
+        ]
+        return "%s(%s)" % (type_name, ", ".join(dataset))
 
     def __setitem__(self, key, item):
         # type: (str, Union[str, object]) -> None
@@ -79,7 +92,10 @@ class Post:
         try:
             data = json.loads(text_data)
         except ValueError:
-            log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
+            log(
+                "error",
+                u"Encountered ValueError parsing the following:\n{0}".format(json_data),
+            )
             return
 
         if "ownerUrl" not in data:
@@ -88,12 +104,12 @@ class Post:
             return
 
         element_map = {
-            'titleEncodedFancy': '_title',
-            'bodySummary': '_body',
-            'ownerDisplayName': '_user_name',
-            'url': '_user_url',
-            'id': '_post_id',
-            'siteBaseHostAddress': '_post_site',
+            "titleEncodedFancy": "_title",
+            "bodySummary": "_body",
+            "ownerDisplayName": "_user_name",
+            "url": "_user_url",
+            "id": "_post_id",
+            "siteBaseHostAddress": "_post_site",
         }
 
         self._process_element_mapping(element_map, data, is_api_response=False)
@@ -135,19 +151,19 @@ class Post:
 
         # Map response elements to the corresponding variable for the Post object internally.
         element_map = {
-            'site': '_post_site',
-            'link': '_post_url',
-            'score': '_post_score',
-            'up_vote_count': "_votes['upvotes']",
-            'down_vote_count': "_votes['downvotes']",
-            'owner': {
-                'display_name': '_user_name',
-                'link': '_user_url',
-                'reputation': '_owner_rep'
+            "site": "_post_site",
+            "link": "_post_url",
+            "score": "_post_score",
+            "up_vote_count": "_votes['upvotes']",
+            "down_vote_count": "_votes['downvotes']",
+            "owner": {
+                "display_name": "_user_name",
+                "link": "_user_url",
+                "reputation": "_owner_rep",
             },
-            'question_id': '_post_id',
-            'answer_id': '_post_id',
-            'edited': '_edited',
+            "question_id": "_post_id",
+            "answer_id": "_post_id",
+            "edited": "_edited",
         }
 
         self._process_element_mapping(element_map, response, is_api_response=True)
@@ -158,11 +174,14 @@ class Post:
         # to the attributes and variables in the object.
         for (element, varmap) in element_map.items():
             try:
-                if is_api_response and element == 'owner':
-                    for (subelement, subvarmap) in element_map['owner'].items():
+                if is_api_response and element == "owner":
+                    for (subelement, subvarmap) in element_map["owner"].items():
                         try:
-                            self[subvarmap] = (html.unescape(data['owner'][subelement]) if subelement == 'display_name'
-                                               else data['owner'][subelement])
+                            self[subvarmap] = (
+                                html.unescape(data["owner"][subelement])
+                                if subelement == "display_name"
+                                else data["owner"][subelement]
+                            )
                         except KeyError:
                             # Go to next subkey
                             continue
@@ -224,7 +243,7 @@ class Post:
     @property
     def post_site(self):
         if type(self._post_site) in [bytes, bytearray]:
-            self._post_site = self._post_site.decode('utf-8')
+            self._post_site = self._post_site.decode("utf-8")
 
         return self._post_site
 
@@ -259,11 +278,11 @@ class Post:
 
     @property
     def up_vote_count(self):
-        return self._votes['upvotes']
+        return self._votes["upvotes"]
 
     @property
     def down_vote_count(self):
-        return self._votes['downvotes']
+        return self._votes["downvotes"]
 
     @property
     def title_ignore_type(self):

@@ -14,12 +14,12 @@ def test_append_pings():
 def test_smokey_transfer(monkeypatch):
     mp = monkeypatch
     blacklisted_users = {1: (2, 3), 4: (5, 6)}
-    mp.setattr(GlobalVars, 'blacklisted_users', blacklisted_users)
+    mp.setattr(GlobalVars, "blacklisted_users", blacklisted_users)
 
     s, metadata = SmokeyTransfer.dump()
     assert s.startswith(SmokeyTransfer.HEADER + "\n\n")
     assert s.endswith("\n\n" + SmokeyTransfer.ENDING)
-    assert isinstance(metadata['lengths'], dict)
+    assert isinstance(metadata["lengths"], dict)
     print(s)
     SmokeyTransfer.load(s, False)
     assert GlobalVars.blacklisted_users == blacklisted_users
@@ -29,4 +29,6 @@ def test_smokey_transfer(monkeypatch):
     assert "invalid data" in str(e.value).lower()
 
     with pytest.raises(ValueError):
-        SmokeyTransfer.load(SmokeyTransfer.HEADER + "\nmmmmmm\n" + SmokeyTransfer.ENDING)
+        SmokeyTransfer.load(
+            SmokeyTransfer.HEADER + "\nmmmmmm\n" + SmokeyTransfer.ENDING
+        )

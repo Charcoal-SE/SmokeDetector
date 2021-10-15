@@ -10,6 +10,7 @@ import requests
 import json
 import time
 import math
+
 # noinspection PyCompatibility
 import regex
 
@@ -32,14 +33,14 @@ class Any:
 
 def _save_problem_pickle(path):
     # Keep the most recent copy of a pickle file which had an error.
-    errorpath = path + '-error'
+    errorpath = path + "-error"
     if os.path.isfile(errorpath):
         os.remove(errorpath)
     if os.path.isfile(path):
         os.rename(path, errorpath)
 
 
-def load_pickle(path, encoding='utf-8'):
+def load_pickle(path, encoding="utf-8"):
     newpath = os.path.join(PICKLE_STORAGE, path)
     if os.path.isfile(newpath):
         path = newpath
@@ -58,7 +59,7 @@ def load_pickle(path, encoding='utf-8'):
         _save_problem_pickle(path)
         raise
     except pickle.UnpicklingError as err:
-        if 'pickle data was truncated' in str(err).lower():
+        if "pickle data was truncated" in str(err).lower():
             _save_problem_pickle(path)
         raise
 
@@ -94,45 +95,59 @@ def has_pickle(path):
 # load_blacklists() is defined in a separate module blacklists.py, though
 def load_files():
     if has_pickle("falsePositives.p"):
-        GlobalVars.false_positives = load_pickle("falsePositives.p", encoding='utf-8')
+        GlobalVars.false_positives = load_pickle("falsePositives.p", encoding="utf-8")
     if has_pickle("whitelistedUsers.p"):
-        GlobalVars.whitelisted_users = load_pickle("whitelistedUsers.p", encoding='utf-8')
+        GlobalVars.whitelisted_users = load_pickle(
+            "whitelistedUsers.p", encoding="utf-8"
+        )
         if not isinstance(GlobalVars.whitelisted_users, set):
             GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
     if has_pickle("blacklistedUsers.p"):
-        GlobalVars.blacklisted_users = load_pickle("blacklistedUsers.p", encoding='utf-8')
+        GlobalVars.blacklisted_users = load_pickle(
+            "blacklistedUsers.p", encoding="utf-8"
+        )
         if not isinstance(GlobalVars.blacklisted_users, dict):
-            GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
+            GlobalVars.blacklisted_users = {
+                data[0]: data[1:] for data in GlobalVars.blacklisted_users
+            }
     if has_pickle("ignoredPosts.p"):
-        GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding='utf-8')
+        GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding="utf-8")
     if has_pickle("autoIgnoredPosts.p"):
-        GlobalVars.auto_ignored_posts = load_pickle("autoIgnoredPosts.p", encoding='utf-8')
+        GlobalVars.auto_ignored_posts = load_pickle(
+            "autoIgnoredPosts.p", encoding="utf-8"
+        )
     if has_pickle("notifications.p"):
-        GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
+        GlobalVars.notifications = load_pickle("notifications.p", encoding="utf-8")
     if has_pickle("whyData.p"):
-        GlobalVars.why_data = load_pickle("whyData.p", encoding='utf-8')
+        GlobalVars.why_data = load_pickle("whyData.p", encoding="utf-8")
     # Switch from apiCalls.pickle to apiCalls.p
     # Correction was on 2020-11-02. Handling the apiCalls.pickle file should be able to be removed shortly thereafter.
     if has_pickle("apiCalls.pickle"):
-        GlobalVars.api_calls_per_site = load_pickle("apiCalls.pickle", encoding='utf-8')
+        GlobalVars.api_calls_per_site = load_pickle("apiCalls.pickle", encoding="utf-8")
         # Remove the incorrectly named pickle file.
         remove_pickle("apiCalls.pickle")
         # Put the pickle in the "correct" file, from which it will be immediately reloaded.
         dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
     if has_pickle("apiCalls.p"):
-        GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding='utf-8')
+        GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding="utf-8")
     if has_pickle("bodyfetcherQueue.p"):
-        GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
+        GlobalVars.bodyfetcher.queue = load_pickle(
+            "bodyfetcherQueue.p", encoding="utf-8"
+        )
     if has_pickle("bodyfetcherMaxIds.p"):
-        GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
+        GlobalVars.bodyfetcher.previous_max_ids = load_pickle(
+            "bodyfetcherMaxIds.p", encoding="utf-8"
+        )
     if has_pickle("codePrivileges.p"):
-        GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
+        GlobalVars.code_privileged_users = load_pickle(
+            "codePrivileges.p", encoding="utf-8"
+        )
     if has_pickle("reasonWeights.p"):
-        GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
+        GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding="utf-8")
     if has_pickle("cookies.p"):
-        GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
+        GlobalVars.cookies = load_pickle("cookies.p", encoding="utf-8")
     if has_pickle("metasmokePostIds.p"):
-        GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
+        GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding="utf-8")
     blacklists.load_blacklists()
 
 
@@ -211,12 +226,12 @@ def is_code_privileged(site, user_id):
 
 
 def update_reason_weights():
-    d = {'last_updated': datetime.utcnow().date()}
+    d = {"last_updated": datetime.utcnow().date()}
     items = metasmoke.Metasmoke.get_reason_weights()
     if not items:
         return  # No update
     for item in items:
-        d[item['reason_name'].lower()] = item['weight']
+        d[item["reason_name"].lower()] = item["weight"]
     GlobalVars.reason_weights = d
     dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 
@@ -226,7 +241,8 @@ def resolve_ms_link(post_url):
     if identifier in GlobalVars.metasmoke_ids:
         if isinstance(GlobalVars.metasmoke_ids[identifier], int):
             ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
-                GlobalVars.metasmoke_ids[identifier])
+                GlobalVars.metasmoke_ids[identifier]
+            )
             return ms_url
         else:
             del GlobalVars.metasmoke_ids[identifier]
@@ -236,9 +252,11 @@ def resolve_ms_link(post_url):
         ms_post_id = None
         ms_url = None
     else:
-        ms_post_id = max([post['id'] for post in ms_posts])
+        ms_post_id = max([post["id"] for post in ms_posts])
         ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
-    GlobalVars.metasmoke_ids[identifier] = ms_post_id  # Store numeric IDs, strings are hard to handle
+    GlobalVars.metasmoke_ids[
+        identifier
+    ] = ms_post_id  # Store numeric IDs, strings are hard to handle
     dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
     return ms_url
 
@@ -370,7 +388,9 @@ def add_queue_timing_data(site, time_in_queue):
 
 def actually_add_queue_timings_data():
     # Use .txt for cross platform compatibility
-    with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+    with open(
+        "pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8"
+    ) as stat_file:
         stat_file.write("\n".join(queue_timings_data) + "\n")
 
 
@@ -401,11 +421,18 @@ def fetch_lines_from_error_log(count):
     if count <= 0:
         return "Please request an exception count greater than zero."
     logs = ErrorLogs.fetch_last(count)
-    s = '\n'.join([
-        "### {2} on {0} at {1}Z: {3}\n{4}".format(
-            GlobalVars.location, datetime.utcfromtimestamp(time).isoformat()[:-7],
-            name, message, tb)
-        for time, name, message, tb in logs])
+    s = "\n".join(
+        [
+            "### {2} on {0} at {1}Z: {3}\n{4}".format(
+                GlobalVars.location,
+                datetime.utcfromtimestamp(time).isoformat()[:-7],
+                name,
+                message,
+                tb,
+            )
+            for time, name, message, tb in logs
+        ]
+    )
     if s:
         return redact_passwords(s)
     else:
@@ -422,10 +449,10 @@ def refresh_sites():
     url = "https://api.stackexchange.com/2.2/sites"
     while has_more:
         params = {
-            'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
-            'key': 'IAkbitmze4B8KpacUfLqkw((',
-            'page': page,
-            'pagesize': 500
+            "filter": "!)Qpa1bTB_jCkeaZsqiQ8pDwI",
+            "key": "IAkbitmze4B8KpacUfLqkw((",
+            "page": page,
+            "pagesize": 500,
         }
         response = requests.get(url, params=params)
 
@@ -449,7 +476,7 @@ def check_site_and_get_full_name(site):
         if not refreshed:
             return False, "Could not fetch sites: " + msg
     for item in GlobalVars.se_sites:
-        full_name = regex.sub(r'https?://', '', item['site_url'])
+        full_name = regex.sub(r"https?://", "", item["site_url"])
         short_name = item["api_site_parameter"]
         if site == full_name or site == short_name:
             return True, full_name
@@ -468,7 +495,9 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=T
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
     if notification_tuple in GlobalVars.notifications:
         return -1, None
-    GlobalVars.notifications.append((int(user_id), chat_site, int(room_id), se_site, always_ping))
+    GlobalVars.notifications.append(
+        (int(user_id), chat_site, int(room_id), se_site, always_ping)
+    )
     dump_pickle("notifications.p", GlobalVars.notifications)
     return 0, se_site
 
@@ -512,7 +541,11 @@ def remove_all_from_notification_list(user_id):
 def get_all_notification_sites(user_id, chat_site, room_id):
     sites = []
     for notification in GlobalVars.notifications:
-        if notification[0] == int(user_id) and notification[1] == chat_site and notification[2] == int(room_id):
+        if (
+            notification[0] == int(user_id)
+            and notification[1] == chat_site
+            and notification[2] == int(room_id)
+        ):
             sites.append(notification[3])
     return sorted(sites)
 
@@ -520,7 +553,11 @@ def get_all_notification_sites(user_id, chat_site, room_id):
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for notification in GlobalVars.notifications:
-        if notification[1] == chat_site and notification[2] == int(room_id) and notification[3] == se_site:
+        if (
+            notification[1] == chat_site
+            and notification[2] == int(room_id)
+            and notification[3] == se_site
+        ):
             uids.append((notification[0], notification[4]))
     return uids
 
@@ -535,8 +572,13 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
         # It should be noted that this *could* be caused by a discontinuity between room_id and
         # client.
         log_exception(*sys.exc_info())
-        log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
-                    'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
+        log(
+            "warn",
+            "ChatExchange failed to get current users. See Error log for more details. Tried "
+            "client.host: {}:: room: {}:: passed chat_site: {}".format(
+                client.host, room_id, chat_site
+            ),
+        )
         current_users = []
 
     for i, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
@@ -554,10 +596,13 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
 # noinspection PyMissingTypeHints
 def append_pings(original_message, names):
     if len(names) != 0:
-        new_message = u"{0} ({1})".format(original_message, " ".join("@" + x.replace(" ", "") for x in names))
+        new_message = u"{0} ({1})".format(
+            original_message, " ".join("@" + x.replace(" ", "") for x in names)
+        )
         if len(new_message) <= 500:
             return new_message
     return original_message
+
 
 # method to check if a post has been bumped by Community
 
@@ -568,9 +613,10 @@ def has_community_bumped_post(post_url, post_content):
         if not ms_posts:
             return False
 
-        return any(post['body'] == post_content for post in ms_posts)
+        return any(post["body"] == post_content for post in ms_posts)
     except (requests.exceptions.ConnectionError, ValueError):
         return False  # MS is down, so assume it is not bumped
+
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
 # (to avoid SmokeDetector's chat messages to be rate-limited too much)
@@ -579,9 +625,15 @@ def has_community_bumped_post(post_url, post_content):
 def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
     user_id = str(user_id)
     for i in range(len(GlobalVars.multiple_reporters)):
-        if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
-            GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0],
-                                                GlobalVars.multiple_reporters[i][1], time_integer)
+        if (
+            GlobalVars.multiple_reporters[i][0] == user_id
+            and GlobalVars.multiple_reporters[i][1] == chat_host
+        ):
+            GlobalVars.multiple_reporters[i] = (
+                GlobalVars.multiple_reporters[i][0],
+                GlobalVars.multiple_reporters[i][1],
+                time_integer,
+            )
             return 1
     GlobalVars.multiple_reporters.append((user_id, chat_host, time_integer))
 
@@ -609,21 +661,23 @@ class SmokeyTransfer:
 
     ITEMS = [
         # (dict_key, object, attr, type, post_processing)
-        ('blacklisted_users', GlobalVars, 'blacklisted_users', None, None),
-        ('whitelisted_users', GlobalVars, 'whitelisted_users', None, None),
-        ('ignored_posts', GlobalVars, 'ignored_posts', None, None),
-        ('notifications', GlobalVars, 'notifications', None, None),
+        ("blacklisted_users", GlobalVars, "blacklisted_users", None, None),
+        ("whitelisted_users", GlobalVars, "whitelisted_users", None, None),
+        ("ignored_posts", GlobalVars, "ignored_posts", None, None),
+        ("notifications", GlobalVars, "notifications", None, None),
     ]
 
     @classmethod
     def dump(cls):
         # Trust Python's GIL here
-        data = {'_metadata': {
-            'time': time.time(),
-            'location': GlobalVars.location,
-            'rev': GlobalVars.commit.id_full,
-            'lengths': {},  # can be used for validation
-        }}  # some metadata, in case they're useful
+        data = {
+            "_metadata": {
+                "time": time.time(),
+                "location": GlobalVars.location,
+                "rev": GlobalVars.commit.id_full,
+                "lengths": {},  # can be used for validation
+            }
+        }  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
             key, obj, attr, obj_type, _ = item_info
             item = getattr(obj, attr)
@@ -632,21 +686,24 @@ class SmokeyTransfer:
                 length = len(item)
             except TypeError:
                 length = None  # len() is inapplicable
-            data['_metadata']['lengths'][key] = length
+            data["_metadata"]["lengths"][key] = length
 
         # hopefully the pickle won't be more than a few MiB
         raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
         # let's save some traffic
         z_data = zlib.compress(raw_data, 9)
         # need to transfer via chat, so text only
-        b64_s = base64.b64encode(z_data).decode('ascii')
+        b64_s = base64.b64encode(z_data).decode("ascii")
 
         chunk_size = 64  # The same value as GnuPG armored output
         s = "{}\n\n{}\n\n{}".format(
             cls.HEADER,
-            '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
-            cls.ENDING)
-        return s, data['_metadata']
+            "\n".join(
+                [b64_s[i : i + chunk_size] for i in range(0, len(b64_s), chunk_size)]
+            ),
+            cls.ENDING,
+        )
+        return s, data["_metadata"]
 
     @classmethod
     def load(cls, s, merge=False):
@@ -654,15 +711,15 @@ class SmokeyTransfer:
             # While it generates a blank line after the header and before the ending,
             # it should also accept data that does not contain the blank lines
             lbound, rbound = s.index(cls.HEADER + "\n"), s.rindex("\n" + cls.ENDING)
-            s = s[lbound + len(cls.HEADER):rbound].strip()
+            s = s[lbound + len(cls.HEADER) : rbound].strip()
         except ValueError:
             raise ValueError("Invalid data (invalid header or ending)")
-        s = ''.join(s.split())  # Clear whitespaces
+        s = "".join(s.split())  # Clear whitespaces
 
         try:
-            z_data = base64.b64decode(s.encode('ascii'))
+            z_data = base64.b64decode(s.encode("ascii"))
             raw_data = zlib.decompress(z_data)
-            data = pickle.loads(raw_data, encoding='utf-8')
+            data = pickle.loads(raw_data, encoding="utf-8")
             if type(data) is not dict:
                 raise ValueError("Invalid data (data type is not dict)")
 
@@ -677,11 +734,14 @@ class SmokeyTransfer:
                     length = len(item)
                 except TypeError:
                     length = None
-                if length != data['_metadata']['lengths'][key]:
-                    warnings.append("Length of {!r} mismatch (recorded {}, actual {})".format(
-                        key, data['_metadata']['lengths'][key], length))
+                if length != data["_metadata"]["lengths"][key]:
+                    warnings.append(
+                        "Length of {!r} mismatch (recorded {}, actual {})".format(
+                            key, data["_metadata"]["lengths"][key], length
+                        )
+                    )
                 setattr(obj, attr, item)
             if warnings:
-                raise Warning("Warning: " + ', '.join(warnings))
+                raise Warning("Warning: " + ", ".join(warnings))
         except (ValueError, zlib.error) as e:
             raise ValueError(str(e)) from None

@@ -9,11 +9,13 @@ from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, ConfigParser
 import threading
+
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
 import platform
-if 'windows' in platform.platform().lower():
+
+if "windows" in platform.platform().lower():
     # noinspection PyPep8Naming
     from _Git_Windows import git, GitError
 else:
@@ -21,7 +23,7 @@ else:
     from sh.contrib import git
 
 
-CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
+CommitInfo = namedtuple("CommitInfo", ["id", "id_full", "author", "message"])
 
 git_url = git.config("--get", "remote.origin.url").strip()
 git_url_split = git_url.split("/")
@@ -32,8 +34,10 @@ if git_url[0:19] == "https://github.com/":
 
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%h%n%H%n%an%n%s', 'HEAD'],
-                               stderr=sp.STDOUT).decode('utf-8')
+        data = sp.check_output(
+            ["git", "rev-list", "-1", "--pretty=%h%n%H%n%an%n%s", "HEAD"],
+            stderr=sp.STDOUT,
+        ).decode("utf-8")
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
     _, abbrev_id, full_id, author, message = data.strip().split("\n")
@@ -41,7 +45,7 @@ def git_commit_info():
 
 
 def git_ref():
-    git_cp = sp.run(['git', 'symbolic-ref', '--short', '-q', 'HEAD'], stdout=sp.PIPE)
+    git_cp = sp.run(["git", "symbolic-ref", "--short", "-q", "HEAD"], stdout=sp.PIPE)
     return git_cp.stdout.decode("utf-8").strip()  # not on branch = empty output
 
 
@@ -51,7 +55,7 @@ def git_ref():
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
-    on_windows = 'windows' in platform.platform().lower()
+    on_windows = "windows" in platform.platform().lower()
 
     false_positives = []
     whitelisted_users = set()
@@ -72,10 +76,11 @@ class GlobalVars:
     api_backoff_time = 0
     deletion_watcher = None
 
-    not_privileged_warning = \
-        "You are not a privileged user. Please see " \
-        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
+    not_privileged_warning = (
+        "You are not a privileged user. Please see "
+        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for "
         "information on what privileges are and what is expected of privileged users."
+    )
 
     experimental_reasons = {  # Don't widely report these
         "potentially bad keyword in answer",
@@ -133,21 +138,22 @@ class GlobalVars:
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
 
     class PostScanStat:
-        """ Tracking post scanning data """
+        """Tracking post scanning data"""
+
         num_posts_scanned = 0
         post_scan_time = 0
         rw_lock = threading.Lock()
 
         @staticmethod
         def add_stat(posts_scanned, scan_time):
-            """ Adding post scanning data """
+            """Adding post scanning data"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
                 GlobalVars.PostScanStat.post_scan_time += scan_time
 
         @staticmethod
         def get_stat():
-            """ Getting post scanning statistics """
+            """Getting post scanning statistics"""
             with GlobalVars.PostScanStat.rw_lock:
                 posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
                 scan_time = GlobalVars.PostScanStat.post_scan_time
@@ -159,17 +165,17 @@ class GlobalVars:
 
         @staticmethod
         def reset_stat():
-            """ Resetting post scanning data """
+            """Resetting post scanning data"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.num_posts_scanned = 0
                 GlobalVars.PostScanStat.post_scan_time = 0
 
     config_parser = ConfigParser(interpolation=None)
 
-    if os.path.isfile('config') and "pytest" not in sys.modules:
-        config_parser.read('config')
+    if os.path.isfile("config") and "pytest" not in sys.modules:
+        config_parser.read("config")
     else:
-        config_parser.read('config.ci')
+        config_parser.read("config.ci")
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
@@ -190,35 +196,36 @@ class GlobalVars:
     dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
     class MSStatus:
-        """ Tracking metasmoke status """
+        """Tracking metasmoke status"""
+
         ms_is_up = True
         counter = 0
         rw_lock = threading.Lock()
 
         @staticmethod
         def set_up():
-            """ Set metasmoke status to up """
+            """Set metasmoke status to up"""
             # Private to metasmoke.py
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = True
 
         @staticmethod
         def set_down():
-            """ Set metasmoke status to down """
+            """Set metasmoke status to down"""
             # Private to metasmoke.py
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = False
 
         @staticmethod
         def is_up():
-            """ Query if metasmoke status is up """
+            """Query if metasmoke status is up"""
             with GlobalVars.MSStatus.rw_lock:
                 current_ms_status = GlobalVars.MSStatus.ms_is_up
             return current_ms_status
 
         @staticmethod
         def is_down():
-            """ Query if metasmoke status is down """
+            """Query if metasmoke status is down"""
             return not GlobalVars.MSStatus.is_up()
 
         # Why implement failed() and succeeded() here, as they will only be called in metasmoke.py?
@@ -226,26 +233,26 @@ class GlobalVars:
         # to implement failed() and succeeded() here.
         @staticmethod
         def failed():
-            """ Indicate a metasmoke connection failure """
+            """Indicate a metasmoke connection failure"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.counter += 1
 
         @staticmethod
         def succeeded():
-            """ Indicate a metasmoke connection success """
+            """Indicate a metasmoke connection success"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.counter = 0
 
         @staticmethod
         def get_failure_count():
-            """ Get consecutive metasmoke connection failure count """
+            """Get consecutive metasmoke connection failure count"""
             with GlobalVars.MSStatus.rw_lock:
                 failure_count = GlobalVars.MSStatus.counter
             return failure_count
 
         @staticmethod
         def reset_ms_status():
-            """ Reset class GlobalVars.MSStatus to default values """
+            """Reset class GlobalVars.MSStatus to default values"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = True
                 GlobalVars.MSStatus.counter = 0
@@ -273,9 +280,15 @@ class GlobalVars:
     log_time_format = config.get("log_time_format", "%H:%M:%S")
 
     # Blacklist privileged users from config
-    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(",")
-    mse_blacklisters = regex.sub(r"[^\d,]", "", config.get("mse_blacklisters", "")).split(",")
-    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(",")
+    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(
+        ","
+    )
+    mse_blacklisters = regex.sub(
+        r"[^\d,]", "", config.get("mse_blacklisters", "")
+    ).split(",")
+    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(
+        ","
+    )
 
     # Create a set of blacklisters equivalent to what's used in code_privileged_users.
     config_blacklisters = set()
@@ -304,44 +317,70 @@ class GlobalVars:
         cls.commit = commit = git_commit_info()
 
         cls.commit_with_author = "`{}` ({}: {})".format(
-            commit.id, commit.author, commit.message)
+            commit.id, commit.author, commit.message
+        )
 
         # We don't want to escape `[` and `]` when they are within code.
-        split_commit_with_author = cls.commit_with_author.split('`')
+        split_commit_with_author = cls.commit_with_author.split("`")
         split_length = len(split_commit_with_author)
         for index in range(0, split_length, 2):
-            split_commit_with_author[index] = split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
+            split_commit_with_author[index] = (
+                split_commit_with_author[index].replace("[", "\\[").replace("]", "\\]")
+            )
         # There's not an even number of ` characters, so the parsing hack failed, but we assume the last one needs
         # escaping.
         if not split_length % 2:
-            split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
+            split_commit_with_author[-1] = (
+                split_commit_with_author[-1].replace("[", "\\[").replace("]", "\\]")
+            )
 
-        cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
+        cls.commit_with_author_escaped = "`".join(split_commit_with_author)
 
         cls.on_branch = git_ref()
         cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-            cls.commit.id, cls.location, platform.python_version())
-        cls.s_reverted = \
-            "[ {} ] SmokeDetector started in [reverted mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
+            cls.chatmessage_prefix,
+            cls.commit_with_author_escaped,
+            cls.bot_repository,
+            cls.commit.id,
+            cls.location,
+            platform.python_version(),
+        )
+        cls.s_reverted = (
+            "[ {} ] SmokeDetector started in [reverted mode]("
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) "
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_blacklists = \
-            "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_findspam = \
-            "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.standby_message = \
-            "[ {} ] SmokeDetector started in [standby mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
+                cls.chatmessage_prefix,
+                cls.commit_with_author_escaped,
+                cls.bot_repository,
+                cls.commit.id,
+                cls.location,
+            )
+        )
+        cls.s_norestart_blacklists = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            cls.chatmessage_prefix,
+            cls.commit_with_author_escaped,
+            cls.bot_repository,
+            cls.commit.id,
+            cls.location,
+        )
+        cls.s_norestart_findspam = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            cls.chatmessage_prefix,
+            cls.commit_with_author_escaped,
+            cls.bot_repository,
+            cls.commit.id,
+            cls.location,
+        )
+        cls.standby_message = (
+            "[ {} ] SmokeDetector started in [standby mode]("
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) "
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
+                cls.chatmessage_prefix,
+                cls.commit_with_author_escaped,
+                cls.bot_repository,
+                cls.commit.id,
+                cls.location,
+            )
+        )
 
 
 GlobalVars.PostScanStat.reset_stat()

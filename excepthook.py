@@ -4,6 +4,7 @@ import os
 import traceback
 import threading
 import sys
+
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
@@ -15,8 +16,12 @@ from globalvars import GlobalVars
 def uncaught_exception(exctype, value, tb):
     delta = datetime.utcnow() - GlobalVars.startup_utc_date
     log_exception(exctype, value, tb)
-    if delta.total_seconds() < 180 and exctype not in \
-            {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
+    if delta.total_seconds() < 180 and exctype not in {
+        KeyboardInterrupt,
+        SystemExit,
+        requests.ConnectionError,
+        WebSocketConnectionClosedException,
+    }:
         exit_mode("early_exception")
     else:
         exit_mode("restart")
@@ -46,5 +51,7 @@ def install_thread_excepthook():
                 sys.excepthook(*sys.exc_info())
             except BaseException:  # KeyboardInterrupt and SystemExit
                 raise
+
         self.run = run_with_except_hook
+
     threading.Thread.__init__ = init

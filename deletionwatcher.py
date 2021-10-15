@@ -4,8 +4,10 @@ import os.path
 import requests
 import time
 import threading
+
 # noinspection PyPackageRequirements
 import websocket
+
 # noinspection PyPackageRequirements
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
@@ -32,9 +34,11 @@ class DeletionWatcher:
         self.posts = {}
 
         try:
-            self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+            self.socket = websocket.create_connection(
+                "wss://qa.sockets.stackexchange.com/"
+            )
         except websocket.WebSocketException:
-            log('error', 'DeletionWatcher failed to create a websocket connection')
+            log("error", "DeletionWatcher failed to create a websocket connection")
             return
 
         if datahandling.has_pickle(PICKLE_FILENAME):
@@ -43,7 +47,9 @@ class DeletionWatcher:
                 self.subscribe(post, pickle=False)
             self._save()
 
-        threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
+        threading.Thread(
+            name="deletion watcher", target=self._start, daemon=True
+        ).start()
 
     def _start(self):
         while True:
@@ -62,10 +68,16 @@ class DeletionWatcher:
                         try:
                             post_id, _, _, post_url, callbacks = self.posts[action]
 
-                            if post_id == str(data["aId"] if "aId" in data else data["qId"]):
+                            if post_id == str(
+                                data["aId"] if "aId" in data else data["qId"]
+                            ):
                                 del self.posts[action]
                                 self.socket.send("-" + action)
-                                Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
+                                Tasks.do(
+                                    metasmoke.Metasmoke.send_deletion_stats_for_post,
+                                    post_url,
+                                    True,
+                                )
 
                                 for callback, max_time in callbacks:
                                     if not max_time or time.time() < max_time:
@@ -79,11 +91,16 @@ class DeletionWatcher:
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
-            log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url))
+            log(
+                "warning",
+                "unknown site {} when subscribing to {}".format(post_site, post_url),
+            )
             return
 
         if post_type == "answer":
-            question_id = datahandling.get_post_site_id_link((post_id, post_site, post_type))
+            question_id = datahandling.get_post_site_id_link(
+                (post_id, post_site, post_type)
+            )
 
             if question_id is None:
                 return
@@ -95,11 +112,17 @@ class DeletionWatcher:
         max_time = (time.time() + timeout) if timeout else None
 
         if action not in self.posts:
-            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
+            self.posts[action] = (
+                post_id,
+                post_site,
+                post_type,
+                post_url,
+                [(callback, max_time)] if callback else [],
+            )
             try:
                 self.socket.send(action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed on sending {}'.format(action))
+                log("error", "DeletionWatcher failed on sending {}".format(action))
         elif callback:
             _, _, _, _, callbacks = self.posts[action]
             callbacks.append((callback, max_time))
@@ -126,39 +149,53 @@ class DeletionWatcher:
             time.sleep(DeletionWatcher.next_request_time - time.time())
 
         for site, posts in saved.items():
-            ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
+            ids = ";".join(
+                post_id
+                for post_id in posts
+                if not DeletionWatcher._ignore((post_id, site))
+            )
             uri = "https://api.stackexchange.com/2.2/posts/{}".format(ids)
-            params = {
-                'site': site,
-                'key': 'IAkbitmze4B8KpacUfLqkw(('
-            }
+            params = {"site": site, "key": "IAkbitmze4B8KpacUfLqkw(("}
             res = requests.get(uri, params=params)
             json = res.json()
 
             if "items" not in json:
-                log('warning',
-                    'DeletionWatcher API request received no items in response (code {})'.format(res.status_code))
-                log('warning', res.text)
+                log(
+                    "warning",
+                    "DeletionWatcher API request received no items in response (code {})".format(
+                        res.status_code
+                    ),
+                )
+                log("warning", res.text)
                 return
 
-            if 'backoff' in json:
-                DeletionWatcher.next_request_time = time.time() + json['backoff']
+            if "backoff" in json:
+                DeletionWatcher.next_request_time = time.time() + json["backoff"]
 
-            for post in json['items']:
+            for post in json["items"]:
                 if time.time() - post["creation_date"] < 7200:
-                    yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
+                    yield to_protocol_relative(post["link"]).replace(
+                        "/q/", "/questions/"
+                    )
 
     @staticmethod
     def _ignore(post_site_id):
-        return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
-            datahandling.is_auto_ignored_post(post_site_id)
+        return (
+            datahandling.is_false_positive(post_site_id)
+            or datahandling.is_ignored_post(post_site_id)
+            or datahandling.is_auto_ignored_post(post_site_id)
+        )
 
     @staticmethod
     def update_site_id_list():
         if GlobalVars.no_deletion_watcher:
             return
-        soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
-                             "html.parser")
+        soup = BeautifulSoup(
+            requests.get(
+                "https://meta.stackexchange.com/topbar/site-switcher/site-list"
+            ).text,
+            "html.parser",
+        )
         site_id_dict = {}
         for site in soup.findAll("a", attrs={"data-id": True}):
             site_name = urlparse(site["href"]).netloc

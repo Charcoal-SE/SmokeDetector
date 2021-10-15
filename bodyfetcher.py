@@ -1,7 +1,12 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
-from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
-                          add_queue_timing_data)
+from datahandling import (
+    add_or_update_api_data,
+    clear_api_data,
+    store_bodyfetcher_queue,
+    store_bodyfetcher_max_ids,
+    add_queue_timing_data,
+)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -35,8 +40,8 @@ class BodyFetcher:
         #                                                                pre                   sum of requests
         #                                               questions    2020-11-02   2020-02-19    2020-10-28 to
         #                                                per day       setting     requests      2020-11-02
-        "stackoverflow.com": 3,                     # _  6,816            3          360            4,365
-        "math.stackexchange.com": 2,                # _    596            1          473            6,346
+        "stackoverflow.com": 3,  # _  6,816            3          360            4,365
+        "math.stackexchange.com": 2,  # _    596            1          473            6,346
         # "ru.stackoverflow.com": 2,                # _    230           10           13              145
         # "askubuntu.com": ,                        # _    140            1           88            1,199
         # "es.stackoverflow.com": 2,                # _    138            5           25              225
@@ -68,9 +73,15 @@ class BodyFetcher:
         #    as of 2020-11-01.
     }
 
-    time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
-                      "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
-                      "arduino.stackexchange.com", "workplace.stackexchange.com"]
+    time_sensitive = [
+        "security.stackexchange.com",
+        "movies.stackexchange.com",
+        "mathoverflow.net",
+        "gaming.stackexchange.com",
+        "webmasters.stackexchange.com",
+        "arduino.stackexchange.com",
+        "workplace.stackexchange.com",
+    ]
 
     threshold = 1
 
@@ -94,8 +105,8 @@ class BodyFetcher:
 
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
-            3122,    # Formatting Sandbox
-            51812,   # The API sandbox
+            3122,  # Formatting Sandbox
+            51812,  # The API sandbox
             296077,  # Sandbox archive
         ]
         if post_id in ignored_mse_questions and site_base == "meta.stackexchange.com":
@@ -114,21 +125,29 @@ class BodyFetcher:
             # If the item in self.queue[site_base] is neither a dict or a list, then explode.
             if type(self.queue[site_base]) is dict:
                 pass
-            elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            elif type(self.queue[site_base]) is not dict and type(
+                self.queue[site_base]
+            ) in [list, tuple]:
                 post_list_dict = {}
                 for post_list_id in self.queue[site_base]:
                     post_list_dict[post_list_id] = None
                 self.queue[site_base] = post_list_dict
             else:
-                raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+                raise TypeError(
+                    "A non-iterable is in the queue item for a given site, this will cause errors!"
+                )
 
             # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
             # the previous conversion code.
             self.queue[site_base][str(post_id)] = datetime.utcnow()
 
         if GlobalVars.flovis is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
-                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()})
+            GlobalVars.flovis.stage(
+                "bodyfetcher/enqueued",
+                site_base,
+                post_id,
+                {sk: list(sq.keys()) for sk, sq in self.queue.items()},
+            )
 
         if should_check_site:
             self.make_api_call_for_site(site_base)
@@ -158,7 +177,12 @@ class BodyFetcher:
             store_bodyfetcher_queue()
 
     def print_queue(self):
-        return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
+        return "\n".join(
+            [
+                "{0}: {1}".format(key, str(len(values)))
+                for (key, values) in self.queue.items()
+            ]
+        )
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
@@ -172,8 +196,12 @@ class BodyFetcher:
 
         if GlobalVars.flovis is not None:
             for post_id in new_post_ids:
-                GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
-                                        {'site': site, 'posts': list(new_posts.keys())})
+                GlobalVars.flovis.stage(
+                    "bodyfetcher/api_request",
+                    site,
+                    post_id,
+                    {"site": site, "posts": list(new_posts.keys())},
+                )
 
         # Add queue timing data
         with self.queue_timing_modify_lock:
@@ -184,14 +212,17 @@ class BodyFetcher:
                 add_queue_timing_data(site, seconds_in_queue)
 
         with self.max_ids_modify_lock:
-            if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
+            if (
+                site in self.previous_max_ids
+                and max(new_post_ids) > self.previous_max_ids[site]
+            ):
                 previous_max_id = self.previous_max_ids[site]
                 intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
 
                 # We don't want to go over the 100-post API cutoff, so take the last
                 # (100-len(new_post_ids)) from intermediate_posts
 
-                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)):]
+                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)) :]
 
                 # new_post_ids could contain edited posts, so merge it back in
                 combined = chain(intermediate_posts, new_post_ids)
@@ -209,17 +240,20 @@ class BodyFetcher:
                 self.previous_max_ids[site] = max(new_post_ids)
                 store_bodyfetcher_max_ids()
 
-        log('debug', "New IDs / Hybrid Intermediate IDs for {}:".format(site))
+        log("debug", "New IDs / Hybrid Intermediate IDs for {}:".format(site))
         if len(new_post_ids) > 30:
-            log('debug', "{} +{} more".format(sorted(new_post_ids)[:30], len(new_post_ids) - 30))
+            log(
+                "debug",
+                "{} +{} more".format(sorted(new_post_ids)[:30], len(new_post_ids) - 30),
+            )
         else:
-            log('debug', sorted(new_post_ids))
+            log("debug", sorted(new_post_ids))
         if len(new_post_ids) == len(posts):
-            log('debug', "[ *Identical* ]")
+            log("debug", "[ *Identical* ]")
         elif len(posts) > 30:
-            log('debug', "{} +{} more".format(sorted(posts)[:30], len(posts) - 30))
+            log("debug", "{} +{} more".format(sorted(posts)[:30], len(posts) - 30))
         else:
-            log('debug', sorted(posts))
+            log("debug", sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = {}
@@ -233,17 +267,17 @@ class BodyFetcher:
                 pagesize = "25"
 
             pagesize_modifier = {
-                'pagesize': pagesize,
-                'min': str(self.last_activity_date)
+                "pagesize": pagesize,
+                "min": str(self.last_activity_date),
             }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
         url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
         params = {
-            'filter': '!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa',
-            'key': 'IAkbitmze4B8KpacUfLqkw((',
-            'site': site
+            "filter": "!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa",
+            "key": "IAkbitmze4B8KpacUfLqkw((",
+            "site": site,
         }
         params.update(pagesize_modifier)
 
@@ -255,7 +289,7 @@ class BodyFetcher:
             if GlobalVars.api_backoff_time > time.time():
                 time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
             try:
-                time_request_made = datetime.utcnow().strftime('%H:%M:%S')
+                time_request_made = datetime.utcnow().strftime("%H:%M:%S")
                 response = requests.get(url, params=params, timeout=20).json()
             except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
                 # Any failure in the request being made (timeout or otherwise) should be added back to
@@ -274,36 +308,64 @@ class BodyFetcher:
             with GlobalVars.apiquota_rw_lock:
                 if "quota_remaining" in response:
                     quota_remaining = response["quota_remaining"]
-                    if quota_remaining - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0 \
-                            and quota_remaining > 19980:
-                        tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
-                                                 "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                              quota_remaining))
+                    if (
+                        quota_remaining - GlobalVars.apiquota >= 5000
+                        and GlobalVars.apiquota >= 0
+                        and quota_remaining > 19980
+                    ):
+                        tell_rooms_with(
+                            "debug",
+                            "API quota rolled over with {0} requests remaining. "
+                            "Current quota: {1}.".format(
+                                GlobalVars.apiquota, quota_remaining
+                            ),
+                        )
 
-                        sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
-                                                       reverse=True)
+                        sorted_calls_per_site = sorted(
+                            GlobalVars.api_calls_per_site.items(),
+                            key=itemgetter(1),
+                            reverse=True,
+                        )
                         api_quota_used_per_site = ""
                         for site_name, quota_used in sorted_calls_per_site:
-                            sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
-                            api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
+                            sanatized_site_name = site_name.replace(".com", "").replace(
+                                ".stackexchange", ""
+                            )
+                            api_quota_used_per_site += (
+                                sanatized_site_name + ": {0}\n".format(str(quota_used))
+                            )
                         api_quota_used_per_site = api_quota_used_per_site.strip()
 
                         tell_rooms_with("debug", api_quota_used_per_site)
                         clear_api_data()
                     if quota_remaining == 0:
-                        tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
-                        tell_rooms_with("debug", str(response))  # No code format for now?
+                        tell_rooms_with(
+                            "debug", "API reports no quota left!  May be a glitch."
+                        )
+                        tell_rooms_with(
+                            "debug", str(response)
+                        )  # No code format for now?
                     if GlobalVars.apiquota == -1:
-                        tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                                 .format(quota=quota_remaining))
+                        tell_rooms_with(
+                            "debug",
+                            "Restart: API quota is {quota}.".format(
+                                quota=quota_remaining
+                            ),
+                        )
                     GlobalVars.apiquota = quota_remaining
                 else:
-                    message_hq = "The quota_remaining property was not in the API response."
+                    message_hq = (
+                        "The quota_remaining property was not in the API response."
+                    )
 
             if "error_message" in response:
-                message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
+                message_hq += " Error: {} at {} UTC.".format(
+                    response["error_message"], time_request_made
+                )
                 if "error_id" in response and response["error_id"] == 502:
-                    if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
+                    if (
+                        GlobalVars.api_backoff_time < time.time() + 12
+                    ):  # Add a backoff of 10 + 2 seconds as a default
                         GlobalVars.api_backoff_time = time.time() + 12
                 message_hq += " Backing off on requests for the next 12 seconds."
                 message_hq += " Previous URL: `{}`".format(url)
@@ -331,28 +393,35 @@ class BodyFetcher:
 
         for post in response["items"]:
             pnb = copy.deepcopy(post)
-            if 'body' in pnb:
-                pnb['body'] = 'Present, but truncated'
-            if 'answers' in pnb:
-                del pnb['answers']
+            if "body" in pnb:
+                pnb["body"] = "Present, but truncated"
+            if "answers" in pnb:
+                del pnb["answers"]
 
             if "title" not in post or "body" not in post:
-                if GlobalVars.flovis is not None and 'question_id' in post:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/no_content', site, post['question_id'], pnb)
+                if GlobalVars.flovis is not None and "question_id" in post:
+                    GlobalVars.flovis.stage(
+                        "bodyfetcher/api_response/no_content",
+                        site,
+                        post["question_id"],
+                        pnb,
+                    )
                 continue
 
-            post['site'] = site
+            post["site"] = site
             try:
-                post['edited'] = (post['creation_date'] != post['last_edit_date'])
+                post["edited"] = post["creation_date"] != post["last_edit_date"]
             except KeyError:
-                post['edited'] = False  # last_edit_date not present = not edited
+                post["edited"] = False  # last_edit_date not present = not edited
 
             try:
                 post_ = Post(api_response=post)
             except PostParseError as err:
-                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
-                if GlobalVars.flovis is not None and 'question_id' in post:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, post['question_id'], pnb)
+                log("error", "Error {0} when parsing post: {1!r}".format(err, post_))
+                if GlobalVars.flovis is not None and "question_id" in post:
+                    GlobalVars.flovis.stage(
+                        "bodyfetcher/api_response/error", site, post["question_id"], pnb
+                    )
                 continue
 
             num_scanned += 1
@@ -361,17 +430,23 @@ class BodyFetcher:
 
             if is_spam:
                 try:
-                    if GlobalVars.flovis is not None and 'question_id' in post:
-                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
-                                                {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                    handle_spam(post=post_,
-                                reasons=reason,
-                                why=why)
+                    if GlobalVars.flovis is not None and "question_id" in post:
+                        GlobalVars.flovis.stage(
+                            "bodyfetcher/api_response/spam",
+                            site,
+                            post["question_id"],
+                            {"post": pnb, "check_if_spam": [is_spam, reason, why]},
+                        )
+                    handle_spam(post=post_, reasons=reason, why=why)
                 except Exception as e:
-                    log('error', "Exception in handle_spam:", e)
-            elif GlobalVars.flovis is not None and 'question_id' in post:
-                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['question_id'],
-                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                    log("error", "Exception in handle_spam:", e)
+            elif GlobalVars.flovis is not None and "question_id" in post:
+                GlobalVars.flovis.stage(
+                    "bodyfetcher/api_response/not_spam",
+                    site,
+                    post["question_id"],
+                    {"post": pnb, "check_if_spam": [is_spam, reason, why]},
+                )
 
             try:
                 if "answers" not in post:
@@ -379,36 +454,56 @@ class BodyFetcher:
                 else:
                     for answer in post["answers"]:
                         anb = copy.deepcopy(answer)
-                        if 'body' in anb:
-                            anb['body'] = 'Present, but truncated'
+                        if "body" in anb:
+                            anb["body"] = "Present, but truncated"
 
                         num_scanned += 1
                         answer["IsAnswer"] = True  # Necesssary for Post object
-                        answer["title"] = ""  # Necessary for proper Post object creation
-                        answer["site"] = site  # Necessary for proper Post object creation
+                        answer[
+                            "title"
+                        ] = ""  # Necessary for proper Post object creation
+                        answer[
+                            "site"
+                        ] = site  # Necessary for proper Post object creation
                         try:
-                            answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
+                            answer["edited"] = (
+                                answer["creation_date"] != answer["last_edit_date"]
+                            )
                         except KeyError:
-                            answer['edited'] = False  # last_edit_date not present = not edited
+                            answer[
+                                "edited"
+                            ] = False  # last_edit_date not present = not edited
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)
                         if is_spam:
                             try:
-                                if GlobalVars.flovis is not None and 'answer_id' in answer:
-                                    GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer['answer_id'],
-                                                            {'post': anb, 'check_if_spam': [is_spam, reason, why]})
-                                handle_spam(answer_,
-                                            reasons=reason,
-                                            why=why)
+                                if (
+                                    GlobalVars.flovis is not None
+                                    and "answer_id" in answer
+                                ):
+                                    GlobalVars.flovis.stage(
+                                        "bodyfetcher/api_response/spam",
+                                        site,
+                                        answer["answer_id"],
+                                        {
+                                            "post": anb,
+                                            "check_if_spam": [is_spam, reason, why],
+                                        },
+                                    )
+                                handle_spam(answer_, reasons=reason, why=why)
                             except Exception as e:
-                                log('error', "Exception in handle_spam:", e)
-                        elif GlobalVars.flovis is not None and 'answer_id' in answer:
-                            GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer['answer_id'],
-                                                    {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                                log("error", "Exception in handle_spam:", e)
+                        elif GlobalVars.flovis is not None and "answer_id" in answer:
+                            GlobalVars.flovis.stage(
+                                "bodyfetcher/api_response/not_spam",
+                                site,
+                                answer["answer_id"],
+                                {"post": anb, "check_if_spam": [is_spam, reason, why]},
+                            )
 
             except Exception as e:
-                log('error', "Exception handling answers:", e)
+                log("error", "Exception handling answers:", e)
 
         end_time = time.time()
         scan_time = end_time - start_time

@@ -22,7 +22,11 @@ import classes.feedback
 from helpers import log, redact_passwords
 from excepthook import log_exception
 from globalvars import GlobalVars
-from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
+from parsing import (
+    fetch_post_id_and_site_from_url,
+    fetch_post_url_from_msg_content,
+    fetch_owner_url_from_msg_content,
+)
 from tasks import Tasks
 from socketscience import SocketScience
 
@@ -46,7 +50,7 @@ _reply_commands = {}
 _clients = {
     "stackexchange.com": None,
     "stackoverflow.com": None,
-    "meta.stackexchange.com": None
+    "meta.stackexchange.com": None,
 }
 
 _command_rooms = set()
@@ -82,11 +86,22 @@ def init(username, password, try_cookies=True):
                     if site in cookies and cookies[site] is not None:
                         client.login_with_cookie(cookies[site])
                         logged_in = True
-                        log('debug', 'chat.{}: Logged in using cached cookies'.format(site))
+                        log(
+                            "debug",
+                            "chat.{}: Logged in using cached cookies".format(site),
+                        )
                 except LoginError as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
-                    log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
-                    log('debug', 'chat.{}: Falling back to credential-based login'.format(site))
+                    log(
+                        "debug",
+                        "chat.{}: Login error {}: {}".format(
+                            site, exc_type.__name__, exc_obj
+                        ),
+                    )
+                    log(
+                        "debug",
+                        "chat.{}: Falling back to credential-based login".format(site),
+                    )
                     del cookies[site]
                     datahandling.dump_cookies()
 
@@ -97,7 +112,12 @@ def init(username, password, try_cookies=True):
                     break
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
-                    log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
+                    log(
+                        "debug",
+                        "chat.{}: Login error {}: {}".format(
+                            site, exc_type.__name__, exc_obj
+                        ),
+                    )
             else:
                 raise Exception("Failed to log into " + site + ", max retries exceeded")
 
@@ -117,7 +137,9 @@ def init(username, password, try_cookies=True):
         except EOFError:
             pass
 
-    threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
+    threading.Thread(
+        name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True
+    ).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
 
     if try_cookies:
@@ -143,7 +165,11 @@ def parse_room_config(path):
 
     inherits = []
     rooms = {}
-    host_fields = {'stackexchange.com': 1, 'meta.stackexchange.com': 2, 'stackoverflow.com': 3}
+    host_fields = {
+        "stackexchange.com": 1,
+        "meta.stackexchange.com": 2,
+        "stackoverflow.com": 3,
+    }
 
     for site, site_rooms in room_dict.items():
         for roomid, room in site_rooms.items():
@@ -151,13 +177,26 @@ def parse_room_config(path):
             # print("Process {}".format(room_identifier))
             rooms[room_identifier] = room
             if "privileges" in room and "inherit" in room["privileges"]:
-                inherits.append({'from': (room["privileges"]["inherit"]["site"],
-                                          room["privileges"]["inherit"]["room"]), 'to': room_identifier})
+                inherits.append(
+                    {
+                        "from": (
+                            room["privileges"]["inherit"]["site"],
+                            room["privileges"]["inherit"]["room"],
+                        ),
+                        "to": room_identifier,
+                    }
+                )
                 if "additional" in room["privileges"]:
-                    _privileges[room_identifier] =\
-                        set([user_data[x][host_fields[site]] for x in room["privileges"]["additional"]])
+                    _privileges[room_identifier] = set(
+                        [
+                            user_data[x][host_fields[site]]
+                            for x in room["privileges"]["additional"]
+                        ]
+                    )
             elif "privileges" in room:
-                _privileges[room_identifier] = set([user_data[x][host_fields[site]] for x in room["privileges"]])
+                _privileges[room_identifier] = set(
+                    [user_data[x][host_fields[site]] for x in room["privileges"]]
+                )
             else:
                 _privileges[room_identifier] = set()
 
@@ -173,8 +212,14 @@ def parse_room_config(path):
     for inherit in inherits:
         if inherit["from"] in rooms:
             from_privs = _privileges[inherit["from"]]
-            from_accounts = [k for k, v in user_data.items() if v[host_fields[inherit["from"][0]]] in from_privs]
-            inherit_from = set([user_data[x][host_fields[inherit["to"][0]]] for x in from_accounts])
+            from_accounts = [
+                k
+                for k, v in user_data.items()
+                if v[host_fields[inherit["from"][0]]] in from_privs
+            ]
+            inherit_from = set(
+                [user_data[x][host_fields[inherit["to"][0]]] for x in from_accounts]
+            )
 
             if inherit["to"] in _privileges:
                 before = _privileges[inherit["to"]]
@@ -184,8 +229,12 @@ def parse_room_config(path):
             else:
                 _privileges[inherit["to"]] = inherit_from
         else:
-            log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
-                inherit["to"][1], inherit["to"][1], inherit["from"][1]))
+            log(
+                "warn",
+                "Room {} on {} specified privilege inheritance from {}, but no such room exists".format(
+                    inherit["to"][1], inherit["to"][1], inherit["from"][1]
+                ),
+            )
 
 
 def add_room(room, roles):
@@ -208,8 +257,11 @@ def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
         if len(msg) > 500 and "\n" not in msg:
-            log('warn', 'Discarded the following message because it was over 500 characters')
-            log('warn', msg)
+            log(
+                "warn",
+                "Discarded the following message because it was over 500 characters",
+            )
+            log("warn", msg)
             _msg_queue.task_done()
             continue
 
@@ -217,14 +269,18 @@ def send_messages():
 
         while full_retries < 3:
             try:
-                response = room.room._client._do_action_despite_throttling(("send", room.room.id, msg)).json()
+                response = room.room._client._do_action_despite_throttling(
+                    ("send", room.room.id, msg)
+                ).json()
 
                 if "id" in response:
                     identifier = (room.room._client.host, room.room.id)
                     message_id = response["id"]
 
                     if identifier not in _last_messages.messages:
-                        _last_messages.messages[identifier] = collections.deque((message_id,))
+                        _last_messages.messages[identifier] = collections.deque(
+                            (message_id,)
+                        )
                     else:
                         last = _last_messages.messages[identifier]
 
@@ -234,7 +290,9 @@ def send_messages():
                         last.append(message_id)
 
                     if report_data:
-                        _last_messages.reports[(room.room._client.host, message_id)] = report_data
+                        _last_messages.reports[
+                            (room.room._client.host, message_id)
+                        ] = report_data
 
                         if len(_last_messages.reports) > 50:
                             _last_messages.reports.popitem(last=False)
@@ -242,7 +300,9 @@ def send_messages():
                         if room.deletion_watcher:
                             callback = room.room._client.get_message(message_id).delete
 
-                            GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=120)
+                            GlobalVars.deletion_watcher.subscribe(
+                                report_data[0], callback=callback, timeout=120
+                            )
 
                     _pickle_run.set()
 
@@ -256,7 +316,9 @@ def send_messages():
 def on_msg(msg, client):
     global _room_roles
 
-    if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
+    if not isinstance(msg, events.MessagePosted) and not isinstance(
+        msg, events.MessageEdited
+    ):
         return
 
     message = msg.message
@@ -264,8 +326,10 @@ def on_msg(msg, client):
     room_data = _rooms[room_ident]
 
     if message.owner.id == client._br.user_id:
-        if 'direct' in _room_roles and room_ident in _room_roles['direct']:
-            SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+        if "direct" in _room_roles and room_ident in _room_roles["direct"]:
+            SocketScience.receive(
+                message.content_source.replace("\u200B", "").replace("\u200C", "")
+            )
 
         return
 
@@ -277,13 +341,21 @@ def on_msg(msg, client):
     if message.parent:
         try:
             if message.parent.owner.id == client._br.user_id:
-                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
+                strip_mention = regex.sub(
+                    "^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ",
+                    "",
+                    message.content,
+                )
                 cmd = GlobalVars.parser.unescape(strip_mention)
 
                 result = dispatch_reply_command(message.parent, message, cmd)
 
                 if result:
-                    s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
+                    s = (
+                        ":{}\n{}"
+                        if "\n" not in result and len(result) >= 488
+                        else ":{} {}"
+                    )
                     _msg_queue.put((room_data, s.format(message.id, result), None))
         except ValueError:
             pass
@@ -293,20 +365,32 @@ def on_msg(msg, client):
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
+    elif message.content.startswith("!!/") or message.content.lower().startswith(
+        "sdc "
+    ):
         result = dispatch_command(message)
 
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
-            and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
+    elif (
+        classes.feedback.FEEDBACK_REGEX.search(message.content)
+        and is_privileged(message.owner, message.room)
+        and datahandling.last_feedbacked
+    ):
         ids, expires_in = datahandling.last_feedbacked
 
         if time.time() < expires_in:
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
-    elif 'direct' in _room_roles and room_ident in _room_roles['direct']:
-        SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+            Tasks.do(
+                metasmoke.Metasmoke.post_auto_comment,
+                message.content_source,
+                message.owner,
+                ids=ids,
+            )
+    elif "direct" in _room_roles and room_ident in _room_roles["direct"]:
+        SocketScience.receive(
+            message.content_source.replace("\u200B", "").replace("\u200C", "")
+        )
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -337,7 +421,13 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
             continue
 
         for room in _room_roles[prop_has]:
-            if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
+            if all(
+                map(
+                    lambda prop: prop not in _room_roles
+                    or room not in _room_roles[prop],
+                    hasnt,
+                )
+            ):
                 if room not in _rooms:
                     # If SD is not already in the room, then join the room.
                     site, roomid = room
@@ -354,10 +444,9 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
         room = _rooms[room_id]
 
         if notify_site:
-            pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
-                                                                     room.room.id,
-                                                                     notify_site,
-                                                                     room.room._client)
+            pings = datahandling.get_user_names_on_notification_list(
+                room.room._client.host, room.room.id, notify_site, room.room._client
+            )
 
             msg_pings = datahandling.append_pings(msg, pings)
         else:
@@ -366,16 +455,25 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
         timestamp = time.time()
 
         if room.block_time < timestamp and _global_block < timestamp:
-            if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
+            if (
+                report_data
+                and "delay" in _room_roles
+                and room_id in _room_roles["delay"]
+            ):
+
                 def callback(room=room, msg=msg_pings):
                     post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
 
-                    if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
+                    if not datahandling.is_false_positive(
+                        post
+                    ) and not datahandling.is_ignored_post(post):
                         _msg_queue.put((room, msg, report_data))
 
                 task = Tasks.later(callback, after=300)
 
-                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=task.cancel)
+                GlobalVars.deletion_watcher.subscribe(
+                    report_data[0], callback=task.cancel
+                )
             else:
                 _msg_queue.put((room, msg_pings, report_data))
 
@@ -386,7 +484,9 @@ def get_last_messages(room, count):
     if identifier not in _last_messages.messages:
         return
 
-    for msg_id in itertools.islice(reversed(_last_messages.messages[identifier]), count):
+    for msg_id in itertools.islice(
+        reversed(_last_messages.messages[identifier]), count
+    ):
         yield room._client.get_message(msg_id)
 
 
@@ -417,8 +517,16 @@ def block_room(room_id, site, time):
 
 
 class ChatCommand:
-    def __init__(self, type_signature, reply=False, whole_msg=False, privileged=False,
-                 arity=None, aliases=None, give_name=False):
+    def __init__(
+        self,
+        type_signature,
+        reply=False,
+        whole_msg=False,
+        privileged=False,
+        arity=None,
+        aliases=None,
+        give_name=False,
+    ):
         self.type_signature = type_signature
         self.reply = reply
         self.whole_msg = whole_msg
@@ -432,7 +540,10 @@ class ChatCommand:
         disable_key = "no-" + self.__func__.__name__
         try:
             room_identifier = (original_msg.room._client.host, original_msg.room.id)
-            if disable_key in _room_roles and room_identifier in _room_roles[disable_key]:
+            if (
+                disable_key in _room_roles
+                and room_identifier in _room_roles[disable_key]
+            ):
                 return "This command is disabled in this room"
         except AttributeError:
             # Test cases in CI don't contain enough data
@@ -449,7 +560,11 @@ class ChatCommand:
         try:
             try:
                 processed_args.extend(
-                    [(coerce(arg) if arg else arg) for coerce, arg in zip(self.type_signature, args)])
+                    [
+                        (coerce(arg) if arg else arg)
+                        for coerce, arg in zip(self.type_signature, args)
+                    ]
+                )
             except ValueError as e:
                 return "Invalid input type given for an argument"
 
@@ -466,25 +581,39 @@ class ChatCommand:
             return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
     def __repr__(self):
-        return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})" \
-            .format(
-                self.__class__.__name__, ", ".join([s.__name__ for s in self.type_signature]), self.reply,
-                self.whole_msg, self.privileged,
-                self.arity, self.aliases, self.give_name
-            )
+        return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})".format(
+            self.__class__.__name__,
+            ", ".join([s.__name__ for s in self.type_signature]),
+            self.reply,
+            self.whole_msg,
+            self.privileged,
+            self.arity,
+            self.aliases,
+            self.give_name,
+        )
 
 
-def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
+def command(
+    *type_signature,
+    reply=False,
+    whole_msg=False,
+    privileged=False,
+    arity=None,
+    aliases=None,
+    give_name=False
+):
     aliases = aliases or []
 
     def decorator(func):
-        f = ChatCommand(type_signature, reply, whole_msg, privileged, arity, aliases, give_name)
+        f = ChatCommand(
+            type_signature, reply, whole_msg, privileged, arity, aliases, give_name
+        )
         f.__func__ = func
 
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
         if reply:
-            _reply_commands[func.__name__.replace('_', '-')] = cmd
+            _reply_commands[func.__name__.replace("_", "-")] = cmd
 
             for alias in aliases:
                 _reply_commands[alias] = cmd
@@ -513,18 +642,20 @@ def get_message(id, host="stackexchange.com"):
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
     try:
-        if command_parts[0] == 'sdc':
+        if command_parts[0] == "sdc":
             command_parts = command_parts[1].split(" ", 1)
         else:
             command_parts[0] = command_parts[0][3:]
     except IndexError:
-        return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" +\
-               " to run command `cmd_name`."
+        return (
+            "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`"
+            + " to run command `cmd_name`."
+        )
 
     if len(command_parts) == 2:
         cmd, args = command_parts
     else:
-        cmd, = command_parts
+        (cmd,) = command_parts
         args = ""
 
     if cmd == "":
@@ -538,16 +669,23 @@ def dispatch_command(msg):
     if command_name not in _prefix_commands:
         return "No such command '{}'.".format(command_name)
     else:
-        log('debug', 'Command received: ' + msg.content)
+        log("debug", "Command received: " + msg.content)
         func, (min_arity, max_arity) = _prefix_commands[command_name]
 
         if max_arity == 0:
-            return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
+            return func(
+                original_msg=msg, alias_used=command_name, quiet_action=quiet_action
+            )
         elif max_arity == 1:
             if min_arity == 1 and not args:
                 return "Missing an argument."
 
-            return func(args or None, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
+            return func(
+                args or None,
+                original_msg=msg,
+                alias_used=command_name,
+                quiet_action=quiet_action,
+            )
         else:
             args = args.split()
 
@@ -557,7 +695,12 @@ def dispatch_command(msg):
                 return "Too many arguments."
             else:
                 args.extend([None] * (max_arity - len(args)))
-                return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
+                return func(
+                    *args,
+                    original_msg=msg,
+                    alias_used=command_name,
+                    quiet_action=quiet_action
+                )
 
 
 def dispatch_reply_command(msg, reply, full_cmd, comment=True):
@@ -566,7 +709,7 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
     if len(command_parts) == 2:
         cmd, args = command_parts
     else:
-        cmd, = command_parts
+        (cmd,) = command_parts
         args = ""
 
     cmd = cmd.lower()
@@ -580,19 +723,34 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
         assert min_arity == 1
 
         if max_arity == 1:
-            return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(
+                msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action
+            )
         elif max_arity == 2:
-            return func(msg, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(
+                msg, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action
+            )
         else:
             args = args.split()
             args.extend([None] * (max_arity - len(args)))
 
-            return func(msg, *args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(
+                msg,
+                *args,
+                original_msg=reply,
+                alias_used=cmd,
+                quiet_action=quiet_action
+            )
     elif comment and is_privileged(reply.owner, reply.room):
         post_data = get_report_data(msg)
 
         if post_data:
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd, reply.owner, url=post_data[0])
+            Tasks.do(
+                metasmoke.Metasmoke.post_auto_comment,
+                full_cmd,
+                reply.owner,
+                url=post_data[0],
+            )
 
 
 def dispatch_shorthand_command(msg):
@@ -612,17 +770,23 @@ def dispatch_shorthand_command(msg):
 
     should_return_output = False
 
-    for current_command, message in zip(processed_commands, get_last_messages(msg.room, len(processed_commands))):
+    for current_command, message in zip(
+        processed_commands, get_last_messages(msg.room, len(processed_commands))
+    ):
         if current_command == "-":
             output.append("[:{}] <skipped>".format(message.id))
         else:
-            result = dispatch_reply_command(message, msg, current_command, comment=False)
+            result = dispatch_reply_command(
+                message, msg, current_command, comment=False
+            )
 
             if result:
                 should_return_output = True
                 output.append("[:{}] {}".format(message.id, result))
             else:
-                output.append("[:{}] <processed without return value>".format(message.id))
+                output.append(
+                    "[:{}] <processed without return value>".format(message.id)
+                )
 
     if should_return_output:
         return "\n".join(output)

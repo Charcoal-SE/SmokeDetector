@@ -21,18 +21,21 @@ class MetasmokeCache:
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, MISS-EXPIRED, or MISS-NOITEM
         """
         if key in MetasmokeCache._cache:
-            if (key in MetasmokeCache._expiries and MetasmokeCache._expiries[key] >= int(time.time())) or \
-               key not in MetasmokeCache._expiries:
+            if (
+                key in MetasmokeCache._expiries
+                and MetasmokeCache._expiries[key] >= int(time.time())
+            ) or key not in MetasmokeCache._expiries:
                 # Expiry was set on cache insert, and the value is still in-date, OR no expiry was set and the item
                 # is persistently cached.
-                return MetasmokeCache._cache[key],\
-                    ('HIT-VALID' if key in MetasmokeCache._expiries else 'HIT-PERSISTENT')
+                return MetasmokeCache._cache[key], (
+                    "HIT-VALID" if key in MetasmokeCache._expiries else "HIT-PERSISTENT"
+                )
             else:
                 # Expiry was set on cache insert, but the value has expired. We're not regenerating values here.
-                return None, 'MISS-EXPIRED'
+                return None, "MISS-EXPIRED"
         else:
             # Item never existed in the first place.
-            return None, 'MISS-NOITEM'
+            return None, "MISS-NOITEM"
 
     @staticmethod
     def fetch(key, generator=None, expiry=None):
@@ -58,13 +61,13 @@ class MetasmokeCache:
                 value = generator()
             except Exception:
                 # Already logged in generator() so no need to log again
-                return None, 'MISS-NOGEN'
+                return None, "MISS-NOGEN"
             MetasmokeCache.insert(key, value, expiry)
             tasks.Tasks.do(dump_cache_data)
-            return value, 'HIT-GENERATED'
+            return value, "HIT-GENERATED"
         else:
             # Cache miss, and we can't generate a value - that's a MISS-NOGEN.
-            return None, 'MISS-NOGEN'
+            return None, "MISS-NOGEN"
 
     @staticmethod
     def fetch_from_api(key, uri, params=None, expiry=None, property_as_list=None):
@@ -85,29 +88,30 @@ class MetasmokeCache:
         :returns: Tuple - [0] the cached value if it's available or generatable and in-date, otherwise None;
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, HIT-GENERATED, or MISS-NOGEN
         """
+
         def generator():
             nonlocal uri, params
             if params is None:
-                params = {'page': 1, 'key': globalvars.GlobalVars.metasmoke_key}
+                params = {"page": 1, "key": globalvars.GlobalVars.metasmoke_key}
             else:
-                params.update({'page': 1, 'key': globalvars.GlobalVars.metasmoke_key})
+                params.update({"page": 1, "key": globalvars.GlobalVars.metasmoke_key})
 
             items = []
             while True:
                 try:
                     resp = metasmoke.Metasmoke.get(uri, params=params)
                 except Exception as e:
-                    log('warning', e)
+                    log("warning", e)
                     raise
                 if resp is None or not resp.ok:
                     break
                 else:
                     page = resp.json()
-                if 'items' in page:
-                    items.extend(page['items'])
-                if page['has_more'] is False:
+                if "items" in page:
+                    items.extend(page["items"])
+                if page["has_more"] is False:
                     break
-                params['page'] += 1
+                params["page"] += 1
             if property_as_list is None:
                 return items
             else:
@@ -152,14 +156,22 @@ def dump_cache_data():
 
     :returns: None
     """
-    datahandling.dump_pickle('metasmokeCacheData.p',
-                             {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
+    datahandling.dump_pickle(
+        "metasmokeCacheData.p",
+        {"cache": MetasmokeCache._cache, "expiries": MetasmokeCache._expiries},
+    )
 
 
 def is_website_whitelisted(domain):
-    whitelist, hit_info = MetasmokeCache.fetch_from_api('whitelisted-domains',
-                                                        '/api/v2.0/tags/name/whitelisted/domains',
-                                                        params={'filter': 'MFILNMJJGMMLLJ', 'per_page': '100'},
-                                                        expiry=3600,
-                                                        property_as_list='domain')
-    return len(whitelist) > 0 and isinstance(whitelist, list) and domain.lower() in whitelist
+    whitelist, hit_info = MetasmokeCache.fetch_from_api(
+        "whitelisted-domains",
+        "/api/v2.0/tags/name/whitelisted/domains",
+        params={"filter": "MFILNMJJGMMLLJ", "per_page": "100"},
+        expiry=3600,
+        property_as_list="domain",
+    )
+    return (
+        len(whitelist) > 0
+        and isinstance(whitelist, list)
+        and domain.lower() in whitelist
+    )

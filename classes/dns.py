@@ -8,10 +8,10 @@ def dns_resolve(domain: str) -> list:
 
     resolver = dns.resolver.Resolver(configure=False)
     # Default to Google DNS
-    resolver.nameservers = ['8.8.8.8', '8.8.4.4']
+    resolver.nameservers = ["8.8.8.8", "8.8.4.4"]
 
     try:
-        for answer in resolver.resolve(domain, 'A').response.answer:
+        for answer in resolver.resolve(domain, "A").response.answer:
             for item in answer:
                 if item.rdtype == dns.rdatatype.A:
                     addrs.append(item.address)
@@ -19,7 +19,7 @@ def dns_resolve(domain: str) -> list:
         pass
 
     try:
-        for answer in resolver.resolve(domain, 'AAAA').response.answer:
+        for answer in resolver.resolve(domain, "AAAA").response.answer:
             for item in answer:
                 if item.rdtype == dns.rdatatype.AAAA:
                     addrs.append(item.address)

@@ -8,6 +8,7 @@ import shlex
 import inspect
 
 import helpers
+
 helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 import chatcommands
 
@@ -21,6 +22,7 @@ def utility(name, description):
         global utilities
         utilities[name] = (description, func)
         return func
+
     return wrapper
 
 
@@ -40,7 +42,10 @@ def util_help():
     cmds = [(n, v[0], v[1]) for n, v in utilities.items()]
     maxlen = max([len(x[0]) for x in cmds])
     template = "  {{:{}}}  {{}}".format(maxlen)
-    print("List of available commands:\n" + "\n".join([template.format(n, d) for n, d, f in cmds]))
+    print(
+        "List of available commands:\n"
+        + "\n".join([template.format(n, d) for n, d, f in cmds])
+    )
 
 
 def main_start_interactive():
@@ -48,7 +53,7 @@ def main_start_interactive():
         import readline
     except ImportError:
         pass
-    print("Smokey utility\nType \"help\" for a list of commands", file=sys.stderr)
+    print('Smokey utility\nType "help" for a list of commands', file=sys.stderr)
 
 
 def main_loop(args):

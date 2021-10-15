@@ -4,6 +4,7 @@
 # Analysis script for bodyfetcher queue timings. Call from the command line using Python 3 in the pickles directory.
 
 import os.path
+
 # noinspection PyPep8Naming
 import pickle
 import warnings
@@ -14,20 +15,26 @@ def main():
     queue_data = {}
     found_timing = False
     if os.path.isfile("bodyfetcherQueueTimings.p"):
-        warnings.warn("Timing data in pickle format is deprecated; use the plain text format instead.",
-                      DeprecationWarning)
+        warnings.warn(
+            "Timing data in pickle format is deprecated; use the plain text format instead.",
+            DeprecationWarning,
+        )
         found_timing = True
         try:
             with open("bodyfetcherQueueTimings.p", "rb") as f:
                 queue_data = pickle.load(f)
         except EOFError:
-            print("Hit EOFError while reading file. Smokey handles this by deleting the file.")
+            print(
+                "Hit EOFError while reading file. Smokey handles this by deleting the file."
+            )
             resp = input("Delete? (y/n)").lower()
             if resp == "y":
                 os.remove("bodyfetcherQueueTimings.p")
     if os.path.isfile("bodyfetcherQueueTimings.txt"):
         found_timing = True
-        with open("bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8") as stat_file:
+        with open(
+            "bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8"
+        ) as stat_file:
             for stat_line in stat_file:
                 site, time_str = stat_line.split(" ", 1)
                 time_in_queue = float(time_str)
@@ -52,9 +59,21 @@ def main():
             min98 = max(mean - 2 * stddev, min(times))
             max98 = min(mean + 2 * stddev, max(times))
 
-            print("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}"
-                  .format(site.split(".")[0], min(times), max(times), mean, q1, median,
-                          q3, stddev, len(times), min98, max98))
+            print(
+                "{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}".format(
+                    site.split(".")[0],
+                    min(times),
+                    max(times),
+                    mean,
+                    q1,
+                    median,
+                    q3,
+                    stddev,
+                    len(times),
+                    min98,
+                    max98,
+                )
+            )
 
     else:
         print("bodyfetcherQueueTimings.txt doesn't exist. No data to analyse.")

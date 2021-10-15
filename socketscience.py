@@ -50,8 +50,8 @@ class SocketScience:
             SocketScience.handle(decoded)
 
         else:
-            log('warn', 'SocketScience received malformed direct message')
-            log('debug', content)
+            log("warn", "SocketScience received malformed direct message")
+            log("debug", content)
 
     @classmethod
     def register(cls, prop, cb):
@@ -69,25 +69,42 @@ class SocketScience:
 
         if "metasmoke_state" in content:
             if content["metasmoke_state"] == "down":
-                log('info', "{} says metasmoke is down, switching to active ping monitoring."
-                            .format(content["location"]))
-                chatcommunicate.tell_rooms_with("debug", "{} says metasmoke is down,".format(content["location"]) +
-                                                         " switching to active ping monitoring.")
+                log(
+                    "info",
+                    "{} says metasmoke is down, switching to active ping monitoring.".format(
+                        content["location"]
+                    ),
+                )
+                chatcommunicate.tell_rooms_with(
+                    "debug",
+                    "{} says metasmoke is down,".format(content["location"])
+                    + " switching to active ping monitoring.",
+                )
                 # This is an exception, to prevent circular import.
                 # Other classes should not do the same. Always use Metasmoke.ms_down(). (20 May 2020)
                 GlobalVars.MSStatus.set_down()
                 Tasks.later(SocketScience.check_recent_pings, after=90)
 
             if content["metasmoke_state"] == "up":
-                log('info', '{} says metasmoke is up, disabling ping monitoring.'.format(content["location"]))
-                chatcommunicate.tell_rooms_with("debug", "{} says metasmoke is up,".format(content["location"]) +
-                                                         " disabling ping monitoring.")
+                log(
+                    "info",
+                    "{} says metasmoke is up, disabling ping monitoring.".format(
+                        content["location"]
+                    ),
+                )
+                chatcommunicate.tell_rooms_with(
+                    "debug",
+                    "{} says metasmoke is up,".format(content["location"])
+                    + " disabling ping monitoring.",
+                )
                 # This is an exception, to prevent circular import.
                 # Other classes should not do the same. Always use Metasmoke.ms_up(). (20 May 2020)
                 GlobalVars.MSStatus.set_up()
 
         if "ping" in content:
-            cls._pings.append({"timestamp": content["ping"], "location": content["location"]})
+            cls._pings.append(
+                {"timestamp": content["ping"], "location": content["location"]}
+            )
             if cls._switch_task is not None:
                 cls._switch_task.cancel()
 
@@ -106,5 +123,8 @@ class SocketScience:
     @staticmethod
     def switch_to_active():
         GlobalVars.standby_mode = False
-        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " entering autonomous failover.",
-                                        notify_site="/failover")
+        chatcommunicate.tell_rooms_with(
+            "debug",
+            GlobalVars.location + " entering autonomous failover.",
+            notify_site="/failover",
+        )

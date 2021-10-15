@@ -27,5 +27,4 @@ class Client(client.Client):
         self.last_activity = None
 
     def get_room(self, room_id, **attrs_to_set):
-        return self._get_and_set_deduplicated(
-            Room, room_id, self._rooms, attrs_to_set)
+        return self._get_and_set_deduplicated(Room, room_id, self._rooms, attrs_to_set)
