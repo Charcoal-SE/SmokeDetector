@@ -33779,3 +33779,4 @@
 1634402270	cigien	shopmeviet\.vn
 1634404711	cigien	bayoumy
 1634409567	cigien	craftbeerjerky\.com
+1634409593	cigien	craftbeerjerky(?!\.com)
