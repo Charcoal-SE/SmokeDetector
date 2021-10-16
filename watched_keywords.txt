@@ -33780,3 +33780,4 @@
 1634404711	cigien	bayoumy
 1634409567	cigien	craftbeerjerky\.com
 1634409593	cigien	craftbeerjerky(?!\.com)
+1634420906	cigien	luveurpet\.com
