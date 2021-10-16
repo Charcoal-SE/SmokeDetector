@@ -33778,3 +33778,4 @@
 1634400940	cigien	d(?:octo)?r[\W_]*+avro
 1634402270	cigien	shopmeviet\.vn
 1634404711	cigien	bayoumy
+1634409567	cigien	craftbeerjerky\.com
