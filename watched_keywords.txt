@@ -33776,3 +33776,4 @@
 1634400836	cigien	printerdeets\.com
 1634400910	cigien	dravro21spirit(?:@gmail\.com)?
 1634400940	cigien	d(?:octo)?r[\W_]*+avro
+1634402270	cigien	shopmeviet\.vn
