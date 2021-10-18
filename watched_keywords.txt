@@ -33802,3 +33802,4 @@
 1634532124	tripleee	cruise[\W_]*+reservation[\W_]*+system
 1634537966	Ryan M	supertopblog\.com
 1634538004	Ryan M	trungtamtinhocthaibinh\.com
+1634541925	tripleee	(?-i:^steve evans$)
