@@ -1586,3 +1586,6 @@ items:
 - comment: two different domains weirdly also announce nonexistent temp.secureserver.net.
   ns: cdns.ovh.net.
 - ns: liquidweb.com.
+- ns:
+  - now1.dns.com.
+  - now2.dns.com.
