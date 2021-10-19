@@ -2588,5 +2588,11 @@ create_rule("potentially bad keyword in {}",
             all=False, sites=["politics.stackexchange.com", "politics.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=1)
+# Worldbuilding: specific content
+create_rule("potentially bad keyword in {}",
+            r"\bl[\W_]*+dut?ch\b|/a/214453\b",
+            all=False, sites=["worldbuilding.stackexchange.com", "worldbuilding.meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=93, max_score=21)
 
 FindSpam.reload_blacklists()
