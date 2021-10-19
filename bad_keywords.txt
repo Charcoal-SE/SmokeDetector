@@ -2503,7 +2503,7 @@ Village[\W_]*+Talkies
 nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 social[\W_]*+prachar(?!\.com(?<=socialprachar\.com))
 Gary Swiercz Chicago
-download it (?:right )?now and check this out for yourself(?#photo copyright scam)
+download it (?:right )?now and (?:check this out for yourself|follow the instructions to fix the issue)(?#photo copyright scam)
 adm[\W_]*+sneezeguards
 fiverrcpa
 green[\W_]*+ape[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|ie)|oil|\d++|[\da-f]{5,}+)s?)*
