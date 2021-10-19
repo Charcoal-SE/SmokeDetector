@@ -33846,3 +33846,4 @@
 1634668553	Jeff Schaller	kodeclik\.com
 1634671587	cigien	cybersecurityresearch\.tech
 1634671791	cigien	new[\W_]*+age[\W_]*+world[\W_]*+school(?!\.com(?<=newageworldschool\.com))
+1634681781	Makyen	(?-i:pELrw9P5ywM)(?#YouTube)
