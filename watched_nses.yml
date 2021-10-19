@@ -373,6 +373,9 @@ items:
   - cheryl.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
+  - chin.ns.cloudflare.com.
+  - rocky.ns.cloudflare.com.
+- ns:
   - chip.ns.cloudflare.com.
   - cruz.ns.cloudflare.com.
 - ns:
