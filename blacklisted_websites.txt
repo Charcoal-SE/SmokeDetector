@@ -4046,7 +4046,7 @@ bestessaywritingservicereview(?# sites.google.com)
 tutorsindia\.com
 legalwiser\.in
 homify\.com
-(?:firebase)?storage.googleapis.com/[^\s"<]*+(?=[\w\W]{0,500}\b(?:DMCA|infringed)\b)
+(?:firebase)?storage.googleapis.com/[^\s"<]*+(?=[\w\W]{0,1500}<p>\d\d?/\d\d?/\d{4}</p>$)
 esgenv\.com
 jobsatags\.com
 airtviptv\.shop
