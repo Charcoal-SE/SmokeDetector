@@ -22468,7 +22468,6 @@
 1598215563	ArtOfCode	(?-i:cZzsspvI1A8)(?# youtube)
 1598215580	ArtOfCode	ywbawa(?:@gmail\.com)?
 1598215597	ArtOfCode	dumbshits?
-1598215611	ArtOfCode	patentediguidaitalianaonline\.com
 1598245244	tripleee	corywestropp\.com
 1598249405	tripleee	[\w-]*jammer[\w-]*\.com?(?<!\bjammer-mart\.com)
 1598254328	Mast	electricsmokeres\.com
