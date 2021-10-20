@@ -33862,5 +33862,4 @@
 1634720307	Ryan M	vantagepointx\.com
 1634723290	Ryan M	cosmetic[\W_]*+boxes
 1634729139	tripleee	ultimateleather\.pk
-1634733067	tripleee	acumatica
 1634733094	tripleee	tayana[\W_]*+solutions
