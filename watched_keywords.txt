@@ -9653,7 +9653,6 @@
 1557898155	Nisse Engström	llsi\.com
 1557901645	Nisse Engström	worldvaping\.com
 1557902288	Nisse Engström	nitdata\.com
-1557910083	Shree	scanningandindexing\.com
 1557912590	tripleee	anzhuozhuan\.com
 1557919381	tripleee	dauto\.co\.in
 1557920217	Byte Commander	tvisha\.com
