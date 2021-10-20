@@ -32118,7 +32118,6 @@
 1629256290	cigien	fxtrades\.options(?:@gmail\.com)?
 1629257008	cigien	onlist\.id
 1629258475	Ryan M	pakistanconstitutionlaw\.com
-1629262763	tripleee	17 USC Sec\.? 101 et seq\.?
 1629265827	Ryan M	dissertationcapital\.com
 1629266703	tripleee	(?-i:^fennng jo$)
 1629266724	tripleee	(?-i:^Phone Agent 007$)

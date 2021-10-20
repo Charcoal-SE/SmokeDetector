@@ -2560,3 +2560,4 @@ m[\W_]*+o[\W_]*+r[\W_]*+g[\W_]*+a[\W_]*+n[\W_]*+j[\W_]*+i[\W_]*+m[\W_]*+c[\W_]*+
 rhinox[\W_]*+usa(?!\.com(?<=rhinoxusa\.com))
 d(?:octo)?r[\W_]*+uguel
 greatvampirelord1(?:@gmail\.com)?
+17 USC Sec\.? 101 et seq
