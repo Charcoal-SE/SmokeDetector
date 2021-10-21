@@ -523,3 +523,4 @@ williamriver
 (?-i:^Reach360 Digital$)
 (?-i:^ruby dav$)
 ^nandhini\W?sharemarket$
+(?-i:^thearticlereview$)
