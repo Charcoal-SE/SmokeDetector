@@ -33894,3 +33894,4 @@
 1634823718	Ollie	mdaltd\.ca
 1634824283	Ollie	whoopi-goldberg-cbd\.wixsite\.com
 1634829242	Makyen	tenagemechis(?:@gmail\.com)?
+1634829263	Makyen	(?-i:lalise\.yisihak)(?#facebook.com)
