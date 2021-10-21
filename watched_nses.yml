@@ -1556,25 +1556,30 @@ items:
 - ns: epizy.com.
 - ns: hostingmadeeasy.com.
 - ns:
-  - ns-1061.awsdns-04.org.
-  - ns-107.awsdns-13.com.
-  - ns-1845.awsdns-38.co.uk.
-  - ns-722.awsdns-26.net.
-- ns:
-  - ns-1508.awsdns-60.org.
-  - ns-1721.awsdns-23.co.uk.
-  - ns-310.awsdns-38.com.
-  - ns-636.awsdns-15.net.
-- ns:
   - ns-1.awsdns-00.com.
   - ns-1217.awsdns-24.org.
   - ns-1920.awsdns-48.co.uk.
   - ns-841.awsdns-41.net.
 - ns:
+  - ns-1061.awsdns-04.org.
+  - ns-107.awsdns-13.com.
+  - ns-1845.awsdns-38.co.uk.
+  - ns-722.awsdns-26.net.
+- ns:
   - ns-1208.awsdns-23.org.
   - ns-1606.awsdns-08.co.uk.
   - ns-452.awsdns-56.com.
   - ns-533.awsdns-02.net.
+- ns:
+  - ns-1344.awsdns-40.org.
+  - ns-1729.awsdns-24.co.uk.
+  - ns-6.awsdns-00.com.
+  - ns-934.awsdns-52.net.
+- ns:
+  - ns-1508.awsdns-60.org.
+  - ns-1721.awsdns-23.co.uk.
+  - ns-310.awsdns-38.com.
+  - ns-636.awsdns-15.net.
 - ns: webhostingbuzz.com.
 - ns: symbolhost.com.
 - ns: w2iserver.com.
