@@ -33900,3 +33900,4 @@
 1634839638	tripleee	sambridhhi\.com
 1634843339	Makyen	necessityreview\.com
 1634844366	Makyen	halfort[\W_]*+medical(?!\.com(?<=halfortmedical\.com))(?:[\W_]*+(?:billing|seo|\d++|[\da-f]{5,}+)s?)*
+1634844385	Makyen	halfortmedical\.com
