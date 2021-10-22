@@ -33904,4 +33904,3 @@
 1634847193	cigien	theclasstakers\.com
 1634867006	cigien	(?-i:2XvlnkI)(?#bit.ly)
 1634876340	cigien	milwaukeesurveyors\.com
-1634877645	Ryan M	crop[\W_]*+king[\W_]*+seeds
