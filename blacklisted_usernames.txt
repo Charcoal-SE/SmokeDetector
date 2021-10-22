@@ -524,3 +524,4 @@ williamriver
 (?-i:^ruby dav$)
 ^nandhini\W?sharemarket$
 (?-i:^thearticlereview$)
+(?-i:^andystuart$)
