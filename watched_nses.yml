@@ -409,6 +409,9 @@ items:
   - chuck.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
+  - clay.ns.cloudflare.com.
+  - gail.ns.cloudflare.com.
+- ns:
   - cleo.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
