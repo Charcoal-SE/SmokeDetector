@@ -33976,3 +33976,4 @@
 1635150772	tripleee	1960tips\.com
 1635150800	tripleee	(?-i:^Maria Cleh$)
 1635152490	Makyen	tasnimnews\.com
+1635153421	tripleee	logintutos\.com
