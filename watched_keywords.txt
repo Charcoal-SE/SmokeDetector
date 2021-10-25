@@ -33992,3 +33992,4 @@
 1635172777	Spevacus	wolf-dumps\.club
 1635174373	tripleee	(?-i:^click$)
 1635175623	cigien	grapecat\.com
+1635175930	cigien	ustaxidmeti\.az
