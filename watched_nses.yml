@@ -891,6 +891,9 @@ items:
   - kirk.ns.cloudflare.com.
   - lara.ns.cloudflare.com.
 - ns:
+  - kirk.ns.cloudflare.com.
+  - meg.ns.cloudflare.com.
+- ns:
   - koa.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
