@@ -33995,3 +33995,4 @@
 1635175930	cigien	ustaxidmeti\.az
 1635176014	cigien	cyberethiicalhacker(?:@gmail\.com)?
 1635176386	Spevacus	redqueen\.in
+1635178076	tripleee	(?-i:^ishita$)
