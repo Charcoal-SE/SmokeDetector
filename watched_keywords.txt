@@ -33974,3 +33974,4 @@
 1635145543	Glorfindel	enterex\.com
 1635148128	tripleee	mpmstore24\.com
 1635150772	tripleee	1960tips\.com
+1635150800	tripleee	(?-i:^Maria Cleh$)
