@@ -355,6 +355,9 @@ items:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - carla.ns.cloudflare.com.
+  - melnicoff.ns.cloudflare.com.
+- ns:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
