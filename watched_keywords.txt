@@ -33990,3 +33990,4 @@
 1635172564	Spevacus	blkmaxhospital\.com
 1635172593	Spevacus	blkhospital\.com
 1635172777	Spevacus	wolf-dumps\.club
+1635174373	tripleee	(?-i:^click$)
