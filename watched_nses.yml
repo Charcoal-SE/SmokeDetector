@@ -849,6 +849,9 @@ items:
   - justin.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - kai.ns.cloudflare.com.
+  - lola.ns.cloudflare.com.
+- ns:
   - kami.ns.cloudflare.com.
   - maxim.ns.cloudflare.com.
 - ns:
