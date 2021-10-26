@@ -34018,3 +34018,4 @@
 1635239060	tripleee	femin[\W_]*+plus
 1635239225	tripleee	bangbimai\.ac\.th
 1635243148	tripleee	Here's the link to the doc, check it out:
+1635243207	tripleee	magnut\.es
