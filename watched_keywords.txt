@@ -34009,3 +34009,4 @@
 1635232610	cigien	fontchanger\.top
 1635232632	cigien	sarc\.in
 1635232647	cigien	vishyat\.com
+1635233429	tripleee	(?-i:^ssg$)
