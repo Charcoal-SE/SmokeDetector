@@ -24298,7 +24298,6 @@
 1604196108	Ryan M	sanwellsr2fiwriu\.ru
 1604196125	Ryan M	sanwells\.su
 1604204455	Makyen	(?-i:UC_D9Ik6snkhkxEIMJJlMR5w)(?#YouTube channel)
-1604228477	rene	friendlycaptcha\.com
 1604237405	Nisse Engström	newsotime\.com
 1604243121	Jeff Schaller	theglobalkos
 1604243142	Jeff Schaller	Leroysteckler
