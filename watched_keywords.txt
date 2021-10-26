@@ -34012,3 +34012,4 @@
 1635233429	tripleee	(?-i:^ssg$)
 1635236276	tripleee	electricianofasheville\.com
 1635238320	Makyen	(?-i:yUClv)
+1635238890	tripleee	techbuzz544\.blogspot
