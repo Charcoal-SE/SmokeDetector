@@ -1147,7 +1147,8 @@ items:
   disable: true
   ns: shared-host.org.
 - ns: web.com.ph.
-- ns:
+- comment: low yield, disabling after 115/293
+  ns:
   - ns01.domaincontrol.com.
   - ns02.domaincontrol.com.
 - comment: FPs, don't blacklist
