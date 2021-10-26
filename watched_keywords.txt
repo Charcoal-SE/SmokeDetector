@@ -34003,3 +34003,4 @@
 1635227474	tripleee	rawat[\W_]*+nimisha
 1635227812	Ryan M	temperhosting\.co
 1635229559	Makyen	cbdkickessentialoil\.wixsite\.com
+1635230223	Ryan M	clarkia[\W_]*+home(?!\.com(?<=clarkiahome\.com))
