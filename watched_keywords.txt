@@ -34006,3 +34006,4 @@
 1635230223	Ryan M	clarkia[\W_]*+home(?!\.com(?<=clarkiahome\.com))
 1635230243	Ryan M	clarkiahome\.com
 1635232588	cigien	cpj\.edu\.in
+1635232610	cigien	fontchanger\.top
