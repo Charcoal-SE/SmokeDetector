@@ -34004,3 +34004,4 @@
 1635227812	Ryan M	temperhosting\.co
 1635229559	Makyen	cbdkickessentialoil\.wixsite\.com
 1635230223	Ryan M	clarkia[\W_]*+home(?!\.com(?<=clarkiahome\.com))
+1635230243	Ryan M	clarkiahome\.com
