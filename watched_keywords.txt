@@ -23408,7 +23408,6 @@
 1600940048	Mast	mobilepricebd\.co
 1600944947	tripleee	taninsima\.com
 1600945798	Mast	zenpens
-1600947846	tripleee	intelicle(?!\.com)(?:[\W_]*+ltd)?
 1600947991	Jeff Schaller	chandakagro\.com
 1600960565	tripleee	levam\.net
 1600963056	tripleee	tarahionline\.com
