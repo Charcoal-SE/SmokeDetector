@@ -28385,7 +28385,6 @@
 1617194776	Spevacus	coupongrabber\.org
 1617195268	Spevacus	vision-tools\.com
 1617199087	Spevacus	(?-i:XIbMyNnkPfU)(?#youtu.be)
-1617208211	cigien	24dollsde\.com
 1617208388	cigien	activatenortonsetupinfo\.com
 1617208402	cigien	activatenortonsetupinfo(?!\.com)
 1617208715	cigien	innodatatics\.ai
