@@ -34036,3 +34036,4 @@
 1635301056	Spevacus	riverfronttimes\.com
 1635310486	Makyen	thewritefirst\.com
 1635312366	Cody Gray	tamiltoken\.org
+1635312384	Cody Gray	tamil[\W_]*crypto
