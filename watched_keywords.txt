@@ -34046,3 +34046,4 @@
 1635321894	Cody Gray	marijuanaseeds\.com
 1635321930	Cody Gray	marijuana[\W_]*+seeds(?!\.com(?<=marijuanaseeds\.com))
 1635322320	tripleee	jokers4D
+1635322387	tripleee	legendsolicitors\.org
