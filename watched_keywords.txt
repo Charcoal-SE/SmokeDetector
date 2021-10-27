@@ -34048,3 +34048,4 @@
 1635323249	Cody Gray	nestack\.com
 1635323285	Cody Gray	nestack(?!\.com(?<=nestack\.com))
 1635326422	tripleee	intelicle(?<!(?-i:^Intelicle(?= Ltd$)))(?!\.com)(?:[\W_]*+ltd)?
+1635326443	tripleee	(?-i:^Intelicle Ltd$)
