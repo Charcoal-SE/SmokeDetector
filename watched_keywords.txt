@@ -34053,3 +34053,4 @@
 1635329972	tripleee	wsaindia\.net
 1635334070	Xnero	solar-mems\.com
 1635333716	Xnero	ibtenquiry(?:@gmail\.com)?
+1635339156	Jeff Schaller	diyarbakirtasima\.com
