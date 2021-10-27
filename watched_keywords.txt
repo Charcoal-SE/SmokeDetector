@@ -34039,3 +34039,4 @@
 1635312384	Cody Gray	tamil[\W_]*crypto
 1635314315	tripleee	greatlearning\.in
 1635318263	Makyen	community\.gaeamobile\.com
+1635318278	Makyen	genericaura\.com
