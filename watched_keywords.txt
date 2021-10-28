@@ -34068,3 +34068,4 @@
 1635403041	tripleee	auto[\W_]*+martz
 1635405029	tripleee	surbhi[\W_]*+nahta(?<!^(?-i:^Surbhi Nahta$))
 1635405627	Cody Gray	funsport\.co\.in
+1635405687	Cody Gray	funsport(?!\.co\.in(?<=funsport\.co\.in))
