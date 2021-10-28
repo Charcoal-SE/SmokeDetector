@@ -80,6 +80,9 @@ items:
   - noah.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
 - ns:
+  - porter.ns.cloudflare.com.
+  - vita.ns.cloudflare.com.
+- ns:
   - stan.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:
