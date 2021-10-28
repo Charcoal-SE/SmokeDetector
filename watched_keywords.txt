@@ -19567,7 +19567,6 @@
 1588320730	Makyen	oldcrowhempco\.com
 1588321108	Makyen	opendllfile\.co
 1588327006	Makyen	sabflix\.com
-1588327937	Makyen	(?-i:^Amna$)
 1588329179	Glorfindel	ninistutor\.com
 1588335559	Nisse Engström	thecakedelivery\.com
 1588339591	Xnero	digitalsigner\.pulkitsoft\.com
