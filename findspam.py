@@ -1867,7 +1867,6 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     r"\brsgold",
     "packers.{0,15}(?:movers|logistic)(?:.{0,25}</a>)",
     "(?:brain|breast|male|penile|penis)[- ]?(?:enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
-    " %[au]h ",
     "tapsi ?sarkar",
 
     r"(?:"
