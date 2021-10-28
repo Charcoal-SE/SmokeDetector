@@ -34098,3 +34098,4 @@
 1635428860	Ollie	finbeet\.com
 1635429151	cigien	aptugo\.com
 1635429209	Ryan M	aptugo(?!\.com)
+1635433070	Spevacus	pandemia\.site
