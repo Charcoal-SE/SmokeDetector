@@ -34073,3 +34073,4 @@
 1635407249	tripleee	mj[\W_]*+seeds
 1635408980	tripleee	learnbay
 1635409397	tripleee	(?-i:^ElinaFransis$)
+1635410098	tripleee	thearchitectcoach\.com
