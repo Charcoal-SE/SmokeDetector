@@ -991,6 +991,9 @@ items:
   - seth.ns.cloudflare.com.
 - ns:
   - lloyd.ns.cloudflare.com.
+  - naomi.ns.cloudflare.com.
+- ns:
+  - lloyd.ns.cloudflare.com.
   - phoenix.ns.cloudflare.com.
 - ns:
   - logan.ns.cloudflare.com.
