@@ -526,3 +526,4 @@ williamriver
 (?-i:^thearticlereview$)
 (?-i:^andystuart$)
 (?-i:^Anna Thomas$)
+(?-i:^Huhnkie Lee$)
