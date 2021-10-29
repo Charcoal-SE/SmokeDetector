@@ -1290,6 +1290,9 @@ items:
 - ns:
   - ns8021.hostgator.com.
   - ns8022.hostgator.com.
+- ns:
+  - ns8541.hostgator.com.
+  - ns8542.hostgator.com.
 - ns: hostspicy.com.
 - ns: ewebguru.com.
 - ns: dnsowl.com.
