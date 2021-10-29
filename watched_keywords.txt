@@ -34123,3 +34123,4 @@
 1635507074	tripleee	decmastercleaning\.com
 1635507095	tripleee	(?-i:7AVTbMe4LCDM5SPL8)(?# google maps)
 1635515718	Ollie	phonexa\.com
+1635518525	Ollie	minecraftcolorcodes\.info
