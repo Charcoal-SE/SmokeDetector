@@ -34146,3 +34146,4 @@
 1635585339	Nisse Engström	minecraftcirclegenerator\.info
 1635585365	Nisse Engström	spacebarcounter\.info
 1635586603	Glorfindel	fontsbee\.com
+1635592727	Cody Gray	Jay[\W_]*Shinde(?!\.com(?<=jayshinde\.com))
