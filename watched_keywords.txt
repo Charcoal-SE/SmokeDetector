@@ -34149,3 +34149,4 @@
 1635592727	Cody Gray	Jay[\W_]*Shinde(?!\.com(?<=jayshinde\.com))
 1635597861	Cody Gray	theorein\.org
 1635600928	cigien	reservationsdeltaairlines\.org
+1635620475	cigien	infohifi\.com
