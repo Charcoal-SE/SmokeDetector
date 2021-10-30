@@ -34135,3 +34135,4 @@
 1635544038	cigien	algo\.id
 1635551939	Ollie	kooralivehd\.xyz
 1635562652	cigien	leather-genix\.com
+1635563243	Makyen	leather[\W_]*+genix(?!\.com(?<=leather-genix\.com))
