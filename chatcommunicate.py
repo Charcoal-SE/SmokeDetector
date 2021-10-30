@@ -98,6 +98,18 @@ def init(username, password, try_cookies=True):
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
+                    if exc_type.__name__ == 'LoginError' and str(exc_obj) == 'fkey input not found':
+                        # ChatExchange didn't find the `fkey` <input> in the SE login page. Under most operating
+                        # conditions, this means that we've either lost connectivity to SE entirely or SE
+                        # is in read-only mode and isn't accepting login attempts. Under those conditions,
+                        # there's nothing which we or SD can do other than wait for SE to resolve the issue.
+                        # So, instead of spinning the CPU hard in order to retry at the maximum rate, we delay a bit.
+                        # The situations where the problem is on our end rather than on SE's end tend
+                        sleep_time = 30 * (retry + 1)
+                        log('warning', 'Login to SE appears unavailable. Can be caused by: SD config issue,' +
+                            ' bad network connection, or Stack Exchange is down/read-only.' +
+                            ' Sleeping for {} seconds.'.format(sleep_time))
+                        time.sleep(sleep_time)
             else:
                 raise Exception("Failed to log into " + site + ", max retries exceeded")
 
