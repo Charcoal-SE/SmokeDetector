@@ -101,8 +101,8 @@ def init(username, password, try_cookies=True):
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
                     log('debug', 'chat.{}: Falling back to credential-based login'.format(site))
-                    del cookies[site]
-                    datahandling.dump_cookies()
+                    # Instead of deleting the cookies, start with a clean slate of a new client.
+                    client = Client(site)
 
         if not logged_in:
             for retry in range(3):
