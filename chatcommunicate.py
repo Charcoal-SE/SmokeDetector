@@ -80,9 +80,23 @@ def init(username, password, try_cookies=True):
                 cookies = GlobalVars.cookies
                 try:
                     if site in cookies and cookies[site] is not None:
-                        client.login_with_cookie(cookies[site])
-                        logged_in = True
-                        log('debug', 'chat.{}: Logged in using cached cookies'.format(site))
+                        try:
+                            # This implements a quick login to only chat using the existing cookies. It doesn't
+                            # require accessing main SE sites, so should be available when SE is in read-only mode.
+                            # Ideally, we'll update ChatExchange with something similar.
+                            client._br.session.cookies.update(cookies[site])
+                            # client.get_me() will raise an exception if the cookies don't work.
+                            me = client.get_me()
+                            if me.id > 0:
+                                client.logged_in = True
+                                logged_in = True
+                                log('debug', 'chat.{}: Logged in to chat only using cached cookies'.format(site))
+                        except Exception:
+                            # This is a fallback using the ChatExchange functionality we've been using for a long time.
+                            log('debug', 'chat.{}: chat-only login failed. Falling back to normal cookies'.format(site))
+                            client.login_with_cookie(cookies[site])
+                            logged_in = True
+                            log('debug', 'chat.{}: Logged in using cached cookies'.format(site))
                 except LoginError as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
