@@ -2362,3 +2362,18 @@ def dnscheck(domain) -> str:
                    "{}".format(domain, sdres.rrset)
 
     return response
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+@command(str, privileged=True)
+def no_se_websocket_activity(what):
+    """
+    Ignore or monitor when there is no SE WebSocket activity
+    :param what:
+    :return: A string
+    """
+
+    with GlobalVars.ignore_no_se_websocket_activity_lock:
+        GlobalVars.ignore_no_se_websocket_activity = what == 'ignore'
+        ignoring_or_monitoring = "ignoring" if GlobalVars.ignore_no_se_websocket_activity else "monitoring"
+    return "Now {} when there's no Stack Exchange WebSocket activity.".format(ignoring_or_monitoring)

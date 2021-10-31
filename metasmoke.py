@@ -673,7 +673,11 @@ class Metasmoke:
             if GlobalVars.PostScanStat.get_stat() == Metasmoke.scan_stat_snapshot:
                 # There's been no actvity since the last ping.
                 Metasmoke.status_pings_since_scan_activity += 1
-                if Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REBOOT:
+                with GlobalVars.ignore_no_se_websocket_activity_lock:
+                    ignore_no_se_websocket_activity = GlobalVars.ignore_no_se_websocket_activity
+                if ignore_no_se_websocket_activity:
+                    pass
+                elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REBOOT:
                     # Assume something is very wrong. Report to debug rooms and go into standby mode.
                     reboot_or_standby("reboot")
                 elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_STANDBY:

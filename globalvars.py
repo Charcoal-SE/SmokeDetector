@@ -129,6 +129,9 @@ class GlobalVars:
     no_se_activity_scan = False
     no_deletion_watcher = False
 
+    ignore_no_se_websocket_activity_lock = threading.Lock()
+    ignore_no_se_websocket_activity = False
+
     api_request_lock = threading.Lock()  # Get this lock before making API requests
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
 
