@@ -187,6 +187,9 @@ items:
   - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - ara.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
   - aragorn.ns.cloudflare.com.
   - may.ns.cloudflare.com.
 - ns:
