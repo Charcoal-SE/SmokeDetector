@@ -2563,3 +2563,4 @@ greatvampirelord1(?:@gmail\.com)?
 17 U\.?S\.?C\.? Sec(?:\.|tion)? 101 et seq
 cybergods116(?:@gmail\.com)?
 allianze[\W_]*+bpo[\W_]*+services(?!\.com(?<=allianzebposervices\.com))
+drlucasspelltemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
