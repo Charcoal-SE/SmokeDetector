@@ -31528,7 +31528,6 @@
 1627386076	Ryan M	palmskys\.com
 1627386205	Ryan M	alettavanzon(?:@gmail\.com)?
 1627386245	Ryan M	hamedsaberian78
-1627387499	tripleee	(?-i:^Sarfaraz$)
 1627387631	Ryan M	certification-training
 1627388619	Ryan M	vpn[\W_]*+pro
 1627388840	tripleee	(?-i:^Code Leaks$)
