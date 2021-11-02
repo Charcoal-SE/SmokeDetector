@@ -34195,3 +34195,4 @@
 1635841287	tripleee	technofibre\.com
 1635841333	Ryan M	technofibredubai\.com
 1635841361	tripleee	techno[\W_]*+fibre(?!(?:dubai)?\.com)
+1635841593	Ryan M	gvoiceus\.com
