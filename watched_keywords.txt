@@ -28911,7 +28911,6 @@
 1619161085	tripleee	ifs[\W_]*+(?:certificat(?:e|ion)s?|affirm(?:ation|ed)|guidelines?|standards?|reviewers?)
 1619161227	tripleee	golowketoreviewsbuy
 1619161318	Makyen	the[\W_]*+green[\W_]*+nursery(?!\.com(?<=thegreennursery\.com))
-1619164547	Makyen	shapemyskills\.in
 1619164569	Makyen	shapemyskills(?!\.in)
 1619166716	tripleee	(?-i:[Jj]ennifer [Ll]orax$)
 1619170474	tripleee	mawazna\.com
