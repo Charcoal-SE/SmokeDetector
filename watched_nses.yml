@@ -136,6 +136,9 @@ items:
   - alla.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
+  - alla.ns.cloudflare.com.
+  - piotr.ns.cloudflare.com.
+- ns:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
