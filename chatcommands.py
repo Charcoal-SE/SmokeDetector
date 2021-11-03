@@ -368,6 +368,9 @@ def do_blacklist(blacklist_type, msg, force=False):
     if regex.search(r"^\s+", pattern):
         other_issues.append("The pattern starts with whitespace.")
 
+    if regex.search(r"blogspot\\.", pattern):
+        other_issues.append("The pattern is a blogspot watch but keeps the TLD, in most cases this should be removed.")
+
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
