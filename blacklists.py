@@ -299,8 +299,10 @@ class YAMLParserNS(YAMLParserCIDR):
                 return False
             try:
                 addr = dns.resolver.resolve(ns, 'a', search=True)
-                log('debug', '{0} resolved to {1}'.format(
-                    ns, ','.join(x.to_text() for x in addr)))
+                # Outputing for every resolved entry makes it harder to find the actual error,
+                # due to being swamped with data in the error output.
+                # log('debug', '{0} resolved to {1}'.format(
+                #     ns, ','.join(x.to_text() for x in addr)))
             except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 if not item.get('pass', None):
                     soa = dns.resolver.resolve(ns, 'soa', search=True)
