@@ -34262,3 +34262,4 @@
 1636025344	Magisch	yoyoworks\.com
 1636029806	Spevacus	foodprocessoronline\.com
 1636032489	Ollie	base64\.ai
+1636033836	Magisch	enterprisearchitecturetool\.blogspot
