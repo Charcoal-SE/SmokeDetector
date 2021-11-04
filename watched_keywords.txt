@@ -34255,3 +34255,4 @@
 1636015666	Magisch	nextlevelrealestate\.ae
 1636016226	Glorfindel	easylogisticsmanagement\.com
 1636017135	tripleee	(?-i:^Leo E Eeo$)
+1636018731	Magisch	adscracker\.com
