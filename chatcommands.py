@@ -2368,7 +2368,7 @@ def dnscheck(domain) -> str:
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, privileged=True)
+@command(str, privileged=True, arity=(0, 1))
 def no_se_websocket_activity(what):
     """
     Ignore or monitor when there is no SE WebSocket activity
