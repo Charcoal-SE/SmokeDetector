@@ -580,6 +580,9 @@ items:
   - ed.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
 - ns:
+  - ed.ns.cloudflare.com.
+  - michelle.ns.cloudflare.com.
+- ns:
   - elinore.ns.cloudflare.com.
   - igor.ns.cloudflare.com.
 - ns:
