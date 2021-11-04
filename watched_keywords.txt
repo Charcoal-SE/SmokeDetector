@@ -25435,7 +25435,6 @@
 1608388801	Cody Gray	gdmedya\.net
 1608393023	cigien	knowledgetweak\.com
 1608411924	cigien	spbo\.news
-1608345949	cigien	wminecraft\.net
 1608382908	Yatin	customroms\.in
 1608416129	Spevacus	neptune\.ai\/blog
 1608437373	Spevacus	freefitdiet\.com
