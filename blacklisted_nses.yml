@@ -100,7 +100,9 @@ items:
 - ns: healthymum.org.
 - ns: escortdomain.net.
 - ns: dnsdomen.com.
-- ns: letter.org.in.
+- comment: no longer in DNS 2021-11-04
+  disable: true
+  ns: letter.org.in.
 - comment: no longer in DNS 2020-04-02
   disable: true
   ns: utecho.com.
