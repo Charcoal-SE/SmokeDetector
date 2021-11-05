@@ -1428,6 +1428,7 @@ items:
 - ns: uberhost.in.
 - ns: hichina.com.
 - ns: pavietnam.vn.
+- ns: pavietnam.net.
 - comment: timeout 2020-04-02
   disable: true
   ns: dns-parking.net.
