@@ -527,3 +527,4 @@ williamriver
 (?-i:^andystuart$)
 (?-i:^Anna Thomas$)
 (?-i:^Huhnkie Lee$)
+(?-i:^klay line$)
