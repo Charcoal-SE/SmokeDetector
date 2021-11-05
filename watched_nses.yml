@@ -742,6 +742,9 @@ items:
   - kate.ns.cloudflare.com.
 - ns:
   - ines.ns.cloudflare.com.
+  - marty.ns.cloudflare.com.
+- ns:
+  - ines.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
   - iris.ns.cloudflare.com.
