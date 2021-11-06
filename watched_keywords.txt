@@ -34305,3 +34305,4 @@
 1636212657	cigien	(?-i:XmgFyk6)(?#discord)
 1636212677	cigien	mathsanew\.com
 1636212991	cigien	docextractor(?!\.com)
+1636225491	cigien	weightfm\.com
