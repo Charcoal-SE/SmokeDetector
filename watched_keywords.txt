@@ -34307,4 +34307,3 @@
 1636212991	cigien	docextractor(?!\.com)
 1636225491	cigien	weightfm\.com
 1636229347	Mast	voodoorpa\.com
-1636229632	Makyen	voodoo[\W_]*+rpa(?!\.com(?<=voodoorpa))
