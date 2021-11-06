@@ -34306,5 +34306,4 @@
 1636212677	cigien	mathsanew\.com
 1636212991	cigien	docextractor(?!\.com)
 1636225491	cigien	weightfm\.com
-1636229301	Mast	VooDoo[\W_]*+RPA
 1636229347	Mast	voodoorpa\.com
