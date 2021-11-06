@@ -34309,3 +34309,4 @@
 1636229347	Mast	voodoorpa\.com
 1636230031	cigien	voodoo[\W_]*+rpa(?!\.com(?<=voodoorpa\.com))
 1636231637	cigien	caluaniemuelearmetalcrushing\.com
+1636231652	cigien	flymedishop\.com
