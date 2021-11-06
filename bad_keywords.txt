@@ -2565,3 +2565,4 @@ cybergods116(?:@gmail\.com)?
 allianze[\W_]*+bpo[\W_]*+services(?!\.com(?<=allianzebposervices\.com))
 drlucasspelltemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 d(?:octo)?r[\W_]*+odudu
+worldbuilding\.stackexchange\.com/a/214453
