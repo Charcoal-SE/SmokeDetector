@@ -34312,3 +34312,4 @@
 1636234854	Makyen	l[\W_]*+dut?ch
 1636254816	cigien	sasquatchstudio\.co
 1636268923	Nisse Engström	shayarihd\.com
+1636271256	Cody Gray	certified-translation\.us
