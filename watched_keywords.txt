@@ -34310,3 +34310,4 @@
 1636231637	cigien	caluaniemuelearmetalcrushing\.com
 1636231652	cigien	flymedishop\.com
 1636234854	Makyen	l[\W_]*+dut?ch
+1636254816	cigien	sasquatchstudio\.co
