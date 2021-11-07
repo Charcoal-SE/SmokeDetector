@@ -34318,3 +34318,4 @@
 1636287963	Mast	bestofkawaii\.com
 1636293342	Jeff Schaller	vasilopita\.com
 1636294846	Cody Gray	mackart1(?:@yahoo\.com)?
+1636299339	Mast	скупка[\W_]*+картриджей
