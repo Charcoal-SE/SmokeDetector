@@ -34343,3 +34343,4 @@
 1636374972	tripleee	codexpace\.blogspot
 1636376285	Magisch	isvpay\.io
 1636377852	tripleee	(?-i:^Monica Geller$)
+1636378991	tripleee	(?-i:^nick mosan$)
