@@ -25189,7 +25189,6 @@
 1607501063	Ryan M	onlinevoicerecorder\.net
 1607501189	Ryan M	freeapkpro\.com
 1607501919	tripleee	usalocksmithinc\.com
-1607504835	Zoe	captchas\.io
 1607513617	tripleee	bookmyflightticket\.com
 1607513801	tripleee	vitaitexpert\.com
 1607514918	tripleee	cpprinter\.com
