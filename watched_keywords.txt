@@ -34327,3 +34327,4 @@
 1636354853	tripleee	couponrovers\.com
 1636357198	tripleee	zantania\.com
 1636357318	tripleee	(?-i:^swarali$)
+1636359772	tripleee	gladwingroup\.com
