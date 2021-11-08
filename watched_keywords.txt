@@ -34342,3 +34342,4 @@
 1636374823	tripleee	g(?:lenn)[\W_]*+prialde
 1636374972	tripleee	codexpace\.blogspot
 1636376285	Magisch	isvpay\.io
+1636377852	tripleee	(?-i:^Monica Geller$)
