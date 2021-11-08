@@ -1675,3 +1675,8 @@ items:
 - ns: clouddnstool.com.
 - ns: supremepanel.com.
 - ns: terabytesserver.com.
+- ns:
+  - ns1cmt.name.com.
+  - ns2gtx.name.com.
+  - ns3fgh.name.com.
+  - ns4ksy.name.com.
