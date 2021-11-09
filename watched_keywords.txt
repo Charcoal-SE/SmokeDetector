@@ -34355,3 +34355,4 @@
 1636441272	tripleee	waist[\W_]*+buster
 1636441552	Ryan M	vipcontentworld\.com
 1636443068	Ryan M	duramaxpvcpanels\.com
+1636443395	Ryan M	securemodapk\.com
