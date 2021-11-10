@@ -34372,3 +34372,4 @@
 1636524812	tripleee	setupampedwireless\.info
 1636524885	tripleee	(?-i:^james anderson$)
 1636524952	tripleee	tp-tplinkwifinet\.com
+1636525519	tripleee	apset-up\.net
