@@ -138,3 +138,6 @@ items:
 - ns:
   - sns1.hostgator.in.
   - sns2.hostgator.in.
+- ns:
+  - sns19.hostgator.in.
+  - sns20.hostgator.in.
