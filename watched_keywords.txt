@@ -34370,3 +34370,4 @@
 1636505820	Ryan M	csharp-sqlconnection\.blogspot
 1636514043	Makyen	taisinhdatang\.vn
 1636524812	tripleee	setupampedwireless\.info
+1636524885	tripleee	(?-i:^james anderson$)
