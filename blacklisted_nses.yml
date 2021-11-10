@@ -132,3 +132,6 @@ items:
 - ns: thesecurededicatedserver.com.
 - ns: cloudnstools.com.
 - ns: supremedns.com.
+- ns:
+  - sns1.hostgator.in.
+  - sns2.hostgator.in.
