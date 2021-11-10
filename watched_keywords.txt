@@ -34369,3 +34369,4 @@
 1636476806	cigien	profitmart(?!\.in)
 1636505820	Ryan M	csharp-sqlconnection\.blogspot
 1636514043	Makyen	taisinhdatang\.vn
+1636524812	tripleee	setupampedwireless\.info
