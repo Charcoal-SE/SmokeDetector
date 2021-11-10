@@ -5152,7 +5152,6 @@
 1535883584	Glorfindel	medliever\W?cbd?
 1535902687	John Militer	bdjobsoccupation\.com
 1535944011	Makyen	info\.agapfinancefunds(?:@gmail\.com)?
-1535944596	Tetsuya Yamamoto	techgyo\.com
 1535950948	iBug	ssla\.co\.uk
 1535954808	Makyen	mytectra\.com
 1535956993	Makyen	marvelcorporate\.co
