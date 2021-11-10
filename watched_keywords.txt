@@ -34380,3 +34380,4 @@
 1636540113	Zoe	brightfutureas\.com
 1636542825	tripleee	plunex\.in
 1636544277	tripleee	petalspreschool\.com
+1636546039	tripleee	amazon[\W_]*+comcode[\W_]*+prime
