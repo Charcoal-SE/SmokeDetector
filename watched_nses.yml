@@ -1401,7 +1401,9 @@ items:
 - ns:
   - ns1.cp-48.bigrockservers.com.
   - ns2.cp-48.bigrockservers.com.
-- ns: md-97.bigrockservers.com.
+- ns: 
+  - ns1.md-97.bigrockservers.com.
+  - ns2.md-97.bigrockservers.com.
 - ns:
   - cns1.bigrock.com.
   - cns2.bigrock.com.
