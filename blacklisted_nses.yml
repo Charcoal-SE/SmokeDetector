@@ -2,6 +2,9 @@ Schema: yaml_ns
 Schema_version: '2019120601'
 items:
 - ns:
+  - ns1.cp-48.bigrockservers.com.
+  - ns2.cp-48.bigrockservers.com.
+- ns:
   - ns1.md-95.bigrockservers.com.
   - ns2.md-95.bigrockservers.com.
 - ns:
