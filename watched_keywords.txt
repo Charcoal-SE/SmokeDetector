@@ -34404,3 +34404,4 @@
 1636638537	cigien	waternify\.com
 1636638626	cigien	online[\W_]*+gambling[\W_]*+hub(?!\.com(?<=onlinegamblinghub\.com))
 1636640175	cigien	objecthut\.com
+1636649392	cigien	jobnetwork24\.com
