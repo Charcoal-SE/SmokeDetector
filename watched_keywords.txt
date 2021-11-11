@@ -34398,3 +34398,4 @@
 1636633211	tripleee	skyline[\W_]*+it[\W_]*+tech(?!\.com)
 1636635580	Spevacus	bookingxml\.com
 1636635783	Spevacus	couponapprove\.com
+1636637749	cigien	modpree\.com
