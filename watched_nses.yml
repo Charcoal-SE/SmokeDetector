@@ -1722,3 +1722,6 @@ items:
   - ns4ksy.name.com.
 - ns: spaceweb.pro.
 - ns: spaceweb.ru.
+- ns:
+  - rs18a.registrar-servers.com.
+  - rs18b.registrar-servers.com.
