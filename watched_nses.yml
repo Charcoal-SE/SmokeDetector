@@ -1140,6 +1140,9 @@ items:
   - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - rose.ns.cloudflare.com.
+  - yew.ns.cloudflare.com.
+- ns:
   - ruth.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
