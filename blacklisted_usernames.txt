@@ -529,3 +529,4 @@ williamriver
 (?-i:^Huhnkie Lee$)
 (?-i:^klay line$)
 (?-i:^Rude Warner$)
+(?-i:^Beack Kendall$)
