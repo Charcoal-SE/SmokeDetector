@@ -34395,3 +34395,4 @@
 1636616657	Glorfindel	learnersleague\.com
 1636624505	Glorfindel	ventprevent\.com
 1636633163	tripleee	skylineittech\.com
+1636633211	tripleee	skyline[\W_]*+it[\W_]*+tech(?!\.com)
