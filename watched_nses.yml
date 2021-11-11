@@ -804,6 +804,9 @@ items:
   - jarred.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - jaxson.ns.cloudflare.com.
+  - zainab.ns.cloudflare.com.
+- ns:
   - jean.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
