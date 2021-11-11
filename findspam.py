@@ -1263,6 +1263,7 @@ def ns_for_url_domain(s, site, nslist):
                     assert ns.endswith('.'),\
                         "Missing final dot on NS entry {0}".format(ns)
             else:
+                assert isinstance(nsentry, str)
                 assert nsentry.endswith('.'),\
                     "Missing final dot on NS entry {0}".format(nsentry)
 
