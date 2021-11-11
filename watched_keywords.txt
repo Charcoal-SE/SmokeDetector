@@ -34390,3 +34390,4 @@
 1636591916	Ryan M	(?-i:^Mark Ingraham$)
 1636601788	Cody Gray	(?-i:UCFZLpIbMp9X7TcOrOwR4eng)(?#YouTube channel)
 1636601822	Cody Gray	warungscore\.com
+1636606226	Cody Gray	amzn\.to/3obNtuk
