@@ -34421,3 +34421,4 @@
 1636704284	cigien	10bestlawnmowers\.com
 1636704472	cigien	newtechapp\.com
 1636709898	tripleee	(?-i:[Mm]y name is [A-Z][a-z]+ from TDS)
+1636713613	tripleee	3t-saudi\.com
