@@ -179,9 +179,6 @@ items:
   - karsyn.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
-  - liz.ns.cloudflare.com.
-- ns:
-  - apollo.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
