@@ -34457,3 +34457,4 @@
 1636926967	cigien	siam[\W_]*+digital[\W_]*+it(?!\.com(?<=siamdigitalit\.com))
 1636927349	cigien	woodworkingclarity\.com
 1636933327	Spevacus	lucketara77(?:@gmail\.com)?
+1636947046	cigien	globalinfocentral\.com
