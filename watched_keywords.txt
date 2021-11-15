@@ -34470,3 +34470,4 @@
 1636973052	tripleee	gsmgateway\.in
 1636974712	tripleee	riverdayspa\.com
 1636975889	tripleee	hsewatch\.com
+1636977070	Jeff Schaller	satisfiedshoes\.com
