@@ -34481,3 +34481,4 @@
 1636990326	cigien	cosmos[\W_]*+immigration(?!\.com(?<=cosmosimmigration\.com))
 1636991015	Ollie	carpenterbhai\.com
 1636991867	Ollie	mytechhood\.net
+1636993560	Makyen	sodep(?#farts in Spanish backwards; used by a troll)
