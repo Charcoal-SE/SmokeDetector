@@ -939,6 +939,9 @@ items:
   - koa.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
+  - kristin.ns.cloudflare.com.
+  - vern.ns.cloudflare.com.
+- ns:
   - kurt.ns.cloudflare.com.
   - nina.ns.cloudflare.com.
 - ns:
