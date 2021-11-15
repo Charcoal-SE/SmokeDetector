@@ -530,3 +530,4 @@ williamriver
 (?-i:^klay line$)
 (?-i:^Rude Warner$)
 (?-i:^Beack Kendall$)
+(?-i:^Stradivari Strings$)
