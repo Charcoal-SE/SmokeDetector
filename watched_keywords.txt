@@ -34499,3 +34499,4 @@
 1637053832	Cody Gray	(?-i:crystal118official)(?# instagram)
 1637055291	tripleee	elevenwriting\.com
 1637055341	tripleee	bestdarkwebmarketslinks\.com
+1637055590	tripleee	(?-i:^Highland Care Center$)
