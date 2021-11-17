@@ -34520,3 +34520,4 @@
 1637109801	Makyen	arrivals[\W_]*+star[\W_]*+taxis
 1637109817	Makyen	arrivalsstar\.co\.uk
 1637124877	Makyen	111\.90\.151\.74
+1637128855	Makyen	eazyresearch\.com
