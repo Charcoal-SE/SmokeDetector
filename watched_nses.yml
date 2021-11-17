@@ -1060,6 +1060,9 @@ items:
   - salvador.ns.cloudflare.com.
 - ns:
   - mark.ns.cloudflare.com.
+  - mary.ns.cloudflare.com.
+- ns;
+  - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
   - marty.ns.cloudflare.com.
