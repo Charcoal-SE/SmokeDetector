@@ -34518,3 +34518,4 @@
 1637094878	cigien	moviemania\.us
 1637099282	Makyen	zamanitltd\.com
 1637109801	Makyen	arrivals[\W_]*+star[\W_]*+taxis
+1637109817	Makyen	arrivalsstar\.co\.uk
