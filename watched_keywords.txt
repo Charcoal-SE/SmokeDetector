@@ -34523,3 +34523,4 @@
 1637128855	Makyen	eazyresearch\.com
 1637129753	Makyen	lanta[\W_]*+flat[\W_]*+belly[\W_]*+shake
 1637135163	Makyen	souq-olx\.com
+1637144907	Cody Gray	Bear-Bull-Traders-Coupon-112765204552260
