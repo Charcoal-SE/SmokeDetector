@@ -34571,3 +34571,4 @@
 1637218651	Cody Gray	fantasykhiladi\.com
 1637219417	cigien	paintingservicesuae\.com
 1637220266	tripleee	(?:shop[\W_]*+)?menina(?:[\W_]*+vn)?(?<!\bmenina\.vn)
+1637221333	tripleee	keyforge
