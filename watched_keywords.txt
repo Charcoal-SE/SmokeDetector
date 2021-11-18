@@ -34573,3 +34573,4 @@
 1637221409	tripleee	keyforge(?!\.net)
 1637222980	Ryan M	jsacade\.my
 1637224401	tripleee	axie[\W_]*+infinity[\W_]*+clone
+1637227542	Cody Gray	clickcounter\.info
