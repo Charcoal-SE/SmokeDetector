@@ -34590,3 +34590,4 @@
 1637247085	cigien	akasel\.net
 1637258082	Ollie	(?-i:Phemex_API)(?#t.me)
 1637265160	Cody Gray	consumer\.huawei\.com\/[\S]*\/?buy
+1637265361	Spevacus	stars\.voxmovies123\.com
