@@ -34570,3 +34570,4 @@
 1637216111	cigien	menina\.vn
 1637218651	Cody Gray	fantasykhiladi\.com
 1637219417	cigien	paintingservicesuae\.com
+1637220266	tripleee	(?:shop[\W_]*+)?menina(?:[\W_]*+vn)?(?<!\bmenina\.vn)
