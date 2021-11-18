@@ -34572,3 +34572,4 @@
 1637220266	tripleee	(?:shop[\W_]*+)?menina(?:[\W_]*+vn)?(?<!\bmenina\.vn)
 1637221389	tripleee	keyforge\.net
 1637221409	tripleee	keyforge(?!\.net)
+1637222980	Ryan M	jsacade\.my
