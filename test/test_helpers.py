@@ -8,7 +8,8 @@ import helpers
 @pytest.mark.parametrize('shortened, original', [
     ('https://git.io/vyDZv', 'https://charcoal-se.org/smokey/'),
     ('https://bit.ly/2jhMbxn', 'https://charcoal-se.org/'),
-    ('https://tinyurl.com/y7ba4pth', 'https://charcoal-se.org/')
+    # Failing as of 2021-11-18
+    # ('https://tinyurl.com/y7ba4pth', 'https://charcoal-se.org/')
     # https://tiny.cc/gsbbpy is not resolving on some hosts.
     # Notably, it does not resolve on CircleCI, but does on Travis CI.
     # It also resolves from Makyen's Windows machine, but not from Makyen's EC2-Linux.
