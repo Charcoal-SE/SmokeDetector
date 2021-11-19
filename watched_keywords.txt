@@ -34620,3 +34620,4 @@
 1637325968	tripleee	(?-i:^Mponye Mary Spells Caster$)
 1637326758	tripleee	prestigeastonpark\.in
 1637328570	Spevacus	ticketmasterphonenumbernumber\.wordpress\.com
+1637329985	cigien	medicineclue\.com
