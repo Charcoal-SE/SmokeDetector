@@ -34593,3 +34593,4 @@
 1637265361	Spevacus	stars\.voxmovies123\.com
 1637269964	cigien	scholarlight\.com
 1637273654	Cody Gray	C0inBasE
+1637286774	cigien	(?:8[\W_]*+)?[\W_]*+[O0][\W_]*+[5S][\W_]*+4[\W_]*+7[\W_]*+2[\W_]*+7[\W_]*+8[\W_]*+4[\W_]*+8(?# obfuscated phone number)
