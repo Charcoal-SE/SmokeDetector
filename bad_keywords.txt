@@ -2573,3 +2573,4 @@ babatundesolutioncentre1(?:@gmail\.com)?
 (?:[li1][\W_]*+)?(?:8[\W_]*+)?[O0][\W_]*+[5S][\W_]*+4[\W_]*+7[\W_]*+2[\W_]*+7[\W_]*+8[\W_]*+4[\W_]*+8(?# obfuscated phone number)
 SU~Pp0~RT
 2022\.strong text
+c[\W_]*+[0o][\W_]*+i[\W_]*+n[\W_]*+b[\W_]*+a[\W_]*+s[\W_]*+e(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
