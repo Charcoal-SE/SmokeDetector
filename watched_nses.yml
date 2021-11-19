@@ -385,6 +385,9 @@ items:
   - casey.ns.cloudflare.com.
   - harlee.ns.cloudflare.com.
 - ns:
+  - cash.ns.cloudflare.com.
+  - gigi.ns.cloudflare.com.
+- ns:
   - chad.ns.cloudflare.com.
   - elaine.ns.cloudflare.com.
 - ns:
