@@ -34608,3 +34608,4 @@
 1637306172	tripleee	netraclos\.com
 1637308258	tripleee	extendersetuphelp\.com
 1637308290	tripleee	holly[\W_]*+hooper
+1637308362	tripleee	reduce the bounce rate
