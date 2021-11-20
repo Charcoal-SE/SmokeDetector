@@ -34629,3 +34629,4 @@
 1637352244	Cody Gray	Gemini[\W_]*(?:support|Membership|Helpline|customer|service)
 1637352529	cigien	enye\.in
 1637363658	Makyen	fresno[\W_]*+apartments[\W_]*+llc
+1637385181	cigien	californianewstimes\.com
