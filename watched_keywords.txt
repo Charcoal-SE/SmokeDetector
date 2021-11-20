@@ -34651,3 +34651,4 @@
 1637423697	Makyen	(?-i:dapetDuit1M)(?#bit.ly)
 1637423726	Cody Gray	2409256477(?:@qq\.com)?
 1637424976	Cody Gray	ticketmaster[\w_]*\.wordpress\.com
+1637427691	Cody Gray	Customer[\W_]*Service[\W_]*Representative[\W_]*Resolve
