@@ -34630,3 +34630,4 @@
 1637352529	cigien	enye\.in
 1637363658	Makyen	fresno[\W_]*+apartments[\W_]*+llc
 1637385181	cigien	californianewstimes\.com
+1637385195	cigien	lexcliq\.com
