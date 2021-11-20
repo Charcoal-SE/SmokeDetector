@@ -2576,3 +2576,4 @@ SU~Pp0~RT
 c[\W_]*+[0o][\W_]*+i[\W_]*+n[\W_]*+b[\W_]*+a[\W_]*+s[\W_]*+e(?:[\W_]*+(?:toll|free|phone|number|support)){2,}
 C0inBasE_
 Supp0rt
+Customer[\W_]*Service[\W_]*Representative[\W_]*Resolve
