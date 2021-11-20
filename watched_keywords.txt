@@ -34653,3 +34653,4 @@
 1637424976	Cody Gray	ticketmaster[\w_]*\.wordpress\.com
 1637432849	cigien	alethadaldawlih\.com
 1637438072	cigien	pa-ic\.com
+1637441842	cigien	bikeseatguide\.com
