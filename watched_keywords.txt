@@ -34649,3 +34649,4 @@
 1637422513	Cody Gray	Check\s*to\s*make\s*sure\s*that\s*your\s*question\s*has\s*the\s*following
 1637423670	Makyen	(?-i:OpFSO\.jpg)
 1637423684	Makyen	103\.227\.177\.25
+1637423697	Makyen	(?-i:dapetDuit1M)(?#bit.ly)
