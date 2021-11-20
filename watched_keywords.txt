@@ -34618,7 +34618,6 @@
 1637321529	tripleee	𝗔𝗰𝘂𝗮𝗽𝘂𝗿𝗼
 1637325968	tripleee	(?-i:^Mponye Mary Spells Caster$)
 1637326758	tripleee	prestigeastonpark\.in
-1637328570	Spevacus	ticketmasterphonenumbernumber\.wordpress\.com
 1637329985	cigien	medicineclue\.com
 1637334074	Ollie	eporner\.com
 1637335668	cigien	royalsadashome\.ae
