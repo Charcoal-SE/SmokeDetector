@@ -34663,3 +34663,4 @@
 1637451351	Makyen	open[\W_]*+invitation[\W_]*+4473137
 1637451366	Makyen	pijnpillenjame
 1637504246	Jeff Schaller	cofeonline\.com
+1637504369	Jeff Schaller	khasiyatbazaar\.com
