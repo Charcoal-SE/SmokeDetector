@@ -1773,5 +1773,6 @@ items:
 - ns: just2trade.online.
 - ns: boxsecured.com.
 - ns:
-  - cpns1.turhost.com.
-  - cpns2.turhost.com.
+  - comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but not resolving
+  - disable: true
+  - turhost.com.
