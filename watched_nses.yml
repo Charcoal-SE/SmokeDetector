@@ -1772,4 +1772,6 @@ items:
 - ns: dnsserverboot.com.
 - ns: just2trade.online.
 - ns: boxsecured.com.
-- ns: turhost.com.
+- ns:
+  - cpns1.turhost.com.
+  - cpns2.turhost.com.
