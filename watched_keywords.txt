@@ -32677,7 +32677,6 @@
 1631168219	tripleee	analyticssteps\.com
 1631169518	Ryan M	mak(?:e|ing)?\b.{1,30}(?:dollars|hour).{1,50}work(?:ing)?.{1,30}(?:online|home)
 1631170289	Ryan M	zumato\.in
-1631170428	tripleee	dumpspass4sure\.com
 1631170656	tripleee	thetrainofthoughts\.com
 1631171341	tripleee	The credit card details you entered were declined\. Please try a different card or contact support\.
 1631171795	tripleee	technophilic\.co
