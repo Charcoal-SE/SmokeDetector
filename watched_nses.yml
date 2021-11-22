@@ -877,6 +877,9 @@ items:
   - seth.ns.cloudflare.com.
 - ns:
   - john.ns.cloudflare.com.
+  - tess.ns.cloudflare.com.
+- ns:
+  - john.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
   - jonah.ns.cloudflare.com.
