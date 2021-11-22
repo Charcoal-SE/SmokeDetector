@@ -2423,6 +2423,10 @@ create_rule("numbers-only title",
             r"^(?=.*[0-9])[^\pL]*$",
             sites=["math.stackexchange.com"],
             body=False, max_rep=52, max_score=5)
+# Two or more emoji or Unicode symbols in title
+create_rule("several emoji in title",
+            r"\p{So}\P{So}{0,15}\p{So}",
+            body=False, max_rep=52)
 # Parenting troll
 create_rule("bad keyword in {}",
             r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
