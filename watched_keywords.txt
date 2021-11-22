@@ -34681,3 +34681,4 @@
 1637548421	Makyen	tourque-tech(?#linkedin.com)
 1637548436	Makyen	bajariyavilpa(?#twitter.com)
 1637556655	cigien	techuvindubro\.blogspot
+1637563646	tripleee	(?-i:^Pakainfo$)
