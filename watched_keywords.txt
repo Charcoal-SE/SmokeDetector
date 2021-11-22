@@ -34709,3 +34709,4 @@
 1637600226	tripleee	(?-i:SDj3SHpR780)(?# youtube)
 1637601165	Ollie	(?-i:3x8BEtb)(?#bit.ly)
 1637601471	tripleee	alura\.com\.br
+1637601501	tripleee	alura(?!\.com\.br)
