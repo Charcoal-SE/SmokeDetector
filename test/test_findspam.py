@@ -118,6 +118,8 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('keytones', '<p>Some body</p>', 'a username', 'superuser.com', True, True, False),
     ('A title', 'keytones', 'a username', 'superuser.com', True, True, True),
     ('A title', '<p>Some body</p>', 'keytones', 'superuser.com', True, True, True),
+    ('emoji \U0001f525 emoji', 'emoji \U0001f525 emoji \U0001f525 emoji', 'tripleee', 'stackoverflow.com', True, False, False),
+    ('emoji \U0001f525 emoji \U0001f525 emoji', 'two emojis in title should trigger, others not', 'tripleee', 'stackoverflow.com', True, False, True),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,
