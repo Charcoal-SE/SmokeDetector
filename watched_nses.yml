@@ -1778,3 +1778,4 @@ items:
 - comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but not resolving
   disable: true
   ns: turhost.com.
+- ns: biswasdomain.com.
