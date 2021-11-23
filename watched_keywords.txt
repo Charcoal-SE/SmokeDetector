@@ -34733,3 +34733,4 @@
 1637670373	tripleee	basketballgem\.com
 1637676120	tripleee	garggoyal\.com
 1637676413	tripleee	amazon[\W_]*+free[\W_]*+products\d*
+1637676468	tripleee	hevodata\.com
