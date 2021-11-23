@@ -1779,3 +1779,7 @@ items:
   disable: true
   ns: turhost.com.
 - ns: biswasdomain.com.
+- ns:
+  - ns-150-c.gandi.net.
+  - ns-41-b.gandi.net.
+  - ns-9-a.gandi.net.
