@@ -34733,4 +34733,3 @@
 1637670373	tripleee	basketballgem\.com
 1637676029	tripleee	amazon[\W_]*+free[\W_]*+products
 1637676120	tripleee	garggoyal\.com
-1637676158	Jeff Schaller	amazonfreeproducts7951
