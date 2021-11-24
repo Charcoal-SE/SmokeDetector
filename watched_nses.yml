@@ -627,6 +627,9 @@ items:
 - ns:
   - elmo.ns.cloudflare.com.
   - lina.ns.cloudflare.com.
+- ns:
+  - eloise.ns.cloudflare.com.
+  - ian.ns.cloudflare.com.
 - comment: 0/112 over 7 months
   disable: true
   ns:
