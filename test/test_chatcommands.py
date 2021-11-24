@@ -665,10 +665,18 @@ def test_notifications():
         assert chatcommands.willbenotified("11540", "gaming", original_msg=msg1) == \
             "No, you won't be notified for that site in that room."
         assert chatcommands.notify("11540", "gaming", None, original_msg=msg1) == \
-            "You'll now get pings from me if I report a post on `gaming`, in room `11540` on `chat.stackexchange.com`"
+            "You'll now get pings from me if I report a post on `gaming`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.notify("11540", "codegolf.stackexchange.com", None, original_msg=msg1) == \
             "You'll now get pings from me if I report a post on `codegolf.stackexchange.com`, in room `11540` on " \
-            "`chat.stackexchange.com`"
+            "`chat.stackexchange.com`."
+        # Check for additional text when notifying only when in room
+        assert chatcommands.notify("11540", "meta.stackexchange.com", False, original_msg=msg1) == \
+            "You'll now get pings from me if I report a post on `meta.stackexchange.com`, in room `11540` on " \
+            "`chat.stackexchange.com`, but only when you're in that room."
+        # Remove notification which is active only when in room
+        assert chatcommands.unnotify("11540", "meta.stackexchange.com", original_msg=msg1) == \
+            "I will no longer ping you if I report a post on `meta.stackexchange.com`, in room `11540` on " \
+            "`chat.stackexchange.com`."
         assert chatcommands.willbenotified("11540", "gaming.stackexchange.com", original_msg=msg1) == \
             "Yes, you will be notified for that site in that room."
         assert chatcommands.willbenotified("11540", "codegolf", original_msg=msg1) == \
@@ -680,7 +688,7 @@ def test_notifications():
         assert chatcommands.willbenotified("11540", "raspberrypi", original_msg=msg2) == \
             "No, you won't be notified for that site in that room."
         assert chatcommands.notify("11540", "raspberrypi", None, original_msg=msg2) == \
-            "You'll now get pings from me if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
+            "You'll now get pings from me if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.notify("11540", "raspberrypi", None, original_msg=msg2) == \
             "That notification configuration is already registered."
         assert chatcommands.willbenotified("11540", "raspberrypi.stackexchange.com", original_msg=msg2) == \
@@ -695,11 +703,11 @@ def test_notifications():
         # Remove all notifications and check
         assert chatcommands.unnotify("11540", "gaming.stackexchange.com", original_msg=msg1) == \
             "I will no longer ping you if I report a post on `gaming.stackexchange.com`, in room `11540` on " \
-            "`chat.stackexchange.com`"
+            "`chat.stackexchange.com`."
         assert chatcommands.unnotify("11540", "codegolf", original_msg=msg1) == \
-            "I will no longer ping you if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`"
+            "I will no longer ping you if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.unnotify("11540", "raspberrypi", original_msg=msg2) == \
-            "I will no longer ping you if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
+            "I will no longer ping you if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.unnotify("11540", "raspberrypi", original_msg=msg2) == \
             "That configuration doesn't exist."
         assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
@@ -712,7 +720,7 @@ def test_notifications():
             "The given SE site does not exist."
 
         assert chatcommands.notify("11540", "codegolf", "True", original_msg=msg1) == \
-            "You'll now get pings from me if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`"
+            "You'll now get pings from me if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.notify("11540", "codegolf", "False", original_msg=msg1) == \
             "That notification configuration is already registered."
     finally:

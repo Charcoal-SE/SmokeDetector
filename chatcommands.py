@@ -1502,12 +1502,14 @@ def notify(msg, room_id, se_site, always_ping):
     :return: A string
     """
     # TODO: Add check whether smokey reports in that room
+    always_ping = always_ping if always_ping is not None else True
     response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site,
-                                                   always_ping=(always_ping if always_ping is not None else True))
-
+                                                   always_ping=always_ping)
+    in_room_text = "" if always_ping else ", but only when you're in that room"
     if response == 0:
         return "You'll now get pings from me if I report a post on `{site}`, in room "\
-               "`{room}` on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
+               "`{room}` on `chat.{domain}`{in_room}.".format(site=se_site, room=room_id, domain=msg._client.host,
+                                                              in_room=in_room_text)
     elif response == -1:
         raise CmdException("That notification configuration is already registered.")
     elif response == -2:
@@ -1555,7 +1557,7 @@ def unnotify(msg, room_id, se_site):
 
     if response:
         return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
-               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
+               "on `chat.{domain}`.".format(site=se_site, room=room_id, domain=msg._client.host)
 
     raise CmdException("That configuration doesn't exist.")
 
