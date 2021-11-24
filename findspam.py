@@ -8,6 +8,7 @@ from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
 from datetime import datetime
+from string import punctuation
 import time
 import os
 import os.path as path
@@ -2412,6 +2413,75 @@ create_rule("messaging number in {}",
             r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
             r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}',
             stripcodeblocks=True)
+
+
+# Homoglyph obfuscation, used both by trolls and spammers
+@create_rule("obfuscated word", max_rep=50, stripcodeblocks=True)
+def obfuscated_word(s, site):
+    obfuscation_keywords = [
+        # Trolls && cussing
+        "c" + "ock",
+        "c" + "unt",
+        "d" + "ick",
+        "f" + "uck",
+        "mother" + "f" + "ucker",
+        "p" + "enis",
+        "p" + "ussy",
+        "w" + "hore",
+        "black helicopters",
+        "attack helicopters",
+
+        # Phone support scam
+        # Rule only covers single words for the time being
+        # Also, comment out really short ones to reduce chance for FPs
+        # "amazon prime",
+        # "avg",
+        "binance",
+        "coinbase",
+        # "ebay",
+        "gemini",
+        # "hp printer",
+        "norton",
+        "paypal",
+        "printer",  # maybe remove if we enable "hp printer"
+        "quickbooks",
+        # "sage",
+        "sbcglobal",
+        "ticketmaster",
+        # "trust wallet",
+        "turbotax",
+        "wallet",  # maybe remove if we enable "trust wallet"
+
+        "support",
+        "phone",
+        "number",
+        "helpline"
+    ]
+    # Simple 1337 translator
+    t = {
+        '4': 'a',
+        '3': 'e',
+        '6': 'g',
+        '9': 'g',
+        '1': 'l',
+        '!': 'i',
+        '0': 'o',
+        '5': 's',
+        '7': 't',
+        '2': 'z',
+    }
+    for p in punctuation:
+        if p not in t:
+            t[p] = ''
+    trans = "".maketrans(t)
+    for word in regex.split(r'[-\s_]+', s):
+        # prevent FP on stuff like 'I have this "number": 1111'
+        word = word.strip(punctuation)
+        translated = word.translate(trans).lower()
+        if translated in obfuscation_keywords and translated != word.lower():
+            return True, "%r is obfuscated %r" % (word, translated)
+    return False, ""
+
 
 # Category: Trolling
 # Offensive title: titles are more sensitive
