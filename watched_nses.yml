@@ -1008,6 +1008,9 @@ items:
   - lee.ns.cloudflare.com.
   - roxy.ns.cloudflare.com.
 - ns:
+  - leif.ns.cloudflare.com.
+  - stephane.ns.cloudflare.com.
+- ns:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
