@@ -527,22 +527,36 @@ def get_user_ids_on_notification_list(chat_site, room_id, se_site):
 
 def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
     names = []
-    try:
-        current_users = client._br.get_current_users_in_room(room_id)
-    except Exception:
-        # ChatExchange had a problem getting the current users. This shouldn't be allowed to
-        # cause us to crash, as it's on the path we take for going into standby.
-        # It should be noted that this *could* be caused by a discontinuity between room_id and
-        # client.
-        log_exception(*sys.exc_info())
-        log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
-                    'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
-        current_users = []
-
+    non_always_ids = []
     for i, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
         if always:
             names.append(client.get_user(i).name)
         else:
+            non_always_ids.append(i)
+
+    if non_always_ids:
+        # If there are no users who have requested to be pinged only when present in the room, then we
+        # don't fetch the current_users list for this room (doing so makes an HTTPS request to chat).
+        # If people use the feature of not being pinged when not in the room for high-traffic rooms, then
+        # we should implement a cache for the current_users in each room, so we're not fetching it on each
+        # of a large number of messages/reports. If this feature is only used on low traffic rooms, then
+        # we don't really need a cache.
+        # Note: for a considerable time (years), we fetched the current users on *every* report, so it is
+        # something SD can do. It's just better if we don't have to have the extra request for *every*
+        # report posted into a high-traffic room.
+        try:
+            current_users = client._br.get_current_users_in_room(room_id)
+        except Exception:
+            # ChatExchange had a problem getting the current users. This shouldn't be allowed to
+            # cause us to crash, as it's on the path we take for going into standby.
+            # It should be noted that this *could* be caused by a discontinuity between room_id and
+            # client.
+            log_exception(*sys.exc_info())
+            log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
+                        'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
+            current_users = []
+
+        for i in non_always_ids:
             try:
                 names.append(current_users[current_users.index((i, Any()))][1])
             except ValueError:  # user not in room
