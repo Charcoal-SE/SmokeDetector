@@ -30013,7 +30013,6 @@
 1622532681	tripleee	a-fold\.com
 1622534874	tripleee	rudhrasoft\.com
 1622538065	tripleee	octalsoftware\.com\.sg
-1622538084	tripleee	printersupportnumber\.co
 1622540435	tripleee	organicsbestshop\.com
 1622543275	tripleee	teknonauts\.com
 1622547841	tripleee	certswarrior\.com
