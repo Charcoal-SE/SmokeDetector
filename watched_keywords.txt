@@ -5136,7 +5136,6 @@
 1535836037	doppelgreener	t\.me/healthycoinofficial
 1535836041	doppelgreener	healthy\W?coin
 1535836053	doppelgreener	healthy\W?token
-1535837940	doppelgreener	miniimagesvideos\.com
 1535846743	Makyen	fastbet99\.top
 1535846748	Makyen	solaire99\.cc
 1535846754	Makyen	fontana99\.cc
