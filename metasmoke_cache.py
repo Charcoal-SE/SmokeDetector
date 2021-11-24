@@ -162,4 +162,4 @@ def is_website_whitelisted(domain):
                                                         params={'filter': 'MFILNMJJGMMLLJ', 'per_page': '100'},
                                                         expiry=3600,
                                                         property_as_list='domain')
-    return len(whitelist) > 0 and isinstance(whitelist, list) and domain.lower() in whitelist
+    return whitelist is not None and len(whitelist) > 0 and isinstance(whitelist, list) and domain.lower() in whitelist
