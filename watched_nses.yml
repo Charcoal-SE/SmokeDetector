@@ -1317,6 +1317,7 @@ items:
 - ns: giow1065.siteground.us.
 - ns: us1011.siteground.us.
 - ns: m76.siteground.biz.
+- ns: siteground.net.
 - comment: no longer responding 2020-04-02
   disable: true
   ns: sttdns.com.
