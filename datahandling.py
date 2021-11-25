@@ -133,6 +133,11 @@ def load_files():
         GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
     if has_pickle("metasmokePostIds.p"):
         GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
+    if has_pickle("ms_ajax_queue.p"):
+        with metasmoke.Metasmoke.ms_ajax_queue_lock:
+            metasmoke.Metasmoke.ms_ajax_queue = load_pickle("ms_ajax_queue.p")
+            log("debug", "Loaded {} entries into ms_ajax_queue".format(len(metasmoke.Metasmoke.ms_ajax_queue)))
+
     blacklists.load_blacklists()
 
 
@@ -356,6 +361,11 @@ def store_bodyfetcher_queue():
 
 def store_bodyfetcher_max_ids():
     dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
+
+
+def store_ms_ajax_queue():
+    with metasmoke.Metasmoke.ms_ajax_queue_lock:
+        dump_pickle("ms_ajax_queue.p", metasmoke.Metasmoke.ms_ajax_queue)
 
 
 def add_queue_timing_data(site, time_in_queue):

@@ -42,8 +42,15 @@ NO_ACTIVITY_PINGS_TO_REPORT = 3
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
+    MS_URLS_TO_NOT_QUEUE = [
+        "/status-update.json",
+        "/flagging/smokey_disable",
+    ]
     status_pings_since_scan_activity = 0
     scan_stat_snapshot = None
+    ms_ajax_queue_lock = threading.Lock()
+    # The ms_ajax_queue is filled from the pickle in datahandling
+    ms_ajax_queue = []
 
     class AutoSwitch:
         """ Automatically switch metasmoke status """
@@ -317,13 +324,40 @@ class Metasmoke:
                 metasmoke_cache.MetasmokeCache.delete('whitelisted-domains')
 
     @staticmethod
+    def add_call_to_metasmoke_queue(method_name, ms_ajax_timestamp, data):
+        if ms_ajax_timestamp == 0:
+            ms_ajax_timestamp = time.time()
+        new_entry = {"method_name": method_name, 'ms_ajax_timestamp': ms_ajax_timestamp, "data": data}
+        with Metasmoke.ms_ajax_queue_lock:
+            Metasmoke.ms_ajax_queue.append(new_entry)
+            queue_length = len(Metasmoke.ms_ajax_queue)
+        log('debug', 'Added a call to the delayed MS AJAX queue. Current length: {}'.format(queue_length))
+        datahandling.store_ms_ajax_queue()
+
+    @staticmethod
     def send_stats_on_post(title, link, reasons, body, markdown, username, user_link, why, owner_rep,
-                           post_score, up_vote_count, down_vote_count):
+                           post_score, up_vote_count, down_vote_count, ms_ajax_timestamp=0):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            log('warning', "Metasmoke down, not sending stats.")
+            Metasmoke.add_call_to_metasmoke_queue("send_stats_on_post", ms_ajax_timestamp, {
+                "kwargs": {
+                    "title": title,
+                    "link": link,
+                    "reasons": reasons,
+                    "body": body,
+                    "markdown": markdown,
+                    "username": username,
+                    "user_link": user_link,
+                    "why": why,
+                    "owner_rep": owner_rep,
+                    "post_score": post_score,
+                    "up_vote_count": up_vote_count,
+                    "down_vote_count": down_vote_count,
+                }
+            })
+            log('warning', "Metasmoke down, not sending stats now, but queued it for later.")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -347,12 +381,21 @@ class Metasmoke:
             log('error', e)
 
     @staticmethod
-    def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
+    def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host, ms_ajax_timestamp=0):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            log('warning', "Metasmoke is down, not sending feedback")
+            Metasmoke.add_call_to_metasmoke_queue("send_feedback_for_post", ms_ajax_timestamp, {
+                "kwargs": {
+                    "post_link": post_link,
+                    "feedback_type": feedback_type,
+                    "user_name": user_name,
+                    "user_id": user_id,
+                    "chat_host": chat_host,
+                }
+            })
+            log('warning', "Metasmoke is down, not sending feedback now, but queued it for later.")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -376,12 +419,18 @@ class Metasmoke:
             log('error', e)
 
     @staticmethod
-    def send_deletion_stats_for_post(post_link, is_deleted):
+    def send_deletion_stats_for_post(post_link, is_deleted, ms_ajax_timestamp=0):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            log('warning', "Metasmoke is down, not sending deletion stats")
+            Metasmoke.add_call_to_metasmoke_queue("send_deletion_stats_for_post", ms_ajax_timestamp, {
+                "kwargs": {
+                    "post_link": post_link,
+                    "is_deleted": is_deleted,
+                }
+            })
+            log('warning', "Metasmoke is down, not sending deletion stats now, but queued it for later.")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -624,7 +673,7 @@ class Metasmoke:
     # Some sniffy stuff
     @staticmethod
     def request_sender(method):
-        def func(url, *args, ignore_down=False, **kwargs):
+        def func(url, *args, ignore_down=False, ms_ajax_timestamp=0, **kwargs):
             if not GlobalVars.metasmoke_host or (GlobalVars.MSStatus.is_down() and not ignore_down):
                 return None
 
@@ -639,6 +688,12 @@ class Metasmoke:
                 if ignore_down:
                     # Means that this is a status ping
                     Metasmoke.AutoSwitch.ping_failed()
+                if method is requests.post and url not in Metasmoke.MS_URLS_TO_NOT_QUEUE:
+                    # This is a POST. It's failed, and this is not a URL to which we care to send later.
+                    kwargs['ignore_down'] = ignore_down
+                    Metasmoke.add_call_to_metasmoke_queue("post", ms_ajax_timestamp,
+                                                          {"args": tuple([url]) + args, "kwargs": kwargs})
+                    log('warning', "A POST to metasmoke URL: {} failed. It has been queued for later.".format(url))
                 # No need to log here because it's re-raised
                 raise  # Maintain minimal difference to the original get/post methods
             else:
