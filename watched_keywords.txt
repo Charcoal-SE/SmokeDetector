@@ -34772,3 +34772,4 @@
 1637835543	tripleee	sirpriz\.com
 1637838085	tripleee	gravityextra\.com
 1637839251	Cody Gray	atrasahi\.com
+1637839576	tripleee	atr[\W_]*+asahi(?!\.com)
