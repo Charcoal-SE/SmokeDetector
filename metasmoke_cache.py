@@ -7,8 +7,10 @@ from helpers import log
 
 
 class MetasmokeCache:
+    MINIMUM_SECONDS_BETWEEN_ATTEMPTS = 600
     _cache = {}
     _expiries = {}
+    _prior_attempt_timestamp = {}
 
     @staticmethod
     def get(key):
@@ -54,6 +56,11 @@ class MetasmokeCache:
             return value, cache_status
         elif value is None and generator is not None:
             # Cache miss, but we have a generator available so we can gen a value and return that.
+            if key in MetasmokeCache._prior_attempt_timestamp and MetasmokeCache._prior_attempt_timestamp[key] >= \
+               int(time.time() - MetasmokeCache.MINIMUM_SECONDS_BETWEEN_ATTEMPTS):
+                # We've already attempted to get the value recently, so we're not trying again for a while.
+                return None, 'MISS-NOGEN'
+            MetasmokeCache._prior_attempt_timestamp[key] = int(time.time())
             try:
                 value = generator()
             except Exception:
