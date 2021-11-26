@@ -2583,3 +2583,4 @@ Fanacoin
 quickbookss
 Coin~~Ba\$e~~
 Moonpay
+quickbooks[\W_]*customer[\W_]*service
