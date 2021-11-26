@@ -34799,3 +34799,4 @@
 1637922937	tripleee	easyadvertising[\W_]*+inc
 1637925409	tripleee	topescortsinlahore\.com
 1637927484	tripleee	grab[\W_]*+taxi(?:[\W_]*+coupons?[\W_]*+code)?
+1637929183	tripleee	vspagy\.in
