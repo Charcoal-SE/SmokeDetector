@@ -2416,7 +2416,7 @@ create_rule("messaging number in {}",
 
 
 # Homoglyph obfuscation, used both by trolls and spammers
-@create_rule("obfuscated word", max_rep=50, stripcodeblocks=True)
+@create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
 def obfuscated_word(s, site):
     obfuscation_keywords = [
         # Trolls && cussing
