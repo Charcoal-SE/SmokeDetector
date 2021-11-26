@@ -34795,3 +34795,4 @@
 1637914525	Ryan M	shopwale\.com
 1637921017	tripleee	shree[\W_]*+tripada
 1637922613	tripleee	makeen\.io
+1637922743	tripleee	easyadvertising\.cheap
