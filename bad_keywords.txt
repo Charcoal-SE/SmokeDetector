@@ -2586,3 +2586,4 @@ Moonpay
 quickbooks[\W_]*customer[\W_]*service
 enterpriselied
 Customer Service Helpline
+(?-i:QUICKBOOKS)(?="(?<=QUICKBOOKS"))
