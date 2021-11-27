@@ -2586,5 +2586,4 @@ Moonpay
 quickbooks[\W_]*customer[\W_]*service
 enterpriselied
 Customer Service Helpline
-(?-i:QUICKBOOKS)(?="(?<=QUICKBOOKS"))
 Binance[\W_]+(?:Customer|Tech.*)[\W_]+(?:Care|Support|Service)[\W_]+Number
