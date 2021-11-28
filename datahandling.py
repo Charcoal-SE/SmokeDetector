@@ -468,6 +468,12 @@ def check_site_and_get_full_name(site):
 
 # methods to add/remove/check users on the "notification" list
 # (that is, being pinged when Smokey reports something on a specific site)
+#
+# The list of notifications is stored in GlobalVars.notifications.
+# It is a tuple with the following format:
+# notification_tuple = (int(user_id), chat_site, int(room_id), se_site, always_ping)
+# always_ping is used to indicate if the user should always be pinged, or only pinged
+# when they are present in the room.
 
 # noinspection PyMissingTypeHints
 def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=True):
