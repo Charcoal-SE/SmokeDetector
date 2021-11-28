@@ -36,3 +36,12 @@ location=location_here
 dns_resolver=system
 dns_cache_enabled=True
 dns_cache_cleanup_interval=300.0
+
+# Run only the following specified detection reasons.
+# "valid_detection_reasons" is a semicolon separated list of detections which are permitted to run.
+# If the rule's "reason" has an exact match in the following list, then the rule is run. If the
+# rule's "reason" is not in the list, then it's not run.
+# Currently, "blacklisted user" is run separately, so is always run, regardless of it not
+# being in the list. If no list is specified, then all detections are run.
+# Whitespace is not trimmed from the entries in the list.
+# valid_detection_reasons:potentially bad keyword in {};potentially bad IP for hostname in {}
