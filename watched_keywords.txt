@@ -34846,3 +34846,4 @@
 1638080102	cigien	cybspace279
 1638095536	Mast	sheikhhussein\.com
 1638104054	Glorfindel	declan\W*brock
+1638104271	Cody Gray	Shiba[\W_]?BNB
