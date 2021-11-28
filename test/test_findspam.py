@@ -121,6 +121,8 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('C01nb4s3 support number', 'C01nb4$3 support number', 'spammer', 'stackoverflow.com', True, True, True),
     ('emoji \U0001f525 emoji', 'emoji \U0001f525 emoji \U0001f525 emoji', 'tripleee', 'stackoverflow.com', True, False, False),
     ('emoji \U0001f525 emoji \U0001f525 emoji', 'two emojis in title should trigger, others not', 'tripleee', 'stackoverflow.com', True, False, True),
+    ('number sequence 1 to 30', '<p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</p>', 'a username', 'math.stackexchange.com', False, False, False),
+    ('Multiple consecutive numbers 1', '<p>Some1-888-884-0111 888-884-0111 +1-972-534-5446 972-534-5446 1-628-215-2166 628-215-2166 1-844-802-7535 844-802-7535 body</p>', 'a username', 'math.stackexchange.com', False, False, True),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,
