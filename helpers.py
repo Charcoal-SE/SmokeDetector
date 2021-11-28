@@ -295,3 +295,7 @@ def chunk_list(list_in, chunk_size):
 
 class SecurityError(Exception):
     pass
+
+
+def not_regex_search_ascii_and_unicode(regex_dict, test_text):
+    return not regex_dict['ascii'].search(test_text) and not regex_dict['unicode'].search(test_text)

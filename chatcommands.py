@@ -29,7 +29,7 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list
+    reload_modules, chunk_list, not_regex_search_ascii_and_unicode
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -360,6 +360,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = " Append `-force` to the command if you really want to add this pattern."
 
     pattern = get_pattern_from_content_source(msg)
+    is_watchlist = bool("watch" in blacklist_type)
 
     other_issues = []
     if '\u202d' in pattern:
@@ -386,6 +387,27 @@ def do_blacklist(blacklist_type, msg, force=False):
         if r.search(GlobalVars.valid_content) is not None:
             raise CmdException("That pattern is probably too broad, refusing to commit." +
                                " If you really want to add this pattern, you will need to manually submit a PR.")
+    else:
+        exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
+        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX, pattern):
+            digit_count = len(regex.findall(r'\d', pattern))
+            digit_between_text = "between {} and {} digits".format(findspam.NUMBER_REGEX_MINIMUM_DIGITS,
+                                                                   findspam.NUMBER_REGEX_MAXIMUM_DIGITS)
+            digit_count_text = ""
+            if digit_count < findspam.NUMBER_REGEX_MINIMUM_DIGITS or digit_count > findspam.NUMBER_REGEX_MAXIMUM_DIGITS:
+                digit_count_text = " The supplied pattern contains" + \
+                                   " {} digits, which doesn't meet the requirements.".format(digit_count)
+            raise CmdException("That pattern can't be detected by the number detections. Patterns for the number" +
+                               " detections must match the `NUMBER_REGEX` in findspam.py. In order to do so, it needs" +
+                               " to have " + digit_between_text + " and not include" +
+                               " any alpha characters (i.e. nothing matching `[A-Za-z]`)." +
+                               " Generally, you should watch/blacklist a non-obfuscated version of the number." +
+                               digit_count_text)
+        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_START, pattern):
+            other_issues.append(exact_match_text + 'begin with a digit' +
+                                ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
+        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_END, pattern):
+            other_issues.append(exact_match_text + 'end with a digit.')
 
     other_issues_text = ' '.join(other_issues)
 
@@ -396,7 +418,6 @@ def do_blacklist(blacklist_type, msg, force=False):
         else:
             is_phone = False
 
-        is_watchlist = bool("watch" in blacklist_type)
         concretized_pattern = get_test_text_from_regex(pattern)
 
         for username in False, True:
