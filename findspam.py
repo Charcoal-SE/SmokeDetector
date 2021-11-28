@@ -503,15 +503,16 @@ class Rule:
         body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                  .replace("\u200B", "").replace("\u200C", "")
         body_type = "body" if not post.is_answer else "answer"
-        reason_title = self.reason.replace("{}", "title")
-        reason_username = self.reason.replace("{}", "username")
-        reason_body = self.reason.replace("{}", body_type)
+        reason = self.reason
+        reason_title = reason.replace("{}", "title")
+        reason_username = reason.replace("{}", "username")
+        reason_body = reason.replace("{}", body_type)
 
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "linked punctuation" on code-only links
             body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
             body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
-        if self.reason == 'phone number detected in {}':
+        if reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
         matched_title, matched_username, matched_body = False, False, False
@@ -579,9 +580,10 @@ class Rule:
             else:
                 result_body = (False, "", "")
         else:
-            raise TypeError("To match, a rule must have either 'func' or 'regex' valid! : {}".format(self.reason))
+            raise TypeError("To match, a rule must have either 'func' or 'regex' valid! : {}".format(reason))
 
-        # "result" format: tuple((title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why))
+        # "result" format: tuple((title_spam, title_reason, why), (username_spam, username_reason, why),
+        #                        (body_spam, body_reason, why))
         return result_title, result_username, result_body
 
     def __call__(self, *args, **kwargs):
