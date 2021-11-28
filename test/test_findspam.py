@@ -127,9 +127,12 @@ def test_findspam(title, body, username, site, body_is_summary, is_answer, expec
                               'owner': {'display_name': username, 'reputation': 1, 'link': ''},
                               'site': site, 'question_id': '1', 'IsAnswer': is_answer,
                               'BodyIsSummary': body_is_summary, 'score': 0})
-    result = FindSpam.test_post(post)[0]
-    log('info', title)
+    full_result = FindSpam.test_post(post)
+    result = full_result[0]
+    why = full_result[1]
+    log('info', "Test post title:", title)
     log('info', "Result:", result)
+    log('info', "Why:", why)
     scan_spam = (len(result) > 0)
     if scan_spam != expected_spam:
         print("Expected {1} on {0}".format(body, expected_spam))
