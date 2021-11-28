@@ -647,6 +647,10 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
+    if GlobalVars.valid_detection_reasons is not None and reason not in GlobalVars.valid_detection_reasons:
+        # There was a list of reasons provided in the config file as valid and this detection reason isn't in that list.
+        disabled = True
+
     if not (body or body_summary or username):  # title-only
         answer = False  # answers have no titles, this saves some loops
     post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,

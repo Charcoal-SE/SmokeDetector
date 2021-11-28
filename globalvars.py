@@ -294,6 +294,12 @@ class GlobalVars:
         if id:
             config_blacklisters.add(("stackoverflow.com", int(id)))
 
+    # If the config has it, get a list of the detection reasons which are considered valid.
+    # The list is semicolon separated.
+    valid_detection_reasons = config.get("valid_detection_reasons", None)
+    if valid_detection_reasons is not None:
+        valid_detection_reasons = valid_detection_reasons.split(";")
+
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
     bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
