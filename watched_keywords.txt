@@ -34867,3 +34867,4 @@
 1638177735	tripleee	diamond[\W_]*+trading[\W_]*+inc
 1638180632	tripleee	certs4prep\.com
 1638180845	tripleee	j2t\.com
+1638183963	tripleee	triquenchindia\.com
