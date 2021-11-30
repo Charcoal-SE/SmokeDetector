@@ -531,3 +531,4 @@ williamriver
 (?-i:^Rude Warner$)
 (?-i:^Beack Kendall$)
 (?-i:^Stradivari Strings$)
+(?-i:^Jade Mckinley$)
