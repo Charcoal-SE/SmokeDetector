@@ -34873,3 +34873,4 @@
 1638229232	cigien	bitcoin[\W_]*+invest[\W_]*+group[\W_]*+inc
 1638236675	Ryan M	slitherio\.online
 1638239565	Makyen	cryptoretreive[\W_]*+com
+1638246544	cigien	sattaking01\.in
