@@ -34895,3 +34895,4 @@
 1638288378	cigien	howtodetect\.com
 1638289189	cigien	nominus\.com
 1638289606	cigien	snowball\.im
+1638290128	cigien	zumper\.com
