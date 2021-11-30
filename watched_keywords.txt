@@ -34877,3 +34877,4 @@
 1638251580	Makyen	uwa4d\.com
 1638253893	tripleee	ovencleansydney\.com\.au
 1638253908	cigien	junkremoveluae\.com
+1638254556	tripleee	(?-i:^abithram$)
