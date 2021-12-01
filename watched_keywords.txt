@@ -34902,3 +34902,4 @@
 1638319833	Spevacus	help[\W_]*+mi[\W_]*+cro[\W_]*+s[\W_]*+oft[\W_]*+com
 1638327114	Jeff Schaller	concreteharrisonburg\.com
 1638328050	Spevacus	yanrestrength\.com
+1638328782	Sonic the Anonymous Hedgehog	ezzeefonts\.com
