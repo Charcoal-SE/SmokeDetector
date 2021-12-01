@@ -34866,7 +34866,6 @@
 1638206800	cigien	lovetoteach\.org
 1638207659	cigien	tttools\.uk
 1638207788	cigien	qtora\.com
-1638210748	Spevacus	help[\W_]*mi[\W_]*cro[\W_]*s[\W_]*oft[\W_]*com(?<!onlinehelp\.microsoft\.com)(?<!offlinehelp\.microsoft\.com)(?<!windowshelp\.microsoft\.com)
 1638229232	cigien	bitcoin[\W_]*+invest[\W_]*+group[\W_]*+inc
 1638236675	Ryan M	slitherio\.online
 1638239565	Makyen	cryptoretreive[\W_]*+com
