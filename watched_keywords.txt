@@ -34909,3 +34909,4 @@
 1638352461	Cody Gray	firstflytravel\.com
 1638353217	tripleee	luvuwomenworld\.com
 1638353317	Cody Gray	freecharge[\W_]*coupons
+1638354467	tripleee	creativepoint\.in
