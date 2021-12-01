@@ -34910,3 +34910,4 @@
 1638353217	tripleee	luvuwomenworld\.com
 1638353317	Cody Gray	freecharge[\W_]*coupons
 1638354467	tripleee	creativepoint\.in
+1638354487	tripleee	endemajfunds\.com
