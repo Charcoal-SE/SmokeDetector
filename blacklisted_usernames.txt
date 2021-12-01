@@ -534,3 +534,4 @@ williamriver
 (?-i:^Jade Mckinley$)
 (?-i:^Harrywilson$)
 (?-i:^franky_da_man$)
+(?-i:^htmachinerychina$)
