@@ -533,3 +533,4 @@ williamriver
 (?-i:^Stradivari Strings$)
 (?-i:^Jade Mckinley$)
 (?-i:^Harrywilson$)
+(?-i:^franky_da_man$)
