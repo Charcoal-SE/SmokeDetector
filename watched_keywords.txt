@@ -34899,3 +34899,4 @@
 1638299856	Spevacus	lawyerboxus\.com
 1638303024	cigien	paulmilitaria\.com
 1638304296	Spevacus	computools\.com
+1638319833	Spevacus	help[\W_]*+mi[\W_]*+cro[\W_]*+s[\W_]*+oft[\W_]*+com
