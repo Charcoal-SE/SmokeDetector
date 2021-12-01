@@ -34914,3 +34914,4 @@
 1638354551	tripleee	(?-i:2ZCaRJh)(?# bit.ly)
 1638354756	Makyen	endemaj(?:[\W_]*+(?:funds|dubai|\d++|[\da-f]{5,}+)s?)*
 1638354943	tripleee	getambee\.com
+1638355047	tripleee	(?-i:^sherrif$)
