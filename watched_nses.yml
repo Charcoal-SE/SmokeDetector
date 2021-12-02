@@ -789,6 +789,9 @@ items:
   - irma.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - irma.ns.cloudflare.com.
+  - woz.ns.cloudflare.com.
+- ns:
   - isaac.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
