@@ -34943,3 +34943,4 @@
 1638431381	tripleee	comunidadnews\.com
 1638432138	tripleee	primalsupplements\.co\.nz
 1638433642	tripleee	xem chi tiết
+1638434135	Ryan M	via[\W_]*+whatsapp?.{0,20}\d{3,}
