@@ -544,11 +544,18 @@ def get_user_ids_on_notification_list(chat_site, room_id, se_site):
 def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
     names = []
     non_always_ids = []
-    for i, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
+    for user_id, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
         if always:
-            names.append(client.get_user(i).name)
+            try:
+                names.append(client.get_user(user_id).name)
+            except Exception:
+                # The user is probably deleted, or we're having communication problems with chat.
+                log_exception(*sys.exc_info())
+                log('warn', 'ChatExchange failed to get user for a report notification. '
+                            'See Error log for more details. Tried client.host: '
+                            '{}:: user_id: {}:: chat_site: {}'.format(client.host, user_id, chat_site))
         else:
-            non_always_ids.append(i)
+            non_always_ids.append(user_id)
 
     if non_always_ids:
         # If there are no users who have requested to be pinged only when present in the room, then we
