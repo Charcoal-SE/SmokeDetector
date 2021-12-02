@@ -31645,7 +31645,6 @@
 1627865536	cigien	bpmcounter\.blogspot
 1627866439	cigien	parpining\.xyz
 1627873397	cigien	postsclub\.com
-1627875322	Spevacus	darkwebprogrammer(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1627883683	tripleee	rkmarblesindia\.com
 1627885845	tripleee	speechocean\.com
 1627885870	tripleee	viagrawithoutdoctorntx\.com
