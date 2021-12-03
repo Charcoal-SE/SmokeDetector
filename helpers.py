@@ -183,9 +183,12 @@ def log_file(log_level, *args):
         print(log_str, file=f)
 
 
-def log_exception(exctype, value, tb, f=False, *, level='error'):
+def log_exception(exctype, value, traceback_or_message, f=False, *, level='error'):
     now = datetime.utcnow()
-    tr = ''.join(traceback.format_tb(tb))
+    if isinstance(traceback_or_message, str):
+        tr = traceback_or_message
+    else:
+        tr = ''.join(traceback.format_tb(traceback_or_message))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     # Redacting passwords happens in log() and ErrorLogs.add().
