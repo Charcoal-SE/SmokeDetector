@@ -34971,6 +34971,5 @@
 1638536598	tripleee	americasgenerators\.com
 1638536637	tripleee	bestcakephpteam\.com
 1638537870	Spevacus	islamicallrounder\.com
-1638545216	Spevacus	h[\W_]*+e[\W_]*+lp[\W_]*+mi[\W_]*+cro[\W_]*+s[\W_]*+oft[\W_]*+com
 1638558414	cigien	landing\.ai
 1638559186	cigien	(?-i:3lAxQMN)(?#bit.ly)
