@@ -30167,7 +30167,6 @@
 1623059489	tripleee	accidentchirowa\.com
 1623063203	Jeff Schaller	larsonmedicalaesthetics\.com
 1623063311	Xnero	larson[\W_]*medical(?:[\W_]*aesthetics)?(?!\.com)
-1623068589	Spevacus	nadcab\.com
 1623068606	Spevacus	seosprendimai\.lt
 1623073361	cigien	beezzly\.com
 1623073518	cigien	todaytechhelp\.com
