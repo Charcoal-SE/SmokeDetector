@@ -34973,3 +34973,4 @@
 1638537870	Spevacus	islamicallrounder\.com
 1638558414	cigien	landing\.ai
 1638559186	cigien	(?-i:3lAxQMN)(?#bit.ly)
+1638559728	Mast	customers[\W_]*+call[\W_]*+microsoft[\W_]*+tech
