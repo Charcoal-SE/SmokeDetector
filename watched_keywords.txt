@@ -34987,3 +34987,4 @@
 1638602516	Makyen	chocolate[\W_]*+kids[\W_]*+play[\W_]*+school(?!\.org(?<=chocolatekidsplayschool\.org))
 1638611160	tripleee	labrika\.com
 1638611215	Cody Gray	doktors\.co\.in
+1638636137	cigien	droidfeats\.com
