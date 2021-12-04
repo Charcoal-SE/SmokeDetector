@@ -461,6 +461,9 @@ items:
   - jerry.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
+  - holly.ns.cloudflare.com.
+- ns:
+  - cory.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
