@@ -327,7 +327,7 @@ URL_REGEX = regex.compile(
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 
-# The NUMBER_REGEXES are used to obtain strings within a post which are considered to be a single "number". While
+# The NUMBER_REGEXes are used to obtain strings within a post which are considered to be a single "number". While
 #   it would be nice to be able to just use a single regular expression like:
 #     r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
 #   Doing so won't get us all the possible matches of different lengths which start from the same character, even
@@ -342,7 +342,6 @@ TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 #   NUMBER_REGEX_START, and NUMBER_REGEX_END in order to not have a separate source for a combined regex. This
 #   does result in our CI testing being a bit slower, but is a trade-off for not using two separate regexes, which
 #   would reduce maintainability.
-NUMBER_REGEXES = []
 # The minimum number of digits to be considered a "number":
 NUMBER_REGEX_MINIMUM_DIGITS = 7
 # The maximum number of digits to be considered a "number":
@@ -371,7 +370,7 @@ for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH
     NUMBER_REGEX_TEXT += r'(?=({})|)'.format(get_number_regex_with_quantfier(number_regex_length))
 
 # The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected
-#   by the NUMBER_REGEXES. It should be used as a test to verify patterns for number watches and blacklists.
+#   by the NUMBER_REGEXes. It should be used as a test to verify patterns for number watches and blacklists.
 NUMBER_REGEX = {
     'unicode': regex.compile(NUMBER_REGEX_TEXT, flags=regex.UNICODE),
     'ascii': regex.compile(NUMBER_REGEX_TEXT, flags=regex.ASCII)
