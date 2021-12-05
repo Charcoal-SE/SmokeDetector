@@ -348,8 +348,8 @@ NUMBER_REGEX_MINIMUM_DIGITS = 7
 NUMBER_REGEX_MAXIMUM_DIGITS = 20
 NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
 NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
-NUMBER_REGEX_START_TEXT = r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))[\W_]*+'
-NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d[\W_]*+){{{}}}'
+NUMBER_REGEX_START_TEXT = r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))){{{}}}'
 NUMBER_REGEX_END_TEXT = r'\d(?=\D|$)'
 
 
