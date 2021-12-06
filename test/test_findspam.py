@@ -124,6 +124,18 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('emoji \U0001f525 emoji \U0001f525 emoji', 'two emojis in title should trigger, others not', 'tripleee', 'stackoverflow.com', True, False, True),
     ('number sequence 1 to 30', '<p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</p>', 'a username', 'math.stackexchange.com', False, False, False),
     ('Multiple consecutive numbers 1', '<p>Some1-888-884-0111 888-884-0111 +1-972-534-5446 972-534-5446 1-628-215-2166 628-215-2166 1-844-802-7535 844-802-7535 body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('Phone numbers 01', '<p>Some1i888i884i0111 body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('Phone numbers 02', '<p>Some+1l972l534l5446body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('Phone numbers 03', '<p>Some972-534-5446ObOdyyy</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 01', '<p>SomeI-888-884-Olll fobody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 02', '<p>Some888-884-OIII foo body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 03', '<p>Some +I-972-S34-S446 body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 04', '<p>Some 972-S34-S446 foobody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 05', '<p>Some I-628-21S-2I66 fbody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 06', '<p>Some 628a21Sa2l66 foobody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 07', '<p>Some 1-844i8O2i7S3S fbody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('homoglyph phone numbers 08', '<p>Some 844-8O2-7S3S foobody</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('Multiple consecutive homoglyph numbers 1', '<p>SomeI-888-884-Olll 888-884-OIII +I-972-S34-S446 972-S34-S446 I-628-21S-2I66 628-21S-2l66 1-844i8O2i7S3S 844a8O2a7S3S body</p>', 'a username', 'math.stackexchange.com', False, False, True),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,

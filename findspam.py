@@ -27,6 +27,7 @@ from helpers import log
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
+from homoglyphs import NumberHomoglyphs
 
 
 if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
@@ -994,6 +995,20 @@ def has_phone_number(s, site):
     return False, ""
 
 
+def get_number_candidates(text):
+    # Get all the strings within the text to test which might be considered a single "number".
+    # The difficulty here is that we want all the different permutations (restricted to the original order)
+    # which can match with any number of digits within our range.
+    ascii_findall = NUMBER_REGEX['ascii'].findall(text, overlapped=True)
+    numbers = [number for lst in ascii_findall for number in lst if number != '']
+    # We only want the ones which consider Unicode digits which are not included with only ASCII digits.
+    # Considering the non-ASCII Unicode numbers may result in number candidates which start or end at different points.
+    unicode_findall = NUMBER_REGEX['unicode'].findall(text, overlapped=True)
+    numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
+    numbers = set(numbers)
+    return numbers
+
+
 # noinspection PyMissingTypeHints
 def check_numbers(s, numlist, numlist_normalized=None):
     """
@@ -1003,24 +1018,27 @@ def check_numbers(s, numlist, numlist_normalized=None):
     """
     numlist_normalized = numlist_normalized or set()
     matches = []
-    # Get all the strings within the text to test which might be considered a single "number".
-    # The difficulty here is that we want all the different permutations (restricted to the original order)
-    # which can match with any number of digits within our range.
-    ascii_findall = NUMBER_REGEX['ascii'].findall(s, overlapped=True)
-    numbers = [number for lst in ascii_findall for number in lst if number != '']
-    # We only want the ones which consider Unicode digits which are not included with only ASCII digits.
-    # Considering the non-ASCII Unicode numbers may result in number candidates which start or end at different points.
-    unicode_findall = NUMBER_REGEX['unicode'].findall(s, overlapped=True)
-    numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
-    numbers = set(numbers)
+    numbers = get_number_candidates(s)
+    normalized_numbers = set()
     for number_candidate in numbers:
+        # Generating the normalized_numbers is done here to keep checking them in lock-step with the non-normalized
+        # numbers. It also prevents re-generating them later for the obfuscated check.
+        normalized_candidate = regex.sub(r"(?a)\D", "", number_candidate)
+        normalized_numbers.add(normalized_candidate)
         if number_candidate in numlist:
             matches.append('{0} found verbatim'.format(number_candidate))
             continue
         # else
-        normalized_candidate = regex.sub(r"(?a)\D", "", number_candidate)
         if normalized_candidate in numlist_normalized:
             matches.append('{0} found normalized'.format(normalized_candidate))
+    # Obfuscated via homoglyphs
+    if numlist_normalized:
+        # We only test against the normalized list, so there's no need to do anything if we don't have such a list.
+        hg_initial_numbers = get_number_candidates(NumberHomoglyphs.normalize(s))
+        hg_normalized_numbers = {regex.sub(r"(?a)\D", "", num) for num in hg_initial_numbers} - normalized_numbers
+        for hg_candidate in hg_normalized_numbers:
+            if hg_candidate in numlist_normalized:
+                matches.append('{0} found obfuscated'.format(hg_candidate))
     if matches:
         return True, '; '.join(matches)
     else:
