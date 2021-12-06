@@ -35025,3 +35025,4 @@
 1638784011	tripleee	pennyfatherway\.wordpress\.com
 1638784075	tripleee	sidingcontractorsbaltimore\.com
 1638790061	Makyen	kite[\W_]*+club[\W_]*+cabarete(?!\.com(?<=kiteclubcabarete\.com))
+1638791405	Makyen	tibart7\.com
