@@ -29,7 +29,7 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, not_regex_search_ascii_and_unicode
+    reload_modules, chunk_list, not_regex_search_ascii_and_unicode, remove_regex_comments
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -375,7 +375,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
-        without_comments = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
+        without_comments = remove_regex_comments(pattern)
         # Remove character sets, where . doesn't need to be escaped.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
         if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
