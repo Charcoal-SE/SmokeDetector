@@ -35021,3 +35021,4 @@
 1638770961	cigien	courtmarriagelucknow\.in
 1638770977	cigien	aryasamajmandirinagra\.in
 1638783644	tripleee	powermetrics\.co\.uk
+1638783899	tripleee	(?-i:^anderew moore$)
