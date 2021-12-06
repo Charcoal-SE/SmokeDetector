@@ -35027,3 +35027,4 @@
 1638790061	Makyen	kite[\W_]*+club[\W_]*+cabarete(?!\.com(?<=kiteclubcabarete\.com))
 1638791405	Makyen	tibart7\.com
 1638796082	Spevacus	knowlathon\.com
+1638796121	Spevacus	magecaptain\.com
