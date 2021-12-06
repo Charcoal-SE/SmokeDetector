@@ -306,3 +306,10 @@ def not_regex_search_ascii_and_unicode(regex_dict, test_text):
 
 def remove_regex_comments(regex_text):
     return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", regex_text)  # remove comments
+
+
+def process_numlist(numlist):
+    processed = set(numlist)  # Sets are faster than Hong Kong journalists!
+    normalized = {regex.sub(r"(?a)\D", "", entry) for entry in numlist}
+    return processed, normalized
+

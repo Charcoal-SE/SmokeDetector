@@ -23,7 +23,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log
+from helpers import log, process_numlist
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -1043,12 +1043,6 @@ def check_numbers(s, numlist, numlist_normalized=None):
         return True, '; '.join(matches)
     else:
         return False, ''
-
-
-def process_numlist(numlist):
-    processed = set(numlist)  # Sets are faster than Hong Kong journalists!
-    normalized = {regex.sub(r"(?a)\D", "", entry) for entry in numlist}
-    return processed, normalized
 
 
 @create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
