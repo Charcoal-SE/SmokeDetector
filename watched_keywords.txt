@@ -35024,4 +35024,3 @@
 1638783965	tripleee	bevywise\.com
 1638784011	tripleee	pennyfatherway\.wordpress\.com
 1638784075	tripleee	sidingcontractorsbaltimore\.com
-1638789993	Makyen	kite[\W_]*+club[\W_]*+cabarete
