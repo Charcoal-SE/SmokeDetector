@@ -35,6 +35,7 @@ from classes.feedback import *
 from classes.dns import dns_resolve
 from tasks import Tasks
 import dns.resolver
+from homoglyphs import NumberHomoglyphs
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -374,9 +375,9 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
-        test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
+        without_comments = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
         # Remove character sets, where . doesn't need to be escaped.
-        test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", test_for_unescaped_dot)
+        test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
         if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
             other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
 
@@ -400,14 +401,18 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern can't be detected by the number detections. Patterns for the number" +
                                " detections must match the `NUMBER_REGEX` in findspam.py. In order to do so, it needs" +
                                " to have " + digit_between_text + " and not include" +
-                               " any alpha characters (i.e. nothing matching `[A-Za-z]`)." +
-                               " Generally, you should watch/blacklist a non-obfuscated version of the number." +
+                               " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." +
+                               " Generally, you should watch/blacklist the non-obfuscated version of the number." +
                                digit_count_text)
         if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_START, pattern):
             other_issues.append(exact_match_text + 'begin with a digit' +
                                 ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
         if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_END, pattern):
             other_issues.append(exact_match_text + 'end with a digit.')
+        deobfuscated_number = NumberHomoglyphs.normalize(without_comments)
+        if deobfuscated_number != without_comments:
+            other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
+                                ' use the non-obfuscated number.')
 
     other_issues_text = ' '.join(other_issues)
 
