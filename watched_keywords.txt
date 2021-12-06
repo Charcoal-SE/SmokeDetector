@@ -35023,3 +35023,4 @@
 1638783644	tripleee	powermetrics\.co\.uk
 1638783899	tripleee	(?-i:^anderew moore$)
 1638783965	tripleee	bevywise\.com
+1638784011	tripleee	pennyfatherway\.wordpress\.com
