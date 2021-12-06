@@ -35038,3 +35038,4 @@
 1638819399	double-beep	visualback\.com
 1638820342	cigien	(?-i:zydCEV)(?#google forms)
 1638820737	cigien	market\.authenticitservices\.com
+1638821286	Makyen	mydeals247\.com
