@@ -29386,7 +29386,6 @@
 1620803507	Ryan M	45\.120\.149\.188
 1620817548	Ryan M	totalorthocare\.in
 1620818753	Ryan M	findautopartsonline\.com
-1620822360	Ryan M	mathomatic\.org(?# This site used to be a math tool, but has now been replaced with QuickBooks spam.  Remove this watch if you check the site and it looks anything like a math tool's website)
 1620822522	Ryan M	opentext[\W_]*+managed[\W_]*+services
 1620824596	Spevacus	escaperoom\.com
 1620838946	Spevacus	voicedocs\.com
