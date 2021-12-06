@@ -9,46 +9,102 @@ from globalvars import GlobalVars
 import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
-from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
+from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode, process_numlist
 from findspam import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
 
 
 def test_number_lists():
-    errors = []
+    errors = {}
     no_exacts = []
+    all_errors = []
 
-    def test_a_number_list(list_type, number_list):
+    def clear_errors():
+        errors['too_many_processed_results'] = []
+        errors['fails_number_regex'] = []
+        errors['no_unique'] = []
+        errors['blacklist_dup_with_no_unique'] = []
+        errors['blacklist_dup_with_unique'] = []
+
+    def get_sorted_current_errors_and_clear_errors():
+        current_errors = [error for sub in [errors[error_group] for error_group in errors] for error in sub]
+        clear_errors()
+        return current_errors
+
+    def test_a_number_list(list_type, number_list, blacklist_normalized=None):
         line_number = 0
+        all_processed = set()
+        all_normalized = set()
+        lines_no_unique = []
+        lines_duplicate_blacklist_with_no_unique = []
+        lines_duplicate_blacklist_with_unique = []
         for pattern in number_list:
             line_number += 1
-            digit_count = len(regex.findall(r'\d', pattern))
+            entry_description = "{} number ({})::{}:: ".format(list_type, line_number, pattern)
+            this_processed_set, all_normalized, unique_normalized, duplicate_normalized = process_numlist([pattern], normalized=all_normalized)
+            if len(this_processed_set) != 1:
+                errors['too_many_processed_results'].append(entry_description + "too many processed results ({} != 1)".format(len(this_processed_set)))
+            processed_pattern = this_processed_set.pop()
+            digit_count = len(regex.findall(r'\d', processed_pattern))
             digit_count_text = " ({} digits is OK)".format(digit_count)
             if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
                 digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS)
-            if not_regex_search_ascii_and_unicode(NUMBER_REGEX, pattern):
-                errors.append("{} number ({}): fails NUMBER_REGEX{}::{}".format(list_type, line_number, digit_count_text, pattern))
+            if not_regex_search_ascii_and_unicode(NUMBER_REGEX, processed_pattern):
+                errors['fails_number_regex'].append(entry_description + "fails NUMBER_REGEX{}::{}".format(digit_count_text, processed_pattern))
             else:
                 this_no_exacts = []
-                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_START, pattern):
+                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_START, processed_pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_START.")
-                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_END, pattern):
+                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_END, processed_pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_END.")
                 if len(this_no_exacts) > 0:
-                    no_exact = "{} number ({}): ".format(list_type, line_number)
-                    no_exact += " ".join(this_no_exacts) + digit_count_text + "::" + pattern
-                    no_exacts.append(no_exact)
+                    no_exacts.append(entry_description + " ".join(this_no_exacts) + digit_count_text + "::" + pattern)
+            if not unique_normalized:
+                errors['no_unique'].append(entry_description + "has no unique normalized entries. Duplicate normalized entries: {}".format(duplicate_normalized))
+                lines_no_unique.append(str(line_number))
+            if blacklist_normalized:
+                this_normalized = unique_normalized | duplicate_normalized
+                this_normalized_in_blacklist = this_normalized & blacklist_normalized
+                this_normalized_not_in_blacklist = this_normalized - blacklist_normalized
+                if this_normalized_in_blacklist:
+                    not_in_blacklist_text = ":: normalized not in blacklist: {}".format(this_normalized_not_in_blacklist)
+                    error_text = entry_description + "has duplicate normalized entries on the blacklist: {}".format(this_normalized_in_blacklist) + not_in_blacklist_text
+                    if this_normalized_not_in_blacklist:
+                        lines_duplicate_blacklist_with_unique.append(str(line_number))
+                        errors['blacklist_dup_with_unique'].append(error_text)
+                    else:
+                        lines_duplicate_blacklist_with_no_unique.append(str(line_number))
+                        errors['blacklist_dup_with_no_unique'].append(error_text)
+        lines_no_unique.reverse()
+        deletion_list = []
+        for error_group in errors:
+            if errors[error_group]:
+                has_errors = True
+                # The following produces a sequence of commands which can be used in vi/vim to delete the entries in the appropriate file which have errors.
+                # It's intended use is in the transition from not checking normalizations to applying homoglyphs and checking normalizations.
+                line_list = [error.split('(')[1].split(')')[0] for error in errors[error_group]]
+                line_list.reverse()
+                deletion_list.append('{}: to remove {}: {}'.format(list_type, error_group, 'Gdd'.join(line_list) + 'Gdd'))
+        if (deletion_list):
+            print('\n')
+            print('USE ONLY ONE OF THE FOLLOWING PER RUN OF THESE TESTS. Using more than one will result in the wrong lines being deleted:')
+            print('\n'.join(deletion_list))
+            print('\n\n')
+        return all_processed, all_normalized
 
+    clear_errors()
     load_blacklists()
-    test_a_number_list("watched", GlobalVars.watched_numbers)
-    test_a_number_list("blacklisted", GlobalVars.blacklisted_numbers)
+    blacklist_processed, blacklist_normalized = test_a_number_list("blacklisted", GlobalVars.blacklisted_numbers)
+    all_errors.extend(get_sorted_current_errors_and_clear_errors())
+    test_a_number_list("watched", GlobalVars.watched_numbers, blacklist_normalized=blacklist_normalized)
+    all_errors.extend(get_sorted_current_errors_and_clear_errors())
     no_exacts_count = len(no_exacts)
     if (no_exacts_count > 0):
         pluralize = "" if no_exacts_count == 1 else "s"
         print("\n\t".join(["{} pattern{} can't match exactly:".format(no_exacts_count, pluralize)] + no_exacts))
-    error_count = len(errors)
+    error_count = len(all_errors)
     if error_count > 0:
         pluralize = "" if error_count == 1 else "s"
-        pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + errors))
+        pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + all_errors))
 
 
 def test_blacklist_integrity():

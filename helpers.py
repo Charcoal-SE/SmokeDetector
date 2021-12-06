@@ -18,6 +18,7 @@ from glob import glob
 import sqlite3
 from urllib.parse import quote, quote_plus
 from globalvars import GlobalVars
+from homoglyphs import NumberHomoglyphs
 
 
 def exit_mode(*args, code=0):
@@ -305,11 +306,111 @@ def not_regex_search_ascii_and_unicode(regex_dict, test_text):
 
 
 def remove_regex_comments(regex_text):
-    return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", regex_text)  # remove comments
+    return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", regex_text)
 
 
-def process_numlist(numlist):
-    processed = set(numlist)  # Sets are faster than Hong Kong journalists!
-    normalized = {regex.sub(r"(?a)\D", "", entry) for entry in numlist}
-    return processed, normalized
+def remove_end_regex_comment(regex_text):
+    return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)$", "", regex_text)
 
+
+def get_only_digits(text):
+    return regex.sub(r"(?a)\D", "", text)
+
+
+# North American phone numbers with fairly strict formatting
+# The goal here is to be sure about identification, even if that leaves ones which are not identified.
+# Without a 1. It must have a separator between the 334 groupings, like \d{3}\D\d{3}\D\d{4}, but with more
+# than just a single \D permited. The start can be our normal mix.
+NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4})$'
+NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4})$'
+NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^((?:[(+{[]{1,2}[2-9]|[2-9](?<=[^\d(+{[][2-9]|^[2-9]))\d{2}' + \
+                                    r'(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+NA_NUMBER_WITHOUT_ONE_REGEX = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
+NA_NUMBER_WITHOUT_ONE_LOOSE = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
+# With a 1. It must have a separator between the 334 groupings, like 1\d{3}\D\d{3}\D\d{4}, but with more
+# than just a single \D permited and a separator is permitted after the 1. The start can be our normal mix.
+NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[(+{[]{1,2}1|1(?<=[^\d(+{[]1|^1))(?:[\W_]*+|\D(?=\d))' + \
+                                 r'([2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
+NA_NUMBER_WITH_ONE_REGEX = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
+NA_NUMBER_WITH_ONE_LOOSE = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
+
+
+def is_north_american_phone_number_with_one(text):
+    return regex.match(NA_NUMBER_WITH_ONE_REGEX, text) is not None
+
+
+def is_north_american_phone_number_without_one(text):
+    return regex.match(NA_NUMBER_WITHOUT_ONE_REGEX, text) is not None
+
+
+def is_north_american_phone_number_with_one_loose(text):
+    return regex.match(NA_NUMBER_WITH_ONE_LOOSE, text) is not None
+
+
+def is_north_american_phone_number_without_one_loose(text):
+    return regex.match(NA_NUMBER_WITHOUT_ONE_LOOSE, text) is not None
+
+
+def process_numlist(numlist, processed=None, normalized=None):
+    processed = processed if processed is not None else set()
+    normalized = normalized if normalized is not None else set()
+    unique_normalized = set()
+    duplicate_normalized = set()
+    for entry in numlist:
+        this_entry_normalized = set()
+        without_comment = remove_end_regex_comment(entry)
+        processed.add(without_comment)
+        comment = entry.replace(without_comment, '')
+        no_north_american = 'no noram' in comment.lower() or 'NO NA' in comment
+        is_north_american = 'is noram' in comment.lower() or 'IS NA' in comment
+        # normalized to only digits
+        this_entry_normalized.add(get_only_digits(without_comment))
+        deobfuscated = NumberHomoglyphs.normalize(without_comment)
+        # deobfuscated and normalized: We don't look for the non-normalized deobfuscated
+        this_entry_normalized.add(get_only_digits(deobfuscated))
+        normalized_deobfuscated = get_only_digits(deobfuscated)
+        report_text = 'Number entry: {}'.format(entry)
+        north_american_extra = ''
+        north_american_add_type = ''
+        maybe_north_american_extra = ''
+        maybe_north_american_add_type = ''
+        if not no_north_american:
+            if is_north_american_phone_number_with_one(deobfuscated):
+                # Add a version without a one
+                north_american_extra = normalized_deobfuscated[1:]
+                north_american_add_type = 'non-1'
+            elif is_north_american_phone_number_without_one(deobfuscated):
+                # Add a version with a one
+                north_american_extra = '1' + normalized_deobfuscated
+                north_american_add_type = 'non-1'
+            elif is_north_american_phone_number_with_one_loose(deobfuscated):
+                # Add a version without a one
+                maybe_north_american_extra = normalized_deobfuscated[1:]
+                maybe_north_american_add_type = 'non-1'
+            elif is_north_american_phone_number_without_one_loose(deobfuscated):
+                # Add a version with a one
+                maybe_north_american_extra = '1' + normalized_deobfuscated
+                maybe_north_american_add_type = 'non-1'
+        if is_north_american and maybe_north_american_extra:
+            north_american_extra = maybe_north_american_extra
+            north_american_add_type = maybe_north_american_add_type
+            maybe_north_american_extra = ''
+            maybe_north_american_add_type = ''
+        if north_american_extra:
+            this_entry_normalized.add(north_american_extra)
+            report_text += ': NorAm {} normalized: {}'.format(north_american_add_type, north_american_extra)
+        if maybe_north_american_extra:
+            report_text += ': MAYBE NorAm {} normalized: {} (NOT ADDED)'.format(maybe_north_american_add_type,
+                                                                                maybe_north_american_extra)
+        this_unique_normalized = this_entry_normalized - normalized
+        unique_normalized |= this_unique_normalized
+        duplicate_normalized |= this_entry_normalized - this_unique_normalized
+        normalized |= this_unique_normalized
+        # normalized += normalized.union(this_unique_normalized)
+        if unique_normalized:
+            report_text += ': adding normalized: {}'.format(unique_normalized)
+        else:
+            # There are no unique normalized forms for this entry (i.e. it's redundant)
+            report_text += ': all normalized forms already in list: {}'.format(this_entry_normalized)
+        # print(report_text)
+    return processed, normalized, unique_normalized, duplicate_normalized
