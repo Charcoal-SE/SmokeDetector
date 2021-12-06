@@ -2489,49 +2489,51 @@ create_rule("messaging number in {}",
 
 
 # Homoglyph obfuscation, used both by trolls and spammers
-@create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
-def obfuscated_word(s, site):
-    obfuscation_keywords = [
-        # Trolls && cussing
-        "c" + "ock",
-        "c" + "unt",
-        "d" + "ick",
-        "f" + "uck",
-        "mother" + "f" + "ucker",
-        "p" + "enis",
-        "p" + "ussy",
-        "w" + "hore",
-        "black helicopters",
-        "attack helicopters",
+obfuscation_keywords = [
+    # Trolls && cussing
+    "c" + "ock",
+    "c" + "unt",
+    "d" + "ick",
+    "f" + "uck",
+    "mother" + "f" + "ucker",
+    "p" + "enis",
+    "p" + "ussy",
+    "w" + "hore",
+    "black helicopters",
+    "attack helicopters",
 
-        # Phone support scam
-        # Rule only covers single words for the time being
-        # Also, comment out really short ones to reduce chance for FPs
-        # "amazon prime",
-        # "avg",
-        "binance",
-        "coinbase",
-        # "ebay",
-        "gemini",
-        # "hp printer",
-        "norton",
-        "paypal",
-        "printer",  # maybe remove if we enable "hp printer"
-        "quickbooks",
-        # "sage",
-        "sbcglobal",
-        "ticketmaster",
-        # "trust wallet",
-        "turbotax",
-        "wallet",  # maybe remove if we enable "trust wallet"
+    # Phone support scam
+    # Rule only covers single words for the time being
+    # Also, comment out really short ones to reduce chance for FPs
+    # "amazon prime",
+    # "avg",
+    "binance",
+    "coinbase",
+    # "ebay",
+    "gemini",
+    # "hp printer",
+    "norton",
+    "paypal",
+    "printer",  # maybe remove if we enable "hp printer"
+    "quickbooks",
+    # "sage",
+    "sbcglobal",
+    "ticketmaster",
+    # "trust wallet",
+    "turbotax",
+    "wallet",  # maybe remove if we enable "trust wallet"
 
-        "support",
-        "phone",
-        "number",
-        "helpline"
-    ]
-    # Simple 1337 translator
-    t = {
+    "support",
+    "phone",
+    "number",
+    "helpline"
+]
+
+
+# Simple 1337 translator
+def create_1337_translation():
+    # It is currently relied upon that there are no translation differences between upper and lower case text.
+    simple_1337_mapping = {
         '4': 'a',
         '3': 'e',
         '6': 'g',
@@ -2545,14 +2547,21 @@ def obfuscated_word(s, site):
         '2': 'z',
     }
     for p in punctuation:
-        if p not in t:
-            t[p] = ''
-    trans = "".maketrans(t)
+        if p not in simple_1337_mapping:
+            simple_1337_mapping[p] = ''
+    return "".maketrans(simple_1337_mapping)
+
+
+translation_1337 = create_1337_translation()
+
+
+@create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
+def obfuscated_word(s, site):
     for word in regex.split(r'[-\s_]+', s):
         # prevent FP on stuff like 'I have this "number": 1111'
-        word = word.strip(punctuation)
-        translated = word.translate(trans).lower()
-        if translated in obfuscation_keywords and translated != word.lower():
+        word = word.strip(punctuation).lower()
+        translated = word.translate(translation_1337)
+        if translated != word and translated in obfuscation_keywords:
             return True, "%r is obfuscated %r" % (word, translated)
     return False, ""
 
