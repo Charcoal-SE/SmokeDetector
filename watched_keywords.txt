@@ -35079,3 +35079,4 @@
 1638979979	Makyen	yougjunior542baba(?:@gmail\.com)?
 1638980653	cigien	fastenere\.com
 1638981110	cigien	pandr[\W_]*+junk[\W_]*+cars(?!\.com(?<=pandrjunkcars\.com))
+1638984976	cigien	seven[\W_]*+mentor(?!\.com(?<=sevenmentor\.com))
