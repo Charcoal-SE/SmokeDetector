@@ -35078,3 +35078,4 @@
 1638971904	tripleee	pandrjunkcars\.com
 1638975809	Makyen	recovercoin
 1638975834	Makyen	rescueteam[\W_]*+(?:dot[\W_]*+)?com
+1638979979	Makyen	yougjunior542baba(?:@gmail\.com)?
