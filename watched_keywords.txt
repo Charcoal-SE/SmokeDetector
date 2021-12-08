@@ -35077,3 +35077,4 @@
 1638969056	tripleee	delhiindiaescorts1\.in
 1638971904	tripleee	pandrjunkcars\.com
 1638975809	Makyen	recovercoin
+1638975834	Makyen	rescueteam[\W_]*+(?:dot[\W_]*+)?com
