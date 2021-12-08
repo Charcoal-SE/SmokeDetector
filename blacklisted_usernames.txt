@@ -540,3 +540,4 @@ williamriver
 (?-i:^biomart8844$)
 (?-i:^Hir Infotech$)
 (?-i:^UWA4d$)
+(?-i:^Global Trade Plaza$)
