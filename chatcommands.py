@@ -35,7 +35,8 @@ from classes.feedback import *
 from classes.dns import dns_resolve
 from tasks import Tasks
 import dns.resolver
-from homoglyphs import NumberHomoglyphs
+import number_homoglyphs
+import phone_numbers
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -390,26 +391,27 @@ def do_blacklist(blacklist_type, msg, force=False):
                                " If you really want to add this pattern, you will need to manually submit a PR.")
     else:
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
-        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX, pattern):
+        if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX, pattern):
             digit_count = len(regex.findall(r'\d', pattern))
-            digit_between_text = "between {} and {} digits".format(findspam.NUMBER_REGEX_MINIMUM_DIGITS,
-                                                                   findspam.NUMBER_REGEX_MAXIMUM_DIGITS)
+            digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
+                                                                   phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
             digit_count_text = ""
-            if digit_count < findspam.NUMBER_REGEX_MINIMUM_DIGITS or digit_count > findspam.NUMBER_REGEX_MAXIMUM_DIGITS:
+            if digit_count < phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS or \
+               digit_count > phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS:
                 digit_count_text = " The supplied pattern contains" + \
                                    " {} digits, which doesn't meet the requirements.".format(digit_count)
             raise CmdException("That pattern can't be detected by the number detections. Patterns for the number" +
-                               " detections must match the `NUMBER_REGEX` in findspam.py. In order to do so, it needs" +
-                               " to have " + digit_between_text + " and not include" +
+                               " detections must match the `NUMBER_REGEX` in phone_numbers.py. In order to do so," +
+                               " it needs to have " + digit_between_text + " and not include" +
                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." +
                                " Generally, you should watch/blacklist the non-obfuscated version of the number." +
                                digit_count_text)
-        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_START, pattern):
+        if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_START, pattern):
             other_issues.append(exact_match_text + 'begin with a digit' +
                                 ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
-        if not_regex_search_ascii_and_unicode(findspam.NUMBER_REGEX_END, pattern):
+        if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_END, pattern):
             other_issues.append(exact_match_text + 'end with a digit.')
-        deobfuscated_number = NumberHomoglyphs.normalize(without_comments)
+        deobfuscated_number = number_homoglyphs.normalize(without_comments)
         if deobfuscated_number != without_comments:
             other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
                                 ' use the non-obfuscated number.')

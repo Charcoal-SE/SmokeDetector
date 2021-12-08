@@ -23,11 +23,11 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, process_numlist
+from helpers import log
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
-from homoglyphs import NumberHomoglyphs
+import phone_numbers
 
 
 if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
@@ -328,63 +328,6 @@ URL_REGEX = regex.compile(
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 
-# The NUMBER_REGEXes are used to obtain strings within a post which are considered to be a single "number". While
-#   it would be nice to be able to just use a single regular expression like:
-#     r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))[\W_]*+(?:\d[\W_]*+){7,18}\d(?=\D|$)'
-#   Doing so won't get us all the possible matches of different lengths which start from the same character, even
-#   when using the regex package's overlapped=True option. In order to get all different possible lengths,
-#   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
-#   interested and then combine the results.
-#   In order to make it more efficient, we combine those into a single regular expression using lookaheads and
-#   capture groups, which will put all of the different possibilites into capture groups, along with empty strings
-#   for each length which didn't match.
-# The use of separate Unicode and ASCII flagged versions of the regexes is also because they can result in different
-#   start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
-#   NUMBER_REGEX_START, and NUMBER_REGEX_END in order to not have a separate source for a combined regex. This
-#   does result in our CI testing being a bit slower, but is a trade-off for not using two separate regexes, which
-#   would reduce maintainability.
-# The minimum number of digits to be considered a "number":
-NUMBER_REGEX_MINIMUM_DIGITS = 7
-# The maximum number of digits to be considered a "number":
-NUMBER_REGEX_MAXIMUM_DIGITS = 20
-NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
-NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
-NUMBER_REGEX_START_TEXT = r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
-NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))){{{}}}'
-NUMBER_REGEX_END_TEXT = r'\d(?=\D|$)'
-
-
-def get_number_regex_with_quantfier(quantifier):
-    return NUMBER_REGEX_START_TEXT + NUMBER_REGEX_MIDDLE_TEXT.format(quantifier) + NUMBER_REGEX_END_TEXT
-
-
-NUMBER_REGEX_RANGE_TEXT = "{},{}".format(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH)
-NUMBER_REGEXTEXT_WITH_RANGE = get_number_regex_with_quantfier(NUMBER_REGEX_RANGE_TEXT)
-# Starting the regex with a pattern for the entire range limits the rest of the overall regex to only being tested
-# on characters where there's going to be a match.
-NUMBER_REGEX_TEXT = r'(?={})'.format(NUMBER_REGEXTEXT_WITH_RANGE)
-
-for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH):
-    # These lookaheads all have an empty pattern as a second option. This causes all of them to
-    # always match, which results in the capture group having the capture and not causing evaluation
-    # of the regex to stop.
-    NUMBER_REGEX_TEXT += r'(?=({})|)'.format(get_number_regex_with_quantfier(number_regex_length))
-
-# The NUMBER_REGEX is to verify that a pattern with be able to make an exact match to text strings which are selected
-#   by the NUMBER_REGEXes. It should be used as a test to verify patterns for number watches and blacklists.
-NUMBER_REGEX = {
-    'unicode': regex.compile(NUMBER_REGEX_TEXT, flags=regex.UNICODE),
-    'ascii': regex.compile(NUMBER_REGEX_TEXT, flags=regex.ASCII)
-}
-NUMBER_REGEX_START = {
-    'unicode': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.UNICODE),
-    'ascii': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.ASCII)
-}
-NUMBER_REGEX_END = {
-    'unicode': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.UNICODE),
-    'ascii': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.ASCII)
-}
-
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
 
@@ -640,9 +583,9 @@ class FindSpam:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized, unused1, unused2 = \
-            process_numlist(GlobalVars.blacklisted_numbers)
+            phone_numbers.process_numlist(GlobalVars.blacklisted_numbers)
         GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized, unused1, unused2 = \
-            process_numlist(GlobalVars.watched_numbers)
+            phone_numbers.process_numlist(GlobalVars.watched_numbers)
         log('debug', "Global blacklists loaded")
 
     @staticmethod
@@ -995,20 +938,6 @@ def has_phone_number(s, site):
     return False, ""
 
 
-def get_number_candidates(text):
-    # Get all the strings within the text to test which might be considered a single "number".
-    # The difficulty here is that we want all the different permutations (restricted to the original order)
-    # which can match with any number of digits within our range.
-    ascii_findall = NUMBER_REGEX['ascii'].findall(text, overlapped=True)
-    numbers = [number for lst in ascii_findall for number in lst if number != '']
-    # We only want the ones which consider Unicode digits which are not included with only ASCII digits.
-    # Considering the non-ASCII Unicode numbers may result in number candidates which start or end at different points.
-    unicode_findall = NUMBER_REGEX['unicode'].findall(text, overlapped=True)
-    numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
-    numbers = set(numbers)
-    return numbers
-
-
 # noinspection PyMissingTypeHints
 def check_numbers(s, numlist, numlist_normalized=None):
     """
@@ -1018,27 +947,17 @@ def check_numbers(s, numlist, numlist_normalized=None):
     """
     numlist_normalized = numlist_normalized or set()
     matches = []
-    numbers = get_number_candidates(s)
-    normalized_numbers = set()
-    for number_candidate in numbers:
-        # Generating the normalized_numbers is done here to keep checking them in lock-step with the non-normalized
-        # numbers. It also prevents re-generating them later for the obfuscated check.
-        normalized_candidate = regex.sub(r"(?a)\D", "", number_candidate)
-        normalized_numbers.add(normalized_candidate)
-        if number_candidate in numlist:
-            matches.append('{0} found verbatim'.format(number_candidate))
-            continue
-        # else
-        if normalized_candidate in numlist_normalized:
-            matches.append('{0} found normalized'.format(normalized_candidate))
-    # Obfuscated via homoglyphs
-    if numlist_normalized:
-        # We only test against the normalized list, so there's no need to do anything if we don't have such a list.
-        hg_initial_numbers = get_number_candidates(NumberHomoglyphs.normalize(s))
-        hg_normalized_numbers = {regex.sub(r"(?a)\D", "", num) for num in hg_initial_numbers} - normalized_numbers
-        for hg_candidate in hg_normalized_numbers:
-            if hg_candidate in numlist_normalized:
-                matches.append('{0} found obfuscated'.format(hg_candidate))
+    # normalized_candidates has no candidates; deobfuscated_candidates has no candidates or normalized_candidates
+    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
+
+    def check_set_and_add_matches(reported_match_type, candidates, number_detection_list):
+        for number_candidate in candidates:
+            if number_candidate in number_detection_list:
+                matches.append('{} found {}'.format(number_candidate, reported_match_type))
+
+    check_set_and_add_matches('verbatim', candidates, numlist)
+    check_set_and_add_matches('normalized', normalized_candidates, numlist_normalized)
+    check_set_and_add_matches('obfuscated', deobfuscated_candidates, numlist_normalized)
     if matches:
         return True, '; '.join(matches)
     else:

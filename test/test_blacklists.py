@@ -9,8 +9,8 @@ from globalvars import GlobalVars
 import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
-from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode, process_numlist
-from findspam import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
+from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
+from phone_numbers import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS, process_numlist
 
 
 def test_number_lists():
