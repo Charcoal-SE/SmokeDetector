@@ -772,10 +772,13 @@ items:
   - west.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
+  - kate.ns.cloudflare.com.
+- ns:
+  - ian.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
-  - kate.ns.cloudflare.com.
+  - nancy.ns.cloudflare.com.
 - ns:
   - ines.ns.cloudflare.com.
   - marty.ns.cloudflare.com.
