@@ -539,3 +539,4 @@ williamriver
 (?-i:^linehammer$)
 (?-i:^biomart8844$)
 (?-i:^Hir Infotech$)
+(?-i:^UWA4d$)
