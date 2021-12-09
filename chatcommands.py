@@ -1409,6 +1409,31 @@ def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True, timeou
     return results
 
 
+def bisect_number_list(s, full_number_list, filename):
+    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
+    line_number = 0
+    matches = []
+    types_regex = regex.compile(r'(verbatim|normalized|obfuscated)')
+    for raw_number in full_number_list:
+        line_number += 1
+        (processed, normalized_set) = full_number_list[raw_number]
+        line_matches = findspam.get_number_matches(candidates, normalized_candidates, deobfuscated_candidates,
+                                                   set(processed), normalized_set)
+        types = ', '.join({types_regex.search(match)[0] for match in line_matches})
+        if line_matches:
+            matches.append((raw_number, (line_number, filename), types, line_matches))
+    return matches
+
+
+def get_watch_and_blacklist_number_bisects(s):
+    number_matching = []
+    number_matching.extend(bisect_number_list(s, GlobalVars.blacklisted_numbers_full, 'blacklisted_numbers.txt'))
+    number_matching.extend(bisect_number_list(s, GlobalVars.watched_numbers_full, 'watched_numbers.txt'))
+    number_matching = [(raw_pattern, line_and_filename, ' matched ' + match_types, full_match_list)
+                       for (raw_pattern, line_and_filename, match_types, full_match_list) in number_matching]
+    return number_matching
+
+
 @command(str, privileged=True, whole_msg=True, aliases=['what'])
 def bisect(msg, s):
     bookended_regexes = []
@@ -1432,6 +1457,10 @@ def bisect(msg, s):
     # it would be better to look at how the regex might be rewritten.
     matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=1)
     matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=1))
+    # Number matches use an additional value in the tuple. Change any regex matches to have tuples of the same length.
+    matching = [(raw_pattern, line_and_filename, '', []) for (raw_pattern, line_and_filename) in matching]
+    # Number bisects
+    matching.extend(get_watch_and_blacklist_number_bisects(s))
 
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
@@ -1439,12 +1468,14 @@ def bisect(msg, s):
     print('matching: {}'.format(matching))
     print('len(matching): {}'.format(len(matching)))
     if len(matching) == 1:
-        r, (l, f) = matching[0]
-        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
-            r, l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+        raw_pattern, (line_number, filename), match_type, unused = matching[0]
+        match_type = " matched " + match_type if match_type else ''
+        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
+            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
     else:
-        return "Matched by the following regexes:\n" + "\n".join(
-            "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
+        return "Matched by the following:\n" + "\n".join(
+            "{} on line {} of {}{}".format(raw_pattern, line_number, filename, types)
+            for raw_pattern, (line_number, filename), types, unused in matching)
 
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
@@ -1454,45 +1485,22 @@ def bisect_number(msg, s):
         number = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
         pass
-    normalized = regex.sub(r"\D", "", number)
 
-    # Assume raw number strings don't duplicate
-    numbers = dict(Blacklist(Blacklist.NUMBERS).each(True))
-    numbers.update(Blacklist(Blacklist.WATCHED_NUMBERS).each(True))
-    # But normalized numbers surely duplicate
-    normalized_numbers = collections.defaultdict(list)
-    for item, info in numbers.items():
-        item_norm = regex.sub(r"\D", "", item)
-        normalized_numbers[item_norm].append(info)
+    matching = get_watch_and_blacklist_number_bisects(s)
 
-    normalized_match = normalized_numbers.get(normalized)
-    if not normalized_match:
-        return "{!r} is not caught by a blacklist or watchlist number.".format(number)
-    verbatim_match = numbers.get(number)
-    if verbatim_match:
-        # A verbatim match is ALWAYS a normalized match as well
-        # Something would be seriously wrong if this throws ValueError
-        normalized_match.remove(verbatim_match)
-        if normalized_match:
-            l, f = verbatim_match
-            response = "Matched verbatim on line {0} of {1}, and also normalized on".format(l, f)
-            for l, f in normalized_match:
-                response += "\n- line {0} of {1}".format(l, f)
-            return response
-        else:
-            l, f = verbatim_match
-            return "Matched verbatim on [line {0} of {1}](https://github.com/{2}/blob/{3}/{1}#L{0})".format(
-                l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+    if not matching:
+        return "{!r} is not caught by a blacklist or watchlist number.".format(s)
+
+    if len(matching) == 1:
+        raw_pattern, (line_number, filename), match_type, full_match_list = matching[0]
+        match_type = " matched " + match_type if match_type else ''
+        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}): {5}".format(
+            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id,
+            '; '.join(full_match_list))
     else:
-        if len(normalized_match) == 1:
-            l, f = normalized_match[0]
-            return "Not matched verbatim, but normalized on " \
-                   "[line {0} of {1}](https://github.com/{2}/blob/{3}/{1}#L{0})".format(
-                       l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
-        response = "Not matched verbatim, but normalized on"
-        for l, f in normalized_match:
-            response += "\n- line {0} of {1}".format(l, f)
-        return response
+        return "Matched by the following:\n" + "\n".join(
+            "{} on line {} of {}{}".format(raw_pattern, line_number, filename, '; '.join(full_match_list))
+            for raw_pattern, (line_number, filename), unused, full_match_list in matching)
 
 
 # noinspection PyIncorrectDocstring
