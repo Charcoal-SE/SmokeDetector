@@ -147,6 +147,15 @@ def deobfuscate(text):
     return number_homoglyphs.normalize(text)
 
 
+def get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized, all_normalized=None):
+    north_american_extra, north_american_add_type, maybe_north_american_extra = \
+        get_north_american_alternate_normalized(processed)
+    if maybe_north_american_extra not in normalized and \
+            (all_normalized is None or maybe_north_american_extra in all_normalized):
+        return maybe_north_american_extra
+    return ''
+
+
 def get_north_american_alternate_normalized(non_normalized, normalized=None):
     normalized = normalized if normalized else get_only_digits(non_normalized)
     north_american_extra = ''

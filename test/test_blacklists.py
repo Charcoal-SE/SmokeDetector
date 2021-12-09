@@ -10,13 +10,15 @@ import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
 from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
-from phone_numbers import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS, process_numlist
+from phone_numbers import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS, \
+    process_numlist, get_maybe_north_american_not_in_normalized_but_in_all
 from findspam import FindSpam
 
 
 def test_number_lists():
     errors = {}
     no_exacts = []
+    maybe_north_american_already = []
     all_errors = []
 
     def clear_errors():
@@ -43,6 +45,9 @@ def test_number_lists():
             (processed_pattern, this_normalized) = number_list[pattern]
             unique_normalized = this_normalized - all_normalized
             duplicate_normalized = unique_normalized - this_normalized
+            maybe_north_american_not_in_all = get_maybe_north_american_not_in_normalized_but_in_all(processed_pattern, this_normalized, all_normalized)
+            if maybe_north_american_not_in_all:
+                maybe_north_american_already.append(entry_description + "has maybe North American form already in all normalized: {}".format(maybe_north_american_not_in_all))
             all_normalized |= unique_normalized
             digit_count = len(regex.findall(r'\d', processed_pattern))
             digit_count_text = " ({} digits is OK)".format(digit_count)
@@ -100,6 +105,10 @@ def test_number_lists():
     if (no_exacts_count > 0):
         pluralize = "" if no_exacts_count == 1 else "s"
         print("\n\t".join(["{} pattern{} can't match exactly:".format(no_exacts_count, pluralize)] + no_exacts))
+    maybe_north_american_already_count = len(maybe_north_american_already)
+    if (maybe_north_american_already_count > 0):
+        pluralize = "" if maybe_north_american_already_count == 1 else "s"
+        print("\n\t".join(["{} pattern{} are maybe North American with the alternate version already in all normalized:".format(maybe_north_american_already_count, pluralize)] + maybe_north_american_already))
     error_count = len(all_errors)
     if error_count > 0:
         pluralize = "" if error_count == 1 else "s"
