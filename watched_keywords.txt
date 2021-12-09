@@ -35095,3 +35095,4 @@
 1639045107	Makyen	doodleyday\.com
 1639046335	tripleee	paisley\.org\.uk
 1639046727	tripleee	mbbs[\W_]*+in[\W_]*+ukraine
+1639046746	tripleee	bright[\W_]*+future[\W_]*+abroad
