@@ -201,7 +201,6 @@ def process_numlist(numlist, processed=None, normalized=None):
         # deobfuscated and normalized: We don't look for the non-normalized deobfuscated
         normalized_deobfuscated = get_only_digits(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
-        report_text = '({}) Number entry: {}'.format(index, entry)
         if not force_no_north_american:
             north_american_extra, north_american_add_type, maybe_north_american_extra = \
                 get_north_american_alternate_normalized(deobfuscated, normalized_deobfuscated)
@@ -209,14 +208,7 @@ def process_numlist(numlist, processed=None, normalized=None):
                 north_american_extra = maybe_north_american_extra
             if north_american_extra:
                 this_entry_normalized.add(north_american_extra)
-                report_text += ': NorAm {} normalized: {}'.format(north_american_add_type, north_american_extra)
-            elif maybe_north_american_extra:
-                report_text += ': MAYBE NorAm {} normalized: {} (NOT ADDED)'.format(north_american_add_type,
-                                                                                    maybe_north_american_extra)
         normalized |= this_entry_normalized
         full_entry = (without_comment, this_entry_normalized)
         full_list[entry] = full_entry
-        report_text += ':: adding normalized: {}'.format(this_entry_normalized)
-        report_text += ':: full_entry: {}'.format(full_entry)
-        print(report_text)
     return full_list, processed, normalized
