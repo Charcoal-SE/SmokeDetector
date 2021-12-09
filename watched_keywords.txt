@@ -34938,7 +34938,6 @@
 1638450393	Ryan M	linksbuilt\.wordpress\.com
 1638455839	cigien	mansionpage\.com
 1638456374	cigien	hire[\W_]*+full[\W_]*+stack[\W_]*+developer[\W_]*+india
-1638466235	Ollie	lbk\.com\.tw
 1638469708	Jeff Schaller	orocinono\.site
 1638480520	Makyen	zkahe\.com
 1638488238	Cody Gray	carson-matthews\.co\.uk
