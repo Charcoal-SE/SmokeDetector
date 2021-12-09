@@ -406,17 +406,54 @@ def do_blacklist(blacklist_type, msg, force=False):
                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." +
                                " Generally, you should watch/blacklist the non-obfuscated version of the number." +
                                digit_count_text)
+        (orig_number_text, processed, normalized), processed_as_set, unused1 = phone_numbers.process_numlist([pattern])
+        if processed in GlobalVars.blacklisted_numbers:
+            raise CmdException('The processed version of that pattern `{}` already on the number blacklist.')
+        # The following requires is_watchlist, due to moving entries from the watchlist to the blacklist. It's
+        # assumed that any conflict with something being blacklisted will resolve by the auto-removal from the
+        # watchlist. If it doesn't, it should be caught by CI testing.
+        if is_watchlist and processed in GlobalVars.watched_numbers:
+            raise CmdException('The processed version of that pattern `{}` already on the number watchlist.')
+        normalized_already_text = 'The following deobfuscated and normalized version of that pattern are already' + \
+                                  'on the number {}list: `{}`'
+        normalized_already_in_blacklist = normalized - (normalized - GlobalVars.blacklisted_numbers_normalized)
+        if normalized_already_in_blacklist:
+            raise CmdException(normalized_already_text.format('black', '`; `'.join(normalized_already_in_blacklist)))
+        normalized_already_in_watchlist = normalized - (normalized - GlobalVars.watched_numbers_normalized)
+        # The following requires is_watchlist, due to moving entries from the watchlist to the blacklist. It's
+        # assumed that any conflict with something being blacklisted will resolve by the auto-removal from the
+        # watchlist. If it doesn't, it should be caught by CI testing.
+        if is_watchlist and normalized_already_in_watchlist:
+            raise CmdException(normalized_already_text.format('watch', '`; `'.join(normalized_already_in_watchlist)))
+        unused_maybe_north_american_norm = get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
+        if unused_maybe_north_american_norm:
+            other_issues.append("That pattern may be a North American number. If it is, please use a format" +
+                                " which starts with an optional `1` with possible separator text and has the main" +
+                                " number in the format `234-567-8900` where the `-` could be a single alpha character"
+                                " or any `[\\W_]*+`. Alternately, you can add the comment `(?#IS NorAm)` to the" +
+                                " end of the pattern to force also using the alternate normalized form, or"
+                                " `(?#NO NorAm)` if it's not a North American phone number.")
+        unused_na_on_list = 'That pattern may be a North American number and the alternate normalized verison' + \
+                            ' is already on the {}list. This indicates a potential conflict. Ideally, there should' + \
+                            ' be one entry which is automatically used normalized both with and without a "1". The' + \
+                            ' normalized version which is already in use is:{}'
+        if unused_maybe_north_american_norm in GlobalVars.blacklisted_numbers_normalized:
+            other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
+        if unused_maybe_north_american_norm in GlobalVars.watchlisted_numbers_normalized:
+            other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
         if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_START, pattern):
             other_issues.append(exact_match_text + 'begin with a digit' +
                                 ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
         if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_END, pattern):
             other_issues.append(exact_match_text + 'end with a digit.')
-        deobfuscated_number = number_homoglyphs.normalize(without_comments)
+        deobfuscated_number = phone_numbers.deobfuscate(without_comments)
         if deobfuscated_number != without_comments:
             other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
-                                ' use the non-obfuscated number.')
+                                " use the non-obfuscated number.")
 
     other_issues_text = ' '.join(other_issues)
+    if len(other_issues_text) > 350:
+        other_issues_text = '\n'.join(other_issues)
 
     if not force:
         if "number" in blacklist_type or \
