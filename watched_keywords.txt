@@ -35088,3 +35088,4 @@
 1639031385	tripleee	(?-i:^harriswood$)
 1639032767	tripleee	shotsblastingmachine\.com
 1639034890	tripleee	querybro\.com
+1639034969	tripleee	popularthemereview\.com
