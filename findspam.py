@@ -940,16 +940,12 @@ def has_phone_number(s, site):
 
 
 # noinspection PyMissingTypeHints
-def check_numbers(s, numlist, numlist_normalized=None):
+def get_number_matches(candidates, normalized_candidates, deobfuscated_candidates, numlist, numlist_normalized=None):
     """
-    Extract sequences of possible phone numbers. Check extracted numbers
-    against verbatim match (identical to item in list) or normalized match
-    (digits are identical, but spacing or punctuation contains differences).
+    Get the matches for a set of candidates which are in a number list
     """
     numlist_normalized = numlist_normalized or set()
     matches = []
-    # normalized_candidates has no candidates; deobfuscated_candidates has no candidates or normalized_candidates
-    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
 
     def check_set_and_add_matches(reported_match_type, candidates, number_detection_list):
         for number_candidate in candidates:
@@ -959,6 +955,23 @@ def check_numbers(s, numlist, numlist_normalized=None):
     check_set_and_add_matches('verbatim', candidates, numlist)
     check_set_and_add_matches('normalized', normalized_candidates, numlist_normalized)
     check_set_and_add_matches('obfuscated', deobfuscated_candidates, numlist_normalized)
+    return matches
+
+
+# noinspection PyMissingTypeHints
+def check_numbers(s, numlist, numlist_normalized=None):
+    """
+    Extract sequences of possible phone numbers. Check extracted numbers
+    against verbatim match (identical to item in list) or normalized match
+    (digits are identical, but spacing or punctuation contains differences)
+    with both the original text and a number-deobfuscated version.
+    """
+    numlist_normalized = numlist_normalized or set()
+    matches = []
+    # normalized_candidates has no candidates; deobfuscated_candidates has no candidates or normalized_candidates
+    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
+    matches = get_number_matches(candidates, normalized_candidates, deobfuscated_candidates,
+                                 numlist, numlist_normalized)
     if matches:
         return True, '; '.join(matches)
     else:
