@@ -143,6 +143,30 @@ def is_north_american_phone_number_without_one_loose(text):
     return regex.match(NA_NUMBER_WITHOUT_ONE_LOOSE, text) is not None
 
 
+def get_north_american_alternate_normalized(non_normalized, normalized=None):
+    normalized = normalized if normalized else get_only_digits(non_normalized)
+    north_american_extra = ''
+    north_american_add_type = ''
+    maybe_north_american_extra = ''
+    if is_north_american_phone_number_with_one(non_normalized):
+        # Add a version without a one
+        north_american_extra = normalized[1:]
+        north_american_add_type = 'non-1'
+    elif is_north_american_phone_number_without_one(non_normalized):
+        # Add a version with a one
+        north_american_extra = '1' + normalized
+        north_american_add_type = 'add-1'
+    elif is_north_american_phone_number_with_one_loose(non_normalized):
+        # Add a version without a one
+        maybe_north_american_extra = normalized[1:]
+        north_american_add_type = 'non-1'
+    elif is_north_american_phone_number_without_one_loose(non_normalized):
+        # Add a version with a one
+        maybe_north_american_extra = '1' + normalized
+        north_american_add_type = 'add-1'
+    return north_american_extra, north_american_add_type, maybe_north_american_extra
+
+
 def process_numlist(numlist, processed=None, normalized=None):
     processed = processed if processed is not None else set()
     normalized = normalized if normalized is not None else set()
@@ -165,38 +189,17 @@ def process_numlist(numlist, processed=None, normalized=None):
         normalized_deobfuscated = get_only_digits(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
         report_text = '({}) Number entry: {}'.format(index, entry)
-        north_american_extra = ''
-        north_american_add_type = ''
-        maybe_north_american_extra = ''
-        maybe_north_american_add_type = ''
         if not force_no_north_american:
-            if is_north_american_phone_number_with_one(deobfuscated):
-                # Add a version without a one
-                north_american_extra = normalized_deobfuscated[1:]
-                north_american_add_type = 'non-1'
-            elif is_north_american_phone_number_without_one(deobfuscated):
-                # Add a version with a one
-                north_american_extra = '1' + normalized_deobfuscated
-                north_american_add_type = 'add-1'
-            elif is_north_american_phone_number_with_one_loose(deobfuscated):
-                # Add a version without a one
-                maybe_north_american_extra = normalized_deobfuscated[1:]
-                maybe_north_american_add_type = 'non-1'
-            elif is_north_american_phone_number_without_one_loose(deobfuscated):
-                # Add a version with a one
-                maybe_north_american_extra = '1' + normalized_deobfuscated
-                maybe_north_american_add_type = 'add-1'
-        if maybe_north_american_extra and force_is_north_american:
-            north_american_extra = maybe_north_american_extra
-            north_american_add_type = maybe_north_american_add_type
-            maybe_north_american_extra = ''
-            maybe_north_american_add_type = ''
-        if north_american_extra:
-            this_entry_normalized.add(north_american_extra)
-            report_text += ': NorAm {} normalized: {}'.format(north_american_add_type, north_american_extra)
-        if maybe_north_american_extra:
-            report_text += ': MAYBE NorAm {} normalized: {} (NOT ADDED)'.format(maybe_north_american_add_type,
-                                                                                maybe_north_american_extra)
+            north_american_extra, north_american_add_type, maybe_north_american_extra = \
+                get_north_american_alternate_normalized(deobfuscated, normalized_deobfuscated)
+            if maybe_north_american_extra and force_is_north_american:
+                north_american_extra = maybe_north_american_extra
+            if north_american_extra:
+                this_entry_normalized.add(north_american_extra)
+                report_text += ': NorAm {} normalized: {}'.format(north_american_add_type, north_american_extra)
+            elif maybe_north_american_extra:
+                report_text += ': MAYBE NorAm {} normalized: {} (NOT ADDED)'.format(north_american_add_type,
+                                                                                    maybe_north_american_extra)
         normalized |= this_entry_normalized
         full_entry = (without_comment, this_entry_normalized)
         full_list[entry] = full_entry
