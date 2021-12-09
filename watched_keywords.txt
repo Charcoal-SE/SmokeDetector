@@ -35092,3 +35092,4 @@
 1639035571	tripleee	(?-i:CxCO09U0okE)(?# youtube)
 1639038179	tripleee	cex\.io
 1639045092	Makyen	doodleyday(?!\.com)
+1639045107	Makyen	doodleyday\.com
