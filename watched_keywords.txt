@@ -35097,3 +35097,4 @@
 1639046727	tripleee	mbbs[\W_]*+in[\W_]*+ukraine
 1639046746	tripleee	bright[\W_]*+future[\W_]*+abroad
 1639046933	tripleee	klantenservices\.bravesites\.com
+1639047698	tripleee	kbizsoft\.com
