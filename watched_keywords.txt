@@ -35081,3 +35081,4 @@
 1638981110	cigien	pandr[\W_]*+junk[\W_]*+cars(?!\.com(?<=pandrjunkcars\.com))
 1638984976	cigien	seven[\W_]*+mentor(?!\.com(?<=sevenmentor\.com))
 1638993586	Spevacus	tweetsgames\.com
+1639009026	cigien	kodyoon\.com
