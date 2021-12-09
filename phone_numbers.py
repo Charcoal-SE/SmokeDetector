@@ -143,6 +143,10 @@ def is_north_american_phone_number_without_one_loose(text):
     return regex.match(NA_NUMBER_WITHOUT_ONE_LOOSE, text) is not None
 
 
+def deobfuscate(text):
+    return number_homoglyphs.normalize(text)
+
+
 def get_north_american_alternate_normalized(non_normalized, normalized=None):
     normalized = normalized if normalized else get_only_digits(non_normalized)
     north_american_extra = ''
@@ -184,7 +188,7 @@ def process_numlist(numlist, processed=None, normalized=None):
         force_is_north_american = 'is noram' in comment.lower() or 'IS NA' in comment
         # normalized to only digits
         this_entry_normalized.add(get_only_digits(without_comment))
-        deobfuscated = number_homoglyphs.normalize(without_comment)
+        deobfuscated = deobfuscate(without_comment)
         # deobfuscated and normalized: We don't look for the non-normalized deobfuscated
         normalized_deobfuscated = get_only_digits(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
