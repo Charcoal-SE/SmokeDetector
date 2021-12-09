@@ -35098,3 +35098,4 @@
 1639046746	tripleee	bright[\W_]*+future[\W_]*+abroad
 1639046933	tripleee	klantenservices\.bravesites\.com
 1639047698	tripleee	kbizsoft\.com
+1639047823	tripleee	indiadataentry\.co\.uk
