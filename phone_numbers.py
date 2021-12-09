@@ -148,25 +148,28 @@ def process_numlist(numlist, processed=None, normalized=None):
     normalized = normalized if normalized is not None else set()
     unique_normalized = set()
     duplicate_normalized = set()
+    full_list = dict()
+    index = 0
     for entry in numlist:
+        index += 1
         this_entry_normalized = set()
         without_comment = remove_end_regex_comment(entry)
         processed.add(without_comment)
         comment = entry.replace(without_comment, '')
-        no_north_american = 'no noram' in comment.lower() or 'NO NA' in comment
-        is_north_american = 'is noram' in comment.lower() or 'IS NA' in comment
+        force_no_north_american = 'no noram' in comment.lower() or 'NO NA' in comment
+        force_is_north_american = 'is noram' in comment.lower() or 'IS NA' in comment
         # normalized to only digits
         this_entry_normalized.add(get_only_digits(without_comment))
         deobfuscated = number_homoglyphs.normalize(without_comment)
         # deobfuscated and normalized: We don't look for the non-normalized deobfuscated
         normalized_deobfuscated = get_only_digits(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
-        report_text = 'Number entry: {}'.format(entry)
+        report_text = '({}) Number entry: {}'.format(index, entry)
         north_american_extra = ''
         north_american_add_type = ''
         maybe_north_american_extra = ''
         maybe_north_american_add_type = ''
-        if not no_north_american:
+        if not force_no_north_american:
             if is_north_american_phone_number_with_one(deobfuscated):
                 # Add a version without a one
                 north_american_extra = normalized_deobfuscated[1:]
@@ -183,7 +186,7 @@ def process_numlist(numlist, processed=None, normalized=None):
                 # Add a version with a one
                 maybe_north_american_extra = '1' + normalized_deobfuscated
                 maybe_north_american_add_type = 'add-1'
-        if is_north_american and maybe_north_american_extra:
+        if maybe_north_american_extra and force_is_north_american:
             north_american_extra = maybe_north_american_extra
             north_american_add_type = maybe_north_american_add_type
             maybe_north_american_extra = ''
@@ -194,14 +197,10 @@ def process_numlist(numlist, processed=None, normalized=None):
         if maybe_north_american_extra:
             report_text += ': MAYBE NorAm {} normalized: {} (NOT ADDED)'.format(maybe_north_american_add_type,
                                                                                 maybe_north_american_extra)
-        this_unique_normalized = this_entry_normalized - normalized
-        unique_normalized |= this_unique_normalized
-        duplicate_normalized |= this_entry_normalized - this_unique_normalized
-        normalized |= this_unique_normalized
-        if unique_normalized:
-            report_text += ': adding normalized: {}'.format(unique_normalized)
-        else:
-            # There are no unique normalized forms for this entry (i.e. it's redundant)
-            report_text += ': all normalized forms already in list: {}'.format(this_entry_normalized)
+        normalized |= this_entry_normalized
+        full_entry = (without_comment, this_entry_normalized)
+        full_list[entry] = full_entry
+        report_text += ':: adding normalized: {}'.format(this_entry_normalized)
+        report_text += ':: full_entry: {}'.format(full_entry)
         print(report_text)
-    return processed, normalized, unique_normalized, duplicate_normalized
+    return full_list, processed, normalized

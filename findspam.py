@@ -582,10 +582,11 @@ class FindSpam:
         except AttributeError:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
-        GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized, unused1, unused2 = \
-            phone_numbers.process_numlist(GlobalVars.blacklisted_numbers)
-        GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized, unused1, unused2 = \
-            phone_numbers.process_numlist(GlobalVars.watched_numbers)
+        GlobalVars.blacklisted_numbers_full, GlobalVars.blacklisted_numbers, \
+            GlobalVars.blacklisted_numbers_normalized = \
+            phone_numbers.process_numlist(GlobalVars.blacklisted_numbers_raw)
+        GlobalVars.watched_numbers_full, GlobalVars.watched_numbers, \
+            GlobalVars.watched_numbers_normalized = phone_numbers.process_numlist(GlobalVars.watched_numbers_raw)
         log('debug', "Global blacklists loaded")
 
     @staticmethod
