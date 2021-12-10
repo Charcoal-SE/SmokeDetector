@@ -226,6 +226,8 @@ class Metasmoke:
                                           " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
             # Use protocol-relative links
             from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)
+            if "New [metasmoke user](//metasmoke.erwaysoftware.com/users" in from_ms and "](//stackexchange.com/users" in from_ms:
+                from_ms += " @Makyen"
             chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "exit" in message:
             exit_mode(code=message["exit"])
