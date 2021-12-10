@@ -35110,3 +35110,4 @@
 1639088779	cigien	onlymega\.com
 1639091523	cigien	(?-i:Mz621mtsM7Sj79XcA)(?#google forms)
 1639107038	Makyen	tycorun(?!\.com)(?:[\W_]*+lithium)?(?:[\W_]*+batter(?:y|ies))?
+1639107055	Makyen	tycorun\.com
