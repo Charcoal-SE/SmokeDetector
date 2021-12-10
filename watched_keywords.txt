@@ -35122,3 +35122,4 @@
 1639140171	Jeff Schaller	northshoremedicalclinic\.ca
 1639141652	tripleee	startelelogic(?!(?:\.wixsite)?\.com)
 1639141673	tripleee	startelelogic\.com
+1639149116	cigien	(?-i:3DU25W0)(?#bit.ly)
