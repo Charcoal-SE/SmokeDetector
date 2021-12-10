@@ -295,6 +295,9 @@ items:
   - betty.ns.cloudflare.com.
   - moura.ns.cloudflare.com.
 - ns:
+  - betty.ns.cloudflare.com.
+  - terry.ns.cloudflare.com.
+- ns:
   - blakely.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
