@@ -406,7 +406,8 @@ def do_blacklist(blacklist_type, msg, force=False):
                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." +
                                " Generally, you should watch/blacklist the non-obfuscated version of the number." +
                                digit_count_text)
-        (orig_number_text, processed, normalized), processed_as_set, unused1 = phone_numbers.process_numlist([pattern])
+        (orig_number_text, (processed, normalized)), processed_as_set, unused1 = \
+            phone_numbers.process_numlist([pattern])
         if processed in GlobalVars.blacklisted_numbers:
             raise CmdException('The processed version of that pattern `{}` already on the number blacklist.')
         # The following requires is_watchlist, due to moving entries from the watchlist to the blacklist. It's
