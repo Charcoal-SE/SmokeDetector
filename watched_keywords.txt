@@ -34132,7 +34132,6 @@
 1635833745	tripleee	ribs[\W_]*+uae
 1635837479	Makyen	rhinoxusastainlesssteel\.blogspot
 1635840149	Ryan M	nexsoftsys\.com
-1635840188	tripleee	startelelogic
 1635841287	tripleee	technofibre\.com
 1635841333	Ryan M	technofibredubai\.com
 1635841361	tripleee	techno[\W_]*+fibre(?!(?:dubai)?\.com)
