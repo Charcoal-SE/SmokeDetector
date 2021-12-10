@@ -35112,3 +35112,4 @@
 1639107038	Makyen	tycorun(?!\.com)(?:[\W_]*+lithium)?(?:[\W_]*+batter(?:y|ies))?
 1639107055	Makyen	tycorun\.com
 1639111102	cigien	rozibankgaransi\.com
+1639111760	Makyen	rsaswan@gmail\.com
