@@ -35120,3 +35120,4 @@
 1639132124	tripleee	pxpng\.com
 1639138712	tripleee	sabre[\W_]*+gds
 1639138730	tripleee	(?-i:^Chaitu Kushi$)
+1639140171	Jeff Schaller	northshoremedicalclinic\.ca
