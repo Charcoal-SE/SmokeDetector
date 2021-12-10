@@ -35111,3 +35111,4 @@
 1639091523	cigien	(?-i:Mz621mtsM7Sj79XcA)(?#google forms)
 1639107038	Makyen	tycorun(?!\.com)(?:[\W_]*+lithium)?(?:[\W_]*+batter(?:y|ies))?
 1639107055	Makyen	tycorun\.com
+1639111102	cigien	rozibankgaransi\.com
