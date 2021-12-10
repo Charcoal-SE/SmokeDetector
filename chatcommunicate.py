@@ -234,10 +234,9 @@ def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
         if len(msg) > 500 and "\n" not in msg:
-            log('warn', 'Discarded the following message because it was over 500 characters')
+            log('warn', 'The following message was over 500 characters')
             log('warn', msg)
-            _msg_queue.task_done()
-            continue
+            msg = msg[:490] + "\n" + msg[490:]
 
         full_retries = 0
 
