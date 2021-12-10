@@ -2605,3 +2605,4 @@ darkwebprogrammer(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 h[\W_]*+e[\W_]*+lp[\W_]*+mi[\W_]*+cro[\W_]*+s[\W_]*+oft[\W_]*+com
 QuickBooks License Lookup Tool
 &upp0rt
+(?-i:9c7mebX_N_EwNTk0)(?#t.me)
