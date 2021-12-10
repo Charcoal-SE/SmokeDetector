@@ -35119,3 +35119,4 @@
 1639131947	tripleee	glintylab\.com
 1639132124	tripleee	pxpng\.com
 1639138712	tripleee	sabre[\W_]*+gds
+1639138730	tripleee	(?-i:^Chaitu Kushi$)
