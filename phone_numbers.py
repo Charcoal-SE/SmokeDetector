@@ -70,20 +70,46 @@ def normalize_number_set(numbers):
     return {normalize_number(num) for num in numbers}
 
 
-def get_all_unique_candidates(text):
-    # Get unprocessed, unique normalized, and unique deobfuscated candidates
-    unprocessed, normalized, deobfuscated = get_all_candidates(text)
-    unique_normalized = normalized - unprocessed
-    unique_deobfuscated = deobfuscated - unique_normalized - unprocessed
-    return unprocessed, unique_normalized, unique_deobfuscated
+def normalize_number_list_only_changed(numbers):
+    # We want all which were changed by normalization, even if that results
+    #  in re-introducing something that was excluded.
+    #  Example: original: ['12a34', '1234']
+    #                        ^want    ^don't want
+    normalized_list = []
+    for num in numbers:
+        normalized = normalize_number(num)
+        if normalized != num:
+            normalized_list.append(normalized)
+    return normalized_list
+
+
+def normalize_number_list(numbers):
+    return [normalize_number(num) for num in numbers]
 
 
 def get_all_candidates(text):
-    # Get unprocessed, unique normalized, and unique deobfuscated candidates
-    unprocessed = get_candidates(text)
-    normalized = normalize_number_set(unprocessed)
-    deobfuscated = get_normalized_deobfuscated_candidates(text)
-    return unprocessed, normalized, deobfuscated
+    """
+    Get unprocessed number candidates, normalized entries which are differenet from their unprocessed source,
+    and the normalized candidates which are newly generated as a result of deobfuscation.
+    """
+    unprocessed_list = get_candidates(text)
+    normalized_list = normalize_number_list(unprocessed_list)
+    raw_deobfuscated_list = get_deobfuscated_candidates(text)
+    # The raw_deobfuscated list should contain everything that's in the unprocessed list.
+    # We don't want to be considering any which are the identical entries as are in the unprocessed
+    # list. However, it's possible that an additional identical entry was created through deobfuscation.
+    # So, if there are 2 copies of a number on the unprocessed_list and 3 of that number on the
+    # raw_deobfuscated_list, then we want to end up with 1 of that number on the deobfuscated_list.
+    for unprocessed in unprocessed_list:
+        for index in range(len(raw_deobfuscated_list)):
+            if raw_deobfuscated_list[index] == unprocessed:
+                raw_deobfuscated_list[index] = None
+                break
+    deobfuscated_list = [deobfuscated for deobfuscated in raw_deobfuscated_list if deobfuscated is not None]
+    # We only ever deal with the deobfuscated numbers in normalized format. Unlike the normalized list,
+    # we want all of them, even if unchanged.
+    deobfuscated_list = normalize_number_list(deobfuscated_list)
+    return set(unprocessed_list), set(normalized_list), set(deobfuscated_list)
 
 
 def get_candidates(text):
@@ -97,7 +123,6 @@ def get_candidates(text):
     # different points.
     unicode_findall = NUMBER_REGEX['unicode'].findall(text, overlapped=True)
     numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
-    numbers = set(numbers)
     return numbers
 
 
@@ -107,6 +132,10 @@ def get_normalized_candidates(text):
 
 def get_normalized_deobfuscated_candidates(text):
     return normalize_number_set(get_candidates(number_homoglyphs.normalize(text)))
+
+
+def get_deobfuscated_candidates(text):
+    return get_candidates(number_homoglyphs.normalize(text))
 
 
 # North American phone numbers with fairly strict formatting
@@ -156,11 +185,12 @@ def get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized,
     return ''
 
 
-def get_north_american_alternate_normalized(non_normalized, normalized=None):
+def get_north_american_alternate_normalized(non_normalized, normalized=None, force=False):
     normalized = normalized if normalized else get_only_digits(non_normalized)
     north_american_extra = ''
     north_american_add_type = ''
     maybe_north_american_extra = ''
+    non_normalized = normalized if force else non_normalized
     if is_north_american_phone_number_with_one(non_normalized):
         # Add a version without a one
         north_american_extra = normalized[1:]
@@ -181,6 +211,7 @@ def get_north_american_alternate_normalized(non_normalized, normalized=None):
 
 
 def process_numlist(numlist, processed=None, normalized=None):
+    # The normalized list does contain any processed item which is also normalized.
     processed = processed if processed is not None else set()
     normalized = normalized if normalized is not None else set()
     unique_normalized = set()
@@ -203,11 +234,14 @@ def process_numlist(numlist, processed=None, normalized=None):
         this_entry_normalized.add(normalized_deobfuscated)
         if not force_no_north_american:
             north_american_extra, north_american_add_type, maybe_north_american_extra = \
-                get_north_american_alternate_normalized(deobfuscated, normalized_deobfuscated)
+                get_north_american_alternate_normalized(deobfuscated, normalized_deobfuscated, force_is_north_american)
             if maybe_north_american_extra and force_is_north_american:
                 north_american_extra = maybe_north_american_extra
+                maybe_north_american_extra = ''
             if north_american_extra:
                 this_entry_normalized.add(north_american_extra)
+        # The normalized list *does* contain the processed string, if it's also normalized, as we need it to test
+        #   against obfuscated
         normalized |= this_entry_normalized
         full_entry = (without_comment, this_entry_normalized)
         full_list[entry] = full_entry

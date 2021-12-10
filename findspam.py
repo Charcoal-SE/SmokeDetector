@@ -947,10 +947,16 @@ def get_number_matches(candidates, normalized_candidates, deobfuscated_candidate
     numlist_normalized = numlist_normalized or set()
     matches = []
 
-    def check_set_and_add_matches(reported_match_type, candidates, number_detection_list):
-        for number_candidate in candidates:
-            if number_candidate in number_detection_list:
-                matches.append('{} found {}'.format(number_candidate, reported_match_type))
+    def check_set_and_add_matches(reported_match_type, these_candidates, number_detection_list):
+        nonlocal normalized_candidates
+        in_both = these_candidates & number_detection_list
+        if reported_match_type == 'verbatim' and in_both:
+            # Need to regenerate the normalized list without the ones derived from the verbatim matches
+            candidates_without_verbatim_matches = candidates - in_both
+            normalized_candidates = \
+                set(phone_numbers.normalize_number_list_only_changed(candidates_without_verbatim_matches))
+        for found in in_both:
+            matches.append('{} found {}'.format(found, reported_match_type))
 
     check_set_and_add_matches('verbatim', candidates, numlist)
     check_set_and_add_matches('normalized', normalized_candidates, numlist_normalized)
@@ -968,8 +974,7 @@ def check_numbers(s, numlist, numlist_normalized=None):
     """
     numlist_normalized = numlist_normalized or set()
     matches = []
-    # normalized_candidates has no candidates; deobfuscated_candidates has no candidates or normalized_candidates
-    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
+    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_candidates(s)
     matches = get_number_matches(candidates, normalized_candidates, deobfuscated_candidates,
                                  numlist, numlist_normalized)
     if matches:

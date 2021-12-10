@@ -1410,7 +1410,17 @@ def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True, timeou
 
 
 def bisect_number_list(s, full_number_list, filename):
-    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_unique_candidates(s)
+    candidates, normalized_candidates, deobfuscated_candidates = phone_numbers.get_all_candidates(s)
+
+    def type_sort(text):
+        if text == 'verbatim':
+            return 1
+        if text == 'normalized':
+            return 2
+        if text == 'obfuscated':
+            return 3
+        return 10
+
     line_number = 0
     matches = []
     types_regex = regex.compile(r'(verbatim|normalized|obfuscated)')
@@ -1418,8 +1428,10 @@ def bisect_number_list(s, full_number_list, filename):
         line_number += 1
         (processed, normalized_set) = full_number_list[raw_number]
         line_matches = findspam.get_number_matches(candidates, normalized_candidates, deobfuscated_candidates,
-                                                   set(processed), normalized_set)
-        types = ', '.join({types_regex.search(match)[0] for match in line_matches})
+                                                   set([processed]), normalized_set)
+        types_list = list({types_regex.search(match)[0] for match in line_matches})
+        types_list.sort(key=type_sort)
+        types = ', '.join(types_list)
         if line_matches:
             matches.append((raw_number, (line_number, filename), types, line_matches))
     return matches
@@ -1465,8 +1477,6 @@ def bisect(msg, s):
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
 
-    print('matching: {}'.format(matching))
-    print('len(matching): {}'.format(len(matching)))
     if len(matching) == 1:
         raw_pattern, (line_number, filename), match_type, unused = matching[0]
         match_type = " matched " + match_type if match_type else ''
@@ -1474,15 +1484,16 @@ def bisect(msg, s):
             raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
     else:
         return "Matched by the following:\n" + "\n".join(
-            "{} on line {} of {}{}".format(raw_pattern, line_number, filename, types)
+            "{}{types} on line {} of {}".format(raw_pattern, line_number, filename, types=types)
             for raw_pattern, (line_number, filename), types, unused in matching)
 
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
 def bisect_number(msg, s):
-    minimally_validate_content_source(msg)
+    if msg is not None:
+        minimally_validate_content_source(msg)
     try:
-        number = rebuild_str(get_pattern_from_content_source(msg))
+        s = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
         pass
 
@@ -1499,7 +1510,7 @@ def bisect_number(msg, s):
             '; '.join(full_match_list))
     else:
         return "Matched by the following:\n" + "\n".join(
-            "{} on line {} of {}{}".format(raw_pattern, line_number, filename, '; '.join(full_match_list))
+            "{} on line {} of {}: {}".format(raw_pattern, line_number, filename, '; '.join(full_match_list))
             for raw_pattern, (line_number, filename), unused, full_match_list in matching)
 
 
