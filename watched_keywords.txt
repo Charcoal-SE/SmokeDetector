@@ -35124,3 +35124,4 @@
 1639141673	tripleee	startelelogic\.com
 1639149116	cigien	(?-i:3DU25W0)(?#bit.ly)
 1639149537	cigien	am-motion\.eu
+1639153554	Jeff Schaller	cracktech\.co\.in
