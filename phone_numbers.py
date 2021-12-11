@@ -62,6 +62,26 @@ NUMBER_REGEX_END = {
 }
 
 
+def matches_regex_ascii_or_unicode(regex_dict, pattern):
+    return regex_dict['ascii'].search(pattern) or regex_dict['unicode'].search(pattern)
+
+
+def matches_number_regex(pattern):
+    return matches_regex_ascii_or_unicode(NUMBER_REGEX, pattern)
+
+
+def matches_number_regex_start(pattern):
+    return matches_regex_ascii_or_unicode(NUMBER_REGEX_START, pattern)
+
+
+def matches_number_regex_end(pattern):
+    return matches_regex_ascii_or_unicode(NUMBER_REGEX_END, pattern)
+
+
+def is_digit_count_in_number_regex_range(digit_count):
+    return digit_count > NUMBER_REGEX_MINIMUM_DIGITS and digit_count < NUMBER_REGEX_MAXIMUM_DIGITS
+
+
 def normalize(number):
     return regex.sub(r"(?a)\D", "", number)
 

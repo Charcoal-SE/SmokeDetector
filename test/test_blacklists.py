@@ -11,7 +11,8 @@ import pytest
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
 from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
 from phone_numbers import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS, \
-    process_numlist, get_maybe_north_american_not_in_normalized_but_in_all
+    process_numlist, get_maybe_north_american_not_in_normalized_but_in_all, is_digit_count_in_number_regex_range, matches_number_regex, \
+    matches_number_regex_start, matches_number_regex_end
 from findspam import FindSpam
 
 
@@ -51,15 +52,15 @@ def test_number_lists():
             all_normalized |= unique_normalized
             digit_count = len(regex.findall(r'\d', processed_pattern))
             digit_count_text = " ({} digits is OK)".format(digit_count)
-            if digit_count < NUMBER_REGEX_MINIMUM_DIGITS or digit_count > NUMBER_REGEX_MAXIMUM_DIGITS:
+            if not is_digit_count_in_number_regex_range(digit_count):
                 digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS)
-            if not_regex_search_ascii_and_unicode(NUMBER_REGEX, processed_pattern):
+            if not matches_number_regex(processed_pattern):
                 errors['fails_number_regex'].append(entry_description + "fails NUMBER_REGEX{}::{}".format(digit_count_text, processed_pattern))
             else:
                 this_no_exacts = []
-                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_START, processed_pattern):
+                if not matches_number_regex_start(processed_pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_START.")
-                if not_regex_search_ascii_and_unicode(NUMBER_REGEX_END, processed_pattern):
+                if not matches_number_regex_end(processed_pattern):
                     this_no_exacts.append("Does not match NUMBER_REGEX_END.")
                 if len(this_no_exacts) > 0:
                     no_exacts.append(entry_description + " ".join(this_no_exacts) + digit_count_text + "::" + pattern)

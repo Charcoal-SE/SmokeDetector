@@ -29,7 +29,7 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, not_regex_search_ascii_and_unicode, remove_regex_comments
+    reload_modules, chunk_list, remove_regex_comments
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -400,10 +400,8 @@ def do_blacklist(blacklist_type, msg, force=False):
         processed = full_entry[0]
         deobfuscated_processed = phone_numbers.deobfuscate(processed)
         normalized_deobfuscated = phone_numbers.normalize(deobfuscated_processed)
-        pattern_matches_number_regex = \
-            not not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX, pattern)
-        deobfuscated_matches_number_regex = \
-            not not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX, deobfuscated_processed)
+        pattern_matches_number_regex = phone_numbers.matches_number_regex(pattern)
+        deobfuscated_matches_number_regex = phone_numbers.matches_number_regex(deobfuscated_processed)
         digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
                                                                phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
         number_regex_requires = "Patterns for the number" + \
@@ -414,8 +412,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         if not pattern_matches_number_regex and not deobfuscated_matches_number_regex:
             digit_count = len(regex.findall(r'\d', pattern))
             digit_count_text = ""
-            if digit_count < phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS or \
-               digit_count > phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS:
+            if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
                 digit_count_text = " The supplied pattern contains" + \
                                    " {} digits, which doesn't meet the requirements.".format(digit_count)
             raise CmdException("That pattern can't be detected by the number detections. " +
@@ -471,10 +468,10 @@ def do_blacklist(blacklist_type, msg, force=False):
             other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
         if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
             other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
-        if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_START, pattern):
+        if not phone_numbers.matches_number_regex_start(pattern):
             other_issues.append(exact_match_text + 'begin with a digit' +
                                 ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
-        if not_regex_search_ascii_and_unicode(phone_numbers.NUMBER_REGEX_END, pattern):
+        if not phone_numbers.matches_number_regex_end(pattern):
             other_issues.append(exact_match_text + 'end with a digit.')
 
     other_issues_text = ' '.join(other_issues)
