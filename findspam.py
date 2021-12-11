@@ -674,7 +674,8 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         # Standalone mode
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
-                    stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check)
+                    stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
+                    rule_id=rule_id)
         if not disabled:
             FindSpam.rules.append(rule)
         return rule
@@ -689,7 +690,8 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                     raise ValueError("This rule does not contain a function, can't recreate") from None
             rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
-                        stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check)
+                        stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
+                        rule_id=rule_id)
             if not disabled:
                 FindSpam.rules.append(rule)
             return rule
