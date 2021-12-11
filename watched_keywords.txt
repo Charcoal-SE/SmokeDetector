@@ -35140,3 +35140,4 @@
 1639206372	cigien	yboptotech\.com
 1639206808	cigien	extendfeature\.com
 1639216570	Makyen	chemmanur[\W_]*+jewell?er[sy]?(?!\.com(?<=chemmanurjewellers\.com))
+1639216593	Makyen	chemmanurjewellers\.com
