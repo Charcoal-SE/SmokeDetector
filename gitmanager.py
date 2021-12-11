@@ -100,7 +100,7 @@ class GitManager:
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False, metasmoke_down=False):
+                         code_permissions=False, metasmoke_down=False, before_pattern='', after_pattern=''):
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
 
@@ -176,7 +176,9 @@ class GitManager:
                 "-c", "user.email=" + GlobalVars.git_email,
                 "commit",
                 "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
-                "-m", "Auto {0} of `{1}` by {2}".format(op, item, username))
+                "-m", "Auto {0} of{before_pattern} `{1}`{after_pattern} by {2}".format(op, item, username,
+                                                                                       before_pattern=before_pattern,
+                                                                                       after_pattern=after_pattern))
 
             origin_or_auth = cls.get_origin_or_auth()
             if code_permissions:

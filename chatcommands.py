@@ -363,6 +363,8 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
+    text_before_pattern = ''
+    text_after_pattern = ''
 
     other_issues = []
     if '\u202d' in pattern:
@@ -393,6 +395,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         blacklist_command = blacklist_type.replace("_", "-")
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
         full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
+        text_after_pattern = ' normalized numbers: ' + str(normalized)
         full_entry = full_entry_list[pattern]
         processed = full_entry[0]
         deobfuscated_processed = phone_numbers.deobfuscate(processed)
@@ -512,7 +515,9 @@ def do_blacklist(blacklist_type, msg, force=False):
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=code_permissions,
-        metasmoke_down=metasmoke_down
+        metasmoke_down=metasmoke_down,
+        before_pattern=text_before_pattern,
+        after_pattern=text_after_pattern
     )
 
     if not _status:
