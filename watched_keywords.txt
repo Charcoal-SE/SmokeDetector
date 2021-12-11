@@ -35142,3 +35142,4 @@
 1639216570	Makyen	chemmanur[\W_]*+jewell?er[sy]?(?!\.com(?<=chemmanurjewellers\.com))
 1639216593	Makyen	chemmanurjewellers\.com
 1639216619	Makyen	mensclinicspecial\.co\.za
+1639216641	Makyen	howtocastlovespell\.com
