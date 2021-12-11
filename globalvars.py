@@ -300,6 +300,12 @@ class GlobalVars:
     if valid_detection_reasons is not None:
         valid_detection_reasons = valid_detection_reasons.split(";")
 
+    # If the config has it, get a list of the detection IDs which are considered valid.
+    # The list is semicolon separated.
+    valid_rule_ids = config.get("valid_rule_ids", None)
+    if valid_rule_ids is not None:
+        valid_rule_ids = valid_rule_ids.split(";")
+
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
     bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)

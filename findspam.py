@@ -467,7 +467,7 @@ class Rule:
     default_filter = PostFilter()
 
     def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
-                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False):
+                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None):
         self.regex = None
         self.func = None
         if isinstance(item, (str, URL_REGEX.__class__)):
@@ -482,6 +482,7 @@ class Rule:
         self.filter = filter or Rule.default_filter
         self.stripcodeblocks = stripcodeblocks
         self.whole_post = whole_post
+        self.rule_id = rule_id
         if not skip_creation_sanity_check:
             self.sanity_check()
 
@@ -595,6 +596,7 @@ class Rule:
 
 class FindSpam:
     rules = []
+    rule_ids = set()
 
     # supplied at the bottom of this file
     rule_bad_keywords = None
@@ -702,12 +704,22 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
                 disabled=False,  # yeah, disabled=True is intuitive
+                rule_id=None,  # Unique rule ID [The "reason" may be on multiple rules; this is unique to the rule.]
                 skip_creation_sanity_check=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
     if GlobalVars.valid_detection_reasons is not None and reason not in GlobalVars.valid_detection_reasons:
         # There was a list of reasons provided in the config file as valid and this detection reason isn't in that list.
+        disabled = True
+
+    if rule_id is not None:
+        if rule_id in FindSpam.rule_ids:
+            raise ValueError("rule_id must be unique for ID: " + rule_id)
+        FindSpam.rule_ids.add(rule_id)
+
+    if GlobalVars.valid_rule_ids is not None and rule_id not in GlobalVars.valid_rule_ids:
+        # There was a list of valid rule IDs provided in the config file and this detection isn't in that list.
         disabled = True
 
     if not (body or body_summary or username):  # title-only
@@ -1022,7 +1034,8 @@ def process_numlist(numlist):
     return processed, normalized
 
 
-@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
+@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
+             rule_id="bad phone number 01")
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
@@ -1031,7 +1044,8 @@ def check_blacklisted_numbers(s, site):
     )
 
 
-@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
+@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
+             rule_id="potentially bad phone number 01")
 def check_watched_numbers(s, site):
     return check_numbers(
         s,
