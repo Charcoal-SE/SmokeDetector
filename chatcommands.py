@@ -405,7 +405,8 @@ def do_blacklist(blacklist_type, msg, force=False):
         digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
                                                                phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
         number_regex_requires = "Patterns for the number" + \
-                                " detections must match the `NUMBER_REGEX` in phone_numbers.py. In order to do so," + \
+                                " detections must match the `NUMBER_REGEX` in phone_numbers.py, at least" + \
+                                " when deobfuscated. In order to do so," + \
                                 " it needs to have " + digit_between_text + " and not include" + \
                                 " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." + \
                                 " Generally, you should watch/blacklist the non-obfuscated version of the number."
