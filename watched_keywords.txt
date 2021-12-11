@@ -35150,3 +35150,4 @@
 1639229727	Makyen	amberlottotemple(?:@yahoo\.com)?
 1639236920	Makyen	beetvapp\.me
 1639236944	Makyen	megaboxhdapk\.com
+1639236962	Makyen	krnl\.ltd
