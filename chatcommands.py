@@ -2495,3 +2495,35 @@ def no_se_websocket_activity(what):
         GlobalVars.ignore_no_se_websocket_activity = what == 'ignore'
         ignoring_or_monitoring = "ignoring" if GlobalVars.ignore_no_se_websocket_activity else "monitoring"
     return "Now {} when there's no Stack Exchange WebSocket activity.".format(ignoring_or_monitoring)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+@command(str, whole_msg=True)
+def normalize_number(msg, pattern):
+    """
+    Returns the normalizations which the number detections will use for a number.
+    :param msg:
+    :param pattern:
+    :return: A string
+    """
+    minimally_validate_content_source(msg)
+    pattern = get_pattern_from_content_source(msg)
+    full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
+    return "Strict normalization: `" + phone_numbers.normalize(pattern) + \
+           "`; Normalized numbers used by the number detections: `" + str(normalized) + "`"
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+@command(str, whole_msg=True)
+def deobfuscate_number(msg, pattern):
+    """
+    Returns the number deobfuscation which the number detections apply to a pattern.
+    :param msg:
+    :param pattern:
+    :return: A string
+    """
+    minimally_validate_content_source(msg)
+    pattern = get_pattern_from_content_source(msg)
+    deobfuscated = phone_numbers.deobfuscate(pattern)
+    normalized_deobfuscated = phone_numbers.normalize(deobfuscated)
+    return "Deobfuscated: `" + deobfuscated + "`; deobfuscated and normalized: `" + normalized_deobfuscated + "`"
