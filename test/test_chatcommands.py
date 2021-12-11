@@ -126,7 +126,7 @@ def test_version():
 1 (866) 978-6819 on line 1 of blacklisted_numbers.txt: 8669786819 found normalized
 (866) 978-6819 on line 2 of blacklisted_numbers.txt: (866) 978-6819 found verbatim"""),
 
-    ("bisect_number", "bar 8888840111 bar", """Matched by `8888840111` on [line 5 of blacklisted_numbers.txt](https://github.com/Charcoal-SE/SmokeDetector/blob/d43851e44/blacklisted_numbers.txt#L5): 8888840111 found verbatim"""),
+    ("bisect_number", "bar 8888840111 bar", """Matched by `8888840111` on [line 5 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L5): 8888840111 found verbatim"""),
     ("bisect_number", "bar 18669786819 bar", """Matched by the following:
 1 (866) 978-6819 on line 1 of blacklisted_numbers.txt: 18669786819 found normalized
 (866) 978-6819 on line 2 of blacklisted_numbers.txt: 18669786819 found normalized"""),
@@ -152,8 +152,8 @@ def test_bisect(command, test_text, expected_result):
     print('command:', command)
     print('test_text:', test_text)
     msg.content = msg.content_source
-    chat_command = getattr(chatcommands, command)
     formatted_expected_result = expected_result.format(test_text=test_text, bot_repo_slug=GlobalVars.bot_repo_slug, commit_id=GlobalVars.commit.id)
+    chat_command = getattr(chatcommands, command)
     result = chat_command(None, original_msg=msg)
     print('test_text:', test_text)
     print('formatted_expected_result :', formatted_expected_result)

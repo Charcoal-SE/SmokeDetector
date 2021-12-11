@@ -953,8 +953,7 @@ def get_number_matches(candidates, normalized_candidates, deobfuscated_candidate
         if reported_match_type == 'verbatim' and in_both:
             # Need to regenerate the normalized list without the ones derived from the verbatim matches
             candidates_without_verbatim_matches = candidates - in_both
-            normalized_candidates = \
-                set(phone_numbers.normalize_number_list_only_changed(candidates_without_verbatim_matches))
+            normalized_candidates = set(phone_numbers.normalize_list(candidates_without_verbatim_matches))
         for found in in_both:
             matches.append('{} found {}'.format(found, reported_match_type))
 

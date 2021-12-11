@@ -62,29 +62,29 @@ NUMBER_REGEX_END = {
 }
 
 
-def normalize_number(number):
+def normalize(number):
     return regex.sub(r"(?a)\D", "", number)
 
 
-def normalize_number_set(numbers):
-    return {normalize_number(num) for num in numbers}
+def normalize_set(numbers):
+    return {normalize(num) for num in numbers}
 
 
-def normalize_number_list_only_changed(numbers):
+def normalize_list_only_changed(numbers):
     # We want all which were changed by normalization, even if that results
     #  in re-introducing something that was excluded.
     #  Example: original: ['12a34', '1234']
     #                        ^want    ^don't want
     normalized_list = []
     for num in numbers:
-        normalized = normalize_number(num)
+        normalized = normalize(num)
         if normalized != num:
             normalized_list.append(normalized)
     return normalized_list
 
 
-def normalize_number_list(numbers):
-    return [normalize_number(num) for num in numbers]
+def normalize_list(numbers):
+    return [normalize(num) for num in numbers]
 
 
 def get_all_candidates(text):
@@ -93,7 +93,7 @@ def get_all_candidates(text):
     and the normalized candidates which are newly generated as a result of deobfuscation.
     """
     unprocessed_list = get_candidates(text)
-    normalized_list = normalize_number_list(unprocessed_list)
+    normalized_list = normalize_list(unprocessed_list)
     raw_deobfuscated_list = get_deobfuscated_candidates(text)
     # The raw_deobfuscated list should contain everything that's in the unprocessed list.
     # We don't want to be considering any which are the identical entries as are in the unprocessed
@@ -108,7 +108,7 @@ def get_all_candidates(text):
     deobfuscated_list = [deobfuscated for deobfuscated in raw_deobfuscated_list if deobfuscated is not None]
     # We only ever deal with the deobfuscated numbers in normalized format. Unlike the normalized list,
     # we want all of them, even if unchanged.
-    deobfuscated_list = normalize_number_list(deobfuscated_list)
+    deobfuscated_list = normalize_list(deobfuscated_list)
     return set(unprocessed_list), set(normalized_list), set(deobfuscated_list)
 
 
@@ -127,11 +127,11 @@ def get_candidates(text):
 
 
 def get_normalized_candidates(text):
-    return normalize_number_set(get_candidates(text))
+    return normalize_set(get_candidates(text))
 
 
 def get_normalized_deobfuscated_candidates(text):
-    return normalize_number_set(get_candidates(number_homoglyphs.normalize(text)))
+    return normalize_set(get_candidates(number_homoglyphs.normalize(text)))
 
 
 def get_deobfuscated_candidates(text):
@@ -176,9 +176,15 @@ def deobfuscate(text):
     return number_homoglyphs.normalize(text)
 
 
+def get_north_american_with_separators_from_normalized(normalized):
+    base = normalized[-10:-7] + '-' + normalized[-7:-4] + '-' + normalized[-4:]
+    country_code = '1-' if len(normalized) > 10 else ''
+    return country_code + base
+
+
 def get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized, all_normalized=None):
     north_american_extra, north_american_add_type, maybe_north_american_extra = \
-        get_north_american_alternate_normalized(processed)
+        get_north_american_alternate_normalized(normalize(deobfuscate(processed)), force=True)
     if maybe_north_american_extra not in normalized and \
             (all_normalized is None or maybe_north_american_extra in all_normalized):
         return maybe_north_american_extra
