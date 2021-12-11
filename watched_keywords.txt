@@ -35143,3 +35143,4 @@
 1639216593	Makyen	chemmanurjewellers\.com
 1639216619	Makyen	mensclinicspecial\.co\.za
 1639216641	Makyen	howtocastlovespell\.com
+1639216664	Makyen	(?-i:mensclinicssouthafrica)(?#sites.google.com)
