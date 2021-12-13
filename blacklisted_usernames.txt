@@ -543,3 +543,4 @@ williamriver
 (?-i:^Global Trade Plaza$)
 (?-i:^siyaram yadav$)
 (?-i:^Manik Vashist$)
+(?-i:^kamini sahu$)
