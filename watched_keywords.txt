@@ -35199,3 +35199,4 @@
 1639425381	cigien	itprospt\.com
 1639425430	cigien	b2bappointmentsetting\.com
 1639428987	cigien	^donald\W*+j?\.?\W*+trump$
+1639429605	Glorfindel	milestoneapply\.cards
