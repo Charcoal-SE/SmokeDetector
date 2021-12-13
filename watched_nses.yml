@@ -1221,6 +1221,9 @@ items:
   - sara.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - sara.ns.cloudflare.com.
+  - yahir.ns.cloudflare.com.
+- ns:
   - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
