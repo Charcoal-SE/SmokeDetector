@@ -43,8 +43,8 @@ import chatcommands
 
 
 MAX_SE_WEBSOCKET_RETRIES = 5
-MIN_PYTHON_VERSION = (3, 5, 0)
-RECOMMENDED_PYTHON_VERSION = (3, 6, 0)
+MIN_PYTHON_VERSION = (3, 6, 0)
+RECOMMENDED_PYTHON_VERSION = (3, 7, 0)
 THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
 
 if os.path.isfile("plugin.py"):

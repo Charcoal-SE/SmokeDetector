@@ -58,10 +58,23 @@ class GlobalVars:
     blacklisted_users = dict()
     blacklisted_usernames = []
     blacklisted_websites = []
-    blacklisted_numbers = []
-    watched_numbers = []
+    # set() with the processed version of each blacklisted number pattern.
+    blacklisted_numbers = None
+    # blacklisted_numbers_raw is a list with the raw patterns read from the blacklisted_numbers.txt file.
+    blacklisted_numbers_raw = None
+    # set() with the processed version of each watched number pattern.
+    watched_numbers = None
+    # watched_numbers_raw is a dict() with the keys the raw patterns, with properties
+    # for the user and time the pattern was added. Insertion order represents the order of the patterns in the
+    # watched_numbers.txt
+    watched_numbers_raw = None
+    # set() with the normalized, including deobfuscated and normalized, versions of the patterns.
     blacklisted_numbers_normalized = None
     watched_numbers_normalized = None
+    # The _full versions are a dict() with key=raw pattern, with tuple with processed and normalized for each.
+    # Insertion order is the order they are in within the file.
+    blacklisted_numbers_full = None
+    watched_numbers_full = None
     bad_keywords = []
     watched_keywords = {}
     ignored_posts = []
