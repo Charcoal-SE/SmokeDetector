@@ -541,3 +541,4 @@ williamriver
 (?-i:^Hir Infotech$)
 (?-i:^UWA4d$)
 (?-i:^Global Trade Plaza$)
+(?-i:^siyaram yadav$)
