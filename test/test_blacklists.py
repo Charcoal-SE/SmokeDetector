@@ -120,8 +120,7 @@ def test_number_lists():
         #   wait until after this is merged to enable the potential for failures here and perform the needed changes to those
         #   files.
         # The output which is provided here and above should make it substantially easier to make the needed changes.
-        # pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + all_errors))
-        print("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + all_errors))
+        pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + all_errors))
 
 
 def test_blacklist_integrity():
