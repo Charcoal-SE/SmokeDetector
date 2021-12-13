@@ -35188,3 +35188,4 @@
 1639398075	tripleee	inasoft[\W_]*solutions(?!\.com(?<=inasoftsolutions\.com))
 1639398096	tripleee	inasoftsolutions\.com
 1639404995	cigien	river[\W_]*+day[\W_]*+spa(?!\.com(?<=riverdayspa\.com))
+1639405387	cigien	social\.artisanssoft\.com
