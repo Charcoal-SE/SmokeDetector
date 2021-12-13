@@ -110,6 +110,17 @@ def normalize_list(numbers):
     return [normalize(num) for num in numbers]
 
 
+def get_candidate_set_with_start_characters(candidate):
+    result = set()
+    base = regex.sub(r'^[' + VALID_NON_DIGIT_START_CHARACTERS + r']+', '', candidate)
+    result.add(base)
+    for first in VALID_NON_DIGIT_START_CHARACTERS:
+        result.add(first + base)
+        for second in VALID_NON_DIGIT_START_CHARACTERS:
+            result.add(first + second + base)
+    return result
+
+
 def get_all_candidates(text):
     """
     Get unprocessed number candidates, normalized entries which are differenet from their unprocessed source,
