@@ -35186,3 +35186,4 @@
 1639393891	tripleee	clickercounter\.org
 1639397537	tripleee	expovisa\.com
 1639398075	tripleee	inasoft[\W_]*solutions(?!\.com(?<=inasoftsolutions\.com))
+1639398096	tripleee	inasoftsolutions\.com
