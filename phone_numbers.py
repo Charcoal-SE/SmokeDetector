@@ -24,7 +24,10 @@ NUMBER_REGEX_MINIMUM_DIGITS = 7
 NUMBER_REGEX_MAXIMUM_DIGITS = 20
 NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
 NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
-NUMBER_REGEX_START_TEXT = r'(?:[(+{[]{1,2}\d|\d(?<=[^\d(+{[]\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+VALID_NON_DIGIT_START_CHARACTERS = r'(+{['
+NUMBER_REGEX_START_TEXT = r'(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
+                          r']{1,2}\d|\d(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
+                          r']\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
 NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))){{{}}}'
 NUMBER_REGEX_END_TEXT = r'\d(?=\D|$)'
 
@@ -112,8 +115,7 @@ def get_all_candidates(text):
     Get unprocessed number candidates, normalized entries which are differenet from their unprocessed source,
     and the normalized candidates which are newly generated as a result of deobfuscation.
     """
-    unprocessed_list = get_candidates(text)
-    normalized_list = normalize_list(unprocessed_list)
+    unprocessed_list, normalized_list = get_candidates(text, True)
     raw_deobfuscated_list = get_deobfuscated_candidates(text)
     # The raw_deobfuscated list should contain everything that's in the unprocessed list.
     # We don't want to be considering any which are the identical entries as are in the unprocessed
@@ -132,18 +134,139 @@ def get_all_candidates(text):
     return set(unprocessed_list), set(normalized_list), set(deobfuscated_list)
 
 
-def get_candidates(text):
-    # Get all the strings within the text to test which might be considered a single "number".
-    # The difficulty here is that we want all the different permutations (restricted to the original order)
-    # which can match with any number of digits within our range.
-    ascii_findall = NUMBER_REGEX['ascii'].findall(text, overlapped=True)
-    numbers = [number for lst in ascii_findall for number in lst if number != '']
-    # We only want the ones which consider Unicode digits which are not included with only ASCII digits.
-    # Considering the non-ASCII Unicode numbers may result in number candidates which start or end at
-    # different points.
-    unicode_findall = NUMBER_REGEX['unicode'].findall(text, overlapped=True)
-    numbers.extend([number for lst in unicode_findall for number in lst if number != ''])
-    return numbers
+def get_candidates(text, also_normalized=False):
+    """
+    :param test: Text from which to extract number candidates
+    :param also_normalized: Also return the normalized list
+    :return: canidate_list or candidate_list, normalized_list
+    """
+    # The differences between this implementation and the original get_candidates(), which was based on a
+    # regex implementation, are:
+    #   1. This doesn't have the same potential for catistrophic CPU usage based on input text.
+    #   2. When the first character in the candidate is not a digit, this returns up to three candidates.
+    #      For example "+(123..." will return ["+(123...", "(123...", "123..."]. The regex version does not return
+    #      the version without the non-digit start characters (i.e. it returns ["+(123...", "(123..."]).
+    #      The characters other than digits which are valid at the start are in VALID_NON_DIGIT_START_CHARACTERS.
+    #   3. The regex version routinely returned duplicate entries. This implementation only returns duplicate
+    #      entries if there are duplicates in the input text.
+    candidates = []
+    candidates_normalized = []
+    in_process_normalized = []
+    in_process = []
+    in_process_digit_counts = []
+    non_digits = ''
+    prev_non_digit = ''
+    prev_prev_non_digit = ''
+    digits = ''
+    # alpha_count is, primarily, the number of alpha characters encountered since the last digit. However, it's
+    # also used as a flag, by setting alpha_count = max_alpha + 1, to indicate that some other criteria has
+    # been reached which should cause the same behavior.
+    # Specifically, it's used for when len_digits > NUMBER_REGEX_MAXIMUM_DIGITS or when
+    # len(non_digits) > max_non_digits.
+    alpha_count = 0
+    max_alpha = 1
+    # max_non_digits is moderately high, but is intended to account for potential zalgo text, and/or
+    # combining characters, which would leave the number still readable by humans.
+    max_non_digits = 50
+
+    def promote_any_in_process_with_appropriate_digit_count():
+        for index in range(len(in_process)):
+            cur_count = in_process_digit_counts[index]
+            if cur_count >= NUMBER_REGEX_MINIMUM_DIGITS and cur_count <= NUMBER_REGEX_MAXIMUM_DIGITS:
+                candidates.append(in_process[index])
+                if in_process_normalized[index][0] != 'z':
+                    # The 'z' at the start is used as a flag that this isn't a valid normalized entry.
+                    candidates_normalized.append(in_process_normalized[index])
+
+    def evict_any_in_process_with_too_many_digits():
+        for index in reversed(range(len(in_process))):
+            if in_process_digit_counts[index] > NUMBER_REGEX_MAXIMUM_DIGITS:
+                del in_process[index]
+                del in_process_normalized[index]
+                del in_process_digit_counts[index]
+
+    def clear_in_process_if_more_than_limit_alpha():
+        nonlocal in_process
+        nonlocal in_process_normalized
+        nonlocal in_process_digit_counts
+        if in_process and alpha_count > max_alpha:
+            # No sequences continue passed limit alpha characters
+            in_process_normalized = []
+            in_process = []
+            in_process_digit_counts = []
+
+    def if_digits_add_digits_to_all_in_process_and_promote():
+        nonlocal in_process
+        nonlocal in_process_normalized
+        nonlocal in_process_digit_counts
+        nonlocal digits
+        nonlocal alpha_count
+        nonlocal prev_non_digit
+        nonlocal prev_prev_non_digit
+        if digits:
+            len_digits = len(digits)
+            if len_digits > NUMBER_REGEX_MAXIMUM_DIGITS:
+                # Too many digits. No need to try adding them, nor remembering the next alpha chars
+                alpha_count = max_alpha + 1
+                clear_in_process_if_more_than_limit_alpha()
+            else:
+                in_process = [to_add + digits for to_add in in_process]
+                in_process_normalized = [to_add + digits for to_add in in_process_normalized]
+                in_process_digit_counts = [to_add + len_digits for to_add in in_process_digit_counts]
+                # The original regex was written so that if a sequence started with '+(123...', then
+                # both '+(123...' and '(123...' ended up as candidates.
+                if prev_non_digit in VALID_NON_DIGIT_START_CHARACTERS:
+                    if prev_prev_non_digit in VALID_NON_DIGIT_START_CHARACTERS:
+                        in_process.append(prev_prev_non_digit + prev_non_digit + digits)
+                        # In order to keep the same number of entries in the normalized list, we add an extra
+                        # in_process_normalized entry here. We will have to remove it later, or just never
+                        # promote such entries to the candidates list.
+                        in_process_normalized.append('z' + digits)
+                        in_process_digit_counts.append(len_digits)
+                    in_process.append(prev_non_digit + digits)
+                    # Again, an extra in_process_normalized entry
+                    in_process_normalized.append('z' + digits)
+                    in_process_digit_counts.append(len_digits)
+                # The original regex version didn't include as candidates the sequence without the non-digit
+                # start characters when those characters existed.
+                in_process.append(digits)
+                in_process_normalized.append(digits)
+                in_process_digit_counts.append(len_digits)
+                promote_any_in_process_with_appropriate_digit_count()
+                evict_any_in_process_with_too_many_digits()
+            digits = ''
+            prev_non_digit = ''
+            prev_prev_non_digit = ''
+
+    for char in text:
+        if char >= '0' and char <= '9':
+            # It's a digit
+            digits += char
+            alpha_count = 0
+            if non_digits:
+                in_process = [to_add + non_digits for to_add in in_process]
+                non_digits = ''
+        else:
+            # Not a digit
+            if_digits_add_digits_to_all_in_process_and_promote()
+            prev_prev_non_digit = prev_non_digit
+            prev_non_digit = char
+            if (char >= 'A' and char <= 'Z') or (char >= 'a' and char <= 'z'):
+                alpha_count += 1
+                clear_in_process_if_more_than_limit_alpha()
+            if alpha_count > max_alpha:
+                non_digits = ''
+            else:
+                non_digits += char
+                if len(non_digits) > max_non_digits:
+                    alpha_count = max_alpha + 1  # Secondary use is as a flag that all in_process should end.
+                    clear_in_process_if_more_than_limit_alpha()
+                    non_digits = ''
+    if_digits_add_digits_to_all_in_process_and_promote()
+    # We can look at returning the normalized in a bit
+    if also_normalized:
+        return candidates, candidates_normalized
+    return candidates
 
 
 def get_normalized_candidates(text):
@@ -164,13 +287,17 @@ def get_deobfuscated_candidates(text):
 # than just a single \D permited. The start can be our normal mix.
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4})$'
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4})$'
-NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^((?:[(+{[]{1,2}[2-9]|[2-9](?<=[^\d(+{[][2-9]|^[2-9]))\d{2}' + \
+NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^((?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
+                                    r']{1,2}[2-9]|[2-9](?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
+                                    r'][2-9]|^[2-9]))\d{2}' + \
                                     r'(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
 NA_NUMBER_WITHOUT_ONE_REGEX = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITHOUT_ONE_LOOSE = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
 # With a 1. It must have a separator between the 334 groupings, like 1\d{3}\D\d{3}\D\d{4}, but with more
 # than just a single \D permited and a separator is permitted after the 1. The start can be our normal mix.
-NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[(+{[]{1,2}1|1(?<=[^\d(+{[]1|^1))(?:[\W_]*+|\D(?=\d))' + \
+NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
+                                 r']{1,2}1|1(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
+                                 r']1|^1))(?:[\W_]*+|\D(?=\d))' + \
                                  r'([2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
 NA_NUMBER_WITH_ONE_REGEX = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITH_ONE_LOOSE = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
