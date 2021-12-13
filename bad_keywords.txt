@@ -2608,3 +2608,4 @@ QuickBooks License Lookup Tool
 (?-i:9c7mebX_N_EwNTk0)(?#t.me)
 rental[\W_]*+cars[\W_]*+uae(?!\.com(?<=rentalcarsuae\.com))
 (?-i:chinadebitbank)(?#t.me)
+(?-i:aQllDARKNET)(?#icq.im)
