@@ -4342,3 +4342,4 @@ teamcode\.com
 extendfeature\.com
 anyviewer\.com
 thetechjournal\.in
+astrothoughts\.in
