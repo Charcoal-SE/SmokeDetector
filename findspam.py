@@ -955,13 +955,6 @@ def get_number_matches(candidates, normalized_candidates, deobfuscated_candidate
         if reported_match_type == 'verbatim' and in_both:
             # Need to regenerate the normalized list without the ones derived from the verbatim matches
             candidates_without_verbatim_matches = candidates - in_both
-            # The way the verbatim candidates are generated results in multiple entries when there are characters
-            # starting the match other than a digit. This is done because humans like to have those non-digits and
-            # see verbatim matches.
-            # Instead of trying to figure out which variation(s) are actually included in the candidates list, we
-            # just remove all of the variations prior to recreating the normalized list.
-            for base in in_both:
-                candidates_without_verbatim_matches -= phone_numbers.get_candidate_set_with_start_characters(base)
             normalized_candidates = set(phone_numbers.normalize_list(candidates_without_verbatim_matches))
         for found in in_both:
             matches.append('{} found {}'.format(found, reported_match_type))

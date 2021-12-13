@@ -154,10 +154,12 @@ def get_candidates(text, also_normalized=False):
     # The differences between this implementation and the original get_candidates(), which was based on a
     # regex implementation, are:
     #   1. This doesn't have the same potential for catistrophic CPU usage based on input text.
-    #   2. When the first character in the candidate is not a digit, this returns up to three candidates.
-    #      For example "+(123..." will return ["+(123...", "(123...", "123..."]. The regex version does not return
+    #   2. When the first character in the candidate is not a digit, this returns only one candidate.
+    #      For example "+(123..." will return ["+(123..."]. The regex version returns two candidates, but not
     #      the version without the non-digit start characters (i.e. it returns ["+(123...", "(123..."]).
     #      The characters other than digits which are valid at the start are in VALID_NON_DIGIT_START_CHARACTERS.
+    #      The intent at that time was to generate more verbatim matches, but it's better to just have the one
+    #      result. In the meantime, normalized matching has been improved and more emphasis placed on it.
     #   3. The regex version routinely returned duplicate entries. This implementation only returns duplicate
     #      entries if there are duplicates in the input text.
     candidates = []
@@ -229,18 +231,10 @@ def get_candidates(text, also_normalized=False):
                 if prev_non_digit in VALID_NON_DIGIT_START_CHARACTERS:
                     if prev_prev_non_digit in VALID_NON_DIGIT_START_CHARACTERS:
                         in_process.append(prev_prev_non_digit + prev_non_digit + digits)
-                        # In order to keep the same number of entries in the normalized list, we add an extra
-                        # in_process_normalized entry here. We will have to remove it later, or just never
-                        # promote such entries to the candidates list.
-                        in_process_normalized.append('z' + digits)
-                        in_process_digit_counts.append(len_digits)
-                    in_process.append(prev_non_digit + digits)
-                    # Again, an extra in_process_normalized entry
-                    in_process_normalized.append('z' + digits)
-                    in_process_digit_counts.append(len_digits)
-                # The original regex version didn't include as candidates the sequence without the non-digit
-                # start characters when those characters existed.
-                in_process.append(digits)
+                    else:
+                        in_process.append(prev_non_digit + digits)
+                else:
+                    in_process.append(digits)
                 in_process_normalized.append(digits)
                 in_process_digit_counts.append(len_digits)
                 promote_any_in_process_with_appropriate_digit_count()
