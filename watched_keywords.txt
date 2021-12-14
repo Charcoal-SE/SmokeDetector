@@ -35220,3 +35220,4 @@
 1639487442	Spevacus	soap2day-movies\.com
 1639489628	tripleee	(?-i:^user150281$)
 1639490962	tripleee	playtoearn\.net
+1639491086	tripleee	(?-i:^johnsnow$)
