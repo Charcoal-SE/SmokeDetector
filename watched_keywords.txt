@@ -35212,3 +35212,4 @@
 1639477288	tripleee	(?-i:^Amira Mahasin$)
 1639477939	tripleee	exerror\.com
 1639479965	tripleee	chikucab\.com
+1639480434	tripleee	luxury[\W_]*+brand[\W_]*+management
