@@ -35205,3 +35205,4 @@
 1639466606	tripleee	allforyou2020\.org
 1639466867	tripleee	kit[\W_]*+(?:coimbatore|cbe)\d*(?<!kitcbe(?=\.com\b))
 1639470977	tripleee	snowrider3d\.com
+1639471055	tripleee	bestpsychiatristbhopal\.com
