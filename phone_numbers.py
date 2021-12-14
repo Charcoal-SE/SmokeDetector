@@ -305,11 +305,12 @@ NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
                                  r']1|^1))(?:[\W_]*+|\D(?=\d))' + \
                                  r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
 # There's a trend to using a straight format of "+12345678900", which should be considered a NA number.
-NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX = r'^\+?1([2-9]\d{2}[2-9]\d{2}\d{4})$'
+NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX = r'^\+?1[2-9]\d{2}[2-9]\d{2}\d{4}$'
+NA_NUMBER_WITH_ONE_AREA_CODE_SHORT_SEPARATORS_REGEX = r'^\+?1\D{0,2}[2-9]\d{2}\D{0,2}[2-9]\d{2}\d{4}$'
 NA_NUMBER_WITH_ONE_REGEX = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITH_ONE_LOOSE = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
 NA_NUMBER_WITH_ONE_OR_ONE_NO_SEPARATORS_REGEX = '(?:' + NA_NUMBER_WITH_ONE_REGEX + '|' + \
-                                                NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX + ')'
+                                                NA_NUMBER_WITH_ONE_AREA_CODE_SHORT_SEPARATORS_REGEX + ')'
 
 
 def is_north_american_phone_number_with_one(text):
