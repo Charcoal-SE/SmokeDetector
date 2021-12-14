@@ -116,7 +116,7 @@ def test_version():
 +2348147347417 matched verbatim on line 2 of blacklisted_numbers.txt"""),
 
     ("bisect_number", "11 bar (866) 978-6819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 8669786819 found normalized"""),
-    ("bisect_number", "12 bar 8888840111 bar", """Matched by `8888840111` on [line 4 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L4): 8888840111 found verbatim"""),
+    ("bisect_number", "12 bar 8888840111 bar", """Matched by `18888840111` on [line 3 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L3): 8888840111 found normalized"""),
     ("bisect_number", "13 bar 18669786819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 18669786819 found normalized"""),
 ])
 def test_bisect(command, test_text, expected_result):
