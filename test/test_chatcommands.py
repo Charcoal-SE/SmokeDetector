@@ -88,14 +88,11 @@ def test_version():
     ("bisect", ":::essayssos.com:::", r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/watched_keywords.txt#L1)"),
     ("bisect", "OoOasdfghjklOoO", r"{test_text!r} is not caught by a blacklist or watchlist item."),
     # bisects of numbers
-    ("bisect", "bar (866) 978-6819 bar", r"""Matched by the following:
+    ("bisect", "05 bar (866) 978-6819 bar", r"""Matched by the following:
 [a-z_]*+(?:1_*+)?866[\W_]*+978[\W_]*+(?:6819|6762)[a-z_]*+ on line 48 of bad_keywords.txt
-1 (866) 978-6819 matched normalized on line 1 of blacklisted_numbers.txt
-(866) 978-6819 matched verbatim on line 2 of blacklisted_numbers.txt"""),
+1 (866) 978-6819 matched normalized on line 1 of blacklisted_numbers.txt"""),
 
-    ("bisect", "bar (866) 978-68I9 bar", r"""Matched by the following:
-1 (866) 978-6819 matched obfuscated on line 1 of blacklisted_numbers.txt
-(866) 978-6819 matched obfuscated on line 2 of blacklisted_numbers.txt"""),
+    ("bisect", "06 bar (866) 978-68I9 bar", r"""Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1) matched obfuscated"""),
 
     # We're detecting both entries as both verbatim and as North American normalized.
     # This will be better when the entries are trimmed, but the only way we'd be able to prevent
@@ -103,33 +100,24 @@ def test_version():
     # ones which include another. Given that it's all under a single detection reason, we're OK from a
     # systemic point of view (i.e. we're not putting more weight on it).
     # We could perform NA transformation on each verbatim detection and remove those from the normalized list also.
-    ("bisect", "bar 1 (866) 978-6819 bar", r"""Matched by the following:
+    ("bisect", "07 bar 1 (866) 978-6819 bar", r"""Matched by the following:
 [a-z_]*+(?:1_*+)?866[\W_]*+978[\W_]*+(?:6819|6762)[a-z_]*+ on line 48 of bad_keywords.txt
-1 (866) 978-6819 matched verbatim, normalized on line 1 of blacklisted_numbers.txt
-(866) 978-6819 matched verbatim, normalized on line 2 of blacklisted_numbers.txt"""),
+1 (866) 978-6819 matched verbatim, normalized on line 1 of blacklisted_numbers.txt"""),
 
-    ("bisect", "bar 1 (866) 978-68I9 bar", r"""Matched by the following:
+    ("bisect", "08 bar 1 (866) 978-68I9 bar", r"""Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1) matched obfuscated"""),
+
+    ("bisect", "09 bar +2348147347417 bar", r"""Matched by the following:
+234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5} on line 2372 of bad_keywords.txt
++2348147347417 matched verbatim on line 2 of blacklisted_numbers.txt"""),
+
+    ("bisect", "10 bar 1 (866) 978-68I9 bar +2348147347417 bar", r"""Matched by the following:
+234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5} on line 2372 of bad_keywords.txt
 1 (866) 978-6819 matched obfuscated on line 1 of blacklisted_numbers.txt
-(866) 978-6819 matched obfuscated on line 2 of blacklisted_numbers.txt"""),
++2348147347417 matched verbatim on line 2 of blacklisted_numbers.txt"""),
 
-    ("bisect", "bar +2348147347417 bar", r"""Matched by the following:
-234\W*+(?:80|81|90)\d\W*+\d{{3}}\W*+\d{{4,5}} on line 2372 of bad_keywords.txt
-+2348147347417 matched verbatim on line 3 of blacklisted_numbers.txt"""),
-
-    ("bisect", "bar 1 (866) 978-68I9 bar +2348147347417 bar", r"""Matched by the following:
-234\W*+(?:80|81|90)\d\W*+\d{{3}}\W*+\d{{4,5}} on line 2372 of bad_keywords.txt
-1 (866) 978-6819 matched obfuscated on line 1 of blacklisted_numbers.txt
-(866) 978-6819 matched obfuscated on line 2 of blacklisted_numbers.txt
-+2348147347417 matched verbatim on line 3 of blacklisted_numbers.txt"""),
-
-    ("bisect_number", "bar (866) 978-6819 bar", """Matched by the following:
-1 (866) 978-6819 on line 1 of blacklisted_numbers.txt: 8669786819 found normalized
-(866) 978-6819 on line 2 of blacklisted_numbers.txt: (866) 978-6819 found verbatim"""),
-
-    ("bisect_number", "bar 8888840111 bar", """Matched by `8888840111` on [line 5 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L5): 8888840111 found verbatim"""),
-    ("bisect_number", "bar 18669786819 bar", """Matched by the following:
-1 (866) 978-6819 on line 1 of blacklisted_numbers.txt: 18669786819 found normalized
-(866) 978-6819 on line 2 of blacklisted_numbers.txt: 18669786819 found normalized"""),
+    ("bisect_number", "11 bar (866) 978-6819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 8669786819 found normalized"""),
+    ("bisect_number", "12 bar 8888840111 bar", """Matched by `8888840111` on [line 4 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L4): 8888840111 found verbatim"""),
+    ("bisect_number", "13 bar 18669786819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 18669786819 found normalized"""),
 ])
 def test_bisect(command, test_text, expected_result):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
@@ -152,12 +140,14 @@ def test_bisect(command, test_text, expected_result):
     print('command:', command)
     print('test_text:', test_text)
     msg.content = msg.content_source
+    # All of the substitution references used in the .format() for the expected result are named. Any which are numbers are
+    # part of the expected results.
+    expected_result = regex.sub(r"(\{\d+(?:,\d+)?\})", r'{\1}', expected_result)
     formatted_expected_result = expected_result.format(test_text=test_text, bot_repo_slug=GlobalVars.bot_repo_slug, commit_id=GlobalVars.commit.id)
     chat_command = getattr(chatcommands, command)
     result = chat_command(None, original_msg=msg)
-    print('test_text:', test_text)
-    print('formatted_expected_result :', formatted_expected_result)
-    print('result :', result)
+    print('formatted_expected_result:', formatted_expected_result)
+    print('                   result:', result)
     assert result == formatted_expected_result
 
 
