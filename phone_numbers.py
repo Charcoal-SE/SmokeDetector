@@ -290,9 +290,9 @@ def get_deobfuscated_candidates(text):
 # The goal here is to be sure about identification, even if that leaves ones which are not identified.
 # Without a 1. It must have a separator between the 334 groupings, like \d{3}\D\d{3}\D\d{4}, but with more
 # than just a single \D permited. The start can be our normal mix.
-NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4})$'
-NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4})$'
-NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^((?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
+NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4}$'
+NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4}$'
+NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
                                     r']{1,2}[2-9]|[2-9](?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
                                     r'][2-9]|^[2-9]))\d{2}' + \
                                     r'(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
@@ -303,13 +303,17 @@ NA_NUMBER_WITHOUT_ONE_LOOSE = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENT
 NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
                                  r']{1,2}1|1(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
                                  r']1|^1))(?:[\W_]*+|\D(?=\d))' + \
-                                 r'([2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
+                                 r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
+# There's a trend to using a straight format of "+12345678900", which should be considered a NA number.
+NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX = r'^\+?1([2-9]\d{2}[2-9]\d{2}\d{4})$'
 NA_NUMBER_WITH_ONE_REGEX = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITH_ONE_LOOSE = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
+NA_NUMBER_WITH_ONE_OR_ONE_NO_SEPARATORS_REGEX = '(?:' + NA_NUMBER_WITH_ONE_REGEX + '|' + \
+                                                NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX + ')'
 
 
 def is_north_american_phone_number_with_one(text):
-    return regex.match(NA_NUMBER_WITH_ONE_REGEX, text) is not None
+    return regex.match(NA_NUMBER_WITH_ONE_OR_ONE_NO_SEPARATORS_REGEX, text) is not None
 
 
 def is_north_american_phone_number_without_one(text):
