@@ -35201,3 +35201,4 @@
 1639428987	cigien	^donald\W*+j?\.?\W*+trump$
 1639429605	Glorfindel	milestoneapply\.cards
 1639458101	cigien	upgradevip\.com
+1639461549	cigien	bambee\.grsm\.io
