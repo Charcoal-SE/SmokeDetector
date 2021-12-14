@@ -428,7 +428,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         if is_watchlist and processed in GlobalVars.watched_numbers:
             raise CmdException(processed_on_list.format('watch'))
         normalized_already_text = 'The following deobfuscated and normalized version of that pattern is already' + \
-                                  'on the number {}list: `{}`'
+                                  ' on the number {}list: `{}`'
         normalized_already_in_blacklist = normalized & GlobalVars.blacklisted_numbers_normalized
         if normalized_already_in_blacklist:
             raise CmdException(normalized_already_text.format('black', '`; `'.join(normalized_already_in_blacklist)))
@@ -1506,7 +1506,8 @@ def bisect(msg, s):
 
     if len(matching) == 1:
         raw_pattern, (line_number, filename), match_type, unused = matching[0]
-        match_type = " matched " + match_type if match_type else ''
+        if match_type and 'matched' not in match_type:
+            match_type = " matched " + match_type
         return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
             raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
     else:
