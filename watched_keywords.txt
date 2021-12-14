@@ -35223,3 +35223,4 @@
 1639491086	tripleee	(?-i:^johnsnow$)
 1639491771	cigien	instalarapp\.com
 1639492152	cigien	mobile-price-bd\.com
+1639494537	Makyen	(?-i:BlackDemar)(?#t.me)
