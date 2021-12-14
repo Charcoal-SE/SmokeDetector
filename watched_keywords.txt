@@ -35211,3 +35211,4 @@
 1639476563	Makyen	7qasearch\.net
 1639477288	tripleee	(?-i:^Amira Mahasin$)
 1639477939	tripleee	exerror\.com
+1639479965	tripleee	chikucab\.com
