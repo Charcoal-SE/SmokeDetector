@@ -35203,3 +35203,4 @@
 1639458101	cigien	upgradevip\.com
 1639461549	cigien	bambee\.grsm\.io
 1639466606	tripleee	allforyou2020\.org
+1639466867	tripleee	kit[\W_]*+(?:coimbatore|cbe)\d*(?<!kitcbe(?=\.com\b))
