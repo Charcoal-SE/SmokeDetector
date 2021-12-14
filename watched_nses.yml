@@ -37,6 +37,9 @@ items:
   - adam.ns.cloudflare.com.
   - emily.ns.cloudflare.com.
 - ns:
+  - adam.ns.cloudflare.com.
+  - rosalyn.ns.cloudflare.com.
+- ns:
   - addilyn.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
