@@ -536,6 +536,9 @@ items:
   - quincy.ns.cloudflare.com.
 - ns:
   - dean.ns.cloudflare.com.
+  - heather.ns.cloudflare.com.
+- ns:
+  - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
   - dean.ns.cloudflare.com.
