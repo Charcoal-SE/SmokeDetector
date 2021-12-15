@@ -72,9 +72,9 @@ def test_version():
 
 @pytest.mark.parametrize("command, test_text, expected_result", [
     # The expected_result can have the following named .format() fields:
-    #   test_text = the bisect_text
-    #   bot_repo_slug = GlobalVars.bot_repo_slug
-    #   commit_id = GlobalVars.commit.id
+    #   {test_text} = the bisect_text
+    #   {bot_repo_slug} = GlobalVars.bot_repo_slug (normally "Charcoal-SE/SmokeDetector")
+    #   {commit_id} = GlobalVars.commit.id
 
     # Testing to see if a watch/blacklist regex is performing poorly.
     # The post text in the next two tests is from actual posts which caused SD to hang.
@@ -88,36 +88,34 @@ def test_version():
     ("bisect", ":::essayssos.com:::", r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/watched_keywords.txt#L1)"),
     ("bisect", "OoOasdfghjklOoO", r"{test_text!r} is not caught by a blacklist or watchlist item."),
     # bisects of numbers
-    ("bisect", "05 bar (866) 978-6819 bar", r"""Matched by the following:
-[a-z_]*+(?:1_*+)?866[\W_]*+978[\W_]*+(?:6819|6762)[a-z_]*+ on line 48 of bad_keywords.txt
-1 (866) 978-6819 matched normalized on line 1 of blacklisted_numbers.txt"""),
-
-    ("bisect", "06 bar (866) 978-68I9 bar", r"""Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1) matched obfuscated"""),
-
-    # We're detecting both entries as both verbatim and as North American normalized.
-    # This will be better when the entries are trimmed, but the only way we'd be able to prevent
-    # a double (verbatim & normalized) detection would be if we tracked the derivations and disqualified
-    # ones which include another. Given that it's all under a single detection reason, we're OK from a
-    # systemic point of view (i.e. we're not putting more weight on it).
-    # We could perform NA transformation on each verbatim detection and remove those from the normalized list also.
-    ("bisect", "07 bar 1 (866) 978-6819 bar", r"""Matched by the following:
-[a-z_]*+(?:1_*+)?866[\W_]*+978[\W_]*+(?:6819|6762)[a-z_]*+ on line 48 of bad_keywords.txt
-1 (866) 978-6819 matched verbatim, normalized on line 1 of blacklisted_numbers.txt"""),
-
-    ("bisect", "08 bar 1 (866) 978-68I9 bar", r"""Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1) matched obfuscated"""),
-
-    ("bisect", "09 bar +2348147347417 bar", r"""Matched by the following:
-234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5} on line 2372 of bad_keywords.txt
-+2348147347417 matched verbatim on line 2 of blacklisted_numbers.txt"""),
-
-    ("bisect", "10 bar 1 (866) 978-68I9 bar +2348147347417 bar", r"""Matched by the following:
-234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5} on line 2372 of bad_keywords.txt
-1 (866) 978-6819 matched obfuscated on line 1 of blacklisted_numbers.txt
-+2348147347417 matched verbatim on line 2 of blacklisted_numbers.txt"""),
-
-    ("bisect_number", "11 bar (866) 978-6819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 8669786819 found normalized"""),
-    ("bisect_number", "12 bar 8888840111 bar", """Matched by `18888840111` on [line 3 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L3): 8888840111 found normalized"""),
-    ("bisect_number", "13 bar 18669786819 bar", """Matched by `1 (866) 978-6819` on [line 1 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L1): 18669786819 found normalized"""),
+    # Verbatim number
+    ("bisect", "05 bar 1-816-787-3816 bar", r"""Matched by `1-816-787-3816` on [line 2 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L2) matched verbatim, normalized"""),
+    # North American Without a 1
+    ("bisect", "06 bar 816-787-3816 bar", r"""Matched by `1-816-787-3816` on [line 2 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L2) matched normalized"""),
+    # Obfuscated number and blacklisted keyword
+    ("bisect", "07 bar 1-8I6-787-38I6 bar fifabay", r"""Matched by the following:
+fifabay on line 3 of bad_keywords.txt
+1-816-787-3816 matched obfuscated on line 2 of blacklisted_numbers.txt"""),
+    # 2 obfuscated numbers: one twice with second verbatim
+    ("bisect", "08 bar 8I6a787a38I6 bar 4474S9294I74 bar1-816-787-3816 bar", r"""Matched by the following:
+1-816-787-3816 matched verbatim, normalized, obfuscated on line 2 of blacklisted_numbers.txt
++447459294174 matched obfuscated on line 6 of blacklisted_numbers.txt"""),
+    # Obfuscated number and blacklisted keyword, which shouldn't be detected
+    ("bisect_number", "09 bar +447459294174 bar fifabay", r"""Matched by `+447459294174` on [line 6 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L6): +447459294174 found verbatim"""),
+    # two numbers, one obfuscated
+    # We do not test "1-816-787-38I6" here, because it will be detected obfuscated both as 18167873816 and 8167873816 and
+    # the order in which those two are reported is indeterminate (i.e. however the set() ended up ordered).
+    ("bisect_number", "10 bar 816-787-38I6 bar 447459294174 bar", r"""Matched by the following:
+1-816-787-3816 on line 2 of blacklisted_numbers.txt: 8167873816 found obfuscated
++447459294174 on line 6 of blacklisted_numbers.txt: 447459294174 found normalized"""),
+    # 2 obfuscated numbers: one twice with second verbatim
+    ("bisect_number", "11 bar 8I6a787a38I6 bar 4474S9294I74 bar1-816-787-3816 bar", r"""Matched by the following:
+1-816-787-3816 on line 2 of blacklisted_numbers.txt: 1-816-787-3816 found verbatim; 8167873816 found normalized; 8167873816 found obfuscated
++447459294174 on line 6 of blacklisted_numbers.txt: 447459294174 found obfuscated"""),
+    # normalized without 1
+    ("bisect_number", "12 bar 8167873816 bar", """Matched by `1-816-787-3816` on [line 2 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L2): 8167873816 found normalized"""),
+    # normalized with 1
+    ("bisect_number", "13 bar 18167873816 bar", """Matched by `1-816-787-3816` on [line 2 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L2): 18167873816 found normalized"""),
 ])
 def test_bisect(command, test_text, expected_result):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
@@ -258,11 +256,12 @@ def test_watch(monkeypatch):
         resp = wrap_watch(r'israelbigmarket')
         assert "That pattern looks like it's already caught" in resp
 
-        # The phone number here is the first one in this format in bad_keywords.txt
+        # The phone number here is the first one which used to be in this format in bad_keywords.txt.
+        # It is now in blacklisted_numbers.txt.
         resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
         assert "Mostly non-latin" not in resp
-        assert "Bad keyword in answer" in resp
-        assert "Bad keyword in body" in resp
+        assert "Bad phone number in answer" in resp
+        assert "Bad phone number in body" in resp
 
         # XXX TODO: figure out how to trigger duplicate entry separately
         monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
