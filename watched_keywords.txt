@@ -35249,3 +35249,4 @@
 1639567249	tripleee	dldolls(?!\.com)
 1639567326	tripleee	nadula\.com
 1639567668	tripleee	ymcart\.com
+1639568585	tripleee	everyremote\.co\.uk
