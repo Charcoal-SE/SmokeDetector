@@ -35241,3 +35241,4 @@
 1639554107	tripleee	bigce\.org
 1639556584	tripleee	bigce(?!\.org)
 1639556854	tripleee	myshopcoffee\.com
+1639559120	tripleee	printablecalendarpoint\.com
