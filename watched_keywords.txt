@@ -35231,3 +35231,4 @@
 1639509893	Makyen	aaradhanatechnology\.com
 1639512502	cigien	yamseo\.co\.il
 1639528061	Makyen	^(?!<)(?=.{8,40}$).*?wing(?<!\bshowing).*?ding(?<!\bpending)(?<!\bloading)(?<!\bbending)(?<!\badding)(?<!\bbuildding)\w*+
+1639534316	Makyen	illuminatibrotherhood\.co\.za
