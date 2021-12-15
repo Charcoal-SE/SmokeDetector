@@ -27,6 +27,7 @@ def test_number_lists():
         errors['no_unique'] = []
         errors['blacklist_dup_with_no_unique'] = []
         errors['blacklist_dup_with_unique'] = []
+        errors['duplicate_normializations'] = []
 
     def get_sorted_current_errors_and_clear_errors():
         current_errors = [error for sub in [errors[error_group] for error_group in errors] for error in sub]
@@ -36,7 +37,7 @@ def test_number_lists():
     def test_a_number_list(list_type, number_list, blacklist_normalized=None):
         line_number = 0
         all_processed = set()
-        all_normalized = set()
+        this_list_all_normalized = set()
         lines_no_unique = []
         lines_duplicate_blacklist_with_no_unique = []
         lines_duplicate_blacklist_with_unique = []
@@ -44,12 +45,12 @@ def test_number_lists():
             line_number += 1
             entry_description = "{} number ({})::{}:: ".format(list_type, line_number, pattern)
             (processed_pattern, this_normalized) = number_list[pattern]
-            unique_normalized = this_normalized - all_normalized
-            duplicate_normalized = unique_normalized - this_normalized
-            maybe_north_american_not_in_all = get_maybe_north_american_not_in_normalized_but_in_all(processed_pattern, this_normalized, all_normalized)
+            unique_normalized = this_normalized - this_list_all_normalized
+            duplicate_normalized = this_normalized - unique_normalized
+            maybe_north_american_not_in_all = get_maybe_north_american_not_in_normalized_but_in_all(processed_pattern, this_normalized, this_list_all_normalized)
             if maybe_north_american_not_in_all:
                 maybe_north_american_already.append(entry_description + "has maybe North American form already in all normalized: {}".format(maybe_north_american_not_in_all))
-            all_normalized |= unique_normalized
+            this_list_all_normalized |= unique_normalized
             digit_count = len(regex.findall(r'\d', processed_pattern))
             digit_count_text = " ({} digits is OK)".format(digit_count)
             if not is_digit_count_in_number_regex_range(digit_count):
@@ -79,6 +80,8 @@ def test_number_lists():
                     else:
                         lines_duplicate_blacklist_with_no_unique.append(str(line_number))
                         errors['blacklist_dup_with_no_unique'].append(error_text)
+            if duplicate_normalized:
+                errors['duplicate_normializations'].append(entry_description + "Has duplicate normalized entries: {}".format(duplicate_normalized))
         lines_no_unique.reverse()
         deletion_list = []
         for error_group in errors:
@@ -94,7 +97,7 @@ def test_number_lists():
             print('USE ONLY ONE OF THE FOLLOWING PER RUN OF THESE TESTS. Using more than one will result in the wrong lines being deleted:')
             print('\n'.join(deletion_list))
             print('\n\n')
-        return all_processed, all_normalized
+        return all_processed, this_list_all_normalized
 
     clear_errors()
     FindSpam.reload_blacklists()
@@ -120,7 +123,7 @@ def test_number_lists():
         #   wait until after this is merged to enable the potential for failures here and perform the needed changes to those
         #   files.
         # The output which is provided here and above should make it substantially easier to make the needed changes.
-        pytest.fail("\n\t".join(["{} error{} have occurred:".format(error_count, pluralize)] + all_errors))
+        pytest.fail("\n\t".join(["{} error{} have occurred (NOTE: you should find the normalized duplicate entry and decide which is better to keep):".format(error_count, pluralize)] + all_errors))
 
 
 def test_blacklist_integrity():
