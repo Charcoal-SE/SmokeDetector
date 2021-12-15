@@ -35236,3 +35236,4 @@
 1639544956	tripleee	cui[\W_]*+tutorial(?!\.com(?<=cuitutorial\.com))
 1639550134	cigien	tillu\.co\.uk
 1639550325	cigien	jagaha\.com
+1639550542	cigien	samyakonline\.net
