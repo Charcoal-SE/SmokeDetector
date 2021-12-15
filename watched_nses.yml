@@ -1820,6 +1820,11 @@ items:
   - ns2gtx.name.com.
   - ns3fgh.name.com.
   - ns4ksy.name.com.
+- ns:
+  - ns1cnb.name.com.
+  - ns2bls.name.com.
+  - ns3cna.name.com.
+  - ns4ksy.name.com.
 - ns: spaceweb.pro.
 - ns: spaceweb.ru.
 - ns:
