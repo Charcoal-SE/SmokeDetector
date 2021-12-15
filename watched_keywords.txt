@@ -35243,3 +35243,4 @@
 1639556854	tripleee	myshopcoffee\.com
 1639559120	tripleee	printablecalendarpoint\.com
 1639559508	tripleee	dataladder\.com
+1639562031	Makyen	shqawa\.com
