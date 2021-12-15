@@ -35239,3 +35239,4 @@
 1639550542	cigien	samyakonline\.net
 1639553805	Cody Gray	webarticlelist\.com
 1639554107	tripleee	bigce\.org
+1639556584	tripleee	bigce(?!\.org)
