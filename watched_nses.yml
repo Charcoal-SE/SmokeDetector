@@ -521,6 +521,9 @@ items:
   - rudy.ns.cloudflare.com.
 - ns:
   - dave.ns.cloudflare.com.
+  - gina.ns.cloudflare.com.
+- ns:
+  - dave.ns.cloudflare.com.
   - lorna.ns.cloudflare.com.
 - ns:
   - dave.ns.cloudflare.com.
