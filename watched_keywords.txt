@@ -34848,3 +34848,4 @@
 1639652440	tripleee	nutrifymeals\.com
 1639652884	Makyen	trippypsychedelicshop\.com
 1639655286	tripleee	acevisiontreks\.com
+1639655307	tripleee	teachin\.id
