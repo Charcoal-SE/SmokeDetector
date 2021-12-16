@@ -544,3 +544,4 @@ williamriver
 (?-i:^Manik Vashist$)
 (?-i:^kamini sahu$)
 (?-i:^AnujjindalUPSC$)
+(?-i:^Daniel Lisa$)

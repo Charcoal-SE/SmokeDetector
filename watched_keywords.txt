@@ -34466,7 +34466,6 @@
 1638356093	Ryan M	koinbazar(?!\.com)
 1638357333	Cody Gray	alldatmatterz\.com
 1638358219	Cody Gray	antsori\.com
-1638358443	tripleee	(?-i:^Daniel Lisa$)
 1638359078	Cody Gray	bufeez\.com
 1638359305	tripleee	codingpracticewithme\.blogspot
 1638360155	tripleee	onlineplagiarismchecker\.net
