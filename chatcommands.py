@@ -418,26 +418,26 @@ def do_blacklist(blacklist_type, msg, force=False):
                                    " {} digits, which doesn't meet the requirements.".format(digit_count)
             raise CmdException("That pattern can't be detected by the number detections. " +
                                number_regex_requires + digit_count_text)
-        processed_on_list = 'The processed version of that pattern `{}`'.format(processed) + \
-                            ' is already on the number {}list.'
-        if processed in GlobalVars.blacklisted_numbers:
-            raise CmdException(processed_on_list.format('black'))
-        # The following requires is_watchlist, due to moving entries from the watchlist to the blacklist. It's
-        # assumed that any conflict with something being blacklisted will resolve by the auto-removal from the
-        # watchlist. If it doesn't, it should be caught by CI testing.
-        if is_watchlist and processed in GlobalVars.watched_numbers:
-            raise CmdException(processed_on_list.format('watch'))
-        normalized_already_text = 'The following deobfuscated and normalized version of that pattern is already' + \
-                                  ' on the number {}list: `{}`'
-        normalized_already_in_blacklist = normalized & GlobalVars.blacklisted_numbers_normalized
-        if normalized_already_in_blacklist:
-            raise CmdException(normalized_already_text.format('black', '`; `'.join(normalized_already_in_blacklist)))
-        normalized_already_in_watchlist = normalized & GlobalVars.watched_numbers_normalized
-        # The following requires is_watchlist, due to moving entries from the watchlist to the blacklist. It's
-        # assumed that any conflict with something being blacklisted will resolve by the auto-removal from the
-        # watchlist. If it doesn't, it should be caught by CI testing.
-        if is_watchlist and normalized_already_in_watchlist:
-            raise CmdException(normalized_already_text.format('watch', '`; `'.join(normalized_already_in_watchlist)))
+        normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
+        normalized_on_list = 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
+                             ' is already on the number {}list{extra}. You can use' + \
+                             ' `!!/bisect-number {}`'.format(pattern) + \
+                             ' to determine which entries on the number lists match that pattern.'
+        if normalized & GlobalVars.blacklisted_numbers_normalized:
+            raise CmdException(normalized_on_list.format('black', extra=''))
+        if normalized & GlobalVars.watched_numbers_normalized:
+            # The following differentiates between watching and blacklisting, due to
+            # automatic movement of entries from the watchlist to the blacklist.  It's
+            # assumed any conflict with something being blacklisted which is an exact
+            # pattern match for an existing entry on the watchlist will be resolved by the
+            # automatic removal of the pattern from the watchlist when moved to the
+            # blacklist.  If it isn't resolved, CI testing will fail.
+            if is_watchlist:
+                raise CmdException(normalized_on_list.format('watch', extra=''))
+            elif pattern not in GlobalVars.watched_numbers_full:
+                extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
+                                                     ' to an existing entry on the number watchlist'
+                raise CmdException(normalized_on_list.format('watch', extra=extra_blacklisting_non_exact_match))
         unused_maybe_north_american_norm = \
             phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
         north_american_alt = phone_numbers.get_north_american_alternate_normalized(normalized_deobfuscated, force=True)
