@@ -4349,3 +4349,4 @@ cartloot\.com
 cuitutorial\.com
 pnytrainings\.com
 lcbs\.edu\.in
+bumppy\.com

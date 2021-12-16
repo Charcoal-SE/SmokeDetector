@@ -33479,7 +33479,6 @@
 1635153421	tripleee	logintutos\.com
 1635157372	tripleee	solulever\.com
 1635157757	tripleee	shopping-cart-migration\.com
-1635161183	tripleee	bumppy\.com
 1635162730	tripleee	roadly\.ca
 1635167734	Ollie	aayu\.app
 1635167934	Ollie	learnvern\.com
