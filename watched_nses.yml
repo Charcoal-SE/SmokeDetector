@@ -134,6 +134,9 @@ items:
   - gerald.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
+  - beau.ns.cloudflare.com.
+- ns:
+  - alice.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
