@@ -34883,3 +34883,4 @@
 1639757303	cigien	frasez\.com\.br
 1639758070	cigien	i4[\W_]*+acmmos[\W_]*+media(?!\.com(?<=i4acmmosmedia\.com))
 1639758093	cigien	i4acmmosmedia\.com
+1639760762	cigien	stork\.ai
