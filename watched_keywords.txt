@@ -34216,7 +34216,6 @@
 1637578341	Ryan M	originsoftwares\.com
 1637578370	Ryan M	mesutdemir\.net
 1637580477	Jeff Schaller	codecraftcrew\.com
-1637581255	tripleee	(?-i:^Peter John$)
 1637583426	tripleee	ulne\.se
 1637583723	tripleee	sourcingallies\.com
 1637585778	tripleee	(?-i:^Swapna gupta$)
