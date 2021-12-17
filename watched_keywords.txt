@@ -34880,3 +34880,4 @@
 1639748030	Jeff Schaller	ozonesoftsolutions\.com
 1639749498	tripleee	affordable\.pk
 1639752449	cigien	lakshyaiasacademy\.com
+1639752514	cigien	lakshya[\W_]*+ias[\W_]*+academy(?!\.com(?<=lakshyaiasacademy\.com))
