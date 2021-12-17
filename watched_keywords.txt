@@ -34319,7 +34319,6 @@
 1637866953	tripleee	khakisahib\d*(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1637871926	tripleee	lotpixel\.com
 1637904574	cigien	lawnscanner\.com
-1637904653	cigien	breakout\.in
 1637905840	cigien	kosherproctor\.com
 1637907996	cigien	monarishair\.com
 1637909398	cigien	cloudstonz\.com
