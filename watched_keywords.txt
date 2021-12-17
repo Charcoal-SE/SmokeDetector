@@ -34885,3 +34885,4 @@
 1639758093	cigien	i4acmmosmedia\.com
 1639760762	cigien	stork\.ai
 1639760846	cigien	geeksware\.in
+1639762518	cigien	groupe\.krone(?:@protonmail\.com)?
