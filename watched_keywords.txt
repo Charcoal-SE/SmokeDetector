@@ -34868,3 +34868,4 @@
 1639732382	tripleee	yourgoodtracker\.com
 1639732774	tripleee	a2n[\W_]*+academy(?!\.com(?<=a2nacademy\.com))
 1639733617	tripleee	audintel\.com
+1639733638	tripleee	789maxbet\.com
