@@ -34867,3 +34867,4 @@
 1639730672	tripleee	trungtamytehoavang\.com\.vn
 1639732382	tripleee	yourgoodtracker\.com
 1639732774	tripleee	a2n[\W_]*+academy(?!\.com(?<=a2nacademy\.com))
+1639733617	tripleee	audintel\.com
