@@ -34882,3 +34882,4 @@
 1639752514	cigien	lakshya[\W_]*+ias[\W_]*+academy(?!\.com(?<=lakshyaiasacademy\.com))
 1639757303	cigien	frasez\.com\.br
 1639758070	cigien	i4[\W_]*+acmmos[\W_]*+media(?!\.com(?<=i4acmmosmedia\.com))
+1639758093	cigien	i4acmmosmedia\.com
