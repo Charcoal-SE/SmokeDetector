@@ -34873,3 +34873,4 @@
 1639734404	tripleee	netraclos(?!\.com)
 1639735666	tripleee	bryter\.com
 1639740690	tripleee	atlantacommercialcleaners\.com
+1639740844	tripleee	justapplications\.co\.uk
