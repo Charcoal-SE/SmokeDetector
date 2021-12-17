@@ -34864,3 +34864,4 @@
 1639728795	tripleee	(?-i:^Arun sankar$)
 1639730627	tripleee	phongkhamhungthinh\.neocities\.org
 1639730654	tripleee	phs\.moh\.gov\.cy
+1639730672	tripleee	trungtamytehoavang\.com\.vn
