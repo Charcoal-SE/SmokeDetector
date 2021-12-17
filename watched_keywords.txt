@@ -34866,3 +34866,4 @@
 1639730654	tripleee	phs\.moh\.gov\.cy
 1639730672	tripleee	trungtamytehoavang\.com\.vn
 1639732382	tripleee	yourgoodtracker\.com
+1639732774	tripleee	a2n[\W_]*+academy(?!\.com(?<=a2nacademy\.com))
