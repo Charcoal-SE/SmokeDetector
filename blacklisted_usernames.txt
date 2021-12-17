@@ -544,3 +544,4 @@ williamriver
 (?-i:^kamini sahu$)
 (?-i:^AnujjindalUPSC$)
 (?-i:^Daniel Lisa$)
+(?-i:^buymygenerix$)
