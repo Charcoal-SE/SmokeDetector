@@ -34863,3 +34863,4 @@
 1639726337	tripleee	herbalhillsprime\.com
 1639728795	tripleee	(?-i:^Arun sankar$)
 1639730627	tripleee	phongkhamhungthinh\.neocities\.org
+1639730654	tripleee	phs\.moh\.gov\.cy
