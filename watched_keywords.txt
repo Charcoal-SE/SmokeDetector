@@ -34875,3 +34875,4 @@
 1639740690	tripleee	atlantacommercialcleaners\.com
 1639740844	tripleee	justapplications\.co\.uk
 1639740858	tripleee	xebia\.com
+1639740906	tripleee	i4[\W_]*+acmmos[\W_]*+media(?!\.com(?<= i4acmmosmedia\.com))
