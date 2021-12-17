@@ -34881,3 +34881,4 @@
 1639749498	tripleee	affordable\.pk
 1639752449	cigien	lakshyaiasacademy\.com
 1639752514	cigien	lakshya[\W_]*+ias[\W_]*+academy(?!\.com(?<=lakshyaiasacademy\.com))
+1639757303	cigien	frasez\.com\.br
