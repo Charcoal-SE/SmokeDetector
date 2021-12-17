@@ -1515,7 +1515,7 @@ items:
 - ns: privatesever.com.
 - ns:
   - ns1.cp-36.bigrockservers.com.
-  . ns2.cp-36.bigrockservers.com.
+  - ns2.cp-36.bigrockservers.com.
 - ns: 
   - ns1.md-97.bigrockservers.com.
   - ns2.md-97.bigrockservers.com.
