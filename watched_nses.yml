@@ -628,6 +628,9 @@ items:
   - ed.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - edna.ns.cloudflare.com.
+  - lee.ns.cloudflare.com.
+- ns:
   - edward.ns.cloudflare.com.
   - zainab.ns.cloudflare.com.
 - ns:
