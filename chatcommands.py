@@ -394,13 +394,14 @@ def do_blacklist(blacklist_type, msg, force=False):
     else:
         blacklist_command = blacklist_type.replace("_", "-")
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
+        without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
         full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
         text_after_pattern = ' normalized numbers: ' + str(normalized)
         full_entry = full_entry_list[pattern]
         processed = full_entry[0]
         deobfuscated_processed = phone_numbers.deobfuscate(processed)
         normalized_deobfuscated = phone_numbers.normalize(deobfuscated_processed)
-        pattern_matches_number_regex = phone_numbers.matches_number_regex(pattern)
+        pattern_matches_number_regex = phone_numbers.matches_number_regex(without_comments)
         deobfuscated_matches_number_regex = phone_numbers.matches_number_regex(deobfuscated_processed)
         digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
                                                                phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
@@ -471,10 +472,10 @@ def do_blacklist(blacklist_type, msg, force=False):
             other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
         if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
             other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
-        if not phone_numbers.matches_number_regex_start(pattern):
+        if not phone_numbers.matches_number_regex_start(without_comments):
             other_issues.append(exact_match_text + 'begin with a digit' +
                                 ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
-        if not phone_numbers.matches_number_regex_end(pattern):
+        if not phone_numbers.matches_number_regex_end(without_comments):
             other_issues.append(exact_match_text + 'end with a digit.')
 
     other_issues_text = ' '.join(other_issues)
