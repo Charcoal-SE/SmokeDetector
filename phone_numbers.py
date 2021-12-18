@@ -1,7 +1,7 @@
 # coding=utf-8
 import regex
 import number_homoglyphs
-from helpers import get_only_digits, remove_end_regex_comment
+from helpers import get_only_digits, remove_end_regex_comments
 
 # The NUMBER_REGEXes are used to obtain strings within a post which are considered to be a single "number". While
 #   it would be nice to be able to just use a single regular expression like:
@@ -86,7 +86,7 @@ def is_digit_count_in_number_regex_range(digit_count):
 
 
 def normalize(number):
-    return regex.sub(r"(?a)\D", "", number)
+    return get_only_digits(number)
 
 
 def normalize_set(numbers):
@@ -339,9 +339,10 @@ def get_north_american_with_separators_from_normalized(normalized):
     return country_code + base
 
 
-def get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized, all_normalized=None):
+def get_maybe_north_american_not_in_normalized_but_in_all(pattern, normalized, all_normalized=None):
+    without_comments, comments = split_processed_and_comments(pattern)
     north_american_extra, north_american_add_type, maybe_north_american_extra = \
-        get_north_american_alternate_normalized(normalize(deobfuscate(processed)), force=True)
+        get_north_american_alternate_normalized(normalize(deobfuscate(without_comments)), force=True)
     if maybe_north_american_extra not in normalized and \
             (all_normalized is None or maybe_north_american_extra in all_normalized):
         return maybe_north_american_extra
@@ -349,7 +350,7 @@ def get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized,
 
 
 def get_north_american_alternate_normalized(non_normalized, normalized=None, force=False):
-    normalized = normalized if normalized else get_only_digits(non_normalized)
+    normalized = normalized if normalized else normalize(non_normalized)
     north_american_extra = ''
     north_american_add_type = ''
     maybe_north_american_extra = ''
@@ -373,6 +374,23 @@ def get_north_american_alternate_normalized(non_normalized, normalized=None, for
     return north_american_extra, north_american_add_type, maybe_north_american_extra
 
 
+def split_processed_and_comments(pattern):
+    without_comments = remove_end_regex_comments(pattern)
+    comment = pattern.replace(without_comments, '')
+    return without_comments, comment
+
+
+def check_comments_for_north_american_directive(comments):
+    force_is_north_american = 'is noram' in comments.lower() or 'IS NA' in comments
+    force_no_north_american = 'no noram' in comments.lower() or 'NO NA' in comments
+    return force_is_north_american, force_no_north_american
+
+
+def get_north_american_forced_or_no_from_pattern(pattern):
+    without_comments, comments = split_processed_and_comments(pattern)
+    return check_comments_for_north_american_directive(comments)
+
+
 def process_numlist(numlist, processed=None, normalized=None):
     # The normalized list does contain any processed item which is also normalized.
     processed = processed if processed is not None else set()
@@ -384,16 +402,15 @@ def process_numlist(numlist, processed=None, normalized=None):
     for entry in numlist:
         index += 1
         this_entry_normalized = set()
-        without_comment = remove_end_regex_comment(entry)
-        processed.add(without_comment)
-        comment = entry.replace(without_comment, '')
-        force_no_north_american = 'no noram' in comment.lower() or 'NO NA' in comment
-        force_is_north_american = 'is noram' in comment.lower() or 'IS NA' in comment
+        without_comments, comments = split_processed_and_comments(entry)
+        processed.add(without_comments)
+        comment = entry.replace(without_comments, '')
+        force_is_north_american, force_no_north_american = check_comments_for_north_american_directive(comments)
         # normalized to only digits
-        this_entry_normalized.add(get_only_digits(without_comment))
-        deobfuscated = deobfuscate(without_comment)
+        this_entry_normalized.add(normalize(without_comments))
+        deobfuscated = deobfuscate(without_comments)
         # deobfuscated and normalized: We don't look for the non-normalized deobfuscated
-        normalized_deobfuscated = get_only_digits(deobfuscated)
+        normalized_deobfuscated = normalize(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
         if not force_no_north_american:
             north_american_extra, north_american_add_type, maybe_north_american_extra = \
@@ -406,6 +423,6 @@ def process_numlist(numlist, processed=None, normalized=None):
         # The normalized list *does* contain the processed string, if it's also normalized, as we need it to test
         #   against obfuscated
         normalized |= this_entry_normalized
-        full_entry = (without_comment, this_entry_normalized)
+        full_entry = (without_comments, this_entry_normalized)
         full_list[entry] = full_entry
     return full_list, processed, normalized

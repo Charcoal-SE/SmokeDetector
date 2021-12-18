@@ -438,6 +438,8 @@ def do_blacklist(blacklist_type, msg, force=False):
                 extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
                                                      ' to an existing entry on the number watchlist'
                 raise CmdException(normalized_on_list.format('watch', extra=extra_blacklisting_non_exact_match))
+        force_is_north_american, force_no_north_american = \
+            phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
         unused_maybe_north_american_norm = \
             phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
         north_american_alt = phone_numbers.get_north_american_alternate_normalized(normalized_deobfuscated, force=True)
@@ -457,7 +459,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                     " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
                                     " incorrectly recognized as one." + \
                                     " Perhaps try \n`!!/{} {}`\n".format(blacklist_command, formatted_north_american)
-        if unused_maybe_north_american_norm:
+        if not force_no_north_american and unused_maybe_north_american_norm:
             other_issues.append("That pattern may be a North American number. If it is, please " +
                                 north_american_formatting)
         unused_na_on_list = 'That pattern may be a North American number and the alternate normalized verison' + \

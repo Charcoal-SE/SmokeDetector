@@ -308,8 +308,8 @@ def remove_regex_comments(regex_text):
     return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", regex_text)
 
 
-def remove_end_regex_comment(regex_text):
-    return regex.sub(r"(?<!\\)\(\?\#[^\)]*\)$", "", regex_text)
+def remove_end_regex_comments(regex_text):
+    return regex.sub(r"(?:(?<!\\)\(\?\#[^\)]*\))+$", "", regex_text)
 
 
 def get_only_digits(text):
