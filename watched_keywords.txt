@@ -34912,3 +34912,4 @@
 1639873398	Makyen	gambleguru\.games
 1639879247	Makyen	thefancytext\.com
 1639885663	cigien	myskinspa\.co\.uk
+1639887846	Makyen	globalhackgroup(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
