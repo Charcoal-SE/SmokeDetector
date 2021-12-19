@@ -554,6 +554,24 @@ class FindSpam:
     rule_blacklisted_websites = None
     rule_blacklisted_usernames = None
 
+    # This is the minimum number of seconds which need to have elapsed for the Rule
+    # in order for some extra text to be added to the log output in order to draw more
+    # attention to the line.
+    ELAPSED_TIME_DRAW_ATTENTION_MIN = 5
+    # This is an arbitrarily long list of tuples representing different required elapsed times,
+    # the log level to use and text to prepend to the chat message.
+    # If the text for the log level doesn't exist, then a log(<log level>, report text)
+    # call is not executed.
+    # If there's no text to prepend to the chat message, then no chat message is sent for that entry.
+    # The list is scanned through in order with the last value where the elapsed time for the Rule
+    # is greater than the <minimum elapsed time> is acted upon.
+    ELAPSED_TIME_LOG_AND_TELL_LEVELS = [
+        # (<Log level>, <text prepended to chat message>, <minimum elapsed time>)
+        ('debug', '', 1),  # > 1 s: Log a "debug" level message for the Rule; No chat message
+        ('info', 'High ', 10),  # > 10 s: Log an "info" for the Rule and output to chat as "High "
+        ('warning', '**Very High** ', 30),  # > 30 s: Log a "warning" and output to chat as bold "Very High"
+    ]
+
     @classmethod
     def reload_blacklists(cls):
         global bad_keywords_nwb
@@ -600,8 +618,27 @@ class FindSpam:
     def test_post(post):
         result = []
         why_title, why_username, why_body = [], [], []
+        post_brief_id = "{}/{}/{}".format(post.post_site, "a" if post.is_answer else "q", post.post_id)
         for rule in FindSpam.rules:
+            start_time = time.time()
             title, username, body = rule.match(post)
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            draw_attention = ' <------------------' if elapsed_time > FindSpam.ELAPSED_TIME_DRAW_ATTENTION_MIN else ''
+            log_type = ''
+            tell_text = ''
+            for log_level, tell_level, minimum_elapsed_time in FindSpam.ELAPSED_TIME_LOG_AND_TELL_LEVELS:
+                if (elapsed_time >= minimum_elapsed_time):
+                    log_type = log_level
+                    tell_text = tell_level
+            if log_type or tell_text:
+                log_message = ('Rule elapsed time: {:.2f} s'.format(elapsed_time)
+                               + ': {}: {}'.format(rule.reason, rule.rule_id)
+                               + ' for [{}](https://{})'.format(post_brief_id, post_brief_id))
+                if log_type:
+                    log(log_type, log_message + draw_attention)
+                if tell_text:
+                    chatcommunicate.tell_rooms_with('long-rule-times', tell_text + log_message)
             if title[0]:
                 result.append(title[1])
                 why_title.append(title[2])
