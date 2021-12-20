@@ -34929,3 +34929,4 @@
 1639995171	tripleee	kpop4d
 1639995244	tripleee	deposit[\W_]*+pulsa
 1639995784	tripleee	cdlsuite\.com
+1639996703	tripleee	smrvinayestella\.biz
