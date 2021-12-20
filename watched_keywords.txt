@@ -34919,3 +34919,4 @@
 1639927664	cigien	landmarkdevelopments\.net
 1639933058	Makyen	rizin[\W_]*+33[\W_]*+live
 1639978589	cigien	grainstrading\.epizy\.com
+1639978680	cigien	technitab\.in
