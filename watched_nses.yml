@@ -847,6 +847,9 @@ items:
   - quinton.ns.cloudflare.com.
 - ns:
   - ivy.ns.cloudflare.com.
+  - joel.ns.cloudflare.com.
+- ns:
+  - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
   - jacqueline.ns.cloudflare.com.
