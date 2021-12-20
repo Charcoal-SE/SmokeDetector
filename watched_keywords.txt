@@ -34938,3 +34938,4 @@
 1640002427	tripleee	accountscomparison\.com
 1640002467	tripleee	celebrityhairtransplantsurgeon\.com
 1640002498	tripleee	izakscientific\.com
+1640002525	tripleee	genealogisthelp\.com
