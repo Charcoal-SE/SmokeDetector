@@ -34927,3 +34927,4 @@
 1639993644	tripleee	karofivietnam\.com\.vn
 1639993725	tripleee	softformance\.com
 1639995171	tripleee	kpop4d
+1639995244	tripleee	deposit[\W_]*+pulsa
