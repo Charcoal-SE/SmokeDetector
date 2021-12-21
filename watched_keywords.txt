@@ -34970,3 +34970,4 @@
 1640094738	tripleee	vegrecipeswithvaishali\.com
 1640094763	tripleee	(?-i:^Mbastami93$)
 1640096213	cigien	(?-i:Dmc7ABHKjw1WFjF7A)(?#google forms)
+1640096422	cigien	quickbookstool\.wordpress\.com
