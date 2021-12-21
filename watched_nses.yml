@@ -406,6 +406,9 @@ items:
   - cash.ns.cloudflare.com.
   - gigi.ns.cloudflare.com.
 - ns:
+  - cesar.ns.cloudflare.com.
+  - hazel.ns.cloudflare.com.
+- ns:
   - chad.ns.cloudflare.com.
   - elaine.ns.cloudflare.com.
 - ns:
