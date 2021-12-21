@@ -34968,3 +34968,4 @@
 1640083816	Mithical	mhapks
 1640094424	Spevacus	latestmodapks\.com
 1640094738	tripleee	vegrecipeswithvaishali\.com
+1640094763	tripleee	(?-i:^Mbastami93$)
