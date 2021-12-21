@@ -11638,7 +11638,6 @@
 1566610019	Makyen	freecoursesites\.online
 1566613583	Makyen	^(?:\s*<p>\s*(?:<\/?\w+\/?>\s*)*(?:<a href="[^>]*>)?\W*<img src="[^>]*>(?:<\/?\w+\/?>\s*)*)+$
 1566623086	Makyen	sunraised[\W_]*hemp[\W_]*oil(?:[\W_]*(?:\d+|[\da-f]{4,}))*
-1566625341	Makyen	trioangle\.com
 1566627114	Makyen	ultramax[\W_]*testo(?:[\W_]*(?:enhancer|\d+))*
 1566627279	Makyen	illuminatiworldofsociety1(?:@gmail\.com)?
 1566627289	Makyen	mr\w*justin\W*scott
