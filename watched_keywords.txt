@@ -34964,3 +34964,4 @@
 1640080129	tripleee	famuelcondez\.com
 1640080146	tripleee	jamuelcondez\.com
 1640080186	tripleee	famuelcondez(?!\.com)
+1640080341	tripleee	jamuel[\W_]*+condez(?!\.com(?<=jamuelcondez\.com))
