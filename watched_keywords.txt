@@ -34967,3 +34967,4 @@
 1640080341	tripleee	jamuel[\W_]*+condez(?!\.com(?<=jamuelcondez\.com))
 1640083816	Mithical	mhapks
 1640094424	Spevacus	latestmodapks\.com
+1640094738	tripleee	vegrecipeswithvaishali\.com
