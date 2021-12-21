@@ -24520,7 +24520,6 @@
 1606578648	Jeff Schaller	thehadilawfirm\.com
 1606583757	Mast	apksclub\.com
 1606584608	Mast	optimal[\W_]*+recovery[\W_]*+dot[\W_]*+org
-1606595643	Mast	bitdegree\.org
 1606595781	Mast	cryptominertips\.com
 1606650592	rene	playpianotips\.com
 1606661749	Mast	naijanex\.com\.ng
