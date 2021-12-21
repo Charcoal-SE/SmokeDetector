@@ -34952,3 +34952,4 @@
 1640053203	Makyen	thanhkhetay\.danang\.gov\.vn
 1640053243	Makyen	bachnienyhoaduong\.vn
 1640056659	cigien	speakersking\.com
+1640058165	cigien	trueimagetech\.com
