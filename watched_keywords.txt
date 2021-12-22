@@ -35007,3 +35007,4 @@
 1640177553	tripleee	(?-i:^AmiyaSamanta$)
 1640178903	tripleee	cachorrolegal\.com
 1640184764	Jeff Schaller	xpressautoparts\.co\.nz
+1640184897	Makyen	xpress[\W_]*+auto[\W_]*+parts(?!\.co\.nz(?<=xpressautoparts\.co\.nz))
