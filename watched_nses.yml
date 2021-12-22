@@ -1060,6 +1060,9 @@ items:
   - terin.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
+  - leah.ns.cloudflare.com.
   - vin.ns.cloudflare.com.
 - ns:
   - leanna.ns.cloudflare.com.
