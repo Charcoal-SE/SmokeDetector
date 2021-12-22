@@ -34988,5 +34988,4 @@
 1640153282	tripleee	themoveit\.com
 1640154415	tripleee	paincarecenter\.com\.sg
 1640154866	Makyen	(?-i:3FHWlAa)(?#bit.ly)
-1640154934	tripleee	(?-i:3FHWlAa)(?# bit.ly)
 1640155237	tripleee	cosmocratsoftwares\.com
