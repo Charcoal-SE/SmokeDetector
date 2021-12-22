@@ -9508,7 +9508,6 @@
 1559012366	Makyen	capsulcn\.com
 1559021470	Shree	drivingschoolva\.com
 1559025805	Makyen	dtgraphic\.com
-1559026169	Makyen	FuGenx
 1559028392	Makyen	financepolice\.com
 1559034175	Shree	spdesigngroup\.com
 1559035550	Makyen	garmincustomerservice\.co\.uk
