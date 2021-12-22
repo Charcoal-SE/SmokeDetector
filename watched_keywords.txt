@@ -34985,3 +34985,4 @@
 1640147537	cigien	d(?:octo)?r[\W_]*+omokpo(?:@gmail\.com)?
 1640147806	cigien	fugenx\.com
 1640147826	cigien	fugenx(?!\.com)
+1640153282	tripleee	themoveit\.com
