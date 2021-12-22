@@ -34986,3 +34986,4 @@
 1640147806	cigien	fugenx\.com
 1640147826	cigien	fugenx(?!\.com)
 1640153282	tripleee	themoveit\.com
+1640154415	tripleee	paincarecenter\.com\.sg
