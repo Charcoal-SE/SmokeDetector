@@ -493,6 +493,9 @@ items:
   - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - cory.ns.cloudflare.com.
+  - rita.ns.cloudflare.com.
+- ns:
   - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
