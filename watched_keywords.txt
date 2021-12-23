@@ -35028,3 +35028,4 @@
 1640250834	tripleee	eakinbrosltd(?!\.co\.uk)
 1640254714	tripleee	mrcheaptransport\.co\.za
 1640256256	tripleee	bose[\W_]*+soundbar[\W_]*+500
+1640257048	tripleee	cancellationandchanges\.com
