@@ -35018,3 +35018,4 @@
 1640232463	cigien	(?-i:G22CWzdpqQc)(?#youtube)
 1640234167	cigien	corbetttigerreserve\.net
 1640234895	cigien	wishusucess\.com
+1640235649	cigien	kycuyu[\W_]*+health[\W_]*+clinic(?:[\W_]*+com)?
