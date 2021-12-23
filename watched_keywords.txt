@@ -35032,3 +35032,4 @@
 1640260459	tripleee	hpcustomerssupport\.com
 1640271896	cigien	ilmiofruttivendolo\.it
 1640272022	cigien	codewithrandom\.com
+1640272118	cigien	mapmodnews\.com
