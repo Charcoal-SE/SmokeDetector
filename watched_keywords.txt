@@ -35026,3 +35026,4 @@
 1640247947	tripleee	eakinbrosltd\.co\.uk
 1640248066	tripleee	abortionpillsforsaledrricky(?# sites.google.com)
 1640250834	tripleee	eakinbrosltd(?!\.co\.uk)
+1640254714	tripleee	mrcheaptransport\.co\.za
