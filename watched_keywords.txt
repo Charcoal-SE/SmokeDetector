@@ -34748,7 +34748,6 @@
 1639405387	cigien	social\.artisanssoft\.com
 1639408529	Spevacus	basicautopart\.com
 1639410099	cigien	crello\.com
-1639412428	Makyen	debrasabina1961(?:@gmail\.com)?
 1639413116	cigien	ordingg\.com
 1639418468	Ollie	el-kef\.blogspot
 1639418509	Zoe	gohardashtcp\.com
