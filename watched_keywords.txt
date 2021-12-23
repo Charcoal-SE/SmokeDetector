@@ -35027,3 +35027,4 @@
 1640248066	tripleee	abortionpillsforsaledrricky(?# sites.google.com)
 1640250834	tripleee	eakinbrosltd(?!\.co\.uk)
 1640254714	tripleee	mrcheaptransport\.co\.za
+1640256256	tripleee	bose[\W_]*+soundbar[\W_]*+500
