@@ -1,12 +1,10 @@
-SmokeDetector
-=============
+# SmokeDetector
 
 [![Build Status](https://travis-ci.org/Charcoal-SE/SmokeDetector.svg?branch=master)](https://travis-ci.org/Charcoal-SE/SmokeDetector)
 [![Circle CI](https://circleci.com/gh/Charcoal-SE/SmokeDetector.svg?style=shield)](https://circleci.com/gh/Charcoal-SE/SmokeDetector)
 [![Coverage Status](https://coveralls.io/repos/github/Charcoal-SE/SmokeDetector/badge.svg?branch=master)](https://coveralls.io/github/Charcoal-SE/SmokeDetector?branch=master)
 [![Open issues](https://img.shields.io/github/issues/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/issues)
 [![Open PRs](https://img.shields.io/github/issues-pr/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/pulls)
-
 
 Headless chatbot that detects spam and posts it to chatrooms.
 Uses [ChatExchange](https://github.com/Manishearth/ChatExchange),
@@ -70,11 +68,10 @@ To run SmokeDetector in this virtual environment, use
 `env/bin/python3 nocrash.py`.
 
 [Note: On some systems (e.g. Mac's and Linux), some circumstances may
-require the `--user` option be removed from the last `pip3` 
-command line in the above instructions. However, the `--user` option is 
-known to be necessary in other circumstances. Further testing is 
+require the `--user` option be removed from the last `pip3`
+command line in the above instructions. However, the `--user` option is
+known to be necessary in other circumstances. Further testing is
 necessary to resolve the discrepancy.]
-
 
 ### Docker setup
 
@@ -84,44 +81,44 @@ To set up SmokeDetector in a Docker container, follow the steps below.
 
 1. Grab the [Dockerfile](Dockerfile) and build an image of SmokeDetector:
 
-  ```shell
-  DATE=$(date +%F)
-  mkdir temp
-  cd temp
-  wget https://raw.githubusercontent.com/Charcoal-SE/SmokeDetector/master/Dockerfile
-  docker build -t smokey:$DATE .
-  ```
+   ```shell
+   DATE=$(date +%F)
+   mkdir temp
+   cd temp
+   wget https://raw.githubusercontent.com/Charcoal-SE/SmokeDetector/master/Dockerfile
+   docker build -t smokey:$DATE .
+   ```
 
 2. Create a container from the image you just built
 
-  ```shell
-  docker create --name=mysmokedetector smokedetector:$DATE
-  ```
+   ```shell
+   docker create --name=mysmokedetector smokedetector:$DATE
+   ```
 
 3. Start the container.
-  Don't worry, SmokeDetector won't run until it's ready,
-  so you have the chance to edit the configuration file before SmokeDetector runs.
+   Don't worry, SmokeDetector won't run until it's ready,
+   so you have the chance to edit the configuration file before SmokeDetector runs.
 
-  Copy `config.sample` to a new file named `config`
-  and edit the values required,
-  then copy the file into the container with this command:
+   Copy `config.sample` to a new file named `config`
+   and edit the values required,
+   then copy the file into the container with this command:
 
-  ```shell
-  docker cp config mysmokedetector:/home/smokey/SmokeDetector/config
-  ```
+   ```shell
+   docker cp config mysmokedetector:/home/smokey/SmokeDetector/config
+   ```
 
 4. If you would like to set up additional stuff (SSH, Git etc.),
-  you can do so with a Bash shell in the container:
+   you can do so with a Bash shell in the container:
 
-  ```shell
-  docker exec -it mysmokedetector bash
-  ```
+   ```shell
+   docker exec -it mysmokedetector bash
+   ```
 
-  After you're ready, put a file named `ready` under `/home/smokey`:
+   After you're ready, put a file named `ready` under `/home/smokey`:
 
-  ```shell
-  touch ~smokey/ready
-  ```
+   ```shell
+   touch ~smokey/ready
+   ```
 
 #### Automate Docker deployment with Docker Compose
 
@@ -159,10 +156,10 @@ although we recommend Git 2.11+.
 
 Licensed under either of
 
- * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE)
-   or <https://www.apache.org/licenses/LICENSE-2.0>)
- * MIT license ([LICENSE-MIT](LICENSE-MIT)
-   or <https://opensource.org/licenses/MIT>)
+- Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE)
+  or <https://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](LICENSE-MIT)
+  or <https://opensource.org/licenses/MIT>)
 
 at your option.
 
@@ -171,4 +168,4 @@ at your option.
 By submitting your contribution for inclusion in the work
 as defined in the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0),
 you agree that it be dual licensed as above,
-without any additional terms or conditions. 
+without any additional terms or conditions.
