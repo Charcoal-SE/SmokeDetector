@@ -24045,7 +24045,6 @@
 1604855618	Makyen	c:\\Users\\John doe\\Desktop\\Libreoffice_7\.0\.3_win_x64\.msi
 1604856647	Makyen	scantype[\W_]*+3
 1604890880	Makyen	superpages\.uk\.com
-1604895602	Nisse Engström	wordcounter\.tools
 1604897968	Nisse Engström	skystarcleaning\.com
 1604902002	tripleee	florenceoregonatvrentals\.com
 1604905894	Mast	wowrooms\.co\.in
