@@ -34787,7 +34787,7 @@
 1639509877	Makyen	(?-i:1cILgyF)(?#pin.it)
 1639509893	Makyen	aaradhanatechnology\.com
 1639512502	cigien	yamseo\.co\.il
-1639528061	Makyen	^(?!<)(?=.{8,40}$).*?win[g9](?<!\bshowing).*?din[g9](?<!\bpending)(?<!\bloading)(?<!\bbending)(?<!\badding)(?<!\bbuildding)\w*+
+1639528061	Makyen	^(?!<)(?=.{8,40}$).*?w[1i]n[g9](?<!\bshowing).*?d[1i]n[g9](?<!\bpending)(?<!\bloading)(?<!\bbending)(?<!\badding)(?<!\bbuildding)\w*+(?#wing ding;wingding in usernames) 
 1639534316	Makyen	illuminatibrotherhood\.co\.za
 1639538276	Spevacus	tianwachinese\.com
 1639539747	Makyen	pmhelpline\.com
