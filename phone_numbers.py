@@ -134,14 +134,13 @@ def get_all_candidates(text):
     # So, if there are 2 copies of a number on the unprocessed_list and 3 of that number on the
     # raw_deobfuscated_list, then we want to end up with 1 of that number on the deobfuscated_list.
     for unprocessed in unprocessed_list:
-        for index in range(len(raw_deobfuscated_list)):
-            if raw_deobfuscated_list[index] == unprocessed:
-                raw_deobfuscated_list[index] = None
-                break
-    deobfuscated_list = [deobfuscated for deobfuscated in raw_deobfuscated_list if deobfuscated is not None]
+        try:
+            raw_deobfuscated_list.remove(unprocessed)
+        except ValueError:
+            pass
     # We only ever deal with the deobfuscated numbers in normalized format. Unlike the normalized list,
     # we want all of them, even if unchanged.
-    deobfuscated_list = normalize_list(deobfuscated_list)
+    deobfuscated_list = normalize_list(raw_deobfuscated_list)
     return set(unprocessed_list), set(normalized_list), set(deobfuscated_list)
 
 
