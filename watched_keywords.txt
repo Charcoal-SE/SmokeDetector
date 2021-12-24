@@ -34000,7 +34000,6 @@
 1637035081	cigien	news000k\.com
 1637038861	cigien	mobiledic\.com
 1637044465	cigien	uncmart\.com
-1637046348	tripleee	(?-i:^Evelyn$)
 1637046402	tripleee	(?-i:o0nBoTYjn8Y)(?# youtube)
 1637048160	tripleee	setupnorton\.site
 1637053385	tripleee	sign-in-aolmail\.com
