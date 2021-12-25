@@ -35069,3 +35069,4 @@
 1640444202	cigien	edgeneural\.ai
 1640444446	cigien	zarifgraphic\.com
 1640444619	cigien	efilinginfotech\.com
+1640444678	cigien	efiling[\W_]*+infotech(?!\.com(?<=efilinginfotech\.com))
