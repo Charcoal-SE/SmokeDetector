@@ -35071,3 +35071,4 @@
 1640444619	cigien	efilinginfotech\.com
 1640444678	cigien	efiling[\W_]*+infotech(?!\.com(?<=efilinginfotech\.com))
 1640445597	cigien	topperone\.com
+1640446841	cigien	the10technology\.blogspot
