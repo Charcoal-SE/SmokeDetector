@@ -395,6 +395,9 @@ items:
   - lorna.ns.cloudflare.com.
 - ns:
   - burt.ns.cloudflare.com.
+  - lina.ns.cloudflare.com.
+- ns:
+  - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
   - carla.ns.cloudflare.com.
