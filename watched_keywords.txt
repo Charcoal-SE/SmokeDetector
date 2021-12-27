@@ -35100,3 +35100,4 @@
 1640588538	Makyen	phongkhamdakhoahungthinh(?!\.webflow\.io)
 1640588555	Makyen	phongkhamhungthinh(?!\.neocities\.org)(?!\.glitch\.me)
 1640588568	Makyen	hungthinhclinic\d*
+1640588582	Makyen	phongkham365
