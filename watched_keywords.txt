@@ -35101,3 +35101,4 @@
 1640588555	Makyen	phongkhamhungthinh(?!\.neocities\.org)(?!\.glitch\.me)
 1640588568	Makyen	hungthinhclinic\d*
 1640588582	Makyen	phongkham365
+1640589344	tripleee	(?-i:6dfY_MMYseU)(?# youtube)
