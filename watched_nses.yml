@@ -515,6 +515,9 @@ items:
   - lucy.ns.cloudflare.com.
 - ns:
   - dan.ns.cloudflare.com.
+  - nadia.ns.cloudflare.com.
+- ns:
+  - dan.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
