@@ -235,6 +235,9 @@ items:
   - arnold.ns.cloudflare.com.
   - fay.ns.cloudflare.com.
 - ns:
+  - arnold.ns.cloudflare.com.
+  - uma.ns.cloudflare.com.
+- ns:
   - aron.ns.cloudflare.com.
   - clay.ns.cloudflare.com.
 - ns:
