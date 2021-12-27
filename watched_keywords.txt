@@ -35108,3 +35108,4 @@
 1640594879	tripleee	reviewscot\.com
 1640596612	tripleee	arlologgin\.com
 1640597947	tripleee	veerchual\.com
+1640600624	tripleee	wordshares\.com
