@@ -546,3 +546,4 @@ williamriver
 (?-i:^Daniel Lisa$)
 (?-i:^buymygenerix$)
 (?-i:^BRIGHT FUTURE ABROAD STUDIES$)
+(?-i:^a2n academy$)
