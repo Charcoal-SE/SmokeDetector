@@ -143,3 +143,6 @@ items:
   - sns20.hostgator.in.
 - ns: allianzetechnologies.com.
 - ns: anujjindal.in.
+- ns:
+  - ns5001.mochahost.com.
+  - ns6001.mochahost.com.
