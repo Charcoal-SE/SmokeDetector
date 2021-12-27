@@ -2542,3 +2542,4 @@ rental[\W_]*+cars[\W_]*+uae(?!\.com(?<=rentalcarsuae\.com))
 (?-i:[Mm]y name is [A-Z][a-z]+ from TDS)
 vibro[\W_]*+dynamics(?!\.com(?<=vibrodynamics\.com))
 debrasabina1961(?:@gmail\.com)?
+johnsmasher123(?:@gmail\.com)?
