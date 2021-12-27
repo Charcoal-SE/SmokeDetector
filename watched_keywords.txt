@@ -23877,7 +23877,6 @@
 1604294999	Ryan M	getuseuk\.com
 1604295072	Ryan M	poker55\.com
 1604298492	Makyen	topshir\.com
-1604298511	Makyen	winplat\.in
 1604298529	Makyen	ernestech\.com
 1604298692	Makyen	udaipur(?!escortservice\.biz\b)(?:[\W_]*+(?:escorts?([\W_]*+service)?|call\s*girl)s?)(?:[\W_]*+(?:escort|service|call|girl|\d++|[\da-f]{5,}+)s?)*
 1604298711	Makyen	iqbody\.com
