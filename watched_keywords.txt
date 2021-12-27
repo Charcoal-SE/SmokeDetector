@@ -14516,7 +14516,6 @@
 1576451877	Machavity	magazeena\.com
 1576452013	Machavity	ponzi\.wtf
 1576462219	Eliah Kagan	thevideodownloader\.com
-1576474997	Makyen	isha-patel\.com
 1576475065	Makyen	leanbridgetech\.com
 1576475698	Makyen	marcellorecords\.com
 1576475995	tripleee	vidmate\.vet
