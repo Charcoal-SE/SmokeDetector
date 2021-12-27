@@ -31140,7 +31140,6 @@
 1627614084	cigien	rizmona\.com
 1627614102	cigien	propartnergroup\.com
 1627614192	cigien	yesreach\.wordpress\.com
-1627614456	cigien	a2nacademy\.com
 1627628543	Makyen	nokego\.ie
 1627628584	Makyen	onpointit\.com\.au
 1627629203	Ryan M	food[\W_]*+product[\W_]*+development
