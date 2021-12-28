@@ -4364,3 +4364,4 @@ winplat\.in
 likigram\.com
 empirecrack\.com
 spacebarcounter\.org
+teachin\.id
