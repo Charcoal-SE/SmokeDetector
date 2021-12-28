@@ -2543,3 +2543,4 @@ rental[\W_]*+cars[\W_]*+uae(?!\.com(?<=rentalcarsuae\.com))
 vibro[\W_]*+dynamics(?!\.com(?<=vibrodynamics\.com))
 debrasabina1961(?:@gmail\.com)?
 johnsmasher123(?:@gmail\.com)?
+uwashare
