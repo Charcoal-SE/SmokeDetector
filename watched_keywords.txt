@@ -35130,3 +35130,4 @@
 1640692259	tripleee	familyprotectvpn\.com
 1640692277	tripleee	com\.familyprotectvpn
 1640698132	Spevacus	helonational\.com
+1640699227	tripleee	sfgate\.com
