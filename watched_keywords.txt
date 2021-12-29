@@ -35150,3 +35150,4 @@
 1640762942	tripleee	(?-i:^cosmocrat12$)
 1640765109	tripleee	akdinvest\.com
 1640767238	Glorfindel	angela\W*angie
+1640767447	tripleee	edupro\.edu\.vn
