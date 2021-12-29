@@ -35165,3 +35165,4 @@
 1640784928	tripleee	(?-i:V4tlJ23SfLM&t=53s)(?# youtube)
 1640784948	tripleee	wanted[\W_]*+gecko
 1640784973	tripleee	dubaisofarepair\.ae
+1640787483	Makyen	thisendorsed\.com
