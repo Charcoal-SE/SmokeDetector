@@ -65,6 +65,7 @@ items:
   disable: true
 - asn: '42831'
 - asn: '43317'
+- asn: '45538'
 - asn: '45815'
 - asn: '45839'
 - asn: '46261'
