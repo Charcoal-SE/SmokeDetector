@@ -35163,3 +35163,4 @@
 1640781875	tripleee	swissebene\.ch
 1640781899	tripleee	(?-i:^Kevin Mille$)
 1640784928	tripleee	(?-i:V4tlJ23SfLM&t=53s)(?# youtube)
+1640784948	tripleee	wanted[\W_]*+gecko
