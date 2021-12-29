@@ -63,16 +63,10 @@ def api_get_post(post_url):
         GlobalVars.api_request_lock.release()
         return None
     post_id, site, post_type = d
-    if post_type == "answer":
-        api_filter = r"!4z6S)cPO)zvpuDWsWTAUW(kaV6K6thsqi1tlYa"
-    elif post_type == "question":
-        api_filter = r"!m)9.UaQrI5-DZXtlTpWhv2HroYRgS3dPhv.2vxV7fpGT*27rEHM.BKV1"
-    else:
-        raise ValueError("Unknown post type: {}".format(post_type))
 
     request_url = "https://api.stackexchange.com/2.2/{}s/{}".format(post_type, post_id)
     params = {
-        'filter': api_filter,
+        'filter': GlobalVars.se_api_question_answer_post_filter,
         'key': 'IAkbitmze4B8KpacUfLqkw((',
         'site': site
     }

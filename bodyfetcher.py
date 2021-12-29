@@ -557,7 +557,7 @@ class BodyFetcher:
 
         url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
         params = {
-            'filter': '!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa',
+            'filter': GlobalVars.se_api_question_answer_post_filter,
             'key': 'IAkbitmze4B8KpacUfLqkw((',
             'site': site
         }

@@ -155,6 +155,20 @@ class GlobalVars:
 
     api_request_lock = threading.Lock()  # Get this lock before making API requests
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
+    # The following is a filter for the SE API to use on /questions, /answers, and /posts routes, which
+    # returns consistent data for all three types of requests, as far as that is possible.
+    # However, it should be noted that some of the fields which are available in the /questions and /answers
+    # routes are not available when the same post is obtained through the /posts routes.
+    # Our primary scanning is done based on responses to the /questions route. In general, data should be
+    # obtained from that route when possible. Unfortunately, there isn't a good way to go from just a post_id
+    # to both knowing that it's a question or answer and having the posts full data.
+    # [Note: URL decoding can't actually be relied upon to determine if a post is a question or answer, because the
+    # /a and /q main/meta site routes take a post ID and return whichever of question or answer it is.]
+    # The best case is that we know or guess that the post is either a question or answer and we request it
+    # accurately from the correct route. However, for scanning posts, we also want the question data associated
+    # with an answer.
+    se_api_question_answer_post_filter = \
+        "!7bj2kejr9-Tmw-wWkT)JQ1T3qUUB9KLZAB0TT-dWOwUFyqxVII1y.BH6Ji(.pwih1odhF-wr29R*Jbti"
 
     class PostScanStat:
         """ Tracking post scanning data """

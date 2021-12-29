@@ -2163,7 +2163,7 @@ def allspam(msg, url):
         # Fetch posts
         request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
         params = {
-            'filter': '!fsv5ng(IaK_MBkZYCDWuA.U2DqLwdl*YEL_',
+            'filter': GlobalVars.se_api_question_answer_post_filter,
             'key': api_key,
             'site': u_site
         }
@@ -2206,7 +2206,7 @@ def allspam(msg, url):
                 # Fetch posts
                 req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
                 params = {
-                    'filter': '!*Jxb9s5EOrE51WK*',
+                    'filter': GlobalVars.se_api_question_answer_post_filter,
                     'key': api_key,
                     'site': u_site
                 }
