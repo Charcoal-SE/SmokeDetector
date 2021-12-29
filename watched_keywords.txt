@@ -35172,3 +35172,4 @@
 1640815559	cigien	dirask\.com
 1640818171	cigien	carlsongracieplacentia\.com
 1640819141	Makyen	carlson[\W_]*+gracie[\W_]*+jiu[\W_]*+jitsu
+1640819159	Makyen	carlson[\W_]*+gracie[\W_]*+placentia(?!\.com(?<=carlsongracieplacentia\.com))
