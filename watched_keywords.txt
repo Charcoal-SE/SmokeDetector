@@ -35153,3 +35153,4 @@
 1640767447	tripleee	edupro\.edu\.vn
 1640768266	tripleee	bitaacademy\.com
 1640770412	tripleee	skvenergyservices\.com
+1640770953	Glorfindel	best\W*internet\W*solution
