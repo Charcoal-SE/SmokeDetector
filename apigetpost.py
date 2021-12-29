@@ -64,7 +64,7 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
 
-    request_url = "https://api.stackexchange.com/2.2/{}s/{}".format(post_type, post_id)
+    request_url = GlobalVars.se_api_url_base + "{}s/{}".format(post_type, post_id)
     params = {
         'filter': GlobalVars.se_api_question_answer_post_filter,
         'key': 'IAkbitmze4B8KpacUfLqkw((',

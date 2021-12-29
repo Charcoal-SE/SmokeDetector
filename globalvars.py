@@ -169,6 +169,7 @@ class GlobalVars:
     # with an answer.
     se_api_question_answer_post_filter = \
         "!7bj2kejr9-Tmw-wWkT)JQ1T3qUUB9KLZAB0TT-dWOwUFyqxVII1y.BH6Ji(.pwih1odhF-wr29R*Jbti"
+    se_api_url_base = "https://api.stackexchange.com/2.2/"
 
     class PostScanStat:
         """ Tracking post scanning data """

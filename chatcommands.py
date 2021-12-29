@@ -2133,7 +2133,7 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch sites
-        request_url = "https://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
+        request_url = GlobalVars.se_api_url_base + "users/{}/associated".format(user[0])
         params = {
             'filter': '!6Pbp)--cWmv(1',
             'key': api_key
@@ -2161,7 +2161,7 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch posts
-        request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
+        request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
         params = {
             'filter': GlobalVars.se_api_question_answer_post_filter,
             'key': api_key,
@@ -2204,7 +2204,7 @@ def allspam(msg, url):
                 if GlobalVars.api_backoff_time > time.time():
                     time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
                 # Fetch posts
-                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
+                req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
                 params = {
                     'filter': GlobalVars.se_api_question_answer_post_filter,
                     'key': api_key,

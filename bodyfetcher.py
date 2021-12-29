@@ -555,7 +555,7 @@ class BodyFetcher:
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
-        url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
+        url = GlobalVars.se_api_url_base + "questions{}".format(question_modifier)
         params = {
             'filter': GlobalVars.se_api_question_answer_post_filter,
             'key': 'IAkbitmze4B8KpacUfLqkw((',

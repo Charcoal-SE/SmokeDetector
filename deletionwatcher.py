@@ -147,7 +147,7 @@ class DeletionWatcher:
 
         for site, posts in saved.items():
             ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
-            uri = "https://api.stackexchange.com/2.2/posts/{}".format(ids)
+            uri = GlobalVars.se_api_url_base + "posts/{}".format(ids)
             params = {
                 'site': site,
                 'key': 'IAkbitmze4B8KpacUfLqkw(('

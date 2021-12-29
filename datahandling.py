@@ -513,7 +513,7 @@ def fetch_lines_from_error_log(count):
 def refresh_sites():
     has_more = True
     page = 1
-    url = "https://api.stackexchange.com/2.2/sites"
+    url = GlobalVars.se_api_url_base + "sites"
     while has_more:
         params = {
             'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
