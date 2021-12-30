@@ -35202,3 +35202,4 @@
 1640880421	cigien	bestessayservicesradar\.com
 1640881842	Makyen	legitwritingservices\.com
 1640883282	Ollie	openwebanalytics\.com
+1640888248	cigien	(?-i:^WB Bush$)
