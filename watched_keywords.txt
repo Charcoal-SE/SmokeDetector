@@ -35174,3 +35174,4 @@
 1640819141	Makyen	carlson[\W_]*+gracie[\W_]*+jiu[\W_]*+jitsu
 1640819159	Makyen	carlson[\W_]*+gracie[\W_]*+placentia(?!\.com(?<=carlsongracieplacentia\.com))
 1640830587	cigien	jiowo\.com
+1640831071	Makyen	(?-i:34qbjs)(?#rb.gy)
