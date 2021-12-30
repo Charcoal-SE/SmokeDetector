@@ -35203,3 +35203,4 @@
 1640881842	Makyen	legitwritingservices\.com
 1640883282	Ollie	openwebanalytics\.com
 1640888248	cigien	(?-i:^WB Bush$)
+1640888264	cigien	futuretripexperience\.com
