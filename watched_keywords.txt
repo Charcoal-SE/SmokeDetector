@@ -35182,3 +35182,4 @@
 1640846925	tripleee	care4nutrition\.com
 1640848072	tripleee	fueldigi(?!\.com)
 1640848559	tripleee	indianrenters\.com
+1640849900	tripleee	khoslakaghosla\.com
