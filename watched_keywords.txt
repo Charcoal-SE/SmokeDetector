@@ -31049,7 +31049,6 @@
 1627372239	Ryan M	caseprofessors\.com
 1627373010	Ryan M	ethereumaddressgenerator\.com
 1627373098	tripleee	reality-bit\.com
-1627374044	Ryan M	yan[\W_]*+li[\W_]*+meng
 1627376396	Ryan M	pointslopeform\.net
 1627376534	Ryan M	amygb\.ai
 1627380797	Ryan M	floorseatingplanet\.com
