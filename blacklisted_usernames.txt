@@ -548,3 +548,4 @@ williamriver
 (?-i:^BRIGHT FUTURE ABROAD STUDIES$)
 (?-i:^a2n academy$)
 (?-i:^Izak Sciientific$)
+(?-i:^Riverdayspa$)
