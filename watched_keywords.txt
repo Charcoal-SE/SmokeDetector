@@ -35191,3 +35191,4 @@
 1640859929	tripleee	pinsoutinnovation\.com
 1640859949	tripleee	crafsol
 1640861323	double-beep	ecsion\.com
+1640861817	tripleee	ecsion(?!\.com)
