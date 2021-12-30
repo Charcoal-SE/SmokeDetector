@@ -35180,3 +35180,4 @@
 1640844527	cigien	wefru\.com
 1640845972	tripleee	niithanoi\.edu\.vn
 1640846925	tripleee	care4nutrition\.com
+1640848072	tripleee	fueldigi(?!\.com)
