@@ -35193,3 +35193,4 @@
 1640861323	double-beep	ecsion\.com
 1640861817	tripleee	ecsion(?!\.com)
 1640861857	tripleee	armani'?s[\W_]*+jewelry(?!\.com(?<=armanisjewelry\.com))
+1640864625	tripleee	everestvacuum\.com
