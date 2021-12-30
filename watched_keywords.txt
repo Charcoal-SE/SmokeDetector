@@ -35184,7 +35184,6 @@
 1640848559	tripleee	indianrenters\.com
 1640849900	tripleee	khoslakaghosla\.com
 1640850865	tripleee	law[\W_]*+prep[\W_]*+tutorial
-1640853802	tripleee	thingiverse\.com
 1640853950	tripleee	direct-link\.net
 1640853965	tripleee	linkvertise\.com
 1640859741	tripleee	armanisjewelry\.com
