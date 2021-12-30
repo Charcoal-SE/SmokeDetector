@@ -35178,3 +35178,4 @@
 1640842184	cigien	integrasources\.com
 1640842425	cigien	key4you\.in
 1640843619	cigien	pmsaifworld\.com
+1640843723	cigien	pms[\W_]*+aif[\W_]*+world(?!\.com(?<=pmsaifworld\.com))
