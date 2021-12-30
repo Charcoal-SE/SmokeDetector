@@ -35180,3 +35180,4 @@
 1640843619	cigien	pmsaifworld\.com
 1640843723	cigien	pms[\W_]*+aif[\W_]*+world(?!\.com(?<=pmsaifworld\.com))
 1640844527	cigien	wefru\.com
+1640845972	tripleee	niithanoi\.edu\.vn
