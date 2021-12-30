@@ -35183,3 +35183,4 @@
 1640848072	tripleee	fueldigi(?!\.com)
 1640848559	tripleee	indianrenters\.com
 1640849900	tripleee	khoslakaghosla\.com
+1640850865	tripleee	law[\W_]*+prep[\W_]*+tutorial
