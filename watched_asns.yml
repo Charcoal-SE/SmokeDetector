@@ -26,12 +26,13 @@ items:
   comment: Moderate FPs, don't double up
   disable: true
 - asn: '23352'
+- asn: '23957'
 - asn: '24309'
+- asn: '24778'
 - asn: '25697'
 - asn: '26496'
   comment: Massive FPs; do not watch
   disable: true
-- asn: '24778'
 - asn: '27176'
 - asn: '29066'
 - asn: '29073'
