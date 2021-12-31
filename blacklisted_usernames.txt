@@ -549,3 +549,4 @@ williamriver
 (?-i:^a2n academy$)
 (?-i:^Izak Sciientific$)
 (?-i:^Riverdayspa$)
+(?-i:^anderson_bekker$)
