@@ -35230,3 +35230,4 @@
 1640944140	tripleee	(?-i:^tom0099$)
 1640944677	tripleee	comparewise\.ca
 1640945899	tripleee	jhon
+1640946639	tripleee	prickdaily\.com
