@@ -35229,7 +35229,6 @@
 1640944099	tripleee	bejeweled3\.co
 1640944140	tripleee	(?-i:^tom0099$)
 1640944677	tripleee	comparewise\.ca
-1640945899	tripleee	jhon
 1640946639	tripleee	prickdaily\.com
 1640946665	tripleee	buzzoid\.me
 1640946691	tripleee	emedhealthtech\.com
