@@ -35227,3 +35227,4 @@
 1640943267	tripleee	cararegistrasi\.com
 1640944079	tripleee	mahjongfreegames\.online
 1640944099	tripleee	bejeweled3\.co
+1640944140	tripleee	(?-i:^tom0099$)
