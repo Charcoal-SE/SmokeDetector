@@ -35278,3 +35278,4 @@
 1641212962	tripleee	(?-i:^kishore jatoth$)
 1641213400	cigien	ngeducate\.blogspot
 1641214985	cigien	sposync\.com
+1641215105	tripleee	misdiva1bil(?:(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com)?
