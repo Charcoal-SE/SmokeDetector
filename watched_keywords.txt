@@ -35273,3 +35273,4 @@
 1641204949	tripleee	badalcox[\W_]*+88(?:(?:[\W_]*+at)?gmail[\W_]*+(?:[\W_]*+dot)?com)?
 1641207010	tripleee	afroid\.net
 1641208753	tripleee	divinecopper\.com
+1641209035	Jeff Schaller	chess-boards\.com
