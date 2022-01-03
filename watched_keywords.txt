@@ -35270,3 +35270,4 @@
 1641200386	tripleee	adbidds\.com
 1641203323	tripleee	paarthinfra\.com
 1641204079	tripleee	clinicgrand\.com
+1641204949	tripleee	badalcox[\W_]*+88(?:(?:[\W_]*+at)?gmail[\W_]*+(?:[\W_]*+dot)?com)?
