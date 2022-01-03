@@ -1728,7 +1728,7 @@ darknetmarketslink(?=\.com)(?#Intentional double-detection of this site)
 braindumps?4it(?!\.com(?<=braindumps4it\.com))
 breast\W?actives?
 bioW?tech\W?pro
-duraflex
+duraflex(?=.{0,30}?(?:male|enhancement|sex))
 mara\W?nutra
 Andro\W*+Testo(?:-Pro)?
 com\.appmaster\.akash(?#please tp and mod flag; requested by mod MartijnPieters)
