@@ -35277,3 +35277,4 @@
 1641212028	tripleee	the[\W_]*+soorat
 1641212962	tripleee	(?-i:^kishore jatoth$)
 1641213400	cigien	ngeducate\.blogspot
+1641214985	cigien	sposync\.com
