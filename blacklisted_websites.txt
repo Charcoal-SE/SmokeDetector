@@ -4374,3 +4374,4 @@ fueldigi\.com
 fumacrom\.com(?#pay per click link shortener; inherently spam)
 mamamponye\.com
 lexcliq\.com
+testrigtechnologies\.com
