@@ -35285,3 +35285,4 @@
 1641243071	cigien	ivegotgas\.net
 1641264164	cigien	treetrimmingbatonrouge\.com
 1641266165	cigien	rootkit[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
+1641275326	tripleee	digitalflake\.com
