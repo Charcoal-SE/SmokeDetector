@@ -35302,3 +35302,4 @@
 1641295157	tripleee	strnews\.in
 1641295354	tripleee	newsus24\.com
 1641295630	tripleee	firmwareraw\.com
+1641297972	cigien	sparesworld\.co\.ke
