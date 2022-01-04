@@ -35297,3 +35297,4 @@
 1641287543	tripleee	gmail[\W_]*+bellen
 1641290737	tripleee	utravs\.com
 1641293238	tripleee	techsaga\.co\.in
+1641293423	tripleee	techsaga(?!\.co\.in)
