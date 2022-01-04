@@ -35312,3 +35312,4 @@
 1641299852	cigien	auther\.ai
 1641301654	cigien	gitaforyouth\.connect(?:@gmail\.com)?
 1641301783	cigien	naturalgoodz\.com
+1641302357	cigien	goprotoz\.com
