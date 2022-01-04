@@ -1799,6 +1799,11 @@ items:
   - ns-1920.awsdns-48.co.uk.
   - ns-841.awsdns-41.net.
 - ns:
+  - ns-106.awsdns-13.com.
+  - ns-1309.awsdns-35.org.
+  - ns-1936.awsdns-50.co.uk.
+  - ns-566.awsdns-06.net.
+- ns:
   - ns-1061.awsdns-04.org.
   - ns-107.awsdns-13.com.
   - ns-1845.awsdns-38.co.uk.
