@@ -35310,3 +35310,4 @@
 1641298159	cigien	famousfacebiography\.com
 1641299497	cigien	lucafriends\.com
 1641299852	cigien	auther\.ai
+1641301654	cigien	gitaforyouth\.connect(?:@gmail\.com)?
