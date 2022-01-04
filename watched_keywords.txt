@@ -35291,3 +35291,4 @@
 1641276391	tripleee	(?-i:cp5ctgsy)(?# geogebra.org sevenmentor spam)
 1641276871	tripleee	ispauto\.com
 1641278832	tripleee	(?-i:^Aims Education$)
+1641278871	tripleee	bransloadcell\.com
