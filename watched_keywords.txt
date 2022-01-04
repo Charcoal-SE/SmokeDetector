@@ -35300,3 +35300,4 @@
 1641293423	tripleee	techsaga(?!\.co\.in)
 1641294719	tripleee	siashmed\.com
 1641295157	tripleee	strnews\.in
+1641295354	tripleee	newsus24\.com
