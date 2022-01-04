@@ -810,6 +810,9 @@ items:
   - hal.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
 - ns:
+  - hans.ns.cloudflare.com.
+  - pam.ns.cloudflare.com.
+- ns:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
