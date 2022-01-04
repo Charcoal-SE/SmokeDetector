@@ -35308,3 +35308,4 @@
 1641298110	cigien	nsbpresets\.com
 1641298133	cigien	lightroompreset\.in
 1641298159	cigien	famousfacebiography\.com
+1641299497	cigien	lucafriends\.com
