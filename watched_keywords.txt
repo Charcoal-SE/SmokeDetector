@@ -35346,3 +35346,4 @@
 1641391758	tripleee	stevecybers(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1641397235	cigien	lpm\.uma\.ac\.id
 1641397558	Jeff Schaller	indiansinukraine\.com
+1641403059	cigien	clipclaps\.com
