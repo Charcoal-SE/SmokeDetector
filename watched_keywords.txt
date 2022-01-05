@@ -35343,3 +35343,4 @@
 1641388144	cigien	english\.naveedplace\.com
 1641388671	cigien	rappelone\.ir
 1641390912	tripleee	akshaykumarmovies\.co\.in
+1641391758	tripleee	stevecybers(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
