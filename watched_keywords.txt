@@ -35337,3 +35337,4 @@
 1641385518	tripleee	ventsmagazine\.com
 1641385716	tripleee	usarxstores\.org
 1641386027	tripleee	cyberdude(?:[\W_]*+(?:dot|\.)[\W_]*+)com
+1641386052	tripleee	(?-i:FPjBBgIOwZU)(?# youtube)
