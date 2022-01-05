@@ -35336,3 +35336,4 @@
 1641383119	tripleee	a23d\.co
 1641385518	tripleee	ventsmagazine\.com
 1641385716	tripleee	usarxstores\.org
+1641386027	tripleee	cyberdude(?:[\W_]*+(?:dot|\.)[\W_]*+)com
