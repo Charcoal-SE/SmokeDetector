@@ -35331,3 +35331,4 @@
 1641376918	tripleee	entakala(?!\.com)
 1641377487	tripleee	fridayrack\.com
 1641378364	Jeff Schaller	mirasvit\.com
+1641381909	tripleee	scantrics\.io
