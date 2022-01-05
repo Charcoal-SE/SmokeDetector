@@ -35328,3 +35328,4 @@
 1641368488	Nisse Engström	kiwiads\.co\.nz
 1641372922	Ryan M	niceseoservices\.com
 1641373247	tripleee	aw8\.site
+1641376918	tripleee	entakala(?!\.com)
