@@ -35323,3 +35323,4 @@
 1641360394	Makyen	hkhamza\.wixsite\.com
 1641361651	tripleee	ezio[\W_]*+solutions
 1641362297	tripleee	hk[\W_]*+hamza(?!\.wixsite\.com)
+1641364877	tripleee	ambienforsale\.us
