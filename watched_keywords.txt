@@ -35330,3 +35330,4 @@
 1641373247	tripleee	aw8\.site
 1641376918	tripleee	entakala(?!\.com)
 1641377487	tripleee	fridayrack\.com
+1641378364	Jeff Schaller	mirasvit\.com
