@@ -35361,3 +35361,4 @@
 1641470022	cigien	gomalthemes\.com
 1641470346	cigien	ndtkala\.co
 1641470644	cigien	sysinspire(?!\.com)
+1641470839	cigien	dataintelo\.com
