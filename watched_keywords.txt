@@ -35368,5 +35368,4 @@
 1641491611	Machavity	panelook\.com
 1641491725	Makyen	(?-i:kKnRqWu0ATk)(?#youtube.com)
 1641492438	Mast	Coinbase[\W_]*+Customer[\W_]*+service
-1641493376	cigien	best\W*internet\W*solution(?!\.com(?<=bestinternetsolution\.com))
 1641493407	cigien	bestinternetsolution\.com
