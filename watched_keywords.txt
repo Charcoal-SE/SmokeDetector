@@ -35360,3 +35360,4 @@
 1641469993	cigien	smartdevicehelpline\.com
 1641470022	cigien	gomalthemes\.com
 1641470346	cigien	ndtkala\.co
+1641470644	cigien	sysinspire(?!\.com)
