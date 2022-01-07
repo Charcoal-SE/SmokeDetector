@@ -35371,3 +35371,4 @@
 1641494747	cigien	best[\W_]*+internet[\W_]*+solution(?!\.com(?<=bestinternetsolution\.com))
 1641537458	Ryan M	vootfly\.com
 1641537743	Ryan M	gworg\.com
+1641537960	Ryan M	maxgrowcorp\.com
