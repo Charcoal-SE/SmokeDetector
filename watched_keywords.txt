@@ -35383,3 +35383,4 @@
 1641560688	cigien	spatial-dev\.guru
 1641560862	cigien	letscodeofficial\.com
 1641561287	cigien	pragaticrafts\.co\.in
+1641561717	cigien	ats[\W_]*+generators
