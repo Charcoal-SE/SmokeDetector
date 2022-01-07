@@ -35380,3 +35380,4 @@
 1641559178	tripleee	(?-i:^Raaj Babu$)
 1641559269	cigien	goatsemarathon\.com
 1641560455	cigien	rambetexchange\.com
+1641560688	cigien	spatial-dev\.guru
