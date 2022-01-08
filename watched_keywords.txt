@@ -34598,7 +34598,6 @@
 1638969038	tripleee	sophi\.in
 1638969056	tripleee	delhiindiaescorts1\.in
 1638971904	tripleee	pandrjunkcars\.com
-1638975809	Makyen	recovercoin
 1638975834	Makyen	rescueteam[\W_]*+(?:dot[\W_]*+)?com
 1638979979	Makyen	yougjunior542baba(?:@gmail\.com)?
 1638980653	cigien	fastenere\.com

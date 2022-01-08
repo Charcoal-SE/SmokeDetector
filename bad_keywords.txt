@@ -2552,3 +2552,4 @@ yan[\W_]*+li[\W_]*+meng
 investor_anderson(?:@outlook\.com)?
 flutter_list_view
 chubygreat(?:@gmail\.com)?
+recovercoin
