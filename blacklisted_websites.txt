@@ -4380,3 +4380,4 @@ provenexpert\.com
 sirinsoftware\.com
 atoallinks\.com
 sfdcfileexporter\.com
+rescueteam[\W_]*+(?:dot[\W_]*+)?com
