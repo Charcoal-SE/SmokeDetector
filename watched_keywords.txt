@@ -35394,3 +35394,4 @@
 1641578583	Makyen	lunchtime-result\.com
 1641580207	Makyen	nidra[\W_]*+coin
 1641605887	Machavity	iptv-univers\.com
+1641619264	Makyen	fayway\.in
