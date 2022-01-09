@@ -35417,3 +35417,4 @@
 1641729362	tripleee	geminitwins\.xyz
 1641732495	cigien	(?-i:3qZL3AG)(?#amzn.to)
 1641732660	Makyen	eliyahu[\W_]*+shear
+1641732681	Makyen	magiskzip\.com
