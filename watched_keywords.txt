@@ -35422,3 +35422,4 @@
 1641732739	Makyen	fuelestechnology(?:@gmail\.com)?
 1641732755	Makyen	et\.echo tech
 1641732775	Makyen	(?-i:lLx_R4Y0v7c)(?#YouTube)
+1641732790	Makyen	gemini[\W_]*+twins(?!\.xyz(?<=geminitwins\.xyz))
