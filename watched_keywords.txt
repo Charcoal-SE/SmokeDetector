@@ -35413,3 +35413,4 @@
 1641678696	Makyen	web[\W_]*+news[\W_]*+observer(?!\.com(?<=webnewsobserver\.com))
 1641690423	cigien	rasapoetra\.com
 1641710459	Makyen	kolatelegraf\.ru
+1641710676	Makyen	world4freezone\.blogspot
