@@ -35418,3 +35418,4 @@
 1641732495	cigien	(?-i:3qZL3AG)(?#amzn.to)
 1641732660	Makyen	eliyahu[\W_]*+shear
 1641732681	Makyen	magiskzip\.com
+1641732703	Makyen	magisk[\W_]*+zip(?!\.com(?<=magiskzip\.com))
