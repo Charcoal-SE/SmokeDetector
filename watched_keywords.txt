@@ -35411,3 +35411,4 @@
 1641673766	cigien	rkstoretn\.com
 1641677517	cigien	webnewsobserver\.com
 1641678696	Makyen	web[\W_]*+news[\W_]*+observer(?!\.com(?<=webnewsobserver\.com))
+1641690423	cigien	rasapoetra\.com
