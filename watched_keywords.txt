@@ -35420,3 +35420,4 @@
 1641732681	Makyen	magiskzip\.com
 1641732703	Makyen	magisk[\W_]*+zip(?!\.com(?<=magiskzip\.com))
 1641732739	Makyen	fuelestechnology(?:@gmail\.com)?
+1641732755	Makyen	et\.echo tech
