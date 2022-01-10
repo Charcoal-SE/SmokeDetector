@@ -4383,3 +4383,4 @@ sfdcfileexporter\.com
 rescueteam[\W_]*+(?:dot[\W_]*+)?com
 clubeo\.com
 espiort\.club
+manibhadrafittings\.com
