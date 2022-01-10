@@ -35441,3 +35441,4 @@
 1641811536	tripleee	ultrastark\.ch
 1641811625	tripleee	reduce[\W_]*+the[\W_]*+bounce[\W_]*+rate
 1641813668	tripleee	passwordgeneratorpasswords\.link
+1641813991	Jeff Schaller	hyperfarsh\.com
