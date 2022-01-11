@@ -304,6 +304,9 @@ items:
   - ben.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
+  - benedict.ns.cloudflare.com.
+  - yolanda.ns.cloudflare.com.
+- ns:
   - beth.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
