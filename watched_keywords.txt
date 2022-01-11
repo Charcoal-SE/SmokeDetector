@@ -35475,3 +35475,4 @@
 1641897288	tripleee	backpageclassifieds\.com
 1641903402	cigien	(?-i:^Ravi Kiran$)(?#cloudways spammer)
 1641905678	tripleee	datatrigger\.org
+1641907219	Glorfindel	cyruscrafts\.com
