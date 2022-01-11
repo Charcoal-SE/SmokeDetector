@@ -1592,6 +1592,9 @@ items:
   - cns1.bigrock.com.
   - cns2.bigrock.com.
 - ns:
+  - sns13.bigrock.com.
+  - sns14.bigrock.com.
+- ns:
   - sns7.bigrock.com.
   - sns8.bigrock.com.
 - ns: tenten.vn.
