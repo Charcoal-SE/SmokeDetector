@@ -163,9 +163,6 @@ items:
   - alla.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
-  - amber.ns.cloudflare.com.
-  - skip.ns.cloudflare.com.
-- ns:
   - amir.ns.cloudflare.com.
   - cass.ns.cloudflare.com.
 - ns:
