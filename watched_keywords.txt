@@ -35467,3 +35467,4 @@
 1641892084	tripleee	(?-i:^Ravi Kiran$)
 1641892668	tripleee	zencreating(?# fiverr)
 1641894686	tripleee	tplinkwifi-net\.info
+1641896180	tripleee	kbnetgearrouter\.net
