@@ -502,6 +502,9 @@ items:
   - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
+  - coleman.ns.cloudflare.com.
+  - izabella.ns.cloudflare.com.
+- ns:
   - cortney.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
