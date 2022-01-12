@@ -35506,3 +35506,4 @@
 1641995909	cigien	adfree\.world
 1641999492	cigien	deepak1kamalta(?:@gmail\.com)?
 1642002939	cigien	patrickdomingues\.com
+1642002997	cigien	frenchclick\.com
