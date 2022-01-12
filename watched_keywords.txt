@@ -35493,3 +35493,4 @@
 1641969856	tripleee	hircana\.com
 1641971174	tripleee	(?-i:^hircana$)
 1641973243	tripleee	thashreefhere\.com
+1641974817	tripleee	education[\W_]*+digest[\W_]*+online
