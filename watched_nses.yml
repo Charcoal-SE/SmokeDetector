@@ -1281,6 +1281,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - nina.ns.cloudflare.com.
+  - sterling.ns.cloudflare.com.
+- ns:
   - norm.ns.cloudflare.com.
   - olga.ns.cloudflare.com.
 - ns:
