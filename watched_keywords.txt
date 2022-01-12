@@ -35499,3 +35499,4 @@
 1641982948	tripleee	digiadzo\.com
 1641982996	tripleee	digi[\W_]*+adzo(?!\.com(?<=digiadzo\.com))
 1641984508	tripleee	pizzastone\.co
+1641986118	tripleee	nadracardcentre\.co\.uk
