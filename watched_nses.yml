@@ -768,6 +768,9 @@ items:
   - gerald.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
+  - gigi.ns.cloudflare.com.
+  - sterling.ns.cloudflare.com.
+- ns:
   - gina.ns.cloudflare.com.
   - james.ns.cloudflare.com.
 - ns:
