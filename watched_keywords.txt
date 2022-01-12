@@ -35491,3 +35491,4 @@
 1641966463	tripleee	alexaechosetup\.com
 1641967806	Ryan M	windowspasswordkey\.com
 1641969856	tripleee	hircana\.com
+1641971174	tripleee	(?-i:^hircana$)
