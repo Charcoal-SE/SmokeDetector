@@ -35498,3 +35498,4 @@
 1641977457	tripleee	markwilliams\.ae
 1641977724	tripleee	/report/global-
 1641982948	tripleee	digiadzo\.com
+1641982996	tripleee	digi[\W_]*+adzo(?!\.com(?<=digiadzo\.com))
