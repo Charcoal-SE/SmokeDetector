@@ -35511,3 +35511,4 @@
 1642015037	Makyen	newmobileapp3(?:@gmail\.com)?
 1642015760	Makyen	zelle(?=.{1,40}customer)(?=.{1,40}service)
 1642020545	cigien	tommypet\.com
+1642022983	cigien	nick-name-generator\.com
