@@ -555,3 +555,4 @@ williamriver
 (?-i:^Ciel2333$)
 (?-i:^codecraftcrew$)
 (?-i:^Ecsion Inc$)
+(?-i:^cosmocrat12$)
