@@ -35497,3 +35497,4 @@
 1641975099	tripleee	host[\W_]*+net[\W_]*+india(?:[\W_]*+com)?
 1641977457	tripleee	markwilliams\.ae
 1641977724	tripleee	/report/global-
+1641982948	tripleee	digiadzo\.com
