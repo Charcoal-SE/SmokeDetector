@@ -4388,3 +4388,4 @@ dependency-detector\.com
 inwizards\.com
 reelit\.io
 scriptscomplete\.com
+cosmocratsoftwares\.com
