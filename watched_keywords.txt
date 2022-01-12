@@ -15003,7 +15003,6 @@
 1577691613	Makyen	duxdatarecovery\.com
 1577692184	Makyen	ketotrim800\.hateblo\.jp
 1577692708	tripleee	(?-i:^webinfotech solutions$)
-1577696858	Makyen	iskconbangalore\.org
 1577700733	Makyen	onlineconvertsite\.com
 1577700747	Makyen	1659130248(?:@qq\.com)
 1577700766	Makyen	(?-i:CDrp6pu_LvU)(?#YouTube)
