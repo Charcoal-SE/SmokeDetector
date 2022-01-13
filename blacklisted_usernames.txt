@@ -557,3 +557,4 @@ williamriver
 (?-i:^Ecsion Inc$)
 (?-i:^cosmocrat12$)
 (?-i:^Phyllis Reyes$)
+(?-i:^Logicspice Software$)
