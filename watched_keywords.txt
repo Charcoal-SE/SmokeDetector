@@ -35531,3 +35531,4 @@
 1642075673	tripleee	dhani(?# temporary for credit card scammer)
 1642077738	tripleee	ironcad\.academy
 1642079752	tripleee	(?-i:^JackWhite$)
+1642081719	Ryan M	newsletterglue\.com
