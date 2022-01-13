@@ -35527,3 +35527,4 @@
 1642073340	tripleee	imarcgroup\.com
 1642073775	tripleee	americanforeversecurity\.com
 1642073957	tripleee	/request-sample/d+
+1642074208	tripleee	visa[\W_]*+simple(?!\.com(?<=visasimple\.com))
