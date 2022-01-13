@@ -35518,3 +35518,4 @@
 1642034139	Makyen	luca[\W_]*+friends[\W_]*+move[\W_]*+learn[\W_]*+play
 1642034153	Makyen	id1599675900
 1642039880	Ryan M	logistikexpress\.id
+1642041332	Ryan M	manikandankvpbca\.blogspot
