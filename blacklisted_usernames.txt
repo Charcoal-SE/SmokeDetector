@@ -558,3 +558,4 @@ williamriver
 (?-i:^cosmocrat12$)
 (?-i:^Phyllis Reyes$)
 (?-i:^Logicspice Software$)
+(?-i:^Imalent Flashlight$)
