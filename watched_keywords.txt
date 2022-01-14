@@ -35556,3 +35556,4 @@
 1642163315	tripleee	digitalnewshut\.com
 1642174245	cigien	(?-i:iFq2iFNmtf0)(?#youtube)
 1642178398	cigien	galaxygate\.net
+1642178412	cigien	u\.pgamerx\.com
