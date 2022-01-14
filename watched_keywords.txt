@@ -35546,3 +35546,4 @@
 1642140791	tripleee	(?-i:^hafeez$)
 1642142017	tripleee	picoworkers\.com
 1642144689	tripleee	mobiloitte(?!\.com)
+1642146196	tripleee	carbikemovers\.com
