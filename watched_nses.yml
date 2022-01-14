@@ -793,6 +793,9 @@ items:
   - quentin.ns.cloudflare.com.
 - ns:
   - grace.ns.cloudflare.com.
+  - patryk.ns.cloudflare.com.
+- ns:
+  - grace.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
   - graham.ns.cloudflare.com.
