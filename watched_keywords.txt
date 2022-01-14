@@ -35541,3 +35541,4 @@
 1642139830	tripleee	qwikaid(?!\.com)
 1642139889	tripleee	66corridor\.org
 1642140029	tripleee	landmarkimmigration\.com
+1642140052	tripleee	landmark[\W_]*+immigration(?!\.com(?<=landmarkimmigration\.com))
