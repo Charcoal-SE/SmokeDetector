@@ -28637,7 +28637,6 @@
 1619781271	Jeff Schaller	gigacars\.com
 1619781504	Jeff Schaller	elkharttrees\.com
 1619781572	Jeff Schaller	24inside\.com
-1619787852	Spevacus	antenchem\.com
 1619791998	Yatin	usimmigrationlawyer\.co\.uk
 1619794274	Spevacus	bitmix\.biz
 1619800337	Mast	(?-i:9zG4oY)(?# fiverr)
