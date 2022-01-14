@@ -35542,3 +35542,4 @@
 1642139889	tripleee	66corridor\.org
 1642140029	tripleee	landmarkimmigration\.com
 1642140052	tripleee	landmark[\W_]*+immigration(?!\.com(?<=landmarkimmigration\.com))
+1642140720	tripleee	(?-i:^Arnold Miller$)
