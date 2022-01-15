@@ -15910,7 +15910,6 @@
 1579758003	Makyen	kenken3d\.hatenablog\.com
 1579758032	Makyen	true[\W_]*+source[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579758909	tripleee	maheshtechnicals\.com
-1579759011	tripleee	onlinegenericmedicine\.com
 1579759138	tripleee	theeyefoundation\.com
 1579759249	Makyen	(?-i:bVt2S\.jpg)
 1579759725	tripleee	getantivirus\.info
