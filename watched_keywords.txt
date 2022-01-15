@@ -11505,7 +11505,6 @@
 1566243479	Machavity	qqcasa\.com
 1566258661	Machavity	potbd\.com
 1566263599	Makyen	allpcb\.com
-1566269217	Machavity	(?-i:^jitendra kumar$)
 1566300272	Shree	matargashti\.co\.in
 1566300310	Shree	calculatorall\.com
 1566303783	Shree	camisetasfutboleses\.com
