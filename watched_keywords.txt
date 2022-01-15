@@ -35572,3 +35572,4 @@
 1642254426	cigien	aprofikhv(?:@gmail\.com)?
 1642256877	Makyen	panoramacharter\.ltd
 1642260233	Makyen	(?:info\.)?prudentrecovery(?:@gmail\.com)?
+1642262105	Makyen	codeberg\.org
