@@ -35580,3 +35580,4 @@
 1642282276	Makyen	recover[\W_]*+your[\W_]*+cryptocurrency[\W_]*+coins[\W_]*+and[\W_]*+tokens[\W_]*+1468558985244192768(?#upwork.com)
 1642285325	Makyen	whitedeserthome\.com
 1642288100	cigien	noorcracks\.com
+1642289001	cigien	jamilhallal\.blogspot
