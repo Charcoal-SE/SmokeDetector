@@ -25202,7 +25202,6 @@
 1609204594	cigien	africastalking\.com
 1609230880	tripleee	appdevelopmenttexas\.net
 1609235534	Ryan M	^(?-i:Pe Pl)$
-1609238063	tripleee	clickspeeder\.com
 1609239488	Ryan M	9jabeatz\.com
 1609243024	tripleee	airprint\.us
 1609255163	Spevacus	dinhcongcanh272(?:@gmail\.com)?
