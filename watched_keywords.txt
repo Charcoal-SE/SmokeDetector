@@ -35581,5 +35581,4 @@
 1642285325	Makyen	whitedeserthome\.com
 1642288100	cigien	noorcracks\.com
 1642289001	cigien	jamilhallal\.blogspot
-1642291011	cigien	mercimonamidressing\.ca
 1642292565	Makyen	summitrecoup(?:[\W_]*+dtcm)?
