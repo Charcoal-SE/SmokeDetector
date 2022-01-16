@@ -35587,3 +35587,4 @@
 1642332202	cigien	cheapammorounds\.com
 1642332226	cigien	(?-i:FNuS8n9zZDo)(?#youtube)
 1642332264	cigien	softitcare\.com
+1642332324	cigien	soft[\W_]*+it[\W_]*+care(?!\.com(?<=softitcare\.com))
