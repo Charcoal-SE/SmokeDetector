@@ -35610,3 +35610,4 @@
 1642401302	tripleee	seodiscovery\.com
 1642401321	tripleee	seo[\W_]*+discovery(?!\.com(?<=seodiscovery\.com))
 1642401336	tripleee	digital[\W_]*+discovery[\W_]*+institute
+1642401910	tripleee	(?-i:^Sophia Philips$)
