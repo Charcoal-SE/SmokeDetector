@@ -211,6 +211,9 @@ items:
   - max.ns.cloudflare.com.
 - ns:
   - ara.ns.cloudflare.com.
+  - jobs.ns.cloudflare.com.
+- ns:
+  - ara.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
   - ara.ns.cloudflare.com.
