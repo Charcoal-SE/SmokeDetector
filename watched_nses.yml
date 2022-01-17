@@ -1295,6 +1295,9 @@ items:
   - morgan.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - morgan.ns.cloudflare.com.
+  - raquel.ns.cloudflare.com.
+- ns:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
