@@ -914,6 +914,9 @@ items:
   - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
+  - jacob.ns.cloudflare.com.
+  - lorba.ns.cloudflare.com.
+- ns:
   - jacqueline.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
 - ns:
