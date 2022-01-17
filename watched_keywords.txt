@@ -35617,3 +35617,4 @@
 1642412048	tripleee	(?-i:CkH3ohlKaCs)(?# youtube)
 1642412615	tripleee	armiet\.in
 1642412633	tripleee	armiet(?!\.in)
+1642413681	tripleee	yarakenterprises\.net
