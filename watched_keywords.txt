@@ -35630,3 +35630,4 @@
 1642423189	tripleee	vegetarianorvegan\.com
 1642423204	tripleee	gtd-review\.com
 1642425850	tripleee	pystackcode\.com
+1642427103	cigien	d(?:octo)?r[\W_]*+brian[\W_]*+nantais
