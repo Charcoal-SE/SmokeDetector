@@ -35665,3 +35665,4 @@
 1642497764	tripleee	packersmoversinbangalore\.co\.in
 1642499286	Mithical	altezatel\.com
 1642499585	tripleee	alteza
+1642499790	tripleee	techydeed\.com
