@@ -35655,3 +35655,4 @@
 1642484965	Makyen	marketplace-help\.com
 1642486534	tripleee	twinklestar
 1642486559	tripleee	leave[\W_]*+management[\W_]*+software
+1642487042	tripleee	(?-i:^thinklekrish$)
