@@ -35660,3 +35660,4 @@
 1642493721	tripleee	bahisnora\.com
 1642494374	Ryan M	kriptopay
 1642494390	Ryan M	payfix
+1642495229	tripleee	casino(?<=\A.{1,20}casino)(?=.{1,20}\Z)(?# target user name or coinicidentally really short titles or bodies)
