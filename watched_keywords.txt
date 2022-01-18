@@ -35657,3 +35657,4 @@
 1642486559	tripleee	leave[\W_]*+management[\W_]*+software
 1642487042	tripleee	(?-i:^thinklekrish$)
 1642490121	Makyen	goldcraftstudio\.com
+1642490961	Makyen	keepsakes\.cn
