@@ -35674,3 +35674,4 @@
 1642504908	tripleee	(?-i:^Abhijeet$)
 1642505970	tripleee	skillsion\.com
 1642507752	tripleee	911gear\.ca
+1642507781	tripleee	911[\W_]*gear(?!\.ca(?<=911gear\.ca))
