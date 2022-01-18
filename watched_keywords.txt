@@ -35680,3 +35680,4 @@
 1642511900	cigien	mlich\.zam\.slu\.cz
 1642512656	cigien	derbylimos\.co\.uk
 1642513059	cigien	ddi-dev\.com
+1642515208	tripleee	(?-i:^jack harpar$)
