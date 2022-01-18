@@ -35676,3 +35676,4 @@
 1642507752	tripleee	911gear\.ca
 1642507781	tripleee	911[\W_]*gear(?!\.ca(?<=911gear\.ca))
 1642508001	tripleee	remoteface\.com
+1642511103	tripleee	aranyani\.com
