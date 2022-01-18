@@ -35656,3 +35656,4 @@
 1642486534	tripleee	twinklestar
 1642486559	tripleee	leave[\W_]*+management[\W_]*+software
 1642487042	tripleee	(?-i:^thinklekrish$)
+1642490121	Makyen	goldcraftstudio\.com
