@@ -35658,3 +35658,4 @@
 1642487042	tripleee	(?-i:^thinklekrish$)
 1642490121	Makyen	goldcraftstudio\.com
 1642490961	Makyen	keepsakes\.cn
+1642493326	Makyen	technomentdigital\.com
