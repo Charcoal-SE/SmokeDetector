@@ -35670,3 +35670,4 @@
 1642501931	tripleee	emrassist\.com
 1642502193	tripleee	(?-i:^John Addi$)
 1642502879	tripleee	walacor\.com
+1642502896	tripleee	walacor(?!\.com)
