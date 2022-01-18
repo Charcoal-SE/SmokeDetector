@@ -2557,3 +2557,4 @@ mrs[\W_]*+debra[\W_]*+sabina
 jimfundsrecovery
 i'm[\W_]*+mr\.green[\W_]*+gold[\W_]*+and[\W_]*+i'm[\W_]*+average[\W_]*+joe
 metronet[\W_]*+credit[\W_]*+solution
+chase[\W_]*+bank[\W_]*+.{0,20}\b(?:phone|number|service|customer)
