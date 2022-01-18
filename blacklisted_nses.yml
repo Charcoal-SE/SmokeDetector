@@ -83,6 +83,9 @@ items:
   - maria.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
+  - mona.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
+- ns:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
