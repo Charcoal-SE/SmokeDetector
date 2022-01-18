@@ -35673,3 +35673,4 @@
 1642502896	tripleee	walacor(?!\.com)
 1642504908	tripleee	(?-i:^Abhijeet$)
 1642505970	tripleee	skillsion\.com
+1642507752	tripleee	911gear\.ca
