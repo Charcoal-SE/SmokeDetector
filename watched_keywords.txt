@@ -35661,3 +35661,4 @@
 1642493721	tripleee	bahisnora\.com
 1642494374	Ryan M	kriptopay
 1642494390	Ryan M	payfix
+1642494646	tripleee	\A.*\bcasino\b.*\Z(?# watch casino in user name)
