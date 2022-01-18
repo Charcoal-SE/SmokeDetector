@@ -35654,3 +35654,4 @@
 1642483806	Makyen	realescortslahore\.com
 1642484965	Makyen	marketplace-help\.com
 1642486534	tripleee	twinklestar
+1642486559	tripleee	leave[\W_]*+management[\W_]*+software
