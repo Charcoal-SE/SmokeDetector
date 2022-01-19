@@ -35703,3 +35703,4 @@
 1642585613	tripleee	aakash[\W_]*+byju
 1642586009	tripleee	(?-i:^cloehanson$)
 1642587546	Ryan M	bitminerscenter\.com
+1642589389	cigien	thetooth\.io
