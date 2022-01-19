@@ -35710,3 +35710,4 @@
 1642599336	tripleee	prflare\.com
 1642599739	tripleee	bearproof\.io
 1642599754	tripleee	bearproof(?!\.io)
+1642600095	tripleee	prflare(?!\.com)
