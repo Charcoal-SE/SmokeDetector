@@ -926,9 +926,6 @@ items:
   - jade.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
-  - jake.ns.cloudflare.com.
-  - sofia.ns.cloudflare.com.
-- ns:
   - james.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
