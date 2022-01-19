@@ -752,6 +752,9 @@ items:
   - eva.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
+  - eve.ns.cloudflare.com.
+  - jimmy.ns.cloudflare.com.
+- ns:
   - everton.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
