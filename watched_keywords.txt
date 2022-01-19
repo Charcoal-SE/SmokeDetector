@@ -35690,3 +35690,4 @@
 1642571331	tripleee	(?-i:^Jay Proff$)
 1642572501	tripleee	dumpspool\.com
 1642573905	tripleee	mcube\d*
+1642575850	tripleee	(?-i:3nFYxAu)(?# bit.ly)
