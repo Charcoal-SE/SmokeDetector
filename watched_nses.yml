@@ -957,6 +957,9 @@ items:
   - pam.ns.cloudflare.com.
 - ns:
   - jeff.ns.cloudflare.com.
+  - sara.ns.cloudflare.com.
+- ns:
+  - jeff.ns.cloudflare.com.
   - venus.ns.cloudflare.com.
 - ns:
   - jeremy.ns.cloudflare.com.
