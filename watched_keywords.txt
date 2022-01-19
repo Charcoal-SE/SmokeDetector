@@ -35687,3 +35687,4 @@
 1642533702	Mast	1-800-Walgreens
 1642562451	cigien	apikay\.com
 1642567772	cigien	kashicloud\.com
+1642571331	tripleee	(?-i:^Jay Proff$)
