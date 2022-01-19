@@ -1172,6 +1172,9 @@ items:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
+  - liz.ns.cloudflare.com.
+  - ram.ns.cloudflare.com.
+- ns:
   - lloyd.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
