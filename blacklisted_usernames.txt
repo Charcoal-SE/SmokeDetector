@@ -560,3 +560,4 @@ williamriver
 (?-i:^Logicspice Software$)
 (?-i:^Imalent Flashlight$)
 Devil_Ace
+(?-i:^Nikunj Shingala$)
