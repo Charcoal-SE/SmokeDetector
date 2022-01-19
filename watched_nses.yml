@@ -532,6 +532,9 @@ items:
   - jean.ns.cloudflare.com.
 - ns:
   - dahlia.ns.cloudflare.com.
+  - mack.ns.cloudflare.com.
+- ns:
+  - dahlia.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - damon.ns.cloudflare.com.
