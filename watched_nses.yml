@@ -1854,6 +1854,12 @@ items:
   - ns-1920.awsdns-48.co.uk.
   - ns-841.awsdns-41.net.
 - ns:
+  - mn.co.
+  - ns-1048.awsdns-03.org.
+  - ns-134.awsdns-16.com.
+  - ns-2033.awsdns-62.co.uk.
+  - ns-928.awsdns-52.net.
+- ns:
   - ns-106.awsdns-13.com.
   - ns-1309.awsdns-35.org.
   - ns-1936.awsdns-50.co.uk.
