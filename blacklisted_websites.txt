@@ -4400,3 +4400,4 @@ onlineairlinesbooking\.com
 windsor\.ai
 primejackets\.com
 koyowater\.com
+company(?<=\.company)\.site
