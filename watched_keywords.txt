@@ -35748,3 +35748,4 @@
 1642690371	cigien	topmostblog\.com
 1642692306	Makyen	sailpoint[\W_]*+training
 1642692837	Makyen	meditationdefine\.com
+1642692864	Makyen	meditation[\W_]*+define(?!\.com(?<=meditationdefine\.com))
