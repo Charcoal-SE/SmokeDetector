@@ -35726,3 +35726,4 @@
 1642656913	tripleee	kameymall\.com
 1642658688	Ryan M	bestarticlelist\.com
 1642659127	tripleee	hah2\.co\.uk
+1642659209	tripleee	(?-i:^Jhonth Smith$)
