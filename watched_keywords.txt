@@ -35740,3 +35740,4 @@
 1642676480	Mast	onwayassociation\.mn\.co
 1642676566	tripleee	mn\.co(?<=\.mn\.co)/
 1642678526	Ryan M	infinityfolder\.com
+1642679159	Ryan M	pacificworldschool\.com
