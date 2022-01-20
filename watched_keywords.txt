@@ -35756,3 +35756,4 @@
 1642692998	Makyen	1329074690102136849(?#minds.com)
 1642693511	Makyen	94\.237\.2\.71
 1642693544	Makyen	mpomaxwin\.com
+1642693574	Makyen	mpomaxwin(?!\.com)
