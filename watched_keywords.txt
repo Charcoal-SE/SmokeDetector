@@ -35758,3 +35758,4 @@
 1642693544	Makyen	mpomaxwin\.com
 1642693574	Makyen	mpomaxwin(?!\.com)
 1642693930	Makyen	dichvudidong\.vn
+1642695872	cigien	ecomitize\.com
