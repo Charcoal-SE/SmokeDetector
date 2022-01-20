@@ -28340,7 +28340,6 @@
 1618882124	cigien	yasushiuzawa(?:@yahoo\.co\.uk)?
 1618882819	cigien	roofscool\.com
 1618882837	cigien	shahidbrothers\.com
-1618888551	Makyen	koyowater(?!\.com)
 1618888566	Makyen	koyo[\W_]*+juice[\W_]*+sachet[\W_]*+produce[\W_]*+line
 1618891471	Ryan M	zilo\.app
 1618892373	Makyen	(?-i:Y13vQ)(?#zilo.app)
