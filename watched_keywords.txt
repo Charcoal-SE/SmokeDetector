@@ -35721,3 +35721,4 @@
 1642642241	cigien	topessayeditors\.com
 1642644623	cigien	thienmochuong\.com
 1642645701	Makyen	nhangtram(?:huong(?:caocap)?)?
+1642645718	Makyen	(?:nhangtram)?thienmochuong(?!\.com(?<=\bthienmochuong))
