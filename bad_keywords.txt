@@ -2559,3 +2559,4 @@ i'm[\W_]*+mr\.green[\W_]*+gold[\W_]*+and[\W_]*+i'm[\W_]*+average[\W_]*+joe
 metronet[\W_]*+credit[\W_]*+solution
 chase(?!\.com/)(?:[\W_]*+:bank)?.{0,20}(?:[\W_]*+(?:phone|number|service|customer)){2,}
 koyowater(?!\.com)(?!$(?<=(?-i:^koyowater$)))
+hacktech101[\W_]*+(?:at[\W_]*+)?webname[\W_]*+(?:dot[\W_]*+)?com
