@@ -719,6 +719,9 @@ items:
   - elsa.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - emma.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
   - eoin.ns.cloudflare.com.
   - joselyn.ns.cloudflare.com.
 - ns:
