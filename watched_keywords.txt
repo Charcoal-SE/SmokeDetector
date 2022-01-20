@@ -35737,3 +35737,4 @@
 1642672504	Ryan M	embednotion\.com
 1642673255	tripleee	beautyfly\.pk
 1642673272	tripleee	beautyfly(?!\.pk)
+1642676480	Mast	onwayassociation\.mn\.co
