@@ -35030,7 +35030,6 @@
 1640533773	Makyen	100076306299235(?#URL value)
 1640533796	Makyen	(?:17129694-)?jun88tv
 1640554838	cigien	thecodeteacher\.com
-1640567248	cigien	hacktech101(?:[\W_]*+(?:at[\W_]*+)?webname(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1640574144	Spevacus	megapsychedelics\.de
 1640575862	cigien	firmwarehacks(?:@gmail\.com)?
 1640575978	cigien	cjlift\.com
