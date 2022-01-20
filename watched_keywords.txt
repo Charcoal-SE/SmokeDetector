@@ -35739,3 +35739,4 @@
 1642673272	tripleee	beautyfly(?!\.pk)
 1642676480	Mast	onwayassociation\.mn\.co
 1642676566	tripleee	mn\.co(?<=\.mn\.co)/
+1642678526	Ryan M	infinityfolder\.com
