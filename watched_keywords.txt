@@ -35722,3 +35722,4 @@
 1642645701	Makyen	nhangtram(?:huong(?:caocap)?)?
 1642645718	Makyen	(?:nhangtram)?thienmochuong(?!\.com(?<=\bthienmochuong))
 1642655599	cigien	abkdigital\.com
+1642655617	cigien	scrylearning\.com
