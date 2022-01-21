@@ -2069,3 +2069,8 @@ items:
 - ns: freshersjob.in.
 - ns: krystal.uk.
 - ns: techsolit.com.
+- ns:
+  - ns1045.ui-dns.biz.
+  - ns1045.ui-dns.com.
+  - ns1045.ui-dns.de.
+  - ns1045.ui-dns.org.
