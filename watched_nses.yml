@@ -1355,6 +1355,9 @@ items:
   - rose.ns.cloudflare.com.
   - yew.ns.cloudflare.com.
 - ns:
+  - rustam.ns.cloudflare.com.
+  - susan.ns.cloudflare.com.
+- ns:
   - ruth.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
