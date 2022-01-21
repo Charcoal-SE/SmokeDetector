@@ -35797,3 +35797,4 @@
 1642769708	cigien	vanitygen\.online
 1642769758	cigien	fastblockchain\.xyz
 1642769781	tripleee	diarmidmackenzie\.github\.io
+1642770368	cigien	organic[\W_]*+health[\W_]*+planet(?!\.com(?<=organichealthplanet\.com))
