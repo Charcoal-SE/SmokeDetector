@@ -1537,6 +1537,11 @@ items:
 - ns:
   - ns8541.hostgator.com.
   - ns8542.hostgator.com.
+- ns: cp-in-18.hostgatorwebservers.com.
+- ns: md-in-80.hostgatorwebservers.com.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: gohostgator.com.
 - ns: hostspicy.com.
 - ns: ewebguru.com.
 - ns: dnsowl.com.
@@ -1652,9 +1657,6 @@ items:
   ns: aakibuki.com.
 - ns: cloudhostdns.net.
 - ns: elsner.com.
-- comment: no longer resolves 2020-08-27
-  disable: true
-  ns: gohostgator.com.
 - ns: webnode.com.
 - ns: printdns.com.
 - ns: websiteserverbox.com.
@@ -1949,7 +1951,6 @@ items:
 - ns: symbolhost.com.
 - ns: w2iserver.com.
 - ns: weblink.in.
-- ns: cp-in-18.hostgatorwebservers.com.
 - ns:
   - ns61.worldnic.com.
   - ns62.worldnic.com.
