@@ -563,3 +563,4 @@ Devil_Ace
 (?-i:^Nikunj Shingala$)
 (?-i:^koyowater$)
 (?-i:^mcube56$)
+(?-i:^Javeria Gauhar$)
