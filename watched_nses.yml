@@ -1539,7 +1539,9 @@ items:
   - ns8542.hostgator.com.
 - ns: cp-in-18.hostgatorwebservers.com.
 - ns: md-ht-7.hostgatorwebservers.com.
-- ns: md-in-65.hostgatorwebservers.com.
+- ns:
+  - ns1.md-in-65.hostgatorwebservers.com.
+  - ns2.md-in-65.hostgatorwebservers.com.
 - ns: md-in-80.hostgatorwebservers.com.
 - comment: no longer resolves 2020-08-27
   disable: true
