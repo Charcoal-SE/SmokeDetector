@@ -29789,7 +29789,6 @@
 1623319766	double-beep	asiliwellness\.cerule\.com
 1623322415	tripleee	tplinkkasa\.us
 1623324558	double-beep	medstudies\.in
-1623327184	Xnero	saadahsan\.com
 1623327442	Cody Gray	addmecart\.com
 1623327553	Cody Gray	refurbished[\W_]*+(?:jio[\W_]*+)*router
 1623333477	Spevacus	contentwriting\.us
