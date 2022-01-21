@@ -35799,3 +35799,4 @@
 1642770368	cigien	organic[\W_]*+health[\W_]*+planet(?!\.com(?<=organichealthplanet\.com))
 1642774781	cigien	pondesk\.com
 1642775194	cigien	cbspschanderi\.blogspot
+1642776122	cigien	digitaldescribe\.com
