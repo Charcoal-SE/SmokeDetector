@@ -4402,3 +4402,4 @@ primejackets\.com
 koyowater\.com
 company(?<=\.company)\.site
 saadahsan\.com
+megebyte\.com
