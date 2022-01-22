@@ -35823,3 +35823,4 @@
 1642861767	Makyen	debate\.org(?#phucanhinata; may be bystander)
 1642861789	Makyen	hwbot\.org(?#phucanhinata; may be bystander)
 1642861807	Makyen	pastelink\.net(?#phucanhinata; may be bystander)
+1642861826	cigien	apkstick\.com
