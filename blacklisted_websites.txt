@@ -4403,3 +4403,4 @@ koyowater\.com
 company(?<=\.company)\.site
 saadahsan\.com
 megebyte\.com
+clippingcreationsindia\.com
