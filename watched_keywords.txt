@@ -35828,3 +35828,4 @@
 1642861873	Makyen	novcanaoaza\.com
 1642861919	Makyen	(?-i:QBWvsx_mXpw)(?#YouTube)
 1642861999	cigien	blog\.lazyhacker\.com
+1642871339	Makyen	wordpressfirst\.blogspot
