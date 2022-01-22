@@ -35806,3 +35806,4 @@
 1642798622	cigien	apkcurrent\.com
 1642814815	Makyen	salasbanesa11(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1642821104	cigien	itsmeit\.net
+1642824110	cigien	medicscales\.com
