@@ -35844,3 +35844,4 @@
 1642921405	Makyen	unlocking4u\.com
 1642921421	Makyen	superunlockcodes\.com
 1642928494	Makyen	gmediagroup\.ca
+1642928515	Makyen	g[\W_]*+media[\W_]*+group(?!\.ca(?<=gmediagroup\.ca))
