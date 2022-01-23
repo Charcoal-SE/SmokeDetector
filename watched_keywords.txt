@@ -35846,3 +35846,4 @@
 1642928494	Makyen	gmediagroup\.ca
 1642928515	Makyen	g[\W_]*+media[\W_]*+group(?!\.ca(?<=gmediagroup\.ca))
 1642947788	cigien	zoommantra(?#bit.ly)
+1642948071	cigien	atteweb3\.com
