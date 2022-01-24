@@ -35876,3 +35876,4 @@
 1643033356	cigien	jotjpn\.com
 1643033797	cigien	rozarraz(?:@gmail\.com)?
 1643034263	cigien	kwikbox(?!\.in)
+1643035401	cigien	australianwritings\.net
