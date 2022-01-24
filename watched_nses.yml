@@ -567,6 +567,9 @@ items:
   - dana.ns.cloudflare.com.
   - ray.ns.cloudflare.com.
 - ns:
+  - dana.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
+- ns:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
