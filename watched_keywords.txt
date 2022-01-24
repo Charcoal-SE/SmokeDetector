@@ -35851,3 +35851,4 @@
 1642991570	Makyen	(?-i:^aniccc+$)
 1642997538	cigien	startupnirvana\.com
 1642999475	cigien	hackingtruth\.in
+1642999491	cigien	kumaratuljaiswal\.in
