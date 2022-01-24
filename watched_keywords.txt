@@ -35883,3 +35883,4 @@
 1643040946	Makyen	(?-i:SocialGiftBot)(?#t.me)
 1643040967	Makyen	679493082(?#t.me URL parameter)
 1643042415	tripleee	resolvescience\.com
+1643044143	Ollie	cryptomarketnews\.wixsite\.com
