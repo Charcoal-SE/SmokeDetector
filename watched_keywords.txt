@@ -35874,3 +35874,4 @@
 1643032684	Jeff Schaller	seovip\.edu\.vn
 1643032709	tripleee	DaoTaoDigitalMarketingDaNang(?# facebook)
 1643033356	cigien	jotjpn\.com
+1643033797	cigien	rozarraz(?:@gmail\.com)?
