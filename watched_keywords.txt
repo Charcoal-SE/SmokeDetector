@@ -35879,7 +35879,6 @@
 1643037912	cigien	(?-i:75sQqoaYdUU)(?#youtube)
 1643038217	cigien	(?-i:KH2kz4cXKCo)(?#youtube)
 1643039063	cigien	textrics\.ai
-1643039584	cigien	in\.messer-cutting\.com
 1643040946	Makyen	(?-i:SocialGiftBot)(?#t.me)
 1643040967	Makyen	679493082(?#t.me URL parameter)
 1643042415	tripleee	resolvescience\.com
