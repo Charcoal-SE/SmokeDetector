@@ -35882,3 +35882,4 @@
 1643039063	cigien	textrics\.ai
 1643039584	cigien	in\.messer-cutting\.com
 1643040946	Makyen	(?-i:SocialGiftBot)(?#t.me)
+1643040967	Makyen	679493082(?#t.me URL parameter)
