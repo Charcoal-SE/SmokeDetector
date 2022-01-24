@@ -35857,3 +35857,4 @@
 1643003376	cigien	folksit\.com
 1643003430	cigien	thefarmsoho\.com
 1643009274	tripleee	brandingicon\.blogspot
+1643010275	tripleee	(?-i:^Hugh Davenport$)
