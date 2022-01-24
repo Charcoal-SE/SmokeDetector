@@ -35887,3 +35887,4 @@
 1643045212	Ollie	ticketmastercontact\.odoo\.com
 1643046192	cigien	messer-cutting\.com
 1643052102	tripleee	(?-i:SyHpz2pd--Q)
+1643066187	cigien	the[\W_]*+farm[\W_]*+soho(?!\.com(?<=thefarmsoho\.com))
