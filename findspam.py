@@ -66,7 +66,7 @@ SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serv
 WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
-    r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org"
+    r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org", "regexr"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for site in (
     '0i.is', '1b.yt', '1th.me', '92q.com', '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co',
@@ -867,8 +867,12 @@ def has_repeating_characters(s, site):
     "gaming.stackexchange.com", "arduino.stackexchange.com", "workplace.stackexchange.com"])
 def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
-    match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
-                          r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)(?=</a>\s*$)").search(s)
+    match = regex.compile(
+        r"(?i)https?://(?:"
+        "" r"[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|"
+        "" r"plus\.google\.com/[\w/]*|"
+        "" r"www\.pinterest\.com/pin/[\d/]*|"
+        r")(?=</a>\s*$)").search(s)
     if match and not is_whitelisted_website(match.group(0)):
         return True, u"Link at end: {}".format(match.group(0))
     return False, ""
@@ -2680,11 +2684,15 @@ create_rule("potentially bad keyword in {}",
             max_rep=93, max_score=1)
 # Link at beginning of post; pulled from watchlist
 create_rule("link at beginning of {}",
-            r'(?is)^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium'
-            r'|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example'
-            r'|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
-            r'|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal'
-            r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
+            r'(?is)^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:'
+            '' r'quora|medium|googleusercontent|youtube|microsoft|unity3d|'
+            '' r'wso|merriam-webster|oracle|magento|example|apple|google|'
+            '' r'github|imgur|'
+            '' r'stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|'
+            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|'
+            r'github\.io|youtu\.be|edu|'
+            r'(?:(?:arxiv|drupal|python|isc|khronos|mongodb|open-std|dartlang|'
+            '' r'apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
             r'[/\"])[^"]*+"(?![\W\w]*?</(?:code|blockquote)>)',
             title=False, username=False, body=True,
             max_rep=32, max_score=1)
