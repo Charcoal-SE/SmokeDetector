@@ -35910,3 +35910,4 @@
 1643119466	cigien	teck[\W_]*+life[\W_]*+innovations(?!\.com(?<=tecklifeinnovations\.com))
 1643119882	cigien	DONARLDJACKSONCYBERHOST
 1643120315	cigien	themedicalbilling\.net
+1643122712	Spevacus	gamstopbookmakers\.com
