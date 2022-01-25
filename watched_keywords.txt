@@ -35898,3 +35898,4 @@
 1643092269	tripleee	polypak\.com
 1643094108	tripleee	digitalworldgiant\.com
 1643096680	tripleee	com\.ml\.freedogecoin
+1643096927	tripleee	mydimmerswitch\.com
