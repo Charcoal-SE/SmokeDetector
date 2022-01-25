@@ -35915,3 +35915,4 @@
 1643125611	Makyen	mama[\W_]*+bashirah
 1643127070	Spevacus	crackedfine\.co
 1643128409	tripleee	vincees\.com
+1643128441	tripleee	deeznuts\.com
