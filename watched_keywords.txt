@@ -29735,7 +29735,6 @@
 1623155755	tripleee	perfectcem\.com
 1623155843	tripleee	rudraksha-ratna\.com
 1623159378	Ollie	orologilusso\.eu
-1623160458	Xnero	healthcarebeauty\.in
 1623160978	Ollie	mydresshut\.com
 1623166782	cigien	sepio[\W_]*+products(?!\.com(?<=sepioproducts\.com))
 1623166831	cigien	kingessays\.com
