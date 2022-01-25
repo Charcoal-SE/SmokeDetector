@@ -35894,3 +35894,4 @@
 1643088259	Makyen	furniture[\W_]*+movers[\W_]*+johannesburg
 1643088272	Makyen	mr[\W_]*+cheap[\W_]*+transport
 1643090283	tripleee	daraz\.com\.bd
+1643090317	tripleee	blackberryosint(?# t.me)
