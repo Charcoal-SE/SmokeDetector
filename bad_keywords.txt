@@ -2561,3 +2561,4 @@ chase(?!\.com/)(?:[\W_]*+:bank)?.{0,20}(?:[\W_]*+(?:phone|number|service|custome
 koyowater(?!\.com)(?!$(?<=(?-i:^koyowater$)))
 hacktech101(?:[\W_]*+(?:at[\W_]*+)?webname(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 m[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+y[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+0[\W_]*+0[\W_]*+1[\W_]*+(?:a[\W_]*+t[\W_]*+)?s[\W_]*+o[\W_]*+l[\W_]*+u[\W_]*+t[\W_]*+i[\W_]*+o[\W_]*+n[\W_]*+4[\W_]*+u[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?#obfuscated moneyrecovery001@solution4u.com)
+genocidegames
