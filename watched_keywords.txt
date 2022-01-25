@@ -35895,3 +35895,4 @@
 1643088272	Makyen	mr[\W_]*+cheap[\W_]*+transport
 1643090283	tripleee	daraz\.com\.bd
 1643090317	tripleee	blackberryosint(?# t.me)
+1643092269	tripleee	polypak\.com
