@@ -35891,3 +35891,4 @@
 1643076331	Makyen	generalfinanzen(?:@gmail\.com)?
 1643076374	Makyen	wbminternational(?!\.pk)
 1643079010	cigien	goblogsandarticles\.com
+1643088259	Makyen	furniture[\W_]*+movers[\W_]*+johannesburg
