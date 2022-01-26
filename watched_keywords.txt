@@ -15553,7 +15553,6 @@
 1578982014	Makyen	(?-i:OOR_o-_vYEo)(?#youtu.be)
 1578982604	tripleee	mytaxio\.com
 1578982796	tripleee	codercraz
-1578985304	tripleee	koyopacker\.com
 1578985346	tripleee	koyopacker(?!\.com)
 1578985378	tripleee	machinery[\W_]*+co[\W_]*+ltd
 1578987296	tripleee	worldgenuinedocument\.com
