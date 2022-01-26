@@ -1290,6 +1290,9 @@ items:
   - seamus.ns.cloudflare.com.
 - ns:
   - merlin.ns.cloudflare.com.
+  - mona.ns.cloudflare.com.
+- ns:
+  - merlin.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
   - merlin.ns.cloudflare.com.
