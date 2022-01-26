@@ -35922,3 +35922,4 @@
 1643152564	cigien	(?-i:unK05)(?#shrinke.me)
 1643169265	cigien	hitechcleaning\.com\.np
 1643179398	tripleee	koyopacker(?!\.com)(?<!(?-i:^koyopacker$))
+1643182725	tripleee	essaywritingservicereview1\.wordpress\.com
