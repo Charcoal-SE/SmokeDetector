@@ -566,3 +566,4 @@ Devil_Ace
 (?-i:^Javeria Gauhar$)
 (?-i:^fadil$)
 (?-i:^aeahmad$)
+(?-i:^koyopacker$)
