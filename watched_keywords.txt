@@ -35931,5 +35931,4 @@
 1643194098	tripleee	biomedical-israel\.com
 1643196097	tripleee	lawyersnjurists\.com
 1643199087	tripleee	ghestineh\.com
-1643204471	tripleee	klimarealistene\.com
 1643204878	tripleee	greenland420market\.com
