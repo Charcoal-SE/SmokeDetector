@@ -35921,4 +35921,3 @@
 1643151624	cigien	(?-i:Q9WN8R)(?#fiverr)
 1643152564	cigien	(?-i:unK05)(?#shrinke.me)
 1643169265	cigien	hitechcleaning\.com\.np
-1643179259	tripleee	koyopacker(?!\.com)(?!<=(?-i:^koyopacker$))
