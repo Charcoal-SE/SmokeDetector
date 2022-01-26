@@ -35926,3 +35926,4 @@
 1643187832	tripleee	aadhar[\W_]*+history
 1643188015	tripleee	powerfullspellscaster(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1643188089	Makyen	ojas-gujarat\.in
+1643188104	Makyen	aadhaar[\W_]*+authentication(?:[\W_]*+(?:history|\d++|[\da-f]{5,}+)s?)*
