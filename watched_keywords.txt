@@ -35145,7 +35145,6 @@
 1640861857	tripleee	armani'?s[\W_]*+jewelry(?!\.com(?<=armanisjewelry\.com))
 1640864625	tripleee	everestvacuum\.com
 1640865032	tripleee	medzpalace\.com
-1640866682	Mast	HACKINGPROFESSIONAL3
 1640872848	cigien	shopmakergenix\.blogspot
 1640873842	tripleee	(?-i:^MM0ZjUboEPk)(?# youtube)
 1640873863	tripleee	surebet
