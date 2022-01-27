@@ -35963,3 +35963,4 @@
 1643275002	Makyen	lassoa\.com
 1643275068	tripleee	d(?:octo)?r[\W_]*+joy(?<!(?-i:^Doctor Joy$))
 1643275386	tripleee	curiosum\.com
+1643276463	tripleee	alloweb\.ma
