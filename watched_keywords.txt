@@ -35977,3 +35977,4 @@
 1643295844	cigien	aguan[\W_]*+banquet(?!\.com(?<=aguanbanquet\.com))
 1643296581	cigien	maharishiuniversity\.ac\.in
 1643298082	cigien	(?-i:3EsKUKI)(?#bit.ly)
+1643299590	Mast	party[\W_]*+bus[\W_]*+rental
