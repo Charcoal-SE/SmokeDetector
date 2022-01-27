@@ -35979,3 +35979,4 @@
 1643298082	cigien	(?-i:3EsKUKI)(?#bit.ly)
 1643299590	Mast	party[\W_]*+bus[\W_]*+rental
 1643304406	Ollie	capsag\.co\.uk
+1643305860	Ollie	ksolves\.com
