@@ -2116,6 +2116,3 @@ items:
 - ns: naoservers.com.
 - ns: virtualstacks.com.
 - ns: shoviv.com.
-- ns:
-  - srv1-alloweb.ma.
-  - srv2-alloweb.ma.
