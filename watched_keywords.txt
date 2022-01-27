@@ -35961,3 +35961,4 @@
 1643273987	Makyen	zhenxiang\.me
 1643274814	tripleee	joyabortionclinic\.com
 1643275002	Makyen	lassoa\.com
+1643275068	tripleee	d(?:octo)?r[\W_]*+joy(?<!(?-i:^Doctor Joy$))
