@@ -35947,3 +35947,4 @@
 1643264683	tripleee	promellu\.me
 1643264888	tripleee	(?-i:^suraseo$)
 1643270249	Makyen	laraibnow\.com
+1643270264	Makyen	laraibnow(?!\.com)
