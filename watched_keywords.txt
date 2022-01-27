@@ -35953,3 +35953,4 @@
 1643270649	Makyen	the[\W_]*+wedding[\W_]*+card[\W_]*+co(?!\.com(?<=\bweddingcardco\.com))
 1643272316	Makyen	sattakinginfo\.com
 1643272501	Makyen	shepskymix\.com
+1643272521	Makyen	attitudestatus\.org
