@@ -35950,3 +35950,4 @@
 1643270264	Makyen	laraibnow(?!\.com)
 1643270292	Makyen	airlinebookingnumber\.com
 1643270630	Makyen	weddingcardco\.com
+1643270649	Makyen	the[\W_]*+wedding[\W_]*+card[\W_]*+co(?!\.com(?<=\bweddingcardco\.com))
