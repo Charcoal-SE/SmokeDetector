@@ -31,7 +31,9 @@ items:
 - ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
-- ns:
+- comment: dominantly FP after 2021-03-22
+  disable: true
+  ns:
   - braden.ns.cloudflare.com.
   - georgia.ns.cloudflare.com.
 - ns:
