@@ -35943,3 +35943,4 @@
 1643217407	cigien	umfrageonline\.com
 1643222597	tripleee	plurk\.com
 1643249988	cigien	thehotplaza\.com
+1643258215	Makyen	narolainfotech(?!\.com)
