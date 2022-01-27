@@ -35980,3 +35980,4 @@
 1643304406	Ollie	capsag\.co\.uk
 1643305860	Ollie	ksolves\.com
 1643312163	Makyen	(?-i:32RHAvy)(?#bit.ly)
+1643321047	cigien	typingglobal\.com
