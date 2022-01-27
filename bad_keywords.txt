@@ -2565,3 +2565,4 @@ genocidegames
 koyopacker\.com
 H[\W_]*+A[\W_]*+C[\W_]*+K[\W_]*+I[\W_]*+N[\W_]*+G[\W_]*+P[\W_]*+R[\W_]*+O[\W_]*+F[\W_]*+E[\W_]*+S[\W_]*+S[\W_]*+I[\W_]*+O[\W_]*+N[\W_]*+A[\W_]*+L[\W_]*+3(?# HACKINGPROFESSIONAL3 at gmail)
 xpress[\W_]*+auto[\W_]*+parts(?!\.co\.nz(?<=xpressautoparts\.co\.nz))
+deez[\W_]*+nuts
