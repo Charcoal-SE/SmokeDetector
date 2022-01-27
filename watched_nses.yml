@@ -697,6 +697,9 @@ items:
   - igor.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
+  - joel.ns.cloudflare.com.
+- ns:
+  - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - ns:
   - elisabeth.ns.cloudflare.com.
