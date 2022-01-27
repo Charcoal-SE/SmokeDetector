@@ -568,3 +568,4 @@ Devil_Ace
 (?-i:^aeahmad$)
 (?-i:^koyopacker$)
 (?-i:^MofB$)
+(?-i:^Doctor Joy$)
