@@ -35974,3 +35974,4 @@
 1643286043	tripleee	capsag\.com
 1643291518	Jeff Schaller	aguanbanquet\.com
 1643295690	cigien	24freetv\.com
+1643295844	cigien	aguan[\W_]*+banquet(?!\.com(?<=aguanbanquet\.com))
