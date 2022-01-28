@@ -169,6 +169,9 @@ items:
   - cass.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
+  - amy.ns.cloudflare.com.
+- ns:
+  - amit.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
   - amy.ns.cloudflare.com.
