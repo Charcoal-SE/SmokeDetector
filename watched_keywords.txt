@@ -30277,7 +30277,6 @@
 1624939287	tripleee	theultimateencryption(?:[\W_]*+(?:at[\W_]*+)protonmail[\W_]*+(?:dot[\W_]*+)com)?
 1624939330	tripleee	(?-i:AVERAGE[\W_]*+MAN)
 1624942619	cigien	thejeweljar\.com
-1624943764	cigien	ieqsgroup\.com
 1624943857	cigien	m2ysafety\.com
 1624944737	cigien	lavnalocks\.com
 1624948647	tripleee	deileromier(?# medium)
