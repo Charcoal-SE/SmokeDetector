@@ -648,6 +648,9 @@ items:
   - destiny.ns.cloudflare.com.
   - igor.ns.cloudflare.com.
 - ns:
+  - diana.ns.cloudflare.com.
+  - marvin.ns.cloudflare.com.
+- ns:
   - dilbert.ns.cloudflare.com.
   - meg.ns.cloudflare.com.
 - ns:
