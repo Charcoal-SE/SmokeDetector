@@ -513,6 +513,9 @@ items:
   - coleman.ns.cloudflare.com.
   - izabella.ns.cloudflare.com.
 - ns:
+  - coleman.ns.cloudflare.com.
+  - marjory.ns.cloudflare.com.
+- ns:
   - connie.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
