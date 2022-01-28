@@ -132,6 +132,9 @@ items:
   - alexis.ns.cloudflare.com.
   - val.ns.cloudflare.com.
 - ns:
+  - alfred.ns.cloudflare.com.
+  - zariyah.ns.cloudflare.com.
+- ns:
   - ali.ns.cloudflare.com.
   - boyd.ns.cloudflare.com.
 - ns:
