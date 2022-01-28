@@ -569,3 +569,4 @@ Devil_Ace
 (?-i:^koyopacker$)
 (?-i:^MofB$)
 (?-i:^Doctor Joy$)
+(?-i:^Tessie Swift$)
