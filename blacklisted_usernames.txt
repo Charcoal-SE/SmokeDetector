@@ -571,3 +571,4 @@ Devil_Ace
 (?-i:^Doctor Joy$)
 (?-i:^Tessie Swift$)
 (?-i:^lallu lal$)
+(?-i:^Hugh Davenport$)
