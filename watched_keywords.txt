@@ -12394,7 +12394,6 @@
 1569224943	tripleee	printerrepairguide\.com
 1569227538	tripleee	automartz\.com
 1569230620	tripleee	data-room\.co
-1569238144	tripleee	decipherzone\.com
 1569243058	tripleee	rsoft\.in
 1569244867	Machavity	printeroffline\.org
 1569245983	Machavity	sugarkube\.io
