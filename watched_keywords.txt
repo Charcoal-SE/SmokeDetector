@@ -36016,3 +36016,4 @@
 1643470663	cigien	d(?:octo)?r[\W_]*+aboda
 1643471763	cigien	crispcode\.org
 1643472107	cigien	atelange\.com
+1643472268	cigien	handymanhrm\.ca
