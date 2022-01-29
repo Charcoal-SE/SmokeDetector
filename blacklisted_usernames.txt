@@ -573,3 +573,4 @@ Devil_Ace
 (?-i:^lallu lal$)
 (?-i:^Hugh Davenport$)
 (?-i:^Biswajit Nandi$)
+(?-i:^Mama Bashirah$)
