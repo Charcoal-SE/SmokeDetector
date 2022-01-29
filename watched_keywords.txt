@@ -36011,3 +36011,4 @@
 1643448956	tripleee	hyderabadserv\.com
 1643452057	tripleee	offshoremarketers\.com
 1643452169	tripleee	genes(?:[\W_]*+(?:lh|collection|stardom))
+1643450550	jps	star-gooo\.com
