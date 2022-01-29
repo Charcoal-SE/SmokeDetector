@@ -36022,3 +36022,4 @@
 1643474429	cigien	cellstrat[\W_]*+hub(?!\.com(?<=cellstrathub\.com))
 1643474447	cigien	cellstrathub\.com
 1643482039	cigien	rajaplay-hk1\.ppgames\.net
+1643498999	cigien	grabbersdeals\.com
