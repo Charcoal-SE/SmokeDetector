@@ -36012,3 +36012,4 @@
 1643452169	tripleee	genes(?:[\W_]*+(?:lh|collection|stardom))
 1643450550	jps	star-gooo\.com
 1643469846	cigien	databasegram\.com
+1643470163	cigien	ufa25hr\.com
