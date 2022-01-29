@@ -572,3 +572,4 @@ Devil_Ace
 (?-i:^Tessie Swift$)
 (?-i:^lallu lal$)
 (?-i:^Hugh Davenport$)
+(?-i:^Biswajit Nandi$)
