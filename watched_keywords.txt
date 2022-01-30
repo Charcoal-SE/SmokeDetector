@@ -34747,7 +34747,6 @@
 1639575062	tripleee	un-curso-de-milagros\.org
 1639575268	tripleee	(?-i:^burakdeniz$)
 1639589002	cigien	movflixs\.blogspot
-1639589406	Ollie	gold-pattern\.com
 1639590194	Ollie	anywhereoutpost\.com
 1639591065	cigien	wikifeedz\.com
 1639591084	cigien	growarticles\.com
