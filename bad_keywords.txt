@@ -2569,3 +2569,4 @@ deez[\W_]*+nuts
 top[\W_]*+domain[\W_]*+sellers
 officialhackingcompany(?:@gmail\.com)?
 <p>quote</p>
+𝗡𝘂𝗺𝗯𝗲𝗿
