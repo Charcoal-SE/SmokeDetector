@@ -2568,3 +2568,4 @@ xpress[\W_]*+auto[\W_]*+parts(?!\.co\.nz(?<=xpressautoparts\.co\.nz))
 deez[\W_]*+nuts
 top[\W_]*+domain[\W_]*+sellers
 officialhackingcompany(?:@gmail\.com)?
+<p>quote</p>
