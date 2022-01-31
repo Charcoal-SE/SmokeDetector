@@ -36047,3 +36047,4 @@
 1643625076	tripleee	punegirl\.com
 1643625358	tripleee	(?-i:\+TTCiOzvDXAE1NmM8)(?# tt.me)
 1643627740	tripleee	shukriyasongs\.com
+1643628066	tripleee	(?-i:^acl$)
