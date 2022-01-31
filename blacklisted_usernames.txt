@@ -574,3 +574,4 @@ Devil_Ace
 (?-i:^Hugh Davenport$)
 (?-i:^Biswajit Nandi$)
 (?-i:^Mama Bashirah$)
+(?-i:^rina shah$)
