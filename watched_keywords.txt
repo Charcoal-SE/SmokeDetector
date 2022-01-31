@@ -36062,3 +36062,4 @@
 1643639360	Glorfindel	mmc\W+global
 1643640351	Glorfindel	couponfacet\.com
 1643642985	cigien	journeynepaladv\.com
+1643643124	cigien	henriqueguimaraes\.com
