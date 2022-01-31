@@ -1331,6 +1331,9 @@ items:
   - michelle.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - miki.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
+- ns:
   - miles.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
