@@ -36060,3 +36060,4 @@
 1643637688	tripleee	banooart\.ir
 1643637762	tripleee	griha[\W_]*+(?:pravesh|pooja)
 1643639360	Glorfindel	mmc\W+global
+1643640351	Glorfindel	couponfacet\.com
