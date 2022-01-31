@@ -388,6 +388,9 @@ items:
   - curt.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
+  - brenda.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
   - brett.ns.cloudflare.com.
