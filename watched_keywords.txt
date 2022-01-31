@@ -36058,3 +36058,4 @@
 1643635615	tripleee	disti\.com
 1643637537	tripleee	(?-i:gu7z4U3ciz4)(?# youtube)
 1643637688	tripleee	banooart\.ir
+1643637762	tripleee	griha[\W_]*+(?:pravesh|pooja)
