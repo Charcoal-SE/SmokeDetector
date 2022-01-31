@@ -36043,3 +36043,4 @@
 1643619528	tripleee	emailhelpzone\.com
 1643622080	tripleee	landmark[\W_]*+developments(?!\.net(?<=landmarkdevelopments\.net))
 1643622680	tripleee	(?-i:^3tJpWpk)(?# fiverr)
+1643625044	tripleee	ranchiescorts\.com
