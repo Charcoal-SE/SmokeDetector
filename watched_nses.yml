@@ -1571,6 +1571,9 @@ items:
 - ns: symbolhostpremiumdns.com.
 - ns: hostgator.in.
 - ns:
+  - cns2023.hostgator.com.
+  - cns2024.hostgator.com.
+- ns:
   - cns2031.hostgator.com.
   - cns2032.hostgator.com.
 - ns:
