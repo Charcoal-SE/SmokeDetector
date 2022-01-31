@@ -575,3 +575,4 @@ Devil_Ace
 (?-i:^Biswajit Nandi$)
 (?-i:^Mama Bashirah$)
 (?-i:^rina shah$)
+(?-i:^Nancy Acer$)
