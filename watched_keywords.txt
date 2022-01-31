@@ -34439,7 +34439,6 @@
 1638517396	tripleee	wordpressmigrationhelp\.com
 1638525579	tripleee	ananditsolutions\.com
 1638531216	tripleee	thepackersmoversdelhi\.com
-1638531353	tripleee	takeactionnyc\.com
 1638531621	tripleee	breakout\.co\.in
 1638536598	tripleee	americasgenerators\.com
 1638536637	tripleee	bestcakephpteam\.com
