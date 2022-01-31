@@ -36038,3 +36038,4 @@
 1643617306	tripleee	gclub-auto\.vip
 1643617446	tripleee	qnicithost\.com
 1643617478	tripleee	45d79bca58860757(?# skype cid)
+1643617848	tripleee	qnick?[\W_]*it(?:[\W_]*host)?(?!\.com(?<=qnicithost\.com))
