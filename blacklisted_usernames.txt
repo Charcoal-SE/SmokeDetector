@@ -577,3 +577,4 @@ Devil_Ace
 (?-i:^rina shah$)
 (?-i:^Nancy Acer$)
 (?-i:^user476172$)
+(?-i:^qnicit it host$)
