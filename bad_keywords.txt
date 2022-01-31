@@ -2567,3 +2567,4 @@ H[\W_]*+A[\W_]*+C[\W_]*+K[\W_]*+I[\W_]*+N[\W_]*+G[\W_]*+P[\W_]*+R[\W_]*+O[\W_]*+
 xpress[\W_]*+auto[\W_]*+parts(?!\.co\.nz(?<=xpressautoparts\.co\.nz))
 deez[\W_]*+nuts
 top[\W_]*+domain[\W_]*+sellers
+swipecart
