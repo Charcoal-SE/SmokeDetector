@@ -579,3 +579,4 @@ Devil_Ace
 (?-i:^user476172$)
 (?-i:^qnicit it host$)
 (?-i:^steve evans$)
+^(?:my[\W_]*+)?amazon[\W_]*prime$
