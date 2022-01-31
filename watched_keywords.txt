@@ -35304,7 +35304,6 @@
 1641470022	cigien	gomalthemes\.com
 1641470346	cigien	ndtkala\.co
 1641470644	cigien	sysinspire(?!\.com)
-1641470839	cigien	dataintelo\.com
 1641471080	cigien	imediz\.com
 1641473096	cigien	constructivevisual\.com
 1641484109	Spevacus	pianochordes\.com
