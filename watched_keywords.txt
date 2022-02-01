@@ -36071,3 +36071,4 @@
 1643695984	tripleee	(?-i:^Lily Acer$)
 1643705135	tripleee	cygnature\.io
 1643705393	tripleee	possumpiper\.com\.au
+1643709900	tripleee	officechairandtable\.com
