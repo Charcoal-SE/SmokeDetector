@@ -35024,7 +35024,6 @@
 1640589344	tripleee	(?-i:6dfY_MMYseU)(?# youtube)
 1640589367	tripleee	(?-i:pKa8s9Kmp2E)(?# youtube)
 1640589386	tripleee	(?-i:fej7fQY9doM)(?# youtube)
-1640589409	cigien	cfi-blog\.org
 1640589732	cigien	healthmaker\.in
 1640589750	cigien	healthmaker(?!\.in)
 1640590215	tripleee	shelter4greendeal\.co\.uk
