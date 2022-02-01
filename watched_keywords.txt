@@ -36082,3 +36082,4 @@
 1643718640	tripleee	techie[\W_]*+(?:dot[\W_]*+)com
 1643722099	Glorfindel	iCreativeSOL
 1643723824	cigien	swcdb\.org
+1643724058	cigien	webtvhd\.com
