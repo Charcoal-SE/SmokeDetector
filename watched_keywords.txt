@@ -36081,3 +36081,4 @@
 1643717005	Makyen	(?-i:sevenmentorindia)(?#medium.com)
 1643718640	tripleee	techie[\W_]*+(?:dot[\W_]*+)com
 1643722099	Glorfindel	iCreativeSOL
+1643723824	cigien	swcdb\.org
