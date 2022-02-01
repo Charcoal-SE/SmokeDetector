@@ -36079,3 +36079,4 @@
 1643715683	tripleee	mybestguide\.com
 1643716561	tripleee	thejerker\.com
 1643717005	Makyen	(?-i:sevenmentorindia)(?#medium.com)
+1643718640	tripleee	techie[\W_]*+(?:dot[\W_]*+)com
