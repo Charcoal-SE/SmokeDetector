@@ -625,6 +625,9 @@ items:
   - heather.ns.cloudflare.com.
 - ns:
   - dean.ns.cloudflare.com.
+  - sharon.ns.cloudflare.com.
+- ns:
+  - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
   - dean.ns.cloudflare.com.
