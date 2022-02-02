@@ -36114,3 +36114,4 @@
 1643803400	tripleee	thetechexplained\.com
 1643805142	tripleee	search[\W_]*+adaccount(?<!Search-ADAccount)
 1643807007	tripleee	txplanoairductcleaning\.com
+1643808008	Jeff Schaller	mckleenz\.com
