@@ -2004,6 +2004,14 @@ items:
   - ns-38.awsdns-04.com.
   - ns-785.awsdns-34.net.
 - ns:
+  - ns-1243.awsdns-27.org.
+  - ns-1625.awsdns-11.co.uk.
+  - ns-207.awsdns-25.com.
+  - ns-762.awsdns-31.net.
+  - ns-a1.cloud.z.com.
+  - ns-a2.cloud.z.com.
+  - ns-a3.cloud.z.com.
+- ns:
   - ns-1270.awsdns-30.org.
   - ns-1890.awsdns-44.co.uk.
   - ns-591.awsdns-09.net.
