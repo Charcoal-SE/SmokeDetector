@@ -33978,7 +33978,6 @@
 1637146901	tripleee	progeco-holland\.com
 1637153883	tripleee	rosedesign\.ir
 1637156419	tripleee	(?-i:^Harry Warner$)
-1637157116	tripleee	(?-i:^Juan Mark$)
 1637159530	cigien	eleken\.co
 1637159642	Ollie	myassignmentexperts\.com
 1637159721	Ollie	webmatics\.com

@@ -580,3 +580,4 @@ Devil_Ace
 (?-i:^qnicit it host$)
 (?-i:^steve evans$)
 ^(?:my[\W_]*+)?amazon[\W_]*prime$
+(?-i:^Juan Mark$)
