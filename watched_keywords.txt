@@ -20854,7 +20854,6 @@
 1593769673	Xnero	marketwebdesigner\.com
 1593769690	Xnero	(?-i:ydx8RsrZQ28)(?#YouTube)
 1593769769	Xnero	(?-i:App Developer Seattle)
-1593772538	Xnero	awslagi\.com
 1593775183	Xnero	essaytigers\.co\.uk
 1593775272	Xnero	essaytigers(?!\.co\.uk)
 1593779103	Xnero	jazzcarrental\.com
