@@ -36112,3 +36112,4 @@
 1643802114	tripleee	entrancei\.com
 1643803147	tripleee	gold-coast-solar-power-solutions\.com\.au
 1643803400	tripleee	thetechexplained\.com
+1643805142	tripleee	search[\W_]*+adaccount(?<!Search-ADAccount)
