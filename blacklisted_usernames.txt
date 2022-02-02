@@ -581,3 +581,4 @@ Devil_Ace
 (?-i:^steve evans$)
 ^(?:my[\W_]*+)?amazon[\W_]*prime$
 (?-i:^Juan Mark$)
+(?-i:^iam\.awslagi$)
