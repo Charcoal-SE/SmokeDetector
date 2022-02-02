@@ -36101,3 +36101,4 @@
 1643784682	cigien	netflixparty\.live
 1643785456	tripleee	(?-i:^Denny Morisson$)
 1643786222	tripleee	myscreenrecord\.com
+1643786660	tripleee	forerunsoftwaresolutions\.com
