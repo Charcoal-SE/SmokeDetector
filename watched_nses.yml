@@ -531,6 +531,9 @@ items:
   - connie.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
+  - corey.ns.cloudflare.com.
+  - ollie.ns.cloudflare.com.
+- ns:
   - cortney.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
