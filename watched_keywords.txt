@@ -21999,7 +21999,6 @@
 1598122522	Makyen	sumitthakur209(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1598135083	Makyen	certsquestions\.com
 1598145939	Makyen	com\.signifium(?#company specifier for android products)
-1598145958	Makyen	search[\W_]*+adaccount
 1598156420	Makyen	jimwalterilluminati(?:@gmail\.com)?
 1598173884	Mast	contact(?:[\W_]*+a)?(?:[\W_]*+reliable)?[\W_]*+hacker
 1598178550	Xnero	862843076(?:@qq\.com)?
