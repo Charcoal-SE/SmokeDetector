@@ -36134,3 +36134,4 @@
 1643869289	cigien	deviceshelpdesk\.com
 1643871359	tripleee	(?-i:^sara$)
 1643874340	tripleee	cpstester\.fr
+1643876399	tripleee	good-time-invest\.com
