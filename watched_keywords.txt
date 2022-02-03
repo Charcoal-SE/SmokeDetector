@@ -36128,3 +36128,4 @@
 1643863498	cigien	smartphonecrunch\.com
 1643863586	cigien	cascaremedies\.com
 1643863601	cigien	casca[\W_]*+remedies(?!\.com(?<=cascaremedies\.com))
+1643865433	cigien	code2\.io
