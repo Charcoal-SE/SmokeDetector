@@ -36135,3 +36135,4 @@
 1643871359	tripleee	(?-i:^sara$)
 1643874340	tripleee	cpstester\.fr
 1643876399	tripleee	good-time-invest\.com
+1643876843	tripleee	pancakesbot\.com
