@@ -33539,7 +33539,6 @@
 1635429209	Ryan M	aptugo(?!\.com)
 1635433070	Spevacus	pandemia\.site
 1635434094	Ollie	graphicsmartz\.com
-1635440332	tripleee	besttanklessguide\.com
 1635450665	cigien	HQRECOVERY22(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1635453692	cigien	woorank\.com
 1635455654	Cody Gray	(?-i:UC3KfrSmQDkCtcAdxB10XWJQ)(?#YouTube channel)
