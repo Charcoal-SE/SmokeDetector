@@ -540,6 +540,9 @@ items:
   - connie.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
+  - cora.ns.cloudflare.com.
+  - jason.ns.cloudflare.com.
+- ns:
   - corey.ns.cloudflare.com.
   - ollie.ns.cloudflare.com.
 - ns:
