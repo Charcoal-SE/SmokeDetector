@@ -36132,3 +36132,4 @@
 1643866586	cigien	medixpills\.com
 1643868092	cigien	mobylogix\.com
 1643869289	cigien	deviceshelpdesk\.com
+1643871359	tripleee	(?-i:^sara$)
