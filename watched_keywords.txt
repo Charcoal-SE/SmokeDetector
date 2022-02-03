@@ -36127,3 +36127,4 @@
 1643861129	cigien	aflmxnxx\.com
 1643863498	cigien	smartphonecrunch\.com
 1643863586	cigien	cascaremedies\.com
+1643863601	cigien	casca[\W_]*+remedies(?!\.com(?<=cascaremedies\.com))
