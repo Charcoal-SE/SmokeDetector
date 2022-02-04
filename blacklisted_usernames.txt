@@ -585,3 +585,4 @@ Devil_Ace
 (?-i:^David Jhon$)
 (?-i:^Trish S\. Gujral$)
 (?-i:^Ravi Kiran$)(?#cloudways spammer)
+(?-i:^nick mosan$)
