@@ -36180,3 +36180,4 @@
 1643996832	Makyen	(?-i:officialmymetamaskioreviews)(?#sites.google.com)
 1643996854	Makyen	metamask\.io
 1644001020	Makyen	cryptô\.com
+1644001032	Makyen	crypto-com-login\.wixsite\.com
