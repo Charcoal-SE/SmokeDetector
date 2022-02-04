@@ -35872,7 +35872,6 @@
 1643104966	Makyen	kacoolerfridge\.com
 1643106736	tripleee	PlatinX
 1643114929	tripleee	youramazingcar\.com
-1643115201	tripleee	(?-i:^Faizan$)
 1643115230	tripleee	hashlogics\.com
 1643117698	cigien	tenthsports\.co\.za
 1643119336	cigien	tecklifeinnovations\.com
