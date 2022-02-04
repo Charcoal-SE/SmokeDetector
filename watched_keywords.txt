@@ -5728,7 +5728,6 @@
 1540794806	Tetsuya Yamamoto	fijiguide\.com
 1540796520	Makyen	\w*키스\w*(?#kiss)
 1540797143	Tetsuya Yamamoto	synkronizer\.com
-1540797715	Tetsuya Yamamoto	dreamworldtravel\.co\.uk
 1540797859	Tetsuya Yamamoto	tamiras\.in
 1540799487	Tetsuya Yamamoto	redbus\.in
 1540799915	Tetsuya Yamamoto	24techsupport\.in
