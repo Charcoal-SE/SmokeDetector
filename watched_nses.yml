@@ -176,6 +176,9 @@ items:
   - amir.ns.cloudflare.com.
   - cass.ns.cloudflare.com.
 - ns:
+  - amir.ns.cloudflare.com.
+  - dee.ns.cloudflare.com.
+- ns:
   - amit.ns.cloudflare.com.
   - amy.ns.cloudflare.com.
 - ns:
