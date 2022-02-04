@@ -583,3 +583,4 @@ Devil_Ace
 (?-i:^Juan Mark$)
 (?-i:^iam\.awslagi$)
 (?-i:^David Jhon$)
+(?-i:^Trish S\. Gujral$)
