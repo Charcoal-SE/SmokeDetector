@@ -916,6 +916,9 @@ items:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - hasslo.ns.cloudflare.com.
+  - leanna.ns.cloudflare.com.
+- ns:
   - hayes.ns.cloudflare.com.
   - katja.ns.cloudflare.com.
 - ns:
