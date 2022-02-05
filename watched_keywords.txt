@@ -36198,3 +36198,4 @@
 1644079913	cigien	sitecoreme\.wordpress\.com
 1644080170	cigien	eon8\.com
 1644080888	cigien	shakyatechnology\.com
+1644080909	cigien	shakya[\W_]*+technology(?!\.com(?<=shakyatechnology\.com))
