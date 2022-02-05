@@ -36190,7 +36190,6 @@
 1644071980	tripleee	hindishouter\.com
 1644071998	tripleee	refinishingproslancaster\.com
 1644072118	tripleee	americasell\.shop
-1644077887	tripleee	voxeljs2\.rf\.gd
 1644078282	cigien	trycloudy\.com
 1644079128	cigien	grapheene\.com
 1644079780	cigien	devhelper\.xyz
