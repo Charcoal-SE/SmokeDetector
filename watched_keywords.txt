@@ -36197,3 +36197,4 @@
 1644079822	cigien	d(?:octo)?r[\W_]*+aminu
 1644079913	cigien	sitecoreme\.wordpress\.com
 1644080170	cigien	eon8\.com
+1644080888	cigien	shakyatechnology\.com
