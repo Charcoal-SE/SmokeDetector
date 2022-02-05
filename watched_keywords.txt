@@ -36194,3 +36194,4 @@
 1644078282	cigien	trycloudy\.com
 1644079128	cigien	grapheene\.com
 1644079780	cigien	devhelper\.xyz
+1644079822	cigien	d(?:octo)?r[\W_]*+aminu
