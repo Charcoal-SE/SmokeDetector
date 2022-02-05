@@ -36183,3 +36183,4 @@
 1644001032	Makyen	crypto-com-login\.wixsite\.com
 1644001057	Makyen	crypto-com-login(?!\.wixsite\.com)
 1644021301	cigien	(?-i:DyKy8ob)(?#shrinke.me)
+1644034826	Ryan M	word-counter\.io
