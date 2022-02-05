@@ -36182,3 +36182,4 @@
 1644001020	Makyen	cryptô\.com
 1644001032	Makyen	crypto-com-login\.wixsite\.com
 1644001057	Makyen	crypto-com-login(?!\.wixsite\.com)
+1644021301	cigien	(?-i:DyKy8ob)(?#shrinke.me)
