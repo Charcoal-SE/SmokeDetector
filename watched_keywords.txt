@@ -36206,3 +36206,4 @@
 1644142422	tripleee	vaporspirit(?!\.ch)
 1644142577	tripleee	cbd[\W_]*+kaufen
 1644153053	tripleee	applicationyak\.com
+1644153136	tripleee	techoxygen\.com
