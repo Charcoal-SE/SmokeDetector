@@ -36200,3 +36200,4 @@
 1644080909	cigien	shakya[\W_]*+technology(?!\.com(?<=shakyatechnology\.com))
 1644081032	cigien	dela-hwi-semarang\.blogspot
 1644086624	tripleee	leadbycode\.com
+1644124796	Makyen	codingyaar\.com
