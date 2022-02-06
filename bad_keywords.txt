@@ -542,7 +542,7 @@ xl\Wtest\Wplus
 illumina\W?sd
 activatrol
 skintology
-zko(?!<=tom zko)
+zko(?:[\W_]*(?:skincare|cream))+
 formula\W?focus
 dermedica
 follicle\W?rx
