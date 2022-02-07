@@ -28923,7 +28923,6 @@
 1620868406	cigien	murphylightwork\.wordpress\.com
 1620870120	cigien	medyatakipcileri\.com
 1620870802	cigien	finoin\.com
-1620873677	cigien	globalatmhackingservice(?:@gmail\.com)?
 1620875096	cigien	earthyskin(?!\.com)
 1620876205	cigien	nileex\.io
 1620876493	Ryan M	Hugh[\W_]*+Janus
