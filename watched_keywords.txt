@@ -36238,3 +36238,4 @@
 1644223892	tripleee	kota[\W_]*+gold(?!\.co(?<=kotagold\.co))
 1644224359	tripleee	psychexp\.com
 1644226347	tripleee	(?-i:^Stacy Elmer$)
+1644229004	tripleee	apkclassy\.com
