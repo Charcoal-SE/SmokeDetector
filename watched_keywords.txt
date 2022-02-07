@@ -36230,3 +36230,4 @@
 1644213061	Makyen	braincorr(?!\.com)
 1644215794	Makyen	mattresscleaningsingaporecompany\.com
 1644217225	tripleee	floatingfeet\.net
+1644217300	tripleee	(?-i:^Madelyn Nora$)
