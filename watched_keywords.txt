@@ -36122,7 +36122,6 @@
 1643866586	cigien	medixpills\.com
 1643868092	cigien	mobylogix\.com
 1643869289	cigien	deviceshelpdesk\.com
-1643871359	tripleee	(?-i:^sara$)
 1643874340	tripleee	cpstester\.fr
 1643876399	tripleee	good-time-invest\.com
 1643876843	tripleee	pancakesbot\.com
