@@ -36235,7 +36235,6 @@
 1644223340	Robert Longson	shootthesoccer\.com
 1644223892	tripleee	kota[\W_]*+gold(?!\.co(?<=kotagold\.co))
 1644224359	tripleee	psychexp\.com
-1644226347	tripleee	(?-i:^Stacy Elmer$)
 1644229004	tripleee	apkclassy\.com
 1644229503	tripleee	purevedicgems\.com
 1644234986	tripleee	sarkariexams\.co\.in
