@@ -28259,7 +28259,6 @@
 1618567146	Mast	1921681881\.com
 1618569391	double-beep	kuchesarfort\.com
 1618579361	Spevacus	admsneezeguards\.mirtesen\.ru
-1618600165	cigien	henryclarkethicalhacker(?:@gmail\.com)?
 1618605787	Makyen	pkpassvalidator\.com
 1618607317	Makyen	d(?:octo)?r[\W_]*+ojeabulu
 1618607331	Makyen	ojeabulusolutionhome(?:@gmail\.com)?
