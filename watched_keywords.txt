@@ -36238,3 +36238,4 @@
 1644229503	tripleee	purevedicgems\.com
 1644234986	tripleee	sarkariexams\.co\.in
 1644237833	tripleee	awna\.com\.au
+1644237849	tripleee	awna(?!\.com\.au)
