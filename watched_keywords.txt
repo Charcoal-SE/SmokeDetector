@@ -36237,3 +36237,4 @@
 1644223389	tripleee	kotagold\.co
 1644223340	Robert Longson	shootthesoccer\.com
 1644223892	tripleee	kota[\W_]*+gold(?!\.co(?<=kotagold\.co))
+1644224359	tripleee	psychexp\.com
