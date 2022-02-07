@@ -36240,3 +36240,4 @@
 1644237833	tripleee	awna\.com\.au
 1644237849	tripleee	awna(?!\.com\.au)
 1644240377	tripleee	purohitin\.blogspot
+1644240919	Spevacus	findnetworth\.com
