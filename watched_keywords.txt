@@ -34487,7 +34487,6 @@
 1638791405	Makyen	tibart7\.com
 1638796082	Spevacus	knowlathon\.com
 1638796121	Spevacus	magecaptain\.com
-1638801026	Makyen	c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+d[\W_]*+o[\W_]*+n(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+i[\W_]*+e[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?:c[\W_]*+o[\W_]*+m)?
 1638805036	cigien	theoverpoweredpc\.tk
 1638805516	Jeff Schaller	cyberspaceintelligence
 1638805554	Jeff Schaller	hackgoodnesstech
