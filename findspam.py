@@ -1984,7 +1984,7 @@ pattern_websites = [
     r"https?://[\w-.]{10,}\.(?:top|help)\W",
     r"filefix(?:er)?\.com",
     r"\.page\.tl\W",
-    r"infotech\.(?:com|net|in)",
+    r"(?<=pure)infotech\.(?:com|net|in)",
     r"\.(?:com|net)/(?:xtra|muscle)[\w-]",
     r"http\S*?\Wfor-sale\W",
     r"fifa\d+[\w-]*+\.com",
