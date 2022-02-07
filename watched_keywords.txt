@@ -36223,3 +36223,4 @@
 1644174126	tripleee	webserve\.digital
 1644178605	cigien	buyexpertdoc\.com
 1644182762	Makyen	hxnpc\.com
+1644205366	cigien	blogsandarticleses\.com
