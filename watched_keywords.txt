@@ -36244,3 +36244,4 @@
 1644242901	cigien	devstoc\.com
 1644243846	tripleee	(?-i:^mutupisam$)
 1644247073	Makyen	terepair\.com
+1644258994	cigien	ipolitica\.mx
