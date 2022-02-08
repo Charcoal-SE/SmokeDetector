@@ -872,6 +872,9 @@ items:
   - jean.ns.cloudflare.com.
 - ns:
   - gordon.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
+  - gordon.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
   - grace.ns.cloudflare.com.
