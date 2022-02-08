@@ -31,6 +31,9 @@ items:
 - ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
+- ns:
+  - boyd.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
 - comment: dominantly FP after 2021-03-22
   disable: true
   ns:
@@ -38,10 +41,10 @@ items:
   - georgia.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
-  - merlin.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
 - ns:
-  - boyd.ns.cloudflare.com.
-  - jasmine.ns.cloudflare.com.
+  - brenda.ns.cloudflare.com.
+  - merlin.ns.cloudflare.com.
 - ns:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
