@@ -36253,3 +36253,4 @@
 1644286232	cigien	d(?:octo)?r[\W_]*+osemudiamen
 1644298976	tripleee	mycryptogen\.xyz
 1644299003	tripleee	(?-i:^Gorg Miler$)
+1644300364	tripleee	(?-i:^Deepika Kharola$)
