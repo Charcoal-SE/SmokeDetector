@@ -1300,6 +1300,9 @@ items:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
+  - magnolia.ns.cloudflare.com.
+  - rayden.ns.cloudflare.com.
+- ns:
   - major.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
