@@ -36267,3 +36267,4 @@
 1644322461	tripleee	ceat[\W_]*+tyres
 1644322907	tripleee	moviessubway\.xyz
 1644323155	tripleee	elmufid\.com
+1644324768	tripleee	bestmbbsmd\.com
