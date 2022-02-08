@@ -36265,3 +36265,4 @@
 1644321958	Jeff Schaller	tractorguru\.in
 1644322088	tripleee	br[\W_]*+softech(?!\.com(?<=brsoftech\.com))
 1644322461	tripleee	ceat[\W_]*+tyres
+1644322907	tripleee	moviessubway\.xyz
