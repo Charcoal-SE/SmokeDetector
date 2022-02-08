@@ -860,6 +860,9 @@ items:
   - sterling.ns.cloudflare.com.
 - ns:
   - gina.ns.cloudflare.com.
+  - harvey.ns.cloudflare.com.
+- ns:
+  - gina.ns.cloudflare.com.
   - james.ns.cloudflare.com.
 - ns:
   - gina.ns.cloudflare.com.
