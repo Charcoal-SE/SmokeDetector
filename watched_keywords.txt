@@ -36263,3 +36263,4 @@
 1644315733	tripleee	myaccountrecovery\.com
 1644321922	Jeff Schaller	tractorfirst\.com
 1644321958	Jeff Schaller	tractorguru\.in
+1644322088	tripleee	br[\W_]*+softech(?!\.com(?<=brsoftech\.com))
