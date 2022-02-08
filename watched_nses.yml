@@ -2101,6 +2101,9 @@ items:
 - ns: w2iserver.com.
 - ns: weblink.in.
 - ns:
+  - ns45.worldnic.com.
+  - ns46.worldnic.com.
+- ns:
   - ns61.worldnic.com.
   - ns62.worldnic.com.
 - ns: xpertesolutions.com.
