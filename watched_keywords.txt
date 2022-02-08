@@ -36251,3 +36251,4 @@
 1644285736	cigien	triotechsoftwaretrainings\.com
 1644285802	cigien	trio[\W_]*+tech[\W_]*+software[\W_]*+trainings(?!\.com(?<=triotechsoftwaretrainings\.com))
 1644286232	cigien	d(?:octo)?r[\W_]*+osemudiamen
+1644298976	tripleee	mycryptogen\.xyz
