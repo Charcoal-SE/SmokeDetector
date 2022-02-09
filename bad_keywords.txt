@@ -2578,3 +2578,4 @@ globalatmhackingservice(?:@gmail\.com)?
 c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+d[\W_]*+o[\W_]*+n(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+i[\W_]*+e[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?:c[\W_]*+o[\W_]*+m)?
 (?-i:We have a domain that is currently on sale)
 HQRECOVERY22(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+dedicatedcore(?!\.com)
