@@ -36295,3 +36295,4 @@
 1644399562	tripleee	toolslite\.com
 1644399676	tripleee	toolslite(?!\.com)
 1644402227	tripleee	hatchlift\.com
+1644402241	tripleee	ubrbusservice\.com
