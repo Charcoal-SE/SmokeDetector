@@ -36293,3 +36293,4 @@
 1644399014	tripleee	hyve(?!\.works)
 1644399338	tripleee	installturbotax[\W_]*+com
 1644399562	tripleee	toolslite\.com
+1644399676	tripleee	toolslite(?!\.com)
