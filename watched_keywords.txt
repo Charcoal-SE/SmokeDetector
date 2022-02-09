@@ -36288,3 +36288,4 @@
 1644384737	Makyen	dedicatedcore\.com
 1644384752	Makyen	dedicatedcore(?!\.com)
 1644384766	cigien	tritonalloysinc\.in
+1644385137	tripleee	(?-i:^Nanesh$)
