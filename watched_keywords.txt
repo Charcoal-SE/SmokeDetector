@@ -36316,3 +36316,4 @@
 1644421121	tripleee	infotreeit\.com
 1644421292	tripleee	(?-i:^Sakshi Mehta$)
 1644423645	tripleee	auto[\W_]*+mexico(?!\.com(?<=automexico\.com))
+1644425011	Spevacus	customui\.codes
