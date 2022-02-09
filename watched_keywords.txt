@@ -36287,3 +36287,4 @@
 1644384154	Makyen	gethelp7\.blogspot
 1644384584	tripleee	(?-i:_lmdyj6QFnQ)(?# youtube)
 1644384737	Makyen	dedicatedcore\.com
+1644384752	Makyen	dedicatedcore(?!\.com)
