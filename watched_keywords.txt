@@ -36304,3 +36304,4 @@
 1644406143	tripleee	inco[\W_]*+special[\W_]*alloys(?!\.com(?<=incospecialalloys\.com))
 1644406251	tripleee	nysmith\.com
 1644408794	Glorfindel	webnexs\.com
+1644410940	Jeff Schaller	didrjf4861(?:@naver\.com)?
