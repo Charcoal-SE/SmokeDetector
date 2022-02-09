@@ -36289,3 +36289,4 @@
 1644393202	tripleee	(?-i:^Sai Ganesh$)
 1644393520	tripleee	sharkwheel\.com
 1644394809	tripleee	cinoko\.com
+1644395931	tripleee	smalltik\.com
