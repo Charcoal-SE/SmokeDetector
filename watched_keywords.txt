@@ -36291,3 +36291,4 @@
 1644398928	tripleee	(?-i:3uAowxD)(?# bit.ly)
 1644398987	tripleee	hyve\.works
 1644399014	tripleee	hyve(?!\.works)
+1644399338	tripleee	installturbotax[\W_]*+com
