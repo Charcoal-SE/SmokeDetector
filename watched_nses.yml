@@ -1716,7 +1716,6 @@ items:
   comment: lots of FPs but also many TP posts which would otherwise not have been found
 - ns: zonode.com.
 - ns: cabanova.net.
-- ns: server.plus.
 - ns: securehostdns.com.
 - ns: net4india.com.
 - ns: hostsailor.com.
