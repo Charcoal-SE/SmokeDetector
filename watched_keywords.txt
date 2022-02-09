@@ -36301,3 +36301,4 @@
 1644406010	Glorfindel	omniclubdubai\.com
 1644406052	tripleee	investimentosinfo\.com\.br
 1644406069	tripleee	talentsupplier\.co
+1644406143	tripleee	inco[\W_]*+special[\W_]*alloys(?!\.com(?<=incospecialalloys\.com))
