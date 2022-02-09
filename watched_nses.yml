@@ -386,6 +386,9 @@ items:
   - bonnie.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
+  - bowen.ns.cloudflare.com.
+  - simone.ns.cloudflare.com.
+- ns:
   - boyd.ns.cloudflare.com.
   - emma.ns.cloudflare.com.
 - ns:
