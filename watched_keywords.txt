@@ -34925,7 +34925,6 @@
 1640238347	Makyen	corbett[\W_]*+tiger[\W_]*+reserve(?!\.net(?<=corbetttigerreserve\.net))
 1640242419	tripleee	bluehavenpharmacy\.com
 1640243886	Makyen	linux2cloud\.com
-1640244476	tripleee	laptoprepair\.services
 1640247947	tripleee	eakinbrosltd\.co\.uk
 1640248066	tripleee	abortionpillsforsaledrricky(?# sites.google.com)
 1640250834	tripleee	eakinbrosltd(?!\.co\.uk)
