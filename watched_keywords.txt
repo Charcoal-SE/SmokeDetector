@@ -36318,3 +36318,4 @@
 1644423645	tripleee	auto[\W_]*+mexico(?!\.com(?<=automexico\.com))
 1644425011	Spevacus	customui\.codes
 1644427976	Makyen	go\.paid4link\.com
+1644429045	Makyen	sonytvservicecenter\.com
