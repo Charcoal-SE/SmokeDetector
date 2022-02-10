@@ -528,6 +528,9 @@ items:
   - leah.ns.cloudflare.com.
 - ns:
   - cloe.ns.cloudflare.com.
+  - jack.ns.cloudflare.com.
+- ns:
+  - cloe.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
   - clyde.ns.cloudflare.com.
