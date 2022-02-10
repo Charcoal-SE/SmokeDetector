@@ -2578,3 +2578,4 @@ c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+d[\W_]*+o[\W_]*+n(?:[\W_]*+(?:a[\W_]*+t[
 (?-i:We have a domain that is currently on sale)
 HQRECOVERY22(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 dedicatedcore(?!\.com)
+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+o[\W_]*+i[\W_]*+n
