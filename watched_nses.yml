@@ -119,6 +119,9 @@ items:
   - alex.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
+  - alex.ns.cloudflare.com.
+  - tess.ns.cloudflare.com.
+- ns:
   - alexia.ns.cloudflare.com.
   - donovan.ns.cloudflare.com.
 - ns:
