@@ -36353,3 +36353,4 @@
 1644502970	cigien	dlinkrouuterlocal\.com
 1644503717	cigien	billofsaletemplates\.org
 1644503852	cigien	asiamelk(?!\.com)
+1644504331	cigien	timex[\W_]*+metals(?!\.com(?<=timexmetals\.com))
