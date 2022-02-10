@@ -36351,3 +36351,4 @@
 1644502363	Jeff Schaller	techglimpse\.com
 1644502823	cigien	sofia[\W_]*+surgicals(?!\.com(?<=sofiasurgicals\.com))
 1644502970	cigien	dlinkrouuterlocal\.com
+1644503717	cigien	billofsaletemplates\.org
