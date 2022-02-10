@@ -231,6 +231,9 @@ items:
   - wanda.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
+  - fonzie.ns.cloudflare.com.
+- ns:
+  - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - ara.ns.cloudflare.com.
