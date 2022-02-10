@@ -36360,3 +36360,4 @@
 1644514173	Ollie	latexplots\.netlify\.app
 1644519802	tripleee	zinger[\W_]*art(?!\.in(?<=zingerart\.in))
 1644519868	tripleee	(?-i:^Jenny Jenkins$)
+1644521598	tripleee	webproeducation\.org
