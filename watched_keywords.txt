@@ -35247,7 +35247,6 @@
 1641381909	tripleee	scantrics\.io
 1641383050	tripleee	(?-i:WPqEz2)(?# wn.nr redirect)
 1641383119	tripleee	a23d\.co
-1641385518	tripleee	ventsmagazine\.com
 1641385716	tripleee	usarxstores\.org
 1641386027	tripleee	cyberdude(?:[\W_]*+(?:dot|\.)[\W_]*+)com
 1641386052	tripleee	(?-i:FPjBBgIOwZU)(?# youtube)
