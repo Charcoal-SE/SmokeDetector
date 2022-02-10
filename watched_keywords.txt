@@ -36355,3 +36355,4 @@
 1644503852	cigien	asiamelk(?!\.com)
 1644504331	cigien	timex[\W_]*+metals(?!\.com(?<=timexmetals\.com))
 1644506088	Makyen	lifestylexplore\.com
+1644507363	Makyen	stripcurtain\.com
