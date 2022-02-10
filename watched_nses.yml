@@ -96,6 +96,9 @@ items:
   - rodney.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
+  - becky.ns.cloudflare.com.
+- ns:
+  - ajay.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
