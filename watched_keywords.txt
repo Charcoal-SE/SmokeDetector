@@ -36327,4 +36327,3 @@
 1644476917	tripleee	wealthngo\.com
 1644478001	Makyen	jyotiambulanceservicesdelhi\.com
 1644480020	tripleee	(?-i:^lamtrancl123456$)
-1644480551	tripleee	datadoghq\.com
