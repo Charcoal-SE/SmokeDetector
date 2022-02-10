@@ -36344,4 +36344,3 @@
 1644495500	tripleee	dlinkfirmwareupdate\.net
 1644495531	tripleee	sumitimpex\.com
 1644496021	tripleee	carserviceandrepair\.co\.uk
-1644496206	tripleee	dlinkfirmwareupdate\.local
