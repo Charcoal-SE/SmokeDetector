@@ -36376,7 +36376,6 @@
 1644565426	Makyen	apswebtech\.com
 1644575030	tripleee	antech
 1644575053	tripleee	talks99\.com
-1644575902	tripleee	kslegal\.co\.in
 1644576023	tripleee	(?-i:^techniq it$)
 1644570050	shearn89	elitekaya\.com
 1644570352	shearn89	excellentinteriorthanjai\.com
