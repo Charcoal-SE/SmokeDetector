@@ -36377,3 +36377,4 @@
 1644575030	tripleee	antech
 1644575053	tripleee	talks99\.com
 1644575902	tripleee	kslegal\.co\.in
+1644576023	tripleee	(?-i:^techniq it$)
