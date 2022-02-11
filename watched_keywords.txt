@@ -36379,3 +36379,4 @@
 1644575902	tripleee	kslegal\.co\.in
 1644576023	tripleee	(?-i:^techniq it$)
 1644570050	shearn89	elitekaya\.com
+1644570352	shearn89	excellentinteriorthanjai\.com
