@@ -36422,3 +36422,4 @@
 1644759563	Makyen	mandy[\W_]*+(?:at[\W_]*+)?china[\W_]*+lutong[\W_]*+(?:doc[\W_]*+)?net
 1644761385	Makyen	movieboxproapk\.com
 1644761402	Makyen	kyte-tv\.com
+1644761425	Makyen	freeflix-hq\.com
