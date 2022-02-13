@@ -36423,3 +36423,4 @@
 1644761385	Makyen	movieboxproapk\.com
 1644761402	Makyen	kyte-tv\.com
 1644761425	Makyen	freeflix-hq\.com
+1644761447	Makyen	upflixapk\.com
