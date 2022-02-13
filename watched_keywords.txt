@@ -36419,3 +36419,4 @@
 1644757256	Jeff Schaller	houstontxwaterheater\.com
 1644759170	Makyen	cinemahd-v2\.com
 1644759375	Makyen	galarmapp\.com
+1644759563	Makyen	mandy[\W_]*+(?:at[\W_]*+)?china[\W_]*+lutong[\W_]*+(?:doc[\W_]*+)?net
