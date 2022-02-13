@@ -36431,3 +36431,4 @@
 1644766593	cigien	fuelgear\.com\.au
 1644776385	cigien	(?-i:DailyPovKS)(?#youtube channel)
 1644776780	tripleee	gumblar\.cn
+1644788200	cigien	newsuptimes\.com
