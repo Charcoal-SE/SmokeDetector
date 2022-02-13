@@ -36427,3 +36427,4 @@
 1644761466	Makyen	tweakdoor\.info
 1644762248	Makyen	(?-i:^mr \w+nu$)(?#Username pattern for spammer on sharepoint.se. Remove if it gets FP.)
 1644763794	cigien	crack11\.com
+1644764581	Makyen	aflo\.com\.au
