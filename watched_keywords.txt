@@ -36429,3 +36429,4 @@
 1644763794	cigien	crack11\.com
 1644764581	Makyen	aflo\.com\.au
 1644766593	cigien	fuelgear\.com\.au
+1644776385	cigien	(?-i:DailyPovKS)(?#youtube channel)
