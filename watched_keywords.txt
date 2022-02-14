@@ -36437,3 +36437,4 @@
 1644794411	Makyen	slot[\W_]*+pulsa
 1644799919	Ollie	cyber-prime\.com
 1644807125	Makyen	dycables(?!\.com)
+1644821832	tripleee	hilplife\.xyz
