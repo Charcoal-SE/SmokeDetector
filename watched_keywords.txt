@@ -36439,3 +36439,4 @@
 1644821832	tripleee	hilplife\.xyz
 1644821854	tripleee	hilplife(?!\.xyz)
 1644824534	Makyen	t-jazan\.com
+1644826967	tripleee	topscompcbassembly\.com
