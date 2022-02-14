@@ -36442,3 +36442,4 @@
 1644826967	tripleee	topscompcbassembly\.com
 1644827399	tripleee	(?-i:^leathercollectt$)
 1644828453	tripleee	abshr
+1644829730	tripleee	techaheadcorp\.com
