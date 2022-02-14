@@ -36459,3 +36459,4 @@
 1644860542	Makyen	(?:chuj|pedale|kurwa)(?#Polish swear words)
 1644872271	Makyen	103\.3\.60\.176
 1644872290	Makyen	voiceofmotown\.com
+1644872947	Luuklag	Amtrak
