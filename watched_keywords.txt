@@ -36438,3 +36438,4 @@
 1644807125	Makyen	dycables(?!\.com)
 1644821832	tripleee	hilplife\.xyz
 1644821854	tripleee	hilplife(?!\.xyz)
+1644824534	Makyen	t-jazan\.com
