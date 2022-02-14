@@ -1462,6 +1462,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - nell.ns.cloudflare.com.
+  - pat.ns.cloudflare.com.
+- ns:
   - nina.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
