@@ -36443,3 +36443,4 @@
 1644827399	tripleee	(?-i:^leathercollectt$)
 1644828453	tripleee	abshr
 1644829730	tripleee	techaheadcorp\.com
+1644829866	tripleee	shiftme\.in
