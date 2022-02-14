@@ -36460,3 +36460,4 @@
 1644872271	Makyen	103\.3\.60\.176
 1644872290	Makyen	voiceofmotown\.com
 1644874451	Makyen	8[\W_]*+[0o][\W_]*+8[\W_]*+6[\W_]*+[0o][\W_]*+[0o][\W_]*+6[\W_]*+8[\W_]*+9[\W_]*+9(?#also a bad number and bad keyword; abuse the watchlist to get more detection reasons)
+1644876108	cigien	per\.ud
