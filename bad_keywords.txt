@@ -2580,3 +2580,4 @@ HQRECOVERY22(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 dedicatedcore(?!\.com)
 r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+o[\W_]*+i[\W_]*+n
 45d79bca58860757(?# skype cid)
+(?-i:Sugar Land TX)
