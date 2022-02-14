@@ -36440,3 +36440,4 @@
 1644821854	tripleee	hilplife(?!\.xyz)
 1644824534	Makyen	t-jazan\.com
 1644826967	tripleee	topscompcbassembly\.com
+1644827399	tripleee	(?-i:^leathercollectt$)
