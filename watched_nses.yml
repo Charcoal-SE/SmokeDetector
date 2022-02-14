@@ -542,6 +542,9 @@ items:
   - chuck.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
+  - clark.ns.cloudflare.com.
+  - molly.ns.cloudflare.com.
+- ns:
   - clay.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
 - ns:
