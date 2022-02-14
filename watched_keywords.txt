@@ -29427,7 +29427,6 @@
 1622308346	cigien	thegerminate\.com
 1622308477	cigien	stata[\W_]*+17[\W_]*+mp
 1622308594	cigien	networth57\.com
-1622308632	cigien	maticz\.com
 1622309544	cigien	thegerminate(?!\.com)
 1622309562	cigien	networth57(?!\.com)
 1622309957	cigien	englishlab\.co\.in
