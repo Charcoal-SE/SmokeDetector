@@ -36137,7 +36137,6 @@
 1643957067	cigien	ideators\.pk
 1643957113	cigien	tirandoduvidas\.com\.br
 1643957135	cigien	estudosacademicos\.com\.br
-1643957833	tripleee	worldfreshers\.in
 1643958127	tripleee	(?-i:^himanshu$)
 1643960880	tripleee	1-800-273-TALK
 1643962803	tripleee	domyhomework\.us
