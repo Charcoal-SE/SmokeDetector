@@ -4453,3 +4453,4 @@ txhoustonplumbing\.com
 worldfreshers\.in
 txwaterheater\.com
 osplabs\.com
+jpost\.com/promocontent(?=/)
