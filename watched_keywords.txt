@@ -36448,7 +36448,6 @@
 1644838987	tripleee	gorilla[\W_]*+warfare
 1644840388	tripleee	drhitzypern\.com
 1644842048	tripleee	fixscreenrepair\.com
-1644842468	tripleee	emergencyplumberhoustontx\.com
 1644843663	tripleee	studio-23-xyz(?# github project)
 1644846724	cigien	(?:roy\.wu@)?soundmax-hk\.com
 1644851094	cigien	drsimsgomezherbs(?:[\W_]*+(?:dot[\W_]*+)?com)?
