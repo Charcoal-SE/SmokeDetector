@@ -36474,3 +36474,4 @@
 1644909800	tripleee	delhincrescortgirl\.com
 1644909917	tripleee	royalangels\.in
 1644918204	tripleee	txwaterheater\.com
+1644918513	tripleee	water[\W_]*+heater
