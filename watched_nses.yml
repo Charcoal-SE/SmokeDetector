@@ -1315,6 +1315,9 @@ items:
   - lia.ns.cloudflare.com.
   - vick.ns.cloudflare.com.
 - ns:
+  - ligia.ns.cloudflare.com.
+  - nolan.ns.cloudflare.com.
+- ns:
   - lila.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
