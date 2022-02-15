@@ -36464,3 +36464,4 @@
 1644885621	Ryan M	paribar\.com\.br
 1644885693	Ryan M	animamundi2019\.com\.br
 1644903073	tripleee	sontorjo\.com
+1644903090	tripleee	jabirkhan2022\.herokuapp\.com
