@@ -36477,3 +36477,4 @@
 1644922839	tripleee	covernet-vpn\.com
 1644923156	tripleee	hirededicatedresources\.com
 1644926862	tripleee	softweak\.com
+1644927096	tripleee	tictactoeplay(?# sites.google.com)
