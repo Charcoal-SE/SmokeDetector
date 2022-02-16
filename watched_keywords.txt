@@ -36498,3 +36498,4 @@
 1644989113	Makyen	hcvinitvitnam\.doodlekit\.com
 1644989130	Makyen	(?-i:hocvienitvietnam)(?!\.blogspot)(?#sites.google.com)
 1644989149	Makyen	hocvienitvn(?!\.com)
+1644989206	cigien	zedcoworking\.com
