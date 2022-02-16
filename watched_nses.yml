@@ -1480,6 +1480,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - nicolas.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
+- ns:
   - nina.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
