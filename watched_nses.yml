@@ -1124,6 +1124,9 @@ items:
   - kirk.ns.cloudflare.com.
 - ns:
   - jessica.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
+  - jessica.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
