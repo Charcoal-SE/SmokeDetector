@@ -36496,3 +36496,4 @@
 1644988875	cigien	sajithatharaka\.medium\.com
 1644988929	cigien	kgin\.com\.vn
 1644989113	Makyen	hcvinitvitnam\.doodlekit\.com
+1644989130	Makyen	(?-i:hocvienitvietnam)(?!\.blogspot)(?#sites.google.com)
