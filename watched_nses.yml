@@ -1141,6 +1141,9 @@ items:
   - jo.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - joan.ns.cloudflare.com.
+  - tadeo.ns.cloudflare.com.
+- ns:
   - jocelyn.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
