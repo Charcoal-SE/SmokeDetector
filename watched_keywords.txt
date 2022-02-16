@@ -18090,7 +18090,6 @@
 1584946167	tripleee	imarticus(?:[\W_]*+learning)?
 1584957124	tripleee	(?:(?:3GA|3GP|AIFF|ASF|AU|AVCHD|Apple Lossless|Apple ProRes|CAF|DVR|F4V|FLV|M2T|M2TS|M4A|M4B|M4V|MKV|MOD|MOV|MPC|MTS|MVI|MXF|OGV|QCP|R3D|RA|RMVB|SHN|TOD|TS|TTA|VOB|VOC|WTV|WebM), ){5,}
 1584959037	tripleee	nagpurescorts\.in
-1584961445	tripleee	crazyforstudy\.com
 1584970812	tripleee	voiceofbarpeta\.com
 1584970846	tripleee	assam[\W_]*+career(?:[\W_]*+\d+)?
 1584973216	Machavity	phen375loss\.co\.uk

@@ -4454,3 +4454,4 @@ worldfreshers\.in
 txwaterheater\.com
 osplabs\.com
 jpost\.com/promocontent(?=/)
+crazyforstudy\.com
