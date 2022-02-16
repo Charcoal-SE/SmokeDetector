@@ -36526,3 +36526,4 @@
 1645024506	cigien	koinemas88(?!\.net)
 1645026284	cigien	spinfold\.com
 1645026790	cigien	deetsinfo\.com
+1645026851	cigien	(?-i:FTpMSFy6)(?#discord)
