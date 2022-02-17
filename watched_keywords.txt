@@ -36562,3 +36562,4 @@
 1645093434	Makyen	stig\.com\.ng
 1645093457	tripleee	beyondtheboxnutrition\.com
 1645093487	tripleee	instantviral\.uk
+1645093781	Makyen	beyond[\W_]*+the[\W_]*+box[\W_]*+nutrition(?!\.com(?<=beyondtheboxnutrition\.com))
