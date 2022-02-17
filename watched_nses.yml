@@ -1286,6 +1286,9 @@ items:
   - rodney.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
+  - nitin.ns.cloudflare.com.
+- ns:
+  - leah.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
