@@ -592,3 +592,4 @@ Devil_Ace
 (?-i:^Mahmoud Taha$)
 (?-i:^himanshu$)
 (?-i:^hilplife 360$)
+(?-i:^Danny Cardenas$)
