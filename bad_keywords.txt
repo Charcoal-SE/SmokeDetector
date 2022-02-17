@@ -2586,3 +2586,4 @@ r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+o[\W_]*+i[\W_]*+
 coinbase[\W_]*+pro[\W_]*+login
 cóinbase[\W_]*+pro[\W_]*+login
 cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
+(?-i:cinbaseprlgin)(?# sites.google.com)
