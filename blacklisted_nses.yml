@@ -67,6 +67,9 @@ items:
   - dan.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
+  - dana.ns.cloudflare.com.
+  - josh.ns.cloudflare.com.
+- ns:
   - dawn.ns.cloudflare.com.
   - dimitris.ns.cloudflare.com.
 - ns:
