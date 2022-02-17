@@ -2584,3 +2584,4 @@ r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+o[\W_]*+i[\W_]*+
 8[\W_]*+[0o][\W_]*+8[\W_]*+6[\W_]*+[0o][\W_]*+[0o][\W_]*+6[\W_]*+8[\W_]*+9[\W_]*+9(?#also a bad number; intentionally duplicated to increase autoflagging)
 (?-i: Houston TX$)
 coinbase[\W_]*+pro[\W_]*+login
+cóinbase[\W_]*+pro[\W_]*+login
