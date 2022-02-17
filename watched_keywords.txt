@@ -36550,3 +36550,4 @@
 1645084816	tripleee	iskcondesiretree\.com
 1645085338	tripleee	edgeware(?:[\W_]*+tech(?!\.com(?<=edgewaretech\.com\b))(?:nology)?)?
 1645085612	tripleee	labhdai[\W_]*+vastu(?!\.com(?<=labhdaivastu\.com))
+1645085753	tripleee	(?-i:^zenita datta$)
