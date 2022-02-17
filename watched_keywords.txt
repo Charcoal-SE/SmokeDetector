@@ -36549,3 +36549,4 @@
 1645084350	Ryan M	wedoapk\.com
 1645084504	tripleee	thehotarticle\.com
 1645084816	tripleee	iskcondesiretree\.com
+1645085338	tripleee	edgeware(?:[\W_]*+tech(?!\.com(?<=edgewaretech\.com\b))(?:nology)?)?
