@@ -36578,3 +36578,4 @@
 1645097198	tripleee	all[\W_]*+days[\W_]*+(?:from[\W_]*+)?\d+(?:am)?
 1645097544	Jeff Schaller	waterheaterrepairwebster\.com
 1645097953	tripleee	waterheaterrepairfresnotx\.com
+1645098063	tripleee	(?-i:^himanshu chopra$)
