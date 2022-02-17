@@ -371,6 +371,9 @@ items:
   - betty.ns.cloudflare.com.
   - terry.ns.cloudflare.com.
 - ns:
+  - bingo.ns.cloudflare.com.
+  - hugh.ns.cloudflare.com.
+- ns:
   - blakely.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
