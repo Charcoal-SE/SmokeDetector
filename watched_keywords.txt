@@ -36399,7 +36399,6 @@
 1644734526	cigien	airy-tv\.com
 1644734542	cigien	yacinetv\.fun
 1644755043	Jeff Schaller	Digital_Vishu
-1644757150	Jeff Schaller	localplumbingrepairhouston\.com
 1644757256	Jeff Schaller	houstontxwaterheater\.com
 1644759170	Makyen	cinemahd-v2\.com
 1644759375	Makyen	galarmapp\.com
