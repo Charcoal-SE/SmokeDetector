@@ -36565,3 +36565,4 @@
 1645093781	Makyen	beyond[\W_]*+the[\W_]*+box[\W_]*+nutrition(?!\.com(?<=beyondtheboxnutrition\.com))
 1645094260	Makyen	plumbingleaguecitytx\.com
 1645094471	tripleee	plumbingthewoodlandstexas\.com
+1645095526	tripleee	plazamiddleeast\.com
