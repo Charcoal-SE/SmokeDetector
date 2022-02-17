@@ -1581,6 +1581,9 @@ items:
 - ns:
   - terry.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
+- ns:
+  - titan.ns.cloudflare.com.
+  - yolanda.ns.cloudflare.com.
 - comment: FPs, don't blacklist
   ns: mihanwebhost.com.
 - ns: offshoreracks.com.
