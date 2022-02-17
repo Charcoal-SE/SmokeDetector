@@ -36542,3 +36542,4 @@
 1645082773	tripleee	file-upload\.com
 1645082794	tripleee	codigosql\.com
 1645082815	tripleee	mannaweb\.info
+1645082830	tripleee	edgewaretech\.com
