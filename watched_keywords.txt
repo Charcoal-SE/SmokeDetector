@@ -36546,3 +36546,4 @@
 1645083104	tripleee	universal[\W_]*+srushti
 1645084261	tripleee	(?-i:^crystalhel$)
 1645084280	tripleee	dealstoall\.com
+1645084350	Ryan M	wedoapk\.com
