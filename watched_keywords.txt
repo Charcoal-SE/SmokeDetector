@@ -12235,7 +12235,6 @@
 1568707648	tripleee	bulkaccounts\.com
 1568714710	Glorfindel	mac-downloader\.com
 1568722854	tripleee	wrestlingonlinematches\.com
-1568724861	tripleee	cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
 1568724647	Machavity	cetpa
 1568724914	tripleee	webtrainingroom\.com
 1568727340	Machavity	pixibitdesign\.com
