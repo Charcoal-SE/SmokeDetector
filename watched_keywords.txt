@@ -36614,3 +36614,4 @@
 1645197655	cigien	printinthecity\.com
 1645197781	cigien	fixthephoto\.com
 1645197980	cigien	clipping[\W_]*+arts[\W_]*+india(?!\.com(?<=clippingartsindia\.com))
+1645198234	cigien	teknobuilt\.com
