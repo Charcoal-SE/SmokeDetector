@@ -126,6 +126,7 @@ ASN_WHITELISTED_WEBSITES = [
 # Hostnames should be all lowercase, as the hostnames are obtained from
 # urlparse().hostname, which lowercases the hostname.
 WHITELISTED_IP_HOSTNAMES = [
+    "alfa.com.tw",
     "angular.io",
     "api.flutter.dev",
     "bot.run",
