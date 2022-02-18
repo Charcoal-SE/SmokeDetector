@@ -713,6 +713,9 @@ items:
   - dee.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
+  - demi.ns.cloudflare.com.
+  - ivan.ns.cloudflare.com.
+- ns:
   - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
 - ns:
