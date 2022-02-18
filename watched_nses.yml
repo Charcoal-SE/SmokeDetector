@@ -1052,6 +1052,9 @@ items:
   - jeremy.ns.cloudflare.com.
 - ns:
   - isla.ns.cloudflare.com.
+  - jerome.ns.cloudflare.com.
+- ns:
+  - isla.ns.cloudflare.com.
   - quinton.ns.cloudflare.com.
 - ns:
   - ivy.ns.cloudflare.com.
