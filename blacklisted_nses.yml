@@ -112,6 +112,9 @@ items:
   - porter.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - rose.ns.cloudflare.com.
+  - yew.ns.cloudflare.com.
+- ns:
   - stan.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:

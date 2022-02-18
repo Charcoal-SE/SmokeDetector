@@ -1558,9 +1558,6 @@ items:
   - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
-  - rose.ns.cloudflare.com.
-  - yew.ns.cloudflare.com.
-- ns:
   - rustam.ns.cloudflare.com.
   - susan.ns.cloudflare.com.
 - ns:
