@@ -36616,3 +36616,4 @@
 1645197980	cigien	clipping[\W_]*+arts[\W_]*+india(?!\.com(?<=clippingartsindia\.com))
 1645198234	cigien	teknobuilt\.com
 1645198500	cigien	www-ytmp3\.com
+1645198567	cigien	sugardetox\.com
