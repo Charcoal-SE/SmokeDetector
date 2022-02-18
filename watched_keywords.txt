@@ -36601,3 +36601,4 @@
 1645171932	tripleee	gobankingrates\.com
 1645171967	tripleee	blockcerts\.com
 1645180792	tripleee	worldstocks\.co\.uk
+1645180858	tripleee	primalhealthtips\.com
