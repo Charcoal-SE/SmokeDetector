@@ -2377,3 +2377,8 @@ items:
 - ns: sitehostinggeeks.com.
 - ns: webserviceexpress.com.
 - ns: premiumshieldinc.com.
+- ns:
+  - chipmunk.ezoicns.com.
+  - javanese.ezoicns.com.
+  - reindeer.ezoicns.com.
+  - siberian.ezoicns.com.
