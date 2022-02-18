@@ -23,6 +23,9 @@ items:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
+  - anirban.ns.cloudflare.com.
+  - janet.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
