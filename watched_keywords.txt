@@ -34712,7 +34712,6 @@
 1639591084	cigien	growarticles\.com
 1639591642	Ollie	apkkiss\.com
 1639592206	Ollie	iloweb\.ir
-1639602478	cigien	techbiriyani\.com
 1639625187	cigien	kyzziadamgreen22(?:@gmail\.com)?
 1639629196	cigien	mayvatlongga123\.com\.vn
 1639629217	cigien	nutriexpressonline\.com
