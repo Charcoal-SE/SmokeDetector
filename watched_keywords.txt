@@ -36638,3 +36638,4 @@
 1645281300	cigien	tiptopesen\.ae
 1645282573	cigien	bemyears\.io
 1645282724	cigien	djsarzen\.in
+1645282741	cigien	dj[\W_]*+sarzen(?!\.in(?<=djsarzen\.in))
