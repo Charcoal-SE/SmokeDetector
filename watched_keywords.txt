@@ -36623,3 +36623,4 @@
 1645206550	Makyen	cbtnuggets\.com
 1645209671	Ollie	(?-i:0a89bed004)(?# fiverr)
 1645211377	cigien	cmdocdestruction\.com
+1645229481	cigien	elinformado\.co
