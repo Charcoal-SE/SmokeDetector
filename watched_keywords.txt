@@ -36654,3 +36654,4 @@
 1645328435	Makyen	australian[\W_]*+opal[\W_]*+direct
 1645329944	cigien	webanvar\.com
 1645336966	Makyen	motortrip\.vn
+1645336998	Makyen	motortripvn(?:@gmail\.com)?
