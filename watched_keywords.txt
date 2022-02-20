@@ -36664,3 +36664,4 @@
 1645362525	cigien	(?-i:liRXVCIIE-I)(?#youtu.be)
 1645363078	cigien	moti[\W_]*+mahal
 1645363526	cigien	sohrabnasehi\.ir
+1645364142	cigien	stella\.kojot\.co\.hu
