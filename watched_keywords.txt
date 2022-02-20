@@ -36653,3 +36653,4 @@
 1645320923	Robert Longson	gowallpapersgo\.com
 1645328435	Makyen	australian[\W_]*+opal[\W_]*+direct
 1645329944	cigien	webanvar\.com
+1645336966	Makyen	motortrip\.vn
