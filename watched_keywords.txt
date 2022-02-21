@@ -36676,3 +36676,4 @@
 1645415616	cigien	catheon[\W_]*+gaming(?!\.com(?<=catheongaming\.com))
 1645425141	Makyen	techpragna\.com
 1645425195	Makyen	(?-i:Z0zLql)(?#fiverr.com)
+1645425236	Makyen	certificationstime\.com
