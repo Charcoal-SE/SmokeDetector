@@ -36053,7 +36053,6 @@
 1643777097	cigien	posteezy\.com
 1643782212	Makyen	(?-i:grecourseinpune)(?#sites.google.com)
 1643782228	Makyen	zingerart\.in
-1643782995	Makyen	apklub\.com
 1643784666	cigien	teztarrar\.com
 1643784682	cigien	netflixparty\.live
 1643785456	tripleee	(?-i:^Denny Morisson$)
