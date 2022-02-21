@@ -36681,3 +36681,4 @@
 1645433430	Jeff Schaller	liquid[\W_]+incense[\W_]+infused
 1645440035	Mithical	mumbaihotmodels\.com
 1645443311	tripleee	adamwarrock\.com
+1645443605	tripleee	fenceanddeckconnection\.com
