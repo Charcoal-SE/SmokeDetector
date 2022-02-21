@@ -36674,3 +36674,4 @@
 1645401448	cigien	(?-i:rqpm4Ey4-eU)(?#youtube)
 1645415521	cigien	catheongaming\.com
 1645415616	cigien	catheon[\W_]*+gaming(?!\.com(?<=catheongaming\.com))
+1645425141	Makyen	techpragna\.com
