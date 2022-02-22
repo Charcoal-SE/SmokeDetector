@@ -36721,3 +36721,4 @@
 1645539440	Makyen	northwestlimony\.com
 1645539468	Makyen	ginternet\.in
 1645539492	Makyen	nftyper\.com
+1645539520	Makyen	(?-i:hyveworks)(?#t.me, etc.)
