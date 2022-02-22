@@ -2587,3 +2587,4 @@ coinbase[\W_]*+pro[\W_]*+login
 cóinbase[\W_]*+pro[\W_]*+login
 cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
+patialalegitimate515
