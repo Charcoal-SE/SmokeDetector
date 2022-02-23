@@ -36761,3 +36761,4 @@
 1645625922	Makyen	blog\.naver\.com
 1645625952	Makyen	(?-i:3h6AHdN)(?#fvrr.co)
 1645626370	cigien	bestdirectory\.co\.za
+1645627247	Makyen	inox[\W_]*+steel[\W_]*+india(?!\.net(?<=inoxsteelindia\.net))
