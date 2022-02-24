@@ -36772,3 +36772,4 @@
 1645659449	Ryan M	ishadelhi\.in
 1645670036	cigien	lottrips(?!\.com)
 1645671783	cigien	wheelspinner\.tools
+1645671798	cigien	joyminer\.com
