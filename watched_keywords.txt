@@ -36770,3 +36770,4 @@
 1645637130	Ollie	eurocity\.be
 1645654634	Ollie	yerliteknoloji\.net
 1645659449	Ryan M	ishadelhi\.in
+1645670036	cigien	lottrips(?!\.com)
