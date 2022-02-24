@@ -34733,7 +34733,6 @@
 1639718907	Makyen	adsifymarketing\.com
 1639719036	cigien	jwellmachine\.com
 1639720046	cigien	jasonskinrood\.com
-1639724738	tripleee	troopmessenger\.com
 1639724759	tripleee	neuherbs\.com
 1639726337	tripleee	herbalhillsprime\.com
 1639728795	tripleee	(?-i:^Arun sankar$)
