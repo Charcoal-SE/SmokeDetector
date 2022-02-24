@@ -36792,3 +36792,4 @@
 1645710760	cigien	web[\W_]*+mingo(?!\.com(?<=webmingo\.com))
 1645710857	cigien	cheapestessay\.com
 1645710900	Makyen	vanceai\.com
+1645710939	Makyen	dramamix\.online
