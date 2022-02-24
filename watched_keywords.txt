@@ -36796,3 +36796,4 @@
 1645711155	Makyen	(?-i:fodmapedia)(?#facebook.com)
 1645711352	cigien	blog\.emdiu\.com
 1645711499	cigien	seoyarismasi\.xyz
+1645711563	cigien	purpleno\.in
