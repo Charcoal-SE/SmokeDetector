@@ -36808,3 +36808,4 @@
 1645747484	Jeff Schaller	timemagazinenews\.com
 1645770113	Ryan M	deeplyinc\.com
 1645770129	Ryan M	babba\.ai
+1645770236	Ryan M	wundergraph\.com
