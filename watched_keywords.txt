@@ -36182,7 +36182,6 @@
 1644205366	cigien	blogsandarticleses\.com
 1644210171	cigien	drchinnababu\.com
 1644212393	Makyen	lakhesh98\.tech
-1644212954	cigien	braincorr\.com
 1644213061	Makyen	braincorr(?!\.com)
 1644215794	Makyen	mattresscleaningsingaporecompany\.com
 1644217225	tripleee	floatingfeet\.net
