@@ -36859,3 +36859,4 @@
 1645911115	Makyen	topcashback\.co\.uk
 1645914064	Makyen	ting[\W_]*+sing[\W_]*+tay(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1645914081	Makyen	100075462413503(?#facebook profile ID)
+1645914101	Makyen	f0%9d%90%92%f0%9d%90%94%f0%9d%90%8f%f0%9d%90%84%f0%9d%90%91__%f0%9d%90%8f%f0%9d%90%84(?#facebook)
