@@ -36857,3 +36857,4 @@
 1645906862	cigien	(?-i:uJb5eMRYUY)(?#discord)
 1645910928	cigien	(?-i:Top-Cash-Back22)(?#bit.ly)
 1645911115	Makyen	topcashback\.co\.uk
+1645914064	Makyen	ting[\W_]*+sing[\W_]*+tay(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
