@@ -36835,3 +36835,4 @@
 1645819211	cigien	mkoften\.com
 1645844134	Ryan M	baikalelectronics\.com
 1645856751	EJoshuaS - Reinstate Monica	absoluteprestige\.com
+1645857295	Makyen	absolute[\W_]*+prestige(?!\.com(?<=absoluteprestige\.com))
