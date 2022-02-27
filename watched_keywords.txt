@@ -29174,7 +29174,6 @@
 1621604834	Spevacus	new[\W_]*+york[\W_]*+cables(?!\.com(?<=newyorkcables\.com))
 1621605036	Spevacus	all4techs\.com
 1621642080	cigien	(?:hello@)?foundernow\.co
-1621643149	cigien	pestcontrolhyderabad\.com
 1621643167	cigien	thietkewebchuanseo\.com
 1621643182	cigien	axispharm\.com
 1621643250	cigien	animestream\.in
