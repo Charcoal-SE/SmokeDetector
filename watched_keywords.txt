@@ -36916,3 +36916,4 @@
 1646055869	tripleee	developcoins(?!\.com)
 1646056378	cigien	(?-i:jBb8r2MZx5)(?#discord)
 1646060308	cigien	applivery\.com
+1646060949	cigien	locphen\.vn
