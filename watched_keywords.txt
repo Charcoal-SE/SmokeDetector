@@ -27248,7 +27248,6 @@
 1615181529	tripleee	chungcutrinitytower\.vn
 1615181587	tripleee	theinfiniteuniverses\.com
 1615185794	tripleee	marbltoronto\.ca
-1615185950	tripleee	(?-i:^Novella Johns$)
 1615187750	tripleee	studyroo\.com\.au
 1615188599	Makyen	footballilse\.com
 1615191078	Makyen	f77741@aol\.com

@@ -594,3 +594,4 @@ Devil_Ace
 (?-i:^hilplife 360$)
 (?-i:^Danny Cardenas$)
 ^amtrak$
+(?-i:^Novella Johns$)
