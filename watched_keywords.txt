@@ -36915,3 +36915,4 @@
 1646052003	tripleee	anzeel\.co\.uk
 1646054768	tripleee	disti[\W_]*+corporation
 1646055869	tripleee	developcoins(?!\.com)
+1646056378	cigien	(?-i:jBb8r2MZx5)(?#discord)
