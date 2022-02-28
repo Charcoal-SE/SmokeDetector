@@ -2588,3 +2588,4 @@ cóinbase[\W_]*+pro[\W_]*+login
 cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
 patialalegitimate515
+techie[\W_]*+(?:dot[\W_]*+)?com
