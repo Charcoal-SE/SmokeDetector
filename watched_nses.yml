@@ -156,6 +156,9 @@ items:
   - beau.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
+  - lee.ns.cloudflare.com.
+- ns:
+  - alice.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
