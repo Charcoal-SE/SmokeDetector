@@ -1546,6 +1546,9 @@ items:
   - pat.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - pearl.ns.cloudflare.com.
+  - seamus.ns.cloudflare.com.
+- ns:
   - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
