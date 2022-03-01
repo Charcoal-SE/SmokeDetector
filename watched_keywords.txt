@@ -36944,3 +36944,4 @@
 1646130378	tripleee	emorphis(?!\.com)
 1646130652	tripleee	verisart\.com
 1646132022	Robert Longson	oxsoftwares\.com
+1646133963	tripleee	bm-techs\.com
