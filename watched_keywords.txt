@@ -36926,3 +36926,4 @@
 1646109278	tripleee	(?-i:cjhbbq0422)(?# t.me)
 1646110228	tripleee	mind[\W_]*+digital(?!\.com(?<=minddigital\.com))
 1646111401	cigien	ipcsautomation\.com
+1646111563	cigien	mightytips\.ro
