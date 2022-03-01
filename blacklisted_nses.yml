@@ -20,6 +20,9 @@ items:
   - adrian.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
+  - alla.ns.cloudflare.com.
+  - ed.ns.cloudflare.com.
+- ns:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:

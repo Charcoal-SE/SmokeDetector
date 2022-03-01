@@ -168,9 +168,6 @@ items:
   - max.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
-  - ed.ns.cloudflare.com.
-- ns:
-  - alla.ns.cloudflare.com.
   - george.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
