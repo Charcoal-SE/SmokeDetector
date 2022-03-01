@@ -16192,7 +16192,6 @@
 1580401860	Eliah Kagan	secmail\.pro
 1580401889	Eliah Kagan	hackservice
 1580404070	Machavity	fundesertsafari\.com
-1580404372	Machavity	consultant(?:\.|\W*dot\W*)com
 1580405769	Eliah Kagan	info\.ghanapolice
 1580409616	Eliah Kagan	quickgyan\.in
 1580415844	Eliah Kagan	hackeredwards\.com
