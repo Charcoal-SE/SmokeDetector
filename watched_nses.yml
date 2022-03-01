@@ -1600,6 +1600,9 @@ items:
   - sue.ns.cloudflare.com.
   - thomas.ns.cloudflare.com.
 - ns:
+  - susan.ns.cloudflare.com.
+  - zac.ns.cloudflare.com.
+- ns:
   - terry.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
