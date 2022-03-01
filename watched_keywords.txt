@@ -36938,3 +36938,4 @@
 1646123874	tripleee	devrims\.com
 1646126484	tripleee	mightytips\.org
 1646126870	tripleee	(?-i:^Spammer$)
+1646127144	tripleee	edua[\W_]*+uraa(?!\.com(?<=eduauraa\.com))(?:[\W_]*+india)?
