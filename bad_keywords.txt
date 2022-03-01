@@ -2590,3 +2590,4 @@ cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
 patialalegitimate515
 techie[\W_]*+(?:dot[\W_]*+)?com
 consultant[\W_]*+(?:dot[\W_]*+)?com
+amberlottotemple(?:@yahoo\.com)?
