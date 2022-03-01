@@ -597,3 +597,4 @@ Devil_Ace
 (?-i:^Novella Johns$)
 (?-i:^home3 page3$)
 (?-i:^Jenna Tay Lia$)
+(?-i:^elsanhova$)
