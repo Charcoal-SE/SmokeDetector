@@ -36941,3 +36941,4 @@
 1646127144	tripleee	edua[\W_]*+uraa(?!\.com(?<=eduauraa\.com))(?:[\W_]*+india)?
 1646129656	tripleee	oncohiv\.net
 1646129674	tripleee	oncohiv(?!\.net)
+1646130157	tripleee	muhasebegonulluleri\.com
