@@ -36951,3 +36951,4 @@
 1646136160	tripleee	bandarshiotogel4d
 1646137394	Jeff Schaller	oceansoftwares\.com
 1646143762	cigien	extmag\.com
+1646143836	cigien	ibu[\W_]*+consulting(?!\.com(?<=ibuconsulting\.com))
