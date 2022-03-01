@@ -36925,3 +36925,4 @@
 1646101203	cigien	nhaxinhdoor\.com
 1646109210	tripleee	WhatsappTelegramZaloSignal
 1646109278	tripleee	(?-i:cjhbbq0422)(?# t.me)
+1646110228	tripleee	mind[\W_]*+digital(?!\.com(?<=minddigital\.com))
