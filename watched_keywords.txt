@@ -36704,7 +36704,6 @@
 1645523582	Ryan M	mbareportsguru\.com
 1645524391	Glorfindel	techmoog\.com
 1645526632	Someone	aims-english\.com
-1645532280	Jeff Schaller	minddigital
 1645535025	Jeff Schaller	horacemannelementary\.com
 1645535053	Jeff Schaller	friendscargoservice\.com
 1645539440	Makyen	northwestlimony\.com
