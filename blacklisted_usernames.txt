@@ -598,3 +598,4 @@ Devil_Ace
 (?-i:^home3 page3$)
 (?-i:^Jenna Tay Lia$)
 (?-i:^elsanhova$)
+(?-i:^Self-care$)
