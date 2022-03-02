@@ -36964,3 +36964,4 @@
 1646198434	tripleee	loja2\.com\.br
 1646199937	tripleee	dougholtphotography\.com
 1646200345	tripleee	doug[\W_]*+holt[\W_]*+photography(?<!(?-i:^Doug Holt Photography$))
+1646201693	tripleee	marutilifecare\.com
