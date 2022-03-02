@@ -36969,3 +36969,4 @@
 1646203714	tripleee	geecon[\W_]*+global(?!\.com(?<=geeconglobal\.com))
 1646206125	tripleee	adaptiveus\.com
 1646206963	tripleee	(?-i:^Nick Furry$)
+1646206982	tripleee	dnpindiahindi\.in
