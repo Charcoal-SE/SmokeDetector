@@ -378,6 +378,9 @@ items:
   - dee.ns.cloudflare.com.
 - ns:
   - bob.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
+  - bob.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
