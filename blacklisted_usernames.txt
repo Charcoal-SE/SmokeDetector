@@ -599,3 +599,4 @@ Devil_Ace
 (?-i:^Jenna Tay Lia$)
 (?-i:^elsanhova$)
 (?-i:^Self-care$)
+(?-i:^Doug Holt Photography$)
