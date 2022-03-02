@@ -36988,3 +36988,4 @@
 1646242271	Makyen	lultube(?!\.com)
 1646242305	Makyen	lultube\.com
 1646242340	Makyen	(?-i:uca3jarnf9zioe2lwcax_uag)(?#youtube)
+1646242375	Makyen	uassy(?!\.com\b)(?:[\W_]*+(?:girls|company|com|\d++|[\da-f]{5,}+)s?)*
