@@ -36991,3 +36991,4 @@
 1646242375	Makyen	uassy(?!\.com\b)(?:[\W_]*+(?:girls|company|com|\d++|[\da-f]{5,}+)s?)*
 1646245012	Ollie	(?-i:qReyWZ )(?# fiverr)
 1646251484	cigien	twgap\.com
+1646258537	Ryan M	logicloop\.com
