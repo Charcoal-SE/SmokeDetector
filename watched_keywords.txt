@@ -36977,3 +36977,4 @@
 1646230708	Makyen	parfumerieeternelle\.com
 1646230727	Makyen	parfumerie[\W_]*+eternelle(?!\.com(?<=parfumerieeternelle\.com))
 1646231119	cigien	chappegah\.com
+1646231627	cigien	freetextcompare\.com
