@@ -36966,3 +36966,4 @@
 1646200345	tripleee	doug[\W_]*+holt[\W_]*+photography(?<!(?-i:^Doug Holt Photography$))
 1646201693	tripleee	marutilifecare\.com
 1646203697	tripleee	geeconglobal\.com
+1646203714	tripleee	geecon[\W_]*+global(?!\.com(?<=geeconglobal\.com))
