@@ -911,6 +911,9 @@ items:
   - fiona.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
+  - gabe.ns.cloudflare.com.
+  - pat.ns.cloudflare.com.
+- ns:
   - gail.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
