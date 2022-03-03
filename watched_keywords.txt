@@ -30212,7 +30212,6 @@
 1624811323	Mast	(?-i:UC3bRqB9FlS49wCt5cEybKDw)(?#YouTube channel)
 1624815512	Cody Gray	jacobrosstalent\.com
 1624815581	Cody Gray	Jacob[\W_]*Ross[\W_]*Talent
-1624815641	Cody Gray	ryan\.jones(?:@jacobrosstalent\.com)?
 1624840018	cigien	supremespellssolutions(?:@gmail\.com)?
 1624840289	cigien	thaonhi\.com\.vn
 1624857855	cigien	forbesmagazine\.net
