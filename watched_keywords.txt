@@ -37020,3 +37020,4 @@
 1646299117	tripleee	singlebasket\.in
 1646301538	tripleee	dmarket\.com
 1646301862	tripleee	sprintful\.com
+1646301896	tripleee	sprintful(?!\.com)
