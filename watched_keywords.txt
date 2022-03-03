@@ -37022,3 +37022,4 @@
 1646301896	tripleee	sprintful(?!\.com)
 1646301934	tripleee	visual[\W_]*+subtitling(?!\.com(?<!visualsubtitling\.com))
 1646304325	tripleee	suadienmaysaigon\.com
+1646304777	tripleee	dynamicssquare\.co\.uk
