@@ -1433,6 +1433,9 @@ items:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
+  - martha.ns.cloudflare.com.
+  - sullivan.ns.cloudflare.com.
+- ns:
   - marty.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
 - ns:
