@@ -37034,3 +37034,4 @@
 1646312906	Jeff Schaller	dumpschief\.com
 1646312968	Jeff Schaller	certsstar\.com
 1646313960	Jeff Schaller	haleynutritionus\.wordpress\.com
+1646314010	tripleee	haley[\W_]*+nutrition
