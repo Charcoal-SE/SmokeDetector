@@ -37032,3 +37032,4 @@
 1646312727	Jeff Schaller	B2B-Solution-Architect
 1646312780	Jeff Schaller	dumpsgeek\.com
 1646312906	Jeff Schaller	dumpschief\.com
+1646312968	Jeff Schaller	certsstar\.com
