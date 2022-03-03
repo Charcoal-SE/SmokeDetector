@@ -593,6 +593,9 @@ items:
   - coco.ns.cloudflare.com.
   - michael.ns.cloudflare.com.
 - ns:
+  - coco.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
   - coleman.ns.cloudflare.com.
   - izabella.ns.cloudflare.com.
 - ns:
