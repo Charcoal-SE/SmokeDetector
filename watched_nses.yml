@@ -108,6 +108,9 @@ items:
   - alaric.ns.cloudflare.com.
   - aria.ns.cloudflare.com.
 - ns:
+  - albert.ns.cloudflare.com.
+  - molly.ns.cloudflare.com.
+- ns:
   - alec.ns.cloudflare.com.
   - nicole.ns.cloudflare.com.
 - ns:
