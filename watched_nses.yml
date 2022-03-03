@@ -210,6 +210,9 @@ items:
   - syeef.ns.cloudflare.com.
 - ns:
   - andy.ns.cloudflare.com.
+  - isla.ns.cloudflare.com.
+- ns:
+  - andy.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
   - angela.ns.cloudflare.com.
