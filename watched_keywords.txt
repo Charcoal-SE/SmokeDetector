@@ -37027,3 +37027,4 @@
 1646306632	tripleee	(?-i:^Claudine Albert$)
 1646307722	tripleee	globalmarketdatabase\.com
 1646308012	tripleee	global[\W_]*+market[\W_]*+database(?!\.com(?<=globalmarketdatabase\.com))
+1646308123	tripleee	gmdv2
