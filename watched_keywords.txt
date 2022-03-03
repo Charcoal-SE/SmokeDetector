@@ -37026,3 +37026,4 @@
 1646304818	tripleee	sitong6688(?# telegram)
 1646306632	tripleee	(?-i:^Claudine Albert$)
 1646307722	tripleee	globalmarketdatabase\.com
+1646308012	tripleee	global[\W_]*+market[\W_]*+database(?!\.com(?<=globalmarketdatabase\.com))
