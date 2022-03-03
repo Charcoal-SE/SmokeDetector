@@ -601,3 +601,4 @@ Devil_Ace
 (?-i:^Self-care$)
 (?-i:^Doug Holt Photography$)
 (?-i:^AgarwalArchana$)
+(?-i:^Christa Elrod$)
