@@ -987,6 +987,9 @@ items:
   - molly.ns.cloudflare.com.
 - ns:
   - gwen.ns.cloudflare.com.
+  - hasslo.ns.cloudflare.com.
+- ns:
+  - gwen.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
