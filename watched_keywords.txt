@@ -13355,7 +13355,6 @@
 1572933943	Shree	volio\.net
 1572935078	tripleee	rze[\W_]*+max
 1572936015	tripleee	2BGtCMi(?# bit.ly redirector from spammer's profile)
-1572936152	tripleee	visualsubtitling\.com
 1572938121	tripleee	do18\.net
 1572939668	tripleee	ongraph\.com
 1572944761	Glorfindel	wordsdoctorate\.com
