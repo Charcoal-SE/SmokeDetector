@@ -37088,3 +37088,4 @@
 1646418768	cigien	spectateswamp
 1646420980	cigien	arno-token\.com
 1646430410	Makyen	fleetdrive360\.com
+1646430426	Makyen	fleet[\W_]*+drive[\W_]*+360(?!\.com(?<=fleetdrive360\.com))
