@@ -37080,3 +37080,4 @@
 1646401521	tripleee	Hristijan Ivanovski
 1646402603	cigien	decktopus\.com
 1646403762	tripleee	thedesertsafaris\.com
+1646403944	cigien	followersanalysis(?!\.com)
