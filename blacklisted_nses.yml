@@ -216,3 +216,6 @@ items:
   - sgvip41.noc40.com.
   - sgvip42.noc40.com.
 - ns: hostguy.com.
+- ns:
+  - bar.dnspod.net.
+  - select.dnspod.net.
