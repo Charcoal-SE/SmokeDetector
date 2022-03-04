@@ -37064,3 +37064,4 @@
 1646371453	Makyen	zoomslot88(?:[\w\.-]*\w)?
 1646371470	Makyen	gamingzoom88(?:[\w\.-]*\w)?
 1646371491	Makyen	daftar[\w\.-]{0,60}slot(?:[\w\.-]*\w)?
+1646371512	Makyen	bonus[\w\.-]{0,60}slot(?:[\w\.-]*\w)?
