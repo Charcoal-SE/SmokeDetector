@@ -37059,3 +37059,4 @@
 1646371201	Makyen	moodle\.philol\.msu\.ru
 1646371382	Makyen	slot-bonus-new-member-100-di(?:[\w\.-]*\w)?
 1646371400	Makyen	slotbonus100didepan
+1646371416	Makyen	zmslot(?:88|gacor)?
