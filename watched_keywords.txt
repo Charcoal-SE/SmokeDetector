@@ -37069,3 +37069,4 @@
 1646377466	tripleee	freeonlinetoolsworld\.blogspot
 1646377513	tripleee	leathercollection\.ca
 1646380337	tripleee	robot[\W_]*+baby
+1646380440	tripleee	wellnesssolutiondiet\.com
