@@ -891,6 +891,9 @@ items:
   - hank.ns.cloudflare.com.
 - ns:
   - eva.ns.cloudflare.com.
+  - marty.ns.cloudflare.com.
+- ns:
+  - eva.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
   - eve.ns.cloudflare.com.
