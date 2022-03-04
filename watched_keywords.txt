@@ -37066,3 +37066,4 @@
 1646371491	Makyen	daftar[\w\.-]{0,60}slot(?:[\w\.-]*\w)?
 1646371512	Makyen	bonus[\w\.-]{0,60}slot(?:[\w\.-]*\w)?
 1646373502	Makyen	gampang-menang-bonus-new-member-100(?:[\w\.-]*\w)?
+1646377466	tripleee	freeonlinetoolsworld\.blogspot
