@@ -37057,3 +37057,4 @@
 1646371169	Makyen	lnk\.bio
 1646371185	Makyen	me-page\.org
 1646371201	Makyen	moodle\.philol\.msu\.ru
+1646371382	Makyen	slot-bonus-new-member-100-di(?:[\w\.-]*\w)?
