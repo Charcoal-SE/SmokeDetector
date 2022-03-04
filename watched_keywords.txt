@@ -37050,3 +37050,4 @@
 1646371059	Makyen	slotasiagames\.xyz
 1646371073	Makyen	cblonline\.org
 1646371087	Makyen	centrogabo\.org
+1646371102	Makyen	elearningx\.org
