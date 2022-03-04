@@ -37061,3 +37061,4 @@
 1646371400	Makyen	slotbonus100didepan
 1646371416	Makyen	zmslot(?:88|gacor)?
 1646371435	Makyen	slot88terbaru
+1646371453	Makyen	zoomslot88(?:[\w\.-]*\w)?
