@@ -37076,3 +37076,4 @@
 1646380554	tripleee	mkmrp\.pl
 1646380627	tripleee	adbeesolutions\.com
 1646388381	tripleee	asotools\.io
+1646396231	tripleee	(?-i:^Puneet Verma$)
