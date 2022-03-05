@@ -37103,3 +37103,4 @@
 1646468480	Makyen	gkonelectric\.com
 1646468496	Makyen	crystaivf\.com
 1646468511	Makyen	mmoexperts\.com
+1646468533	Makyen	clfsofttech\.com
