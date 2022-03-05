@@ -36442,7 +36442,6 @@
 1644909779	tripleee	zooya\.in
 1644909800	tripleee	delhincrescortgirl\.com
 1644909917	tripleee	royalangels\.in
-1644918513	tripleee	water[\W_]*+heater
 1644921005	tripleee	integrativesystems\.com
 1644921190	tripleee	visualytes(?!\.com)
 1644922839	tripleee	covernet-vpn\.com
