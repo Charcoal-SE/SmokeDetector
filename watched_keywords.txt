@@ -37106,3 +37106,4 @@
 1646468533	Makyen	clfsofttech\.com
 1646468549	Makyen	savvysetup\.com
 1646468604	Makyen	pcbrunner\.com
+1646468628	Makyen	voltagelab\.com
