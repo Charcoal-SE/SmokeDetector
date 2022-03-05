@@ -37116,3 +37116,4 @@
 1646491108	cigien	kah-len\.com
 1646491274	cigien	gkon[\W_]*+electric(?!\.com(?<=gkonelectric\.com))
 1646491907	Makyen	greenhomestore\.ir
+1646491923	Makyen	kronogreen\.com
