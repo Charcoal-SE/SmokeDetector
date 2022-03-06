@@ -148,6 +148,7 @@ WHITELISTED_IP_HOSTNAMES = [
     "pipeline.fit",
     "portforward.com",
     "pub.dev",
+    "reactjs.org",
     "shop.pimoroni.com",
     "size.my",
     "talkerscode.com",
