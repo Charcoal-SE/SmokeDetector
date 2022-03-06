@@ -37135,3 +37135,4 @@
 1646576247	Makyen	d(?:octo)?r[\W_]*+jambu[\W_]*+jain(?!\.com(?<=drjambujain\.com))
 1646581018	Nisse Engström	dataentryadep\.com
 1646581840	Nisse Engström	schoolconnectonline\.com
+1646585099	cigien	tallkite\.com
