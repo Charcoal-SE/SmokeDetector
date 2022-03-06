@@ -37132,3 +37132,4 @@
 1646560080	Makyen	128\.199\.120\.167
 1646571759	tripleee	balloonslane\.com
 1646573019	Jeff Schaller	drjambujain\.com
+1646576247	Makyen	d(?:octo)?r[\W_]*+jambu[\W_]*+jain(?!\.com(?<=drjambujain\.com))
