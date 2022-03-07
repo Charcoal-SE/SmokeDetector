@@ -37162,3 +37162,4 @@
 1646658243	tripleee	vae\.fyi
 1646662076	Jeff Schaller	successbeta\.com
 1646662720	tripleee	blogs-afrique\.info
+1646664183	cigien	quick[\W_]*+books[\W_]*+helpline
