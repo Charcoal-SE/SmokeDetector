@@ -36990,7 +36990,6 @@
 1646251484	cigien	twgap\.com
 1646258537	Ryan M	logicloop\.com
 1646266524	cigien	instastory\.pl
-1646270756	Ollie	smartpay1\.com
 1646270796	Ollie	bestproblog\.com
 1646271241	Ollie	(?-i:^Carol Sanders$)
 1646271679	cigien	appslite-ar\.com
