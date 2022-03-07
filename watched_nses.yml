@@ -1484,6 +1484,9 @@ items:
   - megan.ns.cloudflare.com.
   - vin.ns.cloudflare.com.
 - ns:
+  - meiling.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
   - melissa.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
