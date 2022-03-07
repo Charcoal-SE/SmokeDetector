@@ -31442,7 +31442,6 @@
 1628842233	tripleee	1921681240setup\.com
 1628842374	tripleee	[/.]192168\d+[-\w]+[-\d\w]*\.
 1628842441	tripleee	gutdolls\.com
-1628847073	tripleee	currace\.com
 1628848756	tripleee	cpadesk\.us
 1628850501	tripleee	hophuhoai
 1628852134	tripleee	(?-i:3kmIWTO)(?# bit.ly)
