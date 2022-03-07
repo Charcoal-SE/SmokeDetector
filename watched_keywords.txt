@@ -36948,7 +36948,6 @@
 1646144979	cigien	baudcom\.com\.cn
 1646152178	tripleee	(?-i:^noah2419$)
 1646159833	Ollie	hammad\.account(?:@gmail\.com)?
-1646161203	cigien	editage\.com
 1646162366	cigien	aakankshabhende\.hashnode\.dev
 1646162417	cigien	(?-i:yvCSrn6V)(?#chng.it)
 1646162605	cigien	vetechno\.in
