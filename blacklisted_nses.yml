@@ -219,3 +219,4 @@ items:
 - ns:
   - bar.dnspod.net.
   - select.dnspod.net.
+- ns: symbolhost.com.
