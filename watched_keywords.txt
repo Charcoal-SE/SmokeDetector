@@ -10177,7 +10177,6 @@
 1561816258	Machavity	Use\Wangle\Wbrackets\Wto\Wforce\Wlinking
 1561818089	Machavity	luckypatcherinfo\.com
 1561784824	double-beep	hellojinri\.com
-1561825929	Makyen	dr\W*vinod\W*raina
 1561825966	Makyen	tourtravel360\.com
 1561825986	Makyen	delver\W*research\W*(?:and\W*)?analytic\W*solution
 1561826104	Makyen	chairsadvisor\.com
