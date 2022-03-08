@@ -37175,3 +37175,4 @@
 1646716265	EJoshuaS - Stand with Ukraine	bestsitenet\.com
 1646718174	tripleee	mbahjono\.net
 1646718325	tripleee	mbahjono(?!\.net)
+1646718361	tripleee	(?-i:^Chandra Manna$)
