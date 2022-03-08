@@ -37182,3 +37182,4 @@
 1646724172	tripleee	(?-i:^Taniya khan$)
 1646726035	tripleee	sksolutionsgroup\.com\.au
 1646736372	tripleee	digitalnavigators\.in
+1646736543	tripleee	opt[\W_]*+g[\W_]*+net
