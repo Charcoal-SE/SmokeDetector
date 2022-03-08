@@ -215,6 +215,9 @@ items:
 - ns:
   - sgvip41.noc40.com.
   - sgvip42.noc40.com.
+- ns:
+  - corporate.viplus11.noc40.com.
+  - corporate.viplus12.noc40.com.
 - ns: hostguy.com.
 - ns:
   - bar.dnspod.net.
