@@ -37174,3 +37174,4 @@
 1646713349	cigien	tech[\W_]*+man[\W_]*+kpo(?!\.com(?<=techmankpo\.com))
 1646716265	EJoshuaS - Stand with Ukraine	bestsitenet\.com
 1646718174	tripleee	mbahjono\.net
+1646718325	tripleee	mbahjono(?!\.net)
