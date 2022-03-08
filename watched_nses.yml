@@ -2048,7 +2048,9 @@ items:
   ns: hostcloudstore.com.
 - ns: controlmyvps.com.au.
 - ns: wyservers.com.
-- ns: w3gb.com.
+- comment: no longer resolves 2022-03-08
+  disable: true
+  ns: w3gb.com.
 - ns: ekkum.com.
 - comment: no longer resolves 2021-04-10
   disable: true
