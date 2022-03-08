@@ -1004,11 +1004,14 @@ items:
   - hal.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
 - ns:
+  - hal.ns.cloudflare.com.
+  - tegan.ns.cloudflare.com.
+- ns:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
-  - hal.ns.cloudflare.com.
-  - tegan.ns.cloudflare.com.
+  - harleigh.ns.cloudflare.com.
+  - jasper.ns.cloudflare.com.
 - ns:
   - hasslo.ns.cloudflare.com.
   - leanna.ns.cloudflare.com.
