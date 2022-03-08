@@ -35475,7 +35475,6 @@
 1642254197	cigien	gathr\.one
 1642254426	cigien	aprofikhv(?:@gmail\.com)?
 1642256877	Makyen	panoramacharter\.ltd
-1642260233	Makyen	(?:info\.)?prudentrecovery(?:@gmail\.com)?
 1642262105	Makyen	codeberg\.org
 1642267235	Makyen	shoesfame\.com
 1642271832	cigien	(?-i:322lOFn)(?#bit.ly)
