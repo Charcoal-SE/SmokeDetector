@@ -633,6 +633,9 @@ items:
   - cory.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - crystal.ns.cloudflare.com.
+  - gordon.ns.cloudflare.com.
+- ns:
   - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
