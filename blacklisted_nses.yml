@@ -88,6 +88,9 @@ items:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
+  - harleigh.ns.cloudflare.com.
+  - jasper.ns.cloudflare.com.
+- ns:
   - ivy.ns.cloudflare.com.
   - joel.ns.cloudflare.com.
 - ns:
