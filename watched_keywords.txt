@@ -37202,3 +37202,4 @@
 1646814613	Makyen	parsers\.vc
 1646815097	tripleee	ourfilters\.com
 1646816912	tripleee	journeyjuice\.vn
+1646817766	tripleee	(?-i:^shirley raghu$)
