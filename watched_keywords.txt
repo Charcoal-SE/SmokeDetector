@@ -37198,3 +37198,4 @@
 1646810838	tripleee	ezeelogin\.com
 1646811338	tripleee	vazricknazari\.com
 1646811990	tripleee	e-signindia\.com
+1646814410	Makyen	ezeelogin(?!\.com)
