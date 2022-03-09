@@ -603,3 +603,4 @@ Devil_Ace
 (?-i:^AgarwalArchana$)
 (?-i:^Christa Elrod$)
 (?-i:^Mobina Jawahar$)
+(?-i:^Shira Ellis$)

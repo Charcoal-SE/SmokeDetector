@@ -36891,7 +36891,6 @@
 1646046925	Jeff Schaller	ordyslexie\.com
 1646046998	Jeff Schaller	248am\.com
 1646047071	Jeff Schaller	ortodoxia\.md
-1646048842	tripleee	(?-i:^Shira Ellis$)
 1646048859	tripleee	(?-i:^Jacob Willson$)
 1646052003	tripleee	anzeel\.co\.uk
 1646054768	tripleee	disti[\W_]*+corporation
