@@ -37218,3 +37218,4 @@
 1646837296	cigien	d(?:octo)?r[\W_]*+okoka
 1646837315	cigien	spellcastertemple453(?:@aol\.com)?
 1646837695	cigien	analytex\.app
+1646838577	tripleee	spellcaster\w+@(\w+\.)+com
