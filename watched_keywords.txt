@@ -37220,3 +37220,4 @@
 1646838577	tripleee	spellcaster\w+@(\w+\.)+com
 1646838731	tripleee	studyabroadupdates\.com
 1646842026	cigien	rincondelinformatico\.com
+1646848593	Ollie	fun\.classmovies88\.com
