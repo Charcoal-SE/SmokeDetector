@@ -1310,6 +1310,9 @@ items:
   - lady.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
+  - lady.ns.cloudflare.com.
+  - norm.ns.cloudflare.com.
+- ns:
   - lakas.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
