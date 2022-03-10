@@ -37232,3 +37232,4 @@
 1646891392	Makyen	(?-i:3KmPUWpAevY)(?#youtu.be)
 1646894984	tripleee	dailybinaryhub\.com
 1646895059	tripleee	tictactoebeast\.com
+1646895997	tripleee	(?-i:^Patrica(?:[A-Z]|\b))
