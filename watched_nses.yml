@@ -998,6 +998,9 @@ items:
   - guy.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
+  - guy.ns.cloudflare.com.
+  - paislee.ns.cloudflare.com.
+- ns:
   - gwen.ns.cloudflare.com.
   - hasslo.ns.cloudflare.com.
 - ns:
