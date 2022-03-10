@@ -535,9 +535,6 @@ items:
   - guy.ns.cloudflare.com.
 - ns:
   - cheryl.ns.cloudflare.com.
-  - jonah.ns.cloudflare.com.
-- ns:
-  - cheryl.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
   - chin.ns.cloudflare.com.
