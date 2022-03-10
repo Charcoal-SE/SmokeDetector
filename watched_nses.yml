@@ -1058,6 +1058,9 @@ items:
   - heather.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - hera.ns.cloudflare.com.
+  - kevin.ns.cloudflare.com.
+- ns:
   - ian.ns.cloudflare.com.
   - kate.ns.cloudflare.com.
 - ns:
