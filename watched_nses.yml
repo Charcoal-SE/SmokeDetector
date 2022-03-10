@@ -600,6 +600,9 @@ items:
   - coco.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
+  - cody.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
   - coleman.ns.cloudflare.com.
   - izabella.ns.cloudflare.com.
 - ns:
