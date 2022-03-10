@@ -37241,3 +37241,4 @@
 1646901233	tripleee	couponcage\.blogspot
 1646901250	tripleee	couponcage(?!\.(?:com|blogspot))
 1646902887	tripleee	wiki-updates\.com
+1646905598	tripleee	semarjitu
