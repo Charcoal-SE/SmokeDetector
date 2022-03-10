@@ -37238,3 +37238,4 @@
 1646899446	tripleee	burberryconstruction\.com
 1646899469	tripleee	burberry[\W_]*+construction(?!\.com(?<=burberryconstruction\.com))
 1646901217	tripleee	couponcage\.com
+1646901233	tripleee	couponcage\.blogspot
