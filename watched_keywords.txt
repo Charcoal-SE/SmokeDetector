@@ -26837,7 +26837,6 @@
 1614008280	Spevacus	fortmyersmobilemechanic\.com
 1614014267	Yatin	gimbaltop1\.com
 1614019184	cigien	gimbal[\W_]*+top[\W_]*+\d*+(?!\.com(?<=gimbaltop1\.com))
-1614020903	cigien	ias-singapore\.com
 1614021431	cigien	nestor\.sos\.pl
 1614021659	cigien	world[\W_]*+united[\W_]*+power[\W_]*+society(?:@gmail\.com)?
 1614022618	cigien	kinsun[\W_]*+packing(?!\.com(?<=kinsunpacking\.com))
