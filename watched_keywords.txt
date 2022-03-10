@@ -37236,3 +37236,4 @@
 1646897574	tripleee	sattebaaj
 1646899214	tripleee	vezlay\.com
 1646899446	tripleee	burberryconstruction\.com
+1646899469	tripleee	burberry[\W_]*+construction(?!\.com(?<=burberryconstruction\.com))
