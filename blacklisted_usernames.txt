@@ -606,3 +606,4 @@ Devil_Ace
 (?-i:^Shira Ellis$)
 (?-i:^Ezeelogin$)
 (?-i:^Miacharlotte$)
+(?-i:^couponcage$)
