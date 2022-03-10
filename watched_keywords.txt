@@ -37234,3 +37234,4 @@
 1646895997	tripleee	(?-i:^Patrica(?:[A-Z]|\b))
 1646896373	tripleee	ezeelogin(?!\.com)(?<!(?-i:^Ezeelogin$))
 1646897574	tripleee	sattebaaj
+1646899214	tripleee	vezlay\.com
