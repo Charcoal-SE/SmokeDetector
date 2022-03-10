@@ -1136,6 +1136,9 @@ items:
   - jarred.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - jasmine.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
   - jaxson.ns.cloudflare.com.
   - zainab.ns.cloudflare.com.
 - ns:
