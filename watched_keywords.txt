@@ -37274,3 +37274,4 @@
 1647005049	tripleee	(?-i:3J43gVj)(?# fiverr)
 1647005132	tripleee	(?-i:37gINP7)(?# fiverr)
 1647006108	tripleee	apkgodown\.com
+1647009238	Makyen	crypto[\W_]*+com
