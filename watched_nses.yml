@@ -1747,7 +1747,9 @@ items:
   disable: true
   ns: syrahost.com.
 - ns: greengeeks.com.
-- ns: supportaus.com.
+- comment: no longer resolves 2022-03-11
+  disable: true
+  ns: supportaus.com.
 - ns: 256gbserver.com.
 - comment: no longer responding 2020-04-02
   disable: true
