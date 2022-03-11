@@ -608,3 +608,4 @@ Devil_Ace
 (?-i:^Miacharlotte$)
 (?-i:^couponcage$)
 (?-i:^Amydoelly$)
+(?-i:^Sitara Gull$)
