@@ -1082,6 +1082,9 @@ items:
   - ines.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - ingrid.ns.cloudflare.com.
+  - jerry.ns.cloudflare.com.
+- ns:
   - iris.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
