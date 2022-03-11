@@ -1910,11 +1910,7 @@ items:
   - vip2.alidns.com.
 - ns: globat.com.
 - ns: idwebhost.id.
-- comment: no longer responding 2021-07-01
-  disable: true
-  ns:
-  - ns16225425293.a2dns.com.
-  - ns16225425298.a2dns.com.
+- ns: a2dns.com.
 - ns: flaunt7.com.
 - ns: ihc.ru.
 - ns: r53.com.ua.
