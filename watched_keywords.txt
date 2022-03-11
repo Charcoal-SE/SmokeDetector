@@ -37275,3 +37275,4 @@
 1647006108	tripleee	apkgodown\.com
 1647009238	Makyen	crypto[\W_]*+com
 1647019129	cigien	innosoft
+1647020783	EJoshuaS - Stand with Ukraine	technocrash\.online
