@@ -36257,7 +36257,6 @@
 1644414079	cigien	tabletopy\.com
 1644415061	Jeff Schaller	gexton\.com
 1644415759	cigien	(?-i:mRZf35tA1ebK4x1H7)(?#google forms)
-1644416118	cigien	baudcom\.cn
 1644417217	cigien	kirillibrahim\.medium\.com
 1644421121	tripleee	infotreeit\.com
 1644421292	tripleee	(?-i:^Sakshi Mehta$)
