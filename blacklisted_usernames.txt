@@ -607,3 +607,4 @@ Devil_Ace
 (?-i:^Ezeelogin$)
 (?-i:^Miacharlotte$)
 (?-i:^couponcage$)
+(?-i:^Amydoelly$)
