@@ -4491,3 +4491,4 @@ hashengines\.com
 baudcom\.cn
 fvrr\.co
 couponcage\.(?:blogspot\.)?com
+geetauniversity\.edu\.in
