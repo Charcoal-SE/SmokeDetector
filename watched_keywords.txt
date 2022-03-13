@@ -37308,3 +37308,4 @@
 1647180373	cigien	kdmaster\.com\.au
 1647180512	cigien	kdmaster(?!\.com\.au)
 1647180633	cigien	ibericatsoftware(?:@gmail\.com)?
+1647181151	cigien	(?-i:qga9tZuF)(?#discord)
