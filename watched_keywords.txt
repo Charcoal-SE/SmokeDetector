@@ -37307,3 +37307,4 @@
 1647175490	Makyen	(?-i:HABANERO)
 1647180373	cigien	kdmaster\.com\.au
 1647180512	cigien	kdmaster(?!\.com\.au)
+1647180633	cigien	ibericatsoftware(?:@gmail\.com)?
