@@ -609,3 +609,4 @@ Devil_Ace
 (?-i:^couponcage$)
 (?-i:^Amydoelly$)
 (?-i:^Sitara Gull$)
+dentcare[\W_]*dental
