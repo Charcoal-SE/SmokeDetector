@@ -37306,3 +37306,4 @@
 1647175472	Makyen	(?-i:MICRO[\W_]*+GAMING)
 1647175490	Makyen	(?-i:HABANERO)
 1647180373	cigien	kdmaster\.com\.au
+1647180512	cigien	kdmaster(?!\.com\.au)
