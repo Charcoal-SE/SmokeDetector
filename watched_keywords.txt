@@ -29475,7 +29475,6 @@
 1622465138	Nick	ecoboxfab\.com
 1622465286	Nick	Takeoff\s*Projects(?!\.com)
 1622465148	Nick	ecoboxfab(?!\.com)
-1622465600	tripleee	(?-i:^Datta$)
 1622467988	Nick	happyfashion\.net
 1622475685	Makyen	info\.rp@inbox\.lt
 1622482506	Xnero	namemixers\.com
