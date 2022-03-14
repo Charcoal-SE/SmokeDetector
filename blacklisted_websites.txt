@@ -4492,3 +4492,4 @@ baudcom\.cn
 fvrr\.co
 couponcage\.(?:blogspot\.)?com
 geetauniversity\.edu\.in
+handsomeincome24\.blogspot
