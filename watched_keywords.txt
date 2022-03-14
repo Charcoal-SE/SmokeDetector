@@ -37324,3 +37324,4 @@
 1647242244	tripleee	zinger[\W_]*art(?!\.in(?<=zingerart\.in))(?<!(?-i:^zingerart$))
 1647245315	tripleee	executivecls\.com
 1647245465	tripleee	jeddah4cleaning\.com
+1647246865	tripleee	waywedesign\.com
