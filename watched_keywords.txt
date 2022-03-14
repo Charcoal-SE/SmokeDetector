@@ -37135,7 +37135,6 @@
 1646650032	Mast	securiumsolutions\.org
 1646651510	Mast	ogonn\.in
 1646651609	tripleee	groovyweb\.co
-1646652783	tripleee	itsfoss\.com
 1646654635	tripleee	homerootspm\.com
 1646654913	Jeff Schaller	jrnews\.net
 1646655456	Jeff Schaller	screativesoft\.com
