@@ -37322,3 +37322,4 @@
 1647241658	tripleee	(?-i:^YYJJJ$)
 1647242147	tripleee	houze\.com\.sg
 1647242244	tripleee	zinger[\W_]*art(?!\.in(?<=zingerart\.in))(?<!(?-i:^zingerart$))
+1647245315	tripleee	executivecls\.com
