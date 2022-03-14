@@ -578,6 +578,7 @@ Devil_Ace
 (?-i:^Nancy Acer$)
 (?-i:^user476172$)
 (?-i:^qnicit it host$)
+(?-i:^steve evans$)
 ^(?:my[\W_]*+)?amazon[\W_]*prime$
 (?-i:^Juan Mark$)
 (?-i:^iam\.awslagi$)
