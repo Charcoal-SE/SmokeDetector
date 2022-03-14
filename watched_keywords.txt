@@ -21139,7 +21139,6 @@
 1594886072	Xnero	sarandaforest\.in
 1594886173	Xnero	coinbreze
 1594886314	Xnero	75health\.com
-1594886374	Xnero	poecurrency\.com
 1594886841	Xnero	Askmeoffers(?!\.com)
 1594889771	Xnero	chronodivers\.com
 1594906863	Xnero	zaibis(?!\.com)
