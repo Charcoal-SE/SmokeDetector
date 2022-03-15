@@ -33871,7 +33871,6 @@
 1636975889	tripleee	hsewatch\.com
 1636977070	Jeff Schaller	satisfiedshoes\.com
 1636978216	tripleee	(?-i:^Mammothic Films$)
-1636978283	tripleee	myinfodiary\.com
 1636980128	tripleee	jivo\.in
 1636980488	tripleee	webupro\.com
 1636980879	tripleee	betterlyf\.com
