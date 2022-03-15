@@ -36687,7 +36687,6 @@
 1645550136	Ollie	femalechennaiescort\.com
 1645550154	Ollie	payalrostogi\.com
 1645550170	Ollie	madampayal\.com
-1645550756	Ollie	investmentpro[\W_]*+at[\W_]*+writeme[\W_]*+dot[\W_]*+com
 1645552871	cigien	reposcore\.dev
 1645553026	cigien	blog\.bajajsumit\.com
 1645553997	cigien	technoupaaye\.com
