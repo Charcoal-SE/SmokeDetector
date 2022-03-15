@@ -2488,3 +2488,9 @@ items:
 - ns: trdns.com.
 - ns: dns-he.com.
 - ns: betalarb.com.
+- ns:
+  - dns1.p08.nsone.net.
+  - dns2.p08.nsone.net.
+  - dns3.p08.nsone.net.
+  - dns4.p08.nsone.net.
+
