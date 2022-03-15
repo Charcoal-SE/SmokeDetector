@@ -2594,3 +2594,4 @@ amberlottotemple(?:@yahoo\.com)?
 quick[\W_]*+books[\W_]*+helpline
 dr\W*vinod\W*raina
 fastservice(?:\.|[\W_]*+dot[\W_]*+)com
+^Mar, (?:the )?cashier
