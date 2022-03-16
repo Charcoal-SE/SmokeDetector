@@ -274,6 +274,9 @@ items:
   - may.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
+  - mimi.ns.cloudflare.com.
+- ns:
+  - aragorn.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
