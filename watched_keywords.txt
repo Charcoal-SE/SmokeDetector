@@ -37408,3 +37408,4 @@
 1647458459	cigien	cybergeeksquad\.co
 1647460371	cigien	shared2fa\.com
 1647468564	Ryan M	cgmmonitors\.com
+1647468898	Makyen	cgm[\W_]*+monitors(?!\.com(?<=cgmmonitors\.com))
