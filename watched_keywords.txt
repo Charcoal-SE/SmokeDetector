@@ -37395,3 +37395,4 @@
 1647431774	Cody Gray	drhp\.ir
 1647431796	tripleee	(?-i:^Bhaskar Rana$)
 1647443793	cigien	aliciaortego\.com
+1647444393	Jeff Schaller	allegianthighfly\.com
