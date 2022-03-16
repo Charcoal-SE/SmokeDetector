@@ -613,3 +613,4 @@ dentcare[\W_]*dental
 (?-i:^zingerart$)
 (?-i:^Peter123$)
 Aaron[\W_]*Pointing
+(?-i:^rastojuste$)
