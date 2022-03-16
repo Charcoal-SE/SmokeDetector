@@ -37377,3 +37377,4 @@
 1647416623	Cody Gray	biggbvoting\.com
 1647416682	Cody Gray	Bigg[\W_]*Boss[\W_]*(?:Hindi[\W_]*)?vote
 1647419537	Cody Gray	topbestwriter\.com
+1647421170	Cody Gray	redotexforsale\.com
