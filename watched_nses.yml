@@ -960,6 +960,9 @@ items:
   - james.ns.cloudflare.com.
 - ns:
   - gina.ns.cloudflare.com.
+  - kai.ns.cloudflare.com.
+- ns:
+  - gina.ns.cloudflare.com.
   - kianchau.ns.cloudflare.com.
 - ns:
   - gina.ns.cloudflare.com.
