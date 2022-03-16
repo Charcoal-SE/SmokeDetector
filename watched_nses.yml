@@ -1831,6 +1831,9 @@ items:
   - cns2031.hostgator.com.
   - cns2032.hostgator.com.
 - ns:
+  - cns65.hostgator.com.
+  - cns66.hostgator.com.
+- ns:
   - ns4027.hostgator.com.
   - ns4028.hostgator.com.
 - ns:
