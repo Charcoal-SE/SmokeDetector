@@ -37390,3 +37390,4 @@
 1647427565	Cody Gray	trackobit\.com
 1647427586	Cody Gray	TrackoBit
 1647429085	tripleee	(?-i:^Amara albert$)
+1647429239	Glorfindel	utelectrode
