@@ -336,6 +336,9 @@ items:
   - bailey.ns.cloudflare.com.
   - bill.ns.cloudflare.com.
 - ns:
+  - bailey.ns.cloudflare.com.
+  - patryk.ns.cloudflare.com.
+- ns:
   - barbara.ns.cloudflare.com.
   - jack.ns.cloudflare.com.
 - ns:
