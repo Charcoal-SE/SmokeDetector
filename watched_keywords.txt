@@ -37424,3 +37424,4 @@
 1647538943	Ollie	prourdu\.pk
 1647539777	Glorfindel	apkgrape\.com
 1647541631	Ollie	(?-i:Ss9CYYA0_YgpGMfg)(?# t.me)
+1647541710	Makyen	apkgrape(?!\.com)
