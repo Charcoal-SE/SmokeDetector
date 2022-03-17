@@ -37425,3 +37425,4 @@
 1647539777	Glorfindel	apkgrape\.com
 1647541631	Ollie	(?-i:Ss9CYYA0_YgpGMfg)(?# t.me)
 1647541710	Makyen	apkgrape(?!\.com)
+1647541727	Makyen	pirlotv[\W_]*+apk
