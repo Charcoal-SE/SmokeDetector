@@ -37428,3 +37428,4 @@
 1647541727	Makyen	pirlotv[\W_]*+apk
 1647541822	Ryan M	boost-social-media\.com
 1647544435	cigien	gool\.pk
+1647545185	Makyen	(?-i:aung\.myo\.zeo)(?#facebook.com)
