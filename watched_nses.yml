@@ -334,6 +334,9 @@ items:
   - laura.ns.cloudflare.com.
 - ns:
   - bailey.ns.cloudflare.com.
+  - bayan.ns.cloudflare.com.
+- ns:
+  - bailey.ns.cloudflare.com.
   - bill.ns.cloudflare.com.
 - ns:
   - bailey.ns.cloudflare.com.
