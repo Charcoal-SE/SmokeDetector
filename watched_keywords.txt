@@ -3996,7 +3996,6 @@
 1531486600	Glorfindel	jrdtours\.com
 1531487950	Andy	worldbit\.com
 1531495109	Glorfindel	clouddesktoponline\.com
-1531495118	Glorfindel	apps4rent\.com
 1531495884	doppelgreener	intertext\.es
 1531504075	Makyen	spaceuniversal\.com
 1531504115	Makyen	ENRIQUEHACKDEMON11
