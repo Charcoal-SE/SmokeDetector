@@ -37418,3 +37418,4 @@
 1647508581	tripleee	(?-i:^Nova Lucy$)
 1647510009	tripleee	chinaprinting4u\.com
 1647516408	tripleee	heavenofgamers\.com
+1647520314	cigien	hinz\.pk
