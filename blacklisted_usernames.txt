@@ -615,3 +615,4 @@ dentcare[\W_]*dental
 Aaron[\W_]*Pointing
 (?-i:^rastojuste$)
 (?-i:^Gyr Tech$)
+(?-i:^sophiaabigail$)
