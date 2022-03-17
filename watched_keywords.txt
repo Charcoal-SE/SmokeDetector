@@ -37412,3 +37412,4 @@
 1647476222	cigien	(?:sales@)?ovttech\.com
 1647484303	cigien	visionnav\.com
 1647484381	cigien	vision[\W_]*+nav(?!\.com(?<=visionnav\.com))
+1647489143	Makyen	brigh?teye
