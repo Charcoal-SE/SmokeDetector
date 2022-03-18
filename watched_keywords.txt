@@ -37445,3 +37445,4 @@
 1647601946	tripleee	mallareddyinfraprojects\.in
 1647603859	tripleee	gaminginform\.com
 1647614916	Jeff Schaller	bjjandmore\.com
+1647615160	Makyen	bjj[\W_]*+and[\W_]*+more(?!\.com(?<=bjjandmore\.com))
