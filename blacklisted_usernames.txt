@@ -617,3 +617,4 @@ Aaron[\W_]*Pointing
 (?-i:^Gyr Tech$)
 (?-i:^sophiaabigail$)
 (?-i:^Elevatoz loyalty$)
+(?-i:^user37920$)
