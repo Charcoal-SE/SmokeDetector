@@ -37436,3 +37436,4 @@
 1647573010	cigien	muktokosh\.com
 1647573158	Makyen	muktokosh(?!\.com)
 1647578838	Makyen	aws-services\.info
+1647580218	Robert Longson	cna-traininginstitute\.com
