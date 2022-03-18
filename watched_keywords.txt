@@ -37443,3 +37443,4 @@
 1647587043	tripleee	elevatoz[\W_]*+loyalty(?!\.com(?<=elevatozloyalty\.com))
 1647596273	Glorfindel	user37920
 1647600290	tripleee	(?-i:^tufi syed$)
+1647601946	tripleee	mallareddyinfraprojects\.in
