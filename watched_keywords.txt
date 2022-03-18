@@ -37441,7 +37441,6 @@
 1647584048	tripleee	santanu\.biz
 1647585204	Cody Gray	wonderwayimmigration\.com
 1647587043	tripleee	elevatoz[\W_]*+loyalty(?!\.com(?<=elevatozloyalty\.com))
-1647596273	Glorfindel	user37920
 1647600290	tripleee	(?-i:^tufi syed$)
 1647601946	tripleee	mallareddyinfraprojects\.in
 1647603859	tripleee	gaminginform\.com
