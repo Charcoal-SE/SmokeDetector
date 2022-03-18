@@ -37447,3 +37447,4 @@
 1647614916	Jeff Schaller	bjjandmore\.com
 1647615160	Makyen	bjj[\W_]*+and[\W_]*+more(?!\.com(?<=bjjandmore\.com))
 1647629996	cigien	povverful\.com
+1647640191	Ryan M	networthypeople\.com
