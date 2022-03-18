@@ -37434,3 +37434,4 @@
 1647562316	cigien	(?-i:uoMvvN9DPpGRqzZ17)(?#google forms)
 1647571079	Makyen	987674838@qq\.com
 1647573010	cigien	muktokosh\.com
+1647573158	Makyen	muktokosh(?!\.com)
