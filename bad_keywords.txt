@@ -2567,7 +2567,6 @@ xpress[\W_]*+auto[\W_]*+parts(?!\.co\.nz(?<=xpressautoparts\.co\.nz))
 deez[\W_]*+nuts
 top[\W_]*+domain[\W_]*+sellers
 officialhackingcompany(?:@gmail\.com)?
-<p>quote</p>
 𝗡𝘂𝗺𝗯𝗲𝗿
 letâ€™s
 weightbreakthru(?=\.com\b)(?#Abuse the keyword blacklist to put more weight on this domain, per mod request to autoflag it)
