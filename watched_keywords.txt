@@ -37452,3 +37452,4 @@
 1647671909	Cody Gray	uidai-aadharhelp\.in
 1647673737	Cody Gray	checkmoz\.com
 1647673840	Cody Gray	Check[\W_]*Moz(?!\.com(?<=checkmoz\.com))
+1647681789	Cody Gray	anyvideosdownloader\.com
