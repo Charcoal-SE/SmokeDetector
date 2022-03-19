@@ -619,3 +619,4 @@ Aaron[\W_]*Pointing
 (?-i:^Elevatoz loyalty$)
 (?-i:^user37920$)
 Visualytes
+(?-i:^Ganesh Gurung$)
