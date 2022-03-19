@@ -506,9 +506,10 @@ class Rule:
             try:
                 compiled_regex = self.compiled_regex
             except AttributeError:
+                regex.cache_all(False)  # Don't keep the regex in the cache.
                 compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
+                regex.cache_all(True)
                 self.compiled_regex = compiled_regex
-                regex.purge()  # Don't keep the regex in the cache.
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
