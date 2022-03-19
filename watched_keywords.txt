@@ -37459,3 +37459,4 @@
 1647688213	Cody Gray	Nivito(?!\.pt(?<=nivito\.pt))
 1647703621	cigien	mlregex\.com
 1647704761	cigien	techconsumptions\.com
+1647706079	cigien	comfortablets\.com
