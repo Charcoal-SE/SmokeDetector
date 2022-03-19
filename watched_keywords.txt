@@ -37448,3 +37448,4 @@
 1647615160	Makyen	bjj[\W_]*+and[\W_]*+more(?!\.com(?<=bjjandmore\.com))
 1647629996	cigien	povverful\.com
 1647640191	Ryan M	networthypeople\.com
+1647654952	Ryan M	instazoomhd\.com
