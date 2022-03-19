@@ -14929,7 +14929,6 @@
 1577520260	Eliah Kagan	codeplayon\.com
 1577524472	Eliah Kagan	sattakingfirst\.in
 1577524484	Eliah Kagan	sattakingtoday\.com
-1577526608	Eliah Kagan	icareprost\.com
 1577542505	Nisse Engström	cltech\.in
 1577543680	Nisse Engström	technodani\.com
 1577544795	Nisse Engström	pinoytvreplaychannel\.su
