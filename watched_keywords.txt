@@ -37455,3 +37455,4 @@
 1647681789	Cody Gray	anyvideosdownloader\.com
 1647681973	Cody Gray	any[\W_]*(?:social[\W_]*(?:media[\W_]*)?)?videos?[\W_]*download(?:er)?
 1647682632	Cody Gray	forex-sig\.com
+1647684865	Cody Gray	gemccy20
