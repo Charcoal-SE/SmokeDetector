@@ -268,6 +268,8 @@ def blacklist_integrity_check():
     bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + glob('watched_*.txt')
     seen = dict()
     errors = []
+    city_list = ['test']
+    regex.cache_all(False)
     for bl_file in bl_files:
         with open(bl_file, 'r', encoding="utf-8") as lines:
             for lineno, line in enumerate(lines, 1):
@@ -279,13 +281,22 @@ def blacklist_integrity_check():
                     errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
                 elif bl_file.startswith('watched_'):
                     line = line.split('\t')[2]
-
+                if 'numbers' not in bl_file:
+                    try:
+                        regex.compile(line, regex.UNICODE, city=city_list, ignore_unused=True)
+                    except Exception:
+                        (exctype, value, traceback_or_message) = sys.exc_info()
+                        exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
+                        errors.append("{0}:{1}:Regex fails to compile:r'''{2}''':{3}".format(bl_file, lineno,
+                                                                                             line.rstrip('\n'),
+                                                                                             exception_only))
                 line = pcre_comment.sub("", line)
                 if line in seen:
                     errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
                         bl_file, lineno, line.rstrip('\n'), seen[line]))
                 else:
                     seen[line] = '{0}:{1}'.format(bl_file, lineno)
+    regex.cache_all(True)
     return errors
 
 
