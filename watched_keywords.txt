@@ -37453,3 +37453,4 @@
 1647673737	Cody Gray	checkmoz\.com
 1647673840	Cody Gray	Check[\W_]*Moz(?!\.com(?<=checkmoz\.com))
 1647681789	Cody Gray	anyvideosdownloader\.com
+1647681973	Cody Gray	any[\W_]*(?:social[\W_]*(?:media[\W_]*)?)?videos?[\W_]*download(?:er)?
