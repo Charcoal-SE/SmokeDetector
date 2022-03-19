@@ -92,7 +92,7 @@ To set up SmokeDetector in a Docker container, follow the steps below.
 2. Create a container from the image you just built
 
    ```shell
-   docker create --name=mysmokedetector smokedetector:$DATE
+   docker create --name=mysmokedetector smokey:$DATE
    ```
 
 3. Start the container.
