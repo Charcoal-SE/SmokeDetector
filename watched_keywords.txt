@@ -7393,7 +7393,6 @@
 1549521294	iBug	best(?<=<a[^>]*>\W*best)(?#best as first word in link text; fixed 1609526651)
 1549522385	Tetsuya Yamamoto	tc-ww\.com
 1549525288	Wai Ha Lee	thenewsgeeks\.com
-1549528565	Shree	glorioushimalaya\.com
 1549530652	Zoe	howtoopenrarfile\.net
 1549531171	Tetsuya Yamamoto	classiccitylegal\.com
 1549531361	Tetsuya Yamamoto	webislandx\.com
