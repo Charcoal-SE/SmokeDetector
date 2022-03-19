@@ -2595,3 +2595,4 @@ dr\W*vinod\W*raina
 fastservice(?:\.|[\W_]*+dot[\W_]*+)com
 ^Mar, (?:the )?cashier
 investmentpro[\W_]*+at[\W_]*+writeme[\W_]*+dot[\W_]*+com
+blockquote>\s*+<p>quote</p>\s*+</blockquote
