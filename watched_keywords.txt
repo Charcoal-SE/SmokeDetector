@@ -37477,3 +37477,4 @@
 1647800462	Makyen	glimpse[\W_]*+4[\W_]*+you(?!\.blogspot(?<=glimpse4you\.blogspot))
 1647803235	Makyen	jumpgrowth\.com
 1647805971	Makyen	solveigmm\.com
+1647811379	cigien	(?-i:ZNBLnsj9EGYXHYHf7)(?#google form)
