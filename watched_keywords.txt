@@ -37474,3 +37474,4 @@
 1647780631	Makyen	827312424@qq\.com
 1647788684	cigien	kunal-tech-official\.blogspot
 1647800440	Makyen	glimpse4you\.blogspot
+1647800462	Makyen	glimpse[\W_]*+4[\W_]*+you(?!\.blogspot(?<=glimpse4you\.blogspot))
