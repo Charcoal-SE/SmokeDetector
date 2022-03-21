@@ -37489,3 +37489,4 @@
 1647846719	tripleee	(?-i:^Mohanlal Pandya$)
 1647846762	tripleee	buylikesfollowers\.ca
 1647850329	tripleee	printercustomerhelp\.com
+1647850448	tripleee	touchstone[\W_]*+infotech(?!\.com(?<=touchstoneinfotech\.com))
