@@ -24448,7 +24448,6 @@
 1606464883	tripleee	laxminarasimhahospital\.in
 1606473203	tripleee	thegadgethelp\.com
 1606473220	tripleee	lornemarrfitafter45\.ca
-1606475542	tripleee	protigwelders\.com
 1606477967	tripleee	escalesolutions\.com
 1606478016	tripleee	aquafreshropurifier\.com
 1606480687	Mast	analaticg2(?:@gmail\.com)?
