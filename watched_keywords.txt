@@ -37487,3 +37487,4 @@
 1647840920	tripleee	nft[\W_]*+drops
 1647840980	tripleee	sunrisehospitals\.in
 1647846719	tripleee	(?-i:^Mohanlal Pandya$)
+1647846762	tripleee	buylikesfollowers\.ca
