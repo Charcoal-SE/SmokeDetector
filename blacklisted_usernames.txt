@@ -620,3 +620,4 @@ Aaron[\W_]*Pointing
 (?-i:^user37920$)
 Visualytes
 (?-i:^Ganesh Gurung$)
+(?-i:^Candace Craig$)
