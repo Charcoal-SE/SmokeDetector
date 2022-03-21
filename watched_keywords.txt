@@ -25376,7 +25376,6 @@
 1609994000	cigien	zengliyang\.wordpress
 1609996426	cigien	theinspirespy\.com
 1609999732	tripleee	contact-customer-service\.net
-1609994202	cigien	motherboardinfo\.com
 1610000630	cigien	duck[\W_]*+dynasty[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:official|store|\d++|[\da-f]{5,}+)s?)*
 1610003036	tripleee	jiomarts\.xyz
 1610008386	tripleee	getlove-vipladies1\.com
