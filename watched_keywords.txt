@@ -37494,3 +37494,4 @@
 1647860888	tripleee	challenge[\W_]*+coins
 1647862012	tripleee	thinkwithniche\.in
 1647863276	tripleee	c4changer\.com
+1647866186	tripleee	zaracomputers\.com
