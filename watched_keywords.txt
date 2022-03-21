@@ -36580,7 +36580,6 @@
 1645268504	Jeff Schaller	cinemana\.co
 1645273538	Jeff Schaller	techroses\.com
 1645273594	Jeff Schaller	rvdmatrimonial\.in
-1645280050	cigien	leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1645280100	cigien	neemopani\.com
 1645280169	cigien	websitedesignghaziabad\.com
 1645280946	cigien	napbots\.com
