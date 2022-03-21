@@ -1676,6 +1676,9 @@ items:
   - sara.ns.cloudflare.com.
   - yahir.ns.cloudflare.com.
 - ns:
+  - sima.ns.cloudflare.com.
+  - woz.ns.cloudflare.com.
+- ns:
   - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
