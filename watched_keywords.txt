@@ -37495,3 +37495,4 @@
 1647862012	tripleee	thinkwithniche\.in
 1647863276	tripleee	c4changer\.com
 1647866186	tripleee	zaracomputers\.com
+1647867188	cigien	hyderabad[\W_]*+service[\W_]*+centers(?!\.com(?<=hyderabadservicecenters\.com))
