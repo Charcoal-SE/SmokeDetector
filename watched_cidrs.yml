@@ -2708,7 +2708,9 @@ items:
 - ip: 35.166.58.51
 - ip: 35.172.94.1
 - ip: 35.185.17.71
-- ip: 35.185.44.232
+- comment: several high-profile sites, includig docs.gitlab.com and various gitlab.io
+  disable: true
+  ip: 35.185.44.232
 - ip: 35.193.41.128
 - ip: 35.200.182.220
 - ip: 35.202.42.57
