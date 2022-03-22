@@ -37510,3 +37510,4 @@
 1647922025	cigien	engineeringpaper\.xyz
 1647924879	Cody Gray	indiansuccessstories\.com
 1647925299	Cody Gray	mcqsacademy\.com
+1647925327	Cody Gray	9th[\W_]*class[\W_]*chemistry
