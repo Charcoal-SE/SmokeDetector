@@ -357,6 +357,9 @@ items:
   - barbara.ns.cloudflare.com.
   - roan.ns.cloudflare.com.
 - ns:
+  - bart.ns.cloudflare.com.
+  - candy.ns.cloudflare.com.
+- ns:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
