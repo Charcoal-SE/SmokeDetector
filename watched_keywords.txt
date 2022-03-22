@@ -37541,3 +37541,4 @@
 1647948373	Cody Gray	united[\W_]*airlines[\W_]*lost[\W_]*(?:and|&)[\W_]*found
 1647951494	Cody Gray	tcnews360\.blogspot
 1647953566	tripleee	(?-i:^Henry Walter$)
+1647954817	Jeff Schaller	diginerds\.co
