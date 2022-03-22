@@ -37517,3 +37517,4 @@
 1647931058	Cody Gray	firearms\.deals
 1647932263	Cody Gray	wheelsofmotor\.com
 1647932285	Cody Gray	Wheels[\W_]*of[\W_]*Motor(?!\.com(?<=wheelsofmotor\.com))
+1647932335	Cody Gray	kanyewestmerch\.ltd
