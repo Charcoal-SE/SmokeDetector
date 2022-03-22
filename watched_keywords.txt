@@ -30902,7 +30902,6 @@
 1627101431	cigien	ultratechstudio\.com
 1627102335	cigien	professionalwritingservices\.in
 1627102650	cigien	bellefever\.com\.au
-1627107734	Makyen	solutionbuggy\.com
 1627107750	Makyen	solutionbuggy(?!\.com)
 1627107782	Ryan M	yoonet\.in
 1627108104	Ryan M	food[\W_]*+technology[\W_]*+consultants?
