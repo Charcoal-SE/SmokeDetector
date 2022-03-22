@@ -37512,3 +37512,4 @@
 1647925299	Cody Gray	mcqsacademy\.com
 1647925327	Cody Gray	9th[\W_]*class[\W_]*chemistry
 1647928401	Cody Gray	rubinasekh\.com
+1647928555	Makyen	rubina[\W_]*+sekh(?!\.com(?<=rubinasekh\.com))
