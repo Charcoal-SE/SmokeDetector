@@ -37513,3 +37513,4 @@
 1647925327	Cody Gray	9th[\W_]*class[\W_]*chemistry
 1647928401	Cody Gray	rubinasekh\.com
 1647928555	Makyen	rubina[\W_]*+sekh(?!\.com(?<=rubinasekh\.com))
+1647928714	Cody Gray	globalcomputers\.pk
