@@ -37542,3 +37542,4 @@
 1647951494	Cody Gray	tcnews360\.blogspot
 1647953566	tripleee	(?-i:^Henry Walter$)
 1647954817	Jeff Schaller	diginerds\.co
+1647954834	Jeff Schaller	Diginerds
