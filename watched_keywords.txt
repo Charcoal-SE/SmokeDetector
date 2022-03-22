@@ -37515,3 +37515,4 @@
 1647928555	Makyen	rubina[\W_]*+sekh(?!\.com(?<=rubinasekh\.com))
 1647928714	Cody Gray	globalcomputers\.pk
 1647931058	Cody Gray	firearms\.deals
+1647932263	Cody Gray	wheelsofmotor\.com
