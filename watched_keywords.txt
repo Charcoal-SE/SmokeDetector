@@ -37538,3 +37538,4 @@
 1647947440	tripleee	genexdbs\.com
 1647948189	Cody Gray	pakurangaliquorspot\.co\.nz
 1647948326	Cody Gray	bookunitedairlines\.com
+1647948373	Cody Gray	united[\W_]*airlines[\W_]*lost[\W_]*(?:and|&)[\W_]*found
