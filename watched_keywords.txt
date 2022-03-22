@@ -35132,7 +35132,6 @@
 1641207010	tripleee	afroid\.net
 1641208753	tripleee	divinecopper\.com
 1641209035	Jeff Schaller	chess-boards\.com
-1641210239	tripleee	healthcarthub\.com
 1641211900	tripleee	handmadefortoday\.com
 1641212028	tripleee	the[\W_]*+soorat
 1641212962	tripleee	(?-i:^kishore jatoth$)
