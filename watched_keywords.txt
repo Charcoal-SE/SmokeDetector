@@ -37521,7 +37521,6 @@
 1647932943	Cody Gray	pomonanyc\.com
 1647932966	Cody Gray	autismescapes\.org
 1647932990	Cody Gray	irpel\.org
-1647933012	Cody Gray	cinnachroma[\W_]*reviews
 1647934290	Cody Gray	uiuxexplorer(?:@gmail\.com)?
 1647934685	Makyen	z989[\W_]*+casino(?!\.com(?<=z989casino\.com))
 1647934841	Cody Gray	Quick[\W_]*Transcription[\W_]*Service(?!\.com(?<=quicktranscriptionservice\.com))
