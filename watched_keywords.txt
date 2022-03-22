@@ -37526,4 +37526,3 @@
 1647934685	Makyen	z989[\W_]*+casino(?!\.com(?<=z989casino\.com))
 1647934841	Cody Gray	Quick[\W_]*Transcription[\W_]*Service(?!\.com(?<=quicktranscriptionservice\.com))
 1647936916	Makyen	lean[\W_]*+start[\W_]*+keto(?:[\W_]*+(?:review|buy|\d++|[\da-f]{5,}+)s?)*
-1647937070	Ryan M	cinnachroma
