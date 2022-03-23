@@ -231,3 +231,6 @@ items:
 - ns: symbolhost.com.
 - ns: shoviv.com.
 - ns: hndservers.net.
+- ns:
+  - 2001a.trouble-free.net.
+  - 2001b.trouble-free.net.
