@@ -2182,7 +2182,6 @@ items:
 - ns: systemdns.com.
 - ns: whitelabelwebserver.com.
 - ns: 24xservice.com.
-- ns: zonedns.vn.
 - ns: hostingraja.in.
 - ns: hostingraja.org.
 - ns: bigwighosting.com.
