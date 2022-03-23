@@ -37575,3 +37575,4 @@
 1648029732	Cody Gray	Zomato[\W_]*clone
 1648029815	Cody Gray	(?-i:^dajiang lu$)
 1648031475	tripleee	bashoswap\.finance
+1648032169	Cody Gray	maxtechhealth\.com
