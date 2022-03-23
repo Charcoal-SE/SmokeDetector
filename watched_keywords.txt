@@ -37577,3 +37577,4 @@
 1648031475	tripleee	bashoswap\.finance
 1648032169	Cody Gray	maxtechhealth\.com
 1648032851	Cody Gray	Naresh[\W_]*I[\W_]*T(?:echnologies)?(?!\.com(?<=nareshit\.com))
+1648034899	tripleee	ingolin\.com
