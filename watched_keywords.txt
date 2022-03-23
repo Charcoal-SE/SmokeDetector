@@ -34782,7 +34782,6 @@
 1640002654	tripleee	ukapmp\.co\.uk
 1640004478	tripleee	(?-i:wLMPU8wL2lQ)(?# youtube)
 1640006931	tripleee	dragonflyaerospace\.com
-1640016146	Spevacus	lionjek\.com
 1640019737	cigien	nilesoft\.org
 1640019809	cigien	eta-govt\.com
 1640020383	cigien	cleverprogrammer\.com
