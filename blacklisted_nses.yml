@@ -232,5 +232,5 @@ items:
 - ns: shoviv.com.
 - ns: hndservers.net.
 - ns:
-  - 2001a.trouble-free.net.
-  - 2001b.trouble-free.net.
+  - dns2001a.trouble-free.net.
+  - dns2001b.trouble-free.net.
