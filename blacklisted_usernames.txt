@@ -624,3 +624,4 @@ Visualytes
 (?-i:^Self Studys$)
 (?-i:^Volkan Scarlet$)
 (?-i:^NareshIT$)
+(?-i:^Bloom[\W_]*Enterprisess?$)
