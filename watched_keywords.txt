@@ -37563,3 +37563,4 @@
 1648018278	tripleee	(?-i:^emily bell$)
 1648019603	Cody Gray	thewoodlands-garagedoors\.com
 1648019641	Cody Gray	oyova\.com
+1648021553	Cody Gray	finansportali\.net
