@@ -37579,3 +37579,4 @@
 1648032851	Cody Gray	Naresh[\W_]*I[\W_]*T(?:echnologies)?(?!\.com(?<=nareshit\.com))
 1648034899	tripleee	ingolin\.com
 1648035251	Cody Gray	(?-i:^juliastefan$)
+1648036309	Cody Gray	astroassociates\.com
