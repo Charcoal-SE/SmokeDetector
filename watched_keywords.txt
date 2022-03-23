@@ -37564,3 +37564,4 @@
 1648019603	Cody Gray	thewoodlands-garagedoors\.com
 1648019641	Cody Gray	oyova\.com
 1648021553	Cody Gray	finansportali\.net
+1648021597	Cody Gray	(?-i:^serk_atici$)
