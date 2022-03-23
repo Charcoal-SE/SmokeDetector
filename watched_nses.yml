@@ -2260,6 +2260,11 @@ items:
   - ns-a2.cloud.z.com.
   - ns-a3.cloud.z.com.
 - ns:
+  - ns-1264.awsdns-30.org.
+  - ns-1629.awsdns-11.co.uk.
+  - ns-462.awsdns-57.com.
+  - ns-966.awsdns-56.net.
+- ns:
   - ns-1270.awsdns-30.org.
   - ns-1890.awsdns-44.co.uk.
   - ns-591.awsdns-09.net.
