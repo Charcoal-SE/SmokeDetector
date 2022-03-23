@@ -37555,3 +37555,4 @@
 1648007782	Cody Gray	(?<!preview\.)codecanyon\.net\/(?:user|item)\/
 1648008073	Cody Gray	imagekit\.io\/\?utm_
 1648011917	Cody Gray	accountingadvice\.co
+1648014301	tripleee	(?-i:^Fakhri Huda Awalin$)
