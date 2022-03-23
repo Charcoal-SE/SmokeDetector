@@ -37580,3 +37580,4 @@
 1648034899	tripleee	ingolin\.com
 1648035251	Cody Gray	(?-i:^juliastefan$)
 1648036309	Cody Gray	astroassociates\.com
+1648036333	Cody Gray	Astro[\W_]*Associates(?!\.com(?<=astroassociates\.com))
