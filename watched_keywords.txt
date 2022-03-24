@@ -37643,4 +37643,3 @@
 1648117984	tripleee	amazingtalker\.com
 1648118495	Cody Gray	CISA[\W_]*certification
 1648118778	Cody Gray	selector\.ink
-1648118795	Cody Gray	rs7\.com
