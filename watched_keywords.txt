@@ -37654,3 +37654,4 @@
 1648152395	cigien	tammibriggs
 1648160026	cigien	darknetekona\.com
 1648160353	Cody Gray	darknetekona(?!\.com(?<=darknetekona\.com))
+1648161745	Cody Gray	keto[\W_]*(?:strong|plus)[\W_]*pastillas
