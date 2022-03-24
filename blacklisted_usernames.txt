@@ -625,3 +625,4 @@ Visualytes
 (?-i:^Volkan Scarlet$)
 (?-i:^NareshIT$)
 (?-i:^Bloom[\W_]*Enterprisess?$)
+(?-i:^Teddy bear$)
