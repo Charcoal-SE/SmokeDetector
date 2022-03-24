@@ -37623,3 +37623,4 @@
 1648104158	Ryan M	web[\W_]*+solution[\W_]*+centre(?!\.com(?<=websolutioncentre\.com))
 1648104237	Ryan M	nivito\.be
 1648104934	Cody Gray	jeevanweddingarts\.in
+1648106150	Ryan M	soldrit\.com
