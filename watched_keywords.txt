@@ -37649,3 +37649,4 @@
 1648128221	tripleee	edulete(?!\.in)(?<!(?-i:^Edulete$))
 1648129715	cigien	sunrise[\W_]*+vietnam
 1648138610	Ollie	marincountyproperties\.com
+1648141432	Jeff Schaller	(?-i:^Adgroups)
