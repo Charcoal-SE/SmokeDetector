@@ -37655,3 +37655,4 @@
 1648147973	Makyen	nbf\.ae(?<![^\W_]-nbf\.ae)(?<=\bnbf\.ae)(?=\b)
 1648152395	cigien	tammibriggs
 1648160026	cigien	darknetekona\.com
+1648160353	Cody Gray	darknetekona(?!\.com(?<=darknetekona\.com))
