@@ -937,7 +937,6 @@ bella\W?restor
 9530069900
 synoptic\W?boost
 libomax
-lumineux
 renuvaline
 nexacell
 andbrain\.com
