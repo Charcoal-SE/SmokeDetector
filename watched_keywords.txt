@@ -37641,3 +37641,4 @@
 1648114690	tripleee	nativesdaily\.com
 1648114712	tripleee	weddingwire\.ca
 1648117984	tripleee	amazingtalker\.com
+1648118495	Cody Gray	CISA[\W_]*certification
