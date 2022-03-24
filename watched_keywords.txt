@@ -37657,3 +37657,4 @@
 1648161745	Cody Gray	keto[\W_]*(?:strong|plus)[\W_]*pastillas
 1648161782	Cody Gray	pastillas[\W_]*keto
 1648161976	cigien	codersvibe\.com
+1648162806	Cody Gray	nedennedir(?!\.com(?<=nedennedir\.com))
