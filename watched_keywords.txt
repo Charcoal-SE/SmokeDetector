@@ -37649,3 +37649,4 @@
 1648121402	Cody Gray	Crayoninfotech(?!\.com(?<=crayoninfotech\.com))
 1648122123	Cody Gray	rapidexworldwide\.com
 1648122196	Cody Gray	Rapidex(?:[\W_]*Worldw(?:id|di)e)?(?!\.com(?<=rapidexworldwide\.com))
+1648124781	Glorfindel	pakmcqs\.info
