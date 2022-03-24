@@ -37539,7 +37539,6 @@
 1647971169	cigien	firsteigen\.com
 1647972781	cigien	baobao-industries\.com
 1647986372	Cody Gray	(?:UAE|Dubai)[\W_]*Scarlet
-1647989110	Cody Gray	activitydeploy\.com
 1648003557	Makyen	motordeviajes\.com
 1648007782	Cody Gray	codecanyon(?<!preview\.codecanyon)codecanyon\.net/(?:user|item)/
 1648008073	Cody Gray	imagekit\.io\/\?utm_
