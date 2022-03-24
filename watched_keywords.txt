@@ -13987,7 +13987,6 @@
 1574921328	tripleee	ontrack\.com
 1574924446	tripleee	mattseocarner(?:@gmail\.com)?
 1574924608	Makyen	nguyenquyen142857
-1574924630	Makyen	ketopluspastillas
 1574924802	Makyen	testo[\W_]*+alpha[\W_]*+ex
 1574924881	Makyen	my-mcafee-login\.com
 1574927882	Makyen	besthybridbicycles\.com
