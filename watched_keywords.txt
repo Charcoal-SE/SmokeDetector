@@ -37638,3 +37638,4 @@
 1648113751	Cody Gray	docEdge[\W_]*DMS
 1648113816	Cody Gray	t20worldcuplivescore\.com
 1648113850	Cody Gray	Jason[\W_]*Holder[\W_]*net[\W_]*worth
+1648114690	tripleee	nativesdaily\.com
