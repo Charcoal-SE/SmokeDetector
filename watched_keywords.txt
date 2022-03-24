@@ -37633,3 +37633,4 @@
 1648112714	Cody Gray	notch[\W_]*neck[\W_]*jacket
 1648112813	Cody Gray	(?-i:3LejawX)(?#bit.ly)
 1648112922	tripleee	juliaandgil\.com
+1648113027	Cody Gray	hottracks(?!\.in(?<=hottracks\.in))
