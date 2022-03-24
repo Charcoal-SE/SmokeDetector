@@ -37653,3 +37653,4 @@
 1648141456	Ollie	(?-i:xSKZ0Jm)(?# cutt.ly)
 1648143839	Ollie	burgerandsauce\.com
 1648147973	Makyen	nbf\.ae(?<![^\W_]-nbf\.ae)(?<=\bnbf\.ae)(?=\b)
+1648151997	Jeff Schaller	blog\.logrocket\.com
