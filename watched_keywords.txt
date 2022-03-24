@@ -37631,3 +37631,4 @@
 1648112353	Cody Gray	hottracks\.in
 1648112654	Cody Gray	jacket-hub\.com
 1648112714	Cody Gray	notch[\W_]*neck[\W_]*jacket
+1648112813	Cody Gray	(?-i:3LejawX)(?#bit.ly)
