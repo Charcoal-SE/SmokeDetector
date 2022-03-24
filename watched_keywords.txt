@@ -37635,3 +37635,4 @@
 1648113027	Cody Gray	hottracks(?!\.in(?<=hottracks\.in))
 1648113614	Cody Gray	al-baik\.in
 1648113733	Cody Gray	pericent\.com
+1648113751	Cody Gray	docEdge[\W_]*DMS
