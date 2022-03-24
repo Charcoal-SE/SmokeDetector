@@ -37627,3 +37627,4 @@
 1648109485	tripleee	web[\W_]*+solution[\W_]*+centre(?<!(?-i:^websolutioncentre$))(?!\.com(?<=websolutioncentre\.com))
 1648110699	tripleee	playlistcalculator\.net
 1648110897	tripleee	scriptease\.org
+1648112122	Cody Gray	applplus\.com
