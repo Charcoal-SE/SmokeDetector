@@ -24656,7 +24656,6 @@
 1607326796	Makyen	(?-i:CVrcNFPn5n7AjDAho2TvtP)(?#chat.whatsapp.com)
 1607326814	Makyen	aap[\W_]*+sab[\W_]*+hamari
 1607326972	Makyen	(?-i:w5poez)(?#rb.gy)
-1607331066	tripleee	jennycasino\.com
 1607331091	tripleee	os-system\.com
 1607331570	Ryan M	harga(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1607339243	Glorfindel	greatinnovus\.com
