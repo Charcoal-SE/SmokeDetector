@@ -37645,3 +37645,4 @@
 1648118778	Cody Gray	selector\.ink
 1648118834	Cody Gray	go-vstars7\.com
 1648120408	tripleee	hyprprime\.com
+1648121306	Cody Gray	(?-i:^Jobs[\W_]*Link$)
