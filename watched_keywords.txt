@@ -37658,3 +37658,4 @@
 1648161782	Cody Gray	pastillas[\W_]*keto
 1648161976	cigien	codersvibe\.com
 1648162806	Cody Gray	nedennedir(?!\.com(?<=nedennedir\.com))
+1648164875	Cody Gray	(?-i:^bar$)
