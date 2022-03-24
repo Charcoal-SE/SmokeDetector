@@ -627,3 +627,4 @@ Visualytes
 (?-i:^Bloom[\W_]*Enterprisess?$)
 (?-i:^Teddy bear$)
 (?-i:^websolutioncentre$)
+(?-i:^Edulete$)
