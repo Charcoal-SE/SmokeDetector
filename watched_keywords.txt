@@ -37647,3 +37647,4 @@
 1648120408	tripleee	hyprprime\.com
 1648121306	Cody Gray	(?-i:^Jobs[\W_]*Link$)
 1648121402	Cody Gray	Crayoninfotech(?!\.com(?<=crayoninfotech\.com))
+1648122123	Cody Gray	rapidexworldwide\.com
