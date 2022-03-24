@@ -37648,3 +37648,4 @@
 1648121306	Cody Gray	(?-i:^Jobs[\W_]*Link$)
 1648121402	Cody Gray	Crayoninfotech(?!\.com(?<=crayoninfotech\.com))
 1648122123	Cody Gray	rapidexworldwide\.com
+1648122196	Cody Gray	Rapidex(?:[\W_]*Worldw(?:id|di)e)?(?!\.com(?<=rapidexworldwide\.com))
