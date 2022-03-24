@@ -25836,7 +25836,6 @@
 1611290453	Ryan M	cheapestdegree\.com
 1611290470	Ryan M	cheapestsoftware\.org
 1611294060	Cody Gray	digitalakki\.com
-1611294251	tripleee	adgroups
 1611294268	tripleee	akash[\W_]*+digital[\W_]*+groups?
 1611294908	Yatin	bryanandcandy\.com
 1611295059	cigien	tekalook\.com
