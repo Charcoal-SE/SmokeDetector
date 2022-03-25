@@ -37684,3 +37684,4 @@
 1648207978	Cody Gray	frontier\.xyz
 1648208719	Cody Gray	kitronik\.co\.uk
 1648208795	Cody Gray	talentxpert\.com
+1648208851	Cody Gray	T(?:alent|est)Xpert(?!\.com(?<=talentxpert\.com))
