@@ -37670,3 +37670,4 @@
 1648192243	Cody Gray	didgets\.com
 1648192261	Cody Gray	Didgets(?!\.com(?<=didgets\.com))
 1648193197	Cody Gray	@?sayedmudassar786
+1648193454	Cody Gray	kodytechnolab\.com
