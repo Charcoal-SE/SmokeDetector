@@ -13917,7 +13917,6 @@
 1574778276	Machavity	onlinenodepositslot\.com
 1574781799	Glorfindel	5336\W*6901\W*3336\W*7286(?# card number)
 1574787677	Machavity	roxsport\.club
-1574788865	Machavity	h4ck3r
 1574789512	Makyen	testo[\W_]*+vital
 1574789549	Makyen	lizardsquadhackgroup(?:@gmail\.com)?
 1574790929	Machavity	getfirstnaukri\.com
