@@ -37687,3 +37687,4 @@
 1648208851	Cody Gray	T(?:alent|est)Xpert(?!\.com(?<=talentxpert\.com))
 1648208884	Cody Gray	playgamesandroid\.com
 1648208924	Cody Gray	(?i:^Play Games Android$)
+1648208963	Cody Gray	Play[\W_]*Games[\W_]*Android(?!\.com(?<=playgamesandroid\.com))
