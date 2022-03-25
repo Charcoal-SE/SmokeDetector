@@ -37662,3 +37662,4 @@
 1648187081	Cody Gray	write[\W_]*my[\W_]*case[\W_]*study
 1648187974	Cody Gray	S[ıi]ra[\W_]*Bulucu
 1648189632	Cody Gray	(?-i:^Prestige Marigold$)
+1648189680	Cody Gray	brandingkan\.com
