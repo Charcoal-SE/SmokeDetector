@@ -37664,3 +37664,4 @@
 1648189632	Cody Gray	(?-i:^Prestige Marigold$)
 1648189680	Cody Gray	brandingkan\.com
 1648189697	Cody Gray	essaycorp\.com
+1648189726	Cody Gray	EssayCorp(?!\.com(?<=essaycorp\.com))
