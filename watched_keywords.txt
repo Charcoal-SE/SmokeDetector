@@ -37666,3 +37666,4 @@
 1648189697	Cody Gray	essaycorp\.com
 1648189726	Cody Gray	EssayCorp(?!\.com(?<=essaycorp\.com))
 1648189781	Cody Gray	(?-i:^Brandingkan$)
+1648190149	Cody Gray	websi\.in
