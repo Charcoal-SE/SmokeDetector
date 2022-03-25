@@ -37665,3 +37665,4 @@
 1648189726	Cody Gray	EssayCorp(?!\.com(?<=essaycorp\.com))
 1648189781	Cody Gray	(?-i:^Brandingkan$)
 1648190149	Cody Gray	websi\.in
+1648191397	Cody Gray	petsfoodnutrition\.com
