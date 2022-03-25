@@ -291,6 +291,9 @@ items:
   - arch.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
 - ns:
+  - aria.ns.cloudflare.com.
+  - carter.ns.cloudflare.com.
+- ns:
   - ariella.ns.cloudflare.com.
   - lewis.ns.cloudflare.com.
 - ns:
