@@ -32417,7 +32417,6 @@
 1632167094	Ryan M	rapidrides\.pk
 1632185983	cigien	forloops\.net
 1632197512	Makyen	hacker4wise[\W_]*+com
-1632198110	Makyen	myrouterlocalcom\.net
 1632201312	cigien	aryasaze\.com
 1632204240	tripleee	mrskt\.com
 1632204463	Ryan M	tnori-tamr\.co\.il
