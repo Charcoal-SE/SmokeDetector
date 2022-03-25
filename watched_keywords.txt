@@ -37667,3 +37667,4 @@
 1648190149	Cody Gray	websi\.in
 1648191397	Cody Gray	petsfoodnutrition\.com
 1648191412	Cody Gray	Pets[\W_]*Food[\W_]*Nutrition(?!\.com(?<=petsfoodnutrition\.com))
+1648192225	Cody Gray	(?-i:AXqvWMmoL1M)(?#youtube)
