@@ -37660,3 +37660,4 @@
 1648164875	Cody Gray	(?-i:^bar$)
 1648165028	cigien	badisoch(?!\.in)
 1648180685	Cody Gray	deekshaarya\.com
+1648187081	Cody Gray	write[\W_]*my[\W_]*case[\W_]*study
