@@ -628,3 +628,4 @@ Visualytes
 (?-i:^Teddy bear$)
 (?-i:^websolutioncentre$)
 (?-i:^Edulete$)
+(?-i:^Eduauraa$)
