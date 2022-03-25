@@ -37673,3 +37673,4 @@
 1648193454	Cody Gray	kodytechnolab\.com
 1648198777	tripleee	themaparchive\.com
 1648199169	Cody Gray	(?-i:^Elvira Jovita$)
+1648199233	Cody Gray	Guo[\W_]*Wengui
