@@ -3165,7 +3165,9 @@ items:
 - ip: 75.2.70.75
 - ip: 75.9.247.135
 - ip: 75.98.175.115
-- ip: 76.223.122.69
+- comment: 0/13 over 17 days 2022-03-25
+  disable: true
+  ip: 76.223.122.69
 - ip: 76.223.27.102
 - ip: 76.223.32.197
 - comment: too high FP rate, 1/39
