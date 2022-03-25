@@ -37672,3 +37672,4 @@
 1648193197	Cody Gray	@?sayedmudassar786
 1648193454	Cody Gray	kodytechnolab\.com
 1648198777	tripleee	themaparchive\.com
+1648199169	Cody Gray	(?-i:^Elvira Jovita$)
