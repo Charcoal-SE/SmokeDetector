@@ -37688,3 +37688,4 @@
 1648208884	Cody Gray	playgamesandroid\.com
 1648208924	Cody Gray	(?i:^Play Games Android$)
 1648208963	Cody Gray	Play[\W_]*Games[\W_]*Android(?!\.com(?<=playgamesandroid\.com))
+1648209240	Cody Gray	masonryprocontractor\.com
