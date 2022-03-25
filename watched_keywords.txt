@@ -37669,3 +37669,4 @@
 1648192225	Cody Gray	(?-i:AXqvWMmoL1M)(?#youtube)
 1648192243	Cody Gray	didgets\.com
 1648192261	Cody Gray	Didgets(?!\.com(?<=didgets\.com))
+1648193197	Cody Gray	@?sayedmudassar786
