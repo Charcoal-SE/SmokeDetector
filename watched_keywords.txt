@@ -37719,3 +37719,4 @@
 1648277068	Cody Gray	bnfanprostore\.com
 1648277721	Cody Gray	tractorsinfo\.com
 1648277763	Cody Gray	employeeconnection\.net
+1648282596	Cody Gray	applplus\s{0,3}\.com
