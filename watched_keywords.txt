@@ -37709,3 +37709,4 @@
 1648268583	cigien	kientrucnha\.com\.vn
 1648269074	Cody Gray	(?i:^Mescells$)
 1648269152	Cody Gray	Mescells(?!\.com(?<=mescells\.com))
+1648271383	Cody Gray	bysnis\.com
