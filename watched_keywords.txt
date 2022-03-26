@@ -33953,7 +33953,6 @@
 1637221409	tripleee	keyforge(?!\.net)
 1637222980	Ryan M	jsacade\.my
 1637224401	tripleee	axie[\W_]*+infinity[\W_]*+clone
-1637227542	Cody Gray	clickcounter\.info
 1637233492	Jeff Schaller	akasel\.com
 1637235375	Cody Gray	themovieplay1(?:@gmail\.com)?
 1637235406	Cody Gray	themovieplay\.com

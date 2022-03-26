@@ -4525,3 +4525,4 @@ playlistcalculator\.net
 activitydeploy\.com
 myrouterlocalcom\.net
 enkash\.com
+clickcounter\.info
