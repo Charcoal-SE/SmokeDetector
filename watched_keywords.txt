@@ -37710,3 +37710,4 @@
 1648269074	Cody Gray	(?i:^Mescells$)
 1648269152	Cody Gray	Mescells(?!\.com(?<=mescells\.com))
 1648271383	Cody Gray	bysnis\.com
+1648272146	Cody Gray	KLM(?:['’]s)?[\W_]*Singapore[\W_]*Office
