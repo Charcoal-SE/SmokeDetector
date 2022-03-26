@@ -37731,3 +37731,4 @@
 1648294795	Cody Gray	mahboburrahman\.com
 1648294820	Cody Gray	Mahbobur[\W_]*Rahman(?!\.com(?<=mahboburrahman\.com))
 1648295801	Cody Gray	10million\.online
+1648295863	Cody Gray	10[\W_]*Million[\W_]*Arts
