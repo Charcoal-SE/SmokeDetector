@@ -5925,7 +5925,6 @@
 1541616920	K.Dᴀᴠɪs	sqlkhichdi\.tk
 1541618233	Erik the Outgolfer	parsifile\.ir
 1541618309	Erik the Outgolfer	fileshoper\.ir
-1541648144	Tetsuya Yamamoto	babyconfused\.com
 1541657346	NobodyNada	user118776
 1541658513	Makyen	harleysdocument(?:@yahoo\.com)?
 1541658828	Tetsuya Yamamoto	truepush\.com
