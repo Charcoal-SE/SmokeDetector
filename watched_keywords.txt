@@ -37740,3 +37740,4 @@
 1648363301	Cody Gray	DASARITUTS
 1648367806	Cody Gray	like-minded[\W_]*employees
 1648369324	Cody Gray	Angie[\W_]*Homes['’]?(?!\.co(?<=angiehomes\.co))
+1648371291	Cody Gray	umrah[\W_]*packages?
