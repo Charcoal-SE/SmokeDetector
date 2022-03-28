@@ -37780,3 +37780,4 @@
 1648458070	tripleee	desklib\.com
 1648461026	tripleee	ferall\.si
 1648461064	tripleee	tvreplay\.su
+1648461095	tripleee	iwanttfc\.su
