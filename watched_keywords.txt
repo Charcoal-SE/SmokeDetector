@@ -37799,3 +37799,4 @@
 1648475995	Spevacus	pcvirtualexperts\.com
 1648476022	Spevacus	stoptrouble\.com
 1648476214	Makyen	pc[\W_]*+virtual[\W_]*+experts(?!\.com(?<=pcvirtualexperts\.com))
+1648482056	Spevacus	eloking\.com
