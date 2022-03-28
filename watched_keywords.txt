@@ -37816,3 +37816,4 @@
 1648487268	Ollie	medconverge\.in
 1648487729	Ollie	freesitenews\.com
 1648487790	Makyen	freesitenews(?!\.com)\d*
+1648489090	cigien	asiachemtrade(?:@tuta\.io)?
