@@ -37815,3 +37815,4 @@
 1648486346	Ollie	rancah\.com
 1648487268	Ollie	medconverge\.in
 1648487729	Ollie	freesitenews\.com
+1648487790	Makyen	freesitenews(?!\.com)\d*
