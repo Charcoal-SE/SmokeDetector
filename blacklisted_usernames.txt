@@ -628,3 +628,4 @@ Visualytes
 (?-i:^websolutioncentre$)
 (?-i:^Edulete$)
 (?-i:^Eduauraa$)
+(?-i:^Amara albert$)
