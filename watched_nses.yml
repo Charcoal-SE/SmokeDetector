@@ -2375,6 +2375,9 @@ items:
 - ns:
   - rs18a.registrar-servers.com.
   - rs18b.registrar-servers.com.
+- ns:
+  - rs41a.registrar-servers.com.
+  - rs41b.registrar-servers.com.
 - ns: siriwebsolutions.com.
 - ns: lifeingermany.ir.
 - ns: kit.co.
