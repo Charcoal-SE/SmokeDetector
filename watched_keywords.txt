@@ -1213,7 +1213,6 @@
 1509345463	bummi	canonprintersdrivers\.com
 1509350461	tripleee	myvigour\.com
 1509352036	tripleee	rediscoverclinic\.com
-1509354218	Mithrandir	tuandc
 1509355242	tripleee	caliber\.com
 1509355872	tripleee	howtotoken\.com
 1509364669	Mithrandir	arabiandesertdubai\.com
