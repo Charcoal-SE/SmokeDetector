@@ -37798,3 +37798,4 @@
 1648474995	Jeff Schaller	topromoter\.com
 1648475995	Spevacus	pcvirtualexperts\.com
 1648476022	Spevacus	stoptrouble\.com
+1648476214	Makyen	pc[\W_]*+virtual[\W_]*+experts(?!\.com(?<=pcvirtualexperts\.com))
