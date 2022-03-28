@@ -37783,3 +37783,4 @@
 1648461095	tripleee	iwanttfc\.su
 1648461114	tripleee	ofwpinoyreplay\.su
 1648461138	tripleee	ofwteleseryereplay\.su
+1648461162	tripleee	thepinoytv\.su
