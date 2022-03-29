@@ -37831,3 +37831,4 @@
 1648536467	Cody Gray	businesstechworlds?(?:@gmail\.com)?
 1648537115	tripleee	thesimpos\.com
 1648537282	tripleee	simpos\.com\.au
+1648541389	Cody Gray	edureka(?!\.(?:co|selenium))
