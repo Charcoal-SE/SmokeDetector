@@ -37834,3 +37834,4 @@
 1648541389	Cody Gray	edureka(?!\.(?:co|selenium))
 1648543679	Cody Gray	sureworks\.in
 1648543697	Cody Gray	(?-i:bU5NP\.png)(?# stack imgur)
+1648543983	Cody Gray	bbraun\.com
