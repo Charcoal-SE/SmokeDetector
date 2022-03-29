@@ -31804,7 +31804,6 @@
 1630273492	cigien	maticpunks\.net
 1630276059	cigien	datarecoveryexpert\.ca
 1630292828	cigien	kazurtip(?#telegram)
-1630310624	tripleee	edureka(?!\.co)
 1630311508	tripleee	ytconvertmp3\.com
 1630312030	tripleee	dainikcircle\.com
 1630314754	tripleee	742306\.129(?# linksynergy campaign redirect)
