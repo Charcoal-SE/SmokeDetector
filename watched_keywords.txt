@@ -37843,3 +37843,4 @@
 1648550568	Cody Gray	takip2018\.com
 1648550622	Cody Gray	Takip[\W_]*2018(?!\.com(?<=takip2018\.com))
 1648551604	Cody Gray	developerdiary\.in
+1648551623	Cody Gray	developerdiary(?!\.in(?<=developerdiary\.in))
