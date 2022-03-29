@@ -37837,3 +37837,4 @@
 1648543983	Cody Gray	bbraun\.com
 1648544004	Cody Gray	shopcada\.com
 1648544111	Cody Gray	online[\W_]*selling[\W_]*platform
+1648544142	Cody Gray	everything[\W_]*you[\W_]*need[\W_]*to[\W_]*sell
