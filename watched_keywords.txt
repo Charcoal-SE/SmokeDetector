@@ -37847,3 +37847,4 @@
 1648552364	Cody Gray	tnrkdevelopment\.ca
 1648552394	Cody Gray	tnrk[\W_]*development(?!\.ca(?<=tnrkdevelopment\.ca))
 1648554667	Cody Gray	sellshop\.com\.bd
+1648556511	Cody Gray	(?-i:^mott$)
