@@ -37835,3 +37835,4 @@
 1648543679	Cody Gray	sureworks\.in
 1648543697	Cody Gray	(?-i:bU5NP\.png)(?# stack imgur)
 1648543983	Cody Gray	bbraun\.com
+1648544004	Cody Gray	shopcada\.com
