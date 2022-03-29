@@ -37845,3 +37845,4 @@
 1648551604	Cody Gray	developerdiary\.in
 1648551623	Cody Gray	developerdiary(?!\.in(?<=developerdiary\.in))
 1648552364	Cody Gray	tnrkdevelopment\.ca
+1648552394	Cody Gray	tnrk[\W_]*development(?!\.ca(?<=tnrkdevelopment\.ca))
