@@ -37818,3 +37818,4 @@
 1648487790	Makyen	freesitenews(?!\.com)\d*
 1648489090	cigien	asiachemtrade(?:@tuta\.io)?
 1648500130	Ollie	twsoins\.blogspot
+1648517572	cigien	ajmalbent\.com
