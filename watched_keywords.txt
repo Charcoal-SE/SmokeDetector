@@ -37882,3 +37882,4 @@
 1648627954	Cody Gray	Algoworks(?!\.com(?<=algoworks\.com))
 1648632740	Cody Gray	kenstar\.in
 1648633731	tripleee	sellershub\.io
+1648634844	Cody Gray	thewazaif\.com
