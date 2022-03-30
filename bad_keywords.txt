@@ -2598,3 +2598,4 @@ blockquote>\s*+<p>quote</p>\s*+</blockquote
 leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 lumineux[\W_]*+cream
 QuickBooks[\W_]*Desktop[\W_]*Payroll
+(?-i:umw0lr)(#? rb.gy)
