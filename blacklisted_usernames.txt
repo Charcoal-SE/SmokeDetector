@@ -630,3 +630,4 @@ Visualytes
 (?-i:^Eduauraa$)
 (?-i:^Amara albert$)
 (?-i:^Answersjet$)
+(?-i:^Judy White$)
