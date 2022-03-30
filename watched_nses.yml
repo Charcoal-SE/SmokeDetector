@@ -945,6 +945,9 @@ items:
   - jimmy.ns.cloudflare.com.
 - ns:
   - everton.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
+  - everton.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
   - felicity.ns.cloudflare.com.
