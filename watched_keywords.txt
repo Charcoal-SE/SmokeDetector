@@ -37866,3 +37866,4 @@
 1648614730	Cody Gray	slotindoterbaik\.com
 1648616345	Cody Gray	slotindo[\W_]*terbaik(?!\.com(?<=slotindoterbaik\.com))
 1648616940	Cody Gray	thegoodwood(?!\.in(?<=thegoodwood\.in))
+1648619371	Cody Gray	proffinonline\.com
