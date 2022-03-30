@@ -37878,3 +37878,4 @@
 1648624667	Cody Gray	britishdissertationhelp\.com
 1648624711	Cody Gray	British[\W_]*Dissertation[\W_]*Help(?!\.com(?<=britishdissertationhelp\.com))
 1648626131	Cody Gray	(?:^Chargen$)
+1648627927	Cody Gray	algoworks\.com
