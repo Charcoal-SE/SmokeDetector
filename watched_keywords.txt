@@ -37862,3 +37862,4 @@
 1648613194	Cody Gray	kfcfeedback\.com\.au
 1648613210	Cody Gray	topsurvey\.onl
 1648613237	Cody Gray	KFC[\W_]*(?:Australia[\W_]*)?Survey
+1648613264	Cody Gray	kfcvisit\.com
