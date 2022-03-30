@@ -37870,3 +37870,4 @@
 1648619386	Cody Gray	Proffin
 1648619843	tripleee	infrassist\.com
 1648622228	tripleee	outfable\.com
+1648622373	tripleee	NewHorizons001[\W_]*+(?:at[\W_]*+)?AOL[\W_]*+(?:dot[\W_]*+)?com
