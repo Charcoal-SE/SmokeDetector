@@ -37885,3 +37885,4 @@
 1648634844	Cody Gray	thewazaif\.com
 1648634878	Cody Gray	Wazifa[\W_]*for[\W_]*marriage
 1648637166	Ryan M	germanbasic\.com
+1648644332	Makyen	bims\.edu\.in
