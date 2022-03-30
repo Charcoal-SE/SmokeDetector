@@ -37794,7 +37794,6 @@
 1648472802	Makyen	minufashion\.com
 1648474995	Jeff Schaller	topromoter\.com
 1648475995	Spevacus	pcvirtualexperts\.com
-1648476022	Spevacus	stoptrouble\.com
 1648476214	Makyen	pc[\W_]*+virtual[\W_]*+experts(?!\.com(?<=pcvirtualexperts\.com))
 1648482056	Spevacus	eloking\.com
 1648484335	cigien	spiritofadventuretourism\.com
