@@ -37886,3 +37886,4 @@
 1648634878	Cody Gray	Wazifa[\W_]*for[\W_]*marriage
 1648637166	Ryan M	germanbasic\.com
 1648644332	Makyen	bims\.edu\.in
+1648648072	Cody Gray	(?-i:atlantamedicine)(?#g.page)
