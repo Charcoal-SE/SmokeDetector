@@ -37864,3 +37864,4 @@
 1648613237	Cody Gray	KFC[\W_]*(?:Australia[\W_]*)?Survey
 1648613264	Cody Gray	kfcvisit\.com
 1648614730	Cody Gray	slotindoterbaik\.com
+1648616345	Cody Gray	slotindo[\W_]*terbaik(?!\.com(?<=slotindoterbaik\.com))
