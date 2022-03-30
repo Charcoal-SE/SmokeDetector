@@ -37874,4 +37874,3 @@
 1648622391	tripleee	belberi\.ir
 1648622721	Ryan M	pingdad\.com
 1648623200	Cody Gray	foodiesmania\.com
-1648623220	Cody Gray	foodiesmania(?!\.com(?<=foodiesmania\.com))
