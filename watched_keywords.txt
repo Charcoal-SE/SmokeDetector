@@ -37908,3 +37908,4 @@
 1648712090	tripleee	dizitalsquare\.com
 1648714503	tripleee	cedcoss\.com
 1648714545	tripleee	cedcommerce(?!\.com)
+1648715908	Ryan M	totallaptopsolutions\.com
