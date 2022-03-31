@@ -37903,3 +37903,4 @@
 1648707542	tripleee	pinoy[\W_]*+tvs?
 1648707727	tripleee	teleserye\d*
 1648710899	tripleee	theblogsandarticles\.com
+1648711007	tripleee	techfox99(?# telegram)
