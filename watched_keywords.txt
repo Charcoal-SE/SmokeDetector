@@ -37901,3 +37901,4 @@
 1648702687	Ryan M	paperminecraft\.io
 1648705244	Cody Gray	wittytool\.com
 1648707542	tripleee	pinoy[\W_]*+tvs?
+1648707727	tripleee	teleserye\d*
