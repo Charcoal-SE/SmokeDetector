@@ -37912,3 +37912,4 @@
 1648716148	Ryan M	alsadatmarketing\.com
 1648716313	Makyen	dizitalsquare(?!\.com)
 1648718343	Ryan M	elecbee\.com
+1648718798	tripleee	pre[\W_]*+pc[\W_]*+solutions?
