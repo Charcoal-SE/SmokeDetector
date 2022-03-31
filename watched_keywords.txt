@@ -37905,3 +37905,4 @@
 1648710899	tripleee	theblogsandarticles\.com
 1648711007	tripleee	techfox99(?# telegram)
 1648711063	tripleee	swiftfoxcoder[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com
+1648712090	tripleee	dizitalsquare\.com
