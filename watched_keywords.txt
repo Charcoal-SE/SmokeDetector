@@ -37959,3 +37959,4 @@
 1648807699	Cody Gray	best[\W_]*(?:bedside[\W_]*)?commodes?
 1648807792	Cody Gray	(?-i:^Valuefirst823$)
 1648809019	Cody Gray	(?-i:^Won Deso$)
+1648810274	Jeff Schaller	comatelectronic\.com
