@@ -37950,3 +37950,4 @@
 1648806003	Cody Gray	ValueFirst
 1648806306	Cody Gray	purevedicgems\.in
 1648806333	Cody Gray	gems(?:tone)?[\W_]*recommendations
+1648806350	Cody Gray	(?-i:^purevedicgems$)
