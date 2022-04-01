@@ -37955,3 +37955,4 @@
 1648806970	Cody Gray	muh5z\.com
 1648807068	Cody Gray	#?mu[\W_]*khởi[\W_]*nguyên
 1648807092	Cody Gray	#?mu[\W_]*mới[\W_]*nhất
+1648807669	Cody Gray	walkermaster\.com
