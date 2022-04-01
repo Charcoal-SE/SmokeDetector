@@ -37943,4 +37943,3 @@
 1648802691	Makyen	dal[pƤ]ocha2(?:\.콤|\.com)?(?#website)
 1648804337	tripleee	(?-i:^chau becks$)
 1648804565	Cody Gray	businessbloomer\.com
-1648804967	Cody Gray	canon[\W_]*printer[\W_]*repair
