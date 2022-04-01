@@ -37948,3 +37948,4 @@
 1648805941	Cody Gray	BinaryMetrix(?:[\W_]*Technologies)?(?!\.com(?<=binarymetrix\.com))
 1648805975	Cody Gray	vfirst\.com
 1648806003	Cody Gray	ValueFirst
+1648806306	Cody Gray	purevedicgems\.in
