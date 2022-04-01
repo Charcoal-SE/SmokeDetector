@@ -37941,3 +37941,4 @@
 1648800493	Cody Gray	Melbourne[\W_]*Urology[\W_]*Centre(?!\.com\.au(?<=melbourneurologycentre\.com\.au))
 1648800543	Cody Gray	best[\W_]*urolog(y|ist|ical)
 1648802691	Makyen	dal[pƤ]ocha2(?:\.콤|\.com)?(?#website)
+1648804337	tripleee	(?-i:^chau becks$)
