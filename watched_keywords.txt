@@ -37952,3 +37952,4 @@
 1648806350	Cody Gray	(?-i:^purevedicgems$)
 1648806400	Cody Gray	gems(?:tone)?[\W_]*recommendations?
 1648806539	Cody Gray	(?-i:B5LKp\.jpg)(?# stack imgur)
+1648806970	Cody Gray	muh5z\.com
