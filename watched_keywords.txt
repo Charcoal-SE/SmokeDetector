@@ -37932,3 +37932,4 @@
 1648791445	Cody Gray	mestachs\.wordpress
 1648791659	Cody Gray	apkomex\.com
 1648792176	Cody Gray	(?-i:^fero[\W_]*)
+1648795197	Cody Gray	apkhall\.com
