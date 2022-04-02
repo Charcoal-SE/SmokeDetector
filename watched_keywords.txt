@@ -37976,3 +37976,4 @@
 1648882951	Cody Gray	Aquaguard[\W_]*RO
 1648882971	Cody Gray	ASL[\W_]*Enterprises
 1648883161	Cody Gray	auroraaclinic\.com
+1648883195	Cody Gray	Auroraa[\W_]*Clinic(?!\.com(?<=auroraaclinic\.com))
