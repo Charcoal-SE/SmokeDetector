@@ -37974,3 +37974,4 @@
 1648881976	Cody Gray	zh52\.vip
 1648882933	Cody Gray	aslrowaterpurifier\.com
 1648882951	Cody Gray	Aquaguard[\W_]*RO
+1648882971	Cody Gray	ASL[\W_]*Enterprises
