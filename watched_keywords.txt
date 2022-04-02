@@ -37980,3 +37980,4 @@
 1648883452	Ryan M	orderonlinerx\.com
 1648884704	Cody Gray	(?-i:Kn0Bc0qV4gg)(?#youtube)
 1648889323	Cody Gray	Claritox[\W_]*Pro
+1648889339	Cody Gray	healthadvicereview\.blogspot
