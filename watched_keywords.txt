@@ -37975,3 +37975,4 @@
 1648882933	Cody Gray	aslrowaterpurifier\.com
 1648882951	Cody Gray	Aquaguard[\W_]*RO
 1648882971	Cody Gray	ASL[\W_]*Enterprises
+1648883161	Cody Gray	auroraaclinic\.com
