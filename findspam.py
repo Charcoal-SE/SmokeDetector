@@ -2612,8 +2612,8 @@ create_rule("blacklisted username",
             r"(?i)^keshav$",
             all=False, sites=["judaism.stackexchange.com"],
             title=False, body=False, username=True)
-# Judaism etc troll, 2018-04-18 (see also disabled watch above)
-create_rule("blacklisted username", r'(?i)^john$',
+# Judaism etc troll, 2018-04-18 (see also disabled watch above); disabled 2022-04-02, as there's no TP in 4 years.
+create_rule("blacklisted username", r'(?i)^john$', disabled=True,
             all=False,
             sites=['hinduism.stackexchange.com', 'judaism.stackexchange.com', 'islam.stackexchange.com'],
             title=False, body=False, username=True)
