@@ -37978,3 +37978,4 @@
 1648883161	Cody Gray	auroraaclinic\.com
 1648883195	Cody Gray	Auroraa[\W_]*Clinic(?!\.com(?<=auroraaclinic\.com))
 1648883452	Ryan M	orderonlinerx\.com
+1648884704	Cody Gray	(?-i:Kn0Bc0qV4gg)(?#youtube)
