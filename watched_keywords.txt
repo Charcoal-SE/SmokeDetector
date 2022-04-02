@@ -37992,3 +37992,4 @@
 1648913312	Makyen	thebangaloreescorts\.eu5\.org
 1648913331	Makyen	thebangaloreescorts\.coolpage\.biz
 1648913347	Makyen	thebangaloreescorts(?!\.orgfree\.com)(?!\.6te\.net)(?!\.ueuo\.com)(?!\.eu5\.org)(?!\.coolpage\.biz)(?:\.[\w%-])*
+1648913361	Makyen	thebangaloreescorts\.orgfree\.com
