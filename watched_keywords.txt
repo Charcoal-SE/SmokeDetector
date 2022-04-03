@@ -38011,3 +38011,4 @@
 1648964442	Makyen	dubai[\W_]*+chiller[\W_]*+trucks(?!\.com(?<=dubaichillertrucks\.com))
 1648964583	Cody Gray	eabcr\.xyz
 1648970620	Cody Gray	pragmaticjp\.com
+1648970636	Cody Gray	5\.188\.34\.231
