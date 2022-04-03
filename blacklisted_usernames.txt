@@ -632,3 +632,4 @@ Visualytes
 (?-i:^Answersjet$)
 (?-i:^Judy White$)
 (?-i:^robert paul$)
+(?-i:^Easy Learn English$)
