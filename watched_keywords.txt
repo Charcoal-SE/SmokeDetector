@@ -38013,3 +38013,4 @@
 1648970620	Cody Gray	pragmaticjp\.com
 1648970636	Cody Gray	5\.188\.34\.231
 1648970654	Cody Gray	slot[\W_]*shopeepay
+1648971976	Cody Gray	(?-i:^Michele Gadd$)
