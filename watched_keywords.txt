@@ -38017,5 +38017,4 @@
 1648977910	Cody Gray	amzn\.to/3u56Iu2
 1648993124	cigien	(?-i:QWMEo16WXpDFHkkd6)(?#google forms)
 1648993284	cigien	growdm\.com
-1648996289	cigien	realsaintspyerhk[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com
 1648996644	cigien	victorstadeyhacker[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com
