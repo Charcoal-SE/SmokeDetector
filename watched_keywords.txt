@@ -38009,3 +38009,4 @@
 1648938862	Ollie	(?-i:Donhackercrypto)(?# t.me)
 1648964425	Makyen	dubaichillertrucks\.com
 1648964442	Makyen	dubai[\W_]*+chiller[\W_]*+trucks(?!\.com(?<=dubaichillertrucks\.com))
+1648964583	Cody Gray	eabcr\.xyz
