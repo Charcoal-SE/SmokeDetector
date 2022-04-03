@@ -38015,3 +38015,4 @@
 1648970654	Cody Gray	slot[\W_]*shopeepay
 1648971976	Cody Gray	(?-i:^Michele Gadd$)
 1648977910	Cody Gray	amzn\.to/3u56Iu2
+1648990642	Jeff Schaller	victorstadeyhacker
