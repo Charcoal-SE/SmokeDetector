@@ -2598,3 +2598,4 @@ leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)
 lumineux[\W_]*+cream
 QuickBooks[\W_]*Desktop[\W_]*Payroll
 (?-i:umw0lr)(#? rb.gy)
+victorstadeyhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
