@@ -633,3 +633,4 @@ Visualytes
 (?-i:^Judy White$)
 (?-i:^robert paul$)
 (?-i:^Easy Learn English$)
+(?-i:^Michele Gadd$)

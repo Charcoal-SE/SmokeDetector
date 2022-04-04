@@ -38013,7 +38013,6 @@
 1648970620	Cody Gray	pragmaticjp\.com
 1648970636	Cody Gray	5\.188\.34\.231
 1648970654	Cody Gray	slot[\W_]*shopeepay
-1648971976	Cody Gray	(?-i:^Michele Gadd$)
 1648977910	Cody Gray	amzn\.to/3u56Iu2
 1648993124	cigien	(?-i:QWMEo16WXpDFHkkd6)(?#google forms)
 1648993284	cigien	growdm\.com
