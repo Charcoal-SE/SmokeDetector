@@ -36422,7 +36422,6 @@
 1644994680	tripleee	garnier\.co\.th
 1644995067	tripleee	coinsqueens\.com
 1644995098	tripleee	coinsqueens(?!\.com)
-1644998451	tripleee	syntaxtechs\.com
 1644999259	tripleee	hinditypingkeyboard\.in
 1644999308	tripleee	herbalbio-tech\.com
 1644999457	tripleee	animalsmicrochip\.com
