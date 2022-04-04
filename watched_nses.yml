@@ -817,6 +817,9 @@ items:
   - rachel.ns.cloudflare.com.
 - ns:
   - donald.ns.cloudflare.com.
+  - pat.ns.cloudflare.com.
+- ns:
+  - donald.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
 - ns:
   - dora.ns.cloudflare.com.
