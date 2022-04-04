@@ -38043,3 +38043,4 @@
 1649084735	cigien	mona\.gill(?:@consultant\.com)?
 1649091968	Ollie	pioneeringhub\.com
 1649097220	Jeff Schaller	vacuumsealerjournal\.com
+1649097246	Jeff Schaller	vacuumsealerjournal
