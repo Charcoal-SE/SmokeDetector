@@ -36431,7 +36431,6 @@
 1645006460	tripleee	maakalkaproperty\.blogspot
 1645006594	tripleee	advanceauto\.co\.th
 1645006933	tripleee	(?-i:gIojFRyw)(?# shrinke.me)
-1645008676	tripleee	^james smith$
 1645010837	tripleee	kurnool-realestate(?# sites.google.com)
 1645010875	tripleee	parentsupervisa\.ca
 1645010898	tripleee	meditationprogrammer\.blogspot
