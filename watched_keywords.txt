@@ -38045,3 +38045,4 @@
 1649097220	Jeff Schaller	vacuumsealerjournal\.com
 1649097246	Jeff Schaller	vacuumsealerjournal
 1649108731	cigien	kedirabuna\.com
+1649108751	cigien	kedirabuna(?!\.com)
