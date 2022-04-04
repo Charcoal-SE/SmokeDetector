@@ -38042,3 +38042,4 @@
 1649080132	cigien	ukprefulfillment\.com
 1649084735	cigien	mona\.gill(?:@consultant\.com)?
 1649091968	Ollie	pioneeringhub\.com
+1649097220	Jeff Schaller	vacuumsealerjournal\.com
