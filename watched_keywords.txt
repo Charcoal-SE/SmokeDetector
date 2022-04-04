@@ -38029,3 +38029,4 @@
 1649061414	Ryan M	hirestar
 1649061565	tripleee	webkeydigital\.com
 1649062725	Ryan M	slotter88\.xyz
+1649062745	Ryan M	slotter88(?!\.xyz)
