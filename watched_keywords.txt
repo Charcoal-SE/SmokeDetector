@@ -38057,3 +38057,4 @@
 1649150725	Cody Gray	burnessa\.com
 1649154541	Cody Gray	NFT[\W_]*market(?:place)?
 1649164925	cigien	yourmedikart\.store
+1649166915	cigien	famousvashikaranspecialist\.com
