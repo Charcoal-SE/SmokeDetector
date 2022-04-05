@@ -9463,7 +9463,6 @@
 1558808066	Makyen	go-roku-com-hdcp\.com
 1558819186	Makyen	drewanherbalhome(?:@gmail\.com)?
 1558819378	Olivia	tiktokapk\.info
-1558836770	Makyen	educba\.com
 1558885680	Byte Commander	apkstarz\.com
 1558886753	Makyen	doorall\.ir
 1558892061	double-beep	stellarinfo\.com
