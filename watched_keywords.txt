@@ -38051,3 +38051,4 @@
 1649139403	tripleee	masswinery\.com
 1649139425	tripleee	wegento\.com
 1649139815	tripleee	freelancingnetwork\.org
+1649140334	tripleee	(?-i:^Patrica(?:[A-Z]|\b(?! Hendry$)))
