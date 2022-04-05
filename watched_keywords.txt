@@ -24432,7 +24432,6 @@
 1606458935	Makyen	mtouch[\W_]*+labs(?!\.com(?<=mtouchlabs\.com))
 1606458956	Makyen	mtouchlabs\.com
 1606459250	Makyen	jobalertclub\.com
-1606463895	tripleee	synergisticit\.com
 1606463928	tripleee	uptons\.net\.au
 1606464883	tripleee	laxminarasimhahospital\.in
 1606473203	tripleee	thegadgethelp\.com
