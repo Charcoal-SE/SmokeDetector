@@ -36120,7 +36120,6 @@
 1644212393	Makyen	lakhesh98\.tech
 1644213061	Makyen	braincorr(?!\.com)
 1644215794	Makyen	mattresscleaningsingaporecompany\.com
-1644217225	tripleee	floatingfeet\.net
 1644217300	tripleee	(?-i:^Madelyn Nora$)
 1644218366	tripleee	zaminwale\.com
 1644218636	tripleee	girlsplace\.in
