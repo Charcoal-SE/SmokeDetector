@@ -638,3 +638,4 @@ Visualytes
 (?-i:^steve rex$)
 (?-i:^MIckle Herald$)
 (?-i:^Patrica Hendry$)
+(?-i:^Gunashree$)
