@@ -35382,7 +35382,6 @@
 1642073775	tripleee	americanforeversecurity\.com
 1642074208	tripleee	visa[\W_]*+simple(?!\.com(?<=visasimple\.com))
 1642074930	tripleee	(?-i:PLPqH38Ki1fy3EB-8xmShVqpbQw99Do2B-)(?# youtube)
-1642075673	tripleee	dhani(?# temporary for credit card scammer)
 1642077738	tripleee	ironcad\.academy
 1642079752	tripleee	(?-i:^JackWhite$)
 1642081719	Ryan M	newsletterglue\.com
