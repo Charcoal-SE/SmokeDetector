@@ -2486,7 +2486,9 @@ items:
 - ns: bagful.net.
 - ns: irandns.com.
 - ns: parkingcrew.net.
-- ns: porkbun.com.
+- comment: 1/14 over 2 months 2022-04-05
+  disable: true
+  ns: porkbun.com.
 - ns: indianfresher.com.
 - ns: mumuhost.net.
 - ns: aiarticlespinner.co.
