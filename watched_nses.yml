@@ -235,6 +235,9 @@ items:
   - surina.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
+  - cortney.ns.cloudflare.com.
+- ns:
+  - apollo.ns.cloudflare.com.
   - gina.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
