@@ -537,6 +537,9 @@ items:
   - carla.ns.cloudflare.com.
   - melnicoff.ns.cloudflare.com.
 - ns:
+  - carmelo.ns.cloudflare.com.
+  - lila.ns.cloudflare.com.
+- ns:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
