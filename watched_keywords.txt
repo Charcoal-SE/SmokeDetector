@@ -38050,7 +38050,6 @@
 1649145467	tripleee	(?-i:^salih gültekin$)
 1649150083	Ryan M	github\.com/hellygeorge
 1649150725	Cody Gray	burnessa\.com
-1649154541	Cody Gray	NFT[\W_]*market(?:place)?
 1649164925	cigien	yourmedikart\.store
 1649166915	cigien	famousvashikaranspecialist\.com
 1649173838	Ollie	bestcloudplatform\.com
