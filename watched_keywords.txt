@@ -38086,3 +38086,4 @@
 1649245941	tripleee	stayinfront\.com
 1649245975	tripleee	discoveryindemand\.com
 1649246443	Jeff Schaller	timenowis\.com
+1649247065	Jeff Schaller	techchalks\.com
