@@ -160,6 +160,9 @@ items:
   - beau.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
+  - elmo.ns.cloudflare.com.
+- ns:
+  - alice.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
