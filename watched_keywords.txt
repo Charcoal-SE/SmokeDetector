@@ -38135,3 +38135,4 @@
 1649320372	Cody Gray	overheaddoorcypress\.com
 1649320407	Cody Gray	overhead[\W_]*+door\b.{0,40}\btx
 1649320546	Cody Gray	garagedoorrepair-dickinson\.com
+1649321142	Cody Gray	rosenberggaragedoorrepair\.com
