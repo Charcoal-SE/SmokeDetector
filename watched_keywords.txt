@@ -38133,3 +38133,4 @@
 1649319736	Cody Gray	garage-door-pasadena\.com
 1649320327	Cody Gray	sugarlandgaragedoors\.com
 1649320372	Cody Gray	overheaddoorcypress\.com
+1649320407	Cody Gray	overhead[\W_]*+door\b.{0,40}\btx
