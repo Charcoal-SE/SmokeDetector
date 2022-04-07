@@ -38109,3 +38109,4 @@
 1649307369	tripleee	traxanhkhongdo\.com\.vn
 1649307474	tripleee	Không Độ
 1649307512	tripleee	it says time flies
+1649308744	tripleee	(?-i:^yoki Faris$)
