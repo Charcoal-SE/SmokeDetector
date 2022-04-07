@@ -38157,3 +38157,4 @@
 1649333790	Zoe stands with Ukraine	uvhealsafeair\.com
 1649339042	cigien	whats\.link
 1649345019	Spevacus	Marketo[\W_]*+Data[\W_]*+Replication
+1649346201	Spevacus	jameshardware\.live
