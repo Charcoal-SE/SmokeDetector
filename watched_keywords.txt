@@ -38111,3 +38111,4 @@
 1649308744	tripleee	(?-i:^yoki Faris$)
 1649309488	Ryan M	VancePDF(?!\.com)
 1649311229	Ryan M	(?-i:in3Xmf1jz04)(?# YouTube video)
+1649311265	Ryan M	(?-i:ADMVnVIuCno)(?# YouTube video)
