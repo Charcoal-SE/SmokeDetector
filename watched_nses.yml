@@ -1903,6 +1903,9 @@ items:
   - ns8041.hostgator.com.
   - ns8042.hostgator.com.
 - ns:
+  - ns8255.hostgator.com.
+  - ns8256.hostgator.com.
+- ns:
   - ns8491.hostgator.com.
   - ns8492.hostgator.com.
 - ns:
