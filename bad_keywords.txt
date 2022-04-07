@@ -2601,4 +2601,3 @@ QuickBooks[\W_]*Desktop[\W_]*Payroll
 victorstadeyhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 realsaintspyerhk(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 VanceAI(?!\.com)
-^(?:garage|overhead)[\W_]*+door\b.{0,40}\btx$
