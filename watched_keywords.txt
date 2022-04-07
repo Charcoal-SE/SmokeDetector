@@ -38142,3 +38142,4 @@
 1649322022	tripleee	garagedoorkemahtx\.com
 1649322280	Cody Gray	ravsitsol\.com
 1649322315	Cody Gray	ravsitsol(?!\.com(?<=ravsitsol\.com))
+1649322416	Cody Gray	caffeinepark\.com
