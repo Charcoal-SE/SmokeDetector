@@ -38119,3 +38119,4 @@
 1649315153	tripleee	staticking\.com
 1649315338	tripleee	ereviewbiz\.com
 1649316561	Cody Gray	houstontxgaragedoorrepair\.com
+1649316620	Cody Gray	Garage[\W_]*Door[\W_]*Repair
