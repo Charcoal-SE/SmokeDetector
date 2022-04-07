@@ -4534,3 +4534,4 @@ floatingfeet\.net
 synergisticit\.com
 vanceai\.com
 wimzyroses\.com
+\bscaler\.com\b
