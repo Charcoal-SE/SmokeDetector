@@ -38150,3 +38150,4 @@
 1649326812	Cody Gray	weedhuis\.com
 1649326830	Cody Gray	weedhuis(?!\.com)
 1649328358	tripleee	aavinashpestcontrol\.com
+1649328441	tripleee	com\.dawateislami
