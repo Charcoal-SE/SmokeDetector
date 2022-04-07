@@ -38126,3 +38126,4 @@
 1649317614	Ryan M	garagedoor-springtx\.com
 1649317865	Ryan M	garage[\W_]*+door\b.{0,40}\btx
 1649318110	Cody Gray	garagedoorrepairkatytx\.com
+1649318339	tripleee	garagedoorinpearlandtx\.com
