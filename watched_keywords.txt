@@ -36707,7 +36707,6 @@
 1645710685	Makyen	tree[\W_]*+ssixty(?:[\W_]*+(?:nursery|\d++|[\da-f]{5,}+)s?)*
 1645710760	cigien	web[\W_]*+mingo(?!\.com(?<=webmingo\.com))
 1645710857	cigien	cheapestessay\.com
-1645710900	Makyen	vanceai\.com
 1645710939	Makyen	dramamix\.online
 1645711155	Makyen	(?-i:fodmapedia)(?#facebook.com)
 1645711352	cigien	blog\.emdiu\.com
