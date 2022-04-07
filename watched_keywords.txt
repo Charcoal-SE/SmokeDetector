@@ -38103,3 +38103,4 @@
 1649281621	Jeff Schaller	tokejudi\.com
 1649281615	cocomac	Fish Finder for Ice Fishing
 1649287659	Ryan M	attributer\.io
+1649295302	Spevacus	illuminatidevilchurch(?:@gmail\.com)?
