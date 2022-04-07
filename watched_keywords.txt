@@ -38124,3 +38124,4 @@
 1649316886	Cody Gray	smmpakpanel(?!\.com(?<=smmpakpanel\.com))
 1649317368	tripleee	overheaddoorthewoodlands\.com
 1649317614	Ryan M	garagedoor-springtx\.com
+1649317865	Ryan M	garage[\W_]*+door\b.{0,40}\btx
