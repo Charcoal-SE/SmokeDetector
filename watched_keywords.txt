@@ -38159,3 +38159,4 @@
 1649345019	Spevacus	Marketo[\W_]*+Data[\W_]*+Replication
 1649346201	Spevacus	jameshardware\.live
 1649347189	Ollie	(?-i:FDdJdkdUPspP5yT48)(?# forms.gle)
+1649350068	Spevacus	(?-i:judibolaole303)(?#bit.ly)
