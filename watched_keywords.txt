@@ -38148,3 +38148,4 @@
 1649323251	Cody Gray	garagedoorbaytown\.com
 1649324127	tripleee	abbs[\W_]*law(?!\.edu\.in)
 1649326812	Cody Gray	weedhuis\.com
+1649326830	Cody Gray	weedhuis(?!\.com)
