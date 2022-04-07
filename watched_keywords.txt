@@ -38121,3 +38121,4 @@
 1649316561	Cody Gray	houstontxgaragedoorrepair\.com
 1649316620	Cody Gray	Garage[\W_]*Door[\W_]*Repair
 1649316793	tripleee	emiratestransitvisa\.com
+1649316886	Cody Gray	smmpakpanel(?!\.com(?<=smmpakpanel\.com))
