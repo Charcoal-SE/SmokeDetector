@@ -38180,3 +38180,4 @@
 1649394934	Cody Gray	claerityai
 1649397663	tripleee	indxx(?!\.com)
 1649400872	Cody Gray	QuickBooks[\W_]*Amazon
+1649401058	Cody Gray	myassignmentservices\.com
