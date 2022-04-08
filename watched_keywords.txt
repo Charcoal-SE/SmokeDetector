@@ -38190,3 +38190,4 @@
 1649409697	Cody Gray	TDV[\W_]*FOUNTAIN
 1649410468	tripleee	tdv[\W_]*+vietnam
 1649411146	tripleee	getmemymedicare\.com
+1649412265	Cody Gray	Design[\W_]*Kug(?!\.com(?<=designkug\.com))
