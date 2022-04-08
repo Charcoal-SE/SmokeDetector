@@ -2365,6 +2365,11 @@ items:
   - ns-1721.awsdns-23.co.uk.
   - ns-310.awsdns-38.com.
   - ns-636.awsdns-15.net.
+- ns:
+  - ns-1522.awsdns-62.org.
+  - ns-2033.awsdns-62.co.uk.
+  - ns-240.awsdns-30.com.
+  - ns-824.awsdns-39.net.
 - ns: webhostingbuzz.com.
 - ns: w2iserver.com.
 - ns: weblink.in.
