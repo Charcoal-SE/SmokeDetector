@@ -38207,3 +38207,4 @@
 1649443507	Makyen	(?-i:ExperianBusinessCredit)(?#facebook.com)
 1649444234	Spevacus	lexol[\W_]*+leather[\W_]*+(?:conditioner|cleaner)?
 1649444254	Jeff Schaller	yenom\.biz
+1649447532	Spevacus	repository\.agrosavia\.co
