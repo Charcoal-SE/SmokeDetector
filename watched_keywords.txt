@@ -38197,4 +38197,3 @@
 1649413480	Cody Gray	(?-i:^scrabble world)
 1649413681	Cody Gray	Amazon[\W_]*Prime[\W_]*Customer[\W_]*Service
 1649416922	Cody Gray	simcuatui\.com
-1649416959	Cody Gray	simcuatuisct(?:sct)?(?!\.com)
