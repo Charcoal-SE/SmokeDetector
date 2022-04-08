@@ -38194,3 +38194,4 @@
 1649412699	Cody Gray	Reliance[\W_]*Smart[\W_]*Money(?!\.com(?<=reliancesmartmoney\.com))
 1649412740	Cody Gray	reliancesmartmoney\.com
 1649413445	Cody Gray	easy[\W_]*wordun[\W_]*scrambler(?!\.com(?<=easywordunscrambler\.com))
+1649413480	Cody Gray	(?-i:^scrabble world)
