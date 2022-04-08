@@ -38183,3 +38183,4 @@
 1649401058	Cody Gray	myassignmentservices\.com
 1649401966	Cody Gray	blue[\W_]*orchid(?!\.com)
 1649407117	Cody Gray	bestmusthave\.app
+1649407976	Cody Gray	ottawalife\.com
