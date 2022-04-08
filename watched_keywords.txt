@@ -38195,3 +38195,4 @@
 1649412740	Cody Gray	reliancesmartmoney\.com
 1649413445	Cody Gray	easy[\W_]*wordun[\W_]*scrambler(?!\.com(?<=easywordunscrambler\.com))
 1649413480	Cody Gray	(?-i:^scrabble world)
+1649413681	Cody Gray	Amazon[\W_]*Prime[\W_]*Customer[\W_]*Service
