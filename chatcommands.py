@@ -749,7 +749,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
+COFFEES = ['espresso', 'macchiato', 'ristretto', 'Americano', 'latte', 'cappuccino', 'mocha', 'affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
@@ -778,7 +778,7 @@ def lick():
     return "*licks ice cream cone*"
 
 
-TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
+TEAS = ['Earl Grey', 'green', 'chamomile', 'lemon', 'Darjeeling', 'mint', 'jasmine', 'passionfruit']
 
 
 # noinspection PyIncorrectDocstring
