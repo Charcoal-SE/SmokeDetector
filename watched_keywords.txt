@@ -38184,3 +38184,4 @@
 1649401966	Cody Gray	blue[\W_]*orchid(?!\.com)
 1649407117	Cody Gray	bestmusthave\.app
 1649407976	Cody Gray	ottawalife\.com
+1649408023	Cody Gray	healthsuportweb(?#twitter)
