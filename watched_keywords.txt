@@ -38179,3 +38179,4 @@
 1649394911	Cody Gray	claerity\.ai
 1649394934	Cody Gray	claerityai
 1649397663	tripleee	indxx(?!\.com)
+1649400872	Cody Gray	QuickBooks[\W_]*Amazon
