@@ -38192,3 +38192,4 @@
 1649411146	tripleee	getmemymedicare\.com
 1649412265	Cody Gray	Design[\W_]*Kug(?!\.com(?<=designkug\.com))
 1649412699	Cody Gray	Reliance[\W_]*Smart[\W_]*Money(?!\.com(?<=reliancesmartmoney\.com))
+1649412740	Cody Gray	reliancesmartmoney\.com
