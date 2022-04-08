@@ -38189,3 +38189,4 @@
 1649409130	Cody Gray	isfahanattorney(?!\.ir)
 1649409676	Cody Gray	nhacnuoctdv\.com
 1649409697	Cody Gray	TDV[\W_]*FOUNTAIN
+1649410468	tripleee	tdv[\W_]*+vietnam
