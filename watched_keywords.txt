@@ -38181,3 +38181,4 @@
 1649397663	tripleee	indxx(?!\.com)
 1649400872	Cody Gray	QuickBooks[\W_]*Amazon
 1649401058	Cody Gray	myassignmentservices\.com
+1649401966	Cody Gray	blue[\W_]*orchid(?!\.com)
