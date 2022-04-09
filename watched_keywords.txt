@@ -38214,3 +38214,4 @@
 1649468118	Ryan M	crack[\W_]*+20\d\d
 1649471035	Ryan M	autelpilot\.com
 1649489334	Cody Gray	panda[\W_]*express[\W_]*keto
+1649489350	Cody Gray	pandaexpressketoingredients\.tumblr
