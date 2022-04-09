@@ -169,7 +169,7 @@ def handle_spam(post, reasons, why):
 def build_message(post, reasons):
     # This is the main report format. Username and user link are deliberately not separated as with title and post
     # link, because we may want to use "by a deleted user" rather than a username+link.
-    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}\u202D]({post_url}) by {user} on `{site}`"
+    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): **[{title}\u202D]({post_url})** by {user} on `{site}`"
 
     # Post URL, user URL, and site details are all easy - just data from the post object, transformed a bit
     # via datahandling.
