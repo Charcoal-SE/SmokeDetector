@@ -299,7 +299,7 @@ class YAMLParserNS(YAMLParserCIDR):
             if item.get('disable', None):
                 return False
             try:
-                # Extenmd lifetime if we are running a test
+                # Extend lifetime if we are running a test
                 extra_params = dict()
                 if "pytest" in sys.modules:
                     extra_params['lifetime'] = 15
