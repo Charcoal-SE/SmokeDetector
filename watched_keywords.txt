@@ -38235,3 +38235,4 @@
 1649533331	cigien	faindx\.com
 1649538714	cigien	guinrank\.com
 1649555595	Makyen	cloudshifttech\.com
+1649555617	Makyen	cloud[\W_]*+shift[\W_]*+tech(?!\.com(?<=cloudshifttech\.com))(?:nologies)?
