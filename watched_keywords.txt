@@ -38250,3 +38250,4 @@
 1649602400	Makyen	167\.71\.192\.65
 1649624806	cigien	gas-stationsnearme\.com
 1649624822	cigien	banksnear-me\.com
+1649624842	cigien	chinesebuffetnearmenow\.net
