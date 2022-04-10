@@ -38237,3 +38237,4 @@
 1649555595	Makyen	cloudshifttech\.com
 1649555617	Makyen	cloud[\W_]*+shift[\W_]*+tech(?!\.com(?<=cloudshifttech\.com))(?:nologies)?
 1649563051	Makyen	creds?masters?
+1649582264	Makyen	glowstaff\.de
