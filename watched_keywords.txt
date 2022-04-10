@@ -38251,3 +38251,4 @@
 1649624806	cigien	gas-stationsnearme\.com
 1649624822	cigien	banksnear-me\.com
 1649624842	cigien	chinesebuffetnearmenow\.net
+1649625943	cigien	shop\.allnetchina\.cn
