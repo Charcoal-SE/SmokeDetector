@@ -38248,3 +38248,4 @@
 1649601339	cigien	live124\.com
 1649601981	Makyen	𝐋𝐢𝐯𝐞𝟏𝟐𝟒\.𝐂𝐨𝐦
 1649602400	Makyen	167\.71\.192\.65
+1649624806	cigien	gas-stationsnearme\.com
