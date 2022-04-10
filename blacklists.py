@@ -4,6 +4,7 @@ from typing import Union
 import regex
 import yaml
 import dns.resolver
+import sys
 
 from globalvars import GlobalVars
 from helpers import log
@@ -298,7 +299,11 @@ class YAMLParserNS(YAMLParserCIDR):
             if item.get('disable', None):
                 return False
             try:
-                addr = dns.resolver.resolve(ns, 'a', search=True)
+                # Extend lifetime if we are running a test
+                extra_params = dict()
+                if "pytest" in sys.modules:
+                    extra_params['lifetime'] = 15
+                addr = dns.resolver.resolve(ns, 'a', search=True, **extra_params)
                 # Outputing for every resolved entry makes it harder to find the actual error,
                 # due to being swamped with data in the error output.
                 # log('debug', '{0} resolved to {1}'.format(
