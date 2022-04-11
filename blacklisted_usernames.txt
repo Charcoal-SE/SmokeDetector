@@ -642,3 +642,4 @@ Visualytes
 (?-i:^SusanBelly$)
 (?-i:^julianbells$)
 (?-i:^Ezio solutions$)
+(?-i:^Eleanor Owen$)
