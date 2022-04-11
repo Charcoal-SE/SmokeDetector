@@ -235,6 +235,9 @@ items:
   - tim.ns.cloudflare.com.
 - ns:
   - anuj.ns.cloudflare.com.
+  - molly.ns.cloudflare.com.
+- ns:
+  - anuj.ns.cloudflare.com.
   - surina.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
