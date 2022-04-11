@@ -38254,3 +38254,4 @@
 1649625943	cigien	shop\.allnetchina\.cn
 1649643903	cigien	lygdamus\.com
 1649651622	tripleee	(?-i:^Chanshal sir$)
+1649653128	tripleee	bikevaly\.com
