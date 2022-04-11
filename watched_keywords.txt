@@ -38253,3 +38253,4 @@
 1649624842	cigien	chinesebuffetnearmenow\.net
 1649625943	cigien	shop\.allnetchina\.cn
 1649643903	cigien	lygdamus\.com
+1649651622	tripleee	(?-i:^Chanshal sir$)
