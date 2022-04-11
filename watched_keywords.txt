@@ -38259,3 +38259,4 @@
 1649653284	tripleee	deposit[\W_]*+dana
 1649655256	tripleee	axesgeeks\.co\.in
 1649655275	tripleee	axesgeeks
+1649655298	tripleee	signaxesgeeks
