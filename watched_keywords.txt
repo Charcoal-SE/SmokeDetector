@@ -38283,3 +38283,4 @@
 1649685532	cigien	remotespytech(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1649686498	cigien	bhrigupandit\.com
 1649689210	cigien	qiro\.ai
+1649697593	Jeff Schaller	tilatel\.com
