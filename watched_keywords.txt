@@ -38279,3 +38279,4 @@
 1649676769	tripleee	veronedu\.com
 1649677869	tripleee	ezio[\W_]*+solutions(?<!(?-i:^Ezio solutions$))
 1649681585	cigien	(?-i:3Jty9SF)(?#amzn.to)
+1649682880	cigien	fricavlsmvl(?:@gmail\.com)?
