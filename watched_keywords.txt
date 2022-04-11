@@ -38266,3 +38266,4 @@
 1649659231	tripleee	axpertaccounting\.com
 1649660590	tripleee	lowest[\W_]*+flight[\W_]*+fare
 1649661168	tripleee	globallinkeducation\.com
+1649662663	Glorfindel	mydataprovider\.com
