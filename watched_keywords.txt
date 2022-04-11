@@ -38256,3 +38256,4 @@
 1649651622	tripleee	(?-i:^Chanshal sir$)
 1649653128	tripleee	bikevaly\.com
 1649653262	tripleee	slot[\W_]*+deposit
+1649653284	tripleee	deposit[\W_]*+dana
