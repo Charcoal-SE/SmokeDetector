@@ -641,3 +641,4 @@ Visualytes
 ^surbhi nahta$
 (?-i:^SusanBelly$)
 (?-i:^julianbells$)
+(?-i:^Ezio solutions$)
