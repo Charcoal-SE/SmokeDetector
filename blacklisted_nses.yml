@@ -118,6 +118,9 @@ items:
   - marlowe.ns.cloudflare.com.
   - salvador.ns.cloudflare.com.
 - ns:
+  - millie.ns.cloudflare.com.
+  - porter.ns.cloudflare.com.
+- ns:
   - mona.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
