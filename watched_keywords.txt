@@ -38264,3 +38264,4 @@
 1649657873	tripleee	freeblogclub\.com
 1649658985	tripleee	chashnika\.ir
 1649659231	tripleee	axpertaccounting\.com
+1649660590	tripleee	lowest[\W_]*+flight[\W_]*+fare
