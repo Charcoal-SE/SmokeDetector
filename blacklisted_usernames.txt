@@ -232,7 +232,6 @@ devleadz
 (?-i:^Cure[Cc]onsult$)
 (?-i:^adi mishra$)
 (?-i:^Shakhaz Alishka$)
-(?-i:^Andre Green$)
 (?-i:^Vijay Mann$)
 (?-i:^okfine$)
 village\W*talkies
