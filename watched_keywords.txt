@@ -38257,3 +38257,4 @@
 1649653128	tripleee	bikevaly\.com
 1649653262	tripleee	slot[\W_]*+deposit
 1649653284	tripleee	deposit[\W_]*+dana
+1649655256	tripleee	axesgeeks\.co\.in
