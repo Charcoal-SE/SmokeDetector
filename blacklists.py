@@ -298,11 +298,11 @@ class YAMLParserNS(YAMLParserCIDR):
                     '{0} does not look like a valid host name'.format(item['ns']))
             if item.get('disable', None):
                 return False
+            # Extend lifetime if we are running a test
+            extra_params = dict()
+            if "pytest" in sys.modules:
+                extra_params['lifetime'] = 15
             try:
-                # Extend lifetime if we are running a test
-                extra_params = dict()
-                if "pytest" in sys.modules:
-                    extra_params['lifetime'] = 15
                 addr = dns.resolver.resolve(ns, 'a', search=True, **extra_params)
                 # Outputing for every resolved entry makes it harder to find the actual error,
                 # due to being swamped with data in the error output.
@@ -310,7 +310,7 @@ class YAMLParserNS(YAMLParserCIDR):
                 #     ns, ','.join(x.to_text() for x in addr)))
             except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 if not item.get('pass', None):
-                    soa = dns.resolver.resolve(ns, 'soa', search=True)
+                    soa = dns.resolver.resolve(ns, 'soa', search=True, **extra_params)
                     log('debug', '{0} has no A record; SOA is {1}'.format(
                         ns, ';'.join(s.to_text() for s in soa)))
             except dns.resolver.NoNameservers:
