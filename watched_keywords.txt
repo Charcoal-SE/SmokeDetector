@@ -35154,7 +35154,6 @@
 1641346147	Jeff Schaller	time-is-life\.fun
 1641354524	Makyen	cassavida\.com\.au
 1641360394	Makyen	hkhamza\.wixsite\.com
-1641361651	tripleee	ezio[\W_]*+solutions
 1641362297	tripleee	hk[\W_]*+hamza(?!\.wixsite\.com)
 1641364877	tripleee	ambienforsale\.us
 1641368456	Nisse Engström	beautifulblinds\.co\.nz
