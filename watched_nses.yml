@@ -1437,6 +1437,9 @@ items:
   - marek.ns.cloudflare.com.
 - ns:
   - lee.ns.cloudflare.com.
+  - kate.ns.cloudflare.com.
+- ns:
+  - lee.ns.cloudflare.com.
   - megan.ns.cloudflare.com.
 - ns:
   - lee.ns.cloudflare.com.
