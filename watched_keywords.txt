@@ -38313,3 +38313,4 @@
 1649745854	tripleee	lowearnings\.com
 1649745914	tripleee	hande[\W_]*+hospital(?!\.org(?<=handehospital\.org))
 1649747653	tripleee	xurlocation\.com
+1649754443	tripleee	timentask\.com
