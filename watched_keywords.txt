@@ -34118,7 +34118,6 @@
 1637736941	tripleee	icewhale\.org
 1637736965	tripleee	loftboardingspecialist\.org\.uk
 1637736998	tripleee	finercustomjewelry\.com
-1637741276	tripleee	unair\.ac\.id
 1637741331	Cody Gray	jellyfish-g\.co\.jp
 1637743152	tripleee	alimoverspakers\.com
 1637743267	tripleee	webo\.pk
