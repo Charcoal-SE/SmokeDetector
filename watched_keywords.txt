@@ -25607,7 +25607,6 @@
 1610663436	cigien	esolem-production\.com
 1610663467	cigien	esolem-production(?!\.com)
 1610671277	cigien	clippingpathfix\.com
-1610692844	cigien	prismleadindia\.in
 1610695283	tripleee	uptodrivers\.com
 1610695459	cigien	free-btc\.biz
 1610695627	cigien	finddeviceinfo\.com
