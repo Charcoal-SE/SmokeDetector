@@ -2632,3 +2632,6 @@ items:
 - ns: dns-he.com.
 - ns: fusionlogicx.com.
 - ns: 2cohost.com.
+- ns:
+  - ns10.hawkhost.com.
+  - ns9.hawkhost.com.
