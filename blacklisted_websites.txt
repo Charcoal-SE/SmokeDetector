@@ -4544,3 +4544,4 @@ aws-services\.info
 unair\.ac\.id
 prismleadindia\.in
 islam-guide\.com
+primotechy\.com

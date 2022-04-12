@@ -31804,7 +31804,6 @@
 1630318018	tripleee	mamywszystko\.net
 1630318677	tripleee	softsbucket\.com
 1630319167	tripleee	(?-i:^Soft Name$)
-1630319556	tripleee	primotechy\.com
 1630321183	tripleee	suncartstore\.com
 1630323175	tripleee	(?-i:^oscarjack463$)
 1630324778	tripleee	ukrainainaescort\.com
