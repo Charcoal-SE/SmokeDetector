@@ -38305,3 +38305,4 @@
 1649742349	tripleee	kahteck\.com
 1649742383	tripleee	seo[\W_]*+kartik(?:[\W_]*+\d+)?
 1649742650	tripleee	miku3920
+1649744624	tripleee	(?-i:^fernanda$)
