@@ -38312,3 +38312,4 @@
 1649745837	tripleee	factoryresethelp\.com
 1649745854	tripleee	lowearnings\.com
 1649745914	tripleee	hande[\W_]*+hospital(?!\.org(?<=handehospital\.org))
+1649747653	tripleee	xurlocation\.com
