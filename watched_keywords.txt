@@ -38316,3 +38316,4 @@
 1649754443	tripleee	timentask\.com
 1649755057	tripleee	mp3download\.to
 1649755397	tripleee	btclod\.com
+1649755978	tripleee	axad\.com
