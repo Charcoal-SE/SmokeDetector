@@ -38304,3 +38304,4 @@
 1649735834	Ryan M	dodoslot\.info
 1649739322	Ryan M	howtobuysaas\.com
 1649742349	tripleee	kahteck\.com
+1649742383	tripleee	seo[\W_]*+kartik(?:[\W_]*+\d+)?
