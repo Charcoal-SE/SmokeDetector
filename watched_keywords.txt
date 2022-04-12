@@ -32991,7 +32991,6 @@
 1633983872	cigien	happy[\W_]*+hiller(?!\.com(?<=happyhiller\.com))
 1633993718	Makyen	(?-i:7QVdzz)(?#goo.gl)
 1633993736	Makyen	(?-i:7d16CpWp-ok)(?#youtu.be)
-1634003397	Makyen	islam-guide\.com
 1634006825	Makyen	scandalchick\.me
 1634006846	Makyen	antekk\.net
 1634014906	cigien	shadystencils\.com
