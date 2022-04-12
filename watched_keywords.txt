@@ -38305,3 +38305,4 @@
 1649742383	tripleee	seo[\W_]*+kartik(?:[\W_]*+\d+)?
 1649742650	tripleee	miku3920
 1649744624	tripleee	(?-i:^fernanda$)
+1649744844	tripleee	prism[\W_]*+lead[\W_]*+india(?!\.in(?<=prismleadindia\.in)|\.com(?<=prismleadindia\.com))
