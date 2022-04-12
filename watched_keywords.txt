@@ -38307,3 +38307,4 @@
 1649744844	tripleee	prism[\W_]*+lead[\W_]*+india(?!\.in(?<=prismleadindia\.in)|\.com(?<=prismleadindia\.com))
 1649744862	tripleee	prismleadindia\.com
 1649745070	tripleee	howelandco\.com
+1649745430	tripleee	needfinancialhelp\.org
