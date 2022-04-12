@@ -38311,3 +38311,4 @@
 1649745544	tripleee	mighty[\W_]*+warners?
 1649745837	tripleee	factoryresethelp\.com
 1649745854	tripleee	lowearnings\.com
+1649745874	tripleee	hande[\W_]*+hospital(?!\.com(?<=handehospital\.com))
