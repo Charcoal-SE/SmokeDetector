@@ -38346,3 +38346,4 @@
 1649830052	tripleee	thegoodwood(?!\.in(?<=thegoodwood\.in))(?<!(?-i:^thegoodwood$))
 1649831030	tripleee	erectilepharma\.com
 1649831088	tripleee	espiargratis\.org
+1649832175	Nick	naffcoelectric\.com
