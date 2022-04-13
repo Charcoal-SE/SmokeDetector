@@ -38376,3 +38376,4 @@
 1649875539	Spevacus	opensponsorship\.rippling-ats\.com
 1649884257	cigien	msubaroda\.ac\.in
 1649884275	cigien	keltron\.org
+1649885881	Ryan M	rohr[\W_]*+emmett
