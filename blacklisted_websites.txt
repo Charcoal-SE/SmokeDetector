@@ -4545,3 +4545,4 @@ unair\.ac\.id
 prismleadindia\.in
 islam-guide\.com
 primotechy\.com
+technumus\.com
