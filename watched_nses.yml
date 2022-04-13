@@ -1508,6 +1508,9 @@ items:
   - lloyd.ns.cloudflare.com.
   - phoenix.ns.cloudflare.com.
 - ns:
+  - lochlan.ns.cloudflare.com.
+  - stella.ns.cloudflare.com.
+- ns:
   - logan.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
 - ns:
