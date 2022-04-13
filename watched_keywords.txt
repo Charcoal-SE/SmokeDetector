@@ -38370,3 +38370,4 @@
 1649857153	Spevacus	devlopersfield\.blogspot
 1649857187	cigien	menstitan\.com
 1649861639	Spevacus	duplicatebills\.com
+1649864473	Makyen	ethicalhackergroup\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
