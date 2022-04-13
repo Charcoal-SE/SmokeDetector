@@ -148,6 +148,9 @@ items:
   - val.ns.cloudflare.com.
 - ns:
   - alfred.ns.cloudflare.com.
+  - princess.ns.cloudflare.com.
+- ns:
+  - alfred.ns.cloudflare.com.
   - zariyah.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
