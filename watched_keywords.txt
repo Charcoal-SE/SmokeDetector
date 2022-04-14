@@ -38402,3 +38402,4 @@
 1649938100	cigien	haxopc\.com
 1649938118	cigien	junaidtariq\.com
 1649938426	cigien	(?-i:wlAB9B)(?#fiverr)
+1649939134	cigien	cookieclicker4\.com
