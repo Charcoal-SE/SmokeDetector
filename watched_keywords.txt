@@ -38413,3 +38413,4 @@
 1649947230	Makyen	(?-i:spectrum-mail)(?#sites.google.com)
 1649947289	Makyen	ijcanon\.org
 1649951880	Ollie	ediify\.com
+1649952496	Ollie	cryptocurrency-exchange\.software
