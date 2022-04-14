@@ -573,6 +573,9 @@ items:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
+  - cartman.ns.cloudflare.com.
+  - rosalyn.ns.cloudflare.com.
+- ns:
   - casey.ns.cloudflare.com.
   - harlee.ns.cloudflare.com.
 - ns:
