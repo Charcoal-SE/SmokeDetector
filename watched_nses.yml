@@ -552,6 +552,9 @@ items:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - byron.ns.cloudflare.com.
+  - pam.ns.cloudflare.com.
+- ns:
   - candy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
