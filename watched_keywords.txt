@@ -38406,3 +38406,4 @@
 1649940710	cigien	pure-medical\.co\.uk
 1649940851	Ryan M	gujratsteel\.com
 1649943524	Jeff Schaller	reviewgators\.com
+1649947133	Makyen	(?-i:coinbase-wallet-us)(?#sites.google.com)
