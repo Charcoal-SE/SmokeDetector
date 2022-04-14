@@ -829,6 +829,11 @@ items:
   - marvin.ns.cloudflare.com.
 - ns:
   - dilbert.ns.cloudflare.com.
+  - dns19.hichina.com.
+  - dns20.hichina.com.
+  - meilani.ns.cloudflare.com.
+- ns:
+  - dilbert.ns.cloudflare.com.
   - meg.ns.cloudflare.com.
 - ns:
   - dilbert.ns.cloudflare.com.
