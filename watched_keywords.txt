@@ -34982,7 +34982,6 @@
 1640777924	tripleee	halocouture\.com
 1640778025	tripleee	(?-i:^Key Marketing$)
 1640780134	tripleee	onsitedesk
-1640781855	tripleee	wpoven\.com
 1640781875	tripleee	swissebene\.ch
 1640781899	tripleee	(?-i:^Kevin Mille$)
 1640784928	tripleee	(?-i:V4tlJ23SfLM&t=53s)(?# youtube)
