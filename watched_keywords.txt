@@ -38386,3 +38386,4 @@
 1649919707	tripleee	controlaltdeleteonline\.com
 1649921181	tripleee	(?-i:^Emily White$)
 1649921240	Robert Longson	designerpeople\.com
+1649921340	Cody Gray	Designer[\W_]*People[\W_]*(?!\.com(?<=designerpeople\.com))
