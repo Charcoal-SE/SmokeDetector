@@ -38439,3 +38439,4 @@
 1650013690	Ryan M	copysafe[\W_]*+pdf
 1650013722	Ryan M	artistscope(?!\.com)
 1650013741	Ryan M	artistscope\.com
+1650014080	Cody Gray	dikazo\.com
