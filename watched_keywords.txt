@@ -38432,3 +38432,4 @@
 1650005029	Cody Gray	brandoost(?!\.com)
 1650005400	Cody Gray	(?-i:^Vishal Goyal$)
 1650006532	Cody Gray	cjmetalalloy\.com
+1650006571	Cody Gray	industrial[\W_]*aluminum[\W_]*(?:products|profile)
