@@ -38435,4 +38435,3 @@
 1650006571	Cody Gray	industrial[\W_]*aluminum[\W_]*(?:products|profile)
 1650007256	Cody Gray	Axes[\W_]*Geeks
 1650008619	Cody Gray	RESARE(?:[\W_]*Vintage[\W_]*Geometric[\W_]*Area[\W_]*Rugs?)?
-1650013304	Glorfindel	Blaine\W*Graboyes
