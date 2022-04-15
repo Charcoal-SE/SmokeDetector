@@ -38426,3 +38426,4 @@
 1649993487	Cody Gray	(?-i:LTKXqBCfobnA1Vbr7)(?#forms.gle)
 1649993557	Cody Gray	Beosin[\W_]*(?:VaaS)?(?!\.com(?<=beosin\.com))
 1649997752	Cody Gray	livingnotestravelnetwork\.com
+1650001712	Cody Gray	orderz\.in
