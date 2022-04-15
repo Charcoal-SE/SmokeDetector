@@ -38427,3 +38427,4 @@
 1649993557	Cody Gray	Beosin[\W_]*(?:VaaS)?(?!\.com(?<=beosin\.com))
 1649997752	Cody Gray	livingnotestravelnetwork\.com
 1650001712	Cody Gray	orderz\.in
+1650003405	Cody Gray	sugar[\W_]*road
