@@ -38437,3 +38437,4 @@
 1650008619	Cody Gray	RESARE(?:[\W_]*Vintage[\W_]*Geometric[\W_]*Area[\W_]*Rugs?)?
 1650013484	Cody Gray	Blaine[\W_]*Graboyes
 1650013690	Ryan M	copysafe[\W_]*+pdf
+1650013722	Ryan M	artistscope(?!\.com)
