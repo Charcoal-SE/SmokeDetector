@@ -38424,3 +38424,4 @@
 1649991373	Cody Gray	Agung[\W_]*Podomoro(?!\.com(?<=agungpodomoro\.com))
 1649993466	Cody Gray	beosin\.com
 1649993487	Cody Gray	(?-i:LTKXqBCfobnA1Vbr7)(?#forms.gle)
+1649993557	Cody Gray	Beosin[\W_]*(?:VaaS)?(?!\.com(?<=beosin\.com))
