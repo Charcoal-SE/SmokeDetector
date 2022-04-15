@@ -38441,3 +38441,4 @@
 1650013741	Ryan M	artistscope\.com
 1650014080	Cody Gray	dikazo\.com
 1650014119	Cody Gray	dikazo(?!\.com)
+1650014339	Cody Gray	Genex[\W_]*DBS(?!\.com(?<=genexdbs\.com))
