@@ -38440,3 +38440,4 @@
 1650013722	Ryan M	artistscope(?!\.com)
 1650013741	Ryan M	artistscope\.com
 1650014080	Cody Gray	dikazo\.com
+1650014119	Cody Gray	dikazo(?!\.com)
