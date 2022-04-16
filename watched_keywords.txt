@@ -38462,3 +38462,4 @@
 1650090840	Cody Gray	sapphireinfocom\.com
 1650090859	Cody Gray	Sapphire[\W_]*Infocom(?!\.com(?<=sapphireinfocom\.com))
 1650090881	Cody Gray	Blackout[\W_]*Bingo[\W_]*Game
+1650090918	Cody Gray	primesgaming\.blogspot
