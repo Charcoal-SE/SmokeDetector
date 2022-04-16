@@ -38471,3 +38471,4 @@
 1650121174	Cody Gray	[ĐD][áa]nh[\W_]*B[ạa]i[\W_]*Nh[àa][\W_]*C[áa]i(?!\.com(?<=danhbainhacai\.com))
 1650116273	Robert Longson	allamericangrit\.com
 1650121282	Cody Gray	All[\W_]*American[\W_]*Grit(?!\.com(?<=allamericangrit\.com))
+1650133212	Makyen	cygnusmarketing\.pk
