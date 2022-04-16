@@ -38465,3 +38465,4 @@
 1650090968	Cody Gray	Blackout[\W_]*Bingo(?:[\W_]*Game)?
 1650097118	Robert Longson	orthoindehospital\.in
 1650101398	Robert Longson	healthcarebloger\.com
+1650113870	Jeff Schaller	glitex\.co\.ke
