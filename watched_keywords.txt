@@ -38455,3 +38455,4 @@
 1650047933	cigien	raouf[\W_]*+darvishan(?:@gmail\.com)?
 1650060179	cigien	romsguy\.com
 1650088224	Cody Gray	silkrute\.com
+1650088242	Cody Gray	Silk[\W_]*Rute(?!\.com(?<=silkrute\.com))
