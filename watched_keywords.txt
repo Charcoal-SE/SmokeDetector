@@ -38468,3 +38468,4 @@
 1650113870	Jeff Schaller	glitex\.co\.ke
 1650116229	Robert Longson	danhbainhacai\.com
 1650121088	Cody Gray	@?tukimcuong888
+1650121174	Cody Gray	[ĐD][áa]nh[\W_]*B[ạa]i[\W_]*Nh[àa][\W_]*C[áa]i(?!\.com(?<=danhbainhacai\.com))
