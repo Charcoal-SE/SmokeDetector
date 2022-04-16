@@ -38458,3 +38458,4 @@
 1650088242	Cody Gray	Silk[\W_]*Rute(?!\.com(?<=silkrute\.com))
 1650089963	Cody Gray	elitepassion\.club
 1650090024	Cody Gray	ElitePassion(?!\.club)
+1650090382	Cody Gray	arzhost\.com
