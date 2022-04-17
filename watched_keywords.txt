@@ -38480,3 +38480,4 @@
 1650181505	Cody Gray	Cheap[\W_]*Air[\W_]*Ticket[\W_]*USA(?!\.com(?<=cheapairticketusa\.com))
 1650190224	Robert Longson	kingspipes\.com
 1650188639	Robert Longson	tribunalearbitraleeuropeo\.net
+1650193102	Robert Longson	tinysol\.com\.au
