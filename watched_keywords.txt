@@ -38478,3 +38478,4 @@
 1650169606	Makyen	mercurious(?:[\W_]*+(?:confraternity|occult|society|gmail\.com))+
 1650180708	Robert Longson	cheapairticketusa\.com
 1650181505	Cody Gray	Cheap[\W_]*Air[\W_]*Ticket[\W_]*USA(?!\.com(?<=cheapairticketusa\.com))
+1650190224	Robert Longson	kingspipes\.com
