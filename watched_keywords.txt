@@ -38535,3 +38535,4 @@
 1650427437	cocomac	crm24\.vn
 1650434685	tripleee	clouddrivehelper\.com
 1650434709	Makyen	aplusappliancepro\.com
+1650434946	tripleee	milk[\W_]*+tea[\W_]*+alliance
