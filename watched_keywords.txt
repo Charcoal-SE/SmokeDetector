@@ -38540,3 +38540,4 @@
 1650439872	Nick	ourupn\.com
 1650441899	Cody Gray	phamgiamedia\.vn
 1650441971	Cody Gray	Ph[ạa]m[\W_]*Gia[\W_]*Media(?!\.vn(?<=phamgiamedia\.vn))
+1650443789	tripleee	(?-i:^Michael Mateo$)
