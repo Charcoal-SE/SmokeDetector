@@ -38550,3 +38550,4 @@
 1650462142	Makyen	tahanci\.av\.tr
 1650462387	Makyen	kıdem[\W_]*+tazminatı
 1650467948	Jeff Schaller	lovelabworld\.com
+1650468286	Jeff Schaller	clippingpathexperienced\.com
