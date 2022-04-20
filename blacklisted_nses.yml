@@ -192,6 +192,9 @@ items:
 - ns:
   - sns19.hostgator.in.
   - sns20.hostgator.in.
+- ns:
+  - sns41.hostgator.in.
+  - sns42.hostgator.in.
 - ns: allianzetechnologies.com.
 - ns: anujjindal.in.
 - ns:
