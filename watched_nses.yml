@@ -97,6 +97,9 @@ items:
   - melissa.ns.cloudflare.com.
 - ns:
   - ainsley.ns.cloudflare.com.
+  - leonard.ns.cloudflare.com.
+- ns:
+  - ainsley.ns.cloudflare.com.
   - morgan.ns.cloudflare.com.
 - ns:
   - aisha.ns.cloudflare.com.
