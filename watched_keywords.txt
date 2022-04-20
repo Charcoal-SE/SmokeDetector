@@ -38538,3 +38538,4 @@
 1650434946	tripleee	milk[\W_]*+tea[\W_]*+alliance
 1650437591	tripleee	quantoknack\.com
 1650438054	tripleee	sworld\.co\.uk
+1650439872	Nick	ourupn\.com
