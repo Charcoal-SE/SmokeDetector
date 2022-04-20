@@ -38548,3 +38548,4 @@
 1650459469	Cody Gray	lafabet[\W_]*manager
 1650460701	Makyen	dissertationteam\.com
 1650462142	Makyen	tahanci\.av\.tr
+1650462387	Makyen	kıdem[\W_]*+tazminatı
