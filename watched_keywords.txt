@@ -38565,3 +38565,4 @@
 1650522542	Cody Gray	(?-i:^Kellton Tech$)
 1650522589	Cody Gray	kellton[\W_]*tech(?!\.com)
 1650526750	tripleee	playboimerch\.com
+1650528345	Glorfindel	azerbaijanvisa\.org
