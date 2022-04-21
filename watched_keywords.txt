@@ -38566,3 +38566,4 @@
 1650522589	Cody Gray	kellton[\W_]*tech(?!\.com)
 1650526750	tripleee	playboimerch\.com
 1650528345	Glorfindel	azerbaijanvisa\.org
+1650529224	Nick	nguyendinhchieu\.edu\.vn
