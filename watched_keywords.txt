@@ -38561,3 +38561,4 @@
 1650520578	Cody Gray	Theme[\W_]*GPL[\W_]*Store
 1650520632	Cody Gray	Wendy[’']s[\W_]*Breakfast[\W_]*Menu(?!\.info(?<=wendysbreakfastmenu\.info))
 1650521415	Cody Gray	(?-i:DhmGjWleyGY)(?# youtube)
+1650522505	Cody Gray	kelltontech\.com
