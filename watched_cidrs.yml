@@ -1347,7 +1347,8 @@ items:
 - ip: 151.106.97.84
 - ip: 151.106.98.45
 - ip: 151.139.128.10
-- comment: dominantly FPs, don't blacklist
+- comment: dominantly FPs, 12/108 over 6 months 2022-04-21
+  disable: true
   ip: 151.139.128.11
 - ip: 151.248.127.138
 - ip: 151.80.64.2
