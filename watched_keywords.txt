@@ -38555,7 +38555,6 @@
 1650500090	Makyen	vpnapk\.su
 1650516520	Suraj Rao	debtconsultation\.co
 1650520011	Cody Gray	wendysbreakfastmenu\.info
-1650520048	Cody Gray	Wendy[’']s[\W_]*Breakfast[\W_]*Menu(?!\.info(?<=wendysbreakfastmenu\.vn))
 1650520489	tripleee	darren[\W_]*+james[\W_]*+interiors
 1650520506	tripleee	mermaidpublishers\.com
 1650520522	tripleee	thangapushpam\.com
