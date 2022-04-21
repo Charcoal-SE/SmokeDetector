@@ -38559,3 +38559,4 @@
 1650520506	tripleee	mermaidpublishers\.com
 1650520522	tripleee	thangapushpam\.com
 1650520578	Cody Gray	Theme[\W_]*GPL[\W_]*Store
+1650520632	Cody Gray	Wendy[’']s[\W_]*Breakfast[\W_]*Menu(?!\.info(?<=wendysbreakfastmenu\.info))
