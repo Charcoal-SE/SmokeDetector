@@ -860,9 +860,6 @@ items:
   - dilbert.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
 - ns:
-  - dina.ns.cloudflare.com.
-  - mario.ns.cloudflare.com.
-- ns:
   - dolly.ns.cloudflare.com.
   - hans.ns.cloudflare.com.
 - ns:

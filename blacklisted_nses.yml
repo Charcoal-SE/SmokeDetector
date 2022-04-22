@@ -88,6 +88,9 @@ items:
   - dawn.ns.cloudflare.com.
   - dimitris.ns.cloudflare.com.
 - ns:
+  - dina.ns.cloudflare.com.
+  - mario.ns.cloudflare.com.
+- ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
