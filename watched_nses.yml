@@ -1717,6 +1717,9 @@ items:
   - pablo.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
+  - pablo.ns.cloudflare.com.
+  - sara.ns.cloudflare.com.
+- ns:
   - paityn.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
