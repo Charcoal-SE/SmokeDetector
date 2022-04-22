@@ -714,6 +714,9 @@ items:
   - cory.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - cris.ns.cloudflare.com.
+  - ruth.ns.cloudflare.com.
+- ns:
   - crystal.ns.cloudflare.com.
   - gordon.ns.cloudflare.com.
 - ns:
