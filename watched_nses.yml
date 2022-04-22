@@ -726,6 +726,9 @@ items:
   - dahlia.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - damien.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
   - damon.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
