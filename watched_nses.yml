@@ -316,6 +316,9 @@ items:
   - bella.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
+  - molly.ns.cloudflare.com.
+- ns:
+  - arch.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
 - ns:
   - aria.ns.cloudflare.com.
