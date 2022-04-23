@@ -23616,7 +23616,6 @@
 1603519245	Ryan M	dotnetartisan\.in
 1603521751	Makyen	(?:get[\W_]*+)vyessence(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
 1603535271	Jeff Schaller	blog\.forumias\.com
-1603535464	Jeff Schaller	UPSC
 1603542768	Mast	bang[\W_]*+tekso
 1603542916	Mast	tmg-clothing\.com
 1603543083	Mast	wiki87\.com
