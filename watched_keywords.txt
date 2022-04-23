@@ -38620,3 +38620,4 @@
 1650713487	Cody Gray	ligma[\W_]*balls
 1650713865	Jeff Schaller	ketocompletget\.livejournal\.com
 1650714203	Jeff Schaller	jamadvisor\.com
+1650717309	Cody Gray	(?-i:UPSC)
