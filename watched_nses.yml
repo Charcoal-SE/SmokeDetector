@@ -1762,6 +1762,9 @@ items:
   - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - roman.ns.cloudflare.com.
+  - ursula.ns.floudflare.com.
+- ns:
   - rustam.ns.cloudflare.com.
   - susan.ns.cloudflare.com.
 - ns:
