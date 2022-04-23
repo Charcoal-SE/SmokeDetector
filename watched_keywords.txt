@@ -38267,7 +38267,6 @@
 1649717117	cigien	rename_app
 1649722613	Makyen	jlbonafe2022(?:@gmail\.com)?
 1649723023	Ian Campbell	pacbiosupply\.com
-1649725768	Ryan M	myyapk\.com
 1649729840	cigien	zsetup\.com
 1649735573	Ryan M	imageandart\.com
 1649735588	Ryan M	tommynevins\.com
