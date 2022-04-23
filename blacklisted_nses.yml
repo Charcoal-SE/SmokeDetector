@@ -106,6 +106,9 @@ items:
   - jay.ns.cloudflare.com.
   - jule.ns.cloudflare.com.
 - ns:
+  - kayleigh.ns.cloudflare.com.
+  - weston.ns.cloudflare.com.
+- ns:
   - lee.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
