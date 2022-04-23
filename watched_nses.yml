@@ -1763,7 +1763,7 @@ items:
   - west.ns.cloudflare.com.
 - ns:
   - roman.ns.cloudflare.com.
-  - ursula.ns.floudflare.com.
+  - ursula.ns.cloudflare.com.
 - ns:
   - rustam.ns.cloudflare.com.
   - susan.ns.cloudflare.com.
