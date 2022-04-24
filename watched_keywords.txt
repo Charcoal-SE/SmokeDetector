@@ -38628,3 +38628,4 @@
 1650786513	Cody Gray	airdrops\.id
 1650818111	Cody Gray	Delta[\W_]*(?:Airlines[\W_]*)?(?:Cancellation|Change[\W_]*Flight)[\W_]*
 1650822003	Makyen	techembounce\.com
+1650828984	Makyen	colombianrecruit(?:@gmail\.com)?
