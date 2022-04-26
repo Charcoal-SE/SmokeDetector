@@ -30411,7 +30411,6 @@
 1625486922	Makyen	emiratesnbd\.com
 1625487566	Makyen	tuyensinhdonga
 1625487584	Makyen	tuyensinhnganhduoc
-1625490903	Machavity	serpapi
 1625492136	cigien	keoso\.tv
 1625492627	cigien	tech\.esearchlogix\.com
 1625492690	cigien	semreseller\.com
