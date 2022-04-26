@@ -32229,7 +32229,6 @@
 1631602494	tripleee	misterskinfotech\.com
 1631605025	tripleee	healthcare24hrs\.com
 1631606144	Ryan M	uptocrack\.com
-1631606183	Ryan M	maxxmann\.in
 1631610052	tripleee	nembutalplus\.com
 1631610253	tripleee	acetaminophen[\W_]*+tablets?
 1631610351	tripleee	american[\W_]*+iron[\W_]*+and[\W_]*+steel[\W_]*+institute
