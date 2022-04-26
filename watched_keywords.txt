@@ -4899,7 +4899,6 @@
 1536470227	Makyen	Larryblackhathacksolution(?:@gmail\.com)?
 1536475458	iBug	shatabdiaviation\.com
 1536478840	Mithrandir	mobdroapkfree\.com
-1536478874	Mithrandir	Mobdro\W?Apk
 1536485861	Mithrandir	where\Wto\Wbuy
 1536490910	Glorfindel	aluflagpole\.com
 1536504092	Makyen	javainterviewsolution\.in
