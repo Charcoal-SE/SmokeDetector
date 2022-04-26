@@ -38672,3 +38672,4 @@
 1651004863	Makyen	achetez-permisdeconduire\.com
 1651006005	Makyen	installapks\.com
 1651006028	Cody Gray	(?-i:^madagushema$)
+1651009160	Cody Gray	valuanalytics\.com
