@@ -38671,3 +38671,4 @@
 1651004847	Makyen	documentoregistrato\.com
 1651004863	Makyen	achetez-permisdeconduire\.com
 1651006005	Makyen	installapks\.com
+1651006028	Cody Gray	(?-i:^madagushema$)
