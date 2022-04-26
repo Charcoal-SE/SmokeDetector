@@ -645,3 +645,4 @@ Visualytes
 (?-i:^Eleanor Owen$)
 (?-i:^aziza aziza$)
 (?-i:^thegoodwood$)
+(?-i:^Claudine Albert$)
