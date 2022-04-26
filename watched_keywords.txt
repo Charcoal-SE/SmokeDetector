@@ -5998,7 +5998,6 @@
 1542020562	Erik the Outgolfer	csindian\.com
 1542021690	Erik the Outgolfer	fitrepublik\.com
 1542028103	Glorfindel	windowserrors\.org
-1542028271	Glorfindel	appuals\.com
 1542038603	Makyen	trustedloancouncil(?:@googlemail\.com)?
 1542042109	WELZ	rajasri\.com
 1542047078	Erik the Outgolfer	wittyflick\.com
