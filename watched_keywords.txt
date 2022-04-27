@@ -38685,7 +38685,6 @@
 1651048225	Robert Longson	getnewreview\.com
 1651049745	Nick	wowenglish\.edu\.vn
 1651049616	Robert Longson	fastandup\.in
-1651050249	tripleee	coverjunction\.com
 1651051350	Cody Gray	spaceedgetechnology\.com
 1651051397	Cody Gray	SpaceEdge[\W_]*Technology(?!\.com(?<=spaceedgetechnology\.com))
 1651052461	Cody Gray	vulkanvegas\.company
