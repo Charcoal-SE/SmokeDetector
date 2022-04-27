@@ -23442,7 +23442,6 @@
 1603075364	Makyen	禮品卡
 1603075377	Makyen	付款方法
 1603083573	Jeff Schaller	counterfeitmoney\.biz
-1603090233	Mast	chennaitraining\.in
 1603091628	Mast	rokutechnicalsupportnumber\.com
 1603091881	Mast	(?-i:S31qQPlnP44)(?#youtu.be)
 1603092366	Makyen	prime[\W_]*+green[\W_]*+cbd[\W_]*+oil
