@@ -38692,3 +38692,4 @@
 1651053287	tripleee	sky[\W_]*+movies[\W_]*+hd
 1651053309	tripleee	udayancare\.org
 1651053631	Cody Gray	(?-i:^Baba Support Team$)
+1651060168	Jeff Schaller	storeaccspva\.com
