@@ -38690,3 +38690,4 @@
 1651051397	Cody Gray	SpaceEdge[\W_]*Technology(?!\.com(?<=spaceedgetechnology\.com))
 1651052461	Cody Gray	vulkanvegas\.company
 1651052489	Cody Gray	вулкан[\W_]*казино
+1651053287	tripleee	sky[\W_]*+movies[\W_]*+hd
