@@ -38689,3 +38689,4 @@
 1651050249	tripleee	coverjunction\.com
 1651051350	Cody Gray	spaceedgetechnology\.com
 1651051397	Cody Gray	SpaceEdge[\W_]*Technology(?!\.com(?<=spaceedgetechnology\.com))
+1651052461	Cody Gray	vulkanvegas\.company
