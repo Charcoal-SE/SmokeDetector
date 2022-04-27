@@ -38678,3 +38678,4 @@
 1651015633	Cody Gray	apkpure\.com
 1651015701	Cody Gray	Mobdro(?:[\W_]*Apk)?
 1651032506	Cody Gray	compresstech\.com\.ph
+1651032577	Cody Gray	Compresstech(?!\.com\.ph)
