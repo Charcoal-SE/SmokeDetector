@@ -38679,3 +38679,4 @@
 1651015701	Cody Gray	Mobdro(?:[\W_]*Apk)?
 1651032506	Cody Gray	compresstech\.com\.ph
 1651032577	Cody Gray	Compresstech(?!\.com\.ph)
+1651041262	Nick	lifechacha\.com
