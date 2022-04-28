@@ -196,6 +196,9 @@ items:
   - piotr.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
+  - arturo.ns.cloudflare.com.
+- ns:
+  - amanda.ns.cloudflare.com.
   - jack.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
