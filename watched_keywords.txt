@@ -38740,3 +38740,4 @@
 1651147969	cigien	blog\.cheapestflightsfare\.com
 1651150121	cigien	(?-i:C2JxNodFhuSJMnPz7)(?#google forms)
 1651158659	tripleee	nigeriaolympiccommittee\.org
+1651159950	Makyen	(?:raja@)?talentola\.com
