@@ -38715,3 +38715,4 @@
 1651123201	cigien	microprokey\.com
 1651123381	cigien	microprokey(?!\.com)
 1651130047	Ryan M	fast[\W_]*+cash[\W_]*+offer
+1651130076	Ryan M	^lalegitimate$
