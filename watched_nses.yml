@@ -291,9 +291,6 @@ items:
   - ara.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
-  - ara.ns.cloudflare.com.
-  - toby.ns.cloudflare.com.
-- ns:
   - aragorn.ns.cloudflare.com.
   - connie.ns.cloudflare.com.
 - ns:

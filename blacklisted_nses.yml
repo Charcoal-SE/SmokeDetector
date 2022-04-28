@@ -38,6 +38,9 @@ items:
   - ara.ns.cloudflare.com.
   - greg.ns.cloudflare.com.
 - ns:
+  - ara.ns.cloudflare.com.
+  - toby.ns.cloudflare.com.
+- ns:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
