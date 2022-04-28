@@ -38735,3 +38735,4 @@
 1651141068	tripleee	simandhar[\W_]*+education(?!\.com(?<=simandhareducation\.com))
 1651141424	tripleee	faresfriction\.com
 1651141588	tripleee	copilotcode\.com
+1651141983	Ryan M	techmaxzine\.blogspot
