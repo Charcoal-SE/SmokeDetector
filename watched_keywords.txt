@@ -38718,3 +38718,4 @@
 1651130076	Ryan M	^lalegitimate$
 1651130111	tripleee	aaroh\.com
 1651130490	tripleee	mount[\W_]*+talent(?:[\W_]*+consulting)?
+1651131115	Nick	iowacontractorsinsurance\.com
