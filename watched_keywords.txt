@@ -38732,3 +38732,4 @@
 1651139808	Cody Gray	whizco\.in
 1651139836	Cody Gray	Metaverse[\W_]*NFT[\W_]*Marketplace
 1651140943	tripleee	simandhareducation\.com
+1651141068	tripleee	simandhar[\W_]*+education(?!\.com(?<=simandhareducation\.com))
