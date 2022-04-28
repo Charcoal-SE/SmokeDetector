@@ -38708,3 +38708,4 @@
 1651119126	cigien	store[\W_]*+accs[\W_]*+pva(?!\.com(?<=storeaccspva\.com))
 1651119165	cigien	synergyraftar\.com
 1651121044	cigien	howtostartanllc\.com
+1651121243	Ryan M	blueflamingo\.ca
