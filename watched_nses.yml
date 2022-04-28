@@ -451,6 +451,9 @@ items:
   - hugh.ns.cloudflare.com.
 - ns:
   - blakely.ns.cloudflare.com.
+  - roan.ns.cloudflare.com.
+- ns:
+  - blakely.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
   - bob.ns.cloudflare.com.
