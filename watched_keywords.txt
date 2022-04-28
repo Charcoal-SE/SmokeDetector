@@ -38720,3 +38720,4 @@
 1651130490	tripleee	mount[\W_]*+talent(?:[\W_]*+consulting)?
 1651131115	Nick	iowacontractorsinsurance\.com
 1651131173	Nick	insuringminnesota\.com
+1651131672	tripleee	sobnews\.xyz
