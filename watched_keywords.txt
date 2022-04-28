@@ -38728,3 +38728,4 @@
 1651134945	Ryan M	drnaresharthritisandrheumatism\.com
 1651135684	tripleee	tauchain\.medium\.com
 1651135709	tripleee	(?-i:UCHmYERrMpeCc6mp9zK8UiTw)(?# youtube)
+1651136000	tripleee	rev[\W_]*+skin[\W_]*+cream\w*
