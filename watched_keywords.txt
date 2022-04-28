@@ -38706,3 +38706,4 @@
 1651113291	Ryan M	qualitybredcanecorso\.company\.com
 1651117974	cigien	fasterpakistan\.com
 1651119126	cigien	store[\W_]*+accs[\W_]*+pva(?!\.com(?<=storeaccspva\.com))
+1651119165	cigien	synergyraftar\.com
