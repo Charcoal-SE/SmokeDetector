@@ -36245,7 +36245,6 @@
 1644560000	cigien	onlineslots\.com\.ua
 1644561307	cigien	orbirouterssetup\.com
 1644561342	Ryan M	www-192-168-100-1\.com
-1644561357	Ryan M	192-168-l0-1\.club
 1644561458	cigien	miadocumentary\.com
 1644561474	cigien	yoyo88\.com
 1644565400	Makyen	aps[\W_]*+webtech(?!\.com)(?:[\W_]*+(?:pvt|ltd))*
