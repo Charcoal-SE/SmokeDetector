@@ -29909,7 +29909,6 @@
 1624000935	double-beep	khoahoctiengtrung\.com
 1624000975	double-beep	indiatransformer\.com
 1624004677	tripleee	mtdproducts\.in
-1624009498	Cody Gray	zhihu\.com
 1624013360	tripleee	springgalaxy\.com
 1624018682	Spevacus	admsneezeguardsusa\.wordpress
 1624023760	Xnero	(?-i:EG8mr0N4ZC0)(?#YouTube)
