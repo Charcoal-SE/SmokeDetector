@@ -38777,3 +38777,4 @@
 1651247872	tripleee	michipel\.com
 1651250423	tripleee	apkmodhub\.online
 1651250444	tripleee	querybeast\.com
+1651255174	Makyen	ethical\.gurru(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
