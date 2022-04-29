@@ -38746,3 +38746,4 @@
 1651177521	Cody Gray	Urology[\W_]*Center
 1651181427	Makyen	assamsakori\.org
 1651198867	cigien	arieljunioralison89(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1651199023	cigien	shopdoacademico\.com\.br
