@@ -38766,3 +38766,4 @@
 1651230471	Cody Gray	simpleintelligentsystems\.com
 1651231493	tripleee	(?-i:APR(?=[$]))
 1651233703	tripleee	mytechremedy\.com
+1651235321	Cody Gray	Capital[\W_]*Title[\W_]*Loans
