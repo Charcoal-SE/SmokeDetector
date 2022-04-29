@@ -38748,3 +38748,4 @@
 1651198867	cigien	arieljunioralison89(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1651199023	cigien	shopdoacademico\.com\.br
 1651200233	cigien	duckcreektraining\.com
+1651200284	cigien	writemyessaysos\.com
