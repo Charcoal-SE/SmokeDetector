@@ -36582,7 +36582,6 @@
 1645452693	cigien	shoesreviewer\.com
 1645452988	cigien	material3d\.net
 1645453095	cigien	milanopavia\.news
-1645455885	Makyen	router-tech\.com
 1645456498	cigien	mrfruits\.it
 1645456639	cigien	edakkal[\W_]*+hermitage
 1645456714	cigien	fotocelerpaolini\.it
