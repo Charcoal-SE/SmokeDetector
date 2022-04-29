@@ -38603,7 +38603,6 @@
 1650697967	Ryan M	nordikdentalgroup\.com
 1650700284	Ryan M	thecodehubs\.com
 1650708974	Cody Gray	pccustombuilder\.com
-1650712811	Cody Gray	www-10-0-0-1\.com
 1650713487	Cody Gray	ligma[\W_]*balls
 1650713865	Jeff Schaller	ketocompletget\.livejournal\.com
 1650714203	Jeff Schaller	jamadvisor\.com
