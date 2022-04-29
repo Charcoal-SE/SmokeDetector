@@ -613,6 +613,9 @@ items:
   - venus.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
+  - gail.ns.cloudflare.com.
+- ns:
+  - chance.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
   - charles.ns.cloudflare.com.
