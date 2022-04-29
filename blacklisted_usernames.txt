@@ -647,3 +647,4 @@ Visualytes
 (?-i:^thegoodwood$)
 (?-i:^Claudine Albert$)
 (?-i:^Sahara$)
+(?-i:^Caroline Arthur$)
