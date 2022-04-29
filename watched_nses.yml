@@ -712,6 +712,9 @@ items:
   - jason.ns.cloudflare.com.
 - ns:
   - corey.ns.cloudflare.com.
+  - naya.ns.cloudflare.com.
+- ns:
+  - corey.ns.cloudflare.com.
   - ollie.ns.cloudflare.com.
 - ns:
   - cortney.ns.cloudflare.com.
