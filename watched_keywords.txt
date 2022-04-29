@@ -38751,3 +38751,4 @@
 1651200284	cigien	writemyessaysos\.com
 1651202228	cigien	fixigo\.in
 1651213900	tripleee	las-vegas\.com
+1651214693	tripleee	(?-i:^Adi Shetrit$)
