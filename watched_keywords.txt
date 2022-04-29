@@ -38757,3 +38757,4 @@
 1651224873	Cody Gray	jade[\W_]*rollers(?!\.com(?<=bestjaderollers\.com))
 1651225197	tripleee	feecreative\.com
 1651226374	tripleee	veron[\W_]*+institute
+1651226426	tripleee	national[\W_]*+defence[\W_]*+academy
