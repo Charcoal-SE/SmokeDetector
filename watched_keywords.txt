@@ -38765,3 +38765,4 @@
 1651229841	Cody Gray	Get your hands on this fantastic phone right now
 1651230471	Cody Gray	simpleintelligentsystems\.com
 1651231493	tripleee	(?-i:APR(?=[$]))
+1651233703	tripleee	mytechremedy\.com
