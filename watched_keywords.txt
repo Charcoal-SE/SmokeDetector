@@ -38755,3 +38755,4 @@
 1651216921	Cody Gray	baidyanath\.co\.in
 1651216964	Cody Gray	Baidyanath(?!\.co\.in)
 1651220630	Cody Gray	Shri[\W_]*Ram(?:[\W_]*Global)?[\W_]*School
+1651221590	tripleee	anmaksubs\.com
