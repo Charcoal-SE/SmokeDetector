@@ -38768,3 +38768,4 @@
 1651233703	tripleee	mytechremedy\.com
 1651235321	Cody Gray	Capital[\W_]*Title[\W_]*Loans
 1651235349	Cody Gray	1stcapitaltitleloans\.com
+1651235590	tripleee	styloss\.com
