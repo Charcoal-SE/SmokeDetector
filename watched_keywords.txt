@@ -38758,3 +38758,4 @@
 1651221590	tripleee	anmaksubs\.com
 1651222964	Cody Gray	electrotounes\.tn
 1651224299	Cody Gray	salesforce[\W_]*integration[\W_]*services?
+1651224873	Cody Gray	jade[\W_]*rollers(?!\.com(?<=bestjaderollers\.com))
