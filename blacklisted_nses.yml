@@ -124,6 +124,9 @@ items:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - major.ns.cloudflare.com.
+  - tara.ns.cloudflare.com.
+- ns:
   - maria.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:

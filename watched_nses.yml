@@ -1594,9 +1594,6 @@ items:
   - major.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
-  - major.ns.cloudflare.com.
-  - tara.ns.cloudflare.com.
-- ns:
   - malcolm.ns.cloudflare.com.
   - sureena.ns.cloudflare.com.
 - ns:
