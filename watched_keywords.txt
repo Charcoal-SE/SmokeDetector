@@ -6115,7 +6115,7 @@
 1542694155	K.Dᴀᴠɪs	heloideo\.com
 1542702625	K.Dᴀᴠɪs	Stack\s?Exchange Mod(?:eration)?\s?(?:team)?
 1542703430	Shree	itjobslist\.com
-1542705064	tripleee	write\W?my\W?essay
+1542705064	tripleee	write[\W_]*+my[\W_]*+essay(?!\.nyc(?<=writemyessay\.nyc))(?!\.pro(?<=writemyessay\.pro))(?!\.services(?<=writemyessay\.services))
 1542705737	tripleee	Gypsy\W*Housing\W*World
 1542706198	tripleee	roomster\.com
 1542711465	Shree	pandapro\.ir
