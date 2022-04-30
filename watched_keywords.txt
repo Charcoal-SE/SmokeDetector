@@ -38813,3 +38813,4 @@
 1651335555	Jeff Schaller	2ndpassportonline\.com
 1651342153	Makyen	writemyessay\.nyc
 1651344007	Makyen	sky4k\.top
+1651344027	Makyen	sky4k(?!\.top)
