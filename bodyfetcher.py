@@ -36,7 +36,7 @@ class BodyFetcher:
         #                                               questions    2020-11-02   2020-02-19    2020-10-28 to
         #                                                per day       setting     requests      2020-11-02
         # "stackoverflow.com": 3,                   # _  6,816            3          360            4,365
-        "math.stackexchange.com": 2,                # _    596            1          473            6,346
+        # "math.stackexchange.com": 2,              # _    596            1          473            6,346
         # "ru.stackoverflow.com": 2,                # _    230           10           13              145
         # "askubuntu.com": ,                        # _    140            1           88            1,199
         # "es.stackoverflow.com": 2,                # _    138            5           25              225
