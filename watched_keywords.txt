@@ -38785,3 +38785,4 @@
 1651283914	Ryan M	3sfarm\.com
 1651283944	Ryan M	3s[\W_]*+render[\W_]*+farm
 1651283987	Ryan M	3sfarm\.io
+1651286793	Makyen	1[\W_]*+800[\W_]*+biz[\W_]*+broker(?!\.com(?<=1800bizbroker\.com))
