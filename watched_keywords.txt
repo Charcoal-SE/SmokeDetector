@@ -6108,7 +6108,7 @@
 1542635202	tripleee	moshaveretahsili\d*
 1542645165	K.Dᴀᴠɪs	miniproreviews\.com
 1542650688	K.Dᴀᴠɪs	justquarry\.com
-1542656412	Erik the Outgolfer	darkcracker\W?(?:@|at)\W?protonmail\W?(?:\.|dot)\W?com
+1542656412	Erik the Outgolfer	darkcracker[\W_]*+(?:at[\W_]*+)?protonmail[\W_]*+(?:dot[\W_]*+)?com
 1542668140	Makyen	alreemas\.com
 1542679375	K.Dᴀᴠɪs	soniastevens1995(?:@gmail\.com)?
 1542693616	K.Dᴀᴠɪs	jewelsinfosystems\.com
@@ -6116,7 +6116,7 @@
 1542702625	K.Dᴀᴠɪs	Stack\s?Exchange Mod(?:eration)?\s?(?:team)?
 1542703430	Shree	itjobslist\.com
 1542705064	tripleee	write[\W_]*+my[\W_]*+essay(?!\.nyc(?<=writemyessay\.nyc))(?!\.pro(?<=writemyessay\.pro))(?!\.services(?<=writemyessay\.services))
-1542705737	tripleee	Gypsy\W*Housing\W*World
+1542705737	tripleee	Gypsy[\W_]*+Housing[\W_]*+World
 1542706198	tripleee	roomster\.com
 1542711465	Shree	pandapro\.ir
 1542717009	tripleee	2QbzmX0
