@@ -38800,3 +38800,4 @@
 1651309612	Cody Gray	Family[\W_]*Tree[\W_]*Maker(?!\.com(?<=familytreemakersupport\.com))
 1651313720	Cody Gray	dochouse\.ee
 1651315932	Cody Gray	Catherine (?:Jones|Maldonado)
+1651316082	Cody Gray	reply with "?unsubscribe"?
