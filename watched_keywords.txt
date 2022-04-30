@@ -38804,3 +38804,4 @@
 1651318991	Cody Gray	admecindia\.co\.in
 1651319070	Cody Gray	(?-i:^amanadmec$)
 1651320119	tripleee	thedsinfra\.com
+1651320265	Cody Gray	(?:the[\W_]*)?DS[\W_]*Infra(?!\.com(?<=thedsinfra\.com))
