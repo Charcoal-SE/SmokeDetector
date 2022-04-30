@@ -38796,3 +38796,4 @@
 1651301002	Cody Gray	Maglieriapelle(?!\.com)
 1651304025	Cody Gray	agents\.farmers\.com
 1651304043	Cody Gray	(?-i:George Carpenter)
+1651308028	Cody Gray	Genex[\W_]*Utility(?!\.com(?<=genexutility\.com))
