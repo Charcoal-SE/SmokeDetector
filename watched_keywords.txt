@@ -38794,3 +38794,4 @@
 1651297539	Cody Gray	(?-i:InfoSec Brigade)
 1651300293	Cody Gray	urgentcourtmarriage\.in
 1651300344	Cody Gray	Court[\W_]*Marriage[\W_]*(?:Registration[\W_]*)?in[\W_]*Thane
+1651301002	Cody Gray	Maglieriapelle(?!\.com)
