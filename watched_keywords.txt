@@ -38797,3 +38797,4 @@
 1651304025	Cody Gray	agents\.farmers\.com
 1651304043	Cody Gray	(?-i:George Carpenter)
 1651308028	Cody Gray	Genex[\W_]*Utility(?!\.com(?<=genexutility\.com))
+1651309612	Cody Gray	Family[\W_]*Tree[\W_]*Maker(?!\.com(?<=familytreemakersupport\.com))
