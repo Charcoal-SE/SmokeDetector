@@ -38834,3 +38834,4 @@
 1651424570	cigien	bimekhaneh\.com
 1651427448	cigien	tradermath\.org
 1651430755	Makyen	letâ€™s(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1651444965	cigien	rutificadordechile\.com
