@@ -38820,3 +38820,4 @@
 1651383380	cocomac	montvoo
 1651388360	Cody Gray	narco[\W_]*traffico
 1651388377	Cody Gray	alexxgreyys\.wixsite\.com
+1651388668	Cody Gray	scopolamine[\W_]*powder
