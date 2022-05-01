@@ -24070,7 +24070,6 @@
 1605081486	Makyen	ketoxpdiet\.com
 1605081504	Makyen	keto[\W_]*+xp(?!diet\.com(?<=ketoxpdiet\.com))(?:[\W_]*+(?:diet|pill|\d++|[\da-f]{5,}+)s?)*
 1605081817	Ryan M	howtogalaxy\.com
-1605082779	Ryan M	uber clone
 1605083191	Ryan M	Skype:\W*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1605084270	Ryan M	(?:diamonds?|gold[\W_]*+(?:bars?|nuggets?))\b.{0,50}\W++(?:sale|sell)
 1605086143	tripleee	sifars\.com
