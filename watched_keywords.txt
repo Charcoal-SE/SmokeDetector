@@ -20878,7 +20878,6 @@
 1594019192	Makyen	hemp[\W_]*+gummies(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{5,}+)s?)*
 1594021656	Makyen	peidagroup\.com
 1594021672	Makyen	peida[\W_]*+(?:machinery[\W_]*+)?group(?!\.com(?<=peidagroup\.com))(?:[\W_]*+(?:co|ltd))*
-1594021686	Makyen	008618855615637(?#Whatsapp)
 1594021701	Makyen	beck\.liu1(?#skype)
 1594023579	Makyen	(?-i:getketoboostplus)(?#facebook.com)
 1594026855	Makyen	zoomvirtualoffice\.com
@@ -31596,7 +31595,6 @@
 1629475869	Glorfindel	splicepackages\.com
 1629477042	Jeff Schaller	kothiwaldentalcollege\.com
 1629485849	Jeff Schaller	colimolux\.com
-1629491033	Jeff Schaller	918657399601(?#Whatsapp)
 1629498673	cigien	thearbor-al\.com
 1629499146	cigien	kothiwal[\W_]*+dental[\W_]*+college(?!\.com(?<=kothiwaldentalcollege\.com))
 1629499596	cigien	printresetter\.com
