@@ -38845,3 +38845,4 @@
 1651482673	Makyen	getmodyapk\.com
 1651483761	Makyen	ieltscoachinginstitute\.com
 1651484306	Makyen	thebeststockbroker\.com
+1651484324	Makyen	zerodha[\W_]*+streak(?:[\W_]*+charges)?
