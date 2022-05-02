@@ -38842,3 +38842,4 @@
 1651471824	Makyen	vmswale\.com
 1651471840	Makyen	vmswale(?!\.com)
 1651478375	Makyen	illuminatilord34(?:@gmail\.com)?
+1651482673	Makyen	getmodyapk\.com
