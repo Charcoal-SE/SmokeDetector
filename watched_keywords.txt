@@ -38848,3 +38848,4 @@
 1651484324	Makyen	zerodha[\W_]*+streak(?:[\W_]*+charges)?
 1651463221	cocomac	dobagsa\.com
 1651492321	Jeff Schaller	freesoftwarefiles\.net
+1651492339	Jeff Schaller	apunkagamee\.com
