@@ -38847,3 +38847,4 @@
 1651484306	Makyen	thebeststockbroker\.com
 1651484324	Makyen	zerodha[\W_]*+streak(?:[\W_]*+charges)?
 1651463221	cocomac	dobagsa\.com
+1651494146	Jeff Schaller	appleketogummiesbuynow\.tumblr\.com
