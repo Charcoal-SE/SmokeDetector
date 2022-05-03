@@ -649,5 +649,4 @@ Visualytes
 (?-i:^Caroline Arthur$)
 (?-i:^FreeSoftwareFiles$)
 (?-i:^Michele.{0,29}Gadd$)
-(?-i:^coinbase.{0,32}$)
 ^binance.{0,33}$
