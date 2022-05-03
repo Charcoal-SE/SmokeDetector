@@ -38876,3 +38876,4 @@
 1651566562	Ryan M	(?-i:^Truly Madly$)
 1651567327	Cody Gray	numbér
 1651570432	Cody Gray	Quickbooks?[\W_]*Online[\W_]*(?:Help|Support)
+1651572139	Cody Gray	ticketmasterservisdk\.com
