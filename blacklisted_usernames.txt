@@ -631,7 +631,6 @@ Visualytes
 (?-i:^Judy White$)
 (?-i:^robert paul$)
 (?-i:^Easy Learn English$)
-(?-i:^Michele Gadd$)
 (?-i:^Syntax Technologies$)
 (?-i:^steve rex$)
 (?-i:^MIckle Herald$)
