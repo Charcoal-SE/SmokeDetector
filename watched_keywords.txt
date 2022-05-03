@@ -38881,3 +38881,4 @@
 1651574979	Cody Gray	grey[\W_]*orange(?!\.com(?<=greyorange\.com))
 1651579058	Cody Gray	asianmassagestores\.com
 1651580210	Cody Gray	fitnesstips03
+1651580226	Cody Gray	k1ketolifeget
