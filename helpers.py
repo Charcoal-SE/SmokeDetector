@@ -51,8 +51,16 @@ class ErrorLogs:
     db = sqlite3.connect(DB_FILE)
     if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
         # Table 'error_logs' doesn't exist
-        db.execute("CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT, traceback TEXT)")
-        db.commit()
+        try:
+            db.execute("CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT,"
+                       " traceback TEXT)")
+            db.commit()
+        except (sqlite3.OperationalError):
+            # In CI testing, it's possible for the table to be created in a different thread between when
+            # we first test for the table's existanceand when we try to create the table.
+            if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
+                # Table 'error_logs' still doesn't exist
+                raise
     db.close()
 
     db_conns = {}
