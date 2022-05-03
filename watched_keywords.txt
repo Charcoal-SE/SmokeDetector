@@ -38890,3 +38890,4 @@
 1651582076	cigien	twexxor
 1651582424	Cody Gray	(?-i:^BlogSoch$)
 1651582754	cigien	theblockstats\.com
+1651582772	cigien	bitfare\.io
