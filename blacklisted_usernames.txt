@@ -649,3 +649,4 @@ Visualytes
 (?-i:^Sahara$)
 (?-i:^Caroline Arthur$)
 (?-i:^FreeSoftwareFiles$)
+(?-i:^Michele[\W_ ]*Gadd$)
