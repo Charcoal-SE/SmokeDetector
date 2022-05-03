@@ -650,4 +650,3 @@ Visualytes
 (?-i:^FreeSoftwareFiles$)
 (?-i:^Michele.{0,29}Gadd$)
 (?-i:^coinbase.{0,32}$)
-(?-i:^binance.{0,33}$)
