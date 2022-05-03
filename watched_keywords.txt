@@ -38887,3 +38887,4 @@
 1651581812	Cody Gray	bikash[\W_]*bhavan[\W_]*scholarship
 1651581830	Cody Gray	stocly\.com
 1651581917	Cody Gray	stocly(?!\.com)
+1651582076	cigien	twexxor
