@@ -2605,3 +2605,4 @@ jimthompson8223@gmail\.com
 burberry[\W_]*+construction(?!\.com(?<=burberryconstruction\.com))
 (?-i:#FEB\$ #2021\$)
 milk[\W_]*+tea[\W_]*+alliance
+QuickBooks[\W_]*Error[\W_]*Code
