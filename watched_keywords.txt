@@ -38898,3 +38898,4 @@
 1651641766	cocomac	cane[\W_]*+corso[\W_]*+puppies
 1651646183	Makyen	secondphone\.net
 1651647727	Glorfindel	actionteams\.com
+1651649923	Ryan M	talendtrainings\.in
