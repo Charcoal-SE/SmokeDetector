@@ -6,9 +6,18 @@ jobs:
     branches:
       ignore: deploy
     steps:
-      - checkout
       - restore_cache:
-          key: deps-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          # Restore a basic .git to prevent needing to download the whole thing.
+          keys:
+            - git-cimg-python3.8-{{ .Branch }}
+            - git-cimg-python3.8
+      - checkout
+      - save_cache:
+          key: git-cimg-python3.8-{{ .Branch }}
+          paths:
+            - ".git"
+      - restore_cache:
+          key: env-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
       - run:
           name: install python dependencies in venv
           command: |
@@ -17,7 +26,7 @@ jobs:
             env/bin/pip3 install -r requirements.txt --upgrade
             env/bin/pip3 install -r user_requirements.txt --upgrade
       - save_cache:
-          key: deps-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: env-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
             - "env"
       - run:
@@ -36,4 +45,6 @@ jobs:
             git config user.email "smokey@erwaysoftware.com"
       - run:
           name: Pytest
+          # Use 5 processes is intended to allow one DNS lookup bound long running test run
+          # in parallel with most of the other tests which generally consume more CPU.
           command: env/bin/python3 -W default::Warning -m pytest -n 5 --dist loadgroup test
