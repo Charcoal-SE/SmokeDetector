@@ -38900,3 +38900,4 @@
 1651649923	Ryan M	talendtrainings\.in
 1651650223	Ryan M	careerline\.org
 1651650239	Ryan M	careerline(?!\.org)
+1651650541	Ryan M	tvgconsultancy\.com
