@@ -30,23 +30,27 @@ jobs:
       id: cache
       uses: actions/cache@v2
       with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-1-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-${{ matrix.python-version }}-pip-1-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
-          ${{ runner.os }}-pip-1-
+          ${{ runner.os }}-${{ matrix.python-version }}-pip-1-${{ hashFiles('**/requirements.txt') }}
+          ${{ runner.os }}-${{ matrix.python-version }}-pip-1-
+        path: |
+          ~/.cache/pip
+          env
     - name: Install dependencies
       run: |
-        pip3 install -U wheel
-        pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls
+        python3 -m venv env
+        env/bin/pip3 install -U wheel
+        env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls
     - name: Lint tests
-      run: flake8 --config=tox_tests.ini test/
+      run: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
     - name: Lint classes
-      run: flake8 --config=tox_classes.ini classes/
+      run: env/bin/python3 -m flake8 --config=tox_classes.ini ./classes/
     - name: Lint code
-      run: flake8 ./
+      run: env/bin/python3 -m flake8 ./
     - name: Pytest
       run: |
-        python3 -W default::Warning -m pytest \
+        env/bin/python3 -W default::Warning -m pytest \
           --cov=chatcommunicate \
           --cov=findspam \
           --cov=globalvars \
