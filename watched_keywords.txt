@@ -38902,3 +38902,4 @@
 1651650239	Ryan M	careerline(?!\.org)
 1651650541	Ryan M	tvgconsultancy\.com
 1651651146	Makyen	cakeresume\.com
+1651651469	Cody Gray	crypto(?:currency)?[\W_]*payment[\W_]*gateway(?![\W_]*api)
