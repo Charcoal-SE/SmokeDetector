@@ -36,4 +36,4 @@ jobs:
             git config user.email "smokey@erwaysoftware.com"
       - run:
           name: Pytest
-          command: env/bin/python3 -W default::Warning -m pytest -n 4 test
+          command: env/bin/python3 -W default::Warning -m pytest -n 5 --dist loadgroup test
