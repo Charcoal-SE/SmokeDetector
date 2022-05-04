@@ -38919,3 +38919,4 @@
 1651678443	Ollie	ideabag\.biz
 1651678537	Ollie	evergreenkids\.in
 1651683294	cigien	prestige[\W_]*+meridian[\W_]*+park(?!\.in(?<=prestigemeridianpark\.in))
+1651683905	cigien	faze[\W_]*+sway(?:[\W_]*+fortnite)?
