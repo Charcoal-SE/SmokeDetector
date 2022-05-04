@@ -2608,3 +2608,4 @@ milk[\W_]*+tea[\W_]*+alliance
 QuickBooks[\W_]*Error[\W_]*Code
 invoicing(?:Binance|Coinbase)_\+\W*
 QuickBooks[\W_]*Chat[\W_]*(?:Help|Support)
+ryjfgjl(?#github account)
