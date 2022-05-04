@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: deps-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
       - run:
           name: install python dependencies in venv
           command: |
@@ -17,7 +17,7 @@ jobs:
             env/bin/pip3 install -r requirements.txt --upgrade
             env/bin/pip3 install -r user_requirements.txt --upgrade
       - save_cache:
-          key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: deps-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
             - "env"
       - run:
