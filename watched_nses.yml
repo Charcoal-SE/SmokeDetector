@@ -1063,6 +1063,9 @@ items:
   - gail.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
+  - gannon.ns.cloudflare.com.
+  - linda.ns.cloudflare.com.
+- ns:
   - gemma.ns.cloudflare.com.
   - mcgrory.ns.cloudflare.com.
 - ns:
