@@ -38948,3 +38948,4 @@
 1651745193	Makyen	get-vidmateapp\.com
 1651745213	Makyen	get-mobdroapk\.com
 1651745333	Ryan M	[a-z0-9%-]*apk[a-z0-9%-]*+\.(?:[a-z0-9%-]++\.)*[a-z0-9%]{2,4}+
+1651746273	Makyen	vindhyaprocess\.com
