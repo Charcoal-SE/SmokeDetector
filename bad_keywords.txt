@@ -2608,3 +2608,4 @@ QuickBooks[\W_]*Error[\W_]*Code
 invoicing(?:Binance|Coinbase)_\+\W*
 QuickBooks[\W_]*Chat[\W_]*(?:Help|Support)
 ryjfgjl(?#github account)
+blockquote>\s*+<p>quote</p>\s*+</blockquote>$
