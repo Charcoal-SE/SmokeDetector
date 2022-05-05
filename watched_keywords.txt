@@ -38755,7 +38755,6 @@
 1651228895	Cody Gray	(?:Coinbase|Robinhood)[\W_]*(?:Pro[\W_]*)?(?:wallet[\W_]*)?support[\W_]*number
 1651229110	Cody Gray	editage(?!\.com)
 1651229142	Cody Gray	english[\W_]*editing[\W_]*services?
-1651229841	Cody Gray	Get your hands on this fantastic phone right now
 1651230471	Cody Gray	simpleintelligentsystems\.com
 1651231493	tripleee	(?-i:APR(?=[$]))
 1651233703	tripleee	mytechremedy\.com
