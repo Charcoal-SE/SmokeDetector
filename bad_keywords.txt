@@ -2610,3 +2610,4 @@ QuickBooks[\W_]*Chat[\W_]*(?:Help|Support)
 ryjfgjl(?#github account)
 blockquote>\s*+<p>quote</p>\s*+</blockquote>$
 Get your hands on this fantastic phone right now
+Coinbase(?:_Tech)?[\W_]*Support
