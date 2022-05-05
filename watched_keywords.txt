@@ -38949,3 +38949,4 @@
 1651745333	Ryan M	[a-z0-9%-]*apk[a-z0-9%-]*+\.(?:[a-z0-9%-]++\.)*[a-z0-9%]{2,4}+
 1651746273	Makyen	vindhyaprocess\.com
 1651746296	Makyen	vindhyaprocess(?!\.com)
+1651746394	Makyen	(?-i:NuMbeR)(?<=(?-i:†NuMbeR))
