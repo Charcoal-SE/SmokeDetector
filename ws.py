@@ -24,8 +24,8 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import (load_pickle, PICKLE_STORAGE, load_files,
-                          filter_auto_ignored_posts, actually_add_queue_timings_data)
+from datahandling import (load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts,
+                          actually_add_queue_timings_data, refresh_site_id_dict_if_needed_and_get_issues)
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
@@ -46,6 +46,7 @@ MAX_SE_WEBSOCKET_RETRIES = 5
 MIN_PYTHON_VERSION = (3, 6, 0)
 RECOMMENDED_PYTHON_VERSION = (3, 7, 0)
 THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
+MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT = 2 * 60 * 60  # 2 hours in seconds
 
 if os.path.isfile("plugin.py"):
     try:
@@ -200,6 +201,16 @@ if GlobalVars.standby_mode:
         time.sleep(3)
 
     chatcommunicate.join_command_rooms()
+
+se_site_id_issues = refresh_site_id_dict_if_needed_and_get_issues()
+if (se_site_id_issues):
+    send_se_site_id_issues_to_chat = False
+    with GlobalVars.site_id_dict_lock:
+        if GlobalVars.site_id_dict_issues_into_chat_timestamp + MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT >= time.time():
+            GlobalVars.site_id_dict_issues_into_chat_timestamp = time.time()
+            send_se_site_id_issues_to_chat = True
+    if send_se_site_id_issues_to_chat:
+        chatcommunicate.tell_rooms_with("debug", " ".join(se_site_id_issues))
 
 
 # noinspection PyProtectedMember

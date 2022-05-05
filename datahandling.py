@@ -24,6 +24,9 @@ PICKLE_STORAGE = "pickles/"
 queue_timings_data = list()
 FLUSH_TIMINGS_THRES = 128
 
+SE_SITE_IDS_MAX_AGE_IN_SECONDS = 24 * 60 * 60
+SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
+
 
 class Any:
     def __eq__(self, _):
@@ -137,6 +140,12 @@ def load_files():
         with metasmoke.Metasmoke.ms_ajax_queue_lock:
             metasmoke.Metasmoke.ms_ajax_queue = load_pickle("ms_ajax_queue.p")
             log("debug", "Loaded {} entries into ms_ajax_queue".format(len(metasmoke.Metasmoke.ms_ajax_queue)))
+    if has_pickle("seSiteIds.p"):
+        with GlobalVars.site_id_dict_lock:
+            (GlobalVars.site_id_dict_timestamp,
+             GlobalVars.site_id_dict_issues_into_chat_timestamp,
+             GlobalVars.site_id_dict) = load_pickle("seSiteIds.p", encoding='utf-8')
+            fill_site_id_dict_by_id_from_site_id_dict()
 
     blacklists.load_blacklists()
 
@@ -722,3 +731,58 @@ class SmokeyTransfer:
                 raise Warning("Warning: " + ', '.join(warnings))
         except (ValueError, zlib.error) as e:
             raise ValueError(str(e)) from None
+
+
+def store_site_id_dict():
+    with GlobalVars.site_id_dict_lock:
+        to_dump = (GlobalVars.site_id_dict_timestamp,
+                   GlobalVars.site_id_dict_issues_into_chat_timestamp,
+                   GlobalVars.site_id_dict.copy())
+    dump_pickle("seSiteIds.p", to_dump)
+
+
+def fill_site_id_dict_by_id_from_site_id_dict():
+    GlobalVars.site_id_dict_by_id = {site_id: site for site, site_id in GlobalVars.site_id_dict.items()}
+
+
+def refresh_site_id_dict():
+    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites')
+    data = json.loads(message.text)
+    site_ids_dict = {entry['hostname']: entry['siteid'] for entry in data}
+    if len(site_ids_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH:
+        with GlobalVars.site_id_dict_lock:
+            GlobalVars.site_id_dict = site_ids_dict
+            fill_site_id_dict_by_id_from_site_id_dict()
+            GlobalVars.site_id_dict_timestamp = time.time()
+
+
+def is_se_site_id_list_length_valid():
+    with GlobalVars.site_id_dict_lock:
+        to_return = len(GlobalVars.site_id_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH
+    return to_return
+
+
+def is_se_site_id_list_out_of_date():
+    return GlobalVars.site_id_dict_timestamp < time.time() - SE_SITE_IDS_MAX_AGE_IN_SECONDS
+
+
+def refresh_site_id_dict_if_needed_and_get_issues():
+    issues = []
+    if not is_se_site_id_list_length_valid() or is_se_site_id_list_out_of_date():
+        try:
+            refresh_site_id_dict()
+        except Exception:
+            # We ignore any problems with getting or refreshing the list of SE sites, as we handle it by
+            # testing to see if we have valid data (i.e. SD doesn't need to fail for an exception here).
+            log_exception(*sys.exc_info())
+            issues.append("An exception occurred when trying to get the SE site ID list."
+                          " See the error log for details.")
+        if is_se_site_id_list_length_valid():
+            store_site_id_dict()
+    if is_se_site_id_list_out_of_date():
+        issues.insert(0, "The site ID list is more than a day old.")
+    if not is_se_site_id_list_length_valid():
+        with GlobalVars.site_id_dict_lock:
+            issues.insert(0, "The SE site ID list has "
+                             "{} entries, which isn't considered valid.".format(len(GlobalVars.site_id_dict)))
+    return issues

@@ -190,6 +190,11 @@ class GlobalVars:
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
     site_id_dict = {}
+    site_id_dict_by_id = {}
+    site_id_dict_timestamp = 0
+    site_id_dict_issues_into_chat_timestamp = 0
+    site_id_dict_lock = threading.Lock()
+
     post_site_id_to_question = {}
 
     location = config.get("location", "Continuous Integration")

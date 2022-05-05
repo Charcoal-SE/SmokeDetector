@@ -28,7 +28,6 @@ class DeletionWatcher:
     def __init__(self):
         if GlobalVars.no_deletion_watcher:
             return
-        DeletionWatcher.update_site_id_list()
         self.posts = {}
 
         try:
@@ -152,16 +151,3 @@ class DeletionWatcher:
     def _ignore(post_site_id):
         return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
             datahandling.is_auto_ignored_post(post_site_id)
-
-    @staticmethod
-    def update_site_id_list():
-        if GlobalVars.no_deletion_watcher:
-            return
-        soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
-                             "html.parser")
-        site_id_dict = {}
-        for site in soup.findAll("a", attrs={"data-id": True}):
-            site_name = urlparse(site["href"]).netloc
-            site_id = site["data-id"]
-            site_id_dict[site_name] = site_id
-        GlobalVars.site_id_dict = site_id_dict
