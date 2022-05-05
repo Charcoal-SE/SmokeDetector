@@ -38935,3 +38935,4 @@
 1651735586	tripleee	alphabetazone\.com
 1651735603	tripleee	alphabetazone(?!\.com)
 1651735696	tripleee	jouple\.com
+1651736200	tripleee	getsolved\.org
