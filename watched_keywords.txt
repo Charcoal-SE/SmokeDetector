@@ -38930,3 +38930,4 @@
 1651731194	Cody Gray	99runs(?!\.com)
 1651734643	Cody Gray	upwork[\W_]*reviews?
 1651734764	Cody Gray	goserviceszone\.in
+1651734947	Cody Gray	with[\W_]*in[\W_]*(?:24|twenty[\W_]*four)[\W_]*hours
