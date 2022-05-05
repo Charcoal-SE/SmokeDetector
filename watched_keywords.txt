@@ -38950,3 +38950,4 @@
 1651746273	Makyen	vindhyaprocess\.com
 1651746296	Makyen	vindhyaprocess(?!\.com)
 1651746394	Makyen	(?-i:NuMbeR)(?<=(?-i:†NuMbeR))
+1651747761	Cody Gray	worldfree4u
