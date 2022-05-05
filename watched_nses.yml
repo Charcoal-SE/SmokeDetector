@@ -1552,6 +1552,9 @@ items:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
+  - lina.ns.cloudflare.com.
+  - roan.ns.cloudflare.com.
+- ns:
   - lindsey.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
