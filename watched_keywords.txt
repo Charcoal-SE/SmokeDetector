@@ -38922,3 +38922,4 @@
 1651683905	cigien	faze[\W_]*+sway(?:[\W_]*+fortnite)?
 1651686334	Ollie	directus\.chat
 1651727643	cocomac	pestcontrolexpert\.net
+1651727420	cocomac	izend-clothes\.com
