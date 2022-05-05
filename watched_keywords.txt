@@ -38944,3 +38944,4 @@
 1651740759	tripleee	vediphile(?!\.com)
 1651740937	tripleee	(?-i:^lazyfans$)
 1651741181	Cody Gray	nidhi-techworld\.com
+1651741693	Cody Gray	(?-i:†NuMbeR)
