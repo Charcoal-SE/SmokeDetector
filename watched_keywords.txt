@@ -37466,7 +37466,6 @@
 1647953566	tripleee	(?-i:^Henry Walter$)
 1647954817	Jeff Schaller	diginerds\.co
 1647954834	Jeff Schaller	Diginerds
-1647955131	Jeff Schaller	overheaddoorhoustontx\.com
 1647955200	Jeff Schaller	doradofashion\.net
 1647966094	Ollie	tranggiatruyenfood\.com
 1647966143	Ollie	helpabhimanyu\.in
