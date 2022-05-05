@@ -1261,6 +1261,9 @@ items:
   - jade.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
+  - jakub.ns.cloudflare.com.
+  - shubhi.ns.cloudflare.com.
+- ns:
   - james.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
