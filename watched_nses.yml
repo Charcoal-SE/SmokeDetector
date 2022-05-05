@@ -1649,6 +1649,9 @@ items:
   - skip.ns.cloudflare.com.
 - ns:
   - meera.ns.cloudflare.com.
+  - vasilii.ns.cloudflare.com.
+- ns:
+  - meera.ns.cloudflare.com.
   - zahir.ns.cloudflare.com.
 - ns:
   - meg.ns.cloudflare.com.
