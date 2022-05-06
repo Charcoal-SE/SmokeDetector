@@ -38966,3 +38966,4 @@
 1651816453	Cody Gray	b2elearning(?!\.com)
 1651817550	Cody Gray	usitservices\.in
 1651817576	Cody Gray	laptop[\W_]*(?:on[\W_]*rent|rental)
+1651817857	Cody Gray	Airlines['’]?[\W_]*(?:contact|reservation|ticket)
