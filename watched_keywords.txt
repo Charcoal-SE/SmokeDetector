@@ -38973,3 +38973,4 @@
 1651824376	Cody Gray	線上家教(?# "online tutoring")
 1651824482	Cody Gray	amazingtalker(?:tw)*(?!\.com)
 1651825318	Cody Gray	imphi\.co\.in
+1651825422	Cody Gray	business[\W_]*in[\W_]*india
