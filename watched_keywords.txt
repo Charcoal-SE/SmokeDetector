@@ -38965,3 +38965,4 @@
 1651816223	Cody Gray	b2elearning\.com
 1651816294	Cody Gray	IIT[\W_]*JEE[\W_]*(?:coaching|preparation)
 1651816422	Cody Gray	American[\W_]*Airlines['’]?[\W_]*(?:contact|reservation|ticket)
+1651816453	Cody Gray	b2elearning(?!\.com)
