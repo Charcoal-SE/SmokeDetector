@@ -38980,3 +38980,4 @@
 1651831750	Cody Gray	WhatsApp[\W_]*Marketing
 1651832307	Jeff Schaller	rahulvijayam\.com
 1651833592	Cody Gray	download[\W_]*rtorrent
+1651833641	Cody Gray	indianfresher(?!\.com)
