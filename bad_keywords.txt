@@ -2614,3 +2614,4 @@ Coinbase(?:_Tech)?[\W_]*Support
 helpline bookkeeping involves
 pre[\W_]*pc[\_W]*solutions?
 The certified experts directly get in touch with you
+(?:American?|Alaskan?|Copa|Delta|Spirit|Southwest|United)[\W_]*Airlines['’]?[\W_]*(?:booking|contact|manage|reservation|ticket)
