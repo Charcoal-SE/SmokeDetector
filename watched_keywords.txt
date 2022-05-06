@@ -38978,3 +38978,4 @@
 1651829844	Cody Gray	aranyam(?!\.)(?:online)?
 1651830444	Cody Gray	dong[\W_]*phuong[\W_]*(?:general[\W_]*|poly)?clinic
 1651831724	Cody Gray	viria\.io
+1651831750	Cody Gray	WhatsApp[\W_]*Marketing
