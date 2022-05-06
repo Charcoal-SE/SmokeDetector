@@ -588,7 +588,6 @@ Devil_Ace
 (?-i:^Aims Education$)
 (?-i:^Stacy Elmer$)
 (?-i:^Mahmoud Taha$)
-(?-i:^himanshu$)
 (?-i:^hilplife 360$)
 (?-i:^Danny Cardenas$)
 ^amtrak$
