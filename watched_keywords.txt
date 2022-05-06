@@ -38975,3 +38975,4 @@
 1651825318	Cody Gray	imphi\.co\.in
 1651825422	Cody Gray	business[\W_]*in[\W_]*india
 1651829772	Cody Gray	aranyam\.online
+1651829844	Cody Gray	aranyam(?!\.)(?:online)?
