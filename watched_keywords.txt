@@ -38963,3 +38963,4 @@
 1651800849	Makyen	affiliatem\.org
 1651812673	Cody Gray	(?-i:IDC)[\W_]*marketscape
 1651816223	Cody Gray	b2elearning\.com
+1651816294	Cody Gray	IIT[\W_]*JEE[\W_]*(?:coaching|preparation)
