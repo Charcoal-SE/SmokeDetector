@@ -38981,3 +38981,4 @@
 1651832307	Jeff Schaller	rahulvijayam\.com
 1651833592	Cody Gray	download[\W_]*rtorrent
 1651833641	Cody Gray	indianfresher(?!\.com)
+1651833682	Cody Gray	world[\W_]*freshers?(?!\.in(?<=worldfreshers\.in))
