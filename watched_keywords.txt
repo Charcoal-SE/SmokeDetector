@@ -38968,3 +38968,4 @@
 1651817857	Cody Gray	Airlines['’]?[\W_]*(?:contact|reservation|ticket)
 1651818934	Cody Gray	callgirlservice\.guwahatiservice\.in
 1651820474	Cody Gray	myenergenie\.com
+1651822488	Cody Gray	^.{0,32}[\W_]*Airlines$
