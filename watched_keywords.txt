@@ -12040,7 +12040,6 @@
 1568009883	tripleee	likesups\.com
 1568010406	tripleee	idrush\.com
 1568010695	tripleee	tapestodigital\.co\.uk
-1568011053	tripleee	academia\.edu
 1568012613	double-beep	godrejnewlaunches\.in
 1568016987	Shree	deltaflights-airlinesreservations\.com
 1568017625	double-beep	bestvanitymirrors\.com
