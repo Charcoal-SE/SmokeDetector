@@ -39014,3 +39014,4 @@
 1651923380	Cody Gray	actualtools\.com
 1651924360	Cody Gray	Sick[\W_]*Car[\W_]*Accessories(?!\.com(?<=sickcaraccessories\.com))
 1651924446	lyxal	virtuenetz\.com
+1651927590	Cody Gray	(?:husband|wife|partner|spouse|(?:wo)?m[ae]n) (?:is|was) (?:a )?cheat(?:er|ing)?
