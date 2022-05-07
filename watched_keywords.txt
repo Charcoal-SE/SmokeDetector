@@ -39012,3 +39012,4 @@
 1651922446	Cody Gray	ufa99\.com
 1651923005	Cody Gray	officialmymetamaskioreviews
 1651923380	Cody Gray	actualtools\.com
+1651924360	Cody Gray	Sick[\W_]*Car[\W_]*Accessories(?!\.com(?<=sickcaraccessories\.com))
