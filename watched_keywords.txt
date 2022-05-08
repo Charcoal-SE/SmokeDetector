@@ -39038,3 +39038,4 @@
 1652003380	Cody Gray	preston[\W_]*witt(?!\.com(?<=prestonwitt\.com))
 1652007135	Makyen	translation4biz\.com
 1652007152	Makyen	translation4biz(?!\.com)
+1652009692	Cody Gray	seedandspark\.com
