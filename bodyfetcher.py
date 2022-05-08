@@ -76,6 +76,8 @@ class BodyFetcher:
     threshold = 1
 
     last_activity_date = 0
+    last_activity_date_lock = threading.Lock()
+    ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH = 6 * 60 * 1000  # 6 minutes in milliseconds; is beyond edit grace period
 
     api_data_lock = threading.Lock()
     queue_lock = threading.Lock()
@@ -235,15 +237,16 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
-            if self.last_activity_date != 0:
-                pagesize = "50"
-            else:
-                pagesize = "25"
+            with self.last_activity_date_lock:
+                if self.last_activity_date != 0:
+                    pagesize = "100"
+                else:
+                    pagesize = "50"
 
-            pagesize_modifier = {
-                'pagesize': pagesize,
-                'min': str(self.last_activity_date)
-            }
+                pagesize_modifier = {
+                    'pagesize': pagesize,
+                    'min': str(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH)
+                }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
@@ -332,7 +335,8 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             items = response["items"]
             if len(items) > 0 and "last_activity_date" in items[0]:
-                self.last_activity_date = items[0]["last_activity_date"]
+                with self.last_activity_date_lock:
+                    self.last_activity_date = items[0]["last_activity_date"]
 
         num_scanned = 0
         start_time = time.time()
