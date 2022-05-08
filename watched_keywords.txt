@@ -39041,3 +39041,4 @@
 1652009692	Cody Gray	seedandspark\.com
 1652009713	Cody Gray	quescard\.com
 1652009732	Cody Gray	dell[\W_]*os[\W_]*recovery[\W_]*tool
+1652021026	cigien	kksj2018(?:@hotmail\.com)?
