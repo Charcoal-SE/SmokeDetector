@@ -283,7 +283,12 @@ while not GlobalVars.no_se_activity_scan:
                 if GlobalVars.flovis is not None:
                     GlobalVars.flovis.stage('received', hostname, question_id, json.loads(a))
 
-                is_spam, reason, why = check_if_spam_json(a)
+                is_spam = False
+                if GlobalVars.bodyfetcher.threshold == 1 and hostname not in GlobalVars.bodyfetcher.special_cases:
+                    # If the queue threshold depth is 1 and there are no special cases, then there's not
+                    # much benefit to pre-testing, as there isn't a wait for the queue to fill to the threshold.
+                    # The site will, however, be behind any site which is already queued.
+                    is_spam, reason, why = check_if_spam_json(a)
 
                 add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None)
 
