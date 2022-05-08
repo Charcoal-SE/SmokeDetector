@@ -39043,3 +39043,4 @@
 1652009732	Cody Gray	dell[\W_]*os[\W_]*recovery[\W_]*tool
 1652021026	cigien	kksj2018(?:@hotmail\.com)?
 1652022793	cigien	pusatmenang\d*+
+1652022902	cigien	36\.255\.141\.92
