@@ -81,57 +81,47 @@ class BodyFetcher:
     max_ids_modify_lock = threading.Lock()
     queue_timing_modify_lock = threading.Lock()
 
-    def add_to_queue(self, post, should_check_site=False):
-        try:
-            d = json.loads(json.loads(post)["data"])
-        except ValueError:
-            # post didn't contain a valid JSON object in its ["data"] member
-            # indicative of a server-side socket reset
-            return
-
-        site_base = d["siteBaseHostAddress"]
-        post_id = d["id"]
-
+    def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
             3122,    # Formatting Sandbox
             51812,   # The API sandbox
             296077,  # Sandbox archive
         ]
-        if post_id in ignored_mse_questions and site_base == "meta.stackexchange.com":
+        if question_id in ignored_mse_questions and hostname == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
 
         with self.queue_modify_lock:
-            if site_base not in self.queue:
-                self.queue[site_base] = {}
+            if hostname not in self.queue:
+                self.queue[hostname] = {}
 
             # Something about how the queue is being filled is storing Post IDs in a list.
             # So, if we get here we need to make sure that the correct types are paseed.
             #
-            # If the item in self.queue[site_base] is a dict, do nothing.
-            # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+            # If the item in self.queue[hostname] is a dict, do nothing.
+            # If the item in self.queue[hostname] is not a dict but is a list or a tuple, then convert to dict and
             # then replace the list or tuple with the dict.
-            # If the item in self.queue[site_base] is neither a dict or a list, then explode.
-            if type(self.queue[site_base]) is dict:
+            # If the item in self.queue[hostname] is neither a dict or a list, then explode.
+            if type(self.queue[hostname]) is dict:
                 pass
-            elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            elif type(self.queue[hostname]) in [list, tuple]:
                 post_list_dict = {}
-                for post_list_id in self.queue[site_base]:
+                for post_list_id in self.queue[hostname]:
                     post_list_dict[post_list_id] = None
-                self.queue[site_base] = post_list_dict
+                self.queue[hostname] = post_list_dict
             else:
                 raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
 
-            # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+            # This line only works if we are using a dict in the self.queue[hostname] object, which we should be with
             # the previous conversion code.
-            self.queue[site_base][str(post_id)] = datetime.utcnow()
+            self.queue[hostname][str(question_id)] = datetime.utcnow()
 
         if GlobalVars.flovis is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
+            GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id,
                                     {sk: list(sq.keys()) for sk, sq in self.queue.items()})
 
         if should_check_site:
-            self.make_api_call_for_site(site_base)
+            self.make_api_call_for_site(hostname)
         else:
             self.check_queue()
         return

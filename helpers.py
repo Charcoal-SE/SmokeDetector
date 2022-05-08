@@ -18,6 +18,7 @@ from glob import glob
 import sqlite3
 from urllib.parse import quote, quote_plus
 from globalvars import GlobalVars
+from threading import Thread
 
 
 def exit_mode(*args, code=0):
@@ -333,3 +334,10 @@ def remove_end_regex_comments(regex_text):
 
 def get_only_digits(text):
     return regex.sub(r"(?a)\D", "", text)
+
+
+def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_check_site=False):
+    t = Thread(name="bodyfetcher post enqueuing",
+               target=GlobalVars.bodyfetcher.add_to_queue,
+               args=(hostname, question_id, should_check_site))
+    t.start()

@@ -35,7 +35,7 @@ import requests
 import dns.resolver
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import exit_mode, log, Helpers, log_exception
+from helpers import exit_mode, log, Helpers, log_exception, add_to_global_bodyfetcher_queue_in_new_thread
 from flovis import Flovis
 from tasks import Tasks
 
@@ -272,20 +272,20 @@ while not GlobalVars.no_se_activity_scan:
     try:
         a = ws.recv()
         if a is not None and a != "":
-            action = json.loads(a)["action"]
+            message = json.loads(a)
+            action = message["action"]
             if action == "hb":
                 ws.send("hb")
             if action == "155-questions-active":
+                data = json.loads(message['data'])
+                hostname = data['siteBaseHostAddress']
+                question_id = data['id']
                 if GlobalVars.flovis is not None:
-                    data = json.loads(json.loads(a)['data'])
-                    GlobalVars.flovis.stage('received', data['siteBaseHostAddress'], data['id'], json.loads(a))
+                    GlobalVars.flovis.stage('received', hostname, question_id, json.loads(a))
 
                 is_spam, reason, why = check_if_spam_json(a)
 
-                t = Thread(name="bodyfetcher post enqueing",
-                           target=GlobalVars.bodyfetcher.add_to_queue,
-                           args=(a, True if is_spam else None))
-                t.start()
+                add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None)
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
