@@ -18,6 +18,7 @@ from globalvars import GlobalVars
 import blacklists
 from helpers import ErrorLogs, log, log_exception, redact_passwords
 import threading
+from tasks import Tasks
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -28,6 +29,9 @@ FLUSH_TIMINGS_THRESHOLD = 128
 
 SE_SITE_IDS_MAX_AGE_IN_SECONDS = 24 * 60 * 60
 SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
+
+bodyfetcher_max_ids_save_handle = None
+bodyfetcher_max_ids_save_handle_lock = threading.Lock()
 
 
 class Any:
@@ -372,8 +376,21 @@ def store_bodyfetcher_queue():
     dump_pickle("bodyfetcherQueue.p", queue_copy)
 
 
+def schedule_store_bodyfetcher_max_ids():
+    global bodyfetcher_max_ids_save_handle
+    with bodyfetcher_max_ids_save_handle_lock:
+        if bodyfetcher_max_ids_save_handle:
+            bodyfetcher_max_ids_save_handle.cancel()
+        bodyfetcher_max_ids_save_handle = Tasks.do(store_bodyfetcher_max_ids)
+
+
 def store_bodyfetcher_max_ids():
-    dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
+    with GlobalVars.bodyfetcher.max_ids_modify_lock:
+        max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids
+    with bodyfetcher_max_ids_save_handle_lock:
+        if bodyfetcher_max_ids_save_handle:
+            bodyfetcher_max_ids_save_handle.cancel()
+    dump_pickle("bodyfetcherMaxIds.p", max_ids_copy)
 
 
 def store_ms_ajax_queue():

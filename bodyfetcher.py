@@ -1,7 +1,7 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
-from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
-                          add_queue_timing_data)
+from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
+                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -190,6 +190,7 @@ class BodyFetcher:
         post_add_times = [(pop_time - v).total_seconds() for k, v in new_posts.items()]
         Tasks.do(add_queue_timing_data, site, post_add_times)
 
+        store_max_ids = False
         with self.max_ids_modify_lock:
             if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
                 previous_max_id = self.previous_max_ids[site]
@@ -208,13 +209,13 @@ class BodyFetcher:
             else:
                 posts = new_post_ids
 
-            try:
-                if max(new_post_ids) > self.previous_max_ids[site]:
-                    self.previous_max_ids[site] = max(new_post_ids)
-                    store_bodyfetcher_max_ids()
-            except KeyError:
-                self.previous_max_ids[site] = max(new_post_ids)
-                store_bodyfetcher_max_ids()
+            new_post_ids_max = max(new_post_ids)
+            if new_post_ids_max > self.previous_max_ids.get(site, 0):
+                self.previous_max_ids[site] = new_post_ids_max
+                store_max_ids = True
+
+        if store_max_ids:
+            schedule_store_bodyfetcher_max_ids()
 
         log('debug', "New IDs / Hybrid Intermediate IDs for {}:".format(site))
         if len(new_post_ids) > 30:
