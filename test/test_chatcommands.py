@@ -220,12 +220,15 @@ def test_privileged():
 
 
 def test_deprecated_blacklist():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     assert chatcommands.blacklist("").startswith("The `!!/blacklist` command has been deprecated.")
 
 
 @pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
 def test_watch(monkeypatch):
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     # XXX TODO: expand
+
     def wrap_watch(pattern, force=False):
         cmd = 'watch{0}'.format('-force' if force else '')
         msg = Fake({
@@ -276,6 +279,7 @@ def test_watch(monkeypatch):
 
 
 def test_approve(monkeypatch):
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     msg = Fake({
         "_client": {
             "host": "stackexchange.com",
@@ -302,6 +306,7 @@ def test_approve(monkeypatch):
 
 
 def test_reject(monkeypatch):
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     msg = Fake({
         "_client": {
             "host": "stackexchange.com",
@@ -329,6 +334,7 @@ def test_reject(monkeypatch):
 
 @patch("chatcommands.handle_spam")
 def test_report(handle_spam):
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     # Documentation: The process before scanning the post is identical regardless of alias_used.
     #   No need to supply alias_used to test that part.
     #   If no alias_used is supplied, it acts as if it's "scan"
@@ -412,6 +418,7 @@ def test_report(handle_spam):
 
 @patch("chatcommands.handle_spam")
 def test_allspam(handle_spam):
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
         msg = Fake({
             "owner": {
@@ -492,6 +499,7 @@ def test_allspam(handle_spam):
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
 def test_blacklisted_users():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
         msg = Fake({
             "owner": {
@@ -563,6 +571,7 @@ def test_blacklisted_users():
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
 def test_whitelisted_users():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
         msg = Fake({
             "owner": {
@@ -630,6 +639,7 @@ def test_whitelisted_users():
 
 
 def test_metasmoke():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     orig_tell_rooms_with = chatcommunicate.tell_rooms_with
     chatcommunicate.tell_rooms_with = dummy_tell_rooms_with
     msg = Fake({
@@ -661,6 +671,7 @@ def test_metasmoke():
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
 def test_notifications():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
         msg1 = Fake({
             "owner": {
@@ -766,6 +777,7 @@ def test_notifications():
 
 
 def test_inqueue():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
     site = Fake({"keys": (lambda: ['1'])})
 
     class FakeQueue:
