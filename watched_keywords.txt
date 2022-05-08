@@ -39036,3 +39036,4 @@
 1652001365	Cody Gray	(?-i:Fkc8SdwGGp)(?#discord)
 1652003307	Cody Gray	prestonwitt\.com
 1652003380	Cody Gray	preston[\W_]*witt(?!\.com(?<=prestonwitt\.com))
+1652007135	Makyen	translation4biz\.com
