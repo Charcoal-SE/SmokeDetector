@@ -365,7 +365,9 @@ def clear_api_data():
 
 
 def store_bodyfetcher_queue():
-    dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
+    with GlobalVars.bodyfetcher.queue_lock:
+        queue_copy = GlobalVars.bodyfetcher.queue.copy()
+    dump_pickle("bodyfetcherQueue.p", queue_copy)
 
 
 def store_bodyfetcher_max_ids():

@@ -14,6 +14,7 @@ import copy
 from classes import Post, PostParseError
 from helpers import log
 from itertools import chain
+from tasks import Tasks
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -77,7 +78,7 @@ class BodyFetcher:
     last_activity_date = 0
 
     api_data_lock = threading.Lock()
-    queue_modify_lock = threading.Lock()
+    queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
     queue_timing_modify_lock = threading.Lock()
 
@@ -91,7 +92,7 @@ class BodyFetcher:
         if question_id in ignored_mse_questions and hostname == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
 
-        with self.queue_modify_lock:
+        with self.queue_lock:
             if hostname not in self.queue:
                 self.queue[hostname] = {}
 
@@ -107,7 +108,7 @@ class BodyFetcher:
             elif type(self.queue[hostname]) in [list, tuple]:
                 post_list_dict = {}
                 for post_list_id in self.queue[hostname]:
-                    post_list_dict[post_list_id] = None
+                    post_list_dict[str(post_list_id)] = None
                 self.queue[hostname] = post_list_dict
             else:
                 raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
@@ -115,10 +116,12 @@ class BodyFetcher:
             # This line only works if we are using a dict in the self.queue[hostname] object, which we should be with
             # the previous conversion code.
             self.queue[hostname][str(question_id)] = datetime.utcnow()
+            flovis_dict = None
+            if GlobalVars.flovis is not None:
+                flovis_dict = {sk: list(sq.keys()) for sk, sq in self.queue.items()}
 
-        if GlobalVars.flovis is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id,
-                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()})
+        if flovis_dict is not None:
+            GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
 
         if should_check_site:
             self.make_api_call_for_site(hostname)
@@ -127,36 +130,54 @@ class BodyFetcher:
         return
 
     def check_queue(self):
-        for site, values in self.queue.items():
+        # This should be called once in a new Thread every time we add an entry to the queue. Thus, we
+        # should only need to process a single queue entry in order to keep the queue from containing
+        # entries which are qualified for processing, but which haven't been processed. However, that
+        # doesn't account for the possibility of things going wrong and/or implementing some other
+        # way to qualify other than the depth of the queue for a particular site (e.g. time in queue).
+
+        # We use a copy of the queue in order to allow the queue to be changed in other threads.
+        # This is OK, because self.make_api_call_for_site(site) verifies that the site
+        # is still in the queue.
+        with self.queue_lock:
+            queue_copy = self.queue
+        handled_sites = []
+        # Handle sites listed in special cases and as time_sensitive
+        for site, values in queue_copy.items():
             if site in self.special_cases:
                 if len(values) >= self.special_cases[site]:
+                    handled_sites.append(site)
                     self.make_api_call_for_site(site)
-                    return
+                    continue
             if site in self.time_sensitive:
                 if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
+                    handled_sites.append(site)
                     self.make_api_call_for_site(site)
-                    return
+
+        # Remove the sites which we've handled from our copy of the queue.
+        for site in handled_sites:
+            queue_copy.pop(site, None)
 
         # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, values in self.queue.items():
+        for site, values in queue_copy.items():
             if site not in self.special_cases and len(values) >= self.threshold:
+                handled_sites.append(site)
                 self.make_api_call_for_site(site)
-                return
 
-        # We're not making an API request, so explicitly store the queue
-        with self.queue_modify_lock:
-            store_bodyfetcher_queue()
+        if not handled_sites:
+            # We're not making an API request, so explicitly store the queue.
+            Tasks.do(store_bodyfetcher_queue)
 
     def print_queue(self):
         return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
 
     def make_api_call_for_site(self, site):
-        if site not in self.queue:
+        with self.queue_lock:
+            new_posts = self.queue.pop(site, None)
+        if new_posts is None:
+            # site was not in the queue
             return
-
-        with self.queue_modify_lock:
-            new_posts = self.queue.pop(site)
-            store_bodyfetcher_queue()
+        Tasks.do(store_bodyfetcher_queue)
 
         new_post_ids = [int(k) for k in new_posts.keys()]
 
@@ -250,7 +271,7 @@ class BodyFetcher:
             except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
                 # Any failure in the request being made (timeout or otherwise) should be added back to
                 # the queue.
-                with self.queue_modify_lock:
+                with self.queue_lock:
                     if site in self.queue:
                         self.queue[site].update(new_posts)
                     else:
