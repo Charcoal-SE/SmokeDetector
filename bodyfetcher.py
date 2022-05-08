@@ -80,7 +80,6 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
-    queue_timing_modify_lock = threading.Lock()
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
@@ -187,12 +186,9 @@ class BodyFetcher:
                                         {'site': site, 'posts': list(new_posts.keys())})
 
         # Add queue timing data
-        with self.queue_timing_modify_lock:
-            post_add_times = [v for k, v in new_posts.items()]
-            pop_time = datetime.utcnow()
-            for add_time in post_add_times:
-                seconds_in_queue = (pop_time - add_time).total_seconds()
-                add_queue_timing_data(site, seconds_in_queue)
+        pop_time = datetime.utcnow()
+        post_add_times = [(pop_time - v).total_seconds() for k, v in new_posts.items()]
+        Tasks.do(add_queue_timing_data, site, post_add_times)
 
         with self.max_ids_modify_lock:
             if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:

@@ -17,12 +17,14 @@ from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 from helpers import ErrorLogs, log, log_exception, redact_passwords
+import threading
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
 
 queue_timings_data = list()
-FLUSH_TIMINGS_THRES = 128
+queue_timings_data_lock = threading.Lock()
+FLUSH_TIMINGS_THRESHOLD = 128
 
 SE_SITE_IDS_MAX_AGE_IN_SECONDS = 24 * 60 * 60
 SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
@@ -379,20 +381,23 @@ def store_ms_ajax_queue():
         dump_pickle("ms_ajax_queue.p", metasmoke.Metasmoke.ms_ajax_queue)
 
 
-def add_queue_timing_data(site, time_in_queue):
+def add_queue_timing_data(site, times_in_queue):
     global queue_timings_data
-    queue_timings_data.append("{} {}".format(site, time_in_queue))
-    # time_in_queue comes first as it is an integer
-    # and hence won't contain any whitespace or trailing ones
-    if len(queue_timings_data) >= FLUSH_TIMINGS_THRES:
-        actually_add_queue_timings_data()
-        queue_timings_data = list()
+    new_times = ["{} {}".format(site, time_in_queue) for time_in_queue in times_in_queue]
+    with queue_timings_data_lock:
+        queue_timings_data.extend(new_times)
+        queue_length = len(queue_timings_data)
+    if queue_length >= FLUSH_TIMINGS_THRESHOLD:
+        flush_queue_timings_data()
 
 
-def actually_add_queue_timings_data():
+def flush_queue_timings_data():
+    global queue_timings_data
     # Use .txt for cross platform compatibility
-    with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
-        stat_file.write("\n".join(queue_timings_data) + "\n")
+    with queue_timings_data_lock:
+        with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+            stat_file.write("\n".join(queue_timings_data) + "\n")
+        queue_timings_data = list()
 
 
 # methods that help avoiding reposting alerts:
