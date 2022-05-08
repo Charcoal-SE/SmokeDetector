@@ -103,27 +103,31 @@ class EditWatcher:
                                                                                   post_url))
             return
 
-        action = "{}-question-{}".format(site_id, question_id)
+        question_ids = question_id
+        if type(question_ids) != list:
+            question_ids = [question_id]
         now = time.time()
         if from_time:
             now = from_time
         if not max_time:
             max_time = now + timeout
 
-        updated = True
-        subscribe = False
+        updated = None
+        to_subscribe = []
         with self.posts_lock:
-            if action not in self.posts:
-                self.posts[action] = (site_id, hostname, question_id, max_time)
-                subscribe = True
-            else:
-                old_max_time = self.posts[action][2]
-                if max_time > old_max_time:
+            for question_id in question_ids:
+                action = "{}-question-{}".format(site_id, question_id)
+                if action not in self.posts:
                     self.posts[action] = (site_id, hostname, question_id, max_time)
+                    to_subscribe.append(action)
                 else:
-                    updated = False
+                    old_max_time = self.posts[action][2]
+                    if max_time > old_max_time:
+                        self.posts[action] = (site_id, hostname, question_id, max_time)
+                    elif updated is None:
+                        updated = False
 
-        if subscribe:
+        for action in to_subscribe:
             Tasks.do(self._subscribe, action)
 
         if updated and pickle:
