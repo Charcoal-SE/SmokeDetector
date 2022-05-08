@@ -29,6 +29,7 @@ from datahandling import (load_pickle, PICKLE_STORAGE, load_files, filter_auto_i
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
+from editwatcher import EditWatcher
 import json
 import time
 import requests
@@ -189,6 +190,7 @@ filter_auto_ignored_posts()
 GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
+GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
@@ -259,6 +261,7 @@ if not GlobalVars.no_se_activity_scan:
     ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
+GlobalVars.edit_watcher = EditWatcher()
 
 if "first_start" in sys.argv:
     chatcommunicate.tell_rooms_with('debug', GlobalVars.s if GlobalVars.on_branch else GlobalVars.s_reverted)
@@ -291,6 +294,7 @@ while not GlobalVars.no_se_activity_scan:
                     is_spam, reason, why = check_if_spam_json(a)
 
                 add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None)
+                GlobalVars.edit_watcher.subscribe(hostname=hostname, question_id=question_id)
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()

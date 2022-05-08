@@ -141,6 +141,7 @@ class GlobalVars:
     standby_mode = False
     no_se_activity_scan = False
     no_deletion_watcher = False
+    no_edit_watcher = False
 
     ignore_no_se_websocket_activity_lock = threading.Lock()
     ignore_no_se_websocket_activity = False
