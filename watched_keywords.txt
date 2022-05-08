@@ -39039,3 +39039,4 @@
 1652007135	Makyen	translation4biz\.com
 1652007152	Makyen	translation4biz(?!\.com)
 1652009692	Cody Gray	seedandspark\.com
+1652009713	Cody Gray	quescard\.com
