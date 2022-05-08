@@ -17,7 +17,7 @@ class Tasks:
 
     @classmethod
     def do(cls, func, *args, **kwargs):
-        handle = cls.loop.call_soon(lambda: func(*args, **kwargs))
+        handle = cls.loop.call_soon_threadsafe(lambda: func(*args, **kwargs))
         cls.loop._write_to_self()
 
         return handle
