@@ -39040,3 +39040,4 @@
 1652007152	Makyen	translation4biz(?!\.com)
 1652009692	Cody Gray	seedandspark\.com
 1652009713	Cody Gray	quescard\.com
+1652009732	Cody Gray	dell[\W_]*os[\W_]*recovery[\W_]*tool
