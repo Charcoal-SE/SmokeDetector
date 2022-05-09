@@ -383,6 +383,7 @@ class BodyFetcher:
                 num_scanned += 1
 
                 is_spam, reason, why = check_if_spam(post_)
+                add_recently_scanned_post(post, is_spam=is_spam, reasons=reason, why=why)
 
                 if is_spam:
                     try:
@@ -423,6 +424,7 @@ class BodyFetcher:
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)
+                        add_recently_scanned_post(answer, is_spam=is_spam, reasons=reason, why=why)
                         if is_spam:
                             answer_id = answer.get('answer_id', None)
                             do_flovis = GlobalVars.flovis is not None and answer_id is not None

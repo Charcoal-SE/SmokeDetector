@@ -457,9 +457,10 @@ def append_to_latest_questions(host, post_id, title):
             GlobalVars.latest_questions.pop()
 
 
-def add_recently_scanned_post(post):
+def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None):
     new_key = get_recently_scanned_key_for_post(post)
-    new_record = {'post': post, 'scan_timestamp': time.time()}
+    new_record = {'post': post, 'scan_timestamp': time.time(),
+                  'is_spam': is_spam, 'reasons': reasons, 'why': why}
     with GlobalVars.recently_scanned_posts_lock:
         GlobalVars.recently_scanned_posts[new_key] = new_record
 
