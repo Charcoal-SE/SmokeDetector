@@ -342,11 +342,12 @@ class BodyFetcher:
         start_time = time.time()
 
         for post in response["items"]:
-            pnb = copy.deepcopy(post)
-            if 'body' in pnb:
-                pnb['body'] = 'Present, but truncated'
-            if 'answers' in pnb:
-                del pnb['answers']
+            if GlobalVars.flovis is not None:
+                pnb = copy.deepcopy(post)
+                if 'body' in pnb:
+                    pnb['body'] = 'Present, but truncated'
+                if 'answers' in pnb:
+                    del pnb['answers']
 
             if "title" not in post or "body" not in post:
                 if GlobalVars.flovis is not None and 'question_id' in post:
@@ -390,9 +391,10 @@ class BodyFetcher:
                     pass
                 else:
                     for answer in post["answers"]:
-                        anb = copy.deepcopy(answer)
-                        if 'body' in anb:
-                            anb['body'] = 'Present, but truncated'
+                        if GlobalVars.flovis is not None:
+                            anb = copy.deepcopy(answer)
+                            if 'body' in anb:
+                                anb['body'] = 'Present, but truncated'
 
                         num_scanned += 1
                         answer["IsAnswer"] = True  # Necesssary for Post object
