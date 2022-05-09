@@ -39061,3 +39061,4 @@
 1652085200	tripleee	wellcostore\.com
 1652085891	tripleee	agfabric\.com
 1652086066	tripleee	(?-i:^Wu Alison$)
+1652086590	tripleee	worldcaretakerfacilityservices\.com
