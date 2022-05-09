@@ -2,7 +2,8 @@
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
                           schedule_store_bodyfetcher_max_ids, add_queue_timing_data,
-                          add_recently_scanned_post, expire_recently_scanned_posts)
+                          add_recently_scanned_post, expire_recently_scanned_posts,
+                          update_recently_scanned_post_timestamp)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -366,12 +367,15 @@ class BodyFetcher:
                 post['edited'] = False  # last_edit_date not present = not edited
 
             question_doesnt_need_scan = is_post_recently_scanned_and_unchanged(post)
-            if question_doesnt_need_scan and "answers" not in post:
-                continue
+            if question_doesnt_need_scan:
+                update_recently_scanned_post_timestamp(post)
+                if "answers" not in post:
+                    continue
+            else:
+                add_recently_scanned_post(post)
             question_id = post.get('question_id', None)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
-            add_recently_scanned_post(post)
             do_flovis = GlobalVars.flovis is not None and question_id is not None
             try:
                 post_ = Post(api_response=post)
@@ -418,9 +422,10 @@ class BodyFetcher:
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
                         answer_doesnt_need_scan = is_post_recently_scanned_and_unchanged(answer)
-                        add_recently_scanned_post(answer)
                         if answer_doesnt_need_scan:
+                            update_recently_scanned_post_timestamp(answer)
                             continue
+                        add_recently_scanned_post(answer)
                         num_scanned += 1
                         answer_ = Post(api_response=answer, parent=post_)
 

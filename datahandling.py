@@ -465,6 +465,16 @@ def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None):
         GlobalVars.recently_scanned_posts[new_key] = new_record
 
 
+def update_recently_scanned_post_timestamp(post):
+    key = get_recently_scanned_key_for_post(post)
+    try:
+        with GlobalVars.recently_scanned_posts_lock:
+            GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
+    except KeyError:
+        # If the record doesn't exist, we add it.
+        add_recently_scanned_post(post)
+
+
 # noinspection PyMissingTypeHints
 def has_already_been_posted(host, post_id, title):
     with GlobalVars.latest_questions_lock:
