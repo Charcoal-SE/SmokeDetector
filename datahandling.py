@@ -444,8 +444,16 @@ def store_recently_scanned_posts():
 def expire_recently_scanned_posts():
     min_retained_timestamp = time.time() - GlobalVars.recently_scanned_posts_retention_time
     with GlobalVars.recently_scanned_posts_lock:
-        GlobalVars.recently_scanned_posts = {key: value for key, value in GlobalVars.recently_scanned_posts.items()
-                                             if value['scan_timestamp'] > min_retained_timestamp}
+        # A dict comprehension can be used to do this:
+        #   GlobalVars.recently_scanned_posts = {key: value for key, value in GlobalVars.recently_scanned_posts.items()
+        #                                        if value['scan_timestamp'] > min_retained_timestamp}
+        # But, that has a notably higher memory requirement than deleting the entries.
+        # Where the right trade-off wrt. higher memory use vs. maybe more time for del/pop isn't clear and will depend
+        # on the size of the dict and memory/CPU available for the particular SD instance.
+        rs_posts = GlobalVars.recently_scanned_posts
+        keys_to_delete = [key for key, value in rs_posts.items() if value['scan_timestamp'] < min_retained_timestamp]
+        for key in keys_to_delete:
+            rs_posts.pop(key, None)
 
 
 # methods that help avoiding reposting alerts:
