@@ -1,7 +1,7 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
-                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
+                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data, add_recently_scanned_post)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter

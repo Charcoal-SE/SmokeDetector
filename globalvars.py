@@ -82,6 +82,11 @@ class GlobalVars:
     startup_utc_date = datetime.utcnow()
     startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
+    latest_questions_lock = threading.Lock()
+    # recently_scanned_posts is not stored upon abnormal exit (exceptions, ctrl-C, etc.).
+    recently_scanned_posts = {}
+    recently_scanned_posts_lock = threading.Lock()
+    recently_scanned_posts_retention_time = 15 * 60  # 15 minutes
     api_backoff_time = 0
     deletion_watcher = None
 

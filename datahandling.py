@@ -16,7 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import ErrorLogs, log, log_exception, redact_passwords
+from helpers import ErrorLogs, log, log_exception, redact_passwords, get_recently_scanned_key_for_post
 import threading
 from tasks import Tasks
 
@@ -32,6 +32,8 @@ SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
 
 bodyfetcher_max_ids_save_handle = None
 bodyfetcher_max_ids_save_handle_lock = threading.Lock()
+recently_scanned_posts_save_handle = None
+recently_scanned_posts_save_handle_lock = threading.Lock()
 
 
 class Any:
@@ -152,6 +154,9 @@ def load_files():
              GlobalVars.site_id_dict_issues_into_chat_timestamp,
              GlobalVars.site_id_dict) = load_pickle("seSiteIds.p", encoding='utf-8')
             fill_site_id_dict_by_id_from_site_id_dict()
+    if has_pickle("recentlyScannedPosts.p"):
+        with GlobalVars.recently_scanned_posts_lock:
+            GlobalVars.recently_scanned_posts = load_pickle("recentlyScannedPosts.p", encoding='utf-8')
 
     blacklists.load_blacklists()
 
@@ -417,21 +422,55 @@ def flush_queue_timings_data():
         queue_timings_data = list()
 
 
+def schedule_store_recently_scanned_posts():
+    global recently_scanned_posts_save_handle
+    with recently_scanned_posts_save_handle_lock:
+        if recently_scanned_posts_save_handle:
+            recently_scanned_posts_save_handle.cancel()
+        recently_scanned_posts_save_handle = Tasks.do(store_recently_scanned_posts)
+
+
+def store_recently_scanned_posts():
+    # While using a copy to avoid holding the lock while storing is generally desired,
+    # the expectation is that this will only be stored when shutting down.
+    with GlobalVars.recently_scanned_posts_lock:
+        with recently_scanned_posts_save_handle_lock:
+            if recently_scanned_posts_save_handle:
+                recently_scanned_posts_save_handle.cancel()
+        dump_pickle("recentlyScannedPosts.p", GlobalVars.recently_scanned_posts)
+
+
+def expire_recently_scanned_posts():
+    min_retained_timestamp = time.time() - GlobalVars.recently_scanned_posts_retention_time
+    with GlobalVars.recently_scanned_posts_lock:
+        GlobalVars.recently_scanned_posts = {key: value for key, value in GlobalVars.recently_scanned_posts.items()
+                                             if value['scan_timestamp'] > min_retained_timestamp}
+
+
 # methods that help avoiding reposting alerts:
 
 
 def append_to_latest_questions(host, post_id, title):
-    GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
-    if len(GlobalVars.latest_questions) > 50:
-        GlobalVars.latest_questions.pop()
+    with GlobalVars.latest_questions_lock:
+        GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
+        if len(GlobalVars.latest_questions) > 50:
+            GlobalVars.latest_questions.pop()
+
+
+def add_recently_scanned_post(post):
+    new_key = get_recently_scanned_key_for_post(post)
+    new_record = {'post': post, 'scan_timestamp': time.time()}
+    with GlobalVars.recently_scanned_posts_lock:
+        GlobalVars.recently_scanned_posts[new_key] = new_record
 
 
 # noinspection PyMissingTypeHints
 def has_already_been_posted(host, post_id, title):
-    for post in GlobalVars.latest_questions:
-        if post[0] == host and post[1] == str(post_id):
-            return True
-    return False
+    with GlobalVars.latest_questions_lock:
+        for post in GlobalVars.latest_questions:
+            if post[0] == host and post[1] == str(post_id):
+                return True
+        return False
 
 
 # method to get data from the error log:
