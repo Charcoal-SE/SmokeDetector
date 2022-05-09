@@ -342,3 +342,38 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
                target=GlobalVars.bodyfetcher.add_to_queue,
                args=(hostname, question_id, should_check_site))
     t.start()
+
+
+def get_recently_scanned_key_for_post(post):
+    site = post.get('site', None)
+    post_id = post.get('question_id', None)
+    if post_id is None:
+        post_id = post.get('answer_id', None)
+    if site is None or post_id is None:
+        log('warn', 'Unable to determine site or post_id for add_recently_scanned_post:'
+                    ' site:{}:: post_id: {}'.format(site, post_id))
+        return
+    return "{}/{}".format(site, post_id)
+
+
+def get_check_equality_data(post):
+    owner_dict = post.get('owner', {})
+    owner_name = owner_dict.get('display_name', None)
+    return (
+        post.get('last_edit_date', None),
+        post.get('title', None),
+        owner_name,
+        post.get('body', None),
+    )
+
+
+def is_post_recently_scanned_and_unchanged(post):
+    post_key = get_recently_scanned_key_for_post(post)
+    with GlobalVars.recently_scanned_posts_lock:
+        scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
+    if scanned_entry is None:
+        return False
+    scanned_post = scanned_entry['post']
+    post_equality_data = get_check_equality_data(post)
+    scanned_equality_data = get_check_equality_data(scanned_post)
+    return post_equality_data == scanned_equality_data

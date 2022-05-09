@@ -1,7 +1,8 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
-                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data, add_recently_scanned_post)
+                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data,
+                          add_recently_scanned_post, expire_recently_scanned_posts)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -12,7 +13,7 @@ import threading
 import requests
 import copy
 from classes import Post, PostParseError
-from helpers import log
+from helpers import log, is_post_recently_scanned_and_unchanged
 from itertools import chain
 from tasks import Tasks
 
@@ -82,6 +83,9 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
+
+    RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL = 10 * 60  # 10 minutes
+    Tasks.periodic(expire_recently_scanned_posts, interval=RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL)
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
@@ -360,31 +364,34 @@ class BodyFetcher:
             except KeyError:
                 post['edited'] = False  # last_edit_date not present = not edited
 
-            try:
-                post_ = Post(api_response=post)
-            except PostParseError as err:
-                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
-                if GlobalVars.flovis is not None and 'question_id' in post:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, post['question_id'], pnb)
-                continue
-
-            num_scanned += 1
-
-            is_spam, reason, why = check_if_spam(post_)
-
-            if is_spam:
+            question_doesnt_need_scan = is_post_recently_scanned_and_unchanged(post)
+            add_recently_scanned_post(post)
+            if not question_doesnt_need_scan:
                 try:
+                    post_ = Post(api_response=post)
+                except PostParseError as err:
+                    log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
                     if GlobalVars.flovis is not None and 'question_id' in post:
-                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
-                                                {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                    handle_spam(post=post_,
-                                reasons=reason,
-                                why=why)
-                except Exception as e:
-                    log('error', "Exception in handle_spam:", e)
-            elif GlobalVars.flovis is not None and 'question_id' in post:
-                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['question_id'],
-                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, post['question_id'], pnb)
+                    continue
+
+                num_scanned += 1
+
+                is_spam, reason, why = check_if_spam(post_)
+
+                if is_spam:
+                    try:
+                        if GlobalVars.flovis is not None and 'question_id' in post:
+                            GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
+                                                    {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                        handle_spam(post=post_,
+                                    reasons=reason,
+                                    why=why)
+                    except Exception as e:
+                        log('error', "Exception in handle_spam:", e)
+                elif GlobalVars.flovis is not None and 'question_id' in post:
+                    GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['question_id'],
+                                            {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
 
             try:
                 if "answers" not in post:
@@ -404,6 +411,10 @@ class BodyFetcher:
                             answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
+                        answer_doesnt_need_scan = is_post_recently_scanned_and_unchanged(answer)
+                        add_recently_scanned_post(answer)
+                        if answer_doesnt_need_scan:
+                            continue
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)
