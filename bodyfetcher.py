@@ -3,7 +3,7 @@ from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
                           schedule_store_bodyfetcher_max_ids, add_queue_timing_data,
                           add_recently_scanned_post, expire_recently_scanned_posts,
-                          update_recently_scanned_post_timestamp)
+                          atomic_is_post_recently_scanned_and_unchanged_and_update)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -14,7 +14,7 @@ import threading
 import requests
 import copy
 from classes import Post, PostParseError
-from helpers import log, is_post_recently_scanned_and_unchanged
+from helpers import log, log_current_thread
 from itertools import chain
 from tasks import Tasks
 
@@ -366,13 +366,9 @@ class BodyFetcher:
             except KeyError:
                 post['edited'] = False  # last_edit_date not present = not edited
 
-            question_doesnt_need_scan = is_post_recently_scanned_and_unchanged(post)
-            if question_doesnt_need_scan:
-                update_recently_scanned_post_timestamp(post)
-                if "answers" not in post:
-                    continue
-            else:
-                add_recently_scanned_post(post)
+            question_doesnt_need_scan = atomic_is_post_recently_scanned_and_unchanged_and_update(post)
+            if question_doesnt_need_scan and "answers" not in post:
+                continue
             question_id = post.get('question_id', None)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
@@ -421,11 +417,8 @@ class BodyFetcher:
                             answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
-                        answer_doesnt_need_scan = is_post_recently_scanned_and_unchanged(answer)
-                        if answer_doesnt_need_scan:
-                            update_recently_scanned_post_timestamp(answer)
+                        if atomic_is_post_recently_scanned_and_unchanged_and_update(answer):
                             continue
-                        add_recently_scanned_post(answer)
                         num_scanned += 1
                         answer_ = Post(api_response=answer, parent=post_)
 

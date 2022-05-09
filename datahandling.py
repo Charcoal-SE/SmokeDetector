@@ -17,7 +17,7 @@ from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 from helpers import (ErrorLogs, log, log_exception, redact_passwords, get_recently_scanned_key_for_post,
-                     get_recently_scanned_post_from_post)
+                     get_recently_scanned_post_from_post, is_recently_scanned_post_unchanged)
 import threading
 from tasks import Tasks
 
@@ -466,24 +466,53 @@ def append_to_latest_questions(host, post_id, title):
             GlobalVars.latest_questions.pop()
 
 
-def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None):
+def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None, have_lock=None):
     if 'is_recently_scanned_post' not in post:
         post = get_recently_scanned_post_from_post(post)
     new_key = post['post_key']
+    if new_key is None:
+        return
     new_record = {'post': post, 'scan_timestamp': time.time(),
                   'is_spam': is_spam, 'reasons': reasons, 'why': why}
-    with GlobalVars.recently_scanned_posts_lock:
+    if have_lock:
         GlobalVars.recently_scanned_posts[new_key] = new_record
+    else:
+        with GlobalVars.recently_scanned_posts_lock:
+            GlobalVars.recently_scanned_posts[new_key] = new_record
 
 
-def update_recently_scanned_post_timestamp(post):
+def update_recently_scanned_post_timestamp(post, have_lock=None):
     key = get_recently_scanned_key_for_post(post)
     try:
-        with GlobalVars.recently_scanned_posts_lock:
+        if have_lock:
             GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
+        else:
+            with GlobalVars.recently_scanned_posts_lock:
+                GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
     except KeyError:
         # If the record doesn't exist, we add it.
-        add_recently_scanned_post(post)
+        add_recently_scanned_post(post, have_lock)
+
+
+def atomic_is_post_recently_scanned_and_unchanged_and_update(post):
+    with GlobalVars.recently_scanned_posts_lock:
+        if 'is_recently_scanned_post' not in post:
+            post = get_recently_scanned_post_from_post(post)
+        post_key = post.get('post_key', None)
+        if post_key is None:
+            # Without a post_key, we can't check or store.
+            return False
+        scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
+        if scanned_entry is None:
+            add_recently_scanned_post(post, have_lock=True)
+            return False
+        scanned_post = scanned_entry['post']
+        is_unchanged = is_recently_scanned_post_unchanged(post, scanned_post)
+        if is_unchanged:
+            update_recently_scanned_post_timestamp(post, have_lock=True)
+        else:
+            add_recently_scanned_post(post, have_lock=True)
+        return is_unchanged
 
 
 # noinspection PyMissingTypeHints

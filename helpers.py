@@ -345,14 +345,16 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
 
 
 def get_recently_scanned_key_for_post(post):
+    if 'is_recently_scanned_post' in post:
+        return post.get('post_key', None)
     site = post.get('site', None)
     post_id = post.get('question_id', None)
     if post_id is None:
         post_id = post.get('answer_id', None)
     if site is None or post_id is None:
         log('warn', 'Unable to determine site or post_id for add_recently_scanned_post:'
-                    ' site:{}:: post_id: {}'.format(site, post_id))
-        return
+                    ' site:{}:: post_id: {}:: post:{}'.format(site, post_id, post))
+        return None
     return "{}/{}".format(site, post_id)
 
 
@@ -376,6 +378,10 @@ def is_post_recently_scanned_and_unchanged(post):
     if scanned_entry is None:
         return False
     scanned_post = scanned_entry['post']
+    return is_recently_scanned_post_unchanged(post, scanned_post)
+
+
+def is_recently_scanned_post_unchanged(post, scanned_post):
     post_equality_data = get_check_equality_data(post)
     scanned_equality_data = get_check_equality_data(scanned_post)
     is_unchanged = post_equality_data == scanned_equality_data
@@ -383,6 +389,7 @@ def is_post_recently_scanned_and_unchanged(post):
         # This should be a grace period edit
         results = [post_equality_data[count] == scanned_equality_data[count]
                    for count in range(len(post_equality_data))]
+        post_key = post.get('post_key', None)
         log('debug', 'GRACE period edit: {}:: results:{}'.format(post_key, results))
     return is_unchanged
 
@@ -395,6 +402,9 @@ recently_scanned_post_straight_copy_keys = [
 
 
 def get_recently_scanned_post_from_post(post):
+    if 'is_recently_scanned_post' in post:
+        # It's already a RS post
+        return post
     rs_post = {key: post.get(key, None) for key in recently_scanned_post_straight_copy_keys}
     rs_post['is_recently_scanned_post'] = True
     owner_dict = post.get('owner', {})
