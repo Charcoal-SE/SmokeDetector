@@ -39058,3 +39058,4 @@
 1652084878	tripleee	mmplus(?!\.in)
 1652085008	tripleee	revoltwind\.com
 1652085024	tripleee	bent-engineering\.com
+1652085200	tripleee	wellcostore\.com
