@@ -366,22 +366,23 @@ class BodyFetcher:
                 post['edited'] = False  # last_edit_date not present = not edited
 
             question_doesnt_need_scan = is_post_recently_scanned_and_unchanged(post)
+            if question_doesnt_need_scan and "answers" not in post:
+                continue
             question_id = post.get('question_id', None)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
             add_recently_scanned_post(post)
+            do_flovis = GlobalVars.flovis is not None and question_id is not None
+            try:
+                post_ = Post(api_response=post)
+            except PostParseError as err:
+                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
+                if do_flovis:
+                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, question_id, pnb)
+                continue
+
             if not question_doesnt_need_scan:
-                do_flovis = GlobalVars.flovis is not None and question_id is not None
-                try:
-                    post_ = Post(api_response=post)
-                except PostParseError as err:
-                    log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
-                    if do_flovis:
-                        GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, question_id, pnb)
-                    continue
-
                 num_scanned += 1
-
                 is_spam, reason, why = check_if_spam(post_)
                 add_recently_scanned_post(post, is_spam=is_spam, reasons=reason, why=why)
 
@@ -409,7 +410,6 @@ class BodyFetcher:
                             if 'body' in anb:
                                 anb['body'] = 'Present, but truncated'
 
-                        num_scanned += 1
                         answer["IsAnswer"] = True  # Necesssary for Post object
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
@@ -421,6 +421,7 @@ class BodyFetcher:
                         add_recently_scanned_post(answer)
                         if answer_doesnt_need_scan:
                             continue
+                        num_scanned += 1
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)
