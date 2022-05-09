@@ -39057,3 +39057,4 @@
 1652084550	tripleee	linux[\W_]*+hint[\W_]*+bd
 1652084878	tripleee	mmplus(?!\.in)
 1652085008	tripleee	revoltwind\.com
+1652085024	tripleee	bent-engineering\.com
