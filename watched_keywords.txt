@@ -37032,7 +37032,6 @@
 1646630173	cigien	d-designstudio\.com
 1646631395	tripleee	spencerandrutherford\.com\.au
 1646636290	tripleee	itsbrandnews\.com
-1646637993	tripleee	bark\.com
 1646638190	tripleee	prestigemarigold\.gen\.in
 1646640165	Jeff Schaller	Duramaster
 1646641732	tripleee	semaggames\.nl
