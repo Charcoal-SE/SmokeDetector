@@ -376,4 +376,10 @@ def is_post_recently_scanned_and_unchanged(post):
     scanned_post = scanned_entry['post']
     post_equality_data = get_check_equality_data(post)
     scanned_equality_data = get_check_equality_data(scanned_post)
-    return post_equality_data == scanned_equality_data
+    is_unchanged = post_equality_data == scanned_equality_data
+    if not is_unchanged and post_equality_data[0] == scanned_equality_data[0]:
+        # This should be a grace period edit
+        results = [post_equality_data[count] == scanned_equality_data[count]
+                   for count in range(len(post_equality_data))]
+        log('debug', 'GRACE period edit: {}:: results:{}'.format(post_key, results))
+    return is_unchanged
