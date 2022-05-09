@@ -39054,3 +39054,4 @@
 1652074862	cocomac	jeff[\W_]*+packer
 1652077627	tripleee	marijuanasolutioncentre\.com
 1652084495	tripleee	mmplus\.in
+1652084550	tripleee	linux[\W_]*+hint[\W_]*+bd
