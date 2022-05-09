@@ -140,32 +140,32 @@ class BodyFetcher:
         # We use a copy of the queue in order to allow the queue to be changed in other threads.
         # This is OK, because self.make_api_call_for_site(site) verifies that the site
         # is still in the queue.
+        sites_to_handle = []
+        is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
         with self.queue_lock:
-            queue_copy = self.queue
-        handled_sites = []
-        # Handle sites listed in special cases and as time_sensitive
-        for site, values in queue_copy.items():
+            sites_in_queue = {site: len(values) for site, values in self.queue.items()}
+        # Get sites listed in special cases and as time_sensitive
+        for site, length in sites_in_queue.items():
             if site in self.special_cases:
-                if len(values) >= self.special_cases[site]:
-                    handled_sites.append(site)
-                    self.make_api_call_for_site(site)
+                if length >= self.special_cases[site]:
+                    sites_to_handle.append(site)
                     continue
-            if site in self.time_sensitive:
-                if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    handled_sites.append(site)
-                    self.make_api_call_for_site(site)
+            if is_time_sensitive_time and site in self.time_sensitive and length >= 1:
+                sites_to_handle.append(site)
 
         # Remove the sites which we've handled from our copy of the queue.
-        for site in handled_sites:
-            queue_copy.pop(site, None)
+        for site in sites_to_handle:
+            sites_in_queue.pop(site, None)
 
         # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, values in queue_copy.items():
-            if site not in self.special_cases and len(values) >= self.threshold:
-                handled_sites.append(site)
-                self.make_api_call_for_site(site)
+        for site, length in sites_in_queue.items():
+            if site not in self.special_cases and length >= self.threshold:
+                sites_to_handle.append(site)
 
-        if not handled_sites:
+        for site in sites_to_handle:
+            self.make_api_call_for_site(site)
+
+        if not sites_to_handle:
             # We're not making an API request, so explicitly store the queue.
             Tasks.do(store_bodyfetcher_queue)
 
