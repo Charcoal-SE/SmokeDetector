@@ -71,7 +71,8 @@ class EditWatcher:
                             del self.posts[action]
                             Tasks.do(self._unsubscribe, action)
                     if max_time > now and data["a"] == "post-edit":
-                        add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False)
+                        add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False,
+                                                                      source="EditWatcher")
 
     def subscribe(self, post_url=None, hostname=None, site_id=None, question_id=None,
                   pickle=True, timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):

@@ -210,6 +210,11 @@ def log_current_exception(f=False):
     log_exception(*sys.exc_info(), f)
 
 
+def log_current_thread(log_level, prefix="", postfix=""):
+    current_thread = threading.current_thread()
+    log(log_level, "{}current thread: {}: {}{}".format(prefix, current_thread.name, current_thread.ident, postfix))
+
+
 def files_changed(diff, file_set):
     changed = set(diff.split())
     return bool(len(changed & file_set))
@@ -337,8 +342,11 @@ def get_only_digits(text):
     return regex.sub(r"(?a)\D", "", text)
 
 
-def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_check_site=False):
-    t = Thread(name="bodyfetcher post enqueuing: {}/{}".format(hostname, question_id),
+def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_check_site=False, source=None):
+    source_text = ""
+    if source:
+        source_text = " from {}".format(source)
+    t = Thread(name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
                target=GlobalVars.bodyfetcher.add_to_queue,
                args=(hostname, question_id, should_check_site))
     t.start()

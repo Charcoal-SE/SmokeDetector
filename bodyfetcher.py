@@ -89,6 +89,8 @@ class BodyFetcher:
     Tasks.periodic(expire_recently_scanned_posts, interval=RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL)
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
+        log_current_thread("debug", "BodyFetcher.add_to_queue: ")
+
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
             3122,    # Formatting Sandbox
@@ -145,6 +147,7 @@ class BodyFetcher:
         # We use a copy of the queue in order to allow the queue to be changed in other threads.
         # This is OK, because self.make_api_call_for_site(site) verifies that the site
         # is still in the queue.
+        log_current_thread("debug", "BodyFetcher.check_queue: ")
         sites_to_handle = []
         is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
         with self.queue_lock:
@@ -178,8 +181,11 @@ class BodyFetcher:
         return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
 
     def make_api_call_for_site(self, site):
+        log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ", "::  site:{}".format(site))
         with self.queue_lock:
             new_posts = self.queue.pop(site, None)
+        log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ",
+                           "::  site:{}::  new_posts:{}".format(site, [key for key in new_posts.keys()]))
         if new_posts is None:
             # site was not in the queue
             return

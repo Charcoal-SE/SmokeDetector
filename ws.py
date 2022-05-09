@@ -293,7 +293,8 @@ while not GlobalVars.no_se_activity_scan:
                     # The site will, however, be behind any site which is already queued.
                     is_spam, reason, why = check_if_spam_json(a)
 
-                add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None)
+                add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None,
+                                                              source="155-questions-active")
                 GlobalVars.edit_watcher.subscribe(hostname=hostname, question_id=question_id)
 
     except Exception as e:
