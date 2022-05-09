@@ -39056,3 +39056,4 @@
 1652084495	tripleee	mmplus\.in
 1652084550	tripleee	linux[\W_]*+hint[\W_]*+bd
 1652084878	tripleee	mmplus(?!\.in)
+1652085008	tripleee	revoltwind\.com
