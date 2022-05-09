@@ -357,18 +357,20 @@ def get_recently_scanned_key_for_post(post):
 
 
 def get_check_equality_data(post):
-    owner_dict = post.get('owner', {})
-    owner_name = owner_dict.get('display_name', None)
     return (
         post.get('last_edit_date', None),
         post.get('title', None),
-        owner_name,
-        post.get('body', None),
+        post.get('owner_name', None),
+        post.get('body_markdown', None),
     )
 
 
 def is_post_recently_scanned_and_unchanged(post):
-    post_key = get_recently_scanned_key_for_post(post)
+    if 'is_recently_scanned_post' not in post:
+        post = get_recently_scanned_post_from_post(post)
+    post_key = post.get('post_key', None)
+    if post_key is None:
+        return False
     with GlobalVars.recently_scanned_posts_lock:
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
     if scanned_entry is None:
@@ -383,3 +385,20 @@ def is_post_recently_scanned_and_unchanged(post):
                    for count in range(len(post_equality_data))]
         log('debug', 'GRACE period edit: {}:: results:{}'.format(post_key, results))
     return is_unchanged
+
+
+recently_scanned_post_straight_copy_keys = [
+    'last_edit_date',
+    'title',
+    'body_markdown',
+]
+
+
+def get_recently_scanned_post_from_post(post):
+    rs_post = {key: post.get(key, None) for key in recently_scanned_post_straight_copy_keys}
+    rs_post['is_recently_scanned_post'] = True
+    owner_dict = post.get('owner', {})
+    owner_name = owner_dict.get('display_name', None)
+    rs_post['owner_name'] = owner_name
+    rs_post['post_key'] = get_recently_scanned_key_for_post(post)
+    return rs_post
