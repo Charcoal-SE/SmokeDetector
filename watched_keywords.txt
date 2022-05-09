@@ -39067,3 +39067,4 @@
 1652092847	tripleee	food\.com
 1652094058	tripleee	topnewsbase\.com
 1652095212	tripleee	cpugpunerds\.com
+1652100165	tripleee	vishalvyas\.com
