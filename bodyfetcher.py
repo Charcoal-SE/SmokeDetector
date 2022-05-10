@@ -204,7 +204,11 @@ class BodyFetcher:
             return None
 
     def print_queue(self):
-        return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
+        with self.queue_lock:
+            if self.queue:
+                return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
+            else:
+                return 'The BodyFetcher queue is empty.'
 
     def make_api_call_for_site(self, site, new_posts):
         log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ",
