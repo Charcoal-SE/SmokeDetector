@@ -39094,3 +39094,4 @@
 1652177555	tripleee	(?-i:^Spectra Plus$)
 1652178684	Jeff Schaller	manchalamushafir\.com
 1652178777	Jeff Schaller	molnova\.in
+1652178805	Jeff Schaller	wakeposts\.com
