@@ -471,7 +471,7 @@ def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None, have_l
         post = get_recently_scanned_post_from_post(post)
     new_key = post['post_key']
     if new_key is None:
-        return
+        raise KeyError('post key is None')
     new_record = {'post': post, 'scan_timestamp': time.time(),
                   'is_spam': is_spam, 'reasons': reasons, 'why': why}
     if have_lock:
@@ -483,6 +483,8 @@ def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None, have_l
 
 def update_recently_scanned_post_timestamp(post, have_lock=None):
     key = get_recently_scanned_key_for_post(post)
+    if key is None:
+        raise KeyError('post key is None')
     try:
         if have_lock:
             GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
@@ -501,7 +503,7 @@ def atomic_is_post_recently_scanned_and_unchanged_and_update(post):
         post_key = post.get('post_key', None)
         if post_key is None:
             # Without a post_key, we can't check or store.
-            return False
+            raise KeyError('post key is None')
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
         if scanned_entry is None:
             add_recently_scanned_post(post, have_lock=True)

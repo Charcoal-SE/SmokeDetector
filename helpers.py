@@ -380,7 +380,7 @@ def is_post_recently_scanned_and_unchanged(post):
         post = get_recently_scanned_post_from_post(post)
     post_key = post.get('post_key', None)
     if post_key is None:
-        return False
+        raise KeyError('post key is None')
     with GlobalVars.recently_scanned_posts_lock:
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
     if scanned_entry is None:
