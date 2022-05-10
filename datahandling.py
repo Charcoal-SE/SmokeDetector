@@ -33,6 +33,8 @@ SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
 
 bodyfetcher_max_ids_save_handle = None
 bodyfetcher_max_ids_save_handle_lock = threading.Lock()
+bodyfetcher_queue_save_handle = None
+bodyfetcher_queue_save_handle_lock = threading.Lock()
 recently_scanned_posts_save_handle = None
 recently_scanned_posts_save_handle_lock = threading.Lock()
 
@@ -377,10 +379,17 @@ def clear_api_data():
     dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
+def schedule_store_bodyfetcher_queue():
+    global bodyfetcher_queue_save_handle
+    with bodyfetcher_queue_save_handle_lock:
+        if bodyfetcher_queue_save_handle:
+            bodyfetcher_queue_save_handle.cancel()
+        bodyfetcher_queue_save_handle = Tasks.do(store_bodyfetcher_queue)
+
+
 def store_bodyfetcher_queue():
     with GlobalVars.bodyfetcher.queue_lock:
-        queue_copy = GlobalVars.bodyfetcher.queue.copy()
-    dump_pickle("bodyfetcherQueue.p", queue_copy)
+        dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
 
 
 def schedule_store_bodyfetcher_max_ids():
@@ -392,11 +401,11 @@ def schedule_store_bodyfetcher_max_ids():
 
 
 def store_bodyfetcher_max_ids():
-    with GlobalVars.bodyfetcher.max_ids_modify_lock:
-        max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids
     with bodyfetcher_max_ids_save_handle_lock:
         if bodyfetcher_max_ids_save_handle:
             bodyfetcher_max_ids_save_handle.cancel()
+    with GlobalVars.bodyfetcher.max_ids_modify_lock:
+        max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids.copy()
     dump_pickle("bodyfetcherMaxIds.p", max_ids_copy)
 
 

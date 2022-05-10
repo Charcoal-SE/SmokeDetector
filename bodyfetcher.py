@@ -1,6 +1,6 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
-from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue,
+from datahandling import (add_or_update_api_data, clear_api_data, schedule_store_bodyfetcher_queue,
                           schedule_store_bodyfetcher_max_ids, add_queue_timing_data,
                           add_recently_scanned_post, expire_recently_scanned_posts,
                           atomic_is_post_recently_scanned_and_unchanged_and_update)
@@ -137,14 +137,14 @@ class BodyFetcher:
             with self.queue_lock:
                 new_posts = self.queue.pop(hostname, None)
             if new_posts:
-                Tasks.do(store_bodyfetcher_queue)
+                schedule_store_bodyfetcher_queue()
                 self.make_api_call_for_site(hostname, new_posts)
 
         # While there are still sites in the queue which meet their applcable threshold, we
         # process the site.
         site_and_posts = self.get_fist_queue_item_to_process()
         while site_and_posts:
-            Tasks.do(store_bodyfetcher_queue)
+            schedule_store_bodyfetcher_queue()
             # The following really should be limited to a number of threads consistent with
             # the resources available to this SD instance. As it is, it *could* end up that there
             # are a large number of threads processing posts at the same time. That would be
@@ -152,7 +152,7 @@ class BodyFetcher:
             self.make_api_call_for_site(*site_and_posts)
             site_and_posts = self.get_fist_queue_item_to_process()
 
-        Tasks.do(store_bodyfetcher_queue)
+        schedule_store_bodyfetcher_queue()
 
     def get_fist_queue_item_to_process(self):
         # We use a copy of the queue keys (sites) and lengths in order to allow
