@@ -219,6 +219,10 @@ def log_current_thread(log_level, prefix="", postfix=""):
     log(log_level, "{}current thread: {}: {}{}".format(prefix, current_thread.name, current_thread.ident, postfix))
 
 
+def append_to_current_thread_name(text):
+    threading.current_thread().name += text
+
+
 def files_changed(diff, file_set):
     changed = set(diff.split())
     return bool(len(changed & file_set))
