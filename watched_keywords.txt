@@ -39103,3 +39103,4 @@
 1652198053	cigien	alightmotionapk\.co
 1652198074	cigien	offers\.livesportsnetwork\.net
 1652198473	cigien	home[\W_]*+tech[\W_]*+geeks(?!\.com(?<=hometechgeeks\.com))
+1652198762	cigien	(?-i:UxDZvuAqog9pznWW7)(?#google forms)
