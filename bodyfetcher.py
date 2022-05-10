@@ -84,6 +84,7 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
+    check_queue_lock = threading.Lock()
 
     RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL = 10 * 60  # 10 minutes
     Tasks.periodic(expire_recently_scanned_posts, interval=RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL)
@@ -132,64 +133,82 @@ class BodyFetcher:
             GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
 
         if should_check_site:
-            self.make_api_call_for_site(hostname)
-        else:
-            self.check_queue()
-        return
+            # The call to add_to_queue indicated that the site should be immediately processed.
+            with self.queue_lock:
+                new_posts = self.queue.pop(hostname, None)
+            if new_posts:
+                Tasks.do(store_bodyfetcher_queue)
+                self.make_api_call_for_site(hostname, new_posts)
 
-    def check_queue(self):
-        # This should be called once in a new Thread every time we add an entry to the queue. Thus, we
-        # should only need to process a single queue entry in order to keep the queue from containing
-        # entries which are qualified for processing, but which haven't been processed. However, that
-        # doesn't account for the possibility of things going wrong and/or implementing some other
-        # way to qualify other than the depth of the queue for a particular site (e.g. time in queue).
-
-        # We use a copy of the queue in order to allow the queue to be changed in other threads.
-        # This is OK, because self.make_api_call_for_site(site) verifies that the site
-        # is still in the queue.
-        log_current_thread("debug", "BodyFetcher.check_queue: ")
-        sites_to_handle = []
-        is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
-        with self.queue_lock:
-            sites_in_queue = {site: len(values) for site, values in self.queue.items()}
-        # Get sites listed in special cases and as time_sensitive
-        for site, length in sites_in_queue.items():
-            if site in self.special_cases:
-                if length >= self.special_cases[site]:
-                    sites_to_handle.append(site)
-                    continue
-            if is_time_sensitive_time and site in self.time_sensitive and length >= 1:
-                sites_to_handle.append(site)
-
-        # Remove the sites which we've handled from our copy of the queue.
-        for site in sites_to_handle:
-            sites_in_queue.pop(site, None)
-
-        # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, length in sites_in_queue.items():
-            if site not in self.special_cases and length >= self.threshold:
-                sites_to_handle.append(site)
-
-        for site in sites_to_handle:
-            self.make_api_call_for_site(site)
-
-        if not sites_to_handle:
-            # We're not making an API request, so explicitly store the queue.
+        # While there are still sites in the queue which meet their applcable threshold, we
+        # process the site.
+        site_and_posts = self.get_fist_queue_item_to_process()
+        while site_and_posts:
             Tasks.do(store_bodyfetcher_queue)
+            # The following really should be limited to a number of threads consistent with
+            # the resources available to this SD instance. As it is, it *could* end up that there
+            # are a large number of threads processing posts at the same time. That would be
+            # counterproductive, due to CPU/memory thrashing.
+            self.make_api_call_for_site(*site_and_posts)
+            site_and_posts = self.get_fist_queue_item_to_process()
+
+        Tasks.do(store_bodyfetcher_queue)
+
+    def get_fist_queue_item_to_process(self):
+        # We use a copy of the queue keys (sites) and lengths in order to allow
+        # the queue to be changed in other threads.
+        # Overall this results in a FIFO for sites which have reached their threshold, because
+        # dicts are guaranteed to be iterated in insertion order in Python >= 3.6.
+        # We use self.check_queue_lock here to fully dispatch one queued site at a time and allow
+        # consolidation of multiple WebSocket events for the same real-world event.
+        with self.check_queue_lock:
+            time.sleep(.25)  # Some time for multiple potential  WebSocket events to queue the same post
+            log_current_thread("debug", "BodyFetcher.check_queue: ")
+            special_sites = []
+            site_to_handle = None
+            is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
+            with self.queue_lock:
+                sites_in_queue = {site: len(values) for site, values in self.queue.items()}
+            # Get sites listed in special cases and as time_sensitive
+            for site, length in sites_in_queue.items():
+                if site in self.special_cases:
+                    special_sites.append(site)
+                    if length >= self.special_cases[site]:
+                        site_to_handle = site
+                        break
+                if is_time_sensitive_time and site in self.time_sensitive:
+                    special_sites.append(site)
+                    if length >= 1:
+                        site_to_handle = site
+                        break
+            else:
+                # We didn't find a special site which met the applicable threshold.
+                # Remove the sites which we've already considered from our copy of the queue's keys.
+                for site in special_sites:
+                    sites_in_queue.pop(site, None)
+
+                # If we don't have any special sites with their queue filled, take the first
+                # one without a special case
+                for site, length in sites_in_queue.items():
+                    if length >= self.threshold:
+                        site_to_handle = site
+                        break
+
+            if site_to_handle is not None:
+                with self.queue_lock:
+                    new_posts = self.queue.pop(site_to_handle, None)
+                if new_posts:
+                    # We've identified a site and have a list of new posts to fetch.
+                    return (site, new_posts)
+            # There's no site in the queue which has met the applicable threshold.
+            return None
 
     def print_queue(self):
         return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
 
-    def make_api_call_for_site(self, site):
-        log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ", "::  site:{}".format(site))
-        with self.queue_lock:
-            new_posts = self.queue.pop(site, None)
+    def make_api_call_for_site(self, site, new_posts):
         log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ",
                            "::  site:{}::  new_posts:{}".format(site, [key for key in new_posts.keys()]))
-        if new_posts is None:
-            # site was not in the queue
-            return
-        Tasks.do(store_bodyfetcher_queue)
 
         new_post_ids = [int(k) for k in new_posts.keys()]
         Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
