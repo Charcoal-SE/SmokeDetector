@@ -39092,3 +39092,4 @@
 1652177500	tripleee	candidroot\.com
 1652177520	tripleee	candidroot(?!\.com)
 1652177555	tripleee	(?-i:^Spectra Plus$)
+1652178684	Jeff Schaller	manchalamushafir\.com
