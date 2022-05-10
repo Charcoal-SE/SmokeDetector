@@ -299,6 +299,7 @@ class BodyFetcher:
             try:
                 time_request_made = datetime.utcnow().strftime('%H:%M:%S')
                 response = requests.get(url, params=params, timeout=20).json()
+                response_timestamp = time.time()
             except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
                 # Any failure in the request being made (timeout or otherwise) should be added back to
                 # the queue.
@@ -386,6 +387,7 @@ class BodyFetcher:
                 continue
 
             post['site'] = site
+            post['response_timestamp'] = response_timestamp
             try:
                 post['edited'] = (post['creation_date'] != post['last_edit_date'])
             except KeyError:
@@ -435,6 +437,7 @@ class BodyFetcher:
                             if 'body' in anb:
                                 anb['body'] = 'Present, but truncated'
 
+                        answer['response_timestamp'] = response_timestamp
                         answer["IsAnswer"] = True  # Necesssary for Post object
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation

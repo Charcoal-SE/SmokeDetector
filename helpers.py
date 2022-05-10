@@ -375,7 +375,7 @@ def get_check_equality_data(post):
     )
 
 
-def is_post_recently_scanned_and_unchanged(post):
+def is_post_recently_scanned_and_unchanged_or_older(post):
     if 'is_recently_scanned_post' not in post:
         post = get_recently_scanned_post_from_post(post)
     post_key = post.get('post_key', None)
@@ -386,10 +386,16 @@ def is_post_recently_scanned_and_unchanged(post):
     if scanned_entry is None:
         return False
     scanned_post = scanned_entry['post']
-    return is_recently_scanned_post_unchanged(post, scanned_post)
+    return is_recently_scanned_post_unchanged_or_older(post, scanned_post)
 
 
-def is_recently_scanned_post_unchanged(post, scanned_post):
+def is_recently_scanned_post_unchanged_or_older(post, scanned_post):
+    post_resonse_timestamp = post.get('response_timestamp', 0)
+    scanned_post_resonse_timestamp = scanned_post.get('response_timestamp', 0)
+    post_is_older = post_resonse_timestamp < scanned_post_resonse_timestamp
+    if post_is_older:
+        return True
+    scanned_equality_data = get_check_equality_data(scanned_post)
     post_equality_data = get_check_equality_data(post)
     scanned_equality_data = get_check_equality_data(scanned_post)
     is_unchanged = post_equality_data == scanned_equality_data
@@ -403,6 +409,7 @@ def is_recently_scanned_post_unchanged(post, scanned_post):
 
 
 recently_scanned_post_straight_copy_keys = [
+    'response_timestamp',
     'last_edit_date',
     'title',
     'body_markdown',

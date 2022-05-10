@@ -17,7 +17,7 @@ from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 from helpers import (ErrorLogs, log, log_exception, redact_passwords, get_recently_scanned_key_for_post,
-                     get_recently_scanned_post_from_post, is_recently_scanned_post_unchanged)
+                     get_recently_scanned_post_from_post, is_recently_scanned_post_unchanged_or_older)
 import threading
 from tasks import Tasks
 
@@ -491,16 +491,27 @@ def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None, have_l
             GlobalVars.recently_scanned_posts[new_key] = new_record
 
 
-def update_recently_scanned_post_timestamp(post, have_lock=None):
+def apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, scanned_entry):
+    scanned_post = scanned_entry['post']
+    scanned_post_reponse_timestamp = scanned_post.get('response_timestamp', 0)
+    post_reponse_timestamp = post.get('response_timestamp', 0)
+    if post_reponse_timestamp > scanned_post_reponse_timestamp:
+        scanned_entry['scan_timestamp'] = time.time()
+        scanned_entry['post']['response_timestamp'] = post.get('response_timestamp', None)
+
+
+def update_recently_scanned_post_timestamp_if_newer(post, have_lock=None):
     key = get_recently_scanned_key_for_post(post)
     if key is None:
         raise KeyError('post key is None')
     try:
         if have_lock:
-            GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
+            rs_entry = GlobalVars.recently_scanned_posts[key]
+            apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, rs_entry)
         else:
             with GlobalVars.recently_scanned_posts_lock:
-                GlobalVars.recently_scanned_posts[key]['scan_timestamp'] = time.time()
+                rs_entry = GlobalVars.recently_scanned_posts[key]
+                apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, rs_entry)
     except KeyError:
         # If the record doesn't exist, we add it.
         add_recently_scanned_post(post, have_lock)
@@ -519,9 +530,9 @@ def atomic_is_post_recently_scanned_and_unchanged_and_update(post):
             add_recently_scanned_post(post, have_lock=True)
             return False
         scanned_post = scanned_entry['post']
-        is_unchanged = is_recently_scanned_post_unchanged(post, scanned_post)
+        is_unchanged = is_recently_scanned_post_unchanged_or_older(post, scanned_post)
         if is_unchanged:
-            update_recently_scanned_post_timestamp(post, have_lock=True)
+            update_recently_scanned_post_timestamp_if_newer(post, have_lock=True)
         else:
             add_recently_scanned_post(post, have_lock=True)
         return is_unchanged
