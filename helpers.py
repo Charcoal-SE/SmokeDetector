@@ -398,7 +398,7 @@ def is_recently_scanned_post_unchanged(post, scanned_post):
         results = [post_equality_data[count] == scanned_equality_data[count]
                    for count in range(len(post_equality_data))]
         post_key = post.get('post_key', None)
-        log('debug', 'GRACE period edit: {}:: results:{}'.format(post_key, results))
+        log_current_thread('debug', 'GRACE period edit: {}::  matching(ED,T,U,MD):{}::  '.format(post_key, results))
     return is_unchanged
 
 
