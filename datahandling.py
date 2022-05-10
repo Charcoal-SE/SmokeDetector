@@ -158,6 +158,7 @@ def load_files():
     if has_pickle("recentlyScannedPosts.p"):
         with GlobalVars.recently_scanned_posts_lock:
             GlobalVars.recently_scanned_posts = load_pickle("recentlyScannedPosts.p", encoding='utf-8')
+        expire_recently_scanned_posts()
 
     blacklists.load_blacklists()
 
