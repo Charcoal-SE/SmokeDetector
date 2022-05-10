@@ -39090,3 +39090,4 @@
 1652175749	Zoe stands with Ukraine	ihateedi\.com
 1652177480	tripleee	(?-i:KxpRE2)(?# fiverr)
 1652177500	tripleee	candidroot\.com
+1652177520	tripleee	candidroot(?!\.com)
