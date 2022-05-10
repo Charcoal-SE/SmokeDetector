@@ -39081,3 +39081,4 @@
 1652157508	cigien	taimoorsattar\.dev
 1652159823	cigien	unogeeks\.com
 1652159956	tripleee	hcm[\W_]*+training
+1652160577	tripleee	unogeeks(?!\.com)
