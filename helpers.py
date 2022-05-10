@@ -211,6 +211,10 @@ def log_current_exception(f=False):
 
 
 def log_current_thread(log_level, prefix="", postfix=""):
+    if prefix:
+        prefix += '\t'
+    if postfix:
+        postfix = '\t' + postfix
     current_thread = threading.current_thread()
     log(log_level, "{}current thread: {}: {}{}".format(prefix, current_thread.name, current_thread.ident, postfix))
 
