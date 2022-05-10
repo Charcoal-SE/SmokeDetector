@@ -14,7 +14,7 @@ import threading
 import requests
 import copy
 from classes import Post, PostParseError
-from helpers import log, log_current_thread
+from helpers import log, log_current_thread, append_to_current_thread_name
 from itertools import chain
 from tasks import Tasks
 
@@ -211,6 +211,8 @@ class BodyFetcher:
                 return 'The BodyFetcher queue is empty.'
 
     def make_api_call_for_site(self, site, new_posts):
+        append_to_current_thread_name(' --> processing site: {}:: posts: {}'.format(site,
+                                                                                    [key for key in new_posts.keys()]))
         log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ",
                            "::  site:{}::  new_posts:{}".format(site, [key for key in new_posts.keys()]))
 
