@@ -650,3 +650,4 @@ Visualytes
 (?-i:^Michele.{0,29}Gadd$)
 ^binance.{0,33}$
 ^coinbase.{0,32}$
+(?-i:^Roger Watson$)
