@@ -39133,3 +39133,4 @@
 1652263722	tripleee	cronoz[\W_]*+shop
 1652263746	tripleee	campus-cidci\.ulg\.ac\.be
 1652264827	tripleee	blucheez\.com\.bd
+1652266758	tripleee	todaynationnews\.com
