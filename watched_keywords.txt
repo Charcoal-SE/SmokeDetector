@@ -39139,3 +39139,4 @@
 1652267215	tripleee	buchananreform\.org
 1652268104	tripleee	(?-i:^a\d+preacct$)
 1652269159	tripleee	wavlinklogin\.com
+1652269937	tripleee	factmr\.com
