@@ -39135,3 +39135,4 @@
 1652264827	tripleee	blucheez\.com\.bd
 1652266758	tripleee	todaynationnews\.com
 1652266950	tripleee	subsquid\.io
+1652266979	tripleee	anna[\W_]*+loginova\d*
