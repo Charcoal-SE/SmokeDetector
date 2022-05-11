@@ -90,8 +90,6 @@ class BodyFetcher:
     Tasks.periodic(expire_recently_scanned_posts, interval=RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL)
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
-        log_current_thread("debug", "BodyFetcher.add_to_queue: ")
-
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
             3122,    # Formatting Sandbox
@@ -163,7 +161,6 @@ class BodyFetcher:
         # consolidation of multiple WebSocket events for the same real-world event.
         with self.check_queue_lock:
             time.sleep(.25)  # Some time for multiple potential  WebSocket events to queue the same post
-            log_current_thread("debug", "BodyFetcher.check_queue: ")
             special_sites = []
             site_to_handle = None
             is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
@@ -213,8 +210,6 @@ class BodyFetcher:
     def make_api_call_for_site(self, site, new_posts):
         append_to_current_thread_name(' --> processing site: {}:: posts: {}'.format(site,
                                                                                     [key for key in new_posts.keys()]))
-        log_current_thread("debug", "BodyFetcher.make_api_call_for_site: ",
-                           "::  site:{}::  new_posts:{}".format(site, [key for key in new_posts.keys()]))
 
         new_post_ids = [int(k) for k in new_posts.keys()]
         Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
