@@ -39128,3 +39128,4 @@
 1652252760	tripleee	xosolocphatnet\d*
 1652254468	tripleee	monkeysingh\.com
 1652256379	tripleee	mulemasters\.in
+1652260625	tripleee	bandienmaytaikho\.com
