@@ -39137,7 +39137,6 @@
 1652266950	tripleee	subsquid\.io
 1652266979	tripleee	anna[\W_]*+loginova\d*
 1652267215	tripleee	buchananreform\.org
-1652268104	tripleee	(?-i:^a\d+preacct$)
 1652269159	tripleee	wavlinklogin\.com
 1652269937	tripleee	factmr\.com
 1652271771	Jeff Schaller	qbenterprisesupport\.com
