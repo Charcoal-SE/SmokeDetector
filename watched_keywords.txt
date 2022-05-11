@@ -39134,3 +39134,4 @@
 1652263746	tripleee	campus-cidci\.ulg\.ac\.be
 1652264827	tripleee	blucheez\.com\.bd
 1652266758	tripleee	todaynationnews\.com
+1652266950	tripleee	subsquid\.io
