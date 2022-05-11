@@ -1,9 +1,7 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, schedule_store_bodyfetcher_queue,
-                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data,
-                          add_recently_scanned_post, expire_recently_scanned_posts,
-                          atomic_is_post_recently_scanned_and_unchanged_and_update)
+                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -14,7 +12,9 @@ import threading
 import requests
 import copy
 from classes import Post, PostParseError
-from helpers import log, log_current_thread, append_to_current_thread_name
+from helpers import (log, log_current_thread, append_to_current_thread_name,
+                     convert_new_scan_to_spam_result_if_new_reasons)
+import recently_scanned_posts as rsp
 from itertools import chain
 from tasks import Tasks
 
@@ -85,9 +85,6 @@ class BodyFetcher:
     queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
     check_queue_lock = threading.Lock()
-
-    RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL = 10 * 60  # 10 minutes
-    Tasks.periodic(expire_recently_scanned_posts, interval=RECENTLY_SCANNED_POSTS_EXPIRE_INTERVAL)
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
@@ -394,12 +391,13 @@ class BodyFetcher:
             except KeyError:
                 post['edited'] = False  # last_edit_date not present = not edited
 
-            question_doesnt_need_scan = atomic_is_post_recently_scanned_and_unchanged_and_update(post)
-            if question_doesnt_need_scan and "answers" not in post:
-                continue
             question_id = post.get('question_id', None)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
+            compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
+            question_doesnt_need_scan = compare_info['is_older_or_unchanged']
+            if question_doesnt_need_scan and "answers" not in post:
+                continue
             do_flovis = GlobalVars.flovis is not None and question_id is not None
             try:
                 post_ = Post(api_response=post)
@@ -411,8 +409,9 @@ class BodyFetcher:
 
             if not question_doesnt_need_scan:
                 num_scanned += 1
-                is_spam, reason, why = check_if_spam(post_)
-                add_recently_scanned_post(post, is_spam=is_spam, reasons=reason, why=why)
+                is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(post_),
+                                                                                      compare_info)
+                rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why)
 
                 if is_spam:
                     try:
@@ -446,13 +445,16 @@ class BodyFetcher:
                             answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
-                        if atomic_is_post_recently_scanned_and_unchanged_and_update(answer):
+                        compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
+                        answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                        if answer_doesnt_need_scan:
                             continue
                         num_scanned += 1
                         answer_ = Post(api_response=answer, parent=post_)
 
-                        is_spam, reason, why = check_if_spam(answer_)
-                        add_recently_scanned_post(answer, is_spam=is_spam, reasons=reason, why=why)
+                        is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(answer_),
+                                                                                              compare_info)
+                        rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why)
                         if is_spam:
                             answer_id = answer.get('answer_id', None)
                             do_flovis = GlobalVars.flovis is not None and answer_id is not None

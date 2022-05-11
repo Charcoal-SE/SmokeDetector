@@ -16,8 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import (ErrorLogs, log, log_exception, redact_passwords, get_recently_scanned_key_for_post,
-                     get_recently_scanned_post_from_post, is_recently_scanned_post_unchanged_or_older)
+from helpers import ErrorLogs, log, log_exception, redact_passwords
 import threading
 from tasks import Tasks
 
@@ -160,7 +159,6 @@ def load_files():
     if has_pickle("recentlyScannedPosts.p"):
         with GlobalVars.recently_scanned_posts_lock:
             GlobalVars.recently_scanned_posts = load_pickle("recentlyScannedPosts.p", encoding='utf-8')
-        expire_recently_scanned_posts()
 
     blacklists.load_blacklists()
 
@@ -451,21 +449,6 @@ def store_recently_scanned_posts():
         dump_pickle("recentlyScannedPosts.p", GlobalVars.recently_scanned_posts)
 
 
-def expire_recently_scanned_posts():
-    min_retained_timestamp = time.time() - GlobalVars.recently_scanned_posts_retention_time
-    with GlobalVars.recently_scanned_posts_lock:
-        # A dict comprehension can be used to do this:
-        #   GlobalVars.recently_scanned_posts = {key: value for key, value in GlobalVars.recently_scanned_posts.items()
-        #                                        if value['scan_timestamp'] > min_retained_timestamp}
-        # But, that has a notably higher memory requirement than deleting the entries.
-        # Where the right trade-off wrt. higher memory use vs. maybe more time for del/pop isn't clear and will depend
-        # on the size of the dict and memory/CPU available for the particular SD instance.
-        rs_posts = GlobalVars.recently_scanned_posts
-        keys_to_delete = [key for key, value in rs_posts.items() if value['scan_timestamp'] < min_retained_timestamp]
-        for key in keys_to_delete:
-            rs_posts.pop(key, None)
-
-
 # methods that help avoiding reposting alerts:
 
 
@@ -474,68 +457,6 @@ def append_to_latest_questions(host, post_id, title):
         GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
         if len(GlobalVars.latest_questions) > 50:
             GlobalVars.latest_questions.pop()
-
-
-def add_recently_scanned_post(post, is_spam=None, reasons=None, why=None, have_lock=None):
-    if 'is_recently_scanned_post' not in post:
-        post = get_recently_scanned_post_from_post(post)
-    new_key = post['post_key']
-    if new_key is None:
-        raise KeyError('post key is None')
-    new_record = {'post': post, 'scan_timestamp': time.time(),
-                  'is_spam': is_spam, 'reasons': reasons, 'why': why}
-    if have_lock:
-        GlobalVars.recently_scanned_posts[new_key] = new_record
-    else:
-        with GlobalVars.recently_scanned_posts_lock:
-            GlobalVars.recently_scanned_posts[new_key] = new_record
-
-
-def apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, scanned_entry):
-    scanned_post = scanned_entry['post']
-    scanned_post_reponse_timestamp = scanned_post.get('response_timestamp', 0)
-    post_reponse_timestamp = post.get('response_timestamp', 0)
-    if post_reponse_timestamp > scanned_post_reponse_timestamp:
-        scanned_entry['scan_timestamp'] = time.time()
-        scanned_entry['post']['response_timestamp'] = post.get('response_timestamp', None)
-
-
-def update_recently_scanned_post_timestamp_if_newer(post, have_lock=None):
-    key = get_recently_scanned_key_for_post(post)
-    if key is None:
-        raise KeyError('post key is None')
-    try:
-        if have_lock:
-            rs_entry = GlobalVars.recently_scanned_posts[key]
-            apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, rs_entry)
-        else:
-            with GlobalVars.recently_scanned_posts_lock:
-                rs_entry = GlobalVars.recently_scanned_posts[key]
-                apply_timestamps_to_recently_scanned_entry_from_post_and_time_if_newer(post, rs_entry)
-    except KeyError:
-        # If the record doesn't exist, we add it.
-        add_recently_scanned_post(post, have_lock)
-
-
-def atomic_is_post_recently_scanned_and_unchanged_and_update(post):
-    with GlobalVars.recently_scanned_posts_lock:
-        if 'is_recently_scanned_post' not in post:
-            post = get_recently_scanned_post_from_post(post)
-        post_key = post.get('post_key', None)
-        if post_key is None:
-            # Without a post_key, we can't check or store.
-            raise KeyError('post key is None')
-        scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
-        if scanned_entry is None:
-            add_recently_scanned_post(post, have_lock=True)
-            return False
-        scanned_post = scanned_entry['post']
-        is_unchanged = is_recently_scanned_post_unchanged_or_older(post, scanned_post)
-        if is_unchanged:
-            update_recently_scanned_post_timestamp_if_newer(post, have_lock=True)
-        else:
-            add_recently_scanned_post(post, have_lock=True)
-        return is_unchanged
 
 
 # noinspection PyMissingTypeHints

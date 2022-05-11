@@ -360,78 +360,26 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
     t.start()
 
 
-def get_recently_scanned_key_for_post(post):
-    if 'is_recently_scanned_post' in post:
-        return post.get('post_key', None)
-    site = post.get('site', None)
-    post_id = post.get('question_id', None)
-    if post_id is None:
-        post_id = post.get('answer_id', None)
-    if site is None or post_id is None:
-        log('warn', 'Unable to determine site or post_id for add_recently_scanned_post:'
-                    ' site:{}:: post_id: {}:: post:{}'.format(site, post_id, post))
-        return None
-    return "{}/{}".format(site, post_id)
-
-
-def get_check_equality_data(post):
-    return (
-        post.get('last_edit_date', None),
-        post.get('title', None),
-        post.get('owner_name', None),
-        post.get('body_markdown', None),
-    )
-
-
-def is_post_recently_scanned_and_unchanged_or_older(post):
-    if 'is_recently_scanned_post' not in post:
-        post = get_recently_scanned_post_from_post(post)
-    post_key = post.get('post_key', None)
-    if post_key is None:
-        raise KeyError('post key is None')
-    with GlobalVars.recently_scanned_posts_lock:
-        scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
-    if scanned_entry is None:
-        return False
-    scanned_post = scanned_entry['post']
-    return is_recently_scanned_post_unchanged_or_older(post, scanned_post)
-
-
-def is_recently_scanned_post_unchanged_or_older(post, scanned_post):
-    post_resonse_timestamp = post.get('response_timestamp', 0)
-    scanned_post_resonse_timestamp = scanned_post.get('response_timestamp', 0)
-    post_is_older = post_resonse_timestamp < scanned_post_resonse_timestamp
-    if post_is_older:
-        return True
-    scanned_equality_data = get_check_equality_data(scanned_post)
-    post_equality_data = get_check_equality_data(post)
-    scanned_equality_data = get_check_equality_data(scanned_post)
-    is_unchanged = post_equality_data == scanned_equality_data
-    if not is_unchanged and post_equality_data[0] == scanned_equality_data[0]:
-        # This should be a grace period edit
-        results = [post_equality_data[count] == scanned_equality_data[count]
-                   for count in range(len(post_equality_data))]
-        post_key = post.get('post_key', None)
-        log_current_thread('debug', 'GRACE period edit: {}::  matching(ED,T,U,MD):{}::  '.format(post_key, results))
-    return is_unchanged
-
-
-recently_scanned_post_straight_copy_keys = [
-    'response_timestamp',
-    'last_edit_date',
-    'title',
-    'body_markdown',
-]
-
-
-def get_recently_scanned_post_from_post(post):
-    if 'is_recently_scanned_post' in post:
-        # It's already a RS post
-        return post
-    rs_post = {key: post.get(key, None) for key in recently_scanned_post_straight_copy_keys}
-    rs_post['is_recently_scanned_post'] = True
-    owner_dict = post.get('owner', {})
-    owner_name = owner_dict.get('display_name', None)
-    rs_post['owner_name'] = owner_name
-    rs_post['post_key'] = get_recently_scanned_key_for_post(post)
-    return rs_post
+def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info):
+    if type(old_info) is dict:
+        old_is_spam = old_info.get('is_spam', None)
+        old_results = old_info.get('results', None)
+        old_why = old_info.get('why', None)
+    elif type(old_info) is tuple:
+        old_is_spam, old_results, old_why = old_info
+    if not old_is_spam:
+        return new_info
+    new_is_spam, new_results, new_why = new_info
+    if new_is_spam:
+        return new_info
+    if type(new_results) is tuple:
+        # The scan was actually spam, but was declared non-spam for some reason external to the content.
+        # For example, that it was recently reported.
+        actual_new_results, actual_new_why = new_results
+    else:
+        # The new results did not actually indicate it was spam.
+        return new_info
+    if len(actual_new_results) > len(old_results) or not set(actual_new_results).issubset(set(old_results)):
+        # There are new reasons the post would have been reported
+        return (True, actual_new_results, actual_new_why)
+    return new_info
