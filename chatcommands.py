@@ -2047,6 +2047,14 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
                           "It may already have been deleted.".format(index))
             continue
 
+        # Watch for edits on the associated question
+        try:
+            if post_data.site and post_data.question_id:
+                Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=post_data.site, question_id=post_data.question_id)
+        except AttributeError:
+            # This happens in some CI testing, because GlobalVars.edit_watcher isn't set up.
+            pass
+
         if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
                 (post_data.post_id, post_data.site)) and not is_forced:
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
