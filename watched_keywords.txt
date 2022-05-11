@@ -39144,3 +39144,4 @@
 1652273637	Jeff Schaller	jeumxtool\.herokuapp\.com
 1652274181	tripleee	cfxn\.io
 1652276856	Makyen	gembrahealth\.com
+1652279967	tripleee	^\d[).].{1,50}\bHTML
