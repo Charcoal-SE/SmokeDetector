@@ -39131,3 +39131,4 @@
 1652260625	tripleee	bandienmaytaikho\.com
 1652261613	tripleee	hi88\.work
 1652263722	tripleee	cronoz[\W_]*+shop
+1652263746	tripleee	campus-cidci\.ulg\.ac\.be
