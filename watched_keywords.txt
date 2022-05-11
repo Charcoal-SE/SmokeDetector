@@ -39127,3 +39127,4 @@
 1652252715	tripleee	xosolocphat\.net
 1652252760	tripleee	xosolocphatnet\d*
 1652254468	tripleee	monkeysingh\.com
+1652256379	tripleee	mulemasters\.in
