@@ -2617,3 +2617,4 @@ The certified experts directly get in touch with you
 (?:American?|Alaskan?|Copa|Delta|Spirit|Southwest|United)[\W_]*Airlines['’]?[\W_]*(?:booking|contact|manage|reservation|ticket)
 Q(?:uick)?B(?:ooks)?[\W_]*ProAdvisors?
 suonerie
+slot[\W_]*online
