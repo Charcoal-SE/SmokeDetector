@@ -44,7 +44,7 @@ def sum_weight(reasons: list):
 
 
 # noinspection PyMissingTypeHints
-def check_if_spam(post):
+def check_if_spam(post, dont_ignore_for=None):
     test, why = findspam.FindSpam.test_post(post)
     if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
         test.append("blacklisted user")
@@ -79,7 +79,7 @@ def check_if_spam(post):
         elif datahandling.has_community_bumped_post(post.post_url, post.body):
             result = "post is bumped by Community \u2666\uFE0F"
         # Dirty approach
-        if result is None:  # Post not ignored
+        if result is None or (dont_ignore_for is not None and result in dont_ignore_for):  # Post not ignored
             return True, test, why
         else:
             return False, (test, why), result
