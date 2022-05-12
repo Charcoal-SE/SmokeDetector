@@ -37359,7 +37359,6 @@
 1647682632	Cody Gray	forex-sig\.com
 1647684865	Cody Gray	gemccy20
 1647688158	Cody Gray	nivito\.pt
-1647688213	Cody Gray	Nivito(?!\.pt(?<=nivito\.pt))
 1647703621	cigien	mlregex\.com
 1647704761	cigien	techconsumptions\.com
 1647706079	cigien	comfortablets\.com
