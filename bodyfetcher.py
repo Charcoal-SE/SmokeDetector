@@ -211,11 +211,14 @@ class BodyFetcher:
                 }
                 site_dict[post_id] = post_dict
                 return True
-            if post_dict.get('owner', None) == ident:
+            post_lock_owner = post_dict.get('owner', None)
+            if post_lock_owner == ident:
                 post_dict['recent_timestamp'] = time.time(),
                 return True
             post_dict['rescan_requested'] = True
             post_dict['rescan_requested_by'] = ident
+            log('warning', 'Processing prevented in thread ',
+                           '{} for Post {}/{}: being processed by {}'.format(ident, site, post_id, post_lock_owner))
             return False
 
     def release_post_in_process_and_recan_if_requested(self, ident, site, post_id, question_id):
