@@ -32060,7 +32060,6 @@
 1631099451	tripleee	the[\W_]*+home[\W_]*+dekor(?!\.(?:in|com\.au)(?<=thehomedekor\.(?:in|com\.au)))
 1631100905	tripleee	the[\W_]*+design[\W_]*+trip(?!\.com(?<=thedesigntrip\.com))
 1631102215	tripleee	(?-i:^Kelsi Monore$)
-1631103397	tripleee	airfleetrating\.com
 1631105024	tripleee	(?-i:^Addify CO$)
 1631109072	Jeff Schaller	shremadoverseas\.com
 1631110231	Ollie	ultraductcleaning\.com
