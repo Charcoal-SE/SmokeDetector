@@ -135,19 +135,10 @@ class BodyFetcher:
                 schedule_store_bodyfetcher_queue()
                 self.make_api_call_for_site(hostname, new_posts)
 
-        # While there are still sites in the queue which meet their applcable threshold, we
-        # process the site.
         site_and_posts = self.get_fist_queue_item_to_process()
-        while site_and_posts:
+        if site_and_posts:
             schedule_store_bodyfetcher_queue()
-            # The following really should be limited to a number of threads consistent with
-            # the resources available to this SD instance. As it is, it *could* end up that there
-            # are a large number of threads processing posts at the same time. That would be
-            # counterproductive, due to CPU/memory thrashing.
             self.make_api_call_for_site(*site_and_posts)
-            site_and_posts = self.get_fist_queue_item_to_process()
-
-        schedule_store_bodyfetcher_queue()
 
     def get_fist_queue_item_to_process(self):
         # We use a copy of the queue keys (sites) and lengths in order to allow
