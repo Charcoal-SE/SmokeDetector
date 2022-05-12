@@ -959,6 +959,9 @@ items:
   - elliot.ns.cloudflare.com.
   - liv.ns.cloudflare.com.
 - ns:
+  - elliot.ns.cloudflare.com.
+  - tegan.ns.cloudflare.com.
+- ns:
   - elly.ns.cloudflare.com.
   - remy.ns.cloudflare.com.
 - ns:
