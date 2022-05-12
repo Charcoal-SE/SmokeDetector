@@ -39161,3 +39161,4 @@
 1652322397	cigien	d(?:octo)?r[\W_]*+agumba
 1652322858	cigien	monkey[\W_]*+singh(?!\.com(?<=monkeysingh\.com))
 1652323233	cigien	drift-hunters\.io
+1652329247	Ryan M	crackpcsoft\.net
