@@ -39156,3 +39156,4 @@
 1652318435	cigien	doon[\W_]*+pet[\W_]*+shop(?!\.com(?<=doonpetshop\.com))
 1652321690	cigien	ibnbookkeepingservices\.com
 1652321814	cigien	(?-i:HkjSUXpEJkU)(?#youtube)
+1652322139	cigien	quantumics\.ai
