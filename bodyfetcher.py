@@ -13,7 +13,7 @@ import requests
 import copy
 from classes import Post, PostParseError
 from helpers import (log, log_current_thread, append_to_current_thread_name,
-                     convert_new_scan_to_spam_result_if_new_reasons)
+                     convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread)
 import recently_scanned_posts as rsp
 from itertools import chain
 from tasks import Tasks
@@ -23,6 +23,7 @@ from tasks import Tasks
 class BodyFetcher:
     queue = {}
     previous_max_ids = {}
+    posts_in_process = {}
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -85,6 +86,7 @@ class BodyFetcher:
     queue_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
     check_queue_lock = threading.Lock()
+    posts_in_process_lock = threading.Lock()
 
     def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
@@ -195,7 +197,43 @@ class BodyFetcher:
             else:
                 return 'The BodyFetcher queue is empty.'
 
+    def claim_post_in_process_or_request_rescan(self, ident, site, post_id):
+        with self.posts_in_process_lock:
+            site_dict = self.posts_in_process.get(site, None)
+            if site_dict is None:
+                site_dict = {}
+                self.posts_in_process[site] = site_dict
+            post_dict = site_dict.get(post_id, None)
+            if post_dict is None:
+                post_dict = {
+                    'owner': ident,
+                    'first_timestamp': time.time(),
+                }
+                site_dict[post_id] = post_dict
+                return True
+            if post_dict.get('owner', None) == ident:
+                post_dict['recent_timestamp'] = time.time(),
+                return True
+            post_dict['rescan_requested'] = True
+            post_dict['rescan_requested_by'] = ident
+            return False
+
+    def release_post_in_process_and_recan_if_requested(self, ident, site, post_id, question_id):
+        with self.posts_in_process_lock:
+            site_dict = self.posts_in_process[site]
+            post_dict = site_dict[post_id]
+            if post_dict['owner'] == ident:
+                if post_dict.get('rescan_requested', None) is True:
+                    add_to_global_bodyfetcher_queue_in_new_thread(site, question_id, False,
+                                                                  source="BodyFetcher re-request")
+                site_dict.pop(post_id, None)
+                return True
+            # There's really nothing for us to do here. We could raise an error, but it's
+            # unclear that would help this thread.
+            return False
+
     def make_api_call_for_site(self, site, new_posts):
+        current_thread_ident = threading.current_thread().ident
         append_to_current_thread_name(' --> processing site: {}:: posts: {}'.format(site,
                                                                                     [key for key in new_posts.keys()]))
 
@@ -385,38 +423,48 @@ class BodyFetcher:
             question_id = post.get('question_id', None)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
-            compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
-            question_doesnt_need_scan = compare_info['is_older_or_unchanged']
-            if question_doesnt_need_scan and "answers" not in post:
-                continue
-            do_flovis = GlobalVars.flovis is not None and question_id is not None
             try:
-                post_ = Post(api_response=post)
-            except PostParseError as err:
-                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
-                if do_flovis:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, question_id, pnb)
-                continue
+                if self.claim_post_in_process_or_request_rescan(current_thread_ident, site, question_id):
+                    compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
+                    question_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                else:
+                    question_doesnt_need_scan = True
 
-            if not question_doesnt_need_scan:
-                num_scanned += 1
-                is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(post_),
-                                                                                      compare_info)
-                rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why)
+                if question_doesnt_need_scan and "answers" not in post:
+                    continue
+                do_flovis = GlobalVars.flovis is not None and question_id is not None
+                try:
+                    post_ = Post(api_response=post)
+                except PostParseError as err:
+                    log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
+                    if do_flovis:
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, question_id, pnb)
+                    continue
 
-                if is_spam:
-                    try:
-                        if do_flovis:
-                            GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, question_id,
-                                                    {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                        handle_spam(post=post_,
-                                    reasons=reason,
-                                    why=why)
-                    except Exception as e:
-                        log('error', "Exception in handle_spam:", e)
-                elif do_flovis:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, question_id,
-                                            {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                if not question_doesnt_need_scan:
+                    num_scanned += 1
+                    is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(post_),
+                                                                                          compare_info)
+                    rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why)
+
+                    if is_spam:
+                        try:
+                            if do_flovis:
+                                GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, question_id,
+                                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                            handle_spam(post=post_,
+                                        reasons=reason,
+                                        why=why)
+                        except Exception as e:
+                            log('error', "Exception in handle_spam:", e)
+                    elif do_flovis:
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, question_id,
+                                                {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+            except Exception:
+                raise
+            finally:
+                self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, question_id,
+                                                                    question_id)
 
             try:
                 if "answers" not in post:
@@ -436,31 +484,41 @@ class BodyFetcher:
                             answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
-                        compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
-                        answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
-                        if answer_doesnt_need_scan:
-                            continue
-                        num_scanned += 1
-                        answer_ = Post(api_response=answer, parent=post_)
+                        answer_id = answer.get('answer_id', None)
+                        try:
+                            if self.claim_post_in_process_or_request_rescan(current_thread_ident, site, answer_id):
+                                compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
+                                answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                            else:
+                                continue
+                            if answer_doesnt_need_scan:
+                                continue
+                            num_scanned += 1
+                            answer_ = Post(api_response=answer, parent=post_)
 
-                        is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(answer_),
-                                                                                              compare_info)
-                        rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why)
-                        if is_spam:
-                            answer_id = answer.get('answer_id', None)
-                            do_flovis = GlobalVars.flovis is not None and answer_id is not None
-                            try:
-                                if do_flovis:
-                                    GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer_id,
-                                                            {'post': anb, 'check_if_spam': [is_spam, reason, why]})
-                                handle_spam(answer_,
-                                            reasons=reason,
-                                            why=why)
-                            except Exception as e:
-                                log('error', "Exception in handle_spam:", e)
-                        elif do_flovis:
-                            GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer_id,
-                                                    {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                            raw_results = check_if_spam(answer_)
+                            is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(raw_results,
+                                                                                                  compare_info)
+                            rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why)
+                            if is_spam:
+                                do_flovis = GlobalVars.flovis is not None and answer_id is not None
+                                try:
+                                    if do_flovis:
+                                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer_id,
+                                                                {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                                    handle_spam(answer_,
+                                                reasons=reason,
+                                                why=why)
+                                except Exception as e:
+                                    log('error', "Exception in handle_spam:", e)
+                            elif do_flovis:
+                                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer_id,
+                                                        {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                        except Exception:
+                            raise
+                        finally:
+                            self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, answer_id,
+                                                                                question_id)
 
             except Exception as e:
                 log('error', "Exception handling answers:", e)
