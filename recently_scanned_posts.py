@@ -2,7 +2,7 @@
 import time
 from tasks import Tasks
 from globalvars import GlobalVars
-from helpers import log, log_current_thread
+from helpers import log
 
 
 POST_STRAIGHT_COPY_KEYS = [
@@ -99,8 +99,7 @@ def compare_posts(post, scanned_post):
         what_changed = [post_equality_data[count] == scanned_equality_data[count]
                         for count in range(len(post_equality_data))]
         post_key = post.get('post_key', None)
-        log_current_thread('debug', 'GRACE period edit: {}::  matching(ED,T,U,MD):{}::  '.format(post_key,
-                                                                                                 what_changed))
+        log('debug', 'GRACE period edit: {}::  matching(ED,T,U,MD):{}::  '.format(post_key, what_changed))
         result['is_grace_edit'] = True
     return result
 
