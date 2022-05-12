@@ -39197,3 +39197,4 @@
 1652367692	tripleee	(?-i:^Alina Koson$)
 1652368133	cigien	codingninjas\.com
 1652369222	cigien	buyneem\.com
+1652370724	cigien	darthcoin\.substack\.com
