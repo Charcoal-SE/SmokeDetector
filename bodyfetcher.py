@@ -27,6 +27,12 @@ class BodyFetcher:
     posts_in_process = {}
 
     LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
+    DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = 3
+    per_site_processing_thread_limits = {
+        'stackoverflow.com': 5,
+    }
+    per_site_processing_thread_locks = {}
+    per_site_processing_thread_locks_lock = threading.Lock()
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -134,16 +140,47 @@ class BodyFetcher:
 
         if should_check_site:
             # The call to add_to_queue indicated that the site should be immediately processed.
-            with self.queue_lock:
-                new_posts = self.queue.pop(hostname, None)
-            if new_posts:
-                schedule_store_bodyfetcher_queue()
-                self.make_api_call_for_site(hostname, new_posts)
+            if self.acquire_site_processing_lock(hostname):
+                try:
+                    with self.queue_lock:
+                        new_posts = self.queue.pop(hostname, None)
+                    if new_posts:
+                        schedule_store_bodyfetcher_queue()
+                        self.make_api_call_for_site(hostname, new_posts)
+                except Exception:
+                    raise
+                finally:
+                    # We're done processing the site, so release the processing lock.
+                    self.release_site_processing_lock(hostname)
 
-        site_and_posts = self.get_fist_queue_item_to_process()
-        if site_and_posts:
-            schedule_store_bodyfetcher_queue()
-            self.make_api_call_for_site(*site_and_posts)
+        try:
+            site_and_posts = self.get_fist_queue_item_to_process()
+            if site_and_posts:
+                schedule_store_bodyfetcher_queue()
+                self.make_api_call_for_site(*site_and_posts)
+        except Exception:
+            raise
+        finally:
+            # We're done processing the site, so release the processing lock.
+            if site_and_posts:
+                self.release_site_processing_lock(site_and_posts[0])
+
+    def acquire_site_processing_lock(self, site):
+        with self.per_site_processing_thread_locks_lock:
+            site_semaphore = self.per_site_processing_thread_locks.get(site, None)
+            if site_semaphore is None:
+                semaphore_count = (self.per_site_processing_thread_limits.get(site, None)
+                                   or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT)
+                site_semaphore = threading.BoundedSemaphore(value=semaphore_count)
+                self.per_site_processing_thread_locks[site] = site_semaphore
+            have_acquired_lock = site_semaphore.acquire(blocking=False)
+            if not have_acquired_lock:
+                log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
+            return have_acquired_lock
+
+    def release_site_processing_lock(self, site):
+        with self.per_site_processing_thread_locks_lock:
+            self.per_site_processing_thread_locks[site].release()
 
     def get_fist_queue_item_to_process(self):
         # We use a copy of the queue keys (sites) and lengths in order to allow
@@ -153,52 +190,67 @@ class BodyFetcher:
         # We use self.check_queue_lock here to fully dispatch one queued site at a time and allow
         # consolidation of multiple WebSocket events for the same real-world event.
         with self.check_queue_lock:
-            # Getting the CPU activity also provides time for multiple potential WebSocket events to queue
-            # the same post along with some time for the SE API to update and have information on the new post.
-            cpu_use = psutil.cpu_percent(interval=1)
-            if cpu_use > self.LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD:
-                # We are already maxing out the CPU. Having additional threads processing posts is counterproductive.
-                log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
-                                              + ', which is too high to launch an additional scan thread.')
-                return None
-            special_sites = []
-            site_to_handle = None
-            is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
-            with self.queue_lock:
-                sites_in_queue = {site: len(values) for site, values in self.queue.items()}
-            # Get sites listed in special cases and as time_sensitive
-            for site, length in sites_in_queue.items():
-                if site in self.special_cases:
-                    special_sites.append(site)
-                    if length >= self.special_cases[site]:
-                        site_to_handle = site
-                        break
-                if is_time_sensitive_time and site in self.time_sensitive:
-                    special_sites.append(site)
-                    if length >= 1:
-                        site_to_handle = site
-                        break
-            else:
-                # We didn't find a special site which met the applicable threshold.
-                # Remove the sites which we've already considered from our copy of the queue's keys.
-                for site in special_sites:
-                    sites_in_queue.pop(site, None)
-
-                # If we don't have any special sites with their queue filled, take the first
-                # one without a special case
-                for site, length in sites_in_queue.items():
-                    if length >= self.threshold:
-                        site_to_handle = site
-                        break
-
-            if site_to_handle is not None:
+            try:
+                # Getting the CPU activity also provides time for multiple potential WebSocket events to queue
+                # the same post along with some time for the SE API to update and have information on the new post.
+                cpu_use = psutil.cpu_percent(interval=1)
+                if cpu_use > self.LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD:
+                    # We are already maxing out the CPU.
+                    # Having additional threads processing posts is counterproductive.
+                    log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
+                                                  + ', which is too high to launch an additional scan thread.')
+                    return None
+                special_sites = []
+                site_to_handle = None
+                is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
                 with self.queue_lock:
-                    new_posts = self.queue.pop(site_to_handle, None)
-                if new_posts:
-                    # We've identified a site and have a list of new posts to fetch.
-                    return (site, new_posts)
-            # There's no site in the queue which has met the applicable threshold.
-            return None
+                    sites_in_queue = {site: len(values) for site, values in self.queue.items()}
+                # Get sites listed in special cases and as time_sensitive
+                for site, length in sites_in_queue.items():
+                    if site in self.special_cases:
+                        special_sites.append(site)
+                        if length >= self.special_cases[site]:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+                    if is_time_sensitive_time and site in self.time_sensitive:
+                        special_sites.append(site)
+                        if length >= 1:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+                else:
+                    # We didn't find a special site which met the applicable threshold.
+                    # Remove the sites which we've already considered from our copy of the queue's keys.
+                    for site in special_sites:
+                        sites_in_queue.pop(site, None)
+
+                    # If we don't have any special sites with their queue filled, take the first
+                    # one without a special case
+                    for site, length in sites_in_queue.items():
+                        if length >= self.threshold:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+
+                if site_to_handle is not None:
+                    # We already have a site processing lock, so if we have new_posts, then we're good to go.
+                    with self.queue_lock:
+                        new_posts = self.queue.pop(site_to_handle, None)
+                    if new_posts:
+                        # We've identified a site and have a list of new posts to fetch.
+                        return (site, new_posts)
+                    else:
+                        # We don't actually have any posts to process, so need to give up the site processing lock
+                        # we alreadying obtained.
+                        self.release_site_processing_lock(site_to_handle)
+                        site_to_handle = None
+                # There's no site in the queue which has met the applicable threshold.
+                return None
+            # We don't have a finally here, as we're only releasing upon an exception.
+            except Exception:
+                if site_to_handle:
+                    self.release_site_processing_lock(site_to_handle)
 
     def print_queue(self):
         with self.queue_lock:
