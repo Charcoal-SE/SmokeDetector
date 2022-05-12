@@ -17,6 +17,7 @@ from helpers import (log, log_current_thread, append_to_current_thread_name,
 import recently_scanned_posts as rsp
 from itertools import chain
 from tasks import Tasks
+import psutil
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -24,6 +25,8 @@ class BodyFetcher:
     queue = {}
     previous_max_ids = {}
     posts_in_process = {}
+
+    LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -150,7 +153,14 @@ class BodyFetcher:
         # We use self.check_queue_lock here to fully dispatch one queued site at a time and allow
         # consolidation of multiple WebSocket events for the same real-world event.
         with self.check_queue_lock:
-            time.sleep(.25)  # Some time for multiple potential  WebSocket events to queue the same post
+            # Getting the CPU activity also provides time for multiple potential WebSocket events to queue
+            # the same post along with some time for the SE API to update and have information on the new post.
+            cpu_use = psutil.cpu_percent(interval=1)
+            if cpu_use > self.LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD:
+                # We are already maxing out the CPU. Having additional threads processing posts is counterproductive.
+                log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
+                                              + ', which is too high to launch an additional scan thread.')
+                return None
             special_sites = []
             site_to_handle = None
             is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
