@@ -263,6 +263,9 @@ items:
   - dns2001a.trouble-free.net.
   - dns2001b.trouble-free.net.
 - ns:
+  - dns2049a.trouble-free.net.
+  - dns2049b.trouble-free.net.
+- ns:
   - ns1267.websitewelcome.com.
   - ns1268.websitewelcome.com.
 - ns: daxa.net.
