@@ -223,9 +223,15 @@ class BodyFetcher:
 
     def release_post_in_process_and_recan_if_requested(self, ident, site, post_id, question_id):
         with self.posts_in_process_lock:
-            site_dict = self.posts_in_process[site]
-            post_dict = site_dict[post_id]
-            if post_dict['owner'] == ident:
+            site_dict = self.posts_in_process.get(site, None)
+            if site_dict is None:
+                log('error', 'posts_in_process: no site_dict found for {} in process: {}'.format(site_dict, ident))
+                return False
+            post_dict = site_dict.get(post_id, None)
+            if post_dict is None:
+                log('error', 'posts_in_process: no post_dict found for {} in process: {}'.format(post_dict, ident))
+                return False
+            if post_dict.get('owner', None) == ident:
                 if post_dict.get('rescan_requested', None) is True:
                     add_to_global_bodyfetcher_queue_in_new_thread(site, question_id, False,
                                                                   source="BodyFetcher re-request")
