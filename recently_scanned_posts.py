@@ -117,8 +117,11 @@ def get_recently_scanned_post_from_post(post):
     return rs_post
 
 
-def atomic_compare_update_and_get_spam_data(post):
-    with GlobalVars.recently_scanned_posts_lock:
+def atomic_compare_update_and_get_spam_data(post, have_lock=False, update=True):
+    try:
+        my_lock = False
+        if not have_lock:
+            my_lock = GlobalVars.recently_scanned_posts_lock.acquire()
         if 'is_recently_scanned_post' not in post:
             post = get_recently_scanned_post_from_post(post)
         post_key = post.get('post_key', None)
@@ -127,14 +130,21 @@ def atomic_compare_update_and_get_spam_data(post):
             raise KeyError('post key is None')
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
         if scanned_entry is None:
-            add_post(post, have_lock=True)
+            if update:
+                add_post(post, have_lock=True)
             return {'is_older_or_unchanged': False, 'no_scanned_entry': True}
         scanned_post = scanned_entry['post']
         compare_info = compare_posts(post, scanned_post)
-        apply_timestamps_to_entry_from_post_and_time_if_newer(post, scanned_entry)
+        if update:
+            apply_timestamps_to_entry_from_post_and_time_if_newer(post, scanned_entry)
         for key in ['is_spam', 'reasons', 'why']:
             compare_info[key] = scanned_entry.get(key, None)
         return compare_info
+    except Exception:
+        raise
+    finally:
+        if my_lock:
+            GlobalVars.recently_scanned_posts_lock.release()
 
 
 def expire_posts():
