@@ -39190,3 +39190,4 @@
 1652365669	cigien	clinicthandi(?:@gmail\.com)?
 1652365762	cigien	papa[\W_]*+hamiduo
 1652365818	cigien	marcoalimentari\.com
+1652366159	cigien	nivito(?!\.(p|l)t(?<=nivito\.(p|l)t))
