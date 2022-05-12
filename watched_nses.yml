@@ -1768,6 +1768,9 @@ items:
   - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
+  - phil.ns.cloudflare.com.
+  - sonia.ns.cloudflare.com.
+- ns:
   - plato.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
