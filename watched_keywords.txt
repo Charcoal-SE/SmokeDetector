@@ -39183,3 +39183,4 @@
 1652347326	tripleee	adsthumb\.com
 1652347579	tripleee	junior[\W_]*+dps(?!\.com(?<=juniordps\.com))
 1652349171	tripleee	watch airlines?[\W_]*+(?:flight[\W_]*+)?(?:booking|cancellation)
+1652351360	tripleee	rstechindia\.com
