@@ -39182,3 +39182,4 @@
 1652346116	tripleee	trx757\.com
 1652347294	tripleee	lifetimeheritagefilms\.com
 1652347326	tripleee	adsthumb\.com
+1652347579	tripleee	junior[\W_]*+dps(?!\.com(?<=juniordps\.com))
