@@ -26,6 +26,9 @@ class BodyFetcher:
     previous_max_ids = {}
     posts_in_process = {}
 
+    IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM = [
+        "post has already been reported",
+    ]
     LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
     DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = 3
     per_site_processing_thread_limits = {
@@ -516,8 +519,11 @@ class BodyFetcher:
 
                 if not question_doesnt_need_scan:
                     num_scanned += 1
-                    is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(check_if_spam(post_),
-                                                                                          compare_info)
+                    is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
+                        check_if_spam(post_),
+                        compare_info,
+                        match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                    )
                     rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why)
 
                     if is_spam:
@@ -573,9 +579,11 @@ class BodyFetcher:
                             num_scanned += 1
                             answer_ = Post(api_response=answer, parent=post_)
 
-                            raw_results = check_if_spam(answer_)
-                            is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(raw_results,
-                                                                                                  compare_info)
+                            is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
+                                check_if_spam(answer_),
+                                compare_info,
+                                match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                            )
                             rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why)
                             if is_spam:
                                 do_flovis = GlobalVars.flovis is not None and answer_id is not None

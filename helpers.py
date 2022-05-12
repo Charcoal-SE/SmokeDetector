@@ -385,7 +385,7 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
     t.start()
 
 
-def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info):
+def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ignore=None):
     if type(old_info) is dict:
         old_is_spam = old_info.get('is_spam', None)
         old_results = old_info.get('results', None)
@@ -403,6 +403,9 @@ def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info):
         actual_new_results, actual_new_why = new_results
     else:
         # The new results did not actually indicate it was spam.
+        return new_info
+    if match_ignore is not None and new_why not in match_ignore:
+        # We only want it to be considered spam if ignored for specified reasons.
         return new_info
     if len(actual_new_results) > len(old_results) or not set(actual_new_results).issubset(set(old_results)):
         # There are new reasons the post would have been reported
