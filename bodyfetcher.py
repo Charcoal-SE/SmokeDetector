@@ -433,7 +433,9 @@ class BodyFetcher:
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
             try:
-                if self.claim_post_in_process_or_request_rescan(current_thread_ident, site, question_id):
+                have_question_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
+                                                                                             site, question_id)
+                if have_question_processing_lock:
                     compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
                     question_doesnt_need_scan = compare_info['is_older_or_unchanged']
                 else:
@@ -472,8 +474,10 @@ class BodyFetcher:
             except Exception:
                 raise
             finally:
-                self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, question_id,
-                                                                    question_id)
+                if have_question_processing_lock:
+                    have_question_processing_lock = False
+                    self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, question_id,
+                                                                        question_id)
 
             try:
                 if "answers" not in post:
@@ -495,7 +499,9 @@ class BodyFetcher:
                             answer['edited'] = False  # last_edit_date not present = not edited
                         answer_id = answer.get('answer_id', None)
                         try:
-                            if self.claim_post_in_process_or_request_rescan(current_thread_ident, site, answer_id):
+                            answer_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
+                                                                                                  site, answer_id)
+                            if answer_processing_lock:
                                 compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
                                 answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
                             else:
@@ -526,8 +532,10 @@ class BodyFetcher:
                         except Exception:
                             raise
                         finally:
-                            self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, answer_id,
-                                                                                question_id)
+                            if answer_processing_lock:
+                                answer_processing_lock = False
+                                self.release_post_in_process_and_recan_if_requested(current_thread_ident, site,
+                                                                                    answer_id, question_id)
 
             except Exception as e:
                 log('error', "Exception handling answers:", e)
