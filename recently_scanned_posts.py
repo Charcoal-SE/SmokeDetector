@@ -66,7 +66,7 @@ def update_entry_timestamp_if_newer(post, have_lock=None):
                 apply_timestamps_to_entry_from_post_and_time_if_newer(post, rs_entry)
     except KeyError:
         # If the record doesn't exist, we add it.
-        add_post(post, have_lock)
+        add_post(post, have_lock=have_lock)
 
 
 def get_check_equality_data(post):
