@@ -39224,3 +39224,4 @@
 1652429516	tripleee	lechiffonvert\.ca
 1652432834	tripleee	matic-pc
 1652433500	tripleee	(?-i:^Q\d+[.):])
+1652440004	tripleee	uniprint\.net
