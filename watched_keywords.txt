@@ -39232,3 +39232,4 @@
 1652455233	cigien	sydneydigitalagency\.com\.au
 1652456496	cigien	(?-i:IZEND)(?!-clothes\.com)
 1652461381	cigien	hot-movies\.online
+1652462466	cigien	d(?:octo)?r[\W_]*sanikada
