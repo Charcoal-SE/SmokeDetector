@@ -129,7 +129,7 @@ def atomic_compare_update_and_get_spam_data(post, have_lock=False, update=True):
             # Without a post_key, we can't check or store.
             raise KeyError('post key is None')
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
-        if scanned_entry is None:
+        if scanned_entry is None or scanned_entry.get('is_spam', None) is None:
             if update:
                 add_post(post, have_lock=True)
             return {'is_older_or_unchanged': False, 'no_scanned_entry': True}
