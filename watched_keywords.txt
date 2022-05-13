@@ -39224,3 +39224,4 @@
 1652426510	tripleee	crawleycitycentreservicedapartments\.co\.uk
 1652429279	tripleee	airlines?[\W_]*+(?:(?:online|flight)[\W_]*+)*(?:booking|(?:cancell|reserv)ation)
 1652429516	tripleee	lechiffonvert\.ca
+1652432834	tripleee	matic-pc
