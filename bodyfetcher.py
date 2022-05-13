@@ -377,7 +377,7 @@ class BodyFetcher:
 
                 pagesize_modifier = {
                     'pagesize': pagesize,
-                    'min': str(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH)
+                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH, 0))
                 }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
