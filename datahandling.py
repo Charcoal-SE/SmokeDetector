@@ -402,7 +402,7 @@ def store_bodyfetcher_max_ids():
     with bodyfetcher_max_ids_save_handle_lock:
         if bodyfetcher_max_ids_save_handle:
             bodyfetcher_max_ids_save_handle.cancel()
-    with GlobalVars.bodyfetcher.max_ids_modify_lock:
+    with GlobalVars.bodyfetcher.max_ids_lock:
         max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids.copy()
     dump_pickle("bodyfetcherMaxIds.p", max_ids_copy)
 

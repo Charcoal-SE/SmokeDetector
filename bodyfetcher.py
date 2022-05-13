@@ -96,7 +96,7 @@ class BodyFetcher:
 
     api_data_lock = threading.Lock()
     queue_lock = threading.Lock()
-    max_ids_modify_lock = threading.Lock()
+    max_ids_lock = threading.Lock()
     check_queue_lock = threading.Lock()
     posts_in_process_lock = threading.Lock()
 
@@ -325,7 +325,7 @@ class BodyFetcher:
         Tasks.do(add_queue_timing_data, site, post_add_times)
 
         store_max_ids = False
-        with self.max_ids_modify_lock:
+        with self.max_ids_lock:
             if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
                 previous_max_id = self.previous_max_ids[site]
                 intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
