@@ -39218,3 +39218,4 @@
 1652413753	cocomac	hcom\.vn
 1652413741	cocomac	thegioimanhinh\.vn
 1652415372	tripleee	serialetv\.me
+1652416679	cocomac	Founded[\W_]*+in[\W_]*+2019[\W_]*+IZEND
