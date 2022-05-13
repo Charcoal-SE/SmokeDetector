@@ -39226,3 +39226,4 @@
 1652433500	tripleee	(?-i:^Q\d+[.):])
 1652440004	tripleee	uniprint\.net
 1652440533	tripleee	(?-i:^brouthier\w+$)
+1652444122	tripleee	arpitsjava\.blogspot
