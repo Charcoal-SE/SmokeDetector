@@ -14,6 +14,9 @@ items:
   - adam.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
+  - adel.ns.cloudflare.com.
+  - alexis.ns.cloudflare.com.
+- ns:
   - adrian.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
 - ns:
