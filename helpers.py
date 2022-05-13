@@ -388,26 +388,26 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
 def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ignore=None):
     if type(old_info) is dict:
         old_is_spam = old_info.get('is_spam', None)
-        old_results = old_info.get('results', None)
+        old_reasons = old_info.get('reasons', None)
         old_why = old_info.get('why', None)
     elif type(old_info) is tuple:
-        old_is_spam, old_results, old_why = old_info
+        old_is_spam, old_reasons, old_why = old_info
     if not old_is_spam:
         return new_info
-    new_is_spam, new_results, new_why = new_info
+    new_is_spam, new_reasons, new_why = new_info
     if new_is_spam:
         return new_info
-    if type(new_results) is tuple:
+    if type(new_reasons) is tuple:
         # The scan was actually spam, but was declared non-spam for some reason external to the content.
         # For example, that it was recently reported.
-        actual_new_results, actual_new_why = new_results
+        actual_new_reasons, actual_new_why = new_reasons
     else:
         # The new results did not actually indicate it was spam.
         return new_info
     if match_ignore is not None and new_why not in match_ignore:
         # We only want it to be considered spam if ignored for specified reasons.
         return new_info
-    if len(actual_new_results) > len(old_results) or not set(actual_new_results).issubset(set(old_results)):
+    if len(actual_new_reasons) > len(old_reasons) or not set(actual_new_reasons).issubset(set(old_reasons)):
         # There are new reasons the post would have been reported
-        return (True, actual_new_results, actual_new_why)
+        return (True, actual_new_reasons, actual_new_why)
     return new_info
