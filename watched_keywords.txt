@@ -39235,3 +39235,4 @@
 1652462466	cigien	d(?:octo)?r[\W_]*sanikada
 1652467048	cigien	coinbaseusd1\.blogspot
 1652476261	Makyen	rajbet\.com
+1652484172	Makyen	katalogsajtov\.ru
