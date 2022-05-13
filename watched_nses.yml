@@ -514,6 +514,9 @@ items:
   - brenda.ns.cloudflare.com.
 - ns:
   - brad.ns.cloudflare.com.
+  - kate.ns.cloudflare.com.
+- ns:
+  - brad.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
   - brad.ns.cloudflare.com.
