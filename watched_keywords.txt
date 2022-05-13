@@ -39234,3 +39234,4 @@
 1652461381	cigien	hot-movies\.online
 1652462466	cigien	d(?:octo)?r[\W_]*sanikada
 1652467048	cigien	coinbaseusd1\.blogspot
+1652476261	Makyen	rajbet\.com
