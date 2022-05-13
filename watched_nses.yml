@@ -322,6 +322,9 @@ items:
   - carter.ns.cloudflare.com.
 - ns:
   - ariella.ns.cloudflare.com.
+  - julian.ns.cloudflare.com.
+- ns:
+  - ariella.ns.cloudflare.com.
   - lewis.ns.cloudflare.com.
 - ns:
   - armfazh.ns.cloudflare.com.
