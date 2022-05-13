@@ -36718,7 +36718,6 @@
 1645884141	Ryan M	206\.72\.205\.50
 1645884157	Ryan M	ratingslot
 1645889019	cigien	crackedguru\.com
-1645889453	cigien	handehospital\.org
 1645889553	cigien	oceansheet\.com
 1645889811	cigien	uiterwijkwinkel\.eu
 1645889911	cigien	(?-i:2tvnmrs4)(?#tinyurl.com)
