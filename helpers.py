@@ -385,8 +385,15 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
     t.start()
 
 
-def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ignore=None):
+CONVERT_NEW_SCAN_TO_SPAM_DEFAULT_IGNORED_REASONS = set([
+    "blacklisted user",
+])
+
+
+def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ignore=None, ignored_reasons=True):
     if type(old_info) is dict:
+        # This is for recently scanned posts, which pass the recently scanned posts entry here,
+        # which is a dict.
         old_is_spam = old_info.get('is_spam', None)
         old_reasons = old_info.get('reasons', None)
         old_why = old_info.get('why', None)
@@ -407,7 +414,15 @@ def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ign
     if match_ignore is not None and new_why not in match_ignore:
         # We only want it to be considered spam if ignored for specified reasons.
         return new_info
-    if len(actual_new_reasons) > len(old_reasons) or not set(actual_new_reasons).issubset(set(old_reasons)):
+    ignored_reasons_set = set()
+    if ignored_reasons:
+        if ignored_reasons is True:
+            ignored_reasons_set = CONVERT_NEW_SCAN_TO_SPAM_DEFAULT_IGNORED_REASONS
+        else:
+            ignored_reasons_set = set(ignored_reasons)
+    actual_new_reasons_set = set(actual_new_reasons) - ignored_reasons_set
+    old_reasons_set = set(old_reasons) - ignored_reasons_set
+    if len(actual_new_reasons_set) > len(old_reasons_set) or not actual_new_reasons_set.issubset(old_reasons_set):
         # There are new reasons the post would have been reported
         return (True, actual_new_reasons, actual_new_why)
     return new_info
