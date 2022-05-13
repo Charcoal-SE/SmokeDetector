@@ -653,3 +653,4 @@ Visualytes
 (?-i:^Roger Watson$)
 (?-i:^a\d+preacct$)
 (?-i:^a\d+onlinedata$)
+(?-i:^brouthier\w+$)

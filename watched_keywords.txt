@@ -39221,7 +39221,6 @@
 1652432834	tripleee	matic-pc
 1652433500	tripleee	(?-i:^Q\d+[.):])
 1652440004	tripleee	uniprint\.net
-1652440533	tripleee	(?-i:^brouthier\w+$)
 1652444122	tripleee	arpitsjava\.blogspot
 1652444786	tripleee	clavox
 1652446407	tripleee	digitaljubilee\.com
