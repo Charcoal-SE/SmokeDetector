@@ -21095,7 +21095,6 @@
 1594822810	Makyen	dr\.okpodosolutionhome(?:@gmail\.com)?
 1594822828	Makyen	okpodosolutionhome\.blogspot
 1594822908	Machavity	evolinestore\.com
-1594822870	Jeff Schaller	technobridge\.in
 1594824361	Xnero	edailystar\.com
 1594824475	Makyen	apnasandesh\.com
 1594827494	Xnero	dwall\.online
