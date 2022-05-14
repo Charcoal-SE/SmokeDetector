@@ -39244,3 +39244,4 @@
 1652527947	tripleee	onedirection\.com\.bd
 1652528048	tripleee	limrs\.com
 1652537418	cigien	abgooneh\.com
+1652537486	cigien	abgooneh(?!\.com)
