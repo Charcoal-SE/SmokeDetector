@@ -121,6 +121,9 @@ items:
   - molly.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
+  - lela.ns.cloudflare.com.
+- ns:
+  - alec.ns.cloudflare.com.
   - nicole.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
