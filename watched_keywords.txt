@@ -34699,7 +34699,6 @@
 1639885663	cigien	myskinspa\.co\.uk
 1639887846	Makyen	globalhackgroup(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1639926924	cigien	urseotools\.com
-1639927278	cigien	fcbuy\.ir
 1639927490	cigien	chakra\.beyondlife\.club
 1639927628	cigien	callme2580\.com
 1639927664	cigien	landmarkdevelopments\.net
