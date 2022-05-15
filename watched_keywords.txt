@@ -39279,3 +39279,4 @@
 1652633390	tripleee	theglucotrust2022\.blogspot
 1652633411	tripleee	gluco[\W_]*+trust
 1652633888	cigien	techblog\.inplayer\.com
+1652644117	cigien	multimart\.ge
