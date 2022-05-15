@@ -39267,3 +39267,4 @@
 1652601109	tripleee	apnewscorner\.com
 1652605237	tripleee	(?-i:^chen na$)
 1652605979	tripleee	fad[\W_]*+diets?
+1652612419	tripleee	darkthc\.com
