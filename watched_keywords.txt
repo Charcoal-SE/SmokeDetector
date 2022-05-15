@@ -39265,3 +39265,4 @@
 1652599784	tripleee	tree[\W_]*+ssixty(?!\.com(?<=treessixty\.com))(?:[\W_]*+(?:nursery|\d++|[\da-f]{5,}+)s?)*
 1652599818	tripleee	treessixty\.com
 1652601073	tripleee	(?-i:3PodEe8)(?# bit.ly)
+1652601109	tripleee	apnewscorner\.com
