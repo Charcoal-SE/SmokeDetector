@@ -39271,3 +39271,4 @@
 1652612702	tripleee	urlhelp\.xyz
 1652616876	tripleee	(?-i:^uvais.{30,})
 1652627178	cigien	9minecraft\.net
+1652628746	cigien	(?-i:5a8f6e4305)(?#fiverr)
