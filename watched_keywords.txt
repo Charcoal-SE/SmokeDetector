@@ -39269,3 +39269,4 @@
 1652605979	tripleee	fad[\W_]*+diets?
 1652612419	tripleee	darkthc\.com
 1652612702	tripleee	urlhelp\.xyz
+1652616876	tripleee	(?-i:^uvais.{30,})
