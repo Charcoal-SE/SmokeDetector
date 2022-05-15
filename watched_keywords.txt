@@ -39261,5 +39261,4 @@
 1652556968	cigien	sqlinterviewsquestions\.com
 1652570754	cigien	polygonjs
 1652575847	cigien	canameds[\W_]*+plug(?!\.com(?<=canamedsplug\.com))
-1652599662	tripleee	tree[\W_]*+ssixty(?:[\W_]*+(?:nursery|\d++|[\da-f]{5,}+)s?)*(?<!treessixty\.com)
 1652599699	tripleee	ufabets168(?# tripadvisor.in)
