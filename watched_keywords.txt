@@ -39265,3 +39265,4 @@
 1652599818	tripleee	treessixty\.com
 1652601073	tripleee	(?-i:3PodEe8)(?# bit.ly)
 1652601109	tripleee	apnewscorner\.com
+1652605237	tripleee	(?-i:^chen na$)
