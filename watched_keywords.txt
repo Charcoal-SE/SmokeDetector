@@ -36657,7 +36657,6 @@
 1645710430	Makyen	green[\W_]*+galaxy[\W_]*+cbd[\W_]*+gummies
 1645710567	Makyen	(?-i:uiuxdesigncourseinpune)(?#sites.google.com)
 1645710623	Jeff Schaller	woocommerce-custom-user-registration-fields
-1645710685	Makyen	tree[\W_]*+ssixty(?:[\W_]*+(?:nursery|\d++|[\da-f]{5,}+)s?)*
 1645710760	cigien	web[\W_]*+mingo(?!\.com(?<=webmingo\.com))
 1645710857	cigien	cheapestessay\.com
 1645710939	Makyen	dramamix\.online
