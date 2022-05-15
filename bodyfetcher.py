@@ -1,23 +1,25 @@
 # coding=utf-8
+import json
+import time
+import threading
+import copy
+from itertools import chain
+from operator import itemgetter
+from datetime import datetime
+
+import requests
+import psutil
+
+from globalvars import GlobalVars
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, schedule_store_bodyfetcher_queue,
                           schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
 from chatcommunicate import tell_rooms_with
-from globalvars import GlobalVars
-from operator import itemgetter
-from datetime import datetime
-import json
-import time
-import threading
-import requests
-import copy
 from classes import Post, PostParseError
 from helpers import (log, log_current_thread, append_to_current_thread_name,
                      convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread)
 import recently_scanned_posts as rsp
-from itertools import chain
 from tasks import Tasks
-import psutil
 
 
 # noinspection PyClassHasNoInit,PyBroadException

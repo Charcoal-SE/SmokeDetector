@@ -1,8 +1,9 @@
 # coding=utf-8
 import time
-from tasks import Tasks
+
 from globalvars import GlobalVars
 from helpers import log
+from tasks import Tasks
 
 
 POST_STRAIGHT_COPY_KEYS = [

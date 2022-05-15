@@ -11,14 +11,16 @@ platform_text = platform.platform().lower()
 if 'windows' in platform_text and 'cygwin' not in platform_text:
     from colorama import init as colorama_init
     colorama_init()
-from termcolor import colored
-import requests
-import regex
 from glob import glob
 import sqlite3
 from urllib.parse import quote, quote_plus
-from globalvars import GlobalVars
 from threading import Thread
+
+from termcolor import colored
+import requests
+import regex
+
+from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):

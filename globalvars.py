@@ -9,10 +9,11 @@ from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, ConfigParser
 import threading
-# noinspection PyCompatibility
-import regex
 import subprocess as sp
 import platform
+
+# noinspection PyCompatibility
+import regex
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
     from _Git_Windows import git, GitError

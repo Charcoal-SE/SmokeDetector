@@ -1,17 +1,16 @@
 # coding=utf-8
 import json
 import os.path
-import requests
 import time
 import threading
+from urllib.parse import urlparse
+
+import requests
 # noinspection PyPackageRequirements
 import websocket
-# noinspection PyPackageRequirements
-from bs4 import BeautifulSoup
-from urllib.parse import urlparse
-import chatcommunicate
-import metasmoke
+
 from globalvars import GlobalVars
+import metasmoke
 import datahandling
 from helpers import log
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
