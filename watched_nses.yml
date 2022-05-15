@@ -1720,6 +1720,9 @@ items:
   - michelle.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - mike.ns.cloudflare.com.
+  - treasure.ns.cloudflare.com.
+- ns:
   - miki.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
