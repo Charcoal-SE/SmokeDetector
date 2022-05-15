@@ -39273,3 +39273,4 @@
 1652627178	cigien	9minecraft\.net
 1652628746	cigien	(?-i:5a8f6e4305)(?#fiverr)
 1652628839	cigien	smrturl\.co
+1652628886	cigien	rushingfolder\.com
