@@ -39270,3 +39270,4 @@
 1652612419	tripleee	darkthc\.com
 1652612702	tripleee	urlhelp\.xyz
 1652616876	tripleee	(?-i:^uvais.{30,})
+1652627178	cigien	9minecraft\.net
