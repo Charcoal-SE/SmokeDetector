@@ -801,6 +801,9 @@ items:
   - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - daphne.ns.cloudflare.com.
+  - garret.ns.cloudflare.com.
+- ns:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
