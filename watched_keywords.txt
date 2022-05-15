@@ -39277,3 +39277,4 @@
 1652630458	cigien	auctionsentinel\.com
 1652631280	cigien	royayezendegi\.com
 1652633390	tripleee	theglucotrust2022\.blogspot
+1652633411	tripleee	gluco[\W_]*+trust
