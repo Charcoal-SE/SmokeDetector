@@ -39282,3 +39282,4 @@
 1652668641	cigien	iodraft(?#youtube channel)
 1652672574	cocomac	bingsport\.com
 1652672831	tripleee	(?-i:^kar luo$)
+1652674406	tripleee	zudena
