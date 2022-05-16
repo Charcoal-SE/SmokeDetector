@@ -38,6 +38,12 @@ class BodyFetcher:
     }
     per_site_processing_thread_locks = {}
     per_site_processing_thread_locks_lock = threading.Lock()
+    per_site_processing_thread_locks_delayed_warnings = {}
+    PER_SITE_THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
+    # CPU starvation updates are under the check_queue_lock
+    cpu_starvation_last_thread_launched_timestamp = None
+    cpu_starvation_posted_in_chat_timestamp = None
+    CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -170,22 +176,76 @@ class BodyFetcher:
             if site_and_posts:
                 self.release_site_processing_lock(site_and_posts[0])
 
+    def get_site_thread_limit(self, site):
+        return self.per_site_processing_thread_limits.get(site, None) or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT
+
     def acquire_site_processing_lock(self, site):
         with self.per_site_processing_thread_locks_lock:
             site_semaphore = self.per_site_processing_thread_locks.get(site, None)
             if site_semaphore is None:
-                semaphore_count = (self.per_site_processing_thread_limits.get(site, None)
-                                   or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT)
+                semaphore_count = self.get_site_thread_limit(site)
                 site_semaphore = threading.BoundedSemaphore(value=semaphore_count)
                 self.per_site_processing_thread_locks[site] = site_semaphore
             have_acquired_lock = site_semaphore.acquire(blocking=False)
-            if not have_acquired_lock:
-                log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
+            if have_acquired_lock:
+                self.site_thread_starvation_warning_thread_launched(site)
+            else:
+                if not self.send_site_thread_starvation_warning_if_appropriate(site):
+                    log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
             return have_acquired_lock
 
     def release_site_processing_lock(self, site):
         with self.per_site_processing_thread_locks_lock:
             self.per_site_processing_thread_locks[site].release()
+
+    def send_site_thread_starvation_warning_if_appropriate(self, site):
+        # The thread lock for this is the per_site_processing_thread_locks_lock
+        now = time.time()
+        min_time = now - self.PER_SITE_THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
+        record = self.per_site_processing_thread_locks_delayed_warnings.get(site, None)
+        if record is None:
+            self.per_site_processing_thread_locks_delayed_warnings[site] = {
+                'launched_timestamp': now,
+                'chat_timestamp': now,
+            }
+            return False
+        launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
+        if (launched_timestamp < min_time and chat_timestamp < min_time):
+            self.per_site_processing_thread_locks_delayed_warnings[site]['chat_timestamp'] = now
+            message = ("Unable to launch scan thread for {} due to exhausted thred limit"
+                       "of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
+                                                       round(now - launched_timestamp, 2))
+            Tasks.do(tell_rooms_with, "debug", message)
+            log('error', message)
+            return True
+        return False
+
+    def site_thread_starvation_warning_thread_launched(self, site):
+        # The thread lock for this is the per_site_processing_thread_locks_lock
+        self.per_site_processing_thread_locks_delayed_warnings.pop(site, None)
+
+    def send_cpu_starvation_warning_if_appropriate(self):
+        # The thread lock for this is the check_queue_lock
+        now = time.time()
+        min_time = now - self.CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
+        launched_timestamp = self.cpu_starvation_last_thread_launched_timestamp
+        if launched_timestamp is None:
+            self.cpu_starvation_last_thread_not_launched_timestamp = now
+            self.cpu_starvation_posted_in_chat_timestamp = now
+            return False
+        chat_timestamp = self.cpu_starvation_posted_in_chat_timestamp
+        if (launched_timestamp < min_time and chat_timestamp < min_time):
+            self.cpu_starvation_posted_in_chat_timestamp = now
+            message = ("High CPU use has prevented launching additional scan threads for"
+                       " {} seconds.").format(round(now - launched_timestamp, 2))
+            Tasks.do(tell_rooms_with, "debug", message)
+            log('error', message)
+            return True
+        return False
+
+    def cpu_starvation_warning_thread_launched(self):
+        # The thread lock for this is the check_queue_lock
+        self.cpu_starvation_last_thread_not_launched_timestamp = None
 
     def get_fist_queue_item_to_process(self):
         # We use a copy of the queue keys (sites) and lengths in order to allow
@@ -202,9 +262,11 @@ class BodyFetcher:
                 if cpu_use > self.LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD:
                     # We are already maxing out the CPU.
                     # Having additional threads processing posts is counterproductive.
-                    log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
-                                                  + ', which is too high to launch an additional scan thread.')
+                    if not self.send_cpu_starvation_warning_if_appropriate():
+                        log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
+                                                      + ', which is too high to launch an additional scan thread.')
                     return None
+                self.cpu_starvation_warning_thread_launched()
                 special_sites = []
                 site_to_handle = None
                 is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
