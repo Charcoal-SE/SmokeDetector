@@ -157,35 +157,86 @@ class GlobalVars:
 
     class PostScanStat:
         """ Tracking post scanning data """
-        num_posts_scanned = 0
-        post_scan_time = 0
+        # Setting up the stats dict with default values isn't needed. If a key/value pair is in the new_stats
+        # sent to add_stat, then it will be automatically added. The list here is merely to document the
+        # keys and values which are currently expected.
+        # All stats in a key are reported into chat using the !!/stats command. The report_order_with_defaults
+        # variable in the code for that command shows what's expected to be here, but other values could exist.
+        # stats are accumulated from reboot to reboot.
+        stats = {
+            'scan_time': 0,
+            'posts_scanned': 0,
+            'grace_period_edits': 0,
+            'unchanged_questions': 0,
+            'unchanged_answers': 0,
+            'no_post_lock': 0,
+            'errors': 0,
+            'max_scan_time': 0,
+            'max_scan_time_post': '',
+        }
+        # stats_for_ms are accumulated, but cleared each time SD reports to MS.
+        stats_for_ms = {}
         rw_lock = threading.Lock()
 
         @staticmethod
-        def add_stat(posts_scanned, scan_time):
+        def add_stat(new_stats):
             """ Adding post scanning data """
             with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
-                GlobalVars.PostScanStat.post_scan_time += scan_time
+                all_stats = GlobalVars.PostScanStat.stats
+                # First, deal with all stats which are not simple accumulators
+                new_max_time = new_stats.pop('max_scan_time', 0)
+                new_max_time_post = new_stats.pop('max_scan_time_post', '')
+                if (new_max_time > all_stats.get('max_scan_time', 0)):
+                    all_stats['max_scan_time'] = new_max_time
+                    all_stats['max_scan_time_post'] = new_max_time_post
+                # Every other stat is accumulated into the existing values.
+                for key, value in new_stats.items():
+                    old_value = all_stats.get(key, 0)
+                    if type(value) in [int, float]:
+                        # There isn't any value currently used here which should be anything other than an
+                        # int or float, but, just in case, we only directly replace string values
+                        all_stats[key] = old_value + value
+                    else:
+                        all_stats[key] = value
+                # MS wants only posts_scanned, scan_time, posts_per_second, but it doesn't hurt to also
+                # keep any additional ones which are sccumulators. We don't keep a copy of anything which
+                # isn't accumulated (e.g. max_time and max_time_post).
+                ms_stats = GlobalVars.PostScanStat.stats_for_ms
+                for key, value in new_stats.items():
+                    old_value = ms_stats.get(key, 0)
+                    if type(value) in [int, float]:
+                        # There isn't any value currently used here which should be anything other than an
+                        # int or float, but, just in case, we only directly replace string values
+                        ms_stats[key] = old_value + value
+                    else:
+                        ms_stats[key] = value
 
         @staticmethod
-        def get_stat():
+        def get_stats_for_ms():
+            """ Getting post scanning statistics for reporting to MS """
+            copy = GlobalVars.PostScanStat.get_stats()
+            # MS wants only posts_scanned, scan_time, posts_per_second
+            return (copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
+
+        @staticmethod
+        def get_stats():
             """ Getting post scanning statistics """
             with GlobalVars.PostScanStat.rw_lock:
-                posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
-                scan_time = GlobalVars.PostScanStat.post_scan_time
+                copy = GlobalVars.PostScanStat.stats.copy()
+            # Derived values:
+            scan_time = copy.get('scan_time', 0)
+            posts_scanned = copy.get('posts_scanned', 0)
             if scan_time == 0:
-                posts_per_second = None
+                copy['posts_per_second'] = None
             else:
-                posts_per_second = posts_scanned / scan_time
-            return (posts_scanned, scan_time, posts_per_second)
+                copy['posts_per_second'] = posts_scanned / scan_time
+            return copy
 
         @staticmethod
-        def reset_stat():
+        def reset_ms_stats():
             """ Resetting post scanning data """
             with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.num_posts_scanned = 0
-                GlobalVars.PostScanStat.post_scan_time = 0
+                GlobalVars.PostScanStat.stats_for_ms = {}
 
     config_parser = ConfigParser(interpolation=None)
 
@@ -384,6 +435,6 @@ class GlobalVars:
                 cls.commit.id, cls.location)
 
 
-GlobalVars.PostScanStat.reset_stat()
+GlobalVars.PostScanStat.reset_ms_stats()
 GlobalVars.MSStatus.reset_ms_status()
 GlobalVars.reload()

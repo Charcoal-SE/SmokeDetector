@@ -29,14 +29,15 @@ def get_key_for_post(post):
     return "{}/{}".format(site, post_id)
 
 
-def add_post(post, is_spam=None, reasons=None, why=None, have_lock=None):
+def add_post(post, is_spam=None, reasons=None, why=None, scan_time=None, have_lock=None):
     if 'is_recently_scanned_post' not in post:
         post = get_recently_scanned_post_from_post(post)
     new_key = post['post_key']
     if new_key is None:
         raise KeyError('post key is None')
     new_record = {'post': post, 'scan_timestamp': time.time(),
-                  'is_spam': is_spam, 'reasons': reasons, 'why': why}
+                  'is_spam': is_spam, 'reasons': reasons, 'why': why,
+                  'scan_time': scan_time}
     if have_lock:
         GlobalVars.recently_scanned_posts[new_key] = new_record
     else:

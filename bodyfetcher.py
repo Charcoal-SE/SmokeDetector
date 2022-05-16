@@ -33,6 +33,7 @@ class BodyFetcher:
     ]
     LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
     DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = 3
+    POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD = 0.015
     per_site_processing_thread_limits = {
         'stackoverflow.com': 5,
     }
@@ -371,9 +372,8 @@ class BodyFetcher:
             return False
 
     def make_api_call_for_site(self, site, new_posts):
-        current_thread_ident = threading.current_thread().ident
-        append_to_current_thread_name(' --> processing site: {}:: posts: {}'.format(site,
-                                                                                    [key for key in new_posts.keys()]))
+        append_to_current_thread_name(('\n --> processing site:'
+                                       ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
 
         new_post_ids = [int(k) for k in new_posts.keys()]
         Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
@@ -535,8 +535,199 @@ class BodyFetcher:
                 with self.last_activity_date_lock:
                     self.last_activity_date = items[0]["last_activity_date"]
 
-        num_scanned = 0
-        start_time = time.time()
+        self.scan_api_results(site, response, response_timestamp)
+
+    def scan_api_results(self, site, response, response_timestamp):
+        current_thread = threading.current_thread()
+        current_thread_ident = current_thread.ident
+        base_thread_name = current_thread.name
+        full_start_time = time.time()
+        section_start_time = full_start_time
+        posts_processed_text = ''
+        post_processing_text = ''
+        scan_stats_text = ''
+        scan_stats = {}
+        post_stats = {}
+        post_type = None
+        processing_post_id = None
+        started_post_stat_ident = None
+        post_processing_text_prefixes = {
+            'answer': '\n⠀⠀\t⠀⠀\tA{}:',
+            'question': '\n⠀⠀\tQ{}:',
+        }
+
+        def build_scan_stats():
+            nonlocal current_thread
+            nonlocal scan_stats_text
+            now = time.time()
+            scan_stats_text = ('elapsed time: {}; scanned: {}, Q({}), A({});'
+                               ' unchanged: Q({}), A({}); no post lock: {}; errors: {}')
+            scan_stats_text = scan_stats_text.format(
+                round(now - full_start_time, 2),
+                scan_stats.get('posts_scanned', 0),
+                scan_stats.get('questions_scanned', 0),
+                scan_stats.get('answers_scanned', 0),
+                scan_stats.get('unchanged_questions', 0),
+                scan_stats.get('unchanged_answers', 0),
+                scan_stats.get('no_post_lock', 0),
+                scan_stats.get('errors', 0))
+
+        def set_thread_name():
+            current_thread.name = (base_thread_name + '\n' + scan_stats_text + posts_processed_text
+                                   + post_processing_text)
+
+        def start_post(type_of_post, post_id):
+            nonlocal post_stats
+            nonlocal post_type
+            nonlocal processing_post_id
+            post_stats = {}
+            end_post()
+            post_type = type_of_post
+            processing_post_id = post_id
+            reset_section_timer()
+            build_post_thread_name_text()
+            set_thread_name()
+
+        def end_post():
+            nonlocal post_processing_text
+            nonlocal posts_processed_text
+            nonlocal post_stats
+            nonlocal scan_stats
+            nonlocal started_post_stat_ident
+            posts_processed_text += post_processing_text
+            post_processing_text = ''
+            for stat_name, post_stat_dict in post_stats.items():
+                if not post_stat_dict['dont_include_in_scan_stats']:
+                    post_value = post_stat_dict.get('value', None)
+                    if type(post_value) in [int, float]:
+                        scan_stats[stat_name] = scan_stats.get(stat_name, 0) + post_stat_dict['value']
+                    else:
+                        log('warning', "BodyFetcher post stats: stat {} is {} with value: {}".format(stat_name,
+                                                                                                     type(post_value),
+                                                                                                     post_value))
+            started_post_stat_ident = None
+            post_stats = {}
+            build_scan_stats()
+            set_thread_name()
+
+        def increment_scan_stat(stat_name, increment=1):
+            nonlocal scan_stats
+            old_value = scan_stats.get(stat_name, 0)
+            scan_stats[stat_name] = old_value + increment
+
+        def reset_section_timer():
+            nonlocal section_start_time
+            section_start_time = time.time()
+
+        def start_post_stat_time(ident, short_text, no_low_output=True, dont_include_in_scan_stats=False):
+            nonlocal post_stats
+            nonlocal started_post_stat_ident
+            post_stats[ident] = {
+                'start_time': time.time(),
+                'short_text': short_text,
+                'no_low_output': no_low_output,
+                'dont_include_in_scan_stats': dont_include_in_scan_stats,
+            }
+            started_post_stat_ident = ident
+            build_post_thread_name_text()
+            set_thread_name()
+
+        def end_post_stat_time_and_start_new(new_ident=None, short_text=None, no_low_output=True,
+                                             dont_include_in_scan_stats=False, ident=None):
+            nonlocal post_stats
+            nonlocal started_post_stat_ident
+            now = time.time()
+            if ident is None:
+                ident = started_post_stat_ident
+            elapsed = now - post_stats[ident]['start_time']
+            post_stats[ident]['value'] = elapsed
+            started_post_stat_ident = None
+            if new_ident is not None:
+                start_post_stat_time(new_ident, short_text, no_low_output, dont_include_in_scan_stats)
+            else:
+                started_post_stat_ident = None
+            build_post_thread_name_text()
+            set_thread_name()
+            return elapsed
+
+        def add_post_stat_time(ident, short_text, value=None, no_low_output=True, dont_include_in_scan_stats=False):
+            nonlocal section_start_time
+            nonlocal post_stats
+            now = time.time()
+            elapsed = now - section_start_time
+            section_start_time = now
+            if value is not None:
+                elapsed = value
+            post_stats[ident] = {
+                'value': elapsed,
+                'short_text': short_text,
+                'no_low_output': no_low_output,
+                'dont_include_in_scan_stats': dont_include_in_scan_stats,
+            }
+            build_post_thread_name_text()
+            set_thread_name()
+            return elapsed
+
+        def build_post_thread_name_text():
+            nonlocal post_processing_text
+            build_post_thread_name_post_id()
+            shorts_values = [[entry['short_text'], entry.get('value', '')] for entry in post_stats.values()
+                             if not entry['no_low_output'] or entry.get('value', None) is None
+                             or entry.get('value', 0) > self.POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD]
+
+            shorts_values = [[short_text, round(value, 2) if type(value) is float else value]
+                             for short_text, value in shorts_values]
+            texts = ['{}({})'.format(short_text, value) for short_text, value in shorts_values]
+            post_processing_text += ';'.join(texts)
+
+        def build_post_thread_name_post_id():
+            nonlocal post_processing_text
+            post_processing_text = post_processing_text_prefixes.get(post_type, '{}:').format(processing_post_id)
+
+        def no_post_lock():
+            nonlocal post_processing_text
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            increment_scan_stat('no_post_lock')
+            build_post_thread_name_text()
+            post_processing_text += '; no post lock'
+            end_post()
+
+        def post_is_unchanged():
+            nonlocal post_processing_text
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            increment_scan_stat('unchanged_{}s'.format(post_type))
+            # We don't show a record of the unchanged ones in the thread name.
+            post_processing_text = ''
+            end_post()
+
+        def post_is_grace_period_edit():
+            increment_scan_stat('grace_period_edits')
+
+        def post_was_scanned():
+            nonlocal scan_stats
+            increment_scan_stat('posts_scanned')
+            increment_scan_stat('{}s_scanned'.format(post_type))
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            post_scan_time_dict = post_stats.get('scan_{}'.format(post_type), None)
+            if post_scan_time_dict is not None:
+                post_scan_time = post_scan_time_dict.get('value', None)
+                if type(post_scan_time) is float:
+                    max_scan_time = scan_stats.get('max_scan_time', 0)
+                    if post_scan_time > max_scan_time:
+                        scan_stats['max_scan_time'] = post_scan_time
+                        scan_stats['max_scan_time_post'] = '{}/{}'.format(site, processing_post_id)
+            build_post_thread_name_text()
+            end_post()
+
+        def post_had_error():
+            nonlocal post_processing_text
+            increment_scan_stat('errors')
+            build_post_thread_name_text()
+            post_processing_text += '; ERROR'
+            end_post()
 
         for post in response["items"]:
             if GlobalVars.flovis is not None:
@@ -559,16 +750,24 @@ class BodyFetcher:
                 post['edited'] = False  # last_edit_date not present = not edited
 
             question_id = post.get('question_id', None)
+            start_post('question', question_id)
             if question_id is not None:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
             try:
+                start_post_stat_time('post_processing_lock', '<Qplk')
                 have_question_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
                                                                                              site, question_id)
                 if have_question_processing_lock:
+                    end_post_stat_time_and_start_new('check_unchanged', '<Qchkun')
                     compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
                     question_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                    if question_doesnt_need_scan:
+                        post_is_unchanged()
+                    if compare_info.get('is_grace_edit', False):
+                        post_is_grace_period_edit()
                 else:
                     question_doesnt_need_scan = True
+                    no_post_lock()
 
                 if question_doesnt_need_scan and "answers" not in post:
                     continue
@@ -582,13 +781,14 @@ class BodyFetcher:
                     continue
 
                 if not question_doesnt_need_scan:
-                    num_scanned += 1
+                    end_post_stat_time_and_start_new('scan_question', ' scan', no_low_output=False)
                     is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
                         check_if_spam(post_),
                         compare_info,
                         match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
                     )
-                    rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why)
+                    scan_time = end_post_stat_time_and_start_new()
+                    rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
 
                     if is_spam:
                         try:
@@ -603,7 +803,9 @@ class BodyFetcher:
                     elif do_flovis:
                         GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, question_id,
                                                 {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                    post_was_scanned()
             except Exception:
+                post_had_error()
                 raise
             finally:
                 if have_question_processing_lock:
@@ -630,25 +832,34 @@ class BodyFetcher:
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
                         answer_id = answer.get('answer_id', None)
+                        start_post('answer', answer_id)
                         try:
+                            start_post_stat_time('post_processing_lock', '<Aplk')
                             answer_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
                                                                                                   site, answer_id)
                             if answer_processing_lock:
+                                end_post_stat_time_and_start_new('check_unchanged', '<Achkun')
                                 compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
                                 answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                                if compare_info.get('is_grace_edit', False):
+                                    post_is_grace_period_edit()
                             else:
+                                no_post_lock()
                                 continue
                             if answer_doesnt_need_scan:
+                                post_is_unchanged()
                                 continue
-                            num_scanned += 1
                             answer_ = Post(api_response=answer, parent=post_)
 
+                            end_post_stat_time_and_start_new('scan_answer', ' scan', no_low_output=False)
                             is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
                                 check_if_spam(answer_),
                                 compare_info,
                                 match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
                             )
-                            rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why)
+                            scan_time = end_post_stat_time_and_start_new()
+                            rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
+
                             if is_spam:
                                 do_flovis = GlobalVars.flovis is not None and answer_id is not None
                                 try:
@@ -663,6 +874,7 @@ class BodyFetcher:
                             elif do_flovis:
                                 GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer_id,
                                                         {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                            post_was_scanned()
                         except Exception:
                             raise
                         finally:
@@ -672,9 +884,11 @@ class BodyFetcher:
                                                                                     answer_id, question_id)
 
             except Exception as e:
+                post_had_error()
                 log('error', "Exception handling answers:", e)
 
         end_time = time.time()
-        scan_time = end_time - start_time
-        GlobalVars.PostScanStat.add_stat(num_scanned, scan_time)
+        scan_stats['scan_time'] = end_time - full_start_time
+        GlobalVars.PostScanStat.add_stat(scan_stats)
+        log('debug', current_thread.name)
         return
