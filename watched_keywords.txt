@@ -32361,7 +32361,6 @@
 1632117500	Makyen	(?-i:usmanrajpoot_0)(?#fiverr.com)
 1632120055	tripleee	energenicbatteries\.com
 1632120071	tripleee	faritaz\.ml
-1632129448	tripleee	(?-i:^Royal Continental Hotels$)
 1632129550	tripleee	sitarganjtv\.com
 1632132045	tripleee	mudassirchughtai\.com
 1632132723	tripleee	~018d5d7583416c4f31(?# upwork)
