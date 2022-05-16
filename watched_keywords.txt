@@ -39291,3 +39291,4 @@
 1652685828	tripleee	canaan\.io
 1652686673	tripleee	(?-i:^Emma Allen$)
 1652688406	tripleee	wetest\.net
+1652688427	tripleee	wetest(?!\.net)
