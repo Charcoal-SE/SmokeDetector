@@ -39291,3 +39291,4 @@
 1652688406	tripleee	wetest\.net
 1652688427	tripleee	wetest(?!\.net)
 1652688471	tripleee	startupoffices\.in
+1652691892	tripleee	findmycollegeonline\.com
