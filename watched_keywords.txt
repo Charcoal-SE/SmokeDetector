@@ -39292,3 +39292,4 @@
 1652688427	tripleee	wetest(?!\.net)
 1652688471	tripleee	startupoffices\.in
 1652691892	tripleee	findmycollegeonline\.com
+1652692857	tripleee	letrascursivas\.com\.mx
