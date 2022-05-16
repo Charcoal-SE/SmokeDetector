@@ -39311,3 +39311,4 @@
 1652731886	Ryan M	taiwanfriend\.com
 1652731915	Ryan M	cantexdistribution\.com
 1652733595	Ryan M	best quality ([\w\-]+ ){0,5}services?
+1652734173	Makyen	(?-i:39XGLER)(?#bit.ly)
