@@ -39284,3 +39284,4 @@
 1652672831	tripleee	(?-i:^kar luo$)
 1652674406	tripleee	zudena
 1652675545	tripleee	shoplingks\.com
+1652676497	tripleee	paxiful\.com
