@@ -70,6 +70,9 @@ items:
   - candy.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
+  - carlos.ns.cloudflare.com.
+  - dara.ns.cloudflare.com.
+- ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
