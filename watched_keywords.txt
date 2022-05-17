@@ -39332,3 +39332,4 @@
 1652778603	tripleee	saveralogistics\.in
 1652778661	tripleee	savera[\W]*+logistics(?!\.in(?<=saveralogistics\.in))
 1652780310	tripleee	singaporeproperty99\.com
+1652783530	Jeff Schaller	kbatechnologyinc\.com
