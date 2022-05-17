@@ -39318,3 +39318,4 @@
 1652757540	cocomac	subscribe[\W_]*+to[\W_]*+me
 1652762028	cigien	consagous\.co
 1652762361	cigien	consagous\.com
+1652764630	cocomac	smtpserver\.com
