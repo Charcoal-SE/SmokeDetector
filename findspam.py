@@ -290,6 +290,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "sqlitebrowser.org",
     "sqlteam.com",
     "stepik.org",
+    "substrate.io",
     "sunfounder.cc",
     "techmikael.com",
     "terraform.io",
