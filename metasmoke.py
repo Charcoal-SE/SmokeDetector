@@ -338,7 +338,7 @@ class Metasmoke:
     def send_stats_on_post(title, link, reasons, body, markdown, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count, ms_ajax_timestamp=0):
         if GlobalVars.metasmoke_host is None:
-            log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
+            log('info', 'Would have reported post to metasmoke, but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
             Metasmoke.add_call_to_metasmoke_queue("send_stats_on_post", ms_ajax_timestamp, {
@@ -578,7 +578,7 @@ class Metasmoke:
         current_apiquota = GlobalVars.apiquota
         GlobalVars.apiquota_rw_lock.release()
 
-        posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+        posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stats_for_ms()
         payload = {'key': GlobalVars.metasmoke_key,
                    'statistic': {'posts_scanned': posts_scanned,
                                  'api_quota': current_apiquota}}
@@ -586,7 +586,7 @@ class Metasmoke:
             # Send scan rate as well, if applicable.
             payload['statistic']['post_scan_rate'] = posts_per_second
 
-        GlobalVars.PostScanStat.reset_stat()
+        GlobalVars.PostScanStat.reset_ms_stats()
 
         headers = {'Content-type': 'application/json'}
 
@@ -594,6 +594,9 @@ class Metasmoke:
             log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
             Metasmoke.post("/statistics.json",
                            data=json.dumps(payload), headers=headers)
+        else:
+            log('info', 'Would have sent statistics to metasmoke, but metasmoke_host is undefined.'
+                        ' Ignoring. Stats would have been: ', payload['statistic'])
 
     @staticmethod
     def post_auto_comment(msg, user, url=None, ids=None):
@@ -725,7 +728,7 @@ class Metasmoke:
         in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
         if not in_standby_mode:
             # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
-            if GlobalVars.PostScanStat.get_stat() == Metasmoke.scan_stat_snapshot:
+            if GlobalVars.PostScanStat.get_stats_for_ms() == Metasmoke.scan_stat_snapshot:
                 # There's been no actvity since the last ping.
                 Metasmoke.status_pings_since_scan_activity += 1
                 with GlobalVars.ignore_no_se_websocket_activity_lock:
@@ -746,5 +749,5 @@ class Metasmoke:
                     chatcommunicate.tell_rooms_with("debug", status_message)
             else:
                 Metasmoke.status_pings_since_scan_activity = 0
-                Metasmoke.scan_stat_snapshot = GlobalVars.PostScanStat.get_stat()
+                Metasmoke.scan_stat_snapshot = GlobalVars.PostScanStat.get_stats_for_ms()
         Metasmoke.send_status_ping()

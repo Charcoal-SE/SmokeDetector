@@ -938,17 +938,50 @@ def metasmoke(msg, alias_used):
            " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
-@command(aliases=["scan-stat", "statistics"])
+@command(aliases=["scan-stat", "statistics", "stats"])
 def stat():
     """ Return post scan statistics. """
-    posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
-    stat_msg = "Posts scanned: {}; Scan time: {}".format(posts_scanned, scan_time)
+    # As of Python 3.6+, dicts are iterated in insertion order.
+    report_order_with_defaults = {
+        'posts_scanned': 0,
+        'scan_time': 0,
+        'posts_per_second': 0,
+        'grace_period_edits': 0,
+        'unchanged_posts': 0,
+        'no_post_lock': 0,
+        'errors': 0,
+        'max_scan_time': 0,
+        'max_scan_time_post': '',
+    }
+    # posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+    # get_stats() gets a copy of the stats, not the actual reference.
+    stats = GlobalVars.PostScanStat.get_stats()
+    # First, we deal with converting the max_scan_time_post into a Markdown link. We don't know if the post
+    # is an answer or question, and SE doesn't care wrt. the URL used.
+    site_post = stats.get('max_scan_time_post', None)
+    if site_post:
+        site, _, post_id = site_post.partition('/')
+        stats['max_scan_time_post'] = '[{}](//{}/q/{})'.format(site_post, site, post_id)
+    # posts_scanned, questions_scanned, answers_scanned = (stats.pop(key + '_scanned', 0)
+    posts_questions_answers_scanned = tuple(stats.pop(key + '_scanned', 0) for key in ['posts', 'questions', 'answers'])
+    stats['posts_scanned'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scanned)
+    q_and_a_unchanged = tuple(stats.pop('unchanged_' + key, 0) for key in ['questions', 'answers'])
+    stats['unchanged_posts'] = '{}, Q({}), A({})'.format(sum(q_and_a_unchanged), *q_and_a_unchanged)
+    # Round all the floats to 2 digits after the decimal point
+    for key, value in stats.items():
+        if type(value) is float:
+            stats[key] = round(value, 2)
+    # For the stats we have a defined order; use that order.
+    # We're not using .capitalize() on the entire key, so any internal capitalization is preserved.
+    messages = ['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), stats.get(key, default_value))
+                for key, default_value in report_order_with_defaults.items()]
+    for key in report_order_with_defaults.keys():
+        stats.pop(key, None)
+    # Add any additional stats we don't have in report_order_with_defaults
+    messages.extend(['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), value)
+                     for key, value in stats.items()])
 
-    rate_msg = ""
-    if posts_per_second:
-        rate_msg = "; Posts scanned per second: {}".format(posts_per_second)
-
-    return stat_msg + rate_msg
+    return '; '.join(messages)
 
 
 @command(aliases=["counter", "internal-counter", "ping-failure"])
@@ -2046,6 +2079,14 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             output.append("Post {}: Could not find data for this post in the API. "
                           "It may already have been deleted.".format(index))
             continue
+
+        # Watch for edits on the associated question
+        try:
+            if post_data.site and post_data.question_id:
+                Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=post_data.site, question_id=post_data.question_id)
+        except AttributeError:
+            # This happens in some CI testing, because GlobalVars.edit_watcher isn't set up.
+            pass
 
         if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
                 (post_data.post_id, post_data.site)) and not is_forced:

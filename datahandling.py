@@ -5,24 +5,38 @@ import sys
 import zlib
 import base64
 from datetime import datetime
-import metasmoke
-import requests
 import json
 import time
 import math
+import threading
+
+import requests
 # noinspection PyCompatibility
 import regex
 
-from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
+import metasmoke
+from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
 from helpers import ErrorLogs, log, log_exception, redact_passwords
+from tasks import Tasks
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
 
 queue_timings_data = list()
-FLUSH_TIMINGS_THRES = 128
+queue_timings_data_lock = threading.Lock()
+FLUSH_TIMINGS_THRESHOLD = 128
+
+SE_SITE_IDS_MAX_AGE_IN_SECONDS = 24 * 60 * 60
+SE_SITE_IDS_MINIMUM_VALID_LENGTH = 200
+
+bodyfetcher_max_ids_save_handle = None
+bodyfetcher_max_ids_save_handle_lock = threading.Lock()
+bodyfetcher_queue_save_handle = None
+bodyfetcher_queue_save_handle_lock = threading.Lock()
+recently_scanned_posts_save_handle = None
+recently_scanned_posts_save_handle_lock = threading.Lock()
 
 
 class Any:
@@ -137,6 +151,15 @@ def load_files():
         with metasmoke.Metasmoke.ms_ajax_queue_lock:
             metasmoke.Metasmoke.ms_ajax_queue = load_pickle("ms_ajax_queue.p")
             log("debug", "Loaded {} entries into ms_ajax_queue".format(len(metasmoke.Metasmoke.ms_ajax_queue)))
+    if has_pickle("seSiteIds.p"):
+        with GlobalVars.site_id_dict_lock:
+            (GlobalVars.site_id_dict_timestamp,
+             GlobalVars.site_id_dict_issues_into_chat_timestamp,
+             GlobalVars.site_id_dict) = load_pickle("seSiteIds.p", encoding='utf-8')
+            fill_site_id_dict_by_id_from_site_id_dict()
+    if has_pickle("recentlyScannedPosts.p"):
+        with GlobalVars.recently_scanned_posts_lock:
+            GlobalVars.recently_scanned_posts = load_pickle("recentlyScannedPosts.p", encoding='utf-8')
 
     blacklists.load_blacklists()
 
@@ -355,12 +378,34 @@ def clear_api_data():
     dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
+def schedule_store_bodyfetcher_queue():
+    global bodyfetcher_queue_save_handle
+    with bodyfetcher_queue_save_handle_lock:
+        if bodyfetcher_queue_save_handle:
+            bodyfetcher_queue_save_handle.cancel()
+        bodyfetcher_queue_save_handle = Tasks.do(store_bodyfetcher_queue)
+
+
 def store_bodyfetcher_queue():
-    dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
+    with GlobalVars.bodyfetcher.queue_lock:
+        dump_pickle("bodyfetcherQueue.p", GlobalVars.bodyfetcher.queue)
+
+
+def schedule_store_bodyfetcher_max_ids():
+    global bodyfetcher_max_ids_save_handle
+    with bodyfetcher_max_ids_save_handle_lock:
+        if bodyfetcher_max_ids_save_handle:
+            bodyfetcher_max_ids_save_handle.cancel()
+        bodyfetcher_max_ids_save_handle = Tasks.do(store_bodyfetcher_max_ids)
 
 
 def store_bodyfetcher_max_ids():
-    dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
+    with bodyfetcher_max_ids_save_handle_lock:
+        if bodyfetcher_max_ids_save_handle:
+            bodyfetcher_max_ids_save_handle.cancel()
+    with GlobalVars.bodyfetcher.max_ids_lock:
+        max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids.copy()
+    dump_pickle("bodyfetcherMaxIds.p", max_ids_copy)
 
 
 def store_ms_ajax_queue():
@@ -368,37 +413,60 @@ def store_ms_ajax_queue():
         dump_pickle("ms_ajax_queue.p", metasmoke.Metasmoke.ms_ajax_queue)
 
 
-def add_queue_timing_data(site, time_in_queue):
+def add_queue_timing_data(site, times_in_queue):
     global queue_timings_data
-    queue_timings_data.append("{} {}".format(site, time_in_queue))
-    # time_in_queue comes first as it is an integer
-    # and hence won't contain any whitespace or trailing ones
-    if len(queue_timings_data) >= FLUSH_TIMINGS_THRES:
-        actually_add_queue_timings_data()
+    new_times = ["{} {}".format(site, time_in_queue) for time_in_queue in times_in_queue]
+    with queue_timings_data_lock:
+        queue_timings_data.extend(new_times)
+        queue_length = len(queue_timings_data)
+    if queue_length >= FLUSH_TIMINGS_THRESHOLD:
+        flush_queue_timings_data()
+
+
+def flush_queue_timings_data():
+    global queue_timings_data
+    # Use .txt for cross platform compatibility
+    with queue_timings_data_lock:
+        with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+            stat_file.write("\n".join(queue_timings_data) + "\n")
         queue_timings_data = list()
 
 
-def actually_add_queue_timings_data():
-    # Use .txt for cross platform compatibility
-    with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
-        stat_file.write("\n".join(queue_timings_data) + "\n")
+def schedule_store_recently_scanned_posts():
+    global recently_scanned_posts_save_handle
+    with recently_scanned_posts_save_handle_lock:
+        if recently_scanned_posts_save_handle:
+            recently_scanned_posts_save_handle.cancel()
+        recently_scanned_posts_save_handle = Tasks.do(store_recently_scanned_posts)
+
+
+def store_recently_scanned_posts():
+    # While using a copy to avoid holding the lock while storing is generally desired,
+    # the expectation is that this will only be stored when shutting down.
+    with GlobalVars.recently_scanned_posts_lock:
+        with recently_scanned_posts_save_handle_lock:
+            if recently_scanned_posts_save_handle:
+                recently_scanned_posts_save_handle.cancel()
+        dump_pickle("recentlyScannedPosts.p", GlobalVars.recently_scanned_posts)
 
 
 # methods that help avoiding reposting alerts:
 
 
 def append_to_latest_questions(host, post_id, title):
-    GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
-    if len(GlobalVars.latest_questions) > 50:
-        GlobalVars.latest_questions.pop()
+    with GlobalVars.latest_questions_lock:
+        GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
+        if len(GlobalVars.latest_questions) > 50:
+            GlobalVars.latest_questions.pop()
 
 
 # noinspection PyMissingTypeHints
 def has_already_been_posted(host, post_id, title):
-    for post in GlobalVars.latest_questions:
-        if post[0] == host and post[1] == str(post_id):
-            return True
-    return False
+    with GlobalVars.latest_questions_lock:
+        for post in GlobalVars.latest_questions:
+            if post[0] == host and post[1] == str(post_id):
+                return True
+        return False
 
 
 # method to get data from the error log:
@@ -722,3 +790,58 @@ class SmokeyTransfer:
                 raise Warning("Warning: " + ', '.join(warnings))
         except (ValueError, zlib.error) as e:
             raise ValueError(str(e)) from None
+
+
+def store_site_id_dict():
+    with GlobalVars.site_id_dict_lock:
+        to_dump = (GlobalVars.site_id_dict_timestamp,
+                   GlobalVars.site_id_dict_issues_into_chat_timestamp,
+                   GlobalVars.site_id_dict.copy())
+    dump_pickle("seSiteIds.p", to_dump)
+
+
+def fill_site_id_dict_by_id_from_site_id_dict():
+    GlobalVars.site_id_dict_by_id = {site_id: site for site, site_id in GlobalVars.site_id_dict.items()}
+
+
+def refresh_site_id_dict():
+    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites')
+    data = json.loads(message.text)
+    site_ids_dict = {entry['hostname']: entry['siteid'] for entry in data}
+    if len(site_ids_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH:
+        with GlobalVars.site_id_dict_lock:
+            GlobalVars.site_id_dict = site_ids_dict
+            fill_site_id_dict_by_id_from_site_id_dict()
+            GlobalVars.site_id_dict_timestamp = time.time()
+
+
+def is_se_site_id_list_length_valid():
+    with GlobalVars.site_id_dict_lock:
+        to_return = len(GlobalVars.site_id_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH
+    return to_return
+
+
+def is_se_site_id_list_out_of_date():
+    return GlobalVars.site_id_dict_timestamp < time.time() - SE_SITE_IDS_MAX_AGE_IN_SECONDS
+
+
+def refresh_site_id_dict_if_needed_and_get_issues():
+    issues = []
+    if not is_se_site_id_list_length_valid() or is_se_site_id_list_out_of_date():
+        try:
+            refresh_site_id_dict()
+        except Exception:
+            # We ignore any problems with getting or refreshing the list of SE sites, as we handle it by
+            # testing to see if we have valid data (i.e. SD doesn't need to fail for an exception here).
+            log_exception(*sys.exc_info())
+            issues.append("An exception occurred when trying to get the SE site ID list."
+                          " See the error log for details.")
+        if is_se_site_id_list_length_valid():
+            store_site_id_dict()
+    if is_se_site_id_list_out_of_date():
+        issues.insert(0, "The site ID list is more than a day old.")
+    if not is_se_site_id_list_length_valid():
+        with GlobalVars.site_id_dict_lock:
+            issues.insert(0, "The SE site ID list has "
+                             "{} entries, which isn't considered valid.".format(len(GlobalVars.site_id_dict)))
+    return issues

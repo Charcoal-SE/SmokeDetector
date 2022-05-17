@@ -24,18 +24,19 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import (load_pickle, PICKLE_STORAGE, load_files,
-                          filter_auto_ignored_posts, actually_add_queue_timings_data)
+from datahandling import (load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts,
+                          refresh_site_id_dict_if_needed_and_get_issues)
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
+from editwatcher import EditWatcher
 import json
 import time
 import requests
 import dns.resolver
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import exit_mode, log, Helpers, log_exception
+from helpers import exit_mode, log, Helpers, log_exception, add_to_global_bodyfetcher_queue_in_new_thread
 from flovis import Flovis
 from tasks import Tasks
 
@@ -46,6 +47,7 @@ MAX_SE_WEBSOCKET_RETRIES = 5
 MIN_PYTHON_VERSION = (3, 6, 0)
 RECOMMENDED_PYTHON_VERSION = (3, 7, 0)
 THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
+MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT = 2 * 60 * 60  # 2 hours in seconds
 
 if os.path.isfile("plugin.py"):
     try:
@@ -188,6 +190,7 @@ filter_auto_ignored_posts()
 GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
+GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
@@ -200,6 +203,16 @@ if GlobalVars.standby_mode:
         time.sleep(3)
 
     chatcommunicate.join_command_rooms()
+
+se_site_id_issues = refresh_site_id_dict_if_needed_and_get_issues()
+if (se_site_id_issues):
+    send_se_site_id_issues_to_chat = False
+    with GlobalVars.site_id_dict_lock:
+        if GlobalVars.site_id_dict_issues_into_chat_timestamp + MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT >= time.time():
+            GlobalVars.site_id_dict_issues_into_chat_timestamp = time.time()
+            send_se_site_id_issues_to_chat = True
+    if send_se_site_id_issues_to_chat:
+        chatcommunicate.tell_rooms_with("debug", " ".join(se_site_id_issues))
 
 
 # noinspection PyProtectedMember
@@ -248,6 +261,7 @@ if not GlobalVars.no_se_activity_scan:
     ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
+GlobalVars.edit_watcher = EditWatcher()
 
 if "first_start" in sys.argv:
     chatcommunicate.tell_rooms_with('debug', GlobalVars.s if GlobalVars.on_branch else GlobalVars.s_reverted)
@@ -261,20 +275,27 @@ while not GlobalVars.no_se_activity_scan:
     try:
         a = ws.recv()
         if a is not None and a != "":
-            action = json.loads(a)["action"]
+            message = json.loads(a)
+            action = message["action"]
             if action == "hb":
                 ws.send("hb")
             if action == "155-questions-active":
+                data = json.loads(message['data'])
+                hostname = data['siteBaseHostAddress']
+                question_id = data['id']
                 if GlobalVars.flovis is not None:
-                    data = json.loads(json.loads(a)['data'])
-                    GlobalVars.flovis.stage('received', data['siteBaseHostAddress'], data['id'], json.loads(a))
+                    GlobalVars.flovis.stage('received', hostname, question_id, json.loads(a))
 
-                is_spam, reason, why = check_if_spam_json(a)
+                is_spam = False
+                if GlobalVars.bodyfetcher.threshold == 1 and hostname not in GlobalVars.bodyfetcher.special_cases:
+                    # If the queue threshold depth is 1 and there are no special cases, then there's not
+                    # much benefit to pre-testing, as there isn't a wait for the queue to fill to the threshold.
+                    # The site will, however, be behind any site which is already queued.
+                    is_spam, reason, why = check_if_spam_json(a)
 
-                t = Thread(name="bodyfetcher post enqueing",
-                           target=GlobalVars.bodyfetcher.add_to_queue,
-                           args=(a, True if is_spam else None))
-                t.start()
+                add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None,
+                                                              source="155-questions-active")
+                GlobalVars.edit_watcher.subscribe(hostname=hostname, question_id=question_id)
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()

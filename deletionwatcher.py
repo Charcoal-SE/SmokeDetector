@@ -1,17 +1,16 @@
 # coding=utf-8
 import json
 import os.path
-import requests
 import time
 import threading
+from urllib.parse import urlparse
+
+import requests
 # noinspection PyPackageRequirements
 import websocket
-# noinspection PyPackageRequirements
-from bs4 import BeautifulSoup
-from urllib.parse import urlparse
-import chatcommunicate
-import metasmoke
+
 from globalvars import GlobalVars
+import metasmoke
 import datahandling
 from helpers import log
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
@@ -28,12 +27,15 @@ class DeletionWatcher:
     def __init__(self):
         if GlobalVars.no_deletion_watcher:
             return
-        DeletionWatcher.update_site_id_list()
         self.posts = {}
+        self.posts_lock = threading.Lock()
+        self.save_handle = None
+        self.save_handle_lock = threading.Lock()
 
         try:
             self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         except websocket.WebSocketException:
+            self.socket = None
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
 
@@ -41,7 +43,7 @@ class DeletionWatcher:
             pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
             for post in DeletionWatcher._check_batch(pickle_data):
                 self.subscribe(post, pickle=False)
-            self._save()
+            self._schedule_save()
 
         threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
 
@@ -60,11 +62,13 @@ class DeletionWatcher:
 
                     if data["a"] == "post-deleted":
                         try:
-                            post_id, _, _, post_url, callbacks = self.posts[action]
+                            with self.posts_lock:
+                                post_id, _, _, post_url, callbacks = self.posts[action]
 
                             if post_id == str(data["aId"] if "aId" in data else data["qId"]):
-                                del self.posts[action]
-                                self.socket.send("-" + action)
+                                with self.posts_lock:
+                                    del self.posts[action]
+                                Tasks.do(self._unsubscribe, action)
                                 Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
 
                                 for callback, max_time in callbacks:
@@ -78,7 +82,9 @@ class DeletionWatcher:
             return
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
-        if post_site not in GlobalVars.site_id_dict:
+        with GlobalVars.site_id_dict_lock:
+            site_id = GlobalVars.site_id_dict.get(post_site, None)
+        if not site_id:
             log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url))
             return
 
@@ -90,33 +96,47 @@ class DeletionWatcher:
         else:
             question_id = post_id
 
-        site_id = GlobalVars.site_id_dict[post_site]
         action = "{}-question-{}".format(site_id, question_id)
         max_time = (time.time() + timeout) if timeout else None
 
-        if action not in self.posts:
-            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
+        with self.posts_lock:
+            if action not in self.posts:
+                self.posts[action] = (post_id, post_site, post_type, post_url,
+                                      [(callback, max_time)] if callback else [])
+                Tasks.do(self._subscribe, action)
+            elif callback:
+                _, _, _, _, callbacks = self.posts[action]
+                callbacks.append((callback, max_time))
+            else:
+                return
+
+        if pickle:
+            self._schedule_save()
+
+    def _subscribe(self, action):
+        if self.socket:
             try:
                 self.socket.send(action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed on sending {}'.format(action))
-        elif callback:
-            _, _, _, _, callbacks = self.posts[action]
-            callbacks.append((callback, max_time))
+                log('error', 'DeletionWatcher failed to subscribe to {}'.format(action))
         else:
-            return
+            log('warning', 'DeletionWatcher tried to subscribe to {}, but no WebSocket available.'.format(action))
 
-        if pickle:
-            Tasks.do(self._save)
+    def _schedule_save(self):
+        with self.save_handle_lock:
+            if self.save_handle:
+                self.save_handle.cancel()
+            save_handle = Tasks.do(self._save)
 
     def _save(self):
         pickle_output = {}
 
-        for post_id, post_site, _, _, _ in self.posts.values():
-            if post_site not in pickle_output:
-                pickle_output[post_site] = [post_id]
-            else:
-                pickle_output[post_site].append(post_id)
+        with self.posts_lock:
+            for post_id, post_site, _, _, _ in self.posts.values():
+                if post_site not in pickle_output:
+                    pickle_output[post_site] = [post_id]
+                else:
+                    pickle_output[post_site].append(post_id)
 
         datahandling.dump_pickle(PICKLE_FILENAME, pickle_output)
 
@@ -148,20 +168,16 @@ class DeletionWatcher:
                 if time.time() - post["creation_date"] < 7200:
                     yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
 
+    def _unsubscribe(self, action):
+        if self.socket:
+            try:
+                self.socket.send("-" + action)
+            except websocket.WebSocketException:
+                log('error', 'DeletionWatcher failed to unsubscribe to {}'.format(action))
+        else:
+            log('warning', 'DeletionWatcher tried to unsubscribe to {}, but no WebSocket available.'.format(action))
+
     @staticmethod
     def _ignore(post_site_id):
         return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
             datahandling.is_auto_ignored_post(post_site_id)
-
-    @staticmethod
-    def update_site_id_list():
-        if GlobalVars.no_deletion_watcher:
-            return
-        soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
-                             "html.parser")
-        site_id_dict = {}
-        for site in soup.findAll("a", attrs={"data-id": True}):
-            site_name = urlparse(site["href"]).netloc
-            site_id = site["data-id"]
-            site_id_dict[site_name] = site_id
-        GlobalVars.site_id_dict = site_id_dict

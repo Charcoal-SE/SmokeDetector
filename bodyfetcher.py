@@ -1,25 +1,50 @@
 # coding=utf-8
-from spamhandling import handle_spam, check_if_spam
-from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
-                          add_queue_timing_data)
-from chatcommunicate import tell_rooms_with
-from globalvars import GlobalVars
-from operator import itemgetter
-from datetime import datetime
 import json
 import time
 import threading
-import requests
 import copy
-from classes import Post, PostParseError
-from helpers import log
 from itertools import chain
+from operator import itemgetter
+from datetime import datetime
+
+import requests
+import psutil
+
+from globalvars import GlobalVars
+from spamhandling import handle_spam, check_if_spam
+from datahandling import (add_or_update_api_data, clear_api_data, schedule_store_bodyfetcher_queue,
+                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
+from chatcommunicate import tell_rooms_with
+from classes import Post, PostParseError
+from helpers import (log, log_current_thread, append_to_current_thread_name,
+                     convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread)
+import recently_scanned_posts as rsp
+from tasks import Tasks
 
 
 # noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
     queue = {}
     previous_max_ids = {}
+    posts_in_process = {}
+
+    IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM = [
+        "post has already been reported",
+    ]
+    LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
+    DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = 3
+    POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD = 0.015
+    per_site_processing_thread_limits = {
+        'stackoverflow.com': 5,
+    }
+    per_site_processing_thread_locks = {}
+    per_site_processing_thread_locks_lock = threading.Lock()
+    per_site_processing_thread_locks_delayed_warnings = {}
+    PER_SITE_THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
+    # CPU starvation updates are under the check_queue_lock
+    cpu_starvation_last_thread_launched_timestamp = None
+    cpu_starvation_posted_in_chat_timestamp = None
+    CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -75,100 +100,290 @@ class BodyFetcher:
     threshold = 1
 
     last_activity_date = 0
+    last_activity_date_lock = threading.Lock()
+    ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH = 6 * 60 * 1000  # 6 minutes in milliseconds; is beyond edit grace period
 
     api_data_lock = threading.Lock()
-    queue_modify_lock = threading.Lock()
-    max_ids_modify_lock = threading.Lock()
-    queue_timing_modify_lock = threading.Lock()
+    queue_lock = threading.Lock()
+    max_ids_lock = threading.Lock()
+    check_queue_lock = threading.Lock()
+    posts_in_process_lock = threading.Lock()
 
-    def add_to_queue(self, post, should_check_site=False):
-        try:
-            d = json.loads(json.loads(post)["data"])
-        except ValueError:
-            # post didn't contain a valid JSON object in its ["data"] member
-            # indicative of a server-side socket reset
-            return
-
-        site_base = d["siteBaseHostAddress"]
-        post_id = d["id"]
-
+    def add_to_queue(self, hostname, question_id, should_check_site=False):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
             3122,    # Formatting Sandbox
             51812,   # The API sandbox
             296077,  # Sandbox archive
         ]
-        if post_id in ignored_mse_questions and site_base == "meta.stackexchange.com":
+        if question_id in ignored_mse_questions and hostname == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
 
-        with self.queue_modify_lock:
-            if site_base not in self.queue:
-                self.queue[site_base] = {}
+        with self.queue_lock:
+            if hostname not in self.queue:
+                self.queue[hostname] = {}
 
             # Something about how the queue is being filled is storing Post IDs in a list.
             # So, if we get here we need to make sure that the correct types are paseed.
             #
-            # If the item in self.queue[site_base] is a dict, do nothing.
-            # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+            # If the item in self.queue[hostname] is a dict, do nothing.
+            # If the item in self.queue[hostname] is not a dict but is a list or a tuple, then convert to dict and
             # then replace the list or tuple with the dict.
-            # If the item in self.queue[site_base] is neither a dict or a list, then explode.
-            if type(self.queue[site_base]) is dict:
+            # If the item in self.queue[hostname] is neither a dict or a list, then explode.
+            if type(self.queue[hostname]) is dict:
                 pass
-            elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            elif type(self.queue[hostname]) in [list, tuple]:
                 post_list_dict = {}
-                for post_list_id in self.queue[site_base]:
-                    post_list_dict[post_list_id] = None
-                self.queue[site_base] = post_list_dict
+                for post_list_id in self.queue[hostname]:
+                    post_list_dict[str(post_list_id)] = None
+                self.queue[hostname] = post_list_dict
             else:
                 raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
 
-            # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+            # This line only works if we are using a dict in the self.queue[hostname] object, which we should be with
             # the previous conversion code.
-            self.queue[site_base][str(post_id)] = datetime.utcnow()
+            self.queue[hostname][str(question_id)] = datetime.utcnow()
+            flovis_dict = None
+            if GlobalVars.flovis is not None:
+                flovis_dict = {sk: list(sq.keys()) for sk, sq in self.queue.items()}
 
-        if GlobalVars.flovis is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
-                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()})
+        if flovis_dict is not None:
+            GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
 
         if should_check_site:
-            self.make_api_call_for_site(site_base)
-        else:
-            self.check_queue()
-        return
+            # The call to add_to_queue indicated that the site should be immediately processed.
+            if self.acquire_site_processing_lock(hostname):
+                try:
+                    with self.queue_lock:
+                        new_posts = self.queue.pop(hostname, None)
+                    if new_posts:
+                        schedule_store_bodyfetcher_queue()
+                        self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts)
+                except Exception:
+                    raise
+                finally:
+                    # We're done processing the site, so release the processing lock.
+                    self.release_site_processing_lock(hostname)
 
-    def check_queue(self):
-        for site, values in self.queue.items():
-            if site in self.special_cases:
-                if len(values) >= self.special_cases[site]:
-                    self.make_api_call_for_site(site)
-                    return
-            if site in self.time_sensitive:
-                if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    self.make_api_call_for_site(site)
-                    return
+        site_and_posts = True
+        while site_and_posts:
+            try:
+                site_and_posts = self.get_fist_queue_item_to_process()
+                if site_and_posts:
+                    schedule_store_bodyfetcher_queue()
+                    self.make_api_call_for_site_and_restore_thread_name(*site_and_posts)
+            except Exception:
+                raise
+            finally:
+                # We're done processing the site, so release the processing lock.
+                if site_and_posts:
+                    self.release_site_processing_lock(site_and_posts[0])
 
-        # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, values in self.queue.items():
-            if site not in self.special_cases and len(values) >= self.threshold:
-                self.make_api_call_for_site(site)
-                return
+    def make_api_call_for_site_and_restore_thread_name(self, site, new_posts):
+        current_thread = threading.current_thread()
+        append_to_current_thread_name(('\n --> processing site:'
+                                       ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
+        thread_name_to_restore = current_thread.name
+        self.make_api_call_for_site(site, new_posts)
+        current_thread.name = thread_name_to_restore
 
-        # We're not making an API request, so explicitly store the queue
-        with self.queue_modify_lock:
-            store_bodyfetcher_queue()
+    def get_site_thread_limit(self, site):
+        return self.per_site_processing_thread_limits.get(site, None) or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT
+
+    def acquire_site_processing_lock(self, site):
+        with self.per_site_processing_thread_locks_lock:
+            site_semaphore = self.per_site_processing_thread_locks.get(site, None)
+            if site_semaphore is None:
+                semaphore_count = self.get_site_thread_limit(site)
+                site_semaphore = threading.BoundedSemaphore(value=semaphore_count)
+                self.per_site_processing_thread_locks[site] = site_semaphore
+            have_acquired_lock = site_semaphore.acquire(blocking=False)
+            if have_acquired_lock:
+                self.site_thread_starvation_warning_thread_launched(site)
+            else:
+                if not self.send_site_thread_starvation_warning_if_appropriate(site):
+                    log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
+            return have_acquired_lock
+
+    def release_site_processing_lock(self, site):
+        with self.per_site_processing_thread_locks_lock:
+            self.per_site_processing_thread_locks[site].release()
+
+    def send_site_thread_starvation_warning_if_appropriate(self, site):
+        # The thread lock for this is the per_site_processing_thread_locks_lock
+        now = time.time()
+        min_time = now - self.PER_SITE_THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
+        record = self.per_site_processing_thread_locks_delayed_warnings.get(site, None)
+        if record is None:
+            self.per_site_processing_thread_locks_delayed_warnings[site] = {
+                'launched_timestamp': now,
+                'chat_timestamp': now,
+            }
+            return False
+        launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
+        if (launched_timestamp < min_time and chat_timestamp < min_time):
+            self.per_site_processing_thread_locks_delayed_warnings[site]['chat_timestamp'] = now
+            message = ("Unable to launch scan thread for {} due to exhausted thred limit"
+                       "of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
+                                                       round(now - launched_timestamp, 2))
+            Tasks.do(tell_rooms_with, "debug", message)
+            log('error', message)
+            return True
+        return False
+
+    def site_thread_starvation_warning_thread_launched(self, site):
+        # The thread lock for this is the per_site_processing_thread_locks_lock
+        self.per_site_processing_thread_locks_delayed_warnings.pop(site, None)
+
+    def send_cpu_starvation_warning_if_appropriate(self):
+        # The thread lock for this is the check_queue_lock
+        now = time.time()
+        min_time = now - self.CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
+        launched_timestamp = self.cpu_starvation_last_thread_launched_timestamp
+        if launched_timestamp is None:
+            self.cpu_starvation_last_thread_not_launched_timestamp = now
+            self.cpu_starvation_posted_in_chat_timestamp = now
+            return False
+        chat_timestamp = self.cpu_starvation_posted_in_chat_timestamp
+        if (launched_timestamp < min_time and chat_timestamp < min_time):
+            self.cpu_starvation_posted_in_chat_timestamp = now
+            message = ("High CPU use has prevented launching additional scan threads for"
+                       " {} seconds.").format(round(now - launched_timestamp, 2))
+            Tasks.do(tell_rooms_with, "debug", message)
+            log('error', message)
+            return True
+        return False
+
+    def cpu_starvation_warning_thread_launched(self):
+        # The thread lock for this is the check_queue_lock
+        self.cpu_starvation_last_thread_not_launched_timestamp = None
+
+    def get_fist_queue_item_to_process(self):
+        # We use a copy of the queue keys (sites) and lengths in order to allow
+        # the queue to be changed in other threads.
+        # Overall this results in a FIFO for sites which have reached their threshold, because
+        # dicts are guaranteed to be iterated in insertion order in Python >= 3.6.
+        # We use self.check_queue_lock here to fully dispatch one queued site at a time and allow
+        # consolidation of multiple WebSocket events for the same real-world event.
+        with self.check_queue_lock:
+            try:
+                # Getting the CPU activity also provides time for multiple potential WebSocket events to queue
+                # the same post along with some time for the SE API to update and have information on the new post.
+                cpu_use = psutil.cpu_percent(interval=1)
+                if cpu_use > self.LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD:
+                    # We are already maxing out the CPU.
+                    # Having additional threads processing posts is counterproductive.
+                    if not self.send_cpu_starvation_warning_if_appropriate():
+                        log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
+                                                      + ', which is too high to launch an additional scan thread.')
+                    return None
+                self.cpu_starvation_warning_thread_launched()
+                special_sites = []
+                site_to_handle = None
+                is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
+                with self.queue_lock:
+                    sites_in_queue = {site: len(values) for site, values in self.queue.items()}
+                # Get sites listed in special cases and as time_sensitive
+                for site, length in sites_in_queue.items():
+                    if site in self.special_cases:
+                        special_sites.append(site)
+                        if length >= self.special_cases[site]:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+                    if is_time_sensitive_time and site in self.time_sensitive:
+                        special_sites.append(site)
+                        if length >= 1:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+                else:
+                    # We didn't find a special site which met the applicable threshold.
+                    # Remove the sites which we've already considered from our copy of the queue's keys.
+                    for site in special_sites:
+                        sites_in_queue.pop(site, None)
+
+                    # If we don't have any special sites with their queue filled, take the first
+                    # one without a special case
+                    for site, length in sites_in_queue.items():
+                        if length >= self.threshold:
+                            if self.acquire_site_processing_lock(site):
+                                site_to_handle = site
+                                break
+
+                if site_to_handle is not None:
+                    # We already have a site processing lock, so if we have new_posts, then we're good to go.
+                    with self.queue_lock:
+                        new_posts = self.queue.pop(site_to_handle, None)
+                    if new_posts:
+                        # We've identified a site and have a list of new posts to fetch.
+                        return (site, new_posts)
+                    else:
+                        # We don't actually have any posts to process, so need to give up the site processing lock
+                        # we alreadying obtained.
+                        self.release_site_processing_lock(site_to_handle)
+                        site_to_handle = None
+                # There's no site in the queue which has met the applicable threshold.
+                return None
+            # We don't have a finally here, as we're only releasing upon an exception.
+            except Exception:
+                if site_to_handle:
+                    self.release_site_processing_lock(site_to_handle)
 
     def print_queue(self):
-        return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
+        with self.queue_lock:
+            if self.queue:
+                return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
+            else:
+                return 'The BodyFetcher queue is empty.'
 
-    def make_api_call_for_site(self, site):
-        if site not in self.queue:
-            return
+    def claim_post_in_process_or_request_rescan(self, ident, site, post_id):
+        with self.posts_in_process_lock:
+            site_dict = self.posts_in_process.get(site, None)
+            if site_dict is None:
+                site_dict = {}
+                self.posts_in_process[site] = site_dict
+            post_dict = site_dict.get(post_id, None)
+            if post_dict is None:
+                post_dict = {
+                    'owner': ident,
+                    'first_timestamp': time.time(),
+                }
+                site_dict[post_id] = post_dict
+                return True
+            post_lock_owner = post_dict.get('owner', None)
+            if post_lock_owner == ident:
+                post_dict['recent_timestamp'] = time.time(),
+                return True
+            post_dict['rescan_requested'] = True
+            post_dict['rescan_requested_by'] = ident
+            log('info', 'Processing prevented in thread ',
+                        '{} for Post {}/{}: being processed by {}'.format(ident, site, post_id, post_lock_owner))
+            return False
 
-        with self.queue_modify_lock:
-            new_posts = self.queue.pop(site)
-            store_bodyfetcher_queue()
+    def release_post_in_process_and_recan_if_requested(self, ident, site, post_id, question_id):
+        with self.posts_in_process_lock:
+            site_dict = self.posts_in_process.get(site, None)
+            if site_dict is None:
+                log('error', 'posts_in_process: no site_dict found for {} in process: {}'.format(site_dict, ident))
+                return False
+            post_dict = site_dict.get(post_id, None)
+            if post_dict is None:
+                log('error', 'posts_in_process: no post_dict found for {} in process: {}'.format(post_dict, ident))
+                return False
+            if post_dict.get('owner', None) == ident:
+                if post_dict.get('rescan_requested', None) is True:
+                    add_to_global_bodyfetcher_queue_in_new_thread(site, question_id, False,
+                                                                  source="BodyFetcher re-request")
+                site_dict.pop(post_id, None)
+                return True
+            # There's really nothing for us to do here. We could raise an error, but it's
+            # unclear that would help this thread.
+            return False
 
+    def make_api_call_for_site(self, site, new_posts):
         new_post_ids = [int(k) for k in new_posts.keys()]
+        Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
 
         if GlobalVars.flovis is not None:
             for post_id in new_post_ids:
@@ -176,14 +391,12 @@ class BodyFetcher:
                                         {'site': site, 'posts': list(new_posts.keys())})
 
         # Add queue timing data
-        with self.queue_timing_modify_lock:
-            post_add_times = [v for k, v in new_posts.items()]
-            pop_time = datetime.utcnow()
-            for add_time in post_add_times:
-                seconds_in_queue = (pop_time - add_time).total_seconds()
-                add_queue_timing_data(site, seconds_in_queue)
+        pop_time = datetime.utcnow()
+        post_add_times = [(pop_time - v).total_seconds() for k, v in new_posts.items()]
+        Tasks.do(add_queue_timing_data, site, post_add_times)
 
-        with self.max_ids_modify_lock:
+        store_max_ids = False
+        with self.max_ids_lock:
             if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
                 previous_max_id = self.previous_max_ids[site]
                 intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
@@ -201,13 +414,13 @@ class BodyFetcher:
             else:
                 posts = new_post_ids
 
-            try:
-                if max(new_post_ids) > self.previous_max_ids[site]:
-                    self.previous_max_ids[site] = max(new_post_ids)
-                    store_bodyfetcher_max_ids()
-            except KeyError:
-                self.previous_max_ids[site] = max(new_post_ids)
-                store_bodyfetcher_max_ids()
+            new_post_ids_max = max(new_post_ids)
+            if new_post_ids_max > self.previous_max_ids.get(site, 0):
+                self.previous_max_ids[site] = new_post_ids_max
+                store_max_ids = True
+
+        if store_max_ids:
+            schedule_store_bodyfetcher_max_ids()
 
         log('debug', "New IDs / Hybrid Intermediate IDs for {}:".format(site))
         if len(new_post_ids) > 30:
@@ -227,15 +440,16 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
-            if self.last_activity_date != 0:
-                pagesize = "50"
-            else:
-                pagesize = "25"
+            with self.last_activity_date_lock:
+                if self.last_activity_date != 0:
+                    pagesize = "100"
+                else:
+                    pagesize = "50"
 
-            pagesize_modifier = {
-                'pagesize': pagesize,
-                'min': str(self.last_activity_date)
-            }
+                pagesize_modifier = {
+                    'pagesize': pagesize,
+                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH, 0))
+                }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
@@ -257,10 +471,11 @@ class BodyFetcher:
             try:
                 time_request_made = datetime.utcnow().strftime('%H:%M:%S')
                 response = requests.get(url, params=params, timeout=20).json()
+                response_timestamp = time.time()
             except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
                 # Any failure in the request being made (timeout or otherwise) should be added back to
                 # the queue.
-                with self.queue_modify_lock:
+                with self.queue_lock:
                     if site in self.queue:
                         self.queue[site].update(new_posts)
                     else:
@@ -324,17 +539,210 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             items = response["items"]
             if len(items) > 0 and "last_activity_date" in items[0]:
-                self.last_activity_date = items[0]["last_activity_date"]
+                with self.last_activity_date_lock:
+                    self.last_activity_date = items[0]["last_activity_date"]
 
-        num_scanned = 0
-        start_time = time.time()
+        self.scan_api_results(site, response, response_timestamp)
+
+    def scan_api_results(self, site, response, response_timestamp):
+        current_thread = threading.current_thread()
+        current_thread_ident = current_thread.ident
+        base_thread_name = current_thread.name
+        full_start_time = time.time()
+        section_start_time = full_start_time
+        posts_processed_text = ''
+        post_processing_text = ''
+        scan_stats_text = ''
+        scan_stats = {}
+        post_stats = {}
+        post_type = None
+        processing_post_id = None
+        started_post_stat_ident = None
+        post_processing_text_prefixes = {
+            'answer': '\n⠀⠀\t⠀⠀\tA{}:',
+            'question': '\n⠀⠀\tQ{}:',
+        }
+
+        def build_scan_stats():
+            nonlocal current_thread
+            nonlocal scan_stats_text
+            now = time.time()
+            scan_stats_text = ('elapsed time: {}; scanned: {}, Q({}), A({});'
+                               ' unchanged: Q({}), A({}); no post lock: {}; errors: {}')
+            scan_stats_text = scan_stats_text.format(
+                round(now - full_start_time, 2),
+                scan_stats.get('posts_scanned', 0),
+                scan_stats.get('questions_scanned', 0),
+                scan_stats.get('answers_scanned', 0),
+                scan_stats.get('unchanged_questions', 0),
+                scan_stats.get('unchanged_answers', 0),
+                scan_stats.get('no_post_lock', 0),
+                scan_stats.get('errors', 0))
+
+        def set_thread_name():
+            current_thread.name = (base_thread_name + '\n' + scan_stats_text + posts_processed_text
+                                   + post_processing_text)
+
+        def start_post(type_of_post, post_id):
+            nonlocal post_stats
+            nonlocal post_type
+            nonlocal processing_post_id
+            post_stats = {}
+            end_post()
+            post_type = type_of_post
+            processing_post_id = post_id
+            reset_section_timer()
+            build_post_thread_name_text()
+            set_thread_name()
+
+        def end_post():
+            nonlocal post_processing_text
+            nonlocal posts_processed_text
+            nonlocal post_stats
+            nonlocal scan_stats
+            nonlocal started_post_stat_ident
+            posts_processed_text += post_processing_text
+            post_processing_text = ''
+            for stat_name, post_stat_dict in post_stats.items():
+                if not post_stat_dict['dont_include_in_scan_stats']:
+                    post_value = post_stat_dict.get('value', None)
+                    if type(post_value) in [int, float]:
+                        scan_stats[stat_name] = scan_stats.get(stat_name, 0) + post_stat_dict['value']
+                    else:
+                        log('warning', "BodyFetcher post stats: stat {} is {} with value: {}".format(stat_name,
+                                                                                                     type(post_value),
+                                                                                                     post_value))
+            started_post_stat_ident = None
+            post_stats = {}
+            build_scan_stats()
+            set_thread_name()
+
+        def increment_scan_stat(stat_name, increment=1):
+            nonlocal scan_stats
+            old_value = scan_stats.get(stat_name, 0)
+            scan_stats[stat_name] = old_value + increment
+
+        def reset_section_timer():
+            nonlocal section_start_time
+            section_start_time = time.time()
+
+        def start_post_stat_time(ident, short_text, no_low_output=True, dont_include_in_scan_stats=False):
+            nonlocal post_stats
+            nonlocal started_post_stat_ident
+            post_stats[ident] = {
+                'start_time': time.time(),
+                'short_text': short_text,
+                'no_low_output': no_low_output,
+                'dont_include_in_scan_stats': dont_include_in_scan_stats,
+            }
+            started_post_stat_ident = ident
+            build_post_thread_name_text()
+            set_thread_name()
+
+        def end_post_stat_time_and_start_new(new_ident=None, short_text=None, no_low_output=True,
+                                             dont_include_in_scan_stats=False, ident=None):
+            nonlocal post_stats
+            nonlocal started_post_stat_ident
+            now = time.time()
+            if ident is None:
+                ident = started_post_stat_ident
+            elapsed = now - post_stats[ident]['start_time']
+            post_stats[ident]['value'] = elapsed
+            started_post_stat_ident = None
+            if new_ident is not None:
+                start_post_stat_time(new_ident, short_text, no_low_output, dont_include_in_scan_stats)
+            else:
+                started_post_stat_ident = None
+            build_post_thread_name_text()
+            set_thread_name()
+            return elapsed
+
+        def add_post_stat_time(ident, short_text, value=None, no_low_output=True, dont_include_in_scan_stats=False):
+            nonlocal section_start_time
+            nonlocal post_stats
+            now = time.time()
+            elapsed = now - section_start_time
+            section_start_time = now
+            if value is not None:
+                elapsed = value
+            post_stats[ident] = {
+                'value': elapsed,
+                'short_text': short_text,
+                'no_low_output': no_low_output,
+                'dont_include_in_scan_stats': dont_include_in_scan_stats,
+            }
+            build_post_thread_name_text()
+            set_thread_name()
+            return elapsed
+
+        def build_post_thread_name_text():
+            nonlocal post_processing_text
+            build_post_thread_name_post_id()
+            shorts_values = [[entry['short_text'], entry.get('value', '')] for entry in post_stats.values()
+                             if not entry['no_low_output'] or entry.get('value', None) is None
+                             or entry.get('value', 0) > self.POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD]
+
+            shorts_values = [[short_text, round(value, 2) if type(value) is float else value]
+                             for short_text, value in shorts_values]
+            texts = ['{}({})'.format(short_text, value) for short_text, value in shorts_values]
+            post_processing_text += ';'.join(texts)
+
+        def build_post_thread_name_post_id():
+            nonlocal post_processing_text
+            post_processing_text = post_processing_text_prefixes.get(post_type, '{}:').format(processing_post_id)
+
+        def no_post_lock():
+            nonlocal post_processing_text
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            increment_scan_stat('no_post_lock')
+            build_post_thread_name_text()
+            post_processing_text += '; no post lock'
+            end_post()
+
+        def post_is_unchanged():
+            nonlocal post_processing_text
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            increment_scan_stat('unchanged_{}s'.format(post_type))
+            # We don't show a record of the unchanged ones in the thread name.
+            post_processing_text = ''
+            end_post()
+
+        def post_is_grace_period_edit():
+            increment_scan_stat('grace_period_edits')
+
+        def post_was_scanned():
+            nonlocal scan_stats
+            increment_scan_stat('posts_scanned')
+            increment_scan_stat('{}s_scanned'.format(post_type))
+            if started_post_stat_ident is not None:
+                end_post_stat_time_and_start_new()
+            post_scan_time_dict = post_stats.get('scan_{}'.format(post_type), None)
+            if post_scan_time_dict is not None:
+                post_scan_time = post_scan_time_dict.get('value', None)
+                if type(post_scan_time) is float:
+                    max_scan_time = scan_stats.get('max_scan_time', 0)
+                    if post_scan_time > max_scan_time:
+                        scan_stats['max_scan_time'] = post_scan_time
+                        scan_stats['max_scan_time_post'] = '{}/{}'.format(site, processing_post_id)
+            build_post_thread_name_text()
+            end_post()
+
+        def post_had_error():
+            nonlocal post_processing_text
+            increment_scan_stat('errors')
+            build_post_thread_name_text()
+            post_processing_text += '; ERROR'
+            end_post()
 
         for post in response["items"]:
-            pnb = copy.deepcopy(post)
-            if 'body' in pnb:
-                pnb['body'] = 'Present, but truncated'
-            if 'answers' in pnb:
-                del pnb['answers']
+            if GlobalVars.flovis is not None:
+                pnb = copy.deepcopy(post)
+                if 'body' in pnb:
+                    pnb['body'] = 'Present, but truncated'
+                if 'answers' in pnb:
+                    del pnb['answers']
 
             if "title" not in post or "body" not in post:
                 if GlobalVars.flovis is not None and 'question_id' in post:
@@ -342,47 +750,87 @@ class BodyFetcher:
                 continue
 
             post['site'] = site
+            post['response_timestamp'] = response_timestamp
             try:
                 post['edited'] = (post['creation_date'] != post['last_edit_date'])
             except KeyError:
                 post['edited'] = False  # last_edit_date not present = not edited
 
+            question_id = post.get('question_id', None)
+            start_post('question', question_id)
+            if question_id is not None:
+                Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
             try:
-                post_ = Post(api_response=post)
-            except PostParseError as err:
-                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
-                if GlobalVars.flovis is not None and 'question_id' in post:
-                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, post['question_id'], pnb)
-                continue
+                start_post_stat_time('post_processing_lock', '<Qplk')
+                have_question_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
+                                                                                             site, question_id)
+                if have_question_processing_lock:
+                    end_post_stat_time_and_start_new('check_unchanged', '<Qchkun')
+                    compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
+                    question_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                    if question_doesnt_need_scan:
+                        post_is_unchanged()
+                    if compare_info.get('is_grace_edit', False):
+                        post_is_grace_period_edit()
+                else:
+                    question_doesnt_need_scan = True
+                    no_post_lock()
 
-            num_scanned += 1
-
-            is_spam, reason, why = check_if_spam(post_)
-
-            if is_spam:
+                if question_doesnt_need_scan and "answers" not in post:
+                    continue
+                do_flovis = GlobalVars.flovis is not None and question_id is not None
                 try:
-                    if GlobalVars.flovis is not None and 'question_id' in post:
-                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
+                    post_ = Post(api_response=post)
+                except PostParseError as err:
+                    log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
+                    if do_flovis:
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, question_id, pnb)
+                    continue
+
+                if not question_doesnt_need_scan:
+                    end_post_stat_time_and_start_new('scan_question', ' scan', no_low_output=False)
+                    is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
+                        check_if_spam(post_),
+                        compare_info,
+                        match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                    )
+                    scan_time = end_post_stat_time_and_start_new()
+                    rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
+
+                    if is_spam:
+                        try:
+                            if do_flovis:
+                                GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, question_id,
+                                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                            handle_spam(post=post_,
+                                        reasons=reason,
+                                        why=why)
+                        except Exception as e:
+                            log('error', "Exception in handle_spam:", e)
+                    elif do_flovis:
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, question_id,
                                                 {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                    handle_spam(post=post_,
-                                reasons=reason,
-                                why=why)
-                except Exception as e:
-                    log('error', "Exception in handle_spam:", e)
-            elif GlobalVars.flovis is not None and 'question_id' in post:
-                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['question_id'],
-                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                    post_was_scanned()
+            except Exception:
+                post_had_error()
+                raise
+            finally:
+                if have_question_processing_lock:
+                    have_question_processing_lock = False
+                    self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, question_id,
+                                                                        question_id)
 
             try:
                 if "answers" not in post:
                     pass
                 else:
                     for answer in post["answers"]:
-                        anb = copy.deepcopy(answer)
-                        if 'body' in anb:
-                            anb['body'] = 'Present, but truncated'
+                        if GlobalVars.flovis is not None:
+                            anb = copy.deepcopy(answer)
+                            if 'body' in anb:
+                                anb['body'] = 'Present, but truncated'
 
-                        num_scanned += 1
+                        answer['response_timestamp'] = response_timestamp
                         answer["IsAnswer"] = True  # Necesssary for Post object
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
@@ -390,27 +838,64 @@ class BodyFetcher:
                             answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
-                        answer_ = Post(api_response=answer, parent=post_)
+                        answer_id = answer.get('answer_id', None)
+                        start_post('answer', answer_id)
+                        try:
+                            start_post_stat_time('post_processing_lock', '<Aplk')
+                            answer_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
+                                                                                                  site, answer_id)
+                            if answer_processing_lock:
+                                end_post_stat_time_and_start_new('check_unchanged', '<Achkun')
+                                compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
+                                answer_doesnt_need_scan = compare_info['is_older_or_unchanged']
+                                if compare_info.get('is_grace_edit', False):
+                                    post_is_grace_period_edit()
+                            else:
+                                no_post_lock()
+                                continue
+                            if answer_doesnt_need_scan:
+                                post_is_unchanged()
+                                continue
+                            answer_ = Post(api_response=answer, parent=post_)
 
-                        is_spam, reason, why = check_if_spam(answer_)
-                        if is_spam:
-                            try:
-                                if GlobalVars.flovis is not None and 'answer_id' in answer:
-                                    GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer['answer_id'],
-                                                            {'post': anb, 'check_if_spam': [is_spam, reason, why]})
-                                handle_spam(answer_,
-                                            reasons=reason,
-                                            why=why)
-                            except Exception as e:
-                                log('error', "Exception in handle_spam:", e)
-                        elif GlobalVars.flovis is not None and 'answer_id' in answer:
-                            GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer['answer_id'],
-                                                    {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                            end_post_stat_time_and_start_new('scan_answer', ' scan', no_low_output=False)
+                            is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
+                                check_if_spam(answer_),
+                                compare_info,
+                                match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                            )
+                            scan_time = end_post_stat_time_and_start_new()
+                            rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
+
+                            if is_spam:
+                                do_flovis = GlobalVars.flovis is not None and answer_id is not None
+                                try:
+                                    if do_flovis:
+                                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer_id,
+                                                                {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                                    handle_spam(answer_,
+                                                reasons=reason,
+                                                why=why)
+                                except Exception as e:
+                                    log('error', "Exception in handle_spam:", e)
+                            elif do_flovis:
+                                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer_id,
+                                                        {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                            post_was_scanned()
+                        except Exception:
+                            raise
+                        finally:
+                            if answer_processing_lock:
+                                answer_processing_lock = False
+                                self.release_post_in_process_and_recan_if_requested(current_thread_ident, site,
+                                                                                    answer_id, question_id)
 
             except Exception as e:
+                post_had_error()
                 log('error', "Exception handling answers:", e)
 
         end_time = time.time()
-        scan_time = end_time - start_time
-        GlobalVars.PostScanStat.add_stat(num_scanned, scan_time)
+        scan_stats['scan_time'] = end_time - full_start_time
+        GlobalVars.PostScanStat.add_stat(scan_stats)
+        log('debug', current_thread.name)
         return

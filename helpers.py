@@ -11,12 +11,15 @@ platform_text = platform.platform().lower()
 if 'windows' in platform_text and 'cygwin' not in platform_text:
     from colorama import init as colorama_init
     colorama_init()
-from termcolor import colored
-import requests
-import regex
 from glob import glob
 import sqlite3
 from urllib.parse import quote, quote_plus
+from threading import Thread
+
+from termcolor import colored
+import requests
+import regex
+
 from globalvars import GlobalVars
 
 
@@ -33,7 +36,8 @@ def exit_mode(*args, code=0):
 
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
-    datahandling.actually_add_queue_timings_data()
+    datahandling.flush_queue_timings_data()
+    datahandling.store_recently_scanned_posts()
 
     # We have to use '_exit' here, because 'sys.exit' only exits the current
     # thread (not the current process).  Unfortunately, this results in
@@ -208,18 +212,56 @@ def log_current_exception(f=False):
     log_exception(*sys.exc_info(), f)
 
 
+def log_current_thread(log_level, prefix="", postfix=""):
+    if prefix:
+        prefix += '\t'
+    if postfix:
+        postfix = '\t' + postfix
+    current_thread = threading.current_thread()
+    log(log_level, "{}current thread: {}: {}{}".format(prefix, current_thread.name, current_thread.ident, postfix))
+
+
+def append_to_current_thread_name(text):
+    threading.current_thread().name += text
+
+
 def files_changed(diff, file_set):
     changed = set(diff.split())
     return bool(len(changed & file_set))
 
 
 core_files = {
-    "apigetpost.py", "blacklists.py", "bodyfetcher.py", "chatcommands.py", "chatcommunicate.py",
-    "chatexchange_extension.py", "datahandling.py", "deletionwatcher.py", "excepthook.py", "flovis.py",
-    "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py",
-    "spamhandling.py", "socketscience.py", "tasks.py", "ws.py",
+    "apigetpost.py",
+    "blacklists.py",
+    "bodyfetcher.py",
+    "chatcommands.py",
+    "chatcommunicate.py",
+    "chatexchange_extension.py",
+    "datahandling.py",
+    "deletionwatcher.py",
+    "editwatcher.py",
+    "excepthook.py",
+    "flovis.py",
+    "gitmanager.py",
+    "globalvars.py",
+    "helpers.py",
+    "metasmoke.py",
+    "metasmoke_cache.py",
+    "nocrash.py",
+    "number_homoglyphs.py",
+    "parsing.py",
+    "phone_numbers.py",
+    "queue_timings.py",
+    "recently_scanned_posts.py",
+    "socketscience.py",
+    "spamhandling.py",
+    "tasks.py",
+    "ws.py",
 
-    "classes/feedback.py", "_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
+    "classes/feedback.py",
+    "_Git_Windows.py",
+    "classes/__init__.py",
+    "classes/_Post.py",
 
     # Before these are made reloadable
     "rooms.yml",
@@ -333,3 +375,56 @@ def remove_end_regex_comments(regex_text):
 
 def get_only_digits(text):
     return regex.sub(r"(?a)\D", "", text)
+
+
+def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_check_site=False, source=None):
+    source_text = ""
+    if source:
+        source_text = " from {}".format(source)
+    t = Thread(name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
+               target=GlobalVars.bodyfetcher.add_to_queue,
+               args=(hostname, question_id, should_check_site))
+    t.start()
+
+
+CONVERT_NEW_SCAN_TO_SPAM_DEFAULT_IGNORED_REASONS = set([
+    "blacklisted user",
+])
+
+
+def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ignore=None, ignored_reasons=True):
+    if type(old_info) is dict:
+        # This is for recently scanned posts, which pass the recently scanned posts entry here,
+        # which is a dict.
+        old_is_spam = old_info.get('is_spam', None)
+        old_reasons = old_info.get('reasons', None)
+        old_why = old_info.get('why', None)
+    elif type(old_info) is tuple:
+        old_is_spam, old_reasons, old_why = old_info
+    if not old_is_spam:
+        return new_info
+    new_is_spam, new_reasons, new_why = new_info
+    if new_is_spam:
+        return new_info
+    if type(new_reasons) is tuple:
+        # The scan was actually spam, but was declared non-spam for some reason external to the content.
+        # For example, that it was recently reported.
+        actual_new_reasons, actual_new_why = new_reasons
+    else:
+        # The new results did not actually indicate it was spam.
+        return new_info
+    if match_ignore is not None and new_why not in match_ignore:
+        # We only want it to be considered spam if ignored for specified reasons.
+        return new_info
+    ignored_reasons_set = set()
+    if ignored_reasons:
+        if ignored_reasons is True:
+            ignored_reasons_set = CONVERT_NEW_SCAN_TO_SPAM_DEFAULT_IGNORED_REASONS
+        else:
+            ignored_reasons_set = set(ignored_reasons)
+    actual_new_reasons_set = set(actual_new_reasons) - ignored_reasons_set
+    old_reasons_set = set(old_reasons) - ignored_reasons_set
+    if len(actual_new_reasons_set) > len(old_reasons_set) or not actual_new_reasons_set.issubset(old_reasons_set):
+        # There are new reasons the post would have been reported
+        return (True, actual_new_reasons, actual_new_why)
+    return new_info
