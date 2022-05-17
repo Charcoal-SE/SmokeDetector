@@ -39323,3 +39323,4 @@
 1652765464	cigien	ifieldsmart\.com
 1652765644	tripleee	geekyteluguworld\.com
 1652767052	tripleee	^(?=\A[^\n]{80,}\Z)(?<phrase>\w+(?:\W\w+){4,12}\W?)(?P=phrase){40,80}$
+1652771799	tripleee	exe\.io
