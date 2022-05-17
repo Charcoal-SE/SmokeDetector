@@ -657,3 +657,4 @@ Visualytes
 (?-i:^user305560$)
 (?-i:^Royal Continental Hotels$)
 (?-i:^cd\d+onlinedata$)
+(?-i:^Simple Intelligent Systems$)
