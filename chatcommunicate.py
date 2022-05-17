@@ -90,6 +90,7 @@ def init(username, password, try_cookies=True):
                             if me.id > 0:
                                 client.logged_in = True
                                 logged_in = True
+                                client._thread.start()
                                 log('debug', 'chat.{}: Logged in to chat only using cached cookies'.format(site))
                         except Exception:
                             # This is a fallback using the ChatExchange functionality we've been using for a long time.
