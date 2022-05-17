@@ -158,24 +158,34 @@ class BodyFetcher:
                         new_posts = self.queue.pop(hostname, None)
                     if new_posts:
                         schedule_store_bodyfetcher_queue()
-                        self.make_api_call_for_site(hostname, new_posts)
+                        self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts)
                 except Exception:
                     raise
                 finally:
                     # We're done processing the site, so release the processing lock.
                     self.release_site_processing_lock(hostname)
 
-        try:
-            site_and_posts = self.get_fist_queue_item_to_process()
-            if site_and_posts:
-                schedule_store_bodyfetcher_queue()
-                self.make_api_call_for_site(*site_and_posts)
-        except Exception:
-            raise
-        finally:
-            # We're done processing the site, so release the processing lock.
-            if site_and_posts:
-                self.release_site_processing_lock(site_and_posts[0])
+        site_and_posts = True
+        while site_and_posts:
+            try:
+                site_and_posts = self.get_fist_queue_item_to_process()
+                if site_and_posts:
+                    schedule_store_bodyfetcher_queue()
+                    self.make_api_call_for_site_and_restore_thread_name(*site_and_posts)
+            except Exception:
+                raise
+            finally:
+                # We're done processing the site, so release the processing lock.
+                if site_and_posts:
+                    self.release_site_processing_lock(site_and_posts[0])
+
+    def make_api_call_for_site_and_restore_thread_name(self, site, new_posts):
+        current_thread = threading.current_thread()
+        append_to_current_thread_name(('\n --> processing site:'
+                                       ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
+        thread_name_to_restore = current_thread.name
+        self.make_api_call_for_site(site, new_posts)
+        current_thread.name = thread_name_to_restore
 
     def get_site_thread_limit(self, site):
         return self.per_site_processing_thread_limits.get(site, None) or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT
@@ -372,9 +382,6 @@ class BodyFetcher:
             return False
 
     def make_api_call_for_site(self, site, new_posts):
-        append_to_current_thread_name(('\n --> processing site:'
-                                       ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
-
         new_post_ids = [int(k) for k in new_posts.keys()]
         Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
 
