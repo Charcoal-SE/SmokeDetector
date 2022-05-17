@@ -39342,3 +39342,4 @@
 1652803871	Spevacus	mspowermail\.com
 1652803926	cigien	ms[\W_]*+power[\W_]*+mail(?!\.com(?<=mspowermail\.com))
 1652805086	cigien	w88move\.com
+1652805302	cigien	msnho\.com
