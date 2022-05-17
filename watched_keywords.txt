@@ -39331,3 +39331,4 @@
 1652774839	Ryan M	kolkatababe\.com
 1652774870	Ryan M	hotgarima\.com
 1652778603	tripleee	saveralogistics\.in
+1652778661	tripleee	savera[\W]*+logistics(?!\.in(?<=saveralogistics\.in))
