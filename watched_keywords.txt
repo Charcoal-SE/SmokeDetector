@@ -39317,3 +39317,4 @@
 1652750043	cigien	bozo\.com
 1652757540	cocomac	subscribe[\W_]*+to[\W_]*+me
 1652762028	cigien	consagous\.co
+1652762361	cigien	consagous\.com
