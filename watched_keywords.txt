@@ -39322,4 +39322,4 @@
 1652765408	cigien	fleetridge
 1652765464	cigien	ifieldsmart\.com
 1652765644	tripleee	geekyteluguworld\.com
-1652767052	tripleee	^(?=\A<p>[^\n]{80,}</p>\Z)<p>(?<phrase>\w+(?:\W\w+){4,12}\W?)(?P=phrase){40,80}</p>$
+1652767052	tripleee	^(?=\A[^\n]{80,}\Z)(?<phrase>\w+(?:\W\w+){4,12}\W?)(?P=phrase){40,80}$
