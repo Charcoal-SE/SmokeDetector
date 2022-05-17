@@ -39334,4 +39334,3 @@
 1652780310	tripleee	singaporeproperty99\.com
 1652783530	Jeff Schaller	kbatechnologyinc\.com
 1652783965	tripleee	digital[\W_]*minax(?!\.in(?<=digitalminax\.in))
-1652784360      tripleee	(?-i:^what is (?:take )?your(? \w+){1,2}$)
