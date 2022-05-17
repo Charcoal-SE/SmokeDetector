@@ -39343,3 +39343,4 @@
 1652803926	cigien	ms[\W_]*+power[\W_]*+mail(?!\.com(?<=mspowermail\.com))
 1652805086	cigien	w88move\.com
 1652805302	cigien	msnho\.com
+1652806031	cigien	seoauth\.com
