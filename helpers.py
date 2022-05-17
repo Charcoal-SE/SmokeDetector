@@ -37,6 +37,7 @@ def exit_mode(*args, code=0):
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
     datahandling.flush_queue_timings_data()
+    datahandling.store_post_scan_stats()
     datahandling.store_recently_scanned_posts()
 
     # We have to use '_exit' here, because 'sys.exit' only exits the current

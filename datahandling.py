@@ -160,7 +160,9 @@ def load_files():
     if has_pickle("recentlyScannedPosts.p"):
         with GlobalVars.recently_scanned_posts_lock:
             GlobalVars.recently_scanned_posts = load_pickle("recentlyScannedPosts.p", encoding='utf-8')
-
+    if has_pickle("postScanStats.p"):
+        GlobalVars.PostScanStat.stats, GlobalVars.PostScanStat.stats_for_ms = load_pickle("postScanStats.p",
+                                                                                          encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -448,6 +450,13 @@ def store_recently_scanned_posts():
             if recently_scanned_posts_save_handle:
                 recently_scanned_posts_save_handle.cancel()
         dump_pickle("recentlyScannedPosts.p", GlobalVars.recently_scanned_posts)
+
+
+def store_post_scan_stats():
+    with GlobalVars.PostScanStat.rw_lock:
+        stats = GlobalVars.PostScanStat.stats.copy()
+        stats_for_ms = GlobalVars.PostScanStat.stats_for_ms.copy()
+    dump_pickle("postScanStats.p", (stats, stats_for_ms))
 
 
 # methods that help avoiding reposting alerts:
