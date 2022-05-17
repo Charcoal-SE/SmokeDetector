@@ -39337,3 +39337,4 @@
 1652784360	tripleee	(?-i:^what is (?:take )?your(?: \w+){1,2}$)
 1652790727	tripleee	scoringanswer\.com
 1652792340	tripleee	rkraihan\.com
+1652793431	Spevacus	micronfrance\.fr
