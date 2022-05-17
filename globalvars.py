@@ -214,15 +214,18 @@ class GlobalVars:
         @staticmethod
         def get_stats_for_ms():
             """ Getting post scanning statistics for reporting to MS """
-            copy = GlobalVars.PostScanStat.get_stats()
+            copy = GlobalVars.PostScanStat.get_stats(True)
             # MS wants only posts_scanned, scan_time, posts_per_second
             return (copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
 
         @staticmethod
-        def get_stats():
+        def get_stats(use_ms_stats=False):
             """ Getting post scanning statistics """
             with GlobalVars.PostScanStat.rw_lock:
-                copy = GlobalVars.PostScanStat.stats.copy()
+                if use_ms_stats:
+                    copy = GlobalVars.PostScanStat.stats_for_ms.copy()
+                else:
+                    copy = GlobalVars.PostScanStat.stats.copy()
             # Derived values:
             scan_time = copy.get('scan_time', 0)
             posts_scanned = copy.get('posts_scanned', 0)
