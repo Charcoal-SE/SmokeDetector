@@ -815,8 +815,8 @@ def body_text_repeated(s, site):
     """
     Do some hacks to reduce the need for regex backtracking for this rule
     """
-    if s.startswith("<p>") and s.endswith("</p>"):
-        s = s[3:-4]
+    if s.startswith("<p>") and s.endswith("</p>\n"):
+        s = s[3:-5]
     initial_words = regex.match(r"\A(\w+)\W+(\w+)\W+(\w+)", s)
     if not initial_words:
         return False, ""
