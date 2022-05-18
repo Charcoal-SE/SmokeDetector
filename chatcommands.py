@@ -938,8 +938,10 @@ def metasmoke(msg, alias_used):
            " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
-@command(aliases=["scan-stat", "statistics", "stats"])
-def stat():
+@command(str, str, str, give_name=True, arity=(0, 3), privileged=True, aliases=["stats", "scan-stat", "statistics",
+                                                                                "stats-force", "scan-stat-force",
+                                                                                "statistics-force", "stat-force"])
+def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
     """ Return post scan statistics. """
     # As of Python 3.6+, dicts are iterated in insertion order.
     report_order_with_defaults = {
@@ -953,35 +955,122 @@ def stat():
         'max_scan_time': 0,
         'max_scan_time_post': '',
     }
-    # posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
-    # get_stats() gets a copy of the stats, not the actual reference.
-    stats = GlobalVars.PostScanStat.get_stats()
-    # First, we deal with converting the max_scan_time_post into a Markdown link. We don't know if the post
-    # is an answer or question, and SE doesn't care wrt. the URL used.
-    site_post = stats.get('max_scan_time_post', None)
-    if site_post:
-        site, _, post_id = site_post.partition('/')
-        stats['max_scan_time_post'] = '[{}](//{}/q/{})'.format(site_post, site, post_id)
-    # posts_scanned, questions_scanned, answers_scanned = (stats.pop(key + '_scanned', 0)
-    posts_questions_answers_scanned = tuple(stats.pop(key + '_scanned', 0) for key in ['posts', 'questions', 'answers'])
-    stats['posts_scanned'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scanned)
-    q_and_a_unchanged = tuple(stats.pop('unchanged_' + key, 0) for key in ['questions', 'answers'])
-    stats['unchanged_posts'] = '{}, Q({}), A({})'.format(sum(q_and_a_unchanged), *q_and_a_unchanged)
-    # Round all the floats to 2 digits after the decimal point
-    for key, value in stats.items():
-        if type(value) is float:
-            stats[key] = round(value, 2)
-    # For the stats we have a defined order; use that order.
-    # We're not using .capitalize() on the entire key, so any internal capitalization is preserved.
-    messages = ['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), stats.get(key, default_value))
-                for key, default_value in report_order_with_defaults.items()]
-    for key in report_order_with_defaults.keys():
-        stats.pop(key, None)
-    # Add any additional stats we don't have in report_order_with_defaults
-    messages.extend(['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), value)
-                     for key, value in stats.items()])
+    known_operations = [
+        'clear',
+        'copy',
+        'create',
+        'delete',
+        'display',
+        'get',
+        'lock',
+        'list',
+        'reset',
+        'show',
+        'unlock',
+    ]
+    protected_from_stat_only_operations = [
+        'clear',
+        'create',
+        'delete',
+        'lock',
+        'reset',
+        'unlock',
+    ]
+    protected_stats_types = [
+        'all',
+        'uptime',
+        'ms',
+    ]
+    if operation not in known_operations:
+        if from_stats or to_stats:
+            return problem_text
+        if operation:
+            from_stats = operation
+        else:
+            from_stats = 'uptime'
+        operation = 'get'
+    from_stats = '' if from_stats is None else from_stats
+    to_stats = '' if to_stats is None else to_stats
+    problem_text = 'The options you supplied ("{}", "{}", "{}") were not understood.'.format(operation, from_stats,
+                                                                                             to_stats)
+    not_permitted_text = ('The operation you requested,'
+                          ' {}, is not permitted on the stats you specified: {}, {}').format(operation, from_stats,
+                                                                                             to_stats).rstrip(' ,')
+    response_from_stats_only = 'The {} operation succeeded on {}.'.format(operation, from_stats)
+    response = ''
+    error_text = ''
+    is_forced = '-force' in alias_used
+    if operation in protected_from_stat_only_operations and from_stats and not to_stats:
+        if from_stats in protected_stats_types and not is_forced:
+            error_text = not_permitted_text
+        else:
+            response = response_from_stats_only
+            already_exists = from_stats in GlobalVars.PostScanStat.get_set_keys()
+            if operation in ['create'] and already_exists and not is_forced:
+                error_text = 'The {} stats set already exists.'.format(from_stats)
+            elif ((operation in ['clear', 'delete', 'reset'] and not already_exists and not is_forced)
+                    or (operation in ['lock', 'unlock'] and not already_exists)):
+                error_text = "The {} stats set doesn't exist.".format(from_stats)
+            if operation in ['clear', 'create', 'reset']:
+                operation = 'reset'
+            if not error_text:
+                getattr(GlobalVars.PostScanStat, operation)(from_stats)
+    elif operation == 'copy' and from_stats and to_stats:
+        if to_stats in protected_stats_types and not is_forced:
+            error_text = not_permitted_text
+        else:
+            GlobalVars.PostScanStat.copy(from_stats, to_stats)
+            response = 'The {} stats set was copied to {}.'.format(from_stats, to_stats)
+    elif operation in ['list', 'listsets', 'list_sets', 'list-sets'] and not from_stats and not to_stats:
+        stats_set_keys = GlobalVars.PostScanStat.get_set_keys()
+        response = 'The currently stored stats sets are named: "' + '", "'.join(stats_set_keys) + '".'
+    elif operation in ['get', 'display', 'show'] and from_stats and not to_stats:
+        # posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+        # get_stats() gets a copy of the stats, not the actual reference.
+        stats = GlobalVars.PostScanStat.get(from_stats)
+        # First, we deal with converting the max_scan_time_post into a Markdown link. We don't know if the post
+        # is an answer or question, and SE doesn't care wrt. the URL used when you use /q/ID#.
+        site_post = stats.get('max_scan_time_post', None)
+        if site_post:
+            site, _, post_id = site_post.partition('/')
+            stats['max_scan_time_post'] = '[{}](//{}/q/{})'.format(site_post, site, post_id)
+        posts_questions_answers_scanned = tuple(stats.pop(key + '_scanned', 0) for key in ['posts', 'questions',
+                                                                                           'answers'])
+        stats['posts_scanned'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scanned)
+        posts_questions_answers_scantime = (round(stats.pop('scan_time', 0), 2),
+                                            round(stats.pop('scan_question', 0), 2),
+                                            round(stats.pop('scan_answers', 0), 2))
+        stats['scan_time'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scantime)
+        q_and_a_unchanged = tuple(stats.pop('unchanged_' + key, 0) for key in ['questions', 'answers'])
+        stats['unchanged_posts'] = '{}, Q({}), A({})'.format(sum(q_and_a_unchanged), *q_and_a_unchanged)
+        # Round all the floats to 2 digits after the decimal point
+        for key, value in stats.items():
+            if type(value) is float:
+                stats[key] = round(value, 2)
+        # In addition to converting to ISO format for the timestamps, this puts them at the end, due to
+        # Python 3.6+ iterating dicts in insertion order.
+        stats['started'] = stats.pop('start_timestamp', None).isoformat()
+        locked_timestamp = stats.pop('locked_timestamp', None)
+        if locked_timestamp:
+            stats['locked'] = locked_timestamp.isoformat()
+        # For the stats we have a defined order; use that order.
+        # We're not using .capitalize() on the entire key, so any internal capitalization is preserved.
+        messages = ['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), stats.get(key, default_value))
+                    for key, default_value in report_order_with_defaults.items()]
+        for key in report_order_with_defaults.keys():
+            stats.pop(key, None)
+        # Add any additional stats we don't have in report_order_with_defaults
+        messages.extend(['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), value)
+                         for key, value in stats.items()])
 
-    return '; '.join(messages)
+        return '"{}" stats: '.format(from_stats) + '; '.join(messages)
+    else:
+        return problem_text
+    if error_text:
+        return error_text
+    if alias_used[-1] == '-':
+        return
+    return response
 
 
 @command(aliases=["counter", "internal-counter", "ping-failure"])

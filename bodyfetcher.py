@@ -896,6 +896,6 @@ class BodyFetcher:
 
         end_time = time.time()
         scan_stats['scan_time'] = end_time - full_start_time
-        GlobalVars.PostScanStat.add_stat(scan_stats)
+        GlobalVars.PostScanStat.add(scan_stats)
         log('debug', current_thread.name)
         return

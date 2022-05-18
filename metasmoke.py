@@ -729,7 +729,8 @@ class Metasmoke:
         in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
         if not in_standby_mode:
             # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
-            if GlobalVars.PostScanStat.get_stats_for_ms() == Metasmoke.scan_stat_snapshot:
+            current_ms_stats = GlobalVars.PostScanStat.get_stats_for_ms()
+            if current_ms_stats == Metasmoke.scan_stat_snapshot:
                 # There's been no actvity since the last ping.
                 Metasmoke.status_pings_since_scan_activity += 1
                 with GlobalVars.ignore_no_se_websocket_activity_lock:
@@ -750,5 +751,5 @@ class Metasmoke:
                     chatcommunicate.tell_rooms_with("debug", status_message)
             else:
                 Metasmoke.status_pings_since_scan_activity = 0
-                Metasmoke.scan_stat_snapshot = GlobalVars.PostScanStat.get_stats_for_ms()
+                Metasmoke.scan_stat_snapshot = current_ms_stats
         Metasmoke.send_status_ping()
