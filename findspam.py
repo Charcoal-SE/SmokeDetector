@@ -809,30 +809,6 @@ def has_repeating_words(s, site):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-@create_rule("text repeated in {}", title=False, body_summary=True, max_rep=10000, max_score=10000)
-def body_text_repeated(s, site):
-    """
-    Do some hacks to reduce the need for regex backtracking for this rule
-    """
-    if s.startswith("<p>") and s.endswith("</p>\n"):
-        s = s[3:-5]
-    initial_words = regex.match(r"\A(\w+)\W+(\w+)\W+(\w+)", s)
-    if not initial_words:
-        return False, ""
-    period = regex.match(
-        r"\A%s\W+%s\W+%s\W+(.+?)%s\W+%s\W+%s\b" % (
-            tuple(regex.escape(x) for x in initial_words.groups()) * 2), s)
-    if not period:
-        return False, ""
-    repeats = regex.match(
-        r"\A(\w+(?:\W+\w+){%i}\W*){10,}" % (
-            len(period.groups(0)[0].split()) + 1), s)
-    if repeats:
-        return True, "Body contains repeated phrase %s" % repeats.groups(0)[0]
-    return False, ""
-
-
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("few unique characters in {}", title=False, max_rep=10000, max_score=10000)
 def has_few_characters(s, site):
