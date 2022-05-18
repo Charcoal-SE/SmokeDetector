@@ -810,7 +810,7 @@ def has_repeating_words(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-@create_rule("body text repeated in {}", title=False, body_summary=True, max_rep=10000, max_score=10000)
+@create_rule("text repeated in {}", title=False, body_summary=True, max_rep=10000, max_score=10000)
 def body_text_repeated(s, site):
     """
     Do some hacks to reduce the need for regex backtracking for this rule
