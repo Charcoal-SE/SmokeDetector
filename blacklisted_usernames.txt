@@ -658,3 +658,4 @@ Visualytes
 (?-i:^Royal Continental Hotels$)
 (?-i:^cd\d+onlinedata$)
 (?-i:^Simple Intelligent Systems$)
+(?-i:^Pakainfo$)
