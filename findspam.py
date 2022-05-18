@@ -599,6 +599,7 @@ class FindSpam:
 
     @staticmethod
     def test_post(post):
+        print("# post", repr(post))
         result = []
         why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:
@@ -814,11 +815,11 @@ def body_text_repeated(s, site):
     """
     Do some hacks to reduce the need for regex backtracking for this rule
     """
-    initial_words = regex.match(r"\A(\w+)\W+(\w+)", s)
+    initial_words = regex.match(r"\A(\w+)\W+(\w+)\W+(\w+)", s)
     if not initial_words:
         return False, ""
     period = regex.match(
-        r"\A%s\W+%s\W+(\w+(?:\W+\w+)*?\W*)%s\W+%s\b" % (
+        r"\A%s\W+%s\W+%s\W+(.*?)%s\W+%s\W+%s\b" % (
             tuple(regex.escape(x) for x in initial_words.groups()) * 2), s)
     if not period:
         return False, ""
