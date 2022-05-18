@@ -821,7 +821,7 @@ def body_text_repeated(s, site):
     if not initial_words:
         return False, ""
     period = regex.match(
-        r"\A%s\W+%s\W+%s\W+(.*?)%s\W+%s\W+%s\b" % (
+        r"\A%s\W+%s\W+%s\W+(.+?)%s\W+%s\W+%s\b" % (
             tuple(regex.escape(x) for x in initial_words.groups()) * 2), s)
     if not period:
         return False, ""
