@@ -599,7 +599,6 @@ class FindSpam:
 
     @staticmethod
     def test_post(post):
-        print("# post", repr(post))
         result = []
         why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:
