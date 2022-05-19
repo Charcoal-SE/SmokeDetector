@@ -39394,3 +39394,4 @@
 1652946858	Makyen	bhuumi[\W_]*+ride(?!\.com(?<=bhuumiride\.com))
 1652946882	Makyen	bhuumiride\.com
 1652947275	tripleee	techgeekbuzz\.com
+1652947666	tripleee	AndroBranch
