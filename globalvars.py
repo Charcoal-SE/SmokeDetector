@@ -211,17 +211,19 @@ class GlobalVars:
                                 these_stats[stat_name] = value
 
         @staticmethod
-        def get_stats_for_ms():
+        def get_stats_for_ms(reset=False):
             """ Get post scanning statistics for reporting to MS """
-            stats_copy = GlobalVars.PostScanStat.get('ms')
+            stats_copy = GlobalVars.PostScanStat.get('ms', reset=reset)
             # MS wants only posts_scanned, scan_time, posts_per_second
             return (stats_copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
 
         @staticmethod
-        def get(stats_set_key='uptime'):
+        def get(stats_set_key='uptime', reset=False):
             """ Get post scanning statistics from a stat set, including derived data, start and lock timestamps. """
             with GlobalVars.PostScanStat.rw_lock:
                 stats_set = copy.deepcopy(GlobalVars.PostScanStat.stats[stats_set_key])
+                if reset is True:
+                    GlobalVars.PostScanStat._reset(stats_set_key)
             stats_copy = stats_set['stats']
             # Derived values:
             scan_time = stats_copy.get('scan_time', 0)
@@ -238,12 +240,17 @@ class GlobalVars:
             return stats_copy
 
         @staticmethod
+        def _reset(stats_set_key):
+            """ Resets/clears/creates post scanning data in a stats set without getting the rw_lock """
+            GlobalVars.PostScanStat.stats[stats_set_key] = {}
+            GlobalVars.PostScanStat.stats[stats_set_key]['stats'] = GlobalVars.PostScanStat.default_stats.copy()
+            GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.utcnow()
+
+        @staticmethod
         def reset(stats_set_key):
             """ Resets/clears/creates post scanning data in a stats set """
             with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.stats[stats_set_key] = {}
-                GlobalVars.PostScanStat.stats[stats_set_key]['stats'] = GlobalVars.PostScanStat.default_stats.copy()
-                GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.utcnow()
+                GlobalVars.PostScanStat._reset(stats_set_key)
 
         @staticmethod
         def lock(stats_set_key):

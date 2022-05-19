@@ -579,15 +579,13 @@ class Metasmoke:
         current_apiquota = GlobalVars.apiquota
         GlobalVars.apiquota_rw_lock.release()
 
-        posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stats_for_ms()
+        posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stats_for_ms(reset=True)
         payload = {'key': GlobalVars.metasmoke_key,
                    'statistic': {'posts_scanned': posts_scanned,
                                  'api_quota': current_apiquota}}
         if posts_per_second:
             # Send scan rate as well, if applicable.
             payload['statistic']['post_scan_rate'] = posts_per_second
-
-        GlobalVars.PostScanStat.reset_ms_stats()
 
         headers = {'Content-type': 'application/json'}
 
