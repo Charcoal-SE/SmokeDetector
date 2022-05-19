@@ -421,6 +421,9 @@ items:
   - jasmine.ns.cloudflare.com.
 - ns:
   - beau.ns.cloudflare.com.
+  - maya.ns.cloudflare.com.
+- ns:
+  - beau.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
   - beau.ns.cloudflare.com.
