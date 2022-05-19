@@ -39384,3 +39384,4 @@
 1652918582	cigien	earners?[\W_]*+trade[\W_]*+x[\W_]*+plus
 1652926109	cigien	mikesteve\d*(?:@gmail\.com)?
 1652926692	cigien	pslk\.net
+1652938596	cigien	drlogy\.com
