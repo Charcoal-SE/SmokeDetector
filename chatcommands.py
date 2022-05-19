@@ -1059,10 +1059,11 @@ def pull(alias_used='pull'):
         state = ci_status["state"]
         states.append(state)
     if "success" in states:
-        if only_modules_changed(remote_diff):
+        if False and only_modules_changed(remote_diff):
+            # As of 2022-05-19, this causes at least intermittent failures and has been disabled.
             GitManager.pull_remote()
-            reload_modules()
             GlobalVars.reload()
+            reload_modules()
             tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
             return
         else:
@@ -1131,7 +1132,7 @@ def git(alias_used="git"):
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
-@command(whole_msg=True, privileged=True, give_name=True, aliases=["restart", "reload"])
+@command(whole_msg=True, privileged=True, give_name=True, aliases=["restart", "reload-disabled"])
 def reboot(msg, alias_used="reboot"):
     """
     Forces a system exit with exit code = 5
@@ -1143,7 +1144,9 @@ def reboot(msg, alias_used="reboot"):
                    ("debug", (msg._client.host, msg.room.id)), ())
         time.sleep(3)
         exit_mode("reboot")
-    elif alias_used in {"reload"}:
+    elif False and alias_used in {"reload"}:
+        # As of 2022-05-19, this causes at least intermittent failures and has been disabled.
+        GlobalVars.reload()
         reload_modules()
         tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
         time.sleep(3)

@@ -294,7 +294,8 @@ class Metasmoke:
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
-                    elif only_modules_changed(remote_diff):
+                    elif False and only_modules_changed(remote_diff):
+                        # As of 2022-05-19, this causes at least intermittent failures and has been disabled.
                         GitManager.pull_remote()
                         if not GlobalVars.on_branch:
                             # Restart if HEAD detached
