@@ -45,6 +45,9 @@ class BodyFetcher:
     cpu_starvation_last_thread_launched_timestamp = None
     cpu_starvation_posted_in_chat_timestamp = None
     CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
+    SITES_NOT_TO_REREQUEST_POST_DUE_TO_POST_SCAN_CONFLICT = [
+        'stackoverflow.com',
+    ]
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
     # need to be in the queue prior to feching posts.
@@ -355,10 +358,15 @@ class BodyFetcher:
             if post_lock_owner == ident:
                 post_dict['recent_timestamp'] = time.time(),
                 return True
-            post_dict['rescan_requested'] = True
-            post_dict['rescan_requested_by'] = ident
             log('info', 'Processing prevented in thread ',
                         '{} for Post {}/{}: being processed by {}'.format(ident, site, post_id, post_lock_owner))
+            if site not in self.SITES_NOT_TO_REREQUEST_POST_DUE_TO_POST_SCAN_CONFLICT:
+                # For sites where we're getting all recently active questions every time, and where they have
+                # substantial activity (i.e. effectively guaranteed to be within the additional time-window
+                # fetched before our last_active), a rescan of the post, if it's changed, is effectively
+                # guaranteed, so we don't need to specifically request that the post be rescanned.
+                post_dict['rescan_requested'] = True
+                post_dict['rescan_requested_by'] = ident
             return False
 
     def release_post_in_process_and_recan_if_requested(self, ident, site, post_id, question_id):
