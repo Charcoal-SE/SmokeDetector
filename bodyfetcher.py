@@ -109,7 +109,7 @@ class BodyFetcher:
     check_queue_lock = threading.Lock()
     posts_in_process_lock = threading.Lock()
 
-    def add_to_queue(self, hostname, question_id, should_check_site=False):
+    def add_to_queue(self, hostname, question_id, should_check_site=False, source=None):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
             3122,    # Formatting Sandbox
@@ -119,78 +119,96 @@ class BodyFetcher:
         if question_id in ignored_mse_questions and hostname == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
 
-        with self.queue_lock:
-            if hostname not in self.queue:
-                self.queue[hostname] = {}
+        thread_stats = {
+            'thread_count': 1,
+            'source_EditWatcher': 1 if 'EditWatcher' in source else 0,
+            'source_155-questions-active': 1 if '155-questions-active' in source else 0,
+            'source_BF_re-reqest': 1 if 'BodyFetcher re-reqest' in source else 0,
+            'all_errors': 0,
+            'high_CPU': 0,
+            'threads_limited_non_SO': 0,
+            'threads_limited_SO': 0,
+            'api_calls': 0,
+        }
 
-            # Something about how the queue is being filled is storing Post IDs in a list.
-            # So, if we get here we need to make sure that the correct types are paseed.
-            #
-            # If the item in self.queue[hostname] is a dict, do nothing.
-            # If the item in self.queue[hostname] is not a dict but is a list or a tuple, then convert to dict and
-            # then replace the list or tuple with the dict.
-            # If the item in self.queue[hostname] is neither a dict or a list, then explode.
-            if type(self.queue[hostname]) is dict:
-                pass
-            elif type(self.queue[hostname]) in [list, tuple]:
-                post_list_dict = {}
-                for post_list_id in self.queue[hostname]:
-                    post_list_dict[str(post_list_id)] = None
-                self.queue[hostname] = post_list_dict
-            else:
-                raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+        try:
+            with self.queue_lock:
+                if hostname not in self.queue:
+                    self.queue[hostname] = {}
 
-            # This line only works if we are using a dict in the self.queue[hostname] object, which we should be with
-            # the previous conversion code.
-            self.queue[hostname][str(question_id)] = datetime.utcnow()
-            flovis_dict = None
-            if GlobalVars.flovis is not None:
-                flovis_dict = {sk: list(sq.keys()) for sk, sq in self.queue.items()}
+                # Something about how the queue is being filled is storing Post IDs in a list.
+                # So, if we get here we need to make sure that the correct types are paseed.
+                #
+                # If the item in self.queue[hostname] is a dict, do nothing.
+                # If the item in self.queue[hostname] is not a dict but is a list or a tuple, then convert to dict and
+                # then replace the list or tuple with the dict.
+                # If the item in self.queue[hostname] is neither a dict or a list, then explode.
+                if type(self.queue[hostname]) is dict:
+                    pass
+                elif type(self.queue[hostname]) in [list, tuple]:
+                    post_list_dict = {}
+                    for post_list_id in self.queue[hostname]:
+                        post_list_dict[str(post_list_id)] = None
+                    self.queue[hostname] = post_list_dict
+                else:
+                    raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
 
-        if flovis_dict is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
+                # This line only works if we are using a dict in the self.queue[hostname] object, which we
+                # should be with the previous conversion code.
+                self.queue[hostname][str(question_id)] = datetime.utcnow()
+                flovis_dict = None
+                if GlobalVars.flovis is not None:
+                    flovis_dict = {sk: list(sq.keys()) for sk, sq in self.queue.items()}
 
-        if should_check_site:
-            # The call to add_to_queue indicated that the site should be immediately processed.
-            if self.acquire_site_processing_lock(hostname):
+            if flovis_dict is not None:
+                GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
+
+            if should_check_site:
+                # The call to add_to_queue indicated that the site should be immediately processed.
+                if self.acquire_site_processing_lock(hostname, thread_stats):
+                    try:
+                        with self.queue_lock:
+                            new_posts = self.queue.pop(hostname, None)
+                        if new_posts:
+                            schedule_store_bodyfetcher_queue()
+                            self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts, thread_stats)
+                    except Exception:
+                        raise
+                    finally:
+                        # We're done processing the site, so release the processing lock.
+                        self.release_site_processing_lock(hostname)
+
+            site_and_posts = True
+            while site_and_posts:
                 try:
-                    with self.queue_lock:
-                        new_posts = self.queue.pop(hostname, None)
-                    if new_posts:
+                    site_and_posts = self.get_first_queue_item_to_process(thread_stats)
+                    if site_and_posts:
                         schedule_store_bodyfetcher_queue()
-                        self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts)
+                        self.make_api_call_for_site_and_restore_thread_name(*site_and_posts, thread_stats)
                 except Exception:
                     raise
                 finally:
                     # We're done processing the site, so release the processing lock.
-                    self.release_site_processing_lock(hostname)
+                    if site_and_posts and site_and_posts is not True:
+                        self.release_site_processing_lock(site_and_posts[0])
+        except Exception:
+            thread_stats['all_errors'] += 1
+            raise
+        finally:
+            GlobalVars.PostScanStat.add(thread_stats)
 
-        site_and_posts = True
-        while site_and_posts:
-            try:
-                site_and_posts = self.get_fist_queue_item_to_process()
-                if site_and_posts:
-                    schedule_store_bodyfetcher_queue()
-                    self.make_api_call_for_site_and_restore_thread_name(*site_and_posts)
-            except Exception:
-                raise
-            finally:
-                # We're done processing the site, so release the processing lock.
-                if site_and_posts:
-                    self.release_site_processing_lock(site_and_posts[0])
-
-    def make_api_call_for_site_and_restore_thread_name(self, site, new_posts):
+    def make_api_call_for_site_and_restore_thread_name(self, site, new_posts, thread_stats):
         current_thread = threading.current_thread()
         append_to_current_thread_name(('\n --> processing site:'
                                        ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
         thread_name_to_restore = current_thread.name
-        self.make_api_call_for_site(site, new_posts)
+        self.make_api_call_for_site(site, new_posts, thread_stats)
         current_thread.name = thread_name_to_restore
 
     def get_site_thread_limit(self, site):
         return self.per_site_processing_thread_limits.get(site, None) or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT
 
-    def acquire_site_processing_lock(self, site):
+    def acquire_site_processing_lock(self, site, thread_stats):
         with self.per_site_processing_thread_locks_lock:
             site_semaphore = self.per_site_processing_thread_locks.get(site, None)
             if site_semaphore is None:
@@ -201,6 +219,10 @@ class BodyFetcher:
             if have_acquired_lock:
                 self.site_thread_starvation_warning_thread_launched(site)
             else:
+                if site == 'stackoverflow.com':
+                    thread_stats['threads_limited_SO'] += 1
+                else:
+                    thread_stats['threads_limited_non_SO'] += 1
                 if not self.send_site_thread_starvation_warning_if_appropriate(site):
                     log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
             return have_acquired_lock
@@ -258,7 +280,7 @@ class BodyFetcher:
         # The thread lock for this is the check_queue_lock
         self.cpu_starvation_last_thread_not_launched_timestamp = None
 
-    def get_fist_queue_item_to_process(self):
+    def get_first_queue_item_to_process(self, thread_stats):
         # We use a copy of the queue keys (sites) and lengths in order to allow
         # the queue to be changed in other threads.
         # Overall this results in a FIFO for sites which have reached their threshold, because
@@ -276,6 +298,7 @@ class BodyFetcher:
                     if not self.send_cpu_starvation_warning_if_appropriate():
                         log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
                                                       + ', which is too high to launch an additional scan thread.')
+                    thread_stats['high_CPU'] += 1
                     return None
                 self.cpu_starvation_warning_thread_launched()
                 special_sites = []
@@ -288,13 +311,13 @@ class BodyFetcher:
                     if site in self.special_cases:
                         special_sites.append(site)
                         if length >= self.special_cases[site]:
-                            if self.acquire_site_processing_lock(site):
+                            if self.acquire_site_processing_lock(site, thread_stats):
                                 site_to_handle = site
                                 break
                     if is_time_sensitive_time and site in self.time_sensitive:
                         special_sites.append(site)
                         if length >= 1:
-                            if self.acquire_site_processing_lock(site):
+                            if self.acquire_site_processing_lock(site, thread_stats):
                                 site_to_handle = site
                                 break
                 else:
@@ -307,7 +330,7 @@ class BodyFetcher:
                     # one without a special case
                     for site, length in sites_in_queue.items():
                         if length >= self.threshold:
-                            if self.acquire_site_processing_lock(site):
+                            if self.acquire_site_processing_lock(site, thread_stats):
                                 site_to_handle = site
                                 break
 
@@ -381,7 +404,7 @@ class BodyFetcher:
             # unclear that would help this thread.
             return False
 
-    def make_api_call_for_site(self, site, new_posts):
+    def make_api_call_for_site(self, site, new_posts, thread_stats):
         new_post_ids = [int(k) for k in new_posts.keys()]
         Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=new_post_ids)
 
@@ -465,6 +488,7 @@ class BodyFetcher:
         time.sleep(3)
 
         with GlobalVars.api_request_lock:
+            thread_stats['api_calls'] += 1
             # Respect backoff, if we were given one
             if GlobalVars.api_backoff_time > time.time():
                 time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
@@ -568,7 +592,7 @@ class BodyFetcher:
             nonlocal scan_stats_text
             now = time.time()
             scan_stats_text = ('elapsed time: {}; scanned: {}, Q({}), A({});'
-                               ' unchanged: Q({}), A({}); no post lock: {}; errors: {}')
+                               ' unchanged: Q({}), A({}); no post lock: {}; post errors: {}')
             scan_stats_text = scan_stats_text.format(
                 round(now - full_start_time, 2),
                 scan_stats.get('posts_scanned', 0),
@@ -577,7 +601,7 @@ class BodyFetcher:
                 scan_stats.get('unchanged_questions', 0),
                 scan_stats.get('unchanged_answers', 0),
                 scan_stats.get('no_post_lock', 0),
-                scan_stats.get('errors', 0))
+                scan_stats.get('post_errors', 0))
 
         def set_thread_name():
             current_thread.name = (base_thread_name + '\n' + scan_stats_text + posts_processed_text
@@ -731,7 +755,7 @@ class BodyFetcher:
 
         def post_had_error():
             nonlocal post_processing_text
-            increment_scan_stat('errors')
+            increment_scan_stat('post_errors')
             build_post_thread_name_text()
             post_processing_text += '; ERROR'
             end_post()

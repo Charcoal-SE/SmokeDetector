@@ -954,6 +954,11 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         'errors': 0,
         'max_scan_time': 0,
         'max_scan_time_post': '',
+        'post_processing_lock': 0,
+        'check_unchanged': 0,
+        'threads': '',
+        'high_CPU': '',
+        'site_limited': '',
     }
     known_operations = [
         'clear',
@@ -1039,10 +1044,21 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         stats['posts_scanned'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scanned)
         posts_questions_answers_scantime = (round(stats.pop('scan_time', 0), 2),
                                             round(stats.pop('scan_question', 0), 2),
-                                            round(stats.pop('scan_answers', 0), 2))
+                                            round(stats.pop('scan_answer', 0), 2))
         stats['scan_time'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scantime)
         q_and_a_unchanged = tuple(stats.pop('unchanged_' + key, 0) for key in ['questions', 'answers'])
         stats['unchanged_posts'] = '{}, Q({}), A({})'.format(sum(q_and_a_unchanged), *q_and_a_unchanged)
+        threads_limited_so_non_so = (stats.pop('threads_limited_SO', 0), stats.pop('threads_limited_non_SO', 0))
+        limited_threads = sum(threads_limited_so_non_so)
+        total_threads = stats.pop('thread_count', 0)
+        api_calls = stats.pop('api_calls', 0)
+        stats['threads'] = ('{}, API({}), 155QA({})'
+                            ', EW({}), BFrr({})').format(total_threads,
+                                                         api_calls,
+                                                         stats.pop('source_155-questions-active', 0),
+                                                         stats.pop('source_EditWatcher', 0),
+                                                         stats.pop('source_BF_re-reqest', 0))
+        stats['site_limited'] = '{}, SO({}), nonSO({})'.format(limited_threads, *threads_limited_so_non_so)
         # Round all the floats to 2 digits after the decimal point
         for key, value in stats.items():
             if type(value) is float:

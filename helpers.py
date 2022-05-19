@@ -384,7 +384,7 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
         source_text = " from {}".format(source)
     t = Thread(name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
                target=GlobalVars.bodyfetcher.add_to_queue,
-               args=(hostname, question_id, should_check_site))
+               args=(hostname, question_id, should_check_site, source))
     t.start()
 
 
