@@ -26689,7 +26689,6 @@
 1613716237	Makyen	nayakam\.com
 1613716372	cigien	himalaya[\W_]*+land[\W_]*+treks(?!\.com(?<=himalayalandtreks\.com))
 1613716643	cigien	sbc[\W_]*+global[\W_]*+help(?!\.com(?<=sbcglobal-help\.com))(?!\.weebly\.com(?<=sbcglobal-help\.weebly\.com))
-1613720529	Ryan M	seplite\.com
 1613720861	cigien	appsquadz(?!\.com)
 1613721661	cigien	patankarfarmproducts\.com
 1613721771	cigien	patankar[\W_]*+farm[\W_]*+products(?!\.com(?<=patankarfarmproducts\.com))
