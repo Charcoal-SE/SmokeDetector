@@ -39391,3 +39391,4 @@
 1652941873	Nick	dichvuvesinhtrungnam\.com
 1652945943	tripleee	themangroveindia\.com
 1652945998	tripleee	(?:the[\W_]*+)?mangrove[\W_]*+india(?!\.com(?<=themangroveindia\.com))
+1652946858	Makyen	bhuumi[\W_]*+ride(?!\.com(?<=bhuumiride\.com))
