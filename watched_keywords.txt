@@ -38157,7 +38157,6 @@
 1649517978	cigien	shomorikaspelltemple(?:@yahoo\.com)?
 1649519459	cigien	hacklord
 1649519757	Makyen	github\.com/PayteR
-1649519806	Makyen	hacklordjody(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1649524051	Makyen	articlesaur\.com
 1649526018	Makyen	expert-seo-training-institute\.in
 1649533331	cigien	faindx\.com
