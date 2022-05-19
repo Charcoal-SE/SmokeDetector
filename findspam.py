@@ -795,6 +795,34 @@ def misleading_link(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("text repeated in {}", title=False, body_summary=True, max_rep=10000, max_score=10000)
+def body_text_repeated(s, site):
+    """
+    Do some hacks to reduce the need for regex backtracking for this rule
+    """
+    s = s.rstrip("\n")
+    if s.startswith("<p>") and s.endswith("</p>"):
+        s = s[3:-4]
+    initial_words = regex.match(r"\A([^\W_]+)[\W_]+([^\W_]+)[\W_]+([^\W_]+)", s)
+    if not initial_words:
+        return False, ""
+    escaped_initial_words = [regex.escape(x) for x in initial_words.groups()]
+    period = regex.match(
+        r"\A%s[\W_]+%s[\W_]+%s[\W_]+(.{1,40}?)%s[\W_]+%s[\W_]+%s(?=$|[\W_])" % (
+            tuple(escaped_initial_words * 2)), s)
+    if not period:
+        return False, ""
+    period_words = regex.split(r"[\W_]+", period.groups(0)[0])
+    escaped_words = escaped_initial_words + [
+        regex.escape(x) for x in period_words]
+    repeats_regex = r"\A(" + r"[\W_]+".join(escaped_words) + r"[\W_]*){10,}"
+    repeats = regex.match(repeats_regex, s)
+    if repeats:
+        return True, "Body contains repeated phrase '%s'" % repeats.groups(0)[0]
+    return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 @create_rule("repeating words in {}", max_rep=11, stripcodeblocks=True)
 def has_repeating_words(s, site):
     # RegEx DoS warning!!!
