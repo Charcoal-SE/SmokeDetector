@@ -39382,3 +39382,4 @@
 1652897370	Ollie	worldwidepackers\.com
 1652898773	Makyen	(?-i:AZdU0I4C#lQaG00Kl32GZboYq0ARlwg)
 1652902526	Makyen	hackterritory\d*(?:@gmail\.com)?
+1652918582	cigien	earners?[\W_]*+trade[\W_]*+x[\W_]*+plus
