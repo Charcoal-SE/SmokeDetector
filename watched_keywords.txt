@@ -39440,4 +39440,3 @@
 1653049343	Jeff Schaller	godrejsplendour\.net\.in
 1653049564	Makyen	betzillion\.com
 1653052168	Makyen	maadhu[\W_]*+creatives
-1653057710	cigien	godrej[\W_]*+splendour(?!\.net(?<=godrejsplendour\.net))
