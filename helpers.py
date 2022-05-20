@@ -37,6 +37,7 @@ def exit_mode(*args, code=0):
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
     datahandling.flush_queue_timings_data()
+    datahandling.store_post_scan_stats()
     datahandling.store_recently_scanned_posts()
 
     # We have to use '_exit' here, because 'sys.exit' only exits the current
@@ -383,7 +384,7 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
         source_text = " from {}".format(source)
     t = Thread(name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
                target=GlobalVars.bodyfetcher.add_to_queue,
-               args=(hostname, question_id, should_check_site))
+               args=(hostname, question_id, should_check_site, source))
     t.start()
 
 

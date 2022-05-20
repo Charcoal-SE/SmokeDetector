@@ -11,6 +11,7 @@ from configparser import NoOptionError, ConfigParser
 import threading
 import subprocess as sp
 import platform
+import copy
 
 # noinspection PyCompatibility
 import regex
@@ -157,13 +158,15 @@ class GlobalVars:
 
     class PostScanStat:
         """ Tracking post scanning data """
-        # Setting up the stats dict with default values isn't needed. If a key/value pair is in the new_stats
-        # sent to add_stat, then it will be automatically added. The list here is merely to document the
-        # keys and values which are currently expected.
         # All stats in a key are reported into chat using the !!/stats command. The report_order_with_defaults
         # variable in the code for that command shows what's expected to be here, but other values could exist.
-        # stats are accumulated from reboot to reboot.
-        stats = {
+        # Stats are accumulated unless the stats set is locked.
+        # The default stat set is "uptime".
+
+        # Setting up the stats dict with default values isn't needed. If a key/value pair is in the new_stats
+        # sent to add(), then it will be automatically added. The list here is merely to document the
+        # keys and values which are currently expected.
+        default_stats = {
             'scan_time': 0,
             'posts_scanned': 0,
             'grace_period_edits': 0,
@@ -174,72 +177,121 @@ class GlobalVars:
             'max_scan_time': 0,
             'max_scan_time_post': '',
         }
-        # stats_for_ms are accumulated, but cleared each time SD reports to MS.
-        stats_for_ms = {}
+        # stats is a dict of stat_sets, which use keys as the name of the set of stats. The default keys are
+        # 'all', 'uptime', and 'ms'.
+        # Each stat set is a dict with keys: 'stats', 'start_timestamp', and optionally 'locked_timestamp'.
+        # If the stats set is locked, the optional 'locked_timestamp' key exists and has a datetime value.
+        # All of the actual stats are in the dict which is stored in the 'stats' key.
+        stats = {}
         rw_lock = threading.Lock()
 
         @staticmethod
-        def add_stat(new_stats):
-            """ Adding post scanning data """
+        def add(new_stats):
+            """ Add post scanning data """
             with GlobalVars.PostScanStat.rw_lock:
-                all_stats = GlobalVars.PostScanStat.stats
+                dict_of_stat_sets = GlobalVars.PostScanStat.stats
                 # First, deal with all stats which are not simple accumulators
                 new_max_time = new_stats.pop('max_scan_time', 0)
                 new_max_time_post = new_stats.pop('max_scan_time_post', '')
-                if (new_max_time > all_stats.get('max_scan_time', 0)):
-                    all_stats['max_scan_time'] = new_max_time
-                    all_stats['max_scan_time_post'] = new_max_time_post
-                # Every other stat is accumulated into the existing values.
-                for key, value in new_stats.items():
-                    old_value = all_stats.get(key, 0)
-                    if type(value) in [int, float]:
-                        # There isn't any value currently used here which should be anything other than an
-                        # int or float, but, just in case, we only directly replace string values
-                        all_stats[key] = old_value + value
-                    else:
-                        all_stats[key] = value
-                # MS wants only posts_scanned, scan_time, posts_per_second, but it doesn't hurt to also
-                # keep any additional ones which are sccumulators. We don't keep a copy of anything which
-                # isn't accumulated (e.g. max_time and max_time_post).
-                ms_stats = GlobalVars.PostScanStat.stats_for_ms
-                for key, value in new_stats.items():
-                    old_value = ms_stats.get(key, 0)
-                    if type(value) in [int, float]:
-                        # There isn't any value currently used here which should be anything other than an
-                        # int or float, but, just in case, we only directly replace string values
-                        ms_stats[key] = old_value + value
-                    else:
-                        ms_stats[key] = value
+                for stat_set in dict_of_stat_sets.values():
+                    # MS wants only posts_scanned, scan_time, posts_per_second, but it doesn't hurt to also
+                    # keep any additional ones.
+                    if not stat_set.get('locked_timestamp', False):
+                        these_stats = stat_set['stats']
+                        if new_max_time > these_stats.get('max_scan_time', 0):
+                            these_stats['max_scan_time'] = new_max_time
+                            these_stats['max_scan_time_post'] = new_max_time_post
+                        for stat_name, value in new_stats.items():
+                            old_value = these_stats.get(stat_name, 0)
+                            if type(value) in [int, float]:
+                                these_stats[stat_name] = old_value + value
+                            else:
+                                # There isn't any value currently used here which should be anything other than an int
+                                # or float, but, just in case, we directly replace values which aren't int or float.
+                                these_stats[stat_name] = value
 
         @staticmethod
-        def get_stats_for_ms():
-            """ Getting post scanning statistics for reporting to MS """
-            copy = GlobalVars.PostScanStat.get_stats(True)
+        def get_stats_for_ms(reset=False):
+            """ Get post scanning statistics for reporting to MS """
+            stats_copy = GlobalVars.PostScanStat.get('ms', reset=reset)
             # MS wants only posts_scanned, scan_time, posts_per_second
-            return (copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
+            return (stats_copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
 
         @staticmethod
-        def get_stats(use_ms_stats=False):
-            """ Getting post scanning statistics """
+        def get(stats_set_key='uptime', reset=False):
+            """ Get post scanning statistics from a stat set, including derived data, start and lock timestamps. """
             with GlobalVars.PostScanStat.rw_lock:
-                if use_ms_stats:
-                    copy = GlobalVars.PostScanStat.stats_for_ms.copy()
-                else:
-                    copy = GlobalVars.PostScanStat.stats.copy()
+                stats_set = copy.deepcopy(GlobalVars.PostScanStat.stats[stats_set_key])
+                if reset is True:
+                    GlobalVars.PostScanStat._reset(stats_set_key)
+            stats_copy = stats_set['stats']
             # Derived values:
-            scan_time = copy.get('scan_time', 0)
-            posts_scanned = copy.get('posts_scanned', 0)
+            scan_time = stats_copy.get('scan_time', 0)
+            posts_scanned = stats_copy.get('posts_scanned', 0)
             if scan_time == 0:
-                copy['posts_per_second'] = None
+                stats_copy['posts_per_second'] = None
             else:
-                copy['posts_per_second'] = posts_scanned / scan_time
-            return copy
+                stats_copy['posts_per_second'] = posts_scanned / scan_time
+            # Stats which are properties of the stat_set
+            stats_copy['start_timestamp'] = stats_set['start_timestamp']
+            locked_timestamp = stats_set.get('locked_timestamp', None)
+            if locked_timestamp:
+                stats_copy['locked_timestamp'] = locked_timestamp
+            return stats_copy
+
+        @staticmethod
+        def _reset(stats_set_key):
+            """ Resets/clears/creates post scanning data in a stats set without getting the rw_lock """
+            GlobalVars.PostScanStat.stats[stats_set_key] = {}
+            GlobalVars.PostScanStat.stats[stats_set_key]['stats'] = GlobalVars.PostScanStat.default_stats.copy()
+            GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.utcnow()
+
+        @staticmethod
+        def reset(stats_set_key):
+            """ Resets/clears/creates post scanning data in a stats set """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat._reset(stats_set_key)
+
+        @staticmethod
+        def lock(stats_set_key):
+            """ Locks post scanning data in a stats set """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.stats[stats_set_key]['locked_timestamp'] = datetime.utcnow()
+
+        @staticmethod
+        def unlock(stats_set_key):
+            """ Unlocks post scanning data in a stats set """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.stats[stats_set_key].pop('locked_timestamp', None)
+
+        @staticmethod
+        def delete(stats_set_key):
+            """ Deletes a stats set """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.stats.pop(stats_set_key, None)
+
+        @staticmethod
+        def copy(from_type, to_type):
+            """ Copies the contents of a stat set to another stat set key """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.stats[to_type] = copy.deepcopy(GlobalVars.PostScanStat.stats[from_type])
+
+        @staticmethod
+        def create(stats_set_key):
+            """ Creates a stat set (identical to a reset) """
+            GlobalVars.PostScanStat.reset[stats_set_key]
+
+        @staticmethod
+        def get_set_keys():
+            """ Get a list of the available stat set keys """
+            with GlobalVars.PostScanStat.rw_lock:
+                keys = list(GlobalVars.PostScanStat.stats.keys())
+            return keys
 
         @staticmethod
         def reset_ms_stats():
-            """ Resetting post scanning data """
-            with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.stats_for_ms = {}
+            """ Reset post scanning data for MS """
+            GlobalVars.PostScanStat.reset('ms')
 
     config_parser = ConfigParser(interpolation=None)
 
@@ -438,6 +490,7 @@ class GlobalVars:
                 cls.commit.id, cls.location)
 
 
-GlobalVars.PostScanStat.reset_ms_stats()
+for stats_set_key in ['all', 'uptime', 'ms']:
+    GlobalVars.PostScanStat.reset(stats_set_key)
 GlobalVars.MSStatus.reset_ms_status()
 GlobalVars.reload()
