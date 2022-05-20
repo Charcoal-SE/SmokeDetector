@@ -39427,3 +39427,4 @@
 1653040087	tripleee	paylessvouchercodes\.com
 1653040407	tripleee	mbatalks\.in
 1653040854	Glorfindel	qrg101\.com
+1653040975	tripleee	(?-i:^friends travel$)
