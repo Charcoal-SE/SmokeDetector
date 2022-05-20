@@ -659,3 +659,4 @@ Visualytes
 (?-i:^cd\d+onlinedata$)
 (?-i:^Simple Intelligent Systems$)
 (?-i:^Pakainfo$)
+(?-i:^Ximple Solutions$)
