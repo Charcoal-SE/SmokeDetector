@@ -39437,3 +39437,4 @@
 1653045863	tripleee	kalyanavirundhu[\W_]*+biryani(?!\.com(?<=kalyanavirundhubiryani\.com))
 1653046099	tripleee	Shopify webhook the URL is not triggered
 1653047537	tripleee	abudhabimodels\.com
+1653049343	Jeff Schaller	godrejsplendour\.net\.in
