@@ -660,3 +660,4 @@ Visualytes
 (?-i:^Simple Intelligent Systems$)
 (?-i:^Pakainfo$)
 (?-i:^Ximple Solutions$)
+(?-i:^Hande Hospital$)
