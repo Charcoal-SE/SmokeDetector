@@ -986,6 +986,10 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         'uptime',
         'ms',
     ]
+    from_stats = '' if from_stats is None else from_stats
+    to_stats = '' if to_stats is None else to_stats
+    problem_text = 'The options you supplied ("{}", "{}", "{}") were not understood.'.format(operation, from_stats,
+                                                                                             to_stats)
     if operation not in known_operations:
         if from_stats or to_stats:
             return problem_text
@@ -994,10 +998,6 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         else:
             from_stats = 'uptime'
         operation = 'get'
-    from_stats = '' if from_stats is None else from_stats
-    to_stats = '' if to_stats is None else to_stats
-    problem_text = 'The options you supplied ("{}", "{}", "{}") were not understood.'.format(operation, from_stats,
-                                                                                             to_stats)
     not_permitted_text = ('The operation you requested,'
                           ' {}, is not permitted on the stats you specified: {}, {}').format(operation, from_stats,
                                                                                              to_stats).rstrip(' ,')
