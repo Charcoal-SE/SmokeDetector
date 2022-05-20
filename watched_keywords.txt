@@ -39418,3 +39418,4 @@
 1653030065	tripleee	wizolio\.com
 1653030641	tripleee	wizolio(?!\.com)
 1653034268	tripleee	gipsfarmfresh(?!\.in)
+1653034627	tripleee	chinausmile(?!\.com)
