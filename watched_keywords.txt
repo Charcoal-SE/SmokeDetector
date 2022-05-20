@@ -39442,3 +39442,4 @@
 1653057821	cigien	abu[\W_]*+dhabi[\W_]*+models(?!\.com(?<=abudhabimodels\.com))
 1653058161	cigien	business-analytic\.de
 1653059235	cigien	(?-i:1FAIpQLScu26UZZvPoBoeXyjQaEn1Xc8kBzIjJyN8xgHywTkjbtASKtg)(?#google forms)
+1653062057	cigien	sitedayexe\.id
