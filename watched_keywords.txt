@@ -39417,3 +39417,4 @@
 1653023887	cigien	a-lign\.com
 1653027018	tripleee	pdfsnake\.com
 1653030065	tripleee	wizolio\.com
+1653030641	tripleee	wizolio(?!\.com)
