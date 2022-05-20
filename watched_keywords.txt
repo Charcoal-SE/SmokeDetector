@@ -39421,3 +39421,4 @@
 1653034627	tripleee	chinausmile(?!\.com)
 1653034658	tripleee	chinausmile\.com
 1653035936	Cody Gray	(?-i:PAIC)
+1653035958	Cody Gray	(?-i:Paul[\W_]*Abraham)
