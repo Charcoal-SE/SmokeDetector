@@ -1030,8 +1030,7 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         stats_set_keys = GlobalVars.PostScanStat.get_set_keys()
         response = 'The currently stored stats sets are named: "' + '", "'.join(stats_set_keys) + '".'
     elif operation in ['get', 'display', 'show'] and from_stats and not to_stats:
-        # posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
-        # get_stats() gets a copy of the stats, not the actual reference.
+        # get() retrieves a copy of the stats, not the actual reference.
         stats = GlobalVars.PostScanStat.get(from_stats)
         # First, we deal with converting the max_scan_time_post into a Markdown link. We don't know if the post
         # is an answer or question, and SE doesn't care wrt. the URL used when you use /q/ID#.
