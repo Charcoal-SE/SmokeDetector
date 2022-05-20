@@ -2619,3 +2619,4 @@ Q(?:uick)?B(?:ooks)?[\W_]*ProAdvisors?
 suonerie
 slot[\W_]*online
 hacklordjody(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+drbenjaminlottospell711(?:@gmail\.com)?
