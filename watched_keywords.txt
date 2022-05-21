@@ -39451,3 +39451,4 @@
 1653103683	cigien	(?-i:wAV7Hfmj7ME)(?#youtu.be)
 1653104329	cocomac	1GuK6ZKHSQvn9BjvLv8Zj7bFEN4gZV5Puz
 1653109137	cigien	wdptechnologies\.com
+1653109171	cigien	wdp[\W_]*+technologies(?!\.com(?<=wdptechnologies\.com))
