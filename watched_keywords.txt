@@ -39464,3 +39464,4 @@
 1653147743	cigien	shadowr\.org
 1653147773	cigien	cryptocoders\.com\.au
 1653147917	cigien	lavedaboutique\.com
+1653148447	cigien	businessstudynotes\.com
