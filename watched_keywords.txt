@@ -20353,7 +20353,6 @@
 1592226179	Machavity	migrateemails\.com
 1592226355	Machavity	fixlocal\.co\.uk
 1592228992	Xnero	Fixlocal(?#no case sensitive flag as the user used this name with two different capitalisations)
-1592229378	Xnero	(?-i:ketosis)
 1592231725	Machavity	machinerypicks\.com
 1592234016	Makyen	watumie[\W_]*+uwapendao
 1592234031	Makyen	(?-i:0Ajvd\.gif)
