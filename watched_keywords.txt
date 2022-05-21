@@ -39453,3 +39453,4 @@
 1653109171	cigien	wdp[\W_]*+technologies(?!\.com(?<=wdptechnologies\.com))
 1653109156	richardec	aldaffa\.com\.qa
 1653123202	Cody Gray	ketosis
+1653124157	Cody Gray	joyrulez\.com
