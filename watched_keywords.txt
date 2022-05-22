@@ -39483,3 +39483,4 @@
 1653214812	Jeff Schaller	comprarelapatente\.com
 1653214835	Jeff Schaller	passepermis\.com
 1653214907	Jeff Schaller	casadelpuros\.com
+1653214939	Jeff Schaller	emporiohabanos\.com
