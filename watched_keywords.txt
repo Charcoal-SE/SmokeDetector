@@ -39492,3 +39492,4 @@
 1653241146	cigien	freemailsender\.com
 1653242446	cigien	infomativebeats\.com
 1653242489	cigien	infomative[\W_]*+beats(?!\.com(?<=infomativebeats\.com))
+1653261259	cigien	minorworkpermit\.com
