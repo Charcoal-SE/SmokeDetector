@@ -662,3 +662,4 @@ Visualytes
 (?-i:^Ximple Solutions$)
 (?-i:^Hande Hospital$)
 ^skale[\W_]*+fitness$
+(?-i:^PAIC Immigration Consultant$)
