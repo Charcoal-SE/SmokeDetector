@@ -39500,7 +39500,6 @@
 1653289762	Ryan M	peergrowth\.net
 1653290108	Ryan M	daempos\.coo?m
 1653290135	tripleee	daempos(?!\.coo?m)
-1653291543	tripleee	achievephysiorehab(?!\.ca)
 1653291656	tripleee	tapestri\.io
 1653291678	tripleee	(?-i:3AA52K7)(?# bit.ly)
 1653292884	tripleee	avsjournal\.com
