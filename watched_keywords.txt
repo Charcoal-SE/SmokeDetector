@@ -39521,3 +39521,4 @@
 1653324387	cigien	vasavi[\W_]*+hospital(?!\.org(?<=vasavihospital\.org))
 1653324679	cigien	synersoft(?!\.in)
 1653325129	cigien	lootstools\.darye\.dev
+1653325425	cigien	allassignmentexperts\.com
