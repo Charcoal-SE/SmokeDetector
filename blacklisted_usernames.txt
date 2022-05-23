@@ -662,3 +662,4 @@ Visualytes
 (?-i:^Hande Hospital$)
 ^skale[\W_]*+fitness$
 (?-i:^PAIC Immigration Consultant$)
+(?-i:^pronewsreviews$)
