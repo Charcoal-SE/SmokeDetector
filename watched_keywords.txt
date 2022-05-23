@@ -39519,3 +39519,4 @@
 1653322666	richardec	playlistpumppr\.agency
 1653323211	Suraj Rao	upholtdloginsus\.teachable\.com
 1653324387	cigien	vasavi[\W_]*+hospital(?!\.org(?<=vasavihospital\.org))
+1653324679	cigien	synersoft(?!\.in)
