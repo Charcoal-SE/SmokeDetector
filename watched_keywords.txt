@@ -39506,3 +39506,4 @@
 1653294080	tripleee	achieve[\W_]*+physiorehab(?!\.ca(?<=achievephysiorehab\.ca))
 1653294147	tripleee	vn88\.io
 1653297296	tripleee	sunaofe\.com
+1653297321	tripleee	sunaofe(?!\.com)
