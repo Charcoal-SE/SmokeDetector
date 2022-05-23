@@ -8,6 +8,9 @@ items:
   - may.ns.cloudflare.com.
 - ns:
   - aarav.ns.cloudflare.com.
+  - christina.ns.cloudflare.com.
+- ns:
+  - aarav.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
   - aarav.ns.cloudflare.com.
