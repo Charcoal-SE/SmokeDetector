@@ -2046,7 +2046,6 @@
 1517422995	Glorfindel	hammerofthor\.name
 1517473396	Glorfindel	vironit
 1517476876	Glorfindel	tubemate\.xyz
-1517478433	Glorfindel	vsoftware\.org
 1517484937	Byte Commander	inandoutsteamers\.com
 1517485460	Glorfindel	viplocksmithtampa\.com
 1517485516	Glorfindel	mmfilmesonlinex\.org
