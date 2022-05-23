@@ -39504,3 +39504,4 @@
 1653291678	tripleee	(?-i:3AA52K7)(?# bit.ly)
 1653292884	tripleee	avsjournal\.com
 1653294080	tripleee	achieve[\W_]*+physiorehab(?!\.ca(?<=achievephysiorehab\.ca))
+1653294147	tripleee	vn88\.io
