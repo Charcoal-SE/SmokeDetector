@@ -30629,7 +30629,6 @@
 1626234998	Makyen	vipcontentshop\.com
 1626235175	Makyen	ingoodpost\.com
 1626235316	Makyen	^the[\W_]*+river[\W_]*+flows[\W_]*+eastward\w*+
-1626240615	Cody Gray	bharathorthopaedics\.com
 1626250319	Glorfindel	onyamagazine\.com
 1626259504	Makyen	bharath[\W_]*+ortho(?:pa?edics?(?!\.com(?<=bharathorthopaedics\.com)))?(?:[\W_]*+hospital)?
 1626259526	Makyen	d(?:octo)?r[\W_]*+bharath
