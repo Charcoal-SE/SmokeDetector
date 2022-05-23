@@ -1243,6 +1243,9 @@ items:
   - ingrid.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
+  - irena.ns.cloudflare.com.
+  - vasilii.ns.cloudflare.com.
+- ns:
   - iris.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
