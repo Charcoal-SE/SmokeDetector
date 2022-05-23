@@ -39501,3 +39501,4 @@
 1653290108	Ryan M	daempos\.coo?m
 1653290135	tripleee	daempos(?!\.coo?m)
 1653291543	tripleee	achievephysiorehab(?!\.ca)
+1653291656	tripleee	tapestri\.io
