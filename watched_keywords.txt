@@ -39511,3 +39511,4 @@
 1653298905	tripleee	paulmankin\.com
 1653299441	tripleee	aiwritingtools\.in
 1653300197	tripleee	codequiry(?!\.com)
+1653301062	tripleee	widefy\.in
