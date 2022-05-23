@@ -1508,6 +1508,9 @@ items:
   - lloyd.ns.cloudflare.com.
 - ns:
   - lara.ns.cloudflare.com.
+  - pete.ns.cloudflare.com.
+- ns:
+  - lara.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
   - lara.ns.cloudflare.com.
