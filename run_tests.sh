@@ -10,7 +10,7 @@ python3 -m flake8 --config=tox_tests.ini ./test/
 python3 -m flake8 --config=tox_classes.ini ./classes/
 
 : Lint code
-python3 -m flake8 ./
+python3 -m flake8 ./*.py
 
 : Pytest
 python3 -W default::Warning -m pytest test
