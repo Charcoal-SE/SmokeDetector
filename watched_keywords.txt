@@ -39525,4 +39525,3 @@
 1653332488	Glorfindel	setlifestyle\.in
 1653332520	Glorfindel	totalnewsonline\.com
 1653357241	cigien	soran\.edu\.iq
-1653366406	tripleee	milan(?:[\W_]*+driver)?[\W_]*+taxii
