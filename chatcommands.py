@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
+from chatcommunicate import add_room, block_room, CmdException, CmdExceptionLongReply, command, get_report_data, \
     is_privileged, message, \
     tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
@@ -417,8 +417,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
                 digit_count_text = " The supplied pattern contains" + \
                                    " {} digits, which doesn't meet the requirements.".format(digit_count)
-            raise CmdException("That pattern can't be detected by the number detections. " +
-                               number_regex_requires + digit_count_text)
+            raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
+                                        number_regex_requires + digit_count_text)
         normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
         normalized_on_list = 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
                              ' is already on the number {}list{extra}. You can use' + \
@@ -448,7 +448,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         if deobfuscated_processed != processed:
             other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
                                 " use the non-obfuscated number. Perhaps try: " +
-                                "`!!/{} {}`".format(blacklist_command, deobfuscated_processed))
+                                "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed))
         formatted_north_american = \
             phone_numbers.get_north_american_with_separators_from_normalized(normalized_deobfuscated)
         north_american_formatting = "use a format which starts with an optional `1` followed by" + \
@@ -459,7 +459,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                     " end of the pattern to force also using the alternate normalized form, or" + \
                                     " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
                                     " incorrectly recognized as one." + \
-                                    " Perhaps try \n`!!/{} {}`\n".format(blacklist_command, formatted_north_american)
+                                    " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
         if not force_no_north_american and unused_maybe_north_american_norm:
             other_issues.append("That pattern may be a North American number. If it is, please " +
                                 north_american_formatting)
@@ -496,11 +496,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
             if reasons:
-                raise CmdException("That pattern looks like it's already caught by " +
-                                   format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
+                raise CmdExceptionLongReply("That pattern looks like it's already caught by " +
+                                            format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
 
         if other_issues_text:
-            raise CmdException(other_issues_text + append_force_to_do)
+            raise CmdExceptionLongReply(other_issues_text + append_force_to_do)
 
     metasmoke_down = False
 
