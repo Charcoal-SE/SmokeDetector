@@ -39550,3 +39550,4 @@
 1653391261	tripleee	(?-i:^bran arizona$)
 1653391401	tripleee	(?-i:^gold gold$)
 1653393406	tripleee	livetogelresmi\.com
+1653393436	tripleee	marvelbuilding\.com
