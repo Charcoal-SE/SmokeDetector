@@ -39543,3 +39543,4 @@
 1653387102	tripleee	dolphin-emulator-safe(?# sites.google.com)
 1653388052	tripleee	thetravelbrief\.com
 1653388285	tripleee	(?-i:05jyvbIpNYk)(?# youtube)
+1653388942	tripleee	sistemakalinka\.com
