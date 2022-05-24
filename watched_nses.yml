@@ -262,6 +262,9 @@ items:
   - priscilla.ns.cloudflare.com.
 - ns:
   - anuj.ns.cloudflare.com.
+  - sue.ns.cloudflare.com.
+- ns:
+  - anuj.ns.cloudflare.com.
   - surina.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
