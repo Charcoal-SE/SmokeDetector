@@ -225,6 +225,9 @@ items:
   - amit.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
+  - amit.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
   - amy.ns.cloudflare.com.
   - cody.ns.cloudflare.com.
 - ns:
