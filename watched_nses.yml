@@ -124,6 +124,9 @@ items:
   - aria.ns.cloudflare.com.
 - ns:
   - albert.ns.cloudflare.com.
+  - angela.ns.cloudflare.com.
+- ns:
+  - albert.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
