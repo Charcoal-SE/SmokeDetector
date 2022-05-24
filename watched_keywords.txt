@@ -39527,3 +39527,4 @@
 1653366474	tripleee	milan(?:[\W_]*+driver)?[\W_]*+t[ae]xi
 1653367307	tripleee	we'm
 1653374785	cocomac	blogsandarticlesgroup\.com
+1653375295	tripleee	nsk8\.co
