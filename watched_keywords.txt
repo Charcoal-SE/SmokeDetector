@@ -39549,3 +39549,4 @@
 1653391105	tripleee	wisemarket\.co\.nz
 1653391261	tripleee	(?-i:^bran arizona$)
 1653391401	tripleee	(?-i:^gold gold$)
+1653393406	tripleee	livetogelresmi\.com
