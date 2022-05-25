@@ -39574,3 +39574,4 @@
 1653460870	tripleee	funfish33(?!\.com)
 1653465306	Glorfindel	goaloo
 1653465327	Glorfindel	goaloo1\.com
+1653466037	Jeff Schaller	manifoldmining\.com
