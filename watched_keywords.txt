@@ -39581,3 +39581,4 @@
 1653468889	tripleee	glamourbeauty\.sg
 1653468925	tripleee	247sport\.net
 1653469024	tripleee	new-gbplus\.net
+1653469063	tripleee	lesbian[\W_]*+dating
