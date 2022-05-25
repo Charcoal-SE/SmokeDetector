@@ -972,6 +972,9 @@ items:
   - rajeev.ns.cloudflare.com.
 - ns:
   - eleanor.ns.cloudflare.com.
+  - lewis.ns.cloudflare.com.
+- ns:
+  - eleanor.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
