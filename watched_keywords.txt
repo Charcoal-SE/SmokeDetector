@@ -39588,3 +39588,4 @@
 1653475835	Cody Gray	IPSI[\W_]*Pay(?!\.com(?<=ipsipay\.com))
 1653475910	Cody Gray	id1603055932(?# Apple App Store ID)
 1653476437	Cody Gray	(?-i:8EmN2ma25W)(?# Discord)
+1653476460	Cody Gray	tencent_imsdk
