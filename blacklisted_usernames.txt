@@ -234,7 +234,6 @@ devleadz
 (?-i:^Shakhaz Alishka$)
 (?-i:^Vijay Mann$)
 (?-i:^okfine$)
-village\W*talkies
 quran[\W_]*+for[\W_]*+kids
 ^buy[\W_]*+buk[\W_]*tablets$
 (?-i:^Digiworld Expert$)
