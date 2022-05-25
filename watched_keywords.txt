@@ -39542,7 +39542,6 @@
 1653389329	Cody Gray	Geo[\W_]*Markets
 1653389358	Zoe stands with Ukraine	sheerquote\.com
 1653391063	tripleee	transglobal[\W_]*+overseas
-1653391105	tripleee	wisemarket\.co\.nz
 1653391261	tripleee	(?-i:^bran arizona$)
 1653391401	tripleee	(?-i:^gold gold$)
 1653393406	tripleee	livetogelresmi\.com
