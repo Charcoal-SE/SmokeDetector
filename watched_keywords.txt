@@ -39600,3 +39600,4 @@
 1653497754	cigien	design[\W_]*+stallion(?!\.com(?<=designstallion\.com))
 1653497849	cigien	hnr[\W_]*+speech[\W_]*+and[\W_]*+hearing(?!\.com(?<=hnrspeechandhearing\.com))
 1653498303	cigien	360degreecloud\.in
+1653500602	cigien	androidstudioo\.com
