@@ -15,6 +15,7 @@ import threading
 import time
 import yaml
 import shlex
+import copy
 
 import datahandling
 import metasmoke
@@ -41,22 +42,36 @@ class CmdException(Exception):
 
 
 _prefix_commands = {}
+_prefix_commands_lock = threading.RLock()
+
 _reply_commands = {}
+_reply_commands_lock = threading.RLock()
 
 _clients = {
     "stackexchange.com": None,
     "stackoverflow.com": None,
     "meta.stackexchange.com": None
 }
+_clients_lock = threading.RLock()
 
-_command_rooms = set()
-_watcher_rooms = set()
 _room_roles = {}
+_room_roles_lock = threading.RLock()
+
 _privileges = {}
+_privileges_lock = threading.RLock()
 
 _global_block = -1
+_global_block_lock = threading.RLock()
+
 _rooms = {}
+_command_rooms = set()
+_watcher_rooms = set()
+_rooms_lock = threading.RLock()
+
 _last_messages = LastMessages({}, collections.OrderedDict())
+_last_messages_lock = threading.RLock()
+
+# queue.Queue() is already thread safe, so doesn't need manual locks.
 _msg_queue = queue.Queue()
 
 _pickle_run = threading.Event()
@@ -68,7 +83,10 @@ def init(username, password, try_cookies=True):
     global _room_data
     global _last_messages
 
-    for site in _clients.keys():
+    with _clients_lock:
+        client_keys = [key for key in _clients.keys()]
+
+    for site in client_keys:
         client = Client(site)
         logged_in = False
 
@@ -128,7 +146,8 @@ def init(username, password, try_cookies=True):
             else:
                 raise Exception("Failed to log into " + site + ", max retries exceeded")
 
-        _clients[site] = client
+        with _clients_lock:
+            _clients[site] = client
 
     if os.path.exists("rooms_custom.yml"):
         parse_room_config("rooms_custom.yml")
@@ -140,7 +159,8 @@ def init(username, password, try_cookies=True):
 
     if datahandling.has_pickle("messageData.p"):
         try:
-            _last_messages = datahandling.load_pickle("messageData.p")
+            with _last_messages_lock:
+                _last_messages = datahandling.load_pickle("messageData.p")
         except EOFError:
             pass
 
@@ -152,13 +172,15 @@ def init(username, password, try_cookies=True):
 
 
 def join_command_rooms():
-    for site, roomid in _command_rooms:
-        room = _clients[site].get_room(roomid)
-        deletion_watcher = (site, roomid) in _watcher_rooms
+    with _rooms_lock:
+        for site, roomid in _command_rooms:
+            with _clients_lock:
+                room = _clients[site].get_room(roomid)
+            deletion_watcher = (site, roomid) in _watcher_rooms
 
-        room.join()
-        room.watch_socket(on_msg)
-        _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
+            room.join()
+            room.watch_socket(on_msg)
+            _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
 
 
 def parse_room_config(path):
@@ -172,55 +194,57 @@ def parse_room_config(path):
     rooms = {}
     host_fields = {'stackexchange.com': 1, 'meta.stackexchange.com': 2, 'stackoverflow.com': 3}
 
-    for site, site_rooms in room_dict.items():
-        for roomid, room in site_rooms.items():
-            room_identifier = (site, roomid)
-            # print("Process {}".format(room_identifier))
-            rooms[room_identifier] = room
-            if "privileges" in room and "inherit" in room["privileges"]:
-                inherits.append({'from': (room["privileges"]["inherit"]["site"],
-                                          room["privileges"]["inherit"]["room"]), 'to': room_identifier})
-                if "additional" in room["privileges"]:
-                    _privileges[room_identifier] =\
-                        set([user_data[x][host_fields[site]] for x in room["privileges"]["additional"]])
-            elif "privileges" in room:
-                _privileges[room_identifier] = set([user_data[x][host_fields[site]] for x in room["privileges"]])
+    with _privileges_lock, _rooms_lock:
+        for site, site_rooms in room_dict.items():
+            for roomid, room in site_rooms.items():
+                room_identifier = (site, roomid)
+                # print("Process {}".format(room_identifier))
+                rooms[room_identifier] = room
+                if "privileges" in room and "inherit" in room["privileges"]:
+                    inherits.append({'from': (room["privileges"]["inherit"]["site"],
+                                              room["privileges"]["inherit"]["room"]), 'to': room_identifier})
+                    if "additional" in room["privileges"]:
+                        _privileges[room_identifier] =\
+                            set([user_data[x][host_fields[site]] for x in room["privileges"]["additional"]])
+                elif "privileges" in room:
+                    _privileges[room_identifier] = set([user_data[x][host_fields[site]] for x in room["privileges"]])
+                else:
+                    _privileges[room_identifier] = set()
+
+                if "commands" in room and room["commands"]:
+                    _command_rooms.add(room_identifier)
+
+                if "watcher" in room and room["watcher"]:
+                    _watcher_rooms.add(room_identifier)
+
+                if "msg_types" in room:
+                    add_room(room_identifier, room["msg_types"])
+
+        for inherit in inherits:
+            if inherit["from"] in rooms:
+                from_privs = _privileges[inherit["from"]]
+                from_accounts = [k for k, v in user_data.items() if v[host_fields[inherit["from"][0]]] in from_privs]
+                inherit_from = set([user_data[x][host_fields[inherit["to"][0]]] for x in from_accounts])
+
+                if inherit["to"] in _privileges:
+                    before = _privileges[inherit["to"]]
+                    _privileges[inherit["to"]] = _privileges[inherit["to"]] | inherit_from
+                    # log('debug', '{} inheriting privs from {} with additional: before {}, after {}'.format(
+                    #     inherit["to"], inherit["from"], before, _privileges[inherit["to"]]))
+                else:
+                    _privileges[inherit["to"]] = inherit_from
             else:
-                _privileges[room_identifier] = set()
-
-            if "commands" in room and room["commands"]:
-                _command_rooms.add(room_identifier)
-
-            if "watcher" in room and room["watcher"]:
-                _watcher_rooms.add(room_identifier)
-
-            if "msg_types" in room:
-                add_room(room_identifier, room["msg_types"])
-
-    for inherit in inherits:
-        if inherit["from"] in rooms:
-            from_privs = _privileges[inherit["from"]]
-            from_accounts = [k for k, v in user_data.items() if v[host_fields[inherit["from"][0]]] in from_privs]
-            inherit_from = set([user_data[x][host_fields[inherit["to"][0]]] for x in from_accounts])
-
-            if inherit["to"] in _privileges:
-                before = _privileges[inherit["to"]]
-                _privileges[inherit["to"]] = _privileges[inherit["to"]] | inherit_from
-                # log('debug', '{} inheriting privs from {} with additional: before {}, after {}'.format(
-                #     inherit["to"], inherit["from"], before, _privileges[inherit["to"]]))
-            else:
-                _privileges[inherit["to"]] = inherit_from
-        else:
-            log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
-                inherit["to"][1], inherit["to"][1], inherit["from"][1]))
+                log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
+                    inherit["to"][1], inherit["to"][1], inherit["from"][1]))
 
 
 def add_room(room, roles):
-    for role in roles:
-        if role not in _room_roles:
-            _room_roles[role] = set()
+    with _room_roles_lock:
+        for role in roles:
+            if role not in _room_roles:
+                _room_roles[role] = set()
 
-        _room_roles[role].add(room)
+            _room_roles[role].add(room)
 
 
 def pickle_last_messages():
@@ -228,7 +252,9 @@ def pickle_last_messages():
         _pickle_run.wait()
         _pickle_run.clear()
 
-        datahandling.dump_pickle("messageData.p", _last_messages)
+        with _last_messages_lock:
+            last_messages_copy = copy.deepcopy(_last_messages)
+        datahandling.dump_pickle("messageData.p", last_messages_copy)
 
 
 def send_messages():
@@ -249,21 +275,23 @@ def send_messages():
                     identifier = (room.room._client.host, room.room.id)
                     message_id = response["id"]
 
-                    if identifier not in _last_messages.messages:
-                        _last_messages.messages[identifier] = collections.deque((message_id,))
-                    else:
-                        last = _last_messages.messages[identifier]
+                    with _last_messages_lock:
+                        if identifier not in _last_messages.messages:
+                            _last_messages.messages[identifier] = collections.deque((message_id,))
+                        else:
+                            last = _last_messages.messages[identifier]
 
-                        if len(last) > 100:
-                            last.popleft()
+                            if len(last) > 100:
+                                last.popleft()
 
-                        last.append(message_id)
+                            last.append(message_id)
 
                     if report_data:
-                        _last_messages.reports[(room.room._client.host, message_id)] = report_data
+                        with _last_messages_lock:
+                            _last_messages.reports[(room.room._client.host, message_id)] = report_data
 
-                        if len(_last_messages.reports) > 50:
-                            _last_messages.reports.popitem(last=False)
+                            if len(_last_messages.reports) > 50:
+                                _last_messages.reports.popitem(last=False)
 
                         if room.deletion_watcher:
                             callback = room.room._client.get_message(message_id).delete
@@ -279,6 +307,17 @@ def send_messages():
         _msg_queue.task_done()
 
 
+def send_reply_if_not_blank(room_ident, reply_to_id, message):
+    if message:
+        send_reply(room_ident, reply_to_id, message)
+
+
+def send_reply(room_ident, reply_to_id, message):
+    s = ":{}\n{}" if "\n" not in message and len(message) >= 488 else ":{} {}"
+    with _rooms_lock:
+        _msg_queue.put((_rooms[room_ident], s.format(reply_to_id, message), None))
+
+
 def on_msg(msg, client):
     global _room_roles
 
@@ -287,13 +326,13 @@ def on_msg(msg, client):
 
     message = msg.message
     room_ident = (client.host, message.room.id)
-    room_data = _rooms[room_ident]
 
-    if message.owner.id == client._br.user_id:
-        if 'direct' in _room_roles and room_ident in _room_roles['direct']:
-            SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+    with _room_roles_lock:
+        if message.owner.id == client._br.user_id:
+            if 'direct' in _room_roles and room_ident in _room_roles['direct']:
+                SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
 
-        return
+            return
 
     if message.content.startswith("<div class='partial'>"):
         message.content = message.content[21:]
@@ -307,32 +346,25 @@ def on_msg(msg, client):
                 cmd = GlobalVars.parser.unescape(strip_mention)
 
                 result = dispatch_reply_command(message.parent, message, cmd)
-
-                if result:
-                    s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-                    _msg_queue.put((room_data, s.format(message.id, result), None))
+                send_reply_if_not_blank(room_ident, message.id, result)
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
         result = dispatch_shorthand_command(message)
-
-        if result:
-            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-            _msg_queue.put((room_data, s.format(message.id, result), None))
+        send_reply_if_not_blank(room_ident, message.id, result)
     elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
         result = dispatch_command(message)
-
-        if result:
-            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-            _msg_queue.put((room_data, s.format(message.id, result), None))
+        send_reply_if_not_blank(room_ident, message.id, result)
     elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
             and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
         ids, expires_in = datahandling.last_feedbacked
 
         if time.time() < expires_in:
             Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
-    elif 'direct' in _room_roles and room_ident in _room_roles['direct']:
-        SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+    else:
+        with _room_roles_lock:
+            if 'direct' in _room_roles and room_ident in _room_roles['direct']:
+                SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -350,96 +382,107 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     msg = redact_passwords(msg)
     target_rooms = set()
 
-    # Go through the list of properties in "has" and add all rooms which have any of those properties
-    # to the target_rooms set. _room_roles contains a list of rooms for each property.
-    for prop_has in has:
-        if isinstance(prop_has, tuple):
-            # If the current prop_has is a tuple, then it's assumed to be a descriptor of a specific room.
-            # The format is: (_client.host, room.id)
-            target_rooms.add(prop_has)
+    with _room_roles_lock, _rooms_lock:
+        # Go through the list of properties in "has" and add all rooms which have any of those properties
+        # to the target_rooms set. _room_roles contains a list of rooms for each property.
+        for prop_has in has:
+            if isinstance(prop_has, tuple):
+                # If the current prop_has is a tuple, then it's assumed to be a descriptor of a specific room.
+                # The format is: (_client.host, room.id)
+                target_rooms.add(prop_has)
 
-        if prop_has not in _room_roles:
-            # No rooms have this property.
-            continue
+            if prop_has not in _room_roles:
+                # No rooms have this property.
+                continue
 
-        for room in _room_roles[prop_has]:
-            if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
-                if room not in _rooms:
-                    # If SD is not already in the room, then join the room.
-                    site, roomid = room
-                    deletion_watcher = room in _watcher_rooms
+            for room in _room_roles[prop_has]:
+                if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
+                    if room not in _rooms:
+                        # If SD is not already in the room, then join the room.
+                        site, roomid = room
+                        deletion_watcher = room in _watcher_rooms
 
-                    new_room = _clients[site].get_room(roomid)
-                    new_room.join()
+                        with _clients_lock:
+                            new_room = _clients[site].get_room(roomid)
+                        new_room.join()
 
-                    _rooms[room] = RoomData(new_room, -1, deletion_watcher)
+                        _rooms[room] = RoomData(new_room, -1, deletion_watcher)
 
-                target_rooms.add(room)
+                    target_rooms.add(room)
 
-    for room_id in target_rooms:
-        room = _rooms[room_id]
+        for room_id in target_rooms:
+            room = _rooms[room_id]
 
-        if notify_site:
-            pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
-                                                                     room.room.id,
-                                                                     notify_site,
-                                                                     room.room._client)
+            if notify_site:
+                pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
+                                                                         room.room.id,
+                                                                         notify_site,
+                                                                         room.room._client)
 
-            msg_pings = datahandling.append_pings(msg, pings)
-        else:
-            msg_pings = msg
-
-        timestamp = time.time()
-
-        if room.block_time < timestamp and _global_block < timestamp:
-            if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                def callback(room=room, msg=msg_pings):
-                    post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
-
-                    if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
-                        _msg_queue.put((room, msg, report_data))
-
-                task = Tasks.later(callback, after=300)
-
-                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=task.cancel)
+                msg_pings = datahandling.append_pings(msg, pings)
             else:
-                _msg_queue.put((room, msg_pings, report_data))
+                msg_pings = msg
+
+            timestamp = time.time()
+
+            with _global_block_lock:
+                is_global_block_before_timestamp = _global_block < timestamp
+            if room.block_time < timestamp and is_global_block_before_timestamp:
+                if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
+                    def callback(room=room, msg=msg_pings):
+                        post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
+
+                        if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
+                            _msg_queue.put((room, msg, report_data))
+
+                    task = Tasks.later(callback, after=300)
+
+                    GlobalVars.deletion_watcher.subscribe(report_data[0], callback=task.cancel)
+                else:
+                    _msg_queue.put((room, msg_pings, report_data))
 
 
 def get_last_messages(room, count):
     identifier = (room._client.host, room.id)
 
-    if identifier not in _last_messages.messages:
-        return
+    with _last_messages_lock:
+        if identifier not in _last_messages.messages:
+            return
 
-    for msg_id in itertools.islice(reversed(_last_messages.messages[identifier]), count):
+        last_messages_identifier_copy = copy.deepcopy(_last_messages.messages[identifier])
+
+    for msg_id in itertools.islice(reversed(last_messages_identifier_copy), count):
         yield room._client.get_message(msg_id)
 
 
 def get_report_data(message):
     identifier = (message._client.host, message.id)
 
-    if identifier in _last_messages.reports:
-        return _last_messages.reports[identifier]
-    else:
-        post_url = fetch_post_url_from_msg_content(message.content_source)
+    with _last_messages_lock:
+        if identifier in _last_messages.reports:
+            return _last_messages.reports[identifier]
+        else:
+            post_url = fetch_post_url_from_msg_content(message.content_source)
 
-        if post_url:
-            return (post_url, fetch_owner_url_from_msg_content(message.content_source))
+            if post_url:
+                return (post_url, fetch_owner_url_from_msg_content(message.content_source))
 
 
 def is_privileged(user, room):
-    # print(_privileges)
-    return user.id in _privileges[(room._client.host, room.id)] or user.is_moderator
+    with _privileges_lock:
+        # print(_privileges)
+        return user.id in _privileges[(room._client.host, room.id)] or user.is_moderator
 
 
 def block_room(room_id, site, time):
     global _global_block
 
     if room_id is None:
-        _global_block = time
+        with _global_block_lock:
+            _global_block = time
     else:
-        _rooms[(site, room_id)].block_time = time
+        with _rooms_lock:
+            _rooms[(site, room_id)].block_time = time
 
 
 class ChatCommand:
@@ -458,8 +501,9 @@ class ChatCommand:
         disable_key = "no-" + self.__func__.__name__
         try:
             room_identifier = (original_msg.room._client.host, original_msg.room.id)
-            if disable_key in _room_roles and room_identifier in _room_roles[disable_key]:
-                return "This command is disabled in this room"
+            with _room_roles_lock:
+                if disable_key in _room_roles and room_identifier in _room_roles[disable_key]:
+                    return "This command is disabled in this room"
         except AttributeError:
             # Test cases in CI don't contain enough data
             pass
@@ -510,15 +554,17 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
         if reply:
-            _reply_commands[func.__name__.replace('_', '-')] = cmd
+            with _reply_commands_lock:
+                _reply_commands[func.__name__.replace('_', '-')] = cmd
 
-            for alias in aliases:
-                _reply_commands[alias] = cmd
+                for alias in aliases:
+                    _reply_commands[alias] = cmd
         else:
-            _prefix_commands[func.__name__.replace("_", "-")] = cmd
+            with _prefix_commands_lock:
+                _prefix_commands[func.__name__.replace("_", "-")] = cmd
 
-            for alias in aliases:
-                _prefix_commands[alias] = cmd
+                for alias in aliases:
+                    _prefix_commands[alias] = cmd
 
         return f
 
@@ -531,9 +577,10 @@ def message(msg):
 
 
 def get_message(id, host="stackexchange.com"):
-    if host not in _clients:
-        raise ValueError("Invalid host")
-    return _clients[host].get_message(int(id))
+    with _clients_lock:
+        if host not in _clients:
+            raise ValueError("Invalid host")
+        return _clients[host].get_message(int(id))
 
 
 def dispatch_command(msg):
@@ -561,11 +608,15 @@ def dispatch_command(msg):
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name).replace("_", "-")
 
-    if command_name not in _prefix_commands:
+    with _prefix_commands_lock:
+        is_command_name_in_prefix_commands = command_name in _prefix_commands
+
+    if not is_command_name_in_prefix_commands:
         return "No such command '{}'.".format(command_name)
     else:
         log('debug', 'Command received: ' + msg.content)
-        func, (min_arity, max_arity) = _prefix_commands[command_name]
+        with _prefix_commands_lock:
+            func, (min_arity, max_arity) = _prefix_commands[command_name]
 
         if max_arity == 0:
             return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
@@ -600,9 +651,11 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
-    if cmd in _reply_commands:
-        func, (min_arity, max_arity) = _reply_commands[cmd]
+    with _reply_commands_lock:
+        if cmd in _reply_commands:
+            func, (min_arity, max_arity) = _reply_commands[cmd]
 
+    if func:
         assert min_arity == 1
 
         if max_arity == 1:
