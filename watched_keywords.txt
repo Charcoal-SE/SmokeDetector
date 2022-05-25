@@ -34720,7 +34720,6 @@
 1640053203	Makyen	thanhkhetay\.danang\.gov\.vn
 1640053243	Makyen	bachnienyhoaduong\.vn
 1640056659	cigien	speakersking\.com
-1640058165	cigien	trueimagetech\.com
 1640059966	cigien	casauminhchau\.com
 1640065480	cigien	ankita-sharma\.in
 1640065494	cigien	sarakaur\.com
