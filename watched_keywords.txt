@@ -34041,7 +34041,6 @@
 1637646037	Cody Gray	freetopblogger\.com
 1637647701	Cody Gray	worldgrowthtoday\.com
 1637649817	cigien	rexfont\.com
-1637651997	tripleee	(?-i:^sonam$)
 1637652044	Cody Gray	saaztro\.co
 1637652639	cigien	goadreams\.com
 1637655010	Cody Gray	deepbrainai\.io
