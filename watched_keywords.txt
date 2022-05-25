@@ -39590,3 +39590,4 @@
 1653476437	Cody Gray	(?-i:8EmN2ma25W)(?# Discord)
 1653476460	Cody Gray	tencent_imsdk
 1653476486	Cody Gray	tencent\.com
+1653476514	Cody Gray	Tencent(?:[\W_]*Cloud)?[\W_]*IM[?？]
