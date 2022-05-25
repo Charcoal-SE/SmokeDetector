@@ -39597,3 +39597,4 @@
 1653479511	Cody Gray	best[\W_]*small[\W_]*business[\W_]*invoicing[\W_]*software
 1653480127	tripleee	mixbowls\.com
 1653493550	Ollie	akiragi\.com
+1653495081	cigien	ijsetupcanon\.com
