@@ -39591,3 +39591,4 @@
 1653476460	Cody Gray	tencent_imsdk
 1653476486	Cody Gray	tencent\.com
 1653476514	Cody Gray	Tencent(?:[\W_]*Cloud)?[\W_]*IM[?？]
+1653478154	tripleee	uvairpurifierltd\.com
