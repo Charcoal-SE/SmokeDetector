@@ -3,6 +3,7 @@ import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
 from datahandling import has_pickle, remove_pickle
+from pprint import pprint
 
 import collections
 import io
@@ -99,6 +100,12 @@ def test_validate_yaml():
                 privileged_users.extend(room["privileges"])
 
     privileged_users = set(privileged_users)
+
+    print('len(set(privileged_users)):', len(privileged_users))
+    print('privileged_users:')
+    pprint(privileged_users)
+    print('user_data:')
+    pprint(user_data)
 
     issues = []
 
