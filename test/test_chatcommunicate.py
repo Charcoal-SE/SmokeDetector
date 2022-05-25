@@ -24,7 +24,6 @@ def test_validate_yaml():
     with open("users.yml", "r") as f:
         user_data = yaml.safe_load(f.read())
 
-    flatten = lambda l: [item for sublist in l for item in sublist]
     privileged_users = []
 
     for site, site_rooms in room_data.items():
@@ -33,16 +32,31 @@ def test_validate_yaml():
                 continue
 
             if "additional" in room["privileges"]:
-                privileged_users.append(room["privileges"]["additional"])
+                privileged_users.extend(room["privileges"]["additional"])
 
             if "inherit" not in room["privileges"]:
-                privileged_users.append(room["privileges"])
+                privileged_users.extend(room["privileges"])
 
-    privileged_users = set(flatten(privileged_users))
+    privileged_users = set(privileged_users)
+
+    issues = []
+
+    for user_key in user_data.keys():
+        if type(user_key) != int:
+            print('type(user_key):', type(user_key))
+            issues.append('user.yml user ID "{}" is not an int'.format(user_key))
+
+    for user_id in privileged_users:
+        if type(user_id) != int:
+            print('type(user_id):', type(user_id))
+            issues.append('user.yml user ID "{}" is not an int'.format(user_key))
 
     for uid in privileged_users:
         if uid not in user_data:
-            pytest.fail("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
+            issues.append("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
+
+    if issues:
+        pytest.fail('\n'.join(issues))
 
 
 def test_parse_room_config():
