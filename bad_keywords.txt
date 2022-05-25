@@ -2428,7 +2428,6 @@ kara(?:[\W_]*+s)?[\W_]*+orchards[\W_]*+cbd(?:[\W_]*+(?:gummies|oil|uk|united|kin
 effuel
 verifiedielts770(?:@yahoo\.com)?
 bongdalu(?!\.com(?<=bongdalu\.com))
-Village[\W_]*+Talkies
 nala[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 social[\W_]*+prachar(?!\.com(?<=socialprachar\.com))
 Gary Swiercz Chicago
