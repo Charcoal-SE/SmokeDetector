@@ -39622,3 +39622,4 @@
 1653567357	Mast	mathgenie\.com
 1653567405	Mast	geomeasure\.in
 1653571705	Makyen	theoneworld\.co\.uk
+1653573672	Jeff Schaller	zubair-learning\.blogspot
