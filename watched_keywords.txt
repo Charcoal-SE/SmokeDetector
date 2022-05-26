@@ -39630,3 +39630,4 @@
 1653579142	cigien	bristolrehabclinic\.ca
 1653579521	cigien	(?-i:lWgZ1hG00sc)(?#youtube)
 1653579697	cigien	togglenow(?!\.com)
+1653579846	cigien	equationbalancer\.com
