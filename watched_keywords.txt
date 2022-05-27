@@ -39666,4 +39666,3 @@
 1653648234	Cody Gray	(?-i:T5zGy\.jpg)(?# stack imgur)
 1653648488	tripleee	Ucchvas
 1653648518	Cody Gray	gotartwork\.com
-1653648578	Cody Gray	mutiara[\W_]*hoki(?:[\W_]*\d{0,4})?
