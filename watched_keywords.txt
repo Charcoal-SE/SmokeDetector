@@ -35754,7 +35754,6 @@
 1643217407	cigien	umfrageonline\.com
 1643222597	tripleee	plurk\.com
 1643249988	cigien	thehotplaza\.com
-1643258215	Makyen	narolainfotech(?!\.com)
 1643264683	tripleee	promellu\.me
 1643264888	tripleee	(?-i:^suraseo$)
 1643270249	Makyen	laraibnow\.com
