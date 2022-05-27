@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
+from chatcommunicate import add_room, block_room, CmdException, CmdExceptionLongReply, command, get_report_data, \
     is_privileged, message, \
     tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
@@ -346,6 +346,13 @@ def get_test_text_from_regex(pattern):
     return pattern
 
 
+def get_number_bisect(msg, pattern):
+    fake_command = '!!/bisect-number ' + pattern
+    Fake_Message = collections.namedtuple('Fake_Message', ['content', 'content_source', 'owner', 'room'])
+    fake_message = Fake_Message(fake_command, fake_command, msg.owner, msg.room)
+    return bisect_number('', original_msg=fake_message)
+
+
 def do_blacklist(blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
@@ -356,13 +363,21 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
+    def get_normalized_on_list(list_type, extra=''):
+        return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
+               ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra) + \
+               ' `!!/bisect-number {}`'.format(pattern) + \
+               ' to determine which entries on the number lists match that pattern, which' + \
+               ' would tell you: ' + get_number_bisect(msg, pattern)
+
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
-    append_force_to_do = " Append `-force` to the command if you really want to add the  pattern you entered."
+    append_force_to_do = " Append `-force` to the command word(s) if you really want to add the pattern you provided."
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
+    blacklist_or_watchlist = 'watchlist' if is_watchlist else 'blacklist'
     text_before_pattern = ''
     text_after_pattern = ''
 
@@ -392,7 +407,10 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit." +
                                " If you really want to add this pattern, you will need to manually submit a PR.")
     else:
-        blacklist_command = blacklist_type.replace("_", "-")
+        # When it's a blacklist command, blacklist_type only provides the type of blacklist, not the full command.
+        blacklist_command = 'blacklist-' + blacklist_type if not is_watchlist \
+            and 'blacklist' not in blacklist_type else blacklist_type
+        blacklist_command = blacklist_command.replace("_", "-")
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
         without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
         full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
@@ -417,15 +435,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
                 digit_count_text = " The supplied pattern contains" + \
                                    " {} digits, which doesn't meet the requirements.".format(digit_count)
-            raise CmdException("That pattern can't be detected by the number detections. " +
-                               number_regex_requires + digit_count_text)
+            raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
+                                        number_regex_requires + digit_count_text)
         normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
-        normalized_on_list = 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
-                             ' is already on the number {}list{extra}. You can use' + \
-                             ' `!!/bisect-number {}`'.format(pattern) + \
-                             ' to determine which entries on the number lists match that pattern.'
         if normalized & GlobalVars.blacklisted_numbers_normalized:
-            raise CmdException(normalized_on_list.format('black', extra=''))
+            raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
         if normalized & GlobalVars.watched_numbers_normalized:
             # The following differentiates between watching and blacklisting, due to
             # automatic movement of entries from the watchlist to the blacklist.  It's
@@ -434,11 +448,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             # automatic removal of the pattern from the watchlist when moved to the
             # blacklist.  If it isn't resolved, CI testing will fail.
             if is_watchlist:
-                raise CmdException(normalized_on_list.format('watch', extra=''))
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
             elif pattern not in GlobalVars.watched_numbers_full:
                 extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
                                                      ' to an existing entry on the number watchlist'
-                raise CmdException(normalized_on_list.format('watch', extra=extra_blacklisting_non_exact_match))
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
         force_is_north_american, force_no_north_american = \
             phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
         unused_maybe_north_american_norm = \
@@ -448,7 +462,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         if deobfuscated_processed != processed:
             other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
                                 " use the non-obfuscated number. Perhaps try: " +
-                                "`!!/{} {}`".format(blacklist_command, deobfuscated_processed))
+                                "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed))
         formatted_north_american = \
             phone_numbers.get_north_american_with_separators_from_normalized(normalized_deobfuscated)
         north_american_formatting = "use a format which starts with an optional `1` followed by" + \
@@ -459,7 +473,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                     " end of the pattern to force also using the alternate normalized form, or" + \
                                     " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
                                     " incorrectly recognized as one." + \
-                                    " Perhaps try \n`!!/{} {}`\n".format(blacklist_command, formatted_north_american)
+                                    " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
         if not force_no_north_american and unused_maybe_north_american_norm:
             other_issues.append("That pattern may be a North American number. If it is, please " +
                                 north_american_formatting)
@@ -496,11 +510,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
             if reasons:
-                raise CmdException("That pattern looks like it's already caught by " +
-                                   format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
+                raise CmdExceptionLongReply("That pattern looks like it's already caught by " +
+                                            format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
 
         if other_issues_text:
-            raise CmdException(other_issues_text + append_force_to_do)
+            raise CmdExceptionLongReply(other_issues_text + append_force_to_do)
 
     metasmoke_down = False
 
@@ -558,8 +572,8 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :return: A string
     """
 
-    parts = alias_used.split("-")
-    return do_blacklist(parts[1], msg, force=len(parts) > 2)
+    parts = alias_used.replace("_", "-").split("-")
+    return do_blacklist(parts[1], msg, force='force' in alias_used)
 
 
 # noinspection PyIncorrectDocstring

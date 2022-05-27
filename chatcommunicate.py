@@ -40,6 +40,10 @@ class CmdException(Exception):
     pass
 
 
+class CmdExceptionLongReply(Exception):
+    pass
+
+
 _prefix_commands = {}
 _reply_commands = {}
 
@@ -487,6 +491,8 @@ class ChatCommand:
             return result if not quiet_action else ""
         except CmdException as e:
             return str(e)
+        except CmdExceptionLongReply as e:
+            return '\n' + str(e).replace('\n', ' ')
         except Exception:  # Everything else
             log_exception(*sys.exc_info())
             return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
