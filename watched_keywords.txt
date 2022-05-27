@@ -39668,3 +39668,4 @@
 1653648518	Cody Gray	gotartwork\.com
 1653648744	Cody Gray	mutiara[\W_\d]{0,7}(?:brum|hoki)[\W_\d]{0,7}
 1653650723	tripleee	axpertadvisors\.com
+1653651887	tripleee	donewssuper\.blogspot
