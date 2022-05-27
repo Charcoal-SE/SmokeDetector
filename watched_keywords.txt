@@ -39677,3 +39677,4 @@
 1653664870	cigien	smotra\.ru
 1653664899	cigien	beacons\.ai
 1653666064	cigien	aua[\W_]*+framework(?!\.com(?<=auaframework\.com))
+1653666377	Ollie	marketing\.cnsg(?:@gmail\.com)?
