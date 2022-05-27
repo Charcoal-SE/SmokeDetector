@@ -39654,3 +39654,4 @@
 1653626933	Ian Campbell	onlinesmartwebs\.com
 1653628303	Makyen	onlinesmartwebs(?!\.com)
 1653628440	Cody Gray	blogsandarticlesonline\.com
+1653629927	Cody Gray	minutesnippets\.blogspot
