@@ -1250,6 +1250,9 @@ items:
   - kate.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
+  - lucy.ns.cloudflare.com.
+- ns:
+  - ian.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
