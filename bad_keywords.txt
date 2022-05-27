@@ -2472,7 +2472,6 @@ ve[\W_]*+sinh[\W_]*+nha[\W_]*+cua
 binaryexpertrecovery\d*+(?:@gmail\.com)?
 dụng[\W_]*+khác(?# "household appliances" in Vietnamese)
 ^<p>[\W_]*+(?:(?:lol(?:ol)*+|lmao|rofl)[\W_]*){3,}[\W_]*</p>$
-pad[\W_]*+store
 hacksolution7(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 dr\W*oba
 Are you looking for Leolist
