@@ -39675,3 +39675,4 @@
 1653662973	Spevacus	multitouchmarketing\.agency
 1653664838	cigien	hwdi\.org
 1653664870	cigien	smotra\.ru
+1653664899	cigien	beacons\.ai
