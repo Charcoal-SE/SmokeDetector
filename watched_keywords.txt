@@ -39655,4 +39655,3 @@
 1653633090	tripleee	o\.bike(?<=https?://(?:\w+\.)*o\.bike)
 1653633676	tripleee	(?-i:^narolainfotech$)
 1653633827	tripleee	narolainfotech(?!\.com)(?<!(?-i:^narolainfotech$))
-1653635390	Cody Gray	(?:SAP[\W_]*)?Fieldglass
