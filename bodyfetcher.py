@@ -522,7 +522,7 @@ class BodyFetcher:
                 if "quota_remaining" in response:
                     quota_remaining = response["quota_remaining"]
                     if quota_remaining - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0 \
-                            and quota_remaining > 64980:
+                            and quota_remaining > 65980:
                         tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
                                                  "Current quota: {1}.".format(GlobalVars.apiquota,
                                                                               quota_remaining))
