@@ -28,6 +28,10 @@ class BodyFetcher:
     previous_max_ids = {}
     posts_in_process = {}
 
+    SMOKEDETECTOR_MAX_QUOTA = 80000
+    QUOTA_ROLLOVER_DETECTION_THRESHOLD = SMOKEDETECTOR_MAX_QUOTA - 20
+    QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE = 5000
+
     IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM = [
         "post has already been reported",
     ]
@@ -521,8 +525,9 @@ class BodyFetcher:
             with GlobalVars.apiquota_rw_lock:
                 if "quota_remaining" in response:
                     quota_remaining = response["quota_remaining"]
-                    if quota_remaining - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0 \
-                            and quota_remaining > 65980:
+                    if (quota_remaining - GlobalVars.apiquota >= self.QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE
+                            and GlobalVars.apiquota >= 0
+                            and quota_remaining > self.QUOTA_ROLLOVER_DETECTION_THRESHOLD):
                         tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
                                                  "Current quota: {1}.".format(GlobalVars.apiquota,
                                                                               quota_remaining))
