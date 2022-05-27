@@ -363,9 +363,9 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
-    def get_normalized_on_list(blacklist_type, extra=''):
+    def get_normalized_on_list(list_type, extra=''):
         return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
-               ' is already on the number {}list{extra}. You can use'.format(blacklist_type, extra=extra) + \
+               ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra) + \
                ' `!!/bisect-number {}`'.format(pattern) + \
                ' to determine which entries on the number lists match that pattern, which' + \
                ' would tell you: ' + get_number_bisect(msg, pattern)
@@ -377,6 +377,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
+    blacklist_or_watchlist = 'watchlist' if is_watchlist else 'blacklist'
     text_before_pattern = ''
     text_after_pattern = ''
 
@@ -406,7 +407,10 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit." +
                                " If you really want to add this pattern, you will need to manually submit a PR.")
     else:
-        blacklist_command = blacklist_type.replace("_", "-")
+        # When it's a blacklist command, blacklist_type only provides the type of blacklist, not the full command.
+        blacklist_command = 'blacklist-' + blacklist_type if not is_watchlist \
+            and 'blacklist' not in blacklist_type else blacklist_type
+        blacklist_command = blacklist_command.replace("_", "-")
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
         without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
         full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
@@ -568,8 +572,8 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :return: A string
     """
 
-    parts = alias_used.split("-")
-    return do_blacklist(parts[1], msg, force=len(parts) > 2)
+    parts = alias_used.replace("_", "-").split("-")
+    return do_blacklist(parts[1], msg, force='force' in alias_used)
 
 
 # noinspection PyIncorrectDocstring
