@@ -105,6 +105,9 @@ items:
   - ainsley.ns.cloudflare.com.
   - morgan.ns.cloudflare.com.
 - ns:
+  - ainsley.ns.cloudflare.com.
+  - terry.ns.cloudflare.com.
+- ns:
   - aisha.ns.cloudflare.com.
   - rodney.ns.cloudflare.com.
 - ns:
