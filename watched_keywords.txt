@@ -39663,3 +39663,4 @@
 1653644534	tripleee	(?-i:^Secret World$)
 1653648116	Cody Gray	gardenparadiseseeds\.com
 1653648123	Cody Gray	plantmyseeds\.ie
+1653648132	Cody Gray	plant-my-seeds\.com
