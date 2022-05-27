@@ -24,6 +24,47 @@ from fake import Fake
 from unittest.mock import patch
 
 
+def rewrap_for_paramiterized_test_bisect():
+    def decorator(func):
+        def wrap(command, test_text, expected_result):
+            return func(command, test_text, expected_result)
+        return wrap
+    return decorator
+
+
+def lock_and_restore_chatcommunicate_rooms():
+    def decorator(func):
+        def wrap(*args, **kwargs):
+            chatcommunicate._privileges_lock.acquire()
+            try:
+                chatcommunicate._rooms_lock.acquire()
+                privileges = chatcommunicate._privileges
+                rooms = chatcommunicate._rooms
+                command_rooms = chatcommunicate._command_rooms
+                watcher_rooms = chatcommunicate._watcher_rooms
+                try:
+                    chatcommunicate._privileges = {}
+                    chatcommunicate._rooms = {}
+                    chatcommunicate._command_rooms = set()
+                    chatcommunicate._watcher_rooms = set()
+                    return func(*args, **kwargs)
+                except Exception:
+                    pass
+                finally:
+                    # Reset the values which were controlled under the locks
+                    chatcommunicate._privileges = privileges
+                    chatcommunicate._rooms = rooms
+                    chatcommunicate._command_rooms = command_rooms
+                    chatcommunicate._watcher_rooms = watcher_rooms
+                    chatcommunicate._rooms_lock.release()
+            except Exception:
+                pass
+            finally:
+                chatcommunicate._privileges_lock.release()
+        return wrap
+    return decorator
+
+
 def dummy_tell_rooms_with(dummy1, dummy2):
     pass
 
@@ -117,6 +158,8 @@ fifabay on line 3 of bad_keywords.txt
     # normalized with 1
     ("bisect_number", "13 bar 18167873816 bar", """Matched by `1-816-787-3816` on [line 2 of blacklisted_numbers.txt](https://github.com/{bot_repo_slug}/blob/{commit_id}/blacklisted_numbers.txt#L2): 18167873816 found normalized"""),
 ])
+@rewrap_for_paramiterized_test_bisect()
+@lock_and_restore_chatcommunicate_rooms()
 def test_bisect(command, test_text, expected_result):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     msg = Fake({
@@ -193,6 +236,7 @@ def test_blame():
     assert chatcommands.blame2("\u200B\u200C\u2060\u200D\u180E\uFEFF\u2063", original_msg=msg2) == "It's [J F](https://chat.stackexchange.com/users/161943)'s fault."
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_privileged():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
 
@@ -219,12 +263,14 @@ def test_privileged():
     assert chatcommands.amiprivileged(original_msg=msg) == "\u2713 You are a privileged user."
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_deprecated_blacklist():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     assert chatcommands.blacklist("").startswith("The `!!/blacklist` command has been deprecated.")
 
 
 @pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
+@lock_and_restore_chatcommunicate_rooms()
 def test_watch(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     # XXX TODO: expand
@@ -278,6 +324,7 @@ def test_watch(monkeypatch):
         git.checkout("master")
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_approve(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     msg = Fake({
@@ -305,6 +352,7 @@ def test_approve(monkeypatch):
     assert chatcommands.approve(2518, original_msg=msg)[:8] in {"PR #2518", "Cannot c"}
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_reject(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     msg = Fake({
@@ -333,6 +381,7 @@ def test_reject(monkeypatch):
 
 
 @patch("chatcommands.handle_spam")
+@lock_and_restore_chatcommunicate_rooms()
 def test_report(handle_spam):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     # Documentation: The process before scanning the post is identical regardless of alias_used.
@@ -417,6 +466,7 @@ def test_report(handle_spam):
 
 
 @patch("chatcommands.handle_spam")
+@lock_and_restore_chatcommunicate_rooms()
 def test_allspam(handle_spam):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -498,6 +548,7 @@ def test_allspam(handle_spam):
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
+@lock_and_restore_chatcommunicate_rooms()
 def test_blacklisted_users():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -570,6 +621,7 @@ def test_blacklisted_users():
 
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
+@lock_and_restore_chatcommunicate_rooms()
 def test_whitelisted_users():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -638,6 +690,7 @@ def test_whitelisted_users():
         remove_pickle("whitelistedUsers.p")
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_metasmoke():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     orig_tell_rooms_with = chatcommunicate.tell_rooms_with
@@ -670,6 +723,7 @@ def test_metasmoke():
 
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
+@lock_and_restore_chatcommunicate_rooms()
 def test_notifications():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -776,6 +830,7 @@ def test_notifications():
         remove_pickle("notifications.p")
 
 
+@lock_and_restore_chatcommunicate_rooms()
 def test_inqueue():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     site = Fake({"keys": (lambda: ['1'])})
