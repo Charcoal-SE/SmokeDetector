@@ -346,6 +346,13 @@ def get_test_text_from_regex(pattern):
     return pattern
 
 
+def get_number_bisect(msg, pattern):
+    fake_command = '!!/bisect-number ' + pattern
+    Fake_Message = collections.namedtuple('Fake_Message', ['content', 'content_source', 'owner', 'room'])
+    fake_message = Fake_Message(fake_command, fake_command, msg.owner, msg.room)
+    return bisect_number('', original_msg=fake_message)
+
+
 def do_blacklist(blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
@@ -356,10 +363,17 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
+    def get_normalized_on_list(blacklist_type, extra=''):
+        return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
+               ' is already on the number {}list{extra}. You can use'.format(blacklist_type, extra=extra) + \
+               ' `!!/bisect-number {}`'.format(pattern) + \
+               ' to determine which entries on the number lists match that pattern, which' + \
+               ' would tell you: ' + get_number_bisect(msg, pattern)
+
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
-    append_force_to_do = " Append `-force` to the command if you really want to add the  pattern you entered."
+    append_force_to_do = " Append `-force` to the command word(s) if you really want to add the pattern you provided."
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
@@ -420,12 +434,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
                                         number_regex_requires + digit_count_text)
         normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
-        normalized_on_list = 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
-                             ' is already on the number {}list{extra}. You can use' + \
-                             ' `!!/bisect-number {}`'.format(pattern) + \
-                             ' to determine which entries on the number lists match that pattern.'
         if normalized & GlobalVars.blacklisted_numbers_normalized:
-            raise CmdException(normalized_on_list.format('black', extra=''))
+            raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
         if normalized & GlobalVars.watched_numbers_normalized:
             # The following differentiates between watching and blacklisting, due to
             # automatic movement of entries from the watchlist to the blacklist.  It's
@@ -434,11 +444,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             # automatic removal of the pattern from the watchlist when moved to the
             # blacklist.  If it isn't resolved, CI testing will fail.
             if is_watchlist:
-                raise CmdException(normalized_on_list.format('watch', extra=''))
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
             elif pattern not in GlobalVars.watched_numbers_full:
                 extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
                                                      ' to an existing entry on the number watchlist'
-                raise CmdException(normalized_on_list.format('watch', extra=extra_blacklisting_non_exact_match))
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
         force_is_north_american, force_no_north_american = \
             phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
         unused_maybe_north_american_norm = \
