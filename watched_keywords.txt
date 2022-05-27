@@ -39676,3 +39676,4 @@
 1653664838	cigien	hwdi\.org
 1653664870	cigien	smotra\.ru
 1653664899	cigien	beacons\.ai
+1653666064	cigien	aua[\W_]*+framework(?!\.com(?<=auaframework\.com))
