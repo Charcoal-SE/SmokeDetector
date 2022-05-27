@@ -39653,3 +39653,4 @@
 1653628440	Cody Gray	blogsandarticlesonline\.com
 1653629927	Cody Gray	minutesnippets\.blogspot
 1653633090	tripleee	o\.bike(?<=https?://(?:\w+\.)*o\.bike)
+1653633676	tripleee	(?-i:^narolainfotech$)
