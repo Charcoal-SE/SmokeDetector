@@ -17,6 +17,56 @@ from fake import Fake
 from unittest.mock import Mock, patch
 
 
+def lock_and_restore_all_chatcommunicate_global_values():
+    def decorator(func):
+        def wrap(*args, **kwargs):
+            with chatcommunicate._prefix_commands_lock, chatcommunicate._reply_commands_lock, chatcommunicate._room_roles_lock, \
+                    chatcommunicate._privileges_lock, chatcommunicate._global_block_lock, chatcommunicate._rooms_lock, \
+                    chatcommunicate._last_messages_lock:
+                prefix_commands = chatcommunicate._prefix_commands
+                reply_commands = chatcommunicate._reply_commands
+                clients = chatcommunicate._clients
+                room_roles = chatcommunicate._room_roles
+                privileges = chatcommunicate._privileges
+                global_block = chatcommunicate._global_block
+                rooms = chatcommunicate._rooms
+                command_rooms = chatcommunicate._command_rooms
+                watcher_rooms = chatcommunicate._watcher_rooms
+                last_messages = chatcommunicate._last_messages
+                try:
+                    chatcommunicate._prefix_commands = {}
+                    chatcommunicate._reply_commands = {}
+                    chatcommunicate._clients = {
+                        "stackexchange.com": None,
+                        "stackoverflow.com": None,
+                        "meta.stackexchange.com": None
+                    }
+                    chatcommunicate._room_roles = {}
+                    chatcommunicate._privileges = {}
+                    chatcommunicate._global_block = -1
+                    chatcommunicate._rooms = {}
+                    chatcommunicate._command_rooms = set()
+                    chatcommunicate._watcher_rooms = set()
+                    chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
+                    return func(*args, **kwargs)
+                except Exception:
+                    pass
+                finally:
+                    # Reset the values which were controlled under the locks
+                    chatcommunicate._prefix_commands = prefix_commands
+                    chatcommunicate._reply_commands = reply_commands
+                    chatcommunicate._clients = clients
+                    chatcommunicate._room_roles = room_roles
+                    chatcommunicate._privileges = privileges
+                    chatcommunicate._global_block = global_block
+                    chatcommunicate._rooms = rooms
+                    chatcommunicate._command_rooms = command_rooms
+                    chatcommunicate._watcher_rooms = watcher_rooms
+                    chatcommunicate._last_messages = last_messages
+        return wrap
+    return decorator
+
+
 def test_validate_yaml():
     with open("rooms.yml", "r") as f:
         room_data = yaml.safe_load(f.read())
@@ -99,6 +149,7 @@ def test_parse_room_config():
 @patch("chatcommunicate.threading.Thread")
 @patch("chatcommunicate.Client")
 @patch("chatcommunicate.parse_room_config")
+@lock_and_restore_all_chatcommunicate_global_values()
 def test_init(room_config, client_constructor, thread):
     client = Mock()
     client_constructor.return_value = client
