@@ -2621,3 +2621,4 @@ village[\W_]*+talkies(?!\.com(?<=villagetalkies\.com))
 pad[\W_]?+store
 tadalista
 slot[\W_]*gacor
+niastoto(?!(?<=^niastoto)$)
