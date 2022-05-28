@@ -39714,3 +39714,4 @@
 1653756068	cigien	adv[\W_]*+contractors(?!\.co\.uk(?<=advcontractors\.co\.uk))
 1653756306	cigien	aruna[\W_]*+lab(?!\.com(?<=arunalab\.com))
 1653756646	cigien	finprov\.com
+1653757764	cigien	buynow\.store
