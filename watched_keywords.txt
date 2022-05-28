@@ -39708,3 +39708,4 @@
 1653747311	tripleee	megafamous\.com
 1653747539	tripleee	^ra+i+s+\d*$
 1653753971	cigien	graphql\.haraj\.com\.sa
+1653754145	Ollie	haraj\.com\.sa
