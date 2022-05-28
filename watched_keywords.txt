@@ -39696,3 +39696,4 @@
 1653731173	tripleee	zphotoedit(?!\.com)
 1653734707	Ryan M	onlineloginportal\.com
 1653734730	Ryan M	arunalab\.com
+1653734786	Ryan M	Aruna Lab
