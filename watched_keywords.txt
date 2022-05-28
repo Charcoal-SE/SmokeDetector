@@ -39715,3 +39715,4 @@
 1653756306	cigien	aruna[\W_]*+lab(?!\.com(?<=arunalab\.com))
 1653756646	cigien	finprov\.com
 1653757764	cigien	buynow\.store
+1653774551	cigien	tnlhi\.com
