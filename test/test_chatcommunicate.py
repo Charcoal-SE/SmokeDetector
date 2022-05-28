@@ -24,7 +24,6 @@ def test_validate_yaml():
     with open("users.yml", "r") as f:
         user_data = yaml.safe_load(f.read())
 
-    flatten = lambda l: [item for sublist in l for item in sublist]
     privileged_users = []
 
     for site, site_rooms in room_data.items():
@@ -33,52 +32,68 @@ def test_validate_yaml():
                 continue
 
             if "additional" in room["privileges"]:
-                privileged_users.append(room["privileges"]["additional"])
+                privileged_users.extend(room["privileges"]["additional"])
 
             if "inherit" not in room["privileges"]:
-                privileged_users.append(room["privileges"])
+                privileged_users.extend(room["privileges"])
 
-    privileged_users = set(flatten(privileged_users))
+    privileged_users = set(privileged_users)
+
+    issues = []
+
+    for user_key in user_data.keys():
+        if type(user_key) != int:
+            print('type(user_key):', type(user_key))
+            issues.append('user.yml user ID "{}" is not an int'.format(user_key))
+
+    for user_id in privileged_users:
+        if type(user_id) != int:
+            print('type(user_id):', type(user_id))
+            issues.append('user.yml user ID "{}" is not an int'.format(user_key))
 
     for uid in privileged_users:
         if uid not in user_data:
-            pytest.fail("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
+            issues.append("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
+
+    if issues:
+        pytest.fail('\n'.join(issues))
 
 
 def test_parse_room_config():
-    chatcommunicate.parse_room_config("test/test_rooms.yml")
+    with chatcommunicate._rooms_lock, chatcommunicate._privileges_lock, chatcommunicate._room_roles_lock:
+        chatcommunicate.parse_room_config("test/test_rooms.yml")
 
-    assert ("stackexchange.com", 11540) in chatcommunicate._command_rooms
-    assert ("stackexchange.com", 30332) in chatcommunicate._command_rooms
-    assert ("stackoverflow.com", 111347) in chatcommunicate._command_rooms
+        assert ("stackexchange.com", 11540) in chatcommunicate._command_rooms
+        assert ("stackexchange.com", 30332) in chatcommunicate._command_rooms
+        assert ("stackoverflow.com", 111347) in chatcommunicate._command_rooms
 
-    assert ("stackexchange.com", 3) not in chatcommunicate._command_rooms
-    assert ("stackexchange.com", 54445) not in chatcommunicate._command_rooms
-    assert ("meta.stackexchange.com", 89) not in chatcommunicate._command_rooms
+        assert ("stackexchange.com", 3) not in chatcommunicate._command_rooms
+        assert ("stackexchange.com", 54445) not in chatcommunicate._command_rooms
+        assert ("meta.stackexchange.com", 89) not in chatcommunicate._command_rooms
 
-    assert ("stackexchange.com", 11540) in chatcommunicate._watcher_rooms
-    assert ("stackexchange.com", 3) in chatcommunicate._watcher_rooms
-    assert ("meta.stackexchange.com", 89) in chatcommunicate._watcher_rooms
+        assert ("stackexchange.com", 11540) in chatcommunicate._watcher_rooms
+        assert ("stackexchange.com", 3) in chatcommunicate._watcher_rooms
+        assert ("meta.stackexchange.com", 89) in chatcommunicate._watcher_rooms
 
-    assert ("stackexchange.com", 30332) not in chatcommunicate._watcher_rooms
-    assert ("stackexchange.com", 54445) not in chatcommunicate._watcher_rooms
-    assert ("stackoverflow.com", 111347) not in chatcommunicate._watcher_rooms
+        assert ("stackexchange.com", 30332) not in chatcommunicate._watcher_rooms
+        assert ("stackexchange.com", 54445) not in chatcommunicate._watcher_rooms
+        assert ("stackoverflow.com", 111347) not in chatcommunicate._watcher_rooms
 
-    assert chatcommunicate._privileges[("stackexchange.com", 11540)] == {121520, 10145}
-    assert chatcommunicate._privileges[("stackexchange.com", 30332)] == {121520, 10145}
-    assert chatcommunicate._privileges[("stackexchange.com", 3)] == set()
-    assert chatcommunicate._privileges[("stackexchange.com", 54445)] == set()
-    assert chatcommunicate._privileges[("meta.stackexchange.com", 89)] == {262823}
-    assert chatcommunicate._privileges[("stackoverflow.com", 111347)] == {3160466, 603346}
+        assert chatcommunicate._privileges[("stackexchange.com", 11540)] == {121520, 10145}
+        assert chatcommunicate._privileges[("stackexchange.com", 30332)] == {121520, 10145}
+        assert chatcommunicate._privileges[("stackexchange.com", 3)] == set()
+        assert chatcommunicate._privileges[("stackexchange.com", 54445)] == set()
+        assert chatcommunicate._privileges[("meta.stackexchange.com", 89)] == {262823}
+        assert chatcommunicate._privileges[("stackoverflow.com", 111347)] == {3160466, 603346}
 
-    assert len(chatcommunicate._room_roles) == 5
-    assert chatcommunicate._room_roles["debug"] == {("stackexchange.com", 11540)}
-    assert chatcommunicate._room_roles["all"] == {("stackexchange.com", 11540),
-                                                  ("stackexchange.com", 54445),
-                                                  ("stackoverflow.com", 111347)}
-    assert chatcommunicate._room_roles["metatavern"] == {("meta.stackexchange.com", 89)}
-    assert chatcommunicate._room_roles["delay"] == {("meta.stackexchange.com", 89)}
-    assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
+        assert len(chatcommunicate._room_roles) == 5
+        assert chatcommunicate._room_roles["debug"] == {("stackexchange.com", 11540)}
+        assert chatcommunicate._room_roles["all"] == {("stackexchange.com", 11540),
+                                                      ("stackexchange.com", 54445),
+                                                      ("stackoverflow.com", 111347)}
+        assert chatcommunicate._room_roles["metatavern"] == {("meta.stackexchange.com", 89)}
+        assert chatcommunicate._room_roles["delay"] == {("meta.stackexchange.com", 89)}
+        assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
 
 @patch("chatcommunicate.threading.Thread")
@@ -93,7 +108,8 @@ def test_init(room_config, client_constructor, thread):
     # https://stackoverflow.com/questions/23337471/
     with pytest.raises(Exception) as e:
         chatcommunicate.init("shoutouts", "to simpleflips", try_cookies=False)
-    assert str(e.value).endswith("Failed to log into {}, max retries exceeded".format(next(iter(chatcommunicate._clients))))
+    with chatcommunicate._clients_lock:
+        assert str(e.value).endswith("Failed to log into {}, max retries exceeded".format(next(iter(chatcommunicate._clients))))
 
     client.login.side_effect = None
     client.login.reset_mock()
@@ -107,7 +123,8 @@ def test_init(room_config, client_constructor, thread):
     except Exception:
         return  # This interferes with the following tests
 
-    assert len(chatcommunicate._rooms) == 0
+    with chatcommunicate._rooms_lock:
+        assert len(chatcommunicate._rooms) == 0
 
     assert client_constructor.call_count == 3
     client_constructor.assert_any_call("stackexchange.com")
@@ -149,10 +166,11 @@ def test_init(room_config, client_constructor, thread):
     thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
     thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
-    assert len(chatcommunicate._rooms) == 3
-    assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
-    assert chatcommunicate._rooms[("stackexchange.com", 30332)].deletion_watcher is False
-    assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
+    with chatcommunicate._rooms_lock:
+        assert len(chatcommunicate._rooms) == 3
+        assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
+        assert chatcommunicate._rooms[("stackexchange.com", 30332)].deletion_watcher is False
+        assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
 
 
 @pytest.mark.skipif(has_pickle("messageData.p"), reason="shouldn't overwrite file")
@@ -205,252 +223,256 @@ def test_message_sender(pickle_rick):
         time.sleep(0)
 
     room.room._client._do_action_despite_throttling.assert_called_once_with(("send", 30332, "test"))
-    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((1,))
-    assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 2): "did you hear about what happened to pluto"})
+    with chatcommunicate._last_messages_lock:
+        assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((1,))
+        assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 2): "did you hear about what happened to pluto"})
 
 
 @patch("chatcommunicate._msg_queue.put")
 @patch("chatcommunicate.get_last_messages")
 def test_on_msg(get_last_messages, post_msg):
-    client = Fake({
-        "_br": {
-            "user_id": 1337
-        },
-
-        "host": "stackexchange.com"
-    })
-
-    room_data = chatcommunicate.RoomData(Mock(), -1, False)
-    chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
-
-    chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
-
-    msg1 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
+    # This is loading fake room data into chatcommunicate._rooms, so we need to keep chatcommunicate._rooms_lock for the entire test.
+    # It's also mocking chatcommunicate._prefix_commands and chatcommunicate._reply_commands.
+    with chatcommunicate._rooms_lock, chatcommunicate._prefix_commands_lock, chatcommunicate._reply_commands_lock:
+        client = Fake({
+            "_br": {
+                "user_id": 1337
             },
 
-            "owner": {
-                "id": 1,
-            },
+            "host": "stackexchange.com"
+        })
 
-            "parent": None,
-            "content": "shoutouts to simpleflips"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
+        room_data = chatcommunicate.RoomData(Mock(), -1, False)
+        chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
 
-    chatcommunicate.on_msg(msg1, client)
+        chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
 
-    msg2 = Fake({
-        "message": {
-            "room": {
-                "id": 11540
-            },
+        msg1 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-            "owner": {
-                "id": 1337
-            },
-
-            "id": 999,
-            "parent": None,
-            "content": "!!/not_actually_a_command"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
-
-    chatcommunicate.on_msg(msg2, client)
-
-    msg3 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
-
-            "owner": {
-                "id": 1
-            },
-
-            "id": 999,
-            "parent": None,
-            "content": "!!/a_command"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
-
-    mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
-
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a_command-"
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 1))
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 1 2 3"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (1, 2))
-
-    msg3.message.content = "!!/a-command"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 Too few arguments."
-    mock_command.assert_not_called()
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 1 2 oatmeal"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 Too many arguments."
-    mock_command.assert_not_called()
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command- 1 2"
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 3"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg4 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
-
-            "owner": {
-                "id": 1
-            },
-
-            "parent": {
                 "owner": {
-                    "id": 2
-                }
-            },
+                    "id": 1,
+                },
 
-            "id": 1000,
-            "content": "asdf"
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
+                "parent": None,
+                "content": "shoutouts to simpleflips"
+            }
+        }, spec=chatcommunicate.events.MessagePosted)
 
-    chatcommunicate.on_msg(msg4, client)
+        chatcommunicate.on_msg(msg1, client)
 
-    msg5 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
+        msg2 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540
+                },
 
-            "owner": {
-                "id": 1
-            },
-
-            "parent": {
                 "owner": {
                     "id": 1337
-                }
-            },
+                },
 
-            "id": 1000,
-            "content": "@SmokeDetector why   "
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
+                "id": 999,
+                "parent": None,
+                "content": "!!/not_actually_a_command"
+            }
+        }, spec=chatcommunicate.events.MessagePosted)
 
-    chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
+        chatcommunicate.on_msg(msg2, client)
 
-    threw_exception = False
+        msg3 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-    try:
+                "owner": {
+                    "id": 1
+                },
+
+                "id": 999,
+                "parent": None,
+                "content": "!!/a_command"
+            }
+        }, spec=chatcommunicate.events.MessagePosted)
+
+        mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
+
+        chatcommunicate.on_msg(msg3, client)
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg3.message.content = "!!/a_command-"
+        chatcommunicate.on_msg(msg3, client)
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 1))
+        chatcommunicate.on_msg(msg3, client)
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg3.message.content = "!!/a-command 1 2 3"
+        chatcommunicate.on_msg(msg3, client)
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (1, 2))
+
+        msg3.message.content = "!!/a-command"
+        chatcommunicate.on_msg(msg3, client)
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 Too few arguments."
+        mock_command.assert_not_called()
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg3.message.content = "!!/a-command 1 2 oatmeal"
+        chatcommunicate.on_msg(msg3, client)
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 Too many arguments."
+        mock_command.assert_not_called()
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg3.message.content = "!!/a-command- 1 2"
+        chatcommunicate.on_msg(msg3, client)
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg3.message.content = "!!/a-command 3"
+        chatcommunicate.on_msg(msg3, client)
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
+
+                "owner": {
+                    "id": 1
+                },
+
+                "parent": {
+                    "owner": {
+                        "id": 2
+                    }
+                },
+
+                "id": 1000,
+                "content": "asdf"
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
+
+        chatcommunicate.on_msg(msg4, client)
+
+        msg5 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
+
+                "owner": {
+                    "id": 1
+                },
+
+                "parent": {
+                    "owner": {
+                        "id": 1337
+                    }
+                },
+
+                "id": 1000,
+                "content": "@SmokeDetector why   "
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
+
+        chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
+
+        threw_exception = False
+
+        try:
+            chatcommunicate.on_msg(msg5, client)
+        except AssertionError:
+            threw_exception = True
+
+        assert threw_exception
+        mock_command.assert_not_called()
+        post_msg.assert_not_called()
+
+        chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
         chatcommunicate.on_msg(msg5, client)
-    except AssertionError:
-        threw_exception = True
 
-    assert threw_exception
-    mock_command.assert_not_called()
-    post_msg.assert_not_called()
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":1000 hi"
+        mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
 
-    chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
-    chatcommunicate.on_msg(msg5, client)
+        post_msg.reset_mock()
+        mock_command.reset_mock()
 
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":1000 hi"
-    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
+        msg5.message.content = "@SmokeDetector why@!@#-"
+        chatcommunicate.on_msg(msg5, client)
 
-    post_msg.reset_mock()
-    mock_command.reset_mock()
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
 
-    msg5.message.content = "@SmokeDetector why@!@#-"
-    chatcommunicate.on_msg(msg5, client)
+        msg6 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
+                "owner": {
+                    "id": 1
+                },
 
-    msg6 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
+                "id": 1000,
+                "parent": None,
+                "content": "sd why - 2why 2why- 2- why- "
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
 
-            "owner": {
-                "id": 1
-            },
+        get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
+        chatcommunicate.on_msg(msg6, client)
 
-            "id": 1000,
-            "parent": None,
-            "content": "sd why - 2why 2why- 2- why- "
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
-
-    get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
-    chatcommunicate.on_msg(msg6, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
 
 
 def test_message_type():

@@ -217,9 +217,13 @@ if (se_site_id_issues):
 
 # noinspection PyProtectedMember
 def check_socket_connections():
-    for client in chatcommunicate._clients.values():
-        if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
-            exit_mode("socket_failure")
+    socket_failure = False
+    with chatcommunicate._clients_lock:
+        for client in chatcommunicate._clients.values():
+            if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
+                socket_failure = True
+    if socket_failure:
+        exit_mode("socket_failure")
 
 
 Tasks.periodic(check_socket_connections, interval=90)

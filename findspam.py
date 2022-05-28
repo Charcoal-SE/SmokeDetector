@@ -1840,7 +1840,8 @@ def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
 @create_rule("himalayan pink salt detected", whole_post=True, disabled=True)
 def turkey2(post):
     if regex.search("([01]{8}|zoe)", post.body):
-        pingable = chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names()
+        with chatcommunicate._clients_lock:
+            pingable = chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names()
 
         if not pingable or not isinstance(pingable, list):
             return False, False, False, ""
