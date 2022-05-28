@@ -23,7 +23,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log
+from helpers import log, regex_compile_no_cache
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -47,7 +47,7 @@ PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
-RE_COMPILE = regex.compile(EXCEPTION_RE)
+RE_COMPILE = regex_compile_no_cache(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
@@ -63,7 +63,7 @@ SE_SITES_RE = r'(?:{sites})'.format(
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
                     'imgur.com']  # Frequently catching FP
-WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".join([
+WHITELISTED_WEBSITES_REGEX = regex_compile_no_cache(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
     r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org", "regexr"
@@ -327,14 +327,14 @@ if GlobalVars.perspective_key:
 # stupid and don't always know how to actually *link* their web site. BeautifulSoup misses
 # those plain text URLs.
 # https://gist.github.com/dperini/729294#gistcomment-1296121
-URL_REGEX = regex.compile(
+URL_REGEX = regex_compile_no_cache(
     r"""((?:(?:https?|ftp)://)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)"""
     r"""(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2}))"""
     r"""(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])"""
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|\b(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
-TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
+TAG_REGEX = regex_compile_no_cache(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
@@ -506,9 +506,8 @@ class Rule:
             try:
                 compiled_regex = self.compiled_regex
             except AttributeError:
-                compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
+                compiled_regex = regex_compile_no_cache(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
                 self.compiled_regex = compiled_regex
-                regex.purge()  # Don't keep the regex in the cache.
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
@@ -853,7 +852,7 @@ def has_repeating_characters(s, site):
     s = s.strip().replace("\u200B", "").replace("\u200C", "")  # Strip leading and trailing spaces
     if "\n\n" in s or "<code>" in s or "<pre>" in s:
         return False, ""
-    s = regex.sub(URL_REGEX, "", s)  # Strip URLs for this check
+    s = URL_REGEX.sub("", s)  # Strip URLs for this check
     if not s:
         return False, ""
     # Don't detect a couple of common ways for people to try to include tables (reduces FP by ~20%).
@@ -1529,7 +1528,7 @@ def post_links(post):
         edited_post = edited_post.replace(p[0], p[1])
 
     links = []
-    for l in regex.findall(URL_REGEX, edited_post):
+    for l in URL_REGEX.findall(edited_post):
         if l[-1].isalnum():
             links.append(l)
         else:
