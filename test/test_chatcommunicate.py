@@ -17,7 +17,16 @@ from fake import Fake
 from unittest.mock import Mock, patch
 
 
-def lock_and_restore_all_chatcommunicate_global_values():
+def parse_test_rooms():
+    def decorator(func):
+        def wrap(*args, **kwargs):
+            chatcommunicate.parse_room_config("test/test_rooms.yml")
+            return func(*args, **kwargs)
+        return wrap
+    return decorator
+
+
+def lock_clear_and_restore_all_chatcommunicate_global_values():
     def decorator(func):
         def wrap(*args, **kwargs):
             with chatcommunicate._prefix_commands_lock, chatcommunicate._reply_commands_lock, chatcommunicate._room_roles_lock, \
@@ -44,9 +53,11 @@ def lock_and_restore_all_chatcommunicate_global_values():
                     chatcommunicate._room_roles = {}
                     chatcommunicate._privileges = {}
                     chatcommunicate._global_block = -1
+
                     chatcommunicate._rooms = {}
                     chatcommunicate._command_rooms = set()
                     chatcommunicate._watcher_rooms = set()
+
                     chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
                     return func(*args, **kwargs)
                 except Exception:
@@ -146,10 +157,11 @@ def test_parse_room_config():
         assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
 
+@lock_clear_and_restore_all_chatcommunicate_global_values()
+@parse_test_rooms()
 @patch("chatcommunicate.threading.Thread")
 @patch("chatcommunicate.Client")
 @patch("chatcommunicate.parse_room_config")
-@lock_and_restore_all_chatcommunicate_global_values()
 def test_init(room_config, client_constructor, thread):
     client = Mock()
     client_constructor.return_value = client
