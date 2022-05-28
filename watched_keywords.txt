@@ -39712,3 +39712,4 @@
 1653755778	cigien	redcart\.ir
 1653755825	cigien	ezwin288\.com
 1653756068	cigien	adv[\W_]*+contractors(?!\.co\.uk(?<=advcontractors\.co\.uk))
+1653756306	cigien	aruna[\W_]*+lab(?!\.com(?<=arunalab\.com))
