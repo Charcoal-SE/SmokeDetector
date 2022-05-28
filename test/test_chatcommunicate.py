@@ -50,7 +50,7 @@ def lock_and_restore_all_chatcommunicate_global_values():
                     chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
                     return func(*args, **kwargs)
                 except Exception:
-                    pass
+                    raise
                 finally:
                     # Reset the values which were controlled under the locks
                     chatcommunicate._prefix_commands = prefix_commands

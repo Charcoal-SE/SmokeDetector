@@ -32,12 +32,18 @@ def rewrap_for_paramiterized_test_bisect():
     return decorator
 
 
+def rewrap_for_monkeypatch_argument():
+    def decorator(func):
+        def wrap(monkeypatch):
+            return func(monkeypatch)
+        return wrap
+    return decorator
+
+
 def lock_and_restore_chatcommunicate_rooms():
     def decorator(func):
         def wrap(*args, **kwargs):
-            chatcommunicate._privileges_lock.acquire()
-            try:
-                chatcommunicate._rooms_lock.acquire()
+            with chatcommunicate._privileges_lock, chatcommunicate._rooms_lock:
                 privileges = chatcommunicate._privileges
                 rooms = chatcommunicate._rooms
                 command_rooms = chatcommunicate._command_rooms
@@ -49,18 +55,13 @@ def lock_and_restore_chatcommunicate_rooms():
                     chatcommunicate._watcher_rooms = set()
                     return func(*args, **kwargs)
                 except Exception:
-                    pass
+                    raise
                 finally:
                     # Reset the values which were controlled under the locks
                     chatcommunicate._privileges = privileges
                     chatcommunicate._rooms = rooms
                     chatcommunicate._command_rooms = command_rooms
                     chatcommunicate._watcher_rooms = watcher_rooms
-                    chatcommunicate._rooms_lock.release()
-            except Exception:
-                pass
-            finally:
-                chatcommunicate._privileges_lock.release()
         return wrap
     return decorator
 
@@ -324,6 +325,7 @@ def test_watch(monkeypatch):
         git.checkout("master")
 
 
+@rewrap_for_monkeypatch_argument()
 @lock_and_restore_chatcommunicate_rooms()
 def test_approve(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
@@ -352,6 +354,7 @@ def test_approve(monkeypatch):
     assert chatcommands.approve(2518, original_msg=msg)[:8] in {"PR #2518", "Cannot c"}
 
 
+@rewrap_for_monkeypatch_argument()
 @lock_and_restore_chatcommunicate_rooms()
 def test_reject(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
