@@ -12,6 +12,7 @@ from string import punctuation
 import time
 import os
 import os.path as path
+import threading
 
 import regex
 # noinspection PyPackageRequirements
@@ -35,9 +36,8 @@ if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
         'Need regex >= 2020.6.8 (internal version number 2.5.82; got %s)' %
         regex.__version__)
 
-TLD_CACHE = []
-DNS_CACHE = dict()
 LINK_CACHE = dict()
+LINK_CACHE_lock = threading.RLock()
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -1518,9 +1518,10 @@ def post_links(post):
     """
     global LINK_CACHE
 
-    if post in LINK_CACHE:
-        log('debug', 'Returning cached links for post')
-        return LINK_CACHE[post]['links']
+    with LINK_CACHE_lock:
+        if post in LINK_CACHE:
+            log('debug', 'Returning cached links for post')
+            return LINK_CACHE[post]['links']
 
     # Fix stupid spammer tricks
     edited_post = post
@@ -1534,14 +1535,15 @@ def post_links(post):
         else:
             links.append(l[:-1])
 
-    if len(LINK_CACHE.keys()) >= 15:
-        log('debug', 'Trimming LINK_CACHE down to 5 entries')
-        purge_cache(LINK_CACHE, 10)
-        log('debug', 'LINK_CACHE purged')
+    with LINK_CACHE_lock:
+        if len(LINK_CACHE.keys()) >= 15:
+            log('debug', 'Trimming LINK_CACHE down to 5 entries')
+            purge_cache(LINK_CACHE, 10)
+            log('debug', 'LINK_CACHE purged')
 
-    linkset = set(links)
-    LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.utcnow()}
-    return linkset
+        linkset = set(links)
+        LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.utcnow()}
+        return linkset
 
 
 def post_hosts(post, check_tld=False):
@@ -1556,8 +1558,9 @@ def post_hosts(post, check_tld=False):
     '''
     global LINK_CACHE
 
-    if post in LINK_CACHE and 'hosts' in LINK_CACHE[post]:
-        return LINK_CACHE[post]['hosts']
+    with LINK_CACHE_lock:
+        if post in LINK_CACHE and 'hosts' in LINK_CACHE[post]:
+            return LINK_CACHE[post]['hosts']
 
     invalid_tld_count = 0
     hostnames = []
@@ -1586,7 +1589,8 @@ def post_hosts(post, check_tld=False):
         hostnames.append(hostname)
 
     hostset = set(hostnames)
-    LINK_CACHE[post]['hosts'] = hostset
+    with LINK_CACHE_lock:
+        LINK_CACHE[post]['hosts'] = hostset
     return hostset
 
 
