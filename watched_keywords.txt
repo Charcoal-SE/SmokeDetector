@@ -39728,3 +39728,4 @@
 1653866395	Makyen	dribrahimspellcaster(?:@gmail\.com)?
 1653866439	Makyen	woodstockwalls\d*(?!\.com)
 1653868008	cigien	wotlk\.gold
+1653868035	cigien	deucesandthediamondclub\.com
