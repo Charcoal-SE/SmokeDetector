@@ -271,6 +271,7 @@ def test_deprecated_blacklist():
 
 
 @pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
+@rewrap_for_monkeypatch_argument()
 @lock_and_restore_chatcommunicate_rooms()
 def test_watch(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
