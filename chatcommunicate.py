@@ -657,6 +657,7 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
+    func = None
     with _reply_commands_lock:
         if cmd in _reply_commands:
             func, (min_arity, max_arity) = _reply_commands[cmd]
