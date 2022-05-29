@@ -23551,7 +23551,6 @@
 1603369724	Ryan M	(?:best|top|great(?:est)?|must\W?see)\W++(?:\w++\W++){0,3}movies\W++(?:\w++\W++){0,5}(?:20\d\d|all time)
 1603371758	tripleee	roomfurnisher\.com
 1603376481	Spevacus	hpsloyalty\.in
-1603377605	Spevacus	opendatascience\.com
 1603385343	Spevacus	thefilmyseries\.com
 1603389293	Ryan M	vandenberg-berlin\.de
 1603396540	Glorfindel	thesarkarijobportal\.in
