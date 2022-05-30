@@ -37358,7 +37358,6 @@
 1647850448	tripleee	touchstone[\W_]*+infotech(?!\.com(?<=touchstoneinfotech\.com))
 1647854926	Ryan M	appcraver\.com
 1647857071	Jeff Schaller	hyderabadservicecenters\.com
-1647859535	tripleee	(?-i:^Jessica David$)
 1647860888	tripleee	challenge[\W_]*+coins
 1647862012	tripleee	thinkwithniche\.in
 1647863276	tripleee	c4changer\.com
