@@ -418,7 +418,8 @@ class Rule:
     default_filter = PostFilter()
 
     def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
-                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None):
+                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None,
+                 elapsed_time_reporting=None):
         self.regex = None
         self.func = None
         if isinstance(item, (str, URL_REGEX.__class__)):
@@ -434,6 +435,7 @@ class Rule:
         self.stripcodeblocks = stripcodeblocks
         self.whole_post = whole_post
         self.rule_id = rule_id
+        self.elapsed_time_reporting = elapsed_time_reporting
         if not skip_creation_sanity_check:
             self.sanity_check()
 
@@ -625,10 +627,15 @@ class FindSpam:
             title, username, body = rule.match(post)
             end_time = time.time()
             elapsed_time = end_time - start_time
-            draw_attention = ' <------------------' if elapsed_time > FindSpam.ELAPSED_TIME_DRAW_ATTENTION_MIN else ''
+            elapsed_time_draw_attention_min = FindSpam.ELAPSED_TIME_DRAW_ATTENTION_MIN
+            elapsed_time_levels = FindSpam.ELAPSED_TIME_LOG_AND_TELL_LEVELS
+            if type(rule.elapsed_time_reporting) is dict:
+                elapsed_time_draw_attention_min = rule.elapsed_time_reporting.get('draw_attention_min', 600)
+                elapsed_time_levels = rule.elapsed_time_reporting.get('levels', [])
+            draw_attention = ' <------------------' if elapsed_time > elapsed_time_draw_attention_min else ''
             log_type = ''
             tell_text = ''
-            for log_level, tell_level, minimum_elapsed_time in FindSpam.ELAPSED_TIME_LOG_AND_TELL_LEVELS:
+            for log_level, tell_level, minimum_elapsed_time in elapsed_time_levels:
                 if (elapsed_time >= minimum_elapsed_time):
                     log_type = log_level
                     tell_text = tell_level
@@ -694,6 +701,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 whole_post=False,  # For some functions
                 disabled=False,  # yeah, disabled=True is intuitive
                 rule_id=None,  # Unique rule ID [The "reason" may be on multiple rules; this is unique to the rule.]
+                elapsed_time_reporting=None,
                 skip_creation_sanity_check=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
@@ -723,7 +731,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                    rule_id=rule_id)
+                    rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
         if not disabled:
             FindSpam.rules.append(rule)
         return rule
@@ -739,7 +747,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
             rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                        rule_id=rule_id)
+                        rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
             if not disabled:
                 FindSpam.rules.append(rule)
             return rule
@@ -2208,7 +2216,15 @@ FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
                                              max_rep=32, max_score=1, skip_creation_sanity_check=True,
-                                             rule_id="Potentialy bad keywords: main detection")
+                                             rule_id="Potentialy bad keywords: main detection (watchlist)",
+                                             elapsed_time_reporting={
+                                                 'draw_attention_min': 20,
+                                                 'levels': [
+                                                     ('debug', '', 10),
+                                                     ('info', 'High ', 20),
+                                                     ('warning', '**Very High** ', 45),
+                                                 ],
+                                             })
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
                                                  max_rep=52, max_score=5, skip_creation_sanity_check=True,
                                                  rule_id="Blacklisted websites: main detection")
