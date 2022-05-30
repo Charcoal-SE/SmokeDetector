@@ -39751,3 +39751,4 @@
 1653903174	tripleee	(?-i:^soniya sha$)
 1653907672	tripleee	most-bet\.az
 1653907859	tripleee	(?-i:^Amrit Pal$)
+1653911806	tripleee	myshoplaza\.com
