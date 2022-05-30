@@ -39739,4 +39739,3 @@
 1653889892	Makyen	isharpacademy\.in
 1653889914	Makyen	isharp[\W_]*+academy(?!\.in(?<=isharpacademy\.in))
 1653891025	tripleee	ackrolix\.co
-1653891056	tripleee	ackrolix(?!\.co\b)
