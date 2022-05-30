@@ -39741,3 +39741,4 @@
 1653891297	tripleee	ackrol?ix(?!\.co\b)
 1653892354	tripleee	ihealthcure\.com
 1653892987	tripleee	dmrengineering\.net
+1653893042	tripleee	mapout24\.com
