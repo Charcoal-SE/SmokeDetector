@@ -39747,3 +39747,4 @@
 1653898216	tripleee	(?-i:^DK C$)
 1653898969	tripleee	green[\W_]*+house[\W_]*+cbd
 1653900148	tripleee	websitebuddy\.in
+1653902751	tripleee	dienthoaivui\.com\.vn
