@@ -17,6 +17,9 @@ items:
   - ximena.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
+  - norman.ns.cloudflare.com.
+- ns:
+  - abby.ns.cloudflare.com.
   - rick.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
