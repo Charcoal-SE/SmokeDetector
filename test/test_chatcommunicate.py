@@ -80,11 +80,15 @@ def lock_clear_and_restore_all_chatcommunicate_global_values():
 
 
 def test_validate_yaml():
+    rooms_file_content = ''
+    users_file_content = ''
     with open("rooms.yml", "r") as f:
-        room_data = yaml.safe_load(f.read())
+        rooms_file_content = f.read()
+        room_data = yaml.safe_load(rooms_file_content)
 
     with open("users.yml", "r") as f:
-        user_data = yaml.safe_load(f.read())
+        users_file_content = f.read()
+        user_data = yaml.safe_load(users_file_content)
 
     privileged_users = []
 
@@ -124,6 +128,10 @@ def test_validate_yaml():
             issues.append("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
 
     if issues:
+        print('\n\nrooms_file_content:')
+        print(rooms_file_content)
+        print('\n\nusers_file_content:')
+        print(users_file_content)
         pytest.fail('\n'.join(issues))
 
 
