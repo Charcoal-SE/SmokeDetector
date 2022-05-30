@@ -2622,3 +2622,4 @@ pad[\W_]?+store
 tadalista
 slot[\W_]*gacor
 niastoto(?!(?<=^niastoto)$)
+explainer[\W_]*+video[\W_]*+company

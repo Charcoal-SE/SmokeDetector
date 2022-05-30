@@ -30672,7 +30672,6 @@
 1626339780	Ryan M	vershinin\.biz
 1626340507	Ryan M	terrariablog\.com
 1626341257	Ryan M	explainermojo\.com
-1626341372	Ryan M	explainer[\W_]*+video[\W_]*+company
 1626341956	Ryan M	cincinnatiproshoponline\.com
 1626342265	Ryan M	arunseo\.com
 1626344259	Ryan M	judocoder\.com
