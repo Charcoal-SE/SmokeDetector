@@ -805,6 +805,9 @@ items:
   - dahlia.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - dalary.ns.cloudflare.com.
+  - pablo.ns.cloudflare.com.
+- ns:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
