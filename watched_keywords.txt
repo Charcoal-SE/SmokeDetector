@@ -39726,7 +39726,6 @@
 1653852429	cocomac	jobiworld\.com
 1653866369	Makyen	d(?:octo)?r[\W_]*+ibrahim
 1653866395	Makyen	dribrahimspellcaster(?:@gmail\.com)?
-1653866439	Makyen	woodstockwalls\d*(?!\.com)
 1653868008	cigien	wotlk\.gold
 1653868035	cigien	deucesandthediamondclub\.com
 1653869731	cigien	d(?:octo)?r[\W_]*+salato
