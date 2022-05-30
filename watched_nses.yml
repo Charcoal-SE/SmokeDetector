@@ -1200,6 +1200,9 @@ items:
   - kia.ns.cloudflare.com.
 - ns:
   - greg.ns.cloudflare.com.
+  - leia.ns.cloudflare.com.
+- ns:
+  - greg.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
   - greg.ns.cloudflare.com.
