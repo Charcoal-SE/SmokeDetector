@@ -39759,3 +39759,4 @@
 1653918235	cigien	spacebarclicker\.info
 1653918607	cigien	acsel
 1653919235	cigien	emiratefix\.com
+1653920360	Jeff Schaller	acselnow\.com
