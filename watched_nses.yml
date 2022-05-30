@@ -472,6 +472,9 @@ items:
   - beth.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
+  - beth.ns.cloudflare.com.
+  - mitch.ns.cloudflare.com.
+- ns:
   - betty.ns.cloudflare.com.
   - charles.ns.cloudflare.com.
 - ns:
