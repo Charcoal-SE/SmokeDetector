@@ -1655,6 +1655,9 @@ items:
   - lindsey.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
+  - lisa.ns.cloudflare.com.
+  - yew.ns.cloudflare.com.
+- ns:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
