@@ -401,6 +401,9 @@ items:
   - clyde.ns.cloudflare.com.
 - ns:
   - ashley.ns.cloudflare.com.
+  - dan.ns.cloudflare.com.
+- ns:
+  - ashley.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - athena.ns.cloudflare.com.
