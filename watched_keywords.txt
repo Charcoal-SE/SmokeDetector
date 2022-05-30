@@ -39755,3 +39755,4 @@
 1653914481	tripleee	alightmotion\.net
 1653916466	tripleee	cvv[\W_]*+dump[sz]?
 1653916511	tripleee	channels4you\.com
+1653917349	Jeff Schaller	legitmedss\.com
