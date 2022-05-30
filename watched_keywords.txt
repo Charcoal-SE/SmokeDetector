@@ -39740,3 +39740,4 @@
 1653891025	tripleee	ackrolix\.co
 1653891297	tripleee	ackrol?ix(?!\.co\b)
 1653892354	tripleee	ihealthcure\.com
+1653892987	tripleee	dmrengineering\.net
