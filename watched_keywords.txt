@@ -39748,3 +39748,4 @@
 1653898969	tripleee	green[\W_]*+house[\W_]*+cbd
 1653900148	tripleee	websitebuddy\.in
 1653902751	tripleee	dienthoaivui\.com\.vn
+1653902776	tripleee	propertybuy-rent\.co\.uk
