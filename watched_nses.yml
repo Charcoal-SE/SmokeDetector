@@ -793,6 +793,9 @@ items:
   - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
+  - curt.ns.cloudflare.com.
+  - vida.ns.cloudflare.com.
+- ns:
   - dahlia.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
