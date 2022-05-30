@@ -119,6 +119,9 @@ items:
   - lia.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
+  - megan.ns.cloudflare.com.
+- ns:
+  - ajay.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
   - alan.ns.cloudflare.com.
