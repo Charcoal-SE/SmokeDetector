@@ -39800,3 +39800,4 @@
 1653994997	Jeff Schaller	carryindia\.co\.in
 1653995319	tripleee	unitedmoversdubai\.ae
 1653995383	tripleee	oulhadjoday(?:[\W_]*+(?:at[\_W]*+)?gmail[\W_]*+(?:dot[\_W]*+)?com)?
+1653995723	tripleee	kudosayurveda\.com
