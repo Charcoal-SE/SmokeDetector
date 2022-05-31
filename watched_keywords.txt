@@ -39796,3 +39796,4 @@
 1653988244	tripleee	baccha[\W_]*+wala(?!\.(?:com|blogspot)(?<=bacchawala\.(?:com|blogspot)))
 1653989030	tripleee	ductscleaning\.com\.au
 1653989560	tripleee	digitaleproducts\.shop
+1653989640	tripleee	(?-i:^FSPCBA$)
