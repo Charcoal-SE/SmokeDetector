@@ -39793,3 +39793,4 @@
 1653988109	tripleee	bacchawala\.com
 1653988161	tripleee	bacchawala\.blogspot
 1653988207	tripleee	calculatorway\.com
+1653988244	tripleee	baccha[\W_]*+wala(?!\.(?:com|blogspot)(?<=bacchawala\.(?:com|blogspot)))
