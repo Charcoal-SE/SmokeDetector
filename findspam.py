@@ -2212,11 +2212,11 @@ city_list = [
 FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
                                          username=True, body_summary=True,
                                          max_rep=32, max_score=1, skip_creation_sanity_check=True,
-                                         rule_id="Bad keywords: main detection")
+                                         rule_id="main blacklisted keywords")
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
                                              max_rep=32, max_score=1, skip_creation_sanity_check=True,
-                                             rule_id="Potentialy bad keywords: main detection (watchlist)",
+                                             rule_id="main watchlist",
                                              elapsed_time_reporting={
                                                  'draw_attention_min': 20,
                                                  'levels': [
@@ -2227,11 +2227,11 @@ FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", re
                                              })
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
                                                  max_rep=52, max_score=5, skip_creation_sanity_check=True,
-                                                 rule_id="Blacklisted websites: main detection")
+                                                 rule_id="main blacklisted websites")
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
                                                   skip_creation_sanity_check=True,
-                                                  rule_id="Blacklisted usernames: main detection")
+                                                  rule_id="main blacklisted usernames")
 
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
