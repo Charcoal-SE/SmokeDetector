@@ -666,3 +666,4 @@ Visualytes
 ^niastoto$
 (?-i:^magecaptain$)
 (?-i:^Koora_today$)
+(?-i:^civiconcepts$)
