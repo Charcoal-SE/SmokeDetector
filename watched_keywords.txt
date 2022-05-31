@@ -39785,3 +39785,4 @@
 1653979424	tripleee	akkadianqatar\.com
 1653980582	tripleee	social[\W_]*+credit[\W_]*+repairs(?!\.com(?<=socialcreditrepairs\.com))
 1653980671	tripleee	rakhiworldwide\.com
+1653981052	tripleee	(?-i:^Niaz Muhammad$)
