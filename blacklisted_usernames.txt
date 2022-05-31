@@ -665,3 +665,4 @@ Visualytes
 (?-i:^World Wide Packers and Movers$)
 ^niastoto$
 (?-i:^magecaptain$)
+(?-i:^Koora_today$)
