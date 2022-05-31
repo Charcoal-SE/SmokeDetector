@@ -2901,3 +2901,6 @@ items:
 - ns: asurahosting.com.
 - ns: adminvps.net.
 - ns: adminvps.ru.
+- ns:
+  - rs1.net.au.
+  - rs2.net.au.
