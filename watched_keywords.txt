@@ -39809,3 +39809,4 @@
 1654003461	tripleee	matrix[\W_]*+bricks(?!\.com(?<=matrixbricks\.com))
 1654003492	tripleee	matrixbricks\.com
 1654004050	cigien	PedroBrainboss(?#t.me)
+1654009786	Makyen	oceananime\.com
