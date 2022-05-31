@@ -39805,3 +39805,4 @@
 1654001012	Makyen	myvegblog\.com
 1654002926	tripleee	(?-i:4--v1S-gI5o)(?# youtube)
 1654003115	tripleee	whiteboard[\W_]*+explainer[\W_]*+videos?
+1654003383	tripleee	specialityvalve\.com
