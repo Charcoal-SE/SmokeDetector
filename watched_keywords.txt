@@ -39808,3 +39808,4 @@
 1654003383	tripleee	specialityvalve\.com
 1654003461	tripleee	matrix[\W_]*+bricks(?!\.com(?<=matrixbricks\.com))
 1654003492	tripleee	matrixbricks\.com
+1654004050	cigien	PedroBrainboss(?#t.me)
