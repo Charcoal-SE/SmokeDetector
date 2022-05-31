@@ -2473,7 +2473,6 @@ items:
 - ip: 192.0.78.192
 - ip: 192.0.78.240
 - ip: 192.124.249.109
-- ip: 192.124.249.110
 - ip: 192.124.249.112
 - comment: no TPs, 0/26 over two years
   disable: true
