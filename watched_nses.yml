@@ -1430,6 +1430,9 @@ items:
   - jim.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
+  - jimmy.ns.cloudflare.com.
+  - perla.ns.cloudflare.com.
+- ns:
   - jo.ns.cloudflare.com.
   - otto.ns.cloudflare.com.
 - ns:
