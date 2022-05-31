@@ -584,6 +584,9 @@ items:
   - dalary.ns.cloudflare.com.
 - ns:
   - brianna.ns.cloudflare.com.
+  - drew.ns.cloudflare.com.
+- ns:
+  - brianna.ns.cloudflare.com.
   - rex.ns.cloudflare.com.
 - ns:
   - brianna.ns.cloudflare.com.
