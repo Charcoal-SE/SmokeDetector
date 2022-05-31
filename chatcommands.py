@@ -1804,12 +1804,62 @@ def migrate_notifications():
 @command(whole_msg=True)
 def unnotify_all(msg):
     """
-    Unsubscribes a user to all events
+    Unsubscribes a user from all events
     :param msg:
     :return: A string
     """
     remove_all_from_notification_list(msg.owner.id)
-    return "I will no longer ping you if I report a post anywhere."
+    return "I will no longer ping you anywhere when I report a post."
+
+
+def user_must_be_an_admin(msg):
+    if not is_user_an_admin(msg):
+        raise CmdException('You do not have permission to use this command.'
+                           ' Only metasmoke admins may use this command.')
+
+
+def is_user_an_admin(msg):
+    # The code here was largely copied from the whois command.
+    if GlobalVars.metasmoke_key is None or GlobalVars.metasmoke_host is None:
+        raise CmdException('Either the host or API key for metasmoke is not defined. This command requires both.')
+    ms_route = "/api/v2.0/users/with_role/admin"
+    params = {
+        'filter': 'HMMKFJ',
+        'key': GlobalVars.metasmoke_key,
+        'per_page': 100
+    }
+    user_response = Metasmoke.get(ms_route, params=params)
+    user_response.encoding = 'utf-8-sig'
+    user_response = user_response.json()
+    chat_host = msg._client.host
+
+    # Build our list of admin chat ids
+    key = ""
+    if chat_host == "stackexchange.com":
+        key = 'stackexchange_chat_id'
+    elif chat_host == "meta.stackexchange.com":
+        key = 'meta_stackexchange_chat_id'
+    elif chat_host == "stackoverflow.com":
+        key = 'stackoverflow_chat_id'
+
+    admin_ids = [a[key] for a in user_response['items'] if a[key] and a['id'] != -1]
+
+    return msg.owner.id in admin_ids
+
+
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, whole_msg=True)
+def unnotify_all_admin(msg, user_id):
+    """
+    Unsubscribes a user ID from all events
+    :param msg:
+    :param user_id:
+    :return: A string
+    """
+
+    user_must_be_an_admin(msg)
+    remove_all_from_notification_list(user_id)
+    return "I will no longer ping user ID {} anywhere when I report a post.".format(user_id)
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
