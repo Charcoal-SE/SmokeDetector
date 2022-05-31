@@ -44,6 +44,12 @@ jobs:
             git config user.name SmokeDetector
             git config user.email "smokey@erwaysoftware.com"
       - run:
+          name: cat users.yml
+          command: cat users.yml
+      - run:
+          name: cat test/data_test_spamhandling.txt
+          command: cat test/data_test_spamhandling.txt
+      - run:
           name: Pytest
           # Use 5 processes is intended to allow one DNS lookup bound long running test run
           # in parallel with most of the other tests which generally consume more CPU.
