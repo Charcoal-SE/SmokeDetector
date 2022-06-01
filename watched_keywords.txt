@@ -39828,3 +39828,4 @@
 1654068676	tripleee	(?-i:^AlbertTaylor$)
 1654070842	tripleee	a2converter\.com
 1654071128	Ryan M	gosloto\.co\.za
+1654071192	Ryan M	gosloto\.co(?!\.za)
