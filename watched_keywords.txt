@@ -39825,3 +39825,4 @@
 1654062829	tripleee	crm[\W_]*+masters(?!\.com(?<=crm-masters\.com))
 1654065159	tripleee	ourjharkhand\.com
 1654067500	tripleee	ets2indo\.com
+1654067580	tripleee	callgirlguwahati\.com
