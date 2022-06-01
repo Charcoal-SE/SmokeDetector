@@ -2123,7 +2123,7 @@ city_list = [
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
     "Darjeeling", "Dehradun", "Dehrdun", "Delhi", "Dharamshala", "Dharamsala", "Durgapur",
     "Ernakulam", "Faridabad",
-    "Ghatkopar", "Ghaziabad", "Gurgaon", "Gurugram",
+    "Ghatkopar", "Ghaziabad", "Gurgaon", "Gurugram", "Guwahati",
     "Haldwani", "Haridwar", "Hyderabad",
     "Jaipur", "Jalandhar", "Jim Corbett",
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Karnal", "Kerala",
