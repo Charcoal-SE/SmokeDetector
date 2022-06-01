@@ -39833,3 +39833,4 @@
 1654074897	tripleee	aimlay\.com
 1654075742	tripleee	it2\.tv
 1654080783	Mast	ukassignmenthelp\.uk
+1654081565	tripleee	(?-i:^horo$)'
