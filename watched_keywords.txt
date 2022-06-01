@@ -39818,3 +39818,4 @@
 1654031024	cigien	freecoder\.co
 1654046640	Makyen	bark\.com
 1654049635	Makyen	browserstack\.com
+1654049803	Makyen	browserstack(?!\.com)
