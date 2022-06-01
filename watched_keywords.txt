@@ -39839,3 +39839,4 @@
 1654086679	Makyen	d(?:octo)?r[\W_]*+adoda(?:[\W_]*+wonders)?
 1654086712	Makyen	adodalovespelltemple440(?:@gmail\.com)?
 1654086871	Jeff Schaller	endtimesmessages\.com
+1654086967	Jeff Schaller	sbcglobalhelpline\.com
