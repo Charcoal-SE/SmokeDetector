@@ -39819,3 +39819,4 @@
 1654051001	Ryan M	support@browserstack\.com
 1654052075	tripleee	farmacialapasarela\.es
 1654055012	cigien	trumonde\.com
+1654058328	cigien	ultimate[\W_]*+life[\W_]*+clinic(?!\.com(?<=ultimatelifeclinic\.com))
