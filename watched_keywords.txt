@@ -39853,3 +39853,4 @@
 1654120155	cigien	domymathhomework\.pro
 1654120736	cigien	medicinepricebd\.com
 1654122701	cigien	sbcglobalhelpline(?!\.com)
+1654123172	cigien	sokhcn\.cantho\.gov\.vn
