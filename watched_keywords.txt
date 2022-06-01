@@ -39854,3 +39854,4 @@
 1654122701	cigien	sbcglobalhelpline(?!\.com)
 1654123172	cigien	sokhcn\.cantho\.gov\.vn
 1654123253	cigien	aimlay(?!\.com)
+1654124313	cigien	milan(?:[\W_]*+driver)?[\W_]*+t[ae]xi(?!\.com(?<=milandrivertaxi\.com))
