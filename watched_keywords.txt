@@ -39837,3 +39837,4 @@
 1654081878	tripleee	clickscampus\.com
 1654086649	Makyen	dradodalovetemple\.com
 1654086679	Makyen	d(?:octo)?r[\W_]*+adoda(?:[\W_]*+wonders)?
+1654086712	Makyen	adodalovespelltemple440(?:@gmail\.com)?
