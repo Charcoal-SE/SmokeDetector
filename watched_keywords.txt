@@ -39822,3 +39822,4 @@
 1654058328	cigien	ultimate[\W_]*+life[\W_]*+clinic(?!\.com(?<=ultimatelifeclinic\.com))
 1654058642	tripleee	bookprintingchina\.com
 1654062159	Ryan M	medium\.com/geekculture
+1654062829	tripleee	crm[\W_]*+masters(?!\.com(?<=crm-masters\.com))
