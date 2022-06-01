@@ -37955,7 +37955,6 @@
 1649185194	cigien	ihs\.ltd
 1649203011	Ryan M	(?-i:^G Dd$)
 1649212625	cigien	tokenbb\.com
-1649212657	cigien	gosloto\.co
 1649214412	cigien	chakushinon123\.com
 1649217835	Ryan M	itechhacks\.com
 1649221609	tripleee	btamericantire\.com
