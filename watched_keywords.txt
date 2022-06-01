@@ -39823,3 +39823,4 @@
 1654058642	tripleee	bookprintingchina\.com
 1654062159	Ryan M	medium\.com/geekculture
 1654062829	tripleee	crm[\W_]*+masters(?!\.com(?<=crm-masters\.com))
+1654065159	tripleee	ourjharkhand\.com
