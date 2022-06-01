@@ -39831,3 +39831,4 @@
 1654071192	Ryan M	gosloto\.co(?!\.za)
 1654074854	tripleee	(?-i:^muhammad imran$)
 1654074897	tripleee	aimlay\.com
+1654075742	tripleee	it2\.tv
