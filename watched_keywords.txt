@@ -39725,7 +39725,6 @@
 1653876201	cigien	hoskey[\W_]*+april
 1653885531	Makyen	adultdoll\.de
 1653885710	Makyen	sapphiresolutions\.net
-1653889914	Makyen	isharp[\W_]*+academy(?!\.in(?<=isharpacademy\.in))
 1653891025	tripleee	ackrolix\.co
 1653891297	tripleee	ackrol?ix(?!\.co\b)
 1653892354	tripleee	ihealthcure\.com
