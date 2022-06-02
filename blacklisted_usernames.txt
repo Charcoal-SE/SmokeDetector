@@ -672,3 +672,4 @@ Visualytes
 (?-i:^troken migration$)
 (?-i:^isharp academy$)
 (?-i:^bharathalan$)
+(?-i:^sanju singh$)
