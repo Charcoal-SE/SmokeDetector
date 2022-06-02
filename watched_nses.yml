@@ -272,6 +272,9 @@ items:
   - dee.ns.cloudflare.com.
 - ns:
   - anna.ns.cloudflare.com.
+  - thomas.ns.cloudflare.com.
+- ns:
+  - anna.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
   - anuj.ns.cloudflare.com.
