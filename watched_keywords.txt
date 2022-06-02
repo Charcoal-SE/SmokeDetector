@@ -39870,3 +39870,4 @@
 1654153927	tripleee	thinkconnects\.com
 1654153957	cigien	datastoragesolutions\.in
 1654153996	cigien	smarterair\.com\.au
+1654154050	tripleee	think[\W_]*+connects(?!\.com(?<=thinkconnects\.com))
