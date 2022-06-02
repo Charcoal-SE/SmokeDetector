@@ -2624,3 +2624,4 @@ slot[\W_]*gacor
 niastoto(?!(?<=^niastoto)$)
 explainer[\W_]*+video[\W_]*+company
 🎉🎁✅👍👇
+customer[\W_]*+care[\W_]*+number
