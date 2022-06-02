@@ -39890,3 +39890,4 @@
 1654163847	tripleee	cispro[\W_]*+training(?!\.com(?<=cisprotraining\.com))
 1654163879	tripleee	cisprotraining\.com
 1654164278	tripleee	duiux
+1654150215	cocomac	resellerclub\.com
