@@ -39876,5 +39876,4 @@
 1654155996	Ryan M	hamariwishes\.com
 1654156254	tripleee	vissentials
 1654156412	tripleee	(?-i:^Sunday Godwin$)
-1654156996	tripleee	tunesmake
 1654157023	tripleee	sarthaktech\.in
