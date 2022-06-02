@@ -39908,3 +39908,4 @@
 1654187238	cigien	pubgnewstate\.mobi
 1654188196	tripleee	(?-i:^Satinderjot Kaur$)
 1654188621	Ollie	quranxperts\.com
+1654188720	Ollie	psychedelichavens\.com
