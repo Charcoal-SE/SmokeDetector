@@ -39865,3 +39865,4 @@
 1654149255	tripleee	isharp[\W_]*+academy(?<!(?-i:^isharp academy$))(?!\.in(?<=isharpacademy\.in))
 1654150029	tripleee	(?-i:^Ticketmasterakabss$)
 1654150670	tripleee	mesameergaikwad\.blogspot
+1654151333	tripleee	transeptia\.com
