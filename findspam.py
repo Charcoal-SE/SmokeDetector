@@ -418,7 +418,8 @@ class Rule:
     default_filter = PostFilter()
 
     def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
-                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None):
+                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None,
+                 elapsed_time_reporting=None):
         self.regex = None
         self.func = None
         if isinstance(item, (str, URL_REGEX.__class__)):
@@ -434,6 +435,7 @@ class Rule:
         self.stripcodeblocks = stripcodeblocks
         self.whole_post = whole_post
         self.rule_id = rule_id
+        self.elapsed_time_reporting = elapsed_time_reporting
         if not skip_creation_sanity_check:
             self.sanity_check()
 
@@ -547,12 +549,31 @@ class Rule:
 class FindSpam:
     rules = []
     rule_ids = set()
+    reasons = set()
 
     # supplied at the bottom of this file
     rule_bad_keywords = None
     rule_watched_keywords = None
     rule_blacklisted_websites = None
     rule_blacklisted_usernames = None
+
+    # This is the minimum number of seconds which need to have elapsed for the Rule
+    # in order for some extra text to be added to the log output in order to draw more
+    # attention to the line.
+    ELAPSED_TIME_DRAW_ATTENTION_MIN = 5
+    # This is an arbitrarily long list of tuples representing different required elapsed times,
+    # the log level to use and text to prepend to the chat message.
+    # If the text for the log level doesn't exist, then a log(<log level>, report text)
+    # call is not executed.
+    # If there's no text to prepend to the chat message, then no chat message is sent for that entry.
+    # The list is scanned through in order with the last value where the elapsed time for the Rule
+    # is greater than the <minimum elapsed time> is acted upon.
+    ELAPSED_TIME_LOG_AND_TELL_LEVELS = [
+        # (<Log level>, <text prepended to chat message>, <minimum elapsed time>)
+        ('debug', '', 1),  # > 1 s: Log a "debug" level message for the Rule; No chat message
+        ('info', 'High ', 10),  # > 10 s: Log an "info" for the Rule and output to chat as "High "
+        ('warning', '**Very High** ', 30),  # > 30 s: Log a "warning" and output to chat as bold "Very High"
+    ]
 
     @classmethod
     def reload_blacklists(cls):
@@ -600,8 +621,32 @@ class FindSpam:
     def test_post(post):
         result = []
         why_title, why_username, why_body = [], [], []
+        post_brief_id = "{}/{}/{}".format(post.post_site, "a" if post.is_answer else "q", post.post_id)
         for rule in FindSpam.rules:
+            start_time = time.time()
             title, username, body = rule.match(post)
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            elapsed_time_draw_attention_min = FindSpam.ELAPSED_TIME_DRAW_ATTENTION_MIN
+            elapsed_time_levels = FindSpam.ELAPSED_TIME_LOG_AND_TELL_LEVELS
+            if type(rule.elapsed_time_reporting) is dict:
+                elapsed_time_draw_attention_min = rule.elapsed_time_reporting.get('draw_attention_min', 600)
+                elapsed_time_levels = rule.elapsed_time_reporting.get('levels', [])
+            draw_attention = ' <------------------' if elapsed_time > elapsed_time_draw_attention_min else ''
+            log_type = ''
+            tell_text = ''
+            for log_level, tell_level, minimum_elapsed_time in elapsed_time_levels:
+                if (elapsed_time >= minimum_elapsed_time):
+                    log_type = log_level
+                    tell_text = tell_level
+            if log_type or tell_text:
+                log_message = ('Rule elapsed time: {:.2f} s'.format(elapsed_time)
+                               + ': {}: {}'.format(rule.reason, rule.rule_id)
+                               + ' for [{}](https://{})'.format(post_brief_id, post_brief_id))
+                if log_type:
+                    log(log_type, log_message + draw_attention)
+                if tell_text:
+                    chatcommunicate.tell_rooms_with('long-rule-times', tell_text + log_message)
             if title[0]:
                 result.append(title[1])
                 why_title.append(title[2])
@@ -656,6 +701,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 whole_post=False,  # For some functions
                 disabled=False,  # yeah, disabled=True is intuitive
                 rule_id=None,  # Unique rule ID [The "reason" may be on multiple rules; this is unique to the rule.]
+                elapsed_time_reporting=None,
                 skip_creation_sanity_check=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
@@ -664,10 +710,13 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         # There was a list of reasons provided in the config file as valid and this detection reason isn't in that list.
         disabled = True
 
-    if rule_id is not None:
-        if rule_id in FindSpam.rule_ids:
-            raise ValueError("rule_id must be unique for ID: " + rule_id)
-        FindSpam.rule_ids.add(rule_id)
+    if rule_id is None and reason not in FindSpam.reasons:
+        # Only the first Rule with the reason can use the reason as the default rule_id.
+        rule_id = reason
+    if rule_id is None or rule_id in FindSpam.rule_ids:
+        raise ValueError("rule_id must exist and be unique for reason: {}::  ID: {}".format(reason, rule_id))
+    FindSpam.rule_ids.add(rule_id)
+    FindSpam.reasons.add(reason)
 
     if GlobalVars.valid_rule_ids is not None and rule_id not in GlobalVars.valid_rule_ids:
         # There was a list of valid rule IDs provided in the config file and this detection isn't in that list.
@@ -682,7 +731,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                    rule_id=rule_id)
+                    rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
         if not disabled:
             FindSpam.rules.append(rule)
         return rule
@@ -698,7 +747,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
             rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                        rule_id=rule_id)
+                        rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
             if not disabled:
                 FindSpam.rules.append(rule)
             return rule
@@ -868,10 +917,11 @@ def has_repeating_characters(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-@create_rule("link at end of {}", title=False, all=False, sites=[
-    "superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com",
-    "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com",
-    "gaming.stackexchange.com", "arduino.stackexchange.com", "workplace.stackexchange.com"])
+@create_rule("link at end of {}", title=False, all=False,
+             sites=["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com",
+                    "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com",
+                    "gaming.stackexchange.com", "arduino.stackexchange.com", "workplace.stackexchange.com"],
+             rule_id="link at end: main link_at_end, limited sites")
 def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
     match = regex.compile(
@@ -912,9 +962,9 @@ def non_english_link(s, site):   # non-english link in short answer
     "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com",
     "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com",
     "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
-    "ukrainian.stackexchange.com"], body_summary=True)
+    "ukrainian.stackexchange.com"], body_summary=True, rule_id="Mostly non-Latin: most sites")
 @create_rule("mostly non-Latin {}", all=False, sites=["stackoverflow.com"],
-             stripcodeblocks=True, body_summary=True, question=False)
+             stripcodeblocks=True, body_summary=True, question=False, rule_id="Mostly non-Latin: SO answers only")
 def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
@@ -924,8 +974,9 @@ def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrilli
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-@create_rule("phone number detected in {}", body=False, sites=[
-    "patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"])
+@create_rule("phone number detected in {}", body=False,
+             sites=["patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"],
+             rule_id="phone number detected in: main has_phone_number, not patents, math, mathoverflow")
 def has_phone_number(s, site):
     if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
@@ -995,8 +1046,7 @@ def check_numbers(s, numlist, numlist_normalized=None):
         return False, ''
 
 
-@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
-             rule_id="bad phone number 01")
+@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
@@ -1006,7 +1056,7 @@ def check_blacklisted_numbers(s, site):
 
 
 @create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
-             rule_id="potentially bad phone number 01")
+             rule_id="potentially bad phone number")
 def check_watched_numbers(s, site):
     return check_numbers(
         s,
@@ -1016,8 +1066,8 @@ def check_watched_numbers(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-@create_rule("potentially bad keyword in {}", all=False, sites=[
-    "askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"])
+@create_rule("potentially bad keyword in {}", all=False, rule_id="potentially bad customer support phrase",
+             sites=["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"])
 def customer_support_phrase(s, site):  # flexible detection of customer service
     # We don't want to double-detect phrases which the bad keywords list already detects,
     # so we remove anything that matches those from the string to test.
@@ -1383,8 +1433,9 @@ def bad_ns_for_url_domain(s, site):
 
 # This applies to all answers, and non-SO questions
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             sites=["stackoverflow.com"])
-@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
+             sites=["stackoverflow.com"], rule_id="potentially bad NS for domain: questions only, not SO")
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False,
+             rule_id="potentially bad NS for domain, answers only, all sites")
 def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, GlobalVars.watched_nses)
 
@@ -1447,7 +1498,8 @@ def watched_asn_for_url_hostname(s, site):
     return asn_for_url_host(s, site, GlobalVars.watched_asns)
 
 
-@create_rule("offensive {} detected", body_summary=True, max_rep=101, max_score=2, stripcodeblocks=True)
+@create_rule("offensive {} detected", body_summary=True, max_rep=101, max_score=2, stripcodeblocks=True,
+             rule_id="offensive detected: main is_offensive_post, no code")
 def is_offensive_post(s, site):
     if not s:
         return False, ""
@@ -1723,7 +1775,7 @@ def mostly_punctuations(s, site):
         return False, ""
 
 
-@create_rule("no whitespace in {}", body=False, max_rep=10000, max_score=10000)
+@create_rule("no whitespace in {}", body=False, max_rep=10000, max_score=10000, rule_id="No whitespace in titles")
 def no_whitespace_title(s, site):
     if regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
         return True, "No whitespace or formatting in title"
@@ -1731,7 +1783,7 @@ def no_whitespace_title(s, site):
         return False, ""
 
 
-@create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000)
+@create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000, rule_id="No whitespace in bodies")
 def no_whitespace_body(s, site):
     if regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
         return True, "No whitespace or formatting in body"
@@ -1859,7 +1911,8 @@ def turkey2(post):
 # FLEE WHILE YOU STILL CAN.
 @create_rule("offensive {} detected", all=False, stripcodeblocks=True, max_rep=101, max_score=1,
              sites=["hindiusm.stackexchange.com", "islam.stackexchange.com",
-                    "judaism.stackexchange.com", "medicalsciences.stackexchange.com"])
+                    "judaism.stackexchange.com", "medicalsciences.stackexchange.com"],
+             rule_id="offensive detected: religion_troll")
 def religion_troll(s, site):
     regexes = [
         r'(?:(?:Rubellite\W*(?:Fae|Yaksi)|Sarvabhouma|Rohit|Anisha|Ahmed\W*Bkhaty|Anubhav\W*Jha|Vineet\W*Aggarwal|Josh'
@@ -2162,20 +2215,33 @@ city_list = [
 # General blacklists, regex will be filled at the reload_blacklist() call at the bottom
 FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
                                          username=True, body_summary=True,
-                                         max_rep=32, max_score=1, skip_creation_sanity_check=True)
+                                         max_rep=32, max_score=1, skip_creation_sanity_check=True,
+                                         rule_id="main blacklisted keywords")
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
-                                             max_rep=32, max_score=1, skip_creation_sanity_check=True)
+                                             max_rep=32, max_score=1, skip_creation_sanity_check=True,
+                                             rule_id="main watchlist",
+                                             elapsed_time_reporting={
+                                                 'draw_attention_min': 20,
+                                                 'levels': [
+                                                     ('debug', '', 10),
+                                                     ('info', 'High ', 20),
+                                                     ('warning', '**Very High** ', 45),
+                                                 ],
+                                             })
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
-                                                 max_rep=52, max_score=5, skip_creation_sanity_check=True)
+                                                 max_rep=52, max_score=5, skip_creation_sanity_check=True,
+                                                 rule_id="main blacklisted websites")
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
-                                                  skip_creation_sanity_check=True)
+                                                  skip_creation_sanity_check=True,
+                                                  rule_id="main blacklisted usernames")
 
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
-            body_summary=True, max_rep=11)
+            body_summary=True, max_rep=11,
+            rule_id="Potentialy bad keywords: gratis, not softwarerecs and es.SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # not medicalsciences, fitness, biology
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
@@ -2185,29 +2251,34 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\
                    'biology.stackexchange.com',
                    'stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="bad keywords: keto, not sciences and SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # Stack Overflow, but not in code
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
             sites=['stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="bad keywords: keto, not in code, SO")
 # Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
             sites=['medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
                    'biology.stackexchange.com'],
             username=True, body_summary=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="Potentialy bad keywords: keto, not medicalsciences, fitness, biology")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             sites=['webmasters.stackexchange.com'],
             title=True, body=False, username=False,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="Potentialy bad keywords: SEO, titles only, not webmasters")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             title=False, body=False, username=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="Potentialy bad keywords: SEO, usernames only")
 
 # Bad keywords in titles and usernames, all sites
 # %TP: 2020-06-27 01:00UTC: ~97.65%TP
@@ -2224,7 +2295,8 @@ create_rule("bad keyword in {}",
             r"|^(?=.{0,150}?packer).{0,150}mover"
             r"|(online|certification).{0,150}?training",
             title=True, body=False, username=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="bad keywords: movies, free, skin care, training, not bodies")
 
 # Potentially bad keywords in titles and usernames, all sites
 # Not suffient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
@@ -2239,35 +2311,42 @@ create_rule("potentially bad keyword in {}",
             r"|watch\b.{0,150}(online|episode|free\b)"
             r"|episode.{0,150}\bsub\b",
             title=True, body=False, username=True,
-            max_rep=32, max_score=1)
+            max_rep=32, max_score=1,
+            rule_id="Potentialy bad keywords: videos, payday loans, titles and usernames")
 
 # Car insurance spammers (username only)
 create_rule("bad keyword in {}", r"car\Win",
             all=False, sites=['superuser.com', 'puzzling.stackexchange.com'],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            rule_id="bad keywords: car in, usernames only, SU and puzzling")
 # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
 create_rule('potentially bad keyword in {}', r'^John$', all=False,
             sites=['judaism.stackexchange.com', 'superuser.com', 'islam.stackexchange.com',
                    'math.stackexchange.com', 'academia.stackexchange.com', 'medicalsciences.stackexchange.com',
                    'askubuntu.com', 'skeptics.stackexchange.com', 'politics.stackeschange.com'],
             title=False, body=False, username=True,
-            disabled=True)
+            disabled=True,
+            rule_id="Potentialy bad keywords: username: John, selected sites")
 # Corn troll on Blender.SE
 create_rule("potentially bad keyword in {}", r'\bcorn\b', all=False, sites=['blender.stackexchange.com'],
-            username=True)
+            username=True,
+            rule_id="Potentialy bad keywords: username: corn, blender")
 # Bad keywords in titles only, all sites
 # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
 # 2020-04-20: This next one hasn't seen a TP in almost 2 years. Overall, it's running about 50% TP.
 create_rule("potentially bad keyword in {}",
             r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|h.i.e.l.d|s.o.l.i.d|o.s.a.r.l)[a-z](?:\.+[a-z]){4,}\b",
-            body=False)
+            body=False,
+            rule_id="Potentialy bad keywords: obfuscated smart shield, not bodies")
 create_rule("bad keyword in {}",
             r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
-            body=False, max_rep=22, max_score=2)
+            body=False, max_rep=22, max_score=2,
+            rule_id="bad keywords: help postgrad write, not bodies")
 # Requested by Mithrandir 2019-03-08
 create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
             title=False, body=False, username=True,
-            all=False, sites=['scifi.stackexchange.com'])
+            all=False, sites=['scifi.stackexchange.com'],
+            rule_id="Potentialy bad keywords: username *kumar, scifi")
 create_rule("bad keyword in {}",
             r"(?i)\b(?:(?:beauty|skin|health|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|shop|store|lyft|"
             r"product|strateg(?:y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(?:er|ing)?|"
@@ -2275,7 +2354,8 @@ create_rule("bad keyword in {}",
             r"(?:beauty|skin) care\b",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
-            body=False)
+            body=False,
+            rule_id="bad keywords: beauty, skin care, etc, not bodies, not sciences")
 # Bad health-related keywords in titles and posts, health sites and SciFi are exempt
 # If you change some here, you should look at changing these for SciFi in the two below.
 create_rule("bad keyword in {}",
@@ -2285,20 +2365,23 @@ create_rule("bad keyword in {}",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
                    "pets.stackexchange.com", "parenting.stackexchange.com", "scifi.stackexchange.com"],
-            body_summary=True, stripcodeblocks=True)
+            body_summary=True, stripcodeblocks=True,
+            rule_id="bad keywords: health related, not health sites and SciFi")
 # For SciFi, split the health-related keywords in titles and posts into "bad" and "potentially bad", and ignore "serum"
 create_rule("bad keyword in {}",
             r"(?is)virility|diet ?(?:plan|pill)|\b(?:pro)?derma(?=[a-su-z\W]\w)"
             r"|fat[ -]?(?:loo?s[es]|reduction)"
             r"|erectile|\bherpes\b|colon ?(?:detox|clean)",
             all=False, sites=["scifi.stackexchange.com"],
-            body_summary=True, stripcodeblocks=True)
+            body_summary=True, stripcodeblocks=True,
+            rule_id="bad keywords: lesser health related, scifi")
 create_rule("potentially bad keyword in {}",
             r"(?is)"
             r"weight(?<!dead[ -]?weight)[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight"
             r"|\bpenis\b",
             all=False, sites=["scifi.stackexchange.com"],
-            body_summary=True, stripcodeblocks=True)
+            body_summary=True, stripcodeblocks=True,
+            rule_id="Potentialy bad keywords: weight reduction/loss, scifi")
 # Korean character in title: requires 3
 create_rule("Korean character in {}", r"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}",
             sites=["korean.stackexchange.com"], body=False)
@@ -2315,7 +2398,8 @@ create_rule("English text in {} on a localized site", r"(?i)^[a-z0-9_\W]*[a-z]{3
 # Roof repair
 create_rule("bad keyword in {}", r"(?is)roof repair",
             sites=["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
-            stripcodeblocks=True, body_summary=True, max_rep=11)
+            stripcodeblocks=True, body_summary=True, max_rep=11,
+            rule_id="bad keywords: roof repair, diy, outdoors, mechanics")
 # Bad keywords (only include link at end sites + SO, the other sites give false positives for these keywords)
 create_rule("bad keyword in {}", r"(?i)serum(?<!truth serum)|\bsupplements(?<!to supplements)\b", all=False,
             sites=["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
@@ -2323,37 +2407,45 @@ create_rule("bad keyword in {}", r"(?i)serum(?<!truth serum)|\bsupplements(?<!to
                    "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
                    "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com",
                    "arduino.stackexchange.com"],
-            stripcodeblocks=True, body_summary=True)
+            stripcodeblocks=True, body_summary=True,
+            rule_id="bad keywords: serum, supplements, limited sites, no code")
 # Jesus Christ, the Son of God, on SciFi.
 create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["scifi.stackexchange.com"],
-            username=True)
+            username=True,
+            rule_id="bad keywords: usernames:son of david, scifi")
 # Holocaust troll
 create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|deni(?:er|al)|is\Wreal)",
-            all=False, sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
+            all=False, sites=["skeptics.stackexchange.com", "history.stackexchange.com"],
+            rule_id="bad keywords: holocaust, not skeptics, history")
 # Online poker, except poker.SE
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
             r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
-            sites=["poker.stackexchange.com"])
+            sites=["poker.stackexchange.com"],
+            rule_id="bad keywords: online poker, casino, not poker")
 # Category: Suspicious links
 # Suspicious sites 1
 create_rule("pattern-matching website in {}",
             r"(?i)(?:{})(?![^>]*<)".format("|".join(pattern_websites)),
-            stripcodeblocks=True, body_summary=True, max_score=1)
+            stripcodeblocks=True, body_summary=True, max_score=1,
+            rule_id="pattern matching website: main pattern_websites")
 # Suspicious sites 2
 create_rule("pattern-matching website in {}",
             r"(?i)(?:(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
                 "|".join(bad_keywords_nwb)),
-            stripcodeblocks=True, body_summary=True, max_score=1)
+            stripcodeblocks=True, body_summary=True, max_score=1,
+            rule_id="pattern matching website: bad_keywords_nwb")
 # Country-name domains, travel and expats sites are exempt
 create_rule("pattern-matching website in {}",
             r"(?i)\b(?:[\w-]{6,}|\w*shop\w*)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
             r"spain|sweden)\w{0,4}\.(com|net)",
             sites=["travel.stackexchange.com", "expatriates.stackexchange.com"],
-            username=True, body_summary=True)
+            username=True, body_summary=True,
+            rule_id="pattern matching website: shop or various countries")
 # The TLDs of Iran, Pakistan, United Arab Emirates, or Tokelau in answers
 create_rule("pattern-matching website in {}",
             r'(?i)http\S*?(?<![/.]tcl)\.(ae|ir|pk|tk)(?=[/"<])',
-            username=True, body_summary=True, question=False)
+            username=True, body_summary=True, question=False,
+            rule_id="pattern matching website: commonly problematic TLDs")
 # Suspicious health-related websites, health sites are exempt
 create_rule("pattern-matching website in {}",
             r"(?i)(?:bodybuilding|workout|fitness(?!e)|diet(?!pi\.com(?<=(?<!-)\bdietpi\.com)\b(?![.-]))|"
@@ -2361,7 +2453,8 @@ create_rule("pattern-matching website in {}",
             r"[\w-]*?\.(?:com|co\.|net|org|info|in\W)",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
-            username=True, body_summary=True, max_rep=22, max_score=2)
+            username=True, body_summary=True, max_rep=22, max_score=2,
+            rule_id="pattern matching website: health themed, not health sites")
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
             r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{0,20}"
@@ -2373,7 +2466,8 @@ create_rule("link at end of {}",
             r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
             r'|\[/url\]\W*</p>\s*$',
             sites=["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
-            title=False, question=False)
+            title=False, question=False,
+            rule_id="link at end: short answers or [/url], not raspberrypi, softwarerecs")
 # URL repeated at end of post
 create_rule("repeated URL at end of long post",
             r"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
@@ -2389,21 +2483,25 @@ create_rule("repeated URL at end of long post",
 # non-linked .tk site at the end of an answer
 create_rule("pattern-matching website in {}",
             r'(?is)\w{3}(?<![/.]tcl)\.tk(?:</strong>)?\W*</p>\s*$',
-            title=False, question=False)
+            title=False, question=False,
+            rule_id="pattern matching website: .tk at end of post")
 # non-linked site at the end of a short answer
 create_rule("link at end of {}",
             r'(?is)\b\w{6,}+\.(?:com?|co\.uk|in|io|html?|onl|nl|ir)(?<=^.{0,365})(?:</strong>)?\W*</p>\s*$',
-            title=False, question=False)
+            title=False, question=False,
+            rule_id="link at end: non-linked site at the end of a short answer")
 # Shortened URL near the end of question
 create_rule("shortened URL in {}",
             r"(?is)://(?:w+\.)?" + URL_SHORTENER_REGEX_FRAGMENT + r"/(?=.{0,200}$)",
             sites=["superuser.com", "askubuntu.com"],
-            title=False, answer=False)
+            title=False, answer=False,
+            rule_id="shortened URL in: questions, not titles, not SU, AU")
 # Shortened URL in an answer
 create_rule("shortened URL in {}",
             r"(?is)://(?:w+\.)?" + URL_SHORTENER_REGEX_FRAGMENT + r"/",
             sites=["codegolf.stackexchange.com"],
-            stripcodeblocks=True, question=False)
+            stripcodeblocks=True, question=False,
+            rule_id="shortened URL in: answers, no code, no codegolf")
 # Link text without Latin characters
 create_rule("non-Latin link in {}",
             r">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>",
@@ -2443,7 +2541,8 @@ create_rule("URL-only title",
 create_rule("phone number detected in {}",
             r"(?s)\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b(?<=^.{0,267})",
             sites=["math.stackexchange.com"],
-            title=False, stripcodeblocks=False)
+            title=False, stripcodeblocks=False,
+            rule_id="phone number detected in: bodies, simplified NorAm number starts with 8 near start, math")
 # Email check for answers on selected sites
 create_rule("email in {}",
             r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
@@ -2454,7 +2553,8 @@ create_rule("email in {}",
                    "medicalsciences.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
                    "rpg.stackexchange.com", "scifi.stackexchange.com", "travel.stackexchange.com",
                    "worldbuilding.stackexchange.com"],
-            stripcodeblocks=True, question=False)
+            stripcodeblocks=True, question=False,
+            rule_id="email in: basic regex, answers, limited sites")
 # Email check for questions: check only at the end, and on selected sites
 create_rule("email in {}",
             r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
@@ -2462,7 +2562,8 @@ create_rule("email in {}",
             all=False,
             sites=["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
                    "gaming.stackexchange.com"],
-            stripcodeblocks=True, answer=False)
+            stripcodeblocks=True, answer=False,
+            rule_id="email in: basic regex near end, money, travel, gamedev, gaming")
 # QQ/ICQ/WhatsApp... numbers, for all sites
 create_rule("messaging number in {}",
             r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
@@ -2567,7 +2668,8 @@ def obfuscated_word(s, site):
 # Offensive title: titles are more sensitive
 create_rule("offensive {} detected",
             r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b",
-            body=False, max_rep=101, max_score=5)
+            body=False, max_rep=101, max_score=5,
+            rule_id="offensive detected: fuck")
 # Numbers-only title
 create_rule("numbers-only title",
             r"^(?=.*[0-9])[^\pL]*$",
@@ -2578,25 +2680,30 @@ create_rule("several emoji in title",
             r"\p{So}\P{So}{0,15}\p{So}",
             body=False, max_rep=52)
 # Parenting troll
+# This rule is currently broken and detects nothing. It appears it was supposed to be for usernames.
 create_rule("bad keyword in {}",
             r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
             all=False, sites=["parenting.stackexchange.com"],
-            title=False, body_summary=True, max_rep=52)
+            title=False, body_summary=True, max_rep=52,
+            rule_id="bad keywords: erica, jeff, er1ca, etc., bodies, parenting")
 # Code Review troll
 create_rule("bad keyword in {}",
             r"JAMAL",
             all=False, sites=["codereview.stackexchange.com"],
-            username=True, body_summary=True)
+            username=True, body_summary=True,
+            rule_id="bad keywords: JAMAL, usernames, bodies, titles, codereview")
 # Eggplant emoji
 create_rule("potentially bad keyword in {}",
             r"\U0001F346",  # Unicode value for the eggplant emoji
             sites=["es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "ja.stackoverflow.com",
                    "rus.stackexchange.com"],
-            max_rep=5000, max_score=3)
+            max_rep=5000, max_score=3,
+            rule_id="Potentialy bad keywords: eggplant emoji, not not localized SO, rus")
 # Academia kangaroos
 create_rule("bad keyword in {}"
             r"(?i)kangaroos",
-            all=False, sites=["academia.stackexchange.com"])
+            all=False, sites=["academia.stackexchange.com"],
+            rule_id="bad keywords: kangaroos, academia")
 create_rule('non-Google "google search" link in {}',
             r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
             title=False, stripcodeblocks=True)
@@ -2623,20 +2730,24 @@ create_rule("title starts and ends with a forward slash",
 create_rule("blacklisted username",
             r'^[A-Z][a-z]{3,7}(19\d{2})$',
             all=False, sites=["drupal.stackexchange.com"],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            rule_id="blacklisted username: short w19dd, drupal")
 create_rule("blacklisted username",
             r"(?i)^jeff$",
             all=False, sites=["parenting.stackexchange.com"],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            rule_id="blacklisted username: jeff, parenting")
 create_rule("blacklisted username",
             r"(?i)^keshav$",
             all=False, sites=["judaism.stackexchange.com"],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            rule_id="blacklisted username: keshav, judaism")
 # Judaism etc troll, 2018-04-18 (see also disabled watch above); disabled 2022-04-02, as there's no TP in 4 years.
 create_rule("blacklisted username", r'(?i)^john$', disabled=True,
             all=False,
             sites=['hinduism.stackexchange.com', 'judaism.stackexchange.com', 'islam.stackexchange.com'],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            rule_id="blacklisted username: john, hinduism, judaism, islam")
 # Workplace troll, 2020-03-28
 create_rule("blacklisted username",
             r"(?i)(?:"
@@ -2646,7 +2757,8 @@ create_rule("blacklisted username",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
-            max_rep=100, max_score=1)
+            max_rep=100, max_score=1,
+            rule_id="blacklisted username: troll on workplace")
 create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"
             r"(?:"  # Begin group of bookended regexes
@@ -2657,7 +2769,8 @@ create_rule("bad keyword in {}",
             r"(?:\b|(?w:\b)|$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=100, max_score=1)
+            max_rep=100, max_score=1,
+            rule_id="bad keywords: various bad words, some overlap, workplace")
 # Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
 create_rule("potentially bad keyword in {}",
             r"(?:"
@@ -2668,7 +2781,8 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=100, max_score=1)
+            max_rep=100, max_score=1,
+            rule_id="Potentialy bad keywords: poop, smash, slash, behead, workplace")
 # Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
 # This is a separate rule, because it will consume up to 100 characters, which, if not separate,
 # will tend to mask other watch matches which we want to show up separately in the why data.
@@ -2678,7 +2792,8 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=100, max_score=1)
+            max_rep=100, max_score=1,
+            rule_id="Potentialy bad keywords: only upercase and numbers, workplace")
 # TWP: Watch for the re-use of the usernames of the top 100 users by reputation.
 create_rule("potentially bad keyword in {}",
             r"(?:"
@@ -2710,7 +2825,8 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
-            max_rep=93, max_score=1)
+            max_rep=93, max_score=1,
+            rule_id="Potentialy bad keywords: high rep user's usernames, workplace")
 # Link at beginning of post; pulled from watchlist
 create_rule("link at beginning of {}",
             r'(?is)^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:'
@@ -2730,7 +2846,8 @@ create_rule("potentially bad keyword in {}",
             r"^no one$",
             all=False, sites=["meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
-            max_rep=33, max_score=1)
+            max_rep=33, max_score=1,
+            rule_id="Potentialy bad keywords: username: no one, MSE")
 # Non-bookended watch for usernames
 create_rule("potentially bad keyword in {}",
             r"(?i)(?:"
@@ -2740,18 +2857,21 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=True,
             username=True, body_summary=False, body=False, title=False,
-            max_rep=33, max_score=1)
+            max_rep=33, max_score=1,
+            rule_id="Potentialy bad keywords: usernames: Wesley")
 # Politics: specific content; requested by mods
 create_rule("potentially bad keyword in {}",
             r"،",
             all=False, sites=["politics.stackexchange.com", "politics.meta.stackexchange.com"],
             username=True, body_summary=True, body=True, title=True,
-            max_rep=93, max_score=21)
+            max_rep=93, max_score=21,
+            rule_id="Potentialy bad keywords: specific Unicode character, politics")
 # Worldbuilding: specific content
 create_rule("potentially bad keyword in {}",
-            r"\bl[\W_]*+dut?ch\b|/a/214453\b",
+            r"(?i)(?:\bl[\W_]*+dut?ch\b|/a/214453\b)",
             all=False, sites=["worldbuilding.stackexchange.com", "worldbuilding.meta.stackexchange.com"],
-            username=True, body_summary=False, body=False, title=False,
-            max_rep=93, max_score=21)
+            username=False, body_summary=True, body=True, title=False,
+            max_rep=93, max_score=21,
+            rule_id="Potentialy bad keywords: l dutch, answer 214453, worldbuilding")
 
 FindSpam.reload_blacklists()
