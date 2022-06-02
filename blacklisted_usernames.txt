@@ -671,3 +671,4 @@ Visualytes
 (?-i:^aniccccc$)
 (?-i:^troken migration$)
 (?-i:^isharp academy$)
+(?-i:^bharathalan$)
