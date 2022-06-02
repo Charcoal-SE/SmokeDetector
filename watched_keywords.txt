@@ -39913,3 +39913,4 @@
 1654189196	Ollie	findformula\.co\.in
 1654190041	Ollie	modernsemitruckparts\.com
 1654211780	cigien	galaxyuserguide\.com
+1654212577	cigien	psychedelic[\W_]*+havens(?!\.com(?<=psychedelichavens\.com))
