@@ -39904,3 +39904,4 @@
 1654185721	cigien	flattestroute\.com
 1654186452	cigien	gamik\.me
 1654186841	cigien	smartgaga\.me
+1654187214	cigien	apexlegendsmobile\.co
