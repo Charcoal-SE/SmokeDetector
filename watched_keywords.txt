@@ -39907,3 +39907,4 @@
 1654187214	cigien	apexlegendsmobile\.co
 1654187238	cigien	pubgnewstate\.mobi
 1654188196	tripleee	(?-i:^Satinderjot Kaur$)
+1654188621	Ollie	quranxperts\.com
