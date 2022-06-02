@@ -39873,3 +39873,4 @@
 1654154050	tripleee	think[\W_]*+connects(?!\.com(?<=thinkconnects\.com))
 1654154125	cigien	cnheliumleaktest\.com
 1654155860	cigien	confengine\.com
+1654155996	Ryan M	hamariwishes\.com
