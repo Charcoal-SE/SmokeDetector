@@ -2142,7 +2142,7 @@ city_list = [
     "Telangana", "Tiruchi", "Tiruchirappalli", "Tirupati", "Thane",
     "Trichinopoly", "Trichy", "Trivandrum", "Thiruvananthapuram",
     "Udaipur", "Uttarakhand",
-    "Visakhapatnam", "Worli",
+    "Vadodara", "Visakhapatnam", "Worli",
     # not in India
     "Dubai", "Lahore", "Lusail", "Portland",
     # yes, these aren't cities but...
