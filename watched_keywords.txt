@@ -39875,3 +39875,4 @@
 1654155860	cigien	confengine\.com
 1654155996	Ryan M	hamariwishes\.com
 1654156254	tripleee	vissentials
+1654156412	tripleee	(?-i:^Sunday Godwin$)
