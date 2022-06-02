@@ -39887,3 +39887,4 @@
 1654162467	tripleee	alhoda-eg\.com
 1654162762	tripleee	(?-i:LBUfXf3Zy68)(?# youtube)
 1654162787	tripleee	mooglelabs\.com
+1654163847	tripleee	cispro[\W_]*+training(?!\.com(?<=cisprotraining\.com))
