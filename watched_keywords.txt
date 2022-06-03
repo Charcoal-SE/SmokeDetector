@@ -39922,3 +39922,4 @@
 1654234412	tripleee	als\.aero
 1654235944	cocomac	evisastoindia\.org
 1654236271	cigien	mcqpoint\.com
+1654236300	cigien	evisastoindia(?!\.org)
