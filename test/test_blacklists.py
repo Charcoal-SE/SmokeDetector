@@ -101,9 +101,13 @@ def test_number_lists():
 
     clear_errors()
     FindSpam.reload_blacklists()
-    blacklist_processed, blacklist_normalized = test_a_number_list("blacklisted", GlobalVars.blacklisted_numbers_full)
+    with GlobalVars.blacklisted_numbers_lock:
+        blacklisted_numbers_full = GlobalVars.blacklisted_numbers_full
+    blacklist_processed, blacklist_normalized = test_a_number_list("blacklisted", blacklisted_numbers_full)
     all_errors.extend(get_sorted_current_errors_and_clear_errors())
-    test_a_number_list("watched", GlobalVars.watched_numbers_full, blacklist_normalized=blacklist_normalized)
+    with GlobalVars.watched_numbers_lock:
+        watched_numbers_full = GlobalVars.watched_numbers_full
+    test_a_number_list("watched", watched_numbers_full, blacklist_normalized=blacklist_normalized)
     all_errors.extend(get_sorted_current_errors_and_clear_errors())
     no_exacts_count = len(no_exacts)
     if (no_exacts_count > 0):

@@ -58,6 +58,7 @@ class GlobalVars:
     false_positives = []
     whitelisted_users = set()
     blacklisted_users = dict()
+    raw_blacklist_watchlist_lock = threading.RLock()
     blacklisted_usernames = []
     blacklisted_websites = []
     # set() with the processed version of each blacklisted number pattern.
@@ -76,7 +77,9 @@ class GlobalVars:
     # The _full versions are a dict() with key=raw pattern, with tuple with processed and normalized for each.
     # Insertion order is the order they are in within the file.
     blacklisted_numbers_full = None
+    blacklisted_numbers_lock = threading.RLock()
     watched_numbers_full = None
+    watched_numbers_lock = threading.RLock()
     bad_keywords = []
     watched_keywords = {}
     ignored_posts = []

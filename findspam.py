@@ -421,6 +421,7 @@ class Rule:
                  stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None,
                  elapsed_time_reporting=None):
         self.regex = None
+        self.regex_lock = threading.RLock()
         self.func = None
         if isinstance(item, (str, URL_REGEX.__class__)):
             self.regex = item
@@ -440,8 +441,9 @@ class Rule:
             self.sanity_check()
 
     def sanity_check(self):
-        if not self.func and not self.regex:
-            raise TypeError("A rule must have either 'func' or 'regex' valid! : {}".format(self.reason))
+        with self.regex_lock:
+            if not self.func and not self.regex:
+                raise TypeError("A rule must have either 'func' or 'regex' valid! : {}".format(self.reason))
 
     def match(self, post):
         """
@@ -504,36 +506,41 @@ class Rule:
                     result_body = (matched_body, "", "")
                 else:
                     result_body = (False, "", "")
-        elif self.regex:
-            try:
-                compiled_regex = self.compiled_regex
-            except AttributeError:
-                compiled_regex = regex_compile_no_cache(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
-                self.compiled_regex = compiled_regex
-
-            if self.title and not post.is_answer:
-                matches = list(compiled_regex.finditer(post.title))
-                result_title = (bool(matches), reason_title,
-                                reason_title.capitalize() + " - " + FindSpam.match_infos(matches))
-            else:
-                result_title = (False, "", "")
-
-            if self.username:
-                matches = list(compiled_regex.finditer(post.user_name))
-                result_username = (bool(matches), reason_username,
-                                   reason_username.capitalize() + " - " + FindSpam.match_infos(matches))
-            else:
-                result_username = (False, "", "")
-
-            if (self.body and not post.body_is_summary) \
-                    or (self.body_summary and post.body_is_summary):
-                matches = list(compiled_regex.finditer(body_to_check))
-                result_body = (bool(matches), reason_body,
-                               reason_body.capitalize() + " - " + FindSpam.match_infos(matches))
-            else:
-                result_body = (False, "", "")
         else:
-            raise TypeError("To match, a rule must have either 'func' or 'regex' valid! : {}".format(reason))
+            compiled_regex = None
+            with self.regex_lock:
+                if self.regex:
+                    try:
+                        compiled_regex = self.compiled_regex
+                    except AttributeError:
+                        compiled_regex = regex_compile_no_cache(self.regex, regex.UNICODE, city=city_list,
+                                                                ignore_unused=True)
+                        self.compiled_regex = compiled_regex
+
+            if compiled_regex:
+                if self.title and not post.is_answer:
+                    matches = list(compiled_regex.finditer(post.title))
+                    result_title = (bool(matches), reason_title,
+                                    reason_title.capitalize() + " - " + FindSpam.match_infos(matches))
+                else:
+                    result_title = (False, "", "")
+
+                if self.username:
+                    matches = list(compiled_regex.finditer(post.user_name))
+                    result_username = (bool(matches), reason_username,
+                                       reason_username.capitalize() + " - " + FindSpam.match_infos(matches))
+                else:
+                    result_username = (False, "", "")
+
+                if (self.body and not post.body_is_summary) \
+                        or (self.body_summary and post.body_is_summary):
+                    matches = list(compiled_regex.finditer(body_to_check))
+                    result_body = (bool(matches), reason_body,
+                                   reason_body.capitalize() + " - " + FindSpam.match_infos(matches))
+                else:
+                    result_body = (False, "", "")
+            else:
+                raise TypeError("To match, a rule must have either 'func' or 'regex' valid! : {}".format(reason))
 
         # "result" format: tuple((title_spam, title_reason, why), (username_spam, username_reason, why),
         #                        (body_spam, body_reason, why))
@@ -582,39 +589,47 @@ class FindSpam:
         blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
-        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
-        try:
-            del cls.rule_bad_keywords.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_bad_keywords.sanity_check()
-        cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
-        try:
-            del cls.rule_watched_keywords.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_watched_keywords.sanity_check()
-        cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
-        try:
-            del cls.rule_blacklisted_websites.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_blacklisted_websites.sanity_check()
-        cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
-        try:
-            del cls.rule_blacklisted_usernames.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_blacklisted_usernames.sanity_check()
-        GlobalVars.blacklisted_numbers_full, GlobalVars.blacklisted_numbers, \
-            GlobalVars.blacklisted_numbers_normalized = \
-            phone_numbers.process_numlist(GlobalVars.blacklisted_numbers_raw)
-        GlobalVars.watched_numbers_full, GlobalVars.watched_numbers, \
-            GlobalVars.watched_numbers_normalized = phone_numbers.process_numlist(GlobalVars.watched_numbers_raw)
+        with GlobalVars.raw_blacklist_watchlist_lock:
+            with cls.rule_bad_keywords.regex_lock:
+                cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
+                    "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+                try:
+                    del cls.rule_bad_keywords.compiled_regex
+                except AttributeError:
+                    pass
+                cls.rule_bad_keywords.sanity_check()
+            with cls.rule_watched_keywords.regex_lock:
+                cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
+                    "|".join(GlobalVars.watched_keywords.keys()))
+                try:
+                    del cls.rule_watched_keywords.compiled_regex
+                except AttributeError:
+                    pass
+                cls.rule_watched_keywords.sanity_check()
+            with cls.rule_blacklisted_websites.regex_lock:
+                cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
+                    "|".join(GlobalVars.blacklisted_websites))
+                try:
+                    del cls.rule_blacklisted_websites.compiled_regex
+                except AttributeError:
+                    pass
+                cls.rule_blacklisted_websites.sanity_check()
+            with cls.rule_blacklisted_usernames.regex_lock:
+                cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
+                    "|".join(GlobalVars.blacklisted_usernames))
+                try:
+                    del cls.rule_blacklisted_usernames.compiled_regex
+                except AttributeError:
+                    pass
+                cls.rule_blacklisted_usernames.sanity_check()
+            with GlobalVars.blacklisted_numbers_lock:
+                GlobalVars.blacklisted_numbers_full, GlobalVars.blacklisted_numbers, \
+                    GlobalVars.blacklisted_numbers_normalized = \
+                    phone_numbers.process_numlist(GlobalVars.blacklisted_numbers_raw)
+            with GlobalVars.watched_numbers_lock:
+                GlobalVars.watched_numbers_full, GlobalVars.watched_numbers, \
+                    GlobalVars.watched_numbers_normalized \
+                    = phone_numbers.process_numlist(GlobalVars.watched_numbers_raw)
         log('debug', "Global blacklists loaded")
 
     @staticmethod
@@ -1048,20 +1063,26 @@ def check_numbers(s, numlist, numlist_normalized=None):
 
 @create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
+    with GlobalVars.blacklisted_numbers_lock:
+        blacklisted_numbers = GlobalVars.blacklisted_numbers
+        blacklisted_numbers_normalized = GlobalVars.blacklisted_numbers_normalized
     return check_numbers(
         s,
-        GlobalVars.blacklisted_numbers,
-        GlobalVars.blacklisted_numbers_normalized
+        blacklisted_numbers,
+        blacklisted_numbers_normalized
     )
 
 
 @create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
              rule_id="potentially bad phone number")
 def check_watched_numbers(s, site):
+    with GlobalVars.watched_numbers_lock:
+        watched_numbers = GlobalVars.watched_numbers
+        watched_numbers_normalized = GlobalVars.watched_numbers_normalized
     return check_numbers(
         s,
-        GlobalVars.watched_numbers,
-        GlobalVars.watched_numbers_normalized
+        watched_numbers,
+        watched_numbers_normalized
     )
 
 

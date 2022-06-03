@@ -11,18 +11,19 @@ from helpers import log
 
 
 def load_blacklists():
-    GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
-    GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
-    GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
-    GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
-    GlobalVars.blacklisted_numbers_raw = Blacklist(Blacklist.NUMBERS).parse()
-    GlobalVars.watched_numbers_raw = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
-    GlobalVars.blacklisted_nses = Blacklist(Blacklist.NSES).parse()
-    GlobalVars.watched_nses = Blacklist(Blacklist.WATCHED_NSES).parse()
-    GlobalVars.blacklisted_cidrs = Blacklist(Blacklist.CIDRS).parse()
-    GlobalVars.watched_cidrs = Blacklist(Blacklist.WATCHED_CIDRS).parse()
-    # GlobalVars.blacklisted_asns = Blacklist(Blacklist.ASNS).parse()
-    GlobalVars.watched_asns = Blacklist(Blacklist.WATCHED_ASNS).parse()
+    with GlobalVars.raw_blacklist_watchlist_lock:
+        GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
+        GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
+        GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
+        GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
+        GlobalVars.blacklisted_numbers_raw = Blacklist(Blacklist.NUMBERS).parse()
+        GlobalVars.watched_numbers_raw = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
+        GlobalVars.blacklisted_nses = Blacklist(Blacklist.NSES).parse()
+        GlobalVars.watched_nses = Blacklist(Blacklist.WATCHED_NSES).parse()
+        GlobalVars.blacklisted_cidrs = Blacklist(Blacklist.CIDRS).parse()
+        GlobalVars.watched_cidrs = Blacklist(Blacklist.WATCHED_CIDRS).parse()
+        # GlobalVars.blacklisted_asns = Blacklist(Blacklist.ASNS).parse()
+        GlobalVars.watched_asns = Blacklist(Blacklist.WATCHED_ASNS).parse()
 
 
 class BlacklistParser:

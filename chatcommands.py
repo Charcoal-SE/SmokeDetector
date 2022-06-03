@@ -438,9 +438,14 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
                                         number_regex_requires + digit_count_text)
         normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
-        if normalized & GlobalVars.blacklisted_numbers_normalized:
+        with GlobalVars.blacklisted_numbers_lock:
+            blacklisted_numbers_normalized = GlobalVars.blacklisted_numbers_normalized
+        if normalized & blacklisted_numbers_normalized:
             raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
-        if normalized & GlobalVars.watched_numbers_normalized:
+        with GlobalVars.watched_numbers_lock:
+            watched_numbers_normalized = GlobalVars.watched_numbers_normalized
+            watched_numbers_full = GlobalVars.watched_numbers_full
+        if normalized & watched_numbers_normalized:
             # The following differentiates between watching and blacklisting, due to
             # automatic movement of entries from the watchlist to the blacklist.  It's
             # assumed any conflict with something being blacklisted which is an exact
@@ -449,7 +454,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             # blacklist.  If it isn't resolved, CI testing will fail.
             if is_watchlist:
                 raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
-            elif pattern not in GlobalVars.watched_numbers_full:
+            elif pattern not in watched_numbers_full:
                 extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
                                                      ' to an existing entry on the number watchlist'
                 raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
@@ -482,9 +487,9 @@ def do_blacklist(blacklist_type, msg, force=False):
                             ' be one entry which is automatically used normalized both with and without a "1". The' + \
                             ' version which is already in use is: `{}`, but it\'s not automatically recognized as' + \
                             ' a North American number.'
-        if unused_maybe_north_american_norm in GlobalVars.blacklisted_numbers_normalized:
+        if unused_maybe_north_american_norm in blacklisted_numbers_normalized:
             other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
-        if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
+        if unused_maybe_north_american_norm in watched_numbers_normalized:
             other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
         if not phone_numbers.matches_number_regex_start(without_comments):
             other_issues.append(exact_match_text + 'begin with a digit' +
@@ -1624,8 +1629,12 @@ def bisect_number_list(s, full_number_list, filename):
 
 def get_watch_and_blacklist_number_bisects(s):
     number_matching = []
-    number_matching.extend(bisect_number_list(s, GlobalVars.blacklisted_numbers_full, 'blacklisted_numbers.txt'))
-    number_matching.extend(bisect_number_list(s, GlobalVars.watched_numbers_full, 'watched_numbers.txt'))
+    with GlobalVars.blacklisted_numbers_lock:
+        blacklisted_numbers_full = GlobalVars.blacklisted_numbers_full
+    number_matching.extend(bisect_number_list(s, blacklisted_numbers_full, 'blacklisted_numbers.txt'))
+    with GlobalVars.watched_numbers_lock:
+        watched_numbers_full = GlobalVars.watched_numbers_full
+    number_matching.extend(bisect_number_list(s, watched_numbers_full, 'watched_numbers.txt'))
     number_matching = [(raw_pattern, line_and_filename, ' matched ' + match_types, full_match_list)
                        for (raw_pattern, line_and_filename, match_types, full_match_list) in number_matching]
     return number_matching
