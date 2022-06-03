@@ -3,6 +3,7 @@ import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
 from datahandling import has_pickle, remove_pickle
+from helpers import with_local_git_repository_file_lock
 from pprint import pprint
 
 import collections
@@ -82,13 +83,14 @@ def lock_clear_and_restore_all_chatcommunicate_global_values():
 def test_validate_yaml():
     rooms_file_content = ''
     users_file_content = ''
-    with open("rooms.yml", "r") as f:
-        rooms_file_content = f.read()
-        room_data = yaml.safe_load(rooms_file_content)
+    with GlobalVars.local_git_repository_file_lock:
+        with open("rooms.yml", "r") as f:
+            rooms_file_content = f.read()
+            room_data = yaml.safe_load(rooms_file_content)
 
-    with open("users.yml", "r") as f:
-        users_file_content = f.read()
-        user_data = yaml.safe_load(users_file_content)
+        with open("users.yml", "r") as f:
+            users_file_content = f.read()
+            user_data = yaml.safe_load(users_file_content)
 
     privileged_users = []
 
@@ -172,6 +174,7 @@ def test_parse_room_config():
         assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
 
+@with_local_git_repository_file_lock()
 @lock_clear_and_restore_all_chatcommunicate_global_values()
 @parse_test_rooms()
 @patch("chatcommunicate.threading.Thread")

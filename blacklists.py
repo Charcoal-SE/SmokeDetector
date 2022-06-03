@@ -7,11 +7,11 @@ import dns.resolver
 import sys
 
 from globalvars import GlobalVars
-from helpers import log
+from helpers import log, with_local_git_repository_file_lock
 
 
 def load_blacklists():
-    with GlobalVars.raw_blacklist_watchlist_lock:
+    with GlobalVars.local_git_repository_file_lock, GlobalVars.raw_blacklist_watchlist_lock:
         GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
         GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
         GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
@@ -50,11 +50,13 @@ class BasicListParser(BlacklistParser):
         """
         return input.rstrip()
 
+    @with_local_git_repository_file_lock()
     def parse(self):
         with open(self._filename, 'r', encoding='utf-8') as f:
             return [self._normalize(line)
                     for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
+    @with_local_git_repository_file_lock()
     def add(self, item: str):
         with open(self._filename, 'a+', encoding='utf-8') as f:
             last_char = f.read()[-1:]
@@ -62,6 +64,7 @@ class BasicListParser(BlacklistParser):
                 item = '\n' + item
             f.write(item + '\n')
 
+    @with_local_git_repository_file_lock()
     def remove(self, item: str):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
@@ -70,6 +73,7 @@ class BasicListParser(BlacklistParser):
             f.truncate()
             f.writelines(items)
 
+    @with_local_git_repository_file_lock()
     def each(self, with_info=False):
         # info = (filename, lineno)
         if with_info:
@@ -81,6 +85,7 @@ class BasicListParser(BlacklistParser):
                 for line in f:
                     yield line.rstrip("\n")
 
+    @with_local_git_repository_file_lock()
     def exists(self, item: str):
         item = item.lower()
 
@@ -94,6 +99,7 @@ class BasicListParser(BlacklistParser):
 
 
 class TSVDictParser(BlacklistParser):
+    @with_local_git_repository_file_lock()
     def parse(self):
         dct = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
@@ -110,6 +116,7 @@ class TSVDictParser(BlacklistParser):
 
         return dct
 
+    @with_local_git_repository_file_lock()
     def add(self, item: Union[str, dict]):
         with open(self._filename, 'a+', encoding='utf-8') as f:
             if isinstance(item, dict):
@@ -119,6 +126,7 @@ class TSVDictParser(BlacklistParser):
                 item = '\n' + item
             f.write(item + '\n')
 
+    @with_local_git_repository_file_lock()
     def remove(self, item: Union[str, dict]):
         if isinstance(item, dict):
             item = item[2]
@@ -131,6 +139,7 @@ class TSVDictParser(BlacklistParser):
             f.truncate()
             f.writelines(items)
 
+    @with_local_git_repository_file_lock()
     def each(self, with_info=False):
         # info = (filename, lineno)
         if with_info:
@@ -144,6 +153,7 @@ class TSVDictParser(BlacklistParser):
                     if line.count('\t') == 2:
                         yield line.rstrip("\n").split('\t')[2]
 
+    @with_local_git_repository_file_lock()
     def exists(self, item: Union[str, dict]):
         if isinstance(item, dict):
             item = item[2]
@@ -175,6 +185,7 @@ class YAMLParserCIDR(BlacklistParser):
     def __init__(self, filename):
         super().__init__(filename)
 
+    @with_local_git_repository_file_lock()
     def _parse(self, keep_disabled=False):
         with open(self._filename, 'r', encoding='utf-8') as f:
             y = yaml.safe_load(f)
@@ -192,6 +203,7 @@ class YAMLParserCIDR(BlacklistParser):
     def parse(self):
         return [item[self.SCHEMA_PRIKEY] for item in self._parse()]
 
+    @with_local_git_repository_file_lock()
     def _write(self, callback):
         d = {
             'Schema': self.SCHEMA_VARIANT,
@@ -236,6 +248,7 @@ class YAMLParserCIDR(BlacklistParser):
         for item in self._parse():
             self._validate(item)
 
+    @with_local_git_repository_file_lock()
     def add(self, item):
         self._validate(item)
         prikey = self.SCHEMA_PRIKEY
@@ -249,6 +262,7 @@ class YAMLParserCIDR(BlacklistParser):
 
         self._write(add_callback)
 
+    @with_local_git_repository_file_lock()
     def remove(self, item):
         prikey = self.SCHEMA_PRIKEY
 

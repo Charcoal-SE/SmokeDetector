@@ -7,6 +7,7 @@ from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
 from datahandling import remove_pickle
+from helpers import with_local_git_repository_file_lock
 
 import datetime
 import os
@@ -272,6 +273,7 @@ def test_deprecated_blacklist():
 
 @pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
 @rewrap_for_monkeypatch_argument()
+@with_local_git_repository_file_lock()
 @lock_and_restore_chatcommunicate_rooms()
 def test_watch(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
@@ -327,6 +329,7 @@ def test_watch(monkeypatch):
 
 
 @rewrap_for_monkeypatch_argument()
+@with_local_git_repository_file_lock()
 @lock_and_restore_chatcommunicate_rooms()
 def test_approve(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
@@ -356,6 +359,7 @@ def test_approve(monkeypatch):
 
 
 @rewrap_for_monkeypatch_argument()
+@with_local_git_repository_file_lock()
 @lock_and_restore_chatcommunicate_rooms()
 def test_reject(monkeypatch):
     chatcommunicate.parse_room_config("test/test_rooms.yml")

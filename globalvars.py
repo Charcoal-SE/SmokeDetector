@@ -55,6 +55,32 @@ def git_ref():
 class GlobalVars:
     on_windows = 'windows' in platform.platform().lower()
 
+    # Threading locks for interacting with files stored in the local git repository, or
+    # which *might* be in the origin repository and changed when we perform git operations.
+    # In some cases, we are performing git operations which can change any or all files in
+    # the local repository, so we need to be able to lock file modifications to one thread
+    # at a time.  Without finer grained locks, that means we will have one and only one
+    # thread reading or writing to any file covered by the git repository
+    #
+    # It may end up frustrating to need to obtain a complete lock on any reads/writes to
+    # files covered in the git repository (e.g.  not including ./pickles) everywhere we
+    # interact with a file, so finer grained locks may be desired.
+    #
+    # The local_git_repository_file_lock should be obtained prior to writing to any files in the
+    # git repository, which includes performing any git operations which might change files. If
+    # the function is going to be performing more than one manipulation on the files, then the
+    # lock should be obtained prior to starting and only released once the files are back in
+    # a stable state. Effectively, for some functions this means obtaining the lock at the
+    # beginning of the function and retaining it until the end when the files are in the state
+    # in which they will remain.
+    #
+    # The local_git_repository_file_lock should also be obtained prior to reading any file covered in the
+    # git repository.
+    #
+    # In other words, if the lock is available to a new thread, then the state of the files in the
+    # git repository should be in a "stable" state.
+    local_git_repository_file_lock = threading.RLock()
+
     false_positives = []
     whitelisted_users = set()
     blacklisted_users = dict()

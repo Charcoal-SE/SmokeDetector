@@ -9,7 +9,7 @@ from globalvars import GlobalVars
 import pytest
 
 from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS, load_blacklists
-from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode
+from helpers import files_changed, blacklist_integrity_check, not_regex_search_ascii_and_unicode, with_local_git_repository_file_lock
 from phone_numbers import NUMBER_REGEX, NUMBER_REGEX_START, NUMBER_REGEX_END, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS, \
     process_numlist, get_maybe_north_american_not_in_normalized_but_in_all, is_digit_count_in_number_regex_range, matches_number_regex, \
     matches_number_regex_start, matches_number_regex_end
@@ -151,6 +151,7 @@ def yaml_validate_existing(filename, cls):
     return Blacklist((filename, cls)).validate()
 
 
+@with_local_git_repository_file_lock()
 def test_yaml_blacklist():
     with open('test_ip.yml', 'w') as y:
         yaml.dump({
@@ -184,6 +185,7 @@ def test_yaml_blacklist():
     yaml_validate_existing('watched_cidrs.yml', YAMLParserCIDR)
 
 
+@with_local_git_repository_file_lock()
 def test_yaml_asn():
     with open('test_asn.yml', 'w') as y:
         yaml.dump({
@@ -217,6 +219,7 @@ def test_yaml_asn():
 
 # test_yaml_nses currently takes 105s to run, so we want it to start up first, with everything else running in parallel.
 @pytest.mark.xdist_group(name="long_runner_1")
+@with_local_git_repository_file_lock()
 def test_yaml_nses():
     with open('test_nses.yml', 'w') as y:
         yaml.dump({

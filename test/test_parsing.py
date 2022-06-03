@@ -1,11 +1,13 @@
 # coding=utf-8
 from parsing import *
+from globalvars import GlobalVars
 import pytest
 
 test_data_inputs = []
-with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
-    # noinspection PyRedeclaration
-    test_data_inputs = f.readlines()
+with GlobalVars.local_git_repository_file_lock:
+    with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
+        # noinspection PyRedeclaration
+        test_data_inputs = f.readlines()
 
 # Large inputs should go to that file.
 # Only inputs should go there, not the parsing method and the expected output,

@@ -15,9 +15,10 @@ from globalvars import GlobalVars
 
 load_blacklists()
 test_data_inputs = []
-with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
-    # noinspection PyRedeclaration
-    test_data_inputs = f.readlines()
+with GlobalVars.local_git_repository_file_lock:
+    with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
+        # noinspection PyRedeclaration
+        test_data_inputs = f.readlines()
 
 
 class Matcher:

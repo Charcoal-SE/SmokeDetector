@@ -21,7 +21,7 @@ else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
 
-from helpers import log, log_exception, only_blacklists_changed
+from helpers import log, log_exception, only_blacklists_changed, with_local_git_repository_file_lock
 from blacklists import *
 
 
@@ -99,6 +99,7 @@ class GitManager:
             return "origin"
 
     @classmethod
+    @with_local_git_repository_file_lock()
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
                          code_permissions=False, metasmoke_down=False, before_pattern='', after_pattern=''):
         if blacklist == "":
@@ -263,6 +264,7 @@ class GitManager:
             return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
+    @with_local_git_repository_file_lock()
     def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
             if metasmoke_down:
@@ -338,6 +340,7 @@ class GitManager:
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @classmethod
+    @with_local_git_repository_file_lock()
     def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
@@ -378,6 +381,7 @@ class GitManager:
             cls.gitmanager_lock.release()
 
     @classmethod
+    @with_local_git_repository_file_lock()
     def reject_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
@@ -408,6 +412,7 @@ class GitManager:
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def prepare_git_for_operation(blacklist_file_name):
         try:
             git.checkout('master')
@@ -445,15 +450,18 @@ class GitManager:
         return str(git('rev-parse', '--abbrev-ref', 'HEAD')).strip()
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def merge_abort():
         git.merge("--abort")
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def reset_head():
         git.reset("--hard", "HEAD")
         git.clean("-f")
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def get_remote_diff():
         git.fetch()
         if GlobalVars.on_windows:
@@ -469,6 +477,7 @@ class GitManager:
             return git.diff("--name-only", "HEAD", "master")
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def pull_remote():
         # We need to pull both the master and deploy branches here in order to be in sync with GitHub.
         git.checkout('deploy')
@@ -478,6 +487,7 @@ class GitManager:
         git.checkout('deploy')
 
     @classmethod
+    @with_local_git_repository_file_lock()
     def pull_local(cls):
         diff = GitManager.get_local_diff()
         if not only_blacklists_changed(diff):
@@ -490,6 +500,7 @@ class GitManager:
             return
 
     @staticmethod
+    @with_local_git_repository_file_lock()
     def sync_remote():
         try:
             git.fetch('--force')
@@ -503,6 +514,7 @@ class GitManager:
 
     @staticmethod
     def sync_remote_hard():
+        # This does not try to get a GlobalVars.local_git_repository_file_lock
         try:
             git.fetch('--force')
             git.checkout('master', '--force')

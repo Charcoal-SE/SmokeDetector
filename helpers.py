@@ -313,9 +313,19 @@ def unshorten_link(url, request_type='GET', depth=10):
     return url
 
 
+def with_local_git_repository_file_lock():
+    def decorator(func):
+        def wrap(*args, **kwargs):
+            with GlobalVars.local_git_repository_file_lock:
+                return func(*args, **kwargs)
+        return wrap
+    return decorator
+
+
 pcre_comment = regex.compile(r"\(\?#(?<!(?:[^\\]|^)(?:\\\\)*\\\(\?#)[^)]*\)")
 
 
+@with_local_git_repository_file_lock()
 def blacklist_integrity_check():
     bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + glob('watched_*.txt')
     seen = dict()
@@ -434,3 +444,5 @@ def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ign
 
 def regex_compile_no_cache(regex_text, flags=0, ignore_unused=False, **kwargs):
     return regex_raw_compile(regex_text, flags, ignore_unused, kwargs, False)
+
+
