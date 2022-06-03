@@ -39915,3 +39915,4 @@
 1654211780	cigien	galaxyuserguide\.com
 1654212577	cigien	psychedelic[\W_]*+havens(?!\.com(?<=psychedelichavens\.com))
 1654218984	Machavity	lataqntu\.com
+1654221010	cocomac	alphashopfrontshutter\.co\.uk
