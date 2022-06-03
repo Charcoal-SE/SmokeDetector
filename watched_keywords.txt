@@ -39930,3 +39930,4 @@
 1654250732	Jeff Schaller	atsprojectdeals\.com
 1654250850	tripleee	sobujig(?# fiverr)
 1654269152	Makyen	bluelinkservices\.qa
+1654269196	Makyen	blue[\W_]*+link[\W_]*+services(?!\.qa(?<=bluelinkservices\.qa))
