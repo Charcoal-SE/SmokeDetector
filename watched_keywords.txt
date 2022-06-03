@@ -39916,3 +39916,4 @@
 1654212577	cigien	psychedelic[\W_]*+havens(?!\.com(?<=psychedelichavens\.com))
 1654218984	Machavity	lataqntu\.com
 1654221010	cocomac	alphashopfrontshutter\.co\.uk
+1654227040	cocomac	fonediary\.com\.au
