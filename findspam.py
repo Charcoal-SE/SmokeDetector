@@ -978,9 +978,17 @@ def non_english_link(s, site):   # non-english link in short answer
     "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com",
     "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
     "ukrainian.stackexchange.com"], body_summary=True, rule_id="Mostly non-Latin: most sites")
+def mostly_non_latin_most_sites(s, site):
+    return _mostly_non_latin(s, site)
+
+
 @create_rule("mostly non-Latin {}", all=False, sites=["stackoverflow.com"],
              stripcodeblocks=True, body_summary=True, question=False, rule_id="Mostly non-Latin: SO answers only")
-def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
+def mostly_non_latin_so_answers(s, site):
+    return _mostly_non_latin(s, site)
+
+
+def _mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if len(non_latin_chars) > 0.4 * len(word_chars):
