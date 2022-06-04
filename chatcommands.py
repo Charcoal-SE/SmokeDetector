@@ -1560,7 +1560,8 @@ def bisect_regex(s, regexes, bookend=True, timeout=None):
     if seconds > 0.1:
         # For debugging, if a regex is taking a long time, we want to know about it. This is about 5 times
         # longer than the high end of what one group of 64 regexes normally takes in our tests.
-        log('debug', "bisect_regex: took {} seconds for the regex: {}".format(seconds, formatted_regex))
+        # log('debug', "bisect_regex: took {} seconds for the regex: {}".format(seconds, formatted_regex))
+        pass
     if not match:
         return []
     if len(regexes) <= 1:  # atom element found
