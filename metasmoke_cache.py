@@ -4,13 +4,17 @@ import metasmoke
 import globalvars
 import tasks
 from helpers import log
+from threading import RLock
 
 
 class MetasmokeCache:
     MINIMUM_SECONDS_BETWEEN_ATTEMPTS = 600
     _cache = {}
+    _cache_lock = RLock()
     _expiries = {}
+    _expiries_lock = RLock()
     _prior_attempt_timestamp = {}
+    _prior_attempt_timestamp_lock = RLock()
 
     @staticmethod
     def get(key):
@@ -22,19 +26,20 @@ class MetasmokeCache:
         :returns: Tuple - [0] the cached value if it's available and in-date, otherwise None;
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, MISS-EXPIRED, or MISS-NOITEM
         """
-        if key in MetasmokeCache._cache:
-            if (key in MetasmokeCache._expiries and MetasmokeCache._expiries[key] >= int(time.time())) or \
-               key not in MetasmokeCache._expiries:
-                # Expiry was set on cache insert, and the value is still in-date, OR no expiry was set and the item
-                # is persistently cached.
-                return MetasmokeCache._cache[key],\
-                    ('HIT-VALID' if key in MetasmokeCache._expiries else 'HIT-PERSISTENT')
+        with MetasmokeCache._cache_lock, MetasmokeCache._expiries_lock:
+            if key in MetasmokeCache._cache:
+                if (key in MetasmokeCache._expiries and MetasmokeCache._expiries[key] >= int(time.time())) or \
+                   key not in MetasmokeCache._expiries:
+                    # Expiry was set on cache insert, and the value is still in-date, OR no expiry was set and the item
+                    # is persistently cached.
+                    return MetasmokeCache._cache[key],\
+                        ('HIT-VALID' if key in MetasmokeCache._expiries else 'HIT-PERSISTENT')
+                else:
+                    # Expiry was set on cache insert, but the value has expired. We're not regenerating values here.
+                    return None, 'MISS-EXPIRED'
             else:
-                # Expiry was set on cache insert, but the value has expired. We're not regenerating values here.
-                return None, 'MISS-EXPIRED'
-        else:
-            # Item never existed in the first place.
-            return None, 'MISS-NOITEM'
+                # Item never existed in the first place.
+                return None, 'MISS-NOITEM'
 
     @staticmethod
     def fetch(key, generator=None, expiry=None):
@@ -56,11 +61,12 @@ class MetasmokeCache:
             return value, cache_status
         elif value is None and generator is not None:
             # Cache miss, but we have a generator available so we can gen a value and return that.
-            if key in MetasmokeCache._prior_attempt_timestamp and MetasmokeCache._prior_attempt_timestamp[key] >= \
-               int(time.time() - MetasmokeCache.MINIMUM_SECONDS_BETWEEN_ATTEMPTS):
-                # We've already attempted to get the value recently, so we're not trying again for a while.
-                return None, 'MISS-NOGEN'
-            MetasmokeCache._prior_attempt_timestamp[key] = int(time.time())
+            with MetasmokeCache._prior_attempt_timestamp_lock:
+                if key in MetasmokeCache._prior_attempt_timestamp and MetasmokeCache._prior_attempt_timestamp[key] >= \
+                   int(time.time() - MetasmokeCache.MINIMUM_SECONDS_BETWEEN_ATTEMPTS):
+                    # We've already attempted to get the value recently, so we're not trying again for a while.
+                    return None, 'MISS-NOGEN'
+                MetasmokeCache._prior_attempt_timestamp[key] = int(time.time())
             try:
                 value = generator()
             except Exception:
@@ -133,9 +139,10 @@ class MetasmokeCache:
                        will be inserted without a TTL, making it a persistently-cached value.
         :returns: None
         """
-        MetasmokeCache._cache[key] = value
-        if expiry is not None:
-            MetasmokeCache._expiries[key] = int(time.time()) + expiry
+        with MetasmokeCache._cache_lock, MetasmokeCache._expiries_lock:
+            MetasmokeCache._cache[key] = value
+            if expiry is not None:
+                MetasmokeCache._expiries[key] = int(time.time()) + expiry
 
         tasks.Tasks.do(dump_cache_data)
 
@@ -147,8 +154,9 @@ class MetasmokeCache:
         :param key: The cache key to delete.
         :returns: None
         """
-        del MetasmokeCache._cache[key]
-        del MetasmokeCache._expiries[key]
+        with MetasmokeCache._cache_lock, MetasmokeCache._expiries_lock:
+            del MetasmokeCache._cache[key]
+            del MetasmokeCache._expiries[key]
         tasks.Tasks.do(dump_cache_data)
 
 
@@ -159,8 +167,9 @@ def dump_cache_data():
 
     :returns: None
     """
-    datahandling.dump_pickle('metasmokeCacheData.p',
-                             {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
+    with MetasmokeCache._cache_lock, MetasmokeCache._expiries_lock:
+        datahandling.dump_pickle('metasmokeCacheData.p',
+                                 {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
 
 
 def is_website_whitelisted(domain):
