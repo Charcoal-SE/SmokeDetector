@@ -39942,3 +39942,4 @@
 1654309635	cocomac	information-net\.com
 1654309757	cocomac	free[\W_]*+hack
 1654314538	cigien	flycode\.com
+1654344637	Jeff Schaller	hongkong777\.blogspot
