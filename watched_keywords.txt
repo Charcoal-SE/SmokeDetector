@@ -39966,3 +39966,4 @@
 1654431014	Jeff Schaller	worldtrackgps\.in
 1654432740	Jeff Schaller	(?-i:InputOutputCampus)(?#YouTube)
 1654437781	Makyen	ridobiko\.com
+1654440289	cigien	discordserverlists\.com
