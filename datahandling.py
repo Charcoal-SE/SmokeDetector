@@ -23,6 +23,7 @@ from helpers import ErrorLogs, log, log_exception, redact_passwords
 from tasks import Tasks
 
 last_feedbacked = None
+last_feedbacked_lock = threading.RLock()
 PICKLE_STORAGE = "pickles/"
 
 queue_timings_data = list()
@@ -309,8 +310,9 @@ def add_false_positive(site_post_id_tuple):
         GlobalVars.false_positives.append(site_post_id_tuple)
         dump_pickle("falsePositives.p", GlobalVars.false_positives)
 
-    global last_feedbacked
-    last_feedbacked = (site_post_id_tuple, time.time() + 60)
+    with last_feedbacked_lock:
+        global last_feedbacked
+        last_feedbacked = (site_post_id_tuple, time.time() + 60)
 
 
 # noinspection PyMissingTypeHints
@@ -320,8 +322,9 @@ def add_ignored_post(postid_site_tuple):
     GlobalVars.ignored_posts.append(postid_site_tuple)
     dump_pickle("ignoredPosts.p", GlobalVars.ignored_posts)
 
-    global last_feedbacked
-    last_feedbacked = (postid_site_tuple, time.time() + 60)
+    with last_feedbacked_lock:
+        global last_feedbacked
+        last_feedbacked = (postid_site_tuple, time.time() + 60)
 
 
 def remove_blacklisted_user(user):

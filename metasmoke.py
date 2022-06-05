@@ -240,7 +240,8 @@ class Metasmoke:
             ids = (message['blacklist']['uid'], message['blacklist']['site'])
 
             datahandling.add_blacklisted_user(ids, "metasmoke", message['blacklist']['post'])
-            datahandling.last_feedbacked = (ids, time.time() + 60)
+            with datahandling.last_feedbacked_lock:
+                datahandling.last_feedbacked = (ids, time.time() + 60)
         elif "unblacklist" in message:
             ids = (message['unblacklist']['uid'], message['unblacklist']['site'])
             datahandling.remove_blacklisted_user(ids)

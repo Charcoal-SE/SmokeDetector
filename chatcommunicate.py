@@ -153,10 +153,11 @@ def init(username, password, try_cookies=True):
         with _clients_lock:
             _clients[site] = client
 
-    if os.path.exists("rooms_custom.yml"):
-        parse_room_config("rooms_custom.yml")
-    else:
-        parse_room_config("rooms.yml")
+    with GlobalVars.local_git_repository_file_lock:
+        if os.path.exists("rooms_custom.yml"):
+            parse_room_config("rooms_custom.yml")
+        else:
+            parse_room_config("rooms.yml")
 
     if not GlobalVars.standby_mode:
         join_command_rooms()
@@ -188,11 +189,12 @@ def join_command_rooms():
 
 
 def parse_room_config(path):
-    with open(path, "r", encoding="utf-8") as room_config:
-        room_dict = yaml.safe_load(room_config.read())
+    with GlobalVars.local_git_repository_file_lock:
+        with open(path, "r", encoding="utf-8") as room_config:
+            room_dict = yaml.safe_load(room_config.read())
 
-    with open("users.yml", "r", encoding="utf-8") as user_config:
-        user_data = yaml.safe_load(user_config.read())
+        with open("users.yml", "r", encoding="utf-8") as user_config:
+            user_data = yaml.safe_load(user_config.read())
 
     inherits = []
     rooms = {}
@@ -343,6 +345,8 @@ def on_msg(msg, client):
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
+    with datahandling.last_feedbacked_lock:
+        last_feedbacked = datahandling.last_feedbacked
     if message.parent:
         try:
             if message.parent.owner.id == client._br.user_id:
@@ -360,8 +364,8 @@ def on_msg(msg, client):
         result = dispatch_command(message)
         send_reply_if_not_blank(room_ident, message.id, result)
     elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
-            and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
-        ids, expires_in = datahandling.last_feedbacked
+            and is_privileged(message.owner, message.room) and last_feedbacked:
+        ids, expires_in = last_feedbacked
 
         if time.time() < expires_in:
             Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
