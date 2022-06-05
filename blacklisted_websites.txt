@@ -4622,3 +4622,4 @@ isharpacademy\.in
 public\.flourish\.studio
 perfumeriatucuidado\.com
 techrook\.com
+fastservice(?:\.|[\W_]*+dot[\W_]*+)com
