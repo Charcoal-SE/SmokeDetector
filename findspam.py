@@ -14,6 +14,7 @@ import os
 import os.path as path
 import threading
 import copy
+import contextlib
 
 import regex
 # noinspection PyPackageRequirements
@@ -420,7 +421,7 @@ class Rule:
 
     def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
                  stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False, rule_id=None,
-                 elapsed_time_reporting=None):
+                 elapsed_time_reporting=None, thread_safe=False):
         self.regex = None
         self.regex_lock = threading.RLock()
         self.func = None
@@ -438,6 +439,8 @@ class Rule:
         self.whole_post = whole_post
         self.rule_id = rule_id
         self.elapsed_time_reporting = elapsed_time_reporting
+        self.thread_safe = thread_safe
+        self.rule_thread_lock = contextlib.suppress() if thread_safe else threading.RLock()
         if not skip_creation_sanity_check:
             self.sanity_check()
 
@@ -475,38 +478,39 @@ class Rule:
         matched_title, matched_username, matched_body = False, False, False
         result_title, result_username, result_body = None, None, None
         if self.func:  # Functional check takes precedence over regex check
-            if self.whole_post:
-                matched_title, matched_username, matched_body, why_text = self.func(post)
-                result_title = (matched_title, reason_title,
-                                reason_title.capitalize() + " - " + why_text)
-                result_username = (matched_username, reason_username,
-                                   reason_username.capitalize() + " - " + why_text)
-                result_body = (matched_body, reason_body,
-                               reason_body.capitalize() + " - " + why_text)
-            else:
-                if self.title and not post.is_answer:
-                    matched_title, why_text = self.func(post.title, post.post_site)
+            with self.rule_thread_lock:
+                if self.whole_post:
+                    matched_title, matched_username, matched_body, why_text = self.func(post)
                     result_title = (matched_title, reason_title,
                                     reason_title.capitalize() + " - " + why_text)
-                else:
-                    result_title = (False, "", "")
-
-                if self.username:
-                    matched_username, why_text = self.func(post.user_name, post.post_site)
                     result_username = (matched_username, reason_username,
                                        reason_username.capitalize() + " - " + why_text)
-                else:
-                    result_username = (False, "", "")
-
-                if self.body and not post.body_is_summary:
-                    matched_body, why_text = self.func(body_to_check, post.post_site)
                     result_body = (matched_body, reason_body,
                                    reason_body.capitalize() + " - " + why_text)
-                elif self.body_summary and post.body_is_summary:
-                    matched_body, _ = self.func(body_to_check, post.post_site)
-                    result_body = (matched_body, "", "")
                 else:
-                    result_body = (False, "", "")
+                    if self.title and not post.is_answer:
+                        matched_title, why_text = self.func(post.title, post.post_site)
+                        result_title = (matched_title, reason_title,
+                                        reason_title.capitalize() + " - " + why_text)
+                    else:
+                        result_title = (False, "", "")
+
+                    if self.username:
+                        matched_username, why_text = self.func(post.user_name, post.post_site)
+                        result_username = (matched_username, reason_username,
+                                           reason_username.capitalize() + " - " + why_text)
+                    else:
+                        result_username = (False, "", "")
+
+                    if self.body and not post.body_is_summary:
+                        matched_body, why_text = self.func(body_to_check, post.post_site)
+                        result_body = (matched_body, reason_body,
+                                       reason_body.capitalize() + " - " + why_text)
+                    elif self.body_summary and post.body_is_summary:
+                        matched_body, _ = self.func(body_to_check, post.post_site)
+                        result_body = (matched_body, "", "")
+                    else:
+                        result_body = (False, "", "")
         else:
             compiled_regex = None
             with self.regex_lock:
@@ -718,6 +722,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 disabled=False,  # yeah, disabled=True is intuitive
                 rule_id=None,  # Unique rule ID [The "reason" may be on multiple rules; this is unique to the rule.]
                 elapsed_time_reporting=None,
+                thread_safe=False,
                 skip_creation_sanity_check=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
@@ -747,7 +752,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                    rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
+                    rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting, thread_safe=thread_safe)
         if not disabled:
             FindSpam.rules.append(rule)
         return rule
@@ -763,7 +768,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
             rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check,
-                        rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting)
+                        rule_id=rule_id, elapsed_time_reporting=elapsed_time_reporting, thread_safe=thread_safe)
             if not disabled:
                 FindSpam.rules.append(rule)
             return rule
