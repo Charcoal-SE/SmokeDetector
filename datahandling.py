@@ -126,7 +126,8 @@ def load_files():
         with GlobalVars.ignored_posts_lock:
             GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding='utf-8')
     if has_pickle("autoIgnoredPosts.p"):
-        GlobalVars.auto_ignored_posts = load_pickle("autoIgnoredPosts.p", encoding='utf-8')
+        with GlobalVars.auto_ignored_posts_lock:
+            GlobalVars.auto_ignored_posts = load_pickle("autoIgnoredPosts.p", encoding='utf-8')
     if has_pickle("notifications.p"):
         with GlobalVars.notifications_lock:
             GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
@@ -175,16 +176,17 @@ def load_files():
 
 
 def filter_auto_ignored_posts():
-    today_date = datetime.today()
-    to_remove = []
-    for aip in GlobalVars.auto_ignored_posts:
-        day_ignored = aip[2]
-        day_diff = (today_date - day_ignored).days
-        if day_diff > 7:
-            to_remove.append(aip)
-    for tr in to_remove:
-        GlobalVars.auto_ignored_posts.remove(tr)
-    dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
+    with GlobalVars.auto_ignored_posts_lock:
+        today_date = datetime.today()
+        to_remove = []
+        for aip in GlobalVars.auto_ignored_posts:
+            day_ignored = aip[2]
+            day_diff = (today_date - day_ignored).days
+            if day_diff > 7:
+                to_remove.append(aip)
+        for tr in to_remove:
+            GlobalVars.auto_ignored_posts.remove(tr)
+        dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
 
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
@@ -223,10 +225,11 @@ def is_ignored_post(postid_site_tuple):
 
 # noinspection PyMissingTypeHints
 def is_auto_ignored_post(postid_site_tuple):
-    for p in GlobalVars.auto_ignored_posts:
-        if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
-            return True
-    return False
+    with GlobalVars.auto_ignored_posts_lock:
+        for p in GlobalVars.auto_ignored_posts:
+            if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
+                return True
+        return False
 
 
 def update_code_privileged_users_list():
@@ -309,8 +312,9 @@ def add_blacklisted_user(user, message_url, post_url):
 def add_auto_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or is_auto_ignored_post(postid_site_tuple):
         return
-    GlobalVars.auto_ignored_posts.append(postid_site_tuple)
-    dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
+    with GlobalVars.auto_ignored_posts_lock:
+        GlobalVars.auto_ignored_posts.append(postid_site_tuple)
+        dump_pickle("autoIgnoredPosts.p", GlobalVars.auto_ignored_posts)
 
 
 def add_false_positive(site_post_id_tuple):

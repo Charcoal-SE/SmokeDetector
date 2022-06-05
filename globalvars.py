@@ -114,6 +114,7 @@ class GlobalVars:
     ignored_posts = []
     ignored_posts_lock = threading.RLock()
     auto_ignored_posts = []
+    auto_ignored_posts_lock = threading.RLock()
     startup_utc_date = datetime.utcnow()
     startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
