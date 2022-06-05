@@ -82,6 +82,7 @@ class GlobalVars:
     local_git_repository_file_lock = threading.RLock()
 
     false_positives = []
+    false_positives_lock = threading.RLock()
     whitelisted_users = set()
     blacklisted_users = dict()
     raw_blacklist_watchlist_lock = threading.RLock()

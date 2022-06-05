@@ -109,7 +109,8 @@ def has_pickle(path):
 # load_blacklists() is defined in a separate module blacklists.py, though
 def load_files():
     if has_pickle("falsePositives.p"):
-        GlobalVars.false_positives = load_pickle("falsePositives.p", encoding='utf-8')
+        with GlobalVars.false_positives_lock:
+            GlobalVars.false_positives = load_pickle("falsePositives.p", encoding='utf-8')
     if has_pickle("whitelistedUsers.p"):
         GlobalVars.whitelisted_users = load_pickle("whitelistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.whitelisted_users, set):
@@ -185,7 +186,8 @@ def filter_auto_ignored_posts():
 
 # noinspection PyMissingTypeHints
 def is_false_positive(postid_site_tuple):
-    return postid_site_tuple in GlobalVars.false_positives
+    with GlobalVars.false_positives_lock:
+        return postid_site_tuple in GlobalVars.false_positives
 
 
 # noinspection PyMissingTypeHints
@@ -301,10 +303,11 @@ def add_auto_ignored_post(postid_site_tuple):
 
 
 def add_false_positive(site_post_id_tuple):
-    if site_post_id_tuple is None or site_post_id_tuple in GlobalVars.false_positives:
-        return
-    GlobalVars.false_positives.append(site_post_id_tuple)
-    dump_pickle("falsePositives.p", GlobalVars.false_positives)
+    with GlobalVars.false_positives_lock:
+        if site_post_id_tuple is None or site_post_id_tuple in GlobalVars.false_positives:
+            return
+        GlobalVars.false_positives.append(site_post_id_tuple)
+        dump_pickle("falsePositives.p", GlobalVars.false_positives)
 
     global last_feedbacked
     last_feedbacked = (site_post_id_tuple, time.time() + 60)
