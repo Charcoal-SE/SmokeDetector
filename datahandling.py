@@ -113,19 +113,23 @@ def load_files():
         with GlobalVars.false_positives_lock:
             GlobalVars.false_positives = load_pickle("falsePositives.p", encoding='utf-8')
     if has_pickle("whitelistedUsers.p"):
-        GlobalVars.whitelisted_users = load_pickle("whitelistedUsers.p", encoding='utf-8')
-        if not isinstance(GlobalVars.whitelisted_users, set):
-            GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
+        with GlobalVars.whitelisted_users_lock:
+            GlobalVars.whitelisted_users = load_pickle("whitelistedUsers.p", encoding='utf-8')
+            if not isinstance(GlobalVars.whitelisted_users, set):
+                GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
     if has_pickle("blacklistedUsers.p"):
-        GlobalVars.blacklisted_users = load_pickle("blacklistedUsers.p", encoding='utf-8')
-        if not isinstance(GlobalVars.blacklisted_users, dict):
-            GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
+        with GlobalVars.blacklisted_users_lock:
+            GlobalVars.blacklisted_users = load_pickle("blacklistedUsers.p", encoding='utf-8')
+            if not isinstance(GlobalVars.blacklisted_users, dict):
+                GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
     if has_pickle("ignoredPosts.p"):
-        GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding='utf-8')
+        with GlobalVars.ignored_posts_lock:
+            GlobalVars.ignored_posts = load_pickle("ignoredPosts.p", encoding='utf-8')
     if has_pickle("autoIgnoredPosts.p"):
         GlobalVars.auto_ignored_posts = load_pickle("autoIgnoredPosts.p", encoding='utf-8')
     if has_pickle("notifications.p"):
-        GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
+        with GlobalVars.notifications_lock:
+            GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
     if has_pickle("whyData.p"):
         GlobalVars.why_data = load_pickle("whyData.p", encoding='utf-8')
     # Switch from apiCalls.pickle to apiCalls.p
@@ -193,24 +197,28 @@ def is_false_positive(postid_site_tuple):
 
 # noinspection PyMissingTypeHints
 def is_whitelisted_user(user):
-    return user in GlobalVars.whitelisted_users
+    with GlobalVars.whitelisted_users_lock:
+        return user in GlobalVars.whitelisted_users
 
 
 # noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
-    return user in GlobalVars.blacklisted_users
+    with GlobalVars.blacklisted_users_lock:
+        return user in GlobalVars.blacklisted_users
 
 
 def get_blacklisted_user_data(user):
-    try:
-        return (user,) + tuple(GlobalVars.blacklisted_users[user])
-    except KeyError:
-        return ()
+    with GlobalVars.blacklisted_users_lock:
+        try:
+            return (user,) + tuple(GlobalVars.blacklisted_users[user])
+        except KeyError:
+            return ()
 
 
 # noinspection PyMissingTypeHints
 def is_ignored_post(postid_site_tuple):
-    return postid_site_tuple in GlobalVars.ignored_posts
+    with GlobalVars.ignored_posts_lock:
+        return postid_site_tuple in GlobalVars.ignored_posts
 
 
 # noinspection PyMissingTypeHints
@@ -283,17 +291,19 @@ def resolve_ms_link(post_url):
 
 # noinspection PyMissingTypeHints
 def add_whitelisted_user(user):
-    if user in GlobalVars.whitelisted_users or user is None:
-        return
-    GlobalVars.whitelisted_users.add(user)
-    dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
+    with GlobalVars.whitelisted_users_lock:
+        if user in GlobalVars.whitelisted_users or user is None:
+            return
+        GlobalVars.whitelisted_users.add(user)
+        dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
 
 
 def add_blacklisted_user(user, message_url, post_url):
     if is_blacklisted_user(user) or user is None:
         return
-    GlobalVars.blacklisted_users[user] = (message_url, post_url)
-    dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    with GlobalVars.blacklisted_users_lock:
+        GlobalVars.blacklisted_users[user] = (message_url, post_url)
+        dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
 
 
 def add_auto_ignored_post(postid_site_tuple):
@@ -317,10 +327,11 @@ def add_false_positive(site_post_id_tuple):
 
 # noinspection PyMissingTypeHints
 def add_ignored_post(postid_site_tuple):
-    if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
-        return
-    GlobalVars.ignored_posts.append(postid_site_tuple)
-    dump_pickle("ignoredPosts.p", GlobalVars.ignored_posts)
+    with GlobalVars.ignored_posts_lock:
+        if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
+            return
+        GlobalVars.ignored_posts.append(postid_site_tuple)
+        dump_pickle("ignoredPosts.p", GlobalVars.ignored_posts)
 
     with last_feedbacked_lock:
         global last_feedbacked
@@ -331,18 +342,20 @@ def remove_blacklisted_user(user):
     blacklisted_user_data = get_blacklisted_user_data(user)
     if not blacklisted_user_data:
         return False
-    GlobalVars.blacklisted_users.pop(blacklisted_user_data[0])
-    dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    with GlobalVars.blacklisted_users_lock:
+        GlobalVars.blacklisted_users.pop(blacklisted_user_data[0])
+        dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
     return True
 
 
 # noinspection PyMissingTypeHints
 def remove_whitelisted_user(user):
-    if user not in GlobalVars.whitelisted_users:
-        return False
-    GlobalVars.whitelisted_users.remove(user)
-    dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
-    return True
+    with GlobalVars.whitelisted_users_lock:
+        if user not in GlobalVars.whitelisted_users:
+            return False
+        GlobalVars.whitelisted_users.remove(user)
+        dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
+        return True
 
 
 def add_why(site, post_id, why):
@@ -566,10 +579,11 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=T
         if not exists:
             return -2, None
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
-    if notification_tuple in GlobalVars.notifications:
-        return -1, None
-    GlobalVars.notifications.append((int(user_id), chat_site, int(room_id), se_site, always_ping))
-    dump_pickle("notifications.p", GlobalVars.notifications)
+    with GlobalVars.notifications_lock:
+        if notification_tuple in GlobalVars.notifications:
+            return -1, None
+        GlobalVars.notifications.append((int(user_id), chat_site, int(room_id), se_site, always_ping))
+        dump_pickle("notifications.p", GlobalVars.notifications)
     return 0, se_site
 
 
@@ -580,10 +594,11 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
         if not exists:
             return False
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
-    if notification_tuple not in GlobalVars.notifications:
-        return False
-    GlobalVars.notifications.remove(notification_tuple)
-    dump_pickle("notifications.p", GlobalVars.notifications)
+    with GlobalVars.notifications_lock:
+        if notification_tuple not in GlobalVars.notifications:
+            return False
+        GlobalVars.notifications.remove(notification_tuple)
+        dump_pickle("notifications.p", GlobalVars.notifications)
     return True
 
 
@@ -593,7 +608,8 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
     if not exists:
         return False
     notification_tuple = (int(user_id), chat_site, int(room_id), site, Any())
-    return notification_tuple in GlobalVars.notifications
+    with GlobalVars.notifications_lock:
+        return notification_tuple in GlobalVars.notifications
 
 
 # noinspection PyMissingTypeHints
@@ -601,9 +617,10 @@ def remove_all_from_notification_list(user_id):
     user_id = int(user_id)
     my_notifications = []
 
-    for notification in GlobalVars.notifications:
-        if notification[0] == user_id:
-            my_notifications.append(notification[:4])
+    with GlobalVars.notifications_lock:
+        for notification in GlobalVars.notifications:
+            if notification[0] == user_id:
+                my_notifications.append(notification[:4])
 
     for notification in my_notifications:
         remove_from_notification_list(*notification)
@@ -611,17 +628,19 @@ def remove_all_from_notification_list(user_id):
 
 def get_all_notification_sites(user_id, chat_site, room_id):
     sites = []
-    for notification in GlobalVars.notifications:
-        if notification[0] == int(user_id) and notification[1] == chat_site and notification[2] == int(room_id):
-            sites.append(notification[3])
+    with GlobalVars.notifications_lock:
+        for notification in GlobalVars.notifications:
+            if notification[0] == int(user_id) and notification[1] == chat_site and notification[2] == int(room_id):
+                sites.append(notification[3])
     return sorted(sites)
 
 
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
-    for notification in GlobalVars.notifications:
-        if notification[1] == chat_site and notification[2] == int(room_id) and notification[3] == se_site:
-            uids.append((notification[0], notification[4]))
+    with GlobalVars.notifications_lock:
+        for notification in GlobalVars.notifications:
+            if notification[1] == chat_site and notification[2] == int(room_id) and notification[3] == se_site:
+                uids.append((notification[0], notification[4]))
     return uids
 
 
@@ -729,11 +748,11 @@ class SmokeyTransfer:
     ENDING = "-----END SMOKEY DATA BLOCK-----"
 
     ITEMS = [
-        # (dict_key, object, attr, type, post_processing)
-        ('blacklisted_users', GlobalVars, 'blacklisted_users', None, None),
-        ('whitelisted_users', GlobalVars, 'whitelisted_users', None, None),
-        ('ignored_posts', GlobalVars, 'ignored_posts', None, None),
-        ('notifications', GlobalVars, 'notifications', None, None),
+        # (dict_key, object, attr, lock_attr, type, post_processing)
+        ('blacklisted_users', GlobalVars, 'blacklisted_users', 'blacklisted_users_lock', None, None),
+        ('whitelisted_users', GlobalVars, 'whitelisted_users', 'whitelisted_users_lock', None, None),
+        ('ignored_posts', GlobalVars, 'ignored_posts', 'ignored_posts_lock', None, None),
+        ('notifications', GlobalVars, 'notifications', 'notifications_lock', None, None),
     ]
 
     @classmethod
@@ -746,8 +765,9 @@ class SmokeyTransfer:
             'lengths': {},  # can be used for validation
         }}  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
-            key, obj, attr, obj_type, _ = item_info
-            item = getattr(obj, attr)
+            key, obj, attr, lock_attr, obj_type, _ = item_info
+            with getattr(obj, lock_attr):
+                item = copy.deepcopy(getattr(obj, attr))
             data[key] = item
             try:
                 length = len(item)
@@ -790,7 +810,7 @@ class SmokeyTransfer:
             # happy extracting
             warnings = []
             for item_info in cls.ITEMS:
-                key, obj, attr, obj_type, proc = item_info
+                key, obj, attr, lock_attr, obj_type, proc = item_info
                 if key not in data:
                     continue  # Allow partial transfer
                 item = data[key]
@@ -801,7 +821,8 @@ class SmokeyTransfer:
                 if length != data['_metadata']['lengths'][key]:
                     warnings.append("Length of {!r} mismatch (recorded {}, actual {})".format(
                         key, data['_metadata']['lengths'][key], length))
-                setattr(obj, attr, item)
+                with getattr(obj, lock_attr):
+                    setattr(obj, attr, item)
             if warnings:
                 raise Warning("Warning: " + ', '.join(warnings))
         except (ValueError, zlib.error) as e:

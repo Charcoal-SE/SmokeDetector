@@ -23,6 +23,9 @@ def test_globalvars():
     # The following lists must be empty in globalvars.py, because
     # they will be filled later.
     assert len(GlobalVars.auto_ignored_posts) == 0
-    assert len(GlobalVars.ignored_posts) == 0
-    assert len(GlobalVars.blacklisted_users) == 0
-    assert len(GlobalVars.whitelisted_users) == 0
+    with GlobalVars.ignored_posts_lock:
+        assert len(GlobalVars.ignored_posts) == 0
+    with GlobalVars.blacklisted_users_lock:
+        assert len(GlobalVars.blacklisted_users) == 0
+    with GlobalVars.whitelisted_users_lock:
+        assert len(GlobalVars.whitelisted_users) == 0

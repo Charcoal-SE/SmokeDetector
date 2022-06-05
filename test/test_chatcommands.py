@@ -7,7 +7,8 @@ from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
 from datahandling import remove_pickle
-from helpers import with_local_git_repository_file_lock
+from helpers import with_local_git_repository_file_lock, with_blacklisted_users_lock, with_whitelisted_users_lock, \
+    rewrap_for_monkeypatch_argument, with_notifications_lock
 
 import datetime
 import os
@@ -29,14 +30,6 @@ def rewrap_for_paramiterized_test_bisect():
     def decorator(func):
         def wrap(command, test_text, expected_result):
             return func(command, test_text, expected_result)
-        return wrap
-    return decorator
-
-
-def rewrap_for_monkeypatch_argument():
-    def decorator(func):
-        def wrap(monkeypatch):
-            return func(monkeypatch)
         return wrap
     return decorator
 
@@ -390,6 +383,7 @@ def test_reject(monkeypatch):
 
 @patch("chatcommands.handle_spam")
 @lock_and_restore_chatcommunicate_rooms()
+@with_blacklisted_users_lock()
 def test_report(handle_spam):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     # Documentation: The process before scanning the post is identical regardless of alias_used.
@@ -475,6 +469,7 @@ def test_report(handle_spam):
 
 @patch("chatcommands.handle_spam")
 @lock_and_restore_chatcommunicate_rooms()
+@with_blacklisted_users_lock()
 def test_allspam(handle_spam):
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -557,6 +552,7 @@ def test_allspam(handle_spam):
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
 @lock_and_restore_chatcommunicate_rooms()
+@with_blacklisted_users_lock()
 def test_blacklisted_users():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
@@ -630,7 +626,10 @@ def test_blacklisted_users():
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
 @lock_and_restore_chatcommunicate_rooms()
+@with_whitelisted_users_lock()
 def test_whitelisted_users():
+    # We're messing with the whitelisted_users list, which other tests do rely upon, so we need to
+    # make sure we hold the lock on it for the entire test.
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:
         msg = Fake({
@@ -732,6 +731,7 @@ def test_metasmoke():
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
 @lock_and_restore_chatcommunicate_rooms()
+@with_notifications_lock()
 def test_notifications():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     try:

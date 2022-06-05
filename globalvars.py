@@ -84,7 +84,9 @@ class GlobalVars:
     false_positives = []
     false_positives_lock = threading.RLock()
     whitelisted_users = set()
+    whitelisted_users_lock = threading.RLock()
     blacklisted_users = dict()
+    blacklisted_users_lock = threading.RLock()
     raw_blacklist_watchlist_lock = threading.RLock()
     blacklisted_usernames = []
     blacklisted_websites = []
@@ -110,6 +112,7 @@ class GlobalVars:
     bad_keywords = []
     watched_keywords = {}
     ignored_posts = []
+    ignored_posts_lock = threading.RLock()
     auto_ignored_posts = []
     startup_utc_date = datetime.utcnow()
     startup_utc = startup_utc_date.strftime("%H:%M:%S")
@@ -168,6 +171,7 @@ class GlobalVars:
     se_sites = []
     why_data = []
     notifications = []
+    notifications_lock = threading.RLock()
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
