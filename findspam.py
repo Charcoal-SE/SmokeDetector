@@ -13,6 +13,7 @@ import time
 import os
 import os.path as path
 import threading
+import copy
 
 import regex
 # noinspection PyPackageRequirements
@@ -511,11 +512,11 @@ class Rule:
             with self.regex_lock:
                 if self.regex:
                     try:
-                        compiled_regex = self.compiled_regex
+                        compiled_regex = copy.deepcopy(self.compiled_regex)
                     except AttributeError:
                         compiled_regex = regex_compile_no_cache(self.regex, regex.UNICODE, city=city_list,
                                                                 ignore_unused=True)
-                        self.compiled_regex = compiled_regex
+                        self.compiled_regex = copy.deepcopy(compiled_regex)
 
             if compiled_regex:
                 if self.title and not post.is_answer:
