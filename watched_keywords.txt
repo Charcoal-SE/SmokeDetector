@@ -39967,3 +39967,4 @@
 1654437781	Makyen	ridobiko\.com
 1654440289	cigien	discordserverlists\.com
 1654440934	cigien	linux[\W_]*+hint[\W_]*+bd(?!\.xyz(?<=linuxhintbd\.xyz))
+1654440959	cigien	linuxhintbd\.xyz
