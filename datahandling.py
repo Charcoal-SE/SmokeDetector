@@ -537,7 +537,7 @@ def refresh_sites():
             'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
             'key': 'IAkbitmze4B8KpacUfLqkw((',
             'page': page,
-            'pagesize': 500
+            'pagesize': 1000
         }
         response = requests.get(url, params=params)
 
@@ -548,7 +548,8 @@ def refresh_sites():
             return False, "`items` not in JSON data"
         if "has_more" not in data:
             return False, "`has_more` not in JSON data"
-        GlobalVars.se_sites.extend(data["items"])
+        with GlobalVars.se_sites_lock:
+            GlobalVars.se_sites.extend(data["items"])
         has_more = data["has_more"]
         page += 1
     return True, "OK"
@@ -556,15 +557,20 @@ def refresh_sites():
 
 # noinspection PyMissingTypeHints
 def check_site_and_get_full_name(site):
-    if len(GlobalVars.se_sites) == 0:
-        refreshed, msg = refresh_sites()
-        if not refreshed:
-            return False, "Could not fetch sites: " + msg
-    for item in GlobalVars.se_sites:
-        full_name = regex.sub(r'https?://', '', item['site_url'])
-        short_name = item["api_site_parameter"]
-        if site == full_name or site == short_name:
-            return True, full_name
+    with GlobalVars.se_sites_lock:
+        if len(GlobalVars.se_sites) == 0:
+            refreshed, msg = refresh_sites()
+            if not refreshed:
+                return False, "Could not fetch sites: " + msg
+        for item in GlobalVars.se_sites:
+            try:
+                full_name = item['full_name']
+            except KeyError:
+                full_name = regex.sub(r'https?://', '', item['site_url'])
+                item['full_name'] = full_name
+            short_name = item["api_site_parameter"]
+            if site == full_name or site == short_name:
+                return True, full_name
     return False, "Could not find the given site."
 
 

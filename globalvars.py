@@ -183,6 +183,10 @@ class GlobalVars:
     cookies_lock = threading.RLock()
     cookies = {}
 
+    # A list of sites from the SE API used to get the full domain from SE API site API parameter
+    se_sites_lock = threading.RLock()
+    se_sites = []
+
     #
     # Values without locks (some still need them)
     #
@@ -328,7 +332,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    se_sites = []
     why_data = []
     listen_to_these_if_edited = []
     multiple_reporters = []
