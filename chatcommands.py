@@ -1359,10 +1359,11 @@ def inqueue(url):
     if post_type != "question":
         raise CmdException("Can't check for answers.")
 
-    if site in GlobalVars.bodyfetcher.queue:
-        for i, id in enumerate(GlobalVars.bodyfetcher.queue[site].keys()):
-            if id == post_id:
-                return "#" + str(i + 1) + " in queue."
+    with GlobalVars.bodyfetcher.queue_lock:
+        if site in GlobalVars.bodyfetcher.queue:
+            for i, id in enumerate(GlobalVars.bodyfetcher.queue[site].keys()):
+                if id == post_id:
+                    return "#" + str(i + 1) + " in queue."
 
     return "Not in queue."
 
@@ -1370,7 +1371,8 @@ def inqueue(url):
 @command()
 def listening():
     # return "{} post(s) currently monitored for deletion.".format(len(GlobalVars.deletion_watcher.posts))
-    return "Currently listening to:\n" + repr(GlobalVars.deletion_watcher.posts)
+    with GlobalVars.deletion_watcher.posts_lock:
+        return "Currently listening to:\n" + repr(GlobalVars.deletion_watcher.posts)
 
 
 @command()
@@ -1669,10 +1671,11 @@ def bisect(msg, s):
     bookended_regexes = []
     non_bookended_regexes = []
     regexes = []
-    non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
-    non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
-    bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
-    bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
+    with GlobalVars.local_git_repository_file_lock:
+        non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
+        non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
+        bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
+        bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
     if msg is not None:
         minimally_validate_content_source(msg)
@@ -2510,7 +2513,7 @@ def false(feedback, msg, comment, alias_used="false"):
     result = "Registered " + post_type + " as false positive"
     if user is None:
         if feedback_type.blacklist:
-            # The command was to bloacklist the user, but we're unable to determine the user.
+            # The command was to blacklist the user, but we're unable to determine the user.
             raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
     else:
         if feedback_type.blacklist:

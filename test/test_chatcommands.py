@@ -16,6 +16,7 @@ import pytest
 import regex
 import types
 import requests
+import threading
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
     from _Git_Windows import git
@@ -848,6 +849,12 @@ def test_notifications():
 
 @lock_and_restore_chatcommunicate_rooms()
 def test_inqueue():
+    original_bodyfetcher = chatcommands.GlobalVars.bodyfetcher
+    if original_bodyfetcher is not None:
+        # This test relies on chatcommands.GlobalVars.bodyfetcher not having been set by the
+        # code in ws.py. If there are conditions where it's possible for it to have been set,
+        # then we need to know about then and resolve them (e.g. if we do any testing within ws.py).
+        raise ValueError('chatcommands.GlobalVars.bodyfetcher is not None')
     chatcommunicate.parse_room_config("test/test_rooms.yml")
     site = Fake({"keys": (lambda: ['1'])})
 
@@ -858,8 +865,28 @@ def test_inqueue():
         def __contains__(self, name):
             return name == "codegolf.stackexchange.com"
 
-    chatcommands.GlobalVars.bodyfetcher = Fake({"queue": FakeQueue()})
+    fake_queue_lock = threading.RLock()
+    # Get the lock before we susbtitute, in case it's seen by another thread.
+    # If it is, then that thread will never get a lock.
+    fake_queue_lock.acquire()
+    replacement_bodyfetcher = Fake({
+        "queue": FakeQueue(),
+        "queue_lock": fake_queue_lock,
+    })
+    chatcommands.GlobalVars.bodyfetcher = replacement_bodyfetcher
 
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
     assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
+    used_bodyfetcher = chatcommands.GlobalVars.bodyfetcher
+    chatcommands.GlobalVars.bodyfetcher = original_bodyfetcher
+    if used_bodyfetcher is not replacement_bodyfetcher:
+        # Something replaced the chatcommands.GlobalVars.bodyfetcher while we were using it.
+        # If this happens, there's a concurrency issue in the CI tests which might cause
+        # substantial issues. We really should solve this with a lock on GlobalVars.bodyfetcher
+        # and the others which are set in ws.py. What's done here will merely detect it, most
+        # of the time.
+        # Note that there's still time between our saving a copy of chatcommands.GlobalVars.bodyfetcher
+        # into used_bodyfetcher and our replacing it with None which won't be detected and will, potentially,
+        # cause issues elsewhere.
+        raise ValueError('chatcommands.GlobalVars.bodyfetcher was replaced while under test in test_inqueue.')
