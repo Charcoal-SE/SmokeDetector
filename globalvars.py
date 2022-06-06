@@ -191,6 +191,10 @@ class GlobalVars:
     why_data_lock = threading.RLock()
     why_data = []
 
+    # List of users who have reported multiple posts and when they can report again
+    multiple_reporters_lock = threading.RLock()
+    multiple_reporters = []
+
     #
     # Values without locks (some still need them)
     #
@@ -336,7 +340,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    multiple_reporters = []
     api_calls_per_site = {}
     reason_weights = {}
     metasmoke_ids = {}
