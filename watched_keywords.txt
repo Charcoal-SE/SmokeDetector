@@ -39977,3 +39977,4 @@
 1654506101	tripleee	digiticaltech\.com
 1654509092	Nisse Engström	supremenexsus\.com
 1654509183	tripleee	supreme[\W_]*+nexsus(?!\.com(?<=supremenexsus\.com))
+1654509653	tripleee	(?-i:^zeeshan$)
