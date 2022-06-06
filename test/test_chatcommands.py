@@ -101,9 +101,10 @@ def test_alive():
 
 
 def test_version():
-    assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
-        id=GlobalVars.location, commit_name=GlobalVars.commit_with_author_escaped,
-        commit_code=GlobalVars.commit.id, repository=GlobalVars.bot_repository)
+    with GlobalVars.globalvars_reload_lock:
+        assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+            id=GlobalVars.location, commit_name=GlobalVars.commit_with_author_escaped,
+            commit_code=GlobalVars.commit.id, repository=GlobalVars.bot_repository)
 
 
 @pytest.mark.parametrize("command, test_text, expected_result", [
@@ -179,7 +180,10 @@ def test_bisect(command, test_text, expected_result):
     # All of the substitution references used in the .format() for the expected result are named. Any which are numbers are
     # part of the expected results.
     expected_result = regex.sub(r"(\{\d+(?:,\d+)?\})", r'{\1}', expected_result)
-    formatted_expected_result = expected_result.format(test_text=test_text, bot_repo_slug=GlobalVars.bot_repo_slug, commit_id=GlobalVars.commit.id)
+    with GlobalVars.globalvars_reload_lock:
+        formatted_expected_result = expected_result.format(test_text=test_text,
+                                                           bot_repo_slug=GlobalVars.bot_repo_slug,
+                                                           commit_id=GlobalVars.commit.id)
     chat_command = getattr(chatcommands, command)
     result = chat_command(None, original_msg=msg)
     print('formatted_expected_result:', formatted_expected_result)
@@ -264,7 +268,11 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("").startswith("The `!!/blacklist` command has been deprecated.")
 
 
-@pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
+with GlobalVars.globalvars_reload_lock:
+    globalvars_on_branch = GlobalVars.on_branch
+
+
+@pytest.mark.skipif(globalvars_on_branch != "master", reason="avoid branch checkout")
 @rewrap_for_monkeypatch_argument()
 @with_local_git_repository_file_lock()
 @lock_and_restore_chatcommunicate_rooms()

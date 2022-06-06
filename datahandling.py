@@ -152,7 +152,7 @@ def load_files():
     if has_pickle("reasonWeights.p"):
         GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
     if has_pickle("cookies.p"):
-        GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
+            GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
     if has_pickle("metasmokePostIds.p"):
         GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
     if has_pickle("ms_ajax_queue.p"):
@@ -744,7 +744,7 @@ def can_report_now(user_id, chat_host):
 
 
 def dump_cookies():
-    dump_pickle("cookies.p", GlobalVars.cookies)
+        dump_pickle("cookies.p", GlobalVars.cookies)
 
 
 class SmokeyTransfer:
@@ -762,12 +762,13 @@ class SmokeyTransfer:
     @classmethod
     def dump(cls):
         # Trust Python's GIL here
-        data = {'_metadata': {
-            'time': time.time(),
-            'location': GlobalVars.location,
-            'rev': GlobalVars.commit.id_full,
-            'lengths': {},  # can be used for validation
-        }}  # some metadata, in case they're useful
+        with GlobalVars.globalvars_reload_lock:
+            data = {'_metadata': {
+                'time': time.time(),
+                'location': GlobalVars.location,
+                'rev': GlobalVars.commit.id_full,
+                'lengths': {},  # can be used for validation
+            }}  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
             key, obj, attr, lock_attr, obj_type, _ = item_info
             with getattr(obj, lock_attr):

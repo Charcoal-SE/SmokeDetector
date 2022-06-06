@@ -196,7 +196,9 @@ chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
 
 if GlobalVars.standby_mode:
-    chatcommunicate.tell_rooms_with("debug", GlobalVars.standby_message)
+    with GlobalVars.globalvars_reload_lock:
+        globalvars_standby_message = GlobalVars.standby_message
+    chatcommunicate.tell_rooms_with("debug", globalvars_standby_message)
     Metasmoke.send_status_ping()
 
     while GlobalVars.standby_mode:
@@ -268,7 +270,9 @@ GlobalVars.deletion_watcher = DeletionWatcher()
 GlobalVars.edit_watcher = EditWatcher()
 
 if "first_start" in sys.argv:
-    chatcommunicate.tell_rooms_with('debug', GlobalVars.s if GlobalVars.on_branch else GlobalVars.s_reverted)
+    with GlobalVars.globalvars_reload_lock:
+        first_strat_debug_tell_text = GlobalVars.s if GlobalVars.on_branch else GlobalVars.s_reverted
+    chatcommunicate.tell_rooms_with('debug', first_strat_debug_tell_text)
 
 Tasks.periodic(Metasmoke.send_statistics, interval=600)
 

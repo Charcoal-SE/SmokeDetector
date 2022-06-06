@@ -167,6 +167,18 @@ class GlobalVars:
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
     apiquota = -1
 
+    # Loaded in GlobalVars.reload()
+    globalvars_reload_lock = threading.RLock()
+    commit = None
+    commit_with_author = None
+    commit_with_author_escaped = None
+    on_branch = None
+    s = ""
+    s_reverted = ""
+    s_norestart_blacklists = ""
+    s_norestart_findspam = ""
+    standby_message = ""
+
     #
     # Values without locks (some still need them)
     #
@@ -310,16 +322,6 @@ class GlobalVars:
     #
     #
     # NEED LOCK
-    # these are loaded in GlobalVars.reload()
-    commit = None
-    commit_with_author = None
-    commit_with_author_escaped = None
-    on_branch = None
-    s = ""
-    s_reverted = ""
-    s_norestart_blacklists = ""
-    s_norestart_findspam = ""
-    standby_message = ""
 
     # currently unclassified
     cookies = {}
@@ -537,47 +539,49 @@ class GlobalVars:
 
     @classmethod
     def reload(cls):
-        cls.commit = commit = git_commit_info()
+        with cls.globalvars_reload_lock:
+            cls.commit = commit = git_commit_info()
 
-        cls.commit_with_author = "`{}` ({}: {})".format(
-            commit.id, commit.author, commit.message)
+            cls.commit_with_author = "`{}` ({}: {})".format(
+                commit.id, commit.author, commit.message)
 
-        # We don't want to escape `[` and `]` when they are within code.
-        split_commit_with_author = cls.commit_with_author.split('`')
-        split_length = len(split_commit_with_author)
-        for index in range(0, split_length, 2):
-            split_commit_with_author[index] = split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
-        # There's not an even number of ` characters, so the parsing hack failed, but we assume the last one needs
-        # escaping.
-        if not split_length % 2:
-            split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
+            # We don't want to escape `[` and `]` when they are within code.
+            split_commit_with_author = cls.commit_with_author.split('`')
+            split_length = len(split_commit_with_author)
+            for index in range(0, split_length, 2):
+                split_commit_with_author[index] = \
+                    split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
+            # There's not an even number of ` characters, so the parsing hack failed, but we assume the last one needs
+            # escaping.
+            if not split_length % 2:
+                split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
 
-        cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
+            cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
-        cls.on_branch = git_ref()
-        cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-            cls.commit.id, cls.location, platform.python_version())
-        cls.s_reverted = \
-            "[ {} ] SmokeDetector started in [reverted mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
+            cls.on_branch = git_ref()
+            cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
                 cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_blacklists = \
-            "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_findspam = \
-            "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.standby_message = \
-            "[ {} ] SmokeDetector started in [standby mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
+                cls.commit.id, cls.location, platform.python_version())
+            cls.s_reverted = \
+                "[ {} ] SmokeDetector started in [reverted mode](" \
+                "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
+                "at [rev {}]({}/commit/{}) (running on {})".format(
+                    cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                    cls.commit.id, cls.location)
+            cls.s_norestart_blacklists = \
+                "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+                    cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                    cls.commit.id, cls.location)
+            cls.s_norestart_findspam = \
+                "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+                    cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                    cls.commit.id, cls.location)
+            cls.standby_message = \
+                "[ {} ] SmokeDetector started in [standby mode](" \
+                "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
+                "at [rev {}]({}/commit/{}) (running on {})".format(
+                    cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                    cls.commit.id, cls.location)
 
 
 for stats_set_key in ['all', 'uptime', 'ms']:

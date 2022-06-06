@@ -288,23 +288,31 @@ class Metasmoke:
                     remote_diff = GitManager.get_remote_diff()
                     if only_blacklists_changed(remote_diff):
                         GitManager.pull_remote()
-                        if not GlobalVars.on_branch:
+                        with GlobalVars.globalvars_reload_lock:
+                            on_branch = GlobalVars.on_branch
+                        if not on_branch:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
-                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+                        with GlobalVars.globalvars_reload_lock:
+                            globalvars_s_norestart_blacklists = GlobalVars.s_norestart_blacklists
+                        chatcommunicate.tell_rooms_with('debug', globalvars_s_norestart_blacklists)
                     elif False and only_modules_changed(remote_diff):
                         # As of 2022-05-19, this causes at least intermittent failures and has been disabled.
                         GitManager.pull_remote()
-                        if not GlobalVars.on_branch:
+                        with GlobalVars.globalvars_reload_lock:
+                            on_branch = GlobalVars.on_branch
+                        if not on_branch:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         reload_modules()
-                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
+                        with GlobalVars.globalvars_reload_lock:
+                            globalvars_s_norestart_findspam = GlobalVars.s_norestart_findspam
+                        chatcommunicate.tell_rooms_with('debug', globalvars_s_norestart_findspam)
                     else:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                         exit_mode("pull_update")

@@ -547,14 +547,18 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
         try:
-            if not GlobalVars.on_branch:
+            with GlobalVars.globalvars_reload_lock:
+                on_branch = GlobalVars.on_branch
+            if not on_branch:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+            with GlobalVars.globalvars_reload_lock:
+                globalvars_s_norestart_blacklists = GlobalVars.s_norestart_blacklists
+            tell_rooms_with('debug', globalvars_s_norestart_blacklists)
             time.sleep(2)
             return None
         except Exception:
@@ -634,14 +638,18 @@ def unblacklist(msg, item, alias_used="unwatch"):
 
     if only_blacklists_changed(GitManager.get_local_diff()):
         try:
-            if not GlobalVars.on_branch:
+            with GlobalVars.globalvars_reload_lock:
+                on_branch = GlobalVars.on_branch
+            if not on_branch:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+            with GlobalVars.globalvars_reload_lock:
+                globalvars_s_norestart_blacklists = GlobalVars.s_norestart_blacklists
+            tell_rooms_with('debug', globalvars_s_norestart_blacklists)
             time.sleep(2)
             return None
         except Exception:
@@ -669,14 +677,18 @@ def approve(msg, pr_id):
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
-                if not GlobalVars.on_branch:
+                with GlobalVars.globalvars_reload_lock:
+                    on_branch = GlobalVars.on_branch
+                if not on_branch:
                     # Restart if HEAD detached
                     log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                     exit_mode("checkout_deploy")
                 GitManager.pull_local()
                 GlobalVars.reload()
                 findspam.FindSpam.reload_blacklists()
-                tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+                with GlobalVars.globalvars_reload_lock:
+                    globalvars_s_norestart_blacklists = GlobalVars.s_norestart_blacklists
+                tell_rooms_with('debug', globalvars_s_norestart_blacklists)
                 time.sleep(2)
                 return None
             except Exception:
@@ -1175,7 +1187,9 @@ def pull(alias_used='pull'):
         GitManager.pull_remote()
         findspam.FindSpam.reload_blacklists()
         GlobalVars.reload()
-        tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+        with GlobalVars.globalvars_reload_lock:
+            globalvars_s_norestart_blacklists = GlobalVars.s_norestart_blacklists
+        tell_rooms_with('debug', globalvars_s_norestart_blacklists)
         return
 
     request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
@@ -1194,7 +1208,9 @@ def pull(alias_used='pull'):
             GitManager.pull_remote()
             GlobalVars.reload()
             reload_modules()
-            tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
+            with GlobalVars.globalvars_reload_lock:
+                globalvars_s_norestart_findspam = GlobalVars.s_norestart_findspam
+            tell_rooms_with('debug', globalvars_s_norestart_findspam)
             return
         else:
             exit_mode('pull_update', code=3)
@@ -1278,7 +1294,9 @@ def reboot(msg, alias_used="reboot"):
         # As of 2022-05-19, this causes at least intermittent failures and has been disabled.
         GlobalVars.reload()
         reload_modules()
-        tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
+        with GlobalVars.globalvars_reload_lock:
+            globalvars_s_norestart_findspam = GlobalVars.s_norestart_findspam
+        tell_rooms_with('debug', globalvars_s_norestart_findspam)
         time.sleep(3)
     else:
         raise RuntimeError("Invalid alias!")
@@ -1681,6 +1699,7 @@ def bisect(msg, s):
         raw_pattern, (line_number, filename), match_type, unused = matching[0]
         if match_type and 'matched' not in match_type:
             match_type = " matched " + match_type
+        with GlobalVars.globalvars_reload_lock:
             return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
                 raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
     else:
@@ -1706,6 +1725,7 @@ def bisect_number(msg, s):
     if len(matching) == 1:
         raw_pattern, (line_number, filename), match_type, full_match_list = matching[0]
         match_type = " matched " + match_type if match_type else ''
+        with GlobalVars.globalvars_reload_lock:
             return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}): {5}".format(
                 raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id,
                 '; '.join(full_match_list))
@@ -1739,6 +1759,7 @@ def version():
     :return: A string
     """
 
+    with GlobalVars.globalvars_reload_lock:
         return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
             id=GlobalVars.location,
             commit_name=GlobalVars.commit_with_author_escaped,
