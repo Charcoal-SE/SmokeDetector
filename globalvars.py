@@ -336,7 +336,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
     reason_weights = {}
