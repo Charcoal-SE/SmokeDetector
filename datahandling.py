@@ -147,9 +147,11 @@ def load_files():
         with GlobalVars.api_calls_per_site_lock:
             GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding='utf-8')
     if has_pickle("bodyfetcherQueue.p"):
-        GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
+        with GlobalVars.bodyfetcher.queue_lock:
+            GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if has_pickle("bodyfetcherMaxIds.p"):
-        GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
+        with GlobalVars.bodyfetcher.max_ids_lock:
+            GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
     if has_pickle("codePrivileges.p"):
         with GlobalVars.code_privileged_users_lock:
             GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
@@ -448,7 +450,7 @@ def store_bodyfetcher_max_ids():
         if bodyfetcher_max_ids_save_handle:
             bodyfetcher_max_ids_save_handle.cancel()
     with GlobalVars.bodyfetcher.max_ids_lock:
-        max_ids_copy = GlobalVars.bodyfetcher.previous_max_ids.copy()
+        max_ids_copy = copy.deepcopy(GlobalVars.bodyfetcher.previous_max_ids)
     dump_pickle("bodyfetcherMaxIds.p", max_ids_copy)
 
 
