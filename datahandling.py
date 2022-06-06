@@ -842,7 +842,8 @@ def store_site_id_dict():
 
 
 def fill_site_id_dict_by_id_from_site_id_dict():
-    GlobalVars.site_id_dict_by_id = {site_id: site for site, site_id in GlobalVars.site_id_dict.items()}
+    with GlobalVars.site_id_dict_lock:
+        GlobalVars.site_id_dict_by_id = {site_id: site for site, site_id in GlobalVars.site_id_dict.items()}
 
 
 def refresh_site_id_dict():
@@ -858,12 +859,12 @@ def refresh_site_id_dict():
 
 def is_se_site_id_list_length_valid():
     with GlobalVars.site_id_dict_lock:
-        to_return = len(GlobalVars.site_id_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH
-    return to_return
+        return len(GlobalVars.site_id_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH
 
 
 def is_se_site_id_list_out_of_date():
-    return GlobalVars.site_id_dict_timestamp < time.time() - SE_SITE_IDS_MAX_AGE_IN_SECONDS
+    with GlobalVars.site_id_dict_lock:
+        return GlobalVars.site_id_dict_timestamp < time.time() - SE_SITE_IDS_MAX_AGE_IN_SECONDS
 
 
 def refresh_site_id_dict_if_needed_and_get_issues():
