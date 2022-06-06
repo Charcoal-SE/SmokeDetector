@@ -119,7 +119,7 @@ class BodyFetcher:
 
     check_queue_lock = threading.Lock()
     # CPU starvation updates are under the check_queue_lock
-    cpu_starvation_last_thread_launched_timestamp = None
+    cpu_starvation_last_thread_not_launched_timestamp = None
     cpu_starvation_posted_in_chat_timestamp = None
 
     def add_to_queue(self, hostname, question_id, should_check_site=False, source=None):
@@ -274,16 +274,16 @@ class BodyFetcher:
         # The thread lock for this is the check_queue_lock
         now = time.time()
         min_time = now - self.CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
-        launched_timestamp = self.cpu_starvation_last_thread_launched_timestamp
-        if launched_timestamp is None:
+        not_launched_timestamp = self.cpu_starvation_last_thread_not_launched_timestamp
+        if not_launched_timestamp is None:
             self.cpu_starvation_last_thread_not_launched_timestamp = now
             self.cpu_starvation_posted_in_chat_timestamp = now
             return False
         chat_timestamp = self.cpu_starvation_posted_in_chat_timestamp
-        if (launched_timestamp < min_time and chat_timestamp < min_time):
+        if (not_launched_timestamp < min_time and chat_timestamp < min_time):
             self.cpu_starvation_posted_in_chat_timestamp = now
             message = ("High CPU use has prevented launching additional scan threads for"
-                       " {} seconds.").format(round(now - launched_timestamp, 2))
+                       " {} seconds.").format(round(now - not_launched_timestamp, 2))
             Tasks.do(tell_rooms_with, "debug", message)
             log('error', message)
             return True
