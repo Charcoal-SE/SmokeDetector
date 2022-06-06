@@ -53,9 +53,12 @@ def git_ref():
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
-    on_windows = 'windows' in platform.platform().lower()
+    # THREADING LOCKS ARE NEEDED:
+    # If you add a value here and it's not *set once and only once* here in the GlobalVars class,
+    # then it needs a threading lock of some sort. That lock *must be* obtained *everywhere*
+    # the value is accessed (read or write) prior to accessing the value.
 
-    # Threading locks for interacting with files stored in the local git repository, or
+    # A threading lock for interacting with files stored in the local git repository, or
     # which *might* be in the origin repository and changed when we perform git operations.
     # In some cases, we are performing git operations which can change any or all files in
     # the local repository, so we need to be able to lock file modifications to one thread
@@ -81,50 +84,89 @@ class GlobalVars:
     # git repository should be in a "stable" state.
     local_git_repository_file_lock = threading.RLock()
 
-    false_positives = []
+    # List of posts which have received FP feedback
     false_positives_lock = threading.RLock()
-    whitelisted_users = set()
+    false_positives = []
+
+    # Set of whitelisted users
     whitelisted_users_lock = threading.RLock()
-    blacklisted_users = dict()
+    whitelisted_users = set()
+
+    # Dict of blacklisted users
     blacklisted_users_lock = threading.RLock()
+    blacklisted_users = dict()
+
+    # The raw watchlists and blacklists are locked with raw_blacklist_watchlist_lock
     raw_blacklist_watchlist_lock = threading.RLock()
     blacklisted_usernames = []
     blacklisted_websites = []
-    # set() with the processed version of each blacklisted number pattern.
-    blacklisted_numbers = None
+    bad_keywords = []
+    watched_keywords = {}
     # blacklisted_numbers_raw is a list with the raw patterns read from the blacklisted_numbers.txt file.
     blacklisted_numbers_raw = None
-    # set() with the processed version of each watched number pattern.
-    watched_numbers = None
     # watched_numbers_raw is a dict() with the keys the raw patterns, with properties
     # for the user and time the pattern was added. Insertion order represents the order of the patterns in the
     # watched_numbers.txt
     watched_numbers_raw = None
+
+    # Processed values associated with the blacklisted numbers detections
+    blacklisted_numbers_lock = threading.RLock()
+    # set() with the processed version of each blacklisted number pattern.
+    blacklisted_numbers = None
     # set() with the normalized, including deobfuscated and normalized, versions of the patterns.
     blacklisted_numbers_normalized = None
-    watched_numbers_normalized = None
     # The _full versions are a dict() with key=raw pattern, with tuple with processed and normalized for each.
     # Insertion order is the order they are in within the file.
     blacklisted_numbers_full = None
-    blacklisted_numbers_lock = threading.RLock()
-    watched_numbers_full = None
+
+    # Processed values associated with the watched numbers detections
     watched_numbers_lock = threading.RLock()
-    bad_keywords = []
-    watched_keywords = {}
-    ignored_posts = []
+    # set() with the processed version of each watched number pattern.
+    watched_numbers = None
+    watched_numbers_normalized = None
+    # The _full versions are a dict() with key=raw pattern, with tuple with processed and normalized for each.
+    # Insertion order is the order they are in within the file.
+    watched_numbers_full = None
+
+    # List of posts which are ignored
     ignored_posts_lock = threading.RLock()
-    auto_ignored_posts = []
+    ignored_posts = []
+
+    # List of posts which are automatically ignored
     auto_ignored_posts_lock = threading.RLock()
+    auto_ignored_posts = []
+
+    # List of latest questions
+    latest_questions_lock = threading.Lock()
+    latest_questions = []
+
+    # Dict of records of posts which have recently been scanned. It's used to prevent re-scanning posts
+    # which have not changed since the last time the post was fetched from the SE API.
+    # recently_scanned_posts is not stored upon abnormal exit (exceptions, ctrl-C, etc.).
+    recently_scanned_posts_lock = threading.Lock()
+    recently_scanned_posts = {}
+
+    # List of !!/notify notifications for chat users
+    notifications_lock = threading.RLock()
+    notifications = []
+
+    # Values locked by site_id_dict_lock for the site_id dicts
+    site_id_dict_lock = threading.RLock()
+    site_id_dict = {}
+    site_id_dict_by_id = {}
+    site_id_dict_timestamp = 0
+    site_id_dict_issues_into_chat_timestamp = 0
+
+    #
+    # Values without locks (some still need them)
+    #
+    # Values set here and never changed
+    on_windows = 'windows' in platform.platform().lower()
+
+    recently_scanned_posts_retention_time = 60 * 60  # 60 minutes
+
     startup_utc_date = datetime.utcnow()
     startup_utc = startup_utc_date.strftime("%H:%M:%S")
-    latest_questions = []
-    latest_questions_lock = threading.Lock()
-    # recently_scanned_posts is not stored upon abnormal exit (exceptions, ctrl-C, etc.).
-    recently_scanned_posts = {}
-    recently_scanned_posts_lock = threading.Lock()
-    recently_scanned_posts_retention_time = 60 * 60  # 60 minutes
-    api_backoff_time = 0
-    deletion_watcher = None
 
     not_privileged_warning = \
         "You are not a privileged user. Please see " \
@@ -155,41 +197,144 @@ class GlobalVars:
     parser = HTMLParser()
     parser.unescape = unescape
 
-    code_privileged_users = None
+    valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 
+    #
+    # Values from the config file or derived from it
+    config_parser = ConfigParser(interpolation=None)
+
+    if os.path.isfile('config') and "pytest" not in sys.modules:
+        config_parser.read('config')
+    else:
+        config_parser.read('config.ci')
+
+    config = config_parser["Config"]  # It's a collections.OrderedDict now
+
+    location = config.get("location", "Continuous Integration")
+
+    chatexchange_u = config.get("ChatExchangeU")
+    chatexchange_p = config.get("ChatExchangeP")
+
+    metasmoke_host = config.get("metasmoke_host")
+    metasmoke_key = config.get("metasmoke_key")
+    metasmoke_ws_host = config.get("metasmoke_ws_host")
+
+    git_name = config.get("git_username", "SmokeDetector")
+    git_email = config.get("git_useremail", "smokey@erwaysoftware.com")
+
+    github_username = config.get("github_username")
+    github_password = config.get("github_password")
+    github_access_token = config.get("github_access_token")
+
+    perspective_key = config.get("perspective_key")
+
+    flovis_host = config.get("flovis_host")
+
+    # Miscellaneous
+    log_time_format = config.get("log_time_format", "%H:%M:%S")
+
+    # Blacklist privileged users from config
+    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(",")
+    mse_blacklisters = regex.sub(r"[^\d,]", "", config.get("mse_blacklisters", "")).split(",")
+    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(",")
+
+    # Create a set of blacklisters equivalent to what's used in code_privileged_users.
+    config_blacklisters = set()
+    for id in se_blacklisters:
+        if id:
+            config_blacklisters.add(("stackexchange.com", int(id)))
+
+    for id in mse_blacklisters:
+        if id:
+            config_blacklisters.add(("meta.stackexchange.com", int(id)))
+
+    for id in so_blacklisters:
+        if id:
+            config_blacklisters.add(("stackoverflow.com", int(id)))
+
+    # If the config has it, get a list of the detection reasons which are considered valid.
+    # The list is semicolon separated.
+    valid_detection_reasons = config.get("valid_detection_reasons", None)
+    if valid_detection_reasons is not None:
+        valid_detection_reasons = valid_detection_reasons.split(";")
+
+    # If the config has it, get a list of the detection IDs which are considered valid.
+    # The list is semicolon separated.
+    valid_rule_ids = config.get("valid_rule_ids", None)
+    if valid_rule_ids is not None:
+        valid_rule_ids = valid_rule_ids.split(";")
+
+    # DNS Configuration
+    # Configure resolver based on config options, or System, configure DNS Cache in
+    # thread-safe cache as part of dnspython's resolver system as init options,
+    # control cleanup interval based on **TIME** like a regular DNS server does.
+    #
+    # # Explicitly defining fallback= for fallback values in bool and float getters, in order to
+    # #    avoid IDE complaints -- tward
+    dns_nameservers = config.get("dns_resolver", "system").lower()
+    dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
+    dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
+
+    #
+    # Values from environment variables or derived from them
+    # environ_or_none replaced by os.environ.get (essentially dict.get)
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
+    bot_repository = "//github.com/{}".format(bot_repo_slug)
+    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
+
+    #
+    # Values set once elsewhere (usually ws.py) upon boot
+
+    # Reference to instances of functional classes
+    deletion_watcher = None
+    edit_watcher = None
+    bodyfetcher = None
+    flovis = None
+
+    # Values set from the command line
+    no_se_activity_scan = False
+    no_deletion_watcher = False
+    no_edit_watcher = False
+
+    #
+    #
+    # NEED LOCK
     # these are loaded in GlobalVars.reload()
     commit = None
     commit_with_author = None
+    commit_with_author_escaped = None
     on_branch = None
-
     s = ""
     s_reverted = ""
     s_norestart_blacklists = ""
     s_norestart_findspam = ""
+    standby_message = ""
+
+    # currently unclassified
     apiquota = -1
-    bodyfetcher = None
     cookies = {}
     se_sites = []
     why_data = []
-    notifications = []
-    notifications_lock = threading.RLock()
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
     reason_weights = {}
     metasmoke_ids = {}
 
-    standby_message = ""
+    code_privileged_users = None
+
     standby_mode = False
-    no_se_activity_scan = False
-    no_deletion_watcher = False
-    no_edit_watcher = False
 
     ignore_no_se_websocket_activity_lock = threading.Lock()
     ignore_no_se_websocket_activity = False
 
     api_request_lock = threading.Lock()  # Get this lock before making API requests
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
+
+    api_backoff_time = 0
+
+    post_site_id_to_question = {}
 
     class PostScanStat:
         """ Tracking post scanning data """
@@ -328,36 +473,6 @@ class GlobalVars:
             """ Reset post scanning data for MS """
             GlobalVars.PostScanStat.reset('ms')
 
-    config_parser = ConfigParser(interpolation=None)
-
-    if os.path.isfile('config') and "pytest" not in sys.modules:
-        config_parser.read('config')
-    else:
-        config_parser.read('config.ci')
-
-    config = config_parser["Config"]  # It's a collections.OrderedDict now
-
-    site_id_dict = {}
-    site_id_dict_by_id = {}
-    site_id_dict_timestamp = 0
-    site_id_dict_issues_into_chat_timestamp = 0
-    site_id_dict_lock = threading.Lock()
-
-    post_site_id_to_question = {}
-
-    location = config.get("location", "Continuous Integration")
-
-    # DNS Configuration
-    # Configure resolver based on config options, or System, configure DNS Cache in
-    # thread-safe cache as part of dnspython's resolver system as init options,
-    # control cleanup interval based on **TIME** like a regular DNS server does.
-    #
-    # # Explicitly defining fallback= for fallback values in bool and float getters, in order to
-    # #    avoid IDE complaints -- tward
-    dns_nameservers = config.get("dns_resolver", "system").lower()
-    dns_cache_enabled = config.getboolean("dns_cache_enabled", fallback=True)
-    dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
-
     class MSStatus:
         """ Tracking metasmoke status """
         ms_is_up = True
@@ -418,67 +533,6 @@ class GlobalVars:
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = True
                 GlobalVars.MSStatus.counter = 0
-
-    chatexchange_u = config.get("ChatExchangeU")
-    chatexchange_p = config.get("ChatExchangeP")
-
-    metasmoke_host = config.get("metasmoke_host")
-    metasmoke_key = config.get("metasmoke_key")
-    metasmoke_ws_host = config.get("metasmoke_ws_host")
-
-    git_name = config.get("git_username", "SmokeDetector")
-    git_email = config.get("git_useremail", "smokey@erwaysoftware.com")
-
-    github_username = config.get("github_username")
-    github_password = config.get("github_password")
-    github_access_token = config.get("github_access_token")
-
-    perspective_key = config.get("perspective_key")
-
-    flovis_host = config.get("flovis_host")
-    flovis = None
-
-    # Miscellaneous
-    log_time_format = config.get("log_time_format", "%H:%M:%S")
-
-    # Blacklist privileged users from config
-    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(",")
-    mse_blacklisters = regex.sub(r"[^\d,]", "", config.get("mse_blacklisters", "")).split(",")
-    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(",")
-
-    # Create a set of blacklisters equivalent to what's used in code_privileged_users.
-    config_blacklisters = set()
-    for id in se_blacklisters:
-        if id:
-            config_blacklisters.add(("stackexchange.com", int(id)))
-
-    for id in mse_blacklisters:
-        if id:
-            config_blacklisters.add(("meta.stackexchange.com", int(id)))
-
-    for id in so_blacklisters:
-        if id:
-            config_blacklisters.add(("stackoverflow.com", int(id)))
-
-    # If the config has it, get a list of the detection reasons which are considered valid.
-    # The list is semicolon separated.
-    valid_detection_reasons = config.get("valid_detection_reasons", None)
-    if valid_detection_reasons is not None:
-        valid_detection_reasons = valid_detection_reasons.split(";")
-
-    # If the config has it, get a list of the detection IDs which are considered valid.
-    # The list is semicolon separated.
-    valid_rule_ids = config.get("valid_rule_ids", None)
-    if valid_rule_ids is not None:
-        valid_rule_ids = valid_rule_ids.split(";")
-
-    # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
-    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
-    bot_repository = "//github.com/{}".format(bot_repo_slug)
-    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
-
-    valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 
     @classmethod
     def reload(cls):
