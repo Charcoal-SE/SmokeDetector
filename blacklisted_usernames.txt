@@ -675,3 +675,4 @@ Visualytes
 (?-i:^sanju singh$)
 (?-i:^Messer Cutting$)
 (?-i:^crystalhel$)
+(?-i:^Hawa Al Baher$)
