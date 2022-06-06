@@ -3,7 +3,7 @@ import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
 from datahandling import has_pickle, remove_pickle
-from helpers import with_local_git_repository_file_lock
+from helpers import with_local_git_repository_file_lock, with_standby_mode_lock
 from pprint import pprint
 
 import collections
@@ -174,6 +174,7 @@ def test_parse_room_config():
         assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
 
+@with_standby_mode_lock()
 @with_local_git_repository_file_lock()
 @lock_clear_and_restore_all_chatcommunicate_global_values()
 @parse_test_rooms()

@@ -105,6 +105,7 @@ class SocketScience:
 
     @staticmethod
     def switch_to_active():
-        GlobalVars.standby_mode = False
+        with GlobalVars.standby_mode_lock:
+            GlobalVars.standby_mode = False
         chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " entering autonomous failover.",
                                         notify_site="/failover")

@@ -474,11 +474,12 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {
-                'location': GlobalVars.location,
-                'key': metasmoke_key,
-                'standby': GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
-            }
+            with GlobalVars.standby_mode_lock:
+                payload = {
+                    'location': GlobalVars.location,
+                    'key': metasmoke_key,
+                    'standby': GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
+                }
 
             headers = {'content-type': 'application/json'}
             response = Metasmoke.post("/status-update.json",
@@ -491,10 +492,13 @@ class Metasmoke:
                     log('info', "Received pull command from MS ping response")
                     exit_mode("pull_update")
 
-                if ('failover' in response and GlobalVars.standby_mode and not GlobalVars.no_se_activity_scan):
+                with GlobalVars.standby_mode_lock:
+                    globalvars_standby_mode = GlobalVars.standby_mode
+                if ('failover' in response and globalvars_standby_mode and not GlobalVars.no_se_activity_scan):
                     # If we're not scanning, then we don't want to become officially active due to failover.
                     if response['failover']:
-                        GlobalVars.standby_mode = False
+                        with GlobalVars.standby_mode_lock:
+                            GlobalVars.standby_mode = False
 
                         chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.",
                                                         notify_site="/failover")
@@ -727,13 +731,15 @@ class Metasmoke:
             log('error', error_message)
             chatcommunicate.tell_rooms_with("debug", error_message)
             if action == "standby":
-                GlobalVars.standby_mode = True
+                with GlobalVars.standby_mode_lock:
+                    GlobalVars.standby_mode = True
             # Let MS know immediately, to lessen potential wait time (e.g. if we fail to reboot).
             Metasmoke.send_status_ping()
             time.sleep(8)
             exit_mode(action)
 
-        in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
+        with GlobalVars.standby_mode_lock:
+            in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
         if not in_standby_mode:
             # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
             current_ms_stats = GlobalVars.PostScanStat.get_stats_for_ms()

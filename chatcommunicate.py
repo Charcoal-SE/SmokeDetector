@@ -163,7 +163,9 @@ def init(username, password, try_cookies=True):
         else:
             parse_room_config("rooms.yml")
 
-    if not GlobalVars.standby_mode:
+    with GlobalVars.standby_mode_lock:
+        globalvars_standby_mode = GlobalVars.standby_mode
+    if not globalvars_standby_mode:
         join_command_rooms()
 
     if datahandling.has_pickle("messageData.p"):

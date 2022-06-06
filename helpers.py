@@ -28,7 +28,8 @@ def exit_mode(*args, code=0):
     args = set(args)
 
     if not (args & {'standby', 'no_standby'}):
-        standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
+        with GlobalVars.standby_mode_lock:
+            standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
         args.add(standby)
 
     with open("exit.txt", "w", encoding="utf-8") as f:
@@ -477,6 +478,15 @@ def with_notifications_lock():
     def decorator(func):
         def wrap(*args, **kwargs):
             with GlobalVars.notifications_lock:
+                return func(*args, **kwargs)
+        return wrap
+    return decorator
+
+
+def with_standby_mode_lock():
+    def decorator(func):
+        def wrap(*args, **kwargs):
+            with GlobalVars.standby_mode_lock:
                 return func(*args, **kwargs)
         return wrap
     return decorator

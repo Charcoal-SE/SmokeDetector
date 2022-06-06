@@ -211,6 +211,10 @@ class GlobalVars:
     code_privileged_users_lock = threading.RLock()
     code_privileged_users = None
 
+    # Boolean indicating if this SD instance should be in standby mode
+    standby_mode_lock = threading.RLock()
+    standby_mode = False
+
     #
     # Values without locks (some still need them)
     #
@@ -356,8 +360,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    standby_mode = False
-
     post_site_id_to_question = {}
 
     class PostScanStat:

@@ -187,7 +187,8 @@ load_ms_cache_data()
 filter_auto_ignored_posts()
 
 
-GlobalVars.standby_mode = "standby" in sys.argv
+with GlobalVars.standby_mode_lock:
+    GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
 GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
@@ -195,14 +196,18 @@ GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
 
-if GlobalVars.standby_mode:
+with GlobalVars.standby_mode_lock:
+    globalvars_standby_mode = GlobalVars.standby_mode
+if globalvars_standby_mode:
     with GlobalVars.globalvars_reload_lock:
         globalvars_standby_message = GlobalVars.standby_message
     chatcommunicate.tell_rooms_with("debug", globalvars_standby_message)
     Metasmoke.send_status_ping()
 
-    while GlobalVars.standby_mode:
+    while globalvars_standby_mode:
         time.sleep(3)
+        with GlobalVars.standby_mode_lock:
+            globalvars_standby_mode = GlobalVars.standby_mode
 
     chatcommunicate.join_command_rooms()
 
