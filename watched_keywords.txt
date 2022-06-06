@@ -39982,3 +39982,4 @@
 1654516952	Jeff Schaller	biharigraphic\.com
 1654519788	Jeff Schaller	studioghiblimerch\.store
 1654521030	tripleee	mj[\W_]*+technologies
+1654521060	tripleee	mj[\W_]*+video[\W_]*+editor
