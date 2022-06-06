@@ -1320,11 +1320,8 @@ def apiquota():
     Report how many API hits remain for the day
     :return: A string
     """
-    GlobalVars.apiquota_rw_lock.acquire()
-    current_apiquota = GlobalVars.apiquota
-    GlobalVars.apiquota_rw_lock.release()
-
-    return "The current API quota remaining is {}.".format(current_apiquota)
+    with GlobalVars.apiquota_rw_lock:
+        return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
 
 
 # noinspection PyIncorrectDocstring
@@ -1684,8 +1681,8 @@ def bisect(msg, s):
         raw_pattern, (line_number, filename), match_type, unused = matching[0]
         if match_type and 'matched' not in match_type:
             match_type = " matched " + match_type
-        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
-            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
+            return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
+                raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
     else:
         return "Matched by the following:\n" + "\n".join(
             "{}{types} on line {} of {}".format(raw_pattern, line_number, filename, types=types)
@@ -1709,9 +1706,9 @@ def bisect_number(msg, s):
     if len(matching) == 1:
         raw_pattern, (line_number, filename), match_type, full_match_list = matching[0]
         match_type = " matched " + match_type if match_type else ''
-        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}): {5}".format(
-            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id,
-            '; '.join(full_match_list))
+            return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}): {5}".format(
+                raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id,
+                '; '.join(full_match_list))
     else:
         return "Matched by the following:\n" + "\n".join(
             "{} on line {} of {}: {}".format(raw_pattern, line_number, filename, '; '.join(full_match_list))
@@ -1742,12 +1739,12 @@ def version():
     :return: A string
     """
 
-    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
-        id=GlobalVars.location,
-        commit_name=GlobalVars.commit_with_author_escaped,
-        commit_code=GlobalVars.commit.id,
-        repository=GlobalVars.bot_repository
-    )
+        return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+            id=GlobalVars.location,
+            commit_name=GlobalVars.commit_with_author_escaped,
+            commit_code=GlobalVars.commit.id,
+            repository=GlobalVars.bot_repository
+        )
 
 
 # noinspection PyIncorrectDocstring
@@ -2097,20 +2094,19 @@ def allspam(msg, url):
     # Detect whether link is to network profile or site profile
     if user[1] == 'stackexchange.com':
         # Respect backoffs etc
-        GlobalVars.api_request_lock.acquire()
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-        # Fetch sites
-        request_url = "https://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
-        params = {
-            'filter': '!6Pbp)--cWmv(1',
-            'key': api_key
-        }
-        res = requests.get(request_url, params=params).json()
-        if "backoff" in res:
-            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + res["backoff"]
-        GlobalVars.api_request_lock.release()
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            # Fetch sites
+            request_url = "https://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
+            params = {
+                'filter': '!6Pbp)--cWmv(1',
+                'key': api_key
+            }
+            res = requests.get(request_url, params=params).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
@@ -2125,21 +2121,20 @@ def allspam(msg, url):
     # Fetch posts
     for u_id, u_site in user_sites:
         # Respect backoffs etc
-        GlobalVars.api_request_lock.acquire()
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-        # Fetch posts
-        request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
-        params = {
-            'filter': '!fsv5ng(IaK_MBkZYCDWuA.U2DqLwdl*YEL_',
-            'key': api_key,
-            'site': u_site
-        }
-        res = requests.get(request_url, params=params).json()
-        if "backoff" in res:
-            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + res["backoff"]
-        GlobalVars.api_request_lock.release()
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            # Fetch posts
+            request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
+            params = {
+                'filter': '!fsv5ng(IaK_MBkZYCDWuA.U2DqLwdl*YEL_',
+                'key': api_key,
+                'site': u_site
+            }
+            res = requests.get(request_url, params=params).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user has no posts on this site.")
         posts = res['items']
@@ -2168,21 +2163,20 @@ def allspam(msg, url):
                 # Annoyingly we have to make another request to get the question ID, since it is only returned by the
                 # /answers route
                 # Respect backoffs etc
-                GlobalVars.api_request_lock.acquire()
-                if GlobalVars.api_backoff_time > time.time():
-                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-                # Fetch posts
-                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
-                params = {
-                    'filter': '!*Jxb9s5EOrE51WK*',
-                    'key': api_key,
-                    'site': u_site
-                }
-                answer_res = requests.get(req_url, params=params).json()
-                if "backoff" in answer_res:
-                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
-                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
-                GlobalVars.api_request_lock.release()
+                with GlobalVars.api_request_lock:
+                    if GlobalVars.api_backoff_time > time.time():
+                        time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+                    # Fetch posts
+                    req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
+                    params = {
+                        'filter': '!*Jxb9s5EOrE51WK*',
+                        'key': api_key,
+                        'site': u_site
+                    }
+                    answer_res = requests.get(req_url, params=params).json()
+                    if "backoff" in answer_res:
+                        if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
+                            GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
                 # Finally, set the attribute
                 post_data.question_id = answer_res['items'][0]['question_id']
                 post_data.is_answer = True
