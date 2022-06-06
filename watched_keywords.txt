@@ -39985,4 +39985,3 @@
 1654521060	tripleee	mj[\W_]*+video[\W_]*+editor
 1654526421	Makyen	photosedit092018\.wixsite\.com
 1654527383	Makyen	techgeeknext\.com
-1654530317	Makyen	(?-i:debduttapanda)(?#medium.com)
