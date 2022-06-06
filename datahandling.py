@@ -152,6 +152,7 @@ def load_files():
     if has_pickle("reasonWeights.p"):
         GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
     if has_pickle("cookies.p"):
+        with GlobalVars.cookies_lock:
             GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
     if has_pickle("metasmokePostIds.p"):
         GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
@@ -744,6 +745,7 @@ def can_report_now(user_id, chat_host):
 
 
 def dump_cookies():
+    with GlobalVars.cookies_lock:
         dump_pickle("cookies.p", GlobalVars.cookies)
 
 

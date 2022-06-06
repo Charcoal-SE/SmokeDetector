@@ -179,6 +179,10 @@ class GlobalVars:
     s_norestart_findspam = ""
     standby_message = ""
 
+    # Chat site cookies for SmokeDetector
+    cookies_lock = threading.RLock()
+    cookies = {}
+
     #
     # Values without locks (some still need them)
     #
@@ -324,7 +328,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    cookies = {}
     se_sites = []
     why_data = []
     listen_to_these_if_edited = []

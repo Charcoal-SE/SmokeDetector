@@ -95,11 +95,13 @@ def init(username, password, try_cookies=True):
         logged_in = False
 
         if try_cookies:
-            if GlobalVars.cookies is None:
+            with GlobalVars.cookies_lock:
+                cookies = copy.deepcopy(GlobalVars.cookies)
+            if cookies is None:
                 datahandling.remove_pickle("cookies.p")
-                GlobalVars.cookies = {}
+                with GlobalVars.cookies_lock:
+                    GlobalVars.cookies = {}
             else:
-                cookies = GlobalVars.cookies
                 try:
                     if site in cookies and cookies[site] is not None:
                         try:
@@ -130,7 +132,9 @@ def init(username, password, try_cookies=True):
         if not logged_in:
             for retry in range(3):
                 try:
-                    GlobalVars.cookies[site] = client.login(username, password)
+                    site_cookies = client.login(username, password)
+                    with GlobalVars.cookies_lock:
+                        GlobalVars.cookies[site] = site_cookies
                     break
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
