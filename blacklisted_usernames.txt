@@ -676,3 +676,4 @@ Visualytes
 (?-i:^Messer Cutting$)
 (?-i:^crystalhel$)
 (?-i:^Hawa Al Baher$)
+(?-i:^zeeshan[\W_]*+yameen$)
