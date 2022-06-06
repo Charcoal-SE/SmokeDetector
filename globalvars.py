@@ -195,6 +195,10 @@ class GlobalVars:
     multiple_reporters_lock = threading.RLock()
     multiple_reporters = []
 
+    # Dict with the number of BodyFetcher API calls per site.
+    api_calls_per_site_lock = threading.RLock()
+    api_calls_per_site = {}
+
     #
     # Values without locks (some still need them)
     #
@@ -340,7 +344,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    api_calls_per_site = {}
     reason_weights = {}
     metasmoke_ids = {}
 

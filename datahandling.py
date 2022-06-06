@@ -137,13 +137,15 @@ def load_files():
     # Switch from apiCalls.pickle to apiCalls.p
     # Correction was on 2020-11-02. Handling the apiCalls.pickle file should be able to be removed shortly thereafter.
     if has_pickle("apiCalls.pickle"):
-        GlobalVars.api_calls_per_site = load_pickle("apiCalls.pickle", encoding='utf-8')
-        # Remove the incorrectly named pickle file.
-        remove_pickle("apiCalls.pickle")
-        # Put the pickle in the "correct" file, from which it will be immediately reloaded.
-        dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
+        with GlobalVars.api_calls_per_site_lock:
+            GlobalVars.api_calls_per_site = load_pickle("apiCalls.pickle", encoding='utf-8')
+            # Remove the incorrectly named pickle file.
+            remove_pickle("apiCalls.pickle")
+            # Put the pickle in the "correct" file, from which it will be immediately reloaded.
+            dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
     if has_pickle("apiCalls.p"):
-        GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding='utf-8')
+        with GlobalVars.api_calls_per_site_lock:
+            GlobalVars.api_calls_per_site = load_pickle("apiCalls.p", encoding='utf-8')
     if has_pickle("bodyfetcherQueue.p"):
         GlobalVars.bodyfetcher.queue = load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if has_pickle("bodyfetcherMaxIds.p"):
@@ -398,16 +400,18 @@ def get_post_site_id_link(post_site_id):
 
 
 def add_or_update_api_data(site):
-    if site in GlobalVars.api_calls_per_site:
-        GlobalVars.api_calls_per_site[site] += 1
-    else:
-        GlobalVars.api_calls_per_site[site] = 1
-    dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
+    with GlobalVars.api_calls_per_site_lock:
+        if site in GlobalVars.api_calls_per_site:
+            GlobalVars.api_calls_per_site[site] += 1
+        else:
+            GlobalVars.api_calls_per_site[site] = 1
+        dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def clear_api_data():
-    GlobalVars.api_calls_per_site = {}
-    dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
+    with GlobalVars.api_calls_per_site_lock:
+        GlobalVars.api_calls_per_site = {}
+        dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def schedule_store_bodyfetcher_queue():

@@ -532,8 +532,9 @@ class BodyFetcher:
                                                  "Current quota: {1}.".format(GlobalVars.apiquota,
                                                                               quota_remaining))
 
-                        sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
-                                                       reverse=True)
+                        with GlobalVars.api_calls_per_site_lock:
+                            sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
+                                                           reverse=True)
                         api_quota_used_per_site = ""
                         for site_name, quota_used in sorted_calls_per_site:
                             sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
