@@ -24,8 +24,13 @@ from tasks import Tasks
 
 # noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
+    queue_lock = threading.Lock()
     queue = {}
+
+    max_ids_lock = threading.Lock()
     previous_max_ids = {}
+
+    posts_in_process_lock = threading.Lock()
     posts_in_process = {}
 
     SMOKEDETECTOR_MAX_QUOTA = 80000
@@ -41,13 +46,13 @@ class BodyFetcher:
     per_site_processing_thread_limits = {
         'stackoverflow.com': 5,
     }
-    per_site_processing_thread_locks = {}
+
     per_site_processing_thread_locks_lock = threading.Lock()
+    per_site_processing_thread_locks = {}
     per_site_processing_thread_locks_delayed_warnings = {}
+
     PER_SITE_THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
-    # CPU starvation updates are under the check_queue_lock
-    cpu_starvation_last_thread_launched_timestamp = None
-    cpu_starvation_posted_in_chat_timestamp = None
+
     CPU_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
     SITES_NOT_TO_REREQUEST_POST_DUE_TO_POST_SCAN_CONFLICT = [
         'stackoverflow.com',
@@ -111,10 +116,11 @@ class BodyFetcher:
     ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH = 6 * 60 * 1000  # 6 minutes in milliseconds; is beyond edit grace period
 
     api_data_lock = threading.Lock()
-    queue_lock = threading.Lock()
-    max_ids_lock = threading.Lock()
+
     check_queue_lock = threading.Lock()
-    posts_in_process_lock = threading.Lock()
+    # CPU starvation updates are under the check_queue_lock
+    cpu_starvation_last_thread_launched_timestamp = None
+    cpu_starvation_posted_in_chat_timestamp = None
 
     def add_to_queue(self, hostname, question_id, should_check_site=False, source=None):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
