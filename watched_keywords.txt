@@ -35839,7 +35839,6 @@
 1643612912	tripleee	achieversit\.com
 1643612931	tripleee	achieversit(?!\.com)
 1643613074	tripleee	webinar marketing
-1643613414	tripleee	bankofmaharashtra\.in
 1643613592	tripleee	techgene\.com
 1643614295	tripleee	(?-i:^suj23i$)
 1643614380	tripleee	parafrase\.online
