@@ -132,7 +132,8 @@ def load_files():
         with GlobalVars.notifications_lock:
             GlobalVars.notifications = load_pickle("notifications.p", encoding='utf-8')
     if has_pickle("whyData.p"):
-        GlobalVars.why_data = load_pickle("whyData.p", encoding='utf-8')
+        with GlobalVars.why_data_lock:
+            GlobalVars.why_data = load_pickle("whyData.p", encoding='utf-8')
     # Switch from apiCalls.pickle to apiCalls.p
     # Correction was on 2020-11-02. Handling the apiCalls.pickle file should be able to be removed shortly thereafter.
     if has_pickle("apiCalls.pickle"):
@@ -366,21 +367,24 @@ def remove_whitelisted_user(user):
 def add_why(site, post_id, why):
     key = site + "/" + str(post_id)
     why_data_tuple = (key, why)
-    GlobalVars.why_data.append(why_data_tuple)
-    filter_why()
-    dump_pickle("whyData.p", GlobalVars.why_data)
+    with GlobalVars.why_data_lock:
+        GlobalVars.why_data.append(why_data_tuple)
+        filter_why()
+        dump_pickle("whyData.p", GlobalVars.why_data)
 
 
 def get_why(site, post_id):
     key = site + "/" + str(post_id)
-    for post in GlobalVars.why_data:
-        if post[0] == key:
-            return post[1]
+    with GlobalVars.why_data_lock:
+        for post in GlobalVars.why_data:
+            if post[0] == key:
+                return post[1]
     return None
 
 
 def filter_why(max_size=50):
-    GlobalVars.why_data = GlobalVars.why_data[-max_size:]
+    with GlobalVars.why_data_lock:
+        GlobalVars.why_data = GlobalVars.why_data[-max_size:]
 
 
 def add_post_site_id_link(post_site_id, question_id):

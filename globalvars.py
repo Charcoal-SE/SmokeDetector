@@ -187,6 +187,10 @@ class GlobalVars:
     se_sites_lock = threading.RLock()
     se_sites = []
 
+    # A record of the why data from the last 50 reported posts.
+    why_data_lock = threading.RLock()
+    why_data = []
+
     #
     # Values without locks (some still need them)
     #
@@ -332,7 +336,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    why_data = []
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
