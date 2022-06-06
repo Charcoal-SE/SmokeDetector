@@ -203,6 +203,10 @@ class GlobalVars:
     reason_weights_lock = threading.RLock()
     reason_weights = {}
 
+    # Dict of the most recent metasmoke post IDs matching a SE site post
+    metasmoke_ids_lock = threading.RLock()
+    metasmoke_ids = {}
+
     #
     # Values without locks (some still need them)
     #
@@ -348,8 +352,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    metasmoke_ids = {}
-
     code_privileged_users = None
 
     standby_mode = False

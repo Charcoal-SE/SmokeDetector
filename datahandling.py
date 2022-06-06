@@ -159,7 +159,8 @@ def load_files():
         with GlobalVars.cookies_lock:
             GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
     if has_pickle("metasmokePostIds.p"):
-        GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
+        with GlobalVars.metasmoke_ids_lock:
+            GlobalVars.metasmoke_ids = load_pickle("metasmokePostIds.p", encoding='utf-8')
     if has_pickle("ms_ajax_queue.p"):
         with metasmoke.Metasmoke.ms_ajax_queue_lock:
             metasmoke.Metasmoke.ms_ajax_queue = load_pickle("ms_ajax_queue.p")
@@ -275,13 +276,14 @@ def update_reason_weights():
 
 def resolve_ms_link(post_url):
     identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
-    if identifier in GlobalVars.metasmoke_ids:
-        if isinstance(GlobalVars.metasmoke_ids[identifier], int):
-            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
-                GlobalVars.metasmoke_ids[identifier])
-            return ms_url
-        else:
-            del GlobalVars.metasmoke_ids[identifier]
+    with GlobalVars.metasmoke_ids_lock:
+        if identifier in GlobalVars.metasmoke_ids:
+            if isinstance(GlobalVars.metasmoke_ids[identifier], int):
+                ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
+                    GlobalVars.metasmoke_ids[identifier])
+                return ms_url
+            else:
+                del GlobalVars.metasmoke_ids[identifier]
 
     ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
     if not ms_posts:  # Empty
@@ -290,8 +292,9 @@ def resolve_ms_link(post_url):
     else:
         ms_post_id = max([post['id'] for post in ms_posts])
         ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
-    GlobalVars.metasmoke_ids[identifier] = ms_post_id  # Store numeric IDs, strings are hard to handle
-    dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
+    with GlobalVars.metasmoke_ids_lock:
+        GlobalVars.metasmoke_ids[identifier] = ms_post_id  # Store numeric IDs, strings are hard to handle
+        dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
     return ms_url
 
 
