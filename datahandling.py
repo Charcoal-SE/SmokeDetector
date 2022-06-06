@@ -151,7 +151,8 @@ def load_files():
     if has_pickle("bodyfetcherMaxIds.p"):
         GlobalVars.bodyfetcher.previous_max_ids = load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
     if has_pickle("codePrivileges.p"):
-        GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
+        with GlobalVars.code_privileged_users_lock:
+            GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
     if has_pickle("reasonWeights.p"):
         with GlobalVars.reason_weights_lock:
             GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
@@ -239,27 +240,29 @@ def is_auto_ignored_post(postid_site_tuple):
 
 
 def update_code_privileged_users_list():
-    metasmoke.Metasmoke.update_code_privileged_users_list()
-    # GlobalVars.code_privileged_users can now be a set, or may still be None.
-    if GlobalVars.code_privileged_users is None:
-        if len(GlobalVars.config_blacklisters) > 0:
-            # Only change away from None if there are pre-configured blacklisters
-            GlobalVars.code_privileged_users = set(GlobalVars.config_blacklisters)
-    else:
-        # Add the users in the config file, if any
-        GlobalVars.code_privileged_users.update(GlobalVars.config_blacklisters)
-    dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
+    with GlobalVars.code_privileged_users_lock:
+        metasmoke.Metasmoke.update_code_privileged_users_list()
+        # GlobalVars.code_privileged_users can now be a set, or may still be None.
+        if GlobalVars.code_privileged_users is None:
+            if len(GlobalVars.config_blacklisters) > 0:
+                # Only change away from None if there are pre-configured blacklisters
+                GlobalVars.code_privileged_users = set(GlobalVars.config_blacklisters)
+        else:
+            # Add the users in the config file, if any
+            GlobalVars.code_privileged_users.update(GlobalVars.config_blacklisters)
+        dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
 
 
 def is_code_privileged(site, user_id):
-    if GlobalVars.code_privileged_users is None:
-        update_code_privileged_users_list()
+    with GlobalVars.code_privileged_users_lock:
+        if GlobalVars.code_privileged_users is None:
+            update_code_privileged_users_list()
 
-    try:
-        # For now, disable the moderator override on code/blacklist changes
-        return (site, user_id) in GlobalVars.code_privileged_users
-    except TypeError:
-        return False
+        try:
+            # For now, disable the moderator override on code/blacklist changes
+            return (site, user_id) in GlobalVars.code_privileged_users
+        except TypeError:
+            return False
 
 
 def update_reason_weights():

@@ -207,6 +207,10 @@ class GlobalVars:
     metasmoke_ids_lock = threading.RLock()
     metasmoke_ids = {}
 
+    # Set of code privileged users (tuples with chat site and chat user ID) from metasmoke
+    code_privileged_users_lock = threading.RLock()
+    code_privileged_users = None
+
     #
     # Values without locks (some still need them)
     #
@@ -352,8 +356,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    code_privileged_users = None
-
     standby_mode = False
 
     post_site_id_to_question = {}
