@@ -39978,3 +39978,4 @@
 1654509183	tripleee	supreme[\W_]*+nexsus(?!\.com(?<=supremenexsus\.com))
 1654509653	tripleee	(?-i:^zeeshan$)
 1654511359	tripleee	steverubinluxuryhomes\.com
+1654512174	tripleee	langgo\.edu\.vn
