@@ -526,7 +526,7 @@ def has_already_been_posted(host, post_id, title):
 
 # noinspection PyUnusedLocal
 def fetch_lines_from_error_log(count):
-    if not os.path.isfile("errorLogs.db"):
+    if not os.path.isfile(ErrorLogs.DB_FILE):
         return "The error log database does not exist."
     if count <= 0:
         return "Please request an exception count greater than zero."
