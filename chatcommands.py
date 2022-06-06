@@ -1849,8 +1849,10 @@ def unnotify_all(msg):
     :param msg:
     :return: A string
     """
-    remove_all_from_notification_list(msg.owner.id)
-    return "I will no longer ping you anywhere when I report a post."
+    remove_all_from_notification_list(msg.owner.id, msg._client.host)
+    return ("I will no longer ping you anywhere on this chat server when I report a post."
+            " If you set up notifications on another chat server and want those notifications removed too,"
+            " you will need to run this command on that chat server.")
 
 
 def user_must_be_an_admin(msg):
@@ -1899,7 +1901,7 @@ def unnotify_all_admin(msg, user_id):
     """
 
     user_must_be_an_admin(msg)
-    remove_all_from_notification_list(user_id)
+    remove_all_from_notification_list(user_id, msg._client.host)
     return "I will no longer ping user ID {} anywhere when I report a post.".format(user_id)
 
 

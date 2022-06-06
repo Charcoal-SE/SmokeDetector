@@ -642,13 +642,13 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
 
 
 # noinspection PyMissingTypeHints
-def remove_all_from_notification_list(user_id):
+def remove_all_from_notification_list(user_id, chat_site):
     user_id = int(user_id)
     my_notifications = []
 
     with GlobalVars.notifications_lock:
         for notification in GlobalVars.notifications:
-            if notification[0] == user_id:
+            if notification[0] == user_id and notification[1] == chat_site:
                 my_notifications.append(notification[:4])
 
     for notification in my_notifications:
