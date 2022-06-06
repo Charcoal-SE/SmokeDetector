@@ -398,13 +398,13 @@ def filter_why(max_size=50):
 
 
 def add_post_site_id_link(post_site_id, question_id):
-    GlobalVars.post_site_id_to_question[post_site_id] = question_id
+    with GlobalVars.post_site_id_to_question_lock:
+        GlobalVars.post_site_id_to_question[post_site_id] = question_id
 
 
 def get_post_site_id_link(post_site_id):
-    if post_site_id in GlobalVars.post_site_id_to_question:
-        return GlobalVars.post_site_id_to_question[post_site_id]
-    return None
+    with GlobalVars.post_site_id_to_question_lock:
+        return GlobalVars.post_site_id_to_question.get(post_site_id, None)
 
 
 def add_or_update_api_data(site):

@@ -215,6 +215,10 @@ class GlobalVars:
     standby_mode_lock = threading.RLock()
     standby_mode = False
 
+    # Dict mapping tuples of (answer_id, site, "answer") to parent question ID on that site
+    post_site_id_to_question_lock = threading.RLock()
+    post_site_id_to_question = {}
+
     #
     # Values without locks (some still need them)
     #
@@ -354,13 +358,6 @@ class GlobalVars:
     no_se_activity_scan = False
     no_deletion_watcher = False
     no_edit_watcher = False
-
-    #
-    #
-    # NEED LOCK
-
-    # currently unclassified
-    post_site_id_to_question = {}
 
     class PostScanStat:
         """ Tracking post scanning data """
