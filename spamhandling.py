@@ -25,21 +25,24 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 
 def sum_weight(reasons: list):
-    if not GlobalVars.reason_weights:
+    with GlobalVars.reason_weights_lock:
+        globalvars_reason_weights = GlobalVars.reason_weights
+    if not globalvars_reason_weights:
         datahandling.update_reason_weights()
     now = datetime.utcnow() - timedelta(minutes=15)
-    if 'last_updated' not in GlobalVars.reason_weights or \
-            (now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1):
-        Tasks.do(datahandling.update_reason_weights)
-    s = 0
-    weights = GlobalVars.reason_weights
-    for r in reasons:
-        try:
-            if "(" in r:
-                r = regex.sub(r"\s*\(.*$", "", r)
-            s += weights[r.lower()]
-        except KeyError:
-            pass  # s += 0
+    with GlobalVars.reason_weights_lock:
+        weights = GlobalVars.reason_weights
+        if (not weights.get('updating', False) and now.date() != weights.get('last_updated', 0) and now.hour >= 1):
+            weights['updating'] = True
+            Tasks.do(datahandling.update_reason_weights)
+        s = 0
+        for r in reasons:
+            try:
+                if "(" in r:
+                    r = regex.sub(r"\s*\(.*$", "", r)
+                s += weights[r.lower()]
+            except KeyError:
+                pass  # s += 0
     return s
 
 
@@ -187,7 +190,9 @@ def build_message(post, reasons):
 
     # If we have reason weights cached (GlobalVars.reason_weights) we can calculate total weight for this report;
     # likewise, if we have a MS key, we can fetch the weights and then calculate. If we have neither, tough luck.
-    if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
+    with GlobalVars.reason_weights_lock:
+        globalvars_reason_weights = GlobalVars.reason_weights
+    if globalvars_reason_weights or GlobalVars.metasmoke_key:
         reason_weight = sum_weight(reasons)
         if reason_weight >= 1000:
             reason_weight = "**{}**".format(reason_weight)

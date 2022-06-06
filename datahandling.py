@@ -153,7 +153,8 @@ def load_files():
     if has_pickle("codePrivileges.p"):
         GlobalVars.code_privileged_users = load_pickle("codePrivileges.p", encoding='utf-8')
     if has_pickle("reasonWeights.p"):
-        GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
+        with GlobalVars.reason_weights_lock:
+            GlobalVars.reason_weights = load_pickle("reasonWeights.p", encoding='utf-8')
     if has_pickle("cookies.p"):
         with GlobalVars.cookies_lock:
             GlobalVars.cookies = load_pickle("cookies.p", encoding='utf-8')
@@ -267,8 +268,9 @@ def update_reason_weights():
         return  # No update
     for item in items:
         d[item['reason_name'].lower()] = item['weight']
-    GlobalVars.reason_weights = d
-    dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
+    with GlobalVars.reason_weights_lock:
+        GlobalVars.reason_weights = d
+        dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 
 
 def resolve_ms_link(post_url):

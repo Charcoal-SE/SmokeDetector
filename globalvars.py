@@ -199,6 +199,10 @@ class GlobalVars:
     api_calls_per_site_lock = threading.RLock()
     api_calls_per_site = {}
 
+    # Dict of reasons with weights from metasmoke
+    reason_weights_lock = threading.RLock()
+    reason_weights = {}
+
     #
     # Values without locks (some still need them)
     #
@@ -344,7 +348,6 @@ class GlobalVars:
     # NEED LOCK
 
     # currently unclassified
-    reason_weights = {}
     metasmoke_ids = {}
 
     code_privileged_users = None
