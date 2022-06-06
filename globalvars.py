@@ -157,6 +157,16 @@ class GlobalVars:
     site_id_dict_timestamp = 0
     site_id_dict_issues_into_chat_timestamp = 0
 
+    # If SD is currently ignoring that there's no SE WebSocket activity (e.g. SE is down)
+    ignore_no_se_websocket_activity_lock = threading.Lock()
+    ignore_no_se_websocket_activity = False
+
+    api_request_lock = threading.Lock()  # Get this lock before making API requests
+    api_backoff_time = 0
+
+    apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
+    apiquota = -1
+
     #
     # Values without locks (some still need them)
     #
@@ -292,7 +302,7 @@ class GlobalVars:
     bodyfetcher = None
     flovis = None
 
-    # Values set from the command line
+    # Values derived from command line options, set once in ws.py
     no_se_activity_scan = False
     no_deletion_watcher = False
     no_edit_watcher = False
@@ -312,7 +322,6 @@ class GlobalVars:
     standby_message = ""
 
     # currently unclassified
-    apiquota = -1
     cookies = {}
     se_sites = []
     why_data = []
@@ -325,14 +334,6 @@ class GlobalVars:
     code_privileged_users = None
 
     standby_mode = False
-
-    ignore_no_se_websocket_activity_lock = threading.Lock()
-    ignore_no_se_websocket_activity = False
-
-    api_request_lock = threading.Lock()  # Get this lock before making API requests
-    apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
-
-    api_backoff_time = 0
 
     post_site_id_to_question = {}
 
