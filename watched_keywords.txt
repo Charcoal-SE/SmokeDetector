@@ -40029,3 +40029,4 @@
 1654622159	cigien	aman[\W_]*+health[\W_]*+care(?!\.in(?<=amanhealthcare\.in))
 1654622252	cigien	laraveltuts\.com
 1654622582	cigien	hackwest(?:[\W_]*+(?:at[W]*+)?writeme[\W]*+(?:dot[_W]*+)?com)?
+1654624617	cigien	iadm\.edu\.pk
