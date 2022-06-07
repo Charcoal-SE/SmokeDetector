@@ -39991,3 +39991,4 @@
 1654534606	cigien	techlabz\.io
 1654535761	cocomac	kmttech\.com
 1654560916	Makyen	(?-i:vasavagaurang727)(?#medium.com)
+1654561136	Ryan M	ngx[\W_]*+vector[\W_]*+icons
