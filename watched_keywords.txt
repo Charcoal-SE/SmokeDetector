@@ -40020,3 +40020,4 @@
 1654615007	cigien	techcaro\.com
 1654615379	cigien	small[\W_]*+seo[\W_]*+master(?!\.com(?<=smallseomaster\.com))
 1654615566	cigien	exchanger24\.org
+1654615997	cigien	tradermade\.com
