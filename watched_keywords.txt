@@ -40003,3 +40003,4 @@
 1654581266	cigien	optnation(?!\.com)
 1654585189	Nick	rcis\.in
 1654585313	Ryan M	axiswebart\.com
+1654588196	Ryan M	cryptocurrencyinsurance\.io
