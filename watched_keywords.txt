@@ -39997,3 +39997,4 @@
 1654568734	cigien	livingintown(?!\.com)
 1654574097	cigien	ieasydevops(?#github)
 1654576266	tripleee	myanimelist\.net
+1654577044	Nisse Engström	bulkbanknotes\.com
