@@ -40070,3 +40070,4 @@
 1654704907	cigien	onlybrowsers\.com
 1654705060	cigien	malinipackersandmovers\.com
 1654706492	cigien	crantia(?!\.com)
+1654706810	cigien	allnurses
