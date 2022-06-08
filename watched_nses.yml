@@ -764,6 +764,9 @@ items:
   - hugh.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
+  - hunts.ns.cloudflare.com.
+- ns:
+  - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
