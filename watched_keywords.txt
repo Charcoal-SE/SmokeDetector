@@ -40053,3 +40053,4 @@
 1654687577	Makyen	onroadzcabs\.com
 1654687857	tripleee	aimlay(?!\.com(?<=aimlay\.com)| education(?<=(?-i:^Aimlay education$)))
 1654688308	tripleee	(?-i:^umair mujahid$)
+1654693029	Jeff Schaller	edatamine\.com
