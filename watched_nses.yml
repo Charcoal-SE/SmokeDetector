@@ -1947,6 +1947,9 @@ items:
   - susan.ns.cloudflare.com.
 - ns:
   - ruth.ns.cloudflare.com.
+  - tadeo.ns.cloudflare.com.
+- ns:
+  - ruth.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
   - sam.ns.cloudflare.com.
