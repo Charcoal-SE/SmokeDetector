@@ -40071,3 +40071,4 @@
 1654705060	cigien	malinipackersandmovers\.com
 1654706492	cigien	crantia(?!\.com)
 1654706810	cigien	allnurses
+1654714023	cigien	flashtravel\.info
