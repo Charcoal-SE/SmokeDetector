@@ -40055,3 +40055,4 @@
 1654688308	tripleee	(?-i:^umair mujahid$)
 1654693029	Jeff Schaller	edatamine\.com
 1654693118	Jeff Schaller	programmingassignment\.net
+1654693479	Jeff Schaller	thetridentblog\.blogspot
