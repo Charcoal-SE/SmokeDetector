@@ -677,3 +677,4 @@ Visualytes
 (?-i:^crystalhel$)
 (?-i:^Hawa Al Baher$)
 (?-i:^zeeshan[\W_]*+yameen$)
+(?-i:^Aimlay education$)
