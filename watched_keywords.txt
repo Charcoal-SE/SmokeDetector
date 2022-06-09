@@ -40081,3 +40081,4 @@
 1654753517	cocomac	getmysites\.com
 1654755208	tripleee	bodybulk\.net
 1654757127	tripleee	thequick10\.com
+1654758249	tripleee	isharp[\W_]*+acad[ae]my(?<!(?-i:^isharp acadamy$))(?!\.in(?<=isharpacademy\.in))
