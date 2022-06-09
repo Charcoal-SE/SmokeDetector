@@ -40096,3 +40096,4 @@
 1654778844	tripleee	plantjudo\.com
 1654778869	tripleee	plant[\W_]*+judo(?!\.com(?<=plantjudo\.com))
 1654786554	Spevacus	dasnko\.net
+1654788772	Jeff Schaller	mechanictoolsworld\.com
