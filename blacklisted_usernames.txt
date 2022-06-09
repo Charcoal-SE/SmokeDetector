@@ -678,3 +678,4 @@ Visualytes
 (?-i:^Hawa Al Baher$)
 (?-i:^zeeshan[\W_]*+yameen$)
 (?-i:^Aimlay education$)
+(?-i:^isharp acadamy$)
