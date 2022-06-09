@@ -40095,3 +40095,4 @@
 1654772484	tripleee	pickthecoupon
 1654778844	tripleee	plantjudo\.com
 1654778869	tripleee	plant[\W_]*+judo(?!\.com(?<=plantjudo\.com))
+1654786554	Spevacus	dasnko\.net
