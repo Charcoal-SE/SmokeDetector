@@ -40083,3 +40083,4 @@
 1654757127	tripleee	thequick10\.com
 1654758249	tripleee	isharp[\W_]*+acad[ae]my(?<!(?-i:^isharp acadamy$))(?!\.in(?<=isharpacademy\.in))
 1654759942	tripleee	mubarakdeals\.com
+1654759967	tripleee	ossisto\.com
