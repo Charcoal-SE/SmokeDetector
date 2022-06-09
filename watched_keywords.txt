@@ -40076,3 +40076,4 @@
 1654726705	cocomac	call-for-news\.blogspot
 1654727872	Cody Gray	legacybasedliving\.com
 1654727896	Cody Gray	(?-i:Ethel[\W_]*Lair)
+1654734022	cigien	ylivetv\.com
