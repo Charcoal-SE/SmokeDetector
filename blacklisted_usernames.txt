@@ -670,7 +670,6 @@ Visualytes
 ^xanegam$
 (?-i:^aniccccc$)
 (?-i:^troken migration$)
-(?-i:^isharp academy$)
 (?-i:^bharathalan$)
 (?-i:^sanju singh$)
 (?-i:^Messer Cutting$)
