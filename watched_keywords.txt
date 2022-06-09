@@ -40085,3 +40085,4 @@
 1654759942	tripleee	mubarakdeals\.com
 1654759967	tripleee	ossisto\.com
 1654760189	tripleee	customcursor\.substack\.com
+1654760307	tripleee	ossisto(?!\.com)
