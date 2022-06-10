@@ -1104,6 +1104,9 @@ items:
   - yichun.ns.cloudflare.com.
 - ns:
   - ernest.ns.cloudflare.com.
+  - love.ns.cloudflare.com.
+- ns:
+  - ernest.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
   - ernest.ns.cloudflare.com.
