@@ -29,7 +29,7 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, remove_regex_comments
+    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -1548,7 +1548,7 @@ def bisect_regex(s, regexes, bookend=True, timeout=None):
     formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
     start_time = time.time()
     try:
-        compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
+        compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
         match = compiled.search(s, timeout=timeout)
     except Exception:
         # Log wich regex caused the error:
@@ -1576,7 +1576,8 @@ def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     results = []
     for expresion in regexes:
-        compiled = regex.compile(regex_to_format.format(expresion[0]), city=findspam.city_list, ignore_unused=True)
+        compiled = regex_compile_no_cache(regex_to_format.format(expresion[0]), city=findspam.city_list,
+                                          ignore_unused=True)
         match = compiled.search(test_text, timeout=timeout)
         if match:
             results.append(expresion)
