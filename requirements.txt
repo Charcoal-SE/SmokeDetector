@@ -1,4 +1,5 @@
 git+https://github.com/Charcoal-SE/ChatExchange.git
+git+https://github.com/Charcoal-SE/mrabarnett--mrab-regex.git
 appdirs>=1.4.3
 beautifulsoup4>=4.6.0
 colorama>=0.4.1
@@ -14,7 +15,6 @@ psutil>=5.9.0
 pytest-xdist>=2.5.0
 pytest>=4.1.0
 PyYAML>=3.12
-regex>=2020.10.23
 requests>=2.18.4
 sh>=1.12.14
 termcolor>=1.1.0
