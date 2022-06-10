@@ -40133,3 +40133,4 @@
 1654858061	tripleee	huluadblocker\.live
 1654858090	tripleee	joinclipper\.com
 1654858488	tripleee	(?-i:^onetab$)
+1654872810	cigien	editorsmodapk\.com
