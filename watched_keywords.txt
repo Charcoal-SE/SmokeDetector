@@ -40135,3 +40135,4 @@
 1654858488	tripleee	(?-i:^onetab$)
 1654872810	cigien	editorsmodapk\.com
 1654873475	cigien	tukangbajaklink\.blogspot
+1654873518	cigien	akikuya\.blogspot
