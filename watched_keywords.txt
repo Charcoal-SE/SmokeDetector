@@ -40132,3 +40132,4 @@
 1654857671	Jeff Schaller	onetab\.one
 1654858061	tripleee	huluadblocker\.live
 1654858090	tripleee	joinclipper\.com
+1654858488	tripleee	(?-i:^onetab$)
