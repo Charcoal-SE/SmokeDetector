@@ -40128,3 +40128,4 @@
 1654851241	tripleee	qinuo\.net
 1654853541	tripleee	(?-i:^Contarino Rosario$)
 1654854517	tripleee	buysoma\.me
+1654854739	tripleee	Lovetemple0001(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
