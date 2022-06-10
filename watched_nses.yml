@@ -1199,6 +1199,9 @@ items:
   - glen.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
+  - glen.ns.cloudflare.com.
+  - lilith.ns.cloudflare.com.
+- ns:
   - gordon.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
