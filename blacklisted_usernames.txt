@@ -678,3 +678,4 @@ Visualytes
 (?-i:^zeeshan[\W_]*+yameen$)
 (?-i:^Aimlay education$)
 (?-i:^isharp acadamy$)
+(?-i:^umair mujahid$)
