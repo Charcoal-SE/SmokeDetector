@@ -40172,3 +40172,4 @@
 1654992678	cigien	hubnewspro\.com
 1654992845	cigien	(?-i:3MWBnzX)(?#bit.ly)
 1654999250	Ollie	josephallenhollingsworth4(?:@gmail\.com)?
+1655000156	cigien	challenge\.mip\.co\.za
