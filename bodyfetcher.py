@@ -37,14 +37,22 @@ class BodyFetcher:
     QUOTA_ROLLOVER_DETECTION_THRESHOLD = SMOKEDETECTOR_MAX_QUOTA - 20
     QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE = 5000
 
+    cpu_count = psutil.cpu_count()
+    MAX_SCAN_THREADS_DIFFERENCE_TO_CPU_COUNT = 1
+    max_scan_thread_count = cpu_count + MAX_SCAN_THREADS_DIFFERENCE_TO_CPU_COUNT
+    scan_thread_count_semaphore = threading.BoundedSemaphore(value=max_scan_thread_count)
+    THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
+    MIN_THREADS_NOT_CONSUMED_BY_SAME_SITE = 1 if max_scan_thread_count > 2 else 0
+    MAX_THREADS_PER_SITE = max_scan_thread_count - MIN_THREADS_NOT_CONSUMED_BY_SAME_SITE
+
     IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM = [
         "post has already been reported",
     ]
     LAUNCH_PROCESSING_THREAD_MAXIMUM_CPU_USE_THRESHOLD = 98
-    DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = 3
+    DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT = MAX_THREADS_PER_SITE
     POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD = 0.015
     per_site_processing_thread_limits = {
-        'stackoverflow.com': 5,
+        'stackoverflow.com': MAX_THREADS_PER_SITE,
     }
 
     per_site_processing_thread_locks_lock = threading.Lock()
@@ -122,6 +130,9 @@ class BodyFetcher:
     cpu_starvation_last_thread_not_launched_timestamp = None
     cpu_starvation_posted_in_chat_timestamp = None
 
+    thread_starvation_delayed_warnings_lock = threading.RLock()
+    thread_starvation_delayed_warnings = None
+
     def add_to_queue(self, hostname, question_id, should_check_site=False, source=None):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
@@ -139,6 +150,7 @@ class BodyFetcher:
             'source_BF_re-reqest': 1 if 'BodyFetcher re-reqest' in source else 0,
             'all_errors': 0,
             'high_CPU': 0,
+            'thread_limit': 0,
             'threads_limited_non_SO': 0,
             'threads_limited_SO': 0,
             'api_calls': 0,
@@ -176,34 +188,50 @@ class BodyFetcher:
             if flovis_dict is not None:
                 GlobalVars.flovis.stage('bodyfetcher/enqueued', hostname, question_id, flovis_dict)
 
-            if should_check_site:
-                # The call to add_to_queue indicated that the site should be immediately processed.
-                if self.acquire_site_processing_lock(hostname, thread_stats):
+            have_scan_thread_count_lock = False
+            try:
+                have_scan_thread_count_lock = self.scan_thread_count_semaphore.acquire(blocking=False)
+                if not have_scan_thread_count_lock:
+                    # There are already too many scan threads.
+                    if not self.send_thread_starvation_warning_if_appropriate():
+                        log_current_thread('info', "Already at maximum scan threads"
+                                                   + " ({}).".format(self.max_scan_thread_count)
+                                                   + " Not starting an additional scan thread.")
+                    thread_stats['thread_limit'] += 1
+                    return
+                if should_check_site:
+                    # The call to add_to_queue indicated that the site should be immediately processed.
+                    if self.acquire_site_processing_lock(hostname, thread_stats):
+                        try:
+                            with self.queue_lock:
+                                new_posts = self.queue.pop(hostname, None)
+                            if new_posts:
+                                schedule_store_bodyfetcher_queue()
+                                self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts, thread_stats)
+                        except Exception:
+                            raise
+                        finally:
+                            # We're done processing the site, so release the processing lock.
+                            self.release_site_processing_lock(hostname)
+
+                site_and_posts = True
+                while site_and_posts:
                     try:
-                        with self.queue_lock:
-                            new_posts = self.queue.pop(hostname, None)
-                        if new_posts:
+                        site_and_posts = self.get_first_queue_item_to_process(thread_stats)
+                        if site_and_posts:
                             schedule_store_bodyfetcher_queue()
-                            self.make_api_call_for_site_and_restore_thread_name(hostname, new_posts, thread_stats)
+                            self.make_api_call_for_site_and_restore_thread_name(*site_and_posts, thread_stats)
                     except Exception:
                         raise
                     finally:
                         # We're done processing the site, so release the processing lock.
-                        self.release_site_processing_lock(hostname)
-
-            site_and_posts = True
-            while site_and_posts:
-                try:
-                    site_and_posts = self.get_first_queue_item_to_process(thread_stats)
-                    if site_and_posts:
-                        schedule_store_bodyfetcher_queue()
-                        self.make_api_call_for_site_and_restore_thread_name(*site_and_posts, thread_stats)
-                except Exception:
-                    raise
-                finally:
-                    # We're done processing the site, so release the processing lock.
-                    if site_and_posts and site_and_posts is not True:
-                        self.release_site_processing_lock(site_and_posts[0])
+                        if site_and_posts and site_and_posts is not True:
+                            self.release_site_processing_lock(site_and_posts[0])
+            except Exception:
+                raise
+            finally:
+                if have_scan_thread_count_lock:
+                    self.scan_thread_count_semaphore.release()
         except Exception:
             thread_stats['all_errors'] += 1
             raise
@@ -211,6 +239,7 @@ class BodyFetcher:
             GlobalVars.PostScanStat.add(thread_stats)
 
     def make_api_call_for_site_and_restore_thread_name(self, site, new_posts, thread_stats):
+        self.thread_starvation_warning_thread_launched()
         current_thread = threading.current_thread()
         append_to_current_thread_name(('\n --> processing site:'
                                        ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
@@ -244,6 +273,32 @@ class BodyFetcher:
         with self.per_site_processing_thread_locks_lock:
             self.per_site_processing_thread_locks[site].release()
 
+    def send_thread_starvation_warning_if_appropriate(self):
+        now = time.time()
+        min_time = now - self.THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME
+        with self.thread_starvation_delayed_warnings_lock:
+            record = self.thread_starvation_delayed_warnings
+            if record is None:
+                self.thread_starvation_delayed_warnings = {
+                    'launched_timestamp': now,
+                    'chat_timestamp': now,
+                }
+                return False
+            launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
+            if (launched_timestamp < min_time and chat_timestamp < min_time):
+                record['chat_timestamp'] = now
+                message = ("Unable to launch scan thread due to exhausted general thred limit"
+                           " of {} for {} seconds.").format(self.max_scan_thread_count,
+                                                            round(now - launched_timestamp, 2))
+                Tasks.do(tell_rooms_with, "debug", message)
+                log('error', message)
+                return True
+            return False
+
+    def thread_starvation_warning_thread_launched(self):
+        with self.thread_starvation_delayed_warnings_lock:
+            self.thread_starvation_delayed_warnings = None
+
     def send_site_thread_starvation_warning_if_appropriate(self, site):
         # The thread lock for this is the per_site_processing_thread_locks_lock
         now = time.time()
@@ -257,10 +312,10 @@ class BodyFetcher:
             return False
         launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
         if (launched_timestamp < min_time and chat_timestamp < min_time):
-            self.per_site_processing_thread_locks_delayed_warnings[site]['chat_timestamp'] = now
+            record[site]['chat_timestamp'] = now
             message = ("Unable to launch scan thread for {} due to exhausted thred limit"
-                       "of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
-                                                       round(now - launched_timestamp, 2))
+                       " of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
+                                                        round(now - launched_timestamp, 2))
             Tasks.do(tell_rooms_with, "debug", message)
             log('error', message)
             return True
