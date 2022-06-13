@@ -40190,7 +40190,6 @@
 1655102237	cigien	key2prob\.com
 1655103106	cigien	fmpuppies\.com
 1655103191	cigien	topten\.ai
-1655104938	cigien	expertcorner\.smartglobalgovernance\.com
 1655111484	tripleee	find-cheap-plane-tickets\.blogspot
 1655111728	tripleee	(?-i:^\w+smith$)
 1655111752	tripleee	softsprint\.net
