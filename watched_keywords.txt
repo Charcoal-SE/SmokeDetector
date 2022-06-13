@@ -40202,3 +40202,4 @@
 1655111728	tripleee	(?-i:^\w+smith$)
 1655111752	tripleee	softsprint\.net
 1655111775	tripleee	softsprint(?!\.net)
+1655112841	tripleee	corporatemunim\.com
