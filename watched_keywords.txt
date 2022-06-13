@@ -40210,3 +40210,4 @@
 1655133228	cigien	addify\.store
 1655135204	cigien	testwalesuccess
 1655135363	Ollie	smartglobalgovernance\.com
+1655135431	cigien	wizesafetyrecovery(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
