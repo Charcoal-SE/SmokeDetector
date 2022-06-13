@@ -40208,3 +40208,4 @@
 1655120796	tripleee        new[\W_]*+troll
 1655120963	tripleee	simplilearn\.com
 1655121052	tripleee	rubixcam\.ir
+1655120796	tripleee	new[\W_]*+troll
