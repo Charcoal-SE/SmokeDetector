@@ -2629,3 +2629,4 @@ reliablehacker\d+(?:[\W_]*+(?:at[_W]*+)?gmail[\W_]*+(?:dot[_W]*+)?com)?(?#seen: 
 (?-i:debduttapanda)(?#medium.com)
 drabakaspelltemple(?:@gmail\.com)?
 geecon[\W_]*+global(?!\.com(?<=geeconglobal\.com))
+Geecon[\W_]*Systems?(?!\.com(?<=geeconsystems\.com))
