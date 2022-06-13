@@ -40210,3 +40210,4 @@
 1655120796	tripleee	new[\W_]*+troll
 1655121498	tripleee	lexntax\.com
 1655121527	tripleee	lex[\W_]*n[\W_]*+tax(?!\.com(?<=lexntax\.com))
+1655125510	Makyen	techrepublish\.com
