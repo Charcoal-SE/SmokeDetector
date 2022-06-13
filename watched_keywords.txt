@@ -40193,3 +40193,4 @@
 1655094824	tripleee	qrscannervolio\.page\.link
 1655097557	tripleee	(?-i:sKzv8iNsICQ)(?# youtube)
 1655097591	tripleee	quicktech\.in
+1655100432	cigien	(?-i:gx0CAv7sHAw)(?#youtube)
