@@ -40212,3 +40212,4 @@
 1655135363	Ollie	smartglobalgovernance\.com
 1655135431	cigien	wizesafetyrecovery(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1655135526	cigien	caved-in\.co\.uk
+1655135727	cigien	mumbai[\W_]*+online[\W_]*+florists(?!\.com(?<=mumbaionlineflorists\.com))
