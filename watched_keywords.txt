@@ -40212,3 +40212,4 @@
 1655121527	tripleee	lex[\W_]*n[\W_]*+tax(?!\.com(?<=lexntax\.com))
 1655125510	Makyen	techrepublish\.com
 1655127775	Spevacus	travomonk\.com
+1655127847	Spevacus	recreationalmjshop\.com
