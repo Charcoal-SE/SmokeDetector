@@ -40203,3 +40203,4 @@
 1655111752	tripleee	softsprint\.net
 1655111775	tripleee	softsprint(?!\.net)
 1655112841	tripleee	corporatemunim\.com
+1655112885	tripleee	corporate[\W_]*+munim(?!\.com(?<=corporatemunim\.com))
