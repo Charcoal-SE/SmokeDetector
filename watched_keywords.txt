@@ -40206,3 +40206,4 @@
 1655115738	Jeff Schaller	mumbaionlineflorists\.com
 1655120380	tripleee	waitmoon\.com
 1655120796	tripleee        new[\W_]*+troll
+1655120963	tripleee	simplilearn\.com
