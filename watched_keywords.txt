@@ -40189,3 +40189,4 @@
 1655093151	Makyen	care4dog\.com
 1655093201	Makyen	care4dog(?!\.com)
 1655093240	Makyen	cytopoint[\W_]*+injection
+1655094297	cocomac	denledsvlight\.com
