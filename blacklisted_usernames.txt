@@ -679,3 +679,4 @@ Visualytes
 (?-i:^Aimlay education$)
 (?-i:^isharp acadamy$)
 (?-i:^umair mujahid$)
+(?-i:^Dipesh Makvana$)
