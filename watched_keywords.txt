@@ -40187,3 +40187,4 @@
 1655087261	cocomac	(?-i:mx8QUDIAOeM)(?#YouTube)
 1655089022	cocomac	losarcanos\.it
 1655093151	Makyen	care4dog\.com
+1655093201	Makyen	care4dog(?!\.com)
