@@ -40192,3 +40192,4 @@
 1655094297	cocomac	denledsvlight\.com
 1655094824	tripleee	qrscannervolio\.page\.link
 1655097557	tripleee	(?-i:sKzv8iNsICQ)(?# youtube)
+1655097591	tripleee	quicktech\.in
