@@ -40214,3 +40214,4 @@
 1655137261	cigien	getroutertable(?!\.com)
 1655139835	cigien	hdwhitem(?#github)
 1655141371	cigien	techcrashcourse\.com
+1655145277	Makyen	customlogodesigns\.us
