@@ -40183,3 +40183,4 @@
 1655064022	cigien	bigdata-etl\.com
 1655064461	cigien	upgini\.com
 1655064661	cigien	honeypotdetector\.net
+1655086913	cocomac	splinxtechnologies\.com
