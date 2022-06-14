@@ -40220,3 +40220,4 @@
 1655165160	cigien	vladimirafinancijskiinvestitor(?:@yahoo\.com)?
 1655165357	cigien	TAIK18(?#youtube channel)
 1655165440	cigien	(?-i:P5OXO994I0U)(?#youtu.be)
+1655165460	cigien	(?-i:5yq7p2WYFTo)(?#youtu.be)
