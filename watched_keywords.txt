@@ -40227,3 +40227,4 @@
 1655181678	tripleee	(?-i:^Mama [A-Z][a-z]+$)
 1655183037	tripleee	abusayedahmadruet13(?# medium)
 1655183895	Mast	getreviews\.buzz
+1655185288	Mast	aspirationsinstitute\.com
