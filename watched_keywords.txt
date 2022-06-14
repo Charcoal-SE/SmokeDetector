@@ -40225,3 +40225,4 @@
 1655176707	cigien	thepressurecook\.com
 1655181269	tripleee	newherbalist\.com
 1655181678	tripleee	(?-i:^Mama [A-Z][a-z]+$)
+1655183037	tripleee	abusayedahmadruet13(?# medium)
