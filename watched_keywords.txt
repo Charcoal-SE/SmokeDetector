@@ -40239,3 +40239,4 @@
 1655203545	Ryan M	nycunitedlimo\.com
 1655206883	Jeff Schaller	redapplelearning\.in
 1655207182	Jeff Schaller	prosofaclean\.com\.au
+1655208106	Makyen	researchwap(?!\.com)
