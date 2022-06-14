@@ -10,6 +10,7 @@ import time
 import math
 import threading
 import copy
+from pathlib import Path
 
 import requests
 # noinspection PyCompatibility
@@ -79,8 +80,7 @@ def load_pickle(path, encoding='utf-8'):
 
 
 def dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
-    if not os.path.isdir(PICKLE_STORAGE):
-        os.mkdir(PICKLE_STORAGE)
+    Path(PICKLE_STORAGE).mkdir(exist_ok=True)
     if os.path.isfile(path):  # Remove old one
         os.remove(path)
     newpath = os.path.join(PICKLE_STORAGE, path)
