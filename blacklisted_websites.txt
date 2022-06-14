@@ -4647,3 +4647,4 @@ sita\.app
 upgini\.com
 ebetterbooks\.com
 codeprozone\.com
+anchorfonts\.com

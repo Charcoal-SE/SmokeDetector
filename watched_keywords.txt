@@ -35908,7 +35908,6 @@
 1643795790	tripleee	irvingairductcleaningtx\.com
 1643796348	tripleee	xlightmedia\.com
 1643796515	tripleee	kiltblog\.com
-1643796664	tripleee	anchorfonts\.com
 1643798573	tripleee	bossdriving\.co\.uk
 1643802114	tripleee	entrancei\.com
 1643803147	tripleee	gold-coast-solar-power-solutions\.com\.au
