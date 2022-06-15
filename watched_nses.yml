@@ -2660,6 +2660,11 @@ items:
   - ns-2004.awsdns-58.co.uk.
   - ns-888.awsdns-47.net.
 - ns:
+  - ns-1503.awsdns-59.org.
+  - ns-1863.awsdns-40.co.uk.
+  - ns-284.awsdns-35.com.
+  - ns-629.awsdns-14.net.
+- ns:
   - ns-1504.awsdns-60.org.
   - ns-1739.awsdns-25.co.uk.
   - ns-355.awsdns-44.com.
