@@ -677,6 +677,9 @@ items:
   - elaine.ns.cloudflare.com.
 - ns:
   - chad.ns.cloudflare.com.
+  - lorna.ns.cloudflare.com.
+- ns:
+  - chad.ns.cloudflare.com.
   - venus.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
