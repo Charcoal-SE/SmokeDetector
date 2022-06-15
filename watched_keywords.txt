@@ -25102,7 +25102,6 @@
 1609156183	tripleee	theweedlink\.com
 1609156395	tripleee	mssionline\.com
 1609156717	tripleee	letsmakeiteasy\.tech
-1609163447	Makyen	tekclue\.com
 1609164589	Spevacus	blog\.checkio\.org
 1609166846	Spevacus	grademiners\.com
 1609180703	Ollie	greenleafair\.com

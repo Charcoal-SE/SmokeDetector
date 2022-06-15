@@ -4649,3 +4649,4 @@ ebetterbooks\.com
 codeprozone\.com
 anchorfonts\.com
 amazonprimevideosupport\.wordpress\.com
+tekclue\.com
