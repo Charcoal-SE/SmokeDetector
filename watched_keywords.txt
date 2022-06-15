@@ -40264,3 +40264,4 @@
 1655276740	Mast	hemengeliriz\.com\.tr
 1655279459	tripleee	evolutionco(?!\.com)
 1655279512	tripleee	evolutionco\.com
+1655279562	tripleee	makpolindustries\.com
