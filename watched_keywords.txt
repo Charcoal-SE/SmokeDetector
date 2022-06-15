@@ -40298,3 +40298,4 @@
 1655316760	cocomac	bitminerfarms\.com
 1655316765	cocomac	minedollars\.com
 1655316770	cocomac	hashlists\.com
+1655316776	cocomac	btcminerfarm\.com
