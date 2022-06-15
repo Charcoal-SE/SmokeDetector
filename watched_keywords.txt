@@ -40273,3 +40273,4 @@
 1655286986	tripleee	unibook\.shop
 1655288363	Jeff Schaller	webdevelopmentsolution\.com\.au
 1655288509	Jeff Schaller	advikatranslations\.com
+1655288535	Jeff Schaller	advikatranslation\.blogspot
