@@ -40296,3 +40296,4 @@
 1655312301	cigien	themevolty\.com
 1655315514	Ollie	(?-i:^Sanny Seo$)
 1655316760	cocomac	bitminerfarms\.com
+1655316927	cocomac	hashshiny\.io
