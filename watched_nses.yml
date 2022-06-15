@@ -1280,6 +1280,9 @@ items:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - harmony.ns.cloudflare.com.
+  - ricardo.ns.cloudflare.com.
+- ns:
   - hasslo.ns.cloudflare.com.
   - leanna.ns.cloudflare.com.
 - ns:
