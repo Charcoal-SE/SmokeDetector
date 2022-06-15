@@ -40240,7 +40240,6 @@
 1655211855	Spevacus	totuldespresaltele\.ro
 1655221001	Makyen	cangzhou[\W_]*+futong(?!\.com(?<=cangzhoufutong\.com))(?:[\W_]*+(?:precision|manufacturing|co|ltd|\d++|[\da-f]{5,}+)s?)*
 1655221225	Ollie	newstopz\.com
-1655221272	Ollie	amazonprimevideosupport\.wordpress\.com
 1655221304	Ollie	aletheatech\.com
 1655221506	Ollie	hackingvpro(?:@gmail\.com)?
 1655221540	Ollie	tvsscs\.com
