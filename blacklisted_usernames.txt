@@ -682,3 +682,4 @@ Visualytes
 (?-i:^Dipesh Makvana$)
 (?-i:^testwale$)
 (?-i:^faresglob$)
+(?-i:^Dolar Spammer$)
