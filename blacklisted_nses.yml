@@ -286,4 +286,9 @@ items:
   - sisindia.mars.orderbox-dns.com.
   - sisindia.mercury.orderbox-dns.com.
   - sisindia.venus.orderbox-dns.com.
+- ns:
+  - geeksmart.earth.orderbox-dns.com.
+  - geeksmart.mars.orderbox-dns.com.
+  - geeksmart.mercury.orderbox-dns.com.
+  - geeksmart.venus.orderbox-dns.com.
 - ns: cetpajobs.com.
