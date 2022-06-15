@@ -40263,3 +40263,4 @@
 1655276503	tripleee	achievers[\W_]*+it(?!\.com(?<=achieversit\.com))
 1655276740	Mast	hemengeliriz\.com\.tr
 1655279459	tripleee	evolutionco(?!\.com)
+1655279512	tripleee	evolutionco\.com
