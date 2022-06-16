@@ -294,14 +294,14 @@ def reload_modules():
     return result
 
 
-def unshorten_link(url, request_type='GET', depth=10):
+def unshorten_link(url, request_type='GET', depth=10, timeout=15):
     orig_url = url
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
     for tries in range(depth):
         if response_code not in {301, 302, 303, 307, 308}:
             break
-        res = requests.request(request_type, url, headers=headers, stream=True, allow_redirects=False)
+        res = requests.request(request_type, url, headers=headers, stream=True, allow_redirects=False, timeout=timeout)
         res.connection.close()  # Discard response body for GET requests
         response_code = res.status_code
         if 'Location' not in res.headers:
