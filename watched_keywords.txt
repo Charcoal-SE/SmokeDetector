@@ -4123,7 +4123,6 @@
 1532176611	Glorfindel	techmazza\.com
 1532178290	A J	abroadimmigration\.com
 1532186389	Glorfindel	govtjobalertindia\.blogspot\.com
-1532193256	Makyen	dr\.obho(?:greatspell(?:@gmail\.com)?)?
 1532193286	Makyen	live4k-sports\.blogspot\.com
 1532211320	Makyen	sweetupdate\.com
 1532231516	Makyen	areazipcode\.org
