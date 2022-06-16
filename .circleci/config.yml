@@ -26,6 +26,8 @@ jobs:
           command: |
             python3 --version > ci_environment.txt
       - restore_cache:
+          key: pip-cache-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
+      - restore_cache:
           key: env-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
       - run:
           name: install python dependencies in venv
@@ -37,6 +39,10 @@ jobs:
           key: env-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
           paths:
             - "env"
+      - save_cache:
+          key: pip-cache-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
+          paths:
+            - "/home/circleci/.cache/pip"
       - run:
           name: Lint tests
           command: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
