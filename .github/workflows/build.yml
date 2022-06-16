@@ -40,6 +40,7 @@ jobs:
     - name: Install dependencies
       run: |
         python3 -m venv env
+        source env/bin/activate
         env/bin/pip3 install -U wheel
         env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls
     - name: Lint tests
