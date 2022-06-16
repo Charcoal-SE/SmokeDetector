@@ -41,6 +41,9 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
+        env/bin/pip3 list --outdated --format=freeze > pip_outdated_freeze.txt
+        cat pip_outdated_freeze.txt
+        grep -v '^\-e' pip_outdated_freeze.txt | cut -d = -f 1  | xargs -n1 env/bin/pip3 install -U
         env/bin/pip3 install -U wheel --upgrade-strategy eager
         env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
     - name: Lint tests

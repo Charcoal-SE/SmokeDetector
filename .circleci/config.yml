@@ -32,6 +32,9 @@ jobs:
           command: |
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             python3 -m venv env
+            env/bin/pip3 list --outdated --format=freeze > pip_outdated_freeze.txt
+            cat pip_outdated_freeze.txt
+            grep -v '^\-e' pip_outdated_freeze.txt | cut -d = -f 1  | xargs -n1 env/bin/pip3 install -U
             env/bin/pip3 install -r requirements.txt --upgrade --upgrade-strategy eager
             env/bin/pip3 install -r user_requirements.txt --upgrade --upgrade-strategy eager
       - save_cache:
