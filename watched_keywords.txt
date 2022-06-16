@@ -2638,7 +2638,6 @@
 1523508466	tripleee	ateliers-japon\.com
 1523508649	tripleee	simplehuman\.com
 1523508960	tripleee	gamertags\.info
-1523511345	Glorfindel	cyberservices
 1523515849	Mithrandir	motorola\W?professional
 1523517840	Glorfindel	t\W?traxx\.com
 1523520768	Glorfindel	pyramidaffordable\.in
