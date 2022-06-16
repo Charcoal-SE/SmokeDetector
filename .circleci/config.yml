@@ -23,8 +23,8 @@ jobs:
           command: |
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             python3 -m venv env
-            env/bin/pip3 install -r requirements.txt --upgrade
-            env/bin/pip3 install -r user_requirements.txt --upgrade
+            env/bin/pip3 install -r requirements.txt --upgrade --upgrade-strategy eager
+            env/bin/pip3 install -r user_requirements.txt --upgrade --upgrade-strategy eager
       - save_cache:
           key: env-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:

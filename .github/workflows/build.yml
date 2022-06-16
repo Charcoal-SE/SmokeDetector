@@ -41,8 +41,8 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
-        env/bin/pip3 install -U wheel
-        env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls
+        env/bin/pip3 install -U wheel --upgrade-strategy eager
+        env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
     - name: Lint tests
       run: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
     - name: Lint classes
