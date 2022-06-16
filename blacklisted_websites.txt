@@ -4651,3 +4651,4 @@ anchorfonts\.com
 amazonprimevideosupport\.wordpress\.com
 tekclue\.com
 renkeer\.com
+codiga\.io
