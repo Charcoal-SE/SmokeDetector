@@ -39,6 +39,7 @@ jobs:
           env
     - name: Install dependencies
       run: |
+        rm -rf env/bin env/include env/pyvenv.cfg env/lib/python*/site-packages/{easy_install.py,pip*,pkg_resources,setuptools*}
         python3 -m venv env
         source env/bin/activate
         env/bin/pip3 install -U wheel
