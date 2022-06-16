@@ -11,13 +11,22 @@ jobs:
           keys:
             - git-cimg-python3.8-{{ .Branch }}
             - git-cimg-python3.8
+            - git
       - checkout
       - save_cache:
           key: git-cimg-python3.8-{{ .Branch }}
           paths:
             - ".git"
+      - run:
+          # Put data about the CI environment upon which the env cache may depend
+          # into the file ci_environment.txt, which we'll checksum in order to only use
+          # the env cache when that data hasn't changed. Currently, that's the full
+          # Python version.
+          name: Gather CI environment information
+          command: |
+            python3 --version > ci_environment.txt
       - restore_cache:
-          key: env-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: env-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
       - run:
           name: install python dependencies in venv
           command: |
@@ -26,7 +35,7 @@ jobs:
             env/bin/pip3 install -r requirements.txt --upgrade --upgrade-strategy eager
             env/bin/pip3 install -r user_requirements.txt --upgrade --upgrade-strategy eager
       - save_cache:
-          key: env-cimg-python3.8-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          key: env-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
           paths:
             - "env"
       - run:
