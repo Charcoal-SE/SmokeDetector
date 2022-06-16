@@ -40319,3 +40319,4 @@
 1655372497	tripleee	thehearup\.com
 1655375279	tripleee	crysta[\W_]*+IVF
 1655379270	Mast	jewelry\.pk
+1655381239	tripleee	jewelry(?!\.pk)[\W_]*+pk
