@@ -36,17 +36,16 @@ jobs:
           ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-
         path: |
           ~/.cache/pip
-          env
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         pip3 install -U wheel --upgrade-strategy eager
         pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
-    - name: Lint tests
-      run: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
-    - name: Lint classes
-      run: env/bin/python3 -m flake8 --config=tox_classes.ini ./classes/
+    - name: Lint ./tests
+      run: python3 -m flake8 --config=tox_tests.ini ./test/
+    - name: Lint ./classes
+      run: python3 -m flake8 --config=tox_classes.ini ./classes/
     - name: Lint code
-      run: env/bin/python3 -m flake8 ./
+      run: python3 -m flake8 ./
     - name: Pytest
       run: |
         python3 -W default::Warning -m pytest \
