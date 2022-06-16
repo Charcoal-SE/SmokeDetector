@@ -40311,3 +40311,4 @@
 1655361953	tripleee	(?-i:2SdS0jR)(?# bit.ly)
 1655362100	tripleee	unirpdf\.com
 1655364205	tripleee	apex-consultant\.com
+1655365160	tripleee	jycbattery\.com
