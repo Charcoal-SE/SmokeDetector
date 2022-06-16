@@ -23,6 +23,9 @@ items:
   - adrian.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
+  - aiden.ns.cloudflare.com.
+  - nelly.ns.cloudflare.com.
+- ns:
   - alex.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
