@@ -39,13 +39,8 @@ jobs:
           env
     - name: Install dependencies
       run: |
-        python3 -m venv env
-        source env/bin/activate
-        env/bin/pip3 list --outdated --format=freeze | grep -v -E "pyflakes|pycodestyle|coverage|flake8|pep8-naming|ChatExchange" > pip_outdated_freeze.txt
-        cat pip_outdated_freeze.txt
-        grep -v '^\-e' pip_outdated_freeze.txt | cut -d = -f 1  | xargs -n1 env/bin/pip3 install -U
-        env/bin/pip3 install -U wheel --upgrade-strategy eager
-        env/bin/pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
+        pip3 install -U wheel --upgrade-strategy eager
+        pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
     - name: Lint tests
       run: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
     - name: Lint classes
@@ -54,7 +49,7 @@ jobs:
       run: env/bin/python3 -m flake8 ./
     - name: Pytest
       run: |
-        env/bin/python3 -W default::Warning -m pytest \
+        python3 -W default::Warning -m pytest \
           --cov=chatcommunicate \
           --cov=findspam \
           --cov=globalvars \
