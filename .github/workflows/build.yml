@@ -41,7 +41,7 @@ jobs:
       run: |
         python3 -m venv env
         source env/bin/activate
-        env/bin/pip3 list --outdated --format=freeze > pip_outdated_freeze.txt
+        env/bin/pip3 list --outdated --format=freeze | grep -v -E "pyflakes|pycodestyle|coverage|flake8|pep8-naming|ChatExchange" > pip_outdated_freeze.txt
         cat pip_outdated_freeze.txt
         grep -v '^\-e' pip_outdated_freeze.txt | cut -d = -f 1  | xargs -n1 env/bin/pip3 install -U
         env/bin/pip3 install -U wheel --upgrade-strategy eager
