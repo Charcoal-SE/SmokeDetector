@@ -40321,3 +40321,4 @@
 1655379270	Mast	jewelry\.pk
 1655381239	tripleee	jewelry(?!\.pk)[\W_]*+pk
 1655382505	tripleee	gulffab\.com
+1655383009	tripleee	activateguide\.com
