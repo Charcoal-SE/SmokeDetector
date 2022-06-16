@@ -30,10 +30,10 @@ jobs:
       id: cache
       uses: actions/cache@v2
       with:
-        key: ${{ runner.os }}-${{ matrix.python-version }}-pip-2-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-${{ hashFiles('**/requirements.txt') }}}-${{ hashFiles('**/user_requirements.txt') }}
         restore-keys: |
-          ${{ runner.os }}-${{ matrix.python-version }}-pip-2-${{ hashFiles('**/requirements.txt') }}
-          ${{ runner.os }}-${{ matrix.python-version }}-pip-2-
+          ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/user_requirements.txt') }}
+          ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-
         path: |
           ~/.cache/pip
           env
