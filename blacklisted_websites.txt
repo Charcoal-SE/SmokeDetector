@@ -4652,3 +4652,4 @@ amazonprimevideosupport\.wordpress\.com
 tekclue\.com
 renkeer\.com
 codiga\.io
+decent-group\.com
