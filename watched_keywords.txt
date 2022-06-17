@@ -40335,3 +40335,4 @@
 1655459731	tripleee	evisionatlanta\.com
 1655467200	tripleee	tutorlog\.in
 1655467303	Jeff Schaller	Tutorlog(?!\.in)
+1655467517	Jeff Schaller	globrealestate\.com
