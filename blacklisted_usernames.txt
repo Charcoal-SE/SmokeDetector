@@ -683,3 +683,4 @@ Visualytes
 (?-i:^testwale$)
 (?-i:^faresglob$)
 (?-i:^Dolar Spammer$)
+(?-i:^louise jules$)
