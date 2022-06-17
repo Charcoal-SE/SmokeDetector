@@ -40344,3 +40344,4 @@
 1655472666	Makyen	d(?:octo)?r[\W_]*+sharda[\W_]*+ayurveda(?!\.com(?<=drshardaayurveda\.com))
 1655475998	tripleee	comebackalive\.in\.ua
 1655480948	Ollie	tplinkwiffi\.com
+1655482041	Ollie	vaccum\.shop
