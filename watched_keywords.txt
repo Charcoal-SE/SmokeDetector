@@ -40341,3 +40341,4 @@
 1655472497	Makyen	drshardaayurveda\.com
 1655472600	Makyen	q3gindia\.com
 1655472626	Makyen	q3g[\W_]*+india(?!\.com(?<=q3gindia\.com))(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
+1655472666	Makyen	d(?:octo)?r[\W_]*+sharda[\W_]*+ayurveda(?!\.com(?<=drshardaayurveda\.com))
