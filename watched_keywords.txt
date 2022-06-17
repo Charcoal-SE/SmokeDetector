@@ -40354,3 +40354,4 @@
 1655492797	cigien	(?-i:Y7-MGYx_dlo)(?#youtube)
 1655496144	Spevacus	freemagazines\.top
 1655497073	Spevacus	sholod\.net
+1655499215	cigien	informatics\.center
