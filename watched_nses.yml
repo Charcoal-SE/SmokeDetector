@@ -218,6 +218,9 @@ items:
   - jack.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
+  - kevin.ns.cloudflare.com.
+- ns:
+  - amanda.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
   - amber.ns.cloudflare.com.
