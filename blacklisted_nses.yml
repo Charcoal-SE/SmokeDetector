@@ -160,6 +160,9 @@ items:
   - porter.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - rene.ns.cloudflare.com.
+  - sara.ns.cloudflare.com.
+- ns:
   - rose.ns.cloudflare.com.
   - yew.ns.cloudflare.com.
 - ns:
