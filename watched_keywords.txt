@@ -40379,3 +40379,4 @@
 1655568324	cigien	onlinecasino-az\.com
 1655568372	cigien	revopionsdigitalacademy\.com
 1655568490	cigien	neela[\W_]*+drop[\W_]*+taxi(?!\.in(?<=neeladroptaxi\.in))
+1655568689	cigien	phanphoiacquynhapkhau\.vn
