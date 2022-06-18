@@ -40385,3 +40385,4 @@
 1655569547	cigien	nasha[\W_]*+mukti[\W_]*+centre(?!\.com(?<=nashamukticentre\.com))
 1655579337	Ollie	usaseoshop\.com
 1655579728	Ollie	paypalsell(?# facebook username)
+1655590894	Makyen	c8jd1kl92kl2
