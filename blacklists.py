@@ -1,5 +1,6 @@
 # coding=utf-8
 from typing import Union
+from concurrent.futures import ThreadPoolExecutor
 
 import regex
 import yaml
@@ -7,7 +8,7 @@ import dns.resolver
 import sys
 
 from globalvars import GlobalVars
-from helpers import log, log_current_exception
+from helpers import log, log_current_exception, color
 
 
 def load_blacklists():
@@ -322,7 +323,14 @@ class YAMLParserNS(YAMLParserCIDR):
                     log('warn', '{0}: DNS lookup timed out.'.format(ns))
             except Exception:
                 log_current_exception()
-                log('error', 'validate YAML: Failed NS validation for: {}'.format(ns), no_exception=True)
+                log('error', '                                         {}'.format(color('v' * len(ns), 'red',
+                                                                                  attrs=['bold'])), no_exception=True)
+                log('error', 'validate YAML: Failed NS validation for: {} in {}'.format(color(ns, 'white',
+                                                                                              attrs=['bold']),
+                                                                                        self._filename),
+                    no_exception=True)
+                log('error', '                                         {}'.format(color('^' * len(ns), 'red',
+                                                                                  attrs=['bold'])), no_exception=True)
                 raise
             return True
 
@@ -341,6 +349,19 @@ class YAMLParserNS(YAMLParserCIDR):
             raise ValueError(
                 'Member "ns" must be either string or list of strings: {0!r}'.format(
                     item['ns']))
+
+    def validate(self):
+        # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
+        # it appeared to result in longer times and intermittent failures.
+        with ThreadPoolExecutor(max_workers=20) as executor:
+            # Nothing is currently done with the returned results.
+            # If there's an issue, an exception is raised in self._validate().
+            # As of 2022-06-20, a typical run of this should take about 45 seconds.
+            # On the other hand, it's quite possible for a passing run to take at least into
+            # the 100 second range. A timeout of 300 was chosen as a max, merely because it
+            # seemed like a reasonable limit. As the list gets longer, this may need to be
+            # expanded.
+            list(executor.map(self._validate, self._parse(), timeout=300))
 
 
 class YAMLParserASN(YAMLParserCIDR):
