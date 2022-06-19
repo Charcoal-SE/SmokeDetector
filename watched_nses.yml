@@ -2757,7 +2757,9 @@ items:
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
-- ns: cloudsecurebox.com.
+- comment: no longer resolves 2022-06-19
+  disable: true
+  ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
 - ns: hostwithconfidence.com.
