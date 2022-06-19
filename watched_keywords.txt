@@ -40395,3 +40395,4 @@
 1655626946	Makyen	^zozumuhah[\W_]*+brotherhoodoccult$
 1655626969	Makyen	bflix88\.com
 1655627000	Makyen	betflix
+1655627024	Makyen	betflik\d*
