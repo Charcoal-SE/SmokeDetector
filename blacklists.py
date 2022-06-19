@@ -7,7 +7,7 @@ import dns.resolver
 import sys
 
 from globalvars import GlobalVars
-from helpers import log
+from helpers import log, log_current_exception
 
 
 def load_blacklists():
@@ -303,22 +303,27 @@ class YAMLParserNS(YAMLParserCIDR):
             if "pytest" in sys.modules:
                 extra_params['lifetime'] = 15
             try:
-                addr = dns.resolver.resolve(ns, 'a', search=True, **extra_params)
-                # Outputing for every resolved entry makes it harder to find the actual error,
-                # due to being swamped with data in the error output.
-                # log('debug', '{0} resolved to {1}'.format(
-                #     ns, ','.join(x.to_text() for x in addr)))
-            except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
-                if not item.get('pass', None):
-                    soa = dns.resolver.resolve(ns, 'soa', search=True, **extra_params)
-                    log('debug', '{0} has no A record; SOA is {1}'.format(
-                        ns, ';'.join(s.to_text() for s in soa)))
-            except dns.resolver.NoNameservers:
-                if not item.get('pass', None):
-                    log('warn', '{0} has no available servers to service DNS '
-                                'request.'.format(ns))
-            except dns.resolver.Timeout:
-                log('warn', '{0}: DNS lookup timed out.'.format(ns))
+                try:
+                    addr = dns.resolver.resolve(ns, 'a', search=True, **extra_params)
+                    # Outputing for every resolved entry makes it harder to find the actual error,
+                    # due to being swamped with data in the error output.
+                    # log('debug', '{0} resolved to {1}'.format(
+                    #     ns, ','.join(x.to_text() for x in addr)))
+                except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
+                    if not item.get('pass', None):
+                        soa = dns.resolver.resolve(ns, 'soa', search=True, **extra_params)
+                        log('debug', '{0} has no A record; SOA is {1}'.format(
+                            ns, ';'.join(s.to_text() for s in soa)))
+                except dns.resolver.NoNameservers:
+                    if not item.get('pass', None):
+                        log('warn', '{0} has no available servers to service DNS '
+                                    'request.'.format(ns))
+                except dns.resolver.Timeout:
+                    log('warn', '{0}: DNS lookup timed out.'.format(ns))
+            except Exception:
+                log_current_exception()
+                log('error', 'validate YAML: Failed NS validation for: {}'.format(ns), no_exception=True)
+                raise
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')

@@ -154,7 +154,7 @@ def redact_passwords(value):
 
 
 # noinspection PyMissingTypeHints
-def log(log_level, *args, f=False):
+def log(log_level, *args, f=False, no_exception=False):
     levels = {
         'debug': [0, 'grey'],
         'info': [1, 'cyan'],
@@ -173,7 +173,7 @@ def log(log_level, *args, f=False):
                              redact_passwords("  ".join([str(x) for x in args])))
     print(log_str, file=sys.stderr)
 
-    if level == 3:
+    if level == 3 and not no_exception:
         exc_tb = sys.exc_info()[2]
         print(redact_passwords("".join(traceback.format_tb(exc_tb))), file=sys.stderr)
 
