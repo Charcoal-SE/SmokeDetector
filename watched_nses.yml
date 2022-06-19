@@ -2767,7 +2767,9 @@ items:
 - ns: linuxpl.com.
 - ns: ndx9.com.
 - ns: nexcess.net.
-- ns: dnserverboot.com.
+- comment: 2022-06-19 NXDOMAIN
+  disable: true
+  ns: dnserverboot.com.
 - ns: hostns.io.
 - ns: rapidns.com.
 - ns: cdlsuite.com.
