@@ -40391,3 +40391,4 @@
 1655602386	Makyen	cdkey4u(?!\.com)
 1655624351	tripleee	yummyadvisor\.com
 1655625658	Makyen	sumitihomelend(?:@gmail\.com)?
+1655626925	Makyen	zozumuhah[\W_]*+brotherhood(?:@gmail\.com)?
