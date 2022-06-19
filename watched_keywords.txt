@@ -40389,3 +40389,4 @@
 1655590918	Makyen	(?-i:3xayXHS)(?#bit.ly)
 1655599198	Spevacus	backlinkar\.com
 1655602357	cigien	cdkey4u\.com
+1655602386	Makyen	cdkey4u(?!\.com)
