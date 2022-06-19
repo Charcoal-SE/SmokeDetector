@@ -37105,7 +37105,6 @@
 1647037010	cigien	alphasource\.tech
 1647037028	cigien	azhar\.edu\.eg
 1647037052	cigien	beinquran\.com
-1647039804	cigien	zozumuhahbrotherhood(?:@gmail\.com)?
 1647044012	cigien	cynone\.com
 1647045772	cigien	(?-i:xr2XRhK6TJeebcPDA)(?#google forms)
 1647053149	cigien	sanantoniopavingsolutions\.com
