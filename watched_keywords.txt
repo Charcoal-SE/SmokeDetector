@@ -40417,3 +40417,4 @@
 1655683003	Makyen	miraculouscentre\.wixsite\.com
 1655683059	Makyen	miraculouscentre(?!\.wixsite\.com)(?:@gmail\.com)?
 1655683654	cocomac	are[\W_]*+you[\W_]*+in[\W_]*+need[\W_]*+of
+1655689810	Spevacus	wisetechacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
