@@ -26712,7 +26712,6 @@
 1613782108	cigien	bioinformatics[\W_]*+india(?!\.com(?<=bioinformaticsindia\.com))
 1613782276	cigien	rizonesoft\.com
 1613787345	cigien	hallamshome\.com\.au
-1613787468	cigien	aliasharma\.in
 1613787525	cigien	sportsmatik\.com
 1613787546	cigien	sportsmatik(?!\.com)
 1613787740	cigien	goodcreditsfoundation(?:@gmail\.com)?
