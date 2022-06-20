@@ -40416,3 +40416,4 @@
 1655682847	cocomac	righteva05\.blogspot
 1655683003	Makyen	miraculouscentre\.wixsite\.com
 1655683059	Makyen	miraculouscentre(?!\.wixsite\.com)(?:@gmail\.com)?
+1655683654	cocomac	are[\W_]*+you[\W_]*+in[\W_]*+need[\W_]*+of
