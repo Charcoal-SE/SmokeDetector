@@ -40419,7 +40419,6 @@
 1655692535	Nick	JfSlC_t8-r4(?#youtube)
 1655712269	Jeff Schaller	panditgarg\.space
 1655712300	Nick	thepostbest\.com
-1655712343	Nick	swlearner\.com
 1655714268	doppelgreener	boreasdiamond\.com
 1655726514	Makyen	kirklandreporter\.com
 1655731147	Jeff Schaller	ehotelbooking\.in
