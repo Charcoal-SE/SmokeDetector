@@ -40461,3 +40461,4 @@
 1655817272	Jeff Schaller	jokerwin77\.info
 1655818804	Makyen	rajafreebet\.club
 1655818831	Makyen	raja[\W_]*+freebet(?!\.club(?<=rajafreebet\.club))
+1655818863	Makyen	betgratis
