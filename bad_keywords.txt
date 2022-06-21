@@ -2635,3 +2635,4 @@ mr[\W_]*+Oscar[\W_]*+White
 cyberservices(?!\.com)
 d(?:octo)?r[\W_]*+obho(?:greatspell(?:@gmail\.com)?)?
 zozumuhahbrotherhood
+situs[\W_]*+slot(?:[\W_]*+gacor)?
