@@ -702,6 +702,7 @@ stackoverflow.com:
 
     msg_types:
       - debug
+      - dump
       - no-offensive-mask
 
     privileges:
