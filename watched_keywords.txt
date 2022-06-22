@@ -40480,3 +40480,4 @@
 1655861257	Jeff Schaller	pogo-pins\.com
 1655857535	cocomac	yousefadel19\.blogspot
 1655867003	Makyen	bweview\.com
+1655872844	Makyen	iroid[\W_]*+technologies(?!\.com(?<=iroidtechnologies\.com))
