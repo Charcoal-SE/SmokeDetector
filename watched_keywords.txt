@@ -40503,3 +40503,4 @@
 1655912858	Ollie	pricescope\.com
 1655913111	Ollie	ldycdn\.com
 1655913167	Ollie	papospellcaster\.blogspot
+1655913220	Ollie	drpapospellcaster(?:@gmail\.com)?
