@@ -40483,3 +40483,4 @@
 1655872844	Makyen	iroid[\W_]*+technologies(?!\.com(?<=iroidtechnologies\.com))
 1655873982	cigien	caviarco\.ir
 1655876369	cigien	haffizji\.com
+1655876715	cigien	supportpro\.com
