@@ -40482,3 +40482,4 @@
 1655867003	Makyen	bweview\.com
 1655872844	Makyen	iroid[\W_]*+technologies(?!\.com(?<=iroidtechnologies\.com))
 1655873982	cigien	caviarco\.ir
+1655876369	cigien	haffizji\.com
