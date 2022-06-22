@@ -40487,3 +40487,4 @@
 1655880031	cigien	vjinstruments\.com
 1655880952	cigien	premiumvapestore\.com
 1655883047	tripleee	bestarion\.com
+1655883076	tripleee	bestarion(?!\.com)
