@@ -40492,3 +40492,4 @@
 1655886294	tripleee	(?-i:^Fannyzeng$)
 1655892237	Mast	gubelin\.com
 1655892443	Mast	trickyenough\.com
+1655893723	Mast	raskruton\.ru
