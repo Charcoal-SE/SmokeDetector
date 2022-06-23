@@ -2873,5 +2873,12 @@ create_rule("potentially bad keyword in {}",
             username=False, body_summary=True, body=True, title=False,
             max_rep=93, max_score=21,
             rule_id="Potentialy bad keywords: l dutch, answer 214453, worldbuilding")
+# japanese.se: specific content in usernames
+create_rule("potentially bad keyword in {}",
+            r"(?i)(?:kukel)",
+            all=False, sites=["japanese.stackexchange.com", "japanese.meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=93, max_score=21,
+            rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
 
 FindSpam.reload_blacklists()
