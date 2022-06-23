@@ -40530,3 +40530,4 @@
 1655987138	Jeff Schaller	cloudlearn24\.com
 1655987171	Jeff Schaller	colorhexmap\.com
 1655987744	Jeff Schaller	marilynsfalsies\.com
+1655988926	Jeff Schaller	koyfin\.com
