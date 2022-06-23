@@ -687,3 +687,4 @@ Visualytes
 (?-i:^The Daily Info$)
 ^kukelsack\w*+
 (?-i:^meta kukel exchange$)
+(?-i:^Kukel of the filth$)
