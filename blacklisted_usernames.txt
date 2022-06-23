@@ -686,3 +686,4 @@ Visualytes
 (?-i:^louise jules$)
 (?-i:^The Daily Info$)
 ^kukelsack\w*+
+(?-i:^meta kukel exchange$)
