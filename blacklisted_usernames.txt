@@ -689,3 +689,4 @@ Visualytes
 (?-i:^meta kukel exchange$)
 (?-i:^Kukel of the filth$)
 Kukel of the filth
+meta kukel exchange
