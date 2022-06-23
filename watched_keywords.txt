@@ -40539,3 +40539,4 @@
 1656010737	cigien	hivelance\.com
 1656012508	cigien	hemengeliriz\.com
 1656014956	cigien	ugandaempya\.com
+1656015107	Makyen	uganda[\W_]*+empya(?!\.com(?<=ugandaempya\.com))
