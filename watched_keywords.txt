@@ -40180,7 +40180,6 @@
 1655127775	Spevacus	travomonk\.com
 1655127847	Spevacus	recreationalmjshop\.com
 1655131916	Makyen	(?-i:DJS0kyc)(?#cutt.ly)
-1655133228	cigien	addify\.store
 1655135204	cigien	testwalesuccess
 1655135363	Ollie	smartglobalgovernance\.com
 1655135431	cigien	wizesafetyrecovery(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
