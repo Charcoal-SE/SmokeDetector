@@ -685,3 +685,4 @@ Visualytes
 (?-i:^Dolar Spammer$)
 (?-i:^louise jules$)
 (?-i:^The Daily Info$)
+^kukelsack\w*+
