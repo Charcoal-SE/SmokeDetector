@@ -684,3 +684,4 @@ Visualytes
 (?-i:^faresglob$)
 (?-i:^Dolar Spammer$)
 (?-i:^louise jules$)
+(?-i:^The Daily Info$)
