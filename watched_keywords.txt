@@ -40557,3 +40557,4 @@
 1656071864	Jeff Schaller	6623game\.com
 1656073435	Jeff Schaller	evco\.co\.in
 1656079004	Makyen	beyaz[\W_]*eşya
+1656080669	Makyen	dcaguide\.org
