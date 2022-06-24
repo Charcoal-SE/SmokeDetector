@@ -36123,7 +36123,6 @@
 1644476917	tripleee	wealthngo\.com
 1644478001	Makyen	jyotiambulanceservicesdelhi\.com
 1644480020	tripleee	(?-i:^lamtrancl123456$)
-1644483620	tripleee	itztechy\.com
 1644483800	tripleee	asiamelk\.com
 1644485203	tripleee	hondaservice\.ae
 1644486676	tripleee	t4texchange\.com
