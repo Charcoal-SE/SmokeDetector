@@ -40560,3 +40560,4 @@
 1656080669	Makyen	dcaguide\.org
 1656085086	Ollie	yoonik\.me
 1656086073	Ollie	(?-i:mazihwang)(?# t.me)
+1656086439	Ollie	techplanet\.today
