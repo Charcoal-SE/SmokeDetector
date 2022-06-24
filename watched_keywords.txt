@@ -40541,3 +40541,4 @@
 1656014956	cigien	ugandaempya\.com
 1656015107	Makyen	uganda[\W_]*+empya(?!\.com(?<=ugandaempya\.com))
 1656020510	Makyen	^kukel\w*+
+1656032968	Ollie	launchxsummer2022\.com
