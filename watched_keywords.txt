@@ -40584,3 +40584,4 @@
 1656149426	Cody Gray	(?-i:Prosperity[\W_]*Lion)
 1656153502	Mast	bscbooks\.com
 1656157717	Jeff Schaller	tistabene\.com
+1656161589	Jeff Schaller	hopbug\.com
