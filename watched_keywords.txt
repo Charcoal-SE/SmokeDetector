@@ -40575,3 +40575,4 @@
 1656130941	cocomac	kitchenling\.com
 1656132852	cigien	cronozshop\.com
 1656132892	cigien	cronoz[\W_]*+shop(?!\.com(?<=cronozshop\.com))
+1656134161	cigien	sobhasentosa\.org\.in
