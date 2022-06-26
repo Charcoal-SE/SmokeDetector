@@ -40598,3 +40598,4 @@
 1656228150	Cody Gray	windows11freedownloadactivatediso
 1656228172	Cody Gray	beedatimescrypto\.blogzet
 1656228225	Cody Gray	beeda[\W_]*(?:news|times)(?!crypto)
+1656254988	Ollie	snapied\.com
