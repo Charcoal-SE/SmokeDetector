@@ -40597,3 +40597,4 @@
 1656227692	Cody Gray	(?-i:6d0NcUougD4)(?#youtube)
 1656228150	Cody Gray	windows11freedownloadactivatediso
 1656228172	Cody Gray	beedatimescrypto\.blogzet
+1656228225	Cody Gray	beeda[\W_]*(?:news|times)(?!crypto)
