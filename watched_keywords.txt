@@ -40598,3 +40598,4 @@
 1656228172	Cody Gray	beedatimescrypto\.blogzet
 1656228225	Cody Gray	beeda[\W_]*(?:news|times)(?!crypto)
 1656254988	Ollie	snapied\.com
+1656220784	Nick	beedatimes\.com
