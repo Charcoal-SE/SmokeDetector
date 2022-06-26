@@ -136,6 +136,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('homoglyph phone numbers 07', '<p>Some 1-844i8O2i7S3S fbody</p>', 'a username', 'math.stackexchange.com', False, False, True),
     ('homoglyph phone numbers 08', '<p>Some 844-8O2-7S3S foobody</p>', 'a username', 'math.stackexchange.com', False, False, True),
     ('Multiple consecutive homoglyph numbers 1', '<p>SomeI-888-884-Olll 888-884-OIII +I-972-S34-S446 972-S34-S446 I-628-21S-2I66 628-21S-2l66 1-844i8O2i7S3S 844a8O2a7S3S body</p>', 'a username', 'math.stackexchange.com', False, False, True),
+    ('repeated body test', 'need enough interesting text to avoid few unique characters rule' * 15, 'luser', 'stackoverflow.com', False, False, True),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,
