@@ -35165,7 +35165,6 @@
 1641732703	Makyen	magisk[\W_]*+zip(?!\.com(?<=magiskzip\.com))
 1641732739	Makyen	fuelestechnology(?:@gmail\.com)?
 1641732755	Makyen	et\.echo tech
-1641732775	Makyen	(?-i:lLx_R4Y0v7c)(?#YouTube)
 1641732790	Makyen	gemini[\W_]*+twins(?!\.xyz(?<=geminitwins\.xyz))
 1641732814	Makyen	(?-i:6Xv0h\.jpg)
 1641733487	cigien	boosornot\.com
