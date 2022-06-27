@@ -25530,7 +25530,6 @@
 1610561126	Spevacus	brandedmobile\.in
 1610564548	Spevacus	outdoorbasketballhub\.com
 1610570638	cigien	marketplace\.digitalocean\.com
-1610573345	Spevacus	paternityusa\.com
 1610587687	cigien	billspk\.com
 1610588120	cigien	blitzz\.io
 1610600489	ppwater	aspiresoftwareconsultancy\.com
