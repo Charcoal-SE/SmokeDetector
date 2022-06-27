@@ -40603,3 +40603,4 @@
 1656262311	cocomac	you[\W_]*+can[\W_]*+reach[\W_]*+(us|them)[\W_]*+(on|at)
 1656264544	cigien	fashiondesignportfolio\.com
 1656264787	cigien	5dailydevotional\.com
+1656288410	cocomac	静乃は主人公を振った、そうして、主人公を裏切った
