@@ -690,3 +690,4 @@ Visualytes
 (?-i:^Kukel of the filth$)
 Kukel of the filth
 meta kukel exchange
+^赤い血$
