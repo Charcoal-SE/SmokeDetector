@@ -40603,3 +40603,4 @@
 1656264544	cigien	fashiondesignportfolio\.com
 1656264787	cigien	5dailydevotional\.com
 1656291202	Makyen	support[\W_]*+my[\W_]*+revenge[\W_]*+against[\W_]*+shizuno
+1656293653	Spevacus	bitcci\.ag
