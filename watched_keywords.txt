@@ -40605,3 +40605,4 @@
 1656291202	Makyen	support[\W_]*+my[\W_]*+revenge[\W_]*+against[\W_]*+shizuno
 1656293653	Spevacus	bitcci\.ag
 1656306685	cocomac	matterhornapartment\.com
+1656312264	Makyen	amazoneestore\.com
