@@ -40618,4 +40618,3 @@
 1656331539	Glorfindel	bitty\W*advance
 1656332990	Nick	theonetechnologies\.com
 1656335005	Spevacus	laxbtcrecovery(?:@gmail\.com)?
-1656336219	Glorfindel	cryptoglobally\.com
