@@ -40658,3 +40658,4 @@
 1656429673	Makyen	allcountrybills\.com
 1656431042	Makyen	(?-i:H4x0rxploit)(?#t.me)
 1656431080	Makyen	(?-i:H4x0rxploits)(?#t.me)
+1656431155	Makyen	haxor[\W_]*+id
