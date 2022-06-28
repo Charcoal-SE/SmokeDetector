@@ -37238,7 +37238,6 @@
 1647505279	tripleee	tataonebangalore\.in
 1647506204	Cody Gray	nguyenminhpoly(?:@gmail\.com)?
 1647508581	tripleee	(?-i:^Nova Lucy$)
-1647510009	tripleee	chinaprinting4u\.com
 1647516408	tripleee	heavenofgamers\.com
 1647520314	cigien	hinz\.pk
 1647531307	Ollie	concurrent-controls\.com
