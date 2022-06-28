@@ -40661,3 +40661,4 @@
 1656431155	Makyen	haxor[\W_]*+id
 1656432651	Ollie	bgfdesignsnyc\.com
 1656432913	Ollie	prestamosgold\.es
+1656432953	Ollie	sassyshows\.com
