@@ -40651,3 +40651,4 @@
 1656399437	Ryan M	imgpaper\.com
 1656399466	Ryan M	imgpaper(?!\.com)
 1656409106	Ryan M	pawrulz\.com
+1656410367	Ryan M	armia\.com
