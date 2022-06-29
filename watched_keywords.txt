@@ -40713,3 +40713,4 @@
 1656502404	Makyen	drsavitachaudhry\.ca
 1656503699	Makyen	nine[\W_]*+one[\W_]*+nine[\W_]*+six[\W_]*+zero[\W_]*+one[\W_]*+five[\W_]*+five[\W_]*+seven[\W_]*+seven[\W_]*+four[\W_]*+zero
 1656506186	Jeff Schaller	talksgossip\.com
+1656506254	Jeff Schaller	logipole\.com
