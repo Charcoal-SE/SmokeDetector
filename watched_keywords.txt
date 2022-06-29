@@ -40710,3 +40710,4 @@
 1656498581	tripleee	(?-i:^Nomorecourses$)
 1656498769	tripleee	nomorecourses(?!\.com)(?<!(?-i:^Nomorecourses$))
 1656502383	Makyen	tinker[\W_]*+tots[\W_]*+preschool(?:[\W_]*+daycare)?
+1656502404	Makyen	drsavitachaudhry\.ca
