@@ -40704,3 +40704,4 @@
 1656496974	Makyen	winner1668\.com
 1656496998	Makyen	winner1668(?!\.com)
 1656498025	Glorfindel	storyboardthat\.com
+1656498240	tripleee	nomorecourses\.com
