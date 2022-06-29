@@ -40712,3 +40712,4 @@
 1656502383	Makyen	tinker[\W_]*+tots[\W_]*+preschool(?:[\W_]*+daycare)?
 1656502404	Makyen	drsavitachaudhry\.ca
 1656503699	Makyen	nine[\W_]*+one[\W_]*+nine[\W_]*+six[\W_]*+zero[\W_]*+one[\W_]*+five[\W_]*+five[\W_]*+seven[\W_]*+seven[\W_]*+four[\W_]*+zero
+1656506186	Jeff Schaller	talksgossip\.com
