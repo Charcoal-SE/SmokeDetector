@@ -40699,3 +40699,4 @@
 1656486914	tripleee	ultimateconnector\.com
 1656486960	tripleee	(?-i:^rosamelill$)
 1656487034	tripleee	freesoftwareapps\.com
+1656488316	Nick	ustankapida\.com
