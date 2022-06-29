@@ -40685,3 +40685,4 @@
 1656452565	Makyen	jordanemperor6(?:@gmail\.com)?
 1656454702	Makyen	coin-12-capital[\W_]*+com
 1656473486	cigien	skyfethiye\.com
+1656473515	cigien	flyakeed\.com
