@@ -40696,3 +40696,4 @@
 1656482530	Cody Gray	onlineRDservice\.com
 1656482614	Cody Gray	Online[\W_]*RD[\W_]*Service(?!\.com(?<=onlineRDservice\.com))
 1656484539	Ryan M	read(?<=//read) product by id
+1656486876	tripleee	(?-i:^ rosamelill$)
