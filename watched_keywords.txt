@@ -40707,3 +40707,4 @@
 1656498240	tripleee	nomorecourses\.com
 1656498428	tripleee	best-carpetclean\.com
 1656498460	tripleee	partshnc\.com
+1656498581	tripleee	(?-i:^Nomorecourses$)
