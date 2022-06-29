@@ -40686,3 +40686,4 @@
 1656454702	Makyen	coin-12-capital[\W_]*+com
 1656473486	cigien	skyfethiye\.com
 1656473515	cigien	flyakeed\.com
+1656476587	cigien	edumotivation\.com
