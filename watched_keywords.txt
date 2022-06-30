@@ -40523,7 +40523,6 @@
 1655999704	Ollie	cukurovaplus\.com
 1655999728	Ollie	a2z\.tools
 1656004242	Makyen	ikaria[\W_]*+lean[\W_]*+belly[\W_]*+juice
-1656006557	Ryan M	coderscay\.blogspot
 1656008175	Jeff Schaller	CJRECOVERY
 1656008589	cigien	(?-i:PLLi-le77HGDZWbQ0jinryMcERYXttnpC5)(?#youtube playlist)
 1656010737	cigien	hivelance\.com
