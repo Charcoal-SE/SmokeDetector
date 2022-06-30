@@ -40755,3 +40755,4 @@
 1656605602	cigien	slideserve\.com
 1656606826	cigien	godrej[\W_]*+splendour(?!\.(?:net|org)\.in(?<=godrejsplendour\.(?:net|org)\.in))
 1656606851	cigien	godrejsplendour\.org\.in
+1656607043	cigien	erauniversity\.in
