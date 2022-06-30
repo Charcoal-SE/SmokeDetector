@@ -1,4 +1,5 @@
 # coding=utf-8
+import regex
 
 """
 Convert number homoglyphs to ASCII numbers
@@ -144,3 +145,132 @@ translate_table = str.maketrans(translate_dict)
 
 def normalize(text):
     return text.translate(translate_table)
+
+
+def table_as_regex(table=None, hex_prefix='', hex_sufix='', separator='', range_separator='-', prefix='[', sufix=']',
+                   as_characters=False, max_value=None, included_obfuscations=None, zero_padding=None,
+                   uppercase_hex=None):
+    """
+    Returns a regular expression character class of all the characters in the provided translation table.
+    :param table:            The table to operate upon. Defaults to translate_table.
+    :param hex_prefix:       Characters to include before a hex character code
+    :param hex_sufix:        Characters to include after a hex character code
+    :param separator:        Character to separate separate hex entries/characters
+    :param range_separator:  Character indicating two hex codes or characters are a range
+    :param prefix:           Characters to include at the begining of the character class
+    :param sufix:            Characters to include at the end of the character class
+    :param as_characters:    True indicates characters should be used instead of hex character codepoints
+    :param max_value:        Maximum value to include (e.g. limit to 4 hex digits by specifying 0xffff)
+    :param included_obfuscations: List of str/characters the translations for which will be included
+    :param zero_padding:     Number of zero-padded chracters for the hex values
+    :param upercase_hex:     Use upercase [A-F] letters for hex codes
+    :return: A string
+    """
+    table = table if table else translate_table
+    escapes = []
+    zero_padding_format = '%0{}x'.format(zero_padding)
+
+    def get_single_value_as_hex_escape(value):
+        if as_characters:
+            return chr(value)
+        if zero_padding is None:
+            value = hex(value)[2:]
+        else:
+            value = zero_padding_format % value
+        if uppercase_hex:
+            value = value.upper()
+        return '{}{}{}'.format(hex_prefix, value, hex_sufix)
+
+    def append_previous(first, prev):
+        if max_value is not None:
+            if first > max_value:
+                return
+            if prev > max_value:
+                prev = max_value
+        prev_text = get_single_value_as_hex_escape(prev)
+        if first == prev:
+            escapes.append(prev_text)
+        else:
+            escapes.append('{}{}{}'.format(get_single_value_as_hex_escape(first), range_separator, prev_text))
+
+    keys = [int(key) for key in table.keys()]
+    keys.sort(key=int)
+    start = None
+    previous = None
+    for key in keys:
+        if included_obfuscations is not None and table[key] not in included_obfuscations:
+            continue
+        if start is None:
+            # Handle the first key we're going to output.
+            start = key
+            previous = key
+            continue
+        if not range_separator or previous + 1 != key:
+            append_previous(start, previous)
+            start = key
+        previous = key
+    append_previous(start, previous)
+    return '{}{}{}'.format(prefix, separator.join(escapes), sufix)
+
+
+def table_as_ms_search_regex(table=None, max_value=0xffff, included_obfuscations=None, as_characters=False,
+                             with_digits=False, extra_escape=None):
+    r"""
+    For MS search: Returns a regular expression character class of all the characters in the provided translation table.
+    :param table:            The table to operate upon. Defaults to translate_table.
+    :param max_value:        Maximum value to include (e.g. limit to 4 hex digits by specifying 0xffff)
+    :param included_obfuscations: List of str/characters the translations for which will be included
+    :param as_characters:    True indicates characters should be used instead of hex character codepoints
+    :param with_digits:      Include \d in the character class
+    :param extra_escape:     Add an additional '\' to the '\x{x}' and '\d' escapes, so '\\x{x}' and '\\d' are used.
+    :return: A string
+    """
+    hex_prefix = r'\\x{' if extra_escape else r'\x{'
+    prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
+    return table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='}', max_value=max_value,
+                          included_obfuscations=included_obfuscations, as_characters=as_characters)
+
+
+def table_as_ms_regexp_regex(table=None, max_value=0xffff, included_obfuscations=None, as_characters=False,
+                             with_digits=False, extra_escape=None):
+    r"""
+    For MS Regexp: Returns a regular expression character set of all the characters in the provided translation table.
+    :param table:            The table to operate upon. Defaults to translate_table.
+    :param max_value:        Maximum value to include (e.g. limit to 4 hex digits by specifying 0xffff)
+    :param included_obfuscations: List of str/characters the translations for which will be included
+    :param as_characters:    True indicates characters should be used instead of hex character codepoints
+    :param with_digits:      Include \d in the character class
+    :param extra_escape:     Add an additional '\' to the '\uxxxx' and '\d' escapes, so '\\uxxxx' and '\\d' are used.
+    :return: A string
+    """
+    hex_prefix = r'\\u' if extra_escape else r'\u'
+    prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
+    return table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='', max_value=max_value,
+                          included_obfuscations=included_obfuscations, zero_padding=4, as_characters=as_characters)
+
+
+def table_as_sd_regex(table=None, max_value=0xffffffff, included_obfuscations=None, as_characters=False,
+                      with_digits=False, extra_escape=None):
+    r"""
+    For SD regex: Returns a regular expression character set of all the characters in the provided translation table.
+    :param table:            The table to operate upon. Defaults to translate_table.
+    :param max_value:        Maximum value to include (e.g. limit to 4 hex digits by specifying 0xffff)
+    :param included_obfuscations: List of str/characters the translations for which will be included
+    :param as_characters:    True indicates characters should be used instead of hex character codepoints
+    :param with_digits:      Include \d in the character class
+    :param extra_escape:     Add a '\' to the '\U', '\u', and '\d' escapes, so '\\U', '\\u', and '\\d' are used.
+    :return: A string
+    """
+    hex_prefix = r'\\U' if extra_escape else r'\U'
+    prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
+    long_u_escape = table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='', max_value=max_value,
+                                   included_obfuscations=included_obfuscations, zero_padding=8,
+                                   as_characters=as_characters)
+    # The regex package does its own parsing of escapes, even on the replace-with string. So, the extra escape on
+    # the '\\u' is needed, just like it is on the '\\U' in the regex pattern.
+    return regex.sub(r'\\U0000(?=[\dA-Fa-f]{4})', r'\\u', long_u_escape)
+
+
+def get_prefix_with_digit_and_extra_escape(with_digits, extra_escape):
+    prefix = r'[\d' if with_digits else '['
+    return prefix.replace('\\', '\\\\') if extra_escape else prefix
