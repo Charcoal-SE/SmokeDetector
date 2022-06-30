@@ -39354,7 +39354,6 @@
 1653049343	Jeff Schaller	godrejsplendour\.net\.in
 1653049564	Makyen	betzillion\.com
 1653052168	Makyen	maadhu[\W_]*+creatives
-1653057760	cigien	godrej[\W_]*+splendour(?!\.net\.in(?<=godrejsplendour\.net\.in))
 1653057821	cigien	abu[\W_]*+dhabi[\W_]*+models(?!\.com(?<=abudhabimodels\.com))
 1653058161	cigien	business-analytic\.de
 1653059235	cigien	(?-i:1FAIpQLScu26UZZvPoBoeXyjQaEn1Xc8kBzIjJyN8xgHywTkjbtASKtg)(?#google forms)
