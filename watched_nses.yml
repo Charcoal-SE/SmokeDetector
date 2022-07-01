@@ -2146,7 +2146,9 @@ items:
 - comment: no longer responding 2020-11-11
   disable: true
   ns: specializedtest.com.
-- ns: macsol.co.in.
+- comment: 2022-07-01 NXDOMAIN
+  disable: true
+  ns: macsol.co.in.
 - comment: 37/216 over 6 months
   disable: true
   ns: inmotionhosting.com.
