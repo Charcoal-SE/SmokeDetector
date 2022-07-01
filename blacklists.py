@@ -323,14 +323,11 @@ class YAMLParserNS(YAMLParserCIDR):
                     log('warn', '{0}: DNS lookup timed out.'.format(ns))
             except Exception:
                 log_current_exception()
-                log('error', '                                         {}'.format(color('v' * len(ns), 'red',
-                                                                                  attrs=['bold'])), no_exception=True)
-                log('error', 'validate YAML: Failed NS validation for: {} in {}'.format(color(ns, 'white',
-                                                                                              attrs=['bold']),
-                                                                                        self._filename),
+                log('error', '{}'.format(color('-' * 41 + 'v' * len(ns), 'red', attrs=['bold'])), no_exception=True)
+                log('error', ('validate YAML: Failed NS validation for:'
+                              ' {} in {}'.format(color(ns, 'white', attrs=['bold']), self._filename)),
                     no_exception=True)
-                log('error', '                                         {}'.format(color('^' * len(ns), 'red',
-                                                                                  attrs=['bold'])), no_exception=True)
+                log('error', '{}'.format(color('-' * 41 + '^' * len(ns), 'red', attrs=['bold'])), no_exception=True)
                 raise
             return True
 
