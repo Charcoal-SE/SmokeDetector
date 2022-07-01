@@ -40762,3 +40762,4 @@
 1656638845	Jeff Schaller	freebestpost\.com
 1656642652	Jeff Schaller	researchchemical9898(?:@gmail\.com)?
 1656657778	cocomac	findingsonmeadowlane\.com
+1656657924	Cody Gray	Findings[\W_]*On[\W_]*Meadow[\W_]*Lane(?!\.com(?<=findingsonmeadowlane\.com))
