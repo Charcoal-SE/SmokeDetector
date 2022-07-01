@@ -40765,3 +40765,4 @@
 1656657924	Cody Gray	Findings[\W_]*On[\W_]*Meadow[\W_]*Lane(?!\.com(?<=findingsonmeadowlane\.com))
 1656662911	tripleee	(?-i:^vinod chavan$)
 1656662956	tripleee	3c(?<=%3c)href%20a
+1656665503	Ryan M	allineurope\.eu
