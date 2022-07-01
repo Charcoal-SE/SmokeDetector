@@ -40772,3 +40772,4 @@
 1656685325	Jeff Schaller	p3care\.com
 1656689632	cocomac	erkeksacmodeli\.com
 1656692089	Ollie	therugrepublic\.in
+1656692787	cigien	bansal[\W_]*+travels(?!\.com(?<=bansaltravels\.com))
