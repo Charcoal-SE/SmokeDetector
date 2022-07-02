@@ -301,7 +301,7 @@ while not GlobalVars.no_se_activity_scan:
                     GlobalVars.flovis.stage('received', hostname, question_id, json.loads(a))
 
                 is_spam = False
-                if GlobalVars.bodyfetcher.threshold == 1 and hostname not in GlobalVars.bodyfetcher.special_cases:
+                if GlobalVars.bodyfetcher.special_cases.get(hostname, GlobalVars.bodyfetcher.threshold) > 1:
                     # If the queue threshold depth is 1 and there are no special cases, then there's not
                     # much benefit to pre-testing, as there isn't a wait for the queue to fill to the threshold.
                     # The site will, however, be behind any site which is already queued.
