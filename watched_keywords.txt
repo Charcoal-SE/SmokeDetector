@@ -40793,3 +40793,4 @@
 1656785016	cigien	apkvow\.com
 1656785499	cigien	d(?:octo)?r[\W_]*+lenin
 1656785602	cigien	ackrolixinnovations\.com
+1656785678	cigien	d(?:octo)?r[\W_]*+emu
