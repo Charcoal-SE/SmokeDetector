@@ -40792,3 +40792,4 @@
 1656784937	cigien	downloadwhats\.app
 1656785016	cigien	apkvow\.com
 1656785499	cigien	d(?:octo)?r[\W_]*+lenin
+1656785602	cigien	ackrolixinnovations\.com
