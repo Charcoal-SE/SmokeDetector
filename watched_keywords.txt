@@ -40795,3 +40795,4 @@
 1656785602	cigien	ackrolixinnovations\.com
 1656785678	cigien	d(?:octo)?r[\W_]*+emu
 1656787447	cigien	ydeh808\.info
+1656789988	cigien	ghafarimarketing\.com
