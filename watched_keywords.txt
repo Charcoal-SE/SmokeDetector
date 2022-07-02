@@ -40797,3 +40797,4 @@
 1656787447	cigien	ydeh808\.info
 1656789988	cigien	ghafarimarketing\.com
 1656790062	cigien	ghafari[\W_]*+marketing(?!\.com(?<=ghafarimarketing\.com))
+1656800878	cocomac	alesta\.me
