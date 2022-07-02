@@ -582,7 +582,8 @@ def message(msg):
     return msg
 
 
-def get_message(id, host="stackexchange.com"):
+def get_message(id, host=None):
+    host = host if host else "stackexchange.com"
     with _clients_lock:
         if host not in _clients:
             raise ValueError("Invalid host")
@@ -712,3 +713,10 @@ def dispatch_shorthand_command(msg):
 
     if should_return_output:
         return "\n".join(output)
+
+
+def is_self(test_id, host=None):
+    host = host if host else "stackexchange.com"
+    with _clients_lock:
+        me = _clients[host].get_me()
+    return test_id == me.id

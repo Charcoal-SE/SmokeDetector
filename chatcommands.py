@@ -2,7 +2,7 @@
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, CmdException, CmdExceptionLongReply, command, get_report_data, \
     is_privileged, message, \
-    tell_rooms, tell_rooms_with, get_message
+    tell_rooms, tell_rooms_with, get_message, is_self
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 import findspam
@@ -2375,12 +2375,12 @@ def dump_data():
     return "Data successfully dumped"
 
 
-@command(int, privileged=True)
-def load_data(msg_id):
-    msg = get_message(msg_id)
-    if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
-        raise CmdException("Message owner is not SmokeDetector, refusing to load")
-    minimally_validate_content_source(msg)
+@command(int, str, privileged=True, arity=(1, 2), give_name=True, aliases=["load-data-force"])
+def load_data(msg_id, hostname, alias_used="load-data"):
+    force = 'force' in alias_used
+    msg = get_message(msg_id, host=hostname)
+    if not force and not is_self(msg.owner.id, host=hostname):
+        raise CmdException("Message owner is not myself. Refusing to load.")
     try:
         SmokeyTransfer.load(msg.content_source)
     except ValueError as e:
