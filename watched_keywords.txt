@@ -40808,7 +40808,6 @@
 1656856349	Makyen	opunlock\.com
 1656856379	Makyen	reg\.com
 1656856405	Makyen	dc9d[\W_]*+4f91[\W_]*+c00f[\W_]*+f74e
-1656856436	Makyen	s\.id
 1656856458	Makyen	(?-i:IPINSLOT4)
 1656856486	Makyen	thejasperz\.com
 1656856899	Mast	edisitechno\.my\.id
