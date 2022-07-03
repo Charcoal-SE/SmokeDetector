@@ -40811,3 +40811,4 @@
 1656856458	Makyen	(?-i:IPINSLOT4)
 1656856486	Makyen	thejasperz\.com
 1656856899	Mast	edisitechno\.my\.id
+1656867237	Makyen	https?://s\.id
