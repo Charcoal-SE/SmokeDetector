@@ -251,23 +251,29 @@ class BodyFetcher:
         return self.per_site_processing_thread_limits.get(site, None) or self.DEFAULT_PER_SITE_PROCESSING_THREAD_LIMIT
 
     def acquire_site_processing_lock(self, site, thread_stats):
-        with self.per_site_processing_thread_locks_lock:
-            site_semaphore = self.per_site_processing_thread_locks.get(site, None)
-            if site_semaphore is None:
-                semaphore_count = self.get_site_thread_limit(site)
-                site_semaphore = threading.BoundedSemaphore(value=semaphore_count)
-                self.per_site_processing_thread_locks[site] = site_semaphore
-            have_acquired_lock = site_semaphore.acquire(blocking=False)
-            if have_acquired_lock:
-                self.site_thread_starvation_warning_thread_launched(site)
-            else:
-                if site == 'stackoverflow.com':
-                    thread_stats['threads_limited_SO'] += 1
+        have_acquired_lock = False
+        try:
+            with self.per_site_processing_thread_locks_lock:
+                site_semaphore = self.per_site_processing_thread_locks.get(site, None)
+                if site_semaphore is None:
+                    semaphore_count = self.get_site_thread_limit(site)
+                    site_semaphore = threading.BoundedSemaphore(value=semaphore_count)
+                    self.per_site_processing_thread_locks[site] = site_semaphore
+                have_acquired_lock = site_semaphore.acquire(blocking=False)
+                if have_acquired_lock:
+                    self.site_thread_starvation_warning_thread_launched(site)
                 else:
-                    thread_stats['threads_limited_non_SO'] += 1
-                if not self.send_site_thread_starvation_warning_if_appropriate(site):
-                    log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
-            return have_acquired_lock
+                    if site == 'stackoverflow.com':
+                        thread_stats['threads_limited_SO'] += 1
+                    else:
+                        thread_stats['threads_limited_non_SO'] += 1
+                    if not self.send_site_thread_starvation_warning_if_appropriate(site):
+                        log_current_thread('info', 'Unable to obtain site processing lock for: {}'.format(site))
+                return have_acquired_lock
+        except Exception:
+            if have_acquired_lock:
+                site_semaphore.release()
+            raise
 
     def release_site_processing_lock(self, site):
         with self.per_site_processing_thread_locks_lock:
@@ -356,6 +362,7 @@ class BodyFetcher:
         # We use self.check_queue_lock here to fully dispatch one queued site at a time and allow
         # consolidation of multiple WebSocket events for the same real-world event.
         with self.check_queue_lock:
+            site_to_handle = None
             try:
                 # Getting the CPU activity also provides time for multiple potential WebSocket events to queue
                 # the same post along with some time for the SE API to update and have information on the new post.
@@ -370,7 +377,6 @@ class BodyFetcher:
                     return None
                 self.cpu_starvation_warning_thread_launched()
                 special_sites = []
-                site_to_handle = None
                 is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
                 with self.queue_lock:
                     sites_in_queue = {site: len(values) for site, values in self.queue.items()}
