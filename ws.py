@@ -44,8 +44,16 @@ import chatcommands
 
 
 MAX_SE_WEBSOCKET_RETRIES = 5
-MIN_PYTHON_VERSION = (3, 6, 0)
-RECOMMENDED_PYTHON_VERSION = (3, 7, 0)
+# Python 3.6.0 is the bare minimum needed to run SmokeDetector.
+MIN_PYTHON_VERSION = (3, 6, 0)  # Below this version we know SmokeDetector has issues.
+# Our CI testing is actually on the latest patch (dot dot) release of the minor
+# version specified in MIN_TESTED_PYTHON_VERSION.
+# MIN_TESTED_PYTHON_VERSION is the earliest version on which we do CI testing as of the last time this
+# was manually updated. The version on which we *actually* do CI testing is the latest release, whatever that
+# is at the time the test is run and GitHub Actions has updated their Python configurations. It is
+# expected that the version mentioned below will not be updated on a regular basis and that it *will be*
+# out of date most of the time.
+MIN_TESTED_PYTHON_VERSION = (3, 7, 13)
 THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
 MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT = 2 * 60 * 60  # 2 hours in seconds
 
@@ -74,17 +82,19 @@ if any('--loglevel' in x for x in sys.argv):
 else:
     Helpers.min_log_level = 0
 
-# Python 3.5.0 is the bare minimum needed to run SmokeDetector
 if THIS_PYTHON_VERSION < MIN_PYTHON_VERSION:
     msg = "SmokeDetector requires Python version {0}.{1}.{2} or newer to run.".format(*MIN_PYTHON_VERSION)
     raise RuntimeError(msg)
 
 # However, 3.5 is already deprecated so we need to prepare for this
 # with a warning in the logs about it.
-if THIS_PYTHON_VERSION < RECOMMENDED_PYTHON_VERSION:
-    msg = 'SmokeDetector may remove support for versions of Python before ' \
-          '{0}.{1}.{2} in the future, please consider upgrading your instances of ' \
-          'SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*RECOMMENDED_PYTHON_VERSION)
+if THIS_PYTHON_VERSION < MIN_TESTED_PYTHON_VERSION:
+    msg = ('SmokeDetector is tested on the latest released version of Python {0}.{1}.'
+           ' SmokeDetector may or may not work with Python versions earlier than that.'
+           ' Code changes which break SmokeDetector in earlier Python versions may be'
+           ' made without notice.'
+           ' Please consider upgrading your instances of'
+           ' SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*MIN_TESTED_PYTHON_VERSION))
     log('warning', msg)
 
 if not GlobalVars.metasmoke_host:
