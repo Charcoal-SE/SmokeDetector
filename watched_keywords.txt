@@ -40851,3 +40851,4 @@
 1657006252	cigien	carevision\.hashnode\.dev
 1657006407	cigien	(?-i:uqyTTm5u6_M)(?#youtu.be)
 1657006435	cigien	chill[\W_]*+fuel
+1657016404	Jeff Schaller	gamookulmobilyalari\.com\.tr
