@@ -40862,3 +40862,4 @@
 1657040595	cigien	drokonsolutionspell(?:@gmail\.com)?
 1657040616	cigien	d(?:octo)?r[\W_]*+okon
 1657041746	Jeff Schaller	linuxsheet\.com
+1657042742	Jeff Schaller	newjerseyloteryresults\.com
