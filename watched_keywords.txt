@@ -40853,3 +40853,4 @@
 1657006435	cigien	chill[\W_]*+fuel
 1657016404	Jeff Schaller	gamookulmobilyalari\.com\.tr
 1657017613	Jeff Schaller	imsheth\.com
+1657017724	Jeff Schaller	yazdania14(?:@gmail\.com)?
