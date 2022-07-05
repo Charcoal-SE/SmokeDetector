@@ -839,7 +839,7 @@ xytropin
 trim\W?genesis
 impact\W?ultra
 pure\W?prime
-\w*?cyberwiz\w*+@gmail\.com(?#XXX)
+\b\w*?cyberwiz\w*+@gmail\.com(?#XXX)
 le\W?fior
 bellaire\W?skin
 alpha\W?king(?!$)
@@ -1481,7 +1481,7 @@ slimatrex
 bellavei
 opuderm
 follicure
-\w*kreatine(?#XXX)
+\b\w*kreatine(?#XXX)
 revolyn
 3073598075
 revimax
@@ -1565,7 +1565,7 @@ c\W*+y\W*+b\W*+e\W*+r\W*+s\W*+h\W*+i\W*+e\W*+l\W*+d\W*+n\W*+o\W*+t\W*+c\W*+h(?:\
 p\W*+r\W*+o\W*+t\W*+o\W*+c\W*+o\W*+l\W*+h\W*+a\W*+c\W*+k\W*+s(?:\W*+(?:a\W*+t\W*+)?g\W*+m\W*+a\W*+i\W*+l\W*+(?:d\W*+o\W*+t\W*+)?c\W*+o\W*+m)?(?#obfuscated email + text: protocolhacks@gmail.com)
 barrymoreloans12(?:@gmail\.com)?
 veda\W?soothie
-\w*+안마\w*+
+\b\w*+안마\w*+
 nutri\W?sleep(?:\W?rx)?
 geno\W?drive
 naturalherbalgardens
@@ -1586,7 +1586,7 @@ nuhydrate(?:\W?serum)?
 revive\W?keto
 voluminesse
 vitahair\W*+max
-(?:up\W*+a\W*+cup.{0,40}?(?:breast|pills|bust|cream|</a>\W*+)s?|(?:breast|pills|bust|cream|\W*</a>).{0,40}?up\W*a\W*cup)
+(?:up\W*+a\W*+cup.{0,40}?(?:breast|pills|bust|cream|</a>\W*+)s?|(?:breast|pills|bust|cream|a>(?<=</a>)).{0,40}?up\W*a\W*cup)
 luma\W?slim
 supreme\W?x
 viva\W?x
