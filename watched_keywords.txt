@@ -40856,3 +40856,4 @@
 1657018113	Jeff Schaller	favouritetable\.com
 1657019748	Ryan M	vardenafil
 1657019966	Ryan M	lifesavingrx(?!\.com)
+1657020101	Ryan M	vilitra(?<!buy[\W_]*+vilitra)
