@@ -40850,3 +40850,4 @@
 1657005376	cigien	super4dtoto\.totoindo\.online
 1657006252	cigien	carevision\.hashnode\.dev
 1657006407	cigien	(?-i:uqyTTm5u6_M)(?#youtu.be)
+1657006435	cigien	chill[\W_]*+fuel
