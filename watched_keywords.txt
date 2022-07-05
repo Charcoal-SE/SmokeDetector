@@ -40856,3 +40856,4 @@
 1657017724	Jeff Schaller	yazdania14(?:@gmail\.com)?
 1657018113	Jeff Schaller	favouritetable\.com
 1657019748	Ryan M	vardenafil
+1657019966	Ryan M	lifesavingrx(?!\.com)
