@@ -40886,3 +40886,4 @@
 1657128322	cigien	slotcashback100\.com
 1657128895	cigien	(?-i:Z2xLEm)(?#fiverr)
 1657129024	cigien	famsapolymersindustry\.com
+1657129084	cigien	aista\.com
