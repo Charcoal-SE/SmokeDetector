@@ -750,7 +750,10 @@ class SmokeyTransfer:
             data['_metadata']['lengths'][key] = length
 
         # hopefully the pickle won't be more than a few MiB
-        raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
+        # For backward compatibility, we use protocol=4, which was introduced in Python 3.4.
+        # protocol=5 was introduced with Python 3.8, so we can move to that once we no longer
+        # support Python 3.7.
+        raw_data = pickle.dumps(data, protocol=4)
         # let's save some traffic
         z_data = zlib.compress(raw_data, 9)
         # need to transfer via chat, so text only
