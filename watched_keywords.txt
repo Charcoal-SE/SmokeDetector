@@ -14853,7 +14853,7 @@
 1577384479	Makyen	ystream24\.com
 1577384497	Makyen	royalexam\.com
 1577386208	Makyen	heritagetutorials\.com
-1577393413	Makyen	drokosun55(?:@gmail\.com)?
+1577393413	Makyen	drokosun55(?!\.weebly\.com)(?:@gmail\.com)?
 1577394510	Eliah Kagan	portal4fitness(?!\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1577397083	Makyen	24x7assignmenthelp\.com
 1577396042	Eliah Kagan	maccrack\.club
