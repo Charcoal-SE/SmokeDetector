@@ -40878,3 +40878,4 @@
 1657109837	Jeff Schaller	crewman\.in
 1657112278	Makyen	selfurl\.xyz
 1657125119	Makyen	usadropshop\.com
+1657125150	Makyen	leodis20linksua(?:[\W_]*+(?:\d++|[\da-f]{5,}+))*
