@@ -971,7 +971,8 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         'post_processing_lock': 0,
         'check_unchanged': 0,
         'threads': '',
-        'high_CPU': '',
+        'high_CPU': 0,
+        'thread_limit': 0,
         'site_limited': '',
     }
     known_operations = [
