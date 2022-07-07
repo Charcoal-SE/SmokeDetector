@@ -40918,3 +40918,4 @@
 1657210855	Ollie	firstouchkiosk\.com
 1657210942	Ollie	plusapp-ar\.com
 1657214435	cigien	zb\.com
+1657214798	cigien	newsdata\.io
