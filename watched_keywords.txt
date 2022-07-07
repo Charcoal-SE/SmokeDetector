@@ -40914,3 +40914,4 @@
 1657198102	Makyen	wmgtasarim
 1657198559	Makyen	whydonate\.nl
 1657198613	Makyen	woodford[\W_]*+gray[\W_]*+group
+1657198669	Makyen	si̇stem beyi̇mi̇z
