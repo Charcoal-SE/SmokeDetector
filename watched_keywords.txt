@@ -40919,3 +40919,4 @@
 1657210942	Ollie	plusapp-ar\.com
 1657214435	cigien	zb\.com
 1657214798	cigien	newsdata\.io
+1657215244	cigien	technomax[\W_]*+systems
