@@ -40928,3 +40928,4 @@
 1657252916	cigien	keyboardtester\.unaux\.com
 1657254357	cigien	nuevacash\.com
 1657260643	cocomac	vedantasset\.com
+1657260821	Makyen	vedantasset(?!\.com)
