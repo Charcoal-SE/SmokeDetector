@@ -40953,3 +40953,4 @@
 1657309368	Spevacus	auto-verschrotten\.de
 1657309395	Spevacus	nrw-autoverwertung\.de
 1657309421	Spevacus	lkw-entsorgen\.de
+1657309450	Spevacus	autoverwertung\.de\.com
