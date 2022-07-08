@@ -40943,3 +40943,4 @@
 1657288311	Jeff Schaller	confidays\.com
 1657288411	Makyen	duthuyenluxury\.com
 1657289188	Makyen	confidays(?!\.com)
+1657293408	Glorfindel	ransomware\W*service
