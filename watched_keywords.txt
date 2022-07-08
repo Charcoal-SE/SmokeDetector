@@ -40957,3 +40957,4 @@
 1657312853	cigien	karizmanews\.com
 1657313685	cigien	surepac\.in
 1657316049	cigien	ood[\W_]*+health[\W_]*+herbal[\W_]*+foundation(?:[\W_]*+(?:at[\W_]*+)?yahoo[\W_]*+(?:dot[\W_]*+)?com)?
+1657316076	cigien	good[\W_]*+health[\W_]*+herbal[\W_]*+foundation(?:[\W_]*+(?:at[\W_]*+)?yahoo[\W_]*+(?:dot[\W_]*+)?com)?
