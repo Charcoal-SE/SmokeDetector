@@ -40923,3 +40923,4 @@
 1657215645	cigien	mpulsemobile\.com
 1657217084	cigien	valuegist\.com\.ng
 1657245175	cigien	ezcellusa\.com
+1657247068	cigien	superwritten\.com
