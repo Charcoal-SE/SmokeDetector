@@ -40933,3 +40933,4 @@
 1657265959	Jeff Schaller	ohcanvas\.com
 1657266761	Glorfindel	ucc\W*environmental
 1657269962	Glorfindel	Portfolio\W*Plus
+1657280086	Ryan M	venmetals\.com
