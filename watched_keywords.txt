@@ -40930,3 +40930,4 @@
 1657260643	cocomac	vedantasset\.com
 1657260821	Makyen	vedantasset(?!\.com)
 1657261368	cigien	haseebpc\.com
+1657265959	Jeff Schaller	ohcanvas\.com
