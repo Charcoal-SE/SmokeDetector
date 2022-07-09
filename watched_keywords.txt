@@ -40977,3 +40977,4 @@
 1657380954	Makyen	nexconsultants\.com
 1657380979	Makyen	nex[\W_]*+consultants(?!\.com(?<=nexconsultants\.com))
 1657382500	cocomac	Scam[\W_]*+Recovery
+1657384119	cigien	parsico\.net
