@@ -40976,3 +40976,4 @@
 1657379018	Makyen	19463[\W_]*+project[\W_]*+color
 1657380954	Makyen	nexconsultants\.com
 1657380979	Makyen	nex[\W_]*+consultants(?!\.com(?<=nexconsultants\.com))
+1657382500	cocomac	Scam[\W_]*+Recovery
