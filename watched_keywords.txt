@@ -40972,3 +40972,4 @@
 1657364544	Glorfindel	sphereplugins\.com
 1657377665	Makyen	smartifysol\.com
 1657378037	Jeff Schaller	ontherocks\.in
+1657378246	Makyen	mkblogshere\.blogspot
