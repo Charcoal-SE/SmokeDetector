@@ -40978,3 +40978,4 @@
 1657380979	Makyen	nex[\W_]*+consultants(?!\.com(?<=nexconsultants\.com))
 1657382500	cocomac	Scam[\W_]*+Recovery
 1657384119	cigien	parsico\.net
+1657384920	cigien	cheapairlinesfares\.com
