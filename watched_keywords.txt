@@ -40960,3 +40960,4 @@
 1657316406	cigien	pokemongocoordinates(?#discord)
 1657333427	cigien	popcustoms\.com
 1657333452	cigien	popcustoms(?!\.com)
+1657334144	cigien	samyar[\W_]*+ghodrati
