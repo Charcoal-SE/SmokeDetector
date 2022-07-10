@@ -40984,3 +40984,4 @@
 1656521296	cocomac	place[\W_]*+your[\W_]*+order(?![\W_]*+again)(?![\W_]*+(?:button|btn))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1657429140	cocomac	xn--winliv4d-8cb\.xn--tckwe
 1657429495	cigien	winlive4d
+1657432176	cigien	rinjanisamalas\.net
