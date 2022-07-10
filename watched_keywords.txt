@@ -40991,3 +40991,4 @@
 1657455711	tripleee	rakeshranks\.com
 1657466607	Makyen	jgbanpmkkimbdiiedceplpmnolcldeoh
 1657466629	Makyen	youtubemaster\.cc
+1657466662	Makyen	youtube[\W_]*+master(?!\.cc(?<=youtubemaster\.cc))
