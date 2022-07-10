@@ -40994,3 +40994,4 @@
 1657466662	Makyen	youtube[\W_]*+master(?!\.cc(?<=youtubemaster\.cc))
 1657478290	cigien	standardfinancecorporation\.com
 1657478471	cigien	drupalmaster\.live
+1657479479	cigien	counterfeitcompany\.com
