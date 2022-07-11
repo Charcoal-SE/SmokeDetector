@@ -1544,56 +1544,63 @@ def test(content, alias_used="test"):
     return result
 
 
-def bisect_regex(s, regexes, bookend=True, timeout=None):
+def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=False):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
     start_time = time.time()
-    try:
-        compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
-        match = compiled.search(s, timeout=timeout)
-    except Exception:
-        # Log wich regex caused the error:
-        seconds = time.time() - start_time
-        log('error', "bisect_regex: in {} seconds, got an error with the regex: {}".format(seconds, formatted_regex))
-        raise
-
+    compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
+    match = compiled.search(test_text)
     seconds = time.time() - start_time
-    if seconds > 0.1:
-        # For debugging, if a regex is taking a long time, we want to know about it. This is about 5 times
-        # longer than the high end of what one group of 64 regexes normally takes in our tests.
-        # log('debug', "bisect_regex: took {} seconds for the regex: {}".format(seconds, formatted_regex))
-        pass
-    if not match:
-        return []
-    if len(regexes) <= 1:  # atom element found
-        return regexes
+    # The high end of "normal" wrt. amount of time for a 64x pattern is ~0.02s
+    timeouts = []
+    timed_out = timeout is not None and seconds > timeout
+    if timed_out:
+        timeouts = [{'seconds': seconds, 'regexes': regexes}]
+    if timed_out or force_log_time:
+        log('debug', "bisect_regex: {} s, regex: {}".format('%9.5f' % seconds, formatted_regex))
+    if not match and not timed_out:
+        return {'matches': [], 'timeouts': []}
+    if len(regexes) <= 1:  # This is a single regex
+        return {'matches': regexes, 'timeouts': timeouts}
 
     mid_len = (len(regexes) - 1).bit_length() - 1
     mid = 2 ** mid_len
-    return bisect_regex(s, regexes[:mid], bookend=bookend, timeout=timeout) + \
-        bisect_regex(s, regexes[mid:], bookend=bookend, timeout=timeout)
+    half1_result = bisect_regex(test_text, regexes[:mid], bookend=bookend, timeout=timeout, force_log_time=timed_out)
+    half2_result = bisect_regex(test_text, regexes[mid:], bookend=bookend, timeout=timeout, force_log_time=timed_out)
+    both_matches = half1_result['matches'] + half2_result['matches']
+    both_timeouts = half1_result['timeouts'] + half2_result['timeouts']
+    if len(both_timeouts) == 0 and timed_out:
+        both_timeouts = timeouts
+    return {'matches': both_matches, 'timeouts': both_timeouts}
 
 
 def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
-    results = []
+    matches = []
+    timeouts = []
     for expresion in regexes:
+        start_time = time.time()
         compiled = regex_compile_no_cache(regex_to_format.format(expresion[0]), city=findspam.city_list,
                                           ignore_unused=True)
-        match = compiled.search(test_text, timeout=timeout)
+        match = compiled.search(test_text)
+        seconds = time.time() - start_time
+        timed_out = timeout is not None and seconds > timeout
+        if timed_out:
+            timeouts.append({'seconds': seconds, 'regexes': [expresion]})
         if match:
-            results.append(expresion)
-    return results
+            matches.append(expresion)
+    return {'matches': matches, 'timeouts': timeouts}
 
 
 def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True, timeout=None):
     regex_chunks = chunk_list(regexes, size)
-    results = []
+    matches = []
+    timeouts = []
     for chunk in regex_chunks:
-        matches = bisect_regex(test_text, chunk, bookend=bookend, timeout=timeout)
-        if matches:
-            results.extend(matches)
-    return results
+        results = bisect_regex(test_text, chunk, bookend=bookend, timeout=timeout)
+        matches.extend(results['matches'])
+        timeouts.extend(results['timeouts'])
+    return {'matches': matches, 'timeouts': timeouts}
 
 
 def bisect_number_list(s, full_number_list, filename):
@@ -1637,7 +1644,6 @@ def get_watch_and_blacklist_number_bisects(s):
 def bisect(msg, s):
     bookended_regexes = []
     non_bookended_regexes = []
-    regexes = []
     non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
     non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
     bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
@@ -1650,30 +1656,56 @@ def bisect(msg, s):
         s = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
         pass
+    matches = []
+    timeouts = []
+    is_pytest = "pytest" in sys.modules
+    timeout = 1 if is_pytest else None
     # A timeout of 1 second is about 50 times longer than we're currently seeing. It should give
     # us a good indication of when we have a regex that is not behaving as well as we'd like.
     # If there is a regex which needs more than this, feel free to adjust the timeout. However,
     # it would be better to look at how the regex might be rewritten.
-    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=1)
-    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=1))
+    results_bookended = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=timeout)
+    results_non_bookended = bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False,
+                                                          timeout=timeout)
+    matches.extend(results_bookended['matches'])
+    matches.extend(results_non_bookended['matches'])
+    timeouts.extend(results_bookended['timeouts'])
+    timeouts.extend(results_non_bookended['timeouts'])
+    timeout_error_message = ''
+    if timeouts:
+        formatted_timeouts = []
+        for value in timeouts:
+            seconds = '%9.5f' % value['seconds']
+            regexes_formatted_text = ['`{}` on line {} of {}'.format(raw_pattern, line_number, filename)
+                                      for raw_pattern, (line_number, filename) in value['regexes']]
+            formatted_timeouts.append('{} s: {}'.format(seconds, (';\n' + ' ' * 15).join(regexes_formatted_text)))
+        indented_timeout_list_text = '  {}'.format('\n  '.join(formatted_timeouts))
+        timeout_error_message = 'bisect excessive regex processing time:\n{}'.format(indented_timeout_list_text)
+        log('warning', timeout_error_message)
+        if is_pytest:
+            # Cause the CI testing to fail when there were timeouts.
+            raise TimeoutError(timeout_error_message)
+        timeout_error_message = '\n' + timeout_error_message
     # Number matches use an additional value in the tuple. Change any regex matches to have tuples of the same length.
-    matching = [(raw_pattern, line_and_filename, '', []) for (raw_pattern, line_and_filename) in matching]
+    matches = [(raw_pattern, line_and_filename, '', []) for (raw_pattern, line_and_filename) in matches]
     # Number bisects
-    matching.extend(get_watch_and_blacklist_number_bisects(s))
+    matches.extend(get_watch_and_blacklist_number_bisects(s))
 
-    if not matching:
-        return "{!r} is not caught by a blacklist or watchlist item.".format(s)
+    if not matches:
+        return "{!r} is not caught by a blacklist or watchlist item.{}".format(s, timeout_error_message)
 
-    if len(matching) == 1:
-        raw_pattern, (line_number, filename), match_type, unused = matching[0]
+    if len(matches) == 1:
+        raw_pattern, (line_number, filename), match_type, unused = matches[0]
         if match_type and 'matched' not in match_type:
             match_type = " matched " + match_type
-        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
+        return ("Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
             raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
+            + timeout_error_message)
     else:
-        return "Matched by the following:\n" + "\n".join(
+        return ("Matched by the following:\n" + "\n".join(
             "{}{types} on line {} of {}".format(raw_pattern, line_number, filename, types=types)
-            for raw_pattern, (line_number, filename), types, unused in matching)
+            for raw_pattern, (line_number, filename), types, unused in matches)
+            + timeout_error_message)
 
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
