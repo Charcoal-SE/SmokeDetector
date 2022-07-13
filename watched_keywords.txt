@@ -41080,3 +41080,4 @@
 1657752140	Makyen	7cchlorinegassupplier
 1657752175	Makyen	aughdaddytoohard01
 1657752208	Makyen	casualarticlesandblogs\.com
+1657752244	Makyen	casualarticlesandblogs(?!\.com)
