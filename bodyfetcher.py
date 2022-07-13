@@ -293,7 +293,7 @@ class BodyFetcher:
             launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
             if (launched_timestamp < min_time and chat_timestamp < min_time):
                 record['chat_timestamp'] = now
-                message = ("Unable to launch scan thread due to exhausted general thred limit"
+                message = ("Unable to launch scan thread due to exhausted general thread limit"
                            " of {} for {} seconds.").format(self.max_scan_thread_count,
                                                             round(now - launched_timestamp, 2))
                 Tasks.do(tell_rooms_with, "debug", message)
@@ -319,7 +319,7 @@ class BodyFetcher:
         launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
         if (launched_timestamp < min_time and chat_timestamp < min_time):
             record[site]['chat_timestamp'] = now
-            message = ("Unable to launch scan thread for {} due to exhausted thred limit"
+            message = ("Unable to launch scan thread for {} due to exhausted thread limit"
                        " of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
                                                         round(now - launched_timestamp, 2))
             Tasks.do(tell_rooms_with, "debug", message)
