@@ -41081,3 +41081,4 @@
 1657752175	Makyen	aughdaddytoohard01
 1657752208	Makyen	casualarticlesandblogs\.com
 1657752244	Makyen	casualarticlesandblogs(?!\.com)
+1657752279	Makyen	blog\.didm\.in
