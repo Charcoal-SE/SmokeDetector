@@ -41067,3 +41067,4 @@
 1657685341	cocomac	Mustdial
 1657690446	cigien	stylusmarketing\.ca
 1657693201	cigien	smads\.com\.au
+1657693410	cigien	(?-i:csgonews1)(?#shrinke.me)
