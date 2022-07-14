@@ -41114,3 +41114,4 @@
 1657802043	Jeff Schaller	khalidabdellah\.com
 1657718137	DavidW	v2websolutions\.com
 1657803105	Jeff Schaller	x9barber\.com
+1657803494	Makyen	spcinsaner(?:[\W_]*+(?:shop|\d++|[\da-f]{5,}+)s?)*
