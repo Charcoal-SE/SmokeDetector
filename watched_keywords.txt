@@ -41133,3 +41133,4 @@
 1657879331	Makyen	nizakonda\.jigsy\.com
 1657879365	Makyen	(?-i:ELnR9fW)(?#cutt.ly)
 1657879392	Makyen	fridayshopping\.vn
+1657879429	Makyen	fridayshopping(?!\.vn)
