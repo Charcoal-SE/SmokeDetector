@@ -41122,7 +41122,6 @@
 1657843822	cigien	krishnadey30(?#medium)
 1657848303	Makyen	vtvhyundai\.vn
 1657850463	Makyen	代写
-1657855229	cigien	tokogacor\.online
 1657856929	cigien	gmailguide\.io
 1657861335	Makyen	xpro[\W_]*+theme[\W_]*+builder
 1657861357	Makyen	elementor\.wpxpro\.com
