@@ -41129,3 +41129,4 @@
 1657867656	Glorfindel	tokogacorsite
 1657879215	Makyen	kolkatabengaligirl\.com
 1657879240	Makyen	bootsgrid(?!\.com)
+1657879303	Ryan M	jenvi[\W_]*+convention[\W_]*+center
