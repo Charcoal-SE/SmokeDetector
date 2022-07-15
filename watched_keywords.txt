@@ -40940,7 +40940,6 @@
 1657289188	Makyen	confidays(?!\.com)
 1657293408	Glorfindel	ransomware\W*service
 1657295123	Ollie	coinbasecustomersupport123help\.wordpress\.com
-1657295470	Ollie	youth4work\.com
 1657299950	Ollie	geniussports\.com
 1657300439	Ollie	portfolioplus\.com
 1657305025	Makyen	(?-i:emBxJ)(?#urlzs.com)
