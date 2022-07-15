@@ -41135,3 +41135,4 @@
 1657879392	Makyen	fridayshopping\.vn
 1657879429	Makyen	fridayshopping(?!\.vn)
 1657879455	Makyen	emblixacademy\.com
+1657880381	Jeff Schaller	ochk\.hk
