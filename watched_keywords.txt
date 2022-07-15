@@ -41140,3 +41140,4 @@
 1657881577	Ryan M	jenvi[\W_]*+convention[\W_]*+center
 1657888339	Jeff Schaller	pikndel\.com
 1657888393	Jeff Schaller	thevapes\.uk
+1657890838	Jeff Schaller	huracanfutbol\.com
