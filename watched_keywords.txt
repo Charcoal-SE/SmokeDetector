@@ -41130,3 +41130,4 @@
 1657879215	Makyen	kolkatabengaligirl\.com
 1657879240	Makyen	bootsgrid(?!\.com)
 1657879303	Ryan M	jenvi[\W_]*+convention[\W_]*+center
+1657879331	Makyen	nizakonda\.jigsy\.com
