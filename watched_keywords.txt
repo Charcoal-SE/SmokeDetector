@@ -41125,3 +41125,4 @@
 1657855229	cigien	tokogacor\.online
 1657856929	cigien	gmailguide\.io
 1657861335	Makyen	xpro[\W_]*+theme[\W_]*+builder
+1657861357	Makyen	elementor\.wpxpro\.com
