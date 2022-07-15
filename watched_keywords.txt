@@ -41119,3 +41119,4 @@
 1657815659	Ollie	Jamshed\.lvsalamanca(?:@gmail\.com)?
 1657818445	cigien	hotreviewsweb(?!\.com)
 1657819881	Ollie	aiyc\.top
+1657843822	cigien	krishnadey30(?#medium)
