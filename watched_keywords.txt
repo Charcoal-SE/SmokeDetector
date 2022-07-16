@@ -41183,3 +41183,4 @@
 1657993854	cigien	sonneriemp3gratuite\.com
 1657994411	Makyen	sonneriemp3gratuite(?!\.com)
 1657998147	cigien	grinchcostume\.shop
+1657998277	Makyen	grinch[\W_]*+costume(?!\.shop(?<=grinchcostume\.shop))(?:[\W_]*+(?:shop|\d++|[\da-f]{5,}+)s?)*
