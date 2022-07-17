@@ -41186,3 +41186,4 @@
 1657998277	Makyen	grinch[\W_]*+costume(?!\.shop(?<=grinchcostume\.shop))(?:[\W_]*+(?:shop|\d++|[\da-f]{5,}+)s?)*
 1658006897	Machavity	direct\.lc\.chat
 1658020233	Jeff Schaller	CYBER LORD
+1658027673	cigien	indigocard\.ltd
