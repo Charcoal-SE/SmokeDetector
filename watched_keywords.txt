@@ -41237,3 +41237,4 @@
 1658243709	cigien	thefitpets\.com
 1658243931	Makyen	zfinance(?!\.com\.au)
 1658243955	cigien	sheikspells\d*
+1658244058	cigien	proonlinemarketer\.tumblr\.com
