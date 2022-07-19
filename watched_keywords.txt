@@ -41213,3 +41213,4 @@
 1658198807	cigien	bresciapc(?!\.com)
 1658199217	Makyen	reverse-geocoding\.com
 1658200834	cigien	thietbithongminhabs\.vn
+1658209725	cocomac	apktemple\.com
