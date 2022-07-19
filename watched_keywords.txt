@@ -41235,3 +41235,4 @@
 1658243552	cigien	rrbkolkata\.org
 1658243600	cigien	gtechwebindia
 1658243709	cigien	thefitpets\.com
+1658243931	Makyen	zfinance(?!\.com\.au)
