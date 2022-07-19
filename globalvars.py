@@ -88,7 +88,7 @@ class GlobalVars:
     # recently_scanned_posts is not stored upon abnormal exit (exceptions, ctrl-C, etc.).
     recently_scanned_posts = {}
     recently_scanned_posts_lock = threading.Lock()
-    recently_scanned_posts_retention_time = 60 * 60  # 60 minutes
+    recently_scanned_posts_retention_time = 24 * 60 * 60  # 24 hours
     api_backoff_time = 0
     deletion_watcher = None
 
