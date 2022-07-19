@@ -41230,3 +41230,4 @@
 1658235971	Makyen	freehealthtips\.in
 1658236020	Makyen	dfy[\W_]*+saas
 1658241727	cigien	musicexplorers\.com
+1658243390	cigien	zfinance\.com\.au
