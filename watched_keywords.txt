@@ -41240,3 +41240,4 @@
 1658245397	cigien	ath[\W_]*+infosystems
 1658258580	cigien	eeepedia\.com
 1658263707	cigien	productz\.com
+1658279439	cigien	alightmotionproapk\.net
