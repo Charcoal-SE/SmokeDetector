@@ -41247,3 +41247,4 @@
 1658299316	cigien	skillsrich\.com
 1658299351	cigien	skills[\W_]*+info
 1658300457	cigien	zevin\.ir
+1658303409	Mast	Shoviv[\W_]*+Exchange
