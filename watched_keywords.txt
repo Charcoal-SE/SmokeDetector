@@ -41246,3 +41246,4 @@
 1658295302	cigien	cargo-ws
 1658297998	cigien	crazybuy\.pk
 1658299316	cigien	skillsrich\.com
+1658299351	cigien	skills[\W_]*+info
