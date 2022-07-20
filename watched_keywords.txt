@@ -41259,3 +41259,4 @@
 1658330536	cigien	apero[\W_]*+publishers?
 1658331019	cigien	muaban\.net
 1658331471	cigien	SWIFTHACKGENIUS
+1658333961	cigien	bestelectricpro\.com
