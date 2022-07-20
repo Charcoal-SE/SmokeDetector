@@ -41258,3 +41258,4 @@
 1658325361	Robert Longson	b7b7ha\.xyz
 1658326071	Jeff Schaller	usamedicalsurgical\.com
 1658327780	Spevacus	thelawreporters\.com
+1658330536	cigien	apero[\W_]*+publishers?
