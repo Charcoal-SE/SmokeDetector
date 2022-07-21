@@ -41268,3 +41268,4 @@
 1658369999	Makyen	dtptech\.vn
 1658372369	Makyen	apollo-basement-waterproofing-queens\.business\.site
 1658379980	Makyen	angelm\.in
+1658380010	Makyen	(?-i:EthereumBeaconChain)(?#bit.ly)
