@@ -41294,3 +41294,4 @@
 1658412730	Makyen	clarity[\W_]*+scopes
 1658412757	Makyen	andersenlab\.com
 1658412794	Makyen	sonovive(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
+1658412823	Makyen	indiatopescorts\.com
