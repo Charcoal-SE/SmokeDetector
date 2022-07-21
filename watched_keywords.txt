@@ -41282,3 +41282,4 @@
 1658406610	Makyen	kisanmajdur(?!\.com)
 1658406666	Makyen	hankbuyshouses(?!\.com)
 1658406725	Makyen	natural[\W_]*+vitality[\W_]*+calm(?:[\W_]*+(?:gummies|\d++|[\da-f]{5,}+)s?)*
+1658407730	Makyen	tanap\.net
