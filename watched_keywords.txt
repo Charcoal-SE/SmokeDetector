@@ -41304,3 +41304,4 @@
 1658415112	cigien	drivedirect\.link
 1658415682	cigien	angularversion14\.blogspot
 1658415922	cigien	nevinainfotech\.com
+1658415981	cigien	baniglobal(?!\.com)
