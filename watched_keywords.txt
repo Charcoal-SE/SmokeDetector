@@ -41298,3 +41298,4 @@
 1658412847	Makyen	ai-trademarks\.co\.uk
 1658412875	Makyen	ai[\W_]*+trademarks(?!\.co\.uk(?<=ai-trademarks\.co\.uk))
 1658412912	Makyen	(?-i:bdshroud)(?#fiverr.com)
+1658413035	cigien	tripplecode\.com
