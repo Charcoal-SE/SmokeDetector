@@ -41315,3 +41315,4 @@
 1658434191	Jeff Schaller	neuromarketingglobal\.com
 1658434452	Makyen	premarketing[\W_]*+global(?!\.com(?<=premarketingglobal\.com))
 1658436333	cigien	baseflowcoins\.com
+1658436967	cigien	(?-i:iamvijaykishan)(?#medium)
