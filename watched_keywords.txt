@@ -41306,3 +41306,4 @@
 1658415922	cigien	nevinainfotech\.com
 1658415981	cigien	baniglobal(?!\.com)
 1658416332	cigien	trekkersnepal\.com
+1658418329	cigien	myuwucafe\.com
