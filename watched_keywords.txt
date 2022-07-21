@@ -41295,3 +41295,4 @@
 1658412757	Makyen	andersenlab\.com
 1658412794	Makyen	sonovive(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1658412823	Makyen	indiatopescorts\.com
+1658412847	Makyen	ai-trademarks\.co\.uk
