@@ -41291,3 +41291,4 @@
 1658412646	Makyen	gbplusyo\.com
 1658412675	Makyen	robu(?!\.in)
 1658412702	Makyen	highway420\.club
+1658412730	Makyen	clarity[\W_]*+scopes
