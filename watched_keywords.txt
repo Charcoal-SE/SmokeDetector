@@ -41285,3 +41285,4 @@
 1658407730	Makyen	tanap\.net
 1658411726	cigien	kern\.ai
 1658411834	cigien	(?-i:UCkQtpV6gLGHxWVrgtKwOGPw)(?#youtube channel)
+1658412328	cigien	kerassentials
