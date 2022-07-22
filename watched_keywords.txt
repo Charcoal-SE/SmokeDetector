@@ -41316,3 +41316,4 @@
 1658434452	Makyen	premarketing[\W_]*+global(?!\.com(?<=premarketingglobal\.com))
 1658436333	cigien	baseflowcoins\.com
 1658436967	cigien	(?-i:iamvijaykishan)(?#medium)
+1658449765	cigien	newmiind\.com
