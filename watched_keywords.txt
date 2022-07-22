@@ -41331,3 +41331,4 @@
 1658491727	Jeff Schaller	mygenmeds\.com
 1658497509	cigien	topbestalternatives\.com
 1658499761	cigien	dctinc\.com
+1658499829	cigien	dct[\W_]*+inc(?!\.com(?<=dctinc\.com))
