@@ -41349,3 +41349,4 @@
 1658519129	Makyen	techdecodetutorials\.com
 1658528220	cigien	realbible\.tech
 1658528250	cigien	codehurry\.com
+1658528595	cigien	windows10skill\.com
