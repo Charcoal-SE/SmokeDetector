@@ -41333,3 +41333,4 @@
 1658499761	cigien	dctinc\.com
 1658499829	cigien	dct[\W_]*+inc(?!\.com(?<=dctinc\.com))
 1658501668	Makyen	mavic[\W_]*+air[\W_]*+2s
+1658501859	Makyen	(?-i:oiFTvBAnvWo)(?#youtu.be)
