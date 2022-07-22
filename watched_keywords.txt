@@ -41323,3 +41323,4 @@
 1658477364	tripleee	driver[\W_]*+talent
 1658486560	Jeff Schaller	brollyacademy\.com
 1658486611	Jeff Schaller	visiontechnews\.com
+1658487079	Jeff Schaller	planeks\.net
