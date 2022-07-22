@@ -41335,3 +41335,4 @@
 1658501668	Makyen	mavic[\W_]*+air[\W_]*+2s
 1658501859	Makyen	(?-i:oiFTvBAnvWo)(?#youtu.be)
 1658502003	Makyen	kartbutiken\.se
+1658502171	Makyen	aiprogmarketing(?!\.com)
