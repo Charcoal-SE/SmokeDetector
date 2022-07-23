@@ -39638,7 +39638,6 @@
 1653885531	Makyen	adultdoll\.de
 1653885710	Makyen	sapphiresolutions\.net
 1653891025	tripleee	ackrolix\.co
-1653891297	tripleee	ackrol?ix(?!\.co\b)
 1653892354	tripleee	ihealthcure\.com
 1653892987	tripleee	dmrengineering\.net
 1653893407	tripleee	(?-i:^Arunprakash$)
