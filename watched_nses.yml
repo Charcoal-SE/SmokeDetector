@@ -2509,7 +2509,9 @@ items:
 - comment: 2021-11-02 SERVFAIL
   disable: true
   ns: main-hosting.eu.
-- ns: leytewebhost.com.
+- comment: 2021-11-02 NXDOMAIN
+  disable: true
+  ns: leytewebhost.com.
 - ns: epizy.com.
 - ns: hostingmadeeasy.com.
 - ns:
