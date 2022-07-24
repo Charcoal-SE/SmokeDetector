@@ -41384,3 +41384,4 @@
 1658673004	cigien	stylebyneet\.com
 1658673786	Makyen	mamsea30(?:@gmail\.com)?
 1658679982	Makyen	patrick[\W_]*+spell
+1658680004	Makyen	powerfulspell(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
