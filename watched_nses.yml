@@ -2138,7 +2138,7 @@ items:
   ns: hover.com.
 - ns: stechsky.com.
 - ns: loopbyte.com.
-- comment: lo longer responding 2020-04-02
+- comment: no longer responding 2020-04-02
   disable: true
   ns: dynamicnetips.com.
 - ns: w3softech.com.
@@ -2802,7 +2802,9 @@ items:
 - ns: yosif.xyz.
 - ns: bodis.com.
 - ns: shared-host.in.
-- ns: cprapid.com.
+- comment: NXDOMAIN 2022-07-24
+  disable: true
+  ns: cprapid.com.
 - ns: cloudoon.com.
 - ns: globalitsuccess.com.
 - ns: interserver.net.
