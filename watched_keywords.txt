@@ -41396,3 +41396,4 @@
 1658734638	Makyen	vegasslots777\.vip
 1658734670	Makyen	vegasslots\d*(?!\.vip(?<=vegasslots777\.vip))
 1658734703	Makyen	indosloter88\.com
+1658734730	Makyen	indosloter\d*(?!\.com(?<=indosloter88\.com))
