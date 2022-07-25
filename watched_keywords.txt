@@ -41388,7 +41388,6 @@
 1658688646	cigien	essaygeeks\.co\.uk
 1658690444	cigien	farmanitfirm\.com
 1658721013	tripleee	saigonnamphat\.vn
-1658726603	tripleee	rohit[\W_]*+verma
 1658726639	tripleee	(?-i:rohitverma_87831(?<=@rohitverma_87831))(?# medium.com)
 1658727163	tripleee	easy-views\.org
 1658727734	tripleee	primeitsolution\.us
