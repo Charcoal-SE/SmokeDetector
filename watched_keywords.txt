@@ -41399,3 +41399,4 @@
 1658734730	Makyen	indosloter\d*(?!\.com(?<=indosloter88\.com))
 1658734762	Makyen	indoarena88\.me
 1658734789	Makyen	indoarena\d*(?!\.me(?<=indoarena88\.me))
+1658734815	Makyen	iconplaygg\.net
