@@ -37893,7 +37893,6 @@
 1649222333	tripleee	(?-i:^thomas lane)
 1649224983	tripleee	mazeless\.com
 1649227929	tripleee	premade\.co\.in
-1649230633	Robert Longson	lowestflightfare\.com
 1649231332	Robert Longson	getlinks\.com
 1649231935	tripleee	getlinks[\W_]*+vietnam
 1649234561	tripleee	(?-i:OUxtXMQI0hbUm)(?# express.adobe.com sevenmentor promotion)
