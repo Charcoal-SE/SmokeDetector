@@ -41394,3 +41394,4 @@
 1658727163	tripleee	easy-views\.org
 1658727734	tripleee	primeitsolution\.us
 1658734638	Makyen	vegasslots777\.vip
+1658734670	Makyen	vegasslots\d*(?!\.vip(?<=vegasslots777\.vip))
