@@ -41441,3 +41441,4 @@
 1658833356	tripleee	mighty[\W_]*+warners?+(?<!(?-i:^mightywarners$))
 1658834180	tripleee	vaex\.io
 1658834617	tripleee	badenewby\.co\.uk
+1658834639	tripleee	cyberworx\.in
