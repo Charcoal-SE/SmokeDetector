@@ -1949,6 +1949,9 @@ items:
   - quincy.ns.cloudflare.com.
   - roxy.ns.cloudflare.com.
 - ns:
+  - rachel.ns.cloudflare.com.
+  - vicky.ns.cloudflare.com.
+- ns:
   - raina.ns.cloudflare.com.
   - zac.ns.cloudflare.com.
 - ns:
