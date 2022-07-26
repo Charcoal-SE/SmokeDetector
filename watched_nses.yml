@@ -1934,9 +1934,6 @@ items:
   - paul.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
-  - pearl.ns.cloudflare.com.
-  - seamus.ns.cloudflare.com.
-- ns:
   - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
