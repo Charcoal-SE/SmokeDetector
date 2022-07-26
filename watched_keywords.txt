@@ -38134,7 +38134,6 @@
 1649744862	tripleee	prismleadindia\.com
 1649745070	tripleee	howelandco\.com
 1649745430	tripleee	needfinancialhelp\.org
-1649745544	tripleee	mighty[\W_]*+warners?
 1649745837	tripleee	factoryresethelp\.com
 1649745854	tripleee	lowearnings\.com
 1649745914	tripleee	hande[\W_]*+hospital(?!\.org(?<=handehospital\.org))
