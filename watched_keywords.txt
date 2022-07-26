@@ -41440,3 +41440,4 @@
 1658832089	tripleee	readyoffshorecompany\.com
 1658833356	tripleee	mighty[\W_]*+warners?+(?<!(?-i:^mightywarners$))
 1658834180	tripleee	vaex\.io
+1658834617	tripleee	badenewby\.co\.uk
