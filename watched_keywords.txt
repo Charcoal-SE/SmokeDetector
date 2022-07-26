@@ -41393,7 +41393,6 @@
 1658734815	Makyen	iconplaygg\.net
 1658734840	Makyen	iconplayg*(?!\.net(?<=iconplaygg\.net))
 1658743923	Jeff Schaller	generalcoat\.com
-1658744113	Jeff Schaller	login360\.in
 1658744152	Jeff Schaller	ashishpipes\.in
 1658744373	tripleee	digicrowdsolution\.com
 1658747658	Jeff Schaller	remitchoice\.com
