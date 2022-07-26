@@ -29742,7 +29742,6 @@
 1623670634	tripleee	ecochem\.ind\.in
 1623672306	tripleee	nesscoindia\.com
 1623672491	tripleee	fiyatinedir\.net
-1623673653	double-beep	mightywarner\.ae
 1623674767	Spevacus	ceoreviewmagazine\.com
 1623664733	Xnero	charbhujatiles\.com
 1623675947	tripleee	iq-global-test\.com
