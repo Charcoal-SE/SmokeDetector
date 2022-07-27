@@ -100,6 +100,9 @@ items:
   - aiden.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
+  - aiden.ns.cloudflare.com.
+  - nina.ns.cloudflare.com.
+- ns:
   - ainsley.ns.cloudflare.com.
   - leonard.ns.cloudflare.com.
 - ns:
