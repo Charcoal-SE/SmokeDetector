@@ -332,9 +332,6 @@ items:
   - connie.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
-  - gwen.ns.cloudflare.com.
-- ns:
-  - aragorn.ns.cloudflare.com.
   - may.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.

@@ -47,6 +47,9 @@ items:
   - ara.ns.cloudflare.com.
   - toby.ns.cloudflare.com.
 - ns:
+  - aragorn.ns.cloudflare.com.
+  - gwen.ns.cloudflare.com.
+- ns:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
