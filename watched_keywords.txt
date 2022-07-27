@@ -41384,7 +41384,6 @@
 1658727734	tripleee	primeitsolution\.us
 1658734670	Makyen	vegasslots\d*(?!\.vip(?<=vegasslots777\.vip))
 1658734730	Makyen	indosloter\d*(?!\.com(?<=indosloter88\.com))
-1658734762	Makyen	indoarena88\.me
 1658734789	Makyen	indoarena\d*(?!\.me(?<=indoarena88\.me))
 1658734815	Makyen	iconplaygg\.net
 1658734840	Makyen	iconplayg*(?!\.net(?<=iconplaygg\.net))
