@@ -39987,7 +39987,6 @@
 1654727896	Cody Gray	(?-i:Ethel[\W_]*Lair)
 1654734022	cigien	ylivetv\.com
 1654748135	Ryan M	8x\.com
-1654753141	tripleee	rajeshwariayurdhama\.com
 1654753517	cocomac	getmysites\.com
 1654755208	tripleee	bodybulk\.net
 1654757127	tripleee	thequick10\.com
@@ -41382,13 +41381,9 @@
 1658726639	tripleee	(?-i:rohitverma_87831(?<=@rohitverma_87831))(?# medium.com)
 1658727163	tripleee	easy-views\.org
 1658727734	tripleee	primeitsolution\.us
-1658734638	Makyen	vegasslots777\.vip
 1658734670	Makyen	vegasslots\d*(?!\.vip(?<=vegasslots777\.vip))
-1658734703	Makyen	indosloter88\.com
 1658734730	Makyen	indosloter\d*(?!\.com(?<=indosloter88\.com))
-1658734762	Makyen	indoarena88\.me
 1658734789	Makyen	indoarena\d*(?!\.me(?<=indoarena88\.me))
-1658734815	Makyen	iconplaygg\.net
 1658734840	Makyen	iconplayg*(?!\.net(?<=iconplaygg\.net))
 1658743923	Jeff Schaller	generalcoat\.com
 1658744152	Jeff Schaller	ashishpipes\.in
@@ -41461,3 +41456,8 @@
 1658886802	Makyen	prkr@cock\.li
 1658895080	tripleee	latticeofafrica\.app
 1658901455	tripleee	gventure\.net
+1658903534	cocomac	inifdpune\.co\.in
+1658904863	tripleee	zingpro\.in
+1658905232	cocomac	chiaki\.vn
+1658907823	tripleee	pujan\.org
+1658908408	tripleee	mercurynews\.com
