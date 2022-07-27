@@ -250,6 +250,11 @@ items:
   - ns-173.awsdns-21.com.
   - ns-1867.awsdns-41.co.uk.
   - ns-776.awsdns-33.net.
+- ns:
+  - ns-1486.awsdns-57.org.
+  - ns-183.awsdns-22.com.
+  - ns-2004.awsdns-58.co.uk.
+  - ns-888.awsdns-47.net.
 - comment: covered by blacklist of entire domain daxa.net 2022-04-11
   disable: true
   ns:
