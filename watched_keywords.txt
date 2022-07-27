@@ -37666,7 +37666,6 @@
 1648563968	Cody Gray	marketquotient\.com
 1648568795	Spevacus	seowale\.com
 1648570749	Makyen	fontyfonts\.com
-1648573502	Spevacus	mamc\.ae
 1648575522	cigien	seo[\W_]*+wale(?!\.com(?<=seowale\.com))
 1648580018	Ollie	sagarpaliwal16(?:@gmail\.com)?
 1648580135	Thomas Ward	essaypay\.com
