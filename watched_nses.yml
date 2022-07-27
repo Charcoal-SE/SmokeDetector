@@ -1965,6 +1965,9 @@ items:
   - rocky.ns.cloudflare.com.
 - ns:
   - rita.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
+  - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
   - roman.ns.cloudflare.com.
