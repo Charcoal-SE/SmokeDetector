@@ -438,3 +438,15 @@ def regex_compile_no_cache(regex_text, flags=0, ignore_unused=False, **kwargs):
 
 def color(text, color, attrs=None):
     return colored(text, color, attrs=attrs)
+
+
+def strip_code_elements(text, leave_note=False):
+    return regex.sub("(?s)<code>.*?</code>", "\nstripped code\n" if leave_note else "", text)
+
+
+def strip_pre_elements(text, leave_note=False):
+    return regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n" if leave_note else "", text)
+
+
+def strip_pre_and_code_elements(text, leave_note=False):
+    return strip_code_elements(strip_pre_elements(text, leave_note=leave_note), leave_note=leave_note)

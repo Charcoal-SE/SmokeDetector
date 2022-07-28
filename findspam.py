@@ -24,7 +24,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, regex_compile_no_cache
+from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -464,8 +464,7 @@ class Rule:
 
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "linked punctuation" on code-only links
-            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
-            body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
+            body_to_check = strip_pre_and_code_elements(body_to_check, leave_note=True)
         if reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
