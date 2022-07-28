@@ -41488,3 +41488,4 @@
 1658984116	tripleee	entrepreneurhandbook\.co\.uk
 1658986830	tripleee	youstable\.com
 1658986860	tripleee	hostingloginguide\.com
+1658987221	tripleee	(?-i:^Prompt Resolve$)
