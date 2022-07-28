@@ -2932,7 +2932,9 @@ items:
 - ns: sunvalleyhosting.com.
 - ns: innovationsseo.com.
 - ns: magichostingllc.com.
-- ns: topdns.com.
+- comment: 1/10 over 3 months 2022-07-28
+  disable: true
+  ns: topdns.com.
 - ns: luutruso.vn.
 - ns: luutruso.net.
 - ns: designkug.com.
