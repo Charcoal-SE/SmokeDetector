@@ -296,6 +296,9 @@ items:
   - cortney.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
+  - dina.ns.cloudflare.com.
+- ns:
+  - apollo.ns.cloudflare.com.
   - emely.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
