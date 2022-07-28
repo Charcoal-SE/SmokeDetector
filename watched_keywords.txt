@@ -41492,3 +41492,4 @@
 1658990869	Jeff Schaller	helpbot\.net
 1658996782	Makyen	br\.nowgoal\.com
 1658996806	Makyen	staticking\d*(?!\.com(?<=staticking\.com))
+1658996829	Makyen	civilgang\.com
