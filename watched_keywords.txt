@@ -41508,3 +41508,4 @@
 1659012481	Jeff Schaller	ezrankings\.com
 1659012790	Jeff Schaller	webappfix\.com
 1659015179	cigien	webappfix(?!\.com)
+1659015308	cigien	atlastravel\.in
