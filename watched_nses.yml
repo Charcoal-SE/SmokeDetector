@@ -947,6 +947,9 @@ items:
   - rob.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
+  - stan.ns.cloudflare.com.
+- ns:
+  - desi.ns.cloudflare.com.
   - terry.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
