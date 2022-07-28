@@ -41490,3 +41490,4 @@
 1658986860	tripleee	hostingloginguide\.com
 1658987221	tripleee	(?-i:^Prompt Resolve$)
 1658990869	Jeff Schaller	helpbot\.net
+1658996782	Makyen	br\.nowgoal\.com
