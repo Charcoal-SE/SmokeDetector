@@ -1263,6 +1263,9 @@ items:
   - leia.ns.cloudflare.com.
 - ns:
   - greg.ns.cloudflare.com.
+  - macy.ns.cloudflare.com.
+- ns:
+  - greg.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
   - greg.ns.cloudflare.com.
