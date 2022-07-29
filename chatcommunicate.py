@@ -115,11 +115,13 @@ def init(username, password, try_cookies=True):
                                 log('debug', 'chat.{}: Logged in to chat only using cached cookies'.format(site))
                         except Exception:
                             # This is a fallback using the ChatExchange functionality we've been using for a long time.
+                            log_current_exception(log_level='debug')
                             log('debug', 'chat.{}: chat-only login failed. Falling back to normal cookies'.format(site))
                             client.login_with_cookie(cookies[site])
                             logged_in = True
                             log('debug', 'chat.{}: Logged in using cached cookies'.format(site))
                 except LoginError as e:
+                    log_current_exception(log_level='debug')
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
                     log('debug', 'chat.{}: Falling back to credential-based login'.format(site))
@@ -134,6 +136,7 @@ def init(username, password, try_cookies=True):
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
                     log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
+                    log_current_exception(log_level='debug')
                     if exc_type.__name__ == 'LoginError' and str(exc_obj) == 'fkey input not found':
                         # ChatExchange didn't find the `fkey` <input> in the SE login page. Under most operating
                         # conditions, this means that we've either lost connectivity to SE entirely or SE
