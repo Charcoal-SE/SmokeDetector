@@ -140,7 +140,8 @@ def init(username, password, try_cookies=True):
                         # is in read-only mode and isn't accepting login attempts. Under those conditions,
                         # there's nothing which we or SD can do other than wait for SE to resolve the issue.
                         # So, instead of spinning the CPU hard in order to retry at the maximum rate, we delay a bit.
-                        # The situations where the problem is on our end rather than on SE's end tend
+                        # The situations where the problem is on our end rather than on SE's end tend to be when
+                        # the SD instance owner is already watching the console.
                         sleep_time = 30 * (retry + 1)
                         log('warning', 'Login to SE appears unavailable. Can be caused by: SD config issue,' +
                             ' bad network connection, or Stack Exchange is down/read-only.' +
