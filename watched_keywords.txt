@@ -41522,3 +41522,4 @@
 1659071135	tripleee	dance[\W_]*+era
 1659071290	tripleee	3vdanceera\.com
 1659076994	Makyen	luxuryeventmanagement\.ezyro\.com
+1659077285	Makyen	appsoft\.co\.il
