@@ -25,7 +25,7 @@ import spamhandling
 import classes
 import chatcommunicate
 from helpers import log, exit_mode, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_modules, log_exception
+    only_modules_changed, blacklist_integrity_check, reload_modules, log_current_exception
 from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
@@ -185,7 +185,7 @@ class Metasmoke:
                         raise
                     except Exception as e:
                         log('error', '{}: {}'.format(type(e).__name__, e))
-                        log_exception(*sys.exc_info())
+                        log_current_exception()
                         GlobalVars.MSStatus.failed()
                         Metasmoke.connect_websocket()
             except Exception:
@@ -642,7 +642,7 @@ class Metasmoke:
             return None
         except Exception as e:
             log('error', '{}: {}'.format(type(e).__name__, e))
-            log_exception(*sys.exc_info())
+            log_current_exception()
             exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
             chatcommunicate.tell_rooms_with("debug", "{}: In getting MS post information, recovered from `{}`"
                                                      .format(GlobalVars.location, exception_only))

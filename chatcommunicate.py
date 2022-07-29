@@ -20,8 +20,7 @@ import copy
 import datahandling
 import metasmoke
 import classes.feedback
-from helpers import log, redact_passwords
-from excepthook import log_exception
+from helpers import log, redact_passwords, log_current_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 from tasks import Tasks
@@ -538,7 +537,7 @@ class ChatCommand:
         except CmdExceptionLongReply as e:
             return '\n' + str(e).replace('\n', ' ')
         except Exception:  # Everything else
-            log_exception(*sys.exc_info())
+            log_current_exception()
             return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
     def __repr__(self):

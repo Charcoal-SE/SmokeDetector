@@ -21,7 +21,7 @@ else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
 
-from helpers import log, log_exception, only_blacklists_changed
+from helpers import log, log_current_exception, only_blacklists_changed
 from blacklists import *
 
 
@@ -250,7 +250,7 @@ class GitManager:
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response['message'])
         except Exception as err:
-            log_exception(*sys.exc_info())
+            log_current_exception()
             return (False, "Git functions failed for unspecified reasons, details may be in error log.")
         finally:
             # Always return to `deploy` branch when done with anything.
@@ -328,7 +328,7 @@ class GitManager:
 
         except Exception as e:
             log('error', '{}: {}'.format(type(e).__name__, e))
-            log_exception(*sys.exc_info())
+            log_current_exception()
             return False, 'Git operations failed for unspecified reasons.'
         finally:
             git.checkout('deploy')
@@ -416,7 +416,7 @@ class GitManager:
         except GitError as e:
             if GlobalVars.on_windows:
                 return False, "Not doing this, we're on Windows."
-            log_exception(*sys.exc_info())
+            log_current_exception()
             return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
 
         if GlobalVars.on_windows:
