@@ -165,7 +165,7 @@ except TldIOError as ioerr:
 
     else:
         err_msg = strerror
-    log_exception(type(ioerr), ioerr, err_msg, True, level="warning")
+    log_exception(type(ioerr), ioerr, err_msg, True, log_level="warning")
 
 if "ChatExchangeU" in os.environ:
     log('debug', "ChatExchange username loaded from environment")

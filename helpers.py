@@ -211,19 +211,19 @@ def get_traceback_from_traceback_or_message(traceback_or_message):
         return ''.join(traceback.format_tb(traceback_or_message))
 
 
-def log_exception(exctype, value, traceback_or_message, and_file=False, *, level=None):
-    level = 'error' if level is None else level
+def log_exception(exctype, value, traceback_or_message, and_file=False, *, log_level=None):
+    log_level = 'error' if log_level is None else log_level
     now = datetime.utcnow()
     tr = get_traceback_from_traceback_or_message(traceback_or_message)
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     # Redacting passwords happens in log() and ErrorLogs.add().
-    log(level, logged_msg, and_file=and_file)
+    log(log_level, logged_msg, and_file=and_file)
     ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
 
-def log_current_exception(and_file=False, level=None):
-    log_exception(*sys.exc_info(), and_file=and_file, level=level)
+def log_current_exception(and_file=False, log_level=None):
+    log_exception(*sys.exc_info(), and_file=and_file, log_level=log_level)
 
 
 def log_current_thread(log_level, prefix="", postfix=""):
