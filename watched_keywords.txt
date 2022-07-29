@@ -41547,3 +41547,4 @@
 1659101841	Jeff Schaller	jobsupportprogram\.com
 1659102492	cigien	24tutorials\.com
 1659102750	cigien	ayatas
+1659102817	cigien	scopex(?!\.in)
