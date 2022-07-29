@@ -1562,6 +1562,9 @@ items:
   - kay.ns.cloudflare.com.
   - peyton.ns.cloudflare.com.
 - ns:
+  - kay.ns.cloudflare.com.
+  - vin.ns.cloudflare.com.
+- ns:
   - kayden.ns.cloudflare.com.
   - novalee.ns.cloudflare.com.
 - ns:
