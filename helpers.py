@@ -79,6 +79,13 @@ class ErrorLogs:
         return cls.db_conns[thread_id]
 
     @classmethod
+    def add_current_exception(cls):
+        now = datetime.utcnow()
+        exctype, value, traceback_or_message = sys.exc_info()
+        tr = get_traceback_from_traceback_or_message(traceback_or_message)
+        cls.add(now.timestamp(), exctype.__name__, str(value), tr)
+
+    @classmethod
     def add(cls, time, classname, message, traceback):
         classname = redact_passwords(classname)
         message = redact_passwords(message)
@@ -197,12 +204,17 @@ def log_file(log_level, *args):
         print(log_str, file=f)
 
 
-def log_exception(exctype, value, traceback_or_message, f=False, *, level='error'):
-    now = datetime.utcnow()
+def get_traceback_from_traceback_or_message(traceback_or_message):
     if isinstance(traceback_or_message, str):
-        tr = traceback_or_message
+        return traceback_or_message
     else:
-        tr = ''.join(traceback.format_tb(traceback_or_message))
+        return ''.join(traceback.format_tb(traceback_or_message))
+
+
+def log_exception(exctype, value, traceback_or_message, f=False, *, level=None):
+    level = 'error' if level is None else level
+    now = datetime.utcnow()
+    tr = get_traceback_from_traceback_or_message(traceback_or_message)
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     # Redacting passwords happens in log() and ErrorLogs.add().
@@ -210,8 +222,8 @@ def log_exception(exctype, value, traceback_or_message, f=False, *, level='error
     ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
 
-def log_current_exception(f=False):
-    log_exception(*sys.exc_info(), f)
+def log_current_exception(f=False, level=None):
+    log_exception(*sys.exc_info(), f, level=level)
 
 
 def log_current_thread(log_level, prefix="", postfix=""):
