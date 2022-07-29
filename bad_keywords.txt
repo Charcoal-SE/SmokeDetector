@@ -2654,3 +2654,4 @@ ackrol?ix(?!\.co\b)
 hackadviserpro
 hack\Wethics
 jerryfixesit(?:[\W_]*+(?:at[\W_]*+)?cyberservices[\W_]*+(?:dot[\W_]*+)?com)?
+zinglanguage
