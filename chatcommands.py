@@ -542,7 +542,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         try:
             if not GlobalVars.on_branch:
                 # Restart if HEAD detached
-                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
@@ -628,7 +628,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
         try:
             if not GlobalVars.on_branch:
                 # Restart if HEAD detached
-                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
@@ -662,7 +662,7 @@ def approve(msg, pr_id):
             try:
                 if not GlobalVars.on_branch:
                     # Restart if HEAD detached
-                    log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                    log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                     exit_mode("checkout_deploy")
                 GitManager.pull_local()
                 GlobalVars.reload()

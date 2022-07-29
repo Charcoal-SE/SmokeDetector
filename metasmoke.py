@@ -289,7 +289,7 @@ class Metasmoke:
                         GitManager.pull_remote()
                         if not GlobalVars.on_branch:
                             # Restart if HEAD detached
-                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", and_file=True)
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
@@ -299,7 +299,7 @@ class Metasmoke:
                         GitManager.pull_remote()
                         if not GlobalVars.on_branch:
                             # Restart if HEAD detached
-                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", and_file=True)
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         reload_modules()
