@@ -41519,3 +41519,4 @@
 1659068645	tripleee	primemarine\.com
 1659069794	tripleee	uii\.io(?<=https?://(?:\w+\.)*uii\.io)
 1659070195	tripleee	computersworld\.pk
+1659071135	tripleee	dance[\W_]*+era
