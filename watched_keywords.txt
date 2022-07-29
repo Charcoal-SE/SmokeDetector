@@ -41525,3 +41525,4 @@
 1659077285	Makyen	appsoft\.co\.il
 1659078658	Makyen	vaivyhairwigpune\.com
 1659078689	Makyen	vaivyhairwigpune(?!\.com)
+1659078716	Makyen	vaivy[\W_]*+world[\W_]*+of[\W_]*+hair
