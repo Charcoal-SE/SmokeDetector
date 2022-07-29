@@ -41541,3 +41541,4 @@
 1659097163	Jeff Schaller	scopex\.in
 1659098427	Jeff Schaller	ayatas\.com
 1659098527	tripleee	(?-i:^raushni gupta$)
+1659099262	tripleee	novergysolar\.com
