@@ -41548,3 +41548,4 @@
 1659102492	cigien	24tutorials\.com
 1659102750	cigien	ayatas
 1659102817	cigien	scopex(?!\.in)
+1659104979	cigien	quictents\.com
