@@ -41526,3 +41526,4 @@
 1659078658	Makyen	vaivyhairwigpune\.com
 1659078689	Makyen	vaivyhairwigpune(?!\.com)
 1659078716	Makyen	vaivy[\W_]*+world[\W_]*+of[\W_]*+hair
+1659082517	Makyen	starconferences\.org
