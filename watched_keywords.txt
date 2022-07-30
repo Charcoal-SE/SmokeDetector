@@ -41557,3 +41557,4 @@
 1659160184	cocomac	sunnevaisland\.vn
 1659160832	cocomac	topindianholidays\.com
 1659161447	cocomac	supplementstrend\.com
+1659162661	cocomac	picovoice\.ai
