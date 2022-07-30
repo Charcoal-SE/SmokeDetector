@@ -51,6 +51,8 @@ groups:
       - surajrao
       - teward
       - tripleee
+      - CoconutMacaroon # cocomac
+      - longsonr # Robert Longson
     author_approval:
       ignored: true
     reject_value: -1
