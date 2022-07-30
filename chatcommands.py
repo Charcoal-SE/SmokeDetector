@@ -389,7 +389,9 @@ def do_blacklist(blacklist_type, msg, force=False):
         other_issues.append("The pattern starts with whitespace.")
 
     if regex.search(r"blogspot\\.", pattern):
-        other_issues.append("The pattern is a blogspot watch but keeps the TLD, in most cases this should be removed.")
+        other_issues.append("The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
+                            " [For Blogspot, we prefer the TLD to not be included in"
+                            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
 
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
