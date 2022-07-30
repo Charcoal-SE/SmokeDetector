@@ -24,7 +24,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, regex_compile_no_cache
+from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -464,8 +464,7 @@ class Rule:
 
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "linked punctuation" on code-only links
-            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
-            body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
+            body_to_check = strip_pre_and_code_elements(body_to_check, leave_note=True)
         if reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
@@ -889,7 +888,7 @@ def mostly_img(s, site):
     if len(s) == 0:
         return False, ""
 
-    s_len_img = len_img_block(s)
+    s_len_img = len_img_block(strip_code_elements(s))
     if s_len_img / len(s) > IMG_TXT_R_THRES:
         return True, "{:.4f} of the post is html image blocks".format(s_len_img / len(s))
     return False, ""
