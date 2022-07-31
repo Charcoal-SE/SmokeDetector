@@ -29,7 +29,7 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache
+    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -544,7 +544,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         try:
             if not GlobalVars.on_branch:
                 # Restart if HEAD detached
-                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
@@ -630,7 +630,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
         try:
             if not GlobalVars.on_branch:
                 # Restart if HEAD detached
-                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                 exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
@@ -664,7 +664,7 @@ def approve(msg, pr_id):
             try:
                 if not GlobalVars.on_branch:
                     # Restart if HEAD detached
-                    log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                    log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
                     exit_mode("checkout_deploy")
                 GitManager.pull_local()
                 GlobalVars.reload()
@@ -2405,7 +2405,7 @@ def dump_data():
         s = "{}, {}, {}\n{}".format(metadata['time'], metadata['location'], metadata['rev'], s)
         tell_rooms_with('dump', s)
     except Exception:
-        log_exception(*sys.exc_info())
+        log_current_exception()
         raise CmdException("Failed to dump data. Run `!!/errorlogs` for details.")
     return "Data successfully dumped"
 
@@ -2421,7 +2421,7 @@ def load_data(msg_id, hostname, alias_used="load-data"):
     except ValueError as e:
         raise CmdException(str(e)) from None
     except Exception:
-        log_exception(*sys.exc_info())
+        log_current_exception()
         raise CmdException("Failed to load data. Run `!!/errorlogs` for details.")
     return "Data successfully loaded"
 

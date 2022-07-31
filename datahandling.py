@@ -20,7 +20,7 @@ from globalvars import GlobalVars
 import metasmoke
 from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
-from helpers import ErrorLogs, log, log_exception, redact_passwords
+from helpers import ErrorLogs, log, log_current_exception, redact_passwords
 from tasks import Tasks
 
 last_feedbacked = None
@@ -628,7 +628,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
                 names.append(client.get_user(user_id).name)
             except Exception:
                 # The user is probably deleted, or we're having communication problems with chat.
-                log_exception(*sys.exc_info())
+                log_current_exception()
                 log('warn', 'ChatExchange failed to get user for a report notification. '
                             'See Error log for more details. Tried client.host: '
                             '{}:: user_id: {}:: chat_site: {}'.format(client.host, user_id, chat_site))
@@ -652,7 +652,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
             # cause us to crash, as it's on the path we take for going into standby.
             # It should be noted that this *could* be caused by a discontinuity between room_id and
             # client.
-            log_exception(*sys.exc_info())
+            log_current_exception()
             log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
                         'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
             current_users = []
@@ -846,7 +846,7 @@ def refresh_site_id_dict_if_needed_and_get_issues():
         except Exception:
             # We ignore any problems with getting or refreshing the list of SE sites, as we handle it by
             # testing to see if we have valid data (i.e. SD doesn't need to fail for an exception here).
-            log_exception(*sys.exc_info())
+            log_current_exception()
             issues.append("An exception occurred when trying to get the SE site ID list."
                           " See the error log for details.")
         if is_se_site_id_list_length_valid():
