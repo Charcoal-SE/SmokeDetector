@@ -41584,3 +41584,4 @@
 1659214989	cigien	dubaibesharam\.com
 1659217893	cigien	expow72(?:@gmail\.com)?
 1659223466	cigien	indexlister[\W_]*+com
+1659228097	cigien	electedroyalty\.com
