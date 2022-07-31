@@ -41607,3 +41607,4 @@
 1659279074	cigien	cyber[\W_]*+developer[\W_]*+bd(?!\.com(?<=cyberdeveloperbd\.com))
 1659279096	cigien	trendmoversdubai\.com
 1659282030	cigien	b2n\.ir
+1659283675	cigien	gbwhatsapp\.pk
