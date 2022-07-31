@@ -41586,3 +41586,4 @@
 1659223466	cigien	indexlister[\W_]*+com
 1659228097	cigien	electedroyalty\.com
 1659228125	cigien	preacherblair(?:@gmail\.com)?
+1659229292	Makyen	(?-i:H3zfUnhiSznEqQChGWk2oU)(?#chat.whatsapp.com/)
