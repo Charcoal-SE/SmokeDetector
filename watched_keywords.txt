@@ -41640,3 +41640,4 @@
 1659365792	Makyen	breast[\W_]*+milk[\W_]*+jewellery
 1659365804	Makyen	visit(?=.{0,40}?(?:</?a|\.(?<=[a-z0-9]\.)[a-z]))
 1659365848	Makyen	opshubvisualstudioonlinemigrationutility
+1659366258	cigien	attendance[\W_]*+keeper(?!\.net(?<=attendancekeeper\.net))
