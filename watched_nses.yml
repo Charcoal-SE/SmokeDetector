@@ -838,6 +838,9 @@ items:
   - dahlia.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - dahlia.ns.cloudflare.com.
+  - vin.ns.cloudflare.com.
+- ns:
   - dalary.ns.cloudflare.com.
   - pablo.ns.cloudflare.com.
 - ns:
