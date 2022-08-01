@@ -41642,3 +41642,4 @@
 1659365848	Makyen	opshubvisualstudioonlinemigrationutility
 1659366258	cigien	attendance[\W_]*+keeper(?!\.net(?<=attendancekeeper\.net))
 1659366355	cigien	harish[\W_]*+jagtani
+1659366771	Makyen	contact(?=.{0,40}?(?:</?a|\.(?<=[a-z0-9]\.)[a-z]))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
