@@ -41634,3 +41634,4 @@
 1659357153	tripleee	zumvu\.com
 1659361595	Makyen	sportstiger\.com
 1659364115	cigien	codeindotnet\.com
+1659364145	Makyen	(?-i:products\.freshdeal190)(?#facebook.com)
