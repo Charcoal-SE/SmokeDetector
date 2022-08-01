@@ -41614,3 +41614,4 @@
 1659329983	tripleee	lenin[\W_]*+orthopedic
 1659332132	tripleee	jaycar\.co\.nz
 1659333498	tripleee	quickbookstoolhub\.co
+1659334156	tripleee	picnic\.zone
