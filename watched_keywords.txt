@@ -41638,3 +41638,4 @@
 1659364283	cigien	atmosephirin\.cc
 1659364902	cigien	nirmalspacesarchitects\.in
 1659365792	Makyen	breast[\W_]*+milk[\W_]*+jewellery
+1659365804	Makyen	visit(?=.{0,40}?(?:</?a|\.(?<=[a-z0-9]\.)[a-z]))
