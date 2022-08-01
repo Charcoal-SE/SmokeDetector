@@ -41620,3 +41620,4 @@
 1659342562	tripleee	ca[\W_]*+foundation
 1659342913	tripleee	attendancekeeper\.net
 1659348096	tripleee	countingcharacters\.com
+1659348150	tripleee	hoyhoyibiza\.com
