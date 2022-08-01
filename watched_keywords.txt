@@ -41644,3 +41644,4 @@
 1659366355	cigien	harish[\W_]*+jagtani
 1659366771	Makyen	contact(?=.{0,40}?(?:</?a|\.(?<=[a-z0-9]\.)[a-z]))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1659369005	tripleee	bestdoggyfood\.com
+1659369210	tripleee	(?-i:^Jay Oldaker$)
