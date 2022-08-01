@@ -41450,7 +41450,6 @@
 1658904863	tripleee	zingpro\.in
 1658905232	cocomac	chiaki\.vn
 1658907823	tripleee	pujan\.org
-1658908408	tripleee	mercurynews\.com
 1658910406	Mast	digitizings\.com
 1658913244	Mast	ibnns\.net
 1658913270	Mast	dailybugs\.xyz
