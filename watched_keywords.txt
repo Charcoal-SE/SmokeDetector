@@ -41619,3 +41619,4 @@
 1659342437	tripleee	(?-i:3S4D0iH)(?# bit.ly)
 1659342504	tripleee	scanneradda\.com
 1659342562	tripleee	ca[\W_]*+foundation
+1659342913	tripleee	attendancekeeper\.net
