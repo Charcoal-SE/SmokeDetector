@@ -41617,3 +41617,4 @@
 1659334156	tripleee	picnic\.zone
 1659334483	tripleee	theweek\.in
 1659342437	tripleee	(?-i:3S4D0iH)(?# bit.ly)
+1659342504	tripleee	scanneradda\.com
