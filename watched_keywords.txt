@@ -41659,3 +41659,4 @@
 1659424185	Makyen	mrseo\.tw
 1659424394	tripleee	emptycosmetictubes\.com
 1659424597	tripleee	gkboptic\.com
+1659424633	tripleee	gbk[\W_]*+optics?(?<!gbkoptic(?=\.com))
