@@ -4726,3 +4726,4 @@ chiasetonghop\.com
 caffeinepark\.com
 driftboss\.net
 mercurynews\.com/[^\s"',]*?(?:cbd|gummies)
+selcousa\.com
