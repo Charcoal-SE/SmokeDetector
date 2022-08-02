@@ -374,6 +374,9 @@ items:
   - eleanor.ns.cloudflare.com.
 - ns:
   - arnold.ns.cloudflare.com.
+  - blair.ns.cloudflare.com.
+- ns:
+  - arnold.ns.cloudflare.com.
   - edna.ns.cloudflare.com.
 - ns:
   - arnold.ns.cloudflare.com.
