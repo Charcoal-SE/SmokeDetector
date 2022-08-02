@@ -41660,3 +41660,4 @@
 1659424394	tripleee	emptycosmetictubes\.com
 1659424597	tripleee	gkboptic\.com
 1659424950	tripleee	gkp[\W_]*+optics?
+1659425160	Ryan M	talentspot2010@outlook\.com
