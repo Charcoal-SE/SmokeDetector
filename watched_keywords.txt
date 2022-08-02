@@ -41650,3 +41650,4 @@
 1659385889	Makyen	bestreviewoto\.com
 1659403259	cigien	my4gdatahh\.xyz
 1659410914	Makyen	visit(?=.{0,40}?(?:</?a|\.(?<=[a-z0-9]\.)[a-z]))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1659411687	tripleee	yoglica(?!\.com)
