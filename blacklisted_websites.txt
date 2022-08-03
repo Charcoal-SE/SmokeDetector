@@ -4729,3 +4729,4 @@ mercurynews\.com/[^\s"',]*?(?:cbd|gummies)
 selcousa\.com
 packersmoversinbangalore\.co\.in
 besttech\.in
+supplementstrend\.com
