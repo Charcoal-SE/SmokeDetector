@@ -1281,6 +1281,9 @@ items:
   - reza.ns.cloudflare.com.
 - ns:
   - guy.ns.cloudflare.com.
+  - kate.ns.cloudflare.com.
+- ns:
+  - guy.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - guy.ns.cloudflare.com.
