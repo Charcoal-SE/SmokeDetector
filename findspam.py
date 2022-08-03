@@ -2196,7 +2196,7 @@ city_list = [
     "Udaipur", "Uttarakhand",
     "Vadodara", "Visakhapatnam", "Worli",
     # not in India
-    "Ajman", "Dubai", "Lahore", "Lusail", "Portland", "Sharjah",
+    "Ajman", "Dubai", "Fujairah", "Lahore", "Lusail", "Portland", "Sharjah",
     # yes, these aren't cities but...
     "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar",
     # buyabans.com spammer uses creative variations
