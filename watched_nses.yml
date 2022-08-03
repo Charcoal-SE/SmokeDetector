@@ -1433,6 +1433,9 @@ items:
   - jasmine.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
+  - jasper.ns.cloudflare.com.
+  - jocelyn.ns.cloudflare.com.
+- ns:
   - jaxson.ns.cloudflare.com.
   - zainab.ns.cloudflare.com.
 - ns:
