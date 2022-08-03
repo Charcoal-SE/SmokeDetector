@@ -41695,3 +41695,4 @@
 1659518057	Makyen	sjo777[\W_]*+alternative
 1659518099	Makyen	bank508alter
 1659518134	Makyen	fbpadi77
+1659519426	Glorfindel	mariarandall
