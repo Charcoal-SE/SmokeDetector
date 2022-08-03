@@ -1556,6 +1556,9 @@ items:
   - kami.ns.cloudflare.com.
   - maxim.ns.cloudflare.com.
 - ns:
+  - kanye.ns.cloudflare.com.
+  - ophelia.ns.cloudflare.com.
+- ns:
   - kara.ns.cloudflare.com.
   - phil.ns.cloudflare.com.
 - ns:
