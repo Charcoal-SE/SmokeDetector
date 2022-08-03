@@ -2173,7 +2173,7 @@ pattern_websites = [
     r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
-    "Agra", "Ahmedabad", "Ajanta", "Ajman", "Almora", "Alwar", "Amritsar", "Andheri",
+    "Agra", "Ahmedabad", "Ajanta", "Almora", "Alwar", "Amritsar", "Andheri",
     "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
     "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
@@ -2196,7 +2196,7 @@ city_list = [
     "Udaipur", "Uttarakhand",
     "Vadodara", "Visakhapatnam", "Worli",
     # not in India
-    "Dubai", "Lahore", "Lusail", "Portland",
+    "Ajman", "Dubai", "Lahore", "Lusail", "Portland", "Sharjah",
     # yes, these aren't cities but...
     "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar",
     # buyabans.com spammer uses creative variations
