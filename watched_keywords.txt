@@ -41686,3 +41686,4 @@
 1659481377	cocomac	thailotterywinners\.com
 1659495131	cocomac	application[\W_]*+uploader
 1659498026	cigien	umny\.ca
+1659498053	cigien	groundtemperatures\.com
