@@ -275,6 +275,9 @@ items:
   - dee.ns.cloudflare.com.
 - ns:
   - anita.ns.cloudflare.com.
+  - george.ns.cloudflare.com.
+- ns:
+  - anita.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
   - anna.ns.cloudflare.com.
