@@ -41714,3 +41714,4 @@
 1659581383	cigien	Paul[\W_]*+Pelosi
 1659585873	Makyen	wa\.link
 1659585896	Makyen	(?-i:6yq696)(?#wa.link)
+1659587549	Spevacus	digitallysupply\.com
