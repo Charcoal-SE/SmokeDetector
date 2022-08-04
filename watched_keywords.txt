@@ -41735,3 +41735,4 @@
 1659619744	tripleee	kozyhomeproducts\.com
 1659619875	tripleee	kwtreecare\.co\.uk
 1659619959	Makyen	kw[\W_]*+tree[\W_]*+care(?!\.co\.uk(?<=kwtreecare\.co\.uk))
+1659622230	Jeff Schaller	coinbloc\.us
