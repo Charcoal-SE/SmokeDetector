@@ -6,9 +6,10 @@ import regex
 import yaml
 import dns.resolver
 import sys
+import time
 
 from globalvars import GlobalVars
-from helpers import log, log_current_exception, color
+from helpers import log, log_current_exception, color, pluralize
 
 
 def load_blacklists():
@@ -321,14 +322,18 @@ class YAMLParserNS(YAMLParserCIDR):
                                     'request.'.format(ns))
                 except dns.resolver.Timeout:
                     log('warn', '{0}: DNS lookup timed out.'.format(ns))
-            except Exception:
+            except Exception as excep:
                 log_current_exception()
                 log('error', '{}'.format(color('-' * 41 + 'v' * len(ns), 'red', attrs=['bold'])), no_exception=True)
                 log('error', ('validate YAML: Failed NS validation for:'
                               ' {} in {}'.format(color(ns, 'white', attrs=['bold']), self._filename)),
                     no_exception=True)
                 log('error', '{}'.format(color('-' * 41 + '^' * len(ns), 'red', attrs=['bold'])), no_exception=True)
-                raise
+                if "pytest" in sys.modules:
+                    item['error'] = excep
+                    return item
+                else:
+                    raise
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
@@ -347,18 +352,48 @@ class YAMLParserNS(YAMLParserCIDR):
                 'Member "ns" must be either string or list of strings: {0!r}'.format(
                     item['ns']))
 
-    def validate(self):
+    def validate_list(self, list_to_validate):
         # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
         # it appeared to result in longer times and intermittent failures.
         with ThreadPoolExecutor(max_workers=20) as executor:
-            # Nothing is currently done with the returned results.
-            # If there's an issue, an exception is raised in self._validate().
-            # As of 2022-06-20, a typical run of this should take about 45 seconds.
-            # On the other hand, it's quite possible for a passing run to take at least into
-            # the 100 second range. A timeout of 300 was chosen as a max, merely because it
-            # seemed like a reasonable limit. As the list gets longer, this may need to be
-            # expanded.
-            list(executor.map(self._validate, self._parse(), timeout=300))
+            return list(executor.map(self._validate, list_to_validate, timeout=300))
+
+    def validate(self):
+        parsed_list = self._parse()
+        log('info', 'Validation Pass 1:')  # Just a blank line
+        results_pass1 = self.validate_list(parsed_list)
+        entries_with_exception = [entry for entry in results_pass1 if entry is not True]
+        # There are intermittent issues on some of the entries, so we run a second pass on the failures.
+        # This may end up taking substantial time in testing, so we'll need to monitor for that.
+        pass1_error_count = len(entries_with_exception)
+        if pass1_error_count == 0:
+            # Everything passed
+            return
+        log('info', 'Validation Pass 1 had {} {}. Waiting 6 seconds'.format(pass1_error_count,
+                                                                            pluralize(pass1_error_count, 'error', 's')))
+        time.sleep(6)
+        log('debug', '(blank lines)\n\n\n\n\n\n')  # Just blank lines
+        log('info', 'Validation Pass 2:')  # Just a blank line
+        results_pass2 = self.validate_list(entries_with_exception)
+        entries_with_exception2 = [entry for entry in results_pass2 if entry is not True]
+        number_failed_to_validate = len(entries_with_exception2)
+        if number_failed_to_validate > 0:
+            entry_plural = pluralize(number_failed_to_validate, 'entr', 'ies', 'y')
+            exception_entries_text = [
+                color('{}'.format(entry.get('ns', 'NO NS')), 'white', attrs=['bold'])
+                + ' in {} for {}'.format(self._filename,
+                                         '{}.{}'.format(entry['error'].__class__.__module__,
+                                                        entry['error'].__class__.__name__)
+                                         if entry.get('error', None) is not None else '')
+                for entry in entries_with_exception2]
+            exception_entries_indented = '\n    {}'. format('\n    '.join(exception_entries_text))
+            problems_text_colored = (color('{} which failed to validate twice:'.format(entry_plural.capitalize()),
+                                           'red', attrs=['bold'])
+                                     + exception_entries_indented)
+            log('debug', '(blank lines)\n\n\n')  # Just blank lines
+            log('error', problems_text_colored)
+            raise Exception('{} {} failed to validate in {}{}'.format(number_failed_to_validate, entry_plural,
+                                                                      self._filename, exception_entries_indented))
 
 
 class YAMLParserASN(YAMLParserCIDR):

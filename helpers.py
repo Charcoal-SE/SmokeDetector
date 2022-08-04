@@ -462,3 +462,7 @@ def strip_pre_elements(text, leave_note=False):
 
 def strip_pre_and_code_elements(text, leave_note=False):
     return strip_code_elements(strip_pre_elements(text, leave_note=leave_note), leave_note=leave_note)
+
+
+def pluralize(value, base, plural_end, single_end='', zero_is_plural=True):
+    return base + plural_end if value > 1 or (zero_is_plural and value == 0) else base + single_end
