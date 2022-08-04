@@ -972,6 +972,52 @@ def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrilli
     return False, ""
 
 
+phone_number_detected_in_title_second_exclude_regex_text = (
+    r"(?is)^(?:"
+    "" r"(?="
+    "" "" r"(?!.*?(?:quick[\W_]*+books?|binance|support|help(?:line|desk)|\bcall\b|antivirus|customer|whatsapp?))"
+    "" "" r".*?(?:"
+    "" "" "" r"errors?\b"
+    "" "" "" r"|(?#list of words/phrases which tend to indicate FP, but are also used by some spammers)\b(?:"
+    "" "" "" "" r"regex|invalid|attempt|config"
+    "" "" "" "" r"|translate|spreadsheet|identify(?:ing)?|stack(?:overflow|exchange)\.com/questions/"
+    "" "" "" "" r"|ref=|official build|(?-i:GUI)|chrome ?(?: version)?\d{2,3}\.\d\.\d{4}\.\d{3}"
+    "" "" "" "" r"|paten[dt]|arxiv|(?:please|pls)(?: someone)?(?: help)"
+    "" "" "" "" r"|(?:any|some) ?(?:one|body)(?: (?:please|pls))? help|i need help|UUID"
+    "" "" "" r")\b"
+    "" r"))"
+    "" r"|.*?(?:"
+    "" "" r"(?#IP address)\b(?<=[\s\[\](,;:@/\\-]|^)(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}"  # ) syntax
+    "" "" r"(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b(?=[\s\[\](,;:/\\-]|$)(?<!\b\d\.\d\.\d\.\d\b)"  # ) highlighting
+    "" "" r"|(?#simple recent date)(?<!\d)(?:"
+    "" "" "" r"(?:(?:[012]?\d|3[01])[/-]){2}20(?:1\d|2[0-6])"
+    "" "" "" r"|20(?:1\d|2[0-6])(?:[/-](?:[012]?\d|3[01])){2}"
+    "" "" r")(?!\d)"
+    "" "" r"|(?#Hex number)0x(?:(?<=\D0x)|(?<=^0x))[\da-f]+\b"
+    "" "" r"|(?#6+ in a row of same number)(?:0{6}|1{6}|2{6}|3{6}|4{6}|5{6}|6{6}|7{6}|8{6}|9{6})"
+    "" "" r"|(?#first 4 digits of 32 bit MAX_INT)2147"
+    "" "" r"|(?#x86, i386, i486, etc)\b(?:x86|i\d86)\b"
+    "" "" r"|(?#a long sequence of digits, too long for a phone number)(?:\d[,. ]?+){14}"
+    "" "" r"|(?#decade date range)(?:(?<=\D)|^)(?:(?:1\d|20)\d0s?[\W_]{0,3}){2,}"
+    "" "" r"|(?:(?:(?<=\D)|^)(?#simple recent date: yyyy[/-]?mm[/-]?dd)"
+    "" "" "" r"(?:1\d|20)\d\d[/-]?(?:0[1-9]|1[0-2])[/-]?(?:0[1-9]|[12]\d|3[01]))"
+    "" "" r"|(?:(?#sequence 23456 with potential separators)"
+    "" "" "" r"2(?:(?<=[\D]2)|(?<=^2)|(?<=\W12)|(?<=^12))[\W_]*+3[\W_]*+4[\W_]*+5[\W_]*+6(?=\d*\b))"
+    "" "" r"|(?#7+ in a row of same number, with separators)(?:"
+    "" "" "" r"(?:0[\W_]*+){7}"
+    "" "" "" r"|(?:1[\W_]*+){7}"
+    "" "" "" r"|(?:2[\W_]*+){7}"
+    "" "" "" r"|(?:3[\W_]*+){7}"
+    "" "" "" r"|(?:4[\W_]*+){7}"
+    "" "" "" r"|(?:5[\W_]*+){7}"
+    "" "" "" r"|(?:6[\W_]*+){7}"
+    "" "" "" r"|(?:7[\W_]*+){7}"
+    "" "" "" r"|(?:8[\W_]*+){7}"
+    "" "" "" r"|(?:9[\W_]*+){7}"
+    "" "" r")"
+    r"))")
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("phone number detected in {}", body=False,
              sites=["patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"],
@@ -980,6 +1026,8 @@ def has_phone_number(s, site):
     if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
+    if regex.compile(phone_number_detected_in_title_second_exclude_regex_text, regex.UNICODE).search(s):
+        return False, ""  # Probably not a phone number; very unlikely to be TP.
     s = regex.sub("[^A-Za-z0-9\\s\"',|]", "", s)   # deobfuscate
     s = regex.sub("[Oo]", "0", s)
     s = regex.sub("[Ss]", "5", s)
