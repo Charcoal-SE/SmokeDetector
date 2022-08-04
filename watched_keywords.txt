@@ -41719,3 +41719,4 @@
 1659587770	Spevacus	xelectron\.com
 1659593429	tripleee	(?-i:^srikummari$)
 1659594059	tripleee	justuniforms\.com\.ng
+1659602288	tripleee	softhound\.net
