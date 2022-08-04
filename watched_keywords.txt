@@ -41729,3 +41729,4 @@
 1659612630	tripleee	cleaningteach\.com
 1659612741	tripleee	emirium\.com
 1659613042	tripleee	SYMForexInstitution(?# telegram)
+1659613589	tripleee	(?-i:^001vpn$)
