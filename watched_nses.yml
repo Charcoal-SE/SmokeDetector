@@ -3027,3 +3027,6 @@ items:
 - ns: zarahosting.com.
 - ns: amznetwork.net.
 - ns: dynu.com.
+- ns:
+  - da73venom.stableserver.net.
+  - da74venom.stableserver.net.
