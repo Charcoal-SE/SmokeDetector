@@ -41779,3 +41779,4 @@
 1659697591	tripleee	globaldailyblogging\.com
 1659697611	tripleee	globaldailyblogging(?!\.com)
 1659700240	tripleee	glamly\.com
+1659702106	Jeff Schaller	webhostwinner\.com
