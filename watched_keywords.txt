@@ -41758,3 +41758,4 @@
 1659681447	tripleee	tech2globe\.com
 1659681659	tripleee	telecmi\.com
 1659683244	tripleee	kingdomrecommends\.co\.uk
+1659685266	tripleee	cryptoanime\.net
