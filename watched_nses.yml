@@ -1778,6 +1778,9 @@ items:
   - logan.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
 - ns:
+  - lola.ns.cloudflare.com.
+  - max.ns.cloudflare.com.
+- ns:
   - lorna.ns.cloudflare.com.
   - rodney.ns.cloudflare.com.
 - ns:
