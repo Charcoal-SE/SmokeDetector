@@ -41760,3 +41760,4 @@
 1659683244	tripleee	kingdomrecommends\.co\.uk
 1659685266	tripleee	cryptoanime\.net
 1659685437	tripleee	ez[\W_]*+burn
+1659685504	tripleee	takemod\.com
