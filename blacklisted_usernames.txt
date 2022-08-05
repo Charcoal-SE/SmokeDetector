@@ -694,3 +694,4 @@ meta kukel exchange
 (?-i:^mightywarners$)
 (?-i:^Selco USA$)
 (?-i:^Anne Phoebe$)
+(?-i:^Staticking\d*$)
