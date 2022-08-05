@@ -41770,3 +41770,4 @@
 1659689895	tripleee	bestreviewshk\.com
 1659690042	tripleee	website2\.me
 1659691815	tripleee	masonrydavis\.com
+1659691910	Glorfindel	yuturn\W*restaurant
