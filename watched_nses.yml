@@ -242,6 +242,9 @@ items:
   - amy.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
+  - ara.ns.cloudflare.com.
+- ns:
+  - amit.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
