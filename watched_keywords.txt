@@ -41778,3 +41778,4 @@
 1659697536	tripleee	kimmy[\W_]*+watson
 1659697591	tripleee	globaldailyblogging\.com
 1659697611	tripleee	globaldailyblogging(?!\.com)
+1659700240	tripleee	glamly\.com
