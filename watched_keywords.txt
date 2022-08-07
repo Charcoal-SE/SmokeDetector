@@ -41849,3 +41849,4 @@
 1659879950	Makyen	(?-i:^eamadit$)
 1659885411	Makyen	contadorpalavras\.com
 1659886083	Jeff Schaller	didipostman\.hashnode\.dev
+1659886269	Makyen	navjotsinghprince(?!\.com)
