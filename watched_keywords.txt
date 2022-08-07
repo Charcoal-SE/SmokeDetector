@@ -41853,3 +41853,4 @@
 1659888782	cigien	wholesale[\W_]*+jewelry
 1659889684	cigien	protraders\.ir
 1659890154	Makyen	physics[\W_]*+wallah
+1659890513	Makyen	fivitian\.com
