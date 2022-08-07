@@ -41851,3 +41851,4 @@
 1659886083	Jeff Schaller	didipostman\.hashnode\.dev
 1659886269	Makyen	navjotsinghprince(?!\.com)
 1659888782	cigien	wholesale[\W_]*+jewelry
+1659889684	cigien	protraders\.ir
