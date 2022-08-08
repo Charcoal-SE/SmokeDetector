@@ -502,6 +502,9 @@ items:
   - ben.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
+  - ben.ns.cloudflare.com.
+  - zara.ns.cloudflare.c
+- ns:
   - benedict.ns.cloudflare.com.
   - yolanda.ns.cloudflare.com.
 - ns:
