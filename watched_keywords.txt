@@ -41891,3 +41891,4 @@
 1659959915	Jeff Schaller	Fluxactive
 1659960834	Jeff Schaller	agfarmindia\.com
 1659966538	Jeff Schaller	cajunencounters\.com
+1659967304	Makyen	agfarmindia(?!\.com)
