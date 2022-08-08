@@ -209,6 +209,9 @@ items:
   - max.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
+  - cory.ns.cloudflare.com.
+- ns:
+  - alla.ns.cloudflare.com.
   - george.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
