@@ -333,3 +333,8 @@ items:
 - ns:
   - ns13.hoststage.net.
   - ns14.hoststage.net.
+- ns:
+  - ns1cnb.name.com.
+  - ns2bls.name.com.
+  - ns3cna.name.com.
+  - ns4ksy.name.com.
