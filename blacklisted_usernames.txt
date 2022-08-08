@@ -695,3 +695,4 @@ meta kukel exchange
 (?-i:^Selco USA$)
 (?-i:^Anne Phoebe$)
 (?-i:^Staticking\d*$)
+(?-i:^Prompt Resolve$)
