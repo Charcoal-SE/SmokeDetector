@@ -41587,7 +41587,6 @@
 1659264216	tripleee	opscloud\.com\.au
 1659266303	Jeff Schaller	guestbloggingpro\.com
 1659276819	cigien	proseobd\.com
-1659277623	cigien	tutorialwing\.com
 1659278215	cigien	carbatteryexpertsadelaide\.com\.au
 1659279074	cigien	cyber[\W_]*+developer[\W_]*+bd(?!\.com(?<=cyberdeveloperbd\.com))
 1659279096	cigien	trendmoversdubai\.com
