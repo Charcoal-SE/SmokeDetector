@@ -41869,3 +41869,4 @@
 1659924391	cigien	10mgambien\.com
 1659925828	Makyen	familyfun\.fandom\.com
 1659925849	Makyen	wild[\W_]*+knuckles
+1659925869	Makyen	(?-i:daniel\.kraszewski\.1)(?#facebook.com)
