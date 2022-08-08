@@ -1946,6 +1946,9 @@ items:
   - nina.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
+  - nora.ns.cloudflare.com.
+  - zod.ns.cloudflare.com.
+- ns:
   - norm.ns.cloudflare.com.
   - olga.ns.cloudflare.com.
 - ns:
