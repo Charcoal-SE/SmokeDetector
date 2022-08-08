@@ -2656,3 +2656,4 @@ hack\Wethics
 jerryfixesit(?:[\W_]*+(?:at[\W_]*+)?cyberservices[\W_]*+(?:dot[\W_]*+)?com)?
 zinglanguage
 outlook-spotlight
+business-spotlight
