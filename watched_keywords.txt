@@ -41879,3 +41879,4 @@
 1659938620	cocomac	buymmog\.com
 1659939469	cocomac	juiceculture\.com\.au
 1659941120	cigien	goldendreamproperty\.com
+1659942015	cigien	bhavya[\W_]*+steel
