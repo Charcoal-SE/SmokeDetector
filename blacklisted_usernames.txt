@@ -697,3 +697,4 @@ meta kukel exchange
 (?-i:^Staticking\d*$)
 (?-i:^Prompt Resolve$)
 (?-i:^robu$)
+(?-i:^IIP RD$)
