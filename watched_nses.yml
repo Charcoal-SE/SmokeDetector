@@ -632,6 +632,9 @@ items:
   - dara.ns.cloudflare.com.
 - ns:
   - brodie.ns.cloudflare.com.
+  - evangeline.ns.cloudflare.com.
+- ns:
+  - brodie.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
