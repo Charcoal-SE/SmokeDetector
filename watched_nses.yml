@@ -170,6 +170,9 @@ items:
   - daisy.ns.cloudflare.com.
 - ns:
   - alexis.ns.cloudflare.com.
+  - savanna.ns.cloudflare.com.
+- ns:
+  - alexis.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
   - alexis.ns.cloudflare.com.
