@@ -1389,6 +1389,9 @@ items:
   - nelci.ns.cloudflare.com.
 - ns:
   - ines.ns.cloudflare.com.
+  - joel.ns.cloudflare.com.
+- ns:
+  - ines.ns.cloudflare.com.
   - marty.ns.cloudflare.com.
 - ns:
   - ines.ns.cloudflare.com.
