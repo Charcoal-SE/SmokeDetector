@@ -41919,3 +41919,4 @@
 1660047793	tripleee	cloudtrucks\.com
 1660048219	tripleee	look[\W_]*+east[\W_]*+policy
 1660051396	Jeff Schaller	echoinnovateit\.com
+1660053908	cigien	forensiksoft\.com
