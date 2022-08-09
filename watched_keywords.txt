@@ -41909,3 +41909,4 @@
 1660031628	Ryan M	ivesgo\.com
 1660031755	Ryan M	scltaxlaw\.com
 1660037328	tripleee	nhacaicacuoc\.com
+1660038214	tripleee	naturesnaturalindia(?!\.com)
