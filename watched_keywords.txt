@@ -41906,3 +41906,4 @@
 1660026120	cocomac	seo[\W_]*+optimization[\W_]*+company
 1660026941	cocomac	kkksmart\.com
 1660031584	Ryan M	civilstep\.com
+1660031628	Ryan M	ivesgo\.com
