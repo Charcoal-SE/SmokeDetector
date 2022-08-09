@@ -487,7 +487,8 @@ class Metasmoke:
                     if response['failover']:
                         GlobalVars.standby_mode = False
 
-                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.",
+                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal."
+                                                        + GlobalVars.additional_failover_text,
                                                         notify_site="/failover")
 
                 if response.get('standby', False):
