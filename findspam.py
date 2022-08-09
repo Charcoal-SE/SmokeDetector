@@ -158,6 +158,7 @@ WHITELISTED_IP_HOSTNAMES = [
     "ufile.io",
     "usenix.org",
     "whatever.com",
+    "www.docker.com",
     "www.sefaria.org",
     "www.usenix.org",
     "xahlee.info",
