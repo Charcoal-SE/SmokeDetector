@@ -437,6 +437,12 @@ class GlobalVars:
     if valid_rule_ids is not None:
         valid_rule_ids = valid_rule_ids.split(";")
 
+    # Additional text to send to chat when this instance receives a "failover" from MS:
+    # If present at the start and end of the string in the config file, a single ["'] character is stripped from
+    # both the start and end of the value. This allows the value in the config file to be enclosed in quotes
+    # to preserve leading whitespace, but also permit the string to contain those characters.
+    additional_failover_text = regex.sub(r'''^['"](.*)['"]$''', r'\1', config.get("additional_failover_text", ""))
+
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
     bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
