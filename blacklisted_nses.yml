@@ -163,6 +163,9 @@ items:
   - marlowe.ns.cloudflare.com.
   - salvador.ns.cloudflare.com.
 - ns:
+  - martha.ns.cloudflare.com.
+  - sullivan.ns.cloudflare.com.
+- ns:
   - millie.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
 - ns:
