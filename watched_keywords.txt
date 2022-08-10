@@ -41952,3 +41952,4 @@
 1660128381	tripleee	ffont\.ru
 1660128764	tripleee	(?-i:^Samantha Martin$)
 1660128875	tripleee	wiseessays(?!\.com)
+1660129360	tripleee	new[\W_]*+india[\W_]*+solutions
