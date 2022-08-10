@@ -1133,6 +1133,9 @@ items:
   - emely.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
+  - emily.ns.cloudflare.com.
+  - tony.ns.cloudflare.com.
+- ns:
   - emma.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
