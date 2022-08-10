@@ -41939,3 +41939,4 @@
 1660111794	tripleee	premium[\W_]*+learnings[\W_]*+system
 1660112575	tripleee	(?-i:^Ahem Kumar$)
 1660114033	tripleee	great-site\.net
+1660114187	tripleee	swatisethi\.com
