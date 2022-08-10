@@ -2027,6 +2027,9 @@ items:
   - plato.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
+  - porter.ns.cloudflare.com.
+  - tani.ns.cloudflare.com.
+- ns:
   - princess.ns.cloudflare.com.
   - rene.ns.cloudflare.com.
 - ns:
