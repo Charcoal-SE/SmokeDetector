@@ -41955,3 +41955,4 @@
 1660129418	tripleee	newindiasolutions\.com
 1660129464	tripleee	new[\W_]*+india[\W_]*+solutions(?!\.com(?<=newindiasolutions\.com))
 1660130347	tripleee	nftmarketplace
+1660132938	tripleee	munbyn\.com
