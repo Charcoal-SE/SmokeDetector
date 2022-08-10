@@ -1220,6 +1220,9 @@ items:
   - fiona.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
+  - fred.ns.cloudflare.com.
+  - mary.ns.cloudflare.com.
+- ns:
   - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
