@@ -752,9 +752,6 @@ items:
   - kevin.ns.cloudflare.com.
 - ns:
   - chris.ns.cloudflare.com.
-  - josephine.ns.cloudflare.com.
-- ns:
-  - chris.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
   - chuck.ns.cloudflare.com.

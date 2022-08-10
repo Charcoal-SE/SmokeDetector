@@ -100,6 +100,9 @@ items:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - chris.ns.cloudflare.com.
+  - josephine.ns.cloudflare.com.
+- ns:
   - clark.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
