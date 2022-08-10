@@ -881,6 +881,9 @@ items:
   - gina.ns.cloudflare.com.
 - ns:
   - dan.ns.cloudflare.com.
+  - kayleigh.ns.cloudflare.com.
+- ns:
+  - dan.ns.cloudflare.com.
   - lucy.ns.cloudflare.com.
 - ns:
   - dan.ns.cloudflare.com.
