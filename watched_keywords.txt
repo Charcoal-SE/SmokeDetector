@@ -41951,3 +41951,4 @@
 1660128355	tripleee	longterm-health\.com
 1660128381	tripleee	ffont\.ru
 1660128764	tripleee	(?-i:^Samantha Martin$)
+1660128875	tripleee	wiseessays(?!\.com)
