@@ -41935,3 +41935,4 @@
 1660110422	tripleee	stimulus[\W_]*+check
 1660110445	tripleee	skyla[\W_]*+runte\d*
 1660111238	tripleee	theboostr\d*
+1660111748	tripleee	premiumlearnings\.com
