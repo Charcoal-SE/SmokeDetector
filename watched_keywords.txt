@@ -41940,3 +41940,4 @@
 1660112575	tripleee	(?-i:^Ahem Kumar$)
 1660114033	tripleee	great-site\.net
 1660114187	tripleee	swatisethi\.com
+1660115168	tripleee	calculator1\.net
