@@ -1590,6 +1590,9 @@ items:
   - lola.ns.cloudflare.com.
 - ns:
   - kai.ns.cloudflare.com.
+  - marge.ns.cloudflare.com.
+- ns:
+  - kai.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
 - ns:
   - kami.ns.cloudflare.com.
