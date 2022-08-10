@@ -41936,3 +41936,4 @@
 1660110445	tripleee	skyla[\W_]*+runte\d*
 1660111238	tripleee	theboostr\d*
 1660111748	tripleee	premiumlearnings\.com
+1660111794	tripleee	premium[\W_]*+learnings[\W_]*+system
