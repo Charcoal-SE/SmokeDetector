@@ -41958,3 +41958,4 @@
 1660132982	tripleee	planetwired\.com
 1660133315	tripleee	crypto[\W_]*consultant
 1660137520	Jeff Schaller	beautysiaa\.com
+1660143909	cigien	(?-i:sajadsolidity)(?#medium)
