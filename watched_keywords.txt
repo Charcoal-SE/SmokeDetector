@@ -41717,7 +41717,6 @@
 1659612741	tripleee	emirium\.com
 1659613042	tripleee	SYMForexInstitution(?# telegram)
 1659613589	tripleee	(?-i:^001vpn$)
-1659613612	tripleee	prodentim
 1659615617	tripleee	agencydashboard\.io
 1659619695	Makyen	(?-i:theprodentim2022)(?#facebook.com)
 1659619744	tripleee	kozyhomeproducts\.com
