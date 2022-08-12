@@ -41997,3 +41997,4 @@
 1660306403	tripleee	Consoelatte Muhozi
 1660307438	tripleee	gencleoparlar\.com
 1660313947	Jeff Schaller	profoundevolution\.com
+1660313977	Cody Gray	profound[\W_]*evolution(?!\.com(<=profoundevolution\.com))
