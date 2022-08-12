@@ -41986,3 +41986,4 @@
 1660276197	tripleee	oppo[\W_]*+a95[\W_]*+rom
 1660276345	tripleee	lensxp\.com
 1660289423	tripleee	dumpstech\.com
+1660292444	tripleee	socialcontentonline\.com
