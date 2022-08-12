@@ -41983,3 +41983,4 @@
 1660251687	Jeff Schaller	legendsoflearning\.com
 1660267029	Spevacus	hondaautoshop\.com
 1660269869	cocomac	diveinto\.global
+1660276197	tripleee	oppo[\W_]*+a95[\W_]*+rom
