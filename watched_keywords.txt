@@ -42000,3 +42000,4 @@
 1660313977	Cody Gray	profound[\W_]*evolution(?!\.com(<=profoundevolution\.com))
 1660315585	cigien	lerenisplezant\.be
 1660316404	cigien	(?-i:UCtEiCYcI76fKD6J0d4ZmDqw)(?#youtube channel)
+1660316882	Cody Gray	justоoin\.it
