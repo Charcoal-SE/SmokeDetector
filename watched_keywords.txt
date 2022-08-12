@@ -41934,7 +41934,6 @@
 1660112575	tripleee	(?-i:^Ahem Kumar$)
 1660114033	tripleee	great-site\.net
 1660114187	tripleee	swatisethi\.com
-1660115168	tripleee	calculator1\.net
 1660116027	tripleee	servproamarillo\.com
 1660119656	tripleee	shadeowl\.site
 1660119883	tripleee	xxxtentacionmerchshop\.net
