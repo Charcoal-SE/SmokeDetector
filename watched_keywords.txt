@@ -41985,3 +41985,4 @@
 1660269869	cocomac	diveinto\.global
 1660276197	tripleee	oppo[\W_]*+a95[\W_]*+rom
 1660276345	tripleee	lensxp\.com
+1660289423	tripleee	dumpstech\.com
