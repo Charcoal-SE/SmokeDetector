@@ -42028,3 +42028,4 @@
 1660385244	Cody Gray	astroarunpandit\.com
 1660385289	Cody Gray	Astro[\W_]*Arun[\W_]*Pandit(?!\.com(<=astroarunpandit\.com))
 1660385332	Cody Gray	saniya838
+1660389367	Cody Gray	apksvilla\.com
