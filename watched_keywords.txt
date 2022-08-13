@@ -42010,3 +42010,4 @@
 1660329622	cigien	dappcreators(?#telegram)
 1660334738	Ollie	weiy\.city
 1660364405	cocomac	theglobalreviews\.com
+1660368488	Cody Gray	elementor[\W_]*pro(?:[\W_]*review)?
