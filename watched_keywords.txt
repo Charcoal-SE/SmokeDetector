@@ -42026,3 +42026,4 @@
 1660384464	Makyen	topactivationkey(?!\.org)\d*
 1660384963	Makyen	gosoccerworld\.com
 1660385002	Makyen	jewelrykg(?!\.com)
+1660385244	Cody Gray	astroarunpandit\.com
