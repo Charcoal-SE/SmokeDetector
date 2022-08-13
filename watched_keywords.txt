@@ -42025,3 +42025,4 @@
 1660384296	Robert Longson	topactivationkey\.org
 1660384464	Makyen	topactivationkey(?!\.org)\d*
 1660384963	Makyen	gosoccerworld\.com
+1660385002	Makyen	jewelrykg(?!\.com)
