@@ -42034,3 +42034,4 @@
 1660390340	Cody Gray	savastan0\.(?:es|top|shop)
 1660390371	Cody Gray	pp24\.market
 1660390392	Cody Gray	finds0me\.ru
+1660390483	Cody Gray	ssnd[o0]b(?!\.(?:biz|cc))
