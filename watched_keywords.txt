@@ -42024,3 +42024,4 @@
 1660381838	Cody Gray	high[\W_]*risk[\W_]*merchant[\W_]*account
 1660384296	Robert Longson	topactivationkey\.org
 1660384464	Makyen	topactivationkey(?!\.org)\d*
+1660384963	Makyen	gosoccerworld\.com
