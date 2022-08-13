@@ -42027,3 +42027,4 @@
 1660384963	Makyen	gosoccerworld\.com
 1660385002	Makyen	jewelrykg(?!\.com)
 1660385244	Cody Gray	astroarunpandit\.com
+1660385289	Cody Gray	Astro[\W_]*Arun[\W_]*Pandit(?!\.com(<=astroarunpandit\.com))
