@@ -42022,3 +42022,4 @@
 1660376507	Makyen	bitcoin[\W_]*+loophole(?:[\W_]*+(?:erfahrungen|bewertungen|\d++|[\da-f]{5,}+)s?)*
 1660378441	Makyen	thumbnailsave\.net
 1660381838	Cody Gray	high[\W_]*risk[\W_]*merchant[\W_]*account
+1660384296	Robert Longson	topactivationkey\.org
