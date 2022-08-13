@@ -32294,7 +32294,6 @@
 1632132723	tripleee	~018d5d7583416c4f31(?# upwork)
 1632132852	tripleee	timesofmart(?!\.com)
 1632133054	tripleee	meherulislam
-1632134840	tripleee	(?-i:^Manish Prajapati$)
 1632134879	tripleee	vmorgan\.co\.uk
 1632134935	tripleee	(?-i:^Shashi Kant Mani Tripathi$)
 1632141868	double-beep	act3office\.co\.uk
