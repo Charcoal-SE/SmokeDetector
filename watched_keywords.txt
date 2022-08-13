@@ -42038,3 +42038,4 @@
 1660394026	Cody Gray	ritikkr99(?#github)
 1660394062	Cody Gray	ritik-kumar-4b1070214(?#linkedin)
 1660396953	Cody Gray	jobupdates24\.com
+1660396976	Cody Gray	jobupdates24(?!\.com)
