@@ -42020,3 +42020,4 @@
 1660376013	Makyen	bitcoinloop(?#pinterest.co.uk)
 1660376047	Makyen	950189221356884547(?#pinterest.de)
 1660376507	Makyen	bitcoin[\W_]*+loophole(?:[\W_]*+(?:erfahrungen|bewertungen|\d++|[\da-f]{5,}+)s?)*
+1660378441	Makyen	thumbnailsave\.net
