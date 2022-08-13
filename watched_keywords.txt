@@ -42012,3 +42012,4 @@
 1660364405	cocomac	theglobalreviews\.com
 1660368488	Cody Gray	elementor[\W_]*pro(?:[\W_]*review)?
 1660368522	Cody Gray	quickwp\.net
+1660368544	Cody Gray	website1\.ir
