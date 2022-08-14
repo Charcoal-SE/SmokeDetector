@@ -42064,3 +42064,4 @@
 1660471480	Cody Gray	emmalovesweddings\.com
 1660471508	Cody Gray	emmalovesweddings(?!\.com)
 1660473986	Cody Gray	myprojecthd\.in
+1660474021	Cody Gray	My[\W_]*Project[\W_]*HD(?!\.in(<=myprojecthd\.in))
