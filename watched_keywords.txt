@@ -42052,3 +42052,4 @@
 1660452314	Cody Gray	Student[\W_]*Saathi(?!\.com(<=studentssaathi\.com))
 1660452350	cocomac	studentssaathi\.com
 1660454635	cocomac	p..ce[\W_]*+of[\W_]*+sh.t
+1660460235	Cody Gray	cashappup\.com
