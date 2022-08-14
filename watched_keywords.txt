@@ -42054,3 +42054,4 @@
 1660454635	cocomac	p..ce[\W_]*+of[\W_]*+sh.t
 1660460235	Cody Gray	cashappup\.com
 1660460308	Cody Gray	noahlangphotography\.com
+1660460330	Cody Gray	Activate[\W_]*Cash[\W_]*App[\W_]*Card
