@@ -42063,3 +42063,4 @@
 1660466102	Cody Gray	(?-i:^donditech$)
 1660471480	Cody Gray	emmalovesweddings\.com
 1660471508	Cody Gray	emmalovesweddings(?!\.com)
+1660473986	Cody Gray	myprojecthd\.in
