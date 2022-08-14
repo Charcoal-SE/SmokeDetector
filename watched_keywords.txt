@@ -42051,3 +42051,4 @@
 1660451844	Cody Gray	Code[\W_]*With[\W_]*Nepal(?!\.com(<=codewithnepal\.com))
 1660452314	Cody Gray	Student[\W_]*Saathi(?!\.com(<=studentssaathi\.com))
 1660452350	cocomac	studentssaathi\.com
+1660454635	cocomac	p..ce[\W_]*+of[\W_]*+sh.t
