@@ -42083,3 +42083,4 @@
 1660547911	tripleee	tribuneindia\.com/news/brand-connect
 1660547938	tripleee	tribuneindia\.com(?!/news/brand-connect)
 1660551133	tripleee	(?-i:^Ruby Garage$)
+1660552979	tripleee	sixpackpower\.com
