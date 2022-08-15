@@ -42101,3 +42101,4 @@
 1660579185	cigien	pgslot\.link
 1660581674	Ollie	innovabc\.com\.ar
 1660587104	Makyen	fmwhatsapp[\W_]*+apk
+1660590768	Makyen	deltiamon(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
