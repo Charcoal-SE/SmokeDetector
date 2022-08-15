@@ -2730,7 +2730,7 @@ create_rule("several emoji in title",
 # Parenting troll
 # This rule is currently broken and detects nothing. It appears it was supposed to be for usernames.
 create_rule("bad keyword in {}",
-            r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
+            r"(?i)\b(jeff|spam|moderator)\b",
             all=False, sites=["parenting.stackexchange.com"],
             title=False, body_summary=True, max_rep=52,
             rule_id="bad keywords: erica, jeff, er1ca, etc., bodies, parenting")
