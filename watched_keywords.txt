@@ -42080,4 +42080,3 @@
 1660539029	tripleee	rankrazer\.com
 1660546296	tripleee	rapidapi\.com/yevhenkudrya
 1660547279	tripleee	brotheroffline\.com
-1660547806	tripleee	tribuneindia\.com
