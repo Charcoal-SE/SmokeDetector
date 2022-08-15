@@ -42087,3 +42087,4 @@
 1660553003	tripleee	(?-i:^Gregory Garvie$)
 1660558236	tripleee	drachen
 1660563846	Jeff Schaller	neek-reden-reading-glasses\.com
+1660564410	tripleee	syodolls*(?!\.com(?<=syodoll\.com))
