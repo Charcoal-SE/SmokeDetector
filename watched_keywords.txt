@@ -42141,3 +42141,4 @@
 1660653481	Jeff Schaller	muricasnews\.com
 1660655304	tripleee	(?-i:^Martin Gray$)
 1660656885	Spevacus	chase2learn\.com
+1660657076	Spevacus	motifcreatives(?!\.co)(?# codecanyon.net)
