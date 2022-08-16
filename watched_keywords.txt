@@ -42145,3 +42145,4 @@
 1660657110	Spevacus	motifcreatives\.co
 1660659829	Spevacus	theroutertable\.com
 1660660994	cigien	mixhubb\.com
+1660661021	cigien	mixhubb(?!\.com)
