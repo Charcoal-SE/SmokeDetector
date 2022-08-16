@@ -42151,3 +42151,4 @@
 1660677982	Makyen	forumfr\.com
 1660680559	Makyen	develux(?!\.com)
 1660683189	cigien	drmacusspellcaster(?:@gmail\.com)
+1660683210	cigien	d(?:octo)?r[\W_]*+macus
