@@ -133,6 +133,9 @@ items:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
+  - evan.ns.cloudflare.com.
+  - megan.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
