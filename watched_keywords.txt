@@ -42157,3 +42157,4 @@
 1660692154	Spevacus	lodekto\.com
 1660692840	Makyen	lodekto(?!\.com)
 1660692862	Makyen	lodeonline
+1660692883	Makyen	soicaulode
