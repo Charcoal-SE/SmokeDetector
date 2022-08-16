@@ -42127,3 +42127,4 @@
 1660641256	tripleee	skale[\W_]*+fitness(?<!(?-i:^skalefitness$))(?!\.com(?<=skalefitness\.com))
 1660641455	tripleee	johnbabikian\.com
 1660641875	tripleee	tpdevpro\.com
+1660643538	tripleee	wteacademy\.com
