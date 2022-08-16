@@ -42137,3 +42137,4 @@
 1660651116	tripleee	nimmish\.com
 1660651304	tripleee	ep[\W_]*+application[\W_]*+agency
 1660651415	tripleee	chemical[\W_]*+fiber[\W_]*+wigs?
+1660651877	tripleee	(?-i:^Mahdi Kaffash$)
