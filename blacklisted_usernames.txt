@@ -699,3 +699,4 @@ meta kukel exchange
 (?-i:^robu$)
 (?-i:^IIP RD$)
 (?-i:^Alex Abbott$)
+(?-i:^pentagon space$)
