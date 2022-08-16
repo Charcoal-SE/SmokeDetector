@@ -42124,3 +42124,4 @@
 1660639055	tripleee	(?-i:coEs4hKFoes)(?# youtube)
 1660639084	tripleee	(?-i:N829GtzatDI)(?# youtube)
 1660640212	tripleee	kanekalon
+1660640249	tripleee	wig[\W_]*+fashion
