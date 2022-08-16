@@ -42142,3 +42142,4 @@
 1660655304	tripleee	(?-i:^Martin Gray$)
 1660656885	Spevacus	chase2learn\.com
 1660657076	Spevacus	motifcreatives(?!\.co)(?# codecanyon.net)
+1660657110	Spevacus	motifcreatives\.co
