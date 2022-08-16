@@ -42143,3 +42143,4 @@
 1660656885	Spevacus	chase2learn\.com
 1660657076	Spevacus	motifcreatives(?!\.co)(?# codecanyon.net)
 1660657110	Spevacus	motifcreatives\.co
+1660659829	Spevacus	theroutertable\.com
