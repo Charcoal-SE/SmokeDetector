@@ -42139,3 +42139,4 @@
 1660651415	tripleee	chemical[\W_]*+fiber[\W_]*+wigs?
 1660651877	tripleee	(?-i:^Mahdi Kaffash$)
 1660653238	tripleee	t3ereview\.com
+1660653481	Jeff Schaller	muricasnews\.com
