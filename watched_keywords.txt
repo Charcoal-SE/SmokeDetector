@@ -42131,3 +42131,4 @@
 1660643841	tripleee	wte[\W_]*+academy(?!\.com(?<=wteacademy\.com))
 1660644022	tripleee	kazmicardetailing\.com
 1660644327	tripleee	zabihahalalchicken\.com
+1660645530	tripleee	blockchaintechs\.io
