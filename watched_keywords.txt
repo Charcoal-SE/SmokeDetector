@@ -42155,3 +42155,4 @@
 1660686524	Ollie	(?-i:currently-unava-ipaid-gmai-ebb)(?# sites.google.com)
 1660689838	Makyen	academicsconsultancy\.co\.uk
 1660692154	Spevacus	lodekto\.com
+1660692840	Makyen	lodekto(?!\.com)
