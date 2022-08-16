@@ -42144,3 +42144,4 @@
 1660657076	Spevacus	motifcreatives(?!\.co)(?# codecanyon.net)
 1660657110	Spevacus	motifcreatives\.co
 1660659829	Spevacus	theroutertable\.com
+1660660994	cigien	mixhubb\.com
