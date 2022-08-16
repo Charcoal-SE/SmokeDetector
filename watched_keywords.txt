@@ -42129,3 +42129,4 @@
 1660641875	tripleee	tpdevpro\.com
 1660643538	tripleee	wteacademy\.com
 1660643841	tripleee	wte[\W_]*+academy(?!\.com(?<=wteacademy\.com))
+1660644022	tripleee	kazmicardetailing\.com
