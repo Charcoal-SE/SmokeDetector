@@ -42176,3 +42176,4 @@
 1660722289	tripleee	bustmaxx
 1660722448	tripleee	openteleshop\.com
 1660722474	tripleee	openteleshop\.pk
+1660722633	tripleee	trishulbiotech\.com
