@@ -42181,3 +42181,4 @@
 1660722762	tripleee	clear[\W_]*+anti[\W_]*+shock[\W_]*+screen[\W_]*+protector
 1660725716	tripleee	gocasualarticlesandblogs\.com
 1660725773	tripleee	PortionOfScreen(?# github project)
+1660725888	tripleee	rus-buket\.ru
