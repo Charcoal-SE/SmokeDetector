@@ -916,6 +916,9 @@ items:
   - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - daniella.ns.cloudflare.com.
+  - isaac.ns.cloudflare.com.
+- ns:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
