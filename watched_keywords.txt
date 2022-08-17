@@ -42186,3 +42186,4 @@
 1660728966	tripleee	islootoday\.com
 1660729336	tripleee	(?-i:^Amelia Kiebler$)
 1660731016	tripleee	green[\W_]*+leafz
+1660731954	tripleee	techusablogs\.com
