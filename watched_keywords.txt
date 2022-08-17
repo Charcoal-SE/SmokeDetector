@@ -42192,3 +42192,4 @@
 1660732442	tripleee	ip[\W_]*+tv[\W_]*+services?
 1660732919	tripleee	(?-i:^hasnain yaseen$)
 1660735193	tripleee	drbuho\.com
+1660735613	tripleee	neurogan\.com
