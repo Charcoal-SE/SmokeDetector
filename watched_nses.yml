@@ -1349,6 +1349,9 @@ items:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - haley.ns.cloudflare.com.
+  - mike.ns.cloudflare.com.
+- ns:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
