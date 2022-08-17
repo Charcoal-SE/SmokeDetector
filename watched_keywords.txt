@@ -42190,3 +42190,4 @@
 1660731979	tripleee	parivariptv\.com
 1660732016	tripleee	bestaudiopro\.com
 1660732365	tripleee	rate[\W_]*my[\W_]*+professors?
+1660732442	tripleee	ip[\W_]*+tv[\W_]*+services?
