@@ -42184,3 +42184,4 @@
 1660725888	tripleee	rus-buket\.ru
 1660725965	tripleee	redleafinterior\.com
 1660728915	tripleee	clicky[\W_]*+club
+1660728966	tripleee	islootoday\.com
