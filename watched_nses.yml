@@ -824,9 +824,6 @@ items:
   - marjory.ns.cloudflare.com.
 - ns:
   - coleman.ns.cloudflare.com.
-  - tagan.ns.cloudflare.com.
-- ns:
-  - coleman.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
   - cora.ns.cloudflare.com.
