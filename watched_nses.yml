@@ -280,6 +280,9 @@ items:
   - andy.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - andy.ns.cloudflare.com.
+  - maria.ns.cloudflare.com.
+- ns:
   - angela.ns.cloudflare.com.
   - austin.ns.cloudflare.com.
 - ns:
