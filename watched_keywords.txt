@@ -42199,3 +42199,4 @@
 1660737176	tripleee	cleanup\.expert
 1660742594	Jeff Schaller	letkatiecook\.com
 1660742617	Jeff Schaller	thegifttown\.com
+1660742793	Jeff Schaller	www\.google\.com\.487382835812038\.windows-display-service\.com
