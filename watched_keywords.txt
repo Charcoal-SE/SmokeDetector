@@ -42174,3 +42174,4 @@
 1660718938	tripleee	adhiban\.in
 1660721616	tripleee	hollywoodmovis\.com
 1660722289	tripleee	bustmaxx
+1660722448	tripleee	openteleshop\.com
