@@ -1592,6 +1592,9 @@ items:
   - jose.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
+  - julio.ns.cloudflare.com.
+  - lola.ns.cloudflare.com.
+- ns:
   - june.ns.cloudflare.com.
   - keanu.ns.cloudflare.com.
 - ns:
