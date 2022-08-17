@@ -42195,3 +42195,4 @@
 1660735613	tripleee	neurogan\.com
 1660735646	tripleee	vape[\W_]*+juice
 1660735726	tripleee	medsarcade\.com
+1660736452	tripleee	(?-i:^james8801brown$)
