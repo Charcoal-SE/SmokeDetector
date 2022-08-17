@@ -42167,3 +42167,4 @@
 1660706424	Makyen	elfrad\.eth#5842
 1660709625	tripleee	empowerloans\.in
 1660709796	tripleee	elfrad[\W_]*+eth
+1660711596	tripleee	lataqntu(?!\.com)
