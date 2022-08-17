@@ -42193,3 +42193,4 @@
 1660732919	tripleee	(?-i:^hasnain yaseen$)
 1660735193	tripleee	drbuho\.com
 1660735613	tripleee	neurogan\.com
+1660735646	tripleee	vape[\W_]*+juice
