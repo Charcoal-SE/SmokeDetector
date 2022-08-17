@@ -42177,3 +42177,4 @@
 1660722448	tripleee	openteleshop\.com
 1660722474	tripleee	openteleshop\.pk
 1660722633	tripleee	trishulbiotech\.com
+1660722678	tripleee	yccscreenfilter\.com
