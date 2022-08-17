@@ -42167,3 +42167,4 @@
 1660709625	tripleee	empowerloans\.in
 1660709796	tripleee	elfrad[\W_]*+eth
 1660711596	tripleee	lataqntu(?!\.com)
+1660712847	tripleee	(?-i:^Health Medical$)
