@@ -42210,3 +42210,4 @@
 1660749877	cigien	trishul[\W_]*+biotech(?!\.com(?<=trishulbiotech\.com))
 1660756622	Ollie	hemptherapyheals\.com
 1660758939	Jeff Schaller	crypto\.ru
+1660769168	Jeff Schaller	ceptelefonservis\.com
