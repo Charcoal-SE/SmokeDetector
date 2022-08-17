@@ -23707,7 +23707,6 @@
 1603957431	tripleee	ffxiv[\W_]*+gil
 1603957734	Ryan M	trickyworlds\.com
 1603967202	tripleee	essayreviews247\.com
-1603968235	tripleee	develux\.com
 1603970715	tripleee	customboxesworld\.com
 1603975717	Mast	sntv24samachar\.com
 1603977333	Spevacus	rbsland\.com
