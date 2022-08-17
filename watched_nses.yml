@@ -1832,6 +1832,9 @@ items:
   - lorna.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - lorna.ns.cloudflare.com.
+  - trey.ns.cloudflare.com.
+- ns:
   - love.ns.cloudflare.com.
   - vasilii.ns.cloudflare.com.
 - ns:
