@@ -512,6 +512,9 @@ items:
   - duke.ns.cloudflare.com.
 - ns:
   - ben.ns.cloudflare.com.
+  - chan.ns.cloudflare.com.
+- ns:
+  - ben.ns.cloudflare.com.
   - chloe.ns.cloudflare.com.
 - ns:
   - ben.ns.cloudflare.com.
