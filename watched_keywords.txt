@@ -42197,3 +42197,4 @@
 1660735726	tripleee	medsarcade\.com
 1660736452	tripleee	(?-i:^james8801brown$)
 1660737176	tripleee	cleanup\.expert
+1660742594	Jeff Schaller	letkatiecook\.com
