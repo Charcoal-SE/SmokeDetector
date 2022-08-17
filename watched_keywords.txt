@@ -41119,7 +41119,6 @@
 1657994411	Makyen	sonneriemp3gratuite(?!\.com)
 1657998147	cigien	grinchcostume\.shop
 1657998277	Makyen	grinch[\W_]*+costume(?!\.shop(?<=grinchcostume\.shop))(?:[\W_]*+(?:shop|\d++|[\da-f]{5,}+)s?)*
-1658006897	Machavity	direct\.lc\.chat
 1658020233	Jeff Schaller	CYBER LORD
 1658027673	cigien	indigocard\.ltd
 1658027695	cigien	krnl\.run
