@@ -42242,3 +42242,4 @@
 1660812728	Makyen	capcauthanggiare
 1660814710	tripleee	(?-i:^Emily Watson$)
 1660815196	tripleee	quicknet\.me
+1660815368	tripleee	ewsfast\d*
