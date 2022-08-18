@@ -42243,3 +42243,4 @@
 1660815196	tripleee	quicknet\.me
 1660815368	tripleee	ewsfast\d*
 1660815466	tripleee	coolnetdatacenter\.com
+1660815613	tripleee	(?-i:^coolnet$)
