@@ -1075,6 +1075,9 @@ items:
   - wally.ns.cloudflare.com.
 - ns:
   - earl.ns.cloudflare.com.
+  - gail.ns.cloudflare.com.
+- ns:
+  - earl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
 - ns:
   - ed.ns.cloudflare.com.
