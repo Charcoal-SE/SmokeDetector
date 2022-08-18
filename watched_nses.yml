@@ -1581,6 +1581,9 @@ items:
   - perla.ns.cloudflare.com.
 - ns:
   - jo.ns.cloudflare.com.
+  - khalid.ns.cloudflare.com.
+- ns:
+  - jo.ns.cloudflare.com.
   - otto.ns.cloudflare.com.
 - ns:
   - jo.ns.cloudflare.com.
