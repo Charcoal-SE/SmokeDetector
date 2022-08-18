@@ -42230,3 +42230,4 @@
 1660808613	Makyen	sieuketqua\.com
 1660808645	Makyen	caothusoicau\.com
 1660808901	Makyen	mmowts\.com
+1660811949	Makyen	capcauthang(?!\.vn)
