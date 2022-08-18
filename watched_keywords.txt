@@ -42267,3 +42267,4 @@
 1660842375	Ollie	(?-i:YXz3aqy)(?# cutt.ly)
 1660848613	cigien	xerosource\.com
 1660853526	Makyen	kbclucky\.com
+1660853566	Makyen	kbc[\W_]*+lucky(?!\.com(?<=kbclucky\.com))
