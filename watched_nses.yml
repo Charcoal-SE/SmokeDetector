@@ -740,6 +740,9 @@ items:
   - irma.ns.cloudflare.com.
 - ns:
   - charles.ns.cloudflare.com.
+  - nova.ns.cloudflare.com.
+- ns:
+  - charles.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
   - chelsea.ns.cloudflare.com.
