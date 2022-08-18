@@ -701,3 +701,4 @@ meta kukel exchange
 (?-i:^Alex Abbott$)
 (?-i:^pentagon space$)
 (?-i:^skalefitness$)
+(?-i:^Joan Williams$)
