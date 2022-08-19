@@ -41882,7 +41882,6 @@
 1660031584	Ryan M	civilstep\.com
 1660031628	Ryan M	ivesgo\.com
 1660031755	Ryan M	scltaxlaw\.com
-1660037328	tripleee	nhacaicacuoc\.com
 1660038214	tripleee	naturesnaturalindia(?!\.com)
 1660038641	tripleee	https\.in
 1660039041	tripleee	market247\.io
