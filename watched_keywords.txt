@@ -42292,3 +42292,4 @@
 1660916743	cigien	vqs-novinteb\.com
 1660917642	Jeff Schaller	customjs\.space
 1660917780	cigien	(?-i:7ec28d856377)(?#medium)
+1660917900	cigien	exampraxis(?!\.com)
