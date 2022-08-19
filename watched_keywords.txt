@@ -42295,3 +42295,4 @@
 1660917900	cigien	exampraxis(?!\.com)
 1660918124	cigien	virtuacoin\.com
 1660918697	cigien	sunyata\.info
+1660920535	Jeff Schaller	skeducations\.in
