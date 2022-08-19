@@ -42294,3 +42294,4 @@
 1660917780	cigien	(?-i:7ec28d856377)(?#medium)
 1660917900	cigien	exampraxis(?!\.com)
 1660918124	cigien	virtuacoin\.com
+1660918697	cigien	sunyata\.info
