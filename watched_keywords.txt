@@ -42316,3 +42316,4 @@
 1660987592	tripleee	hotjobshub\.com
 1660988863	tripleee	sharma[\W_]*+academy(?!\.com(?<=sharmaacademy\.com))
 1660992098	tripleee	prestogroup\.com
+1660992151	tripleee	hawkee\.com
