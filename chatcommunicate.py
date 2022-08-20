@@ -684,9 +684,8 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
         if post_data:
             expected_domains = (r'\b(?:erwaysoftware\.com|stackexchange\.com|stackoverflow\.com|serverfault\.com'
                                 r'|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net)\b')
-            is_alive_regex_text = r'(?i)^(?=.*?\bstill\b)(?=.*?\b(?:alive|up)\b)(?=.*?{})'.format(expected_domains)
             content = reply.content
-            if regex.search(is_alive_regex_text, content) is not None:
+            if regex.search(r'(?i)\bstill[\W_]+(?:alive|up)\b', content) is not None:
                 sub_regex_text = r'(?i)(?:^@\S*|<a href="[^/]*//[^/]*{}[^<]*</a>)'.format(expected_domains)
                 content_without_at_and_expected_links = regex.sub(sub_regex_text, '', content)
                 if len(content_without_at_and_expected_links) < 100:
