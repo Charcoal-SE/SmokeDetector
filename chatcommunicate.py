@@ -641,7 +641,7 @@ def dispatch_command(msg):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
-def dispatch_reply_command(msg, reply, full_cmd, comment=True):
+def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
     command_parts = full_cmd.split(" ", 1)
 
     if len(command_parts) == 2:
@@ -664,16 +664,16 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
         assert min_arity == 1
 
         if max_arity == 1:
-            return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(message_replied_to, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
         elif max_arity == 2:
-            return func(msg, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(message_replied_to, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
         else:
             args = args.split()
             args.extend([None] * (max_arity - len(args)))
 
-            return func(msg, *args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+            return func(message_replied_to, *args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
     elif comment and is_privileged(reply.owner, reply.room):
-        post_data = get_report_data(msg)
+        post_data = get_report_data(message_replied_to)
 
         if post_data:
             expected_domains = (r'\b(?:erwaysoftware\.com|stackexchange\.com|stackoverflow\.com|serverfault\.com'
