@@ -682,6 +682,18 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
         post_data = get_report_data(msg)
 
         if post_data:
+            expected_domains = (r'\b(?:erwaysoftware\.com|stackexchange\.com|stackoverflow\.com|serverfault\.com'
+                                r'|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net)\b')
+            is_alive_regex_text = r'(?i)^(?=.*?\balive\b)(?=.*?{})'.format(expected_domains)
+            content = reply.content
+            if regex.search(is_alive_regex_text, content) is not None:
+                sub_regex_text = r'(?i)(?:^@\S*|<a href="[^/]*//[^/]*{}[^<]*</a>)'.format(expected_domains)
+                content_without_at_and_expected_links = regex.sub(sub_regex_text, '', content)
+                if len(content_without_at_and_expected_links) < 100:
+                    # This is a "still alive" message which includes at least a link to one of the domains
+                    # and doesn't have much text other than the reply, and contains at lesat one  MS and/or SE domain.
+                    # So, we don't want to forward it as a comment to MS.
+                    return
             Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd, reply.owner, url=post_data[0])
 
 
