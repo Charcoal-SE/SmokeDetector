@@ -42356,3 +42356,4 @@
 1661008919	cigien	crimescene\.com
 1661009771	cigien	apkmodroid\.com
 1661009820	cigien	hotjobshub(?!\.com)
+1661013505	cocomac	fitnessgym\.pro
