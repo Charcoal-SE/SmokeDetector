@@ -1254,6 +1254,9 @@ items:
   - mary.ns.cloudflare.com.
 - ns:
   - gabe.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
+  - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
   - gail.ns.cloudflare.com.
