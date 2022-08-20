@@ -42321,3 +42321,4 @@
 1660992195	tripleee	glam0ur\.net
 1660992217	tripleee	upverter\.com
 1660992250	tripleee	consultasexologo\.com
+1660992475	tripleee	presto[\W_]*+group(?!\.com(?<=prestogroup\.com))
