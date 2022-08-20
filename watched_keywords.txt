@@ -42351,3 +42351,4 @@
 1661005910	Makyen	featureguards(?!\.com)
 1661007613	Makyen	custompackagingboxes\.co\.uk
 1661008761	cigien	neodumps\.com
+1661008796	cigien	fajar[\W_]*+realty(?!\.ae(?<=fajarrealty\.ae))
