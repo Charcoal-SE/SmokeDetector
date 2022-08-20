@@ -490,6 +490,9 @@ items:
   - bayan.ns.cloudflare.com.
   - mia.ns.cloudflare.com.
 - ns:
+  - bayan.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
