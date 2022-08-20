@@ -641,6 +641,13 @@ def dispatch_command(msg):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
+def get_attribution_for_message(msg):
+    host_url = 'https://chat.{}/'.format(msg._client.host)
+    message_url = '{}transcript/message/{}'.format(host_url, msg.id)
+    user_url = '{}users/{}/{}'.format(host_url, msg.owner.id, msg.owner.name)
+    return ' &ndash; from a [chat message]({}) by [{}]({})'.format(message_url, msg.owner.name, user_url)
+
+
 def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
     command_parts = full_cmd.split(" ", 1)
 
@@ -687,7 +694,8 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
                     # and doesn't have much text other than the reply, and contains at lesat one  MS and/or SE domain.
                     # So, we don't want to forward it as a comment to MS.
                     return
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd, reply.owner, url=post_data[0])
+            Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd + get_attribution_for_message(reply),
+                     reply.owner, url=post_data[0])
 
 
 def dispatch_shorthand_command(msg):
