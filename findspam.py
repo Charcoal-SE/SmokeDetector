@@ -2230,6 +2230,7 @@ city_list = [
     "Ernakulam", "Faridabad",
     "Ghatkopar", "Ghaziabad", "Gurgaon", "Gurugram", "Guwahati",
     "Haldwani", "Haridwar", "Hyderabad",
+    "Indore",
     "Jaipur", "Jalandhar", "Jim Corbett",
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
     "Kochi", "Kolkata", "Kota",
