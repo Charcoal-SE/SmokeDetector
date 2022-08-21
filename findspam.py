@@ -132,6 +132,7 @@ WHITELISTED_IP_HOSTNAMES = [
     "bot.run",
     "build.ninja",
     "data.gov.sg",
+    "docker.com",
     "ergoemacs.org",
     "flutter.dev",
     "form.as",
