@@ -362,12 +362,6 @@ def on_msg(msg, client):
     elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
         result = dispatch_command(message)
         send_reply_if_not_blank(room_ident, message.id, result)
-    elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
-            and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
-        ids, expires_in = datahandling.last_feedbacked
-
-        if time.time() < expires_in:
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
     else:
         with _room_roles_lock:
             if 'direct' in _room_roles and room_ident in _room_roles['direct']:
