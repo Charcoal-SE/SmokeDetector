@@ -812,6 +812,9 @@ items:
   - dalary.ns.cloudflare.com.
 - ns:
   - clyde.ns.cloudflare.com.
+  - ligia.ns.cloudflare.com.
+- ns:
+  - clyde.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
   - clyde.ns.cloudflare.com.
