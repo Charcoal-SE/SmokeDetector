@@ -42414,3 +42414,4 @@
 1661174440	tripleee	synapse[\W_]*+x
 1661174948	cigien	bestonlinewritingservice\.com
 1661176088	cigien	pishgamnoor\.com
+1661176293	cigien	cryptora\.tech
