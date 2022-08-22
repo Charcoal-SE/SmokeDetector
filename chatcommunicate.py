@@ -645,7 +645,8 @@ def get_attribution_for_message(msg):
     host_url = 'https://chat.{}/'.format(msg._client.host)
     message_url = '{}transcript/message/{}'.format(host_url, msg.id)
     user_url = '{}users/{}/{}'.format(host_url, msg.owner.id, msg.owner.name)
-    return ' &ndash; from a [chat message]({}) by [{}]({})'.format(message_url, msg.owner.name, user_url)
+    return ' – from a <a href="{}">chat message</a> by <a href="{}">{}</a>'.format(message_url, user_url,
+                                                                                   msg.owner.name)
 
 
 def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
