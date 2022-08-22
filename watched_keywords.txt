@@ -42410,3 +42410,4 @@
 1661172404	Spevacus	eximtradedata\.com
 1661172520	cigien	luuma[\W_]*+luxury(?!\.com(?<=luumaluxury\.com))
 1661172899	cigien	pdmc\.in
+1661173181	Spevacus	xscan\.io
