@@ -3111,7 +3111,9 @@ items:
 - comment: 1/10 over 3 months 2022-07-28
   disable: true
   ns: topdns.com.
-- ns: luutruso.vn.
+- comment: NXDOMAIN 2022-08-22
+  disable: true
+  ns: luutruso.vn.
 - ns: luutruso.net.
 - ns: designkug.com.
 - ns: byet.org.
