@@ -42395,3 +42395,4 @@
 1661151421	tripleee	com\.ag\.multi\.storey\.car\.parkingmaster\.symstudiogames(?# play.google.com)
 1661151463	tripleee	brighteduworld\.com
 1661151490	tripleee	baoyu\.ir
+1661151712	tripleee	makeyourexam\.com
