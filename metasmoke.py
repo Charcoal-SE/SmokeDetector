@@ -604,6 +604,9 @@ class Metasmoke:
             return
 
         response = None
+        # This works around a limitation in MS comments not allowing full Unicode characters. It allows
+        # SD to forward chat messages which are oneboxed moderator comments.
+        msg = msg.replace('♦', '&diams;')
 
         if url is not None:
             params = {"key": GlobalVars.metasmoke_key, "urls": url, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
