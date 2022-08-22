@@ -42392,3 +42392,4 @@
 1661145836	tripleee	(?-i:^Freedom Tech$)
 1661147497	cocomac	copycat\.dev
 1661147634	cocomac	vinitahealth\.com
+1661151421	tripleee	com\.ag\.multi\.storey\.car\.parkingmaster\.symstudiogames(?# play.google.com)
