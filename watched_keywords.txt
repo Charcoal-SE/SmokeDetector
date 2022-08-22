@@ -42385,3 +42385,4 @@
 1661144127	tripleee	sex[\W_]*+power[\W_]*+capsules?
 1661145525	Makyen	servicemycar\.com
 1661145687	Makyen	(?-i:KUzTguc5uVs)(?#youtu.be)
+1661145708	Makyen	(?-i:w6CvLuTvW3E)(?#youtu.be)
