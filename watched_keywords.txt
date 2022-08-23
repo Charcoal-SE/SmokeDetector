@@ -42443,3 +42443,4 @@
 1661256905	tripleee	(?-i:^Avajos$)
 1661257279	Jeff Schaller	bluebrightsolutions\.com
 1661257584	tripleee	atlas[\W_]*+vpn
+1661262502	cigien	bringbackmycrypto\.com
