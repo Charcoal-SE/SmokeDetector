@@ -42442,3 +42442,4 @@
 1661255433	Jeff Schaller	getrecognised\.com\.au
 1661256905	tripleee	(?-i:^Avajos$)
 1661257279	Jeff Schaller	bluebrightsolutions\.com
+1661257584	tripleee	atlas[\W_]*+vpn
