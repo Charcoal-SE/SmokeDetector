@@ -42430,3 +42430,4 @@
 1661238817	cocomac	doramasmp4\.digital
 1661238994	tripleee	(?-i:^Harry Johnson$)
 1661244138	tripleee	acetechnology\.co\.in
+1661244319	tripleee	(?-i:^First DigiAdd$)
