@@ -42445,3 +42445,4 @@
 1661257584	tripleee	atlas[\W_]*+vpn
 1661262502	cigien	bringbackmycrypto\.com
 1661263006	cigien	d(?:octo)?r[\W_]*+ayoola
+1661263529	cigien	dordle\.io
