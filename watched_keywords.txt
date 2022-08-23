@@ -42447,3 +42447,4 @@
 1661263006	cigien	d(?:octo)?r[\W_]*+ayoola
 1661263529	cigien	dordle\.io
 1661264701	cocomac	(?:call[\W_]*+or[\W_]*+text|text[\W_]*+or[\W_]*+call)
+1661282716	Glorfindel	sky247bet\.in
