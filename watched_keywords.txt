@@ -42428,3 +42428,4 @@
 1661235282	tripleee	worldcups\.top
 1661238439	tripleee	livedoor\.blog
 1661238817	cocomac	doramasmp4\.digital
+1661238994	tripleee	(?-i:^Harry Johnson$)
