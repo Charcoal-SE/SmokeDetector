@@ -42435,3 +42435,4 @@
 1661246137	tripleee	h3bet\.com
 1661251028	Ryan M	leaf[\W_]*+baba(?!\.com(?<=leafbaba\.com))
 1661251061	Ryan M	leafbaba\.com
+1661255047	Jeff Schaller	tiogafolder\.com
