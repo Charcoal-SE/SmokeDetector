@@ -42431,3 +42431,4 @@
 1661244138	tripleee	acetechnology\.co\.in
 1661244319	tripleee	(?-i:^First DigiAdd$)
 1661245107	tripleee	thegreatherbalhealinghome\.blogspot
+1661245141	tripleee	dr[\W_]*+ofua
