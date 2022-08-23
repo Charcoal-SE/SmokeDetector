@@ -41990,7 +41990,6 @@
 1660368488	Cody Gray	elementor[\W_]*pro(?:[\W_]*review)?
 1660368522	Cody Gray	quickwp\.net
 1660368544	Cody Gray	website1\.ir
-1660369603	Cody Gray	tea[\W_]*burn
 1660372533	cocomac	ytin1s\.com
 1660375130	Makyen	ggtutor\.tech
 1660375981	Makyen	loophol4bitcoin(?#twitter.com)

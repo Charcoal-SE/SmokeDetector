@@ -2664,3 +2664,4 @@ voipphone(?<=https?://[\w.]+/voipphone)
 our[\W_]*+services[\W_]*+include
 sonovive
 (text|call)[\W_]*+or[\W_]*+(text|call)
+tea[\W_]*burn
