@@ -43,6 +43,9 @@ items:
   - ada.ns.cloudflare.com.
   - norm.ns.cloudflare.com.
 - ns:
+  - adaline.ns.cloudflare.com.
+  - gordon.ns.cloudflare.com.
+- ns:
   - adam.ns.cloudflare.com.
   - emily.ns.cloudflare.com.
 - ns:
