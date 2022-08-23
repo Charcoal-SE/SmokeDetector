@@ -1659,6 +1659,9 @@ items:
   - maxim.ns.cloudflare.com.
 - ns:
   - kanye.ns.cloudflare.com.
+  - mckinley.ns.cloudflare.com.
+- ns:
+  - kanye.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
 - ns:
   - kara.ns.cloudflare.com.
