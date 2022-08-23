@@ -42433,3 +42433,4 @@
 1661245107	tripleee	thegreatherbalhealinghome\.blogspot
 1661245141	tripleee	dr[\W_]*+ofua
 1661246137	tripleee	h3bet\.com
+1661251028	Ryan M	leaf[\W_]*+baba(?!\.com(?<=leafbaba\.com))
