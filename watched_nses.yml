@@ -2991,6 +2991,8 @@ items:
   disable: true
   ns: cprapid.com.
 - ns: cloudoon.com.
+- ns: cloudoon.net.
+- ns: cloudoon.org.
 - ns: globalitsuccess.com.
 - ns: interserver.net.
 - ns: rozblog.com.
