@@ -42475,3 +42475,4 @@
 1661359259	Ollie	baccalaureateacademy\.in
 1661360462	Welz	shmoggo\.com
 1661368161	cocomac	batsmast\.com
+1661369774	cocomac	live[\W_]*+casino[\W_]*+games
