@@ -42454,3 +42454,4 @@
 1661314117	tripleee	kwork\.ru
 1661314935	tripleee	dr[\W_]*+okosu
 1661315250	tripleee	^budi$
+1661316892	cigien	wineandflower\.ro
