@@ -42460,3 +42460,4 @@
 1661325243	Robert Longson	dsi-me\.com
 1661331584	tripleee	okbetcasino\.live
 1661337074	Cody Gray	quellxcode\.com
+1661337253	Cody Gray	quellxcode(?!\.com)
