@@ -42449,3 +42449,4 @@
 1661264701	cocomac	(?:call[\W_]*+or[\W_]*+text|text[\W_]*+or[\W_]*+call)
 1661282716	Glorfindel	sky247bet\.in
 1661283072	cocomac	okyanustakipci\.com
+1661304101	Spevacus	mightytravels\.com
