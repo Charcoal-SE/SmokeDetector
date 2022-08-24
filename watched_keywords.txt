@@ -42468,3 +42468,4 @@
 1661349274	tripleee	(?-i:^Mohammed Tarek$)
 1661349617	tripleee	token[\W_]*+migration[\W_]*+development
 1661350410	cigien	zdrowersi\.pl
+1661351568	Spevacus	techartifacts\.com
