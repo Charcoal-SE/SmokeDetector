@@ -42461,3 +42461,4 @@
 1661331584	tripleee	okbetcasino\.live
 1661337074	Cody Gray	quellxcode\.com
 1661337253	Cody Gray	quellxcode(?!\.com)
+1661337541	Cody Gray	super[\W_]*slim[\W_]*keto[\W_]*gummies
