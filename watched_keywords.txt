@@ -42465,3 +42465,4 @@
 1661339562	Cody Gray	AdPumb(?!\.com)
 1661345668	Jeff Schaller	omegainstitutenagpur\.in
 1661346156	Jeff Schaller	mywowhealth\.com
+1661349274	tripleee	(?-i:^Mohammed Tarek$)
