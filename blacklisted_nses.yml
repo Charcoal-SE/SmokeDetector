@@ -59,6 +59,9 @@ items:
   - austin.ns.cloudflare.com.
   - val.ns.cloudflare.com.
 - ns:
+  - autumn.ns.cloudflare.com.
+  - kipp.ns.cloudflare.com.
+- ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
