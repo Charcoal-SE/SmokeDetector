@@ -42398,7 +42398,7 @@
 1661154169	tripleee	bitcoinatmsupportus\.org
 1661157938	tripleee	morebyte\.in
 1661158398	tripleee	nursingstudybay\.com
-1661158610	tripleee	\A<p>¿Cómo estás? Soy Alberto
+1661158610	tripleee	\A<p>¿Cómo estás\? Soy Alberto
 1661167969	Jeff Schaller	extrafollower\.com
 1661168138	Makyen	cleveroad\.com
 1661168365	Jeff Schaller	eoreka\.it
