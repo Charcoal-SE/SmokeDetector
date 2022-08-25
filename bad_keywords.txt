@@ -2665,3 +2665,4 @@ our[\W_]*+services[\W_]*+include
 sonovive
 tea[\W_]*burn
 (?-i:zBk0QuC2Xq0wODg1)(?#t.me)
+(?-i:2kngUHa075k3YzU1)(?#t.me)
