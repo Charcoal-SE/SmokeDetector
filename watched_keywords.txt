@@ -42481,3 +42481,4 @@
 1661396760	tripleee	opensea\.io
 1661400657	Cody Gray	kientrucdoorway\.com\.vn
 1661401230	Cody Gray	(?:my|your)[\W_]*ex[\W_]*lover
+1661402584	Cody Gray	(?-i:BoAt)
