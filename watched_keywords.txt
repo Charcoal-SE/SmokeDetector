@@ -42498,3 +42498,4 @@
 1661414608	Cody Gray	Kings[\W_]*Town[\W_]*Lahore
 1661416664	tripleee	vietnix\.vn
 1661416710	tripleee	uyducukarakopru\.com
+1661417300	tripleee	online[\W_]*+cockfight(?:ing)?
