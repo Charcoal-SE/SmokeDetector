@@ -42500,3 +42500,4 @@
 1661416710	tripleee	uyducukarakopru\.com
 1661417300	tripleee	online[\W_]*+cockfight(?:ing)?
 1661419530	tripleee	(?-i:^Edward Pattinson$)
+1661425532	Jeff Schaller	roggle-delivery\.tribe\.so
