@@ -42484,3 +42484,4 @@
 1661406394	Cody Gray	wilcode\.com
 1661406419	Cody Gray	Wilcode(?!\.com)
 1661410129	Cody Gray	bookmymove\.co\.za
+1661410155	Cody Gray	announceamerica\.com
