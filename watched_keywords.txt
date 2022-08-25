@@ -42485,3 +42485,4 @@
 1661406419	Cody Gray	Wilcode(?!\.com)
 1661410129	Cody Gray	bookmymove\.co\.za
 1661410155	Cody Gray	announceamerica\.com
+1661410205	Cody Gray	book[\W_]*my[\W_]*move(?!\.co\.za(?<=bookmymove\.co\.za))
