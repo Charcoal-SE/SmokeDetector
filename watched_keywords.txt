@@ -42477,3 +42477,4 @@
 1661368161	cocomac	batsmast\.com
 1661369774	cocomac	live[\W_]*+casino[\W_]*+games
 1661373195	Robert Longson	travelpremiumboutique\.com
+1661396135	Spevacus	photoclippingpathbd\.com
