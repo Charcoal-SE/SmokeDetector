@@ -41272,7 +41272,6 @@
 1658502003	Makyen	kartbutiken\.se
 1658502171	Makyen	aiprogmarketing(?!\.com)
 1658504644	Jeff Schaller	kabirhat\.com
-1658510587	cigien	yoglica\.com
 1658512000	cigien	easycryptocurrency\.com
 1658512482	cigien	(?-i:3IXeImp)(?#amzn.to)
 1658512563	cigien	kosmik
