@@ -42497,3 +42497,4 @@
 1661414560	Cody Gray	Bahria[\W_]*Town[\W_]*Karachi
 1661414608	Cody Gray	Kings[\W_]*Town[\W_]*Lahore
 1661416664	tripleee	vietnix\.vn
+1661416710	tripleee	uyducukarakopru\.com
