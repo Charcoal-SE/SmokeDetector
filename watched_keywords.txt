@@ -42492,3 +42492,4 @@
 1661412169	cocomac	cryptominering\.com
 1661412375	Cody Gray	deccanherald\.com
 1661414226	Cody Gray	apkwired(?!\.com)
+1661414258	Cody Gray	rohtasdigital\.com
