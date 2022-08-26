@@ -42523,3 +42523,4 @@
 1661490449	Cody Gray	Burmese[\W_]*teak(?:[\W_]*wood)?
 1661491498	tripleee	(?-i:^Carlos Barrera$)
 1661494157	Ryan M	hospitalityplus\.com\.pk
+1661497023	Cody Gray	Techmindz
