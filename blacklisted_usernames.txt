@@ -706,3 +706,4 @@ meta kukel exchange
 (?-i:^johnchen717$)
 (?-i:^Alpenature$)
 (?-i:^Fannyzeng$)
+(?-i:^shawn davidson$)
