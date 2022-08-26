@@ -3079,7 +3079,9 @@ items:
 - ns: party.biz.
 - ns: goviralhost.net.
 - ns: fozzy.com.
-- ns: one.com.
+- comment: 8/88 over 6 months 2022-08-26; disabling
+  disable: true
+  ns: one.com.
 - ns: bghserver.xyz.
 - ns: trdns.com.
 - ns: dns-he.com.
