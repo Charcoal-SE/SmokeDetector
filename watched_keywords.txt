@@ -42530,3 +42530,4 @@
 1661502248	Cody Gray	citrusbug\.com
 1661502281	Cody Gray	citrusbug(?!\.com)
 1661507673	tripleee	gsbhomecleaners\.com\.au
+1661508276	Glorfindel	debian-packages/deb_package_ubuntu_64amd
