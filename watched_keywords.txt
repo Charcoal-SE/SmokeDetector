@@ -42525,3 +42525,4 @@
 1661497023	Cody Gray	Techmindz
 1661497637	Cody Gray	best[\W_]*SEO[\W_]*company
 1661500092	tripleee	spabeautysalon\.com
+1661500123	tripleee	spabeautysalon(?!\.com)
