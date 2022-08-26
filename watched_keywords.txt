@@ -42521,3 +42521,4 @@
 1661489889	Makyen	stateoftheartnovelinflowtech\.blogspot
 1661490424	Cody Gray	reshawood\.com
 1661490449	Cody Gray	Burmese[\W_]*teak(?:[\W_]*wood)?
+1661491498	tripleee	(?-i:^Carlos Barrera$)
