@@ -137,6 +137,8 @@ items:
 - asn: '200000'
 - asn: '201978'
 - asn: '202053'
+  comment: 272/326 but 242 of those are a single domain; disabling 2022-08-26
+  disable: true
 - asn: '203226'
 - asn: '206349'
 - asn: '208425'
