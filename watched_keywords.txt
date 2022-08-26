@@ -41609,7 +41609,6 @@
 1659419516	tripleee	pam[\W_]*+company
 1659419853	tripleee	sharpmotorgroup\.com\.au
 1659420963	Ryan M	webdailyblogging\.com
-1659421248	Glorfindel	spabeautysalon
 1659423368	tripleee	omgevcable\.com
 1659424185	Makyen	mrseo\.tw
 1659424394	tripleee	emptycosmetictubes\.com
