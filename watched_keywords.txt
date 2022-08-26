@@ -42526,3 +42526,4 @@
 1661500092	tripleee	spabeautysalon\.com
 1661500123	tripleee	spabeautysalon(?!\.com)
 1661500480	Cody Gray	techfy2know\.blogspot
+1661500533	tripleee	digital[\W_]*+utilization(?!\.com(?<=digitalutilization\.com))
