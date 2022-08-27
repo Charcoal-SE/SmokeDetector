@@ -42554,3 +42554,4 @@
 1661581981	Cody Gray	PayPal[\W_]*(?:Klantenservice[\W_]*)?(?:Nederland|Nummer)
 1661585212	Cody Gray	embassyprojectsindia\.com
 1661585823	Cody Gray	sex[\W_]*(?:doll|toy)s?
+1661590257	Cody Gray	softwareprince\.com
