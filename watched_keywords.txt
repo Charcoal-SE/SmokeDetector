@@ -42550,3 +42550,4 @@
 1661576225	Cody Gray	VSVP[\W_]*Tech(?!\.com(?<=vsvptech\.com))
 1661576273	Cody Gray	earthlytribe\.com
 1661581200	Cody Gray	neexgent\.com
+1661581231	Cody Gray	Neexgent[\W_]*(?:Hybrid[\W_]*)?Solar[\W_]*Inverter
