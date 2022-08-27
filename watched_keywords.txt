@@ -42557,7 +42557,6 @@
 1661591055	Cody Gray	ostrojs\.com
 1661591086	Cody Gray	OstroJS(?!\.com)
 1661593160	Cody Gray	tutuappapkfree\.com
-1661594461	Cody Gray	coderstacks\.com\/connect-flutter-with-firebase-using-firebase-cli
 1661600716	Cody Gray	wellingtonlandscapingmasters\.co\.nz
 1661601478	Cody Gray	^Masti Baba$
 1661601500	Cody Gray	plumberswestauckland\.co\.nz
