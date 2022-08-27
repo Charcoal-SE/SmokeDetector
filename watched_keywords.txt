@@ -42549,3 +42549,4 @@
 1661576162	Cody Gray	vsvptech\.com
 1661576225	Cody Gray	VSVP[\W_]*Tech(?!\.com(?<=vsvptech\.com))
 1661576273	Cody Gray	earthlytribe\.com
+1661581200	Cody Gray	neexgent\.com
