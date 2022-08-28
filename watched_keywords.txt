@@ -42571,3 +42571,4 @@
 1661619826	Makyen	github\.com/koculu
 1661631392	Makyen	este[\W_]*servicio[\W_]*incluye[\W_]*tanto[\W_]*la[\W_]*redacción[\W_]*de[\W_]*la[\W_]*noticia[\W_]*como[\W_]*el[\W_]*análisis[\W_]*de[\W_]*las[\W_]*palabras[\W_]*clave(?#abuse the watchlist to put another detection on a persistent spammer)
 1661647532	cigien	researchchemslab\.com
+1661650394	cigien	alibadereddin(?#medium)
