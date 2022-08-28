@@ -42587,3 +42587,4 @@
 1661704211	Cody Gray	jigsy\.com
 1661704359	Cody Gray	technorchid(?!\.blogspot)
 1661719359	cigien	triality\.org
+1661719413	cigien	microphoneglobe\.com
