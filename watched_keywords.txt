@@ -42585,3 +42585,4 @@
 1661691996	cigien	technorchid\.blogspot
 1661694269	cigien	top[\W_]*+bet[\W_]*+info
 1661704211	Cody Gray	jigsy\.com
+1661704359	Cody Gray	technorchid(?!\.blogspot)
