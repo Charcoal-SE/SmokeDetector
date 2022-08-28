@@ -42588,3 +42588,4 @@
 1661704359	Cody Gray	technorchid(?!\.blogspot)
 1661719359	cigien	triality\.org
 1661719413	cigien	microphoneglobe\.com
+1661719462	cigien	(?-i:3PYzPXk)(?#bit.ly)
