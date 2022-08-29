@@ -33386,7 +33386,6 @@
 1635579846	Cody Gray	redohome(?:\.sales)?(?:@gmail\.com)?
 1635585339	Nisse Engström	minecraftcirclegenerator\.info
 1635585365	Nisse Engström	spacebarcounter\.info
-1635592727	Cody Gray	Jay[\W_]*Shinde(?!\.com(?<=jayshinde\.com))
 1635597861	Cody Gray	theorein\.org
 1635620475	cigien	infohifi\.com
 1635627504	Ollie	rokucom-support\.com
