@@ -42597,3 +42597,4 @@
 1661755612	tripleee	amina-group\.com
 1661756525	tripleee	jpmescooter\.com
 1661762040	Glorfindel	thayerbirding\.com
+1661763790	tripleee	(?-i:^Hospitality Plus$)
