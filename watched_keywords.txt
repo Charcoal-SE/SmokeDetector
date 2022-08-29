@@ -42614,3 +42614,4 @@
 1661782530	cigien	phpcod\.com
 1661783716	Makyen	endtest\.io
 1661784289	Makyen	amzaccessories(?!\.blogspot)
+1661784315	Makyen	amzaccessories\.blogspot
