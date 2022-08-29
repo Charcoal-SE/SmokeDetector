@@ -42600,3 +42600,4 @@
 1661763790	tripleee	(?-i:^Hospitality Plus$)
 1661766154	tripleee	flightforu\.com
 1661766405	tripleee	(?-i:3cvQfZJ)(?# bit.ly)
+1661766848	tripleee	airlinesbuddy\.com
