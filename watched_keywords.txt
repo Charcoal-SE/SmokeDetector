@@ -42607,3 +42607,4 @@
 1661777335	Jeff Schaller	vronns\.com
 1661777375	Jeff Schaller	negativeseoexpert\.com
 1661779556	Spevacus	hygiene[\W_]*+for[\W_]*+all(?!\.com)
+1661780335	Jeff Schaller	getbravo\.io
