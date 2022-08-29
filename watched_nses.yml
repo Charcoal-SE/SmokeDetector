@@ -949,6 +949,9 @@ items:
   - yichun.ns.cloudflare.com.
 - ns:
   - dane.ns.cloudflare.com.
+  - june.ns.cloudflare.com.
+- ns:
+  - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
   - daniella.ns.cloudflare.com.
