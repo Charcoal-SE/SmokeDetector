@@ -708,3 +708,4 @@ meta kukel exchange
 (?-i:^Fannyzeng$)
 (?-i:^shawn davidson$)
 ^OstroJS$
+(?-i:^Camelli Andre$)
