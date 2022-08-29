@@ -42602,3 +42602,4 @@
 1661766405	tripleee	(?-i:3cvQfZJ)(?# bit.ly)
 1661766848	tripleee	airlinesbuddy\.com
 1661768614	tripleee	gtopcars\.com
+1661768915	tripleee	best7\.io
