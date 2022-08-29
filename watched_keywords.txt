@@ -38011,7 +38011,6 @@
 1649517721	cigien	easydevguide\.com
 1649517795	cigien	1800bizbroker\.com
 1649517978	cigien	shomorikaspelltemple(?:@yahoo\.com)?
-1649519459	cigien	hacklord
 1649519757	Makyen	github\.com/PayteR
 1649524051	Makyen	articlesaur\.com
 1649526018	Makyen	expert-seo-training-institute\.in
