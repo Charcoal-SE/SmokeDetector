@@ -4776,3 +4776,4 @@ tu[W_]*empresa[\W_]*aparezca[\W_]*en[\W_]*más[\W_]*de[\W_]*50[\W_]*periódicos[
 btwvisas\.com
 worldwebtool\.com
 developers-zone\.com
+batsmast\.com
