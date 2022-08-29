@@ -42594,3 +42594,4 @@
 1661748488	tripleee	misoprostol
 1661748562	tripleee	mifepristone
 1661748618	cocomac	dosmm24(?:@gmail\.com)?
+1661751850	tripleee	(?-i:^Herbert Bear$)
