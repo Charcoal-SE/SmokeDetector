@@ -42639,3 +42639,4 @@
 1661840542	tripleee	affiliate[\W_]*+marketing(?<!(?-i:AFFILIATE[\W_]*+MARKETING))
 1661841427	Cody Gray	(?-i:Nize)
 1661842776	Cody Gray	(?-i:ecPxi\.jpg)(?# stack imgur)
+1661842798	tripleee	ah[\W_]*+q[\W_]*+turtle
