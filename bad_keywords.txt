@@ -2669,3 +2669,4 @@ sonovive(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 \A<p>¿Cómo estás\? Soy Alberto
 hacklord
 h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+l[\W_]*+o[\W_]*+r[\W_]*+d[\W_]*+j[\W_]*+o[\W_]*+d[\W_]*+y[\W_]*+(?:(?:a[\W_]*+t[\W_]*+)?[\W_]*+g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?
+Guo[\W_]*Wengui
