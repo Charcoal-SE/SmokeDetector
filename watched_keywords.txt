@@ -42633,3 +42633,4 @@
 1661837874	Cody Gray	(?-i:FtjLloAtdlQ)(?#YouTube)
 1661838048	Cody Gray	hanumanchalisamantra\.com
 1661838075	Cody Gray	hanuman[\W_]*chalisa
+1661839118	tripleee	dhaba7(?!\.in)
