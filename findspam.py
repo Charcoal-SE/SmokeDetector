@@ -2039,6 +2039,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "" r"|automation|sex|services?|kindergarten"
     "" r"|services?|maintenance|clinic|surgeons?|treatments?"
     "" r"|studios?"
+    "" r"|restaurants?|food|cuisine|delicac(?:y|ies)"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
     r"(?:\b.{1,8}\b)?\L<city>\b",
