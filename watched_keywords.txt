@@ -42644,3 +42644,4 @@
 1661846789	Cody Gray	(?-i:2JVxN\.jpg)(?# stack imgur)
 1661847281	Cody Gray	instavideosdownloader\.net
 1661847314	Cody Gray	washmart\.in
+1661847355	Cody Gray	washmart(?!\.in)
