@@ -42670,3 +42670,4 @@
 1661863806	Jeff Schaller	torontowiderestoration\.com
 1661864647	cigien	canopas\.com
 1661864998	Jeff Schaller	firassayah7
+1661865528	cigien	adamwilson[\W_]*+trading
