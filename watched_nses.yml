@@ -1340,6 +1340,9 @@ items:
   - kristin.ns.cloudflare.com.
 - ns:
   - graham.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
+  - graham.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
   - graham.ns.cloudflare.com.
