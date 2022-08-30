@@ -42648,3 +42648,4 @@
 1661847771	Cody Gray	businesssitepage(?!\.com)
 1661847792	Cody Gray	Voip[\W_]*Phone[\W_]*Service
 1661848108	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\Z
+1661849066	tripleee	alightmotion\.online
