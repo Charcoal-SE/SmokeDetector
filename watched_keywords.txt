@@ -42655,3 +42655,4 @@
 1661850128	Cody Gray	essayhours\.com
 1661850164	Cody Gray	essayhours(?!\.com)
 1661850406	tripleee	reliablematernity\.com
+1661850635	Cody Gray	Reliable[\W_]*Maternity(?!\.com(?<=reliablematernity\.com))
