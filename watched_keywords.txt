@@ -42637,3 +42637,4 @@
 1661839536	Cody Gray	energywisesolutions\.com
 1661839570	Cody Gray	Energy[\W_]*Wise[\W_]*Solutions(?!\.com(?<=energywisesolutions\.com))
 1661840542	tripleee	affiliate[\W_]*+marketing(?<!(?-i:AFFILIATE[\W_]*+MARKETING))
+1661841427	Cody Gray	(?-i:Nize)
