@@ -42653,3 +42653,4 @@
 1661850052	Cody Gray	essaywriter\.college
 1661850091	Cody Gray	gradschoolgenius(?!\.com)
 1661850128	Cody Gray	essayhours\.com
+1661850164	Cody Gray	essayhours(?!\.com)
