@@ -42650,3 +42650,4 @@
 1661848108	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\Z
 1661849066	tripleee	alightmotion\.online
 1661849100	tripleee	al?ight[\W_]*+motion(?!\.online(?<!alightmotion\.online))
+1661850052	Cody Gray	essaywriter\.college
