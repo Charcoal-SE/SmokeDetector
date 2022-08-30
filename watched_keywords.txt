@@ -42652,3 +42652,4 @@
 1661849100	tripleee	al?ight[\W_]*+motion(?!\.online(?<!alightmotion\.online))
 1661850052	Cody Gray	essaywriter\.college
 1661850091	Cody Gray	gradschoolgenius(?!\.com)
+1661850128	Cody Gray	essayhours\.com
