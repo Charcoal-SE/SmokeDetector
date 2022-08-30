@@ -42627,3 +42627,4 @@
 1661833151	Cody Gray	epsilon[\W_]*(move?|transition)s?
 1661834563	Cody Gray	(?-i:^dinhthaihoang$)
 1661835181	cocomac	trickknowledge\.com
+1661836895	Cody Gray	thegingamebroadway\.com
