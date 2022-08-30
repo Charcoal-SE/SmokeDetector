@@ -42630,3 +42630,4 @@
 1661836895	Cody Gray	thegingamebroadway\.com
 1661837412	Cody Gray	Aram[\W_]*Visas(?!\.com(?<=aramvisas\.com))
 1661837523	Cody Gray	Canada[\W_]*Immigration[\W_]*Chennai
+1661837874	Cody Gray	(?-i:FtjLloAtdlQ)(?#YouTube)
