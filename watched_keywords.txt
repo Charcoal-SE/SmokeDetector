@@ -42629,7 +42629,6 @@
 1661837523	Cody Gray	Canada[\W_]*Immigration[\W_]*Chennai
 1661837874	Cody Gray	(?-i:FtjLloAtdlQ)(?#YouTube)
 1661838048	Cody Gray	hanumanchalisamantra\.com
-1661838075	Cody Gray	hanuman[\W_]*chalisa
 1661839118	tripleee	dhaba7(?!\.in)
 1661839396	Cody Gray	Fiverr[\W_]*Connection
 1661839536	Cody Gray	energywisesolutions\.com
