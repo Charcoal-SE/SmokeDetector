@@ -42642,3 +42642,4 @@
 1661842998	Cody Gray	globalfxmine\.com
 1661845731	Cody Gray	codesparrk(?!\.com)
 1661846789	Cody Gray	(?-i:2JVxN\.jpg)(?# stack imgur)
+1661847281	Cody Gray	instavideosdownloader\.net
