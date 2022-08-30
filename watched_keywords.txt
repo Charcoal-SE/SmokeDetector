@@ -42640,3 +42640,4 @@
 1661841427	Cody Gray	(?-i:Nize)
 1661842776	Cody Gray	(?-i:ecPxi\.jpg)(?# stack imgur)
 1661842798	tripleee	ah[\W_]*+q[\W_]*+turtle
+1661842998	Cody Gray	globalfxmine\.com
