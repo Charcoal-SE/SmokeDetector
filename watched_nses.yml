@@ -1190,6 +1190,9 @@ items:
   - tony.ns.cloudflare.com.
 - ns:
   - emma.ns.cloudflare.com.
+  - kellen.ns.cloudflare.com.
+- ns:
+  - emma.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
   - eoin.ns.cloudflare.com.
