@@ -41845,7 +41845,6 @@
 1659970496	cigien	gomcraft\.com
 1659970632	cigien	wpfixit\.com
 1659973306	Ollie	hireahacker\.com
-1659975252	Jeff Schaller	Protetox
 1659978246	Ollie	himenus\.com
 1659996467	cigien	decodable\.co
 1659997112	cigien	qscode\.fr
