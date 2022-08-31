@@ -42719,4 +42719,3 @@
 1661951189	tripleee	kudxarbitrage
 1661951294	tripleee	baba87
 1661952012	cigien	belivbloodsugaroil\.com
-1661952037	cigien	beliv[\W_]*blood[\W_]*sugar[\W_]*oil(?!\.com(?<=belivbloodsugaroil\.com))
