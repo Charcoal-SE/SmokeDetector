@@ -42684,3 +42684,4 @@
 1661916714	Cody Gray	(?-i:MAS4D)
 1661916933	Cody Gray	phanthuocsinhhoc\.net
 1661916964	Cody Gray	phanthuocsinhhoc(?!\.net)
+1661917526	Cody Gray	^binance.{0,33}$
