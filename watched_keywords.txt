@@ -42706,3 +42706,4 @@
 1661933460	Cody Gray	venture[\W_]*(?:investments|projects)
 1661933496	tripleee	beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil\.com
 1661939063	tripleee	ant[\W_]*+gang
+1661941025	tripleee	merch-billieeilish\.com
