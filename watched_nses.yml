@@ -1726,6 +1726,9 @@ items:
   - kianchau.ns.cloudflare.com.
   - tara.ns.cloudflare.com.
 - ns:
+  - kim.ns.cloudflare.com.
+  - micah.ns.cloudflare.com.
+- ns:
   - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
