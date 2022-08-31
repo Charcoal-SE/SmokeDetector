@@ -42691,3 +42691,4 @@
 1661920256	tripleee	plague[\W_]*+turtle
 1661920396	tripleee	xi[\W_]*+coin
 1661922690	tripleee	nortondns\.com
+1661923008	tripleee	arivpz[\W_]*+(?:at[\W_]*+)?@gmail[\W_]*+(?:dot[\W_]*+)?com
