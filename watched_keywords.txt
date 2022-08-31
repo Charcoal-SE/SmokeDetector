@@ -42694,3 +42694,4 @@
 1661925255	tripleee	family[\W_]*+tree[\W_]*+maker(?!support\.(?:com|us)(?<=familytreemakersupport\.(?:com|us)))
 1661925334	Cody Gray	pees?chute
 1661925484	Cody Gray	bscs19019(?:@itu\.edu\.pk)?
+1661926030	Cody Gray	zara[\W_]*(?:us[\W_]*)?fashion
