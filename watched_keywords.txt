@@ -42720,3 +42720,4 @@
 1661952012	cigien	belivbloodsugaroil\.com
 1661952087	cigien	beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil(?!\.com(?<=belivbloodsugaroil\.com))
 1661959933	tripleee	paid[\W_]*+millions
+1661961055	Mast	aideohearing\.com
