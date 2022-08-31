@@ -42708,3 +42708,4 @@
 1661939063	tripleee	ant[\W_]*+gang
 1661941025	tripleee	merch-billieeilish\.com
 1661941126	tripleee	connectsystem\.in
+1661942233	tripleee	simpledesign-eg\.com
