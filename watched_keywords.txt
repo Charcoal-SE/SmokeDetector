@@ -42724,3 +42724,4 @@
 1661968776	Cody Gray	reachoutworld\.org
 1661968835	Cody Gray	reach[\W_]*out[\W_]*world(?:[\W_]*live)?(?!\.org(?<=reachoutworld\.org))
 1661968976	Cody Gray	pastor[\W_]*chris
+1661969074	Cody Gray	rowlive(?:wpc)?
