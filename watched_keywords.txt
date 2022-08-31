@@ -42693,3 +42693,4 @@
 1661925132	Cody Gray	Adeena'?s[\W_]*Kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
 1661925255	tripleee	family[\W_]*+tree[\W_]*+maker(?!support\.(?:com|us)(?<=familytreemakersupport\.(?:com|us)))
 1661925334	Cody Gray	pees?chute
+1661925484	Cody Gray	bscs19019(?:@itu\.edu\.pk)?
