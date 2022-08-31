@@ -17434,7 +17434,6 @@
 1583428233	Eliah Kagan	jive[\W_]*(?:mini[\W_]*)?pods?
 1583432373	Makyen	alshamstech\.ae
 1583434054	Makyen	jualobataborsiasli\.com
-1583440481	Das_Geek	familytreemakersupport\.us
 1583441419	Byte Commander	aircartapp\.com
 1583445091	Makyen	kaitai\.io
 1583446206	Eliah Kagan	pepgra\.com
