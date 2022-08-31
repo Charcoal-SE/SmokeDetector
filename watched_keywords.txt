@@ -42334,7 +42334,6 @@
 1661009771	cigien	apkmodroid\.com
 1661009820	cigien	hotjobshub(?!\.com)
 1661013505	cocomac	fitnessgym\.pro
-1661016449	Jeff Schaller	golearnrussian\.com
 1661022824	Spevacus	melecioattachments\.com
 1661030333	Makyen	convertio\.co
 1661030354	Makyen	gooddealconnect\.com
