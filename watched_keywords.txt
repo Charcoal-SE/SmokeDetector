@@ -42701,3 +42701,4 @@
 1661927426	Cody Gray	dorrisedeh888(?:@gmail\.com)?
 1661929437	Cody Gray	Beliv[\W_]*Blood[\W_]*Sugar[\W_]*Oil
 1661929904	Cody Gray	depixus\.com
+1661931421	Cody Gray	digicruncher\.com
