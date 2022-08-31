@@ -94,6 +94,9 @@ items:
   - carlos.ns.cloudflare.com.
   - dara.ns.cloudflare.com.
 - ns:
+  - carmelo.ns.cloudflare.com.
+  - lila.ns.cloudflare.com.
+- ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
