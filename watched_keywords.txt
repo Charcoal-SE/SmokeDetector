@@ -42689,3 +42689,4 @@
 1661920079	tripleee	thoptv
 1661920225	tripleee	president[\W_]*+turtle
 1661920256	tripleee	plague[\W_]*+turtle
+1661920396	tripleee	xi[\W_]*+coin
