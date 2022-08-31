@@ -42697,3 +42697,4 @@
 1661926030	Cody Gray	zara[\W_]*(?:us[\W_]*)?fashion
 1661926868	Cody Gray	book[\W_]*(?:your[\W_]*)?cheap[\W_]*flights?
 1661927038	Cody Gray	(?-i:^Alberto$)
+1661927375	Cody Gray	(?-i:Davari Hooman)
