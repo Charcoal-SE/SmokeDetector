@@ -42690,3 +42690,4 @@
 1661920225	tripleee	president[\W_]*+turtle
 1661920256	tripleee	plague[\W_]*+turtle
 1661920396	tripleee	xi[\W_]*+coin
+1661922690	tripleee	nortondns\.com
