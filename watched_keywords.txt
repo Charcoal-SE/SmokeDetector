@@ -42722,3 +42722,4 @@
 1661963556	tripleee	haileads\.com
 1661967098	cigien	beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil(?:\.com)?
 1661968776	Cody Gray	reachoutworld\.org
+1661968835	Cody Gray	reach[\W_]*out[\W_]*world(?:[\W_]*live)?(?!\.org(?<=reachoutworld\.org))
