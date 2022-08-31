@@ -42687,3 +42687,4 @@
 1661917526	Cody Gray	^binance.{0,33}$
 1661917828	Ryan M	probestsite\.com
 1661920079	tripleee	thoptv
+1661920225	tripleee	president[\W_]*+turtle
