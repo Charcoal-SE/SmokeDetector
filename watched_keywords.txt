@@ -42754,3 +42754,4 @@
 1662010591	Cody Gray	danayazdani8(?:@gmail\.com)?
 1662010639	Cody Gray	incirclexec\.com
 1662010752	Cody Gray	Domenico[\W_]*Calcaterra
+1662011840	Cody Gray	ekwik[\W_]*digital(?!\.com(?<=ekwikdigital\.com))
