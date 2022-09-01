@@ -1375,6 +1375,9 @@ items:
   - greg.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - greg.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
+- ns:
   - guy.ns.cloudflare.com.
   - kate.ns.cloudflare.com.
 - ns:
