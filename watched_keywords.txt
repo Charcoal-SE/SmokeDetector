@@ -42738,3 +42738,4 @@
 1662006473	Cody Gray	ultimatedrivers\.ca
 1662006498	Cody Gray	driving[\W_]*school[\W_]*brampton
 1662007126	Cody Gray	techtista\.com
+1662007809	Cody Gray	kdsoftware\.in
