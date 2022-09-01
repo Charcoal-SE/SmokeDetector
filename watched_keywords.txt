@@ -42732,4 +42732,3 @@
 1661993949	cigien	(?-i:eyKlpJI02o)(?#youtube)
 1662000540	Cody Gray	(?-i:^Johnchen969$)
 1662000642	Cody Gray	(?-i:^mark okbet$)
-1662000680	Cody Gray	okbet(?!casino\.live)
