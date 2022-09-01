@@ -42437,7 +42437,6 @@
 1661317576	cigien	binarykitchen\.com
 1661325115	Robert Longson	com\.kotak\.neo
 1661325243	Robert Longson	dsi-me\.com
-1661331584	tripleee	okbetcasino\.live
 1661337074	Cody Gray	quellxcode\.com
 1661337253	Cody Gray	quellxcode(?!\.com)
 1661337541	Cody Gray	super[\W_]*slim[\W_]*keto[\W_]*gummies
