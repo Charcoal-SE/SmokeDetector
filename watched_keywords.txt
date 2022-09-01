@@ -42759,3 +42759,4 @@
 1662016513	Cody Gray	homework[\W_]*help[\W_]*services?
 1662016542	Cody Gray	starprocombat\.co\.uk
 1662016569	Cody Gray	starprocombat(?!\.co\.uk)
+1662016670	Cody Gray	serenity\.ae
