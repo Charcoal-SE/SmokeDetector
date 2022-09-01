@@ -42742,3 +42742,4 @@
 1662007911	Cody Gray	(?:best|(?:top[\W_]*quality))[\W_]*led
 1662008001	Cody Gray	sha[\W_]*boing(?:[\W_]*boing?)?
 1662008277	Cody Gray	so3ody\.com
+1662008306	Cody Gray	whitecollarrealty\.com
