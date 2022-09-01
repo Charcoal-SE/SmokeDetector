@@ -42740,3 +42740,4 @@
 1662007126	Cody Gray	techtista\.com
 1662007809	Cody Gray	kdsoftware\.in
 1662007911	Cody Gray	(?:best|(?:top[\W_]*quality))[\W_]*led
+1662008001	Cody Gray	sha[\W_]*boing(?:[\W_]*boing?)?
