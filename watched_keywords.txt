@@ -42775,3 +42775,4 @@
 1662034648	Glorfindel	hashlogics
 1662034928	tripleee	localpestcontrolhobart\.com\.au
 1662034962	tripleee	schoolfurnitureindia\.in
+1662034990	tripleee	kurnoolhousing\.in
