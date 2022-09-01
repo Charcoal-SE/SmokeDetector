@@ -42777,3 +42777,4 @@
 1662034962	tripleee	schoolfurnitureindia\.in
 1662034990	tripleee	kurnoolhousing\.in
 1662035018	tripleee	transcription[\W_]*+services[\W_]*+us
+1662035958	cigien	technicalspeaks\.com
