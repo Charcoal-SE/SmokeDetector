@@ -42759,3 +42759,4 @@
 1662016542	Cody Gray	starprocombat\.co\.uk
 1662016569	Cody Gray	starprocombat(?!\.co\.uk)
 1662016670	Cody Gray	serenity\.ae
+1662017348	Cody Gray	FreeBitcoin100k#4864
