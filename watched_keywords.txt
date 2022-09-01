@@ -42755,3 +42755,4 @@
 1662011840	Cody Gray	ekwik[\W_]*digital(?!\.com(?<=ekwikdigital\.com))
 1662015595	Cody Gray	digitalsanstha\.in
 1662016108	tripleee	speakatoo\.com
+1662016143	tripleee	speakatoo(?!\.com)
