@@ -2580,6 +2580,9 @@ items:
   - cns2015.webhostbox.net.
   - cns2016.webhostbox.net.
 - ns:
+  - cns3999.webhostbox.net.
+  - cns4000.webhostbox.net.
+- ns:
   - rns15.webhostbox.net.
   - rns16.webhostbox.net.
 - ns:
