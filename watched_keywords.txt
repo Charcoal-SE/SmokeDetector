@@ -38632,7 +38632,6 @@
 1651427448	cigien	tradermath\.org
 1651430755	Makyen	letâ€™s(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1651444965	cigien	rutificadordechile\.com
-1651468866	Makyen	whats?[\W_]*+app[\W_]*+(?:\d[\W_]*+){4,}\d\w*+
 1651469129	Makyen	blogshub\.netlify\.app
 1651470873	Makyen	surpluscentral\.ca
 1651470929	Makyen	localstar\.org
