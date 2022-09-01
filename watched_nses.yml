@@ -121,6 +121,9 @@ items:
   - aisha.ns.cloudflare.com.
   - rodney.ns.cloudflare.com.
 - ns:
+  - aisha.ns.cloudflare.com.
+  - seamus.ns.cloudflare.com.
+- ns:
   - ajay.ns.cloudflare.com.
   - becky.ns.cloudflare.com.
 - ns:
