@@ -42739,3 +42739,4 @@
 1662006498	Cody Gray	driving[\W_]*school[\W_]*brampton
 1662007126	Cody Gray	techtista\.com
 1662007809	Cody Gray	kdsoftware\.in
+1662007911	Cody Gray	(?:best|(?:top[\W_]*quality))[\W_]*led
