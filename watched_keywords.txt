@@ -42750,3 +42750,4 @@
 1662009533	Cody Gray	newsarticleinfo\.com
 1662009695	Cody Gray	shtechsolution\.com
 1662009800	tripleee	(?-i:^Robert Lewis$)
+1662009896	Cody Gray	EarthlyTribe(?!\.com)
