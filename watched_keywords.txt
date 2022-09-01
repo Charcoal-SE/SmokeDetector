@@ -28392,7 +28392,6 @@
 1619430318	tripleee	behfarmachine\.com
 1619431823	tripleee	thinkboxcommunication\.com
 1619432092	Makyen	bestvpnservice\.com
-1619432798	tripleee	idn[\W_]*+poker
 1619433083	tripleee	patentillustration\.net
 1619434017	tripleee	gccgamers\.com
 1619434207	tripleee	thewebjob\.in
