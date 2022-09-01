@@ -42747,4 +42747,3 @@
 1662008517	Cody Gray	github\.com/toeverything
 1662008968	Cody Gray	thecodepoints\.blogspot
 1662009139	Cody Gray	theofficialblog\.net
-1662009207	Cody Gray	capsule[\W_]*endoscopy(?:[\W_]*cameras?)?
