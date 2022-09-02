@@ -42798,3 +42798,4 @@
 1662101860	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\n*\Z
 1662104544	tripleee	atrixware\.com
 1662104796	tripleee	pure[\W_]*+life[\W_]*+organics
+1662104913	tripleee	slim[\W_]*+tea
