@@ -42806,3 +42806,4 @@
 1662120331	tripleee	sris[\W_]*+law(?:yers?)?
 1662120355	tripleee	axisglobalexport\.com
 1662121110	Glorfindel	ecosmob
+1662123217	tripleee	mala\.ae
