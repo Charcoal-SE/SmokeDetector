@@ -42792,3 +42792,4 @@
 1662100162	Cody Gray	triposia(?!\.com)
 1662100189	tripleee	vapeciga(?!\.com)
 1662100797	cocomac	we[\W_]*+provide[\W_]*+you[\W_]*+with
+1662100878	tripleee	(?-i:^deepak barik$)
