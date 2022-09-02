@@ -1993,6 +1993,9 @@ items:
   - may.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - may.ns.cloudflare.com.
+  - rob.ns.cloudflare.com.
+- ns:
   - maya.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
