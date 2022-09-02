@@ -42167,7 +42167,6 @@
 1660743779	tripleee	areteitech\.net
 1660748113	cigien	baliapur\.com
 1660748139	cigien	atozreviewzone
-1660748727	cigien	indiaassignmenthelp\.com
 1660749255	cigien	ppongsuper\.com
 1660749470	cigien	webdesignslash\.com\.au
 1660749877	cigien	trishul[\W_]*+biotech(?!\.com(?<=trishulbiotech\.com))
