@@ -212,6 +212,9 @@ items:
   - elmo.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
+  - josh.ns.cloudflare.com.
+- ns:
+  - alice.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
