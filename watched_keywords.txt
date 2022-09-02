@@ -13868,7 +13868,6 @@
 1574744167	Makyen	744853225856722815(?#pinterest.com)
 1574744186	Makyen	officialinstaketo\.blogspot
 1574746723	tripleee	worldmovieshd\.com
-1574746833	tripleee	certificate[\W_]*+of[\W_]*+authority(?# see https://meta.stackexchange.com/q/339063)
 1574751776	tripleee	fiksqb\.com
 1574753317	tripleee	healthvirile\.com
 1574753356	tripleee	health[\W_]*+virile(?!\.com)\d*
