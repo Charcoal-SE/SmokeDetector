@@ -42800,3 +42800,4 @@
 1662104796	tripleee	pure[\W_]*+life[\W_]*+organics
 1662104913	tripleee	slim[\W_]*+tea
 1662107413	tripleee	thiruvananthapuramflorist\.com
+1662107468	tripleee	vpnsuggestions\.com
