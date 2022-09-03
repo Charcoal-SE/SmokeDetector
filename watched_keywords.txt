@@ -42840,3 +42840,4 @@
 1662191992	Cody Gray	meesho
 1662192018	Cody Gray	paytm
 1662196939	Cody Gray	Delhi[\W_]*Tourism(?:[\W_]*Blog)?
+1662196982	Cody Gray	delhitourismgov\.blogspot
