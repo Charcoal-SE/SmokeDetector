@@ -42819,7 +42819,7 @@
 1662162185	cigien	marketingkingss\.com
 1662162209	cigien	marketingkingss\.space
 1662162309	Makyen	marketingkingss\.org
-1662162361	Makyen	marketingkingss(?!\.org)(?!\.com)(?!\.space)
+1662162361	Makyen	marketingkingss(?!\.(?:com|org|space))
 1662164800	cigien	vepuan\.com
 1662164834	cigien	kazanabilirsin\.com
 1662166517	cigien	betw1n4d\.com
