@@ -42838,3 +42838,4 @@
 1662190896	Cody Gray	myassignmenthelp\.live
 1662191652	Cody Gray	custome[\W_]*+r[\W_]*+care[\W_]*+number
 1662191992	Cody Gray	meesho
+1662192018	Cody Gray	paytm
