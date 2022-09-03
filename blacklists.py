@@ -356,44 +356,59 @@ class YAMLParserNS(YAMLParserCIDR):
         # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
         # it appeared to result in longer times and intermittent failures.
         with ThreadPoolExecutor(max_workers=20) as executor:
-            return list(executor.map(self._validate, list_to_validate, timeout=300))
+            results = list(executor.map(self._validate, list_to_validate, timeout=300))
+        entries_with_exception = [entry for entry in results if entry is not True]
+        exception_entries_not_ignored = [entry for entry in entries_with_exception
+                                         if entry.get('ignore_validation_errors', None) is not True]
+        ingored_failures = [entry for entry in entries_with_exception
+                            if entry.get('ignore_validation_errors', None) is True]
+        return (results, entries_with_exception, exception_entries_not_ignored, ingored_failures)
+
+    def log_entries(self, log_level, issue_text, entries_list, color_name, color_attrs=[]):
+        count = len(entries_list)
+        entry_plural = pluralize(count, 'entr', 'ies', 'y')
+        entries_text = [
+            color('{}'.format(entry.get('ns', 'NO NS')), 'white', attrs=['bold'])
+            + ' in {} for {}'.format(self._filename,
+                                     '{}.{}'.format(entry['error'].__class__.__module__,
+                                                    entry['error'].__class__.__name__)
+                                     if entry.get('error', None) is not None else '')
+            for entry in entries_list]
+        entries_indented = '\n    {}'. format('\n    '.join(entries_text))
+        problems_text_colored = (color('{} {}:'.format(entry_plural.capitalize(), issue_text),
+                                       color_name, attrs=color_attrs)
+                                 + entries_indented)
+        log('debug', '(blank lines)\n\n\n')  # Just blank lines
+        log(log_level, problems_text_colored)
+        return (entry_plural, entries_indented)
 
     def validate(self):
         parsed_list = self._parse()
         log('info', 'Validation Pass 1:')  # Just a blank line
-        results_pass1 = self.validate_list(parsed_list)
-        entries_with_exception = [entry for entry in results_pass1 if entry is not True]
+        results_pass1, entries_with_exception, entries_for_pass2, ingored_failures = self.validate_list(parsed_list)
+        if len(ingored_failures) > 0:
+            self.log_entries('info', 'which failed to validate once, but are ignored', ingored_failures, 'white', [])
         # There are intermittent issues on some of the entries, so we run a second pass on the failures.
         # This may end up taking substantial time in testing, so we'll need to monitor for that.
-        pass1_error_count = len(entries_with_exception)
-        if pass1_error_count == 0:
+        pass1_not_ignored_error_count = len(entries_for_pass2)
+        if pass1_not_ignored_error_count == 0:
             # Everything passed
             return
-        log('info', 'Validation Pass 1 had {} {}. Waiting 6 seconds'.format(pass1_error_count,
-                                                                            pluralize(pass1_error_count, 'error', 's')))
+        log('info', 'Validation Pass 1 had {} {}. Waiting 6 seconds'.format(pass1_not_ignored_error_count,
+                                                                            pluralize(pass1_not_ignored_error_count,
+                                                                                      'error', 's')))
         time.sleep(6)
         log('debug', '(blank lines)\n\n\n\n\n\n')  # Just blank lines
-        log('info', 'Validation Pass 2:')  # Just a blank line
-        results_pass2 = self.validate_list(entries_with_exception)
-        entries_with_exception2 = [entry for entry in results_pass2 if entry is not True]
-        number_failed_to_validate = len(entries_with_exception2)
-        if number_failed_to_validate > 0:
-            entry_plural = pluralize(number_failed_to_validate, 'entr', 'ies', 'y')
-            exception_entries_text = [
-                color('{}'.format(entry.get('ns', 'NO NS')), 'white', attrs=['bold'])
-                + ' in {} for {}'.format(self._filename,
-                                         '{}.{}'.format(entry['error'].__class__.__module__,
-                                                        entry['error'].__class__.__name__)
-                                         if entry.get('error', None) is not None else '')
-                for entry in entries_with_exception2]
-            exception_entries_indented = '\n    {}'. format('\n    '.join(exception_entries_text))
-            problems_text_colored = (color('{} which failed to validate twice:'.format(entry_plural.capitalize()),
-                                           'red', attrs=['bold'])
-                                     + exception_entries_indented)
-            log('debug', '(blank lines)\n\n\n')  # Just blank lines
-            log('error', problems_text_colored)
-            raise Exception('{} {} failed to validate in {}{}'.format(number_failed_to_validate, entry_plural,
-                                                                      self._filename, exception_entries_indented))
+        log('info', 'Validation Pass 2:')
+        results_pass2, entries_with_exception2, failures, ingored_failures = self.validate_list(entries_for_pass2)
+        if len(ingored_failures) > 0:
+            self.log_entries('info', 'which failed to validate twice, but are ignored', ingored_failures, 'white', [])
+        failure_count = len(failures)
+        if failure_count > 0:
+            entry_plural, indented_failures = self.log_entries('error', 'which failed to validate twice (not ignored)',
+                                                               failures, 'red', ['bold'])
+            raise Exception('{} {} failed to validate in {}{}'.format(failure_count, entry_plural,
+                                                                      self._filename, indented_failures))
 
 
 class YAMLParserASN(YAMLParserCIDR):
