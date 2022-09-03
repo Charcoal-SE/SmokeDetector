@@ -42854,3 +42854,4 @@
 1662212895	Jeff Schaller	accbuzz\.com
 1662213300	Makyen	writerzingo(?!\.com)
 1662213324	Makyen	writerzingo\.com
+1662215619	cigien	blogshub\.co\.in
