@@ -2620,7 +2620,7 @@ slot[\W_]*gacor
 niastoto(?!(?<=^niastoto)$)
 explainer[\W_]*+video[\W_]*+company
 🎉🎁✅👍👇
-customer[\W_]*+care[\W_]*+number
+c[\W_]*+u[\W_]*+s[\W_]*+t[\W_]*+o[\W_]*+m[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+a[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+u[\W_]*+m[\W_]*+b[\W_]*+e[\W_]*+r
 reliablehacker\d+(?:[\W_]*+(?:at[_W]*+)?gmail[\W_]*+(?:dot[_W]*+)?com)?(?#seen: reliablehacker06)
 (?-i:3IvrxDZ9aD8)(?#youtu.be)
 (?-i:debduttapanda)(?#medium.com)
