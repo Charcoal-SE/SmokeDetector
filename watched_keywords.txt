@@ -42842,3 +42842,4 @@
 1662196939	Cody Gray	Delhi[\W_]*Tourism(?:[\W_]*Blog)?
 1662196982	Cody Gray	delhitourismgov\.blogspot
 1662197583	Cody Gray	parvamusic\.ir
+1662197627	Cody Gray	poptrack\.ir
