@@ -42882,3 +42882,4 @@
 1662316095	Jeff Schaller	electronicsmith\.com
 1662316648	Makyen	checkoutfirst\.com
 1662316677	Makyen	checkoutfirst(?!\.com)
+1662331923	Makyen	veryserial\.com
