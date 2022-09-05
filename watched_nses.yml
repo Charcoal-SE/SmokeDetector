@@ -1894,6 +1894,9 @@ items:
   - lila.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
+  - lilith.ns.cloudflare.com.
+  - ray.ns.cloudflare.com.
+- ns:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
