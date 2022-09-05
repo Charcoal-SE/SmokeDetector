@@ -1035,6 +1035,9 @@ items:
   - denver.ns.cloudflare.com.
   - elisabeth.ns.cloudflare.com.
 - ns:
+  - derek.ns.cloudflare.com.
+  - elinore.ns.cloudflare.com.
+- ns:
   - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
 - ns:
