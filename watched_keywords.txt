@@ -42884,3 +42884,4 @@
 1662316677	Makyen	checkoutfirst(?!\.com)
 1662331923	Makyen	veryserial\.com
 1662347666	Nick	thanhdatfurniture\.com
+1662347884	Jeff Schaller	taterbomb\.top
