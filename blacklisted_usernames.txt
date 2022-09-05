@@ -708,3 +708,4 @@ meta kukel exchange
 (?-i:^shawn davidson$)
 ^OstroJS$
 (?-i:^Camelli Andre$)
+(?-i:^Frenco 011$)
