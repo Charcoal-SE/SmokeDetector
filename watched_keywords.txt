@@ -42933,3 +42933,4 @@
 1662403324	Spevacus	navigation[\W_]*+unlocker(?!\.com)
 1662409595	Jeff Schaller	cytotecobataborsi\.net
 1662422186	cigien	circlemarketing\.pk
+1662422392	cigien	(?-i:bLSZ2)(?#shorturl)
