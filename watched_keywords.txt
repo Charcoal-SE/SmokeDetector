@@ -42930,3 +42930,4 @@
 1662402727	Makyen	2jewellery
 1662402752	Makyen	huaweicloud\.com
 1662403173	Spevacus	navigationunlocker\.com
+1662403237	Spevacus	navigation[\W_]*+unlocker(?:@gmail\.com)?
