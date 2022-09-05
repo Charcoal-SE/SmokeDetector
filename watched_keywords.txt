@@ -42883,3 +42883,4 @@
 1662316648	Makyen	checkoutfirst\.com
 1662316677	Makyen	checkoutfirst(?!\.com)
 1662331923	Makyen	veryserial\.com
+1662347666	Nick	thanhdatfurniture\.com
