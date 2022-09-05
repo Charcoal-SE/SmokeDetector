@@ -42931,3 +42931,4 @@
 1662402752	Makyen	huaweicloud\.com
 1662403173	Spevacus	navigationunlocker\.com
 1662403324	Spevacus	navigation[\W_]*+unlocker(?!\.com)
+1662409595	Jeff Schaller	cytotecobataborsi\.net
