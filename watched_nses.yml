@@ -502,6 +502,9 @@ items:
   - candy.ns.cloudflare.com.
 - ns:
   - bayan.ns.cloudflare.com.
+  - keira.ns.cloudflare.com.
+- ns:
+  - bayan.ns.cloudflare.com.
   - mia.ns.cloudflare.com.
 - ns:
   - bayan.ns.cloudflare.com.
