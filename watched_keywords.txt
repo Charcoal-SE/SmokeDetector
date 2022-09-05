@@ -42891,3 +42891,4 @@
 1662353852	tripleee	(?-i:^tailuudan$)
 1662353912	tripleee	(?-i:^Arjun Suhass$)
 1662355257	tripleee	assignment\.world
+1662355737	tripleee	(?-i:^Zuni$)
