@@ -1894,6 +1894,9 @@ items:
   - lina.ns.cloudflare.com.
   - roan.ns.cloudflare.com.
 - ns:
+  - linda.ns.cloudflare.com.
+  - will.ns.cloudflare.com.
+- ns:
   - lindsey.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
