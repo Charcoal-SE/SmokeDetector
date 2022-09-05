@@ -2672,3 +2672,4 @@ h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+l[\W_]*+o[\W_]*+r[\W_]*+d[\W_]*+j[\W_]*+o[\W_]*+
 Guo[\W_]*Wengui
 郭文贵(?#Guo Wengui)
 idn[\W_]*+poker
+slim[\W_]*+tea

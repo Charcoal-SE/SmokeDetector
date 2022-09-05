@@ -42795,7 +42795,6 @@
 1662101860	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\n*\Z
 1662104544	tripleee	atrixware\.com
 1662104796	tripleee	pure[\W_]*+life[\W_]*+organics
-1662104913	tripleee	slim[\W_]*+tea
 1662107413	tripleee	thiruvananthapuramflorist\.com
 1662107468	tripleee	vpnsuggestions\.com
 1662111400	tripleee	migr8\.in
