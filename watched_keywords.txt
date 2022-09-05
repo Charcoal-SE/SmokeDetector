@@ -42887,3 +42887,4 @@
 1662347884	Jeff Schaller	taterbomb\.top
 1662348908	tripleee	\A<p>Nice put up\.
 1662349256	tripleee	(?-i:^wsreviewnet$)
+1662350706	tripleee	indepthworld\.com
