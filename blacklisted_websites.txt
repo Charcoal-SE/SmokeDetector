@@ -1823,7 +1823,7 @@ francesupplements\.fr
 essayvikings\.com
 youtubetomp3converter\.world
 freemp3download\.club
-gardensnursery\.com
+\b(?<![^\W_]-)gardensnursery\.com(?![.-][^\W_])\b
 traditionessaysonline\.com
 probuztech\.com
 nehatandan\.com
