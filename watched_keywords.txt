@@ -42940,3 +42940,4 @@
 1662431111	cigien	bigbenacademy\.edu\.my
 1662433948	Makyen	sattakingco\.in
 1662433974	Makyen	leakgame\.in
+1662435645	Makyen	flaglegame\.net
