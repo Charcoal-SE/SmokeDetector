@@ -29138,7 +29138,6 @@
 1621907279	cigien	nature[\W_]*+wood[\W_]*+homes(?!\.com(?<=naturewoodhomes\.com))
 1621907295	cigien	articleconstruction\.icu
 1621909988	Nick	reviewbooknet\.com
-1621911802	Nick	business\s+voip\s+service
 1621912676	cigien	199\.192\.31\.242
 1621921225	Nick	vietnamta\.vn
 1621924842	tripleee	(?-i:cb8tuczz)(?# tinyurl.com)
