@@ -42951,5 +42951,4 @@
 1662448624	Cody Gray	esoftspro\.com
 1662448656	Cody Gray	esoftspro(?!\.com)
 1662448704	Cody Gray	puradrop-weight-loss-gummies\.mystrikingly\.com
-1662448729	Cody Gray	Puradrop[\W_]*Weight[\W_]*Loss[\W_]*Gumm(?:y|ies)
 1662448772	Cody Gray	most-popular\.tumblr
