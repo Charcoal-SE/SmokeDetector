@@ -42945,4 +42945,3 @@
 1662436038	cocomac	byrdie\.com
 1662439868	cocomac	novaworld\.info
 1662439994	cocomac	novaworldresort(?:@gmail\.com)?
-1662440392	Makyen	novaworld[\w%-]+
