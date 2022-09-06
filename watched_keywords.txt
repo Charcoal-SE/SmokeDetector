@@ -42833,7 +42833,6 @@
 1662190855	Cody Gray	contact[\W_]*24\/7
 1662190896	Cody Gray	myassignmenthelp\.live
 1662191992	Cody Gray	meesho
-1662192018	Cody Gray	paytm
 1662196939	Cody Gray	Delhi[\W_]*Tourism(?:[\W_]*Blog)?
 1662196982	Cody Gray	delhitourismgov\.blogspot
 1662197583	Cody Gray	parvamusic\.ir
