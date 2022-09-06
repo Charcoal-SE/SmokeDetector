@@ -42955,3 +42955,4 @@
 1662448998	Cody Gray	Puradrop[\W_]*Weight[\W_]*Loss[\W_]*Gumm(?:y|ies)(?!\.mystrikingly\.com(?<=puradrop-weight-loss-gummies\.mystrikingly\.com))
 1662449239	tripleee	bestscholarship\.co\.uk
 1662449626	Cody Gray	(?-i:vXoSx\.png)(?# stack imgur)
+1662449664	Cody Gray	Wafa200
