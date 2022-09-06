@@ -2767,6 +2767,11 @@ items:
   - ns-2033.awsdns-62.co.uk.
   - ns-928.awsdns-52.net.
 - ns:
+  - ns-1050.awsdns-03.org.
+  - ns-1881.awsdns-43.co.uk.
+  - ns-418.awsdns-52.com.
+  - ns-966.awsdns-56.net.
+- ns:
   - ns-106.awsdns-13.com.
   - ns-1309.awsdns-35.org.
   - ns-1936.awsdns-50.co.uk.
