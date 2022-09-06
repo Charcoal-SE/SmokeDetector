@@ -42977,3 +42977,4 @@
 1662467193	tripleee	axis[\W_]*+colleges(?!\.org(?<=axiscolleges\.org))
 1662468112	cigien	technodevadiga\.com
 1662470190	Ollie	ohsotasty\.com
+1662476791	Ollie	handyman-services-dubai\.com
