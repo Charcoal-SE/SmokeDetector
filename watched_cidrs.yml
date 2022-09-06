@@ -860,7 +860,9 @@ items:
 - ip: 104.26.6.106
 - ip: 104.26.6.107
 - ip: 104.26.6.13
-- ip: 104.26.6.173
+- comment: FP-prone, shared between cubix.co (TP) and ionicframework.com (generally TP)
+  disable: true
+  ip: 104.26.6.173
 - ip: 104.26.6.197
 - ip: 104.26.6.237
 - ip: 104.26.6.239
@@ -870,7 +872,9 @@ items:
 - ip: 104.26.7.106
 - ip: 104.26.7.107
 - ip: 104.26.7.13
-- ip: 104.26.7.173
+- comment: FP-prone, shared between cubix.co (TP) and ionicframework.com (generally TP)
+  disable: true
+  ip: 104.26.7.173
 - ip: 104.26.7.197
 - ip: 104.26.7.237
 - ip: 104.26.7.239
@@ -2482,7 +2486,9 @@ items:
 - ip: 172.67.69.233
 - ip: 172.67.69.238
 - ip: 172.67.69.251
-- ip: 172.67.69.29
+- comment: FP-prone, shared between cubix.co (TP) and ionicframework.com (generally TP)
+  disable: true
+  ip: 172.67.69.29
 - ip: 172.67.69.3
 - ip: 172.67.69.74
 - ip: 172.67.69.69
