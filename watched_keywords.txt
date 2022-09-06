@@ -42974,3 +42974,4 @@
 1662465294	cigien	growbizz\.net
 1662465331	cigien	growbizz(?!\.net)
 1662465828	cigien	techusall\.com
+1662466931	tripleee	axiscolleges\.org
