@@ -42964,3 +42964,4 @@
 1662454114	Cody Gray	townbusinesstore\.com
 1662454150	Cody Gray	townbusinessstore(?!\.com)
 1662454349	tripleee	markvandewielblog\.wordpress\.com
+1662455335	tripleee	(?-i:^Raveena Kumar$)
