@@ -42949,3 +42949,4 @@
 1662443362	tripleee	ydesign\.in
 1662445003	tripleee	punjabi[\W_]*+dhaba
 1662448624	Cody Gray	esoftspro\.com
+1662448656	Cody Gray	esoftspro(?!\.com)
