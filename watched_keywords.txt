@@ -42975,3 +42975,4 @@
 1662465828	cigien	techusall\.com
 1662466931	tripleee	axiscolleges\.org
 1662467193	tripleee	axis[\W_]*+colleges(?!\.org(?<=axiscolleges\.org))
+1662468112	cigien	technodevadiga\.com
