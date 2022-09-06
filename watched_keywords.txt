@@ -42944,3 +42944,4 @@
 1662435688	Makyen	lol-beans\.io
 1662436038	cocomac	byrdie\.com
 1662439868	cocomac	novaworld\.info
+1662439994	cocomac	novaworldresort(?:@gmail\.com)?
