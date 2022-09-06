@@ -2203,7 +2203,7 @@ bestessaywritingservice\.co
 healthwho\.com
 supplement4guide\.com
 msofficetechnicalsupportnumbers\.com
-smore\.com
+\b(?<![^\W_]-)smore\.com(?![.-][^\W_])\b
 topsupplements\.co\.za
 bodyprodiets\.com
 supplementxt\.com
