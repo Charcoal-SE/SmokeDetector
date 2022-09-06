@@ -42962,3 +42962,4 @@
 1662453295	Cody Gray	^fiufiu$
 1662453554	Cody Gray	blockchain[\W_]*development[\W_]*(?:company|survey)
 1662454114	Cody Gray	townbusinesstore\.com
+1662454150	Cody Gray	townbusinessstore(?!\.com)
