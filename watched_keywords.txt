@@ -42950,3 +42950,4 @@
 1662445003	tripleee	punjabi[\W_]*+dhaba
 1662448624	Cody Gray	esoftspro\.com
 1662448656	Cody Gray	esoftspro(?!\.com)
+1662448704	Cody Gray	puradrop-weight-loss-gummies\.mystrikingly\.com
