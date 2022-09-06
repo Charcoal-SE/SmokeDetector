@@ -42958,3 +42958,4 @@
 1662449664	Cody Gray	Wafa200
 1662450549	tripleee	letsvisitpersia\.com
 1662450869	Cody Gray	letsvisitpersia(?!\.com)
+1662453024	Cody Gray	market247(?!\.io)
