@@ -22456,7 +22456,6 @@
 1599738062	Mast	destroyerbit(?:@gmail\.com)?
 1599740632	tripleee	thegta5android\.com
 1599742562	tripleee	hemptradesupply\.com
-1599742906	tripleee	(?-i:^Liam Smith$)
 1599742960	tripleee	(?-i:^bikash sahu$)
 1599743583	Mast	premium[\W_]*+hemp[\W_]*+flower
 1599745304	Spevacus	newamericanstore\.com
