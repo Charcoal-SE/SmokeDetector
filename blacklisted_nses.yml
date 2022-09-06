@@ -133,6 +133,9 @@ items:
   - dawn.ns.cloudflare.com.
   - dimitris.ns.cloudflare.com.
 - ns:
+  - dean.ns.cloudflare.com.
+  - heather.ns.cloudflare.com.
+- ns:
   - dina.ns.cloudflare.com.
   - mario.ns.cloudflare.com.
 - ns:
