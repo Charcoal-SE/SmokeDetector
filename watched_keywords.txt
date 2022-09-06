@@ -42947,3 +42947,4 @@
 1662439994	cocomac	novaworldresort(?:@gmail\.com)?
 1662440463	Makyen	novaworld[\w%-]+
 1662443075	tripleee	(?-i:^priya bha$)
+1662443362	tripleee	ydesign\.in
