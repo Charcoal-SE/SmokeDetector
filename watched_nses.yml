@@ -873,6 +873,9 @@ items:
   - cora.ns.cloudflare.com.
   - jason.ns.cloudflare.com.
 - ns:
+  - cora.ns.cloudflare.com.
+  - sam.ns.cloudflare.com.
+- ns:
   - corey.ns.cloudflare.com.
   - naya.ns.cloudflare.com.
 - ns:
