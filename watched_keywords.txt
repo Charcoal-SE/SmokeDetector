@@ -43007,3 +43007,4 @@
 1662547253	tripleee	y2mate\.co\.in
 1662547289	tripleee	blockchainwork(?!\.net)
 1662547320	tripleee	dinosaurhuntinggame1\.blogspot
+1662547348	tripleee	uceed[\W_]*+nid
