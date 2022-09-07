@@ -42997,3 +42997,4 @@
 1662541332	tripleee	expatmedicare\.com
 1662541728	tripleee	humanverificationtiktok\d*\.blogspot
 1662541754	tripleee	(?-i:7Ck7cN4)(?# cutt.ly)
+1662542488	tripleee	splendour$
