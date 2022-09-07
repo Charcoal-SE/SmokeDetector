@@ -2676,3 +2676,4 @@ satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatka
 janbask
 edulete\.in/question
 edulete\.in/blog
+edulete\.in/quiz
