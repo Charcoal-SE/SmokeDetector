@@ -42990,3 +42990,4 @@
 1662525948	tripleee	hashnode\.dev(?<!(?:aakankshabhende|carevision|codeweb|didipostman|harveyt)\.hashnode\.dev)
 1662526747	cocomac	emanuellcharis\.de
 1662526847	tripleee	vasgroup\.vn
+1662528223	tripleee	(?-i:^blogsand1$)
