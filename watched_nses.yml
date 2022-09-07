@@ -3129,7 +3129,9 @@ items:
 - ns: ehosts.com.
 - ns: restoregreenlife.com.
 - ns: studentdatabase.co.in.
-- ns: vercel-dns.com.
+- comment: disabled 2022-09-07, 10/162
+  disable: true
+  ns: vercel-dns.com.
 - ns: webhostingprotocol.com.
 - ns: oldprohosting.com.
 - ns: seozonexperts.com.
