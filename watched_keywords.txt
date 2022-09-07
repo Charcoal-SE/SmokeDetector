@@ -43013,3 +43013,4 @@
 1662547702	tripleee	(?-i:^Mobiloitte Technologies$)
 1662548933	tripleee	leadingscholarships\.com
 1662549895	Jeff Schaller	jbformworksystems\.com
+1662550161	Jeff Schaller	stupefywatches\.com
