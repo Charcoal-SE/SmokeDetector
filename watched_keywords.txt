@@ -13683,7 +13683,6 @@
 1574114276	Jenayah	qualityessay\.com
 1574166819	tripleee	siddibio\.co\.in
 1574166878	tripleee	accu[\W_]*+feet(?!insoles\.wixsite\.com(?<=accufeetinsoles\.wixsite\.com))(?:[\W_]*+in[\W_]*+soles)?
-1574169438	tripleee	hex64\.net
 1574174276	tripleee	mspy\.gen\.tr
 1574184175	Machavity	last\W*month's\W*online\W*earning
 1574179624	Das_Geek	foreignerhelp\.com

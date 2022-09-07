@@ -4796,3 +4796,4 @@ webtoolsoffers\.com
 \bpicc\.io
 famform\.io
 pakistanjobs\.pk
+hex64\.net
