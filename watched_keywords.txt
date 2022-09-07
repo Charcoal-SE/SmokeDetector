@@ -43010,3 +43010,4 @@
 1662547348	tripleee	uceed[\W_]*+nid
 1662547386	tripleee	mycareer\.se
 1662547537	tripleee	puradrop
+1662547702	tripleee	(?-i:^Mobiloitte Technologies$)
