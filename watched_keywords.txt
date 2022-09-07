@@ -42990,3 +42990,4 @@
 1662528223	tripleee	(?-i:^blogsand1$)
 1662529721	tripleee	(?-i:^App Developers(?: [A-Z][a-z]*){1,4}$)
 1662530256	tripleee	bruitly\.com
+1662532014	tripleee	1000bulbs\.com
