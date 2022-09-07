@@ -1487,7 +1487,6 @@ revimax
 d-bal
 dianabol
 viatropin
-satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatkapro\.mobi))\w*+
 nordic\W*+loan\W*+firm(?:@gmail\W*+com)?
 safflower\W?oil
 ramsedave121(?:@gma?il\.com)?
