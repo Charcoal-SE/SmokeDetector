@@ -12542,7 +12542,6 @@
 1569816548	Stormblessed	Mr\W+Steven\W+Robert
 1569818968	Makyen	gym-expert\.com
 1569820145	Shree	training@janbasktrainig\.com
-1569820719	tripleee	janbask
 1569822125	Makyen	stella[\W_]*+maeson[\W_]*+cream
 1569825437	tripleee	nrzee\.com
 1569827833	tripleee	hulucomactivatecode\.com
