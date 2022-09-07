@@ -15558,7 +15558,6 @@
 1579081411	tripleee	streetviewexplore\.com
 1579082380	tripleee	27\.124\.27\.111
 1579082403	tripleee	ofwpinoy1tv\.net
-1579083615	tripleee	automic
 1579083664	tripleee	active[\W_]*+pedal(?:[\W_]*+cbd)?
 1579084816	tripleee	wikizn\.com
 1579084840	tripleee	omsoftware\.net
