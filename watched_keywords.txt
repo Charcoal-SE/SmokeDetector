@@ -30821,7 +30821,6 @@
 1627284158	tripleee	^aamir[\W_]*+yasin$
 1627284257	tripleee	citizenship[\W_]*+by[\W_]*+investment
 1627284496	tripleee	homify\.ca
-1627295425	tripleee	bernhelmets\.com
 1627299350	Glorfindel	srkinnovations\.com
 1627299386	tripleee	bestspiceexporter\.com
 1627300563	Jeff Schaller	bittenbook\.com
