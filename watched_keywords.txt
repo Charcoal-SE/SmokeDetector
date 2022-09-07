@@ -42989,3 +42989,4 @@
 1662522342	Makyen	drravibhatt\.com
 1662522364	Makyen	ohbabyboxes\.com
 1662525948	tripleee	hashnode\.dev(?<!(?:aakankshabhende|carevision|codeweb|didipostman|harveyt)\.hashnode\.dev)
+1662526747	cocomac	emanuellcharis\.de
