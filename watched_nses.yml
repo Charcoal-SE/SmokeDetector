@@ -1204,6 +1204,9 @@ items:
   - emely.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
+  - emerie.ns.cloudflare.com.
+  - keenan.ns.cloudflare.com.
+- ns:
   - emily.ns.cloudflare.com.
   - tony.ns.cloudflare.com.
 - ns:
