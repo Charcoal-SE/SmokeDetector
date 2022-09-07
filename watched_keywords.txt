@@ -43008,3 +43008,4 @@
 1662547289	tripleee	blockchainwork(?!\.net)
 1662547320	tripleee	dinosaurhuntinggame1\.blogspot
 1662547348	tripleee	uceed[\W_]*+nid
+1662547386	tripleee	mycareer\.se
