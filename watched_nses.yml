@@ -3286,7 +3286,9 @@ items:
 - ns: att-websites.com.
 - ns: flammahost.com.
 - ns: starprocombat.com.
-- ns: awxcom.com.
+- comment: SERVFAIL 2022-09-07
+  disable: true
+  ns: awxcom.com.
 - ns: thehost.com.ua.
 - ns: parspack.co.
 - ns: bitcoin-dns.com.
