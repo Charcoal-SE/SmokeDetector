@@ -5933,7 +5933,6 @@
 1541749423	tripleee	punkroku\d*
 1541751112	Glorfindel	ofwmoney\.org
 1541758132	Glorfindel	involutetraining\.com
-1541758283	tripleee	pakistanjobs\.pk
 1541795815	K.Dᴀᴠɪs	netearnpoint\.com
 1541802622	K.Dᴀᴠɪs	airdelights\.com
 1541823430	K.Dᴀᴠɪs	lzzgmachine\.com
