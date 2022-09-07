@@ -42641,7 +42641,6 @@
 1661859642	Jeff Schaller	decorosoft\.com
 1661859675	Robert Longson	ekwikdigital\.com
 1661859704	Jeff Schaller	studiojchanel\.com
-1661861819	Jeff Schaller	iqlance\.com
 1661862253	Jeff Schaller	semidotinfotech\.com
 1661863687	Jeff Schaller	fastcloud\.global
 1661863806	Jeff Schaller	torontowiderestoration\.com
