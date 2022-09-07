@@ -42988,3 +42988,4 @@
 1662522320	Makyen	d(?:octo)?r[\W_]*+ravi[\W_]*+bhatt(?!\.com(?<=drravibhatt\.com))
 1662522342	Makyen	drravibhatt\.com
 1662522364	Makyen	ohbabyboxes\.com
+1662525948	tripleee	hashnode\.dev(?<!(?:aakankshabhende|carevision|codeweb|didipostman|harveyt)\.hashnode\.dev)
