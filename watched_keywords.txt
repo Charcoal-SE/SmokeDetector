@@ -43041,3 +43041,4 @@
 1662621001	tripleee	(?-i:^dpt hub$)
 1662621461	tripleee	edisonmed\.com
 1662623754	tripleee	ryangroup\.org
+1662628460	tripleee	skycoair\.com
