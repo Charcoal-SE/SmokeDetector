@@ -43027,3 +43027,4 @@
 1662606970	cocomac	assetsrepo(?:[\W_]*com)?
 1662611149	cocomac	geometry-dash\.onl
 1662611172	cocomac	basketball-stars\.co
+1662611529	cocomac	gartic-phone\.io
