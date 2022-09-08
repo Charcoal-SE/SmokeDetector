@@ -12894,7 +12894,6 @@
 1571220882	Glorfindel	sociablekit\.com
 1571225043	double-beep	giftlab\.co\.uk
 1571226178	double-beep	ketopiller\.com
-1571226220	double-beep	(?-i:^Seema Kumari$)
 1571241186	Machavity	whatsappstatusclub\.in
 1571260928	Makyen	bomb[\W_]*+cyclone(?:[\W_]*+(?:t|shirts?|2019)){2,}
 1571260939	Makyen	shubhastro2(?:@gmail\.com)?
