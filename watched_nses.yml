@@ -1091,6 +1091,9 @@ items:
   - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - dom.ns.cloudflare.com.
+  - sunny.ns.cloudflare.com.
+- ns:
   - donald.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
