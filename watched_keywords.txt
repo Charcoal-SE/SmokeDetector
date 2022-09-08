@@ -42700,7 +42700,6 @@
 1661968976	Cody Gray	pastor[\W_]*chris
 1661969074	Cody Gray	rowlive(?:wpc)?
 1661969131	Cody Gray	dileepveldi(?#medium)
-1661971947	Cody Gray	protetox(?:usa)?
 1661978195	Spevacus	guruface\.com
 1661986636	Ollie	today4pc\.com
 1661988244	Ollie	ismailfedakar\.com

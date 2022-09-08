@@ -2677,3 +2677,4 @@ janbask
 edulete\.in/question
 edulete\.in/blog
 edulete\.in/quiz
+protetox(?:usa)?
