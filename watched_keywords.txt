@@ -40114,7 +40114,6 @@
 1655267485	cigien	(?-i:ankurmulasi)(?#linkedin)
 1655268306	Makyen	l3harrisgeospatial\.com
 1655273096	Mast	aYkADA(?# fiverr)
-1655276503	tripleee	achievers[\W_]*+it(?!\.com(?<=achieversit\.com))
 1655276740	Mast	hemengeliriz\.com\.tr
 1655279459	tripleee	evolutionco(?!\.com)
 1655279512	tripleee	evolutionco\.com
