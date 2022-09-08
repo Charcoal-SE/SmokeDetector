@@ -43045,6 +43045,5 @@
 1662629535	tripleee	okbet[\W_]*+login
 1662629729	Glorfindel	sallet\W*one
 1662631523	Cody Gray	freeflow[\W_]*seo
-1662632622	tripleee	ripped[\W_]*+off
 1662636945	Jeff Schaller	myoil\.ch
 1662637792	Jeff Schaller	iamat\.com
