@@ -38353,7 +38353,6 @@
 1650584527	Cody Gray	shopbyoffers\.com
 1650587250	Ryan M	prestige[\W_]*+aston[\W_]*+park
 1650590243	Nick	nourcoupons\.com
-1650594695	Jeff Schaller	smartblogsandarticles\.com
 1650604776	Suraj Rao	heartzfx\.com
 1650606658	tripleee	cornbreadhemp\.com
 1650607628	tripleee	etissimo\.de
