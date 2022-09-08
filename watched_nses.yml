@@ -2790,6 +2790,11 @@ items:
   - ns-492.awsdns-61.com.
   - ns-941.awsdns-53.net.
 - ns:
+  - ns-1089.awsdns-08.org.
+  - ns-1670.awsdns-16.co.uk.
+  - ns-308.awsdns-38.com.
+  - ns-828.awsdns-39.net.
+- ns:
   - ns-11.awsdns-01.com.
   - ns-1309.awsdns-35.org.
   - ns-1719.awsdns-22.co.uk.
