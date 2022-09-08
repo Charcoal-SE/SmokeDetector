@@ -43033,3 +43033,4 @@
 1662618628	Cody Gray	full[\W_]*coin[\W_]*loan
 1662618640	Cody Gray	☎️
 1662618782	Cody Gray	kredx\.com
+1662618806	Cody Gray	kredx(?!\.com)
