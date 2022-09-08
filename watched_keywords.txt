@@ -43044,3 +43044,4 @@
 1662629070	tripleee	(?-i:^khushboo$)
 1662629166	tripleee	okbetsports\.ph
 1662629535	tripleee	okbet[\W_]*+login
+1662629729	Glorfindel	sallet\W*one
