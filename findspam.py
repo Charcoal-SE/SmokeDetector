@@ -2237,7 +2237,7 @@ city_list = [
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
     "Kochi", "Kolkata", "Kota",
     "Lokhandwala", "Lonavala", "Ludhiana",
-    "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru",
+    "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli",
     "Meghalaya", "Mulund", "Mumbai",
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Patna", "Pune",
