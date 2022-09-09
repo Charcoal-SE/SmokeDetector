@@ -43085,3 +43085,4 @@
 1662712572	Cody Gray	cara[\W_]*trading[\W_]*crypto
 1662712706	Cody Gray	BaaSid
 1662713229	tripleee	soundcloudmp3\.cc
+1662713265	tripleee	learnaside\.com
