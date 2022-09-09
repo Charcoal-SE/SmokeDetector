@@ -43077,3 +43077,4 @@
 1662709705	Cody Gray	wireless-nrepeater\.net
 1662709746	Cody Gray	victony
 1662709780	Cody Gray	litsotravels\.com
+1662709806	Cody Gray	Litso[\W_]*Travels(?!\.com(?<=litsotravels\.com))
