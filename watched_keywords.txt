@@ -43092,3 +43092,4 @@
 1662717593	Cody Gray	pro[\W_]*tax[\W_]*accountant(?!\.co\.uk(?<=protaxaccountant\.co\.uk))
 1662717625	Cody Gray	starbucks[\W_]*partner[\W_]*hours(?!\.org(?<=starbuckspartnerhours\.org))
 1662718801	Jeff Schaller	techinkers\.com
+1662723805	Jeff Schaller	karachigifts\.com
