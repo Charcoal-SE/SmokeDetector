@@ -43082,3 +43082,4 @@
 1662712020	tripleee	techfreak\.com\.ng
 1662712521	Cody Gray	maincrypto\.my\.id
 1662712546	Cody Gray	main[\W_]*crypto(?!\.my\.id(?<=maincrypto\.my\.id))
+1662712572	Cody Gray	cara[\W_]*trading[\W_]*crypto
