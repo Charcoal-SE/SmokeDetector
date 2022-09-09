@@ -4799,3 +4799,4 @@ pakistanjobs\.pk
 hex64\.net
 blogreviewsbook\.com
 smartblogsandarticles\.com
+ittechtrends\.com
