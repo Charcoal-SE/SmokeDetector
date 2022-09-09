@@ -43060,3 +43060,4 @@
 1662693260	cocomac	uadplugins\.club
 1662693374	Cody Gray	uad[\W_]*plugins(?!\.club(?<=uadplugins\.club))
 1662693905	Makyen	inanquangcao2h
+1662693927	Makyen	xuonginpp
