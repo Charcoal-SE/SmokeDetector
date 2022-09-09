@@ -43065,3 +43065,4 @@
 1662697861	Cody Gray	Winder[\W_]*Loan
 1662697908	Cody Gray	newreviewnet\.com
 1662697624	EJoshuaS - Stand with Ukraine	lumbuy\.com
+1662698583	Makyen	rametron
