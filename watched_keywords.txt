@@ -43061,3 +43061,4 @@
 1662693374	Cody Gray	uad[\W_]*plugins(?!\.club(?<=uadplugins\.club))
 1662693905	Makyen	inanquangcao2h
 1662693927	Makyen	xuonginpp
+1662694467	cocomac	https?:\/{2}[^ ]*crack[\W_]*torrents?[^ ]*
