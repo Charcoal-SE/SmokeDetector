@@ -43057,3 +43057,4 @@
 1662659216	Glorfindel	mokhawi20
 1662675643	Makyen	elmerkirts862(?:@gmail\.com)?
 1662682487	cigien	seculife\.us
+1662682511	cigien	seculife(?!\.us)
