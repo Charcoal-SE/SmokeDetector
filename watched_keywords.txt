@@ -43078,3 +43078,4 @@
 1662709746	Cody Gray	victony
 1662709780	Cody Gray	litsotravels\.com
 1662709806	Cody Gray	Litso[\W_]*Travels(?!\.com(?<=litsotravels\.com))
+1662709869	Cody Gray	(?-i:pzNK8y)
