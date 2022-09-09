@@ -43093,3 +43093,4 @@
 1662717625	Cody Gray	starbucks[\W_]*partner[\W_]*hours(?!\.org(?<=starbuckspartnerhours\.org))
 1662718801	Jeff Schaller	techinkers\.com
 1662723805	Jeff Schaller	karachigifts\.com
+1662726874	cigien	(?-i:ZxRHOT3pzx4)(?#youtube)
