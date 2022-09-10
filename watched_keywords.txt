@@ -43120,3 +43120,4 @@
 1662816921	cigien	coolinglass\.com
 1662816973	cigien	(?-i:PLqzWbejkeaNRpWCLl3LL-qqzyuH_PPrkz)(?#youtube playlist)
 1662829344	Cody Gray	doramasmp4\.onl
+1662829367	Cody Gray	doramasmp4(?!\.onl)
