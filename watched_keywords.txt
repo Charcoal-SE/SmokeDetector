@@ -43137,3 +43137,4 @@
 1662875685	cocomac	quotesjin\.com
 1662900912	Jeff Schaller	cps-test\.onl
 1662902531	Cody Gray	apple[\W_]*gadgets[\W_]*bd(?!\.com(?<=applegadgetsbd\.com))
+1662902960	cigien	lessborders\.com
