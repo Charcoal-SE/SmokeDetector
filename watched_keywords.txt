@@ -43145,3 +43145,4 @@
 1662910065	Jeff Schaller	watchfullmovie7204k\.blogspot
 1662910089	Jeff Schaller	casmovie\.com
 1662911587	Cody Gray	management[\W_]*consulting(?:[\W_]*services?)?
+1662918345	Makyen	remotebridge\.com
