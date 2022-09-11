@@ -43144,3 +43144,4 @@
 1662907059	Cody Gray	cattuongnguyen95(?:@gmail\.com)?
 1662910065	Jeff Schaller	watchfullmovie7204k\.blogspot
 1662910089	Jeff Schaller	casmovie\.com
+1662911587	Cody Gray	management[\W_]*consulting(?:[\W_]*services?)?
