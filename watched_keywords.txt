@@ -14412,7 +14412,6 @@
 1576241934	Makyen	btcbit\.net
 1576254627	Machavity	(?-i:^info\Wbixines)
 1576257273	Machavity	veprit\.com
-1576263329	Makyen	thestyledare\.com
 1576263349	Makyen	conceptksaad\.com
 1576267904	Machavity	owenbarreth
 1576270573	Makyen	dr[\W_]*+okoye
