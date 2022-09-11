@@ -43139,3 +43139,4 @@
 1662902531	Cody Gray	apple[\W_]*gadgets[\W_]*bd(?!\.com(?<=applegadgetsbd\.com))
 1662902960	cigien	lessborders\.com
 1662903077	cigien	(?-i:aBOVW)(?#shorturl.at)
+1662903474	cigien	cuti\.cc
