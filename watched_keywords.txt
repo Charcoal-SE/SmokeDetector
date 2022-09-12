@@ -43159,3 +43159,4 @@
 1662973866	Makyen	chiropractornearme
 1662973894	Makyen	bestchiropractornearme
 1662973920	Makyen	headachetreatmentnearme
+1662973958	Makyen	physiotherapybowmanville
