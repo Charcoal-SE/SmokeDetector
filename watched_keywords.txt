@@ -43193,3 +43193,4 @@
 1663000960	Makyen	nyfw[\W_]*+the[\W_]*+shows
 1663003326	cigien	wiseliving\.com\.au
 1663013410	Jeff Schaller	msquare\.pro
+1663027171	cigien	(?-i:binh-nguyen)(?#medium)
