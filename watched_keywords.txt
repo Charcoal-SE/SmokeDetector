@@ -43149,3 +43149,4 @@
 1662923539	Jeff Schaller	upskillanywhere\.com
 1662973590	Makyen	thegolferpost\.com
 1662973614	Makyen	the[\W_]*+golfer[\W_]*+post(?!\.com(?<=thegolferpost\.com))
+1662973642	Makyen	imggoldbuyers\.com
