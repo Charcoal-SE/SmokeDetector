@@ -38732,7 +38732,7 @@
 1651745172	Ryan M	teatv\.ltd
 1651745193	Makyen	get-vidmateapp\.com
 1651745213	Makyen	get-mobdroapk\.com
-1651745333	Ryan M	[a-z0-9%-]*apk[a-z0-9%-]*+\.(?:[a-z0-9%-]++\.)*[a-z0-9%]{2,4}+\b(?<!\.(?:png|jpg|gif|svg)\b)(?<!\.(?:gz|sh)\b)(?<!\.(?:bat|git|jar|tar|txt|yml|zip)\b)(?<!\.(?:file|java)\b)(?<!\bwapka\.me\b)(?<!\bapkeh\.com\b)(?<!\btapkey\.io\b)(?<!\bapktom\.com\b)(?<!\bmapkit\.map\b)(?<!\bapkhigh\.com\b)(?<!\bapkcombo\.com\b)(?<!\bfreemodedapk\.com\b)(?<!\bmultiapkclub\.com\b)(?<!\bconfigure-apk-splits\.html\b)
+1651745333	Ryan M	[a-z0-9%-]*apk[a-z0-9%-]*+\.(?:[a-z0-9%-]++\.)*[a-z0-9%]{2,4}+\b(?<!\.(?:png|jpg|gif|svg)\b)(?<!\.(?:gz|sh)\b)(?<!\.(?:bat|git|jar|tar|txt|yml|zip)\b)(?<!\.(?:file|java)\b)(?<!\bwapka\.me\b)(?<!\bapkeh\.com\b)(?<!\btapkey\.io\b)(?<!\bapktom\.com\b)(?<!\bmapkit\.map\b)(?<!\bapkhigh\.com\b)(?<!\bapkcombo\.com\b)(?<!\bfreemodedapk\.com\b)(?<!\bmultiapkclub\.com\b)(?<!\bconfigure-apk-splits\.html\b)(?<!\bapkmirror\.com\b)
 1651746273	Makyen	vindhyaprocess\.com
 1651746296	Makyen	vindhyaprocess(?!\.com)
 1651746394	Makyen	(?-i:NuMbeR)(?<=(?-i:†NuMbeR))
