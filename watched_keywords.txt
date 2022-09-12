@@ -43151,3 +43151,4 @@
 1662973614	Makyen	the[\W_]*+golfer[\W_]*+post(?!\.com(?<=thegolferpost\.com))
 1662973642	Makyen	imggoldbuyers\.com
 1662973679	Makyen	img[\W_]*+gold[\W_]*+buyers(?!\.com(?<=imggoldbuyers\.com))
+1662973711	Makyen	www-mywifiext-net\.net
