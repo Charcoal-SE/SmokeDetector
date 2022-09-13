@@ -43195,3 +43195,4 @@
 1663013410	Jeff Schaller	msquare\.pro
 1663027171	cigien	(?-i:binh-nguyen)(?#medium)
 1663027847	Makyen	msquare(?!\.pro)(?:[\W_]*+(?:automation|solutions|\d++|[\da-f]{5,}+)s?)*
+1663028229	cigien	vinequai\.com
