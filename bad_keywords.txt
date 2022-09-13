@@ -2680,3 +2680,4 @@ edulete\.in/quiz
 protetox(?:usa)?
 achievers[\W_]*+it(?!\.com(?<=achieversit\.com))
 (?-i:^Market247$)
+^what is your name$
