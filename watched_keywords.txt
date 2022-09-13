@@ -41117,7 +41117,6 @@
 1658225092	Makyen	eigo-honkidr-koryaku\.com
 1658225595	Robert Longson	tamizhasolutions\.com
 1658227919	Makyen	bestenrezepte\.com
-1658231929	Jeff Schaller	dhaba7\.in
 1658235971	Makyen	freehealthtips\.in
 1658236020	Makyen	dfy[\W_]*+saas
 1658241727	cigien	musicexplorers\.com
