@@ -43240,3 +43240,4 @@
 1663160604	Jeff Schaller	hitour24\.com
 1663160783	Jeff Schaller	brealpa\.com
 1663165825	Spevacus	usmultiservice\.com
+1663165892	Spevacus	(?-i:jenya\.korsun)(?#medium)
