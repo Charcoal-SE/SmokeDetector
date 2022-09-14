@@ -19480,7 +19480,6 @@
 1589514100	tripleee	jusorock\.com
 1589517595	tripleee	trackmyhashtag\.com
 1589519375	tripleee	Руслан Александрович
-1589520377	tripleee	minepi\.com
 1589520403	tripleee	xyligan77
 1589521282	tripleee	unikglobalservices\.com
 1589521308	tripleee	unik[\W_]*+global[\W_]*+services(?!\.com)
