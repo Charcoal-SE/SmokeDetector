@@ -43253,3 +43253,4 @@
 1663173850	Jeff Schaller	akashminds\.com
 1663174794	Makyen	beponghoang(?!\.com)
 1663174820	Makyen	hack[\W_]*+mavens(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1663181955	Jeff Schaller	uprinting\.us
