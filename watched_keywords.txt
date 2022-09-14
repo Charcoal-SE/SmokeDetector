@@ -43252,3 +43252,4 @@
 1663173753	Jeff Schaller	thetechiest\.com
 1663173850	Jeff Schaller	akashminds\.com
 1663174794	Makyen	beponghoang(?!\.com)
+1663174820	Makyen	hack[\W_]*+mavens(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
