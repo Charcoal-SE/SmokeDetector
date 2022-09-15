@@ -37698,7 +37698,6 @@
 1648800543	Cody Gray	best[\W_]*urolog(y|ist|ical)
 1648802691	Makyen	dal[pƤ]ocha2(?:\.콤|\.com)?(?#website)
 1648804337	tripleee	(?-i:^chau becks$)
-1648804565	Cody Gray	businessbloomer\.com
 1648805060	Cody Gray	(?:canon[\W_]*)?printer[\W_]*repair(?:[\W_]*services?)?
 1648805906	Cody Gray	binarymetrix\.com
 1648805941	Cody Gray	BinaryMetrix(?:[\W_]*Technologies)?(?!\.com(?<=binarymetrix\.com))
