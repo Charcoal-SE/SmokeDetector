@@ -43267,3 +43267,4 @@
 1663224295	Nick	dm2211\.citsquad\.xyz
 1663224354	Nick	sukudoanalytica\.com
 1663253016	cigien	markethix\.com
+1663253050	cigien	markethix(?!\.com)
