@@ -709,4 +709,3 @@ meta kukel exchange
 ^OstroJS$
 (?-i:^Camelli Andre$)
 (?-i:^Frenco 011$)
-(?-i:^Photoshop services?$)
