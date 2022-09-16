@@ -43298,3 +43298,4 @@
 1663330922	Ryan M	dogq\.io
 1663339200	cigien	(?-i:johnche88)(?#medium)
 1663341113	cigien	sell\.amazon\.in
+1663341492	cigien	mahanta[\W_]*+ethnic
