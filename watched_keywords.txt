@@ -43301,3 +43301,4 @@
 1663341492	cigien	mahanta[\W_]*+ethnic
 1663342573	cigien	wix[\W_]*+pay[\W_]*+pro(?!\.com(?<=wixpaypro\.com))
 1663343386	cigien	outsourceseo\.com\.au
+1663346308	cigien	experimax\.com
