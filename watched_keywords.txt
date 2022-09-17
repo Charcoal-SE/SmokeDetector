@@ -43331,3 +43331,4 @@
 1663430139	Makyen	srk_1[\W_]*+6[\W_]*+7[\W_]*+3\w*+
 1663432172	Makyen	carapedi\.id
 1663435333	Jeff Schaller	bestellipticalbike\.com
+1663439108	Makyen	fayed[\W_]*+hack(?:er)?
