@@ -43311,3 +43311,4 @@
 1663392403	cocomac	techcoders\.design
 1663395257	Nick	magnificitconsulting\.com
 1663399766	Makyen	bigchadlaw\.com
+1663399789	Makyen	big[\W_]*+chad[\W_]*+law(?!\.com(?<=bigchadlaw\.com))
