@@ -43313,3 +43313,4 @@
 1663399766	Makyen	bigchadlaw\.com
 1663399789	Makyen	big[\W_]*+chad[\W_]*+law(?!\.com(?<=bigchadlaw\.com))
 1663407240	Cody Gray	y-axis\.com
+1663408073	Jeff Schaller	imusafir\.in
