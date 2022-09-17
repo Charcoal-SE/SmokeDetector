@@ -43323,3 +43323,4 @@
 1663390691	Nick	phongkhamdakhoadaiviet\.vn
 1663423587	cigien	(?-i:ivivekkumar)(?#t.me)
 1663423958	cigien	treattoolbox\.com
+1663424063	cigien	d(?:octo)?r[\W_]*+ogala
