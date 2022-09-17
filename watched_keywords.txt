@@ -43332,3 +43332,4 @@
 1663435333	Jeff Schaller	bestellipticalbike\.com
 1663439108	Makyen	fayed[\W_]*+hack(?:er)?
 1663441962	Makyen	alvapc\.co\.uk
+1663450668	Makyen	gorenje\.ind\.in
