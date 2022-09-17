@@ -43326,3 +43326,4 @@
 1663424063	cigien	d(?:octo)?r[\W_]*+ogala
 1663424265	cigien	(?-i:gucodero)(?#github account)
 1663427607	Makyen	lifeclayglass\.es
+1663427640	Makyen	lifeclayglass(?!\.es)
