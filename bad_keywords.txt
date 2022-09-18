@@ -2684,3 +2684,4 @@ achievers[\W_]*+it(?!\.com(?<=achieversit\.com))
 hackvanish(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 swift[\W_]*+rupee[\W_]*+loan
 solution4u(?!\.com)
+(?-i:RlyHs-UV-fs)(?#youtu.be)
