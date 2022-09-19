@@ -152,6 +152,7 @@ WHITELISTED_IP_HOSTNAMES = [
     "reactjs.org",
     "shop.pimoroni.com",
     "size.my",
+    "socket.io",
     "talkerscode.com",
     "terrytao.wordpress.com",
     "thepihut.com",
