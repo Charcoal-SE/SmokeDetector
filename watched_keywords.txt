@@ -43356,3 +43356,4 @@
 1663524505	Ollie	neoistone\.com
 1663524532	Ollie	cscglobal\.com
 1663559134	Makyen	volterra2021\.it
+1663559156	Makyen	volterra2021(?!\.it)
