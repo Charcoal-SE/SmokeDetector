@@ -43388,3 +43388,4 @@
 1663603058	Jeff Schaller	algorithm\.llc
 1663603427	Makyen	creative[\W_]*+peptides
 1663605692	Jeff Schaller	lead-academy\.org
+1663608101	Spevacus	slidecast\.com
