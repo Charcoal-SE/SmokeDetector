@@ -41281,7 +41281,6 @@
 1658681681	cigien	aytekustundag\.com
 1658687376	cigien	onboarding\.study
 1658688646	cigien	essaygeeks\.co\.uk
-1658690444	cigien	farmanitfirm\.com
 1658721013	tripleee	saigonnamphat\.vn
 1658726639	tripleee	(?-i:rohitverma_87831(?<=@rohitverma_87831))(?# medium.com)
 1658727163	tripleee	easy-views\.org
