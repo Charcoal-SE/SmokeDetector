@@ -43397,3 +43397,4 @@
 1663642984	cigien	ashley[\W_]*philip[\W_]*recovery(?:@(?:counsellor|gmail)\.com)?
 1663643009	cocomac	megatoolpro\.com
 1663654099	Cody Gray	cypherix\.com
+1663654123	Cody Gray	cypherix(?!\.com)
