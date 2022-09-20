@@ -43424,3 +43424,4 @@
 1663701263	Spevacus	ahlbyt\.in
 1663711631	Jeff Schaller	syscurve\.com
 1663711882	Spevacus	dryerventcleaningtoday\.ca
+1663712800	Makyen	syscurve(?!\.com)
