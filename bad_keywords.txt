@@ -2686,3 +2686,4 @@ swift[\W_]*+rupee[\W_]*+loan
 solution4u(?!\.com)
 (?-i:RlyHs-UV-fs)(?#youtu.be)
 ezzee[\W_]*+fonts(?!\.com)
+encantado[\W_]*+de[\W_]*+saludarte[\W_]*+Soy[\W_]*+Jose[\W_]*+Quería
