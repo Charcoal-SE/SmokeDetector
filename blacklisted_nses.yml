@@ -142,6 +142,9 @@ items:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
+  - emma.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
   - etienne.ns.cloudflare.com.
   - mona.ns.cloudflare.com.
 - ns:
