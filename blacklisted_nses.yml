@@ -54,6 +54,9 @@ items:
   - gwen.ns.cloudflare.com.
 - ns:
   - asa.ns.cloudflare.com.
+  - kevin.ns.cloudflare.com.
+- ns:
+  - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
   - austin.ns.cloudflare.com.
