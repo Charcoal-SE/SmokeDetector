@@ -27659,7 +27659,6 @@
 1616832150	cigien	smsnotif\.id
 1616832489	cigien	gamestoremobi\.com
 1616834500	cigien	agen138terkuat\.wildapricot\.org
-1616835133	cigien	inoru\.com
 1616835173	cigien	shoulderandelbow\.in
 1616835544	cigien	sarkariresults\.info
 1616835565	cigien	sarkari[\W_]*+results(?!\.info(?<=sarkariresults\.info))
