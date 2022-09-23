@@ -43523,3 +43523,4 @@
 1663974513	cigien	getmyradiocodes\.com
 1663974585	cigien	(?-i:EX2S2T)(?#fy9.in)
 1663974608	cigien	(?-i:QVz8c33)(?#cutt.ly)
+1663974665	cigien	sturdysports\.com\.au
