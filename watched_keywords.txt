@@ -43508,3 +43508,4 @@
 1663929981	tripleee	himalaya[\W_]*+quartz
 1663930228	tripleee	rasayanam\.in
 1663931621	tripleee	ipatientportal\.com
+1663931646	tripleee	investment-mastery\.com
