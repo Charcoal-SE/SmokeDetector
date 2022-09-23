@@ -43502,3 +43502,4 @@
 1663914121	Makyen	sp[\W_]*+marketer(?!\.tech(?<=spmarketer\.tech))
 1663920630	Jeff Schaller	brugu\.io
 1663920679	Jeff Schaller	khoetunhien24h\.com
+1663914465	Nick	tokinori\.com
