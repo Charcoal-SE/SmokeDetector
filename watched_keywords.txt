@@ -34437,7 +34437,6 @@
 1639471155	tripleee	waficars\.com
 1639473786	tripleee	msmeregisteration\.org
 1639476543	Makyen	lauftech\.de
-1639476563	Makyen	7qasearch\.net
 1639477288	tripleee	(?-i:^Amira Mahasin$)
 1639477939	tripleee	exerror\.com
 1639479965	tripleee	chikucab\.com
