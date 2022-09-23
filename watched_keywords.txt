@@ -43509,3 +43509,4 @@
 1663931621	tripleee	ipatientportal\.com
 1663931646	tripleee	investment-mastery\.com
 1663932788	Glorfindel	techycompany\.com
+1663934571	Jeff Schaller	element-home\.com
