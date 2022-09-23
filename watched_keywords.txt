@@ -43498,3 +43498,4 @@
 1663900927	cigien	apploadyou(?!\.com)
 1663901660	cigien	tuixachbalo\.vn
 1663914005	Makyen	qberrorsupport\.com
+1663914097	Makyen	spmarketer\.tech
