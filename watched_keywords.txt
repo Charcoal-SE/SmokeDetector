@@ -43513,3 +43513,4 @@
 1663934645	Glorfindel	BuilderHardware
 1663936224	tripleee	custommarketinsights\.com
 1663939460	Spevacus	one-submit\.com
+1663939578	Spevacus	falconguru\.blogspot
