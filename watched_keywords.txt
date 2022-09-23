@@ -32659,7 +32659,6 @@
 1633406683	Thomas Ward	excelsoftware\.com
 1633411402	cigien	jawliner\.us
 1633411890	cigien	bizzeonline(?!\.com)
-1633412358	Ryan M	ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
 1633415678	tripleee	(?-i:UiWjet8DBjk)(?# youtube)
 1633417756	tripleee	(?-i:KBvNpl)(?# fiverr)
 1633417849	tripleee	polo[\W_]*+organic[\W_]*+cow[\W_]*+farm
