@@ -43507,3 +43507,4 @@
 1663922532	Jeff Schaller	beautycaresinfo\.com
 1663929981	tripleee	himalaya[\W_]*+quartz
 1663930228	tripleee	rasayanam\.in
+1663931621	tripleee	ipatientportal\.com
