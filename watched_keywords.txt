@@ -43499,3 +43499,4 @@
 1663901660	cigien	tuixachbalo\.vn
 1663914005	Makyen	qberrorsupport\.com
 1663914097	Makyen	spmarketer\.tech
+1663914121	Makyen	sp[\W_]*+marketer(?!\.tech(?<=spmarketer\.tech))
