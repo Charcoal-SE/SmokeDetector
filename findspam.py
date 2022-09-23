@@ -2225,7 +2225,7 @@ pattern_websites = [
     r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
-    "Agra", "Ahmedabad", "Ajanta", "Almora", "Alwar", "Ambattur", "Amritsar", "Andheri",
+    "Agra", "Ahmedabad", "Ajanta", "Almora", "Alwar", "Ambattur", "Amritsar", "Anand Nagar", "Andheri",
     "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
     "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
@@ -2238,16 +2238,16 @@ city_list = [
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
     "Kochi", "Kolkata", "Kota",
     "Lokhandwala", "Lonavala", "Ludhiana",
-    "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli",
-    "Meghalaya", "Mulund", "Mumbai",
+    "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli", "Mayur Vihar",
+    "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Mulund", "Mumbai",
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
-    "Patna", "Pune",
+    "Palam", "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
     "Sonipat", "Srinagar", "Surat",
     "Telangana", "Thane", "Thiruvananthapuram", "Tiruchi", "Tiruchirappalli", "Tirupati",
     "Trichinopoly", "Trichy", "Trivandrum", "Tura",
     "Udaipur", "Uttarakhand",
-    "Vadodara", "Visakhapatnam", "Worli",
+    "Vadodara", "Vasant Kunj", "Vasant Vihar", "Visakhapatnam", "Worli",
     # not in India
     "Ajman", "Dubai", "Fujairah", "Hamad", "Lahore", "Lusail", "Portland", "Sharjah",
     # yes, these aren't cities but...
