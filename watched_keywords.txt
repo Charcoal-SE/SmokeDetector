@@ -43517,3 +43517,4 @@
 1663943403	Spevacus	logoerpdestek\.com
 1663945603	Jeff Schaller	RamsayMacDonald
 1663946469	Ollie	babykiss\.vn
+1663948470	Ollie	(?-i:^Evance Ooko$)
