@@ -43534,4 +43534,3 @@
 1663999278	Makyen	petalsfurniture\.in
 1663999303	Makyen	petals[\W_]*+furniture(?!\.in(?<=petalsfurniture\.in))
 1664004228	Cody Gray	colon[\W_]*brush
-1664004254	Cody Gray	GoKeto
