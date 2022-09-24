@@ -43532,3 +43532,4 @@
 1663991046	Makyen	newca\.vn
 1663999187	Makyen	mobilefirst
 1663999278	Makyen	petalsfurniture\.in
+1663999303	Makyen	petals[\W_]*+furniture(?!\.in(?<=petalsfurniture\.in))
