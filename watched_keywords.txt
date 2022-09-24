@@ -43544,3 +43544,4 @@
 1664019148	Jeff Schaller	casualarticlesandblogsonline\.com
 1664019299	Jeff Schaller	metalsupplycentre\.com
 1664029624	Makyen	mobsapps\.com
+1664032193	Makyen	counseltrain(?!\.com)
