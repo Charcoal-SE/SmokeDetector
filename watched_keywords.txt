@@ -43535,3 +43535,4 @@
 1663999303	Makyen	petals[\W_]*+furniture(?!\.in(?<=petalsfurniture\.in))
 1664004228	Cody Gray	colon[\W_]*brush
 1664008295	Cody Gray	animedonki\.com
+1664008749	Cody Gray	Wayanad
