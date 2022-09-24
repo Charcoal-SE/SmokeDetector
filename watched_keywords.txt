@@ -43541,3 +43541,4 @@
 1664009084	Cody Gray	refresh[\W_]*mattress(?!\.com(?<=refreshmattress\.com))
 1664010455	Cody Gray	lalluvemula\.com
 1664012116	Mast	pathcreatortutorial\.com
+1664019148	Jeff Schaller	casualarticlesandblogsonline\.com
