@@ -2687,3 +2687,4 @@ solution4u(?!\.com)
 ezzee[\W_]*+fonts(?!\.com)
 encantado[\W_]*+de[\W_]*+saludarte[\W_]*+Soy[\W_]*+Jose[\W_]*+Quería
 ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
+GoKeto[\W_]*Gumm(?:y|ies)
