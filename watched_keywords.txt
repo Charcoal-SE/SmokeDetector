@@ -43529,3 +43529,4 @@
 1663984168	Makyen	growondigitalindia\.in
 1663984212	Makyen	growon[\W_]*+digital[\W_]*+india(?!\.in(?<=growondigitalindia\.in))
 1663991024	Makyen	newcacyberlotus(?:@gmail\.com)?
+1663991046	Makyen	newca\.vn
