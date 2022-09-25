@@ -11784,7 +11784,6 @@
 1567136830	Machavity	customersupportnumber-usa\.com
 1567138482	Shree	bestbuyat\.com
 1567143457	Shree	sapphirerings\.org
-1567155303	Shree	cheap-nigeria-flights\.com
 1567155334	Shree	gocityad\.in
 1567159429	double-beep	sujitsure4(?:@gmail\.com)?
 1567173862	double-beep	reliablepsd\.com
