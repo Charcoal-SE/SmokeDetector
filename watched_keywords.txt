@@ -43578,3 +43578,4 @@
 1664144899	Jeff Schaller	okvix\.com
 1664171427	tripleee	easyfix\d*(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com
 1664171578	tripleee	kaufenmodafinil\.com
+1664171720	tripleee	modafinil
