@@ -2077,6 +2077,9 @@ items:
   - michelle.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - michelle.ns.cloudflare.com.
+  - woz.ns.cloudflare.com.
+- ns:
   - mike.ns.cloudflare.com.
   - treasure.ns.cloudflare.com.
 - ns:
