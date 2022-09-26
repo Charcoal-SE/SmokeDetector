@@ -43595,3 +43595,4 @@
 1664190320	tripleee	famoid\.com
 1664193482	Jeff Schaller	golfvela\.com
 1664193792	tripleee	southwestairtrip\.com
+1664194062	Jeff Schaller	amprotechvalley\.com
