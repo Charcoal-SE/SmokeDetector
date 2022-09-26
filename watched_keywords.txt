@@ -43590,3 +43590,4 @@
 1664186858	tripleee	(?-i:^luke$)
 1664186885	tripleee	khaleejaffairs\.com
 1664187009	tripleee	marketraiseindia\.com
+1664188504	tripleee	all4pets\.in
