@@ -43588,3 +43588,4 @@
 1664186196	tripleee	energyexteriorsnw\.com
 1664186340	tripleee	lushambience\.com
 1664186858	tripleee	(?-i:^luke$)
+1664186885	tripleee	khaleejaffairs\.com
