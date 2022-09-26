@@ -292,6 +292,11 @@ items:
   - ns-1845.awsdns-38.co.uk.
   - ns-722.awsdns-26.net.
 - ns:
+  - ns-1117.awsdns-11.org.
+  - ns-1994.awsdns-57.co.uk.
+  - ns-20.awsdns-02.com.
+  - ns-902.awsdns-48.net.
+- ns:
   - ns-1133.awsdns-13.org.
   - ns-140.awsdns-17.com.
   - ns-1605.awsdns-08.co.uk.
