@@ -43607,3 +43607,4 @@
 1664256578	Nick	paypalfree\.com
 1664259138	tripleee	la[\W_]*+nest(?!\.in(?<=lanest\.in))
 1664259161	tripleee	lanest\.in
+1664259463	tripleee	(?-i:^Kevin Deeb$)
