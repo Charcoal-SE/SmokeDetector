@@ -3893,7 +3893,9 @@ items:
 - comment: too high FP rate, 3/39
   disable: true
   ip: 76.76.21.21
-- ip: 76.76.21.241
+- comment: too high FP rate, 2/26
+  disable: true
+  ip: 76.76.21.241
 - comment: too high FP rate, 1/33
   disable: true
   ip: 76.76.21.61
