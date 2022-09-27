@@ -43602,3 +43602,4 @@
 1664219304	Makyen	ecommerceonlinebd\.xyz
 1664235543	Jeff Schaller	syedqurancenter\.com
 1664235758	Makyen	shia(?:[\W_]*+quran[\W_]*+)?tajween(?:[\W_]*+(?:online|\d++|[\da-f]{5,}+)s?)*
+1664244581	Jeff Schaller	anygadgetreview\.com
