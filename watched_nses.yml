@@ -1672,6 +1672,9 @@ items:
   - john.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
+  - johnathan.ns.cloudflare.com.
+  - wally.ns.cloudflare.com.
+- ns:
   - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
