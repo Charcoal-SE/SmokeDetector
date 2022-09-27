@@ -1354,7 +1354,9 @@ items:
 - ip: 13.251.209.148
 - ip: 13.32.151.111
 - ip: 13.32.151.20
-- ip: 13.32.151.37
+- comment: disabled 2022-09-27, overlaps with forums.lenovo.com
+  disable: true
+  ip: 13.32.151.37
 - ip: 13.32.151.46
 - ip: 13.33.242.77
 - ip: 13.33.242.79
