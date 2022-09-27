@@ -43606,3 +43606,4 @@
 1664246572	cocomac	premium[\W_]*+crack
 1664256578	Nick	paypalfree\.com
 1664259138	tripleee	la[\W_]*+nest(?!\.in(?<=lanest\.in))
+1664259161	tripleee	lanest\.in
