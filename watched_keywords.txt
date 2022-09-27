@@ -15651,7 +15651,6 @@
 1579273836	Eliah Kagan	varmemarket\.no
 1579273868	Eliah Kagan	tvttechnology\.no
 1579273907	Eliah Kagan	varmepumpermarket\.no
-1579273942	Eliah Kagan	Varmepumpe
 1579275223	Machavity	sharemarketgo\.in
 1579278696	Makyen	counterfeitmoneyonline\.com
 1579278727	Makyen	docssalesonline(?:@gmail\.com)?
