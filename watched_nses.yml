@@ -471,6 +471,9 @@ items:
   - austin.ns.cloudflare.com.
   - laura.ns.cloudflare.com.
 - ns:
+  - autumn.ns.cloudflare.com.
+  - brady.ns.cloudflare.com.
+- ns:
   - bailey.ns.cloudflare.com.
   - bayan.ns.cloudflare.com.
 - ns:
