@@ -43608,3 +43608,4 @@
 1664259138	tripleee	la[\W_]*+nest(?!\.in(?<=lanest\.in))
 1664259161	tripleee	lanest\.in
 1664259463	tripleee	(?-i:^Kevin Deeb$)
+1664262660	Glorfindel	idealsmtp\.com
