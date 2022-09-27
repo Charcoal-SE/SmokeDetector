@@ -43605,3 +43605,4 @@
 1664244581	Jeff Schaller	anygadgetreview\.com
 1664246572	cocomac	premium[\W_]*+crack
 1664256578	Nick	paypalfree\.com
+1664259138	tripleee	la[\W_]*+nest(?!\.in(?<=lanest\.in))
