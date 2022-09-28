@@ -43637,3 +43637,4 @@
 1664339684	tripleee	basketballist\.com
 1664342431	tripleee	itech-theme\.com
 1664342473	tripleee	itech[\W_]*+theme(?!\.com(?<=itech-theme\.com))
+1664345198	tripleee	rurashfin\.com
