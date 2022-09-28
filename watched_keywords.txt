@@ -43647,3 +43647,4 @@
 1664347898	tripleee	beston[\W_]*+(?:asia[\W_]*+)?(?:group[\W_]*+)?(?:co)?(?!\.com(?<=bestonasia\.com))
 1664348281	tripleee	imarku\.net
 1664350583	tripleee	scand\.com
+1664350628	tripleee	immipointvisa\.com
