@@ -42170,7 +42170,6 @@
 1660815466	tripleee	coolnetdatacenter\.com
 1660815613	tripleee	(?-i:^coolnet$)
 1660817416	tripleee	drvikasfitness\.com
-1660817776	tripleee	frencoltd\.com
 1660818198	tripleee	rewritingtools\.com
 1660820458	tripleee	lars-daniel-arkitektur\.se
 1660820748	tripleee	qaaas\.ai
