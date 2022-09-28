@@ -43658,3 +43658,4 @@
 1664364133	tripleee	global[\W_]*+edge[\W_]*+school
 1664364173	tripleee	lclaustralia\.org
 1664365527	Jeff Schaller	wholesaleshopping\.co\.uk
+1664365724	Jeff Schaller	(the)?globaledgeschool\.com
