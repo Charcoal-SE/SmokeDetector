@@ -43639,3 +43639,4 @@
 1664342473	tripleee	itech[\W_]*+theme(?!\.com(?<=itech-theme\.com))
 1664345198	tripleee	rurashfin\.com
 1664345224	tripleee	magentobrain\.com
+1664346692	Nick	deutschlandsupplements\.org
