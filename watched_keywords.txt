@@ -20764,7 +20764,6 @@
 1593745267	Makyen	auntiereviews\.com
 1593745285	Makyen	auntie[\W_]*+reviews(?!\.com(?<=auntiereviews\.com))
 1593750957	tripleee	pumpadvisor\.com
-1593753627	Makyen	buygenericpills\.com
 1593758485	tripleee	mercy[\W_]*+brown\d*(?:(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com)?
 1593759127	tripleee	time4servers\.com
 1593760643	tripleee	etrolley\.weebly\.com
