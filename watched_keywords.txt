@@ -43635,3 +43635,4 @@
 1664334498	cocomac	homevio(?:[\W_]*+in)?
 1664338997	Makyen	shibatoken\.com
 1664339684	tripleee	basketballist\.com
+1664342431	tripleee	itech-theme\.com
