@@ -43644,3 +43644,4 @@
 1664347115	tripleee	hackmd\.io
 1664347743	tripleee	bestonasia\.com
 1664347790	tripleee	classyapk\.com
+1664347898	tripleee	beston[\W_]*+(?:asia[\W_]*+)?(?:group[\W_]*+)?(?:co)?(?!\.com(?<=bestonasia\.com))
