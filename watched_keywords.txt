@@ -43652,3 +43652,4 @@
 1664350736	tripleee	codemithra(?!\.com)
 1664350772	tripleee	holidaytoturkey\.uk
 1664356083	tripleee	misshighness\.com
+1664356583	tripleee	(?-i:^vaisak pv$)
