@@ -32113,7 +32113,6 @@
 1631617310	Jeff Schaller	softekpro\.com
 1631617356	Jeff Schaller	softechpro\.in
 1631618611	tripleee	(?-i:^Electric Smokers 4u$)
-1631619219	tripleee	novasteelcorporation\.com
 1631620664	tripleee	truviv\.com
 1631623388	tripleee	hiperwinner\.com
 1631623621	tripleee	jobslink\.in
