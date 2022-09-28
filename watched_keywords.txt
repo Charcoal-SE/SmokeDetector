@@ -43655,3 +43655,4 @@
 1664362033	tripleee	ecommerceda\.com
 1664362211	Jeff Schaller	nipponalloys\.com
 1664362553	Jeff Schaller	qcbaseball\.com
+1664364133	tripleee	global[\W_]*+edge[\W_]*+school
