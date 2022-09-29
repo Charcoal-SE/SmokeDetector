@@ -41217,7 +41217,6 @@
 1658504644	Jeff Schaller	kabirhat\.com
 1658512000	cigien	easycryptocurrency\.com
 1658512482	cigien	(?-i:3IXeImp)(?#amzn.to)
-1658512563	cigien	kosmik
 1658513405	cigien	homertongrammar\.com
 1658471692	cocomac	simplefloorspdx\.com
 1658513634	cigien	accrets\.com
