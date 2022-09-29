@@ -43697,3 +43697,4 @@
 1664453747	Jeff Schaller	yatrabyhelicopter\.in
 1664454508	tripleee	infopediya\.com
 1664455434	tripleee	datadriveninvestor\.com
+1664456454	tripleee	com\.sprinklr
