@@ -40791,7 +40791,6 @@
 1657210855	Ollie	firstouchkiosk\.com
 1657210942	Ollie	plusapp-ar\.com
 1657214435	cigien	zb\.com
-1657214798	cigien	newsdata\.io
 1657215244	cigien	technomax[\W_]*+systems
 1657215645	cigien	mpulsemobile\.com
 1657217084	cigien	valuegist\.com\.ng
