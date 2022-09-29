@@ -43685,3 +43685,4 @@
 1664437474	tripleee	kosmik(?!tech)
 1664437529	tripleee	kosmik[\W_]*+tech(?:nologies)?
 1664442749	tripleee	nana\.ua
+1664443252	tripleee	nursingpaper\.com
