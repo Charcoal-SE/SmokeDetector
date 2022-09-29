@@ -459,6 +459,9 @@ items:
   - arya.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
+  - arya.ns.cloudflare.com.
+  - wesley.ns.cloudflare.com.
+- ns:
   - ashley.ns.cloudflare.com.
   - clyde.ns.cloudflare.com.
 - ns:
