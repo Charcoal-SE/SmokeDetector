@@ -43684,3 +43684,4 @@
 1664436310	tripleee	sprinklr\.com
 1664437474	tripleee	kosmik(?!tech)
 1664437529	tripleee	kosmik[\W_]*+tech(?:nologies)?
+1664442749	tripleee	nana\.ua
