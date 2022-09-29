@@ -3857,7 +3857,6 @@ gridhosting\.co\.uk
 ijstartcanonx\.com
 circuitvpn\.com
 21yunbox\.com
-justgiving\.com
 benzinga\.com(?:(?=/(?:press-releases|content))|(?!/))
 keyquery\.com
 ketoflu\.org
