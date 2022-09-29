@@ -43689,3 +43689,4 @@
 1664445738	tripleee	macxdvd\.com
 1664446174	tripleee	mahanta[\W_]*+ethnic(?!\.com(?<=mahantaethnic\.com))
 1664446200	tripleee	mahantaethnic\.com
+1664446253	tripleee	diljotkaur\.com
