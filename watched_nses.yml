@@ -1181,6 +1181,9 @@ items:
   - elisabeth.ns.cloudflare.com.
   - nero.ns.cloudflare.com.
 - ns:
+  - elisabeth.ns.cloudflare.com.
+  - scott.ns.cloudflare.com.
+- ns:
   - elliot.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
