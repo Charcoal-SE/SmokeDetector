@@ -41429,7 +41429,6 @@
 1659096765	tripleee	projectpro\.io
 1659097163	Jeff Schaller	scopex\.in
 1659098427	Jeff Schaller	ayatas\.com
-1659098527	tripleee	(?-i:^raushni gupta$)
 1659099262	tripleee	novergysolar\.com
 1659100408	Jeff Schaller	hassainaralanjery\.com
 1659100454	Jeff Schaller	lillywoods\.in
