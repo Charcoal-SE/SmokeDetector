@@ -1538,6 +1538,9 @@ items:
   - woz.ns.cloudflare.com.
 - ns:
   - isaac.ns.cloudflare.com.
+  - joselyn.ns.cloudflare.com.
+- ns:
+  - isaac.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
   - isaac.ns.cloudflare.com.
