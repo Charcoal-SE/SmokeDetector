@@ -43682,3 +43682,4 @@
 1664436127	tripleee	chennaidesires\.in
 1664436248	tripleee	techzapk
 1664436310	tripleee	sprinklr\.com
+1664437474	tripleee	kosmik(?!tech)
