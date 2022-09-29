@@ -43678,3 +43678,4 @@
 1664429517	tripleee	pro388(?!\.com)
 1664430440	tripleee	pay[\W_]*(?:some(?:body|one)|you|a pro(?:fessional)?)[\W_]*+to[\W_]*+write
 1664431657	tripleee	(?-i:^Guru Prasath$)
+1664431793	tripleee	pilesfissure\.in
