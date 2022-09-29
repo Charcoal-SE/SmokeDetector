@@ -1011,6 +1011,9 @@ items:
   - dawn.ns.cloudflare.com.
   - quincy.ns.cloudflare.com.
 - ns:
+  - dawn.ns.cloudflare.com.
+  - vern.ns.cloudflare.com.
+- ns:
   - dean.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
