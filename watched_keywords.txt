@@ -36661,7 +36661,6 @@
 1646143762	cigien	extmag\.com
 1646143836	cigien	ibu[\W_]*+consulting(?!\.com(?<=ibuconsulting\.com))
 1646143853	cigien	websitechnologies\.com
-1646144979	cigien	baudcom\.com\.cn
 1646152178	tripleee	(?-i:^noah2419$)
 1646159833	Ollie	hammad\.account(?:@gmail\.com)?
 1646162366	cigien	aakankshabhende\.hashnode\.dev
