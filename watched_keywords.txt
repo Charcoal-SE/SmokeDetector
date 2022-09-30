@@ -43701,3 +43701,4 @@
 1664497133	Spevacus	nsps\.us\.com
 1664518580	tripleee	gameonline\.co\.id
 1664519399	tripleee	livetvmesh\.com
+1664523912	Glorfindel	bpo\W*outsourcing
