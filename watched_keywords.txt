@@ -43708,3 +43708,4 @@
 1664534735	Jeff Schaller	callgirlslucknow\.in
 1664535179	tripleee	(?-i:^ind aus$)
 1664535648	tripleee	mojo[\W_]*+marketplace(?!\.com(?<=mojomarketplace\.com))
+1664535703	tripleee	mojomarketplace\.com
