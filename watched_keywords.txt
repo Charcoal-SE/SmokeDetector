@@ -43707,3 +43707,4 @@
 1664531370	tripleee	kirpal[\W_]*export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
 1664534504	tripleee	playon99casino\.com
 1664534735	Jeff Schaller	callgirlslucknow\.in
+1664535179	tripleee	(?-i:^ind aus$)
