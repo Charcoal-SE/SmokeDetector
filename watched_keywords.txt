@@ -43710,3 +43710,4 @@
 1664535648	tripleee	mojo[\W_]*+marketplace(?!\.com(?<=mojomarketplace\.com))
 1664535703	tripleee	mojomarketplace\.com
 1664536276	tripleee	(?-i:^playon 99$)
+1664537868	Jeff Schaller	e-healthportal\.org
