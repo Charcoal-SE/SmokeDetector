@@ -1778,6 +1778,9 @@ items:
   - vin.ns.cloudflare.com.
 - ns:
   - kayden.ns.cloudflare.com.
+  - lucy.ns.cloudflare.com.
+- ns:
+  - kayden.ns.cloudflare.com.
   - novalee.ns.cloudflare.com.
 - ns:
   - kayleigh.ns.cloudflare.com.
