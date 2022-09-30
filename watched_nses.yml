@@ -1255,6 +1255,9 @@ items:
   - eric.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - eric.ns.cloudflare.com.
+  - vera.ns.cloudflare.com.
+- ns:
   - erin.ns.cloudflare.com.
   - hassan.ns.cloudflare.com.
 - ns:
