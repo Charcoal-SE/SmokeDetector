@@ -4835,3 +4835,4 @@ inblogsandarticles\.com
 blogsandarticleslife\.com
 bestpostshop\.com
 gethotarticle\.com
+blogsandarticlesshop\.com
