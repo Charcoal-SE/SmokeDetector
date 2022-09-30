@@ -39405,7 +39405,6 @@
 1653533777	cigien	gogocode
 1653542113	Ryan M	attheschool\.com
 1653541702	cocomac	greenlines\.pro
-1653547856	Nick	webblogsandarticles\.com
 1653547436	Nick	ever-power\.net
 1653548299	Makyen	h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+r[\W_]*+e[\W_]*+a[\W_]*+l[\W_]*+9[\W_]*+8(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1653548728	Ryan M	parker2010\.com
