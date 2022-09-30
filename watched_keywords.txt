@@ -43704,3 +43704,4 @@
 1664525053	tripleee	domyessay\.co
 1664526874	tripleee	sextorso\.com
 1664531057	tripleee	sgvisa\.in
+1664531370	tripleee	kirpal[\W_]*export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
