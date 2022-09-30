@@ -1179,6 +1179,9 @@ items:
   - lewis.ns.cloudflare.com.
 - ns:
   - eleanor.ns.cloudflare.com.
+  - nicholas.ns.cloudflare.com.
+- ns:
+  - eleanor.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
 - ns:
   - elijah.ns.cloudflare.com.
