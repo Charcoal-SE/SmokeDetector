@@ -42738,7 +42738,6 @@
 1662100189	tripleee	vapeciga(?!\.com)
 1662100797	cocomac	we[\W_]*+provide[\W_]*+you[\W_]*+with
 1662100878	tripleee	(?-i:^deepak barik$)
-1662101245	Cody Gray	freedailyblogging\.com
 1662101593	Cody Gray	(?-i:VcamSq7iZsb)(?#medium)
 1662101617	Cody Gray	(?-i:fee22a819e57)(?#medium)
 1662101860	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\n*\Z
