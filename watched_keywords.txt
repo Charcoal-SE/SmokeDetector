@@ -43731,3 +43731,4 @@
 1664643725	Makyen	create[\W_]*+inline[\W_]*+text[\W_]*+links[\W_]*+with[\W_]*+markdown
 1664644303	cigien	mahaanbharat\.com
 1664644385	cigien	chalisalyrics\.co
+1664644834	cigien	careercollegeindia\.com
