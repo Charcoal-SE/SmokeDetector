@@ -43723,3 +43723,4 @@
 1664629937	Jeff Schaller	swisslinguists\.com
 1664631575	Spevacus	sports-no1\.com
 1664631660	Spevacus	shailenders\.com
+1664631692	Spevacus	netspend-logi\.com
