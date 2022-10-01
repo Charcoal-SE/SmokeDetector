@@ -43733,3 +43733,4 @@
 1664644385	cigien	chalisalyrics\.co
 1664644834	cigien	careercollegeindia\.com
 1664646435	cigien	ackugbespiritualtemple(?:@gmail\.com)?
+1664650051	Jeff Schaller	allstacksdeveloper\.com
