@@ -43749,3 +43749,4 @@
 1664719614	cigien	com\.FigaseGame\.MagicBattleMergeRandomCards
 1664720328	cigien	(?-i:2bahg8Gq71I)(?#youtu.be)
 1664722290	cigien	stumbleguysapk\.net
+1664725427	Spevacus	drodasolution(?:@gmail\.com)?
