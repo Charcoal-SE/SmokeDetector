@@ -43747,3 +43747,4 @@
 1664708982	Nick	ghsmm\.com
 1664716550	cigien	eduzaurus\.com
 1664719614	cigien	com\.FigaseGame\.MagicBattleMergeRandomCards
+1664720328	cigien	(?-i:2bahg8Gq71I)(?#youtu.be)
