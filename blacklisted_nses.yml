@@ -148,6 +148,9 @@ items:
   - emma.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
+  - erin.ns.cloudflare.com.
+  - wesley.ns.cloudflare.com.
+- ns:
   - etienne.ns.cloudflare.com.
   - mona.ns.cloudflare.com.
 - ns:
