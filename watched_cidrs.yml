@@ -111,8 +111,12 @@ items:
 - ip: 104.16.192.25
 - ip: 104.16.193.25
 - ip: 104.16.199.133
-- ip: 104.16.243.78
-- ip: 104.16.244.78
+- comment: overwhelmingly FP; disabled 2022-10-03
+  disable: true
+  ip: 104.16.243.78
+- comment: overwhelmingly FP; disabled 2022-10-03
+  disable: true
+  ip: 104.16.244.78
 - ip: 104.16.36.8
 - ip: 104.16.37.8
 - ip: 104.161.23.24
