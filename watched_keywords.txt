@@ -43764,3 +43764,4 @@
 1664800919	cigien	lushydays\.com
 1664801489	cigien	bitcoinpredictors(?!\.com)
 1664801667	cigien	yelloudt\.com
+1664801732	cigien	(?-i:oYRXyg)(?#fiverr)
