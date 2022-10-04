@@ -43780,3 +43780,4 @@
 1664864195	tripleee	jackky\w*
 1664866676	tripleee	nusabet\.live
 1664866886	tripleee	nova[\W_]*+skin
+1664867146	tripleee	agenter(?!\.com(?<=agenter\.com))([\W_]*+books?(?!\.com(?<=agenterbooks\.com)))?
