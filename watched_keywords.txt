@@ -43777,3 +43777,4 @@
 1664862007	cigien	travelquid\.com
 1664862311	cigien	mylinuxblog\.com
 1664863728	cigien	(?:nplatt@)?teksystems\.com
+1664863877	cigien	janesilva0727(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?com)?
