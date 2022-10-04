@@ -43790,3 +43790,4 @@
 1664877266	Glorfindel	bikes\W*on\W*rent
 1664877955	tripleee	paraphraseronline\.com
 1664877980	tripleee	paraphraser[\W_]*+online(?!\.com(?<=paraphraseronline\.com))
+1664881405	cigien	plumbingadvice24\.com
