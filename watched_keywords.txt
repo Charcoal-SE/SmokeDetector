@@ -41156,7 +41156,6 @@
 1658412675	Makyen	robu(?!\.in)
 1658412702	Makyen	highway420\.club
 1658412730	Makyen	clarity[\W_]*+scopes
-1658412757	Makyen	andersenlab\.com
 1658412823	Makyen	indiatopescorts\.com
 1658412847	Makyen	ai-trademarks\.co\.uk
 1658412875	Makyen	ai[\W_]*+trademarks(?!\.co\.uk(?<=ai-trademarks\.co\.uk))
