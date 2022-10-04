@@ -26748,7 +26748,6 @@
 1614112478	Spevacus	bedsforbuilders\.com
 1614119548	cigien	couadiomc(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1614130842	cigien	feuerwehr-wettringen\.de
-1614132685	cigien	dev[\W_]*+dham[\W_]*+yatra
 1614132755	cigien	askdba\.pro
 1614132994	cigien	blackmagicspecialistinindia\.com
 1614133208	cigien	bedsforbuilders(?!\.com)
