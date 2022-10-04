@@ -43794,3 +43794,4 @@
 1664883900	Jeff Schaller	Keilini
 1664885503	Jeff Schaller	clientscode\.in
 1664887770	tripleee	dev[\W_]*+dham[\W_]*+yatra(?!\.com(?<=devdhamyatra\.com))
+1664887798	tripleee	devdhamyatra\.com
