@@ -43792,3 +43792,4 @@
 1664877980	tripleee	paraphraser[\W_]*+online(?!\.com(?<=paraphraseronline\.com))
 1664881405	cigien	plumbingadvice24\.com
 1664883233	tripleee	metamorphx
+1664883900	Jeff Schaller	Keilini
