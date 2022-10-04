@@ -43758,7 +43758,6 @@
 1664799136	tripleee	reviewdifference\.com
 1664799162	tripleee	coinbino\.com
 1664799189	tripleee	mp3hugs\.com
-1664799989	tripleee	digitalsandipacademy\.com
 1664800037	tripleee	nccmed\.com
 1664800919	cigien	lushydays\.com
 1664801489	cigien	bitcoinpredictors(?!\.com)
