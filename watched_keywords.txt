@@ -43783,3 +43783,4 @@
 1664867146	tripleee	agenter(?!\.com(?<=agenter\.com))([\W_]*+books?(?!\.com(?<=agenterbooks\.com)))?
 1664867288	tripleee	webedunews\.com
 1664871582	Robert Longson	lemonslot88\.org
+1664872471	Robert Longson	afridichillervan\.com
