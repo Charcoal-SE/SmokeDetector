@@ -2690,3 +2690,4 @@ ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
 GoKeto[\W_]*Gumm(?:y|ies)
 Diaetoxil
 ofrecerte un mes gratuito
+periódicos de gran autoridad
