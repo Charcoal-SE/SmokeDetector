@@ -554,7 +554,18 @@ def do_blacklist(blacklist_type, msg, force=False):
             return None
         except Exception:
             pass
-    return result
+    additional_state = (" However, the blacklists were not reloaded at this time. The most likely issue"
+                        " is another change was made on SD's master branch on GitHub and everything"
+                        " is waiting for CI to pass and MS to update the deploy branch.")
+    if GlobalVars.MSStatus.is_down():
+        additional_state += (" But, metasmoke is currently down, so that won't happen. Someone with write"
+                             " permission to SD's GitHub reository will need to manually update the deploy"
+                             " branch. Usually, this means you should ping an MS admin.")
+    else:
+        additional_state += (" That could take a few to several minutes. If SD doesn't automatically reload"
+                             " the blacklists or automatically reboot after that time, then someone should"
+                             " investigate why that hasn't happened.")
+    return result + additional_state
 
 
 # noinspection PyIncorrectDocstring
