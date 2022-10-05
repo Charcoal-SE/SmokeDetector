@@ -43806,3 +43806,4 @@
 1664957699	tripleee	eatthis\.com
 1664957841	tripleee	toyotasure\.vn
 1664958131	tripleee	thegioiphongtam(?!\.vn)
+1664958553	tripleee	(?-i:^mogk0r$)
