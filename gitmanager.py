@@ -260,7 +260,7 @@ class GitManager:
         if op == 'blacklist':
             return (True, "Blacklisted `{0}`".format(item))
         elif op == 'watch':
-            return (True, "`{0}` will be added to the watchlist once the ongoing CI testing is done".format(item))
+            return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
     def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
