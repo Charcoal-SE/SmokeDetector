@@ -713,3 +713,4 @@ meta kukel exchange
 (?-i:^pablo_sama$)
 (?-i:^raushni gupta$)
 (?-i:^Saroj Bluebells$)
+(?-i:^elastic content share$)
