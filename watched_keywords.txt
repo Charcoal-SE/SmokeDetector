@@ -43805,3 +43805,4 @@
 1664952748	cigien	(?-i:x0p1O)(?#lnkiy.in)
 1664957699	tripleee	eatthis\.com
 1664957841	tripleee	toyotasure\.vn
+1664958131	tripleee	thegioiphongtam(?!\.vn)
