@@ -43809,3 +43809,4 @@
 1664958553	tripleee	(?-i:^mogk0r$)
 1664962387	Mast	simplified\.com
 1664962980	tripleee	jancargo\.com
+1664965610	Jeff Schaller	resortsbythebaagh\.com
