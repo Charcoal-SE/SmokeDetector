@@ -43817,3 +43817,4 @@
 1664976880	tripleee	doctempl\.com
 1664977989	tripleee	buffcom\.net
 1664982704	Jeff Schaller	myarticlereviews\.com
+1664982734	Jeff Schaller	healthyanozo\.com
