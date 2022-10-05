@@ -43813,3 +43813,4 @@
 1664967692	cigien	scrabble[\W_]*+word[\W_]*+cheat(?!\.com(?<=scrabblewordcheat\.com))
 1664967726	cigien	(?-i:3M0B8VE)(?#bit.ly)
 1664968838	tripleee	(?-i:^Andersen Lab$)
+1664976833	tripleee	vakilazma\.com
