@@ -43812,3 +43812,4 @@
 1664965610	Jeff Schaller	resortsbythebaagh\.com
 1664966512	Jeff Schaller	hxmagnets\.com
 1664967692	cigien	scrabble[\W_]*+word[\W_]*+cheat(?!\.com(?<=scrabblewordcheat\.com))
+1664967726	cigien	(?-i:3M0B8VE)(?#bit.ly)
