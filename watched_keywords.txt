@@ -43815,3 +43815,4 @@
 1664968838	tripleee	(?-i:^Andersen Lab$)
 1664976833	tripleee	vakilazma\.com
 1664976880	tripleee	doctempl\.com
+1664977989	tripleee	buffcom\.net
