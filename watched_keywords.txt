@@ -43837,3 +43837,4 @@
 1665058423	tripleee	theholidayadviser\.co\.in
 1665058466	tripleee	the[\W_]*+holiday[\W_]*+adviser(?!\.co\.in(?<=theholidayadviser\.co\.in))
 1665063046	tripleee	zazz\.io
+1665073215	Ollie	resume2023\.com
