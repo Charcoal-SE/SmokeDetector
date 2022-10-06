@@ -32652,7 +32652,6 @@
 1633423890	tripleee	printersinflorida\.com
 1633423996	tripleee	(?-i:9e1Rug6Qpsk)(?# youtube)
 1633424034	tripleee	btcyazilim\.com
-1633424457	tripleee	(?-i:^joshikhushi526$)
 1633425459	tripleee	(?-i:^btcyazilim$)
 1633429512	tripleee	FSUPERUSER
 1633430031	tripleee	bestcheck\.in
