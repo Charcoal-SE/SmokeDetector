@@ -43829,3 +43829,4 @@
 1665045932	tripleee	synlabs\.io
 1665047920	tripleee	(?-i:bzV0Qk)(?# fiverr)
 1665048029	tripleee	artdaily\.com
+1665048170	tripleee	rupalsharma\.com
