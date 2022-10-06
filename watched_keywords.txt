@@ -43836,3 +43836,4 @@
 1665058188	tripleee	recycled[\W_]*+plastic[\W_]*+rugs?
 1665058308	tripleee	middleeastvalve\.com
 1665058423	tripleee	theholidayadviser\.co\.in
+1665058466	tripleee	the[\W_]*+holiday[\W_]*+adviser(?!\.co\.in(?<=theholidayadviser\.co\.in))
