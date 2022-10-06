@@ -43855,3 +43855,4 @@
 1665094085	Makyen	loginwe1poker\.com
 1665094111	Makyen	loginslotzeus\.com
 1665094194	Makyen	kolify\.com
+1665094227	Makyen	kolify(?!\.com)
