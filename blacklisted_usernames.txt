@@ -715,4 +715,3 @@ meta kukel exchange
 (?-i:^Saroj Bluebells$)
 (?-i:^elastic content share$)
 (?-i:^joshikhushi526$)
-(?-i:^vaibhav$)
