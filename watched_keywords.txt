@@ -43896,3 +43896,4 @@
 1665137956	cigien	ranking-ubezpieczen-na-zycie\.pl
 1665139260	Cody Gray	Kangaroo[\W_]*Kids
 1665139283	Cody Gray	(?:best|top)[\W_]*play[\W_]*school
+1665141203	tripleee	companiesdata\.cloud
