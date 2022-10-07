@@ -43900,3 +43900,4 @@
 1665142905	cigien	sunlifesolar\.com\.pk
 1665144786	tripleee	dynamicssquare\.com\.au
 1665145128	tripleee	(?-i:^Sharada Surgery Cryo- Surgery$)
+1665145214	cigien	getassignmentontime\.com
