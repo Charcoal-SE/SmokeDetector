@@ -43884,3 +43884,4 @@
 1665124243	tripleee	shengtujx\.com
 1665126235	tripleee	gold[\W_]*+iptv
 1665126677	tripleee	digibitsfx\.com
+1665129840	tripleee	cloudibn(?!\.com)
