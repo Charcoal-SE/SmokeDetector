@@ -43863,3 +43863,4 @@
 1665110636	tripleee	bpo[\W_]*+philippines
 1665110722	tripleee	dizix\.org
 1665111318	tripleee	gdc[\W_]*+coin
+1665111341	tripleee	global[\W_]*+digital[\W_]*+cluster[\W_]*+coin
