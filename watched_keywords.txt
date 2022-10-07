@@ -43865,3 +43865,4 @@
 1665111318	tripleee	gdc[\W_]*+coin
 1665111341	tripleee	global[\W_]*+digital[\W_]*+cluster[\W_]*+coin
 1665113399	cigien	forgehub\.net
+1665113905	cigien	slot777mobileapk\.com
