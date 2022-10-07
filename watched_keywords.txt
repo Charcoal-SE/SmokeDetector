@@ -43887,3 +43887,4 @@
 1665129840	tripleee	cloudibn(?!\.com)
 1665130075	tripleee	reasmey\d*[\W_]*+mao\d*[\W_]*+thom\d*(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1665130105	tripleee	unsoed\.ac\.id
+1665130949	tripleee	abejor\.org\.br
