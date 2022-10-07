@@ -43891,3 +43891,4 @@
 1665133483	tripleee	bikerace\.io
 1665133509	tripleee	bike-race\.io
 1665136243	tripleee	nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
+1665137783	cigien	techom[\W_]*+systems?+(?!\.com\.au(?<=techomsystems\.com\.au))
