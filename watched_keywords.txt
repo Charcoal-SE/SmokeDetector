@@ -43861,3 +43861,4 @@
 1665100514	Cody Gray	viralproductsexchange\.com
 1665100541	Cody Gray	Advanced[\W_]*Blood[\W_]*Pressure[\W_]*Formula
 1665110636	tripleee	bpo[\W_]*+philippines
+1665110722	tripleee	dizix\.org
