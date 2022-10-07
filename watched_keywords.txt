@@ -43880,3 +43880,4 @@
 1665119448	cigien	wptrains\.com
 1665119890	cigien	gownsbit\.com
 1665122909	tripleee	gownsbit(?!\.com)
+1665124207	tripleee	gandercoin\.com
