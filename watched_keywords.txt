@@ -43535,7 +43535,6 @@
 1664171427	tripleee	easyfix\d*(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com
 1664171578	tripleee	kaufenmodafinil\.com
 1664171720	tripleee	modafinil
-1664171938	tripleee	ant\.design
 1664172925	tripleee	nbfcadvisory\.com
 1664174763	Glorfindel	appsrhino\.com
 1664175636	VLAZ	payslipslus\.blogspot
