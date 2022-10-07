@@ -43893,3 +43893,4 @@
 1665136243	tripleee	nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
 1665137783	cigien	techom[\W_]*+systems?+(?!\.com\.au(?<=techomsystems\.com\.au))
 1665137908	cigien	jobsinfopoint\.com
+1665137956	cigien	ranking-ubezpieczen-na-zycie\.pl
