@@ -540,32 +540,35 @@ def do_blacklist(blacklist_type, msg, force=False):
     if not _status:
         raise CmdException(result)
 
-    if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
-        try:
-            if not GlobalVars.on_branch:
-                # Restart if HEAD detached
-                log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
-                exit_mode("checkout_deploy")
-            GitManager.pull_local()
-            GlobalVars.reload()
-            findspam.FindSpam.reload_blacklists()
-            tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
-            time.sleep(2)
-            return None
-        except Exception:
-            pass
-    additional_state = (" However, the blacklists were not reloaded at this time. The most likely issue"
-                        " is another change was made on SD's master branch on GitHub and everything"
-                        " is waiting for CI to pass and MS to update the deploy branch.")
-    if GlobalVars.MSStatus.is_down():
-        additional_state += (" But, metasmoke is currently down, so that won't happen. Someone with write"
-                             " permission to SD's GitHub reository will need to manually update the deploy"
-                             " branch. Usually, this means you should ping an MS admin.")
+    if code_permissions:
+        if only_blacklists_changed(GitManager.get_local_diff()):
+            try:
+                if not GlobalVars.on_branch:
+                    # Restart if HEAD detached
+                    log('warning', "Pulling local with HEAD detached, checkout deploy", and_file=True)
+                    exit_mode("checkout_deploy")
+                GitManager.pull_local()
+                GlobalVars.reload()
+                findspam.FindSpam.reload_blacklists()
+                tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
+                time.sleep(2)
+                return None
+            except Exception:
+                pass
+        additional_state = (" However, the blacklists were not reloaded at this time. The most likely issue"
+                            " is another change was made on SD's master branch on GitHub and everything"
+                            " is waiting for CI to pass and MS to update the deploy branch.")
+        if GlobalVars.MSStatus.is_down():
+            additional_state += (" But, metasmoke is currently down, so that won't happen. Someone with write"
+                                 " permission to SD's GitHub reository will need to manually update the deploy"
+                                 " branch. Usually, this means you should ping an MS admin.")
+        else:
+            additional_state += (" That could take a few to several minutes. If SD doesn't automatically reload"
+                                 " the blacklists or automatically reboot after that time, then someone should"
+                                 " investigate why that hasn't happened.")
+        return result + additional_state
     else:
-        additional_state += (" That could take a few to several minutes. If SD doesn't automatically reload"
-                             " the blacklists or automatically reboot after that time, then someone should"
-                             " investigate why that hasn't happened.")
-    return result + additional_state
+        return result
 
 
 # noinspection PyIncorrectDocstring
