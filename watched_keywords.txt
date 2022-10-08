@@ -43914,3 +43914,4 @@
 1665210149	Cody Gray	tree[\W_]*campus
 1665208796	Nick	techintegrations\.net
 1665210560	Cody Gray	techintegration(?!s\.net)
+1665211309	Cody Gray	2captcha
