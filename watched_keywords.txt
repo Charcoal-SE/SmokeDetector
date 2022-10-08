@@ -43915,3 +43915,4 @@
 1665208796	Nick	techintegrations\.net
 1665210560	Cody Gray	techintegration(?!s\.net)
 1665211309	Cody Gray	2captcha
+1665211333	Cody Gray	harawant[\W_]*singh
