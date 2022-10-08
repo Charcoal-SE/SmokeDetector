@@ -334,7 +334,7 @@ def test_watch(monkeypatch):
         assert wrap_watch("trimfire", True).startswith("Already watched")
 
         monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
-        assert wrap_watch("male enhancement", True).startswith("Hahaha ")
+        assert wrap_watch("male enhancement", True) == "Hahaha"
     finally:
         git.checkout("master")
 
