@@ -43930,3 +43930,4 @@
 1665237917	cigien	satudatapalapa\.mojokertokab\.go\.id
 1665238369	cigien	Maxzibrady(?#telegram)
 1665238491	cigien	documentbundle\.com
+1665238588	cigien	apketsy\.com
