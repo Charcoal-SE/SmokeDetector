@@ -43967,3 +43967,4 @@
 1665370663	Makyen	daftar[\W_]*+sekarang
 1665370687	Makyen	klik[\W_]*+disini
 1665374398	Makyen	(?-i:IDRsloto_)(?#bit.ly)
+1665374878	Makyen	104\.248\.155\.56
