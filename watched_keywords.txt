@@ -43979,3 +43979,4 @@
 1665379688	tripleee	dana[\W_]*+\d+
 1665381081	tripleee	online24jam
 1665381170	tripleee	altllinkpedes2(?# rebrand.ly)
+1665381193	tripleee	xn--6pd-2l3fm16i\.xyz
