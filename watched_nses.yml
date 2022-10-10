@@ -999,6 +999,9 @@ items:
   - daniella.ns.cloudflare.com.
   - isaac.ns.cloudflare.com.
 - ns:
+  - daphne.ns.cloudflare.com.
+  - julio.ns.cloudflare.com.
+- ns:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
