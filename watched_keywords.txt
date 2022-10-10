@@ -43966,3 +43966,4 @@
 1665369729	Makyen	australiancocainemen\.guru
 1665370663	Makyen	daftar[\W_]*+sekarang
 1665370687	Makyen	klik[\W_]*+disini
+1665374398	Makyen	(?-i:IDRsloto_)(?#bit.ly)
