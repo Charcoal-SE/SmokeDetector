@@ -2693,3 +2693,4 @@ ofrecerte un mes gratuito
 periódicos de gran autoridad
 beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil(?:\.com)?
 bandar[\W_]*+togel
+(?-i:IDRsloto_)(?#bit.ly)

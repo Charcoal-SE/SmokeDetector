@@ -43964,7 +43964,6 @@
 1665369729	Makyen	australiancocainemen\.guru
 1665370663	Makyen	daftar[\W_]*+sekarang
 1665370687	Makyen	klik[\W_]*+disini
-1665374398	Makyen	(?-i:IDRsloto_)(?#bit.ly)
 1665374878	Makyen	104\.248\.155\.56
 1665375359	cigien	superbandar1\.xyz
 1665375408	cigien	sultanliga\.org
