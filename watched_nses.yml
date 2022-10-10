@@ -846,6 +846,9 @@ items:
   - clay.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
 - ns:
+  - clayton.ns.cloudflare.com.
+  - maya.ns.cloudflare.com.
+- ns:
   - cleo.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
