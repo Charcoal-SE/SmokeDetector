@@ -43961,3 +43961,4 @@
 1665348420	Makyen	pus+y\w+
 1665367319	Spevacus	thevipcontent\.com
 1665368771	Jeff Schaller	yowhatsapp\.org
+1665368799	Jeff Schaller	fouadwhatsapp\.in
