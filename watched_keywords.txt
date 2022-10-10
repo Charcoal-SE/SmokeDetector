@@ -44003,3 +44003,4 @@
 1665410024	tripleee	uangslot88\.one
 1665410053	tripleee	uangslot88(?!\.one)
 1665411379	cigien	hnd\.ie
+1665413409	cigien	tpu\.liferience\.com
