@@ -43965,3 +43965,4 @@
 1665368833	Jeff Schaller	fouadwhatsapp\.id
 1665369729	Makyen	australiancocainemen\.guru
 1665370663	Makyen	daftar[\W_]*+sekarang
+1665370687	Makyen	klik[\W_]*+disini
