@@ -10345,7 +10345,6 @@
 1562564568	Makyen	pgc\.info
 1562565352	Makyen	cbd\W*premium\W*pure
 1562572704	Shree	sahrzad\.net
-1562573821	Shree	tecreals\.com
 1562589666	Machavity	hexometer\.com
 1562596214	Machavity	polontech\.com
 1562604082	Makyen	capitalism-28217326
