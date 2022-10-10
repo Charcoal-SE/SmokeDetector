@@ -1936,6 +1936,9 @@ items:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
+  - leo.ns.cloudflare.com.
+  - pearl.ns.cloudflare.com.
+- ns:
   - lex.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
 - ns:
