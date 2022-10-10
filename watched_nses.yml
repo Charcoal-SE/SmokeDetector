@@ -1346,6 +1346,9 @@ items:
   - nash.ns.cloudflare.com.
 - ns:
   - fiona.ns.cloudflare.com.
+  - nero.ns.cloudflare.com.
+- ns:
+  - fiona.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
   - fred.ns.cloudflare.com.
