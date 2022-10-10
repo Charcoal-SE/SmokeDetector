@@ -43976,3 +43976,4 @@
 1665378469	tripleee	gk5n9ox(?# rebrand.ly)
 1665378544	tripleee	puncak88(?!\.pro)
 1665379203	tripleee	multispanindia\.com
+1665379688	tripleee	dana[\W_]*+\d+
