@@ -7005,7 +7005,6 @@
 1547664342	tripleee	professionalghostwriter\.com
 1547675178	Makyen	psnguide\.blogspot\.com
 1547699295	Tetsuya Yamamoto	webhilltech\.com
-1547705426	Tetsuya Yamamoto	techtoreview\.com
 1547708141	tripleee	fashion2day\.co\.uk
 1547710291	tripleee	alpha\W?omega\W?inc
 1547711288	tripleee	wismad\.com
