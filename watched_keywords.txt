@@ -44049,3 +44049,4 @@
 1665504790	cigien	astheticblogs\.com
 1665504829	cigien	orionesolutions\.com
 1665504880	cigien	drlepage\.com\.au
+1665504912	Jeff Schaller	futureminutes\.com
