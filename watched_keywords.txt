@@ -43132,7 +43132,6 @@
 1662987529	cigien	elisanaflorist\.co\.uk
 1662987594	cigien	globaltree\.in
 1662987632	cigien	ekwik
-1662988291	Jeff Schaller	opensea\.io(?<!docs\.opensea\.io)
 1662966202	Nick	OVELOSEC
 1662996343	Ollie	modelocurriculum\.net
 1663000960	Makyen	nyfw[\W_]*+the[\W_]*+shows
