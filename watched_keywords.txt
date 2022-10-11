@@ -44029,3 +44029,4 @@
 1665478660	tripleee	nerdle-game\.co
 1665479473	tripleee	arohanyoga\.com
 1665479505	tripleee	mister-mpo\.com
+1665480474	tripleee	bills\.com\.pk
