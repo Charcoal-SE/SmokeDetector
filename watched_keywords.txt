@@ -38823,7 +38823,6 @@
 1652085891	tripleee	agfabric\.com
 1652086066	tripleee	(?-i:^Wu Alison$)
 1652086590	tripleee	worldcaretakerfacilityservices\.com
-1652088607	tripleee	allurantmedical\.com
 1652088626	tripleee	allurant
 1652092847	tripleee	food\.com
 1652094058	tripleee	topnewsbase\.com
