@@ -2588,6 +2588,9 @@ items:
 - ns:
   - vip1.alidns.com.
   - vip2.alidns.com.
+- ns:
+  - vip7.alidns.com.
+  - vip8.alidns.com.
 - ns: globat.com.
 - ns: idwebhost.id.
 - ns: a2dns.com.
