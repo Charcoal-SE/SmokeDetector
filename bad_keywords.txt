@@ -2695,3 +2695,4 @@ beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil(?:\.com)?
 bandar[\W_]*+togel
 (?-i:IDRsloto_)(?#bit.ly)
 D A N T E G I D E O N @ C O N S U L T A N T. C O M
+allurant[\W_]*medical(?!\.com(?<=allurantmedical\.com))
