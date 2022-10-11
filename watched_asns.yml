@@ -38,6 +38,7 @@ items:
   comment: Massive FPs; do not watch
   disable: true
 - asn: '27176'
+- asn: '28753'
 - asn: '29066'
 - asn: '29073'
 - asn: '31083'
