@@ -44013,3 +44013,4 @@
 1665458692	cigien	woatee\.com
 1665460022	cigien	davodganji1369(?:@gmail\.com)?
 1665460096	cigien	itsoft24\.com
+1665460127	cigien	itsoft[\W_]*+world
