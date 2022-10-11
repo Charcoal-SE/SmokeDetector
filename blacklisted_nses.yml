@@ -82,6 +82,9 @@ items:
   - braden.ns.cloudflare.com.
   - georgia.ns.cloudflare.com.
 - ns:
+  - brett.ns.cloudflare.com.
+  - jo.ns.cloudflare.com.
+- ns:
   - brenda.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:

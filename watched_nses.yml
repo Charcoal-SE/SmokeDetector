@@ -679,9 +679,6 @@ items:
   - theo.ns.cloudflare.com.
 - ns:
   - brett.ns.cloudflare.com.
-  - jo.ns.cloudflare.com.
-- ns:
-  - brett.ns.cloudflare.com.
   - mallory.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
