@@ -44021,3 +44021,4 @@
 1665467342	tripleee	thegeekcart\.com
 1665467817	tripleee	allurant(?![\W_]*+medical)
 1665470189	tripleee	aso[\W_]*+services[\W_]*+offer
+1665471259	tripleee	house[\W_]*+of[\W_]*+arfa(?!\.com(?<=houseofarfa\.com))
