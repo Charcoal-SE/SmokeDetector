@@ -44019,3 +44019,4 @@
 1665467162	tripleee	widelyhealth\.com
 1665467246	tripleee	kat[\W_]*+khorrami
 1665467300	tripleee	(?-i:lQAZF3PUgS0)(?# youtube)
+1665467342	tripleee	thegeekcart\.com
