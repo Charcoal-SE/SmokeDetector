@@ -44020,3 +44020,4 @@
 1665467300	tripleee	(?-i:lQAZF3PUgS0)(?# youtube)
 1665467342	tripleee	thegeekcart\.com
 1665467817	tripleee	allurant(?![\W_]*+medical)
+1665470189	tripleee	aso[\W_]*+services[\W_]*+offer
