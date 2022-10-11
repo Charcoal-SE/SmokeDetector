@@ -33417,7 +33417,6 @@
 1635928458	tripleee	profoto\.com
 1635930678	tripleee	howtosguru\.com
 1635932656	tripleee	ismp\.ac\.in
-1635932999	Ryan M	movavi\.com
 1635934187	Cody Gray	matchurl\.com
 1635936159	Ryan M	videoconverter\.com
 1635936175	Ryan M	fastreel\.com
