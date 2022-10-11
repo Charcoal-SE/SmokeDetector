@@ -44044,3 +44044,4 @@
 1665498215	tripleee	99\.83\.138\.255
 1665498243	tripleee	xrp77
 1665504104	cigien	shoesperk\.com
+1665504674	cigien	frickcontrols\.com
