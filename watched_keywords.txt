@@ -38465,7 +38465,6 @@
 1651131115	Nick	iowacontractorsinsurance\.com
 1651131173	Nick	insuringminnesota\.com
 1651131672	tripleee	sobnews\.xyz
-1651131779	tripleee	magustools\.com
 1651132094	tripleee	trendnut\.com
 1651132459	Cody Gray	(?-i:^cool_noice$)
 1651132695	Cody Gray	drive[\W_]*(?:you|the train)[\W_]*to the payload

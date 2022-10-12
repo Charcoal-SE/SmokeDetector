@@ -4865,3 +4865,4 @@ getadmissioninfo\.com
 movavi\.com
 techtoreview\.com
 livingintown\.com
+magustools\.com
