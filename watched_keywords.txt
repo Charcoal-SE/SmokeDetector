@@ -36042,7 +36042,6 @@
 1644507363	Makyen	stripcurtain\.com
 1644513961	cigien	besttreadmillchoice\.com
 1644514173	Ollie	latexplots\.netlify\.app
-1644519868	tripleee	(?-i:^Jenny Jenkins$)
 1644521598	tripleee	webproeducation\.org
 1644537076	cigien	pyshark\.com
 1644540761	Ollie	typeform\.com
