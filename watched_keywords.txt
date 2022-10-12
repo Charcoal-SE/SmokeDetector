@@ -44074,3 +44074,4 @@
 1665597421	tripleee	(?-i:URCAvh9MAeU)(?# youtube)
 1665597874	tripleee	(?-i:67CsJBBoNgk)(?# youtube)
 1665610059	Makyen	constipt\w*
+1665612471	Makyen	(?-i:^Richard Phillips$)
