@@ -30025,7 +30025,6 @@
 1624652137	Spevacus	enlego\.com
 1624659362	cigien	gangnamanma\.com
 1624659382	cigien	anma4you\.kr
-1624659469	cigien	homesidingcolorado\.com
 1624675686	Machavity	sydneycabling\.com\.au
 1624676583	Makyen	kyle[\W_]*+richards[\W_]*+thc[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1624677638	Spevacus	arabcouponat\.com
