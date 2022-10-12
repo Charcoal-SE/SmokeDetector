@@ -44075,4 +44075,3 @@
 1665597874	tripleee	(?-i:67CsJBBoNgk)(?# youtube)
 1665612471	Makyen	(?-i:^Richard Phillips$)
 1665614003	Ryan M	premuimpharmacy\.com
-1665614755	Ryan M	constipt\w*(?<!constipt(?:ion|ing|ed|ee)?s?)
