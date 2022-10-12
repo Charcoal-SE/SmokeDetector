@@ -32,6 +32,9 @@ items:
   - alexia.ns.cloudflare.com.
   - sevki.ns.cloudflare.com.
 - ns:
+  - alexia.ns.cloudflare.com.
+  - zeus.ns.cloudflare.com.
+- ns:
   - alla.ns.cloudflare.com.
   - ed.ns.cloudflare.com.
 - ns:

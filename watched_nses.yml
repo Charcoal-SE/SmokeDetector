@@ -175,9 +175,6 @@ items:
   - alexia.ns.cloudflare.com.
   - kolton.ns.cloudflare.com.
 - ns:
-  - alexia.ns.cloudflare.com.
-  - zeus.ns.cloudflare.com.
-- ns:
   - alexis.ns.cloudflare.com.
   - daisy.ns.cloudflare.com.
 - ns:
