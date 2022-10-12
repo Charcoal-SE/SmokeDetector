@@ -39787,7 +39787,6 @@
 1654535761	cocomac	kmttech\.com
 1654560916	Makyen	(?-i:vasavagaurang727)(?#medium.com)
 1654561136	Ryan M	ngx[\W_]*+vector[\W_]*+icons
-1654562727	cigien	livingintown\.com
 1654566265	cocomac	ashawn546\.medium\.com
 1654568515	cigien	acctekgroup\.com
 1654568734	cigien	livingintown(?!\.com)
