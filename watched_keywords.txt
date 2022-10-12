@@ -44069,3 +44069,4 @@
 1665561883	Makyen	maxyfi\.com
 1665561918	Makyen	maxyfi(?!\.com)
 1665571137	tripleee	andersenlab\.de
+1665580801	Jeff Schaller	agensogwin\.com
