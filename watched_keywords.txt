@@ -44113,3 +44113,4 @@
 1665664792	tripleee	(?-i:^Julia Strax$)
 1665664961	tripleee	vtgk7uzp7v2ba2wiv2m5diuklzszgcparux5cjxvjlt5mqaoehwjqxad\.onion
 1665665153	tripleee	smashersteam
+1665665212	tripleee	(?-i:^emma0122$)
