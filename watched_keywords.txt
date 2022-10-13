@@ -44077,3 +44077,4 @@
 1665614003	Ryan M	premuimpharmacy\.com
 1665617693	Ryan M	constipt(?!(?:ion|ing|ed|ee)?s?\b)\w*+
 1665628412	Ryan M	168linux\.com
+1665629180	Jeff Schaller	supercasualarticlesandblogs\.com
