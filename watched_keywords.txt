@@ -44076,3 +44076,4 @@
 1665612471	Makyen	(?-i:^Richard Phillips$)
 1665614003	Ryan M	premuimpharmacy\.com
 1665617693	Ryan M	constipt(?!(?:ion|ing|ed|ee)?s?\b)\w*+
+1665628412	Ryan M	168linux\.com
