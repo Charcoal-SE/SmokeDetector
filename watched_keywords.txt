@@ -44077,3 +44077,4 @@
 1665617693	Ryan M	constipt(?!(?:ion|ing|ed|ee)?s?\b)\w*+
 1665628412	Ryan M	168linux\.com
 1665635024	tripleee	itoolab\.com
+1665636141	tripleee	(?-i:^siusiu$)
