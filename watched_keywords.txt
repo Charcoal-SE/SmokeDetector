@@ -44106,3 +44106,4 @@
 1665656834	tripleee	(?-i:xWIHis1WqkY)(?# youtube)
 1665656893	tripleee	(?-i:BSRN0hC96L8)(?# youtube)
 1665656930	tripleee	influicity\.com
+1665656989	tripleee	nubela(?!\.co)
