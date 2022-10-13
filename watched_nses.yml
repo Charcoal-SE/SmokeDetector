@@ -2319,6 +2319,9 @@ items:
   - scott.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
+  - sharon.ns.cloudflare.com.
+  - venkat.ns.cloudflare.com.
+- ns:
   - sima.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
 - ns:
