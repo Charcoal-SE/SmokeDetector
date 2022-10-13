@@ -44087,3 +44087,4 @@
 1665643679	cigien	graztaxi24\.com
 1665643940	cigien	taoyuanparts\.com
 1665643983	cigien	educationalcart\.wixsite\.com
+1665644121	cigien	freepik-downloader\.com
