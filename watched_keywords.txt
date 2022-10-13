@@ -44117,3 +44117,4 @@
 1665674545	Spevacus	qubcort
 1665676907	cigien	apkspike\.com
 1665677147	Thomas Ward	earthweb\.com
+1665680685	cigien	influicity(?!\.com)
