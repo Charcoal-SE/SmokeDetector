@@ -44095,3 +44095,4 @@
 1665645578	cigien	central[\W_]*+bio[\W_]*+hub(?!\.de(?<=centralbiohub\.de))
 1665646163	cigien	zenkoders(?!\.com)
 1665646554	tripleee	dian[\W_]*+apps(?!\.com(?<=dianapps\.com))
+1665646582	tripleee	dianapps\.com
