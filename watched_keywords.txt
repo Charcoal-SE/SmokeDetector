@@ -44115,3 +44115,4 @@
 1665665212	tripleee	(?-i:^emma0122$)
 1665667979	Jeff Schaller	repair-service-center\.com
 1665674545	Spevacus	qubcort
+1665676907	cigien	apkspike\.com
