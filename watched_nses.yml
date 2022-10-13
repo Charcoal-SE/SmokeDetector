@@ -2237,6 +2237,9 @@ items:
   - piotr.ns.cloudflare.com.
 - ns:
   - paul.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
+  - paul.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
   - pete.ns.cloudflare.com.
@@ -3424,3 +3427,4 @@ items:
 - ns: rediffmailpro.com.
 - ns: peniton.co.uk.
 - ns: tino.org.
+- ns: hostinggujju.com.
