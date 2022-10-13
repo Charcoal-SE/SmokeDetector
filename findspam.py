@@ -2099,7 +2099,7 @@ pattern_websites = [
     r"(?:health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
     r"(?://|www\.)healthy?\w{5,}+\.com",
     r"https?://[\w-.]\.repair\W",
-    r"https?://[\w-.]{10,}\.(?:top|help)\W",
+    r"https?://[\w-.]{10,}(?<!programmer)(?<!documentation)\.(?:top|help)\W",
     r"filefix(?:er)?\.com",
     r"\.page\.tl\W",
     r"(?<=pure)infotech\.(?:com|net|in)",
