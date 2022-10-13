@@ -2274,7 +2274,9 @@ items:
 - ns:
   - rita.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
-- ns:
+- comment: 0/9 over 2 months 2022-10-13
+  disable: true
+  ns:
   - rita.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
