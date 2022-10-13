@@ -44089,3 +44089,4 @@
 1665643983	cigien	educationalcart\.wixsite\.com
 1665644121	cigien	freepik-downloader\.com
 1665644196	cigien	(?-i:romulocrj)(?#github)
+1665644914	cigien	cpstest\.info
