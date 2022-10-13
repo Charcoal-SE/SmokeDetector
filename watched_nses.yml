@@ -754,6 +754,9 @@ items:
   - quentin.ns.cloudflare.com.
 - ns:
   - carol.ns.cloudflare.com.
+  - chad.ns.cloudflare.com.
+- ns:
+  - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
   - cartman.ns.cloudflare.com.
