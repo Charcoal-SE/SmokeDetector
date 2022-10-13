@@ -30546,7 +30546,6 @@
 1626268793	cigien	senftlegal\.com
 1626268960	Makyen	hiletsbuy\.com
 1626269388	Makyen	leatherandmorecanada\.ca
-1626270651	Glorfindel	wishup\.co
 1626277190	cigien	thehitereport\.com
 1626277318	Ollie	fastwaytracking\.com
 1626277829	cigien	techfortuner\.com
