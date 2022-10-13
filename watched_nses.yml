@@ -2237,6 +2237,9 @@ items:
   - piotr.ns.cloudflare.com.
 - ns:
   - paul.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
+  - paul.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
   - pete.ns.cloudflare.com.
