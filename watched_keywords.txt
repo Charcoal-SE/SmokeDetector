@@ -44093,3 +44093,4 @@
 1665644937	cigien	theimmigrater\.com
 1665645378	cigien	(?-i:97OHx3JXzuI)(?#youtu.be)
 1665645578	cigien	central[\W_]*+bio[\W_]*+hub(?!\.de(?<=centralbiohub\.de))
+1665645619	cigien	dian[\W_]*+apps
