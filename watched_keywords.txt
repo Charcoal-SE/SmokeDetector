@@ -34648,7 +34648,6 @@
 1640234167	cigien	corbetttigerreserve\.net
 1640234895	cigien	wishusucess\.com
 1640235649	cigien	kycuyu[\W_]*+health[\W_]*+clinic(?:[\W_]*+com)?
-1640237022	cigien	netsmartwebs\.com
 1640238347	Makyen	corbett[\W_]*+tiger[\W_]*+reserve(?!\.net(?<=corbetttigerreserve\.net))
 1640242419	tripleee	bluehavenpharmacy\.com
 1640243886	Makyen	linux2cloud\.com
