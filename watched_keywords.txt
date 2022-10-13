@@ -44111,3 +44111,4 @@
 1665657065	tripleee	(?-i:dc_e8adODiE)(?# youtube)
 1665657102	tripleee	LambaFamilyVlogs
 1665659915	tripleee	thestudenthelpline\.co\.uk
+1665664792	tripleee	(?-i:^Julia Strax$)
