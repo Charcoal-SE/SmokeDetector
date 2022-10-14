@@ -44143,3 +44143,4 @@
 1665735444	tripleee	checkbillnow\.com
 1665735478	tripleee	cdnflyer\.com
 1665735673	tripleee	megahattrick\.com
+1665735685	tripleee	quranclasses\.online
