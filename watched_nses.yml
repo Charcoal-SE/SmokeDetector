@@ -2251,6 +2251,9 @@ items:
   - paul.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
+  - perla.ns.cloudflare.com.
+  - viddy.ns.cloudflare.com.
+- ns:
   - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
