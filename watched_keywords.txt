@@ -44147,3 +44147,4 @@
 1665735771	tripleee	articleboxdirect\.com
 1665735925	tripleee	com\.earn_money_online
 1665735961	tripleee	omaryemen\.net
+1665736003	tripleee	applify[\W_]*+tech
