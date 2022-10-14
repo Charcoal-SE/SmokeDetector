@@ -44150,3 +44150,4 @@
 1665736003	tripleee	applify[\W_]*+tech
 1665736060	tripleee	kudu[\W_]*+stores?
 1665736098	tripleee	koodo[\W_]*+(?:mobile[\W_]*+)?store
+1665736148	tripleee	dlmobitools\.com
