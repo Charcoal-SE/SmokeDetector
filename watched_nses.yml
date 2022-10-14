@@ -2326,6 +2326,9 @@ items:
   - theo.ns.cloudflare.com.
 - ns:
   - sara.ns.cloudflare.com.
+  - tim.ns.cloudflare.com.
+- ns:
+  - sara.ns.cloudflare.com.
   - yahir.ns.cloudflare.com.
 - ns:
   - scott.ns.cloudflare.com.
