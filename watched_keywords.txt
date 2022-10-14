@@ -44139,3 +44139,4 @@
 1665733280	Cody Gray	empirerideinc(?!\.com)
 1665733857	tripleee	dtcforce\.com
 1665734047	tripleee	(?-i:^Aiden David$)
+1665735131	tripleee	socygen
