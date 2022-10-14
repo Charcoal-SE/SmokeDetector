@@ -41615,7 +41615,6 @@
 1659676644	cocomac	workspace24\.wixsite\.com
 1659678953	tripleee	prremovals\.com\.au
 1659679011	tripleee	streetgirl\.in
-1659679057	tripleee	itcanvass\.com
 1659680112	tripleee	buygenmeds\.com
 1659680435	cocomac	buyxanaxonline\.net
 1659681447	tripleee	tech2globe\.com
