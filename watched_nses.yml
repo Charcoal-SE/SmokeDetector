@@ -20,6 +20,9 @@ items:
   - norman.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
+  - ram.ns.cloudflare.com.
+- ns:
+  - abby.ns.cloudflare.com.
   - rick.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
