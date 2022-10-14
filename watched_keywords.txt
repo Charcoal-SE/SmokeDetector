@@ -44149,3 +44149,4 @@
 1665735961	tripleee	omaryemen\.net
 1665736003	tripleee	applify[\W_]*+tech
 1665736060	tripleee	kudu[\W_]*+stores?
+1665736098	tripleee	koodo[\W_]*+(?:mobile[\W_]*+)?store
