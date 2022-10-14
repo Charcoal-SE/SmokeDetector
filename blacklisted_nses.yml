@@ -17,6 +17,9 @@ items:
   - adel.ns.cloudflare.com.
   - alexis.ns.cloudflare.com.
 - ns:
+  - adi.ns.cloudflare.com.
+  - mitch.ns.cloudflare.com.
+- ns:
   - adrian.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
 - ns:

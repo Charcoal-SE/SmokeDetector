@@ -74,9 +74,6 @@ items:
   - miles.ns.cloudflare.com.
 - ns:
   - adi.ns.cloudflare.com.
-  - mitch.ns.cloudflare.com.
-- ns:
-  - adi.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
 - ns:
   - adrian.ns.cloudflare.com.
