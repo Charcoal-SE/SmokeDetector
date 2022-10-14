@@ -2475,7 +2475,6 @@ items:
 - ns: us1011.siteground.us.
 - ns: m76.siteground.biz.
 - ns: siteground.net.
-- ns: sttdns.com.
 - comment: 21/291 over 8 months (some weight 1)
   disable: true
   ns: hover.com.
