@@ -44185,3 +44185,4 @@
 1665838926	cigien	eie88\.net
 1665838961	cigien	eie88(?!\.net)
 1665839750	cigien	terbaru
+1665849500	cigien	designwithalmomin\.blogspot
