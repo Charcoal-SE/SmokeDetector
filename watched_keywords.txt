@@ -41048,7 +41048,6 @@
 1658160776	cigien	comedyclassroom\.com
 1658162014	cigien	rndbtc\.com
 1658162285	Jeff Schaller	epoll-wp-voting
-1658169305	cigien	healthylifehuman\.com
 1658198624	cigien	kyland\.com
 1658198759	cigien	bresciapc\.com
 1658198807	cigien	bresciapc(?!\.com)
