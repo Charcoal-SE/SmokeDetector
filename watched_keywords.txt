@@ -44207,3 +44207,4 @@
 1665967919	Jeff Schaller	horacetempo\.com
 1665976412	Makyen	singnutri(?!\.com)
 1665975896	Nick	singnutri\.com
+1665980424	cigien	(?-i:dynjeb)(?#rb.gy)
