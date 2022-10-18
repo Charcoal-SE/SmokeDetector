@@ -44237,3 +44237,4 @@
 1666071655	cigien	robotflux\.com
 1666071696	cigien	skywayfare\.com
 1666072075	cigien	provident[\W_]*+housing(?!\.com(?<=providenthousing\.com))(?:[\W_]*+limited)?
+1666072150	cigien	prestigeserenityshore\.in
