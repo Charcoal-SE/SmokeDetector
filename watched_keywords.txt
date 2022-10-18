@@ -33978,7 +33978,6 @@
 1637913066	cigien	astrogowthamnanda\.com
 1637913274	cigien	affordablemac\.co\.uk
 1637913386	cigien	macfinder\.co\.uk
-1637913426	Ryan M	vinsys\.com
 1637913577	cigien	printerofflineerror\.com
 1637914525	Ryan M	shopwale\.com
 1637921017	tripleee	shree[\W_]*+tripada
