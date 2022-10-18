@@ -44239,3 +44239,4 @@
 1666072075	cigien	provident[\W_]*+housing(?!\.com(?<=providenthousing\.com))(?:[\W_]*+limited)?
 1666072150	cigien	prestigeserenityshore\.in
 1666072310	Makyen	cuanhunter88\.net
+1666072333	Makyen	cuan[\W_]*+hunter(?!88\.net(?<=cuanhunter88\.net))(?:[\W_]*+88)?
