@@ -44263,3 +44263,4 @@
 1666084148	cigien	apkdice\.com
 1666084233	Ryan M	imagetextconverter\.com
 1666084335	cigien	maniadsanat\.com
+1666084778	Makyen	embroidery[\W_]*+khazana
