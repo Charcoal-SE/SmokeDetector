@@ -44254,3 +44254,4 @@
 1666080254	Makyen	rostopedia\.blogspot
 1666080287	Makyen	sacred[\W_]*+seasons[\W_]*+2
 1666080322	Makyen	savewcal\.net
+1666080352	Makyen	lovedailyblogging\.com
