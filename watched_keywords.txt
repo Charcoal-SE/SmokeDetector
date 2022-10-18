@@ -44241,3 +44241,4 @@
 1666072333	Makyen	cuan[\W_]*+hunter(?!88\.net(?<=cuanhunter88\.net))(?:[\W_]*+88)?
 1666074769	Glorfindel	diyfixtool
 1666075054	cigien	techlovers01\.blogspot
+1666077970	Nick	considracare\.com
