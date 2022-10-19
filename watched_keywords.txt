@@ -44292,3 +44292,4 @@
 1666171269	cigien	(?-i:mukavinilavan)(?#medium)
 1666171911	cigien	touchmousetools\.com
 1666171943	cigien	printertales\.com
+1666172888	cigien	arturplavnik(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
