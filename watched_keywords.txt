@@ -44295,3 +44295,4 @@
 1666172888	cigien	arturplavnik(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1666172918	cigien	alten\.com
 1666172940	cigien	rapidtech\.co\.ke
+1666173123	tripleee	barracuda razer
