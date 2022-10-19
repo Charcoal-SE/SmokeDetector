@@ -44301,3 +44301,4 @@
 1666176240	Jeff Schaller	pakaopedia\.com
 1666176273	Jeff Schaller	vegantail\.com
 1666176294	Jeff Schaller	snowsolutionhub\.com
+1666182428	Jeff Schaller	learnmateacademy\.com
