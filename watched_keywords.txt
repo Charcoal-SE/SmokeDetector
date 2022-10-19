@@ -44286,3 +44286,4 @@
 1666163195	cigien	lodetrenmang\.com
 1666163221	cigien	verifiedanswer\.com
 1666163823	cigien	linksys-extender-?setup\.com
+1666163902	cigien	linksys[\W_]*+extender[\W_]*+setup(?!\.com(?<=linksys-extender-setup\.com))(?!\.com(?<=linksys-extendersetup\.com))
