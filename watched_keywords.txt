@@ -44289,3 +44289,4 @@
 1666163902	cigien	linksys[\W_]*+extender[\W_]*+setup(?!\.com(?<=linksys-extender-setup\.com))(?!\.com(?<=linksys-extendersetup\.com))
 1666164450	cigien	tesler-trading\.net
 1666171103	cigien	fifaworldcupmania\.com
+1666171269	cigien	(?-i:mukavinilavan)(?#medium)
