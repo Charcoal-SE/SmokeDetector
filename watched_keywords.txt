@@ -44291,3 +44291,4 @@
 1666171103	cigien	fifaworldcupmania\.com
 1666171269	cigien	(?-i:mukavinilavan)(?#medium)
 1666171911	cigien	touchmousetools\.com
+1666171943	cigien	printertales\.com
