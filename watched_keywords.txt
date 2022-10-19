@@ -44323,3 +44323,4 @@
 1666202400	Makyen	(?:mr[\W_]*+)?aboobacker[\W_]*+mohammed[\W_]*+ali
 1666202477	Makyen	eindhovenseschaakvereniging\.nl
 1666202700	Makyen	newzealandcasinos\.nz
+1666202874	Makyen	com\.rishitcompany(?:\.\w++)?
