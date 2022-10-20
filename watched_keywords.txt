@@ -44335,3 +44335,4 @@
 1666249128	cigien	avas[\W_]*+living
 1666249835	cigien	translation\.io
 1666249894	cigien	topwikiqa\.com
+1666249965	cigien	rytr\.me
