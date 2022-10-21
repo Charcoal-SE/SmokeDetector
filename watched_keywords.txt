@@ -44377,3 +44377,4 @@
 1666339889	Ryan M	buyjuicerblender\.com
 1666343689	tripleee	cre8iveskill\.com
 1666343709	tripleee	cre8iveskill(?!\.com)
+1666343756	tripleee	vorlane\.com
