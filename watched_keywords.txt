@@ -44378,3 +44378,4 @@
 1666343689	tripleee	cre8iveskill\.com
 1666343709	tripleee	cre8iveskill(?!\.com)
 1666343756	tripleee	vorlane\.com
+1666353456	Jeff Schaller	allerrorcode\.com
