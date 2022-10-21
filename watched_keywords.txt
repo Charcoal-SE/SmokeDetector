@@ -44369,3 +44369,4 @@
 1666327947	Makyen	tiancimachine\.com
 1666327971	Makyen	tiancimachine(?!\.com)
 1666329404	Makyen	joannabriggs\.org
+1666332945	Makyen	bags247\.com\.au
