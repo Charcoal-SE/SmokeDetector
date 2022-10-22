@@ -44399,3 +44399,4 @@
 1666428664	Nick	fontchangerguru\.com
 1666440831	Mast	(?-i:CZ1ya7SYags)(?# youtu\.be)
 1666443165	Nick	baodihoc\.com
+1666443924	Jeff Schaller	respiratoryclinics\.in
