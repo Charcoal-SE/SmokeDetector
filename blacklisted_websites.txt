@@ -4688,7 +4688,7 @@ smtpserver\.com
 limrs\.com
 tokogacor\.online
 youth4work\.com
-opshub\.com
+opshub(?<=\b(?<![^\W_]-)opshub)\.com(?![.-][^\W_])\b
 tourtoreview\.com
 omninos\.in
 blockchainappsdeveloper\.com
