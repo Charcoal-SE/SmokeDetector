@@ -568,7 +568,6 @@ Devil_Ace
 (?-i:^Tessie Swift$)
 (?-i:^lallu lal$)
 (?-i:^Hugh Davenport$)
-(?-i:^Biswajit Nandi$)
 (?-i:^Mama Bashirah$)
 (?-i:^rina shah$)
 (?-i:^Nancy Acer$)
