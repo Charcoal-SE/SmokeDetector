@@ -44406,3 +44406,4 @@
 1666456982	Jeff Schaller	gogle-news\.com
 1666457965	tripleee	anycoincasinos\.com
 1666459269	Makyen	fengxinhhh(?#GitHub)
+1666460925	Makyen	(?-i:^Biswajit Nandi$)
