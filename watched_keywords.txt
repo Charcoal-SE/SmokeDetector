@@ -44417,3 +44417,4 @@
 1666508150	cigien	bookwritingonline\.com
 1666529336	cigien	spideressay\.org
 1666529395	cigien	spider[\W_]*+essay(?!\.org(?<=spideressay\.org))
+1666530278	cigien	trumonytechs\.com
