@@ -44416,3 +44416,4 @@
 1666507514	cigien	GoodCollect
 1666508150	cigien	bookwritingonline\.com
 1666529336	cigien	spideressay\.org
+1666529395	cigien	spider[\W_]*+essay(?!\.org(?<=spideressay\.org))
