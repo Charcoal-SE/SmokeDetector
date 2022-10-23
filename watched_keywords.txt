@@ -44410,3 +44410,4 @@
 1666468833	Mithical	^Raymond\W?Scott$
 1666500928	cigien	fynxther\.com
 1666501196	cigien	holodilnik138\.ru
+1666501285	cigien	(?-i:duduyoyo)(?#github)
