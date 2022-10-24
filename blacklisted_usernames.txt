@@ -717,3 +717,4 @@ meta kukel exchange
 (?-i:^JBFS Engineering Systems Pvt\.$)
 (?-i:^VISHWAS SETHI$)
 (?-i:^Jenny Jenkins$)
+(?-i:Curious Potato)
