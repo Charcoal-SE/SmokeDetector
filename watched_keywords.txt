@@ -44438,3 +44438,4 @@
 1666599535	cigien	techters\.com
 1666599558	cigien	taichinhcn\.com
 1666604044	cigien	decornhacua\.com
+1666612085	Jeff Schaller	snbknews\.blogspot
