@@ -44469,3 +44469,4 @@
 1666706430	cigien	themeim\.com
 1666706465	cigien	cloudapi\.stream
 1666706560	cigien	tissueweb\.com
+1666706840	cigien	artursamenezes\.com
