@@ -44450,3 +44450,4 @@
 1666694510	Jeff Schaller	armadaboost\.com
 1666694559	Jeff Schaller	perftest\.com
 1666694643	Jeff Schaller	riversidebuffet\.com
+1666697844	Jeff Schaller	swift2claim\.com
