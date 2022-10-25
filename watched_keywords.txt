@@ -44462,3 +44462,4 @@
 1666702896	cigien	onroadz(?!tours\.com)
 1666702932	cigien	onroadztours\.com
 1666703576	cigien	dominanthackers(?:gmail\.com)?
+1666703644	cigien	blog\.jeffryanto\.live
