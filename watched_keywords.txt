@@ -44474,3 +44474,4 @@
 1666714094	Mast	namecombinertool\.com
 1666714309	tripleee	salesshield\.app
 1666719012	Glorfindel	vvco\.com
+1666724805	Glorfindel	shorturls\W*link
