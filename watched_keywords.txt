@@ -44460,3 +44460,4 @@
 1666702078	cigien	glsun\.com
 1666702110	cigien	glsun(?!\.com)
 1666702896	cigien	onroadz(?!tours\.com)
+1666702932	cigien	onroadztours\.com
