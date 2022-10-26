@@ -1292,6 +1292,9 @@ items:
   - vera.ns.cloudflare.com.
 - ns:
   - erin.ns.cloudflare.com.
+  - hank.ns.cloudflare.com.
+- ns:
+  - erin.ns.cloudflare.com.
   - hassan.ns.cloudflare.com.
 - ns:
   - erin.ns.cloudflare.com.
