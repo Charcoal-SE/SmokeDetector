@@ -44498,3 +44498,4 @@
 1666785016	tripleee	piles[\W_]*+fissure
 1666785083	tripleee	apollo[\W_]*+spectra
 1666785125	tripleee	medisync
+1666786046	Jeff Schaller	bigbadbiker360360(?:gmail\.com)?
