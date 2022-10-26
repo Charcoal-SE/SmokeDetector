@@ -43500,7 +43500,6 @@
 1664128864	Spevacus	quantumtransportsolutions\.com
 1664131708	cigien	techmanish\.in
 1664131734	cigien	(?-i:68HlUniMHRs)(?#youtube)
-1664144058	Jeff Schaller	repairmyappliance\.ca
 1664144870	Jeff Schaller	tuofa-cncmachining\.com
 1664144899	Jeff Schaller	okvix\.com
 1664171427	tripleee	easyfix\d*(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com
