@@ -44487,3 +44487,4 @@
 1666768200	tripleee	4gmobifone\.mobi
 1666768427	tripleee	(?-i:^Working Mail$)
 1666774770	tripleee	teatimeresult\.co\.za
+1666774974	tripleee	xhj-plastic\.cn
