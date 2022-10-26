@@ -44479,3 +44479,4 @@
 1666724866	Glorfindel	bio\W*link\W*generator
 1666728562	Makyen	seokot\.com
 1666757441	cigien	dukerolex\.com
+1666757459	cigien	firetechnews\.in
