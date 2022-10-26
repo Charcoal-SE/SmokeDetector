@@ -639,7 +639,6 @@ Visualytes
 (?-i:^aziza aziza$)
 (?-i:^thegoodwood$)
 (?-i:^Claudine Albert$)
-(?-i:^Sahara$)
 (?-i:^Caroline Arthur$)
 (?-i:^FreeSoftwareFiles$)
 (?-i:^Michele.{0,29}Gadd$)
