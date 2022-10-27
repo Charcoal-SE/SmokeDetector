@@ -44518,3 +44518,4 @@
 1666863398	cigien	redactlegame\.com
 1666863514	cigien	saveourwaterrebates\.com
 1666864474	cigien	learnenglish100\.com
+1666865353	cigien	bis[\W_]*+certification
