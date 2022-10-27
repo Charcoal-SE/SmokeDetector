@@ -44456,7 +44456,7 @@
 1666702110	cigien	glsun(?!\.com)
 1666702896	cigien	onroadz(?!tours\.com)
 1666702932	cigien	onroadztours\.com
-1666703576	cigien	dominanthackers(?:gmail\.com)?
+1666703576	cigien	dominanthackers(?:@gmail\.com)?
 1666703644	cigien	blog\.jeffryanto\.live
 1666703813	cigien	photvietnam\.com
 1666704021	cigien	signa[\W_]*+productions
