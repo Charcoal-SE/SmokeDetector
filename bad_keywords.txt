@@ -1040,7 +1040,6 @@ xflo(?<=/xflo)(?:$|[/?])
 flexinall
 phytolast\w*
 andras\Wfiber
-apower\W?(?:manager|mirror|pdf|rec|recover)
 video\W?download\W?capture
 streaming\W?(?:audio|video)\W?recorder
 showmore\W?screen\W?recorder
