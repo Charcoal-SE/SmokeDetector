@@ -38602,7 +38602,6 @@
 1651531553	cigien	corelanguages\.com
 1651542086	Ryan M	dalpocha2\S*+
 1651542542	Spevacus	instantlogodesign\.com
-1651548005	Makyen	tutorchamps\.com
 1651555310	Suraj Rao	cachdietmoi\.vn
 1651556317	Makyen	aribaonlinetraining\.com
 1651555720	lyxal	seoinuk\.co\.uk
