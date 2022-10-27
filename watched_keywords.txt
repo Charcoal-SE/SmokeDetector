@@ -44526,3 +44526,4 @@
 1666883096	Makyen	mp3juice\.wtf
 1666887080	Ryan M	kalsarpdoshpujainujjain\.com
 1666887985	Jeff Schaller	anekdotoes\.ru
+1666901007	Makyen	apower[\W_]*+(?:manager|mirror|pdf|rec|recover)
