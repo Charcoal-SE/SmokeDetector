@@ -44533,3 +44533,4 @@
 1666933245	cigien	marketingglobals\.com
 1666933462	cigien	akshay\.patell1702(?:@gmail\.com)?
 1666933577	cigien	Lore-Master\.com
+1666935820	cigien	digitalguider\.com
