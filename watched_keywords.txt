@@ -38941,7 +38941,6 @@
 1652368133	cigien	codingninjas\.com
 1652369222	cigien	buyneem\.com
 1652370724	cigien	darthcoin\.substack\.com
-1652373300	Glorfindel	englishpapa\.com
 1652374573	Spevacus	vereluniversodeoliver\.reblog\.hu
 1652374596	Spevacus	el-universo-de-oliver-2022\.tumblr\.com
 1652374615	Spevacus	rsg\.gg
