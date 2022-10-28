@@ -44543,3 +44543,4 @@
 1666953853	tripleee	tags[\W_]*+n[\W_]*+ticks(?!\.com(?<=tagsnticks\.com))
 1666953892	tripleee	tagsnticks\.com
 1666956203	tripleee	teamplusindia\.in
+1666958563	tripleee	one[\W_]*+muthoot
