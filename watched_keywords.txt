@@ -44528,3 +44528,4 @@
 1666887985	Jeff Schaller	anekdotoes\.ru
 1666901007	Makyen	apower[\W_]*+(?:manager|mirror|pdf|rec|recover)
 1666913270	Makyen	jirivrubel@email\.cz
+1666916677	Ollie	expertsdesigner\.com
