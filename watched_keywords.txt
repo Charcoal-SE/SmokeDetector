@@ -44542,3 +44542,4 @@
 1666952544	cigien	mexicanonlinepharmacy\.org
 1666953853	tripleee	tags[\W_]*+n[\W_]*+ticks(?!\.com(?<=tagsnticks\.com))
 1666953892	tripleee	tagsnticks\.com
+1666956203	tripleee	teamplusindia\.in
