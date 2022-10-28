@@ -44535,3 +44535,4 @@
 1666933577	cigien	Lore-Master\.com
 1666935820	cigien	digitalguider\.com
 1666935938	cigien	redcliffelabs\.com
+1666940744	tripleee	paolo\.?devera\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
