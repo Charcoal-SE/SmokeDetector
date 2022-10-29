@@ -40852,7 +40852,7 @@
 1657542629	Glorfindel	iMagic\W*Baroda
 1657542657	Jeff Schaller	drkathiresan\.com
 1657543418	Makyen	supportbitcoin\.com
-1657547159	Makyen	dee[sz]++[\W_]*+nut[sz]++(?!["'“”])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1657547159	Makyen	dee[sz]++[\W_]*+nut[sz]++(?!["'“”])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#" syntax highlighting fodder)
 1657547185	Makyen	softwarelee\.org
 1657555664	Makyen	smitsuthar321(?:@gmail\.com)?
 1657560170	cigien	gogetsaving\.com
@@ -41403,7 +41403,7 @@
 1659160184	cocomac	sunnevaisland\.vn
 1659160832	cocomac	topindianholidays\.com
 1659162661	cocomac	picovoice\.ai
-1659163342	cocomac	google(?:\.[a-z\d]++){1,2}/url\?q=https?://(?!(?:www\.)?(?:google\.com|(?:(?:[a-z\d]++\.){0,2}(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps)\.com|mathoverflow\.net))[/\s"'<])
+1659163342	cocomac	google(?:\.[a-z\d]++){1,2}/url\?q=https?://(?!(?:www\.)?(?:google\.com|(?:(?:[a-z\d]++\.){0,2}(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps)\.com|mathoverflow\.net))[/\s"'<])(?#" syntax highlighting fodder)
 1659163933	cocomac	infansy\.store
 1659178394	Jeff Schaller	howtoabroad\.com
 1659178535	Jeff Schaller	belkinrouterlogins\.com
@@ -42696,7 +42696,7 @@
 1662100878	tripleee	(?-i:^deepak barik$)
 1662101593	Cody Gray	(?-i:VcamSq7iZsb)(?#medium)
 1662101617	Cody Gray	(?-i:fee22a819e57)(?#medium)
-1662101860	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\n*\Z
+1662101860	tripleee	/voipphone" rel="nofollow noreferrer">[^<>]*+</a></p>\n*\Z(?#" syntax highlighting fodder)
 1662104544	tripleee	atrixware\.com
 1662104796	tripleee	pure[\W_]*+life[\W_]*+organics
 1662107413	tripleee	thiruvananthapuramflorist\.com
