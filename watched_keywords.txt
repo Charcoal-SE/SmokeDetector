@@ -44573,3 +44573,4 @@
 1667061649	cigien	nababshiraz33(?:@gmail\.com)?
 1667061782	cigien	recruitexam\.com
 1667062372	cigien	scriptureinterpretsscripture\.com
+1667063968	cigien	hackwizard999(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
