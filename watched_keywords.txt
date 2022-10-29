@@ -44564,7 +44564,6 @@
 1667041484	cigien	topnewcontent\.com
 1667043109	cigien	federalbank\.co\.in
 1667050533	Robert Longson	romanticcampus\.com
-1667054426	Jeff Schaller	casualarticlesandblogspro\.com
 1667054533	Jeff Schaller	pathology\.wiki
 1667054564	Jeff Schaller	christmassongs\.club
 1667054590	Jeff Schaller	Dancebars\.art
