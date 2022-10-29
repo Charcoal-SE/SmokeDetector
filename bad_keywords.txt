@@ -755,7 +755,7 @@ test\W?ultimate
 memory\W?boost\W?xl
 musconv
 collagen\W?retinol
-avella(?:(?:[\W_]*+(?:anti|aging|serum|skin))+|(?=["<>/]))
+avella(?:(?:[\W_]*+(?:anti|aging|serum|skin))+|(?=["<>/]))(?#" syntax highlighting fodder)
 zyklo?n.*?(?:introduction|delivery|device)
 ang\ ang
 p(?:eni|nei|enni|eeni|ein)s?\ size
@@ -841,7 +841,7 @@ pure\W?prime
 le\W?fior
 bellaire\W?skin
 alpha\W?king(?!$)
-/phone-mirror(?=[/"<-]|$)
+/phone-mirror(?=[/"<-]|$)(?#" syntax highlighting fodder)
 bio\W?slim
 shanti\W?cbd
 steel\W?focus
@@ -864,7 +864,7 @@ simply\W?flawless\W?cream
 trim\W?fit
 apple\W?stem\W?cell
 hdt[\W_]*+male[\W_]*+enhancement
-vcore(?<=/vcor)(?=[-/<"]|$)
+vcore(?<=/vcor)(?=[-/<"]|$)(?#" syntax highlighting fodder)
 brain\W?360
 rejuvilane
 phenlean
@@ -893,7 +893,7 @@ refollium
 cilexin
 essential\W?trim(?:\W?gc)?
 ez\W*battery
-https?://\S+\.(?:band|club|download|live|media|press|world|xyz|zone)/[^/\s"]*-mp3-(?:musica-baixar|cancion-descargar|(?:song-)?download|sarki-indir|telecharger-musique)
+https?://\S+\.(?:band|club|download|live|media|press|world|xyz|zone)/[^/\s"]*-mp3-(?:musica-baixar|cancion-descargar|(?:song-)?download|sarki-indir|telecharger-musique)(?#" syntax highlighting fodder)
 platinum\W*+xwl
 new\W*+age\W*+serum
 noxitril
@@ -970,7 +970,7 @@ blockchaininvestio
 titan\W?blast
 male\W?peak(?:\W?ultra)?
 (?:immune\W?)?ultra\W?turmeric
-fxm(?<=[/-]fxm)(?=[-<"])
+fxm(?<=[/-]fxm)(?=[-<"])(?#" syntax highlighting fodder)
 testosup
 true\W?slim
 zyplex
@@ -1167,7 +1167,7 @@ enhance\W?male
 gluco\W?trim
 brilliance\W?sf
 how\W?to\W?hack\W?whatsapp
-memory(?<=/memory)\Whack[-/<"]
+memory(?<=/memory)\Whack[-/<"](?#" syntax highlighting fodder)
 panitrol\W?xl
 xyz\W?collagen
 personal-loans\.html
@@ -1595,7 +1595,7 @@ privy\W?farms(?:\W?keto)?
 quick\Wburn\Wketo
 evolution\Wlean\Wketo
 technicalsupporttollfree\.co
-(?:hyperion\b(?:.{0,40}?(?:males?|boost\w*|performance|/"\W*+))|\w*supplement.{0,40}?hyperion)
+(?:hyperion\b(?:.{0,40}?(?:males?|boost\w*|performance|/"\W*+))|\w*supplement.{0,40}?hyperion)(?#" syntax highlighting fodder)
 slim4vit
 prime\W?skin
 thermo\W*+sculpt(?:\W*+pro)?
@@ -1654,7 +1654,7 @@ lean\W?diet
 hydralyft
 hydra\W?life
 viral\W?rx
-<a href="https://compitionpoint\.com/[^"]*+" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>
+<a href="https://compitionpoint\.com/[^"]*+" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>(?#" syntax highlighting fodder)
 green[\W_]*+coffee(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano(?!\.in(?<=greencoffeegrano\.in))|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|\d++|[\da-f]{5,}+)s?)+
 waist\.click
 gracinia
@@ -1691,7 +1691,7 @@ hyper\W*+testo
 beam\W?skin
 levia\W?flex
 kalis\W?keto
-/(?<=\.\w{1,5}/)(?:\w++-keto|keto-\w+)(?=["/< ]|$)(?#product name like keto-xx in URL)
+/(?<=\.\w{1,5}/)(?:\w++-keto|keto-\w+)(?=["/< ]|$)(?#product name like keto-xx in URL)(?#" syntax highlighting fodder)
 gkjwb-how-to-look-younger
 k[ae]lis\W?keto
 qpaf6
@@ -1833,7 +1833,7 @@ get SSL certification in one hour(?#fiverr spammer)
 ats\W*+ost\W*+to\W*+pst\W*+converter
 life\W*+keto
 ^Не делайте вид что проблемы нeт!
-"Администрация не выносит критики
+"Администрация не выносит критики(?#" syntax highlighting fodder)
 performex(?:\W?keto(?:\W?heat)?)?
 insta\W?lean(?:\W?forskolin)?
 momen(?:\W*+(?:trim|keto))+
@@ -2015,7 +2015,7 @@ k[\W_]*+shred(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 games[\W_]*+bx(?!\.(?:pro|tk))(?:daily)?\d*+
 vegusbet(?!\.net)
 emylia[\W_]*+skin(?:[\W_]*+(?:au|review|cream|australia|\d++|[\da-f]{4,}+)s?)*
-gandu(?!$|['"])
+gandu(?!$|['"])(?#" syntax highlighting fodder)
 superior[\W_]*+flux
 allmightbazulartemple(?:@gmail\.com)?
 testo[\W_]*+man(?:[\W_]*+(?:uk|pill|ultra|with|xl|nano|supplement|muscle|\d++|[\da-f]{4,}+)s?)*
