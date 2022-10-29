@@ -2698,3 +2698,4 @@ allurant[\W_]*medical(?!\.com(?<=allurantmedical\.com))
 constipt(?:ion|ing|ed|ee)?s?
 vissentials
 (?-i:89TUYPIbXmpmMWU5)(?#t.me)
+(?-i:9X9ZXhBpNSFkMzk8)(?#t.me)
