@@ -44586,3 +44586,4 @@
 1667124973	Robert Longson	baidudownloader\.com
 1667132299	cigien	hobigamespro\.com
 1667132488	cigien	clippingpathservice\.io
+1667134231	cigien	awesomeminer\.pxf\.io
