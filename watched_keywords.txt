@@ -38643,7 +38643,6 @@
 1651644760	Henry Ecker	faresglob\.com
 1651642767	lyxal	gene-rator\.online
 1651651931	Cody Gray	pg[\W_]*slot(?!\.)(?:[\W_]*game)?
-1651652944	Cody Gray	r\.?obinhood(?!$)
 1651653730	Ryan M	taxindia24\.com
 1651653852	Cody Gray	intellectsoft\.net
 1651654782	Robert Longson	prestigemeridianpark\.in
