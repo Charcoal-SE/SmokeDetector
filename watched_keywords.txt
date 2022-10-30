@@ -44582,3 +44582,4 @@
 1667083016	Makyen	(?:a href="https?://t\.me/[^>]*>(?:[^<]*+|<(?!/a>))*+</a>(?:.{0,30}a href="https?://t\.me/[^>]*>(?:[^<]*+|<(?!/a>))*+</a>)+|(?:https?:)?(?://)?t\.me/\S*+(?:.{0,20}?(?:https?:)?(?://)?t\.me/\S*+)+)\W*+(?#more than one t.me link or URL close together)
 1667116160	tripleee	manpower\.com\.kw
 1667116350	tripleee	lpgagency\.in
+1667121294	Makyen	digitalpadho\.com
