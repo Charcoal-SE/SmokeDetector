@@ -44581,3 +44581,4 @@
 1667083015	Makyen	(?:(?:c++p{3,}+\w*+|g++oo++d{3,}+\w*+|ch?e++s++e++\w*+[\W_]*+p++i++z++a++\w*+|child++[\W_]*+(?:(?:stuf++|lovers?)\w*+)+|cp++d*+[\W_]*+(?:great|good)|(?:great|good)[\W_]*+cp++d*+)|sexy.{0,15}child)ebbmobile\.com
 1667083016	Makyen	(?:a href="https?://t\.me/[^>]*>(?:[^<]*+|<(?!/a>))*+</a>(?:.{0,30}a href="https?://t\.me/[^>]*>(?:[^<]*+|<(?!/a>))*+</a>)+|(?:https?:)?(?://)?t\.me/\S*+(?:.{0,20}?(?:https?:)?(?://)?t\.me/\S*+)+)\W*+(?#more than one t.me link or URL close together)
 1667116160	tripleee	manpower\.com\.kw
+1667116350	tripleee	lpgagency\.in
