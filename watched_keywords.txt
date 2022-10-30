@@ -38613,7 +38613,6 @@
 1651570432	Cody Gray	Quickbooks?[\W_]*Online[\W_]*(?:Help|Support)
 1651572139	Cody Gray	ticketmasterservisdk\.com
 1651574960	Ryan M	cryptobetting\.net
-1651574979	Cody Gray	grey[\W_]*orange(?!\.com(?<=greyorange\.com))
 1651579058	Cody Gray	asianmassagestores\.com
 1651580210	Cody Gray	fitnesstips03
 1651580226	Cody Gray	k1ketolifeget
