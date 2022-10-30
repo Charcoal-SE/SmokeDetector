@@ -44588,3 +44588,4 @@
 1667132488	cigien	clippingpathservice\.io
 1667134231	cigien	awesomeminer\.pxf\.io
 1667134293	cigien	mentorguard\.com
+1667135365	cigien	decisionaccuracy\.com
