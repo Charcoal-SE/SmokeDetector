@@ -27993,7 +27993,6 @@
 1618106944	Makyen	jokergame\.games
 1618121016	Nisse Engström	adsdecoration\.com
 1618149055	cigien	lonavalaproperty\.com
-1618168799	Nisse Engström	keyboardtestt\.com
 1618171133	Nisse Engström	autorich\.ltd
 1618192597	Makyen	banktransferhackers\.su
 1618196200	cigien	pmlimited-service\.com
