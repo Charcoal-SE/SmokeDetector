@@ -44608,3 +44608,4 @@
 1667197703	cigien	em[\W_]*+softech(?!\.com(?<=emsoftech\.com))
 1667197730	cigien	xaydungsg\.com\.vn
 1667198653	Nick	landroverkeyreplacement\.com
+1667200192	tripleee	net-informations\.com
