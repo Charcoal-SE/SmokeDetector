@@ -40577,7 +40577,6 @@
 1656623006	cocomac	free[\W_]*+download[\W_]*+202\d
 1656638845	Jeff Schaller	freebestpost\.com
 1656642652	Jeff Schaller	researchchemical9898(?:@gmail\.com)?
-1656657778	cocomac	findingsonmeadowlane\.com
 1656657924	Cody Gray	Findings[\W_]*On[\W_]*Meadow[\W_]*Lane(?!\.com(?<=findingsonmeadowlane\.com))
 1656662911	tripleee	(?-i:^vinod chavan$)
 1656662956	tripleee	3c(?<=%3c)href%20a
