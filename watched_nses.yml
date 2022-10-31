@@ -200,6 +200,9 @@ items:
   - clay.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
+  - clyde.ns.cloudflare.com.
+- ns:
+  - ali.ns.cloudflare.com.
   - gerald.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
