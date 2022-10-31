@@ -44601,3 +44601,4 @@
 1667191265	cocomac	donghothanhthuy\.com
 1667192518	cigien	grgindia\.in
 1667192590	cigien	dgmflorida\.com
+1667192622	cigien	dgm[\W_]*+florida(?!\.com(?<=dgmflorida\.com))
