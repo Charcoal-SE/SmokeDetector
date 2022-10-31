@@ -44615,3 +44615,4 @@
 1667206420	tripleee	bestdiscountvouchers\.com
 1667210024	Makyen	turito\.com
 1667210062	Makyen	israelgadgetreview\.co\.il
+1667210106	Makyen	gaadvisorygroup\.com
