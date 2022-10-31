@@ -44623,3 +44623,4 @@
 1667219253	tripleee	si[\W_]*+global[\W_]*+solutions?
 1667219873	cigien	buypharmagrade\.com
 1667225919	tripleee	abidtahir\.blogspot
+1667232165	tripleee	codeinger\.com
