@@ -715,9 +715,6 @@ items:
   - mira.ns.cloudflare.com.
 - ns:
   - bryce.ns.cloudflare.com.
-  - dina.ns.cloudflare.com.
-- ns:
-  - bryce.ns.cloudflare.com.
   - kelly.ns.cloudflare.com.
 - ns:
   - buck.ns.cloudflare.com.
