@@ -44618,3 +44618,4 @@
 1667210106	Makyen	gaadvisorygroup\.com
 1667210420	tripleee	prega[\W_]*+junction
 1667211648	tripleee	(?-i:^Hjnn Thj$)
+1667211756	tripleee	minoxidil
