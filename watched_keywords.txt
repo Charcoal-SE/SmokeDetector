@@ -44627,3 +44627,4 @@
 1667232504	tripleee	superlogix\.net
 1667234728	Makyen	morganilluminatirich(?:@gmail\.com)?
 1667235220	cigien	codesigned\.blogspot
+1667236585	tripleee	genuis-info\.com
