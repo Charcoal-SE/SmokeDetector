@@ -2749,6 +2749,9 @@ items:
   - rns15.webhostbox.net.
   - rns16.webhostbox.net.
 - ns:
+  - rns29.webhostbox.net.
+  - rns30.webhostbox.net.
+- ns:
   - rns7.webhostbox.net.
   - rns8.webhostbox.net.
 - ns: bh-63.webhostbox.net.
