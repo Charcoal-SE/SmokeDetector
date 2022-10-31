@@ -44622,3 +44622,4 @@
 1667214228	cigien	cabrentaldelhi\.com
 1667217902	tripleee	sp2000\.org\.cn
 1667218174	cigien	gamevki\.com
+1667219253	tripleee	si[\W_]*+global[\W_]*+solutions?
