@@ -952,6 +952,9 @@ items:
   - gordon.ns.cloudflare.com.
 - ns:
   - crystal.ns.cloudflare.com.
+  - kurt.ns.cloudflare.com.
+- ns:
+  - crystal.ns.cloudflare.com.
   - maxim.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
