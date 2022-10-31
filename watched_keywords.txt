@@ -44614,3 +44614,4 @@
 1667206388	tripleee	mediashareiq\.com
 1667206420	tripleee	bestdiscountvouchers\.com
 1667210024	Makyen	turito\.com
+1667210062	Makyen	israelgadgetreview\.co\.il
