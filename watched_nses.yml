@@ -1133,6 +1133,9 @@ items:
   - dilbert.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
+  - dina.ns.cloudflare.com.
+  - ignacio.ns.cloudflare.com.
+- ns:
   - dolly.ns.cloudflare.com.
   - hans.ns.cloudflare.com.
 - ns:
