@@ -44604,3 +44604,4 @@
 1667192622	cigien	dgm[\W_]*+florida(?!\.com(?<=dgmflorida\.com))
 1667192753	cigien	techtolia\.com
 1667194329	cigien	shopalotautosales\.com
+1667195707	tripleee	superottwatch\.com
