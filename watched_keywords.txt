@@ -44607,3 +44607,4 @@
 1667195707	tripleee	superottwatch\.com
 1667196693	cigien	usairling\.com
 1667197655	cigien	emsoftech\.com
+1667197703	cigien	em[\W_]*+softech(?!\.com(?<=emsoftech\.com))
