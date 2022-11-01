@@ -44638,3 +44638,4 @@
 1667301721	cigien	dcsaleshop\.com
 1667301766	cigien	babysstep\.com
 1667301816	cigien	offernutra\.com
+1667301872	cigien	newsworldmagazine\.com
