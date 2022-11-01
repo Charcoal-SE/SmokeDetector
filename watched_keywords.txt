@@ -12151,7 +12151,6 @@
 1568536252	Nisse Engström	stdcenterny\.com
 1568536693	Nisse Engström	shadowswork\.com
 1568573619	Makyen	jagran\.com
-1568576016	Makyen	くそ
 1568581000	Makyen	01d6e8202d622887bb(?#upwork.com)
 1568588883	Makyen	tmcnet\.com
 1568589017	Makyen	(?-i:tuIX8\.jpg)
