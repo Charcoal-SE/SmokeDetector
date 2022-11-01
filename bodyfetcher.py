@@ -625,7 +625,7 @@ class BodyFetcher:
                     if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
                         GlobalVars.api_backoff_time = time.time() + 12
                 message_hq += " Backing off on requests for the next 12 seconds."
-                message_hq += " Previous URL: `{}`".format(url)
+                message_hq += " Previous URL: `{}?site={}`".format(url, site)
 
             if "backoff" in response:
                 if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
