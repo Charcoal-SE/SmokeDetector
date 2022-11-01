@@ -9265,7 +9265,6 @@
 1558091678	tripleee	gpcsoftwares\.com
 1558091345	double-beep	(?:online\W?)?salesforce\W?training
 1558095626	Machavity	evincemage\.com
-1558116496	Machavity	tekrevol\.com
 1558120339	Machavity	icepower97
 1558122013	Machavity	danieldias\.info
 1558124629	Machavity	spesialiskandungan\.com
