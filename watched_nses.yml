@@ -949,6 +949,9 @@ items:
   - ruth.ns.cloudflare.com.
 - ns:
   - cruz.ns.cloudflare.com.
+  - david.ns.cloudflare.com.
+- ns:
+  - cruz.ns.cloudflare.com.
   - tanner.ns.cloudflare.com.
 - ns:
   - crystal.ns.cloudflare.com.
