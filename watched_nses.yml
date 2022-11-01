@@ -978,6 +978,9 @@ items:
   - dale.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
 - ns:
+  - dale.ns.cloudflare.com.
+  - tricia.ns.cloudflare.com.
+- ns:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
