@@ -44630,3 +44630,4 @@
 1667236585	tripleee	genuis-info\.com
 1667241842	Jeff Schaller	scrapewithbots\.com
 1667284238	Makyen	longlivo\.com
+1667284488	tripleee	yogitimes\.com
