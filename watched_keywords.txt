@@ -44644,3 +44644,4 @@
 1667313723	Jeff Schaller	mindhome\.vn
 1667313879	tripleee	mindhome(?!\.vn)
 1667316779	Jeff Schaller	freeprosoftwarez\.com
+1667317104	cigien	7zippasswordrecovery\.com
