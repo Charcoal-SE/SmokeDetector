@@ -172,7 +172,6 @@ def test_parse_room_config():
         assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
 
-'''
 @lock_clear_and_restore_all_chatcommunicate_global_values()
 @parse_test_rooms()
 @patch("chatcommunicate.threading.Thread")
@@ -250,7 +249,6 @@ def test_init(room_config, client_constructor, thread):
         assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
         assert chatcommunicate._rooms[("stackexchange.com", 30332)].deletion_watcher is False
         assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
-'''
 
 
 @pytest.mark.skipif(has_pickle("messageData.p"), reason="shouldn't overwrite file")

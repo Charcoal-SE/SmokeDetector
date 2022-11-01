@@ -90,8 +90,6 @@ def init(username, password, try_cookies=True):
         client_keys = [key for key in _clients.keys()]
 
     for site in client_keys:
-        if site == 'stackexchange.com':
-            continue
         client = Client(site)
         logged_in = False
 

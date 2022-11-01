@@ -1,27 +1,14 @@
 # Before adding new users here, make sure they are in users.yml
-meta.stackexchange.com:
-  89:  # Tavern on the Meta
+stackexchange.com:
+  11540:  # Charcoal HQ
     commands: true
-    watcher: true
 
     msg_types:
+      - debug
+      - metasmoke
       - all-sites
-      - metatavern
-      - delay
-      - site-no-stackoverflow.com
-      - no-all-caps body
-      - no-all-caps answer
-      - no-repeating characters in body
-      - no-repeating characters in title
-      - no-repeating characters in answer
-      - no-few unique characters in body
-      - no-few unique characters in answer
-      - no-title has only one unique char
-      - no-phone number detected in title
-      - no-offensive body detected
-      - no-no whitespace in body
-      - no-no whitespace in answer
-      - offensive-mask
+      - experimental-all-sites
+      - no-offensive-mask
 
     privileges:
       - 2848444  # Santa Claus
@@ -216,37 +203,286 @@ meta.stackexchange.com:
       - 4210753 # dippas
       - 456872 # Federico
       - 15019314 # Brandon_J
-      - 212518   # Alexis King
-      - 1399708  # JNat
-      - 2052845  # Qantas 94 Heavy
-      - 531689   # J. Musser
-      - 3232583  # Ixrec
-      - 6551576  # SamsungNote7Plus
-      - 201110   # Shadow Wizard
-      - 1872335  # TGMCians
-      - 3310555  # misterManSam
-      - 6070438  # ASCIIThenANSI
-      - 4140743  # Pandya
-      - 3648514  # CRABOLO
-      - 1968644  # durron597
-      - 3572172  # Infinite Recursion
-      - 5423050  # kos
-      - 1960597  # Simon Klaver
-      - 3934463  # Unicode
-      - 2775391  # DroidDev
-      - 1279912  # Mooseman
-      - 2662014  # vaultah
-      - 2348349  # Ed Cottrell
-      - 2497975  # Sourav Ghosh
-      - 9739821  # DonQuiKong
-      - 974068   # rekire
-      - 4451090  # Unihedron
-      - 4101518  # AstroCB
-      - 466356   # Madara Uchiha
-      - 305991   # Jason C
-      - 2539078  # cybermonkey
-      - 3717584  # josliber
-      - 2591787  # Sam
+
+  65945:  # Charcoal Test
+    commands: true
+
+    msg_types:
+      - offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+
+  3877:  # Raiders of the Lost Downboat
+    commands: false
+    watcher: true
+    msg_types:
+      - site-askubuntu.com
+      - site-meta.askubuntu.com
+      - experimental-site-askubuntu.com
+      - experimental-site-meta.askubuntu.com
+      - offensive-mask
+
+  2165:  # CRUDE
+    commands: false
+    msg_types:
+      - site-math.stackexchange.com
+      - offensive-mask
+
+  95:  # English Language & Usage chat
+    commands: false
+    msg_types:
+      - site-english.stackexchange.com
+      - offensive-mask
+
+  388:  # Parenting chat
+    commands: false
+    msg_types:
+      - site-parenting.stackexchange.com
+      - offensive-mask
+
+  468:  # V'dibarta Bam
+    commands: false
+    msg_types:
+      - site-judaism.stackexchange.com
+      - offensive-mask
+
+  35068:  # Money.SE - Smoke Detector
+    commands: true
+    msg_types:
+      - site-money.stackexchange.com
+      - no-all-caps title
+      - no-all-caps body
+      - no-all-caps answer
+      - offensive-mask
+
+  34620:  # Whisper
+    commands: false
+    msg_types:
+      - site-ethereum.stackexchange.com
+      - offensive-mask
+
+  22462:  # Russian.SO General Room
+    commands: false
+    msg_types:
+      - site-ru.stackoverflow.com
+      - offensive-mask
+
+  11:     # Role-Playing Games General Chat
+    commands: false
+    msg_types:
+      - site-rpg.stackexchange.com
+      - offensive-mask
+
+  24938:  # Language Overflow
+    commands: false
+    msg_types:
+      - site-ell.stackexchange.com
+      - offensive-mask
+
+  38932:  # The Studio
+    commands: false
+    msg_types:
+      - site-crafts.stackexchange.com
+      - offensive-mask
+
+  56223:  # The Spam Blot
+    commands: false
+    msg_types:
+      - site-graphicdesign.stackexchange.com
+      - offensive-mask
+
+  59281:  # SFF Cleanup room
+    commands: false
+    msg_types:
+      - site-scifi.stackexchange.com
+      - offensive-mask
+
+  58631:  # The Restaurant at the End of the Universe
+    commands: true
+    watcher: true
+    msg_types:
+      - site-scifi.stackexchange.com
+      - no-phone number detected in title
+      - offensive-mask
+
+  61165:  # The Awkward Silence
+    commands: false
+    msg_types:
+      - site-interpersonal.stackexchange.com
+      - offensive-mask
+
+  511:
+    commands: false
+    msg_types:
+      - site-japanese.stackexchange.com
+      - offensive-mask
+
+  84778:  # The Terminal
+    commands: true
+    msg_types:
+      #- site-russian.stackexchange.com
+      - site-rus.stackexchange.com
+      #- site-german.stackexchange.com
+      #- site-korean.stackexchange.com
+      #- site-esperanto.stackexchange.com
+      #- site-french.stackexchange.com
+      #- site-spanish.stackexchange.com
+      #- site-chinese.stackexchange.com
+      #- site-japanese.stackexchange.com
+      #- site-italian.stackexchange.com
+      #- site-portuguese.stackexchange.com
+      #- site-ukrainian.stackexchange.com
+      #- site-latin.stackexchange.com
+      - site-ru.stackoverflow.com
+      - site-pt.stackoverflow.com
+      - site-ja.stackoverflow.com
+      - site-es.stackoverflow.com
+      #- experimental-site-rus.stackexchange.com
+      #- experimental-site-ru.stackoverflow.com
+      #- experimental-site-pt.stackoverflow.com
+      #- experimental-site-ja.stackoverflow.com
+      - experimental-site-es.stackoverflow.com
+      - delay
+      - offensive-mask
+
+  27:  # Stack Apps
+    commands: false
+    watcher: false
+    msg_types:
+      - site-stackapps.com
+      - offensive-mask
+
+  96491:  # Jeff's U&L smokedetector room
+    commands: true
+    msg_types:
+      - site-unix.stackexchange.com
+      - offensive-mask
+
+  46061:  # La Tertulia
+    commands: false
+    msg_types:
+      - site-spanish.stackexchange.com
+      - offensive-mask
+
+  106445:  # No Smoking in the Office
+    commands: true
+
+    msg_types:
+      - site-workplace.stackexchange.com
+      - site-workplace.meta.stackexchange.com
+      - experimental-site-workplace.stackexchange.com
+      - experimental-site-workplace.meta.stackexchange.com
+      - offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+
+  109836:  # Chat Restricted
+    commands: true
+    msg_types:
+        - site-gaming.stackexchange.com
+        - site-gaming.meta.stackexchange.com
+        - experimental-site-gaming.stackexchange.com
+        - experimental-site-gaming.meta.stackexchange.com
+        - offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+
+  109841:  # Smoke Detector Reports
+    commands: true
+    msg_types:
+        - site-travel.stackexchange.com
+        - site-travel.meta.stackexchange.com
+        - experimental-site-travel.stackexchange.com
+        - experimental-site-travel.meta.stackexchange.com
+        - site-outdoors.stackexchange.com
+        - site-outdoors.meta.stackexchange.com
+        - experimental-site-outdoors.stackexchange.com
+        - experimental-site-outdoors.meta.stackexchange.com
+        - no-offensive-mask
+
+    privileges:
+      - 17078244 # Xnero
+      # NOTICE: please don't add new users until you have Room Owner approval
+
+  129590:  # CGCC Mod Office
+    commands: true
+    msg_types:
+      - site-codegolf.stackexchange.com
+      - site-codegolf.meta.stackexchange.com
+      - experimental-site-codegolf.stackexchange.com
+      - experimental-site-codegolf.meta.stackexchange.com
+      - no-offensive-mask
+
+
+meta.stackexchange.com:
+  89:  # Tavern on the Meta
+    commands: true
+    watcher: true
+
+    msg_types:
+      - all-sites
+      - metatavern
+      - delay
+      - site-no-stackoverflow.com
+      - no-all-caps body
+      - no-all-caps answer
+      - no-repeating characters in body
+      - no-repeating characters in title
+      - no-repeating characters in answer
+      - no-few unique characters in body
+      - no-few unique characters in answer
+      - no-title has only one unique char
+      - no-phone number detected in title
+      - no-offensive body detected
+      - no-no whitespace in body
+      - no-no whitespace in answer
+      - offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+      additional:
+        - 212518   # Alexis King
+        - 1399708  # JNat
+        - 2052845  # Qantas 94 Heavy
+        - 531689   # J. Musser
+        - 3232583  # Ixrec
+        - 6551576  # SamsungNote7Plus
+        - 201110   # Shadow Wizard
+        - 1872335  # TGMCians
+        - 3310555  # misterManSam
+        - 6070438  # ASCIIThenANSI
+        - 4140743  # Pandya
+        - 3648514  # CRABOLO
+        - 1968644  # durron597
+        - 3572172  # Infinite Recursion
+        - 5423050  # kos
+        - 1960597  # Simon Klaver
+        - 3934463  # Unicode
+        - 2775391  # DroidDev
+        - 1279912  # Mooseman
+        - 2662014  # vaultah
+        - 2348349  # Ed Cottrell
+        - 2497975  # Sourav Ghosh
+        - 9739821  # DonQuiKong
+        - 974068   # rekire
+        - 4451090  # Unihedron
+        - 4101518  # AstroCB
+        - 466356   # Madara Uchiha
+        - 305991   # Jason C
+        - 2539078  # cybermonkey
+        - 3717584  # josliber
+        - 2591787  # Sam
 
   1181:  # The Fire Department
     commands: true
@@ -468,203 +704,11 @@ stackoverflow.com:
     commands: true
 
     msg_types:
-      - all-sites
       - debug
       - dump
-      - experimental-all-sites
-      - metasmoke
       - no-offensive-mask
 
     privileges:
-      - 2848444  # Santa Claus
-      - 8181207  # WELZ
-      - 1245478  # CalvT
-      - 9584324  # Supreme Leader SnokeDetector
-      - 3193304  # NVZ
-      - 272446   # Rob
-      - 267077   # Martin Sleziak
-      - 1212053  # ManishEarth
-      - 7627686  # Åna
-      - 1435254  # Suraj Rao
-      - 6473006  # Zoe
-      - 6062499  # Filnor
-      - 5963824  # Ashish Ahuja
-      - 7034529  # Magisch
-      - 2372500  # D-side
-      - 3802375  # Alexander O'Mara
-      - 4642421  # michaelpri
-      - 6887735  # Petter Friberg
-      - 5655434  # Owen Hines
-      - 4314782  # DJMcMayhem
-      - 8510281  # Tinkeringbell
-      - 9926590  # paper1111
-      - 2575625  # Henders
-      - 8507897  # Tetsuya Yamamoto
-      - 4252138  # Nisse Engström
-      - 2034372  # Kaz Wolfe
-      - 3986488  # Ave
-      - 1878548  # bummi
-      - 8561994  # Locutus of Borg
-      - 11533608 # Grant Garrison
-      - 2477436  # gparyani
-      - 12596055 # Devealte
-      - 281857   # rene
-      - 4911344  # Yvette Colomb
-      - 5018541  # EJoshuaS
-      - 6816483  # J F
-      - 9572642  # Lt. A. Code
-      - 4248202  # NobodyNada
-      - 6109921  # quartata
-      - 1677570  # Ferrybig
-      - 468289   # tripleee
-      - 3046327  # hichris123
-      - 2094462  # QPaysTaxes
-      - 3457374  # ArtOfCode
-      - 216196   # tchrist
-      - 411877   # Shree
-      - 1445276  # Wai Ha Lee
-      - 5950537  # micsthepick
-      - 2058164  # Cerbrus
-      - 4000711  # Quill
-      - 63984    # Andy
-      - 1780938  # Sconibulus
-      - 4440133  # Jeffrey Bosboom
-      - 1464473  # Frenzy Li
-      - 8116083  # Videonauth
-      - 331514   # Lynn Crumbling
-      - 1208323  # Seth
-      - 3359942  # Andrew T.
-      - 2927268  # Mego
-      - 89883    # Stijn
-      - 9507971  # AquariusOne
-      - 253560   # scaaahu
-      - 131474   # Brock Adams
-      - 74727    # Oldskool
-      - 10839766 # HyperNeutrino
-      - 2809239  # JAL
-      - 3841881  # M.A.R. ಠ_ಠ
-      - 2287191  # FrankerZ
-      - 1936546  # Tunaki
-      - 3979517  # Catija
-      - 2259853  # Cai
-      - 7624963  # K.Dᴀᴠɪs
-      - 178805   # Ilmari Karonen
-      - 354360   # djsmiley2k
-      - 1029387  # Robert Longson
-      - 9933161  # Gypsy Spellweaver
-      - 7884440  # Christopher 2EZ 4RTZ
-      - 5962654  # FelixSFD
-      - 1241839  # Andrew Leach
-      - 4230755  # DavidPostill
-      - 1703573  # Undo
-      - 347241   # bwDraco
-      - 435342   # Ryan Bemrose
-      - 4314736  # Okx
-      - 4768421  # Michał Perłakowski
-      - 233608   # John Dvorak
-      - 2751107  # Machavity
-      - 5221606  # Paul Stenne
-      - 8105092  # John Militer
-      - 3947134  # CaffeineAddiction
-      - 1266491  # Doorknob
-      - 7886663  # iBug
-      - 9176804  # JAD
-      - 199671   # Eric Leschinski
-      - 4657998  # Makyen
-      - 11798870 # sau226
-      - 6132527  # A J
-      - 297701   # Thomas Ward
-      - 247613   # Hovercraft Full Of Eels
-      - 5869449  # angussidney
-      - 13183561 # iBot
-      - 5129611  # Mithrandir
-      - 6241661  # wythagoras
-      - 2824081  # Sagar V
-      - 2771931  # EKons
-      - 5612515  # Byte Commander
-      - 3408190  # Ajay Brahmakshatriya
-      - 3094403  # ProgramFOX
-      - 365844   # Melebius
-      - 1750581  # PeterJ
-      - 5905206  # bertieb
-      - 1123059  # apnorton
-      - 6085540  # Glorfindel
-      - 3136569  # Gaurang Tandon
-      - 429324   # S.L. Barth
-      - 416592   # Braiam
-      - 12007967 # Jake Symons
-      - 2734210  # JamesENL
-      - 7569646  # 4castle
-      - 5029344  # Registered User
-      - 6270022  # thesecretmaster
-      - 4485506  # Rob (not the moderator)
-      - 8165300  # Nog Shine
-      - 214848   # Michael Dodd
-      - 14688437 # double-beep
-      - 8505551  # TuringTux
-      - 11311023 # avazula
-      - 11267045 # MEE the setup wizard
-      - 170826   # Stephen Kennedy
-      - 13177264 # Jenayah
-      - 11630962 # Maktest
-      - 13563472 # Stormblessed
-      - 785560   # Johannes Kuhn
-      - 11725517 # Kulfy
-      - 15776767 # Das_Geek
-      - 10317043 # treyBake
-      - 13467462 # connectyourcharger
-      - 15185282 # Chipster
-      - 11230997 # SecretAgentMan
-      - 14952682 # JL2210
-      - 8643622  # Columbia says Reinstate Monica
-      - 519526   # Eliah Kagan
-      - 4146267  # robsiemb
-      - 2063361  # Dharman
-      - 2193756  # Justin Krejcha (jkrejcha)
-      - 8629256  # M--
-      - 15062967 # Adrian Mole
-      - 1599858  # luuklag
-      - 1280398  # Rubiksmoose
-      - 17876926 # user12986714
-      - 18017074 # Ian Campbell
-      - 72095    # Ryan M
-      - 93089    # doppelgreener
-      - 2629084  # Vickel
-      - 15484767 # Spevacus
-      - 999385   # Mast
-      - 2848832  # Calvin Khor
-      - 1187908  # Daniel Widdis
-      - 15911789 # Victor VosMottor
-      - 15376718 # 10 Rep
-      - 9533520  # Yatin
-      - 15588810 # Z9.
-      - 18074340 # Ollie
-      - 11421497 # cigien
-      - 19279602 # ppwater
-      - 17078244 # Xnero
-      - 11644720 # janw
-      - 1233392 # Steve
-      - 13113751 # Nick
-      - 12951433 # Lyxal
-      - 15968770 # Ekadh Singh
-      - 13704771 # Ginger
-      - 11436990 # Anonymous
-      - 10839766 # hyper-neutrino
-      - 7156005 # Vega
-      - 2568291 # Eric Aya
-      - 10398261 # Dude coinheringaahing
-      - 5063134 # Loong
-      - 5919781 # DavidW
-      - 9899349 # jps
-      - 1911219 # karel
-      - 21084402 # Henry Ecker
-      - 22718731 # cocomac
-      - 75563 # shearn89
-      - 22804023 # Someone
-      - 5117622 # Stephen Kitt
-      - 22202197 # user17242583 (richardec)
-      - 4541793 # VLAZ
-      - 23435245 # Ethan
-      - 4210753 # dippas
-      - 456872 # Federico
-      - 15019314 # Brandon_J
+      inherit:
+        site: stackexchange.com
+        room: 11540
