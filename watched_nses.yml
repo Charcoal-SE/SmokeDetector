@@ -1157,6 +1157,9 @@ items:
   - dolly.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
+  - dolly.ns.cloudflare.com.
+  - kurt.ns.cloudflare.com.
+- ns:
   - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
