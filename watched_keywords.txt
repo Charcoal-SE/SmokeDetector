@@ -44659,3 +44659,4 @@
 1667366427	cigien	streamingtip\.com
 1667367502	tripleee	first[\W_]*+fly[\W_]*+travel(?!\.com(<=firstflytravel\.com))
 1667367576	tripleee	cheap[\W_]*+fares[\W_]*+travel
+1667368415	tripleee	commercencommerce\.com
