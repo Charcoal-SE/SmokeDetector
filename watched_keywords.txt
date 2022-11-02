@@ -31442,7 +31442,6 @@
 1629443343	tripleee	bestnewssocial\.com
 1629443773	cigien	aiouhub\.con
 1629445500	cigien	fsmbuddy\.com
-1629446199	cigien	zabtechnologies\.net
 1629446321	cigien	asfera\.in
 1629448535	tripleee	(?-i:Rlmv78)(?# fiverr)
 1629451078	tripleee	amped-wireless-setup\.net
