@@ -43836,7 +43836,6 @@
 1665132169	tripleee	¿Podrías facilitarme
 1665133483	tripleee	bikerace\.io
 1665133509	tripleee	bike-race\.io
-1665136243	tripleee	nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
 1665137783	cigien	techom[\W_]*+systems?+(?!\.com\.au(?<=techomsystems\.com\.au))
 1665137908	cigien	jobsinfopoint\.com
 1665137956	cigien	ranking-ubezpieczen-na-zycie\.pl

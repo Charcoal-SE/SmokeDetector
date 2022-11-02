@@ -2706,3 +2706,4 @@ vissentials
 (?-i:yzyggl)(?#t.me)
 (?-i:yzyggl_7)(?#t.me)
 mailvita
+nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
