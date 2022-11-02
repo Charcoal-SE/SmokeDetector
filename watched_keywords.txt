@@ -44665,3 +44665,4 @@
 1667372737	tripleee	(?-i:^ssidrisi$)
 1667373016	tripleee	scrackpc\.com
 1667373397	tripleee	(?-i:^rashmikohli$)
+1667374849	tripleee	educart\.co
