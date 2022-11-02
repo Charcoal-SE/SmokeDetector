@@ -1411,9 +1411,6 @@ items:
   - gannon.ns.cloudflare.com.
   - linda.ns.cloudflare.com.
 - ns:
-  - gemma.ns.cloudflare.com.
-  - mcgrory.ns.cloudflare.com.
-- ns:
   - gene.ns.cloudflare.com.
   - graham.ns.cloudflare.com.
 - ns:

@@ -175,6 +175,9 @@ items:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
+  - gemma.ns.cloudflare.com.
+  - mcgrory.ns.cloudflare.com.
+- ns:
   - harleigh.ns.cloudflare.com.
   - jasper.ns.cloudflare.com.
 - ns:
