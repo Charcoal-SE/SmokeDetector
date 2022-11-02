@@ -44661,3 +44661,4 @@
 1667369557	tripleee	arisen[\W_]*+technologies
 1667369587	tripleee	arisen\.in
 1667369614	tripleee	arisen\.com
+1667371574	tripleee	squadinfotech\.in
