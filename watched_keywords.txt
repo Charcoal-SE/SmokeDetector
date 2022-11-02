@@ -42892,7 +42892,6 @@
 1662533567	Ryan M	topshealthinfo\.com
 1662534112	tripleee	sattamatkaz\.com
 1662535269	tripleee	mangools
-1662538152	tripleee	(?-i:^Muhammad Saeed$)
 1662541332	tripleee	expatmedicare\.com
 1662541728	tripleee	humanverificationtiktok\d*\.blogspot
 1662541754	tripleee	(?-i:7Ck7cN4)(?# cutt.ly)
