@@ -44670,3 +44670,4 @@
 1667389978	tripleee	propezh\.ir
 1667390017	tripleee	wordle-score-calc\.herokuapp\.com
 1667403586	tripleee	acortar\.link
+1667403654	tripleee	xunta\.gal
