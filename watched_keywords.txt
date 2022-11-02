@@ -44656,3 +44656,4 @@
 1667324611	cigien	msm[\W_]*+unify(?!\.com(?<=msmunify\.com))
 1667328568	Jeff Schaller	dragcityapk\.com
 1667362195	cigien	99tempmail\.com
+1667362217	cigien	99tempmail(?!\.com)
