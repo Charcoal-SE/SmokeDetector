@@ -146,6 +146,9 @@ items:
   - angela.ns.cloudflare.com.
 - ns:
   - albert.ns.cloudflare.com.
+  - dee.ns.cloudflare.com.
+- ns:
+  - albert.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - alberto.ns.cloudflare.com.
