@@ -44666,3 +44666,4 @@
 1667374849	tripleee	educart\.co
 1667377455	tripleee	autovehicleparts\.com
 1667379122	cigien	corewaysolution\.com
+1667379889	cigien	technicalproducts\.in
