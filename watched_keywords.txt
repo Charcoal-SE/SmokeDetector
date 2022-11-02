@@ -44655,7 +44655,6 @@
 1667328568	Jeff Schaller	dragcityapk\.com
 1667362195	cigien	99tempmail\.com
 1667362217	cigien	99tempmail(?!\.com)
-1667366427	cigien	streamingtip\.com
 1667367502	tripleee	first[\W_]*+fly[\W_]*+travel(?!\.com(<=firstflytravel\.com))
 1667367576	tripleee	cheap[\W_]*+fares[\W_]*+travel
 1667368415	tripleee	commercencommerce\.com
