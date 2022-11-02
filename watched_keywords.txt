@@ -44669,3 +44669,4 @@
 1667379889	cigien	technicalproducts\.in
 1667381819	tripleee	silver[\W_]*+x[\W_]*+technologies
 1667385847	cigien	qualityze\.com
+1667389978	tripleee	propezh\.ir
