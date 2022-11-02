@@ -918,9 +918,6 @@ items:
   - coleman.ns.cloudflare.com.
   - marjory.ns.cloudflare.com.
 - ns:
-  - coleman.ns.cloudflare.com.
-  - tegan.ns.cloudflare.com.
-- ns:
   - cora.ns.cloudflare.com.
   - jason.ns.cloudflare.com.
 - ns:
