@@ -44658,3 +44658,4 @@
 1667367502	tripleee	first[\W_]*+fly[\W_]*+travel(?!\.com(<=firstflytravel\.com))
 1667367576	tripleee	cheap[\W_]*+fares[\W_]*+travel
 1667368415	tripleee	commercencommerce\.com
+1667369557	tripleee	arisen[\W_]*+technologies
