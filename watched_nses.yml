@@ -1250,6 +1250,9 @@ items:
   - igor.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
+  - jim.ns.cloudflare.com.
+- ns:
+  - elinore.ns.cloudflare.com.
   - joel.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
