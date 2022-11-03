@@ -3223,7 +3223,9 @@ items:
 - ns: starsolarsavings.com.
 - ns: serverhost.name.
 - ns: yosif.xyz.
-- ns: bodis.com.
+- comment: 4/120 over 10 months 2022-11-03
+  disable: true
+  ns: bodis.com.
 - ns: shared-host.in.
 - comment: NXDOMAIN 2022-07-24
   disable: true
