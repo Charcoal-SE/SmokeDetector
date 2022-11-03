@@ -2027,6 +2027,9 @@ items:
   - roan.ns.cloudflare.com.
 - ns:
   - linda.ns.cloudflare.com.
+  - thomas.ns.cloudflare.com.
+- ns:
+  - linda.ns.cloudflare.com.
   - will.ns.cloudflare.com.
 - ns:
   - lindsey.ns.cloudflare.com.
