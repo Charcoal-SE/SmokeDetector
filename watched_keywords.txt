@@ -44701,3 +44701,4 @@
 1667473550	tripleee	unabis
 1667473682	tripleee	leather[\W_]*+outwears(?!\.com(?<=leather-outwears\.com))
 1667478053	Jeff Schaller	emilycarterutharap\.wixsite\.com
+1667481875	tripleee	ysk-books\.com
