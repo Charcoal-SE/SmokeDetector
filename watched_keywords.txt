@@ -21843,7 +21843,6 @@
 1597901174	tripleee	sitenetnews\.com
 1597905843	tripleee	(?-i:^kikko$)
 1597905901	tripleee	mp3\.studio
-1597906086	tripleee	img-converter\.com
 1597906114	tripleee	altipeakinternational\.com
 1597906137	tripleee	stratonelectricals\.com
 1597908039	tripleee	smtpman\.com
