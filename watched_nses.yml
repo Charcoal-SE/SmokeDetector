@@ -1318,6 +1318,9 @@ items:
   - joselyn.ns.cloudflare.com.
 - ns:
   - eric.ns.cloudflare.com.
+  - lisa.ns.cloudflare.com.
+- ns:
+  - eric.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
   - eric.ns.cloudflare.com.
