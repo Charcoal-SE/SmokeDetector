@@ -44693,3 +44693,4 @@
 1667462616	tripleee	electricwirescables\.com
 1667463719	tripleee	hygienelinks\.com
 1667463746	tripleee	hygiene[\W_]*+links(?!\.com(<=hygienelinks\.com))
+1667464573	cigien	ykmfence\.com
