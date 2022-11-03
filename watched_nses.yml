@@ -136,6 +136,9 @@ items:
   - megan.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
+  - nia.ns.cloudflare.com.
+- ns:
+  - ajay.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
   - alan.ns.cloudflare.com.
