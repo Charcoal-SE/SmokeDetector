@@ -9552,7 +9552,6 @@
 1559208269	Makyen	nbmrkosl\.blogerus\.com
 1559208287	Makyen	nbmrkosl(?!\.ampedpages\.com|\.fitnell\.com|\.isblog\.net|\.canariblogs\.com|\.blogerus\.com)
 1559209491	Makyen	buyflakka\.com
-1559209514	Erik the Outgolfer	emagia\.com
 1559211338	Makyen	coldhackerxxx(?:@gmail\.com)?
 1559213313	Makyen	contact-supportnumber\.com
 1559213766	doppelgreener	josaa2019\.in
