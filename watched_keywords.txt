@@ -44687,3 +44687,4 @@
 1667455846	cigien	2k75\.xyz
 1667456192	tripleee	(?-i:^amyshare$)
 1667457615	cigien	cocaine-forsale\.io
+1667460748	tripleee	(?-i:3FkQUtd)(?# bit.ly)
