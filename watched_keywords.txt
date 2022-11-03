@@ -39974,7 +39974,6 @@
 1655112885	tripleee	corporate[\W_]*+munim(?!\.com(?<=corporatemunim\.com))
 1655115738	Jeff Schaller	mumbaionlineflorists\.com
 1655120380	tripleee	waitmoon\.com
-1655120963	tripleee	simplilearn\.com
 1655121052	tripleee	rubixcam\.ir
 1655120796	tripleee	new[\W_]*+troll
 1655121498	tripleee	lexntax\.com
