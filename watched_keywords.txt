@@ -44696,3 +44696,4 @@
 1667467039	cigien	711casino[\W_]*+net
 1667470903	Jeff Schaller	sleepingassist\.com
 1667470927	Jeff Schaller	sysfix\.co\.uk
+1667471455	Jeff Schaller	itarsia\.in
