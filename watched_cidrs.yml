@@ -880,7 +880,9 @@ items:
 - comment: oddly, removed completely; disabled 2022-10-04
   disable: true
   ip: 104.26.12.155
-- ip: 104.26.12.156
+- comment: mostly FP 2022-11-03
+  disable: true
+  ip: 104.26.12.156
 - ip: 104.26.12.217
 - ip: 104.26.12.227
 - ip: 104.26.12.234
@@ -897,7 +899,9 @@ items:
 - comment: disabled 2022-10-04
   disable: true
   ip: 104.26.13.155
-- ip: 104.26.13.156
+- comment: mostly FP 2022-11-03
+  disable: true
+  ip: 104.26.13.156
 - ip: 104.26.12.217
 - ip: 104.26.13.227
 - ip: 104.26.13.234
@@ -2644,7 +2648,9 @@ items:
 - ip: 172.67.68.78
 - ip: 172.67.68.81
 - ip: 172.67.68.98
-- ip: 172.67.69.165
+- comment: mostly FP 2022-11-03
+  disable: true
+  ip: 172.67.69.165
 - ip: 172.67.69.191
 - ip: 172.67.69.233
 - ip: 172.67.69.238
