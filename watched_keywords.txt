@@ -44700,3 +44700,4 @@
 1667473381	tripleee	silverxtech\.com
 1667473550	tripleee	unabis
 1667473682	tripleee	leather[\W_]*+outwears(?!\.com(?<=leather-outwears\.com))
+1667478053	Jeff Schaller	emilycarterutharap\.wixsite\.com
