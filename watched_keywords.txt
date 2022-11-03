@@ -44694,3 +44694,4 @@
 1667463746	tripleee	hygiene[\W_]*+links(?!\.com(<=hygienelinks\.com))
 1667464573	cigien	ykmfence\.com
 1667467039	cigien	711casino[\W_]*+net
+1667470903	Jeff Schaller	sleepingassist\.com
