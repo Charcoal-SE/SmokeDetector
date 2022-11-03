@@ -18,7 +18,9 @@ items:
 - ns:
   - abby.ns.cloudflare.com.
   - norman.ns.cloudflare.com.
-- ns:
+- comment: all FP 2022-11-03
+  disable: true
+  ns:
   - abby.ns.cloudflare.com.
   - ram.ns.cloudflare.com.
 - ns:
