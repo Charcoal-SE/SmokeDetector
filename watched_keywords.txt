@@ -44690,3 +44690,4 @@
 1667460748	tripleee	(?-i:3FkQUtd)(?# bit.ly)
 1667460957	tripleee	w3era\.com
 1667461110	tripleee	(?-i:^John Robert$)
+1667462616	tripleee	electricwirescables\.com
