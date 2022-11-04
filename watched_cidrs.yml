@@ -1255,8 +1255,12 @@ items:
 - ip: 104.31.95.238
 - ip: 104.31.95.251
 - ip: 104.31.95.3
-- ip: 104.75.163.11
-- ip: 104.75.163.41
+- comment: shared between www.unair.ac.id and www.geeksforgeeks.org /-:
+  disabled: true
+  ip: 104.75.163.11
+- comment: shared between www.unair.ac.id and www.geeksforgeeks.org /-:
+  disabled: true
+  ip: 104.75.163.41
 - ip: 107.141.158.137
 - ip: 107.154.154.86
 - ip: 107.154.161.186
