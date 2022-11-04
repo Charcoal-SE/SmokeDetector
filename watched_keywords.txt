@@ -44721,3 +44721,4 @@
 1667552787	Makyen	craftinence(?!\.com)
 1667552886	Makyen	un2slbar3s94
 1667554263	tripleee	miclient(?<=#miclient)
+1667554296	tripleee	(?-i:^sonam singh$)
