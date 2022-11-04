@@ -2262,6 +2262,9 @@ items:
   - nina.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
+  - nina.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
   - nora.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
