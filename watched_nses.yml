@@ -124,6 +124,9 @@ items:
   - rodney.ns.cloudflare.com.
 - ns:
   - aisha.ns.cloudflare.com.
+  - salvador.ns.cloudflare.com.
+- ns:
+  - aisha.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
