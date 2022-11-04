@@ -42378,7 +42378,6 @@
 1661458610	cigien	sastechvision\.in
 1661458764	Makyen	(?-i:PWrQ--6tRZ8)(?#youtu.be)
 1661461818	cigien	grouptable\.com
-1661489889	Makyen	stateoftheartnovelinflowtech\.blogspot
 1661490424	Cody Gray	reshawood\.com
 1661490449	Cody Gray	Burmese[\W_]*teak(?:[\W_]*wood)?
 1661491498	tripleee	(?-i:^Carlos Barrera$)
