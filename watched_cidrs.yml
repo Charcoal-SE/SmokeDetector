@@ -1255,10 +1255,10 @@ items:
 - ip: 104.31.95.238
 - ip: 104.31.95.251
 - ip: 104.31.95.3
-- comment: shared between www.unair.ac.id and www.geeksforgeeks.org /-:
+- comment: shared between www.unair.ac.id and www.geeksforgeeks.org
   disable: true
   ip: 104.75.163.11
-- comment: shared between www.unair.ac.id and www.geeksforgeeks.org /-:
+- comment: shared between www.unair.ac.id and www.geeksforgeeks.org
   disable: true
   ip: 104.75.163.41
 - ip: 107.141.158.137
