@@ -680,6 +680,9 @@ items:
   - brad.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
+  - brad.ns.cloudflare.com.
+  - paris.ns.cloudflare.com.
+- ns:
   - braelyn.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
