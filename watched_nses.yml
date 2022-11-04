@@ -55,6 +55,9 @@ items:
   - emily.ns.cloudflare.com.
 - ns:
   - addilyn.ns.cloudflare.com.
+  - kip.ns.cloudflare.com.
+- ns:
+  - addilyn.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
   - addyson.ns.cloudflare.com.
