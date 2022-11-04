@@ -44736,3 +44736,4 @@
 1667563841	tripleee	hiring9(?!\.com?)
 1667563889	tripleee	hiring9\.com
 1667564260	tripleee	ks-digital\.ch
+1667568124	tripleee	solutionsdesign\.tech
