@@ -44732,3 +44732,4 @@
 1667562665	tripleee	nagricoin\.io
 1667563551	tripleee	ujeb\.se
 1667563608	tripleee	button-maker\.net
+1667563653	tripleee	hiring9(?!\.co)
