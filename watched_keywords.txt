@@ -44722,3 +44722,4 @@
 1667552886	Makyen	un2slbar3s94
 1667554263	tripleee	miclient(?<=#miclient)
 1667554296	tripleee	(?-i:^sonam singh$)
+1667554535	cigien	utharaprint\.co\.uk
