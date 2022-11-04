@@ -35973,7 +35973,6 @@
 1644415061	Jeff Schaller	gexton\.com
 1644415759	cigien	(?-i:mRZf35tA1ebK4x1H7)(?#google forms)
 1644417217	cigien	kirillibrahim\.medium\.com
-1644421121	tripleee	infotreeit\.com
 1644421292	tripleee	(?-i:^Sakshi Mehta$)
 1644423645	tripleee	auto[\W_]*+mexico(?!\.com(?<=automexico\.com))
 1644425011	Spevacus	customui\.codes
