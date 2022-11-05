@@ -44743,3 +44743,4 @@
 1667617259	Makyen	jackielong082(?:@gmail\.com)?
 1667617290	Makyen	dolthub(?!\.com)
 1667621541	cigien	blogs\.makinfratek\.com
+1667623140	cigien	baduruzzaman(?:@gmail\.com)?
