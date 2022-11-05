@@ -44741,3 +44741,4 @@
 1667616467	Jeff Schaller	choilode\.online
 1667614484	Ethan	dolthub\.com
 1667617259	Makyen	jackielong082(?:@gmail\.com)?
+1667617290	Makyen	dolthub(?!\.com)
