@@ -44742,3 +44742,4 @@
 1667614484	Ethan	dolthub\.com
 1667617259	Makyen	jackielong082(?:@gmail\.com)?
 1667617290	Makyen	dolthub(?!\.com)
+1667621541	cigien	blogs\.makinfratek\.com
