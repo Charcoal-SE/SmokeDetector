@@ -44775,3 +44775,4 @@
 1667752736	Makyen	rykabalan
 1667754273	cigien	(?-i:Gmszya0eNbE)(?#youtu.be)
 1667754812	cigien	infooinsure\.com
+1667756239	Makyen	\A(?:<p>)?dudes?(?=.{21}+)
