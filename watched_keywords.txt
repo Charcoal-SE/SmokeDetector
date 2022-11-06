@@ -24596,6 +24596,7 @@
 1607440891	Zoe	h[0oøuüôöõ][l1][t7]\W*j[4aåà]cks[0oøuüôöõ]n
 1607441280	Zoe	sh[0oøuüôöõ]g{2,}9
 1607443656	Zoe	y(?:[0oøuüôöõ]{2}|[3eé]+)\W*kn[0oøuüôöõ]w\W*wh[0oøuüôöõ]'?\W*i?s?\W*(?:\_?/\W*|w)+r[1i]t[1i]ng?\W*it
+1607444254	Zoe	(?:\\_?\/\W*|w(?![^>]{0,39}+$)(?!\W++else\W++(?!y)))+[\.\W]*(?:[eé3]+\W*(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3]\W*.?|.{0,40}[a@]t?(?:\\_?\/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)+
 1607446410	Spevacus	pornmonde\.com
 1607456635	Spevacus	fontspool\.com
 1607494145	tripleee	hydromaxcaj\.com
