@@ -42666,7 +42666,7 @@
 1662058982	Makyen	recoverysolution1(?:@gmail\.com)?
 1662065136	Glorfindel	blog\.apilayer\.com
 1662070521	cigien	(?-i:2C6TjHyU3gU)(?#youtu.be)
-1662074766	Makyen	whats?[\W_]*+app(?!(?:[^<]|<(?!\/?code>))*+<\/code>)[\W_]*+.{0,160}?(?:\d[\W_]*+){4,}\d\w*+(?#a much narrower watch was added at 1651468866, 2022-05-01; when widened, 2022-09-01, was 2958 Total / 2816 TP, 95.2% TP / 125 FP / 23 NAA)
+1662074766	Makyen	w[\W_]*+h[\W_]*+a[\W_]*+t(?:[\W_]*+s)?[\W_]*+a[\W_]*+p(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+p)*+[\W_]*+.{0,160}?(?:\d[\W_]*+){4,}\d\w*+(?#a much narrower watch was added at 1651468866, 2022-05-01; when widened, 2022-09-01, was 2958 Total / 2816 TP, 95.2% TP / 125 FP / 23 NAA; additional obfuscation added on 1667755193, 2022-11-06, going from 3109 Total / 2900 TP 93.28% TP / 183 FP / 25 NAA to 3204 Total / 2990 TP 93.32% TP / 186 FP / 28 NAA)
 1662084664	Robert Longson	bankykalasm\.com
 1662084924	cigien	macrosafegates\.com
 1662096720	Makyen	labirdo\.software(?:@gmail\.com)?
