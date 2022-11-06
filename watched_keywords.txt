@@ -44767,3 +44767,4 @@
 1667679180	tripleee	testdepurete\.info
 1667709556	cigien	energymiser101\.com
 1667728310	tripleee	jnr[\W_]*+austin[\W_]*+bookkeeping
+1667733053	cigien	com\.xdev\.screen\.recorder
