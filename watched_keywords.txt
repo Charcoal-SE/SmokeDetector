@@ -44769,3 +44769,4 @@
 1667728310	tripleee	jnr[\W_]*+austin[\W_]*+bookkeeping
 1667733053	cigien	com\.xdev\.screen\.recorder
 1667733924	cigien	bloggertipsseotricks\.com
+1667744746	Makyen	animedao\.vc
