@@ -40877,7 +40877,6 @@
 1657650086	Makyen	eassistentin\.de
 1657661778	cocomac	sheikspells\.co\.za
 1657684210	cocomac	lucysworks\.com
-1657684218	cocomac	sanaigmore\.com
 1657685221	cocomac	seoindonesia\.co\.id
 1657685341	cocomac	Mustdial
 1657690446	cigien	stylusmarketing\.ca
