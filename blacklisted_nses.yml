@@ -193,6 +193,9 @@ items:
   - jeff.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - kay.ns.cloudflare.com.
+  - rob.ns.cloudflare.com.
+- ns:
   - kayleigh.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
