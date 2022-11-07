@@ -1420,7 +1420,10 @@ def ns_for_url_domain(s, site, nslist):
     for hostname in post_hosts(s, check_tld=True):
         if hostname in WHITELISTED_NS_HOSTNAMES:
             continue
-        domains.append(get_domain(hostname, full=True))
+        try:
+            domains.append(get_domain(hostname, full=True))
+        except ValueError:
+            continue
 
     for domain in set(domains):
         if domain in WHITELISTED_NS_HOSTNAMES:
