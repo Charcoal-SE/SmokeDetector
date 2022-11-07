@@ -894,6 +894,9 @@ items:
   - jack.ns.cloudflare.com.
 - ns:
   - cloe.ns.cloudflare.com.
+  - mario.ns.cloudflare.com.
+- ns:
+  - cloe.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
   - clyde.ns.cloudflare.com.
