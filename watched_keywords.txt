@@ -44798,3 +44798,4 @@
 1667825500	Jeff Schaller	trendytechnology\.online
 1667828128	Jeff Schaller	yuyyu\.com
 1667828814	tripleee	newtechaudit\.ru
+1667829376	tripleee	(?-i:^blah$)
