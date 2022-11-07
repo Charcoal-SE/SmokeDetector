@@ -44793,3 +44793,4 @@
 1667815937	tripleee	(?-i:^Kashish Verma$)
 1667816773	cigien	issbotleisureco\.com
 1667818577	cigien	recovercrypto\.org
+1667818860	cigien	qservicesit\.com
