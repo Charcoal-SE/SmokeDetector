@@ -44784,3 +44784,4 @@
 1667786849	Jeff Schaller	ssndob\.pro
 1667786884	Jeff Schaller	wt1shop\.net\.ru
 1667798315	cigien	vipexch365\.com
+1667798354	cigien	vipexch365(?!\.com)
