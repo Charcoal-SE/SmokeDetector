@@ -2805,6 +2805,9 @@ items:
   - cns3999.webhostbox.net.
   - cns4000.webhostbox.net.
 - ns:
+  - cns4007.webhostbox.net.
+  - cns4008.webhostbox.net.
+- ns:
   - rns15.webhostbox.net.
   - rns16.webhostbox.net.
 - ns:
