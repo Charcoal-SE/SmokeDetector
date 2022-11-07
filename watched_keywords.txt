@@ -41725,7 +41725,6 @@
 1659948934	Robert Longson	typsytown\.com
 1659952693	tripleee	geekyants\.com
 1659958637	tripleee	luumaluxury\.com
-1659959915	Jeff Schaller	Fluxactive
 1659960834	Jeff Schaller	agfarmindia\.com
 1659966538	Jeff Schaller	cajunencounters\.com
 1659967304	Makyen	agfarmindia(?!\.com)
