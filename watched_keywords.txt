@@ -44796,3 +44796,4 @@
 1667821300	tripleee	upstox
 1667822895	tripleee	zee5\.com
 1667825500	Jeff Schaller	trendytechnology\.online
+1667828128	Jeff Schaller	yuyyu\.com
