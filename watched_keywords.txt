@@ -44795,3 +44795,4 @@
 1667818577	cigien	recovercrypto\.org
 1667818860	cigien	qservicesit\.com
 1667821255	tripleee	quadraticformula\.us
+1667821300	tripleee	upstox
