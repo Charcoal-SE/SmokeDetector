@@ -1421,9 +1421,10 @@ def ns_for_url_domain(s, site, nslist):
         if hostname in WHITELISTED_NS_HOSTNAMES:
             continue
         try:
-            domains.append(get_domain(hostname, full=True))
+            domain_from_hostname = get_domain(hostname, full=True)
         except ValueError:
             continue
+        domains.append(domain_from_hostname)
 
     for domain in set(domains):
         if domain in WHITELISTED_NS_HOSTNAMES:
@@ -1472,8 +1473,12 @@ def ns_is_host(s, site):
         host_ip = dns_query(hostname, 'a')
         if host_ip is None:
             continue
+        try:
+            domain = get_domain(hostname, full=True)
+        except ValueError:
+            continue
         host_ips = set([str(x) for x in host_ip])
-        if host_ips and set(get_ns_ips(get_domain(hostname, full=True))) == host_ips:
+        if host_ips and set(get_ns_ips(domain)) == host_ips:
             return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
                 hostname, host_ips)
     return False, ''
@@ -1711,7 +1716,10 @@ def perform_similarity_checks(post, name):
 
     # Keep checking links until one is deemed "similar"
     for link in post_links(post):
-        domain = get_domain(link)
+        try:
+            domain = get_domain(link)
+        except ValueError:
+            continue
 
         # Straight comparison
         s1 = similar_ratio(domain, name)
