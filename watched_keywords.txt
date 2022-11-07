@@ -44778,3 +44778,4 @@
 1667756239	Makyen	\A(?:<p>)?dudes?(?=.{21}+)
 1667756239	Makyen	dude(?<=.{31}dude)s?[\W_]*+(?:\w++>)?(?:\s*+</?\w++>)*+\Z
 1667767226	Ollie	hkmbahsemar\.com
+1667786778	Jeff Schaller	flowcc\.top
