@@ -44813,3 +44813,4 @@
 1667895145	tripleee	softmeter\.blogspot
 1667895312	tripleee	voiceofsevensisters\.com
 1667895392	tripleee	sicheadphones\.com
+1667895425	tripleee	sicheadphones(?!\.com)
