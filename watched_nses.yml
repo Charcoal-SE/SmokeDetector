@@ -30,6 +30,9 @@ items:
   - abby.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
 - ns:
+  - achiel.ns.cloudflare.com.
+  - bristol.ns.cloudflare.com.
+- ns:
   - abdullah.ns.cloudflare.com.
   - malavika.ns.cloudflare.com.
 - ns:
