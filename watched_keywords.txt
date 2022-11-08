@@ -44808,3 +44808,4 @@
 1667887079	cocomac	lost[\W_]*+or[\W_]*+stolen[\W_]*+(?:bitcoin|crypto)
 1667888997	tripleee	(?-i:^Compliance Quest$)
 1667889043	tripleee	fda[\W_]*+21[\W_]*+cfr
+1667890191	cigien	lnkd\.in
