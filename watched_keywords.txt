@@ -44810,3 +44810,4 @@
 1667890191	cigien	lnkd\.in
 1667890217	cigien	(?-i:gzfwdMev)(?#lnkd.in)
 1667893916	cocomac	govtdebtrelief\.com
+1667895145	tripleee	softmeter\.blogspot
