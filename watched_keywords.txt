@@ -44839,3 +44839,4 @@
 1667936025	cigien	Dentitox[\W_]*+Pro
 1667941473	Robert Longson	summitcrew\.com
 1667945672	Ollie	(?-i:8vs38)(?# justpaste.it)
+1667948730	Ollie	jasper\.ai
