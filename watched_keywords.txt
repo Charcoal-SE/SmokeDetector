@@ -44825,3 +44825,4 @@
 1667902243	tripleee	iqratechnology\.com
 1667903940	cigien	theparlaykings\.com
 1667903973	cigien	theracingsharks\.com\.au
+1667904017	cigien	sportstips\.com
