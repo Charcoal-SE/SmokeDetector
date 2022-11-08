@@ -53,6 +53,7 @@ items:
 - asn: '32613'
 - asn: '32748'
 - asn: '33182'
+- asn: '34088'
 - asn: '34119'
   comment: 32/173 over a year
   disable: true
