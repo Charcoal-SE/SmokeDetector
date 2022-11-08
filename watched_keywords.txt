@@ -44806,3 +44806,4 @@
 1667886380	cigien	aldana
 1667887007	cigien	ludokingfun\.com
 1667887079	cocomac	lost[\W_]*+or[\W_]*+stolen[\W_]*+(?:bitcoin|crypto)
+1667888997	tripleee	(?-i:^Compliance Quest$)
