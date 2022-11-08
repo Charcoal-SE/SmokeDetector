@@ -1813,6 +1813,9 @@ items:
   - wally.ns.cloudflare.com.
 - ns:
   - jonah.ns.cloudflare.com.
+  - rachel.ns.cloudflare.com.
+- ns:
+  - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
   - jose.ns.cloudflare.com.
