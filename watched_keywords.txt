@@ -41180,7 +41180,6 @@
 1658561074	Robert Longson	webpulseindia\.com
 1658561145	Robert Longson	chavanhospitals\.co\.in
 1658561182	Robert Longson	considir\.com
-1658561395	Robert Longson	skedoc\.com
 1658583234	tripleee	techmindeds\.com
 1658585512	Jeff Schaller	games24x7\.com
 1658588945	cigien	(?-i:DKj26N)(?#fiverr)
