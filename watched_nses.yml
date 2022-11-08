@@ -649,7 +649,9 @@ items:
 - ns:
   - bob.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
-- ns:
+- comment: all FP 0/4 over 3 years 2022-11-08
+  disable: true
+  ns:
   - bob.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
 - ns:
