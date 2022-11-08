@@ -44829,3 +44829,4 @@
 1667904053	cigien	alanicglobal\.com
 1667906767	tripleee	awesomereviewsite\.com
 1667906803	tripleee	tanzaniaevisaonline\.com
+1667910000	tripleee	iqra[\W_]*+technology(?!\.com(?<=iqratechnology\.com))
