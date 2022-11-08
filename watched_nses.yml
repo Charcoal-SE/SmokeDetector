@@ -1608,6 +1608,9 @@ items:
   - hal.ns.cloudflare.com.
   - tia.ns.cloudflare.com.
 - ns:
+  - hank.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
   - heather.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
