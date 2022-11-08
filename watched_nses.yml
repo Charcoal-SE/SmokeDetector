@@ -2112,6 +2112,9 @@ items:
   - luciane.ns.cloudflare.com.
   - oswald.ns.cloudflare.com.
 - ns:
+  - luciane.ns.cloudflare.com.
+  - ricardo.ns.cloudflare.com.
+- ns:
   - luke.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
