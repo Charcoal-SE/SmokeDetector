@@ -3403,7 +3403,9 @@ items:
 - ns: trdns.com.
 - ns: dns-he.com.
 - ns: betalarb.com.
-- ns:
+- comment: 5/84 over one year (with some spillover from 4 years ago) 2022-11-09
+  disable: true
+  ns:
   - dns1.p08.nsone.net.
   - dns2.p08.nsone.net.
   - dns3.p08.nsone.net.
