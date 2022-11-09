@@ -41060,7 +41060,6 @@
 1658299351	cigien	skills[\W_]*+info
 1658300457	cigien	zevin\.ir
 1658303409	Mast	Shoviv[\W_]*+Exchange
-1658306227	Mast	jackbcarroll\.com
 1658307415	tripleee	(?-i:eGj2RS_SdPU)(?# youtube)
 1658310543	tripleee	moneyboxus\.com
 1658312119	tripleee	bonguides\.com
