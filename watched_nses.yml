@@ -1452,6 +1452,9 @@ items:
   - mary.ns.cloudflare.com.
 - ns:
   - gabe.ns.cloudflare.com.
+  - kim.ns.cloudflare.com.
+- ns:
+  - gabe.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
   - gabe.ns.cloudflare.com.
