@@ -2910,6 +2910,7 @@ items:
 - comment: github.io, massive FPs
   disable: true
   ip: 185.199.108.153
+- ip: 185.199.220.28
 - ip: 185.199.220.29
 - ip: 185.2.14.4
 - ip: 185.201.10.107
