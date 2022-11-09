@@ -44851,3 +44851,4 @@
 1667993698	tripleee	allmenuprices\.com
 1667993753	tripleee	nosware\.com
 1667993933	tripleee	sellbuyus\.com
+1667999088	tripleee	uniqmindz\.com
