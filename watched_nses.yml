@@ -271,6 +271,9 @@ items:
   - arturo.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
+  - decker.ns.cloudflare.com.
+- ns:
+  - amanda.ns.cloudflare.com.
   - garrett.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
