@@ -3976,7 +3976,7 @@ travismoviereviews\.blogspot
 happybelatedbirthdays\.com
 waptechs\.com
 123hpprinterssetup\.com
-sites\.google\.com/\w+/(?:id)?(?:\d{10,25}|\w*)/(?:\w+/)*\w+\?\w+=(?:\d{10,25}|\w*)
+sites\.google\.com/\w++/(?=\S*?download)(?:id)?(?:\d{10,25}|\w*)/(?:\w+/)*\w+\?\w+=(?:\d{10,25}|\w*)
 pulsehyip\.com
 unrivaledcandles\.com
 ccosplay\.com
