@@ -44889,3 +44889,4 @@
 1668086860	Jeff Schaller	afmsgroup\.com\.au
 1668091067	tripleee	(?-i:^Mayank Agarwal$)
 1668091892	tripleee	ironorrfitness\.com
+1668092559	tripleee	(?-i:^Lucy Jack$)
