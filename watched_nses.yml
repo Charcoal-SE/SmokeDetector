@@ -64,6 +64,9 @@ items:
   - mack.ns.cloudflare.com.
 - ns:
   - addyson.ns.cloudflare.com.
+  - byron.ns.cloudflare.com.
+- ns:
+  - addyson.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
