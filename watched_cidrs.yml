@@ -3589,6 +3589,7 @@ items:
 - comment: several high-profile sites, includig docs.gitlab.com and various gitlab.io
   disable: true
   ip: 35.185.44.232
+- ip: 35.193.23.85
 - ip: 35.193.41.128
 - ip: 35.193.45.201
 - ip: 35.197.227.153
