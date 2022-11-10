@@ -44891,3 +44891,4 @@
 1668091892	tripleee	ironorrfitness\.com
 1668092559	tripleee	(?-i:^Lucy Jack$)
 1668095982	tripleee	skatingplay\.com
+1668103076	cigien	go\.menjelajahi\.com
