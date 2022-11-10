@@ -39843,7 +39843,6 @@
 1654727896	Cody Gray	(?-i:Ethel[\W_]*Lair)
 1654734022	cigien	ylivetv\.com
 1654748135	Ryan M	8x\.com
-1654753517	cocomac	getmysites\.com
 1654755208	tripleee	bodybulk\.net
 1654757127	tripleee	thequick10\.com
 1654758249	tripleee	isharp[\W_]*+acad[ae]my(?<!(?-i:^isharp acadamy$))(?!\.in(?<=isharpacademy\.in))
