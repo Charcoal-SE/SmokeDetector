@@ -44874,3 +44874,4 @@
 1668065797	cigien	scottmillerphotography\.co\.uk
 1668065872	cigien	scott[\W_]*+miller[\W_]*+photography(?!\.co\.uk(?<=scottmillerphotography\.co\.uk))
 1668072028	tripleee	rurash
+1668072758	tripleee	sekaitoto
