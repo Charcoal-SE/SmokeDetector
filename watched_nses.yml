@@ -2054,6 +2054,9 @@ items:
   - leo.ns.cloudflare.com.
   - pearl.ns.cloudflare.com.
 - ns:
+  - leonard.ns.cloudflare.com.
+  - rayne.ns.cloudflare.com.
+- ns:
   - lex.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
 - ns:
