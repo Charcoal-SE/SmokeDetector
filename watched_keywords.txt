@@ -44872,3 +44872,4 @@
 1668062877	cigien	edmeds\.net
 1668063870	cigien	liebesbindungzauber\.com
 1668065797	cigien	scottmillerphotography\.co\.uk
+1668065872	cigien	scott[\W_]*+miller[\W_]*+photography(?!\.co\.uk(?<=scottmillerphotography\.co\.uk))
