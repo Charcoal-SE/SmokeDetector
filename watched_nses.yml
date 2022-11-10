@@ -1995,6 +1995,9 @@ items:
   - pete.ns.cloudflare.com.
 - ns:
   - lara.ns.cloudflare.com.
+  - rodney.ns.cloudflare.com.
+- ns:
+  - lara.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
   - lara.ns.cloudflare.com.
