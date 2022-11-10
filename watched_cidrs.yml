@@ -137,7 +137,9 @@ items:
 - ip: 104.17.114.180
 - ip: 104.17.115.180
 - ip: 104.17.161.73
-- ip: 104.17.46.19
+- comment: lots of FPs from www.businessbloomer.com 2022-09-10
+  disable: true
+  ip: 104.17.46.19
 - ip: 104.17.47.19
 - ip: 104.18.12.221
 - ip: 104.18.13.221
