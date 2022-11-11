@@ -44903,3 +44903,4 @@
 1668144833	cigien	i[\W_]*+threw[\W_]*+a
 1668145772	cigien	synerchii\.com
 1668146806	cigien	au[\W_]*+telecom(?!\.net(?<=autelecom\.net))
+1668147148	cigien	symflower\.com
