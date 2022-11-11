@@ -44911,3 +44911,4 @@
 1668154183	tripleee	vandan[\W_]*+steel
 1668154237	tripleee	chhajed[\W_]*+steel
 1668156051	tripleee	go[\W_]*+solar[\W_]*+go[\W_]*+green
+1668156232	cigien	AISecurius
