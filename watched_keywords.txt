@@ -44920,3 +44920,4 @@
 1668169041	cigien	phanmemmkt\.vn
 1668172374	cigien	(?:spyware)?[\W_]*+cybergal[\W_]*+com
 1668172594	cigien	aboutthenerd\.com
+1668172960	cigien	tutero\.com\.au
