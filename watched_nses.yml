@@ -515,9 +515,6 @@ items:
   - ashley.ns.cloudflare.com.
   - dan.ns.cloudflare.com.
 - ns:
-  - ashley.ns.cloudflare.com.
-  - lee.ns.cloudflare.com.
-- ns:
   - athena.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
