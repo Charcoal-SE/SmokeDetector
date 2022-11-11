@@ -44918,3 +44918,4 @@
 1668168147	cigien	eukessays\.co\.uk
 1668168827	cigien	riches\d*+(?:pg|all)\.com
 1668169041	cigien	phanmemmkt\.vn
+1668172374	cigien	(?:spyware)?[\W_]*+cybergal[\W_]*+com
