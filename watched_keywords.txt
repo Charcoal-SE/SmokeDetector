@@ -44910,3 +44910,4 @@
 1668154047	tripleee	abrexplate\.com
 1668154183	tripleee	vandan[\W_]*+steel
 1668154237	tripleee	chhajed[\W_]*+steel
+1668156051	tripleee	go[\W_]*+solar[\W_]*+go[\W_]*+green
