@@ -2540,6 +2540,9 @@ items:
   ns:
   - ns77.domaincontrol.com.
   - ns78.domaincontrol.com.
+- ns:
+  - pdns09.domaincontrol.com.
+  - pdns10.domaincontrol.com.
 - ns: supercloudapps.com.
 - comment: 64/169 over a year
   disable: true
