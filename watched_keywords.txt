@@ -25378,7 +25378,6 @@
 1610342532	cigien	samptelenergy\.com
 1610338349	Yatin	thuoctaydactri\.com
 1610246442	cigien	natur(?:e|al)[\W_]*+relief[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
-1610345397	tripleee	zigya\.com
 1610345730	Makyen	wedgatematrimony\.com
 1610347140	tripleee	topz\.edu\.vn
 1610348440	cigien	examsaway\.com
