@@ -44905,3 +44905,4 @@
 1668146806	cigien	au[\W_]*+telecom(?!\.net(?<=autelecom\.net))
 1668147148	cigien	symflower\.com
 1668147968	tripleee	(?-i:^eliceburg$)
+1668148778	Mast	hubex\.com\.au
