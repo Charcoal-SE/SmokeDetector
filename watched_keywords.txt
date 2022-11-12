@@ -44938,3 +44938,4 @@
 1668235268	cigien	mytv-store\.com
 1668235474	cigien	gaadifix\.in
 1668235505	cigien	gaadifix(?!\.in)
+1668242101	cigien	techcare\.vn
