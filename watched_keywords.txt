@@ -44926,3 +44926,4 @@
 1668184132	tripleee	moring[\W_]*+slim
 1668189757	Makyen	ufabet
 1668191967	Jeff Schaller	qbdataservice\.com
+1668213833	Makyen	nipt\.ne\.jp
