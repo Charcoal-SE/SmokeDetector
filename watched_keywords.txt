@@ -44958,3 +44958,4 @@
 1668352982	cigien	scrollsequence\.com
 1668353669	cigien	r3volution[\W_]*+ad[\W_]*+services(?!\.com(?<=r3volutionadservices\.com))
 1668354271	cigien	smartdatamodels\.org
+1668357811	cigien	Stetson[\W_]*+Bennett
