@@ -319,6 +319,9 @@ items:
   - damiete.ns.cloudflare.com.
 - ns:
   - amy.ns.cloudflare.com.
+  - ed.ns.cloudflare.com.
+- ns:
+  - amy.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
   - anastasia.ns.cloudflare.com.
