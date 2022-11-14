@@ -44962,3 +44962,4 @@
 1668398425	cigien	decorgenz\.com
 1668403250	cigien	iipopescu\.com
 1668404052	cigien	skywings\.co\.in
+1668404787	Makyen	decor[\W_]*+genz(?!\.com(?<=decorgenz\.com))\d*(?:@gmail\.com)?
