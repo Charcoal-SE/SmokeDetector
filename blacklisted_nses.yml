@@ -11,6 +11,9 @@ items:
   - ns1.md-99.bigrockservers.com.
   - ns2.md-99.bigrockservers.com.
 - ns:
+  - aarav.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
   - adam.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
