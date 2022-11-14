@@ -39757,7 +39757,6 @@
 1654576266	tripleee	myanimelist\.net
 1654577044	Nisse Engström	bulkbanknotes\.com
 1654578919	Ryan M	dlinkaplocal-setup\.net
-1654580569	Makyen	contactcustomer-service\.co
 1654580922	cigien	ncri\.com
 1654580987	cigien	sapmasters\.in
 1654581266	cigien	optnation(?!\.com)
