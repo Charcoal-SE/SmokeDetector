@@ -44974,3 +44974,4 @@
 1668417538	cigien	moto-x3m\.io
 1668417692	cigien	fandbrecipes\.com
 1668418248	tripleee	(?-i:^autelpilot036$)
+1668419761	cigien	pakkaoffer\.com
