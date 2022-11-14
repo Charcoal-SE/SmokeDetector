@@ -44967,3 +44967,4 @@
 1668408159	tripleee	360dissertations\.com\.my
 1668408510	tripleee	todaytechreview\.com
 1668409641	cocomac	learnshareit\.com
+1668413765	tripleee	vantos\.in
