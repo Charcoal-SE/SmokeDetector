@@ -1698,7 +1698,9 @@ items:
 - ip: 151.106.97.191
 - ip: 151.106.97.84
 - ip: 151.106.98.45
-- ip: 151.139.128.10
+- comment: dominantly FPs, 5/33 over a year 2022-11-14
+  disable: true
+  ip: 151.139.128.10
 - comment: dominantly FPs, 12/108 over 6 months 2022-04-21
   disable: true
   ip: 151.139.128.11
