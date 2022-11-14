@@ -1469,6 +1469,9 @@ items:
   - gail.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
+  - galilea.ns.cloudflare.com.
+  - max.ns.cloudflare.com.
+- ns:
   - gannon.ns.cloudflare.com.
   - linda.ns.cloudflare.com.
 - ns:
