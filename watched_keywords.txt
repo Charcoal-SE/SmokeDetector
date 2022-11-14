@@ -42383,7 +42383,6 @@
 1661508850	tripleee	walgreenlistens\.shop
 1661512099	Cody Gray	shahgitlearning\.blogspot
 1661514560	Cody Gray	edulled\.com
-1661514938	Cody Gray	thestonestudio\.in
 1661514961	Cody Gray	konark[\W_]*sun[\W_]*tea?mple
 1661515190	Jeff Schaller	templeofpermanenthealings
 1661516084	Cody Gray	xn--ergnzungenschweiz-sqb\.ch
