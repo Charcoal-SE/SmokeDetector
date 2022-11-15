@@ -44999,3 +44999,4 @@
 1668496656	cigien	janesvilleboudoir\.com
 1668496744	cigien	boudoirdarling\.com
 1668496768	cigien	napervilleboudoirphotos\.com
+1668497154	cigien	(?:hammond|fishers|racine|madison|kenosha|oakpark|bloomington|dekalb|waukegan|schaumburg|wheaton)boudoir\.com
