@@ -45016,3 +45016,4 @@
 1668513491	tripleee	kalashov(?# telegram)
 1668513856	tripleee	chiefactive\.com
 1668514054	tripleee	barcodelive\.org
+1668514951	cigien	barcodelive(?!\.org)
