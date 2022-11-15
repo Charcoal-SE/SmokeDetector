@@ -1547,7 +1547,9 @@ items:
 - comment: 4/40 over 8 months, no 1-weights 2022-11-10
   disable: true
   ip: 141.193.213.10
-- ip: 141.193.213.11
+- comment: 4/43 over 8 months, a few 1-weights but disabling for now 2022-11-15
+  disable: true
+  ip: 141.193.213.11
 - ip: 141.193.213.20
 - ip: 141.193.213.21
 - ip: 142.202.65.6
