@@ -45003,3 +45003,4 @@
 1668495545	cigien	rentez\.in
 1668495585	cigien	rentez(?!\.in)
 1668496656	cigien	janesvilleboudoir\.com
+1668496744	cigien	boudoirdarling\.com
