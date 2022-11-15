@@ -39414,7 +39414,6 @@
 1653648123	Cody Gray	plantmyseeds\.ie
 1653648132	Cody Gray	plant-my-seeds\.com
 1653648234	Cody Gray	(?-i:T5zGy\.jpg)(?# stack imgur)
-1653648488	tripleee	Ucchvas
 1653648518	Cody Gray	gotartwork\.com
 1653648744	Cody Gray	mutiara[\W_\d]{0,7}(?:brum|hoki)[\W_\d]{0,7}
 1653650723	tripleee	axpertadvisors\.com
