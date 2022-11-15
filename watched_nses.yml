@@ -2288,9 +2288,6 @@ items:
   - miles.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
-  - mira.ns.cloudflare.com.
-  - sergi.ns.cloudflare.com.
-- ns:
   - mitchell.ns.cloudflare.com.
   - nancy.ns.cloudflare.com.
 - ns:

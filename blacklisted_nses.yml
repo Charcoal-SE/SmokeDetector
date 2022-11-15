@@ -232,6 +232,9 @@ items:
   - millie.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
 - ns:
+  - mira.ns.cloudflare.com.
+  - sergi.ns.cloudflare.com.
+- ns:
   - mona.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
