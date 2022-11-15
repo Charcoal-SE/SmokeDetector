@@ -45000,3 +45000,4 @@
 1668488923	tripleee	kienvangvietnam\.com
 1668491056	tripleee	gamevki(?!\.com)
 1668495512	cigien	clippingpathcenter\.com
+1668495545	cigien	rentez\.in
