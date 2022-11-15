@@ -45001,3 +45001,4 @@
 1668497679	cigien	hhovel\.com
 1668497852	tripleee	syedhussain792(?# fiverr)
 1668498367	tripleee	ignissta(?!\.com)
+1668500530	tripleee	black[\W_]*+friday[\W_]*+2022
