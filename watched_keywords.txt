@@ -45001,3 +45001,4 @@
 1668491056	tripleee	gamevki(?!\.com)
 1668495512	cigien	clippingpathcenter\.com
 1668495545	cigien	rentez\.in
+1668495585	cigien	rentez(?!\.in)
