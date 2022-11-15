@@ -45007,3 +45007,4 @@
 1668508511	tripleee	diamondexch-cricketid\.com
 1668508537	tripleee	decimaltoascii\.com
 1668509146	tripleee	cheatcommands\.cc
+1668510660	tripleee	love-navigator\.ru
