@@ -44998,3 +44998,4 @@
 1668488162	tripleee	geniusconnect\.com
 1668488480	tripleee	geniusconnect(?!\.com)
 1668488923	tripleee	kienvangvietnam\.com
+1668491056	tripleee	gamevki(?!\.com)
