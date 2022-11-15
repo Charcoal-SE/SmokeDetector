@@ -45017,3 +45017,4 @@
 1668513856	tripleee	chiefactive\.com
 1668514054	tripleee	barcodelive\.org
 1668514951	cigien	barcodelive(?!\.org)
+1668515182	cigien	digiqt\.com
