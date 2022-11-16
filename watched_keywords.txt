@@ -45044,3 +45044,4 @@
 1668582576	tripleee	rambet[\W_]*+exchane?ge
 1668584857	tripleee	gmtasoftware\.com
 1668585569	cigien	gmta[\W_]*+software(?!\.com(?<=gmtasoftware\.com))
+1668586524	tripleee	yowhatsapp(?!\.org)
