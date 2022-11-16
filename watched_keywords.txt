@@ -45038,3 +45038,4 @@
 1668578716	tripleee	h[\W_]*+t[\W_]*+t[\W_]*+p[\W_]*+s[\W_]*+:[\W_]*+/[\W_]*+/[\W_]*+w[\W_]*+w[\W_]*+w[\W_]*+(?=.)(?<!https://www)
 1668578818	tripleee	(?-i:^Rachel Gomez$)
 1668579484	tripleee	hdmoviess300\.online
+1668581191	tripleee	(?-i:wCOfKbeKUuI)(?# youtube)
