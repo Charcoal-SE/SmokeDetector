@@ -45053,3 +45053,4 @@
 1668603312	tripleee	coin[\W_]*+beera(?!\.com(?<=coinbeera\.com))
 1668606264	Jeff Schaller	famavip\.com
 1668612196	Jeff Schaller	bitkeep\.com
+1668614478	Ollie	lighthouse-hosting\.com
