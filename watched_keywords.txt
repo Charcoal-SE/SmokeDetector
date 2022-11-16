@@ -22375,7 +22375,6 @@
 1599630552	Mast	allstardentalacademy\.com
 1599633278	tripleee	thewispy\.com
 1599635077	Makyen	dinneregg\.com
-1599637904	tripleee	futuremarketinsights\.com
 1599638188	tripleee	bixeltechnologies\.com
 1599585289	Dharman	(?-i:JaClA57ChVI)(?#YouTube)
 1599633644	Mast	thewispy(?!\.com)
