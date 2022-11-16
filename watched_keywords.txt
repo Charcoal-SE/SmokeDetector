@@ -42333,7 +42333,6 @@
 1661411259	tripleee	kaike\.vn
 1661411546	tripleee	karishye\.co
 1661412169	cocomac	cryptominering\.com
-1661412375	Cody Gray	deccanherald\.com
 1661414226	Cody Gray	apkwired(?!\.com)
 1661414258	Cody Gray	rohtasdigital\.com
 1661414284	Cody Gray	malloftoys\.com
