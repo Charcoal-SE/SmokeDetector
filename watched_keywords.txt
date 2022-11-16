@@ -45043,3 +45043,4 @@
 1668581690	tripleee	ping[\W_]*+call\d*(?!\.com(?<=pingcall\.com))
 1668582042	tripleee	phoenixed\.io
 1668582576	tripleee	rambet[\W_]*+exchane?ge
+1668584857	tripleee	gmtasoftware\.com
