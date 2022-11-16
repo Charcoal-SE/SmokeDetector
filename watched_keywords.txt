@@ -45040,3 +45040,4 @@
 1668579484	tripleee	hdmoviess300\.online
 1668581191	tripleee	(?-i:wCOfKbeKUuI)(?# youtube)
 1668581437	tripleee	santic\.com
+1668581470	tripleee	santic(?!\.com)
