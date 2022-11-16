@@ -45050,3 +45050,4 @@
 1668599921	tripleee	aradbranding\.com
 1668602590	Jeff Schaller	fineartcanvas\.com
 1668603282	tripleee	coinbeera\.com
+1668603312	tripleee	coin[\W_]*+beera(?!\.com(?<=coinbeera\.com))
