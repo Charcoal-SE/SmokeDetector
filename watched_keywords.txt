@@ -45057,3 +45057,4 @@
 1668614510	Ollie	endelon-hosting\.de
 1668614541	Ollie	jxelsw\.tk
 1668617905	Makyen	japanescortshub\.com
+1668617939	Makyen	japan[\W_]*+escorts[\W_]*+hub(?!\.com(?<=japanescortshub\.com))
