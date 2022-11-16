@@ -38291,7 +38291,6 @@
 1650604776	Suraj Rao	heartzfx\.com
 1650606658	tripleee	cornbreadhemp\.com
 1650607628	tripleee	etissimo\.de
-1650607656	tripleee	pingcall\.com
 1650607983	tripleee	renhotec\.com
 1650608021	tripleee	renhotec(?!\.com)
 1650608154	Ryan M	thewebboost\.com

@@ -4919,3 +4919,4 @@ thestonestudio\.in
 mix-bitcoin\.net
 pdflockunlock\.com
 fezibo\.com
+pingcall\.com
