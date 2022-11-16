@@ -2710,3 +2710,4 @@ nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
 Fluxactive
 fayed[\W_]*+hack(?:er)?
 Ucchvas
+dribrahimspellcaster(?:@gmail\.com)?
