@@ -45040,3 +45040,4 @@
 1668581191	tripleee	(?-i:wCOfKbeKUuI)(?# youtube)
 1668581437	tripleee	santic\.com
 1668581470	tripleee	santic(?!\.com)
+1668581690	tripleee	ping[\W_]*+call\d*(?!\.com(?<=pingcall\.com))
