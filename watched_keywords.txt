@@ -45059,3 +45059,4 @@
 1668617905	Makyen	japanescortshub\.com
 1668617939	Makyen	japan[\W_]*+escorts[\W_]*+hub(?!\.com(?<=japanescortshub\.com))
 1668617983	Makyen	sapporo[\W_]*+escorts
+1668618020	Makyen	fun88
