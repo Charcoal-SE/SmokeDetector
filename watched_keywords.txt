@@ -45064,3 +45064,4 @@
 1668620462	Jeff Schaller	sexypg1688\.com
 1668620785	cigien	sexypg1688(?!\.com)
 1668626866	cigien	arad[\W_]*+branding?+(?!\.com(?<=aradbranding\.com))
+1668626984	cigien	blazorplate\.net
