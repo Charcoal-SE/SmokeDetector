@@ -2711,3 +2711,4 @@ Fluxactive
 fayed[\W_]*+hack(?:er)?
 Ucchvas
 dribrahimspellcaster(?:@gmail\.com)?
+d(?:octo)?r[\W_]*+ibrahim

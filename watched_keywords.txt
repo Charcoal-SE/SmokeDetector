@@ -39472,7 +39472,6 @@
 1653786740	Nick	kio4\.com
 1653852274	Spevacus	uniqueaesthetics\.co\.uk
 1653852429	cocomac	jobiworld\.com
-1653866369	Makyen	d(?:octo)?r[\W_]*+ibrahim
 1653868008	cigien	wotlk\.gold
 1653868035	cigien	deucesandthediamondclub\.com
 1653869731	cigien	d(?:octo)?r[\W_]*+salato
