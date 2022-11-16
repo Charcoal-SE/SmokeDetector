@@ -721,3 +721,4 @@ meta kukel exchange
 (?-i:^Robot Flux$)
 (?-i:^sonam singh$)
 (?-i:^latest pills$)
+(?-i:^Twinkle Khatri$)

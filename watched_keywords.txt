@@ -32419,7 +32419,6 @@
 1632827834	tripleee	renyor\.com
 1632832049	Spevacus	endlesscontainerpool\.com
 1632832086	Spevacus	topcbdmart\.com
-1632832573	tripleee	(?-i:^Twinkle Khatri$)
 1632832743	tripleee	leolist
 1632832911	tripleee	(?-i:^Royal M Hotels and Resort$)
 1632832966	tripleee	ボンズ\.com
