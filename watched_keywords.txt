@@ -18541,7 +18541,6 @@
 1586830523	Makyen	print-labels\.net
 1586830550	Makyen	cup[\W_]*+seal[\W_]*+labels(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586837420	Makyen	apkrapido\.com
-1586837450	Makyen	yowhatsapp
 1586850384	JoErNanO	Flyus\.com
 1586851124	Makyen	loginjoker388\.com
 1586851153	Makyen	joker388\.rocks
