@@ -45066,3 +45066,4 @@
 1668626866	cigien	arad[\W_]*+branding?+(?!\.com(?<=aradbranding\.com))
 1668626984	cigien	blazorplate\.net
 1668629145	cigien	entrastyle\.com
+1668629870	Makyen	entrastyle(?!\.com)
