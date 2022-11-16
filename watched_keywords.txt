@@ -45045,3 +45045,4 @@
 1668584857	tripleee	gmtasoftware\.com
 1668585569	cigien	gmta[\W_]*+software(?!\.com(?<=gmtasoftware\.com))
 1668586524	tripleee	yowhatsapp(?!\.org)
+1668587545	tripleee	digitalspec\.net
