@@ -45036,3 +45036,4 @@
 1668577636	cigien	(?-i:LVrhPeUY7Vc)(?#youtube)
 1668578178	tripleee	dissertationrevision\.com
 1668578418	tripleee	(?-i:^Jiang Song$)
+1668578716	tripleee	h[\W_]*+t[\W_]*+t[\W_]*+p[\W_]*+s[\W_]*+:[\W_]*+/[\W_]*+/[\W_]*+w[\W_]*+w[\W_]*+w[\W_]*+(?=.)(?<!https://www)
