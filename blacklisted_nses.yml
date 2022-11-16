@@ -27,6 +27,9 @@ items:
   - ben.ns.cloudflare.com.
 - ns:
   - adrian.ns.cloudflare.com.
+  - kanye.ns.cloudflare.com.
+- ns:
+  - adrian.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
   - aiden.ns.cloudflare.com.
