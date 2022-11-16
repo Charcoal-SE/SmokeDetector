@@ -45035,3 +45035,4 @@
 1668577531	tripleee	hacker[\W_]*+wise[\W_]*+(?:at[\W_]*+)?g[\W_]*+mail[\W_]*+(?:dot[\W_]*+)?com
 1668577636	cigien	(?-i:LVrhPeUY7Vc)(?#youtube)
 1668578178	tripleee	dissertationrevision\.com
+1668578418	tripleee	(?-i:^Jiang Song$)
