@@ -45030,3 +45030,4 @@
 1668551913	Spevacus	suplementosmaisbaratos\.com\.br
 1668568603	Jeff Schaller	lifeatsoftwaretesting\.blogspot
 1668575962	cigien	dvdfab\.org
+1668576520	cigien	(?-i:1VQD1al5OBk)(?#youtube)
