@@ -45085,3 +45085,4 @@
 1668685254	cigien	(?-i:3gdBGMm)(?#bit.ly)
 1668686474	tripleee	yourspex\.com
 1668687379	tripleee	(?-i:^Anaya Singh$)
+1668689081	tripleee	sparkcurriculum\.org
