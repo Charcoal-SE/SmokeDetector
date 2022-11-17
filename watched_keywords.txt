@@ -45081,3 +45081,4 @@
 1668676975	tripleee	x8infinity(?!\.com)
 1668677171	tripleee	rockdata\.net
 1668677481	tripleee	(?-i:^redrock$)
+1668677602	tripleee	(?-i:^Halsayya$)
