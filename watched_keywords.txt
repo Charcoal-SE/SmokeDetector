@@ -45090,3 +45090,4 @@
 1668694760	tripleee	xoriant\.com
 1668695887	Ian Campbell	naturesrise\.com(?#suspicious post on Medical Sciences)
 1668697523	Jeff Schaller	seogurubd\.com
+1668699071	tripleee	ozgurbugun\.com
