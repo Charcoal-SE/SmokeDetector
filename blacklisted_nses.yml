@@ -202,6 +202,9 @@ items:
   - jeff.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - jeff.ns.cloudflare.com.
+  - sara.ns.cloudflare.com.
+- ns:
   - kay.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
