@@ -1151,6 +1151,9 @@ items:
   - lars.ns.cloudflare.com.
 - ns:
   - demi.ns.cloudflare.com.
+  - geraln.ns.cloudflare.com.
+- ns:
+  - demi.ns.cloudflare.com.
   - ivan.ns.cloudflare.com.
 - ns:
   - demi.ns.cloudflare.com.
