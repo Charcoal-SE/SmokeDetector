@@ -723,3 +723,4 @@ meta kukel exchange
 (?-i:^latest pills$)
 (?-i:^Twinkle Khatri$)
 (?-i:^giavlxd$)
+(?-i:^sameena sharifa$)
