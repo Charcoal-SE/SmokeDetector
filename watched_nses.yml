@@ -794,6 +794,9 @@ items:
   - melnicoff.ns.cloudflare.com.
 - ns:
   - carlane.ns.cloudflare.com.
+  - dimitris.ns.cloudflare.com.
+- ns:
+  - carlane.ns.cloudflare.com.
   - quentin.ns.cloudflare.com.
 - ns:
   - carol.ns.cloudflare.com.
