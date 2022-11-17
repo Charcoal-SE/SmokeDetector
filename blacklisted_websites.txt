@@ -4922,3 +4922,4 @@ fezibo\.com
 pingcall\.com
 deccanherald\.com
 futuremarketinsights\.com
+bconnect\.chat

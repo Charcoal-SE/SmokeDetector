@@ -44938,7 +44938,6 @@
 1668329497	tripleee	onlinetoolslab\.com
 1668345390	Jeff Schaller	60jrh\.top
 1668351232	Makyen	mightytravels(?!\.com)\w*
-1668351259	cigien	bconnect\.chat
 1668351930	cigien	lanierhacks@gmail\.com
 1668352682	cigien	milwaukeegutterguard\.com
 1668352853	cigien	agrometromart\.com
