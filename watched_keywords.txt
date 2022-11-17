@@ -45082,3 +45082,4 @@
 1668681219	tripleee	(?-i:^CCNA$)
 1668681243	tripleee	versionbay\.com
 1668682790	tripleee	okslides\.com
+1668685254	cigien	(?-i:3gdBGMm)(?#bit.ly)
