@@ -45076,3 +45076,4 @@
 1668675472	cigien	tehran-cabinet\.com
 1668676805	tripleee	sky[\W_]*+host\d*
 1668676878	tripleee	aliposwal\.wordpress\.com
+1668676914	tripleee	ali[\W_]*+poswal(?!\.wordpress\.com(?<=aliposwal\.wordpress\.com))
