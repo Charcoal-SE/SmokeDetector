@@ -45072,3 +45072,4 @@
 1668669843	tripleee	deserteveningsafari\.com
 1668672397	tripleee	mundrugstore\.net
 1668673631	cigien	desert[\W_]*+evening[\W_]*+safari(?!\.com(?<=deserteveningsafari\.com))
+1668674312	cigien	selectiver\.pl
