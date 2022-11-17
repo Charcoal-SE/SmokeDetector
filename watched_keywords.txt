@@ -45069,3 +45069,4 @@
 1668629870	Makyen	entrastyle(?!\.com)
 1668637898	Jeff Schaller	embtelsolutions\.com
 1668660680	cigien	760creditsepecialist(?:@gmail\.com)?
+1668666700	cigien	sigbl\.com
