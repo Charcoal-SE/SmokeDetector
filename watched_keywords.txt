@@ -45087,3 +45087,4 @@
 1668687379	tripleee	(?-i:^Anaya Singh$)
 1668689081	tripleee	sparkcurriculum\.org
 1668689442	tripleee	(?<=<!--\n)(?P<gostamp>\d\d\d{1,2}[ap]m)\n(?P=gostamp)(?=\n-->\n)
+1668689748	Jeff Schaller	thinkmortgage\.com\.au
