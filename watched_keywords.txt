@@ -45078,3 +45078,4 @@
 1668676878	tripleee	aliposwal\.wordpress\.com
 1668676914	tripleee	ali[\W_]*+poswal(?!\.wordpress\.com(?<=aliposwal\.wordpress\.com))
 1668676944	tripleee	x8infinity\.com
+1668676975	tripleee	x8infinity(?!\.com)
