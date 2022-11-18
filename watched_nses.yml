@@ -244,6 +244,9 @@ items:
   - weston.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - augustus.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - bob.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
