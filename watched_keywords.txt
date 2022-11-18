@@ -45109,3 +45109,4 @@
 1668766687	tripleee	growbizz(?!\.net)(?<!(?-i:^growbizz$))
 1668768685	tripleee	3cx\.us
 1668768980	tripleee	mysupportly
+1668770010	tripleee	fakaza
