@@ -967,6 +967,9 @@ items:
   - coleman.ns.cloudflare.com.
   - marjory.ns.cloudflare.com.
 - ns:
+  - conrad.ns.cloudflare.com.
+  - galilea.ns.cloudflare.com.
+- ns:
   - cora.ns.cloudflare.com.
   - jason.ns.cloudflare.com.
 - ns:
