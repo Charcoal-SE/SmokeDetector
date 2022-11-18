@@ -45106,3 +45106,4 @@
 1668758227	tripleee	best-yoriyoi\.com
 1668758916	tripleee	piwi247\.com
 1668760883	tripleee	chuby[\W_]*+great
+1668766687	tripleee	growbizz(?!\.net)(?<!(?-i:^growbizz$))
