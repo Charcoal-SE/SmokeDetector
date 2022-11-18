@@ -42832,7 +42832,6 @@
 1662463860	cigien	sharepoint\.asia
 1662465241	Jeff Schaller	acorns-logi\.com
 1662465294	cigien	growbizz\.net
-1662465331	cigien	growbizz(?!\.net)
 1662465828	cigien	techusall\.com
 1662466931	tripleee	axiscolleges\.org
 1662467193	tripleee	axis[\W_]*+colleges(?!\.org(?<=axiscolleges\.org))
