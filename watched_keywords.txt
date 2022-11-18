@@ -40646,7 +40646,6 @@
 1657018113	Jeff Schaller	favouritetable\.com
 1657019748	Ryan M	vardenafil
 1657019966	Ryan M	lifesavingrx(?!\.com)
-1657020101	Ryan M	vilitra(?<!buy[\W_]*+vilitra)
 1657024245	Jeff Schaller	usupdates\.com
 1657025760	Spevacus	bedsvalue\.com
 1657034484	Ollie	sowravdigital
