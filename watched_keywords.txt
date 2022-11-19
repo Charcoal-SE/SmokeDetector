@@ -45135,3 +45135,4 @@
 1668838571	cigien	printangles\.com
 1668848126	cigien	biblezone\.in
 1668849823	cigien	(?:mader|bhen)chod
+1668852402	tripleee	jigsawabacus\.com
