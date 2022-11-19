@@ -45142,3 +45142,4 @@
 1668866639	cigien	naveenkaulwar\.blogspot
 1668866720	cigien	mommed[\W_]*+com
 1668873692	Makyen	eruditesonline\.com
+1668873781	Makyen	healthline\.com
