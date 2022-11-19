@@ -45143,3 +45143,4 @@
 1668866720	cigien	mommed[\W_]*+com
 1668873692	Makyen	eruditesonline\.com
 1668873781	Makyen	healthline\.com
+1668876509	cigien	minimilitiamodapk\.net
