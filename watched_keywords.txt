@@ -37742,7 +37742,6 @@
 1649132926	tripleee	chrisbocay\.com
 1649135266	tripleee	boostfansonline\.com
 1649139403	tripleee	masswinery\.com
-1649139425	tripleee	wegento\.com
 1649139815	tripleee	freelancingnetwork\.org
 1649142811	tripleee	topreview\.live
 1649143086	Ryan M	irancompressor\.com
