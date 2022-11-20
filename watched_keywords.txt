@@ -45152,3 +45152,4 @@
 1668937075	Makyen	breakmyth\.com
 1668939311	tripleee	calculatorspro\.com
 1668951768	cigien	jonotarsongram\.ga
+1668951814	cigien	daily5xprofits(?#s.id)
