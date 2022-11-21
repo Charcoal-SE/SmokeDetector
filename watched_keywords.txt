@@ -45192,3 +45192,4 @@
 1669019756	tripleee	woodburningstovesshop\.co\.uk
 1669020776	tripleee	foralldirectory\.com
 1669022654	tripleee	plasticssource\.ca
+1669022994	tripleee	(?-i:^panghu Li$)
