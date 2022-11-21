@@ -726,3 +726,4 @@ meta kukel exchange
 (?-i:^sameena sharifa$)
 (?-i:^AradBranding$)
 (?-i:^growbizz$)
+(?-i:^Jay Restivo$)
