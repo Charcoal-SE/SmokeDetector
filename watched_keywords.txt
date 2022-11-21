@@ -45195,3 +45195,4 @@
 1669022994	tripleee	(?-i:^panghu Li$)
 1669023185	tripleee	erdoganderi\.com
 1669023305	tripleee	erdo(?:g|ğ)an[\W_]*+der(?:İ|i|ı)(?!\.com(?<=erdoganderi\.com))
+1669023332	tripleee	laetoto\.live
