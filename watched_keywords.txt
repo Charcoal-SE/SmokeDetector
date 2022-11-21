@@ -45197,3 +45197,4 @@
 1669025267	tripleee	(?-i:Rachel Gomez(?<!^Rachel Gomez$))
 1669028548	tripleee	uspstrackingnumber\.co
 1669028710	tripleee	bankruptcy-lawyers-near
+1669031686	tripleee	ufkpharm\.com
