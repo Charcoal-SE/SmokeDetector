@@ -45204,3 +45204,4 @@
 1669039271	cigien	betfare247\.com
 1669039302	cigien	betfare247(?!\.com)
 1669040610	cigien	scaler\.com
+1669041578	cigien	mahendra[\W_]*+homes(?!\.com(?<=mahendrahomes\.com))
