@@ -45172,3 +45172,4 @@
 1669008747	tripleee	(?-i:^Pxin Protector$)
 1669008781	tripleee	steadfastnutrition\.in
 1669010128	tripleee	aamad\.org
+1669010192	tripleee	yesassistant\.com
