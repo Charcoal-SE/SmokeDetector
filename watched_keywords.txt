@@ -45190,3 +45190,4 @@
 1669018077	tripleee	(?-i:^Verified Answer$)
 1669018734	tripleee	gsquarewebtech\.com
 1669019756	tripleee	woodburningstovesshop\.co\.uk
+1669020776	tripleee	foralldirectory\.com
