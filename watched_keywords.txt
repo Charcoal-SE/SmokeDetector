@@ -45182,3 +45182,4 @@
 1669014437	tripleee	media[\W_]*+ad[\W_]*+network
 1669014735	tripleee	montgomeryelec\.com
 1669016318	cocomac	2quickauto\.com
+1669017561	tripleee	mechtex\.com
