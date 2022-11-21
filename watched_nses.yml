@@ -2384,6 +2384,9 @@ items:
   - paityn.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
+  - pam.ns.cloudflare.com.
+  - thomas.ns.cloudflare.com.
+- ns:
   - pat.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
