@@ -45170,3 +45170,4 @@
 1669005152	tripleee	vajra\.ai
 1669007930	tripleee	ricksimpsonoil\.com
 1669008747	tripleee	(?-i:^Pxin Protector$)
+1669008781	tripleee	steadfastnutrition\.in
