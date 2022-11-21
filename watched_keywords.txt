@@ -45175,3 +45175,4 @@
 1669010192	tripleee	yesassistant\.com
 1669010883	tripleee	(?-i:YV0ozCt-4gs)(?# youtube)
 1669012608	tripleee	kingtruckandtrailerrepair\.com
+1669012635	tripleee	unitedcanadainc\.com
