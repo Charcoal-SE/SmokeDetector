@@ -228,6 +228,9 @@ items:
   - ali.ns.cloudflare.com.
   - gerald.ns.cloudflare.com.
 - ns:
+  - ali.ns.cloudflare.com.
+  - luke.ns.cloudflare.com.
+- ns:
   - alice.ns.cloudflare.com.
   - beau.ns.cloudflare.com.
 - ns:
