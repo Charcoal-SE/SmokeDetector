@@ -1976,6 +1976,9 @@ items:
   - kianchau.ns.cloudflare.com.
   - tara.ns.cloudflare.com.
 - ns:
+  - kiki.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
+- ns:
   - kim.ns.cloudflare.com.
   - micah.ns.cloudflare.com.
 - ns:
