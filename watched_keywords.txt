@@ -45196,3 +45196,4 @@
 1669023332	tripleee	laetoto\.live
 1669025267	tripleee	(?-i:Rachel Gomez(?<!^Rachel Gomez$))
 1669028548	tripleee	uspstrackingnumber\.co
+1669028710	tripleee	bankruptcy-lawyers-near
