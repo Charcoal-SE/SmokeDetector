@@ -45187,3 +45187,4 @@
 1669017742	tripleee	buymodafinilus\.com
 1669017772	tripleee	99magento\.com
 1669017812	tripleee	desireworld\.in
+1669018077	tripleee	(?-i:^Verified Answer$)
