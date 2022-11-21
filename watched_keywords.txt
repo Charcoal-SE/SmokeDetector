@@ -45178,3 +45178,4 @@
 1669012635	tripleee	unitedcanadainc\.com
 1669013369	tripleee	mahendrahomes\.com
 1669013703	tripleee	7[\W_]*+search[\W_]ppc(?!\.com(?<=7searchppc\.com))
+1669014417	cocomac	acadestudio\.com
