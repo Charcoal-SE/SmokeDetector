@@ -45184,3 +45184,4 @@
 1669016318	cocomac	2quickauto\.com
 1669017561	tripleee	mechtex\.com
 1669017586	tripleee	gps[\W_]*+computer[\W_]*+academy
+1669017742	tripleee	buymodafinilus\.com
