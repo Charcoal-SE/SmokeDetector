@@ -213,6 +213,9 @@ items:
   - alfred.ns.cloudflare.com.
   - zariyah.ns.cloudflare.com.
 - ns:
+  - algin.ns.cloudflare.com.
+  - lola.ns.cloudflare.com.
+- ns:
   - ali.ns.cloudflare.com.
   - boyd.ns.cloudflare.com.
 - ns:
