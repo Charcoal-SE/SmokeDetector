@@ -2333,6 +2333,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - nick.ns.cloudflare.com.
+  - nelly.ns.cloudflare.com.
+- ns:
   - nicolas.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
