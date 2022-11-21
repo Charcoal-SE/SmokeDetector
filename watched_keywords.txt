@@ -45168,3 +45168,4 @@
 1668998670	cocomac	stringsio\.com
 1669004932	tripleee	insigniacollege\.com
 1669005152	tripleee	vajra\.ai
+1669007930	tripleee	ricksimpsonoil\.com
