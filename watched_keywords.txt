@@ -45219,3 +45219,4 @@
 1669094885	tripleee	ramada[\W_]*+gurgaon[\W_]*+central\d*
 1669097755	tripleee	brainalyst\.in
 1669099553	tripleee	primedaycare\.com
+1669099814	tripleee	(?-i:^sai$)
