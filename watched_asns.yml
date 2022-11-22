@@ -99,6 +99,7 @@ items:
 - asn: '54290'
   comment: 22/58 over a year
   disable: true
+- asn: '54600'
 - asn: '55002'
   comment: 11/100 over a yeasr
   disable: true
