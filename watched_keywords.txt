@@ -45215,3 +45215,4 @@
 1669091310	Makyen	bocavietnam\.com\.vn
 1669094170	cigien	mclinestudios\.com
 1669094211	cigien	mcline[\W_]*+studios(?!\.com(?<=mclinestudios\.com))
+1669094470	cigien	leadforcareer\.com
