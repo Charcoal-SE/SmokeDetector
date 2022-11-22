@@ -45223,3 +45223,4 @@
 1669100072	tripleee	awesomeawnings\.co\.nz
 1669102555	tripleee	abcstructure4u\.co\.uk
 1669102582	tripleee	abc[\W_]*+structure[\W_]*+4[\W_]*+u(?!\.co\.uk(?<=abcstructure4u\.co\.uk))
+1669102964	tripleee	creditcares\.in
