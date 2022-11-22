@@ -45225,3 +45225,4 @@
 1669102964	tripleee	creditcares\.in
 1669103020	tripleee	datapatrons\.com
 1669103042	tripleee	aticoexport\.com
+1669104185	tripleee	(?-i:^Ghulam Hassan$)
