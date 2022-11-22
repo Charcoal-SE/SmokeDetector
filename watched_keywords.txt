@@ -45209,3 +45209,4 @@
 1669049910	cigien	calculadorapp\.com
 1669061221	Makyen	metaworkhouse\.com
 1669061242	Makyen	meta[\W_]*+workhouse(?!\.com(?<=metaworkhouse\.com))
+1669088072	cigien	wunderkiddy\.com
