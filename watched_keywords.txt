@@ -45235,3 +45235,4 @@
 1669114863	cigien	cracklot\.com
 1669115106	cigien	us\.essayassistant\.org
 1669115317	cigien	hafeezcenterlhr\.com
+1669115494	cigien	atico[\W_]*+export(?!\.com(?<=aticoexport\.com))
