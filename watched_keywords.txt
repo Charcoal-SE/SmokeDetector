@@ -45216,3 +45216,4 @@
 1669094170	cigien	mclinestudios\.com
 1669094211	cigien	mcline[\W_]*+studios(?!\.com(?<=mclinestudios\.com))
 1669094470	cigien	leadforcareer\.com
+1669094885	tripleee	ramada[\W_]*+gurgaon[\W_]*+central\d*
