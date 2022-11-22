@@ -45237,3 +45237,4 @@
 1669115317	cigien	hafeezcenterlhr\.com
 1669115494	cigien	atico[\W_]*+export(?!\.com(?<=aticoexport\.com))
 1669119161	Jeff Schaller	neticlimo\.com
+1669119681	tripleee	(?-i:^Sanchayan Roy$)
