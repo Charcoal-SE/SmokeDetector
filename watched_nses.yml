@@ -653,6 +653,9 @@ items:
   - bjorn.ns.cloudflare.com.
   - novalee.ns.cloudflare.com.
 - ns:
+  - blair.ns.cloudflare.com.
+  - simon.ns.cloudflare.com.
+- ns:
   - blakely.ns.cloudflare.com.
   - roan.ns.cloudflare.com.
 - ns:
