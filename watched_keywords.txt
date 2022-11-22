@@ -45238,3 +45238,4 @@
 1669115494	cigien	atico[\W_]*+export(?!\.com(?<=aticoexport\.com))
 1669119161	Jeff Schaller	neticlimo\.com
 1669119681	tripleee	(?-i:^Sanchayan Roy$)
+1669122733	Jeff Schaller	tuskertrailcoorg\.com
