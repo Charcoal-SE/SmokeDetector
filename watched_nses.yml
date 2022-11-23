@@ -1344,6 +1344,9 @@ items:
   - elliot.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - elle.ns.cloudflare.com.
+  - kirk.ns.cloudflare.com.
+- ns:
   - elly.ns.cloudflare.com.
   - remy.ns.cloudflare.com.
 - ns:
