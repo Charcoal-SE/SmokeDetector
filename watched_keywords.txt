@@ -45274,3 +45274,4 @@
 1669197524	cigien	silicophilic\.com
 1669199471	cigien	flipars\.com
 1669199600	tripleee	brandmarkt\.store
+1669199764	cigien	brandmarkt(?!\.store)
