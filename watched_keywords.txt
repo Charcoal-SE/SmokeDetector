@@ -45257,3 +45257,4 @@
 1669182258	tripleee	mccombssupply\.com
 1669183205	tripleee	applianceparts365\.com
 1669186490	tripleee	azfintech\.co
+1669186523	tripleee	azfintech(?!\.co)
