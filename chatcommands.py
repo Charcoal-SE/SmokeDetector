@@ -35,6 +35,7 @@ from classes.feedback import *
 from classes.dns import dns_resolve
 from tasks import Tasks
 import dns.resolver
+from dns.exception import DNSException
 import number_homoglyphs
 import phone_numbers
 
@@ -2702,20 +2703,56 @@ def autoflagged(msg):
         return "That post was **not** automatically flagged by metasmoke."
 
 
+def dns_command(domain, qtype=['A', 'AAAA']):
+    """
+    Internal workhorse for dns commands
+
+    Runs a DNS query using pydns and returns the results.
+    :param domain: the domain to get DNS records for
+    :param qtype: query type(s), list of strings, defaults to ["A", "AAAA"]
+    :return: A comma-separated string of results
+    """
+    try:
+        results = dns_resolve(domain, qtype)
+        if results:
+            return ", ".join(sorted(results))
+        else:
+            return "No data found."
+    except DNSException as exc:
+        return "DNS exception: %s" % str(exc)
+
+
 # noinspection PyMissingTypeHints
 @command(str, privileged=True)
 def dig(domain):
     """
-    Runs a DNS query using pydns and returns the
-    list of A and AAAA records as output.
+    Runs a DNS query using pydns and returns the A and AAAA query results.
     :param domain: the domain to get DNS records for
-    :return: A comma-separated string of IPs
+    :return: A string response to the user.
     """
-    results = dns_resolve(domain)
-    if results:
-        return ", ".join(result for result in results)
-    else:
-        return "No data found."
+    return dns_command(domain)
+
+
+# noinspection PyMissingTypeHints
+@command(str, privileged=True)
+def ns(domain):
+    """
+    Runs a DNS query using pydns and returns the NS query results.
+    :param domain: the domain to get DNS records for
+    :return: A string response to the user.
+    """
+    return dns_command(domain, ['NS'])
+
+
+# noinspection PyMissingTypeHints
+@command(str, privileged=True)
+def soa(domain):
+    """
+    Runs a DNS query using pydns and returns the SOA query results.
+    :param domain: the domain to get DNS records for
+    :return: A string response to the user.
+    """
+    return dns_command(domain, ['SOA'])
 
 
 @command(str, privileged=True)
