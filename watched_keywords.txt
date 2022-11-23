@@ -45262,3 +45262,4 @@
 1669188984	tripleee	prohperty\.com
 1669189009	tripleee	textreme\.app
 1669189105	tripleee	saphnix[\W_]*+life[\W_]*+sciences(?!\.com(?<=saphnixlifesciences\.com))
+1669193979	tripleee	canonprintersupportpro\.us
