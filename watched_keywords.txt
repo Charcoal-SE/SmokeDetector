@@ -41828,7 +41828,6 @@
 1660326984	cigien	pharmacymedsonline\.com(?# Found in profile of user posting very low quality answers across network)
 1660329622	cigien	dappcreators(?#telegram)
 1660334738	Ollie	weiy\.city
-1660364405	cocomac	theglobalreviews\.com
 1660368522	Cody Gray	quickwp\.net
 1660368544	Cody Gray	website1\.ir
 1660372533	cocomac	ytin1s\.com
