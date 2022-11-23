@@ -3081,6 +3081,7 @@ items:
 - comment: 1/3 over 4 months, disabled 2022-10-07
   disable: true
   ip: 192.124.249.55
+- ip: 192.124.249.83
 - ip: 192.124.249.87
 - ip: 192.124.249.9
 - ip: 192.129.167.178
