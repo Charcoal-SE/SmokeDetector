@@ -45254,3 +45254,4 @@
 1669182063	tripleee	(?-i:yxqkWwSyGEk)(?# youtube)
 1669182101	tripleee	jcpenneykiosk\.review
 1669182131	tripleee	jcpenneykiosk(?!\.review)
+1669182236	tripleee	partsofcanada\.com
