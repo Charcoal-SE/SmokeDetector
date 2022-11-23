@@ -45255,3 +45255,4 @@
 1669182101	tripleee	jcpenneykiosk\.review
 1669182131	tripleee	jcpenneykiosk(?!\.review)
 1669182236	tripleee	partsofcanada\.com
+1669182258	tripleee	mccombssupply\.com
