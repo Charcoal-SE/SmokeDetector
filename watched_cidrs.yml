@@ -1576,7 +1576,9 @@ items:
 - comment: 4/43 over 8 months, a few 1-weights but disabling for now 2022-11-15
   disable: true
   ip: 141.193.213.11
-- ip: 141.193.213.20
+- comment: 5/85 over 8 months, only one 1-weight 2022-11-23
+  disable: true
+  ip: 141.193.213.20
 - ip: 141.193.213.21
 - ip: 142.202.65.6
 - comment: mostly FP, mainly developer sites
