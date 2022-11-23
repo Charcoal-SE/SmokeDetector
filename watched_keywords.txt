@@ -45276,3 +45276,4 @@
 1669199600	tripleee	brandmarkt\.store
 1669199764	cigien	brandmarkt(?!\.store)
 1669199880	cigien	warith[\W_]*+akbar
+1669200190	cigien	careers\.novopay\.in
