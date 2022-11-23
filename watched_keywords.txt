@@ -45252,3 +45252,4 @@
 1669177207	tripleee	vtech[\W_]*+solution(?!\.com(?<=vtechsolution\.com))
 1669179195	cigien	v2cloud\.com
 1669182063	tripleee	(?-i:yxqkWwSyGEk)(?# youtube)
+1669182101	tripleee	jcpenneykiosk\.review
