@@ -45250,3 +45250,4 @@
 1669171030	cigien	donusumsanhurda\.com
 1669173785	cigien	essayduniya\.com
 1669177207	tripleee	vtech[\W_]*+solution(?!\.com(?<=vtechsolution\.com))
+1669179195	cigien	v2cloud\.com
