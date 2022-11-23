@@ -45264,3 +45264,4 @@
 1669189105	tripleee	saphnix[\W_]*+life[\W_]*+sciences(?!\.com(?<=saphnixlifesciences\.com))
 1669193979	tripleee	canonprintersupportpro\.us
 1669194011	tripleee	appscreenrecorder\.com
+1669194047	tripleee	goaescorts\.biz
