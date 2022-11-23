@@ -2169,6 +2169,9 @@ items:
   - yew.ns.cloudflare.com.
 - ns:
   - liv.ns.cloudflare.com.
+  - mitch.ns.cloudflare.com.
+- ns:
+  - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
   - liz.ns.cloudflare.com.
