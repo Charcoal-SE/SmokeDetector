@@ -2001,6 +2001,9 @@ items:
   - ned.ns.cloudflare.com.
 - ns:
   - kim.ns.cloudflare.com.
+  - matt.ns.cloudflare.com.
+- ns:
+  - kim.ns.cloudflare.com.
   - micah.ns.cloudflare.com.
 - ns:
   - kimora.ns.cloudflare.com.
