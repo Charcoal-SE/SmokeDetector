@@ -45287,3 +45287,4 @@
 1669211216	tripleee	(?-i:^William Hills$)
 1669212391	tripleee	theartsuppliers\.com
 1669212456	tripleee	sooperarticles\.com
+1669212480	tripleee	of\.edu\.au
