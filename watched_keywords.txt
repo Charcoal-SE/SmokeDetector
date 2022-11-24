@@ -45309,3 +45309,4 @@
 1669277356	tripleee	(?-i:^Flavia Derby$)
 1669278683	tripleee	cgpinoy\.org
 1669279085	tripleee	movie4me
+1669280678	cigien	techbarcode\.com
