@@ -45074,7 +45074,7 @@
 1668704857	Spevacus	gamefowlsforsale\.com
 1668706074	cigien	(?-i:XocgJNXuVebwAJcm6)(?#google forms)
 1668713679	Makyen	chiefaberash\.com
-1668726138	Jeff Schaller	wizardjamesrecovery
+1668726138	Jeff Schaller	wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
 1668734226	Jeff Schaller	inmemory-beta\.webflow\.io
 1668734322	Jeff Schaller	kosta-consulting\.com
 1668749193	cigien	vedikroots\.com
