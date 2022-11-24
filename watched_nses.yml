@@ -2480,6 +2480,9 @@ items:
   - raina.ns.cloudflare.com.
   - zac.ns.cloudflare.com.
 - ns:
+  - ram.ns.cloudflare.com.
+  - sierra.ns.cloudflare.com.
+- ns:
   - raphaela.ns.cloudflare.com.
   - razvan.ns.cloudflare.com.
 - ns:
