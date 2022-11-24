@@ -45325,3 +45325,4 @@
 1669294656	cigien	leblanc[\W_]*+interiors?(?!\.com(?<=leblancinterior\.com))
 1669295408	cigien	filerehab\.com
 1669295764	cigien	longtrends
+1669299592	tripleee	divorcio[\W_]*+de[\W_]*+mutuo[\W_]*+acuerdo
