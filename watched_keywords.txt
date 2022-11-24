@@ -45327,3 +45327,4 @@
 1669299592	tripleee	divorcio[\W_]*+de[\W_]*+mutuo[\W_]*+acuerdo
 1669299692	tripleee	divorcio[\W_]*+sin[\W_]*+oposicion
 1669299851	tripleee	oxfordoracle\.org
+1669301555	tripleee	ittutoria\.net
