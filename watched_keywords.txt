@@ -45313,3 +45313,4 @@
 1669286137	tripleee	mpo[\W_]*+slot
 1669286222	tripleee	(?-i:^everything Know$)
 1669286327	tripleee	togel[\W_]*+4d
+1669286589	tripleee	caliberplumbing\.com
