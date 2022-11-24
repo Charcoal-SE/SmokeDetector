@@ -45300,3 +45300,4 @@
 1669264712	cigien	movies[\W_]*+chimp(?!\.com(?<=movieschimp\.com))
 1669266414	cigien	newzealandescortspage\.com
 1669266934	cigien	rentmobile\.in
+1669269368	tripleee	(?-i:^henrymiller$)
