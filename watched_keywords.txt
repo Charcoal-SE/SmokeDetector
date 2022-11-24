@@ -45314,3 +45314,4 @@
 1669286222	tripleee	(?-i:^everything Know$)
 1669286327	tripleee	togel[\W_]*+4d
 1669286589	tripleee	caliberplumbing\.com
+1669286637	tripleee	(?-i:DataRepairTools)(?!\.com)
