@@ -45323,3 +45323,4 @@
 1669289571	tripleee	touch[\W_]*+heights(?!\.com(?<=touchheights\.com))
 1669289642	tripleee	iplantables\.com
 1669294656	cigien	leblanc[\W_]*+interiors?(?!\.com(?<=leblancinterior\.com))
+1669295408	cigien	filerehab\.com
