@@ -2719,6 +2719,9 @@ translation_1337 = create_1337_translation()
 @create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
 def obfuscated_word(s, site):
     for word in regex.split(r'[-\s_]+', s):
+        # prevent FP on simple English possessive
+        if word[-2:] == "'s" and word[:-2] + "s" in obfuscation_keywords:
+            continue
         # prevent FP on stuff like 'I have this "number": 1111'
         word = word.strip(punctuation).lower()
         translated = word.translate(translation_1337)

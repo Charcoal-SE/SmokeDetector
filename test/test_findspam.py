@@ -120,6 +120,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('A title', '<p>Some body</p>', 'keytones', 'superuser.com', True, True, True),
     ('C01nb4s3 support number', 'obfuscated_word in title', 'spammer', 'stackoverflow.com', False, False, True),
     ('obfuscated_word in body', 'C01nb4$3 support number', 'spammer', 'stackoverflow.com', False, False, True),
+    ('''airline's responsibilities''', 'test case for "not obfuscated after all" (#7345)', 'good guy', 'stackoverflow.com', False, False, False),
     ('emoji \U0001f525 emoji', 'emoji \U0001f525 emoji \U0001f525 emoji', 'tripleee', 'stackoverflow.com', True, False, False),
     ('emoji \U0001f525 emoji \U0001f525 emoji', 'two emojis in title should trigger, others not', 'tripleee', 'stackoverflow.com', True, False, True),
     ('number sequence 1 to 30', '<p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30</p>', 'a username', 'math.stackexchange.com', False, False, False),
