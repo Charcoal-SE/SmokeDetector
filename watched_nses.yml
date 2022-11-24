@@ -1305,6 +1305,9 @@ items:
   - edna.ns.cloudflare.com.
   - sean.ns.cloudflare.com.
 - ns:
+  - edna.ns.cloudflare.com.
+  - terin.ns.cloudflare.com.
+- ns:
   - edward.ns.cloudflare.com.
   - princess.ns.cloudflare.com.
 - ns:
