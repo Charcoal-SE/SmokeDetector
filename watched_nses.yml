@@ -1805,6 +1805,9 @@ items:
   - javon.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
+  - javon.ns.cloudflare.com.
+  - marissa.ns.cloudflare.com.
+- ns:
   - jaxson.ns.cloudflare.com.
   - zainab.ns.cloudflare.com.
 - ns:
