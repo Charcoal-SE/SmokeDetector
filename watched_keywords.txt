@@ -45300,3 +45300,4 @@
 1669266934	cigien	rentmobile\.in
 1669269368	tripleee	(?-i:^henrymiller$)
 1669269658	cigien	advancelam\.com
+1669271458	tripleee	(?-i:^qrgdcarea$)
