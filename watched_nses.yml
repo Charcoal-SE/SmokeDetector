@@ -1012,6 +1012,9 @@ items:
   - cory.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - craig.ns.cloudflare.com.
+  - janet.ns.cloudflare.com.
+- ns:
   - cris.ns.cloudflare.com.
   - ruth.ns.cloudflare.com.
 - ns:
