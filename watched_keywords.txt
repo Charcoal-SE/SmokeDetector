@@ -45329,3 +45329,4 @@
 1669299851	tripleee	oxfordoracle\.org
 1669301555	tripleee	ittutoria\.net
 1669303989	tripleee	pub\.dev/packages/video_player_win
+1669318784	Makyen	cairotranslation\.com
