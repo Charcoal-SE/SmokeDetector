@@ -45320,3 +45320,4 @@
 1669288272	tripleee	gate6\.com
 1669288919	tripleee	vinod[\W_]*+raina
 1669289540	tripleee	touchheights\.com
+1669289571	tripleee	touch[\W_]*+heights(?!\.com(?<=touchheights\.com))
