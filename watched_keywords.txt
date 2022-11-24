@@ -45304,3 +45304,4 @@
 1669271688	tripleee	(?-i:^easycasual$)
 1669272215	tripleee	d5render\.com
 1669273792	tripleee	galaxy[\W_]*+gallery
+1669275727	tripleee	runningofficial\.com
