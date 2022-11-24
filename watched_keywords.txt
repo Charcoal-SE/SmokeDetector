@@ -45326,3 +45326,4 @@
 1669295408	cigien	filerehab\.com
 1669295764	cigien	longtrends
 1669299592	tripleee	divorcio[\W_]*+de[\W_]*+mutuo[\W_]*+acuerdo
+1669299692	tripleee	divorcio[\W_]*+sin[\W_]*+oposicion
