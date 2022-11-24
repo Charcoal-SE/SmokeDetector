@@ -602,6 +602,9 @@ items:
   - bella.ns.cloudflare.com.
   - duke.ns.cloudflare.com.
 - ns:
+  - bella.ns.cloudflare.com.
+  - greg.ns.cloudflare.com.
+- ns:
   - ben.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
