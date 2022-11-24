@@ -45306,3 +45306,4 @@
 1669273792	tripleee	galaxy[\W_]*+gallery
 1669275727	tripleee	runningofficial\.com
 1669276325	tripleee	worldbet888\.com
+1669277356	tripleee	(?-i:^Flavia Derby$)
