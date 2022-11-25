@@ -259,6 +259,9 @@ items:
   - porter.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - irena.ns.cloudflare.com.
+  - rajeev.ns.cloudflare.com.
+- ns:
   - rene.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
