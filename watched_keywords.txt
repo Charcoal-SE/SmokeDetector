@@ -37405,7 +37405,6 @@
 1648273610	Cody Gray	wasserbath\.com
 1648273656	Cody Gray	Wasser[\W_]*Bath(?!\.com(?<=wasserbath\.com))
 1648275532	Makyen	fhalend\.com
-1648276668	Cody Gray	thebangaloreescorts\.in
 1648276684	Cody Gray	nainakaur\.in
 1648276699	Cody Gray	dlfgurgaoncallgirls\.com
 1648277068	Cody Gray	bnfanprostore\.com
