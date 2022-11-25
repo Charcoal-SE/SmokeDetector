@@ -45335,3 +45335,4 @@
 1669348232	Makyen	tutorialwing\.com
 1669356164	tripleee	digital[\W_]*+academy(?:[\W_]*+(?:jayanagar|(?:360\b)\d++|[\da-f]{5,}+)s?)*
 1669360747	tripleee	1ytdtomp3\.com
+1669360768	tripleee	mailbackupx\.com
