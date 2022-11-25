@@ -45338,3 +45338,4 @@
 1669360768	tripleee	mailbackupx\.com
 1669362403	tripleee	mail[\W_]*+backup[\W_]*+x
 1669362423	tripleee	(?-i:^Steven Adam$)
+1669362443	tripleee	hopewelltheater\.com
