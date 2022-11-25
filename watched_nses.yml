@@ -2950,6 +2950,7 @@ items:
 - ns: resourcesofnet.net.
 - ns: bh-20.webhostbox.net.
 - ns: bh-76.webhostbox.net.
+- ns: bh-in-21.webhostbox.net.
 - ns: bh-in-36.webhostbox.net.
 - comment: 5/9 over 7 months, all TPs overlap with other rules (2020-08-18)
   disable: true
