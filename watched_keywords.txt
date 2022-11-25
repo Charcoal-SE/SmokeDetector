@@ -45337,3 +45337,4 @@
 1669360747	tripleee	1ytdtomp3\.com
 1669360768	tripleee	mailbackupx\.com
 1669362403	tripleee	mail[\W_]*+backup[\W_]*+x
+1669362423	tripleee	(?-i:^Steven Adam$)
