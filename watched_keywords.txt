@@ -40831,7 +40831,6 @@
 1657624485	tripleee	pharmaonline\.store
 1657626530	Jeff Schaller	vrankup\.com
 1657629513	Jeff Schaller	stairstar\.ca
-1657629623	Makyen	digital[\W_]*+academy(?:[\W_]*+(?:jayanagar|\d++|[\da-f]{5,}+)s?)*
 1657630506	Jeff Schaller	marketresearchcommunity\.com
 1657632057	Jeff Schaller	algoscale\.com
 1657634721	Spevacus	vedpe\.com
