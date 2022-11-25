@@ -2707,7 +2707,7 @@ vissentials
 mailvita
 nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
 Fluxactive
-fayed[\W_]*+hack(?:er)?
+fayed[\W_]*+ha+ck(?:er)?\d*
 Ucchvas
 dribrahimspellcaster(?:@gmail\.com)?
 d(?:octo)?r[\W_]*+ibrahim
