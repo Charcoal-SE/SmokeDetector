@@ -4026,7 +4026,9 @@ items:
 - ip: 52.53.43.21
 - ip: 52.54.162.128
 - ip: 52.54.51.158
-- ip: 52.55.54.43
+- comment: 1/5 over 15 days, TP is covered by other watches
+  disable: true
+  ip: 52.55.54.43
 - ip: 52.63.232.23
 - ip: 52.66.101.246
 - ip: 52.66.108.242
