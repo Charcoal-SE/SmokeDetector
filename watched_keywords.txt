@@ -33207,7 +33207,6 @@
 1635280582	cigien	krcgroup\.co\.in
 1635298939	Ryan M	^BattleP00P$
 1635301056	Spevacus	riverfronttimes\.com
-1635310486	Makyen	thewritefirst\.com
 1635312366	Cody Gray	tamiltoken\.org
 1635312384	Cody Gray	tamil[\W_]*crypto
 1635314315	tripleee	greatlearning\.in
