@@ -35,6 +35,9 @@ items:
   - aiden.ns.cloudflare.com.
   - nelly.ns.cloudflare.com.
 - ns:
+  - alec.ns.cloudflare.com.
+  - leia.ns.cloudflare.com.
+- ns:
   - alex.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
