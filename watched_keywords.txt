@@ -45364,4 +45364,3 @@
 1669485510	Ethan	(?-i:jPu24yWXOz0)(?# youtu\.be)
 1669485698	Ethan	(?-i:iJCJGnr9grA)(?# youtu\.be)
 1669486567	Makyen	ultimatehackerjerry
-1669486600	Makyen	seznam[\W_]*+cz
