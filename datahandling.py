@@ -55,7 +55,12 @@ def _save_problem_pickle(path):
         os.rename(path, errorpath)
 
 
+def create_pickle_storage_if_not_exist():
+    Path(PICKLE_STORAGE).mkdir(exist_ok=True)
+
+
 def load_pickle(path, encoding='utf-8'):
+    create_pickle_storage_if_not_exist()
     newpath = os.path.join(PICKLE_STORAGE, path)
     if os.path.isfile(newpath):
         path = newpath
@@ -80,7 +85,7 @@ def load_pickle(path, encoding='utf-8'):
 
 
 def dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
-    Path(PICKLE_STORAGE).mkdir(exist_ok=True)
+    create_pickle_storage_if_not_exist()
     if os.path.isfile(path):  # Remove old one
         os.remove(path)
     newpath = os.path.join(PICKLE_STORAGE, path)
@@ -430,6 +435,7 @@ def add_queue_timing_data(site, times_in_queue):
 def flush_queue_timings_data():
     global queue_timings_data
     # Use .txt for cross platform compatibility
+    create_pickle_storage_if_not_exist()
     with queue_timings_data_lock:
         with open("pickles/bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
             stat_file.write("\n".join(queue_timings_data) + "\n")
