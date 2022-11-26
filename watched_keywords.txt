@@ -45356,3 +45356,4 @@
 1669454104	Nisse Engström	novus\.bi
 1669457845	Makyen	rummy[\W_]*+gold(?:[\W_]*+app)?(?!\.com(?<=rummygoldapp\.com))
 1669471887	Ethan	thetopbestblogger\.com
+1669474138	Jeff Schaller	soap2day\.vc
