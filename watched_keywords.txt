@@ -45365,3 +45365,4 @@
 1669485698	Ethan	(?-i:iJCJGnr9grA)(?# youtu\.be)
 1669486681	Makyen	seznam[\W_]*+cz(?<!seznam\.cz)
 1669486890	Makyen	ultimate[\W_]*+hacker[\W_]*+jerry
+1669487829	Ethan	nortonsupportcenter\.co\.uk
