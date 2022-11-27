@@ -45375,3 +45375,4 @@
 1669527782	cocomac	stirtshirt\.com
 1669537336	tripleee	bapehoodie\.uk
 1669538701	tripleee	hiicanhelpyou\.com
+1669542856	Makyen	family[\W_]*+christmas[\W_]*+sweater
