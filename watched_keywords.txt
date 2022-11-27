@@ -45378,3 +45378,4 @@
 1669542856	Makyen	family[\W_]*+christmas[\W_]*+sweater
 1669542877	Makyen	mobinidc\.com
 1669544534	Makyen	ofwealtht(?:@gmail\.com)?
+1669546803	double-beep	thekiranacademy\.com
