@@ -45377,3 +45377,4 @@
 1669538701	tripleee	hiicanhelpyou\.com
 1669542856	Makyen	family[\W_]*+christmas[\W_]*+sweater
 1669542877	Makyen	mobinidc\.com
+1669544534	Makyen	ofwealtht(?:@gmail\.com)?
