@@ -45387,3 +45387,4 @@
 1669573077	Makyen	longdogechallenge\.com
 1669574993	Ethan	(?-i:snehagrawal98)(?#medium)
 1669592678	Makyen	fredvalcyberghost(?:[\W_]*+(?:at?[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1669600757	Ethan	halimstudio\.com
