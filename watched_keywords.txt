@@ -45402,3 +45402,4 @@
 1669628940	tripleee	digiskillzz\.com
 1669629884	tripleee	sex-crimes(?<=/sex-crimes)
 1669630254	tripleee	golakshadweep\.com
+1669630396	tripleee	(?-i:^Edward\.M Meganfox$)
