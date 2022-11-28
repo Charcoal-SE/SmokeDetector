@@ -45393,3 +45393,4 @@
 1669612768	tripleee	golden444\.com
 1669614956	tripleee	sexygacor\.com
 1669618701	tripleee	wikistarpie\.in
+1669619233	tripleee	peter[\W_]*+gade
