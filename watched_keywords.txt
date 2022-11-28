@@ -45413,3 +45413,4 @@
 1669638562	tripleee	pitamaas\.com gs score
 1669638601	tripleee	pitamaas(?!\.com)
 1669638630	tripleee	gs[\W_]*+score
+1669580654	Ethan	pSioni69(?#Twitter)
