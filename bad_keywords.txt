@@ -4,7 +4,7 @@ fifabay
 long\W?path\W?tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
-writing(?<!(?:code|script)\Wwriting) services?
+writing(?<!code\Wwriting)(?<!script\Wwriting)(?<!\bre\Wwriting)(?<!\bi'm\Wwriting)(?<!\bi\Wam\Wwriting)(?<!\bi\Wwriting)[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 tosterone
 we (?:offer|give out) (?:loans?|funds?|funding)
 skin\W?(?:endear|royale|cell\W?pro|opulent|ology|centric)
