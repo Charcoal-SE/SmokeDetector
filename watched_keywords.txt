@@ -45395,3 +45395,4 @@
 1669618701	tripleee	wikistarpie\.in
 1669619233	tripleee	peter[\W_]*+gade
 1669624536	tripleee	impressionewllness\.com
+1669626827	tripleee	tinker[\W_]*+tots
