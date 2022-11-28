@@ -45414,3 +45414,4 @@
 1669638601	tripleee	pitamaas(?!\.com)
 1669638630	tripleee	gs[\W_]*+score
 1669580654	Ethan	pSioni69(?#Twitter)
+1669638750	tripleee	hotelmanorama\.com
