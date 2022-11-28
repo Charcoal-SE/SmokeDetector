@@ -337,7 +337,6 @@ drivingdirectionss\.com
 (?-i:^Hank Sauri$)
 (?-i:^Danush Shetty$)
 (?-i:^Sri Ramana$)
-(?-i:^Sharath Raju$)
 (?-i:^Niko Tech$)
 (?-i:^jack henry$)
 (?-i:^IAS QATAR$)
