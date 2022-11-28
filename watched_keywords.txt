@@ -45404,3 +45404,4 @@
 1669630396	tripleee	(?-i:^Edward\.M Meganfox$)
 1669630821	tripleee	solutiontemple\.info
 1669630845	tripleee	solutiontemple(?!\.indo)
+1669634532	tripleee	knowfromexpert\.com
