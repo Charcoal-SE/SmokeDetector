@@ -45415,3 +45415,4 @@
 1669638630	tripleee	gs[\W_]*+score
 1669580654	Ethan	pSioni69(?#Twitter)
 1669638750	tripleee	hotelmanorama\.com
+1669641799	Jeff Schaller	braveachievers\.com
