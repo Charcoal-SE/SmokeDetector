@@ -45389,3 +45389,4 @@
 1669592678	Makyen	fredvalcyberghost(?:[\W_]*+(?:at?[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1669600691	Ethan	urgentway\.com
 1669600757	Ethan	halimstudio\.com
+1669603486	Spevacus	QoreUps
