@@ -31,6 +31,9 @@ items:
   - bristol.ns.cloudflare.com.
 - ns:
   - abdullah.ns.cloudflare.com.
+  - elisabeth.ns.cloudflare.com.
+- ns:
+  - abdullah.ns.cloudflare.com.
   - malavika.ns.cloudflare.com.
 - ns:
   - ada.ns.cloudflare.com.
