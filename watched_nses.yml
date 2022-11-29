@@ -2875,6 +2875,9 @@ items:
   - cns1.bigrock.com.
   - cns2.bigrock.com.
 - ns:
+  - cns6003.bigrock.com.
+  - cns6004.bigrock.com.
+- ns:
   - sns13.bigrock.com.
   - sns14.bigrock.com.
 - ns:
