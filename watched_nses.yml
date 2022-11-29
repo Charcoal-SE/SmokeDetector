@@ -2264,6 +2264,9 @@ items:
   - maria.ns.cloudflare.com.
   - trey.ns.cloudflare.com.
 - ns:
+  - marissa.ns.cloudflare.com.
+  - mike.ns.cloudflare.com.
+- ns:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
