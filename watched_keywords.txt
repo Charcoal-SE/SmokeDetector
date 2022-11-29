@@ -45441,3 +45441,4 @@
 1669715035	tripleee	windmills[\W_]*+group
 1669715133	tripleee	komol[\W_]*+komol
 1669717904	tripleee	joe\.taxi
+1669717942	tripleee	expertmover\.ae
