@@ -45439,3 +45439,4 @@
 1669714691	tripleee	buzzmoving\.com
 1669714772	tripleee	fmoviesstream\.store
 1669715035	tripleee	windmills[\W_]*+group
+1669715133	tripleee	komol[\W_]*+komol
