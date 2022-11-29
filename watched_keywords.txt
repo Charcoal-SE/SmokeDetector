@@ -44463,7 +44463,6 @@
 1666946511	tripleee	econour\.com
 1666946565	tripleee	aonesteelgroup\.com
 1666951991	tripleee	certifiedmexicanpharmacy\.com
-1666952544	cigien	mexicanonlinepharmacy\.org
 1666953853	tripleee	tags[\W_]*+n[\W_]*+ticks(?!\.com(?<=tagsnticks\.com))
 1666956203	tripleee	teamplusindia\.in
 1666958563	tripleee	one[\W_]*+muthoot
