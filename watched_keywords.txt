@@ -45448,3 +45448,4 @@
 1669721425	Jeff Schaller	kr9\.opsarang1\.com
 1669721466	Jeff Schaller	whiteroseshub\.com
 1669724210	tripleee	realestateinc\.com\.sa
+1669726879	tripleee	icanassist\d*(?!\.net(?<=icanassist\.net))
