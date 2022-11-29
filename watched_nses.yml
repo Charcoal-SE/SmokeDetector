@@ -2566,6 +2566,9 @@ items:
   - sloan.ns.cloudflare.com.
   - tate.ns.cloudflare.com.
 - ns:
+  - sneh.ns.cloudflare.com.
+  - wesley.ns.cloudflare.com.
+- ns:
   - sue.ns.cloudflare.com.
   - thomas.ns.cloudflare.com.
 - ns:
