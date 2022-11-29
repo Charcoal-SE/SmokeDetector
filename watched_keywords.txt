@@ -45451,3 +45451,4 @@
 1669726879	tripleee	icanassist\d*(?!\.net(?<=icanassist\.net))
 1669730693	Jeff Schaller	mymathlabanswer\.com
 1669731994	tripleee	redammunition\.us
+1669743877	Jeff Schaller	bayareaaccountingsolutions\.com
