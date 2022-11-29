@@ -45421,3 +45421,4 @@
 1669665679	Ethan	pylote\.io
 1669670337	Glorfindel	thescopes\.net
 1669670369	Glorfindel	pressublimation\.com
+1669686850	Jeff Schaller	BuyGvsells
