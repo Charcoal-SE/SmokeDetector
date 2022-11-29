@@ -1535,6 +1535,9 @@ items:
   - gannon.ns.cloudflare.com.
   - linda.ns.cloudflare.com.
 - ns:
+  - garret.ns.cloudflare.com.
+  - liberty.ns.cloudflare.com.
+- ns:
   - gene.ns.cloudflare.com.
   - graham.ns.cloudflare.com.
 - ns:
