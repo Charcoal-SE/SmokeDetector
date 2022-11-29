@@ -3635,7 +3635,9 @@ items:
 - ip: 3.231.167.138
 - ip: 3.238.90.199
 - ip: 3.248.8.137
-- ip: 3.33.152.147
+- comment: 44/157 over a year, recently no 1-weights 2022-11-29
+  disable: true
+  ip: 3.33.152.147
 - ip: 3.33.191.88
 - ip: 3.6.1.124
 - ip: 3.6.158.69
