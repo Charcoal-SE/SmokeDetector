@@ -45438,3 +45438,4 @@
 1669714662	tripleee	blinkhealth\.us
 1669714691	tripleee	buzzmoving\.com
 1669714772	tripleee	fmoviesstream\.store
+1669715035	tripleee	windmills[\W_]*+group
