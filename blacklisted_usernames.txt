@@ -729,3 +729,4 @@ meta kukel exchange
 (?-i:^Sdk Nandhini$)
 (?-i:^Monitask$)
 (?-i:^akash ignissta$)
+(?-i:^Iqra Technology$)
