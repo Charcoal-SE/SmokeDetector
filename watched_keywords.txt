@@ -45462,3 +45462,4 @@
 1669794433	tripleee	crystalsbygzk\.com
 1669794528	tripleee	iqra[\W_]*+technology(?<!(?-i:^Iqra Technology$))(?!\.com(?<=iqratechnology\.com))
 1669795705	tripleee	highmica\.com
+1669795960	tripleee	manageyourecommerce\.com
