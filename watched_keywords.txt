@@ -45481,3 +45481,4 @@
 1669815479	cigien	appsmanager\.in
 1669817240	cigien	karelservisi\.net
 1669820191	tripleee	miragedb\.com
+1669824729	tripleee	docuclipper\.com
