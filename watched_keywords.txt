@@ -45458,3 +45458,4 @@
 1669782679	cigien	california[\W_]*+info[\W_]*+tech(?!\.com(?<=californiainfotech\.com))
 1669783128	cigien	redammunition(?!\.us)
 1669787156	tripleee	com-consult\.info
+1669794091	tripleee	carecom[\W_]*+qatar(?!\.com(?<=carecomqatar\.com))
