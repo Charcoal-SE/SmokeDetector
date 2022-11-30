@@ -27,6 +27,9 @@ items:
   - abby.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
 - ns:
+  - ace.ns.cloudflare.com.
+  - ulla.ns.cloudflare.com.
+- ns:
   - achiel.ns.cloudflare.com.
   - bristol.ns.cloudflare.com.
 - ns:
