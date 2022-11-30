@@ -4950,3 +4950,4 @@ thewritefirst\.com
 mexicanonlinepharmacy\.org
 wilcode\.com
 jumpgrowth\.com
+b[\W_]*+u[\W_]*+y[\W_]*+d[\W_]*+o[\W_]*+c[\W_]*+u[\W_]*+m[\W_]*+e[\W_]*+n[\W_]*+t[\W_]*+\.[\W_]*+n[\W_]*+e[\W_]*+t(?<!buydocument\.net)
