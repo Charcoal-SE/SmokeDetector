@@ -43188,7 +43188,6 @@
 1663435333	Jeff Schaller	bestellipticalbike\.com
 1663441962	Makyen	alvapc\.co\.uk
 1663450668	Makyen	gorenje\.ind\.in
-1663458600	cigien	mergeguru\.com
 1663458665	cigien	websolutionstuff\.com
 1663462198	Jeff Schaller	findston\.com
 1663475165	Makyen	irsme\.org
