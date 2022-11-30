@@ -45463,3 +45463,4 @@
 1669794528	tripleee	iqra[\W_]*+technology(?<!(?-i:^Iqra Technology$))(?!\.com(?<=iqratechnology\.com))
 1669795705	tripleee	highmica\.com
 1669795960	tripleee	manageyourecommerce\.com
+1669797366	tripleee	(?-i:^JHON MARTON$)
