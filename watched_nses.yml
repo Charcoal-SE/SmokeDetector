@@ -177,6 +177,9 @@ items:
   - alberto.ns.cloudflare.com.
   - demi.ns.cloudflare.com.
 - ns:
+  - aldo.ns.cloudflare.com.
+  - sue.ns.cloudflare.com.
+- ns:
   - alec.ns.cloudflare.com.
   - dora.ns.cloudflare.com.
 - ns:
