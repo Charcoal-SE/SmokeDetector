@@ -27914,7 +27914,6 @@
 1617878133	Xnero	(?-i:AAinvestor)(?#Telegram)
 1617885352	Spevacus	specialrdp\.com
 1617886000	tripleee	(?-i:^jahanzeb locker$)
-1617887044	tripleee	just[\W_]*+join[\W_]*+it
 1617887061	tripleee	470356554205207(?# facebook event)
 1617893724	Nisse Engström	research-chemicals-team\.info
 1617900038	cigien	lokedi6926(?:@ddwfzp\.com)?
