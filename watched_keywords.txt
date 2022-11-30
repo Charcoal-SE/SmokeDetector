@@ -45466,3 +45466,4 @@
 1669799553	tripleee	(?-i:^igssaran1$)
 1669811265	cigien	(?-i:B0BJYM9FM3)(?#amazon)
 1669811812	cigien	wincloudpms\.com
+1669811884	cigien	kanakinfosystems\.com
