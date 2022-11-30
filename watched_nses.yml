@@ -2319,6 +2319,9 @@ items:
   - nina.ns.cloudflare.com.
 - ns:
   - matt.ns.cloudflare.com.
+  - venus.ns.cloudflare.com.
+- ns:
+  - matt.ns.cloudflare.com.
   - zelda.ns.cloudflare.com.
 - ns:
   - max.ns.cloudflare.com.
