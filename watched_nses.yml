@@ -33,6 +33,9 @@ items:
   - achiel.ns.cloudflare.com.
   - bristol.ns.cloudflare.com.
 - ns:
+  - achiel.ns.cloudflare.com.
+  - nelci.ns.cloudflare.com.
+- ns:
   - abdullah.ns.cloudflare.com.
   - elisabeth.ns.cloudflare.com.
 - ns:
