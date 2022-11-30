@@ -730,3 +730,4 @@ meta kukel exchange
 (?-i:^Monitask$)
 (?-i:^akash ignissta$)
 (?-i:^Iqra Technology$)
+(?-i:^Jiang Song$)
