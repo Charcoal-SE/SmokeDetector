@@ -45455,3 +45455,4 @@
 1669754298	Mast	bookkeeping[\W_]*+services
 1669775089	Jeff Schaller	cheapbondcleaningadelaide\.com\.au
 1669782616	cigien	californiainfotech\.com
+1669782679	cigien	california[\W_]*+info[\W_]*+tech(?!\.com(?<=californiainfotech\.com))
