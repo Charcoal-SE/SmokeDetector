@@ -45459,3 +45459,4 @@
 1669783128	cigien	redammunition(?!\.us)
 1669787156	tripleee	com-consult\.info
 1669794091	tripleee	carecom[\W_]*+qatar(?!\.com(?<=carecomqatar\.com))
+1669794289	tripleee	learnwithhafiz\.com
