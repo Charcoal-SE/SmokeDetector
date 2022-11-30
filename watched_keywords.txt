@@ -45456,3 +45456,4 @@
 1669775089	Jeff Schaller	cheapbondcleaningadelaide\.com\.au
 1669782616	cigien	californiainfotech\.com
 1669782679	cigien	california[\W_]*+info[\W_]*+tech(?!\.com(?<=californiainfotech\.com))
+1669783128	cigien	redammunition(?!\.us)
