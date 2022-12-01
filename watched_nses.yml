@@ -588,6 +588,9 @@ items:
   - rafe.ns.cloudflare.com.
 - ns:
   - beau.ns.cloudflare.com.
+  - chin.ns.cloudflare.com.
+- ns:
+  - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
   - beau.ns.cloudflare.com.
