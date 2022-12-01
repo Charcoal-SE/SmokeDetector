@@ -76,6 +76,9 @@ items:
   - dale.ns.cloudflare.com.
 - ns:
   - addyson.ns.cloudflare.com.
+  - hal.ns.cloudflare.com.
+- ns:
+  - addyson.ns.cloudflare.com.
   - vicente.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
