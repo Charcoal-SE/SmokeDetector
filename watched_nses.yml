@@ -721,6 +721,9 @@ items:
   - boyd.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
+  - boyd.ns.cloudflare.com.
+  - zoe.ns.cloudflare.com.
+- ns:
   - brad.ns.cloudflare.com.
   - brenda.ns.cloudflare.com.
 - ns:
