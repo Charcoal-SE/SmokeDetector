@@ -818,6 +818,9 @@ items:
   - simon.ns.cloudflare.com.
 - ns:
   - carl.ns.cloudflare.com.
+  - grace.ns.cloudflare.com.
+- ns:
+  - carl.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
 - ns:
   - carl.ns.cloudflare.com.
