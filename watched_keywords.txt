@@ -45488,3 +45488,4 @@
 1669872370	tripleee	oldcoinsellingbazaar\.com
 1669872396	tripleee	distributorshipcontact\.org
 1669872435	tripleee	digitalindiadataentryjobs\.com
+1669872949	tripleee	(?-i:^Nayem Ahsan$)
