@@ -1433,6 +1433,9 @@ items:
   - emerie.ns.cloudflare.com.
   - koa.ns.cloudflare.com.
 - ns:
+  - emerie.ns.cloudflare.com.
+  - rocky.ns.cloudflare.com.
+- ns:
   - emily.ns.cloudflare.com.
   - tony.ns.cloudflare.com.
 - ns:
