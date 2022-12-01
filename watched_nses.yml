@@ -737,6 +737,9 @@ items:
   - paris.ns.cloudflare.com.
 - ns:
   - braelyn.ns.cloudflare.com.
+  - earl.ns.cloudflare.com.
+- ns:
+  - braelyn.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
