@@ -4956,3 +4956,4 @@ b[\W_]*+u[\W_]*+y[\W_]*+f[\W_]*+a[\W_]*+s[\W_]*+t[\W_]*+d[\W_]*+e[\W_]*+g[\W_]*+
 g[\W_]*+e[\W_]*+t[\W_]*+a[\W_]*+d[\W_]*+i[\W_]*+p[\W_]*+l[\W_]*+o[\W_]*+m[\W_]*+a[\W_]*+9[\W_]*+\.[\W_]*+c[\W_]*+o[\W_]*+m(?<!getadiploma9\.com)
 mergeguru\.com
 (?-i:DynamicNestedField)(?#pypi\.org/project)
+apksbrand\.com
