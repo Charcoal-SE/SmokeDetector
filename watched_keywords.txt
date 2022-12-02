@@ -45512,3 +45512,4 @@
 1669945514	Ethan	EZYTOR\.com
 1669945734	Ethan	(?-i:b/bHNP5dbc/ez)(?#trello\.com)
 1669959336	cigien	isyncsf\.com
+1669959387	cigien	(?-i:7zVnQo_Mb0M)(?#youtube)
