@@ -45525,3 +45525,4 @@
 1669971150	tripleee	freeimgtools\.com
 1669971814	cigien	cryptonewsz\.com
 1669972317	cigien	bestsocialpromotion\.com
+1669973698	cigien	gibf\.biz
