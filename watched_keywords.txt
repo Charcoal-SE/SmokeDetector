@@ -45531,3 +45531,4 @@
 1669981821	tripleee	(?-i:^vijikiv$)
 1669987477	tripleee	freeonlineearn\.com
 1669993433	Jeff Schaller	bankingo\.in
+1669993458	Jeff Schaller	hindipaisa\.in
