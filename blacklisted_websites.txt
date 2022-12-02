@@ -4957,3 +4957,4 @@ g[\W_]*+e[\W_]*+t[\W_]*+a[\W_]*+d[\W_]*+i[\W_]*+p[\W_]*+l[\W_]*+o[\W_]*+m[\W_]*+
 mergeguru\.com
 (?-i:DynamicNestedField)(?#pypi\.org/project)
 apksbrand\.com
+pdsinternational\.in
