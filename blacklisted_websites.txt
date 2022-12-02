@@ -4958,3 +4958,4 @@ mergeguru\.com
 (?-i:DynamicNestedField)(?#pypi\.org/project)
 apksbrand\.com
 pdsinternational\.in
+ultahost\.com

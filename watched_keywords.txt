@@ -41787,7 +41787,6 @@
 1660225307	cigien	omegacad\.in
 1660225450	cigien	blogamca\.com
 1660225640	cigien	softwarehouse\.today
-1660249355	Jeff Schaller	ultahost\.com
 1660251687	Jeff Schaller	legendsoflearning\.com
 1660267029	Spevacus	hondaautoshop\.com
 1660269869	cocomac	diveinto\.global
