@@ -45530,3 +45530,4 @@
 1669977603	tripleee	foodswithfitness\.com
 1669981821	tripleee	(?-i:^vijikiv$)
 1669987477	tripleee	freeonlineearn\.com
+1669993433	Jeff Schaller	bankingo\.in
