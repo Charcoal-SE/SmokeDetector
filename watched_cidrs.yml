@@ -1464,7 +1464,9 @@ items:
 - comment: briefly watched on 2022-11-14; rose to 1/7 already (Microsoft IP) so disabling again 2022-11-16
   disable: true
   ip: 13.107.213.40
-- ip: 13.107.246.40
+- comment: 0/17 over two weeks 2022-12-02
+  disable: true
+  ip: 13.107.246.40
 - ip: 13.115.55.121
 - ip: 13.124.136.207
 - ip: 13.126.109.115
