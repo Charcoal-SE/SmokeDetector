@@ -45511,3 +45511,4 @@
 1669957972	cocomac	contractors[\W_]*+near[\W_]*+me
 1669945514	Ethan	EZYTOR\.com
 1669945734	Ethan	(?-i:b/bHNP5dbc/ez)(?#trello\.com)
+1669959336	cigien	isyncsf\.com
