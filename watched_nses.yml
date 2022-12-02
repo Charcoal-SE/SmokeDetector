@@ -2451,6 +2451,9 @@ items:
   - wanda.ns.cloudflare.com.
 - ns:
   - nina.ns.cloudflare.com.
+  - sri.ns.cloudflare.com.
+- ns:
+  - nina.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
   - nina.ns.cloudflare.com.
