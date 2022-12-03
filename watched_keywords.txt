@@ -29180,7 +29180,6 @@
 1622172804	cigien	leonyu9703(?:@gmail\.com)?
 1622172853	cigien	aromaeasy(?!\.com)
 1622173018	cigien	myinfo\.pk
-1622173819	cigien	thebestlog\.com
 1622173894	cigien	checkmybest(?!\.com)
 1622173996	cigien	thedeezerpremiumapk\.com
 1622174098	cigien	guessingtrick\.com
