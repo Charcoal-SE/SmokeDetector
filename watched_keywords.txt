@@ -45541,3 +45541,4 @@
 1670047006	Makyen	errorcodeassistant\.com
 1670048108	cigien	aly[\W_]*+jewelry(?!\.com(?<=alyjewelry\.com))
 1670049105	cigien	apkods\.com
+1670049152	cigien	ventyre\.com
