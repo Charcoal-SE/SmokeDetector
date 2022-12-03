@@ -28775,7 +28775,6 @@
 1620913015	Spevacus	digiboxx\.com
 1620915864	Spevacus	easyurl\.cc
 1620918406	Spevacus	bhallafasteners\.com
-1620925099	cigien	electricalgang\.com
 1620925210	cigien	bhalla[\W_]*+fasteners(?!\.com(?<=bhallafasteners\.com))
 1620925374	cigien	digiboxx(?!\.com)
 1620926627	Ryan M	le[\W_]*+regime[\W_]*+keto
