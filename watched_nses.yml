@@ -3555,7 +3555,9 @@ items:
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
 - ns: yuvajobs.in.
-- ns: askbeen.com.
+- comment: NXDOMAIN 2022-12-03; potentially intermittent.
+  disable: true
+  ns: askbeen.com.
 - ns: hostever.com.
 - ns: sellvir.com.
 - ns: multiscreensite.com.
