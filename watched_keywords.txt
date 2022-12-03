@@ -45540,3 +45540,4 @@
 1670041120	cocomac	sunnyvanphongpham\.com
 1670047006	Makyen	errorcodeassistant\.com
 1670048108	cigien	aly[\W_]*+jewelry(?!\.com(?<=alyjewelry\.com))
+1670049105	cigien	apkods\.com
