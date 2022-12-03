@@ -45539,3 +45539,4 @@
 1670040428	Makyen	sensa838rtp\.online
 1670041120	cocomac	sunnyvanphongpham\.com
 1670047006	Makyen	errorcodeassistant\.com
+1670048108	cigien	aly[\W_]*+jewelry(?!\.com(?<=alyjewelry\.com))
