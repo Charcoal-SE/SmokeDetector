@@ -45550,3 +45550,4 @@
 1670087644	Jeff Schaller	acrobatfeed\.com
 1670131122	cigien	queen[\W_]*+zazi\d*+(?:[\W_]*+(?:at?[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1670120879	Ethan	freecash\.com
+1670131372	cigien	(?-i:npjkut)(?#rb.gy)
