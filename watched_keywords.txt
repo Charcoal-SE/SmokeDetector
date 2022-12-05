@@ -45569,3 +45569,4 @@
 1670225331	Makyen	monginisstorefranchise\.com
 1670225353	Makyen	monginis(?:[\W_]*+(?:store|franchise))*(?!\.com(?<=monginisstorefranchise\.com))
 1670225385	Makyen	thequirkynaari\.com
+1670225412	Makyen	the[\W_]*+quirky[\W_]*+naari(?!\.com(?<=thequirkynaari\.com))
