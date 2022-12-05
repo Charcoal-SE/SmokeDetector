@@ -45582,3 +45582,4 @@
 1670257793	Jeff Schaller	taplink\.cc
 1670259780	Makyen	teds-list\.com
 1670266206	Jeff Schaller	businessleadsworld\.com
+1670269305	Jeff Schaller	jobsforhealth\.com
