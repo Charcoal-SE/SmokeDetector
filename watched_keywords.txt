@@ -45568,3 +45568,4 @@
 1670224996	Makyen	minepi\.com(?<!api\.minepi\.com)(?<!back\.developers\.minepi\.com)(?<!api\.testnet\.minepi\.com)
 1670225331	Makyen	monginisstorefranchise\.com
 1670225353	Makyen	monginis(?:[\W_]*+(?:store|franchise))*(?!\.com(?<=monginisstorefranchise\.com))
+1670225385	Makyen	thequirkynaari\.com
