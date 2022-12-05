@@ -45566,3 +45566,4 @@
 1670212191	cigien	walnutinnovations\.com
 1670213230	cigien	(?-i:sIcy3q3Ib_s)(?#youtube)
 1670224996	Makyen	minepi\.com(?<!api\.minepi\.com)(?<!back\.developers\.minepi\.com)(?<!api\.testnet\.minepi\.com)
+1670225331	Makyen	monginisstorefranchise\.com
