@@ -45571,3 +45571,4 @@
 1670225385	Makyen	thequirkynaari\.com
 1670225412	Makyen	the[\W_]*+quirky[\W_]*+naari(?!\.com(?<=thequirkynaari\.com))
 1670226508	Makyen	mamalatifah800(?:@gmail\.com)?
+1670226874	cigien	mnsmarketgroup\.com
