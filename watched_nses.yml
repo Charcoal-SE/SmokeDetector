@@ -2117,6 +2117,9 @@ items:
   - lakas.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - lana.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
   - lara.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:
