@@ -45595,3 +45595,4 @@
 1670318651	tripleee	raqmiyat\.com
 1670320940	tripleee	futureittechnology\.com
 1670326345	Makyen	whitemistcafe\.com
+1670326374	Makyen	whitemist[\W_]*+cafe(?!\.com(?<=whitemistcafe\.com))
