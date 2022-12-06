@@ -45601,3 +45601,4 @@
 1670326495	Makyen	busyexperts\.in
 1670328056	Makyen	acctek(?:[\W_]*+(?:group|cnc))*(?!\.com(?<=acctekgroup\.com))
 1670328761	Makyen	cashappscontact\.com
+1670328958	tripleee	jammer-store\.de
