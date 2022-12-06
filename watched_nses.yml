@@ -1171,9 +1171,6 @@ items:
   - david.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
 - ns:
-  - davina.ns.cloudflare.com.
-  - syeef.ns.cloudflare.com.
-- ns:
   - dawn.ns.cloudflare.com.
   - dom.ns.cloudflare.com.
 - ns:

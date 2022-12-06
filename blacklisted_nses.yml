@@ -160,6 +160,9 @@ items:
   - dana.ns.cloudflare.com.
   - jerome.ns.cloudflare.com.
 - ns:
+  - davina.ns.cloudflare.com.
+  - syeef.ns.cloudflare.com.
+- ns:
   - dawn.ns.cloudflare.com.
   - dimitris.ns.cloudflare.com.
 - ns:
