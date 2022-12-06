@@ -45600,3 +45600,4 @@
 1670326462	Makyen	empire[\W_]*+tactical(?!\.org(?<=empiretactical\.org))
 1670326495	Makyen	busyexperts\.in
 1670328056	Makyen	acctek(?:[\W_]*+(?:group|cnc))*(?!\.com(?<=acctekgroup\.com))
+1670328761	Makyen	cashappscontact\.com
