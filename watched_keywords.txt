@@ -45588,3 +45588,4 @@
 1670301520	Makyen	cargomurah\.id
 1670306215	cigien	itechbrand\.com
 1670306248	cigien	idlebreakout\.io
+1670306474	cigien	newjourneymd\.com
