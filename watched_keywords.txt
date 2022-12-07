@@ -43571,7 +43571,6 @@
 1664525053	tripleee	domyessay\.co
 1664526874	tripleee	sextorso\.com
 1664531057	tripleee	sgvisa\.in
-1664531370	tripleee	kirpal[\W_]*export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
 1664534504	tripleee	playon99casino\.com
 1664534735	Jeff Schaller	callgirlslucknow\.in
 1664535179	tripleee	(?-i:^ind aus$)

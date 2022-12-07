@@ -2716,3 +2716,4 @@ ignissta(?!\.com)
 modafinil
 kanyewestmerch\.ltd
 cryptohopper(?!\.com)
+kirpal[\W_]*export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
