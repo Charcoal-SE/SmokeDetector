@@ -45630,3 +45630,4 @@
 1670414471	tripleee	sapevaluation\.org
 1670416833	Jeff Schaller	goodb\.in
 1670423502	tripleee	flytrippers\.com
+1670423713	tripleee	infrassist(?!\.com)
