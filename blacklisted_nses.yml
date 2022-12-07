@@ -217,6 +217,9 @@ items:
   - kay.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - kayden.ns.cloudflare.com.
+  - lucy.ns.cloudflare.com.
+- ns:
   - kayleigh.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
