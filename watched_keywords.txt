@@ -42515,7 +42515,6 @@
 1661920396	tripleee	xi[\W_]*+coin
 1661922690	tripleee	nortondns\.com
 1661923008	tripleee	arivpz[\W_]*+(?:at[\W_]*+)?@gmail[\W_]*+(?:dot[\W_]*+)?com
-1661925132	Cody Gray	Adeena'?s[\W_]*Kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
 1661925255	tripleee	family[\W_]*+tree[\W_]*+maker(?!support\.(?:com|us)(?<=familytreemakersupport\.(?:com|us)))
 1661925334	Cody Gray	pees?chute
 1661925484	Cody Gray	bscs19019(?:@itu\.edu\.pk)?
