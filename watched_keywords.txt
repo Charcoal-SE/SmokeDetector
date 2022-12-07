@@ -45618,3 +45618,4 @@
 1670397290	cigien	wplake\.org
 1670398197	Makyen	royalmonarchlaundry\.com
 1670398227	Makyen	royal[\W_]*+monarch[\W_]*+laundry(?!\.com(?<=royalmonarchlaundry\.com))
+1670403515	tripleee	timapp\.vn
