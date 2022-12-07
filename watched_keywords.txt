@@ -45025,7 +45025,6 @@
 1668673631	cigien	desert[\W_]*+evening[\W_]*+safari(?!\.com(?<=deserteveningsafari\.com))
 1668674312	cigien	selectiver\.pl
 1668675472	cigien	tehran-cabinet\.com
-1668676805	tripleee	sky[\W_]*+host\d*
 1668676878	tripleee	aliposwal\.wordpress\.com
 1668676914	tripleee	ali[\W_]*+poswal(?!\.wordpress\.com(?<=aliposwal\.wordpress\.com))
 1668676944	tripleee	x8infinity\.com
