@@ -2349,9 +2349,6 @@ items:
   - rob.ns.cloudflare.com.
 - ns:
   - maya.ns.cloudflare.com.
-  - rocky.ns.cloudflare.com.
-- ns:
-  - maya.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
   - meera.ns.cloudflare.com.

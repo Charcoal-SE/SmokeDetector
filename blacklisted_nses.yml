@@ -244,6 +244,9 @@ items:
   - martha.ns.cloudflare.com.
   - sullivan.ns.cloudflare.com.
 - ns:
+  - maya.ns.cloudflare.com.
+  - rocky.ns.cloudflare.com.
+- ns:
   - miki.ns.cloudflare.com.
   - yahir.ns.cloudflare.com.
 - ns:
