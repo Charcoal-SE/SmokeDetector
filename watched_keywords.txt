@@ -45614,3 +45614,4 @@
 1670391074	tripleee	autoprodfw\.com
 1670391823	tripleee	onlinenewnews\.com
 1670393442	cigien	KURTIFOLKS
+1670396017	cigien	hardwareguider\.com
