@@ -45626,3 +45626,4 @@
 1670408476	cigien	blue[\W_]*+sky[\W_]*+concepts(?!\.in(?<=blueskyconcepts\.in))
 1670409106	cigien	qrcode-tiger\.com
 1670409692	cigien	proarticlehub\.com
+1670411114	tripleee	couponsjournal\.com
