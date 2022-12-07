@@ -3479,7 +3479,6 @@ items:
 - comment: 2022-06-19 NXDOMAIN
   disable: true
   ns: dnserverboot.com.
-- ns: hostns.io.
 - ns: rapidns.com.
 - ns: cdlsuite.com.
 - ns: purvainfosystems.info.
