@@ -45622,3 +45622,4 @@
 1670407280	tripleee	(?-i:^prudvi raju$)
 1670407406	tripleee	handyman-atl\.com
 1670408408	cigien	sky[\W_]*+host\d*+(?!\.pk(?<=skyhost\.pk))
+1670408435	cigien	skyhost\.pk
