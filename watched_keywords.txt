@@ -45613,3 +45613,4 @@
 1670353390	tripleee	timebeat\.app
 1670353657	tripleee	(?-i:^Hunday Yova$)
 1670391074	tripleee	autoprodfw\.com
+1670391823	tripleee	onlinenewnews\.com
