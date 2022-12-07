@@ -77,6 +77,7 @@ items:
   disable: true
 - asn: '42831'
 - asn: '43317'
+- asn: '45012'
 - asn: '45538'
 - asn: '45544'
 - asn: '45815'
