@@ -45555,7 +45555,6 @@
 1670160080	cigien	shopammos\.com
 1670163403	Makyen	g1homes\.ca
 1670164839	cigien	captchaai\.com
-1670166462	cigien	geektechnology\.in
 1670167208	cigien	playboyhoodie\.us
 1670167251	cigien	playboy[\W_]*+hoodie(?!\.us(?<=playboyhoodie\.us))
 1670168279	Ollie	996station\.com
