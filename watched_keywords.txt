@@ -45633,3 +45633,4 @@
 1670423713	tripleee	infrassist(?!\.com)
 1670427949	tripleee	luxe[\W_]*+keto
 1670430418	Ollie	aspirods\.com
+1670431724	Jeff Schaller	aniquekhan\.com
