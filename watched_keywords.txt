@@ -45625,3 +45625,4 @@
 1670408435	cigien	skyhost\.pk
 1670408476	cigien	blue[\W_]*+sky[\W_]*+concepts(?!\.in(?<=blueskyconcepts\.in))
 1670409106	cigien	qrcode-tiger\.com
+1670409692	cigien	proarticlehub\.com
