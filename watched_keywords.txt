@@ -45658,3 +45658,4 @@
 1670500710	Jeff Schaller	graphicsly\.net
 1670501781	Jeff Schaller	distancepathshala\.com
 1670502763	tripleee	intellipaat$(?<=\|[\W_]*+intellipaat)
+1670503006	tripleee	distance[\W_]*+pathshala(?<!distancepathshala(?=\.com))
