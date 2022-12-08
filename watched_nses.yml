@@ -845,6 +845,9 @@ items:
   - melnicoff.ns.cloudflare.com.
 - ns:
   - carlane.ns.cloudflare.com.
+  - cash.ns.cloudflare.com.
+- ns:
+  - carlane.ns.cloudflare.com.
   - dimitris.ns.cloudflare.com.
 - ns:
   - carlane.ns.cloudflare.com.
