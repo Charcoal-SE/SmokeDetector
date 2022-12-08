@@ -45644,3 +45644,4 @@
 1670487795	tripleee	cherishvietnam\.store
 1670488498	tripleee	optimalvapors\.com
 1670488531	tripleee	heptotechnologies\.com
+1670488741	cigien	hepto[\W_]*+technologies(?!\.com(?<=heptotechnologies\.com))
