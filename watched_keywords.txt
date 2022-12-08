@@ -45649,3 +45649,4 @@
 1670488819	cigien	nvntri(?!\.com)
 1670492634	cigien	juniordelhischool\.com
 1670492910	cigien	Poet(?:[\W_]*+Boutique)?[\W_]*+Restaurant
+1670493800	tripleee	vnbooking
