@@ -90,6 +90,7 @@ class GlobalVars:
     recently_scanned_posts_lock = threading.Lock()
     recently_scanned_posts_retention_time = 24 * 60 * 60  # 24 hours
     api_backoff_time = 0
+    default_requests_timeout = 60
     deletion_watcher = None
 
     not_privileged_warning = \

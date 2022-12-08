@@ -1186,11 +1186,11 @@ def pull(alias_used='pull'):
         return
 
     request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
-        GlobalVars.bot_repo_slug))
+        GlobalVars.bot_repo_slug), timeout=GlobalVars.default_requests_timeout)
     latest_sha = request.json()["object"]["sha"]
     request = requests.get(
-        'https://api.github.com/repos/{}/commits/{}/statuses'.format(
-            GlobalVars.bot_repo_slug, latest_sha))
+        'https://api.github.com/repos/{}/commits/{}/statuses'.format(GlobalVars.bot_repo_slug, latest_sha),
+        timeout=GlobalVars.default_requests_timeout)
     states = []
     for ci_status in request.json():
         state = ci_status["state"]
@@ -2137,7 +2137,7 @@ def allspam(msg, url):
         params = get_se_api_default_params({
             'filter': '!6Pbp)--cWmv(1',
         })
-        res = requests.get(request_url, params=params).json()
+        res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
@@ -2162,7 +2162,7 @@ def allspam(msg, url):
         # Fetch posts
         request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
         params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
-        res = requests.get(request_url, params=params).json()
+        res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
@@ -2201,7 +2201,7 @@ def allspam(msg, url):
                 # Fetch posts
                 req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
                 params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
-                answer_res = requests.get(req_url, params=params).json()
+                answer_res = requests.get(req_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
                 if "backoff" in answer_res:
                     if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
                         GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]

@@ -67,7 +67,7 @@ def api_get_post(post_url):
 
     request_url = GlobalVars.se_api_url_base + "{}s/{}".format(post_type, post_id)
     params = get_se_api_default_params_questions_answers_posts_add_site(site)
-    response = requests.get(request_url, params=params).json()
+    response = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
     if "backoff" in response:
         if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
             GlobalVars.api_backoff_time = time.time() + response["backoff"]

@@ -149,7 +149,7 @@ class DeletionWatcher:
             ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
             uri = GlobalVars.se_api_url_base + "posts/{}".format(ids)
             params = get_se_api_default_params_questions_answers_posts_add_site(site)
-            res = requests.get(uri, params=params)
+            res = requests.get(uri, params=params, timeout=GlobalVars.default_requests_timeout)
             json = res.json()
 
             if "items" not in json:

@@ -520,7 +520,7 @@ def refresh_sites():
             'page': page,
             'pagesize': 500
         })
-        response = requests.get(url, params=params)
+        response = requests.get(url, params=params, timeout=GlobalVars.default_requests_timeout)
 
         data = response.json()
         if "error_message" in data:
@@ -823,7 +823,8 @@ def fill_site_id_dict_by_id_from_site_id_dict():
 
 
 def refresh_site_id_dict():
-    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites')
+    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites',
+                           timeout=GlobalVars.default_requests_timeout)
     data = json.loads(message.text)
     site_ids_dict = {entry['hostname']: entry['siteid'] for entry in data}
     if len(site_ids_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH:

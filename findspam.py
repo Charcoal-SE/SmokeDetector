@@ -1859,7 +1859,7 @@ def toxic_check(post):
         return False, False, False, ""
 
     try:
-        response = requests.post(PERSPECTIVE, json={
+        response = requests.post(PERSPECTIVE, timeout=GlobalVars.default_requests_timeout, json={
             "comment": {
                 "text": s
             },
