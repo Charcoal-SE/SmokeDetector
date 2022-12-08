@@ -39151,7 +39151,6 @@
 1653045863	tripleee	kalyanavirundhu[\W_]*+biryani(?!\.com(?<=kalyanavirundhubiryani\.com))
 1653046099	tripleee	Shopify webhook the URL is not triggered
 1653047537	tripleee	abudhabimodels\.com
-1653049343	Jeff Schaller	godrejsplendour\.net\.in
 1653049564	Makyen	betzillion\.com
 1653052168	Makyen	maadhu[\W_]*+creatives
 1653057821	cigien	abu[\W_]*+dhabi[\W_]*+models(?!\.com(?<=abudhabimodels\.com))
