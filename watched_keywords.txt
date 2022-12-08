@@ -45661,3 +45661,4 @@
 1670503006	tripleee	distance[\W_]*+pathshala(?<!distancepathshala(?=\.com))
 1670503200	tripleee	targetjackets\.com
 1670508126	Jeff Schaller	HACK.?WITH.?ADRIAN.?LAMO
+1670508223	Jeff Schaller	puffxtrax\.com
