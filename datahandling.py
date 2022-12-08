@@ -20,7 +20,8 @@ from globalvars import GlobalVars
 import metasmoke
 from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
-from helpers import ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params
+from helpers import (ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params,
+                     get_se_api_url_for_route)
 from tasks import Tasks
 
 last_feedbacked = None
@@ -513,7 +514,7 @@ def fetch_lines_from_error_log(count):
 def refresh_sites():
     has_more = True
     page = 1
-    url = GlobalVars.se_api_url_base + "sites"
+    url = get_se_api_url_for_route("sites")
     while has_more:
         params = get_se_api_default_params({
             'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',

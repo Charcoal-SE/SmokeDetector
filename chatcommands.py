@@ -30,7 +30,7 @@ from ast import literal_eval
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
     reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception, \
-    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site
+    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -2132,7 +2132,7 @@ def allspam(msg, url):
             if GlobalVars.api_backoff_time > time.time():
                 time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
             # Fetch sites
-            request_url = GlobalVars.se_api_url_base + "users/{}/associated".format(user[0])
+            request_url = get_se_api_url_for_route("users/{}/associated".format(user[0]))
             params = get_se_api_default_params({
                 'filter': '!6Pbp)--cWmv(1',
             })
@@ -2158,7 +2158,7 @@ def allspam(msg, url):
             if GlobalVars.api_backoff_time > time.time():
                 time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
             # Fetch posts
-            request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
+            request_url = get_se_api_url_for_route("users/{}/posts".format(u_id))
             params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
             res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
             if "backoff" in res:
@@ -2196,7 +2196,7 @@ def allspam(msg, url):
                     if GlobalVars.api_backoff_time > time.time():
                         time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
                     # Fetch posts
-                    req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
+                    req_url = get_se_api_url_for_route("answers/{}".format(post['post_id']))
                     params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
                     answer_res = requests.get(req_url, params=params,
                                               timeout=GlobalVars.default_requests_timeout).json()

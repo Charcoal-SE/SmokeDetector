@@ -4,7 +4,7 @@ import parsing
 from globalvars import GlobalVars
 import time
 import html
-from helpers import get_se_api_default_params_questions_answers_posts_add_site
+from helpers import get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
 
 
 class PostData:
@@ -63,7 +63,7 @@ def api_get_post(post_url):
             return None
         post_id, site, post_type = d
 
-        request_url = GlobalVars.se_api_url_base + "{}s/{}".format(post_type, post_id)
+        request_url = get_se_api_url_for_route("{}s/{}".format(post_type, post_id))
         params = get_se_api_default_params_questions_answers_posts_add_site(site)
         response = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
         if "backoff" in response:

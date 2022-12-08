@@ -18,7 +18,7 @@ from chatcommunicate import tell_rooms_with
 from classes import Post, PostParseError
 from helpers import (log, log_current_thread, append_to_current_thread_name,
                      convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread,
-                     get_se_api_default_params_questions_answers_posts_add_site)
+                     get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route)
 import recently_scanned_posts as rsp
 from tasks import Tasks
 
@@ -556,7 +556,7 @@ class BodyFetcher:
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
-        url = GlobalVars.se_api_url_base + "questions{}".format(question_modifier)
+        url = get_se_api_url_for_route("questions{}".format(question_modifier))
         params = get_se_api_default_params_questions_answers_posts_add_site(site)
         params.update(pagesize_modifier)
 
