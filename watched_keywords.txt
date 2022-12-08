@@ -45646,3 +45646,4 @@
 1670488531	tripleee	heptotechnologies\.com
 1670488741	cigien	hepto[\W_]*+technologies(?!\.com(?<=heptotechnologies\.com))
 1670488785	cigien	nvntri\.com
+1670488819	cigien	nvntri(?!\.com)
