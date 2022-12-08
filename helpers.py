@@ -466,3 +466,25 @@ def strip_pre_and_code_elements(text, leave_note=False):
 
 def pluralize(value, base, plural_end, single_end='', zero_is_plural=True):
     return base + plural_end if value > 1 or (zero_is_plural and value == 0) else base + single_end
+
+
+def get_se_api_default_params(params):
+    all_params = GlobalVars.se_api_default_params.copy()
+    all_params.update(params)
+    return all_params
+
+
+def get_se_api_default_params_questions_answers_posts(params):
+    all_params = GlobalVars.se_api_default_params_questions_answers_posts.copy()
+    all_params.update(params)
+    return all_params
+
+
+def get_se_api_default_params_questions_answers_posts_add_site(site):
+    all_params = GlobalVars.se_api_default_params_questions_answers_posts.copy()
+    all_params.update({'site': site})
+    return all_params
+
+
+def get_se_api_url_for_route(route):
+    return GlobalVars.se_api_url_base + route

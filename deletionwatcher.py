@@ -12,7 +12,7 @@ import websocket
 from globalvars import GlobalVars
 import metasmoke
 import datahandling
-from helpers import log
+from helpers import log, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
 
@@ -147,12 +147,9 @@ class DeletionWatcher:
 
         for site, posts in saved.items():
             ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
-            uri = "https://api.stackexchange.com/2.2/posts/{}".format(ids)
-            params = {
-                'site': site,
-                'key': 'IAkbitmze4B8KpacUfLqkw(('
-            }
-            res = requests.get(uri, params=params)
+            uri = get_se_api_url_for_route("posts/{}".format(ids))
+            params = get_se_api_default_params_questions_answers_posts_add_site(site)
+            res = requests.get(uri, params=params, timeout=GlobalVars.default_requests_timeout)
             json = res.json()
 
             if "items" not in json:

@@ -50,7 +50,8 @@ class GitHubManager:
         """ Perform API calls. """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.request(method, route, data=payload, **cls.auth_args)
+        response = requests.request(method, route, data=payload, timeout=GlobalVars.default_requests_timeout,
+                                    **cls.auth_args)
         return response
 
     @classmethod
@@ -61,14 +62,14 @@ class GitHubManager:
         if isinstance(payload, dict):
             payload = json.dumps(payload)
         response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
-                                 data=payload, **cls.auth_args)
+                                 data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
 
     @classmethod
     def comment_on_thread(cls, thread_id, body):
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, thread_id)
         payload = json.dumps({'body': body})
-        response = requests.post(url, data=payload, **cls.auth_args)
+        response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
 
     @classmethod
@@ -339,7 +340,8 @@ class GitManager:
 
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
+                                timeout=GlobalVars.default_requests_timeout)
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
@@ -379,7 +381,8 @@ class GitManager:
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
+                                timeout=GlobalVars.default_requests_timeout)
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()

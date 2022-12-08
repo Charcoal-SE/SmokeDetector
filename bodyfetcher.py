@@ -17,7 +17,8 @@ from datahandling import (add_or_update_api_data, clear_api_data, schedule_store
 from chatcommunicate import tell_rooms_with
 from classes import Post, PostParseError
 from helpers import (log, log_current_thread, append_to_current_thread_name,
-                     convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread)
+                     convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread,
+                     get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route)
 import recently_scanned_posts as rsp
 from tasks import Tasks
 
@@ -555,12 +556,8 @@ class BodyFetcher:
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
-        url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
-        params = {
-            'filter': '!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa',
-            'key': 'IAkbitmze4B8KpacUfLqkw((',
-            'site': site
-        }
+        url = get_se_api_url_for_route("questions{}".format(question_modifier))
+        params = get_se_api_default_params_questions_answers_posts_add_site(site)
         params.update(pagesize_modifier)
 
         # wait to make sure API has/updates post data

@@ -20,7 +20,8 @@ from globalvars import GlobalVars
 import metasmoke
 from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
-from helpers import ErrorLogs, log, log_current_exception, redact_passwords
+from helpers import (ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params,
+                     get_se_api_url_for_route)
 from tasks import Tasks
 
 last_feedbacked = None
@@ -513,15 +514,14 @@ def fetch_lines_from_error_log(count):
 def refresh_sites():
     has_more = True
     page = 1
-    url = "https://api.stackexchange.com/2.2/sites"
+    url = get_se_api_url_for_route("sites")
     while has_more:
-        params = {
+        params = get_se_api_default_params({
             'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
-            'key': 'IAkbitmze4B8KpacUfLqkw((',
             'page': page,
             'pagesize': 500
-        }
-        response = requests.get(url, params=params)
+        })
+        response = requests.get(url, params=params, timeout=GlobalVars.default_requests_timeout)
 
         data = response.json()
         if "error_message" in data:
@@ -824,7 +824,8 @@ def fill_site_id_dict_by_id_from_site_id_dict():
 
 
 def refresh_site_id_dict():
-    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites')
+    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites',
+                           timeout=GlobalVars.default_requests_timeout)
     data = json.loads(message.text)
     site_ids_dict = {entry['hostname']: entry['siteid'] for entry in data}
     if len(site_ids_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH:

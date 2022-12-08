@@ -4,6 +4,7 @@ import parsing
 from globalvars import GlobalVars
 import time
 import html
+from helpers import get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
 
 
 class PostData:
@@ -53,37 +54,23 @@ class PostData:
 
 
 def api_get_post(post_url):
-    GlobalVars.api_request_lock.acquire()
+    with GlobalVars.api_request_lock:
+        # Respect backoff, if we were given one
+        if GlobalVars.api_backoff_time > time.time():
+            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+        d = parsing.fetch_post_id_and_site_from_url(post_url)
+        if d is None:
+            return None
+        post_id, site, post_type = d
 
-    # Respect backoff, if we were given one
-    if GlobalVars.api_backoff_time > time.time():
-        time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-    d = parsing.fetch_post_id_and_site_from_url(post_url)
-    if d is None:
-        GlobalVars.api_request_lock.release()
-        return None
-    post_id, site, post_type = d
-    if post_type == "answer":
-        api_filter = r"!4z6S)cPO)zvpuDWsWTAUW(kaV6K6thsqi1tlYa"
-    elif post_type == "question":
-        api_filter = r"!m)9.UaQrI5-DZXtlTpWhv2HroYRgS3dPhv.2vxV7fpGT*27rEHM.BKV1"
-    else:
-        raise ValueError("Unknown post type: {}".format(post_type))
-
-    request_url = "https://api.stackexchange.com/2.2/{}s/{}".format(post_type, post_id)
-    params = {
-        'filter': api_filter,
-        'key': 'IAkbitmze4B8KpacUfLqkw((',
-        'site': site
-    }
-    response = requests.get(request_url, params=params).json()
-    if "backoff" in response:
-        if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
-            GlobalVars.api_backoff_time = time.time() + response["backoff"]
-    if 'items' not in response or len(response['items']) == 0:
-        GlobalVars.api_request_lock.release()
-        return False
-    GlobalVars.api_request_lock.release()
+        request_url = get_se_api_url_for_route("{}s/{}".format(post_type, post_id))
+        params = get_se_api_default_params_questions_answers_posts_add_site(site)
+        response = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
+        if "backoff" in response:
+            if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
+                GlobalVars.api_backoff_time = time.time() + response["backoff"]
+        if 'items' not in response or len(response['items']) == 0:
+            return False
 
     item = response['items'][0]
     post_data = PostData()
