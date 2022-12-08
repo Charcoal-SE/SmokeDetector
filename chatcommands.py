@@ -29,7 +29,8 @@ from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception
+    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception, \
+    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -2113,7 +2114,6 @@ def allspam(msg, url):
     :return:
     """
 
-    api_key = 'IAkbitmze4B8KpacUfLqkw(('
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
         raise CmdException("You can execute the !!/allspam command again in {} seconds. "
@@ -2134,10 +2134,9 @@ def allspam(msg, url):
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch sites
         request_url = GlobalVars.se_api_url_base + "users/{}/associated".format(user[0])
-        params = {
+        params = get_se_api_default_params({
             'filter': '!6Pbp)--cWmv(1',
-            'key': api_key
-        }
+        })
         res = requests.get(request_url, params=params).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
@@ -2162,11 +2161,7 @@ def allspam(msg, url):
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch posts
         request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
-        params = {
-            'filter': GlobalVars.se_api_question_answer_post_filter,
-            'key': api_key,
-            'site': u_site
-        }
+        params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
         res = requests.get(request_url, params=params).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
@@ -2205,11 +2200,7 @@ def allspam(msg, url):
                     time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
                 # Fetch posts
                 req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
-                params = {
-                    'filter': GlobalVars.se_api_question_answer_post_filter,
-                    'key': api_key,
-                    'site': u_site
-                }
+                params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
                 answer_res = requests.get(req_url, params=params).json()
                 if "backoff" in answer_res:
                     if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:

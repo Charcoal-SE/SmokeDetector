@@ -20,7 +20,7 @@ from globalvars import GlobalVars
 import metasmoke
 from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
-from helpers import ErrorLogs, log, log_current_exception, redact_passwords
+from helpers import ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params
 from tasks import Tasks
 
 last_feedbacked = None
@@ -515,12 +515,11 @@ def refresh_sites():
     page = 1
     url = GlobalVars.se_api_url_base + "sites"
     while has_more:
-        params = {
+        params = get_se_api_default_params({
             'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
-            'key': 'IAkbitmze4B8KpacUfLqkw((',
             'page': page,
             'pagesize': 500
-        }
+        })
         response = requests.get(url, params=params)
 
         data = response.json()
