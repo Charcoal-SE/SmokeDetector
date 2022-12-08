@@ -45652,3 +45652,4 @@
 1670493800	tripleee	vnbooking
 1670494438	tripleee	(?-i:0bNFkI_0jhc)(?# youtube)
 1670496164	cigien	realestateindia\.com
+1670497848	Jeff Schaller	movebuddha\.com
