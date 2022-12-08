@@ -1327,9 +1327,8 @@ def apiquota():
     Report how many API hits remain for the day
     :return: A string
     """
-    GlobalVars.apiquota_rw_lock.acquire()
-    current_apiquota = GlobalVars.apiquota
-    GlobalVars.apiquota_rw_lock.release()
+    with GlobalVars.apiquota_rw_lock:
+        current_apiquota = GlobalVars.apiquota
 
     return "The current API quota remaining is {}.".format(current_apiquota)
 
@@ -2129,19 +2128,18 @@ def allspam(msg, url):
     # Detect whether link is to network profile or site profile
     if user[1] == 'stackexchange.com':
         # Respect backoffs etc
-        GlobalVars.api_request_lock.acquire()
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-        # Fetch sites
-        request_url = GlobalVars.se_api_url_base + "users/{}/associated".format(user[0])
-        params = get_se_api_default_params({
-            'filter': '!6Pbp)--cWmv(1',
-        })
-        res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
-        if "backoff" in res:
-            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + res["backoff"]
-        GlobalVars.api_request_lock.release()
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            # Fetch sites
+            request_url = GlobalVars.se_api_url_base + "users/{}/associated".format(user[0])
+            params = get_se_api_default_params({
+                'filter': '!6Pbp)--cWmv(1',
+            })
+            res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
@@ -2156,17 +2154,16 @@ def allspam(msg, url):
     # Fetch posts
     for u_id, u_site in user_sites:
         # Respect backoffs etc
-        GlobalVars.api_request_lock.acquire()
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-        # Fetch posts
-        request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
-        params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
-        res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
-        if "backoff" in res:
-            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + res["backoff"]
-        GlobalVars.api_request_lock.release()
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            # Fetch posts
+            request_url = GlobalVars.se_api_url_base + "users/{}/posts".format(u_id)
+            params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
+            res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user has no posts on this site.")
         posts = res['items']
@@ -2195,17 +2192,17 @@ def allspam(msg, url):
                 # Annoyingly we have to make another request to get the question ID, since it is only returned by the
                 # /answers route
                 # Respect backoffs etc
-                GlobalVars.api_request_lock.acquire()
-                if GlobalVars.api_backoff_time > time.time():
-                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-                # Fetch posts
-                req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
-                params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
-                answer_res = requests.get(req_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
-                if "backoff" in answer_res:
-                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
-                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
-                GlobalVars.api_request_lock.release()
+                with GlobalVars.api_request_lock:
+                    if GlobalVars.api_backoff_time > time.time():
+                        time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+                    # Fetch posts
+                    req_url = GlobalVars.se_api_url_base + "answers/{}".format(post['post_id'])
+                    params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
+                    answer_res = requests.get(req_url, params=params,
+                                              timeout=GlobalVars.default_requests_timeout).json()
+                    if "backoff" in answer_res:
+                        if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
+                            GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
                 # Finally, set the attribute
                 post_data.question_id = answer_res['items'][0]['question_id']
                 post_data.is_answer = True
