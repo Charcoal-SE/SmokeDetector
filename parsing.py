@@ -112,7 +112,7 @@ def fetch_post_id_and_site_from_url(url):
         search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+[/#](\d+)(?:#\d+)?$"
     else:
         post_type = "question"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)/(?:questions|staging-ground)/(\d+)(?:/.*)?$"
     found = regex.compile(search_regex).search(trimmed_url)
     if found is not None:
         try:
