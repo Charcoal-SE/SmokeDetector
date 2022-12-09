@@ -45670,3 +45670,4 @@
 1670564804	tripleee	digital[\W_]*+air[\W_]*+fryer
 1670565484	tripleee	vootfly(?!\.com)(?<!(?-i:^vootfly$))
 1670565512	tripleee	(?-i:^vootfly$)
+1670565607	tripleee	loginvki\.com
