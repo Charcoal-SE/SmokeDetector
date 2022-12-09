@@ -45674,3 +45674,4 @@
 1670565650	tripleee	loginvki(?!\.com)
 1670567916	cigien	schengenflightreservationvisa\.com
 1670569006	cigien	carlyimotor\.com
+1670570454	tripleee	universal[\W_]*+dream[\W_]*+services
