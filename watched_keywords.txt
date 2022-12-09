@@ -45203,7 +45203,6 @@
 1669128632	cigien	twowheelforum\.com
 1669128673	cigien	ultrapharmrx\.com
 1669144480	Jeff Schaller	sr-makemoney\.com
-1669146548	Nisse Engström	gloriumtech\.com
 1669147637	Nisse Engström	jacketsmania\.co\.uk
 1669148579	cigien	atomgrim(?:[\W_]*+com)?
 1669171030	cigien	donusumsanhurda\.com
