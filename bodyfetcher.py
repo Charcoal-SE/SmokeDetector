@@ -122,7 +122,8 @@ class BodyFetcher:
 
     last_activity_date = 0
     last_activity_date_lock = threading.Lock()
-    ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH = 6 * 60 * 1000  # 6 minutes in milliseconds; is beyond edit grace period
+    # 6 minutes in seconds (SE API uses seconds) is beyond edit grace period:
+    ACTIVITY_DATE_EXTRA_EARLIER_S_TO_FETCH = 6 * 60
 
     api_data_lock = threading.Lock()
 
@@ -551,7 +552,7 @@ class BodyFetcher:
 
                 pagesize_modifier = {
                     'pagesize': pagesize,
-                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_MS_TO_FETCH, 0))
+                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_S_TO_FETCH, 0))
                 }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
