@@ -40226,7 +40226,6 @@
 1655827466	Ollie	phpfragments\.com
 1655827752	Ollie	(?-i:jhlbem)(?# rb.gy)
 1655831775	Makyen	beingtopper(?!\.net)
-1655834673	Ollie	mangocityit\.com
 1655844914	Makyen	proyectonisal\.org
 1655851799	cocomac	superbcompanies\.com
 1655854441	Spevacus	partners@msg91\.com
