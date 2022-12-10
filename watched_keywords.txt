@@ -45705,3 +45705,4 @@
 1670676707	Jeff Schaller	next-x\.com\.au
 1670676735	Jeff Schaller	moversbrampton\.ca
 1670679042	cigien	movers[\W_]*+brampton(?!\.ca(?<=moversbrampton\.ca))
+1670679123	cigien	tech2globe(?!\.ca)
