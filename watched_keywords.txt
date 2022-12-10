@@ -45693,3 +45693,4 @@
 1670649669	tripleee	mbo99\.one
 1670651233	tripleee	it(?:s|ian)[\W_]*+(?:guru|expert)s?
 1670655068	cigien	shiash\.com
+1670655106	cigien	tondocoin\.io
