@@ -45700,3 +45700,4 @@
 1670656234	cigien	gofastresearch\.com
 1670656466	cigien	itque(?!\.net)
 1670656687	cigien	securieon[\W_]*+group(?!\.com(?<=securieongroup\.com))
+1670665850	cigien	cvpschool\.com
