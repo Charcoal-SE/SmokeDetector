@@ -45704,3 +45704,4 @@
 1670674278	Jeff Schaller	tech2globe\.ca
 1670676707	Jeff Schaller	next-x\.com\.au
 1670676735	Jeff Schaller	moversbrampton\.ca
+1670679042	cigien	movers[\W_]*+brampton(?!\.ca(?<=moversbrampton\.ca))
