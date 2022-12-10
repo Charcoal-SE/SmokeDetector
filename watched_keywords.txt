@@ -45702,3 +45702,4 @@
 1670656687	cigien	securieon[\W_]*+group(?!\.com(?<=securieongroup\.com))
 1670665850	cigien	cvpschool\.com
 1670668839	Jeff Schaller	doublepills\.com
+1670674278	Jeff Schaller	tech2globe\.ca
