@@ -45697,3 +45697,4 @@
 1670655327	cigien	growmap\.com
 1670655365	cigien	lepszaforma\.pl
 1670655461	cigien	mbo99(?!\.one)
+1670656234	cigien	gofastresearch\.com
