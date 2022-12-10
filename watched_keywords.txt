@@ -45691,3 +45691,4 @@
 1670629805	Makyen	itque\.net
 1670644024	cocomac	162\.243\.175\.185
 1670649669	tripleee	mbo99\.one
+1670651233	tripleee	it(?:s|ian)[\W_]*+(?:guru|expert)s?
