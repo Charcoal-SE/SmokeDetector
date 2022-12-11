@@ -15,8 +15,7 @@ items:
 - ns:
   - abby.ns.cloudflare.com.
   - norman.ns.cloudflare.com.
-- comment: all FP 2022-11-03
-  disable: true
+- comment: undisclosed affiliation? so far, captured posts have received FP feedback, but re-enabling 2022-12-11
   ns:
   - abby.ns.cloudflare.com.
   - ram.ns.cloudflare.com.
