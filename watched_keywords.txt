@@ -42848,7 +42848,6 @@
 1662547537	tripleee	puradrop
 1662547702	tripleee	(?-i:^Mobiloitte Technologies$)
 1662548933	tripleee	leadingscholarships\.com
-1662549895	Jeff Schaller	jbformworksystems\.com
 1662550161	Jeff Schaller	stupefywatches\.com
 1662555217	cigien	agrodane\.pl
 1662563510	Ollie	orlandocamerasinstallation\.com
