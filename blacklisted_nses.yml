@@ -83,6 +83,9 @@ items:
   - autumn.ns.cloudflare.com.
   - kipp.ns.cloudflare.com.
 - ns:
+  - bailey.ns.cloudflare.com.
+  - bill.ns.cloudflare.com.
+- ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
