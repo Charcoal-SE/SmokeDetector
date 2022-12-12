@@ -45730,3 +45730,4 @@
 1670829008	cocomac	rated-psychics\.com
 1670829037	cigien	latestjavafeatures\.blogspot
 1670830288	cigien	airlines[\W_]*+buddy(?!\.com(?<=airlinesbuddy\.com))
+1670831290	cigien	starworlddigital\.com
