@@ -45736,3 +45736,4 @@
 1670838626	tripleee	giayphepgm\.com
 1670838771	cigien	royalcarwash\.com\.au
 1670843209	tripleee	absolute[\W_]*+erp
+1670843245	tripleee	erp[\W_]*+absolute(?!\.com(?<=erpabsolute\.com))
