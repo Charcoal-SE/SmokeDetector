@@ -736,3 +736,4 @@ meta kukel exchange
 (?-i:^Swapnil Gour$)
 (?-i:^Berodrito Pembrunk$)
 (?-i:^casualac$)
+(?-i:^coinshen1$)
