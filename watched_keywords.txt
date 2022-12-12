@@ -45748,3 +45748,4 @@
 1670863565	Ollie	emsme\.com
 1670864744	cigien	itcanvass(?!\.com)
 1670865436	cigien	emsme(?!\.com)
+1670868578	tripleee	(?-i:qTtBcOI-cXY)(?# youtube)
