@@ -45724,3 +45724,4 @@
 1670825957	tripleee	prof[\W_]*+dr[\W_]*+hamka
 1670828109	cigien	indianspellcaster\.com
 1670828172	cigien	tapasyamundhra\.com
+1670828202	cigien	tapasya[\W_]*+mundhra(?!\.com(?<=tapasyamundhra\.com))
