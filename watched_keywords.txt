@@ -45722,3 +45722,4 @@
 1670824633	tripleee	perfectans\.net
 1670825485	tripleee	rankeronline\.com
 1670825957	tripleee	prof[\W_]*+dr[\W_]*+hamka
+1670828109	cigien	indianspellcaster\.com
