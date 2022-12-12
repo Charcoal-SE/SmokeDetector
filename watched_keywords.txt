@@ -1884,7 +1884,6 @@
 1515503441	iBug	freejobalertonline\.in
 1515564139	paper1111	online-l%C3%A5n\.dk
 1515576849	Glorfindel	thestuart\.com
-1515578537	Mithrandir	ozassignments\.com
 1515589527	Glorfindel	academicresearchcenter\.com
 1515594307	Glorfindel	vinaigrefr\.com
 1515597666	Glorfindel	jrelectronicsonline\.com
