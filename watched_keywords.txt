@@ -45731,3 +45731,4 @@
 1670832264	tripleee	vezin[\W_]*+pharma(?!\.com(?<=vezinpharma\.com))
 1670832295	tripleee	vezinpharma\.com
 1670837886	tripleee	sangopriestesslovesolution
+1670837919	tripleee	newlaunchproject\.in
