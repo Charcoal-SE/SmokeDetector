@@ -45730,3 +45730,4 @@
 1670830288	cigien	airlines[\W_]*+buddy(?!\.com(?<=airlinesbuddy\.com))
 1670831290	cigien	starworlddigital\.com
 1670832264	tripleee	vezin[\W_]*+pharma(?!\.com(?<=vezinpharma\.com))
+1670832295	tripleee	vezinpharma\.com
