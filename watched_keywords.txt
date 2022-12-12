@@ -45749,3 +45749,4 @@
 1670864744	cigien	itcanvass(?!\.com)
 1670865436	cigien	emsme(?!\.com)
 1670868578	tripleee	(?-i:qTtBcOI-cXY)(?# youtube)
+1670873698	Ethan	smbinfotech\.net
