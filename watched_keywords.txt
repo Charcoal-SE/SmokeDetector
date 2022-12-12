@@ -45726,3 +45726,4 @@
 1670828172	cigien	tapasyamundhra\.com
 1670828202	cigien	tapasya[\W_]*+mundhra(?!\.com(?<=tapasyamundhra\.com))
 1670828257	cocomac	leaptrend\.com
+1670828421	cigien	lucarb999\.com
