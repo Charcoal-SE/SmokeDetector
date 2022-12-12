@@ -45750,3 +45750,4 @@
 1670865436	cigien	emsme(?!\.com)
 1670868578	tripleee	(?-i:qTtBcOI-cXY)(?# youtube)
 1670873698	Ethan	smbinfotech\.net
+1670876714	Ethan	idstop\.co
