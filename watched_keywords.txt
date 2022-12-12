@@ -45741,3 +45741,4 @@
 1670843655	tripleee	(?-i:^dannys$)
 1670847907	tripleee	tolerance-homes\.com
 1670848825	Glorfindel	beyond\W*ride
+1670852635	Jeff Schaller	mfo24\.info
