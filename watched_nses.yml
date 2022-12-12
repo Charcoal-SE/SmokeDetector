@@ -1858,6 +1858,9 @@ items:
   - jean.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - jean.ns.cloudflare.com.
+  - rayden.ns.cloudflare.com.
+- ns:
   - jeff.ns.cloudflare.com.
   - maya.ns.cloudflare.com.
 - ns:
