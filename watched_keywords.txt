@@ -45732,3 +45732,4 @@
 1670832295	tripleee	vezinpharma\.com
 1670837886	tripleee	sangopriestesslovesolution
 1670837919	tripleee	newlaunchproject\.in
+1670838569	tripleee	umer[\W_]*+shah?koor
