@@ -1316,6 +1316,9 @@ items:
   - doug.ns.cloudflare.com.
   - keyla.ns.cloudflare.com.
 - ns:
+  - doug.ns.cloudflare.com.
+  - vita.ns.cloudflare.com.
+- ns:
   - drew.ns.cloudflare.com.
   - jo.ns.cloudflare.com.
 - ns:
