@@ -45775,3 +45775,4 @@
 1670939341	tripleee	(?-i:^Beyond Ride$)
 1670939403	tripleee	beyond[\W_]*+rides?(?!\.com(?<=beyondride\.com))(?<!(?-i:^Beyond Ride$))
 1670940233	cigien	c3d\.ae
+1670940833	tripleee	(?-i:^John Mascera$)
