@@ -45753,3 +45753,4 @@
 1670878032	Jeff Schaller	mc\.informalnewz\.com
 1670881649	Makyen	learncamerarepair\.com
 1670894718	Vickel	autowin888\.com
+1670910164	tripleee	(?-i:^Anjali Chand$)
