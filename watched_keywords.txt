@@ -45737,7 +45737,6 @@
 1670843294	tripleee	(?-i:^Textile Manufacturing Software$)
 1670843655	tripleee	(?-i:^dannys$)
 1670847907	tripleee	tolerance-homes\.com
-1670848825	Glorfindel	beyond\W*ride
 1670852635	Jeff Schaller	mfo24\.info
 1670859058	Ethan	(?-i:WFxkhY1efrg)(?# youtu\.be)
 1670863198	cigien	faisaltechh\.com
