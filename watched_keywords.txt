@@ -45782,3 +45782,4 @@
 1670949327	Glorfindel	jojoy
 1670949496	tripleee	albert[\W_]*+gonzalez[\W]*+wizard(?<!albertgonzalezwizard)
 1670949749	tripleee	fluxus\.vip
+1670949932	tripleee	(?-i:^taril$)
