@@ -45764,3 +45764,4 @@
 1670924316	cigien	lensoptikal\.com
 1670925378	Glorfindel	cut\W*price\W*retail
 1670926845	tripleee	macsonik\.com
+1670927166	tripleee	(?-i:5ZBMPY3L34w)(?# youtube)
