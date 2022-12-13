@@ -45781,3 +45781,4 @@
 1670948987	tripleee	idp[\W_]*+education
 1670949327	Glorfindel	jojoy
 1670949496	tripleee	albert[\W_]*+gonzalez[\W]*+wizard(?<!albertgonzalezwizard)
+1670949749	tripleee	fluxus\.vip
