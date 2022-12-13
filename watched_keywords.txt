@@ -41266,7 +41266,6 @@
 1658964471	Jeff Schaller	nchsoftware\.com
 1658982823	tripleee	itemName=AlexShen(?# visual studio marketplace)
 1658984116	tripleee	entrepreneurhandbook\.co\.uk
-1658986830	tripleee	youstable\.com
 1658986860	tripleee	hostingloginguide\.com
 1658990869	Jeff Schaller	helpbot\.net
 1658996782	Makyen	br\.nowgoal\.com
