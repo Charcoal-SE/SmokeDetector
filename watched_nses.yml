@@ -1240,6 +1240,9 @@ items:
   - elmo.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
+  - julian.ns.cloudflare.com.
+- ns:
+  - desi.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
