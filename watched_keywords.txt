@@ -45771,3 +45771,4 @@
 1670931915	Jeff Schaller	pkinstitutecrt\.com
 1670934525	Jeff Schaller	junkbunk\.co\.uk
 1670937379	tripleee	(?-i:^Seven Solution$)
+1670938862	cigien	tutoroot(?!\.com)
