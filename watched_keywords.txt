@@ -45769,3 +45769,4 @@
 1670928586	tripleee	bluewallet[\W_]*+sign[\W_]*+inn?
 1670929540	tripleee	diamonddistrictblock\.com
 1670931915	Jeff Schaller	pkinstitutecrt\.com
+1670934525	Jeff Schaller	junkbunk\.co\.uk
