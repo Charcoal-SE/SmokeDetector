@@ -45762,3 +45762,4 @@
 1670923294	cigien	thewebnotix\.com
 1670923486	cigien	fazter\.com
 1670924316	cigien	lensoptikal\.com
+1670925378	Glorfindel	cut\W*price\W*retail
