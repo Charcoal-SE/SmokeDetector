@@ -40920,7 +40920,6 @@
 1657910243	cigien	gardenhouseflags\.com
 1657910307	cigien	garden[\W_]*+house[\W_]*+flags(?!\.com(?<=gardenhouseflags\.com))
 1657916323	Makyen	hostmycode\.in
-1657918639	Makyen	buytilesandmore\.com
 1657922612	Makyen	masallaroku\.org
 1657923009	Makyen	q646043
 1657926101	Makyen	kbuenoplumbing
