@@ -3138,7 +3138,9 @@ items:
 - ns: dnsireland.com.
 - ns:
   - sdns2.ovh.ca.
-- ns: iwantmyname.net.
+- comment: 3/291 (!) -- disabled 2022-12-13
+  disable: true
+  ns: iwantmyname.net.
 - ns: vicerocks.com.
 - ns: noc40.com.
 - comment: 32/292 over 3 years
