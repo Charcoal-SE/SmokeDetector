@@ -45765,3 +45765,4 @@
 1670925378	Glorfindel	cut\W*price\W*retail
 1670926845	tripleee	macsonik\.com
 1670927166	tripleee	(?-i:5ZBMPY3L34w)(?# youtube)
+1670927199	tripleee	tutoroot\.com
