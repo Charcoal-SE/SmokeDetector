@@ -1708,6 +1708,9 @@ items:
   - henrik.ns.cloudflare.com.
   - maya.ns.cloudflare.com.
 - ns:
+  - henry.ns.cloudflare.com.
+  - jade.ns.cloudflare.com.
+- ns:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
