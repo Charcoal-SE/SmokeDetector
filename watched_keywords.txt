@@ -45783,3 +45783,4 @@
 1670949749	tripleee	fluxus\.vip
 1670949932	tripleee	(?-i:^taril$)
 1670950362	Ollie	mightytips\.com
+1670958312	Vickel	imediasolutions\.in
