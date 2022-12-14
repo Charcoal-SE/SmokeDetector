@@ -45814,3 +45814,4 @@
 1671031279	Jeff Schaller	essentialsclothing\.co
 1671032527	Jeff Schaller	MOV\.AI
 1671035047	cigien	my[\W_]*+virtual[\W_]*+teams(?!\.com(?<=myvirtualteams\.com))
+1671040302	Jeff Schaller	profullversion\.org
