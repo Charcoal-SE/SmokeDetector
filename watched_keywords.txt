@@ -45801,3 +45801,4 @@
 1671012000	cigien	hariome\.com
 1671012096	cigien	auvietrack\.net
 1671012134	cigien	au[\W_]*+viet[\W_]*+rack(?!\.net(?<=auvietrack\.net))
+1671015582	tripleee	adaptiva\.com
