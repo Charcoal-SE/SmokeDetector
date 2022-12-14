@@ -45800,3 +45800,4 @@
 1671009188	cigien	rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
 1671009344	cigien	fam[\W_]*+pay(?:[\W_]*+gift[\W_]*+cards)?
 1671012000	cigien	hariome\.com
+1671012096	cigien	auvietrack\.net
