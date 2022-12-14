@@ -45807,3 +45807,4 @@
 1671015956	Makyen	originate[\W_]*+web(?!\.com(?<=originateweb\.com))
 1671016326	tripleee	(?-i:^Nicholwhit$)
 1671017114	tripleee	(?-i:^Adaptiva$)
+1671017454	tripleee	higssoftware\.com
