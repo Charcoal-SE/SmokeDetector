@@ -45798,3 +45798,4 @@
 1671007836	cigien	(?-i:B0b7Rb)(?#fiverr)
 1671009126	cigien	usdtopkr\.pk
 1671009188	cigien	rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
+1671009344	cigien	fam[\W_]*+pay(?:[\W_]*+gift[\W_]*+cards)?
