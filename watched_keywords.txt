@@ -45806,3 +45806,4 @@
 1671015929	Makyen	originateweb\.com
 1671015956	Makyen	originate[\W_]*+web(?!\.com(?<=originateweb\.com))
 1671016326	tripleee	(?-i:^Nicholwhit$)
+1671017114	tripleee	(?-i:^Adaptiva$)
