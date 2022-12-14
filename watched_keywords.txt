@@ -45809,3 +45809,4 @@
 1671017114	tripleee	(?-i:^Adaptiva$)
 1671017454	tripleee	higssoftware\.com
 1671019650	Mast	Elite[\W_]*+Private[\W_]*+School
+1671023446	Jeff Schaller	myvirtualteams\.com
