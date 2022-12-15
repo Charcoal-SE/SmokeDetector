@@ -45841,3 +45841,4 @@
 1671104303	cigien	the[\W_]*+sports[\W_]*+giant(?!\.com(?<=thesportsgiant\.com))
 1671104368	cigien	gkindus\.com
 1671104697	cigien	mosttrendingnews\.com
+1671105032	cigien	itadon\.com
