@@ -45861,3 +45861,4 @@
 1671123231	Jeff Schaller	snowlock\.org
 1671130435	tripleee	aadhaar[\W_]*+data [\W_]*+vault
 1671130467	Jeff Schaller	coolservicellc\.com
+1671131966	Makyen	aspireleather\.com
