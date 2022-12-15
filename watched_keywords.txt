@@ -45831,7 +45831,6 @@
 1671102928	cigien	bito\.co
 1671103065	Ryan M	spotneats\.com
 1671103100	cigien	daibau\.ro
-1671103183	cigien	poland\.travel
 1671103223	cigien	hrad-karlstejn\.cz
 1671103254	cigien	chateaudusse\.fr
 1671103300	cigien	burgenstrasse\.de
