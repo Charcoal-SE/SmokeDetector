@@ -45842,3 +45842,4 @@
 1671104368	cigien	gkindus\.com
 1671104697	cigien	mosttrendingnews\.com
 1671105032	cigien	itadon\.com
+1671105067	cigien	itadon(?!\.com)
