@@ -45846,3 +45846,4 @@
 1671105111	cigien	ecos\.am
 1671105282	cigien	mypowerexperts\.com
 1671105312	cigien	my[\W_]*+power[\W_]*+experts(?!\.com(?<=mypowerexperts\.com))
+1671105342	Ryan M	sithub\.in
