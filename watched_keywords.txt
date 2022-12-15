@@ -45859,3 +45859,4 @@
 1671109753	Jeff Schaller	soefyansyah\.com
 1671115527	Jeff Schaller	signdocs\.co
 1671123231	Jeff Schaller	snowlock\.org
+1671130435	tripleee	aadhaar[\W_]*+data [\W_]*+vault
