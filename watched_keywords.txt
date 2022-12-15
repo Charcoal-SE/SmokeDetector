@@ -45838,3 +45838,4 @@
 1671103729	cigien	daerahgacor\.com
 1671103876	Ryan M	creditrepairhouston\.mobi
 1671104258	cigien	spiderservers\.mysellix\.io
+1671104303	cigien	the[\W_]*+sports[\W_]*+giant(?!\.com(?<=thesportsgiant\.com))
