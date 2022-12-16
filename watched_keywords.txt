@@ -45879,3 +45879,4 @@
 1671207594	Jeff Schaller	slopeunblocked\.space
 1671207625	Jeff Schaller	serviice\.in
 1671213664	Ethan	bomcas\.ca
+1671214073	Makyen	bomcas(?!\.ca)
