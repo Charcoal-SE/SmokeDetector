@@ -45872,3 +45872,4 @@
 1671186395	Makyen	3359362516(?#linkedin.com)
 1671188427	Makyen	liveonca\.com
 1671191734	Jeff Schaller	silvergiftz\.com
+1671191802	Ian Campbell	ophthalmologytimes\.com(?#Highly suspicious website posted on medical sciences)
