@@ -45874,3 +45874,4 @@
 1671191734	Jeff Schaller	silvergiftz\.com
 1671194594	Jeff Schaller	civildetail\.com
 1671195413	cigien	ophthalmologytimes\.com
+1671195445	cigien	cdn\.sanity\.io
