@@ -1567,7 +1567,6 @@ Apx\W?Me
 bella\W?pelle
 perfect\W?keto(?:\W?base)?
 protec\W?vital(?:\W?plus)?
-abcya
 adam4adam
 magnum\W?pump(?:\W?xr)?
 retro\W?vigor
