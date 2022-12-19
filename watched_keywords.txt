@@ -45921,3 +45921,4 @@
 1671467965	cigien	swapnil-techworks\.blogspot
 1671468008	Jeff Schaller	substancedigital\.in
 1671468120	cigien	networkise\.com
+1671468151	cigien	networkise(?!\.com)
