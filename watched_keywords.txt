@@ -45915,3 +45915,4 @@
 1671466946	Jeff Schaller	oastify\.com
 1671466994	cigien	elianaandivana(?:@gmail\.com)?
 1671467408	cigien	spss-tutor\.com
+1671467439	cigien	spss[\W_]*+tutor(?!\.com(?<=spss-tutor\.com))
