@@ -45918,3 +45918,4 @@
 1671467439	cigien	spss[\W_]*+tutor(?!\.com(?<=spss-tutor\.com))
 1671467733	cigien	apkregular\.com
 1671467841	cigien	campuscomponent\.com
+1671467965	cigien	swapnil-techworks\.blogspot
