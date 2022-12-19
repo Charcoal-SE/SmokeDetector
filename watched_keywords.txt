@@ -38600,7 +38600,6 @@
 1651651146	Makyen	cakeresume\.com
 1651651469	Cody Gray	crypto(?:currency)?[\W_]*payment[\W_]*gateway(?![\W_]*api)
 1651648241	Henry Ecker	drneetujainpulmo\.com
-1651644760	Henry Ecker	faresglob\.com
 1651642767	lyxal	gene-rator\.online
 1651651931	Cody Gray	pg[\W_]*slot(?!\.)(?:[\W_]*game)?
 1651653730	Ryan M	taxindia24\.com
