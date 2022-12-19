@@ -5624,7 +5624,6 @@
 1540357737	Shree	weryon\.ro
 1540361262	Tetsuya Yamamoto	roshanlalevents\.com
 1540361352	A J	profitclip\.com
-1540363096	Tetsuya Yamamoto	mobile-phone\.pk
 1540373758	Shree	bestpharmacyinusa\.com
 1540375095	Shree	airtel-customer-care-number\.in
 1540386742	Makyen	emptynothing30(?:@gmail\.com)?
