@@ -45930,3 +45930,4 @@
 1671468748	Jeff Schaller	gaf\.ni\.ac\.rs
 1671468788	Jeff Schaller	openscience\.usdb\.uminho\.pt
 1671468838	cigien	(?-i:o0ggpWUtSFA)(?#youtu.be)
+1671468944	cigien	iqtechtime\.com
