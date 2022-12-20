@@ -45963,3 +45963,4 @@
 1671568598	Ethan	pakistanspot\.com
 1671569304	Jeff Schaller	thebestfishfinder\.com
 1671569463	Glorfindel	medute
+1671569900	Glorfindel	^my\W*kitchen\W*mart$
