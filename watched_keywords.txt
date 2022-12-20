@@ -45940,3 +45940,4 @@
 1671472465	Jeff Schaller	rxpresshealthpharmacy\.com
 1671476405	Jeff Schaller	avanche\.org
 1671477499	Jeff Schaller	myesadoctor\.com
+1671499351	Jeff Schaller	nixondata\.com
