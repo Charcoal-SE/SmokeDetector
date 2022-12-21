@@ -45977,3 +45977,4 @@
 1671625485	cigien	quomodosoft\.com
 1671631530	cigien	dealer77\.com
 1671631555	cigien	dealer77(?!\.com)
+1671631590	cigien	triftcreditplus\.com
