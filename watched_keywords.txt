@@ -45982,3 +45982,4 @@
 1671632093	cigien	sky[\W_]*+help[\W_]*+service
 1671641909	Jeff Schaller	airwaysair\.com
 1671653333	Ethan	embersummers519(?:@gmail\.com)?
+1671568907	Ethan	(?-i:Monsterovich)(?# gitlab\.com)
