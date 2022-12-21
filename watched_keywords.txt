@@ -45964,3 +45964,4 @@
 1671569463	Glorfindel	medute
 1671569900	Glorfindel	^my\W*kitchen\W*mart$
 1671571954	Spevacus	tayfsoft\.com
+1671585186	Vickel	northlandz\.com
