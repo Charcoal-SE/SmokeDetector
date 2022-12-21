@@ -65,7 +65,7 @@ orignalsoft\.com
 diabacordoesitwork
 mixresult\.com
 win-ipad\.
-healthy?(?:advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)
+healthy?(?:advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)(?![a-z\d%-]*\.gov(?=\b[^.]|\. |$))
 hyperglycemiaabout
 waffor\.com
 feedcabal\.com
