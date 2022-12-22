@@ -45998,3 +45998,4 @@
 1671728189	Glorfindel	avakids\.com
 1671731122	Spevacus	prigotovit\.in
 1671736100	Spevacus	redbubbletools\.com
+1671739972	Jeff Schaller	loopbytes\.com
