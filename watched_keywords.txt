@@ -45993,3 +45993,4 @@
 1671714545	Jeff Schaller	iusb\.com\.au
 1671717449	Jeff Schaller	bayqueenmeds\.com
 1671717488	Jeff Schaller	ukcannabismarket\.com
+1671721845	Jeff Schaller	(?-i:^Marie Burdon$)
