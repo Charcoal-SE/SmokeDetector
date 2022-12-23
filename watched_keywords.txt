@@ -46004,3 +46004,4 @@
 1671797050	tripleee	(?-i:^Waking Posts$)
 1671805051	Spevacus	digitalizepedia\.com
 1671809018	Jeff Schaller	techcust1\.blogspot
+1671809643	Jeff Schaller	bavachallenge\.blogspot
