@@ -46005,3 +46005,4 @@
 1671805051	Spevacus	digitalizepedia\.com
 1671809018	Jeff Schaller	techcust1\.blogspot
 1671809643	Jeff Schaller	bavachallenge\.blogspot
+1671809884	Jeff Schaller	wpautomatic\.com
