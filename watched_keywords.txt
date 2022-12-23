@@ -39396,7 +39396,6 @@
 1653662973	Spevacus	multitouchmarketing\.agency
 1653664838	cigien	hwdi\.org
 1653664870	cigien	smotra\.ru
-1653664899	cigien	beacons\.ai
 1653666064	cigien	aua[\W_]*+framework(?!\.com(?<=auaframework\.com))
 1653666377	Ollie	marketing\.cnsg(?:@gmail\.com)?
 1653677928	tripleee	(?-i:^Cassaunrdra Lincoln$)

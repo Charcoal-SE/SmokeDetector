@@ -4987,3 +4987,4 @@ qbaccountingfirm\.com
 \bupdateerror\.co\b
 wordmaker\.info
 wakeposts\.com
+beacons\.ai
