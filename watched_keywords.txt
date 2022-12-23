@@ -38793,7 +38793,6 @@
 1652177555	tripleee	(?-i:^Spectra Plus$)
 1652178684	Jeff Schaller	manchalamushafir\.com
 1652178777	Jeff Schaller	molnova\.in
-1652178805	Jeff Schaller	wakeposts\.com
 1652184232	tripleee	(?-i:^james smith$)
 1652184271	tripleee	bestndacoachinglucknow\.in
 1652184645	tripleee	flazio\.com
