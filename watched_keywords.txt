@@ -46012,3 +46012,4 @@
 1671828367	cocomac	kodamakoifarm\.com
 1671844270	Makyen	magicfingerhackers(?:@gmail\.com)?
 1671850072	Ethan	link-hub\.net
+1671880073	Jeff Schaller	glovesedge\.com
