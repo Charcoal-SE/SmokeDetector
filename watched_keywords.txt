@@ -46020,3 +46020,4 @@
 1671881527	Jeff Schaller	latticeworkinc\.com
 1671881554	Jeff Schaller	mousejiggle\.org
 1671899021	Makyen	godigitalinfo\.com
+1671903805	Makyen	(?-i:3juPAL6)(?#bit.ly)
