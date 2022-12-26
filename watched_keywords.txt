@@ -41894,7 +41894,6 @@
 1660590792	Makyen	stormisrising@hgmail\.com
 1660598078	Makyen	kissasian\.fi
 1660599208	cigien	kissasians\.io
-1660605410	Makyen	travelmykashmir\.com
 1660605474	Makyen	kashmir[\W_]*+taxi[\W_]*+service
 1660609019	Makyen	macmillianguncenter\.com
 1660616560	cigien	(?-i:ruA9XrWVyLg)(?#youtube)
