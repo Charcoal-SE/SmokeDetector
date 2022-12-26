@@ -737,3 +737,4 @@ meta kukel exchange
 (?-i:^Berodrito Pembrunk$)
 (?-i:^casualac$)
 (?-i:^coinshen1$)
+(?-i:^minimokoii$)
