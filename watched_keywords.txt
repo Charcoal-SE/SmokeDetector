@@ -46044,3 +46044,4 @@
 1672125972	Cody Gray	duni[\W_]*tech
 1672126003	Cody Gray	forexrenkocharts\.com
 1672126036	Cody Gray	OKBET
+1672126259	Cody Gray	cryptolordtech
