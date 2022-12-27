@@ -46048,3 +46048,4 @@
 1672127965	Cody Gray	grepixit\.com
 1672127998	Cody Gray	Uber[\W_]*Like[\W_]*App
 1672128026	Cody Gray	itfigs\.com
+1672129999	Cody Gray	couponkudos\.com
