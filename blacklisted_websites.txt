@@ -4991,3 +4991,4 @@ beacons\.ai
 thetopbestblogger\.com
 travelmykashmir\.com
 (?<!store\.)magenest\.com
+resumerpro\.com
