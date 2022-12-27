@@ -46062,3 +46062,4 @@
 1672135423	Cody Gray	yscpackagingmachine(?!\.com)
 1672135454	Cody Gray	VFFS[\W_]*packaging
 1672135662	Cody Gray	polycom[\W_]*plastic
+1672137584	Cody Gray	bitscape\.com
