@@ -46068,3 +46068,4 @@
 1672145268	tripleee	resumer[\W_]*+pro
 1672150086	Spevacus	feedingtrends\.com
 1672150165	Spevacus	creativeeyeadv\.com
+1672153591	Ethan	1182738252763086785(?:figma\.com/community/widget/)?
