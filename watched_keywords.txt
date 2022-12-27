@@ -46067,3 +46067,4 @@
 1672138267	Cody Gray	(?-i:FuturoInfo)
 1672145268	tripleee	resumer[\W_]*+pro
 1672150086	Spevacus	feedingtrends\.com
+1672150165	Spevacus	creativeeyeadv\.com
