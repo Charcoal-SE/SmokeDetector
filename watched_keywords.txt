@@ -46052,3 +46052,4 @@
 1672130037	Cody Gray	mounjaro\.com
 1672130065	Cody Gray	mounjaro(?!\.com)
 1672130094	Cody Gray	laserwuhan\.com
+1672130121	Cody Gray	HJZ[\W_]*Laser
