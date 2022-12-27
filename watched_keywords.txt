@@ -46065,3 +46065,4 @@
 1672137584	Cody Gray	bitscape\.com
 1672137613	Cody Gray	Power[\W_]*Automate[\W_]*Consulting
 1672138267	Cody Gray	(?-i:FuturoInfo)
+1672145268	tripleee	resumer[\W_]*+pro
