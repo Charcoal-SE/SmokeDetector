@@ -46051,3 +46051,4 @@
 1672129999	Cody Gray	couponkudos\.com
 1672130037	Cody Gray	mounjaro\.com
 1672130065	Cody Gray	mounjaro(?!\.com)
+1672130094	Cody Gray	laserwuhan\.com
