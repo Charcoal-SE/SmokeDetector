@@ -46049,3 +46049,4 @@
 1672127998	Cody Gray	Uber[\W_]*Like[\W_]*App
 1672128026	Cody Gray	itfigs\.com
 1672129999	Cody Gray	couponkudos\.com
+1672130037	Cody Gray	mounjaro\.com
