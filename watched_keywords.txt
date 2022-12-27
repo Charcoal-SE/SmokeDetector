@@ -17267,7 +17267,6 @@
 1583173454	Eliah Kagan	you\s+idiots?
 1583188895	Makyen	take-screenshot\.com
 1583192814	Eliah Kagan	somsripaperscoltd(?:@gmail\.com)?
-1583192853	Eliah Kagan	Somsri
 1583197316	Eliah Kagan	aiflex-fitness\.com
 1583197340	Eliah Kagan	aiflexsports\.com
 1583197569	Eliah Kagan	aiflex(?!-fitness\.com\b)
