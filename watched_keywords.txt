@@ -46059,3 +46059,4 @@
 1672134784	tripleee	igpmediventures\.com
 1672134815	Cody Gray	igpmediventures?(?!\.com)
 1672135394	Cody Gray	yscpackagingmachine\.com
+1672135423	Cody Gray	yscpackagingmachine(?!\.com)
