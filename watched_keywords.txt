@@ -46055,3 +46055,4 @@
 1672132071	Cody Gray	Dalpocha6
 1672132770	Cody Gray	youtube[\W_]*to[\W_]*mp3[\W_]*converter
 1672134329	Cody Gray	pickcel\.com
+1672134361	Cody Gray	pickcel(?!\.com)
