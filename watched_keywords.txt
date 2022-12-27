@@ -46050,3 +46050,4 @@
 1672128026	Cody Gray	itfigs\.com
 1672129999	Cody Gray	couponkudos\.com
 1672130037	Cody Gray	mounjaro\.com
+1672130065	Cody Gray	mounjaro(?!\.com)
