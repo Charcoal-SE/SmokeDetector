@@ -46106,3 +46106,4 @@
 1672222940	Cody Gray	rezbookglobal\.com
 1672222974	Cody Gray	Rezbook[\W_]*Global(?!\.com(?<=rezbookglobal\.com))
 1672223272	Cody Gray	ourosjewels\.com
+1672225223	Cody Gray	aroapress\.com
