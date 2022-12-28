@@ -46102,3 +46102,4 @@
 1672217084	Cody Gray	cbdforsleep\.net
 1672217127	Cody Gray	CBD[\W_]*for[\W_]*Sleep(?!\.net(?<=cbdforsleep\.net))
 1672217466	Cody Gray	codilar\.com
+1672217510	Cody Gray	codilar(?!\.com)
