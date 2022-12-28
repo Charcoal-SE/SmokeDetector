@@ -46094,3 +46094,4 @@
 1672214287	Cody Gray	altheqa(?!\.com)
 1672214626	Cody Gray	Strong[\W_]*Core[\W_]*Gym
 1672214656	Cody Gray	(?-i:bWykm\.png)(?# stack imgur)
+1672214697	cocomac	best[\W_]*+gym[\W_]*+in
