@@ -46117,3 +46117,4 @@
 1672232501	Cody Gray	metana\.io
 1672232617	Cody Gray	growupreviews\.com
 1672234605	Jeff Schaller	boltnutritions\.com
+1672238776	Cody Gray	Super[\W_]*Visa[\W_]*Insurance
