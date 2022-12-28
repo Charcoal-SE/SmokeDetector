@@ -46119,3 +46119,4 @@
 1672238776	Cody Gray	Super[\W_]*Visa[\W_]*Insurance
 1672238850	Cody Gray	Fly4Less
 1672238925	Cody Gray	MyTravel[\W_]*insurance(?!\.com(?<=mytravel-insurance\.com))
+1672240693	Cody Gray	gradesfixer\.com
