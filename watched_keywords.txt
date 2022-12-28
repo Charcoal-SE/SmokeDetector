@@ -46100,3 +46100,4 @@
 1672216997	Cody Gray	exporthub\.com
 1672217039	Cody Gray	Leather[\W_]*Jackets[\W_]*Manufacturers
 1672217084	Cody Gray	cbdforsleep\.net
+1672217127	Cody Gray	CBD[\W_]*for[\W_]*Sleep(?!\.net(?<=cbdforsleep\.net))
