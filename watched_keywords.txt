@@ -46105,3 +46105,4 @@
 1672217510	Cody Gray	codilar(?!\.com)
 1672222738	tripleee	(?-i:^muthu$)
 1672222940	Cody Gray	rezbookglobal\.com
+1672222974	Cody Gray	Rezbook[\W_]*Global(?!\.com(?<=rezbookglobal\.com))
