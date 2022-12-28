@@ -46076,3 +46076,4 @@
 1672170980	Spevacus	howtoid\.com
 1672182986	Nisse Engström	kibrit\.com\.tr
 1672198268	Spevacus	alfatihah\.com
+1672202643	Cody Gray	brain\W?power(?<=^(?s).{0,211})
