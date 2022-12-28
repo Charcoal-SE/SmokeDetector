@@ -31,7 +31,6 @@ xtreme\W?antler
 maxx\W?test\W?3000
 orvigomax
 cheap\W?wigs?
-brain\W?power(?<=^(?s).{0,211})
 maximum\W?shred
 black\W?label\W?no
 bagprada
