@@ -46118,5 +46118,4 @@
 1672232617	Cody Gray	growupreviews\.com
 1672234605	Jeff Schaller	boltnutritions\.com
 1672238776	Cody Gray	Super[\W_]*Visa[\W_]*Insurance
-1672238810	Cody Gray	MyTravel[\W_]*insurance
 1672238850	Cody Gray	Fly4Less
