@@ -250,7 +250,6 @@ test\Wboost\Welite
 collamask
 naturacel
 luminescent\Wserum
-rx24
 omega\Wrejuvenol
 spa\Welixir
 ultra\W?flex
