@@ -46120,3 +46120,4 @@
 1672240693	Cody Gray	gradesfixer\.com
 1672241458	Cody Gray	(?-i:^Martin Goodnews$)
 1672241593	Cody Gray	in\.ey\.com
+1672242562	Cody Gray	rx24
