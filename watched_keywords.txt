@@ -46084,3 +46084,4 @@
 1672206812	Cody Gray	Dragon[\W_]*Professional[\W_]*Individual
 1672207825	Cody Gray	figur[\W_]*diet[\W_]*capsules?
 1672207849	Cody Gray	startup\.info
+1672208466	Cody Gray	matebiz(?!\.com)
