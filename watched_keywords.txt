@@ -46086,3 +46086,4 @@
 1672207849	Cody Gray	startup\.info
 1672208466	Cody Gray	matebiz(?!\.com)
 1672212320	Cody Gray	quocduy\.com(?:\.vn)?
+1672212348	Cody Gray	semac\.com\.vn
