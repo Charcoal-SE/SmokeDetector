@@ -46080,3 +46080,4 @@
 1672204608	Cody Gray	topbestbloggerpro\.com
 1672204641	Cody Gray	topbestbloggerpro(?!\.com)
 1672204816	Cody Gray	businessmotivation\.in
+1672204852	Cody Gray	businessmotivaion\.in
