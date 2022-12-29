@@ -46147,3 +46147,4 @@
 1672308017	Mast	theamericanoutfit\.com
 1672309468	Cody Gray	hypensquare\.com
 1672309523	Cody Gray	Hyphen[\W_]*Square(?!\.com(?<=hypensquare\.com))
+1672309819	Cody Gray	retable\.io
