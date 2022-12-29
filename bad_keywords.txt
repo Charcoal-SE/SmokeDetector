@@ -2716,3 +2716,4 @@ Adeena'?s[\W_]*Kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
 online24jam
 7[\W_]*+search[\W_]*+ppc(?!\.com(?<=7searchppc\.com))
 fonts[\W]*+bee(?!\.com)
+intellimindz(?!\.com)
