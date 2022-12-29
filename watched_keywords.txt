@@ -18887,7 +18887,6 @@
 1587987650	tripleee	roridoll\d*+(?!\.com)
 1587987614	Xnero	cmsfinance\.com
 1587987726	tripleee	printerfaq\.com
-1587993433	Xnero	selectpdf\.com
 1587994119	Xnero	openio\.io
 1587994136	Xnero	presales@openio\.io
 1587995899	rene	point59\.com
