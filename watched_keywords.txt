@@ -46143,3 +46143,4 @@
 1672306727	Cody Gray	adapitva\.com
 1672306790	Cody Gray	^Lanteria$
 1672307330	Cody Gray	astromiracle\.in
+1672307378	Cody Gray	astromiracle(?!\.in)
