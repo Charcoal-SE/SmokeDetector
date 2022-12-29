@@ -46149,3 +46149,4 @@
 1672309523	Cody Gray	Hyphen[\W_]*Square(?!\.com(?<=hypensquare\.com))
 1672309819	Cody Gray	retable\.io
 1672311260	Cody Gray	social4money\.com
+1672312267	Cody Gray	allcertificateshub\.com
