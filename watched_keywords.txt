@@ -46134,3 +46134,4 @@
 1672295397	Cody Gray	Mod(?:alert|vigil)[\W_]*200
 1672295682	Cody Gray	Jacklistens\.com
 1672295716	Cody Gray	jacklistenssurvey\.online
+1672296730	Cody Gray	levanastore\.com
