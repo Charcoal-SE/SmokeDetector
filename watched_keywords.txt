@@ -46151,3 +46151,4 @@
 1672311260	Cody Gray	social4money\.com
 1672312267	Cody Gray	allcertificateshub\.com
 1672312302	Cody Gray	nurs(?:e|ing)[\W_]*assignments?
+1672313272	Cody Gray	connectfreelance\.ae
