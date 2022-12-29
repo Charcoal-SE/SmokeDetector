@@ -21672,7 +21672,6 @@
 1597350052	Mast	blueturtle\.co\.za
 1597372768	Machavity	hwsecurity\.dev
 1597391691	tripleee	(?-i:^PRYSM$)
-1597391757	tripleee	prysm(?<!(?-i:^PRYSM$))
 1597391912	tripleee	phonegnome\.com
 1597392370	tripleee	dctech\.club
 1597392470	tripleee	smileaddiction\.com\.au
