@@ -46167,3 +46167,4 @@
 1672324842	Ethan	patimbanservisindonesia\.co\.id
 1672328644	Cody Gray	Fonts[\W_]*Monster(?!\.com(?<=fontsmonster\.com))
 1672338951	Makyen	srislawgroup\.biz
+1672339611	Ethan	go\.hotmart\.com
