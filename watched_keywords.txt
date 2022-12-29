@@ -46165,3 +46165,4 @@
 1672322813	Jeff Schaller	brandingforeverr\.com
 1672323690	Jeff Schaller	99kreviews\.com
 1672324842	Ethan	patimbanservisindonesia\.co\.id
+1672328644	Cody Gray	Fonts[\W_]*Monster(?!\.com(?<=fontsmonster\.com))
