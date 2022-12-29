@@ -46168,4 +46168,3 @@
 1672328644	Cody Gray	Fonts[\W_]*Monster(?!\.com(?<=fontsmonster\.com))
 1672338951	Makyen	srislawgroup\.biz
 1672339611	Ethan	go\.hotmart\.com
-1672340073	Ethan	hotmart\.com
