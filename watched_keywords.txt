@@ -42613,7 +42613,7 @@
 1662113888	tripleee	scg6666win\.com
 1662113924	tripleee	ww6vip\.com
 1662119938	tripleee	himalyaquartz\.in
-1662120331	tripleee	sris[\W_]*+law(?:yers?)?
+1662120331	tripleee	sris[\W_]*+law(?:y[ae]rs?)?\d*\b(?!\.com(?:(?<=srislawyer\.com)|(?<=srislaw\.com)))
 1662120355	tripleee	axisglobalexport\.com
 1662121110	Glorfindel	ecosmob
 1662123217	tripleee	mala\.ae
