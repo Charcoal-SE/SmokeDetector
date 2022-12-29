@@ -738,3 +738,4 @@ meta kukel exchange
 (?-i:^casualac$)
 (?-i:^coinshen1$)
 (?-i:^minimokoii$)
+(?-i:^taj uddin$)
