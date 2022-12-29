@@ -46150,3 +46150,4 @@
 1672309819	Cody Gray	retable\.io
 1672311260	Cody Gray	social4money\.com
 1672312267	Cody Gray	allcertificateshub\.com
+1672312302	Cody Gray	nurs(?:e|ing)[\W_]*assignments?
