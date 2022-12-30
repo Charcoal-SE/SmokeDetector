@@ -40595,7 +40595,6 @@
 1656962900	cigien	(?-i:pTZyfdPNW_g)(?#youtube)
 1656975557	cigien	dustsofttools\.com
 1656985146	cigien	prolancom\.com
-1656990966	cigien	dh[\W_]*+events?
 1656990986	cigien	dh[\W_]*+movies?
 1656991685	cigien	forkliftbatterymanufacturer\.com
 1656995705	cigien	rjkellylock\.com
