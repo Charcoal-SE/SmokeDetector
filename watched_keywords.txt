@@ -46179,3 +46179,4 @@
 1672393442	Cody Gray	dh[^\w=]*+events?
 1672393503	Cody Gray	dh[^\w=]*+movies?
 1672393813	Cody Gray	aroundme\.co\.in
+1672393864	Cody Gray	Aroun?dme(?!\.co\.in)
