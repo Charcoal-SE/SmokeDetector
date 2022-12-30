@@ -46181,3 +46181,4 @@
 1672393813	Cody Gray	aroundme\.co\.in
 1672393864	Cody Gray	Aroun?dme(?!\.co\.in)
 1672394789	Cody Gray	Narola[\W_]*USA
+1672396041	Cody Gray	manpower[\W_]*supply[\W_]*company
