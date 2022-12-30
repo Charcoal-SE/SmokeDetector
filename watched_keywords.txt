@@ -46183,3 +46183,4 @@
 1672394789	Cody Gray	Narola[\W_]*USA
 1672396041	Cody Gray	manpower[\W_]*supply[\W_]*company
 1672396085	Cody Gray	yesitlabs\.com
+1672396131	Cody Gray	YES[\W_]*IT[\W_]*Labs(?!\.com(?<=yesitlabs\.com))
