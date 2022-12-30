@@ -46186,3 +46186,4 @@
 1672396131	Cody Gray	YES[\W_]*IT[\W_]*Labs(?!\.com(?<=yesitlabs\.com))
 1672400088	Cody Gray	wizardrecoveryhome(?:@gmail\.com)?
 1672404345	Glorfindel	DrySign
+1672409343	Cody Gray	letterboxd\.com
