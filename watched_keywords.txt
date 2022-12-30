@@ -26670,7 +26670,6 @@
 1613976030	Makyen	one[\W_]*+shot[\W_]*+pills?(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1613976247	cigien	promodomegroup\.com
 1613976318	cigien	promodome[\W_]*+communications
-1613976381	cigien	prysm[\W_]*+systems(?!\.com(?<=prysmsystems\.com))
 1613978094	cigien	aquaproperties\.com
 1613978913	Ryan M	neurologysleepcentre\.com
 1613978931	cigien	knowledgesight\.com
