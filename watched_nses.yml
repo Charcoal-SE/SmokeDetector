@@ -2883,7 +2883,9 @@ items:
 - ns: rumahweb.org.
 - ns: rumahweb.biz.
 - ns: contabo.net.
-- ns: crazydomains.com.
+- comment: NXDOMAIN 2022-12-30
+  disable: true
+  ns: crazydomains.com.
 - ns: servers-servers.com.
 - ns: vhostplatform.com.
 - ns: wpxhosting.com.
