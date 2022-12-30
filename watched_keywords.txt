@@ -46172,3 +46172,4 @@
 1672381062	Cody Gray	prysm[\W_]*+systems(?!\.com\b(?<=prysmsystems\.com\b))\d*
 1672385824	Cody Gray	tplinkextendersetup\.com
 1672386428	Cody Gray	Kinmade
+1672387976	Cody Gray	quadraticformulacalculator\.org
