@@ -46169,3 +46169,4 @@
 1672339611	Ethan	go\.hotmart\.com
 1672342150	Nisse Engström	thetecfixer\.com
 1672351678	Nisse Engström	bizinfograph\.com
+1672370737	Spevacus	refundedtechrecovery(?:@gmail\.com)?
