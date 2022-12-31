@@ -46193,3 +46193,4 @@
 1672332716	Ethan	0xf487b060235cd4f43301b4a8193396bfbbb5bbf9
 1672332661	Ethan	sepolia\.etherscan\.io
 1672417885	Jeff Schaller	worlddentalproduct\.com
+1672470045	Cody Gray	World[\W_]*Dental[\W_]*Product(?!\.com(?<=worlddentalproduct\.com))
