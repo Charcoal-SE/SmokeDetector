@@ -46201,3 +46201,4 @@
 1672477433	Cody Gray	contact[\W_]*(?:me|us)[\W_]*if
 1672487633	Glorfindel	kikstaart\.com
 1672493647	Jeff Schaller	vegcale\.com
+1672493745	Jeff Schaller	europafashions\.co\.uk
