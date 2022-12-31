@@ -2717,3 +2717,4 @@ online24jam
 7[\W_]*+search[\W_]*+ppc(?!\.com(?<=7searchppc\.com))
 fonts[\W]*+bee(?!\.com)
 intellimindz(?!\.com)
+HACKEROFLIFESERIAL12112
