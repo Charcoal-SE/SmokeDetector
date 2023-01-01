@@ -46210,3 +46210,4 @@
 1672585211	Cody Gray	conceal[\W_]*the[\W_]*origin[\W_]*of[\W_]*Covid[\W_]*19
 1672585254	Cody Gray	military[\W_]*kept[\W_]*spraying[\W_]*the[\W_]*virus
 1672587466	Cody Gray	(?-i:^Tayyab Bashir$)
+1672587822	Cody Gray	we[\W_]*earned[\W_]*the[\W_]*["“”]?top[\W_]*contributor["“”]?[\W_]*badge
