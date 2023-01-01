@@ -46210,3 +46210,4 @@
 1672575743	Jeff Schaller	leathernjacket\.com
 1672585173	Cody Gray	182:1[\W_]*high[\W_]*vote!?
 1672585211	Cody Gray	conceal[\W_]*the[\W_]*origin[\W_]*of[\W_]*Covid[\W_]*19
+1672585254	Cody Gray	military[\W_]*kept[\W_]*spraying[\W_]*the[\W_]*virus
