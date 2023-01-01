@@ -46163,7 +46163,6 @@
 1672338951	Makyen	srislawgroup\.biz
 1672339611	Ethan	go\.hotmart\.com
 1672342150	Nisse Engström	thetecfixer\.com
-1672351678	Nisse Engström	bizinfograph\.com
 1672370737	Spevacus	refundedtechrecovery(?:@gmail\.com)?
 1672381062	Cody Gray	prysm[\W_]*+systems(?!\.com\b(?<=prysmsystems\.com\b))\d*
 1672385824	Cody Gray	tplinkextendersetup\.com
