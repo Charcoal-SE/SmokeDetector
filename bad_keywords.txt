@@ -2718,3 +2718,4 @@ online24jam
 fonts[\W]*+bee(?!\.com)
 intellimindz(?!\.com)
 HACKEROFLIFESERIAL12112
+badge in Super Visa Insurance
