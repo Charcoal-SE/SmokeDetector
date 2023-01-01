@@ -46103,7 +46103,6 @@
 1672232617	Cody Gray	growupreviews\.com
 1672234605	Jeff Schaller	boltnutritions\.com
 1672238850	Cody Gray	Fly4Less
-1672238925	Cody Gray	MyTravel[\W_]*insurance(?!\.com(?<=mytravel-insurance\.com))
 1672240693	Cody Gray	gradesfixer\.com
 1672241458	Cody Gray	(?-i:^Martin Goodnews$)
 1672241593	Cody Gray	in\.ey\.com
