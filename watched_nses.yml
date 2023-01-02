@@ -879,6 +879,9 @@ items:
   - cash.ns.cloudflare.com.
   - gigi.ns.cloudflare.com.
 - ns:
+  - cecelia.ns.cloudflare.com.
+  - viddy.ns.cloudflare.com.
+- ns:
   - celeste.ns.cloudflare.com.
   - langston.ns.cloudflare.com.
 - ns:
