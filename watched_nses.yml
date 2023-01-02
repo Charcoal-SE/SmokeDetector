@@ -203,6 +203,9 @@ items:
   - alex.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
+  - alexa.ns.cloudflare.com.
+  - karl.ns.cloudflare.com.
+- ns:
   - alexia.ns.cloudflare.com.
   - donovan.ns.cloudflare.com.
 - ns:
