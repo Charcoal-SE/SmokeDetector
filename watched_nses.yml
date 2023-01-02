@@ -2021,6 +2021,9 @@ items:
   - ophelia.ns.cloudflare.com.
 - ns:
   - kara.ns.cloudflare.com.
+  - noah.ns.cloudflare.com.
+- ns:
+  - kara.ns.cloudflare.com.
   - phil.ns.cloudflare.com.
 - ns:
   - kareem.ns.cloudflare.com.
