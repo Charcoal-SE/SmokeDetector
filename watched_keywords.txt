@@ -46231,3 +46231,4 @@
 1672656236	tripleee	dndraces\.com
 1672656288	tripleee	zikrainfotech\.com
 1672660998	tripleee	it[\W_]*+innovation[\W_]*+inc(?!\.com(?<=itinnovationinc\.com))(?<!(?-i:^IT INNOVATION INC$))
+1672661492	tripleee	theserpwire\.com
