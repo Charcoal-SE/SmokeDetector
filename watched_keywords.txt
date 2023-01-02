@@ -45788,7 +45788,6 @@
 1671032527	Jeff Schaller	MOV\.AI
 1671035047	cigien	my[\W_]*+virtual[\W_]*+teams(?!\.com(?<=myvirtualteams\.com))
 1671040302	Jeff Schaller	profullversion\.org
-1671058145	Makyen	it[\W_]*+innovation[\W_]*+inc(?!\.com(?<=itinnovationinc\.com))
 1671058995	Ollie	dilkhus\.com
 1671060687	cocomac	rgcdigitalmarketing\.com\.au
 1671070076	Spevacus	zenarc\.vn
