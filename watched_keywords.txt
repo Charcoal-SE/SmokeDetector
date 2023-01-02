@@ -46233,3 +46233,4 @@
 1672660998	tripleee	it[\W_]*+innovation[\W_]*+inc(?!\.com(?<=itinnovationinc\.com))(?<!(?-i:^IT INNOVATION INC$))
 1672661492	tripleee	theserpwire\.com
 1672661527	tripleee	devopsuk\.com
+1672661808	tripleee	(?-i:Many ports(?=\.))
