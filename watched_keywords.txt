@@ -46232,3 +46232,4 @@
 1672655429	tripleee	myassignmentservices\.ae
 1672655897	tripleee	myway\.cf
 1672656236	tripleee	dndraces\.com
+1672656288	tripleee	zikrainfotech\.com
