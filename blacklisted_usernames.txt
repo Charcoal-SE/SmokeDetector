@@ -739,3 +739,4 @@ meta kukel exchange
 (?-i:^coinshen1$)
 (?-i:^minimokoii$)
 (?-i:^taj uddin$)
+(?-i:^Maria Murphy$)
