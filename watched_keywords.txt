@@ -46217,3 +46217,4 @@
 1672636455	Makyen	hoskey[\W_]*+team(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?
 1672640031	tripleee	saphnix[\W_]*+medicure(?!\.com(?<=saphnixmedicure\.com))
 1672640346	tripleee	khoobsurat\.in
+1672641538	tripleee	medicalshipment\.com
