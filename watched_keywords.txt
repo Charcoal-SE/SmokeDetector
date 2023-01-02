@@ -46223,3 +46223,4 @@
 1672647756	tripleee	quickwayinfosystems\.com
 1672647788	tripleee	appliedwatermidwest\.com
 1672647823	tripleee	microfiber[\W_]*+(?:cleaning[\W_]*+)?cloth
+1672648372	tripleee	rakhi[\W_]*+gifts?
