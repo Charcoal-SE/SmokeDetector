@@ -46214,3 +46214,4 @@
 1672588360	Cody Gray	\A(?!<p>)(?-i:Latest News)
 1672608632	Ethan	tyamtyres\.co\.uk
 1672621164	Ethan	Hoskey[\W_]team@[\W_]proton[\W_]\.me
+1672625365	Jeff Schaller	go\.trade-ideas\.com
