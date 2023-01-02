@@ -46226,3 +46226,4 @@
 1672648372	tripleee	rakhi[\W_]*+gifts?
 1672648641	tripleee	rakshabandhan[\W_]*+gifts?
 1672652390	Makyen	centrikidblog\.com
+1672652687	Makyen	avsseries\.com
