@@ -4999,3 +4999,4 @@ fly4lesstravels\.com
 bizinfograph\.com
 myway\.cf
 itinnovationinc\.com
+/packages/JsonPathSerializer(?:nuget\.org)?
