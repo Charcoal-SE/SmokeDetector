@@ -46215,3 +46215,4 @@
 1672608632	Ethan	tyamtyres\.co\.uk
 1672625365	Jeff Schaller	go\.trade-ideas\.com
 1672636455	Makyen	hoskey[\W_]*+team(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?
+1672640031	tripleee	saphnix[\W_]*+medicure(?!\.com(?<=saphnixmedicure\.com))
