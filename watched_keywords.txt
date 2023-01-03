@@ -46268,3 +46268,4 @@
 1672748956	tripleee	wellemetal\.com
 1672749582	Cody Gray	macaubea?t(?:888)?
 1672749692	Cody Gray	BookMyEssay(?!\.com)
+1672750146	Cody Gray	lovelanguagetest\.org
