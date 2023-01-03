@@ -46269,3 +46269,4 @@
 1672749582	Cody Gray	macaubea?t(?:888)?
 1672749692	Cody Gray	BookMyEssay(?!\.com)
 1672750146	Cody Gray	lovelanguagetest\.org
+1672750205	Cody Gray	love[\W_]*language[\W_]*(?:test|quiz)(?!\.org(?<=lovelanguagetest\.org))
