@@ -46262,3 +46262,4 @@
 1672735559	tripleee	(?-i:^occasionalrifle$)
 1672737431	Glorfindel	gomileage\.com
 1672737975	tripleee	medimadewellness\.com
+1672739152	tripleee	(?-i:pvJU5)(?# shorturl.at)
