@@ -1849,6 +1849,9 @@ items:
   - jakub.ns.cloudflare.com.
   - shubhi.ns.cloudflare.com.
 - ns:
+  - jakub.ns.cloudflare.com.
+  - sureena.ns.cloudflare.com.
+- ns:
   - james.ns.cloudflare.com.
   - jamie.ns.cloudflare.com.
 - ns:
