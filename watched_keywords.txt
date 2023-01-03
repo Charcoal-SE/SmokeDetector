@@ -46271,3 +46271,4 @@
 1672750146	Cody Gray	lovelanguagetest\.org
 1672750205	Cody Gray	love[\W_]*language[\W_]*(?:test|quiz)(?!\.org(?<=lovelanguagetest\.org))
 1672750375	tripleee	bhappyb\.com
+1672754021	tripleee	easywholesale\.com
