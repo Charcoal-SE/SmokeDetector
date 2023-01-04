@@ -46278,4 +46278,3 @@
 1672761457	Jeff Schaller	iconnecttechnologies\.com
 1672769464	Ethan	bloggersplane\.com
 1672776162	Spevacus	nelsonbradley218(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
-1672792394	Cody Gray	we[\W_]*earned[\W_]*the[\W_]*top[\W_]*contributor[\W_]*badge
