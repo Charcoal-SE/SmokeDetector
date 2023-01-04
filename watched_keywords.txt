@@ -46297,3 +46297,4 @@
 1672815181	Cody Gray	sarkaariexam\.in
 1672817435	cocomac	team(?<!\ba[\W_]*+team)[\W_]*+of[\W_]*+expert(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 1672818144	tripleee	initiotechmedia\.com
+1672818171	tripleee	initiotechmedia(?!\.com)
