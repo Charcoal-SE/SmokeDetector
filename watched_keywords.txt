@@ -46291,3 +46291,4 @@
 1672813623	Cody Gray	Mithvin(?!\.com)
 1672813668	Cody Gray	read[\W_]*our[\W_]*article
 1672813878	tripleee	(?-i:^SAI DINESH k$)
+1672814159	cocomac	digterest\.com
