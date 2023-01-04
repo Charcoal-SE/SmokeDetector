@@ -46304,3 +46304,4 @@
 1672827137	tripleee	(?-i:^Rina Rowday$)
 1672827444	tripleee	apkinu\.com
 1672830331	tripleee	(?:pro[\W_]*+)?asset[\W_]*+recovery[\W_]*+expert
+1672830387	tripleee	protoindus\.com
