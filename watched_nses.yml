@@ -2455,6 +2455,9 @@ items:
   - miles.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
+  - miles.ns.cloudflare.com.
+  - nola.ns.cloudflare.com.
+- ns:
   - mira.ns.cloudflare.com.
   - peter.ns.cloudflare.com.
 - ns:
