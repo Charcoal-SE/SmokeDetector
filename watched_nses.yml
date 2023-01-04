@@ -1032,6 +1032,9 @@ items:
   - cody.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
+  - coen.ns.cloudflare.com.
+  - nena.ns.cloudflare.com.
+- ns:
   - coleman.ns.cloudflare.com.
   - marjory.ns.cloudflare.com.
 - ns:
