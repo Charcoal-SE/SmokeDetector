@@ -2353,6 +2353,9 @@ items:
   - mark.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
+  - marlowe.ns.cloudflare.com.
+  - milan.ns.cloudflare.com.
+- ns:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
