@@ -46298,3 +46298,4 @@
 1672817435	cocomac	team(?<!\ba[\W_]*+team)[\W_]*+of[\W_]*+expert(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 1672818144	tripleee	initiotechmedia\.com
 1672818171	tripleee	initiotechmedia(?!\.com)
+1672824911	Makyen	magelang1337\.com
