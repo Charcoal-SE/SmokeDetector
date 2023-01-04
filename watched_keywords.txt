@@ -46299,3 +46299,4 @@
 1672818144	tripleee	initiotechmedia\.com
 1672818171	tripleee	initiotechmedia(?!\.com)
 1672824911	Makyen	magelang1337\.com
+1672825088	Makyen	levo\.vn
