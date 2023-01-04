@@ -46293,3 +46293,4 @@
 1672813878	tripleee	(?-i:^SAI DINESH k$)
 1672814159	cocomac	digterest\.com
 1672814293	tripleee	digterest(?!\.com)
+1672814452	tripleee	limodestiny\.com
