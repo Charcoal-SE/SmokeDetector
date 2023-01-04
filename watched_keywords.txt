@@ -46315,3 +46315,4 @@
 1672852769	Jeff Schaller	applebuy\.top
 1672853867	Jeff Schaller	boutiquediscrete\.fr
 1672856845	Jeff Schaller	Tradehub\.pk
+1672860212	Jeff Schaller	wantrn\.com
