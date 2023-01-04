@@ -2437,6 +2437,9 @@ items:
   - merlin.ns.cloudflare.com.
   - treasure.ns.cloudflare.com.
 - ns:
+  - mia.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
   - michelle.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
 - ns:
