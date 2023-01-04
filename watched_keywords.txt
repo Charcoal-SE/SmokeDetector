@@ -46295,3 +46295,4 @@
 1672814293	tripleee	digterest(?!\.com)
 1672814452	tripleee	limodestiny\.com
 1672814833	tripleee	savingshour\.com
+1672815143	tripleee	team[\W_]*+of[\W_]*+experts?
