@@ -7,7 +7,7 @@ items:
   - aaden.ns.cloudflare.com.
   - may.ns.cloudflare.com.
 - ns:
-  - aarav.ns.cloudflare.com.
+  - aarav.ns.cloudflare.com. -
   - christina.ns.cloudflare.com.
 - ns:
   - aarav.ns.cloudflare.com.
@@ -1503,6 +1503,9 @@ items:
 - ns:
   - ernest.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
+- ns:
+  - ernest.ns.cloudflare.com.
+  - penny.ns.cloudflare.com.
 - ns:
   - ernest.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
