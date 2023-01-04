@@ -196,6 +196,9 @@ items:
   - evan.ns.cloudflare.com.
   - megan.ns.cloudflare.com.
 - ns:
+  - fatima.ns.cloudflare.com.
+  - houston.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
