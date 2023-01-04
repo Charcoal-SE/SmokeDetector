@@ -46289,3 +46289,4 @@
 1672813337	Cody Gray	baccaratfun(?:[\W_]*888)?
 1672813575	tripleee	mithvin\.com
 1672813623	Cody Gray	Mithvin(?!\.com)
+1672813668	Cody Gray	read[\W_]*our[\W_]*article
