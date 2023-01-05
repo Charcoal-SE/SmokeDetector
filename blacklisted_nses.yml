@@ -71,6 +71,9 @@ items:
   - aragorn.ns.cloudflare.com.
   - gwen.ns.cloudflare.com.
 - ns:
+  - arya.ns.cloudflare.com.
+  - pete.ns.cloudflare.com.
+- ns:
   - asa.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
