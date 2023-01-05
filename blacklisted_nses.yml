@@ -265,6 +265,9 @@ items:
   - mira.ns.cloudflare.com.
   - sergi.ns.cloudflare.com.
 - ns:
+  - mitchell.ns.cloudflare.com.
+  - tricia.ns.cloudflare.com.
+- ns:
   - mona.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
