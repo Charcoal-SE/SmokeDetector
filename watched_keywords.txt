@@ -46332,3 +46332,4 @@
 1672911134	tripleee	maaambulanceservice\.in
 1672911453	tripleee	gerizimmount\.com
 1672912074	tripleee	(?-i:^Auorara Locus$)
+1672915651	tripleee	UCPL[\W_]*+technologies
