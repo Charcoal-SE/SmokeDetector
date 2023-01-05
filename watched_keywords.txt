@@ -13121,7 +13121,6 @@
 1572204409	Makyen	john3m5\.wixsite\.com
 1572212092	Makyen	visaprocess313(?:@gmail\.com)?
 1572212120	Makyen	atahualpa\.com
-1572212149	Makyen	atahualpa(?!\.com)
 1572212175	Makyen	intomath\.org
 1572212272	Makyen	gamerhub\.gg
 1572212304	Makyen	visionduweb\.fr
