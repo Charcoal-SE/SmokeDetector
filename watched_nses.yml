@@ -2687,6 +2687,9 @@ items:
 - ns:
   - tricia.ns.cloudflare.com.
   - will.ns.cloudflare.com.
+- ns:
+  - vern.ns.cloudflare.com.
+  - zelda.ns.cloudflare.com.
 - comment: FPs, don't blacklist
   ns: mihanwebhost.com.
 - ns: offshoreracks.com.
