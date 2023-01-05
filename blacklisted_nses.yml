@@ -50,6 +50,9 @@ items:
   - alexia.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
+  - alina.ns.cloudflare.com.
+  - augustus.ns.cloudflare.com.
+- ns:
   - alla.ns.cloudflare.com.
   - ed.ns.cloudflare.com.
 - ns:
