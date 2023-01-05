@@ -46334,3 +46334,4 @@
 1672912074	tripleee	(?-i:^Auorara Locus$)
 1672915651	tripleee	UCPL[\W_]*+technologies
 1672916584	tripleee	destinations\.com\.tr
+1672924291	Jeff Schaller	axissoftwaredynamics\.com
