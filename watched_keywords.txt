@@ -46323,3 +46323,4 @@
 1672896430	tripleee	wismad
 1672899027	Cody Gray	Jamaliabbasph(?:@gmail\.com)?
 1672899777	tripleee	(?-i:^Larisabrownb$)
+1672899879	tripleee	mim[\W_]*+technology
