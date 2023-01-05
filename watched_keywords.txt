@@ -46324,3 +46324,4 @@
 1672899027	Cody Gray	Jamaliabbasph(?:@gmail\.com)?
 1672899777	tripleee	(?-i:^Larisabrownb$)
 1672899879	tripleee	mim[\W_]*+technology
+1672900186	tripleee	Momentum[\W_]*+(?:Coaching|Gorakhpur)(?<!(?-i:^Momentum Gorakhpur))
