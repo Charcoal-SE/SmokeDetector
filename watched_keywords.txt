@@ -46353,3 +46353,4 @@
 1672993969	Cody Gray	worldbestastrologerinindia\.com
 1672996600	Cody Gray	prakritivedawellness\.com
 1672997366	Cody Gray	File[\W_]*Rehab(?!\.com(?<=filerehab\.com))
+1672997744	Cody Gray	programely\.com
