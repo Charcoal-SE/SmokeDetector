@@ -2285,6 +2285,9 @@ items:
   - seth.ns.cloudflare.com.
 - ns:
   - liz.ns.cloudflare.com.
+  - mario.ns.cloudflare.com.
+- ns:
+  - liz.ns.cloudflare.com.
   - owen.ns.cloudflare.com.
 - ns:
   - liz.ns.cloudflare.com.
