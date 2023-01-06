@@ -46348,3 +46348,4 @@
 1672988944	Cody Gray	Best[\W_]*Web[\W_]*(?:page|site)?[\W_]*Development[\W_]*Company
 1672990504	Cody Gray	streamaestro\.com
 1672990549	Cody Gray	StreaMaestro(?!\.com)
+1672991221	Cody Gray	(?:Bitcoin|Crypto)[\W_]*Escrow
