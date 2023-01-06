@@ -46344,3 +46344,4 @@
 1672985576	Cody Gray	cashapphone\.com
 1672988239	Cody Gray	Backlinks[\W_]*Pro
 1672988320	Cody Gray	SuisseMaids®?(?!\.ch)
+1672988362	Cody Gray	suissemaids\.ch
