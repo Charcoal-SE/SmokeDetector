@@ -807,9 +807,6 @@ items:
   - bruce.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
-  - bryce.ns.cloudflare.com.
-  - kelly.ns.cloudflare.com.
-- ns:
   - buck.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
