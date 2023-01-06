@@ -46364,3 +46364,4 @@
 1673018806	tripleee	(?-i:^ali hadi$)
 1673021503	tripleee	(?-i:3Iv6BPV)(?# bit.ly)
 1673021551	tripleee	learngermanwithstories\.com
+1673030305	Jeff Schaller	translator\.neumpy\.com
