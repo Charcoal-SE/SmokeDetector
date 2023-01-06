@@ -46352,3 +46352,4 @@
 1672993902	Cody Gray	pharma[\W_]*coders(?!\.com(?<=pharmacoders\.com))
 1672993969	Cody Gray	worldbestastrologerinindia\.com
 1672996600	Cody Gray	prakritivedawellness\.com
+1672997366	Cody Gray	File[\W_]*Rehab(?!\.com(?<=filerehab\.com))
