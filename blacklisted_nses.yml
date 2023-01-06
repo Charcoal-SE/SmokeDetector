@@ -485,3 +485,6 @@ items:
 - ns: clouddnstool.com.
 - ns: vivawebhost.com.
 - ns: hostns.io.
+- ns:
+  - ns313.ownmyserver.com.
+  - ns314.ownmyserver.com.
