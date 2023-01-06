@@ -46351,3 +46351,4 @@
 1672991221	Cody Gray	(?:Bitcoin|Crypto)[\W_]*Escrow
 1672992701	Cody Gray	3mar\.dooon(?:@gmail\.com)?
 1672993902	Cody Gray	pharma[\W_]*coders(?!\.com(?<=pharmacoders\.com))
+1672993969	Cody Gray	worldbestastrologerinindia\.com
