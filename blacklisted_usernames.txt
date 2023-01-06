@@ -744,3 +744,4 @@ meta kukel exchange
 (?-i:^Ameliajoness$)
 (?-i:^Momentum Gorakhpur$)
 (?-i:^sicheadphones$)
+(?-i:^Dms infosys$)
