@@ -3747,7 +3747,7 @@ muckrack\.com
 wpsecurer\.com
 cloudmounter\.net
 apkinstallation\.com
-digistore24\.com
+digistore24\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 agenter\.com
 sysadminxpert\.com
 tuckeat\.com
