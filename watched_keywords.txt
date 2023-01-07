@@ -46396,3 +46396,4 @@
 1673101716	Cody Gray	^Sajad[\W_]*Salehi$
 1673101811	Cody Gray	Yogesh[\W_]*(?:A\.[\W_]*|Ananda[\W_]*)?Nikam
 1673112221	Cody Gray	anifree-shoes\.de
+1673112258	Cody Gray	vegane[\W_]*Schuhe
