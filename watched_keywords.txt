@@ -46389,3 +46389,4 @@
 1673093542	Cody Gray	raja88(?!slot\.site)
 1673095266	Cody Gray	arup-finance\.com
 1673095512	Cody Gray	smoothheal\.com
+1673095560	Cody Gray	Smooth[\W_]*Heal(?!\.com(?<=smoothheal\.com))
