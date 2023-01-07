@@ -46394,3 +46394,4 @@
 1673097639	Cody Gray	\/299134\/
 1673097928	Cody Gray	error-blog\.com
 1673101716	Cody Gray	^Sajad[\W_]*Salehi$
+1673101811	Cody Gray	Yogesh[\W_]*(?:A\.[\W_]*|Ananda[\W_]*)?Nikam
