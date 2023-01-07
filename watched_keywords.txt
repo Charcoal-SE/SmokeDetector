@@ -46392,3 +46392,4 @@
 1673095560	Cody Gray	Smooth[\W_]*Heal(?!\.com(?<=smoothheal\.com))
 1673097530	Cody Gray	ᴅɪɢɪꜱᴛᴏʀᴇ24\.ᴄᴏᴍ
 1673097565	Cody Gray	Metdaan[\W_]*Fitness
+1673097639	Cody Gray	\/299134\/
