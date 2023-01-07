@@ -39893,7 +39893,6 @@
 1655044437	Jeff Schaller	onlineearnhindime\.blogspot
 1655044794	cigien	ucalc\.pro
 1655046431	cigien	dot-pi\.com
-1655046914	cigien	geekculture
 1655061283	Ryan M	thangloidanang\.com\.vn
 1655064022	cigien	bigdata-etl\.com
 1655064661	cigien	honeypotdetector\.net
