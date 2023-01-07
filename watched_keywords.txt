@@ -46393,3 +46393,4 @@
 1673097565	Cody Gray	Metdaan[\W_]*Fitness
 1673097639	Cody Gray	\/299134\/
 1673097928	Cody Gray	error-blog\.com
+1673101716	Cody Gray	^Sajad[\W_]*Salehi$
