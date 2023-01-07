@@ -2563,19 +2563,19 @@ r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+c[\W_]*+o[\W_]*+i[\W_]*+
 (?-i: Houston TX$)
 coinbase[\W_]*+pro[\W_]*+login
 cóinbase[\W_]*+pro[\W_]*+login
-cetpa\W*infotech(?!\.com(?<=cetpainfotech\.com))
+cetpa[\W_]*+infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
 patialalegitimate515
 techie[\W_]*+(?:dot[\W_]*+)?com
 consultant[\W_]*+(?:dot[\W_]*+)?com
 amberlottotemple(?:@yahoo\.com)?
 quick[\W_]*+books[\W_]*+helpline
-dr\W*vinod\W*raina
+dr[\W_]*+vinod[\W_]*+raina
 ^Mar, (?:the )?cashier
 investmentpro[\W_]*+at[\W_]*+writeme[\W_]*+dot[\W_]*+com
 leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 lumineux[\W_]*+cream
-QuickBooks[\W_]*Desktop[\W_]*Payroll
+quickbooks[\W_]*+desktop[\W_]*+payroll
 (?-i:umw0lr)(#? rb.gy)
 victorstadeyhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 realsaintspyerhk(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
@@ -2586,18 +2586,18 @@ jimthompson8223@gmail\.com
 burberry[\W_]*+construction(?!\.com(?<=burberryconstruction\.com))
 (?-i:#FEB\$ #2021\$)
 milk[\W_]*+tea[\W_]*+alliance
-QuickBooks[\W_]*Error[\W_]*Code
+quickbooks[\W_]*+error[\W_]*+code
 invoicing(?:Binance|Coinbase)_\+\W*
-QuickBooks[\W_]*Chat[\W_]*(?:Help|Support)
+quickbooks[\W_]*chat[\W_]*(?:help|support)
 ryjfgjl(?#github account)
 blockquote>\s*+<p>quote</p>\s*+</blockquote>$
-Get your hands on this fantastic phone right now
-Coinbase(?:_Tech)?[\W_]*Support
+get your hands on this fantastic phone right now
+coinbase(?:_tech)?[\W_]*support
 helpline bookkeeping involves
 pre[\W_]*pc[\_W]*solutions?
-The certified experts directly get in touch with you
-(?:American?|Alaskan?|Copa|Delta|Spirit|Southwest|United)[\W_]*Airlines['’]?[\W_]*(?:booking|contact|manage|reservation|ticket)
-Q(?:uick)?B(?:ooks)?[\W_]*ProAdvisors?
+the certified experts directly get in touch with you
+(?:american?|alaskan?|copa|delta|spirit|southwest|united)[\W_]*+airlines['’]?[\W_]*+(?:booking|contact|manage|reservation|ticket)
+q(?:uick)?b(?:ooks)?[\W_]*proadvisors?
 suonerie
 slot[\W_]*online
 drbenjaminlottospell711(?:@gmail\.com)?
@@ -2616,15 +2616,15 @@ reliablehacker\d+(?:[\W_]*+(?:at[_W]*+)?gmail[\W_]*+(?:dot[_W]*+)?com)?(?#seen: 
 drabakaspelltemple(?:@gmail\.com)?
 geecon[\W_]*+global(?!\.com(?<=geeconglobal\.com))
 Geecon[\W_]*Systems?(?!\.com(?<=geeconsystems\.com))
-How[\W_]*+do[\W_]*+bails[\W_]*+work[\W_]*+in[\W_]*+the[\W_]*+state[\W_]*+of[\W_]*+California
-mr[\W_]*+Oscar[\W_]*+White
+how[\W_]*+do[\W_]*+bails[\W_]*+work[\W_]*+in[\W_]*+the[\W_]*+state[\W_]*+of[\W_]*+california
+mr[\W_]*+oscar[\W_]*+white
 cyberservices(?!\.com)
 d(?:octo)?r[\W_]*+obho(?:greatspell(?:@gmail\.com)?)?
 zozumuhahbrotherhood
 situs(?:[\W_]*+online)?[\W_]*+slot(?:[\W_]*+online)?(?:[\W_]*+gacor)?
 \bcontains the best solution I have ever seen\b
 and(?<=\) and) got the desired solution
-QuickBooks[\W_]*+\w*[\W_]*+Support
+quickbooks[\W_]*+\w*[\W_]*+support
 kukelgang
 bc1qcv874ny25h4aevfhekj3sl9rt5vaez9n3khtx6
 (?-i:lLx_R4Y0v7c)(?#YouTube)
@@ -2633,7 +2633,7 @@ bc1qcv874ny25h4aevfhekj3sl9rt5vaez9n3khtx6
 Zelle.? Support
 Departamento\W+de\W+Prensa
 (?-i:sgtV3KLcLd8)(?#youtu.be)
-Bangladesh[\W_]*+LIMRS[\W_]*+Constructions
+bangladesh[\W_]*+limrs[\W_]*+constructions
 cdyera@yandex\.com
 dulywork@mailfence\.com
 ackrol?ix(?!\.co\b)
@@ -2644,12 +2644,12 @@ zinglanguage
 outlook-spotlight
 business-spotlight
 prodentim
-oprah[\W_]*winfrey[\W_]*(?:(?:acv|keto|weight[\W_]*+loss)[\W_]*)*+gummies
+oprah[\W_]*+winfrey[\W_]*+(?:(?:acv|keto|weight[\W_]*+loss)[\W_]*+)*+gummies
 silikonpuppen?
 (?-i:7d16CpWp-ok)(?#youtu.be)
 voipphone(?<=https?://[\w.]+/voipphone)
 our[\W_]*+services[\W_]*+include
-tea[\W_]*burn
+tea[\W_]*+burn
 (?-i:zBk0QuC2Xq0wODg1)(?#t.me)
 (?-i:2kngUHa075k3YzU1)(?#t.me)
 amarose(?:[\W_]*+(?:boosting|moisturizer|\d++|[\da-f]{5,}+)s?)*
@@ -2657,7 +2657,7 @@ sonovive(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 \A<p>¿Cómo estás\? Soy Alberto
 hacklord
 h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+l[\W_]*+o[\W_]*+r[\W_]*+d[\W_]*+j[\W_]*+o[\W_]*+d[\W_]*+y[\W_]*+(?:(?:a[\W_]*+t[\W_]*+)?[\W_]*+g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?
-Guo[\W_]*Wengui
+guo[\W_]*+wengui
 郭文贵(?#Guo Wengui)
 idn[\W_]*+poker
 slim[\W_]*+tea
@@ -2676,10 +2676,10 @@ swift[\W_]*+rupee[\W_]*+loan
 solution4u(?!\.com)
 (?-i:RlyHs-UV-fs)(?#youtu.be)
 ezzee[\W_]*+fonts(?!\.com)
-encantado[\W_]*+de[\W_]*+saludarte[\W_]*+Soy[\W_]*+Jose[\W_]*+Quería
+encantado[\W_]*+de[\W_]*+saludarte[\W_]*+soy[\W_]*+jose[\W_]*+quería
 ananka[\W_]*+fasteners(?!\.com(?<=anankafasteners\.com))
-GoKeto[\W_]*Gumm(?:y|ies)
-Diaetoxil
+goketo[\W_]*+gumm(?:y|ies)
+diaetoxil
 ofrecerte un mes gratuito
 periódicos de gran autoridad
 beliv[\W_]*+blood[\W_]*+sugar[\W_]*+oil(?:\.com)?
@@ -2711,15 +2711,15 @@ digital[\W_]*+academy[\W_]*+360
 ignissta(?!\.com)
 modafinil
 cryptohopper(?!\.com)
-kirpal[\W_]*export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
-Adeena'?s[\W_]*Kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
+kirpal[\W_]*+export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
+adeena'?s[\W_]*+kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
 online24jam
 7[\W_]*+search[\W_]*+ppc(?!\.com(?<=7searchppc\.com))
-fonts[\W]*+bee(?!\.com)
+fonts[\W_]*+bee(?!\.com)
 intellimindz(?!\.com)
 HACKEROFLIFESERIAL12112
-Super[\W_]*Visa[\W_]*Insurance
-MyTravel[\W_]*insurance(?!\.com(?<=mytravel-insurance\.com))
+super[\W_]*+visa[\W_]*+insurance
+mytravel[\W_]*+insurance(?!\.com(?<=mytravel-insurance\.com))
 duni[\W_]*+tech(?!\.com)
-we[\W_]*earned[\W_]*the[\W_]*top[\W_]*contributor[\W_]*badge
-Arlo[\W_]*Camera
+we[\W_]*+earned[\W_]*+the[\W_]*+top[\W_]*+contributor[\W_]*+badge
+arlo[\W_]*+camera
