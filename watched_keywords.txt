@@ -46405,3 +46405,4 @@
 1673142409	Cody Gray	welovewrite\.com
 1673142446	Cody Gray	We[\W_]*Love[\W_]*Write(?!\.com(?<=welovewrite\.com))
 1673143346	Cody Gray	aazib[\W_]*khan(?:26)?
+1673148538	Spevacus	federicopolanski198(?:@gmail\.com)?
