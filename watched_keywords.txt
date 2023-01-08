@@ -46412,3 +46412,4 @@
 1673167337	Cody Gray	cashapppresents\.tk
 1673167913	Cody Gray	cyberspc\.com
 1673168638	Cody Gray	(?-i:jPg2NGN1Rfk)(?# YouTube)
+1673168678	Cody Gray	gadjet(?:'s)?[\W_]*garage
