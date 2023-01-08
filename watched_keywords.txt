@@ -46433,3 +46433,4 @@
 1673190785	Ethan	yerdenisitmasirketi\.com
 1673195210	Spevacus	blog\.thesimplifieddev\.com
 1673199559	Makyen	startallback\.com
+1673209022	Jeff Schaller	brainiacshub\.blogspot
