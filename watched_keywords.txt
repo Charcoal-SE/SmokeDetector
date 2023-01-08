@@ -46417,3 +46417,4 @@
 1673170999	Cody Gray	drugsmartinternational\.com
 1673171141	Cody Gray	Unreal[\W_]*Virals(?!\.com(?<=unreelvirals\.com))
 1673172080	Cody Gray	itgongju\.com
+1673172121	Cody Gray	itgongju(?!\.com)
