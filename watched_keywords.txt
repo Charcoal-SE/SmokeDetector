@@ -46440,3 +46440,4 @@
 1673244126	tripleee	clavick\.com
 1673244175	tripleee	clavick(?!\.com)
 1673244649	tripleee	otosemi\.com
+1673244685	tripleee	ikancupang\.id
