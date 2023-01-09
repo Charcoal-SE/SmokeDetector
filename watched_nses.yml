@@ -1298,6 +1298,9 @@ items:
   - dina.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
+  - diva.ns.cloudflare.com.
+  - micah.ns.cloudflare.com.
+- ns:
   - dolly.ns.cloudflare.com.
   - hans.ns.cloudflare.com.
 - ns:
