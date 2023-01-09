@@ -46454,3 +46454,4 @@
 1673259332	tripleee	utthunga(?!\.com)
 1673259775	tripleee	astroeshop\.com
 1673259810	tripleee	secvolt\.com
+1673259858	tripleee	secvolt(?!\.com)
