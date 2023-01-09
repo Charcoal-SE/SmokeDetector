@@ -46458,3 +46458,4 @@
 1673261903	VLAZ	tejjy\.com
 1673262299	tripleee	codeobfuscator\.net
 1673267907	tripleee	ioncubedecoder\.net
+1673267989	Jeff Schaller	sfgate\.com/market/article
