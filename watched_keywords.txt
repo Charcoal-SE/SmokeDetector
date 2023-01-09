@@ -46438,3 +46438,4 @@
 1673231402	Makyen	(?-i:4c8uv2)(?#rb.gy)
 1673230319	Ethan	stick-dat\.com\.au
 1673244126	tripleee	clavick\.com
+1673244175	tripleee	clavick(?!\.com)
