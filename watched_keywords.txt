@@ -11433,8 +11433,8 @@
 1566204863	Makyen	bonygory
 1566204898	Makyen	iamakhilapriya
 1566204951	Makyen	tone-keto-avis-67\.webself\.net
-1566207338	Makyen	(?i:k82awuF9oAc88Tv0Syi85A)
-1566207361	Makyen	(?i:HuvY6hAy3xw)
+1566207338	Makyen	(?-i:k82awuF9oAc88Tv0Syi85A)
+1566207361	Makyen	(?-i:HuvY6hAy3xw)
 1566207402	Makyen	velofel-south-africa-64\.webself\.net
 1566207884	Byte Commander	odataware
 1566208640	Makyen	(?-i:VOsV-V5Ym-c)
@@ -25255,7 +25255,7 @@
 1610008386	tripleee	getlove-vipladies1\.com
 1610008778	cigien	(?-i:cWxWXhC6494)(?#youtu.be)
 1610008841	cigien	allproductreview\.org
-1610012947	tripleee	(?i:^Joanna Leslie Paragas$)
+1610012947	tripleee	(?-i:^Joanna Leslie Paragas$)
 1610013165	tripleee	dbmci\.com
 1610014410	tripleee	themotorbiker\.com
 1610017186	tripleee	router-help\.com
@@ -36945,7 +36945,7 @@
 1647105437	cigien	hauling911\.com
 1647154192	cigien	virautomation1(?:@gmail\.com)?
 1647158943	Cody Gray	47\.95\.209\.198
-1647163022	Cody Gray	(?i:qq_40374604)(?#blog.csdn.net)
+1647163022	Cody Gray	(?-i:qq_40374604)(?#blog.csdn.net)
 1647174176	Makyen	boomslot88
 1647174244	Makyen	slot88
 1647175436	Makyen	(?-i:PRAGMATIC)
@@ -37346,13 +37346,13 @@
 1648202056	Cody Gray	aakritihousing\.com
 1648204678	Robert Longson	techwear-x\.com
 1648205052	tripleee	celebaltech\.com
-1648206963	Cody Gray	(?i:^Aanya Bhat$)
+1648206963	Cody Gray	(?-i:^Aanya Bhat$)
 1648207978	Cody Gray	frontier\.xyz
 1648208719	Cody Gray	kitronik\.co\.uk
 1648208795	Cody Gray	talentxpert\.com
 1648208851	Cody Gray	T(?:alent|est)Xpert(?!\.com(?<=talentxpert\.com))
 1648208884	Cody Gray	playgamesandroid\.com
-1648208924	Cody Gray	(?i:^Play Games Android$)
+1648208924	Cody Gray	(?-i:^Play Games Android$)
 1648208963	Cody Gray	Play[\W_]*Games[\W_]*Android(?!\.com(?<=playgamesandroid\.com))
 1648209240	Cody Gray	masonryprocontractor\.com
 1648209273	Cody Gray	Masonry[\W_]*Pro(?:fessional)?[\W_]*Contractors?(?!\.com(?<=masonryprocontractor\.com))
@@ -37372,7 +37372,7 @@
 1648268149	cigien	arturogutierrezp
 1648268567	cigien	noithatnhaxinhap\.com
 1648268583	cigien	kientrucnha\.com\.vn
-1648269074	Cody Gray	(?i:^Mescells$)
+1648269074	Cody Gray	(?-i:^Mescells$)
 1648269152	Cody Gray	Mescells(?!\.com(?<=mescells\.com))
 1648271383	Cody Gray	bysnis\.com
 1648272146	Cody Gray	KLM(?:['’]s)?[\W_]*Singapore[\W_]*Office
@@ -37386,7 +37386,7 @@
 1648277721	Cody Gray	tractorsinfo\.com
 1648277763	Cody Gray	employeeconnection\.net
 1648282596	Cody Gray	applplus\s{0,3}\.com
-1648282690	Cody Gray	(?i:^Khan Nida$)
+1648282690	Cody Gray	(?-i:^Khan Nida$)
 1648283782	Cody Gray	interactivedesignservice\.com
 1648283810	Cody Gray	Interactive[\W_]*Design[\W_]*Service(?!\.com(?<=interactivedesignservice\.com))
 1648284601	Cody Gray	x8spedersapk\.id
