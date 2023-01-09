@@ -1628,6 +1628,9 @@ items:
   - kianchau.ns.cloudflare.com.
 - ns:
   - gina.ns.cloudflare.com.
+  - nico.ns.cloudflare.com.
+- ns:
+  - gina.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
   - glen.ns.cloudflare.com.
