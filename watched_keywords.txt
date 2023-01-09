@@ -46458,3 +46458,4 @@
 1673259900	tripleee	(?-i:3vtH021)(?# bit.ly)
 1673261903	VLAZ	tejjy\.com
 1673262299	tripleee	codeobfuscator\.net
+1673267907	tripleee	ioncubedecoder\.net
