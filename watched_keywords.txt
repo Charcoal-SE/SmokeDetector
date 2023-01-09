@@ -46439,3 +46439,4 @@
 1673230319	Ethan	stick-dat\.com\.au
 1673244126	tripleee	clavick\.com
 1673244175	tripleee	clavick(?!\.com)
+1673244649	tripleee	otosemi\.com
