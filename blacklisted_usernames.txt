@@ -746,3 +746,4 @@ meta kukel exchange
 (?-i:^sicheadphones$)
 (?-i:^Dms infosys$)
 (?-i:^Mohan Mondol$)
+(?-i:^Magus Tools$)
