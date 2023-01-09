@@ -46455,3 +46455,4 @@
 1673259775	tripleee	astroeshop\.com
 1673259810	tripleee	secvolt\.com
 1673259858	tripleee	secvolt(?!\.com)
+1673259900	tripleee	(?-i:3vtH021)(?# bit.ly)
