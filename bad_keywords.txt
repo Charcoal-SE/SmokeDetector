@@ -2726,3 +2726,4 @@ arlo[\W_]*+camera
 group[\W_]*+booking[\W_]*+number
 (?-i:MO30KEY)
 digistore24\.com(?# abuse additional blacklist to increase weight for spam wave)
+(?-i:3GP8Mg1)(?# bit.ly)
