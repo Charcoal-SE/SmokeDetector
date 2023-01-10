@@ -747,3 +747,4 @@ meta kukel exchange
 (?-i:^Dms infosys$)
 (?-i:^Mohan Mondol$)
 (?-i:^Magus Tools$)
+(?-i:^Appliance Repair$)
