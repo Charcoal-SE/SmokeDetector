@@ -46497,3 +46497,4 @@
 1673349903	Cody Gray	printing[\W_]*the[\W_]*new[\W_]*1099[\W_]*nec[\W_]*in[\W_]*sage[\W_]*50
 1673350378	tripleee	sage[\W_]*+50
 1673350566	Cody Gray	amansala\.com
+1673350762	tripleee	yourselfquotes\.com
