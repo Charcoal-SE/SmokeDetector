@@ -46491,3 +46491,4 @@
 1673348532	Cody Gray	sanworapid\.com
 1673348841	Cody Gray	infograins\.com
 1673348883	Cody Gray	infograins(?!\.com)
+1673349672	Cody Gray	(?-i:3GuQVtv)(?# bit.ly)
