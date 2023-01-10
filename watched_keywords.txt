@@ -21156,7 +21156,6 @@
 1595334006	Machavity	blogpostexamples\.com
 1595334185	Machavity	trexcoin
 1595334372	Machavity	vyapin\.com
-1595335408	Machavity	obsidian\.md
 1595339404	Eliah Kagan	TechRaiz
 1595339476	Eliah Kagan	fooditems\.in
 1595340283	Eliah Kagan	appletondental\.ca
