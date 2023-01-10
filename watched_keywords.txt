@@ -46499,3 +46499,4 @@
 1673350566	Cody Gray	amansala\.com
 1673350762	tripleee	yourselfquotes\.com
 1673351534	Cody Gray	kenovate(?!\.com)
+1673351595	Cody Gray	Cyber[\W_]*Genie[\W_]*Intercontinental
