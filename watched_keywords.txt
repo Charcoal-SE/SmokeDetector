@@ -46498,3 +46498,4 @@
 1673350378	tripleee	sage[\W_]*+50
 1673350566	Cody Gray	amansala\.com
 1673350762	tripleee	yourselfquotes\.com
+1673351534	Cody Gray	kenovate(?!\.com)
