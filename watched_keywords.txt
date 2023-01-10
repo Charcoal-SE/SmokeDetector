@@ -46494,3 +46494,4 @@
 1673349672	Cody Gray	(?-i:3GuQVtv)(?# bit.ly)
 1673349718	Cody Gray	battle[\W_]*with[\W_]*body[\W_]*fat
 1673349867	Cody Gray	reconcilebooks\.com
+1673349903	Cody Gray	printing[\W_]*the[\W_]*new[\W_]*1099[\W_]*nec[\W_]*in[\W_]*sage[\W_]*50
