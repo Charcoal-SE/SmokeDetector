@@ -46480,3 +46480,4 @@
 1673334465	Cody Gray	Lean[\W_]*Six[\W_]*Sigma
 1673334505	Cody Gray	Six[\W_]*Sigma[\W_]*Black[\W_]*Belt
 1673335169	tripleee	(?-i:^tobylykins$)
+1673337516	Cody Gray	yugongengineering\.com
