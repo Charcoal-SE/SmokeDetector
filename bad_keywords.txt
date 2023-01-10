@@ -2725,6 +2725,5 @@ we[\W_]*+earned[\W_]*+the[\W_]*+top[\W_]*+contributor[\W_]*+badge
 arlo[\W_]*+camera
 group[\W_]*+booking[\W_]*+number
 (?-i:MO30KEY)
-digistore24\.com(?# abuse additional blacklist to increase weight for spam wave)
 (?-i:3GP8Mg1)(?# bit.ly)
 click[\W_]*+here[\W_]*+to[\W_]*+complete[\W_]*+your[\W_]*+application
