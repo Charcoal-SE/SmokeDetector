@@ -1606,6 +1606,9 @@ items:
   - gannon.ns.cloudflare.com.
   - linda.ns.cloudflare.com.
 - ns:
+  - gannon.ns.cloudflare.com.
+  - sarah.ns.cloudflare.com.
+- ns:
   - garret.ns.cloudflare.com.
   - liberty.ns.cloudflare.com.
 - ns:
