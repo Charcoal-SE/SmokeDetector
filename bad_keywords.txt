@@ -2724,3 +2724,4 @@ duni[\W_]*+tech(?!\.com)
 we[\W_]*+earned[\W_]*+the[\W_]*+top[\W_]*+contributor[\W_]*+badge
 arlo[\W_]*+camera
 group[\W_]*+booking[\W_]*+number
+(?-i:MO30KEY)
