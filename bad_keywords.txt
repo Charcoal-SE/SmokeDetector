@@ -2727,3 +2727,4 @@ group[\W_]*+booking[\W_]*+number
 (?-i:MO30KEY)
 (?-i:3GP8Mg1)(?# bit.ly)
 click[\W_]*+here[\W_]*+to[\W_]*+complete[\W_]*+your[\W_]*+application
+[rRrʀԻᏒᚱＲｒ][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ][dDdĎďĐđԁժᎠḍⅮⅾＤｄ][iIilɩΙІіاᎥᛁⅠⅰРఠＩｉ][rRrʀԻᏒᚱＲｒ](?=[/／/̸⁄∕╱⫻⫽／ﾉ])(?<=[/／/̸⁄∕╱⫻⫽／ﾉ][rRrʀԻᏒᚱＲｒ][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ][dDdĎďĐđԁժᎠḍⅮⅾＤｄ][iIilɩΙІіاᎥᛁⅠⅰРఠＩｉ][rRrʀԻᏒᚱＲｒ])(?<!linkedin\.com/redir)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
