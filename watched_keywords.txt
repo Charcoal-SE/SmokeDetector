@@ -46503,3 +46503,4 @@
 1673352476	tripleee	economicschool\.org
 1673353316	Cody Gray	(?<!com\.)webomates(?!\.com)
 1673353436	Cody Gray	ftccryptorecoveryexpert(?:@gmail\.com)?
+1673353959	tripleee	copy and paste the link in normal font
