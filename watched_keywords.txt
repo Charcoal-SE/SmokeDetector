@@ -46490,3 +46490,4 @@
 1673345490	Cody Gray	Jeff[\W_]*Silbert(?!39)
 1673348532	Cody Gray	sanworapid\.com
 1673348841	Cody Gray	infograins\.com
+1673348883	Cody Gray	infograins(?!\.com)
