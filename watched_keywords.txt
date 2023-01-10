@@ -46489,3 +46489,4 @@
 1673342876	tripleee	drifthunters2\.io
 1673345490	Cody Gray	Jeff[\W_]*Silbert(?!39)
 1673348532	Cody Gray	sanworapid\.com
+1673348841	Cody Gray	infograins\.com
