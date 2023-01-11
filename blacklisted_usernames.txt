@@ -748,3 +748,4 @@ meta kukel exchange
 (?-i:^Mohan Mondol$)
 (?-i:^Magus Tools$)
 (?-i:^Appliance Repair$)
+(?-i:^cabinet soghaan$)
