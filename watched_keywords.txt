@@ -46507,3 +46507,4 @@
 1673379133	Spevacus	ufabet168\.info
 1673416371	tripleee	ij-startset\.com
 1673416395	tripleee	oyasaibatake\.com
+1673416787	tripleee	connect[\W_]*+vith[\W_]*+me
