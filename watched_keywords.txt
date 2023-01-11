@@ -46525,3 +46525,4 @@
 1673433455	tripleee	flcrack\.com
 1673433540	Cody Gray	QU[\W_]*Cars(?![\W_]*auto)
 1673433955	Cody Gray	movieterm\.com
+1673433999	Cody Gray	MovieTerm(?!\.com)
