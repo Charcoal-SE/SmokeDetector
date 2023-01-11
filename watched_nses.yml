@@ -2906,6 +2906,9 @@ items:
 - ns:
   - ns8545.hostgator.com.
   - ns8546.hostgator.com.
+- ns:
+  - ns8603.hostgator.com.
+  - ns8604.hostgator.com.
 - ns: cp-in-18.hostgatorwebservers.com.
 - ns: md-ht-7.hostgatorwebservers.com.
 - ns:
