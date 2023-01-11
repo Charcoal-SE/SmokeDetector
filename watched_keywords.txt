@@ -46528,3 +46528,4 @@
 1673433999	Cody Gray	MovieTerm(?!\.com)
 1673434038	Cody Gray	Best[\W_]*Movie[\W_]*Store
 1673434177	Cody Gray	(?-i:prGIlf)(?# qr.ae)
+1673434365	Cody Gray	publicpill\.com
