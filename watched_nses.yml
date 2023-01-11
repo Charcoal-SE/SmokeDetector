@@ -2521,6 +2521,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - nena.ns.cloudflare.com.
+  - ryan.ns.cloudflare.com.
+- ns:
   - nick.ns.cloudflare.com.
   - nelly.ns.cloudflare.com.
 - ns:
