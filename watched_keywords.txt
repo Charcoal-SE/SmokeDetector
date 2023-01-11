@@ -46516,3 +46516,4 @@
 1673422884	tripleee	muberet\.com
 1673422923	tripleee	draroras\.com
 1673422954	tripleee	(?-i:eiszc)(?# surl.li)
+1673427882	tripleee	soghaan(?!\.com)(?<!(?-i:^cabinet soghaan$))
