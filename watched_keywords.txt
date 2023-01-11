@@ -46536,3 +46536,4 @@
 1673435302	Cody Gray	masaru[\W_]*japanese(?!\.com(?<=masarujapanese\.com))
 1673438103	Cody Gray	kyriossoftwareservices\.com
 1673438271	Cody Gray	kyrios[\W_]*software[\W_]*services(?!\.com(?<=kyriossoftwareservices\.com))
+1673438446	Cody Gray	qservices(?!it\.com)
