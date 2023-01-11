@@ -46520,3 +46520,4 @@
 1673427930	Cody Gray	larvalstore\.com
 1673427975	Cody Gray	larval[\W_]*store(?!\.com(?<=larvalstore\.com))
 1673430292	Cody Gray	taxiborlange\.se
+1673430335	Cody Gray	taxiborlange(?!\.se)
