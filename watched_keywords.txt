@@ -46524,3 +46524,4 @@
 1673430379	Cody Gray	taxi[\W_]*kurir
 1673433266	Cody Gray	qucarsauto\.com
 1673433455	tripleee	flcrack\.com
+1673433540	Cody Gray	QU[\W_]*Cars(?![\W_]*auto)
