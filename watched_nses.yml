@@ -3620,6 +3620,11 @@ items:
 - ns: krystal.uk.
 - ns: techsolit.com.
 - ns:
+  - ns1042.ui-dns.biz.
+  - ns1043.ui-dns.com.
+  - ns1109.ui-dns.org.
+  - ns1125.ui-dns.de.
+- ns:
   - ns1045.ui-dns.biz.
   - ns1045.ui-dns.com.
   - ns1045.ui-dns.de.
