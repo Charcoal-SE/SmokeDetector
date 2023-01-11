@@ -46539,3 +46539,4 @@
 1673438446	Cody Gray	qservices(?!it\.com)
 1673438818	Cody Gray	queentilwanacolson31(?:@gmail\.com)?
 1673439141	tripleee	wanghualian9(?# telegram)
+1673439186	Cody Gray	(?-i:B0BRDG5Y4P)(?# Amazon)
