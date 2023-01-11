@@ -46542,3 +46542,4 @@
 1673439186	Cody Gray	(?-i:B0BRDG5Y4P)(?# Amazon)
 1673439285	Cody Gray	why[\W_]*choose[\W_]*us
 1673439356	Cody Gray	KFCloud
+1673443648	Cody Gray	eggycar\.co
