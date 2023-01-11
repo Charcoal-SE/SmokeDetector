@@ -46527,3 +46527,4 @@
 1673433955	Cody Gray	movieterm\.com
 1673433999	Cody Gray	MovieTerm(?!\.com)
 1673434038	Cody Gray	Best[\W_]*Movie[\W_]*Store
+1673434140	tripleee	\bqr\.ae
