@@ -30478,7 +30478,6 @@
 1626183398	cigien	easyfirmwarez\.com
 1626186052	Ollie	novatec\.co\.in
 1626183687	Ian Campbell	atariarchives\.org\/iad
-1626188772	cigien	novatec(?!\.co\.in)
 1626202708	cigien	ludokingforpc\.com
 1626203344	cigien	tiktokdownloaders\.com
 1626231578	cigien	aresourcepool\.com
