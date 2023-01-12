@@ -46575,3 +46575,4 @@
 1673520133	tripleee	go4affm\.com
 1673520204	tripleee	play-pogo\.club
 1673522240	tripleee	red[\W_]*+shield[\W_]*+5
+1673529658	Jeff Schaller	universalaspire\.com
