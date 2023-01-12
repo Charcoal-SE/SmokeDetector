@@ -46574,4 +46574,3 @@
 1673518898	tripleee	fedex[\W_]*+job\d*
 1673520133	tripleee	go4affm\.com
 1673520204	tripleee	play-pogo\.club
-1673522196	tripleee	red[\W_]*+shielf[\W_]*+5
