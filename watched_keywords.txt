@@ -23618,7 +23618,6 @@
 1603872827	tripleee	palline\.com\.sg
 1603873020	tripleee	lumiman\.com
 1603873511	tripleee	vigor[\W_]*+smart(?:[\W_]*+pills?)(?:[\W_]*+official)?(?:[\W_]*+buy)?\d*
-1603873587	tripleee	smart[\W_]*+brain(?:[\W_]*+canada)?\d*
 1603874179	Ryan M	prompthelp\.us
 1603875656	tripleee	freespinsnodep\.com
 1603880815	tripleee	xecurify\.com
