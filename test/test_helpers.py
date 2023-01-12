@@ -6,7 +6,9 @@ import helpers
 
 @pytest.mark.skipif("CHINA" in os.environ, reason="")
 @pytest.mark.parametrize('shortened, original', [
-    ('https://git.io/vyDZv', 'https://charcoal-se.org/smokey/'),
+    # Failing as of 2023-01-12
+    # ('https://git.io/vyDZv', 'https://charcoal-se.org/smokey/'),
+    ('https://t.ly/AqjA', 'https://charcoal-se.org/smokey/'),
     ('https://bit.ly/2jhMbxn', 'https://charcoal-se.org/'),
     # Failing as of 2021-11-18
     # ('https://tinyurl.com/y7ba4pth', 'https://charcoal-se.org/')
