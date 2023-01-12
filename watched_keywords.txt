@@ -46572,3 +46572,4 @@
 1673515972	tripleee	theikariajuice\.com
 1673516694	tripleee	forasoft\.com
 1673518898	tripleee	fedex[\W_]*+job\d*
+1673520133	tripleee	go4affm\.com
