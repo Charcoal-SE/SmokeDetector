@@ -46557,3 +46557,4 @@
 1673502579	Cody Gray	niccla(?:69)?
 1673502626	Cody Gray	Mr\.?[\W_]*StealYOhOE
 1673502819	Cody Gray	techictalk\.com
+1673503899	Cody Gray	Dallas[\W_]*Server[\W_]*Colocation
