@@ -46553,3 +46553,4 @@
 1673499237	Cody Gray	alltechworld\.in
 1673501409	Cody Gray	AajkiStory\.com
 1673501454	Cody Gray	Aajki[\W_]*Story(?!\.com(?<=AajkiStory\.com))
+1673502550	Cody Gray	yucoo\.net
