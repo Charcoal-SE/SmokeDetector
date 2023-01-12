@@ -46587,3 +46587,4 @@
 1673547214	Jeff Schaller	filebase\.com
 1673550298	Glorfindel	^durgesh\sgupta$
 1673551342	Jeff Schaller	(?-i:P2cQYDUQyhhkZDM8)(?#t.me)
+1673556405	Spevacus	turkeymedicals\.com
