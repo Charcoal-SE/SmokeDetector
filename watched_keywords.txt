@@ -46569,3 +46569,4 @@
 1673511796	Cody Gray	omegalearn\.org
 1673511820	Cody Gray	omega[\W_]*learn(?!\.org(?<=omegalearn\.org))
 1673512368	tripleee	idenxt\.com
+1673515972	tripleee	theikariajuice\.com
