@@ -46577,3 +46577,4 @@
 1673522240	tripleee	red[\W_]*+shield[\W_]*+5
 1673529658	Jeff Schaller	universalaspire\.com
 1673530510	Jeff Schaller	cuvalley\.com
+1673531246	Glorfindel	happyrunningshoes\.com
