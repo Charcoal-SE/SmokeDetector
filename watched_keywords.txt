@@ -46554,3 +46554,4 @@
 1673501409	Cody Gray	AajkiStory\.com
 1673501454	Cody Gray	Aajki[\W_]*Story(?!\.com(?<=AajkiStory\.com))
 1673502550	Cody Gray	yucoo\.net
+1673502579	Cody Gray	niccla(?:69)?
