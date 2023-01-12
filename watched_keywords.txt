@@ -46563,3 +46563,4 @@
 1673505716	Cody Gray	fling[^\w.]*com
 1673506003	Cody Gray	Quchange
 1673506229	Cody Gray	vipescortjaipur\.com
+1673506271	Cody Gray	Amer[\W_]*Escort
