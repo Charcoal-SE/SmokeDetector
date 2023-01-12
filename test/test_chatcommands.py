@@ -223,7 +223,7 @@ def test_info():
     assert chatcommands.info() == "I'm " + GlobalVars.chatmessage_prefix +\
         ", a bot that detects spam and offensive posts on the network and"\
         " posts alerts to chat."\
-        " [A command list is available here](https://git.io/SD-Commands)."
+        " [A command list is available here](https://t.ly/zP_E)."
 
 
 def test_blame():

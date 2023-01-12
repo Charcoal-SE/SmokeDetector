@@ -224,7 +224,7 @@ class Metasmoke:
             if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
                                    " continuous-integration/travis-ci/push")):
                 from_ms = from_ms.replace(": ",
-                                          ", or the [SD wiki](//git.io/vyDZv)"
+                                          ", or the [SD wiki](//t.ly/AqjA)"
                                           " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
             # Use protocol-relative links
             from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)

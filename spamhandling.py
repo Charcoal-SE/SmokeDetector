@@ -180,9 +180,9 @@ def build_message(post, reasons):
     # Message prefix. There's always a link to SmokeDetector; if we have a metasmoke key, there's also a link to the
     # post's MS record. If we *don't* have a MS key, it's a fair assumption that the post won't be in metasmoke as
     # we didn't have a key to create a record for it.
-    prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
+    prefix = u"[ [SmokeDetector](//t.ly/AqjA) ]"
     if GlobalVars.metasmoke_key:
-        prefix = u"[ [SmokeDetector](//git.io/vyDZv) | [MS]({}) ]".format(
+        prefix = u"[ [SmokeDetector](//t.ly/AqjA) | [MS]({}) ]".format(
             to_metasmoke_link(post_url, protocol=False))
 
     # If we have reason weights cached (GlobalVars.reason_weights) we can calculate total weight for this report;
