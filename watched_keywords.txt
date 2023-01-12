@@ -46566,3 +46566,4 @@
 1673506271	Cody Gray	Amer[\W_]*Escort
 1673506771	Cody Gray	onisol\.com
 1673506820	Cody Gray	Onisol(?!\.com)(?:[\W_]*Systems)?
+1673507347	Cody Gray	tips\.gg
