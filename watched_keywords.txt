@@ -46605,3 +46605,4 @@
 1673609400	Cody Gray	educertglobal\.com
 1673609806	tripleee	wifilearning\.com
 1673609839	tripleee	(?-i:ZUgfRnnhz7U)(?# youtube)
+1673609884	tripleee	wifi[\W_]*+learning\d*(?!\.com(?<=wifilearning\.com))
