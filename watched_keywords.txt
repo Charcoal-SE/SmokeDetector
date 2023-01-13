@@ -46612,3 +46612,4 @@
 1673612560	tripleee	%d8%aa%d8%ad%d9%84%db%8c%d9%84%20%d8%aa%da%a9%d9%86%db%8c%da%a9%d8%a7%d9%84
 1673615018	tripleee	petmantraa\.com
 1673616285	tripleee	survivor[\W_]*+hunt
+1673619148	Jeff Schaller	yaronhelfer\.com
