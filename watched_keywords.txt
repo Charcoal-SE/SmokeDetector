@@ -46604,3 +46604,4 @@
 1673607006	Cody Gray	ubiqcom(?!\.in)
 1673609400	Cody Gray	educertglobal\.com
 1673609806	tripleee	wifilearning\.com
+1673609839	tripleee	(?-i:ZUgfRnnhz7U)(?# youtube)
