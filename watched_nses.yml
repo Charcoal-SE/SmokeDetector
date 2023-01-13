@@ -467,6 +467,9 @@ items:
   - bella.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
+  - dorthy.ns.cloudflare.com.
+- ns:
+  - arch.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
