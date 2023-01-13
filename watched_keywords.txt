@@ -46602,3 +46602,4 @@
 1673606759	Cody Gray	First[\W_]*Path[\W_]*Montessori
 1673606960	Cody Gray	ubiqcom\.in
 1673607006	Cody Gray	ubiqcom(?!\.in)
+1673609400	Cody Gray	educertglobal\.com
