@@ -46591,3 +46591,4 @@
 1673561068	Cody Gray	(?-i:^davis$)
 1673575459	Jeff Schaller	essvalley\.com
 1673587437	Makyen	periodicos\.letras\.ufmg\.br
+1673587467	Makyen	vokasindo\.ub\.ac\.id
