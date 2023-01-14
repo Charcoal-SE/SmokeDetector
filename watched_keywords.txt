@@ -46635,3 +46635,4 @@
 1673682146	Cody Gray	(?-i:abcya)(?!\.com)
 1673684119	Cody Gray	tiktokdownload\.club
 1673684153	Cody Gray	TikTok[\W_]*downloader
+1673685521	Cody Gray	deliveringparcel\.com
