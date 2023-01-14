@@ -46632,3 +46632,4 @@
 1673679400	cocomac	forefront-apartments\.com
 1673679493	Cody Gray	Forefront[\W_]*Apartments(?!\.com(?<=forefront-apartments\.com))
 1673679753	Cody Gray	saurabh[\W_]*shukla
+1673679837	cocomac	saurabhshukladigitalcreator\.tumblr\.com
