@@ -46636,3 +46636,4 @@
 1673684119	Cody Gray	tiktokdownload\.club
 1673684153	Cody Gray	TikTok[\W_]*downloader
 1673685521	Cody Gray	deliveringparcel\.com
+1673695509	Cody Gray	diesel[\W_]*generator[\W_]*(?:companies|suppliers)[\W_]*in[\W_]*UAE
