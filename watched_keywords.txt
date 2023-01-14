@@ -46630,3 +46630,4 @@
 1673679027	Cody Gray	visaprovisioning\.com
 1673679055	Cody Gray	Kolkata[\W_]*online[\W_]*florists?
 1673679400	cocomac	forefront-apartments\.com
+1673679493	Cody Gray	Forefront[\W_]*Apartments(?!\.com(?<=forefront-apartments\.com))
