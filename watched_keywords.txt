@@ -46643,3 +46643,4 @@
 1673697427	Cody Gray	Burhan[\W_]*Real[\W_]*Estate
 1673698429	Cody Gray	lesta[\W_]*cholez(?:@gmail\.com)?
 1673699262	Cody Gray	mygeorgiasouthern\.org
+1673699297	Cody Gray	MyGeorgiaSouthern(?!\.org)
