@@ -46641,3 +46641,4 @@
 1673695693	Cody Gray	realsocialz\.com
 1673696497	Cody Gray	homelyitems\.com
 1673697427	Cody Gray	Burhan[\W_]*Real[\W_]*Estate
+1673698429	Cody Gray	lesta[\W_]*cholez(?:@gmail\.com)?
