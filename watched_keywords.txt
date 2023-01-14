@@ -46644,3 +46644,4 @@
 1673698429	Cody Gray	lesta[\W_]*cholez(?:@gmail\.com)?
 1673699262	Cody Gray	mygeorgiasouthern\.org
 1673699297	Cody Gray	MyGeorgiaSouthern(?!\.org)
+1673699525	Jeff Schaller	cloudbik\.com
