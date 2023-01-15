@@ -18381,7 +18381,7 @@
 1586332839	tripleee	raletta[\W_]*+technology
 1586337673	tripleee	eduiconbd\.com
 1586337710	tripleee	huvleview\.com
-1586337842	tripleee	gmail[\W_]*+(?:dot[\W_]*+)?com(?<!gmail\.com)
+1586337842	tripleee	g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?<!gmail\.com)
 1586337894	tripleee	indianbossmatka\.com
 1586337920	tripleee	matkaparivar\.in
 1586337949	tripleee	bossmatka\.me
