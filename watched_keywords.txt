@@ -46656,4 +46656,3 @@
 1673736381	Makyen	aiders[\W_]*+hacker(?:@gmail\.com)?
 1673771683	Cody Gray	crypto-bonus\.xyz
 1673771982	Cody Gray	(?-i:prYzac)(?# qr.ae)
-1673772196	Cody Gray	mitnick_security01
