@@ -46658,3 +46658,4 @@
 1673771982	Cody Gray	(?-i:prYzac)(?# qr.ae)
 1673772939	Cody Gray	mitnick[\W_]*security(?:01)?
 1673779325	Cody Gray	Muhammad[\W_]*Hashim
+1673781230	Cody Gray	epitaaf\.com
