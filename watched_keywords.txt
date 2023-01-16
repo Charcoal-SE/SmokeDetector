@@ -46668,3 +46668,4 @@
 1673802836	Makyen	nobelium[\W_]*+crypto[\W_]*+recovery
 1673819871	Spevacus	iscooterglobal\.co\.uk
 1673836316	Ethan	monkeymart\.io
+1673836765	Ethan	geometrydash2\.com
