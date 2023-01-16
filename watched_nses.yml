@@ -3919,3 +3919,6 @@ items:
 - ns: iiifun.com.
 - ns: whirltechindia.com.
 - ns: eukdns.com.
+- ns:
+  - ns57.1and1.com.
+  - ns58.1and1.com.
