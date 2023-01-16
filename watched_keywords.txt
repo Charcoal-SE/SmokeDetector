@@ -39822,7 +39822,6 @@
 1654837342	cocomac	ebuysugar\.com
 1654840903	tripleee	zayton
 1654845979	Glorfindel	Equify\W*Financial
-1654843344	cocomac	spinewise\.ca
 1654850830	tripleee	paintbrushesnrollers\.com
 1654850852	tripleee	(?-i:p97VmE)(?# fiverr)
 1654850911	tripleee	yjthealthcare\.com
