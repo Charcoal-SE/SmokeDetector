@@ -38382,7 +38382,6 @@
 1651122231	cigien	level\.io
 1651122336	Ryan M	melbourne[\W_]*+foot
 1651122769	Ryan M	mygoldkart\.com
-1651123381	cigien	microprokey(?!\.com)
 1651130047	Ryan M	fast[\W_]*+cash[\W_]*+offer
 1651130076	Ryan M	^lalegitimate$
 1651130111	tripleee	aaroh\.com
