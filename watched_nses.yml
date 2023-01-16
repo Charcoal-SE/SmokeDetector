@@ -1197,6 +1197,9 @@ items:
   - david.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
 - ns:
+  - david.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
+- ns:
   - dawn.ns.cloudflare.com.
   - dom.ns.cloudflare.com.
 - ns:
