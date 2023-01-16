@@ -232,6 +232,9 @@ items:
   - jeff.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
+  - jonah.ns.cloudflare.com.
+  - rachel.ns.cloudflare.com.
+- ns:
   - kay.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
