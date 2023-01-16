@@ -13,9 +13,6 @@ items:
   - aarav.ns.cloudflare.com.
   - ximena.ns.cloudflare.com.
 - ns:
-  - aaron.ns.cloudflare.com.
-  - sofia.ns.cloudflare.com.
-- ns:
   - abby.ns.cloudflare.com.
   - norman.ns.cloudflare.com.
 - comment: undisclosed affiliation? so far, captured posts have received FP feedback, but re-enabling 2022-12-11
