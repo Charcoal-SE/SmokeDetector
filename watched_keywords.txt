@@ -46675,4 +46675,3 @@
 1673861257	Suraj Rao	weblankan\.com
 1673865107	tripleee	kevinmitnickcyber(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1673865554	tripleee	(?-i:^CloudBik$)
-1673865586	tripleee	cloudbic(?!\.com)(?<!(?-i:^CloudBik$))
