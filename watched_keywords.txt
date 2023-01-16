@@ -44885,7 +44885,6 @@
 1668500530	tripleee	black[\W_]*+friday[\W_]*+2022
 1668502293	tripleee	flappy-bird\.co
 1668504786	tripleee	wezen-ball\.com
-1668508339	tripleee	controlf5(?!\.in)
 1668508383	tripleee	metaverseswapping\.com
 1668508511	tripleee	diamondexch-cricketid\.com
 1668508537	tripleee	decimaltoascii\.com
