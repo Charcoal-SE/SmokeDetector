@@ -46698,3 +46698,4 @@
 1673942110	Cody Gray	bulkcontainment\.com
 1673943054	Cody Gray	sdgroup\.vn
 1673943092	Cody Gray	SD[\W_]*Group(?!\.vn(?<=sdgroup\.vn))
+1673947072	Cody Gray	syndelltech\.com
