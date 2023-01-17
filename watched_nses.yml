@@ -1323,6 +1323,9 @@ items:
   - kurt.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
+  - edna.ns.cloudflare.com.
+- ns:
+  - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
