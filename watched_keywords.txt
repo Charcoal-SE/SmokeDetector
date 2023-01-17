@@ -46692,3 +46692,4 @@
 1673935590	Cody Gray	Tech[\W_]*Playon(?!\.com(?<=techplayon\.com))
 1673937263	Cody Gray	safetyfencesystems\.com
 1673939013	tripleee	(?-i:^Jacob Morganij$)
+1673939051	Cody Gray	empowerelearning\.com
