@@ -46697,3 +46697,4 @@
 1673940475	Cody Gray	Xe88[\W_]*Live[\W_]*Bet(?!\.com(?<=xe88livebet\.com))
 1673941059	Cody Gray	cisco[\W_]*dumps?
 1673941268	Cody Gray	apilayer\.com(?<!api\.apilayer\.com)
+1673942110	Cody Gray	bulkcontainment\.com
