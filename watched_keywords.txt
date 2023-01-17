@@ -46704,3 +46704,4 @@
 1673951049	Cody Gray	destination[\W_]*+wedding[\W_]*+(?:places[\W_]*)?in[\W_]*+india
 1673953265	Cody Gray	rankbrainmarketing\.com
 1673953764	Cody Gray	dailyseoupdates\.com
+1673953809	Cody Gray	(?-i:^yash denge$)
