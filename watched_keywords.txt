@@ -46719,3 +46719,4 @@
 1673958743	Cody Gray	blockdispensary(?:\.io)
 1673959119	tripleee	(?-i:^jennysmith$)
 1673960307	Cody Gray	clutteroo\.com
+1673960706	tripleee	php\.org
