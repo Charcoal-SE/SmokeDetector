@@ -198,6 +198,9 @@ items:
   - roxy.ns.cloudflare.com.
 - ns:
   - alex.ns.cloudflare.com.
+  - erin.ns.cloudflare.com.
+- ns:
+  - alex.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
   - alex.ns.cloudflare.com.
