@@ -46712,3 +46712,4 @@
 1673955271	Cody Gray	Brand[\W_]*Name[\W_]*Genius(?!\.com(?<=brandnamegenius\.com))
 1673955389	Cody Gray	Business[\W_]*Name[\W_]*Generator
 1673957025	tripleee	energy[\W_]*+exteriors(?:[\W_]*+nw)?
+1673957110	tripleee	seo(?<!\A.{0,20}\bseo\b.{0,20}\Z)
