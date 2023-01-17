@@ -46714,3 +46714,4 @@
 1673957110	tripleee	seo(?<!\A.{0,20}\bseo\b.{0,20}\Z)
 1673957157	tripleee	superiorsoftwashsolutions\.com
 1673958279	Jeff Schaller	paystubcreator\.net
+1673958588	Jeff Schaller	lovebackbyvashikaran\.com
