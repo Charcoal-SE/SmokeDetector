@@ -46717,3 +46717,4 @@
 1673958588	Jeff Schaller	lovebackbyvashikaran\.com
 1673958707	Cody Gray	37trillion
 1673958743	Cody Gray	blockdispensary(?:\.io)
+1673959119	tripleee	(?-i:^jennysmith$)
