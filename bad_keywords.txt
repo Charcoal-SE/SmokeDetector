@@ -2732,3 +2732,4 @@ ufabet
 anchor[\W_]*fonts(?!\.com(?<=anchorfonts\.com))
 controlf5(?!\.in)
 microprokey(?!\.com)
+pitamaas(?!\.com)

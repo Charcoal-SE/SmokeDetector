@@ -45316,7 +45316,6 @@
 1669638491	tripleee	sv388bet\.org
 1669638515	tripleee	(?-i:tlPNE1532I8)(?# youtube)
 1669638562	tripleee	pitamaas\.com gs score
-1669638601	tripleee	pitamaas(?!\.com)
 1669638630	tripleee	gs[\W_]*+score
 1669580654	Ethan	pSioni69(?#Twitter)
 1669638750	tripleee	hotelmanorama\.com
