@@ -46695,3 +46695,4 @@
 1673939100	Cody Gray	em[\W_]*Power[\W_]*e[\W_]*Learning(?!\.com(?<=empowerelearning\.com))
 1673939486	tripleee	seo(?<!^.{0,18}\bseo\b.{0,18}$)
 1673940407	tripleee	xe88livebet\.com
+1673940475	Cody Gray	Xe88[\W_]*Live[\W_]*Bet(?!\.com(?<=xe88livebet\.com))
