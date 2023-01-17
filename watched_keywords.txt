@@ -46693,3 +46693,4 @@
 1673937263	Cody Gray	safetyfencesystems\.com
 1673939013	tripleee	(?-i:^Jacob Morganij$)
 1673939051	Cody Gray	empowerelearning\.com
+1673939100	Cody Gray	em[\W_]*Power[\W_]*e[\W_]*Learning(?!\.com(?<=empowerelearning\.com))
