@@ -14369,7 +14369,6 @@
 1576217431	Makyen	(?-i:ogwRS\.png)
 1576217450	Makyen	(?-i:te9ouRmUwDU)
 1576217469	Makyen	(?-i:7baTm\.png)
-1576217492	tripleee	cisco[\W_]*+\d{3}-\d{3}[\W_]*+(?:\w+[\W_]+){0,10}exam
 1576217647	Makyen	envy[\W_]*+us(?:[\W_]*+moisturizer)?[\W_]*+cream
 1576219410	tripleee	jarvistechnical\.com
 1576219664	tripleee	ecochoicewindows\.ca
