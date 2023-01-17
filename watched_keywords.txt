@@ -46708,3 +46708,4 @@
 1673954600	Cody Gray	onyxabaya\.com
 1673954649	Cody Gray	Onyx[\W_]*Abaya(?!\.com(?<=onyxabaya\.com))
 1673954882	Cody Gray	oxfordkollam\.edu\.in
+1673954943	Cody Gray	Oxford[\W_]*(?:School[\W_]*)?Kollam(?!\.edu\.in(?<=oxfordkollam\.edu\.in))
