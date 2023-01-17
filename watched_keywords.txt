@@ -46696,3 +46696,4 @@
 1673939486	tripleee	seo(?<!^.{0,18}\bseo\b.{0,18}$)
 1673940407	tripleee	xe88livebet\.com
 1673940475	Cody Gray	Xe88[\W_]*Live[\W_]*Bet(?!\.com(?<=xe88livebet\.com))
+1673941059	Cody Gray	cisco[\W_]*dumps?
