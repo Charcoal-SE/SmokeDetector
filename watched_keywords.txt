@@ -6914,7 +6914,6 @@
 1547189727	tripleee	sskrypt
 1547192889	Tetsuya Yamamoto	expertsminds\.com
 1547194159	Tetsuya Yamamoto	questpond\.com
-1547194886	Tetsuya Yamamoto	chrisansgroup\.com
 1547196891	Tetsuya Yamamoto	mashhadbranding\.blogfa\.com
 1547199902	tripleee	biginternet\.ca
 1547202682	tripleee	fondofrecipes\.blogspot
