@@ -46700,3 +46700,4 @@
 1673943092	Cody Gray	SD[\W_]*Group(?!\.vn(?<=sdgroup\.vn))
 1673947072	Cody Gray	syndelltech\.com
 1673947259	Cody Gray	emdoorrugged\.com
+1673947723	Cody Gray	dragonarab
