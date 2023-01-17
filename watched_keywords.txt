@@ -46720,4 +46720,3 @@
 1673959119	tripleee	(?-i:^jennysmith$)
 1673960307	Cody Gray	clutteroo\.com
 1673960706	tripleee	php\.org
-1673961405	Adrian Mole	ironpdf\.com
