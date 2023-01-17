@@ -46710,3 +46710,4 @@
 1673954882	Cody Gray	oxfordkollam\.edu\.in
 1673954943	Cody Gray	Oxford[\W_]*(?:School[\W_]*)?Kollam(?!\.edu\.in(?<=oxfordkollam\.edu\.in))
 1673955223	Cody Gray	brandnamegenius\.com
+1673955271	Cody Gray	Brand[\W_]*Name[\W_]*Genius(?!\.com(?<=brandnamegenius\.com))
