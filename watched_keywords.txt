@@ -46707,3 +46707,4 @@
 1673953809	Cody Gray	(?-i:^yash denge$)
 1673954600	Cody Gray	onyxabaya\.com
 1673954649	Cody Gray	Onyx[\W_]*Abaya(?!\.com(?<=onyxabaya\.com))
+1673954882	Cody Gray	oxfordkollam\.edu\.in
