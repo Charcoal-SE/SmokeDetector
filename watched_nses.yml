@@ -3683,7 +3683,6 @@ items:
 - ns: firestarthosting.com.
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
-- ns: yuvajobs.in.
 - comment: NXDOMAIN 2022-12-03; potentially intermittent.
   disable: true
   ns: askbeen.com.
