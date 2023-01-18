@@ -46743,3 +46743,4 @@
 1674041347	tripleee	growthplusreports\.com
 1674041408	tripleee	growth[\W_]*+plus[\W_]*+reports(?!\.com(?<=growthplusreports\.com))
 1674043273	Cody Gray	shubhsanskarconcrete\.com
+1674043354	Cody Gray	andwepromote\.com
