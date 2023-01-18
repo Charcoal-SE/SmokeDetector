@@ -46761,3 +46761,4 @@
 1674070828	Cody Gray	affdel\.com
 1674070860	Cody Gray	affdel(?!\.com)
 1674070902	Cody Gray	techreviewnews\.com
+1674070953	Cody Gray	tech[\W_]*review[\W_]*news(?!\.com(?<=techreviewnews\.com))
