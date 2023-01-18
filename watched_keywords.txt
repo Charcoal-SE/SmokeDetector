@@ -21779,7 +21779,6 @@
 1597739870	Mast	best[\W_]*+sites[\W_]*+to[\W_]*+watch
 1597740259	Mast	acbells\.com
 1597742172	Mast	phras\.in
-1597744176	tripleee	yuvajobs\.com
 1597744193	tripleee	leadgle\.com
 1597744584	tripleee	techsmagic\.com
 1597746149	tripleee	hottentcamping\.com
