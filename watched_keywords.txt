@@ -43949,7 +43949,6 @@
 1665664961	tripleee	vtgk7uzp7v2ba2wiv2m5diuklzszgcparux5cjxvjlt5mqaoehwjqxad\.onion
 1665665153	tripleee	smashersteam
 1665665212	tripleee	(?-i:^emma0122$)
-1665667979	Jeff Schaller	repair-service-center\.com
 1665674545	Spevacus	qubcort
 1665676907	cigien	apkspike\.com
 1665677147	Thomas Ward	earthweb\.com
