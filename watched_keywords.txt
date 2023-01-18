@@ -31542,7 +31542,6 @@
 1630028044	cigien	arlofirmwareupdate\.com
 1630029706	cigien	chamnha(?!\.com)
 1630035562	cigien	hustleways\.com
-1630041690	cigien	videosdk\.live
 1630045451	cigien	sreemoneybuilders\.com
 1630050754	tripleee	mnbsoft\.com
 1630051798	cigien	dkog\.com\.au
