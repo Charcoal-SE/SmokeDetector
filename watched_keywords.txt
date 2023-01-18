@@ -45320,7 +45320,6 @@
 1669647317	Jeff Schaller	weedgrass\.net
 1669651988	Jeff Schaller	lipsindia\.com
 1669665679	Ethan	pylote\.io
-1669670337	Glorfindel	thescopes\.net
 1669686850	Jeff Schaller	BuyGvsells
 1669686876	Jeff Schaller	enterprisedna\.co
 1669687001	Jeff Schaller	pooltime\.se
