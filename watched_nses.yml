@@ -39,6 +39,9 @@ items:
   - malavika.ns.cloudflare.com.
 - ns:
   - ada.ns.cloudflare.com.
+  - algin.ns.cloudflare.com.
+- ns:
+  - ada.ns.cloudflare.com.
   - arch.ns.cloudflare.com.
 - ns:
   - ada.ns.cloudflare.com.
