@@ -46752,3 +46752,4 @@
 1674048131	tripleee	softlew(?!\.com)
 1674048522	tripleee	(?-i:^Mark Roy$)
 1674049252	tripleee	ceribenanoche\.com
+1674059001	Spevacus	cardchecker\.net
