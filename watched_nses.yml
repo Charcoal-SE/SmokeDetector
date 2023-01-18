@@ -1177,6 +1177,9 @@ items:
   - june.ns.cloudflare.com.
 - ns:
   - dane.ns.cloudflare.com.
+  - laura.ns.cloudflare.com.
+- ns:
+  - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
   - daniella.ns.cloudflare.com.
