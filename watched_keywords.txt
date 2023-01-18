@@ -46747,3 +46747,4 @@
 1674043396	Cody Gray	andwe[\W_]*promote(?!\.com(?<=andwepromote\.com))
 1674046951	Jeff Schaller	coolitdowntx\.com
 1674047042	Jeff Schaller	adonaivietnam\.org
+1674047699	tripleee	neo-tokyo\.no
