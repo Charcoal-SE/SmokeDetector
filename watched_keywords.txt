@@ -46741,3 +46741,4 @@
 1674041105	tripleee	themencure\.com
 1674041156	tripleee	dailyvocabshay\.blogspot
 1674041347	tripleee	growthplusreports\.com
+1674041408	tripleee	growth[\W_]*+plus[\W_]*+reports(?!\.com(?<=growthplusreports\.com))
