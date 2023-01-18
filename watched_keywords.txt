@@ -46728,3 +46728,4 @@
 1674019299	Cody Gray	Al[\W_]*Rizq(?:[\W_]*Advertising)?
 1674019749	Cody Gray	LIC[\W_]*agent
 1674021824	tripleee	desktopgoldhelpline\.com
+1674025241	tripleee	sysvita\.com
