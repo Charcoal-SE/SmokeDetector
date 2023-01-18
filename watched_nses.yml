@@ -2603,6 +2603,9 @@ items:
   - viddy.ns.cloudflare.com.
 - ns:
   - pete.ns.cloudflare.com.
+  - venus.ns.cloudflare.com.
+- ns:
+  - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
   - phil.ns.cloudflare.com.
