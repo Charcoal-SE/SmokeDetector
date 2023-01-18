@@ -46729,3 +46729,4 @@
 1674019749	Cody Gray	LIC[\W_]*agent
 1674021824	tripleee	desktopgoldhelpline\.com
 1674025241	tripleee	sysvita\.com
+1674025290	tripleee	sysvita(?!\.com)
