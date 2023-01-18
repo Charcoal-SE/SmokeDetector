@@ -46752,3 +46752,4 @@
 1674048049	tripleee	adonai\.vn
 1674048086	tripleee	softlew\.com
 1674048131	tripleee	softlew(?!\.com)
+1674048522	tripleee	(?-i:^Mark Roy$)
