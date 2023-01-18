@@ -46759,3 +46759,4 @@
 1674070755	Cody Gray	cloudycoders\.com
 1674070792	Cody Gray	salesforce[\W_]*consultant
 1674070828	Cody Gray	affdel\.com
+1674070860	Cody Gray	affdel(?!\.com)
