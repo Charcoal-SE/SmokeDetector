@@ -1131,6 +1131,9 @@ items:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
+  - damiete.ns.cloudflare.com.
+  - sandra.ns.cloudflare.com.
+- ns:
   - damon.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
