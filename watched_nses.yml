@@ -1799,6 +1799,9 @@ items:
   - tia.ns.cloudflare.com.
 - ns:
   - hank.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
+  - hank.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
   - heather.ns.cloudflare.com.
