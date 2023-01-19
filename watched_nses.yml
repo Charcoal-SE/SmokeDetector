@@ -2522,6 +2522,9 @@ items:
   - nola.ns.cloudflare.com.
 - ns:
   - mira.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
+  - mira.ns.cloudflare.com.
   - peter.ns.cloudflare.com.
 - ns:
   - mitchell.ns.cloudflare.com.
