@@ -45628,7 +45628,6 @@
 1670676707	Jeff Schaller	next-x\.com\.au
 1670676735	Jeff Schaller	moversbrampton\.ca
 1670679042	cigien	movers[\W_]*+brampton(?!\.ca(?<=moversbrampton\.ca))
-1670679123	cigien	tech2globe(?!\.ca)
 1670682175	Jeff Schaller	bikebd\.com
 1670693055	cigien	fadaktahvieh\.com
 1670696002	Makyen	nicehash\.com
