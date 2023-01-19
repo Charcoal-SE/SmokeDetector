@@ -46778,3 +46778,4 @@
 1674110826	tripleee	nityango\.org
 1674112454	tripleee	audience[\W_]*+finder(?:[\W_]*+com)?
 1674112499	tripleee	bubblsboog
+1674112547	tripleee	himeros(?:me)?
