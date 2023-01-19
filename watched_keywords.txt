@@ -46784,3 +46784,4 @@
 1674119987	tripleee	(?-i:^Mashrangi Umesh$)
 1674125321	tripleee	leewaysoftech\.com
 1674125834	tripleee	tech[\W_]*+2[\W_]*+globe(?!\.c(?:a|om))
+1674127441	Jeff Schaller	epsonprint\.uk
