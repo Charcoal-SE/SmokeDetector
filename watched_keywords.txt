@@ -46774,3 +46774,4 @@
 1674107512	tripleee	esoftsafe\.com
 1674107541	tripleee	(?-i:^John Dave$)
 1674107660	tripleee	(?-i:^aiden wils$)
+1674107832	tripleee	windowssolved\.com
