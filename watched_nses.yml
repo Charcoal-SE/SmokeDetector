@@ -2467,6 +2467,9 @@ items:
   - meg.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - meg.ns.cloudflare.com.
+  - vick.ns.cloudflare.com.
+- ns:
   - megan.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
