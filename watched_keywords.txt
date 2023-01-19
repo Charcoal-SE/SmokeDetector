@@ -36439,7 +36439,6 @@
 1645790398	Mast	batterymela\.com
 1645790478	Mast	biznsys\.io
 1645794289	Jeff Schaller	impressim\.com
-1645798456	Jeff Schaller	freshcodestudio\.com
 1645798472	Jeff Schaller	portaracqg\.com
 1645798602	Makyen	(?-i:KlFDXcP5E6Q)(?#YouTube)
 1645798623	Makyen	laptopoutlet\.co\.uk
