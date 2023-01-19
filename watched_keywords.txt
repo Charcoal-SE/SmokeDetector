@@ -46772,3 +46772,4 @@
 1674107245	tripleee	geekzonear\.com
 1674107296	tripleee	herbalhillswellness\.com
 1674107512	tripleee	esoftsafe\.com
+1674107541	tripleee	(?-i:^John Dave$)
