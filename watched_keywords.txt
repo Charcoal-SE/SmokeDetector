@@ -46764,3 +46764,4 @@
 1674071158	Cody Gray	pureinfotech\.com
 1674071247	Cody Gray	network[\W_]*educative(?!\.com(?<=networkeducative\.com))
 1674078677	Spevacus	kasamba\.co\.za
+1674106545	tripleee	techplek\.com
