@@ -46786,3 +46786,4 @@
 1674125834	tripleee	tech[\W_]*+2[\W_]*+globe(?!\.c(?:a|om))
 1674127441	Jeff Schaller	epsonprint\.uk
 1674130667	tripleee	zzang79\.com
+1674131296	tripleee	샌즈카지노
