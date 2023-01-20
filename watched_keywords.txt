@@ -46818,3 +46818,4 @@
 1674206131	Cody Gray	pcbsino(?!\.com)
 1674207141	tripleee	gomedsonline\.com
 1674207181	tripleee	go[\W_]*+meds[\W_]*+online(?!\.com(?<=gomedsonline\.com))
+1674207307	tripleee	ealoorstudyabroad\.com
