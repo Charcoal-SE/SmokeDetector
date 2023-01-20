@@ -46824,3 +46824,4 @@
 1674212408	tripleee	codeslook\.com
 1674212492	tripleee	royal[\W_]*+child[\W_]*+care
 1674213039	tripleee	instructure\.com(?<!\bcanvas\.instructure\.com)
+1674213098	tripleee	(?-i:^Plastics Source$)
