@@ -915,6 +915,9 @@ items:
   - chad.ns.cloudflare.com.
   - venus.ns.cloudflare.com.
 - ns:
+  - chan.ns.cloudflare.com.
+  - curt.ns.cloudflare.com.
+- ns:
   - chance.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
 - ns:
