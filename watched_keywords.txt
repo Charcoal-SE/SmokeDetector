@@ -46821,3 +46821,4 @@
 1674207307	tripleee	ealoorstudyabroad\.com
 1674207353	tripleee	ealoor
 1674208303	tripleee	haikudeck\.com
+1674208451	tripleee	commercial[\W_]*+pilot[\W_]*+license[\W_]*+CPL
