@@ -3934,7 +3934,9 @@ items:
 - ns: 34sp.com.
 - ns: sureserver.com.
 - ns: arvancdn.net.
-- ns: transip.nl.
+- comment: 1/35 over 3 months; not valuable
+  disable: true
+  ns: transip.nl.
 - ns: rockdoc0.github.io.
 - ns: nsresponse.com.
 - ns: redserverhost.com.
