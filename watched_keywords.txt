@@ -46802,3 +46802,4 @@
 1674194441	tripleee	lokeshdlk77(?# medium.com)
 1674194534	tripleee	preparation-toeic\.org
 1674194572	Cody Gray	brightdata\.grsm\.io
+1674194611	Cody Gray	Bright[\W_]*+Data(?!\.grsm\.io(?<=brightdata\.grsm\.io))
