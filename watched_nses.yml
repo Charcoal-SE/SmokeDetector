@@ -686,6 +686,9 @@ items:
   - leo.ns.cloudflare.com.
 - ns:
   - bjorn.ns.cloudflare.com.
+  - deb.ns.cloudflare.com.
+- ns:
+  - bjorn.ns.cloudflare.com.
   - ines.ns.cloudflare.com.
 - ns:
   - bjorn.ns.cloudflare.com.
