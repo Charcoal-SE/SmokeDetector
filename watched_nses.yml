@@ -798,6 +798,9 @@ items:
   - bristol.ns.cloudflare.com.
   - hasslo.ns.cloudflare.com.
 - ns:
+  - brit.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
   - brodie.ns.cloudflare.com.
   - dara.ns.cloudflare.com.
 - ns:
