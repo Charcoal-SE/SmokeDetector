@@ -46804,3 +46804,4 @@
 1674194572	Cody Gray	brightdata\.grsm\.io
 1674194611	Cody Gray	Bright[\W_]*+Data(?!\.grsm\.io(?<=brightdata\.grsm\.io))
 1674194693	Cody Gray	vitariz
+1674195276	Cody Gray	check-plagiarism\.com
