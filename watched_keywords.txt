@@ -46832,3 +46832,4 @@
 1674220723	tripleee	kalem[\W_]*+tez[\W_]*+haz[iı]rlama(?!\.com(?<=kalemtezhazirlama\.com))
 1674226565	Ethan	dublin-gasboilers\.ie
 1674226825	Jeff Schaller	ikkids\.com
+1674226918	Jeff Schaller	ikkids
