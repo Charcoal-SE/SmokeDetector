@@ -46826,3 +46826,4 @@
 1674213039	tripleee	instructure\.com(?<!\bcanvas\.instructure\.com)
 1674213098	tripleee	(?-i:^Plastics Source$)
 1674217814	tripleee	countryconverter\.com
+1674219026	Jeff Schaller	kaisanba\.com
