@@ -46829,3 +46829,4 @@
 1674219026	Jeff Schaller	kaisanba\.com
 1674219294	tripleee	skyboxcreative\.com
 1674220600	tripleee	kalemtezhazirlama\.com
+1674220723	tripleee	kalem[\W_]*+tez[\W_]*+haz[iı]rlama(?!\.com(?<=kalemtezhazirlama\.com))
