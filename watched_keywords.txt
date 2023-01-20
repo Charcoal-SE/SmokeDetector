@@ -46815,3 +46815,4 @@
 1674202595	tripleee	digitalbrolly\.com
 1674204881	tripleee	florence\.tours
 1674206089	Cody Gray	pcbsino\.com
+1674206131	Cody Gray	pcbsino(?!\.com)
