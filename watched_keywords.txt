@@ -46820,3 +46820,4 @@
 1674207181	tripleee	go[\W_]*+meds[\W_]*+online(?!\.com(?<=gomedsonline\.com))
 1674207307	tripleee	ealoorstudyabroad\.com
 1674207353	tripleee	ealoor
+1674208303	tripleee	haikudeck\.com
