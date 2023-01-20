@@ -46823,3 +46823,4 @@
 1674208451	tripleee	commercial[\W_]*+pilot[\W_]*+license[\W_]*+CPL
 1674212408	tripleee	codeslook\.com
 1674212492	tripleee	royal[\W_]*+child[\W_]*+care
+1674213039	tripleee	instructure\.com(?<!\bcanvas\.instructure\.com)
