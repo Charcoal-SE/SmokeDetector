@@ -46806,3 +46806,4 @@
 1674194693	Cody Gray	vitariz
 1674195276	Cody Gray	check-plagiarism\.com
 1674195944	Cody Gray	fomtooley\.com
+1674196608	tripleee	(?-i:^Jasmine Kate$)
