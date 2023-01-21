@@ -46865,3 +46865,4 @@
 1674294239	Cody Gray	FrancisIV(?# t.me)
 1674294273	Cody Gray	^simi[\W_]*sinia$
 1674297160	Cody Gray	myassignmenthelp(?!\.io)
+1674298287	tripleee	image[\W_]*+clinic
