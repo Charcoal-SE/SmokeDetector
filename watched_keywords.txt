@@ -46857,3 +46857,4 @@
 1674288901	Cody Gray	abcservices\.in
 1674288933	Cody Gray	ABC[\W_]*Services(?!\.in(?<=abcservices\.in))
 1674291424	Cody Gray	cart4needs\.com
+1674291464	Cody Gray	cart4needs(?!\.com)
