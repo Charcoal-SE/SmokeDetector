@@ -46859,3 +46859,4 @@
 1674291424	Cody Gray	cart4needs\.com
 1674291464	Cody Gray	cart4needs(?!\.com)
 1674291976	Cody Gray	ewd\.co\.in
+1674292012	Cody Gray	expertwebdesigning\.com
