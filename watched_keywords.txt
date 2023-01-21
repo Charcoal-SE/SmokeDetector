@@ -46871,3 +46871,4 @@
 1674300199	tripleee	true[\W_]*+push[\W_]*+tool
 1674302702	Cody Gray	Red[\W_]*Notice[\W_]*Fugitive
 1674306086	Cody Gray	mindcarehospital\.in
+1674306108	Cody Gray	(?-i:Tejas Patel)
