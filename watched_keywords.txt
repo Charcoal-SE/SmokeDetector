@@ -46853,3 +46853,4 @@
 1674287463	Cody Gray	bitdeal\.net
 1674287507	Cody Gray	cryptocurrency[\W_]*exchange[\W_]*script
 1674287546	Cody Gray	^alicejenifferze$
+1674287587	Cody Gray	bitdeal(?!\.net)
