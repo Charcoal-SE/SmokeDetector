@@ -46852,3 +46852,4 @@
 1674285626	Cody Gray	^ablebits[\W_]*excel$
 1674287463	Cody Gray	bitdeal\.net
 1674287507	Cody Gray	cryptocurrency[\W_]*exchange[\W_]*script
+1674287546	Cody Gray	^alicejenifferze$
