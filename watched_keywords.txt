@@ -46850,3 +46850,4 @@
 1674285386	Cody Gray	sultan-bahoo\.com
 1674285422	Cody Gray	Shaikh[\W_]*Abdul[\W_]*Qadir[\W_]*Jilani
 1674285626	Cody Gray	^ablebits[\W_]*excel$
+1674287463	Cody Gray	bitdeal\.net
