@@ -46867,3 +46867,4 @@
 1674297160	Cody Gray	myassignmenthelp(?!\.io)
 1674298287	tripleee	image[\W_]*+clinic
 1674298983	Cody Gray	infowebsoftwaresupport\.com
+1674299030	Cody Gray	hp[\W_]*printer[\W_]*error
