@@ -46855,3 +46855,4 @@
 1674287546	Cody Gray	^alicejenifferze$
 1674287587	Cody Gray	bitdeal(?!\.net)
 1674288901	Cody Gray	abcservices\.in
+1674288933	Cody Gray	ABC[\W_]*Services(?!\.in(?<=abcservices\.in))
