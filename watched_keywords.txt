@@ -46846,3 +46846,4 @@
 1674278556	Cody Gray	academy[\W_]*roberts[\W_]*supplements[\W_]*online
 1674278589	Cody Gray	accentnext(?!\.com)
 1674283046	Cody Gray	thebestfashion\.co
+1674285261	Cody Gray	themorningcomes\.com
