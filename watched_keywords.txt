@@ -46366,7 +46366,6 @@
 1673152934	Cody Gray	Federico[\W_]*Polanski(?!198)
 1673153423	Cody Gray	wuh5935(?:@gmail\.com)?
 1673153526	Cody Gray	moneycontrol(?!\.com)
-1673162537	Cody Gray	ablebits
 1673167337	Cody Gray	cashapppresents\.tk
 1673167913	Cody Gray	cyberspc\.com
 1673168638	Cody Gray	(?-i:jPg2NGN1Rfk)(?# YouTube)
