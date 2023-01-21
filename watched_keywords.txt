@@ -46847,3 +46847,4 @@
 1674278589	Cody Gray	accentnext(?!\.com)
 1674283046	Cody Gray	thebestfashion\.co
 1674285261	Cody Gray	themorningcomes\.com
+1674285340	Cody Gray	The[\W_]*Morning[\W_]*Comes(?!\.com(?<=themorningcomes\.com))
