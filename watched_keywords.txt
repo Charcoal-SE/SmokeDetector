@@ -46848,3 +46848,4 @@
 1674283046	Cody Gray	thebestfashion\.co
 1674285261	Cody Gray	themorningcomes\.com
 1674285340	Cody Gray	The[\W_]*Morning[\W_]*Comes(?!\.com(?<=themorningcomes\.com))
+1674285386	Cody Gray	sultan-bahoo\.com
