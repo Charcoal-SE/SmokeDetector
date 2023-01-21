@@ -46870,3 +46870,4 @@
 1674299030	Cody Gray	hp[\W_]*printer[\W_]*error
 1674300199	tripleee	true[\W_]*+push[\W_]*+tool
 1674302702	Cody Gray	Red[\W_]*Notice[\W_]*Fugitive
+1674306086	Cody Gray	mindcarehospital\.in
