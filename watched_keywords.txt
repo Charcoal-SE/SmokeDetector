@@ -46889,3 +46889,4 @@
 1674388290	Cody Gray	ngodeid\.com
 1674389138	Cody Gray	pkwisdom\.com
 1674389178	Cody Gray	pkwisdom(?!\.com)
+1674391817	Cody Gray	ithemelandco(?!\.com)
