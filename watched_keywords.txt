@@ -46894,3 +46894,4 @@
 1674399350	Cody Gray	essentialshoodie\.co
 1674408082	tripleee	lucifer[\W_]*+morning[\W_]*+star
 1674410746	Makyen	2[\W_]*+3[\W_]*+4[\W_]*+(?:8[\W_]*+0|8[\W_]*+1|9[\W_]*+0)[\W_]*+\d(?:[\W_]*+\d){3}(?=(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+\d){4,5}(?#234 80|81|90 numbers in code with some obfuscation; not in code is blacklisted)
+1674423697	Spevacus	thedrivingtutors\.com
