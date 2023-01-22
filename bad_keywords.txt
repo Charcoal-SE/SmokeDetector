@@ -2287,7 +2287,7 @@ mcafeecomactivation(?#sites.google.com)
 nulavance
 hackingsetting50(?:@gmail\.com)?
 /g-suite/"(?<=bol7\.com/g-suite/")
-234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5}
+2[\W_]*+3[\W_]*+4[\W_]*+(?:8[\W_]*+0|8[\W_]*+1|9[\W_]*+0)[\W_]*+\d(?:[\W_]*+\d){3}(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+\d){4,5}(?#234 80|81|90 numbers with some obfuscation, not in code)
 edb[\W_]*+mails
 jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|oil|result|\d++|[\da-f]{5,}+)s?)*
 cenforce
