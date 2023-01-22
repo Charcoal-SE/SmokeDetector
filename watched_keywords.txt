@@ -46890,3 +46890,4 @@
 1674389138	Cody Gray	pkwisdom\.com
 1674389178	Cody Gray	pkwisdom(?!\.com)
 1674391817	Cody Gray	ithemelandco(?!\.com)
+1674394681	Cody Gray	civilravi2001(@gmail\.com)?
