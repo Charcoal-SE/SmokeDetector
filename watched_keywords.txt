@@ -46911,3 +46911,4 @@
 1674471789	tripleee	sumeru[\W_]*+digital(?!\.com(?<=sumerudigital\.com))(?:[\W_]*+solutions)?
 1674476002	tripleee	meinoffice\.net
 1674477962	tripleee	coderrize\.com
+1674490211	Jeff Schaller	coderelative\.com
