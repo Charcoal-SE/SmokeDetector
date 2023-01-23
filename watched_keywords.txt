@@ -46899,3 +46899,4 @@
 1674453289	tripleee	teciza\.net
 1674453332	tripleee	teciza\.xyz
 1674453363	tripleee	teciza\.in
+1674454510	tripleee	teciza(?!\.(?:in|net|xyz))(?:[\W_]*+web[\W_]*+solutions)?
