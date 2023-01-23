@@ -46901,3 +46901,4 @@
 1674454510	tripleee	teciza(?!\.(?:in|net|xyz))(?:[\W_]*+web[\W_]*+solutions)?
 1674460479	tripleee	nexonbet\.vip
 1674460961	tripleee	alchemyinteractive\.co\.uk
+1674461844	tripleee	nexon[\W_]*+bet(?!\.vip(?<=nexonbet\.vip))
