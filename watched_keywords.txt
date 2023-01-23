@@ -46903,3 +46903,4 @@
 1674460961	tripleee	alchemyinteractive\.co\.uk
 1674461844	tripleee	nexon[\W_]*+bet(?!\.vip(?<=nexonbet\.vip))
 1674462205	tripleee	homelyville\.com
+1674462254	tripleee	soundproofguide\.com
