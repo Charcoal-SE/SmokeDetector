@@ -754,3 +754,4 @@ meta kukel exchange
 (?-i:^Ferrotitanium$)
 (?-i:^SEO BOY$)
 (?-i:^laxman katti$)
+(?-i:^kosmik technologies pvt ltd$)
