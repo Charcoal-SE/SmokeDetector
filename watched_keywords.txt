@@ -3525,7 +3525,6 @@
 1528975550	tripleee	soapandcosmeticclasses
 1528977870	tripleee	smartinfomation\.com
 1528980084	Ashish Ahuja	caidentistry\.com
-1528980225	tripleee	elfsight\.com
 1528985254	Nisse Engström	healthyzer\.com
 1529007426	Makyen	customerservicehelpnumber\.com
 1529008894	Makyen	world-ofadults\.com
