@@ -849,6 +849,9 @@ items:
   - byron.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - camilo.ns.cloudflare.com.
+  - monroe.ns.cloudflare.com.
+- ns:
   - candy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
