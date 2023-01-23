@@ -45933,7 +45933,6 @@
 1671746881	Jeff Schaller	recovercenterbtc(?:@gmail\.com)?
 1671784789	Robert Longson	flyfuture\.in
 1671787729	Robert Longson	fmovies3\.com
-1671797050	tripleee	(?-i:^Waking Posts$)
 1671805051	Spevacus	digitalizepedia\.com
 1671809018	Jeff Schaller	techcust1\.blogspot
 1671809643	Jeff Schaller	bavachallenge\.blogspot

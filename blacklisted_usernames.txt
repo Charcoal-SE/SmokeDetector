@@ -755,3 +755,4 @@ meta kukel exchange
 (?-i:^SEO BOY$)
 (?-i:^laxman katti$)
 (?-i:^kosmik technologies pvt ltd$)
+(?-i:^Waking Posts$)
