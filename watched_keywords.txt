@@ -36100,7 +36100,6 @@
 1644926862	tripleee	softweak\.com
 1644927096	tripleee	tictactoeplay(?# sites.google.com)
 1644929973	Makyen	qdownloader\.aiousolvedassignment\.com
-1644934415	cigien	aspired\.io
 1644934437	cigien	(?-i:3oNPf63)(?#bit.ly)
 1644935532	cigien	anandb3\.medium\.com
 1644938848	Jeff Schaller	analysisofratings\.quora\.com
