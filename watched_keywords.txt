@@ -46909,3 +46909,4 @@
 1674471642	tripleee	teamlogicit\.support
 1674471684	tripleee	znanye\.com
 1674471729	tripleee	sumerudigital\.com
+1674471756	tripleee	znanye(?!\.com)
