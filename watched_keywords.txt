@@ -46919,3 +46919,4 @@
 1674541194	tripleee	g[\W_]*+square(?:[\W_]*+web[\W_]*+tech(?:nologies)?(?!\.com(?<=gsquarewebtech\.com)))?
 1674545491	tripleee	walgreenslistenswin\.one
 1674545559	tripleee	pdf2docx\.com
+1674546088	tripleee	nottyboy\.com
