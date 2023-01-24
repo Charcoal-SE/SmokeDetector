@@ -46919,3 +46919,4 @@
 1674539479	tripleee	brainalystacademy\.com
 1674539587	tripleee	panen[\W_]*+303
 1674539686	tripleee	vidmate\.icu
+1674541194	tripleee	g[\W_]*+square(?:[\W_]*+web[\W_]*+tech(?:nologies)?(?!\.com(?<=gsquarewebtech\.com)))?
