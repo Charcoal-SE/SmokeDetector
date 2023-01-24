@@ -2738,3 +2738,4 @@ cisco[\W_]*+\d{3}-\d{3}[\W_]*+(?:\w+[\W_]+){0,10}exam
 (?-i:3GuQVtv)(?# bit.ly)
 chrisans[\W_]*+(?:web[\W_]*+)?solutions
 origami[\W_]*+studios(?!\.us(?<=origamistudios\.us))(?<=(?-i:^origamistudios$))
+2zkknmse(?# tinyurl)
