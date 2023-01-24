@@ -46945,3 +46945,4 @@
 1674565837	tripleee	saudi[\W_]*+e[\W_]*+visa
 1674566461	Ethan	talmichplumbingheating\.com
 1674566721	tripleee	2zkknmse(?# tinyurl)
+1674567582	Ethan	limousinenassar\.com
