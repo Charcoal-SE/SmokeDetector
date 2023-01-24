@@ -2416,6 +2416,9 @@ items:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
+  - marge.ns.cloudflare.com.
+  - toby.ns.cloudflare.com.
+- ns:
   - margot.ns.cloudflare.com.
   - renan.ns.cloudflare.com.
 - ns:
