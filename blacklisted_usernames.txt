@@ -756,3 +756,4 @@ meta kukel exchange
 (?-i:^laxman katti$)
 (?-i:^kosmik technologies pvt ltd$)
 (?-i:^Waking Posts$)
+^rohit negi$
