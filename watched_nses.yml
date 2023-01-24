@@ -912,6 +912,9 @@ items:
   - cecelia.ns.cloudflare.com.
   - viddy.ns.cloudflare.com.
 - ns:
+  - cecelia.ns.cloudflare.com.
+  - yew.ns.cloudflare.com.
+- ns:
   - celeste.ns.cloudflare.com.
   - langston.ns.cloudflare.com.
 - ns:
