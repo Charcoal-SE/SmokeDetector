@@ -46920,3 +46920,4 @@
 1674545491	tripleee	walgreenslistenswin\.one
 1674545559	tripleee	pdf2docx\.com
 1674546088	tripleee	nottyboy\.com
+1674546987	tripleee	join\W+(?:\w+\W+){0,2}occult
