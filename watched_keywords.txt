@@ -46933,3 +46933,4 @@
 1674556262	Cody Gray	geeksquad(?:@writeme\.com)?
 1674556676	Cody Gray	forex[\W_]*+trading(?!\.pk(?<=forextrading\.pk))
 1674557674	Cody Gray	Web[W_]*+of[W_]*+Science[W_]*+journal[W_]*+index(?:ing)?
+1674557854	Cody Gray	(?-i:^HIGS$)
