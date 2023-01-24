@@ -759,3 +759,4 @@ meta kukel exchange
 ^rohit negi$
 (?-i:^Kevin Deeb$)
 (?-i:^ealoor$)
+(?-i:^Baliar$)
