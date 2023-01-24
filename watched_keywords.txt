@@ -46918,3 +46918,4 @@
 1674539686	tripleee	vidmate\.icu
 1674541194	tripleee	g[\W_]*+square(?:[\W_]*+web[\W_]*+tech(?:nologies)?(?!\.com(?<=gsquarewebtech\.com)))?
 1674545491	tripleee	walgreenslistenswin\.one
+1674545559	tripleee	pdf2docx\.com
