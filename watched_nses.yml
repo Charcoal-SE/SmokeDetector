@@ -2891,7 +2891,9 @@ items:
 - comment: 9/39 over a year
   disable: true
   ns: fatcow.com.
-- ns: vedigitize.us.
+- comment: NXDOMAIN 2023-01-24
+  disable: true
+  ns: vedigitize.us.
 - ns: serverpars.com.
 - comment: disabled as "no longer responding" 2020-04-02 but added back; flapping
   ns: namedc.com.
