@@ -46927,3 +46927,4 @@
 1674551743	Cody Gray	cortrightlaw\.com
 1674551818	tripleee	crystalindiaholidays\.com
 1674551935	Cody Gray	douradocars\.com
+1674552074	Cody Gray	Dourado[\W_]*(Luxury[\W_]*)?Cars?(?!s?\.com(?<=douradocars\.com))
