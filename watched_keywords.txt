@@ -46931,3 +46931,4 @@
 1674553735	tripleee	mid-day\.com
 1674554407	tripleee	ealoorconsultancy\.co\.uk
 1674554527	tripleee	triumphrecruit\.com
+1674554873	tripleee	ealoor(?<!(?-i:^ealoor$))
