@@ -1589,6 +1589,9 @@ items:
   - jimmy.ns.cloudflare.com.
 - ns:
   - everton.ns.cloudflare.com.
+  - gemma.ns.cloudflare.com.
+- ns:
+  - everton.ns.cloudflare.com.
   - liv.ns.cloudflare.com.
 - ns:
   - everton.ns.cloudflare.com.
