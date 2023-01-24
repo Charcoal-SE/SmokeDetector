@@ -757,3 +757,4 @@ meta kukel exchange
 (?-i:^kosmik technologies pvt ltd$)
 (?-i:^Waking Posts$)
 ^rohit negi$
+(?-i:^Kevin Deeb$)
