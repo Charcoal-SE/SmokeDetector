@@ -24,6 +24,9 @@ items:
   - rick.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
+  - roan.ns.cloudflare.com.
+- ns:
+  - abby.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
 - ns:
   - ace.ns.cloudflare.com.
