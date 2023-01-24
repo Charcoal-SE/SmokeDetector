@@ -359,6 +359,9 @@ items:
   - amy.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
+  - amy.ns.cloudflare.com.
+  - ram.ns.cloudflare.com.
+- ns:
   - anastasia.ns.cloudflare.com.
   - rory.ns.cloudflare.com.
 - ns:
