@@ -758,3 +758,4 @@ meta kukel exchange
 (?-i:^Waking Posts$)
 ^rohit negi$
 (?-i:^Kevin Deeb$)
+(?-i:^ealoor$)
