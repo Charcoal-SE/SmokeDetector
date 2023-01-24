@@ -46918,3 +46918,4 @@
 1674511427	Jeff Schaller	CamtasiaTraining
 1674539479	tripleee	brainalystacademy\.com
 1674539587	tripleee	panen[\W_]*+303
+1674539686	tripleee	vidmate\.icu
