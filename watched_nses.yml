@@ -1062,6 +1062,9 @@ items:
   - connie.ns.cloudflare.com.
   - hal.ns.cloudflare.com.
 - ns:
+  - connie.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
+- ns:
   - conrad.ns.cloudflare.com.
   - galilea.ns.cloudflare.com.
 - ns:
