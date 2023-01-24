@@ -2470,6 +2470,9 @@ items:
   - mary.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
 - ns:
+  - mary.ns.cloudflare.com.
+  - woz.ns.cloudflare.com.
+- ns:
   - matt.ns.cloudflare.com.
   - nina.ns.cloudflare.com.
 - ns:
