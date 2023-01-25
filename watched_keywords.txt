@@ -46968,3 +46968,4 @@
 1674629645	tripleee	d(?:octo)?r[\W_]*+odunga
 1674630446	tripleee	likee\.video
 1674633250	tripleee	organiconlines\.com
+1674633298	tripleee	retagex\.com
