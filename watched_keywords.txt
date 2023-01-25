@@ -21445,7 +21445,6 @@
 1596618949	tripleee	skoolwork\.co\.uk
 1596619115	tripleee	wealthyaffiliate\.com
 1596622810	Xnero	Tunelf Audio Converter
-1596622903	tripleee	advologysolution\.com
 1596623124	tripleee	advology(?:[\W_]*+solution(?!\.com))?
 1596623578	tripleee	puravidabracelets\.com
 1596626705	tripleee	bengaluru[\W_]*+university
