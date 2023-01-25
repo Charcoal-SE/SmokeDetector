@@ -46976,3 +46976,4 @@
 1674640374	tripleee	thecoloursname\.com
 1674646210	tripleee	(?-i:^Fainas$)
 1674647807	Jeff Schaller	upgrodigital\.com
+1674648697	Jeff Schaller	miamicriminaldefense\.com
