@@ -2579,6 +2579,9 @@ items:
   - nancy.ns.cloudflare.com.
 - ns:
   - molly.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
+  - molly.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
   - mona.ns.cloudflare.com.
