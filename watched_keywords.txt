@@ -46962,3 +46962,4 @@
 1674612187	Spevacus	mauryatechnicalsupport\.com
 1674625500	tripleee	animeblix\.click
 1674625887	tripleee	pranic[\W_]*+healing
+1674626080	tripleee	genericzilla\.com
