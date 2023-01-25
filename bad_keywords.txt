@@ -2739,3 +2739,4 @@ cisco[\W_]*+\d{3}-\d{3}[\W_]*+(?:\w+[\W_]+){0,10}exam
 chrisans[\W_]*+(?:web[\W_]*+)?solutions
 origami[\W_]*+studios(?!\.us(?<=origamistudios\.us))(?<=(?-i:^origamistudios$))
 2zkknmse(?# tinyurl)
+hind[\W_]*+it[\W_]*+solution(?!\.com(?<=hinditsolution\.com))
