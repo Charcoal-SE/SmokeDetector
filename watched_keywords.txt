@@ -46961,3 +46961,4 @@
 1674609844	Makyen	d(?:octo)?r[\W_]*+asha(?!\.simdif\.com(?<=drasha\.simdif\.com))
 1674612187	Spevacus	mauryatechnicalsupport\.com
 1674625500	tripleee	animeblix\.click
+1674625887	tripleee	pranic[\W_]*+healing
