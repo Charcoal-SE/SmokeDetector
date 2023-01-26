@@ -47014,3 +47014,4 @@
 1674740211	tripleee	wealth\.jewelry
 1674739542	Ethan	edrelax\.net
 1674740463	tripleee	d(?:octo)?r[\W_]*+omozusi\d*
+1674741654	tripleee	sallimoservice\.com
