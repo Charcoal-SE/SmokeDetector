@@ -46996,3 +46996,4 @@
 1674696778	cocomac	(?:www\.)?el[\W_]*+al\.com
 1674697431	cocomac	crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
 1674701061	Ethan	gudangedukasi\.com
+1674711274	tripleee	trust-cat\.com
