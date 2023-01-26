@@ -1198,9 +1198,6 @@ items:
   - lola.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
-  - major.ns.cloudflare.com.
-- ns:
-  - dana.ns.cloudflare.com.
   - pedro.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.

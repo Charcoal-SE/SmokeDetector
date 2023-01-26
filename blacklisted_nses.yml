@@ -172,6 +172,9 @@ items:
   - dana.ns.cloudflare.com.
   - josh.ns.cloudflare.com.
 - ns:
+  - dana.ns.cloudflare.com.
+  - major.ns.cloudflare.com.
+- ns:
   - daphne.ns.cloudflare.com.
   - garret.ns.cloudflare.com.
 - ns:
