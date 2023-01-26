@@ -46994,3 +46994,4 @@
 1674678030	Ethan	elitewritings\.com
 1674684874	Spevacus	paypii\.com
 1674696778	cocomac	(?:www\.)?el[\W_]*+al\.com
+1674697431	cocomac	crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
