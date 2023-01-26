@@ -47001,3 +47001,4 @@
 1674694760	Ethan	emitologias\.wordpress\.com
 1674672389	Ethan	https://github\.com/ali-aliraqi
 1674719198	Cody Gray	podsamurai\.com
+1674719248	Cody Gray	podsamurai(?!\.com)
