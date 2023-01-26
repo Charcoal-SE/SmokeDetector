@@ -47003,3 +47003,4 @@
 1674719248	Cody Gray	podsamurai(?!\.com)
 1674720855	tripleee	grljournals\.in
 1674720928	Cody Gray	grljournal\.in
+1674722326	Cody Gray	(?:info@)?retailsoft\.in
