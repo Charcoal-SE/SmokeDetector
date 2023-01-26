@@ -33132,7 +33132,6 @@
 1635175930	cigien	ustaxidmeti\.az
 1635176014	cigien	cyberethiicalhacker(?:@gmail\.com)?
 1635176386	Spevacus	redqueen\.in
-1635178076	tripleee	(?-i:^ishita$)
 1635195765	cigien	(?-i:DlO5uzSTkUw)(?#youtube)
 1635224697	cigien	elgoss\.com
 1635225337	cigien	cgs\.com\.sa
