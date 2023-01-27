@@ -133,6 +133,9 @@ items:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
+  - camilo.ns.cloudflare.com.
+  - monroe.ns.cloudflare.com.
+- ns:
   - candy.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
