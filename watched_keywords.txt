@@ -47050,3 +47050,4 @@
 1674815122	Cody Gray	roboprenr\.com
 1674815159	Cody Gray	Roboprenr(?!\.com)
 1674815202	Cody Gray	Robo[\W_]*Genius
+1674815248	Cody Gray	harvest[\W_]*international(?:[\W_]*school)?(?!(?:[\W_]*school)?\.in(?<=harvestinternationalschool\.in))
