@@ -47049,3 +47049,4 @@
 1674814969	Cody Gray	harvestinternationalschool\.in
 1674815122	Cody Gray	roboprenr\.com
 1674815159	Cody Gray	Roboprenr(?!\.com)
+1674815202	Cody Gray	Robo[\W_]*Genius
