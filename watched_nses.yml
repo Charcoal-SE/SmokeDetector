@@ -401,6 +401,9 @@ items:
   - anna.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
+  - annabel.ns.cloudflare.com.
+  - ezra.ns.cloudflare.com.
+- ns:
   - anuj.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
