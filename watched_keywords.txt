@@ -47042,3 +47042,4 @@
 1674812482	Cody Gray	Novus[\W_]*Immigration(?!\.com(?<=novusimmigration\.com))
 1674813010	Cody Gray	immigration[\W_]*consultan(?:cy|ts?)
 1674813245	Cody Gray	(?:d(?:r|octor)?[\W_]*)?excellentspellcaster
+1674813276	Cody Gray	aaakhan879(?:@gmail\.com)?
