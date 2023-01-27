@@ -47045,3 +47045,4 @@
 1674813276	Cody Gray	aaakhan879(?:@gmail\.com)?
 1674813405	tripleee	(?-i:^Sumathi S$)
 1674814608	Cody Gray	austintrim\.co
+1674814651	Cody Gray	soft[\W_]*enamel[\W_]*pins
