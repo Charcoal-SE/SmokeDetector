@@ -47032,3 +47032,4 @@
 1674800096	Cody Gray	onlinecomputertips\.com
 1674800138	Cody Gray	all-keyboard\.com
 1674800713	Cody Gray	valiantjapanese\.jp
+1674800765	Cody Gray	Valiant[\W_]*Japanese(?!\.jp(?<=valiantjapanese\.jp))
