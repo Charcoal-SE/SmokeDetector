@@ -47029,3 +47029,4 @@
 1674798290	Cody Gray	yamaha[\W_]*rx[\W_]*100
 1674798329	Cody Gray	rohith[\W_]*(?:dx|km)
 1674800049	Cody Gray	acaciawooddb\.com
+1674800096	Cody Gray	onlinecomputertips\.com
