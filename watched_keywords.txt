@@ -47036,3 +47036,4 @@
 1674801496	Cody Gray	cwise\.co\.nz
 1674803794	Cody Gray	The[\W_]*Tec[\W_]*Fixer(?!\.com(?<=thetecfixer\.com))
 1674805988	Cody Gray	aemfindings\.blogspot
+1674806148	Cody Gray	(?-i:aB3jth)(?# trust-cat.com invitation code)
