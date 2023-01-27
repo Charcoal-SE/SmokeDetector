@@ -3164,7 +3164,9 @@ items:
 - ns: dns-parking.com.
 - ns: host.com.pk.
 - ns: genxwhosting.com.
-- ns: phase8.net.
+- comment: 18/114 over 3 years; disabled 2023-01-27
+  disable: true
+  ns: phase8.net.
 - ns: bigcommerce.com.
 - ns: dns-diy.com.
 - comment: does not exist, but is claimed by muthoottumini.com
