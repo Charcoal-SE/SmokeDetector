@@ -24390,7 +24390,6 @@
 1606757020	Mithical	^.{0,13}Wesley(?=[\W_]*+[aÀ]to?wo+d?).{0,13}$
 1606757125	Victor VosMottor	Your buddy Wesley
 1606763587	Spevacus	pinjaradrama\.com
-1606770480	NobodyNada	(?-i:BR><BR(?<=<BR><BR)(?=>))
 1606784945	Jeff Schaller	yanrefitness\.com
 1606801310	tripleee	treezone\.org
 1606801331	tripleee	contentrally\.com
