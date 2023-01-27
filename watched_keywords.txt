@@ -47026,3 +47026,4 @@
 1674773302	Cody Gray	Ramsay[\W_]*MacDonald?
 1674777279	Cody Gray	kevin[\W_]*poulsen
 1674794653	Cody Gray	rokn-elmanzel\.com
+1674798290	Cody Gray	yamaha[\W_]*rx[\W_]*100
