@@ -47040,3 +47040,4 @@
 1674807732	Cody Gray	enjoydelhi\.in
 1674812445	Cody Gray	novusimmigration\.com
 1674812482	Cody Gray	Novus[\W_]*Immigration(?!\.com(?<=novusimmigration\.com))
+1674813010	Cody Gray	immigration[\W_]*consultan(?:cy|ts?)
