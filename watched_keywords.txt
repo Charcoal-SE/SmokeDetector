@@ -47034,3 +47034,4 @@
 1674800713	Cody Gray	valiantjapanese\.jp
 1674800765	Cody Gray	Valiant[\W_]*Japanese(?!\.jp(?<=valiantjapanese\.jp))
 1674800812	Cody Gray	private[\W_]*japanese[\W_]*lessons?
+1674801496	Cody Gray	cwise\.co\.nz
