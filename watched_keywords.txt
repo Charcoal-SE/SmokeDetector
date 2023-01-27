@@ -47052,3 +47052,4 @@
 1674815248	Cody Gray	harvest[\W_]*international(?:[\W_]*school)?(?!(?:[\W_]*school)?\.in(?<=harvestinternationalschool\.in))
 1674815287	Cody Gray	school[\W_]*in[\W_]*kodathi
 1674815331	Cody Gray	wallstreetprep\.com
+1674819032	tripleee	quickfixsmile\.xyz
