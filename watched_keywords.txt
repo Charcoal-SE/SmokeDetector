@@ -47048,3 +47048,4 @@
 1674814651	Cody Gray	soft[\W_]*enamel[\W_]*pins
 1674814969	Cody Gray	harvestinternationalschool\.in
 1674815122	Cody Gray	roboprenr\.com
+1674815159	Cody Gray	Roboprenr(?!\.com)
