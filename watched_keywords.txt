@@ -47079,3 +47079,4 @@
 1674902354	Cody Gray	vst-studio\.com
 1674907747	Cody Gray	Salon[\W_]*Parlor[\W_]*Services?
 1674908444	Cody Gray	(?-i:eBGIQ7ZuuiU)(# YouTube RickRoll)
+1674911299	Jeff Schaller	johntheplumberkansascity\.com
