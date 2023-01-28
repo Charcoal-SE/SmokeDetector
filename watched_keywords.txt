@@ -39454,7 +39454,6 @@
 1653976665	tripleee	(?-i:^christina williams$)
 1653979255	tripleee	campusrangers\.edu\.my
 1653979283	tripleee	resellbox\.net
-1653979308	tripleee	akkadian
 1653979424	tripleee	akkadianqatar\.com
 1653980582	tripleee	social[\W_]*+credit[\W_]*+repairs(?!\.com(?<=socialcreditrepairs\.com))
 1653981052	tripleee	(?-i:^Niaz Muhammad$)
