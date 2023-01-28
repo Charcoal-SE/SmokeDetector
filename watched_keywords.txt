@@ -47075,3 +47075,4 @@
 1674901798	Cody Gray	dnctendamembrane\.com
 1674901831	Cody Gray	dnc(?:tenda)?membrane(?!\.com)
 1674902117	Cody Gray	shopsk\.com
+1674902176	Cody Gray	(?:liquor)?shopsk(?!\.com)
