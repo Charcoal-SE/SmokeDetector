@@ -8237,7 +8237,6 @@
 1553690740	double-beep	suplementarios\.es
 1553698199	Makyen	gextonfoundation\.org
 1553703961	Glorfindel	alter-solutions\.de
-1553743335	Makyen	bigdatacloud\.net
 1553744248	Makyen	couponforless\.com
 1553744278	Makyen	coastmentalhealth\.com
 1553744307	Makyen	coast\W*mental\W*health
