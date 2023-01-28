@@ -47065,3 +47065,4 @@
 1674891473	Cody Gray	theliquorbros\.com
 1674891502	Cody Gray	The[\W_]*Liquor[\W_]*Bros(?!\.com(?<=theliquorbros\.com))
 1674891537	Cody Gray	Ali65680988(?# t.me)
+1674894525	Cody Gray	compdf\.com
