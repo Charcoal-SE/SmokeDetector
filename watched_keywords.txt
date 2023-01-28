@@ -47077,3 +47077,4 @@
 1674902117	Cody Gray	shopsk\.com
 1674902176	Cody Gray	(?:liquor)?shopsk(?!\.com)
 1674902316	Cody Gray	brandpc\.co
+1674902354	Cody Gray	vst-studio\.com
