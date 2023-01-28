@@ -47061,3 +47061,4 @@
 1674888099	Cody Gray	(?:DIE[\W_]*){2,}
 1674888242	Cody Gray	^Help[\W_]*line[\W_]*Service$
 1674889583	Cody Gray	publisherlinkvertise
+1674890475	Cody Gray	asktug\.com
