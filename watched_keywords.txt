@@ -47069,4 +47069,3 @@
 1674898669	Cody Gray	varisu[\W_]*hindi[\W_]*movie
 1674898750	Cody Gray	(?-i:^NDLELA ELIJAH M FANISENI K$)
 1674898790	Cody Gray	join[\W_]*(?:the[\W_]*)?brotherhood
-1674898825	Cody Gray	member[\W_]*of(?:[\W_]*the)?illuminati
