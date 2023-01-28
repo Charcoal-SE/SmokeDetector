@@ -41441,7 +41441,6 @@
 1659555138	Jeff Schaller	heattreak\.com
 1659564124	cigien	itsignacioportal\.github\.io
 1659579731	cigien	askconstants\.org
-1659581383	cigien	Paul[\W_]*+Pelosi
 1659585873	Makyen	wa\.link
 1659585896	Makyen	(?-i:6yq696)(?#wa.link)
 1659587549	Spevacus	digitallysupply\.com
