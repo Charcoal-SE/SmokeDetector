@@ -47079,3 +47079,4 @@
 1674911299	Jeff Schaller	johntheplumberkansascity\.com
 1674912263	Cody Gray	Kansas[\W_]*City[\W_]*Plumber
 1674914816	Cody Gray	travelblog2434\.blogspot
+1674915814	Cody Gray	bigdatacloud\.net(?<!api\.bigdatacloud\.net)
