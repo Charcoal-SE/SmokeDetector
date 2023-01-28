@@ -47080,3 +47080,4 @@
 1674907747	Cody Gray	Salon[\W_]*Parlor[\W_]*Services?
 1674908444	Cody Gray	(?-i:eBGIQ7ZuuiU)(# YouTube RickRoll)
 1674911299	Jeff Schaller	johntheplumberkansascity\.com
+1674912263	Cody Gray	Kansas[\W_]*City[\W_]*Plumber
