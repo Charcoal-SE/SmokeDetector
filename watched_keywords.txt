@@ -47093,3 +47093,4 @@
 1675010581	Cody Gray	Neuron[\W_]*Boost[\W_]*Gummies(?:[\W_]*scam[\W_]*exposed)?
 1675010614	Cody Gray	ENIKOPIO(?# t.me)
 1675016495	Makyen	healthytip4u\.com
+1675023034	doppelgreener	dealgpl\.com
