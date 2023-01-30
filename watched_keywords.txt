@@ -46086,7 +46086,6 @@
 1672387976	Cody Gray	quadraticformulacalculator\.org
 1672388007	Cody Gray	^Robertrichardr$
 1672388045	Makyen	338pusat\.xn--6frz82g
-1672388478	Cody Gray	emerging[\W_]*india[\W_]*group
 1672388584	Makyen	338pusat\.移动
 1672393287	Cody Gray	DeFi[\W_]*Dapp
 1672393442	Cody Gray	dh[^\w=]*+events?
