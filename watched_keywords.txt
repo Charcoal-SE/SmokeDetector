@@ -47100,3 +47100,4 @@
 1675057175	tripleee	sqrtech\.com
 1675058613	tripleee	mikemicrotrophic\.com
 1675060880	tripleee	giftlaya\.com
+1675061173	tripleee	sbrewingcompany(?!\.com)
