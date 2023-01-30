@@ -47119,3 +47119,4 @@
 1675080973	tripleee	onroadz(?:cabs|tours)?(?!\.(?:com(?<=onroadz(?:cabs|tours)?\.com))|in(?<=onroadz\.in))
 1675081009	tripleee	onroadz\.com
 1675082520	tripleee	emerging[\W_]*+india(?:[\W_]*group)?(?!\.com(<=emergingindiagroup\.com))
+1675082555	tripleee	themathlab\.in
