@@ -47048,7 +47048,6 @@
 1674830399	Jeff Schaller	kyriosdigitalgroup\.com
 1674843212	Spevacus	timekeepers\.pk
 1674851786	Jeff Schaller	ellismechanicalservices\.com
-1674857910	Jesse	tempmailo\.org
 1674888099	Cody Gray	(?:DIE[\W_]*){2,}
 1674888242	Cody Gray	^Help[\W_]*line[\W_]*Service$
 1674889583	Cody Gray	publisherlinkvertise
