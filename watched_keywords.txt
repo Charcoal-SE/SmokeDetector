@@ -47117,3 +47117,4 @@
 1675078532	tripleee	ledge-esports\.com
 1675078566	tripleee	oemdrivers\.com
 1675079140	Jeff Schaller	tagsandbags\.co\.uk
+1675080973	tripleee	onroadz(?:cabs|tours)?(?!\.(?:com(?<=onroadz(?:cabs|tours)?\.com))|in(?<=onroadz\.in))
