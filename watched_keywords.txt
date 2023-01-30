@@ -47121,3 +47121,4 @@
 1675082520	tripleee	emerging[\W_]*+india(?:[\W_]*group)?(?!\.com(<=emergingindiagroup\.com))
 1675082555	tripleee	themathlab\.in
 1675082593	tripleee	(?-i:gAKpFruq)(?# linkedin)
+1675082971	tripleee	99creativeideas\.com
