@@ -47108,3 +47108,4 @@
 1675070123	tripleee	crownsoft007\.com
 1675070158	tripleee	elightdigitech\.com
 1675071003	tripleee	avertekindia\.com
+1675071343	tripleee	technanosoft(?!\.com)
