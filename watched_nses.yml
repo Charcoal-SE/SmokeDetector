@@ -901,6 +901,9 @@ items:
   - paityn.ns.cloudflare.com.
 - ns:
   - cartman.ns.cloudflare.com.
+  - piper.ns.cloudflare.com.
+- ns:
+  - cartman.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
   - carter.ns.cloudflare.com.
