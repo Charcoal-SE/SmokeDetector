@@ -1221,6 +1221,9 @@ items:
   - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - dane.ns.cloudflare.com.
+  - virginia.ns.cloudflare.com.
+- ns:
   - daniella.ns.cloudflare.com.
   - isaac.ns.cloudflare.com.
 - ns:
