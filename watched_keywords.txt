@@ -47103,3 +47103,4 @@
 1675061173	tripleee	sbrewingcompany(?!\.com)
 1675061628	cocomac	bmtpromotions\.co\.uk
 1675062094	tripleee	orahow\.com
+1675065437	Jeff Schaller	thetechnicaltalk\.com
