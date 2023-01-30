@@ -23277,7 +23277,6 @@
 1602813413	NobodyNada	(?:fre+[\W_]*+)skins?[\W_]*+(?:fre+[\W_]*+)?f[oa]rtni[ghte]+[\W_]*+(?:fre+)?(?#skins fortnite, possibly free)
 1602824499	Makyen	thakur[\W_]*+school[\W_]*+of[\W_]*+architecture[\W_]*+and[\W_]*+planning
 1602828520	Ryan M	mega[\W_]++web[\W_]++design
-1602834549	Ryan M	codeandpixels\.net
 1602839692	Ryan M	utobo\.com
 1602840293	Ryan M	medium\.com/@loginradius
 1602840560	Ryan M	omega[\W_]*+softwares
