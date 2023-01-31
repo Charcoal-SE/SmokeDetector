@@ -25840,7 +25840,6 @@
 1611742360	tripleee	alphainfolab\.com
 1611742581	Makyen	directmbainfo\.com
 1611745203	tripleee	extensionsninjas\.com
-1611746901	tripleee	designkug\.com
 1611748586	tripleee	legalyy\.com
 1611752411	Jeff Schaller	molkkidram\.com
 1611756657	tripleee	pragmaticnepal\.com
