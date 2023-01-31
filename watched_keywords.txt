@@ -47134,3 +47134,4 @@
 1675144777	tripleee	mykinemaster\.com
 1675145587	tripleee	bliss[\W_]*+wellness
 1675145753	tripleee	usamedshop\.com
+1675146838	tripleee	wecodefuture(?!\.com)
