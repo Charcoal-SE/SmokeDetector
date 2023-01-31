@@ -47148,3 +47148,4 @@
 1675160114	tripleee	galvinpower\.org
 1675160582	tripleee	prestigeprimerosehills\.ind\.in
 1675160774	tripleee	prestige[\W_]*+(?:primrose[\W_]*?(?:hills)?)?(?:smart[\W_]*+(?:city)?)?(?<=prestige[\W_]*\w+(?:[\W_]+\w+){0,3})
+1675160979	Cody Gray	ISEL[\W_]*Global
