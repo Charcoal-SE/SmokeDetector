@@ -43551,7 +43551,6 @@
 1664801489	cigien	bitcoinpredictors(?!\.com)
 1664801667	cigien	yelloudt\.com
 1664801732	cigien	(?-i:oYRXyg)(?#fiverr)
-1664804116	cigien	wecodefuture\.com
 1664811031	Ollie	ithemelandco\.com
 1664811680	Ollie	exalate\.com
 1664812413	Ollie	idalko\.com
