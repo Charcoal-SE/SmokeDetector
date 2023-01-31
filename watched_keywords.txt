@@ -47142,3 +47142,4 @@
 1675155244	tripleee	barchart\.com
 1675155272	tripleee	margshree\.com
 1675156982	tripleee	boc[\W_]*+sci(?:ences)?(?!\.com(?<=bocsci\.com))
+1675158375	Cody Gray	catalyticministries\.com
