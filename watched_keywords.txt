@@ -47135,3 +47135,4 @@
 1675145587	tripleee	bliss[\W_]*+wellness
 1675145753	tripleee	usamedshop\.com
 1675146838	tripleee	wecodefuture(?!\.com)
+1675146947	tripleee	sabledhiraj(?# github)
