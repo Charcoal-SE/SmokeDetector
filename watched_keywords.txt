@@ -47149,3 +47149,4 @@
 1675160774	tripleee	prestige[\W_]*+(?:primrose[\W_]*?(?:hills)?)?(?:smart[\W_]*+(?:city)?)?(?<=prestige[\W_]*\w+(?:[\W_]+\w+){0,3})
 1675160979	Cody Gray	ISEL[\W_]*Global
 1675162413	tripleee	c26ed126dd(?# fiverr)
+1675165810	tripleee	growthguide\.co\.in
