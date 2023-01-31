@@ -47160,3 +47160,4 @@
 1675187579	tripleee	gonitzoggo\.com
 1675190347	Jesse	thepuffercase\.me
 1675199192	Makyen	imperialwireless\.com
+1675199223	Makyen	imperial[\W_]*+wireless(?!\.com(?<=imperialwireless\.com))
