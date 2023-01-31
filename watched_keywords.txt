@@ -47136,3 +47136,4 @@
 1675146838	tripleee	wecodefuture(?!\.com)
 1675146947	tripleee	sabledhiraj(?# github)
 1675148271	Cody Gray	saltycustomvinyl\.com
+1675152030	tripleee	amlogy\.com
