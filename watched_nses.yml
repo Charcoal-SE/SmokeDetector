@@ -2288,6 +2288,9 @@ items:
   - rodney.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
+  - leah.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
