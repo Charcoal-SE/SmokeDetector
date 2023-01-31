@@ -47153,3 +47153,4 @@
 1675167536	Cody Gray	wiscon-tech\.com
 1675167591	Cody Gray	Wiscon[\W_]*(?:Enviro)?Tech(?!\.com(?<=wiscon-tech\.com))
 1675168062	Cody Gray	predict888(?!\.com)
+1675170122	tripleee	beautysecretkeeper\.com
