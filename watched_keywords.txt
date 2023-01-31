@@ -46520,7 +46520,6 @@
 1673551342	Jeff Schaller	(?-i:P2cQYDUQyhhkZDM8)(?#t.me)
 1673556405	Spevacus	turkeymedicals\.com
 1673560640	Cody Gray	(?-i:Skip a line and indent eight spaces)
-1673561068	Cody Gray	(?-i:^davis$)
 1673575459	Jeff Schaller	essvalley\.com
 1673587437	Makyen	periodicos\.letras\.ufmg\.br
 1673587467	Makyen	vokasindo\.ub\.ac\.id
