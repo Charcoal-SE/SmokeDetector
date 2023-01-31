@@ -47141,3 +47141,4 @@
 1675155159	tripleee	ittp\.co\.in
 1675155244	tripleee	barchart\.com
 1675155272	tripleee	margshree\.com
+1675156982	tripleee	boc[\W_]*+sci(?:ences)?(?!\.com(?<=bocsci\.com))
