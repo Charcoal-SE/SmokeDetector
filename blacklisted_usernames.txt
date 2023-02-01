@@ -762,3 +762,4 @@ meta kukel exchange
 (?-i:^Baliar$)
 (?-i:^Aqib Bhutta$)
 (?-i:^Advology Solution$)
+(?-i:^CloudBik$)
