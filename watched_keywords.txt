@@ -47200,3 +47200,4 @@
 1675242995	Cody Gray	meghnaddesaiacademy\.org
 1675243031	Cody Gray	Meghnad[\W_]*Desai[\W_]*Academy(?!\.org(?<=meghnaddesaiacademy\.org))
 1675244041	Cody Gray	2000westfrancis(?:@(?:gmail|hotmail)\.com)?
+1675244140	Cody Gray	123\.hp\.com
