@@ -47175,3 +47175,4 @@
 1675222361	Cody Gray	1p\.com\.hk
 1675222672	Cody Gray	\s+systems?\.com
 1675226235	Cody Gray	kinegame\.com
+1675226265	Cody Gray	hyena[\W_]*+key
