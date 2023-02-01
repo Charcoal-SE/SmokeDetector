@@ -47197,4 +47197,3 @@
 1675240349	tripleee	inuaeandqatar\.com
 1675241387	Cody Gray	evoheat\.com\.au
 1675242441	Cody Gray	Bhansali(?:[\W_]*Enterprises?)?
-1675242750	Cody Gray	Meghnad[\W_]*Desai[\W_]*Academy
