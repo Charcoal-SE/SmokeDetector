@@ -47177,3 +47177,4 @@
 1675226235	Cody Gray	kinegame\.com
 1675226265	Cody Gray	hyena[\W_]*+key
 1675227050	Cody Gray	Spoof[\W_]*Paytm(?:[\W_]*Apk)?
+1675229056	Cody Gray	superc4
