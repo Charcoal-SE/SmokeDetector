@@ -47180,3 +47180,4 @@
 1675229417	Cody Gray	Camp(?:ing|s)?[\W_]*in[\W_]*Oman
 1675229732	tripleee	superc4\.co
 1675229756	tripleee	superc4(?!\.co)
+1675231287	tripleee	boatrentalscanada\.com
