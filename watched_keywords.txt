@@ -47206,3 +47206,4 @@
 1675244683	Cody Gray	sinkery[\W_]*foam(?!\.com(?<=sinkeryfoam\.com))
 1675245437	tripleee	dgcustomerfirstsurvey\.wiki
 1675246255	tripleee	campusinterview\.in
+1675246418	tripleee	(?-ii:3YfiOwQ)(?# buff.ly)
