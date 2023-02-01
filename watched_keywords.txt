@@ -47193,3 +47193,4 @@
 1675237523	Cody Gray	miserbee(?!\.com)
 1675238635	Cody Gray	cyberdynesoft\.com
 1675240259	Cody Gray	abortionclinicsafelegal
+1675240293	Cody Gray	d(?:octo)?r[\W_]*+Jasmine
