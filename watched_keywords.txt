@@ -47210,3 +47210,4 @@
 1675248007	tripleee	info[\W_]*+campus(?!\.co\.in(?<=infocampus\.co\.in))
 1675249421	tripleee	pioneerdeveloper\.com
 1675251288	tripleee	chogoriadventure\.com
+1675251324	tripleee	defineprogramming\.com
