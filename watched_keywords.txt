@@ -47190,3 +47190,4 @@
 1675236207	tripleee	brigade[\W_]*+valencia
 1675236581	Cody Gray	Export[\W_]*Office[\W_]*365[\W_]*Mailbox[\W_]*to[\W_]*PST
 1675237470	tripleee	miserbee\.com
+1675237523	Cody Gray	miserbee(?!\.com)
