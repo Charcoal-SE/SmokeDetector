@@ -3747,7 +3747,7 @@ items:
   disable: true
   ns: bodis.com.
 - ns: shared-host.in.
-- comment: NXDOMAIN 2022-07-24
+- comment: dominantly FP (2/29) 2023-02-01
   disable: true
   ns: cprapid.com.
 - ns: cloudoon.com.
