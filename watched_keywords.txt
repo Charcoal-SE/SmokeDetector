@@ -47184,3 +47184,4 @@
 1675231611	Cody Gray	uidesignz(?!\.com)
 1675232029	Cody Gray	Optima[\W_]*(?:Bags|Mart)(?!\.in(?<=optimabags\.in))
 1675234638	Cody Gray	18[\W_]*care[\W_]*india
+1675235444	tripleee	minchat\.io
