@@ -47204,3 +47204,4 @@
 1675244175	Cody Gray	hp[\W_]*printer
 1675244634	Cody Gray	sinkeryfoam\.com
 1675244683	Cody Gray	sinkery[\W_]*foam(?!\.com(?<=sinkeryfoam\.com))
+1675245437	tripleee	dgcustomerfirstsurvey\.wiki
