@@ -47169,3 +47169,4 @@
 1675210375	Cody Gray	Gurutechnicalx(?:@gmail\.com)?
 1675217338	Jesse	hawalab\.com
 1675217615	Jesse	msintsol\.com
+1675219151	Jesse	ldtalentwork\.com
