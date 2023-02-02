@@ -47227,3 +47227,4 @@
 1675323166	tripleee	navtimesnews\.com
 1675323267	tripleee	sure[\W_]*+slim(?:[\W_]*+(?:keto[\W_]*+)?gummies)?\d*
 1675323497	tripleee	dekorcompany\.com
+1675325204	tripleee	advancesolutions\.com
