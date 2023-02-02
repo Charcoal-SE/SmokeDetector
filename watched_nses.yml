@@ -2206,6 +2206,9 @@ items:
   - kimora.ns.cloudflare.com.
   - renan.ns.cloudflare.com.
 - ns:
+  - kinsley.ns.cloudflare.com.
+  - yew.ns.cloudflare.com.
+- ns:
   - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
