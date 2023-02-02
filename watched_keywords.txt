@@ -47250,3 +47250,4 @@
 1675362273	tripleee	bookmymove\.ae
 1675362380	tripleee	book[\W_]*my[\W_]*move(?!\.(?:co\.za(?<=bookmymove\.co\.za)|ae(?<=bookmymove\.ae)))
 1675374147	cocomac	jetblueairlinesnewbookingnumber\.uteach\.io
+1675377763	Jesse	bshemyeshuablog\.wordpress\.com
