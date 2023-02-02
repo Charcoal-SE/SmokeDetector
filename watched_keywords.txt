@@ -47246,3 +47246,4 @@
 1675342920	tripleee	redbubble\.com
 1675346360	tripleee	(?-i:^Nethan Paul$)
 1675355688	tripleee	groundtruth\.com
+1675355727	Jeff Schaller	mandbvendingmachines\.com
