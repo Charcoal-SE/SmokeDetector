@@ -47225,3 +47225,4 @@
 1675320762	tripleee	lyralaser\.com
 1675320869	tripleee	lyra[\W_]*+laser(?!\.com(?<=lyralaser\.com))
 1675323166	tripleee	navtimesnews\.com
+1675323267	tripleee	sure[\W_]*+slim(?:[\W_]*+(?:keto[\W_]*+)?gummies)?\d*
