@@ -47244,3 +47244,4 @@
 1675341325	Jeff Schaller	mlifeinsurance\.com
 1675342579	tripleee	app_helpers(?<=@app_helpers)
 1675342920	tripleee	redbubble\.com
+1675346360	tripleee	(?-i:^Nethan Paul$)
