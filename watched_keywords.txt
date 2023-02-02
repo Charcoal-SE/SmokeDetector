@@ -47228,3 +47228,4 @@
 1675323267	tripleee	sure[\W_]*+slim(?:[\W_]*+(?:keto[\W_]*+)?gummies)?\d*
 1675323497	tripleee	dekorcompany\.com
 1675325204	tripleee	advancesolutions\.com
+1675325241	tripleee	advance[\W_]*+solutions(?!\.com(?<=advancesolutions\.com))
