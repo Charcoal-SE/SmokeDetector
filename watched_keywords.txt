@@ -47238,3 +47238,4 @@
 1675337351	tripleee	editinghelp\.co\.uk
 1675337386	tripleee	onlineinformationstations\.com
 1675338207	tripleee	softakensofware(?!\.com)
+1675339196	Ryan M	socialchamp\.io
