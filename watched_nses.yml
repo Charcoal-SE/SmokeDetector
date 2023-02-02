@@ -2158,6 +2158,9 @@ items:
   - kayden.ns.cloudflare.com.
   - novalee.ns.cloudflare.com.
 - ns:
+  - kayden.ns.cloudflare.com.
+  - peaches.ns.cloudflare.com.
+- ns:
   - kayleigh.ns.cloudflare.com.
   - kipp.ns.cloudflare.com.
 - ns:
