@@ -47224,3 +47224,4 @@
 1675319642	tripleee	sexyprettydoll\.com
 1675320762	tripleee	lyralaser\.com
 1675320869	tripleee	lyra[\W_]*+laser(?!\.com(?<=lyralaser\.com))
+1675323166	tripleee	navtimesnews\.com
