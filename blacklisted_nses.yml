@@ -377,6 +377,9 @@ items:
 - ns:
   - sns41.hostgator.in.
   - sns42.hostgator.in.
+- ns:
+  - wns10.hostgator.in.
+  - wns9.hostgator.in.
 - ns: allianzetechnologies.com.
 - ns: anujjindal.in.
 - ns:
