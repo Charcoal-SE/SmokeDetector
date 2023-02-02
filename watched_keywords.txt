@@ -47237,3 +47237,4 @@
 1675337321	tripleee	archi-cubes\.com
 1675337351	tripleee	editinghelp\.co\.uk
 1675337386	tripleee	onlineinformationstations\.com
+1675338207	tripleee	softakensofware(?!\.com)
