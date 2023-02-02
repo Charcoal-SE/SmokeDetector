@@ -763,3 +763,4 @@ meta kukel exchange
 (?-i:^Aqib Bhutta$)
 (?-i:^Advology Solution$)
 (?-i:^CloudBik$)
+(?-i:^Teamlogic IT Support$)
