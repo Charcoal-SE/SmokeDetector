@@ -47248,3 +47248,4 @@
 1675355727	Jeff Schaller	mandbvendingmachines\.com
 1675357195	cocomac	anycaptcha[\W_]*+com
 1675362273	tripleee	bookmymove\.ae
+1675362380	tripleee	book[\W_]*my[\W_]*move(?!\.(?:co\.za(?<=bookmymove\.co\.za)|ae(?<=bookmymove\.ae)))
