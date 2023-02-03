@@ -47271,3 +47271,4 @@
 1675421062	tripleee	1stepgrow(?!\.com)
 1675423042	tripleee	usmanghias\.com
 1675423079	tripleee	usmanghias(?!\.com)
+1675425273	tripleee	fountainmountain\.com
