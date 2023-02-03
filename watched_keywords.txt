@@ -47252,3 +47252,4 @@
 1675383562	cocomac	pttrimfatburn\.com
 1675401977	tripleee	digitaladssolution\.com
 1675402008	tripleee	reactgeeks\.in
+1675402862	tripleee	bohdanbohdan93(?:[\W_]*+(?:at[\W_]*+)mail[\W_]*+(?:dot[\W_]*+)?ru)?
