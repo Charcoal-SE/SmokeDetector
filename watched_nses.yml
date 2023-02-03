@@ -198,6 +198,9 @@ items:
   - dina.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
+  - marge.ns.cloudflare.com.
+- ns:
+  - alec.ns.cloudflare.com.
   - dora.ns.cloudflare.com.
 - ns:
   - alec.ns.cloudflare.com.
