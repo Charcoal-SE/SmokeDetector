@@ -30535,7 +30535,6 @@
 1626379755	Spevacus	codeaze\.com
 1626384009	cigien	americalogodesigns\.com
 1626384134	cigien	findloanshark\.com
-1626385344	cigien	certshero\.com
 1626388203	Ryan M	kike(?<!^kike)
 1626388525	Ryan M	pinkpen\.net
 1626412378	Mast	valvesonlyeurope\.com
