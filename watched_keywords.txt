@@ -47255,3 +47255,4 @@
 1675402862	tripleee	bohdanbohdan93(?:[\W_]*+(?:at[\W_]*+)mail[\W_]*+(?:dot[\W_]*+)?ru)?
 1675405189	tripleee	(?-i:3wRaXd2)(?# bit.ly)
 1675405381	tripleee	matrix[\W_]*+seo
+1675405439	tripleee	e[\W_]*+seller[\W_]*+hub(?!\.com(?<=esellerhub\.com))
