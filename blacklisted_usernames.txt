@@ -764,3 +764,4 @@ meta kukel exchange
 (?-i:^Advology Solution$)
 (?-i:^CloudBik$)
 (?-i:^Teamlogic IT Support$)
+(?-i:^Christine Finn$)
