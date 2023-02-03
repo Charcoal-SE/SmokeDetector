@@ -47257,3 +47257,4 @@
 1675405381	tripleee	matrix[\W_]*+seo
 1675405439	tripleee	e[\W_]*+seller[\W_]*+hub(?!\.com(?<=esellerhub\.com))
 1675406075	tripleee	ridgerun\.com
+1675407319	tripleee	thecyberexpress\.com
