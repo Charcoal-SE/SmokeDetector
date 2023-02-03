@@ -47272,3 +47272,4 @@
 1675423042	tripleee	usmanghias\.com
 1675423079	tripleee	usmanghias(?!\.com)
 1675425273	tripleee	fountainmountain\.com
+1675426206	tripleee	redeemdiscounts\.com
