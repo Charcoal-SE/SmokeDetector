@@ -47268,3 +47268,4 @@
 1675420433	tripleee	dqfanfeedbackcom\.us
 1675420468	tripleee	1stepgrow\.com
 1675420586	tripleee	htownexotics\.com
+1675421062	tripleee	1stepgrow(?!\.com)
