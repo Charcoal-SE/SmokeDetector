@@ -766,3 +766,4 @@ meta kukel exchange
 (?-i:^Teamlogic IT Support$)
 (?-i:^Christine Finn$)
 (?-i:^Baccalaureate Academy$)
+(?-i:^Ujjvalkashyap sprintzeal$)
