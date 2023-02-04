@@ -47291,3 +47291,4 @@
 1675476233	Makyen	(?-i:v90Ycsv)(?#cutt.ly)
 1675477303	Spevacus	vuvietduc\.com
 1675484958	cocomac	swiftgrants\.co\.uk
+1675485036	cocomac	swift[\W_]*+grants
