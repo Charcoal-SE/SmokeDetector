@@ -47295,3 +47295,4 @@
 1675495160	Cody Gray	mycreativefx\.com
 1675495202	Cody Gray	mycreativefx(?!\.com)
 1675500203	Cody Gray	diginetworks\.co\.in
+1675500249	Cody Gray	importance[\W_]*+of[\W_]*+regular[\W_]*+maintenance[\W_]*+for[\W_]*+it
