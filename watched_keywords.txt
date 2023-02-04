@@ -47280,3 +47280,4 @@
 1675455214	Spevacus	wootech\.io
 1675460735	Cody Gray	Spyware[\W_]*+Cyber
 1675461123	Cody Gray	cyber?gal[\W_]*+com
+1675469864	Cody Gray	rvvxqi(?# rb.gy)
