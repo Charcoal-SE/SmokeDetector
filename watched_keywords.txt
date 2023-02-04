@@ -47293,3 +47293,4 @@
 1675492337	Cody Gray	skillshare\.com\/profile
 1675493747	Cody Gray	Elf[\W_]*+Cat
 1675495160	Cody Gray	mycreativefx\.com
+1675495202	Cody Gray	mycreativefx(?!\.com)
