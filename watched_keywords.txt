@@ -47303,3 +47303,4 @@
 1675512639	Cody Gray	roadmap\.sh
 1675512803	Cody Gray	digital[\W_]*+aroma(?!\.in(?<=digitalaroma\.in))
 1675516374	Cody Gray	leonas\.in
+1675522678	Jeff Schaller	techtofeed\.com
