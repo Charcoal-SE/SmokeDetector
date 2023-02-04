@@ -47294,3 +47294,4 @@
 1675493747	Cody Gray	Elf[\W_]*+Cat
 1675495160	Cody Gray	mycreativefx\.com
 1675495202	Cody Gray	mycreativefx(?!\.com)
+1675500203	Cody Gray	diginetworks\.co\.in
