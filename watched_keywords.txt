@@ -47343,3 +47343,4 @@
 1675685148	tripleee	pauljoseph5890(?:(?:[\W_]*+at)?[\W_]*gmail(?:[\W_]*+dot)?[\W_]*+com)?
 1675687306	tripleee	conclusion\.nl
 1675688598	Glorfindel	thebestfromjapan\.com
+1675689841	tripleee	betfury\.io
