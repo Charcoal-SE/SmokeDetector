@@ -26464,7 +26464,6 @@
 1613425622	cigien	(?-i:etZ0Bi)(?#gestyy.com)
 1613426467	cigien	cryptostockshop\.com
 1613426483	cigien	crypto[\W_]*+stock[\W_]*+shop(?!\.com(?<=cryptostockshop\.com))
-1613409087	Yatin	zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad\.onion
 1613428468	Machavity	apexerotica\.com
 1613428539	cigien	bestmasticatingjuiceronline\.com
 1613431183	cigien	recruitmentbeam\.com\.ng
