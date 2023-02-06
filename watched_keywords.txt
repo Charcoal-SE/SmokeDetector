@@ -47320,3 +47320,4 @@
 1675624439	Makyen	newyorkdental\.site
 1675661888	tripleee	trumgiadung\.vn
 1675661996	tripleee	pythonseedbrute
+1675662161	tripleee	bhatti[\W_]*+studio[\W_]*+606
