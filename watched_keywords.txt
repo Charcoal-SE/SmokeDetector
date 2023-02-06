@@ -47325,3 +47325,4 @@
 1675663100	tripleee	greenpowersaver
 1675663139	tripleee	fairy[\W_]*+cat
 1675665199	tripleee	dogloveservices\.com\.au
+1675665921	tripleee	industrietore?(?!-online\.de(?<=industrietor-online\.de))
