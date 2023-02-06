@@ -47332,3 +47332,4 @@
 1675668181	tripleee	ultra[\W_]*+clean[\W_]*+services
 1675669796	tripleee	bavandkala\.ir
 1675676199	tripleee	finansialku\.com
+1675677113	tripleee	nursingassignmentexpert\.com
