@@ -47324,3 +47324,4 @@
 1675662989	tripleee	web[\W_]*+noticed(?!\.com\.au(?<=webnoticed\.com\.au))
 1675663100	tripleee	greenpowersaver
 1675663139	tripleee	fairy[\W_]*+cat
+1675665164	tripleee	greatassignmenthelper\.com
