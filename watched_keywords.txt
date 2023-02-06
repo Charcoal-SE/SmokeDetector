@@ -47331,3 +47331,4 @@
 1675667814	cocomac	tomorrowstrees\.com
 1675667846	tripleee	genericmeds\.jp
 1675668181	tripleee	ultra[\W_]*+clean[\W_]*+services
+1675669796	tripleee	bavandkala\.ir
