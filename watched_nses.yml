@@ -3048,6 +3048,7 @@ items:
   - ns8604.hostgator.com.
 - ns: cp-in-18.hostgatorwebservers.com.
 - ns: md-ht-7.hostgatorwebservers.com.
+- ns: md-ht-8.hostgatorwebservers.com.
 - ns:
   - ns1.md-in-65.hostgatorwebservers.com.
   - ns2.md-in-65.hostgatorwebservers.com.
