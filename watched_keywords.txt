@@ -47323,3 +47323,4 @@
 1675662161	tripleee	bhatti[\W_]*+studio[\W_]*+606
 1675662953	tripleee	webnoticed\.com\.au
 1675662989	tripleee	web[\W_]*+noticed(?!\.com\.au(?<=webnoticed\.com\.au))
+1675663100	tripleee	greenpowersaver
