@@ -919,6 +919,9 @@ items:
   - harlee.ns.cloudflare.com.
 - ns:
   - cash.ns.cloudflare.com.
+  - fiona.ns.cloudflare.com.
+- ns:
+  - cash.ns.cloudflare.com.
   - gigi.ns.cloudflare.com.
 - ns:
   - cecelia.ns.cloudflare.com.
