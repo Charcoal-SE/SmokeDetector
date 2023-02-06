@@ -47327,3 +47327,4 @@
 1675665921	tripleee	industrietore?(?!-online\.de(?<=industrietor-online\.de))
 1675666481	tripleee	nibblesoftware\.com
 1675666515	tripleee	81aircon\.com
+1675666807	tripleee	(?-i:CM0cZ8mahn42ODA1)(?# t.me)
