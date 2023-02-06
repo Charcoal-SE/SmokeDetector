@@ -47339,3 +47339,4 @@
 1675681697	tripleee	tryvoucher\.com
 1675682454	tripleee	british[\W_]*+dissertation[\W_]*+help(?!\.co(?:\.uk|m)(?<=britishdissertationhelp\.co(?:\.uk|m)))
 1675682491	tripleee	britishdissertationhelp\.co\.uk
+1675684779	Jeff Schaller	Sabtrend\.com
