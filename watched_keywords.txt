@@ -47392,3 +47392,4 @@
 1675774636	tripleee	lg[\W_]*+seeds(?!\.es(?<=lgseeds\.es))
 1675774857	Jeff Schaller	bigchemshop\.com
 1675787671	Makyen	extremeflyerdesigns\.com
+1675787717	Makyen	djemir\.com
