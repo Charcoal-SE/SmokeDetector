@@ -380,6 +380,9 @@ items:
   - anderson.ns.cloudflare.com.
   - yolanda.ns.cloudflare.com.
 - ns:
+  - andronicus.ns.cloudflare.com.
+  - rose.ns.cloudflare.com.
+- ns:
   - andy.ns.cloudflare.com.
   - isla.ns.cloudflare.com.
 - ns:
