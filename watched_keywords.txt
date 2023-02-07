@@ -47373,3 +47373,4 @@
 1675762398	Cody Gray	easypolicyloans\.com
 1675762433	Cody Gray	easy[\W_]*+policy[\W_]*+loans(?!\.com(?<=easypolicyloans\.com))
 1675762484	tripleee	forbed\.com
+1675762537	tripleee	rajmandirhypermarket\.com
