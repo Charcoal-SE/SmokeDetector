@@ -47363,3 +47363,4 @@
 1675755653	tripleee	skin[\W_]*+cell[\W_]*+advanced
 1675755747	tripleee	advancedsitestats\.com
 1675759810	tripleee	itzme\.io
+1675759913	tripleee	seo[\W_]*+wagon
