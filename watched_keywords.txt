@@ -47371,3 +47371,4 @@
 1675761938	Glorfindel	embassy\W*edgespring
 1675762363	Cody Gray	everyoneloan\.co\.uk
 1675762398	Cody Gray	easypolicyloans\.com
+1675762433	Cody Gray	easy[\W_]*+policy[\W_]*+loans(?!\.com(?<=easypolicyloans\.com))
