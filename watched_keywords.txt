@@ -47365,3 +47365,4 @@
 1675759810	tripleee	itzme\.io
 1675759913	tripleee	seo[\W_]*+wagon
 1675759945	tripleee	damac[\W_]*+bay
+1675759985	tripleee	danube[\W_]*+view[sz](?:[\W_]*+luxury)?
