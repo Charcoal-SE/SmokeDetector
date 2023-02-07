@@ -3962,7 +3962,7 @@
 1531390214	doppelgreener	uklaptopcharger\.co
 1531391150	doppelgreener	pckart\.co
 1531391542	doppelgreener	learn\Wtube\Wby\Wtechpassion
-1531407282	doppelgreener	\w*menshealth(?!time\.com(?<=menshealthtime\.com))(?!claimed\.com(?<=womenshealthclaimed\.com))(?!reviews\.org(?<=menshealthreviews\.org))(?!fact\.com(?<=menshealthfact\.com))(?!mag\.com(?<=\bwomenshealthmag\.com))\w*
+1531407282	doppelgreener	\w*menshealth(?!time\.com(?<=menshealthtime\.com))(?!claimed\.com(?<=womenshealthclaimed\.com))(?!reviews\.org(?<=menshealthreviews\.org))(?!fact\.com(?<=menshealthfact\.com))(?!mag\.com(?<=\bwomenshealthmag\.com))(?!\.gov(?<=womenshealth\.gov))\w*
 1531406651	bertieb	poweruser\.blog
 1531460171	Makyen	R6Ko3OCrO9r2BKuzbCHYIw
 1531460184	Makyen	v=_pje3XhRVbQ
@@ -34361,7 +34361,7 @@
 1639509877	Makyen	(?-i:1cILgyF)(?#pin.it)
 1639509893	Makyen	aaradhanatechnology\.com
 1639512502	cigien	yamseo\.co\.il
-1639528061	Makyen	^(?!<)(?=.{8,40}$).*?w[1i]n[g9](?<!\bshowing).*?d[1i]n[g9](?<!\bpending)(?<!\bloading)(?<!\bbending)(?<!\badding)(?<!\bbuildding)\w*+(?#wing ding;wingding in usernames) 
+1639528061	Makyen	^(?!<)(?=.{8,40}$).*?w[1i]n[g9](?<!\bshowing).*?d[1i]n[g9](?<!\bpending)(?<!\bloading)(?<!\bbending)(?<!\badding)(?<!\bbuildding)\w*+(?#wing ding;wingding in usernames)
 1639534316	Makyen	illuminatibrotherhood\.co\.za
 1639538276	Spevacus	tianwachinese\.com
 1639539747	Makyen	pmhelpline\.com
