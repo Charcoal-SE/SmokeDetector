@@ -1421,6 +1421,9 @@ items:
   - dora.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
 - ns:
+  - dorthy.ns.cloudflare.com.
+  - john.ns.cloudflare.com.
+- ns:
   - doug.ns.cloudflare.com.
   - keyla.ns.cloudflare.com.
 - ns:
