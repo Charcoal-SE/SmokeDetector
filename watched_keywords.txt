@@ -47388,3 +47388,4 @@
 1675773084	tripleee	parser-chat\.ru
 1675773117	tripleee	upvchub\.com
 1675774188	tripleee	travis\.co\.in
+1675774600	tripleee	lgseeds\.es
