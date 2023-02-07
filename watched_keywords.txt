@@ -47367,3 +47367,4 @@
 1675759945	tripleee	damac[\W_]*+bay
 1675759985	tripleee	danube[\W_]*+view[sz](?:[\W_]*+luxury)?
 1675760020	tripleee	d[ae]nube[\W_]*+properties
+1675761903	Glorfindel	embassyedgespring\.com
