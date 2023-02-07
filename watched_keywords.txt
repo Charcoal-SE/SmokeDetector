@@ -47379,3 +47379,4 @@
 1675762997	tripleee	woshlaundry\.net
 1675763836	tripleee	sodokusolver\.com
 1675765388	tripleee	rnuc[\W_]*+llc
+1675768600	Glorfindel	foiwe\.com
