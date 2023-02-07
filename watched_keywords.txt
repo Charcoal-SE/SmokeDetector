@@ -47399,3 +47399,4 @@
 1675812443	Cody Gray	r[\W_]*+b[\W_]*+\.[\W_]*+g[\W_]*+y
 1675812599	Cody Gray	(?-i:XqFvGobKJeDet89f8)(?# goo.gl/maps)
 1675812645	Cody Gray	Midwest[\W_]*+Concrete?
+1675812707	Cody Gray	concrete[\W_]*+contractors?
