@@ -47397,3 +47397,4 @@
 1675804995	Makyen	d(?:octo)?r[\W_]*+arnold[\W_]*+p[\W_]*+joyce
 1675812225	Cody Gray	webhost4lifereview\.com
 1675812443	Cody Gray	r[\W_]*+b[\W_]*+\.[\W_]*+g[\W_]*+y
+1675812599	Cody Gray	(?-i:XqFvGobKJeDet89f8)(?# goo.gl/maps)
