@@ -47390,3 +47390,4 @@
 1675774188	tripleee	travis\.co\.in
 1675774600	tripleee	lgseeds\.es
 1675774636	tripleee	lg[\W_]*+seeds(?!\.es(?<=lgseeds\.es))
+1675774857	Jeff Schaller	bigchemshop\.com
