@@ -47386,3 +47386,4 @@
 1675772962	tripleee	bengalurutankcleaning\.com
 1675773008	tripleee	(?-i:686cd28x)(?# tinyurl.com)
 1675773084	tripleee	parser-chat\.ru
+1675773117	tripleee	upvchub\.com
