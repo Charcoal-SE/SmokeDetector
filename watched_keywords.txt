@@ -47368,3 +47368,4 @@
 1675759985	tripleee	danube[\W_]*+view[sz](?:[\W_]*+luxury)?
 1675760020	tripleee	d[ae]nube[\W_]*+properties
 1675761903	Glorfindel	embassyedgespring\.com
+1675761938	Glorfindel	embassy\W*edgespring
