@@ -47375,3 +47375,4 @@
 1675762484	tripleee	forbed\.com
 1675762537	tripleee	rajmandirhypermarket\.com
 1675762573	tripleee	wauth\.in
+1675762723	tripleee	urgentspellcast\.wordpress\.com
