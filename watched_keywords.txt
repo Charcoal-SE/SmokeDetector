@@ -47425,3 +47425,4 @@
 1675845859	cigien	notes360\.in
 1675846198	cigien	xlsxtemplates\.com
 1675847269	cigien	jackrutorial\.com
+1675847422	cigien	wootech(?!\.io)
