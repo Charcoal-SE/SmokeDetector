@@ -47424,3 +47424,4 @@
 1675845471	cigien	roblox[\W_]*+doors(?!\.com(?<=robloxdoors\.com))
 1675845859	cigien	notes360\.in
 1675846198	cigien	xlsxtemplates\.com
+1675847269	cigien	jackrutorial\.com
