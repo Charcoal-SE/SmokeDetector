@@ -229,6 +229,9 @@ items:
   - harleigh.ns.cloudflare.com.
   - jasper.ns.cloudflare.com.
 - ns:
+  - heather.ns.cloudflare.com.
+  - west.ns.cloudflare.com.
+- ns:
   - ivy.ns.cloudflare.com.
   - joel.ns.cloudflare.com.
 - ns:
