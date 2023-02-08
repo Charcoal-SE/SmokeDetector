@@ -47412,3 +47412,4 @@
 1675839493	cigien	racehobbies\.com
 1675840590	cigien	(?-i:nSIHmKWzSqQ)(?#youtu.be)
 1675840639	tripleee	(?-i:^Jacelyn Sia$)
+1675840753	cigien	quality[\W_]*+essay(?!\.com(?<=qualityessay\.com))
