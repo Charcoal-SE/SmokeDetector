@@ -47418,3 +47418,4 @@
 1675841882	cigien	wholesale[\W_]*+shopping(?!\.co\.uk(?<=wholesaleshopping\.co\.uk))
 1675843984	cigien	forbed(?!\.com)
 1675844631	cigien	online[\W_]*+course[\W_]*+experts(?!\.com(?<=onlinecourseexperts\.com))
+1675844791	cigien	webeecafe\.com
