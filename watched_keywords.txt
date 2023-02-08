@@ -47420,3 +47420,4 @@
 1675844631	cigien	online[\W_]*+course[\W_]*+experts(?!\.com(?<=onlinecourseexperts\.com))
 1675844791	cigien	webeecafe\.com
 1675844867	cigien	sistalent(?!\.com)
+1675844955	cigien	dr[\W_]*+sachin[\W_]*+gupta(?!\.in(?<=drsachingupta\.in))
