@@ -47429,3 +47429,4 @@
 1675848370	cigien	developershift\.com
 1675848832	cigien	rtpmgo303\.com
 1675848974	cigien	virtualrewardcenter\.com
+1675849021	cigien	virtual[\W_]*+reward[\W_]*+center(?!\.com(?<=virtualrewardcenter\.com))
