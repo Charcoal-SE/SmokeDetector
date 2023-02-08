@@ -47401,3 +47401,4 @@
 1675812707	Cody Gray	concrete[\W_]*+contractors?
 1675812850	Cody Gray	usaonlineblog\.com
 1675812888	Cody Gray	USA[\W_]*+Online[\W_]*+Blog(?!\.com(?<=usaonlineblog\.com))
+1675818133	Makyen	ankarahayati\.com
