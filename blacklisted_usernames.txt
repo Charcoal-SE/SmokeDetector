@@ -767,3 +767,4 @@ meta kukel exchange
 (?-i:^Christine Finn$)
 (?-i:^Baccalaureate Academy$)
 (?-i:^Ujjvalkashyap sprintzeal$)
+(?-i:^deewanimastani$)
