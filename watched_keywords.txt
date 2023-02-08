@@ -47440,5 +47440,4 @@
 1675855332	tripleee	p2pexams\.com
 1675855481	tripleee	chromameds\.com
 1675855523	tripleee	zolpidem
-1675855562	tripleee	tartrate
 1675855597	tripleee	ambien[\W_]*+generic
