@@ -47414,3 +47414,4 @@
 1675840639	tripleee	(?-i:^Jacelyn Sia$)
 1675840753	cigien	quality[\W_]*+essay(?!\.com(?<=qualityessay\.com))
 1675841110	cigien	3ribs\.wordpress\.com
+1675841409	cigien	bigchemshop(?!\.com)
