@@ -47427,3 +47427,4 @@
 1675847269	cigien	jackrutorial\.com
 1675847422	cigien	wootech(?!\.io)
 1675848370	cigien	developershift\.com
+1675848832	cigien	rtpmgo303\.com
