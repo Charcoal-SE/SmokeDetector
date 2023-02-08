@@ -47415,3 +47415,4 @@
 1675841110	cigien	3ribs\.wordpress\.com
 1675841409	cigien	bigchemshop(?!\.com)
 1675841729	cigien	therapien\.co
+1675841882	cigien	wholesale[\W_]*+shopping(?!\.co\.uk(?<=wholesaleshopping\.co\.uk))
