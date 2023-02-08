@@ -47404,3 +47404,4 @@
 1675818166	Makyen	ankara[\W_]*+hayati(?!\.com(?<=ankarahayati\.com))
 1675819757	Cody Gray	r[\W_]*+b[\W_]*?\.[\W_]*+g[\W_]*+y
 1675824517	Jeff Schaller	highcpmrevenuenetwork\.com
+1675833850	Makyen	howtohireahacker\.org
