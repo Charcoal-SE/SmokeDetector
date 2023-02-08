@@ -47402,3 +47402,4 @@
 1675812850	Cody Gray	usaonlineblog\.com
 1675812888	Cody Gray	USA[\W_]*+Online[\W_]*+Blog(?!\.com(?<=usaonlineblog\.com))
 1675818133	Makyen	ankarahayati\.com
+1675818166	Makyen	ankara[\W_]*+hayati(?!\.com(?<=ankarahayati\.com))
