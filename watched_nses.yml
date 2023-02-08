@@ -975,6 +975,9 @@ items:
   - charles.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
+  - chase.ns.cloudflare.com.
+  - mina.ns.cloudflare.com.
+- ns:
   - chelsea.ns.cloudflare.com.
   - jim.ns.cloudflare.com.
 - ns:
