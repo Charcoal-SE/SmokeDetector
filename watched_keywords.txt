@@ -47470,3 +47470,4 @@
 1675941687	Cody Gray	gadsencetips\.com
 1675942526	tripleee	(?-i:3RPpEXJ)(?# bit.ly)
 1675942562	tripleee	dms[\W_]*+infosystem
+1675943322	Cody Gray	(?-i:lxFd2fniKFg)(?# YouTube)
