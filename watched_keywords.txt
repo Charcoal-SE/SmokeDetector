@@ -47475,3 +47475,4 @@
 1675943681	Cody Gray	Vineet[\W_]*+Tandon(?!\.com(?<=vineettandon\.com))
 1675943986	Cody Gray	outlook[\W_]*+pst[\W_]*+repair
 1675945672	tripleee	(?-i:^William Colton$)
+1675945844	cigien	povison\.com
