@@ -770,3 +770,4 @@ meta kukel exchange
 (?-i:^deewanimastani$)
 (?-i:^johnmaths$)
 (?-i:^industrietor online$)
+(?-i:^Delhi Night$)
