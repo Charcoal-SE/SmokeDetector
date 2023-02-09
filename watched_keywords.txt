@@ -47493,3 +47493,4 @@
 1675961616	cigien	pip\s++install\s++appopener(?#Several TP on SO; confirmed by site mod)
 1675963191	cigien	apkxu\.com
 1675964390	cigien	smgcreativos\.com
+1675968045	tripleee	unique[\W_]*+care[\W_]*+endo
