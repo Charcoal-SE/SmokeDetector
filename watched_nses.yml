@@ -3808,6 +3808,11 @@ items:
   - ns1045.ui-dns.com.
   - ns1045.ui-dns.de.
   - ns1045.ui-dns.org.
+- ns:
+  - ns1051.ui-dns.biz.
+  - ns1062.ui-dns.de.
+  - ns1100.ui-dns.org.
+  - ns1106.ui-dns.com.
 - ns: gocheapweb.com.
 - ns: omnis.com.
 - ns: omnisdns.net.
