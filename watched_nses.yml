@@ -2,7 +2,7 @@ Schema: yaml_ns
 Schema_version: '2019120601'
 items:
 - comment: has FPs, don't blacklist again
-  ns: namecheaphosting.com
+  ns: namecheaphosting.com.
 - ns:
   - aaden.ns.cloudflare.com.
   - may.ns.cloudflare.com.
