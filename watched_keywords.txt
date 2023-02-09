@@ -47477,3 +47477,4 @@
 1675945672	tripleee	(?-i:^William Colton$)
 1675945844	cigien	povison\.com
 1675948881	Jeff Schaller	finlaw\.in
+1675949438	Jeff Schaller	myd2app\.com
