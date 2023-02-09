@@ -47476,3 +47476,4 @@
 1675943986	Cody Gray	outlook[\W_]*+pst[\W_]*+repair
 1675945672	tripleee	(?-i:^William Colton$)
 1675945844	cigien	povison\.com
+1675948881	Jeff Schaller	finlaw\.in
