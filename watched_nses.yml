@@ -120,6 +120,9 @@ items:
   - dora.ns.cloudflare.com.
 - ns:
   - aida.ns.cloudflare.com.
+  - guss.ns.cloudflare.com.
+- ns:
+  - aida.ns.cloudflare.com.
   - hal.ns.cloudflare.com.
 - ns:
   - aida.ns.cloudflare.com.
