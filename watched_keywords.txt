@@ -47481,3 +47481,4 @@
 1675949544	Cody Gray	chirag2120787(?#github.com)
 1675949587	tripleee	lillies[\W_]*+online
 1675950795	tripleee	T_Condor(?# t.me)
+1675951655	Cody Gray	pip install AppOpener
