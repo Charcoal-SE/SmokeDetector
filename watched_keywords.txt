@@ -42606,7 +42606,6 @@
 1662233012	cigien	adcreative\.grsm\.io
 1662233164	Ollie	(?-i:^Top vurzo$)
 1662251167	cigien	live-kora-tv\.com
-1662252792	Makyen	appopener
 1662270041	cocomac	arsesweb\.ir
 1662270203	Makyen	cuttingcornersband\.com
 1662276014	tripleee	(?-i:oPdgDsolaMM)(?# youtube)
