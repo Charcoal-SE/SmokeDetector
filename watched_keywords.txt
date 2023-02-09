@@ -47490,4 +47490,3 @@
 1675957709	Cody Gray	tlk\.io\/hehehe
 1675958177	cigien	notavidecor\.com
 1675959604	cigien	myperch\.io
-1675961074	cigien	pip\s*+install\s*+appopener(?#Several TP on SO; confirmed by site mod)
