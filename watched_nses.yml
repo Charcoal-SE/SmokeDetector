@@ -3412,7 +3412,9 @@ items:
 - ns: mschosting.com.
 - ns: surveyzop.com.
 - ns: ablesales.com.au.
-- ns: systemdns.com.
+- comment: 3/23 over a year, no 1-weight detections 2023-02-09
+  disable: true
+  ns: systemdns.com.
 - ns: whitelabelwebserver.com.
 - ns: 24xservice.com.
 - ns: hostingraja.in.
