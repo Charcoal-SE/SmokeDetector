@@ -47478,3 +47478,4 @@
 1675945844	cigien	povison\.com
 1675948881	Jeff Schaller	finlaw\.in
 1675949438	Jeff Schaller	myd2app\.com
+1675949482	tripleee	finlaw(?!\.in)
