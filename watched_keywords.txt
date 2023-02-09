@@ -47474,3 +47474,4 @@
 1675943645	tripleee	dms[\W_]*+infosystem(?!\.com(?<=dmsinfosystem\.com))
 1675943681	Cody Gray	Vineet[\W_]*+Tandon(?!\.com(?<=vineettandon\.com))
 1675943986	Cody Gray	outlook[\W_]*+pst[\W_]*+repair
+1675945672	tripleee	(?-i:^William Colton$)
