@@ -47480,7 +47480,6 @@
 1675949544	Cody Gray	chirag2120787(?#github.com)
 1675949587	tripleee	lillies[\W_]*+online
 1675950795	tripleee	T_Condor(?# t.me)
-1675951655	Cody Gray	pip install AppOpener
 1675953337	cigien	obi\.academy
 1675953894	Ian Campbell	powertextor\.com
 1675955732	cigien	seomoshak\.rozblog\.com
