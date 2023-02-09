@@ -47468,3 +47468,4 @@
 1675939999	tripleee	luckystore\.in
 1675941302	Jeff Schaller	errorgram\.com
 1675941687	Cody Gray	gadsencetips\.com
+1675942526	tripleee	(?-i:3RPpEXJ)(?# bit.ly)
