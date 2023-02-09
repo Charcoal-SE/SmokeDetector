@@ -47489,5 +47489,4 @@
 1675957317	Spevacus	vigience\.com
 1675957709	Cody Gray	tlk\.io\/hehehe
 1675958177	cigien	notavidecor\.com
-1675958558	cigien	pip[\W_]*+install[\W_]*+appopener(?#Several TP on SO; confirmed by site mod)
 1675959604	cigien	myperch\.io
