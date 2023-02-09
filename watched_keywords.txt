@@ -47482,3 +47482,4 @@
 1675950795	tripleee	T_Condor(?# t.me)
 1675951655	Cody Gray	pip install AppOpener
 1675953337	cigien	obi\.academy
+1675953894	Ian Campbell	powertextor\.com
