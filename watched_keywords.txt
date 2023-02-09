@@ -47465,3 +47465,4 @@
 1675936289	Cody Gray	appdev\.rifathossain(?:@gmail\.com)?
 1675938466	tripleee	usasettlementsloan\.com
 1675938902	tripleee	techgratify\.com
+1675939999	tripleee	luckystore\.in
