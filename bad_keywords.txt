@@ -2750,4 +2750,3 @@ sris[\W_]*+(?:virginia[\W_]*+)?law(?:y[ae]rs?)?\d*\b(?!\.com(?:(?<=srislawyer\.c
 (?-i:AWx-OSPPuAcwNmEx)(?# t.me)
 (?-i:U_IWCb5fnMjO4nUU)(?# t.me)
 (?-i:fXTvWIwuq_IzM2Fl)(?#t.me)
-superkai(?#ko-fi.com)
