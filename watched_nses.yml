@@ -909,6 +909,9 @@ items:
   - carol.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
+  - carrera.ns.cloudflare.com.
+  - dylan.ns.cloudflare.com.
+- ns:
   - cartman.ns.cloudflare.com.
   - paityn.ns.cloudflare.com.
 - ns:
