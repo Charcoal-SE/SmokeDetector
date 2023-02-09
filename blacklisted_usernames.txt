@@ -769,3 +769,4 @@ meta kukel exchange
 (?-i:^Ujjvalkashyap sprintzeal$)
 (?-i:^deewanimastani$)
 (?-i:^johnmaths$)
+(?-i:^industrietor online$)
