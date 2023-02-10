@@ -47527,3 +47527,4 @@
 1676033999	tripleee	wizard[\W_]*+web[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1676035796	tripleee	getservicenumber\.com
 1676039204	cigien	technicalguide\.net
+1676048388	cigien	dataanalysisexperts\.net
