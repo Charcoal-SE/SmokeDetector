@@ -47522,3 +47522,4 @@
 1676025005	Cody Gray	PUJA88
 1676027522	tripleee	(?-i:^kunal jaiswal$)
 1676028447	tripleee	randomstory\.org
+1676030769	tripleee	gullborgen\.no
