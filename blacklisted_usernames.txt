@@ -773,3 +773,4 @@ meta kukel exchange
 (?-i:^Delhi Night$)
 (?-i:^Shridhar G V$)
 (?-i:^Hamshi Hameed$)
+(?-i:^7z password recovery$)
