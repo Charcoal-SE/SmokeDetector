@@ -47515,3 +47515,4 @@
 1676023913	Cody Gray	letmeadvice\.com
 1676023947	Cody Gray	(?:Delete|Remove)[\W_]*+Payment[\W_]*+Method[\W_]*+on[\W_]*+DoorDash
 1676024268	Cody Gray	remove[\W_]*+instagram[\W_]*+reels
+1676024368	Cody Gray	(?-i:^Alon Alush$)
