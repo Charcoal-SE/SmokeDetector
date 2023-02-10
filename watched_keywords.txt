@@ -47497,3 +47497,4 @@
 1675988081	Cody Gray	imperiumdynamics\.com
 1675988124	Cody Gray	PowerTextor(?!\.com)
 1676007381	tripleee	firstdent\.ae
+1676007750	tripleee	(?-i:^Hamshi Hameed$)
