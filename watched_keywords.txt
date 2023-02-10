@@ -47512,3 +47512,4 @@
 1676019057	tripleee	thinkphysiotherapy\.ca
 1676019239	Cody Gray	Think[\W_]*+Physiotherapy(?!\.ca(?<=thinkphysiotherapy\.ca))
 1676020890	Cody Gray	purecbdgummiesreviews(?# pinterest)
+1676023913	Cody Gray	letmeadvice\.com
