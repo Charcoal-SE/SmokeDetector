@@ -47509,3 +47509,4 @@
 1676015396	tripleee	the[\W_]*+cbd[\W_]*+boxes(?!\.com(?<=thecbdboxes\.com))
 1676016489	Cody Gray	(?-i:^Melton Poxymori$)
 1676017237	Cody Gray	LifeItaly
+1676019057	tripleee	thinkphysiotherapy\.ca
