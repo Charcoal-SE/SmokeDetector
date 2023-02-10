@@ -772,3 +772,4 @@ meta kukel exchange
 (?-i:^industrietor online$)
 (?-i:^Delhi Night$)
 (?-i:^Shridhar G V$)
+(?-i:^Hamshi Hameed$)
