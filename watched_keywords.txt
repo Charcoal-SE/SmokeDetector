@@ -47495,3 +47495,4 @@
 1675964390	cigien	smgcreativos\.com
 1675968045	tripleee	unique[\W_]*+care[\W_]*+endo
 1675988081	Cody Gray	imperiumdynamics\.com
+1675988124	Cody Gray	PowerTextor(?!\.com)
