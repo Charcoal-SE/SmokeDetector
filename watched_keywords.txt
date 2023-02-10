@@ -47498,3 +47498,4 @@
 1675988124	Cody Gray	PowerTextor(?!\.com)
 1676007381	tripleee	firstdent\.ae
 1676007750	tripleee	(?-i:^Hamshi Hameed$)
+1676007852	tripleee	softauthor\.com
