@@ -47525,3 +47525,4 @@
 1676030769	tripleee	gullborgen\.no
 1676031707	tripleee	d(?:octo)r?[\W_]*+ofure
 1676031762	tripleee	thekreativeacademy\.com
+1676032764	Makyen	drofureherbalhome(?:@gmail\.com)?
