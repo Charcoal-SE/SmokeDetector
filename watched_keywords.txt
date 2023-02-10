@@ -47506,3 +47506,4 @@
 1676014838	Cody Gray	supvan\.com
 1676014872	Cody Gray	SUPVAN(?!\.com)
 1676015360	tripleee	thecbdboxes\.com
+1676015396	tripleee	the[\W_]*+cbd[\W_]*+boxes(?!\.com(?<=thecbdboxes\.com))
