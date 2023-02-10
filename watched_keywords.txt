@@ -47528,3 +47528,4 @@
 1676035796	tripleee	getservicenumber\.com
 1676039204	cigien	technicalguide\.net
 1676048388	cigien	dataanalysisexperts\.net
+1676048690	cigien	afriqjmarbitrage\.us
