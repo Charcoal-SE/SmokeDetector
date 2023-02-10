@@ -47505,3 +47505,4 @@
 1676011848	tripleee	(?-i:S3phFld)(?# cutt.ly)
 1676011882	tripleee	(?-i:E3phH6K)(?# cutt.ly)
 1676013505	Cody Gray	Cheat[\W_]*+Sheet[\W_]*+🐱‍👤
+1676014838	Cody Gray	supvan\.com
