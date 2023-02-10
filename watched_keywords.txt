@@ -47505,3 +47505,4 @@
 1676013505	Cody Gray	Cheat[\W_]*+Sheet[\W_]*+🐱‍👤
 1676014838	Cody Gray	supvan\.com
 1676014872	Cody Gray	SUPVAN(?!\.com)
+1676015360	tripleee	thecbdboxes\.com
