@@ -47523,3 +47523,4 @@
 1676027522	tripleee	(?-i:^kunal jaiswal$)
 1676028447	tripleee	randomstory\.org
 1676030769	tripleee	gullborgen\.no
+1676031707	tripleee	d(?:octo)r?[\W_]*+ofure
