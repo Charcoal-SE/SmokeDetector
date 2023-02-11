@@ -47558,3 +47558,4 @@
 1676114097	Cody Gray	actualizar\.net
 1676116411	Cody Gray	FITA(?!\.in)(?:[\W_]*+Academy)?
 1676116622	cigien	digirushsolutions\.com
+1676116668	cigien	(?-i:3HSobLN)(?#amzn.to)
