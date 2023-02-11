@@ -47546,3 +47546,4 @@
 1676096565	cigien	w3beginners\.com
 1676097455	Cody Gray	adobe[\W_]*+analytics[\W_]*+(?:online[\W_]*+)?training
 1676097506	Cody Gray	itc\.ua
+1676100294	Cody Gray	shrinksleeveapplicator\.in
