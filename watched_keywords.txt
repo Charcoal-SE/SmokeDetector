@@ -47539,3 +47539,4 @@
 1676087077	cigien	globalresidenceindex\.com
 1676087138	cigien	qtrans\.wufoo\.com
 1676087460	cigien	einfachelosung\.com
+1676092766	Cody Gray	cheat[\W_]*+sheet[\W_]*?🐱‍👤[\W_]*+
