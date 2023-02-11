@@ -47552,3 +47552,4 @@
 1676103105	Cody Gray	inspitetech\.com
 1676105715	Makyen	richardprycewizard2016(?:@gmail\.com)?
 1676105821	cigien	webolutions\.com
+1676106393	Cody Gray	shrink[\W_]*+sleeve(?:[\W_]*+(?:label|applicator(?!\.in(?<=shrinksleeveapplicator\.in))|machine)s?)+
