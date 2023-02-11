@@ -47563,3 +47563,4 @@
 1676116890	Cody Gray	(?:jpotter@)?jpaw\.com
 1676119061	Cody Gray	Securium[\W_]*+Solutions(?!\.com(?<=securiumsolutions\.com))
 1676120973	Cody Gray	beautyame\.com
+1676121545	Cody Gray	NFT[\W_]*+marketplace[\W_]*+(?:development|platform)
