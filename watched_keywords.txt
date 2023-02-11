@@ -47556,3 +47556,4 @@
 1676111648	Cody Gray	MBOX[\W_]*+to[\W_]*+IMAP
 1676113792	Cody Gray	mgogroup\.blogspot
 1676114097	Cody Gray	actualizar\.net
+1676116411	Cody Gray	FITA(?!\.in)(?:[\W_]*+Academy)?
