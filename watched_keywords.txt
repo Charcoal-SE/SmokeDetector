@@ -47540,3 +47540,4 @@
 1676087138	cigien	qtrans\.wufoo\.com
 1676087460	cigien	einfachelosung\.com
 1676092766	Cody Gray	cheat[\W_]*+sheet[\W_]*?🐱‍👤[\W_]*+
+1676094491	Cody Gray	new[\W_]*+watch
