@@ -47577,3 +47577,4 @@
 1676148902	Makyen	priest[\W_]*+jaja
 1676154675	Makyen	ufabet999\.pro
 1676154715	Makyen	varvip999\.com
+1676154781	Makyen	varvip999(?!\.com)
