@@ -47548,3 +47548,4 @@
 1676097506	Cody Gray	itc\.ua
 1676100294	Cody Gray	shrinksleeveapplicator\.in
 1676100338	Cody Gray	Shrink[\W_]*+Sleeve[\W_]*+Label(?:[\W_]*+(?:Applicator|Machine))?(?!\.in(?<=shrinksleeveapplicator\.in))
+1676100505	Cody Gray	VRankUp(?!\.com)
