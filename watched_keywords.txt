@@ -47565,3 +47565,4 @@
 1676120973	Cody Gray	beautyame\.com
 1676121545	Cody Gray	NFT[\W_]*+marketplace[\W_]*+(?:development|platform)
 1676122138	Cody Gray	ireactjs\.blogspot
+1676124397	Ethan	partner\.bitget\.com
