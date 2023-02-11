@@ -47541,3 +47541,4 @@
 1676087460	cigien	einfachelosung\.com
 1676092766	Cody Gray	cheat[\W_]*+sheet[\W_]*?🐱‍👤[\W_]*+
 1676094648	Cody Gray	newwatch\.online
+1676094672	Cody Gray	new[\W_]*+watch(?!\.online(?<=newwatch\.online))
