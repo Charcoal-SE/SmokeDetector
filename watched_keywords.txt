@@ -47542,3 +47542,4 @@
 1676092766	Cody Gray	cheat[\W_]*+sheet[\W_]*?🐱‍👤[\W_]*+
 1676094648	Cody Gray	newwatch\.online
 1676095590	cigien	kndahl(?<=github\.com\/kndahl)
+1676095926	cigien	neulab
