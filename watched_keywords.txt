@@ -47568,3 +47568,4 @@
 1676124397	Ethan	partner\.bitget\.com
 1676127324	Makyen	techsavvy@hackermail\.com
 1676127558	Makyen	winwinwinxmdao
+1676127592	Makyen	(?-i:BitgetENOfficial)(?#t.me)
