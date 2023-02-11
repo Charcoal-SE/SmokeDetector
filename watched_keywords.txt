@@ -47555,3 +47555,4 @@
 1676106393	Cody Gray	shrink[\W_]*+sleeve(?:[\W_]*+(?:label|applicator(?!\.in(?<=shrinksleeveapplicator\.in))|machine)s?)+
 1676107051	Cody Gray	purpleburn(?:[\W_]*+pro)?
 1676111648	Cody Gray	MBOX[\W_]*+to[\W_]*+IMAP
+1676113792	Cody Gray	mgogroup\.blogspot
