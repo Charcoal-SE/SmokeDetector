@@ -47557,3 +47557,4 @@
 1676113792	Cody Gray	mgogroup\.blogspot
 1676114097	Cody Gray	actualizar\.net
 1676116411	Cody Gray	FITA(?!\.in)(?:[\W_]*+Academy)?
+1676116622	cigien	digirushsolutions\.com
