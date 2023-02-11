@@ -47560,3 +47560,4 @@
 1676116622	cigien	digirushsolutions\.com
 1676116668	cigien	(?-i:3HSobLN)(?#amzn.to)
 1676116818	Cody Gray	Digi[\W_]*+Rush(?:[\W_]*+Solutions)?+(?!\.com(?<=digirushsolutions\.com))
+1676116890	Cody Gray	(?:jpotter@)?jpaw\.com
