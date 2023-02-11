@@ -47538,3 +47538,4 @@
 1676067000	Spevacus	booksyeah\.ml
 1676067217	Spevacus	jasonchuang\.substack
 1676087077	cigien	globalresidenceindex\.com
+1676087138	cigien	qtrans\.wufoo\.com
