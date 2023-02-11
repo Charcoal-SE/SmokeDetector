@@ -47564,3 +47564,4 @@
 1676119061	Cody Gray	Securium[\W_]*+Solutions(?!\.com(?<=securiumsolutions\.com))
 1676120973	Cody Gray	beautyame\.com
 1676121545	Cody Gray	NFT[\W_]*+marketplace[\W_]*+(?:development|platform)
+1676122138	Cody Gray	ireactjs\.blogspot
