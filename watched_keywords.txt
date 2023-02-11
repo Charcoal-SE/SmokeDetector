@@ -47549,3 +47549,4 @@
 1676100294	Cody Gray	shrinksleeveapplicator\.in
 1676100338	Cody Gray	Shrink[\W_]*+Sleeve[\W_]*+Label(?:[\W_]*+(?:Applicator|Machine))?(?!\.in(?<=shrinksleeveapplicator\.in))
 1676100505	Cody Gray	VRankUp(?!\.com)
+1676102723	Cody Gray	kapten33
