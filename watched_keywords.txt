@@ -47571,3 +47571,4 @@
 1676127592	Makyen	(?-i:BitgetENOfficial)(?#t.me)
 1676127627	Makyen	0x25d22466e9465208e23bd8d3d5c9a3743ad7ec2a
 1676128229	cigien	gdblogger\.com
+1676130126	cigien	thegameranime\.com
