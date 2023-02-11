@@ -47562,3 +47562,4 @@
 1676116818	Cody Gray	Digi[\W_]*+Rush(?:[\W_]*+Solutions)?+(?!\.com(?<=digirushsolutions\.com))
 1676116890	Cody Gray	(?:jpotter@)?jpaw\.com
 1676119061	Cody Gray	Securium[\W_]*+Solutions(?!\.com(?<=securiumsolutions\.com))
+1676120973	Cody Gray	beautyame\.com
