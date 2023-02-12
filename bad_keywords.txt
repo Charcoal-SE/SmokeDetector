@@ -2764,3 +2764,4 @@ super[\W_]*+bowl(?:\W*+\w*+){0,2}(?:[\W_]*+(?:live|stream|free|broadcast)s?)+
 (?-i:2u27b55f)(?#tinyurl.com)
 (?-i:4umkknvr)(?#tinyurl.com)
 lyon[\W_]*+lens
+barcelona[\W_]*+v[\W_]*+s[\W_]*+villarreal
