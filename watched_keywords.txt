@@ -47592,3 +47592,4 @@
 1676203742	Cody Gray	eyespysee\.com
 1676203792	Cody Gray	dewa918\.xyz
 1676203827	Cody Gray	dewa918\.link
+1676203867	Cody Gray	Dewa918(?!\.(?:link|xyz))
