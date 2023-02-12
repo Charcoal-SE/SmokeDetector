@@ -4933,7 +4933,6 @@
 1536749038	Byte Commander	geek-squad\.us
 1536752626	paper1111	uniglobemarkets\.com
 1536756462	Zoe	jovialevents\.com
-1536757141	paper1111	marouan-ben-mansour\.com
 1536761940	iBug	sodepami\.vn
 1536762830	Glorfindel	favycoin\.com
 1536762892	Glorfindel	commercialtrust\.co\.uk
