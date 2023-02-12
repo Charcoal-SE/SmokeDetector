@@ -29369,7 +29369,7 @@
 1622716228	Xnero	go4office(?!\.com)
 1622716235	Xnero	thehotcontent\.com
 1622716429	Ryan M	paypallogindesk(?# sites.google.com)
-1622716590	Ryan M	login(?<=\w login)(?=</a>)
+1622716590	Ryan M	login(?<=\w login)(?=</a>)(?<=<(?!a href="https?://(?:i\.stack\.imgur\.com|(?:[a-z\d-]+\.)*(?:stackexchange\.com|stackoverflow\.com|serverfault\.com|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net|microsoft\.com)|cloud.google.com/compute/docs|developers\.(?:binance|facebook|google)\.com|docs\.docker\.com/engine/reference/commandline)\/)(?:[^<]|<(?!a href="))*?)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1622717662	tripleee	mygamesetup\.com
 1622717709	tripleee	electronics-club\.com
 1622720723	tripleee	whizzinator\.com
