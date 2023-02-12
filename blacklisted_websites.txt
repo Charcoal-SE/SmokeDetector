@@ -4365,7 +4365,7 @@ clickspeeder\.com
 itronixsolutions\.com
 mstwotoes\.com
 onlineairlinesbooking\.com
-windsor\.ai
+windsor\.ai(?<!sentry\.windsor\.ai)
 primejackets\.com
 koyowater\.com
 company(?<=\.company)\.site
