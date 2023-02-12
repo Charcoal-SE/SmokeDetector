@@ -2757,3 +2757,4 @@ ufc[\W_]*+284[\W_]*+live
 (?-i:y4fnhh9t)(?#tinyurl)
 puppy[\W_]*+bowl
 (?-i:f3mw7W9)(?#cutt.ly)
+(?-i:5y3xnyrx)(?#tinyurl)
