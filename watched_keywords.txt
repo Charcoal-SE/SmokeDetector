@@ -47604,3 +47604,4 @@
 1676228785	cigien	(?-i:13mbNkP)(?#cutt.ly)
 1676237802	Makyen	cabinet[\W_]*+soghaan(?!$(?<=^cabinet soghaan$))
 1676237837	Makyen	(?-i:3Iiibxb)(?#bit.ly)
+1676240683	Makyen	jalen[\W_]*+hurts
