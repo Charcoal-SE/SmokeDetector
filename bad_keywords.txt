@@ -2759,3 +2759,4 @@ puppy[\W_]*+bowl
 (?-i:f3mw7W9)(?#cutt.ly)
 (?-i:5y3xnyrx)(?#tinyurl)
 (?-i:27xy8pmm)(?#tinyurl)
+suprbowlstremfrtv
