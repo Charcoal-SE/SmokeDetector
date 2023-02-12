@@ -2760,3 +2760,4 @@ puppy[\W_]*+bowl
 (?-i:5y3xnyrx)(?#tinyurl)
 (?-i:27xy8pmm)(?#tinyurl)
 suprbowlstremfrtv
+super[\W_]*+bowl(?:\W*+\w*+){0,2}(?:[\W_]*+(?:live|stream|free|broadcast)s?)+
