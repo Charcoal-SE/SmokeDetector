@@ -47630,3 +47630,4 @@
 1676293586	tripleee	miupsik\.ru
 1676294674	tripleee	kaizonhardware\.com
 1676295304	cigien	kaizon[\W_]*+hardware(?!\.com(?<=kaizonhardware\.com))
+1676295806	cigien	espirit[\W_]*+tech(?!\.com(?<=espirittech\.com))
