@@ -22299,7 +22299,6 @@
 1599464493	tripleee	service\.elsevier\.com
 1599464991	tripleee	seintellect\.com
 1599465009	tripleee	se[\W_]*+intellect(?!\.com)
-1599465036	tripleee	gotquestions\.org
 1599468982	Kulfy	vingle\.net
 1599471823	Mast	promocodeslive\.com
 1599473188	tripleee	glamm[\W_]*+pop(?!\.com)
