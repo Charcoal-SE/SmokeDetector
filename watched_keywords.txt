@@ -47616,3 +47616,4 @@
 1676275059	cigien	thuexe16chodalat\.com
 1676275451	cigien	adeliatrans\.com
 1676275484	cigien	adeliatrans(?!\.com)
+1676275541	cigien	smartwidgets\.ru
