@@ -5083,3 +5083,4 @@ ufc284livestreamfree\.blogspot
 420rs\.blogspot
 \b(?<![^\W_]-)exeo\.app(?![.-][^\W_])\b(?#pay-per-click link shortener, so inherently spam)
 feldentertainment\.com
+applicontech\.com
