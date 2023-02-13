@@ -47607,3 +47607,4 @@
 1676240683	Makyen	jalen[\W_]*+hurts
 1676243321	Makyen	fortnitecheats\.z19\.web\.core\.windows\.net
 1676249365	Ethan	tiffany49983315
+1676250877	cocomac	live[\W_]*+reddit[\W_]*+tv
