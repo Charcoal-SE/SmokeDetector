@@ -47679,3 +47679,4 @@
 1676399353	cigien	ricardo\.jobs\.translation(?:@outlook\.com)?
 1676401965	cigien	wellbetterlife\.com
 1676404312	cigien	3KWcLKh27LVZkt9CgWe1Cuxz6ksbhW6Vvi(?#btc)
+1676407038	Spevacus	(?-i:597JzVt)(?#cutt.ly)
