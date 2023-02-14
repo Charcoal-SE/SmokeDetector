@@ -47644,3 +47644,4 @@
 1676353960	tripleee	slaconsultantsindia\.com
 1676358611	cocomac	gopetco\.com
 1676360117	Makyen	adult[\W_]*+meeting[\W_]*+zone
+1676360211	tripleee	amz\.com
