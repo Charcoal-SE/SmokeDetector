@@ -11179,7 +11179,7 @@
 1565333663	tripleee	momnewsdaily\.com
 1565334366	tripleee	astertoursandtravel\.com
 1565336159	tripleee	tiwariacademy\.com
-1565336953	double-beep	localbitcoins\.com
+1565336953	double-beep	localbitcoins\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1565341961	tripleee	socialmediagossips\.com
 1565349205	Shree	printersrepairnearme\.com
 1565352469	Makyen	online\W*plaque\W*maker
