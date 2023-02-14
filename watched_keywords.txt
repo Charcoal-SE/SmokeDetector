@@ -47657,3 +47657,4 @@
 1676371024	tripleee	technosoft
 1676371797	cigien	wowrfid\.com
 1676371837	cigien	wow[\W_]*+rfid(?!\.com(?<=wowrfid\.com))
+1676374596	tripleee	cappingmachines\.in
