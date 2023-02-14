@@ -47667,3 +47667,4 @@
 1676377206	cigien	nursingessaywriting\.com
 1676377289	cigien	wormssl
 1676350907	Henry Ecker	bloohash\.com
+1676377888	cigien	bloohash(?!\.com)
