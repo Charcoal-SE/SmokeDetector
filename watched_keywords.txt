@@ -47647,3 +47647,4 @@
 1676360211	tripleee	amz\.com
 1676361689	tripleee	(?-i:^John Gram$)
 1676361731	tripleee	mdatraining\.com
+1676361862	tripleee	s2smark\.com
