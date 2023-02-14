@@ -47671,3 +47671,4 @@
 1676378911	cigien	ubungmachtdenmeistersite\.wordpress\.com
 1676379231	cigien	northlandz(?!\.com)
 1676379679	cigien	moretv\.live
+1676379718	cigien	kinotv\.me
