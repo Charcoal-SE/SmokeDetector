@@ -463,6 +463,9 @@ items:
 - ns:
   - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
+- ns:
+  - april.ns.cloudflare.com.
+  - stan.ns.cloudflare.com.
 - comment: disabled 2022-08-24, valid for crack11.com but many FPs
   disable: true
   ns:
