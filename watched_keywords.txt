@@ -28240,7 +28240,6 @@
 1619224237	cigien	herbalisthealer090(?:@gmail\.com)?
 1619224296	cigien	d(?:octo)?r[\W_]*+khandi
 1619224411	cigien	dailytechnologyupdate\.com
-1619224948	cigien	alakmalak\.com
 1619225058	cigien	legaltranslationuae\.ae
 1619225733	cigien	sevenb\.io
 1619225905	cigien	vedcraft\.com
