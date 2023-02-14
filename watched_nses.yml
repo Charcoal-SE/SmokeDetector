@@ -1753,9 +1753,6 @@ items:
   - gordon.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
-  - gordon.ns.cloudflare.com.
-  - rosalyn.ns.cloudflare.com.
-- ns:
   - grace.ns.cloudflare.com.
   - lou.ns.cloudflare.com.
 - ns:
