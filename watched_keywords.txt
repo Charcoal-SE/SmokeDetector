@@ -47654,3 +47654,4 @@
 1676367044	tripleee	findapk(?!\.net)
 1676367688	tripleee	(?-i:Waseem Haider)
 1676370996	tripleee	octanetworks\.com
+1676371024	tripleee	technosoft
