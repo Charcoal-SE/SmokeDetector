@@ -2161,6 +2161,9 @@ items:
   - kara.ns.cloudflare.com.
   - phil.ns.cloudflare.com.
 - ns:
+  - kara.ns.cloudflare.com.
+  - rick.ns.cloudflare.com.
+- ns:
   - kareem.ns.cloudflare.com.
   - susan.ns.cloudflare.com.
 - ns:
