@@ -22435,7 +22435,6 @@
 1599842618	Xnero	hwrig\.com
 1599843373	Xnero	medzino\.com
 1599843390	Xnero	medzino(?!\.com)
-1599851369	Thomas Ward	apnews\.com
 1599860735	Machavity	1tpe\.net
 1599875352	user12986714	prudvihub\.blogspot
 1599848302	Mast	(?-i:b1b11a6ae95402e1151f600a1815d33b)(?#apnews)
