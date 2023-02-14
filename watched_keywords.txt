@@ -47658,3 +47658,4 @@
 1676371797	cigien	wowrfid\.com
 1676371837	cigien	wow[\W_]*+rfid(?!\.com(?<=wowrfid\.com))
 1676374596	tripleee	cappingmachines\.in
+1676374696	tripleee	siddhivinayak\d*
