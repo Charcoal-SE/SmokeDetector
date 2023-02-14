@@ -47648,3 +47648,4 @@
 1676361689	tripleee	(?-i:^John Gram$)
 1676361731	tripleee	mdatraining\.com
 1676361862	tripleee	s2smark\.com
+1676363260	tripleee	captchaai(?!\.com)
