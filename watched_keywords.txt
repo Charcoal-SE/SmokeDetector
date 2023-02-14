@@ -47676,3 +47676,4 @@
 1676385889	Spevacus	nbfire\.io
 1676389107	cigien	nbfire(?!\.io)
 1676398697	cigien	(?-i:asraful_ma)(?#fiverr)
+1676399353	cigien	ricardo\.jobs\.translation(?:@outlook\.com)?
