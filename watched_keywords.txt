@@ -47652,3 +47652,4 @@
 1676364471	Makyen	shakilshaikh007
 1676367012	tripleee	findapk\.net
 1676367044	tripleee	findapk(?!\.net)
+1676367688	tripleee	(?-i:Waseem Haider)
