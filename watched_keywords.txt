@@ -47699,3 +47699,4 @@
 1676458081	tripleee	fitnessmatters\.org
 1676458119	tripleee	U85100CH2011PTC033318(?# Indian CIN)
 1676458727	tripleee	insaaf99\.com
+1676458758	tripleee	insaaf[\W_]*+99(?!\.com(?<=insaaf99\.com))
