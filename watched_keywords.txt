@@ -47704,3 +47704,4 @@
 1676460282	Jeff Schaller	playfurn\.com
 1676461060	cigien	ashishgadewar125(?#medium)
 1676461417	cigien	campusconnect\.co\.za
+1676461448	cigien	campus[\W_]*+connect(?!\.co\.za(?<=campusconnect\.co\.za))
