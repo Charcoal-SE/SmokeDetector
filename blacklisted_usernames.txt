@@ -781,3 +781,4 @@ meta kukel exchange
 (?-i:^Optymize(?:Soham)?$)
 (?-i:^SEO Sh$)
 (?-i:^Bestdesign2hub$)
+(?-i:^happytrail$)
