@@ -779,3 +779,4 @@ meta kukel exchange
 ^KAMPANAT THUMWONG$
 (?-i:^Mellisa L\. Ambrose$)
 (?-i:^Optymize(?:Soham)?$)
+(?-i:^SEO Sh$)
