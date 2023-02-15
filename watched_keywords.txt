@@ -47702,3 +47702,4 @@
 1676458758	tripleee	insaaf[\W_]*+99(?!\.com(?<=insaaf99\.com))
 1676459731	Jeff Schaller	aasma\.co\.uk
 1676460282	Jeff Schaller	playfurn\.com
+1676461060	cigien	ashishgadewar125(?#medium)
