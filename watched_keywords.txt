@@ -47687,3 +47687,4 @@
 1676443561	tripleee	talenthue\.com
 1676443595	tripleee	talenthue(?!\.com)
 1676446024	cigien	10techdesign\.com
+1676446785	cigien	zicklincontracting\.com
