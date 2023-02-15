@@ -47686,3 +47686,4 @@
 1676440593	tripleee	red[\W_]*+boost[\W_]*+price
 1676440916	cocomac	blogggest\.com
 1676443561	tripleee	talenthue\.com
+1676443595	tripleee	talenthue(?!\.com)
