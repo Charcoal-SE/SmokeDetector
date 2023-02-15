@@ -47716,3 +47716,4 @@
 1676464750	cigien	kadambari[\W_]*+sangeet(?!\.com(?<=kadambarisangeet\.com))
 1676466136	blackgreen	solveerrors\.blogspot
 1676466699	tripleee	hightechcyberservices(?:[\_W]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1676467141	cigien	ibloggerz\.com
