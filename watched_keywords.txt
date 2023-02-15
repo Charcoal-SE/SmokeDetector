@@ -47714,3 +47714,4 @@
 1676464388	cigien	desertssafari\.com
 1676464538	cigien	deserts?+[\W_]*+safari(?!\.com(?<=desertssafari\.com))
 1676464750	cigien	kadambari[\W_]*+sangeet(?!\.com(?<=kadambarisangeet\.com))
+1676466136	blackgreen	solveerrors\.blogspot
