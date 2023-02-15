@@ -1204,6 +1204,9 @@ items:
   - oaklyn.ns.cloudflare.com.
 - ns:
   - damiete.ns.cloudflare.com.
+  - marlowe.ns.cloudflare.com.
+- ns:
+  - damiete.ns.cloudflare.com.
   - sandra.ns.cloudflare.com.
 - ns:
   - damon.ns.cloudflare.com.
