@@ -47688,3 +47688,4 @@
 1676443595	tripleee	talenthue(?!\.com)
 1676446024	cigien	10techdesign\.com
 1676446785	cigien	zicklincontracting\.com
+1676446820	cigien	zicklin[\W_]*+contracting(?!\.com(?<=zicklincontracting\.com))
