@@ -780,3 +780,4 @@ meta kukel exchange
 (?-i:^Mellisa L\. Ambrose$)
 (?-i:^Optymize(?:Soham)?$)
 (?-i:^SEO Sh$)
+(?-i:^Bestdesign2hub$)
