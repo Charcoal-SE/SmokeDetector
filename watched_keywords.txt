@@ -47709,3 +47709,4 @@
 1676463345	cigien	applify\.co
 1676463381	cigien	applify\.com\.sg
 1676463460	cigien	homebyraiya\.com
+1676463558	cigien	leomi(?!\.in)
