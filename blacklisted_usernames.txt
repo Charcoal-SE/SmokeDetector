@@ -778,3 +778,4 @@ meta kukel exchange
 (?-i:^GCC Web Hosting Dubai$)
 ^KAMPANAT THUMWONG$
 (?-i:^Mellisa L\. Ambrose$)
+(?-i:^Optymize(?:Soham)?$)
