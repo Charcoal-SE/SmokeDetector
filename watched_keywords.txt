@@ -47683,3 +47683,4 @@
 1676439509	tripleee	ambedkarrajaneethi\.com
 1676440065	tripleee	optymize(?!\.io)
 1676440537	cocomac	redboost-pro\.com
+1676440593	tripleee	red[\W_]*+boost[\W_]*+price
