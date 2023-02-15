@@ -882,6 +882,9 @@ items:
   - candy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
+  - carioca.ns.cloudflare.com.
+  - gabriel.ns.cloudflare.com.
+- ns:
   - carl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
 - ns:
