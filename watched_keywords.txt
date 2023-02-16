@@ -47729,3 +47729,4 @@
 1676529123	Cody Gray	(?:jack@)?compuco\.io
 1676531045	cigien	drowdry\.com
 1676535546	tripleee	kepala\.lol
+1676535629	tripleee	kepala[\W_]*+bergetar
