@@ -47737,3 +47737,4 @@
 1676543873	tripleee	(?-i:^soras12$)
 1676546811	tripleee	albelie\.in
 1676546841	tripleee	realcheckstubs\.com
+1676546948	tripleee	vle[\W_]*+bazaar
