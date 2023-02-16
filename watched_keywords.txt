@@ -47758,3 +47758,4 @@
 1676573439	cigien	techmonstercafe\.wordpress\.com
 1676573777	cigien	reblogit\.com
 1676573825	cigien	vicsandreas\.my\.id
+1676574269	cigien	(?-i:u2I3g1hBv3A)(?#youtu.be)
