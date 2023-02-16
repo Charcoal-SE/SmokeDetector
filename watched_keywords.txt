@@ -47723,3 +47723,4 @@
 1676491205	Cody Gray	bostonsightseeing\.us
 1676495614	Jesse	epatronus\.com
 1676525145	cigien	revolutionarydesigners\.com
+1676525179	cigien	revolutionary[\W_]*+designers(?!\.com(?<=revolutionarydesigners\.com))
