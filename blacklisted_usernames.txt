@@ -782,3 +782,4 @@ meta kukel exchange
 (?-i:^SEO Sh$)
 (?-i:^Bestdesign2hub$)
 (?-i:^happytrail$)
+(?-ii:^aipastroshop$)
