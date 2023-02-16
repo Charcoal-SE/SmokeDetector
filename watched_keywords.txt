@@ -47732,3 +47732,4 @@
 1676537879	cigien	signovagroup\.com
 1676537934	Cody Gray	micronutrients[\W_]*+for[\W_]*+plants
 1676538963	cigien	solrivercounseling\.com
+1676538998	cigien	solriver[\W_]*+counseling(?!\.com(?<=solrivercounseling\.com))
