@@ -47734,3 +47734,4 @@
 1676538963	cigien	solrivercounseling\.com
 1676538998	cigien	solriver[\W_]*+counseling(?!\.com(?<=solrivercounseling\.com))
 1676539316	tripleee	tweaklibrary\.com
+1676543873	tripleee	(?-i:^soras12$)
