@@ -47742,3 +47742,4 @@
 1676549205	cigien	infomazeelite\.com
 1676550172	tripleee	(?-i:^Shreesh005$)
 1676553311	tripleee	skyramtechnologies\.com
+1676553512	tripleee	skyram(?:[\W_]*+technologies(?!\.com(?<=skyramtechnologies\.com)))?
