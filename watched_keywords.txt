@@ -37150,7 +37150,6 @@
 1647945358	Cody Gray	interior[\W_]*designer[\W_]*in[\W_]*noida
 1647945496	Cody Gray	gosportsfantasy\.com
 1647945719	tripleee	bpautosparesindia\.com
-1647945789	Cody Gray	mahindra[\W_]*spare[\W_]*parts
 1647948189	Cody Gray	pakurangaliquorspot\.co\.nz
 1647948326	Cody Gray	bookunitedairlines\.com
 1647948373	Cody Gray	united[\W_]*airlines[\W_]*lost[\W_]*(?:and|&)[\W_]*found

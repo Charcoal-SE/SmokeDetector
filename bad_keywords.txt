@@ -2766,3 +2766,4 @@ lyon[\W_]*+lens
 barcelona[\W_]*+v[\W_]*+s[\W_]*+villarreal
 super[\W_]*+bowl(?:\W*+\w*+){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show)s?)+
 Industrietore aus dem Ruhrgebiet
+mahindra[\W_]*spare[\W_]*parts
