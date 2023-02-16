@@ -1672,6 +1672,9 @@ items:
   - fattouche.ns.cloudflare.com.
   - kristin.ns.cloudflare.com.
 - ns:
+  - fattouche.ns.cloudflare.com.
+  - stephane.ns.cloudflare.com.
+- ns:
   - felicity.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
