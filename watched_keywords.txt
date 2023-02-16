@@ -47754,3 +47754,4 @@
 1676568775	cigien	special\.oolatv\.com
 1676569398	Makyen	SheBelieves(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show|coverage)s?)+
 1676571419	cigien	myhero\.id
+1676571607	cigien	oasisguitar\.com
