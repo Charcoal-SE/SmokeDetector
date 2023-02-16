@@ -47752,3 +47752,4 @@
 1676564115	cigien	laptopteens\.tech
 1676564758	tripleee	fluratech\.com
 1676568775	cigien	special\.oolatv\.com
+1676569398	Makyen	SheBelieves(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show|coverage)s?)+
