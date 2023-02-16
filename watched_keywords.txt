@@ -46019,7 +46019,6 @@
 1672298833	Cody Gray	technogeekscs\.com
 1672301914	Cody Gray	(?-i:dQw4w9WgXcQ)(?# official RickRoll video on YouTube)
 1672302234	Cody Gray	honestbroker\.in
-1672302300	Cody Gray	industrietor-online\.de
 1672302440	Cody Gray	flats[\W_]*for[\W_]*(?:rent|sale)
 1672305523	Cody Gray	safarirentacar\.com\.pk
 1672306727	Cody Gray	adapitva\.com
