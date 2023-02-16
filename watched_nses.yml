@@ -2423,6 +2423,9 @@ items:
   - ned.ns.cloudflare.com.
 - ns:
   - lisa.ns.cloudflare.com.
+  - sam.ns.cloudflare.com.
+- ns:
+  - lisa.ns.cloudflare.com.
   - yew.ns.cloudflare.com.
 - ns:
   - liv.ns.cloudflare.com.
