@@ -47748,3 +47748,4 @@
 1676554016	tripleee	aaduki\.com
 1676563430	cigien	akademily\.de
 1676563514	cigien	bestprice-compare\.com
+1676563768	cigien	nightteer\.in
