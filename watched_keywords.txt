@@ -47755,3 +47755,4 @@
 1676569398	Makyen	SheBelieves(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show|coverage)s?)+
 1676571607	cigien	oasisguitar\.com
 1676573304	cigien	ieveeraseo
+1676573439	cigien	techmonstercafe\.wordpress\.com
