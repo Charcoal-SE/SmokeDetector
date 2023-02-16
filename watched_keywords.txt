@@ -47726,3 +47726,4 @@
 1676525179	cigien	revolutionary[\W_]*+designers(?!\.com(?<=revolutionarydesigners\.com))
 1676525533	cigien	vermadeals\.com
 1676525853	cigien	epatronus(?!\.com)
+1676526530	cigien	academictask\.com
