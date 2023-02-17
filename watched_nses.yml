@@ -3204,6 +3204,9 @@ items:
   - cns6003.bigrock.com.
   - cns6004.bigrock.com.
 - ns:
+  - cns6007.bigrock.com.
+  - cns6008.bigrock.com.
+- ns:
   - sns3.bigrock.com.
   - sns4.bigrock.com.
 - ns:
