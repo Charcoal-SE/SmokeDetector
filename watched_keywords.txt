@@ -47765,3 +47765,4 @@
 1676613406	tripleee	(?-i:W3H6LpR)(?# cutt.ly)
 1676613445	cigien	dubaitopakistancargo\.com
 1676615442	tripleee	(?-i:^neha afzal$)
+1676615897	tripleee	journalpulmonology\.org
