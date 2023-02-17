@@ -47779,3 +47779,4 @@
 1676627948	tripleee	tradinggamestrong\.com
 1676628295	cigien	trading[\W_]*+game[\W_]*+strong(?!\.com(?<=tradinggamestrong\.com))
 1676632056	cigien	culliganmiddleeast\.com
+1676632089	cigien	pmsltech\.com
