@@ -783,3 +783,4 @@ meta kukel exchange
 (?-i:^Bestdesign2hub$)
 (?-i:^happytrail$)
 (?-ii:^aipastroshop$)
+(?-i:^premierfilters$)
