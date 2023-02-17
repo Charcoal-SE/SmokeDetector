@@ -784,3 +784,4 @@ meta kukel exchange
 (?-i:^happytrail$)
 (?-ii:^aipastroshop$)
 (?-i:^premierfilters$)
+(?-i:^John Gram$)
