@@ -47762,3 +47762,4 @@
 1676584279	Makyen	hpam\.co\.id
 1676612867	cigien	vn88app\.mobi
 1676612984	cigien	tech-sonic\.us
+1676613370	cigien	appzsoft\.com
