@@ -35836,7 +35836,6 @@
 1644267521	Ollie	myblackmart\.com
 1644268372	Jeff Schaller	depositphotos\.com
 1644280675	Makyen	melloadvogados\.com\.br
-1644285736	cigien	triotechsoftwaretrainings\.com
 1644285802	cigien	trio[\W_]*+tech[\W_]*+software[\W_]*+trainings(?!\.com(?<=triotechsoftwaretrainings\.com))
 1644286232	cigien	d(?:octo)?r[\W_]*+osemudiamen
 1644298976	tripleee	mycryptogen\.xyz
