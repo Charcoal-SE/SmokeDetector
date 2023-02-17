@@ -47789,4 +47789,3 @@
 1676657577	Makyen	optimized[\W_]*+infotech(?!\.com(?<=optimizedinfotech\.com))
 1676659204	cigien	smartpuka\.com
 1676662077	Pilot6	cryptocoinstokens\.com
-1676662719	Glorfindel	cryptocoinstokens
