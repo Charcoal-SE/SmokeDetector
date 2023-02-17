@@ -1715,6 +1715,9 @@ items:
   - zoe.ns.cloudflare.com.
 - ns:
   - gail.ns.cloudflare.com.
+  - julio.ns.cloudflare.com.
+- ns:
+  - gail.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
   - galilea.ns.cloudflare.com.
