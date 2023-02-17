@@ -47775,3 +47775,4 @@
 1676621093	tripleee	(?-i:^Nakia1212$)
 1676623603	cigien	ficode\.co\.uk
 1676623636	cigien	ficode(?!\.co\.uk)
+1676624716	tripleee	techniclaunch\.net
