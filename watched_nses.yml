@@ -3761,7 +3761,9 @@ items:
 - ns: perfectdns.com.
 - ns: livedns.co.uk.
 - ns: managed-vps.net.
-- ns: your-server.de.
+- comment: dominantly FP, disabled 2023-02-17; also second-ns.com. second-ns.de. first-ns.com. first-ns.de.
+  disable: true
+  ns: your-server.de.
 - ns: bluehost.com.
 - ns: bluehost.in.
 - ns: dnsserverboot.com.
