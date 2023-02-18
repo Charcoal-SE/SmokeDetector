@@ -2768,4 +2768,3 @@ super[\W_]*+bowl(?:\W*+\w*+){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show)s?
 Industrietore aus dem Ruhrgebiet
 mahindra[\W_]*spare[\W_]*parts
 KEP-044/BL/MI/2006
-scotties[\W_]*+tournament(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream|free|broadcast|show)s?)+
