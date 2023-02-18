@@ -5097,3 +5097,4 @@ triotechsoftwaretrainings\.com
 curlingnetwork\.xyz
 curling\.oolatv\.com
 consultant(?<=\bconsultant)(?<![^\W_]-consultant)[\W_]*+(?:dot[\W_]*+)?com(?![.-][^\W_])\b
+tabletsquad\.com
