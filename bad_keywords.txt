@@ -2567,7 +2567,6 @@ cetpa[\W_]*+infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
 patialalegitimate515
 techie[\W_]*+(?:dot[\W_]*+)?com
-consultant[\W_]*+(?:dot[\W_]*+)?com
 amberlottotemple(?:@yahoo\.com)?
 quick[\W_]*+books[\W_]*+helpline
 dr[\W_]*+vinod[\W_]*+raina
@@ -2769,4 +2768,3 @@ Industrietore aus dem Ruhrgebiet
 mahindra[\W_]*spare[\W_]*parts
 KEP-044/BL/MI/2006
 scotties[\W_]*+tournament(?:\W++\w++){0,8}(?:[\W_]*+(?:live|stream|free|broadcast|show)s?)+
-Ramsay[\W_]*+MacDonald[\W_]*+(?:at[\W_]*+)?[\W_]*+consultant[\W_]*+(?:dot[\W_]*+)?com
