@@ -47799,3 +47799,4 @@
 1676695042	Makyen	elogns\.com
 1676695082	Makyen	paypalloginus
 1676702148	cigien	seoweboptions\.com
+1676702177	cigien	seo[\W_]*+web[\W_]*+options(?!\.com(?<=seoweboptions\.com))
