@@ -47801,3 +47801,4 @@
 1676702148	cigien	seoweboptions\.com
 1676702177	cigien	seo[\W_]*+web[\W_]*+options(?!\.com(?<=seoweboptions\.com))
 1676704967	cigien	skincenterofsouthmiami\.com
+1676705860	cigien	collegeraptor\.com
