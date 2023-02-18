@@ -47818,3 +47818,4 @@
 1676714442	cigien	(?-i:BqczsivHYOk)(?#youtu.be)
 1676714478	cigien	hindwareproducts\.com
 1676714618	cigien	hysupplies\.net
+1676715268	cigien	hindware[\W_]*+kitchen[\W_]*+ensemble
