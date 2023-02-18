@@ -47816,3 +47816,4 @@
 1676712054	Cody Gray	New[\W_]*+Horizons[\W_]*+001[\W_]*+(?:at[\W_]*+)?[\W_]*+aol[\W_]*+(?:dot[\W_]*+)?com
 1676712111	Cody Gray	singlequote\.blog
 1676714442	cigien	(?-i:BqczsivHYOk)(?#youtu.be)
+1676714478	cigien	hindwareproducts\.com
