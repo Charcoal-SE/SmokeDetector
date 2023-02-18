@@ -47821,3 +47821,4 @@
 1676715268	cigien	hindware[\W_]*+kitchen[\W_]*+ensemble
 1676717359	Cody Gray	hairstraightenertalk\.com
 1676717917	Cody Gray	pinloader\.net
+1676717954	Cody Gray	pinloader(?!\.net)
