@@ -47830,3 +47830,4 @@
 1676731583	Makyen	andrade(?:\W++\w++){0,4}[\W_]*+blanchfield(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
 1676733833	Cody Gray	live(?<=👉[\W_]*live)[\W_]*+stream
 1676737263	cigien	jenilghevariya\.blogspot
+1676737946	cigien	digistore24\.com
