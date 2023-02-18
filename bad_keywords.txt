@@ -1290,7 +1290,6 @@ premier[\W_]*+diet(?:[\W_]*+keto)?
 intelliboost[\W_]*+iq
 delhi[\W_]*+escorts?
 sphere[\W_]*+labs
-epson-printer(?!-utility)
 norton-setup
 luminary[\W_]*+v
 rose[\W_]*+diamond(?:[\W_]*+beauty)?
