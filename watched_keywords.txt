@@ -47807,3 +47807,4 @@
 1676706322	cigien	enterpriseidsolutions\.com
 1676706461	Cody Gray	College[\W_]*+Raptor(?!\.com(?<=collegeraptor\.com))
 1676706485	cigien	muhammadsami212\.blogspot
+1676707683	Cody Gray	vwins\.fun
