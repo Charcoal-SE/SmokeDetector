@@ -47812,3 +47812,4 @@
 1676708475	Cody Gray	unstop\.com
 1676708533	Cody Gray	Codeasthra
 1676710648	Cody Gray	Ramsay[\W_]*+MacDonald(?![\W_]*+(?:at[\W_]*+)?[\W_]*+consultant[\W_]*+(?:dot[\W_]*+)?com)
+1676711991	Cody Gray	bitcoin[\W_]*+scam
