@@ -47796,3 +47796,4 @@
 1676678403	Jeff Schaller	canada-curling-streams\.blogspot
 1676681853	Makyen	scotties[\W_]*+tournament[\W_]*+of[\W_]*+hearts
 1676685235	Jeff Schaller	curling\.oolatv\.com
+1676687221	doppelgreener	skin\.club
