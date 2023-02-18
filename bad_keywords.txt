@@ -2770,3 +2770,4 @@ scotties[\W_]*+tournament(?:\W++\w++){0,8}(?:[\W_]*+(?:live|stream|free|broadcas
 (?<!Ramsay[\W_]*+MacDonald[\W_]*+(?:at[\W_]*+)?[\W_]*+)consultant[\W_]*+(?:dot[\W_]*+)?com
 (?-i:9zs9fwwh)(?# tinyurl)
 epson[\W_]*+printer[\W_]*+(?!-utility)(?:is[\W_]*+)?offline
+(?-i:epson-printer(?!-utility))
