@@ -2725,7 +2725,7 @@ group[\W_]*+booking[\W_]*+number
 (?-i:MO30KEY)
 (?-i:3GP8Mg1)(?# bit.ly)
 click[\W_]*+here[\W_]*+to[\W_]*+complete[\W_]*+your[\W_]*+application
-[rRrʀԻᏒᚱＲｒ][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ][dDdĎďĐđԁժᎠḍⅮⅾＤｄ][iIilɩΙІіاᎥᛁⅠⅰ𐐠𰰠Ｉｉ][rRrʀԻᏒᚱＲｒ](?=[/／/̸⁄∕╱⫻⫽／ﾉ])(?<=[/／/̸⁄∕╱⫻⫽／ﾉ][rRrʀԻᏒᚱＲｒ][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ][dDdĎďĐđԁժᎠḍⅮⅾＤｄ][iIilɩΙІіاᎥᛁⅠⅰ𐐠𰰠Ｉｉ][rRrʀԻᏒᚱＲｒ])(?<!linkedin\.com/redir)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+[rRrʀԻᏒᚱＲｒ\U0001d42b][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ\U0001d41e][dDdĎďĐđԁժᎠḍⅮⅾＤｄ\U0001d41d][iIilɩΙІіاᎥᛁⅠⅰ𐐠𰰠Ｉｉ\U0001d422][rRrʀԻᏒᚱＲｒ\U0001d42b](?=[/／/̸⁄∕╱⫻⫽／ﾉ])(?<=[/／/̸⁄∕╱⫻⫽／ﾉ][rRrʀԻᏒᚱＲｒ\U0001d42b][eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ\U0001d41e][dDdĎďĐđԁժᎠḍⅮⅾＤｄ\U0001d41d][iIilɩΙІіاᎥᛁⅠⅰ𐐠𰰠Ｉｉ\U0001d422][rRrʀԻᏒᚱＲｒ\U0001d42b])(?<!linkedin\.com/redir)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 ufabet
 anchor[\W_]*fonts(?!\.com(?<=anchorfonts\.com))
 controlf5(?!\.in)
