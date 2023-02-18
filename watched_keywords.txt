@@ -47805,3 +47805,4 @@
 1676706053	cigien	chaturbate(?!\.com)
 1676706279	cigien	primeclickmedia\.com
 1676706322	cigien	enterpriseidsolutions\.com
+1676706461	Cody Gray	College[\W_]*+Raptor(?!\.com(?<=collegeraptor\.com))
