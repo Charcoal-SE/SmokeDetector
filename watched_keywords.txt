@@ -47842,3 +47842,4 @@
 1676810162	cigien	prism[\W_]*+gate
 1676816369	Makyen	documentseu\.com
 1676816433	Makyen	(?-i:Buyrealdocumentsonline2023)(?#t.me)
+1676816884	Makyen	insert-koin\.io
