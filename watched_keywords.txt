@@ -47838,3 +47838,4 @@
 1676792858	Cody Gray	^levi[\W_]*+athan$
 1676796095	cigien	btecz\.com
 1676801090	cigien	ozgurhaberler\.com
+1676804856	cigien	flash-speed\.com
