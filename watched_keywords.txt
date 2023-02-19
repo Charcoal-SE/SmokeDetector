@@ -47839,3 +47839,4 @@
 1676796095	cigien	btecz\.com
 1676801090	cigien	ozgurhaberler\.com
 1676804856	cigien	flash-speed\.com
+1676810162	cigien	prism[\W_]*+gate
