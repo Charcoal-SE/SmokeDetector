@@ -47849,3 +47849,4 @@
 1676825559	cigien	reclaim[\W_]*+my[\W_]*+losses(?!\.com(?<=reclaimmylosses\.com))
 1676826538	cigien	incryptobaba\.com
 1676836873	Makyen	ahsaasprogram\.pk
+1676843994	Ethan	chapter12lawyer\.com
