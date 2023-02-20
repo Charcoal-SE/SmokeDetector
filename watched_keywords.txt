@@ -47866,3 +47866,4 @@
 1676875640	cigien	sprint[\W_]*+verify
 1676876717	cigien	instazoom\.cc
 1676878516	cigien	sbcglobal\.net
+1676881916	cigien	sgurrenergy\.com
