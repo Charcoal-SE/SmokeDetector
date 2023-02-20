@@ -47880,3 +47880,4 @@
 1676895219	cigien	gulsheryousaf\.blogspot
 1676896737	cigien	danteanthonyvitoria\.livepositively\.com
 1676896777	cigien	dante[\W_]*+anthony[\W_]*+vitoria(?!\.livepositively\.com(?<=danteanthonyvitoria\.livepositively\.com))
+1676908342	Makyen	gururamah\.my\.id
