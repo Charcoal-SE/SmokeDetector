@@ -47860,3 +47860,4 @@
 1676869997	cigien	chapter[\W_]*+12[\W_]*+lawyer(?!\.com(?<=chapter12lawyer\.com))
 1676870293	cigien	apkaone\.com
 1676872861	cocomac	seodigitz\.com
+1676873923	cigien	magazinehike\.com
