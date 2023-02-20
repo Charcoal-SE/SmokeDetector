@@ -47859,3 +47859,4 @@
 1676862074	Makyen	flappy-bird\.io
 1676869997	cigien	chapter[\W_]*+12[\W_]*+lawyer(?!\.com(?<=chapter12lawyer\.com))
 1676870293	cigien	apkaone\.com
+1676872861	cocomac	seodigitz\.com
