@@ -47890,3 +47890,4 @@
 1676921561	Ethan	extract-audio\.com
 1676921370	Ethan	bitpointofsale\.com
 1676923893	Makyen	\d*+takamall[\W_]*+loan
+1676927324	Makyen	amanda\.mihnovich@united\.com
