@@ -47871,3 +47871,4 @@
 1676881994	cigien	(?-i:b8e147dce6)(?#fiverr)
 1676882564	cigien	nftconstructer\.com
 1676882602	cigien	mskeydeals\.com
+1676882635	cigien	mskeydeals(?!\.com)
