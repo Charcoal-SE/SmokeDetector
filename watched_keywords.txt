@@ -47868,3 +47868,4 @@
 1676878516	cigien	sbcglobal\.net
 1676881916	cigien	sgurrenergy\.com
 1676881951	cigien	sgurrenergy(?!\.com)
+1676881994	cigien	(?-i:b8e147dce6)(?#fiverr)
