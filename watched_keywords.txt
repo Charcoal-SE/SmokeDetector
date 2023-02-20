@@ -47889,4 +47889,3 @@
 1676920376	Makyen	dreamyworldinfo\.com
 1676921561	Ethan	extract-audio\.com
 1676921370	Ethan	bitpointofsale\.com
-1676923747	Makyen	takamall[\W_]*+loan
