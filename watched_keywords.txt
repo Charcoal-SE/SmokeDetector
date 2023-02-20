@@ -47867,3 +47867,4 @@
 1676876717	cigien	instazoom\.cc
 1676878516	cigien	sbcglobal\.net
 1676881916	cigien	sgurrenergy\.com
+1676881951	cigien	sgurrenergy(?!\.com)
