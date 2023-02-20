@@ -47872,3 +47872,4 @@
 1676882564	cigien	nftconstructer\.com
 1676882602	cigien	mskeydeals\.com
 1676882635	cigien	mskeydeals(?!\.com)
+1676890611	Makyen	lancashireshoulderclinic\.co\.uk
