@@ -1905,7 +1905,7 @@ body[\W_]*+start[\W_]*+keto
 keto[\W_]*+extra[\W_]*+strength
 https-walgreensdiet-com
 control[\W_]*+x[\W_]*+keto(?:[\W_]*+(?:review|web|fit|\d++)s?)*(?!\.aircus\.com(?<=controlxketoreview\.aircus\.com))(?!\.bravesites\.com(?<=controlxketoweb\.bravesites\.com))(?!-x-keto\.jigsy\.com(?<=control-x-keto\.jigsy\.com))(?!\.health\.blog(?<=controlxketoreview\.health\.blog))
-abrielle(?:[\W_]*+(?:ageless|face|cream|\d+))*
+abrielle(?:[\W_]*+(?:ageless|face|cream|hydrating|moisturizer))+
 res[\W_]*+v[\W_]*+1000
 top[\W_]*+organic[\W_]*+keto
 prime[\W_]*+time[\W_]*+boost(?:[\W_]*+(?:testosterone|\d++))*
