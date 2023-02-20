@@ -47864,3 +47864,4 @@
 1676874672	cigien	astrologerpuneet\.com
 1676874707	cigien	astrologer[\W_]*+puneet(?!\.com(?<=astrologerpuneet\.com))
 1676875640	cigien	sprint[\W_]*+verify
+1676876717	cigien	instazoom\.cc
