@@ -47891,3 +47891,4 @@
 1676921370	Ethan	bitpointofsale\.com
 1676923893	Makyen	\d*+takamall[\W_]*+loan
 1676927324	Makyen	amanda\.mihnovich@united\.com
+1676929694	Nisse Engström	blacksheepfoods\.com
