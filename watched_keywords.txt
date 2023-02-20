@@ -47862,3 +47862,4 @@
 1676872861	cocomac	seodigitz\.com
 1676873923	cigien	magazinehike\.com
 1676874672	cigien	astrologerpuneet\.com
+1676874707	cigien	astrologer[\W_]*+puneet(?!\.com(?<=astrologerpuneet\.com))
