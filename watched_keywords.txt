@@ -47869,3 +47869,4 @@
 1676881916	cigien	sgurrenergy\.com
 1676881951	cigien	sgurrenergy(?!\.com)
 1676881994	cigien	(?-i:b8e147dce6)(?#fiverr)
+1676882564	cigien	nftconstructer\.com
