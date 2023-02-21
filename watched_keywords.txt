@@ -45430,7 +45430,6 @@
 1670259780	Makyen	teds-list\.com
 1670266206	Jeff Schaller	businessleadsworld\.com
 1670269305	Jeff Schaller	jobsforhealth\.com
-1670269955	Makyen	syncfusion\.com
 1670295452	Jeff Schaller	provipgroup\.com
 1670301520	Makyen	cargomurah\.id
 1670306215	cigien	itechbrand\.com
