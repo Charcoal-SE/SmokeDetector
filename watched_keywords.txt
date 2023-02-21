@@ -47906,3 +47906,4 @@
 1676961167	Cody Gray	Elite[\W_]*+Travels?(?!\.co\.uk(?<=elitetravels\.co\.uk))
 1676964448	Cody Gray	(?:ej2|help)\.syncfusion\.com
 1676969418	cigien	thelightroomapk\.com
+1676969450	cigien	emobucket\.com
