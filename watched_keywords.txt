@@ -47922,3 +47922,4 @@
 1676998896	cigien	word-counter\.app
 1676998955	cigien	strengthscape(?!\.com)
 1676999110	cigien	shadowwebb16(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1676999143	cigien	gadezzat22\.blogspot
