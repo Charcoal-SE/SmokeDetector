@@ -47902,3 +47902,4 @@
 1676957344	cigien	hackerspytech(?:[_W]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1676958258	cigien	mraviteja9949\.medium\.com
 1676958293	cigien	RaviTejaMureboina(?#youtube)
+1676959769	Cody Gray	nadula(?!\.com)[\W_]*+hair
