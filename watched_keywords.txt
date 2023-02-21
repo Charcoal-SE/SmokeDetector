@@ -47896,3 +47896,4 @@
 1676950311	Makyen	e-idp\.co\.uk
 1676952408	cigien	(?-i:FQr7e36ic5N6vMD27)(?#google forms)
 1676953452	cigien	1media-en\.com
+1676954858	cocomac	coronajunkpm\.com
