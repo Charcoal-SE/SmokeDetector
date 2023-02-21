@@ -47904,3 +47904,4 @@
 1676959769	Cody Gray	nadula(?!\.com)[\W_]*+hair
 1676961100	Cody Gray	elitetravels\.co\.uk
 1676961167	Cody Gray	Elite[\W_]*+Travels?(?!\.co\.uk(?<=elitetravels\.co\.uk))
+1676964448	Cody Gray	(?:ej2|help)\.syncfusion\.com
