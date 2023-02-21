@@ -47919,3 +47919,4 @@
 1676998637	cigien	triotechsystems\.com
 1676998761	cigien	code[\W_]*+inbound(?!\.com(?<=codeinbound\.com))
 1676998835	cigien	offroadscare\.com
+1676998896	cigien	word-counter\.app
