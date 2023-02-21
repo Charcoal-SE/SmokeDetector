@@ -13,8 +13,8 @@ Dr\.? Madonna
 Pro Max
 defort essid
 radlelgl
-Anonymous\WTeacher
-Satyajay\WMandal
+^Anonymous[\W_]*+Teacher$
+^Satyajay[\W_]*+Mandal$
 fujihdmanufacturer
 Skybridge Infotech
 SenPerfect
