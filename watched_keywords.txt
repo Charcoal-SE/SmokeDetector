@@ -47977,3 +47977,4 @@
 1677088149	Makyen	drkachispellcast(?:@gmail\.com)?
 1677088182	Makyen	d(?:octo)?r[\W_]*+kachi
 1677089904	Spevacus	lenzostudio\.ir
+1677101087	Spevacus	renvations\.com
