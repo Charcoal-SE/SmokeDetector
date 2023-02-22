@@ -5100,3 +5100,4 @@ consultant(?<=\bconsultant)(?<![^\W_]-consultant)[\W_]*+(?:dot[\W_]*+)?com(?![.-
 tabletsquad\.com
 printerisoffline\.com
 thecircle360\.mn\.co
+pyramidions\.com

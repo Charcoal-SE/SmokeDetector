@@ -30063,7 +30063,6 @@
 1625030841	Cody Gray	germansolarpower\.com\.au
 1625031250	cigien	trick-vault\.blogspot
 1625031309	Cody Gray	banithanijewelry\.com
-1625031603	cigien	pyramidions\.com
 1625031622	cigien	amaznprimeau\.com
 1625031976	tripleee	storedprocs\.com
 1625035762	tripleee	stechmpv\.xyz
