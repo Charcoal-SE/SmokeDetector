@@ -47945,3 +47945,4 @@
 1677050916	Makyen	e-startupindia\.com
 1677055026	Makyen	vendekin\.com
 1677055058	Makyen	hdcablegroup\.com
+1677055388	Makyen	vendekin(?!\.com(?<=vendekin\.com))(?:[\W_]*+(?:technolog(?:y|ies)|pvt|ltd))*
