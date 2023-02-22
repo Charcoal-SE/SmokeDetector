@@ -47956,3 +47956,4 @@
 1677059252	cigien	hdcarmouredcable\.com
 1677059324	cigien	susanjeevanihospital\.in
 1677059355	cigien	susanjeevani[\W_]*+hospital(?!\.in(?<=susanjeevanihospital\.in))
+1677059544	cigien	cinema\.go-stream\.net
