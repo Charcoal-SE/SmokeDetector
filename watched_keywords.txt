@@ -47944,3 +47944,4 @@
 1677050875	Makyen	streaming\.tvstream\.biz
 1677050916	Makyen	e-startupindia\.com
 1677055026	Makyen	vendekin\.com
+1677055058	Makyen	hdcablegroup\.com
