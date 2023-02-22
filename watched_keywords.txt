@@ -47947,3 +47947,4 @@
 1677055058	Makyen	hdcablegroup\.com
 1677055388	Makyen	vendekin(?!\.com(?<=vendekin\.com))(?:[\W_]*+(?:technolog(?:y|ies)|pvt|ltd))*
 1677055624	Cody Gray	florafountain\.com
+1677055675	Cody Gray	Flora[\W_]*+Fountain(?!\.com(?<=florafountain\.com))
