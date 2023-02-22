@@ -47950,3 +47950,4 @@
 1677055675	Cody Gray	Flora[\W_]*+Fountain(?!\.com(?<=florafountain\.com))
 1677056709	Makyen	apexhospitals\.com
 1677056749	Makyen	apex[\W_]*+hospitals
+1677057415	Cody Gray	OpenCEX
