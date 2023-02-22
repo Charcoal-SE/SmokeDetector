@@ -47932,3 +47932,4 @@
 1677010122	Glorfindel	smp\W*clipping\W*path
 1677023110	Ethan	danhgiasan\.vn
 1677027220	Makyen	graver_robot
+1677027253	Makyen	graver\.pw
