@@ -47975,3 +47975,4 @@
 1677076224	Spevacus	infinitivehost\.com
 1677082460	Spevacus	s3-console\.danceparty\.online
 1677088149	Makyen	drkachispellcast(?:@gmail\.com)?
+1677088182	Makyen	d(?:octo)?r[\W_]*+kachi
