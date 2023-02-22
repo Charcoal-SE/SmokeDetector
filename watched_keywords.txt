@@ -47961,3 +47961,4 @@
 1677059630	cigien	marketingfundas\.com
 1677059693	cigien	raachotrekkers\.com
 1677060324	cigien	jasmin[\W_]*+organics(?!\.com(?<=jasminorganics\.com))
+1677060577	cigien	digibones\.com
