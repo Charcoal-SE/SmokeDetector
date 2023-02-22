@@ -47934,3 +47934,4 @@
 1677027220	Makyen	graver_robot
 1677027253	Makyen	graver\.pw
 1677027281	Makyen	graver_pw
+1677027428	Makyen	darkmoney\.lc
