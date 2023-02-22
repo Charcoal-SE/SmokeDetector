@@ -47952,3 +47952,4 @@
 1677056749	Makyen	apex[\W_]*+hospitals
 1677057415	Cody Gray	OpenCEX
 1677057735	cigien	simenmetal\.com
+1677058673	Cody Gray	monseftasadofi\.com
