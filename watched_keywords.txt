@@ -47955,3 +47955,4 @@
 1677058673	Cody Gray	monseftasadofi\.com
 1677059252	cigien	hdcarmouredcable\.com
 1677059324	cigien	susanjeevanihospital\.in
+1677059355	cigien	susanjeevani[\W_]*+hospital(?!\.in(?<=susanjeevanihospital\.in))
