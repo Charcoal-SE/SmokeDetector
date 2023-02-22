@@ -1591,7 +1591,6 @@ technicalsupporttollfree\.co
 slim4vit
 prime[\W_]*+skin
 thermo\W*+sculpt(?:\W*+pro)?
-puria(?!\W*+hadinejad|\W*+developer|\W*+jahanbani)
 alpha[\W_]*+titan(?:[\W_]*+(?:testo|canada|scam|\d++|[\da-f]{4,}+)s?)*
 le\W*+salle(?:\W*+cream)?
 (?:active\W*+)?revitalizing\W*+moisturizer
