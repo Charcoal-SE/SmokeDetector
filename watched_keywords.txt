@@ -48015,3 +48015,4 @@
 1677154417	tripleee	commercialnoida\.com
 1677154534	tripleee	𝐝𝐢𝐠𝐢𝐬𝐭𝐨𝐫𝐞𝟐𝟒\.𝐜𝐨𝐦
 1677154596	tripleee	aussiepokiesclub\.com
+1677154997	tripleee	team[\W_]*+captcha[\W_]*+ai
