@@ -48007,3 +48007,4 @@
 1677147261	cigien	smartminibushire\.co\.uk
 1677147296	cigien	puneescortstars\.com
 1677147328	cigien	giftshabibi\.com
+1677147363	cigien	gifts[\W_]*+habibi(?!\.com(?<=giftshabibi\.com))
