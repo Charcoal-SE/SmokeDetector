@@ -48035,3 +48035,4 @@
 1677174151	cigien	codegpl\.online
 1677174503	cigien	(?-i:dataentrysmm01)(?#fiverr)
 1677174536	cigien	mariazabethloanofficer(?:@gmail\.com)?
+1677178833	cigien	blog\.renatolucena\.net
