@@ -494,6 +494,9 @@ items:
   - rachel.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
+  - sharon.ns.cloudflare.com.
+- ns:
+  - aragorn.ns.cloudflare.com.
   - suzanne.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
