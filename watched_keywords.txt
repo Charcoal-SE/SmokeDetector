@@ -47997,3 +47997,4 @@
 1677131969	cigien	oyun[\W_]*+clubnet(?!\.com(?<=oyunclubnet\.com))
 1677133330	cigien	toolshippo\.net
 1677133377	cigien	gowsalyafencing\.com
+1677133881	cigien	velassociates\.in
