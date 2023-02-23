@@ -820,6 +820,9 @@ items:
   - dalary.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
+  - emily.ns.cloudflare.com.
+- ns:
+  - brian.ns.cloudflare.com.
   - wally.ns.cloudflare.com.
 - ns:
   - brianna.ns.cloudflare.com.
