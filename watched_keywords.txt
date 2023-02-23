@@ -48021,3 +48021,4 @@
 1677156572	tripleee	saya[\W_]*+status
 1677157158	cigien	fignel\.com
 1677157411	cigien	notability\.com
+1677157534	cigien	a2zfitnesshub\.com
