@@ -47978,3 +47978,4 @@
 1677088182	Makyen	d(?:octo)?r[\W_]*+kachi
 1677089904	Spevacus	lenzostudio\.ir
 1677101087	Spevacus	renvations\.com
+1677126171	Makyen	0xcb647227d06a403a5726814e5ef9bb8a06baabc9
