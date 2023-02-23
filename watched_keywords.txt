@@ -47989,3 +47989,4 @@
 1677129855	cigien	mindmentorz\.in
 1677129886	cigien	mind[\W_]*+mentorz(?!\.in(?<=mindmentorz\.in))
 1677131157	cigien	fantasy44(?!\.com)
+1677131224	cigien	semawur\.com
