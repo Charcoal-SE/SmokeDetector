@@ -47983,3 +47983,4 @@
 1677127655	Makyen	idexbiometrics\.com
 1677127688	Makyen	idex[\W_]*+biometrics(?!\.com(?<=idexbiometrics\.com))
 1677128860	cigien	burgerspotplymouth\.com
+1677129169	Makyen	burgerspot[\W_]*+plymouth(?!\.com(?<=burgerspotplymouth\.com))
