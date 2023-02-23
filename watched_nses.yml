@@ -1970,6 +1970,9 @@ items:
   - jerome.ns.cloudflare.com.
 - ns:
   - isla.ns.cloudflare.com.
+  - noah.ns.cloudflare.com.
+- ns:
+  - isla.ns.cloudflare.com.
   - quinton.ns.cloudflare.com.
 - ns:
   - ivy.ns.cloudflare.com.
