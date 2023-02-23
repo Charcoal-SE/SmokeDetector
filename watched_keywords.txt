@@ -48017,3 +48017,4 @@
 1677154997	tripleee	team[\W_]*+captcha[\W_]*+ai
 1677155149	tripleee	skylerkitchens\.com
 1677156328	tripleee	ways[\W_]*+to[\W_]*+make[\W_]*+money
+1677156497	tripleee	m3mnoida\.com
