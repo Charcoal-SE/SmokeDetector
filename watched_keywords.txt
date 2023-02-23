@@ -48030,3 +48030,4 @@
 1677160395	tripleee	oneclicktravel\.in
 1677160439	tripleee	one[\W_]*+click[\W_]*+travel(?!\.in(?<=oneclicktravel\.in))
 1677164452	Jeff Schaller	clicksuds\.me
+1677170614	Makyen	aadvik[\W_]*+foods(?!\.com(?<=aadvikfoods\.com))
