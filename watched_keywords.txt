@@ -48027,3 +48027,4 @@
 1677158001	cigien	aussiepokiesclub(?!\.com)
 1677159857	tripleee	whitecannon\.com
 1677159891	tripleee	white[\W_]*+cannon(?!\.com(?<=whitecannon\.com))
+1677160395	tripleee	oneclicktravel\.in
