@@ -48033,3 +48033,4 @@
 1677170645	Spevacus	fireworkswad\.com
 1677171730	cigien	applogz(?!\.com)(?!\.medium\.com)
 1677174151	cigien	codegpl\.online
+1677174503	cigien	(?-i:dataentrysmm01)(?#fiverr)
