@@ -48010,3 +48010,4 @@
 1677147363	cigien	gifts[\W_]*+habibi(?!\.com(?<=giftshabibi\.com))
 1677147389	cigien	ysdpowersupply\.com
 1677147769	cigien	enablegeek\.com
+1677148053	cigien	atlasiko\.com
