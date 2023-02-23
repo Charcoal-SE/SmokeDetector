@@ -48028,3 +48028,4 @@
 1677159857	tripleee	whitecannon\.com
 1677159891	tripleee	white[\W_]*+cannon(?!\.com(?<=whitecannon\.com))
 1677160395	tripleee	oneclicktravel\.in
+1677160439	tripleee	one[\W_]*+click[\W_]*+travel(?!\.in(?<=oneclicktravel\.in))
