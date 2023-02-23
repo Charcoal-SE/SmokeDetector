@@ -2387,6 +2387,9 @@ items:
   - melina.ns.cloudflare.com.
 - ns:
   - leo.ns.cloudflare.com.
+  - oakley.ns.cloudflare.com.
+- ns:
+  - leo.ns.cloudflare.com.
   - pearl.ns.cloudflare.com.
 - ns:
   - leonard.ns.cloudflare.com.
