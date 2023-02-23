@@ -47991,3 +47991,4 @@
 1677131157	cigien	fantasy44(?!\.com)
 1677131224	cigien	semawur\.com
 1677131296	cigien	birlaopenminds\.com
+1677131339	cigien	birla[\W_]*+open[\W_]*+minds(?!\.com(?<=birlaopenminds\.com))
