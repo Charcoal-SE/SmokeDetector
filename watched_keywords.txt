@@ -48002,3 +48002,4 @@
 1677135417	cigien	applogz\.com
 1677135451	cigien	applogz\.medium\.com
 1677135482	cigien	applogz(?!\.com)
+1677136080	cigien	rummycue\.com
