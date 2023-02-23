@@ -785,3 +785,4 @@ meta kukel exchange
 (?-ii:^aipastroshop$)
 (?-i:^premierfilters$)
 (?-i:^John Gram$)
+(?-i:^buydoublepills$)
