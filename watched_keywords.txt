@@ -4597,7 +4597,6 @@
 1534929881	tripleee	quickensupportsnumber\.com
 1534926970	Shree	makefast\.us
 1534930270	tripleee	notron-setup\.download
-1534936019	tripleee	swaragh\.com
 1534942223	tripleee	dharmalife\.info
 1534944010	tripleee	rahulkapoor\.in
 1534956255	WELZ	Anti\W?Monkey\W?Butt
