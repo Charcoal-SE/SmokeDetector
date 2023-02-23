@@ -47996,3 +47996,4 @@
 1677131526	cigien	yellowpages\.ae
 1677131969	cigien	oyun[\W_]*+clubnet(?!\.com(?<=oyunclubnet\.com))
 1677133330	cigien	toolshippo\.net
+1677133377	cigien	gowsalyafencing\.com
