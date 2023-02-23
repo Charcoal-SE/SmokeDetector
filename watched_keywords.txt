@@ -47994,3 +47994,4 @@
 1677131339	cigien	birla[\W_]*+open[\W_]*+minds(?!\.com(?<=birlaopenminds\.com))
 1677131498	Makyen	5f13602cebee8a7379ac0103
 1677131526	cigien	yellowpages\.ae
+1677131969	cigien	oyun[\W_]*+clubnet(?!\.com(?<=oyunclubnet\.com))
