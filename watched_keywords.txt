@@ -47985,3 +47985,4 @@
 1677128860	cigien	burgerspotplymouth\.com
 1677129169	Makyen	burgerspot[\W_]*+plymouth(?!\.com(?<=burgerspotplymouth\.com))
 1677129617	cigien	psolver9\.blogspot
+1677129681	cigien	cbd(?:[\W_]*+by)?[\W_]*+cosmo
