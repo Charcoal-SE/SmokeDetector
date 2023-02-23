@@ -47987,3 +47987,4 @@
 1677129617	cigien	psolver9\.blogspot
 1677129681	cigien	cbd(?:[\W_]*+by)?[\W_]*+cosmo
 1677129855	cigien	mindmentorz\.in
+1677129886	cigien	mind[\W_]*+mentorz(?!\.in(?<=mindmentorz\.in))
