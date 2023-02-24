@@ -48048,3 +48048,4 @@
 1677210760	Makyen	easywebsolutions\.com
 1677210805	Makyen	easy[\W_]*+web[\W_]*+solution(?!s\.com(?<=easywebsolutions\.com))s?
 1677216635	cigien	lovelcute\.com
+1677217050	cigien	cbackup\.com
