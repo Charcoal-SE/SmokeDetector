@@ -48060,3 +48060,4 @@
 1677240171	cigien	lowtickets\.com
 1677240710	cigien	onlinestrikers\.com
 1677240758	cigien	thegauging\.com
+1677240892	cigien	ev-lectron\.com
