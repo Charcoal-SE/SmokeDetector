@@ -48069,3 +48069,4 @@
 1677247589	tripleee	syscon[\W_]*+tech(?!\.com(?<=syscon-tech\.com))
 1677252207	cigien	(?-i:mavgJMOqy80)(?#youtu.be)
 1677253200	cigien	banshimedicare\.com
+1677253235	cigien	banshi[\W_]*+medicare(?!\.com(?<=banshimedicare\.com))
