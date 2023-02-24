@@ -48059,3 +48059,4 @@
 1677230461	tripleee	top[\W_]*+(?:\d+|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|twenty)[\W_]*+benefits
 1677240171	cigien	lowtickets\.com
 1677240710	cigien	onlinestrikers\.com
+1677240758	cigien	thegauging\.com
