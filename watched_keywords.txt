@@ -48066,3 +48066,4 @@
 1677241188	cigien	(?-i:qPla5yhave)(?#fiverr)
 1677242274	Jeff Schaller	syscon-tech\.com
 1677247553	tripleee	kiltsformen\.us
+1677247589	tripleee	syscon[\W_]*+tech(?!\.com(?<=syscon-tech\.com))
