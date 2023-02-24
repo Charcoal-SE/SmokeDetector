@@ -48068,3 +48068,4 @@
 1677247553	tripleee	kiltsformen\.us
 1677247589	tripleee	syscon[\W_]*+tech(?!\.com(?<=syscon-tech\.com))
 1677252207	cigien	(?-i:mavgJMOqy80)(?#youtu.be)
+1677253200	cigien	banshimedicare\.com
