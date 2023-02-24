@@ -48070,3 +48070,4 @@
 1677252207	cigien	(?-i:mavgJMOqy80)(?#youtu.be)
 1677253200	cigien	banshimedicare\.com
 1677253235	cigien	banshi[\W_]*+medicare(?!\.com(?<=banshimedicare\.com))
+1677266197	Makyen	tubeadverts\.co\.uk
