@@ -48092,3 +48092,4 @@
 1677331782	cigien	aw[\W_]*+fashions
 1677336781	cigien	movienews\.filmplay\.me
 1677342565	cigien	starshindibio\.in
+1677342822	cigien	calendarbridge\.com
