@@ -48090,3 +48090,4 @@
 1677328432	cigien	qnabuddy\.com
 1677331569	cigien	scentido\.com
 1677331782	cigien	aw[\W_]*+fashions
+1677336781	cigien	movienews\.filmplay\.me
