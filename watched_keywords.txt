@@ -48085,3 +48085,4 @@
 1677315375	Glorfindel	techgadgetshqq\.blogspot
 1677315835	Ryan M	baristeelrack\.com
 1677319038	Ryan M	preshacleaning\.com\.au
+1677326076	Cody Gray	BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
