@@ -48086,3 +48086,4 @@
 1677315835	Ryan M	baristeelrack\.com
 1677319038	Ryan M	preshacleaning\.com\.au
 1677326076	Cody Gray	BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
+1677326118	Cody Gray	hashvizard\.blogspot
