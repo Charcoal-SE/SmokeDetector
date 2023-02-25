@@ -48079,3 +48079,4 @@
 1677283853	Makyen	d(?:octo)?r[\W_]*+kendis
 1677283885	Makyen	drkendisherbalhome\.simdif\.com
 1677282485	Vickel	nextjs-app\.com
+1677283223	Vickel	drkendisherbalhome\.simdif\.com
