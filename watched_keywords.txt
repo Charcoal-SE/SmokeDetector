@@ -48077,3 +48077,4 @@
 1677275402	Makyen	sinuano[\W_]*+noche(?!\.org(?<=sinuanonoche\.org))
 1677276173	Makyen	jackpotwala\.in
 1677283853	Makyen	d(?:octo)?r[\W_]*+kendis
+1677283885	Makyen	drkendisherbalhome\.simdif\.com
