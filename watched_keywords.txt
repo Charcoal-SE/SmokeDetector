@@ -48121,3 +48121,4 @@
 1677429988	Makyen	irclickid=&irgwc=1(?#wander.com potential affiliate indicator)
 1677430337	cigien	alivetechno\.com
 1677435408	Mast	aceofpubs\.com
+1677435490	Makyen	asocks\.com(?<=\basocks\.com)(?<![^\W_]-asocks\.com)(?![.-][^\W_])(?=\b)
