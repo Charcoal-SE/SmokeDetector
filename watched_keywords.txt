@@ -48123,3 +48123,4 @@
 1677435408	Mast	aceofpubs\.com
 1677435490	Makyen	asocks\.com(?<=\basocks\.com)(?<![^\W_]-asocks\.com)(?![.-][^\W_])(?=\b)
 1677441722	Makyen	(?-i:P8pqB0u)(?#cutt.ly)
+1677441815	Makyen	oolatv\.com
