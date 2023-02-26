@@ -5117,3 +5117,4 @@ p2pstreams\.tv
 (?-i:JakePaulfights)(?#tinyurl.com)
 bb-ustv\.com
 fubotv24\.live
+(?-i:_3zz)(?#t.ly)
