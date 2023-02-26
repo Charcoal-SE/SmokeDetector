@@ -2772,3 +2772,4 @@ Ramsay[\W_]*+MacDonald[\W_]*+(?:at[\W_]*+)?consultant[\W_]*+(?:dot[\W_]*+)?com
 LIVESTREAM@TV(?<=^\[LIVESTREAM@TV)
 puria[\W_]*+(serum|skin)
 Mustafa Shaikh GALLl
+spyware[\W_]*+cyber
