@@ -48119,3 +48119,4 @@
 1677429885	Makyen	wander\.com(?<=\bwander\.com)(?<![^\W_]-wander\.com)(?![.-][^\W_])(?=\b)
 1677429924	cigien	digitalmarketingnewjersey\.us
 1677429988	Makyen	irclickid=&irgwc=1(?#wander.com potential affiliate indicator)
+1677430337	cigien	alivetechno\.com
