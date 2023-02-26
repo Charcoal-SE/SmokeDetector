@@ -48102,3 +48102,4 @@
 1677386260	Makyen	saggu[\W_]*+machine[\W_]*+tools(?!\.in(?<=saggumachinetools\.in))
 1677390407	cigien	anycoder\.pro
 1677395817	Cody Gray	lahir99(?!\.info)
+1677396131	Cody Gray	(?:421){4,}
