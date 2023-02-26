@@ -48114,3 +48114,4 @@
 1677417882	Jeff Schaller	vervevideos\.com
 1677424838	Jeff Schaller	epldesigns\.in
 1677429333	Makyen	saya[\W_]*+(?:20)?mau[\W_]*+(?:20)?pesan[\W_]*+(?:20)?penggugur
+1677429593	Makyen	(?-i:SPRINGFORWARD)
