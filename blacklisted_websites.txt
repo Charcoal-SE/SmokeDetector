@@ -5108,3 +5108,4 @@ online-stock-exchange\.com
 cyber?gal[\W_]*+com
 𝓼𝓱𝓸𝓻𝓽𝓾𝓻𝓵\.𝓪𝓽
 lahir99\.info
+tommy-fury-vs-jake-paul\.blogspot
