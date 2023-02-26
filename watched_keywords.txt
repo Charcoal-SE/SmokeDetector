@@ -48104,3 +48104,4 @@
 1677395817	Cody Gray	lahir99(?!\.info)
 1677396131	Cody Gray	(?:421){4,}
 1677397133	cigien	4nadvisors\.com
+1677397197	cigien	4n[\W_]*+advisors(?!\.com(?<=4nadvisors\.com))
