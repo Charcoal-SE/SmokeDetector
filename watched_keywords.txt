@@ -48117,3 +48117,4 @@
 1677429593	Makyen	(?-i:SPRINGFORWARD)
 1677429623	Makyen	(?-i:3ISZPmV)(?#bit.ly)
 1677429885	Makyen	wander\.com(?<=\bwander\.com)(?<![^\W_]-wander\.com)(?![.-][^\W_])(?=\b)
+1677429924	cigien	digitalmarketingnewjersey\.us
