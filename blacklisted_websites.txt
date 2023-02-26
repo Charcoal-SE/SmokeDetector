@@ -5114,3 +5114,4 @@ dailysportslive\.online
 premionetwork\.blogspot
 jake-paul-fight-streams\.blogspot
 p2pstreams\.tv
+(?-i:JakePaulfights)(?#tinyurl.com)
