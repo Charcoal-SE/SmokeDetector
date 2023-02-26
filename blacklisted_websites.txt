@@ -5113,3 +5113,4 @@ dailysportslive\.online
 (?-i:r8aoznR)(?#cutt.ly)
 premionetwork\.blogspot
 jake-paul-fight-streams\.blogspot
+p2pstreams\.tv
