@@ -48106,3 +48106,4 @@
 1677397133	cigien	4nadvisors\.com
 1677397197	cigien	4n[\W_]*+advisors(?!\.com(?<=4nadvisors\.com))
 1677410961	Cody Gray	drbirang\.com
+1677411084	Cody Gray	ipparaguay\.com\.py
