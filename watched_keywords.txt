@@ -47240,7 +47240,6 @@
 1675377763	Jesse	bshemyeshuablog\.wordpress\.com
 1675377930	Jesse	lifeinfocus\.fl(@gmail\.com)?
 1675455214	Spevacus	wootech\.io
-1675460735	Cody Gray	Spyware[\W_]*+Cyber
 1675469864	Cody Gray	rvvxqi(?# rb.gy)
 1675475815	Cody Gray	^gd[\W_]*sean[\W_]*wu$
 1675475840	Cody Gray	Please join my link
