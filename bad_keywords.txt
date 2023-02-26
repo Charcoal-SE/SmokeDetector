@@ -2774,3 +2774,4 @@ puria[\W_]*+(serum|skin)
 Mustafa Shaikh GALLl
 spyware[\W_]*+cyber
 (?:fury(?:\W++\w++){0,4}[\W_]*+paul|paul(?:\W++\w++){0,4}[\W_]*+fury)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
+boxinglivetv
