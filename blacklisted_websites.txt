@@ -5118,3 +5118,4 @@ p2pstreams\.tv
 bb-ustv\.com
 fubotv24\.live
 (?-i:_3zz)(?<=\bt\.ly/_3zz)\b
+boxing\.oolatv\.com
