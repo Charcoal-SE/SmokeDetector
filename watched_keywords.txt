@@ -48108,3 +48108,4 @@
 1677410961	Cody Gray	drbirang\.com
 1677411084	Cody Gray	ipparaguay\.com\.py
 1677411114	Cody Gray	ipparaguay(?!\.com\.py)
+1677411144	Cody Gray	marcasdecoches\.info
