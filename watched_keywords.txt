@@ -48116,3 +48116,4 @@
 1677429333	Makyen	saya[\W_]*+(?:20)?mau[\W_]*+(?:20)?pesan[\W_]*+(?:20)?penggugur
 1677429593	Makyen	(?-i:SPRINGFORWARD)
 1677429623	Makyen	(?-i:3ISZPmV)(?#bit.ly)
+1677429885	Makyen	wander\.com(?<=\bwander\.com)(?<![^\W_]-wander\.com)(?![.-][^\W_])(?=\b)
