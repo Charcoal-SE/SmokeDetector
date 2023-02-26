@@ -48103,3 +48103,4 @@
 1677390407	cigien	anycoder\.pro
 1677395817	Cody Gray	lahir99(?!\.info)
 1677396131	Cody Gray	(?:421){4,}
+1677397133	cigien	4nadvisors\.com
