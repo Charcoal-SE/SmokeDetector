@@ -48109,3 +48109,4 @@
 1677411084	Cody Gray	ipparaguay\.com\.py
 1677411114	Cody Gray	ipparaguay(?!\.com\.py)
 1677411144	Cody Gray	marcasdecoches\.info
+1677411175	Cody Gray	islasmaldivas\.com\.ar
