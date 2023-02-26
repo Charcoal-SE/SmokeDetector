@@ -48113,3 +48113,4 @@
 1677411228	Cody Gray	tipo-de-cambio\.com
 1677417882	Jeff Schaller	vervevideos\.com
 1677424838	Jeff Schaller	epldesigns\.in
+1677429333	Makyen	saya[\W_]*+(?:20)?mau[\W_]*+(?:20)?pesan[\W_]*+(?:20)?penggugur
