@@ -48150,3 +48150,4 @@
 1677487466	tripleee	serenasecurity\.com
 1677487509	tripleee	serena[\W_]*+security(?!\.com(?<=serenasecurity\.com))
 1677487615	tripleee	mvd[\W_]*+international
+1677488624	tripleee	phongthuyngocan\.com
