@@ -790,3 +790,4 @@ meta kukel exchange
 (?-i:^Mannera Rhillerton$)
 (?-i:^Diginet Business Solution$)
 (?-i:^Best Training Provider$)
+(?-i:^urvashi121$)
