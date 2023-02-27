@@ -2258,7 +2258,7 @@ city_list = [
     "Telangana", "Thane", "Thiruvananthapuram", "Tiruchi", "Tiruchirappalli", "Tirupati",
     "Trichinopoly", "Trichy", "Trivandrum", "Tura",
     "Udaipur", "Uttarakhand",
-    "Vadodara", "Vasant Kunj", "Vasant Vihar", "Visakhapatnam", "Worli",
+    "Vadodara", "Vaishali", "Vasant Kunj", "Vasant Vihar", "Visakhapatnam", "Worli",
     # not in India
     "Ajman", "Dubai", "Fujairah", "Hamad", "Lahore", "Lusail", "Portland", "Sharjah",
     # yes, these aren't cities but...
