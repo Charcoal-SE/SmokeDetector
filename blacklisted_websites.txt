@@ -5120,3 +5120,4 @@ fubotv24\.live
 (?-i:_3zz)(?<=\bt\.ly/_3zz)\b
 boxing\.oolatv\.com
 allsoftgo\.com
+parlaygame\.weebly\.com
