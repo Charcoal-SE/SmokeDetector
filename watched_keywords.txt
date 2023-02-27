@@ -48144,3 +48144,4 @@
 1677481292	Ryan M	scamsoldier\.com
 1677481362	Ryan M	addustechnologies\.com
 1677482893	tripleee	careprost\.co
+1677482924	tripleee	careprost(?!\.co(?<=careprost\.co))
