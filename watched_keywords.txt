@@ -48152,3 +48152,4 @@
 1677487615	tripleee	mvd[\W_]*+international
 1677488624	tripleee	phongthuyngocan\.com
 1677491947	cigien	addus[\W_]*+technologies(?!\.com(?<=addustechnologies\.com))
+1677493774	tripleee	takemyonlineclassesforme\.com
