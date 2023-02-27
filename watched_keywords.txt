@@ -48138,3 +48138,4 @@
 1677472952	cigien	promopure\.com
 1677473028	cigien	dealspure\.com
 1677474279	cigien	vismiintrend\.com
+1677474311	cigien	vismiintrend(?!\.com)
