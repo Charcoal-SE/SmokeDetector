@@ -788,3 +788,4 @@ meta kukel exchange
 (?-i:^buydoublepills$)
 (?-i:^Husen Anrat$)
 (?-i:^Mannera Rhillerton$)
+(?-i:^Diginet Business Solution$)
