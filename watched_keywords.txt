@@ -48139,3 +48139,4 @@
 1677474279	cigien	vismiintrend\.com
 1677474311	cigien	vismiintrend(?!\.com)
 1677479671	tripleee	petpawful\.com
+1677480076	tripleee	automobilenewsofficial\.com
