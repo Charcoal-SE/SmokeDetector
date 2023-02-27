@@ -48132,3 +48132,4 @@
 1677443587	Ethan	freecrack4u\.net
 1677454194	cocomac	zeusautoclicker\.com
 1677471354	cigien	wallystech\.com
+1677471757	cigien	autoclicker\.io
