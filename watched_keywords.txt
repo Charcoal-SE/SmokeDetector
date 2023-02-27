@@ -48145,3 +48145,4 @@
 1677481362	Ryan M	addustechnologies\.com
 1677482893	tripleee	careprost\.co
 1677482924	tripleee	careprost(?!\.co(?<=careprost\.co))
+1677483647	Ryan M	familytreemakerchat\.com
