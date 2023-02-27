@@ -48147,3 +48147,4 @@
 1677482924	tripleee	careprost(?!\.co(?<=careprost\.co))
 1677483647	Ryan M	familytreemakerchat\.com
 1677484421	tripleee	cdrforengineer\.com
+1677487466	tripleee	serenasecurity\.com
