@@ -48153,3 +48153,4 @@
 1677493774	tripleee	takemyonlineclassesforme\.com
 1677495192	tripleee	www-slotonline\.com
 1677498029	Jeff Schaller	vioresume\.com
+1677498248	tripleee	(?-i:^Norma Davis$)
