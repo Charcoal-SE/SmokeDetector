@@ -48153,3 +48153,4 @@
 1677491947	cigien	addus[\W_]*+technologies(?!\.com(?<=addustechnologies\.com))
 1677493774	tripleee	takemyonlineclassesforme\.com
 1677495192	tripleee	www-slotonline\.com
+1677498029	Jeff Schaller	vioresume\.com
