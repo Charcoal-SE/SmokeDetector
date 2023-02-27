@@ -48134,3 +48134,4 @@
 1677471354	cigien	wallystech\.com
 1677471757	cigien	autoclicker\.io
 1677472304	Makyen	joinilluminatikingdom6666(?:@gmail\.com)?
+1677472782	cigien	ace[\W_]*+of[\W_]*+pubs(?!\.com(?<=aceofpubs\.com))
