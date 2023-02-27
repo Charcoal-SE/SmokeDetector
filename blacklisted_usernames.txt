@@ -789,3 +789,4 @@ meta kukel exchange
 (?-i:^Husen Anrat$)
 (?-i:^Mannera Rhillerton$)
 (?-i:^Diginet Business Solution$)
+(?-ii:^Best Training Provider$)
