@@ -3943,6 +3943,11 @@ items:
 - ns: webserviceexpress.com.
 - ns: premiumshieldinc.com.
 - ns:
+  - beaver.ezoicns.com
+  - bobcat.ezoicns.com.
+  - coyote.ezoicns.com.
+  - toucan.ezoicns.com.
+- ns:
   - chipmunk.ezoicns.com.
   - javanese.ezoicns.com.
   - reindeer.ezoicns.com.
