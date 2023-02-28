@@ -48165,3 +48165,4 @@
 1677562246	Cody Gray	ho[lr]a[\W_]*+s[ao]y[\W_]*+dora
 1677563187	Cody Gray	iverheal
 1677563405	Cody Gray	^krystalbeily$
+1677566679	Makyen	msangaiadventure\.com
