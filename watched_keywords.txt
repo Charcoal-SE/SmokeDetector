@@ -48167,3 +48167,4 @@
 1677563405	Cody Gray	^krystalbeily$
 1677566679	Makyen	msangaiadventure\.com
 1677566712	Cody Gray	useadrenaline\.com
+1677566798	Cody Gray	Nord[\W_]*+Stream[\W_]*+I+
