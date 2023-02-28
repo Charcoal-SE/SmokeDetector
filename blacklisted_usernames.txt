@@ -790,3 +790,4 @@ Visualytes
 (?-i:^Best Training Provider$)
 (?-i:^urvashi121$)
 (?-i:^EASY WEB SOLUTION$)
+(?-i:^peter green$)
