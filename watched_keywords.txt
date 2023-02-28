@@ -48184,3 +48184,4 @@
 1677580416	tripleee	luminocielo\.com
 1677580460	tripleee	luminocielo(?!\.com(?<=luminocielo\.com))
 1677581297	tripleee	azbridal\.co\.uk
+1677583866	tripleee	videotubes\.net
