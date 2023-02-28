@@ -41905,7 +41905,6 @@
 1660735193	tripleee	drbuho\.com
 1660735613	tripleee	neurogan\.com
 1660735646	tripleee	vape[\W_]*+juice
-1660735726	tripleee	medsarcade\.com
 1660736452	tripleee	(?-i:^james8801brown$)
 1660737176	tripleee	cleanup\.expert
 1660742594	Jeff Schaller	letkatiecook\.com
