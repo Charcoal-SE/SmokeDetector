@@ -48171,3 +48171,4 @@
 1677567007	Cody Gray	billsby\.com
 1677567098	Cody Gray	bills[\W_]*+by(?!\.com(?<=billsby\.com))
 1677567132	tripleee	aitoolmall\.com
+1677568049	Cody Gray	dajinsteel\.com
