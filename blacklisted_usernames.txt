@@ -679,11 +679,9 @@ Visualytes
 (?-i:^Dolar Spammer$)
 (?-i:^louise jules$)
 (?-i:^The Daily Info$)
-^kukelsack\w*+
-(?-i:^meta kukel exchange$)
-(?-i:^Kukel of the filth$)
-Kukel of the filth
-meta kukel exchange
+^kukelsack.{0,31}$
+^Kukel of the filth$
+^meta[\W_]*+kukel[\W_]*+exchange$
 ^赤い血$
 (?-i:^Home inetrior design in bangla$)
 (?-i:^mightywarners$)
