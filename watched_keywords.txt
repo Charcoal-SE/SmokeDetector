@@ -48182,3 +48182,4 @@
 1677578876	Cody Gray	iteducationcentre\.com
 1677580172	tripleee	homesperception\.com
 1677580416	tripleee	luminocielo\.com
+1677580460	tripleee	luminocielo(?!\.com(?<=luminocielo\.com))
