@@ -1192,6 +1192,9 @@ items:
   - vida.ns.cloudflare.com.
 - ns:
   - dahlia.ns.cloudflare.com.
+  - jay.ns.cloudflare.com.
+- ns:
+  - dahlia.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
   - dahlia.ns.cloudflare.com.
