@@ -48176,3 +48176,4 @@
 1677569785	cigien	hdstreamzapkdownload\.in
 1677570785	cigien	Ralph[\W_]*+King
 1677570909	tripleee	19ti\.com
+1677571286	cigien	gbwa\.download
