@@ -791,3 +791,4 @@ Visualytes
 (?-i:^urvashi121$)
 (?-i:^EASY WEB SOLUTION$)
 (?-i:^peter green$)
+(?-i:^Hassan Ait said$)
