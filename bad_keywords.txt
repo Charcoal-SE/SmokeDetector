@@ -1207,7 +1207,7 @@ ever[\W_]*+erect
 pure[\W_]*+fit[\W_]*+keto(?:[\W_]*+(?:review|diet|\d++|[\da-f]{4,}+)s?)*
 fur[\W_]*+fag
 bonte[\W_]*+cream
-slim(?:ming)?[\W_]*+(?:diet[\W_]*+)?patch
+slim(?:ming)?[\W_]*+(?:diet[\W_]*+)?patch(?![\W_]*+cable)
 trenorol
 trenbolone
 hindus\W*+are\W*+(?:bastards|assholes)
