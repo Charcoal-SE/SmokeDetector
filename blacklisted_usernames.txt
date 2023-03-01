@@ -794,3 +794,4 @@ Visualytes
 (?-i:^Hassan Ait said$)
 (?-i:^taphoahoatinh$)
 (?-i:^Devon L\. Chang$)
+(?-i:^lancashireshoulderclinic$)
