@@ -1434,7 +1434,7 @@ keto[\W_]*+primal(?:[\W_]*+diet)?
 vascular[\W_]*+x
 prime[\W_]*+slim(?:[\W_]*+forskolin)?
 active[\W_]*+luminous(?:[\W_]*+serum)?
-supreme[\W_]*+test(?:[\W_]*+x)?(?:[\W_]*+boost)?
+supreme[\W_]*+test(?:[\W_]*+x|[\W_]*+boost|/\W++)+
 revitalize[\W_]*+serum
 pro[\W_]*+keto(?:[\W_]*+rx)?
 derma\W*correct
