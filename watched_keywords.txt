@@ -48208,3 +48208,4 @@
 1677668117	tripleee	(?-i:^Hitesh Patil$)
 1677668202	tripleee	nitsotech\.com
 1677668490	tripleee	antino\.io
+1677670814	tripleee	lancashire[\W_]*+shoulder[\W_]*+clinic(?!\.co\.uk(?<=lancashireshoulderclinic\.co\.uk))(?<!(?-i:^lancashireshoulderclinic$))
