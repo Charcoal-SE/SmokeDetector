@@ -47882,7 +47882,6 @@
 1676954858	cocomac	coronajunkpm\.com
 1676955105	cigien	sayedvlogs\.blogspot
 1676955290	cigien	beyondmart\.com
-1676956644	Cody Gray	lancashire[\W_]*+shoulder[\W_]*+clinic(?!\.co\.uk(?<=lancashireshoulderclinic\.co\.uk))
 1676957344	cigien	hackerspytech(?:[_W]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1676958258	cigien	mraviteja9949\.medium\.com
 1676958293	cigien	RaviTejaMureboina(?#youtube)
