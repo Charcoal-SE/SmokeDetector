@@ -402,6 +402,9 @@ items:
   - roxy.ns.cloudflare.com.
 - ns:
   - angela.ns.cloudflare.com.
+  - arch.ns.cloudflare.com.
+- ns:
+  - angela.ns.cloudflare.com.
   - austin.ns.cloudflare.com.
 - ns:
   - anirban.ns.cloudflare.com.
