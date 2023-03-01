@@ -48218,3 +48218,4 @@
 1677692359	Jesse	dexnav\.com
 1677698738	Ryan M	azscore\.ng
 1677698772	Ryan M	azscore(?!\.ng)
+1677699404	Ryan M	socanadiancasino\.com
