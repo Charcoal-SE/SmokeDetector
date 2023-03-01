@@ -48202,3 +48202,4 @@
 1677656227	tripleee	dynamiclinic\.com
 1677656493	tripleee	[Аа]бузоустойчивый [Хх]остинг
 1677658817	tripleee	vitahaus\.com
+1677659701	tripleee	caplandebtsolutions\.ca
