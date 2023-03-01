@@ -48197,3 +48197,4 @@
 1677646482	cigien	247shoppingcart\.co\.in
 1677646991	cigien	ecostals\.com
 1677650499	tripleee	2gn\.ru
+1677650541	tripleee	aairtickets\.com
