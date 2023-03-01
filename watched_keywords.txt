@@ -48206,3 +48206,4 @@
 1677662975	tripleee	ballsportsgames\.com
 1677666615	tripleee	thesurvey\.info
 1677666720	tripleee	srilankaholidays\.net
+1677668117	tripleee	(?-i:^Hitesh Patil$)
