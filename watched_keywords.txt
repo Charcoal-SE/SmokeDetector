@@ -48213,3 +48213,4 @@
 1677675381	tripleee	asbm[\W_]*+university
 1677684946	Spevacus	buyundetectedcounterfeitbmoney\.com
 1677686047	Makyen	aot-technologies\.com
+1677689141	Jesse	codelaravel\.com
