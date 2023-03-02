@@ -48234,3 +48234,4 @@
 1677746371	tripleee	imupro
 1677747104	Cody Gray	findofficesolutions\.com
 1677748024	Cody Gray	escortdirectory\.cam
+1677748070	Cody Gray	escort[\W_]*+directory(?!\.cam(?<=escortdirectory\.cam))
