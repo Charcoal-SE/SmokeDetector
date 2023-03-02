@@ -46692,7 +46692,6 @@
 1674112547	tripleee	himeros(?:me)?
 1674112790	tripleee	techbottle\.com
 1674114065	Cody Gray	miniapparels\.com
-1674117488	tripleee	btsmerchandise\.store
 1674119987	tripleee	(?-i:^Mashrangi Umesh$)
 1674125321	tripleee	leewaysoftech\.com
 1674125834	tripleee	tech[\W_]*+2[\W_]*+globe(?!\.c(?:a|om))
