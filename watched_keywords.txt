@@ -48244,3 +48244,4 @@
 1677754213	tripleee	the[\W_]*+premier[\W_]*+institute[\W_]*+(?:of[\W_]*+)?management[\W_]*+(?:and[\W_]*+)?engineering
 1677757154	Mast	kumandacenter\.com
 1677758551	Jeff Schaller	(?-i:Vv3U11G_jvU)(?# YouTube)
+1677760389	Jeff Schaller	waverleychrysler\.ca
