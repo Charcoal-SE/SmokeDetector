@@ -48229,3 +48229,4 @@
 1677740993	tripleee	doctlab\.com
 1677741472	tripleee	💰💰+
 1677743742	tripleee	austrinasteels\.com
+1677743794	tripleee	austrina[\W_]*+steels?(?!\.com(?<=austrinasteels\.com))
