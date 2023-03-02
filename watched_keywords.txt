@@ -48224,3 +48224,4 @@
 1677716765	cocomac	etherlise\.com
 1677717218	cocomac	(?:manager-)?etherlise(?!\.com)(?:@proton\.me)?
 1677724834	Jeff Schaller	xaynhahcm\.net
+1677727954	Makyen	xaynhahcm(?!\.net)
