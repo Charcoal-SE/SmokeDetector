@@ -48257,3 +48257,4 @@
 1677776382	cigien	remodelers[\W_]*+austin[\W_]*+tx(?!\.com(?<=remodelersaustintx\.com))
 1677776421	cigien	techclaw\.org
 1677776682	cigien	(?-i:O9jG_H7Fw8U )(?#youtu.be)
+1677776714	cigien	(?-i:O9jG_H7Fw8U)(?#youtu.be)
