@@ -48254,3 +48254,4 @@
 1677775152	cigien	find[\W_]*+office[\W_]*+solutions(?!\.com(?<=findofficesolutions\.com))
 1677775774	cigien	(?-i:RO8M4iuls-E)(?#youtu.be)
 1677775820	cigien	7373hothef
+1677776382	cigien	remodelers[\W_]*+austin[\W_]*+tx(?!\.com(?<=remodelersaustintx\.com))
