@@ -48252,3 +48252,4 @@
 1677764135	Jeff Schaller	codewithnaren\.com
 1677769351	tripleee	cloudfy\.com
 1677774394	cigien	waverley[\W_]*+chrysler(?!\.ca(?<=waverleychrysler\.ca))
+1677775152	cigien	find[\W_]*+office[\W_]*+solutions(?!\.com(?<=findofficesolutions\.com))
