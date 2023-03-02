@@ -48232,3 +48232,4 @@
 1677743794	tripleee	austrina[\W_]*+steels?(?!\.com(?<=austrinasteels\.com))
 1677746271	tripleee	foodallergytest\.in
 1677746371	tripleee	imupro
+1677747104	Cody Gray	findofficesolutions\.com
