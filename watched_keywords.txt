@@ -48238,3 +48238,4 @@
 1677748674	tripleee	firebeetechnoservices\.com
 1677749308	tripleee	fire[\W_]*+bee[\W_]*+techno[\W_]*+services(?!\.com(?<=firebeetechnoservices\.com))
 1677749845	Makyen	firstmedicaldiagnostics01(?:@gmail\.com)?
+1677749878	Makyen	brainlevelup\.com
