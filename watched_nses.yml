@@ -2609,6 +2609,9 @@ items:
   - seamus.ns.cloudflare.com.
 - ns:
   - meera.ns.cloudflare.com.
+  - owen.ns.cloudflare.com.
+- ns:
+  - meera.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
   - meera.ns.cloudflare.com.
