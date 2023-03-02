@@ -2236,7 +2236,8 @@ pattern_websites = [
     r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
-    "Agra", "Ahmedabad", "Ajanta", "Almora", "Alwar", "Ambattur", "Amritsar", "Anand Nagar", "Andheri",
+    "Agra", "Ahmedabad", "Ajanta", "Aligarh", "Allahabad", "Almora", "Alwar", "Ambattur", "Amritsar",
+    "Anand Nagar", "Andheri",
     "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
     "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
