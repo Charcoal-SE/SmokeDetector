@@ -48223,3 +48223,4 @@
 1677711586	Nisse Engström	remodelersaustintx\.com
 1677716765	cocomac	etherlise\.com
 1677717218	cocomac	(?:manager-)?etherlise(?!\.com)(?:@proton\.me)?
+1677724834	Jeff Schaller	xaynhahcm\.net
