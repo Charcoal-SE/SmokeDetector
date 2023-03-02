@@ -2777,3 +2777,4 @@ spyware[\W_]*+cyber
 boxinglivetv
 Ampro[\W_]*+Techvalley
 exipure
+brigade[\W_]*+valencia(?!\.(?:gen|net|ind)\.in(?<=brigadevalencia\.(?:gen|net|ind)\.in))
