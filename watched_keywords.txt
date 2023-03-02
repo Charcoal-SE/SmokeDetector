@@ -48242,3 +48242,4 @@
 1677753959	Mast	getphyllo\.com
 1677754135	tripleee	theprimeindia\.net
 1677754213	tripleee	the[\W_]*+premier[\W_]*+institute[\W_]*+(?:of[\W_]*+)?management[\W_]*+(?:and[\W_]*+)?engineering
+1677757154	Mast	kumandacenter\.com
