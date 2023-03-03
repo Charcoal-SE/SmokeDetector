@@ -795,3 +795,4 @@ Visualytes
 (?-i:^taphoahoatinh$)
 (?-i:^Devon L\. Chang$)
 (?-i:^lancashireshoulderclinic$)
+(?-i:^Protoindus$)
