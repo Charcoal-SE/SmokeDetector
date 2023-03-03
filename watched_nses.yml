@@ -2647,6 +2647,9 @@ items:
   - meiling.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - melinda.ns.cloudflare.com.
+  - zeus.ns.cloudflare.com.
+- ns:
   - melissa.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
