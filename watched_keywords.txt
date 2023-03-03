@@ -48266,3 +48266,4 @@
 1677811352	Ollie	sieutocviet\.net
 1677815246	Makyen	sieutocviet\.com
 1677815539	Makyen	poker[\W_]*+dewa
+1677815568	Makyen	kartupoker
