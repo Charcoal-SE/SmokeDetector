@@ -48268,3 +48268,4 @@
 1677815539	Makyen	poker[\W_]*+dewa
 1677815568	Makyen	kartupoker
 1677815599	Makyen	poker[\W_]*+88
+1677821482	tripleee	uniform[\W_]*+hub
