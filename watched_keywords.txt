@@ -48276,3 +48276,4 @@
 1677826436	tripleee	jacklistens\.shop
 1677827825	tripleee	protoindus\.blogspot
 1677828233	tripleee	proto[\W_]*+indus(?!\.com(?<=protoindus\.com))(?<!(?-i:^Protoindus$))
+1677829547	tripleee	(?-i:^Amelia Ami$)
