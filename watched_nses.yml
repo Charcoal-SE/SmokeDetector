@@ -2011,6 +2011,9 @@ items:
   - jade.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
+  - jake.ns.cloudflare.com.
+  - macy.ns.cloudflare.com.
+- ns:
   - jakub.ns.cloudflare.com.
   - shubhi.ns.cloudflare.com.
 - ns:
