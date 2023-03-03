@@ -48271,3 +48271,4 @@
 1677821482	tripleee	uniform[\W_]*+hub
 1677821921	tripleee	instagramlogins\.net
 1677822540	tripleee	cheapassignmentservice\.com
+1677824360	tripleee	plungepools\.com
