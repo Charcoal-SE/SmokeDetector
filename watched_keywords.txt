@@ -48288,3 +48288,4 @@
 1677839891	tripleee	maxlogisticpackers\.com
 1677839950	tripleee	max[\W_]*+logistic[\W_]*+packers[\W_]*+(?:movers)?(?!\.com(?<=maxlogisticpackers\.com))
 1677840016	tripleee	dimensions\.ai
+1677840496	tripleee	paintsbeast\.com
