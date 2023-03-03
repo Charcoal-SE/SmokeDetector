@@ -48280,3 +48280,4 @@
 1677831759	Mast	lalantoptech\.blogspot
 1677831909	tripleee	petarenapro\.com
 1677832305	tripleee	jaibalajipackers\.com
+1677832380	tripleee	(?-i:^Melinda Drury$)
