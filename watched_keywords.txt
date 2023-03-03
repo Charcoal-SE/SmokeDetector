@@ -48285,3 +48285,4 @@
 1677834554	tripleee	fc178
 1677838684	Mast	tappett\.com
 1677839235	tripleee	tappett(?!\.com)
+1677839891	tripleee	maxlogisticpackers\.com
