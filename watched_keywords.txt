@@ -48292,3 +48292,4 @@
 1677844159	tripleee	wordcounter\.icu
 1677844201	tripleee	bazzle\.pk
 1677845658	tripleee	wedowebapps\.com
+1677845702	tripleee	gr-ganzer\.online
