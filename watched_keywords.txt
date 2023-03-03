@@ -47413,7 +47413,6 @@
 1675898310	Ethan	games-news\.online
 1675921979	Cody Gray	snapmaker\.com
 1675926405	cigien	wiseinfo4u\.com
-1675927140	Cody Gray	quarktwin\.com
 1675927938	cigien	fairybaby\.com
 1675928284	cigien	mridwan103
 1675936003	tripleee	katmoviehdonline\.com
