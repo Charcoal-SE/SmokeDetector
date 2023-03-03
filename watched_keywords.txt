@@ -48265,3 +48265,4 @@
 1677810575	Ollie	(?-i:Y3mLsJa)(?# cutt.ly)
 1677811352	Ollie	sieutocviet\.net
 1677815246	Makyen	sieutocviet\.com
+1677815539	Makyen	poker[\W_]*+dewa
