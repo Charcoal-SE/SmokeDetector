@@ -48278,3 +48278,4 @@
 1677829547	tripleee	(?-i:^Amelia Ami$)
 1677831302	tripleee	chatgptproapi\.com
 1677831759	Mast	lalantoptech\.blogspot
+1677831909	tripleee	petarenapro\.com
