@@ -2027,6 +2027,9 @@ items:
   - jamie.ns.cloudflare.com.
 - ns:
   - james.ns.cloudflare.com.
+  - june.ns.cloudflare.com.
+- ns:
+  - james.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
   - janet.ns.cloudflare.com.
