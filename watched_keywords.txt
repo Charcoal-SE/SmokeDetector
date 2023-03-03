@@ -48297,3 +48297,4 @@
 1677854254	Makyen	postcss-obfuscator
 1677868247	Makyen	69-models\.com
 1677868331	Makyen	marina-callgirls\.com
+1677870082	Jeff Schaller	sdeducom\.com
