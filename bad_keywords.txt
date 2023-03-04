@@ -2779,3 +2779,4 @@ Ampro[\W_]*+Techvalley
 exipure
 brigade[\W_]*+valencia(?!\.(?:gen|net|ind)\.in(?<=brigadevalencia\.(?:gen|net|ind)\.in))
 𝙈𝙤𝙣𝙚𝙮\s*𝙒𝙞𝙡𝙡\s*𝘽𝙚\s*𝘾𝙧𝙚𝙙𝙞𝙩𝙚𝙙
+misfits[\W_]*+boxing(?:[\W_]*+(?:free|\d++|[\da-f]{5,}+)s?)*
