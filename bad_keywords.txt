@@ -2782,3 +2782,4 @@ brigade[\W_]*+valencia(?!\.(?:gen|net|ind)\.in(?<=brigadevalencia\.(?:gen|net|in
 misfits[\W_]*+boxing(?:[\W_]*+(?:free|\d++|[\da-f]{5,}+)s?)*
 tim[\W_]*+hortons[\W_]*+brier(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
 (?:swingler(?:\W++\w++){0,4}[\W_]*+nichlmao|nichlmao(?:\W++\w++){0,4}[\W_]*+swingler)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
+ufc[\W_]*+285(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
