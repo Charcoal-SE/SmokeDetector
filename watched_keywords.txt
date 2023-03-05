@@ -48320,3 +48320,4 @@
 1677954654	tripleee	idhaclinic\.com
 1677955055	tripleee	web-devlopment-in-surat\.blogspot
 1677956857	Jeff Schaller	amarserial\.com
+1677994812	Makyen	vs?\b(?:(?<!-v)|(?=-))(?!\s*+=)(?![\W_]*+(?:code\b|\d))(?:\W++\w++){0,4}(?:(?:\W++\w++){0,2}[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?){2,}
