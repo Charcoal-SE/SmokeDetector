@@ -48332,3 +48332,4 @@
 1678031689	Jeff Schaller	saharadesertkingdom\.com
 1678034868	Makyen	gogoanime\.com\.co
 1678034899	Makyen	gogoanime(?!\.com\.co)
+1678035076	Makyen	swarajadhika296(?#fiverr.com)
