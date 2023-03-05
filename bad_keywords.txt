@@ -2746,6 +2746,11 @@ sris[\W_]*+(?:virginia[\W_]*+)?law(?:y[ae]rs?)?\d*\b(?!\.com(?:(?<=srislawyer\.c
 (?-i:AWx-OSPPuAcwNmEx)(?# t.me)
 (?-i:U_IWCb5fnMjO4nUU)(?# t.me)
 (?-i:fXTvWIwuq_IzM2Fl)(?#t.me)
+(?-i:wJgIOFn-g_QwYWFh)(?#t.me)
+(?-i:beijifox)(?<=t\.me/beijifox)(?#t.me)
+(?-i:SediF93gNScyNjZl)(?#t.me)
+beijifox(?<=@beijifox)\d++
+beiji_fox_helper(?<=@beiji_fox_helper)
 makhachev[\W_]*+vs[\W_]*+volkanovski
 ufc[\W_]*+284[\W_]*+live
 (?-i:o3boUSp)(?#cutt.ly)
