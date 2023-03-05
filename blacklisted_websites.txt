@@ -5141,3 +5141,4 @@ classic88\.com
 topstreamtv\.live
 (?-i:M8TxEfk)(?#cutt.ly)
 (?-i:ufc285live)(?#rebrand.ly)
+ufc-285-streams-fight\.blogspot
