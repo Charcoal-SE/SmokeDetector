@@ -48327,3 +48327,4 @@
 1678020491	Jeff Schaller	mcaleads247\.com
 1678025659	Jeff Schaller	factnstats\.com
 1678026175	Jeff Schaller	pesonaku\.com
+1678028053	Jeff Schaller	nowpayments\.io(?<!api\.nowpayments\.io)
