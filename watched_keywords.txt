@@ -37149,7 +37149,6 @@
 1647955200	Jeff Schaller	doradofashion\.net
 1647966094	Ollie	tranggiatruyenfood\.com
 1647966143	Ollie	helpabhimanyu\.in
-1647966222	Makyen	nowpayments\.io
 1647971169	cigien	firsteigen\.com
 1647972781	cigien	baobao-industries\.com
 1647986372	Cody Gray	(?:UAE|Dubai)[\W_]*Scarlet
