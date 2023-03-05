@@ -48325,3 +48325,4 @@
 1678000288	cocomac	artistecard\.com
 1678002921	Makyen	upmpk\.com
 1678004887	Makyen	tandtrealty\.in
+1678020491	Jeff Schaller	mcaleads247\.com
