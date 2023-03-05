@@ -48322,3 +48322,4 @@
 1677956857	Jeff Schaller	amarserial\.com
 1677994812	Makyen	vs?\b(?:(?<!-v)|(?=-))(?!\s*+=)(?![\W_]*+(?:code\b|\d))(?:\W++\w++){0,4}(?:(?:\W++\w++){0,2}[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?){2,}
 1678000263	cocomac	sin889\.com
+1678000288	cocomac	artistecard\.com
