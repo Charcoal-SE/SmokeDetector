@@ -48336,3 +48336,4 @@
 1678035179	Makyen	(?-i:Oq99C-Jaei8)(?#youtu.be)
 1678036859	Jeff Schaller	pishaachini\.net
 1678040108	Makyen	beiji[\W_]*+fox\w*+
+1678046794	Makyen	gasandev\.com
