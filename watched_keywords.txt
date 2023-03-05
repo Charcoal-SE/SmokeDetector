@@ -48330,3 +48330,4 @@
 1678028053	Jeff Schaller	nowpayments\.io(?<!api\.nowpayments\.io)
 1678031518	Makyen	mca[\W_]*+leads(?:[\W_]*+24[\W_]*+7(?!\.com(?<=mcaleads247\.com)))?
 1678031689	Jeff Schaller	saharadesertkingdom\.com
+1678034868	Makyen	gogoanime\.com\.co
