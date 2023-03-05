@@ -5140,3 +5140,4 @@ quarktwin\.com
 classic88\.com
 topstreamtv\.live
 (?-i:M8TxEfk)(?#cutt.ly)
+(?-i:ufc285live)(?#rebrand.ly)
