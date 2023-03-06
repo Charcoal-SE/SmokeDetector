@@ -48348,3 +48348,4 @@
 1678099558	tripleee	simenmetal\.blogspot
 1678099589	tripleee	eleczo\.com
 1678099725	tripleee	simenmetal(?!\.(?:blogspot\.)?com)
+1678102692	Jeff Schaller	tablethire\.ae
