@@ -799,3 +799,4 @@ Visualytes
 (?-i:^real xanax$)
 (?-i:^Elive Joseph$)
 (?-i:^Sanworapid$)
+(?-i:^ASBM University$)
