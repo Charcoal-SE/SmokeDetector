@@ -5146,3 +5146,4 @@ ufc-285-streams-fight\.blogspot
 aew-revolution-2023-stream\.blogspot
 (?-i:tPAR)(?<=\b(?<![^\W_]-)t\.ly\/tPAR)
 (?-i:v8Ins8W)(?#cutt.ly)
+worldnewsupdate\.org
