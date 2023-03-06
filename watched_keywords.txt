@@ -48341,3 +48341,4 @@
 1678084886	Makyen	sanworapid\.blogspot
 1678085704	tripleee	infotera\.co
 1678087848	tripleee	bhansali[\W_]*+enterprises?
+1678087919	tripleee	bhansali[\W_]*+steels?(?!\.com(?<=bhansalisteels\.com))
