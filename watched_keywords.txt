@@ -34012,7 +34012,6 @@
 1638349279	tripleee	gamespotnet\.com
 1638349412	tripleee	24heures\.ch
 1638349598	tripleee	8(?<=(?:^|\D)[\W_]*+[+]?1[\W_]*+]8)(?:0[\W_]*+0|8[\W_]*+8|7[\W_]*+7|6[\W_]*+6|5[\W_]*+5|4[\W_]*+4|3[\W_]*+3)(?:[\W_]*+\d){7}(?!\d)
-1638352461	Cody Gray	firstflytravel\.com
 1638353217	tripleee	luvuwomenworld\.com
 1638353317	Cody Gray	freecharge[\W_]*coupons
 1638354467	tripleee	creativepoint\.in
