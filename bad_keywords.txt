@@ -2794,3 +2794,4 @@ pilar168
 richardprycewizard2016(?:@gmail\.com)?
 (?-i:U8PTWEM)(?#cutt.ly)
 wunderkiddy\.com/(?:ru/)?(?:activity|category|material|template)/
+rebrand\.ly/tim-hortons-brier
