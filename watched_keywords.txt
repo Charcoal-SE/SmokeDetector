@@ -48343,3 +48343,4 @@
 1678087919	tripleee	bhansali[\W_]*+steels?(?!\.com(?<=bhansalisteels\.com))
 1678090262	tripleee	bookkeepingproservices\.com
 1678092301	tripleee	advance[\W_]*+solutions(?!\.com(?<=advancesolutions\.com))(?<!(?-i:^Advance Solutions$))
+1678092340	tripleee	(?-i:^Advance Solutions$)
