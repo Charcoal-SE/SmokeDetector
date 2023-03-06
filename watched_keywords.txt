@@ -48337,3 +48337,4 @@
 1678036859	Jeff Schaller	pishaachini\.net
 1678040108	Makyen	beiji[\W_]*+fox\w*+
 1678046794	Makyen	gasandev\.com
+1678061360	Ollie	(?-i:tPAR)(?# t.ly)
