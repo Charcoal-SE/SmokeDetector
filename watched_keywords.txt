@@ -47138,7 +47138,6 @@
 1675240293	Cody Gray	d(?:octo)?r[\W_]*+Jasmine
 1675240349	tripleee	inuaeandqatar\.com
 1675241387	Cody Gray	evoheat\.com\.au
-1675242441	Cody Gray	Bhansali(?:[\W_]*Enterprises?)?
 1675242995	Cody Gray	meghnaddesaiacademy\.org
 1675243031	Cody Gray	Meghnad[\W_]*Desai[\W_]*Academy(?!\.org(?<=meghnaddesaiacademy\.org))
 1675244041	Cody Gray	2000westfrancis(?:@(?:gmail|hotmail)\.com)?
