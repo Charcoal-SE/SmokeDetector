@@ -226,6 +226,9 @@ items:
   - fatima.ns.cloudflare.com.
   - houston.ns.cloudflare.com.
 - ns:
+  - gabe.ns.cloudflare.com.
+  - pat.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
