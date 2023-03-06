@@ -5143,3 +5143,4 @@ topstreamtv\.live
 (?-i:ufc285live)(?#rebrand.ly)
 ufc-285-streams-fight\.blogspot
 (?-i:mCvk)(?<=\b(?<![^\W_]-)t\.ly\/mCvk)
+aew-revolution-2023-stream\.blogspot
