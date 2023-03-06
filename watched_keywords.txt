@@ -48338,4 +48338,3 @@
 1678040108	Makyen	beiji[\W_]*+fox\w*+
 1678046794	Makyen	gasandev\.com
 1678061360	Ollie	(?-i:tPAR)(?# t.ly)
-1678075859	Makyen	full[\W_]*+movie(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s*)+
