@@ -798,3 +798,4 @@ Visualytes
 (?-i:^Protoindus$)
 (?-i:^real xanax$)
 (?-i:^Elive Joseph$)
+(?-i:^Sanworapid$)
