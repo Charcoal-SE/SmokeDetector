@@ -2789,3 +2789,4 @@ tim[\W_]*+hortons[\W_]*+brier(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|f
 (?:swingler(?:\W++\w++){0,4}[\W_]*+nichlmao|nichlmao(?:\W++\w++){0,4}[\W_]*+swingler)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
 ufc[\W_]*+285(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
 (?-i:98IIyxk)(?#cutt.ly)
+aew[\W_]*+revolution(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
