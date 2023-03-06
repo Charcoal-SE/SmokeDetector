@@ -48340,3 +48340,4 @@
 1678077825	Makyen	full[\W_]*+movie(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight|online)s*)+
 1678081761	tripleee	quinterocorp\.com
 1678084886	Makyen	sanworapid\.blogspot
+1678085704	tripleee	infotera\.co
