@@ -46616,7 +46616,6 @@
 1673959119	tripleee	(?-i:^jennysmith$)
 1673960307	Cody Gray	clutteroo\.com
 1673960706	tripleee	php\.org
-1673964599	Cody Gray	omisoft\.net
 1673965890	Cody Gray	hatbaemama\.com
 1673972208	Ollie	datmediafl\.com
 1673972613	Spevacus	lefashionartiste\.com
