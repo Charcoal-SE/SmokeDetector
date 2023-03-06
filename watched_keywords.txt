@@ -48365,3 +48365,4 @@
 1678131052	Makyen	raytech[\W_]*+gels(?!\.com(?<=raytechgels\.com))
 1678132085	Ethan	webhealthkart\.com
 1678134215	Jeff Schaller	gbwhatsappdownload\.bar
+1678134430	Ethan	sasuralsimarka2\.live
