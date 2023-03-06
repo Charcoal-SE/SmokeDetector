@@ -48347,4 +48347,3 @@
 1678099526	tripleee	hiddenmickeys\.org
 1678099558	tripleee	simenmetal\.blogspot
 1678099589	tripleee	eleczo\.com
-1678099618	tripleee	simenmetal(?!\.blogspot)
