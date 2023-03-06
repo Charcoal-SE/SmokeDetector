@@ -1955,9 +1955,6 @@ items:
   - vasilii.ns.cloudflare.com.
 - ns:
   - iris.ns.cloudflare.com.
-  - plato.ns.cloudflare.com.
-- ns:
-  - iris.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
   - irma.ns.cloudflare.com.

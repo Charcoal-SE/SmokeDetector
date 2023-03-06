@@ -244,6 +244,9 @@ items:
   - heather.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - iris.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
   - ivy.ns.cloudflare.com.
   - joel.ns.cloudflare.com.
 - ns:
