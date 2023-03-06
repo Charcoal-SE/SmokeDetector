@@ -2197,6 +2197,9 @@ items:
   - kanye.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
 - ns:
+  - kanye.ns.cloudflare.com.
+  - reza.ns.cloudflare.com.
+- ns:
   - kara.ns.cloudflare.com.
   - noah.ns.cloudflare.com.
 - ns:
