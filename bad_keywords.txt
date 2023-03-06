@@ -2793,3 +2793,4 @@ aew[\W_]*+revolution(?:\W++\w++){0,6}(?:[\W_]*+(?:live|stream(?:ing)?|free|broad
 pilar168
 richardprycewizard2016(?:@gmail\.com)?
 (?-i:U8PTWEM)(?#cutt.ly)
+wunderkiddy\.com/(?:ru/)?(?:activity|category|material|template)/
