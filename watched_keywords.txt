@@ -46386,7 +46386,6 @@
 1673418150	tripleee	Click here to complete your application if you are interested
 1673418683	Cody Gray	smtpget\.com
 1673420324	tripleee	shiash(?!\.com)
-1673420515	tripleee	helpxpat(?!\.com)
 1673422884	tripleee	muberet\.com
 1673422923	tripleee	draroras\.com
 1673422954	tripleee	(?-i:eiszc)(?# surl.li)
