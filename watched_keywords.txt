@@ -48376,3 +48376,4 @@
 1678174889	tripleee	dotvote\.vote
 1678176580	tripleee	topusasmm\.com
 1678176612	tripleee	purvaoakshire\.org\.in
+1678176789	tripleee	purva[\W_]*+oakshire
