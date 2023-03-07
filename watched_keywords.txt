@@ -48374,3 +48374,4 @@
 1678169274	tripleee	optima[\W_]*+(?:bags|mart)(?!\.(?:com|in)(?<=optimabags\.(?:com|in)))
 1678169307	tripleee	optimabags\.com
 1678174853	tripleee	3yyn\.com
+1678174889	tripleee	dotvote\.vote
