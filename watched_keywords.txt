@@ -48372,3 +48372,4 @@
 1678161711	Jeff Schaller	thebackrooms2\.com
 1678168549	Makyen	trisha[\W_]*+yearwood(?:[\W_]*+(?:gummies|weight|keto|wl|loss|buy|\d++|[\da-f]{5,}+)s?)+
 1678169274	tripleee	optima[\W_]*+(?:bags|mart)(?!\.(?:com|in)(?<=optimabags\.(?:com|in)))
+1678169307	tripleee	optimabags\.com
