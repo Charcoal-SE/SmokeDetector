@@ -39,7 +39,7 @@ class BodyFetcher:
     QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE = 5000
 
     cpu_count = psutil.cpu_count()
-    MAX_SCAN_THREADS_DIFFERENCE_TO_CPU_COUNT = 1
+    MAX_SCAN_THREADS_DIFFERENCE_TO_CPU_COUNT = 0
     max_scan_thread_count = cpu_count + MAX_SCAN_THREADS_DIFFERENCE_TO_CPU_COUNT
     scan_thread_count_semaphore = threading.BoundedSemaphore(value=max_scan_thread_count)
     THREAD_STARVATION_POST_IN_CHAT_AFTER_ELAPSED_TIME = 3 * 60
