@@ -90,6 +90,9 @@ items:
   - vicente.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
+  - albert.ns.cloudflare.com.
+- ns:
+  - adel.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
