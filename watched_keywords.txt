@@ -48190,7 +48190,6 @@
 1677668490	tripleee	antino\.io
 1677670814	tripleee	lancashire[\W_]*+shoulder[\W_]*+clinic(?!\.co\.uk(?<=lancashireshoulderclinic\.co\.uk))(?<!(?-i:^lancashireshoulderclinic$))
 1677675284	tripleee	asbm\.ac\.in
-1677675381	tripleee	asbm[\W_]*+university
 1677684946	Spevacus	buyundetectedcounterfeitbmoney\.com
 1677686047	Makyen	aot-technologies\.com
 1677689141	Jesse	codelaravel\.com
