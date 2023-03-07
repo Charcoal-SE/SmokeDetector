@@ -3268,6 +3268,9 @@ items:
 - ip: 18.197.255.159
 - ip: 18.192.76.182
 - ip: 18.200.206.91
+- comment: git.io, ejabberd etc - don't watch
+  disable: true
+  ip: 18.205.36.100
 - ip: 18.209.216.199
 - ip: 18.210.4.247
 - ip: 18.211.207.209
@@ -4473,6 +4476,9 @@ items:
 - ip: 52.18.234.147
 - ip: 52.19.131.253
 - ip: 52.19.6.38
+- comment: git.io, ejabberd etc - don't watch
+  disable: true
+  ip: 52.204.242.176
 - ip: 52.21.138.72
 - comment: dominantly FP, 3/27 2022-09-07
   disable: true
@@ -4535,7 +4541,13 @@ items:
 - ip: 52.9.73.7
 - ip: 52.95.174.18
 - ip: 54.145.205.131
+- comment: git.io, ejabberd etc - don't watch
+  disable: true
+  ip: 54.157.58.70
 - ip: 54.157.88.95
+- comment: git.io, ejabberd etc - don't watch
+  disable: true
+  ip: 54.162.128.250
 - ip: 54.164.133.105
 - ip: 54.164.4.68
 - ip: 54.165.161.55
