@@ -122,6 +122,9 @@ items:
   - adrian.ns.cloudflare.com.
   - julian.ns.cloudflare.com.
 - ns:
+  - adrian.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
   - agustin.ns.cloudflare.com.
   - dora.ns.cloudflare.com.
 - ns:
