@@ -48388,3 +48388,4 @@
 1678192456	Jeff Schaller	osiztechnologies\.com
 1678193185	Jeff Schaller	mjacinternational\.com
 1678194306	tripleee	invigilo\.ai
+1678194458	tripleee	ngamenslot\d*
