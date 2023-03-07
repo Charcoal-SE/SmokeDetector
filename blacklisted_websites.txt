@@ -5160,3 +5160,4 @@ omisoft\.net
 bestconvertor\.club
 24sportstvlive\.blogspot
 fontsonic\.com
+iqratechnology\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
