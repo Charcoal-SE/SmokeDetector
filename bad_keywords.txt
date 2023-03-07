@@ -2797,3 +2797,4 @@ wunderkiddy\.com/(?:ru/)?(?:activity|category|material|template)/
 rebrand\.ly/tim-hortons-brier
 helpxpat(?!\.com)
 asbm[\W_]*+university
+(?-i:3mwyLBa)(?# bit.ly)
