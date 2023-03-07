@@ -507,15 +507,20 @@ items:
   - ns07.2cohost.com.
   - ns08.2cohost.com.
 - ns:
-  - sisindia.earth.orderbox-dns.com.
-  - sisindia.mars.orderbox-dns.com.
-  - sisindia.mercury.orderbox-dns.com.
-  - sisindia.venus.orderbox-dns.com.
-- ns:
   - geeksmart.earth.orderbox-dns.com.
   - geeksmart.mars.orderbox-dns.com.
   - geeksmart.mercury.orderbox-dns.com.
   - geeksmart.venus.orderbox-dns.com.
+- ns:
+  - sale166523.earth.orderbox-dns.com.
+  - sale166523.mars.orderbox-dns.com.
+  - sale166523.mercury.orderbox-dns.com.
+  - sale166523.venus.orderbox-dns.com.
+- ns:
+  - sisindia.earth.orderbox-dns.com.
+  - sisindia.mars.orderbox-dns.com.
+  - sisindia.mercury.orderbox-dns.com.
+  - sisindia.venus.orderbox-dns.com.
 - ns: cetpajobs.com.
 - ns: unair.ac.id.
 - ns:
