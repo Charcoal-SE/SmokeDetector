@@ -48408,3 +48408,4 @@
 1678266019	tripleee	(?-i:^李长安$)
 1678266920	tripleee	ieveeraseo(?!\.com)
 1678266946	tripleee	ieveeraseo\.com
+1678267495	tripleee	thuocme247\.com
