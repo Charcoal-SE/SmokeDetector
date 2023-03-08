@@ -5163,3 +5163,4 @@ fontsonic\.com
 iqratechnology\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 (?-i:W34P8R6)(?#cutt.ly)
 (?-i:28KdVG9)(?#cutt.ly)
+(?-i:bVMeB1w)(?#cutt.ly)
