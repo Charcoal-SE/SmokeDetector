@@ -46533,7 +46533,6 @@
 1673771683	Cody Gray	crypto-bonus\.xyz
 1673771982	Cody Gray	(?-i:prYzac)(?# qr.ae)
 1673772939	Cody Gray	mitnick[\W_]*security(?:01)?
-1673779325	Cody Gray	Muhammad[\W_]*Hashim
 1673781230	Cody Gray	epitaaf\.com
 1673781262	Cody Gray	(?-i:iml6r5)(?# wa.link)
 1673783941	Cody Gray	zetakn0w\.xyz
