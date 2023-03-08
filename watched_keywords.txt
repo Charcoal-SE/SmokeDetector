@@ -48412,3 +48412,4 @@
 1678267551	tripleee	thuocme247(?!\.com)
 1678270385	tripleee	(?-i:^James Blood$)
 1678274314	Jeff Schaller	feeta\.pk
+1678274451	Jeff Schaller	myhospitalitysupplies\.ca
