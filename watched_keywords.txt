@@ -48417,3 +48417,4 @@
 1678280088	Jeff Schaller	sohelrana207
 1678280606	tripleee	yogeshjugwan\.com
 1678281350	tripleee	arab[\W_]*+basalt[\W_]*+fiber[\W_]*+company
+1678291961	Jeff Schaller	universeductcleaning\.com
