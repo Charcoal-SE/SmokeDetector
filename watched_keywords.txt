@@ -48405,3 +48405,4 @@
 1678255788	tripleee	maximcrosswordclue\.co\.uk
 1678256058	tripleee	(?-i:^Vidya Mathur$)
 1678256087	tripleee	(?-i:^James wellington$)
+1678257510	tripleee	guido van rossum
