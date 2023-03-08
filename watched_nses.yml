@@ -2423,6 +2423,9 @@ items:
   - oakley.ns.cloudflare.com.
 - ns:
   - leo.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
+  - leo.ns.cloudflare.com.
   - pearl.ns.cloudflare.com.
 - ns:
   - leonard.ns.cloudflare.com.
