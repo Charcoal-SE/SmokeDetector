@@ -48406,3 +48406,4 @@
 1678256087	tripleee	(?-i:^James wellington$)
 1678257510	tripleee	guido van rossum
 1678266019	tripleee	(?-i:^李长安$)
+1678266920	tripleee	ieveeraseo(?!\.com)
