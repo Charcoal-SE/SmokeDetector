@@ -48403,3 +48403,4 @@
 1678241746	Makyen	ielts\.asap020(?:@yahoo\.com)?
 1678242455	Jeff Schaller	cloudkp\.com
 1678255788	tripleee	maximcrosswordclue\.co\.uk
+1678256058	tripleee	(?-i:^Vidya Mathur$)
