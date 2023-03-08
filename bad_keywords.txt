@@ -776,7 +776,7 @@ buysupplement
 memory[\W_]*+repair[\W_]*+protocol
 numax[\W_]*+test[\W_]*+xt
 vyalis[\W_]*+rx
-duro[\W_]*+max
+duro(?:[\W_]++max|max(?=/(?<=/duromax/)))
 emior
 agen\W*bola
 brosway
