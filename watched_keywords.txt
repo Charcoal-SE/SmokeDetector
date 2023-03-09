@@ -48452,3 +48452,4 @@
 1678365179	tripleee	ssl[\W_]*+dragon(?!\.com(?<=ssldragon\.com))
 1678365459	tripleee	(?-i:^Samuel$)
 1678365896	tripleee	sslcertshop\.com
+1678366358	tripleee	finddee\.com
