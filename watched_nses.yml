@@ -1044,6 +1044,9 @@ items:
   - chloe.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
+  - chloe.ns.cloudflare.com.
+  - sam.ns.cloudflare.com.
+- ns:
   - chris.ns.cloudflare.com.
   - hadlee.ns.cloudflare.com.
 - ns:
