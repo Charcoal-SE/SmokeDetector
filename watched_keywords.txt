@@ -48440,3 +48440,4 @@
 1678351476	tripleee	cleaningcompany-riyadh\.com
 1678351777	tripleee	bebas88\.org
 1678351814	tripleee	bebas[\W_]*+88(?!\.org(?<=bebas88\.org))
+1678352230	tripleee	rrtechnosoft\.co\.in
