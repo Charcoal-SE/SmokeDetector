@@ -48429,3 +48429,4 @@
 1678343968	tripleee	eric[\W_]*+emanuel[\W_]*+shorts(?!\.us(?<=ericemanuelshorts\.us))
 1678344002	tripleee	pfhindia\.com
 1678344027	tripleee	localwp\.com
+1678345105	tripleee	awsblogcenter\.blogspot
