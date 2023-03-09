@@ -3510,16 +3510,21 @@ items:
 - ns: epizy.com.
 - ns: hostingmadeeasy.com.
 - ns:
-  - ns-1.awsdns-00.com.
-  - ns-1217.awsdns-24.org.
-  - ns-1920.awsdns-48.co.uk.
-  - ns-841.awsdns-41.net.
-- ns:
   - mn.co.
   - ns-1048.awsdns-03.org.
   - ns-134.awsdns-16.com.
   - ns-2033.awsdns-62.co.uk.
   - ns-928.awsdns-52.net.
+- ns:
+  - ns-1.awsdns-00.com.
+  - ns-1217.awsdns-24.org.
+  - ns-1920.awsdns-48.co.uk.
+  - ns-841.awsdns-41.net.
+- ns:
+  - ns-1000.awsdns-61.net.
+  - ns-1303.awsdns-34.org.
+  - ns-1748.awsdns-26.co.uk.
+  - ns-508.awsdns-63.com.
 - ns:
   - ns-1016.awsdns-63.net.
   - ns-1275.awsdns-31.org.
