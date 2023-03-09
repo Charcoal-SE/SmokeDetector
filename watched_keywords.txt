@@ -48441,3 +48441,4 @@
 1678351777	tripleee	bebas88\.org
 1678351814	tripleee	bebas[\W_]*+88(?!\.org(?<=bebas88\.org))
 1678352230	tripleee	rrtechnosoft\.co\.in
+1678353790	tripleee	(?-i:bL9ergqV_JA)(?# youtube)
