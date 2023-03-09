@@ -307,6 +307,9 @@ items:
   - maya.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
+  - meiling.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
   - miki.ns.cloudflare.com.
   - yahir.ns.cloudflare.com.
 - ns:
