@@ -48421,3 +48421,4 @@
 1678301621	Jeff Schaller	play2tv\.live
 1678341759	tripleee	logoai\.com
 1678342014	tripleee	k8bet\.biz
+1678342570	tripleee	(?-i:^Rahul Shastri$)
