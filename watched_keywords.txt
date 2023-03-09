@@ -48428,3 +48428,4 @@
 1678343144	tripleee	(?-i:^alishakihn$)
 1678343968	tripleee	eric[\W_]*+emanuel[\W_]*+shorts(?!\.us(?<=ericemanuelshorts\.us))
 1678344002	tripleee	pfhindia\.com
+1678344027	tripleee	localwp\.com
