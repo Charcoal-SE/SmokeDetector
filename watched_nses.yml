@@ -1951,6 +1951,9 @@ items:
   - ian.ns.cloudflare.com.
   - nancy.ns.cloudflare.com.
 - ns:
+  - ian.ns.cloudflare.com.
+  - zoe.ns.cloudflare.com.
+- ns:
   - ignat.ns.cloudflare.com.
   - nelci.ns.cloudflare.com.
 - ns:
