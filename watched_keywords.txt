@@ -48449,3 +48449,4 @@
 1678361386	Jeff Schaller	rankoservices\.com
 1678363899	tripleee	ssldragon\.com
 1678363940	tripleee	revancedapk\.org
+1678365179	tripleee	ssl[\W_]*+dragon(?!\.com(?<=ssldragon\.com))
