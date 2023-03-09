@@ -48426,3 +48426,4 @@
 1678343006	Makyen	kanyewestmerchandise\.net
 1678343043	tripleee	mountainov\.co\.uk
 1678343144	tripleee	(?-i:^alishakihn$)
+1678343968	tripleee	eric[\W_]*+emanuel[\W_]*+shorts(?!\.us(?<=ericemanuelshorts\.us))
