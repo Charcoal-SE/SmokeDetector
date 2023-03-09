@@ -48427,3 +48427,4 @@
 1678343043	tripleee	mountainov\.co\.uk
 1678343144	tripleee	(?-i:^alishakihn$)
 1678343968	tripleee	eric[\W_]*+emanuel[\W_]*+shorts(?!\.us(?<=ericemanuelshorts\.us))
+1678344002	tripleee	pfhindia\.com
