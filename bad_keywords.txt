@@ -2798,3 +2798,4 @@ rebrand\.ly/tim-hortons-brier
 helpxpat(?!\.com)
 asbm[\W_]*+university
 (?-i:3mwyLBa)(?# bit.ly)
+https://myway\.cf(?# force additional weight on this)
