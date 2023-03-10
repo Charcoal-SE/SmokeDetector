@@ -48460,3 +48460,4 @@
 1678412598	Jeff Schaller	appupgrade\.dev
 1678421864	Makyen	daductam\.vn
 1678434194	tripleee	bts[\W_]*+hoodie(?:[\W_]*+for[\W_]*wom[ae]n)?
+1678434248	tripleee	bts[\W_]*shirts?
