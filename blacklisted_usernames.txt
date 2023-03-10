@@ -804,3 +804,4 @@ Visualytes
 (?-i:^FC yt$)
 (?-i:^Milly Wallace$)
 (?-i:^flightsbooking$)
+(?-i:^Hindware Products$)
