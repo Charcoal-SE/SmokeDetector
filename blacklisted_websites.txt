@@ -5165,3 +5165,4 @@ iqratechnology\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 (?-i:28KdVG9)(?#cutt.ly)
 (?-i:bVMeB1w)(?#cutt.ly)
 livestream08\.blogspot
+techchef\.in
