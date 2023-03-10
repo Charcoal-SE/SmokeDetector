@@ -48474,3 +48474,4 @@
 1678450498	tripleee	bestessaywritingservices\.com\.au
 1678450535	tripleee	best[\W_]*+essay[\W_]*+writing[\W_]*+services?(?!\.com\.au(?<=bestessaywritingservices\.com\.au))
 1678450987	tripleee	mycodebit\.com
+1678451373	Jeff Schaller	fmoviestop\.online
