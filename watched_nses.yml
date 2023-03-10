@@ -3844,7 +3844,9 @@ items:
 - comment: dominantly FP, disabled 2023-02-17; also second-ns.com. second-ns.de. first-ns.com. first-ns.de.
   disable: true
   ns: your-server.de.
-- ns: bluehost.com.
+- comment: 242/765 over one year, very few 1-weight TPs; disabled 2023-03-10
+  disable: true
+  ns: bluehost.com.
 - ns: bluehost.in.
 - ns: dnsserverboot.com.
 - ns: just2trade.online.
