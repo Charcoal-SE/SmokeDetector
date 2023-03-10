@@ -309,6 +309,9 @@ items:
   - bob.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - gabe.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - aliza.ns.cloudflare.com.
