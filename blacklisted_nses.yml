@@ -193,6 +193,9 @@ items:
   - dana.ns.cloudflare.com.
   - jerome.ns.cloudflare.com.
 - ns:
+  - david.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
+- ns:
   - davina.ns.cloudflare.com.
   - syeef.ns.cloudflare.com.
 - ns:
