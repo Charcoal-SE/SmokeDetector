@@ -48465,3 +48465,4 @@
 1678437474	tripleee	paldigitalmedia\.com
 1678438681	tripleee	techchefewaste\.in
 1678439344	tripleee	tech[\W_]*+chef(?!(?:ewaste)?\.in(?<=techchef(?:ewaste)?\.in))\w*+
+1678441098	tripleee	rnbglobal\.edu\.in
