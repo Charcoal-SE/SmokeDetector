@@ -48464,3 +48464,4 @@
 1678434797	tripleee	softriq\.com
 1678437474	tripleee	paldigitalmedia\.com
 1678438681	tripleee	techchefewaste\.in
+1678439344	tripleee	tech[\W_]*+chef(?!(?:ewaste)?\.in(?<=techchef(?:ewaste)?\.in))\w*+
