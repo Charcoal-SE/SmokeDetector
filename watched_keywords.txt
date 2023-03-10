@@ -48477,3 +48477,4 @@
 1678451373	Jeff Schaller	fmoviestop\.online
 1678451765	tripleee	hikerhunger\.com
 1678451918	tripleee	lucky[\W_]*+(?:[^\W_]+[\W_]*+)?store(?!\.in(?<=luckystore\.in))
+1678454860	Jeff Schaller	sale365day\.com
