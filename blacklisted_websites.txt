@@ -5167,3 +5167,4 @@ iqratechnology\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 livestream08\.blogspot
 techchef\.in
 cloudbik\.com
+theubuntulinux\.com
