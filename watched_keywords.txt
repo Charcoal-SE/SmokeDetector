@@ -48464,3 +48464,4 @@
 1678434341	tripleee	bts[\W_]*+merch(?:andise)?(?!\.store(?<=btsmerchandise\.store))
 1678434797	tripleee	softriq\.com
 1678437474	tripleee	paldigitalmedia\.com
+1678438681	tripleee	techchefewaste\.in
