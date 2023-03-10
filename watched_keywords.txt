@@ -48462,3 +48462,4 @@
 1678434194	tripleee	bts[\W_]*+hoodie(?:[\W_]*+for[\W_]*wom[ae]n)?
 1678434248	tripleee	bts[\W_]*shirts?
 1678434341	tripleee	bts[\W_]*+merch(?:andise)?(?!\.store(?<=btsmerchandise\.store))
+1678434797	tripleee	softriq\.com
