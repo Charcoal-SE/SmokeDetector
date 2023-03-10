@@ -48467,3 +48467,4 @@
 1678439344	tripleee	tech[\W_]*+chef(?!(?:ewaste)?\.in(?<=techchef(?:ewaste)?\.in))\w*+
 1678441098	tripleee	rnbglobal\.edu\.in
 1678442377	tripleee	herbalaarogya25\.com
+1678442548	tripleee	quickbillretail\.com
