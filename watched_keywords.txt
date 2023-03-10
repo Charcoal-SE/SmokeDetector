@@ -48479,3 +48479,4 @@
 1678451918	tripleee	lucky[\W_]*+(?:[^\W_]+[\W_]*+)?store(?!\.in(?<=luckystore\.in))
 1678454860	Jeff Schaller	sale365day\.com
 1678454890	tripleee	actiflow
+1678459900	Jeff Schaller	pinesmax\.com
