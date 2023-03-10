@@ -46520,7 +46520,6 @@
 1673698429	Cody Gray	lesta[\W_]*cholez(?:@gmail\.com)?
 1673699262	Cody Gray	mygeorgiasouthern\.org
 1673699297	Cody Gray	MyGeorgiaSouthern(?!\.org)
-1673699525	Jeff Schaller	cloudbik\.com
 1673701079	Cody Gray	bosterbio\.com
 1673707609	Jeff Schaller	spinbikepro\.com
 1673710412	Cody Gray	polycosprayfoam\.com
