@@ -163,6 +163,9 @@ items:
   - clark.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
+  - coby.ns.cloudflare.com.
+  - raphaela.ns.cloudflare.com.
+- ns:
   - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
