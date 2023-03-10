@@ -48459,3 +48459,4 @@
 1678388085	Makyen	mastertech\.com\.bd
 1678412598	Jeff Schaller	appupgrade\.dev
 1678421864	Makyen	daductam\.vn
+1678434194	tripleee	bts[\W_]*+hoodie(?:[\W_]*+for[\W_]*wom[ae]n)?
