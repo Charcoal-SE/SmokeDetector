@@ -110,6 +110,9 @@ items:
   - adelaide.ns.cloudflare.com.
   - kyle.ns.cloudflare.com.
 - ns:
+  - adelaide.ns.cloudflare.com.
+  - skip.ns.cloudflare.com.
+- ns:
   - adi.ns.cloudflare.com.
   - miles.ns.cloudflare.com.
 - ns:
