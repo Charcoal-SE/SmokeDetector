@@ -1759,6 +1759,7 @@ items:
 - ip: 14.225.7.19
 - ip: 141.136.39.13
 - ip: 141.136.39.61
+- ip: 141.136.43.79
 - ip: 141.136.46.125
 - comment: 4/40 over 8 months, no 1-weights 2022-11-10
   disable: true
