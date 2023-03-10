@@ -329,6 +329,9 @@ items:
   - alla.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - amalia.ns.cloudflare.com.
+  - keenan.ns.cloudflare.com.
+- ns:
   - amanda.ns.cloudflare.com.
   - arturo.ns.cloudflare.com.
 - ns:
