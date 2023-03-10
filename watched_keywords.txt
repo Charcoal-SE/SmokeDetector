@@ -48472,3 +48472,4 @@
 1678447733	tripleee	epicfishtank\.com
 1678449922	Glorfindel	radiuslog\.com
 1678450498	tripleee	bestessaywritingservices\.com\.au
+1678450535	tripleee	best[\W_]*+essay[\W_]*+writing[\W_]*+services?(?!\.com\.au(?<=bestessaywritingservices\.com\.au))
