@@ -48500,3 +48500,4 @@
 1678529038	tripleee	surepay88\.com
 1678529186	tripleee	thefuenixmedia\.com
 1678529487	tripleee	uscis(?<=#uscis)
+1678546831	Jeff Schaller	lifewithinasimulationandbeyond\.com
