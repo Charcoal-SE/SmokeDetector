@@ -48496,3 +48496,4 @@
 1678519878	cocomac	fire[\W_]*+works[\W_]*+nation
 1678520288	Nisse Engström	alfajrprint\.com
 1678521805	Nisse Engström	plastikvn\.com
+1678523586	Cody Gray	(?-i:CONTACT[\W_]*+US)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
