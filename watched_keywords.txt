@@ -48494,3 +48494,4 @@
 1678518465	Nisse Engström	begincodedisney\.com
 1678518788	Nisse Engström	databasefirm\.com
 1678519878	cocomac	fire[\W_]*+works[\W_]*+nation
+1678520288	Nisse Engström	alfajrprint\.com
