@@ -48495,3 +48495,4 @@
 1678518788	Nisse Engström	databasefirm\.com
 1678519878	cocomac	fire[\W_]*+works[\W_]*+nation
 1678520288	Nisse Engström	alfajrprint\.com
+1678521805	Nisse Engström	plastikvn\.com
