@@ -48518,3 +48518,4 @@
 1678622340	cigien	ip2world\.com
 1678622378	cigien	ip2world(?!\.com)
 1678622416	cigien	heatcoolappliance\.com
+1678622442	cigien	glgshop\.blogspot
