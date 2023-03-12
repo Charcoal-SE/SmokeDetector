@@ -48517,3 +48517,4 @@
 1678622104	cigien	ltcinsuranceshopper\.com
 1678622340	cigien	ip2world\.com
 1678622378	cigien	ip2world(?!\.com)
+1678622416	cigien	heatcoolappliance\.com
