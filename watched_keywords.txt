@@ -48505,3 +48505,4 @@
 1678589935	Spevacus	automojapan\.com\.bd
 1678589961	Spevacus	airfryereview\.com
 1678596561	Spevacus	(?-i:78LL5Kp)(?#cutt.ly)
+1678606020	Nisse Engström	wosgroup\.com
