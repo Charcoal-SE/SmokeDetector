@@ -48520,3 +48520,4 @@
 1678622416	cigien	heatcoolappliance\.com
 1678622442	cigien	glgshop\.blogspot
 1678622468	cigien	seniorarchitects\.com
+1678622496	cigien	digitalhub[\W_]*+clutch(?!\.com(?<=digitalhub-clutch\.com))
