@@ -48502,3 +48502,4 @@
 1678529487	tripleee	uscis(?<=#uscis)
 1678546831	Jeff Schaller	lifewithinasimulationandbeyond\.com
 1678550232	Makyen	juggler\.laurence1020(?:@gmail\.com)?
+1678589935	Spevacus	automojapan\.com\.bd
