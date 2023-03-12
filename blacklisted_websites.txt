@@ -5176,3 +5176,4 @@ boxingstreamlink\.blogspot
 (?-i:3yyPSVy)(?#bit.ly)
 realmshosting\.com
 (?-i:e89Hvr2)(?#cutt.ly)
+(?-i:yp7m9pvt)(?#tinyurl.com)
