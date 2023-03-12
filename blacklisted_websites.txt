@@ -5172,3 +5172,4 @@ createneon\.com
 tim-tszyu-vs-tony-harrison-live-on\.blogspot
 (?-i:18MIWWd)(?#cutt.ly)
 boxingstreamlink\.blogspot
+(?-i:3Jvw)(?<=\b(?<![^\W_]-)bit\.ly\/3Jvw)
