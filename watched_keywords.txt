@@ -48523,3 +48523,4 @@
 1678622496	cigien	digitalhub[\W_]*+clutch(?!\.com(?<=digitalhub-clutch\.com))
 1678622524	cigien	marvelsupplement\.com
 1678622571	cigien	whatnetworthnow\.com
+1678622601	cigien	sturdybusiness\.com
