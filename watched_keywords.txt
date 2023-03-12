@@ -48504,3 +48504,4 @@
 1678550232	Makyen	juggler\.laurence1020(?:@gmail\.com)?
 1678589935	Spevacus	automojapan\.com\.bd
 1678589961	Spevacus	airfryereview\.com
+1678590297	Ethan	solid-future\.com
