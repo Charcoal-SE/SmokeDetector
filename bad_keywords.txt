@@ -2800,3 +2800,4 @@ asbm[\W_]*+university
 (?-i:3mwyLBa)(?# bit.ly)
 https://myway\.cf(?# force additional weight on this)
 (?:(?:tim[\W_]*+)?tszyu(?:\W++\w++){0,4}[\W_]*+(?:tony[\W_]*+)?harrison|(?:tony[\W_]*+)?harrison(?:\W++\w++){0,4}[\W_]*+(?:tim[\W_]*+)?tszyu)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s*)+
+oscars[\W_]*+2023
