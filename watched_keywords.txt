@@ -48513,3 +48513,4 @@
 1678621875	cigien	motogpgears\.us
 1678622004	cigien	rfleshop\.com
 1678622036	cigien	31208\.win-business\.com
+1678622078	cigien	azuremlschemas\.azureedge\.net
