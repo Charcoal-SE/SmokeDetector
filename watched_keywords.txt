@@ -48557,3 +48557,4 @@
 1678732915	cigien	ehsasprogram\.pk
 1678733999	cigien	leechtown\.co
 1678734384	cigien	(?-i:1I5EN-Hc_oI)(?#youtube)
+1678735708	cigien	miami[\W_]*+turnup[\W_]*+entertainment
