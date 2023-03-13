@@ -1093,6 +1093,9 @@ items:
   - maya.ns.cloudflare.com.
 - ns:
   - cleo.ns.cloudflare.com.
+  - jade.ns.cloudflare.com.
+- ns:
+  - cleo.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
   - cleo.ns.cloudflare.com.
