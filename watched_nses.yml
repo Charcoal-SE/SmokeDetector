@@ -1288,6 +1288,9 @@ items:
   - laura.ns.cloudflare.com.
 - ns:
   - dane.ns.cloudflare.com.
+  - margot.ns.cloudflare.com.
+- ns:
+  - dane.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
   - dane.ns.cloudflare.com.
