@@ -48563,3 +48563,4 @@
 1678736678	cigien	rummycue\.blogspot
 1678736744	cigien	nifty[\W_]*+consultants(?!\.com(?<=niftyconsultants\.com))
 1678736974	cigien	juegos\.games
+1678737001	cigien	wpx\.net
