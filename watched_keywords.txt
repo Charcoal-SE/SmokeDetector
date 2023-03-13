@@ -48561,3 +48561,4 @@
 1678736481	cigien	lazada\.co\.id
 1678736546	cigien	apunkagames\.cc
 1678736678	cigien	rummycue\.blogspot
+1678736744	cigien	nifty[\W_]*+consultants(?!\.com(?<=niftyconsultants\.com))
