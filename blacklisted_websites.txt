@@ -5183,3 +5183,4 @@ oolatv\.com
 (?-i:3YIAW1Z)(?#bit.ly)
 trustsports\.live
 (?-i:yc88j7a6)(?#tinyurl.com)
+(?-i:A89UQ5R)(?#cutt.ly)
