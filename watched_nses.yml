@@ -4151,7 +4151,6 @@ items:
   disable: true
   ns: awxcom.com.
 - ns: thehost.com.ua.
-- ns: parspack.co.
 - ns: bitcoin-dns.com.
 - ns: ultahost.com.
 - ns: rhostrh.com.
