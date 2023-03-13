@@ -48559,3 +48559,4 @@
 1678734384	cigien	(?-i:1I5EN-Hc_oI)(?#youtube)
 1678735708	cigien	miami[\W_]*+turnup[\W_]*+entertainment
 1678736481	cigien	lazada\.co\.id
+1678736546	cigien	apunkagames\.cc
