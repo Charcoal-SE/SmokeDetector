@@ -2802,3 +2802,4 @@ https://myway\.cf(?# force additional weight on this)
 (?:(?:tim[\W_]*+)?tszyu(?:\W++\w++){0,4}[\W_]*+(?:tony[\W_]*+)?harrison|(?:tony[\W_]*+)?harrison(?:\W++\w++){0,4}[\W_]*+(?:tim[\W_]*+)?tszyu)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s*)+
 2023[\W_]*+oscars?
 Live[\W_]*+Stream[\W_]*+FREE
+The\W*+2023\W*+Oscar\W*+nominations\W*+are\W*+in\W*+and\W*+the\W*+95th\W*+Academy\W*+Awards\W*+are\W*+happening\W*+today!\W*+While\W*+we\W*+likely\W*+won't\W*+see\W*+a\W*+repeat\W*+of\W*+last\W*+year's\W*+Oscar\W*+slap,
