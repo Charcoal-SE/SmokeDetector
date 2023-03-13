@@ -21857,7 +21857,6 @@
 1598051487	Makyen	colourlovers\.com
 1598021807	Spevacus	secureotech\.com
 1598036994	Spevacus	dnpackaging\.com
-1598092910	tripleee	vkcontrol\.com
 1598096535	Mast	idtech\.discuforum\.info
 1598111761	Makyen	jasoncooperr257(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1598112404	Makyen	sakura\.waeochabok(?:@gmail\.com)?

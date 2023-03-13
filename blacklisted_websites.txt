@@ -5186,3 +5186,4 @@ trustsports\.live
 (?-i:A89UQ5R)(?#cutt.ly)
 oscars__2023
 raremart\.one
+vkcontrol\.com
