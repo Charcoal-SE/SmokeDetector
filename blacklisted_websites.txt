@@ -5181,3 +5181,4 @@ realmshosting\.com
 vivaph\.com
 oolatv\.com
 (?-i:3YIAW1Z)(?#bit.ly)
+trustsports\.live
