@@ -5195,3 +5195,4 @@ vinylpressing\.com\.au
 topgrademakers\.com
 helpxpat\.com
 allsports24\.co
+(?-i:V4qIEm5)(?#cutt.ly)
