@@ -806,3 +806,4 @@ Visualytes
 (?-i:^flightsbooking$)
 (?-i:^Hindware Products$)
 ^helpxpat
+(?-i:^Isla John$)
