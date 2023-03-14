@@ -48603,3 +48603,4 @@
 1678817944	cigien	popsteak(?!\.com)
 1678818418	cigien	2lucky\.cfd
 1678819049	cigien	vpn[\W_]*+guider(?!\.com(?<=vpnguider\.com))
+1678819296	cigien	diamond[\W_]*+icq(?!\.com(?<=diamondicq\.com))
