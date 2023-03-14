@@ -805,3 +805,4 @@ Visualytes
 (?-i:^Milly Wallace$)
 (?-i:^flightsbooking$)
 (?-i:^Hindware Products$)
+^helpxpat
