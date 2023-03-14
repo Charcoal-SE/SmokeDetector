@@ -48601,3 +48601,4 @@
 1678816676	cigien	conpay(?!\.io)
 1678817831	cigien	techgamiing\.blogspot
 1678817918	cigien	popsteak\.com
+1678817944	cigien	popsteak(?!\.com)
