@@ -48571,3 +48571,4 @@
 1678765497	Makyen	1friend\.com
 1678765530	Makyen	janshop\.com\.vn
 1678765608	Makyen	zanvak\.com\.au
+1678779564	Jeff Schaller	10expert\.com
