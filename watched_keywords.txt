@@ -48607,3 +48607,4 @@
 1678819472	cigien	console\.open\.onebound\.cn
 1678820463	Ethan	namecheap\.pxf\.io/modrk
 1678820988	cigien	idha[\W_]*+clinic(?!\.com(?<=idhaclinic\.com))
+1678821225	cigien	minimilitiamods\.net
