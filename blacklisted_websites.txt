@@ -5197,3 +5197,4 @@ helpxpat\.com
 allsports24\.co
 (?-i:V4qIEm5)(?#cutt.ly)
 (?-i:3EKZmAJ)(?#bit.ly)
+(?-i:UEFA_2023_TV)(?#bit.ly)
