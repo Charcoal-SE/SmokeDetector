@@ -5188,3 +5188,4 @@ oscars__2023
 raremart\.one
 vkcontrol\.com
 scaler\.com
+(?-i:3Jg12DE)(?#bit.ly)
