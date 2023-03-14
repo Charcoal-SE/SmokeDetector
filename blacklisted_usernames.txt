@@ -807,3 +807,4 @@ Visualytes
 (?-i:^Hindware Products$)
 ^helpxpat
 (?-i:^Isla John$)
+(?-i:^impress vinyl$)
