@@ -48605,3 +48605,4 @@
 1678819049	cigien	vpn[\W_]*+guider(?!\.com(?<=vpnguider\.com))
 1678819296	cigien	diamond[\W_]*+icq(?!\.com(?<=diamondicq\.com))
 1678819472	cigien	console\.open\.onebound\.cn
+1678820463	Ethan	namecheap\.pxf\.io/modrk
