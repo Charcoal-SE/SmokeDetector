@@ -48599,3 +48599,4 @@
 1678815579	Makyen	songlifty\.com
 1678815616	Makyen	forexoverflow\.io
 1678816676	cigien	conpay(?!\.io)
+1678817831	cigien	techgamiing\.blogspot
