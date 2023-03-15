@@ -48620,3 +48620,4 @@
 1678849587	Jeff Schaller	yngs\.co\.in
 1678858978	tripleee	hwy[\W_]*+haul
 1678860972	tripleee	rankwatch\.com
+1678861811	tripleee	shopmerse\.com
