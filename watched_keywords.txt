@@ -48662,7 +48662,7 @@
 1678904119	tripleee	uclleague
 1678904171	tripleee	kijk[\W_]*+tv
 1678905335	tripleee	live[\W_]*+kijken
-1678905603	tripleee	real[\W_]*+madrid[\W_]*+liverpool[\W_]*+live
+1678905603	tripleee	real[\W_]*+madrid[\W_]*+liverpool[\W_]*+(?:en[\W_]*+vivo|live)
 1678905889	tripleee	(?-i:jPYwg5auiR)(?# t.co)
 1678906125	tripleee	123movies\.go-stream\.net
 1678906795	Machavity	(?-i:TMetric)
