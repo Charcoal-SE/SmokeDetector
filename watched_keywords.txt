@@ -48637,3 +48637,4 @@
 1678879410	Glorfindel	stackoftuts\.com
 1678879930	tripleee	stackoftuts(?!\.com)
 1678879963	tripleee	celeb[\W_]*+leather[\W_]*+jackets
+1678879994	tripleee	morselli\.me
