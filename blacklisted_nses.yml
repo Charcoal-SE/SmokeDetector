@@ -574,3 +574,8 @@ items:
   - vip8.alidns.com.
 - ns: implant.com.au.
 - ns: zarahosting.com.
+- ns: 
+  - ns3.ebndns.com.
+  - ns4.ebndns.com.
+  - ns5.ebndns.com.
+  - ns6.ebndns.com.
