@@ -5200,3 +5200,4 @@ allsports24\.co
 (?-i:UEFA_2023_TV)(?#bit.ly)
 (?-i:W4qNH0h)(?#cutt.ly)
 traininginmedavakkam\.in
+cudanirput\.blogspot
