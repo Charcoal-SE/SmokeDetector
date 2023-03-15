@@ -48618,3 +48618,4 @@
 1678846128	Makyen	youremfshield\.com
 1678846166	Makyen	opendersharma
 1678849587	Jeff Schaller	yngs\.co\.in
+1678858978	tripleee	hwy[\W_]*+haul
