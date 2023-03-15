@@ -48632,3 +48632,4 @@
 1678870905	tripleee	learntocodewithakstechies\.blogspot
 1678871600	tripleee	aarizbd\.com
 1678872190	tripleee	send[\W_]*+(?:flower|gift)s[\W_]*+(?:for[\W_]*+women[\W_]*+)?to[\W_]*+india
+1678872738	tripleee	cbcamerica\.org
