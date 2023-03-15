@@ -48660,3 +48660,4 @@
 1678903172	tripleee	fubotv
 1678903995	tripleee	parimatch\.co\.tz
 1678904119	tripleee	uclleague
+1678904171	tripleee	kijk[\W_]*+tv
