@@ -48643,3 +48643,4 @@
 1678880409	tripleee	(?-i:^nensi adsum$)
 1678881266	Jeff Schaller	theferri\.com
 1678881632	tripleee	sdabplindia
+1678881694	tripleee	sachi[\W_]*+design[\W_]*+(?:and[\W_]*+)?build(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
