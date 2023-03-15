@@ -48662,3 +48662,4 @@
 1678904119	tripleee	uclleague
 1678904171	tripleee	kijk[\W_]*+tv
 1678905335	tripleee	live[\W_]*+kijken
+1678905542	tripleee	real[\W_]*+l[\W_]*+madridl[\W_]*+liverpooll[\W_]*+live
