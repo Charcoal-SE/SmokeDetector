@@ -48630,3 +48630,4 @@
 1678868323	tripleee	bitcoin[\W_]*+system
 1678868363	tripleee	bitcoin[\W_]*+profit
 1678870905	tripleee	learntocodewithakstechies\.blogspot
+1678871600	tripleee	aarizbd\.com
