@@ -48614,3 +48614,4 @@
 1678834686	cocomac	march[\W_]*+madness[\W_]*+2023[\W_]*+live[\W_]*+stream
 1678841602	Ethan	newsuperwpc\.com
 1678843108	Ethan	support@hgmega\.cc
+1678846100	Makyen	emfdefense
