@@ -2521,7 +2521,7 @@ create_rule("pattern-matching website in {}",
             rule_id="pattern matching website: health themed, not health sites")
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
-            r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{0,20}"
+            r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|▶|→|Read More|Click Here).{0,20}"
             r"https?://(?!i\.stack\.imgur\.com)(?=.{0,200}$)",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
