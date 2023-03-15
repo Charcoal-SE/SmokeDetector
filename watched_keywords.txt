@@ -48646,3 +48646,4 @@
 1678881694	tripleee	sachi[\W_]*+design[\W_]*+(?:and[\W_]*+)?build(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
 1678881964	tripleee	(?-i:^popeye$)
 1678883699	tripleee	llwmg\.com
+1678883767	tripleee	communian\.com/user/profile/972
