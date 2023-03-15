@@ -48631,5 +48631,4 @@
 1678868363	tripleee	bitcoin[\W_]*+profit
 1678870905	tripleee	learntocodewithakstechies\.blogspot
 1678871600	tripleee	aarizbd\.com
-1678871691	tripleee	(?-i:^jacobkenji$)
 1678872190	tripleee	send[\W_]*+(?:flower|gift)s[\W_]*+(?:for[\W_]*+women[\W_]*+)?to[\W_]*+india
