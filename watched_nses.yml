@@ -2323,6 +2323,9 @@ items:
   - kira.ns.cloudflare.com.
   - koa.ns.cloudflare.com.
 - ns:
+  - kira.ns.cloudflare.com.
+  - lochlan.ns.cloudflare.com.
+- ns:
   - kirk.ns.cloudflare.com.
   - lara.ns.cloudflare.com.
 - ns:
