@@ -48626,3 +48626,4 @@
 1678867530	tripleee	mediate\.qa
 1678867637	tripleee	gcmsapply\.com
 1678868242	tripleee	(?-i:mv2uf4ez)(?#tinyurl.com)
+1678868270	tripleee	takolightningsystem\.com
