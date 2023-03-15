@@ -48639,3 +48639,4 @@
 1678879963	tripleee	celeb[\W_]*+leather[\W_]*+jackets
 1678879994	tripleee	morselli\.me
 1678880032	tripleee	brown_ljacket(?# twitter)
+1678880382	tripleee	codeetech\.com
