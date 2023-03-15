@@ -48621,3 +48621,4 @@
 1678858978	tripleee	hwy[\W_]*+haul
 1678860972	tripleee	rankwatch\.com
 1678861811	tripleee	shopmerse\.com
+1678862279	tripleee	emf[\W_]*+defense
