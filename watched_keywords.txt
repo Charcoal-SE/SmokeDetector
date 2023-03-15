@@ -48668,3 +48668,4 @@
 1678906795	Machavity	(?-i:TMetric)
 1678909634	tripleee	kazi[\W_]*+md[\W_]*+hasibul[\W_]*+hasan\d*+
 1678911149	cigien	lorexsecureappforwindows\.com
+1678912231	cigien	evdc\.network
