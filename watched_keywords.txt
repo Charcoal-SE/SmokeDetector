@@ -48628,3 +48628,4 @@
 1678868242	tripleee	(?-i:mv2uf4ez)(?#tinyurl.com)
 1678868270	tripleee	takolightningsystem\.com
 1678868323	tripleee	bitcoin[\W_]*+system
+1678868363	tripleee	bitcoin[\W_]*+profit
