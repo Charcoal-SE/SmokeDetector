@@ -2947,6 +2947,9 @@ items:
   - thomas.ns.cloudflare.com.
 - ns:
   - susan.ns.cloudflare.com.
+  - yadiel.ns.cloudflare.com.
+- ns:
+  - susan.ns.cloudflare.com.
   - zac.ns.cloudflare.com.
 - ns:
   - tara.ns.cloudflare.com.
