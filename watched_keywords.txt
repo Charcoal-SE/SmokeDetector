@@ -48647,3 +48647,4 @@
 1678881964	tripleee	(?-i:^popeye$)
 1678883699	tripleee	llwmg\.com
 1678883767	tripleee	communian\.com/user/profile/972
+1678883807	tripleee	life[\W_]*+long[\W_]*+wealth[\W_]*+management(?:[\W_]*+group)?
