@@ -48636,3 +48636,4 @@
 1678876453	Jeff Schaller	geekysunny\.com
 1678879410	Glorfindel	stackoftuts\.com
 1678879930	tripleee	stackoftuts(?!\.com)
+1678879963	tripleee	celeb[\W_]*+leather[\W_]*+jackets
