@@ -48622,3 +48622,4 @@
 1678860972	tripleee	rankwatch\.com
 1678861811	tripleee	shopmerse\.com
 1678862279	tripleee	emf[\W_]*+defense
+1678866593	tripleee	dorustree\.com
