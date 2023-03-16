@@ -48680,3 +48680,4 @@
 1678945402	tripleee	thegloblenews\.com
 1678945459	tripleee	mobohost\.com
 1678947168	tripleee	bestsimoffers\.com
+1678947216	tripleee	latesttechnicalreviews\.com
