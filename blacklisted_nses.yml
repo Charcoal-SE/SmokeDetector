@@ -409,6 +409,9 @@ items:
 - ns: cloudnstools.com.
 - ns: supremedns.com.
 - ns:
+  - cns3999.hostgator.in.
+  - cns4000.hostgator.in.
+- ns:
   - cns6001.hostgator.in.
   - cns6002.hostgator.in.
 - ns:
