@@ -3037,7 +3037,6 @@ items:
 - ns:
   - pdns09.domaincontrol.com.
   - pdns10.domaincontrol.com.
-- ns: supercloudapps.com.
 - comment: 64/169 over a year
   disable: true
   ns: vultr.com.
