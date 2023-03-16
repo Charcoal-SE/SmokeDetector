@@ -48701,3 +48701,4 @@
 1678978362	Glorfindel	food\W*gyaan(?!\.com)
 1678980209	Ollie	attorneyvirginiamaryland\.com
 1678980236	tripleee	foodgyaan\.com
+1678980888	Makyen	huliony\.com
