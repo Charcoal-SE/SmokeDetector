@@ -48685,3 +48685,4 @@
 1678952351	Makyen	cincinnatidentalservices\.org
 1678953057	Cody Gray	japanartpress\.com
 1678953086	Jeff Schaller	faisaliteb\.com
+1678953312	Cody Gray	Social[\W_]*+Media[\W_]*+Auto[\W_]*+Publish(?:[\W_]*+plug[\W_]*+in)?
