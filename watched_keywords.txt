@@ -48698,3 +48698,4 @@
 1678975041	Jeff Schaller	pintdd\.com
 1678975884	tripleee	pintdd(?!\.com)
 1678977773	tripleee	lefewaresolutions\.com
+1678978362	Glorfindel	food\W*gyaan(?!\.com)
