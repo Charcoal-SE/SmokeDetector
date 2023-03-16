@@ -814,3 +814,4 @@ Visualytes
 (?-i:^Nicholas J Neff$)
 (?-i:^Mobi Wan$)
 (?-i:^loiusjeam$)
+^vnp guider$
