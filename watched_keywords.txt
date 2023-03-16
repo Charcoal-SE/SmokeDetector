@@ -48700,3 +48700,4 @@
 1678977773	tripleee	lefewaresolutions\.com
 1678978362	Glorfindel	food\W*gyaan(?!\.com)
 1678980209	Ollie	attorneyvirginiamaryland\.com
+1678980236	tripleee	foodgyaan\.com
