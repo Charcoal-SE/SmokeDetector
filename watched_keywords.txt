@@ -48704,4 +48704,3 @@
 1678980888	Makyen	huliony\.com
 1678990555	Makyen	19438940(?#pixiv.net)
 1678992848	cigien	adelaide[\W_]*+resume[\W_]*+writers(?!\.com(?<=adelaideresumewriters\.com))
-1678993079	cigien	(?-i:ZsMzfL1WtNJxCtg17 )(?#google forms)
