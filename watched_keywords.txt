@@ -48676,3 +48676,4 @@
 1678914519	cigien	technetronics\.in
 1678914859	Jeff Schaller	honeygoldbotanicals\.com
 1678914906	cigien	honey[\W_]*+gold[\W_]*+botanicals(?!\.com(?<=honeygoldbotanicals\.com))
+1678943010	Makyen	perfumes360\.me
