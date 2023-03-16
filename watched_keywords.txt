@@ -48678,3 +48678,4 @@
 1678914906	cigien	honey[\W_]*+gold[\W_]*+botanicals(?!\.com(?<=honeygoldbotanicals\.com))
 1678943010	Makyen	perfumes360\.me
 1678945402	tripleee	thegloblenews\.com
+1678945459	tripleee	mobohost\.com
