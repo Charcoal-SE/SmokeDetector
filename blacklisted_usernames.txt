@@ -815,3 +815,4 @@ Visualytes
 (?-i:^Mobi Wan$)
 (?-i:^loiusjeam$)
 ^vnp guider$
+(?-i:^Arfamedis Bandung$)
