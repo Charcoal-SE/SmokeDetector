@@ -48712,3 +48712,4 @@
 1679017354	Makyen	write[\W_]*+a[\W_]*+b[\W_]*+a[\W_]*+n[\W_]*+appeal[\W_]*+to[\W_]*+teratail
 1679024093	Makyen	proofstaking\.pro
 1679028869	Makyen	pachranga\.net
+1679031467	tripleee	vpn[\W_]*+guider(?!\.com(?<=vpnguider\.com))(?<!^vpn guider$)
