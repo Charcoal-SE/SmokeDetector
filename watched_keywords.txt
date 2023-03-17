@@ -48713,3 +48713,4 @@
 1679024093	Makyen	proofstaking\.pro
 1679028869	Makyen	pachranga\.net
 1679031467	tripleee	vpn[\W_]*+guider(?!\.com(?<=vpnguider\.com))(?<!^vpn guider$)
+1679031503	tripleee	localdigitalbusiness\.org
