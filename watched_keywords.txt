@@ -48732,3 +48732,4 @@
 1679045005	Cody Gray	palm[\W_]*+oil[\W_]*+(?:line|press)(?!\.com(?<=palmoilline\.com))
 1679049948	tripleee	sunstreamglobal\.com
 1679050287	tripleee	abogado[\W_]*+transito
+1679050536	Jeff Schaller	icsift\.com
