@@ -48733,3 +48733,4 @@
 1679049948	tripleee	sunstreamglobal\.com
 1679050287	tripleee	abogado[\W_]*+transito
 1679050536	Jeff Schaller	icsift\.com
+1679050749	tripleee	abogado[\W_]*+de[\W_]*+trafico
