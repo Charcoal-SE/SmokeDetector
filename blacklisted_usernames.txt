@@ -817,3 +817,4 @@ Visualytes
 ^vnp guider$
 (?-i:^Arfamedis Bandung$)
 (?-i:KEMONO[\W_]*+PANTSU.*$)
+^vpn guider$
