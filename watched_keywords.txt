@@ -48730,3 +48730,4 @@
 1679043677	Cody Gray	laptopsgeeks\.com
 1679043705	Cody Gray	Laptops[\W_]*+Geeks(?!\.com(?<=laptopsgeeks\.com))
 1679044141	Cody Gray	taskvirtual\.com
+1679044958	Cody Gray	palmoilline\.com
