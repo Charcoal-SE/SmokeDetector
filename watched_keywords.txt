@@ -39687,7 +39687,6 @@
 1654686635	Jeff Schaller	centurylawfirm\.in
 1654687127	tripleee	ceenvironment\.com
 1654687577	Makyen	onroadzcabs\.com
-1654687857	tripleee	aimlay(?!\.com(?<=aimlay\.com)| education(?<=(?-i:^Aimlay education$)))
 1654693029	Jeff Schaller	edatamine\.com
 1654693118	Jeff Schaller	programmingassignment\.net
 1654693479	Jeff Schaller	thetridentblog\.blogspot
