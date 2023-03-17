@@ -48734,3 +48734,4 @@
 1679050536	Jeff Schaller	icsift\.com
 1679050749	tripleee	abogado[\W_]*+de[\W_]*+trafico
 1679053682	tripleee	value[\W_]*+appz(?!\.com(?<=valueappz\.com))
+1679055633	tripleee	xxlolanolanxx(?# medium)
