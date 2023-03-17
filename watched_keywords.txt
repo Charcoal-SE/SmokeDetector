@@ -48717,3 +48717,4 @@
 1679031653	tripleee	coinloginn\.com
 1679031748	tripleee	metamasklogins\.com
 1679032887	tripleee	vrashwa\.com
+1679032927	tripleee	vrashwa(?!\.com)
