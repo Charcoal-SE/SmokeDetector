@@ -48735,3 +48735,4 @@
 1679053682	tripleee	value[\W_]*+appz(?!\.com(?<=valueappz\.com))
 1679055633	tripleee	xxlolanolanxx(?# medium)
 1679055895	tripleee	(?-i:^Samantha Collin$)
+1679056713	tripleee	beta-labs\.in
