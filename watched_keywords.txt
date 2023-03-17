@@ -34012,7 +34012,6 @@
 1638354551	tripleee	(?-i:2ZCaRJh)(?# bit.ly)
 1638354756	Makyen	endemaj(?:[\W_]*+(?:funds|dubai|\d++|[\da-f]{5,}+)s?)*
 1638354943	tripleee	getambee\.com
-1638355047	tripleee	(?-i:^sherrif$)
 1638356012	Cody Gray	theeducationlife\.com
 1638356059	Makyen	holakaj403simdpi\.com
 1638356093	Ryan M	koinbazar(?!\.com)
