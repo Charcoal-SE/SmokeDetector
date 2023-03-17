@@ -816,3 +816,4 @@ Visualytes
 (?-i:^loiusjeam$)
 ^vnp guider$
 (?-i:^Arfamedis Bandung$)
+(?-i:KEMONO[\W_]*+PANTSU.*$)
