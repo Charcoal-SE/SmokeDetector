@@ -3175,6 +3175,9 @@ items:
 - ns: md-ht-7.hostgatorwebservers.com.
 - ns: md-ht-8.hostgatorwebservers.com.
 - ns:
+  - ns1.md-in-62.hostgatorwebservers.com.
+  - ns2.md-in-62.hostgatorwebservers.com.
+- ns:
   - ns1.md-in-65.hostgatorwebservers.com.
   - ns2.md-in-65.hostgatorwebservers.com.
 - ns: md-in-80.hostgatorwebservers.com.
