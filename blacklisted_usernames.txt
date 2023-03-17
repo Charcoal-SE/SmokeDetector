@@ -819,3 +819,4 @@ Visualytes
 (?-i:KEMONO[\W_]*+PANTSU.*$)
 ^vpn guider$
 (?-i:^Shashi Kant Mani Tripathi$)
+(?-i:^Orion Realtors$)
