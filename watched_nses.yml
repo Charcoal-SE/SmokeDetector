@@ -1478,9 +1478,6 @@ items:
   - donald.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
-  - donald.ns.cloudflare.com.
-  - tina.ns.cloudflare.com.
-- ns:
   - donovan.ns.cloudflare.com.
   - saanvi.ns.cloudflare.com.
 - ns:
