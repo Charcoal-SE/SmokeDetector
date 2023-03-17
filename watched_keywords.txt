@@ -48711,3 +48711,4 @@
 1679014658	Robert Longson	cracksoft4you\.com
 1679016682	Makyen	pixiv\.net/novel[/?]show\.php\??id=1943894[0](?#Abuse the watchlist to add a detection reason on a very persistent spammer.)
 1679017354	Makyen	write[\W_]*+a[\W_]*+b[\W_]*+a[\W_]*+n[\W_]*+appeal[\W_]*+to[\W_]*+teratail
+1679024093	Makyen	proofstaking\.pro
