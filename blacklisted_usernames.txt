@@ -818,3 +818,4 @@ Visualytes
 (?-i:^Arfamedis Bandung$)
 (?-i:KEMONO[\W_]*+PANTSU.*$)
 ^vpn guider$
+(?-i:^Shashi Kant Mani Tripathi$)
