@@ -36852,7 +36852,7 @@
 1647005049	tripleee	(?-i:3J43gVj)(?# fiverr)
 1647005132	tripleee	(?-i:37gINP7)(?# fiverr)
 1647006108	tripleee	apkgodown\.com
-1647009238	Makyen	crypto[\W_]*+com
+1647009238	Makyen	crypto[\W_]*+com(?!/price\b)(?<!api\.crypto\.com)(?<!docs\.crypto\.com)(?<!help\.crypto\.com)(?!.*(?:<\/?code>|\bapi\b|\berror\b))
 1647019129	cigien	innosoft
 1647020783	EJoshuaS - Stand with Ukraine	technocrash\.online
 1647022745	Ollie	shadnagarploots\.blogspot
