@@ -107,6 +107,9 @@ items:
   - bill.ns.cloudflare.com.
   - elsa.ns.cloudflare.com.
 - ns:
+  - blair.ns.cloudflare.com.
+  - carlos.ns.cloudflare.com.
+- ns:
   - blakely.ns.cloudflare.com.
   - javon.ns.cloudflare.com.
 - ns:

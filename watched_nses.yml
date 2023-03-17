@@ -749,9 +749,6 @@ items:
   - novalee.ns.cloudflare.com.
 - ns:
   - blair.ns.cloudflare.com.
-  - carlos.ns.cloudflare.com.
-- ns:
-  - blair.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
   - blakely.ns.cloudflare.com.
