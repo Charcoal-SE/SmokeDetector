@@ -601,6 +601,9 @@ items:
   - ashley.ns.cloudflare.com.
   - dan.ns.cloudflare.com.
 - ns:
+  - ashton.ns.cloudflare.com.
+  - kia.ns.cloudflare.com.
+- ns:
   - athena.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
