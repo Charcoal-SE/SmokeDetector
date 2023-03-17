@@ -48709,3 +48709,4 @@
 1678997512	Mast	jaipurpinkcitytours\.com
 1678997865	Mast	test-logic\.com
 1679014658	Robert Longson	cracksoft4you\.com
+1679016682	Makyen	pixiv\.net/novel[/?]show\.php\??id=1943894[0](?#Abuse the watchlist to add a detection reason on a very persistent spammer.)
