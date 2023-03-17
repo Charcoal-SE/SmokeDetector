@@ -13429,7 +13429,6 @@
 1573463295	tripleee	css-javascript-toolbox\.com
 1573469029	tripleee	Whinstone
 1573469271	tripleee	certified[\W_]*+santa[\W_]*+letters
-1573474158	Shree	orionrealtors\.com
 1573475631	CalvT	marlinmedicalassistance\.com
 1573476722	Nisse Engström	excellentnursingresearch\.com
 1573477497	tripleee	webakruti\.com
