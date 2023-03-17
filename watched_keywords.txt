@@ -48725,3 +48725,4 @@
 1679037418	tripleee	(?-i:EbxG6K)(?# fiverr)
 1679037475	tripleee	ahmad[\W_]*+marketr
 1679038374	tripleee	^How Is Standard Deviation Calculated\?$
+1679038499	tripleee	bizglide\.in
