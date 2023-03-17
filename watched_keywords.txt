@@ -48728,3 +48728,4 @@
 1679040181	tripleee	quickenlancer\.com
 1679041959	tripleee	odi[\W_]*live
 1679043677	Cody Gray	laptopsgeeks\.com
+1679043705	Cody Gray	Laptops[\W_]*+Geeks(?!\.com(?<=laptopsgeeks\.com))
