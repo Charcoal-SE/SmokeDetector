@@ -16864,7 +16864,6 @@
 1582180934	Makyen	(?-i:4YXmyXslQ-U)(?#youtu.be)
 1582180981	Makyen	usapharmacyworld\.com
 1582181001	Makyen	reviewmypills\.tumblr\.com
-1582181839	Makyen	onlinemedzpharmacy\.com
 1582181863	Makyen	(?-i:gBKic\.jpg)
 1582181887	Makyen	maxx[\W_]*+boosted(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582181910	Makyen	(?-i:K0cUWAoXcGc)(?#youtu.be)
