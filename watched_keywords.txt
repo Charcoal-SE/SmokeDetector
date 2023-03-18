@@ -11328,7 +11328,6 @@
 1565918413	Makyen	(?-i:pF1n1E_d2Yc)(?#YouTube)
 1565918433	Makyen	biogenx-official\.mystrikingly\.com
 1565918510	Makyen	biogenx(?!-official\.mystrikingly\.com)(?!-reviews\.mystrikingly\.com)(?!testobooste\.wixsite\.com)(?!-testosterone-booster-42\.webself\.net)(?:\W*(?:official|testo(?:sterone)?|boost(?:er?)?|review|new|\d+)s?)*
-1565918726	Jeff Schaller	trukky\.com
 1565930582	Shree	columbiaasia\.com
 1565930812	Shree	columbiaasiahospital\d*(?:@gmail\.com)
 1565933754	Shree	(?i)info@SHAMMAclinic\.com
