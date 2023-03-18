@@ -48773,3 +48773,4 @@
 1679161512	Spevacus	emarketingdepot\.com
 1679162216	Ethan	medicalcosmeticsltd\.co\.uk
 1679162314	Makyen	france[\W_]*+pays[\W_]*+de[\W_]*+galles
+1679162343	Makyen	en[\W_]*+direct[\W_]*+streaming[\W_]*+live
