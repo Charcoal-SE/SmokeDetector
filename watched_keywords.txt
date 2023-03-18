@@ -48766,3 +48766,4 @@
 1679152834	Ethan	semarholiday\.co\.id
 1679152870	Ethan	fuelbetter\.app
 1679152879	Ethan	fuelbetter\.co
+1679152899	Ethan	uk\.indeed\.com/job/co-founder-mobile-app-developer-8c070044733b7fe9
