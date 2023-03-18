@@ -48765,3 +48765,4 @@
 1679152353	Ethan	play\.google\.com/store/apps/details?id=com\.powerful\.magic\.spell\.casting
 1679152834	Ethan	semarholiday\.co\.id
 1679152870	Ethan	fuelbetter\.app
+1679152879	Ethan	fuelbetter\.co
