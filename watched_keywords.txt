@@ -48769,3 +48769,4 @@
 1679152899	Ethan	uk\.indeed\.com/job/co-founder-mobile-app-developer-8c070044733b7fe9
 1679156100	Makyen	bedava
 1679157081	Makyen	i̇zle
+1679160604	Nisse Engström	tv2pc\.live
