@@ -2806,3 +2806,4 @@ live[\W_]*+stream[\W_]*+reddit
 real[\W_]*+madrid[\W_]*+(?:vs?[\W_]*+)+liverpool
 19438[9]40(?#pixiv.net)
 aimlay(?!\.com(?<=aimlay\.com)| education(?<=(?-i:^Aimlay education$)))
+(?-i:VU-LTcs1gEw2YzA1)(?#t.me)
