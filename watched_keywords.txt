@@ -48757,3 +48757,4 @@
 1679138196	Cody Gray	MGO303
 1679138314	Cody Gray	allinoneupdate\.in
 1679138351	Cody Gray	allinoneupdate(?!\.in)
+1679139656	Cody Gray	getswipe\.in
