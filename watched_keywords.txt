@@ -48776,3 +48776,4 @@
 1679162343	Makyen	en[\W_]*+direct[\W_]*+streaming[\W_]*+live
 1679166748	Makyen	allinonedownloadzz\.site
 1679167187	Makyen	hoperehabs\.com
+1679176708	Makyen	fontgeneratorfancy\.com
