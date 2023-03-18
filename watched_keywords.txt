@@ -47506,7 +47506,6 @@
 1676167163	Jeff Schaller	Makhachev.vs.Volkanovski.UFC.284
 1676170991	Makyen	watchsportslivetv\.live
 1676172348	Henry Ecker	(?-i:eunezmjt)(?#tinyurl.com)
-1676179925	cigien	ufcfightson\.com
 1676180137	cocomac	faiz9365956985(?:@gmail\.com)?
 1676181202	Cody Gray	Saij[\W_]*+Uddin[\W_]*+Barbhuiya
 1676185195	cigien	apkyolo\.com
