@@ -5227,3 +5227,4 @@ onlinemedzpharmacy\.com
 fortyreviews\.com
 orionrealtors\.com
 10play\.live
+(?-i:3ZVichd)(?#bit.ly)
