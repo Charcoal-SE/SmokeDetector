@@ -5240,3 +5240,4 @@ ufcfightson\.com
 (?-i:3LCGgRt)(?#bit.ly)
 baidudownloader\.com
 (?-i:k4jmqnI)(?#cutt.ly)
+bitbucket\.org/atlassian/update-all-the-things/issues
