@@ -48786,3 +48786,4 @@
 1679240635	Jeff Schaller	3omarcultures\.blogspot
 1679240770	Jeff Schaller	top5shoppers\.blogspot
 1679240874	Jeff Schaller	peoplesoftdotnet\.blogspot
+1679242127	Makyen	(?:canlı|maç|izle)(?#something more complex is probably desired. this should get more data.)
