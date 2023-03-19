@@ -44337,7 +44337,6 @@
 1667116160	tripleee	manpower\.com\.kw
 1667116350	tripleee	lpgagency\.in
 1667121294	Makyen	digitalpadho\.com
-1667124973	Robert Longson	baidudownloader\.com
 1667132299	cigien	hobigamespro\.com
 1667132488	cigien	clippingpathservice\.io
 1667134231	cigien	awesomeminer\.pxf\.io
