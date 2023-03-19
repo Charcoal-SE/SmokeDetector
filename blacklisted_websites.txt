@@ -5239,3 +5239,4 @@ ufcfightson\.com
 (?-i:3Z2eO2y)(?#bit.ly)
 (?-i:3LCGgRt)(?#bit.ly)
 baidudownloader\.com
+(?-i:k4jmqnI)(?#cutt.ly)
