@@ -1085,7 +1085,7 @@ orderfitnesspoints\.co\.uk
 burnfatin4days\.com
 eye7\.in
 freecustomwritings\.com
-cyberservices\.com
+cyberservices[\W_]*+(?:do?t[\W_]*+)?com
 researchomatic\.com
 nutritionfit\.org
 oralhealthplus\.com

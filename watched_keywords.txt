@@ -6778,7 +6778,7 @@
 1546429735	bertieb	poeinjector\.net
 1546475165	Makyen	mbainmalaysia\.com
 1546475880	Makyen	chinacarmount\.com
-1546485969	Makyen	wealthrecovery(?:\W*(?:at\W*)?cyberservices(?:\W*(?:do?t\W*)?com)?)?
+1546485969	Makyen	wealthrecovery(?:[\W_]*+(?:at[\W_]*+)?cyberservices(?:[\W_]*+(?:do?t[\W_]*+)?com)?)?
 1546486351	Makyen	jasabet\.me
 1546491201	Tetsuya Yamamoto	mypeachtree\.co
 1546494207	Tetsuya Yamamoto	indian-graicy\.com
