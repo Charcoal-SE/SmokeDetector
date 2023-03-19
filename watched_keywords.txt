@@ -31221,7 +31221,6 @@
 1628963540	cigien	ratetrade\.ca
 1629005493	cigien	uiweb\.sg
 1629031554	Makyen	programmerdost\.com
-1629031639	Jeff Schaller	top5shoppers\.blogspot\.com
 1629040858	cigien	noithatthinh\.com
 1629040955	cigien	digitalexpertsolution\.com
 1629041127	cigien	moviesmore\.tk
