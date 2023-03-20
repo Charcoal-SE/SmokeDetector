@@ -48808,3 +48808,4 @@
 1679305266	tripleee	strengthscape(?!\.com)(?<!(?-i:^strengthscape$))
 1679305297	tripleee	webdescode\.com
 1679307496	tripleee	aidanglobal\.com
+1679307970	Jeff Schaller	lexity\.com\.au
