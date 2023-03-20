@@ -48819,3 +48819,4 @@
 1679312329	tripleee	capital[\W_]*+varsity
 1679315264	Jeff Schaller	360digitalservices\.com
 1679318048	tripleee	word-master\.org
+1679321295	tripleee	instadpdownloads\.com
