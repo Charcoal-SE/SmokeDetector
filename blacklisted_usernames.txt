@@ -824,3 +824,4 @@ Visualytes
 (?-i:^strengthscape$)
 (?-i:^Lexity$)
 (?-i:^Aravind kumar$)
+(?-i:^dourado car$)
