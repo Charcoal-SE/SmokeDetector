@@ -48807,3 +48807,4 @@
 1679304371	tripleee	assignmenthelp\.london
 1679305266	tripleee	strengthscape(?!\.com)(?<!(?-i:^strengthscape$))
 1679305297	tripleee	webdescode\.com
+1679307496	tripleee	aidanglobal\.com
