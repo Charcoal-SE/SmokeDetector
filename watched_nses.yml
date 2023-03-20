@@ -390,6 +390,9 @@ items:
   - ram.ns.cloudflare.com.
 - ns:
   - anastasia.ns.cloudflare.com.
+  - damon.ns.cloudflare.com.
+- ns:
+  - anastasia.ns.cloudflare.com.
   - rory.ns.cloudflare.com.
 - ns:
   - anastasia.ns.cloudflare.com.
