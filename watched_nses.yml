@@ -1738,6 +1738,9 @@ items:
   - fred.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
+  - frida.ns.cloudflare.com.
+  - gordon.ns.cloudflare.com.
+- ns:
   - gabe.ns.cloudflare.com.
   - kim.ns.cloudflare.com.
 - ns:
