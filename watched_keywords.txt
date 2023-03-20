@@ -48805,3 +48805,4 @@
 1679295654	Makyen	pendrivedatarecovery\.org
 1679304315	tripleee	cottonmonk\.com
 1679304371	tripleee	assignmenthelp\.london
+1679305266	tripleee	strengthscape(?!\.com)(?<!(?-i:^strengthscape$))
