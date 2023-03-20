@@ -2794,6 +2794,9 @@ items:
   - novalee.ns.cloudflare.com.
   - paul.ns.cloudflare.com.
 - ns:
+  - nucum.ns.cloudflare.com.
+  - ram.ns.cloudflare.com.
+- ns:
   - odin.ns.cloudflare.com.
   - paislee.ns.cloudflare.com.
 - ns:
