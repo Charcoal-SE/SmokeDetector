@@ -823,3 +823,4 @@ Visualytes
 (?-i:YUKKURI[\W_]*+MARISA\w*)
 (?-i:^strengthscape$)
 (?-i:^Lexity$)
+(?-i:^Aravind kumar$)
