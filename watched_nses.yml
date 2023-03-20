@@ -1729,6 +1729,9 @@ items:
   - fiona.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
+  - frank.ns.cloudflare.com.
+  - love.ns.cloudflare.com.
+- ns:
   - fred.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
