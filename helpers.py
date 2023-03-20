@@ -334,32 +334,49 @@ def blacklist_integrity_check():
     errors = []
     city_list = ['test']
     regex.cache_all(False)
+    previous_bl_file = ''
     for bl_file in bl_files:
+        print('bl_file:', bl_file)
         with open(bl_file, 'r', encoding="utf-8") as lines:
-            for lineno, line in enumerate(lines, 1):
-                if line.endswith('\r\n'):
-                    errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
-                elif not line.endswith('\n'):
-                    errors.append('{0}:{1}:No newline'.format(bl_file, lineno))
-                elif line == '\n':
-                    errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
-                elif bl_file.startswith('watched_'):
-                    line = line.split('\t')[2]
-                if 'numbers' not in bl_file:
-                    try:
-                        regex.compile(line, regex.UNICODE, city=city_list, ignore_unused=True)
-                    except Exception:
-                        (exctype, value, traceback_or_message) = sys.exc_info()
-                        exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
-                        errors.append("{0}:{1}:Regex fails to compile:r'''{2}''':{3}".format(bl_file, lineno,
-                                                                                             line.rstrip('\n'),
-                                                                                             exception_only))
-                line = pcre_comment.sub("", line)
-                if line in seen:
-                    errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
-                        bl_file, lineno, line.rstrip('\n'), seen[line]))
+            try:
+                previous_line = ''
+                previous_line_number = -1
+                for lineno, line in enumerate(lines, 1):
+                    if line.endswith('\r\n'):
+                        errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
+                    elif not line.endswith('\n'):
+                        errors.append('{0}:{1}:No newline'.format(bl_file, lineno))
+                    elif line == '\n':
+                        errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
+                    elif bl_file.startswith('watched_'):
+                        line = line.split('\t')[2]
+                    if 'numbers' not in bl_file:
+                        try:
+                            regex.compile(line, regex.UNICODE, city=city_list, ignore_unused=True)
+                        except Exception:
+                            (exctype, value, traceback_or_message) = sys.exc_info()
+                            exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
+                            errors.append("{0}:{1}:Regex fails to compile:r'''{2}''':{3}".format(bl_file, lineno,
+                                                                                                 line.rstrip('\n'),
+                                                                                                 exception_only))
+                    line = pcre_comment.sub("", line)
+                    if line in seen:
+                        errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
+                            bl_file, lineno, line.rstrip('\n'), seen[line]))
+                    else:
+                        seen[line] = '{0}:{1}'.format(bl_file, lineno)
+                    previous_line = line
+                    previous_line_number = lineno
+                    previous_bl_file = bl_file
+            except Exception:
+                # Some output to helps localize the problem
+                if previous_line_number == -1:
+                    print('Exception raised when started reading: {}'.format(bl_file))
+                    print('End of previous file: line {} of {}:{}'.format(lineno, previous_bl_file, line))
                 else:
-                    seen[line] = '{0}:{1}'.format(bl_file, lineno)
+                    print('previous: line {} of {}:{}'.format(previous_line_number, previous_bl_file, previous_line))
+                    print('line {} of {}:{}'.format(lineno, bl_file, line))
+                raise
     regex.cache_all(True)
     return errors
 
