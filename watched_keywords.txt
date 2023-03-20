@@ -48801,3 +48801,4 @@
 1679292375	Makyen	(?-i:shypmaxeasier)(?#medium.com)
 1679292429	tripleee	localserviceusa\.com
 1679292771	tripleee	verified[\W_]*+(?:[^\W_]++[\W_]++){0,3}accounts?
+1679293022	tripleee	lotteryteer\.in
