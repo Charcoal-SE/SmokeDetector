@@ -822,3 +822,4 @@ Visualytes
 (?-i:^Orion Realtors$)
 (?-i:YUKKURI[\W_]*+MARISA\w*)
 (?-i:^strengthscape$)
+(?-i:^Lexity$)
