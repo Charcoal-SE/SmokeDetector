@@ -821,3 +821,4 @@ Visualytes
 (?-i:^Shashi Kant Mani Tripathi$)
 (?-i:^Orion Realtors$)
 (?-i:YUKKURI[\W_]*+MARISA\w*)
+(?-i:^strengthscape$)
