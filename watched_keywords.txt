@@ -48816,3 +48816,4 @@
 1679311212	Jeff Schaller	purplerockdubai\.com
 1679311384	Jeff Schaller	microhost\.com
 1679311570	tripleee	cartinmart\.co\.za
+1679312329	tripleee	capital[\W_]*+varsity
