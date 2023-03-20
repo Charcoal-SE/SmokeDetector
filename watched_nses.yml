@@ -3277,6 +3277,9 @@ items:
 - ns:
   - ns1.cp-36.bigrockservers.com.
   - ns2.cp-36.bigrockservers.com.
+- ns:
+  - ns1.cp-in-12.bigrockservers.com.
+  - ns2.cp-in-12.bigrockservers.com.
 - ns: 
   - ns1.md-97.bigrockservers.com.
   - ns2.md-97.bigrockservers.com.
