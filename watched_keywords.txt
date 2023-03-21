@@ -48828,3 +48828,4 @@
 1679376389	tripleee	howphotoshop\.com
 1679376473	tripleee	ice[\W_]*+technology[\W_]*+lab
 1679383247	tripleee	nextblog\.id
+1679383309	tripleee	operfu\.com
