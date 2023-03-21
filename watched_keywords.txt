@@ -48845,3 +48845,4 @@
 1679401551	Jeff Schaller	hustlersbase\.com
 1679402074	Jeff Schaller	inchub\.ae
 1679403585	Jeff Schaller	famshop\.org
+1679404546	Makyen	alvo[\W_]*+f(?:ee|oo)t[\W_]*+socks?
