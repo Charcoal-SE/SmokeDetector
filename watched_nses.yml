@@ -384,6 +384,9 @@ items:
   - ed.ns.cloudflare.com.
 - ns:
   - amy.ns.cloudflare.com.
+  - gabe.ns.cloudflare.com.
+- ns:
+  - amy.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
   - amy.ns.cloudflare.com.
