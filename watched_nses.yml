@@ -2976,6 +2976,9 @@ items:
   - susan.ns.cloudflare.com.
   - zac.ns.cloudflare.com.
 - ns:
+  - sydney.ns.cloudflare.com.
+  - uriah.ns.cloudflare.com.
+- ns:
   - tara.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
