@@ -825,3 +825,4 @@ Visualytes
 (?-i:^Lexity$)
 (?-i:^Aravind kumar$)
 (?-i:^dourado car$)
+(?-i:^Axis Colleges$)
