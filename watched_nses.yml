@@ -2000,6 +2000,9 @@ items:
   - rudy.ns.cloudflare.com.
 - ns:
   - irma.ns.cloudflare.com.
+  - sam.ns.cloudflare.com.
+- ns:
+  - irma.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
 - ns:
   - isaac.ns.cloudflare.com.
