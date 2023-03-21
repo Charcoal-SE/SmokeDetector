@@ -48847,3 +48847,4 @@
 1679403585	Jeff Schaller	famshop\.org
 1679404546	Makyen	alvo[\W_]*+f(?:ee|oo)t[\W_]*+socks?
 1679405772	Jeff Schaller	websolutionzone\.com
+1679406985	Jeff Schaller	lightologist\.co\.uk
