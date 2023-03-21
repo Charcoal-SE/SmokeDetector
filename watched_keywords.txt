@@ -48826,3 +48826,4 @@
 1679371308	cocomac	davinosoft\.com
 1679371492	cocomac	DavinoSoft(?!\.com)
 1679376389	tripleee	howphotoshop\.com
+1679376473	tripleee	ice[\W_]*+technology[\W_]*+lab
