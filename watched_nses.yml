@@ -2068,9 +2068,6 @@ items:
   - james.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
-  - james.ns.cloudflare.com.
-  - rita.ns.cloudflare.com.
-- ns:
   - janet.ns.cloudflare.com.
   - lou.ns.cloudflare.com.
 - ns:
