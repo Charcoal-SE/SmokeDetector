@@ -1197,6 +1197,9 @@ items:
   - cory.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
+  - cosmin.ns.cloudflare.com.
+  - jade.ns.cloudflare.com.
+- ns:
   - craig.ns.cloudflare.com.
   - janet.ns.cloudflare.com.
 - ns:
