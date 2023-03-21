@@ -48823,3 +48823,4 @@
 1679328485	tripleee	(?-i:UCwv6lQnBPWciI-BlOuObArA)(?# youtube)
 1679334052	Mast	grandpahays\.substack\.com
 1679336064	tripleee	Robert[\W_]*+L[\W_]*+Hays
+1679371308	cocomac	davinosoft\.com
