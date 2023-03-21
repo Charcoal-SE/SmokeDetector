@@ -48840,3 +48840,4 @@
 1679397282	tripleee	safari-lift-africa\.com
 1679398000	tripleee	ampedlogin\.com
 1679398984	tripleee	primeestimation\.com
+1679399015	tripleee	prime[\W_]*+estimation(?!\.com(?<=primeestimation\.com))
