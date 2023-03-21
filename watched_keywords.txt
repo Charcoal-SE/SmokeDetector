@@ -48843,3 +48843,4 @@
 1679399015	tripleee	prime[\W_]*+estimation(?!\.com(?<=primeestimation\.com))
 1679399404	Jeff Schaller	7eventzz\.com
 1679401551	Jeff Schaller	hustlersbase\.com
+1679402074	Jeff Schaller	inchub\.ae
