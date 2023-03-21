@@ -5243,3 +5243,4 @@ baidudownloader\.com
 bitbucket\.org/atlassian/update-all-the-things/issues
 (?-i:R4jDhzl)(?#cutt.ly)
 affforce\.com
+viact\.ai

@@ -42463,7 +42463,6 @@
 1662021125	tripleee	the-inner-peace-guru\.tribe\.so
 1662021230	tripleee	tribe\.so
 1662021910	tripleee	(?-i:^Paige Dimick$)
-1662022793	tripleee	viact\.ai
 1662022976	tripleee	znewbooks\.com
 1662022996	tripleee	melbournemoverspackers\.com\.au
 1662025026	tripleee	techademy\.net
