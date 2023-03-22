@@ -48862,3 +48862,4 @@
 1679467445	tripleee	(?-i:^Nighthawk Routerlog$)
 1679467483	tripleee	nighthawk[\W_]*+router[\W_]*+log(?!\.com(?<=nighthawkrouterlog\.com))(?<!(?-i:^Nighthawk Routerlog$))
 1679469611	tripleee	(?-i:^Asif Qasim$)
+1679470307	tripleee	(?-i:^Dwayne Smith$)
