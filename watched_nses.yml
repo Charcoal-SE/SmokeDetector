@@ -1499,6 +1499,9 @@ items:
   - dorthy.ns.cloudflare.com.
   - john.ns.cloudflare.com.
 - ns:
+  - dorthy.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
+- ns:
   - doug.ns.cloudflare.com.
   - keyla.ns.cloudflare.com.
 - ns:
