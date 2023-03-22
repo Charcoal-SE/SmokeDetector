@@ -48884,3 +48884,4 @@
 1679488939	tripleee	cszc3\.com
 1679489596	tripleee	17track\.net
 1679491205	tripleee	getsocialstock\.com
+1679491376	tripleee	pinterestvideodownloader\.io
