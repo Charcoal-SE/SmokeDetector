@@ -1729,6 +1729,9 @@ items:
   - felicity.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
+  - felicity.ns.cloudflare.com.
+  - luciana.ns.cloudflare.com.
+- ns:
   - felipe.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
