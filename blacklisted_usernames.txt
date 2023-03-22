@@ -827,3 +827,4 @@ Visualytes
 (?-i:^dourado car$)
 (?-i:^Axis Colleges$)
 (?-i:^Harper Edward$)
+(?-i:^Solid Future$)
