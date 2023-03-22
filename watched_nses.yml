@@ -272,6 +272,9 @@ items:
   - algin.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - algin.ns.cloudflare.com.
+  - connie.ns.cloudflare.com.
+- ns:
   - ali.ns.cloudflare.com.
   - boyd.ns.cloudflare.com.
 - ns:
