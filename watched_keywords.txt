@@ -48858,3 +48858,4 @@
 1679430930	Makyen	(?-i:tomisinabiodun)(?#medium.com)
 1679465152	tripleee	henceforthsolutions\.com
 1679465208	tripleee	(?-i:^henceforth solutions$)
+1679465248	tripleee	henceforth[\W_]*+solutions(?!\.com(?<=henceforthsolutions\.com))(?<!(?-i:^henceforth solutions$))
