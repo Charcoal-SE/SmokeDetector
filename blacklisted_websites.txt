@@ -5245,3 +5245,4 @@ bitbucket\.org/atlassian/update-all-the-things/issues
 affforce\.com
 viact\.ai
 (?-i:D4bS5sG)(?#cutt.ly)
+indiquehair\.com
