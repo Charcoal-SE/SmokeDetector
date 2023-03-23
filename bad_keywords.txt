@@ -2809,3 +2809,4 @@ aimlay(?!\.com(?<=aimlay\.com)| education(?<=(?-i:^Aimlay education$)))
 (?-i:VU-LTcs1gEw2YzA1)(?#t.me)
 (?-i:evZAdKO4oG85Zjgx)(?#t.me)
 cybergenie
+slot[\W_]*+gacor\d*
