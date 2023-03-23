@@ -48929,3 +48929,4 @@
 1679585751	Makyen	downloadvimeo(?!\.info)
 1679592019	Jeff Schaller	growdm\.co
 1679594313	Makyen	teenagerguides\.com
+1679597821	tripleee	(?-i:Lx5sLk-EX1I)(?# youtube)
