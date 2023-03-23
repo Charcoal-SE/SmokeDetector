@@ -48911,3 +48911,4 @@
 1679555207	tripleee	skill-centre\.com
 1679555429	tripleee	(?-i:^Lalit Kumar$)
 1679556847	tripleee	kanyewestmerch\.online
+1679557447	tripleee	wholesalepictureframes\.co\.uk
