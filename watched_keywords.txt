@@ -48927,3 +48927,4 @@
 1679577427	tripleee	(?-i:^bharani\d+$)
 1679585711	Makyen	downloadvimeo\.info
 1679585751	Makyen	downloadvimeo(?!\.info)
+1679592019	Jeff Schaller	growdm\.co
