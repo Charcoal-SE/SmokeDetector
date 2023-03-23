@@ -48910,3 +48910,4 @@
 1679555177	tripleee	poshtik[\W_]*+sutra
 1679555207	tripleee	skill-centre\.com
 1679555429	tripleee	(?-i:^Lalit Kumar$)
+1679556847	tripleee	kanyewestmerch\.online
