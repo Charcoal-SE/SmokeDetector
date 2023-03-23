@@ -48909,3 +48909,4 @@
 1679555147	tripleee	florencebook\.com
 1679555177	tripleee	poshtik[\W_]*+sutra
 1679555207	tripleee	skill-centre\.com
+1679555429	tripleee	(?-i:^Lalit Kumar$)
