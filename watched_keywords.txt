@@ -48925,3 +48925,4 @@
 1679572001	Jeff Schaller	blinker\.de
 1679573642	tripleee	lawyer-hd\.sa
 1679577427	tripleee	(?-i:^bharani\d+$)
+1679585711	Makyen	downloadvimeo\.info
