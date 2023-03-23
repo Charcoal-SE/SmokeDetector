@@ -48906,3 +48906,4 @@
 1679553787	tripleee	hjsops\.com
 1679553814	tripleee	shamuns[\W_]*+flowers(?!\.com(?<=shamunsflowers\.com))
 1679553850	tripleee	coatingmasters\.in
+1679555147	tripleee	florencebook\.com
