@@ -48914,3 +48914,4 @@
 1679557447	tripleee	wholesalepictureframes\.co\.uk
 1679557523	tripleee	kanye[\W_]*+(?:west[\W_]*+)?merch(?:andise)?(?:[\W_]*+shop)?
 1679557557	tripleee	ongocare\.com
+1679561363	tripleee	katalon\.com
