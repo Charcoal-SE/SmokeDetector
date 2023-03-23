@@ -48900,3 +48900,4 @@
 1679539529	Makyen	slot[\W_]*+gacor88
 1679547250	Makyen	indohoki77\.top
 1679547282	Makyen	indohoki77(?!\.top)
+1679548673	Makyen	trubloggr\.com
