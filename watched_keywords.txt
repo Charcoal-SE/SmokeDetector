@@ -48912,3 +48912,4 @@
 1679555429	tripleee	(?-i:^Lalit Kumar$)
 1679556847	tripleee	kanyewestmerch\.online
 1679557447	tripleee	wholesalepictureframes\.co\.uk
+1679557523	tripleee	kanye[\W_]*+(?:west[\W_]*+)?merch(?:andise)?(?:[\W_]*+shop)?
