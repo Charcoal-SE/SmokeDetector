@@ -1898,6 +1898,9 @@ items:
   - lee.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
+  - jessica.ns.cloudflare.com.
+- ns:
+  - hal.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
