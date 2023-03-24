@@ -80,6 +80,9 @@ items:
   - aragorn.ns.cloudflare.com.
   - gwen.ns.cloudflare.com.
 - ns:
+  - aron.ns.cloudflare.com.
+  - kurt.ns.cloudflare.com.
+- ns:
   - arya.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
