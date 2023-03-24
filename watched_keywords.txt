@@ -48946,3 +48946,4 @@
 1679641232	tripleee	techplek(?!\.com)
 1679641309	tripleee	keodancanh\.com
 1679641824	tripleee	testrig[\W_]*+technologies(?!\.com(?<=testrigtechnologies\.com))
+1679642774	tripleee	sumasoft\.com
