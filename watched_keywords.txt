@@ -48953,3 +48953,4 @@
 1679645758	tripleee	viewform(?<=/viewform[?&])
 1679645801	tripleee	websitespeedy\.com
 1679645881	tripleee	plasticdealers\.in
+1679645912	tripleee	gbwhatsap\.download
