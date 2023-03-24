@@ -49000,3 +49000,4 @@
 1679696849	Ryan M	truckparkingclub\.com
 1679696879	Ryan M	truckparkingclub(?!\.com)
 1679696925	Ryan M	flexa[\W_]*+flex
+1679696989	Ryan M	yyzsc01(?# Telegram)
