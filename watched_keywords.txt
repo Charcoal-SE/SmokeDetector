@@ -49005,7 +49005,6 @@
 1679697297	Ryan M	q2a[\W_]*+market
 1679697423	Ryan M	bet365-il\.net
 1679697586	Ryan M	glasierinc\.com
-1679697616	Ryan M	glasierinc(?!\.com)
 1679697644	Ryan M	amzn\.to/3m2hufs
 1679697671	Ryan M	onlinecasinohex\.ph
 1679697696	Ryan M	playinexchange\.in
