@@ -48990,3 +48990,4 @@
 1679667268	Makyen	recruiting\.for\.stealth\.startup(?:@gmail\.com)?
 1679667295	Makyen	stealthstartup
 1679667333	Makyen	toturial5c\.net
+1679667362	Makyen	codingstudyandshare\.com
