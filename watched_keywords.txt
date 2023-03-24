@@ -48966,3 +48966,4 @@
 1679646733	tripleee	jepara\.go\.id
 1679646781	tripleee	e-journal\.stai-iu\.ac\.id
 1679646817	tripleee	akbidharapanmulya\.ac\.id
+1679646856	tripleee	smpn1kasihan\.sch\.id
