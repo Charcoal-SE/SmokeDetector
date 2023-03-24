@@ -48943,3 +48943,4 @@
 1679639940	tripleee	nochet\.xyz
 1679640024	tripleee	(?-i:^Puneet Sharma$)
 1679640220	tripleee	(?-i:^williamson$)
+1679641232	tripleee	techplek(?!\.com)
