@@ -48945,3 +48945,4 @@
 1679640220	tripleee	(?-i:^williamson$)
 1679641232	tripleee	techplek(?!\.com)
 1679641309	tripleee	keodancanh\.com
+1679641824	tripleee	testrig[\W_]*+technologies(?!\.com(?<=testrigtechnologies\.com))
