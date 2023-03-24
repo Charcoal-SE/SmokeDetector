@@ -48949,3 +48949,4 @@
 1679642774	tripleee	sumasoft\.com
 1679642812	tripleee	suma[\W_]*+soft(?!\.com(?<=sumasoft\.com))
 1679645636	tripleee	immortal\.game
+1679645701	tripleee	(?-i:lAL6)(?# shortest.link)
