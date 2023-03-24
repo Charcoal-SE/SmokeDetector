@@ -48998,3 +48998,4 @@
 1679689061	Spevacus	nuvibit\.com
 1679696001	Jeff Schaller	pythonfreecode\.blogspot
 1679696849	Ryan M	truckparkingclub\.com
+1679696879	Ryan M	truckparkingclub(?!\.com)
