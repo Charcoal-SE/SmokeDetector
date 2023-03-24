@@ -48951,3 +48951,4 @@
 1679645636	tripleee	immortal\.game
 1679645701	tripleee	(?-i:lAL6)(?# shortest.link)
 1679645758	tripleee	viewform(?<=/viewform[?&])
+1679645801	tripleee	websitespeedy\.com
