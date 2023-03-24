@@ -49015,3 +49015,4 @@
 1679697853	Ryan M	online[\W_]*+sports[\W_]*+betting
 1679697881	Ryan M	hybrid[\W_]*+app[\W_]*+development[\W_]*+company
 1679697919	Ryan M	app-development-services
+1679698113	Ryan M	cadetautotags\.com
