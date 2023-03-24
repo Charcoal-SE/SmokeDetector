@@ -49002,3 +49002,4 @@
 1679696925	Ryan M	flexa[\W_]*+flex
 1679696989	Ryan M	yyzsc01(?# Telegram)
 1679697254	Ryan M	kryll\.io
+1679697297	Ryan M	q2a[\W_]*+market
