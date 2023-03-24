@@ -48941,3 +48941,4 @@
 1679635110	tripleee	thecrazydigital\.com
 1679630051	Jesse	home-luce\.com
 1679639940	tripleee	nochet\.xyz
+1679640024	tripleee	(?-i:^Puneet Sharma$)
