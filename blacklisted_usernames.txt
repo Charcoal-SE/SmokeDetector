@@ -831,3 +831,4 @@ Visualytes
 ^Ap'' Ap'' Ap'' Ap'' Ap'' Ap''$
 (?-i:^Market Research Group$)
 (?-i:^user1746412$)
+(?-i:^Pritansh Mehta$)
