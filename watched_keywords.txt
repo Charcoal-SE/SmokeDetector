@@ -49040,3 +49040,4 @@
 1679733785	Nisse Engström	astrolunaresultado\.com
 1679735926	Nisse Engström	bigbang\.biz
 1679740250	Nisse Engström	soffos\.ai
+1679740286	tripleee	(?-i:^allinone$)
