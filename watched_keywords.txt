@@ -49042,3 +49042,4 @@
 1679740250	Nisse Engström	soffos\.ai
 1679740286	tripleee	(?-i:^allinone$)
 1679741868	Nisse Engström	jobsbazaar\.pk
+1679742427	Nisse Engström	thesampleapp\.site
