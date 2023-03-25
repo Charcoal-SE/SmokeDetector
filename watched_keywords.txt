@@ -49034,3 +49034,4 @@
 1679699968	Makyen	flower[\W_]*+process[\W_]*+workflow[\W_]*+automation
 1679700008	Makyen	2f419066[\W_]*+pdf[\W_]*+eng
 1679715671	Makyen	carolnrenahuggins(?:@gmail\.com)?
+1679715696	Makyen	carolynrhuggins@deliveredondemand\.company
