@@ -3964,7 +3964,9 @@ items:
 - ns: jinfo.net.
 - ns: ambitioncloud.org.
 - ns: ambitionhost.org.
-- ns: centreserver.com.
+- comment: NXDOMAIN 2023-03-25
+  disable: true
+  ns: centreserver.com.
 - ns: clover.host.
 - ns: unixplorer.com.
 - ns: bigbadshah.com.
