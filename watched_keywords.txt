@@ -49054,3 +49054,4 @@
 1679804350	Jeff Schaller	acquistorealestate\.com
 1679822284	Nisse Engström	easymovers\.ae
 1679828574	tripleee	roschic
+1679830083	tripleee	(?-i:^Chris Huffman$)
