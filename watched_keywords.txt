@@ -49075,3 +49075,4 @@
 1679899315	tripleee	marriagesolution2012\.com
 1679899355	tripleee	(?-i:^tom lake$)
 1679899384	tripleee	sysqoindia\.com
+1679902017	tripleee	tradexn\.com
