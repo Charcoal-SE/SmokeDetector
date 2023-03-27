@@ -49068,3 +49068,4 @@
 1679884501	Makyen	leather[\W_]*+power[\W_]*+lift[\W_]*+sofa
 1679884558	Makyen	curvedglasssuppliers\.com
 1679892374	tripleee	deesignwithme\.blogspot
+1679897823	Makyen	bhept\.com
