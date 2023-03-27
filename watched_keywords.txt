@@ -49102,3 +49102,4 @@
 1679915628	tripleee	digitalwordings\.com
 1679916619	tripleee	ai[\W_]*+trademarks?(?!\.co\.uk(?<=ai-trademarks\.co\.uk))
 1679924032	Jeff Schaller	arringtones\.com
+1679927666	tripleee	angikatechnologies\.com
