@@ -1243,6 +1243,9 @@ items:
   - pablo.ns.cloudflare.com.
 - ns:
   - dale.ns.cloudflare.com.
+  - kristin.ns.cloudflare.com.
+- ns:
+  - dale.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
 - ns:
   - dale.ns.cloudflare.com.
