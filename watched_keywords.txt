@@ -49100,3 +49100,4 @@
 1679914887	Mast	janbask\.com
 1679915316	tripleee	(?-i:^lily board$)
 1679915628	tripleee	digitalwordings\.com
+1679916619	tripleee	ai[\W_]*+trademarks?(?!\.co\.uk(?<=ai-trademarks\.co\.uk))
