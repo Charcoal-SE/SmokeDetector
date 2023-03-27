@@ -49104,3 +49104,4 @@
 1679924032	Jeff Schaller	arringtones\.com
 1679927666	tripleee	angikatechnologies\.com
 1679928533	tripleee	allmedsuk\.com
+1679928882	tripleee	(?-i:^maneesha$)
