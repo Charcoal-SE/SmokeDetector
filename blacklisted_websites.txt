@@ -5249,3 +5249,4 @@ indiquehair\.com
 (?-i:yrhsfkkw)(?#tinyurl.com)
 (?-i:44PyXae)(?#cutt.ly)
 (?-i:34AbxhY)(?#cutt.ly)
+adfoc\.us(?#pay per click link shortener. Always spam)
