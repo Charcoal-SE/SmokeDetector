@@ -836,3 +836,4 @@ Visualytes
 (?-i:^Grillz Godz$)
 (?-i:^Webkul Software$)
 (?-i:^Urvashi Sharma$)
+(?-i:^JobsBazaarPK$)
