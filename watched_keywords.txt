@@ -49086,3 +49086,4 @@
 1679904272	tripleee	topmedicalcolleges\.co\.in
 1679904763	tripleee	(?-i:^Naveen Reddy$)
 1679905063	tripleee	keeninquire
+1679905103	tripleee	nyo defshop
