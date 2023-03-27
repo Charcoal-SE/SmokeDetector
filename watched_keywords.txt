@@ -49092,3 +49092,4 @@
 1679910238	tripleee	imupro(?!\.in)
 1679910344	tripleee	matorn
 1679910397	tripleee	cmdsingapore\.com
+1679911948	tripleee	autoportal\.com
