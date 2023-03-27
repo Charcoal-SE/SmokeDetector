@@ -45,6 +45,7 @@ items:
 - asn: '28753'
 - asn: '29066'
 - asn: '29073'
+- asn: '29802'
 - asn: '31083'
   comment: 21/97 over a year
   disable: true
