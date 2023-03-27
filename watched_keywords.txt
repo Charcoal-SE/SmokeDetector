@@ -49106,3 +49106,4 @@
 1679928533	tripleee	allmedsuk\.com
 1679928882	tripleee	(?-i:^maneesha$)
 1679929091	Makyen	mac\.eltima\.com
+1679930246	Makyen	(?-i:x91127722)(?#adfoc.us)
