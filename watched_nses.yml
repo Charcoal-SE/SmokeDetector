@@ -5,6 +5,9 @@ items:
   ns: namecheaphosting.com.
 - ns:
   - aaden.ns.cloudflare.com.
+  - coraline.ns.cloudflare.com.
+- ns:
+  - aaden.ns.cloudflare.com.
   - may.ns.cloudflare.com.
 - ns:
   - aarav.ns.cloudflare.com.
