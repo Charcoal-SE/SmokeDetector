@@ -835,3 +835,4 @@ Visualytes
 (?-i:^thomas carman$)
 (?-i:^Grillz Godz$)
 (?-i:^Webkul Software$)
+(?-i:^Urvashi Sharma$)
