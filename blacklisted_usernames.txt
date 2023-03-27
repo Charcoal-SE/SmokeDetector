@@ -837,3 +837,4 @@ Visualytes
 (?-i:^Webkul Software$)
 (?-i:^Urvashi Sharma$)
 (?-i:^JobsBazaarPK$)
+(?-i:KEMONO)
