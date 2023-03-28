@@ -49183,3 +49183,4 @@
 1680022055	Makyen	beget\.com
 1680022084	Makyen	p1886638
 1680022124	Makyen	steve[\W_]*+gates[\W_]*+newell
+1680022162	Makyen	gbic[\W_]*+shop(?!\.de(?<=gbic-shop\.de))
