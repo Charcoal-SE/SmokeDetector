@@ -49123,3 +49123,4 @@
 1679964590	Spevacus	animeonline\.one
 1679964616	Spevacus	gogosanime\.com
 1679968048	Ryan M	miranabd\.com
+1679979295	tripleee	technovative\d*
