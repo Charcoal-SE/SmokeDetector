@@ -49182,3 +49182,4 @@
 1680022027	Makyen	company[\W_]*+pulse[\W_]*+engagement[\W_]*+survey
 1680022055	Makyen	beget\.com
 1680022084	Makyen	p1886638
+1680022124	Makyen	steve[\W_]*+gates[\W_]*+newell
