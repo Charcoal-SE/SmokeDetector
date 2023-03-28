@@ -49133,3 +49133,4 @@
 1679987471	tripleee	liquid[\W_]*+filling[\W_]*+machine(?!\.co\.in(?<=liquidfillingmachine\.co\.in))
 1679987503	tripleee	leatherscin\.com
 1679988037	tripleee	(?-i:^Rohit T$)
+1679988251	tripleee	swethey[\W_]*+com
