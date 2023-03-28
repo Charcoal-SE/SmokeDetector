@@ -49186,3 +49186,4 @@
 1680022162	Makyen	gbic[\W_]*+shop(?!\.de(?<=gbic-shop\.de))
 1680022201	Makyen	pm9srngktryrqrb
 1680022219	Makyen	เสี่ยฟลุ๊ค
+1680023270	Jeff Schaller	touchlessfaucets\.info
