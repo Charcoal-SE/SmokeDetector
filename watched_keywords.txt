@@ -49131,3 +49131,4 @@
 1679987396	tripleee	revmhcs\.in
 1679987434	tripleee	terveyscare\.com
 1679987471	tripleee	liquid[\W_]*+filling[\W_]*+machine(?!\.co\.in(?<=liquidfillingmachine\.co\.in))
+1679987503	tripleee	leatherscin\.com
