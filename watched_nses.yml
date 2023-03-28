@@ -2596,6 +2596,9 @@ items:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
+  - macy.ns.cloudflare.com.
+  - sean.ns.cloudflare.com.
+- ns:
   - magdalena.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
