@@ -49172,3 +49172,4 @@
 1680019635	tripleee	w303\.vip
 1680019689	tripleee	binance\.info
 1680021625	Jeff Schaller	temu\.com
+1680021659	Jeff Schaller	gbic-shop\.de
