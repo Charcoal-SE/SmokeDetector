@@ -49122,3 +49122,4 @@
 1679953515	Makyen	760plus[\W_]*+credit[\W_]*+score(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1679964590	Spevacus	animeonline\.one
 1679964616	Spevacus	gogosanime\.com
+1679968048	Ryan M	miranabd\.com
