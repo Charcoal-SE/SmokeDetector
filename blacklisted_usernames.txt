@@ -841,3 +841,4 @@ nilesecurity
 (?-i:^aeimili$)
 (?-i:^Hwy Haul$)
 (?-i:^Ambika1221$)
+(?-i:^gtt\.zoey$)
