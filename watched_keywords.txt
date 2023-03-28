@@ -49174,3 +49174,4 @@
 1680021625	Jeff Schaller	temu\.com
 1680021659	Jeff Schaller	gbic-shop\.de
 1680021770	Makyen	faqfa
+1680021811	Makyen	fox00[\W_]*+640[12]
