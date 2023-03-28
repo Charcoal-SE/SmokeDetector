@@ -5253,3 +5253,4 @@ adfoc\.us(?#pay per click link shortener. Always spam)
 nilesecure\.com
 loveindoll\.com
 janbask\.com
+(?-i:45pmnr59)(?# tinyurl)
