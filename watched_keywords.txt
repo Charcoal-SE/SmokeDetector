@@ -49180,3 +49180,4 @@
 1680021968	Makyen	devblog\.xero\.com
 1680021998	Makyen	xero[\W_]*+eco(?:[\W_]*+system)?[\W_]*+survey(?:[\W_]*+2023)?
 1680022027	Makyen	company[\W_]*+pulse[\W_]*+engagement[\W_]*+survey
+1680022055	Makyen	beget\.com
