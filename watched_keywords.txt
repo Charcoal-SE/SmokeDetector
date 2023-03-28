@@ -49144,3 +49144,4 @@
 1679996677	tripleee	easypeasyfly\.com
 1679997409	tripleee	appknox\.com
 1679997836	tripleee	(?-i:^JerryThomson$)
+1679999454	tripleee	translate\.video
