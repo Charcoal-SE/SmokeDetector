@@ -49146,3 +49146,4 @@
 1679997836	tripleee	(?-i:^JerryThomson$)
 1679999454	tripleee	translate\.video
 1680004281	Jeff Schaller	geniusedusoft\.com
+1680009323	Makyen	usecapture\.io
