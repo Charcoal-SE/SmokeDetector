@@ -49095,7 +49095,6 @@
 1679914471	tripleee	ludoapks\.com
 1679914504	tripleee	whofixit\.com
 1679914790	tripleee	smoothiediet\.com
-1679914887	Mast	janbask\.com
 1679915316	tripleee	(?-i:^lily board$)
 1679915628	tripleee	digitalwordings\.com
 1679916619	tripleee	ai[\W_]*+trademarks?(?!\.co\.uk(?<=ai-trademarks\.co\.uk))
