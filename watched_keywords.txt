@@ -49122,3 +49122,4 @@
 1679950956	Glorfindel	samploon\.com
 1679952706	Makyen	pixiv\.net/novel/show\.php
 1679953515	Makyen	760plus[\W_]*+credit[\W_]*+score(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1679964590	Spevacus	animeonline\.one
