@@ -49165,3 +49165,4 @@
 1680016449	tripleee	dynamicssquare\.ca
 1680016492	tripleee	onlinecinema\.stream
 1680016746	tripleee	savefrom\.mobi
+1680016874	tripleee	thedailyvoicenews\.com
