@@ -49125,4 +49125,3 @@
 1679979327	tripleee	(?-i:f8mFFe7Nofk)(?# youtube)
 1679979490	tripleee	sautinsoft\.com
 1679979785	tripleee	hwyhaul\.com
-1679979824	tripleee	hwy[\W_]*+haul(?!\.com(?<=hwyhaul\.com))
