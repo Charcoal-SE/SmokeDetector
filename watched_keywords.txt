@@ -49124,3 +49124,4 @@
 1679979295	tripleee	technovative\d*
 1679979327	tripleee	(?-i:f8mFFe7Nofk)(?# youtube)
 1679979490	tripleee	sautinsoft\.com
+1679979785	tripleee	hwyhaul\.com
