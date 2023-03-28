@@ -49128,3 +49128,4 @@
 1679979972	tripleee	hwy[\W_]*+haul(?!\.com(?<=hwyhaul\.com))(?<!(?-i:^Hwy Haul$))
 1679985690	Suraj Rao	liquidfillingmachine\.co\.in
 1679987361	tripleee	spicacbe\.com
+1679987396	tripleee	revmhcs\.in
