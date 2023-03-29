@@ -49204,3 +49204,4 @@
 1680066033	tripleee	Bcgame_Exploit_2023(?# t.me)
 1680066063	tripleee	1DF8DTzygSjTK3uE9SfcSeSFDuG2baVwP(?# drive.google.com)
 1680066167	tripleee	avaccess\.com
+1680066379	tripleee	(?-i:^CiciW$)
