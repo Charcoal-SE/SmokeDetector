@@ -2813,3 +2813,4 @@ janbask(?!\.com)
 ultimate[\W_]*+hacker[\W_]*+jerry
 bocoran
 AA Kredit Loan Customer Care
+^.{1,70}(?:customer care|helpline) number.{1,40}$
