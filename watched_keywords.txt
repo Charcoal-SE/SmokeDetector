@@ -49206,3 +49206,4 @@
 1680066619	tripleee	kandungan
 1680066646	tripleee	tuntas
 1680067033	tripleee	searchmypincode\.in
+1680067929	tripleee	prestige[\W_]*+law(?!\.com(?<=prestigelaw\.com))(?<!(?-i:^Prestige Law$))
