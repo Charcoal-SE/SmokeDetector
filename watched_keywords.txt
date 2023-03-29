@@ -49205,3 +49205,4 @@
 1680066167	tripleee	avaccess\.com
 1680066379	tripleee	(?-i:^CiciW$)
 1680066619	tripleee	kandungan
+1680066646	tripleee	tuntas
