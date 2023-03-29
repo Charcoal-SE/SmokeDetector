@@ -49208,3 +49208,4 @@
 1680067033	tripleee	searchmypincode\.in
 1680067929	tripleee	prestige[\W_]*+law(?!\.com(?<=prestigelaw\.com))(?<!(?-i:^Prestige Law$))
 1680075124	tripleee	websitespeedy(?!\.com)
+1680075522	tripleee	t-techsolutions\.org
