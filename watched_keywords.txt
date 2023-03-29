@@ -49227,3 +49227,4 @@
 1680086629	tripleee	(?-i:^John Wick$)
 1680087373	tripleee	(?-i:nilojit sarkar$)
 1680088971	Jeff Schaller	ahmetalkan\.av\.tr
+1680090632	Jeff Schaller	taxitorontoairport\.ca
