@@ -12885,7 +12885,6 @@
 1571338837	Makyen	tannguyenbc
 1571338849	Makyen	431162410878431(?#facebook event)
 1571338861	Makyen	dao-tao-seo
-1571341038	Makyen	(?:kandungan|tuntas|haid|kehamilan)
 1571341647	double-beep	aghormantrayantraspecialist\.com
 1571342466	Makyen	☛.{0,20}(?:(?:[a-z0-9-]+\.)+[a-z0-9-]+\b|.{0,20}https?://(?!i\.stack\.imgur\.com))
 1571346357	Makyen	bizzone\.com\.ng
