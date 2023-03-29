@@ -49223,3 +49223,4 @@
 1680084321	tripleee	lucky[\W_]*+neko
 1680084349	tripleee	pragmatikplay
 1680084379	tripleee	pragmatikslot
+1680086003	tripleee	kt365\.vn
