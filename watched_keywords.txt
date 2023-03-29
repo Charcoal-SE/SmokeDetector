@@ -49192,3 +49192,4 @@
 1680038565	Makyen	unique[\W_]*+prom[\W_]*+suits
 1680052217	Makyen	pkvofficial
 1680052252	Makyen	(?-i:tszt0o)(?#wa.link)
+1680064537	tripleee	ghewgle\.com
