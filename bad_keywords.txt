@@ -2811,3 +2811,4 @@ cybergenie
 slot[\W_]*+gacor\d*
 janbask(?!\.com)
 ultimate[\W_]*+hacker[\W_]*+jerry
+bocoran
