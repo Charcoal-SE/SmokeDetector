@@ -49243,3 +49243,4 @@
 1680108617	tripleee	findstorynow\.com
 1680112521	tripleee	techdirectarchive\.com
 1680120273	Makyen	live[\W_]*+slot
+1680121954	Jeff Schaller	ROTTGENRAPHAEL
