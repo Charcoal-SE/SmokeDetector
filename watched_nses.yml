@@ -987,6 +987,9 @@ items:
   - cash.ns.cloudflare.com.
   - gigi.ns.cloudflare.com.
 - ns:
+  - cash.ns.cloudflare.com.
+  - ruth.ns.cloudflare.com.
+- ns:
   - cecelia.ns.cloudflare.com.
   - viddy.ns.cloudflare.com.
 - ns:
