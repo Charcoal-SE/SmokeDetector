@@ -49244,3 +49244,4 @@
 1680112521	tripleee	techdirectarchive\.com
 1680120273	Makyen	live[\W_]*+slot
 1680121954	Jeff Schaller	ROTTGENRAPHAEL
+1680129410	Makyen	sanfelipeseabee(?:@gmail\.com)?
