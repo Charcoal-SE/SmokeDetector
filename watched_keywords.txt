@@ -49210,3 +49210,4 @@
 1680075124	tripleee	websitespeedy(?!\.com)
 1680075522	tripleee	t-techsolutions\.org
 1680075559	tripleee	careformulationlabs\.com
+1680075600	tripleee	kesariatextile\.com
