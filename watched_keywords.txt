@@ -49219,3 +49219,4 @@
 1680077836	tripleee	(?-i:^Saumya Yadav$)
 1680082222	tripleee	naturawellnessfoods\.com
 1680083863	tripleee	(?-i:^quickwayinfosystems$)
+1680083916	tripleee	quick[\W_]*+way[\W_]*+info[\W_]*systems?(?!\.com(?<=quickwayinfosystems\.com))(?<!(?-i:^quickwayinfosystems$))
