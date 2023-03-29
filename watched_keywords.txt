@@ -49197,3 +49197,4 @@
 1680064618	tripleee	prestige[\W_]*+law(?!\.com(?<=prestigelaw\.com))
 1680065245	tripleee	apkssoul\.com
 1680065281	tripleee	longboardthings\.com
+1680065533	tripleee	footballlegends3\.com
