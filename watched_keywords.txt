@@ -49221,3 +49221,4 @@
 1680083863	tripleee	(?-i:^quickwayinfosystems$)
 1680083916	tripleee	quick[\W_]*+way[\W_]*+info[\W_]*systems?(?!\.com(?<=quickwayinfosystems\.com))(?<!(?-i:^quickwayinfosystems$))
 1680084321	tripleee	lucky[\W_]*+neko
+1680084349	tripleee	pragmatikplay
