@@ -845,3 +845,4 @@ nilesecurity
 (?-i:^Navdeep kr$)
 (?-i:^Prestige Law$)
 (?-i:^duramaxpvcpanels$)
+(?-i:^Nafish Akhtar$)
