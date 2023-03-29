@@ -49218,3 +49218,4 @@
 1680076088	tripleee	(?-i:^Naveen S$)
 1680077836	tripleee	(?-i:^Saumya Yadav$)
 1680082222	tripleee	naturawellnessfoods\.com
+1680083863	tripleee	(?-i:^quickwayinfosystems$)
