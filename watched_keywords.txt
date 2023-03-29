@@ -49200,3 +49200,4 @@
 1680065533	tripleee	footballlegends3\.com
 1680065862	tripleee	octordle3\.com
 1680065899	tripleee	amwire\.com\.ph
+1680065939	tripleee	darkman247(?# telegram)
