@@ -49235,3 +49235,4 @@
 1680096135	tripleee	(?-i:^Rafiq Ansari$)
 1680096291	tripleee	moco ruby loan app
 1680097065	Jeff Schaller	q-automations\.com
+1680099278	tripleee	super pocket
