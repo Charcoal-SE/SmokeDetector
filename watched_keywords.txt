@@ -49194,3 +49194,4 @@
 1680052252	Makyen	(?-i:tszt0o)(?#wa.link)
 1680064537	tripleee	ghewgle\.com
 1680064587	tripleee	prestigelaw\.com
+1680064618	tripleee	prestige[\W_]*+law(?!\.com(?<=prestigelaw\.com))
