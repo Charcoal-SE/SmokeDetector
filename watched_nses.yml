@@ -3460,6 +3460,9 @@ items:
   - cns4007.webhostbox.net.
   - cns4008.webhostbox.net.
 - ns:
+  - cns6003.webhostbox.net.
+  - cns6004.webhostbox.net.
+- ns:
   - rns15.webhostbox.net.
   - rns16.webhostbox.net.
 - ns:
