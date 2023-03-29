@@ -843,3 +843,4 @@ nilesecurity
 (?-i:^Ambika1221$)
 (?-i:^gtt\.zoey$)
 (?-i:^Navdeep kr$)
+(?-i:^Prestige Law$)
