@@ -49242,3 +49242,4 @@
 1680101859	tripleee	cashwise loan
 1680108617	tripleee	findstorynow\.com
 1680112521	tripleee	techdirectarchive\.com
+1680120273	Makyen	live[\W_]*+slot
