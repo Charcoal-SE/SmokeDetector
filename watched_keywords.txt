@@ -49215,3 +49215,4 @@
 1680075670	tripleee	kalsarppujapandit\.com
 1680075706	tripleee	mitrasuaritma\.com
 1680075813	tripleee	apkspare(?!\.com)
+1680075836	tripleee	apkspare\.com
