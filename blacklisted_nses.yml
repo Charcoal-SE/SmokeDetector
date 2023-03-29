@@ -187,6 +187,9 @@ items:
   - connie.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
+  - cruz.ns.cloudflare.com.
+  - david.ns.cloudflare.com.
+- ns:
   - dan.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
