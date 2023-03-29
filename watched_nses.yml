@@ -2800,6 +2800,9 @@ items:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
+  - natasha.ns.cloudflare.com.
+  - sullivan.ns.cloudflare.com.
+- ns:
   - neil.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
