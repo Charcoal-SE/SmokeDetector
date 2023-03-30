@@ -850,5 +850,4 @@ nilesecurity
 (?-i:^Sonu kumar$)
 (?-i:^soni Kumari$)
 (?-i:^Hsvcs Kdhd$)
-(?-i:^Jhon$)
 (?-i:^Aditi$)
