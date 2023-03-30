@@ -1985,7 +1985,6 @@ michael\.veksler@tech-center\.com
 rezola(?!growth\.info(?<=rezolagrowth\.info))(?:[\W_]*+(?:growth|hair|\d+))*
 aqualeva(?:[\W_]*+(?:cream|face|skin|anti|wrinkle|serum|\d+|[\da-f]{4,})s?)*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*
-evaria
 d(?:octo)?r[\W_]*+ekpen\w*+(?:@gmail\.com)?
 atmmachine\d+(?:@gmail\.com)?
 clinxx
