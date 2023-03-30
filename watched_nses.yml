@@ -4,7 +4,7 @@ items:
 - comment: has FPs, don't blacklist again
   ns: namecheaphosting.com.
 - ns:
-  - aaden.ns.cloudflare.com.- jer
+  - aaden.ns.cloudflare.com.
   - coraline.ns.cloudflare.com.
 - ns:
   - aaden.ns.cloudflare.com.
