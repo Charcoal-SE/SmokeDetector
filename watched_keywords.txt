@@ -49250,3 +49250,4 @@
 1680151414	tripleee	(?-i:^Chotu Yadav$)
 1680151949	Makyen	tikisteel\.com\.vn
 1680152172	tripleee	constitutionalintegrity\.org
+1680152780	tripleee	(?-i:^Farijuddin Khan$)
