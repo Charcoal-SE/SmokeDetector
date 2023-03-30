@@ -49278,3 +49278,4 @@
 1680195536	tripleee	unifygiving\.com
 1680206748	Makyen	sabai[\W_]*+ecoverse
 1680220111	Makyen	naga169\.org
+1680220221	Makyen	vigor(?:[\W_]*+(?:lite|rx|cbd|gummies|us)s?){2}(?:[\W_]*+(?:lite|rx|cbd|gummies|us|\d++|[\da-f]{5,}+)s?)*
