@@ -49246,3 +49246,4 @@
 1680121954	Jeff Schaller	ROTTGENRAPHAEL
 1680129410	Makyen	sanfelipeseabee(?:@gmail\.com)?
 1680150697	tripleee	(?-i:^Rakesh Khan$)
+1680151031	tripleee	(?-i:^Laddu Kumar$)
