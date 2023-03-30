@@ -848,3 +848,4 @@ nilesecurity
 (?-i:^Nafish Akhtar$)
 (?-i:^B gbgc Fjfb$)
 (?-i:^Sonu kumar$)
+(?-i:^soni Kumari$)
