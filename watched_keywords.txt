@@ -49263,3 +49263,4 @@
 1680168918	tripleee	(?-i:^JPS74$)
 1680172384	Jeff Schaller	philmyspice\.com
 1680172414	Makyen	smrtr\.io
+1680172454	Makyen	(?-i:dzpnf)(?#smrtr.io)
