@@ -852,3 +852,4 @@ nilesecurity
 (?-i:^Hsvcs Kdhd$)
 (?-i:^Aditi$)
 (?-i:^Sare Kiumari$)
+(?-i:^Nishad Ahmad$)
