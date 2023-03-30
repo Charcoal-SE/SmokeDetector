@@ -49277,3 +49277,4 @@
 1680184165	tripleee	documents-trainingstage\.myportal\.ul\.com
 1680195536	tripleee	unifygiving\.com
 1680206748	Makyen	sabai[\W_]*+ecoverse
+1680220111	Makyen	naga169\.org
