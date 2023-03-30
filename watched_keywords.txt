@@ -49256,3 +49256,4 @@
 1680161897	Ryan M	water[\W_]*+damage[\W_]*+restoration[\W_]*+corpus[\W_]*+christi(?:[\W_]*+tx)?
 1680164713	tripleee	(?-i:^Nishad Ahmad$)
 1680164869	tripleee	getmodnow\.com
+1680165168	tripleee	DNS_PROBE_FINISHED_NXDOMAIN
