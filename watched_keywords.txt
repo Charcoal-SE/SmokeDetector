@@ -49271,3 +49271,4 @@
 1680180690	Makyen	\w{0,100}?c[\W_]*+u[\W_]*+s[\W_]*+t[\W_]*+(?:o[\W_]*+)?m[\W_]*+e[\W_]*+r(?<!customer)(?!ror)(?!c\d)(?!rro)(?!p\b(?<=\berp))\w*+
 1680183430	tripleee	bharti[\W_]*+share[\W_]*+market
 1680183847	tripleee	(?-i:^Assat Kumar$)
+1680184068	tripleee	almoouj\.com
