@@ -49272,3 +49272,4 @@
 1680183430	tripleee	bharti[\W_]*+share[\W_]*+market
 1680183847	tripleee	(?-i:^Assat Kumar$)
 1680184068	tripleee	almoouj\.com
+1680184096	tripleee	github\.com/Hervian
