@@ -4,7 +4,7 @@ items:
 - comment: has FPs, don't blacklist again
   ns: namecheaphosting.com.
 - ns:
-  - aaden.ns.cloudflare.com.
+  - aaden.ns.cloudflare.com.- jer
   - coraline.ns.cloudflare.com.
 - ns:
   - aaden.ns.cloudflare.com.
@@ -2148,6 +2148,9 @@ items:
 - ns:
   - jeremy.ns.cloudflare.com.
   - katja.ns.cloudflare.com.
+- ns:
+  - jeremy.ns.cloudflare.com.
+  - marissa.ns.cloudflare.com.
 - ns:
   - jeremy.ns.cloudflare.com.
   - yolanda.ns.cloudflare.com.
