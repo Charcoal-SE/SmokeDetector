@@ -42069,7 +42069,6 @@
 1661145753	Makyen	(?-i:vF6fwKN06lM)(?#youtu.be)
 1661145776	Makyen	(?-i:CNJ6YKctGVo)(?#youtu.be)
 1661145836	tripleee	(?-i:^Freedom Tech$)
-1661147497	cocomac	copycat\.dev
 1661147634	cocomac	vinitahealth\.com
 1661151421	tripleee	com\.ag\.multi\.storey\.car\.parkingmaster\.symstudiogames(?# play.google.com)
 1661151463	tripleee	brighteduworld\.com
