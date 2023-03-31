@@ -857,3 +857,4 @@ nilesecurity
 ^laxman[\W_]*+katti$
 (?-i:^SSL Cert Shop$)
 (?-i:^ Crypto Customer Care$)
+(?-i:^ Dinesh Lal Hugdudu$)
