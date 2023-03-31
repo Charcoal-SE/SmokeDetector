@@ -49315,7 +49315,6 @@
 1680271248	Jeff Schaller	barbyoli\.in
 1680273472	Mast	teen[\W_]*+patti
 1680280172	Nisse Engström	mostbet-pe\.com
-1680285553	Makyen	(?:91|0)?[6-9]\d{4}(?<!\d\D\d{5})[\W_]*+\d{5}(?![\s,]++\d)[\W_]++(?:91|0)?[6-9]\d{4}[\W_]*+\d{5}(?![\W_]*+\d)(?=.{0,200}+\Z)
 1680286092	Jeff Schaller	jvz6\.com
 1680286676	Makyen	jvz\d+\.com(?#jvzoo paid selling/affiliate program)
 1680287020	Jeff Schaller	(?-i:nazmul1501034)(?# fiverr)
