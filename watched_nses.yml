@@ -689,6 +689,9 @@ items:
   - earl.ns.cloudflare.com.
 - ns:
   - becky.ns.cloudflare.com.
+  - stan.ns.cloudflare.com.
+- ns:
+  - becky.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
   - bella.ns.cloudflare.com.
