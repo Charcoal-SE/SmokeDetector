@@ -424,7 +424,6 @@ So face the music
 (?-i:^Internetto Trollio$)
 (?-i:^Joke Biden$)
 (?-i:^contact4help$)
-\b(?:y(?:ou?|[eé3_ëêẽ]).*|ban.*|c[4a]n\W*'?\W*n[0oøuüôöõ]?t.*)d[uü]des?$
 (?-i:^digipro$)
 SpeakingAccent
 (?-i:^credit fixers$)
