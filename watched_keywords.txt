@@ -49287,3 +49287,4 @@
 1680241748	tripleee	(?-i:^Razak bin Osman$)
 1680243093	tripleee	spartan[\W_]*+hack(?:ing|s)?
 1680244304	tripleee	rtpdewa158\.com
+1680244635	tripleee	flourishlegend\.com
