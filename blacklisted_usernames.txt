@@ -856,3 +856,4 @@ nilesecurity
 (?-i:^account next$)
 ^laxman[\W_]*+katti$
 (?-i:^SSL Cert Shop$)
+(?-i:^ Crypto Customer Care$)
