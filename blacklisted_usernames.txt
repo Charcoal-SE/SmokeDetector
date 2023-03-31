@@ -854,3 +854,4 @@ nilesecurity
 (?-i:^Ayan k$)
 (?-i:TheFuenix Media$)
 (?-i:^account next$)
+^laxman[\W_]*+katti$
