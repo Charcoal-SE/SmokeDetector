@@ -49285,3 +49285,4 @@
 1680241366	tripleee	(?-i:^Rahul Sarma$)
 1680241572	tripleee	office24by7\.com
 1680241748	tripleee	(?-i:^Razak bin Osman$)
+1680243093	tripleee	spartan[\W_]*+hack(?:ing|s)?
