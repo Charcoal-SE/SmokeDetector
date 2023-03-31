@@ -49296,3 +49296,4 @@
 1680247197	tripleee	possitivevibes\.com
 1680247245	tripleee	r12[\W_]*+solutions(?!\.com(?<=r12solutions\.com))
 1680247288	tripleee	r12solutions\.com
+1680247441	tripleee	the[\W_]*+fuenix[\W_]*+media(?!\.com(?<=thefuenixmedia\.com))(?<!(?-i:TheFuenix Media$))
