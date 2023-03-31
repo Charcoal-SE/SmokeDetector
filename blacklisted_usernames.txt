@@ -855,3 +855,4 @@ nilesecurity
 (?-i:TheFuenix Media$)
 (?-i:^account next$)
 ^laxman[\W_]*+katti$
+(?-i:^SSL Cert Shop$)
