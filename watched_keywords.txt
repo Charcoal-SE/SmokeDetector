@@ -49307,3 +49307,4 @@
 1680259002	tripleee	service[\W_]*+restoration[\W_]*+atlanta
 1680259712	tripleee	crypto[\W_]*+customer[\W_]*+care(?!\.org(?<=cryptocustomercare\.org))(?<!(?-i:^ Crypto Customer Care$))
 1680263916	tripleee	einpix\.com
+1680263947	tripleee	kizanshgroup\.com
