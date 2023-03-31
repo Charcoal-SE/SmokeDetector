@@ -748,7 +748,6 @@ Visualytes
 (?-i:^cloudibn$)
 (?-i:^Ferrotitanium$)
 (?-i:^SEO BOY$)
-(?-i:^laxman katti$)
 (?-i:^kosmik technologies pvt ltd$)
 (?-i:^Waking Posts$)
 ^rohit negi$
