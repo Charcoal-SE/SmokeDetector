@@ -49299,3 +49299,4 @@
 1680247441	tripleee	the[\W_]*+fuenix[\W_]*+media(?!\.com(?<=thefuenixmedia\.com))(?<!(?-i:TheFuenix Media$))
 1680247806	tripleee	buylanguagecertificates\.com
 1680248833	tripleee	pixlogix\.com
+1680248870	tripleee	pixlogix(?!\.com(?<=pixlogix\.com))
