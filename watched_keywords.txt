@@ -49310,3 +49310,4 @@
 1680263947	tripleee	kizanshgroup\.com
 1680264091	tripleee	(?-i:^Md\. Sahil$)
 1680264364	blackgreen	resijnt\.id
+1680265230	tripleee	einpix(?!\.com)
