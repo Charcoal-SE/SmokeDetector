@@ -49320,3 +49320,4 @@
 1680286676	Makyen	jvz\d+\.com(?#jvzoo paid selling/affiliate program)
 1680287020	Jeff Schaller	(?-i:nazmul1501034)(?# fiverr)
 1680289693	Jeff Schaller	meriweb\.net
+1680291223	Jeff Schaller	globaltimeusa\.com
