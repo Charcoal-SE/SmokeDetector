@@ -49281,3 +49281,4 @@
 1680229554	Jeff Schaller	Slot169
 1680236028	Suraj Rao	bloggingaboutanythingblog\.com
 1680238609	Makyen	activeketo\.org
+1680238679	Makyen	active[\W_]*+keto(?!\.org(?<=activeketo\.org))(?:[\W_]*+(?:gummies|\d++|[\da-f]{5,}+)s?)*
