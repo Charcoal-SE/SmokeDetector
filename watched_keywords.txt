@@ -49312,3 +49312,4 @@
 1680264364	blackgreen	resijnt\.id
 1680265230	tripleee	einpix(?!\.com)
 1680268002	Makyen	xn--hmpbl-3qalz0fua8a58g\.net
+1680271248	Jeff Schaller	barbyoli\.in
