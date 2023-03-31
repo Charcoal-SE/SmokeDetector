@@ -49302,3 +49302,4 @@
 1680249011	tripleee	gas-torch\.net
 1680250038	tripleee	kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise))?(?:[\W_]*+shop)?
 1680250740	tripleee	pass4surexams\.com
+1680253153	tripleee	(?-i:^Dinesh Lal Hugdudu$)
