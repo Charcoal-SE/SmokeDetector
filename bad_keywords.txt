@@ -2815,3 +2815,4 @@ AA Kredit Loan Customer Care
 ^.{1,70}(?:customer care|helpline) number.{1,40}$
 water-damage-restoration
 doslease loan
+naga169(?!\.com)
