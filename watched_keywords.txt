@@ -49329,3 +49329,4 @@
 1680340586	Makyen	trusecai\.com
 1680340622	Makyen	buysocialpack\.net
 1680340648	Makyen	buysocialpack(?!\.net)
+1680341865	Makyen	lvdutwcp(?:@yahoo\.com)?
