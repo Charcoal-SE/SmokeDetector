@@ -49351,3 +49351,4 @@
 1680420839	Nisse Engström	experiamoving\.com
 1680422567	Nisse Engström	worldrescuers\.com
 1680432193	Makyen	bsmnconsultancy\.com
+1680432228	Makyen	bsmnconsultancy(?!\.com)
