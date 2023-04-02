@@ -49273,7 +49273,6 @@
 1680184129	tripleee	swtoto\.com
 1680184165	tripleee	documents-trainingstage\.myportal\.ul\.com
 1680195536	tripleee	unifygiving\.com
-1680206748	Makyen	sabai[\W_]*+ecoverse
 1680220111	Makyen	naga169\.org
 1680220221	Makyen	vigor(?:[\W_]*+(?:lite|rx|cbd|gummies|us)s?){2}(?:[\W_]*+(?:lite|rx|cbd|gummies|us|\d++|[\da-f]{5,}+)s?)*
 1680229554	Jeff Schaller	Slot169
