@@ -49355,3 +49355,4 @@
 1680433737	Makyen	changagoidemsonghong\.net
 1680433767	Makyen	changagoidemsonghong(?!\.net)
 1680433797	Makyen	demsonghong(?:caocap|giare)?
+1680433891	Makyen	aha@khodem\.vn
