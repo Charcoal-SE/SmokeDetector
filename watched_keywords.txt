@@ -35682,7 +35682,6 @@
 1643863586	cigien	cascaremedies\.com
 1643863601	cigien	casca[\W_]*+remedies(?!\.com(?<=cascaremedies\.com))
 1643865433	cigien	code2\.io
-1643866586	cigien	medixpills\.com
 1643868092	cigien	mobylogix\.com
 1643869289	cigien	deviceshelpdesk\.com
 1643874340	tripleee	cpstester\.fr
