@@ -49391,3 +49391,4 @@
 1680516463	tripleee	gamechise\.com
 1680516493	tripleee	tendersniper\.com
 1680517642	tripleee	thestorebags\.com
+1680520006	tripleee	all[\W_]*+automatic[\W_]*+discount
