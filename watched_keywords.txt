@@ -49400,3 +49400,4 @@
 1680552870	Jeff Schaller	apkbeyond\.com
 1680554152	Makyen	newmarket[\W_]*+mini[\W_]*+bins(?!\.com(?<=newmarketminibins\.com))
 1680554553	Makyen	alishaescort\.in
+1680554579	Makyen	aerocity[\W_]*+escorts
