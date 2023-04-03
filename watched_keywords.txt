@@ -49378,3 +49378,4 @@
 1680502116	tripleee	rankmantra\.com
 1680502371	tripleee	chain[\W_]*+tech[\W_]*+source(?!\.com(?<=chaintechsource\.com))(?<!(?-i:^ChainTechSource$))
 1680502543	tripleee	noom[\W_]*+mood
+1680503068	tripleee	planncosteel\.in
