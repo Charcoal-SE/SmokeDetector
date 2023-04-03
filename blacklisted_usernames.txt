@@ -863,3 +863,4 @@ nilesecurity
 (?-i:^Ficsjvs Givskbs$)
 ^codeup[\W_]*+institute$
 (?-i:^Lowest Flight Fares$)
+(?-i:^ChainTechSource$)
