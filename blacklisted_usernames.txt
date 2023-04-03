@@ -862,3 +862,4 @@ nilesecurity
 (?-i:^Loan Service$)
 (?-i:^Ficsjvs Givskbs$)
 ^codeup[\W_]*+institute$
+(?-i:^Lowest Flight Fares$)
