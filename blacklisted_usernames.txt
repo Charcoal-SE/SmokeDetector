@@ -861,3 +861,4 @@ nilesecurity
 (?-i:^Mikp Kumar$)
 (?-i:^Loan Service$)
 (?-i:^Ficsjvs Givskbs$)
+^codeup[\W_]*+institute$
