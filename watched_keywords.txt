@@ -49397,3 +49397,4 @@
 1680527825	tripleee	(?-i:^Noel Palmer$)
 1680541100	Jeff Schaller	tarpsupply\.com
 1680551230	Spevacus	newmarketminibins\.com
+1680552870	Jeff Schaller	apkbeyond\.com
