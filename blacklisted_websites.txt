@@ -5268,3 +5268,4 @@ joshua-vs-franklin-streams\.blogspot
 (?-i:40Upy4E)(?#bit.ly)
 ampgc\.ac\.in
 (?-i:3sjwcnm2)(?#tinyurl)
+(?-i:w7qqrtI)(?#cutt.ly)
