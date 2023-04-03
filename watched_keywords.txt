@@ -49376,3 +49376,4 @@
 1680502054	tripleee	(?-i:instapro-apk)(?!\.com)(?#myapklab.com)
 1680502069	tripleee	instapro-apk\.com
 1680502116	tripleee	rankmantra\.com
+1680502371	tripleee	chain[\W_]*+tech[\W_]*+source(?!\.com(?<=chaintechsource\.com))(?<!(?-i:^ChainTechSource$))
