@@ -49365,3 +49365,4 @@
 1680481307	Makyen	procast\.live
 1680496967	tripleee	nhathuocaz\.com\.vn
 1680497122	tripleee	(?-i:^Manni Kumar$)
+1680498278	tripleee	(?P<repeated>.{70,200})(?:[\W_]*+(?P=repeated)){2}
