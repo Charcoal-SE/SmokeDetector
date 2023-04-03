@@ -49391,3 +49391,4 @@
 1680516307	Makyen	bimmer[\W_]*+navii[\W_]*+update(?!\.com(?<=bimmernaviiupdate\.com))
 1680516463	tripleee	gamechise\.com
 1680516493	tripleee	tendersniper\.com
+1680517642	tripleee	thestorebags\.com
