@@ -49389,3 +49389,4 @@
 1680514976	Makyen	swaasa\.jobs
 1680509926	DavidW	latestgbapps\.com
 1680516281	Makyen	bimmernaviiupdate\.com
+1680516307	Makyen	bimmer[\W_]*+navii[\W_]*+update(?!\.com(?<=bimmernaviiupdate\.com))
