@@ -49377,3 +49377,4 @@
 1680501075	tripleee	raybotix(?:[\W_]*+digital)?(?!\.com(?<=raybotixdigital\.com))
 1680502054	tripleee	(?-i:instapro-apk)(?!\.com)(?#myapklab.com)
 1680502069	tripleee	instapro-apk\.com
+1680502116	tripleee	rankmantra\.com
