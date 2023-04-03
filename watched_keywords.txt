@@ -49372,3 +49372,4 @@
 1680499312	tripleee	digitallinkspro\.qa
 1680499956	tripleee	pmp(?=[^\w®]*+®)
 1680500150	tripleee	lotusbook247\.biz
+1680500183	tripleee	world777betting\.com
