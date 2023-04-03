@@ -48099,7 +48099,6 @@
 1677570785	cigien	Ralph[\W_]*+King
 1677570909	tripleee	19ti\.com
 1677571286	cigien	gbwa\.download
-1677572336	cigien	arrify\.com
 1677573310	Makyen	tinytask\.us
 1677574137	Glorfindel	uncode\.io
 1677580172	tripleee	homesperception\.com
