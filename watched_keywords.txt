@@ -49405,3 +49405,4 @@
 1680562044	Makyen	vidiq\.com
 1680562070	Makyen	growlychannel
 1680562108	Makyen	397464(?#URL path)
+1680563834	Ethan	dojpro\.com
