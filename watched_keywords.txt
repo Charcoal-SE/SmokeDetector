@@ -49375,3 +49375,4 @@
 1680500210	tripleee	diamondexch-id\.com
 1680501034	tripleee	raybotixdigital\.com
 1680501075	tripleee	raybotix(?:[\W_]*+digital)?(?!\.com(?<=raybotixdigital\.com))
+1680502054	tripleee	(?-i:instapro-apk)(?!\.com)(?#myapklab.com)
