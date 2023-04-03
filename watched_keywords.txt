@@ -49373,3 +49373,4 @@
 1680499956	tripleee	pmp(?=[^\w®]*+®)
 1680500150	tripleee	lotusbook247\.biz
 1680500183	tripleee	world777betting\.com
+1680500210	tripleee	diamondexch-id\.com
