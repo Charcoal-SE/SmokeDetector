@@ -49413,3 +49413,4 @@
 1680590246	tripleee	(?-i:^Christian$)
 1680590378	tripleee	pribo[\W_]*+clothing
 1680590418	tripleee	kobeena[\W_]*+straightener
+1680591975	tripleee	kodexcc\.com
