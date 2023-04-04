@@ -49412,3 +49412,4 @@
 1680588280	tripleee	jekyllandhide\.co\.uk
 1680590246	tripleee	(?-i:^Christian$)
 1680590378	tripleee	pribo[\W_]*+clothing
+1680590418	tripleee	kobeena[\W_]*+straightener
