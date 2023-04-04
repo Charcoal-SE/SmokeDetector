@@ -48849,7 +48849,6 @@
 1679470307	tripleee	(?-i:^Dwayne Smith$)
 1679471433	tripleee	(?-i:mKGKQR)(?# fiverr)
 1679471505	tripleee	embroiderypatches\.uk
-1679471549	tripleee	digitalhealthmarkets\.com
 1679472485	tripleee	mu88\.in
 1679472532	tripleee	rgl\.ink
 1679476003	tripleee	mrexamples\.com
