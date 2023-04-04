@@ -49410,7 +49410,6 @@
 1680587381	tripleee	quickbooksphonenumber\.com
 1680587612	tripleee	sugarmummyhookupgroups
 1680588280	tripleee	jekyllandhide\.co\.uk
-1680590246	tripleee	(?-i:^Christian$)
 1680590378	tripleee	pribo[\W_]*+clothing
 1680590418	tripleee	kobeena[\W_]*+straightener
 1680591975	tripleee	kodexcc\.com
