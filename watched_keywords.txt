@@ -49414,3 +49414,4 @@
 1680590378	tripleee	pribo[\W_]*+clothing
 1680590418	tripleee	kobeena[\W_]*+straightener
 1680591975	tripleee	kodexcc\.com
+1680592231	tripleee	party\.biz
