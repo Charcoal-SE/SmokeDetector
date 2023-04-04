@@ -2820,3 +2820,4 @@ akungacor169
 sabai[\W_]*+ecoverse
 refd_by=rh
 kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise)?)?(?:[\W_]*+shop)?
+2023[\W_]NCAA[\W_]Tournament
