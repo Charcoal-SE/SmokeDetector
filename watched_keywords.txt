@@ -49415,3 +49415,4 @@
 1680590418	tripleee	kobeena[\W_]*+straightener
 1680591975	tripleee	kodexcc\.com
 1680592231	tripleee	party\.biz
+1680592866	tripleee	ios\.signweb\.cc
