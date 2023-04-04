@@ -49418,3 +49418,4 @@
 1680592866	tripleee	ios\.signweb\.cc
 1680594420	tripleee	spartanslotscasino\.bet
 1680594486	tripleee	alldatafeeds\.com
+1680594523	tripleee	alldatafeeds[\W_]*+com(?<!alldatafeeds\.com)
