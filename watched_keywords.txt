@@ -49430,3 +49430,4 @@
 1680597156	tripleee	buy[\W_]*+ativan[\W_]*+online
 1680597436	tripleee	testdepression\.org
 1680599591	tripleee	fahirakm\.com
+1680602448	tripleee	wclearning\.in
