@@ -49421,3 +49421,4 @@
 1680594523	tripleee	alldatafeeds[\W_]*+com(?<!alldatafeeds\.com)
 1680594747	tripleee	suratwebdesigner\.com
 1680595012	tripleee	programmer[\W_]*+net(?<!programmer\.net)
+1680595041	tripleee	programmer\.net
