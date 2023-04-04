@@ -1931,6 +1931,9 @@ items:
   - liz.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
+  - meg.ns.cloudflare.com.
+- ns:
+  - hal.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
