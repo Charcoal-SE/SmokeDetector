@@ -4016,7 +4016,9 @@ items:
   ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
-- ns: hostwithconfidence.com.
+- comment: no longer resolves 2023-04-05
+  disable: true
+  ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
 - ns: concepts8.com.
