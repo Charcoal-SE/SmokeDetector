@@ -2822,3 +2822,4 @@ refd_by=rh
 kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise)?)?(?:[\W_]*+shop)?
 gluco[\W_]*+trust
 webrootrecovery
+2023[\W_]NCAA[\W_]Tournament
