@@ -49463,3 +49463,4 @@
 1680716835	tripleee	speed of my ((?!web(?:site)?\b)\w+ )*+web[\W_]*+site
 1680724869	Makyen	toyzone\.pk
 1680724906	Makyen	jyotirvistara\.blogspot
+1680724932	Makyen	cubeblogstation\.com
