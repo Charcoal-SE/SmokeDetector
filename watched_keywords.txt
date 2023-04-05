@@ -49450,3 +49450,4 @@
 1680680222	tripleee	creative-[a-z\d%-]+(?:\.[a-z\d%-]+)*\.[a-z]{2,15}(?<!\bcreative-tim\.com)
 1680680932	tripleee	redmi[\W_]*+note\d*
 1680688565	tripleee	clinicianapp\.in
+1680689821	tripleee	tamildool\.org
