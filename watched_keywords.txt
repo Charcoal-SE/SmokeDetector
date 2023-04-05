@@ -49451,3 +49451,4 @@
 1680680932	tripleee	redmi[\W_]*+note\d*
 1680688565	tripleee	clinicianapp\.in
 1680689821	tripleee	tamildool\.org
+1680692435	Mast	bamboovision\.com
