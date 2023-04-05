@@ -49460,3 +49460,4 @@
 1680715174	tripleee	digilearnings\.com
 1680715202	tripleee	digilearnings(?!\.com(?<=digilearnings\.com))
 1680715238	tripleee	ratnavali[\W_]*+arts
+1680716835	tripleee	speed of my ((?!web(?:site)?\b)\w+ )*+web[\W_]*+site
