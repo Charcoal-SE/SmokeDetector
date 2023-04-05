@@ -2025,7 +2025,6 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     r"cbd\W?oil",
     "(?:eye|skin|aging) ?cream",
     "b ?a ?m ?(?:w ?o ?w|w ?a ?r)",
-    "cogniq",
     r"male\Wperf(?!ormer)",
     "anti[- ]?aging",
     "(?:ultra|berry|body)[ -]?ketone",
