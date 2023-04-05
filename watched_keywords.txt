@@ -49439,3 +49439,4 @@
 1680632374	tripleee	onlinewebclub\.com
 1680635253	Makyen	jerkbbqhaven\.com
 1680656440	Spevacus	banteng\.link
+1680669141	tripleee	watch[\W_]*+john[\W_]*+wick
