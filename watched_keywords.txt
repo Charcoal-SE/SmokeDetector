@@ -49443,3 +49443,4 @@
 1680671166	tripleee	infowind(?:[\W_]*+technologies)?
 1680671563	tripleee	(?-i:3m22vGc)(?# bit.ly)
 1680671611	tripleee	buyxanaxonline2m\.blogspot
+1680672370	Makyen	pcpatchedup\.com
