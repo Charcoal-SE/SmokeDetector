@@ -49449,3 +49449,4 @@
 1680677818	Glorfindel	cemca\.org
 1680677845	Glorfindel	auditionformdates\.in
 1680677883	Glorfindel	brabuonline\.in
+1680680222	tripleee	creative-[a-z\d%-]+(?:\.[a-z\d%-]+)*\.[a-z]{2,15}(?<!\bcreative-tim\.com)
