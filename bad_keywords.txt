@@ -1784,7 +1784,7 @@ envy[\W_]*+naturals(?:[\W_]*+keto)?
 brain[\W_]*+dumps
 manifestspellcast(?!\.wordpress\.com)(?:@gmail\.com)?
 alluvia(?:\W*+(?:labs|anti|aging|ageless|cream))+
-(?:(?:keto|forskolin)[\W_]*+)?kc3000
+(?:keto|forskolin)[\W_]*+kc3000
 mmoah
 mindvalley
 arya[\W_]*+money
