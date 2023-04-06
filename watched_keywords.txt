@@ -49447,7 +49447,6 @@
 1680677818	Glorfindel	cemca\.org
 1680677845	Glorfindel	auditionformdates\.in
 1680677883	Glorfindel	brabuonline\.in
-1680680932	tripleee	redmi[\W_]*+note\d*
 1680688565	tripleee	clinicianapp\.in
 1680689821	tripleee	tamildool\.org
 1680692435	Mast	bamboovision\.com
