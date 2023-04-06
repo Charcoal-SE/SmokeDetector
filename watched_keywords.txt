@@ -49496,3 +49496,4 @@
 1680776988	Ryan M	alealamiy\.com
 1680777014	Ryan M	sharpfixe\.com
 1680777052	Ryan M	twkel\.com
+1680777082	Ryan M	deviceseg\.com
