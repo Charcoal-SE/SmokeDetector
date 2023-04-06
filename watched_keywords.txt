@@ -49499,7 +49499,7 @@
 1680781189	Jeff Schaller	sonababes\.com
 1680781242	Jeff Schaller	ecomsole\.com
 1680781282	Jeff Schaller	paper-bird\.net
-1680782668	Makyen	apexfirm\.com
+1680782066	Vickel	apexfirm\.com
 1680782697	Makyen	vio77
 1680798038	Makyen	testseotoolsystem\.com
 1680798385	Makyen	lorazepam-information\.com
@@ -49513,4 +49513,3 @@
 1680815232	Spevacus	empireable\.com
 1680818852	Jesse	pikashowdownload\.in
 1680822147	Jeff Schaller	mayortechs\.com
-1680782066	Vickel	apexfirm\.com
