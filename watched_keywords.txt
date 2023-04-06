@@ -49470,3 +49470,4 @@
 1680763752	tripleee	hewglo\.com
 1680763790	tripleee	coinbaslogs\.com(?# sites.google.com)
 1680763884	tripleee	thecommerceshop\.com
+1680765371	tripleee	medzpills\.com
