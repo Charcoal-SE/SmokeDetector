@@ -4112,7 +4112,7 @@ eminenture\.com
 apptim\.com
 pellerex\.com
 intellimindz\.com
-jimdosite\.com
+\.jimdosite\.com
 nhacaionline\.com
 pythonandmltrainingcourses\.com
 promosimple\.com
