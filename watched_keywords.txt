@@ -49530,3 +49530,4 @@
 1680868647	Makyen	traktor[\W_]*+pro
 1680875464	Spevacus	hidedot\.com
 1680878234	Mast	rummymodernapp\.com
+1680879499	Makyen	in\.barbyoli\.mobile
