@@ -49533,3 +49533,4 @@
 1680879499	Makyen	in\.barbyoli\.mobile
 1680880508	Makyen	satanic[\W_]*+fraternal[\W_]*+organizations
 1680882805	Makyen	vccload\.com
+1680884245	tripleee	beeaand
