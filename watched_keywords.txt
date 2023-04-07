@@ -49531,3 +49531,4 @@
 1680875464	Spevacus	hidedot\.com
 1680878234	Mast	rummymodernapp\.com
 1680879499	Makyen	in\.barbyoli\.mobile
+1680880508	Makyen	satanic[\W_]*+fraternal[\W_]*+organizations
