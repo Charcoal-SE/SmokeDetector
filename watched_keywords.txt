@@ -49555,3 +49555,4 @@
 1680951964	Makyen	masters[\W_]*+assignment[\W_]*+help(?!\.com(?<=mastersassignmenthelp\.com))
 1680952673	Makyen	pdf\.ac
 1680952700	Makyen	(?-i:Cfeez84qQ5E)(?#YouTube)
+1680952727	Makyen	(?-i:lUHknPptvuc)(?#YouTube)
