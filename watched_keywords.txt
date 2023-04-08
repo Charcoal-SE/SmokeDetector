@@ -49564,3 +49564,4 @@
 1680972380	Makyen	clínica[\W_]*+lepiel
 1680972406	Makyen	(?-i:NUDMYDS53XLZI1)(?#wa.me)
 1680972434	Makyen	(?-i:LEPIELPERU)(?#facebook.com)
+1680972476	Makyen	lepiel\.com\.pe
