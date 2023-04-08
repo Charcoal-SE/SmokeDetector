@@ -49552,3 +49552,4 @@
 1680951792	Makyen	mastersassignmenthelp\.com
 1680951829	Makyen	adelautodoors\.com
 1680951855	Makyen	adel[\W_]*+auto[\W_]*+doors(?!\.com(?<=adelautodoors\.com))
+1680951964	Makyen	masters[\W_]*+assignment[\W_]*+help(?!\.com(?<=mastersassignmenthelp\.com))
