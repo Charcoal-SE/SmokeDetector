@@ -49548,3 +49548,4 @@
 1680938105	Glorfindel	erudite\.in
 1680939998	tripleee	from[\W_]*+ashes[\W_]*+to[\W_]*+restoration
 1680941267	tripleee	(?-i:XhuKWAlS1CE)(?# youtube)
+1680941506	Robert Longson	emdigitizer\.com
