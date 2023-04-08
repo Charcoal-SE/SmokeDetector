@@ -546,7 +546,6 @@ rcframecontractors
 bsgolds\.com
 thedropnet\.com
 science\.misis\.ru
-pdf\.ac/
 slotobit\.com
 thaykinhmanhinhcamung\.com
 sfdcbot\.herokuapp\.com
