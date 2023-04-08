@@ -49568,3 +49568,4 @@
 1680973223	tripleee	(?-i:MZe6dirMO80)(?# youtube)
 1680975145	Makyen	nguyen\.nguyen\.54922
 1680980380	Nisse Engström	smmshopus\.com
+1680995552	Jeff Schaller	apkbounce\.com
