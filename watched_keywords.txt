@@ -49561,3 +49561,4 @@
 1680956539	Makyen	wwigg\.com
 1680967441	Jeff Schaller	itsallaboutblogsonline\.com
 1680967466	Jeff Schaller	nangworld\.net
+1680972380	Makyen	clínica[\W_]*+lepiel
