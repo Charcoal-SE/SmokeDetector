@@ -49583,3 +49583,4 @@
 1681039731	Nisse Engström	tarung89\.bio
 1681045810	Nisse Engström	linensrange\.co\.uk
 1681046923	Makyen	apkgarden\.net
+1681046950	Makyen	apk[\W_]*+garden(?!\.net(?<=apkgarden\.net))
