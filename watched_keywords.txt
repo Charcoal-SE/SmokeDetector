@@ -49584,3 +49584,4 @@
 1681045810	Nisse Engström	linensrange\.co\.uk
 1681046923	Makyen	apkgarden\.net
 1681046950	Makyen	apk[\W_]*+garden(?!\.net(?<=apkgarden\.net))
+1681046989	Makyen	12\.rospotrebnadzor\.ru
