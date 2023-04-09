@@ -49589,3 +49589,4 @@
 1681047052	Makyen	universalapk\.com
 1681047079	Makyen	pintodownloader\.com
 1681048459	Makyen	truelennyface\.com
+1681072159	Jeff Schaller	gamelane\.info
