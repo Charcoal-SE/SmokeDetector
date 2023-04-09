@@ -5285,3 +5285,4 @@ lancashireshoulderclinic\.co\.uk
 matlabassignmentexperts\.com
 ufc-fight-287-streams\.blogspot
 (?-i:3UmbPBh)(?#bit.ly)
+(?-i:2r8frukz)(?#tinyurl.com)
