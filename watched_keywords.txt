@@ -49587,3 +49587,4 @@
 1681046989	Makyen	12\.rospotrebnadzor\.ru
 1681047027	Makyen	a\.gongkong\.com
 1681047052	Makyen	universalapk\.com
+1681047079	Makyen	pintodownloader\.com
