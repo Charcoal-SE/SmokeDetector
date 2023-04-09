@@ -49586,3 +49586,4 @@
 1681046950	Makyen	apk[\W_]*+garden(?!\.net(?<=apkgarden\.net))
 1681046989	Makyen	12\.rospotrebnadzor\.ru
 1681047027	Makyen	a\.gongkong\.com
+1681047052	Makyen	universalapk\.com
