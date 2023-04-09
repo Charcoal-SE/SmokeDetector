@@ -2823,4 +2823,3 @@ kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise)?)
 gluco[\W_]*+trust
 webrootrecovery
 2023[\W_]*+NCAA[\W_]*+Tournament
-(?-i:2r8frukz)(?#tinyurl.com)
