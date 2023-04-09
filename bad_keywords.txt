@@ -2824,3 +2824,4 @@ gluco[\W_]*+trust
 webrootrecovery
 2023[\W_]*+NCAA[\W_]*+Tournament
 (?-i:3UmbPBh)(?#bit.ly)
+(?-i:2r8frukz)(?#tinyurl.com)
