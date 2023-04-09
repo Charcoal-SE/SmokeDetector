@@ -5287,3 +5287,4 @@ ufc-fight-287-streams\.blogspot
 (?-i:3UmbPBh)(?#bit.ly)
 (?-i:2r8frukz)(?#tinyurl.com)
 webskylives\.com
+(?-i:Z7cFr9K)(?#cutt.ly)
