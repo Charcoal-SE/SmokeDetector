@@ -49625,3 +49625,4 @@
 1681131693	Makyen	insert[\W_]*+a[\W_]*+reasonably[\W_]*+sized[\W_]*+screenshot[\W_]*+or[\W_]*+code[\W_]*+snippet[\W_]*+of[\W_]*+your(?# Ask question template text on Stack Apps)
 1681135614	Nisse Engström	bearsprings\.ca
 1681139209	Jeff Schaller	vapshop\.ae
+1681139844	Jeff Schaller	technogaming\.in
