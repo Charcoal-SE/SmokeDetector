@@ -49623,3 +49623,4 @@
 1681129202	Makyen	scotkiltstore\.com
 1681130753	Jeff Schaller	msgclub\.net
 1681131693	Makyen	insert[\W_]*+a[\W_]*+reasonably[\W_]*+sized[\W_]*+screenshot[\W_]*+or[\W_]*+code[\W_]*+snippet[\W_]*+of[\W_]*+your(?# Ask question template text on Stack Apps)
+1681135614	Nisse Engström	bearsprings\.ca
