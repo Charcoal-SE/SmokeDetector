@@ -49657,3 +49657,4 @@
 1681232596	tripleee	kampus[\W_]*+islami
 1681233512	tripleee	simontechway\.com
 1681233826	tripleee	volleyballadvisor\.com
+1681234596	tripleee	(?-i:^ANSHUL2344$)
