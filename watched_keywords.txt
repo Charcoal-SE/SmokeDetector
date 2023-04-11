@@ -49654,3 +49654,4 @@
 1681226659	Spevacus	routersnetwork\.com
 1681231563	tripleee	appwarstechnologies\.com
 1681232409	tripleee	24vip\.casino
+1681232596	tripleee	kampus[\W_]*+islami
