@@ -49643,3 +49643,4 @@
 1681201756	tripleee	clipping[\W_]*+next
 1681204463	tripleee	lunyeespindle\.com
 1681208105	tripleee	go-techsolution\.org
+1681208344	tripleee	meghafriendship\.com
