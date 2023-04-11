@@ -49652,3 +49652,4 @@
 1681216971	Makyen	fern[\W_]*+tree[\W_]*+resort
 1681225880	Jeff Schaller	umj\.ac\.id
 1681226659	Spevacus	routersnetwork\.com
+1681231563	tripleee	appwarstechnologies\.com
