@@ -2827,3 +2827,4 @@ webrootrecovery
 157\.245\.84\.48
 67\.207\.83\.133
 162\.243\.175\.185
+skill[\W_]*+slash(?!\.com(?<=skillslash\.com))
