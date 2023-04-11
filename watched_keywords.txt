@@ -49640,3 +49640,4 @@
 1681198709	tripleee	lebuelectric\.com
 1681198765	tripleee	airportassistancehub\.com
 1681200018	tripleee	saralpath\.com
+1681201756	tripleee	clipping[\W_]*+next
