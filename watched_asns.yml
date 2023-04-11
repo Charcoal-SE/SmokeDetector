@@ -138,6 +138,7 @@ items:
 - asn: '132203'
   comment: no 1-weight hits since watch; disabled 2023-03-06
   disable: true
+- asn: '132335'
 - asn: '132420'
 - asn: '133296'
 - asn: '133711'
