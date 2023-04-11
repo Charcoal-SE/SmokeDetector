@@ -49646,3 +49646,4 @@
 1681208404	tripleee	spotnrides(?!\.com)
 1681208431	tripleee	spotnrides\.com
 1681213399	Jeff Schaller	weblistingguru\.com
+1681213425	Glorfindel	e-tradingsoftware\.com
