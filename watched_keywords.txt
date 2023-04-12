@@ -49686,3 +49686,4 @@
 1681278537	tripleee	(?-i:g2wAEhaq4cY)(?# youtube)
 1681279463	tripleee	psychiatreat\.com
 1681282201	tripleee	xl\.institute
+1681282268	tripleee	xl[\W_]*+multimedia
