@@ -49691,3 +49691,4 @@
 1681284836	tripleee	(?-i:^Nicholas David$)
 1681285429	tripleee	whitelabelfox\.com
 1681288240	tripleee	coohom\.com
+1681289723	Glorfindel	(?-i:Core Stars)
