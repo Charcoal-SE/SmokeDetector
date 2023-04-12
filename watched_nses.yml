@@ -4321,7 +4321,9 @@ items:
 - ns: rhostrh.com.
 - ns: cloudhost.id.
 - ns: glowhost.net.
-- ns: wilcode.online.
+- comment: NXDOMAIN 2023-04-12
+  disable: true
+  ns: wilcode.online.
 - ns: sered.net.
 - ns: hostsserver.com.
 - ns: hostandserver.com.
