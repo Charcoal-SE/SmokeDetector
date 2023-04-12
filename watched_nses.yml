@@ -174,6 +174,9 @@ items:
   - terry.ns.cloudflare.com.
 - ns:
   - aisha.ns.cloudflare.com.
+  - hal.ns.cloudflare.com.
+- ns:
+  - aisha.ns.cloudflare.com.
   - rodney.ns.cloudflare.com.
 - ns:
   - aisha.ns.cloudflare.com.
