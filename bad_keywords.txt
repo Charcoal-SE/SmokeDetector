@@ -2828,3 +2828,4 @@ webrootrecovery
 162\.243\.175\.185
 skill[\W_]*+slash(?!\.com(?<=skillslash\.com))
 kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise)?|cloth(?:es?|ing))?(?:[\W_]*+shop)?
+UEFA_2023_LIVE
