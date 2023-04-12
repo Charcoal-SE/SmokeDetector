@@ -49709,3 +49709,4 @@
 1681325930	Makyen	mindfulhealth\.pro
 1681328314	Henry Ecker	leadtopper\.com
 1681331659	Makyen	lead[\W_]*+topper(?!\.com(?<=leadtopper\.com))
+1681336017	Jeff Schaller	gearknacks\.com
