@@ -3656,6 +3656,11 @@ items:
   - ns-1748.awsdns-26.co.uk.
   - ns-508.awsdns-63.com.
 - ns:
+  - ns-1015.awsdns-62.net.
+  - ns-12.awsdns-01.com.
+  - ns-1267.awsdns-30.org.
+  - ns-1739.awsdns-25.co.uk.
+- ns:
   - ns-1016.awsdns-63.net.
   - ns-1275.awsdns-31.org.
   - ns-1631.awsdns-11.co.uk.
