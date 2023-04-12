@@ -41744,7 +41744,6 @@
 1660539029	tripleee	rankrazer\.com
 1660546296	tripleee	rapidapi\.com/yevhenkudrya
 1660547279	tripleee	brotheroffline\.com
-1660547911	tripleee	tribuneindia\.com/news/brand-connect
 1660547938	tripleee	tribuneindia\.com(?!/news/brand-connect)
 1660551133	tripleee	(?-i:^Ruby Garage$)
 1660552979	tripleee	sixpackpower\.com
