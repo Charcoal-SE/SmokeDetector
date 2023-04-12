@@ -49688,3 +49688,4 @@
 1681282201	tripleee	xl\.institute
 1681282268	tripleee	xl[\W_]*+multimedia
 1681284492	tripleee	codeatclick\.in
+1681284523	tripleee	d[\W_]*+tangled
