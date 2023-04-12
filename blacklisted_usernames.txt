@@ -867,3 +867,4 @@ nilesecurity
 (?-i:^Teddy Cong Nghe$)
 (?-i:^Mathewbenze$)
 (?-i:^RR GODARA$)
+(?-i:^clippingnext$)
