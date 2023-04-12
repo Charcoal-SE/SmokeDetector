@@ -49677,3 +49677,4 @@
 1681272156	tripleee	caeassistant\.com
 1681273506	tripleee	travelguideideas\.com
 1681274949	tripleee	solis[\W_]*+tractors?
+1681277104	tripleee	legitcannabinoids\.com
