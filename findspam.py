@@ -2254,7 +2254,7 @@ city_list = [
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Palam", "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
-    "Sonipat", "Srinagar", "Surat",
+    "Sarjapur", "Sonipat", "Srinagar", "Surat",
     "Telangana", "Thane", "Thiruvananthapuram", "Tiruchi", "Tiruchirappalli", "Tirupati",
     "Trichinopoly", "Trichy", "Trivandrum", "Tura",
     "Udaipur", "Uttarakhand",
