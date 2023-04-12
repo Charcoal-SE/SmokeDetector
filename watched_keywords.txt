@@ -49689,3 +49689,4 @@
 1681284492	tripleee	codeatclick\.in
 1681284523	tripleee	d[\W_]*+tangled
 1681284728	tripleee	clipping[\W_]*+next(?<!(?-i:^clippingnext$))
+1681284836	tripleee	(?-i:^Nicholas David$)
