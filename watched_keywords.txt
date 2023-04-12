@@ -49711,3 +49711,4 @@
 1681331659	Makyen	lead[\W_]*+topper(?!\.com(?<=leadtopper\.com))
 1681336017	Jeff Schaller	gearknacks\.com
 1681336047	Jeff Schaller	soundsoftext\.com
+1681336077	Jeff Schaller	checkedluggagenexus\.com
