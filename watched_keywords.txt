@@ -49743,3 +49743,4 @@
 1681390268	tripleee	gaglawyers\.com
 1681391686	tripleee	gotoassignmentexpert\.com
 1681408606	tripleee	strangler[\W_]*+fig
+1681414399	Jeff Schaller	905brazilianjiujitsu\.com
