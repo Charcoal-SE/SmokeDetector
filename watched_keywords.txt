@@ -49712,3 +49712,4 @@
 1681336017	Jeff Schaller	gearknacks\.com
 1681336047	Jeff Schaller	soundsoftext\.com
 1681336077	Jeff Schaller	checkedluggagenexus\.com
+1681359566	tripleee	(?-i:^Chris Wang$)
