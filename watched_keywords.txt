@@ -49739,3 +49739,4 @@
 1681386974	tripleee	ayanshtechnology\.com
 1681387339	tripleee	(?-i:^Iris Caleb$)
 1681387920	Jeff Schaller	memoryclearance\.com
+1681387978	Jeff Schaller	mindmade\.in
