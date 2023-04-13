@@ -2971,6 +2971,9 @@ items:
   - raphaela.ns.cloudflare.com.
   - razvan.ns.cloudflare.com.
 - ns:
+  - rex.ns.cloudflare.com.
+  - sky.ns.cloudflare.com.
+- ns:
   - reza.ns.cloudflare.com.
   - vick.ns.cloudflare.com.
 - ns:
