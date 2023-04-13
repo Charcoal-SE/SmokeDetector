@@ -442,6 +442,9 @@ items:
   - sns19.hostgator.in.
   - sns20.hostgator.in.
 - ns:
+  - sns37.hostgator.in.
+  - sns38.hostgator.in.
+- ns:
   - sns41.hostgator.in.
   - sns42.hostgator.in.
 - ns:
