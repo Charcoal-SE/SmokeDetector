@@ -49742,3 +49742,4 @@
 1681387978	Jeff Schaller	mindmade\.in
 1681390268	tripleee	gaglawyers\.com
 1681391686	tripleee	gotoassignmentexpert\.com
+1681408606	tripleee	strangler[\W_]*+fig
