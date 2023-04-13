@@ -2650,6 +2650,9 @@ items:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
+  - maciej.ns.cloudflare.com.
+  - rita.ns.cloudflare.com.
+- ns:
   - macy.ns.cloudflare.com.
   - sean.ns.cloudflare.com.
 - ns:
