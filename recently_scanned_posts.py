@@ -124,21 +124,22 @@ def atomic_compare_update_and_get_spam_data(post, have_lock=False, update=True):
         my_lock = False
         if not have_lock:
             my_lock = GlobalVars.recently_scanned_posts_lock.acquire()
+        post_rs = post
         if 'is_recently_scanned_post' not in post:
-            post = get_recently_scanned_post_from_post(post)
-        post_key = post.get('post_key', None)
+            post_rs = get_recently_scanned_post_from_post(post)
+        post_key = post_rs.get('post_key', None)
         if post_key is None:
             # Without a post_key, we can't check or store.
             raise KeyError('post key is None')
         scanned_entry = GlobalVars.recently_scanned_posts.get(post_key, None)
         if scanned_entry is None or scanned_entry.get('is_spam', None) is None:
             if update:
-                add_post(post, have_lock=True)
+                add_post(post_rs, have_lock=True)
             return {'is_older_or_unchanged': False, 'no_scanned_entry': True}
         scanned_post = scanned_entry['post']
-        compare_info = compare_posts(post, scanned_post)
+        compare_info = compare_posts(post_rs, scanned_post)
         if update:
-            apply_timestamps_to_entry_from_post_and_time_if_newer(post, scanned_entry)
+            apply_timestamps_to_entry_from_post_and_time_if_newer(post_rs, scanned_entry)
         for key in ['is_spam', 'reasons', 'why']:
             compare_info[key] = scanned_entry.get(key, None)
         return compare_info
