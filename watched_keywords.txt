@@ -49720,3 +49720,4 @@
 1681368893	tripleee	house[\W_]*+shifting
 1681373386	tripleee	counterfeitmoneystore\.com
 1681373788	tripleee	buyfakenotes\.com
+1681375902	tripleee	buyundetectedcounterfeitonline\.com
