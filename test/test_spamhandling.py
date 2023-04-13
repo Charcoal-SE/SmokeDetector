@@ -64,6 +64,7 @@ class TestRoomReports(TestCase):
             api_response['question_id'] = post_id
         else:
             api_response['answer_id'] = post_id
+            api_response['question_id'] = 173245
         return Post(api_response=api_response)
 
     @classmethod
