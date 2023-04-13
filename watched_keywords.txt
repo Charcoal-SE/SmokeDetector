@@ -49727,3 +49727,4 @@
 1681376370	tripleee	heritage[\W_]*+india[\W_]*+restaurant(?!\.ca(?<=heritageindiarestaurant\.ca))
 1681376518	tripleee	umink\.com\.cn
 1681376633	tripleee	(?-i:^Betty Shields$)
+1681376928	tripleee	counterfeitsmoneyforsale\.com
