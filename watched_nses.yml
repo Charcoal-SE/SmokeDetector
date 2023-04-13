@@ -1927,6 +1927,9 @@ items:
   - greg.ns.cloudflare.com.
   - violet.ns.cloudflare.com.
 - ns:
+  - guss.ns.cloudflare.com.
+  - leia.ns.cloudflare.com.
+- ns:
   - guy.ns.cloudflare.com.
   - kate.ns.cloudflare.com.
 - ns:
