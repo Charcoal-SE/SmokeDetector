@@ -1042,6 +1042,9 @@ items:
   - gail.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
+  - ken.ns.cloudflare.com.
+- ns:
+  - chance.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
