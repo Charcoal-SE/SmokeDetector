@@ -49724,3 +49724,4 @@
 1681375934	tripleee	battery-expo\.com
 1681375975	tripleee	bikerinfo\.in
 1681376049	tripleee	elecrow\.com
+1681376370	tripleee	heritage[\W_]*+india[\W_]*+restaurant(?!\.ca(?<=heritageindiarestaurant\.ca))
