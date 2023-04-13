@@ -49729,3 +49729,4 @@
 1681376633	tripleee	(?-i:^Betty Shields$)
 1681376928	tripleee	counterfeitsmoneyforsale\.com
 1681378846	tripleee	artleon\.com
+1681378939	tripleee	techzort\.com
