@@ -1792,6 +1792,9 @@ items:
   - frank.ns.cloudflare.com.
   - love.ns.cloudflare.com.
 - ns:
+  - frank.ns.cloudflare.com.
+  - mckenzie.ns.cloudflare.com.
+- ns:
   - fred.ns.cloudflare.com.
   - mary.ns.cloudflare.com.
 - ns:
