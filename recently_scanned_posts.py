@@ -19,9 +19,9 @@ def get_key_for_post(post):
     if 'is_recently_scanned_post' in post:
         return post.get('post_key', None)
     site = post.get('site', None)
-    post_id = post.get('question_id', None)
+    post_id = post.get('answer_id', None)
     if post_id is None:
-        post_id = post.get('answer_id', None)
+        post_id = post.get('question_id', None)
     if site is None or post_id is None:
         log('warn', 'Unable to determine site or post_id for recently scanned post:'
                     ' site:{}:: post_id: {}:: post:{}'.format(site, post_id, post))
