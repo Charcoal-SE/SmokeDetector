@@ -49759,3 +49759,4 @@
 1681470222	Jeff Schaller	tidyclean\.com\.au
 1681470336	Jeff Schaller	regumsoft\.com
 1681470417	Jeff Schaller	creativefitness\.xyz
+1681470882	Jeff Schaller	craftshoppy\.com
