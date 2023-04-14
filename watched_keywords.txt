@@ -49768,3 +49768,4 @@
 1681492899	Jeff Schaller	sshlan\.com
 1681494903	Makyen	ssh[\W_]*+lan(?!\.com(?<=sshlan\.com))
 1681498727	Ryan M	2048gamers\.com
+1681500053	Ryan M	(?-i:Code) and (?-i:Pixels)
