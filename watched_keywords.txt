@@ -49770,3 +49770,4 @@
 1681498727	Ryan M	2048gamers\.com
 1681500053	Ryan M	(?-i:Code) and (?-i:Pixels)
 1681502620	Nisse Engström	careers\.lg\.com
+1681503104	Jeff Schaller	khasabseatours\.com
