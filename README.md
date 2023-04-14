@@ -144,7 +144,7 @@ cpus: 0.5  # Recommend 2.0 or more for spam waves
 ## Requirements
 
 SmokeDetector only supports Stack Exchange logins,
-and runs on Python 3.6 or higher,
+and runs on Python 3.7 or higher,
 for now.
 
 To allow committing blacklist and watchlist modifications
