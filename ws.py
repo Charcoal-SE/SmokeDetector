@@ -53,7 +53,7 @@ MIN_PYTHON_VERSION = (3, 6, 0)  # Below this version we know SmokeDetector has i
 # is at the time the test is run and GitHub Actions has updated their Python configurations. It is
 # expected that the version mentioned below will not be updated on a regular basis and that it *will be*
 # out of date most of the time.
-MIN_TESTED_PYTHON_VERSION = (3, 7, 13)
+MIN_TESTED_PYTHON_VERSION = (3, 8, 16)
 THIS_PYTHON_VERSION = tuple(map(int, platform.python_version_tuple()))
 MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT = 2 * 60 * 60  # 2 hours in seconds
 
