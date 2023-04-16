@@ -208,6 +208,7 @@ stackexchange.com:
       - 1019341 # jmoerdyk
       - 2907407 # Pilot6
       - 12139977 # James Risner
+      - 18275476 # Artur Meinild
 
   65945:  # Charcoal Test
     commands: true
@@ -232,6 +233,7 @@ stackexchange.com:
 
     privileges:
       - 1911219 # karel
+      - 18275476 # Artur Meinild
       # NOTICE: please don't add new users without approval from an Ask Ubuntu moderator.
 
   2165:  # CRUDE
