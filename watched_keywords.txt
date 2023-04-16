@@ -49793,3 +49793,4 @@
 1681667967	Ethan	(?-i:9nch4lis)(?#bitshare.link)
 1681668171	Makyen	bitshare\.link
 1681669382	Makyen	shinepdf\.com
+1681672023	Makyen	theopenmagazines\.com
