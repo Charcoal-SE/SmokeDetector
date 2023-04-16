@@ -49794,3 +49794,4 @@
 1681668171	Makyen	bitshare\.link
 1681669382	Makyen	shinepdf\.com
 1681672023	Makyen	theopenmagazines\.com
+1681680529	Vickel	karanpc\.online
