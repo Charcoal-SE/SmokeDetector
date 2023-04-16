@@ -221,7 +221,7 @@ stackexchange.com:
         room: 11540
 
   3877:  # Raiders of the Lost Downboat
-    commands: false
+    commands: true
     watcher: true
     msg_types:
       - site-askubuntu.com
@@ -229,6 +229,10 @@ stackexchange.com:
       - experimental-site-askubuntu.com
       - experimental-site-meta.askubuntu.com
       - offensive-mask
+
+    privileges:
+      - 1911219 # karel
+      # NOTICE: please don't add new users without approval from an Ask Ubuntu moderator.
 
   2165:  # CRUDE
     commands: false
