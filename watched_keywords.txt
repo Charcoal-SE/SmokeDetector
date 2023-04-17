@@ -49818,3 +49818,4 @@
 1681724123	tripleee	allminecraftapk\.com
 1681726513	Jeff Schaller	hometechsupply\.com
 1681726994	tripleee	hudsolutions\.com\.au
+1681727125	tripleee	dvdfab(?!\.(?:cn|fr|org))
