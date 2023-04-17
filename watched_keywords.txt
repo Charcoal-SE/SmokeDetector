@@ -49812,3 +49812,4 @@
 1681719737	tripleee	desktopprintersetup\.com
 1681720487	tripleee	(?-i:^Jill Norris$)
 1681722435	tripleee	pisoftware\.in
+1681722570	tripleee	alajavidgentstailor\.com
