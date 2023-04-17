@@ -49429,7 +49429,6 @@
 1680672405	Makyen	iemmadavis24(?:@gmail\.com)?
 1680675924	tripleee	herboganic\.com
 1680677791	Glorfindel	traditionalgames\.in
-1680677818	Glorfindel	cemca\.org
 1680677845	Glorfindel	auditionformdates\.in
 1680677883	Glorfindel	brabuonline\.in
 1680688565	tripleee	clinicianapp\.in
