@@ -871,3 +871,4 @@ nilesecurity
 (?-i:^alishakihn$)
 (?-i:^PenDriveRecovery$)
 (?-i:^crack mix$)
+(?-i:^Dwellfox$)
