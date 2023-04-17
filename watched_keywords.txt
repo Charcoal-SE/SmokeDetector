@@ -49808,3 +49808,4 @@
 1681713600	tripleee	withsontrinh(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1681719567	tripleee	viewyourdealtoday\.com
 1681719603	tripleee	snaplant\.com
+1681719640	tripleee	shovivsoftwarepvtltd\d*
