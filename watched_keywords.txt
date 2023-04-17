@@ -49810,3 +49810,4 @@
 1681719603	tripleee	snaplant\.com
 1681719640	tripleee	shovivsoftwarepvtltd\d*
 1681719667	tripleee	qmcomponents\.com
+1681719700	tripleee	zavi\.live
