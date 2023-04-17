@@ -2582,6 +2582,9 @@ items:
   - roan.ns.cloudflare.com.
 - ns:
   - linda.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
+  - linda.ns.cloudflare.com.
   - thomas.ns.cloudflare.com.
 - ns:
   - linda.ns.cloudflare.com.
