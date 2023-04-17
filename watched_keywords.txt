@@ -49821,3 +49821,4 @@
 1681727125	tripleee	dvdfab(?!\.(?:cn|fr|org))
 1681727161	tripleee	5[\W_]*+star[\W_]*+processing(?!\.com(?<=5starprocessing\.com))
 1681727225	tripleee	trgtechnicalservice\.com
+1681727399	tripleee	homeredecorating\.co\.uk
