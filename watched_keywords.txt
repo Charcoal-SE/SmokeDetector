@@ -49800,3 +49800,4 @@
 1681680544	Vickel	allpcworld\.site
 1681680529	Vickel	karanpc\.online
 1681706374	tripleee	shahadigital\.com
+1681708403	tripleee	getallpapers\.com
