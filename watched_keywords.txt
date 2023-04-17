@@ -49819,3 +49819,4 @@
 1681726513	Jeff Schaller	hometechsupply\.com
 1681726994	tripleee	hudsolutions\.com\.au
 1681727125	tripleee	dvdfab(?!\.(?:cn|fr|org))
+1681727161	tripleee	5[\W_]*+star[\W_]*+processing(?!\.com(?<=5starprocessing\.com))
