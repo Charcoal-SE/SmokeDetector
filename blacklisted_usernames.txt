@@ -870,3 +870,4 @@ nilesecurity
 (?-i:^clippingnext$)
 (?-i:^alishakihn$)
 (?-i:^PenDriveRecovery$)
+(?-i:^crack mix$)
