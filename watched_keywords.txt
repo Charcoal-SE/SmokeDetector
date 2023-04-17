@@ -49837,3 +49837,4 @@
 1681741238	Makyen	allergen[\W_]*+chip
 1681744797	Jeff Schaller	wordsanimals\.com
 1681746067	Jeff Schaller	zennaps\.com
+1681748426	Nisse Engström	standardsalts\.com
