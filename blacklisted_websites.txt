@@ -5300,3 +5300,4 @@ ppv-fight-night-streams\.blogspot
 (?-i:3MM1Rrp)(?#bit.ly)
 iihf-womens-world-championship-stream\.blogspot
 (?-i:D7Nbu4W)(?#cutt.ly)
+w3beginners\.com
