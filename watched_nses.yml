@@ -2884,6 +2884,9 @@ items:
   - nick.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - nico.ns.cloudflare.com.
+  - yolanda.ns.cloudflare.com.
+- ns:
   - nicolas.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
