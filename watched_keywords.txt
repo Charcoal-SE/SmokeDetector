@@ -49807,3 +49807,4 @@
 1681713422	tripleee	moitruongdothixanh\.com\.vn
 1681713600	tripleee	withsontrinh(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1681719567	tripleee	viewyourdealtoday\.com
+1681719603	tripleee	snaplant\.com
