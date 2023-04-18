@@ -49218,7 +49218,6 @@
 1680161540	Ryan M	corpuschristiwaterdamagerestoration\.com
 1680161593	Ryan M	waterdamagecorpus(?# Reddit user)
 1680161897	Ryan M	water[\W_]*+damage[\W_]*+restoration[\W_]*+corpus[\W_]*+christi(?:[\W_]*+tx)?
-1680164869	tripleee	getmodnow\.com
 1680165168	tripleee	DNS_PROBE_FINISHED_NXDOMAIN
 1680165542	tripleee	(?-i:^Mukesh Kumi$)
 1680165571	tripleee	techywired\.com
@@ -49885,3 +49884,8 @@
 1681823448	tripleee	deltron[\W_]*+technologies(?!\.com(?<=deltrontechnologies\.com))
 1681825638	Jeff Schaller	yocofee\.com
 1681826463	Machavity	@goodbisht4755
+1681831812	Jeff Schaller	pressurepowerpros\.com
+1681832078	tripleee	bestjunkremovalnow\.com
+1681832123	tripleee	hamiltonshvac\.com
+1681832160	tripleee	thistleroofing\.com
+1681832467	Jeff Schaller	rumors-escort\.com
