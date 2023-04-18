@@ -11,7 +11,7 @@ predictway\.com
 up24\.pro
 funmac
 lovebiscuits
-z-data\.blogspot\.com
+z-data\.blogspot
 pub4sure\.com
 freeprnow\.com
 Eglobalfitness
@@ -661,7 +661,7 @@ ideaflix\.com
 usadrugguide\.com
 proofy\.io
 torrentsvpn\.com
-techexperiment\.blogspot\.(?:com|sg)
+techexperiment\.blogspot
 dutraeconomicus\.com
 acewriters\.org
 backupbird\.com
@@ -671,14 +671,14 @@ convertmydoc\.com
 downloadapkinstaller\.com
 contactforhelp\.com
 filesupdated\.com
-fpga4student\.blogspot\.com
+fpga4student\.blogspot
 sql-email\.com
 t90xplodecanada\.us
 moviemaniaonline\.com
 SELLCVV\.SHOP
 biohunter\.in
 bizpro9\.com
-selenium-venkat\.blogspot\.(?:com|sg|in)
+selenium-venkat\.blogspot
 injectfollowers\.com
 chandigarhdentist\.com
 xtrfact\.com
@@ -782,7 +782,7 @@ healthyclubpro\.com
 designerworldonline\.com
 gronkaffedenmark\.com
 donewithjob\.com
-gangadharws\.blogspot\.in
+gangadharws\.blogspot
 advids\.co
 gaanamp3club\.com
 menintalk\.com
@@ -1068,7 +1068,7 @@ nutritionextract\.com
 supplementfector\.org
 teknixhealthcare\.com
 bodyprohealth\.com
-inforahasiajudionline\.blogspot\.com
+inforahasiajudionline\.blogspot
 smlcodes\.com
 dissertationclub\.co\.uk
 t-rexmuscleadvice\.com
@@ -1113,7 +1113,7 @@ agilechamps\.com
 digitalelectronicservice\.com
 on2it\.se
 djbaap\.com
-onlin-photoshop\.blogspot\.co
+onlin-photoshop\.blogspot
 raitotec\.com
 honsungtech\.com
 bellasvish\.com
@@ -1214,7 +1214,7 @@ healthbuzzer\.com
 biotestosteronexrtry\.com
 tophealthbuy\.com
 ibwpro\.com
-omindiatech\.blogspot\.in
+omindiatech\.blogspot
 care2world\.com
 nidmindia\.com
 getmysupplement\.com
@@ -1272,7 +1272,7 @@ freesupplementrial\.com
 trysupercbdreview\.com
 supplementssafe\.com
 bestvpnprovider\.com
-zincreward\.blogspot\.com
+zincreward\.blogspot
 fitnesseducations\.com
 needsupplementhelp\.com
 scamcare\.com
@@ -1334,7 +1334,7 @@ shibo333\.com
 puremusclestrength\.com
 sildenafilguide\.com
 hacknohumanverification\.org
-hahmadsolutions\.blogspot\.com
+hahmadsolutions\.blogspot
 cleanserenewdenmark\.com
 waltessays\.com
 slimatrexnorway\.com
@@ -1418,7 +1418,7 @@ mymybear\.com
 drozien\.com
 getsupplementhelp\.com
 beautysk\.com
-apkroidstore\.blogspot\.com
+apkroidstore\.blogspot
 wellness350\.com
 try-nitricstorm\.com
 ifirmationantiagingcream\.com
@@ -1553,7 +1553,7 @@ MusConv\.com
 videoder\.zone
 diving-solutions\.com
 studio\.stupeflix\.com
-everything4comp\.blogspot\.com
+everything4comp\.blogspot
 testoultra\.in
 webtrackker\.com
 garciniasecretdietabout\.com
@@ -1827,7 +1827,7 @@ horlaxendeutschland\.de
 reverseasia\.com
 cognegicsystems\.com
 supplement4fitness\.com
-reviewcrazybulkus\.blogspot\.in
+reviewcrazybulkus\.blogspot
 jstbusiness\.com
 aolsupports\.org
 leemi\.ca
@@ -1870,7 +1870,7 @@ francesupplement\.fr
 nettv4u\.com
 healthfulnutritions\.com
 nutritioncurcumin\.com
-onlineweblogsite\.blogspot\.in
+onlineweblogsite\.blogspot
 endovexstore\.com
 deathbymodernmedicine\.com
 testosteronboosters\.com
@@ -2001,7 +2001,7 @@ agrud\.com
 seodigitalmarketing\.in
 bluesupplement\.org
 freebiebitcoin\.com
-dxncodestrikereview\.blogspot\.com
+dxncodestrikereview\.blogspot
 chromebooksupportnumber\.com
 compaqsupportnumber\.com
 dellcustomersupportnumbers\.com
@@ -2848,7 +2848,7 @@ fairsupplement\.com
 welnesscare\.com
 intellectslinkup\.com
 ketodietwalmart\.com
-doublebitcoin24hours\.blogspot\.com
+doublebitcoin24hours\.blogspot
 medhush\.com
 digitalkrishna\.in
 sachiyasteel\.com
@@ -3066,7 +3066,7 @@ today22\.com
 careerdose\.com
 e[\W_]*+a[\W_]*+r[\W_]*+n[\W_]*+7[\W_]*+4[\W_]*+c[\W_]*+o[\W_]*+m(?#obfuscated earn74.com)
 \bhackmarvel4\b(?#abuse the website blacklist to get more detections/weight on a persistent spammer)
-gisinfomedia\.blogspot\.com
+gisinfomedia\.blogspot
 pilspedia\.com
 buyonlinecare\.com
 2basetechnologies\.com
@@ -3136,7 +3136,7 @@ technobrigadeinfotech\.com
 autobodycu\.org
 pillsenergy\.com
 fitnesshealthpills\.com
-nutrihut\.blogspot\.com
+nutrihut\.blogspot
 biznutrition\.com
 weightlosscharitychallenge\.com
 trendebook\.com
@@ -3558,7 +3558,7 @@ w-ww-office\.com
 slimketoboost\.com
 fast2earn\.com
 healthyaustralia\.com\.au
-educationbygyan\.blogspot\.com
+educationbygyan\.blogspot
 nexgenitsolutions\.in
 buy24x7online\.com
 javaprintln\.com
@@ -3665,7 +3665,7 @@ phukiensamsung\.com
 sigsync\.com
 essayservicescanner\.com
 bilimyurt\.com
-ourunbiasedreview\.blogspot\.com
+ourunbiasedreview\.blogspot
 advisoroffer\.com
 offer4cart\.com
 myfitnessclubb\.com
@@ -3714,7 +3714,7 @@ gotoassignmenthelp\.com
 sprinkledata\.com
 customboxesworld\.co\.uk
 nox\.tips
-biramjih\.blogspot\.com
+biramjih\.blogspot
 onmogul\.com
 natureswater\.ie
 digit-it\.com
@@ -4059,7 +4059,7 @@ transparencymarketresearch\.com
 login2explore\.com
 apl\.ninja
 thetechtrackers\.com
-tukangkuli707\.blogspot\.com
+tukangkuli707\.blogspot
 signalscv\.com
 hkrtrainings\.com
 ketoavis[\W_]*+com
