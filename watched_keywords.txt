@@ -49862,3 +49862,4 @@
 1681790895	tripleee	jerrylinkgroup(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1681791404	tripleee	therivuscity\.com
 1681791618	tripleee	starling[\W_]*+vedic[\W_]*+village
+1681791640	tripleee	yamuna[\W_]*+expressway
