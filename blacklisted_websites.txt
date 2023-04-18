@@ -1553,7 +1553,6 @@ MusConv\.com
 videoder\.zone
 diving-solutions\.com
 studio\.stupeflix\.com
-everything4comp\.blogspot
 testoultra\.in
 webtrackker\.com
 garciniasecretdietabout\.com
@@ -5304,5 +5303,3 @@ w3beginners\.com
 dibiz\.com
 crackmix\.com
 cemca\.org\.in
-jemi\.so
-codelearno\.com
