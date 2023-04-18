@@ -49869,5 +49869,4 @@
 1681802020	tripleee	paylesser\.com
 1681802777	tripleee	sgtuniversity\.ac\.in
 1681803561	tripleee	integral-calculator\.com
-1681804806	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy
 1681804829	tripleee	accountiod\.com
