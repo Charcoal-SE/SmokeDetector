@@ -956,7 +956,6 @@ tribulus[\W_]*+terrestris
 instantly[\W_]*+ageless
 testro[\W_]*+t3
 slimlast
-core[\W_]*+max(?:[\W_]*+ultra)?
 enduraflex
 Oil[\W_]*+Review
 krasa[\W_]*+(?:anti|cream|skin)
