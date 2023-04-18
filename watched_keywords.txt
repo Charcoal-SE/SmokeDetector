@@ -49878,3 +49878,4 @@
 1681815088	tripleee	rightangledevelopers\.co\.in
 1681815123	tripleee	right[\W_]*+angle[\W_]*+developers(?!\.co\.in(?<=rightangledevelopers\.co\.in))
 1681817305	Jeff Schaller	msavirtualservice\.wordpress\.com
+1681818723	Jeff Schaller	cyntexa\.com
