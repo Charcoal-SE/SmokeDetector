@@ -49873,3 +49873,4 @@
 1681804908	tripleee	msasianfilmacademy\.com
 1681804944	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))
 1681805529	tripleee	saiayush\.in
+1681811662	tripleee	aluids\.com
