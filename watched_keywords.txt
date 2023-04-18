@@ -49886,3 +49886,4 @@
 1681822970	Jeff Schaller	melbournefreshflowers\.com\.au
 1681823365	Jeff Schaller	4khdmovies\.club
 1681823448	tripleee	deltron[\W_]*+technologies(?!\.com(?<=deltrontechnologies\.com))
+1681825638	Jeff Schaller	yocofee\.com
