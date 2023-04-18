@@ -49857,3 +49857,4 @@
 1681790616	tripleee	yourceilingfan\.com
 1681790646	tripleee	(?-i:HamaWhiteGG)(?# github)
 1681790671	tripleee	radioactiveglue(?# youtube)
+1681790695	tripleee	amecee\.in
