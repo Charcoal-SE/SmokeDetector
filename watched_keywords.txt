@@ -49876,3 +49876,4 @@
 1681811662	tripleee	aluids\.com
 1681812550	Jeff Schaller	editionsuecia\.com
 1681815088	tripleee	rightangledevelopers\.co\.in
+1681815123	tripleee	right[\W_]*+angle[\W_]*+developers(?!\.co\.in(?<=rightangledevelopers\.co\.in))
