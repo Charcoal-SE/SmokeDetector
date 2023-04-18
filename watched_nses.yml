@@ -1401,6 +1401,9 @@ items:
   - dax.ns.cloudflare.com.
   - maleah.ns.cloudflare.com.
 - ns:
+  - dax.ns.cloudflare.com.
+  - riya.ns.cloudflare.com.
+- ns:
   - dean.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
