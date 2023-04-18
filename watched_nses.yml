@@ -3392,7 +3392,9 @@ items:
 - ns: globat.com.
 - ns: idwebhost.id.
 - ns: a2dns.com.
-- ns: flaunt7.com.
+- comment: NXOMAIN 2023-04-18
+  disable: true
+  ns: flaunt7.com.
 - ns: ihc.ru.
 - ns: r53.com.ua.
 - ns: biswasit.com.
