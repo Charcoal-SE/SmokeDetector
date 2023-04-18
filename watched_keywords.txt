@@ -49863,3 +49863,4 @@
 1681791618	tripleee	starling[\W_]*+vedic[\W_]*+village
 1681791640	tripleee	yamuna[\W_]*+expressway
 1681791728	tripleee	core[\W_]*+max(?![\W_]*+ultra)
+1681797342	tripleee	(?-i:^Wendy Li$)
