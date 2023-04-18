@@ -12726,7 +12726,6 @@
 1570776475	Makyen	lonnuckerow
 1570776484	Makyen	smsindiahub\.in
 1570776508	Makyen	wisetechhack(?:@gmail\.com)?
-1570776519	Makyen	nutrihut\.blogspot
 1570776529	Makyen	/@kyarascott
 1570776549	Makyen	kaspersky-login\.me
 1570776558	Makyen	freshly[\W_]*+bloom[\W_]*+keto
@@ -19574,7 +19573,6 @@
 1590075242	user12986714	dwnlds\.co
 1590075526	Xnero	deveondi\.com
 1590090453	Makyen	uniccsshop\.io
-1590118391	Makyen	educationbygyan\.blogspot
 1590118419	Makyen	(?-i:s9uPt\.jpg)
 1590123267	NobodyNada - Reinstate Monica	(link)?domino168(\.com)?
 1590126852	tripleee	china-rigid\.com
@@ -23497,7 +23495,6 @@
 1603542916	Mast	tmg-clothing\.com
 1603543083	Mast	wiki87\.com
 1603550572	Glorfindel	windowcrack\.com
-1603553622	Makyen	biramjih\.blogspot
 1603555085	Spevacus	jobs87\.com
 1603555106	Spevacus	movies-us\.xyz
 1603566039	NobodyNada	CryptoDredge
