@@ -49871,3 +49871,4 @@
 1681803561	tripleee	integral-calculator\.com
 1681804829	tripleee	accountiod\.com
 1681804908	tripleee	msasianfilmacademy\.com
+1681804944	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))
