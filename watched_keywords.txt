@@ -49460,7 +49460,6 @@
 1680770289	Glorfindel	(?-i:Growing Capital)
 1680771568	tripleee	skylerwindows\.com
 1680773809	Robert Longson	duocsichobe\.com
-1680774035	Ryan M	globe3\.com
 1680774072	Ryan M	globe3(?!\.com)
 1680774131	Ryan M	redefineyourspine\.com
 1680774723	Robert Longson	giayinnhiet\.vn
