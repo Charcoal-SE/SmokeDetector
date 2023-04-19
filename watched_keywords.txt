@@ -32738,7 +32738,7 @@
 1634025757	Ryan M	eschool\.pk
 1634031729	Ryan M	eworld-websolutions\.com
 1634034316	Glorfindel	buy\W*yohimbine
-1634037090	Glorfindel	klantenservicenetherlands\.blogspot\.com
+1634037090	Glorfindel	klantenservicenetherlands\.blogspot
 1634039573	Cody Gray	Aanha[\W_]*Services
 1634040246	Jeff Schaller	sacramentoasphaltpaving\.com
 1634040529	Spevacus	safi-clean\.com
