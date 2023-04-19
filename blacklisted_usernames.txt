@@ -877,3 +877,4 @@ nilesecurity
 (?-i:^Globe3 ERP$)
 (?-i:^Charlie moore$)
 (?-i:^charlryan$)
+(?-i:^ZOEY ZHOU$)
