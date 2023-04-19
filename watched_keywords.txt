@@ -41775,7 +41775,6 @@
 1660632641	cocomac	devmehedi101
 1660632744	tripleee	fiverr\.com/s2
 1660635823	Ryan M	fastractor\.com
-1660637058	Ryan M	amped-wirelesslogin\.com
 1660637451	Ryan M	cyfersolutions\.com
 1660637713	tripleee	cloudsfer\.com
 1660637756	tripleee	cyfer

@@ -5307,3 +5307,4 @@ jemi\.so
 codelearno\.com
 getmodnow\.com
 globe3\.com
+amped-wirelesslogin\.com
