@@ -2869,6 +2869,9 @@ items:
   - mona.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - monika.ns.cloudflare.com.
+  - sean.ns.cloudflare.com.
+- ns:
   - morgan.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
