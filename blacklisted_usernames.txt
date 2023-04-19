@@ -876,3 +876,4 @@ nilesecurity
 (?-i:^Life Coaching Smita Das Jain$)
 (?-i:^Globe3 ERP$)
 (?-i:^Charlie moore$)
+(?-i:^charlryan$)
