@@ -49913,3 +49913,4 @@
 1681896590	tripleee	keytek\.co\.uk
 1681897664	tripleee	d(?:octo)?r[\W_]*+ogun
 1681897720	tripleee	oguncure1010(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1681900216	tripleee	purrgis(?:kav)?
