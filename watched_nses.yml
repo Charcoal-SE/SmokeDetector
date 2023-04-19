@@ -605,6 +605,9 @@ items:
   - vern.ns.cloudflare.com.
 - ns:
   - art.ns.cloudflare.com.
+  - isla.ns.cloudflare.com.
+- ns:
+  - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
   - arturo.ns.cloudflare.com.
