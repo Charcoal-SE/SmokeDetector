@@ -49924,3 +49924,4 @@
 1681921946	tripleee	lunecode\.com
 1681923276	tripleee	itsfalconb\.blogspot
 1681924076	tripleee	rsfsupply\.com
+1681924827	tripleee	(?-i:^RSF Supply$)
