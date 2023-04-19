@@ -79,7 +79,7 @@
 1496056593	Mithrandir	lg916\.com
 1496059924	Mithrandir	ipharmascience\.com
 1496086229	JoErNanO	boxoffice\Wmojo
-1496126505	tripleee	way2trick\.blogspot\.
+1496126505	tripleee	way2trick\.blogspot
 1496129012	tripleee	hometronix\.net
 1496131002	tripleee	supplementime\.com
 1496134946	tripleee	supplementyoga\.com
@@ -101,7 +101,7 @@
 1496227284	tripleee	datawp\.ir
 1496231871	tripleee	wagepay80\.com
 1496233993	tripleee	clippingimagespecialist\.com
-1496244466	tripleee	bollyquick\.blogspot\.\w+
+1496244466	tripleee	bollyquick\.blogspot
 1496262181	Mithrandir	termsbux\.com
 1496290923	tripleee	vitalieskincaretry\.com
 1496291174	tripleee	trendingwidgets\.com
@@ -275,7 +275,7 @@
 1499174231	doppelgreener	Sohbetguzel\.net
 1499228875	tripleee	trimline\W?cleanse
 1499234435	tripleee	darbastan\.(?:com|ir)
-1499236789	tripleee	softwonders\.blogspot\.com
+1499236789	tripleee	softwonders\.blogspot
 1499238654	tripleee	mituniversity\.edu\.in
 1499239008	Glorfindel	golfaxis\.com
 1499240364	tripleee	venture-care\.com
@@ -360,7 +360,7 @@
 1500118173	Glorfindel	kamyaagnihotri\.co\.in
 1500126787	Glorfindel	192-168-0-1\.link
 1500128162	Glorfindel	pobu\.ca
-1500147833	NobodyNada	rposervicesin\.blogspot\.com
+1500147833	NobodyNada	rposervicesin\.blogspot
 1500147937	NobodyNada	jobsnotice\.in
 1500196630	Glorfindel	nomadrental\.com
 1500213472	tripleee	tipsstuff\.tk
@@ -419,7 +419,7 @@
 1500629601	Glorfindel	3dot\W?technologies
 1500630589	Glorfindel	luciddreamingpro\.com
 1500632525	Glorfindel	govtkb\.com
-1500638289	Glorfindel	fitnessetool\.blogspot\.in
+1500638289	Glorfindel	fitnessetool\.blogspot
 1500643391	Glorfindel	bloggingstarts\.com
 1500653116	Glorfindel	mahioberoi\.com
 1500711320	Glorfindel	repliquemontreluxe\.com
@@ -503,19 +503,19 @@
 1501928226	Glorfindel	webrife\.com
 1501981947	Undo	Chicago\WPromar\WSiding
 1502006486	Mithrandir	marketrocker\.com
-1502032941	Glorfindel	al3abwar1\.blogspot\.com
+1502032941	Glorfindel	al3abwar1\.blogspot
 1502050930	Glorfindel	judislot777\.com
 1502121097	Glorfindel	mytechwiki\.com
 1502134618	Mithrandir	futura\.al
 1502161070	quartata	bagishared\.bz
-1502174132	Mithrandir	mapps57a\.blogspot\.ca
+1502174132	Mithrandir	mapps57a\.blogspot
 1502176265	Mithrandir	sex.related
 1502181398	Glorfindel	e-bizinsider\.com
 1502183552	doppelgreener	free.?psn.?codes
 1502185175	Mithrandir	fliptheswitchs\.com
 1502200906	Mithrandir	gpsvehicletrackersindia\.in
 1502201687	Mithrandir	.?burgeesjason2@gmail\.com
-1502204516	Glorfindel	softisistem\.blogspot\.ru
+1502204516	Glorfindel	softisistem\.blogspot
 1502252737	tripleee	roachexpert\.com
 1502252754	tripleee	watch-tv-shows\.org
 1502272230	CalvT븃	sharedesk\.pk
@@ -526,7 +526,7 @@
 1502356175	Glorfindel	tripplannera\.com
 1502356481	Glorfindel	slitherio-o\.com
 1502358728	Glorfindel	fixitscripts\.xyz
-1502362591	Glorfindel	rumusangame331\.blogspot\.com
+1502362591	Glorfindel	rumusangame331\.blogspot
 1502367718	Glorfindel	viewnhanh\.com
 1502370421	Glorfindel	viviangist\.com\.ng
 1502452271	tripleee	ssl2buy\.com
@@ -534,7 +534,7 @@
 1502471747	doppelgreener	abestpro\.com
 1502617608	Glorfindel	threeprinciplesmovies\.com
 1502617615	Glorfindel	jdpiekiti\.org
-1502621751	Mithrandir	getstudypoint\.blogspot\.com
+1502621751	Mithrandir	getstudypoint\.blogspot
 1502623493	Glorfindel	sunmovie21\.com
 1502633863	Glorfindel	seo-group-buy\.net
 1502654867	Glorfindel	powertoolstore\.net
@@ -575,7 +575,7 @@
 1503071392	Glorfindel	cheap55printing\.com
 1503073291	Glorfindel	seleniumtraining\.com
 1503129363	Glorfindel	deiedu\.in
-1503225891	Glorfindel	java9pro\.blogspot\.in
+1503225891	Glorfindel	java9pro\.blogspot
 1503234989	Glorfindel	thekissanime\.net
 1503242768	Glorfindel	oceansknowledge\.com
 1503251207	Glorfindel	thomaslincolnblog\.wordpress\.com
@@ -670,7 +670,7 @@
 1503894590	tripleee	miraireza\.com
 1503894681	tripleee	topnewsage\.com
 1503894721	tripleee	maharajacab\.com
-1503894754	tripleee	ishanvadalia\.blogspot\.in
+1503894754	tripleee	ishanvadalia\.blogspot
 1503895131	tripleee	astrologervikrant\.com
 1503895154	tripleee	yourlifechange\.in
 1503897468	tripleee	noahdatatech\.com
@@ -683,7 +683,7 @@
 1503974369	tripleee	vevostars\.com
 1503974621	tripleee	fitnessjab\.com
 1503974751	tripleee	rajeshpanda\.in
-1504012830	tripleee	consultuning\.blogspot\.com
+1504012830	tripleee	consultuning\.blogspot
 1504013007	tripleee	superbanswer\.com
 1504067395	NobodyNada	Eron\WPlus
 1504070524	tripleee	getapkmarket\.org
@@ -754,7 +754,7 @@
 1504776207	tripleee	happydiwali2016imageshd\.in
 1504777188	tripleee	newangelmed\.com
 1504779419	tripleee	best-documentation-quality\.sitey\.me
-1504783354	tripleee	shape2spatial\.blogspot\.com\.es
+1504783354	tripleee	shape2spatial\.blogspot
 1504786133	tripleee	djmp3find\.net
 1504786569	tripleee	readcivil\.com
 1504787421	tripleee	rehlat\.com\.sa
@@ -777,7 +777,7 @@
 1505108167	tripleee	airfreightbazaar\.com
 1505109971	tripleee	malimgroup\.com
 1505113769	Glorfindel	indexexchange\.ae
-1505114070	tripleee	graphicsbackgrounds\.blogspot\.in
+1505114070	tripleee	graphicsbackgrounds\.blogspot
 1505114099	Glorfindel	gadgetsdeck\.com
 1505114543	Glorfindel	asoranker\.com
 1505114579	Glorfindel	reviewsforapp\.com
@@ -786,7 +786,7 @@
 1505132241	tripleee	hourglassit\.com
 1505136246	tripleee	zabong\.cc
 1505196114	tripleee	lifetools\.in
-1505196450	tripleee	tharlax-rx-male-enhancement\.blogspot\.com
+1505196450	tripleee	tharlax-rx-male-enhancement\.blogspot
 1505196555	tripleee	animeyt\.me
 1505196793	tripleee	medsoft-imaging\.com
 1505196819	tripleee	rotatepdf\.net
@@ -906,7 +906,7 @@
 1506360472	tripleee	bookmybabes\.com
 1506365531	Glorfindel	wrestlemaniamasti\.website
 1506400556	tripleee	worksmart\.co\.uk
-1506412658	tripleee	nainawalker\.blogspot\.com
+1506412658	tripleee	nainawalker\.blogspot
 1506412924	tripleee	kitchengearpros\.com
 1506414896	Glorfindel	eventeca\.com
 1506417201	tripleee	skylifr\.com
@@ -938,7 +938,7 @@
 1506671869	tripleee	reviewfantasy\.com
 1506687270	Glorfindel	speedyfiles\.net
 1506687425	Glorfindel	hdbelgesel\.tv
-1506711943	Glorfindel	starsportslive3\.blogspot\.com
+1506711943	Glorfindel	starsportslive3\.blogspot
 1506730306	bwDraco	icloud\W?assistant\W?pro
 1506744459	quartata	gihosoft\.com
 1506745818	NobodyNada	x?t\Wgenix
@@ -955,7 +955,7 @@
 1506944134	Mithrandir	gamestore\.live
 1506959194	Owen Hines	boldcraze\.com
 1506961455	Glorfindel	bandbniagara\.com
-1506963780	Owen Hines	mr-android12\.blogspot\.com\.eg
+1506963780	Owen Hines	mr-android12\.blogspot
 1506971135	Glorfindel	unlimitedloottricks\.com
 1507005373	tripleee	protazen
 1507006018	tripleee	no\W?force\W?xl
@@ -964,7 +964,7 @@
 1507014788	tripleee	virplexin
 1507049678	Owen Hines	techquery\.org
 1507049989	Glorfindel	graphicdesigninstitutedelhi\.com
-1507050128	Glorfindel	seothor\.blogspot\.com
+1507050128	Glorfindel	seothor\.blogspot
 1507058945	Glorfindel	homeandyards\.com
 1507061322	Glorfindel	traduzione-in\.com
 1507080949	Owen Hines	techwhoop\.com
@@ -1033,7 +1033,7 @@
 1507704331	tripleee	business\W?capital\W?experts
 1507705044	tripleee	abservetech\.com
 1507705570	tripleee	invictus\W?alpha\W?elite
-1507712810	tripleee	fixerrorcodecanonprinter\.blogspot\.in
+1507712810	tripleee	fixerrorcodecanonprinter\.blogspot
 1507716082	Glorfindel	Mechanic37
 1507716828	tripleee	levage
 1507718474	tripleee	codecanyon\.net\Witem\Wmagento
@@ -1088,7 +1088,7 @@
 1508226913	Glorfindel	savyour\.com
 1508227690	tripleee	cannalux
 1508229172	tripleee	hackfest\.tv
-1508230034	tripleee	jesscarranza\.blogspot\.com
+1508230034	tripleee	jesscarranza\.blogspot
 1508235328	tripleee	rockrush\.com
 1508239187	Mithrandir	pointersoft\.in
 1508241757	tripleee	689cloud\.com
@@ -1103,7 +1103,7 @@
 1508305970	tripleee	kk4678
 1508308385	tripleee	nxlog\.co
 1508309076	Glorfindel	obatfibroadenomamammae\.com
-1508309572	tripleee	pepokolovespelltemple\.blogspot\.com
+1508309572	tripleee	pepokolovespelltemple\.blogspot
 1508328077	Byte Commander	rrbresult\d+\.co\.in
 1508353840	Glorfindel	procorpprojects\.com
 1508357273	Glorfindel	androidrootinghelp\.com
@@ -1183,7 +1183,7 @@
 1509051320	quartata	bestearnidea\.com
 1509073446	Tetsuya Yamamoto	obatklgusa\.com
 1509077474	tripleee	firstcrush\.co
-1509077916	tripleee	adusumalliravikiran\.blogspot\.com
+1509077916	tripleee	adusumalliravikiran\.blogspot
 1509079604	tripleee	ronaldocr7\.me
 1509079882	tripleee	belladermsite\.com
 1509087830	tripleee	uniqsofts\.com
@@ -1200,7 +1200,7 @@
 1509102553	Glorfindel	sbcltd\.co
 1509123717	quartata	myshop999\.com
 1509123967	quartata	bestdronesadvisor\.com
-1509172150	Glorfindel	themilliontrip\.blogspot\.com
+1509172150	Glorfindel	themilliontrip\.blogspot
 1509197238	Glorfindel	mobotak\.com
 1509200834	Glorfindel	matlabprozhe\.com
 1509269673	paper1111	twineer\.com
@@ -1243,7 +1243,7 @@
 1509534245	tripleee	xyplexin
 1509537456	tripleee	greenvisa\.io
 1509538468	tripleee	lispa\.in
-1509539711	tripleee	ugconect\.blogspot\.com
+1509539711	tripleee	ugconect\.blogspot
 1509542096	tripleee	overthecoutnerviagramd\.com
 1509599714	tripleee	bitcoinscashout\.com
 1509599890	tripleee	termium\.com
@@ -1280,7 +1280,7 @@
 1509949618	bummi	jyotravel\.com
 1509963454	paper1111	yoursantiagingserum\.com
 1509964559	Glorfindel	newglobedocuments\.com
-1509970146	paper1111	creativoindian\.blogspot\.in
+1509970146	paper1111	creativoindian\.blogspot
 1509976771	Ajay Brahmakshatriya	waistlab\.com
 1509976772	Glorfindel	kalyanmatkatipss\.mobi
 1509976773	Glorfindel	filmbuzz\.top
@@ -1301,7 +1301,7 @@
 1510136145	tripleee	weddingphotographeryeovil\.co\.uk
 1510138896	Byte Commander	paperscrux\.com
 1510144118	tripleee	hhbc\.in
-1510147111	tripleee	soreddymanjunath\.blogspot\.\w+
+1510147111	tripleee	soreddymanjunath\.blogspot
 1510148540	tripleee	digitemb\.com
 1510204947	tripleee	gomovies\.\w+
 1510207699	tripleee	bio\W?bend
@@ -1460,7 +1460,7 @@
 1511341325	tripleee	argacademy\.com
 1511343966	tripleee	saudavd
 1511348665	tripleee	protectimus\.com
-1511349501	A J	sanamwale\.blogspot\.com
+1511349501	A J	sanamwale\.blogspot
 1511356145	tripleee	silklogistics\.com\.pk
 1511412142	tripleee	naijatrace\.com
 1511412366	tripleee	downloadofgames\.com
@@ -1533,7 +1533,7 @@
 1511950292	Tetsuya Yamamoto	hiretablets\.com
 1511952190	Glorfindel	policyx\.com
 1511956659	A J	wbwhite\.com
-1511975083	Glorfindel	bitcoinnews3312\.blogspot\.com
+1511975083	Glorfindel	bitcoinnews3312\.blogspot
 1511997116	paper1111	pablocabral\.com\.br
 1512020525	tripleee	bitcoinnews\d+\.blogspot
 1512020623	tripleee	makeappicon\.com
@@ -1616,7 +1616,7 @@
 1512483260	tripleee	seoexperts\.ae
 1512487922	Federico	socialwander\.com
 1512498256	DJMcMayhem	SapamaCash
-1512505545	Glorfindel	.{0,10}keroncong.{0,10}\.blogspot\.co
+1512505545	Glorfindel	.{0,10}keroncong.{0,10}\.blogspot
 1512549833	Glorfindel	selenium-webdriver\.com
 1512523529	Tetsuya Yamamoto	xinhepacking\.com
 1512523576	Tetsuya Yamamoto	xinrongelectric\.com
@@ -1700,7 +1700,7 @@
 1513081715	tripleee	genesis-mining\.com
 1513081781	tripleee	edge\W?testo
 1513114432	Glorfindel	sparechange\.io
-1513114438	Glorfindel	prosabbir\.blogspot\.com
+1513114438	Glorfindel	prosabbir\.blogspot
 1513158850	tripleee	usmanakbar\.com
 1513159853	tripleee	http\W?hook\W?up\W?apps\W?org
 1513162353	Mithrandir	dmwevehicles\.com
@@ -1746,10 +1746,10 @@
 1513764573	paper1111	informationsecurityawareness\.in
 1513764906	tripleee	xomax
 1513766286	Glorfindel	theclasaffloweroilreview\.com
-1513768815	paper1111	wbcwallet\.blogspot\.in
+1513768815	paper1111	wbcwallet\.blogspot
 1513771776	Glorfindel	youthful\W?derma
-1513827059	paper1111	roddines\.blogspot\.com
-1513857550	paper1111	buddhika-semasinghe\.blogspot\.com
+1513827059	paper1111	roddines\.blogspot
+1513857550	paper1111	buddhika-semasinghe\.blogspot
 1513863276	tripleee	sociobid\.com
 1513880166	quartata	dataalign\.com
 1513882051	Mithrandir	trickyfact(?:\.com)?
@@ -1762,7 +1762,7 @@
 1513936114	Glorfindel	perugiashock\.com
 1513936423	Glorfindel	multiculturalismrocks\.com
 1513936433	Glorfindel	itcantbeyou\.com
-1513936779	Suraj Rao	getwillzone\.blogspot\.in
+1513936779	Suraj Rao	getwillzone\.blogspot
 1513949773	paper1111	neosphere\.com\.np
 1514042853	Glorfindel	vrcams\.io
 1514045768	Glorfindel	runmyresearch\.com
@@ -1857,7 +1857,7 @@
 1515227937	paper1111	flexboxcssgrid\.com
 1515261144	Glorfindel	coroagostosa\.club
 1515285556	paper1111	shayarihindishayari\.com
-1515285851	paper1111	compositehacks\.blogspot\.com
+1515285851	paper1111	compositehacks\.blogspot
 1515300582	paper1111	rezarahmati\.ir
 1515310413	paper1111	99mania\.net
 1515328632	paper1111	techworldz\.xyz
@@ -1873,13 +1873,13 @@
 1515426116	Glorfindel	feetokenteam\.com
 1515426612	iBug	uvbaskiistanbul\.com
 1515446485	Glorfindel	kingtv\.org
-1515477016	iBug	cursesmenu\.blogspot\.com
+1515477016	iBug	cursesmenu\.blogspot
 1515478012	micsthepick	testrot
 1515477683	Tetsuya Yamamoto	emailhelpline\.co\.uk
 1515487698	Glorfindel	soapandcosmeticclasses\.com
 1515490169	paper1111	andeywala\.com
 1515494749	Glorfindel	hp-printer-help\.com
-1515494770	Glorfindel	hpprintertechnicalsupportusa\.blogspot\.co
+1515494770	Glorfindel	hpprintertechnicalsupportusa\.blogspot
 1515497522	Suraj Rao	quickbooks-enterprise-support-number\.blogpost\.com
 1515503441	iBug	freejobalertonline\.in
 1515564139	paper1111	online-l%C3%A5n\.dk
@@ -1889,7 +1889,7 @@
 1515597666	Glorfindel	jrelectronicsonline\.com
 1515602827	Glorfindel	alexamedia-solutions\.ro
 1515615770	Mithrandir	mominbrands\.com
-1515625190	paper1111	leanbelly-breakthrough-review\.blogspot\.com
+1515625190	paper1111	leanbelly-breakthrough-review\.blogspot
 1515649782	NobodyNada	viabol\Wrx
 1515651445	Tetsuya Yamamoto	mobcollege\.ir
 1515651994	Tetsuya Yamamoto	26januaryrepublicday2018speech\.in
@@ -2100,7 +2100,7 @@
 1518426763	Glorfindel	wordpressexperts\.com
 1518427953	tripleee	penirum
 1518428213	tripleee	techmaniyaa
-1518428216	Glorfindel	techmaniyaa\.blogspot\.com
+1518428216	Glorfindel	techmaniyaa\.blogspot
 1518429126	paper1111	hakankocaman\.com
 1518429862	Byte Commander	crack\Wkeygen
 1518438959	iBug	nova\W?repair
@@ -2110,7 +2110,7 @@
 1518498746	iBug	new\W?age\W?skin
 1518501746	iBug	volidian
 1518511096	Glorfindel	inteled\.info
-1518516333	Suraj Rao	engineer2you\.blogspot\.com
+1518516333	Suraj Rao	engineer2you\.blogspot
 1518523065	Glorfindel	college-homework-help\.org
 1518528500	Glorfindel	excrypts\.org
 1518529043	Glorfindel	photomakerz\.com
@@ -2130,7 +2130,7 @@
 1518671735	iBug	vala\W?facial
 1518687419	Glorfindel	eamazongo\.com
 1518692010	Byte Commander	panditanilmaharaj\.com
-1518692045	paper1111	real-exam-dumps\.blogspot\.com
+1518692045	paper1111	real-exam-dumps\.blogspot
 1518693179	Byte Commander	cula\.io
 1518693355	Byte Commander	sjfitindia\.com
 1518702076	WELZ	q2serves\.com
@@ -2171,7 +2171,7 @@
 1519217912	tripleee	bowhunting-hungary\.com
 1519276030	iBug	zylexitrim
 1519330064	thesecretmaster	wampinfotech\.com
-1519335130	WELZ	offers\W?for\W?all?\.blogspot\.com
+1519335130	WELZ	offers\W?for\W?all?\.blogspot
 1519369668	iBug	cialin\W?rx
 1519375476	Tetsuya Yamamoto	jobjobz\.com
 1519371010	Tetsuya Yamamoto	gmailcustomerservicenumber\.ca
@@ -2192,7 +2192,7 @@
 1519648151	Glorfindel	pulsedigital\.ae
 1519710800	tripleee	templateonweb\.com
 1519685337	Makyen	bolaqiuqiu\.net
-1519726954	Glorfindel	eazy2gain\.blogspot\.com
+1519726954	Glorfindel	eazy2gain\.blogspot
 1519732512	Suraj Rao	apexadvancedtech\.com
 1519734559	Glorfindel	sayanagrawal\.com
 1519734569	Glorfindel	sheetalkapoor\.biz
@@ -2438,12 +2438,12 @@
 1522134464	tripleee	goo\.gl/LHfxXn
 1522134474	tripleee	goo\.gl/BSdDDy
 1522134584	Suraj Rao	helptechnumber\.com
-1522139558	Glorfindel	pcbdesigncourse\.blogspot\.com
+1522139558	Glorfindel	pcbdesigncourse\.blogspot
 1522147847	tripleee	tru\W?life
 1522148415	CalvT븃	legalmarijuanaonlinestore\.com
 1522149656	tripleee	sure(?:lock|mdm)
 1522157661	CalvT븃	keywordtool\.io
-1522169589	Glorfindel	csdriod\.blogspot\.com
+1522169589	Glorfindel	csdriod\.blogspot
 1522170439	K.Dᴀᴠɪs	stuffcompare\.com
 1522172885	Glorfindel	gamingadget\.com
 1522176170	Glorfindel	wearvs\.com
@@ -2510,15 +2510,15 @@
 1522750537	CalvT븃	bigbangram\.com
 1522766226	WELZ	careerconvey\.com
 1522773410	Glorfindel	hijacked\W?account
-1522777135	Glorfindel	chetanbhadarka\.blogspot\.in
+1522777135	Glorfindel	chetanbhadarka\.blogspot
 1522800791	quartata	LGBTQQIP2SAA
 1522815575	K.Dᴀᴠɪs	(?:eat|suck|lick|bite|spank|kiss)\Wmy\W(?:ar?s*e?|pu+s+y)
 1522821229	tripleee	niko\.eco
-1522824307	Glorfindel	mysharepointhub\.blogspot\.in
+1522824307	Glorfindel	mysharepointhub\.blogspot
 1522827757	Glorfindel	oakyweb\.com
 1522830104	Glorfindel	informaticscommerce\.com
 1522831473	Glorfindel	mendooutdoors\.com
-1522831835	Glorfindel	devopssuccess\.blogspot\.in
+1522831835	Glorfindel	devopssuccess\.blogspot
 1522832376	A J	agen388\.org
 1522838453	Glorfindel	earthscience\d+\.wordpress\.com
 1522847177	Glorfindel	geomembranemurah\.com
@@ -2573,7 +2573,7 @@
 1523179415	Glorfindel	cincinnativsnevada\.ca
 1523179457	Glorfindel	livevs\w+\.ca
 1523179446	gparyani	safetomatic\.com
-1523192479	Zoe	goodtricks4pc\.blogspot\.in
+1523192479	Zoe	goodtricks4pc\.blogspot
 1523200844	Yvette Colomb	(?:serdar\W?)?argic
 1523205924	Glorfindel	nxttechnology\.net
 1523211111	WELZ	avbio\.org
@@ -2673,7 +2673,7 @@
 1523868951	Glorfindel	guldcoin
 1523870228	Mithrandir	\$ex\W?drive
 1523870244	Glorfindel	originalapk\.com
-1523870917	Glorfindel	techdelta00\.blogspot\.in
+1523870917	Glorfindel	techdelta00\.blogspot
 1523871069	Glorfindel	nhakhoatamnhat\.com
 1523873008	Rob	iqinfotech\.co\.in
 1523873908	tripleee	twosquares\.com
@@ -2803,7 +2803,7 @@
 1524690988	WELZ	fortniteapk-android\.xyz
 1524692415	WELZ	electricguitarstrap\.com
 1524724229	Zoe	sthint\.com
-1524727049	Makyen	happymothersday2018i\.blogspot\.com
+1524727049	Makyen	happymothersday2018i\.blogspot
 1524732598	Makyen	saggy\W*ass
 1524733777	Tetsuya Yamamoto	amarnathjourney\.com
 1524734334	Byte Commander	printerstuffs\.com
@@ -2831,7 +2831,7 @@
 1524856530	Glorfindel	v-share\.org
 1524856548	Glorfindel	3dsemulator\.me
 1524856941	Makyen	(?:(?:drill|suc+k|lic+k|bang+|stuf+|(?:mother)?fuc*k|fis+t|kill|poo+p*|feces)(?:(?:ing|e[dr])?(?:e?[sz])?)?(?:|\b.{0,80}?\b)(?:pis+|pus+(?:y|ies)|boo+b+|tit+(?:ies)?|coc?k|dick|ass(?:hole)?|penis|phallus|cunt|vag(?:ina)?|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|(?:homo|trans|bi)(?:sexual)?|tran+(?:y|ie)s?|retard|jew(?:ish)?|nig+(?:er|a)|nic+a|fag(?:g?[eio]t)?|her[ei]tic|idiot|sin+ers|raghead|muslim|hindu|(?:your|him|her|them)\W*sel(?:f|ves)|chink|gook|moderator|boss(?:es|'s?)?|manager(?<!\btask[\W_]*+manager)(?:s|'s|s')?|ceo|cto)(?:(?:ing|e[dr]|e?)[sz]?)?|(?:pis+|pus+(?:y|ies)|boo+b+|tit+(?:ies)?|coc?k|dick|ass(?:hole)?|penis|phallus|cunt|vag(?:ina)?|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|(?:homo|trans|bi)(?:sexual)?|tran+(?:y|ie)s?|retard|jew(?:ish)?|nig+(?:er|a)|nic+a|fag(?:g?[eio]t)?|her[ei]tic|idiot|sin+ers|raghead|muslim|hindu|(?:your|him|her|them)\W*sel(?:f|ves)|chink|gook|moderator|boss(?:es|'s?)?|manager(?<!\btask[\W_]*+manager)(?:s|'s|s')?|ceo|cto)(?:(?:ing|e[dr]|e?)[sz]?)?(?:|\b.{0,80}?\b)(?:drill|suc+k|lic+k|bang+|stuf+(?:ing|ed)|(?:mother)?fuc*k|fis+t|kill|poo+p*|feces)(?:(?:ing|e[dr])?(?:e?[sz])?)?)
-1524858850	Glorfindel	mizansurovi1\.blogspot\.com
+1524858850	Glorfindel	mizansurovi1\.blogspot
 1524863201	Glorfindel	obatextenzeasli\.com
 1524871974	quartata	aeroportos\.weebly\.com
 1524880074	Rob	nutrinext\w*
@@ -2880,7 +2880,7 @@
 1525243351	tripleee	tru\W?build
 1525243890	Glorfindel	bigbagbazaar\.com
 1525247509	Glorfindel	raletta\.in
-1525247813	Glorfindel	iosdeveloperlive\.blogspot\.in
+1525247813	Glorfindel	iosdeveloperlive\.blogspot
 1525258090	Mithrandir	arkramos
 1525258521	Glorfindel	hostessworldparis\.com
 1525259294	Glorfindel	happyfathersdayv\.com
@@ -2918,8 +2918,8 @@
 1525423091	Glorfindel	somrc\.com
 1525431280	tripleee	wabes\.ca
 1525437234	tripleee	ravana\.info
-1525437254	tripleee	sri-ravana\.blogspot\.\w+
-1525437268	tripleee	helayugaya\.blogspot\.\w+
+1525437254	tripleee	sri-ravana\.blogspot
+1525437268	tripleee	helayugaya\.blogspot
 1525440012	doppelgreener	9anime\.is
 1525441253	Zoe	mhe\W*?pakistan
 1525456566	Glorfindel	hrvoip\.com
@@ -2927,7 +2927,7 @@
 1525461973	Glorfindel	totalcryptos
 1525475390	WELZ	xboxsupport\.org
 1525481879	Makyen	cyber\.surgeon
-1525481880	Glorfindel	urbanchaos-007\.blogspot\.in
+1525481880	Glorfindel	urbanchaos-007\.blogspot
 1525539092	Byte Commander	neverbounce\.com
 1525548426	Zoe	crazyanda\.com
 1525553111	Vogel612	kazafi\.com
@@ -3126,7 +3126,7 @@
 1526754597	Zoe	cat6wiringdiagram\.com
 1526755979	Zoe	pakaianbrand\.com
 1526761558	bwDraco	quranteaching\.com
-1526807480	Zoe	uitableviewwithimagesandlabel\.blogspot\.[a-z]{2,5}
+1526807480	Zoe	uitableviewwithimagesandlabel\.blogspot
 1526807613	Zoe	usemailsupportnumber\.com
 1526815866	paper1111	821620\.com
 1526816903	paper1111	aptoide\.vip
@@ -3166,7 +3166,7 @@
 1527040437	Makyen	jobert\W*abma
 1527047415	Makyen	\w*jjbbu\.com\w*
 1527049175	Makyen	assignmentbang\.com
-1527053628	Makyen	epchindia\.blogspot\.in
+1527053628	Makyen	epchindia\.blogspot
 1527053997	tripleee	clippingpathgraphics\.com
 1527054011	Makyen	\w*jj(?:aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)u\W*com\w*
 1527057324	tripleee	skytechdigitals\.com
@@ -3296,7 +3296,7 @@
 1527691877	doppelgreener	galaxy-satellite\.com
 1527695326	Makyen	bankcodeifsc\.com
 1527701767	NobodyNada	livenbaplayoffs\.com
-1527720982	doppelgreener	aboutplaystore\.blogspot\.com
+1527720982	doppelgreener	aboutplaystore\.blogspot
 1527732308	Makyen	draustinenlargementhome
 1527740706	tripleee	sakoonedil
 1527743636	tripleee	skinphoniqa
@@ -3320,8 +3320,8 @@
 1527821976	Makyen	melodyloops\.com
 1527821985	Makyen	eaglesnewsmedia\.com
 1527821995	Makyen	dichvu3gvinaphone\.vn
-1527825265	Makyen	rashidjorvee\.blogspot\.com
-1527832110	Makyen	habervip\.blogspot\.com
+1527825265	Makyen	rashidjorvee\.blogspot
+1527832110	Makyen	habervip\.blogspot
 1527833600	tripleee	eggsalad09
 1527833613	tripleee	jimmy\W?jasum
 1527835935	tripleee	(?:new\W?)?light\W?cbd
@@ -3407,7 +3407,7 @@
 1528355015	Glorfindel	expodine\.com
 1528360609	A J	puriaanandvillas\.com
 1528361913	tripleee	rapidtonediet\.pro
-1528363534	Glorfindel	mailnewaccount\.blogspot\.com
+1528363534	Glorfindel	mailnewaccount\.blogspot
 1528363545	Glorfindel	gmailsignus\.com
 1528363602	Glorfindel	aapthitech\.com
 1528370024	tripleee	familyessay\.org
@@ -3418,7 +3418,7 @@
 1528418998	Makyen	2s3XuQF
 1528419560	Makyen	braintraining4dogs\.com
 1528432759	tripleee	^l[qg]bt\W
-1528435940	NobodyNada	structuredsettlementquick\.blogspot\.com
+1528435940	NobodyNada	structuredsettlementquick\.blogspot
 1528437133	Makyen	careercenter@regeneronjobs\.site
 1528437150	Makyen	albertochueca\.com
 1528437186	Makyen	priyaescort\.com
@@ -3428,7 +3428,7 @@
 1528446158	tripleee	mixxkart\.com
 1528451939	Glorfindel	pycker\.com
 1528455872	Zoe	logisticinfotech\.com
-1528462664	Glorfindel	towelrootapkfree\.blogspot\.com
+1528462664	Glorfindel	towelrootapkfree\.blogspot
 1528464331	tripleee	asthadnggroup\.com
 1528476655	Makyen	test-dpc-apk\.com
 1528480689	NobodyNada	ca(?:vs|valiers)?vswarriors
@@ -3440,14 +3440,14 @@
 1528526457	Makyen	/freetraining/
 1528526481	Makyen	aws-596f86582865%22
 1528529040	Glorfindel	splashsys\.com
-1528529088	Makyen	informatyka-delphi\.blogspot\.com
+1528529088	Makyen	informatyka-delphi\.blogspot
 1528540640	Zoe	buynectarcbd\.com
 1528544943	Zoe	bitrax
 1528544986	Zoe	bxrt\W*coin
-1528559682	Zoe	pranaya88\.blogspot\.
+1528559682	Zoe	pranaya88\.blogspot
 1528563397	Glorfindel	customerservicenumber\.online
 1528611477	NobodyNada	thesmartpicker\.com
-1528612123	NobodyNada	angularjscrudpagination\.blogspot\.com
+1528612123	NobodyNada	angularjscrudpagination\.blogspot
 1528612464	Nisse Engström	veldtgold\.com
 1528626130	Glorfindel	maintenanceg\.com
 1528626611	Glorfindel	unionairemaintenance\.com
@@ -3694,7 +3694,7 @@
 1529930217	tripleee	ada[\W_]*+rose\d*+(?!\.com\.au(?<=adarose\.com\.au))
 1529932065	tripleee	voipterminator\.com
 1529932642	tripleee	itabix\.com
-1529943700	Glorfindel	24freelancernews\.blogspot\.com
+1529943700	Glorfindel	24freelancernews\.blogspot
 1529959496	Makyen	employeestockoptions\.com
 1529973174	Makyen	academichelpers\.bravesites\.com
 1529986509	iBug	Kara\W?Keto
@@ -3757,7 +3757,7 @@
 1530231649	Makyen	mp3thrill\.co
 1530232654	Makyen	AnonymousFileHacker(?:@hotmail\.com)?
 1530232671	Makyen	res\W?q\W?natural
-1530239501	Makyen	judbandarqonline\.blogspot\.com
+1530239501	Makyen	judbandarqonline\.blogspot
 1530239509	Makyen	rankinghero\.com/en/members/31730/
 1530239526	Makyen	agenbandarsakong99\.wordpress\.com
 1530239531	Makyen	tanyakode\.lawatek\.com
@@ -3787,7 +3787,7 @@
 1530415259	Makyen	^Sbtech\W*Uae$
 1530417122	paper1111	oggy\.me
 1530425723	Makyen	Fashion\W*Dress\W*for\W*Sale\W*Online
-1530426312	paper1111	udtasocialnews\.blogspot\.com
+1530426312	paper1111	udtasocialnews\.blogspot
 1530438060	Makyen	needvisa\.com
 1530438613	Mithrandir	reetmic\.com
 1530438669	Makyen	\b\W*دانلود آهنگ جدید\W*
@@ -3869,7 +3869,7 @@
 1530947766	iBug	srilankatourismguide\.co\.uk
 1530957513	doppelgreener	sproboticworks\.com
 1530969272	J F	candere\.com
-1530957210	rene	apkahealthguru\.blogspot\.com
+1530957210	rene	apkahealthguru\.blogspot
 1530990566	Glorfindel	carngo\.com
 1530979558	J F	fatdecimator\.com
 1530979635	J F	avoidthisveggie
@@ -3897,7 +3897,7 @@
 1531147376	Mithrandir	bubbleindia\.com
 1531149765	Makyen	gcian\.com
 1531154024	Makyen	emailssupports\.com
-1531157036	Makyen	hiredissertationwriters\.blogspot\.com
+1531157036	Makyen	hiredissertationwriters\.blogspot
 1531168278	Makyen	rachelqianyuzhang(?:@gmail\.com)?
 1531168312	Makyen	546027299(?:@qq\.com)?
 1531168519	Makyen	ONk3eLCvBBs
@@ -3955,7 +3955,7 @@
 1531378267	Tetsuya Yamamoto	24toolbox\.com
 1531378905	Glorfindel	aroushtechbd\.net
 1531380254	Glorfindel	apextm
-1531383707	Glorfindel	hotmaillogin\d*\.blogspot\.com
+1531383707	Glorfindel	hotmaillogin\d*\.blogspot
 1531386035	Tetsuya Yamamoto	facebookmkt\.info
 1531387235	Tetsuya Yamamoto	futureithome\.com
 1531389325	Glorfindel	geektechsupport\.net
@@ -4040,7 +4040,7 @@
 1531884457	Makyen	hometuitionsgurgaon\.com
 1531884558	Makyen	thebentech\.com
 1531885776	Tetsuya Yamamoto	patentillustrationservices\.com
-1531888781	Tetsuya Yamamoto	1137x\.blogspot\.com
+1531888781	Tetsuya Yamamoto	1137x\.blogspot
 1531889190	Makyen	goo\.gl/f9ZTrd
 1531891540	Tetsuya Yamamoto	uaefreezone\.xyz
 1531896228	Mithrandir	Tonaki\W?Tinnitus
@@ -4057,7 +4057,7 @@
 1531915135	JoErNanO	briefcasebash\.com
 1531915370	Glorfindel	flightradars24\.co\.uk
 1531923953	J F	multicoinhodler
-1531824823	Shree	codexwebsite\.blogspot\.com
+1531824823	Shree	codexwebsite\.blogspot
 1531932585	Glorfindel	aslitarcanhairclinic\.com
 1531940014	Makyen	ride-executive\.com
 1531940036	Makyen	\b\W*온라인경마사이트\W*
@@ -4070,7 +4070,7 @@
 1531974873	Tetsuya Yamamoto	allofficefurnitureltd\.com
 1531974892	Makyen	ffflv\.org
 1531976822	Makyen	phpbasic\.com
-1531980257	Makyen	harddrivefix\.blogspot\.in
+1531980257	Makyen	harddrivefix\.blogspot
 1531981079	Makyen	jeremdepa\.[\w-]*\.(?:com|net)
 1531984868	Glorfindel	office-setup\.me
 1531985186	Makyen	drjaguai(?:@gmail\.com)?
@@ -4097,7 +4097,7 @@
 1532079444	Tetsuya Yamamoto	homestaydnn\.com
 1532079926	Tetsuya Yamamoto	toolsguardian\.com
 1532093148	Glorfindel	duiadns\.net
-1532097585	Glorfindel	zeptrick\.blogspot\.com
+1532097585	Glorfindel	zeptrick\.blogspot
 1532116711	Makyen	\w{3,}quick\W*book\w{3,}
 1532116749	Makyen	quick\.books?
 1532149887	Makyen	^mercurygadgets$
@@ -4110,8 +4110,8 @@
 1532162156	Glorfindel	showbox\.run
 1532176611	Glorfindel	techmazza\.com
 1532178290	A J	abroadimmigration\.com
-1532186389	Glorfindel	govtjobalertindia\.blogspot\.com
-1532193286	Makyen	live4k-sports\.blogspot\.com
+1532186389	Glorfindel	govtjobalertindia\.blogspot
+1532193286	Makyen	live4k-sports\.blogspot
 1532211320	Makyen	sweetupdate\.com
 1532231516	Makyen	areazipcode\.org
 1532251704	Makyen	ptvnbabaji(?:@gmail\.com)?
@@ -4205,7 +4205,7 @@
 1532685748	bertieb	embeddedschool\.in
 1532688307	Makyen	freesteamcodesnosurvey\.com
 1532688323	Makyen	adderallpills\.site
-1532699210	iBug	careersaver\.blogspot\.com
+1532699210	iBug	careersaver\.blogspot
 1532716301	Makyen	strackit\.com
 1532716310	Makyen	bitcoinminers50(?:@gmail\.com)?
 1532716341	Makyen	adeel\.mgt(?:@gmail\.com)?
@@ -4238,7 +4238,7 @@
 1532931992	Federico	heiwaco
 1532932523	tripleee	tutorail-point\.blogspot
 1532935669	Glorfindel	hotmail\d+\.eklablog\.fr
-1532935686	Glorfindel	hotmailsignin\d+\.blogspot\.com
+1532935686	Glorfindel	hotmailsignin\d+\.blogspot
 1532939793	tripleee	shyamjitours\.in
 1532946066	Glorfindel	cydiaelite\.com
 1532946789	Mithrandir	ogmin
@@ -4255,7 +4255,7 @@
 1533030225	tripleee	amazonprimesupport\.com
 1533032056	tripleee	aptrondelhi\.in
 1533039322	tripleee	blastrestore\.co\.uk
-1533040343	Glorfindel	onlineweblogsite\.blogspot\.com
+1533040343	Glorfindel	onlineweblogsite\.blogspot
 1533041192	tripleee	acowebs\.com
 1533045195	Glorfindel	geoproxies\.com
 1533046787	Mithrandir	Bark\W?Busters
@@ -4362,7 +4362,7 @@
 1533629829	Glorfindel	fhacyberservics
 1533630904	Makyen	diamondloanfirm24(?:@gmail\.com)?
 1533631690	Makyen	diamond\W*+loan\W*+firm
-1533633651	Glorfindel	reviewmediaone\.blogspot\.com
+1533633651	Glorfindel	reviewmediaone\.blogspot
 1533656908	Makyen	recoverygenius(?:@gmail\.com)?
 1533657082	Zoe	kikforpcwindows\.com
 1533657930	Makyen	1otc\.trade
@@ -4523,11 +4523,11 @@
 1534421987	tripleee	printerofflinehelp\.com
 1534426219	Makyen	t\.me/GIKEEglobal
 1534426954	Makyen	translate-document\.com
-1534431986	Makyen	startthenewcareer\.blogspot\.com
+1534431986	Makyen	startthenewcareer\.blogspot
 1534432006	Makyen	clck\.ru/E2zUy
 1534438203	Erik the Outgolfer	freewallet\.org
 1534462508	Makyen	supernaturalspell@yahoo\.com
-1534462517	Makyen	lettalaabourtrelationship\.blogspot\.com
+1534462517	Makyen	lettalaabourtrelationship\.blogspot
 1534482660	tripleee	jazari\W*space
 1534482770	tripleee	naskar\.com\.br
 1534482904	tripleee	vaastunaresh\.com
@@ -4682,7 +4682,7 @@
 1535417881	Makyen	saamonishavingaparty(?:@gmail\.com)?
 1535421053	Tetsuya Yamamoto	chaturbate\.com
 1535424200	Makyen	github\.com/winstongubantes
-1535424390	Makyen	winstongubantes\.blogspot\.com
+1535424390	Makyen	winstongubantes\.blogspot
 1535431097	tripleee	mbahunt\.in
 1535432728	Makyen	inindia\.ooo
 1535434230	Makyen	orthofeet\.com
@@ -5072,7 +5072,7 @@
 1537519850	Glorfindel	statscloud\.io
 1537519871	Glorfindel	agiliumlabs\.com
 1537519694	Shree	enomaigbagbon@gmail\.com
-1537521332	Glorfindel	livemailcalendarrecovery\.blogspot\.com
+1537521332	Glorfindel	livemailcalendarrecovery\.blogspot
 1537522967	Tetsuya Yamamoto	playthebible\.com
 1537524411	Shree	office-comsetup-install\.com
 1537528675	tripleee	puspack\.in
@@ -5282,8 +5282,8 @@
 1538628072	Tetsuya Yamamoto	viralinterest\.com
 1538635932	tripleee	efatoora
 1538638944	Tetsuya Yamamoto	healthjumpprograming\.com
-1538638998	Tetsuya Yamamoto	suhuhealth\.blogspot\.com
-1538639433	Glorfindel	longartikel\.blogspot\.com
+1538638998	Tetsuya Yamamoto	suhuhealth\.blogspot
+1538639433	Glorfindel	longartikel\.blogspot
 1538643518	Tetsuya Yamamoto	koibhi\.com
 1538645948	Glorfindel	leadsuniversal\.com
 1538646129	Glorfindel	toppik\W*hair
@@ -5324,7 +5324,7 @@
 1538843291	Makyen	在线购买杂草(?#Buy weed online)
 1538857351	Erik the Outgolfer	supremetechnologies007@gmail\.com
 1538859072	Makyen	bn51\.net
-1538863133	Makyen	cocoebooks\.blogspot\.com
+1538863133	Makyen	cocoebooks\.blogspot
 1538874066	Makyen	grameencomputerbd\.com
 1538874085	Makyen	iamastonerforreal(?:@gmail\.com)?
 1538875561	Makyen	l86pxnn9nraxsb8zus8szq-on\.drv\.tw
@@ -5412,7 +5412,7 @@
 1539261954	doppelspooker	parsonadhesives\.com
 1539262044	doppelspooker	regentiv
 1539288477	Makyen	a1slotgame\.com
-1539288489	Makyen	rajabokeponline17\.blogspot\.com
+1539288489	Makyen	rajabokeponline17\.blogspot
 1539288815	Makyen	d\W*r\W*(?:d\W*o\W*t\W*)?a\W*m\W*i\W*g\W*o\W*7\W*1(?:\W*(?:a\W*t\W*)?y\W*a\W*h\W*o\W*o\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text: dr.amigo71)
 1539292668	gparyani	trucos-para\.com
 1539302638	Makyen	lentbitcoin\.com
@@ -5631,8 +5631,8 @@
 1540393333	Erik the Outgolfer	financeabcmicro@gmail\.com
 1540394640	Erik the Outgolfer	bestrainshowerheads\.com
 1540395322	doppelspooker	mathauditor\.com
-1540400373	Erik the Outgolfer	hastagsupport\.blogspot\.com
-1540400416	Erik the Outgolfer	dragonsupportgoogle\.blogspot\.com
+1540400373	Erik the Outgolfer	hastagsupport\.blogspot
+1540400416	Erik the Outgolfer	dragonsupportgoogle\.blogspot
 1540413790	Erik the Outgolfer	123greetingmessage\.net
 1540444978	Tetsuya Yamamoto	pappablogt\.nl
 1540448700	Tetsuya Yamamoto	decormyplace\.in
@@ -5648,7 +5648,7 @@
 1540496537	Erik the Outgolfer	ngon\.club
 1540496546	Erik the Outgolfer	pleasevip
 1540514267	Makyen	softlytips\.com
-1540516842	gparyani	pritamfreelancer\.blogspot\.com
+1540516842	gparyani	pritamfreelancer\.blogspot
 1540519722	Makyen	info\.fastservice22(?:@gmail\.com)?
 1540522341	Makyen	^emily\W*snail$(?#username who posts spam about disk-partition.com)
 1540530669	tripleee	SPACEWEBHACKS
@@ -5827,7 +5827,7 @@
 1541292321	Makyen	(?:sikti[ğg]im+|sikmez+)(?#translation: fuck)
 1541240711	bertieb	medtravels\.in
 1541326011	Makyen	vouchercodesuae\.com
-1541330813	Zoe	mrbuzinfo\.blogspot\.com
+1541330813	Zoe	mrbuzinfo\.blogspot
 1541341649	Shree	icoviral\.today
 1541349405	Erik the Outgolfer	buyinstagramfollowers44\.co\.uk
 1541349896	Erik the Outgolfer	bangalorescorts\.com
@@ -5839,7 +5839,7 @@
 1541395537	Tetsuya Yamamoto	technicalustad\.com
 1541405584	Makyen	myschooltutorial\.com
 1541413987	Glorfindel	rkvitsolutions
-1541414019	Glorfindel	rkvitsolutionspvtltd\.blogspot\.com
+1541414019	Glorfindel	rkvitsolutionspvtltd\.blogspot
 1541416318	tripleee	raynatour\.com
 1541416338	tripleee	trustmeds\.com\.au
 1541416465	tripleee	detosil
@@ -5864,7 +5864,7 @@
 1541499299	doppelgreener	hgh\.biz
 1541499643	Shree	innova\.pk
 1541500309	Shree	info@bkash\.in
-1541501228	Shree	makerfab\.blogspot\.com
+1541501228	Shree	makerfab\.blogspot
 1541501817	Shree	itcompanion\.ru
 1541504732	Tetsuya Yamamoto	nativespanishtapas\.com
 1541508128	bertieb	hotelsafes\.com
@@ -6123,7 +6123,7 @@
 1542817135	Zoe	pingpongstart\.com
 1542833472	Makyen	tokeqq\.co
 1542834347	Makyen	searchbyimages\.com
-1542836140	Makyen	computersupportandservices\.blogspot\.com
+1542836140	Makyen	computersupportandservices\.blogspot
 1542849515	Makyen	gitlab\.com/raj_pandi
 1542853721	Makyen	drakioya17spellhome(?:@gmail\.com)?
 1542866942	K.Dᴀᴠɪs	coolmathgamesjunction\.net
@@ -6417,7 +6417,7 @@
 1544179050	Shree	spaceelevators\.org
 1544194272	Makyen	joshpagesolution(?:@gmail\W*(?:dot\W*)?com)?
 1544194690	Glorfindel	amitpanta\.com
-1544197899	Makyen	wolfiesfighters\.blogspot\.com
+1544197899	Makyen	wolfiesfighters\.blogspot
 1544199285	Makyen	hpprinterisoffline\.com
 1544202841	Makyen	illuminolighting\.com
 1544208947	Makyen	manufacturedhomeloans\.com
@@ -6567,7 +6567,7 @@
 1545041246	tripleee	priyankasinghania\.com
 1545041254	tripleee	sunainakaur\.com
 1545057640	Shree	advicelocal\.com
-1545062653	Shree	wpstatus143\.blogspot\.com
+1545062653	Shree	wpstatus143\.blogspot
 1545071269	Makyen	monkelite\.com
 1545072794	Makyen	dynamoinfotech\.com
 1545072805	Makyen	artattackk\.com
@@ -6720,7 +6720,7 @@
 1545980891	Tetsuya Yamamoto	safetyengineersacademy\.in
 1545982774	Glorfindel	kimberleyexperiences\.com
 1545983756	Tetsuya Yamamoto	sheqportal\.ie
-1545986039	Shree	indianewsread\.blogspot\.com
+1545986039	Shree	indianewsread\.blogspot
 1545986379	Makyen	spylordhack(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1545989565	Tetsuya Yamamoto	spycardsshop\.com
 1545989715	Tetsuya Yamamoto	indianfilmhistory\.com
@@ -6813,12 +6813,12 @@
 1546601780	tripleee	clinique-cheveux-tunisie\.com
 1546602764	tripleee	atsshopping\.com
 1546613908	tripleee	myhairact\.com
-1546668166	Nisse Engström	buybestonlineelectronicmusickeyboard\.blogspot\.com
+1546668166	Nisse Engström	buybestonlineelectronicmusickeyboard\.blogspot
 1546710255	iBug	shark\W*tank
 1546727300	Makyen	1jKzHZw_oPGRzQdqg_yOkZS__3jHqba2B
 1546727306	Makyen	tipstersportal\.com
 1546727311	Makyen	xpertphp\.com
-1546727315	Makyen	taylorswiftamericansingersongwriter\.blogspot\.com
+1546727315	Makyen	taylorswiftamericansingersongwriter\.blogspot
 1546727321	Makyen	eGAx7Al0Xe
 1546754212	Shree	artificialintelligenceinindia\.com
 1546757270	Makyen	quantinsti\.com
@@ -6934,7 +6934,7 @@
 1547400974	Makyen	chetu\.com
 1547413824	Makyen	nontonsini\.com
 1547413833	Makyen	incometaxprepfillmore\.com
-1547413841	Makyen	recover-or-reset-aol-email-account\.blogspot\.com
+1547413841	Makyen	recover-or-reset-aol-email-account\.blogspot
 1547419499	Makyen	ramadanwishes2018\.info
 1547419770	Makyen	limitlessreferrals\.info
 1547441053	Makyen	alinamalik\.co\.in
@@ -6992,7 +6992,7 @@
 1546687415	Nisse Engström	cablesforless\.com
 1547658787	Makyen	techoleaksofficial\.com
 1547664342	tripleee	professionalghostwriter\.com
-1547675178	Makyen	psnguide\.blogspot\.com
+1547675178	Makyen	psnguide\.blogspot
 1547699295	Tetsuya Yamamoto	webhilltech\.com
 1547708141	tripleee	fashion2day\.co\.uk
 1547710291	tripleee	alpha\W?omega\W?inc
@@ -7046,7 +7046,7 @@
 1547976252	Shree	khalti\.com
 1547988832	Erik the Outgolfer	kingsslyn\.com
 1547991056	Zoe	oceanofreview\.com
-1548011046	Glorfindel	bestwaytocommerce\.blogspot\.com
+1548011046	Glorfindel	bestwaytocommerce\.blogspot
 1548011274	Makyen	mzurisprings\.com
 1548025765	Makyen	(?-i:7rMAccTldH4|986bilSFRck|JAubMJuB0FE|L3BGTKZn24c|YiUsRrccIEQ|aj3K5GxDJlc|nCldDNvqTN8|nh7BQTlHsuE|thUajpTaSwg)(?#YouTube videos self-promotion by UsersProductions)
 1548044152	Nisse Engström	KPS3
@@ -7085,7 +7085,7 @@
 1548135100	Tetsuya Yamamoto	texttwist\.online
 1548135199	Tetsuya Yamamoto	gameikan\.org
 1548137425	tripleee	Parel\W?Creative
-1548143111	Makyen	ultratechbits\.blogspot\.com
+1548143111	Makyen	ultratechbits\.blogspot
 1548143541	Makyen	fileapps\.net
 1548148320	Tetsuya Yamamoto	vilina\.in
 1548149570	Makyen	pcbeducation\.com
@@ -7181,7 +7181,7 @@
 1548666694	Sonic the Introverted Hedgehog	thechiletimes\.cl
 1548673917	Shree	toursandtaxi\.com
 1548674551	Shree	shorttermcredits\.com
-1548694460	Makyen	natureofchemicalelements\.blogspot\.com
+1548694460	Makyen	natureofchemicalelements\.blogspot
 1548694470	Makyen	dataengineers\.in
 1548694479	Makyen	6780262\.flickrocket\.com
 1548694490	Makyen	belezo\.pl
@@ -7273,7 +7273,7 @@
 1549028223	Zoe	mahir888\.com
 1549029168	Zoe	mahirqq(?:\.xyz)?
 1549039186	Asuna	Arturquickhack
-1549068595	Makyen	mebeljeparaberkualtas(?:\.blogspot\.com)?
+1549068595	Makyen	mebeljeparaberkualtas(?:\.blogspot)?
 1549089260	Makyen	bmconsultantsindia\.com
 1549089488	Makyen	Prof-Jali
 1549097351	Shree	howwebs\.com
@@ -7312,7 +7312,7 @@
 1549354464	Shree	diskanalyzerpro\.com
 1549355579	Shree	thehillside\.co\.in
 1549356770	Shree	sunvilla\.in
-1549363310	Shree	jobsforeveryonehere\.blogspot\.com
+1549363310	Shree	jobsforeveryonehere\.blogspot
 1549369511	Shree	nascarlivetv\.com
 1549371337	Makyen	(?-i:JKYycmcgT3s)(?#YouTube video; self-promotion)
 1549371352	Makyen	bit\.ly/(?-i:2MUZpQC)(?#entrancezone.com)
@@ -7334,7 +7334,7 @@
 1549436798	Makyen	155900216@N08/46266328574(?#flickr.com)
 1549437631	Tetsuya Yamamoto	ghasretalaie\.com
 1549438841	Tetsuya Yamamoto	nortoncom-nu16\.com
-1549438954	Makyen	nortoncom-nu16\.blogspot\.com
+1549438954	Makyen	nortoncom-nu16\.blogspot
 1549443026	Shree	jessewarrenloans(?:@gmail\.com)
 1549445787	Tetsuya Yamamoto	zonalstudy\.com
 1549446363	Makyen	sancuro\.com
@@ -7478,7 +7478,7 @@
 1550205830	Makyen	unlockunit\.com
 1550225056	bertieb	orangefashionvillage\.com
 1550246526	Makyen	(?-i:LxhVa9_KH_4)(?#YouTube video)
-1550246538	Makyen	apk-and-more\.blogspot\.com
+1550246538	Makyen	apk-and-more\.blogspot
 1550246547	Makyen	southern\W*restoration
 1550246556	Makyen	steveseocarner(?:@gmail\.com)?
 1550275328	Makyen	rxsale\.site
@@ -7509,10 +7509,10 @@
 1550373400	Makyen	daftarpokerclub88\.com
 1550382796	Makyen	fm0091
 1550383630	Shree	rahuldigital\.org
-1550384573	Makyen	magictrimmer\.blogspot\.com
+1550384573	Makyen	magictrimmer\.blogspot
 1550386041	Makyen	duomit\.com
 1550397347	Zoe	thetips4you\.com
-1550397485	Shree	tectromicsi\.blogspot\.com
+1550397485	Shree	tectromicsi\.blogspot
 1550398070	Shree	sslretail\.com
 1550398723	Shree	pcgamerlist\.com
 1550399600	Shree	luggagetoship\.com
@@ -7936,7 +7936,7 @@
 1552517026	Machavity	promodo\.com
 1552518518	Makyen	securedbills\d*(?:@gmail\.com)?
 1552526863	Makyen	acceptv\.com
-1552536731	Shree	bestproductss365\.blogspot\.com
+1552536731	Shree	bestproductss365\.blogspot
 1552537566	Shree	gtzmn\.com
 1552537651	Shree	baccarat44\.com
 1552540811	Shree	certsout\.com
@@ -8256,7 +8256,7 @@
 1553844418	Makyen	soft-outlet\.ltd
 1553844592	Makyen	nist\.edu\.pk
 1553847805	Glorfindel	tintran\.org
-1553847909	Glorfindel	microsoftechgeek\.blogspot\.com
+1553847909	Glorfindel	microsoftechgeek\.blogspot
 1553848722	Sonic the Wizard Werehog	patentseo\.net
 1553852433	Glorfindel	rightdeed\.com
 1553856858	tripleee	trepium\.com
@@ -8312,7 +8312,7 @@
 1554115838	double-beep	lonvega\.tumblr\.com
 1554140275	Makyen	appacmedia\.com
 1554115961	double-beep	watchsports\.gq
-1554116013	double-beep	livestreamc\.blogspot\.com
+1554116013	double-beep	livestreamc\.blogspot
 1554117572	double-beep	medium\.com/@oyaarlorow
 1554143145	Makyen	(?:\d{4}\W*)?frozen\W*four(?:\W*(?:\d{4}|live|buffalo|tickets|dates?|packages?|\.html))?
 1554144720	JoErNanO	ticketaudit\.com
@@ -8336,7 +8336,7 @@
 1554197923	Makyen	inde-voyages\.fr
 1554197959	Makyen	customerservicesforyou\.com
 1554197980	Makyen	alternativenumber\.com
-1554213075	double-beep	codekavala\.blogspot\.com
+1554213075	double-beep	codekavala\.blogspot
 1554262529	Makyen	rip\W*nipsey\W*hussle
 1554262592	Makyen	clara\W*cyber\W*tech(?:@outlook\.com)?
 1554264202	Makyen	moniqueoquinn
@@ -8403,7 +8403,7 @@
 1554449488	gparyani	Persatuan Insurans Am Malaysia
 1554449675	tripleee	vigarin
 1554451816	tripleee	catering-tangerang\.com
-1554401094	double-beep	priestkorkmazaza\.blogspot\.com
+1554401094	double-beep	priestkorkmazaza\.blogspot
 1554401203	double-beep	leakedmovies\.cinemax21\.org
 1554401250	double-beep	aborgela\.com
 1554459733	tripleee	switzerlandsupplements\.ch
@@ -8459,7 +8459,7 @@
 1554707255	Makyen	printwithus\.us
 1554708086	tripleee	maplerealestate\.net
 1554708204	tripleee	maple2019
-1554714629	Makyen	strongpowerbody\.blogspot\.com
+1554714629	Makyen	strongpowerbody\.blogspot
 1554714659	Makyen	quibblo\.com
 1554714691	Makyen	(?-i:/video/x75cl7f)
 1554721114	Shree	manpowersecurity\.co\.in
@@ -8570,7 +8570,7 @@
 1555123606	Makyen	usonlinetv\.com
 1555131667	Makyen	evaherborist\.com
 1555137916	Makyen	microsoftoutlookoffice\.com
-1555145466	Makyen	rvceadmission\.blogspot\.com
+1555145466	Makyen	rvceadmission\.blogspot
 1555145492	Makyen	webezy\.co\.uk
 1555145518	Makyen	slot44\.online
 1555147990	Olivia	countoflanguages\.com
@@ -8587,7 +8587,7 @@
 1555236115	Olivia	ilovedeshi\.com
 1555236146	Olivia	crackedfiles\.cf
 1555236228	Olivia	mr\W*(?:dot\W*)?vinodinsan1\W*(?:at\W*)?gmail\W*(?:dot\W*)?com
-1555240773	Olivia	phanmembuildingcare\.blogspot\.
+1555240773	Olivia	phanmembuildingcare\.blogspot
 1555270210	Makyen	abegalejohnston20\.
 1555270308	Makyen	nadiri\.co
 1555278471	Makyen	herbalremedies21(?:@gmail\.com)?
@@ -8644,7 +8644,7 @@
 1555494690	Makyen	butterfly-backup\.readthedocs\.io
 1555494722	Makyen	matteoguadrini\.github\.io
 1555494750	Makyen	ibnalnafees\.com
-1555494884	Zoe	corporate-videos\.blogspot\.
+1555494884	Zoe	corporate-videos\.blogspot
 1555497041	Makyen	gamebaisunwin
 1555497074	Makyen	samlocsunwin
 1555498271	Shree	onlineservices\.pk
@@ -8829,7 +8829,7 @@
 1556264359	tripleee	happyqq\.site
 1556264359	tripleee	inikartu\.online
 1556264359	tripleee	inipoin\.online
-1556270364	Shree	viralways\.blogspot\.com
+1556270364	Shree	viralways\.blogspot
 1556271815	Shree	outsourcingall\.com
 1556273032	tripleee	Webzarc
 1556275514	tripleee	serviceandrey(?:\W*a)?
@@ -9049,7 +9049,7 @@
 1557348811	Makyen	B07QXF9P8Q
 1557348825	Makyen	nmudkey(?:@gmail\.com)?
 1557348882	Makyen	nsowo\.com
-1557349243	Makyen	onlinelession\.blogspot\.com
+1557349243	Makyen	onlinelession\.blogspot
 1557363202	Machavity	fibresales\.com\.au
 1557378485	tripleee	animeist\.com
 1557378537	tripleee	chinahengzesteel\.com
@@ -9120,7 +9120,7 @@
 1557526935	Makyen	skypebankloanfirm(?:@gmail\.com)?
 1557546746	Makyen	kinemaster
 1557546759	Makyen	jobnmk\.com
-1557546773	Makyen	mundejobs\.blogspot\.com
+1557546773	Makyen	mundejobs\.blogspot
 1557576038	tripleee	chaan\.cf
 1557579814	Olivia	jokerout\.com
 1557583105	Machavity	aginity\.com
@@ -9161,7 +9161,7 @@
 1557784282	Makyen	dragonballsuperonline\.net
 1557794913	Makyen	sheltonbernice\d+(?:@yahoo\.com)?(?#sheltonbernice74@yahoo.com seen)
 1557799347	Makyen	princeidialu(?:@outlook\.com)?
-1557799428	Makyen	android-premium-apps\.blogspot\.com
+1557799428	Makyen	android-premium-apps\.blogspot
 1557811955	tripleee	unique-elevators\.com
 1557819198	tripleee	4MyResearch\.com
 1557820018	tripleee	sarmedia\.in
@@ -9426,11 +9426,11 @@
 1558892061	double-beep	stellarinfo\.com
 1558897814	double-beep	ziwa\.ir
 1558861904	double-beep	slim\W*ambition(?:\W*keto)?
-1558866277	double-beep	sobatpokerku99\.blogspot\.com
+1558866277	double-beep	sobatpokerku99\.blogspot
 1558866535	double-beep	fineline-global\.com
 1558876151	double-beep	nellyrobert212(?:@gmail\.com)?
 1558876162	double-beep	searchall\.net
-1558900324	Makyen	softwarepatch101\.blogspot\.com
+1558900324	Makyen	softwarepatch101\.blogspot
 1558913714	Makyen	buyserviceusa\.com
 1558926768	Makyen	fastnews98\.com
 1558933880	tripleee	leather-toolkits\.com
@@ -9561,7 +9561,7 @@
 1559421722	Makyen	Не делайте вид что проблемы нeт!
 1559438908	Makyen	canli\.co
 1559444072	Makyen	ytmp3cc\.cc
-1559453669	Shree	digitalrony\.blogspot\.com
+1559453669	Shree	digitalrony\.blogspot
 1559544852	tripleee	its\.com\.pk
 1559545134	tripleee	amblespersones\.com
 1559547927	tripleee	nanoarchsoftware\.com
@@ -9789,7 +9789,7 @@
 1560475917	Makyen	custom-lapel-pins\.com
 1560491094	Shree	norton\.com-setup\.de
 1560491128	gparyani	qbproadvisor\.org
-1560492205	Shree	dating-customer-service\.blogspot\.com
+1560492205	Shree	dating-customer-service\.blogspot
 1560492710	Makyen	flightradar\.co\.uk
 1560494341	Shree	bharatdefencekavach\.com
 1560495700	Shree	blog\.baljotsingh\.in
@@ -9800,7 +9800,7 @@
 1560541733	Nisse Engström	sitesnorton\.com
 1560541792	Nisse Engström	get-office-2019\.com
 1560544599	Makyen	drlovetemple(?:@gmail\.com)?
-1560544620	Makyen	jaxsonharry\.blogspot\.com
+1560544620	Makyen	jaxsonharry\.blogspot
 1560574217	Makyen	headortailbet\.com
 1560574753	Makyen	supplicient\.com
 1560579683	Makyen	strengthplans\.com
@@ -9940,7 +9940,7 @@
 1561137063	Thomas Ward	smsc\.ru
 1561144652	Makyen	miracle\W*ritual\W*(?:cream|review)
 1561144671	Makyen	(?-i:2WZ1f95)
-1561144690	Makyen	junocoin\.blogspot\.com
+1561144690	Makyen	junocoin\.blogspot
 1561144709	Makyen	2aks\.ir
 1561144732	Makyen	accessrepairnrecovery\.com
 1561145083	Makyen	rbitt\.co\.uk
@@ -9980,7 +9980,7 @@
 1561358461	Glorfindel	missionsecurity\.com
 1561359752	Makyen	(?-i:8lUG4VCQ2s4)
 1561359792	Makyen	pure\W*fit\W*keto\W*uk(?:\W*\d+)?
-1561359836	Makyen	healthandfitnesstip4u\.blogspot\.com
+1561359836	Makyen	healthandfitnesstip4u\.blogspot
 1561361108	Makyen	gmailhelpline\.co\.uk
 1561361128	Makyen	gmail-support\.uk
 1561361146	Makyen	ukcontacthelp\.co\.uk
@@ -10023,7 +10023,7 @@
 1561465124	Machavity	xo-cdp\.com
 1561465620	Shree	almillat\.com
 1561470226	Machavity	answersfromtheuniverse\.com
-1561470396	Machavity	cloud[\w-]*+\.blogspot\.com
+1561470396	Machavity	cloud[\w-]*+\.blogspot
 1561476931	Makyen	questtrustcompany\.com
 1561476972	Makyen	kumar\W*urban\W*development
 1561476990	Makyen	kul\W*kumar\W*builders
@@ -10207,7 +10207,7 @@
 1562168414	Makyen	keto\W*enhanced\W*slim(?:\W*united\W*kingdom|\W*uk)?
 1562168459	Makyen	supercutketoweb
 1562168483	Makyen	ageless\W*male\W*tonight(?:\W*\d+)?
-1562168504	Makyen	andmcintosh\.blogspot\.com
+1562168504	Makyen	andmcintosh\.blogspot
 1562168531	Makyen	andmcintosh
 1562168552	Makyen	adventuringparties\.com
 1562168575	Makyen	koontech\.com
@@ -10229,7 +10229,7 @@
 1562209576	Machavity	bersatutv\.com
 1562217720	Makyen	neu\W*natural\W*cbd
 1562219643	Makyen	(?-i:htw6w)
-1562219695	Makyen	my[\W_]*+fitness[\W_]*+pharm\w*(?!\.com(?<=myfitnesspharm\.com))(?!\.blogspot\.com(?<=myfitnesspharmclub\.blogspot\.com))
+1562219695	Makyen	my[\W_]*+fitness[\W_]*+pharm\w*(?!\.com(?<=myfitnesspharm\.com))(?!\.blogspot(?<=myfitnesspharmclub\.blogspot\.com))
 1562222748	Shree	iccaps\.co\.in
 1562222972	Shree	worldastrologyindia\.com
 1562232386	Shree	partydecorationsjaipur\.in
@@ -10310,7 +10310,7 @@
 1562483780	Makyen	vitabz\.com
 1562483801	Makyen	setup\.?ampedwirelessextender\.com
 1562496842	Shree	invstoc\.com
-1562504184	Machavity	fullstackdeveloper2791\.blogspot\.com
+1562504184	Machavity	fullstackdeveloper2791\.blogspot
 1562515931	Makyen	jigodaymailonlinecom
 1562515950	Makyen	heartset(?=\.wixsite\.com)
 1562515976	Makyen	top\W*10\W*best
@@ -10370,7 +10370,7 @@
 1562752052	Nisse Engström	viuom\.com
 1562752080	Nisse Engström	perfectshikhe\.com
 1562752176	Nisse Engström	esalesclub\.com
-1562752220	Nisse Engström	b2bdatabasee\.blogspot\.com
+1562752220	Nisse Engström	b2bdatabasee\.blogspot
 1562754912	Makyen	clobentrak
 1562754938	Makyen	speed-up-mac\.com
 1562754960	Makyen	id448189857
@@ -10400,7 +10400,7 @@
 1562858541	Nisse Engström	nextdeal\.in
 1562866965	Nisse Engström	achtransferconsultant
 1562867227	Nisse Engström	consultantachtransfer
-1562886248	Machavity	mainframe-forum\.blogspot\.com
+1562886248	Machavity	mainframe-forum\.blogspot
 1562900318	Makyen	fakediplomamall
 1562900395	Makyen	ka\.ruby1
 1562909576	Shree	beemainfratech\.com
@@ -10491,7 +10491,7 @@
 1563228351	Makyen	(?-i:Cjduc\.jpg)
 1563228377	Makyen	hackbornto7(?:@gmail\.com)?
 1563228399	Makyen	doli058450
-1563229982	Makyen	naturalhealthprod\.blogspot\.com
+1563229982	Makyen	naturalhealthprod\.blogspot
 1563230026	Makyen	naturalprod\.health\.blog
 1563247580	Nisse Engström	cliprify\.com
 1563247748	Makyen	sanatino\.com
@@ -10594,7 +10594,7 @@
 1563523981	Makyen	immersivemath\.com
 1563524004	Makyen	(?-i:VSTVWgN5xrc)
 1563524025	Makyen	(?-i:x7dnioq)
-1563524045	Makyen	maleenhancementsupplement4\.blogspot\.com
+1563524045	Makyen	maleenhancementsupplement4\.blogspot
 1563525322	tripleee	rugsandbeyond\.com
 1563527638	Makyen	sparxtechnolabs\.com
 1563527828	Makyen	sparxbpo\.com
@@ -10620,8 +10620,8 @@
 1563601216	Makyen	benjonehackatmcard(?:@gmail\.com)?
 1563602277	Makyen	(?-i:Yihmh0aI_58)
 1563607070	Makyen	/@getrappl
-1563614354	Makyen	ketoviantesf\.blogspot\.com
-1563614389	Makyen	(?:\d+\W*)?garcinia[\W_]*vita(?!hollandandbarrett\.blogspot\.com(?<=garciniavitahollandandbarrett\.blogspot\.com))(?:[\W_]*(?:scam|review|uk|holand|and|barret+|\d+|[\da-f]{4,}))*
+1563614354	Makyen	ketoviantesf\.blogspot
+1563614389	Makyen	(?:\d+\W*)?garcinia[\W_]*vita(?!hollandandbarrett\.blogspot(?<=garciniavitahollandandbarrett\.blogspot\.com))(?:[\W_]*(?:scam|review|uk|holand|and|barret+|\d+|[\da-f]{4,}))*
 1563614514	Makyen	(?-i:c2P8-AycbcI)
 1563614541	Makyen	contactderujason30(?:@gmail\.com)?
 1563614566	Makyen	support@callvertise\.com
@@ -10696,7 +10696,7 @@
 1563834841	Makyen	downloadbazan\.ir
 1563834877	Makyen	zamennews\.ir
 1563834909	Makyen	reza-sadeghi\.ir
-1563834939	Makyen	garyimillei\.blogspot\.com
+1563834939	Makyen	garyimillei\.blogspot
 1563834972	Makyen	/@garyimillei
 1563835009	Makyen	writeabout\.tech
 1563852731	Makyen	ceo\.fordcreditcentre(?:@gmail\.com)?
@@ -10845,7 +10845,7 @@
 1564311345	Makyen	htk-ak\.de
 1564311363	Makyen	htk-online\.de
 1564314604	Shree	aksharteam\.com
-1564326938	Nisse Engström	xhealthyhub\.blogspot\.com
+1564326938	Nisse Engström	xhealthyhub\.blogspot
 1564327555	Makyen	bmvoxz(?#fiver)
 1564327572	Makyen	apidkgon\.hatenablog\.com
 1564333270	Makyen	REWE\W*(?:and\W*)?ROSSMANN
@@ -10947,7 +10947,7 @@
 1564629595	Makyen	cftophp\.com
 1564629857	Makyen	rockset\.com(?<!docs\.rockset\.com)
 1564635822	Makyen	(?-i:9AHzqt9w0Gk)
-1564641572	Makyen	(?:forskolin[\W_]*)?ketovit(?!\.blogspot\.com(?<=forskolin-ketovit\.blogspot\.com))(?:[\W_]*(?:forskolin|reviews?|diet|\d+))*
+1564641572	Makyen	(?:forskolin[\W_]*)?ketovit(?!\.blogspot(?<=forskolin-ketovit\.blogspot\.com))(?:[\W_]*(?:forskolin|reviews?|diet|\d+))*
 1564644082	tripleee	agrawalcorporate\.com
 1564651492	Makyen	keygen[\W_]*xl
 1564651581	Makyen	amiquor\.ga
@@ -11008,7 +11008,7 @@
 1564863833	Makyen	aalsham1@g\.emporia\.edu
 1564863926	Makyen	(?-i:LLcy9\.png)
 1564863943	Makyen	techsupportalert\.com
-1564863965	Makyen	telegramgrouplink1\.blogspot\.com
+1564863965	Makyen	telegramgrouplink1\.blogspot
 1564863984	Makyen	t\.me/joinchat/fuck2me
 1564867629	Makyen	drahmedusman5104(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1564867647	Makyen	dr\W*ahmed\W*usman
@@ -11121,7 +11121,7 @@
 1565165233	Makyen	dr\W*rastogi
 1565165253	Makyen	(?-i:e3YRS)
 1565165273	Makyen	(?-i:/bochw)
-1565165381	Makyen	forskolin-ketovit\.blogspot\.com
+1565165381	Makyen	forskolin-ketovit\.blogspot
 1565167689	Makyen	pdtvjobs\.com
 1565168232	Makyen	vdiskrecovery\.com
 1565168428	Makyen	unlimited[\W_]*abundance(?:[\W_]*review)?
@@ -11149,10 +11149,10 @@
 1565250383	Makyen	e35uZ
 1565250398	Makyen	ftyee
 1565250414	Makyen	jack-beard-growth\.pen\.io
-1565250425	Makyen	jack-beard-growth\.blogspot\.com
+1565250425	Makyen	jack-beard-growth\.blogspot
 1565250435	Makyen	iserver[\W_]*admin(?!\.com(?<=iserveradmin\.com))
-1565250450	Makyen	jack[\W_]*beard[\W_]*growth(?!\.pen\.io(?<=jack-beard-growth\.pen\.io))(?!\.blogspot\.com(?<=jack-beard-growth\.blogspot\.com))
-1565252475	Makyen	charliehaimon\.blogspot\.com
+1565250450	Makyen	jack[\W_]*beard[\W_]*growth(?!\.pen\.io(?<=jack-beard-growth\.pen\.io))(?!\.blogspot(?<=jack-beard-growth\.blogspot\.com))
+1565252475	Makyen	charliehaimon\.blogspot
 1565252502	Makyen	charliehaimon
 1565254386	Makyen	(?-i:x7fgsnz)
 1565257501	Byte Commander	resbee\.org
@@ -11195,10 +11195,10 @@
 1565420336	Makyen	ketopureorg\.tumblr\.com
 1565420346	Makyen	(?-i:8djpUVs3BiI)
 1565420354	Makyen	(?:(?:where[\W_]*to[\W_]*)?buy[\W_]*)?sure[\W_]*botanicals(?:[\W_]*(?:cbd|review|oil|\d+)s?)*
-1565420422	Makyen	topcbdoilhub(?!\.over-blog\.com)(?!\.blogspot\.com)
+1565420422	Makyen	topcbdoilhub(?!\.over-blog\.com)(?!\.blogspot)
 1565420467	Makyen	modular[\W_]*wardrobe(?:[\W_]*(?:manufacturers|design))+
 1565420477	Makyen	helmesharow
-1565420660	Makyen	topcbdoilhub\.blogspot\.com
+1565420660	Makyen	topcbdoilhub\.blogspot
 1565421229	Makyen	skingenix(?:[\W_]*(?:cream|(?<! )skingenix|tag|remove|\d+|[\da-f]{4,})s?)*
 1565422611	Makyen	onlinepromotionway\.com
 1565422710	Makyen	dx[\W_]*amp(?:[\W_]*male[\W_]*enhancement)?
@@ -11367,12 +11367,12 @@
 1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
 1566031094	Makyen	garcinia[\W_]*slim[\W_]*2000
 1566031121	Makyen	408686049853976(?#facebook event)
-1566031250	Makyen	lean[\W_]*boost(?!(?<=lean-boost)-keto-44\.webself\.net)(?!(?<=leanboost)keto\.blogspot\.com)(?:[\W_]*(?:keto|diet|now|new|bhb|formula|\d+|[\da-f]{4,}))*
+1566031250	Makyen	lean[\W_]*boost(?!(?<=lean-boost)-keto-44\.webself\.net)(?!(?<=leanboost)keto\.blogspot)(?:[\W_]*(?:keto|diet|now|new|bhb|formula|\d+|[\da-f]{4,}))*
 1566031342	Makyen	lean-boost-keto-\d+\.webself\.net(?#-11 and -44 seen)
 1566031362	Makyen	leanboostketo\.mystrikingly\.com
 1566031385	Makyen	(?-i:LscZR425n2c)
 1566031410	Makyen	(?-i:x7gdb45a)
-1566031432	Makyen	leanboostketo\.blogspot\.com
+1566031432	Makyen	leanboostketo\.blogspot
 1566031523	Makyen	scarletburg
 1566039635	Shree	qiuqiu992\.site
 1566055449	Makyen	457519994829275(?#YouTube event)
@@ -11437,7 +11437,7 @@
 1566237092	Makyen	herbalsupplementreview\.hatenablog\.com
 1566237167	Makyen	herbalsupplementreview\.kinja\.com
 1566237188	Makyen	herbalsupplementreview\.tumblr\.com
-1566237273	Makyen	herbalsupplementreview\.blogspot\.com
+1566237273	Makyen	herbalsupplementreview\.blogspot
 1566237294	Makyen	herbalsupplementreview(?!\.(?:com|bravesites\.com|jigsy\.com|hatenablog\.com|kinja\.com|tumblr\.com|blogspot\.com))
 1566237326	Makyen	(?-i:7yMoaGuK)
 1566237350	Makyen	636907572285213099(?#pinterest)
@@ -11474,7 +11474,7 @@
 1566374705	Makyen	heptopic\.com
 1566378222	Makyen	maple\W*real\W*estate(?!\.net(?<=maplerealestate\.net))
 1566380460	Shree	standardlifeloanplc(?:@gmail\.com)
-1566381725	Makyen	ketovatrusouthafrica\.blogspot\.com
+1566381725	Makyen	ketovatrusouthafrica\.blogspot
 1566381758	Makyen	jhonwinsen
 1566381862	Makyen	approved\W*science\W*keto
 1566382622	double-beep	prevalentdigital\.in
@@ -11523,7 +11523,7 @@
 1566486552	Makyen	(?-i:0haA_1n7GSE)
 1566486561	Makyen	viftech\.com
 1566487175	Makyen	buinolahapp
-1566487580	Makyen	trialketobodytone\.blogspot\.com
+1566487580	Makyen	trialketobodytone\.blogspot
 1566487658	Makyen	trialketobodytone\.mystrikingly\.com
 1566487716	Makyen	trialketobodytone\.hatenablog\.com
 1566489336	Makyen	iepm\.ir
@@ -11549,7 +11549,7 @@
 1566549639	Makyen	email-helplinecenter\.com
 1566550019	double-beep	csspoints\.com
 1566550540	Makyen	jacksonbill_62284
-1566550611	Makyen	garciniavitahollandandbarrett\.blogspot\.com
+1566550611	Makyen	garciniavitahollandandbarrett\.blogspot
 1566552895	Makyen	welloxpharma\.com
 1566553969	Makyen	(?-i:3UiUYYVVASk)
 1566559720	Shree	quicken-helpnumber\.com
@@ -11571,7 +11571,7 @@
 1566600624	Stormblessed	rocketr\.net
 1566606047	Stormblessed	immotalspiritualhealinghome(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?
 1566600691	Stormblessed	Game Launcher Creator
-1566609845	Makyen	fix-printer-problem\.blogspot\.com
+1566609845	Makyen	fix-printer-problem\.blogspot
 1566610019	Makyen	freecoursesites\.online
 1566613583	Makyen	^(?:\s*<p>\s*(?:<\/?\w+\/?>\s*)*(?:<a href="[^>]*>)?\W*<img src="[^>]*>(?:<\/?\w+\/?>\s*)*)+$
 1566623086	Makyen	sunraised[\W_]*hemp[\W_]*oil(?:[\W_]*(?:\d+|[\da-f]{4,}))*
@@ -11678,9 +11678,9 @@
 1566912789	Machavity	technviews\.com
 1566912959	Machavity	wpnethi\.com
 1566913244	Machavity	friv432
-1566914136	Makyen	eminencevitalityketo\.blogspot\.com
+1566914136	Makyen	eminencevitalityketo\.blogspot
 1566914147	Makyen	(?-i:plNdj4W5Msg)
-1566914169	Makyen	ketogenicvalleyketo\.blogspot\.com
+1566914169	Makyen	ketogenicvalleyketo\.blogspot
 1566919790	Machavity	restaurantpossystems\.com
 1566922680	Machavity	raskruty\.ru
 1566925601	Machavity	toppossystem\.com
@@ -11688,7 +11688,7 @@
 1566925632	Machavity	ruler\.onl
 1566925674	Machavity	ourfitpets\.com
 1566925751	Machavity	ajaytech\.co
-1566927540	Makyen	shirleypinney\.blogspot\.com
+1566927540	Makyen	shirleypinney\.blogspot
 1566927548	Makyen	ultfastketoboostsharktankreviews\.mystrikingly\.com
 1566927557	Makyen	ultra-fast-keto-boost-shark-tank-60\.webself\.net
 1566927568	Makyen	(?-i:bVKpaKt-d8Q)
@@ -11753,7 +11753,7 @@
 1567104516	Makyen	appsinject\.com
 1567104761	Makyen	ketogenicvalleyketoreviews\.mystrikingly\.com
 1567104769	Makyen	ketogenic-valley-keto-69\.webself\.net
-1567104783	Makyen	ketogenicvalleyketoreviews\.blogspot\.com
+1567104783	Makyen	ketogenicvalleyketoreviews\.blogspot
 1567111093	Makyen	4kfullhdfilmizle\.net
 1567111242	Makyen	tamfullhdfilmi+zle\.com
 1567111655	Makyen	\w{0,40}fullhdfilmi+zle(?:\.[\w-]*)?
@@ -11778,12 +11778,12 @@
 1567223472	Makyen	fashionwatchtime\.com
 1567223485	Makyen	bestluxurysale\.com
 1567226735	Makyen	sunday[\W_]*scaries[\W_]*cbd[\W_]*gummies
-1567226743	Makyen	primedzblog\.blogspot\.com
+1567226743	Makyen	primedzblog\.blogspot
 1567226751	Makyen	primedz(?!\.com)
 1567228068	Makyen	\d++[\W_]*+httpsmaptiacomalphafemme[\W_]*+ketogenix
 1567244407	Makyen	(?-i:pYv-8VGQmkw)
 1567244416	Makyen	(?-i:JVBOgsGb_lY)
-1567244425	Makyen	dwaynecrowley\.blogspot\.com
+1567244425	Makyen	dwaynecrowley\.blogspot
 1567244434	Makyen	dwaynecrowley_27339
 1567244442	Makyen	(?-i:l7N9ZuOCZ9U)
 1567244452	Makyen	(?-i:iE-GGMbPGkE)
@@ -11910,7 +11910,7 @@
 1567610309	Makyen	pielbeauty\.com
 1567635939	Makyen	saara\.kemi(?:@gmail\.com)?
 1567663492	Makyen	vggroups\.com
-1567663521	Makyen	digitalmarketingagencyindelhiblog\.blogspot\.com
+1567663521	Makyen	digitalmarketingagencyindelhiblog\.blogspot
 1567664532	tripleee	34iaLEr(?# bit.ly redirector)
 1567675453	double-beep	seeksophie\.com
 1567677007	Shree	vlcsolutions\.com
@@ -11946,7 +11946,7 @@
 1567766305	Jeff Schaller	github\.com/gnu-linux-activation-technologies
 1567771826	double-beep	showbox\.kim
 1567784296	Machavity	signpath\.io
-1567789379	Makyen	nuvoketosisreviews\.blogspot\.com
+1567789379	Makyen	nuvoketosisreviews\.blogspot
 1567789398	Makyen	showtheway\.io
 1567805380	Makyen	procv\.biz
 1567805401	Makyen	(?-i:RTJxCzLJ5mTv9BuJ9)
@@ -12024,7 +12024,7 @@
 1568132253	Machavity	legaldocumentsltd\.com
 1568132873	double-beep	technoenhance\.com
 1568139043	Makyen	issuu\.com
-1568160314	Makyen	blogging-dunia\.blogspot\.com
+1568160314	Makyen	blogging-dunia\.blogspot
 1568160326	Makyen	(?-i:mmbeV\.jpg)
 1568160338	Makyen	rajapkvqq\.net
 1568160348	Makyen	pure[\W_]*+liave
@@ -12061,7 +12061,7 @@
 1568298833	Machavity	cojective\.online
 1568298857	Machavity	sunflaker\.com
 1568301958	Xnero	haydash\.com
-1568323908	Makyen	golpokobitarkutir\.blogspot\.com
+1568323908	Makyen	golpokobitarkutir\.blogspot
 1568323917	Makyen	gingersoftware\.com
 1568343280	Makyen	eventdex\.com
 1568347590	Nisse Engström	hicary\.com
@@ -12081,7 +12081,7 @@
 1568380952	Makyen	blog\.hatena\.ne\.jp
 1568380963	Makyen	flooringfitness(?!\.com)
 1568381026	Makyen	ketofitrecenze\.wixsite\.com
-1568381057	Makyen	smithjenny\.blogspot\.com
+1568381057	Makyen	smithjenny\.blogspot
 1568381129	Makyen	jennysmith\.hatenablog\.com(?#URL path)
 1568384571	Machavity	mortiselockset\.tumblr\.com
 1568386943	Machavity	atldiesel\.com
@@ -12229,13 +12229,13 @@
 1568860937	Makyen	ufftofani
 1568868449	Makyen	mysoretaxiservices\.com
 1568873431	tripleee	techsundhar\.com
-1568874280	Shree	mick7788\.blogspot\.com
+1568874280	Shree	mick7788\.blogspot
 1568874283	tripleee	mick7788\.blogspot
 1568874317	tripleee	xanax\W*addictions
 1568876519	tripleee	ko\W?beards?
 1568876636	Makyen	lacynash\.kinja\.com
 1568876657	Makyen	(?-i:sZlSc\.jpg)
-1568876692	Makyen	sharktankdietreview\.blogspot\.com
+1568876692	Makyen	sharktankdietreview\.blogspot
 1568876728	Makyen	sharktankdietreviews\.wordpress\.com
 1568876794	tripleee	Tapes\W*to\W*digital
 1568876911	tripleee	furniture-company-transport\.com
@@ -12258,7 +12258,7 @@
 1568959115	Makyen	fmovies2u\.com
 1568963883	Makyen	kielytieson
 1568963893	Makyen	geekisquad\.com
-1568963919	Makyen	ketoproplus\.blogspot\.com
+1568963919	Makyen	ketoproplus\.blogspot
 1568963930	Makyen	brother-customerservice\.com
 1568964795	Makyen	magicjack[\W_]*+help[\W_]*+line[\W_]*+number
 1568965063	Makyen	dienmaynewsun\.com
@@ -12292,17 +12292,17 @@
 1569084634	Makyen	\d{2,}+[\W_]*+hour[^s].{0,80}?\b(?:on|with)\b.{0,80}?(?:laptop|computer)\w*
 1569093882	Makyen	mahoganylendinggroup(?:@gmail\.com)?
 1569095914	Makyen	ultra[\W_]*+fast[\W_]*+boost
-1569095922	Makyen	myfitnesspharmclub\.blogspot\.com
+1569095922	Makyen	myfitnesspharmclub\.blogspot
 1569095949	Makyen	bandoxextrememaleenhancement\.pen\.io
 1569096016	Makyen	/@jaqlinesmith
-1569096102	Makyen	emyliacreamreviews\.blogspot\.com
+1569096102	Makyen	emyliacreamreviews\.blogspot
 1569096483	Makyen	cartransportgurgaon\.in
 1569096493	Makyen	jmc(?:[\W_]*+(?:freight|car|transport))+
 1569096501	Makyen	customecaresupportnumber\.co\.uk
 1569096510	Makyen	vehicle[\W_]*+transport[\W_]*+delhi
 1569096520	Makyen	(?-i:5YOYMWTdxcA)
 1569096529	Makyen	(?-i:x7lijmn)
-1569096582	Makyen	superdigideal\.blogspot\.com
+1569096582	Makyen	superdigideal\.blogspot
 1569096656	Makyen	(?-i:60OrmJ5K7ek)
 1569096666	Makyen	(?-i:x7lic09)
 1569096675	Makyen	sites\.google\.com/view/follinique-hair-nutritions
@@ -12580,7 +12580,7 @@
 1570036127	Glorfindel	citadelmortgages\.ca
 1570039125	Machavity	citizenpath\.com
 1570047662	Machavity	piccash\.net
-1570057177	Machavity	examplecodefree\.blogspot\.com
+1570057177	Machavity	examplecodefree\.blogspot
 1570067894	Machavity	SECDatabase
 1570068101	Makyen	(?:(?:(?:hijos[\W_]*+de|filhos[\W_]*+da)[\W_]*+)?puta|mierda|fodasse)(?#Portuguese offensive words)
 1570072581	Machavity	DXM5CJ20
@@ -12729,7 +12729,7 @@
 1570776529	Makyen	/@kyarascott
 1570776549	Makyen	kaspersky-login\.me
 1570776558	Makyen	freshly[\W_]*+bloom[\W_]*+keto
-1570780458	tripleee	klinikspesial01\.blogspot\.com
+1570780458	tripleee	klinikspesial01\.blogspot
 1570781889	tripleee	rocknfunevents\.com
 1570784669	tripleee	techblogize\.com
 1570787791	tripleee	muaranauli2323(?# @medium)
@@ -12768,7 +12768,7 @@
 1570850976	Stormblessed	pushfry\.com
 1570853847	Stormblessed	w88atm\.com
 1570851304	Stormblessed	(?-i:^louis jack$)
-1570853671	Stormblessed	omi8bprewards\.blogspot\.com
+1570853671	Stormblessed	omi8bprewards\.blogspot
 1570857388	double-beep	maneros-london\.com
 1570873944	double-beep	royamode\.ir
 1570873972	double-beep	decokadeh\.com
@@ -13082,7 +13082,7 @@
 1572067263	Makyen	arnaud-lazerat\.com
 1572086235	Makyen	naturally[\W_]*+him
 1572086247	Makyen	officialscrabbledictionary(?:\.weebly\.com)?
-1572086270	Makyen	scrabblewordfinders\.blogspot\.[a-z0-9-]+
+1572086270	Makyen	scrabblewordfinders\.blogspot
 1572086341	Makyen	officialscrabblewordfinder(?:\.yolasite\.com)?
 1572086353	Makyen	misterlau\.com
 1572088120	Makyen	(?:[a-z0-9-]{1,40}?scrabble[a-z0-9-]{0,40}?|[a-z0-9-]{0,40}?scrabble[a-z0-9-]{2,40}?)\b(?!\.vip(?<=scrabblewordfinder\.vip))(?!\.weebly\.com(?<=officialscrabbledictionary\.weebly\.com))(?!\.blogspot(?<=scrabblewordfinders\.blogspot))(?!\.yolasite\.com(?<=officialscrabblewordfinder\.yolasite\.com))(?:\.[a-z0-9-]{1,40}?)+
@@ -13090,7 +13090,7 @@
 1572105514	Makyen	aarontomkins11(?:@gmail\.com)?
 1572132881	Makyen	melodydeco4(?:@gmail\.com)?
 1572155642	double-beep	toolboxadvice\.com
-1572159963	rene	techyabi\.blogspot\.com
+1572159963	rene	techyabi\.blogspot
 1572163761	Kulfy	beprudence\.com
 1572177701	double-beep	senderinbox\W*company
 1572194464	Makyen	free4pc\.org
@@ -13671,7 +13671,7 @@
 1574238152	tripleee	starblastgame\.tk
 1574238176	tripleee	bombom
 1574238413	tripleee	defly2020
-1574239649	Jenayah	wisdomisgift\.blogspot\.com
+1574239649	Jenayah	wisdomisgift\.blogspot
 1574239750	tripleee	sofacle\.com
 1574242743	Shree	mycrossfitbody\.com
 1574243961	Shree	researchpaperservices\.us
@@ -14493,7 +14493,7 @@
 1576646357	Makyen	usahelplinesupport\.com
 1576646391	Makyen	purihair021\.hatenablog\.com
 1576646727	tripleee	holiday-hour\.com
-1576649197	Makyen	kkaesaem\.blogspot\.com
+1576649197	Makyen	kkaesaem\.blogspot
 1576664155	tripleee	callhelpcenter\.com
 1576664855	Shree	mudrahome\.com
 1576664938	Shree	gpsliveupdates\.com
@@ -15141,7 +15141,7 @@
 1578293408	rene	cryptoknowmics\.com
 1578294011	Makyen	(?-i:MsMDmQCjHTw)(?#youtu.be)
 1578294359	Shree	iiahp\.com
-1578294494	Shree	fitnessfiestapro\.blogspot\.com
+1578294494	Shree	fitnessfiestapro\.blogspot
 1578300422	Makyen	tektiks\.com
 1578304012	Makyen	asiatoken88\.com
 1578304591	Makyen	hotstarapkdownloads\.blogspot
@@ -15449,7 +15449,7 @@
 1578941592	Eliah Kagan	tunemovies\.online
 1578942792	Das_Geek	cashelhg\.com
 1578943000	Das_Geek	web(?:iste|site)opedia
-1578944022	Das_Geek	trendyprogrammer\.blogspot\.com
+1578944022	Das_Geek	trendyprogrammer\.blogspot
 1578951149	Machavity	expertsuggestion\.com
 1578952051	Eliah Kagan	urgentrealdocumentprovider\.com
 1578956363	Eliah Kagan	ncaaf-championship-live\.blogspot
@@ -15728,7 +15728,7 @@
 1579594184	tripleee	about\.me
 1579598609	double-beep	olubravo9ja\.info
 1579599635	tripleee	befaro\.com
-1579603611	Shree	instraffiter\.blogspot\.com
+1579603611	Shree	instraffiter\.blogspot
 1579605663	tripleee	iosemulatorzone\.com
 1579605868	tripleee	wewishes\.com
 1579607476	Shree	customercare-email\.net
@@ -15766,7 +15766,7 @@
 1579687413	Makyen	(?-i:xNYQS5kOR_s)(?#youtu.be)
 1579687443	Makyen	(?-i:MiNlyQGCyjw)(?#youtu.be)
 1579687471	Makyen	supplement4muscle\.hatenablog\.com
-1579690398	tripleee	cjavapoint\.blogspot\.com
+1579690398	tripleee	cjavapoint\.blogspot
 1579690464	tripleee	ooe[\W_]*+consultancy(?!\.com)
 1579690500	tripleee	ooeconsultancy\.com
 1579691384	Shree	getaccounting\.co
@@ -16310,7 +16310,7 @@
 1580864365	Eliah Kagan	lamotogp2020indiretta\.com
 1580870179	Eliah Kagan	PDVYSTD(?#surveymonkey)
 1580886637	Shree	nextincareer\.com
-1580886369	Jenayah	tapanpatni58\.blogspot\.com
+1580886369	Jenayah	tapanpatni58\.blogspot
 1580888502	tripleee	bagmackbuilding\.com\.au
 1580888583	tripleee	1-800emailcare\.com
 1580888739	tripleee	hp-support-assistant-us\.com
@@ -16502,7 +16502,7 @@
 1581337745	Eliah Kagan	machhili\.com
 1581338172	tripleee	pulseroll\.com
 1581340384	Eliah Kagan	appspunditinfotech\.com
-1581341947	tripleee	productlabel\.blogspot\.com
+1581341947	tripleee	productlabel\.blogspot
 1581341988	tripleee	ariy?an[\W_]*+packaging
 1581342563	Das_Geek	blogahp\.com
 1581342750	tripleee	instamove\.com
@@ -16529,7 +16529,7 @@
 1581422717	tripleee	a2[\W_]*+milk
 1581434261	Machavity	tfs4jira-azure-devops-integration
 1581434394	Machavity	(?-i:703379\.TFS4JIRA)
-1581447935	Das_Geek	happyholiquotess\.blogspot\.com
+1581447935	Das_Geek	happyholiquotess\.blogspot
 1581448036	Das_Geek	sphynx\.company\.com
 1581451218	Machavity	filmstream\.cc
 1581453659	Machavity	seo25\.com
@@ -17106,8 +17106,8 @@
 1582777299	Shree	streetnetmedia\.com
 1582782735	Shree	cypherace\.projanalytics\.com
 1582784862	Shree	video-softwares\.com
-1582786763	Shree	herbertholley\.blogspot\.com
-1582786796	Shree	onlinebuymedsblog\.blogspot\.com
+1582786763	Shree	herbertholley\.blogspot
+1582786796	Shree	onlinebuymedsblog\.blogspot
 1582787108	Shree	wsneconsulting\.com
 1582790093	double-beep	internetleadstraining\.com
 1582791596	Shree	businesstrends\.com\.pk
@@ -17501,7 +17501,7 @@
 1583780888	Glorfindel	convertostpst\.org
 1583780912	tripleee	goharbor\.io
 1583780945	Glorfindel	aryson
-1583784165	tripleee	technicalblog4you\.blogspot\.com
+1583784165	tripleee	technicalblog4you\.blogspot
 1583805777	Eliah Kagan	talkovlaw\.com
 1583806910	Eliah Kagan	beatestan\.om
 1583809061	Eliah Kagan	Uh1999(?:@hothotmail\.com)?
@@ -17646,7 +17646,7 @@
 1584104062	Das_Geek	mamasroyalcoffee\.com
 1584104119	Das_Geek	certmagic\.com
 1584104173	Das_Geek	surveytoearn\.com
-1584104214	Das_Geek	designswow\.blogspot\.com
+1584104214	Das_Geek	designswow\.blogspot
 1584104297	Das_Geek	setasringtone\.com
 1584104350	Das_Geek	caringlyyours\.com
 1584104624	Das_Geek	ddelhiescorts\.com
@@ -17940,7 +17940,7 @@
 1584712957	Machavity	^sophia\Wworld$
 1584717879	Makyen	iluminatihood123(?:@gmail\.com)?
 1584725020	Jenayah	techpoil\.com
-1584730391	Kulfy	foolsvilla\.blogspot\.com
+1584730391	Kulfy	foolsvilla\.blogspot
 1584732215	Machavity	mehrabian9090(?:@gmail\.com)
 1584776935	Makyen	freeessaywriter\.net
 1584777700	Makyen	spreaker\.com
@@ -17976,7 +17976,7 @@
 1584829459	Eliah Kagan	diet_quiz(?#bit.ly)
 1584885006	Jenayah	jagallaptop\.com
 1584921585	Makyen	ampatentdrawings\.com
-1584938657	Nisse Engström	bestproductsbuyonlinebd\.blogspot\.com
+1584938657	Nisse Engström	bestproductsbuyonlinebd\.blogspot
 1584939748	Nisse Engström	achievementinmotion\.com
 1584946167	tripleee	imarticus(?:[\W_]*+learning)?
 1584957124	tripleee	(?:(?:3GA|3GP|AIFF|ASF|AU|AVCHD|Apple Lossless|Apple ProRes|CAF|DVR|F4V|FLV|M2T|M2TS|M4A|M4B|M4V|MKV|MOD|MOV|MPC|MTS|MVI|MXF|OGV|QCP|R3D|RA|RMVB|SHN|TOD|TS|TTA|VOB|VOC|WTV|WebM), ){5,}
@@ -18056,7 +18056,7 @@
 1585227445	Machavity	ocsuri\.com
 1585227772	double-beep	doctorsbenefits\.com
 1585228979	double-beep	ybom02\.com
-1585229785	tripleee	internetkihdduniya\.blogspot\.com
+1585229785	tripleee	internetkihdduniya\.blogspot
 1585237420	Makyen	crayoninfotech\.com
 1585239396	Machavity	safebizs\.com
 1585243899	tripleee	innovanathinklabs\.com
@@ -18170,7 +18170,7 @@
 1585710432	Makyen	fightingscams(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1585715967	tripleee	wondercap\.com
 1585716336	tripleee	p2play88\.org
-1585724077	tripleee	healthmadebig\.blogspot\.com
+1585724077	tripleee	healthmadebig\.blogspot
 1585732112	tripleee	nousinfosystems\.com
 1585733497	Nisse Engström	mbmc\.at
 1585733528	Nisse Engström	irconcrete\.com
@@ -18494,7 +18494,7 @@
 1586760853	Makyen	hbeautytips\.com
 1586760962	Makyen	vivid[\W_]*+glow[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586761823	Makyen	(?:granite[\W_]*+x100|x100[\W_]*+granite)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1586773025	Nisse Engström	crazycodder\.blogspot\.com
+1586773025	Nisse Engström	crazycodder\.blogspot
 1586774703	Nisse Engström	flipepic\.com
 1586775198	Glorfindel	myotakuworld\.com
 1586778614	Nisse Engström	doubtcool\.com
@@ -18601,7 +18601,7 @@
 1587195455	Makyen	keto[\W_]*+biotic(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587202372	doppelgreener	cricket betting tips
 1587203164	Kulfy	thelinuxuser\.com
-1587213889	Nisse Engström	wildlifehubpakistan\.blogspot\.com
+1587213889	Nisse Engström	wildlifehubpakistan\.blogspot
 1587214947	Makyen	klariecannacare\.com
 1587219049	Makyen	churchofsataninitiationtemple(?:@gmail\.com)?
 1587219870	Makyen	krishitool\.com
@@ -18763,7 +18763,7 @@
 1587704456	Shree	greenbati\.com
 1587708188	Makyen	arenash\.com
 1587712411	tripleee	ajna[\W_]*+digital(?!$(?<=(?-i:^Ajna Digital$)))
-1587713886	tripleee	booktaxiairport\.blogspot\.com
+1587713886	tripleee	booktaxiairport\.blogspot
 1587727171	Makyen	orientdetectors\.com
 1587731494	Machavity	beyoung\.in
 1587733144	Machavity	unitedmedicines\.com
@@ -18880,7 +18880,7 @@
 1588042631	Makyen	mobydog@myfairpoint\.net
 1588055376	tripleee	travel-owl\.com
 1588056943	tripleee	earningnation\.com
-1588060183	tripleee	online-sellers\.blogspot\.com
+1588060183	tripleee	online-sellers\.blogspot
 1588062133	tripleee	amritsaryellowpages\.com
 1588066114	tripleee	tracewellness\.com
 1588068827	tripleee	birlaestates\.co
@@ -18891,7 +18891,7 @@
 1588079281	Makyen	apoganablackmagic\.com
 1588079326	Makyen	apoganalovespell(?:@gmail\.com)?
 1588079947	Xnero	aajithinfotech@gmail\.com
-1588080299	Xnero	crmhub\.blogspot\.com
+1588080299	Xnero	crmhub\.blogspot
 1588085591	tripleee	(?-i:wr6iIl_9hjw)(?# youtube)
 1588087708	Machavity	baybit\.io
 1588089941	Machavity	oldmanpublish\.com
@@ -18912,7 +18912,7 @@
 1588138121	Makyen	pcheckup\.com
 1588139143	Makyen	china-xingsheng\.net
 1588140299	Makyen	jitutogel\.net
-1588143246	tripleee	neo-christianity\.blogspot\.com
+1588143246	tripleee	neo-christianity\.blogspot
 1588144972	Makyen	(?-i:2YaZsNA)(?#bit.ly)
 1588144997	Makyen	musikproduktion-musicproduction\.com
 1588148244	tripleee	shareitforpcapkguide\.com
@@ -18942,7 +18942,7 @@
 1588221216	tripleee	bexo
 1588223712	tripleee	cycheatpoker\.com
 1588228156	Glorfindel	ksreenath\.com
-1588228182	Glorfindel	careerfinder4you\.blogspot\.com
+1588228182	Glorfindel	careerfinder4you\.blogspot
 1588238607	tripleee	gemeiwaterpurifier\.com
 1588239853	Mithical	mt\.gox
 1588247283	Xnero	trakop\.com
@@ -19056,7 +19056,7 @@
 1588509906	Makyen	share/507l77(?<=\bfiverr\.com/share/507l77)
 1588522444	Nisse Engström	besthuntbows\.com
 1588523494	Machavity	neptunofilms\.com
-1588523551	Machavity	vaibhavmojidra\.blogspot\.com
+1588523551	Machavity	vaibhavmojidra\.blogspot
 1588523594	Machavity	(?-i:7Xc_5cduL-Y)(?#Youtube)
 1588525894	Makyen	digitalnishkam\.com
 1588527149	Makyen	allaroundcoder\.com
@@ -19106,7 +19106,7 @@
 1588650287	Makyen	firstofallhacker(?:[\W_]*+(?:a+[\W_]*+t+[\W_]*+)?y+[\W_]*+a+[\W_]*+h+[\W_]*+o+[\W_]*+o+(?:[\W_]*+(?:d+[\W_]*+o+[\W_]*+t+[\W_]*+)?c+[\W_]*+o+[\W_]*+m+)?)?
 1588654425	tripleee	brenda[-_]enzymes\.org
 1588656007	tripleee	infobyd
-1588657689	tripleee	mydailyroutinnv\.blogspot\.com
+1588657689	tripleee	mydailyroutinnv\.blogspot
 1588662832	tripleee	thesims4mods\.com
 1588664291	tripleee	promobuddy\.in
 1588665376	tripleee	jinnatspecialist\.com
@@ -19363,7 +19363,7 @@
 1589315367	Makyen	ayurani2019\.wixsite\.com
 1589321420	Xnero	swharden\.com
 1589344012	tripleee	theversetech\.com
-1589344287	tripleee	theugcnet\.blogspot\.com
+1589344287	tripleee	theugcnet\.blogspot
 1589344373	tripleee	cstcbd\.com
 1589347402	tripleee	chandigarhcareergroup\.in
 1589347433	tripleee	chandigarh[\_]*+career[\W_]*+group(?!\.in)
@@ -19499,7 +19499,7 @@
 1589788314	tripleee	geek[\W_]*+squad(?:[\W_]*+(?:tech[\W_]*+)?support)?\d*
 1589791017	tripleee	pakansanat\.ir
 1589801192	Xnero	startuppaisa\.com
-1589801386	Xnero	fasilodream\.blogspot\.com
+1589801386	Xnero	fasilodream\.blogspot
 1589801914	tripleee	grouplinksrg\.in
 1589802594	tripleee	intersetmedia\.com
 1589804353	Xnero	pharmafranchiseworld\.com
@@ -19659,7 +19659,7 @@
 1590384739	tripleee	reikicuritiba\.com\.br
 1590384766	tripleee	cristaispuroencanto\.com\.br
 1590384792	tripleee	parvatiartigosindianos\.com\.br
-1590386105	tripleee	download-tamilmoviez\.blogspot\.com
+1590386105	tripleee	download-tamilmoviez\.blogspot
 1590391865	tripleee	wowessays\.com
 1590393047	Kulfy	talkwidtech\.com
 1590393158	tripleee	bitdataconversion\.com
@@ -19709,7 +19709,7 @@
 1590482762	Makyen	amozonpill\.com
 1590482787	Makyen	amozonpill(?!\.net)(?!\.com)
 1590492765	tripleee	aaaenos\.com
-1590492836	tripleee	americanblogreaders\.blogspot\.com
+1590492836	tripleee	americanblogreaders\.blogspot
 1590496022	tripleee	indiaeve(?!\.com)
 1590505043	Glorfindel	mt-koreatoto\.com
 1590515443	Xnero	sarkariwant\.com
@@ -19746,7 +19746,7 @@
 1590603425	Makyen	oiljobszone\.com
 1590603482	Makyen	cybercrypticofl
 1590605341	Machavity	warriormining\.com
-1590605874	Machavity	basthealthybost\.blogspot\.com
+1590605874	Machavity	basthealthybost\.blogspot
 1590615250	Machavity	mtpolice\.site
 1590618177	Makyen	r\.honeygain\.me
 1590618203	Makyen	(?-i:KEVIN21CB4)(?#r.honeygain.me)
@@ -19946,7 +19946,7 @@
 1591245266	user12986714	finaldesk\.co\.in
 1591245452	Makyen	centerpost[\W_]*+media
 1591247273	tripleee	finaldesk(?!\.co\.in)
-1591247519	Glorfindel	life30on\.blogspot\.com
+1591247519	Glorfindel	life30on\.blogspot
 1591247970	user12986714	if\W*+you?\W*+\w{0,30}?\W*+(?:not|n'?t)\W*+(?:\w++[^\w,]*+){0,20}+,\W*+(?:\w++\W*+){0,20}?shut\W*+up
 1591254128	Makyen	nutraxyn(?:[\W_]*+(?:usa|official|\d++|[\da-f]{4,}+))*
 1591254152	tripleee	sexual[\W_]*+endurance
@@ -20195,7 +20195,7 @@
 1591955492	tripleee	nsslaptopservicecenter\.in
 1591955674	tripleee	technohacker\.xyz
 1591957422	tripleee	poweragile\.com
-1591958678	tripleee	apcomingfuturetrends\.blogspot\.com
+1591958678	tripleee	apcomingfuturetrends\.blogspot
 1591958916	tripleee	howwikis\.com
 1591963003	tripleee	delhitempotravellers\.com
 1591969918	Machavity	diamondsmileteeth\.com
@@ -20204,7 +20204,7 @@
 1591972966	Machavity	prosfitness\.com
 1591974892	Byte Commander	typhoon-tv\.com
 1591975577	Machavity	nextpcb\.com
-1591984022	Machavity	okayguru\.blogspot\.com
+1591984022	Machavity	okayguru\.blogspot
 1591984506	Makyen	buyessay\.net
 1591985093	Machavity	dogtoa\.com
 1592003081	Machavity	(?-i:vz2ms-housing)(?#gofundme)
@@ -20255,7 +20255,7 @@
 1592173628	user12986714	kinotv\.net
 1592174489	Xnero	youronlinetricks\.com
 1592187078	Makyen	authenticoption\.com
-1592224947	Machavity	kanavancecbd\.blogspot\.com
+1592224947	Machavity	kanavancecbd\.blogspot
 1592225058	Machavity	stillbonarticles\.com
 1592226179	Machavity	migrateemails\.com
 1592226355	Machavity	fixlocal\.co\.uk
@@ -20419,7 +20419,7 @@
 1592715417	NobodyNada	google-services-api(?#pip package by Outscraper)
 1592723034	Makyen	topgistextra\.com
 1592726875	Makyen	cunhoalonso(?:@gmail\.com)?
-1592741326	Xnero	excelexpertblog\.blogspot\.com
+1592741326	Xnero	excelexpertblog\.blogspot
 1592741341	Xnero	alljobalert\.info
 1592746146	Xnero	thestudyiq\.com
 1592746161	Xnero	(?-i:The Study IQ)
@@ -20494,7 +20494,7 @@
 1592988134	Makyen	realdigitalmarketer\.blogspot
 1592990414	Xnero	monacosolicitors\.co\.uk
 1592990921	Makyen	hpsupportphonenumbers\.com
-1593001223	Machavity	how-to-generate-passive-income\.blogspot\.com
+1593001223	Machavity	how-to-generate-passive-income\.blogspot
 1593000882	Jeff Schaller	gangoh\.com
 1593001565	Machavity	htmloverride\.com
 1593004930	rene	companyurlfinder\.com
@@ -21085,7 +21085,7 @@
 1595233138	Makyen	beggar\.news
 1595233156	Makyen	beggar[\W_]*+news(?<!beggar\.news)
 1595233173	Makyen	ivisarussia\.com
-1595245878	Machavity	healthnews3366\.blogspot\.com
+1595245878	Machavity	healthnews3366\.blogspot
 1595246014	Machavity	Hestabit
 1595244649	Jeff Schaller	valuementor\.com
 1595246262	Machavity	adderallwiki\.org
@@ -21222,7 +21222,7 @@
 1595769087	Jeff Schaller	lichamduong
 1595769310	Eliah Kagan	lichamduongcom\.livejournal\.com
 1595775153	Jeff Schaller	websitedesignercanada\.ca
-1595782185	Xnero	thphotographyworld\.blogspot\.com
+1595782185	Xnero	thphotographyworld\.blogspot
 1595788669	Glorfindel	herku\.com
 1595791319	Ian Campbell	mygodimages\.com
 1595792657	Mast	colortarget\.wordpress\.com
@@ -21484,7 +21484,7 @@
 1596823060	Makyen	proserviceappeal\.com
 1596823074	Makyen	chordchord\.com
 1596823144	Makyen	drabioladeadlydiseasescure\.business\.site
-1596824759	Spevacus	drabu7demonspells\.blogspot\.com
+1596824759	Spevacus	drabu7demonspells\.blogspot
 1596824914	Makyen	d(?:octo)?r[\W_]*+abu
 1596824935	Makyen	drabu7demons(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1596826586	Makyen	addtalentsolutions\.com
@@ -21557,7 +21557,7 @@
 1597128461	Mast	Mectronics[\W_]*+Marketing[\W_]*+Services
 1597129435	tripleee	secpod\.com
 1597129450	tripleee	mectronics\.in
-1597129473	tripleee	promolearning\.blogspot\.com
+1597129473	tripleee	promolearning\.blogspot
 1597129490	tripleee	promo[\W_]*+learning(?!\.blogspot)
 1597137648	tripleee	topspraymop\.com
 1597137631	Mast	virtuemart\.club
@@ -21567,7 +21567,7 @@
 1597144360	Mast	acakid\.com
 1597162146	tripleee	(?-i:^mamahawa$)
 1597165597	tripleee	topspying\.com
-1597202841	tripleee	sixfigureincomepermonth\.blogspot\.com
+1597202841	tripleee	sixfigureincomepermonth\.blogspot
 1597203169	tripleee	vmix[\W_]*+(?:[\d.]+[\W_]*+)?crack
 1597204858	tripleee	escuela[\W_]*+tech(?:nologies)?
 1597204886	tripleee	(?-i:^7ny44cW5-Fo)(?# youtube)
@@ -21675,7 +21675,7 @@
 1597421359	Xnero	tanmaybagla(?:@gmail\.com)?
 1597427647	Mast	big\s+butts
 1597444360	Machavity	cashapphelp\.online
-1597445353	Xnero	drmavoospellscaster\.blogspot\.com
+1597445353	Xnero	drmavoospellscaster\.blogspot
 1597445386	Xnero	doctormavoo\.com
 1597445409	Xnero	mariapiagratton\.com
 1597446333	Xnero	ahmednurjimale5(?:@gmail\.com)?
@@ -21782,7 +21782,7 @@
 1597835049	doppelgreener	rateking\.com
 1597835327	tripleee	minkhairmall\.com
 1597835532	tripleee	mink[\W_]*+hair[\W_]*+mall(?!\.com)
-1597838539	tripleee	learnopenerp\.blogspot\.com
+1597838539	tripleee	learnopenerp\.blogspot
 1597838997	tripleee	ineedtrip\.com
 1597839066	tripleee	(?-i:UCe1HLY1HCK7lE2_xYP6hsgg)(?# youtube)
 1597850277	Das_Geek	avto-skup\.com\.ua
@@ -21813,7 +21813,7 @@
 1597919941	Mast	abiertos\.es
 1597872326	user12986714	<i>This is not italic<\/i>, and \[this is not a link\]\(https:\/\/example\.com\)(?#markdown formatting guide nonsense copy-pasting trolling)
 1597924231	Mast	(?-i:^ARABTECHNOLOGIE$)
-1597924102	Mast	condor-sw-firmware\.blogspot\.com
+1597924102	Mast	condor-sw-firmware\.blogspot
 1597936010	Spevacus	caythuocdangian\.vn
 1597936244	Ryan M	caythuocdangianofficial(?:@gmail\.com)?
 1597928593	Mast	retailoria\.com
@@ -21886,7 +21886,7 @@
 1598269907	tripleee	krishidirect\.com
 1598276703	tripleee	(?-i:W0fVUS0aHss)(?# youtube)
 1598280439	Mast	(?-i:833-XtGqZlg)(?# youtube)
-1598281324	tripleee	textpound\.blogspot\.com
+1598281324	tripleee	textpound\.blogspot
 1598279438	Mast	webhostingsearch\.com
 1598279450	user12986714	lizard101\.com
 1598279669	Mast	cashoutmarket\.com
@@ -22043,7 +22043,7 @@
 1598701726	Mast	mywifiextsolutions\.com
 1598711107	Xnero	arabxn\.com
 1598699903	Mast	talktoastro\.com
-1598699807	Mast	propkknowledge\.blogspot\.com
+1598699807	Mast	propkknowledge\.blogspot
 1598699770	Mast	islamicwazifa\.hatenadiary\.com
 1598721058	Makyen	wpw3schools\.com
 1598722944	Makyen	rjspret\.com
@@ -22171,7 +22171,7 @@
 1599113624	Makyen	(?-i:UCUO8Sya_HwsZOvByMbhcr-w)(?#YouTube channel)
 1599113676	Makyen	msx6[\W_]*+germany
 1599114410	Makyen	pleasesavemylife20(?:@gmail\.com)?
-1599112456	Mast	deepdivejava91\.blogspot\.com
+1599112456	Mast	deepdivejava91\.blogspot
 1599111426	Ryan M	syrotech\.com
 1599111426	Ryan M	syrotech(?:!\.com)
 1599115362	Makyen	(?-i:scocs\.uet)(?#facebook.com)
@@ -22405,7 +22405,7 @@
 1599814741	Mast	(?-i:5774b06d7bb11a6c355c214cd673d5da)(?#apnews.com)
 1599814956	Mast	cosmos[\W_]*+atom[\W_]*+token
 1599816904	Mast	iron[\W_]*+stack[\W_]*+pro
-1599820025	Mast	talhamanzoor2\.blogspot\.com
+1599820025	Mast	talhamanzoor2\.blogspot
 1599820112	Ryan M	claybag\.com
 1599817270	Mast	cairnhouseflorida\.com
 1599817495	Mast	(?-i:516fa837a68593a055e7a16b0e4934ed)(?#apnews.com)
@@ -22660,7 +22660,7 @@
 1600512492	Mast	contact[\W_]*+black[\W_]*+heart
 1600512626	Mast	assignmentshelp\.com\.pk
 1600519939	Mast	heatwarden\.io
-1600529376	Mast	bloggerinfosearch\.blogspot\.com
+1600529376	Mast	bloggerinfosearch\.blogspot
 1600529408	Mast	similarblogger\.wordpress\.com
 1600529592	Mast	justmashup\.com
 1600529629	Mast	justmashup(?!\.com)
@@ -22836,7 +22836,7 @@
 1601097291	Makyen	keto[\W_]*+burning(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
 1601116719	Mast	filmyduniya\.in
 1601116862	Mast	mrshabake\.com
-1601117066	Mast	suckhoesinhlyaz\.blogspot\.com
+1601117066	Mast	suckhoesinhlyaz\.blogspot
 1601122064	Mast	davidattenboroughcbd(?#sites.google.com)
 1601122116	Mast	david[\W_]*+attenborough[\W_]*+cbd
 1601055781	Spevacus	deepseaatlanticna\.com
@@ -23361,7 +23361,7 @@
 1603181422	tripleee	vaobong\.tv
 1603185140	Ryan M	akus\.co\.ke
 1603185527	Ryan M	fixallerror\.com
-1603186968	Ryan M	qr-creator\.blogspot\.com
+1603186968	Ryan M	qr-creator\.blogspot
 1603189235	Ryan M	vision(?<!play-services-vision)[\s_-]*+20
 1603189747	Ryan M	\w*tpoint\.com(?<!javatpoint\.com)(?<!spreadsheetpoint\.com)
 1603191167	tripleee	branddiscount\.co\.uk
@@ -23515,7 +23515,7 @@
 1603680686	Makyen	celltrackingapps\.com
 1603689194	tripleee	azpreferredplumbing\.com
 1603693622	tripleee	(?-i:^karenminton$)
-1603694491	tripleee	watchesaaa\.blogspot\.com
+1603694491	tripleee	watchesaaa\.blogspot
 1603699792	tripleee	k12\.instructure\.com
 1603703080	tripleee	officialgalaxyrose\.com
 1603707536	tripleee	onlinebeststor\.tumblr\.com
@@ -23866,7 +23866,7 @@
 1604915122	tripleee	thanhhuongshop\.com
 1604916760	tripleee	getmecrack\.com
 1604916780	tripleee	portabledownloads\.com
-1604919035	tripleee	rodeonfr\.blogspot\.com
+1604919035	tripleee	rodeonfr\.blogspot
 1604920522	tripleee	acconpit\.com
 1604921801	tripleee	remotehub\.com
 1604923809	tripleee	thepetitionsite\.com
@@ -24760,7 +24760,7 @@
 1608288321	tripleee	mywifiiextnet\.com
 1608290170	tripleee	9o93789l42
 1608290189	tripleee	musician[\W_]*+choice
-1608291030	tripleee	allinstoreindia\.blogspot\.com
+1608291030	tripleee	allinstoreindia\.blogspot
 1608291817	tripleee	customwritingservice\.com
 1608295148	tripleee	imoneyslots\.com
 1608296157	tripleee	todaykhoe\.com
@@ -24780,7 +24780,7 @@
 1608373926	Cody Gray	bongda360\.org
 1608364735	Cody Gray	instantpotreview\.us
 1608370598	Cody Gray	premiumqualityevents\.com
-1608370623	Cody Gray	eventplannersinflorida\.blogspot\.com
+1608370623	Cody Gray	eventplannersinflorida\.blogspot
 1608381262	Jeff Schaller	TracyInste
 1608388412	Jeff Schaller	robinbuckler
 1608388792	Cody Gray	medyaankara\.com
@@ -24870,7 +24870,7 @@
 1608697965	Ryan M	peak[\W_]*+surge
 1608698563	Ryan M	casinotructuyen\.vn
 1608701718	Ryan M	AZ-104 exam
-1608703962	tripleee	badshahstatushindi\.blogspot\.com
+1608703962	tripleee	badshahstatushindi\.blogspot
 1608393569	cigien	phillip-kruger\.com
 1608707106	cigien	pillsdaddy\.com
 1608707568	tripleee	digidir\.com
@@ -24885,14 +24885,14 @@
 1608727545	Victor VosMottor	podklyuchitinternet\.ru
 1608734593	Zoe	bridgecitycabinetry\.ca
 1608736870	Cody Gray	keylok\.com
-1608742041	Cody Gray	learncsharpythoncheap\.blogspot\.com
+1608742041	Cody Gray	learncsharpythoncheap\.blogspot
 1608744613	Ollie	felezmall\.com
 1608745902	Spevacus	axiomprint\.com
 1608754963	Spevacus	khalabanemoshaver\.ir
 1608786684	Makyen	trustableshop\.com
 1608792556	cigien	sneed4speed\.com
 1608809367	Glorfindel	wifisecureaccess\.com
-1608809383	Glorfindel	homewifisecureaccess\.blogspot\.com
+1608809383	Glorfindel	homewifisecureaccess\.blogspot
 1608808923	Cody Gray	cifiyah\.com
 1608811977	Jeff Schaller	eShop code(s)?
 1608807489	Yatin	gothicattitude\.com
@@ -24923,7 +24923,7 @@
 1608981447	Yatin	10tv\.in
 1608984399	ppwater	sites\.google\.com/view/acidaburn\-.+
 1608966260	cigien	(?-i:fZ2YjmNrSnU)(?#youtube)
-1608986525	Zoe	hindigalaxy0077\.blogspot\.
+1608986525	Zoe	hindigalaxy0077\.blogspot
 1608961393	cigien	kingsfirmware\.com
 1608952808	cigien	(?:^Big Dick$)
 1608866906	cigien	crunchytricks\.com
@@ -24934,7 +24934,7 @@
 1609031202	Makyen	kickoffbet789\.com
 1609032406	Jeff Schaller	groupdocs\.com
 1609056424	ppwater	minecraftskins\.store
-1609057009	ppwater	yismxplusc\.blogspot\.com
+1609057009	ppwater	yismxplusc\.blogspot
 1609043682	ppwater	govtjobs\.com\.pk
 1609052236	Cody Gray	appsdeveloperchennai\.com
 1609055873	ppwater	4th\.co\.in
@@ -25707,7 +25707,7 @@
 1611403379	Yatin	Jacki\W+Rickert\W+Medical\W+Marijuana\W+Act
 1611407108	Yatin	marycristineo\.wixsite\.com
 1611413472	Yatin	mobilenumerology\.com
-1611415226	Yatin	kumarprateek\.blogspot\.com
+1611415226	Yatin	kumarprateek\.blogspot
 1611416922	Spevacus	allnewjobcircular\.com
 1611416960	Spevacus	resultofficial\.com
 1611418460	Makyen	info\.lowkeydevelopment(?:@gmail\.com)?
@@ -25876,7 +25876,7 @@
 1611922334	double-beep	newswed\.com
 1611925796	Jeff Schaller	mariaelectricals\.com
 1611926048	Jeff Schaller	propliners\.in
-1611926538	tripleee	buybestsewingmachine\.blogspot\.com
+1611926538	tripleee	buybestsewingmachine\.blogspot
 1611926583	tripleee	cheap[\W_]*+best[\W_]*+sewing[\W_]*+machine
 1611981082	cigien	matjrk\.com
 1611983162	cigien	gkaccess\.com
@@ -26211,7 +26211,7 @@
 1612873937	tripleee	crackswaz\.com
 1612874328	Ryan M	cracks\w{3}(?<!(?:mak|mox|waz|fab|war|all|kit|cam|ray|oul))\.com(?# campaign repeatedly adding new domains in this format, minus the ones we know already)
 1612877361	Ryan M	paseet\.com
-1612879357	Xnero	rahasyacommunity\.blogspot\.com
+1612879357	Xnero	rahasyacommunity\.blogspot
 1612883345	double-beep	passportphotocodeuk\.com
 1612889045	double-beep	sgcms\.com
 1612889383	double-beep	tgm-tecnologia\.com
@@ -26690,7 +26690,7 @@
 1614161845	Makyen	dien[\W_]*+lanh[\W_]*+thien[\W_]*+hoa(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1614173995	Spevacus	hospitalityabudhabi\.com
 1614174046	Spevacus	qualitypackagingsolutions\.co\.uk
-1614157568	Xnero	cheswins\.blogspot\.com
+1614157568	Xnero	cheswins\.blogspot
 1614000960	Xnero	(?-i:^Amy[\W_]*Carter$)
 1614178280	Spevacus	roomme\.id
 1614183271	double-beep	klapty\.com
@@ -26992,7 +26992,7 @@
 1614950333	Yatin	nkclassic\.com
 1614944447	Yatin	complete[\W_]+vision[\W_]+formula
 1614941325	Yatin	ketoadvanced1500diets\.com
-1614941336	Yatin	benefitsoflifechanges\.blogspot\.com
+1614941336	Yatin	benefitsoflifechanges\.blogspot
 1614941346	Yatin	getketoadvanced1500\.medium\.com
 1614951653	Spevacus	snvservices\.com
 1614952998	Spevacus	brocoders\.com
@@ -27311,7 +27311,7 @@
 1616064994	tripleee	domaincer\.com
 1616067746	Yatin	blog\.vplayed\.com
 1616067580	Yatin	(?-i:H0TpX8cwL6DDzfTQpgpiqT)(?# WhatsApp group)
-1615963459	Yatin	oneshotketoofficialtrial\.blogspot\.com
+1615963459	Yatin	oneshotketoofficialtrial\.blogspot
 1616068332	tripleee	vplayed\.com
 1615962589	Yatin	^edusolve[\W_]*edutech$
 1616068408	Yatin	ivanovation\.ro
@@ -27627,7 +27627,7 @@
 1617085767	Makyen	get-spnote\.com
 1617087696	tripleee	ox599\.com
 1617092278	Glorfindel	memes-generator\.net
-1617094170	tripleee	onfield11\.blogspot\.com
+1617094170	tripleee	onfield11\.blogspot
 1617103614	cigien	canhcam\.vn
 1617103953	cigien	koinbazar\.com
 1617104147	cigien	startupsguide\.co\.in
@@ -29311,7 +29311,7 @@
 1622585469	Ryan M	jpeeiclinic\.com
 1622590721	cigien	jpeei[\W_]*+clinic(?!\.com(?<=jpeeiclinic\.com))
 1622599815	cigien	kenhtuyensinh24h\.com
-1622614077	tripleee	themoviecharge\.blogspot\.com
+1622614077	tripleee	themoviecharge\.blogspot
 1622617505	tripleee	(?-i:TS4lDvBrdzY)(?# youtu.be)
 1622626566	tripleee	mywifiext\.xyz
 1622628087	tripleee	tikkamasala\.us
@@ -29731,9 +29731,9 @@
 1624096704	Makyen	(?:pure[\W_]*+)?fenbendazole(?:[\W_]*+(?:capsules|powder|\d++|[\da-f]{5,}+)s?)+
 1624102544	Cody Gray	patrickdonnelly222(?:@gmail\.com)?
 1624103278	rene	fabricpitara\.com
-1624104178	Cody Gray	affizoo\.blogspot\.com
+1624104178	Cody Gray	affizoo\.blogspot
 1624104196	Cody Gray	best[\W_]*premium[\W_]*blogger[\W_]*template
-1624106253	Cody Gray	e4earnoline\.blogspot\.com
+1624106253	Cody Gray	e4earnoline\.blogspot
 1624113404	Cody Gray	buytruefollowers\.com
 1624113425	Cody Gray	buy[\W_]*ig[\W_]*followers
 1624114958	Cody Gray	monirulislam949
@@ -30014,7 +30014,7 @@
 1624961111	Cody Gray	itworldsoft\.com
 1624962879	tripleee	korner\.pk
 1624962990	tripleee	marketingmercury\.com
-1624963382	tripleee	app-bizz\.blogspot\.com
+1624963382	tripleee	app-bizz\.blogspot
 1624964283	tripleee	foursquareoutdoors\.com
 1624972169	Spevacus	zoshdigitate\.com
 1624986765	cigien	brandergroup\.net
@@ -30056,7 +30056,7 @@
 1625070138	cigien	svr[\W_]*+global[\W_]*+solutions(?!\.com(?<=svrglobalsolutions\.com))
 1625071113	cigien	redgate\.research\.net
 1625074250	10 Rep	gbapps\.in
-1625072144	10 Rep	blogspotexchange\.blogspot\.com
+1625072144	10 Rep	blogspotexchange\.blogspot
 1625072120	Ollie	blogspot\.exchange
 1625079360	10 Rep	fashionluxshop\.com
 1625080046	cigien	puja-sharma\.medium\.com
@@ -30069,11 +30069,11 @@
 1625122178	tripleee	chocomachinery\.com
 1625122256	tripleee	newhotplaza\.com
 1625122623	tripleee	usaxoom\.com
-1625122821	tripleee	t10kwithshahin\.blogspot\.com
+1625122821	tripleee	t10kwithshahin\.blogspot
 1625130354	tripleee	periodix\.net
 1625130386	tripleee	periodix(?!\.net)
 1625130479	tripleee	playlist\.tools
-1625135883	tripleee	history-den\.blogspot\.com
+1625135883	tripleee	history-den\.blogspot
 1625135908	tripleee	creativaties\.com
 1625136796	tripleee	(?-i:3htiGpP)(?# bit.ly)
 1625140128	tripleee	meridairy\.in
@@ -30336,7 +30336,7 @@
 1625906046	Makyen	folharegional\.org
 1625909100	double-beep	streetview3d\.org
 1625909682	double-beep	sanjayjangam\.com
-1625909979	Cody Gray	factlogical\.blogspot\.com
+1625909979	Cody Gray	factlogical\.blogspot
 1625912142	double-beep	sliww\.com
 1625912163	double-beep	ratwk\.com
 1625912189	double-beep	armilo\.in
@@ -31253,7 +31253,7 @@
 1629181320	tripleee	marketingpulp\.com
 1629182714	Ryan M	b2bexportimportacademy\.com
 1629182943	tripleee	elitegross\.com
-1629185371	tripleee	free-kali-course\.blogspot\.com
+1629185371	tripleee	free-kali-course\.blogspot
 1629185410	tripleee	mobypicture\.com
 1629185543	tripleee	aurogra
 1629185662	tripleee	neem[\W_]*+(?:tree|leaf)
@@ -31598,7 +31598,7 @@
 1630385858	tripleee	simpletraffic\.co
 1630387475	cigien	conceptsall\.com
 1630389452	cigien	(?-i:roxrEb)(?#fiverr)
-1630390982	cigien	chinnitechseries\.blogspot\.com
+1630390982	cigien	chinnitechseries\.blogspot
 1630391387	cigien	drbacsi\.com
 1630392165	Makyen	vakilkaro\.com
 1630394095	tripleee	biggboss15todayepisode\.com
@@ -31607,7 +31607,7 @@
 1630404837	tripleee	getresponse\.com
 1630408297	tripleee	tdupy\.com
 1630408398	tripleee	my[\W_]*+bill[\W_]*+book(?!\.in)
-1630409851	tripleee	solutiondoodz\.blogspot\.com
+1630409851	tripleee	solutiondoodz\.blogspot
 1630412532	tripleee	sportsshow\.net
 1630413410	Spevacus	en\.cliniquemaindor\.com
 1630413461	tripleee	lyricsastra\.com
@@ -31635,7 +31635,7 @@
 1630487900	tripleee	(?-i:^tech village$)
 1630489969	tripleee	guitaa\.com
 1630490037	tripleee	jobsuraksha\.in
-1630491107	tripleee	trickstricker\.blogspot\.com
+1630491107	tripleee	trickstricker\.blogspot
 1630491985	Ryan M	creativemediahouse\.ae
 1630493238	tripleee	(?-i:^Hemendra Singh$)
 1630493525	Ryan M	pinterfone\.com
