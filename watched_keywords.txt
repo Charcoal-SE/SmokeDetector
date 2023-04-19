@@ -4255,7 +4255,6 @@
 1533030225	tripleee	amazonprimesupport\.com
 1533032056	tripleee	aptrondelhi\.in
 1533039322	tripleee	blastrestore\.co\.uk
-1533040343	Glorfindel	onlineweblogsite\.blogspot
 1533041192	tripleee	acowebs\.com
 1533045195	Glorfindel	geoproxies\.com
 1533046787	Mithrandir	Bark\W?Busters
@@ -6583,7 +6582,6 @@
 1545119372	Makyen	(?s:109(?<=\$109)\.95.{0,400}?periods?|periods?.{0,400}?\$109\.95)
 1545120858	Shree	michaelnordmannloanfirm(?:@gmail\.com)
 1545120872	tripleee	fincarebank\.com
-1545121950	tripleee	wpstatus143\.blogspot
 1545124967	Makyen	boostersignalindia\.in
 1545124970	Tetsuya Yamamoto	thesis-dissertationwritinghelp\.com
 1545126091	tripleee	bexplus\.com
@@ -10491,7 +10489,6 @@
 1563228351	Makyen	(?-i:Cjduc\.jpg)
 1563228377	Makyen	hackbornto7(?:@gmail\.com)?
 1563228399	Makyen	doli058450
-1563229982	Makyen	naturalhealthprod\.blogspot
 1563230026	Makyen	naturalprod\.health\.blog
 1563247580	Nisse Engström	cliprify\.com
 1563247748	Makyen	sanatino\.com
@@ -12081,7 +12078,6 @@
 1568380952	Makyen	blog\.hatena\.ne\.jp
 1568380963	Makyen	flooringfitness(?!\.com)
 1568381026	Makyen	ketofitrecenze\.wixsite\.com
-1568381057	Makyen	smithjenny\.blogspot
 1568381129	Makyen	jennysmith\.hatenablog\.com(?#URL path)
 1568384571	Machavity	mortiselockset\.tumblr\.com
 1568386943	Machavity	atldiesel\.com
@@ -12230,12 +12226,10 @@
 1568868449	Makyen	mysoretaxiservices\.com
 1568873431	tripleee	techsundhar\.com
 1568874280	Shree	mick7788\.blogspot
-1568874283	tripleee	mick7788\.blogspot
 1568874317	tripleee	xanax\W*addictions
 1568876519	tripleee	ko\W?beards?
 1568876636	Makyen	lacynash\.kinja\.com
 1568876657	Makyen	(?-i:sZlSc\.jpg)
-1568876692	Makyen	sharktankdietreview\.blogspot
 1568876728	Makyen	sharktankdietreviews\.wordpress\.com
 1568876794	tripleee	Tapes\W*to\W*digital
 1568876911	tripleee	furniture-company-transport\.com
@@ -16423,7 +16417,6 @@
 1581103478	Eliah Kagan	Jetnos(?:freak|thai)
 1581103981	Eliah Kagan	bitstarz\.com
 1581107021	Eliah Kagan	admissioninbangalore\.in
-1581107043	Eliah Kagan	rvceadmission\.blogspot
 1581111161	Das_Geek	byshep\.com
 1581112827	Eliah Kagan	discriminationandsexualharassmentlawyers\.com
 1581128028	Machavity	tigerjohnsonholdings\.com
@@ -20233,7 +20226,6 @@
 1592093949	Makyen	free\.cc
 1592093992	Makyen	kodaktif\.com
 1592094008	Makyen	hannah@goodhometime\.com
-1592094024	Makyen	apcomingfuturetrends\.blogspot
 1592094040	Makyen	(?-i:wa7vxr24HfqeuRxK9)(?#forms.gle)
 1592094056	Makyen	(?-i:bkCQV\.jpg)
 1592094149	Makyen	plutoshelmet\.com
@@ -23961,7 +23953,6 @@
 1605113424	tripleee	qiangc\.net
 1605139905	Spevacus	hdiptv24\.de
 1605148187	Makyen	copiadelamontres\.blogspot
-1605148209	Makyen	watchesaaa\.blogspot
 1605159515	Ryan M	supersitenet\.com
 1605160973	Ryan M	agility\.im
 1605161337	Ryan M	codingwithsid\.in
