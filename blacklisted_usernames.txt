@@ -879,3 +879,4 @@ nilesecurity
 (?-i:^charlryan$)
 (?-i:^ZOEY ZHOU$)
 (?-i:^surouyeye$)
+(?-i:^wishmed website$)
