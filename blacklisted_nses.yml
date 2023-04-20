@@ -253,6 +253,9 @@ items:
   - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
+  - garret.ns.cloudflare.com.
+  - liberty.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
