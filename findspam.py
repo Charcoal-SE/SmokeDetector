@@ -2248,7 +2248,7 @@ city_list = [
     "Jaipur", "Jalandhar", "Jim Corbett",
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
     "Kochi", "Kolkata", "Kota",
-    "Lokhandwala", "Lonavala", "Ludhiana",
+    "Lokhandwala", "Lonavala", "Lucknow", "Ludhiana",
     "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli", "Mayur Vihar",
     "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Mulund", "Mumbai",
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
