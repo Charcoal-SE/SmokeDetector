@@ -49934,3 +49934,4 @@
 1681980633	tripleee	arabasozluk\.com
 1681982545	tripleee	harmonicaindia\.in
 1681982855	tripleee	darazpakistan\.pk
+1681983064	tripleee	black[\W_]*+cobra[\W_]*+tablets?
