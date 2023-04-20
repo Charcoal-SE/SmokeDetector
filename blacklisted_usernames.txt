@@ -880,3 +880,4 @@ nilesecurity
 (?-i:^ZOEY ZHOU$)
 (?-i:^surouyeye$)
 (?-i:^wishmed website$)
+(?-i:^Crypto[\W_]*+Ape$)
