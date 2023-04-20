@@ -797,6 +797,9 @@ items:
   - dee.ns.cloudflare.com.
 - ns:
   - bob.ns.cloudflare.com.
+  - lara.ns.cloudflare.com.
+- ns:
+  - bob.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - comment: all FP 0/4 over 3 years 2022-11-08
   disable: true
