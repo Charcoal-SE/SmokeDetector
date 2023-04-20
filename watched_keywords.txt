@@ -48906,7 +48906,6 @@
 1679646226	tripleee	techspawn\.com
 1679646392	tripleee	advocateatulsharma\.com
 1679646469	tripleee	prosecurityguard\.com
-1679646576	Ryan M	lowestflightfares\.com
 1679646633	Ryan M	workink\.me
 1679646733	tripleee	jepara\.go\.id
 1679646781	tripleee	e-journal\.stai-iu\.ac\.id
