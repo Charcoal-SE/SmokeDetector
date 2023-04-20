@@ -49942,3 +49942,4 @@
 1681988697	tripleee	vynzresearch\.com
 1681988724	tripleee	apollonlimassol@gmail\.com
 1681988750	tripleee	mailmodo\.com
+1681988839	tripleee	$(-i:^Sankalp Vayamedia$)
