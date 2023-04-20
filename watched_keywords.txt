@@ -49942,3 +49942,4 @@
 1681988839	tripleee	$(-i:^Sankalp Vayamedia$)
 1681988938	tripleee	bilet\.com
 1681992311	tripleee	fullstackadda\.com
+1681992911	tripleee	worldofsmokenvape\.com
