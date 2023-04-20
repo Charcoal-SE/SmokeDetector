@@ -49936,3 +49936,4 @@
 1681982855	tripleee	darazpakistan\.pk
 1681983064	tripleee	black[\W_]*+cobra[\W_]*+tablets?
 1681987460	Artur Meinild	thehumanelement\.bconglobal\.com
+1681988049	Jeff Schaller	reliablebusinessinsights\.com
