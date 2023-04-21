@@ -5321,3 +5321,4 @@ fight-streams-2023\.blogspot
 nbalive-streamx\.blogspot
 (?-i:NBA-Free-Links)(?#tinyurl.com)
 1boxing-streaming\.blogspot
+golflive-streamx\.blogspot
