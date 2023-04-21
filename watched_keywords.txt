@@ -49959,3 +49959,4 @@
 1682051558	Jesse	dewalt-retail\.com
 1682051571	Jesse	feastdinnerjournal\.com
 1682051601	Jesse	hraovat\.com
+1682056317	tripleee	powershell[\W_]*+sysadmin[\W_]*+crash[\W_]*+course
