@@ -882,4 +882,3 @@ nilesecurity
 (?-i:^wishmed website$)
 (?-i:^Crypto[\W_]*+Ape$)
 (?-i:^Ryan Frayn$)
-(?-i:^Predksi$)
