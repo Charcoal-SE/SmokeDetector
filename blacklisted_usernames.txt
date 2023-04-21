@@ -883,3 +883,4 @@ nilesecurity
 (?-i:^Crypto[\W_]*+Ape$)
 (?-i:^Ryan Frayn$)
 (?-i:^Prediksi$)
+(?-i:^Yugasa Software Labs$)
