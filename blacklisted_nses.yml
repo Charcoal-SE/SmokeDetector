@@ -307,6 +307,9 @@ items:
   - kayleigh.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
+  - kurt.ns.cloudflare.com.
+  - nina.ns.cloudflare.com.
+- ns:
   - lady.ns.cloudflare.com.
   - lamar.ns.cloudflare.com.
 - ns:
