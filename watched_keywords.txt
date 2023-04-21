@@ -49963,3 +49963,4 @@
 1682056430	tripleee	teknovatecrm\.in
 1682056460	tripleee	floorndecor\.com\.au
 1682056481	tripleee	fundrecovery\d*+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1682057176	tripleee	d(?:octo)?r[\W_]*+chris[\W_]*+garner
