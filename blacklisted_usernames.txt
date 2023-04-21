@@ -885,3 +885,4 @@ nilesecurity
 (?-i:^Prediksi$)
 (?-i:^Yugasa Software Labs$)
 (?-i:^Walk In Chiropractor$)
+(?-i:^Creative Desk India$)
