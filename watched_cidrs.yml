@@ -4787,6 +4787,7 @@ items:
 - ip: 52.9.73.7
 - ip: 52.95.174.18
 - ip: 54.145.205.131
+- ip: 54.153.53.99
 - comment: git.io, ejabberd etc - don't watch
   disable: true
   ip: 54.157.58.70
