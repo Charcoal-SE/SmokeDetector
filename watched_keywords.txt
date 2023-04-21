@@ -49983,4 +49983,3 @@
 1682092182	tripleee	(?-i:^omyash$)
 1682095020	Nisse Engström	trigunaagritech\.com
 1682096400	Ian Campbell	isidore\.co
-1682096906	tripleee	(?-i:^Geremia$)
