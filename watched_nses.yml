@@ -1915,6 +1915,9 @@ items:
   - grace.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
+  - gracie.ns.cloudflare.com.
+  - mark.ns.cloudflare.com.
+- ns:
   - graham.ns.cloudflare.com.
   - kristin.ns.cloudflare.com.
 - ns:
