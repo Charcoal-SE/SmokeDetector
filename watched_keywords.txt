@@ -49972,3 +49972,4 @@
 1682069062	tripleee	tradeimex\.in
 1682073085	tripleee	lorcum[\W_]*+security
 1682076529	Jeff Schaller	shizegogogo\.com
+1682076995	Jeff Schaller	storefashionjunction\.wordpress\.com
