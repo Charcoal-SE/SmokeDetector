@@ -50002,3 +50002,4 @@
 1682179932	Spevacus	vn138\.day
 1682183360	tripleee	timeofsms\.com
 1682183571	tripleee	(?-i:3oDrJeM)(?# bit.ly)
+1682187061	Spevacus	livefight\.online
