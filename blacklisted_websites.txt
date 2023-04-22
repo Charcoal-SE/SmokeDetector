@@ -5323,3 +5323,4 @@ nbalive-streamx\.blogspot
 1boxing-streaming\.blogspot
 golflive-streamx\.blogspot
 dazn-showtime-fight-streams\.blogspot
+boxing-live-streamx\.blogspot
