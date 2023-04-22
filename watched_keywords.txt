@@ -48745,7 +48745,6 @@
 1679292771	tripleee	verified[\W_]*+(?:[^\W_]++[\W_]++){0,3}accounts?
 1679293022	tripleee	lotteryteer\.in
 1679295610	Makyen	postage-solutions\.co\.uk
-1679295654	Makyen	pendrivedatarecovery\.org
 1679304315	tripleee	cottonmonk\.com
 1679304371	tripleee	assignmenthelp\.london
 1679305266	tripleee	strengthscape(?!\.com)(?<!(?-i:^strengthscape$))
