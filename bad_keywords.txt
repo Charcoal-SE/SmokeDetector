@@ -2830,3 +2830,4 @@ kanye[\W_]*+(?:west[\W_]*+)?(?:(?:sweat|t[\W_]*+)?shirt|hoodie|merch(?:andise)?|
 UEFA_2023_LIVE
 core[\W_]*+max[\W_]*+ultra
 refd_by=tkt
+(?-i:RBR-99xit\.pdf)
