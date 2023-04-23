@@ -5331,3 +5331,4 @@ rmoutlook\.com
 (?-i:3KQzCVO)(?#bit.ly)
 euraxess\.ec\.europa\.eu/sites
 (?-i:hHvRKZ6u0U)(?#t.co)
+(?-i:FULL_FIGHT)(?#bit.ly)
