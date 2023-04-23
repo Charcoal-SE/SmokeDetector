@@ -50017,3 +50017,4 @@
 1682262947	Makyen	d(?:octo)?r[\W_]*+subla
 1682270626	Makyen	abattisconsulting\.com
 1682270660	Makyen	abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))
+1682284424	Spevacus	docs\.elmcomputing\.io
