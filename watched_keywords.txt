@@ -50014,3 +50014,4 @@
 1682260270	Jeff Schaller	affiliate\.tiktok\.com
 1682262903	Makyen	dr\.sublatradictionhome(?:@gmail\.com)?
 1682262925	Makyen	drsublatraditionherbalhome\.wordpress\.com
+1682262947	Makyen	d(?:octo)?r[\W_]*+subla
