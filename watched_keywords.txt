@@ -35217,7 +35217,6 @@
 1642581188	tripleee	seoexpertsnearme\.com
 1642581657	tripleee	bestpkjobs\.info
 1642581687	tripleee	atuludyog\.com
-1642581829	tripleee	epizy\.com
 1642584235	tripleee	maldives-times\.com
 1642585003	tripleee	mettl\.com
 1642585517	tripleee	aakash[\W_]*+education
