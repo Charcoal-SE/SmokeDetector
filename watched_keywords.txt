@@ -50014,7 +50014,6 @@
 1682262903	Makyen	dr\.sublatradictionhome(?:@gmail\.com)?
 1682262925	Makyen	drsublatraditionherbalhome\.wordpress\.com
 1682262947	Makyen	d(?:octo)?r[\W_]*+subla
-1682270626	Makyen	abattisconsulting\.com
 1682284424	Spevacus	docs\.elmcomputing\.io
 1682293735	Jeff Schaller	royalyachtdubai\.com
 1682299695	Spevacus	pabloshealthtipsandremedies
