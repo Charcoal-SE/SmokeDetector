@@ -50019,3 +50019,4 @@
 1682270660	Makyen	abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))
 1682284424	Spevacus	docs\.elmcomputing\.io
 1682293735	Jeff Schaller	royalyachtdubai\.com
+1682299695	Spevacus	pabloshealthtipsandremedies
