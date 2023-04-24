@@ -50041,3 +50041,4 @@
 1682341125	tripleee	mypcpanda\.com
 1682341213	tripleee	financebuzz\.net
 1682341250	tripleee	prestaheroes\.com
+1682353982	tripleee	(?-i:^Sofia Smith$)
