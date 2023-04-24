@@ -2287,6 +2287,9 @@ items:
   - joaquin.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
 - ns:
+  - joaquin.ns.cloudflare.com.
+  - zariyah.ns.cloudflare.com.
+- ns:
   - jocelyn.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
