@@ -50037,3 +50037,4 @@
 1682338427	Jeff Schaller	bbuzzart\.com
 1682339230	tripleee	rowanbell28(?# multiple social accounts)
 1682339343	tripleee	(?-i:^felire$)
+1682341016	Jeff Schaller	ritumahajan\.com
