@@ -889,3 +889,4 @@ nilesecurity
 (?-i:^lovelifewes520$)
 (?-i:^pendrivedatarecovery$)
 (?-i:abattis consulting$)
+(?-i:^abattics abattics$)
