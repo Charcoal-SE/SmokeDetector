@@ -50031,3 +50031,4 @@
 1682327064	tripleee	(?-i:^Mindy Hausler$)
 1682330806	tripleee	mindmade[\W_]*+tecnologies
 1682332468	tripleee	abattics
+1682333658	tripleee	almotion\.net
