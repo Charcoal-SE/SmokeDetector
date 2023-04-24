@@ -50032,4 +50032,3 @@
 1682324412	tripleee	tridevairambulance\.com
 1682327064	tripleee	(?-i:^Mindy Hausler$)
 1682330806	tripleee	mindmade[\W_]*+tecnologies
-1682332158	tripleee	abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))(?<!(^-i:abattis consulting$))
