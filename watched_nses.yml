@@ -4107,7 +4107,6 @@ items:
   disable: true
   ns: bluehost.com.
 - ns: bluehost.in.
-- ns: dnsserverboot.com.
 - ns: just2trade.online.
 - ns: boxsecured.com.
 - comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but not resolving
