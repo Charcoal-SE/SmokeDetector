@@ -5335,3 +5335,4 @@ euraxess\.ec\.europa\.eu/sites
 (?-i:H7Wl6Jj)(?#cutt.ly)
 abattisconsulting\.com
 airlinesadviser\.com
+webcluesinfotech\.com
