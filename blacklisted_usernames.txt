@@ -888,3 +888,4 @@ nilesecurity
 (?-i:^Creative Desk India$)
 (?-i:^lovelifewes520$)
 (?-i:^pendrivedatarecovery$)
+(?-i:abattis consulting$)
