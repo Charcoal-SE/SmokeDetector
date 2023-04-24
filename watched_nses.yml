@@ -864,6 +864,9 @@ items:
   - brad.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
+  - bradley.ns.cloudflare.com.
+  - zelda.ns.cloudflare.com.
+- ns:
   - braelyn.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
