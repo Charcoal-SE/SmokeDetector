@@ -50076,3 +50076,4 @@
 1682426643	Vickel	zonaprediksi\.online
 1682427225	tripleee	logicfleet\.ie
 1682427738	tripleee	sonicmechanism\.gft
+1682430092	Jeff Schaller	ca\.parimatch\.com
