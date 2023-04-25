@@ -50045,3 +50045,4 @@
 1682358599	Jeff Schaller	proprietaryfirms\.com
 1682393995	tripleee	igolden-cnc\.com
 1682394317	tripleee	vlat\.fun
+1682394412	tripleee	harperjamesplatform(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
