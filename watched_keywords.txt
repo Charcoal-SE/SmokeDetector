@@ -49893,7 +49893,6 @@
 1681900683	tripleee	narola
 1681903823	tripleee	techwink\.net
 1681910418	tripleee	shivlab\.com
-1681910700	tripleee	(?-i:^Shiv Technolabs Pvt\. Ltd\.$)
 1681913329	Jeff Schaller	sublimerides\.com
 1681914658	Jeff Schaller	china-me\.com
 1681916351	Jeff Schaller	gravity\.blue
