@@ -893,3 +893,4 @@ nilesecurity
 (?-i:^Connect Helpline$)
 (?-i:^purple swivel accent chair$)
 (?-i:^Shiv Technolabs Pvt\. Ltd\.$)
+(?-i:^Shahana Shana$)
