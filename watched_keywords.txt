@@ -50049,3 +50049,4 @@
 1682394674	tripleee	livedrawchina\.pro
 1682395793	tripleee	bebloggingaboutanything\.com
 1682396024	tripleee	lenovonetfilter\.com
+1682397269	Makyen	igolden[\W_]*+cnc(?!\.com(?<=igolden-cnc\.com))
