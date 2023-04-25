@@ -50060,3 +50060,4 @@
 1682412845	tripleee	exoticwineliquor\.com
 1682413066	tripleee	gokulpv\.epizy\.com
 1682413642	tripleee	paradoxbiology\.blogspot
+1682415623	tripleee	(?-i:^Luis Abrines Planisi$)
