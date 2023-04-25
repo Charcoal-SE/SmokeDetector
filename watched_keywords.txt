@@ -25527,7 +25527,6 @@
 1610982865	cigien	(?-i:playfulpetdesign)(?#facebook.com)
 1610996738	cigien	pjrlancermedia\.wixsite\.com
 1610998379	Ollie	ijam3ana\.com
-1611009739	Cody Gray	wuzzuf\.net
 1611009761	Cody Gray	asadshaukat
 1611013087	cigien	doctor_?ogbetemple(?:@gmail\.com)?
 1611013911	cigien	besdocumentservice\.com
