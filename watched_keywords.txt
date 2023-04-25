@@ -50082,3 +50082,4 @@
 1682446032	Makyen	compare[\W_]*+broker[\W_]*+online(?!\.com(?<=comparebrokeronline\.com))
 1682450385	Jeff Schaller	stabilitamerica\.com
 1682451295	Jeff Schaller	167\.235\.17\.195
+1682452946	Jeff Schaller	trustreviewshop\.com
