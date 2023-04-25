@@ -50044,3 +50044,4 @@
 1682353982	tripleee	(?-i:^Sofia Smith$)
 1682358599	Jeff Schaller	proprietaryfirms\.com
 1682393995	tripleee	igolden-cnc\.com
+1682394317	tripleee	vlat\.fun
