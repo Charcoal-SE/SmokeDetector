@@ -50070,3 +50070,4 @@
 1682424939	tripleee	thanyaas\.com
 1682424999	tripleee	valiv[\W_]*+therapy(?:[\W_]*+(?:and[[\W_]*+)?wellness?)(?!\.com(?<=valivtherapyandwellness\.com))
 1682425276	tripleee	supreme[\W_]*+staffing[\W_]*+solutions
+1682425953	tripleee	(?-i:^mukulmahor7060$)
