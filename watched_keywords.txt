@@ -39947,7 +39947,6 @@
 1655467303	Jeff Schaller	Tutorlog(?!\.in)
 1655467517	Jeff Schaller	globrealestate\.com
 1655470536	tripleee	grandstrandchiropractic\.com
-1655470627	tripleee	gocdkeys\.com
 1655472497	Makyen	drshardaayurveda\.com
 1655472600	Makyen	q3gindia\.com
 1655472626	Makyen	q3g[\W_]*+india(?!\.com(?<=q3gindia\.com))(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
