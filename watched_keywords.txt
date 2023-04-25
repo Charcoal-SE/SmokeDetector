@@ -50051,3 +50051,4 @@
 1682397269	Makyen	igolden[\W_]*+cnc(?!\.com(?<=igolden-cnc\.com))
 1682400766	Ryan M	reachowl
 1682401091	Ryan M	oko\.sh
+1682404634	tripleee	nursmemon
