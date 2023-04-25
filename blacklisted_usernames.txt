@@ -891,3 +891,4 @@ nilesecurity
 (?-i:abattis consulting$)
 (?-i:^abattics abattics$)
 (?-i:^Connect Helpline$)
+(?-i:^purple swivel accent chair$)
