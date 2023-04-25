@@ -2138,6 +2138,9 @@ items:
   - quinton.ns.cloudflare.com.
 - ns:
   - ivy.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
+  - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
   - izabella.ns.cloudflare.com.
