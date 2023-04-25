@@ -50079,3 +50079,4 @@
 1682430092	Jeff Schaller	ca\.parimatch\.com
 1682434085	Makyen	digitalkorbax\.ae
 1682437583	Makyen	probdit\.com
+1682446032	Makyen	compare[\W_]*+broker[\W_]*+online(?!\.com(?<=comparebrokeronline\.com))
