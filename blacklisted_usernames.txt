@@ -890,3 +890,4 @@ nilesecurity
 (?-i:^pendrivedatarecovery$)
 (?-i:abattis consulting$)
 (?-i:^abattics abattics$)
+(?-i:^Connect Helpline$)
