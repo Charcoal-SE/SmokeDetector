@@ -50048,3 +50048,4 @@
 1682394412	tripleee	harperjamesplatform(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1682394674	tripleee	livedrawchina\.pro
 1682395793	tripleee	bebloggingaboutanything\.com
+1682396024	tripleee	lenovonetfilter\.com
