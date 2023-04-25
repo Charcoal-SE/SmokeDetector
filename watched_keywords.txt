@@ -50071,3 +50071,4 @@
 1682424999	tripleee	valiv[\W_]*+therapy(?:[\W_]*+(?:and[[\W_]*+)?wellness?)(?!\.com(?<=valivtherapyandwellness\.com))
 1682425276	tripleee	supreme[\W_]*+staffing[\W_]*+solutions
 1682425953	tripleee	(?-i:^mukulmahor7060$)
+1682426634	Vickel	slotprogaip\.com
