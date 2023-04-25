@@ -2857,6 +2857,9 @@ items:
   - miki.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
+  - milan.ns.cloudflare.com.
+  - sunny.ns.cloudflare.com.
+- ns:
   - miles.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
