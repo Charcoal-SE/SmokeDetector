@@ -2347,6 +2347,9 @@ items:
   - kami.ns.cloudflare.com.
   - maxim.ns.cloudflare.com.
 - ns:
+  - kami.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
   - kanye.ns.cloudflare.com.
   - mckinley.ns.cloudflare.com.
 - ns:
