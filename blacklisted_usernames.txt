@@ -896,3 +896,4 @@ nilesecurity
 (?-i:^Shahana Shana$)
 (?-i:^DesktopPrinter Setup$)
 (?-i:^Ada Alex$)
+(?-i:^melody lee$)
