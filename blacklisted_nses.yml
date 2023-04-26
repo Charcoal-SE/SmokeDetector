@@ -274,6 +274,9 @@ items:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - ines.ns.cloudflare.com.
+  - joel.ns.cloudflare.com.
+- ns:
   - iris.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
