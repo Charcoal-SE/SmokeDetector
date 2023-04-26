@@ -168,6 +168,9 @@ items:
   - piper.ns.cloudflare.com.
 - ns:
   - ainsley.ns.cloudflare.com.
+  - andronicus.ns.cloudflare.com.
+- ns:
+  - ainsley.ns.cloudflare.com.
   - leonard.ns.cloudflare.com.
 - ns:
   - ainsley.ns.cloudflare.com.
