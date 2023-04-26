@@ -49812,7 +49812,6 @@
 1681754908	Jeff Schaller	aromancelifeinstitute\.com
 1681757052	Makyen	nefartete\.com
 1681757082	Makyen	nefar tete\.
-1681757106	Makyen	best-electricskateboard\.com
 1681757130	Makyen	evercross[\W_]*+evo8e
 1681764167	Machavity	fromformulatocode\.com
 1681764208	Machavity	malked\.com
