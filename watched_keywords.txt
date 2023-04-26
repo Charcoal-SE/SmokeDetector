@@ -50091,3 +50091,4 @@
 1682490249	tripleee	tendenci\.com
 1682490543	tripleee	khonsu(?:[\W_]*+formula)?/(?:[\W_]*+cbd)?(?:[\W_]*+gummies)?
 1682493529	tripleee	leezdesign\.com
+1682494559	tripleee	tianxi(?:[\W_]*+software)?
