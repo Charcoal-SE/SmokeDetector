@@ -50093,3 +50093,4 @@
 1682493529	tripleee	leezdesign\.com
 1682494559	tripleee	tianxi(?:[\W_]*+software)?
 1682494615	tripleee	lekuanni(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1682496017	tripleee	newzjobz\.com
