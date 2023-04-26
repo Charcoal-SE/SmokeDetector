@@ -895,3 +895,4 @@ nilesecurity
 (?-i:^Shiv Technolabs Pvt\. Ltd\.$)
 (?-i:^Shahana Shana$)
 (?-i:^DesktopPrinter Setup$)
+(?-i:^Ada Alex$)
