@@ -50120,3 +50120,4 @@
 1682562264	Jeff Schaller	phriendlyphishing\.com
 1682562490	Makyen	phriendly[\W_]*+phishing(?!\.com(?<=phriendlyphishing\.com))
 1682567219	tripleee	databaseme
+1682567489	tripleee	kingwoodmac\.com
