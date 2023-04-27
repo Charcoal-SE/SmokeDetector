@@ -1047,6 +1047,9 @@ items:
   - cesar.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
+  - cesar.ns.cloudflare.com.
+  - wren.ns.cloudflare.com.
+- ns:
   - chad.ns.cloudflare.com.
   - daniella.ns.cloudflare.com.
 - ns:
