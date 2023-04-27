@@ -635,6 +635,9 @@ items:
   - kia.ns.cloudflare.com.
 - ns:
   - athena.ns.cloudflare.com.
+  - keaton.ns.cloudflare.com.
+- ns:
+  - athena.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
   - audrey.ns.cloudflare.com.
