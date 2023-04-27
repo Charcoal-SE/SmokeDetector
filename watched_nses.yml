@@ -2329,6 +2329,9 @@ items:
   - julissa.ns.cloudflare.com.
   - ram.ns.cloudflare.com.
 - ns:
+  - junade.ns.cloudflare.com.
+  - sierra.ns.cloudflare.com.
+- ns:
   - june.ns.cloudflare.com.
   - keanu.ns.cloudflare.com.
 - ns:
