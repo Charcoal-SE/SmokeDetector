@@ -50119,3 +50119,4 @@
 1682560712	Makyen	my[\W_]*+home[\W_]*+plumbing(?!\.com\.au(?<=myhomeplumbing\.com\.au))
 1682562264	Jeff Schaller	phriendlyphishing\.com
 1682562490	Makyen	phriendly[\W_]*+phishing(?!\.com(?<=phriendlyphishing\.com))
+1682567219	tripleee	databaseme
