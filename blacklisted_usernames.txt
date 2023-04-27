@@ -898,3 +898,4 @@ nilesecurity
 (?-i:^Ada Alex$)
 (?-i:^melody lee$)
 (?-i:^Iconier Agency$)
+(?-i:^monaco coffee$)
