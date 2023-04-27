@@ -5347,3 +5347,4 @@ tradeflock\.com
 (?-i:j5RJpIg)(?#cutt.ly)
 (?-i:44bD6ec)(?#bit.ly)
 (?-i:3LBsf67)(?#bit.ly)
+(?-i:Z5RxU0l)(?#cutt.ly)
