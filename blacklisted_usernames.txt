@@ -901,3 +901,4 @@ nilesecurity
 (?-i:^monaco coffee$)
 (?-i:^rajatmishra$)
 (?-i:^imene$)
+(?-i:^Aamad Dance Center$)
