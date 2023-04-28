@@ -50161,3 +50161,4 @@
 1682663988	tripleee	elafilador\.net
 1682664089	tripleee	giftblooms\.com
 1682670999	Ryan M	linvite\.life
+1682671648	tripleee	osmotics(?!\.com)
