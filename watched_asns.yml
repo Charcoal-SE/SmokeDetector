@@ -104,6 +104,7 @@ items:
 - asn: '50673'
   comment: 17/77 over 10 months
   disable: true
+- asn: '51167'
 - asn: '51468'
 - asn: '53667'
 - asn: '53755'
