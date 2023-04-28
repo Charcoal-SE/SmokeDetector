@@ -50165,3 +50165,4 @@
 1682672173	tripleee	plantzzhub\.in
 1682672484	tripleee	halinotravel\.com
 1682673976	tripleee	(?-i:^johnwick$)
+1682674094	tripleee	cortexhair\.co\.in
