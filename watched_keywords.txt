@@ -50174,3 +50174,4 @@
 1682681498	tripleee	radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag(?:[\W_]*+remover)?)?
 1682682820	Jeff Schaller	ajsadz\.com
 1682686258	Jeff Schaller	nagraj\.in
+1682688744	Jeff Schaller	alipharmahealth\.com
