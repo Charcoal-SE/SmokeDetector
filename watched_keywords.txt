@@ -50158,3 +50158,4 @@
 1682655164	Makyen	cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
 1682656544	tripleee	auto360\.website
 1682663121	tripleee	radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag[\W_]*+remover)?
+1682663324	tripleee	betonorganic\.com
