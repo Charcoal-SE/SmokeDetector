@@ -902,3 +902,4 @@ nilesecurity
 (?-i:^rajatmishra$)
 (?-i:^imene$)
 (?-i:^Aamad Dance Center$)
+(?-i:^vishal singh singh$)
