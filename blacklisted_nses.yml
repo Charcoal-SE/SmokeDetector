@@ -632,3 +632,6 @@ items:
   - win08ns1.dns-he.com.
   - win08ns2.dns-he.com.
 - ns: dnsserverboot.com.
+- ns:
+  - ns3.azdigi.com.
+  - ns4.azdigi.com.
