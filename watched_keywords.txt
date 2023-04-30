@@ -50201,3 +50201,4 @@
 1682868291	Makyen	makaversenews\.makassarkota\.go\.id
 1682868313	Makyen	simpadu\.lpmpjateng\.go\.id
 1682868339	Makyen	keuangan\.temanggungkab\.go\.id
+1682868360	Makyen	tryout\.unpkediri\.ac\.id
