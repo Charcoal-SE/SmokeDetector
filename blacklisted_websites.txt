@@ -1612,7 +1612,6 @@ clippingserviceindia\.com
 fitnessfacts\.com\.au
 geniuxtrial\.com
 viralsupplements\.com
-fineproxy\.org
 createmyfreeapp\.com
 muscle4supplement\.com
 (?:adult)?sextoyindia\.com
