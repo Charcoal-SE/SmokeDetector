@@ -50196,3 +50196,4 @@
 1682857608	Mast	laborumzug-in-berlin\.de
 1682865079	Makyen	laborumzug[\W_]*+in[\W_]*+berlin(?!\.de(?<=laborumzug-in-berlin\.de))
 1682865100	Makyen	skjlls\.com
+1682865122	Makyen	tutuappx\.com
