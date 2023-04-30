@@ -50203,3 +50203,4 @@
 1682868405	Makyen	bapeten\.go\.id
 1682875030	Makyen	skjlls(?!\.com)
 1682876267	Makyen	apipedia\.io
+1682882356	Jeff Schaller	mdmazed583
