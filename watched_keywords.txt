@@ -50202,3 +50202,4 @@
 1682868313	Makyen	simpadu\.lpmpjateng\.go\.id
 1682868339	Makyen	keuangan\.temanggungkab\.go\.id
 1682868360	Makyen	tryout\.unpkediri\.ac\.id
+1682868383	Makyen	esdm\.jatimprov\.go\.id
