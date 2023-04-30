@@ -50204,3 +50204,4 @@
 1682868360	Makyen	tryout\.unpkediri\.ac\.id
 1682868383	Makyen	esdm\.jatimprov\.go\.id
 1682868405	Makyen	bapeten\.go\.id
+1682875030	Makyen	skjlls(?!\.com)
