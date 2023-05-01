@@ -50216,3 +50216,4 @@
 1682904708	Henry Ecker	smmcpan\.com
 1682907362	Makyen	smmcpan(?!\.com)
 1682907383	Makyen	(?-i:k7v27)
+1682922111	Nisse Engström	rayhanfresh\.ae
