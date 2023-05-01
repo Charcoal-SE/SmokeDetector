@@ -904,3 +904,4 @@ nilesecurity
 (?-i:^Aamad Dance Center$)
 (?-i:^vishal singh singh$)
 ^spammer[\W_]*+mcspamface$
+(?-i:^Doctor Delhi$)
