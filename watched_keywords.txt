@@ -50229,3 +50229,4 @@
 1682947136	Glorfindel	lorentzzi\.com
 1682948248	Makyen	digital[\W_]*+retina(?!\.in(?<=digitalretina\.in))
 1682948730	Makyen	hmatrading\.in
+1682924465	Nick	peypallogs\.com
