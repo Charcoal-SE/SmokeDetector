@@ -50227,3 +50227,4 @@
 1682942473	tripleee	cracktech\.net
 1682946966	Makyen	aj[\W_]*+verminator
 1682947136	Glorfindel	lorentzzi\.com
+1682948248	Makyen	digital[\W_]*+retina(?!\.in(?<=digitalretina\.in))
