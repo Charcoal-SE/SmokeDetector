@@ -50223,3 +50223,4 @@
 1682938637	Jeff Schaller	tmspeedtests\.com
 1682939576	Jeff Schaller	corptaxsolution\.com
 1682941471	tripleee	websvent\.com
+1682941657	tripleee	vancedapp\.net
