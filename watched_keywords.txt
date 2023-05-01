@@ -50225,3 +50225,4 @@
 1682941471	tripleee	websvent\.com
 1682941657	tripleee	vancedapp\.net
 1682941976	tripleee	tripleoutlook\.com
+1682942433	tripleee	digital[\W_]*+retina
