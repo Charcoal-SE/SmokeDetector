@@ -50217,3 +50217,4 @@
 1682907362	Makyen	smmcpan(?!\.com)
 1682907383	Makyen	(?-i:k7v27)
 1682922111	Nisse Engström	rayhanfresh\.ae
+1682922784	Nisse Engström	playnwinbook\.com
