@@ -27761,7 +27761,6 @@
 1617654360	Spevacus	everlastingspellcast(?:@gmail\.com)?
 1617676966	cigien	99digitalacademy\.com
 1617680559	cigien	chinowing\.com
-1617683056	cigien	ap-setup\.us
 1617684893	cigien	behangservicenederland\.com
 1617685576	cigien	wondomains(?!\.com)
 1617685805	cigien	learningmilestone\.blogspot

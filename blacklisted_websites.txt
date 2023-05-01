@@ -5361,3 +5361,4 @@ megasports\.online
 yaxtube\.com
 douradocars\.com
 laborumzug-in-berlin\.de
+ap-setup\.us
