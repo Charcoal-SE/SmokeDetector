@@ -50224,7 +50224,6 @@
 1682941471	tripleee	websvent\.com
 1682941657	tripleee	vancedapp\.net
 1682941976	tripleee	tripleoutlook\.com
-1682942433	tripleee	digital[\W_]*+retina
 1682942473	tripleee	cracktech\.net
 1682946966	Makyen	aj[\W_]*+verminator
 1682947136	Glorfindel	lorentzzi\.com
