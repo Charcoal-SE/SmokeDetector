@@ -50262,3 +50262,4 @@
 1683020761	tripleee	(?-i:HmB3evYa2y8)(?# youtube)
 1683020786	tripleee	kore\.ai
 1683020810	tripleee	zkolenko(?# github)
+1683020843	tripleee	raid[\W_]*+shadow[\W_]*+legends
