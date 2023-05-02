@@ -50276,3 +50276,4 @@
 1683031542	tripleee	pillswithus(?!\.com)
 1683031611	tripleee	(?-i:^Riyai khan$)
 1683040648	Jeff Schaller	coogleplay\.com
+1683042119	Makyen	indyvarna
