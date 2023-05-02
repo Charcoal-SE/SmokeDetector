@@ -905,3 +905,4 @@ nilesecurity
 (?-i:^vishal singh singh$)
 ^spammer[\W_]*+mcspamface$
 (?-i:^Doctor Delhi$)
+(?-i:^Nimesh Devani$)
