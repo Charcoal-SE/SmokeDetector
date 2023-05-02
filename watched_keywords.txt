@@ -50270,3 +50270,4 @@
 1683027154	Jeff Schaller	pillswithus\.com
 1683030404	Jeff Schaller	learningmela\.teachable\.com
 1683030910	tripleee	sanskrit-trikashaivism\.com
+1683030969	tripleee	radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag(?:[\W_]*+remover)?)?
