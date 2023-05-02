@@ -50288,3 +50288,4 @@
 1683056989	Spevacus	bluebyte\.biz
 1683061252	Ryan M	digitaldestinyus\.com
 1683064418	Jesse	fastechy\.com
+1683066440	Makyen	nagafa[\W_]*+shop(?!\.com(?<=nagafashop\.com))
