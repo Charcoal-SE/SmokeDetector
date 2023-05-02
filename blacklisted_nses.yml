@@ -62,6 +62,9 @@ items:
   - amanda.ns.cloudflare.com.
   - garrett.ns.cloudflare.com.
 - ns:
+  - amit.ns.cloudflare.com.
+  - ara.ns.cloudflare.com.
+- ns:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
