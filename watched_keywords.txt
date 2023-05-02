@@ -50275,3 +50275,4 @@
 1683031172	tripleee	123-hp-printer\.com
 1683031542	tripleee	pillswithus(?!\.com)
 1683031611	tripleee	(?-i:^Riyai khan$)
+1683040648	Jeff Schaller	coogleplay\.com
