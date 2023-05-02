@@ -50279,3 +50279,4 @@
 1683042119	Makyen	indyvarna
 1683050809	Jeff Schaller	carrentalsservices\.in
 1683052069	Makyen	vipdamangames\.com
+1683052101	Makyen	vipdamangames(?!\.com)
