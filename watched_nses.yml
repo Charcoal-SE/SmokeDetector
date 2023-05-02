@@ -1601,6 +1601,9 @@ items:
   - lola.ns.cloudflare.com.
 - ns:
   - duke.ns.cloudflare.com.
+  - nora.ns.cloudflare.com.
+- ns:
+  - duke.ns.cloudflare.com.
   - wally.ns.cloudflare.com.
 - ns:
   - earl.ns.cloudflare.com.
