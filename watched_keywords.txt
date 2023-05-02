@@ -50274,3 +50274,4 @@
 1683031001	tripleee	utopia[\W_]*+skin[\W_]*+tag[\W_]*+remover
 1683031067	tripleee	skin[\W_]*+tag[\W_]*+remover(?<!(?:utopia|radiant[\W_]*+cutis)[\W_]*+skin[\W_]*+tag[\W_]*+remover)
 1683031172	tripleee	123-hp-printer\.com
+1683031542	tripleee	pillswithus(?!\.com)
