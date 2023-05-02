@@ -50251,3 +50251,4 @@
 1683017077	Ryan M	social[\W_]*+media[\W_]*+promotion
 1683017114	Ryan M	abouelmagd2\.blogspot
 1683017142	Ryan M	primoanimation\.com
+1683017172	Ryan M	hhjxf(?# Telegram)
