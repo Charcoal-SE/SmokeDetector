@@ -2308,6 +2308,9 @@ items:
   - rob.ns.cloudflare.com.
 - ns:
   - joan.ns.cloudflare.com.
+  - nile.ns.cloudflare.com.
+- ns:
+  - joan.ns.cloudflare.com.
   - tadeo.ns.cloudflare.com.
 - ns:
   - joaquin.ns.cloudflare.com.
