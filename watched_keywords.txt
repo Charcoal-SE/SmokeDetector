@@ -50313,3 +50313,4 @@
 1683120912	tripleee	(?-i:^KP\d{2,3}$)(?# temporary kemono pantsu)
 1683123059	Makyen	services[\W_]*+near[\W_]*+me
 1683128014	Makyen	apps\.shopify\.com/custom-registration-fields
+1683142307	Spevacus	joy\.link
