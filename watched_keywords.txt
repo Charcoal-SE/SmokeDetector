@@ -50302,3 +50302,4 @@
 1683106669	tripleee	itil[\W_]*+v4
 1683106696	tripleee	onlinepharmacyllc\.com
 1683106722	tripleee	thetekkgroup\.us
+1683106951	tripleee	tablet[\W_]*+hire(?!\.ae(?<=tablethire\.ae))
