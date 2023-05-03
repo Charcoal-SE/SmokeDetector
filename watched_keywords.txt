@@ -50293,3 +50293,4 @@
 1683082418	Makyen	ceiling-fans-n-more\.com
 1683082771	Spevacus	komunitaslaundry\.com
 1683082851	Makyen	rgx-extract-replace\.appspot\.com
+1682992832	Nick	fti\.perbanas\.id
