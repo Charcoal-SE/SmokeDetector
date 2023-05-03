@@ -942,6 +942,9 @@ items:
   - june.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
+  - lina.ns.cloudflare.com.
+- ns:
+  - bruce.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
