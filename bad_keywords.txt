@@ -2837,3 +2837,4 @@ Umzugsunternehmen
 anya[\W_]*+wellbeing
 cyber[\W_]*+genie(?:[\W_]*+team)?
 utopia[\W_]*+skin[\W_]*+tag[\W_]*+remover
+radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag(?:[\W_]*+remover)?)?
