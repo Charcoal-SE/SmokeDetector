@@ -50301,3 +50301,4 @@
 1683106636	tripleee	(?-i:uQ81h99Dnz4)(?# youtube)
 1683106669	tripleee	itil[\W_]*+v4
 1683106696	tripleee	onlinepharmacyllc\.com
+1683106722	tripleee	thetekkgroup\.us
