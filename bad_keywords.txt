@@ -2835,3 +2835,4 @@ abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))(?<!^abattis consult
 zolpidem
 Umzugsunternehmen
 anya[\W_]*+wellbeing
+cyber[\W_]*+genie(?:[\W_]*+team)?
