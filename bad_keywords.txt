@@ -2834,3 +2834,4 @@ refd_by=tkt
 abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))(?<!^abattis consulting$)
 zolpidem
 Umzugsunternehmen
+anya[\W_]*+wellbeing
