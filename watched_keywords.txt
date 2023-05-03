@@ -50294,3 +50294,4 @@
 1683091515	tripleee	tranktechnologies\.com
 1683091774	tripleee	techdogs\.com
 1683093322	tripleee	cardddle\.com
+1683097453	tripleee	ckpapermart\.com
