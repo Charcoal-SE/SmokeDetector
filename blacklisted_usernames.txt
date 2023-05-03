@@ -906,3 +906,4 @@ nilesecurity
 ^spammer[\W_]*+mcspamface$
 (?-i:^Doctor Delhi$)
 (?-i:^Nimesh Devani$)
+(?-i:^pappuelezco$)
