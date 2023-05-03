@@ -50314,3 +50314,4 @@
 1683119430	tripleee	kemono[\W_]*+pantsu
 1683120874	tripleee	flareon(?# temporary kemono pantsu)
 1683120912	tripleee	(?-i:^KP\d{2,3}$)(?# temporary kemono pantsu)
+1683123059	Makyen	services[\W_]*+near[\W_]*+me
