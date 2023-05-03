@@ -50292,3 +50292,4 @@
 1683079432	Makyen	cyber[\W_]*+genie(?:[\W_]*+team)?
 1683082418	Makyen	ceiling-fans-n-more\.com
 1683082771	Spevacus	komunitaslaundry\.com
+1683082851	Makyen	rgx-extract-replace\.appspot\.com
