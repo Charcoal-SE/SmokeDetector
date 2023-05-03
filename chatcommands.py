@@ -2185,6 +2185,7 @@ def allspam(msg, url):
             post_data.owner_url = post['owner']['link']
             post_data.owner_rep = post['owner']['reputation']
             post_data.body = post['body']
+            post_data.body_markdown = post['body_markdown']
             post_data.score = post['score']
             post_data.up_vote_count = post['up_vote_count']
             post_data.down_vote_count = post['down_vote_count']
