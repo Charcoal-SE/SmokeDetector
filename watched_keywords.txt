@@ -49949,7 +49949,6 @@
 1682077344	Jeff Schaller	careerinstitute12\.wordpress\.com
 1682080443	tripleee	maticzofficial(?# telegram.io)
 1682080493	tripleee	scanflow\.ai
-1682080770	tripleee	(?-i:^Rebecca Lancaster$)
 1682080931	tripleee	steelbuildings\.in
 1682081906	tripleee	pen[\W_]*+drive[\W_]*+data[\W_]*+recovery(?!\.org(?<=pendrivedatarecovery\.org))
 1682091832	tripleee	remote[\W_]*+position
