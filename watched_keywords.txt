@@ -48757,7 +48757,6 @@
 1679385420	Jeff Schaller	ggsrtp\.com
 1679387154	tripleee	onbikeshare\.com
 1679387856	Glorfindel	comms-spec\.com
-1679388284	tripleee	japanshopees\.com
 1679388302	tripleee	mymoddedapk\.com
 1679389233	tripleee	sculptrainjection(?# sites.google.com)
 1679394502	Jeff Schaller	miichisoft\.com
