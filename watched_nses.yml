@@ -3146,6 +3146,9 @@ items:
   - tara.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
+  - tara.ns.cloudflare.com.
+  - toby.ns.cloudflare.com.
+- ns:
   - terry.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
