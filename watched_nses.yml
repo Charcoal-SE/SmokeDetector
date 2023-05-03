@@ -2886,9 +2886,6 @@ items:
   - mike.ns.cloudflare.com.
   - treasure.ns.cloudflare.com.
 - ns:
-  - miki.ns.cloudflare.com.
-  - ned.ns.cloudflare.com.
-- ns:
   - milan.ns.cloudflare.com.
   - sunny.ns.cloudflare.com.
 - ns:
