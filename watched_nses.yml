@@ -1164,6 +1164,9 @@ items:
   - janet.ns.cloudflare.com.
 - ns:
   - clayton.ns.cloudflare.com.
+  - crystal.ns.cloudflare.com.
+- ns:
+  - clayton.ns.cloudflare.com.
   - maya.ns.cloudflare.com.
 - ns:
   - cleo.ns.cloudflare.com.
