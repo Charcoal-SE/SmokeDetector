@@ -908,3 +908,4 @@ nilesecurity
 (?-i:^Nimesh Devani$)
 (?-i:^pappuelezco$)
 (?-i:^Rebecca Lancaster$)
+(?-i:^Junior Delhi School$)
