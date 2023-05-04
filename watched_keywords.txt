@@ -50321,3 +50321,4 @@
 1683182471	tripleee	derma[\W_]*+freeze
 1683185589	tripleee	besthivdoctorinindia\.com
 1683187897	tripleee	airleftstore\.com
+1683187993	tripleee	lafrenchtaste\.ca
