@@ -50343,3 +50343,4 @@
 1683221419	Jeff Schaller	starsalign\.co
 1683224096	Makyen	freefmod\.com
 1683224289	Makyen	betterscapeslv\.com
+1683224324	Makyen	betterscapes(?!lv\.com)
