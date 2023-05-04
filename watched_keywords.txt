@@ -50339,3 +50339,4 @@
 1683213937	Jeff Schaller	sqlpey\.com
 1683215222	Jesse	pluginjs\.pro
 1683218590	Jeff Schaller	thesisrush\.com
+1683218737	Makyen	jerrylink(?:[\W_]*+(?:credit|group))*
