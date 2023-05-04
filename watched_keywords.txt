@@ -50319,3 +50319,4 @@
 1683178780	tripleee	anypropertyforcash\.com
 1683179568	tripleee	clockworkmicro\.com
 1683180031	tripleee	anandriushkin(?# calendly.com)
+1683182471	tripleee	derma[\W_]*+freeze
