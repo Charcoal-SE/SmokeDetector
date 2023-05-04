@@ -50342,3 +50342,4 @@
 1683218737	Makyen	jerrylink(?:[\W_]*+(?:credit|group))*
 1683221419	Jeff Schaller	starsalign\.co
 1683224096	Makyen	freefmod\.com
+1683224289	Makyen	betterscapeslv\.com
