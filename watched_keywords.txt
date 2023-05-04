@@ -50345,3 +50345,4 @@
 1683224289	Makyen	betterscapeslv\.com
 1683224324	Makyen	betterscapes(?!lv\.com)
 1683224358	Makyen	easynamesgenerator\.com
+1683228989	Jeff Schaller	anarsolutions\.com
