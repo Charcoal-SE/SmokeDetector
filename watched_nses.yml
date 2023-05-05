@@ -1173,6 +1173,9 @@ items:
   - dolly.ns.cloudflare.com.
 - ns:
   - cleo.ns.cloudflare.com.
+  - heidi.ns.cloudflare.com.
+- ns:
+  - cleo.ns.cloudflare.com.
   - jade.ns.cloudflare.com.
 - ns:
   - cleo.ns.cloudflare.com.
