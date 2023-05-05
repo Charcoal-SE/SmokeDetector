@@ -2708,7 +2708,6 @@ adeena'?s[\W_]*+kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
 online24jam
 7[\W_]*+search[\W_]*+ppc(?!\.com(?<=7searchppc\.com))
 fonts[\W_]*+bee(?!\.com)
-intellimindz(?!\.com)
 HACKEROFLIFESERIAL12112
 super[\W_]*+visa[\W_]*+insurance
 mytravel[\W_]*+insurance(?!\.com(?<=mytravel-insurance\.com))
