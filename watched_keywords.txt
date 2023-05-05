@@ -50348,3 +50348,4 @@
 1683244354	Jeff Schaller	hentaila\.tv
 1683253498	Jeff Schaller	dalpocha12\.com
 1683253921	Makyen	dalpΦcha12\.cΦm
+1683263772	tripleee	britts[\W_]*+imperial[\W_]*+college
