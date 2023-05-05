@@ -50352,3 +50352,4 @@
 1683264254	tripleee	^bryan[\W_]*+smith$
 1683264710	tripleee	(?-i:^Lily Ray$)
 1683269127	tripleee	flexiborder\.co\.uk
+1683269281	tripleee	jayabola22\.xyz
