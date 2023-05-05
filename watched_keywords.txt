@@ -50376,3 +50376,4 @@
 1683295298	Jeff Schaller	giveitaread\.net
 1683297444	Jeff Schaller	hobsonsbaydental\.com\.au
 1683298665	Jeff Schaller	eurostop\.com
+1683303314	tripleee	^Charcoal\w*+(?=.{0,32}$)(?!<(?-i:^charcoalblock$))
