@@ -2839,3 +2839,4 @@ utopia[\W_]*+skin[\W_]*+tag[\W_]*+remover
 radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag(?:[\W_]*+remover)?)?
 japanshopees\d*(?!\.com(?<=japanshopees\.com))
 maticzofficial(?# telegram.io)
+intelli[\W_]*+mindz(?!\.com(?<=intellimindz\.com))
