@@ -1281,6 +1281,9 @@ items:
   - janet.ns.cloudflare.com.
 - ns:
   - cris.ns.cloudflare.com.
+  - jule.ns.cloudflare.com.
+- ns:
+  - cris.ns.cloudflare.com.
   - ruth.ns.cloudflare.com.
 - ns:
   - cruz.ns.cloudflare.com.
