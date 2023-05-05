@@ -44537,7 +44537,6 @@
 1667895392	tripleee	sicheadphones\.com
 1667895425	tripleee	sicheadphones(?!\.com)
 1667898352	cigien	pezeshk24\.com
-1667898390	cigien	helpassignment\.com\.au
 1667898483	cigien	ufabetstar365\.com
 1667900548	cigien	injuredgadgets\.com
 1667901791	tripleee	braveuxplatform\.com
