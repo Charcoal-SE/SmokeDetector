@@ -1974,6 +1974,9 @@ items:
   - graham.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
 - ns:
+  - grannbo.ns.cloudflare.com.
+  - lamar.ns.cloudflare.com.
+- ns:
   - greg.ns.cloudflare.com.
   - hera.ns.cloudflare.com.
 - ns:
