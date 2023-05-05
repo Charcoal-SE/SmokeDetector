@@ -2119,6 +2119,9 @@ items:
   - zoe.ns.cloudflare.com.
 - ns:
   - ignat.ns.cloudflare.com.
+  - millie.ns.cloudflare.com.
+- ns:
+  - ignat.ns.cloudflare.com.
   - nelci.ns.cloudflare.com.
 - ns:
   - ines.ns.cloudflare.com.
