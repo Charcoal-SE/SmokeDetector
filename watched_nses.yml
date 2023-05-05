@@ -2025,8 +2025,17 @@ items:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - hal.ns.cloudflare.com.
+  - tia.ns.cloudflare.com.
+- ns:
   - haley.ns.cloudflare.com.
   - mike.ns.cloudflare.com.
+- ns:
+  - hank.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
+  - hank.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
 - ns:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
@@ -2061,6 +2070,9 @@ items:
   - henry.ns.cloudflare.com.
   - jade.ns.cloudflare.com.
 - ns:
+  - hera.ns.cloudflare.com.
+  - kevin.ns.cloudflare.com.
+- ns:
   - howard.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
 - ns:
@@ -2076,17 +2088,8 @@ items:
   - hugh.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
 - ns:
-  - hal.ns.cloudflare.com.
-  - tia.ns.cloudflare.com.
-- ns:
-  - hank.ns.cloudflare.com.
-  - kiki.ns.cloudflare.com.
-- ns:
-  - hank.ns.cloudflare.com.
-  - oaklyn.ns.cloudflare.com.
-- ns:
-  - hera.ns.cloudflare.com.
-  - kevin.ns.cloudflare.com.
+  - huxley.ns.cloudflare.com.
+  - lola.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
   - kate.ns.cloudflare.com.
