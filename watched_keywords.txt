@@ -50377,3 +50377,4 @@
 1683297444	Jeff Schaller	hobsonsbaydental\.com\.au
 1683298665	Jeff Schaller	eurostop\.com
 1683303314	tripleee	^Charcoal\w*+(?=.{0,32}$)(?!<(?-i:^charcoalblock$))
+1683303673	tripleee	Solutionagent440(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
