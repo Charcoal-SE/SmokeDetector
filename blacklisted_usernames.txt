@@ -912,3 +912,4 @@ nilesecurity
 (?-i:^KINGWOODMAC$)
 (?-i:^icruzedigital$)
 (?-i:^Freedom Fence$)
+(?-i:^v2soft$)
