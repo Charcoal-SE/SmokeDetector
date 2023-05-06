@@ -50395,3 +50395,4 @@
 1683386686	Makyen	voting[\W_]*+pads
 1683386708	Makyen	audience[\W_]*+response[\W_]*+systems
 1683386731	Makyen	translationindia\.com
+1683388220	Ollie	banglashangbad\.com
