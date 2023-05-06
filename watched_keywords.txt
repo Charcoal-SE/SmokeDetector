@@ -50402,3 +50402,4 @@
 1683397439	Makyen	live[\W_]*+stream[\W_]*+ufc[\W_]*+(?:[\W_]*+(?:live|stream|free|on|mma|\d++|[\da-f]{5,}+)s?)*
 1683398525	Makyen	8e98\.short\.gy
 1683398547	Makyen	akunprokamboja
+1683398569	Makyen	luckypoker\d*
