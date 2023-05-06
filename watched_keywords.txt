@@ -50392,3 +50392,4 @@
 1683384817	Ollie	(?-i:Aws8sfDj0P0yZDc0)(?# t.me)
 1683385426	Ollie	gamepass\.live
 1683386663	Makyen	(?-i:1hTR4uUY6AU)(?#youtu.be)
+1683386686	Makyen	voting[\W_]*+pads
