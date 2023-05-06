@@ -5377,3 +5377,4 @@ sithub\.in
 (?-i:3NJgyMa)(?#bit.ly)
 helpassignment\.com\.au
 secure\.aspca\.org
+(?-i:3HKzLcD)(?#bit.ly)
