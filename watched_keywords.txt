@@ -50400,3 +50400,4 @@
 1683397285	Makyen	wacgupjcyl
 1683397309	Makyen	openlearncreate
 1683397331	Makyen	mod
+1683397439	Makyen	live[\W_]*+stream[\W_]*+ufc[\W_]*+(?:[\W_]*+(?:live|stream|free|on|mma|\d++|[\da-f]{5,}+)s?)*
