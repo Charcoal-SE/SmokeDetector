@@ -50427,3 +50427,4 @@
 1683485237	Makyen	beiladung[\W_]*+in[\W_]*+berlin(?!\.de(?<=beiladung-in-berlin\.de))
 1683485383	Makyen	blog\.bn-l\.net
 1683488771	Makyen	the[\W_]*+glow[\W_]*+tech(?!\.com(?<=theglowtech\.com))
+1683488792	Makyen	samedaycashloan\.ca
