@@ -5385,3 +5385,4 @@ secure\.aspca\.org
 (?-i:3M1XY0F)(?#bit.ly)
 (?-i:q6etbZA)(?#cutt.ly)
 (?-i:5iTMstHKzX)(?#t.co)
+(?-i:3B0SL2N)(?#bit.ly)
