@@ -50412,3 +50412,4 @@
 1683435730	Nisse Engström	innovationmarketresearch\.com
 1683437624	Makyen	siouipromotions\.com
 1683437683	Makyen	promotional[\W_]*+lanyards?
+1683437738	Nisse Engström	wellnesswave\.xyz
