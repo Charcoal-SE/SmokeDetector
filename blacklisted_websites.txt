@@ -5382,3 +5382,4 @@ secure\.aspca\.org
 (?-i:3peYJKR)(?#bit.ly)
 (?-i:ppv-fight-3nBpqZM)(?#bit.ly)
 (?-i:3M1Xyr7)(?# bit.ly)
+(?-i:3M1XY0F)(?#bit.ly)
