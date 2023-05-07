@@ -2841,3 +2841,4 @@ japanshopees\d*(?!\.com(?<=japanshopees\.com))
 maticzofficial(?# telegram.io)
 intelli[\W_]*+mindz(?!\.com(?<=intellimindz\.com))
 allsports24
+(?-i:PI9qEdb)(?#shrinke.me)
