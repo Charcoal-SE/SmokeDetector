@@ -5389,3 +5389,4 @@ secure\.aspca\.org
 (?-i:3AYXGRM)(?#bit.ly)
 (?-i:yxsaksf9)(?#tinyurl.com)
 (?-i:41avDJW)(?#bit.ly)
+(?-i:42qPpSi)(?#bit.ly)
