@@ -4211,7 +4211,9 @@ items:
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
-- ns: concepts8.com.
+- comment: 2023-05-06 NXDOMAIN
+  disable: true
+  ns: concepts8.com.
 - ns: linuxpl.com.
 - ns: ndx9.com.
 - ns: nexcess.net.
