@@ -50471,3 +50471,4 @@
 1683564592	Makyen	merchant[\W_]*+depot(?!\.com(?<=merchant-depot\.com))
 1683565315	tripleee	ewlimo\.com
 1683569052	Makyen	omninos(?!\.com)(?!\.in)(?:s|insta|-solutions)?
+1683569075	Makyen	iapp_omninos
