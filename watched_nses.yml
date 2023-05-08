@@ -3895,6 +3895,11 @@ items:
   - ns-452.awsdns-56.com.
   - ns-533.awsdns-02.net.
 - ns:
+  - ns-121.awsdns-15.com.
+  - ns-1402.awsdns-47.org.
+  - ns-1955.awsdns-52.co.uk.
+  - ns-721.awsdns-26.net.
+- ns:
   - ns-1213.awsdns-23.org.
   - ns-124.awsdns-15.com.
   - ns-1972.awsdns-54.co.uk.
