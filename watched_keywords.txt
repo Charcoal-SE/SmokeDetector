@@ -50439,3 +50439,4 @@
 1683521126	tripleee	salon[\W_]*+aya
 1683521260	tripleee	صالون أية
 1683521858	Makyen	mamabelindatraditionalhealer\.co\.za
+1683525632	tripleee	abuzaidservices\.com
