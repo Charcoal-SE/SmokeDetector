@@ -50444,3 +50444,4 @@
 1683528535	tripleee	acharyainduprakash\.com
 1683529492	tripleee	leanpitch\.com
 1683530411	tripleee	credlix\.com
+1683530433	tripleee	credlix(?!\.com)
