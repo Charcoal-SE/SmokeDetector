@@ -50473,3 +50473,4 @@
 1683569052	Makyen	omninos(?!\.com)(?!\.in)(?:s|insta|-solutions)?
 1683569075	Makyen	iapp_omninos
 1683573499	Ollie	customboxesus\.com
+1683574441	Makyen	custom(?:[\W_]*+printed)[\W_]*+box(?:es)?
