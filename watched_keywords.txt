@@ -50446,3 +50446,4 @@
 1683530411	tripleee	credlix\.com
 1683530433	tripleee	credlix(?!\.com)
 1683539160	Glorfindel	thegenuineleather\.com
+1683539360	Ryan M	suitpinky\.wordpress\.com
