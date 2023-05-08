@@ -50474,3 +50474,4 @@
 1683569075	Makyen	iapp_omninos
 1683573499	Ollie	customboxesus\.com
 1683574441	Makyen	custom(?:[\W_]*+printed)[\W_]*+box(?:es)?
+1683575706	Jeff Schaller	scaler\.com
