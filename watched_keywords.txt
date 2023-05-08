@@ -50454,3 +50454,4 @@
 1683541942	tripleee	stylishfont\.info
 1683541974	tripleee	v2links\.in
 1683542000	tripleee	cashkar\.in
+1683542651	Glorfindel	techinsocial\.com
