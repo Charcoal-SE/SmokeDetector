@@ -1822,6 +1822,9 @@ items:
   - gemma.ns.cloudflare.com.
 - ns:
   - everton.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
+  - everton.ns.cloudflare.com.
   - liv.ns.cloudflare.com.
 - ns:
   - everton.ns.cloudflare.com.
