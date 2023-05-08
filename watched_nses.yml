@@ -4661,7 +4661,9 @@ items:
 - ns: 1stdomains.net.nz.
 - ns: quickflyllc.com.
 - ns: vdc3.vn.
-- ns: constellix.net.
+- comment: exclusively FP since watching 2023-05-08
+  disable: true
+  ns: constellix.net.
 - ns: indeedme.com.
 - ns: hosting.co.kr.
 - ns: arvancdn.ir.
