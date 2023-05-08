@@ -2843,3 +2843,4 @@ intelli[\W_]*+mindz(?!\.com(?<=intellimindz\.com))
 allsports24
 (?-i:PI9qEdb)(?#shrinke.me)
 f1-streams-race-2023
+(?-i:vc8UJGYnEfcwMTQ1)(?#t.me)
