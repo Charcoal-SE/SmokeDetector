@@ -49582,7 +49582,6 @@
 1681208105	tripleee	go-techsolution\.org
 1681208344	tripleee	meghafriendship\.com
 1681208404	tripleee	spotnrides(?!\.com)
-1681208431	tripleee	spotnrides\.com
 1681213399	Jeff Schaller	weblistingguru\.com
 1681213425	Glorfindel	e-tradingsoftware\.com
 1681213431	Glorfindel	dailyringtones\.net
