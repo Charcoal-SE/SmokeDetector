@@ -50469,3 +50469,4 @@
 1683562757	Makyen	druwabor\d+(?:@gmail\.com)?
 1683562782	Makyen	d(?:octo)?r[\W_]*+uwabor
 1683564560	Makyen	merchant-depot\.com
+1683564592	Makyen	merchant[\W_]*+depot(?!\.com(?<=merchant-depot\.com))
