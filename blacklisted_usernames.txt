@@ -913,3 +913,4 @@ nilesecurity
 (?-i:^icruzedigital$)
 (?-i:^Freedom Fence$)
 (?-i:^v2soft$)
+^อนุรักษ์ เกิดสี$
