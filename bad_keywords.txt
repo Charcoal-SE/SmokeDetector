@@ -2174,7 +2174,7 @@ utopia[\W_]*+p2p
 keto[\W_]*+genix(?:[\W_]*+(?:pills|uk|\d++|[\da-f]{4,}+))*
 insta[\W_]*+hard(?:[\W_]*+on)?
 instant[\W_]*+keto(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*
-raydia(?:[\W_]*+(?:care|cream|creme|skin|raydia|anti|aging|review|\d++|[\da-f]{4,}+)s?)*
+raydia(?:[\W_]*+(?:care|cream|creme|skin|raydia|anti|aging|review)s?)(?:[\W_]*+(?:care|cream|creme|skin|raydia|anti|aging|review|\d++|[\da-f]{4,}+)s?)*
 illuminatiwordoffame12(?:@gmail\.com)?
 kanavance
 prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
