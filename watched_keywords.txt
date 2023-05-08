@@ -50436,3 +50436,4 @@
 1683519820	tripleee	elica\.net
 1683520559	tripleee	(?-i:^danial$)
 1683520662	tripleee	(?-i:^viglens$)
+1683521126	tripleee	salon[\W_]*+aya
