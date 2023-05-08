@@ -5391,3 +5391,4 @@ secure\.aspca\.org
 mai-tv\.blogspot
 techstack\.in(?!cludes)
 (?-i:4j7dtybd)(?#tinyurl.com)
+//j\.gs/
