@@ -50479,3 +50479,4 @@
 1683578868	Vickel	oncloudshoes\.store
 1683578873	Vickel	xenderapk\.store
 1683578878	Vickel	pelisplusofficial\.com
+1683588711	Makyen	mama[\W_]*+amanda
