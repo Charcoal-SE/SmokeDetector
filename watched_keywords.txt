@@ -50462,3 +50462,4 @@
 1683548975	tripleee	zombiecatchersapk\.com
 1683549052	Makyen	linuxteck\.com
 1683549089	Makyen	zombie-catchers-online
+1683554664	Jeff Schaller	sprintedvision\.com
