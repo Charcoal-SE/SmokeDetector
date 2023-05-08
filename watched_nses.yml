@@ -640,6 +640,9 @@ items:
   - kia.ns.cloudflare.com.
 - ns:
   - athena.ns.cloudflare.com.
+  - jeff.ns.cloudflare.com.
+- ns:
+  - athena.ns.cloudflare.com.
   - keaton.ns.cloudflare.com.
 - ns:
   - athena.ns.cloudflare.com.
