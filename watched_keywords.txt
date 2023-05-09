@@ -50506,3 +50506,4 @@
 1683637704	tripleee	flyrobo\.in
 1683637748	tripleee	ias-certification\.com
 1683638135	tripleee	softvision(?![\W_]*+college)
+1683638172	tripleee	softvision[\W_]*+college
