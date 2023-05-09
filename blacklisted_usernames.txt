@@ -914,3 +914,4 @@ nilesecurity
 (?-i:^Freedom Fence$)
 (?-i:^v2soft$)
 ^อนุรักษ์ เกิดสี$
+(?-i:^quadralink77$)
