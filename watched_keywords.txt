@@ -50508,3 +50508,4 @@
 1683638135	tripleee	softvision(?![\W_]*+college)
 1683638172	tripleee	softvision[\W_]*+college
 1683639670	Makyen	andrew\.krawiec@gmail\.com
+1683641553	Nisse Engström	dctechsol\.com
