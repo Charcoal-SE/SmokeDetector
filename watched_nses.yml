@@ -554,6 +554,9 @@ items:
   - dorthy.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
+  - kara.ns.cloudflare.com.
+- ns:
+  - arch.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - arch.ns.cloudflare.com.
