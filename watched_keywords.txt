@@ -45338,7 +45338,6 @@
 1670306474	cigien	newjourneymd\.com
 1670307596	cigien	acf-views
 1670288749	Ethan	happydapps\.com
-1670310648	cigien	technanosoft\.com
 1670318651	tripleee	raqmiyat\.com
 1670320940	tripleee	futureittechnology\.com
 1670326345	Makyen	whitemistcafe\.com
