@@ -50507,3 +50507,4 @@
 1683637748	tripleee	ias-certification\.com
 1683638135	tripleee	softvision(?![\W_]*+college)
 1683638172	tripleee	softvision[\W_]*+college
+1683639670	Makyen	andrew\.krawiec@gmail\.com
