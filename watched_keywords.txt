@@ -50482,3 +50482,4 @@
 1683588711	Makyen	mama[\W_]*+amanda
 1683590262	Makyen	teckiy\.com
 1683592803	Jeff Schaller	officialautomatictellermachine
+1683599012	Nick	cnyouna\.com
