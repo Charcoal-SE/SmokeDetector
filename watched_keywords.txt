@@ -50511,3 +50511,4 @@
 1683642037	Makyen	dc[\W_]*+tech[\W_]*+sol(?!\.com(?<=dctechsol\.com))
 1683646942	tripleee	villady\.vn
 1683652795	Makyen	xnxx\.com
+1683656731	Makyen	apkwit\.com
