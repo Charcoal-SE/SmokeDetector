@@ -50497,3 +50497,4 @@
 1683625085	tripleee	heitravel\.com
 1683625109	tripleee	transact[\W_]*+bridge
 1683625137	tripleee	playbettingonline\.in
+1683625161	tripleee	manyessays\.com
