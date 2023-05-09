@@ -50499,3 +50499,4 @@
 1683625137	tripleee	playbettingonline\.in
 1683625161	tripleee	manyessays\.com
 1683625192	tripleee	tunelf[\W_]*+tidal[\W_]*+music[\W_]*+converter
+1683625216	tripleee	bestgenericpill\.com
