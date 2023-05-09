@@ -50495,3 +50495,4 @@
 1683619330	tripleee	novelastv\.pw
 1683619635	tripleee	amthanhnhapkhau\.vn
 1683625085	tripleee	heitravel\.com
+1683625109	tripleee	transact[\W_]*+bridge
