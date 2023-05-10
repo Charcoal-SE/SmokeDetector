@@ -918,6 +918,9 @@ items:
   - rex.ns.cloudflare.com.
 - ns:
   - brianna.ns.cloudflare.com.
+  - steven.ns.cloudflare.com.
+- ns:
+  - brianna.ns.cloudflare.com.
   - walt.ns.cloudflare.com.
 - ns:
   - bristol.ns.cloudflare.com.
