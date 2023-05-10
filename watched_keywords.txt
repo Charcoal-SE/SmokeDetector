@@ -50294,7 +50294,7 @@
 1683115549	tripleee	oneclickitsolution\.com
 1683115968	tripleee	goldenstarsaba\.com
 1683119405	tripleee	(?-i:qfe9xjLp)(?# pastebin)
-1683119430	tripleee	kemono[\W_]*+pantsu
+1683119430	tripleee	k[\W_]*+e[\W_]*+m[\W_]*+o[\W_]*+n[\W_]*+o[\W_]*+p[\W_]*+a[\W_]*+n[\W_]*+t[\W_]*+s[\W_]*+u\w*+
 1683120874	tripleee	flareon(?# temporary kemono pantsu)
 1683120912	tripleee	(?-i:^KP\d{2,3}$)(?# temporary kemono pantsu)
 1683123059	Makyen	services[\W_]*+near[\W_]*+me
