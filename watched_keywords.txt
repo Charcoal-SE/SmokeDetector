@@ -50531,3 +50531,4 @@
 1683717639	tripleee	abzer\.com
 1683718196	tripleee	godrej[\W_]*+nest
 1683718492	tripleee	watchanimeonlineforfree\.com
+1683723523	Vickel	stock-profit-calculator\.com
