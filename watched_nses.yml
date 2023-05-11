@@ -2820,6 +2820,9 @@ items:
   - marlowe.ns.cloudflare.com.
   - milan.ns.cloudflare.com.
 - ns:
+  - marlowe.ns.cloudflare.com.
+  - salvador.ns.cloudflare.com.
+- ns:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
