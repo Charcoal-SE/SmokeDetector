@@ -2850,3 +2850,4 @@ f1-streams-race-2023
 MailsDaddy
 cerdit[\W_]*+loan
 customer[\W_]*+cara
+coll[\W_]*+(?:me|now)
