@@ -50563,3 +50563,4 @@
 1683796044	tripleee	bits\.edu\.in
 1683796099	tripleee	dvdfab(?!\.(?:at|cn|fr|org))
 1683796136	tripleee	dvdfab\.at
+1683798276	tripleee	bikegear\.in
