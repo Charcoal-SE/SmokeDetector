@@ -50550,3 +50550,4 @@
 1683776622	tripleee	kopibet\.website
 1683776644	tripleee	kopibet\.fun
 1683776666	tripleee	kopibet\.online
+1683777264	tripleee	kopibet\d*(?!\.(?:club|fun|fyi|online|website|xyz)(?<=kopibet\.\w+)|(?:art|co|fyi|net)(?<=kopibet303\.\w+))
