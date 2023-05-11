@@ -50572,3 +50572,4 @@
 1683806338	tripleee	ndmit(?!\.com)
 1683807205	Jeff Schaller	gethrough\.com
 1683807346	tripleee	apps-star\.com
+1683808193	Jeff Schaller	sapi88\.co
