@@ -2849,3 +2849,4 @@ f1-streams-race-2023
 (?-i:(?:Fxhg0|6dPDl|1Y2HF|68YgZ|iKMIf|62mnX)\.jpg)
 MailsDaddy
 cerdit[\W_]*+loan
+customer[\W_]*+cara
