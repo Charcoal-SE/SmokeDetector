@@ -50580,3 +50580,4 @@
 1683819352	Spevacus	vapestarusa\.com
 1683821934	Makyen	gaimin\.cloud
 1683821958	Makyen	gaimin(?!\.cloud)
+1683824628	Jeff Schaller	techkluster\.com
