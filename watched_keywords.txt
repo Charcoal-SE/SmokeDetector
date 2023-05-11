@@ -50578,3 +50578,4 @@
 1683816405	Makyen	chronicparadise\.cc
 1683816437	Makyen	chronicparadise(?!\.cc)
 1683819352	Spevacus	vapestarusa\.com
+1683821934	Makyen	gaimin\.cloud
