@@ -50629,3 +50629,4 @@
 1683923115	Makyen	bangladesh[\W_]*+cricket[\W_]*+news
 1683923137	Makyen	cricketbangladesh\.info
 1683928097	Makyen	lordhackerultimate\.wixsite\.com
+1683928119	Makyen	lord[\W_]*+hacker[\W_]*+ultimate(?!\.wixsite\.com(?<=lordhackerultimate\.wixsite\.com))
