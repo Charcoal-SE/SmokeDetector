@@ -2851,3 +2851,4 @@ MailsDaddy
 cerdit[\W_]*+loan
 customer[\W_]*+cara
 coll[\W_]*+(?:me|now)
+ndmit(?!\.com)

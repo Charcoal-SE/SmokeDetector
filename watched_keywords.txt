@@ -50566,7 +50566,6 @@
 1683799591	tripleee	(?-i:VOfE3hKqvRg)(?# youtube)
 1683799626	tripleee	(?-i:KGOTe1cX7JM)(?# youtube)
 1683799660	tripleee	(?-i:OLPOSFmmuH0)(?# youtube)
-1683806338	tripleee	ndmit(?!\.com)
 1683807205	Jeff Schaller	gethrough\.com
 1683807346	tripleee	apps-star\.com
 1683808193	Jeff Schaller	sapi88\.co
