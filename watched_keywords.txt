@@ -50296,7 +50296,6 @@
 1683131431	Makyen	f[\W_]*+u[\W_]*+c[\W_]*+k(?<!fuck)\w*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1683142307	Spevacus	joy\.link
 1683143948	Makyen	freecreditnodepo
-1683172282	tripleee	(?-i:^Ashwani Sharma$)
 1683172753	Makyen	(?-i:1_GNur759lU_S1HLxA2gW-bBXG9y8Uyl4)
 1683178780	tripleee	anypropertyforcash\.com
 1683179568	tripleee	clockworkmicro\.com
