@@ -50623,3 +50623,4 @@
 1683908902	Makyen	oirabbit\.com
 1683911811	Makyen	anar[\W_]*+solutions(?!\.com(?<=anarsolutions\.com))
 1683914069	Mast	pay[\W_]*+per[\W_]*+click
+1683915354	Nisse Engström	seosiri\.com
