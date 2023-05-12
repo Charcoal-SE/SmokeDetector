@@ -917,3 +917,4 @@ nilesecurity
 (?-i:^quadralink77$)
 (?-i:^Salesforce Services$)
 (?-i:^Ashwani Sharma$)
+(?-i:^shah wali$)
