@@ -50625,3 +50625,4 @@
 1683914069	Mast	pay[\W_]*+per[\W_]*+click
 1683915354	Nisse Engström	seosiri\.com
 1683920685	Spevacus	cybegal\.net
+1683921572	Makyen	newspaperarchive\.com
