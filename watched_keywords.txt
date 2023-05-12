@@ -50632,3 +50632,4 @@
 1683928119	Makyen	lord[\W_]*+hacker[\W_]*+ultimate(?!\.wixsite\.com(?<=lordhackerultimate\.wixsite\.com))
 1683928244	Makyen	l[\W_]*+h[\W_]*+ultimate(?:@fastservice\.com)?
 1683934445	Jeff Schaller	ledsino\.store
+1683935629	Jeff Schaller	astrologerliveresult\.com
