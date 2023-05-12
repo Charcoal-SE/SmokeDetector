@@ -920,3 +920,4 @@ nilesecurity
 (?-i:^shah wali$)
 (?-i:^jacsparow$)
 (?-i:^Owais Raza$)
+(?-i:^Watch Anime$)
