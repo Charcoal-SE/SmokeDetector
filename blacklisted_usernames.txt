@@ -919,3 +919,4 @@ nilesecurity
 (?-i:^Ashwani Sharma$)
 (?-i:^shah wali$)
 (?-i:^jacsparow$)
+(?-i:^Owais Raza$)
