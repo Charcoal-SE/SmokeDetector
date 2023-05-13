@@ -50283,9 +50283,9 @@
 1683115549	tripleee	oneclickitsolution\.com
 1683115968	tripleee	goldenstarsaba\.com
 1683119405	tripleee	(?-i:qfe9xjLp)(?# pastebin)
-1683119430	tripleee	k[\W_]*+e[\W_]*+m[\W_]*+o[\W_]*+n[\W_]*+o[\W_]*+p[\W_]*+a[\W_]*+n[\W_]*+t[\W_]*+s[\W_]*+u\w*+
-1683120874	tripleee	flareon(?# temporary kemono pantsu)
-1683120912	tripleee	(?-i:^KP\d{2,3}$)(?# temporary kemono pantsu)
+1683119430	tripleee	K(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*E(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*M(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*O(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*N(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*O(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*P(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*A(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*N(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*T(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*S(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*U(?# obfuscated kemono pantsu)
+1683120874	tripleee	f(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*l(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*a(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*r(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*e(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*o(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*n(?# obfuscated flareon for kemono pantsu)
+1683120912	tripleee	(?-i:^KP\d{2,3}$)(?# temporary username kemono pantsu)
 1683123059	Makyen	services[\W_]*+near[\W_]*+me
 1683128014	Makyen	apps\.shopify\.com/custom-registration-fields
 1683131431	Makyen	f[\W_]*+u[\W_]*+c[\W_]*+k(?<!fuck)\w*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
