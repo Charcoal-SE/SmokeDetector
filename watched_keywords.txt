@@ -50633,3 +50633,4 @@
 1683935951	Makyen	brwest\.com
 1683936140	Makyen	stfly\.me
 1683936162	Makyen	(?-i:aqwmtz)(?#stfly.me)
+1683936185	Makyen	astrologerliveresult(?!\.com)
