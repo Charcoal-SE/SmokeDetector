@@ -50638,3 +50638,4 @@
 1683936283	Makyen	brandeeproficial(?:@gmail\.com)?
 1683944526	Jesse	magiskmodule\.com
 1683946012	Makyen	magisk(?:[\W_]*+module(?!\.com(?<=magiskmodule\.com)))?
+1683946941	Spevacus	salinebali\.com
