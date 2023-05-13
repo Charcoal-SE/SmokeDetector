@@ -50637,3 +50637,4 @@
 1683936261	Makyen	dnsproficial(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1683936283	Makyen	brandeeproficial(?:@gmail\.com)?
 1683944526	Jesse	magiskmodule\.com
+1683946012	Makyen	magisk(?:[\W_]*+module(?!\.com(?<=magiskmodule\.com)))?
