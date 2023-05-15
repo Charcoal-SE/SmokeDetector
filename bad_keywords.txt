@@ -2854,3 +2854,4 @@ coll[\W_]*+(?:me|now)
 ndmit(?!\.com)
 adolph\.863
 crackstream\w*+
+(?-i:DAZN)
