@@ -923,3 +923,4 @@ nilesecurity
 (?-i:^Watch Anime$)
 (?-i:^sabaprofile$)
 (?-i:^MS ASIAN FILM ACADEMY$)
+(?-i:^QuickFix Support$)
