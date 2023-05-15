@@ -50691,3 +50691,4 @@
 1684140840	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))(?!<(?-i:^MS ASIAN FILM ACADEMY$))
 1684141090	tripleee	24×7(?<=\{24×7)(?=\})
 1684141422	tripleee	ezyro\.com
+1684142557	tripleee	journalpsij\.com
