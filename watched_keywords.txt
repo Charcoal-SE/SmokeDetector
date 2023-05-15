@@ -50692,3 +50692,4 @@
 1684141090	tripleee	24×7(?<=\{24×7)(?=\})
 1684141422	tripleee	ezyro\.com
 1684142557	tripleee	journalpsij\.com
+1684144928	tripleee	(?-i:^Olivier Denis$)
