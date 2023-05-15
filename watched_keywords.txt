@@ -50692,3 +50692,4 @@
 1684141422	tripleee	ezyro\.com
 1684142557	tripleee	journalpsij\.com
 1684144928	tripleee	(?-i:^Olivier Denis$)
+1684145117	tripleee	quick[\W_]*+fix[\W_]*+1st(?!\.com(?<=quickfix1st\.com))
