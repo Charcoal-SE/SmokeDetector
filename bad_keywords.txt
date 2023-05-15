@@ -2853,3 +2853,4 @@ customer[\W_]*+cara
 coll[\W_]*+(?:me|now)
 ndmit(?!\.com)
 adolph\.863
+crackstream
