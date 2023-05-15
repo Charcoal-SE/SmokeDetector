@@ -50682,3 +50682,4 @@
 1684132442	Makyen	localblinds\.ca
 1684132463	Makyen	au\.greatassignmenthelper\.io
 1684132915	Makyen	wizard[\W_]*+larry[\W_]*+recovery[\W_]*+service
+1684132937	Makyen	wizardlarry(?:[\W_]*+(?:at[\W_]*+)?mail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
