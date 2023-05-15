@@ -921,3 +921,4 @@ nilesecurity
 (?-i:^jacsparow$)
 (?-i:^Owais Raza$)
 (?-i:^Watch Anime$)
+(?-i:^sabaprofile$)
