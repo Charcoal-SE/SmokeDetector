@@ -924,3 +924,4 @@ nilesecurity
 (?-i:^sabaprofile$)
 (?-i:^MS ASIAN FILM ACADEMY$)
 (?-i:^QuickFix Support$)
+(?-i:^Poppy Alex$)
