@@ -925,3 +925,4 @@ nilesecurity
 (?-i:^MS ASIAN FILM ACADEMY$)
 (?-i:^QuickFix Support$)
 (?-i:^Poppy Alex$)
+(?-i:^Disha Patil$)
