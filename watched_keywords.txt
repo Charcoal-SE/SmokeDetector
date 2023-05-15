@@ -50689,3 +50689,4 @@
 1684134556	Makyen	trustworth(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?
 1684134630	tripleee	auditzy\.com
 1684140840	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))(?!<(?-i:^MS ASIAN FILM ACADEMY$))
+1684141090	tripleee	24×7(?<=\{24×7)(?=\})
