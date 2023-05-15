@@ -50686,3 +50686,4 @@
 1684133141	Makyen	spaciousdesign\.in
 1684133151	Makyen	keto[\W_]*+trim[\W_]*+max[\W_]*+gummies
 1684133712	tripleee	smarty-trend\.com
+1684134521	Makyen	bitcoin[\W_]*+recovery
