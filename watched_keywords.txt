@@ -50693,3 +50693,4 @@
 1684144928	tripleee	(?-i:^Olivier Denis$)
 1684145117	tripleee	quick[\W_]*+fix[\W_]*+1st(?!\.com(?<=quickfix1st\.com))
 1684146242	tripleee	msofficedeals\.com
+1684146321	tripleee	(?-i:^Digital Software$)
