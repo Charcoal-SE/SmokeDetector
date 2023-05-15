@@ -922,3 +922,4 @@ nilesecurity
 (?-i:^Owais Raza$)
 (?-i:^Watch Anime$)
 (?-i:^sabaprofile$)
+(?-i:^MS ASIAN FILM ACADEMY$)
