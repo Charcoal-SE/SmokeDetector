@@ -39631,7 +39631,6 @@
 1654676636	tripleee	pass2dumps\.com
 1654676904	tripleee	rootandleaves\.com
 1654676997	tripleee	thebuyingpro\.com
-1654677361	tripleee	quickfix1st\.com
 1654678678	tripleee	pharmacoders\.com
 1654680801	tripleee	bagsmart
 1654683427	tripleee	(?-i:^chinaprinting4u$)
