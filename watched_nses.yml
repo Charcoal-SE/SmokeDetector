@@ -1990,6 +1990,9 @@ items:
   - paris.ns.cloudflare.com.
 - ns:
   - graham.ns.cloudflare.com.
+  - pola.ns.cloudflare.com.
+- ns:
+  - graham.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
   - graham.ns.cloudflare.com.
