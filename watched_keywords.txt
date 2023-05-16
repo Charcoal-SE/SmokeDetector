@@ -50719,3 +50719,4 @@
 1684238679	tripleee	(?-i:^Muskan$)
 1684239102	tripleee	wariorreview\.com
 1684239576	tripleee	cryogenic[\W_]*+(?:skin[\W_]*+)?(?:tag[\W_]*+)?remover
+1684242796	tripleee	(?-i:^Mary Swon$)
