@@ -50705,3 +50705,4 @@
 1684183793	Makyen	click5interactive\.com
 1684187973	Makyen	dazn(?<!(?-i:DAZN))
 1684195254	Makyen	ddb545j@gmail\.com
+1684212102	Makyen	shopprix\.in
