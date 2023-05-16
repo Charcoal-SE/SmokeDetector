@@ -49034,7 +49034,6 @@
 1679994593	tripleee	a1corporatecars\.com\.au
 1679994622	tripleee	a1corporate
 1679995636	tripleee	inrainconstruction\.com
-1679996346	tripleee	fabulous[\W_]*+one[\W_]*+strapless
 1679996677	tripleee	easypeasyfly\.com
 1679997409	tripleee	appknox\.com
 1679997836	tripleee	(?-i:^JerryThomson$)
