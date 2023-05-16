@@ -50709,3 +50709,4 @@
 1684212124	Makyen	shopprixon
 1684213680	tripleee	(?-i:^Douglas Dotson$)
 1684215624	tripleee	thedigitalthought\.com
+1684216697	tripleee	aura[\W_]*+vaastu[\W_]*+consultancy
