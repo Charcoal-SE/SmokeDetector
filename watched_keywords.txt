@@ -50713,3 +50713,4 @@
 1684216775	tripleee	fast[\W_]*+physical[\W_]*+machine[\W_]*+rental
 1684216897	tripleee	(?-i:Suddip Mehta)
 1684219094	tripleee	furnicoliving\.co\.uk
+1684219508	tripleee	extremewholesalers\.com
