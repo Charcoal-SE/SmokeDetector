@@ -42532,7 +42532,6 @@
 1662349256	tripleee	(?-i:^wsreviewnet$)
 1662350706	tripleee	indepthworld\.com
 1662353852	tripleee	(?-i:^tailuudan$)
-1662355257	tripleee	assignment\.world
 1662355737	tripleee	(?-i:^Zuni$)
 1662356620	Makyen	drabito\.com
 1662359670	tripleee	migr8(?!\.in)
