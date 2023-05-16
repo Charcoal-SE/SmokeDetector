@@ -49029,7 +49029,6 @@
 1679987471	tripleee	liquid[\W_]*+filling[\W_]*+machine(?!\.co\.in(?<=liquidfillingmachine\.co\.in))
 1679987503	tripleee	leatherscin\.com
 1679988037	tripleee	(?-i:^Rohit T$)
-1679988251	tripleee	swethey[\W_]*+com
 1679993201	Makyen	onlineforms\.in
 1679993229	Makyen	unitedstate\.tech
 1679994593	tripleee	a1corporatecars\.com\.au
