@@ -50728,3 +50728,4 @@
 1684233624	tripleee	efimarkets\.com
 1684238679	tripleee	(?-i:^Muskan$)
 1684239102	tripleee	wariorreview\.com
+1684239576	tripleee	cryogenic[\W_]*+(?:skin[\W_]*+)?(?:tag[\W_]*+)?remover
