@@ -50720,3 +50720,4 @@
 1684239102	tripleee	wariorreview\.com
 1684239576	tripleee	cryogenic[\W_]*+(?:skin[\W_]*+)?(?:tag[\W_]*+)?remover
 1684242796	tripleee	(?-i:^Mary Swon$)
+1684248206	Ian Campbell	blackeden420\.com
