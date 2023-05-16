@@ -102,6 +102,9 @@ items:
   - albert.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
+  - gabe.ns.cloudflare.com.
+- ns:
+  - adel.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
   - adel.ns.cloudflare.com.
