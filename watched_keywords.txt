@@ -49188,7 +49188,6 @@
 1680243093	tripleee	spartan[\W_]*+hack(?:ing|s)?
 1680244304	tripleee	rtpdewa158\.com
 1680244635	tripleee	flourishlegend\.com
-1680245011	tripleee	numiere
 1680245038	tripleee	swezida
 1680245078	tripleee	zerouin
 1680245624	Ryan M	dumpsinfo\.com
