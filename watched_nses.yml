@@ -2383,6 +2383,9 @@ items:
   - wally.ns.cloudflare.com.
 - ns:
   - jonah.ns.cloudflare.com.
+  - menaly.ns.cloudflare.com.
+- ns:
+  - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
   - jose.ns.cloudflare.com.
