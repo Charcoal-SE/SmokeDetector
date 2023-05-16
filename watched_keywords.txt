@@ -50710,3 +50710,4 @@
 1684213680	tripleee	(?-i:^Douglas Dotson$)
 1684215624	tripleee	thedigitalthought\.com
 1684216697	tripleee	aura[\W_]*+vaastu[\W_]*+consultancy
+1684216775	tripleee	fast[\W_]*+physical[\W_]*+machine[\W_]*+rental
