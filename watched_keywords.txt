@@ -50601,7 +50601,6 @@
 1683888786	tripleee	idict\.io
 1683888836	tripleee	bayareaimmigrationservices\.com
 1683888863	tripleee	ulfatufo051export
-1683889078	tripleee	(?-i:^Anshu Toppo ndmit$)
 1683889180	tripleee	wikigyan\.com
 1683889229	tripleee	ipcsglobal\.com
 1683890688	Jeff Schaller	vatshield\.com
