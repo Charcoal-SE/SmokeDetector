@@ -477,7 +477,7 @@
 1501278997	doppelgreener	modup\.net
 1501347530	Glorfindel	gadgetspirit\.com
 1501350484	Glorfindel	taxi-airports-transfer\.com
-1501365414	Undo	Louis\W*A\W*Coffelt
+1501365414	Undo	Louis[\W_]*+A[\W_]*+Coffelt
 1501421675	Mithrandir	magic\.piktochart\.com
 1501427629	Mithrandir	rootsh3ll\.com
 1501483754	Glorfindel	ouseful\.info
@@ -1383,7 +1383,7 @@
 1510754907	tripleee	ncresults\.com
 1510771299	Glorfindel	eudormail\.com
 1510795028	paper1111	fues email customer services
-1510810520	tripleee	beaute\W?facial\W?eye
+1510810520	tripleee	beaute[\W_]*+facial[\W_]*+eye
 1510812709	tripleee	radikalmedikal\.com
 1510814596	tripleee	inkmasters\.net\.au
 1510814991	Tetsuya Yamamoto	epsonprinterssupport\.com
@@ -1393,7 +1393,7 @@
 1510851511	DrMcMoylex	jestaplophotography
 1510879822	paper1111	lk-tinsel-wire\.com
 1510895035	tripleee	unstuckbtc\.ml
-1510895567	tripleee	cell\W?repair\W?7
+1510895567	tripleee	cell[\W_]*+repair[\W_]*+7
 1510901220	tripleee	everydayhero\.com
 1510905155	tripleee	atlasdpack\.com
 1510912649	tripleee	pcb-forum\.com
@@ -1407,7 +1407,7 @@
 1511005185	Glorfindel	khojdo\.com
 1511021644	Glorfindel	popunderzone\.com
 1511022777	Glorfindel	nusaphala\.com
-1511023166	Glorfindel	luis\W?cotton
+1511023166	Glorfindel	luis[\W_]*+cotton
 1511077128	paper1111	writinghelp\.net
 1511078574	paper1111	sorgs\.cn
 1511088861	Glorfindel	gobowlingalley\.com
@@ -1437,14 +1437,14 @@
 1511241967	tripleee	bobslocks\.us
 1511242236	tripleee	follimen
 1511242263	tripleee	appermermai
-1511243920	tripleee	max\W?hair(?:\W?3)?
+1511243920	tripleee	max[\W_]*+hair(?:[\W_]*+3)?
 1511248291	A J	jypsealocal\.com
 1511250098	tripleee	swertresresultz\.com
 1511250257	tripleee	probulus
 1511255662	tripleee	luxxia
 1511260061	Mithrandir	spartagenxtfacts\.com
 1511260626	Glorfindel	valentinegifts\d+\.com
-1511262391	tripleee	cosmovio\W?beauty
+1511262391	tripleee	cosmovio[\W_]*+beauty
 1511268164	Glorfindel	stupidtalks\.com
 1511270061	paper1111	topamericanwriters\.com
 1511271321	Glorfindel	cpalists\.com
@@ -1452,7 +1452,7 @@
 1511277442	Glorfindel	gametwist\.com
 1511323070	Tetsuya Yamamoto	thucphamchucnang360\.com
 1511327868	NobodyNada	pakrunco\.com
-1511328626	tripleee	zeus\W?muscle
+1511328626	tripleee	zeus[\W_]*+muscle
 1511328810	tripleee	lampuprosesor\.my\.id
 1511328979	tripleee	engineeringinterviewquestions\.com
 1511338175	Glorfindel	precision-elec\.com
@@ -1471,11 +1471,11 @@
 1511424120	Tetsuya Yamamoto	thewaywholesale\.com
 1511429833	tripleee	convasti\.com
 1511432726	Glorfindel	upayogee\.com
-1511434025	Glorfindel	venture\W?care
+1511434025	Glorfindel	venture[\W_]*+care
 1511437873	Glorfindel	avisatasfie\.com
-1511504994	tripleee	quick\W?trim
+1511504994	tripleee	quick[\W_]*+trim
 1511507204	A J	rupeenomics\.com
-1511512701	tripleee	tiger\W?zinda\W?hai
+1511512701	tripleee	tiger[\W_]*+zinda[\W_]*+hai
 1511525197	A J	qualitiasoft\.com
 1511527890	Suraj Rao	w88us\.com
 1511537575	Glorfindel	www-animehaven\.com
@@ -1523,7 +1523,7 @@
 1511930945	Tetsuya Yamamoto	sbkwalityinn\.com
 1511932019	NobodyNada	actus\Wexpertise
 1511943283	Glorfindel	fai\.me
-1511943395	tripleee	testo\W?explo
+1511943395	tripleee	testo[\W_]*+explo
 1511944039	tripleee	alcostopex
 1511944316	tripleee	courseworkhelponline\.xyz
 1511944642	tripleee	espanasuplementos\.es
@@ -1597,7 +1597,7 @@
 1512456205	Glorfindel	technicalguru\.beep\.com
 1512459618	Glorfindel	novinwebsite\.com
 1512459768	Tetsuya Yamamoto	worldeyecam\.com
-1512466172	Mithrandir	our\W?team\W?of\W?experts
+1512466172	Mithrandir	our[\W_]*+team[\W_]*+of[\W_]*+experts
 1512469768	ArtOfCode	deepak apples
 1512470239	Mithrandir	shivainfotech\.com
 1512470316	Suraj Rao	turboems\.com
@@ -1669,7 +1669,7 @@
 1512784865	Jamal	swisswatchjust\.co\.uk
 1512784849	Jamal	rolexreplicasstore\.uk\.com
 1512792898	quartata	varyforte
-1512798102	quartata	fizzy\W?slim
+1512798102	quartata	fizzy[\W_]*+slim
 1512809909	Glorfindel	gclubth\.net
 1512810048	Glorfindel	noornegar\.com
 1512810739	Glorfindel	user43177
@@ -1696,13 +1696,13 @@
 1513061937	tripleee	parsaya\.com
 1513065396	tripleee	infozign\.com
 1513066900	tripleee	lawyersforcaraccidents\.org
-1513078265	tripleee	24\W?karat\W?gold
+1513078265	tripleee	24[\W_]*+karat[\W_]*+gold
 1513081715	tripleee	genesis-mining\.com
-1513081781	tripleee	edge\W?testo
+1513081781	tripleee	edge[\W_]*+testo
 1513114432	Glorfindel	sparechange\.io
 1513114438	Glorfindel	prosabbir\.blogspot
 1513158850	tripleee	usmanakbar\.com
-1513159853	tripleee	http\W?hook\W?up\W?apps\W?org
+1513159853	tripleee	http[\W_]*+hook[\W_]*+up[\W_]*+apps[\W_]*+org
 1513162353	Mithrandir	dmwevehicles\.com
 1513162385	Mithrandir	elanpro\.net
 1513190589	Thomas Ward	hiri\.com
@@ -1741,13 +1741,13 @@
 1513753406	Glorfindel	khelplayrummy\.com
 1513758092	Glorfindel	sarahwhatsup\.com
 1513758103	Glorfindel	freeandcheapnyc\.com
-1513759824	Glorfindel	vip\W?fix\W?phone
+1513759824	Glorfindel	vip[\W_]*+fix[\W_]*+phone
 1513763778	Glorfindel	mmkitcheneng\.com
 1513764573	paper1111	informationsecurityawareness\.in
 1513764906	tripleee	xomax
 1513766286	Glorfindel	theclasaffloweroilreview\.com
 1513768815	paper1111	wbcwallet\.blogspot
-1513771776	Glorfindel	youthful\W?derma
+1513771776	Glorfindel	youthful[\W_]*+derma
 1513827059	paper1111	roddines\.blogspot
 1513857550	paper1111	buddhika-semasinghe\.blogspot
 1513863276	tripleee	sociobid\.com
@@ -1756,7 +1756,7 @@
 1513905712	Tetsuya Yamamoto	cheapkeystore\.com
 1513912141	Tetsuya Yamamoto	thegymsportsbars\.com
 1513918216	Federico	aircraftjackservice\.com
-1513918344	tripleee	lord\W?kakabu
+1513918344	tripleee	lord[\W_]*+kakabu
 1513925869	Suraj Rao	xyphersoftware\.com
 1513936105	Glorfindel	muslimyouthgroup\.org
 1513936114	Glorfindel	perugiashock\.com
@@ -1769,7 +1769,7 @@
 1514030910	paper1111	basriyildiz\.com
 1513934780	paper1111	vastushastraechitech\.tumblr\.co
 1514083710	paper1111	lordkakabumiraclouswork\.website2\.me
-1514105136	Mithrandir	luster\W?cream
+1514105136	Mithrandir	luster[\W_]*+cream
 1514108755	paper1111	apkthunder\.com
 1514110573	Mithrandir	steamseo
 1514111478	Glorfindel	erepairoutlook\.com
@@ -1790,8 +1790,8 @@
 1514280288	Glorfindel	rentadolls\.com
 1514286344	Suraj Rao	markets\.post-gazette\.com
 1514291204	paper1111	trackingnumbergps\.com
-1514363693	Mithrandir	EPG\W?Steel\W?75
-1514367489	Mithrandir	online\W?love
+1514363693	Mithrandir	EPG[\W_]*+Steel[\W_]*+75
+1514367489	Mithrandir	online[\W_]*+love
 1514370651	paper1111	onlinekarmabarta\.com
 1514374482	Glorfindel	wiipedia\.org
 1514379109	paper1111	thedrum\.com
@@ -1821,7 +1821,7 @@
 1514613278	paper1111	iuktvnowapk\.com
 1514629076	Suraj Rao	jacksonvillegunrunners\.com
 1514658506	Glorfindel	auto\Wstamper
-1514706869	Mithrandir	kill?\W?(?:yo)?urs(?:el|le)f
+1514706869	Mithrandir	kill?[\W_]*+(?:yo)?urs(?:el|le)f
 1514728896	iBug	wondercoco
 1514848305	paper1111	conexraco\.com
 1514865786	iBug	honeytik\.com
@@ -1899,7 +1899,7 @@
 1515671834	Glorfindel	opportunityinchina\.com
 1515676448	Glorfindel	indiakaaoffer\.com
 1515659614	Tetsuya Yamamoto	101-prototype\.com
-1515687711	Glorfindel	lawrence\W?livestock\W?farm
+1515687711	Glorfindel	lawrence[\W_]*+livestock[\W_]*+farm
 1515723357	NobodyNada	mmotank\.com
 1515724019	paper1111	ffxivgilline8z4\.tek-blogs\.com
 1515724069	paper1111	nba2kmt1853mvn\.basinperlite\.com
@@ -1934,14 +1934,14 @@
 1516078325	Suraj Rao	learnhax\.net
 1516103596	paper1111	actionmovie68\.online
 1516103621	paper1111	movie\.arifin91\.com
-1516109869	Mithrandir	(?:steel|speed)\W?hand\W?dryer
-1516172436	Glorfindel	bhiwadi\W?polymers
+1516109869	Mithrandir	(?:steel|speed)[\W_]*+hand[\W_]*+dryer
+1516172436	Glorfindel	bhiwadi[\W_]*+polymers
 1516177388	Glorfindel	hypez\.com
 1516181311	Glorfindel	reviewlancer
 1516182606	Glorfindel	forummantra\.org
 1516196965	CalvT븃	AscendedMaster8888
 1516208067	CalvT븃	dideban-cctv\.com
-1516215978	Mithrandir	the\W?millennium\W?blessing
+1516215978	Mithrandir	the[\W_]*+millennium[\W_]*+blessing
 1516217156	Glorfindel	openitsolution\.in
 1516191647	CalvT븃	laguterbaru\.me
 1516176380	Tetsuya Yamamoto	upboardresults2018nic\.in
