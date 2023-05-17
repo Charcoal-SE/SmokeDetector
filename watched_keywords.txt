@@ -50753,3 +50753,4 @@
 1684314316	tripleee	i8bet\.today
 1684316342	tripleee	(?-i:^Rimsha Victor Gill$)
 1684317735	tripleee	tree[\W_]*campus(?!\.in(?<=treecampus\.in))
+1684317762	tripleee	treecampus\.in
