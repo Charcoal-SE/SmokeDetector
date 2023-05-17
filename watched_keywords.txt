@@ -50765,3 +50765,4 @@
 1684325234	tripleee	mayabiotechindia\.com
 1684325262	tripleee	maya[\W_]*+biotech(?!\.com(?<=mayabiotechindia\.com))
 1684326066	tripleee	intelligence\.org
+1684327392	tripleee	meddyshop\.com
