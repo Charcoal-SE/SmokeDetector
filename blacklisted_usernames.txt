@@ -936,3 +936,4 @@ nilesecurity
 (?-i:^smtp relay services$)
 (?-i:^ap-setup$)
 (?-i:^Pintrick$)
+(?-i:^Tree Campus$)
