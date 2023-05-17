@@ -50752,3 +50752,4 @@
 1684311783	tripleee	miraculoussolutionhome(?:[\W_]*+(?:at[\W_]*+)?yahoo[\W_]*+(?:dot[\W_]*+)?com)?
 1684311812	tripleee	d(?:octo)?r[\W_]*+oman
 1684313468	tripleee	upbullion\.in
+1684313698	tripleee	shieldroofingonline\.com
