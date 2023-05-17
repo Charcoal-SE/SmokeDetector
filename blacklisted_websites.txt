@@ -5422,3 +5422,4 @@ assignment\.world
 (?-i:y3wVM\.png)
 flappy-bird\.io
 sudobytes\.org
+fukatsoft\.com
