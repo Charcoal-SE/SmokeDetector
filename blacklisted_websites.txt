@@ -5425,3 +5425,4 @@ sudobytes\.org
 fukatsoft\.com
 lifecoachsmitadjain\.com
 revancedapk\.org
+(?-i:3WaNob9)(?#bit.ly)
