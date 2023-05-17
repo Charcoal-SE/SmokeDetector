@@ -50730,3 +50730,4 @@
 1684265942	Jeff Schaller	gardinal\.net
 1684270889	Makyen	fishingproductreview\.com
 1684282820	Makyen	xsino
+1684282966	Makyen	casino[\W_]*+en[\W_]*+línea
