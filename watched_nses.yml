@@ -1248,6 +1248,9 @@ items:
   - todd.ns.cloudflare.com.
 - ns:
   - cody.ns.cloudflare.com.
+  - gabriella.ns.cloudflare.com.
+- ns:
+  - cody.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
   - coen.ns.cloudflare.com.
