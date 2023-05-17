@@ -935,3 +935,4 @@ nilesecurity
 (?-i:^Jacelyn Sia$)
 (?-i:^smtp relay services$)
 (?-i:^ap-setup$)
+(?-i:^Pintrick$)
