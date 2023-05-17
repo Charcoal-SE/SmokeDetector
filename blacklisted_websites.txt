@@ -5420,3 +5420,4 @@ qservicesit\.com
 seikocp\.co\.in
 assignment\.world
 (?-i:y3wVM\.png)
+flappy-bird\.io

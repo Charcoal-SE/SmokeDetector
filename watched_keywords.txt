@@ -47699,7 +47699,6 @@
 1676860684	Makyen	(?-i:N7v0yvdkIHg)(?#youtu.be)
 1676860955	Ethan	abortionpillsqatardubai\.com
 1676861110	Makyen	doctormaya52(?:@gmail\.com)?
-1676862074	Makyen	flappy-bird\.io
 1676869997	cigien	chapter[\W_]*+12[\W_]*+lawyer(?!\.com(?<=chapter12lawyer\.com))
 1676870293	cigien	apkaone\.com
 1676872861	cocomac	seodigitz\.com
