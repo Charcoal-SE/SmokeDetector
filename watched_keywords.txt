@@ -50731,3 +50731,4 @@
 1684282820	Makyen	xsino
 1684282966	Makyen	casino[\W_]*+en[\W_]*+línea
 1684297740	tripleee	edunitas\.com
+1684297762	tripleee	edunovasi\.com
