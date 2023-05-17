@@ -557,7 +557,6 @@ items:
 - ns:
   - bar.dnspod.net.
   - select.dnspod.net.
-- ns: symbolhost.com.
 - ns: shoviv.com.
 - ns: hndservers.net.
 - ns:
