@@ -50754,3 +50754,4 @@
 1684316342	tripleee	(?-i:^Rimsha Victor Gill$)
 1684317735	tripleee	tree[\W_]*campus(?!\.in(?<=treecampus\.in))
 1684317762	tripleee	treecampus\.in
+1684317795	tripleee	theascent-group\.com
