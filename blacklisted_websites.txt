@@ -5419,3 +5419,4 @@ quickfix1st\.com
 qservicesit\.com
 seikocp\.co\.in
 assignment\.world
+(?-i:y3wVM\.png)
