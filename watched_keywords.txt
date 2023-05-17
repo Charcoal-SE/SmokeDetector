@@ -50757,3 +50757,4 @@
 1684318093	tripleee	tree[\W_]*campus(?!\.in(?<=treecampus\.in))(?<!(?-i:^Tree Campus$))
 1684318159	tripleee	genoffpotomac\.com
 1684318273	tripleee	smith[\W_]*+publicity(?!\.com(?<=smithpublicity\.com))
+1684320044	Jeff Schaller	mywifiextsetup\.net
