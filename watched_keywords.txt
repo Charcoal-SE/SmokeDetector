@@ -50753,3 +50753,4 @@
 1684311812	tripleee	d(?:octo)?r[\W_]*+oman
 1684313468	tripleee	upbullion\.in
 1684313698	tripleee	shieldroofingonline\.com
+1684314316	tripleee	i8bet\.today
