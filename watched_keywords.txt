@@ -50743,3 +50743,4 @@
 1684306665	tripleee	thietbig7\.vn
 1684307049	tripleee	wavel\.ai
 1684308005	tripleee	everestairaz\.com
+1684308073	Makyen	newsdata\.io
