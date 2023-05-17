@@ -2074,6 +2074,9 @@ items:
   - oaklyn.ns.cloudflare.com.
 - ns:
   - hans.ns.cloudflare.com.
+  - meg.ns.cloudflare.com.
+- ns:
+  - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
   - harley.ns.cloudflare.com.
