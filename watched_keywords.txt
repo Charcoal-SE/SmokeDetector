@@ -50746,3 +50746,4 @@
 1684308073	Makyen	newsdata\.io
 1684308106	tripleee	everest[\W_]*+air(?:[\W_]*+llc)?
 1684308393	tripleee	unidoc\.io
+1684309908	tripleee	ramsiyatech\.com
