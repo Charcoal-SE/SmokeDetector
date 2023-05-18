@@ -50783,3 +50783,4 @@
 1684392093	Makyen	viga[\W_]*+spray
 1684392627	Makyen	dboe[\W_]*+academy
 1684392856	Makyen	shop\.miele\.ae
+1684392896	Makyen	dboe[\W_]*+exchange
