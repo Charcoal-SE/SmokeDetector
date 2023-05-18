@@ -50785,3 +50785,4 @@
 1684392856	Makyen	shop\.miele\.ae
 1684392896	Makyen	dboe[\W_]*+exchange
 1684406820	Jeff Schaller	tabnova\.com
+1684407036	Jeff Schaller	lifelinehospital\.pk
