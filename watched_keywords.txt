@@ -50793,3 +50793,4 @@
 1684417150	Jeff Schaller	sourceved\.com
 1684418254	Makyen	on?linehack\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1684418843	Makyen	cracksilo\.org
+1684418875	Makyen	cracksilo(?!\.org)
