@@ -50837,3 +50837,4 @@
 1684520013	Jesse	szjy-led\.com
 1684521503	Makyen	(?-i:FhKC97P)
 1684525071	Makyen	bans?\.(?:png|jpg|gif)
+1684525864	Makyen	alien[\W_]*+hybrid[\W_]*+god
