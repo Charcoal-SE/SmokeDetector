@@ -50838,3 +50838,4 @@
 1684525071	Makyen	bans?\.(?:png|jpg|gif)
 1684525864	Makyen	alien[\W_]*+hybrid[\W_]*+god
 1684527972	Makyen	my[\W_]*+wifi(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+(?:ext(?:ender)?|local|net(?:work)?|login|setup|support)s?)*(?<!my wifi)(?!(?<=mywifiext)\.(?:cc|net|xyz))
+1684531640	Jeff Schaller	atscables\.com
