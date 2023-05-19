@@ -50755,7 +50755,6 @@
 1684318273	tripleee	smith[\W_]*+publicity(?!\.com(?<=smithpublicity\.com))
 1684320044	Jeff Schaller	mywifiextsetup\.net
 1684320842	tripleee	nyccarservice\.com
-1684321128	tripleee	my[\W_]*+wifi[\W_]*+(?:[\W_]*+ext(?:ender)?)?(?:[\W_]*+(?:local|net(?:work)?))?(?:[\W_]*+login)?(?:[\W_]*+(?:setup|support))?(?!\.(?:cc|net|xyz)(?<=mywifiext\.\+w))
 1684321586	tripleee	spodable
 1684324327	tripleee	airportslounges\.com
 1684325234	tripleee	mayabiotechindia\.com
