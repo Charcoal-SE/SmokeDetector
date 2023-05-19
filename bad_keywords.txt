@@ -15,8 +15,8 @@ restore[\W_]*+samsung[\W_]*+data
 swtor2credits
 death\Wreckoning\Wcalculate
 bam2u
-neuro\W*+(?:3X|flexyn|fuse|luma|plex|ignite|lon|xr|max)
-Testerone\W*+XL
+neuro[\W_]*+(?:3X|flexyn|fuse|luma|plex|ignite|lon|xr|max)
+Testerone[\W_]*+XL
 Nitroxin
 Bowtrol
 slim[\W_]*+genix
@@ -739,7 +739,7 @@ plus[\W_]*+iq[\W_]*+points
 platinum[\W_]*+light
 test[ -]reload
 avanti[\W_]*+skin
-0?808\W*+281\W*+8685
+0?808[\W_]*+281[\W_]*+8685
 firmaluxe
 hemp\Woil
 blue[\W_]*+fortera
@@ -851,7 +851,7 @@ clarasoft
 perfect[\W_]*+prime[\W_]*+face
 mobotak
 elite[\W_]*+350
-0?44\W*+6565\W*+6523
+0?44[\W_]*+6565[\W_]*+6523
 glamor[\W_]*+gold
 royal[\W_]*+kiraz
 simply[\W_]*+flawless[\W_]*+cream
@@ -888,8 +888,8 @@ cilexin
 essential[\W_]*+trim(?:[\W_]*+gc)?
 ez\W*battery
 https?://\S+\.(?:band|club|download|live|media|press|world|xyz|zone)/[^/\s"]*-mp3-(?:musica-baixar|cancion-descargar|(?:song-)?download|sarki-indir|telecharger-musique)(?#" syntax highlighting fodder)
-platinum\W*+xwl
-new\W*+age\W*+serum
+platinum[\W_]*+xwl
+new[\W_]*+age[\W_]*+serum
 noxitril
 boli[\W_]*+testo[\W_]*+boost
 troxin
@@ -1152,7 +1152,7 @@ cortyx[\W_]*+clarity
 the[\W_]*+away[\W_]*+days
 magnumax
 (?:os)?rs[\W_]*+gold
-keto[\W_]*+tone(?:\W*+(?:diet|avis|france|fr|new\W*zealand|nz|\d++))*
+keto[\W_]*+tone(?:[\W_]*+(?:diet|avis|france|fr|new\W*zealand|nz|\d++))*
 eye[\W_]*+serum[\W_]*+magic
 jet[\W_]*+pro[\W_]*+x
 size[\W_]*+gain[\W_]*+plus
@@ -1191,14 +1191,14 @@ nutriti?ous[\W_]*+health
 diet[\W_]*+keto
 slim[\W_]*+xtra
 fuel[\W_]*+fit[\W_]*+max
-rapid\W*+tone(?:\W*(?:diet|\d++))*
+rapid[\W_]*+tone(?:\W*(?:diet|\d++))*
 clash[\W_]*+of[\W_]*+clans[\W_]*+hack
 saint[\W_]*+elias
-keto(?!-ultra-diet\.com)\W*+ultra(?:\W*+diet)?(?:\W*+com)?
+keto(?!-ultra-diet\.com)[\W_]*+ultra(?:[\W_]*+diet)?(?:[\W_]*+com)?
 pay[\W_]*+for[\W_]*+essay
 cla[\W_]*+slim
 trdbot
-piss\W*+be\W*+upon\W*+him
+piss[\W_]*+be[\W_]*+upon[\W_]*+him
 asha24
 action[\W_]*+pro
 bone[\W_]*+oak
@@ -1209,12 +1209,12 @@ bonte[\W_]*+cream
 slim(?:ming)?[\W_]*+(?:diet[\W_]*+)?patch(?![\W_]*+cable)
 trenorol
 trenbolone
-hindus\W*+are\W*+(?:bastards|assholes)
+hindus[\W_]*+are[\W_]*+(?:bastards|assholes)
 folexin
 vital[\W_]*+derma[\W_]*+x
 shred[\W_]*+t3x
 male[\W_]*+extra
-SEXY\W*+DURGA
+SEXY[\W_]*+DURGA
 vary[\W_]*+forte
 summit[\W_]*+keto
 unlimited[\W_]*+fit
@@ -1224,7 +1224,7 @@ lutragen(?:[\W_]*+cream)?(?:\w*+$)?
 D[ -]Bal
 iq[\W_]*+180(?:[\W_]*+cognitive)?
 flawless[\W_]*+keto
-suck(?:\W*+(?:(?:the|of)?\W*+)(?:lingam|phallus))+
+suck(?:[\W_]*+(?:(?:the|of)[\W_]*+)?(?:lingam|phallus))+
 pro[\W_]*+diet[\W_]*+plus
 alpha[\W_]*+trt
 keto[\W_]*+6x
