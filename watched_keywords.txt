@@ -50831,3 +50831,4 @@
 1684512133	cigien	manappuram\.com
 1684512158	cigien	manappuram(?!\.com)
 1684512292	cigien	bincom\.net
+1684512380	cigien	fotc\.com
