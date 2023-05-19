@@ -50805,3 +50805,4 @@
 1684470979	Makyen	kakekmaxwin\.shop
 1684471008	Makyen	blsupdate\.com
 1684475355	Makyen	rmak\.solutions
+1684475385	Makyen	rmak[\W_]*+solutions(?<!rmak\.solutions)
