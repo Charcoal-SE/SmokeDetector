@@ -50807,3 +50807,4 @@
 1684475355	Makyen	rmak\.solutions
 1684475385	Makyen	rmak[\W_]*+solutions(?<!rmak\.solutions)
 1684477392	Makyen	ourblogz\.com
+1684477481	Makyen	speedy[\W_]*+keto[\W_]*+acv[\W_]*+gummies
