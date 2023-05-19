@@ -5430,3 +5430,4 @@ revancedapk\.org
 (?-i:eU64dQcmfX)(?#t.co)
 4khdmovies\.club
 (?-i:3OoeqK5)(?#bit.ly)
+(?-i:3MFSs4b)(?#bit.ly)
