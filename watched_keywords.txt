@@ -1962,12 +1962,12 @@
 1516605325	Tetsuya Yamamoto	backupmytumblr\.com
 1516608091	Tetsuya Yamamoto	hiradana\.com
 1516614769	Mithrandir	autobinarysignalssoftwarereviews\.com
-1516614913	Mithrandir	nolah\W?mattress(?:\W?reviews)?
+1516614913	Mithrandir	nolah[\W_]*+mattress(?:[\W_]*+reviews)?
 1516616589	Glorfindel	mahanseirsam\.com
 1516623577	Glorfindel	wirapoker\.com
-1516623742	Glorfindel	desert\W?safari\W?dubai
+1516623742	Glorfindel	desert[\W_]*+safari[\W_]*+dubai
 1516623803	Glorfindel	dreamnighttours\.ae
-1516623814	CalvT븃	dream\W?night\W?tours
+1516623814	CalvT븃	dream[\W_]*+night[\W_]*+tours
 1516628980	iBug	weetas\.com
 1516635127	iBug	crowdcast\.io
 1516648889	Glorfindel	999hdwallpaper\.com
@@ -1976,7 +1976,7 @@
 1516699690	doppelgreener	onlineblackjackuk\.com
 1516700587	iBug	onlinecodebeautify\.com
 1516704720	Glorfindel	coinexmarket\.io
-1516706679	iBug	supreme\W?dissertations?
+1516706679	iBug	supreme[\W_]*+dissertations?
 1516721470	Glorfindel	otczeus
 1516748172	paper1111	art\Wchapel\W+84738
 1516760206	Tetsuya Yamamoto	saharveto\.com
@@ -1996,7 +1996,7 @@
 1516956865	Glorfindel	sfeo\.agency
 1516958373	iBug	uplist\.lk
 1516990638	Glorfindel	furnituretransportgroup\.com
-1517041264	iBug	NimbusEdu\W?com
+1517041264	iBug	NimbusEdu[\W_]*+com
 1517059281	iBug	offpageseotips\.info
 1517069792	iBug	cinphe\.com
 1517137526	Glorfindel	lakipoker\.com
@@ -2012,7 +2012,7 @@
 1517215796	Suraj Rao	swiftonic\.com
 1517217857	Glorfindel	virtuallakshmi\.com
 1517225084	paper1111	gazpo\.com
-1517227145	Mithrandir	wings\W?io
+1517227145	Mithrandir	wings[\W_]*+io
 1517235946	doppelgreener	soft8soft
 1517240688	WELZ	bitrapidus\.com
 1517250438	Glorfindel	tistheseasoncelebration\.com
@@ -2049,7 +2049,7 @@
 1517486318	Glorfindel	boomeon\.com
 1517486345	Glorfindel	twilightraven\.com
 1517492687	Glorfindel	superracing3d
-1517495591	Glorfindel	children\W?enjoyment\W?brisbane
+1517495591	Glorfindel	children[\W_]*+enjoyment[\W_]*+brisbane
 1517568550	iBug	multitechnosys\.com
 1517580973	Glorfindel	londonlogodesigns\.co
 1517584302	Glorfindel	errspdyprotocolerror\.com
@@ -2087,27 +2087,27 @@
 1518021119	WELZ	archerygames\.co
 1518097917	tripleee	raypars\.com
 1518157687	tripleee	juicer\W+machine
-1518160584	iBug	Qurb\W?Shot
+1518160584	iBug	Qurb[\W_]*+Shot
 1518251708	Glorfindel	infopokerterbaru\.com
 1518275391	doppelgreener	pcgamescenter\.com
 1518287027	doppelgreener	cryptowolverine\.com
 1518292301	Glorfindel	gstechsoftware\.com
 1518336237	iBug	affordablehousing-\w*\.in
-1518336400	iBug	mahira\W?homes
+1518336400	iBug	mahira[\W_]*+homes
 1518368840	Mego	crypto(?:\W*)wolverine
-1518418778	tripleee	thermocore\W?max
-1518424948	paper1111	verge3d\W?for\W?3ds\W?Max
+1518418778	tripleee	thermocore[\W_]*+max
+1518424948	paper1111	verge3d[\W_]*+for[\W_]*+3ds[\W_]*+Max
 1518426763	Glorfindel	wordpressexperts\.com
 1518427953	tripleee	penirum
 1518428213	tripleee	techmaniyaa
 1518428216	Glorfindel	techmaniyaa\.blogspot
 1518429126	paper1111	hakankocaman\.com
 1518429862	Byte Commander	crack\Wkeygen
-1518438959	iBug	nova\W?repair
+1518438959	iBug	nova[\W_]*+repair
 1518443095	iBug	socialprac(?:ha|ah)r\.com
 1518459067	WELZ	alarmasalicante\.info
 1518497424	iBug	bookhungama\.com
-1518498746	iBug	new\W?age\W?skin
+1518498746	iBug	new[\W_]*+age[\W_]*+skin
 1518501746	iBug	volidian
 1518511096	Glorfindel	inteled\.info
 1518516333	Suraj Rao	engineer2you\.blogspot
@@ -2117,17 +2117,17 @@
 1518590141	tripleee	soyeux
 1518590618	Tetsuya Yamamoto	meentosys\.com
 1518595213	Mithrandir	scottishkiltshop\.com
-1518595233	Mithrandir	prince\W?charlie\W?jacket
+1518595233	Mithrandir	prince[\W_]*+charlie[\W_]*+jacket
 1518599111	Glorfindel	antimalwareserviceexecutable\.xyz
 1518602689	Glorfindel	jcookflyrods\.com
 1518602872	Glorfindel	labespy\.com
 1518603172	Glorfindel	sodapdf\.com
 1518603587	Glorfindel	healthhalt
 1518603875	Glorfindel	uskuper\.com
-1518611707	Glorfindel	support\W?wala
-1518616873	doppelgreener	(?:vaastuwith)?puneet\W?chawla
-1518670788	iBug	mango\W?nutrition
-1518671735	iBug	vala\W?facial
+1518611707	Glorfindel	support[\W_]*+wala
+1518616873	doppelgreener	(?:vaastuwith)?puneet[\W_]*+chawla
+1518670788	iBug	mango[\W_]*+nutrition
+1518671735	iBug	vala[\W_]*+facial
 1518687419	Glorfindel	eamazongo\.com
 1518692010	Byte Commander	panditanilmaharaj\.com
 1518692045	paper1111	real-exam-dumps\.blogspot
@@ -2143,10 +2143,10 @@
 1518877746	iBug	neftegazenergy\.com
 1518936445	paper1111	darkwebssolutions
 1518936891	iBug	nilsmoke
-1518939853	iBug	cardio\W?clear\W?\d
+1518939853	iBug	cardio[\W_]*+clear[\W_]*+\d
 1518940329	Mithrandir	packersmoversjammu\.in
 1518970497	WELZ	pop\.movie
-1518974486	iBug	blood\W?sugar\W?shield
+1518974486	iBug	blood[\W_]*+sugar[\W_]*+shield
 1519018600	iBug	pokerolb\.com
 1519019966	iBug	juniviveserum\.fr
 1519021162	iBug	crumbles\.co
@@ -2164,10 +2164,10 @@
 1519129099	doppelgreener	moon(?:bit|b|lite|doge|dash)(?:co\.in|\.co|\.ch)
 1519129128	doppelgreener	makeculous\.com
 1519190868	iBug	hydrabelle
-1519199481	iBug	musculoskeletal\W?pain
+1519199481	iBug	musculoskeletal[\W_]*+pain
 1519205754	tripleee	electricista\.barcelona
 1519205869	tripleee	holidaytriptour\.com
-1519207327	iBug	ftv\W?24k\W?golden\W?hero
+1519207327	iBug	ftv[\W_]*+24k[\W_]*+golden[\W_]*+hero
 1519217912	tripleee	bowhunting-hungary\.com
 1519276030	iBug	zylexitrim
 1519330064	thesecretmaster	wampinfotech\.com
