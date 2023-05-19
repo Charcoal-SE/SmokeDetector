@@ -5433,3 +5433,4 @@ revancedapk\.org
 (?-i:3MFSs4b)(?#bit.ly)
 (?-i:41Kbdrm)(?#bit.ly)
 bookmyessay\.com\.au
+mid-day\.com
