@@ -50816,3 +50816,4 @@
 1684480472	Makyen	karelaxlabs
 1684480504	Makyen	high[\W_]*+kouncil[\W_]*+intergalaktik
 1684484259	tripleee	iqbalgarden\.com
+1684484315	tripleee	voltawinders\.com
