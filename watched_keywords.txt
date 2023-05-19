@@ -50832,4 +50832,3 @@
 1684512158	cigien	manappuram(?!\.com)
 1684512292	cigien	bincom\.net
 1684512380	cigien	fotc\.com
-1684513210	Makyen	google-workspace-security-audit
