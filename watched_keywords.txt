@@ -50813,3 +50813,4 @@
 1684477567	Makyen	dcsnetworks\.co
 1684477604	Makyen	phishguard
 1684477627	Makyen	(?-i:iammuhammedfuhad)(?#github.com)
+1684480332	Makyen	sourceved(?!\.com)
