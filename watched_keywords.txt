@@ -50829,3 +50829,4 @@
 1684509898	cigien	bincom\.co\.uk
 1684509989	cigien	arcware\.com
 1684512133	cigien	manappuram\.com
+1684512158	cigien	manappuram(?!\.com)
