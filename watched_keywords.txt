@@ -50802,3 +50802,4 @@
 1684446391	Jesse	samsungmobilespecs\.com
 1684447976	Jesse	azlihassan\.com
 1684457889	Makyen	heena[\W_]*+motors
+1684470979	Makyen	kakekmaxwin\.shop
