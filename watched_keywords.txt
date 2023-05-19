@@ -2171,15 +2171,15 @@
 1519217912	tripleee	bowhunting-hungary\.com
 1519276030	iBug	zylexitrim
 1519330064	thesecretmaster	wampinfotech\.com
-1519335130	WELZ	offers\W?for\W?all?\.blogspot
-1519369668	iBug	cialin\W?rx
+1519335130	WELZ	offers[\W_]*+for[\W_]*+all?\.blogspot
+1519369668	iBug	cialin[\W_]*+rx
 1519375476	Tetsuya Yamamoto	jobjobz\.com
 1519371010	Tetsuya Yamamoto	gmailcustomerservicenumber\.ca
-1519442124	iBug	cozy\W?cheekz(?:\.com)?
+1519442124	iBug	cozy[\W_]*+cheekz(?:\.com)?
 1519453689	Suraj Rao	apility\.io
 1519477134	tripleee	streamhd1080\.ga
 1519545240	paper1111	keralalotteriesresults\.in
-1519546829	iBug	fungus\W?destroyer
+1519546829	iBug	fungus[\W_]*+destroyer
 1519622258	tripleee	champcash
 1519622298	tripleee	fitnessexperttips\.com
 1519624208	tripleee	forgica\.com
@@ -2199,7 +2199,7 @@
 1519734580	Glorfindel	callgirlsinchandigarh\.com
 1519739799	Federico	dentoaviation\.com
 1519745836	Glorfindel	ind99info\.com
-1519786348	WELZ	fix\W?card\W?tech
+1519786348	WELZ	fix[\W_]*+card[\W_]*+tech
 1519802723	tripleee	asetsafety\.ac\.in
 1519806308	doppelgreener	softsolution\.al
 1519808512	Glorfindel	hot166\.com
@@ -2247,7 +2247,7 @@
 1520260656	WELZ	greenhouseherbalclinic\.com
 1520262131	WELZ	cypherock\.github\.io
 1520265950	WELZ	tvideos\.net
-1520303372	bwDraco	spotify\W?music\W?converter
+1520303372	bwDraco	spotify[\W_]*+music[\W_]*+converter
 1520312247	K.Dᴀᴠɪs	(?:female|girl).{0,30}? escort.{0,5}?
 1520320761	A J	obatvimaxjakarta\.com
 1520309926	K.Dᴀᴠɪs	rukhsana\.online
@@ -2258,7 +2258,7 @@
 1520336829	Glorfindel	deletebinghistory\.com
 1520426606	WELZ	briskrange\.com
 1520426778	WELZ	threadsphere\.bid
-1520437008	Mithrandir	bubbly\W?hub
+1520437008	Mithrandir	bubbly[\W_]*+hub
 1520451040	Glorfindel	thedaonline\.com
 1520493341	K.Dᴀᴠɪs	cairo-glitz\.com
 1520495291	tripleee	paperown\.com
@@ -2290,8 +2290,8 @@
 1520830900	K.Dᴀᴠɪs	chinasunlead\.net
 1520834947	micsthepick	ajk\Wtorus
 1520837032	tripleee	theitsol\.com
-1520839439	micsthepick	pure\W?simple\W?healing\W?hemp
-1520846564	Glorfindel	cryptocurrency\W?india\W?forum
+1520839439	micsthepick	pure[\W_]*+simple[\W_]*+healing[\W_]*+hemp
+1520846564	Glorfindel	cryptocurrency[\W_]*+india[\W_]*+forum
 1520851419	Glorfindel	hellenictaxi\.com
 1520852445	Glorfindel	vidmate\.win
 1520852453	Glorfindel	mobdro\.one
@@ -2301,10 +2301,10 @@
 1520882503	Glorfindel	howtogethelpinwindows10\.co
 1520907077	WELZ	plasticbidet\.com
 1520907152	WELZ	aquatownbidet\.com
-1520919103	tripleee	golden\W?farms
+1520919103	tripleee	golden[\W_]*+farms
 1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
 1520936500	doppelgreener	mobile-phone-tracker\.org
-1520947926	WELZ	btcerich\W?com
+1520947926	WELZ	btcerich[\W_]*+com
 1520950839	iBug	videobhaia
 1520952319	K.Dᴀᴠɪs	flexistamps\.com
 1520984230	WELZ	immunet\.com
@@ -2323,7 +2323,7 @@
 1521079605	iBug	machinehall\.com
 1521094665	tripleee	anyrent\.in
 1521100057	Glorfindel	viniscookbook\.com
-1521100429	micsthepick	optigen\W?iq
+1521100429	micsthepick	optigen[\W_]*+iq
 1520947926	WELZ	btcerich\.com
 1520949439	K.Dᴀᴠɪs	api\W*amplience\W*(?:dot\W*)?net
 1521112190	Glorfindel	appexperts\.ae
@@ -2333,21 +2333,21 @@
 1521147788	micsthepick	\b\W*root\W*gate\W*hacks\W*
 1521150763	Glorfindel	publishgreen\.info
 1521180420	micsthepick	hbmgz\.com
-1521186412	tripleee	free\W?partition\W?manager
+1521186412	tripleee	free[\W_]*+partition[\W_]*+manager
 1521190918	Federico	cfone\.net
 1521195085	tripleee	solarnetwork
 1521210954	Glorfindel	onitdigital\.com
 1521216310	WELZ	hostingweb\.pe
 1521236819	micsthepick	10hightech\.com
 1521237310	WELZ	hotmailentrarlogin\.org
-1521276814	Glorfindel	manali\W?escort
+1521276814	Glorfindel	manali[\W_]*+escort
 1521300746	Glorfindel	apkmirrorapp\.com
 1521311160	DavidPostill	wikilink\.eu
 1521266837	micsthepick	enzo\W*cassino
 1521371300	iBug	crazytshirtsshop\.com
 1521388410	Glorfindel	nuclear4life\.com
 1521388453	Glorfindel	upresultsnicin\.org
-1521396988	Glorfindel	crypto\W?mos[ck]ow
+1521396988	Glorfindel	crypto[\W_]*+mos[ck]ow
 1521443386	tripleee	turboerp\.in
 1521446788	micsthepick	Claira Care
 1521450739	micsthepick	profemin
