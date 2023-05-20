@@ -5433,3 +5433,4 @@ revancedapk\.org
 bookmyessay\.com\.au
 mid-day\.com
 (?-i:RUGBY_STREAMS_FINAL)(?#bit.ly)
+xtremenitro(?!\.org)
