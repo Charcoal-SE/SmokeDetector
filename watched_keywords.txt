@@ -50854,3 +50854,4 @@
 1684570430	Makyen	tantalyofficial\.com
 1684575209	Makyen	goyalsteeltubes\.com
 1684575469	Makyen	swiftloans\.co\.in
+1684575492	Makyen	hdfc[\W_]*+gold[\W_]*+loan
