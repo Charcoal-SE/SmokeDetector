@@ -50857,3 +50857,4 @@
 1684575492	Makyen	hdfc[\W_]*+gold[\W_]*+loan
 1684582702	Jeff Schaller	chortkee\.com
 1684584730	Vickel	ezzattv\.online
+1684539797	Vickel	(?-i:yprkbwrh)(?#tinyurl.com)
