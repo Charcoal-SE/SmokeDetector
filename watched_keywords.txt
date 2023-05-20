@@ -50851,3 +50851,4 @@
 1684565998	Makyen	com\.orenda\.taimo\.myapplication
 1684566019	Makyen	taleem[\W_]*+abad(?!\.com(?<=taleemabad\.com))
 1684570124	Makyen	lightcheckup\.com
+1684570430	Makyen	tantalyofficial\.com
