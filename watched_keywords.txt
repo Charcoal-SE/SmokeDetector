@@ -50865,3 +50865,4 @@
 1684611970	Vickel	loveinbible\.com
 1684638939	Makyen	(?-i:superdev(?<=@superdev))(?#medium.com)
 1684648349	Jesse	tejjubonda\.blogspot
+1684662099	cigien	businessknowledge\.pk
