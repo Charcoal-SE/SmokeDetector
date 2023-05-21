@@ -5435,3 +5435,4 @@ mid-day\.com
 (?-i:RUGBY_STREAMS_FINAL)(?#bit.ly)
 xtremenitro(?!\.org)
 espn-ppv-fight--haney-vs-loma\.blogspot
+(?-i:ESPN_PPV)(?#bit.ly)
