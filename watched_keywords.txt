@@ -50864,3 +50864,4 @@
 1684605163	Jeff Schaller	ajeetwriting\.com
 1684611970	Vickel	loveinbible\.com
 1684638939	Makyen	(?-i:superdev(?<=@superdev))(?#medium.com)
+1684648349	Jesse	tejjubonda\.blogspot
