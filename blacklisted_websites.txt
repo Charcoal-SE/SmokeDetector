@@ -5438,3 +5438,4 @@ espn-ppv-fight--haney-vs-loma\.blogspot
 (?-i:1661aw6)(?#cutt.ly)
 superuser-haney-vs-lom\.blogspot
 kvch\.in
+sportsloversfree\.blogspot
