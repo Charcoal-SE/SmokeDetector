@@ -2862,3 +2862,4 @@ K(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*E(?:[^A-
 i\.ibb\.co/[a-z\d]++/bans\.png
 haney-vs-lomachenko
 (?-i:ppv-fight)(?#rebrand.ly)
+xtremenitro(?!\.org)
