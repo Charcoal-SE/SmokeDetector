@@ -2860,3 +2860,4 @@ K(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*E(?:[^A-
 (?-i:Daraz Pakistan)
 (?-i:FhKC97P/Bans.png)
 i\.ibb\.co/[a-z\d]++/bans\.png
+haney-vs-lomachenko
