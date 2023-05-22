@@ -50917,3 +50917,4 @@
 1684759803	Makyen	supermetrics\.idevaffiliate\.com
 1684759826	Makyen	(?-i:M8kG_vTZTLk)(?#YouTube)
 1684759881	Makyen	hackburg\.com
+1684759902	Makyen	hackburg(?!\.com)
