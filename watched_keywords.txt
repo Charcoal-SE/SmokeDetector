@@ -50839,6 +50839,7 @@
 1684527972	Makyen	my[\W_]*+wifi(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+(?:ext(?:ender)?|local|net(?:work)?|login|setup|support)s?)*(?<!my wifi)(?!(?<=mywifiext)\.(?:cc|net|xyz))
 1684531640	Jeff Schaller	atscables\.com
 1684534281	Makyen	(?-i:JY6K3nppiMJMe9At5)(?#forms.gle)
+1684539534	Vickel	(?-i:UCIHIUd87jwvSFJ7A9TqKKFQ)
 1684544683	Makyen	milduralawnandgardencare\.com\.au
 1684552682	Makyen	nytimescrossword\.io
 1684559310	Makyen	mattressanalyst\.com
