@@ -50892,3 +50892,4 @@
 1684694684	Jeff Schaller	nhentai\.uk
 1684700699	cigien	businessnewspost\.com
 1684722659	Makyen	maito\.net
+1684724549	Makyen	cvv[\W_]*+seller[\W_]*+logs
