@@ -2655,6 +2655,9 @@ items:
   - lee.ns.cloudflare.com.
   - roxy.ns.cloudflare.com.
 - ns:
+  - lee.ns.cloudflare.com.
+  - zara.ns.cloudflare.com.
+- ns:
   - leif.ns.cloudflare.com.
   - stephane.ns.cloudflare.com.
 - ns:
