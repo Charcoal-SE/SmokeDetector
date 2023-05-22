@@ -50916,3 +50916,4 @@
 1684752190	cigien	abuild[\W_]*+tech(?!\.com(?<=abuildtech\.com))
 1684759803	Makyen	supermetrics\.idevaffiliate\.com
 1684759826	Makyen	(?-i:M8kG_vTZTLk)(?#YouTube)
+1684759881	Makyen	hackburg\.com
