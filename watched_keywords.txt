@@ -50914,3 +50914,4 @@
 1684750508	tripleee	testleaf\.com
 1684752069	cigien	digitaldataschool\.com
 1684752190	cigien	abuild[\W_]*+tech(?!\.com(?<=abuildtech\.com))
+1684759803	Makyen	supermetrics\.idevaffiliate\.com
