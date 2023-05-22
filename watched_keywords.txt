@@ -50895,3 +50895,4 @@
 1684724549	Makyen	cvv[\W_]*+seller[\W_]*+logs
 1684730659	tripleee	growsplash\.com
 1684732137	tripleee	aquantuo\.com
+1684734707	tripleee	simbainstitute\.in
