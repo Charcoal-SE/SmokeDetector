@@ -50920,3 +50920,4 @@
 1684759902	Makyen	hackburg(?!\.com)
 1684759935	Makyen	hackburgblog\.noblogs\.org
 1684763990	Jeff Schaller	mybloginfrmtns\.blogspot
+1684766958	cigien	proauto\.vn
