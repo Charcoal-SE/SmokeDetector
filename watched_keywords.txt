@@ -50893,3 +50893,4 @@
 1684700699	cigien	businessnewspost\.com
 1684722659	Makyen	maito\.net
 1684724549	Makyen	cvv[\W_]*+seller[\W_]*+logs
+1684729596	tripleee	76302717(?# link to sock-puppet answer)
