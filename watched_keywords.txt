@@ -50935,3 +50935,4 @@
 1684827057	cigien	skygamecn\.com
 1684827145	cigien	exoticwinespirits\.com
 1684827201	cigien	exotic[\W_]*+wine[\W_]*+spirits(?!\.com(?<=exoticwinespirits\.com))
+1684827246	cigien	artbaby\.in
