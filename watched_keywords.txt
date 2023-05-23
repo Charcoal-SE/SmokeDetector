@@ -50971,3 +50971,4 @@
 1684861605	cigien	spotyclub\.com
 1684863551	cocomac	anaxdesigns\.com
 1684863624	cocomac	wikipediathrive\.com
+1684863763	Makyen	wikipediathrive(?!\.com)
