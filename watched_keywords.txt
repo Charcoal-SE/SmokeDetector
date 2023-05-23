@@ -50969,3 +50969,4 @@
 1684858305	Makyen	(?-i:myVJe8yiF1s)(?#YouTube)
 1684858373	Makyen	(?:i[\W_]*+m|as)[\W_]*+an[\W_]*+ai[\W_]*+language[\W_]*+model
 1684861605	cigien	spotyclub\.com
+1684863551	cocomac	anaxdesigns\.com
