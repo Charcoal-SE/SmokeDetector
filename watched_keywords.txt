@@ -50967,3 +50967,4 @@
 1684857436	Glorfindel	saudi-clean\.net
 1684857465	Glorfindel	elkhtany\.com
 1684858305	Makyen	(?-i:myVJe8yiF1s)(?#YouTube)
+1684858373	Makyen	(?:i[\W_]*+m|as)[\W_]*+an[\W_]*+ai[\W_]*+language[\W_]*+model
