@@ -50944,3 +50944,4 @@
 1684830971	Makyen	mahak[\W_]*+s[\W_]*+makeover[\W_]*+salon(?:[\W_]*+(?:and|academy))*
 1684831014	Makyen	zaptest\.com
 1684831275	Makyen	adsbizs\.com
+1684831298	Makyen	ads247365
