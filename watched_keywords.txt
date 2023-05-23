@@ -50952,3 +50952,4 @@
 1684835376	Makyen	acpriceinpakistan\.com
 1684835559	Makyen	faranpharmed\.com
 1684835583	Makyen	faran[\W_]*+pharmed(?!\.com(?<=faranpharmed\.com))
+1684836443	Jeff Schaller	ritz\.directsite\.in
