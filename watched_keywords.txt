@@ -50942,3 +50942,4 @@
 1684829714	cigien	realstyle1\.com
 1684830937	Makyen	(?-i:wRnwY1V8yJhWrxbh9)
 1684830971	Makyen	mahak[\W_]*+s[\W_]*+makeover[\W_]*+salon(?:[\W_]*+(?:and|academy))*
+1684831014	Makyen	zaptest\.com
