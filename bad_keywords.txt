@@ -595,7 +595,7 @@ Zyflex
 prime[\W_]*+labs
 primal[\W_]*+growth
 slender[\W_]*+rx
-illuminati\W*(?:brotherhood|church|future|masons|society)\d*+(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|yahoo|hotmail)(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+illuminati[\W_]*+(?:brotherhood|church|future|masons|society)\d*+(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|yahoo|hotmail)(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 sbobet
 primex
 stackt[\W_]*+360
@@ -778,7 +778,7 @@ numax[\W_]*+test[\W_]*+xt
 vyalis[\W_]*+rx
 duro(?:[\W_]++max|max(?=/(?<=/duromax/)))
 emior
-agen\W*bola
+agen[\W_]*+bola
 brosway
 ulti[\W_]*+power
 jelq(?:ing)?
@@ -886,7 +886,7 @@ max[\W_]*+e?xtreme
 refollium
 cilexin
 essential[\W_]*+trim(?:[\W_]*+gc)?
-ez\W*battery
+ez[\W_]*+battery
 https?://\S+\.(?:band|club|download|live|media|press|world|xyz|zone)/[^/\s"]*-mp3-(?:musica-baixar|cancion-descargar|(?:song-)?download|sarki-indir|telecharger-musique)(?#" syntax highlighting fodder)
 platinum[\W_]*+xwl
 new[\W_]*+age[\W_]*+serum
@@ -903,7 +903,7 @@ slimforia
 bellalumi
 slim[\W_]*+plus
 erezan
-the\W*lost\W*ways?
+the[\W_]*+lost[\W_]*+ways?
 We offer only original high-quality counterfeit currency NOTES
 foods[\W_]*+that[\W_]*+help[\W_]*+you[\W_]*+sleep
 xaxtus
@@ -1097,7 +1097,7 @@ testo[\W_]*+master
 vivrax
 testo[\W_]*+ram
 boost[\W_]*+perform[\W_]*+xl
-seo\W*services
+seo[\W_]*+services
 vidhigra
 nuallura
 nitric[\W_]*+boost[\W_]*+xl
@@ -1105,7 +1105,7 @@ zdorov[\W_]*+propolis
 super[\W_]*+boost[\W_]*+perform[\W_]*+xl
 vita[\W_]*+x
 keto[\W_]*+trim(?:[\W_]*+(?:pill|review|official|scam|\d++|[\da-f]{4,}+)s?)*
-ropaxin(?:\W*t)?
+ropaxin(?:[\W_]*+t)?
 cognivex
 hydrox[\W_]*+slim
 vigoriax
@@ -1142,7 +1142,7 @@ power[\W_]*+max[\W_]*+extra
 al[\W_]*+sharq[\W_]*+alawsat
 Kurdish[\W_]*+YPG
 Kurdish[\W_]*+militant
-high\W*tech\W*cbd
+high[\W_]*+tech[\W_]*+cbd
 foligen
 male[\W_]*+booster
 anamax
@@ -1152,7 +1152,7 @@ cortyx[\W_]*+clarity
 the[\W_]*+away[\W_]*+days
 magnumax
 (?:os)?rs[\W_]*+gold
-keto[\W_]*+tone(?:[\W_]*+(?:diet|avis|france|fr|new\W*zealand|nz|\d++))*
+keto[\W_]*+tone(?:[\W_]*+(?:diet|avis|france|fr|new[\W_]*+zealand|nz|\d++))*
 eye[\W_]*+serum[\W_]*+magic
 jet[\W_]*+pro[\W_]*+x
 size[\W_]*+gain[\W_]*+plus
@@ -1191,7 +1191,7 @@ nutriti?ous[\W_]*+health
 diet[\W_]*+keto
 slim[\W_]*+xtra
 fuel[\W_]*+fit[\W_]*+max
-rapid[\W_]*+tone(?:\W*(?:diet|\d++))*
+rapid[\W_]*+tone(?:[\W_]*+(?:diet|\d++))*
 clash[\W_]*+of[\W_]*+clans[\W_]*+hack
 saint[\W_]*+elias
 keto(?!-ultra-diet\.com)[\W_]*+ultra(?:[\W_]*+diet)?(?:[\W_]*+com)?
@@ -1236,9 +1236,9 @@ primal[\W_]*+surge(?:[\W_]*+xl)?
 andro[\W_]*+mpx
 maverick[\W_]*+beard[\W_]*+growth
 lumineri
-skinny\W*+fit\W*+keto
+skinny[\W_]*+fit[\W_]*+keto
 south[\W_]*+beach(?:[\W_]*+(?:diet|food|keto|eat(?:ing)?|weight|$)s?)+
-viexa\W*+man\W*+plus
+viexa[\W_]*+man[\W_]*+plus
 florenceloans1@gmail\.com
 virilagrax
 keto[\W_]*+power
@@ -1278,7 +1278,7 @@ shark[\W_]*+tank[\W_]*+rapid[\W_]*+tone
 folicell
 keto[\W_]*+gen[\W_]*+pure
 keto[\W_]*+firm
-keto\W*rapid(?:\W*+(?:max|pure|\d++))*
+keto[\W_]*+rapid(?:[\W_]*+(?:max|pure|\d++))*
 climadex
 brain[\W_]*+fx
 gleam[\W_]*+and[\W_]*+glow
