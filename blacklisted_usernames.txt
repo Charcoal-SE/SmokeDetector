@@ -938,3 +938,4 @@ nilesecurity
 (?-i:^Pintrick$)
 (?-i:^Tree Campus$)
 (?-i:^Abuild Tech$)
+zoomcar India
