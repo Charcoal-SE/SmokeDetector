@@ -2861,3 +2861,4 @@ i\.ibb\.co/[a-z\d]++/bans\.png
 haney-vs-lomachenko
 (?-i:ppv-fight)(?#rebrand.ly)
 zoomcar(?!\.com)(?! India$)
+aamad[\W_]*+dance[\W_]*+center(?!(?<=^aamad dance center)$)
