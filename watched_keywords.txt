@@ -29763,7 +29763,6 @@
 1624268474	tripleee	hfxcfiberoptic\.com
 1624272301	tripleee	apkheap\.co
 1624273862	tripleee	nerd-corner\.com
-1624275047	Glorfindel	domyexamnow\.com
 1624277324	Spevacus	circleplus\.in
 1624282167	Spevacus	gobadtips\.com
 1624282779	Spevacus	universalelectronics\.pk
