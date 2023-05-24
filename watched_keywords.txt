@@ -50981,3 +50981,4 @@
 1684919650	cigien	panache[\W_]*+auto[\W_]*+werke(?!\.com(?<=panacheautowerke\.com))
 1684919680	cigien	onlineinfatuation\.com
 1684919982	cigien	naga139gacor\.com
+1684920005	cigien	caremywp\.com
