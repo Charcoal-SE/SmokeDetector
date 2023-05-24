@@ -50986,3 +50986,4 @@
 1684920120	cigien	infraon(?!\.io)
 1684920167	cigien	attestedpowergenerators\.com
 1684920200	cigien	attested[\W_]*+power[\W_]*+generators(?!\.com(?<=attestedpowergenerators\.com))
+1684920243	cigien	studiointerplay\.com
