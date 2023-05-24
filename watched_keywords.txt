@@ -50978,3 +50978,4 @@
 1684909535	Makyen	hemplabscbdgummies\.wixsite\.com
 1684919530	cigien	worldboxinglivestreaming\.blogspot
 1684919552	cigien	panacheautowerke\.com
+1684919650	cigien	panache[\W_]*+auto[\W_]*+werke(?!\.com(?<=panacheautowerke\.com))
