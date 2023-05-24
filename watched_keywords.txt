@@ -50976,3 +50976,4 @@
 1684908206	Makyen	(?-i:cash-app-customer-help-number)(?#sites.google.com)
 1684909509	Makyen	hemp[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?!\.wixsite\.com(?<=hemplabscbdgummies\.wixsite\.com))
 1684909535	Makyen	hemplabscbdgummies\.wixsite\.com
+1684919530	cigien	worldboxinglivestreaming\.blogspot
