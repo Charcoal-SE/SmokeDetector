@@ -50992,7 +50992,6 @@
 1684920350	cigien	surveysensum\.com
 1684920588	cigien	iapply\.ai
 1684920634	cigien	universal-bags\.com
-1684921280	cigien	ai-fight-streams\.blogspot
 1684921317	cigien	99booksstore\.com
 1684921403	cigien	geometry[\W_]*+dash[\W_]*+scratch(?!\.io(?<=geometrydashscratch\.io))
 1684921430	cigien	geometrydashscratch\.io
