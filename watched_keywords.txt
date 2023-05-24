@@ -50974,3 +50974,4 @@
 1684897735	Makyen	saigoncomputer\.vn
 1684897775	Makyen	(?-i:0_BTC_1DyMqibGAVBjieH1NXb2841HggLNP1qZWp)
 1684908206	Makyen	(?-i:cash-app-customer-help-number)(?#sites.google.com)
+1684909509	Makyen	hemp[\W_]*+labs[\W_]*+cbd[\W_]*+gummies(?!\.wixsite\.com(?<=hemplabscbdgummies\.wixsite\.com))
