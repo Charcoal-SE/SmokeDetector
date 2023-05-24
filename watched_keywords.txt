@@ -50973,3 +50973,4 @@
 1684863624	cocomac	wikipediathrive\.com
 1684863763	Makyen	wikipediathrive(?!\.com)
 1684897735	Makyen	saigoncomputer\.vn
+1684897775	Makyen	(?-i:0_BTC_1DyMqibGAVBjieH1NXb2841HggLNP1qZWp)
