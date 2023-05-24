@@ -50895,7 +50895,7 @@
 1684734707	tripleee	simbainstitute\.in
 1684736183	Makyen	javaziez\.com
 1684736857	tripleee	topone-contractors\.com
-1684738375	Glorfindel	plantora
+1684738375	Glorfindel	plantora(?!\.app)
 1684739686	Jesse	ghosty\.hashnode
 1684618738	Vickel	newdayconstruction\.co
 1684743253	tripleee	inovi\.co\.za
@@ -51002,3 +51002,4 @@
 1684926232	cigien	mbcargoservicedubai\.com
 1684928574	cigien	markasjp\.org
 1684933632	Glorfindel	no one watches me entering my password
+1684934122	Makyen	plantora\.app
