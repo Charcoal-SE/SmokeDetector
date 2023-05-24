@@ -2963,7 +2963,7 @@ create_rule("bad keyword in {}",
             "" "" "" r")?P(?&obfus_tag_lc)A(?&obfus_tag_lc)N(?&obfus_tag_lc)T(?&obfus_tag_lc)S(?&obfus_tag_lc)U"
             "" "" r")"
             "" "" r"|"
-            "" "" r"K(?&obfus_tag)P(?&obfus_tag)P(?&obfus_tag)r(?&obfus_tag)o(?&obfus_tag)f(?:essional)?"
+            "" "" r"K(?&obfus_tag)P(?&obfus_tag)P(?&obfus_tag)r(?&obfus_tag)o(?&obfus_tag)fessional"
             "" r")"
             r")",
             all=True,
