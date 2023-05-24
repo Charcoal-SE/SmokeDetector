@@ -3847,7 +3847,7 @@
 1530853876	Makyen	drugpillstore\.us
 1530856176	Makyen	impotence
 1530856188	Makyen	erections?
-1530856208	Makyen	Genius\W*IT\W*(?:Solutions|training)?
+1530856208	Makyen	genius[\W_]*+it(?:[\W_]*+(?:solutions|training))+
 1530862058	Glorfindel	kinematicsmedsol\.com
 1530864532	Glorfindel	adib24\.com
 1530866335	Makyen	supportsquicken\.com
