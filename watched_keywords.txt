@@ -50995,3 +50995,4 @@
 1684921280	cigien	ai-fight-streams\.blogspot
 1684921317	cigien	99booksstore\.com
 1684921403	cigien	geometry[\W_]*+dash[\W_]*+scratch(?!\.io(?<=geometrydashscratch\.io))
+1684921430	cigien	geometrydashscratch\.io
