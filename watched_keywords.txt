@@ -50991,3 +50991,4 @@
 1684920290	cigien	dolin\.com\.vn
 1684920314	cigien	dolin(?!\.com\.vn)
 1684920350	cigien	surveysensum\.com
+1684920588	cigien	iapply\.ai
