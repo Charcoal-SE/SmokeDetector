@@ -1294,7 +1294,7 @@ luminary[\W_]*+v
 rose[\W_]*+diamond(?:[\W_]*+beauty)?
 peraglow
 liva[\W_]*+derma
-konect(?!\.(?:co\.za|uni-koblenz)\b)(?:\W*+nutra\W*+keto)?
+konect(?!\.(?:co\.za|uni-koblenz)\b)(?:[\W_]*+nutra[\W_]*+keto)?
 total[\W_]*+tone
 retro[\W_]*+slim
 narvi[\W_]*+testo
@@ -1318,14 +1318,14 @@ lean[\W_]*+belly[\W_]*+breakthrough
 auto\W+link\W+(?:international|int\W+pakistan)
 keto[\W_]*+x
 rvxadryl
-vita\W*+trim
+vita[\W_]*+trim
 natural[\W_]*+keto
 hackmarvel4(?:[\W_]*+(?:at[\W_]*+)?+gmail(?:[\W_]*+(?:dot[\W_]*+)?+com)?)?
 keto[\W_]*+blast
 keto[\W_]*+thermo[\W_]*+diet
 qnc[\W_]*+jelly[\W_]*+gamat
 TRIAL@>>\W*
-rapid\W*+results(?:\W*keto|\W*diet)?
+rapid[\W_]*+results(?:\W*keto|\W*diet)?
 smartcredit07
 boost[\W_]*+sx[\W_]*+pro
 almondhackingarena
@@ -1366,7 +1366,7 @@ printer-error-code-messages
 supercharge[\W_]*+male
 keto[\W_]*+bloom
 praltrix(?!\.info(?<=praltrix\.info))
-diet\W*+pills?
+diet[\W_]*+pills?
 menage[\W_]*+beauty
 cudamax
 Ziapro
@@ -1377,12 +1377,12 @@ sky[\W_]*+n[\W_]*+genix
 mia\W*pielle
 tonaki
 neftegaz\w+@[-\w]+(?:\.[-\w]+)+
-fob\W*+rotterdam
+fob[\W_]*+rotterdam
 neftegazoiltrading
 sun[\W_]*+chips(?!$)
 mission-impossible-fallout
 phendora
-apollo\W*+(?:kidney\W*+)?hospital\d*+(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
+apollo[\W_]*+(?:kidney[\W_]*+)?hospital\d*+(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
 Purexen
 smart[\W_]*+stream[\W_]*+alliance(?:[\W_]*+llc)?
 beach[\W_]*+slim
@@ -1443,7 +1443,7 @@ houston-tx/regenerative-medicine/
 paltrox(?:\W*(?:t|rx))?
 recapture[\W_]*+360(?:[\W_]*+cream)?\w*
 love\Wspells?
-(?:regenerative\W*+medicine|stem\W*+cell\W*+therapy)\W*+houston
+(?:regenerative[\W_]*+medicine|stem[\W_]*+cell[\W_]*+therapy)[\W_]*+houston
 keto[\W_]*+bhb(?:[\W_]*+\d+)?
 yahoo-email(?<=/yahoo-email)
 VitalityTech(?:[\W_]*+Testosterone)?(?!\.com)
@@ -1477,7 +1477,7 @@ revimax
 d-bal
 dianabol
 viatropin
-nordic\W*+loan\W*+firm(?:@gmail\W*+com)?
+nordic[\W_]*+loan[\W_]*+firm(?:@gmail[\W_]*+com)?
 safflower[\W_]*+oil
 ramsedave121(?:@gma?il\.com)?
 (?:meg|test)adrox
@@ -1515,7 +1515,7 @@ nutri[\W_]*+burn
 greenlifenutrition\d*(?!\.com)
 keto[\W_]*+plus(?:[\W_]*+(?:diet|el|salvador|en|nicaragua|chile|col[uo]mbia|precio|ecuador|spain|costa\W*rica|mercadona|es|espana|premier|za|(?<! )keto|austria|\d++|[\da-f]{4,}+)s?)*
 healthsupplementfordiet
-ultra\W*+last(?:\W*+xxl)?
+ultra[\W_]*+last(?:[\W_]*+xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo[\W_]*+drive
 apple-id(?<=/apple-id)
@@ -1526,8 +1526,8 @@ surge[\W_]*+rx
 alpha[\W_]*+flex[\W_]*+xt
 enduro[\W_]*+stack
 keto[\W_]*+max[\W_]*+diet
-blitz\W*+protocol
-weight\W*+loss\W*+plus
+blitz[\W_]*+protocol
+weight[\W_]*+loss[\W_]*+plus
 nutrivano(?:[\W_]*+forskolin)?
 mindzr(?:[\W_]*+brain)?
 vandexafil[\W_]*+ultra
