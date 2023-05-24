@@ -50989,3 +50989,4 @@
 1684920243	cigien	studiointerplay\.com
 1684920246	Glorfindel	no one watches me typing my password
 1684920290	cigien	dolin\.com\.vn
+1684920314	cigien	dolin(?!\.com\.vn)
