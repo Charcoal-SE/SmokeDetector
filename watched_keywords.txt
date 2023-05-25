@@ -51018,3 +51018,4 @@
 1684993520	tripleee	cjgroup\.com
 1684998580	Glorfindel	use a different password for each platform
 1684999635	Glorfindel	sanabuildings
+1684999665	Glorfindel	sanabuildingsolution\.com
