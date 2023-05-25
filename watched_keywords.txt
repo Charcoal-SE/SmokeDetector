@@ -51015,3 +51015,4 @@
 1684963058	cigien	bestyoutubeviews\.com
 1684989411	Papershine	3dpea\.com
 1684989653	Papershine	nofars\.com
+1684991303	tripleee	taleem[\W_]*+abad(?!\.com(?<=taleemabad\.com)) (?<!(?-i:^Taleem abad$))
