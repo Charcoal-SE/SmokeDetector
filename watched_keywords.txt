@@ -51046,3 +51046,4 @@
 1685029844	Makyen	chetu(?!\.com)(?:[\W_]*+inc)?
 1685030510	Jesse	(?-i:x8l8mrc)(?#dai.ly)
 1685032184	tripleee	vindhyaprocess(?!\.com)(?<!(?-i:^vindhyaprocess$))
+1685034046	cigien	landofpickleball\.com
