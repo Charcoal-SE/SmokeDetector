@@ -51026,3 +51026,4 @@
 1685003759	cigien	tou-rism\.com
 1685004400	cigien	topwebexpert\.com
 1685005035	Makyen	mconnectmedia\.com
+1685005060	Makyen	mconnect[\W_]*+media(?!\.com(?<=mconnectmedia\.com))
