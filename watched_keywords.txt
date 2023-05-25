@@ -51019,3 +51019,4 @@
 1684998580	Glorfindel	use a different password for each platform
 1684999635	Glorfindel	sanabuildings
 1684999665	Glorfindel	sanabuildingsolution\.com
+1685000045	tripleee	(?-i:^Akash Roy$)
