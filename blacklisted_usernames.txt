@@ -940,4 +940,3 @@ nilesecurity
 (?-i:^Abuild Tech$)
 zoomcar India
 (?-i:^Taleem abad$)
-(?-i:^Akash Roy$)
