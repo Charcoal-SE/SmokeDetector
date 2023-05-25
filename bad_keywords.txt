@@ -2847,7 +2847,7 @@ f1-streams-race-2023
 (?-i:_Re8NdmENiFkODMx)(?#t.me)
 (?-i:mamaipi999)(?#t.me)
 (?-i:(?:Fxhg0|6dPDl|1Y2HF|68YgZ|iKMIf|62mnX)\.jpg)
-and(?=[\W_]*+changed?[\W_]*+my[\W_]*+name[\W_]*+to[\W_]*+troll)
+ \W*+(?=\w*?changed?[\W_]*+my[\W_]*+name[\W_]*+to[\W_]*+troll)
 MailsDaddy
 cerdit[\W_]*+loan
 customer[\W_]*+cara
