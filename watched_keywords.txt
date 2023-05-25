@@ -51016,3 +51016,4 @@
 1684989411	Papershine	3dpea\.com
 1684989653	Papershine	nofars\.com
 1684991303	tripleee	taleem[\W_]*+abad(?!\.com(?<=taleemabad\.com)) (?<!(?-i:^Taleem abad$))
+1684993520	tripleee	cjgroup\.com
