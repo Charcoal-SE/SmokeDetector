@@ -51044,4 +51044,3 @@
 1685023235	cigien	evaskaenergy\.com
 1685023326	cigien	evaska[\W_]*+energy(?!\.com(?<=evaskaenergy\.com))
 1685024178	cigien	creativeideaskd\.com
-1685029793	Makyen	chetu(?!\.com)(?:[\W_]*+inc)
