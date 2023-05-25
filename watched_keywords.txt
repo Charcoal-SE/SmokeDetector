@@ -51047,3 +51047,4 @@
 1685032184	tripleee	vindhyaprocess(?!\.com)(?<!(?-i:^vindhyaprocess$))
 1685034046	cigien	landofpickleball\.com
 1685035519	tripleee	anshulsood2006\.blogspot
+1685038150	Jesse	ytubebooster\.app
