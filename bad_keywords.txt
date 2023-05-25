@@ -1615,7 +1615,7 @@ emollient[\W_]*+cream
 pain[\W_]*+absolve(?:[\W_]*+rx)?
 vision[\W_]*+rx(?:[\W_]*+\d+)?
 tarvos[\W_]*+testo
-undangan\W*+pernikahan
+undangan[\W_]*+pernikahan
 super[\W_]*+\w[\W_]*+keto
 curafen
 keto(?:sis)?[\W_]*+advanced
@@ -1623,15 +1623,15 @@ lean[\W_]*+keto
 (?-i:3YfwOFZlfOQ|ZLaICQSlxm4|8bkyn6GvHF0|i1tPcR9xhnQ)(?#youtu.be videos from a cryptocurrency spammer)
 keto[\W_]*+ultimate[\W_]*+diet
 daniel\W+tan(?=.{0,400}?\bseo(?:\b|pressor\b))
-rootgatehacks(?:\W*+(?:at\W*+)?tutanota(?:\W*+(?:dot\W*+)?com)?)?
-hackwhitewizard(?:\W*+(?:at\W*+)?tutanota(?:\W*+(?:dot\W*+)?com)?)?
+rootgatehacks(?:[\W_]*+(?:at[\W_]*+)?tutanota(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+hackwhitewizard(?:[\W_]*+(?:at[\W_]*+)?tutanota(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 keto[\W_]*+direct
 Prestige[\W_]*+Smart
 viralis(?:[\W_]*+rx)?
 andro[\W_]*+stack(?:[\W_]*+x\w?)?
 keto[\W_]*+life
 rdx[\W_]*+surge
-huge\W*+mule\W*+xl
+huge[\W_]*+mule[\W_]*+xl
 natura[\W_]*+farms(?:[\W_]*+keto)?
 healthy?[\W_]*+choice[\W_]*+cbd
 into[\W_]*+keto(?:[\W_]*+diet)?
@@ -1663,10 +1663,10 @@ maxeral[\W_]*+max(?:[\W_]*+workout)?
 (?:mira[\W_]*+)?essence[\W_]*+cream
 insta[\W_]*+slim
 testo(?:sterone)?[\W_]*+rush
-first\W*+check.{0,20}?\$55o
+first[\W_]*+check.{0,20}?\$55o
 magnum[\W_]*+trt
 ultra[\W_]*+stren[\W_]*+x(?:[\W_]*+booster)?
-Finfree\W*+Enterprise
+Finfree[\W_]*+Enterprise
 sc[\W_]*+a[\W_]*+cream
 truu[\W_]*+keto
 enzothrust
@@ -1677,7 +1677,7 @@ serexin
 angeletta[\W_]*+skin
 cial[\W_]*+rx
 vampirelordtransformerchanging(?:@[a-z0-9-]+\.com)?
-hyper\W*+testo
+hyper[\W_]*+testo
 beam[\W_]*+skin
 levia[\W_]*+flex
 kalis[\W_]*+keto
@@ -1693,7 +1693,7 @@ vexgen
 alpha[\W_]*+hrd
 pods[\W_]*+vape
 idermabalm
-livewave\W*+tv\W*+antenna
+livewave[\W_]*+tv[\W_]*+antenna
 infatica(?!\.io)
 king[\W_]*+servers
 kamadex
@@ -1702,7 +1702,7 @@ advcnd
 velocity[\W_]*+trim
 ketosis(?<=/ketosis)(?:-\w+)+
 thepilpedia(?!\.com)
-alka\W*+tone(?:\W*+keto)?
+alka[\W_]*+tone(?:[\W_]*+keto)?
 viril[\W_]*+pump
 supreme[\W_]*+vigor
 ultra[\W_]*+sk
@@ -1713,7 +1713,7 @@ breast[\W_]*+actives?
 bioW?tech[\W_]*+pro
 duraflex(?=.{0,30}?(?:male|enhancement|sex))
 mara[\W_]*+nutra
-Andro\W*+Testo(?:-Pro)?
+Andro[\W_]*+Testo(?:-Pro)?
 com\.appmaster\.akash(?#please tp and mod flag; requested by mod MartijnPieters)
 xyz[\W_]*+smart(?:[\W_]*+collagen)?
 whole[\W_]*+greens
@@ -1723,7 +1723,7 @@ nutri[\W_]*+life(?:[\W_]*+keto)?
 nutra[\W_]*+kick
 keto[\W_]*+hack
 viaxyl
-keto\W*+max(?:\W*+\d++)?
+keto[\W_]*+max(?:[\W_]*+\d++)?
 keto\W*hack
 usahealthcart
 w+x*+sex+
@@ -1736,20 +1736,20 @@ lts[\W_]*+secure(?!\.com\b)
 C\W*+Y\W*+B\W*+E\W*+R\W*+S\W*+P\W*+Y\W*+C\W*+L\W*+O\W*+W\W*+N\W*+(?:a\W*+t\W*+)?\W*+G\W*+M\W*+A\W*+I\W*+L\W*+(?:d\W*+o\W*+t\W*+)?C\W*+O\W*+M
 choice[\W_]*+labs(?:[\W_]*+keto)?
 nulante
-shape\W*+x2(?:\W*+fitness|\W*+keto)+
+shape[\W_]*+x2(?:[\W_]*+(?:fitness|keto))+
 rapuvex
 beta[\W_]*+keto
 cerisea[\W_]*+medica
 extend[\W_]*+male
 natura[\W_]*+vitality(?:[\W_]*+keto)?
 rlz[\W_]*+pills
-bandar\W*+qq?
-domin[io]\W*+qq
-keto\W*+buzz(?:\W*+reviews?)?
+bandar[\W_]*+qq?
+domin[io][\W_]*+qq
+keto[\W_]*+buzz(?:[\W_]*+reviews?)?
 risagen
 vita[\W_]*+health
-biogenics\W*+keto
-keto\W*+black
+biogenics[\W_]*+keto
+keto[\W_]*+black
 slimlook
 1kdaily
 holistic[\W_]*+bliss(?:[\W_]*+keto)?
@@ -1759,7 +1759,7 @@ binfer(?!\.com)
 black[\W_]*+latte
 keytones?
 omega[\W_]*+gro(?:[\W_]*+(?:dht|hair))?
-level8\W*+keto
+level8[\W_]*+keto
 Flightsbird
 simply[\W_]*+turmeric
 fantastic[\W_]*+keto
