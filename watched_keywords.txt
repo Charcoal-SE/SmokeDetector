@@ -51028,3 +51028,4 @@
 1685005035	Makyen	mconnectmedia\.com
 1685005060	Makyen	mconnect[\W_]*+media(?!\.com(?<=mconnectmedia\.com))
 1685005380	Makyen	teratail\.com
+1685005843	cigien	allshapes\.net
