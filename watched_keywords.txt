@@ -51039,3 +51039,4 @@
 1685017308	cigien	funnel[\W_]*+media(?!\.in(?<=funnelmedia\.in))
 1685017732	cigien	regainsoftware\.com
 1685019486	Zoe stands with Ukraine	jacketsplay\.com
+1685022054	cigien	photofit
