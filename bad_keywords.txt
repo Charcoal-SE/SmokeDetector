@@ -2863,3 +2863,4 @@ haney-vs-lomachenko
 (?-i:ppv-fight)(?#rebrand.ly)
 zoomcar(?!\.com)(?! India$)
 aamad[\W_]*+dance[\W_]*+center(?!(?<=^aamad dance center)$)
+https://servicemycar\.com/u(?:ae|k)(?# increase weight for these URLs)
