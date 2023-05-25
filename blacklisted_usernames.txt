@@ -939,3 +939,4 @@ nilesecurity
 (?-i:^Tree Campus$)
 (?-i:^Abuild Tech$)
 zoomcar India
+(?-i:^Taleem abad$)
