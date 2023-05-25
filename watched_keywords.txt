@@ -51017,3 +51017,4 @@
 1684989653	Papershine	nofars\.com
 1684991303	tripleee	taleem[\W_]*+abad(?!\.com(?<=taleemabad\.com)) (?<!(?-i:^Taleem abad$))
 1684993520	tripleee	cjgroup\.com
+1684998580	Glorfindel	use a different password for each platform
