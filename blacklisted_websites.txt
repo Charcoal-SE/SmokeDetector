@@ -2639,7 +2639,6 @@ cryptoexchangescript\.com
 bullguard-support\.co\.uk
 //v\.ht
 \b(?<![^\W_]-)cutt\.us(?![.-][^\W_])\b
-weblium\.com
 easyprintersupport\.com
 techjockey\.com
 usahealthcart[\W_]*+com
