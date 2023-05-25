@@ -51042,3 +51042,4 @@
 1685022054	cigien	photofit
 1685022169	cigien	lp\.soundparticles\.com
 1685023235	cigien	evaskaenergy\.com
+1685023326	cigien	evaska[\W_]*+energy(?!\.com(?<=evaskaenergy\.com))
