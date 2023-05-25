@@ -51047,3 +51047,4 @@
 1685030510	Jesse	(?-i:x8l8mrc)(?#dai.ly)
 1685032184	tripleee	vindhyaprocess(?!\.com)(?<!(?-i:^vindhyaprocess$))
 1685034046	cigien	landofpickleball\.com
+1685035519	tripleee	anshulsood2006\.blogspot
