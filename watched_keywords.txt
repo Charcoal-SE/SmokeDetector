@@ -51020,3 +51020,4 @@
 1684999635	Glorfindel	sanabuildings
 1684999665	Glorfindel	sanabuildingsolution\.com
 1685000045	tripleee	(?-i:^Akash Roy$)
+1685001726	Glorfindel	lakewoodexterminating\.com
