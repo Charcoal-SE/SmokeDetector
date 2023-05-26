@@ -51067,3 +51067,4 @@
 1685062633	Jeff Schaller	videostir\.com
 1685064501	Makyen	bevywise(?!\.com)(?:[\W_]*+(?:mqtt|broker))*
 1685073297	tripleee	tis-silicone\.com
+1685076546	tripleee	herbal[\W_]*+hills[\W_]*+wellness(?!\.com(?<=herbalhillswellness\.com))(?<!(?-i:^Herbalhillswellness$))
