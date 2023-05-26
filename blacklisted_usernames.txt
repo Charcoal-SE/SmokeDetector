@@ -942,3 +942,4 @@ zoomcar India
 (?-i:^Taleem abad$)
 (?-i:^vindhyaprocess$)
 (?-i:^Herbalhillswellness$)
+(?-i:^Aquantuo$)
