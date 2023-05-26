@@ -1059,6 +1059,9 @@ items:
   - ruth.ns.cloudflare.com.
 - ns:
   - cecelia.ns.cloudflare.com.
+  - coen.ns.cloudflare.com.
+- ns:
+  - cecelia.ns.cloudflare.com.
   - viddy.ns.cloudflare.com.
 - ns:
   - cecelia.ns.cloudflare.com.
