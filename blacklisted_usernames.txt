@@ -944,3 +944,4 @@ zoomcar India
 (?-i:^Herbalhillswellness$)
 (?-i:^Aquantuo$)
 (?-i:^Ditm College$)
+(?-i:^creativefuel Pvt\. Ltd\.$)
