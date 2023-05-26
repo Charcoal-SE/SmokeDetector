@@ -51085,3 +51085,4 @@
 1685097764	Jeff Schaller	trickspaid\.com
 1685098384	cigien	d(?:octo)?r[\W_]*+safeena[\W_]*+anas
 1685098689	cigien	ladagroups\.com
+1685099113	cigien	uniqueadvtours\.com
