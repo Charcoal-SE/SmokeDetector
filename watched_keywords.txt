@@ -51057,3 +51057,4 @@
 1685058080	Jeff Schaller	weblium\.com
 1685058532	Jeff Schaller	pages\.rediff\.com(?!/jab-harry-met-sejal)
 1685060074	Jeff Schaller	letsnurture\.com
+1685060252	Jeff Schaller	vbagetech\.com
