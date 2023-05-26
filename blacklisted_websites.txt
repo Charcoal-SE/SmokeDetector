@@ -189,7 +189,6 @@ sandangku\.com
 iwasl\.com
 vpn(?:faqs|answers|4games)\.com
 airmore\.com
-showmore\.com
 unblockingtwitter\.com
 openingblockedsite\.com
 credenceresearch\.com
