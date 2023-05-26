@@ -51093,3 +51093,4 @@
 1685101725	tripleee	meme[\W_]*+marketing
 1685103230	Jeff Schaller	onefastshop\.com
 1685103267	cigien	desifavors\.com
+1685103596	cigien	saudipayments\.com
