@@ -51087,3 +51087,4 @@
 1685099888	cigien	framorey\.co\.uk
 1685100315	cigien	ifanca\.org
 1685100348	cigien	rplusuniquesystems\.org
+1685101388	tripleee	ditm[\W_]*+college(?!\.in(?<=ditmcollege\.in))(?<!(?-i:^Ditm College$))
