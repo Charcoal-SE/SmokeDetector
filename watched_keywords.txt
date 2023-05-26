@@ -51091,3 +51091,4 @@
 1685101560	tripleee	creativefuel\.io
 1685101680	tripleee	creative[\W_]*fuel(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?(?!\.io(?<=creativefuel\.io))(?<!(?-i:^creativefuel Pvt\. Ltd\.$))
 1685101725	tripleee	meme[\W_]*+marketing
+1685103230	Jeff Schaller	onefastshop\.com
