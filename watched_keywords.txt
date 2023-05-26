@@ -4359,7 +4359,7 @@
 1533629767	Makyen	williamsloanfundshelp(?:@gmail\.com)?
 1533629829	Glorfindel	fhacyberservics
 1533630904	Makyen	diamondloanfirm24(?:@gmail\.com)?
-1533631690	Makyen	diamond\W*+loan\W*+firm
+1533631690	Makyen	diamond[\W_]*+loan[\W_]*+firm
 1533633651	Glorfindel	reviewmediaone\.blogspot
 1533656908	Makyen	recoverygenius(?:@gmail\.com)?
 1533657082	Zoe	kikforpcwindows\.com
@@ -17379,7 +17379,7 @@
 1583475559	tripleee	csi4092(?#skype)
 1583475582	tripleee	huvle\.com
 1583475607	tripleee	huvle(?!\.com)
-1583476215	tripleee	fazie\W*+wadood
+1583476215	tripleee	fazie[\W_]*+wadood
 1583476805	tripleee	mahindraalcove-chandivali\.com
 1583479614	tripleee	aofygold\.in
 1583483907	tripleee	powerfulvoodoomagicspells\.com
@@ -19935,7 +19935,7 @@
 1591245452	Makyen	centerpost[\W_]*+media
 1591247273	tripleee	finaldesk(?!\.co\.in)
 1591247519	Glorfindel	life30on\.blogspot
-1591247970	user12986714	if\W*+you?\W*+\w{0,30}?\W*+(?:not|n'?t)\W*+(?:\w++[^\w,]*+){0,20}+,\W*+(?:\w++\W*+){0,20}?shut\W*+up
+1591247970	user12986714	if[\W_]*+you?[\W_]*+\w{0,30}?[\W_]*+(?:not|n'?t)[\W_]*+(?:\w++[^\w,]*+){0,20}+,[\W_]*+(?:\w++[\W_]*+){0,20}?shut[\W_]*+up
 1591254128	Makyen	nutraxyn(?:[\W_]*+(?:usa|official|\d++|[\da-f]{4,}+))*
 1591254152	tripleee	sexual[\W_]*+endurance
 1591257360	Makyen	mostfungames69(?#sites.google.com)
@@ -19989,10 +19989,10 @@
 1591380397	Makyen	filehippo
 1591381442	Makyen	(?-i:3gW3bWg)(?#bit.ly)
 1591382839	user12986714	studybulletin\.in
-1591382929	user12986714	goviral\W*+host
+1591382929	user12986714	goviral[\W_]*+host
 1591383278	user12986714	experienciadigitalsevilla\.com
 1591388281	user12986714	pcgamesd\.com
-1591388297	user12986714	honey\W*+select
+1591388297	user12986714	honey[\W_]*+select
 1591387742	user12986714	wuwablog\.blogspot
 1591392339	NobodyNada	rock\W?hard(?:\W?bull)?
 1591397940	user12986714	muhammadhamaeel\.com
@@ -20358,7 +20358,7 @@
 1592629850	Makyen	sapiyo\.com
 1592627057	user12986714	oppojobs\.com
 1592631796	NobodyNada	kohistanrentacar\.com
-1592632992	user12986714	sayam\W*+pradhan
+1592632992	user12986714	sayam[\W_]*+pradhan
 1592633448	user12986714	codingclips\.com
 1592633712	user12986714	andrei\d*+ciobanu\.wordpress
 1592646795	Makyen	testo360italy(?#sites.google.com)
@@ -20397,7 +20397,7 @@
 1592684592	Xnero	samsungfirmware\.net
 1592693709	Makyen	techviewz\.com
 1592693900	Makyen	artelliq\.com
-1592696767	user12986714	\w{0,30}assign(?:ments?)?\W*+helps?\.[\w\.]*+
+1592696767	user12986714	\w{0,30}assign(?:ments?)?[\W_]*+helps?\.[\w\.]*+
 1592695765	user12986714	theclassictools\.com
 1592695949	user12986714	theosnews\.xyz
 1592714130	Makyen	(?-i:2tkqc\.png)
@@ -20555,9 +20555,9 @@
 1593301563	Makyen	d(?:octo)?r[\W_]*+ehizele
 1593301579	Makyen	ehizeleherbalhome(?:@gmail\.com)?
 1593306324	Makyen	8bityard\.com
-1593324261	user12986714	accounts?\W*+get(?:t?ing)?\W*+(?:delet|destroy)ed
+1593324261	user12986714	accounts?[\W_]*+get(?:t?ing)?[\W_]*+(?:delet|destroy)ed
 1593325477	Makyen	nuturaltreehouse
-1593324611	user12986714	(?:used\W*+to\W*+|python(?:2|3)?\W*+(?:newbies?\W*+)?)troll(?:ing)?
+1593324611	user12986714	(?:used[\W_]*+to[\W_]*+|python(?:2|3)?[\W_]*+(?:newbies?[\W_]*+)?)troll(?:ing)?
 1593334530	Kulfy	talentfuturesservices\.com
 1593345551	Xnero	cervezascanarias\.es
 1593347191	Xnero	(?-i:6TQoSMBhE6k)(?#YouTube)
