@@ -51062,3 +51062,4 @@
 1685060754	Jeff Schaller	codek\.tv(?!/feed/)
 1685061166	Jeff Schaller	(?-i:BzMIBf4lvQ)(?# t.co)
 1685061291	Jeff Schaller	elance\.com
+1685061911	Jeff Schaller	voonik\.com
