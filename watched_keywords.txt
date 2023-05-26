@@ -51059,3 +51059,4 @@
 1685060074	Jeff Schaller	letsnurture\.com
 1685060252	Jeff Schaller	vbagetech\.com
 1685060493	Jeff Schaller	antivirus\.comodo\.com
+1685060754	Jeff Schaller	codek\.tv(?!/feed/)
