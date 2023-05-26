@@ -1778,11 +1778,11 @@ jiansong19(?:@gmail\.com)?
 easyhackingguru(?:@gmail\.com)?
 provexum
 noticeably[\W_]*+skin(?:[\W_]*+cream)?
-quickfundsrecovery(?:\W*+(?:at\W*+)?gmail(?:\W*+(?:dot\W*+)?com)?)?
+quickfundsrecovery(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 envy[\W_]*+naturals(?:[\W_]*+keto)?
 brain[\W_]*+dumps
 manifestspellcast(?!\.wordpress\.com)(?:@gmail\.com)?
-alluvia(?:\W*+(?:labs|anti|aging|ageless|cream))+
+alluvia(?:[\W_]*+(?:labs|anti|aging|ageless|cream))+
 (?:keto|forskolin)[\W_]*+kc3000
 mmoah
 mindvalley
@@ -1792,17 +1792,17 @@ yoo[\W_]*+slim(?:[\W_]*+(?:avis|france|fr|konjac|garcinia|\d+|[\da-f]{4,})s?)*
 errorcode0x(?:\.com)(?#abuse keyword blacklist to get 3 detections on persistent spammer)
 elijahcapitals(?:@gmail.com)?
 pure[\W_]*+life[\W_]*+keto
-power\W*+efficiency\W*+guide(?:[\W_]*+system)(?:\W*+reviews?)?
+power[\W_]*+efficiency[\W_]*+guide(?:[\W_]*+system)(?:[\W_]*+reviews?)?
 keto[\W_]*+xcg
 cbd[\W_]*+nutrition(?:[\W_]*+(?:gummies|tincture[\W_]*+oil))?
 best[\W_]*+forex
 sunshine[\W_]*+keto
-official\W*+website\W*+\(Shop\W*+Now\)
-belean\W*+keto
+official[\W_]*+website[\W_]*+\(Shop[\W_]*+Now\)
+belean[\W_]*+keto
 inviga
 nitro[\W_]*+strength
 Keto[\W_]*+Supreme
-visit\W*+link\W*+(?:and|&)\W*+read\W*+more\W*+info(?:rmation)?
+visit[\W_]*+link[\W_]*+(?:and[\W_]*+)?read[\W_]*+more[\W_]*+info(?:rmation)?
 (?:refresh\W*+)?ultra\W*+keto
 thrive\W*+society\W*+keto
 snapslim\W*+keto
