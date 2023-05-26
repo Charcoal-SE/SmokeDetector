@@ -943,3 +943,4 @@ zoomcar India
 (?-i:^vindhyaprocess$)
 (?-i:^Herbalhillswellness$)
 (?-i:^Aquantuo$)
+(?-i:^Ditm College$)
