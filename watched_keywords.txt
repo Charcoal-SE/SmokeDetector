@@ -51069,3 +51069,4 @@
 1685073297	tripleee	tis-silicone\.com
 1685076546	tripleee	herbal[\W_]*+hills[\W_]*+wellness(?!\.com(?<=herbalhillswellness\.com))(?<!(?-i:^Herbalhillswellness$))
 1685081949	Cody Gray	(?-i:iCruze)
+1685082337	tripleee	puredelics\.com
