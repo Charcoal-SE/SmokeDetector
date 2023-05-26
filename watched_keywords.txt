@@ -51101,3 +51101,5 @@
 1685112705	cigien	video1147
 1685118052	Makyen	apkwa\.net
 1685120518	Jeff Schaller	erpscope\.com
+1685125078	Makyen	  \W*+(?=\w*?leave[\W_]*+(?:se|stack[\W_]*+exchange)[\W_]*+forever)
+1685125078	Makyen	  (?:^|[> ])\W*+(?=(?-i:KP))
