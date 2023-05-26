@@ -51065,3 +51065,4 @@
 1685061911	Jeff Schaller	voonik\.com
 1685062495	Jeff Schaller	showmore\.com
 1685062633	Jeff Schaller	videostir\.com
+1685064501	Makyen	bevywise(?!\.com)(?:[\W_]*+(?:mqtt|broker))*
