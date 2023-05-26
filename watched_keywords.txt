@@ -51089,3 +51089,4 @@
 1685100348	cigien	rplusuniquesystems\.org
 1685101388	tripleee	ditm[\W_]*+college(?!\.in(?<=ditmcollege\.in))(?<!(?-i:^Ditm College$))
 1685101560	tripleee	creativefuel\.io
+1685101680	tripleee	creative[\W_]*fuel(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?(?!\.io(?<=creativefuel\.io))(?<!(?-i:^creativefuel Pvt\. Ltd\.$))
