@@ -51118,3 +51118,4 @@
 1685174625	Cody Gray	Flash[\W_]*+Exchange(?!777\.com(?<=flashexchange777\.com))
 1685179980	Cody Gray	descargarwhatsappplus\.pro
 1685180057	Cody Gray	Whatsapp[\W_]*+Plus(?!\.pro(?<=descargarwhatsappplus\.pro))
+1685180110	Cody Gray	hepibola\.com
