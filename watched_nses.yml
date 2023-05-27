@@ -4544,7 +4544,9 @@ items:
 - ns: fivecron.com.
 - ns: rayanegarco.com.
 - ns: mypowerfulserver.com.
-- ns: chipstop.in.
+- comment: NXDOMAIN 2023-05-27
+  disable: true
+  ns: chipstop.in.
 - ns: rapidcpanelserver.com.
 - ns: 7hostir.com.
 - ns: matebiz.com.
