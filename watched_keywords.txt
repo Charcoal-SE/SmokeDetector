@@ -51105,3 +51105,4 @@
 1685125078	Makyen	  (?:^|[> ])\W*+(?=(?-i:KP))
 1685127787	Makyen	juzfit[\W_]*+acv(?:[\W_]*+(?:keto|gummies|\d++|[\da-f]{5,}+)s?)*
 1685137920	Jeff Schaller	safecastle\.com
+1685152002	Makyen	emdigitiz(?!er\.com)(?:er?|ing)
