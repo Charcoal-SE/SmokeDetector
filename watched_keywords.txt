@@ -46331,7 +46331,7 @@
 1673506771	Cody Gray	onisol\.com
 1673506820	Cody Gray	Onisol(?!\.com)(?:[\W_]*Systems)?
 1673507347	Cody Gray	tips\.gg
-1673508731	tripleee	 cloudibn(?!\.com)(?<!(?-i:^cloudibn$))
+1673508731	tripleee	cloudibn(?!\.com)(?<!(?-i:^cloudibn$))
 1673509959	tripleee	smseditorpro\.com
 1673511796	Cody Gray	omegalearn\.org
 1673511820	Cody Gray	omega[\W_]*learn(?!\.org(?<=omegalearn\.org))
@@ -51102,7 +51102,7 @@
 1685118052	Makyen	apkwa\.net
 1685120518	Jeff Schaller	erpscope\.com
 1685125078	Makyen	 \W*+(?=\w*?leave[\W_]*+(?:se|stack[\W_]*+exchange)[\W_]*+forever)
-1685125078	Makyen	(?:^|[> \]])\W*+(?=(?-i:KP)(?:$|\b(?!['"*/=.])|_))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#syntax highlighting fodder:")
+1685125078	Makyen	(?:^|\b[> \]])\W*+(?=(?-i:KP)(?:$|\b(?!['"*/=.])|_))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#syntax highlighting fodder:")
 1685127787	Makyen	juzfit[\W_]*+acv(?:[\W_]*+(?:keto|gummies|\d++|[\da-f]{5,}+)s?)*
 1685137920	Jeff Schaller	safecastle\.com
 1685152002	Makyen	emdigitiz(?!er\.com)(?:er?|ing)
