@@ -5445,3 +5445,4 @@ ditmcollege\.in
 (?-i:BnDTQvw)(?#ibb.co)
 (?-i:w53Q5ce)(?#cutt.ly)
 safecastle\.com
+amprotechvalley\.com
