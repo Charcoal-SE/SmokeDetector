@@ -20573,7 +20573,7 @@
 1593403132	Makyen	(?-i:eKHox\.jpg)
 1593409113	tripleee	services[\W_]*+rpa
 1593409438	tripleee	advancedplumbing\.ca
-1593405581	user12986714	deleted?\W*+(?:as\W*+)?(?:spam|rude|offensive)
+1593405581	user12986714	deleted?[\W_]*+(?:as[\W_]*+)?(?:spam|rude|offensive)
 1593412015	Makyen	kickassanime\.rs
 1593412736	Makyen	onlineessayhelp\.co\.uk
 1593414724	Makyen	infatica\.io
@@ -20601,7 +20601,7 @@
 1593455731	Xnero	visit our website
 1593450095	user12986714	linux xploit
 1593450030	user12986714	(?-i:guP-N-B0vDE)(?#youtu.be)
-1593449850	user12986714	we\W*+provides?\W*+(?:\w*+(?:\W|\r|\n)*+){0,6}services?
+1593449850	user12986714	we[\W_]*+provides?[\W_]*+(?:\w*+(?:\W|\r|\n)*+){0,6}services?
 1593450878	user12986714	triclara(?!\.com)
 1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nascleaners\.com))
 1593470156	user12986714	bitcointechnologist(?:@gmail\.com)?
@@ -20622,10 +20622,10 @@
 1593502503	Makyen	myaukni(?<=@myaukni)
 1593505040	Makyen	probiotic[\W_]*+t[\W_]*+50
 1593505129	Makyen	contactcustomerservice\.net
-1593449773	user12986714	lead(?:ing)?\W*+providers?\W*+of
+1593449773	user12986714	lead(?:ing)?[\W_]*+providers?[\W_]*+of
 1593511093	tripleee	legaldocsa2z\.com
-1593449678	user12986714	enterprises?\W*+resources?\W*+plan(?:ning)?
-1593450354	user12986714	covid\W*+(?:19\W*+)?test(?:ing)?\W*+kits?
+1593449678	user12986714	enterprises?[\W_]*+resources?[\W_]*+plan(?:ning)?
+1593450354	user12986714	covid[\W_]*+(?:19[\W_]*+)?test(?:ing)?[\W_]*+kits?
 1593514653	tripleee	seamantravel\.club
 1593514753	Xnero	(?-i:Seaman Travel Club)
 1593515140	Glorfindel	bitdroplet\.com
@@ -20944,7 +20944,7 @@
 1594750958	Machavity	libonomy(?!\.com)
 1594750976	Machavity	libonomy\.com
 1594756781	Machavity	pestcontrolbd\.net
-1594756604	user12986714	call\W*+now(?=[^\d]{0,20}+\d)
+1594756604	user12986714	call[\W_]*+now(?=[^\d]{0,20}+\d)
 1594761091	user12986714	datalastic\.com
 1594761099	user12986714	datalastic(?!\.com)
 1594766222	Makyen	githelp\.io
@@ -21177,7 +21177,7 @@
 1595568934	Makyen	(?:happy|cheerful[\W_]*+)?honey[\W_]*+(?:cream|skin)s?(?:[\W_]*+(?:cream|skin|\d++|[\da-f]{5,}+)s?)*
 1595573680	Sonic the Masked Werehog	nhahanghuongsen\.com\.vn
 1595577472	Mast	topcomputersciencedegree\.com
-1595594773	Eliah Kagan	sawda\W*+(?:finance|capital)
+1595594773	Eliah Kagan	sawda[\W_]*+(?:finance|capital)
 1595595724	Eliah Kagan	bestseo\.com\.pk
 1595609276	Makyen	bananki\.pl
 1595614400	Jeff Schaller	videoaudiodownloader\.com
