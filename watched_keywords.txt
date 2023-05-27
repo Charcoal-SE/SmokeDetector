@@ -51119,3 +51119,4 @@
 1685179980	Cody Gray	descargarwhatsappplus\.pro
 1685180057	Cody Gray	Whatsapp[\W_]*+Plus(?!\.pro(?<=descargarwhatsappplus\.pro))
 1685180110	Cody Gray	hepibola\.com
+1685197197	Jeff Schaller	newhealthsinfo\.blogspot
