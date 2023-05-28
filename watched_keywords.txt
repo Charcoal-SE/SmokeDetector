@@ -51146,3 +51146,4 @@
 1685263457	Cody Gray	khandelwalcartransport\.com
 1685264127	Cody Gray	russroofing\.com
 1685264155	Cody Gray	Lawrenz[\W_]*+Contracting
+1685278932	Jeff Schaller	minwaa\.com
