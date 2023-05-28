@@ -51148,3 +51148,4 @@
 1685264155	Cody Gray	Lawrenz[\W_]*+Contracting
 1685278932	Jeff Schaller	minwaa\.com
 1685282908	Makyen	breeze[\W_]*+ai(?<!breeze\.ai)
+1685282942	Makyen	emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
