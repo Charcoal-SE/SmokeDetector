@@ -21229,7 +21229,7 @@
 1595826805	Makyen	alfuhod\.com
 1595835091	tripleee	voyagewatch\.com
 1595835156	tripleee	voyage\s*+watch(?:er(?!\.com))?
-1595835213	tripleee	gluco\W*+flow
+1595835213	tripleee	gluco[\W_]*+flow
 1595831368	Cody Gray	phdsc\.org
 1595835914	tripleee	newforceltd\.com
 1595836126	tripleee	packersservices\.in
@@ -21246,9 +21246,9 @@
 1595871762	Eliah Kagan	oneclout\.com
 1595878182	Makyen	drtokubotemple(?:@gmail\.com)?
 1595915648	tripleee	womensbeautyoffers\.com
-1595915833	tripleee	kana\W*+drops
+1595915833	tripleee	kana[\W_]*+drops
 1595914137	Cody Gray	faxlist\.me
-1595918566	tripleee	pearl\W*+dalangin\d*
+1595918566	tripleee	pearl[\W_]*+dalangin\d*
 1595919365	Makyen	rkbodyandsoul\.com
 1595919824	tripleee	fixmyprinter\.us
 1595920094	tripleee	defenseattorneysseattle\.com
@@ -21291,7 +21291,7 @@
 1596081424	tripleee	lamgiayphepnhanh\.net
 1596081942	tripleee	tamovip\.com
 1596085160	tripleee	naturactin\.com
-1596086164	tripleee	b(?:illio)?n\W*+cfu
+1596086164	tripleee	b(?:illio)?n[\W_]*+cfu
 1596087464	tripleee	dmtechnolab\.com
 1596093560	Makyen	testo360[\W_]*+argentina
 1596093808	tripleee	beno\.biz
@@ -21488,7 +21488,7 @@
 1596727879	EJoshuaS - Reinstate Monica	genuinedocumentsdmv\.com
 1596903373	Machavity	synsets\.net
 1596903437	Nisse Engström	lyzafashion\.com
-1596906290	user12986714	chimeratool\W*+utility
+1596906290	user12986714	chimeratool[\W_]*+utility
 1596911885	Makyen	mahrima[\W_]*+brotherhood
 1596912182	Xnero	designserviceasia\.com
 1596919936	Xnero	v8propaganda\.com\.br
@@ -21718,7 +21718,7 @@
 1597684312	Jeff Schaller	gordonbullard\.com
 1597685298	NobodyNada	charteredessay\.com
 1597695595	Eliah Kagan	bitgowallet\.org
-1597695719	Eliah Kagan	gaplek?\W*+qq
+1597695719	Eliah Kagan	gaplek?[\W_]*+qq
 1597696075	Eliah Kagan	thedailyaloe\.com
 1597725179	tripleee	unicom\.co\.uk
 1597725502	tripleee	wizardcharles\d*(?:[\W_]*(?:at[W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
@@ -22579,7 +22579,7 @@
 1600294510	Xnero	live:support_60864(?#Skype)
 1600307681	Spevacus	rewa\.tech
 1600309289	Makyen	supremetechhacker(?:@gmail\.com)?
-1600312915	Ryan M	(?:pretty|very|super|kind(?:a| of)|(?:tha|i)t'?s|so)\W*+gay
+1600312915	Ryan M	(?:pretty|very|super|kind(?:a| of)|(?:tha|i)t'?s|so)[\W_]*+gay
 1600319040	K.Dᴀᴠɪs	laktotechlabs\.com
 1600319880	Makyen	keto[\W_]*+premiere[\W_]*+finland
 1600320793	gparyani	sshline\.com
@@ -23646,7 +23646,7 @@
 1604136932	Ryan M	itechway\.net
 1604136953	Ryan M	getmodapks\.com
 1604137140	Ryan M	kinemasterdown\.com
-1604137574	Ryan M	\w+mod\W*+apk\w*+\.\w{2,4}+
+1604137574	Ryan M	\w+mod[\W_]*+apk\w*+\.\w{2,4}+
 1604140405	Victor VosMottor	EWJYhDQdpy
 1604145252	Ryan M	skillxplore\.com
 1604152184	Jeff Schaller	usps-track\.us
@@ -34253,7 +34253,7 @@
 1639422108	Ollie	alnetworth\.com
 1639425381	cigien	itprospt\.com
 1639425430	cigien	b2bappointmentsetting\.com
-1639428987	cigien	^donald\W*+j?\.?\W*+trump$
+1639428987	cigien	^donald[\W_]*+(?:j[\W_]*+)?trump$
 1639429605	Glorfindel	milestoneapply\.cards
 1639458101	cigien	upgradevip\.com
 1639461549	cigien	bambee\.grsm\.io
