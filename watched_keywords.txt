@@ -51151,3 +51151,4 @@
 1685282942	Makyen	emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
 1685288681	Ethan	socialsites\.in
 1685289057	Nisse Engström	insiderwp\.com
+1685297686	Jeff Schaller	capcutmodapk\.info
