@@ -51147,3 +51147,4 @@
 1685264127	Cody Gray	russroofing\.com
 1685264155	Cody Gray	Lawrenz[\W_]*+Contracting
 1685278932	Jeff Schaller	minwaa\.com
+1685282908	Makyen	breeze[\W_]*+ai(?<!breeze\.ai)
