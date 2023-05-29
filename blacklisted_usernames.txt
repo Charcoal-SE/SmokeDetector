@@ -945,3 +945,4 @@ zoomcar India
 (?-i:^Aquantuo$)
 (?-i:^Ditm College$)
 (?-i:^creativefuel Pvt\. Ltd\.$)
+(?-i:^Plaza Group$)
