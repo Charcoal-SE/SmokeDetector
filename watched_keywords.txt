@@ -51167,3 +51167,4 @@
 1685345677	Makyen	leo[\W_]*+bet(?!\.casino(?<=leo-bet\.casino))(?:[\W_]*+bet)?
 1685346638	Makyen	munchkincatprice\.webflow\.io
 1685346733	Makyen	vishalgarhfarms\.in
+1685346766	Makyen	vishal[\W_]*+garh[\W_]*+farms(?!\.in(?<=vishalgarhfarms\.in))
