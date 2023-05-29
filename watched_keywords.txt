@@ -51170,3 +51170,4 @@
 1685346766	Makyen	vishal[\W_]*+garh[\W_]*+farms(?!\.in(?<=vishalgarhfarms\.in))
 1685348180	cigien	gdmpvtltd\.com
 1685348207	cigien	housecleaninggeelong\.com\.au
+1685348561	cigien	desirenation\.com
