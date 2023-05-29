@@ -51183,3 +51183,4 @@
 1685369444	Jeff Schaller	qatesting\.io
 1685373980	Makyen	vibrationmotor(?!\.net)
 1685378613	Vickel	gamsebazarbd\.com
+1685378492	Jesse	leonifrancesco\.com
