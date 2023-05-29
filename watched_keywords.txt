@@ -51196,3 +51196,4 @@
 1685401107	Jeff Schaller	\.soup\.io(?<!dev\.soup\.io)
 1685401460	Jeff Schaller	mostexclusivewebsite\.com
 1685401560	Jeff Schaller	listoffreeware\.com
+1685401990	Jeff Schaller	vplak\.com
