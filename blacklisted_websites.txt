@@ -808,7 +808,6 @@ academicwriter\.co\.uk
 \b(?<![^\W_]-)intl\.aliyun\.com(?![.-][^\W_])\b
 brainfireadvice\.com
 gonetech\.net
-tipstune\.net
 seekzed\.com
 shadowtechnology\.in
 idolbirthdays\.com
