@@ -51163,3 +51163,4 @@
 1685339244	Makyen	happyeaster-quotes\.com
 1685339266	Makyen	get-lines\.com
 1685345525	Makyen	keto[\W_]*+(?:acv[\W_]*+)?gmy(?:[\W_]*+(?:acv|bhb|gumm(?:ies?|y)|canada|\d++|[\da-f]{5,}+)s?)*
+1685345653	Makyen	leo-bet\.casino
