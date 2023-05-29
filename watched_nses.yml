@@ -4391,7 +4391,9 @@ items:
 - ns: sgcloudhosting.com.
 - ns: zpowerdns.com.
 - ns: webdesigninnepal.com.
-- ns: hostingplatform.net.au.
+- comment: mainly FPs, disabled 2023-05-29
+  disable: true
+  ns: hostingplatform.net.au.
 - ns: gexhost.com.
 - ns: infotreeit.com.
 - ns: ureasyads.com.
