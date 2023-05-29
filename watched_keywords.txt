@@ -51165,3 +51165,4 @@
 1685345525	Makyen	keto[\W_]*+(?:acv[\W_]*+)?gmy(?:[\W_]*+(?:acv|bhb|gumm(?:ies?|y)|canada|\d++|[\da-f]{5,}+)s?)*
 1685345653	Makyen	leo-bet\.casino
 1685345677	Makyen	leo[\W_]*+bet(?!\.casino(?<=leo-bet\.casino))(?:[\W_]*+bet)?
+1685346638	Makyen	munchkincatprice\.webflow\.io
