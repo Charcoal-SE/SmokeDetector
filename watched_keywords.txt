@@ -51181,3 +51181,4 @@
 1685364654	Jeff Schaller	onlinemasterscolleges\.com
 1685365131	tripleee	treba-mebli\.com\.ua
 1685369444	Jeff Schaller	qatesting\.io
+1685373980	Makyen	vibrationmotor(?!\.net)
