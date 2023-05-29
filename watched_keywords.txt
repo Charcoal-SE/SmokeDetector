@@ -51195,3 +51195,4 @@
 1685400797	Jeff Schaller	//sh\.st/(?!WqgZU)
 1685401107	Jeff Schaller	\.soup\.io(?<!dev\.soup\.io)
 1685401460	Jeff Schaller	mostexclusivewebsite\.com
+1685401560	Jeff Schaller	listoffreeware\.com
