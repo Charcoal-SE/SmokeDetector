@@ -51158,3 +51158,4 @@
 1685314725	Vickel	voucherone\.co\.uk
 1685314869	Vickel	(?-i:personalized-gifts-for-teachers)(?#voucherone.co.uk)
 1685321904	Vickel	hlsv-net\.rf\.gd
+1685323910	Makyen	alfapublicaciones\.com
