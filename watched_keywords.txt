@@ -51205,3 +51205,4 @@
 1685413988	Makyen	hereinclub(?!\.com)
 1685421178	Makyen	lotofares\.com
 1685422870	Makyen	vimimagic(?!\.in)
+1685422892	Makyen	vimimagic\.in
