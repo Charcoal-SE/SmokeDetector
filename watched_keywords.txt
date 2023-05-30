@@ -51212,3 +51212,4 @@
 1685429763	Makyen	a+lpha[\W_]*+bio(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 1685429805	Makyen	jhdpcb(?!\.com)
 1685430939	Makyen	linkclicks\.co
+1685431633	tripleee	(?-i:MPS2bGI8tw4)(?# youtube)
