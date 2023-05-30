@@ -2526,6 +2526,9 @@ items:
   - kenneth.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
+  - kevin.ns.cloudflare.com.
+  - maria.ns.cloudflare.com.
+- ns:
   - keyla.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
