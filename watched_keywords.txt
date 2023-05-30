@@ -51215,3 +51215,4 @@
 1685432045	tripleee	(?-i:^kevin francis$)
 1685432545	Makyen	sakyacarbon\.com
 1685432569	Makyen	sakya[\W_]*+carbon(?!\.com(?<=sakyacarbon\.com))
+1685433237	cigien	buycsgorank\.com
