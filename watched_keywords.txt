@@ -51234,3 +51234,4 @@
 1685445961	cigien	customerservice-directory\.com
 1685449100	tripleee	19216811(?!\.(?:app|bid|cam|lol|mx|tel))
 1685449176	tripleee	19216811\.tel
+1685449334	tripleee	19216811\.bid
