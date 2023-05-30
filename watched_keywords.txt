@@ -21349,7 +21349,6 @@
 1596357247	Criggie	wordtopdf\.ltd
 1596357232	Criggie	vidmate\.bid
 1596357187	Criggie	19216811\.cam
-1596357172	Criggie	1921681001\.id
 1596378704	Makyen	(?-i:venessadcruze)(?#medium.com)
 1596378718	Makyen	panaleanstore\.com
 1596378735	Makyen	bioleptinstore\.com
