@@ -51223,3 +51223,4 @@
 1685435212	cigien	luyacoffee\.com
 1685435872	tripleee	pricehut\.pk
 1685436339	tripleee	(?:(?:mada|sadad|sarie|esal)(,?\s*and\s+|,\s+)){2,}
+1685437610	cigien	onlinelasvegasreviews\.com
