@@ -946,3 +946,4 @@ zoomcar India
 (?-i:^Ditm College$)
 (?-i:^creativefuel Pvt\. Ltd\.$)
 (?-i:^Plaza Group$)
+(?-i:^Vezlay Foods Pvt\. Ltd\.$)
