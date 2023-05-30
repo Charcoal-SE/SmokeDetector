@@ -11939,7 +11939,6 @@
 1567765662	double-beep	filthygorgeouslondon\.com
 1567766298	Jeff Schaller	gitlab\.com/glat-official
 1567766305	Jeff Schaller	github\.com/gnu-linux-activation-technologies
-1567771826	double-beep	showbox\.kim
 1567784296	Machavity	signpath\.io
 1567789379	Makyen	nuvoketosisreviews\.blogspot
 1567789398	Makyen	showtheway\.io
