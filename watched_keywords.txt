@@ -51200,3 +51200,4 @@
 1685413859	Makyen	clubinthefactory\.com
 1685413880	Makyen	clubinthefactory(?!\.com)
 1685413918	Makyen	oneeyedtazza\.com
+1685413940	Makyen	oneeyedtazza(?!\.com)
