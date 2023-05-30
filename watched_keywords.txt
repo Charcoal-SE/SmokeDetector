@@ -51216,3 +51216,4 @@
 1685432545	Makyen	sakyacarbon\.com
 1685432569	Makyen	sakya[\W_]*+carbon(?!\.com(?<=sakyacarbon\.com))
 1685433237	cigien	buycsgorank\.com
+1685433262	cigien	wecarewellness\.co\.in
