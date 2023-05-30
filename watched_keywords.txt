@@ -51236,3 +51236,4 @@
 1685449354	tripleee	19216811\.lol
 1685451319	tripleee	marcarian(?:[\W_]*+law[\W_]*+firm)?
 1685451700	tripleee	5ISPYI
+1685452478	Jeff Schaller	marcarianlaw\.com
