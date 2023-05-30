@@ -63,6 +63,9 @@ items:
   - clayton.ns.cloudflare.com.
 - ns:
   - ada.ns.cloudflare.com.
+  - dan.ns.cloudflare.com.
+- ns:
+  - ada.ns.cloudflare.com.
   - john.ns.cloudflare.com.
 - ns:
   - ada.ns.cloudflare.com.
