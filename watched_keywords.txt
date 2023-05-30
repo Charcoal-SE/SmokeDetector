@@ -51237,3 +51237,4 @@
 1685451319	tripleee	marcarian(?:[\W_]*+law[\W_]*+firm)?
 1685451700	tripleee	5ISPYI
 1685452478	Jeff Schaller	marcarianlaw\.com
+1685454073	cigien	icariatechnology\.com
