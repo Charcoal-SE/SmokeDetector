@@ -1938,6 +1938,9 @@ items:
   - gene.ns.cloudflare.com.
   - robert.ns.cloudflare.com.
 - ns:
+  - georgia.ns.cloudflare.com.
+  - jose.ns.cloudflare.com.
+- ns:
   - gerald.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
