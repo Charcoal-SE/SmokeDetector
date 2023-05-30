@@ -51207,3 +51207,4 @@
 1685422870	Makyen	vimimagic(?!\.in)
 1685422892	Makyen	vimimagic\.in
 1685426864	Makyen	estartrade-ic\.com
+1685426885	Makyen	estartrade[\W_]*+ic(?!\.com(?<=estartrade-ic\.com))
