@@ -947,3 +947,4 @@ zoomcar India
 (?-i:^creativefuel Pvt\. Ltd\.$)
 (?-i:^Plaza Group$)
 (?-i:^Vezlay Foods Pvt\. Ltd\.$)
+(?-i:^Malik Abdullah$)
