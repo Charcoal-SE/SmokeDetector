@@ -5440,3 +5440,4 @@ procast\.live
 emergenresearch\.com
 www\.truepush\.com
 (?-i:uwqK0psH)(?# cutt.ly)
+vezlay\.com

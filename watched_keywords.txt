@@ -36760,7 +36760,6 @@
 1646895059	tripleee	tictactoebeast\.com
 1646896373	tripleee	ezeelogin(?!\.com)(?<!(?-i:^Ezeelogin$))
 1646897574	tripleee	sattebaaj
-1646899214	tripleee	vezlay\.com
 1646899446	tripleee	burberryconstruction\.com
 1646901233	tripleee	couponcage\.blogspot
 1646901250	tripleee	couponcage(?!\.(?:com|blogspot))
