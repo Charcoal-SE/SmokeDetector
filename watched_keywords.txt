@@ -51199,3 +51199,4 @@
 1685401990	Jeff Schaller	vplak\.com
 1685413859	Makyen	clubinthefactory\.com
 1685413880	Makyen	clubinthefactory(?!\.com)
+1685413918	Makyen	oneeyedtazza\.com
