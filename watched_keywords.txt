@@ -50602,7 +50602,6 @@
 1683963583	Makyen	ketonaire(?:[\W_]*+(?:keto|acv|gumm(?:ie?|y)|\d++|[\da-f]{5,}+)s?)*
 1683967839	tripleee	fitnessscenz\.com
 1683967923	tripleee	19216811\.mx
-1683967994	tripleee	19216811(?!\.mx)
 1683968953	tripleee	almanar\.com\.lb
 1683970633	tripleee	holland[\W]*+(?:and[\W]*+)?barrett(?:[\W]*+keto)?(?:[\W]*+gummies)?
 1683970817	tripleee	excelwithtushar\.com
