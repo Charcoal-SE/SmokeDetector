@@ -5442,3 +5442,4 @@ www\.truepush\.com
 (?-i:uwqK0psH)(?# cutt.ly)
 vezlay\.com
 1921681001\.id
+1921681001\.cam
