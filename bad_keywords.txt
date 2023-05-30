@@ -2865,3 +2865,4 @@ zoomcar(?!\.com)(?! India$)
 aamad[\W_]*+dance[\W_]*+center(?!(?<=^aamad dance center)$)
 https://servicemycar\.com/u(?:ae|k)(?# increase weight for these URLs)
 ampro[\W_]*+techvalley(?!\.com(?<=amprotechvalley\.com))
+jeffreyethicalhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?

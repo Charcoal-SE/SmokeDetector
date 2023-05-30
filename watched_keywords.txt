@@ -37765,7 +37765,6 @@
 1649503545	Cody Gray	rainmaker\.co\.in
 1649515435	cigien	(?-i:qum-3Pp-kgQ)(?#youtu.be)
 1649516228	cigien	chanchalsir\.com
-1649517541	cigien	jeffreyethicalhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1649517721	cigien	easydevguide\.com
 1649517795	cigien	1800bizbroker\.com
 1649517978	cigien	shomorikaspelltemple(?:@yahoo\.com)?
