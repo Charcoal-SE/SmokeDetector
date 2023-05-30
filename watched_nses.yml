@@ -303,6 +303,9 @@ items:
   - connie.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
+  - aragorn.ns.cloudflare.com.
+- ns:
+  - ali.ns.cloudflare.com.
   - boyd.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
