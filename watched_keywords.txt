@@ -51209,3 +51209,4 @@
 1685426864	Makyen	estartrade-ic\.com
 1685426885	Makyen	estartrade[\W_]*+ic(?!\.com(?<=estartrade-ic\.com))
 1685426894	Makyen	alphabiocbdgummies\.wixsite\.com
+1685429763	Makyen	a+lpha[\W_]*+bio(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
