@@ -51253,3 +51253,4 @@
 1685524912	cigien	vicwidecheaptowingservice\.com\.au
 1685524948	cigien	vicwide[\W_]*+cheap[\W_]*+towing[\W_]*+service(?!\.com\.au(?<=vicwidecheaptowingservice\.com\.au))
 1685525010	cigien	bodycareapparels\.com
+1685525047	cigien	aadme\.co
