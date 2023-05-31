@@ -51255,3 +51255,4 @@
 1685525010	cigien	bodycareapparels\.com
 1685525047	cigien	aadme\.co
 1685525081	cigien	thesoldiersproject\.org
+1685525110	cigien	nyggs\.com
