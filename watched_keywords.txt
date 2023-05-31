@@ -50872,7 +50872,6 @@
 1684722659	Makyen	maito\.net
 1684724549	Makyen	cvv[\W_]*+seller[\W_]*+logs
 1684730659	tripleee	growsplash\.com
-1684732137	tripleee	aquantuo\.com
 1684734707	tripleee	simbainstitute\.in
 1684736183	Makyen	javaziez\.com
 1684736857	tripleee	topone-contractors\.com
