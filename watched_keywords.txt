@@ -51260,3 +51260,4 @@
 1685529913	cigien	google[\W_]*+forex(?!\.net(?<=googleforex\.net))
 1685529947	cigien	kaukoyacu\.com
 1685531688	cigien	plugincrack\.info
+1685532301	cigien	seomadtech\.com
