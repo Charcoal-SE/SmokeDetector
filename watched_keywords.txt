@@ -51262,3 +51262,4 @@
 1685531688	cigien	plugincrack\.info
 1685532301	cigien	seomadtech\.com
 1685532633	cigien	bharti[\W_]*+eye[\W_]*+foundation(?!\.in(?<=bhartieyefoundation\.in))
+1685533710	Jeff Schaller	abbysan\.com
