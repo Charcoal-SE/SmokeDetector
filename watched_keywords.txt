@@ -51306,3 +51306,4 @@
 1685617519	cigien	reportwritinghelp\.com
 1685617556	cigien	(?-i:jasper_guru)(?#fiverr)
 1685622271	cigien	downloadvidoes\.com
+1685622297	cigien	whatsappsdownloads\.com
