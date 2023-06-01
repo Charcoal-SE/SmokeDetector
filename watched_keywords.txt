@@ -44372,7 +44372,6 @@
 1667449619	tripleee	canamwarranty\.com
 1667454427	cigien	arthitectural\.com
 1667454817	cigien	InstantWebP2P(?#github)
-1667455178	cigien	laravelia\.com
 1667455659	cigien	tramadol100\.com
 1667455846	cigien	2k75\.xyz
 1667456192	tripleee	(?-i:^amyshare$)
