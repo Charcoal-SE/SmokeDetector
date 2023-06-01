@@ -1731,7 +1731,7 @@ lucineux
 ketogenic[\W_]*+accelerator
 auras[\W_]*+wave(?:[\W_]*+keto)?
 awa[\W_]*+derm
-v\W*+a\W*+s\W*+h\W*+i\W*+k\W*+a\W*+r\W*+a\W*+n(?#Obfuscated vashikaran)
+v\W*+a\W*+s\W*+h\W*+i\W*+k\W*+a\W*+r\W*+a\W*+n(?!$(?<=^loveson vashikaran$))(?! Samrat)(?#Obfuscated vashikaran)
 lts[\W_]*+secure(?!\.com\b)
 C\W*+Y\W*+B\W*+E\W*+R\W*+S\W*+P\W*+Y\W*+C\W*+L\W*+O\W*+W\W*+N\W*+(?:a\W*+t\W*+)?\W*+G\W*+M\W*+A\W*+I\W*+L\W*+(?:d\W*+o\W*+t\W*+)?C\W*+O\W*+M
 choice[\W_]*+labs(?:[\W_]*+keto)?
