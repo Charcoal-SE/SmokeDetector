@@ -51289,3 +51289,4 @@
 1685600611	Cody Gray	amolatinanews\.com
 1685600637	Cody Gray	smile[\W_]*+dating(?:[\W_]*+test)?
 1685601401	Cody Gray	timechamp\.io
+1685601424	Cody Gray	timechamp(?!\.io)
