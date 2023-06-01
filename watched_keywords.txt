@@ -51294,3 +51294,4 @@
 1685605417	Makyen	nifdo(?!\.com(?<=nifdo\.com))(?:[\W_]*+(?:whitening|serum|\d++|[\da-f]{5,}+)s?)*
 1685607711	cigien	webhibe\.com
 1685607921	cigien	computertipstricks\.tech
+1685607969	cigien	ledmofan\.com
