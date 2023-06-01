@@ -51304,3 +51304,4 @@
 1685617262	cigien	sphinx-solution\.com
 1685617364	Jeff Schaller	gemsny\.com
 1685617519	cigien	reportwritinghelp\.com
+1685617556	cigien	(?-i:jasper_guru)(?#fiverr)
