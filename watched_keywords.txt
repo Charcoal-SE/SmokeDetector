@@ -51275,3 +51275,4 @@
 1685572372	Ryan M	gerai[\W_]*+ltd
 1685579015	Makyen	budiluhur\.ac\.id
 1685591690	Makyen	khuyenmaicuoc\.com
+1685591714	Makyen	khuyen[\W_]*+mai[\W_]*+8xbet
