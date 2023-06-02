@@ -51314,3 +51314,4 @@
 1685633200	Mast	wearecommunity\.io
 1685670291	Makyen	sunpowerbynova\.com
 1685670314	Makyen	sunpowerbynova(?!\.com)
+1685682686	Makyen	blogcuriosity\.com
