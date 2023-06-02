@@ -51315,3 +51315,4 @@
 1685670291	Makyen	sunpowerbynova\.com
 1685670314	Makyen	sunpowerbynova(?!\.com)
 1685682686	Makyen	blogcuriosity\.com
+1685690783	cigien	adsumoriginator\.com
