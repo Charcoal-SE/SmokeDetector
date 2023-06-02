@@ -51329,3 +51329,4 @@
 1685699865	cigien	twellmall\.com
 1685711433	Makyen	softechsource\.com
 1685711451	Makyen	softechsource(?!\.com)
+1685720312	cigien	langtraviet\.com
