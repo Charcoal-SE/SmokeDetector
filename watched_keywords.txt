@@ -51332,3 +51332,4 @@
 1685720312	cigien	langtraviet\.com
 1685774104	Makyen	male[\W_]*+biotix(?!cbdgummies\.wixsite\.com(?<=malebiotixcbdgummies\.wixsite\.com))(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 1685774129	Makyen	malebiotixcbdgummies\.wixsite\.com
+1685774150	Makyen	bodysensation\.in
