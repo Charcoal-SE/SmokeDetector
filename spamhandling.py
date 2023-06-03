@@ -211,7 +211,7 @@ def build_message(post, reasons):
         username = post.user_name.strip()
         escaped_username = escape_format(parsing.escape_markdown(username))
         user = "[{}\u202D]({})".format(escaped_username, poster_url)
-        
+
     # If the post URL is a staging ground link, indicate that; ensure that the post is on Stack Overflow
     if shortened_site == "stackoverflow.com" and "staging-ground" in post.post_url:
         staging = "(Staging Ground) "
