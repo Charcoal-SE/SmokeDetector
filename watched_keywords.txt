@@ -51351,3 +51351,4 @@
 1685837122	Makyen	7wcw\.short\.gy
 1685837143	Makyen	bukanseo
 1685837163	Makyen	short\.gy(?<!7wcw\.short\.gy)
+1685856420	Nisse Engström	cpsandtypingtest\.com
