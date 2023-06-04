@@ -51360,3 +51360,4 @@
 1685874754	Makyen	dynamics[\W_]*+365[\W_]*+finance[\W_]*+(?:and[\W_]*+)?operations
 1685877687	Makyen	shayanfiroozi
 1685877708	Makyen	fastlog\.net
+1685878702	Nisse Engström	dafabett\.org
