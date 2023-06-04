@@ -51378,3 +51378,4 @@
 1685889350	Jeff Schaller	zaputra\.com
 1685889799	Jeff Schaller	huintech\.com(?!/product/)
 1685889828	cigien	combatappnow\.com
+1685890048	Jeff Schaller	kikapptools\.com(?!/knowledge-base/)
