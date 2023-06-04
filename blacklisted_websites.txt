@@ -181,7 +181,6 @@ i-spire\.(?:com|net)
 sandangku\.com
 iwasl\.com
 vpn(?:faqs|answers|4games)\.com
-airmore\.com
 unblockingtwitter\.com
 openingblockedsite\.com
 credenceresearch\.com
