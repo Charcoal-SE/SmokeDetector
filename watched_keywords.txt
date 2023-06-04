@@ -51370,3 +51370,4 @@
 1685887349	Jeff Schaller	webforpc\.com
 1685887570	Jeff Schaller	agriya\.com
 1685887906	Jeff Schaller	robomart\.com(?!/blog/)
+1685888126	Jeff Schaller	//adf\.ly/
