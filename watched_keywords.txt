@@ -51358,3 +51358,4 @@
 1685870344	Nisse Engström	bbcorhitter\.com
 1685874724	Makyen	b0c5pkyp92
 1685874754	Makyen	dynamics[\W_]*+365[\W_]*+finance[\W_]*+(?:and[\W_]*+)?operations
+1685877687	Makyen	shayanfiroozi
