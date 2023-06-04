@@ -51367,3 +51367,4 @@
 1685882027	Makyen	my[\W_]*+cdr[\W_]*+help(?!\.com(?<=mycdrhelp\.com))
 1685886081	Jeff Schaller	catlight\.io
 1685886519	Jeff Schaller	streamaxia\.com
+1685887349	Jeff Schaller	webforpc\.com
