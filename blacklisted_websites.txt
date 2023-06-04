@@ -5450,3 +5450,4 @@ aquantuo\.com
 freewing-model\.com
 nbosports\.blogspot
 bloglovin\.com/@
+provenexpert\.com(?!/widget/)
