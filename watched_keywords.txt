@@ -51371,3 +51371,4 @@
 1685887570	Jeff Schaller	agriya\.com
 1685887906	Jeff Schaller	robomart\.com(?!/blog/)
 1685888126	Jeff Schaller	//adf\.ly/
+1685888435	Jeff Schaller	fakeadiplomaonline\.com
