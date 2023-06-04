@@ -305,7 +305,6 @@ creative-proteomics
 revommerce\.com
 123trainings
 (?:bestof|beta)cheat\.com
-surejob\.in
 israelbigmarket
 savemantra\.com
 imeshlab\.com
