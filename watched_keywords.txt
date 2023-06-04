@@ -51382,3 +51382,4 @@
 1685890308	Jeff Schaller	installthetech\.com
 1685891752	Jeff Schaller	videorooms\.io
 1685891889	Jeff Schaller	pureipos\.com
+1685892095	Jeff Schaller	latestone\.com
