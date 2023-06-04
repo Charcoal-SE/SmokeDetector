@@ -51379,3 +51379,4 @@
 1685889799	Jeff Schaller	huintech\.com(?!/product/)
 1685889828	cigien	combatappnow\.com
 1685890048	Jeff Schaller	kikapptools\.com(?!/knowledge-base/)
+1685890308	Jeff Schaller	installthetech\.com
