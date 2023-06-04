@@ -51376,3 +51376,4 @@
 1685888701	Jeff Schaller	surejob\.in(?!/wp-content/uploads/)
 1685888816	Jeff Schaller	transferphone\.com
 1685889350	Jeff Schaller	zaputra\.com
+1685889799	Jeff Schaller	huintech\.com(?!/product/)
