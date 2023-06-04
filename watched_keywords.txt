@@ -51366,3 +51366,4 @@
 1685881978	Makyen	jet88[\W_]*+bet(?!slot\.com(?<=jet88betslot\.com))(?:[\W_]*+(?:slot|\d++|[\da-f]{5,}+)s?)*
 1685882027	Makyen	my[\W_]*+cdr[\W_]*+help(?!\.com(?<=mycdrhelp\.com))
 1685886081	Jeff Schaller	catlight\.io
+1685886519	Jeff Schaller	streamaxia\.com
