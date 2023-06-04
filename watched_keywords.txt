@@ -51354,3 +51354,4 @@
 1685856420	Nisse Engström	cpsandtypingtest\.com
 1685864244	cigien	SocialMarketBots(?# telegram)
 1685869256	Nisse Engström	trafficriderapp\.com
+1685869861	Nisse Engström	npstj\.com
