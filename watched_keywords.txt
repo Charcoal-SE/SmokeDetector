@@ -51373,3 +51373,4 @@
 1685888126	Jeff Schaller	//adf\.ly/
 1685888435	Jeff Schaller	fakeadiplomaonline\.com
 1685888457	Jeff Schaller	replicatediploma\.com
+1685888701	Jeff Schaller	surejob\.in(?!/wp-content/uploads/)
