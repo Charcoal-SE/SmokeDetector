@@ -51352,3 +51352,4 @@
 1685837143	Makyen	bukanseo
 1685837163	Makyen	short\.gy(?<!7wcw\.short\.gy)
 1685856420	Nisse Engström	cpsandtypingtest\.com
+1685864244	cigien	SocialMarketBots(?# telegram)
