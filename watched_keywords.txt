@@ -51363,3 +51363,4 @@
 1685878702	Nisse Engström	dafabett\.org
 1685880935	Nisse Engström	jet88betslot\.com
 1685881097	Nisse Engström	mycdrhelp\.com
+1685881978	Makyen	jet88[\W_]*+bet(?!slot\.com(?<=jet88betslot\.com))(?:[\W_]*+(?:slot|\d++|[\da-f]{5,}+)s?)*
