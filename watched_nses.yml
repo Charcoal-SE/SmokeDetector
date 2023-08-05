@@ -4503,7 +4503,9 @@ items:
 - ns: 2cohost.com.
 - ns: 24websitehosting.com.
 - ns: websiteservername.com.
-- ns: kidsnot.com.
+- comment: NXDOMAIN 2023-08-05
+  disable: true
+  ns: kidsnot.com.
 - ns: vodacombusiness.co.za.
 - ns: startlogic.com.
 - ns: kinextechnologies.in.
@@ -4576,7 +4578,9 @@ items:
 - ns: armadaservers.com.
 - ns: secureclouddns.net.
 - ns: att-websites.com.
-- ns: flammahost.com.
+- comment: NXDOMAIN 2023-08-05
+  disable: true
+  ns: flammahost.com.
 - ns: starprocombat.com.
 - comment: SERVFAIL 2022-09-07
   disable: true
