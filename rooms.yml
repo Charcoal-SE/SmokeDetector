@@ -529,7 +529,6 @@ stackoverflow.com:
     watcher: true
 
     msg_types:
-      - site-stackoverflow.com
       - no-allspam
       - no-offensive-mask
 
