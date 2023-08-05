@@ -524,6 +524,114 @@ meta.stackexchange.com:
 
 
 stackoverflow.com:
+  41570:  # SOCVR
+    commands: true
+    watcher: true
+
+    msg_types:
+      - site-stackoverflow.com
+      - no-allspam
+      - no-offensive-mask
+
+    privileges:
+      - 270038   # Floern
+      - 416592   # Braiam
+      - 472339   # approxiblue
+      - 3540948  # Compass
+      - 3094403  # ProgramFOX
+      - 1212053  # ManishEarth
+      - 1936546  # Tunaki
+      - 3717584  # josliber
+      - 1878548  # bummi
+      - 5113734  # Bhargav Rao
+      - 2663825  # Siguza
+      - 6887735  # Petter Friberg
+      - 233608   # John Dvorak
+      - 2094462  # QPaysTaxes
+      - 3457374  # ArtOfCode
+      - 11236892 # user0042
+      - 4879045  # Rizier123
+      - 3408190  # Ajay Brahmakshatriya
+      - 1831749  # DavidG
+      - 5044366  # Thaillie
+      - 3598048  # Baum mit Augen
+      - 4451090  # Unihedron
+      - 2032926  # Drew
+      - 7424117  # Li357
+      - 1245478  # CalvT
+      - 411877   # Shree
+      - 210807   # Praveen Kumar
+      - 6899023  # Kevin Guan
+      - 1445276  # Wai Ha Lee
+      - 1968644  # durron597
+      - 7452831  # Ian
+      - 999      # Paul Roub
+      - 9850721  # Erik von Asmuth
+      - 2575625  # Henders
+      - 268821   # Tiny Giant
+      - 5221606  # Paul Stenne
+      - 7034529  # Magisch
+      - 1036128  # gunr2171
+      - 2751107  # Machavity
+      - 6164808  # kayess
+      - 3802375  # Alexander O'Mara
+      - 3273747  # TylerH
+      - 5678307  # intboolstring
+      - 1703573  # Undo
+      - 5018541  # EJoshuaS
+      - 1677570  # Ferrybig
+      - 4252138  # Nisse Engström
+      - 2306806  # Tushar
+      - 6085540  # Glorfindel
+      - 3868683  # Deduplicator
+      - 2591787  # Sam
+      - 468289   # tripleee
+      - 272446   # Rob
+      - 2809239  # JAL
+      - 247613   # Hovercraft Full Of Eels
+      - 297701   # Thomas Ward
+      - 4657998  # Makyen
+      - 4911344  # Yvette Colomb
+      - 1851431  # Mogsdad
+      - 1435254  # Suraj Rao
+      - 214848   # Michael Dodd
+      - 4248202  # NobodyNada
+      - 94692    # easwee
+      - 5460139  # NathanOliver
+      - 1818331  # cimmanon
+      - 281857   # rene
+      - 170826   # Stephen Kennedy
+      - 9760     # Jim Garrison
+      - 2287191  # FrankerZ
+      - 3046327  # hichris123
+      - 2734210  # JamesENL
+      - 7624963  # K.Dᴀᴠɪs
+      - 331514   # Lynn Crumbling
+      - 147868   # Kevin Brown
+      - 2058164  # Cerbrus
+      - 435342   # Ryan Bemrose
+      - 5963824  # Ashish Ahuja
+      - 7569646  # 4castle
+      - 5962654  # FelixSFD
+      - 2539078  # cybermonkey
+      - 5869449  # angussidney
+      - 7886663  # iBug
+      - 1023850  # Cœur
+      - 6473006  # Zoe
+      - 3963457  # Nick A
+      - 10317043 # treyBake
+      - 15185282 # Chipster
+      - 11230997 # SecretAgentMan
+      - 4146267  # robsiemb
+      - 14952682 # JL2210
+      - 2063361  # Dharman
+      - 2477436  # gparyani
+      - 8629256  # M--
+      - 15062967 # Adrian Mole
+      - 72095    # Ryan M
+      - 11421497 # cigien
+      # NOTICE: please don't add new users until you have Room Owner approval
+
   111347:  # SOBotics
     commands: true
 
