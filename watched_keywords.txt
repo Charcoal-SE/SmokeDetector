@@ -51430,3 +51430,4 @@
 1691420681	cigien	paras[\W_]*+quartier[\W_]*+gurgaon
 1691420877	cigien	dowhilelearn\.com
 1691420903	Mast	intel4d\.lol
+1691420996	cigien	davsafaris\.com
