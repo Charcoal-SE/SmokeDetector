@@ -51405,3 +51405,4 @@
 1691382350	Makyen	garry[\W_]*+speed[\W_]*+hack
 1691382402	Makyen	wzardgarryspeedhack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1691382410	Makyen	wzardgarryspeedhac\.wixsite\.com
+1691384754	cocomac	remotecontrollawnmowers\.com
