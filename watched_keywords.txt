@@ -51425,3 +51425,4 @@
 1691420035	cigien	medicinalmadhoney\.com
 1691420443	cigien	mad[\W_]*+honey(?!\.com(?<=medicinalmadhoney\.com))
 1691420545	cigien	cheapseo\.services
+1691420580	cigien	en\.freetoolz\.co
