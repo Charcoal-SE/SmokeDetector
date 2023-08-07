@@ -51477,3 +51477,4 @@
 1691431942	cigien	vermaart\.com
 1691431978	cigien	burberryhoodie\.shop
 1691432027	cigien	burberry[\W_]*+hoodie(?!\.shop(?<=burberryhoodie\.shop))
+1691432128	cigien	shabeebasherinpv\.com
