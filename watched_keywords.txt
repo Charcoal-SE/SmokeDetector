@@ -27851,7 +27851,6 @@
 1617999088	cigien	illini[\W_]*+foundry(?!\.com(?<=illinifoundry\.com))
 1618000848	cigien	delimp(?!\.com)
 1618000907	cigien	behealthyideas\.com
-1618001352	cigien	websitescraper\.com
 1618003437	cigien	discountpartner\.co\.uk
 1618009696	Makyen	(?-i:dK1KkmHX61g)(?#youtu.be)
 1618019577	Makyen	(?-i:2MqIAip)(?#bit.ly)
