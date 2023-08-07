@@ -51483,3 +51483,4 @@
 1691432372	cigien	animeflix\.com\.co
 1691432423	cigien	streamfab\.tv
 1691432599	cigien	paras[\W_]*+quartier[\W_]*+gurgaon(?!\.co\.in(?<=parasquartiergurgaon\.co\.in))
+1691432630	cigien	providentecopoliten\.in
