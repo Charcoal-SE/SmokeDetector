@@ -51423,3 +51423,4 @@
 1691419680	cigien	blog\.mechanicles\.com
 1691419843	cigien	warrior-network\.com
 1691420035	cigien	medicinalmadhoney\.com
+1691420443	cigien	mad[\W_]*+honey(?!\.com(?<=medicinalmadhoney\.com))
