@@ -51474,3 +51474,4 @@
 1691431817	cigien	sheesh[\W_]*+mahal[\W_]*+desert[\W_]*+camp(?!\.in(?<=sheeshmahaldesertcamp\.in))
 1691431843	cigien	goldentreeroofing\.com
 1691431904	cigien	lc\.chat
+1691431942	cigien	vermaart\.com
