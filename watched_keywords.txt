@@ -51007,7 +51007,6 @@
 1685004400	cigien	topwebexpert\.com
 1685005035	Makyen	mconnectmedia\.com
 1685005060	Makyen	mconnect[\W_]*+media(?!\.com(?<=mconnectmedia\.com))
-1685005380	Makyen	teratail\.com
 1685005843	cigien	allshapes\.net
 1685007399	Makyen	thermo[\W_]*+keto[\W_]*+gummies(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1685010530	Jeff Schaller	kitabnagri\.xyz
