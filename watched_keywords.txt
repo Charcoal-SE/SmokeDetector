@@ -51485,3 +51485,4 @@
 1691432599	cigien	paras[\W_]*+quartier[\W_]*+gurgaon(?!\.co\.in(?<=parasquartiergurgaon\.co\.in))
 1691432630	cigien	providentecopoliten\.in
 1691432880	cigien	localcan\.com
+1691432910	cigien	traveltipspot\.com
