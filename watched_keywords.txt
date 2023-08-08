@@ -51528,3 +51528,4 @@
 1691520687	Makyen	stocknaveen\.com
 1691520719	Makyen	stock[\W_]*+naveen(?!\.com(?<=stocknaveen\.com))
 1691525351	Mast	chandigarhescorts\.in
+1691527157	Jeff Schaller	finentor\.com
