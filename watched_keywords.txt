@@ -51525,3 +51525,4 @@
 1691506100	cigien	itsolutionsguides\.com
 1691509353	Makyen	tutorialstrend\.com
 1691509376	Makyen	tutorialstrend(?!\.com)
+1691520687	Makyen	stocknaveen\.com
