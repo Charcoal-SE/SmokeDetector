@@ -51555,3 +51555,4 @@
 1691578973	cigien	om[\W_]*+shree[\W_]*+aluminium(?!\.com(?<=omshreealuminium\.com))
 1691579188	cigien	halalcaters\.com
 1691579439	cigien	brightsighteye\.com
+1691579472	cigien	brightsight[\W_]*+eye(?!\.com(?<=brightsighteye\.com))
