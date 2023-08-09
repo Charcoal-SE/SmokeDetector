@@ -51579,4 +51579,3 @@
 1691595890	cigien	usglobalshop\.com
 1691595974	cigien	usaglobalshop(?:@gmail\.com)?
 1691596000	cigien	usglobalshop(?!\.com)
-1691596553	cigien	7852
