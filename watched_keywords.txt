@@ -51570,7 +51570,6 @@
 1691426017	Jesse	(?-i:VrxLuu2K1YI)(?#YouTube)
 1691584492	Nisse Engström	simplilearn\.com
 1691589237	cigien	zcloud\.ws
-1691592460	Jesse	(?:NANA4D)(?:\.online)?
 1691592496	Jesse	(?:relaxingmusicsanctuary)(?#YouTube)
 1691593279	cigien	seosyrup\.co\.uk
 1691593306	cigien	seo[\W_]*+syrup(?!\.co\.uk(?<=seosyrup\.co\.uk))
