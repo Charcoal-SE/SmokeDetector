@@ -51558,3 +51558,4 @@
 1691579472	cigien	brightsight[\W_]*+eye(?!\.com(?<=brightsighteye\.com))
 1691579656	cigien	brontechnology\.com
 1691580388	cigien	seotoolspark\.com
+1691580413	cigien	seotoolspark(?!\.com)
