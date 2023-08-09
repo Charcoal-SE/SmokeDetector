@@ -51531,3 +51531,4 @@
 1691527157	Jeff Schaller	finentor\.com
 1691558061	Makyen	(?-i:revivoskintagremoval)(?#facebook.com)
 1691558084	Makyen	revivoskintagremover\.contently\.com
+1691558125	Makyen	revivo[\W_]*+skin[\W_]*+tag[\W_]*+remover(?!\.contently\.com(?<=revivoskintagremover\.contently\.com))(?!\.webflow\.io(?<=revivo-skin-tag-remover\.webflow\.io))
