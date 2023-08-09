@@ -51553,3 +51553,4 @@
 1691578783	cigien	13cabstaxis\.com\.au
 1691578949	cigien	omshreealuminium\.com
 1691578973	cigien	om[\W_]*+shree[\W_]*+aluminium(?!\.com(?<=omshreealuminium\.com))
+1691579188	cigien	halalcaters\.com
