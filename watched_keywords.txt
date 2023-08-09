@@ -51578,3 +51578,4 @@
 1691595024	cigien	acandheatrepairs\.com
 1691595890	cigien	usglobalshop\.com
 1691595974	cigien	usaglobalshop(?:@gmail\.com)?
+1691596000	cigien	usglobalshop(?!\.com)
