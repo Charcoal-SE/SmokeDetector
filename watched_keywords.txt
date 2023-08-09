@@ -51556,3 +51556,4 @@
 1691579188	cigien	halalcaters\.com
 1691579439	cigien	brightsighteye\.com
 1691579472	cigien	brightsight[\W_]*+eye(?!\.com(?<=brightsighteye\.com))
+1691579656	cigien	brontechnology\.com
