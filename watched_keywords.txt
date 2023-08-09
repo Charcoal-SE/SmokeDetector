@@ -51560,3 +51560,4 @@
 1691580388	cigien	seotoolspark\.com
 1691580413	cigien	seotoolspark(?!\.com)
 1691580448	cigien	loft[\W_]*+on[\W_]*+5th(?!\.com(?<=lofton5th\.com))
+1691580651	cigien	prestigeparkridge\.gen\.in
