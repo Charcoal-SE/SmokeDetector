@@ -51534,3 +51534,4 @@
 1691558125	Makyen	revivo[\W_]*+skin[\W_]*+tag[\W_]*+remover(?!\.contently\.com(?<=revivoskintagremover\.contently\.com))(?!\.webflow\.io(?<=revivo-skin-tag-remover\.webflow\.io))
 1691558134	Makyen	revivo-skin-tag-remover\.webflow\.io
 1691560202	cocomac	sinthan\.com
+1691560233	cocomac	healingbuddha\.in
