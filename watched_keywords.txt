@@ -51597,3 +51597,4 @@
 1691653781	cigien	bestrepairingcenter\.com
 1691656862	cigien	optimalmentor\.com
 1691656897	cigien	optimal[\W_]*+mentor(?!\.com(?<=optimalmentor\.com))
+1691656961	cigien	customstickersnow\.com
