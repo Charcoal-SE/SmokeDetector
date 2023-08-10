@@ -51641,3 +51641,4 @@
 1691682108	cigien	kindergartenworksheets\.net
 1691682960	Makyen	^(?-i:sajidali59848)$
 1691689282	Machavity	coloradogumcare\.com
+1691690393	Jesse	ohmyhandbags\.us(?:\.com)?
