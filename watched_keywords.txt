@@ -51635,3 +51635,4 @@
 1691678445	Makyen	papa[\W_]*+gumba
 1691678481	Makyen	mama[\W_]*+pinto
 1691678521	Makyen	haitian[\W_]*+voodoo
+1691678562	Makyen	world[\W_]*+of[\W_]*+african[\W_]*+witchcraft
