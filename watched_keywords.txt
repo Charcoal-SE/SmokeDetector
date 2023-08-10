@@ -51636,3 +51636,4 @@
 1691678481	Makyen	mama[\W_]*+pinto
 1691678521	Makyen	haitian[\W_]*+voodoo
 1691678562	Makyen	world[\W_]*+of[\W_]*+african[\W_]*+witchcraft
+1691680008	Makyen	(?:loan|cash)[\W_]*+(?:loan|cash)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
