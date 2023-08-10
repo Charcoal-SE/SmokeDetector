@@ -51646,3 +51646,4 @@
 1691694609	cigien	mt[\W_]*+manager[\W_]*+apk(?!\.pro(?<=mtmanagerapk\.pro))
 1691694618	cigien	mtmanagerapk\.pro
 1691695643	Jesse	checkbill\.pk
+1691697699	Jesse	stride\.marketing
