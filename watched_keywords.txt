@@ -51642,3 +51642,4 @@
 1691682960	Makyen	^(?-i:sajidali59848)$
 1691689282	Machavity	coloradogumcare\.com
 1691693751	cigien	colorado[\W_]*+gum[\W_]*+care(?!\.com(?<=coloradogumcare\.com))
+1691694030	Jesse	ohmyhandbags(?:\.us)?\.com
