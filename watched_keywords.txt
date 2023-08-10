@@ -51647,4 +51647,3 @@
 1691694618	cigien	mtmanagerapk\.pro
 1691695643	Jesse	checkbill\.pk
 1691697699	Jesse	stride\.marketing
-1691698510	Makyen	stride[\W_]*+marketing(?!<stride\.marketing)
