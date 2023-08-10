@@ -51643,3 +51643,4 @@
 1691689282	Machavity	coloradogumcare\.com
 1691693751	cigien	colorado[\W_]*+gum[\W_]*+care(?!\.com(?<=coloradogumcare\.com))
 1691694030	Jesse	ohmyhandbags(?:\.us)?\.com
+1691694609	cigien	mt[\W_]*+manager[\W_]*+apk(?!\.pro(?<=mtmanagerapk\.pro))
