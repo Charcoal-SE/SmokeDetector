@@ -51598,3 +51598,4 @@
 1691656862	cigien	optimalmentor\.com
 1691656897	cigien	optimal[\W_]*+mentor(?!\.com(?<=optimalmentor\.com))
 1691656961	cigien	customstickersnow\.com
+1691656988	cigien	astrovaidya\.com
