@@ -51649,3 +51649,4 @@
 1691697699	Jesse	stride\.marketing
 1691698577	Makyen	stride[\W_]*+marketing(?<!stride\.marketing)
 1691705439	Jeff Schaller	spurqlabs\.com
+1691705665	Jeff Schaller	androidpureapk\.com
