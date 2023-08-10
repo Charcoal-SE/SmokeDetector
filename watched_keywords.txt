@@ -51639,3 +51639,4 @@
 1691680008	Makyen	(?:loan|cash)[\W_]*+(?:loan|cash)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1691680142	Makyen	bestirishflowers\.com
 1691682108	cigien	kindergartenworksheets\.net
+1691682960	Makyen	^(?-i:sajidali59848)$
