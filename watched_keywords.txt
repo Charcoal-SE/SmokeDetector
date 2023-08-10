@@ -51633,3 +51633,4 @@
 1691675998	cigien	weareworking\.com
 1691677557	Makyen	d(?:octo)?r[\W_]*+mama[\W_]*+zola
 1691678445	Makyen	papa[\W_]*+gumba
+1691678481	Makyen	mama[\W_]*+pinto
