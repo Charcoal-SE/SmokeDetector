@@ -51613,3 +51613,4 @@
 1691668468	cigien	thops\.tv
 1691669135	cigien	jaysis\.ai
 1691669170	cigien	jaysis(?!\.ai)
+1691649991	Jesse	kanan\.co
