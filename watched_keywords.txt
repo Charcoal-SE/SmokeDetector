@@ -51668,3 +51668,4 @@
 1691741250	cigien	thenexthint\.com
 1691741273	cigien	tecuy\.com
 1691741313	cigien	myappranking\.com
+1691741338	cigien	myappranking(?!\.com)
