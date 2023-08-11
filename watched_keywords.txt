@@ -51651,3 +51651,4 @@
 1691705439	Jeff Schaller	spurqlabs\.com
 1691705665	Jeff Schaller	androidpureapk\.com
 1691712255	Jeff Schaller	speedyappliancerepairs\.ca
+1691713047	Makyen	speedy[\W_]*+appliance[\W_]*+repair(?!s\.ca(?<=speedyappliancerepairs\.ca))
