@@ -51653,3 +51653,4 @@
 1691712255	Jeff Schaller	speedyappliancerepairs\.ca
 1691713047	Makyen	speedy[\W_]*+appliance[\W_]*+repair(?!s\.ca(?<=speedyappliancerepairs\.ca))
 1691729759	Makyen	ionit2521(?:@gmail\.com)?
+1691729782	Makyen	empower[\W_]*+the[\W_]*+mind(?:[\W_]*+llc)?
