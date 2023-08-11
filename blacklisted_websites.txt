@@ -4684,7 +4684,6 @@ yoglica\.com
 atomatik\.com
 tu[\W_]*empresa[\W_]*aparezca[\W_]*en[\W_]*más[\W_]*de[\W_]*50[\W_]*periódicos[\W_]*digitales[\W_]*como[\W_]*noticia(?#abuse the website blacklist to put more weight on a persistent spammer)
 btwvisas\.com
-worldwebtool\.com
 developers-zone\.com
 batsmast\.com
 gsdcouncil\.org
