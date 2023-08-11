@@ -51699,3 +51699,4 @@
 1691771804	cigien	stablehaunt(?:@gmail\.com)?
 1691776181	Jeff Schaller	thetribunaltimes\.com
 1691791573	Jeff Schaller	outscraper\.com
+1691791825	Jeff Schaller	takhfifan\.com
