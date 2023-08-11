@@ -51680,3 +51680,4 @@
 1691749467	cigien	techimply(?!\.com)(?!\.sg)
 1691749500	cigien	techimply\.sg
 1691749524	cigien	xnxj\.xyz
+1691749553	cigien	chessbazaar\.com
