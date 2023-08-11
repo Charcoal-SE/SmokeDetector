@@ -51695,3 +51695,4 @@
 1691766505	cigien	ctex[\W_]*+coin(?!\.io(?<=ctexcoin\.io))
 1691767369	Mast	sothinkmedia\.com
 1691771486	Jeff Schaller	soonicorncapital\.com
+1691771750	cigien	kuwait[\W_]*+salmiya
