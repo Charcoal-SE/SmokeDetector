@@ -51693,3 +51693,4 @@
 1691766442	cigien	ctexscan\.com
 1691766469	cigien	ctex[\W_]*+scan(?!\.com(?<=ctexscan\.com))
 1691766505	cigien	ctex[\W_]*+coin(?!\.io(?<=ctexcoin\.io))
+1691767369	Mast	sothinkmedia\.com
