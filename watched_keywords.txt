@@ -51656,3 +51656,4 @@
 1691729782	Makyen	empower[\W_]*+the[\W_]*+mind(?:[\W_]*+llc)?
 1691736224	Nick	ipollo\.com
 1691735699	Nick	amenify\.com
+1691740708	cigien	avada\.io
