@@ -51698,3 +51698,4 @@
 1691771750	cigien	kuwait[\W_]*+salmiya
 1691771804	cigien	stablehaunt(?:@gmail\.com)?
 1691776181	Jeff Schaller	thetribunaltimes\.com
+1691791573	Jeff Schaller	outscraper\.com
