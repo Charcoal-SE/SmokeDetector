@@ -51691,3 +51691,4 @@
 1691764645	cigien	(?-i:vDaPLN)(?#fiverr)
 1691766408	cigien	ctexcoin\.io
 1691766442	cigien	ctexscan\.com
+1691766469	cigien	ctex[\W_]*+scan(?!\.com(?<=ctexscan\.com))
