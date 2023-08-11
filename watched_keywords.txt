@@ -51678,3 +51678,4 @@
 1691744050	cigien	bake[\W_]*+n[\W_]*+pack(?!\.free\.nf(?<=bakenpack\.free\.nf))
 1691749255	cigien	everestmechanical\.com
 1691749467	cigien	techimply(?!\.com)(?!\.sg)
+1691749500	cigien	techimply\.sg
