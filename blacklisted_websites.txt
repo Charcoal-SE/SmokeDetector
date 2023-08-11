@@ -5432,3 +5432,4 @@ cigatisolutions\.com
 whmcsglobalservices\.com
 dnaindia\.com/india
 healthfirstcenter\.in
+verzdesign\.com(?!/wp-content/)
