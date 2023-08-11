@@ -51664,3 +51664,4 @@
 1691741005	cigien	labelwarehouse\.com\.au
 1691741031	cigien	wpnext\.org
 1691741059	cigien	kiltoutfit\.co\.uk
+1691741138	cigien	your[\W_]*+money[\W_]*+wise
