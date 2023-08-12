@@ -20275,7 +20275,6 @@
 1592321927	user12986714	cryptoatmhacker\d*+
 1592329318	Machavity	mykfcexperience\.online
 1592321847	user12986714	^(?-i:Atm Card)$
-1592334067	Glorfindel	toevolution\.com(?<!autoevolution\.com)
 1592363299	Makyen	indy500channel\.com
 1592363319	Makyen	com\.gomin\.slideshowmaker\.videoeditor\.videomaker\.musicvideo
 1592363335	Makyen	(?-i:4SIY8\.png)

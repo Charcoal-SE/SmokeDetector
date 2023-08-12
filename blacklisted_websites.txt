@@ -5428,3 +5428,4 @@ whmcsglobalservices\.com
 dnaindia\.com/india
 healthfirstcenter\.in
 verzdesign\.com(?!/wp-content/)
+toevolution\.com(?<!autoevolution\.com)
