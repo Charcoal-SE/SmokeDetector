@@ -51710,3 +51710,4 @@
 1691856276	Jeff Schaller	eglobeits\.com
 1691856660	Jeff Schaller	laserfiche\.com
 1691856921	Jeff Schaller	hminnovance\.com
+1691858316	Makyen	crypto[\W_]*+tex
