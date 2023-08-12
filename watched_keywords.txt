@@ -51712,3 +51712,4 @@
 1691856921	Jeff Schaller	hminnovance\.com
 1691858316	Makyen	crypto[\W_]*+tex
 1691865319	Makyen	perujungletrips\.com
+1691865374	Ethan	capablemachining\.com
