@@ -51713,3 +51713,4 @@
 1691858316	Makyen	crypto[\W_]*+tex
 1691865319	Makyen	perujungletrips\.com
 1691865435	Makyen	fendi[\W_]*+togel
+1691866417	Ethan	nivesguru\.in
