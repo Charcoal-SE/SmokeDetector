@@ -51717,3 +51717,4 @@
 1691881838	Jeff Schaller	capcuttmodapk\.com
 1691896377	Makyen	credit[\W_]*+loan
 1691932444	Spevacus	livroebibliasgratis\.blogspot
+1691932476	Spevacus	vinalike\.vn
