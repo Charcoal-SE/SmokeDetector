@@ -2869,3 +2869,4 @@ jeffreyethicalhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 nba-finals-2023
 layanan[\W*+]deposit
 coco[\W_]*+cash[\W_]*+loan
+allcoco[\W_]*+cash[\W_]*+loan
