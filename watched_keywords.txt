@@ -51733,3 +51733,4 @@
 1691936038	Makyen	d(?:octo)?r[\W_]*+amina
 1691936064	Makyen	women[\W_]*+s[\W_]*+clinic
 1691946198	Spevacus	fondationetclimat\.org
+1691946222	Spevacus	m\.mamul\.am
