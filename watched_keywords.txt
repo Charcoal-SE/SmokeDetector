@@ -51730,3 +51730,4 @@
 1691935942	Makyen	wsoslot88(?!\.cc)
 1691935967	Makyen	future[\W_]*+rupee[\W_]*+loan
 1691936003	Makyen	abortion[\W_]*+clinic[\W_]*+in
+1691936038	Makyen	d(?:octo)?r[\W_]*+amina
