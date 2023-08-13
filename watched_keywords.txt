@@ -49108,7 +49108,7 @@
 1680108617	tripleee	findstorynow\.com
 1680112521	tripleee	techdirectarchive\.com
 1680120273	Makyen	live[\W_]*+slot
-1680121954	Jeff Schaller	ROTTGENRAPHAEL
+1680121954	Jeff Schaller	rottgenraphael(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1680129410	Makyen	sanfelipeseabee(?:@gmail\.com)?
 1680150697	tripleee	(?-i:^Rakesh Khan$)
 1680151031	tripleee	(?-i:^Laddu Kumar$)
