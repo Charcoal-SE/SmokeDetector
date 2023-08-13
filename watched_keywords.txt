@@ -51728,3 +51728,4 @@
 1691935870	Makyen	bonusrefkk
 1691935918	Makyen	wsoslot88\.cc
 1691935942	Makyen	wsoslot88(?!\.cc)
+1691935967	Makyen	future[\W_]*+rupee[\W_]*+loan
