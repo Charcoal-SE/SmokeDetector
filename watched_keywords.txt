@@ -51731,3 +51731,4 @@
 1691935967	Makyen	future[\W_]*+rupee[\W_]*+loan
 1691936003	Makyen	abortion[\W_]*+clinic[\W_]*+in
 1691936038	Makyen	d(?:octo)?r[\W_]*+amina
+1691936064	Makyen	women[\W_]*+s[\W_]*+clinic
