@@ -2265,7 +2265,6 @@ screenshotwindows\.net
 net-raft\.com
 starglamours\.com
 technewuk\.com
-atomicuschart\.com
 supplementtrade\.com
 j\W*+a\W*+n\W*+g\W*+f\W*+f(?=\b|컴|\W*+.{0,4}c\W*+o\W*+m)\W*+(?:컴|.{0,4}c\W*+o\W*+m)?(?#obfuscated jangff.com)
 amazonhealthstore\.com
