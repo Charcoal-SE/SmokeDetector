@@ -51780,3 +51780,4 @@
 1692008056	cigien	dialhumans\.com
 1692008158	cigien	prestigecarcare\.me
 1692008470	cigien	clx\.cloudevents\.ai
+1692008700	cigien	avogtal\.com
