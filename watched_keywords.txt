@@ -51807,3 +51807,4 @@
 1692049455	Jeff Schaller	\bmp3cold\.com
 1692049655	Jeff Schaller	seoclerks\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 1692049911	Jeff Schaller	hossamsoffar\.com
+1692050007	Jeff Schaller	total-qa\.com
