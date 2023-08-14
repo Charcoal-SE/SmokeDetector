@@ -51743,3 +51743,4 @@
 1691974837	Jeff Schaller	shuftipro\.com(?<!api\.shuftipro\.com)
 1691975102	Jeff Schaller	indiehackers\.com
 1691975417	Jeff Schaller	syncios\.com
+1691976088	Jeff Schaller	gestyy\.com
