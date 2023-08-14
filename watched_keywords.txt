@@ -51765,3 +51765,4 @@
 1692005810	cigien	franchise[\W_]*+club(?!\.in(?<=franchiseclub\.in))
 1692005914	cigien	ecosminers\.com
 1692006029	cigien	king-of-fried-rice\.com
+1692006064	cigien	pizzahut\.co\.in
