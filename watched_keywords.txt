@@ -51740,3 +51740,4 @@
 1691963426	Jeff Schaller	developerpartners\.com
 1691964246	Jeff Schaller	repairmsexcel\.com
 1691974127	Jeff Schaller	miniimagesvideos\.com
+1691974837	Jeff Schaller	shuftipro\.com(?<!api\.shuftipro\.com)
