@@ -2871,3 +2871,4 @@ layanan[\W*+]deposit
 coco[\W_]*+cash[\W_]*+loan
 allcoco[\W_]*+cash[\W_]*+loan
 pagli[\W_]*+credit[\W_]*+loan
+d(?:octo)?r[\W_]*+mahlangu
