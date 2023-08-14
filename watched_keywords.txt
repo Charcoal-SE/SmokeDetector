@@ -51763,3 +51763,4 @@
 1692004886	cigien	btocdatabase\.com
 1692005777	cigien	franchiseclub\.in
 1692005810	cigien	franchise[\W_]*+club(?!\.in(?<=franchiseclub\.in))
+1692005914	cigien	ecosminers\.com
