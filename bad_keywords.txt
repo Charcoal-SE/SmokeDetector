@@ -2872,3 +2872,4 @@ coco[\W_]*+cash[\W_]*+loan
 allcoco[\W_]*+cash[\W_]*+loan
 pagli[\W_]*+credit[\W_]*+loan
 d(?:octo)?r[\W_]*+mahlangu
+wizard[\W_]*+web[\W_]*+recovery(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|programmer)[\W_]*+(?:dot[\W_]*+)?(?:com|net))?

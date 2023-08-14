@@ -47328,7 +47328,6 @@
 1676031707	tripleee	d(?:octo)r?[\W_]*+ofure
 1676031762	tripleee	thekreativeacademy\.com
 1676032764	Makyen	drofureherbalhome(?:@gmail\.com)?
-1676033999	tripleee	wizard[\W_]*+web[\W_]*+recovery(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|programmer)[\W_]*+(?:dot[\W_]*+)?(?:com|net))?
 1676035796	tripleee	getservicenumber\.com
 1676039204	cigien	technicalguide\.net
 1676048388	cigien	dataanalysisexperts\.net
