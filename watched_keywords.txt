@@ -51758,3 +51758,4 @@
 1692003288	cigien	snetlabs\.com
 1692003364	cigien	shiftingbazar\.com
 1692003391	cigien	shifting[\W_]*+bazar(?!\.com(?<=shiftingbazar\.com))
+1692004205	cigien	(?-i:eYYp7akkywL6f5AS7)(?#google forms)
