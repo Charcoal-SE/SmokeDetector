@@ -324,7 +324,6 @@ edigitalplace\.com
 plagiarismchecker\.(?:us|com)
 excelanto\.com
 trylxwprot
-clazwork
 doorgrow\.com
 ibworldacademy
 pdfask\.com
