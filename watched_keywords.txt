@@ -51769,3 +51769,4 @@
 1692006811	cigien	edrafter\.in
 1692007239	cigien	mehraffarin\.com
 1692007265	cigien	chatgptfrench\.org
+1692007289	cigien	shabu-sai\.org
