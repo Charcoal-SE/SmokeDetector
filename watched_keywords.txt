@@ -51786,3 +51786,4 @@
 1692017294	cigien	bestbuydeals\.in
 1692017339	cigien	trainocate\.com\.my
 1692017367	cigien	brother[\W_]*+auto[\W_]*+parts(?!\.com(?<=brotherautoparts\.com))
+1692017509	cigien	kottanz(?!\.com)
