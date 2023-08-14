@@ -51788,3 +51788,4 @@
 1692017367	cigien	brother[\W_]*+auto[\W_]*+parts(?!\.com(?<=brotherautoparts\.com))
 1692017509	cigien	kottanz(?!\.com)
 1692021955	cigien	original\.newsbreak\.com
+1692028890	cigien	la-tienda-militar\.com
