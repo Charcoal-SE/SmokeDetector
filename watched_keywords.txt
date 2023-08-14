@@ -51805,3 +51805,4 @@
 1692048906	Jeff Schaller	excelpasswordunlocker\.com
 1692049223	Jeff Schaller	cbodha\.com
 1692049455	Jeff Schaller	\bmp3cold\.com
+1692049655	Jeff Schaller	seoclerks\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
