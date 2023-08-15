@@ -51823,3 +51823,4 @@
 1692091734	cigien	(?-i:psn-tmev-drv)(?#google meets)
 1692085698	Nick	pewax\.com\.cn
 1692091818	cigien	next[\W_]*+leather[\W_]*+jackets(?!\.com(?<=nextleatherjackets\.com))
+1692091920	cigien	taxopark-100\.ru
