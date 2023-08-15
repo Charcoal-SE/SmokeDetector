@@ -5395,3 +5395,4 @@ fbcandy\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 \bncyclopedia\.in(#? exclude innocent pokencyclopedia\.info)
 gomedii\.com(?<!blog\.gomedii\.com)
 svrtechnologies\.video(?!/aa273bc0-af1e-4543-a817-f0cd0dabaec8)
+track\.fiverr\.com/visit/\?bta=
