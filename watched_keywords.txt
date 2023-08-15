@@ -51813,3 +51813,4 @@
 1692061678	Jeff Schaller	smtpserver\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 1692062034	Jeff Schaller	codeleaks\.io
 1692062259	Jeff Schaller	fleekitsolutions\.com
+1692062474	Jeff Schaller	payhip\.com
