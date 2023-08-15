@@ -51848,3 +51848,4 @@
 1692131200	Makyen	cedarfinancial\.com
 1692131225	Makyen	cedar[\W_]*+financial(?!\.com(?<=cedarfinancial\.com))
 1692132857	Jeff Schaller	ostoto\.com
+1692133903	Jeff Schaller	bconnect\.chat
