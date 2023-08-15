@@ -51811,3 +51811,4 @@
 1692050472	Jeff Schaller	familytreemakersupport\.com
 1692060817	Jeff Schaller	rental24h\.com
 1692061678	Jeff Schaller	smtpserver\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
+1692062034	Jeff Schaller	codeleaks\.io
