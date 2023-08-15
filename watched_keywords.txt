@@ -49327,7 +49327,6 @@
 1680693480	tripleee	codetribesolutions\.com
 1680696360	tripleee	flyavionic\.com
 1680699537	tripleee	exchmarket\.net
-1680700648	Makyen	creative-[a-z\d%-]++(?:\.[a-z\d%-]++)*\.[a-z]{2,15}+(?<!\bcreative-tim\.com)
 1680715174	tripleee	digilearnings\.com
 1680715202	tripleee	digilearnings(?!\.com(?<=digilearnings\.com))
 1680715238	tripleee	ratnavali[\W_]*+arts
