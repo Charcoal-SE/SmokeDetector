@@ -51846,3 +51846,4 @@
 1692120660	Mast	anime\.vin
 1692129019	Thomas Ward	codeparttime\.com
 1692131200	Makyen	cedarfinancial\.com
+1692131225	Makyen	cedar[\W_]*+financial(?!\.com(?<=cedarfinancial\.com))
