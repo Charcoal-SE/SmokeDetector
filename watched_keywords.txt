@@ -51832,3 +51832,4 @@
 1692092635	cigien	newswatchindia(?!\.com)
 1692093265	cigien	genie-bot\.app
 1692094181	cigien	beginnersjob\.com
+1692094490	cigien	t2cit\.com
