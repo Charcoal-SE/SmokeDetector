@@ -34761,7 +34761,6 @@
 1641264164	cigien	treetrimmingbatonrouge\.com
 1641266165	cigien	rootkit[\W_]*+credit[\W_]*+specialist(?:@gmail\.com)?
 1641275326	tripleee	digitalflake\.com
-1641275694	tripleee	your-server\.de
 1641276109	tripleee	(?-i:^surbhi jain$)
 1641276391	tripleee	(?-i:cp5ctgsy)(?# geogebra.org sevenmentor spam)
 1641276871	tripleee	ispauto\.com
