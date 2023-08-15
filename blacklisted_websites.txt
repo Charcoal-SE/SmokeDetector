@@ -5389,3 +5389,4 @@ track\.fiverr\.com/visit/\?bta=
 touristvisaonline\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 whatstatus\.co(?!/manga/manga)
 manmachine\.in\b
+zolostays\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
