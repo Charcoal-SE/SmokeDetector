@@ -51825,3 +51825,4 @@
 1692091920	cigien	taxopark-100\.ru
 1692092238	cigien	creative-[a-z\d%-]++(?:\.[a-z\d%-]++)*\.[a-z]{2,15}+(?<!\bcreative-tim\.com)(?<!\bcreative-diagnostics\.com)
 1692092264	cigien	creative-diagnostics\.com
+1692092518	cigien	rechargeablegadgets\.com
