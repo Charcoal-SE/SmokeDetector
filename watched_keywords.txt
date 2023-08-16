@@ -51903,3 +51903,4 @@
 1692211257	Makyen	cobraxgummiesamazonreport\.contently\.com
 1692211281	Makyen	(?-i:kirtirathee)(?#medium.com)
 1692211320	Makyen	cobrax(?:[\W_]*+(?:gummies|amazon|rmx|pills|benefits|results|report|\d++|[\da-f]{5,}+)s?)*
+1692211089	Ian Campbell	gardreen\.com
