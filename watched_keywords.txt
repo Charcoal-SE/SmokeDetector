@@ -51864,3 +51864,4 @@
 1692172669	cigien	jainnarrowfabrics\.in
 1692165124	Dragonrage	memaronline\.com
 1692172884	Nick	prishhospital\.com
+1692173736	cigien	prish[\W_]*+hospital(?!\.com(?<=prishhospital\.com))
