@@ -51867,3 +51867,4 @@
 1692173736	cigien	prish[\W_]*+hospital(?!\.com(?<=prishhospital\.com))
 1692173760	cigien	healthmus\.com
 1692175175	cigien	rokokslot\.cpc-live\.com
+1692175201	cigien	blog\.betplays\.com
