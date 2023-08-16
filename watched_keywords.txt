@@ -51889,3 +51889,4 @@
 1692200087	Makyen	lucknow(?!/(?<=/lucknow/))(?![\W\w]*?<\/?code>)
 1692200554	Jeff Schaller	tubeshortsdownloader\.com
 1692200845	Jeff Schaller	desertdrynj\.com
+1692201961	Jeff Schaller	yuvajobs\.com
