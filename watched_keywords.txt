@@ -51894,3 +51894,4 @@
 1692203528	Makyen	leeultimatehacker(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1692205095	Jeff Schaller	weblineindia\.com
 1692205356	Jeff Schaller	globenewswire\.com/news-release/
+1692205551	Jeff Schaller	arysontechnologies\.com
