@@ -5381,3 +5381,4 @@ ventsmagazine\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in co
 drphilaabortionclinics-pills\.co\.za
 thinkpalm\.com(?<!@thinkpalm\.com)
 cubexsoft\.com(?!/mbox-to-gmail)
+elminuto247\.blogspot
