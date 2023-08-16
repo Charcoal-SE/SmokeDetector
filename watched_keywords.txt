@@ -51891,3 +51891,4 @@
 1692200845	Jeff Schaller	desertdrynj\.com
 1692201961	Jeff Schaller	yuvajobs\.com
 1692203132	Jeff Schaller	djbaap\.com
+1692203528	Makyen	leeultimatehacker(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
