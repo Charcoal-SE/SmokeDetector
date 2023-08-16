@@ -5383,3 +5383,4 @@ manmachine\.in\b
 zolostays\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 ventsmagazine\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 drphilaabortionclinics-pills\.co\.za
+thinkpalm\.com(?<!@thinkpalm\.com)
