@@ -51893,3 +51893,4 @@
 1692203132	Jeff Schaller	djbaap\.com
 1692203528	Makyen	leeultimatehacker(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1692205095	Jeff Schaller	weblineindia\.com
+1692205356	Jeff Schaller	globenewswire\.com/news-release/
