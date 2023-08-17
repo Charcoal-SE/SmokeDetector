@@ -5381,3 +5381,4 @@ businessleadsworld\.com
 net-raft\.com/Questions/
 webdesigninghouse\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 cpagrip\.com/show\.php
+samishleather\.com(?<!mart\.samishleather\.com)
