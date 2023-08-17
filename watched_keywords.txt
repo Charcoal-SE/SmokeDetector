@@ -51966,3 +51966,4 @@
 1692312164	Makyen	iptv[\W_]*+trends(?!\.tv(?<=iptvtrends\.tv))
 1692315687	Dragonrage	(?-i:cryptotool_setup)(?#t.me)
 1692314472	Nick	technoping\.net
+1692315872	Makyen	technoping(?!\.net)
