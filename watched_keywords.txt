@@ -51960,3 +51960,4 @@
 1692293013	Jeff Schaller	\b(?<![^\W_]-)cheezburger\.com(?![.-][^\W_])\b
 1692293417	Jeff Schaller	httpdownloader\.rf\.gd
 1692302784	Dragonrage	madibaherbalcenter[\W_]*+com
+1692307029	Nisse Engström	powerful-love-lotteryspells\.com
