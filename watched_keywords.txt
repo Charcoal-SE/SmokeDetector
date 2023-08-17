@@ -51958,3 +51958,4 @@
 1692292754	Makyen	kingtopnews\.com
 1692292777	Makyen	king[\W_]*+top[\W_]*+news(?!\.com(?<=kingtopnews\.com))
 1692293013	Jeff Schaller	\b(?<![^\W_]-)cheezburger\.com(?![.-][^\W_])\b
+1692293417	Jeff Schaller	httpdownloader\.rf\.gd
