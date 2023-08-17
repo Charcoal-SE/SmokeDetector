@@ -51956,3 +51956,4 @@
 1692287651	cigien	eu1\.hubs\.ly
 1692292645	Jeff Schaller	uufix\.com
 1692292754	Makyen	kingtopnews\.com
+1692292777	Makyen	king[\W_]*+top[\W_]*+news(?!\.com(?<=kingtopnews\.com))
