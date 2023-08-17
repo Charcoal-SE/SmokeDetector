@@ -51937,3 +51937,4 @@
 1692267941	Jeff Schaller	travelagentsdatabase\.com
 1692268040	cigien	tarrakki\.com
 1692268066	cigien	tarrakki(?!\.com)
+1692268092	cigien	serieflix\.live
