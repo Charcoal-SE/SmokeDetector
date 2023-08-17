@@ -51962,3 +51962,4 @@
 1692302784	Dragonrage	madibaherbalcenter[\W_]*+com
 1692307029	Nisse Engström	powerful-love-lotteryspells\.com
 1692311515	Ethan	iptvtrends\.tv
+1692312126	Makyen	profjamespsychic(?:@gmail\.com)?
