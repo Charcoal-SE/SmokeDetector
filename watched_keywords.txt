@@ -51440,7 +51440,6 @@
 1691426392	Jesse	treestandranger\.com
 1691428926	cigien	zorotoken\.io
 1691428970	cigien	(?-i:n4LB43G_MQk)(?#youtube)
-1691429024	cigien	preciseurl\.com
 1691424822	Jesse	khabaronline\.ir
 1691429869	cigien	flowie\.app
 1691429985	cigien	(?-i:kobirmia857)(?#fiverr)
