@@ -51946,3 +51946,4 @@
 1692271440	cigien	kartepekosku\.com\.tr
 1692273706	cigien	airjam\.co
 1692273733	cigien	thecinemainfo\.com
+1692273767	cigien	astcad\.com\.au
