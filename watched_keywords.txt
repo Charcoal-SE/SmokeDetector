@@ -52009,3 +52009,4 @@
 1692377731	Makyen	rajbet-movies\.in
 1692377766	Makyen	rajbet[\W_]*+movies(?!\.in(?<=rajbet-movies\.in))
 1692383002	Spevacus	bestsportsnutrition\.in
+1692390943	Jeff Schaller	renewandroid\.com
