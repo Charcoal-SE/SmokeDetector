@@ -51992,3 +51992,4 @@
 1692356523	cigien	aarit[\W_]*+academy(?!\.in(?<=aaritacademy\.in))
 1692356549	cigien	gmaxketojuice\.com
 1692355015	Dragonrage	differentwordsotherlanguages\.xyz
+1692353519	Dragonrage	keralaspiceswholesale\.com
