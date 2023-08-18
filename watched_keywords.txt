@@ -43675,7 +43675,6 @@
 1665470189	tripleee	aso[\W_]*+services[\W_]*+offer
 1665471259	tripleee	house[\W_]*+of[\W_]*+arfa(?!\.com(?<=houseofarfa\.com))
 1665471965	tripleee	digitalhub-clutch\.com
-1665472040	tripleee	indiaflowersgifts\.com
 1665472195	tripleee	stackupsolutions\.com
 1665472611	tripleee	dailyaccess\.xyz
 1665478625	tripleee	convertoro\.net
