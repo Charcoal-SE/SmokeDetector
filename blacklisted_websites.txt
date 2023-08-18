@@ -5380,3 +5380,4 @@ cpagrip\.com/show\.php
 samishleather\.com(?<!mart\.samishleather\.com)
 \bzee\.gl
 the-dots\.com/projects/
+acciojob\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
