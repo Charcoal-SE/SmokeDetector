@@ -51989,3 +51989,4 @@
 1692351585	Dragonrage	china-handbag-factory\.com
 1692351800	Dragonrage	repairmyphone\.today
 1692355997	Dragonrage	aaritacademy\.in
+1692356523	cigien	aarit[\W_]*+academy(?!\.in(?<=aaritacademy\.in))
