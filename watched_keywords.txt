@@ -51981,3 +51981,4 @@
 1692346224	cigien	(?:info@)?xpedients\.com
 1692347229	cigien	men(?:[\W_]*+s)?[\W_]*+suits
 1692347626	cigien	2sservices\.in
+1692347809	cigien	elite[\W_]*+chauffeurs?+(?!\.ie(?<=elitechauffeurs\.ie))
