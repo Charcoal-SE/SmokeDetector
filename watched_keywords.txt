@@ -51990,3 +51990,4 @@
 1692351800	Dragonrage	repairmyphone\.today
 1692355997	Dragonrage	aaritacademy\.in
 1692356523	cigien	aarit[\W_]*+academy(?!\.in(?<=aaritacademy\.in))
+1692356549	cigien	gmaxketojuice\.com
