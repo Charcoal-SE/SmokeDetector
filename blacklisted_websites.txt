@@ -5062,7 +5062,6 @@ ufc-fight-tv-streaming\.blogspot
 (?-i:mjc989x5)(?#tinyurl.com)
 allpackchina\.com
 vpnguider\.com
-indiaflower(?!gifts\.com)
 indiaflowergifts\.com
 realesaletter\.com
 pixiv\.net/novel[/?]show\.php\??id=19438940(?#abuse the blacklists a bit to get more weight on a persistent spammer)
