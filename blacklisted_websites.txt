@@ -5376,3 +5376,4 @@ acciojob\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 hex64\.net(?!/vmware)
 magentech\.com/
 indiaflowersgifts\.com
+cookpad\.com/(in|us|vn)/
