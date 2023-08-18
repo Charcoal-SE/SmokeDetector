@@ -3464,7 +3464,6 @@ jotform\.com/supplementreviews/
 iasiso-gulf\.com
 acemoneytransfer\.com
 myapklab\.com
-shrinkme\.io(?<!blog\.shrinkme\.io)(?!\/auth\/signup|\/build\/css\/dashboard\.min\.css|\/cdn-cgi\/(?:l\/email-protection|styles\/cf\.errors\.css)|\/modern_theme\/build\/css\/styles\.min\.css|\/pages\/(?:faq|payment-proof|privacy|terms)|\/payout-rates)
 6wresearch\.com
 whopills\.com
 eshopsync\.com
