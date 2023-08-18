@@ -51985,3 +51985,4 @@
 1692347969	cigien	certified[\W_]*+mtp(?!\.com(?<=certifiedmtp\.com))
 1692348297	cigien	neharani\.in
 1692348359	cigien	launchx\.netspresso\.ai
+1692348942	cigien	gilltexasguitars(?:@gmail\.com)?
