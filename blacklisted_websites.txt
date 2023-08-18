@@ -2611,7 +2611,6 @@ healthleans\.com
 webrence\.com
 fresherzones\.com
 \b(?<![^\W_]-)binfer\.com(?![.-][^\W_])\b
-compare-text-files\.com
 cutwin\.com
 dumpsit\.com
 times2deals\.com
