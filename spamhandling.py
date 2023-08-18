@@ -169,7 +169,8 @@ def handle_spam(post, reasons, why):
 def build_message(post, reasons):
     # This is the main report format. Username and user link are deliberately not separated as with title and post
     # link, because we may want to use "by a deleted user" rather than a username+link.
-    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}\u202D]({post_url}) by {user} on `{site}`"
+    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}\u202D]({post_url}) {staging}\
+                      by {user} on `{site}`"
 
     # Post URL, user URL, and site details are all easy - just data from the post object, transformed a bit
     # via datahandling.
@@ -211,10 +212,16 @@ def build_message(post, reasons):
         escaped_username = escape_format(parsing.escape_markdown(username))
         user = "[{}\u202D]({})".format(escaped_username, poster_url)
 
+    # If the post URL is a staging ground link, indicate that; ensure that the post is on Stack Overflow
+    if shortened_site == "stackoverflow.com" and "staging-ground" in post.post_url:
+        staging = "(Staging Ground) "
+    else:
+        staging = ""
+
     # Build the main body of the message. The next step is to insert the reason list while keeping the message
     # under 500 characters long.
     message = message_format.format(prefix_ms=prefix, reason_weight=reason_weight, title=sanitized_title,
-                                    post_url=post_url, user=user, site=shortened_site)
+                                    post_url=post_url, staging=staging, user=user, site=shortened_site)
 
     for reason_count in range(5, 0, -1):
         reason = ", ".join(reasons[:reason_count])
