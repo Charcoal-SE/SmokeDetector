@@ -52008,3 +52008,4 @@
 1692374590	Jeff Schaller	guideusermanual\.com
 1692377731	Makyen	rajbet-movies\.in
 1692377766	Makyen	rajbet[\W_]*+movies(?!\.in(?<=rajbet-movies\.in))
+1692383002	Spevacus	bestsportsnutrition\.in
