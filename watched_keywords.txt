@@ -52059,3 +52059,4 @@
 1692467734	cigien	oknnetwork\.com
 1692467779	cigien	1twi\.blogspot
 1692467883	cigien	fatcatapk\.com
+1692467955	cigien	exedecompiler\.com
