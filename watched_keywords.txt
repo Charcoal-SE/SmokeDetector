@@ -52045,3 +52045,4 @@
 1692455455	Makyen	upgro[\W_]*+digital(?!\.net(?<=upgrodigital\.net))
 1692458806	Jeff Schaller	prophotoshopexpert\.com
 1692458829	Jeff Schaller	pixelclippingpath\.com
+1692458920	Makyen	pixelclippingpath(?!\.com)
