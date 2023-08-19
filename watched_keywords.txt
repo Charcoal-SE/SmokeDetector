@@ -52054,3 +52054,4 @@
 1692467400	cigien	tiki[\W_]*+app(?!\.me(?<=tikiapp\.me))
 1692467423	cigien	ytvancedpro\.com
 1692467516	cigien	ruffiandtuffitechnologies\.com
+1692467566	cigien	(?-i:lkJZQ6V3J0k)(?#youtu.be)
