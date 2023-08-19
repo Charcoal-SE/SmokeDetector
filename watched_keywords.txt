@@ -52051,3 +52051,4 @@
 1692462075	cigien	carpetcleaningsolutions\.ie
 1692465562	cigien	yourtechmaster\.com
 1692467364	cigien	cannabissina(?!\.com)
+1692467400	cigien	tiki[\W_]*+app(?!\.me(?<=tikiapp\.me))
