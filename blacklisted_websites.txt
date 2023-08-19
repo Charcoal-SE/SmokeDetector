@@ -5370,3 +5370,4 @@ shrinkme\.io(?<!blog\.shrinkme\.io)(?!\/auth\/signup|\/build\/css\/dashboard\.mi
 onlinecheckwriter\.com(?!\))
 crazyforstudy\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 smsala\.com(?!/images/)
+mastersindia\.co(?!/invoice-ocr/)
