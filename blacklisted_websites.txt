@@ -5370,3 +5370,4 @@ cookpad\.com/(in|us|vn)/
 shrinkme\.io(?<!blog\.shrinkme\.io)(?!\/auth\/signup|\/build\/css\/dashboard\.min\.css|\/cdn-cgi\/(?:l\/email-protection|styles\/cf\.errors\.css)|\/modern_theme\/build\/css\/styles\.min\.css|\/pages\/(?:faq|payment-proof|privacy|terms)|\/payout-rates)(?!/\])
 onlinecheckwriter\.com(?!\))
 crazyforstudy\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
+smsala\.com(?!/images/)
