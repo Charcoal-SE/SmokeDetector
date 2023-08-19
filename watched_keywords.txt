@@ -52050,3 +52050,4 @@
 1692461591	cigien	vanremoval\.ie
 1692462075	cigien	carpetcleaningsolutions\.ie
 1692465562	cigien	yourtechmaster\.com
+1692467364	cigien	cannabissina(?!\.com)
