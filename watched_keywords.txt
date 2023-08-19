@@ -52048,3 +52048,4 @@
 1692458920	Makyen	pixelclippingpath(?!\.com)
 1692459655	Jeff Schaller	emorphis\.com
 1692461591	cigien	vanremoval\.ie
+1692462075	cigien	carpetcleaningsolutions\.ie
