@@ -52037,3 +52037,4 @@
 1692437260	Dragonrage	healthnewsmart24x7\.com
 1692442671	Dragonrage	dailycaptions\.in
 1692427706	Dragonrage	decision168\.com
+1692426965	Dragonrage	(?-i:decompileapk)(?#Domains)
