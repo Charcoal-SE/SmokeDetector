@@ -52061,3 +52061,4 @@
 1692467883	cigien	fatcatapk\.com
 1692467955	cigien	exedecompiler\.com
 1692468116	cigien	persianpishraneh\.com
+1692468140	cigien	persianpishraneh(?!\.com)
