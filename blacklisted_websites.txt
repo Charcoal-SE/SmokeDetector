@@ -4490,7 +4490,6 @@ addify\.store
 emrpms\.blogspot
 itztechy\.com
 purpletreesoftware\.com
-prophotoshopexpert\.com
 blogzet\.com
 outlookindia\.com
 techplanet\.today
