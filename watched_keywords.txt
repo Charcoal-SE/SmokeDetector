@@ -52064,3 +52064,4 @@
 1692468140	cigien	persianpishraneh(?!\.com)
 1692468184	cigien	waterproofing[\W_]*+contractors?
 1692468252	cigien	gestiones24(?!\.es)
+1692468362	cigien	theativador\.com
