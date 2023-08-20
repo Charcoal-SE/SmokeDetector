@@ -52081,3 +52081,4 @@
 1692543023	Makyen	UFC[\W_]*+\d{3}
 1692544171	Jeff Schaller	mag-manager\.com
 1692545031	Jeff Schaller	chatsim\.com
+1692546090	Jeff Schaller	idealshare\.net
