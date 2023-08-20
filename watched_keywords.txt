@@ -52084,3 +52084,4 @@
 1692546090	Jeff Schaller	idealshare\.net
 1692556560	cigien	coachingleaders\.co\.uk
 1692556774	cigien	bayeducation\.net
+1692557643	cigien	(?-i:khguruge)(?#medium)
