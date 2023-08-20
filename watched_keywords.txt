@@ -52071,3 +52071,4 @@
 1692476274	Ryan M	kruk-gmbh\.com
 1692483279	Makyen	illuminatiworldofpawer(?:@gmail\.com)?
 1692489700	Makyen	nwannedinambabrotherhoodoccult(?:@gmail\.com)?
+1692496322	Makyen	lisatheo225(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
