@@ -52079,3 +52079,4 @@
 1692521928	Dragonrage	apktoly\.com
 1692526415	Dragonrage	ucchire\.com
 1692543023	Makyen	UFC[\W_]*+\d{3}
+1692544171	Jeff Schaller	mag-manager\.com
