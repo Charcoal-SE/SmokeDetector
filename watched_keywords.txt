@@ -52099,3 +52099,4 @@
 1692614786	cigien	ripenapps(?!\.com)
 1692610356	Dragonrage	fullstackgurupune\.com
 1692610374	Dragonrage	flyingcolourtax\.com
+1692614922	cigien	(?-i:alphadrainers)(?#t.me)
