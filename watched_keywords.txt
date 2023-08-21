@@ -52093,3 +52093,4 @@
 1692575213	cigien	e-learns\.ir
 1692603019	cigien	ambica[\W_]*+airvent(?!\.com(?<=ambicaairvent\.com))
 1692599159	Dragonrage	psychicmartha\.com
+1692603124	cigien	psychic[\W_]*+martha(?!\.com(?<=psychicmartha\.com))
