@@ -52113,3 +52113,4 @@
 1692617528	cigien	businesswritingservice\.com
 1692621084	cigien	chiku[\W_]*+cab(?!\.com(?<=chikucab\.com))
 1692621952	cigien	gbnine\.com
+1692629433	cigien	mss[\W_]*+data[\W_]*+solutions(?!\.com\.au(?<=mssdatasolutions\.com\.au))
