@@ -52092,3 +52092,4 @@
 1692559558	cigien	funimateapk\.com
 1692575213	cigien	e-learns\.ir
 1692603019	cigien	ambica[\W_]*+airvent(?!\.com(?<=ambicaairvent\.com))
+1692599159	Dragonrage	psychicmartha\.com
