@@ -52110,3 +52110,4 @@
 1692617441	cigien	burungwalet\.id
 1692617476	cigien	burung[\W_]*+walet(?!\.id(?<=burungwalet\.id))
 1692617502	cigien	bankit\.in
+1692617528	cigien	businesswritingservice\.com
