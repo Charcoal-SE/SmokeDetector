@@ -52115,3 +52115,4 @@
 1692621952	cigien	gbnine\.com
 1692629433	cigien	mss[\W_]*+data[\W_]*+solutions(?!\.com\.au(?<=mssdatasolutions\.com\.au))
 1692629459	cigien	mssdatasolutions\.com\.au
+1692631520	cigien	wpbasicpro\.com
