@@ -52153,3 +52153,4 @@
 1692693184	cigien	toobit\.com
 1692693210	cigien	toobit(?!\.com)
 1692693267	cigien	pikashowapk\.wiki
+1692693349	cigien	fashion[\W_]*+tiy
