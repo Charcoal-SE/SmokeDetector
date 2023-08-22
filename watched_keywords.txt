@@ -52168,3 +52168,4 @@
 1692701121	cigien	letsreact\.org
 1692701171	cigien	thebitech\.com
 1692701213	cigien	ciente\.io
+1692701239	cigien	ciente(?!\.io)
