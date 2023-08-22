@@ -52165,3 +52165,4 @@
 1692695021	cigien	white[\W_]*+flower[\W_]*+developers(?!\.com(?<=whiteflowerdevelopers\.com))
 1692701014	cigien	yourtaxistand\.com
 1692701039	cigien	seasonzindia\.com
+1692701121	cigien	letsreact\.org
