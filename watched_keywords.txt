@@ -52179,3 +52179,4 @@
 1692709887	cigien	regal[\W_]*tours[\W_]*(?:uae)?(?!\.com)
 1692709963	cigien	Web[\W_]*+of[\W_]*+Science[\W_]*+journal[\W_]*+index(?:ing)?
 1692712544	cigien	shamsipoultryequipments\.com
+1692712568	cigien	freegovernmenttablet\.net
