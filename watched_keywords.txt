@@ -52144,3 +52144,4 @@
 1692692061	cigien	takeo\.ai
 1692692123	cigien	emblix[\W_]*+academy(?!\.com(?<=emblixacademy\.com))
 1692692388	cigien	resultsnetworks\.com
+1692692751	cigien	tigersteethblades\.com
