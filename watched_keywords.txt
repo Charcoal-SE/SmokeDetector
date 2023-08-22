@@ -52176,3 +52176,4 @@
 1692707173	Jeff Schaller	jacketsmob\.com
 1692708078	cigien	jacketbase\.com
 1692708118	cigien	jacket[\W_]*+base(?!\.com(?<=jacketbase\.com))
+1692708331	cigien	hackwest(?:[\W_]*+(?:at[\W_]*+)?writeme[\W_]*+(?:dot[\W_]*+)?com)?
