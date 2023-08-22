@@ -52135,3 +52135,4 @@
 1692690441	Nick	ulezcheck\.com
 1692686308	Dragonrage	rtctek\.com
 1692690580	cigien	magickeylocksmithinc\.com
+1692690739	cigien	8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
