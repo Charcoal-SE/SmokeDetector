@@ -52139,3 +52139,4 @@
 1692690767	cigien	8xbet\.soccer
 1692686009	Dragonrage	acharya\.uz
 1692691031	cigien	monaguillo\.org
+1692691081	cigien	hotel[\W_]*+narain[\W_]*+niwas(?!\.com(?<=hotelnarainniwas\.com))
