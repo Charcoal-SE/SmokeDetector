@@ -5368,3 +5368,4 @@ smsala\.com(?!/images/)
 mastersindia\.co(?!/invoice-ocr/)
 adfoc\.us/x?\d+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code; pay per click link shortener. Always spam)
 lamadava\.com
+8xbet\.soccer

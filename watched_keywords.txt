@@ -52136,7 +52136,6 @@
 1692686308	Dragonrage	rtctek\.com
 1692690580	cigien	magickeylocksmithinc\.com
 1692690739	cigien	8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
-1692690767	cigien	8xbet\.soccer
 1692686009	Dragonrage	acharya\.uz
 1692691031	cigien	monaguillo\.org
 1692691081	cigien	hotel[\W_]*+narain[\W_]*+niwas(?!\.com(?<=hotelnarainniwas\.com))
