@@ -52146,3 +52146,4 @@
 1692692388	cigien	resultsnetworks\.com
 1692692751	cigien	tigersteethblades\.com
 1692692997	cigien	getmax\.ae
+1692693021	cigien	physiotalkofficial\.com
