@@ -52169,3 +52169,4 @@
 1692701213	cigien	ciente\.io
 1692701239	cigien	ciente(?!\.io)
 1692701409	cigien	cleffex\.com
+1692701445	cigien	cleffex(?!\.com)
