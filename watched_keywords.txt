@@ -52163,3 +52163,4 @@
 1692694090	Dragonrage	findme\.directory
 1692694202	Dragonrage	whiteflowerdevelopers\.com
 1692695021	cigien	white[\W_]*+flower[\W_]*+developers(?!\.com(?<=whiteflowerdevelopers\.com))
+1692701014	cigien	yourtaxistand\.com
