@@ -51594,7 +51594,6 @@
 1691665176	cigien	vgrofficial\.in
 1691665292	cigien	durolenz\.com\.au
 1691665330	cigien	durolenz(?!\.com\.au)
-1691666085	cigien	8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)
 1691666151	cigien	8xbet\.poker
 1691666283	cigien	my[\W_]*+taste[\W_]*+of[\W_]*+india
 1691666911	cigien	fakrocatimerdivenleri\.com
