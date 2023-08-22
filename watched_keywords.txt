@@ -52180,3 +52180,4 @@
 1692709963	cigien	Web[\W_]*+of[\W_]*+Science[\W_]*+journal[\W_]*+index(?:ing)?
 1692712544	cigien	shamsipoultryequipments\.com
 1692712568	cigien	freegovernmenttablet\.net
+1692714872	cigien	serhant\.com
