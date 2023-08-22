@@ -52142,3 +52142,4 @@
 1692691081	cigien	hotel[\W_]*+narain[\W_]*+niwas(?!\.com(?<=hotelnarainniwas\.com))
 1692691795	Nick	credistore\.id
 1692692061	cigien	takeo\.ai
+1692692123	cigien	emblix[\W_]*+academy(?!\.com(?<=emblixacademy\.com))
