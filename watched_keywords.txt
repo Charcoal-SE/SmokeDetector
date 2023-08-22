@@ -52156,3 +52156,4 @@
 1692693349	cigien	fashion[\W_]*+tiy
 1692693377	cigien	pikashowhd\.com
 1692693670	cigien	bajajfinservhealth\.in
+1692693711	cigien	adoc-tm\.com
