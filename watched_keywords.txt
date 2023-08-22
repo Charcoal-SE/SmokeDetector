@@ -52138,3 +52138,4 @@
 1692690739	cigien	8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
 1692690767	cigien	8xbet\.soccer
 1692686009	Dragonrage	acharya\.uz
+1692691031	cigien	monaguillo\.org
