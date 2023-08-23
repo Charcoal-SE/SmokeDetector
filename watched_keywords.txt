@@ -52232,3 +52232,4 @@
 1692801908	Jeff Schaller	luminati\.io\S*affiliate=
 1692811997	cigien	s\.spr\.ly
 1692813448	cigien	vipdhowcruiseuae\.com
+1692813796	Makyen	(?-i:MI6)\b(?=.{0,100}?conspi)
