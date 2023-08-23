@@ -5357,3 +5357,4 @@ resumerpro\.com
 pubhtml5\.com(?!/yrlc/pmrr/)
 merabheja\.com
 \b(?<![^\W_]-)intl\.aliyun\.com(?![.-][^\W_])\b(?!/zh/support/developer-resources)
+live24u\.com(?<!jaydeep@live24u\.com)
