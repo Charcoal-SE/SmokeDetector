@@ -3962,7 +3962,6 @@
 1531390214	doppelgreener	uklaptopcharger\.co
 1531391150	doppelgreener	pckart\.co
 1531391542	doppelgreener	learn\Wtube\Wby\Wtechpassion
-1531407282	doppelgreener	\w*menshealth(?!time\.com(?<=menshealthtime\.com))(?!claimed\.com(?<=womenshealthclaimed\.com))(?!reviews\.org(?<=menshealthreviews\.org))(?!fact\.com(?<=menshealthfact\.com))(?!mag\.com(?<=\bwomenshealthmag\.com))(?!\.gov(?<=womenshealth\.gov))\w*
 1531406651	bertieb	poweruser\.blog
 1531460171	Makyen	R6Ko3OCrO9r2BKuzbCHYIw
 1531460184	Makyen	v=_pje3XhRVbQ
