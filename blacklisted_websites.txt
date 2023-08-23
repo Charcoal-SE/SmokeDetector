@@ -4242,7 +4242,6 @@ dreamworldtravel\.co\.uk
 voxeljs2\.rf\.gd
 aims-education\.com
 en\.uwa4d\.com
-proxycrawl\.com
 laptoprepair\.services
 domainracer\.info
 dedicatedcore\.com
