@@ -52218,3 +52218,4 @@
 1692790977	cigien	astrologeronline\.co\.in
 1692791005	cigien	ubuildhome\.com
 1692791060	cigien	hedkey[\W_]*+india(?!\.com(?<=hedkeyindia\.com))
+1692791246	cigien	propertyadviser\.in
