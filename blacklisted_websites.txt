@@ -5365,3 +5365,4 @@ adfoc\.us/x?\d+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code;
 lamadava\.com
 8xbet\.soccer
 shoviv\.com(?!/blog/factors-behind-white-space-in-exchange-database)
+getemailservices\.com/
