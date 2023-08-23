@@ -5364,3 +5364,4 @@ shoviv\.com(?!/blog/factors-behind-white-space-in-exchange-database)
 getemailservices\.com/
 talkforweb\.com\.au(?!\.mp4)
 addify\.store(?!/product/woocommerce-country-restrictions)
+zigya\.com(?!/study/book)
