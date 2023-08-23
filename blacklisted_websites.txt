@@ -767,7 +767,6 @@ kerneltraining\.com
 magento-attribute\.com
 hitslimbody\.com
 academicwriter\.co\.uk
-\b(?<![^\W_]-)intl\.aliyun\.com(?![.-][^\W_])\b
 brainfireadvice\.com
 gonetech\.net
 seekzed\.com
