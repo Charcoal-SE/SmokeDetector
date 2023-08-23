@@ -52230,3 +52230,4 @@
 1692800144	Jeff Schaller	orderdmtonline\.com
 1692800418	cigien	vonuc\.com
 1692801908	Jeff Schaller	luminati\.io\S*affiliate=
+1692811997	cigien	s\.spr\.ly
