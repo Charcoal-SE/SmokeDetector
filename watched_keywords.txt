@@ -52188,3 +52188,4 @@
 1692755549	Jeff Schaller	experttexting\.com
 1692757081	Jeff Schaller	proxycrawl\.com
 1692758132	Jeff Schaller	resumerpro\.com
+1692758537	Ryan M	resumer[\W_]*+pro(?!\.com(?<=resumerpro\.com))
