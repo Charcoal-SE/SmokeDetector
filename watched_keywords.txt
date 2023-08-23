@@ -52184,3 +52184,4 @@
 1692721655	cigien	privateproxy\.me
 1692727688	Makyen	onedesignsstudio\.com
 1692727715	Makyen	one[\W_]*+designs[\W_]*+studio(?!\.com(?<=onedesignsstudio\.com))
+1692754793	Jeff Schaller	zetpdf\.com
