@@ -52225,3 +52225,4 @@
 1692793407	cigien	expoinfotech\.com
 1692798506	Jeff Schaller	subhasis-samanta\.blogspot
 1692798668	cigien	lamadava(?!\.com)
+1692799072	Jeff Schaller	errorsdoc\.com
