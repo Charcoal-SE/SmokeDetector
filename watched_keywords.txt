@@ -52198,3 +52198,4 @@
 1692784517	Dragonrage	simpliaxis\.com
 1692784345	Dragonrage	myparfait\.com
 1692785606	Dragonrage	igetbulkbuy\.com
+1692786019	cigien	\w*menshealth(?!time\.com(?<=menshealthtime\.com))(?!claimed\.com(?<=womenshealthclaimed\.com))(?!reviews\.org(?<=menshealthreviews\.org))(?!fact\.com(?<=menshealthfact\.com))(?!mag\.com(?<=\bwomenshealthmag\.com))(?!care\.com(?<=promenshealthcare\.com))\w*
