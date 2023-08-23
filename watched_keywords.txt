@@ -52219,3 +52219,4 @@
 1692791005	cigien	ubuildhome\.com
 1692791060	cigien	hedkey[\W_]*+india(?!\.com(?<=hedkeyindia\.com))
 1692791246	cigien	propertyadviser\.in
+1692791802	cigien	parsebin\.com
