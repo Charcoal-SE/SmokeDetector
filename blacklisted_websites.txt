@@ -5357,3 +5357,4 @@ zigya\.com(?!/study/book)
 resumerpro\.com
 pubhtml5\.com(?!/yrlc/pmrr/)
 merabheja\.com
+\b(?<![^\W_]-)intl\.aliyun\.com(?![.-][^\W_])\b(?!/zh/support/developer-resources)
