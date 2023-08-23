@@ -4805,7 +4805,6 @@ beacons\.ai
 thetopbestblogger\.com
 travelmykashmir\.com
 magenest\.com(?<!store\.magenest\.com)
-resumerpro\.com
 visartech\.com
 metana\.io
 canli\.in
