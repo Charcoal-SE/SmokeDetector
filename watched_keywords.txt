@@ -52211,3 +52211,4 @@
 1692786612	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))
 1692786911	cigien	iamvector\.com
 1692786934	cigien	buzzsocialcrew\.com
+1692786995	cigien	bapehoodie\.live
