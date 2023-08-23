@@ -52220,3 +52220,4 @@
 1692791060	cigien	hedkey[\W_]*+india(?!\.com(?<=hedkeyindia\.com))
 1692791246	cigien	propertyadviser\.in
 1692791802	cigien	parsebin\.com
+1692791829	cigien	aattitudecaptions\.com
