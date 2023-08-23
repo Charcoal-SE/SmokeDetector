@@ -52186,3 +52186,4 @@
 1692727715	Makyen	one[\W_]*+designs[\W_]*+studio(?!\.com(?<=onedesignsstudio\.com))
 1692754793	Jeff Schaller	zetpdf\.com
 1692755095	Jeff Schaller	androidcoding\.in
+1692755549	Jeff Schaller	experttexting\.com
