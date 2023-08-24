@@ -52263,3 +52263,4 @@
 1692869223	cigien	amanitamuscariastore\.com
 1692869288	cigien	amanita[\W_]*+muscaria(?!store\.com)
 1692869483	cigien	glatt[\W_]*+pharma(?:ceuticals)?
+1692871591	Dragonrage	masrgedida\.com
