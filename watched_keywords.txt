@@ -52250,3 +52250,4 @@
 1692864198	Dragonrage	alhadaftech\.com
 1692864919	cigien	al[\W_]*+hadaf[\W_]*+tech(?!\.com(?<=alhadaftech\.com))
 1692864712	Dragonrage	elegantshowers\.co\.uk
+1692864980	cigien	hindieguide\.com
