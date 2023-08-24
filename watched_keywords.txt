@@ -52273,3 +52273,4 @@
 1692878316	cigien	qurantutorsonline\.com
 1692879667	cigien	datalifeae\.com
 1692879695	cigien	escuela\.sharingaway\.com
+1692879852	cigien	(?-i:gqwO1)(?#shorturl)
