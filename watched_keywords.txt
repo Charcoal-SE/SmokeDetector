@@ -52272,3 +52272,4 @@
 1692878277	cigien	yoga[\W_]*+chaitanya(?!\.com(?<=yogachaitanya\.com))
 1692878316	cigien	qurantutorsonline\.com
 1692879667	cigien	datalifeae\.com
+1692879695	cigien	escuela\.sharingaway\.com
