@@ -52282,3 +52282,4 @@
 1692886887	cigien	movieswatch\.pw
 1692886920	cigien	myflixer\.ist
 1692887246	Mast	fincover\.com
+1692888326	Makyen	fincover(?!\.com(?<=fincover\.com))(?:[\W_]*+(?:financial|service)s?)*
