@@ -52265,3 +52265,4 @@
 1692869483	cigien	glatt[\W_]*+pharma(?:ceuticals)?
 1692871591	Dragonrage	masrgedida\.com
 1692872027	Dragonrage	motabet\.com
+1692873347	Dragonrage	delmarpharma\.com
