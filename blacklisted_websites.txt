@@ -5357,3 +5357,4 @@ astera\.com(?!/projects/dwbuilder)
 raybiztech\.com(?<!sadasivaiah\.vasa@raybiztech\.com)(?<!demo17kentico8\.raybiztech\.com)
 bestadvisor\.com(?!/macbook-keyboard-covers)
 sourceved\.com
+fincover\.com
