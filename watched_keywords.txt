@@ -52257,3 +52257,4 @@
 1692866654	Ryan M	veswin\.com
 1692866761	Ryan M	turing\.com(?!\.br)
 1692866857	Ryan M	tech-prastish\.com
+1692867098	Ryan M	minolike\.net
