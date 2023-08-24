@@ -52270,3 +52270,4 @@
 1692875720	cigien	huluwatchparty\.net
 1692877672	cigien	ninjareports\.com
 1692878240	cigien	yogachaitanya\.com
+1692878277	cigien	yoga[\W_]*+chaitanya(?!\.com(?<=yogachaitanya\.com))
