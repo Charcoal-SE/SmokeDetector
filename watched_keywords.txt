@@ -52261,3 +52261,4 @@
 1692867474	cigien	cydiaimpactor\.web\.app
 1692868414	cigien	malaysiacleanerservices\.com
 1692869141	cigien	glatt[\W_]*+pharma
+1692869223	cigien	amanitamuscariastore\.com
