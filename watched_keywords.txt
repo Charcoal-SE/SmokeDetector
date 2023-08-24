@@ -52248,3 +52248,4 @@
 1692863995	Ryan M	yourhomesoldguaranteed\.com
 1692864811	cigien	ourwallet\.io
 1692864198	Dragonrage	alhadaftech\.com
+1692864919	cigien	al[\W_]*+hadaf[\W_]*+tech(?!\.com(?<=alhadaftech\.com))
