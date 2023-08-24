@@ -50740,7 +50740,6 @@
 1684409769	Jeff Schaller	(?-i:PXYA4w)(?# fiverr)
 1684411699	Jeff Schaller	925silvershine\.com
 1684414837	Jeff Schaller	lookatfares\.co\.uk
-1684417150	Jeff Schaller	sourceved\.com
 1684418254	Makyen	on?linehack\d*(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1684418843	Makyen	cracksilo\.org
 1684418875	Makyen	cracksilo(?!\.org)
