@@ -52262,3 +52262,4 @@
 1692868414	cigien	malaysiacleanerservices\.com
 1692869141	cigien	glatt[\W_]*+pharma
 1692869223	cigien	amanitamuscariastore\.com
+1692869288	cigien	amanita[\W_]*+muscaria(?!store\.com)
