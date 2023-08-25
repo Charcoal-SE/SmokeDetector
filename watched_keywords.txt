@@ -52296,3 +52296,4 @@
 1692917776	cigien	(?:platform|web)0823s
 1692861769	Dragonrage	greeny-slim-erfahrungen\.webflow\.io
 1692924308	Dragonrage	tools\.smithii\.io
+1692928322	Spevacus	clippingpath\.ai
