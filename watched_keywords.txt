@@ -52310,3 +52310,4 @@
 1692951318	cigien	afsarebrahim\.com
 1692951667	cigien	gumilacmama\.com
 1692951706	cigien	gumilac[\W_]*+mama(?!\.com(?<=gumilacmama\.com))
+1692951734	cigien	itmtrav\.com
