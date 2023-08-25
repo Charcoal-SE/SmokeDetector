@@ -52325,3 +52325,4 @@
 1692965194	Jeff Schaller	theracalmcbdgummies\.wixsite\.com
 1692965853	cigien	csiknowledgehub\.in
 1692969490	cigien	ouraco\.com
+1692969518	cigien	ouraco(?!\.com)
