@@ -52308,3 +52308,4 @@
 1692950882	cigien	d(?:octo)?r[\W_]*+zainabu
 1692951279	cigien	grandsquare\.me
 1692951318	cigien	afsarebrahim\.com
+1692951667	cigien	gumilacmama\.com
