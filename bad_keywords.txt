@@ -2877,3 +2877,4 @@ pikashow
 reliablehacker\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?(?#seen: reliablehacker06)
 resumer[\W_]*+pro(?!\.com(?<=resumerpro\.com))
 fincover(?!\.com(?<=fincover\.com))(?:[\W_]*+(?:financial|service)s?)*
+fendi[\W_]*+togel
