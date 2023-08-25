@@ -5358,3 +5358,4 @@ raybiztech\.com(?<!sadasivaiah\.vasa@raybiztech\.com)(?<!demo17kentico8\.raybizt
 bestadvisor\.com(?!/macbook-keyboard-covers)
 sourceved\.com
 fincover\.com
+torocloud\.com
