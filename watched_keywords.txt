@@ -52326,3 +52326,4 @@
 1692969490	cigien	ouraco\.com
 1692969518	cigien	ouraco(?!\.com)
 1692978908	Mast	theflowersdelivery\.com
+1692990332	Jeff Schaller	qiratquranonline\.com
