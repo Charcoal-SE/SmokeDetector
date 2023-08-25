@@ -52312,3 +52312,4 @@
 1692951706	cigien	gumilac[\W_]*+mama(?!\.com(?<=gumilacmama\.com))
 1692951734	cigien	itmtrav\.com
 1692951767	cigien	houseofhazards\.com
+1692951949	cigien	(?-i:3qqhJXx)(?#bit.ly)
