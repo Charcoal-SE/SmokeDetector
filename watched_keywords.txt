@@ -52354,3 +52354,4 @@
 1693130975	cigien	holidaywolf\.com
 1693131007	cigien	mzcurioso\.com
 1693131030	cigien	social[\W_]*+admire(?!\.com(?<=socialadmire\.com))
+1693131627	cigien	bulkpvashop\.com
