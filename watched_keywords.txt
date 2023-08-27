@@ -52353,3 +52353,4 @@
 1693130904	cigien	downloader2x\.com
 1693130975	cigien	holidaywolf\.com
 1693131007	cigien	mzcurioso\.com
+1693131030	cigien	social[\W_]*+admire(?!\.com(?<=socialadmire\.com))
