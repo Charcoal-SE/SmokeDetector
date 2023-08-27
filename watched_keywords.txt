@@ -52360,3 +52360,4 @@
 1693132026	cigien	uni[\W_]*+square[\W_]*+concepts(?!\.com(?<=unisquareconcepts\.com))
 1693132203	cigien	apkcroc\.com
 1693132598	cigien	satoshicountry\.org
+1693132662	cigien	novo\.academiadoflutter\.com\.br
