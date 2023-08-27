@@ -52345,3 +52345,4 @@
 1693072046	Mast	khelraja\.com
 1693090436	Makyen	great[\W_]*+idusaku[\W_]*+brotherhood
 1693090550	Makyen	27681786737(?#wa.me)
+1693094487	Jeff Schaller	radiantripples\.wordpress\.com
