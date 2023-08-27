@@ -52363,3 +52363,4 @@
 1693132662	cigien	novo\.academiadoflutter\.com\.br
 1693132925	cigien	hockeyworlds\.com
 1693132994	cigien	linkedai\.co
+1693152368	Makyen	alat[\W_]*+bantu[\W_]*+sex
