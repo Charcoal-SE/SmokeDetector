@@ -52364,3 +52364,4 @@
 1693132925	cigien	hockeyworlds\.com
 1693132994	cigien	linkedai\.co
 1693152368	Makyen	alat[\W_]*+bantu[\W_]*+sex
+1693157412	Jeff Schaller	theworldcove\.com
