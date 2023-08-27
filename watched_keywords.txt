@@ -52355,3 +52355,4 @@
 1693131007	cigien	mzcurioso\.com
 1693131030	cigien	social[\W_]*+admire(?!\.com(?<=socialadmire\.com))
 1693131627	cigien	bulkpvashop\.com
+1693131813	cigien	nhakhoadelia\.vn
