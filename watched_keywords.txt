@@ -52358,3 +52358,4 @@
 1693131813	cigien	nhakhoadelia\.vn
 1693131849	cigien	bestlawfirmae\.com
 1693132026	cigien	uni[\W_]*+square[\W_]*+concepts(?!\.com(?<=unisquareconcepts\.com))
+1693132203	cigien	apkcroc\.com
