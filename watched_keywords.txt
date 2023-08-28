@@ -52383,3 +52383,4 @@
 1693208828	cigien	pny[\W_]*+trainings(?!\.com(?<=pnytrainings\.com))
 1693209275	cigien	buypsilocypsychedeliconline\.com
 1693216478	Jeff Schaller	whmcssmarters\.com
+1693216655	Jeff Schaller	seku\.ac\.ke
