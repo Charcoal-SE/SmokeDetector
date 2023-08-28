@@ -52414,3 +52414,4 @@
 1693245192	Makyen	allprogramsinc\.blogspot
 1693245519	Makyen	bestb2kresearch\.com
 1693250389	Dragonrage	strongspellcaster\.us\.com
+1693252831	Makyen	thai[\W_]*+elixir(?:[\W_]*+(?:male|enhancement|review|\d++|[\da-f]{5,}+)s?)*
