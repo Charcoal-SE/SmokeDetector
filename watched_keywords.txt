@@ -52389,3 +52389,4 @@
 1693222248	cigien	support_alpacas
 1693222425	cigien	codespindle\.com
 1693222469	cigien	valvepress\.com
+1693222504	cigien	whmcs[\W_]*+smarters(?!\.com(?<=whmcssmarters\.com))
