@@ -52405,3 +52405,4 @@
 1693228726	cigien	yesornowheel\.org
 1693232356	Spevacus	rizetours\.com
 1693233398	Makyen	innotech(?!\.pt)
+1693233423	Makyen	innotech\.pt
