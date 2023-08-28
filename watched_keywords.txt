@@ -52380,3 +52380,4 @@
 1693207237	Dragonrage	landscapewaco\.com
 1693208740	cigien	mp3sixer\.com
 1693208807	cigien	mehandipursawamani\.com
+1693208828	cigien	pny[\W_]*+trainings(?!\.com(?<=pnytrainings\.com))
