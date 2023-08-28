@@ -52398,3 +52398,4 @@
 1693225604	Nick	alignbooks\.com
 1693226066	cigien	(?-i:44xDL8S)(?#bit.ly)
 1693226224	cigien	unifiedinfotech\.net
+1693226590	Nick	thelogopalace\.com
