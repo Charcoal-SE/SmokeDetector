@@ -52390,3 +52390,4 @@
 1693222425	cigien	codespindle\.com
 1693222469	cigien	valvepress\.com
 1693222504	cigien	whmcs[\W_]*+smarters(?!\.com(?<=whmcssmarters\.com))
+1693211389	Nick	e-tuitions\.com
