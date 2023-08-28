@@ -2878,3 +2878,4 @@ reliablehacker\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?(?#seen
 resumer[\W_]*+pro(?!\.com(?<=resumerpro\.com))
 fincover(?!\.com(?<=fincover\.com))(?:[\W_]*+(?:financial|service)s?)*
 fendi[\W_]*+togel
+8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
