@@ -52375,3 +52375,4 @@
 1693196655	Dragonrage	providentecopoliten\.net\.in
 1693197581	Makyen	provident[\W_]*+ecopoliten(?!\.net\.in(?<=providentecopoliten\.net\.in))
 1693198937	Dragonrage	diusarxhealthcare\.com
+1693199264	Makyen	medlypharmacareusa\.com
