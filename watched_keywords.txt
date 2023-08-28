@@ -52406,3 +52406,4 @@
 1693232356	Spevacus	rizetours\.com
 1693233398	Makyen	innotech(?!\.pt)
 1693233423	Makyen	innotech\.pt
+1693235509	cigien	chatgptjapan\.org
