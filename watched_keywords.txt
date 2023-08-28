@@ -52382,3 +52382,4 @@
 1693208807	cigien	mehandipursawamani\.com
 1693208828	cigien	pny[\W_]*+trainings(?!\.com(?<=pnytrainings\.com))
 1693209275	cigien	buypsilocypsychedeliconline\.com
+1693213313	Nick	smarterfeds\.com
