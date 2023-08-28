@@ -52392,3 +52392,4 @@
 1693222504	cigien	whmcs[\W_]*+smarters(?!\.com(?<=whmcssmarters\.com))
 1693211389	Nick	e-tuitions\.com
 1693222565	cigien	schwitz\.xyz
+1693213313	Nick	smarterfeds\.com
