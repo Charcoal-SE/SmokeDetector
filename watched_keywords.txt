@@ -41917,7 +41917,6 @@
 1660972099	cocomac	baristastockhouse\.com\.au
 1660980955	tripleee	tranetech\.com
 1660981034	tripleee	crack-patch\.net
-1660982622	tripleee	onlinedissertationhelp\.com
 1660983805	tripleee	glucodyn
 1660987592	tripleee	hotjobshub\.com
 1660988863	tripleee	sharma[\W_]*+academy(?!\.com(?<=sharmaacademy\.com))
