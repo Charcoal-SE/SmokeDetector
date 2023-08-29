@@ -52435,3 +52435,4 @@
 1693297173	cigien	tenglong[\W_]*+academy
 1693297366	cigien	khandigi\.com
 1693297394	cigien	tunesolo\.com
+1693297687	cigien	badshahcric\.net
