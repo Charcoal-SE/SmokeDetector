@@ -52458,3 +52458,4 @@
 1693307156	cigien	nicd\.org\.uk
 1693308809	cigien	beautythings\.co\.uk
 1693309111	cigien	punarjanayurveda\.com
+1693309197	cigien	punarjan[\W_]*+ayurveda(?!\.com(?<=punarjanayurveda\.com))
