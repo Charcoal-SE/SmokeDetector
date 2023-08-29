@@ -52473,3 +52473,4 @@
 1693345726	Dragonrage	escrin\.org
 1693349080	Makyen	pandit[\W_]*+trimbakeshwar(?!\.com(?<=pandittrimbakeshwar\.com))
 1693349110	Makyen	trimbakeshwar[\W_]*+pandit
+1693349132	Makyen	alltheshrooms\.com
