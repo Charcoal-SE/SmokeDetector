@@ -52462,3 +52462,4 @@
 1693309746	cigien	block[\W_]*+intelligence
 1693312305	Jeff Schaller	cheaplikers\.com
 1693312029	Nick	flyfaresky\.com
+1693312931	Gugu72	makeavatar\.io
