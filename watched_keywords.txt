@@ -52472,3 +52472,4 @@
 1693341548	Jeff Schaller	zayian\.com
 1693345726	Dragonrage	escrin\.org
 1693349080	Makyen	pandit[\W_]*+trimbakeshwar(?!\.com(?<=pandittrimbakeshwar\.com))
+1693349110	Makyen	trimbakeshwar[\W_]*+pandit
