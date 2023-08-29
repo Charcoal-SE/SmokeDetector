@@ -52437,3 +52437,4 @@
 1693297394	cigien	tunesolo\.com
 1693297687	cigien	badshahcric\.net
 1693297711	cigien	getcrickid\.com
+1693297755	cigien	badshahcric(?!\.net)
