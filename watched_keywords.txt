@@ -52452,3 +52452,4 @@
 1693306199	cigien	reimagingsc\.com
 1693306233	Jeff Schaller	foresply\.com
 1693306265	cigien	fretmet\.com
+1693306314	cigien	jinn[\W_]*+(?:master|specialist)
