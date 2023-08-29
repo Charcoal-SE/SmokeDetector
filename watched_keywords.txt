@@ -52461,3 +52461,4 @@
 1693309197	cigien	punarjan[\W_]*+ayurveda(?!\.com(?<=punarjanayurveda\.com))
 1693309746	cigien	block[\W_]*+intelligence
 1693312305	Jeff Schaller	cheaplikers\.com
+1693312029	Nick	flyfaresky\.com
