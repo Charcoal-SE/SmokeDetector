@@ -52475,3 +52475,4 @@
 1693349110	Makyen	trimbakeshwar[\W_]*+pandit
 1693349132	Makyen	alltheshrooms\.com
 1693365582	Makyen	quordle-wordle\.com
+1693376374	Jeff Schaller	eterior\.in
