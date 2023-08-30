@@ -2880,3 +2880,4 @@ fincover(?!\.com(?<=fincover\.com))(?:[\W_]*+(?:financial|service)s?)*
 fendi[\W_]*+togel
 8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
 it[\W_]*+education[\W_]*+centre(?!\.com(?<=iteducationcentre\.com))
+rupee[\W_]*+loan
