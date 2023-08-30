@@ -52498,3 +52498,4 @@
 1693395562	cigien	miitomoapk\.com
 1693395631	cigien	techyen\.com
 1693395666	cigien	renownsystem\.com
+1693397260	cigien	uncodemy(?!\.com)
