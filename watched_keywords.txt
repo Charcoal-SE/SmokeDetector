@@ -51960,7 +51960,6 @@
 1692340937	Dragonrage	yamaha88bet\.azurefd\.net
 1692340240	Dragonrage	sexouaq\.com
 1692344785	cigien	d(?:octo)?r[\W_]*+phila
-1692344971	cigien	scrap-car-removal\.ca
 1692345338	cigien	plumbhq\.uk
 1692346224	cigien	(?:info@)?xpedients\.com
 1692347229	cigien	men(?:[\W_]*+s)?[\W_]*+suits
