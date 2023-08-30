@@ -52492,3 +52492,4 @@
 1693390160	cigien	bloomchem[\W_]*+ag(?!\.com(?<=bloomchemag\.com))
 1693394264	cigien	mdhasibbabu24(?:@gmail\.com)?
 1693394446	cigien	(?-i:bitcoin360AIbuyhere)(?#bit.ly)
+1693394689	cigien	slope-unblocked\.org
