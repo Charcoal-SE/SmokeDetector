@@ -52489,3 +52489,4 @@
 1693384865	Dragonrage	dlinkroutersupport\.com
 1693389811	Nick	appleservicenterdubai\.com
 1693390126	cigien	bloomchemag\.com
+1693390160	cigien	bloomchem[\W_]*+ag(?!\.com(?<=bloomchemag\.com))
