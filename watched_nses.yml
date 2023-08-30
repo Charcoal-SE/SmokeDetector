@@ -4239,7 +4239,9 @@ items:
   - now1.dns.com.
   - now2.dns.com.
 - ns: thcservers.com.
-- ns: cloudxspeed.com.
+- comment: NXDOMAIN 2023-08-30
+  disable: true
+  ns: cloudxspeed.com.
 - ns: xmarthost.com.
 - ns: hostzet.com.
 - ns: tmdcloud.com.
