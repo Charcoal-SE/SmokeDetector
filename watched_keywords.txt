@@ -52540,3 +52540,4 @@
 1693480211	cigien	abco[\W_]*+engineers(?!\.com(?<=abcoengineers\.com))
 1693480261	cigien	eduhub21\.com
 1693480340	cigien	teknoppy\.com
+1693480377	cigien	teknoppy(?!\.com)
