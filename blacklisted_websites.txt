@@ -4130,7 +4130,6 @@ lbk\.com\.tw
 tangenz\.com
 teamcode\.com
 extendfeature\.com
-anyviewer\.com
 thetechjournal\.in
 astrothoughts\.in
 allianzegcc\.com
