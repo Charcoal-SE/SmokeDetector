@@ -5365,3 +5365,4 @@ scrap-car-removal\.ca
 katprotech\.com
 learningmagento\.com
 elawoman\.com(?!(?:[^<]*+|<(?!\/?code>))*<\/?code>)
+5staressays\.com(?!/blog/personal-statement)
