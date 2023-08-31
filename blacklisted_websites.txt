@@ -5365,3 +5365,4 @@ learningmagento\.com
 elawoman\.com(?!(?:[^<]*+|<(?!\/?code>))*<\/?code>)
 5staressays\.com(?!/blog/personal-statement)
 icq\.im/(?:Anouymous_CC|AoLGnKtUsQZKGmUTjTA|aQllDARKNET)
+deccanherald\.com/brandspot/
