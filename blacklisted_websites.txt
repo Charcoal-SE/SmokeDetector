@@ -5364,3 +5364,4 @@ buyucoin\.com(?<!api\.buyucoin\.com)(?!/api)
 weheartit\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)(?!/entry/349621974)
 edocr\.com(?!/v/w6xgg6db)
 anyviewer\.com(?!/how-to/keep-rdp-session-alive-0007\.html)
+pearltrees\.com/\w+
