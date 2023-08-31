@@ -52509,3 +52509,4 @@
 1693421255	Mast	fbload\.online
 1693426438	Jeff Schaller	onlineislamicbook\.com
 1693461660	Makyen	wahidgroup\.co
+1693461684	Makyen	wahidgroup(?!\.co)
