@@ -5365,3 +5365,4 @@ elawoman\.com(?!(?:[^<]*+|<(?!\/?code>))*<\/?code>)
 icq\.im/(?:Anouymous_CC|AoLGnKtUsQZKGmUTjTA|aQllDARKNET)
 deccanherald\.com/brandspot/
 buyucoin\.com(?<!api\.buyucoin\.com)(?!/api)
+weheartit\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)(?!/entry/349621974)
