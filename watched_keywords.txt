@@ -42197,7 +42197,6 @@
 1661726815	cigien	ruslanmv\.com
 1661738042	Makyen	xpatbrothers\.com
 1661738071	Makyen	rasusaiid(?:@gmail\.com)?
-1661748488	tripleee	misoprostol
 1661748562	tripleee	mifepristone
 1661748618	cocomac	dosmm24(?:@gmail\.com)?
 1661751850	tripleee	(?-i:^Herbert Bear$)
