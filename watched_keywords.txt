@@ -52541,3 +52541,4 @@
 1693480261	cigien	eduhub21\.com
 1693480340	cigien	teknoppy\.com
 1693480377	cigien	teknoppy(?!\.com)
+1693480982	Ryan M	amanshrbiz
