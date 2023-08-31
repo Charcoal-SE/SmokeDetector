@@ -52520,3 +52520,4 @@
 1693468302	cigien	anika[\W_]*+immigration(?!\.com(?<=anikaimmigration\.com))
 1693468333	cigien	fibrocell\.com
 1693468389	cigien	show-box-android\.com
+1693468421	cigien	goodhealthbyyourself\.megawecare\.com
