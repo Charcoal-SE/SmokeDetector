@@ -52537,3 +52537,4 @@
 1693478701	Ryan M	nakamya[\W_]*+(?:school|training)
 1693479898	Jeff Schaller	pulpnest\.in
 1693480177	cigien	abcoengineers\.com
+1693480211	cigien	abco[\W_]*+engineers(?!\.com(?<=abcoengineers\.com))
