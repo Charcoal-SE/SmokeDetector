@@ -52536,3 +52536,4 @@
 1693478294	Ryan M	indiahighlight\.com
 1693478701	Ryan M	nakamya[\W_]*+(?:school|training)
 1693479898	Jeff Schaller	pulpnest\.in
+1693480177	cigien	abcoengineers\.com
