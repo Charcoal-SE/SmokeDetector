@@ -52543,3 +52543,4 @@
 1693480377	cigien	teknoppy(?!\.com)
 1693480982	Ryan M	amanshrbiz
 1693482198	cigien	pmaspire\.com
+1693483158	cigien	win-logon\.com
