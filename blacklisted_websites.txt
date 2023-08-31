@@ -5365,3 +5365,4 @@ tech\.bnethos\.com
 scrap-car-removal\.ca
 katprotech\.com
 learningmagento\.com
+elawoman\.com(?!(?:[^<]*+|<(?!\/?code>))*<\/?code>)
