@@ -52535,3 +52535,4 @@
 1693474498	cigien	(?-i:fCvNoZQ)(?#amzn)
 1693478294	Ryan M	indiahighlight\.com
 1693478701	Ryan M	nakamya[\W_]*+(?:school|training)
+1693479898	Jeff Schaller	pulpnest\.in
