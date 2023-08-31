@@ -52515,3 +52515,4 @@
 1693461861	Makyen	shaurya[\W_]*+(?:aur[\W_]*+)?vivek(?!\.com(?<=shauryaaurvivek\.com))(?:[\W_]*+(?:defence|academy)s?)*
 1693467948	Ryan M	shingare\.com
 1693467464	Nick	accountings-age-50\.net
+1693467719	Nick	olivotech\.com
