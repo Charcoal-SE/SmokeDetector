@@ -52572,3 +52572,4 @@
 1693560492	cigien	theafroblogger\.blogspot
 1693563476	Jeff Schaller	medilance\.in
 1693563616	Jeff Schaller	secure\.livechatinc\.com
+1693563700	Jeff Schaller	Yinfodesign\.com
