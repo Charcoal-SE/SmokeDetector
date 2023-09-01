@@ -52583,3 +52583,4 @@
 1693581281	cigien	earthrhythm\.com
 1693581313	cigien	earth[\W_]*+rhythm(?!\.com(?<=earthrhythm\.com))
 1693583008	Jeff Schaller	simonjensen\.com
+1693589581	Jeff Schaller	tecinfoz\.com
