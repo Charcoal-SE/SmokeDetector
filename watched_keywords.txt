@@ -52578,3 +52578,4 @@
 1693568472	cigien	chatgpt-portugues\.com
 1693570859	Jeff Schaller	jrsironandsteel\.com
 1693574119	Jeff Schaller	luxedesign\.ae
+1693574682	cigien	luxedesign(?!\.ae)
