@@ -52581,3 +52581,4 @@
 1693574682	cigien	luxedesign(?!\.ae)
 1693576899	Jeff Schaller	beachbuggyracingapk\.com
 1693581281	cigien	earthrhythm\.com
+1693581313	cigien	earth[\W_]*+rhythm(?!\.com(?<=earthrhythm\.com))
