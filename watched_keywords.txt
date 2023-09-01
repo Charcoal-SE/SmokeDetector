@@ -52588,3 +52588,4 @@
 1693592623	Jeff Schaller	(?-i:^jessica herif$)
 1693592726	Jeff Schaller	webflow\.io
 1693592807	Jeff Schaller	vigorplex
+1693596603	Jeff Schaller	pangighatidanikapatrika\.in
