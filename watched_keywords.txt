@@ -52563,3 +52563,4 @@
 1693556459	cigien	drrupalichadha\.com
 1693556483	cigien	d(?:octo)?r[\W_]*+rupali(?:[\W_]*+chadha)?+(?!\.com(?<=drrupalichadha\.com))
 1693556541	cigien	liongueststudios\.com
+1693556579	cigien	stock[\W_]*+vidyapeeth(?!\.com(?<=stockvidyapeeth\.com))
