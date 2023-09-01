@@ -52567,3 +52567,4 @@
 1693556912	cigien	genericmedsuk\.com
 1693557065	cigien	solutiontempleA1(?:@gmail\.com)?
 1693557603	cigien	dnabookofficial\.org
+1693558590	cigien	wowowfaucet\.com
