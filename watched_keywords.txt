@@ -52566,3 +52566,4 @@
 1693556579	cigien	stock[\W_]*+vidyapeeth(?!\.com(?<=stockvidyapeeth\.com))
 1693556912	cigien	genericmedsuk\.com
 1693557065	cigien	solutiontempleA1(?:@gmail\.com)?
+1693557603	cigien	dnabookofficial\.org
