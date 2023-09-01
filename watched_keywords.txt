@@ -18522,7 +18522,6 @@
 1586928291	tripleee	vaytien[\W_]*+a[\W_]*+z(?!\.com)
 1586928728	tripleee	morganfinancialrecovery\.com
 1586931193	Makyen	kalpataruindia\.in
-1586938042	Makyen	shareus\.com
 1586937644	Kulfy	thesoftking\.com
 1586939251	Makyen	archer[\W_]*+mechanical(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586941409	Makyen	(?-i:RCMB)
