@@ -52582,3 +52582,4 @@
 1693576899	Jeff Schaller	beachbuggyracingapk\.com
 1693581281	cigien	earthrhythm\.com
 1693581313	cigien	earth[\W_]*+rhythm(?!\.com(?<=earthrhythm\.com))
+1693583008	Jeff Schaller	simonjensen\.com
