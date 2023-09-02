@@ -467,9 +467,8 @@ class GlobalVars:
     # to preserve leading whitespace, but also permit the string to contain those characters.
     additional_failover_text = regex.sub(r'''^['"](.*)['"]$''', r'\1', config.get("additional_failover_text", ""))
 
-    # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
-    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
+    bot_name = config.get("smokedetector_name", git_name)
+    bot_repo_slug = config.get("smokedetector_repo", git_user_repo)
     bot_repository = "//github.com/{}".format(bot_repo_slug)
     chatmessage_prefix = config.get("chat_prefix", "[{}]({})".format(bot_name, bot_repository))
 

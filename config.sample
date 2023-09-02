@@ -48,3 +48,9 @@ dns_cache_cleanup_interval=300.0
 
 # Set an alternative prefix for chat messages posted by SD
 # chat_prefix=Demo
+
+# The name of the bot
+# smokedetector_name=SmokeDetector
+
+# The URL path of the repo
+# smokedetector_repo=Charcoal-SE/SmokeDetector
