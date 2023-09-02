@@ -52613,3 +52613,4 @@
 1693667798	Makyen	jackwoody962(?:@gmail\.com)?
 1693668404	cocomac	katonic\.ai
 1693672863	cocomac	longboardinsider\.com
+1693678324	Jeff Schaller	techytechtop\.com
