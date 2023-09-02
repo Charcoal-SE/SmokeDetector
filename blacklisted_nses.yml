@@ -62,6 +62,9 @@ items:
   - amanda.ns.cloudflare.com.
   - garrett.ns.cloudflare.com.
 - ns:
+  - amit.ns.cloudflare.com.
+  - ara.ns.cloudflare.com.
+- ns:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
@@ -106,6 +109,9 @@ items:
 - ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
+- ns:
+  - betty.ns.cloudflare.com.
+  - roman.ns.cloudflare.com.
 - ns:
   - bill.ns.cloudflare.com.
   - elsa.ns.cloudflare.com.
@@ -253,6 +259,9 @@ items:
   - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
+  - garret.ns.cloudflare.com.
+  - liberty.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
@@ -270,6 +279,9 @@ items:
 - ns:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
+- ns:
+  - ines.ns.cloudflare.com.
+  - joel.ns.cloudflare.com.
 - ns:
   - iris.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
@@ -304,6 +316,9 @@ items:
   - kayleigh.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
+  - kurt.ns.cloudflare.com.
+  - nina.ns.cloudflare.com.
+- ns:
   - lady.ns.cloudflare.com.
   - lamar.ns.cloudflare.com.
 - ns:
@@ -312,6 +327,9 @@ items:
 - ns:
   - linda.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
+- ns:
+  - linda.ns.cloudflare.com.
+  - will.ns.cloudflare.com.
 - ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
@@ -333,6 +351,9 @@ items:
 - ns:
   - meiling.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
+- ns:
+  - miki.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
 - ns:
   - miki.ns.cloudflare.com.
   - yahir.ns.cloudflare.com.
@@ -536,7 +557,6 @@ items:
 - ns:
   - bar.dnspod.net.
   - select.dnspod.net.
-- ns: symbolhost.com.
 - ns: shoviv.com.
 - ns: hndservers.net.
 - ns:
@@ -591,6 +611,9 @@ items:
 - ns: borntechy.com.
 - ns: yuvajobs.in.
 - ns:
+  - ns185148128233.a2dns.com.
+  - ns185148128234.a2dns.com.
+- ns:
   - ns686624091.a2dns.com.
   - ns686624219.a2dns.com.
 - ns: rebel.com.
@@ -619,3 +642,13 @@ items:
 - ns:
   - win08ns1.dns-he.com.
   - win08ns2.dns-he.com.
+- ns: dnsserverboot.com.
+- ns:
+  - ns3.azdigi.com.
+  - ns4.azdigi.com.
+- ns: pendrivedatarecovery.org.
+- ns: cloudssdserver.com.
+- ns: douradocars.com.
+- ns: mybluehostin.me.
+- ns: ns1-venus.ewebguru.com.
+- ns: alakmalak.com.

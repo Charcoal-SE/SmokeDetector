@@ -25,10 +25,12 @@ items:
 - asn: '19551'
   comment: '6/143 over three months'
   disable: true
+- asn: '19624'
 - asn: '19969'
 - asn: '20013'
   comment: FPs; do not watch
   disable: true
+- asn: '21501'
 - asn: '22611'
 - asn: '22612'
   comment: Moderate FPs, don't double up
@@ -98,11 +100,13 @@ items:
 - asn: '46475'
 - asn: '46844'
 - asn: '47583'
+- asn: '48254'
 - asn: '49335'
 - asn: '50613'
 - asn: '50673'
   comment: 17/77 over 10 months
   disable: true
+- asn: '51167'
 - asn: '51468'
 - asn: '53667'
 - asn: '53755'
@@ -118,6 +122,7 @@ items:
 - asn: '55470'
 - asn: '56110'
 - asn: '56485'
+- asn: '56851'
 - asn: '58061'
 - asn: '58110'
 - asn: '58640'
@@ -143,6 +148,7 @@ items:
 - asn: '132335'
 - asn: '132420'
 - asn: '133296'
+- asn: '133643'
 - asn: '133711'
 - asn: '134286'
 - asn: '135222'
@@ -170,8 +176,10 @@ items:
   disable: true
 - asn: '203226'
 - asn: '204213'
+- asn: '204601'
 - asn: '206349'
 - asn: '208425'
+- asn: '209242'
 - asn: '209853'
 - asn: '210079'
 - asn: '210250'
@@ -180,4 +188,3 @@ items:
 - asn: '395970'
 - asn: '397233'
 - asn: '397373'
-

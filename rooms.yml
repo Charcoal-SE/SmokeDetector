@@ -208,6 +208,10 @@ stackexchange.com:
       - 1019341 # jmoerdyk
       - 2907407 # Pilot6
       - 12139977 # James Risner
+      - 18275476 # Artur Meinild
+      - 16352934 # NotTheDr01ds
+      - 21866301 # user16217248
+      - 16785179 # Gugu72
 
   65945:  # Charcoal Test
     commands: true
@@ -221,7 +225,7 @@ stackexchange.com:
         room: 11540
 
   3877:  # Raiders of the Lost Downboat
-    commands: false
+    commands: true
     watcher: true
     msg_types:
       - site-askubuntu.com
@@ -229,6 +233,14 @@ stackexchange.com:
       - experimental-site-askubuntu.com
       - experimental-site-meta.askubuntu.com
       - offensive-mask
+
+    privileges:
+      - 1911219 # karel
+      - 18275476 # Artur Meinild
+      - 16352934 # NotTheDr01ds
+      - 22718731 # cocomac
+      # NOTICE: please don't add new users without approval from an Ask Ubuntu moderator.
+      # When/if they choose to have SD privileges, BeastOfCaerbannog is pre-authorized to be added here.
 
   2165:  # CRUDE
     commands: false
