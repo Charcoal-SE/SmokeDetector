@@ -4753,7 +4753,9 @@ items:
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- ns: quickflyllc.com.
+- comment: NXDOMAIN 2023-09-03
+  disable: true
+  ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
   disable: true
