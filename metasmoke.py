@@ -217,6 +217,7 @@ class Metasmoke:
         if not isinstance(message, Iterable):
             return
 
+        log('debug', "MS WS: message: {}".format(message))
         if "message" in message:
             from_ms = message['message']
             if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
