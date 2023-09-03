@@ -270,7 +270,7 @@ def send_messages():
         if len(msg) > 500 and "\n" not in msg:
             log('warn', 'The following message was over 500 characters')
             log('warn', msg)
-            msg = msg[:490] + "\n" + msg[490:]
+            msg = ":64298291\n" + msg
 
         full_retries = 0
 
