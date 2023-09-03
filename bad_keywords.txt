@@ -429,7 +429,6 @@ ri(?<=/ri)ght\Wpick(?=[-/<])
 power\Wboost\Wxi
 pinoy[\W_]*+tambayan
 crossroad[\W_]*+elf
-luna\Wbella
 testo[\W_]*+ultra
 evelladerm
 t(?<!'t)[\W_]*+boost
