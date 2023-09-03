@@ -52637,3 +52637,4 @@
 1693764787	cocomac	businessbatao\.com
 1693766306	Makyen	business[\W_]*+batao(?!\.com(?<=businessbatao\.com))
 1693768870	Gugu72	ximi\.ac\.in
+1693777151	Jeff Schaller	holisticint\.com
