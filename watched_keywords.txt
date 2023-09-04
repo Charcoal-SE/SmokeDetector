@@ -52648,3 +52648,4 @@
 1693829866	Jeff Schaller	anpeet\.com
 1693830138	cigien	jusst4you\.com
 1693834310	Jeff Schaller	unbank\.com
+1693834837	cigien	unbank(?!\.com)
