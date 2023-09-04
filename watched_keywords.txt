@@ -52650,3 +52650,4 @@
 1693834310	Jeff Schaller	unbank\.com
 1693834837	cigien	unbank(?!\.com)
 1693834875	cigien	(?-i:FZ7iyBBC_yg)(?#youtube)
+1693835526	cigien	allee\.store
