@@ -52647,3 +52647,4 @@
 1693828243	cigien	north[\W_]*+rose[\W_]*+technologies(?!\.com(?<=northrosetechnologies\.com))
 1693829866	Jeff Schaller	anpeet\.com
 1693830138	cigien	jusst4you\.com
+1693834310	Jeff Schaller	unbank\.com
