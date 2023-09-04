@@ -52644,3 +52644,4 @@
 1693812029	Nick	acquistacocaina\.com
 1693811648	Nick	channelbecho\.com
 1693827240	Jeff Schaller	northrosetechnologies\.com
+1693828243	cigien	north[\W_]*+rose[\W_]*+technologies(?!\.com(?<=northrosetechnologies\.com))
