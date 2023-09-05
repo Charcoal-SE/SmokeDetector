@@ -52669,3 +52669,4 @@
 1693880618	Makyen	windmill[\W_]*+money[\W_]*+loan
 1693883869	Dragonrage	ericcointernational\.com
 1693887245	cocomac	mocardine\.com
+1693898364	Dragonrage	mtss-al-manshuriyah\.sch\.id
