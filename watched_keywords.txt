@@ -52694,3 +52694,4 @@
 1693904553	cigien	qh[\W_]*+rent[\W_]*+a[\W_]*+car(?!\.com(?<=qhrentacar\.com))
 1693904588	cigien	restoslot4d
 1693905941	cigien	speedtest-copel\.net\.br
+1693906023	cigien	24sevenhc\.com
