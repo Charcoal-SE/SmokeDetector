@@ -52680,3 +52680,4 @@
 1693901794	Dragonrage	sonbetongrep\.com
 1693901907	Dragonrage	tirupatigraphite\.co\.uk
 1693902012	cigien	codiveo\.com
+1693902055	cigien	codiveo(?!\.com)
