@@ -52715,3 +52715,4 @@
 1693917921	Jeff Schaller	saihospitalchengalpattu\.com
 1693918851	Makyen	your[\W_]*+rx[\W_]*+pills(?!\.net(?<=yourrxpills\.net))
 1693922817	cigien	shraddha[\W_]*+shree[\W_]*+gems(?!\.com(?<=shraddhashreegems\.com))
+1693923199	cigien	(?-i:arliputraa)(?#github)
