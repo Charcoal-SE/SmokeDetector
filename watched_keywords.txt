@@ -52695,3 +52695,4 @@
 1693904588	cigien	restoslot4d
 1693905941	cigien	speedtest-copel\.net\.br
 1693906023	cigien	24sevenhc\.com
+1693906087	cigien	nicotine-framework\.com
