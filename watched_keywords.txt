@@ -52721,3 +52721,4 @@
 1693923307	cigien	appsinfo\.pro
 1693932851	Jeff Schaller	thexpressinfo\.com
 1693934791	Jeff Schaller	kohlsfeedback\.page
+1693940429	Makyen	thexpressinfo(?!\.com)
