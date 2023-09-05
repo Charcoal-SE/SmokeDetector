@@ -52713,3 +52713,4 @@
 1693917760	Jeff Schaller	tripgoto\.com
 1693917789	Jeff Schaller	atascocitatxtreeservice\.com
 1693917921	Jeff Schaller	saihospitalchengalpattu\.com
+1693918851	Makyen	your[\W_]*+rx[\W_]*+pills(?!\.net(?<=yourrxpills\.net))
