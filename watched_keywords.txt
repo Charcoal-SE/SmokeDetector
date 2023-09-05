@@ -52717,3 +52717,4 @@
 1693922817	cigien	shraddha[\W_]*+shree[\W_]*+gems(?!\.com(?<=shraddhashreegems\.com))
 1693923199	cigien	(?-i:arliputraa)(?#github)
 1693923232	cigien	perthbuyersagents\.com\.au
+1693923264	cigien	perth[\W_]*+buyers[\W_]*+agents(?!\.com\.au(?<=perthbuyersagents\.com\.au))
