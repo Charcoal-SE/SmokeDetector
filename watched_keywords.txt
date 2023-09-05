@@ -33763,7 +33763,6 @@
 1637676413	tripleee	amazon[\W_]*+free[\W_]*+products\d*
 1637676534	tripleee	digishraa
 1637676853	tripleee	avsforum\.com(?# spammer links to phone number thread)
-1637682289	Spevacus	mygeekshelp\.com
 1637685911	cigien	health-and-beauty-living\.blogspot
 1637686046	tripleee	70069253(?# stackoverflow post id)
 1637691015	Ollie	(?-i:KitSupp)(?#bit.ly)
