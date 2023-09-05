@@ -52686,3 +52686,4 @@
 1693903429	cigien	vikramas\.com
 1693903658	cigien	fab-defenseus\.com
 1693903692	cigien	qtree[\W_]*+technologies(?!\.in(?<=qtreetechnologies\.in))
+1693903803	cigien	onlinefitnessexercise\.com
