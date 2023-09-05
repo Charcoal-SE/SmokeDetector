@@ -52681,3 +52681,4 @@
 1693902012	cigien	codiveo\.com
 1693902055	cigien	codiveo(?!\.com)
 1693902210	cigien	gethexcolor\.com
+1693903273	cigien	texmeroe\.com
