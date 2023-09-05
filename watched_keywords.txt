@@ -52666,3 +52666,4 @@
 1693868495	Makyen	janjimaxwin\.net
 1693868717	Makyen	start-b\.com\.tr
 1693878282	Nick	cialisphm\.net
+1693880618	Makyen	windmill[\W_]*+money[\W_]*+loan
