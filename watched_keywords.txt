@@ -52676,3 +52676,4 @@
 1693899807	cigien	storysaverhd\.io
 1693899832	cigien	instazoom
 1693900087	cigien	(?-i:7fGPlDQTvLQ)(?#youtube)
+1693901435	Dragonrage	slotpgsoft\.sgp1\.cdn\.digitaloceanspaces\.com
