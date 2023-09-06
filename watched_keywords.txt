@@ -52749,3 +52749,4 @@
 1693998670	Jeff Schaller	cryptobusinessworld\.com
 1694002977	Jeff Schaller	sisgain\.ae
 1694003724	Jeff Schaller	certsgo\.com
+1694010007	Jeff Schaller	mrdottbook\.blogspot
