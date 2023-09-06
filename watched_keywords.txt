@@ -52742,3 +52742,4 @@
 1693987071	cigien	dragonballlegendsapk\.com
 1693991018	cigien	luxmavens\.com
 1693991043	cigien	tutorialsfreak\.com
+1693991068	cigien	tutorials[\W_]*+freak(?!\.com(?<=tutorialsfreak\.com))
