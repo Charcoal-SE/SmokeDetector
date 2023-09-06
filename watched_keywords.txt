@@ -52729,3 +52729,4 @@
 1693950318	Makyen	voodoo[\W_]*+revenge[\W_]*+spells
 1693961101	Ethan	bulkpvaservices\.com
 1693974955	Dragonrage	meydanfz\.in
+1693979289	Dragonrage	blogstudiio\.com
