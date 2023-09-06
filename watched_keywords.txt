@@ -52745,3 +52745,4 @@
 1693991068	cigien	tutorials[\W_]*+freak(?!\.com(?<=tutorialsfreak\.com))
 1693994174	Jeff Schaller	forbestalks\.com
 1693983203	VLAZ	linkedin\.com\/company\/33247506
+1693998199	VLAZ	tansukhherbals\.com
