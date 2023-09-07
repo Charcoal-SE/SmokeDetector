@@ -36876,7 +36876,6 @@
 1647368556	Ollie	scriptaproject\.com
 1647370851	cigien	(?-i:3ot8i3d)(?#bit.ly)
 1647371369	cigien	fitaminat\.com
-1647389907	Thomas Ward	sms-man\.com
 1647390885	Makyen	ustropicalfish\.com
 1647397757	Makyen	jetmedia-inc\.com
 1647404149	Ryan M	yofonts\.com
