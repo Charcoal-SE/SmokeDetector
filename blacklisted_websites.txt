@@ -5367,3 +5367,4 @@ pearltrees\.com/\w+
 shareus\.com
 21cloudbox\.com
 mygeekshelp\.com
+exalate\.com
