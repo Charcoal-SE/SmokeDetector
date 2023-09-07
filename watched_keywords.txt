@@ -52776,3 +52776,4 @@
 1694090756	cigien	pixelfy\.me
 1694091220	cigien	wahid[\W_]*+group(?!\.co(?<=wahidgroup\.co))
 1694097568	Jeff Schaller	ꜱʜᴀᴅᴏᴡᴋᴜʀᴅ1
+1694097662	Jeff Schaller	zinbeauty\.com
