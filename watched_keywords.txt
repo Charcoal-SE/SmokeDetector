@@ -52813,3 +52813,4 @@
 1694179135	cigien	9[\W_]*+animes?+(?!\.lv(?<=9animes\.lv))
 1694179589	Jeff Schaller	lazywriter\.xyz
 1694179655	cigien	resizepng\.com
+1694179919	Jeff Schaller	dev-shahin2322\.pantheonsite\.io
