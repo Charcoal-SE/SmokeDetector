@@ -52811,3 +52811,4 @@
 1694172978	Can O' Spam	shreedhi\.in
 1694179021	cigien	9animes\.lv
 1694179135	cigien	9[\W_]*+animes?+(?!\.lv(?<=9animes\.lv))
+1694179589	Jeff Schaller	lazywriter\.xyz
