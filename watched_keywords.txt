@@ -52785,3 +52785,4 @@
 1694115341	Makyen	legit\.pk
 1694131031	Jesse	fullmatchreplay\.co
 1694131528	Makyen	fullmatchreplay(?!\.co)
+1694156729	Nick	embeddedhash\.in
