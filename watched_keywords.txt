@@ -52784,3 +52784,4 @@
 1694111552	Jeff Schaller	cubicalsolution\.com
 1694115341	Makyen	legit\.pk
 1694131031	Jesse	fullmatchreplay\.co
+1694131528	Makyen	fullmatchreplay(?!\.co)
