@@ -52822,3 +52822,4 @@
 1694196661	Makyen	r12cloudhosting(?!\.com)
 1694197091	Makyen	viva[\W_]*+prime[\W_]*+enhance[\W_]*+canada(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
 1694207367	Makyen	rabbittranspoland\.com
+1694207390	Makyen	rabbit[\W_]*+trans[\W_]*+poland(?!\.com(?<=rabbittranspoland\.com))
