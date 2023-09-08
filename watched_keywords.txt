@@ -52796,3 +52796,4 @@
 1694159283	cigien	tossinpizza\.com
 1694159316	cigien	tossin[\W_]*+pizza(?!\.com(?<=tossinpizza\.com))
 1694162275	Nick	mrunix\.net
+1694165081	cigien	vikaskumar30\.blogspot
