@@ -52801,3 +52801,4 @@
 1694166877	cigien	coupontive\.com
 1694166910	cigien	coupontive(?!\.com)
 1694167181	cigien	visbody\.com
+1694168228	Dragonrage	vaidic\.ca
