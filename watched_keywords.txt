@@ -52819,3 +52819,4 @@
 1694192043	Makyen	louisjoseph131(?:@gmail\.com)?
 1694191727	VLAZ	(?-i:upCBJBIRo_0)(?#youtube)
 1694196638	Makyen	r12cloudhosting\.com
+1694196661	Makyen	r12cloudhosting(?!\.com)
