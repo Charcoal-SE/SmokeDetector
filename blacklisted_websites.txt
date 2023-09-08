@@ -5369,3 +5369,4 @@ shareus\.com
 mygeekshelp\.com
 exalate\.com
 sms-man\.com
+platform\.linkedai\.co
