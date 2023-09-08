@@ -52820,3 +52820,4 @@
 1694191727	VLAZ	(?-i:upCBJBIRo_0)(?#youtube)
 1694196638	Makyen	r12cloudhosting\.com
 1694196661	Makyen	r12cloudhosting(?!\.com)
+1694197091	Makyen	viva[\W_]*+prime[\W_]*+enhance[\W_]*+canada(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
