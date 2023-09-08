@@ -2880,3 +2880,4 @@ fendi[\W_]*+togel
 8xbet(?<!\bkhuyen[\W_]*+mai[\W_]*+8xbet)(?!\.poker)(?!\.io)(?!\.soccer)
 it[\W_]*+education[\W_]*+centre(?!\.com(?<=iteducationcentre\.com))
 rupee[\W_]*+loan
+market[\W_]*+research[\W_]*+future(?!\.com(?<=marketresearchfuture\.com))
