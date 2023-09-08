@@ -52794,3 +52794,4 @@
 1694158854	Dragonrage	bookcoverdesign\.uk
 1694158901	VLAZ	(?-i:3LbeYAO)(?#bit.ly)
 1694159283	cigien	tossinpizza\.com
+1694159316	cigien	tossin[\W_]*+pizza(?!\.com(?<=tossinpizza\.com))
