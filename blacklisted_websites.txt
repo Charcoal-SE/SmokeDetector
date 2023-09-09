@@ -5367,3 +5367,4 @@ sms-man\.com
 platform\.linkedai\.co
 tekslate\.com(?!(/bteq-features-teradata|/oracle-pl-sql-training))
 fluper\.com(?!(/&response_type=token|/mob/index))
+vcetests\.com(?!/200-355-vce\.html)
