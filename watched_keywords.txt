@@ -52825,3 +52825,4 @@
 1694207390	Makyen	rabbit[\W_]*+trans[\W_]*+poland(?!\.com(?<=rabbittranspoland\.com))
 1694219848	Jeff Schaller	welookups\.com
 1694220005	Jeff Schaller	apponfly\.com
+1694221707	Jeff Schaller	ghostrifles\.com/\W
