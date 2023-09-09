@@ -52839,3 +52839,4 @@
 1694256341	Jeff Schaller	tip4d-linkalternatif\.blogspot
 1694263940	Makyen	rentry\.co
 1694263962	Makyen	linktip4d\.co
+1694264050	Makyen	tip4d(?!-linkalternatif\.blogspot)(?!\.xyz)(?!\.powerappsportals\.com)
