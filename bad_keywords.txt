@@ -2881,3 +2881,4 @@ fendi[\W_]*+togel
 it[\W_]*+education[\W_]*+centre(?!\.com(?<=iteducationcentre\.com))
 rupee[\W_]*+loan
 market[\W_]*+research[\W_]*+future(?!\.com(?<=marketresearchfuture\.com))
+ghostrifles\.com/\w
