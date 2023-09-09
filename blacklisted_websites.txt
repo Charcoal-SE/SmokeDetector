@@ -5369,3 +5369,4 @@ mygeekshelp\.com
 exalate\.com
 sms-man\.com
 platform\.linkedai\.co
+tekslate\.com(?!(/bteq-features-teradata|/oracle-pl-sql-training))
