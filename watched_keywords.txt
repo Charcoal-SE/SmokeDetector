@@ -52860,3 +52860,4 @@
 1694366440	cigien	digmarks\.in
 1694366713	cigien	pikashowapkhd\.com
 1694366788	cigien	digicrowd[\W_]*+solution(?!\.com(?<=digicrowdsolution\.com))
+1694366907	cigien	arsoporte\.com
