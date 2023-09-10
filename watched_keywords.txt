@@ -52861,3 +52861,4 @@
 1694366788	cigien	digicrowd[\W_]*+solution(?!\.com(?<=digicrowdsolution\.com))
 1694366907	cigien	arsoporte\.com
 1694371164	Makyen	buy[\W_]*+trustpilot[\W_]*+reviews
+1694371341	Makyen	poolsapk\.com
