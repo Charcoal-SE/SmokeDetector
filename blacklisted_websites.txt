@@ -5366,3 +5366,4 @@ fluper\.com(?!(/&response_type=token|/mob/index))
 vcetests\.com(?!/200-355-vce\.html)
 ffstylishname\.com
 wallarm\.com(?<!docs\.wallarm\.com)(?<!lab\.wallarm\.com)
+fastestvpn\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
