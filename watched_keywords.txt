@@ -52862,3 +52862,4 @@
 1694366907	cigien	arsoporte\.com
 1694371164	Makyen	buy[\W_]*+trustpilot[\W_]*+reviews
 1694371341	Makyen	poolsapk\.com
+1694383952	Nisse Engström	stickwarapk\.download
