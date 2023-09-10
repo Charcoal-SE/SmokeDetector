@@ -52848,3 +52848,4 @@
 1694350314	Jeff Schaller	myofferrentalassistance
 1694353562	Jeff Schaller	bestwoodrouterguru\.com
 1694360755	Makyen	technicalpandas\.blogspot
+1694360786	Makyen	technical[\W_]*+panda(?!s\.blogspot(?<=technicalpandas\.blogspot))s?
