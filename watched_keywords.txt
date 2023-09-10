@@ -52850,3 +52850,4 @@
 1694360786	Makyen	technical[\W_]*+panda(?!s\.blogspot(?<=technicalpandas\.blogspot))s?
 1694361982	cigien	(?:mister[\W_]*+)?olympia[\W_]*+shop
 1694362345	cigien	jewsandpolesdatabase\.org
+1694308403	Jesse	felbdogg\.com
