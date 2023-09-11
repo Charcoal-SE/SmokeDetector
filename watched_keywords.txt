@@ -52878,3 +52878,4 @@
 1694430784	cigien	ezeeonline\.in
 1694431164	cigien	commercialpaintingservices\.com
 1694431187	cigien	commercial[\W_]*+painting[\W_]*+services(?!\.com(?<=commercialpaintingservices\.com))
+1694434223	cigien	dekarestorasyon\.com
