@@ -52892,3 +52892,4 @@
 1694447421	Makyen	indiatopbest\.in
 1694451144	Mast	cal\.reynolds(?:@plot\.ly)?
 1694452620	Jesse	politicsrights\.com
+1694460407	Jeff Schaller	goldirainvestmentguy\.com
