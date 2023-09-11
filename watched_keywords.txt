@@ -52877,3 +52877,4 @@
 1694429776	cigien	india[\W_]*+biz[\W_]*+for[\W_]*+sale(?!\.com(?<=indiabizforsale\.com))
 1694430784	cigien	ezeeonline\.in
 1694431164	cigien	commercialpaintingservices\.com
+1694431187	cigien	commercial[\W_]*+painting[\W_]*+services(?!\.com(?<=commercialpaintingservices\.com))
