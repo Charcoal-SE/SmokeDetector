@@ -4707,7 +4707,6 @@
 1535535178	tripleee	peoplesolved\.com
 1535535681	Tetsuya Yamamoto	roofos\.ru
 1535536400	Glorfindel	thermalcameras\.guide
-1535538554	Glorfindel	creative-bioarray\.com
 1535538792	tripleee	creative-bio\w+\b(?!\.com(?<=creative-biostructure\.com))(?!\.com(?<=creative-biolabs\.com))(?!\.com(?<=creative-biogene\.com))(?!\.com(?<=creative-bioarray\.com))
 1535539729	tripleee	ibackpage\.com
 1535541408	tripleee	myowncats\.com
