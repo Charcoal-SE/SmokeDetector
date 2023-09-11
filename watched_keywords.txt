@@ -52879,3 +52879,4 @@
 1694431164	cigien	commercialpaintingservices\.com
 1694431187	cigien	commercial[\W_]*+painting[\W_]*+services(?!\.com(?<=commercialpaintingservices\.com))
 1694434223	cigien	dekarestorasyon\.com
+1694434256	cigien	deka[\W_]*+restorasyon(?!\.com(?<=dekarestorasyon\.com))
