@@ -52869,3 +52869,4 @@
 1694421801	cigien	words[\W_]*+doctorate(?!\.com(?<=wordsdoctorate\.com))
 1694426528	VLAZ	anumati\.co\.in
 1694426430	VLAZ	flutterviz\.com
+1694426285	VLAZ	indiabizforsale\.com
