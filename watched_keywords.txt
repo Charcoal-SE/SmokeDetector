@@ -52863,3 +52863,4 @@
 1694371164	Makyen	buy[\W_]*+trustpilot[\W_]*+reviews
 1694371341	Makyen	poolsapk\.com
 1694383952	Nisse Engström	stickwarapk\.download
+1694390956	Makyen	jakkapob8504(?:@gmail\.com)?
