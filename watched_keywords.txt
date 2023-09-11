@@ -52893,3 +52893,4 @@
 1694451144	Mast	cal\.reynolds(?:@plot\.ly)?
 1694452620	Jesse	politicsrights\.com
 1694460407	Jeff Schaller	goldirainvestmentguy\.com
+1694462746	Makyen	gold[\W_]*+ira[\W_]*+investment[\W_]*+guy(?!\.com(?<=goldirainvestmentguy\.com))
