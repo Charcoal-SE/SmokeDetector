@@ -52867,3 +52867,4 @@
 1694417160	cigien	movierulzzapp\.com
 1694418435	cigien	digitize4life\.com
 1694421801	cigien	words[\W_]*+doctorate(?!\.com(?<=wordsdoctorate\.com))
+1694426528	VLAZ	anumati\.co\.in
