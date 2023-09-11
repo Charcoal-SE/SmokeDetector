@@ -52882,3 +52882,4 @@
 1694434256	cigien	deka[\W_]*+restorasyon(?!\.com(?<=dekarestorasyon\.com))
 1694434285	cigien	flightaura\.com
 1694435986	Jeff Schaller	taptap\.mom
+1694437380	cigien	notesapplicationmigration\.com
