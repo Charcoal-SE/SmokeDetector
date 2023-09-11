@@ -52874,3 +52874,4 @@
 1694426147	VLAZ	delhi\.dental
 1694425236	VLAZ	naturallandhairy\.com
 1694429406	cigien	gvtsalt\.com
+1694429776	cigien	india[\W_]*+biz[\W_]*+for[\W_]*+sale(?!\.com(?<=indiabizforsale\.com))
