@@ -52930,3 +52930,4 @@
 1694518629	Jeff Schaller	instrumentscare\.com
 1694519094	Jeff Schaller	pmb\.akperyappi\.ac\.id
 1694522310	Makyen	senjata[\W_]*+cuaca
+1694523210	Jeff Schaller	tecnowith\.com
