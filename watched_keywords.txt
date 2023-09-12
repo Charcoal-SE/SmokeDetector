@@ -49292,7 +49292,6 @@
 1680671166	tripleee	infowind(?:[\W_]*+technologies)?
 1680671563	tripleee	(?-i:3m22vGc)(?# bit.ly)
 1680671611	tripleee	buyxanaxonline2m\.blogspot
-1680672370	Makyen	pcpatchedup\.com
 1680672405	Makyen	iemmadavis24(?:@gmail\.com)?
 1680675924	tripleee	herboganic\.com
 1680677791	Glorfindel	traditionalgames\.in
