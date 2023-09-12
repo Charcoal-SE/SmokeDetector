@@ -51837,7 +51837,6 @@
 1692173760	cigien	healthmus\.com
 1692175175	cigien	rokokslot\.cpc-live\.com
 1692175201	cigien	blog\.betplays\.com
-1692175227	cigien	galsat\.com
 1692175765	cigien	punandjokes\.com
 1692175920	cigien	moviestarplus\.xyz
 1692178049	cigien	dharmsaar\.com
