@@ -52937,3 +52937,4 @@
 1694524961	Makyen	bk[\W_]*+graphy(?!\.co\.in(?<=bkgraphy\.co\.in))
 1694528816	Can O' Spam	panchaaayurveda\.com
 1694530273	Jeff Schaller	nursingbooster\.com
+1694530836	Jeff Schaller	cobolish\.com
