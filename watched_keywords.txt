@@ -52898,3 +52898,4 @@
 1694499772	Ryan M	IntelleWings(?!\.com)
 1694502893	Ryan M	ambanibook-id\.com
 1694502932	Ryan M	mybetex
+1694502966	Ryan M	ambanibook(?!-id\.com)
