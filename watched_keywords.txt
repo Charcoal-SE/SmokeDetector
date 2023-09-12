@@ -52935,3 +52935,4 @@
 1694512727	VLAZ	(?-i:9wzHsbGf)(?#cutt.ly)
 1694524907	Jeff Schaller	bkgraphy\.co\.in
 1694524961	Makyen	bk[\W_]*+graphy(?!\.co\.in(?<=bkgraphy\.co\.in))
+1694528816	Can O' Spam	panchaaayurveda\.com
