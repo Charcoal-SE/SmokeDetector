@@ -52892,7 +52892,6 @@
 1694452620	Jesse	politicsrights\.com
 1694460407	Jeff Schaller	goldirainvestmentguy\.com
 1694462746	Makyen	gold[\W_]*+ira[\W_]*+investment[\W_]*+guy(?!\.com(?<=goldirainvestmentguy\.com))
-1694499739	Ryan M	intellewings\.com
 1694499772	Ryan M	IntelleWings(?!\.com)
 1694502893	Ryan M	ambanibook-id\.com
 1694502932	Ryan M	mybetex
