@@ -52975,3 +52975,4 @@
 1694627878	cigien	cotgin[\W_]*+analytics(?!\.in(?<=cotginanalytics\.in))
 1694628129	cigien	kids[\W_]*+dentistry
 1694628166	cigien	d(?:octo)?r[\W_]*+sunali
+1694628213	cigien	stopwatt
