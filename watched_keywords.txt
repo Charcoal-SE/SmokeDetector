@@ -52948,3 +52948,4 @@
 1694565036	Nick	101info\.ru
 1694496180	VLAZ	llinuxsolutions(?:@gmail\.com)?
 1694522232	Can O' Spam	projectsforeveryone\.com
+1694586404	VLAZ	American Institute in Taiwan(?: \(AIT\))?
