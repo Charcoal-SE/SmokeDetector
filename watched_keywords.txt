@@ -52972,3 +52972,4 @@
 1694627194	cigien	go-sponge\.com
 1694603627	VLAZ	altuscontractors\.co\.uk
 1694627591	cigien	fatweb(?!\.co\.nz)
+1694627878	cigien	cotgin[\W_]*+analytics(?!\.in(?<=cotginanalytics\.in))
