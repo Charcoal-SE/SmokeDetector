@@ -52971,3 +52971,4 @@
 1694627116	cigien	useapi\.net
 1694627194	cigien	go-sponge\.com
 1694603627	VLAZ	altuscontractors\.co\.uk
+1694627591	cigien	fatweb(?!\.co\.nz)
