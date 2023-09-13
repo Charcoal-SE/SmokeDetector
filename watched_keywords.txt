@@ -52981,3 +52981,4 @@
 1694628406	cigien	tricky[\W_]*+mind[\W_]*+solution(?!\.com(?<=trickymindsolution\.com))
 1694629470	cigien	autopax\.net
 1694629494	cigien	autopax(?!\.net)
+1694630069	cigien	icrackeado\.com
