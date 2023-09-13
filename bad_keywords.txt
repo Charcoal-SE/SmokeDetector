@@ -2750,7 +2750,6 @@ ufc[\W_]*+284[\W_]*+live
 (?-i:o3boUSp)(?#cutt.ly)
 (?-i:3E0VPO9)(?#bit.ly)
 (?-i:y4fnhh9t)(?#tinyurl)
-puppy[\W_]*+bowl
 (?-i:f3mw7W9)(?#cutt.ly)
 (?-i:5y3xnyrx)(?#tinyurl)
 (?-i:27xy8pmm)(?#tinyurl)
