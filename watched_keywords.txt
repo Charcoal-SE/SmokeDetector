@@ -52979,3 +52979,4 @@
 1694628341	cigien	technquest\.in
 1694628374	cigien	technquest(?!\.in)
 1694628406	cigien	tricky[\W_]*+mind[\W_]*+solution(?!\.com(?<=trickymindsolution\.com))
+1694629470	cigien	autopax\.net
