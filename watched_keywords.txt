@@ -52973,3 +52973,4 @@
 1694603627	VLAZ	altuscontractors\.co\.uk
 1694627591	cigien	fatweb(?!\.co\.nz)
 1694627878	cigien	cotgin[\W_]*+analytics(?!\.in(?<=cotginanalytics\.in))
+1694628129	cigien	kids[\W_]*+dentistry
