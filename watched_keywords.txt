@@ -52976,3 +52976,4 @@
 1694628129	cigien	kids[\W_]*+dentistry
 1694628166	cigien	d(?:octo)?r[\W_]*+sunali
 1694628213	cigien	stopwatt
+1694628341	cigien	technquest\.in
