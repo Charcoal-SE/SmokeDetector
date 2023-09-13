@@ -52949,7 +52949,6 @@
 1694496180	VLAZ	llinuxsolutions(?:@gmail\.com)?
 1694522232	Can O' Spam	projectsforeveryone\.com
 1694588265	Dragonrage	trickymindsolution\.com
-1694588313	Dragonrage	drbhartipathlabs\.com
 1694588649	Dragonrage	Nativefoodstore\.com
 1694588707	Dragonrage	luminlash\.com
 1694588736	Dragonrage	minerasic\.com
@@ -52957,7 +52956,6 @@
 1694591112	Nick	gstcalculatorau\.com
 1694591787	Dragonrage	drsunalidentalsolutions\.com
 1694572615	Nick	benaughty\.com
-1694586377	Nick	drbhartipathlabs\.com
 1694586404	VLAZ	American Institute in Taiwan(?: \(AIT\))?
 1694592656	VLAZ	myastron\.com
 1694598924	Dragonrage	codestoresolutions\.com
