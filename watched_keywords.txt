@@ -52977,3 +52977,4 @@
 1694628166	cigien	d(?:octo)?r[\W_]*+sunali
 1694628213	cigien	stopwatt
 1694628341	cigien	technquest\.in
+1694628374	cigien	technquest(?!\.in)
