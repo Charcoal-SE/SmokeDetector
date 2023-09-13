@@ -110,9 +110,13 @@ def rmblu(user):
 
     if int(uid) > -1 and val != "":
         if remove_blacklisted_user((uid, val)):
-            return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
+            return "The user has been removed from the user-blacklist (`{}` on `{}`).".format(uid, val)
         else:
-            return "User is not blacklisted."
+            return "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
+                   "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
+                   "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) " \
+                   "for more information about when users are added to or removed from the user-blacklist, which is" \
+                   "primarily done with `tpu` and `fp` feedback."
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
