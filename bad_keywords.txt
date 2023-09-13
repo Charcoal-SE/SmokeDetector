@@ -2882,3 +2882,4 @@ rupee[\W_]*+loan
 market[\W_]*+research[\W_]*+future(?!\.com(?<=marketresearchfuture\.com))
 ghostrifles\.com/\w
 muckrack\.com/\w
+puppy[\W]*+bowl
