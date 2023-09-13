@@ -52982,3 +52982,4 @@
 1694629470	cigien	autopax\.net
 1694629494	cigien	autopax(?!\.net)
 1694630069	cigien	icrackeado\.com
+1694630815	cigien	nooglia\.com
