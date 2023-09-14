@@ -5373,3 +5373,4 @@ galsat\.com
 intellewings\.com
 jamsimkart\.com
 yolasite\.com(?<!@yolasite\.com)
+visactor\.io
