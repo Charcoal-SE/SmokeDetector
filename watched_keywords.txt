@@ -53000,3 +53000,4 @@
 1694697713	Makyen	snetzweb(?!\.com(?<=snetzweb\.com))(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
 1694699978	Jeff Schaller	mobizealapps\.com
 1694709074	Makyen	usmoneymonk\.com
+1694709100	Makyen	us[\W_]*+money[\W_]*+monk(?!\.com(?<=usmoneymonk\.com))
