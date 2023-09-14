@@ -53003,3 +53003,4 @@
 1694709125	Makyen	djobzy\.com
 1694709153	Makyen	djobzy(?!\.com)
 1694712217	cigien	apkloklok\.com
+1694718579	Makyen	(?:great[\W_]*+)?idusaku(?:[\W_]*+(?:brotherhood|temple))?
