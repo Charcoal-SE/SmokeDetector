@@ -53006,3 +53006,4 @@
 1694718579	Makyen	(?:great[\W_]*+)?idusaku(?:[\W_]*+(?:brotherhood|temple))?
 1694724053	Jesse	consultleopard\.com
 1694728556	Jeff Schaller	blockonomi\.com
+1694729133	Jeff Schaller	dataddo\.com
