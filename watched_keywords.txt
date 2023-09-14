@@ -52995,3 +52995,4 @@
 1694681301	cigien	okbetsports\.com
 1694687159	Jeff Schaller	lavorgtechnologies\.de
 1694687211	Jeff Schaller	esaal\.me
+1694690988	cigien	enablex(?!\.io)
