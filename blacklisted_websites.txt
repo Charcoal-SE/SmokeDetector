@@ -5374,3 +5374,4 @@ intellewings\.com
 jamsimkart\.com
 yolasite\.com(?<!@yolasite\.com)
 visactor\.io
+90minsport\.live
