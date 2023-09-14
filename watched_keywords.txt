@@ -53003,3 +53003,4 @@
 1694709100	Makyen	us[\W_]*+money[\W_]*+monk(?!\.com(?<=usmoneymonk\.com))
 1694709125	Makyen	djobzy\.com
 1694709153	Makyen	djobzy(?!\.com)
+1694712217	cigien	apkloklok\.com
