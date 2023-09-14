@@ -52997,3 +52997,4 @@
 1694687211	Jeff Schaller	esaal\.me
 1694690988	cigien	enablex(?!\.io)
 1694693987	Jeff Schaller	xyz\.in
+1694697713	Makyen	snetzweb(?!\.com(?<=snetzweb\.com))(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
