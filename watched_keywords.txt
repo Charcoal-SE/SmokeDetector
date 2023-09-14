@@ -53001,3 +53001,4 @@
 1694699978	Jeff Schaller	mobizealapps\.com
 1694709074	Makyen	usmoneymonk\.com
 1694709100	Makyen	us[\W_]*+money[\W_]*+monk(?!\.com(?<=usmoneymonk\.com))
+1694709125	Makyen	djobzy\.com
