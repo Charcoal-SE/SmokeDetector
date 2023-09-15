@@ -33567,7 +33567,6 @@
 1637159721	Ollie	webmatics\.com
 1637160057	Ollie	simpletips\.net
 1637160578	Ollie	networkerstechnology\.com
-1637160689	Ollie	openteqgroup\.com
 1637160932	Ollie	alreham\.com
 1637161874	cigien	188\.166\.207\.181
 1637162044	cigien	dailymagazinenews\.com
