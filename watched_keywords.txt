@@ -53010,3 +53010,4 @@
 1694756382	Dragonrage	fanzillajackets\.com
 1694763190	cigien	citdm2310\.com
 1694763356	cigien	fanzilla(?:[\W_]*+jackets)?+(?!\.com(?<=fanzillajackets\.com))
+1694763753	cigien	journals\.telkomuniversity\.ac\.id
