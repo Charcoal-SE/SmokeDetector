@@ -53012,3 +53012,4 @@
 1694763753	cigien	journals\.telkomuniversity\.ac\.id
 1694765244	Dragonrage	influence\.co
 1694766060	cigien	bloggingheros\.com
+1694766130	cigien	zingmind(?!\.com)
