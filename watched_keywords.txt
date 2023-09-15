@@ -53019,3 +53019,4 @@
 1694766904	cigien	blog\.eigyo\.co\.jp
 1694767053	cigien	shinearmor\.com
 1694767088	cigien	whidegroup\.com
+1694767119	cigien	buggydesert\.com
