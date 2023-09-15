@@ -53009,3 +53009,4 @@
 1694729133	Jeff Schaller	dataddo\.com
 1694756382	Dragonrage	fanzillajackets\.com
 1694763190	cigien	citdm2310\.com
+1694763356	cigien	fanzilla(?:[\W_]*+jackets)?+(?!\.com(?<=fanzillajackets\.com))
