@@ -53014,3 +53014,4 @@
 1694766060	cigien	bloggingheros\.com
 1694766130	cigien	zingmind(?!\.com)
 1694766328	cigien	qiaobao\.com
+1694766604	cigien	ag[\W_]*+consulting(?!\.in(?<=agconsulting\.in))
