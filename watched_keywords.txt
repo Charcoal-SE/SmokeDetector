@@ -53022,3 +53022,4 @@
 1694767119	cigien	buggydesert\.com
 1694767191	cigien	shaffak(?!\.com)
 1694770509	cigien	mechanicaltalks\.wiki
+1694773447	Jeff Schaller	gleantap\.com
