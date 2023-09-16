@@ -53039,3 +53039,4 @@
 1694837664	Makyen	mikeslavinauthor\.com
 1694837685	Makyen	open[\W_]*+appsec(?!\.io(?<=openappsec\.io))
 1694815363	Jesse	openappsec\.io
+1694838967	Dragonrage	rozagas\.com
