@@ -53074,3 +53074,4 @@
 1694891393	cigien	pushpaganan\.home\.blog
 1694891481	cigien	onlinewebsitecopier\.com
 1694891552	cigien	(?-i:H9MBtt80PNE)(?#youtube)
+1694891651	cigien	roza[\W_]*+gas(?!\.com(?<=rozagas\.com))
