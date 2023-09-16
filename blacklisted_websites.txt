@@ -5373,3 +5373,4 @@ visactor\.io
 90minsport\.live
 openteqgroup\.com
 teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+\b(?<![^\W_]-)ello\.co(?![.-][^\W_])(?!, )\b
