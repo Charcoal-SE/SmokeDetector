@@ -7800,7 +7800,6 @@
 1551957338	Shree	vocational-courses\.co\.in
 1552021869	Makyen	themarketingheaven\.com
 1552022931	tripleee	zohosites
-1552022984	tripleee	home\.blog
 1552023014	tripleee	podbean\.com(?<!\bapi\.podbean\.com)(?<!\bdevelopers\.podbean\.com)(?<!\bmcdn\.podbean\.com)(?<!\bhelp\.podbean\.com)(?<!\bwww\.podbean\.com)(?<!\bbridgetown\.podbean\.com)(?<!\bplaylist\.podbean\.com)(?<!\bfeed\.podbean\.com)
 1552023040	tripleee	classtell\.com
 1552024571	tripleee	fusiontechnology\.in
