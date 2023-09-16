@@ -53037,3 +53037,4 @@
 1694796684	Jeff Schaller	gsmasifkhan\.com
 1694822553	Jeff Schaller	hi\.tech(recovery01)?
 1694837664	Makyen	mikeslavinauthor\.com
+1694837685	Makyen	open[\W_]*+appsec(?!\.io(?<=openappsec\.io))
