@@ -2447,7 +2447,6 @@ lukaynakliyat\.com
 moneyonlineinvestment\.com
 careerjobs360\.in
 supplement2trend\.com
-\b(?<![^\W_]-)ello\.co(?![.-][^\W_])\b
 ttlink\.com
 samuraipaper\.com
 nutrahygiene\.com
