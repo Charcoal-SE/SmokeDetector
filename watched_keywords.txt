@@ -53069,3 +53069,4 @@
 1694890203	cigien	piotex(?!\.in)
 1694890466	cigien	vestel[\W_]*+telecom[\W_]*+services
 1694890513	cigien	corehardware\.co\.in
+1694890664	cigien	blog\.vcclhosting\.com
