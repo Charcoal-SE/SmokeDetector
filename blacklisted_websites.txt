@@ -2648,7 +2648,6 @@ creative-biolabs\.com
 4cashpath\.com
 jobsday3\.com
 pillsa\.com
-teespring\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 JPG4PNG\.COM
 healthsupplementt\.com
 cheyat\.com
