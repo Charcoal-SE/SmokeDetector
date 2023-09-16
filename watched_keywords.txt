@@ -53075,3 +53075,4 @@
 1694891552	cigien	(?-i:H9MBtt80PNE)(?#youtube)
 1694891651	cigien	roza[\W_]*+gas(?!\.com(?<=rozagas\.com))
 1694891943	cigien	hi\.tech(?:recovery01)?
+1694892267	cigien	(?-i:Ee6gj0YmpMM)(?#youtu.be)
