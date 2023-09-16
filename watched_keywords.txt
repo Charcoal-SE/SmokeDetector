@@ -53067,3 +53067,4 @@
 1694889798	cigien	codesigningsolution\.com
 1694889834	cigien	podcasters\.spotify\.com
 1694890203	cigien	piotex(?!\.in)
+1694890466	cigien	vestel[\W_]*+telecom[\W_]*+services
