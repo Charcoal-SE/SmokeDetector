@@ -53051,3 +53051,4 @@
 1694862466	Jeff Schaller	articlejunkie\.in
 1694863118	Jeff Schaller	healthystripe\.com
 1694863258	Jeff Schaller	fatnfix\.com
+1694864704	Jeff Schaller	bitsdujour\.com
