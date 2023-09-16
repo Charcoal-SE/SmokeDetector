@@ -5373,3 +5373,4 @@ visactor\.io
 openteqgroup\.com
 teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 \b(?<![^\W_]-)ello\.co(?![.-][^\W_])(?!, )\b
+wfmj\.com/story/(?!45079892)
