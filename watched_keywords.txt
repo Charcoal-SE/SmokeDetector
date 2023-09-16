@@ -53072,3 +53072,4 @@
 1694891203	cigien	the[\W_]*+leather[\W_]*+sensations(?!\.com(?<=theleathersensations\.com))
 1694891370	cigien	home\.blog(?<!pushpaganan\.home\.blog)
 1694891393	cigien	pushpaganan\.home\.blog
+1694891481	cigien	onlinewebsitecopier\.com
