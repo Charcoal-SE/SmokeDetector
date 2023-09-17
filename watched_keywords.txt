@@ -53087,3 +53087,4 @@
 1694975598	cigien	hdmovieshouse\.com
 1694976030	cigien	gokutoapk\.top
 1694977830	cigien	quiclekha\.com
+1694978032	cigien	eduhub21(?!\.com)
