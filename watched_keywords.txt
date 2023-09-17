@@ -53089,3 +53089,4 @@
 1694977830	cigien	quiclekha\.com
 1694978032	cigien	eduhub21(?!\.com)
 1694978279	cigien	luadec\.metaworm\.site
+1694978854	cigien	evidencebasedacupuncture\.org
