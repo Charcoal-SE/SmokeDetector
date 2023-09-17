@@ -53089,3 +53089,4 @@
 1694978032	cigien	eduhub21(?!\.com)
 1694978279	cigien	luadec\.metaworm\.site
 1694978854	cigien	evidencebasedacupuncture\.org
+1694979040	cigien	pkv(?![\W_]*+games)
