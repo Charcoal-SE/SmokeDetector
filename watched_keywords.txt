@@ -53092,3 +53092,4 @@
 1694979040	cigien	pkv(?![\W_]*+games)
 1694981369	Makyen	hd[\W_]*+movies[\W_]*+house(?!\.com(?<=hdmovieshouse\.com))
 1694984484	cigien	javadzone\.com
+1694984969	Makyen	javadzone(?!\.com)
