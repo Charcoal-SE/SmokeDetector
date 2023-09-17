@@ -53090,3 +53090,4 @@
 1694978279	cigien	luadec\.metaworm\.site
 1694978854	cigien	evidencebasedacupuncture\.org
 1694979040	cigien	pkv(?![\W_]*+games)
+1694981369	Makyen	hd[\W_]*+movies[\W_]*+house(?!\.com(?<=hdmovieshouse\.com))
