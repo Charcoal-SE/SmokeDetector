@@ -2518,7 +2518,6 @@ nutrition4deal\.com
 jumblesolver\.online
 machomanhealth\.com
 cryptoexchangescript\.com
-\.(?:hop|pay)\.clickbank\.net(?<!example\.(?:hop|pay)\.clickbank\.net)(?!.*?</?code>)
 bullguard-support\.co\.uk
 //v\.ht
 \b(?<![^\W_]-)cutt\.us(?![.-][^\W_])\b
