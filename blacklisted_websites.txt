@@ -5373,3 +5373,4 @@ teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 wfmj\.com/story/(?!45079892)
 heylink\.me/
 shrinke\.me(?!/QTEl)
+elsner\.com(?!/magento-extension/paytrace-payment-gateway-magento-2-paytrace)
