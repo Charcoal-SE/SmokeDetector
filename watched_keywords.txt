@@ -53099,3 +53099,4 @@
 1695019864	Dragonrage	appinnovix\.com
 1695019994	Dragonrage	suara77\.xn--6frz82g
 1695022469	cigien	amyl[\W_]*+guard
+1695022841	cigien	appinnovix(?!\.com)
