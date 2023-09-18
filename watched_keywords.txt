@@ -53101,3 +53101,4 @@
 1695022841	cigien	appinnovix(?!\.com)
 1695023227	cigien	wpminds\.com
 1695029170	cigien	hasacon\.com
+1695029202	cigien	hasacon\.vn
