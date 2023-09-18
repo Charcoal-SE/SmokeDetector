@@ -4338,7 +4338,9 @@ items:
 - ns: hoststage.net.
 - ns: orderbox-dns.com.
 - ns: serverhost.name.
-- ns: yosif.xyz.
+- comment: NXDOMAIN 2023-09-18
+  disable: true
+  ns: yosif.xyz.
 - comment: 4/120 over 10 months 2022-11-03
   disable: true
   ns: bodis.com.
