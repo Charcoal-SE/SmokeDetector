@@ -53110,3 +53110,4 @@
 1695037518	Nick	hillandfriends\.com
 1695044670	cigien	conceptinero\.com
 1695044693	cigien	conceptinero(?!\.com)
+1695045500	cigien	xoso\.love
