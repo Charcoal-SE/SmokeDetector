@@ -53093,3 +53093,4 @@
 1694981369	Makyen	hd[\W_]*+movies[\W_]*+house(?!\.com(?<=hdmovieshouse\.com))
 1694984484	cigien	javadzone\.com
 1694984969	Makyen	javadzone(?!\.com)
+1695007012	Jesse	chuxueyun\.com
