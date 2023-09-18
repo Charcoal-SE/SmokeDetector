@@ -5375,3 +5375,4 @@ shrinke\.me(?!/QTEl)
 elsner\.com(?!/magento-extension/paytrace-payment-gateway-magento-2-paytrace)
 \.(?:hop|pay)\.clickbank\.net(?<!example\.(?:hop|pay)\.clickbank\.net)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 ecocleansepros\.com
+limeup\.io
