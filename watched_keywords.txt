@@ -53122,3 +53122,4 @@
 1695078908	Makyen	5dc41d5b6d60d\.site123\.me
 1695078940	Makyen	goodhealthherbalfoundation1(?:@gmail\.com)?
 1695078982	Makyen	realfakeidking\.com
+1695079999	Makyen	mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
