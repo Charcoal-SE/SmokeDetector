@@ -53100,3 +53100,4 @@
 1695022469	cigien	amyl[\W_]*+guard
 1695022841	cigien	appinnovix(?!\.com)
 1695023227	cigien	wpminds\.com
+1695029170	cigien	hasacon\.com
