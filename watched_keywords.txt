@@ -53124,3 +53124,4 @@
 1695078982	Makyen	realfakeidking\.com
 1695079999	Makyen	mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
 1695082310	Jesse	privateequity\.dev
+1695085860	Makyen	sweetwinsprizes\.info
