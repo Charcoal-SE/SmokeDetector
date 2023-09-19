@@ -5377,3 +5377,4 @@ elsner\.com(?!/magento-extension/paytrace-payment-gateway-magento-2-paytrace)
 ecocleansepros\.com
 limeup\.io
 mocardine\.com
+brollyacademy\.com
