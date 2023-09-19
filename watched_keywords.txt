@@ -53130,3 +53130,4 @@
 1695093773	Makyen	(?-i:idfofficial)(?#t.me)
 1695095702	Nick	myeducationwire\.com
 1695095762	Makyen	my[\W_]*+education[\W_]*+wire(?!\.com(?<=myeducationwire\.com))
+1695108371	cigien	asthaayurveda\.in
