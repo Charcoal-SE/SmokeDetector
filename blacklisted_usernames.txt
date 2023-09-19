@@ -948,3 +948,4 @@ zoomcar India
 (?-i:^Vezlay Foods Pvt\. Ltd\.$)
 (?-i:^Malik Abdullah$)
 (?-i:^Samum Sk$)
+(?-i:^Eco Cleans$)
