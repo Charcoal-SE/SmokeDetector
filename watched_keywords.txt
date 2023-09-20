@@ -53170,3 +53170,4 @@
 1695195429	cigien	bio[\W_]*+one[\W_]*+fibreglass(?!\.com(?<=bioonefibreglass\.com))
 1695195583	cigien	jalandharescorts\.com
 1695195792	cigien	growthwork\.co
+1695195892	cigien	leanbiomeoffernow\.blogspot
