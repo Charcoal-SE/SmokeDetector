@@ -53167,3 +53167,4 @@
 1695195040	cigien	buyhearingaid\.com
 1695195370	cigien	bioonefibreglass\.com
 1695195394	cigien	fibermurah\.com
+1695195429	cigien	bio[\W_]*+one[\W_]*+fibreglass(?!\.com(?<=bioonefibreglass\.com))
