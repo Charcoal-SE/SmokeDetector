@@ -53168,3 +53168,4 @@
 1695195370	cigien	bioonefibreglass\.com
 1695195394	cigien	fibermurah\.com
 1695195429	cigien	bio[\W_]*+one[\W_]*+fibreglass(?!\.com(?<=bioonefibreglass\.com))
+1695195583	cigien	jalandharescorts\.com
