@@ -53186,3 +53186,4 @@
 1695217649	cigien	(?-i:kreas_coder)(?#t.me)
 1695217742	cigien	askmequora\.com
 1695218110	cigien	memory4less\.com
+1695218709	cigien	techspyhackerpro(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
