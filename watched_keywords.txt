@@ -53185,3 +53185,4 @@
 1695217622	cigien	scholarlyhelp\.com
 1695217649	cigien	(?-i:kreas_coder)(?#t.me)
 1695217742	cigien	askmequora\.com
+1695218110	cigien	memory4less\.com
