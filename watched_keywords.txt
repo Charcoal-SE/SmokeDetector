@@ -53191,3 +53191,4 @@
 1695200464	Nick	agencygdt\.com
 1695219268	cigien	skinwhitening\.pk
 1695219291	cigien	skin[\W_]*+whitening(?!\.pk(?<=skinwhitening\.pk))
+1695219882	Nick	myweddingmag\.co\.nz
