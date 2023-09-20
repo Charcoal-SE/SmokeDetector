@@ -20672,7 +20672,6 @@
 1593683447	tripleee	codeo(?!token\.com|wallet\.online)[\W_]*?(?:token|wallet)
 1593683463	tripleee	codeotoken\.com
 1593683480	tripleee	codeowallet\.online
-1593688815	tripleee	ory\.sh
 1593688970	tripleee	benfocomplete\.com
 1593689031	tripleee	vfx[\W_]*+(?:college|degree|training|institutes)s?
 1593692689	tripleee	zlovema(?# medium.com)
