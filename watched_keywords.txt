@@ -53190,3 +53190,4 @@
 1695198092	Nick	techurp\.com
 1695200464	Nick	agencygdt\.com
 1695219268	cigien	skinwhitening\.pk
+1695219291	cigien	skin[\W_]*+whitening(?!\.pk(?<=skinwhitening\.pk))
