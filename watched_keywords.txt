@@ -53197,3 +53197,4 @@
 1695224138	cigien	hash[\W_]*+clinics(?!\.pk(?<=hashclinics\.pk))
 1695224217	cigien	sigmakeyapk\.pro
 1695224588	Can O' Spam	(?-i:4MW2TO3UTYLCJ1)(?#wa.me)
+1695228308	Makyen	hyderabadlaserdentistry\.com
