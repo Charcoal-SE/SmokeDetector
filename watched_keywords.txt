@@ -53201,3 +53201,4 @@
 1695228345	Makyen	aifinder(?!\.in)
 1695229532	Jeff Schaller	smartsolvify\.com
 1695232651	Jeff Schaller	kjotvewrites\.com
+1695232702	Jesse	frpcare\.com
