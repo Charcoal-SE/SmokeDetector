@@ -53195,3 +53195,4 @@
 1695221254	Can O' Spam	khelplus\.com
 1695222132	Can O' Spam	pipquantum\.com
 1695224138	cigien	hash[\W_]*+clinics(?!\.pk(?<=hashclinics\.pk))
+1695224217	cigien	sigmakeyapk\.pro
