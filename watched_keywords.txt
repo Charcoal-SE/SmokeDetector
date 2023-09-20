@@ -53161,7 +53161,6 @@
 1695162809	Jesse	leadssplash\.com
 1695147337	Jesse	hashclinics\.pk
 1695175180	Jeff Schaller	prowebdevelopment\.co
-1695147630	Jesse	hash[\W_]*+clinic
 1695174802	Jesse	paragchapre\.com
 1695191231	cocomac	ebizfiling\.com
 1695195040	cigien	buyhearingaid\.com
