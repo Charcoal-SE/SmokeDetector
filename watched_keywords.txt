@@ -53192,3 +53192,4 @@
 1695219268	cigien	skinwhitening\.pk
 1695219291	cigien	skin[\W_]*+whitening(?!\.pk(?<=skinwhitening\.pk))
 1695219882	Nick	myweddingmag\.co\.nz
+1695221254	Can O' Spam	khelplus\.com
