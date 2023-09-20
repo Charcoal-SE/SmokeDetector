@@ -53205,3 +53205,4 @@
 1695232796	Makyen	frp[\W_]*+care(?!\.com(?<=frpcare\.com))
 1695232950	Jesse	kamagrabestellenonline\.com
 1695233105	Jeff Schaller	swastikholiday\.com
+1695251161	Makyen	casinosanalyzer\.ca
