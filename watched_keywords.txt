@@ -14914,7 +14914,6 @@
 1577706676	Glorfindel	plus-roku\.com
 1577706785	Glorfindel	hulu-plus\.net
 1577706835	Glorfindel	officeplus\.us\.com
-1577706882	double-beep	directmacro\.com
 1577706899	Glorfindel	avg\.com.?retail
 1577709343	tripleee	ambitionbox\.com
 1577709363	tripleee	sitejabber\.com
