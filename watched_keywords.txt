@@ -53214,3 +53214,4 @@
 1695273144	Makyen	elitespyhackers(?:@gmail\.com)?
 1695278993	cigien	fulllancers\.com
 1695279028	cigien	full[\W_]*+lancers?+(?!\.com(?<=fulllancers\.com))
+1695279056	cigien	jamshrsolutions\.com
