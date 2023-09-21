@@ -53210,3 +53210,4 @@
 1695251393	Makyen	mamaneedsaproject\.com
 1695272664	Makyen	ketocontrol\.org
 1695272687	Makyen	controlket26982(?#twitter.com)
+1695272748	Makyen	keto[\W_]*+control(?!\.org(?<=ketocontrol\.org))(?:[\W_]*+(?:s|client|overviews|capsule|\d++|[\da-f]{5,}+)s?)*
