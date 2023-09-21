@@ -53239,3 +53239,4 @@
 1695292140	Jeff Schaller	dreamzonedehradun\.com
 1695295758	Can O' Spam	lauraingrahamcbdgummiesreviewsusa
 1695303051	Makyen	ravzon\.com
+1695303076	Makyen	ravzon(?!\.com)
