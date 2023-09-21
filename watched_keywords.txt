@@ -53220,3 +53220,4 @@
 1695279171	cigien	leadsmails\.com
 1695279195	cigien	leadsmails(?!\.com)
 1695279218	cigien	webasha(?!\.com)
+1695279241	cigien	ulaproxy\.com
