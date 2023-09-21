@@ -53218,3 +53218,4 @@
 1695279109	cigien	walla\.my
 1695279132	cigien	lifeiptv\.store
 1695279171	cigien	leadsmails\.com
+1695279195	cigien	leadsmails(?!\.com)
