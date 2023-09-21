@@ -53229,3 +53229,4 @@
 1695262846	Jesse	doodlebaseball\.io
 1695281054	cigien	americajackets(?!\.com)
 1695281219	cigien	indiait360\.com
+1695281246	cigien	indiait360(?!\.com)
