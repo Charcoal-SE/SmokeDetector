@@ -2883,4 +2883,3 @@ ghostrifles\.com/\w
 muckrack\.com/\w
 puppy\W*+bowl(?#the usual underscore seen with \W would pick up 3 FP)
 visactor(?!\.io)
-umzugsunternehmen(?!-meyer\.de)
