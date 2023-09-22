@@ -53259,3 +53259,4 @@
 1695368234	cigien	advance[\W_]*+apparels(?!\.com(?<=advanceapparels\.com))
 1695368261	cigien	elevatemagazine\.co\.nz
 1695368296	cigien	elevate[\W_]*+magazine(?!\.co\.nz(?<=elevatemagazine\.co\.nz))
+1695368415	cigien	doglikesbest\.com
