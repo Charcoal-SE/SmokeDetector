@@ -53273,3 +53273,4 @@
 1695382285	cigien	total[\W_]*+classified(?!\.ca(?<=totalclassified\.ca))
 1695380093	Can O' Spam	ityug247\.com
 1695382687	cigien	re[\W_]*+imaging[\W_]*+sc(?!\.com(?<=reimagingsc\.com))
+1695383013	cigien	khelraja(?!\.com)
