@@ -34241,7 +34241,6 @@
 1639476543	Makyen	lauftech\.de
 1639477288	tripleee	(?-i:^Amira Mahasin$)
 1639477939	tripleee	exerror\.com
-1639479965	tripleee	chikucab\.com
 1639480434	tripleee	luxury[\W_]*+brand[\W_]*+management
 1639480701	tripleee	mona[\W_]*+lisa[\W_]*+joseph
 1639480895	tripleee	FOBGOODS\.COM
