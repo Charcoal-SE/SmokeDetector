@@ -53281,3 +53281,4 @@
 1695398333	Jeff Schaller	tvmon\.one
 1695399128	Ryan M	umbrelly\.cloud
 1695399163	Ryan M	umbrelly[\W_]*+cloud(?<!umbrelly\.cloud)
+1695414271	Jeff Schaller	pieces-auto-maroc1\.blogspot
