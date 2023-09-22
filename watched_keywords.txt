@@ -53274,3 +53274,4 @@
 1695380093	Can O' Spam	ityug247\.com
 1695382687	cigien	re[\W_]*+imaging[\W_]*+sc(?!\.com(?<=reimagingsc\.com))
 1695383013	cigien	khelraja(?!\.com)
+1695383054	cigien	flokii\.com
