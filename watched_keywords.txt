@@ -53276,3 +53276,4 @@
 1695383013	cigien	khelraja(?!\.com)
 1695383054	cigien	flokii\.com
 1695388527	Jeff Schaller	we-matter\.com
+1695389194	Makyen	w[\W_]*+e[\W_]*+matter(?!\.com(?<=we-matter\.com))
