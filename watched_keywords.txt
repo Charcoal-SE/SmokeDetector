@@ -53257,3 +53257,4 @@
 1695368106	cigien	yellowstonejacketco\.com
 1695368199	cigien	advanceapparels\.com
 1695368234	cigien	advance[\W_]*+apparels(?!\.com(?<=advanceapparels\.com))
+1695368261	cigien	elevatemagazine\.co\.nz
