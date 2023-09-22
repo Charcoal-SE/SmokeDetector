@@ -5381,3 +5381,4 @@ brollyacademy\.com
 zalo\.me
 directmacro\.com
 visasimple\.com
+flappy-bird\.co
