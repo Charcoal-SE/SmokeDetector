@@ -53256,3 +53256,4 @@
 1695368072	cigien	codingspell\.com
 1695368106	cigien	yellowstonejacketco\.com
 1695368199	cigien	advanceapparels\.com
+1695368234	cigien	advance[\W_]*+apparels(?!\.com(?<=advanceapparels\.com))
