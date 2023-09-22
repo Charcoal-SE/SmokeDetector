@@ -53250,3 +53250,4 @@
 1695337775	Jesse	techradartimes\.com
 1695340759	Jeff Schaller	travelnoviza
 1695367975	cigien	gobusinesstips\.com
+1695367998	cigien	gobusinesstips(?!\.com)
