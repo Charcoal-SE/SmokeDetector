@@ -53278,3 +53278,4 @@
 1695388527	Jeff Schaller	we-matter\.com
 1695389194	Makyen	w[\W_]*+e[\W_]*+matter(?!\.com(?<=we-matter\.com))
 1695392295	Jeff Schaller	umzug-rostock-24\.de
+1695398333	Jeff Schaller	tvmon\.one
