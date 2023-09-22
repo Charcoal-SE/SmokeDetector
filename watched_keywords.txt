@@ -50679,7 +50679,6 @@
 1684313698	tripleee	shieldroofingonline\.com
 1684314316	tripleee	i8bet\.today
 1684316342	tripleee	(?-i:^Rimsha Victor Gill$)
-1684317762	tripleee	treecampus\.in
 1684317795	tripleee	theascent-group\.com
 1684318093	tripleee	tree[\W_]*campus(?!\.in(?<=treecampus\.in))(?<!(?-i:^Tree Campus$))
 1684318159	tripleee	genoffpotomac\.com
