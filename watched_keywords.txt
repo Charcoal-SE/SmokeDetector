@@ -53275,3 +53275,4 @@
 1695382687	cigien	re[\W_]*+imaging[\W_]*+sc(?!\.com(?<=reimagingsc\.com))
 1695383013	cigien	khelraja(?!\.com)
 1695383054	cigien	flokii\.com
+1695388527	Jeff Schaller	we-matter\.com
