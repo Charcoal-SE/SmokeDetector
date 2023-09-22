@@ -53261,3 +53261,4 @@
 1695368296	cigien	elevate[\W_]*+magazine(?!\.co\.nz(?<=elevatemagazine\.co\.nz))
 1695368415	cigien	doglikesbest\.com
 1695368491	cigien	projivni\.com
+1695368517	cigien	nevankids\.com
