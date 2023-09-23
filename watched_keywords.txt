@@ -53282,3 +53282,4 @@
 1695399128	Ryan M	umbrelly\.cloud
 1695399163	Ryan M	umbrelly[\W_]*+cloud(?<!umbrelly\.cloud)
 1695414271	Jeff Schaller	pieces-auto-maroc1\.blogspot
+1695431085	Jeff Schaller	researchomatic\.com
