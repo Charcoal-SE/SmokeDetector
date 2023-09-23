@@ -1021,7 +1021,6 @@ burnfatin4days\.com
 eye7\.in
 freecustomwritings\.com
 cyberservices[\W_]*+(?:do?t[\W_]*+)?com
-researchomatic\.com
 nutritionfit\.org
 oralhealthplus\.com
 supplementlab\.org
