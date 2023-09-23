@@ -53284,3 +53284,4 @@
 1695414271	Jeff Schaller	pieces-auto-maroc1\.blogspot
 1695431085	Jeff Schaller	researchomatic\.com
 1695431257	Jeff Schaller	microsoftofficesupport\.org
+1695431609	Jeff Schaller	bitcoincorewallet\.org
