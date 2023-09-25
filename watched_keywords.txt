@@ -53348,3 +53348,4 @@
 1695640815	cigien	oskar[\W_]*+jacket(?!\.com(?<=oskarjacket\.com))
 1695642386	Jeff Schaller	madhuridigital\.com
 1695642522	Jeff Schaller	textannotator\.com
+1695643840	Jeff Schaller	goit\.global
