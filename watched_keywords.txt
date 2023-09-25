@@ -53334,3 +53334,4 @@
 1695629604	cigien	fr4pcbs\.com
 1695630761	cigien	kiscol\.com
 1695630794	cigien	kiscol(?!\.com)
+1695630818	cigien	slideegg\.com
