@@ -53351,3 +53351,4 @@
 1695643840	Jeff Schaller	goit\.global
 1695646368	Jeff Schaller	goodycs\.com
 1695654281	cigien	sapibelradio[\W_]*+tv
+1695655130	cigien	kingroot-apk\.com
