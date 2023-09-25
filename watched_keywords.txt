@@ -53346,3 +53346,4 @@
 1695640701	cigien	leather[\W_]*+jacket[\W_]*+black(?!\.com(?<=leatherjacketblack\.com))
 1695640769	Jeff Schaller	oskarjacket\.com
 1695640815	cigien	oskar[\W_]*+jacket(?!\.com(?<=oskarjacket\.com))
+1695642386	Jeff Schaller	madhuridigital\.com
