@@ -53355,3 +53355,4 @@
 1695657854	cigien	labor[\W_]*+accommodation(?!\.ae(?<=laboraccommodation\.ae))
 1695658520	Jesse	lepusjeweller\.com
 1695659433	cigien	WarPortal\.org
+1695663421	cigien	tsvigo\.wordpress\.com
