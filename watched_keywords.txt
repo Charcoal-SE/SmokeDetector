@@ -53352,3 +53352,4 @@
 1695646368	Jeff Schaller	goodycs\.com
 1695654281	cigien	sapibelradio[\W_]*+tv
 1695655130	cigien	kingroot-apk\.com
+1695657854	cigien	labor[\W_]*+accommodation(?!\.ae(?<=laboraccommodation\.ae))
