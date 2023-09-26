@@ -53372,3 +53372,4 @@
 1695713710	cigien	maamitahara\.com
 1695715216	Nick	teo\.dk
 1695717813	cigien	infohensive\.com
+1695717837	cigien	pi[\W_]*+software(?!\.in(?<=pisoftware\.in))
