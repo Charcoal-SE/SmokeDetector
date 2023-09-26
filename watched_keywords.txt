@@ -53368,3 +53368,4 @@
 1695713230	cigien	loanindian\.in
 1695713394	cigien	eventcreate\.com
 1695713582	cigien	cosmopapers\.in
+1695713606	cigien	cosmopapers(?!\.in)
