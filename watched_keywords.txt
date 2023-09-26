@@ -53402,3 +53402,4 @@
 1695741276	VLAZ	dmh[\W]*tyres[\W]*llangefni
 1695751276	Jeff Schaller	cloudrcmsolutions\.com
 1695757284	Jeff Schaller	humanannotation\.com
+1695757586	Jeff Schaller	mapquest-directions\.io
