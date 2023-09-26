@@ -53379,3 +53379,4 @@
 1695720729	cigien	gonautika\.com
 1695720753	cigien	makruzz\.com
 1695720788	cigien	adventure[\W_]*+andaman(?!\.com(?<=adventureandaman\.com))
+1695720814	cigien	makruzz(?!\.com)
