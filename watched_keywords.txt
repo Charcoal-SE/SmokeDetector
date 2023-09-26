@@ -53364,3 +53364,4 @@
 1695699068	Ryan M	wordsmithcreations\.in
 1695704723	Nick	giasutainangxanh\.vn
 1695713164	cigien	gbinstaa\.com
+1695713193	cigien	eterior(?!\.in)
