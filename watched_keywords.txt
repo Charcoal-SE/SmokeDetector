@@ -53373,3 +53373,4 @@
 1695715216	Nick	teo\.dk
 1695717813	cigien	infohensive\.com
 1695717837	cigien	pi[\W_]*+software(?!\.in(?<=pisoftware\.in))
+1695720656	cigien	adventureandaman\.com
