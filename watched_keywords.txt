@@ -53405,3 +53405,4 @@
 1695757586	Jeff Schaller	mapquest-directions\.io
 1695765251	Jeff Schaller	chatgptlg\.com
 1695798534	Nick	chardhampackage\.com
+1695798813	cigien	chardham[\W_]*+package(?!\.com(?<=chardhampackage\.com))
