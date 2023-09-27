@@ -53407,3 +53407,4 @@
 1695798534	Nick	chardhampackage\.com
 1695798813	cigien	chardham[\W_]*+package(?!\.com(?<=chardhampackage\.com))
 1695796749	Nick	indidigital\.com
+1695799140	cigien	indidigital(?!\.com)
