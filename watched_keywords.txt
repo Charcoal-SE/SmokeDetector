@@ -53410,3 +53410,4 @@
 1695799140	cigien	indidigital(?!\.com)
 1695799164	cigien	vinsmoke\.in
 1695799241	cigien	tinyfishing\.co
+1695799196	Nick	tradersfind\.com
