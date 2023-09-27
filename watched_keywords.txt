@@ -53426,3 +53426,4 @@
 1695819995	Jeff Schaller	beautyglosy\.com
 1695816897	Nick	avisaservices\.com
 1695816177	Nick	data-bees\.com
+1695816103	Nick	truscholar\.io
