@@ -53412,3 +53412,4 @@
 1695799241	cigien	tinyfishing\.co
 1695799196	Nick	tradersfind\.com
 1695799453	cigien	tradersfind(?!\.com)
+1695786114	Jesse	scracked\.com
