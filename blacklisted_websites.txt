@@ -5380,3 +5380,4 @@ chikucab\.com
 nightangels\.in
 beslivetv\.online
 tudomuaban\.com
+beauty(?:skin|forever)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
