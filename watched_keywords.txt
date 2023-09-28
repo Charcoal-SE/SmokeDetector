@@ -53463,3 +53463,4 @@
 1695925026	Jeff Schaller	empireonecontactcenter\.com
 1695925077	Makyen	empire[\W_]*+one[\W_]*+contact[\W_]*+center(?!\.com(?<=empireonecontactcenter\.com))
 1695927507	Makyen	zupp\.io
+1695927538	Makyen	zuppio
