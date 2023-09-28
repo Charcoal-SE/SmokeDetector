@@ -1644,7 +1644,7 @@ hydralyft
 hydra[\W_]*+life
 viral[\W_]*+rx
 <a href="https://compitionpoint\.com/[^"]*+" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>(?#" syntax highlighting fodder)
-green[\W_]*+coffee(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano(?!\.in(?<=greencoffeegrano\.in))|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|\d++|[\da-f]{5,}+)s?)+
+green[\W_]*+coffee(?<!Green, Coffee)(?:[\W_]*+(?:5k|diet|extract|bean(?!s\b)|max|grano(?!\.in(?<=greencoffeegrano\.in))|price|lean|cleanse|great|zt|essence|review|g3000|workouts|now|180)s?)+(?<!(?-i:green coffee bean))
 waist\.click
 gracinia
 (?:k\d[\W_]*+)?slim[\W_]*+keto
