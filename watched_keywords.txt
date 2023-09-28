@@ -53438,3 +53438,4 @@
 1695883450	Nick	matrubharti\.com
 1695883493	Nick	netjara\.com
 1695883524	Nick	expertittouch\.com
+1695886822	cigien	expert[\W_]*+it[\W_]*+touch(?!\.com(?<=expertittouch\.com))
