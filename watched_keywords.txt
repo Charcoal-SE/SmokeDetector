@@ -53461,3 +53461,4 @@
 1695919275	Jeff Schaller	appleexplainer\.com
 1695924338	Makyen	sourceforge\.net/projects/live-cd-with-zerofree[\w-]*
 1695925026	Jeff Schaller	empireonecontactcenter\.com
+1695925077	Makyen	empire[\W_]*+one[\W_]*+contact[\W_]*+center(?!\.com(?<=empireonecontactcenter\.com))
