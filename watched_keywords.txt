@@ -53440,3 +53440,4 @@
 1695883524	Nick	expertittouch\.com
 1695886822	cigien	expert[\W_]*+it[\W_]*+touch(?!\.com(?<=expertittouch\.com))
 1695880035	VLAZ	priceblaze\.com
+1695873821	Jesse	cytotec-medellin\.com\.co
