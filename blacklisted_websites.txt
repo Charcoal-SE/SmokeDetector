@@ -2513,7 +2513,6 @@ bullguard-support\.co\.uk
 //v\.ht
 \b(?<![^\W_]-)cutt\.us(?![.-][^\W_])\b
 easyprintersupport\.com
-techjockey\.com
 usahealthcart[\W_]*+com
 growth4uhealth\.com
 healthysupplementstalk\.com
