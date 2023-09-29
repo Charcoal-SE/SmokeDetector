@@ -53472,3 +53472,4 @@
 1695961461	Makyen	ms[\W_]*+it[\W_]*+park(?!\.org(?<=msitpark\.org))
 1695966795	VLAZ	slglegal\.in
 1695970928	Dragonrage	dovesofttech\.io
+1695973394	cigien	securiumacademy\.com
