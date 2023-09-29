@@ -53486,3 +53486,4 @@
 1695981955	VLAZ	Manasa[\W]*Defence[\W*]Academy
 1695982234	Dragonrage	justtravo\.com
 1695983278	VLAZ	buildandrenovate\.co\.nz
+1695983703	Jeff Schaller	bigscal\.com
