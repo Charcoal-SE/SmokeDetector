@@ -53490,3 +53490,4 @@
 1695986835	Dragonrage	rulzbreak\.com
 1695987256	cigien	all[\W_]*+assignment[\W_]*+experts(?!\.com(?<=allassignmentexperts\.com))
 1695987907	cigien	wanderwisetech\.com
+1695987940	cigien	wanderwisetech(?!\.com)
