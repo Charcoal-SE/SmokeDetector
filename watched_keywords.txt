@@ -49488,7 +49488,6 @@
 1681213431	Glorfindel	dailyringtones\.net
 1681215635	tripleee	brianscrabs\.cm
 1681216455	tripleee	(?-i:^jacksparow$)
-1681216971	Makyen	fern[\W_]*+tree[\W_]*+resort
 1681225880	Jeff Schaller	umj\.ac\.id
 1681226659	Spevacus	routersnetwork\.com
 1681231563	tripleee	appwarstechnologies\.com
