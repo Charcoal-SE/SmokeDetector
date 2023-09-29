@@ -53469,3 +53469,4 @@
 1695938819	Jeff Schaller	simplish\.org
 1695949178	Makyen	(?-i:GaB1aWv4rQs)(?#youtu.be)
 1695961439	Makyen	msitpark\.org
+1695961461	Makyen	ms[\W_]*+it[\W_]*+park(?!\.org(?<=msitpark\.org))
