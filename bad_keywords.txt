@@ -2886,3 +2886,4 @@ visactor(?!\.io)
 umzugsunternehmen(?!-meyer\.de)(?!\.de(?<=oberhausen-umzugsunternehmen\.de))
 chiku[\W_]*+cab(?!\.com(?<=chikucab\.com))
 ∜Ø,506129535
+earndriver\.today\/[\W\w]{1,200}?(?:driver|uber)\w*+(?#Abuse the keyword blacklist for more weight on these)
