@@ -53474,3 +53474,4 @@
 1695970928	Dragonrage	dovesofttech\.io
 1695973394	cigien	securiumacademy\.com
 1695973428	cigien	securium[\W_]*+academy(?!\.com(?<=securiumacademy\.com))
+1695973629	cigien	oforonightclub\.com
