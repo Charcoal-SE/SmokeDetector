@@ -53489,3 +53489,4 @@
 1695984967	Jeff Schaller	go-oman\.com
 1695986835	Dragonrage	rulzbreak\.com
 1695987256	cigien	all[\W_]*+assignment[\W_]*+experts(?!\.com(?<=allassignmentexperts\.com))
+1695987573	Adrian Mole	wanderwisetech
