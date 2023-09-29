@@ -45925,7 +45925,6 @@
 1672641769	tripleee	dunotech\.com
 1672642744	cocomac	helpmyassignments\.co\.uk
 1672646191	Suraj Rao	mudanzer\.es
-1672647756	tripleee	quickwayinfosystems\.com
 1672647788	tripleee	appliedwatermidwest\.com
 1672647823	tripleee	microfiber[\W_]*+(?:cleaning[\W_]*+)?cloth
 1672648372	tripleee	rakhi[\W_]*+gifts?

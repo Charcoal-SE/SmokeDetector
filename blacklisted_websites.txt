@@ -5379,3 +5379,4 @@ tudomuaban\.com
 beauty(?:skin|forever)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
 techjockey\.com(?<!developers\.google\.com/speed/pagespeed/insights/\?url=http%3A%2F%2Fwww\.techjockey\.com)
 earndriver\.today
+quickwayinfosystems\.com
