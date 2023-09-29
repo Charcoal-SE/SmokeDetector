@@ -2886,3 +2886,4 @@ visactor(?!\.io)
 umzugsunternehmen(?!-meyer\.de)(?!\.de(?<=oberhausen-umzugsunternehmen\.de))
 chiku[\W_]*+cab(?!\.com(?<=chikucab\.com))
 earndriver\.today\/.*uber.*driver
+∜Ø,506129535
