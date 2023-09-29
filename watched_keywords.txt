@@ -53476,3 +53476,4 @@
 1695973428	cigien	securium[\W_]*+academy(?!\.com(?<=securiumacademy\.com))
 1695973629	cigien	oforonightclub\.com
 1695969250	VLAZ	(?-i:zt-22r8o2f9j-U9VI0NzkglPaThJ3HezTUA)(?#slack invite)
+1695973762	Nick	3sgroups\.in
