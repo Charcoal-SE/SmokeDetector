@@ -53479,3 +53479,4 @@
 1695974244	cigien	resumeforrest\.com
 1695974268	cigien	resume[\W_]*+forrest(?!\.com(?<=resumeforrest\.com))
 1695974519	cigien	slg[\W_]*+legal(?!\.in(?<=slglegal\.in))
+1695975131	cigien	msitpark\.org
