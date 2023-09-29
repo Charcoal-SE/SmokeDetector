@@ -53493,3 +53493,4 @@
 1695989470	cigien	Manasa[\W_]*+Defence[\W_]*+Academy
 1695999306	Makyen	earndriver\.today(?<=earndriver\.today)(?#Abuse the watchlist to get an additional detection on these)
 1695999549	Jeff Schaller	Blackhathacker11[01]
+1696006608	cigien	hagen-umzugshelfer\.de
