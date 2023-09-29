@@ -53468,7 +53468,6 @@
 1695938671	Jeff Schaller	techinpost\.com
 1695938819	Jeff Schaller	simplish\.org
 1695949178	Makyen	(?-i:GaB1aWv4rQs)(?#youtu.be)
-1695961439	Makyen	msitpark\.org
 1695961461	Makyen	ms[\W_]*+it[\W_]*+park(?!\.org(?<=msitpark\.org))
 1695966795	VLAZ	slglegal\.in
 1695970928	Dragonrage	dovesofttech\.io
@@ -53480,4 +53479,3 @@
 1695974244	cigien	resumeforrest\.com
 1695974268	cigien	resume[\W_]*+forrest(?!\.com(?<=resumeforrest\.com))
 1695974519	cigien	slg[\W_]*+legal(?!\.in(?<=slglegal\.in))
-1695960238	Nick	msitpark\.org
