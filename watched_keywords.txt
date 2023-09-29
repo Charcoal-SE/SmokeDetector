@@ -53492,3 +53492,4 @@
 1695987940	cigien	wanderwisetech(?!\.com)
 1695989470	cigien	Manasa[\W_]*+Defence[\W_]*+Academy
 1695999306	Makyen	earndriver\.today(?<=earndriver\.today)(?#Abuse the watchlist to get an additional detection on these)
+1695999549	Jeff Schaller	Blackhathacker11[01]
