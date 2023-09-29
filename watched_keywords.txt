@@ -53483,3 +53483,4 @@
 1695975869	cigien	ferntreeresort\.com
 1695975910	cigien	fern[\W_]*+tree[\W_]*+resorts?+(?!\.com(?<=ferntreeresort\.com))
 1695979942	cigien	akihi\.co\.in
+1695979968	cigien	akihi(?!\.co\.in)
