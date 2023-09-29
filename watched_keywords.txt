@@ -53482,7 +53482,6 @@
 1695975910	cigien	fern[\W_]*+tree[\W_]*+resorts?+(?!\.com(?<=ferntreeresort\.com))
 1695979942	cigien	akihi\.co\.in
 1695979968	cigien	akihi(?!\.co\.in)
-1695981955	VLAZ	Manasa[\W]*Defence[\W*]Academy
 1695982234	Dragonrage	justtravo\.com
 1695983278	VLAZ	buildandrenovate\.co\.nz
 1695983703	Jeff Schaller	bigscal\.com
