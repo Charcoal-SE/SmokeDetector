@@ -53471,3 +53471,4 @@
 1695961439	Makyen	msitpark\.org
 1695961461	Makyen	ms[\W_]*+it[\W_]*+park(?!\.org(?<=msitpark\.org))
 1695966795	VLAZ	slglegal\.in
+1695970928	Dragonrage	dovesofttech\.io
