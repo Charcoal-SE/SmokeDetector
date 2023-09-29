@@ -53481,3 +53481,4 @@
 1695975131	cigien	msitpark\.org
 1695975279	cigien	alien[\W_]*+wizbot
 1695975869	cigien	ferntreeresort\.com
+1695975910	cigien	fern[\W_]*+tree[\W_]*+resorts?+(?!\.com(?<=ferntreeresort\.com))
