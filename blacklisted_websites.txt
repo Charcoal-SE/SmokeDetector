@@ -3697,7 +3697,6 @@ essaypapers\.reviews
 eascertification\.com
 crypto-signals\.org
 globaltrustopedia\.com
-jsonformatting\.com
 camobear\.ca
 199\.192\.27\.100
 199\.192\.27\.121
