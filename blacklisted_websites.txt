@@ -5380,3 +5380,4 @@ techjockey\.com(?<!developers\.google\.com/speed/pagespeed/insights/\?url=http%3
 earndriver\.today
 quickwayinfosystems\.com
 sthint\.com
+jsonformatting\.com(?!/jsoncompare/)
