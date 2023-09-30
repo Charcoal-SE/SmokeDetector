@@ -53516,3 +53516,4 @@
 1696092109	Jesse	saadidesign\.com
 1696093282	Jeff Schaller	Apksmoon\.com
 1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1696102413	Jesse	quikanswers\.com
