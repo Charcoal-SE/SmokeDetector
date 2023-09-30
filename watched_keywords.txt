@@ -53512,3 +53512,4 @@
 1695845779	Vickel	privaterooms\.net
 1695835166	Jesse	onloadify\.com
 1696081871	Jeff Schaller	cybercrime\.emergency
+1696091792	Jeff Schaller	gemini\.com(?<!api\.gemini\.com)
