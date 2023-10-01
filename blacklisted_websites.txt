@@ -5381,4 +5381,3 @@ quickwayinfosystems\.com
 sthint\.com
 jsonformatting\.com(?!/jsoncompare/)
 boxing\.sportsoola\.com
-contently\.com
