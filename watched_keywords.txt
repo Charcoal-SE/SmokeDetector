@@ -53517,3 +53517,4 @@
 1696093282	Jeff Schaller	Apksmoon\.com
 1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1696102413	Jesse	quikanswers\.com
+1696121909	Jeff Schaller	blog\.learnmorecloud\.com
