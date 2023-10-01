@@ -53518,3 +53518,4 @@
 1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1696102413	Jesse	quikanswers\.com
 1696121909	Jeff Schaller	blog\.learnmorecloud\.com
+1696125010	Makyen	(?-i:bljik)(?#justpaste.it)
