@@ -53519,3 +53519,4 @@
 1696102413	Jesse	quikanswers\.com
 1696121909	Jeff Schaller	blog\.learnmorecloud\.com
 1696125010	Makyen	(?-i:bljik)(?#justpaste.it)
+1696125696	Makyen	(?-i:usamadevsecops)(?#upwork.com)
