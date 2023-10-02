@@ -5384,3 +5384,4 @@ boxing\.sportsoola\.com
 \.contently\.com
 biketoworkday\.us
 bapehoodie\.live
+temu\.com/s/\w+
