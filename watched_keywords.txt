@@ -53562,3 +53562,4 @@
 1696260145	Jeff Schaller	krompierlaw\.com
 1696261942	Jeff Schaller	beginnerjava\.com
 1696265795	cigien	ibex[\W_]*+packaging(?!\.com(?<=ibexpackaging\.com))
+1696265818	cigien	cbdpackagingstore\.com
