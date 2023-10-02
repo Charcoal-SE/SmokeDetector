@@ -53564,3 +53564,4 @@
 1696265795	cigien	ibex[\W_]*+packaging(?!\.com(?<=ibexpackaging\.com))
 1696265818	cigien	cbdpackagingstore\.com
 1696265910	cigien	medium\.grid\.is
+1696271373	Jesse	soronix\.com
