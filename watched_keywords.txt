@@ -53540,3 +53540,4 @@
 1696228206	cigien	labradoodlesbycucciolini\.ca
 1696229235	cigien	freelydocs\.com
 1696232147	Nick	aaconsultancy\.ae
+1696233400	cigien	d(?:octo)?r[\W_]*+sikama(?:@gmail\.com)?
