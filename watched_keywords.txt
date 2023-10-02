@@ -53556,3 +53556,4 @@
 1696245268	cigien	morsecodetranslator\.net
 1696245956	Jeff Schaller	willsdana40
 1696247501	cigien	weightlossunlocked\.blogspot
+1696252705	cigien	hexavideos(?!\.com)
