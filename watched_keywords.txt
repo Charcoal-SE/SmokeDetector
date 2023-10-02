@@ -53545,3 +53545,4 @@
 1696235494	cigien	reminimodsapk\.info
 1696235573	cigien	linkwellnodes\.io
 1696235721	cigien	carbongraphicsgroup\.com
+1696235744	cigien	carbon[\W_]*+graphics[\W_]*+group(?!\.com(?<=carbongraphicsgroup\.com))
