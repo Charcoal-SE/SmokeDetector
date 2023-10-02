@@ -53549,3 +53549,4 @@
 1696242280	cigien	perfectretouching\.com
 1696242550	cigien	sbsgenetech\.com
 1696242575	cigien	sbs[\W_]*+genetech(?!\.com(?<=sbsgenetech\.com))
+1696243406	cigien	forsan-pools\.com
