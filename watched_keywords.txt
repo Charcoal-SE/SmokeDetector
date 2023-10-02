@@ -53553,3 +53553,4 @@
 1696243440	cigien	strenuousblog\.com
 1696244516	cigien	lifeplusbd\.com
 1696244542	cigien	lifeplus[\W_]*+bd(?!\.com(?<=lifeplusbd\.com))
+1696245268	cigien	morsecodetranslator\.net
