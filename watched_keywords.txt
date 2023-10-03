@@ -53603,3 +53603,4 @@
 1696369786	Ryan M	shinyappstore\.com
 1696370052	Ryan M	rpkg\.net
 1696376812	Makyen	blacklordsociety(?:@gmail\.com)?
+1696376837	Makyen	black[\W_]*+lord[\W_]*+occult
