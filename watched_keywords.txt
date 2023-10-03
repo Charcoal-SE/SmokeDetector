@@ -53585,3 +53585,4 @@
 1696323946	Ryan M	bharulata\.com
 1696324434	Ryan M	thetoilethelper\.com
 1696324754	Ryan M	investkraft\.com
+1696324800	Ryan M	investkraft(?!\.com)
