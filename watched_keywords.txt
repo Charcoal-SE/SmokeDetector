@@ -53592,3 +53592,4 @@
 1696329679	Ryan M	digital[\W_]*+vishnu
 1696332963	Jeff Schaller	gettingoveritapks\.com
 1696335478	Jeff Schaller	downloadertwitter\.com
+1696338665	Jeff Schaller	bsetec\.com
