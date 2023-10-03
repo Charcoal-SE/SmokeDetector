@@ -53597,3 +53597,4 @@
 1696345006	Jeff Schaller	keyalocapital\.com
 1696353634	Jeff Schaller	nursfpx\.com
 1696360467	Jeff Schaller	forum2\.philippe-fournier-viger\.com
+1696360491	Jeff Schaller	coursera\.community
