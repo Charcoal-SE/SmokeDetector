@@ -53636,3 +53636,4 @@
 1696426392	cigien	telugu[\W_]*+swag(?!\.com(?<=teluguswag\.com))
 1696427841	Jeff Schaller	ekaro\.in
 1696427925	Jeff Schaller	hashblast\.co
+1696430977	cigien	fluentpro\.com
