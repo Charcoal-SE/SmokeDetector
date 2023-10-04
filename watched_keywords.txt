@@ -53634,3 +53634,4 @@
 1696426326	cigien	darkwebprogrammers\.wordpress\.com
 1696426364	cigien	teluguswag\.com
 1696426392	cigien	telugu[\W_]*+swag(?!\.com(?<=teluguswag\.com))
+1696427841	Jeff Schaller	ekaro\.in
