@@ -53605,3 +53605,4 @@
 1696376812	Makyen	blacklordsociety(?:@gmail\.com)?
 1696376837	Makyen	black[\W_]*+lord[\W_]*+occult
 1696398699	Dragonrage	fnafgame\.io
+1696400090	Dragonrage	gunsnglory\.com
