@@ -53644,3 +53644,4 @@
 1696451840	Makyen	mycarelabs\.com
 1696451863	Makyen	mycarelabs(?!\.com)
 1696271373	Jesse	soronix\.com
+1696314293	Nick	appsierra\.com
