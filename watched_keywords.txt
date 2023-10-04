@@ -53632,3 +53632,4 @@
 1696425311	Ian Campbell	aliaddons\.com
 1696426298	cigien	ali[\W_]*+addons(?!\.com(?<=aliaddons\.com))
 1696426326	cigien	darkwebprogrammers\.wordpress\.com
+1696426364	cigien	teluguswag\.com
