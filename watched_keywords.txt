@@ -53611,3 +53611,4 @@
 1696408712	cigien	rejuvegan\.com
 1696408744	cigien	rejuvegan(?!\.com)
 1696409035	cigien	bestproproduct\.com
+1696409151	cigien	clickboxagency\.com
