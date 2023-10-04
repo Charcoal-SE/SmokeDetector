@@ -104,7 +104,7 @@ class EditWatcher:
             return
 
         question_ids = question_id
-        if type(question_ids) != list:
+        if isinstance(question_ids, list):
             question_ids = [question_id]
         now = time.time()
         if from_time:

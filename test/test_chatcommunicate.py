@@ -114,12 +114,12 @@ def test_validate_yaml():
     issues = []
 
     for user_key in user_data.keys():
-        if type(user_key) != int:
+        if not isinstance(user_key, int):
             print('type(user_key):', type(user_key))
             issues.append('user.yml user ID "{}" is not an int'.format(user_key))
 
     for user_id in privileged_users:
-        if type(user_id) != int:
+        if not isinstance(user_id, int):
             print('type(user_id):', type(user_id))
             issues.append('user.yml user ID "{}" is not an int'.format(user_key))
 
