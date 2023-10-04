@@ -53643,3 +53643,4 @@
 1696434922	Jeff Schaller	trendingghost\.com
 1696451840	Makyen	mycarelabs\.com
 1696451863	Makyen	mycarelabs(?!\.com)
+1696271373	Jesse	soronix\.com
