@@ -50651,7 +50651,6 @@
 1684300812	tripleee	chessplaces\.com
 1684301460	tripleee	interactive[\W_]*+advertising[\W_]*+bureau
 1684302899	tripleee	econdse\.com
-1684302928	tripleee	besthealthtopic\.com
 1684303681	tripleee	prosoccerstore\.co
 1684305669	tripleee	pritimahajan\.in
 1684305820	tripleee	azinovatechnologies\.com
