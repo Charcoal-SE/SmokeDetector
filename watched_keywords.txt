@@ -53649,3 +53649,4 @@
 1696467496	Jesse	payvofinance\.us
 1696467511	Jesse	payvofinance(?!\.us)
 1696313094	Nick	fluidgeek\.com
+1696483962	Nick	detoptenbest\.com
