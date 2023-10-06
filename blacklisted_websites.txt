@@ -5390,3 +5390,4 @@ besthealthtopic\.com
 emdigitizer\.com
 upswift\.io
 win-logon\.com
+\bsimplified\.com\b
