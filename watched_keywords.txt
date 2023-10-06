@@ -30616,7 +30616,6 @@
 1627216205	Jeff Schaller	bestofschools\.com
 1627220917	Makyen	chienthancantho(?:@gmail\.com)?
 1627220935	Makyen	dekhisugireal
-1627223087	Makyen	upswift\.io
 1627223103	Makyen	upswift(?!\.io)
 1627224997	cigien	reshukumari120\.medium\.com
 1627225843	cigien	afnanksa\.com
