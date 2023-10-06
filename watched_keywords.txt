@@ -53685,3 +53685,4 @@
 1696581725	cigien	buy[\W_]*+4d(?!\.co(?<=buy4d\.co))
 1696581750	cigien	socioloca\.com
 1696581773	cigien	socioloca(?!\.com)
+1696581794	cigien	free-qr-code-generator\.com
