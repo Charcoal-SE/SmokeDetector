@@ -43422,7 +43422,6 @@
 1664957841	tripleee	toyotasure\.vn
 1664958131	tripleee	thegioiphongtam(?!\.vn)
 1664958553	tripleee	(?-i:^mogk0r$)
-1664962387	Mast	simplified\.com
 1664962980	tripleee	jancargo\.com
 1664965610	Jeff Schaller	resortsbythebaagh\.com
 1664966512	Jeff Schaller	hxmagnets\.com
