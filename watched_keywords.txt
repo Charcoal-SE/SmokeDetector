@@ -53680,3 +53680,4 @@
 1696574835	Nick	travelslifestyle\.com
 1696573260	Nick	eatos\.com
 1696581647	cigien	eatos(?!\.com)
+1696581669	cigien	kloudcourse\.in
