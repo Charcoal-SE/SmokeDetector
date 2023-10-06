@@ -53692,3 +53692,4 @@
 1696583836	cigien	onshore[\W_]*+bpo[\W_]*+leads(?!\.com(?<=onshorebpoleads\.com))
 1696584118	cigien	travels[\W_]*+lifestyle(?!\.com(?<=travelslifestyle\.com))
 1696587121	cigien	ucc\.qualtrics\.com
+1696590513	rene	dreamsfilms\.in
