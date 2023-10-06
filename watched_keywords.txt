@@ -53692,3 +53692,4 @@
 1696583631	cigien	soundproofinglife\.com
 1696583809	cigien	onshorebpoleads\.com
 1696583836	cigien	onshore[\W_]*+bpo[\W_]*+leads(?!\.com(?<=onshorebpoleads\.com))
+1696584118	cigien	travels[\W_]*+lifestyle(?!\.com(?<=travelslifestyle\.com))
