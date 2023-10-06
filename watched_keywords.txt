@@ -49378,7 +49378,6 @@
 1680938105	Glorfindel	erudite\.in
 1680939998	tripleee	from[\W_]*+ashes[\W_]*+to[\W_]*+restoration
 1680941267	tripleee	(?-i:XhuKWAlS1CE)(?# youtube)
-1680941506	Robert Longson	emdigitizer\.com
 1680951792	Makyen	mastersassignmenthelp\.com
 1680951829	Makyen	adelautodoors\.com
 1680951855	Makyen	adel[\W_]*+auto[\W_]*+doors(?!\.com(?<=adelautodoors\.com))
