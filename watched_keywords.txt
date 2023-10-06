@@ -53683,3 +53683,4 @@
 1696581669	cigien	kloudcourse\.in
 1696573353	Nick	buy4d\.co
 1696581725	cigien	buy[\W_]*+4d(?!\.co(?<=buy4d\.co))
+1696581750	cigien	socioloca\.com
