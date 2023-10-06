@@ -53686,3 +53686,4 @@
 1696581750	cigien	socioloca\.com
 1696581773	cigien	socioloca(?!\.com)
 1696581794	cigien	free-qr-code-generator\.com
+1696561430	Nick	NIPUTE
