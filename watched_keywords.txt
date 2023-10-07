@@ -53710,3 +53710,4 @@
 1696690032	Jeff Schaller	sqlvisual\.net
 1696703356	Jeff Schaller	iptv-smartone\.com
 1696712507	Jeff Schaller	limomiami\.net
+1696696394	VLAZ	cybersecurityzone\.net
