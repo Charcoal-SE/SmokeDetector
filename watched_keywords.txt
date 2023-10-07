@@ -50172,7 +50172,6 @@
 1683106951	tripleee	tablet[\W_]*+hire(?!\.ae(?<=tablethire\.ae))
 1683107667	tripleee	printhubdigital\.in
 1683108558	Jeff Schaller	meetsinglesusa\.com
-1683110476	Jeff Schaller	blockgum\.com
 1683112453	tripleee	bookairportcab\.com
 1683112768	tripleee	1102style\.vn
 1683114568	tripleee	teamassignmenthelp\.com

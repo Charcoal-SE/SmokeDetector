@@ -5391,3 +5391,4 @@ emdigitizer\.com
 upswift\.io
 win-logon\.com
 \bsimplified\.com\b
+blockgum\.com
