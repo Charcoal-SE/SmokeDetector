@@ -5392,3 +5392,4 @@ upswift\.io
 win-logon\.com
 \bsimplified\.com\b
 blockgum\.com
+(?-i:vwn8WjGH)(?#cutt.ly)
