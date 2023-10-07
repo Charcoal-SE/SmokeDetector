@@ -33847,7 +33847,7 @@
 1638007454	Suraj Rao	qaabildigital\.com
 1638008599	Ryan M	bigpro1\.com
 1638021696	double-beep	best-essaywriter\.com
-1638026266	Cody Gray	\${4,}
+1638026266	Cody Gray	\${4,}+(?<!class="math-container">\${4})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1638032060	Cody Gray	seekhterahiye\.com
 1638037741	cigien	hutwani\.com
 1638037800	cigien	clickteam\.org
