@@ -2610,7 +2610,7 @@ geecon[\W_]*+global(?!\.com(?<=geeconglobal\.com))
 Geecon[\W_]*Systems?(?!\.com(?<=geeconsystems\.com))
 how[\W_]*+do[\W_]*+bails[\W_]*+work[\W_]*+in[\W_]*+the[\W_]*+state[\W_]*+of[\W_]*+california
 mr[\W_]*+oscar[\W_]*+white
-cyberservices(?![\W_]*+(?:do?t[\W_]*+)?com)
+c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s(?![\W_]*+(?:d[\W_]*+(?:o[\W_]*+)?t[\W_]*+)?c[\W_]*+o[\W_]*+m)(?#cyberservices obfuscated not followed by .com)
 d(?:octo)?r[\W_]*+obho(?:greatspell(?:@gmail\.com)?)?
 zozumuhahbrotherhood
 situs(?:[\W_]*+online)?[\W_]*+slot(?:[\W_]*+online)?(?:[\W_]*+gacor)?

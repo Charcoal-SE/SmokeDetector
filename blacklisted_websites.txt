@@ -1016,7 +1016,7 @@ orderfitnesspoints\.co\.uk
 burnfatin4days\.com
 eye7\.in
 freecustomwritings\.com
-cyberservices[\W_]*+(?:do?t[\W_]*+)?com
+c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s[\W_]*+(?:d[\W_]*+(?:o[\W_]*+)?t[\W_]*+)?c[\W_]*+o[\W_]*+m(?#cyberservices.com obfuscated)
 nutritionfit\.org
 oralhealthplus\.com
 supplementlab\.org
