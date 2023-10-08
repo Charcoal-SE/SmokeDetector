@@ -46204,7 +46204,6 @@
 1673350566	Cody Gray	amansala\.com
 1673350762	tripleee	yourselfquotes\.com
 1673351534	Cody Gray	kenovate(?!\.com)
-1673351595	Cody Gray	Cyber[\W_]*Genie[\W_]*Intercontinental
 1673351927	Cody Gray	^Eloise[\W_]*Schnenil$
 1673352476	tripleee	economicschool\.org
 1673353316	Cody Gray	(?<!com\.)webomates(?!\.com)
