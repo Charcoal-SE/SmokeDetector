@@ -2800,7 +2800,7 @@ real[\W_]*+madrid[\W_]*+(?:vs?[\W_]*+)+liverpool
 aimlay(?!\.com(?<=aimlay\.com)| education(?<=(?-i:^Aimlay education$)))
 (?-i:VU-LTcs1gEw2YzA1)(?#t.me)
 (?-i:evZAdKO4oG85Zjgx)(?#t.me)
-cybergenie
+c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+g[\W_]*+e[\W_]*+n[\W_]*+i[\W_]*+e(?!h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+p[\W_]*+r[\W_]*+o[\W_]*+(?:d[\W_]*+(?:o[\W_]*+)?t[\W_]*+)?x[\W_]*+y[\W_]*+z)(?:[\W_]*+t[\W_]*+e[\W_]*+a[\W_]*+m)?\w*+(?#cybergenie obfuscated, with possible "team" or other word text, but not cybergeniehackpro.xyz)
 slot[\W_]*+gacor\d*
 janbask(?!\.com)
 ultimate[\W_]*+hacker[\W_]*+jerry
@@ -2829,7 +2829,6 @@ refd_by=tkt
 abattis[\W_]*+consulting(?!\.com(?<=abattisconsulting\.com))(?<!^abattis consulting$)
 zolpidem
 anya[\W_]*+wellbeing
-cyber[\W_]*+genie(?:[\W_]*+team)?
 utopia[\W_]*+skin[\W_]*+tag[\W_]*+remover
 radiant[\W_]*+cutis(?:[\W_]*+skin[\W_]*+tag(?:[\W_]*+remover)?)?
 japanshopees\d*(?!\.com(?<=japanshopees\.com))
