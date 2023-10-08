@@ -2,7 +2,7 @@ git+https://github.com/Charcoal-SE/ChatExchange.git
 appdirs>=1.4.3
 beautifulsoup4>=4.6.0
 colorama>=0.4.1
-coverage>=6.5.0
+coverage>=7.3.2
 dnspython>=2.0.0
 flake8~=6.1.0
 msgpack-python>=0.5.6
