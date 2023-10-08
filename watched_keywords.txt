@@ -53718,3 +53718,4 @@
 1696776347	Makyen	c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+g[\W_]*+e[\W_]*+n[\W_]*+i[\W_]*+e[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+p[\W_]*+r[\W_]*+o[\W_]*+(?:d[\W_]*+(?:o[\W_]*+)?t[\W_]*+)?x[\W_]*+y[\W_]*+z(?#cybergeniehackpro.xyz obfuscated)
 1696778036	Jeff Schaller	theartsyspot\.com
 1696758666	DavidW	mcgrocer\.com
+1696789185	Vickel	Davis\.kyambadde(?:@pursuu\.co\.uk)?
