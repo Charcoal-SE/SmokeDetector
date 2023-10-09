@@ -53438,7 +53438,6 @@
 1695897606	Dragonrage	baodanang\.vn
 1695899363	Jeff Schaller	aranyafarm\.in
 1695911567	cigien	usenter1\.com
-1695914200	VLAZ	m3lomaty10\.blogspot
 1695918461	Jeff Schaller	autospace\.qa
 1695919275	Jeff Schaller	appleexplainer\.com
 1695924338	Makyen	sourceforge\.net/projects/live-cd-with-zerofree[\w-]*
