@@ -53740,3 +53740,4 @@
 1696848360	cigien	cryptocurrencyadvocate\d*+(?:@gmail\.com)?
 1696848386	cigien	saconsultantsuae\.com
 1696848411	cigien	softoos\.com
+1696848436	cigien	softoos(?!\.com)
