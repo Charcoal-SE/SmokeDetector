@@ -53725,3 +53725,4 @@
 1696838036	cigien	mas-sharjah\.ae
 1696838162	cigien	nexrupt\.com
 1696838184	cigien	msmsol\.com
+1696838255	cigien	polaris[\W_]*+elevators
