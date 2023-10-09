@@ -53735,3 +53735,4 @@
 1696839141	cigien	(?:Davis\.kyambadde@)?pursuu\.co\.uk
 1696838879	Can O' Spam	clearrmynotice\.com
 1696839191	cigien	clearrmynotice(?!\.com)
+1696840279	cigien	loveanddatingjourney\.blogspot
