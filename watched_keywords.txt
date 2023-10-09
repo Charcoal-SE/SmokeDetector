@@ -53730,3 +53730,4 @@
 1696826517	Jesse	dailymediainsight\.com
 1696838444	cigien	daily[\W_]*+media[\W_]*+insight(?!\.com(?<=dailymediainsight\.com))
 1696838467	cigien	seeyouofficial\.blogspot
+1696813111	Jesse	2629030(?#Steam game)
