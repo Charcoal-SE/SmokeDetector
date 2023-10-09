@@ -53744,3 +53744,4 @@
 1696848460	cigien	supersavvy\.in
 1696848484	cigien	supersavvy(?!\.in)
 1696853747	cigien	digitalmarketingsroute\.blogspot
+1696854031	cigien	knowledgew\.com
