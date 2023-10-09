@@ -53728,3 +53728,4 @@
 1696838255	cigien	polaris[\W_]*+elevators
 1696838315	cigien	smoad\.io
 1696826517	Jesse	dailymediainsight\.com
+1696838444	cigien	daily[\W_]*+media[\W_]*+insight(?!\.com(?<=dailymediainsight\.com))
