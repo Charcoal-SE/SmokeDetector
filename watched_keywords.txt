@@ -53792,3 +53792,4 @@
 1696952520	Nisse Engström	fargoworldwide\.com
 1696953716	Makyen	mattermost\.com
 1696953741	Makyen	mattermost(?!\.com)(?#github.com)
+1696957272	Jeff Schaller	takemyclassdone\.com
