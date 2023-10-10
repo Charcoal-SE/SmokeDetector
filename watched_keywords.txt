@@ -53795,3 +53795,4 @@
 1696957272	Jeff Schaller	takemyclassdone\.com
 1696957341	Makyen	takemyclassdone(?!\.com)
 1696957781	Makyen	capcuttemplate\.co\.in
+1696957804	Makyen	capcut[\W_]*+templates
