@@ -48804,7 +48804,7 @@
 1679661587	tripleee	rskfragrance\.com
 1679662581	tripleee	orthosparkle
 1679666911	Jeff Schaller	(?-i:Zn8ZB498T8Q)(?# youtube)
-1679667228	Makyen	santoshi[\W_]*+hacker(?:@hotmail\.com)?
+1679667228	Makyen	santoshi[\W_]*+hacker\d*+(?:@hotmail\.com)?
 1679667268	Makyen	recruiting\.for\.stealth\.startup(?:@gmail\.com)?
 1679667295	Makyen	stealthstartup
 1679667333	Makyen	toturial5c\.net
