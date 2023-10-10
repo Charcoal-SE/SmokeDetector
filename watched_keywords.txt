@@ -53765,3 +53765,4 @@
 1696925596	cigien	fitbonacci\.com
 1696925619	cigien	fitbonacci(?!\.com)
 1696925643	cigien	planbee\.in
+1696926302	cigien	californiaseoagency\.net
