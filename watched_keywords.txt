@@ -53785,3 +53785,4 @@
 1696943368	Jeff Schaller	okorthospine\.com
 1696946711	cigien	treeremovalgainesvillega\.top
 1696946734	cigien	tree[\W_]*+removal[\W_]*+gainesville[\W_]*+ga(?!\.top(?<=treeremovalgainesvillega\.top))
+1696947983	Makyen	com\.aquapluz\.aquapluz
