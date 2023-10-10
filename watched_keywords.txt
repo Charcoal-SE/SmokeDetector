@@ -53770,3 +53770,4 @@
 1696927151	cigien	gulf[\W_]*+private[\W_]*+finance(?!\.com(?<=gulfprivatefinance\.com))
 1696927247	cigien	teamaskblockchain
 1696927316	cigien	canmur\.com
+1696927479	cigien	aendt\.com
