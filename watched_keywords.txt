@@ -53763,3 +53763,4 @@
 1696925439	cigien	tophomeworkhelper\.com
 1696925463	cigien	javidecodona\.com
 1696925596	cigien	fitbonacci\.com
+1696925619	cigien	fitbonacci(?!\.com)
