@@ -53791,3 +53791,4 @@
 1696949455	Spevacus	pipilika\.net
 1696952520	Nisse Engström	fargoworldwide\.com
 1696953716	Makyen	mattermost\.com
+1696953741	Makyen	mattermost(?!\.com)(?#github.com)
