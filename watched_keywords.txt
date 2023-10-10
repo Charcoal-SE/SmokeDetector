@@ -53767,3 +53767,4 @@
 1696925643	cigien	planbee\.in
 1696926302	cigien	californiaseoagency\.net
 1696926409	cigien	appetenza\.com
+1696927151	cigien	gulf[\W_]*+private[\W_]*+finance(?!\.com(?<=gulfprivatefinance\.com))
