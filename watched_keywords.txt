@@ -53793,3 +53793,4 @@
 1696953716	Makyen	mattermost\.com
 1696953741	Makyen	mattermost(?!\.com)(?#github.com)
 1696957272	Jeff Schaller	takemyclassdone\.com
+1696957341	Makyen	takemyclassdone(?!\.com)
