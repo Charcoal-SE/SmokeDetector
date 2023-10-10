@@ -5394,4 +5394,3 @@ win-logon\.com
 blockgum\.com
 (?-i:vwn8WjGH)(?#cutt.ly)
 m3lomaty10\.blogspot
-\brwincblog9\.wordpress\b
