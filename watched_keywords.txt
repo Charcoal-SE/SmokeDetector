@@ -53799,3 +53799,4 @@
 1696958086	Makyen	folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech-center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1696960080	Spevacus	carbikemoving\.com
 1696961830	Makyen	foodcourt\.com\.vn
+1696971006	Jesse	glennjohansson85\.github\.io
