@@ -53796,3 +53796,4 @@
 1696957341	Makyen	takemyclassdone(?!\.com)
 1696957781	Makyen	capcuttemplate\.co\.in
 1696957804	Makyen	capcut[\W_]*+templates
+1696958086	Makyen	folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech-center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
