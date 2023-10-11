@@ -53837,3 +53837,4 @@
 1697056071	Makyen	digisite(?!\.in)
 1697056096	Makyen	hacker[\W_]*+santoshi
 1697056121	Makyen	(?-i:3tbsoGB)(?#bit.ly)
+1697065472	Makyen	crypto(?:currency)?[\W_]*+recovery[\W_]*+agency
