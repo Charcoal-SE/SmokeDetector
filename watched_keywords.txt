@@ -53833,3 +53833,4 @@
 1697049019	Jeff Schaller	datainfofinder\.com
 1697049081	Jeff Schaller	alrwhanyawad\.com
 1697055664	Jeff Schaller	doenglishi\.com
+1697056047	Makyen	green[\W_]*+bunny[\W_]*+cbd(?:[\W_]*+(?:gummie|review|\d++|[\da-f]{5,}+)s?)*
