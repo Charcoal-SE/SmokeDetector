@@ -53825,3 +53825,4 @@
 1697030253	Makyen	(?-i:NLSxGTHKhelx1HQI)(?#youtu.be)
 1697030279	Makyen	hcd[\W_]*+dream(?:[\W_]*+(?:interior|solution|\d++|[\da-f]{5,}+)s?)*
 1697031887	Can O' Spam	purohitsforpooja\.com
+1697032271	Makyen	purohitsforpooja(?!\.com)
