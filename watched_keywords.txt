@@ -53814,3 +53814,4 @@
 1697021925	cigien	perthcarsremoval\.com\.au
 1697021950	cigien	perth[\W_]*+cars[\W_]*+removal(?!\.com\.au(?<=perthcarsremoval\.com\.au))
 1697022928	Jeff Schaller	tompkinsinc\.com
+1697023755	Can O' Spam	oswalairtravels\.com
