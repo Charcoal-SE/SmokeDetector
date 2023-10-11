@@ -53827,3 +53827,4 @@
 1697031887	Can O' Spam	purohitsforpooja\.com
 1697032271	Makyen	purohitsforpooja(?!\.com)
 1697034064	Jeff Schaller	avesent\.com
+1697039790	cigien	statuslibrary1\.com
