@@ -53868,3 +53868,4 @@
 1697123127	Jeff Schaller	falschgeld\.org
 1697124836	Makyen	wingaming\d*+
 1697124939	Makyen	qrcodedynamic\.com
+1697125007	Makyen	qrcodedynamic(?!\.com)
