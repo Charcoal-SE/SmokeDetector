@@ -40727,7 +40727,6 @@
 1657946695	Makyen	acselnow(?!\.com)
 1657946724	Makyen	intern-cricut\.com
 1657946745	Makyen	drivingdirectionsroute\.com
-1657969453	Jeff Schaller	monkey-type\.org
 1657969710	Jeff Schaller	greasetrapguy\.com
 1657973530	Makyen	jumbo\.ae
 1657990109	cigien	(?-i:KNuphK-GgK4)(?#youtube)
