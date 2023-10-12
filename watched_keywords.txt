@@ -53870,3 +53870,4 @@
 1697124939	Makyen	qrcodedynamic\.com
 1697125007	Makyen	qrcodedynamic(?!\.com)
 1697126055	Jeff Schaller	thetuitione\.com
+1697130453	Jeff Schaller	dawnprinting\.com
