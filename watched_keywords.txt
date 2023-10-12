@@ -52229,7 +52229,6 @@
 1692886887	cigien	movieswatch\.pw
 1692886920	cigien	myflixer\.ist
 1692899631	Mast	jwvdev\.com
-1692902297	Jeff Schaller	newtownspares\.com
 1692903975	cigien	iranbet\.top
 1692904141	cigien	gineshirt\.com
 1692904295	cigien	it\.surveymonkey\.com
