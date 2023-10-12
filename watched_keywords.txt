@@ -53853,3 +53853,4 @@
 1697100201	cigien	winpickup\.com
 1697100224	cigien	winpickupcar\.com
 1697100247	cigien	win[\W_]*+pickup(?!\.com(?<=winpickup\.com))
+1697100279	cigien	thekingsfurniture\.com
