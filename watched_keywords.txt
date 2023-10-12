@@ -53855,3 +53855,4 @@
 1697100247	cigien	win[\W_]*+pickup(?!\.com(?<=winpickup\.com))
 1697100279	cigien	thekingsfurniture\.com
 1697100302	cigien	ez-captcha\.com
+1697100328	cigien	thewalkers\.org
