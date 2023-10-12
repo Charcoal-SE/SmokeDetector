@@ -53839,3 +53839,4 @@
 1697056121	Makyen	(?-i:3tbsoGB)(?#bit.ly)
 1697065472	Makyen	crypto(?:currency)?[\W_]*+recovery[\W_]*+agency
 1697070718	Makyen	hodlfutures
+1697075081	Jeff Schaller	wowtot\.com
