@@ -53859,3 +53859,4 @@
 1697098754	VLAZ	nailbyme\.com
 1697104055	Dragonrage	wednesday-addams-pastiche\.art
 1697105620	Can O' Spam	skuplugs\.com
+1697107297	cigien	skuplugs(?!\.com)
