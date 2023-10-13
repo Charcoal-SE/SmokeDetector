@@ -53905,3 +53905,4 @@
 1697215017	cigien	projectorgenius\.com
 1697215045	cigien	projector[\W_]*+genius(?!\.com(?<=projectorgenius\.com))
 1697215086	cigien	kiasilang(?#t.ly)
+1697215566	cigien	itempire\.net
