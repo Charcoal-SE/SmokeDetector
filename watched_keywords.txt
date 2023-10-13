@@ -53906,3 +53906,4 @@
 1697215045	cigien	projector[\W_]*+genius(?!\.com(?<=projectorgenius\.com))
 1697215086	cigien	kiasilang(?#t.ly)
 1697215566	cigien	itempire\.net
+1697215604	cigien	it[\W_]*+empire(?!\.net(?<=itempire\.net))
