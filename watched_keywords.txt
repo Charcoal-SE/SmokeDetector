@@ -53909,3 +53909,4 @@
 1697215604	cigien	it[\W_]*+empire(?!\.net(?<=itempire\.net))
 1697215639	cigien	edealz4u\.com
 1697215670	cigien	edealz4u(?!\.com)
+1697215699	Jeff Schaller	rate\.lu
