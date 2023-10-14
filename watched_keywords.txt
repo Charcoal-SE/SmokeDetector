@@ -37067,7 +37067,6 @@
 1648026958	Cody Gray	ppscfpscnotes\.com
 1648028794	Mast	bluegooseinn\.com
 1648029203	Mast	svss\.co\.in
-1648029602	Cody Gray	animaapp\.com
 1648029698	Cody Gray	bep20[\W_]*token[\W_]*development
 1648029732	Cody Gray	Zomato[\W_]*clone
 1648029815	Cody Gray	(?-i:^dajiang lu$)
