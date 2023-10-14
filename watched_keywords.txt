@@ -53926,3 +53926,4 @@
 1697253594	Ryan M	myhaalice(?:@gmail\.com)?
 1697253660	Ryan M	Dr\. Subodh Kamble
 1697253735	Ryan M	bulkgpt\.ai
+1697253758	Ryan M	bulkgpt(?!\.ai)
