@@ -53928,3 +53928,4 @@
 1697253758	Ryan M	bulkgpt(?!\.ai)
 1697253853	Ryan M	bk8[\W_]*+center(?<!bk8\.center)
 1697253992	Ryan M	(?:abroad|overseas?) education consultan(?:ts?|cy|cies)
+1697261344	Nisse Engström	exploringgk\.blogspot
