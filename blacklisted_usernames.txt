@@ -949,3 +949,4 @@ zoomcar India
 (?-i:^Eco Cleans$)
 ^amelia\W*alby$
 ^\w{4,5}2ch$
+^Shakib\W*Khan(pust)?$
