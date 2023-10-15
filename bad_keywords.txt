@@ -2889,5 +2889,4 @@ earndriver\.today\/[\W\w]{1,200}?(?:driver|uber)\w*+(?#Abuse the keyword blackli
 daniel[\W_]*+meuli[\W_]*+web[\W_]*+e?recovery(?:[\W_]*+(?:at[\W_]*+)?email(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 static[\W_]++king(?#explicitly requiring at least 1 space here, to avoid an fp, and to avoid overlapping with another detection)
 harlothub(?!\.com)
-^\w{4,5}2ch$
 ^Shakib\W*Khan(pust)?$
