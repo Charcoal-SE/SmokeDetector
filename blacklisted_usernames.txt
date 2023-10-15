@@ -948,3 +948,4 @@ zoomcar India
 (?-i:^Samum Sk$)
 (?-i:^Eco Cleans$)
 ^amelia\W*alby$
+^\w{4,5}2ch$
