@@ -131,7 +131,6 @@ muralidharaB
 ^myboatride$
 ^Manmachine Group$
 ^mason ?java$
-ameliaalby
 Genny\s+Swiss
 ^livewire\W?india$
 ^andymark$
