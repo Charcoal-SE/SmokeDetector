@@ -53957,3 +53957,4 @@
 1697287517	Vickel	etsy\.com\/shop\/NakshuJewelsLGD
 1697323776	Vickel	huismancleverlyrecovery\.com
 1697396143	Makyen	oxshare(?!\.com)(?<!(?-i:OXSHARE))(?<!\bms\Woxshare)
+1697396751	Makyen	itsallaboutai\.com
