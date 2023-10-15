@@ -28068,7 +28068,6 @@
 1618959110	Makyen	kaleidoscopechristian\.wordpress\.com
 1618959440	Makyen	savermaster\.com
 1618971373	Jeff Schaller	dealsengine\.com
-1618986463	Glorfindel	^Shakib\W*Khan(pust)?$
 1618989008	Ryan M	softmagnat\.com
 1618994247	Makyen	mackwelloco\.com
 1618994263	Makyen	tinytechindia\.com
