@@ -53947,3 +53947,4 @@
 1697325654	Makyen	(?-i:LxzoMxFrhwAqtHHa9)(?#forms.gle)
 1697328410	Ryan M	crypto(?:currency)?[\W_]*+recovery
 1697336920	Jeff Schaller	marketinggranadaland\.com
+1697336949	Jeff Schaller	granadahills\.pro
