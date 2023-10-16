@@ -53968,3 +53968,4 @@
 1697440842	cigien	paradisenursery\.com
 1697441439	cigien	workingment(?!\.com)
 1697442546	VLAZ	britishcartransfer\.co\.uk
+1697442777	VLAZ	British[\W_]*car[\W_]*transfer(?!\.co\.uk(?<=britishcartransfer\.co\.uk))
