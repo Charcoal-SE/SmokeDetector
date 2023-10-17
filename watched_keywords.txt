@@ -54029,3 +54029,4 @@
 1697558362	Jeff Schaller	digionfocus\.com
 1697559749	cigien	thetechgenics\.com
 1697565148	Makyen	digimarketwave\.com
+1697565182	Makyen	digimarketwave(?!\.com)
