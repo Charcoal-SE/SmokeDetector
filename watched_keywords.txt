@@ -54024,3 +54024,4 @@
 1697543773	cigien	dekhocampus(?!\.com)
 1697543822	cigien	mediawrkz\.com
 1697544686	cigien	kalbaco\.com
+1697549878	cigien	ascmi\.net
