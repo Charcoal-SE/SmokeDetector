@@ -54002,3 +54002,4 @@
 1697533488	cigien	picsera\.com
 1697533539	cigien	picsera(?!\.com)
 1697533568	cigien	copphago\.vn
+1697533602	cigien	techtoroms\.com
