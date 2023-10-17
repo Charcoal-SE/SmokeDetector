@@ -53996,3 +53996,4 @@
 1697518790	Makyen	herbal-creations\.com
 1697518813	Makyen	phyllanthus[\W_]*+emblica(?:is)?
 1697518835	Makyen	eucitizen\.ae
+1697533259	cigien	travelingstories\.org
