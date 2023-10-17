@@ -54022,3 +54022,4 @@
 1697542002	cigien	techpros\.ae
 1697542026	cigien	techpros(?!\.ae)
 1697543773	cigien	dekhocampus(?!\.com)
+1697543822	cigien	mediawrkz\.com
