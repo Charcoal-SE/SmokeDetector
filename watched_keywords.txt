@@ -52847,7 +52847,6 @@
 1694503586	Ryan M	werbooz\.com
 1694503791	Ryan M	Werbooz Private Limited
 1694504353	cigien	alabamaacn\.org
-1694504546	cigien	smartmoneymatch\.com
 1694488636	Nick	mobilevideoguard\.com
 1694504860	cigien	mobile[\W_]*+video[\W_]*+guard(?!\.com(?<=mobilevideoguard\.com))
 1694474543	Ian Campbell	rapidradiocodes\.co\.uk
