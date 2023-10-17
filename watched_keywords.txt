@@ -53988,3 +53988,4 @@
 1697510535	Makyen	askblockchainhelp[\W_]*+desk
 1697511774	Makyen	weddingplannervn\.com
 1697511796	Makyen	weddingplannervietnam
+1697511868	Makyen	weddingplannerdanangvn
