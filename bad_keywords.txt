@@ -2890,3 +2890,4 @@ daniel[\W_]*+meuli[\W_]*+web[\W_]*+e?recovery(?:[\W_]*+(?:at[\W_]*+)?email(?:[\W
 static[\W_]++king(?#explicitly requiring at least 1 space here, to avoid an fp, and to avoid overlapping with another detection)
 harlothub(?!\.com)
 fastapi-utilities
+yt-channel-scraper
