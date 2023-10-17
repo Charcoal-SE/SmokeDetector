@@ -54021,3 +54021,4 @@
 1697541552	cigien	online-free-translator\.com
 1697542002	cigien	techpros\.ae
 1697542026	cigien	techpros(?!\.ae)
+1697543773	cigien	dekhocampus(?!\.com)
