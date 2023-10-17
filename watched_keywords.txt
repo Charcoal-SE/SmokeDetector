@@ -54009,3 +54009,4 @@
 1697539219	cigien	multiplewords\.com
 1697539290	cigien	infowindtech\.com
 1697539318	cigien	assignmentmasters\.ae
+1697539618	cigien	graphicmags\.com
