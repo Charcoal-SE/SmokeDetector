@@ -54023,3 +54023,4 @@
 1697542026	cigien	techpros(?!\.ae)
 1697543773	cigien	dekhocampus(?!\.com)
 1697543822	cigien	mediawrkz\.com
+1697544686	cigien	kalbaco\.com
