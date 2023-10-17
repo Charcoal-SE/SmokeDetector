@@ -54034,3 +54034,4 @@
 1697568686	Makyen	danielmeuli
 1697568719	Makyen	daniel[\W_]*+meuli[\W_]*+recovery
 1697572742	Jeff Schaller	keepingitoutsidejobs\.com
+1697586282	Makyen	(?-i:stanislav_soft)(?#t.me)
