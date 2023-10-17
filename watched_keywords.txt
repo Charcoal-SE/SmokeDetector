@@ -54033,3 +54033,4 @@
 1697565515	cigien	hdjobonline\.blogspot
 1697568686	Makyen	danielmeuli
 1697568719	Makyen	daniel[\W_]*+meuli[\W_]*+recovery
+1697572742	Jeff Schaller	keepingitoutsidejobs\.com
