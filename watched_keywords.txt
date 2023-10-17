@@ -54018,3 +54018,4 @@
 1697541129	cigien	adnoor\.ca
 1697541153	cigien	adnoor(?!\.ca)
 1697541252	cigien	trucoat(?!\.us)
+1697541552	cigien	online-free-translator\.com
