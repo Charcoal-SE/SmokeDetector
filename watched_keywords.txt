@@ -54017,3 +54017,4 @@
 1697540333	cigien	anyrec\.io
 1697541129	cigien	adnoor\.ca
 1697541153	cigien	adnoor(?!\.ca)
+1697541252	cigien	trucoat(?!\.us)
