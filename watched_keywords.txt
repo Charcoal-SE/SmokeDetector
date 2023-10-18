@@ -54057,3 +54057,4 @@
 1697637413	Makyen	(?-i:ren1ear_paradox287)(?#t.me)
 1697637734	cigien	beautybestway\.com
 1697637763	cigien	beauty[\W_]*+best[\W_]*+way(?!\.com(?<=beautybestway\.com))
+1697637906	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))(?!\.net(?<=netflixparty\.net))
