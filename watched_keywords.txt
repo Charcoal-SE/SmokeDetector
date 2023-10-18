@@ -54038,3 +54038,4 @@
 1697586336	Makyen	crypto[\W_]*+transaction[\W_]*+hijacker
 1697602558	Dragonrage	mykitchenspoint\.com
 1697603216	Makyen	(?-i:TGL_JavaMaker)(?#t.me)
+1697603239	Makyen	mykitchenspoint(?!\.com)
