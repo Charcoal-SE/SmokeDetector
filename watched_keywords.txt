@@ -54051,3 +54051,4 @@
 1697620292	cigien	waterproofing[\W_]*+perth(?!\.com\.au(?<=waterproofingperth\.com\.au))
 1697621525	VLAZ	vinpartyrentals\.com
 1697624738	Jeff Schaller	adityatechsolution50
+1697630783	Jeff Schaller	sarvamsafety\.com
