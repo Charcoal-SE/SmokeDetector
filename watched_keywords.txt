@@ -52140,7 +52140,6 @@
 1692779453	Dragonrage	ukm-prisma\.upr\.ac\.id
 1692786349	cigien	planetslot99\.live
 1692786575	cigien	netflixparty\.services
-1692786612	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))
 1692786911	cigien	iamvector\.com
 1692786934	cigien	buzzsocialcrew\.com
 1692787377	cigien	healthcare24x7hours\.blogspot
