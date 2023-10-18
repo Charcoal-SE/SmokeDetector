@@ -54039,3 +54039,4 @@
 1697602558	Dragonrage	mykitchenspoint\.com
 1697603216	Makyen	(?-i:TGL_JavaMaker)(?#t.me)
 1697603239	Makyen	mykitchenspoint(?!\.com)
+1697615250	cigien	ivyoverseas\.com
