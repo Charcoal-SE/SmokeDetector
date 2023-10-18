@@ -54049,3 +54049,4 @@
 1697619867	VLAZ	mitsde\.com
 1697620267	cigien	waterproofingperth\.com\.au
 1697620292	cigien	waterproofing[\W_]*+perth(?!\.com\.au(?<=waterproofingperth\.com\.au))
+1697621525	VLAZ	vinpartyrentals\.com
