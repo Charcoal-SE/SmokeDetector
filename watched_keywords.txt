@@ -54058,3 +54058,4 @@
 1697637734	cigien	beautybestway\.com
 1697637763	cigien	beauty[\W_]*+best[\W_]*+way(?!\.com(?<=beautybestway\.com))
 1697637906	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))(?!\.net(?<=netflixparty\.net))
+1697637934	cigien	netflixparty\.net
