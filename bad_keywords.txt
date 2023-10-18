@@ -2891,3 +2891,4 @@ static[\W_]++king(?#explicitly requiring at least 1 space here, to avoid an fp, 
 harlothub(?!\.com)
 fastapi-utilities
 yt-channel-scraper
+BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
