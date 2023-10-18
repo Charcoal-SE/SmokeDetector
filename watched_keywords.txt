@@ -54045,3 +54045,4 @@
 1697615372	cigien	arham[\W_]*+techpro(?!\.com(?<=arhamtechpro\.com))
 1697615407	cigien	ipromax\.in
 1697615458	cigien	thestylesalad\.in
+1697615534	cigien	oriaum\.co
