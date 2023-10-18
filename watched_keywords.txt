@@ -54037,3 +54037,4 @@
 1697586305	Makyen	(?-i:stanislav_tricks)(?#t.me)
 1697586336	Makyen	crypto[\W_]*+transaction[\W_]*+hijacker
 1697602558	Dragonrage	mykitchenspoint\.com
+1697603216	Makyen	(?-i:TGL_JavaMaker)(?#t.me)
