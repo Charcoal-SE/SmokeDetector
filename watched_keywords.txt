@@ -50500,9 +50500,9 @@
 1683921572	Makyen	newspaperarchive\.com
 1683923115	Makyen	bangladesh[\W_]*+cricket[\W_]*+news
 1683923137	Makyen	cricketbangladesh\.info
-1683928097	Makyen	lordhackerultimate\.wixsite\.com
-1683928119	Makyen	lord[\W_]*+hacker[\W_]*+ultimate(?!\.wixsite\.com(?<=lordhackerultimate\.wixsite\.com))
-1683928244	Makyen	l[\W_]*+h[\W_]*+ultimate(?:@fastservice\.com)?
+1683928097	Makyen	lord[\W_]*+hacker[\W_]*+ultimate\w*+\.wixsite\.com
+1683928119	Makyen	lord[\W_]*+hacker[\W_]*+ultimate\w*+(?!\.wixsite\.com)
+1683928244	Makyen	l[\W_]*+h[\W_]*+ultimate(?:[\W_]*+(?:at[\W_]*+)?fastservice(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1683934445	Jeff Schaller	ledsino\.store
 1683935629	Jeff Schaller	astrologerliveresult\.com
 1683935916	Makyen	bhajansimran\.com
