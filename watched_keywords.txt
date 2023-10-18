@@ -54052,3 +54052,4 @@
 1697621525	VLAZ	vinpartyrentals\.com
 1697624738	Jeff Schaller	adityatechsolution50
 1697630783	Jeff Schaller	sarvamsafety\.com
+1697634480	Jeff Schaller	mobileinfo\.com\.bd
