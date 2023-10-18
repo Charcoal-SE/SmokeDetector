@@ -34595,7 +34595,6 @@
 1640765109	tripleee	akdinvest\.com
 1640767238	Glorfindel	angela\W*angie
 1640767447	tripleee	edupro\.edu\.vn
-1640768266	tripleee	bitaacademy\.com
 1640770412	tripleee	skvenergyservices\.com
 1640774931	tripleee	viralpik\.com
 1640777853	tripleee	venuepro\.co
