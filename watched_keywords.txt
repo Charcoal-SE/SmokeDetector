@@ -54063,3 +54063,4 @@
 1697648919	Jeff Schaller	msajeescort\.com
 1697650817	cigien	keeping[\W_]*+it[\W_]*+outside[\W_]*+jobs(?!\.com(?<=keepingitoutsidejobs\.com))
 1697651488	Spevacus	golferspanel\.com
+1697654159	Jeff Schaller	nycjackets\.com
