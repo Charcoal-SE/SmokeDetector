@@ -2892,3 +2892,4 @@ harlothub(?!\.com)
 fastapi-utilities
 yt-channel-scraper
 BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
+123\.hp\.com
