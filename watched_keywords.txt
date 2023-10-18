@@ -54041,3 +54041,4 @@
 1697603239	Makyen	mykitchenspoint(?!\.com)
 1697615250	cigien	ivyoverseas\.com
 1697615274	cigien	ivy[\W_]*+overseas(?!\.com(?<=ivyoverseas\.com))
+1697615309	cigien	splendidaccounts\.pk
