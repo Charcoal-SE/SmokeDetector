@@ -54089,3 +54089,4 @@
 1697701284	cigien	plasbit\.com
 1697701309	cigien	plasbit(?!\.com)
 1697708002	VLAZ	icgram\.com
+1697709143	VLAZ	sparklelaser\.com
