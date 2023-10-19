@@ -54074,3 +54074,4 @@
 1697686478	Makyen	ams-osram\.com
 1697686500	Makyen	everlight\.com\.cn
 1697686524	Makyen	ledestar\.com
+1697686558	Makyen	arcetec\.com\.co
