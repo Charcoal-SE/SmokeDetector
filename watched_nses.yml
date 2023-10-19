@@ -4666,7 +4666,9 @@ items:
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- ns: metalcloudserver.in.
+- comment: NXDOMAIN 2023-10-19
+  disable: true
+  ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
 - ns: hostcats.com.
