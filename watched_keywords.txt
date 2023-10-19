@@ -54069,3 +54069,4 @@
 1697670808	Makyen	buy(?:ing)?[\W_]*+google[\W_]*+voice[\W_]*+accounts
 1697673430	Makyen	d(?:octo)?r[\W_]*+suzanne
 1697673452	Makyen	saren55
+1697686425	Makyen	hummingbird-ai\.org
