@@ -54078,3 +54078,4 @@
 1697686590	Makyen	metaveresnow\.com
 1697686625	Makyen	metaveresnow(?!\.com)
 1697687510	Makyen	jaga\.link
+1697687540	Makyen	(?-i:EqnIH\.jpg)
