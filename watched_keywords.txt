@@ -54115,3 +54115,4 @@
 1697739353	Makyen	qirat[\W_]*+(?:quran[\W_]*+)?online(?!\.com(?<=qiratquranonline\.com))
 1697751782	cocomac	arashlaw\.com
 1697753482	Ryan M	rapidapi\.com(?<!p\.rapidapi\.com)
+1697755372	cocomac	byrule\.xyz
