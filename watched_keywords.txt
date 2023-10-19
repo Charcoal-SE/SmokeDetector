@@ -54113,3 +54113,4 @@
 1697738488	Makyen	morriswhite789
 1697739176	Jeff Schaller	genyoutube\.site
 1697739353	Makyen	qirat[\W_]*+(?:quran[\W_]*+)?online(?!\.com(?<=qiratquranonline\.com))
+1697751782	cocomac	arashlaw\.com
