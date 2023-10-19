@@ -54087,3 +54087,4 @@
 1697700485	cigien	eweichat\.com
 1697700746	cigien	sanxuatvalicaptui\.com
 1697701284	cigien	plasbit\.com
+1697701309	cigien	plasbit(?!\.com)
