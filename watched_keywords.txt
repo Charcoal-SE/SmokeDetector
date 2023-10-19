@@ -54080,3 +54080,4 @@
 1697687510	Makyen	jaga\.link
 1697687540	Makyen	(?-i:EqnIH\.jpg)
 1697687562	Makyen	musicplayshut\.com
+1697687589	Makyen	music[\W_]*+play[\W_]*+shut(?!\.com(?<=musicplayshut\.com))
