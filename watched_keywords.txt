@@ -54083,3 +54083,4 @@
 1697687589	Makyen	music[\W_]*+play[\W_]*+shut(?!\.com(?<=musicplayshut\.com))
 1697698245	VLAZ	precisetestingsolution\.com
 1697698550	Dragonrage	nipponproduction\.com
+1697700082	Robert Longson	myeveresttrip\.com
