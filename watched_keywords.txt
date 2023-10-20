@@ -54118,3 +54118,4 @@
 1697771828	Makyen	telkom[\W_]*+university(?!\.ac\.id(?<=telkomuniversity\.ac\.id))
 1697780225	Dragonrage	modapkjournal\.com
 1697786375	Dragonrage	xpectodigital\.com
+1697793850	cigien	hireseoconsultants\.com
