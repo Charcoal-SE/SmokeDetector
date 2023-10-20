@@ -49055,7 +49055,6 @@
 1680161540	Ryan M	corpuschristiwaterdamagerestoration\.com
 1680161593	Ryan M	waterdamagecorpus(?# Reddit user)
 1680161897	Ryan M	water[\W_]*+damage[\W_]*+restoration[\W_]*+corpus[\W_]*+christi(?:[\W_]*+tx)?
-1680165168	tripleee	DNS_PROBE_FINISHED_NXDOMAIN
 1680165542	tripleee	(?-i:^Mukesh Kumi$)
 1680165571	tripleee	techywired\.com
 1680165599	tripleee	utahspineandsport\.com
