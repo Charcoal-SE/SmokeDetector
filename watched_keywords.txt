@@ -49134,7 +49134,6 @@
 1680345726	Makyen	skynair\.com
 1680348480	Jeff Schaller	6kiom\.com
 1680348707	Makyen	codepey\.com
-1680352846	VLAZ	adontec\.com
 1680316951	Jesse	ipunplugged\.com
 1680267024	blackgreen	dezyre\.com
 1680362766	Makyen	fcda\.in
