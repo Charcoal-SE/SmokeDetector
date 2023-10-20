@@ -54116,3 +54116,4 @@
 1697751782	cocomac	arashlaw\.com
 1697753482	Ryan M	rapidapi\.com(?<!p\.rapidapi\.com)
 1697755372	cocomac	byrule\.xyz
+1697771828	Makyen	telkom[\W_]*+university(?!\.ac\.id(?<=telkomuniversity\.ac\.id))
