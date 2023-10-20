@@ -45177,7 +45177,6 @@
 1669968488	cigien	totalenvironments\.co\.in
 1669968634	cigien	ahmad242jameel(?:@gmail\.com)?
 1669969344	tripleee	(?-i:^Pds International Pvt ltd$)
-1669971095	tripleee	tractorkarvan\.com
 1669971150	tripleee	freeimgtools\.com
 1669971814	cigien	cryptonewsz\.com
 1669972317	cigien	bestsocialpromotion\.com
