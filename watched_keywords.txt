@@ -54124,3 +54124,4 @@
 1697793973	cigien	musafircab\.com
 1697794007	cigien	musafircab(?!\.com)
 1697794054	cigien	glossyescortsbirmingham\.co\.uk
+1697794111	cigien	glossy[\W_]*+escorts[\W_]*+birmingham(?!\.co\.uk(?<=glossyescortsbirmingham\.co\.uk))
