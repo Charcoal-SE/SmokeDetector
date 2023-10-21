@@ -24240,7 +24240,6 @@
 1606457678	tripleee	renediazphotography\.com
 1606458425	Makyen	officed+\.uk\.net
 1606458935	Makyen	mtouch[\W_]*+labs(?!\.com(?<=mtouchlabs\.com))
-1606458956	Makyen	mtouchlabs\.com
 1606459250	Makyen	jobalertclub\.com
 1606463928	tripleee	uptons\.net\.au
 1606464883	tripleee	laxminarasimhahospital\.in
