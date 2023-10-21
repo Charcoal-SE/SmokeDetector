@@ -169,3 +169,9 @@ By submitting your contribution for inclusion in the work
 as defined in the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0),
 you agree that it be dual licensed as above,
 without any additional terms or conditions.
+
+## Our Amazing Contributors ⭐
+
+<a href="https://github.com/Charcoal-SE/SmokeDetector">
+  <img src="https://contrib.rocks/image?repo=Charcoal-SE/SmokeDetector" />
+</a>
