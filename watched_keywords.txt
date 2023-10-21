@@ -54158,3 +54158,4 @@
 1697906722	Makyen	soulmatesketch\.com
 1697907633	Jeff Schaller	sazidhealth\.com
 1697931721	Makyen	unisatwalletextension\.com
+1697931743	Makyen	unisat[\W_]*+wallet[\W_]*+extension(?!\.com(?<=unisatwalletextension\.com))
