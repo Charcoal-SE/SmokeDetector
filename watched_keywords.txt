@@ -54146,3 +54146,4 @@
 1697878076	Ryan M	afka[\W_]*+hub[\W_]*+innovations
 1697886894	Jeff Schaller	chatgptdeutsch\.org
 1697887568	Jeff Schaller	invensislearning\.com
+1697888434	Jeff Schaller	winupskill\.com
