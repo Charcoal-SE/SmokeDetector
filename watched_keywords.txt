@@ -17274,7 +17274,6 @@
 1583297754	Shree	societynow\.in
 1583300501	Shree	prodatalabs\.com
 1583306314	Shree	goxxbet\.com
-1583308181	Makyen	codermails\.in
 1583308204	Makyen	afllivestream\.com
 1583308273	Makyen	electroketonew(?#sites.google.com)
 1583308296	Makyen	diet[\W_]*+clarity[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
