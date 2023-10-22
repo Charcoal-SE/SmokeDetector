@@ -54164,3 +54164,4 @@
 1697978781	Jeff Schaller	techcodinghub\.com
 1697983424	Jeff Schaller	vedardalarm\.com
 1697987183	Makyen	weblandinitiation(?:@gmail\.com)?
+1697987318	Makyen	dolphex(?!\.io)
