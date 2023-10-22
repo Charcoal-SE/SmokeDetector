@@ -54165,3 +54165,4 @@
 1697983424	Jeff Schaller	vedardalarm\.com
 1697987183	Makyen	weblandinitiation(?:@gmail\.com)?
 1697987318	Makyen	dolphex(?!\.io)
+1697987368	Makyen	d(?:octo)?r[\W_]*+priti(?:[\W_]*+nanda[\W_]*+sibal)?
