@@ -50060,7 +50060,6 @@
 1682957163	Spevacus	emailverifierpro\.app
 1682967217	Jeff Schaller	mindfuljugni\.com
 1682976318	Jesse	alexandriacomputers\.com
-1682974328	Artur Meinild	technoracle\.com
 1682987229	Jeff Schaller	crontabgenerator\.org
 1683005027	tripleee	buzzingz\.com
 1683005069	tripleee	ascendviral\.com
