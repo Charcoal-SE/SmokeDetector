@@ -27812,7 +27812,6 @@
 1617964841	Jeff Schaller	delimp\.com
 1617971570	Spevacus	kbcgame\.biz
 1617974024	Spevacus	bpbonline\.com
-1617976521	Jeff Schaller	atobtransfer\.com
 1617988094	Makyen	giayxinstore\.com
 1617988112	Makyen	exoticparrotstore\.com
 1617988655	Nisse Engström	clig\.dev
