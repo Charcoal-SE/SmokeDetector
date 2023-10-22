@@ -54167,3 +54167,4 @@
 1697987318	Makyen	dolphex(?!\.io)
 1697987368	Makyen	d(?:octo)?r[\W_]*+priti(?:[\W_]*+nanda[\W_]*+sibal)?
 1697987686	Makyen	panorama[\W_]*+slim
+1697989666	Makyen	legithackar980(?:@gmail\.com)?
