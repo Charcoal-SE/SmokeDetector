@@ -50710,7 +50710,6 @@
 1684512292	cigien	bincom\.net
 1684512380	cigien	fotc\.com
 1684513300	Makyen	(?:webinar-)?google-workspace-security-audit
-1684513961	Jesse	fai-project\.org
 1684520013	Jesse	szjy-led\.com
 1684521503	Makyen	(?-i:FhKC97P)
 1684525071	Makyen	bans?\.(?:png|jpg|gif)
