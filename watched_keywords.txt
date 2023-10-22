@@ -5577,7 +5577,6 @@
 1540148231	Glorfindel	wanderungen-und-abenteuer\.de
 1540148179	JoErNanO	hikingbna\.com
 1540153511	Erik the Outgolfer	romancecompass\.com
-1540159704	Tetsuya Yamamoto	linuxsecrets\.com
 1540161398	Makyen	chirurgie-en-tunisie\.com
 1540178932	Tetsuya Yamamoto	kodi\.ninja
 1540182333	tripleee	disk-partition\.com
