@@ -54172,3 +54172,4 @@
 1698056653	VLAZ	automymo\.com
 1698051426	cigien	fa[\W_]*+plus
 1698054728	VLAZ	printindustry\.com
+1698057886	VLAZ	allegiantsky\.com
