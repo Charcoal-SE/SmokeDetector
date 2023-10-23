@@ -54169,3 +54169,4 @@
 1698055903	Jeff Schaller	rnada\.com
 1698055924	Jeff Schaller	traicaysaydibay\.com
 1698057115	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))
+1698056653	VLAZ	automymo\.com
