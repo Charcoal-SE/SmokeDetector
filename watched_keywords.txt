@@ -54175,3 +54175,4 @@
 1698057886	VLAZ	allegiantsky\.com
 1698058848	Nick	eagle\.in
 1698060921	Jeff Schaller	west-technology\.co\.uk
+1698061731	Jeff Schaller	ansatrading\.com
