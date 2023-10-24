@@ -54198,3 +54198,4 @@
 1698167943	Makyen	dailywazaifinurdu\.blogspot
 1698187872	Makyen	d(?:octo)?r[\W_]*+brian[\W_]*+cole
 1698187890	Makyen	legitimate[\W_]*+hacker
+1698187918	Makyen	omega[\W_]*+cryptos[\W_]*+recovery[\W_]*+specialist
