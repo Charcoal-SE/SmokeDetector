@@ -54196,3 +54196,4 @@
 1698155155	Makyen	whytap\.in
 1698155620	cigien	airlineticketspolicy\.com
 1698167943	Makyen	dailywazaifinurdu\.blogspot
+1698187872	Makyen	d(?:octo)?r[\W_]*+brian[\W_]*+cole
