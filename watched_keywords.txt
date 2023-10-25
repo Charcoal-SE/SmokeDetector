@@ -54201,3 +54201,4 @@
 1698187918	Makyen	omega[\W_]*+cryptos[\W_]*+recovery[\W_]*+specialist
 1698215888	cigien	vantop10\.com
 1698215952	cigien	palazhiayurveda\.com
+1698215992	cigien	palazhi[\W_]*+ayurveda(?!\.com(?<=palazhiayurveda\.com))
