@@ -54228,3 +54228,4 @@
 1698313434	Can O' Spam	u5bets\.com
 1698314033	Makyen	u5bets(?!\.com)
 1698315351	Makyen	quantum[\W_]*+gpt
+1698315379	Makyen	lookerstudio\.google\.com
