@@ -54230,3 +54230,4 @@
 1698315351	Makyen	quantum[\W_]*+gpt
 1698315379	Makyen	lookerstudio\.google\.com
 1698315409	Makyen	tradingbitcoinapp\.blogspot
+1698315433	Can O' Spam	attestationservices\.ae
