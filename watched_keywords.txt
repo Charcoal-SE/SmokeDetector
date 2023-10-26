@@ -54239,3 +54239,4 @@
 1698345080	Jeff Schaller	paymentgateway\.solutions
 1698345554	cocomac	osullivansafety\.ie
 1698358091	Makyen	rothstein_codeand(?#telegram)
+1698358115	Makyen	cyber[\W_]*+dude
