@@ -54226,3 +54226,4 @@
 1698312856	Can O' Spam	emiratesvisaonline\.com
 1698313941	Makyen	emirates[\W_]*+visa[\W_]*+online(?!\.com(?<=emiratesvisaonline\.com))
 1698313434	Can O' Spam	u5bets\.com
+1698314033	Makyen	u5bets(?!\.com)
