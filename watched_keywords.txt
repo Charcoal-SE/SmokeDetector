@@ -54236,3 +54236,4 @@
 1698320018	Jeff Schaller	nothng\.infinityfreeapp\.com
 1698331356	Makyen	sj-trd\.com
 1698340580	Makyen	schoolofinternetmarketing\.co\.in
+1698345080	Jeff Schaller	paymentgateway\.solutions
