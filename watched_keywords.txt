@@ -54263,3 +54263,4 @@
 1698407055	Jeff Schaller	pureleatherjacket\.com
 1698407095	cigien	pure[\W_]*+leather[\W_]*+jacket(?!\.com(?<=pureleatherjacket\.com))
 1698416411	Jeff Schaller	fusioneventz\.in
+1698417752	Jeff Schaller	tranks7\.com
