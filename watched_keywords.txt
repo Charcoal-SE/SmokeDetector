@@ -54258,3 +54258,4 @@
 1698403326	Jeff Schaller	wirelessprinter\.online
 1698403402	Jeff Schaller	skovian\.com
 1698404019	cigien	skovian(?!\.com)
+1698404118	cigien	ketovex[\W_]*+keto[\W_]*+gummies(?:[\W_]*+us)?
