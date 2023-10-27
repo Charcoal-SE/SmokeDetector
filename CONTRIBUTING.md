@@ -29,5 +29,5 @@ requests without these requirements may be rejected or require additional inform
 the request
 
 **If you believe you have found a security flaw**, then report the flaw to security@charcoal-se.org with details of what you believe the 
-flaw is and how you came to the conclusion.  **DO NOT** share any issues that are potentially security vulnerabilitites as public issues 
+flaw is and how you came to the conclusion.  **DO NOT** share any issues that are potentially security vulnerabilities as public issues 
 or through public unsecure mediums.
