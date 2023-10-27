@@ -54252,3 +54252,4 @@
 1698392648	Nick	APKTodo
 1698394933	cigien	5rv\.digital
 1698395015	cigien	5rv[\W_]*+digital(?<!5rv\.digital)
+1698395251	cigien	ismartroom\.com
