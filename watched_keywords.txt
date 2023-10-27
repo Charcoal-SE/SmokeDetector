@@ -47504,7 +47504,6 @@
 1676615442	tripleee	(?-i:^neha afzal$)
 1676615897	tripleee	journalpulmonology\.org
 1676615935	tripleee	ebookwriting\.co\.uk
-1676616422	tripleee	omdeo\.co\.in
 1676617192	cigien	iragoldreview\.com
 1676618494	cigien	bhagwanbabu\.com
 1676618898	Cody Gray	vizzwebsolutions\.com
