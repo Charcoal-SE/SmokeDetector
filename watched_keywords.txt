@@ -54251,4 +54251,3 @@
 1698389913	cigien	dienmaygiaphu\.com\.vn
 1698392648	Nick	APKTodo
 1698394933	cigien	5rv\.digital
-1698394957	cigien	5rv(?!\.digital)
