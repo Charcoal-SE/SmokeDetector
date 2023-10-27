@@ -54240,3 +54240,4 @@
 1698345554	cocomac	osullivansafety\.ie
 1698358091	Makyen	rothstein_codeand(?#telegram)
 1698358115	Makyen	cyber[\W_]*+dude
+1698373966	Nick	Taraftarium24
