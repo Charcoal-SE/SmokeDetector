@@ -28563,7 +28563,6 @@
 1620689046	cigien	bloomengg\.com
 1620689326	cigien	sarkarijobs\.gen\.in
 1620689347	cigien	sarkarijobsagency\.com
-1620636118	Nick	techimply\.com
 1620689865	cigien	hoskey44april(?:@gmail\.com)?
 1620690110	cigien	moshaveraneh\.com
 1620694260	Ryan M	ucep5t-zvl-jpjecjucdm3sa(?# YouTube channel)
