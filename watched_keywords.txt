@@ -54260,3 +54260,4 @@
 1698404118	cigien	ketovex[\W_]*+keto[\W_]*+gummies(?:[\W_]*+us)?
 1698404190	cigien	redmineflux\.com
 1698405937	Jeff Schaller	medzforce\.com
+1698407055	Jeff Schaller	pureleatherjacket\.com
