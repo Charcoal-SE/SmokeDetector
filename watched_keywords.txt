@@ -54302,3 +54302,4 @@
 1698489485	VLAZ	menukavishal\.org
 1698507223	Vickel	givevaluefirst\.com
 1698508871	Makyen	givevaluefirst(?!\.com)
+1698509216	Makyen	alo-tamirkar\.ir
