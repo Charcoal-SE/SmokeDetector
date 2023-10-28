@@ -54297,3 +54297,4 @@
 1698488698	VLAZ	moviesleatherjackets\.com
 1698488723	VLAZ	marks4sure\.com
 1698488805	VLAZ	jodhpurcabservice\.com
+1698496082	Jeff Schaller	good-cplusplus\.blogspot
