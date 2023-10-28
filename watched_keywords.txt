@@ -54290,3 +54290,4 @@
 1698454134	Makyen	dwarerecoveryspecialist(?:[\W_]*+(?:at[\W_]*+)?auctioneer(?:[\W_]*+(?:dot[\W_]*+)?net)?)?
 1698467201	Makyen	woody-brison\.neocities\.org
 1698469224	Makyen	proofs\.pl
+1698488471	VLAZ	duniagames\.xyz
