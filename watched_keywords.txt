@@ -54304,3 +54304,4 @@
 1698508871	Makyen	givevaluefirst(?!\.com)
 1698509216	Makyen	alo-tamirkar\.ir
 1698512091	Makyen	flexospaces\.com
+1698512114	Makyen	flexo[\W_]*+spaces(?!\.com(?<=flexospaces\.com))
