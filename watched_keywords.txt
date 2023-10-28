@@ -54301,3 +54301,4 @@
 1698502671	Jeff Schaller	(?-i:xJZ5sqUrS3CFv9cy5)(?#forms.gle)
 1698489485	VLAZ	menukavishal\.org
 1698507223	Vickel	givevaluefirst\.com
+1698508871	Makyen	givevaluefirst(?!\.com)
