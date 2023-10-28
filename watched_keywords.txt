@@ -54303,3 +54303,4 @@
 1698507223	Vickel	givevaluefirst\.com
 1698508871	Makyen	givevaluefirst(?!\.com)
 1698509216	Makyen	alo-tamirkar\.ir
+1698512091	Makyen	flexospaces\.com
