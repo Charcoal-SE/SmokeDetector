@@ -4095,7 +4095,7 @@ uniqueconnect\.in
 ijstartcannonn\.com
 lbk\.com\.tw
 tangenz\.com
-teamcode\.com
+\b(?<![^\W_]-)teamcode\.com(?![.-][^\W_])\b
 extendfeature\.com
 thetechjournal\.in
 astrothoughts\.in
