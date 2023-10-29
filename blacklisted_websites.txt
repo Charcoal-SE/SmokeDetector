@@ -3819,7 +3819,7 @@ bestessaywritingservicereview(?# sites.google.com)
 tutorsindia\.com
 legalwiser\.in
 homify\.com
-(?:firebase)?storage.googleapis.com/[^\s"<]*+(?=[\w\W]{0,1500}<p>\d\d?/\d\d?/\d{4}</p>$)
+(?:firebase)?storage.googleapis.com/[^\s"<]*+(?=[\w\W]{0,1500}<p>\d\d?/\d\d?/\d{4}</p>$)(?#" syntax highlighting fodder)
 esgenv\.com
 jobsatags\.com
 airtviptv\.shop
@@ -4478,7 +4478,7 @@ bpmcounters\.com
 chiasetonghop\.com
 caffeinepark\.com
 driftboss\.net
-mercurynews\.com/[^\s"',]*?(?:cbd|gummies)
+mercurynews\.com/[^\s"',]*?(?:cbd|gummies)(?#" syntax highlighting fodder)
 selcousa\.com
 packersmoversinbangalore\.co\.in
 besttech\.in
@@ -5354,7 +5354,7 @@ yolasite\.com(?<!@yolasite\.com)
 visactor\.io
 90minsport\.live
 openteqgroup\.com
-teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#" syntax highlighting fodder)
 \b(?<![^\W_]-)ello\.co(?![.-][^\W_])(?!, )\b
 wfmj\.com/story/(?!45079892)
 heylink\.me/
