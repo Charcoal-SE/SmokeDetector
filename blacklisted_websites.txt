@@ -5428,3 +5428,4 @@ mmcgbl\.com
 khelraja\.com
 techimply\.com
 omdeo\.co\.in
+lord[\W_]*+hacker[\W_]*+ultimate\w*+\.wixsite\.com
