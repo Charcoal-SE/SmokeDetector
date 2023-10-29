@@ -54308,3 +54308,4 @@
 1698522839	Vickel	targetboard\.ai
 1698527776	Mithical	getssolution\.com
 1698541215	Jeff Schaller	zeus138guardian\.com
+1698550552	Makyen	(?-i:dmLR2)(?<=\b(?<![^\W_]-)shorturl\.at\/dmLR2)
