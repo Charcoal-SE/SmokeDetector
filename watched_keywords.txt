@@ -54320,3 +54320,4 @@
 1698590787	Makyen	sj[\W_]*+design[\W_]*+studio
 1698590819	Jeff Schaller	cogentsolutions\.co
 1698590863	Makyen	cogentsolutions(?!\.co)
+1698590874	Makyen	santoshihacker\.godaddysites\.com
