@@ -54322,3 +54322,4 @@
 1698590863	Makyen	cogentsolutions(?!\.co)
 1698590874	Makyen	santoshihacker\.godaddysites\.com
 1698595062	Makyen	uctafex[\W_]*+com
+1698608220	Makyen	99cryptowallet\.com
