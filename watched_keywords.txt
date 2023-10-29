@@ -54318,3 +54318,4 @@
 1698590585	Makyen	vipstealth\.com
 1698590762	Makyen	architect[\W_]*+shalini[\W_]*+jain
 1698590787	Makyen	sj[\W_]*+design[\W_]*+studio
+1698590819	Jeff Schaller	cogentsolutions\.co
