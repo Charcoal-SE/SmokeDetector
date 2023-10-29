@@ -54323,3 +54323,4 @@
 1698590874	Makyen	santoshihacker\.godaddysites\.com
 1698595062	Makyen	uctafex[\W_]*+com
 1698608220	Makyen	99cryptowallet\.com
+1698608253	Makyen	(?:xverse|okx|math|zilpay|bitget|sub)[\W_]*+wallet[\W_]*+extension
