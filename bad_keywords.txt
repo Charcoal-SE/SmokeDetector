@@ -2896,3 +2896,4 @@ BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
 cyber-wizard\.com
 programmer\.net
 ditm[\W_]*+college(?!\.in(?<=ditmcollege\.in))(?<!(?-i:^Ditm College$))
+lord[\W_]*+hacker[\W_]*+ultimate\w*+(?!\.wixsite\.com)
