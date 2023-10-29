@@ -54307,3 +54307,4 @@
 1698512114	Makyen	flexo[\W_]*+spaces(?!\.com(?<=flexospaces\.com))
 1698522839	Vickel	targetboard\.ai
 1698527776	Mithical	getssolution\.com
+1698541215	Jeff Schaller	zeus138guardian\.com
