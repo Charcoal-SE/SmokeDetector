@@ -54324,3 +54324,4 @@
 1698595062	Makyen	uctafex[\W_]*+com
 1698608220	Makyen	99cryptowallet\.com
 1698608253	Makyen	(?:xverse|okx|math|zilpay|bitget|sub)[\W_]*+wallet[\W_]*+extension
+1698608274	Makyen	xverse-wallet\.com
