@@ -54357,3 +54357,4 @@
 1698528080	Vickel	culpa[\W_]*+mia[\W_]*
 1698527859	Vickel	moviesfoxs\.com
 1698685373	Can O' Spam	sepaxml\.com
+1698686136	Can O' Spam	revenantcyberhacker\.com
