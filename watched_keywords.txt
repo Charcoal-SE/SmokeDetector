@@ -54348,3 +54348,4 @@
 1698672725	cigien	surveymonkey\.de
 1698673474	Makyen	muyern[\W_]*+trust[\W_]*+hacker
 1698673508	Makyen	muyerntrusted@mail-me\.com
+1698675720	Spevacus	boostmyclass\.com
