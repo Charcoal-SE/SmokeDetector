@@ -54358,3 +54358,4 @@
 1698527859	Vickel	moviesfoxs\.com
 1698685373	Can O' Spam	sepaxml\.com
 1698686136	Can O' Spam	revenantcyberhacker\.com
+1698686420	Makyen	revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
