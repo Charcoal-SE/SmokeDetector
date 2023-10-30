@@ -54339,3 +54339,4 @@
 1698660450	cigien	central[\W_]*+auction[\W_]*+group(?!\.com(?<=centralauctiongroup\.com))
 1698660477	cigien	trishla-city\.co\.in
 1698660712	VLAZ	klik\.pler\.pro
+1698660716	VLAZ	kliksatu\.pler\.pro
