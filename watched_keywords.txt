@@ -54332,3 +54332,4 @@
 1698652383	Nick	receipt-bot\.com
 1698660195	cigien	receipt[\W_]*+bot(?!\.com(?<=receipt-bot\.com))
 1698651660	VLAZ	nsktglobal\.com
+1698660248	cigien	sunflower-cissp\.com
