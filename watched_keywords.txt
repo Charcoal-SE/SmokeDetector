@@ -54353,3 +54353,4 @@
 1698676147	cigien	los[\W_]*+cabos[\W_]*+airport[\W_]*+shuttles(?!\.com(?<=loscabosairportshuttles\.com))
 1698676407	Jeff Schaller	soundtakestudio\.com
 1698678533	Can O' Spam	gdfskills\.com
+1698610172	Vickel	adrian[\W_]*+lamo[\W_]*+hacker
