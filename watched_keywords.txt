@@ -54337,3 +54337,4 @@
 1698660387	cigien	bitlocker-recovery\.com
 1698660426	cigien	centralauctiongroup\.com
 1698660450	cigien	central[\W_]*+auction[\W_]*+group(?!\.com(?<=centralauctiongroup\.com))
+1698660477	cigien	trishla-city\.co\.in
