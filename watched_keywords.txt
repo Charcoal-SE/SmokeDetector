@@ -54329,3 +54329,4 @@
 1698655060	VLAZ	claimsprousa\.com
 1698655096	VLAZ	hilltopresorts\.com
 1698660081	cigien	hilltop[\W_]*+resorts?+(?!\.com(?<=hilltopresorts\.com))
+1698652383	Nick	receipt-bot\.com
