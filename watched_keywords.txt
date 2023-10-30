@@ -54356,3 +54356,4 @@
 1698527865	Vickel	filmsnews21\.com
 1698528080	Vickel	culpa[\W_]*+mia[\W_]*
 1698527859	Vickel	moviesfoxs\.com
+1698685373	Can O' Spam	sepaxml\.com
