@@ -54355,3 +54355,4 @@
 1698678533	Can O' Spam	gdfskills\.com
 1698610172	Vickel	adrian[\W_]*+lamo[\W_]*+hacker
 1698527865	Vickel	filmsnews21\.com
+1698528080	Vickel	culpa[\W_]*+mia[\W_]*
