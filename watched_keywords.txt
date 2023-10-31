@@ -54383,3 +54383,4 @@
 1698753131	cigien	dark[\W_]*+web[\W_]*+online[\W_]*+hackers(?!\.com(?<=darkwebonlinehackers\.com))
 1698753180	cigien	srisaichandratravel\.com
 1698753210	cigien	sri[\W_]*+sai[\W_]*+chandra[\W_]*+travel(?!\.com(?<=srisaichandratravel\.com))
+1698753235	cigien	aura[\W_]*+vaastu(?!\.com(?<=auravaastu\.com))
