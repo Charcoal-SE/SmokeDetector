@@ -323,7 +323,6 @@ canwestcellular
 limitlesspill
 eltib2\.wordpress\.com
 access-electronic\.co
-guyideas\.esy\.es
 alconelectronics\.com
 quicksolutionspell
 metaboostsite
