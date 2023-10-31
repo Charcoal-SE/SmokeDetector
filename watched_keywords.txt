@@ -54372,3 +54372,4 @@
 1698741524	cigien	dar[\W_]*+jewellery(?!\.com(?<=darjewellery\.com))
 1698741721	cigien	upskillfinder\.com
 1698741941	cigien	colourfulindianholidays\.com
+1698743568	cigien	guideublog\.com
