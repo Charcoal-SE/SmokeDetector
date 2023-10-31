@@ -54393,3 +54393,4 @@
 1698756543	Jeff Schaller	KarlienVanJaarsveldKetoGummiesZA
 1698760974	Jeff Schaller	octagoshealth\.com
 1698761045	Makyen	octagos(?:[\W_]*+(?:al|engine|health(?!\.com(?<=octagoshealth\.com)))s?)*
+1698761728	Makyen	chipsx\.net
