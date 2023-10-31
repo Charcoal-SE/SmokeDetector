@@ -16,7 +16,6 @@ centerweb10
 okaygoods\.com
 hellofifa
 chinadivision
-driverdr\.com
 rsgp4u\.com
 fifa\d*online
 wearepropeople\.com
