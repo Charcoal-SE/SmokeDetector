@@ -54425,3 +54425,4 @@
 1698789038	Jeff Schaller	driverdr\.com
 1698788717	Vickel	hinata[\W_]*+porn(?!\.com)
 1698789201	Jeff Schaller	fifa\d*online
+1698789272	Jeff Schaller	wearepropeople\.com
