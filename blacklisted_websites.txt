@@ -264,7 +264,6 @@ evolvedlifevisions\.com
 leptigentry\.com
 fullsoftversion\.com
 hotfrog\.ca
-snorg(?:content|tees)\.com
 webtechcoupons
 diwaliimages\d+\.in
 architecturedesign\.tk
