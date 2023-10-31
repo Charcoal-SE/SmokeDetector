@@ -54376,3 +54376,4 @@
 1698745377	cigien	\bfreedom\.net(?<!-freedom\.net)
 1698747460	cigien	watchgalaxy\.com\.au
 1698747553	Jeff Schaller	iplayboy\.in
+1698747581	cigien	iplayboy(?!\.in)
