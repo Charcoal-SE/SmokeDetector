@@ -54378,3 +54378,4 @@
 1698747553	Jeff Schaller	iplayboy\.in
 1698747581	cigien	iplayboy(?!\.in)
 1698751741	Jeff Schaller	tilda\.ws
+1698751771	Jeff Schaller	auravaastu\.com
