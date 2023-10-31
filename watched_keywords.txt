@@ -54386,3 +54386,4 @@
 1698753235	cigien	aura[\W_]*+vaastu(?!\.com(?<=auravaastu\.com))
 1698753325	cigien	robinhoodapphelp\.com
 1698753430	Jeff Schaller	Ketodietzone
+1698753857	Jeff Schaller	usaseoit\.com
