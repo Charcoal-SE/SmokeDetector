@@ -54401,3 +54401,4 @@
 1698771990	Jeff Schaller	gameart\.net
 1698772194	Jeff Schaller	clusterlinks\.com
 1698772263	Jeff Schaller	analec\.com
+1698772343	Jeff Schaller	sofotex\.com
