@@ -54373,3 +54373,4 @@
 1698741721	cigien	upskillfinder\.com
 1698741941	cigien	colourfulindianholidays\.com
 1698743568	cigien	guideublog\.com
+1698745377	cigien	\bfreedom\.net(?<!-freedom\.net)
