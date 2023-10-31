@@ -54370,3 +54370,4 @@
 1698741353	cigien	workonicservices\.com
 1698736712	Nick	unitedshopfronts\.co\.uk
 1698741524	cigien	dar[\W_]*+jewellery(?!\.com(?<=darjewellery\.com))
+1698741721	cigien	upskillfinder\.com
