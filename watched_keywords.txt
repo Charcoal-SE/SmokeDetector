@@ -53780,7 +53780,6 @@
 1697055664	Jeff Schaller	doenglishi\.com
 1697056047	Makyen	green[\W_]*+bunny[\W_]*+cbd(?:[\W_]*+(?:gummie|review|\d++|[\da-f]{5,}+)s?)*
 1697056071	Makyen	digisite(?!\.in)
-1697056096	Makyen	hacker[\W_]*+santoshi
 1697056121	Makyen	(?-i:3tbsoGB)(?#bit.ly)
 1697065472	Makyen	crypto(?:currency)?[\W_]*+recovery[\W_]*+agency
 1697070718	Makyen	hodlfutures
