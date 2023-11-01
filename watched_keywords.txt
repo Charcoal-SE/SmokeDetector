@@ -54451,3 +54451,4 @@
 1698833658	VLAZ	imonster\.space
 1698834521	VLAZ	naturalherbscentre\.com
 1698834534	VLAZ	natural[\W_]*herbs[\W_]*centre(?!\.com)
+1698842174	Jeff Schaller	residenteviljacket\.com
