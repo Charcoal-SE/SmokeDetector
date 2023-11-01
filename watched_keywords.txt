@@ -54438,3 +54438,4 @@
 1698816104	Makyen	stewartsacademy\.com
 1698816564	Makyen	digihubexpert\.com
 1698817295	Makyen	fwmspl\.com
+1698821328	Nick	Gladias[\W_]*+Consulting(?!\.com)
