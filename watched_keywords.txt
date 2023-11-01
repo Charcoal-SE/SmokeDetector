@@ -54322,7 +54322,6 @@
 1698608253	Makyen	(?:xverse|okx|math|zilpay|bitget|sub)[\W_]*+wallet[\W_]*+extension
 1698608274	Makyen	xverse-wallet\.com
 1698608296	Makyen	phantom[\W_]*+extension
-1698611117	Makyen	foodsroute\.com
 1698615427	Nisse Engström	osman2102\.blogspot
 1698659939	cigien	codedthemes\.com
 1698655060	VLAZ	claimsprousa\.com
