@@ -54462,3 +54462,4 @@
 1698854052	Makyen	bcr99th(?!\.co)
 1698854473	Makyen	777[\W_]*+vin(?!\.vip(?<=777win\.vip))(?:[\W_]*+vip)?
 1698854500	Makyen	(?-i:zQ398g)(?#fiverr.com)
+1698854525	Makyen	jim\.standard\.mortgage(?:@gmail\.com)?
