@@ -5403,3 +5403,4 @@ lord[\W_]*+hacker[\W_]*+ultimate\w*+\.wixsite\.com
 pctechtest\.com
 appingine\.com
 foodsroute\.com
+santoshi[\W_]*+hacker[\W_]*+godaddysites(?:[\W_]*+(?:dot[\W_]*+)?com)
