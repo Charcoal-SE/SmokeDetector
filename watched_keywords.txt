@@ -54458,6 +54458,5 @@
 1698847363	Makyen	suggeststrongpassword\.com
 1698850571	Jeff Schaller	bcr99th\.co
 1698850609	Jeff Schaller	777vin\.vip
-1698850636	Jeff Schaller	777vinvip
 1698847267	VLAZ	bossebonus\.se
 1698854052	Makyen	bcr99th(?!\.co)
