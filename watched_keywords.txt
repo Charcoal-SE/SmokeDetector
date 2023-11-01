@@ -54463,3 +54463,4 @@
 1698854473	Makyen	777[\W_]*+vin(?!\.vip(?<=777win\.vip))(?:[\W_]*+vip)?
 1698854500	Makyen	(?-i:zQ398g)(?#fiverr.com)
 1698854525	Makyen	jim\.standard\.mortgage(?:@gmail\.com)?
+1698855221	Spevacus	outdoorelectricbike\.com
