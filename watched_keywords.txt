@@ -54441,3 +54441,4 @@
 1698835161	Jeff Schaller	cvrnews\.net
 1698820928	Nick	gladiasconsulting\.com
 1698821100	VLAZ	applicationformats\.com
+1698821328	Nick	Gladias[\W_]*+Consulting(?!\.com)
