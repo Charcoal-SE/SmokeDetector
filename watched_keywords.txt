@@ -54485,3 +54485,4 @@
 1698919931	VLAZ	nordenvation\.com
 1698922880	Jeff Schaller	madainproject\.com
 1698923566	Jeff Schaller	labhgarh\.com
+1698924728	Jeff Schaller	pubfonts\.com
