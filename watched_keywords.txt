@@ -54498,3 +54498,4 @@
 1698936889	Makyen	joyitsolutions(?!\.co)
 1698940537	Jeff Schaller	ahanutsvn\.com
 1698944711	Jeff Schaller	salkantaytrekmachu\.com
+1698944732	Makyen	salkantay[\W_]*+trek[\W_]*+machu(?!\.com(?<=salkantaytrekmachu\.com))
