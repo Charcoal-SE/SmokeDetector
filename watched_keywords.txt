@@ -54480,3 +54480,4 @@
 1698918186	Makyen	garudaslot
 1698918215	Makyen	asalgacor(?!\.com)
 1698918245	Makyen	edha[\W_]*+care(?!\.com(?<=edhacare\.com))
+1698921485	VLAZ	icore\.net\.in
