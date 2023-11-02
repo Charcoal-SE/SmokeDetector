@@ -54505,3 +54505,4 @@
 1698953065	Vickel	adware[\W_]*+recovery[\W_]*+specialist(?!\.expert)
 1698965442	Nisse Engström	nursinglevel\.com
 1698967539	Makyen	zachpfeffer\.com
+1698966524	Nick	kirotravel\.com
