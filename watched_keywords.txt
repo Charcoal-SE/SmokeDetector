@@ -54502,3 +54502,4 @@
 1698946468	cigien	itnagency\.com
 1698947054	Makyen	itn[\W_]*+agency(?!\.com(?<=itnagency\.com))
 1698961234	Vickel	centurycyberhacker\.pro
+1698953065	Vickel	adware[\W_]*+recovery[\W_]*+specialist(?!\.expert)
