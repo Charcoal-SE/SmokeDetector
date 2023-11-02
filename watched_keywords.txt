@@ -54496,3 +54496,4 @@
 1698934607	cigien	river[\W_]*+sand[\W_]*+stone[\W_]*+aggregates(?!\.com(?<=riversandstoneaggregates\.com))
 1698936711	cigien	thepoolapk\.com
 1698936889	Makyen	joyitsolutions(?!\.co)
+1698940537	Jeff Schaller	ahanutsvn\.com
