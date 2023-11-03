@@ -54338,7 +54338,6 @@
 1698671016	Makyen	capsnip\.com
 1698672701	cigien	seshionshub\.com
 1698672725	cigien	surveymonkey\.de
-1698673474	Makyen	muyern[\W_]*+trust[\W_]*+hacker
 1698673508	Makyen	muyerntrusted@mail-me\.com
 1698675720	Spevacus	boostmyclass\.com
 1698676122	cigien	loscabosairportshuttles\.com
