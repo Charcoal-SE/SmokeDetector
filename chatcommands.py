@@ -849,7 +849,7 @@ def wut():
 def hats():
     wb_start = datetime(2018, 12, 12, 0, 0, 0)
     wb_end = datetime(2019, 1, 2, 0, 0, 0)
-    now = datetime.utcnow()
+    now = datetime.now(datetime.UTC)
     return_string = ""
     if wb_start > now:
         diff = wb_start - now
@@ -1421,7 +1421,7 @@ def status():
     Returns the amount of time the application has been running
     :return: A string
     """
-    now = datetime.utcnow()
+    now = datetime.now(datetime.UTC)
     diff = now - GlobalVars.startup_utc_date
 
     return 'Running since {time} UTC ({relative})'.format(time=GlobalVars.startup_utc, relative=td_format(diff))
