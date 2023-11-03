@@ -249,7 +249,7 @@ def is_code_privileged(site, user_id):
 
 
 def update_reason_weights():
-    d = {'last_updated': datetime.utcnow().date()}
+    d = {'last_updated': datetime.now(datetime.UTC).date()}
     items = metasmoke.Metasmoke.get_reason_weights()
     if not items:
         return  # No update
