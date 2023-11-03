@@ -4,7 +4,7 @@ import pickle
 import sys
 import zlib
 import base64
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 import time
 import math
@@ -249,7 +249,7 @@ def is_code_privileged(site, user_id):
 
 
 def update_reason_weights():
-    d = {'last_updated': datetime.now(datetime.UTC).date()}
+    d = {'last_updated': datetime.now(tz=timezone.utc).date()}
     items = metasmoke.Metasmoke.get_reason_weights()
     if not items:
         return  # No update
@@ -498,7 +498,7 @@ def fetch_lines_from_error_log(count):
     logs = ErrorLogs.fetch_last(count)
     s = '\n'.join([
         "### {2} on {0} at {1}Z: {3}\n{4}".format(
-            GlobalVars.location, datetime.utcfromtimestamp(time).isoformat()[:-7],
+            GlobalVars.location, tz=timezone.utcfromtimestamp(time).isoformat()[:-7],
             name, message, tb)
         for time, name, message, tb in logs])
     if s:
