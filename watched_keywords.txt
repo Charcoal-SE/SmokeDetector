@@ -54511,3 +54511,4 @@
 1699004619	VLAZ	(?-i:13l_AQC0WLQof8TO2QewKE5v3POiskQzfuUmK4sRFJOI)(?#google spreadsheet with spam links)
 1699004429	VLAZ	silveredgepackaging\.com
 1699004164	VLAZ	notsupporting\.com
+1698998792	Nick	eland\.co\.kr
