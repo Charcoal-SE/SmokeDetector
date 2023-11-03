@@ -54524,3 +54524,4 @@
 1699017645	Can O' Spam	advisorworlds\.com
 1699020837	Makyen	gorgbet(?!\.info)
 1699021294	cigien	mdasik\.com
+1699029150	Jeff Schaller	tallestly\.com
