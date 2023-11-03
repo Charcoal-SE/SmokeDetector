@@ -54527,3 +54527,4 @@
 1699029150	Jeff Schaller	tallestly\.com
 1699030018	Jeff Schaller	shankaransilks\.com
 1699037118	Spevacus	foreignersjob\.com
+1699046615	Vickel	bliss[\W_]*+paradox[\W_]*+recovery(?!\.aol\.com)
