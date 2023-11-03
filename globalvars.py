@@ -81,7 +81,7 @@ class GlobalVars:
     watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
-    startup_utc_date = datetime.utcnow()
+    startup_utc_date = datetime.now(datetime.UTC)
     startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
     latest_questions_lock = threading.Lock()
@@ -268,7 +268,7 @@ class GlobalVars:
             """ Resets/clears/creates post scanning data in a stats set without getting the rw_lock """
             GlobalVars.PostScanStat.stats[stats_set_key] = {}
             GlobalVars.PostScanStat.stats[stats_set_key]['stats'] = GlobalVars.PostScanStat.default_stats.copy()
-            GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.utcnow()
+            GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.now(datetime.UTC)
 
         @staticmethod
         def reset(stats_set_key):
@@ -280,7 +280,7 @@ class GlobalVars:
         def lock(stats_set_key):
             """ Locks post scanning data in a stats set """
             with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.stats[stats_set_key]['locked_timestamp'] = datetime.utcnow()
+                GlobalVars.PostScanStat.stats[stats_set_key]['locked_timestamp'] = datetime.now(datetime.UTC)
 
         @staticmethod
         def unlock(stats_set_key):
