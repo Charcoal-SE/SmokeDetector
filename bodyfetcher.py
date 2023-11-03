@@ -5,7 +5,7 @@ import threading
 import copy
 from itertools import chain
 from operator import itemgetter
-from datetime import datetime
+from datetime import datetime, timezone
 
 import requests
 import psutil
