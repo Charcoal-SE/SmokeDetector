@@ -54521,3 +54521,4 @@
 1699009064	Can O' Spam	streamingfamous\.com
 1699012281	cigien	aqglassaz\.com
 1699014685	cigien	smride\.com
+1699014704	cigien	smride(?!\.com)
