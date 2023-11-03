@@ -13,7 +13,7 @@ from globalvars import GlobalVars
 
 # noinspection PyProtectedMember
 def uncaught_exception(exctype, value, tb):
-    delta = datetime.utcnow() - GlobalVars.startup_utc_date
+    delta = datetime.now(datetime.UTC) - GlobalVars.startup_utc_date
     log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype not in \
             {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
