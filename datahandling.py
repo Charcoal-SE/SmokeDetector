@@ -4,7 +4,7 @@ import pickle
 import sys
 import zlib
 import base64
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 import time
 import math
@@ -249,7 +249,7 @@ def is_code_privileged(site, user_id):
 
 
 def update_reason_weights():
-    d = {'last_updated': datetime.utcnow().date()}
+    d = {'last_updated': datetime.now(tz=timezone.utc).date()}
     items = metasmoke.Metasmoke.get_reason_weights()
     if not items:
         return  # No update
