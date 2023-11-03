@@ -54517,3 +54517,4 @@
 1698978368	Vickel	vpnmulti\.com
 1699006740	Jeff Schaller	chatgptopenai\.nl
 1698976972	Vickel	chat[\W_]*+gpt[\W_]*+in[\W_]*+het[\W_]*+nederlands
+1699007476	Jeff Schaller	gorgbet\.info
