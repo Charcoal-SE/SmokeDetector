@@ -80,7 +80,7 @@ class ErrorLogs:
 
     @classmethod
     def add_current_exception(cls):
-        now = datetime.utcnow()
+        now = datetime.now(datetime.UTC)
         exctype, value, traceback_or_message = sys.exc_info()
         tr = get_traceback_from_traceback_or_message(traceback_or_message)
         cls.add(now.timestamp(), exctype.__name__, str(value), tr)
@@ -175,7 +175,7 @@ def log(log_level, *args, and_file=False, no_exception=False):
         return
 
     color = levels[log_level][1] if log_level in levels else 'white'
-    log_str = "{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
+    log_str = "{} {}".format(colored("[{}]".format(datetime.now(datetime.UTC).isoformat()[11:-3]),
                                      color, attrs=['bold']),
                              redact_passwords("  ".join([str(x) for x in args])))
     print(log_str, file=sys.stderr)
@@ -198,7 +198,7 @@ def log_file(log_level, *args):
     if levels[log_level] < Helpers.min_log_level:
         return
 
-    log_str = redact_passwords("[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
+    log_str = redact_passwords("[{}] {}: {}".format(datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M:%S"),
                                                     log_level.upper(), "  ".join([str(x) for x in args])))
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
@@ -213,7 +213,7 @@ def get_traceback_from_traceback_or_message(traceback_or_message):
 
 def log_exception(exctype, value, traceback_or_message, and_file=False, *, log_level=None):
     log_level = 'error' if log_level is None else log_level
-    now = datetime.utcnow()
+    now = datetime.now(datetime.UTC)
     tr = get_traceback_from_traceback_or_message(traceback_or_message)
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
