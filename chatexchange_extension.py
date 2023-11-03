@@ -7,10 +7,10 @@ from helpers import log
 
 class Room(rooms.Room):
     def watch_socket(self, event_callback):
-        self._client.last_activity = datetime.utcnow()
+        self._client.last_activity = datetime.now(datetime.UTC)
 
         def on_activity(activity):
-            self._client.last_activity = datetime.utcnow()
+            self._client.last_activity = datetime.now(datetime.UTC)
 
             for event in self._events_from_activity(activity, self.id):
                 if isinstance(event, events.MessageEdited):
