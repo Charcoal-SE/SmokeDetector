@@ -54534,3 +54534,4 @@
 1699081020	cocomac	👉[\W_]*+CLICK[\W_]*+HERE
 1699075590	Nick	vxnet\.pro
 1699087081	Nisse Engström	reclaimycoin\.com
+1699088951	Nisse Engström	luckycola\.io
