@@ -54562,3 +54562,5 @@
 1699212436	Makyen	chandu[\W_]*+kanuri(?:[\W_]*+(?:unlimited|music)s?)*
 1699212967	DavidW	andamantech\.com
 1699169108	Nick	greenstardriving\.ca
+1699139619	Jeff Schaller	(?-i:^Khoa Dang$)
+1699142434	Vickel	group[\W_]*+stock[\W_]*+management
