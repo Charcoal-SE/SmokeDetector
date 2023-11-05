@@ -5405,3 +5405,4 @@ santoshi[\W_]*+hacker[\W_]*+godaddysites(?:[\W_]*+(?:dot[\W_]*+)?com)
 santoshi[\W_]*+hacker[\W_]*+3[\W_]*+wixsite(?:[\W_]*+(?:dot[\W_]*+)?com)
 gamma\.app
 tecnowith\.com
+vxnet\.pro
