@@ -54570,3 +54570,4 @@
 1699261041	cigien	tarkib-athath\.com
 1699260924	VLAZ	mahaveerdistributors\.com
 1699261036	VLAZ	(?-i:9jl5s8)(?#rb.gy)
+1699261133	cigien	celebchitchat(?!\.com)
