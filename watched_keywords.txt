@@ -54601,3 +54601,4 @@
 1699341011	Nick	digitalcappuccino\.com
 1699346246	cigien	prime[\W_]*+insights(?!\.in(?<=primeinsights\.in))
 1699339657	VLAZ	vegas79\.bid
+1699346349	cigien	celestialleather\.co\.uk
