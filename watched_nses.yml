@@ -4719,7 +4719,9 @@ items:
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- ns: nccloud.shop.
+- comment: nxdomain 2023-11-07
+  disable: true
+  ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
 - ns: dianadns.com.
