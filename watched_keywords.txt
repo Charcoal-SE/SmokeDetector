@@ -54632,3 +54632,4 @@
 1699369092	cigien	moor[\W_]*+notary(?!\.com(?<=moornotary\.com))
 1699369171	Jeff Schaller	tyc1799\.com
 1699369968	cigien	medsalin\.com
+1699370346	Makyen	steroids[\W_]*+house(?!\.com(?<=steroidshouse\.com))
