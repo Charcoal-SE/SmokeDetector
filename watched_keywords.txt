@@ -54608,3 +54608,4 @@
 1699339582	VLAZ	getsvisionsolutions\.com
 1699346815	cigien	getsvision[\W_]*solutions(?!\.com(?<=getvisionsolutions\.com))
 1699347362	cigien	whizhack(?!\.in)
+1699351730	cigien	mcneelamusic\.com
