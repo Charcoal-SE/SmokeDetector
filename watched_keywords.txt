@@ -54598,3 +54598,4 @@
 1699333796	Nick	prabhubhakti\.com
 1699335790	cocomac	whizhack\.in
 1699335923	cocomac	legitsfentanyl\.com
+1699339590	VLAZ	getsvision[\W_]*solutions(?!\.com)
