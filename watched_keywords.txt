@@ -54606,3 +54606,4 @@
 1699346599	cigien	gachanoxo\.com
 1699338495	VLAZ	cramkey\.com
 1699339582	VLAZ	getsvisionsolutions\.com
+1699346815	cigien	getsvision[\W_]*solutions(?!\.com(?<=getvisionsolutions\.com))
