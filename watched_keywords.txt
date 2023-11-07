@@ -54625,3 +54625,4 @@
 1699360014	cigien	binary[\W_]*+informatics(?!\.com(?<=binaryinformatics\.com))
 1699360241	cigien	gatot\.io
 1699360272	cigien	kuya4d
+1699364332	Jeff Schaller	HBOSLOT188
