@@ -54637,3 +54637,4 @@
 1699370778	Makyen	celestial[\W_]*+leather(?!\.co\.uk(?<=celestialleather\.co\.uk))
 1699370841	Makyen	techtoroms(?!\.com)
 1699372351	Jeff Schaller	ehsaasprogram8171\.net\.pk
+1699378522	Vickel	zaapit\.com
