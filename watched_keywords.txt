@@ -54633,3 +54633,4 @@
 1699369171	Jeff Schaller	tyc1799\.com
 1699369968	cigien	medsalin\.com
 1699370346	Makyen	steroids[\W_]*+house(?!\.com(?<=steroidshouse\.com))
+1699370392	Makyen	mono[\W_]*+industries(?!\.in(?<=monoindustries\.in))
