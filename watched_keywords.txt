@@ -54600,3 +54600,4 @@
 1699335923	cocomac	legitsfentanyl\.com
 1699341011	Nick	digitalcappuccino\.com
 1699346246	cigien	prime[\W_]*+insights(?!\.in(?<=primeinsights\.in))
+1699339657	VLAZ	vegas79\.bid
