@@ -54622,3 +54622,4 @@
 1699359509	Jeff Schaller	all4kidsonline\.com\.au
 1699359737	Jeff Schaller	binaryinformatics\.com
 1699359963	cigien	all4kidsonline(?!\.com\.au)
+1699360014	cigien	binary[\W_]*+informatics(?!\.com(?<=binaryinformatics\.com))
