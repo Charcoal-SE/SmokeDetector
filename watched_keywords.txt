@@ -54629,3 +54629,4 @@
 1699365061	Vickel	STARJP
 1699367908	cigien	appicoders\.com
 1699369054	cigien	moornotary\.com
+1699369092	cigien	moor[\W_]*+notary(?!\.com(?<=moornotary\.com))
