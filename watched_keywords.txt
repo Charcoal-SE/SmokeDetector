@@ -54599,3 +54599,4 @@
 1699335790	cocomac	whizhack\.in
 1699335923	cocomac	legitsfentanyl\.com
 1699341011	Nick	digitalcappuccino\.com
+1699346246	cigien	prime[\W_]*+insights(?!\.in(?<=primeinsights\.in))
