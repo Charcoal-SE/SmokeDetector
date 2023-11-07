@@ -54635,3 +54635,4 @@
 1699370346	Makyen	steroids[\W_]*+house(?!\.com(?<=steroidshouse\.com))
 1699370392	Makyen	mono[\W_]*+industries(?!\.in(?<=monoindustries\.in))
 1699370778	Makyen	celestial[\W_]*+leather(?!\.co\.uk(?<=celestialleather\.co\.uk))
+1699370841	Makyen	techtoroms(?!\.com)
