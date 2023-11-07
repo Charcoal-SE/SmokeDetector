@@ -54593,3 +54593,4 @@
 1699293018	Jeff Schaller	asalvision\.com
 1699294488	Jeff Schaller	thedeveloperschool\.com
 1699301799	Jeff Schaller	dpmatka\.net
+1699321239	Makyen	(?:free[\W_]*+)?gel(?:[\W_]*+guns?)?[\W_]*+blasters?(?:[\W_]*+guns?)?
