@@ -54610,3 +54610,4 @@
 1699347362	cigien	whizhack(?!\.in)
 1699351730	cigien	mcneelamusic\.com
 1699351755	cigien	spectup\.com
+1699351951	cigien	instascenex\.com
