@@ -54667,3 +54667,4 @@
 1699457888	cigien	ymusicapk\.com
 1699463278	Vickel	teajewel\.com
 1699463341	cigien	teajewel(?!\.com)
+1699464456	Jesse	askdbapro(?!\.blogspot)
