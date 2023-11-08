@@ -54653,3 +54653,4 @@
 1699437093	cigien	joinwinchips\.com
 1699437146	cigien	ivigafaucet\.com
 1699437193	cigien	shrtx\.cc
+1699437217	cigien	sss[\W_]*+global(?!\.org\.in(?<=sssglobal\.org\.in))
