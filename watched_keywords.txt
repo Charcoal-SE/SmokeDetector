@@ -54646,3 +54646,4 @@
 1699429860	VLAZ	qsafe\.com\.qa
 1699429214	VLAZ	disneybeginpluss\.com
 1699429138	VLAZ	dealermarket\.com
+1699427057	VLAZ	infycletechnologies\.com
