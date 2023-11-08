@@ -54654,3 +54654,4 @@
 1699437193	cigien	shrtx\.cc
 1699437217	cigien	sss[\W_]*+global(?!\.org\.in(?<=sssglobal\.org\.in))
 1699440138	VLAZ	meathousegourmet\.com
+1699440406	cigien	dissertationhomework\.com
