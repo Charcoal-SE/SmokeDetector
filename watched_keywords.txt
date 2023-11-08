@@ -54666,3 +54666,4 @@
 1699448714	Jeff Schaller	elearning\.yuasathai\.com
 1699457888	cigien	ymusicapk\.com
 1699463278	Vickel	teajewel\.com
+1699463341	cigien	teajewel(?!\.com)
