@@ -54662,3 +54662,4 @@
 1699442408	Jeff Schaller	urbantasker\.com
 1699427517	VLAZ	URBAN[\W_]*CITY[\W_]*LAHORE(?!\.net)
 1699426502	VLAZ	(?-i:bgrAB)(?#shorturl.at)
+1699443932	Jeff Schaller	elitewizardrecovery\.com
