@@ -54651,3 +54651,4 @@
 1699437035	cigien	mistymountain\.in
 1699437059	cigien	misty[\W_]*+mountain(?!\.in(?<=mistymountain\.in))
 1699437093	cigien	joinwinchips\.com
+1699437146	cigien	ivigafaucet\.com
