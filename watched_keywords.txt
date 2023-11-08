@@ -54643,3 +54643,4 @@
 1699378522	Vickel	zaapit\.com
 1699430340	VLAZ	bharatphoton\.com
 1699430293	VLAZ	educationmitra\.in
+1699429860	VLAZ	qsafe\.com\.qa
