@@ -54685,3 +54685,4 @@
 1699524603	cigien	letsguide2023\.com
 1699524627	cigien	amexguide2022\.wordpress\.com
 1699524656	cigien	amexconfirmcard\.wordpress\.com
+1699524677	cigien	americanexpressnfirm\.wordpress\.com
