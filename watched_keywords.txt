@@ -54702,3 +54702,4 @@
 1699531102	cigien	gentlegroovecbdorder\.blogspot
 1699531126	cigien	imnotgettingit\.com
 1699532147	Jeff Schaller	surelocalseo\.com
+1699542867	Makyen	vin[\W_]*+party[\W_]*+rentals(?!\.com(?<=vinpartyrentals\.com))
