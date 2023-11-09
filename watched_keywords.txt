@@ -54699,3 +54699,4 @@
 1699531018	cigien	the[\W_]*+digi[\W_]*+bundle(?!\.in(?<=thedigibundle\.in))
 1699531047	cigien	photoboothdfw\.com
 1699531079	cigien	photo[\W_]*+booth[\W_]*+dfw(?!\.com(?<=photoboothdfw\.com))
+1699531102	cigien	gentlegroovecbdorder\.blogspot
