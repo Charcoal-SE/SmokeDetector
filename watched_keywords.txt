@@ -54692,3 +54692,4 @@
 1699528320	Jeff Schaller	himalayayogateachertraining\.com
 1699530607	cigien	gyaniadda\.com
 1699530762	cigien	oswalairtravels(?!\.com)
+1699530856	cigien	1k[\W_]*+daily[\W_]*+profit[\W_]*+reviews?+(?!\.blogspot(?<=1k-daily-profit-reviews\.blogspot))
