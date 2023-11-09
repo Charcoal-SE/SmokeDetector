@@ -54701,3 +54701,4 @@
 1699531079	cigien	photo[\W_]*+booth[\W_]*+dfw(?!\.com(?<=photoboothdfw\.com))
 1699531102	cigien	gentlegroovecbdorder\.blogspot
 1699531126	cigien	imnotgettingit\.com
+1699532147	Jeff Schaller	surelocalseo\.com
