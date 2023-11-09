@@ -54683,3 +54683,4 @@
 1699524534	cigien	papas-freezeria\.com
 1699524573	cigien	fastcheck\.com\.hk
 1699524603	cigien	letsguide2023\.com
+1699524627	cigien	amexguide2022\.wordpress\.com
