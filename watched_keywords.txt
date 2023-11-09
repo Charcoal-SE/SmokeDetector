@@ -54680,3 +54680,4 @@
 1699524450	cigien	wdpart\.com
 1699524481	cigien	klaycart\.com
 1699524512	cigien	klaycart(?!\.com)
+1699524534	cigien	papas-freezeria\.com
