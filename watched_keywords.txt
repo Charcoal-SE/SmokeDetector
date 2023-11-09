@@ -54704,3 +54704,4 @@
 1699532147	Jeff Schaller	surelocalseo\.com
 1699542867	Makyen	vin[\W_]*+party[\W_]*+rentals(?!\.com(?<=vinpartyrentals\.com))
 1699543550	cigien	dreveal\.com
+1699548077	Jeff Schaller	kuyhaa-me\.id
