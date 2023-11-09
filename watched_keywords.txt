@@ -54691,3 +54691,4 @@
 1699528081	Jeff Schaller	nexob\.ir
 1699528320	Jeff Schaller	himalayayogateachertraining\.com
 1699530607	cigien	gyaniadda\.com
+1699530762	cigien	oswalairtravels(?!\.com)
