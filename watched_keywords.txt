@@ -54732,3 +54732,4 @@
 1699601815	VLAZ	steeloncall\.com
 1699601666	VLAZ	vitatale(?!\.com)
 1699601642	VLAZ	vitatale\.com
+1699587531	Jesse	bestwritefirst\.com
