@@ -54730,3 +54730,4 @@
 1699620057	VLAZ	breen\.com\.ua
 1699602064	VLAZ	(?-i:j064C)(?#t.ly)
 1699601815	VLAZ	steeloncall\.com
+1699601666	VLAZ	vitatale(?!\.com)
