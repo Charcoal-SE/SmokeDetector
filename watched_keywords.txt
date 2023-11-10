@@ -54722,3 +54722,4 @@
 1699604184	cigien	indian[\W_]*+estate[\W_]*+group(?!\.com(?<=indianestategroup\.com))
 1699583072	Vickel	smartchoiceweb
 1699575121	Jesse	dmvpinballs\.shop
+1699605171	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))(?<!fa-plus)
