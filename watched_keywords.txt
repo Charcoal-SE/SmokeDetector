@@ -54718,3 +54718,4 @@
 1699603188	cigien	warmoolheaterreviewsuk\.blogspot
 1699601315	VLAZ	spilfy\.com
 1699601403	VLAZ	imrantech\.site
+1699603851	cigien	vital?tale(?:[\W_]*+com)?
