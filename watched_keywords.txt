@@ -54735,3 +54735,4 @@
 1699587531	Jesse	bestwritefirst\.com
 1699634763	Jeff Schaller	wizardlarryrecovery\.com
 1699635728	Jeff Schaller	wizardlarryrecovery(?!\.com)
+1699646496	Vickel	roysviewfinder\.com
