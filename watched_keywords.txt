@@ -54724,3 +54724,4 @@
 1699575121	Jesse	dmvpinballs\.shop
 1699605171	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))(?<!fa-plus)
 1699611339	VLAZ	kinhmatca\.com
+1699614929	Nick	cloudiffic\.com
