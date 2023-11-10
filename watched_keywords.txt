@@ -54723,3 +54723,4 @@
 1699604163	cigien	indianestategroup\.com
 1699604184	cigien	indian[\W_]*+estate[\W_]*+group(?!\.com(?<=indianestategroup\.com))
 1699583072	Vickel	smartchoiceweb
+1699575121	Jesse	dmvpinballs\.shop
