@@ -54722,3 +54722,4 @@
 1699603879	cigien	barcodeindia\.com
 1699603908	cigien	barcode[\W_]*+india(?!\.com(?<=barcodeindia\.com))
 1699603989	cigien	nexahost\.com
+1699601951	VLAZ	coupomated\.com
