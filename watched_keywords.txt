@@ -54147,7 +54147,6 @@
 1698055924	Jeff Schaller	traicaysaydibay\.com
 1698057115	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))
 1698056653	VLAZ	automymo\.com
-1698051426	cigien	fa[\W_]*+plus
 1698054728	VLAZ	printindustry\.com
 1698057886	VLAZ	allegiantsky\.com
 1698058848	Nick	eagle\.in
