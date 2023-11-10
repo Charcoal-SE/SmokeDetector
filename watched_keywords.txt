@@ -54719,3 +54719,4 @@
 1699601315	VLAZ	spilfy\.com
 1699601403	VLAZ	imrantech\.site
 1699603851	cigien	vital?tale(?:[\W_]*+com)?
+1699603879	cigien	barcodeindia\.com
