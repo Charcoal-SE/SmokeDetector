@@ -54747,3 +54747,4 @@
 1699700688	cigien	androidrub\.com
 1699700741	cigien	techyidiot\.com
 1699700806	cigien	zxacademy\.com
+1699700828	cigien	zx[\W_]*+academy(?!\.com(?<=zxacademy\.com))
