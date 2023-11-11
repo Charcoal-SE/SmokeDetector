@@ -54750,3 +54750,4 @@
 1699700828	cigien	zx[\W_]*+academy(?!\.com(?<=zxacademy\.com))
 1699700849	cigien	tatglam\.com
 1699675008	Jesse	umzuege-in-hannover\.de
+1699656096	Jesse	protectremote\.com
