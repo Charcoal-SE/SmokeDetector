@@ -53436,7 +53436,6 @@
 1696092109	Jesse	saadidesign\.com
 1696093282	Jeff Schaller	Apksmoon\.com
 1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
-1696102413	Jesse	quikanswers\.com
 1696121909	Jeff Schaller	blog\.learnmorecloud\.com
 1696125010	Makyen	(?-i:bljik)(?#justpaste.it)
 1696125696	Makyen	(?-i:usamadevsecops)(?#upwork.com)
