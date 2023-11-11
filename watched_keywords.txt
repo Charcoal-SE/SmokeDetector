@@ -54741,3 +54741,4 @@
 1699690444	Nisse Engström	helmetonly\.com
 1699694272	Nisse Engström	koeln-umzugsfirma\.de
 1699700479	cigien	espacioapk(?!\.tech)
+1699700488	cigien	espacioapk\.tech
