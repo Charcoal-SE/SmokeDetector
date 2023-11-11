@@ -54743,3 +54743,4 @@
 1699700479	cigien	espacioapk(?!\.tech)
 1699700488	cigien	espacioapk\.tech
 1699700558	cigien	apkinflux\.com
+1699700596	cigien	agentmrszafirah7(?#telegram)
