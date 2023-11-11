@@ -4558,7 +4558,9 @@ items:
 - ns: hivelocity.net.
 - ns: inhostedns.net.
 - ns: bhhdns.com.
-- ns: amznetwork.net.
+- comment: NXDOMAIN 2023-11-11
+  disable: true
+  ns: amznetwork.net.
 - ns: dynu.com.
 - ns:
   - da73venom.stableserver.net.
