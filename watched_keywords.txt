@@ -54372,7 +54372,6 @@
 1698761045	Makyen	octagos(?:[\W_]*+(?:al|engine|health(?!\.com(?<=octagoshealth\.com)))s?)*
 1698761728	Makyen	chipsx\.net
 1698761763	Makyen	chipsx(?!\.net)
-1698765599	cigien	jamesmillerrecovery(?:@mail\.com)?
 1698771483	Makyen	01b266144a9aa49655(?# upwork.com)
 1698771562	Jeff Schaller	df\.tips
 1698771990	Jeff Schaller	gameart\.net
