@@ -54766,3 +54766,4 @@
 1699747483	cigien	uss\.eu\.com
 1699747503	cigien	usiic\.co
 1699747595	cigien	appsfab\.com
+1699746653	Vickel	appsfab(?!\.com)
