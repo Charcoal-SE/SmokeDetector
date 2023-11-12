@@ -54248,7 +54248,6 @@
 1698427356	Jeff Schaller	umzugsfirma-oranienburg\.de
 1698434321	Spevacus	creddio\.com
 1698438433	Jeff Schaller	orgcostsavings\.com
-1698439578	Jeff Schaller	Adwarerecoveryspecialist
 1698445521	Vickel	summitdental\.ch
 1698445243	Vickel	allegiant[\W_]*+pro[\W_]*+hacker
 1698373966	Nick	Taraftarium24
