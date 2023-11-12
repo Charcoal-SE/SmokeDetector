@@ -54781,3 +54781,4 @@
 1699783243	cigien	thededicatedengineer\.com
 1699800357	Jeff Schaller	(?-i:rDA0xP)(?#fiverr)
 1699803030	Jeff Schaller	animeunity\.me
+1699804003	cigien	animeunity(?!\.me)
