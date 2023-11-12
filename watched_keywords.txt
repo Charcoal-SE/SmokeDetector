@@ -54773,3 +54773,4 @@
 1699770444	Justine Krejcha	cricolive\.com
 1699780591	cigien	(?-i:gKW0EdCR89)(?#t.co)
 1699765141	Jesse	silkroad6ownowfk\.onion
+1699781478	cigien	brunoe[\W_]*+quick[\W_]*+hack(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?com)?
