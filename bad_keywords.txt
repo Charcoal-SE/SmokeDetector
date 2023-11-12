@@ -2908,3 +2908,4 @@ adrianlamo@consultant\.com
 j[\W_]*+e[\W_]*+f[\W_]*+f[\W_]*+s[\W_]*+i[\W_]*+l[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+3[\W_]*+9(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?(?#obfuscated jeffsilbert39@gmail.com)
 spinewise(?!\.ca)
 facepdf(?!\.com)
+UFC[\W_]*+\d{3}
