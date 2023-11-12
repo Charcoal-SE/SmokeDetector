@@ -54781,3 +54781,4 @@
 1699803030	Jeff Schaller	animeunity\.me
 1699804003	cigien	animeunity(?!\.me)
 1699804294	cigien	adwarerecoveryspecialist\.expert
+1699804315	cigien	adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
