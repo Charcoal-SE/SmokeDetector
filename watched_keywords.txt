@@ -54817,3 +54817,4 @@
 1699899621	cigien	getweys(?!\.com)
 1699900034	cigien	pretendpal\.com
 1699900054	cigien	pretend[\W_]*+pal(?!\.com(?<=pretendpal\.com))
+1699900590	cigien	salesblink(?!\.io)
