@@ -54799,3 +54799,4 @@
 1699857313	Jesse	Smarter[\W_]*+Feds[\W_]*+Retirement
 1699847920	Jesse	khoahoc\.news
 1699878928	Jeff Schaller	highestspeedinternetinmyarea\.com
+1699878971	Jeff Schaller	kytewayelearning\.com
