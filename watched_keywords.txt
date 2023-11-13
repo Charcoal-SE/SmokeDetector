@@ -54820,3 +54820,4 @@
 1699900590	cigien	salesblink(?!\.io)
 1699900609	cigien	tarsil\.pk
 1699900799	cigien	snowdaypredictorcanada\.com
+1699900820	cigien	snow[\W_]*+day[\W_]*+predictor[\W_]*+canada(?!\.com(?<=snowdaypredictorcanada\.com))
