@@ -54819,3 +54819,4 @@
 1699900054	cigien	pretend[\W_]*+pal(?!\.com(?<=pretendpal\.com))
 1699900590	cigien	salesblink(?!\.io)
 1699900609	cigien	tarsil\.pk
+1699900799	cigien	snowdaypredictorcanada\.com
