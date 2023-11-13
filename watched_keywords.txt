@@ -54815,3 +54815,4 @@
 1699894821	Jeff Schaller	apps2app\.in
 1699895729	cigien	essaybeam\.com
 1699899621	cigien	getweys(?!\.com)
+1699900034	cigien	pretendpal\.com
