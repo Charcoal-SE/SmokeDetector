@@ -54821,3 +54821,4 @@
 1699900609	cigien	tarsil\.pk
 1699900799	cigien	snowdaypredictorcanada\.com
 1699900820	cigien	snow[\W_]*+day[\W_]*+predictor[\W_]*+canada(?!\.com(?<=snowdaypredictorcanada\.com))
+1699902235	Makyen	inshot[\W_]*+pro(?:[\W_]*+apks?)*
