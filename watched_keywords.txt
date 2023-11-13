@@ -54824,3 +54824,4 @@
 1699902235	Makyen	inshot[\W_]*+pro(?:[\W_]*+apks?)*
 1699903040	Vickel	techquits\.com
 1699903515	Makyen	kleurplaten
+1699904485	Vickel	Whiskeyfox
