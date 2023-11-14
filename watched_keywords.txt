@@ -54846,3 +54846,4 @@
 1699961987	cigien	labaid[\W_]*+cancer(?!\.com(?<=labaidcancer\.com))
 1699965689	Jeff Schaller	neodrafts\.co
 1699967243	Jeff Schaller	solarstudy\.in
+1699971560	cigien	saigon[\W_]*+technology(?!\.com(?<=saigontechnology\.com))
