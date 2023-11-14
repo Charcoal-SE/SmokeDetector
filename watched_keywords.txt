@@ -54858,3 +54858,4 @@
 1699993009	Jeff Schaller	Marie_consultancy
 1699996686	Jeff Schaller	BUFFETTGIVE
 1699996715	Jeff Schaller	rewenex[\W_]*+com
+1699997123	Nick	https://selar\.co
