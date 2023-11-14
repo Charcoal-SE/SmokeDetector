@@ -54853,3 +54853,4 @@
 1699980088	Jeff Schaller	sizinkahveci\.com\.tr
 1699982153	Makyen	sizinkahveci(?!\.com\.tr)
 1699989150	Jeff Schaller	nadeempro\.com
+1699989223	Jesse	pokemondock\.com
