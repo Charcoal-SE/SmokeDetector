@@ -54852,3 +54852,4 @@
 1699979633	Jeff Schaller	ev-info\.pl
 1699980088	Jeff Schaller	sizinkahveci\.com\.tr
 1699982153	Makyen	sizinkahveci(?!\.com\.tr)
+1699989150	Jeff Schaller	nadeempro\.com
