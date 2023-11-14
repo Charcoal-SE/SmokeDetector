@@ -54827,3 +54827,4 @@
 1699907316	Vickel	^Whiskeyfox$
 1699922577	Vickel	760Plus
 1699912666	Vickel	kviku\.ru
+1699931569	Nick	Saigon[\W_]*+Technology(?!\.com)
