@@ -54857,3 +54857,4 @@
 1699992978	Jeff Schaller	Marieconsultancyoz(?:@gmail\.com)?
 1699993009	Jeff Schaller	Marie_consultancy
 1699996686	Jeff Schaller	BUFFETTGIVE
+1699996715	Jeff Schaller	rewenex[\W_]*+com
