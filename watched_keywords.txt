@@ -54834,3 +54834,4 @@
 1699954571	cigien	jack[\W_]*+cliff[\W_]*+electrical(?!\.com\.au(?<=jackcliffelectrical\.com\.au))
 1699954591	cigien	tafrii\.com
 1699954621	cigien	myassignmentspro\.com
+1699954829	cigien	cloudmineinc\.com
