@@ -54848,3 +54848,4 @@
 1699967243	Jeff Schaller	solarstudy\.in
 1699971560	cigien	saigon[\W_]*+technology(?!\.com(?<=saigontechnology\.com))
 1699972233	Jeff Schaller	luck8\.fund
+1699976367	Jeff Schaller	filesoftware\.org
