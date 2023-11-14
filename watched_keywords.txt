@@ -54843,3 +54843,4 @@
 1699960635	Jeff Schaller	earnnmony\.wordpress\.com
 1699961903	Jeff Schaller	labaidcancer\.com
 1699961778	Nick	industrack\.com
+1699961987	cigien	labaid[\W_]*+cancer(?!\.com(?<=labaidcancer\.com))
