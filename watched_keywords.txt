@@ -54850,3 +54850,4 @@
 1699976367	Jeff Schaller	filesoftware\.org
 1699979041	Jeff Schaller	wizardwebrecoveryteam
 1699979633	Jeff Schaller	ev-info\.pl
+1699980088	Jeff Schaller	sizinkahveci\.com\.tr
