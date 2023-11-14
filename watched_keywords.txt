@@ -54844,6 +54844,5 @@
 1699961903	Jeff Schaller	labaidcancer\.com
 1699961778	Nick	industrack\.com
 1699961987	cigien	labaid[\W_]*+cancer(?!\.com(?<=labaidcancer\.com))
-1699931569	Nick	Saigon[\W_]*+Technology(?!\.com)
 1699965689	Jeff Schaller	neodrafts\.co
 1699967243	Jeff Schaller	solarstudy\.in
