@@ -54877,3 +54877,4 @@
 1700057788	Jeff Schaller	iBolt[\W_]*+Cyber[\W_]*+Hacker
 1700062028	Jeff Schaller	po8\.cash
 1700062578	Jesse	perlanproject\.org
+1700062822	cigien	perlan[\W_]*+project(?!\.org(?<=perlanproject\.org))
