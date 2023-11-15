@@ -54889,3 +54889,4 @@
 1700072314	Vickel	aqareegypt\.com
 1700074728	Jeff Schaller	insecure\.in
 1700074985	Makyen	cj800900(?:@gmail\.com)?
+1700075025	Jeff Schaller	chatgptlogin\.bz
