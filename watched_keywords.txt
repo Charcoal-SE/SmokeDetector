@@ -54882,3 +54882,4 @@
 1700067981	Jesse	universatpro\.com
 1700065472	Jesse	Underrated[\W]*+bibliotheca
 1700069719	Jesse	^Corey[\W_]*+Wilson$
+1700008855	Jesse	dotnet-helpers\.com
