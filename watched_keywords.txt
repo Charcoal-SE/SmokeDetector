@@ -54884,3 +54884,4 @@
 1700069719	Jesse	^Corey[\W_]*+Wilson$
 1700008855	Jesse	dotnet-helpers\.com
 1700001113	Nick	pacsubsea\.com
+1700070016	Jesse	typesofengine\.com
