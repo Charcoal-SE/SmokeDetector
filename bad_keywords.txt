@@ -2910,3 +2910,4 @@ spinewise(?!\.ca)
 facepdf(?!\.com)
 UFC[\W_]*+\d{3}
 folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech-center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+McAfee[\W_]*+Customer[\W_]*+Service
