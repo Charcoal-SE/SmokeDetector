@@ -54928,3 +54928,4 @@
 1700152928	Makyen	omega[\W_]*+crypto(?:[\W_]*+recovery)?
 1700153473	Nisse Engström	wikimint\.com
 1700154530	Jesse	developerqna\.com
+1700155495	Jesse	(?-i:dmERU)(?#shorturl.at)
