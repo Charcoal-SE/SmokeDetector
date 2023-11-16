@@ -54898,3 +54898,4 @@
 1700080017	Spevacus	bestplaces\.biz
 1700088303	Vickel	import-from-egypt\.com
 1700102747	Makyen	^importfromegypt$
+1700102776	Makyen	nefartete
