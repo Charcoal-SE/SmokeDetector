@@ -54900,3 +54900,4 @@
 1700102747	Makyen	^importfromegypt$
 1700102776	Makyen	nefartete
 1700104230	Jesse	lamthanhpottery\.com\.vn
+1700115466	Jesse	orionstarsplayerslounge\.com
