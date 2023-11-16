@@ -54923,3 +54923,4 @@
 1700142524	Vickel	jontanconsulting\.com
 1700142757	Vickel	tanjon383(?:@gmail\.com)?
 1700145985	Jeff Schaller	(?-i:KwEOmhHU)(?#cutt\.ly)
+1700147517	Jesse	Link[\W_]*+Building
