@@ -54914,3 +54914,4 @@
 1700127187	cigien	growth[\W_]*+leaders[\W_]*+consulting(?!\.com(?<=growthleadersconsulting\.com))
 1700129964	cigien	ichome\.com
 1700130000	cigien	sayloyal\.com
+1700131717	cigien	wozbuz\.com
