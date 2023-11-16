@@ -5419,3 +5419,4 @@ ias-indonesia\.org
 realexamcollection\.com
 nefartete\.com
 wikimint\.com
+shop\.onekey\.so
