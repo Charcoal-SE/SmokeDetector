@@ -54927,3 +54927,4 @@
 1700149007	Jesse	hobarttaxicabs\.com\.au
 1700150457	Makyen	londonlogodesigners\.co\.uk
 1700150484	Jesse	chandnacorporation\.com
+1700152915	Makyen	crypto[\W_]*+intelligence[\W_]*+group
