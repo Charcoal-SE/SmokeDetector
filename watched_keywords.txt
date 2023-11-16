@@ -13957,7 +13957,6 @@
 1575142006	Makyen	biggertrader50(?:@gmail\.com)?
 1575142027	Makyen	maestro_seller(?:@yahoo\.com)?
 1575142050	Makyen	1619f8b937bdc37d
-1575142065	Makyen	realexamcollection\.com
 1575142151	Makyen	(?-i:VpPAitD69H)
 1575145978	Makyen	capricorn[\W_]*+bakery(?!\.com(?<=capricornbakery\.com))
 1575146035	Makyen	supper-fast-keto-boost\.tumblr\.com
