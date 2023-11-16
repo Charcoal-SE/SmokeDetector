@@ -53460,7 +53460,6 @@
 1696235721	cigien	carbongraphicsgroup\.com
 1696235744	cigien	carbon[\W_]*+graphics[\W_]*+group(?!\.com(?<=carbongraphicsgroup\.com))
 1696236016	cigien	descargar-musica-z9\.mp3tree\.net
-1696236046	cigien	quik[\W_]*+answers(?!\.com(?<=quikanswers\.com))
 1696242280	cigien	perfectretouching\.com
 1696242550	cigien	sbsgenetech\.com
 1696242575	cigien	sbs[\W_]*+genetech(?!\.com(?<=sbsgenetech\.com))

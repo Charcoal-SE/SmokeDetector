@@ -2913,3 +2913,4 @@ folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech-center(?:[\W_]*+
 McAfee[\W_]*+Customer[\W_]*+Service
 realexamcollection(?!\.com)
 nefar[\W_]*+tete(?!\.com(?<=nefartete\.com))
+quik[\W_]*+answers(?!\.com(?<=quikanswers\.com))
