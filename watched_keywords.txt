@@ -54962,3 +54962,4 @@
 1700206488	Nick	^codersmind$
 1700187469	Vickel	^vape[\W_]*+mode$
 1700143834	Jesse	orange-opensource\.github\.io
+1700143814	Jesse	medium\.com/@njakolouis
