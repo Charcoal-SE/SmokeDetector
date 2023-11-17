@@ -54944,3 +54944,4 @@
 1700206556	Nick	organic[\W_]*+fungus
 1700204205	Nick	techreloaded\.in
 1700214792	cigien	domyclassesnow\.com
+1700219489	cigien	futureteleradiology\.com
