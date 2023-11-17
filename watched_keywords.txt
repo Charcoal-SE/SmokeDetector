@@ -54952,3 +54952,4 @@
 1700222058	cigien	makimo\.com
 1700223118	Jeff Schaller	create-cv-online\.com
 1700223374	cigien	dumps4expert\.com
+1700223394	cigien	dumps4expert(?!\.com)
