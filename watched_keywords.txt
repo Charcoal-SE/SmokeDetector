@@ -54942,3 +54942,4 @@
 1700206431	Nick	thecodersmind\.com
 1700204057	Nick	astuteanalytica\.com
 1700209852	cigien	futurum\.tech
+1700206556	Nick	organic[\W_]*+fungus
