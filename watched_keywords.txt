@@ -54932,3 +54932,4 @@
 1700160467	Mast	shape[\W_]*+the[\W_]*+future
 1700163859	Glorfindel	questionsanswers786\.blogspot
 1700167320	cigien	adl[\W_]*+(?:solution|connect)
+1700153073	Jesse	bestliveforexcomexrecommendationsprovider\.wordpress\.com
