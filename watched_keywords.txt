@@ -54934,3 +54934,4 @@
 1700167320	cigien	adl[\W_]*+(?:solution|connect)
 1700153073	Jesse	bestliveforexcomexrecommendationsprovider\.wordpress\.com
 1700150451	Jesse	^Link Building$
+1700176581	Nick	rocketsinghcondos\.com
