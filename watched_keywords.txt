@@ -54956,3 +54956,4 @@
 1700227274	cigien	lifeandcanvas\.com
 1700227921	Jeff Schaller	gosoftwarebuy\.com
 1700228133	cigien	partyrock\.aws
+1700228154	cigien	partyrock(?!\.aws)
