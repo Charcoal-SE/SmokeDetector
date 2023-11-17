@@ -54961,3 +54961,4 @@
 1700187296	Jesse	vapemodesa\.com
 1700206488	Nick	^codersmind$
 1700187469	Vickel	^vape[\W_]*+mode$
+1700143834	Jesse	orange-opensource\.github\.io
