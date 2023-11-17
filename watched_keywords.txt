@@ -54953,3 +54953,4 @@
 1700223374	cigien	dumps4expert\.com
 1700223394	cigien	dumps4expert(?!\.com)
 1700223423	cigien	theblankpageofficial\.blogspot
+1700227274	cigien	lifeandcanvas\.com
