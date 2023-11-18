@@ -54983,3 +54983,4 @@
 1700301251	cigien	outsourcingtrainingbd\.com
 1700301367	cigien	coursedecote\.info
 1700301745	cigien	chatgptfrancais\.org
+1700301764	cigien	chatgptx(?:online)?\.(?:de|nl|es|fr)
