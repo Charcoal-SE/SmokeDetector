@@ -54989,3 +54989,4 @@
 1700259677	Vickel	^Quanajah Pinnock$
 1700264702	Vickel	jdengs(?:@gmail\.com)?
 1700286080	Jesse	(?-i:P9F_RUZ5nUc)(?#YouTube)
+1700316686	Jeff Schaller	smm-panels-list\.com
