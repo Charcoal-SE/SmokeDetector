@@ -54987,3 +54987,4 @@
 1700303185	cigien	healthsupplement24x7\.com
 1700303208	cigien	cyber[\W_]*+wizard[\W_]*+com(?<!cyber-wizard\.com)
 1700259677	Vickel	^Quanajah Pinnock$
+1700264702	Vickel	jdengs(?:@gmail\.com)?
