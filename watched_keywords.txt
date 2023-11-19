@@ -55003,3 +55003,4 @@
 1700345367	Jesse	auto-accident-lawyers\.space
 1700353782	Makyen	auto[\W_]*+accident[\W_]*+lawyers(?!\.space(?<=auto-accident-lawyers\.space))
 1700365148	Jesse	khidmatgaar\.com
+1700376081	Nick	uppercase-converter\.com
