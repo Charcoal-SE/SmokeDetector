@@ -55012,3 +55012,4 @@
 1700401958	cigien	lenostube\.com
 1700401978	cigien	lenostube(?!\.com)
 1700407704	Makyen	apkmedley\.com
+1700413031	Jeff Schaller	codingeagles\.com
