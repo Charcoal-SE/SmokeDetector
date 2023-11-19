@@ -55017,3 +55017,4 @@
 1700414697	Jesse	learnwithtravis\.com
 1700414742	Jesse	ripetopipeganja\.uk
 1700415160	Makyen	ripetopipeganja(?:@gmail\.com)?
+1700415218	Makyen	ultrahuman[\W_]*+ring[\W_]*+air
