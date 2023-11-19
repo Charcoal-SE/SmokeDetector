@@ -55020,3 +55020,4 @@
 1700415287	Makyen	ultrahuman[\W_]*+ring(?:[\W_]*+air)?
 1700415533	Jeff Schaller	giveawaycode\.icu
 1700418952	Makyen	omegarecoveryspecialist \.com
+1700418973	Makyen	omegacryptos
