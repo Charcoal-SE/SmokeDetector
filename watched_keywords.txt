@@ -55011,3 +55011,4 @@
 1700372323	Jesse	yeomyunglee1994\.wordpress\.com
 1700401958	cigien	lenostube\.com
 1700401978	cigien	lenostube(?!\.com)
+1700407704	Makyen	apkmedley\.com
