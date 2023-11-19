@@ -55018,3 +55018,4 @@
 1700414742	Jesse	ripetopipeganja\.uk
 1700415160	Makyen	ripetopipeganja(?:@gmail\.com)?
 1700415287	Makyen	ultrahuman[\W_]*+ring(?:[\W_]*+air)?
+1700415533	Jeff Schaller	giveawaycode\.icu
