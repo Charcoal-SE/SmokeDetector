@@ -55061,3 +55061,4 @@
 1700496688	Jeff Schaller	akblogs\.iceiy\.com
 1700502696	Jesse	(?-i:8RVd5Kilo7E)(?#youtu.be)
 1700500410	Jesse	2malachi\.com
+1700512189	Makyen	recovering[\W_]*+(?:at[\W_]*+)?usa(?:[\W_]*+(?:dot[\W_]*+)?com)
