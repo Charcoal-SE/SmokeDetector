@@ -55037,3 +55037,4 @@
 1700457856	Makyen	vyrl(?!\.ae)(?:[\W_]*+communications)?
 1700457876	Makyen	dalvkotinfotech\.com
 1700458721	Jesse	jeewer\.com
+1700459881	Jesse	koinpark\.com
