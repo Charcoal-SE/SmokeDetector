@@ -55056,3 +55056,4 @@
 1700490352	Jeff Schaller	animationliberty\.com
 1700494086	Makyen	uniqkey(?!\.eu)
 1700495193	Makyen	chloe\.consultant1(?:@gmail\.com)?
+1700495222	Makyen	chloe[\W_]*+consultant
