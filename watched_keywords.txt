@@ -55027,3 +55027,4 @@
 1700433104	Jeff Schaller	baterybet\.com
 1700435508	Makyen	baterybet(?!\.com)
 1700437766	Vickel	(?-i:HwUU01xj)(?#cutt.ly)
+1700441828	Jesse	lendgo\.com
