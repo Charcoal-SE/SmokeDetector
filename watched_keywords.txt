@@ -55058,3 +55058,4 @@
 1700495193	Makyen	chloe\.consultant1(?:@gmail\.com)?
 1700495222	Makyen	chloe[\W_]*+consultant
 1700496617	Jeff Schaller	www-akblogs-iceiy-com
+1700496688	Jeff Schaller	akblogs\.iceiy\.com
