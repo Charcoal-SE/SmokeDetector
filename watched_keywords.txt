@@ -55034,3 +55034,4 @@
 1700457767	Makyen	knownet\.com
 1700457795	Makyen	\b(?<![^\W_]-)patch\.com(?![.-][^\W_])\b
 1700457815	Makyen	wirexscamreview\.com
+1700457836	Makyen	vyrl\.ae
