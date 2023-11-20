@@ -40269,7 +40269,6 @@
 1656592771	Makyen	getintopcc\.co
 1656594198	Spevacus	royalclipping\.com
 1656597738	Makyen	mitchellrestoration\.com
-1656601207	Jeff Schaller	advancedcommunities\.com
 1656603220	Ollie	bio-gen\.in
 1656603563	Ollie	(?-i:3OFZHHc)(?# bit.ly)
 1656604388	Ollie	privatekeyfinder\.io
