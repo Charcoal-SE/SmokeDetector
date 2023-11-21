@@ -55067,3 +55067,4 @@
 1700514830	Jesse	xaiwebsite\.com
 1700522409	Jesse	excelbookwriting\.com
 1700525115	Jesse	ecobansecurities\.io
+1700524981	Jesse	(?-i:47hlU7Y)(?#bit.ly)
