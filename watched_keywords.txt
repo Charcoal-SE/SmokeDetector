@@ -55114,3 +55114,4 @@
 1700593108	Jeff Schaller	usitfram\.com
 1700601600	Jeff Schaller	digitalassetrecovery\.info
 1700601795	Jeff Schaller	digitalassetsrecovery
+1700610176	Vickel	hoba\.tech
