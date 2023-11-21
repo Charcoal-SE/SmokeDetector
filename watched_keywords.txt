@@ -55090,3 +55090,4 @@
 1700566334	cigien	chemitechgroup\.com
 1700566356	cigien	chemitech[\W_]*+group(?!\.com(?<=chemitechgroup\.com))
 1700566917	Jeff Schaller	spotifyadblocker\.co
+1700566983	Jeff Schaller	intellitechdataservice
