@@ -2916,3 +2916,4 @@ nefar[\W_]*+tete(?!\.com(?<=nefartete\.com))
 quik[\W_]*+answers(?!\.com(?<=quikanswers\.com))
 Yt7crackersz?(?:_admin)?
 intellitech[\W_]*+data[\W_]*+services?
+abortion[\W_]*+pills
