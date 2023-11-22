@@ -55133,3 +55133,4 @@
 1700662765	Jeff Schaller	moreliacarservice\.com
 1700664916	Jeff Schaller	quantia\.ai
 1700670414	cigien	quantia(?!\.ai)
+1700670437	cigien	apksload\.com
