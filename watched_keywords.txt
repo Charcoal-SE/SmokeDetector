@@ -55134,3 +55134,4 @@
 1700664916	Jeff Schaller	quantia\.ai
 1700670414	cigien	quantia(?!\.ai)
 1700670437	cigien	apksload\.com
+1700673215	Jeff Schaller	buycashapp\.com
