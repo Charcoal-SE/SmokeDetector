@@ -55173,3 +55173,4 @@
 1700752026	Jeff Schaller	beer1st\.net
 1700756768	cigien	cronaldodaily\.com
 1700756814	cigien	myiq\.ai
+1700756842	cigien	kshopey\.com
