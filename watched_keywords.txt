@@ -55170,3 +55170,4 @@
 1700740310	cigien	condopoint\.ca
 1700742916	cigien	premiumdermalmart\.com
 1700743065	cigien	inteliconvo\.ai
+1700743085	cigien	inteliconvo(?!\.ai)
