@@ -55145,3 +55145,4 @@
 1700725578	cigien	picsartapkfree\.com
 1700725677	cigien	birlawhite\.com
 1700725707	cigien	birla[\W_]*+white(?!\.com(?<=birlawhite\.com))
+1700722397	Jesse	slot90
