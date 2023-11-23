@@ -1286,7 +1286,6 @@ xylacor
 alpha[\W_]*+rise
 premier[\W_]*+diet(?:[\W_]*+keto)?
 intelliboost[\W_]*+iq
-delhi[\W_]*+escorts?
 sphere[\W_]*+labs
 norton-setup
 luminary[\W_]*+v
