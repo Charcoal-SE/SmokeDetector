@@ -55147,3 +55147,4 @@
 1700725707	cigien	birla[\W_]*+white(?!\.com(?<=birlawhite\.com))
 1700722397	Jesse	slot90
 1700722426	Jesse	biolinku\.co
+1700722430	Jesse	bazardelpolicia\.com
