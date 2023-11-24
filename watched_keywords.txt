@@ -55190,3 +55190,4 @@
 1700808600	Jesse	ramkrishnaacademy\.com\.s3-website\.ap-south-1\.amazonaws\.com
 1700804668	Jesse	mahindrazensingasandra\.ind\.in
 1700811970	cigien	mahindra[\W_]*+zen[\W_]*+singasandra(?!\.ind\.in(?<=mahindrazensingasandra\.ind\.in))
+1700804453	Jesse	buddyclaps\.com
