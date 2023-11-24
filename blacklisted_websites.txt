@@ -5432,3 +5432,4 @@ danielmeulirecovery\.pro
 techkluster\.com
 iboltcyberhacker\.wixsite\.com
 netsworths\.com
+truscholar\.io
