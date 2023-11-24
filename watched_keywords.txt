@@ -55207,4 +55207,3 @@
 1700823698	Nick	sigzen\.com
 1700823878	Nick	Alabuga
 1700787608	Vickel	(?-i:addemoji/FlagsEmoji)(?#t.me)
-1700834884	Jeff Schaller	8829
