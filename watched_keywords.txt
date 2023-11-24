@@ -55196,3 +55196,4 @@
 1700813698	cigien	jamtechtechnologies\.com
 1700793261	Nick	madloki\.pro
 1700814976	cigien	vegas79(?!\.bid)
+1700816978	Nick	arab[\W_]*+basalt[\W_]*+fiber(?!\.com(?<=arabbasaltfiber\.com))
