@@ -2525,7 +2525,6 @@ easybinarysolutions(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 yan[\W_]*+li[\W_]*+meng
 (?:Dr)?LiMengYan
 investor_anderson(?:@outlook\.com)?
-flutter_list_view
 chubygreat(?:@gmail\.com)?
 mrs[\W_]*+debra[\W_]*+sabina
 jimfundsrecovery
