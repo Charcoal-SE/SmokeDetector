@@ -55217,3 +55217,4 @@
 1700850968	Jeff Schaller	karopapier\.de
 1700850989	Jeff Schaller	graphracer\.com
 1700852468	Makyen	flutter_list_view
+1700852489	Makyen	wisbizs(?!\.com)
