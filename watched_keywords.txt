@@ -55220,3 +55220,4 @@
 1700852489	Makyen	wisbizs(?!\.com)
 1700852356	Jesse	thejusticenow\.com
 1700852539	Makyen	thejusticenow(?!\.com)
+1700852569	Jeff Schaller	smmshopes(@gmail\.com)?
