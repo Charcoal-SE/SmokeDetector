@@ -55206,3 +55206,4 @@
 1700816978	Nick	arab[\W_]*+basalt[\W_]*+fiber(?!\.com(?<=arabbasaltfiber\.com))
 1700823698	Nick	sigzen\.com
 1700823878	Nick	Alabuga
+1700787608	Vickel	(?-i:addemoji/FlagsEmoji)(?#t.me)
