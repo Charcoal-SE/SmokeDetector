@@ -55209,3 +55209,4 @@
 1700787608	Vickel	(?-i:addemoji/FlagsEmoji)(?#t.me)
 1700806984	Jesse	one4all\.my\.id
 1700837972	Jeff Schaller	autodcmotor\.com
+1700840654	Jeff Schaller	ricedrive\.com
