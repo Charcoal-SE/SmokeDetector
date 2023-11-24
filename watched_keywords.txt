@@ -55193,3 +55193,4 @@
 1700804453	Jesse	buddyclaps\.com
 1700812031	cigien	winexch\.com
 1700812081	cigien	winexch(?!\.com)
+1700795128	Jesse	maasacarrental\.com
