@@ -55204,4 +55204,3 @@
 1700819917	cigien	royalsdigi\.com
 1700816852	Nick	arabbasaltfiber\.com
 1700816978	Nick	arab[\W_]*+basalt[\W_]*+fiber(?!\.com(?<=arabbasaltfiber\.com))
-1700820337	cigien	sisgain(?!\.com)

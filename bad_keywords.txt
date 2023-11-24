@@ -2916,3 +2916,4 @@ quik[\W_]*+answers(?!\.com(?<=quikanswers\.com))
 Yt7crackersz?(?:_admin)?
 intellitech[\W_]*+data[\W_]*+services?
 delhi[\W_]*+escorts?+(?!\.fun)
+sisgain(?!\.com)
