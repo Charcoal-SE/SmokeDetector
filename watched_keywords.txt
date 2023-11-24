@@ -55178,3 +55178,4 @@
 1700760527	cigien	5tdigitalvietnam(?:@g[am]+il\.com)?
 1700761089	Mast	custommedals\.com
 1700795223	Makyen	mimicrypto@shaw\.ca
+1700795253	Makyen	mimi[\W_]*+crypto(?:@shaw\.ca)?
