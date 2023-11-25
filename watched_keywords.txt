@@ -55234,3 +55234,4 @@
 1700917922	Mast	magnumbet222\.com
 1700926501	Makyen	phukienpetpoly\.com
 1700886839	Jesse	nick[\W_]*+jover[\W_]*+4[\W_]*(@|at)[\W_]*+gmai[Il][\W_]*+(\.|dot)?[\W_]*+com
+1700928633	Makyen	nick[\W_]*+jover[\W_]*+4(?:[\W_]*+(?:at[\W_]*+)?gmai++l?(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
