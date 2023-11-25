@@ -55235,3 +55235,4 @@
 1700926501	Makyen	phukienpetpoly\.com
 1700928633	Makyen	nick[\W_]*+jover[\W_]*+4(?:[\W_]*+(?:at[\W_]*+)?gmai++l?(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1700919459	Vickel	blueoceanblogs\.com
+1700921141	Vickel	areacat\.com
