@@ -37324,7 +37324,6 @@
 1648551623	Cody Gray	developerdiary(?!\.in(?<=developerdiary\.in))
 1648552364	Cody Gray	tnrkdevelopment\.ca
 1648552394	Cody Gray	tnrk[\W_]*development(?!\.ca(?<=tnrkdevelopment\.ca))
-1648554667	Cody Gray	sellshop\.com\.bd
 1648556511	Cody Gray	(?-i:^mott$)
 1648556841	Machavity	kvmswitchtech\.com
 1648563968	Cody Gray	marketquotient\.com
