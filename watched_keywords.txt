@@ -55239,3 +55239,4 @@
 1700921243	Vickel	areacat(?!\.com)
 1700929351	Makyen	wordsplayground\.org
 1700932844	Vickel	appvalleyz\.com
+1700936831	Jesse	gbwasap\.org
