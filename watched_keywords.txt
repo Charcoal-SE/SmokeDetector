@@ -55257,3 +55257,4 @@
 1700990270	VLAZ	energytion\.com
 1700996799	Makyen	dresplitttec(?:@gmail\.com)?
 1701005436	Jeff Schaller	rustikcyberhacksservice
+1701005458	Jeff Schaller	szazalekkalkulator\.net
