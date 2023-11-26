@@ -55253,3 +55253,4 @@
 1700996483	Makyen	mdatikurr23
 1700996512	Makyen	(?-i:lwspm)
 1700996579	Makyen	mustango
+1700996599	Makyen	profitfromai(?!\.in)
