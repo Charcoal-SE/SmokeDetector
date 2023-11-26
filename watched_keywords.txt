@@ -55266,4 +55266,3 @@
 1701025418	Makyen	codespino\.in
 1700958258	Nick	(?-i:ZI5AulS82Ds)(?#youtu.be)
 1701028526	Vickel	(?-i:^blueocean[\W_]*+blogs$)
-1701028263	Vickel	\bkd@launchr\.net\b
