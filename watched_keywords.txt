@@ -55259,3 +55259,4 @@
 1701005436	Jeff Schaller	rustikcyberhacksservice
 1701005458	Jeff Schaller	szazalekkalkulator\.net
 1701010925	Jeff Schaller	milenialdesign\.com
+1701011243	Jeff Schaller	(?-i:^ferdinand panditya$)
