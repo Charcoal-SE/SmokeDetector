@@ -55251,3 +55251,4 @@
 1700934418	Vickel	handmadenhahem\.com
 1700996464	Makyen	rahaman8817(?:@gmail\.com)?
 1700996483	Makyen	mdatikurr23
+1700996512	Makyen	(?-i:lwspm)
