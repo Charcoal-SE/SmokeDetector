@@ -55273,3 +55273,4 @@
 1701044750	Nick	watertogo\.eu
 1701044782	Nick	(?-i:endopeak5)(?#bit.ly)
 1701042037	Nick	conductor\.is
+1701047376	Makyen	g/health-clinic(?<=groups\.google\.com/g/health-clinic)
