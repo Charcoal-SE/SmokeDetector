@@ -2918,3 +2918,4 @@ delhi[\W_]*+escorts?+(?!\.fun)
 sisgain(?!\.com)
 Gologica
 rupeezy(?!\.in)
+steadfast[\W_]*+nutrition(?!\.in(?<=steadfastnutrition\.in))
