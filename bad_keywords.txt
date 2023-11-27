@@ -2917,3 +2917,4 @@ intellitech[\W_]*+data[\W_]*+services?
 delhi[\W_]*+escorts?+(?!\.fun)
 sisgain(?!\.com)
 Gologica
+rupeezy(?!\.in)
