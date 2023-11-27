@@ -55296,3 +55296,4 @@
 1701081137	cigien	bslbattery\.us
 1701081821	Nick	namecheckerr\.com
 1701084186	cigien	barbabill\.com
+1701084209	cigien	barbabill(?!\.com)
