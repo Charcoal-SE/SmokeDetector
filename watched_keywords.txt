@@ -55336,3 +55336,4 @@
 1701157800	Nick	franklindental-supply\.com
 1701160211	Nick	pardisolusi\.com
 1701157877	Nick	Franklin[\W_]*+Dental[\W_]*+Supply(?!\.com(?<=franklindental-supply\.com))
+1701155459	Nick	gptnederlands\.nl
