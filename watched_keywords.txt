@@ -55362,3 +55362,4 @@
 1701201294	Jeff Schaller	pureassignment\.com
 1701201327	cigien	pureassignment(?!\.com)
 1701202079	Mast	aladilauto\.com
+1701207471	Jesse	web[\W_]*+recovery
