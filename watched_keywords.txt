@@ -55360,3 +55360,4 @@
 1701197485	Jesse	webcoredigital\.com
 1701199010	cigien	webcore[\W_]*+digital(?!\.com(?<=webcoredigital\.com))
 1701201294	Jeff Schaller	pureassignment\.com
+1701201327	cigien	pureassignment(?!\.com)
