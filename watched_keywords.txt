@@ -55358,3 +55358,4 @@
 1701182358	Jeff Schaller	statsim\.pythonanywhere\.com
 1701182452	Makyen	gama4d\w*+
 1701197485	Jesse	webcoredigital\.com
+1701199010	cigien	webcore[\W_]*+digital(?!\.com(?<=webcoredigital\.com))
