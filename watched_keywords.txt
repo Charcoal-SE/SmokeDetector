@@ -55372,3 +55372,4 @@
 1701245849	cigien	dreamtime[\W_]*+learning[\W_]*+school(?!\.com(?<=dreamtimelearningschool\.com))
 1701245885	cigien	t-mobile-homeinternet\.com
 1701245977	cigien	bluesteelcyber\.com
+1701247198	cigien	onlinesazeh\.com
