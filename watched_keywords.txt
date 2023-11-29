@@ -55370,3 +55370,4 @@
 1701245773	cigien	allstoredeals(?!\.com)
 1701245824	cigien	dreamtimelearningschool\.com
 1701245849	cigien	dreamtime[\W_]*+learning[\W_]*+school(?!\.com(?<=dreamtimelearningschool\.com))
+1701245885	cigien	t-mobile-homeinternet\.com
