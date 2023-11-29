@@ -55383,3 +55383,4 @@
 1701259134	VLAZ	playsafekasyno\.com
 1701268237	cigien	thecscience\.com
 1701268266	cigien	autoblogging\.ai
+1701268288	cigien	affpilot\.com
