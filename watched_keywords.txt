@@ -55363,3 +55363,4 @@
 1701201327	cigien	pureassignment(?!\.com)
 1701202079	Mast	aladilauto\.com
 1701223090	Jesse	ayce-electric\.com
+1701222004	Jesse	jojoyapk\.net
