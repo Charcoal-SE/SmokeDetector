@@ -55362,3 +55362,4 @@
 1701201294	Jeff Schaller	pureassignment\.com
 1701201327	cigien	pureassignment(?!\.com)
 1701202079	Mast	aladilauto\.com
+1701223090	Jesse	ayce-electric\.com
