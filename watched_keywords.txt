@@ -55445,3 +55445,4 @@
 1701350748	cigien	uperfect[\W_]*+monitor(?!\.de(?<=uperfectmonitor\.de))
 1701350801	cigien	meinghostwriter\.de
 1701284324	Jesse	country96\.com
+1701284328	Jesse	promo138\.cc
