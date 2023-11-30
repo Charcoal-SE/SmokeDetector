@@ -55432,3 +55432,4 @@
 1701342681	Jeff Schaller	scopemagazines\.com
 1701342879	Jeff Schaller	uperfectmonitor\.de
 1701207471	Jesse	web[\W_]*+recovery
+1701349927	Jeff Schaller	theleatherjacketer\.com
