@@ -55422,3 +55422,4 @@
 1701327128	Nick	indoorgem\.com
 1701330654	cigien	qualton(?!\.com\.au)
 1701330712	cigien	scholar[\W_]*+study[\W_]*+solution(?!\.com(?<=scholarstudysolution\.com))
+1701330773	cigien	chaturthitraders\.com
