@@ -55450,7 +55450,6 @@
 1701285005	Jesse	hesgoal\.app
 1701292382	Jesse	foysalahmedraju\.com
 1701294219	Jesse	kadioglumf(?#github)
-1701302854	Jesse	comtechies\.com
 1701303025	Jesse	CERTIFIED[\W_]*+CRYPTOGRAPHER[\W_]*+(at)?[\W_]*+GMAIL[\W_]*+(dot)?[\W_]*+COM
 1701326503	Nick	wpdesigns\.co\.uk
 1701343661	Nick	dharapvd\.com
