@@ -55412,3 +55412,4 @@
 1701328214	Makyen	trezorlogin[\W_]*+issues
 1701328514	Makyen	an[\W_]*+shanti[\W_]*+veggie[\W_]*+house
 1701329804	Nick	alfristongardens\.co\.uk
+1701329920	cigien	alfriston[\W_]*+gardens(?!\.co\.uk(?<=alfristongardens\.co\.uk))
