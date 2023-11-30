@@ -55424,3 +55424,4 @@
 1701330712	cigien	scholar[\W_]*+study[\W_]*+solution(?!\.com(?<=scholarstudysolution\.com))
 1701330773	cigien	chaturthitraders\.com
 1701330797	cigien	chaturthi[\W_]*+traders(?!\.com(?<=chaturthitraders\.com))
+1701331851	Nick	snoozermattress\.com
