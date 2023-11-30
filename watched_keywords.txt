@@ -55440,3 +55440,4 @@
 1701344606	Nick	kualitatem\.com
 1701350494	cigien	kualitee\.com
 1701273549	Jesse	topologia\.wordpress\.com
+1701350568	cigien	advantage[\W_]*+therapy(?!\.com\.au(?<=advantagetherapy\.com\.au))
