@@ -54849,7 +54849,6 @@
 1700052232	Jeff Schaller	lorange-umzuege\.de
 1700055567	Jeff Schaller	recoverykeytechnology(?:@gmail\.com)?
 1700055599	Jeff Schaller	tiemdocanvas\.com
-1700057788	Jeff Schaller	iBolt[\W_]*+Cyber[\W_]*+Hacker
 1700062028	Jeff Schaller	po8\.cash
 1700062578	Jesse	perlanproject\.org
 1700062822	cigien	perlan[\W_]*+project(?!\.org(?<=perlanproject\.org))
