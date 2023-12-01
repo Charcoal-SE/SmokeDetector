@@ -55501,3 +55501,4 @@
 1701445454	Jeff Schaller	slideserve\.com(?<!image1\.slideserve\.com)
 1701446229	Jesse	fortuneinfosys\.com
 1701449410	Jeff Schaller	mobilezmarket\.com
+1701452336	Jeff Schaller	sleepyjelly\.com
