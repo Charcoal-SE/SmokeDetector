@@ -40271,7 +40271,6 @@
 1656604388	Ollie	privatekeyfinder\.io
 1656605243	cigien	drmusa6119(?:@gmail\.com)?
 1656605271	cigien	d(?:octo)?r[\W_]*+musa
-1656605602	cigien	slideserve\.com
 1656606826	cigien	godrej[\W_]*+splendour(?!\.(?:net|org)\.in(?<=godrejsplendour\.(?:net|org)\.in))
 1656606851	cigien	godrejsplendour\.org\.in
 1656607043	cigien	erauniversity\.in
