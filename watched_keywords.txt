@@ -55498,3 +55498,4 @@
 1701443849	Jeff Schaller	movieandrama2425\.blogspot
 1701408971	Nick	tipsandtricks\.dev
 1701434784	VLAZ	techaid71\.xyz
+1701443954	cigien	alkady[\W_]*+cars(?!\.com(?<=alkadycars\.com))
