@@ -55499,3 +55499,4 @@
 1701443954	cigien	alkady[\W_]*+cars(?!\.com(?<=alkadycars\.com))
 1701445147	Jesse	fenstoneofficefurniture\.co\.uk
 1701445454	Jeff Schaller	slideserve\.com(?<!image1\.slideserve\.com)
+1701446229	Jesse	fortuneinfosys\.com
