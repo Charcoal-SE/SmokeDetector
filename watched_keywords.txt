@@ -55508,3 +55508,4 @@
 1701461142	Jeff Schaller	47002719appen\.blogspot
 1701462509	Jeff Schaller	coursera-downloader\.rf\.gd
 1701462503	VLAZ	(?-i:\+PCDQCGB6th04ZmNl)(?#t.me)
+1701465563	Vickel	(?-i:AjaxSoftware)(?#t.me)
