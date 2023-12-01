@@ -55474,3 +55474,4 @@
 1701406458	Makyen	startexpertinternational\.com
 1701406481	Makyen	start[\W_]*+expert[\W_]*+international(?!\.com(?<=startexpertinternational\.com))
 1701404432	Jesse	pjt\.co\.in
+1701406803	Makyen	anwhatsapk\.com
