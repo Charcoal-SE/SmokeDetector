@@ -55472,3 +55472,4 @@
 1701406374	Makyen	(?-i:bRfE3u)
 1701406435	Makyen	tus4dofficial
 1701406458	Makyen	startexpertinternational\.com
+1701406481	Makyen	start[\W_]*+expert[\W_]*+international(?!\.com(?<=startexpertinternational\.com))
