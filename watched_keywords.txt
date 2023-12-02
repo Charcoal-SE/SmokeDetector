@@ -55510,3 +55510,4 @@
 1701462503	VLAZ	(?-i:\+PCDQCGB6th04ZmNl)(?#t.me)
 1701477740	Makyen	technocratrecovery[\W_]*+site
 1701477763	Makyen	technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
+1701480495	Vickel	Eager[\W_]*+Beaver[\W_]*+Sawblade[\W_]*+Service
