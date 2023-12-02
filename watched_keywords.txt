@@ -55514,3 +55514,4 @@
 1701505881	Mast	signaturedetailers\.com
 1701498983	Nick	worklooper\.com
 1701519963	Jeff Schaller	greentreescaycanh\.com
+1701522574	Jeff Schaller	com\.hb\.games\.minesweeperx
