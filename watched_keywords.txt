@@ -55512,3 +55512,4 @@
 1701477763	Makyen	technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
 1701480495	Vickel	Eager[\W_]*+Beaver[\W_]*+Sawblade[\W_]*+Service
 1701505881	Mast	signaturedetailers\.com
+1701498983	Nick	worklooper\.com
