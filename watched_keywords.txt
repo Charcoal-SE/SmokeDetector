@@ -55513,3 +55513,4 @@
 1701480495	Vickel	Eager[\W_]*+Beaver[\W_]*+Sawblade[\W_]*+Service
 1701505881	Mast	signaturedetailers\.com
 1701498983	Nick	worklooper\.com
+1701519963	Jeff Schaller	greentreescaycanh\.com
