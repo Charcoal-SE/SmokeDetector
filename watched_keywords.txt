@@ -55549,3 +55549,4 @@
 1701496614	Nick	trainbodyandmind\.com
 1701482152	Vickel	quangnamtoplist\.com
 1701482147	Vickel	quangnamtoplist\.tumblr\.com
+1701465563	Vickel	(?-i:AjaxSoftware)(?#t.me)
