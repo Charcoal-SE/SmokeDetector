@@ -55533,3 +55533,4 @@
 1701600812	Jeff Schaller	billetesave\.eu
 1701600919	Jeff Schaller	lipsshine\.com
 1701605237	VLAZ	pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
+1701603235	VLAZ	(?-i:8k3swo1)(?#rebrand.ly)
