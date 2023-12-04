@@ -55576,3 +55576,4 @@
 1701694698	Jeff Schaller	largerelectric\.com
 1701618102	Jesse	call[\W_]*+me[\W_]*\d+
 1701497674	Nick	bodypulsefitnessequipments\.com
+1701695976	Jeff Schaller	(?-i:adw-RbQPwOo)(?#youtu.be)
