@@ -55583,3 +55583,4 @@
 1701712728	Jeff Schaller	baseballinsider\.net
 1701717778	Jesse	ivansurdual\.netlify\.app
 1701718994	Jesse	georgewizardrecoveryhome\.com
+1701719293	Jesse	george[\W_]*+wizard[\W_]*+recovery[\W_]*+(home)?+(?!\.com(?<=georgewizardrecoveryhome\.com))
