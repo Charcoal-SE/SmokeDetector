@@ -55586,3 +55586,4 @@
 1701719293	Jesse	george[\W_]*+wizard[\W_]*+recovery[\W_]*+(home)?+(?!\.com(?<=georgewizardrecoveryhome\.com))
 1701737087	Nick	cold-rite\.com\.au
 1701769289	Jeff Schaller	warezsofts\.com
+1701768794	VLAZ	hurranfaucet\.com
