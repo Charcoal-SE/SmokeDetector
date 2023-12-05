@@ -55599,3 +55599,4 @@
 1701772423	VLAZ	incfoxsolutions\.com
 1701775701	Nick	playgooglesnakegame\.com
 1701773110	VLAZ	toptiamcurrent\.blogspot
+1701773064	VLAZ	(?-i:tEXZ7)(?#shorturl.at)
