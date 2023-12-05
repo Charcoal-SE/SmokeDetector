@@ -55608,3 +55608,4 @@
 1701762383	Nick	glowwhispered\.in
 1701761609	VLAZ	firekirinplayonline\.us
 1701759803	Jesse	(?-i:zex0club)(?#t.me)
+1701759800	Jesse	zexo\.club
