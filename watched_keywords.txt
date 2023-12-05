@@ -55625,3 +55625,4 @@
 1701736609	Nick	gatographql\.com
 1701736817	Nick	BERNIE[\W_]*+DORAN([\W_]*+SIGNALS)?
 1701738170	Nick	usefixie\.com
+1701796229	Jesse	sora168\.com
