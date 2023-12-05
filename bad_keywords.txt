@@ -2922,3 +2922,4 @@ steadfast[\W_]*+nutrition(?!\.in(?<=steadfastnutrition\.in))
 james[\W_]*+miller[\W_]*+recovery(?!\.solutions(?<=jamesmillerrecovery\.solutions))(?:@mail\.com)?
 iBolt[\W_]*+Cyber[\W_]*+Hacker
 windmill[\W_]*+money[\W_]*+loan
+chloe[\W_]*+consultant

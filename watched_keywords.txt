@@ -55042,7 +55042,6 @@
 1700490352	Jeff Schaller	animationliberty\.com
 1700494086	Makyen	uniqkey(?!\.eu)
 1700495193	Makyen	chloe\.consultant1(?:@gmail\.com)?
-1700495222	Makyen	chloe[\W_]*+consultant
 1700496617	Jeff Schaller	www-akblogs-iceiy-com
 1700496688	Jeff Schaller	akblogs\.iceiy\.com
 1700502696	Jesse	(?-i:8RVd5Kilo7E)(?#youtu.be)
