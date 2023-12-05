@@ -55626,3 +55626,4 @@
 1701736817	Nick	BERNIE[\W_]*+DORAN([\W_]*+SIGNALS)?
 1701738170	Nick	usefixie\.com
 1701796229	Jesse	sora168\.com
+1701807482	Makyen	(?:(?:recovery|hacker)[\W_]*+)*wizard[\W_]*+maye[\W_]*+musk(?:@\w++\.\w++)?
