@@ -55641,3 +55641,4 @@
 1701860872	Nick	mukhost\.com
 1701860799	Nick	visalotravel\.com
 1701848249	VLAZ	pgslotweb\.net
+1701847544	VLAZ	trusted-spot\.com
