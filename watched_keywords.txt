@@ -55633,3 +55633,4 @@
 1701864136	Jeff Schaller	fasterthanlight\.me
 1701863298	VLAZ	cryptomlmsoftware\.com
 1701865511	VLAZ	grazitti\.com
+1701865507	VLAZ	(?-i:47Jif3s)(?#bit.ly)
