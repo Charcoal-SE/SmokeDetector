@@ -55687,3 +55687,4 @@
 1701899590	Nick	businessspotty\.com
 1701906707	Jesse	anti[\W_]*+cyber[\W_]*+crime[\W_]*+money[\W_]*+recovery
 1701917144	Nick	sydneycrackowermd\.com
+1701944382	VLAZ	affiliatetop\.world
