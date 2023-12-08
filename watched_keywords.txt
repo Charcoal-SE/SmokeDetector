@@ -55706,3 +55706,4 @@
 1701947349	VLAZ	lyricsdb\.org
 1702008474	cocomac	proxiesapi\.com
 1702008830	Makyen	proxiesapi(?!\.com)
+1702015655	Makyen	invoidea(?!\.com)
