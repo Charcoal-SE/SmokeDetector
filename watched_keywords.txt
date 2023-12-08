@@ -55708,3 +55708,4 @@
 1702008830	Makyen	proxiesapi(?!\.com)
 1702015655	Makyen	invoidea(?!\.com)
 1702014137	Jesse	cashaly\.com
+1702015796	Makyen	cashaly(?!\.com)
