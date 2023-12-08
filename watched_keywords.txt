@@ -55713,3 +55713,4 @@
 1702016787	Makyen	nunu[\W_]*+homestay(?!\.com(?<=nunuhomestay\.com))
 1702018064	cocomac	omaliving\.com
 1702019788	VLAZ	americanstudy\.edu\.vn
+1702020767	Makyen	britishessaywriters\.co\.uk
