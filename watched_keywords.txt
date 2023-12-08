@@ -55726,3 +55726,4 @@
 1702027132	VLAZ	bestironwood\.com
 1701906733	Jesse	weforum[\W_]*+org
 1701898073	Jesse	rokokbetlogin(?#bit.ly)
+1702045211	Jeff Schaller	angulartool\.de
