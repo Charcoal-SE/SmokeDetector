@@ -55755,3 +55755,4 @@
 1702131662	Vickel	(?-i:Amocha00)(?#t.me)
 1702131717	Makyen	theta[\W_]*+titans(?!\.com(?<=thetatitans\.com))
 1702156038	Jeff Schaller	pcmobilewala\.com
+1702156305	Jeff Schaller	ccrjustice\.org
