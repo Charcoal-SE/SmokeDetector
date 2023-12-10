@@ -2924,3 +2924,4 @@ iBolt[\W_]*+Cyber[\W_]*+Hacker
 windmill[\W_]*+money[\W_]*+loan
 chloe[\W_]*+consultant
 marie[\W_]*+consultancy(?:oz)?(?:@gmail\.com)?
+(?-i:WizardGhosthacker)(?#t.me)
