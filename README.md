@@ -68,7 +68,7 @@ To run SmokeDetector in this virtual environment, use
 `env/bin/python3 nocrash.py`.
 
 [Note: On some systems (e.g. Mac's and Linux), some circumstances may
-require the `--user` option be removed from the last `pip3`
+require the `--user` option to be removed from the last `pip3`
 command line in the above instructions. However, the `--user` option is
 known to be necessary in other circumstances. Further testing is
 necessary to resolve the discrepancy.]

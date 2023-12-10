@@ -102,7 +102,6 @@ praveen kumar Lakhara
 ^.*+$(?<=\w{1,3}h[ou]++sken$)
 (?-i:^Dorothy Daugherty$)
 ^Tonya Rabish$(?#User spams Avdshare)
-(?-i:^Sophie Cheng$)
 (?-i:^Cade Song$)
 hrisikesh\W*+saloi?
 ^horny\Wprofessor$
@@ -131,7 +130,6 @@ muralidharaB
 ^myboatride$
 ^Manmachine Group$
 ^mason ?java$
-ameliaalby
 Genny\s+Swiss
 ^livewire\W?india$
 ^andymark$
@@ -153,7 +151,6 @@ bestchange
 ^user95957$(?#ell troll 2019-05-23)
 (?-i:^NGFCET$)
 red(?:\s+)?switches
-(?-i:^Khoa Dang$)
 (?-i:^quantumit$)
 (?-i:^dany login$)
 (?-i:^dhekitha$)
@@ -750,7 +747,6 @@ Visualytes
 (?-i:^SEO BOY$)
 (?-i:^kosmik technologies pvt ltd$)
 (?-i:^Waking Posts$)
-^rohit negi$
 (?-i:^Kevin Deeb$)
 (?-i:^ealoor$)
 (?-i:^Baliar$)
@@ -948,3 +944,8 @@ zoomcar India
 (?-i:^Vezlay Foods Pvt\. Ltd\.$)
 (?-i:^Malik Abdullah$)
 (?-i:^Samum Sk$)
+(?-i:^Eco Cleans$)
+^amelia\W*alby$
+^\w{4,5}2ch$
+^Shakib\W*Khan(pust)?$
+^emily\W*snail$(?#username who posts spam about disk-partition.com)

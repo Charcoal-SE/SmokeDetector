@@ -1409,11 +1409,11 @@ def ns_for_url_domain(s, site, nslist):
         for nsentry in nslist:
             if isinstance(nsentry, list):
                 for ns in nsentry:
-                    assert ns.endswith('.'),\
+                    assert ns.endswith('.'), \
                         "Missing final dot on NS entry {0}".format(ns)
             else:
                 assert isinstance(nsentry, str)
-                assert nsentry.endswith('.'),\
+                assert nsentry.endswith('.'), \
                     "Missing final dot on NS entry {0}".format(nsentry)
 
     domains = []

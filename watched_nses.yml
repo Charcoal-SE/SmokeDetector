@@ -4338,7 +4338,9 @@ items:
 - ns: hoststage.net.
 - ns: orderbox-dns.com.
 - ns: serverhost.name.
-- ns: yosif.xyz.
+- comment: NXDOMAIN 2023-09-18
+  disable: true
+  ns: yosif.xyz.
 - comment: 4/120 over 10 months 2022-11-03
   disable: true
   ns: bodis.com.
@@ -4556,7 +4558,9 @@ items:
 - ns: hivelocity.net.
 - ns: inhostedns.net.
 - ns: bhhdns.com.
-- ns: amznetwork.net.
+- comment: NXDOMAIN 2023-11-11
+  disable: true
+  ns: amznetwork.net.
 - ns: dynu.com.
 - ns:
   - da73venom.stableserver.net.
@@ -4664,7 +4668,9 @@ items:
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- ns: metalcloudserver.in.
+- comment: NXDOMAIN 2023-10-19
+  disable: true
+  ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
 - ns: hostcats.com.
@@ -4715,7 +4721,9 @@ items:
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- ns: nccloud.shop.
+- comment: nxdomain 2023-11-07
+  disable: true
+  ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
 - ns: dianadns.com.
@@ -4753,7 +4761,9 @@ items:
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- ns: quickflyllc.com.
+- comment: NXDOMAIN 2023-09-03
+  disable: true
+  ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
   disable: true

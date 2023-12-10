@@ -27,7 +27,7 @@ class MetasmokeCache:
                key not in MetasmokeCache._expiries:
                 # Expiry was set on cache insert, and the value is still in-date, OR no expiry was set and the item
                 # is persistently cached.
-                return MetasmokeCache._cache[key],\
+                return MetasmokeCache._cache[key], \
                     ('HIT-VALID' if key in MetasmokeCache._expiries else 'HIT-PERSISTENT')
             else:
                 # Expiry was set on cache insert, but the value has expired. We're not regenerating values here.

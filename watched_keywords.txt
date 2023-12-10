@@ -2802,7 +2802,6 @@
 1524687954	Makyen	penis\W*be\W*upon\W*him
 1524690988	WELZ	fortniteapk-android\.xyz
 1524692415	WELZ	electricguitarstrap\.com
-1524724229	Zoe	sthint\.com
 1524727049	Makyen	happymothersday2018i\.blogspot
 1524732598	Makyen	saggy\W*ass
 1524733777	Tetsuya Yamamoto	amarnathjourney\.com
@@ -3104,7 +3103,6 @@
 1526619161	tripleee	pegasimediagroup\.com
 1526620560	Makyen	visaliendaiduong\.com
 1526623222	tripleee	landintopc\.blogspot
-1526624179	Makyen	gemini\.com
 1526625611	tripleee	boxfish\.cn
 1526626739	Glorfindel	umedico
 1526626992	Suraj Rao	botchief\.com
@@ -4397,7 +4395,6 @@
 1533791957	tripleee	bostonairporttaxis\.com
 1533796130	Tetsuya Yamamoto	guidesinsider\.com
 1533796753	Tetsuya Yamamoto	ogscapital\.com
-1533801700	tripleee	nimbusweb\.me
 1533803466	doppelgreener	solutionshub\.sitey\.me
 1533807887	Tetsuya Yamamoto	nrimb\.com
 1533811470	Suraj Rao	livewirelabs\.co
@@ -4448,7 +4445,6 @@
 1534147639	Glorfindel	seventeen\.com
 1534148639	Tetsuya Yamamoto	akaribio\.com
 1534152350	Makyen	aliarslangorsi2
-1534152731	Tetsuya Yamamoto	visasimple\.com
 1534155586	tripleee	mabhagwatilogistics\.in
 1534185939	Makyen	bestdietpills-1\.com
 1534191697	Glorfindel	inoxsaobang\.com
@@ -4707,7 +4703,6 @@
 1535535178	tripleee	peoplesolved\.com
 1535535681	Tetsuya Yamamoto	roofos\.ru
 1535536400	Glorfindel	thermalcameras\.guide
-1535538554	Glorfindel	creative-bioarray\.com
 1535538792	tripleee	creative-bio\w+\b(?!\.com(?<=creative-biostructure\.com))(?!\.com(?<=creative-biolabs\.com))(?!\.com(?<=creative-biogene\.com))(?!\.com(?<=creative-bioarray\.com))
 1535539729	tripleee	ibackpage\.com
 1535541408	tripleee	myowncats\.com
@@ -5135,7 +5130,6 @@
 1537934223	Makyen	metatip\.org
 1537934236	Makyen	explorer\.mvs\.org
 1537934242	Makyen	nesilguvenlik\.com
-1537934248	Makyen	online-tvchannel\.org
 1537935397	Tetsuya Yamamoto	jameswellington114
 1537935475	Makyen	RbfO6yzaVpM(?#YouTube video)
 1537938572	Shree	hotmailnumber\.com
@@ -5227,10 +5221,8 @@
 1538393658	Glorfindel	wyvernchuck
 1538396337	Glorfindel	getasmurf\.com
 1538396549	Glorfindel	w9toys\.com
-1538406059	Makyen	killexams(?:\.com)?(?#Used as both domain name and company/product name)
 1538412551	Makyen	e\.foundation(?#domain)
 1538438676	Makyen	kevinmitnick(?:@cyber-wizard\.com)?
-1538438686	Makyen	cyber-wizard\.com
 1538451028	Makyen	latinrose66(?:@gmail\.com)?
 1538455458	Tetsuya Yamamoto	surveyguide\.net
 1538457998	Makyen	hackinvade(?:@gmail\.com)?
@@ -5585,7 +5577,6 @@
 1540148231	Glorfindel	wanderungen-und-abenteuer\.de
 1540148179	JoErNanO	hikingbna\.com
 1540153511	Erik the Outgolfer	romancecompass\.com
-1540159704	Tetsuya Yamamoto	linuxsecrets\.com
 1540161398	Makyen	chirurgie-en-tunisie\.com
 1540178932	Tetsuya Yamamoto	kodi\.ninja
 1540182333	tripleee	disk-partition\.com
@@ -5646,7 +5637,6 @@
 1540514267	Makyen	softlytips\.com
 1540516842	gparyani	pritamfreelancer\.blogspot
 1540519722	Makyen	info\.fastservice22(?:@gmail\.com)?
-1540522341	Makyen	^emily\W*snail$(?#username who posts spam about disk-partition.com)
 1540530669	tripleee	SPACEWEBHACKS
 1540536843	Tetsuya Yamamoto	customersolutioncare\.com
 1540536941	Tetsuya Yamamoto	qqklik55\.com
@@ -6276,7 +6266,6 @@
 1543494985	Makyen	accesscontrols\.com\.au
 1543509674	WELZ	mam-solutions\.com
 1543521868	Makyen	essayhave\.com
-1543530249	WELZ	premiereltg\.com
 1543534544	K.Dᴀᴠɪs	blackhatlord(?:@protonmail\.com)?
 1543540235	Tetsuya Yamamoto	sierracoin\.net
 1543540551	Tetsuya Yamamoto	planmyshifting\.com
@@ -7801,7 +7790,6 @@
 1551957338	Shree	vocational-courses\.co\.in
 1552021869	Makyen	themarketingheaven\.com
 1552022931	tripleee	zohosites
-1552022984	tripleee	home\.blog
 1552023014	tripleee	podbean\.com(?<!\bapi\.podbean\.com)(?<!\bdevelopers\.podbean\.com)(?<!\bmcdn\.podbean\.com)(?<!\bhelp\.podbean\.com)(?<!\bwww\.podbean\.com)(?<!\bbridgetown\.podbean\.com)(?<!\bplaylist\.podbean\.com)(?<!\bfeed\.podbean\.com)
 1552023040	tripleee	classtell\.com
 1552024571	tripleee	fusiontechnology\.in
@@ -8857,7 +8845,6 @@
 1556502994	Makyen	babyblog\.ru
 1556510720	Makyen	javascriptstutorial\.com
 1556513419	tripleee	odemi\.in
-1556514911	tripleee	^\w{4,5}2ch$
 1556518246	tripleee	exkash\.net
 1556521954	tripleee	eappconnect\.com
 1556522537	tripleee	check4offers\.com
@@ -9248,7 +9235,6 @@
 1558124629	Machavity	spesialiskandungan\.com
 1558157573	Makyen	slnwatersupplies\.com
 1558155445	double-beep	ipolk(?:@virtuar\.com)?
-1558158295	Makyen	^amelia\W*alby$
 1558174381	Zoe	cheapwebhosting\.stream
 1558175739	double-beep	dlwordpress\.com
 1558175753	double-beep	dlandroid24\.com
@@ -9687,7 +9673,6 @@
 1560147069	Makyen	ka\W*wazifa\W*in\W*hindi
 1560152735	Makyen	ammoniteadventures\.com
 1560158651	tripleee	ankaracilingirim\.com
-1560161301	Nisse Engström	milople\.com
 1560162455	tripleee	kidslearningsongs\.com
 1560163539	double-beep	bitcoinsxchanger\.com
 1559982391	double-beep	profitaccumulator\.co\.uk
@@ -11709,7 +11694,6 @@
 1567005095	Makyen	ppqnrt\.hatenablog\.com
 1567006835	Makyen	shiningmedia\.vn
 1567007682	Makyen	ijstartcanon\.us
-1567014526	Machavity	nutanix\.com
 1567015011	Makyen	sweatfreelife\.com
 1567015028	Makyen	wallstreetmojo\.com
 1567022434	Machavity	funclubcasino\.com
@@ -13202,7 +13186,6 @@
 1572584837	Makyen	gachthamcnc\.net
 1572590061	Makyen	luxshowersystem\.com
 1572590090	Makyen	lux[\W_]*+board
-1572596974	Kulfy	entab\.in
 1572597804	tripleee	vinaseen\.com\.vn
 1572600360	tripleee	bespokefurnitureandmore\.com
 1572602102	Jenayah	blockgeeks\.com
@@ -13973,7 +13956,6 @@
 1575142006	Makyen	biggertrader50(?:@gmail\.com)?
 1575142027	Makyen	maestro_seller(?:@yahoo\.com)?
 1575142050	Makyen	1619f8b937bdc37d
-1575142065	Makyen	realexamcollection\.com
 1575142151	Makyen	(?-i:VpPAitD69H)
 1575145978	Makyen	capricorn[\W_]*+bakery(?!\.com(?<=capricornbakery\.com))
 1575146035	Makyen	supper-fast-keto-boost\.tumblr\.com
@@ -14916,7 +14898,6 @@
 1577706676	Glorfindel	plus-roku\.com
 1577706785	Glorfindel	hulu-plus\.net
 1577706835	Glorfindel	officeplus\.us\.com
-1577706882	double-beep	directmacro\.com
 1577706899	Glorfindel	avg\.com.?retail
 1577709343	tripleee	ambitionbox\.com
 1577709363	tripleee	sitejabber\.com
@@ -15847,7 +15828,6 @@
 1579844336	Makyen	glamour[\W_]*+skin[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579849738	Shree	logicmojo\.com
 1579849771	tripleee	delighterp\.com
-1579850825	tripleee	taxiyatri\.com
 1579850855	tripleee	netmeds\.com
 1579851160	Makyen	dragonsdenketo(?!\.com)
 1579851193	Makyen	(?-i:ZAGhIqS4LZQ)(?#youtu.be)
@@ -17184,7 +17164,6 @@
 1583080380	Makyen	wellness[\W_]*+qualities[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583099147	Makyen	dr[\W_]*+okuns
 1583099167	Makyen	herbal[\W_]*+home247(?!\.wixsite\.com(?<=herbalhome247\.wixsite\.com))(?:@yahoo\.com)?
-1583099189	Makyen	herbalhome247\.wixsite\.com
 1583099958	Makyen	eibik\.com
 1583110377	Makyen	asiavirtualsolutions\.com
 1583120818	Makyen	(?-i:5H6lE\.png)
@@ -17289,7 +17268,6 @@
 1583297754	Shree	societynow\.in
 1583300501	Shree	prodatalabs\.com
 1583306314	Shree	goxxbet\.com
-1583308181	Makyen	codermails\.in
 1583308204	Makyen	afllivestream\.com
 1583308273	Makyen	electroketonew(?#sites.google.com)
 1583308296	Makyen	diet[\W_]*+clarity[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
@@ -17433,7 +17411,6 @@
 1583602033	Eliah Kagan	carrentalindiadelhi\.com
 1583602060	Eliah Kagan	plumbcorrect\.com
 1583602085	Eliah Kagan	plumbcorrect(?!\.com)
-1583602185	Eliah Kagan	realexamcollection(?!\.com)
 1583602588	Makyen	(?-i:IKyyMKtOpTY)(?#YouTube)
 1583602611	Makyen	getketoshred
 1583602633	Makyen	oasis[\W_]*+keto(?:[\W_]*+(?:canada|ca|\d++|[\da-f]{4,}+))*
@@ -18808,7 +18785,6 @@
 1587900232	Makyen	wifewatching
 1587900261	Makyen	iamcuckold\.github\.io
 1587900293	Makyen	loves-spells\.com
-1587901125	Makyen	ovhcloud\.com
 1587901607	Makyen	blood[\W_]*+balance[\W_]*+formula[\W_]*+pills(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587901754	Makyen	cynorsense\.com
 1587905935	double-beep	digiketab\.net
@@ -19713,7 +19689,6 @@
 1590564502	tripleee	tobacare\.com
 1590564842	Makyen	tobacare(?!\.com)
 1590565607	Glorfindel	(?-i:kAHU8MnsqDE)(?#YouTube)
-1590569288	Glorfindel	papersowl\.com
 1590570550	Glorfindel	yhddb\.com
 1590574539	tripleee	hookupmasters\.com
 1590577497	tripleee	mulesy\.com
@@ -20675,7 +20650,6 @@
 1593683447	tripleee	codeo(?!token\.com|wallet\.online)[\W_]*?(?:token|wallet)
 1593683463	tripleee	codeotoken\.com
 1593683480	tripleee	codeowallet\.online
-1593688815	tripleee	ory\.sh
 1593688970	tripleee	benfocomplete\.com
 1593689031	tripleee	vfx[\W_]*+(?:college|degree|training|institutes)s?
 1593692689	tripleee	zlovema(?# medium.com)
@@ -21341,7 +21315,6 @@
 1596357267	Criggie	jpgtopdf\.onl
 1596357247	Criggie	wordtopdf\.ltd
 1596357232	Criggie	vidmate\.bid
-1596357187	Criggie	19216811\.cam
 1596378704	Makyen	(?-i:venessadcruze)(?#medium.com)
 1596378718	Makyen	panaleanstore\.com
 1596378735	Makyen	bioleptinstore\.com
@@ -21443,7 +21416,6 @@
 1596774514	tripleee	anexsoft\.com
 1596775359	tripleee	eform2290\.com
 1596775550	tripleee	(?-i:^ISO [A-Z]+$)
-1596775941	tripleee	ias-indonesia\.org
 1596782883	tripleee	syspree\.com
 1596782899	tripleee	syspree(?!\.com)
 1596785652	tripleee	All India Council for Technical Education \(AICTE\)
@@ -22348,7 +22320,6 @@
 1599732333	tripleee	happythanksgivingimages\.net
 1599732419	tripleee	thenikhilk
 1599732677	tripleee	karri-international\.com
-1599736471	tripleee	pissedconsumer\.com
 1599738300	tripleee	cloudtechtiq\.com
 1599738317	tripleee	cloudtechtiq(?!\.com)
 1599737541	Jeff Schaller	auroravista\.tech
@@ -23483,7 +23454,6 @@
 1603613296	Jeff Schaller	camo88\.com
 1603622735	Jeff Schaller	bestdjguide\.com
 1603624896	Mast	prominencesupport\.co\.uk
-1603626422	Mast	shahzifpc\.com
 1603634471	Mast	findaword\.co
 1603634709	Makyen	deezerpremium-apk\.com
 1603648486	Jeff Schaller	royalparadiseevents\.com
@@ -24258,7 +24228,6 @@
 1606457678	tripleee	renediazphotography\.com
 1606458425	Makyen	officed+\.uk\.net
 1606458935	Makyen	mtouch[\W_]*+labs(?!\.com(?<=mtouchlabs\.com))
-1606458956	Makyen	mtouchlabs\.com
 1606459250	Makyen	jobalertclub\.com
 1606463928	tripleee	uptons\.net\.au
 1606464883	tripleee	laxminarasimhahospital\.in
@@ -24395,7 +24364,6 @@
 1606973836	Makyen	meeyland\.com
 1606973983	Makyen	macro-supreme-keto-44\.webselfsite\.net
 1606974081	Makyen	macro[\W_]*+supreme[\W_]*+keto(?!-44\.webselfsite\.net(?<=macro-supreme-keto-44\.webselfsite\.net))(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
-1606978833	tripleee	facepdf\.com
 1606979779	tripleee	bestblockja\.com
 1606980607	Glorfindel	(the)?colourmo(o|n)n
 1606982377	Ryan M	UC4qpDjn1Q2FPqOUz2W7jFig(?# YouTube channel)
@@ -25305,7 +25273,6 @@
 1610359979	cigien	agrobloggers\.com
 1610365856	cigien	sattachart\.co
 1610367491	cigien	internet-marketing\.company
-1610368429	cigien	sibinfotech\.com
 1610370316	tripleee	worknector\.de
 1610370086	cigien	worldsdecor\.in
 1610374764	cigien	neboshvspmp\.blogspot
@@ -25646,7 +25613,6 @@
 1611300150	tripleee	icreativez(?!\.com)
 1611300523	cigien	onlinercasino\.ca
 1611300569	cigien	alwujood\.com
-1611301200	Cody Gray	pkv
 1611303164	Nisse Engström	kishorepallapothu\.com
 1611304770	Cody Gray	2Soft\sSolutions\sPvt\sLtd
 1611305137	Cody Gray	techlame\.com
@@ -26120,7 +26086,6 @@
 1612766098	cigien	scooterstudy\.com
 1612766524	Makyen	reviewsserviceusa1\.blogspot
 1612770322	cigien	cavdmindcreatives\.ca
-1612770443	Xnero	(?-i:SMARTCHOICEWEB)(?#Skype)
 1612770972	Xnero	Best folding mobility scooter
 1612774746	cigien	pornnhub\.com
 1612776691	tripleee	(?-i:2O8PcTb)(?# bit.ly)
@@ -27835,7 +27800,6 @@
 1617964841	Jeff Schaller	delimp\.com
 1617971570	Spevacus	kbcgame\.biz
 1617974024	Spevacus	bpbonline\.com
-1617976521	Jeff Schaller	atobtransfer\.com
 1617988094	Makyen	giayxinstore\.com
 1617988112	Makyen	exoticparrotstore\.com
 1617988655	Nisse Engström	clig\.dev
@@ -28082,7 +28046,6 @@
 1618959110	Makyen	kaleidoscopechristian\.wordpress\.com
 1618959440	Makyen	savermaster\.com
 1618971373	Jeff Schaller	dealsengine\.com
-1618986463	Glorfindel	^Shakib\W*Khan(pust)?$
 1618989008	Ryan M	softmagnat\.com
 1618994247	Makyen	mackwelloco\.com
 1618994263	Makyen	tinytechindia\.com
@@ -28591,7 +28554,6 @@
 1620689046	cigien	bloomengg\.com
 1620689326	cigien	sarkarijobs\.gen\.in
 1620689347	cigien	sarkarijobsagency\.com
-1620636118	Nick	techimply\.com
 1620689865	cigien	hoskey44april(?:@gmail\.com)?
 1620690110	cigien	moshaveraneh\.com
 1620694260	Ryan M	ucep5t-zvl-jpjecjucdm3sa(?# YouTube channel)
@@ -30626,7 +30588,6 @@
 1627216205	Jeff Schaller	bestofschools\.com
 1627220917	Makyen	chienthancantho(?:@gmail\.com)?
 1627220935	Makyen	dekhisugireal
-1627223087	Makyen	upswift\.io
 1627223103	Makyen	upswift(?!\.io)
 1627224997	cigien	reshukumari120\.medium\.com
 1627225843	cigien	afnanksa\.com
@@ -30788,7 +30749,6 @@
 1627723737	Ryan M	hvtimes\.com
 1627723829	Ryan M	gsdc[\W_]*+certification
 1627725405	Nisse Engström	eduvogue\.com
-1627725703	Nisse Engström	marketo\.com
 1627727925	Jeff Schaller	gorrifpumps\.com
 1627731907	Nisse Engström	srisakthidentalclinic\.in
 1627731939	Makyen	d(?:octo)?r[\W_]*+ado(?:[\W_]*+spiritual[\W_]*+temple)?
@@ -30905,7 +30865,6 @@
 1628078778	tripleee	tpcs\.ca
 1628078811	tripleee	thenovaclinic\.com
 1628082877	Spevacus	downloadtopten\.com
-1628083338	Spevacus	voxvalley\.com
 1628088842	Spevacus	smmnext\.com
 1628096433	Jeff Schaller	psymargiotta\.it
 1628101855	Nisse Engström	goodhealthfit\.com
@@ -31897,7 +31856,6 @@
 1631441553	double-beep	gaophuongnam\.vn
 1631462567	Jeff Schaller	pgslot168\.win
 1631462586	Jeff Schaller	pgslot\.global
-1631466730	cigien	biketoworkday\.us
 1631466799	cigien	medicinepurchase\.com
 1631466895	cigien	falamakmachine\.com
 1631467405	cigien	account\.renyor\.com
@@ -32700,7 +32658,6 @@
 1634040529	Spevacus	safi-clean\.com
 1634040608	Glorfindel	tplinkrepeatersetup\.com
 1634040751	Spevacus	masterpointleather\.com
-1634043375	Spevacus	mmcgbl\.com
 1634043600	Spevacus	reductiondiscount\.fr
 1634048203	Ollie	ronmacleancbdgummies\.wixsite\.com
 1634050510	Glorfindel	deventor\.io
@@ -33569,7 +33526,6 @@
 1637159721	Ollie	webmatics\.com
 1637160057	Ollie	simpletips\.net
 1637160578	Ollie	networkerstechnology\.com
-1637160689	Ollie	openteqgroup\.com
 1637160932	Ollie	alreham\.com
 1637161874	cigien	188\.166\.207\.181
 1637162044	cigien	dailymagazinenews\.com
@@ -33763,7 +33719,6 @@
 1637676413	tripleee	amazon[\W_]*+free[\W_]*+products\d*
 1637676534	tripleee	digishraa
 1637676853	tripleee	avsforum\.com(?# spammer links to phone number thread)
-1637682289	Spevacus	mygeekshelp\.com
 1637685911	cigien	health-and-beauty-living\.blogspot
 1637686046	tripleee	70069253(?# stackoverflow post id)
 1637691015	Ollie	(?-i:KitSupp)(?#bit.ly)
@@ -33861,7 +33816,7 @@
 1638007454	Suraj Rao	qaabildigital\.com
 1638008599	Ryan M	bigpro1\.com
 1638021696	double-beep	best-essaywriter\.com
-1638026266	Cody Gray	\${4,}
+1638026266	Cody Gray	\${4,}+(?<!class="math-container">\${4})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1638032060	Cody Gray	seekhterahiye\.com
 1638037741	cigien	hutwani\.com
 1638037800	cigien	clickteam\.org
@@ -34250,7 +34205,6 @@
 1639476543	Makyen	lauftech\.de
 1639477288	tripleee	(?-i:^Amira Mahasin$)
 1639477939	tripleee	exerror\.com
-1639479965	tripleee	chikucab\.com
 1639480434	tripleee	luxury[\W_]*+brand[\W_]*+management
 1639480701	tripleee	mona[\W_]*+lisa[\W_]*+joseph
 1639480895	tripleee	FOBGOODS\.COM
@@ -34619,7 +34573,6 @@
 1640765109	tripleee	akdinvest\.com
 1640767238	Glorfindel	angela\W*angie
 1640767447	tripleee	edupro\.edu\.vn
-1640768266	tripleee	bitaacademy\.com
 1640770412	tripleee	skvenergyservices\.com
 1640774931	tripleee	viralpik\.com
 1640777853	tripleee	venuepro\.co
@@ -36440,7 +36393,6 @@
 1646118854	tripleee	fmi\.online
 1646119028	tripleee	fmi[\W_]*+online(<!fmi\.online)
 1646119197	tripleee	kabcogroup\.com
-1646120731	tripleee	avax\.network
 1646126484	tripleee	mightytips\.org
 1646126870	tripleee	(?-i:^Spammer$)
 1646127144	tripleee	edua[\W_]*+uraa(?!\.com(?<=eduauraa\.com))(?:[\W_]*+india)?
@@ -36877,7 +36829,6 @@
 1647368556	Ollie	scriptaproject\.com
 1647370851	cigien	(?-i:3ot8i3d)(?#bit.ly)
 1647371369	cigien	fitaminat\.com
-1647389907	Thomas Ward	sms-man\.com
 1647390885	Makyen	ustropicalfish\.com
 1647397757	Makyen	jetmedia-inc\.com
 1647404149	Ryan M	yofonts\.com
@@ -37086,7 +37037,6 @@
 1648026958	Cody Gray	ppscfpscnotes\.com
 1648028794	Mast	bluegooseinn\.com
 1648029203	Mast	svss\.co\.in
-1648029602	Cody Gray	animaapp\.com
 1648029698	Cody Gray	bep20[\W_]*token[\W_]*development
 1648029732	Cody Gray	Zomato[\W_]*clone
 1648029815	Cody Gray	(?-i:^dajiang lu$)
@@ -37372,7 +37322,6 @@
 1648551623	Cody Gray	developerdiary(?!\.in(?<=developerdiary\.in))
 1648552364	Cody Gray	tnrkdevelopment\.ca
 1648552394	Cody Gray	tnrk[\W_]*development(?!\.ca(?<=tnrkdevelopment\.ca))
-1648554667	Cody Gray	sellshop\.com\.bd
 1648556511	Cody Gray	(?-i:^mott$)
 1648556841	Machavity	kvmswitchtech\.com
 1648563968	Cody Gray	marketquotient\.com
@@ -37414,7 +37363,6 @@
 1648657889	Ollie	(?-i:mighty-dog-roofing-of-southwest-houston)(?# linkedin)
 1648657911	Ollie	(?-i:UCVBpQ8ppY217A56NwMT_ntg)(?# YouTube channel)
 1648657961	Ollie	(?-i:mightydogroofing\.swhouston)(?# Instagram)
-1648666067	Ian Campbell	holapaints\.com
 1648667017	cigien	ubinum\.com
 1648667651	cigien	recoverycrypto0(?:@gmail\.com)?
 1648667829	Makyen	(?-i:Recoverycrypto)(?#t.me)
@@ -37613,7 +37561,6 @@
 1649247489	Jeff Schaller	prossel\.github\.io
 1649248277	tripleee	aitechtonic\.com
 1649251907	cigien	hkinfosoft\.com
-1649253917	Ryan M	lakshydeep-14\.medium\.com
 1649263221	Spevacus	downloadminimilitia\.com
 1649264771	Jeff Schaller	hostingdady\.com
 1649276630	cigien	history-cultural\.com
@@ -38114,7 +38061,6 @@
 1650608021	tripleee	renhotec(?!\.com)
 1650608154	Ryan M	thewebboost\.com
 1650609285	tripleee	mythrihospital\.net
-1650610704	Ryan M	vinchin\.com
 1650611220	Cody Gray	klorstore\.com
 1650611240	Cody Gray	Ef[\W_]*Chlor
 1650612759	tripleee	lucadelgiudice\.medium\.com
@@ -38540,7 +38486,6 @@
 1651885852	Makyen	(?-i:SV_3y11fzLc2Gesr66)
 1651892130	cocomac	prestahero\.com
 1651901117	Ryan M	immunebytes(?!\.com)
-1651905100	Cody Gray	solo\.to
 1651907749	Cody Gray	thammyviennevada\.com
 1651911643	Cody Gray	atreya[\W_]*associates?
 1651912454	Cody Gray	CelluAid
@@ -40025,7 +39970,6 @@
 1655810894	Jeff Schaller	belboa\.com\.au
 1655813618	Jeff Schaller	newmodern\.in
 1655815785	Jeff Schaller	EnKash
-1655816656	Mast	outlookindia\.com\/outlook-spotlight
 1655817047	Jeff Schaller	giselasloton77
 1655817157	Makyen	jokerwin77(?!\.info)
 1655817218	Jeff Schaller	mytechnicalblogger\.com
@@ -40310,7 +40254,6 @@
 1656579574	Jeff Schaller	priyoshop\.com
 1656579742	Jeff Schaller	buildmate\.in
 1656579849	Jeff Schaller	excellenttechnosys\.com
-1656579986	Jeff Schaller	jamsimkart\.com
 1656580044	Jeff Schaller	xuhuangbiotech\.com
 1656584473	Jeff Schaller	electropneumatics\.com
 1656587287	Makyen	cobahemp\.com
@@ -40322,13 +40265,11 @@
 1656592771	Makyen	getintopcc\.co
 1656594198	Spevacus	royalclipping\.com
 1656597738	Makyen	mitchellrestoration\.com
-1656601207	Jeff Schaller	advancedcommunities\.com
 1656603220	Ollie	bio-gen\.in
 1656603563	Ollie	(?-i:3OFZHHc)(?# bit.ly)
 1656604388	Ollie	privatekeyfinder\.io
 1656605243	cigien	drmusa6119(?:@gmail\.com)?
 1656605271	cigien	d(?:octo)?r[\W_]*+musa
-1656605602	cigien	slideserve\.com
 1656606826	cigien	godrej[\W_]*+splendour(?!\.(?:net|org)\.in(?<=godrejsplendour\.(?:net|org)\.in))
 1656606851	cigien	godrejsplendour\.org\.in
 1656607043	cigien	erauniversity\.in
@@ -40745,7 +40686,6 @@
 1657946695	Makyen	acselnow(?!\.com)
 1657946724	Makyen	intern-cricut\.com
 1657946745	Makyen	drivingdirectionsroute\.com
-1657969453	Jeff Schaller	monkey-type\.org
 1657969710	Jeff Schaller	greasetrapguy\.com
 1657973530	Makyen	jumbo\.ae
 1657990109	cigien	(?-i:KNuphK-GgK4)(?#youtube)
@@ -40901,7 +40841,6 @@
 1658477158	tripleee	homeinsulationcontractors\.co\.uk
 1658477314	tripleee	recruitmentindia\.in
 1658477364	tripleee	driver[\W_]*+talent
-1658486560	Jeff Schaller	brollyacademy\.com
 1658486611	Jeff Schaller	visiontechnews\.com
 1658487079	Jeff Schaller	planeks\.net
 1658487279	Jeff Schaller	modyolos\.com
@@ -41825,7 +41764,6 @@
 1660804269	Makyen	urbangloryfurnishing\.com
 1660805217	tripleee	shirogane\.vn
 1660805390	tripleee	fxelta136(?# zalo.me)
-1660805468	tripleee	zalo\.me
 1660808397	Makyen	dienmaycholon\.com\.vn
 1660808447	Makyen	dienmaycholon\.vn
 1660808613	Makyen	sieuketqua\.com
@@ -43294,7 +43232,6 @@
 1664429517	tripleee	pro388(?!\.com)
 1664430440	tripleee	pay[\W_]*(?:some(?:body|one)|you|a pro(?:fessional)?)[\W_]*+to[\W_]*+write
 1664431657	tripleee	(?-i:^Guru Prasath$)
-1664434827	tripleee	seasiainfotech\.com
 1664436127	tripleee	chennaidesires\.in
 1664436248	tripleee	techzapk
 1664436310	tripleee	sprinklr\.com
@@ -43398,7 +43335,6 @@
 1664801667	cigien	yelloudt\.com
 1664801732	cigien	(?-i:oYRXyg)(?#fiverr)
 1664811031	Ollie	ithemelandco\.com
-1664811680	Ollie	exalate\.com
 1664812413	Ollie	idalko\.com
 1664821947	Makyen	nerdyseal\.com
 1664821973	Makyen	nerdyseal(?!\.com)
@@ -43443,7 +43379,6 @@
 1664957841	tripleee	toyotasure\.vn
 1664958131	tripleee	thegioiphongtam(?!\.vn)
 1664958553	tripleee	(?-i:^mogk0r$)
-1664962387	Mast	simplified\.com
 1664962980	tripleee	jancargo\.com
 1664965610	Jeff Schaller	resortsbythebaagh\.com
 1664966512	Jeff Schaller	hxmagnets\.com
@@ -44071,7 +44006,6 @@
 1666529395	cigien	spider[\W_]*+essay(?!\.org(?<=spideressay\.org))
 1666530278	cigien	trumonytechs\.com
 1666530299	cigien	trumonytechs(?!\.com)
-1666530750	cigien	altatechnologies\.com
 1666532063	cigien	postgreshelp\.com
 1666536649	Ollie	wellingtonpark\.org\.au
 1666536863	Jeff Schaller	infoiteb\.com
@@ -44189,7 +44123,6 @@
 1666933462	cigien	akshay\.patell1702(?:@gmail\.com)?
 1666933577	cigien	Lore-Master\.com
 1666935820	cigien	digitalguider\.com
-1666935938	cigien	redcliffelabs\.com
 1666940744	tripleee	paolo\.?devera\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1666941844	tripleee	alltimeresults\.com
 1666946511	tripleee	econour\.com
@@ -44359,7 +44292,6 @@
 1667457615	cigien	cocaine-forsale\.io
 1667460748	tripleee	(?-i:3FkQUtd)(?# bit.ly)
 1667460957	tripleee	w3era\.com
-1667461110	tripleee	(?-i:^John Robert$)
 1667462616	tripleee	electricwirescables\.com
 1667463719	tripleee	hygienelinks\.com
 1667463746	tripleee	hygiene[\W_]*+links(?!\.com(<=hygienelinks\.com))
@@ -44527,7 +44459,6 @@
 1668011468	Ollie	chonongsanonline\.com
 1668017182	cigien	bajrangitandoor\.co\.in
 1668017532	cigien	discountt-coupons-codes\.blogspot
-1668018458	cigien	graphicexpertsindia\.com
 1668020278	cigien	dollerking\.pages\.dev
 1668025073	Ethan	bytecryptofund\.com
 1668026129	Makyen	editage\.com
@@ -44674,7 +44605,6 @@
 1668497679	cigien	hhovel\.com
 1668497852	tripleee	syedhussain792(?# fiverr)
 1668500530	tripleee	black[\W_]*+friday[\W_]*+2022
-1668502293	tripleee	flappy-bird\.co
 1668504786	tripleee	wezen-ball\.com
 1668508383	tripleee	metaverseswapping\.com
 1668508511	tripleee	diamondexch-cricketid\.com
@@ -44849,7 +44779,6 @@
 1669005152	tripleee	vajra\.ai
 1669007930	tripleee	ricksimpsonoil\.com
 1669008747	tripleee	(?-i:^Pxin Protector$)
-1669008781	tripleee	steadfastnutrition\.in
 1669010192	tripleee	yesassistant\.com
 1669010883	tripleee	(?-i:YV0ozCt-4gs)(?# youtube)
 1669012608	tripleee	kingtruckandtrailerrepair\.com
@@ -45217,7 +45146,6 @@
 1669968488	cigien	totalenvironments\.co\.in
 1669968634	cigien	ahmad242jameel(?:@gmail\.com)?
 1669969344	tripleee	(?-i:^Pds International Pvt ltd$)
-1669971095	tripleee	tractorkarvan\.com
 1669971150	tripleee	freeimgtools\.com
 1669971814	cigien	cryptonewsz\.com
 1669972317	cigien	bestsocialpromotion\.com
@@ -45731,7 +45659,6 @@
 1671899021	Makyen	godigitalinfo\.com
 1671903805	Makyen	(?-i:3juPAL6)(?#bit.ly)
 1671920642	Ethan	cervantesjerardo48(?:@gmail\.com)?
-1671960813	tripleee	remarkablemark\.org
 1671973872	Jeff Schaller	Dzg5zOKogHtlZGZk
 1671978366	Jeff Schaller	riderapk\.com
 1671978397	Jeff Schaller	itsonlypaintballing\.com
@@ -45942,7 +45869,6 @@
 1672641769	tripleee	dunotech\.com
 1672642744	cocomac	helpmyassignments\.co\.uk
 1672646191	Suraj Rao	mudanzer\.es
-1672647756	tripleee	quickwayinfosystems\.com
 1672647788	tripleee	appliedwatermidwest\.com
 1672647823	tripleee	microfiber[\W_]*+(?:cleaning[\W_]*+)?cloth
 1672648372	tripleee	rakhi[\W_]*+gifts?
@@ -46194,7 +46120,6 @@
 1673267989	Jeff Schaller	sfgate\.com/market/article
 1673273855	Jeff Schaller	intermediaarts\.org
 1673285062	Makyen	kevinpoulsenhackers595(?:@gmail\.com)?
-1673286677	Makyen	jeff[\W_]*+silbert[\W_]*+39(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1673296476	Ethan	birolbahadir\.com
 1673300805	Spevacus	flywithpeace\.com
 1673309918	Vickel	capital-gains\.co
@@ -46230,7 +46155,6 @@
 1673350566	Cody Gray	amansala\.com
 1673350762	tripleee	yourselfquotes\.com
 1673351534	Cody Gray	kenovate(?!\.com)
-1673351595	Cody Gray	Cyber[\W_]*Genie[\W_]*Intercontinental
 1673351927	Cody Gray	^Eloise[\W_]*Schnenil$
 1673352476	tripleee	economicschool\.org
 1673353316	Cody Gray	(?<!com\.)webomates(?!\.com)
@@ -46333,7 +46257,6 @@
 1673591616	Cody Gray	hobby[\W_]*india
 1673594616	Makyen	iplescorts\.com
 1673596776	Cody Gray	auto2000sports\.com
-1673599926	tripleee	helpwire\.app
 1673600261	Cody Gray	kadoqqpkv\.blogspot
 1673600298	Cody Gray	KadoQQ(?!pkv\.blogspot)
 1673603122	Makyen	forextrading\.pk
@@ -46546,7 +46469,6 @@
 1674130667	tripleee	zzang79\.com
 1674131296	tripleee	샌즈카지노
 1674132160	tripleee	putty\.live
-1674136925	tripleee	edhacare\.com
 1674136965	tripleee	edha[\_W]*+care(?!\.com(?<=edhacare\.com))
 1674146302	Jeff Schaller	omg\.miracle\.us\.to
 1674152999	Makyen	logicbpo\.com
@@ -46981,7 +46903,6 @@
 1675242995	Cody Gray	meghnaddesaiacademy\.org
 1675243031	Cody Gray	Meghnad[\W_]*Desai[\W_]*Academy(?!\.org(?<=meghnaddesaiacademy\.org))
 1675244041	Cody Gray	2000westfrancis(?:@(?:gmail|hotmail)\.com)?
-1675244140	Cody Gray	123\.hp\.com
 1675244175	Cody Gray	hp[\W_]*printer
 1675244634	Cody Gray	sinkeryfoam\.com
 1675244683	Cody Gray	sinkery[\W_]*foam(?!\.com(?<=sinkeryfoam\.com))
@@ -47564,7 +47485,6 @@
 1676615442	tripleee	(?-i:^neha afzal$)
 1676615897	tripleee	journalpulmonology\.org
 1676615935	tripleee	ebookwriting\.co\.uk
-1676616422	tripleee	omdeo\.co\.in
 1676617192	cigien	iragoldreview\.com
 1676618494	cigien	bhagwanbabu\.com
 1676618898	Cody Gray	vizzwebsolutions\.com
@@ -47880,7 +47800,6 @@
 1677302334	cigien	amazing-cart\.com
 1677315375	Glorfindel	techgadgetshqq\.blogspot
 1677315835	Ryan M	baristeelrack\.com
-1677326076	Cody Gray	BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
 1677326118	Cody Gray	hashvizard\.blogspot
 1677328432	cigien	qnabuddy\.com
 1677331569	cigien	scentido\.com
@@ -47988,7 +47907,6 @@
 1677583866	tripleee	videotubes\.net
 1677584162	tripleee	perfectear\.app
 1677586849	Glorfindel	ivery\.in
-1677591701	Jeff Schaller	clockify\.me(?<!reports\.api\.clockify\.me)
 1677599926	tripleee	seoveerendra\.blogspot
 1677601715	Makyen	getonlinecricket\.com
 1677609895	tripleee	playback88\.org
@@ -48007,7 +47925,6 @@
 1677662975	tripleee	ballsportsgames\.com
 1677666615	tripleee	thesurvey\.info
 1677666720	tripleee	srilankaholidays\.net
-1677668117	tripleee	(?-i:^Hitesh Patil$)
 1677668202	tripleee	nitsotech\.com
 1677668490	tripleee	antino\.io
 1677670814	tripleee	lancashire[\W_]*+shoulder[\W_]*+clinic(?!\.co\.uk(?<=lancashireshoulderclinic\.co\.uk))(?<!(?-i:^lancashireshoulderclinic$))
@@ -48418,7 +48335,6 @@
 1678795435	Jeff Schaller	systoolsms\.com
 1678799593	Jeff Schaller	portaloffice\.pl
 1678799646	Jeff Schaller	urgentresume\.com
-1678802073	Makyen	show-boxapk\.com
 1678805582	Makyen	denvertowncarservicesdia\.com
 1678807386	Jeff Schaller	thewebhospitality\.com
 1678812105	Mast	kayakstar\.com
@@ -48833,7 +48749,6 @@
 1679661587	tripleee	rskfragrance\.com
 1679662581	tripleee	orthosparkle
 1679666911	Jeff Schaller	(?-i:Zn8ZB498T8Q)(?# youtube)
-1679667228	Makyen	santoshi[\W_]*+hacker(?:@hotmail\.com)?
 1679667268	Makyen	recruiting\.for\.stealth\.startup(?:@gmail\.com)?
 1679667295	Makyen	stealthstartup
 1679667333	Makyen	toturial5c\.net
@@ -49103,7 +49018,6 @@
 1680161540	Ryan M	corpuschristiwaterdamagerestoration\.com
 1680161593	Ryan M	waterdamagecorpus(?# Reddit user)
 1680161897	Ryan M	water[\W_]*+damage[\W_]*+restoration[\W_]*+corpus[\W_]*+christi(?:[\W_]*+tx)?
-1680165168	tripleee	DNS_PROBE_FINISHED_NXDOMAIN
 1680165542	tripleee	(?-i:^Mukesh Kumi$)
 1680165571	tripleee	techywired\.com
 1680165599	tripleee	utahspineandsport\.com
@@ -49184,7 +49098,6 @@
 1680345726	Makyen	skynair\.com
 1680348480	Jeff Schaller	6kiom\.com
 1680348707	Makyen	codepey\.com
-1680352846	VLAZ	adontec\.com
 1680316951	Jesse	ipunplugged\.com
 1680267024	blackgreen	dezyre\.com
 1680362766	Makyen	fcda\.in
@@ -49272,7 +49185,6 @@
 1680594523	tripleee	alldatafeeds[\W_]*+com(?<!alldatafeeds\.com)
 1680594747	tripleee	suratwebdesigner\.com
 1680595012	tripleee	programmer[\W_]*+net(?<!programmer\.net)
-1680595041	tripleee	programmer\.net
 1680596241	tripleee	(?-i:^Jasmine Kurb$)
 1680596860	tripleee	builtinla\.com
 1680596886	tripleee	buypercocet10mgonline2023\.blogspot
@@ -49298,7 +49210,6 @@
 1680671166	tripleee	infowind(?:[\W_]*+technologies)?
 1680671563	tripleee	(?-i:3m22vGc)(?# bit.ly)
 1680671611	tripleee	buyxanaxonline2m\.blogspot
-1680672370	Makyen	pcpatchedup\.com
 1680672405	Makyen	iemmadavis24(?:@gmail\.com)?
 1680675924	tripleee	herboganic\.com
 1680677791	Glorfindel	traditionalgames\.in
@@ -49404,7 +49315,6 @@
 1680938105	Glorfindel	erudite\.in
 1680939998	tripleee	from[\W_]*+ashes[\W_]*+to[\W_]*+restoration
 1680941267	tripleee	(?-i:XhuKWAlS1CE)(?# youtube)
-1680941506	Robert Longson	emdigitizer\.com
 1680951792	Makyen	mastersassignmenthelp\.com
 1680951829	Makyen	adelautodoors\.com
 1680951855	Makyen	adel[\W_]*+auto[\W_]*+doors(?!\.com(?<=adelautodoors\.com))
@@ -49507,7 +49417,6 @@
 1681213431	Glorfindel	dailyringtones\.net
 1681215635	tripleee	brianscrabs\.cm
 1681216455	tripleee	(?-i:^jacksparow$)
-1681216971	Makyen	fern[\W_]*+tree[\W_]*+resort
 1681225880	Jeff Schaller	umj\.ac\.id
 1681226659	Spevacus	routersnetwork\.com
 1681231563	tripleee	appwarstechnologies\.com
@@ -49702,8 +49611,6 @@
 1681749324	Jeff Schaller	englishbos\.com
 1681753455	Jeff Schaller	wis77\.com
 1681754908	Jeff Schaller	aromancelifeinstitute\.com
-1681757052	Makyen	nefartete\.com
-1681757082	Makyen	nefar tete\.
 1681757130	Makyen	evercross[\W_]*+evo8e
 1681764167	Machavity	fromformulatocode\.com
 1681764208	Machavity	malked\.com
@@ -50124,7 +50031,6 @@
 1682957163	Spevacus	emailverifierpro\.app
 1682967217	Jeff Schaller	mindfuljugni\.com
 1682976318	Jesse	alexandriacomputers\.com
-1682974328	Artur Meinild	technoracle\.com
 1682987229	Jeff Schaller	crontabgenerator\.org
 1683005027	tripleee	buzzingz\.com
 1683005069	tripleee	ascendviral\.com
@@ -50202,11 +50108,9 @@
 1683106951	tripleee	tablet[\W_]*+hire(?!\.ae(?<=tablethire\.ae))
 1683107667	tripleee	printhubdigital\.in
 1683108558	Jeff Schaller	meetsinglesusa\.com
-1683110476	Jeff Schaller	blockgum\.com
 1683112453	tripleee	bookairportcab\.com
 1683112768	tripleee	1102style\.vn
 1683114568	tripleee	teamassignmenthelp\.com
-1683115549	tripleee	oneclickitsolution\.com
 1683115968	tripleee	goldenstarsaba\.com
 1683119405	tripleee	(?-i:qfe9xjLp)(?# pastebin)
 1683120874	tripleee	f(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*l(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*a(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*r(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*e(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*o(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*n(?# obfuscated flareon for kemono pantsu)
@@ -50338,7 +50242,6 @@
 1683504522	Makyen	bubblehouble\.com
 1683504273	Nick	9otof\.com
 1683519820	tripleee	elica\.net
-1683520559	tripleee	(?-i:^danial$)
 1683520662	tripleee	(?-i:^viglens$)
 1683521126	tripleee	salon[\W_]*+aya
 1683521260	tripleee	صالون أية
@@ -50497,7 +50400,6 @@
 1683819352	Spevacus	vapestarusa\.com
 1683821934	Makyen	gaimin\.cloud
 1683821958	Makyen	gaimin(?!\.cloud)
-1683824628	Jeff Schaller	techkluster\.com
 1683826208	Nisse Engström	codezenny\.com
 1683826619	Nisse Engström	zonatecno\.site
 1683830789	Makyen	move-files-by-extension-in-linux(?#techkluster.com)
@@ -50531,7 +50433,6 @@
 1683888836	tripleee	bayareaimmigrationservices\.com
 1683888863	tripleee	ulfatufo051export
 1683889180	tripleee	wikigyan\.com
-1683889229	tripleee	ipcsglobal\.com
 1683890688	Jeff Schaller	vatshield\.com
 1683892088	tripleee	thinkaicorp\.com
 1683892147	tripleee	erotic[\W_]*+massage
@@ -50547,9 +50448,6 @@
 1683921572	Makyen	newspaperarchive\.com
 1683923115	Makyen	bangladesh[\W_]*+cricket[\W_]*+news
 1683923137	Makyen	cricketbangladesh\.info
-1683928097	Makyen	lordhackerultimate\.wixsite\.com
-1683928119	Makyen	lord[\W_]*+hacker[\W_]*+ultimate(?!\.wixsite\.com(?<=lordhackerultimate\.wixsite\.com))
-1683928244	Makyen	l[\W_]*+h[\W_]*+ultimate(?:@fastservice\.com)?
 1683934445	Jeff Schaller	ledsino\.store
 1683935629	Jeff Schaller	astrologerliveresult\.com
 1683935916	Makyen	bhajansimran\.com
@@ -50677,7 +50575,6 @@
 1684300812	tripleee	chessplaces\.com
 1684301460	tripleee	interactive[\W_]*+advertising[\W_]*+bureau
 1684302899	tripleee	econdse\.com
-1684302928	tripleee	besthealthtopic\.com
 1684303681	tripleee	prosoccerstore\.co
 1684305669	tripleee	pritimahajan\.in
 1684305820	tripleee	azinovatechnologies\.com
@@ -50697,7 +50594,6 @@
 1684313698	tripleee	shieldroofingonline\.com
 1684314316	tripleee	i8bet\.today
 1684316342	tripleee	(?-i:^Rimsha Victor Gill$)
-1684317762	tripleee	treecampus\.in
 1684317795	tripleee	theascent-group\.com
 1684318093	tripleee	tree[\W_]*campus(?!\.in(?<=treecampus\.in))(?<!(?-i:^Tree Campus$))
 1684318159	tripleee	genoffpotomac\.com
@@ -50780,7 +50676,6 @@
 1684512292	cigien	bincom\.net
 1684512380	cigien	fotc\.com
 1684513300	Makyen	(?:webinar-)?google-workspace-security-audit
-1684513961	Jesse	fai-project\.org
 1684520013	Jesse	szjy-led\.com
 1684521503	Makyen	(?-i:FhKC97P)
 1684525071	Makyen	bans?\.(?:png|jpg|gif)
@@ -50877,7 +50772,6 @@
 1684793365	Jesse	codeguppy\.com
 1684799303	Jeff Schaller	vmex\.vn
 1684824543	Glorfindel	portaloutdoors\.com
-1684826727	cigien	o365reports\.com
 1684827001	cigien	snowfox\.fun
 1684827057	cigien	skygamecn\.com
 1684827145	cigien	exoticwinespirits\.com
@@ -50893,7 +50787,6 @@
 1684831275	Makyen	adsbizs\.com
 1684831298	Makyen	ads247365
 1684830851	Nick	accsmaster\.com
-1684831988	Glorfindel	ffstylishname\.com
 1684832150	cigien	apktome\.com
 1684834050	cigien	paydayhunt\.ca
 1684835376	Makyen	acpriceinpakistan\.com
@@ -51045,7 +50938,6 @@
 1685099888	cigien	framorey\.co\.uk
 1685100315	cigien	ifanca\.org
 1685100348	cigien	rplusuniquesystems\.org
-1685101388	tripleee	ditm[\W_]*+college(?!\.in(?<=ditmcollege\.in))(?<!(?-i:^Ditm College$))
 1685101560	tripleee	creativefuel\.io
 1685101680	tripleee	creative[\W_]*fuel(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?(?!\.io(?<=creativefuel\.io))(?<!(?-i:^creativefuel Pvt\. Ltd\.$))
 1685101725	tripleee	meme[\W_]*+marketing
@@ -51472,7 +51364,6 @@
 1691485001	cigien	dr-benjamin\.com
 1691478956	Jesse	technbrains\.com
 1691485061	cigien	technbrains(?!\.com)
-1691478733	Jesse	venmoappreview\.com
 1691478873	Jesse	(?-i:7YUeyWk9)(?#shout.com)
 1691478934	Jesse	(?-i:UIhaNAls)(?#shout.com)
 1691485464	cigien	studydriver\.com
@@ -51708,7 +51599,6 @@
 1691936064	Makyen	women[\W_]*+s[\W_]*+clinic
 1691946198	Spevacus	fondationetclimat\.org
 1691946222	Spevacus	m\.mamul\.am
-1691958760	Makyen	wizardwebrecovery\.net
 1691959489	Jeff Schaller	cedcommerce\.com
 1691960556	Jeff Schaller	thecheesyanimation\.com
 1691963426	Jeff Schaller	developerpartners\.com
@@ -51846,7 +51736,6 @@
 1692173760	cigien	healthmus\.com
 1692175175	cigien	rokokslot\.cpc-live\.com
 1692175201	cigien	blog\.betplays\.com
-1692175227	cigien	galsat\.com
 1692175765	cigien	punandjokes\.com
 1692175920	cigien	moviestarplus\.xyz
 1692178049	cigien	dharmsaar\.com
@@ -52055,10 +51944,8 @@
 1692505204	Ryan M	gbwhatsappy\.com
 1692512304	Dragonrage	minmin\.co\.kr
 1692513963	Nisse Engström	fluttertutorialhub\.com
-1692517694	Dragonrage	usastream\.xyz
 1692521928	Dragonrage	apktoly\.com
 1692526415	Dragonrage	ucchire\.com
-1692543023	Makyen	UFC[\W_]*+\d{3}
 1692544171	Jeff Schaller	mag-manager\.com
 1692545031	Jeff Schaller	chatsim\.com
 1692546090	Jeff Schaller	idealshare\.net
@@ -52091,7 +51978,6 @@
 1692617476	cigien	burung[\W_]*+walet(?!\.id(?<=burungwalet\.id))
 1692617502	cigien	bankit\.in
 1692617528	cigien	businesswritingservice\.com
-1692621084	cigien	chiku[\W_]*+cab(?!\.com(?<=chikucab\.com))
 1692621952	cigien	gbnine\.com
 1692629433	cigien	mss[\W_]*+data[\W_]*+solutions(?!\.com\.au(?<=mssdatasolutions\.com\.au))
 1692629459	cigien	mssdatasolutions\.com\.au
@@ -52197,10 +52083,8 @@
 1692779453	Dragonrage	ukm-prisma\.upr\.ac\.id
 1692786349	cigien	planetslot99\.live
 1692786575	cigien	netflixparty\.services
-1692786612	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))
 1692786911	cigien	iamvector\.com
 1692786934	cigien	buzzsocialcrew\.com
-1692786995	cigien	bapehoodie\.live
 1692787377	cigien	healthcare24x7hours\.blogspot
 1692787423	cigien	brisbanebrakeandclutch\.com\.au
 1692790729	cigien	teztecch\.com
@@ -52273,7 +52157,6 @@
 1692886887	cigien	movieswatch\.pw
 1692886920	cigien	myflixer\.ist
 1692899631	Mast	jwvdev\.com
-1692902297	Jeff Schaller	newtownspares\.com
 1692903975	cigien	iranbet\.top
 1692904141	cigien	gineshirt\.com
 1692904295	cigien	it\.surveymonkey\.com
@@ -52321,7 +52204,6 @@
 1692978908	Mast	theflowersdelivery\.com
 1692990332	Jeff Schaller	qiratquranonline\.com
 1692992068	Makyen	dataservicesolutions\.com
-1692994764	Ryan M	limeup\.io
 1692996193	Ryan M	dmarketic\.com
 1692996486	Ryan M	ISP ?mate
 1693001588	Jeff Schaller	sellelectricalsurplus\.com
@@ -52336,8 +52218,6 @@
 1693037191	Nick	trustpva\.com
 1693039240	Dragonrage	estrellatechnologies\.com
 1693040492	Dragonrage	jyotishshastraonline\.com
-1693072046	Mast	khelraja\.com
-1693090436	Makyen	great[\W_]*+idusaku[\W_]*+brotherhood
 1693090550	Makyen	27681786737(?#wa.me)
 1693094487	Jeff Schaller	radiantripples\.wordpress\.com
 1693123599	Dragonrage	brickken\.com
@@ -52356,7 +52236,6 @@
 1693132598	cigien	satoshicountry\.org
 1693132662	cigien	novo\.academiadoflutter\.com\.br
 1693132925	cigien	hockeyworlds\.com
-1693132994	cigien	linkedai\.co
 1693152368	Makyen	alat[\W_]*+bantu[\W_]*+sex
 1693157412	Jeff Schaller	theworldcove\.com
 1693185783	Makyen	stevemedsstore\.com
@@ -52542,7 +52421,6 @@
 1693480377	cigien	teknoppy(?!\.com)
 1693480982	Ryan M	amanshrbiz
 1693482198	cigien	pmaspire\.com
-1693483158	cigien	win-logon\.com
 1693484066	Jeff Schaller	softwaretechit\.com
 1693484092	Jeff Schaller	softwaretechit\.medium\.com
 1693501955	Mast	gladiatorsmoving\.com
@@ -52603,7 +52481,6 @@
 1693642355	Dragonrage	revancedapp\.org
 1693649180	Dragonrage	happytraveltips\.in
 1693649260	Dragonrage	hostwizly\.com
-1693650831	Dragonrage	gamma\.app
 1693650854	Dragonrage	withjoy\.com
 1693651971	Mast	eztap\.in
 1693652711	Jeff Schaller	poultrycartons\.com
@@ -52612,3 +52489,3271 @@
 1693659488	Machavity	niayeshbeautyclinic\.com
 1693667798	Makyen	jackwoody962(?:@gmail\.com)?
 1693668404	cocomac	katonic\.ai
+1693672863	cocomac	longboardinsider\.com
+1693678324	Jeff Schaller	techytechtop\.com
+1693678359	Jeff Schaller	itsnewsbefore\.com
+1693522589	user16217248	CYBERTRACE
+1693690024	cocomac	dpbosslife\.com
+1693692674	cocomac	marwa-doctor\.com
+1693695203	Makyen	traditional-herbalist-healer\.webnode\.com
+1693695233	Makyen	baba[\W_]*+joseph
+1693695254	Makyen	babajoseph473(?:@gmail\.com)?
+1693696801	Makyen	livestreamsnow\.xyz
+1693696836	Makyen	wwe[\W_]*+payback(?:[\W_]*+(?:2023|live|broadcast|online|stream|free|tonight|\d++|[\da-f]{5,}+)s?)*
+1693714633	Ryan M	luna\Wbella
+1693714710	Makyen	infousglobalshop(?:@gmail\.com)?
+1693714747	Makyen	makatijob01
+1693714789	Makyen	zizihr89
+1693732498	Jeff Schaller	tajmahalgemsworld\.com
+1693750405	Jeff Schaller	stsqa\.com
+1693750516	Jeff Schaller	digitalparm\.in
+1693752581	Henry Ecker	homesweetlinens\.com
+1693764358	Makyen	linkrokokbet4d\.com
+1693764381	Makyen	behummus\.com
+1693764787	cocomac	businessbatao\.com
+1693766306	Makyen	business[\W_]*+batao(?!\.com(?<=businessbatao\.com))
+1693768870	Gugu72	ximi\.ac\.in
+1693777151	Jeff Schaller	holisticint\.com
+1693823923	Jeff Schaller	fieldingslocal\.com
+1693824029	Jeff Schaller	bitsoft360-review\.com
+1693824096	Jeff Schaller	zthosting\.com
+1693812029	Nick	acquistacocaina\.com
+1693811648	Nick	channelbecho\.com
+1693827240	Jeff Schaller	northrosetechnologies\.com
+1693828243	cigien	north[\W_]*+rose[\W_]*+technologies(?!\.com(?<=northrosetechnologies\.com))
+1693829866	Jeff Schaller	anpeet\.com
+1693830138	cigien	jusst4you\.com
+1693834310	Jeff Schaller	unbank\.com
+1693834837	cigien	unbank(?!\.com)
+1693834875	cigien	(?-i:FZ7iyBBC_yg)(?#youtube)
+1693835526	cigien	allee\.store
+1693835550	cigien	snaptik\.mom
+1693837292	cigien	craftfactoryoutlet\.co\.uk
+1693837330	cigien	acustomboxes\.com
+1693838687	Makyen	indiancook\.in
+1693838935	Makyen	selectbiography\.in
+1693838960	VLAZ	oxycodontiawan\.com
+1693841397	Jeff Schaller	essaysrescue\.com
+1693842025	Makyen	tunedgoon(?:@gmail\.com)?
+1693868410	Makyen	naga169-1\.com
+1693868432	Makyen	abhyasayogacenter\.com
+1693868453	Makyen	heartofsonomavalley\.com
+1693868461	Makyen	naga169\.bet
+1693868495	Makyen	janjimaxwin\.net
+1693868717	Makyen	start-b\.com\.tr
+1693878282	Nick	cialisphm\.net
+1693883869	Dragonrage	ericcointernational\.com
+1693898364	Dragonrage	mtss-al-manshuriyah\.sch\.id
+1693899471	cigien	rayups\.com
+1693899600	cigien	bitsoft360(?!-review\.com)
+1693899666	cigien	pornlive\.eu
+1693899807	cigien	storysaverhd\.io
+1693899832	cigien	instazoom
+1693900087	cigien	(?-i:7fGPlDQTvLQ)(?#youtube)
+1693901435	Dragonrage	slotpgsoft\.sgp1\.cdn\.digitaloceanspaces\.com
+1693901794	Dragonrage	sonbetongrep\.com
+1693901907	Dragonrage	tirupatigraphite\.co\.uk
+1693902012	cigien	codiveo\.com
+1693902055	cigien	codiveo(?!\.com)
+1693902210	cigien	gethexcolor\.com
+1693903273	cigien	texmeroe\.com
+1693903334	cigien	zthosting(?!\.com)
+1693903429	cigien	vikramas\.com
+1693903658	cigien	fab-defenseus\.com
+1693903692	cigien	qtree[\W_]*+technologies(?!\.in(?<=qtreetechnologies\.in))
+1693903803	cigien	onlinefitnessexercise\.com
+1693904333	cigien	(?-i:LyVAHb8fVvc)(?#youtube)
+1693904355	cigien	aixtor\.com
+1693904421	cigien	progmatech\.com
+1693904528	cigien	qhrentacar\.com
+1693904553	cigien	qh[\W_]*+rent[\W_]*+a[\W_]*+car(?!\.com(?<=qhrentacar\.com))
+1693904588	cigien	restoslot4d
+1693905941	cigien	speedtest-copel\.net\.br
+1693906023	cigien	24sevenhc\.com
+1693906087	cigien	nicotine-framework\.com
+1693906466	cigien	smallseotools\.co\.uk
+1693907178	cigien	storiessaver\.org
+1693907245	cigien	infonewsbd\.com
+1693907277	cigien	rohanpurit\.com
+1693911559	Jeff Schaller	yourrxpills\.net
+1693912817	Jeff Schaller	doyouseewhatiseestudio\.com
+1693912933	Jeff Schaller	alltopicinsight\.blogspot
+1693912961	Jeff Schaller	colorhub\.art
+1693913849	Jeff Schaller	prowp\.org
+1693913878	Jeff Schaller	pbsc\.com
+1693914981	Ryan M	nytcrossword\.us
+1693915162	Jeff Schaller	PETELFIE
+1693916874	Ryan M	bestshirtsstore\.com
+1693916914	Jeff Schaller	perfumedubai\.com
+1693917760	Jeff Schaller	tripgoto\.com
+1693917789	Jeff Schaller	atascocitatxtreeservice\.com
+1693917921	Jeff Schaller	saihospitalchengalpattu\.com
+1693918851	Makyen	your[\W_]*+rx[\W_]*+pills(?!\.net(?<=yourrxpills\.net))
+1693922817	cigien	shraddha[\W_]*+shree[\W_]*+gems(?!\.com(?<=shraddhashreegems\.com))
+1693923199	cigien	(?-i:arliputraa)(?#github)
+1693923232	cigien	perthbuyersagents\.com\.au
+1693923264	cigien	perth[\W_]*+buyers[\W_]*+agents(?!\.com\.au(?<=perthbuyersagents\.com\.au))
+1693923307	cigien	appsinfo\.pro
+1693932851	Jeff Schaller	thexpressinfo\.com
+1693934791	Jeff Schaller	kohlsfeedback\.page
+1693940429	Makyen	thexpressinfo(?!\.com)
+1693942144	Jeff Schaller	teamradioshack\.com
+1693945963	Jeff Schaller	MegaBaiMiami
+1693948404	Jeff Schaller	alahood\.ae
+1693950294	Makyen	babawanjimb
+1693950318	Makyen	voodoo[\W_]*+revenge[\W_]*+spells
+1693961101	Ethan	bulkpvaservices\.com
+1693974955	Dragonrage	meydanfz\.in
+1693979289	Dragonrage	blogstudiio\.com
+1693979316	Dragonrage	s2vmarinelife\.com
+1693980232	Dragonrage	sayaelevatorindustries\.com
+1693981043	Dragonrage	toolscarnival\.com
+1693983775	VLAZ	nshizuma(?:@icloud\.com)
+1693983375	VLAZ	tecswan\.com
+1693985468	cigien	viagcial\.com
+1693983198	VLAZ	qedge\.co
+1693986265	VLAZ	ichanfeng901
+1693986270	VLAZ	kas024\.bb906\.cc
+1693987071	cigien	dragonballlegendsapk\.com
+1693991018	cigien	luxmavens\.com
+1693991043	cigien	tutorialsfreak\.com
+1693991068	cigien	tutorials[\W_]*+freak(?!\.com(?<=tutorialsfreak\.com))
+1693994174	Jeff Schaller	forbestalks\.com
+1693983203	VLAZ	linkedin\.com\/company\/33247506
+1693998199	VLAZ	tansukhherbals\.com
+1693998670	Jeff Schaller	cryptobusinessworld\.com
+1694002977	Jeff Schaller	sisgain\.ae
+1694003724	Jeff Schaller	certsgo\.com
+1694010007	Jeff Schaller	mrdottbook\.blogspot
+1694011924	Jeff Schaller	overboost\.pro
+1694012306	Jeff Schaller	tracking\.me
+1694016439	cigien	omsalessolution\.com
+1694016531	cigien	castleapk\.net
+1694017263	cigien	aifinder\.in
+1694020934	Jeff Schaller	hitech-services\.xyz
+1694021458	Jeff Schaller	youlearnwithme\.com
+1694021867	Jesse	watchvid\.fun
+1694021829	Jesse	pulwamastatus\.blogspot
+1694023218	cigien	thesafeairlines\.com
+1694030673	Jeff Schaller	pipeanddrapeusa\.com
+1694048378	Spevacus	bingx\.com
+1694048637	Makyen	veryfasthosting\.co\.uk
+1694065312	Dragonrage	royalgigoloclubs\.in
+1694065453	VLAZ	enablex\.io
+1694066414	Dragonrage	kombai\.com
+1694067646	Dragonrage	asiapacific\.edu
+1694068877	Dragonrage	deccanherald\.com
+1694069547	Dragonrage	tonosystems\.com
+1694070975	Dragonrage	nbdym\.com
+1694071930	Dragonrage	alshouroukajman\.com
+1694078706	Dragonrage	arrowhitech\.com
+1694078985	Dragonrage	zingmind\.com
+1694076440	VLAZ	laxsson\.com
+1694086692	Jeff Schaller	digitalmarketing1559\.com
+1694086931	cigien	denovoindia\.com
+1694090756	cigien	pixelfy\.me
+1694091220	cigien	wahid[\W_]*+group(?!\.co(?<=wahidgroup\.co))
+1694097568	Jeff Schaller	ꜱʜᴀᴅᴏᴡᴋᴜʀᴅ1
+1694097662	Jeff Schaller	zinbeauty\.com
+1694098106	VLAZ	Shadowkurd1
+1694099083	cigien	xinjiada-ic\.com
+1694099601	cigien	anyonconsulting\.com
+1694108816	Jeff Schaller	kingfishertechtips\.in
+1694111552	Jeff Schaller	cubicalsolution\.com
+1694115341	Makyen	legit\.pk
+1694131031	Jesse	fullmatchreplay\.co
+1694131528	Makyen	fullmatchreplay(?!\.co)
+1694156729	Nick	embeddedhash\.in
+1694157908	cigien	tonosdellamadacanciones\.com
+1694157934	cigien	rakeshrajdevrajkot\.com
+1694157979	cigien	sonicmaniaplusapk\.com
+1694158031	cigien	(?-i:3Z26Bx0)(?#bit.ly)
+1694158611	cigien	spottersecurity\.com
+1694158854	Dragonrage	bookcoverdesign\.uk
+1694158901	VLAZ	(?-i:3LbeYAO)(?#bit.ly)
+1694159283	cigien	tossinpizza\.com
+1694159316	cigien	tossin[\W_]*+pizza(?!\.com(?<=tossinpizza\.com))
+1694162275	Nick	mrunix\.net
+1694165081	cigien	vikaskumar30\.blogspot
+1694165220	cigien	alexandernaumenko\.substack\.com
+1694166877	cigien	coupontive\.com
+1694166910	cigien	coupontive(?!\.com)
+1694167181	cigien	visbody\.com
+1694168228	Dragonrage	vaidic\.ca
+1694168742	Jeff Schaller	aamod\.in
+1694169048	Jeff Schaller	greenremodelinghome\.com
+1694169712	Jeff Schaller	\d{4} World Battery & Energy Storage Industry Expo
+1694170843	Can O' Spam	technomax\.co\.in
+1694171224	Jeff Schaller	smartlivingandtechnology\.com
+1694172450	Jeff Schaller	lifestyle-health-fitness\.com
+1694172978	Can O' Spam	shreedhi\.in
+1694179021	cigien	9animes\.lv
+1694179135	cigien	9[\W_]*+animes?+(?!\.lv(?<=9animes\.lv))
+1694179589	Jeff Schaller	lazywriter\.xyz
+1694179655	cigien	resizepng\.com
+1694179919	Jeff Schaller	dev-shahin2322\.pantheonsite\.io
+1694191997	Makyen	alfredo-bar\.netlify\.app
+1694192020	Makyen	(?-i:Bootstrap02)(?#github.com)
+1694192043	Makyen	louisjoseph131(?:@gmail\.com)?
+1694191727	VLAZ	(?-i:upCBJBIRo_0)(?#youtube)
+1694196638	Makyen	r12cloudhosting\.com
+1694196661	Makyen	r12cloudhosting(?!\.com)
+1694197091	Makyen	viva[\W_]*+prime[\W_]*+enhance[\W_]*+canada(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
+1694207367	Makyen	rabbittranspoland\.com
+1694207390	Makyen	rabbit[\W_]*+trans[\W_]*+poland(?!\.com(?<=rabbittranspoland\.com))
+1694219848	Jeff Schaller	welookups\.com
+1694220005	Jeff Schaller	apponfly\.com
+1694221707	Jeff Schaller	ghostrifles\.com/\W
+1694240828	Dragonrage	lottery24\.vip
+1694241770	Dragonrage	metadrob\.com
+1694241833	Nisse Engström	drywallcentral\.com
+1694242507	Nisse Engström	cam-do\.com
+1694244676	forest	draravindsivf\.com
+1694246983	forest	myhomestore\.pk
+1694250312	Dragonrage	ezrabrand\.com
+1694256021	Jeff Schaller	tip4d\.ink
+1694256053	Jeff Schaller	tip4dbagus\.com
+1694256249	Jeff Schaller	tip4d\.xyz
+1694256341	Jeff Schaller	tip4d-linkalternatif\.blogspot
+1694263962	Makyen	linktip4d\.co
+1694264050	Makyen	tip4d(?!-linkalternatif\.blogspot)(?!\.xyz)(?!\.powerappsportals\.com)
+1694264071	Makyen	tip4d\.powerappsportals\.com
+1694278931	Mast	fakham\.com
+1694280676	Makyen	chartreusediy\.com
+1694297342	Ryan M	ricepuretest\.com
+1694325684	Nisse Engström	sharrgh\.com
+1694347773	Jeff Schaller	jacketspace\.com
+1694350260	Jeff Schaller	mycourseshopify
+1694350314	Jeff Schaller	myofferrentalassistance
+1694353562	Jeff Schaller	bestwoodrouterguru\.com
+1694360755	Makyen	technicalpandas\.blogspot
+1694360786	Makyen	technical[\W_]*+panda(?!s\.blogspot(?<=technicalpandas\.blogspot))s?
+1694361982	cigien	(?:mister[\W_]*+)?olympia[\W_]*+shop
+1694362345	cigien	jewsandpolesdatabase\.org
+1694308403	Jesse	felbdogg\.com
+1694362877	cigien	avatar72407\.monday\.com
+1694362917	cigien	(?-i:LGIJrXlY1AI)(?#youtube)
+1694363150	Makyen	shambhavi@superrealapp\.com
+1694365024	Jeff Schaller	(?-i:nWqgu\.png)
+1694365215	Jeff Schaller	techinfoplanet\.com
+1694365259	cigien	apkproper\.com
+1694366440	cigien	digmarks\.in
+1694366713	cigien	pikashowapkhd\.com
+1694366788	cigien	digicrowd[\W_]*+solution(?!\.com(?<=digicrowdsolution\.com))
+1694366907	cigien	arsoporte\.com
+1694371164	Makyen	buy[\W_]*+trustpilot[\W_]*+reviews
+1694371341	Makyen	poolsapk\.com
+1694383952	Nisse Engström	stickwarapk\.download
+1694390956	Makyen	jakkapob8504(?:@gmail\.com)?
+1694417135	cigien	apkrosh\.com
+1694417160	cigien	movierulzzapp\.com
+1694418435	cigien	digitize4life\.com
+1694421801	cigien	words[\W_]*+doctorate(?!\.com(?<=wordsdoctorate\.com))
+1694426528	VLAZ	anumati\.co\.in
+1694426430	VLAZ	flutterviz\.com
+1694426285	VLAZ	indiabizforsale\.com
+1694426207	VLAZ	invoidea\.com
+1694426147	VLAZ	delhi\.dental
+1694425236	VLAZ	naturallandhairy\.com
+1694429406	cigien	gvtsalt\.com
+1694429776	cigien	india[\W_]*+biz[\W_]*+for[\W_]*+sale(?!\.com(?<=indiabizforsale\.com))
+1694430784	cigien	ezeeonline\.in
+1694431164	cigien	commercialpaintingservices\.com
+1694431187	cigien	commercial[\W_]*+painting[\W_]*+services(?!\.com(?<=commercialpaintingservices\.com))
+1694434223	cigien	dekarestorasyon\.com
+1694434256	cigien	deka[\W_]*+restorasyon(?!\.com(?<=dekarestorasyon\.com))
+1694434285	cigien	flightaura\.com
+1694435986	Jeff Schaller	taptap\.mom
+1694437380	cigien	notesapplicationmigration\.com
+1694438684	Jeff Schaller	smmaccount\.com
+1694438803	Jeff Schaller	lajwaabculinaryart\.com
+1694440240	Jeff Schaller	lahore69\.online
+1694442374	Can O' Spam	themoviesz\.com
+1694434537	Nick	leaderscoupon\.com
+1694447383	Makyen	doctour\.eu
+1694447421	Makyen	indiatopbest\.in
+1694451144	Mast	cal\.reynolds(?:@plot\.ly)?
+1694452620	Jesse	politicsrights\.com
+1694460407	Jeff Schaller	goldirainvestmentguy\.com
+1694462746	Makyen	gold[\W_]*+ira[\W_]*+investment[\W_]*+guy(?!\.com(?<=goldirainvestmentguy\.com))
+1694499772	Ryan M	IntelleWings(?!\.com)
+1694502893	Ryan M	ambanibook-id\.com
+1694502932	Ryan M	mybetex
+1694502966	Ryan M	ambanibook(?!-id\.com)
+1694503586	Ryan M	werbooz\.com
+1694503791	Ryan M	Werbooz Private Limited
+1694504353	cigien	alabamaacn\.org
+1694488636	Nick	mobilevideoguard\.com
+1694504860	cigien	mobile[\W_]*+video[\W_]*+guard(?!\.com(?<=mobilevideoguard\.com))
+1694474543	Ian Campbell	rapidradiocodes\.co\.uk
+1694505029	Dragonrage	amiskinhairclinic\.com
+1694496022	VLAZ	teamsli\.de
+1694506055	Nick	purpleark\.in
+1694504895	VLAZ	aithagoni\.com
+1694506774	cigien	wdipl\.com
+1694507023	Ryan M	pythondex\.com
+1694507408	cigien	kokania\.com
+1694507675	cigien	sostoto
+1694508639	Nick	intop-metal\.com
+1694508876	Dragonrage	zasst\.com
+1694508978	Ryan M	mdhasibbabu
+1694509550	Nick	tattoovillas\.com
+1694510747	Jeff Schaller	cemeterymonumentonline\.com
+1694511640	Jeff Schaller	favegrills\.com
+1694511871	Jeff Schaller	mrgamestic\.blogspot
+1694513293	Jeff Schaller	training\.javatpoint\.com
+1694514507	Jeff Schaller	genciletisim\.com
+1694516435	Ryan M	roadtoheaven\.infinityfreeapp\.com
+1694516708	Jeff Schaller	thebulldog\.law
+1694516784	Jeff Schaller	BlockchainAppsDeveloper
+1694516809	Jeff Schaller	abtosoftware\.com
+1694516923	Jeff Schaller	farstudio\.com
+1694516956	Jeff Schaller	rabha\.com
+1694518068	Jeff Schaller	auctiondaily\.com
+1694518629	Jeff Schaller	instrumentscare\.com
+1694519094	Jeff Schaller	pmb\.akperyappi\.ac\.id
+1694522310	Makyen	senjata[\W_]*+cuaca
+1694523236	Jeff Schaller	quiickwork\.com
+1694512727	VLAZ	(?-i:9wzHsbGf)(?#cutt.ly)
+1694524907	Jeff Schaller	bkgraphy\.co\.in
+1694524961	Makyen	bk[\W_]*+graphy(?!\.co\.in(?<=bkgraphy\.co\.in))
+1694528816	Can O' Spam	panchaaayurveda\.com
+1694530273	Jeff Schaller	nursingbooster\.com
+1694530836	Jeff Schaller	cobolish\.com
+1694530983	Jeff Schaller	muhammadzeeshan03
+1694531147	Jeff Schaller	real\.us
+1694531863	Makyen	mustakahm\.website3\.me
+1694535067	Jeff Schaller	animation-inc\.com
+1694540136	Jeff Schaller	bestusaonline\.com
+1694540309	Jeff Schaller	Bestonline57
+1694540347	Jeff Schaller	bestusaonline4
+1694565036	Nick	101info\.ru
+1694496180	VLAZ	llinuxsolutions(?:@gmail\.com)?
+1694522232	Can O' Spam	projectsforeveryone\.com
+1694588265	Dragonrage	trickymindsolution\.com
+1694588649	Dragonrage	Nativefoodstore\.com
+1694588707	Dragonrage	luminlash\.com
+1694588736	Dragonrage	minerasic\.com
+1694588959	Dragonrage	dasmastersolution\.com
+1694591112	Nick	gstcalculatorau\.com
+1694591787	Dragonrage	drsunalidentalsolutions\.com
+1694572615	Nick	benaughty\.com
+1694586404	VLAZ	American Institute in Taiwan(?: \(AIT\))?
+1694592656	VLAZ	myastron\.com
+1694598924	Dragonrage	codestoresolutions\.com
+1694599017	Dragonrage	fatweb\.co\.nz
+1694599051	Dragonrage	cotginanalytics\.in
+1694599438	Jeff Schaller	drbhartipathlabs\.com
+1694606035	Jeff Schaller	panamamissionindia\.com
+1694608805	Jeff Schaller	learngpt\.today
+1694608830	Jeff Schaller	shield\.com
+1694608937	cigien	qrarproperties\.com
+1694622533	cigien	hilaryjoycouture\.com
+1694624076	Jeff Schaller	cotasks\.com
+1694626455	Jeff Schaller	rami-desilva\.medium\.com
+1694627116	cigien	useapi\.net
+1694627194	cigien	go-sponge\.com
+1694603627	VLAZ	altuscontractors\.co\.uk
+1694627591	cigien	fatweb(?!\.co\.nz)
+1694627878	cigien	cotgin[\W_]*+analytics(?!\.in(?<=cotginanalytics\.in))
+1694628129	cigien	kids[\W_]*+dentistry
+1694628166	cigien	d(?:octo)?r[\W_]*+sunali
+1694628213	cigien	stopwatt
+1694628341	cigien	technquest\.in
+1694628374	cigien	technquest(?!\.in)
+1694628406	cigien	tricky[\W_]*+mind[\W_]*+solution(?!\.com(?<=trickymindsolution\.com))
+1694629470	cigien	autopax\.net
+1694629494	cigien	autopax(?!\.net)
+1694630069	cigien	icrackeado\.com
+1694630815	cigien	nooglia\.com
+1694634758	Makyen	sultan168\.vip
+1694639224	Makyen	werbooz(?!\.com)
+1694640228	Dragonrage	lagfast\.com
+1694641956	Dragonrage	shaffak\.com
+1694654570	Makyen	(?-i:fateh_tipu)(?#fiverr.com)
+1694661606	Spevacus	volgaplastic\.com
+1694671812	Dragonrage	samaritan-technologies\.com
+1694673913	Dragonrage	mkube\.com\.au
+1694675701	Dragonrage	snetzweb\.com
+1694681301	cigien	okbetsports\.com
+1694687159	Jeff Schaller	lavorgtechnologies\.de
+1694687211	Jeff Schaller	esaal\.me
+1694690988	cigien	enablex(?!\.io)
+1694693987	Jeff Schaller	xyz\.in
+1694697713	Makyen	snetzweb(?!\.com(?<=snetzweb\.com))(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
+1694699978	Jeff Schaller	mobizealapps\.com
+1694709074	Makyen	usmoneymonk\.com
+1694709100	Makyen	us[\W_]*+money[\W_]*+monk(?!\.com(?<=usmoneymonk\.com))
+1694709153	Makyen	djobzy(?!\.com)
+1694712217	cigien	apkloklok\.com
+1694718579	Makyen	(?:great[\W_]*+)?idusaku(?:[\W_]*+(?:brotherhood|temple))?
+1694724053	Jesse	consultleopard\.com
+1694728556	Jeff Schaller	blockonomi\.com
+1694729133	Jeff Schaller	dataddo\.com
+1694756382	Dragonrage	fanzillajackets\.com
+1694763190	cigien	citdm2310\.com
+1694763356	cigien	fanzilla(?:[\W_]*+jackets)?+(?!\.com(?<=fanzillajackets\.com))
+1694763753	cigien	journals\.telkomuniversity\.ac\.id
+1694765244	Dragonrage	influence\.co
+1694766060	cigien	bloggingheros\.com
+1694766130	cigien	zingmind(?!\.com)
+1694766328	cigien	qiaobao\.com
+1694766604	cigien	ag[\W_]*+consulting(?!\.in(?<=agconsulting\.in))
+1694766711	cigien	shokrino\.com
+1694766824	cigien	easternpainters\.co\.nz
+1694766904	cigien	blog\.eigyo\.co\.jp
+1694767053	cigien	shinearmor\.com
+1694767088	cigien	whidegroup\.com
+1694767119	cigien	buggydesert\.com
+1694767191	cigien	shaffak(?!\.com)
+1694770509	cigien	mechanicaltalks\.wiki
+1694773447	Jeff Schaller	gleantap\.com
+1694774887	cigien	peacockparty\.net
+1694775271	cigien	jamper\.online
+1694776087	cigien	ukclippingpath\.com
+1694776122	cigien	echotherminc\.com
+1694777771	Jeff Schaller	cancellationflights\.com
+1694780146	Can O' Spam	mrdewdab\.com
+1694782550	Jeff Schaller	routersupport247\.com
+1694782785	Jeff Schaller	nowrapper\.vercel\.app
+1694783866	Makyen	investmentscamsfighters(?:@gmail\.com)?
+1694790717	Jesse	triumphministries\.org
+1694793960	Jeff Schaller	blackpeak\.ca
+1694796684	Jeff Schaller	gsmasifkhan\.com
+1694837664	Makyen	mikeslavinauthor\.com
+1694837685	Makyen	open[\W_]*+appsec(?!\.io(?<=openappsec\.io))
+1694815363	Jesse	openappsec\.io
+1694838967	Dragonrage	rozagas\.com
+1694838994	Dragonrage	gbwhts\.net
+1694843382	Dragonrage	escortcallgirlservice\.com
+1694843443	Dragonrage	maishacare\.com
+1694847587	Nick	icecasino-ar\.com
+1694851358	Nick	theleathersensations\.com
+1694862397	Jeff Schaller	vestel\.co\.in
+1694862424	Jeff Schaller	trustlam\.com
+1694862466	Jeff Schaller	articlejunkie\.in
+1694863118	Jeff Schaller	healthystripe\.com
+1694863258	Jeff Schaller	fatnfix\.com
+1694864704	Jeff Schaller	bitsdujour\.com
+1694864763	Jeff Schaller	protocols\.io
+1694869487	Jeff Schaller	rootzeynusx
+1694869516	Jeff Schaller	ddosserviceroot
+1694869571	Jeff Schaller	botnetserviceroot
+1694869639	Jeff Schaller	blueapplepackaging\.com
+1694872400	Jeff Schaller	piotex\.in
+1694873425	Jeff Schaller	pikashowpro\.pro
+1694875792	Jeff Schaller	N5FHWMQO4AJJC1
+1694885503	Jeff Schaller	sbeexpo\.com
+1694879157	Jesse	remotelabeler\.com
+1694889798	cigien	codesigningsolution\.com
+1694889834	cigien	podcasters\.spotify\.com
+1694890203	cigien	piotex(?!\.in)
+1694890466	cigien	vestel[\W_]*+telecom[\W_]*+services
+1694890513	cigien	corehardware\.co\.in
+1694890664	cigien	blog\.vcclhosting\.com
+1694891005	cigien	primecryptomarket(?:\.[\W_]*+c[\W_]*+o[\W_]*+m)?
+1694891203	cigien	the[\W_]*+leather[\W_]*+sensations(?!\.com(?<=theleathersensations\.com))
+1694891370	cigien	home\.blog(?<!pushpaganan\.home\.blog)
+1694891393	cigien	pushpaganan\.home\.blog
+1694891481	cigien	onlinewebsitecopier\.com
+1694891552	cigien	(?-i:H9MBtt80PNE)(?#youtube)
+1694891651	cigien	roza[\W_]*+gas(?!\.com(?<=rozagas\.com))
+1694891943	cigien	hi\.tech(?:recovery01)?
+1694892267	cigien	(?-i:Ee6gj0YmpMM)(?#youtu.be)
+1694892340	cigien	apkvest\.com
+1694929770	Nick	jockeytmc\.com
+1694932390	rene	govtsjobsnews\.com
+1694941748	VLAZ	premiumcards\.net
+1694952405	Nick	seoinsightspro\.000\.pe
+1694955204	Nick	desinerz\.com
+1694966773	Jesse	goaplans\.com
+1694975384	cigien	fifaapk\.com
+1694975598	cigien	hdmovieshouse\.com
+1694976030	cigien	gokutoapk\.top
+1694977830	cigien	quiclekha\.com
+1694978032	cigien	eduhub21(?!\.com)
+1694978279	cigien	luadec\.metaworm\.site
+1694978854	cigien	evidencebasedacupuncture\.org
+1694979040	cigien	pkv(?![\W_]*+games)
+1694981369	Makyen	hd[\W_]*+movies[\W_]*+house(?!\.com(?<=hdmovieshouse\.com))
+1694984484	cigien	javadzone\.com
+1694984969	Makyen	javadzone(?!\.com)
+1695007012	Jesse	chuxueyun\.com
+1695019685	Dragonrage	phone\.email
+1695019705	Dragonrage	cn-susmed\.com
+1695019864	Dragonrage	appinnovix\.com
+1695019994	Dragonrage	suara77\.xn--6frz82g
+1695022469	cigien	amyl[\W_]*+guard
+1695022841	cigien	appinnovix(?!\.com)
+1695023227	cigien	wpminds\.com
+1695029170	cigien	hasacon\.com
+1695029202	cigien	hasacon\.vn
+1695029226	cigien	utschool\.edu\.vn
+1695032964	Jeff Schaller	ufarich777\.com
+1695034194	cigien	metalartstatue\.com
+1695034235	cigien	techsbucket\.com
+1695037000	cigien	medslike(?!\.com)
+1695037420	cigien	umzugsunternehmen-meyer\.de
+1695037518	Nick	hillandfriends\.com
+1695044670	cigien	conceptinero\.com
+1695044693	cigien	conceptinero(?!\.com)
+1695045500	cigien	xoso\.love
+1695046124	Jesse	komunitaspejuanggacor\.com
+1695060346	Jeff Schaller	isourcegrp\.com
+1695063978	Jeff Schaller	delsbricks\.com
+1695065161	cigien	blog\.stackademic\.com
+1695065690	cigien	validwords\.com
+1695065721	cigien	pokemoninfinitefusioncalculator\.net
+1695067196	cigien	visaslotbooking0
+1695074193	Jesse	findcareers\.site
+1695078908	Makyen	5dc41d5b6d60d\.site123\.me
+1695078940	Makyen	goodhealthherbalfoundation1(?:@gmail\.com)?
+1695078982	Makyen	realfakeidking\.com
+1695079999	Makyen	mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
+1695082310	Jesse	privateequity\.dev
+1695085860	Makyen	sweetwinsprizes\.info
+1695091266	Makyen	propelaxe\.com
+1695091401	Makyen	melanjutkan\.com
+1695093773	Makyen	(?-i:idfofficial)(?#t.me)
+1695095762	Makyen	my[\W_]*+education[\W_]*+wire(?!\.com(?<=myeducationwire\.com))
+1695108371	cigien	asthaayurveda\.in
+1695114118	cigien	brandzee22\.com
+1695114154	cigien	connect-4\.io
+1695114188	cigien	techexpert\.tips
+1695114214	cigien	(?-i:gikn1)(?#shorturl)
+1695114682	cigien	valuesystemspos\.com
+1695114984	cigien	commercemarketplace\.adobe\.com
+1695115243	Nick	pcofficial\.com
+1695115707	cigien	ivfsurrogacy\.com
+1695119414	Jeff Schaller	livehosting\.xyz
+1695119694	Can O' Spam	kisankalyanfoundation\.com
+1695121601	Can O' Spam	naughtylahore\.club
+1695123373	Can O' Spam	leadindia\.law
+1695123083	Can O' Spam	webtwomax\.com
+1695124612	Can O' Spam	CryptoTradeBot\.7z
+1695125400	Jeff Schaller	ercebelecoglu\.com\.tr
+1695127176	Jeff Schaller	Coinhunters
+1695134004	Jeff Schaller	1baiser\.com
+1695137006	Jesse	shahnishant\.com\.np
+1695134768	Can O' Spam	2hatslogic\.com
+1695131316	Can O' Spam	bluebookestimators\.com
+1695140088	Jeff Schaller	Soonkeys\.com
+1695140303	cigien	luebeck-umzuege\.de
+1695140493	cigien	capcuttemplates\.shop
+1695143147	cigien	(?-i:3PFMt0K)(?#bit.ly)
+1695144037	cigien	zremax\.com
+1695144141	cigien	apoorv-pandey\.medium\.com
+1695149745	Jesse	(?-i:3l1JCeVQGPQ)(?#youtu.be)
+1695158182	Makyen	copypastatexts\.com
+1695159864	cocomac	bigsaverhub\.com
+1695162809	Jesse	leadssplash\.com
+1695147337	Jesse	hashclinics\.pk
+1695175180	Jeff Schaller	prowebdevelopment\.co
+1695174802	Jesse	paragchapre\.com
+1695191231	cocomac	ebizfiling\.com
+1695195040	cigien	buyhearingaid\.com
+1695195370	cigien	bioonefibreglass\.com
+1695195394	cigien	fibermurah\.com
+1695195429	cigien	bio[\W_]*+one[\W_]*+fibreglass(?!\.com(?<=bioonefibreglass\.com))
+1695195583	cigien	jalandharescorts\.com
+1695195792	cigien	growthwork\.co
+1695195892	cigien	leanbiomeoffernow\.blogspot
+1695182087	Jesse	hirewebdesignagency\.com
+1695196554	cigien	deutscherfuhrerschein\.de
+1695196542	Nick	retortnow\.com
+1695206497	Jeff Schaller	autoradiocodes\.com
+1695206638	Jeff Schaller	highcpmrevenuegate\.com
+1695206694	Jeff Schaller	4gspeed\.me
+1695207097	Jeff Schaller	techiespice\.com
+1695210023	Jeff Schaller	artlewriteups\.blogspot
+1695210057	Jeff Schaller	monthstoday\.com
+1695211925	Can O' Spam	carsofl\.com
+1695212705	Jeff Schaller	essaycreator\.org
+1695217293	cigien	4gfree\.pro
+1695217526	cigien	electriciansnorthyork\.com
+1695217551	cigien	codetru\.com
+1695217586	cigien	tipga\.com
+1695217622	cigien	scholarlyhelp\.com
+1695217649	cigien	(?-i:kreas_coder)(?#t.me)
+1695217742	cigien	askmequora\.com
+1695218110	cigien	memory4less\.com
+1695218709	cigien	techspyhackerpro(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
+1695198092	Nick	techurp\.com
+1695200464	Nick	agencygdt\.com
+1695219268	cigien	skinwhitening\.pk
+1695219291	cigien	skin[\W_]*+whitening(?!\.pk(?<=skinwhitening\.pk))
+1695219882	Nick	myweddingmag\.co\.nz
+1695221254	Can O' Spam	khelplus\.com
+1695222132	Can O' Spam	pipquantum\.com
+1695224138	cigien	hash[\W_]*+clinics(?!\.pk(?<=hashclinics\.pk))
+1695224217	cigien	sigmakeyapk\.pro
+1695224588	Can O' Spam	(?-i:4MW2TO3UTYLCJ1)(?#wa.me)
+1695228308	Makyen	hyderabadlaserdentistry\.com
+1695228345	Makyen	aifinder(?!\.in)
+1695229532	Jeff Schaller	smartsolvify\.com
+1695232651	Jeff Schaller	kjotvewrites\.com
+1695232702	Jesse	frpcare\.com
+1695232796	Makyen	frp[\W_]*+care(?!\.com(?<=frpcare\.com))
+1695232950	Jesse	kamagrabestellenonline\.com
+1695233105	Jeff Schaller	swastikholiday\.com
+1695251161	Makyen	casinosanalyzer\.ca
+1695251188	Makyen	delinquintaccount(?:@yahoo\.com)?
+1695251393	Makyen	mamaneedsaproject\.com
+1695272664	Makyen	ketocontrol\.org
+1695272687	Makyen	controlket26982(?#twitter.com)
+1695272748	Makyen	keto[\W_]*+control(?!\.org(?<=ketocontrol\.org))(?:[\W_]*+(?:s|client|overviews|capsule|\d++|[\da-f]{5,}+)s?)*
+1695273144	Makyen	elitespyhackers(?:@gmail\.com)?
+1695278993	cigien	fulllancers\.com
+1695279028	cigien	full[\W_]*+lancers?+(?!\.com(?<=fulllancers\.com))
+1695279056	cigien	jamshrsolutions\.com
+1695279109	cigien	walla\.my
+1695279132	cigien	lifeiptv\.store
+1695279171	cigien	leadsmails\.com
+1695279195	cigien	leadsmails(?!\.com)
+1695279218	cigien	webasha(?!\.com)
+1695279241	cigien	ulaproxy\.com
+1695279303	cigien	bakeree\.io
+1695279340	cigien	iproxypool\.com
+1695279916	cigien	virbox\.com
+1695264744	Nick	gearknacks\.net
+1695263045	Jesse	oberhausen-umzugsunternehmen\.de
+1695262846	Jesse	doodlebaseball\.io
+1695281054	cigien	americajackets(?!\.com)
+1695281219	cigien	indiait360\.com
+1695281246	cigien	indiait360(?!\.com)
+1695281278	cigien	(?-i:growthmatrixorder)(?#linktr.ee)
+1695281857	cigien	vnbouncer\.com
+1695282907	cigien	pharmacopie\.com
+1695283732	cigien	dramacool9\.es
+1695284519	cigien	dubaivisitvisa\.online
+1695287734	cigien	pcbeheben\.de
+1695292018	Jeff Schaller	airlineshubs\.com
+1695292140	Jeff Schaller	dreamzonedehradun\.com
+1695295758	Can O' Spam	lauraingrahamcbdgummiesreviewsusa
+1695303051	Makyen	ravzon\.com
+1695303076	Makyen	ravzon(?!\.com)
+1695303400	Makyen	dr-zama-zulu-am-atraditional-healer-and-spell-caster\.webnode\.page
+1695305681	Makyen	intuita\.io
+1695307578	Jeff Schaller	hexavideos\.com
+1695307732	Jeff Schaller	romanticrelationshipguide\.com
+1695310716	Jeff Schaller	spacebarclicker\.co
+1695314436	Jeff Schaller	thecentralprep\.co\.uk
+1695315303	Jeff Schaller	cyberzenpulse\.com
+1695337775	Jesse	techradartimes\.com
+1695340759	Jeff Schaller	travelnoviza
+1695367975	cigien	gobusinesstips\.com
+1695367998	cigien	gobusinesstips(?!\.com)
+1695368021	cigien	discounttruckrepair\.com
+1695368047	cigien	securedoorsolution\.co\.nz
+1695368072	cigien	codingspell\.com
+1695368106	cigien	yellowstonejacketco\.com
+1695368199	cigien	advanceapparels\.com
+1695368234	cigien	advance[\W_]*+apparels(?!\.com(?<=advanceapparels\.com))
+1695368261	cigien	elevatemagazine\.co\.nz
+1695368296	cigien	elevate[\W_]*+magazine(?!\.co\.nz(?<=elevatemagazine\.co\.nz))
+1695368415	cigien	doglikesbest\.com
+1695368491	cigien	projivni\.com
+1695368517	cigien	nevankids\.com
+1695368572	cigien	guiadeilhota\.com\.br
+1695368606	cigien	xn--o80br4k25poga18s\.com
+1695368659	cigien	joybona\.com
+1695368726	cigien	modapktv\.com
+1695369033	cigien	dubaidesertsafaris\.com
+1695374568	cigien	vidxden\.com
+1695373764	Can O' Spam	connexionelectrical\.co\.uk
+1695374622	cigien	genericmedsstore\.com
+1695374675	cigien	locationservices\.barameg\.co
+1695377432	Jeff Schaller	comus\.store
+1695377512	Jeff Schaller	bestkitchenseller\.com
+1695382170	Can O' Spam	totalclassified\.ca
+1695382285	cigien	total[\W_]*+classified(?!\.ca(?<=totalclassified\.ca))
+1695380093	Can O' Spam	ityug247\.com
+1695382687	cigien	re[\W_]*+imaging[\W_]*+sc(?!\.com(?<=reimagingsc\.com))
+1695383013	cigien	khelraja(?!\.com)
+1695383054	cigien	flokii\.com
+1695388527	Jeff Schaller	we-matter\.com
+1695389194	Makyen	w[\W_]*+e[\W_]*+matter(?!\.com(?<=we-matter\.com))
+1695392295	Jeff Schaller	umzug-rostock-24\.de
+1695398333	Jeff Schaller	tvmon\.one
+1695399128	Ryan M	umbrelly\.cloud
+1695399163	Ryan M	umbrelly[\W_]*+cloud(?<!umbrelly\.cloud)
+1695414271	Jeff Schaller	pieces-auto-maroc1\.blogspot
+1695431085	Jeff Schaller	researchomatic\.com
+1695431257	Jeff Schaller	microsoftofficesupport\.org
+1695431609	Jeff Schaller	bitcoincorewallet\.org
+1695432073	Jeff Schaller	kalyandevelopers\.com
+1695432324	Jeff Schaller	coderinme\.com
+1695435556	Jeff Schaller	codebayu\.com
+1695459119	Mast	optimaequipments\.com
+1695450777	Nick	cuanrupiah\.xyz
+1695455874	Nick	freelancerjoni\.com
+1695459191	Mast	ctgirls\.in
+1695459222	Mast	dakshi\.in
+1695460024	Nisse Engström	pennystocksunited\.com
+1695459680	Nick	mobilexraychennai\.com
+1695460175	Nisse Engström	realgoodcredit\.com
+1695460634	Nisse Engström	dakhoacachmangthang8\.vn
+1695470969	Nick	qb\.support
+1695483317	VLAZ	bomdn\.com
+1695483475	Makyen	erfurt-umzuege\.de
+1695506897	Dragonrage	workopportunities1\.blogspot
+1695508584	Dragonrage	ethicsrefinance\.com
+1695513438	Sonic the Anonymous Hedgehog	(?-i:DaniaIPTV)
+1695550210	Jeff Schaller	localseo\.lk
+1695550233	Jeff Schaller	techiesblogs\.com
+1695550275	Jeff Schaller	events\.humanitix\.com
+1695550303	Jeff Schaller	mennismossman\.itch\.io
+1695550342	Jeff Schaller	fixr\.co
+1695550422	Jeff Schaller	azizijobs\.com
+1695555545	Jeff Schaller	Sensamoviesfree
+1695556320	Jeff Schaller	tomisushi\.org
+1695556417	Jeff Schaller	gmb\.co\.com
+1695562447	Jeff Schaller	your-trading-buddy\.blogspot
+1695563370	Jeff Schaller	mathomatic\.org
+1695564532	Jeff Schaller	mybluegenes\.com
+1695570749	Makyen	(?-i:cbd-life)(?#medium.com)
+1695570125	Ethan	wavecbdgummiesaudits\.contently\.com
+1695576586	Jeff Schaller	solveany8\.com
+1695576918	Jeff Schaller	internationaltravelpolicies\.com
+1695576943	Jeff Schaller	blueastral\.com
+1695581809	Jeff Schaller	smmservicestore\.com
+1695585971	Jeff Schaller	takgearbox\.com
+1695587252	Jeff Schaller	seomoshak\.com
+1695588773	Makyen	(?-i:RCRussian)(?#t.me)
+1695623230	Dragonrage	americanspecial24\.com
+1695623090	VLAZ	keeot\.com
+1695623192	VLAZ	laboraccommodation\.ae
+1695623386	VLAZ	thetripleplay\.net
+1695623265	VLAZ	(?-i:mCLQ2)(?#shorturl)
+1695628444	cigien	training\.servicenow
+1695629570	cigien	petcbdclub\.com
+1695629604	cigien	fr4pcbs\.com
+1695630761	cigien	kiscol\.com
+1695630794	cigien	kiscol(?!\.com)
+1695630818	cigien	slideegg\.com
+1695630990	terdon	godrej-ananda\.net\.in
+1695632779	cigien	COINSRECOVERYWORLDWIDE(?:@GMAIL\.COM)?
+1695637070	Dragonrage	thanhtien\.vn
+1695637250	Dragonrage	basketball-stars\.net
+1695638230	Jeff Schaller	theacemakers\.com
+1695639623	Dragonrage	lion567\.com
+1695640161	cigien	lion567(?!\.com)
+1695640650	cigien	william[\W_]*+jacket(?!\.com(?<=williamjacket\.com))
+1695640676	cigien	leatherjacketblack\.com
+1695640701	cigien	leather[\W_]*+jacket[\W_]*+black(?!\.com(?<=leatherjacketblack\.com))
+1695640769	Jeff Schaller	oskarjacket\.com
+1695640815	cigien	oskar[\W_]*+jacket(?!\.com(?<=oskarjacket\.com))
+1695642386	Jeff Schaller	madhuridigital\.com
+1695642522	Jeff Schaller	textannotator\.com
+1695643840	Jeff Schaller	goit\.global
+1695646368	Jeff Schaller	goodycs\.com
+1695654281	cigien	sapibelradio[\W_]*+tv
+1695655130	cigien	kingroot-apk\.com
+1695657854	cigien	labor[\W_]*+accommodation(?!\.ae(?<=laboraccommodation\.ae))
+1695658520	Jesse	lepusjeweller\.com
+1695659433	cigien	WarPortal\.org
+1695663421	cigien	tsvigo\.wordpress\.com
+1695663739	cigien	uppercutseo\.com
+1695663934	cigien	tomi[\W_]*+sushi(?!\.org(?<=tomisushi\.org))
+1695680595	Jesse	zhapedia\.com
+1695680579	Jesse	availabler\.com
+1695683254	Ryan M	cheapnfljerseyssale\.com
+1695699068	Ryan M	wordsmithcreations\.in
+1695704723	Nick	giasutainangxanh\.vn
+1695713164	cigien	gbinstaa\.com
+1695713193	cigien	eterior(?!\.in)
+1695713230	cigien	loanindian\.in
+1695713394	cigien	eventcreate\.com
+1695713582	cigien	cosmopapers\.in
+1695713606	cigien	cosmopapers(?!\.in)
+1695713710	cigien	maamitahara\.com
+1695715216	Nick	teo\.dk
+1695717813	cigien	infohensive\.com
+1695717837	cigien	pi[\W_]*+software(?!\.in(?<=pisoftware\.in))
+1695720656	cigien	adventureandaman\.com
+1695720678	cigien	greenoceanseaways\.com
+1695720702	cigien	ittmajestic\.com
+1695720729	cigien	gonautika\.com
+1695720753	cigien	makruzz\.com
+1695720788	cigien	adventure[\W_]*+andaman(?!\.com(?<=adventureandaman\.com))
+1695720814	cigien	makruzz(?!\.com)
+1695720851	cigien	green[\W_]*+ocean[\W_]*+seaways(?!\.com(?<=greenoceanseaways\.com))
+1695720877	cigien	itt[\W_]*+majestic(?!\.com(?<=ittmajestic\.com))
+1695723976	Jeff Schaller	healthkyte\.com
+1695724008	Jeff Schaller	swordnet\.org
+1695725148	Can O' Spam	foroflamenco\.com
+1695728128	Jeff Schaller	custommacbd\.com
+1695729225	Jeff Schaller	suzuri\.jp
+1695730263	Jeff Schaller	dfwpremiercars\.com
+1695733944	Nick	alf\.sa
+1695737016	Jeff Schaller	terraencounters\.wordpress\.com
+1695737078	cigien	integrator\.ae
+1695737991	cigien	juniortoexpert\.com
+1695739872	cigien	mllabeling\.com
+1695739904	cigien	ringtonesnk\.net
+1695739937	cigien	psychkindle\.com
+1695746803	Jesse	sudge\.org\.tr
+1695745935	Jesse	ghedecor\.com
+1695748552	Jesse	simplefastfunnels\.com
+1695741179	VLAZ	dmhtyres\.com
+1695741276	VLAZ	dmh[\W]*tyres[\W]*llangefni
+1695751276	Jeff Schaller	cloudrcmsolutions\.com
+1695757284	Jeff Schaller	humanannotation\.com
+1695757586	Jeff Schaller	mapquest-directions\.io
+1695765251	Jeff Schaller	chatgptlg\.com
+1695798534	Nick	chardhampackage\.com
+1695798813	cigien	chardham[\W_]*+package(?!\.com(?<=chardhampackage\.com))
+1695796749	Nick	indidigital\.com
+1695799140	cigien	indidigital(?!\.com)
+1695799164	cigien	vinsmoke\.in
+1695799241	cigien	tinyfishing\.co
+1695799196	Nick	tradersfind\.com
+1695799453	cigien	tradersfind(?!\.com)
+1695786114	Jesse	scracked\.com
+1695800143	cigien	mastanfashion\.com
+1695802427	cigien	trustguarddigitalassetsrecovery(?:[\W_]*+(?:at[\W_]*+)?aol[\W_]*+(?:dot[\W_]*+)?com)?
+1695804806	Nick	craftyartapp\.com
+1695807581	cigien	vibes88\.lol
+1695807604	cigien	vibes88(?!\.lol)
+1695809898	cigien	forums\.hitched\.co\.uk
+1695812562	Jeff Schaller	originalrudraksha\.com
+1695812815	Nick	streamsgeek\.com
+1695812774	Nick	gethealthbar\.com
+1695814793	Nick	faangmaang\.com
+1695819995	Jeff Schaller	beautyglosy\.com
+1695816897	Nick	avisaservices\.com
+1695816177	Nick	data-bees\.com
+1695816025	Nick	axislogisticservices\.com
+1695828606	cigien	(?:office)?kettech0(?:@gmail\.com)?
+1695829520	Makyen	efhguild\.com
+1695829620	Vickel	Lisa\.Eric(?:@proton\.me)?
+1695835402	Jesse	thecustompack\.com
+1695840042	Makyen	xeroz\.tech
+1695860168	Jeff Schaller	gaviones\.co
+1695863328	Makyen	(?-i:kKiNFxE8oVTGp9uD6)(?#forms.gle)
+1695883450	Nick	matrubharti\.com
+1695883493	Nick	netjara\.com
+1695883524	Nick	expertittouch\.com
+1695886822	cigien	expert[\W_]*+it[\W_]*+touch(?!\.com(?<=expertittouch\.com))
+1695880035	VLAZ	priceblaze\.com
+1695873821	Jesse	cytotec-medellin\.com\.co
+1695873996	Jesse	(?-i:lojdb)(?#surl.li)
+1695886968	cigien	superroid\.com
+1695887004	cigien	acemakers
+1695887030	cigien	thetechnicalinfo\.com
+1695888502	Dragonrage	cybersuccess\.biz
+1695889680	Dragonrage	vinagreenplus\.vn
+1695891084	Dragonrage	sot\.com\.pk
+1695893835	Dragonrage	mendezelectric\.co
+1695893942	Dragonrage	cinemahdv2\.io
+1695894404	Dragonrage	networkinfrastructuremagazine\.com
+1695895942	Dragonrage	thanhdieu\.com
+1695897606	Dragonrage	baodanang\.vn
+1695899363	Jeff Schaller	aranyafarm\.in
+1695911567	cigien	usenter1\.com
+1695918461	Jeff Schaller	autospace\.qa
+1695919275	Jeff Schaller	appleexplainer\.com
+1695924338	Makyen	sourceforge\.net/projects/live-cd-with-zerofree[\w-]*
+1695925026	Jeff Schaller	empireonecontactcenter\.com
+1695925077	Makyen	empire[\W_]*+one[\W_]*+contact[\W_]*+center(?!\.com(?<=empireonecontactcenter\.com))
+1695927507	Makyen	zupp\.io
+1695927538	Makyen	zuppio
+1695938361	Jeff Schaller	javatechworld\.com
+1695938671	Jeff Schaller	techinpost\.com
+1695938819	Jeff Schaller	simplish\.org
+1695949178	Makyen	(?-i:GaB1aWv4rQs)(?#youtu.be)
+1695961461	Makyen	ms[\W_]*+it[\W_]*+park(?!\.org(?<=msitpark\.org))
+1695966795	VLAZ	slglegal\.in
+1695970928	Dragonrage	dovesofttech\.io
+1695973394	cigien	securiumacademy\.com
+1695973428	cigien	securium[\W_]*+academy(?!\.com(?<=securiumacademy\.com))
+1695973629	cigien	oforonightclub\.com
+1695969250	VLAZ	(?-i:zt-22r8o2f9j-U9VI0NzkglPaThJ3HezTUA)(?#slack invite)
+1695973762	Nick	3sgroups\.in
+1695974244	cigien	resumeforrest\.com
+1695974268	cigien	resume[\W_]*+forrest(?!\.com(?<=resumeforrest\.com))
+1695974519	cigien	slg[\W_]*+legal(?!\.in(?<=slglegal\.in))
+1695975131	cigien	msitpark\.org
+1695975279	cigien	alien[\W_]*+wizbot
+1695975869	cigien	ferntreeresort\.com
+1695975910	cigien	fern[\W_]*+tree[\W_]*+resorts?+(?!\.com(?<=ferntreeresort\.com))
+1695979942	cigien	akihi\.co\.in
+1695979968	cigien	akihi(?!\.co\.in)
+1695982234	Dragonrage	justtravo\.com
+1695983278	VLAZ	buildandrenovate\.co\.nz
+1695983703	Jeff Schaller	bigscal\.com
+1695984967	Jeff Schaller	go-oman\.com
+1695986835	Dragonrage	rulzbreak\.com
+1695987256	cigien	all[\W_]*+assignment[\W_]*+experts(?!\.com(?<=allassignmentexperts\.com))
+1695987907	cigien	wanderwisetech\.com
+1695987940	cigien	wanderwisetech(?!\.com)
+1695989470	cigien	Manasa[\W_]*+Defence[\W_]*+Academy
+1695999306	Makyen	earndriver\.today(?<=earndriver\.today)(?#Abuse the watchlist to get an additional detection on these)
+1695999549	Jeff Schaller	Blackhathacker11[01]
+1696006608	cigien	hagen-umzugshelfer\.de
+1696009601	Jeff Schaller	americanhealthcarecompliance\.com
+1696018436	Jeff Schaller	businesstimemag\.com
+1696018468	Jeff Schaller	newstrillion\.com
+1696018499	Jeff Schaller	theinscribermag\.com
+1696023216	Makyen	xn--gckwhn25pncf\.net
+1696028697	Jeff Schaller	24x7remotesupport\.com
+1696035778	Makyen	acidpsychedelics\.com
+1696073368	Jeff Schaller	sanyuktadesign\.com
+1696075608	Jeff Schaller	frog-lock\.com
+1696079323	Jeff Schaller	indonepalsafar\.com
+1696057297	Nick	seattleblacklimo\.com
+1696056735	Nick	bestmlmsoftware\.com
+1696080746	Jeff Schaller	appxperts\.sg
+1696054420	Nick	opustechglobal\.com
+1696054383	Nick	openaigeek\.com
+1696051360	Nick	venomsoftware\.org
+1696081499	Jeff Schaller	hero-umzuege\.de
+1695845779	Vickel	privaterooms\.net
+1695835166	Jesse	onloadify\.com
+1696081871	Jeff Schaller	cybercrime\.emergency
+1696091792	Jeff Schaller	gemini\.com(?<!api\.gemini\.com)
+1696092109	Jesse	saadidesign\.com
+1696093282	Jeff Schaller	Apksmoon\.com
+1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1696121909	Jeff Schaller	blog\.learnmorecloud\.com
+1696125010	Makyen	(?-i:bljik)(?#justpaste.it)
+1696125696	Makyen	(?-i:usamadevsecops)(?#upwork.com)
+1696156203	Jeff Schaller	Assistassetrecovery
+1696163220	Jeff Schaller	celinehoodie\.net
+1696171663	Makyen	beauty-10\.com
+1696171698	Makyen	she-he\.co
+1696171734	Makyen	glowyp\.com
+1696171760	Makyen	habrat-snam\.com
+1696171784	Makyen	thenoodlehousepei\.com
+1696171815	Makyen	saudi\.kfc\.me
+1696187121	Ryan M	gplthememarket\.com
+1696187142	Ryan M	temasitesi\.com
+1696189352	Jeff Schaller	jobscareersforyou\.blogspot
+1696193284	Jeff Schaller	woi\.gg
+1696193305	Jeff Schaller	lampugcr\.site
+1696193327	Jeff Schaller	slotgacor4d\.com
+1696202109	Jeff Schaller	bella-sera\.co\.uk
+1696226102	Jeff Schaller	bongdastories\.com
+1696226151	Jeff Schaller	alon-sela\.com
+1696228206	cigien	labradoodlesbycucciolini\.ca
+1696229235	cigien	freelydocs\.com
+1696232147	Nick	aaconsultancy\.ae
+1696233400	cigien	d(?:octo)?r[\W_]*+sikama(?:@gmail\.com)?
+1696235426	cigien	pixeleap
+1696235494	cigien	reminimodsapk\.info
+1696235573	cigien	linkwellnodes\.io
+1696235721	cigien	carbongraphicsgroup\.com
+1696235744	cigien	carbon[\W_]*+graphics[\W_]*+group(?!\.com(?<=carbongraphicsgroup\.com))
+1696236016	cigien	descargar-musica-z9\.mp3tree\.net
+1696242280	cigien	perfectretouching\.com
+1696242550	cigien	sbsgenetech\.com
+1696242575	cigien	sbs[\W_]*+genetech(?!\.com(?<=sbsgenetech\.com))
+1696243406	cigien	forsan-pools\.com
+1696243440	cigien	strenuousblog\.com
+1696244516	cigien	lifeplusbd\.com
+1696244542	cigien	lifeplus[\W_]*+bd(?!\.com(?<=lifeplusbd\.com))
+1696245268	cigien	morsecodetranslator\.net
+1696245956	Jeff Schaller	willsdana40
+1696247501	cigien	weightlossunlocked\.blogspot
+1696252705	cigien	hexavideos(?!\.com)
+1696252770	cigien	appingine(?!\.com)
+1696260110	Jeff Schaller	redcheckpest\.com
+1696260145	Jeff Schaller	krompierlaw\.com
+1696261942	Jeff Schaller	beginnerjava\.com
+1696265795	cigien	ibex[\W_]*+packaging(?!\.com(?<=ibexpackaging\.com))
+1696265818	cigien	cbdpackagingstore\.com
+1696265910	cigien	medium\.grid\.is
+1696282324	Spevacus	naplesfloridarentals\.com
+1696271259	Jesse	onlineclassassignment\.com
+1696295395	Dragonrage	djdownloader\.com
+1696295447	Dragonrage	trendifynews\.com
+1696289523	Nick	sagahoki\.com
+1696307646	Dragonrage	itsmarketingblog\.com
+1696307710	Dragonrage	lampinstitute\.in
+1696310174	Ryan M	lilyclothingstore\.com
+1696310838	Dragonrage	gosiphub\.com
+1696310910	Dragonrage	phonologixtherapy\.com
+1696310931	Dragonrage	fitanalytica\.com
+1696310971	Dragonrage	(?-i:n3tg_AKAw-o)(?#youtu.be)
+1696311127	Dragonrage	servbay\.dev
+1696312519	Jeff Schaller	rockssautomation\.com
+1696315399	Ryan M	bookmyblogs\.com
+1696315472	Ryan M	appsierra\.com
+1696321037	Ryan M	motocollection\.us
+1696323946	Ryan M	bharulata\.com
+1696324434	Ryan M	thetoilethelper\.com
+1696324754	Ryan M	investkraft\.com
+1696324800	Ryan M	investkraft(?!\.com)
+1696325950	Ryan M	ailabelers\.com
+1696328721	Jeff Schaller	unexpectedendoffile\.com
+1696329612	Ryan M	tradebrains\.in
+1696329679	Ryan M	digital[\W_]*+vishnu
+1696332963	Jeff Schaller	gettingoveritapks\.com
+1696335478	Jeff Schaller	downloadertwitter\.com
+1696338665	Jeff Schaller	bsetec\.com
+1696340631	Jeff Schaller	aroundthecornerfood\.com
+1696345006	Jeff Schaller	keyalocapital\.com
+1696353634	Jeff Schaller	nursfpx\.com
+1696360467	Jeff Schaller	forum2\.philippe-fournier-viger\.com
+1696360491	Jeff Schaller	coursera\.community
+1696360518	Jeff Schaller	zeball\.com
+1696369765	Ryan M	r2symbols
+1696369786	Ryan M	shinyappstore\.com
+1696370052	Ryan M	rpkg\.net
+1696376812	Makyen	blacklordsociety(?:@gmail\.com)?
+1696376837	Makyen	black[\W_]*+lord[\W_]*+occult
+1696398699	Dragonrage	fnafgame\.io
+1696400090	Dragonrage	gunsnglory\.com
+1696400116	Dragonrage	petlyx\.com
+1696406967	cigien	spydra\.app
+1696408712	cigien	rejuvegan\.com
+1696408744	cigien	rejuvegan(?!\.com)
+1696409035	cigien	bestproproduct\.com
+1696409151	cigien	clickboxagency\.com
+1696410298	Dragonrage	instproapk\.com
+1696413040	Jeff Schaller	ranieribuildinggroup\.com\.au
+1696413089	Jeff Schaller	botwriting\.ai
+1696413257	Jeff Schaller	cabletvandinternetbundles\.com
+1696413537	Jeff Schaller	kinhnghiemcacuoc\.com
+1696413572	Jeff Schaller	khuyenmainhacai\.info
+1696413651	Jeff Schaller	casinotructuyen\.org
+1696414113	Jeff Schaller	merchantech\.com
+1696415419	Jeff Schaller	originalsprout\.com
+1696416484	Mithical	ftechiz\.com
+1696417508	cigien	beststocksbroker\.com
+1696418579	Jeff Schaller	refund policy 82
+1696419218	cigien	quickupdater\.com
+1696419865	Jeff Schaller	emiratesidofficial\.com
+1696422123	Machavity	kritilabs\.com
+1696426153	cigien	kevaclinics\.blogspot
+1696425849	Ian Campbell	kevaclinic\.com
+1696426205	cigien	umzugsservice-solingen\.de
+1696425594	Ian Campbell	marketingvent\.com
+1696425311	Ian Campbell	aliaddons\.com
+1696426298	cigien	ali[\W_]*+addons(?!\.com(?<=aliaddons\.com))
+1696426326	cigien	darkwebprogrammers\.wordpress\.com
+1696426364	cigien	teluguswag\.com
+1696426392	cigien	telugu[\W_]*+swag(?!\.com(?<=teluguswag\.com))
+1696427841	Jeff Schaller	ekaro\.in
+1696427925	Jeff Schaller	hashblast\.co
+1696430977	cigien	fluentpro\.com
+1696431003	cigien	fluentpro(?!\.com)
+1696431275	cigien	naturalherbscentre[\W_]*+\.com
+1696431587	cigien	killexams\.com
+1696431622	cigien	killexams(?!\.com)
+1696434922	Jeff Schaller	trendingghost\.com
+1696451840	Makyen	mycarelabs\.com
+1696451863	Makyen	mycarelabs(?!\.com)
+1696271373	Jesse	soronix\.com
+1696437612	Jesse	connectzap\.com\.br
+1696437765	Jesse	learnjazzpianoonline\.com
+1696467496	Jesse	payvofinance\.us
+1696467511	Jesse	payvofinance(?!\.us)
+1696313094	Nick	fluidgeek\.com
+1696487900	Dragonrage	detoptenbest\.com
+1696489910	Dragonrage	harvestfm\.ae
+1696490827	Dragonrage	trendsyncs\.com
+1696494093	cigien	eggc555\.com
+1696494118	cigien	emhls\.com
+1696491258	Nick	Appsierra(?!\.com)
+1696498203	cigien	lawessayhelponline\.uk
+1696498315	cigien	accountingsfirm\.weebly\.com
+1696502862	VLAZ	monday\.com
+1696502858	VLAZ	monday\.empyra\.com
+1696505444	cigien	ezcash4carsnj\.com
+1696505495	cigien	asorehackcorp
+1696506841	Can O' Spam	webbeesite\.com
+1696484734	Nick	ayurclinic\.com\.au
+1696275357	Jesse	hondabigwing\.in
+1696275375	Jesse	hondamotopub\.com
+1695381042	Can O' Spam	mehmudalom726(?#@gmail.com)
+1696508233	cigien	hartfinancialrepairusa\.com
+1696515014	Can O' Spam	sprinterra\.com
+1696516070	Can O' Spam	tom00jerry(?#.blogspot.com)
+1696521191	Can O' Spam	rankbrainmarketing\.link
+1696528520	Jeff Schaller	lotuscapital-invest\.com
+1696541865	Makyen	opchatgpt\.com
+1696541905	Makyen	referraloffer\.com
+1696548989	Jeff Schaller	VIKTORHACKWORLD
+1696578591	Can O' Spam	domelic\.pk
+1696576517	dan1st	tmirror\.co
+1696580549	cigien	marylandroofers\.com
+1696575725	Nick	sharkstriker\.com
+1696575574	Nick	hesslebach\.com
+1696574835	Nick	travelslifestyle\.com
+1696573260	Nick	eatos\.com
+1696581647	cigien	eatos(?!\.com)
+1696581669	cigien	kloudcourse\.in
+1696573353	Nick	buy4d\.co
+1696581725	cigien	buy[\W_]*+4d(?!\.co(?<=buy4d\.co))
+1696581750	cigien	socioloca\.com
+1696581773	cigien	socioloca(?!\.com)
+1696581794	cigien	free-qr-code-generator\.com
+1696561430	Nick	NIPUTE
+1696582372	cigien	pempek[\W_]*+farhan
+1696546788	Nick	btcfree\.win
+1696583631	cigien	soundproofinglife\.com
+1696583809	cigien	onshorebpoleads\.com
+1696583836	cigien	onshore[\W_]*+bpo[\W_]*+leads(?!\.com(?<=onshorebpoleads\.com))
+1696584118	cigien	travels[\W_]*+lifestyle(?!\.com(?<=travelslifestyle\.com))
+1696587121	cigien	ucc\.qualtrics\.com
+1696590513	rene	dreamsfilms\.in
+1696591108	cigien	mongovision\.org
+1696591139	cigien	fewwires\.com
+1696591165	cigien	fecundtimes\.com
+1696597443	Jeff Schaller	mycurrentlocation\.co
+1696598368	Jeff Schaller	bakemate\.in
+1696601121	cigien	bakemate(?!\.in)
+1696605222	Can O' Spam	daftar-logamtoto\.com
+1696605316	cigien	sadia2335\.citproject\.com
+1696617845	Makyen	pharmasops\.com
+1696629773	Jeff Schaller	techadventuresociety\.com
+1696630424	cocomac	qualityhomemakers\.ca
+1696642288	Ryan M	vsixtool\.com
+1696656039	Nick	erothots\.co
+1696680632	Jeff Schaller	waplus\.win
+1696680660	Jeff Schaller	projectfreetv\.onl
+1696690032	Jeff Schaller	sqlvisual\.net
+1696703356	Jeff Schaller	iptv-smartone\.com
+1696712507	Jeff Schaller	limomiami\.net
+1696696394	VLAZ	cybersecurityzone\.net
+1696697536	VLAZ	tiemhoagenz\.com
+1696722693	Makyen	quà(?#Vietnamese for gift)
+1696746260	VLAZ	candlesnflowers\.com
+1696763247	Jeff Schaller	endsols\.com
+1696769614	Makyen	androxfy4fun\.blogspot
+1696776347	Makyen	c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+g[\W_]*+e[\W_]*+n[\W_]*+i[\W_]*+e[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+p[\W_]*+r[\W_]*+o[\W_]*+(?:d[\W_]*+(?:o[\W_]*+)?t[\W_]*+)?x[\W_]*+y[\W_]*+z(?#cybergeniehackpro.xyz obfuscated)
+1696778036	Jeff Schaller	theartsyspot\.com
+1696758666	DavidW	mcgrocer\.com
+1696792621	Jesse	migdalcomputing\.com
+1696819785	Jeff Schaller	super-mario\.io
+1696837831	cigien	cleerly\.fr
+1696838010	cigien	xoticxperiences\.com
+1696838036	cigien	mas-sharjah\.ae
+1696838162	cigien	nexrupt\.com
+1696838184	cigien	msmsol\.com
+1696838255	cigien	polaris[\W_]*+elevators
+1696838315	cigien	smoad\.io
+1696826517	Jesse	dailymediainsight\.com
+1696838444	cigien	daily[\W_]*+media[\W_]*+insight(?!\.com(?<=dailymediainsight\.com))
+1696838467	cigien	seeyouofficial\.blogspot
+1696813111	Jesse	2629030(?#Steam game)
+1696809419	Jesse	hostyhub\.com
+1696839141	cigien	(?:Davis\.kyambadde@)?pursuu\.co\.uk
+1696838879	Can O' Spam	clearrmynotice\.com
+1696839191	cigien	clearrmynotice(?!\.com)
+1696840279	cigien	loveanddatingjourney\.blogspot
+1696842429	cigien	umzuege-jaensch\.de
+1696848360	cigien	cryptocurrencyadvocate\d*+(?:@gmail\.com)?
+1696848386	cigien	saconsultantsuae\.com
+1696848411	cigien	softoos\.com
+1696848436	cigien	softoos(?!\.com)
+1696848460	cigien	supersavvy\.in
+1696848484	cigien	supersavvy(?!\.in)
+1696853747	cigien	digitalmarketingsroute\.blogspot
+1696854031	cigien	knowledgew\.com
+1696855595	Jeff Schaller	jlsportglasses\.com
+1696861332	cigien	wixdek\.com
+1696862680	Vickel	engravedgiftsly\.com
+1696863740	cigien	dolphinwebsolution\.com
+1696866373	cigien	rheumatologydelaware\.com
+1696871522	cigien	tekno3d\.com
+1696876872	Makyen	buycialislilly\.com
+1696877262	Makyen	٠٠٩٠٥٣٤٠٧٧٦٩٥٨
+1696885474	Makyen	discountciggs\.com
+1696901021	Ryan M	designingsolutions\.co\.in
+1696900947	Ethan	gulfprivatefinance\.com
+1696903837	Makyen	(?-i:w53QrA)(?#fiverr.com)
+1696903859	Makyen	(?-i:va35Qq)(?#fiverr.com)
+1696903893	Makyen	(?-i:3mKdQY)(?#fiverr.com)
+1696917466	Ryan M	replicaswords\.us
+1696925375	cigien	forexbrokeragesetup\.com
+1696925439	cigien	tophomeworkhelper\.com
+1696925463	cigien	javidecodona\.com
+1696925596	cigien	fitbonacci\.com
+1696925619	cigien	fitbonacci(?!\.com)
+1696925643	cigien	planbee\.in
+1696926302	cigien	californiaseoagency\.net
+1696926409	cigien	appetenza\.com
+1696927151	cigien	gulf[\W_]*+private[\W_]*+finance(?!\.com(?<=gulfprivatefinance\.com))
+1696927247	cigien	teamaskblockchain
+1696927316	cigien	canmur\.com
+1696927479	cigien	aendt\.com
+1696927503	cigien	falixnodes\.net
+1696927636	cigien	sridharandev\.com
+1696930235	cigien	thebestcustomboxes\.com
+1696930839	Can O' Spam	donerightplumber\.com
+1696933308	Jeff Schaller	it30\.alhuda\.com\.pk
+1696937131	cigien	calvarycemetery\.org
+1696937156	cigien	calvary[\W_]*+cemetery(?!\.org(?<=calvarycemetery\.org))
+1696937344	cigien	greatdubai\.com
+1696940701	Jeff Schaller	naturaltreatmentforbipolardisorder\.com
+1696940740	Jeff Schaller	martinabacigalupo\.com
+1696940776	Jeff Schaller	bushwhacked\.net
+1696943368	Jeff Schaller	okorthospine\.com
+1696946711	cigien	treeremovalgainesvillega\.top
+1696946734	cigien	tree[\W_]*+removal[\W_]*+gainesville[\W_]*+ga(?!\.top(?<=treeremovalgainesvillega\.top))
+1696947983	Makyen	com\.aquapluz\.aquapluz
+1696948007	Makyen	aquapluz
+1696948040	Makyen	id1662620725(?#aquapluz App Store ID)
+1696949455	Spevacus	pipilika\.net
+1696952520	Nisse Engström	fargoworldwide\.com
+1696953716	Makyen	mattermost\.com
+1696957272	Jeff Schaller	takemyclassdone\.com
+1696957341	Makyen	takemyclassdone(?!\.com)
+1696957781	Makyen	capcuttemplate\.co\.in
+1696957804	Makyen	capcut[\W_]*+templates
+1696960080	Spevacus	carbikemoving\.com
+1696961830	Makyen	foodcourt\.com\.vn
+1696971393	Makyen	grandpa[\W_]*+wobespellhome
+1696997042	cocomac	pdfinsider\.com
+1697007884	Dragonrage	rainpointonline\.com
+1697007909	Dragonrage	proclickspeed\.com
+1697007930	Dragonrage	carrompoolmodyapk\.online
+1697007969	Dragonrage	the7oceanmastersharifi\.com
+1697011027	Dragonrage	weebooworld\.com
+1697015978	Dragonrage	proinstaapks\.com
+1697017526	cigien	thetechienerd\.com
+1697016732	Can O' Spam	omaxe\.support
+1697019272	Dragonrage	bellamenteschools\.com
+1697020134	Jeff Schaller	becanvas\.co
+1697021925	cigien	perthcarsremoval\.com\.au
+1697021950	cigien	perth[\W_]*+cars[\W_]*+removal(?!\.com\.au(?<=perthcarsremoval\.com\.au))
+1697022928	Jeff Schaller	tompkinsinc\.com
+1697024563	Jeff Schaller	nuebegaming168\.com
+1697023755	Can O' Spam	oswalairtravels\.com
+1696853276	Can O' Spam	trypureeasecbdgummies
+1696604939	Can O' Spam	how-to-involve-the-sponge-secr
+1697029367	Can O' Spam	rubic\.su
+1697029854	Spevacus	anotekanodizing\.com
+1697030194	Makyen	tulasi[\W_]*+pickles
+1697030229	Makyen	(?-i:uuFPDf7bNoo)(?#youtu.be)
+1697030253	Makyen	(?-i:NLSxGTHKhelx1HQI)(?#youtu.be)
+1697030279	Makyen	hcd[\W_]*+dream(?:[\W_]*+(?:interior|solution|\d++|[\da-f]{5,}+)s?)*
+1697031887	Can O' Spam	purohitsforpooja\.com
+1697032271	Makyen	purohitsforpooja(?!\.com)
+1697034064	Jeff Schaller	avesent\.com
+1697039790	cigien	statuslibrary1\.com
+1697039948	cigien	bestaiproductlist\.com
+1697042104	Jeff Schaller	annhiendecor\.com
+1697042241	Jeff Schaller	digisite\.in
+1697049019	Jeff Schaller	datainfofinder\.com
+1697049081	Jeff Schaller	alrwhanyawad\.com
+1697055664	Jeff Schaller	doenglishi\.com
+1697056047	Makyen	green[\W_]*+bunny[\W_]*+cbd(?:[\W_]*+(?:gummie|review|\d++|[\da-f]{5,}+)s?)*
+1697056071	Makyen	digisite(?!\.in)
+1697056121	Makyen	(?-i:3tbsoGB)(?#bit.ly)
+1697065472	Makyen	crypto(?:currency)?[\W_]*+recovery[\W_]*+agency
+1697070718	Makyen	hodlfutures
+1697075081	Jeff Schaller	wowtot\.com
+1697075597	Thomas Ward	bazaarroom\.com
+1697075620	Thomas Ward	bazaarroom(?!\.com)
+1697085565	Dragonrage	browns\.in
+1697085874	Dragonrage	moxielawgroup\.com
+1697095848	cigien	upplyf\.com
+1697096044	cigien	countingword\.com
+1697096074	cigien	kc[\W_]*+overseas
+1697096111	cigien	venuebookingz\.com
+1697096148	cigien	mccjpr\.com
+1697096245	cigien	unifiedmentor\.com
+1697096275	cigien	nettyfish\.com
+1697100201	cigien	winpickup\.com
+1697100224	cigien	winpickupcar\.com
+1697100247	cigien	win[\W_]*+pickup(?!\.com(?<=winpickup\.com))
+1697100279	cigien	thekingsfurniture\.com
+1697100302	cigien	ez-captcha\.com
+1697100328	cigien	thewalkers\.org
+1697098754	VLAZ	nailbyme\.com
+1697104055	Dragonrage	wednesday-addams-pastiche\.art
+1697105620	Can O' Spam	skuplugs\.com
+1697107297	cigien	skuplugs(?!\.com)
+1697110636	Can O' Spam	versionit\.org
+1697111079	cigien	stickmanwarriormodapk\.com
+1697116404	cigien	affiliateservices
+1697116804	cigien	fullstackgeek\.blogspot
+1697118143	Ryan M	VEEML
+1697121241	Jeff Schaller	sarasotamug\.com
+1697121612	Jeff Schaller	shomorikaspelltemple0\.blogspot
+1697123127	Jeff Schaller	falschgeld\.org
+1697124836	Makyen	wingaming\d*+
+1697124939	Makyen	qrcodedynamic\.com
+1697125007	Makyen	qrcodedynamic(?!\.com)
+1697126055	Jeff Schaller	thetuitione\.com
+1697130453	Jeff Schaller	dawnprinting\.com
+1697130635	cigien	whatsappapkdownload\.org
+1697132766	Jeff Schaller	forestknight\.co\.uk
+1697133109	cigien	forest[\W_]*+knight(?!\.co\.uk(?<=forestknight\.co\.uk))
+1697141453	Jeff Schaller	^rohit negi$
+1697164363	Ryan M	radhika7983
+1697182027	Dragonrage	brandwitty\.com
+1697182071	Dragonrage	paramountinstruments\.com
+1697182623	Dragonrage	doodlejumping\.com
+1697182864	cigien	ersaelectronics\.com
+1697183501	Dragonrage	intellibeans\.com
+1697185514	cigien	electronicstalk\.com
+1697185970	cigien	spainvisa\.co\.uk
+1697189648	cigien	hoholah\.xyz
+1697189671	cigien	goodwininc\.com
+1697192309	Jeff Schaller	alphonsomangoes\.online
+1697192345	Jeff Schaller	claroclinic\.com
+1697193763	cigien	claro[\W_]*+clinic(?!\.com)
+1697194209	Dragonrage	questwebbi\.co\.nz
+1697194303	cigien	quest[\W_]*+webbi(?!\.co\.nz(?<=questwebbi\.co\.nz))
+1697195750	cigien	satooz\.com
+1697201248	Jeff Schaller	clatbrains\.in
+1697201704	Jeff Schaller	raftrans-umzuege\.de
+1697202699	Jeff Schaller	valerii-khomenko
+1697203940	Jeff Schaller	genmpartners\.com
+1697204521	Spevacus	sofolengineer\.com
+1697205811	Jeff Schaller	whereami\.place
+1697210524	Jeff Schaller	brijeshdigitalhub\.com
+1697212571	Jeff Schaller	quinnnftjoker81\.com
+1697212732	Makyen	离婚证
+1697212922	Makyen	brandwitty(?!\.com)
+1697214311	cigien	poslinksolution\.com
+1697214338	cigien	stashapk\.com
+1697214985	cigien	genmpartners(?!\.com)
+1697215017	cigien	projectorgenius\.com
+1697215045	cigien	projector[\W_]*+genius(?!\.com(?<=projectorgenius\.com))
+1697215086	cigien	kiasilang(?#t.ly)
+1697215604	cigien	it[\W_]*+empire(?!\.net(?<=itempire\.net))
+1697215639	cigien	edealz4u\.com
+1697215670	cigien	edealz4u(?!\.com)
+1697215699	Jeff Schaller	rate\.lu
+1697225386	Jeff Schaller	webiptvshop\.com
+1697227343	Ryan M	under-controls\.net
+1697227892	Jeff Schaller	downloadnow\.com\.pk
+1697227929	Jeff Schaller	shopelitepromo\.com
+1697228135	Jeff Schaller	nutritionfromseeds\.com\.vn
+1697251890	Ryan M	limpiezadecasas\.cercademi\.net
+1697251981	Ryan M	bk8\.center
+1697253018	Ryan M	npmjs\.com/package/react-profile
+1697253074	Ryan M	Stack ?Overflow.{0,20}toxic
+1697253193	Ryan M	source=friends_link(?# Medium links generated by author)
+1697253414	Ryan M	support@animaapp\.com
+1697253455	Ryan M	lojatec8\.com\.br
+1697253495	Ryan M	xxxtentacionrevengehoodie\.com
+1697253594	Ryan M	myhaalice(?:@gmail\.com)?
+1697253660	Ryan M	d(?:octo)?r[\W_]*+subodh[\W_]*+kamble
+1697253735	Ryan M	bulkgpt\.ai
+1697253758	Ryan M	bulkgpt(?!\.ai)
+1697253853	Ryan M	bk8[\W_]*+center(?<!bk8\.center)
+1697253992	Ryan M	(?:abroad|overseas?)[\W_]*+education[\W_]*+consultan(?:ts?|cy|cies)
+1697261344	Nisse Engström	exploringgk\.blogspot
+1697262449	Nisse Engström	getfreecourses\.uk
+1697263564	Nisse Engström	instacustomboxes\.com
+1697263713	Nisse Engström	tingdiamond\.com
+1697264670	Dragonrage	acwcircle\.com
+1697266252	Dragonrage	tmu\.ac\.in
+1697266649	Dragonrage	dhgroupeg\.com
+1697277390	Dragonrage	alcazar\.in
+1697277425	Dragonrage	cintel\.caterforce\.co\.uk
+1697277447	Dragonrage	womantribune\.com
+1697285050	Jeff Schaller	chaiapps\.com
+1697310317	Jeff Schaller	digitbard\.in
+1697310348	Jeff Schaller	techmaginc\.com
+1697313736	Jeff Schaller	tecbrix\.com
+1697315223	Jeff Schaller	bulksmsuaeclub\.com
+1697325611	Makyen	atomicsql(?:_golang)?
+1697325633	Makyen	tecbrix(?!\.com)
+1697325654	Makyen	(?-i:LxzoMxFrhwAqtHHa9)(?#forms.gle)
+1697328410	Ryan M	crypto(?:currency)?[\W_]*+recovery\w*+
+1697336920	Jeff Schaller	marketinggranadaland\.com
+1697336949	Jeff Schaller	granadahills\.pro
+1697336980	Jeff Schaller	granadawaterfall\.com
+1697349959	Dragonrage	crackknow\.com
+1697365029	Dragonrage	(?-i:tX5OTGRpsVw)(?#youtu.be)
+1697372905	Jeff Schaller	shamrockdigitalservices\.com
+1697378078	Jeff Schaller	vernonoptometry\.ca
+1697379839	Jeff Schaller	aidapter\.web\.app
+1697380228	Jeff Schaller	pythononlineeditor\.com
+1697386873	Makyen	smmusareview\.com
+1697394287	Thomas Ward	vwsonline\.org
+1696971006	Jesse	glennjohansson85\.github\.io
+1697093365	user16217248	oxshare\.com
+1697287517	Vickel	etsy\.com\/shop\/NakshuJewelsLGD
+1697323776	Vickel	huismancleverlyrecovery\.com
+1697396143	Makyen	oxshare(?!\.com)(?<!(?-i:OXSHARE))(?<!\bms\Woxshare)
+1697396751	Makyen	itsallaboutai\.com
+1697396786	Jeff Schaller	spyhackelite
+1697402835	Jeff Schaller	nimbusweb\.me/share/1971441
+1697403836	Jeff Schaller	www\.marketo\.com
+1697404551	Jeff Schaller	www\.avax\.network
+1697409098	Vickel	workingment\.com
+1697421167	Makyen	(?-i:4XxgOT5Ffbg)(?#YouTube)
+1697440269	cigien	pertingo
+1697440315	cigien	holisticnaturalhealthexperts\.com
+1697440341	cigien	ulinepack\.com
+1697440418	cigien	fwef\.com
+1697440842	cigien	paradisenursery\.com
+1697441439	cigien	workingment(?!\.com)
+1697442546	VLAZ	britishcartransfer\.co\.uk
+1697442777	VLAZ	British[\W_]*car[\W_]*transfer(?!\.co\.uk(?<=britishcartransfer\.co\.uk))
+1697443049	cigien	krnl\.fun
+1697445712	Jeff Schaller	5ISPYHAK437
+1697445971	Dragonrage	plaza\.rakuten\.co\.jp
+1697455199	cigien	digitechlearner\.com
+1697457655	cigien	vcclhosting\.com
+1697457677	cigien	shrinke\.us
+1697458980	cigien	pageoweb\.com
+1697460583	cigien	wisetrolley\.com
+1697460615	cigien	wisetrolley(?!\.com)
+1697465215	Nisse Engström	messagecentral\.com
+1697466497	cigien	message[\W_]*+central(?!\.com(?<=messagecentral\.com))
+1697467095	Jeff Schaller	nazmaran\.com
+1697469500	Makyen	healthyfood\.com
+1697471342	Jeff Schaller	invisiblehackingloops(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1697482054	Jeff Schaller	hiretopwriters\.com
+1697484869	Jeff Schaller	uaepermit\.com
+1697510535	Makyen	askblockchainhelp[\W_]*+desk
+1697511774	Makyen	weddingplannervn\.com
+1697511796	Makyen	weddingplannervietnam
+1697511868	Makyen	weddingplannerdanangvn
+1697511890	Makyen	thoswedding\.vietnam
+1697514765	cocomac	investinweed\.com
+1697515971	Makyen	ai-email-generator
+1697515994	Makyen	be-safe\.org
+1697518790	Makyen	herbal-creations\.com
+1697518813	Makyen	phyllanthus[\W_]*+emblica(?:is)?
+1697518835	Makyen	eucitizen\.ae
+1697533259	cigien	travelingstories\.org
+1697533383	cigien	Recoverykey1
+1697533423	cigien	spyconnect9(?:@gmail\.com)
+1697533488	cigien	picsera\.com
+1697533539	cigien	picsera(?!\.com)
+1697533568	cigien	copphago\.vn
+1697533602	cigien	techtoroms\.com
+1697533628	cigien	pikashowpc\.com
+1697537757	Jeff Schaller	numantratech\.com
+1697538544	Jeff Schaller	reyecomops\.com
+1697538753	cigien	mlokcleaning\.com
+1697539184	cigien	adtalos
+1697539219	cigien	multiplewords\.com
+1697539290	cigien	infowindtech\.com
+1697539318	cigien	assignmentmasters\.ae
+1697539618	cigien	graphicmags\.com
+1697539643	cigien	projectorprofy\.com
+1697539794	cigien	quickbooksupportnet\.com
+1697539868	cigien	royalhaven\.es
+1697539910	cigien	getmodnow(?!\.com)
+1697540333	cigien	anyrec\.io
+1697541129	cigien	adnoor\.ca
+1697541153	cigien	adnoor(?!\.ca)
+1697541252	cigien	trucoat(?!\.us)
+1697541552	cigien	online-free-translator\.com
+1697542002	cigien	techpros\.ae
+1697542026	cigien	techpros(?!\.ae)
+1697543773	cigien	dekhocampus(?!\.com)
+1697543822	cigien	mediawrkz\.com
+1697544686	cigien	kalbaco\.com
+1697549878	cigien	ascmi\.net
+1697551150	Makyen	evilspeed\.eu
+1697558362	Jeff Schaller	digionfocus\.com
+1697559749	cigien	thetechgenics\.com
+1697565148	Makyen	digimarketwave\.com
+1697565182	Makyen	digimarketwave(?!\.com)
+1697565515	cigien	hdjobonline\.blogspot
+1697568686	Makyen	danielmeuli
+1697568719	Makyen	daniel[\W_]*+meuli[\W_]*+recovery
+1697572742	Jeff Schaller	keepingitoutsidejobs\.com
+1697586282	Makyen	(?-i:stanislav_soft)(?#t.me)
+1697586305	Makyen	(?-i:stanislav_tricks)(?#t.me)
+1697586336	Makyen	crypto[\W_]*+transaction[\W_]*+hijacker
+1697602558	Dragonrage	mykitchenspoint\.com
+1697603216	Makyen	(?-i:TGL_JavaMaker)(?#t.me)
+1697603239	Makyen	mykitchenspoint(?!\.com)
+1697615250	cigien	ivyoverseas\.com
+1697615274	cigien	ivy[\W_]*+overseas(?!\.com(?<=ivyoverseas\.com))
+1697615309	cigien	splendidaccounts\.pk
+1697615339	cigien	arhamtechpro\.com
+1697615372	cigien	arham[\W_]*+techpro(?!\.com(?<=arhamtechpro\.com))
+1697615407	cigien	ipromax\.in
+1697615458	cigien	thestylesalad\.in
+1697615534	cigien	oriaum\.co
+1697615646	cigien	productlistpro\.com
+1697619867	VLAZ	mitsde\.com
+1697620267	cigien	waterproofingperth\.com\.au
+1697620292	cigien	waterproofing[\W_]*+perth(?!\.com\.au(?<=waterproofingperth\.com\.au))
+1697621525	VLAZ	vinpartyrentals\.com
+1697624738	Jeff Schaller	adityatechsolution50
+1697630783	Jeff Schaller	sarvamsafety\.com
+1697634480	Jeff Schaller	mobileinfo\.com\.bd
+1697637315	cigien	market22\.co
+1697637389	Makyen	(?-i:48RXKTf)(?#bit.ly)
+1697637413	Makyen	(?-i:ren1ear_paradox287)(?#t.me)
+1697637734	cigien	beautybestway\.com
+1697637763	cigien	beauty[\W_]*+best[\W_]*+way(?!\.com(?<=beautybestway\.com))
+1697637906	cigien	netflix[\W_]*+party(?!\.services(?<=netflixparty\.services))(?!\.net(?<=netflixparty\.net))
+1697637934	cigien	netflixparty\.net
+1697641723	Makyen	7621310191879637331(?#blogger.com)
+1697641756	Makyen	9136359043417389365(?#blogger.com)
+1697648919	Jeff Schaller	msajeescort\.com
+1697650817	cigien	keeping[\W_]*+it[\W_]*+outside[\W_]*+jobs(?!\.com(?<=keepingitoutsidejobs\.com))
+1697651488	Spevacus	golferspanel\.com
+1697654159	Jeff Schaller	nycjackets\.com
+1697661778	Jeff Schaller	aufaitux\.com
+1697670705	Makyen	chessbazaar\.in
+1697670727	Makyen	the-way-2-life\.page\.tl
+1697670808	Makyen	buy(?:ing)?[\W_]*+google[\W_]*+voice[\W_]*+accounts
+1697673430	Makyen	d(?:octo)?r[\W_]*+suzanne
+1697673452	Makyen	saren55
+1697686425	Makyen	hummingbird-ai\.org
+1697686447	Makyen	g[\W_]*+szd2khcgvy
+1697686478	Makyen	ams-osram\.com
+1697686500	Makyen	everlight\.com\.cn
+1697686524	Makyen	ledestar\.com
+1697686558	Makyen	arcetec\.com\.co
+1697686590	Makyen	metaveresnow\.com
+1697686625	Makyen	metaveresnow(?!\.com)
+1697687510	Makyen	jaga\.link
+1697687540	Makyen	(?-i:EqnIH\.jpg)
+1697687562	Makyen	musicplayshut\.com
+1697687589	Makyen	music[\W_]*+play[\W_]*+shut(?!\.com(?<=musicplayshut\.com))
+1697698245	VLAZ	precisetestingsolution\.com
+1697698550	Dragonrage	nipponproduction\.com
+1697700082	Robert Longson	myeveresttrip\.com
+1697700485	cigien	eweichat\.com
+1697700746	cigien	sanxuatvalicaptui\.com
+1697701284	cigien	plasbit\.com
+1697701309	cigien	plasbit(?!\.com)
+1697708002	VLAZ	icgram\.com
+1697711335	Jeff Schaller	orbimeshsetup\.com
+1697711417	Jeff Schaller	perfectmarketingsolution\.com
+1697711536	Jeff Schaller	perfectmarketingsolution(?!\.com)
+1697715904	Jeff Schaller	getamericastanding\.org
+1697715933	Jeff Schaller	nemanex\.wikidot\.com
+1697715997	Jeff Schaller	Nemanex
+1697718111	Can O' Spam	internetspeed9\.wordpress
+1697717951	Can O' Spam	burlingtonclinics\.com
+1697717667	Can O' Spam	lakeviewhotelkirkland\.com
+1697709143	VLAZ	sparklelaser\.com
+1697463066	VLAZ	(?-i:\+dTfVfknfT2c1OWFk)(?#t.me)
+1697720766	Jeff Schaller	hyper\.onemediasport\.com
+1697722596	cigien	flightschannel\.com
+1697724694	VLAZ	uniqtrendz\.in
+1697725452	Spevacus	imodpulse\.com
+1697726016	Makyen	34\.23\.37\.9
+1697726050	Makyen	68\.183\.42\.215
+1697728778	Jeff Schaller	digimarketer\.ca
+1697730224	Jeff Schaller	koreanpanda\.com
+1697734398	Spevacus	sohawrites\.com
+1697734972	Jeff Schaller	aiblogz\.com
+1697738488	Makyen	morriswhite789
+1697739176	Jeff Schaller	genyoutube\.site
+1697739353	Makyen	qirat[\W_]*+(?:quran[\W_]*+)?online(?!\.com(?<=qiratquranonline\.com))
+1697751782	cocomac	arashlaw\.com
+1697753482	Ryan M	rapidapi\.com(?<!p\.rapidapi\.com)
+1697755372	cocomac	byrule\.xyz
+1697771828	Makyen	telkom[\W_]*+university(?!\.ac\.id(?<=telkomuniversity\.ac\.id))
+1697780225	Dragonrage	modapkjournal\.com
+1697786375	Dragonrage	xpectodigital\.com
+1697793850	cigien	hireseoconsultants\.com
+1697793916	cigien	shrineyatra\.com
+1697793948	cigien	epicyatra\.com
+1697793973	cigien	musafircab\.com
+1697794007	cigien	musafircab(?!\.com)
+1697794054	cigien	glossyescortsbirmingham\.co\.uk
+1697794111	cigien	glossy[\W_]*+escorts[\W_]*+birmingham(?!\.co\.uk(?<=glossyescortsbirmingham\.co\.uk))
+1697794139	cigien	liquortheka\.com
+1697794166	cigien	nhacai10\.com
+1697794219	cigien	delhicallgirlservice\.in
+1697796495	Jeff Schaller	healthydco\.blogspot
+1697797860	Jeff Schaller	umapharmatechmachinery\.com
+1697798871	Dragonrage	ssfermenterbioreactor\.com
+1697799552	cigien	ez\.works
+1697801284	cigien	tic-tac-toe\.games
+1697804991	Jeff Schaller	petzico\.com
+1697807559	Jeff Schaller	techluxor\.com
+1697811405	Makyen	ronsplace\.ca
+1697811527	Makyen	trauma_project(?#twitter.com)
+1697811563	Makyen	vd375@bath\.ac\.uk
+1697829125	Jeff Schaller	njmarketings\.com
+1697846480	Jeff Schaller	qbpayroll-solutions\.gitbook\.io
+1697848322	Makyen	sheetscribe\.io
+1697849831	Jeff Schaller	chuyentien\.org
+1697876483	Ryan M	whisky-price\.in
+1697876521	Ryan M	blogkartco
+1697877422	Ryan M	tallystick\.ai
+1697877545	Ryan M	journeypioneers\.com
+1697878076	Ryan M	afka[\W_]*+hub[\W_]*+innovations
+1697886894	Jeff Schaller	chatgptdeutsch\.org
+1697887568	Jeff Schaller	invensislearning\.com
+1697888434	Jeff Schaller	winupskill\.com
+1697888952	Jeff Schaller	farmixo\.com
+1697889084	Jeff Schaller	labomedworld\.com
+1697889284	Jeff Schaller	chatgptx\.fr
+1697889339	Jeff Schaller	print-casabest\.blogspot
+1697889369	Jeff Schaller	eclsorter\.com
+1697889408	Jeff Schaller	gwacalculator\.net
+1697889447	Jeff Schaller	pppcalculator\.net
+1697889575	Jeff Schaller	atisamhaq123\.github\.io
+1697889968	Jeff Schaller	shenglinpla\.com
+1697899814	Jeff Schaller	webxcelerates\.com
+1697903233	Jeff Schaller	databaseH4ck3r
+1697903416	Jeff Schaller	passporthome247(?:@gmail\.com)?
+1697904535	Makyen	facyummy\.com
+1697906722	Makyen	soulmatesketch\.com
+1697907633	Jeff Schaller	sazidhealth\.com
+1697931721	Makyen	unisatwalletextension\.com
+1697931743	Makyen	unisat[\W_]*+wallet[\W_]*+extension(?!\.com(?<=unisatwalletextension\.com))
+1697936644	Ryan M	dedicatedmodule\.com
+1697936880	Jeff Schaller	palqee\.com
+1697937109	Jeff Schaller	habibicapcut\.net
+1697978488	Jeff Schaller	dolphex\.io
+1697978701	Jeff Schaller	animebis\.tv
+1697978781	Jeff Schaller	techcodinghub\.com
+1697983424	Jeff Schaller	vedardalarm\.com
+1697987183	Makyen	weblandinitiation(?:@gmail\.com)?
+1697987318	Makyen	dolphex(?!\.io)
+1697987368	Makyen	d(?:octo)?r[\W_]*+priti(?:[\W_]*+nanda[\W_]*+sibal)?
+1697987686	Makyen	panorama[\W_]*+slim
+1697989666	Makyen	legithackar980(?:@gmail\.com)?
+1698014216	Makyen	morriswhite78
+1698014289	Makyen	tuition\.training\.business(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1698025332	Jeff Schaller	bongtar98
+1698045198	cigien	alisterrecovery(?:[\W_]*(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1698045785	cigien	lockyourtrip\.com
+1698045989	cigien	nulled\.biz
+1698055488	Jeff Schaller	calculadoraprimaria\.com
+1698055903	Jeff Schaller	rnada\.com
+1698055924	Jeff Schaller	traicaysaydibay\.com
+1698056653	VLAZ	automymo\.com
+1698054728	VLAZ	printindustry\.com
+1698057886	VLAZ	allegiantsky\.com
+1698058848	Nick	eagle\.in
+1698060921	Jeff Schaller	west-technology\.co\.uk
+1698061731	Jeff Schaller	ansatrading\.com
+1698066825	cigien	arvist[\W_]*+ai
+1698073143	Jeff Schaller	xwggnp
+1698074628	Makyen	techexpert4u\.com
+1698078618	cigien	shopee\.vn
+1698079043	Makyen	innisfreevietnam
+1698079825	cigien	premcrest\.co\.uk
+1698079847	cigien	premcrest(?!\.co\.uk)
+1698088241	Jeff Schaller	misay\.id\.vn
+1698092210	VLAZ	Westinghousef\.com
+1698052358	VLAZ	teezill\.com
+1698052465	VLAZ	faplusapp\.com
+1698097349	Makyen	ебанушки
+1698120496	Makyen	hyc-system\.com
+1698120807	Dragonrage	runaway3d\.com
+1698099699	Nick	koi55gg\.xyz
+1698099789	Nick	ladanggacor55\.blogspot
+1698128649	cigien	isratvinfo\.com
+1698131454	VLAZ	SynoGut
+1698155155	Makyen	whytap\.in
+1698155620	cigien	airlineticketspolicy\.com
+1698167943	Makyen	dailywazaifinurdu\.blogspot
+1698187872	Makyen	d(?:octo)?r[\W_]*+brian[\W_]*+cole
+1698187890	Makyen	legitimate[\W_]*+hacker
+1698187918	Makyen	omega[\W_]*+cryptos[\W_]*+recovery[\W_]*+specialist
+1698215888	cigien	vantop10\.com
+1698215952	cigien	palazhiayurveda\.com
+1698215992	cigien	palazhi[\W_]*+ayurveda(?!\.com(?<=palazhiayurveda\.com))
+1698216039	cigien	unaiutosubito\.org
+1698216070	cigien	ifda\.in
+1698220689	cigien	neoadvertise0\.wordpress
+1698221382	cigien	aiappsforyou\.com
+1698263613	Jeff Schaller	quantmoves\.com
+1698283940	Makyen	go\.nordfriend\.com
+1698283972	Makyen	affiliates\.nordvpn\.com
+1698283996	Nick	jiolifesolution\.blogspot
+1698284343	Nick	spoctest\.com
+1698304203	cigien	dynatechconsultancy\.com
+1698304241	cigien	allplayingcards\.com
+1698299482	VLAZ	ingexbotanicals\.com
+1698304547	cigien	ingexbotanicals(?!\.com)
+1698304657	cigien	sungoldsolar(?!\.com)
+1698305136	cigien	trippybug\.com
+1698305782	cigien	barjp88(?#linkr)
+1698307075	cigien	euroworldgrp\.com
+1698307698	Nisse Engström	thebitz420\.uk
+1698309329	Can O' Spam	medypharmasist\.com
+1698309776	Nisse Engström	trading212\.c0m
+1698309857	Nisse Engström	trading212\.com
+1698312856	Can O' Spam	emiratesvisaonline\.com
+1698313941	Makyen	emirates[\W_]*+visa[\W_]*+online(?!\.com(?<=emiratesvisaonline\.com))
+1698313434	Can O' Spam	u5bets\.com
+1698314033	Makyen	u5bets(?!\.com)
+1698315351	Makyen	quantum[\W_]*+gpt
+1698315379	Makyen	lookerstudio\.google\.com
+1698315409	Makyen	tradingbitcoinapp\.blogspot
+1698315433	Can O' Spam	attestationservices\.ae
+1698317155	Makyen	(?-i:48yYnkf)(?#bit.ly)
+1698317739	cigien	getibogaine\.com
+1698320018	Jeff Schaller	nothng\.infinityfreeapp\.com
+1698331356	Makyen	sj-trd\.com
+1698340580	Makyen	schoolofinternetmarketing\.co\.in
+1698345080	Jeff Schaller	paymentgateway\.solutions
+1698345554	cocomac	osullivansafety\.ie
+1698358091	Makyen	rothstein_codeand(?#telegram)
+1698358115	Makyen	cyber[\W_]*+dude
+1698383548	cocomac	citationvault\.com
+1698383861	cocomac	roombasmarti\.com
+1698384920	cocomac	traqiq\.com
+1698385450	cocomac	arabcasinohex\.com
+1698386258	cocomac	surfcollective\.com\.au
+1698386446	cocomac	namescluster\.com
+1698388124	Nick	maharaja\.online
+1698388377	cocomac	escortsindore\.com
+1698389218	cigien	tradespect\.com
+1698389565	cigien	cryo-service-repair\.com
+1698389586	cigien	winbox-mobile\.com
+1698389913	cigien	dienmaygiaphu\.com\.vn
+1698392648	Nick	APKTodo
+1698394933	cigien	5rv\.digital
+1698395015	cigien	5rv[\W_]*+digital(?<!5rv\.digital)
+1698395251	cigien	ismartroom\.com
+1698398859	cigien	dubaiartificialgrass\.ae
+1698398890	cigien	medinutrica\.com
+1698403326	Jeff Schaller	wirelessprinter\.online
+1698403402	Jeff Schaller	skovian\.com
+1698404019	cigien	skovian(?!\.com)
+1698404118	cigien	ketovex[\W_]*+keto[\W_]*+gummies(?:[\W_]*+us)?
+1698404190	cigien	redmineflux\.com
+1698405937	Jeff Schaller	medzforce\.com
+1698407055	Jeff Schaller	pureleatherjacket\.com
+1698407095	cigien	pure[\W_]*+leather[\W_]*+jacket(?!\.com(?<=pureleatherjacket\.com))
+1698416411	Jeff Schaller	fusioneventz\.in
+1698417752	Jeff Schaller	tranks7\.com
+1698414651	EJoshuaS - Stand with Ukraine	kenyt\.ai
+1698421096	cigien	9mediaonline\.com
+1698424219	Jeff Schaller	hairparadisesalon\.com
+1698427356	Jeff Schaller	umzugsfirma-oranienburg\.de
+1698434321	Spevacus	creddio\.com
+1698438433	Jeff Schaller	orgcostsavings\.com
+1698445521	Vickel	summitdental\.ch
+1698445243	Vickel	allegiant[\W_]*+pro[\W_]*+hacker
+1698373966	Nick	Taraftarium24
+1698352866	Vickel	lunchtimeprediction\.com
+1698352076	Vickel	uk49predictions\.com
+1698350515	user16217248	movieswatchinhd\.com
+1698321623	VLAZ	niabusiness\.com
+1698321396	Can O' Spam	ajaykblogs\.com
+1698313273	Can O' Spam	ruoutot\.net
+1698246341	Can O' Spam	darkmodeanyapp\.com
+1698241868	Can O' Spam	instantcustompackaging\.com
+1698158306	Can O' Spam	blix-umzuege\.de
+1698215144	VLAZ	uctafex\.com
+1698313343	Can O' Spam	zWkVwy2Ydxgq5xTS8(?#maps.app.goo.gl)
+1698318816	VLAZ	(?-i:efCGP)(?#shorturl.at)
+1698450341	Nick	ketphame\.wixsite
+1698454134	Makyen	dwarerecoveryspecialist(?:[\W_]*+(?:at[\W_]*+)?auctioneer(?:[\W_]*+(?:dot[\W_]*+)?net)?)?
+1698467201	Makyen	woody-brison\.neocities\.org
+1698469224	Makyen	proofs\.pl
+1698488436	VLAZ	xpressolube\.com
+1698488471	VLAZ	duniagames\.xyz
+1698488523	VLAZ	celestialsacademy\.com
+1698488612	VLAZ	cjcmotor\.com
+1698488698	VLAZ	moviesleatherjackets\.com
+1698488723	VLAZ	marks4sure\.com
+1698488805	VLAZ	jodhpurcabservice\.com
+1698496082	Jeff Schaller	good-cplusplus\.blogspot
+1698502671	Jeff Schaller	(?-i:xJZ5sqUrS3CFv9cy5)(?#forms.gle)
+1698489485	VLAZ	menukavishal\.org
+1698507223	Vickel	givevaluefirst\.com
+1698508871	Makyen	givevaluefirst(?!\.com)
+1698509216	Makyen	alo-tamirkar\.ir
+1698512091	Makyen	flexospaces\.com
+1698512114	Makyen	flexo[\W_]*+spaces(?!\.com(?<=flexospaces\.com))
+1698522839	Vickel	targetboard\.ai
+1698527776	Mithical	getssolution\.com
+1698541215	Jeff Schaller	zeus138guardian\.com
+1698550552	Makyen	(?-i:dmLR2)(?<=\b(?<![^\W_]-)shorturl\.at\/dmLR2)
+1698550575	Makyen	mechanicladenthereby\.com
+1698550597	Makyen	(?-i:csytsqfjw)
+1698550618	Makyen	11d59abe0ec1d24b436c4fafd79a7bcd
+1698550721	Makyen	cuevana88\.expandcart\.com
+1698584735	Jeff Schaller	sjdesignconsultants\.com
+1698584780	Jeff Schaller	woodznails\.com
+1698590585	Makyen	vipstealth\.com
+1698590762	Makyen	architect[\W_]*+shalini[\W_]*+jain
+1698590787	Makyen	sj[\W_]*+design[\W_]*+studio
+1698590819	Jeff Schaller	cogentsolutions\.co
+1698590863	Makyen	cogentsolutions(?!\.co)
+1698595062	Makyen	uctafex[\W_]*+com
+1698608220	Makyen	99cryptowallet\.com
+1698608253	Makyen	(?:xverse|okx|math|zilpay|bitget|sub)[\W_]*+wallet[\W_]*+extension
+1698608274	Makyen	xverse-wallet\.com
+1698608296	Makyen	phantom[\W_]*+extension
+1698615427	Nisse Engström	osman2102\.blogspot
+1698659939	cigien	codedthemes\.com
+1698655060	VLAZ	claimsprousa\.com
+1698655096	VLAZ	hilltopresorts\.com
+1698660081	cigien	hilltop[\W_]*+resorts?+(?!\.com(?<=hilltopresorts\.com))
+1698652383	Nick	receipt-bot\.com
+1698660195	cigien	receipt[\W_]*+bot(?!\.com(?<=receipt-bot\.com))
+1698651660	VLAZ	nsktglobal\.com
+1698660248	cigien	sunflower-cissp\.com
+1698660318	cigien	partsips\.com
+1698660387	cigien	bitlocker-recovery\.com
+1698660426	cigien	centralauctiongroup\.com
+1698660450	cigien	central[\W_]*+auction[\W_]*+group(?!\.com(?<=centralauctiongroup\.com))
+1698660477	cigien	trishla-city\.co\.in
+1698660712	VLAZ	klik\.pler\.pro
+1698660716	VLAZ	kliksatu\.pler\.pro
+1698660722	VLAZ	Marontoto
+1698663467	Jeff Schaller	voicelifemedia\.com
+1698666636	cigien	makan\.com\.qa
+1698671016	Makyen	capsnip\.com
+1698672701	cigien	seshionshub\.com
+1698672725	cigien	surveymonkey\.de
+1698675720	Spevacus	boostmyclass\.com
+1698676122	cigien	loscabosairportshuttles\.com
+1698676147	cigien	los[\W_]*+cabos[\W_]*+airport[\W_]*+shuttles(?!\.com(?<=loscabosairportshuttles\.com))
+1698676407	Jeff Schaller	soundtakestudio\.com
+1698678533	Can O' Spam	gdfskills\.com
+1698610172	Vickel	adrian[\W_]*+lamo[\W_]*+hacker
+1698527865	Vickel	filmsnews21\.com
+1698528080	Vickel	culpa[\W_]*+mia[\W_]*
+1698527859	Vickel	moviesfoxs\.com
+1698685373	Can O' Spam	sepaxml\.com
+1698686136	Can O' Spam	revenantcyberhacker\.com
+1698686420	Makyen	revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1698686639	Jeff Schaller	99papers\.com
+1698688387	cigien	fieldofspartas\.com
+1698735857	Nick	darjewellery\.com
+1698734816	Nick	airportsterminal\.com
+1698732706	VLAZ	cycle-run\.com
+1698730103	Nick	genericmate\.com
+1698741290	cigien	thehackerspro
+1698741328	cigien	jkjainbuildtech\.com
+1698741353	cigien	workonicservices\.com
+1698736712	Nick	unitedshopfronts\.co\.uk
+1698741524	cigien	dar[\W_]*+jewellery(?!\.com(?<=darjewellery\.com))
+1698741721	cigien	upskillfinder\.com
+1698741941	cigien	colourfulindianholidays\.com
+1698743568	cigien	guideublog\.com
+1698745377	cigien	\bfreedom\.net(?<!-freedom\.net)
+1698747460	cigien	watchgalaxy\.com\.au
+1698747553	Jeff Schaller	iplayboy\.in
+1698747581	cigien	iplayboy(?!\.in)
+1698751741	Jeff Schaller	tilda\.ws
+1698751771	Jeff Schaller	auravaastu\.com
+1698753107	cigien	darkwebonlinehackers\.com
+1698753131	cigien	dark[\W_]*+web[\W_]*+online[\W_]*+hackers(?!\.com(?<=darkwebonlinehackers\.com))
+1698753180	cigien	srisaichandratravel\.com
+1698753210	cigien	sri[\W_]*+sai[\W_]*+chandra[\W_]*+travel(?!\.com(?<=srisaichandratravel\.com))
+1698753235	cigien	aura[\W_]*+vaastu(?!\.com(?<=auravaastu\.com))
+1698753325	cigien	robinhoodapphelp\.com
+1698753430	Jeff Schaller	Ketodietzone
+1698753857	Jeff Schaller	usaseoit\.com
+1698753917	Jeff Schaller	blogzymedia\.com
+1698755377	Jeff Schaller	littlemindsdubai\.com
+1698756079	Jeff Schaller	customtentswithlogo\.com
+1698756543	Jeff Schaller	KarlienVanJaarsveldKetoGummiesZA
+1698760974	Jeff Schaller	octagoshealth\.com
+1698761045	Makyen	octagos(?:[\W_]*+(?:al|engine|health(?!\.com(?<=octagoshealth\.com)))s?)*
+1698761728	Makyen	chipsx\.net
+1698761763	Makyen	chipsx(?!\.net)
+1698771483	Makyen	01b266144a9aa49655(?# upwork.com)
+1698771562	Jeff Schaller	df\.tips
+1698771990	Jeff Schaller	gameart\.net
+1698772194	Jeff Schaller	clusterlinks\.com
+1698772263	Jeff Schaller	analec\.com
+1698772343	Jeff Schaller	sofotex\.com
+1698772506	Jeff Schaller	snorgtees\.com
+1698772529	Jeff Schaller	snorgcontent\.com
+1698772611	Jeff Schaller	guyideas\.esy\.es
+1698772680	Jeff Schaller	icognix\.net
+1698772803	Jeff Schaller	fdc\W?servers\.net
+1698772882	Jeff Schaller	autoclavedepot\.com
+1698772915	Jeff Schaller	filerepairforum
+1698772963	Jeff Schaller	lxwpro-t
+1698772990	Jeff Schaller	brokenplanetclothing\.co
+1698773042	Jeff Schaller	casque-beatsbydre
+1698775754	Jeff Schaller	buyusareviews\.com
+1698778249	Jeff Schaller	msgixgenai(?:@outlook\.com)
+1698778431	Makyen	ruoluye
+1698785850	Makyen	dinosaur-game\.io
+1698787655	Vickel	hinataporn\.com
+1698788352	Jeff Schaller	tenderpublish
+1698788401	Jeff Schaller	lovebiscuits
+1698788476	Jeff Schaller	z-data\.blogspot
+1698788528	Jeff Schaller	Eglobalfitness
+1698789038	Jeff Schaller	driverdr\.com
+1698788717	Vickel	hinata[\W_]*+porn(?!\.com)
+1698789201	Jeff Schaller	fifa\d*online
+1698789272	Jeff Schaller	wearepropeople\.com
+1698789338	Jeff Schaller	tagwitty
+1698789383	Jeff Schaller	axsoccertours
+1698789455	Jeff Schaller	ragednablog
+1698789627	Jeff Schaller	ios8easyjailbreak
+1698789707	Jeff Schaller	trustessaywriting
+1698789845	Jeff Schaller	thesispaperwriters
+1698789911	Jeff Schaller	trustmyessay
+1698789961	Jeff Schaller	besttvshows
+1698791933	Jeff Schaller	pelevoniface
+1698791995	Jeff Schaller	examguidez
+1698816104	Makyen	stewartsacademy\.com
+1698816564	Makyen	digihubexpert\.com
+1698817295	Makyen	fwmspl\.com
+1698835161	Jeff Schaller	cvrnews\.net
+1698820928	Nick	gladiasconsulting\.com
+1698821100	VLAZ	applicationformats\.com
+1698821328	Nick	Gladias[\W_]*+Consulting(?!\.com)
+1698821740	VLAZ	luxestar\.co\.in
+1698824329	VLAZ	medzbuddy\.com
+1698824550	VLAZ	mountkilimanjaro\.guide
+1698828272	VLAZ	cricket100\.online
+1698833477	VLAZ	legendarylimousines\.com
+1698833565	VLAZ	(?-i:ctHP7D)(?#g.co)
+1698833658	VLAZ	imonster\.space
+1698834521	VLAZ	naturalherbscentre\.com
+1698834534	VLAZ	natural[\W_]*herbs[\W_]*centre(?!\.com)
+1698842174	Jeff Schaller	residenteviljacket\.com
+1698841960	VLAZ	shivayogaashram\.com
+1698842145	VLAZ	IDEOCOLLEGE
+1698841968	VLAZ	outdoorproject\.com
+1698847363	Makyen	suggeststrongpassword\.com
+1698850571	Jeff Schaller	bcr99th\.co
+1698850609	Jeff Schaller	777vin\.vip
+1698847267	VLAZ	bossebonus\.se
+1698854052	Makyen	bcr99th(?!\.co)
+1698854473	Makyen	777[\W_]*+vin(?!\.vip(?<=777win\.vip))(?:[\W_]*+vip)?
+1698854500	Makyen	(?-i:zQ398g)(?#fiverr.com)
+1698854525	Makyen	jim\.standard\.mortgage(?:@gmail\.com)?
+1698855221	Spevacus	outdoorelectricbike\.com
+1698855948	Can O' Spam	mocbai89\.com
+1698856028	Can O' Spam	red88\.work
+1698856041	Can O' Spam	red88work
+1698861258	Jeff Schaller	911eda\.com
+1698863267	Vickel	partsknock\.com
+1698882486	Makyen	(?-i:fY8ZxAoc4Bk)(?#youtu.be)
+1698889099	Makyen	buyexceltemplates\.com
+1698889722	Jeff Schaller	smartpcfixer
+1698903052	Makyen	aerocityescorts\.services
+1698903125	Makyen	bestweddingvenueinudaipur
+1698903145	Makyen	weddingvenuesinudaipur
+1698903165	Makyen	weddingvenueinudaipur
+1698904950	Nick	faredealspot\.com
+1698911574	Jeff Schaller	asalgacor\.com
+1698911605	Jeff Schaller	wellnesspeakcbdgummiesorder
+1698918157	Makyen	garudaslotgacor[\W_]*+com
+1698918186	Makyen	garudaslot
+1698918215	Makyen	asalgacor(?!\.com)
+1698918245	Makyen	edha[\W_]*+care(?!\.com(?<=edhacare\.com))
+1698922044	Jeff Schaller	hopsworks\.ai
+1698921623	VLAZ	virteract\.com
+1698921485	VLAZ	icore\.net\.in
+1698919931	VLAZ	nordenvation\.com
+1698922880	Jeff Schaller	madainproject\.com
+1698923566	Jeff Schaller	labhgarh\.com
+1698924728	Jeff Schaller	pubfonts\.com
+1698928442	Jeff Schaller	Silverthecrecovery
+1698929460	Jeff Schaller	getpuravive\.com
+1698929507	Jeff Schaller	theforward\.com\.au
+1698933166	cigien	viraltrendss\.com
+1698933569	cigien	pacedigitalmarketing\.com
+1698933590	cigien	joyitsolutions\.co
+1698934085	Jeff Schaller	oahcg\.com
+1698934577	cigien	riversandstoneaggregates\.com
+1698934607	cigien	river[\W_]*+sand[\W_]*+stone[\W_]*+aggregates(?!\.com(?<=riversandstoneaggregates\.com))
+1698936711	cigien	thepoolapk\.com
+1698936889	Makyen	joyitsolutions(?!\.co)
+1698940537	Jeff Schaller	ahanutsvn\.com
+1698944711	Jeff Schaller	salkantaytrekmachu\.com
+1698944732	Makyen	salkantay[\W_]*+trek[\W_]*+machu(?!\.com(?<=salkantaytrekmachu\.com))
+1698946468	cigien	itnagency\.com
+1698947054	Makyen	itn[\W_]*+agency(?!\.com(?<=itnagency\.com))
+1698961234	Vickel	centurycyberhacker\.pro
+1698965442	Nisse Engström	nursinglevel\.com
+1698967539	Makyen	zachpfeffer\.com
+1698966524	Nick	kirotravel\.com
+1698967567	Makyen	kiro[\W_]*+travel(?!\.com(?<=kirotravel\.com))
+1699005776	Jeff Schaller	nkgifs\.com
+1699004619	VLAZ	(?-i:13l_AQC0WLQof8TO2QewKE5v3POiskQzfuUmK4sRFJOI)(?#google spreadsheet with spam links)
+1699004429	VLAZ	silveredgepackaging\.com
+1699004164	VLAZ	notsupporting\.com
+1698998792	Nick	eland\.co\.kr
+1698993175	VLAZ	infinitydecor\.co\.uk
+1698989371	Nick	ordorite\.com
+1698978368	Vickel	vpnmulti\.com
+1699006740	Jeff Schaller	chatgptopenai\.nl
+1698976972	Vickel	chat[\W_]*+gpt[\W_]*+in[\W_]*+het[\W_]*+nederlands
+1699007476	Jeff Schaller	gorgbet\.info
+1699008796	Can O' Spam	linuxckacoupon\.com
+1699009064	Can O' Spam	streamingfamous\.com
+1699012281	cigien	aqglassaz\.com
+1699014685	cigien	smride\.com
+1699014704	cigien	smride(?!\.com)
+1699015033	Jeff Schaller	sanmarbuildingservices\.com
+1699017645	Can O' Spam	advisorworlds\.com
+1699020837	Makyen	gorgbet(?!\.info)
+1699021294	cigien	mdasik\.com
+1699029150	Jeff Schaller	tallestly\.com
+1699030018	Jeff Schaller	shankaransilks\.com
+1699037118	Spevacus	foreignersjob\.com
+1699051058	Makyen	edugames\.com
+1699053322	Makyen	michealbitcoinrecoveryfirm(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1699053350	Makyen	tiktokmod\.pk
+1699063076	Nick	charmington\.org
+1699081020	cocomac	👉[\W_]*+CLICK[\W_]*+HERE
+1699087081	Nisse Engström	reclaimycoin\.com
+1699088951	Nisse Engström	luckycola\.io
+1699091085	Nisse Engström	fairpharmacochin\.com
+1699098143	Jeff Schaller	kimchiandbeans\.com
+1699102962	Jeff Schaller	cyberbd\.xyz
+1699077634	Nick	chnwetwipes\.com
+1699084304	Nick	quest-testing\.com
+1699114393	Makyen	bliss[\W_]*+paradox[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1699114509	Makyen	creativesolutionservices\.com
+1699114617	Makyen	adscloaking\.com
+1699116826	Jeff Schaller	tcn\.news
+1699117829	Jeff Schaller	exploreusa-hub\.blogspot
+1699119005	Jeff Schaller	M[\W_]*+Y[\W_]*+A[\W_]*+S[\W_]*+S[\W_]*+E[\W_]*+T[\W_]*+R[\W_]*+E[\W_]*+C[\W_]*+O[\W_]*+V[\W_]*+E[\W_]*+R[\W_]*+Y
+1699119044	Jeff Schaller	CRYPTO2CASHAPP
+1699119083	Jeff Schaller	ForensicExpertBilly
+1699127469	Vickel	dropshipman\.com
+1699128318	cigien	dropshipman(?!\.com)
+1699127642	Vickel	mypcgames\.net
+1699143665	Makyen	(?-i:rRil0fjDWxk)(?#youtu.be)
+1699155791	Jesse	sandiegofamilylawyer\.net
+1699175075	cigien	discoverystlucia\.com
+1699169013	Nick	webseozone\.com
+1699183822	cigien	manmash\.consulting
+1699191066	Machavity	walczak\.it
+1699196138	Jeff Schaller	axishealth\.ca
+1699198894	Jeff Schaller	lumbarest\.com
+1699203701	Makyen	gary[\W_]*+mckinnon(?:[\W_]*+(?:at[\W_]*+)?technologist(?:[\W_]*+(?:dot[\W_]*+)?com)?)
+1699203729	Makyen	gary[\W_]*+mckinnon[\W_]*+recovery
+1699212436	Makyen	chandu[\W_]*+kanuri(?:[\W_]*+(?:unlimited|music)s?)*
+1699212967	DavidW	andamantech\.com
+1699169108	Nick	greenstardriving\.ca
+1699139619	Jeff Schaller	(?-i:^Khoa Dang$)
+1699142434	Vickel	group[\W_]*+stock[\W_]*+management
+1699260930	cigien	oecd-forum\.org
+1699260988	cigien	stmbet\.rest
+1699261008	cigien	stmbet(?!\.rest)
+1699261041	cigien	tarkib-athath\.com
+1699260924	VLAZ	mahaveerdistributors\.com
+1699261036	VLAZ	(?-i:9jl5s8)(?#rb.gy)
+1699261133	cigien	celebchitchat(?!\.com)
+1699261076	VLAZ	celebchitchat\.com
+1699261724	VLAZ	aust\.edu\.lb
+1699262086	cigien	bionicjoints\.com
+1699262932	cigien	vindictadigital\.co\.uk
+1699267569	VLAZ	onestopcontentsolutions\.com
+1699231826	Nick	pixelscalculator\.com
+1699240031	Nick	databio1\.com
+1699243201	Nick	myreceiptify\.com
+1699254177	VLAZ	nuzanthra\.my\.id
+1699266276	VLAZ	thumbnailchecker\.com
+1699269200	VLAZ	peppynite\.com
+1699270868	cigien	chonfo\.com
+1699274094	cigien	dmvedu\.org
+1699274407	VLAZ	readymatrimonial\.in
+1699281274	Makyen	pchelpreviews\.com
+1699282706	Makyen	48hourslogo\.com
+1699291378	Spevacus	urbancitylahore\.net
+1699291406	Spevacus	reactjsninja\.com
+1699293018	Jeff Schaller	asalvision\.com
+1699294488	Jeff Schaller	thedeveloperschool\.com
+1699301799	Jeff Schaller	dpmatka\.net
+1699321239	Makyen	(?:free[\W_]*+)?gel(?:[\W_]*+guns?)?[\W_]*+blasters?(?:[\W_]*+guns?)?
+1699325634	Jeff Schaller	zattrecoverypro1
+1699333796	Nick	prabhubhakti\.com
+1699335790	cocomac	whizhack\.in
+1699335923	cocomac	legitsfentanyl\.com
+1699341011	Nick	digitalcappuccino\.com
+1699346246	cigien	prime[\W_]*+insights(?!\.in(?<=primeinsights\.in))
+1699339657	VLAZ	vegas79\.bid
+1699346349	cigien	celestialleather\.co\.uk
+1699339701	VLAZ	(?-i:1WdaymSxuv1goWk5bD1FlnKtCjJZTPpQc7kGo5NstAE4)(?#google spreadsheet)
+1699346599	cigien	gachanoxo\.com
+1699338495	VLAZ	cramkey\.com
+1699339582	VLAZ	getsvisionsolutions\.com
+1699346815	cigien	getsvision[\W_]*solutions(?!\.com(?<=getvisionsolutions\.com))
+1699347362	cigien	whizhack(?!\.in)
+1699351730	cigien	mcneelamusic\.com
+1699351755	cigien	spectup\.com
+1699351951	cigien	instascenex\.com
+1699352888	Jeff Schaller	monoindustries\.in
+1699355985	Jeff Schaller	bayitoto\.com
+1699356148	Jeff Schaller	yufta\.com
+1699358948	cigien	autelobd\.com
+1699359046	cigien	bayitoto(?!\.com)
+1699359079	cigien	urgentspellcaster24\.blogspot
+1699359116	cigien	pyschicsandastrology\.com
+1699359142	cigien	yufta(?!\.com)
+1699359509	Jeff Schaller	all4kidsonline\.com\.au
+1699359737	Jeff Schaller	binaryinformatics\.com
+1699359963	cigien	all4kidsonline(?!\.com\.au)
+1699360014	cigien	binary[\W_]*+informatics(?!\.com(?<=binaryinformatics\.com))
+1699360241	cigien	gatot\.io
+1699360272	cigien	kuya4d
+1699364332	Jeff Schaller	HBOSLOT188
+1699365061	Vickel	STARJP
+1699367908	cigien	appicoders\.com
+1699369054	cigien	moornotary\.com
+1699369092	cigien	moor[\W_]*+notary(?!\.com(?<=moornotary\.com))
+1699369171	Jeff Schaller	tyc1799\.com
+1699369968	cigien	medsalin\.com
+1699370346	Makyen	steroids[\W_]*+house(?!\.com(?<=steroidshouse\.com))
+1699370392	Makyen	mono[\W_]*+industries(?!\.in(?<=monoindustries\.in))
+1699370778	Makyen	celestial[\W_]*+leather(?!\.co\.uk(?<=celestialleather\.co\.uk))
+1699370841	Makyen	techtoroms(?!\.com)
+1699372351	Jeff Schaller	ehsaasprogram8171\.net\.pk
+1699383751	Jeff Schaller	quizplus\.com
+1699375794	Jesse	takemyonlinexam\.com
+1699390446	Vickel	menupro\.org
+1699379922	Vickel	sunknowledge\.com
+1699378522	Vickel	zaapit\.com
+1699430340	VLAZ	bharatphoton\.com
+1699430293	VLAZ	educationmitra\.in
+1699429860	VLAZ	qsafe\.com\.qa
+1699429214	VLAZ	disneybeginpluss\.com
+1699429138	VLAZ	dealermarket\.com
+1699427057	VLAZ	infycletechnologies\.com
+1699418569	Jesse	nextdynamix\.com
+1699437035	cigien	mistymountain\.in
+1699437059	cigien	misty[\W_]*+mountain(?!\.in(?<=mistymountain\.in))
+1699437093	cigien	joinwinchips\.com
+1699437146	cigien	ivigafaucet\.com
+1699437193	cigien	shrtx\.cc
+1699437217	cigien	sss[\W_]*+global(?!\.org\.in(?<=sssglobal\.org\.in))
+1699440138	VLAZ	meathousegourmet\.com
+1699440406	cigien	dissertationhomework\.com
+1699441702	Jeff Schaller	theresearchguardian\.com
+1699442193	Jeff Schaller	bdtopcoder\.xyz
+1699442249	Jeff Schaller	aviationanddefencemarketreports\.com
+1699442297	Jeff Schaller	cableandinternetnearme\.com
+1699442408	Jeff Schaller	urbantasker\.com
+1699427517	VLAZ	URBAN[\W_]*CITY[\W_]*LAHORE(?!\.net)
+1699426502	VLAZ	(?-i:bgrAB)(?#shorturl.at)
+1699443932	Jeff Schaller	elitewizardrecovery\.com
+1699443970	Jeff Schaller	eliterecovery247
+1699448714	Jeff Schaller	elearning\.yuasathai\.com
+1699457888	cigien	ymusicapk\.com
+1699463278	Vickel	teajewel\.com
+1699463341	cigien	teajewel(?!\.com)
+1699464406	Jesse	askdbapro\.blogspot
+1699464456	Jesse	askdbapro(?!\.blogspot)
+1699465892	cigien	savefrommedia\.com
+1699472949	Jeff Schaller	skyrockettrade
+1699473395	Jeff Schaller	getshavedice\.com
+1699473575	Jeff Schaller	trucksbuses\.com
+1699479494	Justine Krejcha	Perfect Hackers Recovery
+1699513406	Jesse	openim\.io
+1699522079	cigien	nichooli\.com
+1699524382	cigien	kleurplatenwk\.nl
+1699524450	cigien	wdpart\.com
+1699524481	cigien	klaycart\.com
+1699524512	cigien	klaycart(?!\.com)
+1699524534	cigien	papas-freezeria\.com
+1699524573	cigien	fastcheck\.com\.hk
+1699524603	cigien	letsguide2023\.com
+1699524627	cigien	amexguide2022\.wordpress\.com
+1699524656	cigien	amexconfirmcard\.wordpress\.com
+1699524677	cigien	americanexpressnfirm\.wordpress\.com
+1699524751	cigien	lumyri\.com
+1699514054	Jesse	maximanutrition\.com
+1699528081	Jeff Schaller	nexob\.ir
+1699528320	Jeff Schaller	himalayayogateachertraining\.com
+1699530607	cigien	gyaniadda\.com
+1699530762	cigien	oswalairtravels(?!\.com)
+1699530856	cigien	1k[\W_]*+daily[\W_]*+profit[\W_]*+reviews?+(?!\.blogspot(?<=1k-daily-profit-reviews\.blogspot))
+1699513800	Jesse	nagmani\.com\.np
+1699513766	Jesse	avalon-services\.com\.sg
+1699530998	cigien	thedigibundle\.in
+1699531018	cigien	the[\W_]*+digi[\W_]*+bundle(?!\.in(?<=thedigibundle\.in))
+1699531047	cigien	photoboothdfw\.com
+1699531079	cigien	photo[\W_]*+booth[\W_]*+dfw(?!\.com(?<=photoboothdfw\.com))
+1699531102	cigien	gentlegroovecbdorder\.blogspot
+1699531126	cigien	imnotgettingit\.com
+1699532147	Jeff Schaller	surelocalseo\.com
+1699542867	Makyen	vin[\W_]*+party[\W_]*+rentals(?!\.com(?<=vinpartyrentals\.com))
+1699543550	cigien	dreveal\.com
+1699548077	Jeff Schaller	kuyhaa-me\.id
+1699548097	Jeff Schaller	windows11activators\.com
+1699548484	Makyen	ehsaas-programs\.pk
+1699548506	Jeff Schaller	trading4giving\.com
+1699549064	cigien	festaradontech\.com
+1699554726	Jeff Schaller	(?-i:D346224A2D5D56A319E3)(?# udemy.com referral)
+1699556792	Jesse	repair\.dental
+1699513674	Jesse	mxdraw3d\.com
+1699513582	Jesse	80\.92\.204\.30
+1699557474	Jeff Schaller	UsaSeoit
+1699583018	Jeff Schaller	innodex\.io
+1699603188	cigien	warmoolheaterreviewsuk\.blogspot
+1699601315	VLAZ	spilfy\.com
+1699601403	VLAZ	imrantech\.site
+1699603851	cigien	vital?tale(?:[\W_]*+com)?
+1699603879	cigien	barcodeindia\.com
+1699603908	cigien	barcode[\W_]*+india(?!\.com(?<=barcodeindia\.com))
+1699603989	cigien	nexahost\.com
+1699601951	VLAZ	coupomated\.com
+1699604163	cigien	indianestategroup\.com
+1699604184	cigien	indian[\W_]*+estate[\W_]*+group(?!\.com(?<=indianestategroup\.com))
+1699583072	Vickel	smartchoiceweb
+1699575121	Jesse	dmvpinballs\.shop
+1699605171	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))(?<!fa-plus)
+1699611339	VLAZ	kinhmatca\.com
+1699614929	Nick	cloudiffic\.com
+1699619419	cigien	fishingrodworld\.com
+1699619450	cigien	condredloanworld(?:@yahoo\.com)?
+1699620057	VLAZ	breen\.com\.ua
+1699602064	VLAZ	(?-i:j064C)(?#t.ly)
+1699601815	VLAZ	steeloncall\.com
+1699601666	VLAZ	vitatale(?!\.com)
+1699601642	VLAZ	vitatale\.com
+1699587531	Jesse	bestwritefirst\.com
+1699634763	Jeff Schaller	wizardlarryrecovery\.com
+1699635728	Jeff Schaller	wizardlarryrecovery(?!\.com)
+1699646496	Vickel	roysviewfinder\.com
+1699631402	Jesse	Sandra Ecrin
+1699690235	Nisse Engström	silverishq\.com
+1699690444	Nisse Engström	helmetonly\.com
+1699694272	Nisse Engström	koeln-umzugsfirma\.de
+1699700479	cigien	espacioapk(?!\.tech)
+1699700488	cigien	espacioapk\.tech
+1699700558	cigien	apkinflux\.com
+1699700596	cigien	agentmrszafirah7(?#telegram)
+1699700688	cigien	androidrub\.com
+1699700741	cigien	techyidiot\.com
+1699700806	cigien	zxacademy\.com
+1699700828	cigien	zx[\W_]*+academy(?!\.com(?<=zxacademy\.com))
+1699700849	cigien	tatglam\.com
+1699675008	Jesse	umzuege-in-hannover\.de
+1699656096	Jesse	protectremote\.com
+1699701156	cigien	soumendranaththakur\.blogspot
+1699658028	Vickel	easyacc\.store
+1699703224	cigien	cupheadapk\.com\.mx
+1699705865	Jeff Schaller	Sportsurge
+1699705891	Jeff Schaller	slot888\.plus
+1699710041	Nisse Engström	loei\.energy\.go\.th
+1699711531	Nisse Engström	histats\.com
+1699711621	Vickel	2wheelers\.in
+1699711879	Jeff Schaller	shorturl\.asia
+1699712184	Jeff Schaller	scimath\.org
+1699713561	Jeff Schaller	jayanagarpackers\.in
+1699720166	Jeff Schaller	startfleet\.io
+1699720947	Jesse	termuxcommands\.com
+1699747483	cigien	uss\.eu\.com
+1699747503	cigien	usiic\.co
+1699747595	cigien	appsfab\.com
+1699746653	Vickel	appsfab(?!\.com)
+1699780451	cigien	applesolved\.com
+1699775301	Nick	techzone-agency\.com
+1699780549	cigien	tetsybooks\.com
+1699770444	Justine Krejcha	cricolive\.com
+1699780591	cigien	(?-i:gKW0EdCR89)(?#t.co)
+1699765141	Jesse	silkroad6ownowfk\.onion
+1699781478	cigien	brunoe[\W_]*+quick[\W_]*+hack(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?com)?
+1699781849	cigien	go\.cb-w\.com
+1699781877	cigien	ethereumhnb1\.us
+1699749831	Vickel	ethereumhub018\.top
+1699749861	Vickel	usdt-eth20\.com
+1699783243	cigien	thededicatedengineer\.com
+1699800357	Jeff Schaller	(?-i:rDA0xP)(?#fiverr)
+1699803030	Jeff Schaller	animeunity\.me
+1699804003	cigien	animeunity(?!\.me)
+1699804294	cigien	adwarerecoveryspecialist\.expert
+1699804315	cigien	adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
+1699807278	Jeff Schaller	rumahbicara\.com
+1699807338	cigien	lrapk\.com
+1699818791	Jeff Schaller	kamas24\.com
+1699833342	Makyen	kamas24(?!\.com)
+1699763431	Justine Krejcha	Brunoe Quick Hack
+1699850303	Jesse	peoplesketogummiesget\.blogspot
+1699853448	Makyen	people[\W_]*+s[\W_]*+keto[\W_]*+gummies
+1699863309	Nick	drgodwinharbalhomecure22\.simdif\.com
+1699865844	cigien	linden-umzuege\.de
+1699865883	cigien	britishassignmentshelp\.co\.uk
+1699854334	Jesse	ayurleafherbals\.com
+1699847269	Nick	rynga\.com
+1699873276	Nick	salesblink\.io
+1699857313	Jesse	Smarter[\W_]*+Feds[\W_]*+Retirement
+1699847920	Jesse	khoahoc\.news
+1699878928	Jeff Schaller	highestspeedinternetinmyarea\.com
+1699878971	Jeff Schaller	kytewayelearning\.com
+1699879009	Jeff Schaller	migrateclouddata\.com
+1699879056	Jeff Schaller	hometownstorageunit\.com
+1699881841	Jeff Schaller	eventsbymala\.com
+1699882135	Jeff Schaller	convertidordemp3\.com
+1699884286	Jeff Schaller	exploremobiles\.com
+1699885314	Jeff Schaller	getweys\.com
+1699885726	Jeff Schaller	tiposdefobia\.com
+1699886733	General Grievance	shatteredsilicon\.net
+1699887667	Jeff Schaller	epricebd\.com
+1699888912	Makyen	umrahme\.com
+1699893017	Jeff Schaller	chauautour\.wordpress\.com
+1699894786	Jeff Schaller	inshotproapps\.com
+1699894821	Jeff Schaller	apps2app\.in
+1699895729	cigien	essaybeam\.com
+1699899621	cigien	getweys(?!\.com)
+1699900034	cigien	pretendpal\.com
+1699900054	cigien	pretend[\W_]*+pal(?!\.com(?<=pretendpal\.com))
+1699900590	cigien	salesblink(?!\.io)
+1699900609	cigien	tarsil\.pk
+1699900799	cigien	snowdaypredictorcanada\.com
+1699900820	cigien	snow[\W_]*+day[\W_]*+predictor[\W_]*+canada(?!\.com(?<=snowdaypredictorcanada\.com))
+1699902235	Makyen	inshot[\W_]*+pro(?:[\W_]*+apks?)*
+1699903040	Vickel	techquits\.com
+1699903515	Makyen	kleurplaten
+1699907316	Vickel	^Whiskeyfox$
+1699922577	Vickel	760Plus
+1699912666	Vickel	kviku\.ru
+1699937059	Jesse	geometrydash-unblocked\.com
+1699931524	Nick	saigontechnology\.com
+1699953916	Robert Longson	jackcliffelectrical\.com\.au
+1699954571	cigien	jack[\W_]*+cliff[\W_]*+electrical(?!\.com\.au(?<=jackcliffelectrical\.com\.au))
+1699954591	cigien	tafrii\.com
+1699954621	cigien	myassignmentspro\.com
+1699954829	cigien	cloudmineinc\.com
+1699954856	cigien	teslatogel4d\.com
+1699944844	Nick	bedsdivans\.co\.uk
+1699944372	Nick	editxor\.com
+1699942820	Nick	customboxeslane\.com
+1699957482	cigien	windupradio\.com
+1699960635	Jeff Schaller	earnnmony\.wordpress\.com
+1699961903	Jeff Schaller	labaidcancer\.com
+1699961778	Nick	industrack\.com
+1699961987	cigien	labaid[\W_]*+cancer(?!\.com(?<=labaidcancer\.com))
+1699965689	Jeff Schaller	neodrafts\.co
+1699967243	Jeff Schaller	solarstudy\.in
+1699971560	cigien	saigon[\W_]*+technology(?!\.com(?<=saigontechnology\.com))
+1699972233	Jeff Schaller	luck8\.fund
+1699976367	Jeff Schaller	filesoftware\.org
+1699979041	Jeff Schaller	wizardwebrecoveryteam
+1699979633	Jeff Schaller	ev-info\.pl
+1699980088	Jeff Schaller	sizinkahveci\.com\.tr
+1699982153	Makyen	sizinkahveci(?!\.com\.tr)
+1699989150	Jeff Schaller	nadeempro\.com
+1699989223	Jesse	pokemondock\.com
+1699990149	Jeff Schaller	squidsllc\.com
+1699992978	Jeff Schaller	Marieconsultancyoz(?:@gmail\.com)?
+1699993009	Jeff Schaller	Marie_consultancy
+1699996686	Jeff Schaller	BUFFETTGIVE
+1699996715	Jeff Schaller	rewenex[\W_]*+com
+1699997407	Nick	selar\.co
+1700006209	Makyen	bluehackangels407(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1700006104	Nick	MAVERICK[\W_]*+ANGELOS
+1700011962	Makyen	prestige88slot
+1700011484	Nick	fantasynz\.com
+1700018562	Jesse	seoexpertrakib\.com
+1700011606	Jesse	ykkck\.com
+1700046503	Jeff Schaller	inteloq\.com
+1700046750	Jeff Schaller	bresso-oven\.com
+1700046986	Jeff Schaller	lawnstuff\.com
+1700047100	Jeff Schaller	dreamhomemortgage\.com
+1700047313	Jeff Schaller	mepsking\.com
+1700052204	Jeff Schaller	i2k2\.com
+1700052232	Jeff Schaller	lorange-umzuege\.de
+1700055567	Jeff Schaller	recoverykeytechnology(?:@gmail\.com)?
+1700055599	Jeff Schaller	tiemdocanvas\.com
+1700062028	Jeff Schaller	po8\.cash
+1700062578	Jesse	perlanproject\.org
+1700062822	cigien	perlan[\W_]*+project(?!\.org(?<=perlanproject\.org))
+1700069180	Vickel	monarck\.kesug\.com
+1700067981	Jesse	universatpro\.com
+1700065472	Jesse	Underrated[\W]*+bibliotheca
+1700069719	Jesse	(?-i:^Corey Wilson$)
+1700008855	Jesse	dotnet-helpers\.com
+1700001113	Nick	pacsubsea\.com
+1700070016	Jesse	typesofengine\.com
+1700072310	Vickel	marbleeg\.com
+1700072314	Vickel	aqareegypt\.com
+1700074728	Jeff Schaller	insecure\.in
+1700074985	Makyen	cj800900(?:@gmail\.com)?
+1700075025	Jeff Schaller	chatgptlogin\.bz
+1700076187	Jeff Schaller	(?-i:rZZwxmCTdLCCd1es7)(?#forms.gle)
+1700076382	Vickel	biggbosslive\.live
+1700077507	Jesse	researchthinker\.com
+1700078010	Jesse	alright-hamilton\.com
+1700078349	Jeff Schaller	plyobookkeeping\.com
+1700080017	Spevacus	bestplaces\.biz
+1700088303	Vickel	import-from-egypt\.com
+1700102747	Makyen	^importfromegypt$
+1700104230	Jesse	lamthanhpottery\.com\.vn
+1700120313	Nick	buddy4exam\.com
+1700118118	Jesse	azadtechhub\.com
+1700115466	Jesse	orionstarsplayerslounge\.com
+1700121799	cocomac	konnra\.com
+1700101222	Jesse	metaorangedigital\.com
+1700122735	VLAZ	stansteadimmigration\.com
+1700124102	Nisse Engström	biborun\.com
+1700124137	Nisse Engström	nepxanh\.com
+1700124338	cigien	foodspark\.io
+1700124408	cigien	sevensolutionpk\.com
+1700124537	cigien	proactivehunter\.com
+1700124596	cigien	carrentaldrives\.com
+1700127166	cigien	growthleadersconsulting\.com
+1700127187	cigien	growth[\W_]*+leaders[\W_]*+consulting(?!\.com(?<=growthleadersconsulting\.com))
+1700129964	cigien	ichome\.com
+1700130000	cigien	sayloyal\.com
+1700131717	cigien	wozbuz\.com
+1700131755	cigien	smartmentors\.net
+1700133566	Jeff Schaller	daboost\.io
+1700134212	Jeff Schaller	authorsbreeze\.com
+1700138949	Jeff Schaller	limoudxb\.com
+1700139495	cigien	richtasty\.com
+1700142524	Vickel	jontanconsulting\.com
+1700142757	Vickel	tanjon383(?:@gmail\.com)?
+1700145985	Jeff Schaller	(?-i:KwEOmhHU)(?#cutt\.ly)
+1700148933	Spevacus	caledonianairporttransfers\.co\.uk
+1700149007	Jesse	hobarttaxicabs\.com\.au
+1700150457	Makyen	londonlogodesigners\.co\.uk
+1700150484	Jesse	chandnacorporation\.com
+1700152915	Makyen	crypto[\W_]*+intelligence[\W_]*+group
+1700152928	Makyen	omega[\W_]*+crypto(?:[\W_]*+recovery)?
+1700154530	Jesse	developerqna\.com
+1700155475	Jesse	(?-i:suxP3)(?#shorturl.at)
+1700155479	Jesse	(?-i:EOW17)(?#shorturl.at)
+1700155491	Jesse	(?-i:cdtA6)(?#shorturl.at)
+1700155495	Jesse	(?-i:dmERU)(?#shorturl.at)
+1700160467	Mast	shape[\W_]*+the[\W_]*+future
+1700163859	Glorfindel	questionsanswers786\.blogspot
+1700167320	cigien	adl[\W_]*+(?:solution|connect)
+1700153073	Jesse	bestliveforexcomexrecommendationsprovider\.wordpress\.com
+1700150451	Jesse	^Link Building$
+1700176581	Nick	rocketsinghcondos\.com
+1700188782	Vickel	unhss\.com
+1700193273	Jesse	ramitbd\.com
+1700192343	Nick	natadecocojuice\.com
+1700196879	cocomac	tortoiseandhare\.com\.au
+1700204485	Nick	rectitudecs\.com
+1700206431	Nick	thecodersmind\.com
+1700204057	Nick	astuteanalytica\.com
+1700209852	cigien	futurum\.tech
+1700206556	Nick	organic[\W_]*+fungus
+1700204205	Nick	techreloaded\.in
+1700214792	cigien	domyclassesnow\.com
+1700219489	cigien	futureteleradiology\.com
+1700221039	Jeff Schaller	brain-mentors\.com
+1700221205	cigien	phddissertation\.co\.uk
+1700221265	cigien	bestskincareserum\.com
+1700221295	cigien	dvmcentral\.com
+1700222058	cigien	makimo\.com
+1700223118	Jeff Schaller	create-cv-online\.com
+1700223374	cigien	dumps4expert\.com
+1700223394	cigien	dumps4expert(?!\.com)
+1700223423	cigien	theblankpageofficial\.blogspot
+1700227274	cigien	lifeandcanvas\.com
+1700227921	Jeff Schaller	gosoftwarebuy\.com
+1700228133	cigien	partyrock\.aws
+1700228154	cigien	partyrock(?!\.aws)
+1700204080	Nick	ytanime\.one
+1700201393	Nick	bitbrowser\.cn
+1700187296	Jesse	vapemodesa\.com
+1700206488	Nick	^codersmind$
+1700187469	Vickel	^vape[\W_]*+mode$
+1700143834	Jesse	orange-opensource\.github\.io
+1700143814	Jesse	medium\.com/@njakolouis
+1700117196	Jesse	017a4227a4f33db4c0(?#upwork)
+1700235906	cigien	lotus\.vn
+1700235934	cigien	thoitrangmelia\.com
+1700237158	Jeff Schaller	fundingpanel\.com
+1700239269	Jeff Schaller	britshomegarden\.com
+1700239380	cigien	inctra\.net
+1700239409	Jeff Schaller	(?-i:xBINT)(?#shorturl)
+1700240699	cigien	flightracker\.com\.au
+1700241796	Vickel	tempmailit\.com
+1700245353	Vickel	w3ven\.org
+1700249101	Jeff Schaller	baseballloop\.com
+1700252855	cigien	aljazeerahpestcontrol\.ae
+1700281049	Makyen	oupree\.com
+1700287254	Jesse	yourhomeguider\.com
+1700291989	Nisse Engström	bedsheaven\.com
+1700292575	Jesse	coupon-cart\.com
+1700295577	Jeff Schaller	amritahyd\.org
+1700296427	Jeff Schaller	dksolutionshub\.com
+1700301251	cigien	outsourcingtrainingbd\.com
+1700301367	cigien	coursedecote\.info
+1700301745	cigien	chatgptfrancais\.org
+1700301764	cigien	chatgptx(?:online)?\.(?:de|nl|es|fr)
+1700303185	cigien	healthsupplement24x7\.com
+1700303208	cigien	cyber[\W_]*+wizard[\W_]*+com(?<!cyber-wizard\.com)
+1700259677	Vickel	^Quanajah Pinnock$
+1700264702	Vickel	jdengs(?:@gmail\.com)?
+1700286080	Jesse	(?-i:P9F_RUZ5nUc)(?#YouTube)
+1700316686	Jeff Schaller	smm-panels-list\.com
+1700316746	Jeff Schaller	hackreveal\.com
+1700316866	Jeff Schaller	crystalidea\.com
+1700321193	Jeff Schaller	canyoncomponents\.com
+1700323132	Jeff Schaller	socialmarketing90\.com
+1700324027	Jeff Schaller	videobible\.com
+1700332055	Makyen	promxs
+1700332075	Makyen	promxs24(?:@gmail\.com)?
+1700332098	Makyen	zeusmasterhack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1700331895	Jesse	internationalshippingusa\.com
+1700337038	Jesse	twitter\.utools\.me
+1700326554	Jesse	royalstaruae\.com
+1700345367	Jesse	auto-accident-lawyers\.space
+1700353782	Makyen	auto[\W_]*+accident[\W_]*+lawyers(?!\.space(?<=auto-accident-lawyers\.space))
+1700365148	Jesse	khidmatgaar\.com
+1700376081	Nick	uppercase-converter\.com
+1700392945	cigien	photophantlab\.com
+1700392996	cigien	everythingonline24\.live
+1700393047	cigien	hackingprogramschwartzsoftware(?:@gmail\.com)?
+1700393143	cigien	love-spell-specialist\.com
+1700372323	Jesse	yeomyunglee1994\.wordpress\.com
+1700401958	cigien	lenostube\.com
+1700401978	cigien	lenostube(?!\.com)
+1700407704	Makyen	apkmedley\.com
+1700413031	Jeff Schaller	codingeagles\.com
+1700344923	Jesse	ellii\.com
+1700414697	Jesse	learnwithtravis\.com
+1700414742	Jesse	ripetopipeganja\.uk
+1700415160	Makyen	ripetopipeganja(?:@gmail\.com)?
+1700415287	Makyen	ultrahuman[\W_]*+ring(?:[\W_]*+air)?
+1700415533	Jeff Schaller	giveawaycode\.icu
+1700418952	Makyen	omegarecoveryspecialist \.com
+1700418973	Makyen	omegacryptos
+1700425029	Makyen	qlikview
+1700425050	Makyen	qliktech
+1700425149	Makyen	larixlandscape\.com
+1700433104	Jeff Schaller	baterybet\.com
+1700435508	Makyen	baterybet(?!\.com)
+1700437766	Vickel	(?-i:HwUU01xj)(?#cutt.ly)
+1700441828	Jesse	lendgo\.com
+1700445211	Jesse	cuongquoc\.com\.vn
+1700457719	Makyen	teeshopper\.in
+1700457747	Makyen	bemorepanda\.com
+1700457767	Makyen	knownet\.com
+1700457795	Makyen	\b(?<![^\W_]-)patch\.com(?![.-][^\W_])\b
+1700457815	Makyen	wirexscamreview\.com
+1700457836	Makyen	vyrl\.ae
+1700457856	Makyen	vyrl(?!\.ae)(?:[\W_]*+communications)?
+1700457876	Makyen	dalvkotinfotech\.com
+1700458721	Jesse	jeewer\.com
+1700461387	Jesse	connectioncounselingny\.com
+1700459881	Jesse	koinpark\.com
+1700468661	cigien	suoneriemp3gratis\.net
+1700468036	Nick	mdtdesign\.com\.au
+1700473620	Jeff Schaller	surgipro\.com
+1700473762	Jeff Schaller	campuslife\.telkomuniversity\.ac\.id
+1700474922	cigien	wordfields\.com
+1700474943	cigien	drugsclientonly\.online
+1700475352	cigien	sierrablinds\.com
+1700475387	cigien	certstraining\.com
+1700475417	cigien	certstraining(?!\.com)
+1700476416	cigien	cosmesurgehospital\.com\.pk
+1700476868	cigien	thegbapk\.com
+1700478896	Nick	agrieyes\.com
+1700483575	Jeff Schaller	sportgymgear\.com
+1700485017	Jeff Schaller	blog\.uniqkey\.eu
+1700487886	Jeff Schaller	umzug-bremen-guenstig\.de
+1700490352	Jeff Schaller	animationliberty\.com
+1700494086	Makyen	uniqkey(?!\.eu)
+1700495193	Makyen	chloe\.consultant1(?:@gmail\.com)?
+1700496617	Jeff Schaller	www-akblogs-iceiy-com
+1700496688	Jeff Schaller	akblogs\.iceiy\.com
+1700502696	Jesse	(?-i:8RVd5Kilo7E)(?#youtu.be)
+1700500410	Jesse	2malachi\.com
+1700512189	Makyen	recovering[\W_]*+(?:at[\W_]*+)?usa(?:[\W_]*+(?:dot[\W_]*+)?com)
+1700514590	Jesse	essayhelper\.me
+1700514594	Jesse	coursepivot\.com
+1700514830	Jesse	xaiwebsite\.com
+1700522409	Jesse	excelbookwriting\.com
+1700525115	Jesse	ecobansecurities\.io
+1700524981	Jesse	(?-i:47hlU7Y)(?#bit.ly)
+1700528775	Jeff Schaller	BENRECOVER20
+1700551929	Jesse	thermodynamic\.co\.in
+1700553106	Makyen	thermodynamic[\W_]*+services
+1700553159	Makyen	baidu\.com
+1700550211	Jesse	biswasrajflooring\.in
+1700546769	Jesse	blazingtools\.com
+1700547231	Jesse	mobileappname\.com
+1700560110	cigien	swishhomes\.in
+1700560134	cigien	scg-pro\.com
+1700558462	VLAZ	qualton\.com\.au
+1700560413	cigien	almohandez\.com
+1700557918	VLAZ	vc4\.com
+1700553632	Jesse	purecode\.ai
+1700561056	VLAZ	urbanwash\.qa
+1700566219	cigien	theincomeinformer\.com
+1700566251	cigien	sdreatech\.com
+1700566273	cigien	distinctivelypaint\.com
+1700566305	cigien	fastdigitaltechnology\.com
+1700566334	cigien	chemitechgroup\.com
+1700566356	cigien	chemitech[\W_]*+group(?!\.com(?<=chemitechgroup\.com))
+1700566917	Jeff Schaller	spotifyadblocker\.co
+1700566983	Jeff Schaller	intellitechdataservice
+1700567324	cigien	spotify[\W_]*+ad[\W_]*+blocker(?!\.co(?<=spotifyadblocker\.co))
+1700551748	Jesse	orangemantra\.com
+1700568535	cigien	pdftopng\.org
+1700570212	Jeff Schaller	desku\.io
+1700571872	Jeff Schaller	pellonia\.io
+1700571906	Jeff Schaller	0260labs\.com
+1700572823	Jeff Schaller	weeksfromtoday\.com
+1700537208	Jesse	freshsupplies\.ae
+1700543846	Jesse	(?-i:maps/Lm4MtHS5hudKo6jM6)(?#goo.gl)
+1700544174	Jesse	arnica\.io
+1700549091	Jesse	muneebulhassan\.digital
+1700549094	Jesse	fantasticfood\.pk
+1700549097	Jesse	pickleballopinion\.com
+1700549101	Jesse	civids\.com
+1700553885	Jesse	Hafez255\.ir
+1700576090	Jeff Schaller	gudsho\.com
+1700576118	Jeff Schaller	AlabugaStart
+1700577545	Jesse	ramsmo\.com
+1700577763	Jeff Schaller	gotobuuy\.com
+1700577829	Jeff Schaller	GenderReassignmentSurgery
+1700578659	Jesse	vod\.bluejeans\.com
+1700593108	Jeff Schaller	usitfram\.com
+1700601600	Jeff Schaller	digitalassetrecovery\.info
+1700601795	Jeff Schaller	digitalassetsrecovery
+1700610176	Vickel	hoba\.tech
+1700621057	Jeff Schaller	techpando\.com
+1700645829	Ryan M	greatcreditfast\.com
+1700655841	Jeff Schaller	timetrending\.com
+1700653994	VLAZ	birlacourtyard\.in
+1700659605	VLAZ	rleatherjackets\.com
+1700624670	Jesse	hoholah\.com
+1700625621	Jesse	bluedata\.vn
+1700630638	Jesse	taxzerone\.com
+1700633507	Jesse	ritewaytowingnyc\.com
+1700633999	Jesse	digient\.in
+1700634004	Jesse	optikpi\.com
+1700660428	Jeff Schaller	thcprotect\.com
+1700634424	Jesse	^vijaygopal balasa$
+1700638434	Nick	digiature\.com
+1700638487	Jesse	drjonahwomensabortionclinic(?#@gmail.com)
+1700662499	Jeff Schaller	travobravo\.com
+1700662765	Jeff Schaller	moreliacarservice\.com
+1700664916	Jeff Schaller	quantia\.ai
+1700670414	cigien	quantia(?!\.ai)
+1700670437	cigien	apksload\.com
+1700673215	Jeff Schaller	buycashapp\.com
+1700679763	Jeff Schaller	salesforceasim\.com
+1700723969	Jesse	snpcmachines\.com
+1700723875	Jesse	a1sr\.in
+1700722982	Jesse	vpsmakers\.com
+1700722936	Jesse	north-pakistan\.com
+1700722039	VLAZ	monateamia@gmail\.com
+1700725408	cigien	delhiescorts\.fun
+1700725578	cigien	picsartapkfree\.com
+1700725677	cigien	birlawhite\.com
+1700725707	cigien	birla[\W_]*+white(?!\.com(?<=birlawhite\.com))
+1700722397	Jesse	slot90
+1700722426	Jesse	biolinku\.co
+1700722430	Jesse	bazardelpolicia\.com
+1700726075	cigien	slot90x500\.net
+1700726096	cigien	niagaslotter-seo\.com
+1700726116	cigien	rtpslot90\.com
+1700726146	cigien	lit\.link
+1700717255	Nick	cryptex\.net
+1700716592	Jesse	myofficesupply\.qa
+1700716341	Nick	himatrix\.com
+1700716247	Jesse	(?-i:JMcduf3fX9n8kC5K9)(?#forms.gle)
+1700715905	Jesse	cora\.org
+1700702410	Jesse	quikdraw\.io
+1700726382	cigien	firestore-eloquent\.netlify\.app
+1700729667	cigien	jokkozal\.com
+1700735226	cigien	colorprediction\.website
+1700738850	cigien	dream12\.online
+1700738880	cigien	apclips\.com
+1700738899	cigien	admireme\.vip
+1700738928	cigien	faphouse\.com
+1700738958	cigien	bongacams10\.com
+1700740286	cigien	serverlt\.com
+1700740310	cigien	condopoint\.ca
+1700742916	cigien	premiumdermalmart\.com
+1700743065	cigien	inteliconvo\.ai
+1700743085	cigien	inteliconvo(?!\.ai)
+1700752026	Jeff Schaller	beer1st\.net
+1700756768	cigien	cronaldodaily\.com
+1700756814	cigien	myiq\.ai
+1700756842	cigien	kshopey\.com
+1700757105	cigien	goapk\.org
+1700760527	cigien	5tdigitalvietnam(?:@g[am]+il\.com)?
+1700761089	Mast	custommedals\.com
+1700795223	Makyen	mimicrypto@shaw\.ca
+1700795253	Makyen	mimi[\W_]*+crypto(?:@shaw\.ca)?
+1700802111	Makyen	agengacor2024
+1700802381	Makyen	mulus99c\.com
+1700802400	Makyen	mulus(?!99c\.com)
+1700810091	Nick	(?-i:epzHS)(?#shorturl.at)
+1700809906	Nick	tremitilaw\.com
+1700808636	Jesse	truefile\.in
+1700808639	Jesse	utiitsl\.com
+1700808643	Jesse	tin-nsdl\.com
+1700808600	Jesse	ramkrishnaacademy\.com\.s3-website\.ap-south-1\.amazonaws\.com
+1700804668	Jesse	mahindrazensingasandra\.ind\.in
+1700811970	cigien	mahindra[\W_]*+zen[\W_]*+singasandra(?!\.ind\.in(?<=mahindrazensingasandra\.ind\.in))
+1700804453	Jesse	buddyclaps\.com
+1700812031	cigien	winexch\.com
+1700812081	cigien	winexch(?!\.com)
+1700795128	Jesse	maasacarrental\.com
+1700813698	cigien	jamtechtechnologies\.com
+1700793261	Nick	madloki\.pro
+1700814976	cigien	vegas79(?!\.bid)
+1700819769	cigien	markytics\.com
+1700818725	Can O' Spam	caready\.vn
+1700819839	cigien	caready(?!\.vn)
+1700819868	cigien	easycreditrepair\.com\.au
+1700819888	cigien	maxstarter\.info
+1700819917	cigien	royalsdigi\.com
+1700816852	Nick	arabbasaltfiber\.com
+1700816978	Nick	arab[\W_]*+basalt[\W_]*+fiber(?!\.com(?<=arabbasaltfiber\.com))
+1700823698	Nick	sigzen\.com
+1700823878	Nick	Alabuga
+1700787608	Vickel	(?-i:addemoji/FlagsEmoji)(?#t.me)
+1700806984	Jesse	one4all\.my\.id
+1700837972	Jeff Schaller	autodcmotor\.com
+1700840654	Jeff Schaller	ricedrive\.com
+1700845580	Makyen	bbaantu@gmail\.com
+1700845777	VLAZ	yumfood\.vn
+1700848063	Vickel	startgro\.com
+1700850166	Jeff Schaller	wisbizs\.com
+1700850968	Jeff Schaller	karopapier\.de
+1700850989	Jeff Schaller	graphracer\.com
+1700852468	Makyen	flutter_list_view
+1700852489	Makyen	wisbizs(?!\.com)
+1700852356	Jesse	thejusticenow\.com
+1700852539	Makyen	thejusticenow(?!\.com)
+1700852569	Jeff Schaller	smmshopes(@gmail\.com)?
+1700861568	Makyen	cyberspacehackpro
+1700863018	gparyani	nyzc\.network\.net
+1700896523	Jesse	southern-drilling\.com
+1700885540	Jesse	thucungvpet\.com
+1700889213	Jesse	link-center\.net
+1700891207	Jesse	irancoupler\.com
+1700892522	Jesse	qbsuae\.com
+1700899774	Jesse	topcoolingacrepair\.com
+1700905809	cigien	bagtaggo\.com
+1700906392	cigien	utmel\.com
+1700915452	Jeff Schaller	elitetechtools\.com
+1700917922	Mast	magnumbet222\.com
+1700926501	Makyen	phukienpetpoly\.com
+1700928633	Makyen	nick[\W_]*+jover[\W_]*+4(?:[\W_]*+(?:at[\W_]*+)?gmai++l?(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1700919459	Vickel	blueoceanblogs\.com
+1700921141	Vickel	areacat\.com
+1700921243	Vickel	areacat(?!\.com)
+1700929351	Makyen	wordsplayground\.org
+1700932844	Vickel	appvalleyz\.com
+1700936828	Jesse	gbwasap\.app
+1700936831	Jesse	gbwasap\.org
+1700935247	Vickel	vmanner\.com
+1700972714	Jesse	fashtrend\.net
+1700968794	Jesse	dccurebyaerotel\.com
+1700976098	cigien	skillindia\.gov\.in
+1700976200	cigien	sunfruit\.io\.vn
+1700979518	cigien	phdsupport\.org
+1700983259	Nisse Engström	profitfromai\.in
+1700934418	Vickel	handmadenhahem\.com
+1700996464	Makyen	rahaman8817(?:@gmail\.com)?
+1700996483	Makyen	mdatikurr23
+1700996512	Makyen	(?-i:lwspm)
+1700996579	Makyen	mustango
+1700996599	Makyen	profitfromai(?!\.in)
+1700990270	VLAZ	energytion\.com
+1700996799	Makyen	dresplitttec(?:@gmail\.com)?
+1701005436	Jeff Schaller	rustikcyberhacksservice
+1701005458	Jeff Schaller	szazalekkalkulator\.net
+1701010925	Jeff Schaller	milenialdesign\.com
+1701011243	Jeff Schaller	(?-i:^ferdinand panditya$)
+1701011710	Vickel	inogift\.com\.vn
+1701014243	Jeff Schaller	myiphonesites\.com
+1701024382	Jesse	swiftelearningservices\.com
+1701025418	Makyen	codespino\.in
+1700958258	Nick	(?-i:ZI5AulS82Ds)(?#youtu.be)
+1701028526	Vickel	(?-i:^blueocean[\W_]*+blogs$)
+1701028922	Vickel	kd@launchr\.net
+1701031537	cigien	gama4d1\.info
+1701039950	Makyen	(?-i:WbF805x2J5I)
+1701046957	Jeff Schaller	bit\.ly/endopeak5
+1701044750	Nick	watertogo\.eu
+1701044782	Nick	(?-i:endopeak5)(?#bit.ly)
+1701042037	Nick	conductor\.is
+1701047376	Makyen	g/health-clinic(?<=groups\.google\.com/g/health-clinic)
+1701047436	Makyen	endopeak
+1701051332	Nick	newchinaeat\.com
+1701052075	Jeff Schaller	vpcquant\.com
+1701051527	Nick	fundcanna\.com
+1701035050	Jesse	techwarrant\.com
+1701071751	cigien	goldenviet\.vn
+1701071783	cigien	oncbrothers\.com
+1701071827	cigien	ds[\W_]*+solution
+1701069465	Jesse	btreesystem\.com
+1701069171	Jesse	xlusallc\.com
+1701068184	Jesse	certpro\.co
+1701067548	Jesse	parentnchild\.co\.uk
+1701072951	cigien	corplyxtechnologies\.com
+1701074388	cigien	yehyeh\.bet
+1701074408	cigien	hihuaylotto\.com
+1701074437	cigien	pragmaticslot\.vip
+1701074465	cigien	slotpg\.me
+1701074486	cigien	evoplayslot\.vip
+1701078046	cigien	aximmica\.com
+1701078090	cigien	fatafatdownload\.com
+1701079297	cigien	sygitech\.com
+1701081137	cigien	bslbattery\.us
+1701081821	Nick	namecheckerr\.com
+1701084186	cigien	barbabill\.com
+1701084209	cigien	barbabill(?!\.com)
+1701085071	Jeff Schaller	moonnights\.co\.uk
+1701087911	VLAZ	brandnbusiness\.co\.in
+1701089243	cigien	brandnbusiness(?!\.co\.in)
+1701089328	cigien	housiey\.com
+1701089357	cigien	housiey(?!\.com)
+1701089390	cigien	(?-i:enpJHGcZ)(?#lnkd.in)
+1701088245	VLAZ	craftboxes\.co\.uk
+1701035147	Jesse	mdalimranhossain\.com
+1701094797	Makyen	pipi[\W_]*+coin
+1701094829	Makyen	pinksale\.finance
+1701094862	Makyen	0x91db6b74da29b2bddaa17ad43b2e21d897d86db0
+1701094895	Makyen	(?-i:tokenpipi)(?#t.me)
+1701094937	Makyen	pipi\.wtf
+1701095200	Jeff Schaller	arabtrending\.com
+1701096520	Jeff Schaller	s\.net\.vn
+1701098874	VLAZ	(?-i:UCE-Nk6j_d5ggH6eNRk733NA)(?#youtube channel)
+1701101285	Makyen	ssbytes\.com
+1701101690	Jesse	prgmd\.com
+1701102314	Makyen	aspireapk\.com
+1701104932	Jeff Schaller	(?-i:BPMWK7TjysKVmc1V9)(?#forms.gle)
+1701106989	Nisse Engström	erobella\.com
+1701108559	Jesse	njsoftlab\.ca
+1701111379	Jeff Schaller	clifford\.harrison(@mail\.com)?
+1701119756	Jeff Schaller	(?-i:2hBMq4p4AbyY6GQ78)(?#forms.gle)
+1701111557	Jesse	apkmyboy\.com
+1701125559	Jesse	victorcorcos(?#github.com)
+1701136753	Vickel	technocraterecovery\.site
+1701136794	Vickel	number 15733563708
+1701125881	Jesse	rubygems\.org/gems/cascade-deleter
+1701126252	Jesse	master\.co
+1701138268	Nick	mercedesrepairdubai\.com
+1701165226	cigien	fujiwin88\.info
+1701165251	cigien	vtdevsolutions\.com
+1701166537	cigien	hunteragency\.vn
+1701161607	Can O' Spam	howtoinsuranceall\.com
+1701166576	cigien	asmrmicrophones\.com
+1701157800	Nick	franklindental-supply\.com
+1701160211	Nick	pardisolusi\.com
+1701157877	Nick	Franklin[\W_]*+Dental[\W_]*+Supply(?!\.com(?<=franklindental-supply\.com))
+1701155459	Nick	gptnederlands\.nl
+1701152387	Jesse	wpexternalimages\.com
+1701154343	Jesse	Adrenaline[\W_]*+Rush[\W_]*+Central
+1701155291	Nick	(?-i:Wh5lkTk_nd8)(?#youtube.com)
+1701167735	cigien	wp[\W_]*+external[\W_]*+images(?!\.com(?<=wpexternalimages\.com))
+1701151113	Nick	onerecovery\.online
+1701167777	cigien	onerecovery(?!\.online)
+1701149281	Jesse	carparkingmodapk\.net
+1701149805	Jesse	gaintools\.com
+1701149363	Jesse	blacktogel711\.click
+1701168429	cigien	buytvinternetphone\.com
+1701168481	cigien	communicadence(?:[\W_]*+india[\W_]*+software)?
+1701168899	cigien	pumpsupplies\.co\.uk
+1701170805	Jeff Schaller	ibexeye\.com
+1701174190	Mast	gummiestoday\.com
+1701174221	cigien	snsinsider\.com
+1701174485	cigien	annacoddington\.com
+1701175375	cigien	unstructured-io\.github\.io
+1701153667	Nick	Max[\W_]*+Ads
+1701182358	Jeff Schaller	statsim\.pythonanywhere\.com
+1701182452	Makyen	gama4d\w*+
+1701197485	Jesse	webcoredigital\.com
+1701199010	cigien	webcore[\W_]*+digital(?!\.com(?<=webcoredigital\.com))
+1701201294	Jeff Schaller	pureassignment\.com
+1701201327	cigien	pureassignment(?!\.com)
+1701202079	Mast	aladilauto\.com
+1701223090	Jesse	ayce-electric\.com
+1701222004	Jesse	jojoyapk\.net
+1701221073	Jesse	legitnob\.com
+1701184009	Jesse	onlinemkvplayer\.com
+1701245749	cigien	allstoredeals\.com
+1701245773	cigien	allstoredeals(?!\.com)
+1701245824	cigien	dreamtimelearningschool\.com
+1701245849	cigien	dreamtime[\W_]*+learning[\W_]*+school(?!\.com(?<=dreamtimelearningschool\.com))
+1701245885	cigien	t-mobile-homeinternet\.com
+1701245977	cigien	bluesteelcyber\.com
+1701247198	cigien	onlinesazeh\.com
+1701248148	tripleee	azarsys\.com
+1701255487	Jeff Schaller	dkmartofficial\.com
+1701255551	Jeff Schaller	multitechelevators\.com
+1701256011	Jeff Schaller	amanyasoftech\.com
+1701256673	Jeff Schaller	goodnite\.vn
+1701256556	Nick	bramptonwebdesign\.com
+1701233144	Jesse	pumpkinpanic\.com
+1701259134	VLAZ	playsafekasyno\.com
+1701268237	cigien	thecscience\.com
+1701268266	cigien	autoblogging\.ai
+1701268288	cigien	affpilot\.com
+1701268535	Jeff Schaller	youtubechanneltranscripts\.com
+1701268852	Makyen	wowcustomersupport\.com
+1701270364	Can O' Spam	brightsearchsolutions\.com
+1701272281	Jeff Schaller	bestingems\.com
+1701272548	Jeff Schaller	Gptturkey\.net
+1701273107	Jesse	aatech\.nz
+1701273096	Jesse	tanzaniatribesafari\.com
+1701273124	Jesse	criminallawyerinedmonton\.com
+1701220069	Nick	89\.38\.129\.15
+1701273438	Makyen	bestingems(?!\.com)
+1701275147	Jesse	courseworkhelp\.com\.au
+1701275136	Jesse	gadgets360\.com
+1701275704	Can O' Spam	woodbridgecarandtruckrental\.ca
+1701273616	Jesse	crickexlogin\.com
+1701275109	Jesse	ai-seedfinder\.com
+1701275026	Jesse	tutorition\.com
+1701278348	Jesse	canadianwebstudios\.ca
+1701280370	Jeff Schaller	learngrowgarden\.com
+1701281383	Mast	toya45595
+1701295223	Jesse	fervogear\.com
+1701316423	Jesse	scholarstudysolution\.com
+1701316183	Jesse	digi-zeal\.com
+1701328106	Makyen	anshanti\.com
+1701328177	Makyen	sutetrezor\.us
+1701328214	Makyen	trezorlogin[\W_]*+issues
+1701328514	Makyen	an[\W_]*+shanti[\W_]*+veggie[\W_]*+house
+1701329804	Nick	alfristongardens\.co\.uk
+1701329920	cigien	alfriston[\W_]*+gardens(?!\.co\.uk(?<=alfristongardens\.co\.uk))
+1701327313	Nick	userstyles\.world
+1701326144	Nick	playtunes\.co
+1701330171	cigien	playtunes(?!\.co)
+1701326173	Nick	bulksmsplans\.com
+1701326355	Nick	ecosivila\.com
+1701330468	cigien	eco[\W_]*+sivila(?!\.com(?<=ecosivila\.com))
+1701327128	Nick	indoorgem\.com
+1701330654	cigien	qualton(?!\.com\.au)
+1701330712	cigien	scholar[\W_]*+study[\W_]*+solution(?!\.com(?<=scholarstudysolution\.com))
+1701330773	cigien	chaturthitraders\.com
+1701330797	cigien	chaturthi[\W_]*+traders(?!\.com(?<=chaturthitraders\.com))
+1701332729	Nick	realoq\.com
+1701331851	Nick	snoozermattress\.com
+1701335458	cigien	hairrestorationistanbul\.com
+1701342541	Jeff Schaller	techbusinesinsider\.com
+1701342572	Jeff Schaller	advantagetherapy\.com\.au
+1701342362	VLAZ	coinpayu\.com
+1701342681	Jeff Schaller	scopemagazines\.com
+1701342879	Jeff Schaller	uperfectmonitor\.de
+1701207471	Jesse	web[\W_]*+recovery
+1701349927	Jeff Schaller	theleatherjacketer\.com
+1701273193	Jesse	dbeta\.co\.uk
+1701345783	Nick	ricksautodiag\.com
+1701273379	Jesse	tech2\.in
+1701273539	Jesse	tridizi\.com
+1701344606	Nick	kualitatem\.com
+1701350494	cigien	kualitee\.com
+1701273549	Jesse	topologia\.wordpress\.com
+1701350568	cigien	advantage[\W_]*+therapy(?!\.com\.au(?<=advantagetherapy\.com\.au))
+1701338772	VLAZ	innostax\.com
+1701350706	cigien	worldtrade24x7\.com
+1701350748	cigien	uperfect[\W_]*+monitor(?!\.de(?<=uperfectmonitor\.de))
+1701350801	cigien	meinghostwriter\.de
+1701284324	Jesse	country96\.com
+1701284328	Jesse	promo138\.cc
+1701284996	Jesse	sassa-status-check\.org\.za
+1701285005	Jesse	hesgoal\.app
+1701292382	Jesse	foysalahmedraju\.com
+1701294219	Jesse	kadioglumf(?#github)
+1701303025	Jesse	CERTIFIED[\W_]*+CRYPTOGRAPHER[\W_]*+(at)?[\W_]*+GMAIL[\W_]*+(dot)?[\W_]*+COM
+1701326503	Nick	wpdesigns\.co\.uk
+1701343661	Nick	dharapvd\.com
+1701353512	Jeff Schaller	mvp-plumbing\.com
+1701354498	Jeff Schaller	descargarsnaptube\.org
+1701355242	Jeff Schaller	sportdisney\.com
+1701364254	Jeff Schaller	skylinehackers\.com
+1701364554	Jeff Schaller	idealcustomboxes\.com
+1701366683	Jesse	americanaccentsmi\.com
+1701366351	Jesse	temuapp\.biz
+1701368673	Jesse	gammadyne\.com
+1701371105	Jeff Schaller	maxresolutionimaging\.com
+1701373375	Jeff Schaller	nativesoft\.com
+1701344981	Nick	corporatestays\.com
+1701393338	Jesse	tech\.amikelive\.com
+1701392196	Vickel	sharepricetargetguru\.in
+1701379205	Jesse	api-wa\.me
+1701403471	Jesse	(?-i:TUS4DGROUP)(?#t.me)
+1701406352	Makyen	pondokprediksi
+1701406374	Makyen	(?-i:bRfE3u)
+1701406435	Makyen	tus4dofficial
+1701406458	Makyen	startexpertinternational\.com
+1701406481	Makyen	start[\W_]*+expert[\W_]*+international(?!\.com(?<=startexpertinternational\.com))
+1701404432	Jesse	pjt\.co\.in
+1701406803	Makyen	anwhatsapk\.com
+1701411304	Jesse	montraelectric\.com
+1701417847	VLAZ	new-onlineoffers\.com
+1701418479	cigien	nebeltechgamingzone\.blogspot
+1701416889	Nick	roomdecor\.com\.vn
+1701413970	Jesse	euroglobalconsultancy\.com
+1701413378	Jesse	roadrunnermailsupport\.com
+1701413048	Jesse	mcdonaldswrapoftheday\.com
+1701425621	cigien	domymathhomeworks\.com
+1701427856	Jeff Schaller	vilasata\.com
+1701428632	VLAZ	boldbunny\.in
+1701430082	cigien	vilasata(?!\.com)
+1701430129	cigien	hmarecovery12(?:@gmail\.com)?
+1701430153	cigien	my\.maxprofile\.io
+1701430779	Nick	miguelcamarena\.com
+1701431521	cigien	sqpcb\.com
+1701431552	cigien	nootkas\.com
+1701431588	cigien	nootkas(?!\.com)
+1701436043	VLAZ	viralniches\.quora\.com
+1701435929	VLAZ	ontrackservicesuae\.com
+1701443731	Jeff Schaller	alkadycars\.com
+1701443766	Jeff Schaller	shethalboutique\.free\.nf
+1701443849	Jeff Schaller	movieandrama2425\.blogspot
+1701408971	Nick	tipsandtricks\.dev
+1701434784	VLAZ	techaid71\.xyz
+1701443954	cigien	alkady[\W_]*+cars(?!\.com(?<=alkadycars\.com))
+1701445147	Jesse	fenstoneofficefurniture\.co\.uk
+1701445454	Jeff Schaller	slideserve\.com(?<!image1\.slideserve\.com)
+1701446229	Jesse	fortuneinfosys\.com
+1701449410	Jeff Schaller	mobilezmarket\.com
+1701452336	Jeff Schaller	sleepyjelly\.com
+1701455450	Nisse Engström	1822denim\.com
+1701455503	Jesse	bodyflanges\.com
+1701455628	Jesse	165\.232\.165\.157
+1701459639	Jesse	versatactical\.com
+1701461142	Jeff Schaller	47002719appen\.blogspot
+1701462509	Jeff Schaller	coursera-downloader\.rf\.gd
+1701462503	VLAZ	(?-i:\+PCDQCGB6th04ZmNl)(?#t.me)
+1701477740	Makyen	technocratrecovery[\W_]*+site
+1701477763	Makyen	technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
+1701480495	Vickel	Eager[\W_]*+Beaver[\W_]*+Sawblade[\W_]*+Service
+1701505881	Mast	signaturedetailers\.com
+1701498983	Nick	worklooper\.com
+1701519963	Jeff Schaller	greentreescaycanh\.com
+1701522574	Jeff Schaller	com\.hb\.games\.minesweeperx
+1701522604	Jeff Schaller	monkey-type\.net
+1701522626	Jeff Schaller	com\.ph\.win\.app
+1701522652	Jeff Schaller	com\.phwin\.mines
+1701526245	Jeff Schaller	ryansprofessionalcleaning\.net
+1701530046	Jeff Schaller	divinodiseno\.com\.co
+1701530875	Makyen	5671638(?#udemy)
+1701530898	Makyen	ramshafirdous\.gumroad\.com
+1701586134	Jesse	legendaryfoodz\.com
+1701586137	Jesse	olipopsoda\.com
+1701586141	Jesse	olipopflavors\.com
+1701586144	Jesse	olipopdrinks\.com
+1701586151	Jesse	poppidrink\.com
+1701586148	Jesse	poppiflavors\.com
+1701586171	Jesse	poppisoda\.com
+1701584397	Jesse	furloughedfoodieslondon\.co\.uk
+1701600812	Jeff Schaller	billetesave\.eu
+1701600919	Jeff Schaller	lipsshine\.com
+1701605237	VLAZ	pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
+1701603235	VLAZ	(?-i:8k3swo1)(?#rebrand.ly)
+1701603127	VLAZ	idola69\.today
+1701580949	Jesse	padmarigdzinling\.org
+1701559186	Nick	teconceit\.com
+1701548371	Jesse	entgeltsguru\.de
+1701545875	Jesse	fourtdshop\.com
+1701546914	Jesse	todayexpressnews-daily\.blogspot
+1701545781	Jesse	wscubetech\.com
+1701538878	Jesse	ogrencigundemi\.com
+1701536053	Jesse	spaceman\.net\.br
+1701535282	Jesse	xrivalfitness\.com
+1701535195	Jesse	kiyado\.com
+1701500069	Nick	happymagazine\.co\.uk
+1701497799	Nick	udaaanpe\.com
+1701496614	Nick	trainbodyandmind\.com
+1701482152	Vickel	quangnamtoplist\.com
+1701482147	Vickel	quangnamtoplist\.tumblr\.com
+1701465563	Vickel	(?-i:AjaxSoftware)(?#t.me)
+1701617711	Jesse	Sarvatra[\W_]*+Loan
+1701647016	Nick	marketing2advertising\.com
+1701650747	Nick	omegarecoveryspecialist
+1701689638	Jeff Schaller	lecturewala\.com
+1701688725	VLAZ	networthandage\.com
+1701688637	Nick	ecorprealestate\.com
+1701688605	Nick	capitalstreetfx\.com
+1701685205	VLAZ	welly\.hk
+1701680950	VLAZ	downoutages\.com
+1701680695	VLAZ	qadri-international\.com
+1701692383	Jeff Schaller	faseoservice\.com
+1701692417	Jeff Schaller	liketofashion\.com
+1701672253	Jesse	thesiswriting\.com\.pk
+1701673530	cocomac	eurowindow\.net
+1701670809	Jesse	Advish[\W_]*+Pvt[\W_]*+Ltd
+1701670273	Jesse	universemolding\.com
+1701693490	Jeff Schaller	acsmobiles\.wuaze\.com
+1701669693	Nick	Absolutely[\W_]*+Signature[\W_]*+Detailers
+1701693903	Jeff Schaller	smartpartsexports\.com
+1701667796	cocomac	appeartech\.com\.bd
+1701667656	cocomac	lightworkerchristinawillspears\.com
+1701662552	Nick	btcaccelerator\.info
+1701659343	Nick	bblinds\.com\.au
+1701694698	Jeff Schaller	largerelectric\.com
+1701618102	Jesse	call[\W_]*+me[\W_]*\d+
+1701497674	Nick	bodypulsefitnessequipments\.com
+1701695976	Jeff Schaller	(?-i:adw-RbQPwOo)(?#youtu.be)
+1701696578	Jeff Schaller	rivercityspirits\.com
+1701707513	Jesse	capproapk\.com
+1701708285	Machavity	justblogherenow\.com
+1701712728	Jeff Schaller	baseballinsider\.net
+1701717778	Jesse	ivansurdual\.netlify\.app
+1701718994	Jesse	georgewizardrecoveryhome\.com
+1701719293	Jesse	george[\W_]*+wizard[\W_]*+recovery[\W_]*+(home)?+(?!\.com(?<=georgewizardrecoveryhome\.com))
+1701737087	Nick	cold-rite\.com\.au
+1701769289	Jeff Schaller	warezsofts\.com
+1701768794	VLAZ	hurranfaucet\.com
+1701769380	Jeff Schaller	rfidlion\.com
+1701769441	Jeff Schaller	wpclerks\.com
+1701769517	Jeff Schaller	alightmotionzone\.com
+1701769624	Jeff Schaller	equranekareem\.com
+1701764769	Nick	makuang\.com\.sg
+1701764746	Nick	buydiploma\.org
+1701771552	Jeff Schaller	snaptubemar\.com
+1701774774	Nick	intuitivehealthservices\.com
+1701774955	Jeff Schaller	phonghihuong\.com
+1701772423	VLAZ	incfoxsolutions\.com
+1701775701	Nick	playgooglesnakegame\.com
+1701773110	VLAZ	toptiamcurrent\.blogspot
+1701773064	VLAZ	(?-i:tEXZ7)(?#shorturl.at)
+1701772705	VLAZ	(?-i:nibung88)(?#urlink.id)
+1701779081	VLAZ	11xplay
+1701772647	VLAZ	nibungpoker\.com
+1701772640	VLAZ	cepat\.click
+1701768774	VLAZ	(?-i:44unwt2z)(?#tinyurl)
+1701763316	Nick	(?-i:zexoclub)(?#t.me)
+1701762383	Nick	glowwhispered\.in
+1701761609	VLAZ	firekirinplayonline\.us
+1701759803	Jesse	(?-i:zex0club)(?#t.me)
+1701759800	Jesse	zexo\.club
+1701759778	Jesse	fixityedx\.com
+1701792515	Jesse	friendscarrental\.com
+1701756603	Jesse	princelycoffee\.com
+1701756574	Jesse	topbestbloggeronline\.com
+1701746625	Nick	Fence[\W_]*+Company[\W_]*+Raleigh
+1701746594	Nick	aaafencedeck\.com
+1701738604	Jesse	Bernie[\W_]*+Doran
+1701792932	Makyen	phphonghihuong
+1701792969	Makyen	phungphonghihuong
+1701795815	Mast	mlvinsulation\.com
+1701806481	Mast	techinblood\.com
+1701729300	Jesse	main-okewla\.com
+1701730140	Jesse	appguidepro\.com
+1701735881	Nick	GearHead[\W_]*+Engineers
+1701736609	Nick	gatographql\.com
+1701736817	Nick	BERNIE[\W_]*+DORAN([\W_]*+SIGNALS)?
+1701738170	Nick	usefixie\.com
+1701796229	Jesse	sora168\.com
+1701807482	Makyen	(?:(?:recovery|hacker)[\W_]*+)*wizard[\W_]*+maye[\W_]*+musk(?:@\w++\.\w++)?
+1701807490	Makyen	recoverywizardmaye\.wixsite\.com
+1701831968	Jesse	skubiq\.com
+1701825435	Vickel	webscraping\.ai
+1701864136	Jeff Schaller	fasterthanlight\.me
+1701863298	VLAZ	cryptomlmsoftware\.com
+1701865511	VLAZ	grazitti\.com
+1701865507	VLAZ	(?-i:47Jif3s)(?#bit.ly)
+1701861525	Nick	homeworkprovider\.com
+1701861388	VLAZ	megainterview\.com
+1701861221	Nick	onlineherbalincense\.com
+1701861068	Nick	takemyclasscheap\.com
+1701860872	Nick	mukhost\.com
+1701860799	Nick	visalotravel\.com
+1701848249	VLAZ	pgslotweb\.net
+1701847544	VLAZ	trusted-spot\.com
+1701832074	Jesse	proofmode\.org
+1701867934	Jeff Schaller	xbt accumulator
+1701822457	Nick	newsspotify\.com
+1701868023	Jeff Schaller	BxTra Global Finance
+1701724137	Jesse	stirlingcooperebooks\.vercel\.app
+1701811210	Jesse	ProtectedJson
+1701878978	Jeff Schaller	corteizclothing\.fr
+1701878581	Jesse	apexstoragedesign\.com
+1701879080	Jeff Schaller	mediamaks\.com
+1701879104	Jeff Schaller	sheinhomedecor\.com
+1701881314	Jeff Schaller	svegroup\.com
+1701881592	Jesse	iteachhealth\.com
+1701878602	Jesse	yieldcapitalsllc\.com
+1701878488	Jesse	crackerspc\.com
+1701878624	Jesse	timetofixdubai\.com
+1701878639	Jesse	okeyardtravel\.com
+1701879139	Jesse	apkvent\.com
+1701882757	Jeff Schaller	howtofix0\.blogspot
+1701926562	cocomac	royaljersey\.in
+1701926581	cocomac	igateways\.co\.in
+1701926602	cocomac	yourgolfspot\.com
+1701924376	Jesse	thefamouspersonalities\.com
+1701941239	cigien	psqtr\.com
+1701941378	cigien	radiocodehelp\.com
+1701941433	cigien	yesiaminked\.com
+1701941478	cigien	aachauffeurservices\.com
+1701941529	cigien	wristbandseurope\.com
+1701958424	Jeff Schaller	vgtnyc\.com
+1701961861	VLAZ	strategizer\.in
+1701961808	VLAZ	miyagibonsai\.co\.uk
+1701960984	VLAZ	globalinst\.in
+1701960936	VLAZ	prepecommerce\.com
+1701963992	Jesse	instasize\.com
+1701966026	Jesse	airportbnb\.fo
+1701968216	cigien	viettelidc\.com
+1701968237	cigien	viettel[\W_]*+idc(?!\.com(?<=viettelidc\.com))
+1701971821	Jesse	keduplicatebill\.com\.pk
+1701886187	Jesse	gabrielmoraru\.com
+1701888360	Jesse	github\.com/avinashtare
+1701891594	Jesse	legalconsultantuae\.ae
+1701892107	Jesse	sunshinefinser\.com
+1701897857	Vickel	gefluegelhof-harter\.de
+1701897166	Jesse	syncslyrics\.com
+1701899590	Nick	businessspotty\.com
+1701906707	Jesse	anti[\W_]*+cyber[\W_]*+crime[\W_]*+money[\W_]*+recovery
+1701917144	Nick	sydneycrackowermd\.com
+1701944382	VLAZ	affiliatetop\.world
+1701946766	VLAZ	sitebid\.com
+1701965685	Jesse	dzeeusa\.com
+1702000654	Jeff Schaller	oliviatrader44
+1701996187	Jesse	surajbirla\.blogspot
+1701981909	Jesse	jshub1\.com
+1701964679	Jesse	irelandlanyards\.com
+1701964452	Jesse	synologyrouter\.com
+1701964226	Jesse	34\.74\.167\.222
+1701963941	Jesse	(?-i:1LliyVMqm10tTdcSiTgcnF)(?#Spotify playlist)
+1701963801	Jesse	consumersleads\.com
+1701963791	Jesse	elklayer\.com
+1701963144	Jesse	5paisa\.com
+1701963140	Jesse	beststockadvisory\.com
+1701962959	Jesse	scienpress\.com
+1701962946	Jesse	walsun\.com
+1701962843	Jesse	cagacrypto\.com
+1701961663	VLAZ	mamakasaga@gmail\.com
+1701959743	VLAZ	NYANLINN[\W_]*HTET(?:[\W_]*NYANARIUM)?
+1701959619	VLAZ	@its\.nyanarium0\.2
+1701959599	VLAZ	@its\.htethtetshadyi
+1701947349	VLAZ	lyricsdb\.org
+1702008474	cocomac	proxiesapi\.com
+1702008830	Makyen	proxiesapi(?!\.com)
+1702015655	Makyen	invoidea(?!\.com)
+1702014137	Jesse	cashaly\.com
+1702015796	Makyen	cashaly(?!\.com)
+1702016763	cocomac	nunuhomestay\.com
+1702016787	Makyen	nunu[\W_]*+homestay(?!\.com(?<=nunuhomestay\.com))
+1702018064	cocomac	omaliving\.com
+1702019788	VLAZ	americanstudy\.edu\.vn
+1702020767	Makyen	britishessaywriters\.co\.uk
+1702022294	Makyen	alux\.com\.vn
+1702040449	Jeff Schaller	akconsultants\.com
+1702041735	Jeff Schaller	rentpickupdubai\.com
+1702041838	Jeff Schaller	Crawlbase
+1702034043	VLAZ	coingabbar\.com
+1702033500	Nick	printinlondon\.co\.uk
+1702033439	Nick	evolutionprintmanagement\.com
+1702033018	VLAZ	amoredo\.in
+1702029275	VLAZ	businessconnectindia\.in
+1702027132	VLAZ	bestironwood\.com
+1701906733	Jesse	weforum[\W_]*+org
+1701898073	Jesse	rokokbetlogin(?#bit.ly)
+1702045211	Jeff Schaller	angulartool\.de
+1702045504	Jeff Schaller	rokokbetlink\.tumblr\.com
+1702049115	Jesse	hit1club\.win
+1702049289	Jesse	bentengmachine\.com
+1702049300	Jesse	oilpresssite\.com
+1702049491	Jesse	unigap\.io
+1702049844	Jesse	toolhubquickbooks\.com
+1702050091	Jesse	bestassingnments\.com
+1702066508	Jesse	conveyor\.hydraulic\.dev
+1702058059	Jesse	careerbuilderr\.com
+1702050916	Jesse	najmulreview\.com
+1702114440	Robert Longson	flyhighhempco\.com
+1702122946	Nisse Engström	bluepillz\.com
+1702123118	Nisse Engström	shaterone\.com
+1702100930	Jesse	invaat\.com
+1702103547	Nick	cargojepang\.com
+1702125818	Jeff Schaller	bungalowfinder\.ca
+1702100980	Nick	groupz\.link
+1702100969	Nick	whatgrouplink\.com
+1702100949	Nick	grouplinksor\.com
+1702098746	Nick	hybridmlm\.io
+1702126375	Jeff Schaller	itbors\.com
+1702082345	Nick	bloguplift\.com
+1702077836	Jesse	digital[\W_]*+pro[\W_]*+hackz
+1702131231	Jeff Schaller	thetatitans\.com
+1702131680	Makyen	amocha0@xmpp\.jp
+1702131662	Vickel	(?-i:Amocha00)(?#t.me)
+1702131717	Makyen	theta[\W_]*+titans(?!\.com(?<=thetatitans\.com))
+1702156038	Jeff Schaller	pcmobilewala\.com
+1702156305	Jeff Schaller	ccrjustice\.org
+1702187376	Jesse	gwptctvm\.org
