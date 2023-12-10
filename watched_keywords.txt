@@ -49441,7 +49441,6 @@
 1681271296	tripleee	mytopbestblogger\.com
 1681271331	tripleee	wttr\.in
 1681271372	tripleee	enchantedgardenssoapery\.com
-1681272156	tripleee	caeassistant\.com
 1681273506	tripleee	travelguideideas\.com
 1681274949	tripleee	solis[\W_]*+tractors?
 1681277104	tripleee	legitcannabinoids\.com
