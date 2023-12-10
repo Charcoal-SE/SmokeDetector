@@ -55761,3 +55761,4 @@
 1702215202	Vickel	qualitymakerskw\.com
 1702215103	Vickel	threemovers\.com
 1702186206	Jesse	educounting\.com
+1702184698	Jesse	plexcalc\.com
