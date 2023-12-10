@@ -2923,3 +2923,4 @@ james[\W_]*+miller[\W_]*+recovery(?!\.solutions(?<=jamesmillerrecovery\.solution
 iBolt[\W_]*+Cyber[\W_]*+Hacker
 windmill[\W_]*+money[\W_]*+loan
 chloe[\W_]*+consultant
+marie[\W_]*+consultancy
