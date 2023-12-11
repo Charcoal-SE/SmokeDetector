@@ -55810,3 +55810,4 @@
 1702280625	Jesse	spray[\W_]*+foam[\W_]*+masters?+(?!\.ca(?<=sprayfoammasters\.ca))
 1702282623	Nick	gloriousweddingalbum\.com
 1702282762	Nick	gw\.delhi(?#gmail.com)
+1702282710	Nick	Glorious[\W_]*+Wedding[\W_]*+Album(?!\.com(?<=gloriousweddingalbum\.com))
