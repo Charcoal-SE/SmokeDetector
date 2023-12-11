@@ -55813,3 +55813,4 @@
 1702282710	Nick	Glorious[\W_]*+Wedding[\W_]*+Album(?!\.com(?<=gloriousweddingalbum\.com))
 1702286596	VLAZ	saaslogic\.io
 1702286823	VLAZ	financefact\.net
+1702286883	VLAZ	getsoftwareservices\.com
