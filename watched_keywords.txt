@@ -55805,3 +55805,4 @@
 1702299557	VLAZ	vidyagyan\.in
 1702298354	VLAZ	shivnadarfoundation\.org
 1702280344	Nick	sprayfoammasters\.ca
+1702278303	Jesse	hivelance(?!\.com(?<=hivelance\.com))
