@@ -55781,3 +55781,4 @@
 1702228822	Jesse	onegoodwebdesign\.com
 1702230506	Jesse	areon\.network
 1702257442	Vickel	reviewhossain\.com
+1702280625	Jesse	spray[\W_]*+foam[\W_]*+masters?+(?!\.ca(?<=sprayfoammasters\.ca))
