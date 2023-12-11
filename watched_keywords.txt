@@ -55785,3 +55785,4 @@
 1702282780	Nick	turksem\.com
 1702251665	Nick	snapcopy\.app
 1702253652	Nick	(?-i:swAQruwO)(?#cutt.ly)
+1702257595	Vickel	Attorney[\W_]*+Marketing[\W_]*+Suite[\W_]*+Vol\.2
