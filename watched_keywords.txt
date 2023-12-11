@@ -55814,3 +55814,4 @@
 1702286596	VLAZ	saaslogic\.io
 1702286823	VLAZ	financefact\.net
 1702286883	VLAZ	getsoftwareservices\.com
+1702291653	VLAZ	diplomaregistrado\.com
