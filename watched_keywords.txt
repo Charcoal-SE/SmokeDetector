@@ -55811,3 +55811,4 @@
 1702282623	Nick	gloriousweddingalbum\.com
 1702282762	Nick	gw\.delhi(?#gmail.com)
 1702282710	Nick	Glorious[\W_]*+Wedding[\W_]*+Album(?!\.com(?<=gloriousweddingalbum\.com))
+1702286596	VLAZ	saaslogic\.io
