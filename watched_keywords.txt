@@ -55815,3 +55815,4 @@
 1702286823	VLAZ	financefact\.net
 1702286883	VLAZ	getsoftwareservices\.com
 1702291653	VLAZ	diplomaregistrado\.com
+1702297592	VLAZ	wizard[\W_]*+cyber[\W_]*+files[\W_]*+hacker(?:@gmail\.com)?
