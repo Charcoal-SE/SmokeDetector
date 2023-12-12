@@ -55821,3 +55821,4 @@
 1702376843	VLAZ	vartaalap\.com
 1702374395	VLAZ	automatworld\.in
 1702374186	VLAZ	sgtourism\.vn
+1702374119	VLAZ	goldenvisa\.alriyady\.ae
