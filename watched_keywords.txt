@@ -55850,3 +55850,4 @@
 1702411219	Jeff Schaller	passexamhub\.com
 1702411865	Jeff Schaller	(?-i:^asrinku$)
 1702421078	Nisse Engström	amazonsva\.blogspot
+1702421260	Nisse Engström	certainkey\.com
