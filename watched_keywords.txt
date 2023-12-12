@@ -55817,3 +55817,4 @@
 1702291653	VLAZ	diplomaregistrado\.com
 1702297592	VLAZ	wizard[\W_]*+cyber[\W_]*+files[\W_]*+hacker(?:@gmail\.com)?
 1702360389	cocomac	vnahospital\.com
+1702373632	VLAZ	gamasuite\.com
