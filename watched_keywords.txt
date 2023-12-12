@@ -55833,3 +55833,4 @@
 1702389208	Jeff Schaller	dev_tol(?#fiverr)
 1702389973	Jeff Schaller	ietuts\.com
 1702393728	Jesse	petrometfitting\.com
+1702394219	Jesse	(?-i:elitetechtools)(?#linktr.ee)
