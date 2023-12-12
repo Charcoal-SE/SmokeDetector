@@ -55845,3 +55845,4 @@
 1702396001	Jesse	AI[\W_]*+Seed[\W_]*+(Phrase[\W_]*+)?Finder
 1702402983	Jesse	dumpscollege\.com
 1702402788	Jesse	imetatech\.io
+1702411076	Jeff Schaller	4mlegaltax\.com
