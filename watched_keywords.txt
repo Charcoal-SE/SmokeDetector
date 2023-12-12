@@ -55849,3 +55849,4 @@
 1702411137	Jeff Schaller	excelhsports\.com
 1702411219	Jeff Schaller	passexamhub\.com
 1702411865	Jeff Schaller	(?-i:^asrinku$)
+1702421078	Nisse Engström	amazonsva\.blogspot
