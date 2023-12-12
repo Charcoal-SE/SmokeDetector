@@ -55842,3 +55842,4 @@
 1702394122	Jesse	trackbill\.pk
 1702393917	Jesse	allinoneprinters123(?#sites.google.com)
 1702394219	Jesse	(?-i:elitetechtools)(?#linktr.ee)
+1702396001	Jesse	AI[\W_]*+Seed[\W_]*+(Phrase[\W_]*+)?Finder
