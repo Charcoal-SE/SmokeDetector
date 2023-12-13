@@ -55871,3 +55871,4 @@
 1702452777	VLAZ	stoprodent\.com
 1702481512	Jeff Schaller	(?-i:lx5t_cxntury)(?# t.me)
 1702452169	VLAZ	crawlmagic\.com
+1702481775	Jesse	mapmycourse\.in
