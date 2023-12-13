@@ -55855,3 +55855,4 @@
 1702423209	Jeff Schaller	wellnesscomet\.com
 1702445850	Makyen	quantummartialarts\.com\.au
 1702445870	Makyen	quantum[\W_]*+martial[\W_]*+arts(?!\.com\.au(?<=quantummartialarts\.com\.au))
+1702445901	Makyen	kandatechnology\.com
