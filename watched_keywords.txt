@@ -55857,3 +55857,4 @@
 1702445870	Makyen	quantum[\W_]*+martial[\W_]*+arts(?!\.com\.au(?<=quantummartialarts\.com\.au))
 1702445901	Makyen	kandatechnology\.com
 1702445922	Makyen	k[\W_]*+and[\W_]*+a[\W_]*+technology(?!\.com(?<=kandatechnology\.com))
+1702446286	Nick	litexoticspacks\.com
