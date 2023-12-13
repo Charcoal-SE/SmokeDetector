@@ -55859,3 +55859,4 @@
 1702445922	Makyen	k[\W_]*+and[\W_]*+a[\W_]*+technology(?!\.com(?<=kandatechnology\.com))
 1702447186	Nick	samyakinfotech\.com
 1702455209	Robert Longson	bholaonlinebook\.in
+1702466625	Jeff Schaller	snnrajcorp\.com
