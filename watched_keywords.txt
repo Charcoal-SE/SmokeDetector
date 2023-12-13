@@ -54432,7 +54432,6 @@
 1698918245	Makyen	edha[\W_]*+care(?!\.com(?<=edhacare\.com))
 1698922044	Jeff Schaller	hopsworks\.ai
 1698921623	VLAZ	virteract\.com
-1698921485	VLAZ	icore\.net\.in
 1698919931	VLAZ	nordenvation\.com
 1698922880	Jeff Schaller	madainproject\.com
 1698923566	Jeff Schaller	labhgarh\.com
