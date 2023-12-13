@@ -55858,3 +55858,4 @@
 1702445901	Makyen	kandatechnology\.com
 1702445922	Makyen	k[\W_]*+and[\W_]*+a[\W_]*+technology(?!\.com(?<=kandatechnology\.com))
 1702447186	Nick	samyakinfotech\.com
+1702452862	VLAZ	madhuhutsagonda\.com
