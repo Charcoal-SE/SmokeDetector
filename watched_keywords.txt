@@ -55895,3 +55895,4 @@
 1702526076	Spevacus	911proxy\.com
 1702529832	Makyen	aimrowrealty\.com
 1702529853	Makyen	beaconstac\.com
+1702529874	Makyen	beaconstac(?!\.com)
