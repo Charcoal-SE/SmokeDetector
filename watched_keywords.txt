@@ -55927,3 +55927,4 @@
 1702579080	Jesse	logins[\W_]*+hacker
 1702585818	Jeff Schaller	webmedia-tunisie\.com
 1702585857	Jeff Schaller	shriconnect\.com
+1702586524	Jeff Schaller	theshoeemporium\.rf\.gd
