@@ -5451,3 +5451,4 @@ icore\.net\.in
 upgrodigital\.net
 excelhsports\.com
 guiadoinvestidor\.com\.br
+techzapk\.net
