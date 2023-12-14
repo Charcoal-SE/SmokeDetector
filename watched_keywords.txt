@@ -55923,3 +55923,4 @@
 1702577238	Jesse	heroineconquest\.com
 1702578668	Jesse	bestacademicexperts\.co\.uk
 1702577426	Jesse	Techedo(?!\.com(?<=techedo\.com))
+1702577431	Jesse	techedo\.com
