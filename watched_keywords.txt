@@ -55910,4 +55910,3 @@
 1702582159	Jesse	preguntame\.cl
 1702572569	Jesse	calendarbox\.store
 1702574965	Jesse	pixbim\.com
-1702575029	Jesse	guiadoinvestidor\.com\.br
