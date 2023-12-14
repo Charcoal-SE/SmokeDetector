@@ -55897,3 +55897,4 @@
 1702529853	Makyen	beaconstac\.com
 1702529874	Makyen	beaconstac(?!\.com)
 1702531748	Spevacus	aldanamdc\.ae
+1702540398	Nick	davidshaulingkc\.com
