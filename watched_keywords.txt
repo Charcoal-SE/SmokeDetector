@@ -55925,3 +55925,4 @@
 1702577426	Jesse	Techedo(?!\.com(?<=techedo\.com))
 1702577431	Jesse	techedo\.com
 1702579080	Jesse	logins[\W_]*+hacker
+1702585818	Jeff Schaller	webmedia-tunisie\.com
