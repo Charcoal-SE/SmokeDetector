@@ -55933,3 +55933,4 @@
 1702632847	VLAZ	mumbai\.kpdigitalworld\.com
 1702633980	VLAZ	originbluy\.com
 1702634012	VLAZ	nocodefirm\.com
+1702633037	VLAZ	swambe\.com
