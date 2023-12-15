@@ -55952,3 +55952,4 @@
 1702649716	Jeff Schaller	ressoapkfree\.com
 1702622450	Nick	jyo168\.com
 1702639354	Nick	Wallet[\W_]*+Recovery[\W_]*+(DOT)?[\W_]*+NL
+1702651120	Jesse	e[\W_]*+way[\W_]*+scooters?
