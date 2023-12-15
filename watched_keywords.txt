@@ -55965,3 +55965,4 @@
 1702664208	Jesse	suntec-elektro\.de
 1702665591	Jesse	SUNtec[\W_]*+Elektro(?!\.de(?<=suntec-elektro\.de))(?:technik)?
 1702664349	Jesse	topsmm\.club
+1702664740	Jesse	top[\W_]*+smm(?!\.club(?<=topsmm\.club))
