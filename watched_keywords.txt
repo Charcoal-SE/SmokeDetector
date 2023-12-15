@@ -55954,3 +55954,4 @@
 1702639354	Nick	Wallet[\W_]*+Recovery[\W_]*+(DOT)?[\W_]*+NL
 1702651120	Jesse	e[\W_]*+way[\W_]*+scooters?
 1702633484	VLAZ	(?-i:JACvrhQDfPg|yndPAyYbi4U|b8Z7diyOZww|v7Blxk4JLCQ)(?#groups.google.com review of product)
+1702622328	Nick	artsclub\.shop
