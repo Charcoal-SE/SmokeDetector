@@ -11134,7 +11134,6 @@
 1565252502	Makyen	charliehaimon
 1565254386	Makyen	(?-i:x7fgsnz)
 1565257501	Byte Commander	resbee\.org
-1565258093	Makyen	comparecheapssl\.com
 1565259501	Makyen	lifestream[\W_]*labs(?:[\W_]*(?:oil|cbd|\d+))*
 1565262289	tripleee	mericanapparel\.net
 1565263897	Makyen	blindguydiy(?:@gmail\.com)?
