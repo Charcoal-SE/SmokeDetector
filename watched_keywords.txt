@@ -55969,3 +55969,4 @@
 1702665427	Jesse	cutouttype\.com
 1702654612	Jesse	rubangino(?#x.com)
 1702671178	Jesse	unzipgit\.github\.io
+1702699746	Jesse	(?-i:EwSmWh7C)(?#cutt.ly)
