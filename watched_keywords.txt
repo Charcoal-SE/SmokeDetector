@@ -56020,3 +56020,4 @@
 1702884672	Nick	exacthacks\.com
 1702885216	Nick	hothasher(?#facebook.com)
 1702914390	Jesse	tuxedoride\.com
+1702915575	Jesse	digitaldiscovery\.courses
