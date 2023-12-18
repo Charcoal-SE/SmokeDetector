@@ -56006,3 +56006,4 @@
 1702828762	Jesse	zevendevelopment\.com
 1702828992	Jesse	svglayers\.com
 1702829204	Jesse	Directline[\W_]*+recovery
+1702829311	Jesse	Money[\W_]*+Pocket[\W_]*+Loan
