@@ -56030,3 +56030,4 @@
 1702958578	Makyen	rg[\W_]*+enterprises(?!\.co\.in(?<=rgenterprises\.co\.in))
 1702961914	Robert Longson	merikheti\.com
 1702961566	Nick	thepsychguide\.org
+1702961481	Nick	gettingoverit\.io
