@@ -56077,3 +56077,4 @@
 1703000734	Jesse	theneosolutions\.com
 1703000801	Jesse	The[\W_]*+Neo[\W_]*+Solutions?(?!\.com(?<= theneosolutions\.com))
 1703010789	Jesse	ldhvertmarinefrance\.com
+1703011503	Jeff Schaller	livesports\.fun
