@@ -56075,3 +56075,4 @@
 1703000269	Jesse	(?-i:pdf417mrz_bot)(?#t.me)
 1703005025	Can O' Spam	panoptesv\.com
 1703000734	Jesse	theneosolutions\.com
+1703000801	Jesse	The[\W_]*+Neo[\W_]*+Solutions?(?!\.com(?<= theneosolutions\.com))
