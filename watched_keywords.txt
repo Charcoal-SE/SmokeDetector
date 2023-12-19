@@ -56065,3 +56065,4 @@
 1702983607	Nick	OpenTeQ[\W_]*+Technologies
 1702986741	lyxal	sanantoniospecial\.com
 1702988191	lyxal	innblockchain\.com
+1703000941	Spevacus	techgendev\.esurde\.com
