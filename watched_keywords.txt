@@ -53915,7 +53915,6 @@
 1697533488	cigien	picsera\.com
 1697533539	cigien	picsera(?!\.com)
 1697533568	cigien	copphago\.vn
-1697533602	cigien	techtoroms\.com
 1697533628	cigien	pikashowpc\.com
 1697537757	Jeff Schaller	numantratech\.com
 1697538544	Jeff Schaller	reyecomops\.com
