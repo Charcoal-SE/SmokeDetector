@@ -56046,3 +56046,4 @@
 1702930926	Jesse	tuttoyoutube\.it
 1702931474	Jesse	pettihome\.shop
 1702944300	Jesse	reclaim[\W_]*+right[\W_]*+recovery[\W_]*+group
+1702945005	Jesse	Reinhard[\W_]*+Maverick
