@@ -56028,3 +56028,4 @@
 1702958537	Makyen	rgenterprisesfin(?:@gmail\.com)?
 1702958557	Makyen	rgenterprises\.co\.in
 1702958578	Makyen	rg[\W_]*+enterprises(?!\.co\.in(?<=rgenterprises\.co\.in))
+1702961566	Nick	thepsychguide\.org
