@@ -56072,3 +56072,4 @@
 1703000140	Jesse	paperhunter\.co
 1703000243	Jesse	muskanvarma\.in
 1703000247	Jesse	chinky\.in
+1703000269	Jesse	(?-i:pdf417mrz_bot)(?#t.me)
