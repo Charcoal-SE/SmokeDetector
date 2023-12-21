@@ -56133,3 +56133,4 @@
 1703142354	Nick	All[\W_]*+conference[\W_]*+alert(?!\.com(?<=allconferencealert\.com))
 1703142930	lyxal	pcwhousing\.nl
 1703152074	lyxal	ghostwriting\.ie
+1703159228	Nick	Couponado(?!\.com(?<=couponado\.com))
