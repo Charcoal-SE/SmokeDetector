@@ -56104,3 +56104,4 @@
 1703115004	Vickel	(?-i:1d75n8u2)(?#b.link)
 1703107736	Vickel	support@momentous\.studio
 1703092541	Jesse	statelife\.com\.pk
+1703092502	Jesse	state[\W_]*+life[\W_]*+insurance[\W_]*+
