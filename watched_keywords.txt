@@ -56108,3 +56108,4 @@
 1703146548	Jeff Schaller	capsindia\.in
 1703146616	Jeff Schaller	faisalmover\.com\.pk
 1703158235	lyxal	opioid-rehab\.com
+1703158616	Jeff Schaller	clinicalrx\.co\.uk
