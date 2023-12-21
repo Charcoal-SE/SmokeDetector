@@ -56106,3 +56106,4 @@
 1703092541	Jesse	statelife\.com\.pk
 1703092502	Jesse	state[\W_]*+life[\W_]*+insurance[\W_]*+
 1703146548	Jeff Schaller	capsindia\.in
+1703146616	Jeff Schaller	faisalmover\.com\.pk
