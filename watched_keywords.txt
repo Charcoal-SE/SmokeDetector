@@ -56150,3 +56150,4 @@
 1703233403	Nick	pwcreator\.com
 1703218151	Nick	manasitsolution\.com
 1703223759	Nick	beesanpsychotherapy\.com
+1703218212	Nick	Manas[\W_]*+IT[\W_]*+Solution(?!\.com(?<=manasitsolution\.com))
