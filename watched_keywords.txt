@@ -54736,7 +54736,6 @@
 1699800357	Jeff Schaller	(?-i:rDA0xP)(?#fiverr)
 1699803030	Jeff Schaller	animeunity\.me
 1699804003	cigien	animeunity(?!\.me)
-1699804315	cigien	adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
 1699807278	Jeff Schaller	rumahbicara\.com
 1699807338	cigien	lrapk\.com
 1699818791	Jeff Schaller	kamas24\.com
