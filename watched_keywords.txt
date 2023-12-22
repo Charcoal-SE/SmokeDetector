@@ -56149,3 +56149,4 @@
 1703244694	Nick	DSO[\W_]*+Software(?!\.com(?<=dsosoftware\.com))
 1703233403	Nick	pwcreator\.com
 1703218151	Nick	manasitsolution\.com
+1703223759	Nick	beesanpsychotherapy\.com
