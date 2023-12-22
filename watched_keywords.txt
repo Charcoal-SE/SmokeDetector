@@ -56153,3 +56153,4 @@
 1703218212	Nick	Manas[\W_]*+IT[\W_]*+Solution(?!\.com(?<=manasitsolution\.com))
 1703229531	Nick	classiciasacademy\.com
 1703229583	Nick	Classic[\W_]*_IAS[\W_]*+Academy(?!\.com(?<=classiciasacademy\.com))
+1703244235	Nick	Beleaf[\W_]*+Technologies
