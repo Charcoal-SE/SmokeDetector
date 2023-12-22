@@ -5402,7 +5402,7 @@ appingine\.com
 foodsroute\.com
 santoshi[\W_]*+hacker[\W_]*+godaddysites(?:[\W_]*+(?:dot[\W_]*+)?com)
 santoshi[\W_]*+hacker[\W_]*+3[\W_]*+wixsite(?:[\W_]*+(?:dot[\W_]*+)?com)
-gamma\.app
+\b(?<![^\W_]-)gamma\.app/(?:docs|public)\b
 tecnowith\.com
 vxnet\.pro
 altatechnologies\.com
