@@ -56155,3 +56155,4 @@
 1703229583	Nick	Classic[\W_]*_IAS[\W_]*+Academy(?!\.com(?<=classiciasacademy\.com))
 1703244235	Nick	Beleaf[\W_]*+Technologies
 1703259055	Jesse	digi[\W_]*+world
+1703260821	Jesse	islamicmentors\.com
