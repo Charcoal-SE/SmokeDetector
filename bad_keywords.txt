@@ -2927,3 +2927,4 @@ marie[\W_]*+consultancy(?:oz)?(?:@gmail\.com)?
 (?-i:WizardGhosthacker)(?#t.me)
 pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
 adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
+(?-i:owD4Gk3d)(?#cutt.ly)
