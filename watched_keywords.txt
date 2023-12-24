@@ -56183,3 +56183,4 @@
 1703351788	Makyen	97winltd
 1703350962	Jesse	yoofinder\.com
 1703376975	Nick	poyosurfclub\.com
+1703371062	Nick	Teleteg(?!\.com(?<=teleteg\.com))
