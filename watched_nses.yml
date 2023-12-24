@@ -3508,7 +3508,9 @@ items:
 - comment: no longer responding 2021-07-27
   disable: true
   ns: jawatankosong.biz.
-- ns: isnpk.com.
+- comment: NXDOMAIN 2023-12-23 on GitHub Actions, but passing on CircleCI
+  disable: true
+  ns: isnpk.com.
 - comment: no longer responding 2020-10-15
   disable: true
   ns: tigerexpertz.com.
