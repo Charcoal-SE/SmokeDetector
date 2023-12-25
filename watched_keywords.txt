@@ -56217,3 +56217,4 @@
 1703485821	Makyen	upmetrics\.co
 1703485841	Makyen	upmetrics(?!\.co)
 1703487224	Henry Ecker	joo-da\.tistory\.com
+1703507107	Jeff Schaller	gondalgroupofmarketing\.com
