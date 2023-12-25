@@ -55228,7 +55228,6 @@
 1701005458	Jeff Schaller	szazalekkalkulator\.net
 1701010925	Jeff Schaller	milenialdesign\.com
 1701011243	Jeff Schaller	(?-i:^ferdinand panditya$)
-1701011710	Vickel	inogift\.com\.vn
 1701014243	Jeff Schaller	myiphonesites\.com
 1701024382	Jesse	swiftelearningservices\.com
 1701025418	Makyen	codespino\.in
