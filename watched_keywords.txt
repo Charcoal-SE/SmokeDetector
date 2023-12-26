@@ -56242,3 +56242,4 @@
 1703557529	Nick	honesthairfactory\.com
 1703557573	Nick	Honest[\W_]*+Hair[\W_]*+Factory(?!\.com(?<=honesthairfactory\.com))
 1703569944	Nick	rajatogel\.vzy\.io
+1703571486	Nick	masterdistributors\.ca
