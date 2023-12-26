@@ -56235,3 +56235,4 @@
 1703301104	Nick	theskillstock\.com
 1703317175	Nick	LRO[\W_]*+INVESTMENT[\W_]*+ADVISOR
 1703349121	Jesse	deepdecide\.com
+1703350831	Jesse	depicter\.com
