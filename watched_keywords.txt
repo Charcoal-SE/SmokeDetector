@@ -56230,3 +56230,4 @@
 1703540061	Jesse	tproco\.com
 1703549761	Makyen	hackersteve911(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1703554218	Nick	bereketnakliyat\.com
+1703554259	Nick	Bereket[\W_]*+Nakliyat(?!\.com(?<=bereketnakliyat\.com))
