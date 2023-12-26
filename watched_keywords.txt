@@ -10682,7 +10682,6 @@
 1563861191	Shree	xncasting\.com
 1563861328	Shree	star\.wang@ngxn\.com
 1563862027	tripleee	radianiasacademy\.org
-1563862121	tripleee	tnpsc
 1563862957	tripleee	kumpulanremaja\.com
 1563864075	tripleee	cloud-connect\.in
 1563864982	tripleee	msoignoli(?:@diversant\.com)?
