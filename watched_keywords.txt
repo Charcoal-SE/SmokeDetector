@@ -56248,3 +56248,4 @@
 1703600810	Jeff Schaller	moed774\.com
 1703607284	Makyen	tnpsc(?!\.group)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1703607335	Makyen	(?-i:HOLIAU-LAH-KOH)(?#rebrand.ly)
+1703607355	Makyen	kuda[\W_]*+338
