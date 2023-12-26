@@ -56234,3 +56234,4 @@
 1703554181	Nick	wasp333\.com
 1703301104	Nick	theskillstock\.com
 1703317175	Nick	LRO[\W_]*+INVESTMENT[\W_]*+ADVISOR
+1703349121	Jesse	deepdecide\.com
