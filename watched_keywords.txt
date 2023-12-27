@@ -56256,3 +56256,4 @@
 1703652338	Nick	maindiads\.com
 1703652396	Makyen	ads508
 1703659415	Nick	anainfo\.com
+1703659465	Nick	AnA[\W_]*+Info(?!\.com(?<=anainfo\.com))
