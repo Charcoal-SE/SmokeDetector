@@ -56259,3 +56259,4 @@
 1703659465	Nick	AnA[\W_]*+Info(?!\.com(?<=anainfo\.com))
 1703659934	Makyen	hpe6[\W_]*+a78
 1703672059	Robert Longson	rajatogel138\.vzy\.io
+1703678588	Nick	Presto[\W_]*+Gifts(?!\.com(?<=prestogifts\.com))
