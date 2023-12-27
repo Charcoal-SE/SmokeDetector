@@ -56308,3 +56308,4 @@
 1703647005	Nick	gptjp\.net
 1703664830	Nick	cncmillservice\.com
 1703678546	Nick	prestogifts\.com
+1703678588	Nick	Presto[\W_]*+Gifts(?!\.com(?<=prestogifts\.com))
