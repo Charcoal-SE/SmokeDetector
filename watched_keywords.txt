@@ -56296,3 +56296,4 @@
 1703591314	Nick	bonesthetics\.in
 1703591897	Nick	drnalinjoshi\.com
 1703592033	Nick	meganmoura\.com
+1703592074	Nick	Megan[\W_]*+Moura(?!\.com(?<=meganmoura\.com))
