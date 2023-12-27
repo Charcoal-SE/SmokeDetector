@@ -56327,3 +56327,4 @@
 1703694468	Jesse	Smart[\W_]*+Vision[\W_]*+(?:Clinic|Hospital)
 1703705508	Spevacus	prestogifts\.com
 1703705529	Spevacus	hqns\.ca
+1703707680	Spevacus	khdmatak\.com
