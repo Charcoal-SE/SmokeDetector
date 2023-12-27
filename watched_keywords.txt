@@ -56312,3 +56312,4 @@
 1703692508	Jesse	maxcomproviders\.online
 1703692677	Jesse	gir[\W_]*+national[\W_]*+park(?!\.co\.in(?<=girnationalpark\.co\.in))
 1703692725	Jesse	oretickets\.com
+1703693392	Jesse	imageqrcode\.com
