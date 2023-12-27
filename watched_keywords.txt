@@ -56309,3 +56309,4 @@
 1703678546	Nick	prestogifts\.com
 1703678588	Nick	Presto[\W_]*+Gifts(?!\.com(?<=prestogifts\.com))
 1703691880	Jesse	sportsonhd\.com
+1703692108	Jesse	dailymagazine\.com\.pk
