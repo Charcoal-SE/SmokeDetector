@@ -56296,3 +56296,4 @@
 1703592074	Nick	Megan[\W_]*+Moura(?!\.com(?<=meganmoura\.com))
 1703607873	Jesse	kucinichaction\.com
 1703608411	Jesse	digitalbonjour\.com
+1703703741	Spevacus	daftartotojitu\.com
