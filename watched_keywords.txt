@@ -56269,3 +56269,4 @@
 1703692303	Makyen	jawatoto
 1703692323	Makyen	(?-i:9BA7RA)(?#fiverr.com)
 1703692096	Jesse	thehashcode\.com
+1703434261	Jesse	HACKER[\W_]*+WEREWOLF
