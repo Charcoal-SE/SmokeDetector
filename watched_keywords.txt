@@ -56325,3 +56325,4 @@
 1703694830	Jesse	(?-i:vRG4ZD)(?#fiverr)
 1703694840	Jesse	doursports\.com
 1703694468	Jesse	Smart[\W_]*+Vision[\W_]*+(?:Clinic|Hospital)
+1703705508	Spevacus	prestogifts\.com
