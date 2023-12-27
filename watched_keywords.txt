@@ -56328,3 +56328,4 @@
 1703694657	Jesse	hqns\.ca
 1703694830	Jesse	(?-i:vRG4ZD)(?#fiverr)
 1703694840	Jesse	doursports\.com
+1703694468	Jesse	Smart[\W_]*+Vision[\W_]*+(?:Clinic|Hospital)
