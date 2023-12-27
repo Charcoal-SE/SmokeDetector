@@ -56305,7 +56305,6 @@
 1703640189	Nick	marketing92(?!\.com(?<=marketing92\.com))
 1703647005	Nick	gptjp\.net
 1703664830	Nick	cncmillservice\.com
-1703678546	Nick	prestogifts\.com
 1703678588	Nick	Presto[\W_]*+Gifts(?!\.com(?<=prestogifts\.com))
 1703691880	Jesse	sportsonhd\.com
 1703692108	Jesse	dailymagazine\.com\.pk
@@ -56322,7 +56321,6 @@
 1703693714	Jesse	examonline\.in
 1703693805	Jesse	savingted\.com
 1703693934	Jesse	proxiedmail\.com
-1703694123	Jesse	prestogifts\.com
 1703694222	Jesse	github\.com/unfoldadmin
 1703694325	Jesse	hoppipolla\.net
 1703694657	Jesse	hqns\.ca
