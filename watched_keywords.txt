@@ -56363,3 +56363,4 @@
 1703792297	Jesse	haktutsspin\.com
 1703792425	Jesse	Haktuts(?:[\W_]*+Free)?[\W_]*+Spin(?!\.com(?<=haktutsspin\.com))
 1703798945	Jeff Schaller	devbyteschool\.com
+1703802249	Jesse	DevByteSchool(?!\.com(?<=devbyteschool\.com))
