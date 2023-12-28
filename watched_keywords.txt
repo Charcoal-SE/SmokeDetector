@@ -56361,3 +56361,4 @@
 1703786703	Jesse	gemtvusa\.co
 1703790077	Jesse	prodirectory\.org
 1703792297	Jesse	haktutsspin\.com
+1703792425	Jesse	Haktuts(?:[\W_]*+Free)?[\W_]*+Spin(?!\.com(?<=haktutsspin\.com))
