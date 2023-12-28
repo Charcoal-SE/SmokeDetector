@@ -56353,3 +56353,4 @@
 1703747309	Nick	Emblica[\W_]*+Estate(?!\.net(?<=922emblicaestate\.net))
 1703777274	Jesse	littlealchemyelements\.com
 1703777329	Jesse	magnumconsultancyservices\.ae
+1703778160	Jesse	eliasdc\.dev
