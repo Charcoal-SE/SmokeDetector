@@ -56372,3 +56372,4 @@
 1703859818	Jeff Schaller	thecarlab\.ae
 1703860102	Jeff Schaller	airlabs\.co(?!/api/)
 1703861483	Jeff Schaller	sas\.telkomuniversity\.ac\.id
+1703865131	Jesse	fmapps\.org
