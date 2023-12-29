@@ -56373,3 +56373,4 @@
 1703860102	Jeff Schaller	airlabs\.co(?!/api/)
 1703861483	Jeff Schaller	sas\.telkomuniversity\.ac\.id
 1703836698	Nick	Shape[\W_]*+Kapseln
+1703836825	Nick	digitalambesh\.in
