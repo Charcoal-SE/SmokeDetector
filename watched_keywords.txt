@@ -56416,3 +56416,4 @@
 1703954907	Jesse	digital[\W_]*+techists(?:[\W_]*+media)?+(?!\.com(?<=digitaltechistsmedia\.com))
 1703962226	Jesse	clippingoutsourcing\.com
 1703965434	cocomac	fixitcasa\.com
+1703966975	Jesse	sanjuutalk\.blogspot
