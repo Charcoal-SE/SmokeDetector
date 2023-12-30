@@ -56413,4 +56413,3 @@
 1703950784	Jesse	sikhboyzwalia(?#@gmail.com)
 1703954659	Jesse	digitaltechisMe(?#twitter)
 1703954674	Jesse	numberoneinPune(?#facebook)
-1703954710	Jesse	digital[\W_]*+techists(?:[\W_]*+media)?
