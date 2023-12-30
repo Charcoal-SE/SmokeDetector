@@ -56394,3 +56394,4 @@
 1703947389	Jeff Schaller	kedaitogel-login\.vzy\.io
 1703922445	Nick	astoriashrine(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1703949383	Jeff Schaller	asso\.com\.ua
+1703954710	Jesse	digital[\W_]*+techists(?:[\W_]*+media)?
