@@ -56415,3 +56415,4 @@
 1703954674	Jesse	numberoneinPune(?#facebook)
 1703954907	Jesse	digital[\W_]*+techists(?:[\W_]*+media)?+(?!\.com(?<=digitaltechistsmedia\.com))
 1703962226	Jesse	clippingoutsourcing\.com
+1703965434	cocomac	fixitcasa\.com
