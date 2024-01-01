@@ -56448,3 +56448,4 @@
 1704093004	Makyen	aglobalenterprises\.com
 1704093033	Makyen	a[\W_]*+global[\W_]*+enterprises(?!\.com(?<=aglobalenterprises\.com))
 1704093200	Makyen	vegaprint\.co\.uk
+1704096001	Nick	goalightmotion\.com
