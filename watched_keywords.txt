@@ -56449,3 +56449,4 @@
 1704093033	Makyen	a[\W_]*+global[\W_]*+enterprises(?!\.com(?<=aglobalenterprises\.com))
 1704093200	Makyen	vegaprint\.co\.uk
 1704101728	Robert Longson	xtremedigits\.com
+1704115801	Jeff Schaller	joinpdinsights\.com
