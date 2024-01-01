@@ -56461,3 +56461,4 @@
 1704139934	Makyen	duar88
 1704139786	Vickel	puttykeyinfo\.com
 1704140009	Makyen	puttykeyinfo(?!\.com)
+1704142132	Vickel	cupidstouch\.store
