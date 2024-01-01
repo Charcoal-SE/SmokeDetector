@@ -56447,3 +56447,4 @@
 1704092958	Makyen	uaesafari(?!\.ae)
 1704093004	Makyen	aglobalenterprises\.com
 1704093033	Makyen	a[\W_]*+global[\W_]*+enterprises(?!\.com(?<=aglobalenterprises\.com))
+1704093200	Makyen	vegaprint\.co\.uk
