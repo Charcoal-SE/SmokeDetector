@@ -56442,3 +56442,4 @@
 1704091777	Makyen	mystery\.philamena(?:@gmail\.com)?
 1704092860	Makyen	intechnosoftware\.com
 1704092880	Makyen	intechno[\W_]*+software(?!\.com(?<=intechnosoftware\.com))
+1704092900	Makyen	jackpot[\W_]*+win999(?!\.com(?<=jackpotwin999\.com))
