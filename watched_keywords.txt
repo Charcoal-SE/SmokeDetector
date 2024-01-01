@@ -56458,3 +56458,4 @@
 1704096398	Nick	u7buy\.com
 1704124589	Jeff Schaller	digitalinvention\.in
 1704125162	Makyen	damsonpharmacy\.com
+1704125182	Makyen	digitalinvention(?!\.in)
