@@ -56441,3 +56441,4 @@
 1704091606	Makyen	buy[\W_]*+tramadol
 1704091777	Makyen	mystery\.philamena(?:@gmail\.com)?
 1704092860	Makyen	intechnosoftware\.com
+1704092880	Makyen	intechno[\W_]*+software(?!\.com(?<=intechnosoftware\.com))
