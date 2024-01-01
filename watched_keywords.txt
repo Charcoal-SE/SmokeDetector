@@ -56443,3 +56443,4 @@
 1704092860	Makyen	intechnosoftware\.com
 1704092880	Makyen	intechno[\W_]*+software(?!\.com(?<=intechnosoftware\.com))
 1704092900	Makyen	jackpot[\W_]*+win999(?!\.com(?<=jackpotwin999\.com))
+1704092939	Makyen	uaesafari\.ae
