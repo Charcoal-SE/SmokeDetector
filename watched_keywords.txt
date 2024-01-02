@@ -56546,3 +56546,4 @@
 1704215546	Jeff Schaller	fakenamegeneratorai\.com
 1704218128	Jesse	(?-i:OTENETO)(?#t.me)
 1704218265	Jeff Schaller	codezng\.com
+1704219497	Makyen	code[\W_]*+zng(?!\.com(?<=codezng\.com))
