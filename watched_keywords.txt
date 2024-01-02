@@ -56515,3 +56515,4 @@
 1704183585	cocomac	layarlix\.com
 1704183615	cocomac	shoppingonlineproducts\.com
 1704184223	cocomac	mein-gesundes-abnehmprogramm\.de
+1704198850	Jeff Schaller	blog\.shoonya\.com
