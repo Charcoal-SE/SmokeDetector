@@ -56548,3 +56548,4 @@
 1704218265	Jeff Schaller	codezng\.com
 1704219497	Makyen	code[\W_]*+zng(?!\.com(?<=codezng\.com))
 1704224808	Makyen	(?-i:cEXeeQpbpnU)
+1704224829	Makyen	(?-i:fr4LQhGZh0c)
