@@ -5481,3 +5481,4 @@ sportswatch\.live
 vzy\.io
 livesports\.fun
 topnewstories\.com
+tecswan\.com
