@@ -52021,7 +52021,6 @@
 1692701239	cigien	ciente(?!\.io)
 1692701409	cigien	cleffex\.com
 1692701445	cigien	cleffex(?!\.com)
-1692701744	cigien	lover-dolls\.com
 1692701783	cigien	linkr\.bio
 1692702466	cigien	qaswaengg\.com
 1692703291	cigien	travivachon\.wordpress\.com
