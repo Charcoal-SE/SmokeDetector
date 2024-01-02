@@ -2929,3 +2929,4 @@ pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
 adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
 (?-i:owD4Gk3d)(?#cutt.ly)
 brunoe[\W_]*+quick[\W_]*+hack(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?com)?
+omega[\W_]*+crypto(?:[\W_]*+recovery)?
