@@ -56581,3 +56581,4 @@
 1704296854	Makyen	job[\W_]*+bg(?!\.com(?<=jobbg\.com))
 1704247808	Jesse	templexa\.com
 1704300277	Jeff Schaller	brycematheson\.io
+1704302826	Jesse	trigshaver\.com
