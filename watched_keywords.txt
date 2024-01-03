@@ -56572,3 +56572,4 @@
 1704287493	Jeff Schaller	vndailynews\.net
 1704287870	Jeff Schaller	yourseogenius\.com
 1704288373	Jeff Schaller	tmcsolicitors\.co\.uk
+1704294967	Jesse	tractorkarvan(?!\.com(?<= tractorkarvan\.com))
