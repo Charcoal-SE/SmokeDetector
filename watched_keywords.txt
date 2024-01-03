@@ -56579,3 +56579,4 @@
 1704283429	Vickel	myfastx\.com
 1704296733	Jesse	jobbg\.com
 1704296854	Makyen	job[\W_]*+bg(?!\.com(?<=jobbg\.com))
+1704247808	Jesse	templexa\.com
