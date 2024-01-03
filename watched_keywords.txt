@@ -56570,3 +56570,4 @@
 1704281995	Robert Longson	resultfirst\.com
 1704287200	Jeff Schaller	vietnews\.org
 1704287493	Jeff Schaller	vndailynews\.net
+1704287870	Jeff Schaller	yourseogenius\.com
