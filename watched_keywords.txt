@@ -56649,3 +56649,4 @@
 1704388695	Jesse	Jayz[\W_]*+Tech[\W_]*+Wear
 1704388818	Jesse	jayzchelten(?#instagram)
 1704390371	Jesse	magicmushroomschocolatebars\.com
+1704394426	Jeff Schaller	stat\.bora\.dopa\.go\.th
