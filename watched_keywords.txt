@@ -56658,6 +56658,5 @@
 1704411729	Jesse	main89\.pro
 1704411749	Jesse	kotagame\.xyz
 1704411770	Jesse	cerita\.store
-1704411819	Jesse	vplays89\.com
 1704411840	Jesse	kotagame\.lol
 1704412018	Jesse	vplays?89
