@@ -56621,3 +56621,4 @@
 1704377708	Makyen	speedylinks\.click
 1704377741	Makyen	psychicspellshrine\.wixsite\.com
 1704378209	Makyen	vkommerce\.com
+1704378230	Makyen	locanam(?!\.com)
