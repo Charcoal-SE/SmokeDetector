@@ -56644,3 +56644,4 @@
 1704383651	Jesse	hermanaguinis\.com
 1704384050	Jesse	matrixify\.app
 1704384387	Makyen	sophie[\W_]*+gregoire[\W_]*+trudeau(?:[\W_]*+(?:cbd|gummies|canada|amazon|\d++|[\da-f]{5,}+)s?)+
+1704384727	Jesse	smartgstcalc\.com
