@@ -56648,3 +56648,4 @@
 1704388544	Jesse	munkudil\.com
 1704388695	Jesse	Jayz[\W_]*+Tech[\W_]*+Wear
 1704388818	Jesse	jayzchelten(?#instagram)
+1704390371	Jesse	magicmushroomschocolatebars\.com
