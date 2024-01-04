@@ -56624,3 +56624,4 @@
 1704378230	Makyen	locanam(?!\.com)
 1704378256	Makyen	maldives[\W_]*+times(?!\.com(?<=maldives-times\.com))
 1704378610	Makyen	e[\W_]*+d[\W_]*+pitt
+1704378630	Makyen	neo[\W_]*+drops[\W_]*+erfahrungen[\W_]*+switzerland
