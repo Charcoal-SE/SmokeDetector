@@ -56289,7 +56289,6 @@
 1703647005	Nick	gptjp\.net
 1703664830	Nick	cncmillservice\.com
 1703678588	Nick	Presto[\W_]*+Gifts(?!\.com(?<=prestogifts\.com))
-1703691880	Jesse	sportsonhd\.com
 1703692108	Jesse	dailymagazine\.com\.pk
 1703692508	Jesse	maxcomproviders\.online
 1703692677	Jesse	gir[\W_]*+national[\W_]*+park(?!\.co\.in(?<=girnationalpark\.co\.in))
