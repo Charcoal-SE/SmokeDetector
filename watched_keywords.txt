@@ -56614,3 +56614,4 @@
 1704377501	Makyen	pintu123(?:slot)?
 1704377532	Makyen	123pintuslot
 1704377565	Makyen	matiyas[\W_]*+solutions
+1704377586	Makyen	viaciaxx[\W_]*+fruchtgummis
