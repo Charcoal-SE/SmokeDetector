@@ -56613,3 +56613,4 @@
 1704377470	Makyen	rtppintu123(?!\.shop)
 1704377501	Makyen	pintu123(?:slot)?
 1704377532	Makyen	123pintuslot
+1704377565	Makyen	matiyas[\W_]*+solutions
