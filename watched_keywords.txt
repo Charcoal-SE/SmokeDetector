@@ -55827,7 +55827,6 @@
 1702455209	Robert Longson	bholaonlinebook\.in
 1702466625	Jeff Schaller	snnrajcorp\.com
 1702464646	VLAZ	thewide\.com
-1702478720	VLAZ	latestnewsheadlinestoday\.wordpress
 1702478937	Spevacus	offenbacherumzugsunternehmen\.de
 1702475626	Vickel	femalebeautytips23\.blogspot
 1702472658	VLAZ	mistyseveri\.com
