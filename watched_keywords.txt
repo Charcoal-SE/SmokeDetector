@@ -56633,3 +56633,4 @@
 1704379157	Jeff Schaller	beiladung-in-heidelberg\.de
 1704379191	Jeff Schaller	krishayenterprise\.com
 1704379866	Makyen	rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service
+1704380457	Jeff Schaller	beiladung-in-\w+\.de
