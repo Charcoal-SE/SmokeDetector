@@ -56598,3 +56598,4 @@
 1704341522	Jesse	(?-i:caapp56sh)(?#tinyurl.com)
 1704341542	Jesse	(?-i:hcash6happ)(?#tinyurl.com)
 1704344091	Jesse	g[\W_]*+square[\W_]*+web[\W_]*+tech(?:nologies)?(?!\.com(?<=gsquarewebtech\.com))
+1704355995	tripleee	mint-print\.com
