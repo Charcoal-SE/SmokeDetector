@@ -56689,3 +56689,4 @@
 1704467984	Jesse	mhinfomedia\.in
 1704468040	Jesse	MH[\W_]*+Infomedia(?!\.in(?<=mhinfomedia\.in))
 1704468152	Jesse	geeksquadassists\.com
+1704468282	Jesse	suryarentcarbandung\.com
