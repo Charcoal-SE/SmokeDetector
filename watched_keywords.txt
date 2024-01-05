@@ -56694,3 +56694,4 @@
 1704473447	Makyen	auctioneer\.net
 1704475183	Jesse	edenderma\.com
 1704476701	Jesse	minsoftwarerequirements\.com
+1704477694	Jesse	Glow[\W_]*+POP[\W_]*+(Collection|Polishes)
