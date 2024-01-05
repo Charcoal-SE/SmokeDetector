@@ -56691,3 +56691,4 @@
 1704468152	Jesse	geeksquadassists\.com
 1704468282	Jesse	suryarentcarbandung\.com
 1704468330	Jesse	Surya[\W_]*+Rentcar[\W_]*+Bandung(?!\.com(?<=suryarentcarbandung\.com))
+1704473447	Makyen	auctioneer\.net
