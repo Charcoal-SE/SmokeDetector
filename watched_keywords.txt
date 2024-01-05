@@ -56671,3 +56671,4 @@
 1704448160	tripleee	fastdl\.my\.id
 1704448558	tripleee	pennyappealusa\.org
 1704448588	tripleee	pennyappeal\W*+usa(?!\.org(?<=pennyappealusa\.org))
+1704449941	Jeff Schaller	spartankids\.in
