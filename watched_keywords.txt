@@ -56686,3 +56686,4 @@
 1704464925	tripleee	medium\.com/@light-city
 1704467324	Jesse	vplays?89\.\w{2,}
 1704467580	Jesse	vplays?89(?!\.\w{2,})
+1704467984	Jesse	mhinfomedia\.in
