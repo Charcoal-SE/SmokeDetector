@@ -56697,3 +56697,4 @@
 1704479492	Jesse	Glow[\W_]*+POP[\W_]*+(?:Collection|Polishes)
 1704486335	Jesse	mmalcek\.github\.io
 1704493319	Makyen	international[\W_]*+recovery[\W_]*+agency
+1704493327	Makyen	quickrecoverydeck(?:@consultant\.com)?
