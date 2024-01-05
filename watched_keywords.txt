@@ -56665,3 +56665,4 @@
 1704434289	tripleee	mamaadoptation\.com
 1704436136	Nick	Anumati(?!\.co\.in(?<=anumati\.co\.in))
 1704438051	Makyen	muskanmalhotra\.com
+1704438071	Makyen	angelgoafun\.com
