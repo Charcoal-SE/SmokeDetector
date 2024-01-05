@@ -56688,3 +56688,4 @@
 1704467580	Jesse	vplays?89(?!\.\w{2,})
 1704467984	Jesse	mhinfomedia\.in
 1704468040	Jesse	MH[\W_]*+Infomedia(?!\.in(?<=mhinfomedia\.in))
+1704468152	Jesse	geeksquadassists\.com
