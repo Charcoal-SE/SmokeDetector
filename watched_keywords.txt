@@ -56710,3 +56710,4 @@
 1704546247	Vickel	codingclave[\W_]*+technologies(?!\.com)
 1704546335	Jeff Schaller	fireboxtools\.com
 1704547825	VLAZ	busforrentindubai\.ae
+1704547952	VLAZ	bus[\W_]*+for[\W_]*+rent[\W_]*+in[\W_]*+Dubai(?!\.ae)
