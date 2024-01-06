@@ -56713,3 +56713,4 @@
 1704547952	VLAZ	bus[\W_]*+for[\W_]*+rent[\W_]*+in[\W_]*+Dubai(?!\.ae)
 1704549820	VLAZ	pictorzo\.com
 1704555370	Jesse	thinkai\.fun
+1704555395	Jesse	bavintanjorearts\.com
