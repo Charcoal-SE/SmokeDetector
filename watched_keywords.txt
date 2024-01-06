@@ -56719,3 +56719,4 @@
 1704555664	Jesse	azure-learning\.com
 1704557493	Jesse	harmoko\.com
 1704559737	Makyen	salesbitdeal
+1704560129	Makyen	herbacare(?!\.rf\.gd)
