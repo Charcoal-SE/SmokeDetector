@@ -56707,3 +56707,4 @@
 1704542317	Jeff Schaller	mohandessite\.com
 1704543017	VLAZ	Medzsquare\.com
 1704546158	Vickel	codingclavetechnologies\.com
+1704546247	Vickel	codingclave[\W_]*+technologies(?!\.com)
