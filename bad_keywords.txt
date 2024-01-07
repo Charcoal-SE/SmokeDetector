@@ -2932,3 +2932,4 @@ brunoe[\W_]*+quick[\W_]*+hack(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
 captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
+technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
