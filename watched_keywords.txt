@@ -56732,3 +56732,4 @@
 1704594798	Jesse	AppCash33\.com
 1704595438	Jesse	(?:(?:App[\W_]*+Cash)|(?:Cash[\W_]*+App))[\W_]*+\d{2}(?!\.com(?<=(?:appcash33|cashapp22)\.com))
 1704595749	Jesse	trektechcorp1(?#@gmail.com)
+1704599714	Jesse	bitads\.ai
