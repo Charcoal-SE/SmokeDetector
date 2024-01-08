@@ -56798,3 +56798,4 @@
 1704716912	tripleee	vijaypatidar(?# amazon.com/author link)
 1704717117	Cow	movieszone\.club
 1704720345	Jeff Schaller	hamtamovie\.io
+1704722160	Machavity	oracleexampdf\.com
