@@ -2722,6 +2722,9 @@ def obfuscated_word(s, site):
         # prevent FP on simple English possessive
         if word[-2:] == "'s" and word[:-2] + "s" in obfuscation_keywords:
             continue
+        # prevent FP on contraction of "who are"
+        if word == "who're":
+            continue
         # prevent FP on stuff like 'I have this "number": 1111'
         word = word.strip(punctuation).lower()
         translated = word.translate(translation_1337)
