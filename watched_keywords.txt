@@ -56817,3 +56817,4 @@
 1704730243	Jesse	recovery[\W_]*+darek
 1704732548	Jesse	commercialwastequotes\.co\.uk
 1704732641	cigien	snaptubemodapk\.org
+1704732881	cigien	gotoppr(?!\.com)
