@@ -56819,3 +56819,4 @@
 1704732881	cigien	gotoppr(?!\.com)
 1704732993	cigien	mmogah(?!\.com)
 1704733682	Jesse	drivewaykingusa\.com
+1704738930	Jeff Schaller	sacluxcomptechspecialst(?:@engineer\.com)?
