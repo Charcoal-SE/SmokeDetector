@@ -56837,3 +56837,4 @@
 1704792842	cigien	easy[\W_]*+car[\W_]*+removal(?!\.com\.au(?<=easycarremoval\.com\.au))
 1704792990	cigien	studyfy\.com
 1704793024	cigien	serenity[\W_]*+psychotherapy(?!\.org(?<=serenitypsychotherapy\.org))
+1704793399	cigien	pills4ever\.com
