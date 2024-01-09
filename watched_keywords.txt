@@ -56839,3 +56839,4 @@
 1704793024	cigien	serenity[\W_]*+psychotherapy(?!\.org(?<=serenitypsychotherapy\.org))
 1704793399	cigien	pills4ever\.com
 1704795776	tripleee	theworldhour\.com
+1704798863	tripleee	norsespirit\.com
