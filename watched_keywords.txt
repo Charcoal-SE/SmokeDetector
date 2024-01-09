@@ -56856,3 +56856,4 @@
 1704813229	Jesse	equilibriumconsult\.com
 1704813063	Cow	viralnews360\.net
 1704813313	Jesse	equilibrium[\W_]*+consulting
+1704813439	Jesse	myacademia\.zone
