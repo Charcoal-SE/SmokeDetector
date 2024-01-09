@@ -56842,3 +56842,4 @@
 1704798863	tripleee	norsespirit\.com
 1704800374	cigien	solawins\.com
 1704800436	cigien	techgropse(?!\.com)
+1704800512	cigien	norse[\W_]*+spirit(?!\.com(?<=norsespirit\.com))
