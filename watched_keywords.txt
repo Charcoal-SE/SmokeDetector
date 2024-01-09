@@ -56845,3 +56845,4 @@
 1704800512	cigien	norse[\W_]*+spirit(?!\.com(?<=norsespirit\.com))
 1704800432	Cow	latestnews\.com\.pk
 1704800760	cigien	article[\W_]*+junkie(?!\.in(?<=articlejunkie\.in))
+1704802997	Vickel	1st[\W_]*+Scenic(?!\.co\.uk)
