@@ -56841,3 +56841,4 @@
 1704795776	tripleee	theworldhour\.com
 1704798863	tripleee	norsespirit\.com
 1704800374	cigien	solawins\.com
+1704800436	cigien	techgropse(?!\.com)
