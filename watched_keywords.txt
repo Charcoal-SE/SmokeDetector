@@ -56848,3 +56848,4 @@
 1704802997	Vickel	1st[\W_]*+Scenic(?!\.co\.uk)
 1704802838	Vickel	1stscenic\.co\.uk
 1704804075	Vickel	halaldua\.com
+1704807521	Jeff Schaller	topclassifieddeals\.com
