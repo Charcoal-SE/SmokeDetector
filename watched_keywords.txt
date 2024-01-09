@@ -56844,3 +56844,4 @@
 1704800436	cigien	techgropse(?!\.com)
 1704800512	cigien	norse[\W_]*+spirit(?!\.com(?<=norsespirit\.com))
 1704800432	Cow	latestnews\.com\.pk
+1704800760	cigien	article[\W_]*+junkie(?!\.in(?<=articlejunkie\.in))
