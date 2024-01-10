@@ -56881,3 +56881,4 @@
 1704880412	cigien	samvegetable\.com
 1704880440	cigien	rectopages
 1704881262	cigien	alarab[\W_]*+transport(?!\.com(?<=alarabtransport\.com))
+1704881509	tripleee	educative\.io
