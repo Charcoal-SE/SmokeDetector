@@ -56882,3 +56882,4 @@
 1704881262	cigien	alarab[\W_]*+transport(?!\.com(?<=alarabtransport\.com))
 1704881509	tripleee	educative\.io
 1704881624	tripleee	(?-i:^Jameson scott$)
+1704882781	tripleee	godaddysites\.com
