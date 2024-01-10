@@ -54718,7 +54718,6 @@
 1699807338	cigien	lrapk\.com
 1699818791	Jeff Schaller	kamas24\.com
 1699833342	Makyen	kamas24(?!\.com)
-1699763431	Justine Krejcha	Brunoe Quick Hack
 1699850303	Jesse	peoplesketogummiesget\.blogspot
 1699853448	Makyen	people[\W_]*+s[\W_]*+keto[\W_]*+gummies
 1699863309	Nick	drgodwinharbalhomecure22\.simdif\.com
