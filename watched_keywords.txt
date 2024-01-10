@@ -56872,3 +56872,4 @@
 1704865417	tripleee	(?-i:^OpenIM$)
 1704866207	tripleee	sap\W+?fico
 1704870395	tripleee	idehweb\.com
+1704873258	tripleee	bangaloredigitalmarketing\.com
