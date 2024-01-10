@@ -56906,3 +56906,4 @@
 1704917313	Makyen	wickbeavers\.com
 1704922023	Jesse	listing\.help
 1704925529	Jesse	ccadp\.net
+1704925564	Jesse	ccadp(?!\.net)
