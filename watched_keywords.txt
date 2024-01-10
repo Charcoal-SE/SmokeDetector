@@ -56885,3 +56885,4 @@
 1704882781	tripleee	godaddysites\.com
 1704883387	tripleee	kphmedia\.in
 1704884820	cigien	ecompapi\.com\.au
+1704884850	cigien	ecompapi(?!\.com\.au)
