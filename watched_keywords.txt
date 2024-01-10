@@ -56870,3 +56870,4 @@
 1704857314	Jesse	StarBike\.org
 1704865347	tripleee	pgyer\.com
 1704865417	tripleee	(?-i:^OpenIM$)
+1704866207	tripleee	sap\W+?fico
