@@ -56894,3 +56894,4 @@
 1704888856	cigien	rakumura[\W_]*+it[\W_]*+solutions(?!\.com(?<=rakumuraitsolutions\.com))
 1704889269	cigien	1clickautoauction\.com
 1704889301	cigien	1clickautoauction(?!\.com)
+1704889324	tripleee	Dr\W*+Pankaj\W*+Sharma
