@@ -56891,3 +56891,4 @@
 1704888260	cigien	doublelist24\.com
 1704888400	cigien	doublelist24(?!\.com)
 1704888833	cigien	rakumuraitsolutions\.com
+1704888856	cigien	rakumura[\W_]*+it[\W_]*+solutions(?!\.com(?<=rakumuraitsolutions\.com))
