@@ -56893,3 +56893,4 @@
 1704888833	cigien	rakumuraitsolutions\.com
 1704888856	cigien	rakumura[\W_]*+it[\W_]*+solutions(?!\.com(?<=rakumuraitsolutions\.com))
 1704889269	cigien	1clickautoauction\.com
+1704889301	cigien	1clickautoauction(?!\.com)
