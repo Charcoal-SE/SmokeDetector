@@ -56871,3 +56871,4 @@
 1704865347	tripleee	pgyer\.com
 1704865417	tripleee	(?-i:^OpenIM$)
 1704866207	tripleee	sap\W+?fico
+1704869249	Cow	freepik\.com
