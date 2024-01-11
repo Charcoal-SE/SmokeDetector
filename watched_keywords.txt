@@ -56913,7 +56913,6 @@
 1704953094	Makyen	ictfibers\.com
 1704955567	Nick	culturati\.in
 1704956949	Nick	sareeka\.com
-1704957060	Nick	Sareeka(?!\.com(?<=sareeka\.com))
 1704957162	Nick	Culturati(?!\.in(?<=culturati\.in))
 1704962269	cigien	dissertationhelpexperts\.co\.uk
 1704962310	cigien	varthagamsoft\.com
