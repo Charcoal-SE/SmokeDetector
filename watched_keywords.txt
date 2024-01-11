@@ -56919,3 +56919,4 @@
 1704957162	Nick	Culturati(?!\.in(?<=culturati\.in))
 1704962269	cigien	dissertationhelpexperts\.co\.uk
 1704962310	cigien	varthagamsoft\.com
+1704962331	cigien	varthagamsoft(?!\.com)
