@@ -56927,3 +56927,4 @@
 1704964934	cigien	shapekapseln\.fr
 1704965866	cigien	isallaboutmath\.com
 1704966000	cigien	the[\W_]*+villa[\W_]*+604(?!\.com(?<=thevilla604\.com))
+1704968363	cigien	firstpointwebdesign\.com
