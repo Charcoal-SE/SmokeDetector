@@ -56935,3 +56935,4 @@
 1704976099	VLAZ	tabletennisstore\.us
 1704977819	Jeff Schaller	medscityusa\.com
 1704978353	VLAZ	yl0030\.com
+1704907054	General Grievance	shrinkme\.org
