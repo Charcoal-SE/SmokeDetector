@@ -56909,3 +56909,4 @@
 1704925564	Jesse	ccadp(?!\.net)
 1704940275	Nick	onca\.wiki
 1704942749	Makyen	d(?:octo)?r[\W_]*+kuda
+1704950587	Cow	gadgetandgear\.com
