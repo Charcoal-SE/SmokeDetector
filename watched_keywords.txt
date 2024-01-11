@@ -56922,3 +56922,4 @@
 1704962331	cigien	varthagamsoft(?!\.com)
 1704962352	cigien	mmj-docs\.com
 1704962587	cigien	vkommerce(?!\.com)
+1704962667	cigien	brampton[\W_]*+web[\W_]*+design(?!\.com(?<=bramptonwebdesign\.com))
