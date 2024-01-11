@@ -56921,3 +56921,4 @@
 1704962310	cigien	varthagamsoft\.com
 1704962331	cigien	varthagamsoft(?!\.com)
 1704962352	cigien	mmj-docs\.com
+1704962587	cigien	vkommerce(?!\.com)
