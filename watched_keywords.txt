@@ -56945,3 +56945,4 @@
 1704992272	cigien	luck88th\.com
 1704994530	Jesse	mjmhoki\.com
 1704999869	Jesse	aneworksrepair\.com
+1704999901	Jesse	aneworksrepair(?!\.com)
