@@ -56924,3 +56924,4 @@
 1704962690	cigien	ugc[\W_]*+net[\W_]*+coaching
 1704962910	cigien	sanmar[\W_]*+building[\W_]*+services(?!\.com(?<=sanmarbuildingservices\.com))
 1704964911	cigien	shape[\W_]*+kapseln(?!\.fr(?<=shapekapseln\.fr))
+1704964934	cigien	shapekapseln\.fr
