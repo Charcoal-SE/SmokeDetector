@@ -56929,3 +56929,4 @@
 1704968363	cigien	firstpointwebdesign\.com
 1704968394	cigien	first[\W_]*+point[\W_]*+web[\W_]*+design(?!\.com(?<=firstpointwebdesign\.com))
 1704970315	Nick	Sareeka(?!\.com)
+1704972787	tripleee	vexanshop\.com
