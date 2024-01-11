@@ -56925,3 +56925,4 @@
 1704962910	cigien	sanmar[\W_]*+building[\W_]*+services(?!\.com(?<=sanmarbuildingservices\.com))
 1704964911	cigien	shape[\W_]*+kapseln(?!\.fr(?<=shapekapseln\.fr))
 1704964934	cigien	shapekapseln\.fr
+1704965866	cigien	isallaboutmath\.com
