@@ -56942,3 +56942,4 @@
 1704990111	cigien	NTA[\W_]*+UGC[\W_]*+NET[\W_]*+Academy(?!\.com(?<=ntaugcnetacademy\.com))
 1704990359	cigien	kafkadashboard\.com
 1704992012	cigien	yyyinsta-anonimo\.it
+1704992243	cigien	grasscuttingtools\.com
