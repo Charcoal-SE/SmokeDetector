@@ -56938,3 +56938,4 @@
 1704979885	Jeff Schaller	rent-a-car-otopeni\.ro
 1704983232	Vickel	88myr\.com
 1704988735	Jesse	ntaugcnetacademy\.com
+1704988816	Jesse	NTA[\W_]*+UGC[\W_]*+NET[\W_]*+Academy(?!\.com(?<= ntaugcnetacademy\.com))
