@@ -56908,3 +56908,4 @@
 1704925529	Jesse	ccadp\.net
 1704925564	Jesse	ccadp(?!\.net)
 1704940275	Nick	onca\.wiki
+1704942749	Makyen	d(?:octo)?r[\W_]*+kuda
