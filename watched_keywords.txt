@@ -56940,3 +56940,4 @@
 1704988735	Jesse	ntaugcnetacademy\.com
 1704989171	Jesse	UGC[\W_]*+NET[\W_]*+exam
 1704990111	cigien	NTA[\W_]*+UGC[\W_]*+NET[\W_]*+Academy(?!\.com(?<=ntaugcnetacademy\.com))
+1704990359	cigien	kafkadashboard\.com
