@@ -56979,3 +56979,4 @@
 1705056952	Nick	femwear\.pk
 1705057795	Nick	Secufex[\W_]*+Exchange
 1705057876	Nick	smartmeta\.net
+1705057905	Nick	Smartmeta(?!\.net)
