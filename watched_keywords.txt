@@ -56983,3 +56983,4 @@
 1705058227	tripleee	Roshan_101(?# fiverr)
 1705058369	tripleee	buzzbarsmokeshop\.com
 1705059380	tripleee	boxesgen\.com
+1705059667	cigien	femwear(?!\.pk)
