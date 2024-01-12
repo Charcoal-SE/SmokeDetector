@@ -57004,3 +57004,4 @@
 1705084861	Jesse	lamaisondesfemmes\.fr
 1705086753	Jesse	dsproduksi\.com
 1705086783	Jesse	DS[\W_]*+Produksi(?!\.com(?<=dsproduksi\.com))
+1705086835	Jeff Schaller	saiavenue\.in
