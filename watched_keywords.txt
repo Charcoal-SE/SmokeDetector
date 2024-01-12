@@ -56985,3 +56985,4 @@
 1705059380	tripleee	boxesgen\.com
 1705059667	cigien	femwear(?!\.pk)
 1705060068	cigien	nibavlifts\.ca
+1705062359	cigien	thereporter\.com
