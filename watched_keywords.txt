@@ -56987,3 +56987,4 @@
 1705060068	cigien	nibavlifts\.ca
 1705062359	cigien	thereporter\.com
 1705063848	cigien	modestdogmxshop\.com
+1705063959	tripleee	thc[\W_]*+protect(?!\.com(?<=thcprotect\.com))
