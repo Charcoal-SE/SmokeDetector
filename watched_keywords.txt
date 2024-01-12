@@ -56967,3 +56967,4 @@
 1705040730	tripleee	habwin\.com
 1705040742	tripleee	intuitivetables\.com
 1705042632	Nick	pass4surehub\.com
+1705042665	Nick	pass4surehub(?!\.com)
