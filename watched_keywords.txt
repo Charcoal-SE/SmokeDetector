@@ -56965,3 +56965,4 @@
 1705040048	tripleee	(?-i:^Supriya Pasurla$)
 1705040693	tripleee	jurojinpoker\.com
 1705040730	tripleee	habwin\.com
+1705040742	tripleee	intuitivetables\.com
