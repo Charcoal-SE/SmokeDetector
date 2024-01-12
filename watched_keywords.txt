@@ -56984,3 +56984,4 @@
 1705058369	tripleee	buzzbarsmokeshop\.com
 1705059380	tripleee	boxesgen\.com
 1705059667	cigien	femwear(?!\.pk)
+1705060068	cigien	nibavlifts\.ca
