@@ -56981,3 +56981,4 @@
 1705057876	Nick	smartmeta\.net
 1705057905	Nick	Smartmeta(?!\.net)
 1705058227	tripleee	Roshan_101(?# fiverr)
+1705058369	tripleee	buzzbarsmokeshop\.com
