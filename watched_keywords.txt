@@ -56971,3 +56971,4 @@
 1705047793	tripleee	cbd[\W_]*+flowers?
 1705048825	tripleee	adornensemble(?# sites.google.com)
 1705049801	cigien	perfectcvmaker\.ae
+1705050037	tripleee	careerpluz\.in
