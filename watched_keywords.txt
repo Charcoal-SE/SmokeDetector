@@ -56996,3 +56996,4 @@
 1705074073	Jesse	topup[\W_]*+store(?!\.co\.in(?<=topupstore\.co\.in))
 1705074470	cigien	derradda\.ie
 1705074550	cigien	derradda(?!\.ie)
+1705074634	Jesse	affcpatrk\.com
