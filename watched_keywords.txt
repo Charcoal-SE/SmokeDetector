@@ -56947,3 +56947,4 @@
 1704999869	Jesse	aneworksrepair\.com
 1704999901	Jesse	aneworksrepair(?!\.com)
 1705014499	Jesse	easyaiz\.com
+1705017920	Vickel	sayunieagtchurch\.org
