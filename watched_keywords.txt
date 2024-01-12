@@ -56989,3 +56989,4 @@
 1705063959	tripleee	thc[\W_]*+protect(?!\.com(?<=thcprotect\.com))
 1705065251	Vickel	fr\.californiansmiles\.com
 1705072465	Jeff Schaller	joss\.si
+1705072615	Jesse	CertsArea(?!\.com)
