@@ -2934,3 +2934,4 @@ technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contrac
 khelraja(?!\.com)
 5ISPYHAK437
 microprokey(?!\.com)(?!\.xyz)
+ibolt[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=iboltcyberhacker\.com))
