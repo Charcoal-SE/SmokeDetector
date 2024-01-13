@@ -2934,3 +2934,4 @@ wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
 technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
 khelraja(?!\.com)
 5ISPYHAK437
+microprokey(?!\.com)(?!\.xyz)
