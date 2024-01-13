@@ -57032,3 +57032,4 @@
 1705143859	Nick	astrodeep\.in
 1705146667	VLAZ	india[\W_]*+gpt(?!\.com)
 1705146716	VLAZ	indiagpt\.com
+1705152697	Jeff Schaller	karachiexpert\.com
