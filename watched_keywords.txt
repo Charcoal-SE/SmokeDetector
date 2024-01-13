@@ -56956,7 +56956,6 @@
 1705036247	Jesse	oceaniamedispa\.co\.uk
 1705036279	Jesse	oceaniaspa\.vn
 1705036300	Jesse	oceania\.vn
-1705036320	Jesse	certsarea\.com
 1705039629	tripleee	iconla\.com
 1705039906	tripleee	vimusixapk\.com
 1705040048	tripleee	(?-i:^Supriya Pasurla$)
