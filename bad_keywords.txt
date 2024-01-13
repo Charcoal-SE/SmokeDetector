@@ -2718,7 +2718,6 @@ click[\W_]*+here[\W_]*+to[\W_]*+complete[\W_]*+your[\W_]*+application
 ufabet
 anchor[\W_]*fonts(?!\.com(?<=anchorfonts\.com))
 controlf5(?!\.in)
-microprokey(?!\.com)
 pitamaas(?!\.com)
 cisco[\W_]*+\d{3}-\d{3}[\W_]*+(?:\w+[\W_]+){0,10}exam
 (?-i:3GQe6zF)(?# bit.ly)
