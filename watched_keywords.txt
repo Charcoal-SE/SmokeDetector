@@ -57029,3 +57029,4 @@
 1705141737	VLAZ	newsdailyfilm\.com
 1705142469	cigien	news[\W_]*+daily[\W_]*+film(?!\.com(?<=newsdailyfilm\.com))
 1705143716	VLAZ	\besm[\W_]*+Overseas
+1705143859	Nick	astrodeep\.in
