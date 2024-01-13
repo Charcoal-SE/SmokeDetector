@@ -57014,3 +57014,4 @@
 1705132433	Makyen	neo[\W_]*+drops
 1705132454	Makyen	euphoria[\W_]*+green(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 1705132534	Makyen	buyanysee\.com
+1705132554	Makyen	result\.pk
