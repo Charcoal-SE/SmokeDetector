@@ -57031,3 +57031,4 @@
 1705143716	VLAZ	\besm[\W_]*+Overseas
 1705143859	Nick	astrodeep\.in
 1705146667	VLAZ	india[\W_]*+gpt(?!\.com)
+1705146716	VLAZ	indiagpt\.com
