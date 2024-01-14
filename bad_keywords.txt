@@ -2932,7 +2932,6 @@ captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
 technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
 khelraja(?!\.com)
-5ISPYHAK437
 microprokey(?!\.com)(?!\.xyz)
 ibolt[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=iboltcyberhacker\.com))
 certsarea(?!\.com)
