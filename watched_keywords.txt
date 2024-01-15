@@ -57098,3 +57098,4 @@
 1705327047	Jeff Schaller	immersiveinfotech\.com
 1705329068	cigien	immersive[\W_]*+infotech(?!\.com(?<=immersiveinfotech\.com))
 1705334023	Jesse	vccsupply(?!\.com)
+1705334519	Jesse	beincart\.com
