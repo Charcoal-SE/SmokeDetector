@@ -57081,3 +57081,4 @@
 1705314817	cigien	dermalyn(?!\.in)
 1705316006	tripleee	lebanese[\W_]*+olive[\W_]*+oil
 1705316211	tripleee	thetopstockbroker\.com
+1705316260	tripleee	thequint\.com
