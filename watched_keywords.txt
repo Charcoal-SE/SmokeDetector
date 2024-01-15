@@ -57080,3 +57080,4 @@
 1705312675	cigien	kliniksentosajakarta\.com
 1705314807	cigien	dermalyn\.in
 1705314817	cigien	dermalyn(?!\.in)
+1705316006	tripleee	lebanese[\W_]*+olive[\W_]*+oil
