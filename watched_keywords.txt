@@ -57084,3 +57084,4 @@
 1705316260	tripleee	thequint\.com
 1705318215	cigien	fdsmasterclass\.com
 1705318239	cigien	fds[\W_]*+masterclass(?!\.com(?<=fdsmasterclass\.com))
+1705318273	cigien	goaroundtheglobe\.in
