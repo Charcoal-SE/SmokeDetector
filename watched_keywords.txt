@@ -57060,3 +57060,4 @@
 1705280099	Makyen	szu[\W_]*+designs(?:[\W_]*+inc)?
 1705281210	Jesse	blindinsight\.com
 1705281700	Jesse	openquant\.substack\.com
+1705273658	Vickel	(?-i:0krADUDPU1)(?#t.co)
