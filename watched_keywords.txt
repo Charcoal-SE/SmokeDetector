@@ -57079,3 +57079,4 @@
 1705311983	cigien	biznessolution\.ru
 1705312675	cigien	kliniksentosajakarta\.com
 1705314807	cigien	dermalyn\.in
+1705314817	cigien	dermalyn(?!\.in)
