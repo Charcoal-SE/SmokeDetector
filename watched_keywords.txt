@@ -57096,3 +57096,4 @@
 1705323962	cigien	bostonharbour\.net
 1705323985	cigien	articlessubmissionservice\.com
 1705327047	Jeff Schaller	immersiveinfotech\.com
+1705329068	cigien	immersive[\W_]*+infotech(?!\.com(?<=immersiveinfotech\.com))
