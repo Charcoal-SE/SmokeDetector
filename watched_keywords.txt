@@ -57059,3 +57059,4 @@
 1705275441	Vickel	cp\.bigmovies10\.site
 1705280099	Makyen	szu[\W_]*+designs(?:[\W_]*+inc)?
 1705281210	Jesse	blindinsight\.com
+1705281700	Jesse	openquant\.substack\.com
