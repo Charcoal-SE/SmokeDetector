@@ -57083,3 +57083,4 @@
 1705316211	tripleee	thetopstockbroker\.com
 1705316260	tripleee	thequint\.com
 1705318215	cigien	fdsmasterclass\.com
+1705318239	cigien	fds[\W_]*+masterclass(?!\.com(?<=fdsmasterclass\.com))
