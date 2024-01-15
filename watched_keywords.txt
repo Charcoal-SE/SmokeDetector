@@ -14923,7 +14923,6 @@
 1577785044	Makyen	hearing[\W_]*+aid[\W_]*+centre[\W_]*+experts
 1577785162	Makyen	play[\W_]*+school[\W_]*+in[\W_]*+kilpauk
 1577798577	Machavity	hacksol\.net
-1577834142	Makyen	financier\.com
 1577834158	Makyen	(?-i:XtsZxjWzNDA)(?#YouTube)
 1577834180	Makyen	techtakshila\.com
 1577857634	Makyen	1680380\.com
