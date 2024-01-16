@@ -57149,3 +57149,4 @@
 1705419613	Makyen	(?-i:PHdP992SK2k)(?#groups.google.com/c/ibm.software.network.directory-integrator)
 1705419821	Jesse	offshore\.cat
 1705420094	Jesse	(?-i:s945968078)(?#t.me)
+1705420415	Makyen	vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|south|africa|get|official|\d++|[\da-f]{5,}+)s?)*
