@@ -57139,3 +57139,4 @@
 1705417441	Jeff Schaller	thenexteinstein(?#bit.ly)
 1705417466	Makyen	bioheal[\W_]*+blood(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 1705417501	Makyen	(?-i:CBDBiohealGummies)(?#facebook.com)
+1705417532	Makyen	(?-i:BloodBiohealCBDGummies)(?#facebook.com)
