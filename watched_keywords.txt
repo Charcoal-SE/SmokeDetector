@@ -57154,3 +57154,4 @@
 1705424070	Jesse	villarenovation-dubai\.com
 1705424466	Jesse	Villa[\W_]*+Renovation(?!-dubai\.com(?<=villarenovation-dubai\.com))
 1705425398	Jesse	desertplanettourism\.com
+1705427682	Jesse	pikashowapp\.net\.in
