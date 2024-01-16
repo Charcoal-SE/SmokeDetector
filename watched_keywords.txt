@@ -57117,3 +57117,4 @@
 1705393288	cigien	onlinebachelordegree\.in
 1705393310	cigien	leeddev\.io
 1705393334	cigien	apsotech\.com
+1705393812	cigien	samyak[\W_]*+infotech(?!\.com(?<=samyakinfotech\.com))
