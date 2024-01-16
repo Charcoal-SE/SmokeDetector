@@ -57144,3 +57144,4 @@
 1705417589	Makyen	(?-i:ceCCmCqg6Y4)(?#groups.google.com/c/ibm.software.network.directory-integrator)
 1705417626	Makyen	(?-i:nGeuKIYckcU)(?#groups.google.com/c/ibm.software.network.directory-integrator)
 1705419372	Jesse	healthquerys\.com
+1705419504	Makyen	vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|\d++|[\da-f]{5,}+)s?)*
