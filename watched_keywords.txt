@@ -57138,3 +57138,4 @@
 1705417412	Jeff Schaller	findyogeniusnow(?#bit.ly)
 1705417441	Jeff Schaller	thenexteinstein(?#bit.ly)
 1705417466	Makyen	bioheal[\W_]*+blood(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
+1705417501	Makyen	(?-i:CBDBiohealGummies)(?#facebook.com)
