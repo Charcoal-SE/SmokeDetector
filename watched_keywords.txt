@@ -57134,3 +57134,4 @@
 1705408447	cigien	metrotvantenna\.com\.au
 1705409804	cigien	penkmatters\.com
 1705411701	Jeff Schaller	sharakarma\.com
+1705411728	cigien	sharakarma(?!\.com)
