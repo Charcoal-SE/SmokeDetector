@@ -57120,3 +57120,4 @@
 1705393812	cigien	samyak[\W_]*+infotech(?!\.com(?<=samyakinfotech\.com))
 1705394192	cigien	justinmedicare\.store
 1705394236	cigien	news404\.com
+1705394259	cigien	news404(?!\.com)
