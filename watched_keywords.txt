@@ -57146,3 +57146,4 @@
 1705419372	Jesse	healthquerys\.com
 1705419504	Makyen	vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|\d++|[\da-f]{5,}+)s?)*
 1705419532	Jesse	fiaz\.com\.pk
+1705419576	Makyen	(?-i:JvlRN_OC-Zs)(?#groups.google.com/c/ibm.software.network.directory-integrator)
