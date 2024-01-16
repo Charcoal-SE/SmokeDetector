@@ -57135,3 +57135,4 @@
 1705409804	cigien	penkmatters\.com
 1705411701	Jeff Schaller	sharakarma\.com
 1705411728	cigien	sharakarma(?!\.com)
+1705417412	Jeff Schaller	findyogeniusnow(?#bit.ly)
