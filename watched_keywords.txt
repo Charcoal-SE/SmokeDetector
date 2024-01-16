@@ -57152,3 +57152,4 @@
 1705420415	Makyen	vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|south|africa|get|official|\d++|[\da-f]{5,}+)s?)*
 1705423027	cigien	panem\.agency
 1705424070	Jesse	villarenovation-dubai\.com
+1705424466	Jesse	Villa[\W_]*+Renovation(?!-dubai\.com(?<=villarenovation-dubai\.com))
