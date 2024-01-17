@@ -57170,3 +57170,4 @@
 1705478006	Makyen	analytics[\W_]*+shiksha(?!\.com(?<=analyticsshiksha\.com))
 1705478142	Makyen	vicdigit-technologies\.com
 1705478165	Makyen	vicdigit[\W_]*+technologies(?!\.com(?<=vicdigit-technologies\.com))
+1705478213	Makyen	collegeafricagroup\.com
