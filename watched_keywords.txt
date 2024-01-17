@@ -57189,3 +57189,4 @@
 1705496052	tripleee	ammarsfragrances\.com
 1705496169	tripleee	Nicholas[\W_]*+(?:Winfred[\W_]*+)?Winston
 1705496682	cigien	ammar[\W_]*+(?:s[\W_]*+)?+fragrances?+(?!\.com(?<=ammarsfragrances\.com))
+1705496905	cigien	gpscomputeracademy\.com
