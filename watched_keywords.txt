@@ -44772,7 +44772,6 @@
 1669014735	tripleee	montgomeryelec\.com
 1669016318	cocomac	2quickauto\.com
 1669017561	tripleee	mechtex\.com
-1669017586	tripleee	gps[\W_]*+computer[\W_]*+academy
 1669017742	tripleee	buymodafinilus\.com
 1669017772	tripleee	99magento\.com
 1669017812	tripleee	desireworld\.in
