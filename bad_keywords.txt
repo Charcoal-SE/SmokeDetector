@@ -2930,7 +2930,6 @@ brunoe[\W_]*+quick[\W_]*+hack(?!\.com(?<=brunoequickhack\.com))(?:[\W_]*(?:at[\W
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
 captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
-technocrat[\W_]*+recovery(?!(?<=technocratrecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
 khelraja(?!\.com)
 microprokey(?!\.com)(?!\.xyz)
 ibolt[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=iboltcyberhacker\.com))
