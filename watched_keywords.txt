@@ -57168,3 +57168,4 @@
 1705471533	Nick	Cochin[\W_]*+Suraksha(?!\.com(?<=cochinsuraksha\.com))
 1705477984	Makyen	analyticsshiksha\.com
 1705478006	Makyen	analytics[\W_]*+shiksha(?!\.com(?<=analyticsshiksha\.com))
+1705478142	Makyen	vicdigit-technologies\.com
