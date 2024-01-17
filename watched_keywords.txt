@@ -57178,3 +57178,4 @@
 1705481895	cigien	pim-plus\.com
 1705482637	Cow	foreignsettlein\.com
 1705483997	cigien	foreignsettlein(?!\.com)
+1705483771	Cow	bespokefundingprogram\.com
