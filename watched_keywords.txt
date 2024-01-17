@@ -57192,3 +57192,4 @@
 1705496933	cigien	gps[\W_]*+computer[\W_]*+academy(?!\.com(?<=gpscomputeracademy\.com))
 1705500123	cigien	centralbitdefenderdotcom\.wordpress\.com
 1705503363	Jeff Schaller	restfulmedsuk\.com
+1705504832	Jesse	onthefly\.stream
