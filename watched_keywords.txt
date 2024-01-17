@@ -57162,3 +57162,4 @@
 1705454350	Makyen	online[\W_]*+betting[\W_]*+id
 1705453265	Vickel	mahadevbookonline\.biz
 1705457350	Jesse	formatopara\.com
+1705459970	Jeff Schaller	linhkiendtdd\.vn
