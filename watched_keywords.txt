@@ -57166,3 +57166,4 @@
 1705468180	Nick	Bloggers[\W_]*+Mastermind[\W_]*+Course
 1705469689	Nick	iqmetrics\.org
 1705471533	Nick	Cochin[\W_]*+Suraksha(?!\.com(?<=cochinsuraksha\.com))
+1705477589	Cow	watercode\.in
