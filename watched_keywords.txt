@@ -57191,3 +57191,4 @@
 1705496682	cigien	ammar[\W_]*+(?:s[\W_]*+)?+fragrances?+(?!\.com(?<=ammarsfragrances\.com))
 1705496905	cigien	gpscomputeracademy\.com
 1705496933	cigien	gps[\W_]*+computer[\W_]*+academy(?!\.com(?<=gpscomputeracademy\.com))
+1705500123	cigien	centralbitdefenderdotcom\.wordpress\.com
