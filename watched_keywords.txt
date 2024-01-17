@@ -57200,3 +57200,4 @@
 1705510676	Jesse	bullishway\.com
 1705511122	Jesse	Bullish[\W_]*+Way(?!\.com(?<=bullishway\.com))
 1705513725	Makyen	windel@ppselectrical\.com
+1705517287	Makyen	3p6jpld(?#g.co)
