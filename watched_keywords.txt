@@ -57181,3 +57181,4 @@
 1705483771	Cow	bespokefundingprogram\.com
 1705484668	tripleee	^muhammad javed$
 1705485830	cigien	classicpdf\.com
+1705485855	cigien	classicpdf(?!\.com)
