@@ -57198,3 +57198,4 @@
 1705508733	Jeff Schaller	itexamslab\.com
 1705510198	Jesse	FSOCIETYWETRUST(?#t.me)
 1705510676	Jesse	bullishway\.com
+1705511122	Jesse	Bullish[\W_]*+Way(?!\.com(?<=bullishway\.com))
