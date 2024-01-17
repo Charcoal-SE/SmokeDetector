@@ -57189,3 +57189,4 @@
 1705494113	tripleee	foreignsphere\.com
 1705496052	tripleee	ammarsfragrances\.com
 1705496085	tripleee	ammars?[\W_]*+fragrances?(?!\.com(<=ammarsfragrances\.com))
+1705496169	tripleee	Nicholas[\W_]*+(?:Winfred[\W_]*+)?Winston
