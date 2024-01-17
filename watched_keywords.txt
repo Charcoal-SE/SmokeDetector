@@ -55694,7 +55694,6 @@
 1702126375	Jeff Schaller	itbors\.com
 1702082345	Nick	bloguplift\.com
 1702077836	Jesse	digital[\W_]*+pro[\W_]*+hackz
-1702131231	Jeff Schaller	thetatitans\.com
 1702131680	Makyen	amocha0@xmpp\.jp
 1702131662	Vickel	(?-i:Amocha00)(?#t.me)
 1702131717	Makyen	theta[\W_]*+titans(?!\.com(?<=thetatitans\.com))
