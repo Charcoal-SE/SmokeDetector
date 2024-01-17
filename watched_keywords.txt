@@ -57165,3 +57165,4 @@
 1705459970	Jeff Schaller	linhkiendtdd\.vn
 1705468180	Nick	Bloggers[\W_]*+Mastermind[\W_]*+Course
 1705469689	Nick	iqmetrics\.org
+1705471533	Nick	Cochin[\W_]*+Suraksha(?!\.com(?<=cochinsuraksha\.com))
