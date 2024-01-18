@@ -57254,3 +57254,4 @@
 1705610797	Jesse	WEALTH[\W_]*+RECOUP(?!\.COM(?<=WEALTHRECOUP\.COM))
 1705611449	Jesse	shitexpress\.com
 1705616288	Jesse	utvatvcare\.com
+1705616331	Jesse	utv[\W_]*+atv[\W_]*+care(?!\.com(?<=utvatvcare\.com))
