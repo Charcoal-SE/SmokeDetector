@@ -57214,3 +57214,4 @@
 1705546564	Makyen	ae8888\.webflow\.io
 1705549432	Makyen	m[\W_]*+jacket(?!\.com(?<=mjacket\.com))
 1705557534	Makyen	drhitendrakgarg\.com
+1705557564	Makyen	d(?:octo)?r[\W_]*+hitendrak[\W_]*+garg(?!\.com(?<=drhitendrakgarg\.com))
