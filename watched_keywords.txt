@@ -57231,3 +57231,4 @@
 1705577186	Nick	ansysmodel\.com
 1705577220	Nick	AnsysModel(?!\.com)
 1705581878	Vickel	animesrecommendation\.com
+1705582056	Vickel	animes[\W_]*+recommendation(?!\.com)
