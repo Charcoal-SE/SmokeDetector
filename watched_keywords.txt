@@ -57245,3 +57245,4 @@
 1705600200	Jesse	boxproof\.com
 1705600788	Jesse	roziacademy\.com
 1705601205	Jesse	Rozi[\W_]*+Academy(?!\.com(?<=roziacademy\.com))
+1705604380	Jeff Schaller	finlandfoodmenu\.fi
