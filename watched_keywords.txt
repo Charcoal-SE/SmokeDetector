@@ -57237,3 +57237,4 @@
 1705586234	tripleee	^david[\W_]*+brandt$
 1705588426	Jeff Schaller	ccjk\.com
 1705590205	Spevacus	kodexolabs\.com
+1705591717	Jeff Schaller	tweag\.io
