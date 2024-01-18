@@ -57247,3 +57247,4 @@
 1705601205	Jesse	Rozi[\W_]*+Academy(?!\.com(?<=roziacademy\.com))
 1705604380	Jeff Schaller	finlandfoodmenu\.fi
 1705605700	Jesse	nbi-onlineclearance\.com
+1705606954	Makyen	nbi[\W_]*+(?:online[\W_]*+)?clearance(?!\.com(?<=nbi-onlineclearance\.com))
