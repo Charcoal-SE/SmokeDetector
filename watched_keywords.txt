@@ -57007,7 +57007,6 @@
 1705132454	Makyen	euphoria[\W_]*+green(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 1705132534	Makyen	buyanysee\.com
 1705132554	Makyen	result\.pk
-1705139022	cigien	microprokey\.xyz
 1705139085	cigien	suvetah\.com
 1705139138	cigien	rakeshbishnoi\.in
 1705139178	cigien	gothicking\.com
