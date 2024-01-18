@@ -57222,3 +57222,4 @@
 1705563621	tripleee	stickyaides\.com
 1705563946	tripleee	(?-i:^Raza Hosyain$)
 1705565247	Makyen	cadetsdefenceacademy\.com
+1705566482	tripleee	visualconnections\.in
