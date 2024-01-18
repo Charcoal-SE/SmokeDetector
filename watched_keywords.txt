@@ -57236,3 +57236,4 @@
 1705582723	VLAZ	residieons\.com
 1705586065	tripleee	unfiltered[\W_]*+olive[\W_]*+oil
 1705586234	tripleee	^david[\W_]*+brandt$
+1705588426	Jeff Schaller	ccjk\.com
