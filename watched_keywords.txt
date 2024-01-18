@@ -57243,3 +57243,4 @@
 1705593111	Jesse	hiddenlegendwinery\.com
 1705593188	Jesse	chatgdp\.org
 1705600200	Jesse	boxproof\.com
+1705600788	Jesse	roziacademy\.com
