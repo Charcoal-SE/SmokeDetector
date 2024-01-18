@@ -57241,3 +57241,4 @@
 1705592168	cigien	sunmoy(?!\.com)
 1705592858	Jesse	flight-status\.com
 1705592952	Jesse	kulidesa\.com
+1705593111	Jesse	hiddenlegendwinery\.com
