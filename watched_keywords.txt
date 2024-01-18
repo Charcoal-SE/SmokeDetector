@@ -57205,3 +57205,4 @@
 1705517350	Makyen	trendhousestudio997(?:@gmail\.com)?
 1705518824	Makyen	call(?=\D{0,40}+(?:[\dsol][\W_]*+){6,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# when added: 3405 Total / 3265 TP, 95.89% TP / 127 FP / 8 NAA)
 1705523196	Jesse	sktdigitalsolutions\.com
+1705536759	Jesse	priestjaja7@mail\.com
