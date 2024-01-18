@@ -950,3 +950,4 @@ zoomcar India
 ^Shakib\W*Khan(pust)?$
 ^emily\W*snail$(?#username who posts spam about disk-partition.com)
 ^directmacro$
+(?-i:^softwaresupply$)
