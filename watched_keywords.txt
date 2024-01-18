@@ -57240,3 +57240,4 @@
 1705592146	cigien	sunmoy\.com
 1705592168	cigien	sunmoy(?!\.com)
 1705592858	Jesse	flight-status\.com
+1705592952	Jesse	kulidesa\.com
