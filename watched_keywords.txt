@@ -57213,3 +57213,4 @@
 1705546538	Makyen	sv388
 1705546555	Makyen	đá gà
 1705546564	Makyen	ae8888\.webflow\.io
+1705549432	Makyen	m[\W_]*+jacket(?!\.com(?<=mjacket\.com))
