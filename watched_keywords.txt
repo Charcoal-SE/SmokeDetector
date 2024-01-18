@@ -57233,3 +57233,4 @@
 1705581878	Vickel	animesrecommendation\.com
 1705582056	Vickel	animes[\W_]*+recommendation(?!\.com)
 1705582643	VLAZ	meraquiapartments\.com
+1705582723	VLAZ	residieons\.com
