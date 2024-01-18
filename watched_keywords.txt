@@ -55373,7 +55373,6 @@
 1701350494	cigien	kualitee\.com
 1701273549	Jesse	topologia\.wordpress\.com
 1701350568	cigien	advantage[\W_]*+therapy(?!\.com\.au(?<=advantagetherapy\.com\.au))
-1701338772	VLAZ	innostax\.com
 1701350706	cigien	worldtrade24x7\.com
 1701350748	cigien	uperfect[\W_]*+monitor(?!\.de(?<=uperfectmonitor\.de))
 1701350801	cigien	meinghostwriter\.de
