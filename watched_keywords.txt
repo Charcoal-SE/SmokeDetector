@@ -57230,3 +57230,4 @@
 1705576595	tripleee	^張俊生$
 1705577186	Nick	ansysmodel\.com
 1705577220	Nick	AnsysModel(?!\.com)
+1705582056	Vickel	animes[\W_]*+recommendation(?!\.com)
