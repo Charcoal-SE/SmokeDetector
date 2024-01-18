@@ -57215,3 +57215,4 @@
 1705549432	Makyen	m[\W_]*+jacket(?!\.com(?<=mjacket\.com))
 1705557534	Makyen	drhitendrakgarg\.com
 1705557564	Makyen	d(?:octo)?r[\W_]*+hitendrak[\W_]*+garg(?!\.com(?<=drhitendrakgarg\.com))
+1705557596	Makyen	(?-i:3DvQxd3)(?#bit.ly)
