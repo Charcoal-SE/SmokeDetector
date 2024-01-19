@@ -57274,3 +57274,4 @@
 1705648937	Nick	Scholar[\W_]*+Den(?!\.com(?<=scholarden\.com))
 1705649014	tripleee	logicaldottech\.com
 1705650544	Nick	cortenplus\.com
+1705650786	Nick	saffrontrait\.com
