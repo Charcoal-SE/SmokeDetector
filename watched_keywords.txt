@@ -57308,3 +57308,4 @@
 1705685344	Jesse	desdeck\.com
 1705687495	Jeff Schaller	bentchair\.com
 1705687532	Jeff Schaller	tengdaelectronics\.com
+1705687608	Makyen	tengda[\W_]*+electronics(?!\.com(?<=tengdaelectronics\.com))
