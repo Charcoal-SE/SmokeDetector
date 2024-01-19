@@ -57271,3 +57271,4 @@
 1705648665	tripleee	azilen\.com
 1705648877	Nick	scholarden\.com
 1705648915	tripleee	(?-i:^Logicaldottech$)
+1705648937	Nick	Scholar[\W_]*+Den(?!\.com(?<=scholarden\.com))
