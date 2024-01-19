@@ -57259,3 +57259,4 @@
 1705636582	Nick	tunepat-video\.com
 1705639803	Jesse	XNDOLL\.COM
 1705642033	tripleee	familytreemaker\.news
+1705642076	tripleee	family[\W_]*+tree[\W_]*+maker(?!support\.(?:com|us)(?<=familytreemakersupport\.(?:com|us)))(?!\.news(<=familytreemaker\.news))
