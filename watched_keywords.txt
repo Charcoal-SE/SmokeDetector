@@ -57304,3 +57304,4 @@
 1705677983	Jesse	IEC[\W_]*+Telecom(?!\.com(?<=iec-telecom\.com))
 1705678366	Jesse	TIG[\W_]*+gloves
 1705678403	Jesse	Hilton[\W_]*+Glove(?!\.com(?<=hiltonglove\.com))
+1705678830	Jesse	y7mate\.com
