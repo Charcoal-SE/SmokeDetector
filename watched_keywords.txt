@@ -57261,3 +57261,4 @@
 1705642033	tripleee	familytreemaker\.news
 1705642076	tripleee	family[\W_]*+tree[\W_]*+maker(?!support\.(?:com|us)(?<=familytreemakersupport\.(?:com|us)))(?!\.news(<=familytreemaker\.news))
 1705642441	tripleee	usamedstores\.com
+1705642507	tripleee	(?:buy|purchase|shop)[\W_]*+diazepam(?:[\W_]*+online)?
