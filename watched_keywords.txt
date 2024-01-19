@@ -57277,3 +57277,4 @@
 1705650786	Nick	saffrontrait\.com
 1705651051	VLAZ	rakshaaclinic\.com
 1705653711	tripleee	relicelectrical\.ca
+1705653736	tripleee	relic[\W_]*+electrical(?!\.ca(?<=relicelectrical\.ca))
