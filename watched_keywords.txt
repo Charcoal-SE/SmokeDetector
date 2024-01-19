@@ -57311,3 +57311,4 @@
 1705687608	Makyen	tengda[\W_]*+electronics(?!\.com(?<=tengdaelectronics\.com))
 1705687687	Jeff Schaller	rpatutorials\.com
 1705687904	Jesse	RPA[\W_]*+Tutorials(?!\.com(?<=rpatutorials\.com))
+1705694181	Jesse	www\.tysav\.com
