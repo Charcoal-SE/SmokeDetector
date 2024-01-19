@@ -57314,3 +57314,4 @@
 1705694181	Jesse	www\.tysav\.com
 1705696267	Jesse	tamildhool\.cyou
 1705696303	Jesse	animeflv\.st
+1705696347	Jesse	Tamil[\W_]*+Dhool(?!\.cyou(?<=tamildhool\.cyou))
