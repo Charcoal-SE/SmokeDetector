@@ -57306,3 +57306,4 @@
 1705678403	Jesse	Hilton[\W_]*+Glove(?!\.com(?<=hiltonglove\.com))
 1705678830	Jesse	y7mate\.com
 1705678870	Makyen	opensilver\.net
+1705678892	Makyen	(?-i:OpenSilver)(?#github.com)
