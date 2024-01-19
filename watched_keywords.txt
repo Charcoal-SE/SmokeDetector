@@ -57270,3 +57270,4 @@
 1705648407	Nick	idofine\.in
 1705648665	tripleee	azilen\.com
 1705648877	Nick	scholarden\.com
+1705648915	tripleee	(?-i:^Logicaldottech$)
