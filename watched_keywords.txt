@@ -57302,3 +57302,4 @@
 1705677906	Jesse	wljmobai(?#@gmail.com)
 1705677933	Jesse	iec-telecom\.com
 1705677983	Jesse	IEC[\W_]*+Telecom(?!\.com(?<=iec-telecom\.com))
+1705678366	Jesse	TIG[\W_]*+gloves
