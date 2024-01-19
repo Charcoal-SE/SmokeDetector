@@ -57279,3 +57279,4 @@
 1705653711	tripleee	relicelectrical\.ca
 1705653736	tripleee	relic[\W_]*+electrical(?!\.ca(?<=relicelectrical\.ca))
 1705654389	tripleee	^olivia ava$
+1705656489	tripleee	hiltonglove\.com
