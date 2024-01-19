@@ -57294,3 +57294,4 @@
 1705667914	cigien	stop[\W_]*+hornet(?!\.com(?<=stophornet\.com))
 1705667977	cigien	mirraw\.com
 1705673501	VLAZ	phub-sex\.online
+1705673525	VLAZ	shanispot\.tech
