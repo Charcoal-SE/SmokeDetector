@@ -54434,7 +54434,6 @@
 1699012281	cigien	aqglassaz\.com
 1699014685	cigien	smride\.com
 1699014704	cigien	smride(?!\.com)
-1699015033	Jeff Schaller	sanmarbuildingservices\.com
 1699017645	Can O' Spam	advisorworlds\.com
 1699020837	Makyen	gorgbet(?!\.info)
 1699021294	cigien	mdasik\.com
