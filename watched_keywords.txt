@@ -57317,4 +57317,3 @@
 1705696347	Jesse	Tamil[\W_]*+Dhool(?!\.cyou(?<=tamildhool\.cyou))
 1705696367	Jesse	animeflv(?!\.st)
 1705701953	Jesse	simplesecretservice\.com
-1705702291	Jesse	luaobfuscator\.com
