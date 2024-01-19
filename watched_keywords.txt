@@ -57312,3 +57312,4 @@
 1705687687	Jeff Schaller	rpatutorials\.com
 1705687904	Jesse	RPA[\W_]*+Tutorials(?!\.com(?<=rpatutorials\.com))
 1705694181	Jesse	www\.tysav\.com
+1705696267	Jesse	tamildhool\.cyou
