@@ -952,3 +952,4 @@ zoomcar India
 ^directmacro$
 (?-i:^softwaresupply$)
 (?-i:^Mudassar Hameed$)
+(?-i:^Youtube video downloader$)
