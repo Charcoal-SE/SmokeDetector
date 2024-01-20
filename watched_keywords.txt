@@ -57347,3 +57347,4 @@
 1705766319	Jesse	myofficesupply(?!\.ae)
 1705766395	Jesse	urusrentcars\.com
 1705766436	Jesse	Urus[\W_]*+Rent[\W_]*+a[\W_]*+Car
+1705766671	Jesse	Happy[\W_]*+Travel[\W_]*+Tips(?!\.in(?<=happytraveltips\.in))
