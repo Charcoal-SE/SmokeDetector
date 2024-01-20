@@ -57351,3 +57351,4 @@
 1705766834	Jesse	qualzz\.com
 1705766919	Jesse	burstfadehaircuts\.com
 1705766971	Jesse	Burst[\W_]*+Fade[\W_]*+Haircuts(?!\.com(?<=burstfadehaircuts\.com))
+1705769338	Jesse	cryptolawyers\.org
