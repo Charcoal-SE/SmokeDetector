@@ -57323,3 +57323,4 @@
 1705731107	Nick	leyjao\.pk
 1705731917	Nick	ainosof\.com
 1705733059	Nick	Shin[\W_]*+Shon(?!\.com(?<=shinshon\.com))
+1705736997	Nick	contecharchitects\.in
