@@ -57350,3 +57350,4 @@
 1705766671	Jesse	Happy[\W_]*+Travel[\W_]*+Tips(?!\.in(?<=happytraveltips\.in))
 1705766834	Jesse	qualzz\.com
 1705766919	Jesse	burstfadehaircuts\.com
+1705766971	Jesse	Burst[\W_]*+Fade[\W_]*+Haircuts(?!\.com(?<=burstfadehaircuts\.com))
