@@ -57353,3 +57353,4 @@
 1705766971	Jesse	Burst[\W_]*+Fade[\W_]*+Haircuts(?!\.com(?<=burstfadehaircuts\.com))
 1705769338	Jesse	cryptolawyers\.org
 1705769363	Robert Longson	ipsosisay\.com
+1705772798	Vickel	skinssence\.in
