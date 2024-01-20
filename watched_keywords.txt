@@ -57341,3 +57341,4 @@
 1705761849	Jeff Schaller	syairmacau\.org
 1705765507	Jesse	amitdogra70512(?#medium)
 1705766013	Jesse	APK[\W_]*+My[\W_]*+Boy(?!\.com(?<=apkmyboy\.com))
+1705766202	Jesse	SS[\W_]*+Movers[\W_]*+Hyderabad(?!\.com(?<=ssmovershyderabad\.com))
