@@ -57325,3 +57325,4 @@
 1705733059	Nick	Shin[\W_]*+Shon(?!\.com(?<=shinshon\.com))
 1705736997	Nick	contecharchitects\.in
 1705737032	Nick	Contech[\W_]*+Architects(?!\.in(?<=contecharchitects\.in))
+1705746178	Jeff Schaller	insightdelhi\.com
