@@ -57349,3 +57349,4 @@
 1705766436	Jesse	Urus[\W_]*+Rent[\W_]*+a[\W_]*+Car
 1705766671	Jesse	Happy[\W_]*+Travel[\W_]*+Tips(?!\.in(?<=happytraveltips\.in))
 1705766834	Jesse	qualzz\.com
+1705766919	Jesse	burstfadehaircuts\.com
