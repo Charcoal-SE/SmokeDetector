@@ -57345,3 +57345,4 @@
 1705766232	Jesse	businessinfo29\.blogspot
 1705766281	Jesse	myofficesupply\.ae
 1705766319	Jesse	myofficesupply(?!\.ae)
+1705766395	Jesse	urusrentcars\.com
