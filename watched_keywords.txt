@@ -57344,3 +57344,4 @@
 1705766202	Jesse	SS[\W_]*+Movers[\W_]*+Hyderabad(?!\.com(?<=ssmovershyderabad\.com))
 1705766232	Jesse	businessinfo29\.blogspot
 1705766281	Jesse	myofficesupply\.ae
+1705766319	Jesse	myofficesupply(?!\.ae)
