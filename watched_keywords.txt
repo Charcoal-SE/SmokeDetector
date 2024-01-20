@@ -57361,3 +57361,4 @@
 1705789591	Nick	4tvar8yb(?#tinyurl.com)
 1705794087	Vickel	amerilingua\.com
 1705794306	Jesse	ultrassist\.net
+1705794337	Jesse	Ultrassist(?!\.net)
