@@ -57372,3 +57372,4 @@
 1705844657	Jeff Schaller	0x550x42\.github\.io
 1705850731	Jesse	tugulu\.games
 1705851124	Jesse	autokeymall\.com
+1705851254	Jesse	(?:Autokey|ak)mall(?!\.com(?<=autokeymall\.com))
