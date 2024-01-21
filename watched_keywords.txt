@@ -57395,3 +57395,4 @@
 1705871424	Makyen	daddy[\W_]*+casino
 1705871431	Makyen	vavada[\W_]*+casino
 1705871453	Makyen	monro
+1705871463	Makyen	мобильное казино
