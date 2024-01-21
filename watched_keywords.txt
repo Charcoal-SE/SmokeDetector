@@ -57394,7 +57394,6 @@
 1705871416	Makyen	болливуд казино
 1705871424	Makyen	daddy[\W_]*+casino
 1705871431	Makyen	vavada[\W_]*+casino
-1705871453	Makyen	monro
 1705871463	Makyen	мобильное казино
 1705871479	Makyen	1xslot казино
 1705871488	Makyen	kent казино
