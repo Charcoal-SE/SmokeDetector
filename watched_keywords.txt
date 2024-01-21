@@ -57390,3 +57390,4 @@
 1705871207	Makyen	cat[\W_]*+casino
 1705871218	Makyen	gama[\W_]*+casino
 1705871231	Makyen	1[\W_]*+win[\W_]*+casino
+1705871409	Makyen	bollywod[\W_]*+casino
