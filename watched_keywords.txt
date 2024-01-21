@@ -57389,3 +57389,4 @@
 1705870840	Makyen	sykaaa
 1705871207	Makyen	cat[\W_]*+casino
 1705871218	Makyen	gama[\W_]*+casino
+1705871231	Makyen	1[\W_]*+win[\W_]*+casino
