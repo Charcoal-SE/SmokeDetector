@@ -57388,3 +57388,4 @@
 1705870806	Makyen	казино
 1705870840	Makyen	sykaaa
 1705871207	Makyen	cat[\W_]*+casino
+1705871218	Makyen	gama[\W_]*+casino
