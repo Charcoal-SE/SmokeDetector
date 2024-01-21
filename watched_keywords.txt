@@ -57375,3 +57375,4 @@
 1705851254	Jesse	(?:Autokey|ak)mall(?!\.com(?<=autokeymall\.com))
 1705851424	Jesse	vipskies\.com
 1705851654	Jesse	FAID6631272(?#@yahoo)
+1705865020	Makyen	today\.free\.nf
