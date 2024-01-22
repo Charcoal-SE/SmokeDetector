@@ -57452,3 +57452,4 @@
 1705954666	Makyen	fmedia\.22web
 1705954719	Makyen	datapulseacademy\.com
 1705956834	Jeff Schaller	packetstormsecurity\.com
+1705958150	Jeff Schaller	manamotor\.com
