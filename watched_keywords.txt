@@ -57420,3 +57420,4 @@
 1705919500	VLAZ	pintukeramat\.monster
 1705920609	tripleee	projectorsfocus\.com
 1705920632	tripleee	exergy-he\.com
+1705920652	tripleee	qanda\.design
