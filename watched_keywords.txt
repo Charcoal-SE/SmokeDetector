@@ -57434,3 +57434,4 @@
 1705931424	Makyen	infycle[\W_]*+technologies(?!\.com(?<=infycletechnologies\.com))
 1705932438	Makyen	(?-i:bs8aHjAm)(?#form.typeform.com)
 1705933722	Makyen	virrgotech(?!\.com)
+1705936180	Jeff Schaller	aff\.123new\.link
