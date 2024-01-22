@@ -2937,3 +2937,4 @@ certsarea(?!\.com)
 (?:HAK)?5ISPY(?:HAK)?+(?!\.com(?<=5ISPYHAK\.COM))\d{0,5}
 petercaro@financier\.com
 technocrate?[\W_]*+recovery(?!(?<=technocraterecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
+blissparadoxrecovery
