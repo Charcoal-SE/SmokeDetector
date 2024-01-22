@@ -57455,3 +57455,4 @@
 1705958150	Jeff Schaller	manamotor\.com
 1705957177	Vickel	usetechno\.com
 1705960591	Jesse	madbookies\.com
+1705960762	Jesse	Madbookies(?!\.com)
