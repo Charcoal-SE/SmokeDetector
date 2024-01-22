@@ -57432,3 +57432,4 @@
 1705930702	tripleee	(?-i:^Jay Dunphy$)
 1705930748	tripleee	(?-i:^Alan Hanson$)
 1705931424	Makyen	infycle[\W_]*+technologies(?!\.com(?<=infycletechnologies\.com))
+1705932438	Makyen	(?-i:bs8aHjAm)(?#form.typeform.com)
