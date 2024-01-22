@@ -57429,3 +57429,4 @@
 1705926561	tripleee	income\.as
 1705926608	tripleee	advancedcleanair\.com\.au
 1705928808	Jeff Schaller	bookviaus\.com
+1705930702	tripleee	(?-i:^Jay Dunphy$)
