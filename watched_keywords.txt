@@ -57450,3 +57450,4 @@
 1705948570	Jesse	usatopservices\.com
 1705954604	Makyen	usatopservices(?!\.com)
 1705954666	Makyen	fmedia\.22web
+1705954719	Makyen	datapulseacademy\.com
