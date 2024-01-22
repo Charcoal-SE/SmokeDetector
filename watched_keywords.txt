@@ -57431,3 +57431,4 @@
 1705928808	Jeff Schaller	bookviaus\.com
 1705930702	tripleee	(?-i:^Jay Dunphy$)
 1705930748	tripleee	(?-i:^Alan Hanson$)
+1705931424	Makyen	infycle[\W_]*+technologies(?!\.com(?<=infycletechnologies\.com))
