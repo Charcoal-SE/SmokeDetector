@@ -57448,3 +57448,4 @@
 1705947893	Jesse	WebCore[\W_]*+Infotech
 1705948538	Jesse	kevinkellyunlimited\.com
 1705948570	Jesse	usatopservices\.com
+1705954604	Makyen	usatopservices(?!\.com)
