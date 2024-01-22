@@ -57453,3 +57453,4 @@
 1705954719	Makyen	datapulseacademy\.com
 1705956834	Jeff Schaller	packetstormsecurity\.com
 1705958150	Jeff Schaller	manamotor\.com
+1705957177	Vickel	usetechno\.com
