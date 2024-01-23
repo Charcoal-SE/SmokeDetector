@@ -57470,3 +57470,4 @@
 1705991077	Makyen	ebestpick\.com
 1705991098	Makyen	ebestpick(?!\.com)
 1705991128	Makyen	simple2290\.com
+1705989578	Cow	creativevisionglobal\.com
