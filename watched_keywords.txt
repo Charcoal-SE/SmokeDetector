@@ -57478,3 +57478,4 @@
 1705994440	tripleee	gpldesigners\.com
 1705995567	tripleee	emailprosolutions\.com
 1705995635	tripleee	bamboo[\W_]*+card(?:[\W_]*+llc)?
+1706001234	Jeff Schaller	kagindus\.com
