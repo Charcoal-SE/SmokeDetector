@@ -57502,4 +57502,3 @@
 1706022757	cigien	top20firms\.com
 1706023407	Jesse	GPL[\W_]*+Designers
 1706023824	Jesse	Canucseo(?!\.com)
-1706024163	Jesse	pg4y\.s3\.ap-southeast-1\.amazonaws\.com
