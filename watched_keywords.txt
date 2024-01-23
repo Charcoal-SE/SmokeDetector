@@ -57505,3 +57505,4 @@
 1706024734	Jesse	pg4y(?!\.com)
 1706024956	cigien	moonlightlamp\.co\.uk
 1706025638	Jesse	futransolutions\.com
+1706025672	Jesse	Futran[\W_]*+Solutions(?!\.com(?<=futransolutions\.com))
