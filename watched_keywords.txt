@@ -57473,3 +57473,4 @@
 1705989578	Cow	creativevisionglobal\.com
 1705992236	Nick	instaparcel\.co\.uk
 1705992283	Nick	InstaParcel(?!\.co\.uk)
+1705994061	tripleee	mahakalijewellers\.com
