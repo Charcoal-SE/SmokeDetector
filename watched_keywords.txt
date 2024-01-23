@@ -57491,3 +57491,4 @@
 1706009202	cigien	glazingo\.com
 1706009224	cigien	glazingo(?!\.com)
 1706011233	VLAZ	cognextech\.com
+1706011404	cigien	sharonply\.com
