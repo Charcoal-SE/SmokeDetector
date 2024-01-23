@@ -57500,3 +57500,4 @@
 1706021031	cigien	usa[\W_]*+best[\W_]*+vcc(?!\.com(?<=usabestvcc\.com))
 1706022027	tripleee	lawyers?[\W_]*+near[\W_]*+me
 1706022757	cigien	top20firms\.com
+1706023407	Jesse	GPL[\W_]*+Designers
