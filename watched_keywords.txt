@@ -57472,3 +57472,4 @@
 1705991128	Makyen	simple2290\.com
 1705989578	Cow	creativevisionglobal\.com
 1705992236	Nick	instaparcel\.co\.uk
+1705992283	Nick	InstaParcel(?!\.co\.uk)
