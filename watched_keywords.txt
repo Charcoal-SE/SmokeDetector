@@ -57509,3 +57509,4 @@
 1705950450	Cow	fmedia\.22web\.org
 1706031626	Makyen	kag[\W_]*+industries
 1706032018	Makyen	phenomena[\W_]*+gummies[\W_]*+uk
+1706031741	Vickel	electronicexpress\.com
