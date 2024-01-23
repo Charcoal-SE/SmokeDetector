@@ -57507,3 +57507,4 @@
 1706025672	Jesse	Futran[\W_]*+Solutions(?!\.com(?<=futransolutions\.com))
 1706025706	Jesse	inpkstore\.com
 1705950450	Cow	fmedia\.22web\.org
+1706031626	Makyen	kag[\W_]*+industries
