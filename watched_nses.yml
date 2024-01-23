@@ -1205,6 +1205,9 @@ items:
   - clayton.ns.cloudflare.com.
   - maya.ns.cloudflare.com.
 - ns:
+  - clayton.ns.cloudflare.com.
+  - sneh.ns.cloudflare.com.
+- ns:
   - cleo.ns.cloudflare.com.
   - dolly.ns.cloudflare.com.
 - ns:
