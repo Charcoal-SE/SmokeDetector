@@ -57469,3 +57469,4 @@
 1705991056	Makyen	animationssoftware\.com
 1705991077	Makyen	ebestpick\.com
 1705991098	Makyen	ebestpick(?!\.com)
+1705991128	Makyen	simple2290\.com
