@@ -57499,3 +57499,4 @@
 1706014140	cigien	plantscapedubai\.com
 1706021011	cigien	usabestvcc\.com
 1706021031	cigien	usa[\W_]*+best[\W_]*+vcc(?!\.com(?<=usabestvcc\.com))
+1706022027	tripleee	lawyers?[\W_]*+near[\W_]*+me
