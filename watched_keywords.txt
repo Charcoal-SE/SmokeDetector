@@ -57465,3 +57465,4 @@
 1705980800	Makyen	creativecourse\.net
 1705982813	tripleee	aryaa[\W_]*+money(?!\.com(?<=aryaamoney\.com))
 1705983800	Makyen	vograce\.com
+1705986935	Makyen	indangnguyen\.com
