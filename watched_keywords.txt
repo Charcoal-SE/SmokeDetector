@@ -57480,3 +57480,4 @@
 1705995635	tripleee	bamboo[\W_]*+card(?:[\W_]*+llc)?
 1706001234	Jeff Schaller	kagindus\.com
 1706001497	VLAZ	gulflinefurniture\.ae
+1706002486	Robert Longson	genericstrip\.com
