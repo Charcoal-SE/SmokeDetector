@@ -57493,3 +57493,4 @@
 1706011233	VLAZ	cognextech\.com
 1706011404	cigien	sharonply\.com
 1706011846	VLAZ	cognex[\W_]*+tech(?:nologies)?(?!\.com)
+1706012756	Can O' Spam	vitalmobility\.ca
