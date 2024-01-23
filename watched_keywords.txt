@@ -57482,3 +57482,4 @@
 1706001497	VLAZ	gulflinefurniture\.ae
 1706002486	Robert Longson	genericstrip\.com
 1706002768	cigien	canuckseo\.com
+1706002826	cigien	gulfline[\W_]*+furniture(?!\.ae(?<=gulflinefurniture\.ae))
