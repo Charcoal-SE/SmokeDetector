@@ -57489,3 +57489,4 @@
 1706008121	Jeff Schaller	b2bcert\.com
 1706009140	cigien	b2bcert(?!\.com)
 1706009202	cigien	glazingo\.com
+1706009224	cigien	glazingo(?!\.com)
