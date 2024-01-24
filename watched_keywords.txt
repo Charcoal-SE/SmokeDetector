@@ -57574,3 +57574,4 @@
 1706136362	Jesse	nikkahmee\.com
 1706137372	Jesse	apreciart\.com
 1706137394	Jesse	apreciart\.pe
+1706137507	Jesse	apreciart(?!\.com)(?!\.pe)
