@@ -57534,3 +57534,4 @@
 1706077072	Makyen	viraslos?t77
 1706077093	Makyen	slot[\W_]*+zeus
 1706078391	tripleee	ttspl\.in
+1706078471	tripleee	bisresearch\.com
