@@ -1308,6 +1308,9 @@ items:
   - dale.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
+  - evangeline.ns.cloudflare.com.
+- ns:
+  - cory.ns.cloudflare.com.
   - holly.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
