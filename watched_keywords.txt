@@ -57560,3 +57560,4 @@
 1706103580	tripleee	connect[\W_]*+system[\W_]*+india
 1706103616	VLAZ	it[\W_]*+kothon(?!\.com)
 1706046182	Vickel	hqchemstore99(?#telegram)
+1706106468	Spevacus	tvmoviestream-hd\.online
