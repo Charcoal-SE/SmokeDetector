@@ -983,6 +983,9 @@ items:
   - bruce.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
+  - bruce.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
   - buck.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
