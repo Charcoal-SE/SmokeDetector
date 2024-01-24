@@ -57520,3 +57520,4 @@
 1706061481	Makyen	castbox\.fm
 1706061501	Makyen	id5793065
 1706066208	tripleee	activespheres\.com
+1706067962	Makyen	the[\W_]*+flavour[\W_]*+trail(?!\.com(?<=theflavourtrail\.com))
