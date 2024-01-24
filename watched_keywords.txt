@@ -57548,3 +57548,4 @@
 1706090104	Cow	give-engineering\.com
 1706091439	tripleee	gaatrading\.com
 1706091460	tripleee	ichomesforsale\.com
+1706091481	tripleee	templeoftech\.com
