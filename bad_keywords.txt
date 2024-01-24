@@ -2938,3 +2938,4 @@ certsarea(?!\.com)
 petercaro@financier\.com
 technocrate?[\W_]*+recovery(?!(?<=technocraterecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
 blissparadoxrecovery
+C[\W_]*+d[\W_]*+1[\W_]*+9[\W_]*+2[\W_]*+2[\W_]*+1(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?
