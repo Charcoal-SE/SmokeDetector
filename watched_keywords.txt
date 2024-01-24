@@ -57541,3 +57541,4 @@
 1706081127	tripleee	mefnl(?!\.com)
 1706083316	cigien	meserii\.com
 1706083616	Nick	The[\W_]*+Good[\W_]*+Steward
+1706083884	cigien	firstpolicy\.com
