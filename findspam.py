@@ -2250,7 +2250,7 @@ city_list = [
     "Kochi", "Kolkata", "Kota", "Kottayam",
     "Lokhandwala", "Lonavala", "Lucknow", "Ludhiana",
     "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli", "Mayur Vihar",
-    "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Mulund", "Mumbai",
+    "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Multan", "Mulund", "Mumbai",
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Palam", "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
