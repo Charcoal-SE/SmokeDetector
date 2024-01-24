@@ -57538,3 +57538,4 @@
 1706078895	Cow	hamdanglobal\.co
 1706079487	cocomac	dancingnumbers\.com
 1706080919	VLAZ	mefnl\.com
+1706081127	tripleee	mefnl(?!\.com)
