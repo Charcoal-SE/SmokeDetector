@@ -57555,4 +57555,3 @@
 1706094069	Nick	PLCJournal(?!\.com)
 1706094101	Cow	lovegen\.com
 1706094268	Nick	oletvbola\.com
-1706101784	Cow	gamedays\.live
