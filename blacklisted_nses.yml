@@ -334,6 +334,9 @@ items:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - lorna.ns.cloudflare.com.
+  - trey.ns.cloudflare.com.
+- ns:
   - major.ns.cloudflare.com.
   - tara.ns.cloudflare.com.
 - ns:

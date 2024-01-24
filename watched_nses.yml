@@ -2812,9 +2812,6 @@ items:
   - thaddeus.ns.cloudflare.com.
 - ns:
   - lorna.ns.cloudflare.com.
-  - trey.ns.cloudflare.com.
-- ns:
-  - lorna.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
   - louis.ns.cloudflare.com.
