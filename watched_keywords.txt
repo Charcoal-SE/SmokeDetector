@@ -57523,3 +57523,4 @@
 1706067962	Makyen	the[\W_]*+flavour[\W_]*+trail(?!\.com(?<=theflavourtrail\.com))
 1706072361	Makyen	biztime\.com\.vn
 1706072383	Makyen	fixauto\.vn
+1706072403	Makyen	fixauto(?!\.vn)
