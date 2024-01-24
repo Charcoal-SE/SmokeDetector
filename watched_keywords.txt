@@ -56477,7 +56477,6 @@
 1704126704	Jesse	sci-tech-today\.com
 1704126719	Jesse	grabpillsusa\.com
 1704126773	Jesse	(?-i:shorifhossan_fi)(?#fiverr)
-1704126895	Jesse	Billionaire[\W_]*+Brain[\W_]*+Wave
 1704127054	Jesse	procapcut\.net
 1704127101	Jesse	axindia\.in
 1704127234	Jesse	yellowxanaxbarsforsale\.com
