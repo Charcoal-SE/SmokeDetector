@@ -1308,6 +1308,9 @@ items:
   - holly.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
+  - cory.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
