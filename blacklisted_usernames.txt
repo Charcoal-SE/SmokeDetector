@@ -955,3 +955,4 @@ zoomcar India
 (?-i:^Youtube video downloader$)
 (?-i:^SanMar Building Services LLC$)
 (?-i:^Ajibola Olarinoye$)
+(?-i:^ChatGPT Espanol ChatGPTXOnline$)
