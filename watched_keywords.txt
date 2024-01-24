@@ -57565,3 +57565,4 @@
 1706109910	Jesse	Queue-Fair(?!\.com)
 1706111572	Jesse	prnewshub\.org
 1706111936	Jesse	errances[\W_]*+voyages(?!\.com(?<=errancesvoyages\.com))
+1706112381	Jesse	techysqout\.com
