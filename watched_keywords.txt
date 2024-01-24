@@ -57552,3 +57552,4 @@
 1706091512	tripleee	destinyfound\.org
 1706091609	tripleee	errancesvoyages\.com
 1706094027	Nick	plcjournal\.com
+1706094069	Nick	PLCJournal(?!\.com)
