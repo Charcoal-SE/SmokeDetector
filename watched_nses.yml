@@ -2301,6 +2301,9 @@ items:
   - jarred.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
+  - jarred.ns.cloudflare.com.
+  - marlowe.ns.cloudflare.com.
+- ns:
   - jasmine.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
