@@ -2151,6 +2151,9 @@ items:
   - hera.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
+  - hope.ns.cloudflare.com.
+  - neil.ns.cloudflare.com.
+- ns:
   - howard.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
 - ns:
