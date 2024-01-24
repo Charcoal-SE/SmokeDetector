@@ -57522,3 +57522,4 @@
 1706066208	tripleee	activespheres\.com
 1706067962	Makyen	the[\W_]*+flavour[\W_]*+trail(?!\.com(?<=theflavourtrail\.com))
 1706072361	Makyen	biztime\.com\.vn
+1706072383	Makyen	fixauto\.vn
