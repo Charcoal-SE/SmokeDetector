@@ -57541,7 +57541,6 @@
 1706083316	cigien	meserii\.com
 1706083616	Nick	The[\W_]*+Good[\W_]*+Steward
 1706083884	cigien	firstpolicy\.com
-1706083997	cigien	mergescreens\.com
 1706086590	cigien	nba2k24apk\.com
 1706088375	tripleee	(?-i:^Anshul Kichara$)
 1706091077	tripleee	(?-i:^Anber_liang$)
