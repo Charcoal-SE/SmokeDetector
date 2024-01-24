@@ -57525,3 +57525,4 @@
 1706072383	Makyen	fixauto\.vn
 1706072403	Makyen	fixauto(?!\.vn)
 1706073031	tripleee	trafficroadsafety\.com
+1706073208	tripleee	(?-i:^MD\. Saeeduzzaman$)
