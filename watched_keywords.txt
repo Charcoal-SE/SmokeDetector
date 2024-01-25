@@ -57610,3 +57610,4 @@
 1706198386	Makyen	custom[\W_]*+made[\W_]*+casino(?!\.com(?<=custommadecasino\.com))
 1706200620	Jesse	georgedaviesturf\.co\.uk
 1706200670	Jesse	George[\W_]*+Davies[\W_]*+Turf(?!\.co\.uk(?<=georgedaviesturf\.co\.uk))
+1706206702	Makyen	yaabot\.com
