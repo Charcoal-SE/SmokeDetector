@@ -28511,7 +28511,6 @@
 1620490378	Xnero	sarkariepress\.com
 1620490387	Xnero	sarkariepress(?!\.com)
 1620494582	cigien	genu[\W_]*+venue(?!\.com(?<=genuvenue\.com))
-1620499766	cigien	albertgonzalezwizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1620504162	cigien	drgeetika\.org\.in
 1620504442	cigien	ketonutritiondiets\.com
 1620535799	Makyen	readblackclover\.net
