@@ -57617,3 +57617,4 @@
 1706219850	Jesse	wptamim(?#buymeacoffee)
 1706220045	Jesse	cars\.usnews\.com
 1706220099	Jesse	smsplanet\.net
+1706220749	Makyen	archformation(?!\.com)
