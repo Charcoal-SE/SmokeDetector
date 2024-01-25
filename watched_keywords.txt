@@ -57604,3 +57604,4 @@
 1706195100	Jeff Schaller	offlandorg\.com
 1706195430	Makyen	offlandorg(?!\.com)
 1706197135	Jesse	yacinetv\.me
+1706197161	Jesse	fmwhtsap\.com
