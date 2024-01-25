@@ -57588,3 +57588,4 @@
 1706164107	cigien	hotel[\W_]*+dreamland(?!\.com(?<=hoteldreamland\.com))
 1706164416	cigien	bitnasdaq\.com
 1706164435	cigien	bitnasdaq(?!\.com)
+1706164809	cigien	unboxapk\.com
