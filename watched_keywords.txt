@@ -57579,3 +57579,4 @@
 1706141482	Jesse	157\.230\.32\.215
 1706143363	Jeff Schaller	sdncbb5\.sch\.id
 1706151339	Nick	cameracyprus\.net
+1706151373	Nick	Cameracyprus(?!\.net)
