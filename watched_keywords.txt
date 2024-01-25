@@ -57605,3 +57605,4 @@
 1706195430	Makyen	offlandorg(?!\.com)
 1706197135	Jesse	yacinetv\.me
 1706197161	Jesse	fmwhtsap\.com
+1706197306	Jesse	g2aleaks?(?#t.me)
