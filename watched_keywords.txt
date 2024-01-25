@@ -57583,3 +57583,4 @@
 1706159488	Makyen	cartoonize[\W_]*+my[\W_]*+pet
 1706159515	Makyen	cuadros[\W_]*+aesthetic
 1706161067	VLAZ	crvscience\.com
+1706163789	VLAZ	Tyrewaale(?:\.com)?
