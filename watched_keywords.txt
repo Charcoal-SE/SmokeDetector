@@ -57580,3 +57580,4 @@
 1706143363	Jeff Schaller	sdncbb5\.sch\.id
 1706151339	Nick	cameracyprus\.net
 1706151373	Nick	Cameracyprus(?!\.net)
+1706159488	Makyen	cartoonize[\W_]*+my[\W_]*+pet
