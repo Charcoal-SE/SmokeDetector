@@ -57615,3 +57615,4 @@
 1706206834	Makyen	theaircompanion\.com
 1706219787	Jesse	archformation\.com
 1706219850	Jesse	wptamim(?#buymeacoffee)
+1706220045	Jesse	cars\.usnews\.com
