@@ -57613,3 +57613,4 @@
 1706206702	Makyen	yaabot\.com
 1706206732	Makyen	yaabot(?!\.com)
 1706206834	Makyen	theaircompanion\.com
+1706219787	Jesse	archformation\.com
