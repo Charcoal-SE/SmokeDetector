@@ -57593,3 +57593,4 @@
 1706171318	VLAZ	placestostay\.lk
 1706173440	tripleee	brocute\d*
 1706176251	cigien	switch2solar\.in
+1706176283	cigien	switch2solar(?!\.in)
