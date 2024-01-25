@@ -57582,3 +57582,4 @@
 1706151373	Nick	Cameracyprus(?!\.net)
 1706159488	Makyen	cartoonize[\W_]*+my[\W_]*+pet
 1706159515	Makyen	cuadros[\W_]*+aesthetic
+1706161067	VLAZ	crvscience\.com
