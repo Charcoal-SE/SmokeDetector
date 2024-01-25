@@ -57595,3 +57595,4 @@
 1706176283	cigien	switch2solar(?!\.in)
 1706176313	VLAZ	smartenergygap\.com
 1706183117	Jeff Schaller	cabletvandinternetpackages\.com
+1706185241	Jeff Schaller	shop\.grandstores\.ae
