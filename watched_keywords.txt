@@ -57585,3 +57585,4 @@
 1706161067	VLAZ	crvscience\.com
 1706163789	VLAZ	Tyrewaale(?:\.com)?
 1706163577	Cow	hoteldreamland\.com
+1706164107	cigien	hotel[\W_]*+dreamland(?!\.com(?<=hoteldreamland\.com))
