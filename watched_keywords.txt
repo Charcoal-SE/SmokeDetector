@@ -57589,3 +57589,4 @@
 1706164416	cigien	bitnasdaq\.com
 1706164435	cigien	bitnasdaq(?!\.com)
 1706164809	cigien	unboxapk\.com
+1706164837	cigien	kalpavrikshaacademy\.in
