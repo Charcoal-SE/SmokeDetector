@@ -57611,3 +57611,4 @@
 1706200620	Jesse	georgedaviesturf\.co\.uk
 1706200670	Jesse	George[\W_]*+Davies[\W_]*+Turf(?!\.co\.uk(?<=georgedaviesturf\.co\.uk))
 1706206702	Makyen	yaabot\.com
+1706206732	Makyen	yaabot(?!\.com)
