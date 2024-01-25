@@ -57608,3 +57608,4 @@
 1706197306	Jesse	g2aleaks?(?#t.me)
 1706198045	Jeff Schaller	custommadecasino\.com
 1706198386	Makyen	custom[\W_]*+made[\W_]*+casino(?!\.com(?<=custommadecasino\.com))
+1706200620	Jesse	georgedaviesturf\.co\.uk
