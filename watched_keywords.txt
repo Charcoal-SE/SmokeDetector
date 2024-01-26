@@ -57627,3 +57627,4 @@
 1706266948	tripleee	ismart\.com\.ua
 1706270586	tripleee	revenantcyberhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1706271653	Jeff Schaller	dminfotecinformatica\.tech
+1706271677	Jeff Schaller	nichespotlight\.com
