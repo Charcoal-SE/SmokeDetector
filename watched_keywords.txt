@@ -57619,3 +57619,4 @@
 1706231933	Jesse	iottechnews\.com
 1706232287	Jesse	abiresearch\.com
 1706237686	Nick	tecnologynew\.com
+1706237708	Nick	tecnologynew(?!\.com)
