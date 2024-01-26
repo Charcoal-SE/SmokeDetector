@@ -30780,7 +30780,6 @@
 1627891543	tripleee	wallet[\W_]*+(?:(?:customer|care|service|support|help(?:line)?|contact|(?:toll[\W_]*+)free|(?:tele)?phone)[\W_]*+)*number
 1627895914	tripleee	ecardforest\.com
 1627897432	tripleee	essay48\.com
-1627903759	tripleee	cheapsslshop\.com
 1627903821	tripleee	kalpsolutions\.com
 1627903972	tripleee	kedarudyog\.co\.in
 1627904009	Jeff Schaller	qbtoolhub\.com
