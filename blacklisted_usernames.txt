@@ -957,3 +957,4 @@ zoomcar India
 (?-i:^Ajibola Olarinoye$)
 (?-i:^ChatGPT Espanol ChatGPTXOnline$)
 (?-i:^first policy$)
+(?-i:^albort$)
