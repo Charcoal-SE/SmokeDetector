@@ -57617,3 +57617,4 @@
 1706220099	Jesse	smsplanet\.net
 1706220749	Makyen	archformation(?!\.com)
 1706231933	Jesse	iottechnews\.com
+1706232287	Jesse	abiresearch\.com
