@@ -324,6 +324,9 @@ items:
   - gerald.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
+  - jonah.ns.cloudflare.com.
+- ns:
+  - ali.ns.cloudflare.com.
   - luke.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
