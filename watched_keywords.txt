@@ -57620,3 +57620,4 @@
 1706237686	Nick	tecnologynew\.com
 1706237708	Nick	tecnologynew(?!\.com)
 1706243066	Nick	linkmega\.info
+1706251581	cigien	shamela\.org
