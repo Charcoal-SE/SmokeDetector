@@ -57629,3 +57629,4 @@
 1706271653	Jeff Schaller	dminfotecinformatica\.tech
 1706271677	Jeff Schaller	nichespotlight\.com
 1706272760	VLAZ	fastfundrecovery8[^a-z0-9@]*+@[\W_]*+gmail\.com
+1706272955	VLAZ	whatsgbpro\.org
