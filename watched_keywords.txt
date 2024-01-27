@@ -57653,3 +57653,4 @@
 1706351314	Mast	the[\W_]*+prime[\W_]*+step(?!\.com(?<=theprimestep\.com))
 1706354046	Jeff Schaller	elansector82\.in
 1706359014	Jeff Schaller	vccissuer\.com
+1706359887	Jeff Schaller	atlluxuryblacktrucks\.com
