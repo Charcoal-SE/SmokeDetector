@@ -57668,3 +57668,4 @@
 1706370611	Jesse	sites\.google\.com/view/updatetheory
 1706370733	Jesse	pontaclorenzo56(?:@gmail\.com)?
 1706382887	Cow	quranclass\.com
+1706393700	Vickel	togeldana\.sardengeprek\.ac\.id
