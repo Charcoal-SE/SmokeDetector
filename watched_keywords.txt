@@ -57677,3 +57677,4 @@
 1706394783	Vickel	strd-irrs12\.com
 1706394735	Vickel	passage-through-trees\.com
 1706398954	Makyen	^buy(?:[\W_]*+\w++)?[\W_]*+online
+1706399383	Makyen	haitheory\.com
