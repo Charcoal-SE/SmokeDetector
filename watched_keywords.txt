@@ -57640,3 +57640,4 @@
 1706303838	Jesse	CYBER[\W_]*+SPACE[\W_]*+HACK[\W_]*+PRO
 1706307831	Vickel	hop\.clickbank\.net
 1706321240	Nick	zigwheels\.com
+1706322695	Nick	caamanitoba\.com
