@@ -57650,3 +57650,4 @@
 1706348466	VLAZ	dynamiteladderpro\.com
 1706350375	tripleee	installusd\.com
 1706350415	tripleee	theprimestep\.com
+1706351314	Mast	the[\W_]*+prime[\W_]*+step(?!\.com(?<=theprimestep\.com))
