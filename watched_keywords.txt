@@ -57665,3 +57665,4 @@
 1706370087	Jesse	elsubtitle\.com
 1706370147	Jesse	facebook\.com/groups/mathstoday
 1706370367	Jesse	health\.ucdavis\.edu
+1706370611	Jesse	sites\.google\.com/view/updatetheory
