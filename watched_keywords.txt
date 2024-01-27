@@ -57641,3 +57641,4 @@
 1706307831	Vickel	hop\.clickbank\.net
 1706321240	Nick	zigwheels\.com
 1706322695	Nick	caamanitoba\.com
+1706322753	Nick	caa[\W_]*+manitoba(?!\.com(?<=caamanitoba\.com))
