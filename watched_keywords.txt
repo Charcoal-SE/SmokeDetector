@@ -57639,3 +57639,4 @@
 1706291341	Makyen	ehsaas8171\.pk
 1706303838	Jesse	CYBER[\W_]*+SPACE[\W_]*+HACK[\W_]*+PRO
 1706307831	Vickel	hop\.clickbank\.net
+1706321240	Nick	zigwheels\.com
