@@ -57661,3 +57661,4 @@
 1706369483	Jesse	peekabooschools\.com
 1706369541	Jesse	Peekaboo[\W_]*+Schools?+(?!\.com(peekabooschools\.com))
 1706369670	Jesse	asti\.co\.in
+1706369943	Jesse	t\.me/Kasseiopia
