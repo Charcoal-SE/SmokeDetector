@@ -57666,3 +57666,4 @@
 1706370147	Jesse	facebook\.com/groups/mathstoday
 1706370367	Jesse	health\.ucdavis\.edu
 1706370611	Jesse	sites\.google\.com/view/updatetheory
+1706370733	Jesse	pontaclorenzo56(?:@gmail\.com)?
