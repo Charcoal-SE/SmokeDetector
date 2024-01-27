@@ -57643,3 +57643,4 @@
 1706322695	Nick	caamanitoba\.com
 1706322753	Nick	caa[\W_]*+manitoba(?!\.com(?<=caamanitoba\.com))
 1706328982	Jeff Schaller	bet88vn\.org
+1706329002	Nick	bet88vnorg(?#facebook|instagram/vimeo/twitter/pinterest)
