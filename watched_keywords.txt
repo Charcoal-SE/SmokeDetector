@@ -57693,3 +57693,4 @@
 1706455232	Jesse	puttycolors\.com
 1706456203	Jesse	taglab\.net
 1706456255	Jesse	TAGLAB(?!\.net)
+1706456296	Jesse	(?-i:kfenlfbjdpdgblnoabpdehlabodakbmp)(?#chrome web store)
