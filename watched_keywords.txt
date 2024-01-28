@@ -57680,3 +57680,4 @@
 1706399383	Makyen	haitheory\.com
 1706425974	Nick	chrisharvey553@gmail\.com
 1706427519	Nick	Top[\W_]*+Stock[\W_]*+Broker(?!\.com(?<=thetopstockbroker\.com))
+1706427578	Nick	notshub\.in
