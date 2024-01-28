@@ -57266,7 +57266,6 @@
 1705665497	cigien	ehallpass(?!\.us)
 1705666359	tripleee	(?-i:^Marc Gilbert$)
 1705666493	tripleee	skywirebroadcast\.com
-1705666941	tripleee	phantomwalletextensionau
 1705667020	tripleee	phantwallet\.com
 1705667069	tripleee	sites\.google\.com/[^/\W]*+wallet[^/\W]*+
 1705667881	cigien	stophornet\.com
