@@ -57695,3 +57695,4 @@
 1706456680	Jesse	phantom[\W_]*+wallet[\W_]*+extension(?:[\W_]*+(?:au|us))?
 1706461340	Jeff Schaller	yesranks\.com
 1706394666	Vickel	^Mega4D(?:\s+\w+)*$
+1706474483	Jeff Schaller	ifixnet\.blogspot
