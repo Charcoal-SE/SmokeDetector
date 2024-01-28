@@ -57692,3 +57692,4 @@
 1706456203	Jesse	taglab\.net
 1706456255	Jesse	TAGLAB(?!\.net)
 1706456296	Jesse	(?-i:kfenlfbjdpdgblnoabpdehlabodakbmp)(?#chrome web store)
+1706456680	Jesse	phantom[\W_]*+wallet[\W_]*+extension(?:[\W_]*+(?:au|us))?
