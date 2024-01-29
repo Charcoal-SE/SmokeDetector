@@ -57725,3 +57725,4 @@
 1706533318	Vickel	ariba[\W_]*+safety(?!\.com)
 1706533755	cigien	lovecrm\.com\.br
 1706533775	cigien	lovecrm(?!\.com\.br)
+1706535063	cigien	8xbet\.rocks
