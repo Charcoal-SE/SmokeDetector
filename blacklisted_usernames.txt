@@ -959,3 +959,4 @@ zoomcar India
 (?-i:^first policy$)
 (?-i:^albort$)
 (?-i:^Eva Anna$)
+(?-i:^Jamel Cotte$)
