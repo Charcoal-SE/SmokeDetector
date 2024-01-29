@@ -57702,3 +57702,4 @@
 1706510958	Nick	Christina[\W_]*+Will[\W_]*+Spears(?!\.com(?<=christinawillspears\.com))
 1706513280	Nick	royalclinicdubai\.com
 1706513766	Nick	unitedpower\.in
+1706513800	VLAZ	capcutz\.com
