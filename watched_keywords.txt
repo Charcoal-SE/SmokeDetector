@@ -57709,3 +57709,4 @@
 1706522880	tripleee	phenomena[\W_]*+gummies\w*
 1706523238	cigien	dlinklocal\.com
 1706523311	cigien	rexpayments(?!\.com)
+1706523578	cigien	gasion[\W_]*+airtec(?!\.com(?<=gasionairtec\.com))
