@@ -57707,3 +57707,4 @@
 1706514278	Nick	Lightings?[\W_]*+And[\W_]*+Supplies(?!\.com(?<=lightingandsupplies\.com))
 1706514657	Nick	rexpayments\.com
 1706521820	Nick	univestinc\.com
+1706521964	cigien	sassagrantsstatus\.co\.za
