@@ -57718,3 +57718,4 @@
 1706527972	Jeff Schaller	ultimatevoyagers\.com
 1706528367	Jeff Schaller	Davice_consultant
 1706528802	cigien	proxymimarlik\.com
+1706529703	tripleee	derm[\W_]*+la[\W_]*+fleur(?:[\W_]*+deluxe)?
