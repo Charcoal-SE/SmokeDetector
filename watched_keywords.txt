@@ -57739,3 +57739,4 @@
 1706546754	Jesse	nadevelopers\.com
 1706546791	Jesse	nadevelopers(?!\.com)
 1706549761	Jesse	Telgorithm(?!\.com)
+1706550535	Makyen	seotools\.fyi
