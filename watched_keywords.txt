@@ -57699,3 +57699,4 @@
 1706502437	Makyen	blooming[\W_]*+blossom
 1706506291	Nick	okaya\.in
 1706509673	Nick	onlinedissertationhelp\.uk
+1706510958	Nick	Christina[\W_]*+Will[\W_]*+Spears(?!\.com(?<=christinawillspears\.com))
