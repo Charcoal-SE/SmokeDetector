@@ -57722,3 +57722,4 @@
 1706529777	tripleee	articleshood\.com
 1706531828	Jeff Schaller	(?-i:^Mohit Singh$)
 1706533237	Vickel	aribasafety\.com
+1706533318	Vickel	ariba[\W_]*+safety(?!\.com)
