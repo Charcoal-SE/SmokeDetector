@@ -57727,3 +57727,4 @@
 1706533775	cigien	lovecrm(?!\.com\.br)
 1706535063	cigien	8xbet\.rocks
 1706541006	Jesse	myhousehaven\.com
+1706541042	Jesse	myhousehaven(?!\.com)
