@@ -57746,3 +57746,4 @@
 1706558193	Jeff Schaller	payperinvest\.com
 1706559940	Jeff Schaller	bistrovivant\.com
 1706562069	Vickel	offshorehrsolutions\.com
+1706562333	Vickel	hr[\W_]*+solutions(?!\.com)
