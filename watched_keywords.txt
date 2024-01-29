@@ -57738,3 +57738,4 @@
 1706545389	Jeff Schaller	ejboudreaujr\.com
 1706546754	Jesse	nadevelopers\.com
 1706546791	Jesse	nadevelopers(?!\.com)
+1706549761	Jesse	Telgorithm(?!\.com)
