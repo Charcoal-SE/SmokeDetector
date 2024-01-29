@@ -57697,3 +57697,4 @@
 1706394666	Vickel	^Mega4D(?:\s+\w+)*$
 1706474483	Jeff Schaller	ifixnet\.blogspot
 1706502437	Makyen	blooming[\W_]*+blossom
+1706506291	Nick	okaya\.in
