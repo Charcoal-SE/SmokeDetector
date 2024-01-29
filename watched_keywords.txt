@@ -57715,3 +57715,4 @@
 1706525215	Nick	tws\.edu\.in
 1706525251	Nick	Taurian[\W_]*+World[\W_]*+School
 1706525693	Nick	finacus\.co\.in
+1706527972	Jeff Schaller	ultimatevoyagers\.com
