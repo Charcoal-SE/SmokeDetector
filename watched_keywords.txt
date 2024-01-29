@@ -57716,3 +57716,4 @@
 1706525251	Nick	Taurian[\W_]*+World[\W_]*+School
 1706525693	Nick	finacus\.co\.in
 1706527972	Jeff Schaller	ultimatevoyagers\.com
+1706528367	Jeff Schaller	Davice_consultant
