@@ -57729,3 +57729,4 @@
 1706541006	Jesse	myhousehaven\.com
 1706541042	Jesse	myhousehaven(?!\.com)
 1706541168	Jesse	(?-i:AQ_ikczKxc4)(?#youtube shorts)
+1706541515	cigien	bitpapa\.com
