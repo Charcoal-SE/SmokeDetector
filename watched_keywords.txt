@@ -57748,3 +57748,4 @@
 1706562069	Vickel	offshorehrsolutions\.com
 1706562333	Vickel	hr[\W_]*+solutions(?!\.com)
 1706563527	Vickel	hr[\W_]*+solutions?(?!\.com)
+1706566467	Makyen	affordable-seoservices\.com
