@@ -57711,3 +57711,4 @@
 1706523311	cigien	rexpayments(?!\.com)
 1706523578	cigien	gasion[\W_]*+airtec(?!\.com(?<=gasionairtec\.com))
 1706523885	cigien	myexamcollection\.com
+1706525038	Nick	Revsyntech(?!\.com)
