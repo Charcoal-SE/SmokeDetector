@@ -57706,3 +57706,4 @@
 1706514227	Nick	lightingandsupplies\.com
 1706514278	Nick	Lightings?[\W_]*+And[\W_]*+Supplies(?!\.com(?<=lightingandsupplies\.com))
 1706514657	Nick	rexpayments\.com
+1706521820	Nick	univestinc\.com
