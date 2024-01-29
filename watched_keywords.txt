@@ -57747,3 +57747,4 @@
 1706559940	Jeff Schaller	bistrovivant\.com
 1706562069	Vickel	offshorehrsolutions\.com
 1706562333	Vickel	hr[\W_]*+solutions(?!\.com)
+1706562868	Vickel	hr[\W_]*+solution(?!\.com)
