@@ -57771,3 +57771,4 @@
 1706603135	cigien	grandslot88
 1706604174	cigien	paysquare\.com
 1706604195	cigien	paysquare(?!\.com)
+1706606113	VLAZ	pattistars\.xyz
