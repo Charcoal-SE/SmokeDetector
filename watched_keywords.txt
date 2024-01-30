@@ -57784,3 +57784,4 @@
 1706611279	cigien	prosenthub\.com
 1706611310	cigien	flight[\W_]*+desk[\W_]*+india(?!\.com(?<=flightdeskindia\.com))
 1706613164	Jeff Schaller	10xdigitalgroup\.com\.au
+1706614107	Jeff Schaller	thebwschool\.com
