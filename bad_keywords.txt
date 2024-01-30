@@ -2942,3 +2942,4 @@ C[\W_]*+d[\W_]*+1[\W_]*+9[\W_]*+2[\W_]*+2[\W_]*+1(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*
 Billionaire[\W_]*+Brain[\W_]*+Wave
 albert[\W_]*+gonzalez[\W]*+wizard(?<!albertgonzalezwizard)
 albertgonzalezwizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+blockchainappsdeveloper(?!\.com)
