@@ -57779,3 +57779,4 @@
 1706606760	VLAZ	repair[\W_]*+my[\W_]*+phone[\W_]*+today(?<!repairmyphone\.today)
 1706606795	VLAZ	printerrental\.co\.za
 1706606871	VLAZ	finanzindia\.com
+1706607056	VLAZ	TheGeekStudio\.ae
