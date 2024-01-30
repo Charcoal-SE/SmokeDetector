@@ -57782,3 +57782,4 @@
 1706609377	cigien	certsquestions(?!\.com)
 1706611249	VLAZ	flightdeskindia\.com
 1706611279	cigien	prosenthub\.com
+1706611310	cigien	flight[\W_]*+desk[\W_]*+india(?!\.com(?<=flightdeskindia\.com))
