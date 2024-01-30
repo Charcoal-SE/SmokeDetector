@@ -57759,3 +57759,4 @@
 1706598328	cigien	indicpay(?!\.com)
 1706598348	cigien	printingprogress\.co\.uk
 1706598377	cigien	printingprogress(?!\.co\.uk)
+1706598405	cigien	harbor-breeze-ceilingfans\.com
