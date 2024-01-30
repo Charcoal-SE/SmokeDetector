@@ -57791,3 +57791,4 @@
 1706619396	Vickel	farmerscheesemaking\.com
 1706621389	Jeff Schaller	ifexindia\.com
 1706626935	Jesse	OrangeMantra(?!\.com)
+1706627612	Jesse	The[\W_]*+BW[\W_]*+School(?!\.com(?<=thebwschool\.com))
