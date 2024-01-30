@@ -57800,3 +57800,4 @@
 1706634717	cigien	cryptoprivatekeyrecovery\.net
 1706634754	cigien	crypto[\W_]*+private[\W_]*+key[\W_]*+recovery(?!\.net(?<=cryptoprivatekeyrecovery\.net))
 1706640638	Vickel	elitescreens\.com
+1706640735	Vickel	anupatel\.in
