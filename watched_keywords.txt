@@ -57754,3 +57754,4 @@
 1706595943	VLAZ	ufabetwins\.info
 1706596308	VLAZ	gofortrial\.com
 1706597663	VLAZ	dottimedeliveries\.com
+1706598153	cigien	dottime[\W_]*+deliveries(?!\.com(?<=dottimedeliveries\.com))
