@@ -57794,3 +57794,4 @@
 1706628313	Jesse	PiEV[\W_]*+Core(?!\.com(?<=pievcore\.com))
 1706628347	Jesse	gastroinventar\.dk
 1706628389	Jesse	kamaloge\.in
+1706631784	Jeff Schaller	vipslot\.tumblr\.com
