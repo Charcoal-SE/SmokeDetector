@@ -57777,3 +57777,4 @@
 1706606589	VLAZ	techyaims\.com
 1706606611	VLAZ	techyaims(?!\.com)
 1706606760	VLAZ	repair[\W_]*+my[\W_]*+phone[\W_]*+today(?<!repairmyphone\.today)
+1706606795	VLAZ	printerrental\.co\.za
