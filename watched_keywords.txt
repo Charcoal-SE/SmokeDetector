@@ -57793,3 +57793,4 @@
 1706627612	Jesse	The[\W_]*+BW[\W_]*+School(?!\.com(?<=thebwschool\.com))
 1706628313	Jesse	PiEV[\W_]*+Core(?!\.com(?<=pievcore\.com))
 1706628347	Jesse	gastroinventar\.dk
+1706628389	Jesse	kamaloge\.in
