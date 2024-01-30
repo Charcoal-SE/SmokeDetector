@@ -57775,3 +57775,4 @@
 1706606414	VLAZ	livehidevelopers\.com
 1706606437	VLAZ	livehi[\W_]*+developers(?!\.com(?<=livehidevelopers\.com))
 1706606589	VLAZ	techyaims\.com
+1706606611	VLAZ	techyaims(?!\.com)
