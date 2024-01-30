@@ -56129,7 +56129,6 @@
 1703355989	Jesse	apkminors\.com
 1703384354	Jesse	ssalocator\.livejournal\.com
 1703385766	Makyen	nhavuonhado(?:(?<=/nhavuonhado)|(?<=/@nhavuonhado))\w*+(?#facebook|twitter|instagram|pinterest|youtube)
-1703400772	Makyen	captainwebgenesis\.com
 1703429363	Jeff Schaller	sisoindia\.net
 1703430831	Jeff Schaller	nopira\.com
 1703435795	Jesse	mukesoft\.com
