@@ -57772,3 +57772,4 @@
 1706604174	cigien	paysquare\.com
 1706604195	cigien	paysquare(?!\.com)
 1706606113	VLAZ	pattistars\.xyz
+1706606414	VLAZ	livehidevelopers\.com
