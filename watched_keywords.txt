@@ -57839,3 +57839,4 @@
 1706716523	Jesse	xinshop\.com
 1706716586	Jesse	Xin[\W_]*+shop(?!\.com(?<=xinshop\.com))
 1706716697	Jesse	davemcmillan\.net
+1706717566	Jesse	sepatuindonesia\.com
