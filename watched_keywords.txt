@@ -57806,3 +57806,4 @@
 1706682192	tripleee	gratixtechnologies\.com
 1706682589	tripleee	kiloforce\.in
 1706682972	tripleee	(?-i:^DJ Jammer$)
+1706684047	tripleee	heatedjackets\.store
