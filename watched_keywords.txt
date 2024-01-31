@@ -57830,3 +57830,4 @@
 1706709473	cigien	thecloudswood\.net
 1706711061	Jeff Schaller	backwards3\.info
 1706712727	Jeff Schaller	baedecor\.com
+1706712864	Makyen	bae[\W_]*+decor(?!\.com(?<=baedecor\.com))r?
