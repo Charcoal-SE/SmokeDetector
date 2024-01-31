@@ -1603,6 +1603,9 @@ items:
   - dina.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
+  - dion.ns.cloudflare.com.
+  - rita.ns.cloudflare.com.
+- ns:
   - diva.ns.cloudflare.com.
   - micah.ns.cloudflare.com.
 - ns:
