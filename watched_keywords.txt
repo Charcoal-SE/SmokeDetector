@@ -57836,3 +57836,4 @@
 1706716237	Jesse	Dock[\W_]*+Life[\W_]*+Biermans[\W_]*+cottage[\W_]*+Co
 1706716471	Jesse	reezanhoffman(?:@gmail\.com)?
 1706716500	Jesse	alibalkandr(?#telegram)
+1706716523	Jesse	xinshop\.com
