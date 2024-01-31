@@ -57832,3 +57832,4 @@
 1706712727	Jeff Schaller	baedecor\.com
 1706712864	Makyen	bae[\W_]*+decor(?!\.com(?<=baedecor\.com))r?
 1706715881	Jesse	purple[\W_]*+held
+1706716184	Jesse	rentalsinwasaga\.com
