@@ -57833,3 +57833,4 @@
 1706712864	Makyen	bae[\W_]*+decor(?!\.com(?<=baedecor\.com))r?
 1706715881	Jesse	purple[\W_]*+held
 1706716184	Jesse	rentalsinwasaga\.com
+1706716237	Jesse	Dock[\W_]*+Life[\W_]*+Biermans[\W_]*+cottage[\W_]*+Co
