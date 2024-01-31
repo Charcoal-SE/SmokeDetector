@@ -57825,3 +57825,4 @@
 1706701205	Jeff Schaller	catexotica\.com
 1706701919	cigien	nationalqualityawards\.org
 1706701947	cigien	national[\W_]*+quality[\W_]*+awards(?!\.org(?<=nationalqualityawards\.org))
+1706704637	Jeff Schaller	usi-world\.com
