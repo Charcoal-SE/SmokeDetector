@@ -57834,3 +57834,4 @@
 1706715881	Jesse	purple[\W_]*+held
 1706716184	Jesse	rentalsinwasaga\.com
 1706716237	Jesse	Dock[\W_]*+Life[\W_]*+Biermans[\W_]*+cottage[\W_]*+Co
+1706716471	Jesse	reezanhoffman(?:@gmail\.com)?
