@@ -33933,7 +33933,6 @@
 1638504426	cigien	mp3\.run
 1638512843	Makyen	computeritdisposals\.co\.uk
 1638514806	tripleee	4shared\.com
-1638514929	tripleee	[./](?<=https?://(?:[-a-z]++\.))*+jmp\.sh(?=[</]|$)
 1638517396	tripleee	wordpressmigrationhelp\.com
 1638525579	tripleee	ananditsolutions\.com
 1638531216	tripleee	thepackersmoversdelhi\.com
