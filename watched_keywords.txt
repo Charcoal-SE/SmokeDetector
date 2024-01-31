@@ -33848,7 +33848,6 @@
 1638253908	cigien	junkremoveluae\.com
 1638255820	tripleee	webofinfo\.com
 1638265585	tripleee	mayolapakistan\.com
-1638266303	tripleee	mobileappdaily\.com
 1638268362	Makyen	delhidigitalguru\.in
 1638268581	tripleee	(?-i:7AgzFRVHFLo)(?# youtube)
 1638269894	Makyen	tamimdigital\.com
