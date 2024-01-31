@@ -57809,3 +57809,4 @@
 1706684047	tripleee	heatedjackets\.store
 1706684173	cocomac	innovatetechnologies\.co\.in
 1706687110	tripleee	(?-i:^Md Rakib Hasan$)
+1706687552	Makyen	quytech(?!\.com)
