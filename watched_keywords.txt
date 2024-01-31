@@ -57843,3 +57843,4 @@
 1706717605	Jesse	Sepatu[\W_]*+Indonesia(?!\.com(?<=sepatuindonesia\.com))
 1706717701	Jesse	Noor[\W_]*+Corp(?!\.pk(?<=noorcorp\.pk))
 1706717879	Jesse	medium\.com/@0l4m1de
+1706718039	cigien	fveap\.org
