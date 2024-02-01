@@ -57866,3 +57866,4 @@
 1706788844	cigien	elitebeautyconcepts\.com
 1706788656	Vickel	bjsps\.edu\.in
 1706790118	VLAZ	graycyan(?!\.com|\.us)
+1706790467	VLAZ	graycyan(?:\.com|\.us)
