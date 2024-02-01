@@ -5540,3 +5540,4 @@ xperttechy\.com
 captainwebgenesis\.com
 mobileappdaily\.com
 abroadvice\.com
+t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+n[\W_]*+o[\W_]*+c[\W_]*+r[\W_]*+a[\W_]*+t[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+s[\W_]*+i[\W_]*+t[\W_]*+e(?#obfuscated technocraterecovery\.site)
