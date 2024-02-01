@@ -57872,3 +57872,4 @@
 1706796615	Jeff Schaller	ghulamyasin3021\.blogspot
 1706800567	Jesse	TURAT[\W_]*+FUND[\W_]*+LOAN
 1706800740	Jesse	medium\.com/@zalamayank2005
+1706800998	Jesse	varuna\.net
