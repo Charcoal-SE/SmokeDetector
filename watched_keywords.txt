@@ -57851,3 +57851,4 @@
 1706772161	cigien	simbolomultimedia\.com
 1706772226	cigien	tiptop[\W_]*+einrichtung(?!\.de(?<=tiptop-einrichtung\.de))
 1706770558	Cow	nobrokeragehub\.com
+1706770586	Cow	tiptop-einrichtung\.de
