@@ -57869,3 +57869,4 @@
 1706790467	VLAZ	graycyan(?:\.com|\.us)
 1706793092	Jeff Schaller	finrevu\.com
 1706794717	Jeff Schaller	elearningindustry\.com
+1706796615	Jeff Schaller	ghulamyasin3021\.blogspot
