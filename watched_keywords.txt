@@ -57853,3 +57853,4 @@
 1706770558	Cow	nobrokeragehub\.com
 1706770586	Cow	tiptop-einrichtung\.de
 1706773597	cigien	bsnsconsulting\.com
+1706773627	cigien	bsns[\W_]*+consulting(?!\.com(?<=bsnsconsulting\.com))
