@@ -57870,3 +57870,4 @@
 1706793092	Jeff Schaller	finrevu\.com
 1706794717	Jeff Schaller	elearningindustry\.com
 1706796615	Jeff Schaller	ghulamyasin3021\.blogspot
+1706800567	Jesse	TURAT[\W_]*+FUND[\W_]*+LOAN
