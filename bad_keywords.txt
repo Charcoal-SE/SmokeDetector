@@ -2944,3 +2944,4 @@ albert[\W_]*+gonzalez[\W]*+wizard(?<!albertgonzalezwizard)
 albertgonzalezwizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 blockchainappsdeveloper(?!\.com)
 washingtonfarm
+wengui[\W_]*+guo
