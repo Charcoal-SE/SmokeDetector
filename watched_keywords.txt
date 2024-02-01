@@ -57857,3 +57857,4 @@
 1706774927	cigien	rummyola\.cloud
 1706774947	cigien	gsiseals\.com
 1706775945	Makyen	gsi[\W_]*+seals(?!\.com(?<=gsiseals\.com))
+1706776172	Makyen	matt[\W_]*+dunham[\W_]*+hacker[\W_]*+agency
