@@ -57859,3 +57859,4 @@
 1706775945	Makyen	gsi[\W_]*+seals(?!\.com(?<=gsiseals\.com))
 1706776172	Makyen	matt[\W_]*+dunham[\W_]*+hacker[\W_]*+agency
 1706776433	Makyen	dadu[\W_]*+online
+1706776454	Makyen	superman68
