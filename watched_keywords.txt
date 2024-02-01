@@ -57868,3 +57868,4 @@
 1706790118	VLAZ	graycyan(?!\.com|\.us)
 1706790467	VLAZ	graycyan(?:\.com|\.us)
 1706793092	Jeff Schaller	finrevu\.com
+1706794717	Jeff Schaller	elearningindustry\.com
