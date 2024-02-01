@@ -57856,3 +57856,4 @@
 1706773627	cigien	bsns[\W_]*+consulting(?!\.com(?<=bsnsconsulting\.com))
 1706774927	cigien	rummyola\.cloud
 1706774947	cigien	gsiseals\.com
+1706775945	Makyen	gsi[\W_]*+seals(?!\.com(?<=gsiseals\.com))
