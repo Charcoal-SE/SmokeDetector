@@ -56841,7 +56841,6 @@
 1704883387	tripleee	kphmedia\.in
 1704884820	cigien	ecompapi\.com\.au
 1704884850	cigien	ecompapi(?!\.com\.au)
-1704887064	VLAZ	Trust[\W_]*+Geeks[\W_]*+Hack[\W_]*+Expert
 1704888016	cigien	varundigitalmedia\.com
 1704888260	cigien	doublelist24\.com
 1704888400	cigien	doublelist24(?!\.com)
