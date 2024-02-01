@@ -57873,3 +57873,4 @@
 1706800740	Jesse	medium\.com/@zalamayank2005
 1706800998	Jesse	varuna\.net
 1706801990	Jesse	Agile[\W_]*+Regulatory(?!\.com(?<=agileregulatory\.com))
+1706802212	Jesse	cloudavenue\.io
