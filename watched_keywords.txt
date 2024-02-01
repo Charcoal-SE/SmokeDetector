@@ -57847,3 +57847,4 @@
 1706729888	Makyen	geelongroofingpros\.com\.au
 1706742070	Makyen	rofnal\.com
 1706767462	Nick	homesellerheaven\.com
+1706767520	Nick	Home[\W_]*+Seller[\W_]*+Heaven(?!\.com(?<=homesellerheaven\.com))
