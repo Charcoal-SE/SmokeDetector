@@ -57888,3 +57888,4 @@
 1706810344	Makyen	sigap[\W_]*+bet(?!-20768\.gr-site\.com(?<=sigapbet-20768\.gr-site\.com))
 1706810373	Makyen	nationalcarcovers\.com
 1706810490	Makyen	(?-i:cobraxmaleenhancementgummiesma)(?#sites.google.com)
+1706810464	Cow	tubeflix21\.com
