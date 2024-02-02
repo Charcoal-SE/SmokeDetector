@@ -57926,3 +57926,4 @@
 1706887349	Jesse	Dark[\W_]*+Mountain[\W_]*+Music(?!\.com(?<=darkmountainmusic\.com))
 1706887495	Jesse	015225f005a52f66c6(?#upwork)
 1706888314	Jesse	osiz(?:[\W_]*+technologies)?+(?!\.com(?<=osiztechnologies\.com))
+1706890047	cigien	housetipse\.com
