@@ -57932,3 +57932,4 @@
 1706900448	Makyen	exner[\W_]*+pro[\W_]*+hacker(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1706903231	Jesse	bbbcarwreckers\.com\.au
 1706906195	Jesse	TALLOT[\W_]*+DROPS
+1706917827	Vickel	captainjackcrypto@europe\.com
