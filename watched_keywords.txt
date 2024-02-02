@@ -57901,3 +57901,4 @@
 1706854836	Cow	bravg\.com
 1706815975	General Grievance	deezercorner\.com
 1706855472	Makyen	tradexpertz\.com
+1706855492	Makyen	(?-i:tradexpertzs)(?#t.me)
