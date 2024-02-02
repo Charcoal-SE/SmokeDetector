@@ -57908,3 +57908,4 @@
 1706858815	cigien	watchlivemovies\.online
 1706858895	cigien	cosmocheats\.com
 1706861131	cigien	apkmean\.com
+1706861222	cigien	apkartist\.com
