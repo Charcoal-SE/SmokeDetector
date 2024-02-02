@@ -57925,3 +57925,4 @@
 1706877148	cigien	nsfwaitools\.com
 1706881991	Vickel	uppercasetolowercase\.top
 1706887195	Jesse	ashang888(?#telegram)
+1706887349	Jesse	Dark[\W_]*+Mountain[\W_]*+Music(?!\.com(?<=darkmountainmusic\.com))
