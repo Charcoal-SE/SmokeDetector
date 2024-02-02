@@ -57905,3 +57905,4 @@
 1706858607	cigien	digisoftsolution\.com
 1706858661	cigien	ersa[\W_]*+electronics(?!\.com(?<=ersaelectronics\.com))
 1706858708	cigien	omdeo(?!\.co\.in)
+1706858750	Cow	wptravel\.io
