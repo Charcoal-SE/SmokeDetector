@@ -57930,3 +57930,4 @@
 1706893762	Jesse	(?-i:N5rd0V)(?#fiverr)
 1706895571	Jesse	DiveToGarden(?!\.com)
 1706900448	Makyen	exner[\W_]*+pro[\W_]*+hacker(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1706903231	Jesse	bbbcarwreckers\.com\.au
