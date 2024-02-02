@@ -2946,3 +2946,4 @@ blockchainappsdeveloper(?!\.com)
 washingtonfarm
 wengui[\W_]*+guo
 Trust[\W_]*+Geeks[\W_]*+Hack[\W_]*+Expert
+rottgenraphael(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
