@@ -57928,3 +57928,4 @@
 1706888314	Jesse	osiz(?:[\W_]*+technologies)?+(?!\.com(?<=osiztechnologies\.com))
 1706890047	cigien	housetipse\.com
 1706893762	Jesse	(?-i:N5rd0V)(?#fiverr)
+1706895571	Jesse	DiveToGarden(?!\.com)
