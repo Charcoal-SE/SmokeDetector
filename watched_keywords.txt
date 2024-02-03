@@ -57933,3 +57933,4 @@
 1706903231	Jesse	bbbcarwreckers\.com\.au
 1706906195	Jesse	TALLOT[\W_]*+DROPS
 1706917827	Vickel	captainjackcrypto@europe\.com
+1706918682	Vickel	Captain[\W_]*+Jack[\W_]*+Crypto(?:@europe\.com)?
