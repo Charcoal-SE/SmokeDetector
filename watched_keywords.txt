@@ -57952,3 +57952,4 @@
 1706977717	Jesse	crypto\.jobs
 1706977910	Jesse	(?:Ev)?chargeQ(?!\.com(?<=evchargeq\.com))
 1706978206	Jesse	equitem\.blog
+1706978238	Jesse	inhubsa\.com
