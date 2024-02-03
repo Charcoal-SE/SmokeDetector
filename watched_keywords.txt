@@ -57955,3 +57955,4 @@
 1706978238	Jesse	inhubsa\.com
 1706978420	Jesse	timesofeuropnews\.com
 1706979118	VLAZ	partnerdma\.com
+1706979187	VLAZ	Partner[\W_]*+Digital[\W_]*+Agency
