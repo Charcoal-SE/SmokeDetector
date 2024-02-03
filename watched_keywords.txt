@@ -57948,3 +57948,4 @@
 1706974105	Jeff Schaller	artisanflooring\.ie
 1706975912	Makyen	chemist[\W_]*+warehouse(?!cbdgummiesaustralia3\.bandcamp\.com(?<=chemistwarehousecbdgummiesaustralia3\.bandcamp\.com))(?:[\W_]*+(?:cbd|gumm(?:y|ie)|australia|in|au|austr|buy)s?)(?:[\W_]*+(?:cbd|gumm(?:y|ie)|australia|in|au|austr|buy|\d++|[\da-f]{5,}+)s?)*
 1706977165	Jesse	watchmovie\.live
+1706977396	Jesse	The[\W_]*+Classic[\W_]*+Interior(?!\.in(?<=theclassicinterior\.in))
