@@ -57943,3 +57943,4 @@
 1706918682	Vickel	Captain[\W_]*+Jack[\W_]*+Crypto(?:@europe\.com)?
 1706963217	Jeff Schaller	theclassicinterior\.in
 1706964803	Jeff Schaller	techsitesworld\.com
+1706964905	Jeff Schaller	catchydigitalacademy\.com
