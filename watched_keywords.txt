@@ -57958,3 +57958,4 @@
 1706979187	VLAZ	Partner[\W_]*+Digital[\W_]*+Agency
 1706984755	Jesse	keyspider\.io
 1706984839	Jesse	technoguest\.com
+1706996397	Makyen	revenantcyberhacker\.net
