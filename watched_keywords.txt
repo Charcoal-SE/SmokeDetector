@@ -57942,3 +57942,4 @@
 1706907798	Vickel	wholesaletallotdrops@gmail\.com
 1706918682	Vickel	Captain[\W_]*+Jack[\W_]*+Crypto(?:@europe\.com)?
 1706963217	Jeff Schaller	theclassicinterior\.in
+1706964803	Jeff Schaller	techsitesworld\.com
