@@ -57945,5 +57945,4 @@
 1706964905	Jeff Schaller	catchydigitalacademy\.com
 1706973008	Makyen	chemistwarehousecbdgummiesaustralia3\.bandcamp\.com
 1706973028	Makyen	(?-i:ruceather)(?#medium.com)
-1706973087	Makyen	chemist[\W_]*+warehouse(?!cbdgummiesaustralia3\.bandcamp\.com(?<=chemistwarehousecbdgummiesaustralia3\.bandcamp\.com))(?:[\W_]*+(?:cbd|gumm(?:y|ie)|australia|in|au|austr|buy|\d++|[\da-f]{5,}+)s?)*
 1706974105	Jeff Schaller	artisanflooring\.ie
