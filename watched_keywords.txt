@@ -57951,3 +57951,4 @@
 1706977396	Jesse	The[\W_]*+Classic[\W_]*+Interior(?!\.in(?<=theclassicinterior\.in))
 1706977717	Jesse	crypto\.jobs
 1706977910	Jesse	(?:Ev)?chargeQ(?!\.com(?<=evchargeq\.com))
+1706978206	Jesse	equitem\.blog
