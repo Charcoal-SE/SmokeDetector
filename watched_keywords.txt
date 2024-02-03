@@ -57960,3 +57960,4 @@
 1706998870	Nick	Space[\W_]*+Spy[\W_]*+Recovery
 1707003503	Nick	hkrudanihostel\.com
 1707003529	Nick	hitechpavers\.com
+1707003587	Nick	luxurypls\.com
