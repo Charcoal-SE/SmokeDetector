@@ -57940,3 +57940,4 @@
 1706949507	Makyen	goodstonejewelry\.com
 1706959291	Cow	evchargeq\.com
 1706907798	Vickel	wholesaletallotdrops@gmail\.com
+1706918682	Vickel	Captain[\W_]*+Jack[\W_]*+Crypto(?:@europe\.com)?
