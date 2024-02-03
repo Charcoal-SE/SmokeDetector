@@ -54249,7 +54249,6 @@
 1698527859	Vickel	moviesfoxs\.com
 1698685373	Can O' Spam	sepaxml\.com
 1698686136	Can O' Spam	revenantcyberhacker\.com
-1698686420	Makyen	revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1698686639	Jeff Schaller	99papers\.com
 1698688387	cigien	fieldofspartas\.com
 1698735857	Nick	darjewellery\.com
