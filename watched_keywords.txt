@@ -57959,3 +57959,4 @@
 1706996397	Makyen	revenantcyberhacker\.net
 1706998870	Nick	Space[\W_]*+Spy[\W_]*+Recovery
 1707003503	Nick	hkrudanihostel\.com
+1707003529	Nick	hitechpavers\.com
