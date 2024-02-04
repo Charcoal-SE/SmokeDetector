@@ -57964,3 +57964,4 @@
 1707003615	Makyen	arabfuturecities\.com
 1707003644	Makyen	nana[\W_]*+4d
 1707007353	Makyen	bahraindeafsports(?#instagram.com)
+1707007373	Makyen	(?-i:cjlkZXM4OGhqbmlr)
