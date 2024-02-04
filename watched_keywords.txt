@@ -57971,3 +57971,4 @@
 1707021726	Makyen	anka[\W_]*+outdoor(?!\.com(?<=ankaoutdoor\.com))
 1707025250	Nick	mkdigital10\.com
 1707026232	Makyen	cesaro\.great-site\.net
+1707026845	Makyen	mk[\W_]*+digital[\W_]*+10(?!\.com(?<=mkdigital10\.com))
