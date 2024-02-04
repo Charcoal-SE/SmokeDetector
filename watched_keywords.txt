@@ -57985,3 +57985,4 @@
 1707060133	Jeff Schaller	biharheadline\.blogspot
 1707060323	Makyen	seostips\.com
 1707060375	Makyen	xpert[\W_]*+techy(?!\.com(?<=xperttechy\.com))
+1707061850	Jesse	gardeniaorganic\.com
