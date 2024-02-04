@@ -57976,3 +57976,4 @@
 1707030598	Makyen	dota88
 1707031780	Makyen	house[\W_]*+tipse(?!\.com(?<=housetipse\.com))
 1707031489	Henry Ecker	kivyo\.com
+1707031866	Makyen	kivyo(?!\.com)
