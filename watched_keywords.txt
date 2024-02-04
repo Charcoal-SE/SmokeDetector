@@ -57968,3 +57968,4 @@
 1707013723	Jeff Schaller	WatchEuropa\.com
 1707016866	Jeff Schaller	spacespy65
 1707021623	Makyen	shahiplay\.com
+1707021726	Makyen	anka[\W_]*+outdoor(?!\.com(?<=ankaoutdoor\.com))
