@@ -57965,3 +57965,4 @@
 1707003644	Makyen	nana[\W_]*+4d
 1707007353	Makyen	bahraindeafsports(?#instagram.com)
 1707007373	Makyen	(?-i:cjlkZXM4OGhqbmlr)
+1707007767	Nick	OPEN[\W_]*+READ(?!\.net(?<=openread\.net))
