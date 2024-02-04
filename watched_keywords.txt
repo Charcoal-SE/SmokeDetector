@@ -57974,3 +57974,4 @@
 1707026845	Makyen	mk[\W_]*+digital[\W_]*+10(?!\.com(?<=mkdigital10\.com))
 1707030578	Makyen	johnbook\.store
 1707030598	Makyen	dota88
+1707031780	Makyen	house[\W_]*+tipse(?!\.com(?<=housetipse\.com))
