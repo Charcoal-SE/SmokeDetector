@@ -57987,3 +57987,4 @@
 1707060375	Makyen	xpert[\W_]*+techy(?!\.com(?<=xperttechy\.com))
 1707061850	Jesse	gardeniaorganic\.com
 1707062115	Jesse	dombagacor\.com
+1707062291	Jesse	webdav\.in
