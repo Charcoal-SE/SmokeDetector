@@ -58023,3 +58023,4 @@
 1707146169	Jesse	careermantra\.net
 1707146199	Jesse	careermantra(?!\.net)
 1707146225	Jesse	agriacademyhisar\.com
+1707146775	Jesse	money[\W_]*+fine[\W_]*+customer[\W_]*+care[\W_]*+number️
