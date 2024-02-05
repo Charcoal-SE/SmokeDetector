@@ -56631,7 +56631,6 @@
 1704468152	Jesse	geeksquadassists\.com
 1704468282	Jesse	suryarentcarbandung\.com
 1704468330	Jesse	Surya[\W_]*+Rentcar[\W_]*+Bandung(?!\.com(?<=suryarentcarbandung\.com))
-1704473447	Makyen	auctioneer\.net
 1704475183	Jesse	edenderma\.com
 1704476701	Jesse	minsoftwarerequirements\.com
 1704479492	Jesse	Glow[\W_]*+POP[\W_]*+(?:Collection|Polishes)
