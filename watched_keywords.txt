@@ -58008,3 +58008,4 @@
 1707132099	cigien	coditude\.com
 1707132138	cigien	a1officefurniture\.co\.uk
 1707132334	cigien	livingwaterdentistry\.ca
+1707132354	cigien	living[\W_]*+water[\W_]*+dentistry(?!\.ca(?<=livingwaterdentistry\.ca))
