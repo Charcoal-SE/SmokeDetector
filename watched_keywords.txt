@@ -57993,3 +57993,4 @@
 1707063072	Jesse	winduels\.vip
 1707065856	Makyen	watchesshopus\.com
 1707067333	Jesse	lpjsoncomparer\.in
+1707115688	Nick	Accounts[\W_]*+NextGen(?!\.com(?<=accountsnextgen\.com))
