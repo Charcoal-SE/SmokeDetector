@@ -57997,3 +57997,4 @@
 1707119504	cigien	qurangpt\.com
 1707119522	cigien	qurangpt(?!\.com)
 1707119857	cigien	nhacaiuytinlink\.com
+1707120980	cigien	aitoolhouse\.com
