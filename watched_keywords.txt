@@ -58015,3 +58015,4 @@
 1707136273	cigien	adultvibes-uae\.com
 1707137681	cigien	hassansadparatreksandtours\.com
 1707138274	cigien	buyanyinsurance\.ae
+1707138302	cigien	buyanyinsurance(?!\.ae)
