@@ -58018,3 +58018,4 @@
 1707138302	cigien	buyanyinsurance(?!\.ae)
 1707138557	Jeff Schaller	skillkart\.app
 1707139570	cigien	maxwellfoodcentre\.com
+1707140881	cigien	zitadel\.com
