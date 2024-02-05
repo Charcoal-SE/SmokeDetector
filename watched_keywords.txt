@@ -58036,3 +58036,4 @@
 1707166952	Jesse	pcmaxima\.blogspot
 1707167127	Jesse	(?-i:ifncdaeoflafnclpfhfmcihkhnlebjec)(?#chrome web store)
 1707170904	Jesse	matheusmuniz\.com
+1707171340	Jesse	refund[\W_]*+polici
