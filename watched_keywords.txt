@@ -57995,3 +57995,4 @@
 1707067333	Jesse	lpjsoncomparer\.in
 1707115688	Nick	Accounts[\W_]*+NextGen(?!\.com(?<=accountsnextgen\.com))
 1707119504	cigien	qurangpt\.com
+1707119522	cigien	qurangpt(?!\.com)
