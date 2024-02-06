@@ -58052,3 +58052,4 @@
 1707204698	cigien	webguru\.dev
 1707204861	cigien	activefitnessstore\.com
 1707204889	cigien	ashishgraphics\.in
+1707204919	cigien	ashish[\W_]*+graphics(?!\.in(?<=ashishgraphics\.in))
