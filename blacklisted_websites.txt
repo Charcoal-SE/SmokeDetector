@@ -5545,3 +5545,4 @@ lawyerscorner\.net
 cyber[\W_]*+wizard[\W_]*+com\b
 openread\.net
 auctioneer\.net
+Marketpeace\.net
