@@ -58054,3 +58054,4 @@
 1707204889	cigien	ashishgraphics\.in
 1707204919	cigien	ashish[\W_]*+graphics(?!\.in(?<=ashishgraphics\.in))
 1707205850	cigien	a1[\W_]*+office[\W_]*+furniture(?!\.co\.uk(?<=a1officefurniture\.co\.uk))
+1707206240	cigien	immigransglobal\.com
