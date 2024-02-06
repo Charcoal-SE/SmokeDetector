@@ -58048,3 +58048,4 @@
 1707201227	Nick	fabercre8tive\.ca
 1707201274	Nick	Faber[\W_]*+Cre8tive(?!\.ca(?<=fabercre8tive\.ca))
 1707201663	Nick	trickypurchase\.com
+1707202899	VLAZ	pavitrakher\.com
