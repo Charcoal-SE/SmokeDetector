@@ -58059,7 +58059,6 @@
 1707221825	Jeff Schaller	mestlife\.com
 1707225133	VLAZ	auditstation\.org
 1707225234	cigien	audit[\W_]*+station(?!\.org(?<=auditstation\.org))
-1707225428	cigien	secret[\W_]*+sinners(?!\.co\.uk(?<=secretsinners\.co\.uk))
 1707221004	Cow	netranjali\.org
 1707228426	cigien	netranjali(?!\.org)
 1707229733	Jeff Schaller	dottypost\.com
