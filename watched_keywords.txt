@@ -58055,5 +58055,4 @@
 1707205850	cigien	a1[\W_]*+office[\W_]*+furniture(?!\.co\.uk(?<=a1officefurniture\.co\.uk))
 1707206240	cigien	immigransglobal\.com
 1707212625	cigien	mumbaihotelescorts\.in
-1707217330	VLAZ	(?:Neelaadri)?[\W_]*+True[\W_]*+Frames?(?!\.in)
 1707217353	VLAZ	trueframe\.in
