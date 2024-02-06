@@ -58044,3 +58044,4 @@
 1707194140	Nick	aelectroniz\.com
 1707198711	cocomac	lmkgroups\.com
 1707198939	Makyen	ict[\W_]*+solutions
+1707200866	VLAZ	TRANSTOGEL
