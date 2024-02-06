@@ -58067,3 +58067,4 @@
 1707230100	cigien	dottypost(?!\.com)
 1707234675	Jesse	thetatva\.in
 1707235004	Jesse	grocoder\.com
+1707235248	Jesse	Secret[\W_]*+Sinners?(?!\.co\.uk(?<=secretsinners\.co\.uk))
