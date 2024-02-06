@@ -700,7 +700,11 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
 
 
 def dispatch_shorthand_command(msg):
-    commands = shlex.split(GlobalVars.parser.unescape(msg.content).lower())[1:]
+    try:
+        commands = shlex.split(GlobalVars.parser.unescape(msg.content).lower())[1:]
+    except ValueError:
+        log_current_exception(log_level='debug')
+        return "That shorthand command produced an error when I tried to parse it."
 
     if len(commands) == 0:
         return
