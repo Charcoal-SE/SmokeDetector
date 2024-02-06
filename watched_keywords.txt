@@ -58046,3 +58046,4 @@
 1707198939	Makyen	ict[\W_]*+solutions
 1707200866	VLAZ	TRANSTOGEL
 1707201227	Nick	fabercre8tive\.ca
+1707201274	Nick	Faber[\W_]*+Cre8tive(?!\.ca(?<=fabercre8tive\.ca))
