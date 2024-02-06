@@ -58068,3 +58068,4 @@
 1707235004	Jesse	grocoder\.com
 1707235591	Jesse	buyme24x7\.com
 1707235863	Jesse	Secret[\W_]*+Sinners?+(?!\.co\.uk(?<=secretsinners\.co\.uk))
+1707236185	Jesse	Smart[\W_]*+Hemp[\W_]*+Gummies[\W_]*+(?:In[\W_]*+)?NZ
