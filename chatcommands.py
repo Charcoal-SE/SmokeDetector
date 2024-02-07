@@ -723,7 +723,7 @@ def reject(msg, args, alias_used="reject"):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
         raise CmdException("You need blacklist manager privileges to reject pull requests")
-    if len(reason) < 20 and not force:
+    if len(reason) < 20 and not force and not duplicate:
         raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
                            " can learn from their mistakes. Use `-force` to force the reject")
     rejected_image = "https://camo.githubusercontent.com/" \
@@ -732,8 +732,8 @@ def reject(msg, args, alias_used="reject"):
                      "1636b6c6973746572732d72656a65637465642d7265642e706e67"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
-    rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                  chat_user_profile_link, msg.room.name)
+    rejected_by_text = ("[Rejected]({})" + (" as a duplicate" if duplicate else "") + "by [{}]({}) in {}.").format(
+        message_url, msg.owner.name, chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
