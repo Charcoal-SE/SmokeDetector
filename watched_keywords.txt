@@ -58116,3 +58116,4 @@
 1707320157	Jesse	bapko\.in
 1707320358	Jesse	expertoption\.com
 1707320378	Jesse	expertoption(?!\.com)
+1707320571	Jesse	Devbox[\W_]*+Technologies
