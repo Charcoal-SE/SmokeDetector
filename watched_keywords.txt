@@ -58088,3 +58088,4 @@
 1707289812	Nick	thepfc\.club
 1707289868	Nick	sipplancalculator\.com
 1707289901	Nick	Pfc[\W_]*+Club
+1707290089	Nick	technoprofiles\.com
