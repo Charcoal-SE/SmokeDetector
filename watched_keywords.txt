@@ -58119,3 +58119,4 @@
 1707320571	Jesse	Devbox[\W_]*+Technologies
 1707321322	Jeff Schaller	Stmlyrics\.com
 1707321476	Jeff Schaller	solarsme\.com
+1707321115	Cow	evolution\.org\.ua
