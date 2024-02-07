@@ -699,7 +699,7 @@ def approve(msg, pr_id):
         raise CmdException(str(e))
 
 
-@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
+@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force", "reject-duplicate"])
 def reject(msg, args, alias_used="reject"):
     argsraw = args.split(' "', 1)
     try:
@@ -716,6 +716,7 @@ def reject(msg, args, alias_used="reject"):
     except IndexError:
         reason = ''
     force = alias_used.split("-")[-1] == "force"
+    duplicate = alias_used.split("-")[-1] == "duplicate"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
         raise CmdException("You need blacklist manager privileges to reject pull requests")
@@ -736,7 +737,7 @@ def reject(msg, args, alias_used="reject"):
     reject_reason_image_text = "\n\n![Rejected with SmokeyReject]({})".format(rejected_image)
     comment = rejected_by_text + reject_reason_text + reject_reason_image_text
     try:
-        message = GitManager.reject_pull_request(pr_id, comment)
+        message = GitManager.reject_pull_request(pr_id, comment, duplicate)
         return message
     except Exception as e:
         raise CmdException(str(e))
