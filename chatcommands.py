@@ -732,7 +732,7 @@ def reject(msg, args, alias_used="reject"):
                      "1636b6c6973746572732d72656a65637465642d7265642e706e67"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
-    rejected_by_text = ("[Rejected]({})" + (" as a duplicate" if duplicate else "") + "by [{}]({}) in {}.").format(
+    rejected_by_text = ("[Rejected]({})" + (" as a duplicate" if duplicate else "") + " by [{}]({}) in {}.").format(
         message_url, msg.owner.name, chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
