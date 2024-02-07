@@ -58078,3 +58078,4 @@
 1707284507	Nick	cricbet99\.bet
 1707284545	Nick	Cricbet99\.com
 1707284563	Nick	Cricbet99(?!\.com)(?!\.bet)
+1707285825	Nick	metlone\.com
