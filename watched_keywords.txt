@@ -58126,3 +58126,4 @@
 1707323455	Jesse	xpincorporated\.com
 1707326397	VLAZ	Neelaadri[\W_]*+True[\W_]*+Frames?(?!\.in)
 1707327761	cigien	ashrefdkhili\.com
+1707327901	Jeff Schaller	sumitmannatech\.wordpress
