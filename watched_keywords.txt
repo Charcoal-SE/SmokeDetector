@@ -58080,3 +58080,4 @@
 1707284563	Nick	Cricbet99(?!\.com)(?!\.bet)
 1707285825	Nick	metlone\.com
 1707285881	Nick	metlone([\W_]*+technology)?(?!\.com)
+1707287896	Nick	mypb\.co\.in
