@@ -58082,3 +58082,4 @@
 1707285881	Nick	metlone([\W_]*+technology)?(?!\.com)
 1707287896	Nick	mypb\.co\.in
 1707288441	cigien	mypb(?!\.co\.in)
+1707287358	Henry Ecker	knifeproguide\.com
