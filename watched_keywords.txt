@@ -58087,3 +58087,4 @@
 1707288892	cigien	attic[\W_]*+ladder[\W_]*+installation(?!\.com(?<=atticladderinstallation\.com))
 1707289812	Nick	thepfc\.club
 1707289868	Nick	sipplancalculator\.com
+1707289901	Nick	Pfc[\W_]*+Club
