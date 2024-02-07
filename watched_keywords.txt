@@ -58095,3 +58095,4 @@
 1707291990	Nick	dichvuthue24h\.com
 1707292252	cigien	times-standard\.com
 1707295189	Cow	dcmed\.org
+1707299552	cigien	infisign(?!\.io)
