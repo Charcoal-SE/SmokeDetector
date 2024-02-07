@@ -414,7 +414,7 @@ class GitManager:
             if response:
                 if response.json()["state"] == "closed":
                     git.push('-d', origin_or_auth, ref)
-                    return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})." + 
+                    return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})." +
                             (" as a duplicate" if is_duplicate else "")).format(pr_id, GlobalVars.bot_repo_slug)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
