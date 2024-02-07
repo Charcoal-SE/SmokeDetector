@@ -58085,3 +58085,4 @@
 1707287358	Henry Ecker	knifeproguide\.com
 1707288862	cigien	atticladderinstallation\.com
 1707288892	cigien	attic[\W_]*+ladder[\W_]*+installation(?!\.com(?<=atticladderinstallation\.com))
+1707289812	Nick	thepfc\.club
