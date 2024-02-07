@@ -58091,3 +58091,4 @@
 1707290089	Nick	technoprofiles\.com
 1707290107	Nick	technoprofiles(?!\.com)
 1707291129	VLAZ	maxhr\.io
+1707291177	Nick	Max[\W_]*+HR(?!\.io)
