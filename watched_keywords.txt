@@ -58122,3 +58122,4 @@
 1707321115	Cow	evolution\.org\.ua
 1707321887	Makyen	^spammer$
 1707322750	Makyen	dryer-machinery\.com
+1707323340	Jesse	dessertsafaridubai\.com
