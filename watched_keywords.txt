@@ -58090,3 +58090,4 @@
 1707289901	Nick	Pfc[\W_]*+Club
 1707290089	Nick	technoprofiles\.com
 1707290107	Nick	technoprofiles(?!\.com)
+1707291129	VLAZ	maxhr\.io
