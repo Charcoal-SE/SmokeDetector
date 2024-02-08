@@ -58138,3 +58138,4 @@
 1707374753	Nick	Livglam[\W_]*+Cosmetic[\W_]*+Surgeries(?!\.com)
 1707374901	Nick	CrackedCourse@gmail\.com
 1707374944	Nick	cosmofeed\.com
+1707375433	Cow	boganto\.com
