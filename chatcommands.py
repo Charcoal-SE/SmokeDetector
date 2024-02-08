@@ -702,7 +702,8 @@ def approve(msg, pr_id):
 @command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close",
                                                                         "reject-force",
                                                                         "close-force",
-                                                                        "reject-duplicate"])
+                                                                        "reject-duplicate",
+                                                                        "close-duplicate"])
 def reject(msg, args, alias_used="reject"):
     argsraw = args.split(' "', 1)
     try:
