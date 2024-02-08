@@ -58142,3 +58142,4 @@
 1707375670	Nick	premierfurniturestore\.com
 1707375722	Nick	Premier[\W_]*+Furniture[\W_]*+store(?!\.com(?<=premierfurniturestore\.com))
 1707379885	cigien	livglam[\W_]*+cosmetic[\W_]*+surgeries(?!\.com(?<=livglamcosmeticsurgeries\.com))
+1707382279	cigien	evisaindians\.com
