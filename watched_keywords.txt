@@ -58136,3 +58136,4 @@
 1707373933	Nick	rpecalculator\.info
 1707374647	Cow	livglamcosmeticsurgeries\.com
 1707374711	Nick	livglamcosmeticsurgeries(?!\.com)
+1707374753	Nick	Livglam[\W_]*+Cosmetic[\W_]*+Surgeries(?!\.com)
