@@ -2949,3 +2949,4 @@ rottgenraphael(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?!\.net(?<=revenantcyberhacker\.net))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 Guo[\W_]*+farm
 mangocityit(?!\.com)
+rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service

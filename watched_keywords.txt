@@ -56569,7 +56569,6 @@
 1704378773	Makyen	(?-i:mCsfknXnR3c)(?#YouTube)
 1704378805	Makyen	manublogs\.com
 1704379191	Jeff Schaller	krishayenterprise\.com
-1704379866	Makyen	rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service
 1704380457	Jeff Schaller	beiladung-in-\w+\.de
 1704380840	Jesse	ekaasha\.com
 1704380870	Jesse	eliteresearch\.in
