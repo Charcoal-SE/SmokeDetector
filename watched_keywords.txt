@@ -58154,3 +58154,4 @@
 1707412793	Vickel	ugnaly\.com
 1707412921	Jesse	ikoess\.com
 1707413126	Jesse	checkmateq(?!\.com)
+1707413314	Jesse	Dr[\W_]*+Jumba
