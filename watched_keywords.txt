@@ -58141,3 +58141,4 @@
 1707375433	Cow	boganto\.com
 1707375507	Nick	Boganto(?!\.com)
 1707375670	Nick	premierfurniturestore\.com
+1707375722	Nick	Premier[\W_]*+Furniture[\W_]*+store(?!\.com(?<=premierfurniturestore\.com))
