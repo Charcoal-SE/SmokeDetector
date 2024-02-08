@@ -58157,3 +58157,4 @@
 1707413314	Jesse	Dr[\W_]*+Jumba
 1707413464	Jesse	digilearners
 1707413690	Jesse	tips4health24hour\.blogspot
+1707414481	Jesse	Henry[\W_]*+(?:Clark[\W_]*+)?Hacker
