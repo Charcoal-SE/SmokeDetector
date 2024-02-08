@@ -58160,3 +58160,4 @@
 1707414576	Jesse	fast[\W_]*+fund[\W_]*+recovery
 1707415545	Jesse	sangaku-journal\.eu
 1707415667	Jesse	diogenes\.bg
+1707415767	Jesse	yamatoblog\.net
