@@ -58159,5 +58159,4 @@
 1707414481	Jesse	Henry[\W_]*+(?:Clark[\W_]*+)?Hacker
 1707414576	Jesse	fast[\W_]*+fund[\W_]*+recovery
 1707415545	Jesse	sangaku-journal\.eu
-1707415635	Jesse	okmr\.yamatoblog\.net
 1707415667	Jesse	diogenes\.bg
