@@ -58200,3 +58200,4 @@
 1707493461	Jesse	Amul[\W_]*+Dark[\W_]*+Chocolate
 1707493681	cigien	helpingecommerce\.com
 1707493823	Jesse	Arabian[\W_]*+Automation
+1707494057	Jesse	indiatripplanners(?!\.com)
