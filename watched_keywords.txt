@@ -58182,3 +58182,4 @@
 1707477300	Jeff Schaller	wrightleatherworks\.com
 1707478161	cigien	onlinerecoveryconsultants(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1707478248	cigien	tjluxurycars\.com
+1707478282	cigien	tj[\W_]*+luxury[\W_]*+cars(?!\.com(?<=tjluxurycars\.com))
