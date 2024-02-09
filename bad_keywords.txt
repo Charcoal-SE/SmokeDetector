@@ -2950,3 +2950,4 @@ revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?!\.net(
 Guo[\W_]*+farm
 mangocityit(?!\.com)
 rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service
+0xbeC44674020cCC2Bc9BE1EFF77213A49eB6ED9e0
