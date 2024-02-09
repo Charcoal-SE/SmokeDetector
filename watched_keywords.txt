@@ -58196,3 +58196,4 @@
 1707491631	Jesse	(?-i:eljdjhiffjejhdpmdaeajldbdolimfcj)(?#chromewebstore)
 1707492713	Jesse	airlinesupdates\.com
 1707492913	Jesse	U[\W_]*+M[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+y[\W_]*+L[\W_]*+o[\W_]*+a[\W_]*+n(?#obfuscated U Money Loan)
+1707493027	Jeff Schaller	monacorac\.ae
