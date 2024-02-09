@@ -58184,3 +58184,4 @@
 1707478248	cigien	tjluxurycars\.com
 1707478282	cigien	tj[\W_]*+luxury[\W_]*+cars(?!\.com(?<=tjluxurycars\.com))
 1707478309	cigien	worldhealthstock\.com
+1707478342	cigien	publuu\.com
