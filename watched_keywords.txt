@@ -58175,3 +58175,4 @@
 1707469974	cigien	gratix[\W_]*+technologies(?!\.com(?<=gratixtechnologies\.com))
 1707471251	Cow	pipingmart\.ae
 1707473502	VLAZ	softura\.com
+1707473247	Cow	zyro\.in
