@@ -2951,3 +2951,4 @@ Guo[\W_]*+farm
 mangocityit(?!\.com)
 rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service
 0xbeC44674020cCC2Bc9BE1EFF77213A49eB6ED9e0
+vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|south|africa|get|official|\d++|[\da-f]{5,}+)s?)*
