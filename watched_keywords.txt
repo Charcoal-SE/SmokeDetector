@@ -58198,3 +58198,4 @@
 1707492913	Jesse	U[\W_]*+M[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+y[\W_]*+L[\W_]*+o[\W_]*+a[\W_]*+n(?#obfuscated U Money Loan)
 1707493027	Jeff Schaller	monacorac\.ae
 1707493461	Jesse	Amul[\W_]*+Dark[\W_]*+Chocolate
+1707493681	cigien	helpingecommerce\.com
