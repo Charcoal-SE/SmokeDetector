@@ -58173,3 +58173,4 @@
 1707469025	VLAZ	bbbmylar\.com
 1707469933	cigien	wlafnl\.com
 1707469974	cigien	gratix[\W_]*+technologies(?!\.com(?<=gratixtechnologies\.com))
+1707471251	Cow	pipingmart\.ae
