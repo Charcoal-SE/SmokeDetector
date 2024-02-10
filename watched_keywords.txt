@@ -58208,3 +58208,4 @@
 1707525835	Makyen	(?-i:3wbzQ6h)(?#bit.ly)
 1707525858	Makyen	(?-i:1tfH7U3CaEbfnQSAt19_tlCQfEGmDRTl2)(?#drive.google.com)
 1707525880	Makyen	codeeasy\.io
+1707540611	Nick	fubotv-connects\.com
