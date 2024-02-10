@@ -58238,3 +58238,4 @@
 1707599492	Vickel	alzaemat\.com
 1707599471	Vickel	afastbuy\.com
 1707597038	Vickel	cake-ideas\.com
+1707597162	Vickel	(?-i:^cakeideas$)
