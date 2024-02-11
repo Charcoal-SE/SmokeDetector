@@ -217,6 +217,7 @@ stackexchange.com:
       - 5392262  # General Grievance (Calculuswhiz on MS)
       - 15725245 # Cow
       - 22084389 # mozway
+      - 12413463 # stumblebee
 
   65945:  # Charcoal Test
     commands: true
@@ -244,6 +245,7 @@ stackexchange.com:
       - 18275476 # Artur Meinild
       - 16352934 # NotTheDr01ds
       - 22718731 # cocomac
+      - 12413463 # stumblebee
       # NOTICE: please don't add new users without approval from an Ask Ubuntu moderator.
       # When/if they choose to have SD privileges, BeastOfCaerbannog is pre-authorized to be added here.
 
