@@ -58243,3 +58243,4 @@
 1707609946	Vickel	tradingview-magical-keyboard-shortcuts\.com
 1707619493	Makyen	61550299165926(?#facebook.com)
 1707619785	Jeff Schaller	Texaco[\W_]*+Recovery
+1707624326	Nick	arcteche(?#blogspot.com)
