@@ -58255,3 +58255,4 @@
 1707669143	Makyen	(?-i:HRNDjb_SWXk)(?#groups.google.com/c/ibm.software.network.directory-integrator)
 1707669923	Vickel	mxmine\.site
 1707668708	Vickel	ravi-gupta\.com
+1707672152	Makyen	active?[\W_]*+genix\w*+(?:[\W_]*+(?:cbd|gumm(?:y|ie)|usa?|review|\d++|[\da-f]{5,}+)s?)*
