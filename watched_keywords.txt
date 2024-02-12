@@ -58271,3 +58271,4 @@
 1707719848	Nick	Kerala[\W_]*+Day[sz](?!\.com(?<=keraladayz\.com))
 1707721966	VLAZ	marriedbiography\.com
 1707721995	VLAZ	married[\W_]*+biography(?!\.com)
+1707724488	cigien	thecodeplay\.com
