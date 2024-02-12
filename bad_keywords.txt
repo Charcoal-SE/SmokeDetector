@@ -2954,4 +2954,3 @@ rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service
 vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|south|africa|get|official|\d++|[\da-f]{5,}+)s?)*
 euphoria[\W_]*+green(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
 coin[\W_]*+recovery[\W_]*+specialists(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
-(?-i:f88tw)
