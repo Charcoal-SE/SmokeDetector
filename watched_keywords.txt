@@ -58267,3 +58267,4 @@
 1707718443	VLAZ	abudaminerals\.com
 1707718601	VLAZ	abudaminerals(?!\.com)
 1707719000	Cow	scholarshipen\.com
+1707719778	Nick	keraladayz\.com
