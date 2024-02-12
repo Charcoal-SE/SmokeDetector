@@ -58290,3 +58290,4 @@
 1707741861	cigien	londondesignandbuild\.co\.uk
 1707741892	cigien	london[\W_]*+design[\W_]*+and[\W_]*+build(?!\.co\.uk(?<=londondesignandbuild\.co\.uk))
 1707741932	cigien	shapoorji[\W_]*+pallonji(?!\.ind\.in(?<=shapoorjipallonji\.ind\.in))
+1707742200	cigien	nectw721\.com
