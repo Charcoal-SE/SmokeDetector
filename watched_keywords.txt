@@ -58272,3 +58272,4 @@
 1707721995	VLAZ	married[\W_]*+biography(?!\.com)
 1707724488	cigien	thecodeplay\.com
 1707728256	cigien	brokfolio\.com
+1707729772	Nick	cheyennebostock\.mykajabi\.com
