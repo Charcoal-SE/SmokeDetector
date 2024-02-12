@@ -58282,7 +58282,6 @@
 1707736351	tripleee	voiceofcrypto\.online
 1707736844	tripleee	platformengineers\.io
 1707737133	tripleee	olympiados\.in
-1707741831	cigien	nish[\W_]*+technologies
 1707741861	cigien	londondesignandbuild\.co\.uk
 1707741892	cigien	london[\W_]*+design[\W_]*+and[\W_]*+build(?!\.co\.uk(?<=londondesignandbuild\.co\.uk))
 1707741932	cigien	shapoorji[\W_]*+pallonji(?!\.ind\.in(?<=shapoorjipallonji\.ind\.in))
