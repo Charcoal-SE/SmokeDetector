@@ -58304,3 +58304,4 @@
 1707770369	Jesse	vucaoit(?:@gmail\.com)?
 1707770394	Jesse	caodev16(?#skype)
 1707770577	Jesse	nishtechnologies\.com
+1707770610	Jesse	NISH[\W_]*+Technologies(?!\.com(?<=nishtechnologies\.com))
