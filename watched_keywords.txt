@@ -58307,3 +58307,4 @@
 1707770610	Jesse	NISH[\W_]*+Technologies(?!\.com(?<=nishtechnologies\.com))
 1707770677	Jesse	famewall\.io
 1707760838	General Grievance	fictivestudios\.com
+1707771277	Jesse	Fictive[\W_]*+Studios(?!\.com(?<=fictivestudios\.com))
