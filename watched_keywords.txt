@@ -58296,3 +58296,4 @@
 1707750016	Cow	sakinteriors\.net
 1707753768	Cow	getege\.com
 1707673817	Vickel	enhanceai\.art
+1707755728	VLAZ	kodehash(?!\.com)(?:[\W_]*+technologies)?
