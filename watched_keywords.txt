@@ -54619,7 +54619,6 @@
 1699575121	Jesse	dmvpinballs\.shop
 1699605171	cigien	fa[\W_]*+plus(?!app\.com(?<=faplusapp\.com))(?<!fa-plus)
 1699611339	VLAZ	kinhmatca\.com
-1699614929	Nick	cloudiffic\.com
 1699619419	cigien	fishingrodworld\.com
 1699619450	cigien	condredloanworld(?:@yahoo\.com)?
 1699620057	VLAZ	breen\.com\.ua
