@@ -58277,3 +58277,4 @@
 1707730761	cigien	progatix\.com
 1707730795	cigien	laravelangular\.blogspot
 1707731136	Cow	topusavcc\.com
+1707731782	cigien	topusavcc(?!\.com)
