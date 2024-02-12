@@ -58266,3 +58266,4 @@
 1707717902	VLAZ	rajwadi\.com
 1707718443	VLAZ	abudaminerals\.com
 1707718601	VLAZ	abudaminerals(?!\.com)
+1707719000	Cow	scholarshipen\.com
