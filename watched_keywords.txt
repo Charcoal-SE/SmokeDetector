@@ -58274,3 +58274,4 @@
 1707728256	cigien	brokfolio\.com
 1707729772	Nick	cheyennebostock\.mykajabi\.com
 1707729848	Nick	Cheyenne[\W_]*+Bostock(?!\.mykajabi\.com(?<=cheyennebostock\.mykajabi\.com))
+1707730761	cigien	progatix\.com
