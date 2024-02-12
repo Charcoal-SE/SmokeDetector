@@ -58243,7 +58243,6 @@
 1707619493	Makyen	61550299165926(?#facebook.com)
 1707619785	Jeff Schaller	Texaco[\W_]*+Recovery
 1707624326	Nick	arcteche(?#blogspot.com)
-1707634839	Nick	f88tw
 1707645257	rene	ios\.com
 1707646367	cigien	informationstime\.com
 1707648798	cigien	toyland\.toys
