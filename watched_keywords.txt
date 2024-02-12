@@ -58297,3 +58297,4 @@
 1707755728	VLAZ	kodehash(?!\.com)(?:[\W_]*+technologies)?
 1707758963	cigien	adidas\.co\.in
 1707760809	Jesse	costumeplayhub\.com
+1707761083	Jesse	memorize\.academy
