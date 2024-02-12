@@ -58262,3 +58262,4 @@
 1707713939	Makyen	awscreditsonline\.com
 1707717121	VLAZ	kodehash\.com
 1707717245	VLAZ	kodehash([\W]*+technologies)?(?!\.com)
+1707717310	VLAZ	secondhandlaptopinhyderabad\.in
