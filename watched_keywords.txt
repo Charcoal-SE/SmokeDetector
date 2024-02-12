@@ -58258,3 +58258,4 @@
 1707672152	Makyen	active?[\W_]*+genix\w*+(?:[\W_]*+(?:cbd|gumm(?:y|ie)|usa?|review|\d++|[\da-f]{5,}+)s?)*
 1707678715	Makyen	d(?:octo)?r[\W_]*+oz[\W_]*+bioheal\w*+(?:[\W_]*+(?:cbd|gumm(?:y|ie)|review|buy|usa?|free|stress|blood|\d++|[\da-f]{5,}+)s?)*
 1707676913	Cow	lensoptik\.com
+1707697614	Nick	Huisman[\W_]*+Cleverly[\W_]*+Recovery(?!\.com(?<=huismancleverlyrecovery\.com))
