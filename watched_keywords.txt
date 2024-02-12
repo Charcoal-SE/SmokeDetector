@@ -58299,3 +58299,4 @@
 1707760809	Jesse	costumeplayhub\.com
 1707761083	Jesse	memorize\.academy
 1707761103	Jesse	aramoving\.com
+1707761149	Jesse	ARA[\W_]*+Moving(?!\.com(?<=aramoving\.com))
