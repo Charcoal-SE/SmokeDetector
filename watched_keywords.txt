@@ -58260,7 +58260,6 @@
 1707697614	Nick	Huisman[\W_]*+Cleverly[\W_]*+Recovery(?!\.com(?<=huismancleverlyrecovery\.com))
 1707713939	Makyen	awscreditsonline\.com
 1707717121	VLAZ	kodehash\.com
-1707717245	VLAZ	kodehash([\W]*+technologies)?(?!\.com)
 1707717310	VLAZ	secondhandlaptopinhyderabad\.in
 1707717902	VLAZ	rajwadi\.com
 1707718443	VLAZ	abudaminerals\.com
