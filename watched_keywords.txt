@@ -58295,3 +58295,4 @@
 1707745748	cigien	smmpaneldeals(?!\.com)
 1707745771	cigien	muktiline\.com
 1707750016	Cow	sakinteriors\.net
+1707753768	Cow	getege\.com
