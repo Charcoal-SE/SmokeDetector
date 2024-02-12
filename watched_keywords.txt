@@ -58265,3 +58265,4 @@
 1707717310	VLAZ	secondhandlaptopinhyderabad\.in
 1707717902	VLAZ	rajwadi\.com
 1707718443	VLAZ	abudaminerals\.com
+1707718601	VLAZ	abudaminerals(?!\.com)
