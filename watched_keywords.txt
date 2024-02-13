@@ -58543,3 +58543,4 @@
 1707835665	Makyen	medecinstore(?:@gmail\.com)?
 1707835712	Makyen	michelo000
 1707838521	Jesse	Medallion[\W_]*+Greens[\W_]*+CBD[\W_]*+Gummies\w*
+1707839311	Jesse	Toronto[\W_]*+pearson(?:al)?[\W_]*+Limo(?:usine)?(?:[\W_]*+Services?)?+(?!\.ca(?<=torontopearsonlimoservice\.ca))
