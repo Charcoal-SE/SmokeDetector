@@ -58329,3 +58329,4 @@
 1707813133	cigien	cloudy[\W_]*+coders(?!\.com(?<=cloudycoders\.com))
 1707815005	Cow	universalheatingsolutions\.co\.uk
 1707813663	Cow	makeupworldbd\.com
+1707816272	tripleee	sdreatech(?!\.com)
