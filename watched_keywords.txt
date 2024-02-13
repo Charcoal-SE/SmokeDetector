@@ -58343,3 +58343,4 @@
 1707821644	VLAZ	anytime[\W_]*+astro(?!\.com(?<=anytimeastro\.com))
 1707823189	tripleee	flinkdex\.com
 1707824175	VLAZ	oitclasses\.com
+1707824364	Jeff Schaller	howtostartprogramming\.in
