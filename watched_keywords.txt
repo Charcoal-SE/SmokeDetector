@@ -58346,3 +58346,4 @@
 1707824364	Jeff Schaller	howtostartprogramming\.in
 1707824551	tripleee	fintechzoomes\.com
 1707824570	tripleee	fintechzoomes(?!\.com)
+1707825960	Jeff Schaller	hindisahayak\.in
