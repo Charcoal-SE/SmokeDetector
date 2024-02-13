@@ -58546,3 +58546,4 @@
 1707839311	Jesse	Toronto[\W_]*+pearson(?:al)?[\W_]*+Limo(?:usine)?(?:[\W_]*+Services?)?+(?!\.ca(?<=torontopearsonlimoservice\.ca))
 1707839654	Jesse	Makeup[\W_]*+World[\W_]*+BD(?!\.com(?<=makeupworldbd\.com))
 1707840492	Jesse	Hindi[\W_]*+Sahayak(?!\.in(?<=hindisahayak\.in))
+1707840618	Makyen	socialmarketing90(?!\.com)
