@@ -58726,3 +58726,4 @@
 1698882128	Jeff Schaller	(?-i:HwwtVoRs)(?#cutt.ly)
 1698882128	Jeff Schaller	(?-i:Kwwp8mWn)(?#cutt.ly)
 1698882128	Jeff Schaller	\bncyclopedia\.in(#? exclude innocent pokencyclopedia\.info)
+1707827186	tripleee	(?-i:^JohnJames$)
