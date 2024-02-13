@@ -15762,7 +15762,6 @@
 1579715883	Makyen	(?-i:kLlW0N)(?#fiverr.com)
 1579719369	Makyen	wisetechhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1579721262	Makyen	villaggiestivi\.com
-1579730158	Eliah Kagan	accountinghelpline\.com
 1579730508	Eliah Kagan	bbcstoriesnews\.blogspot
 1579738248	Makyen	eduethic\.com
 1579751572	Makyen	evicine\.fr
