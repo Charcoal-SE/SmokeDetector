@@ -58334,3 +58334,4 @@
 1707817846	tripleee	addoncoupons\.com
 1707818967	VLAZ	reelush\.com
 1707819128	VLAZ	reelush(?!\.com)
+1707819158	VLAZ	reed[\W_]*+lights
