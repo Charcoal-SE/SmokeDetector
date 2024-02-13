@@ -58341,3 +58341,4 @@
 1707821215	VLAZ	anytimeastro\.com
 1707821448	tripleee	firefoxbikes\.com
 1707821644	VLAZ	anytime[\W_]*+astro(?!\.com(?<=anytimeastro\.com))
+1707823189	tripleee	flinkdex\.com
