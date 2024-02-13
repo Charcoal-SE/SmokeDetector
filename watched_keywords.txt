@@ -58547,3 +58547,4 @@
 1707839654	Jesse	Makeup[\W_]*+World[\W_]*+BD(?!\.com(?<=makeupworldbd\.com))
 1707840492	Jesse	Hindi[\W_]*+Sahayak(?!\.in(?<=hindisahayak\.in))
 1707840618	Makyen	socialmarketing90(?!\.com)
+1707842743	Makyen	exxon\.ae
