@@ -58325,3 +58325,4 @@
 1707809695	Nick	(?-i:cAHMX)(?#shorturl.at)
 1707810027	Nick	torontopearsonlimoservice\.ca
 1707810704	cigien	toronto[\W_]*+pearson[\W_]*+limo(?:usine)?(?:[\W_]*+service)?+(?!\.ca(?<=torontopearsonlimoservice\.ca))
+1707810950	cigien	astyork
