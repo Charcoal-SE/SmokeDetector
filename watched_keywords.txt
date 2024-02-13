@@ -58326,3 +58326,4 @@
 1707810027	Nick	torontopearsonlimoservice\.ca
 1707810704	cigien	toronto[\W_]*+pearson[\W_]*+limo(?:usine)?(?:[\W_]*+service)?+(?!\.ca(?<=torontopearsonlimoservice\.ca))
 1707810950	cigien	astyork
+1707811061	cigien	calischoice\.com
