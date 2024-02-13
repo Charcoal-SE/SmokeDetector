@@ -748,6 +748,9 @@ items:
   - jason.ns.cloudflare.com.
 - ns:
   - becky.ns.cloudflare.com.
+  - kurt.ns.cloudflare.com.
+- ns:
+  - becky.ns.cloudflare.com.
   - stan.ns.cloudflare.com.
 - ns:
   - becky.ns.cloudflare.com.
