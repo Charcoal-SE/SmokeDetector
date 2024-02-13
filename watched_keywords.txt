@@ -58332,3 +58332,4 @@
 1707816272	tripleee	sdreatech(?!\.com)
 1707816561	tripleee	cureus\.com
 1707817846	tripleee	addoncoupons\.com
+1707818967	VLAZ	reelush\.com
