@@ -354,6 +354,9 @@ items:
   - bob.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - frank.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - gabe.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
