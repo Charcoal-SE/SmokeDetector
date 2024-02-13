@@ -58339,3 +58339,4 @@
 1707820444	tripleee	(?-i:^Juvana$)
 1707821075	tripleee	vruksha[\W_]*+loan
 1707821215	VLAZ	anytimeastro\.com
+1707821448	tripleee	firefoxbikes\.com
