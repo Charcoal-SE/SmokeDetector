@@ -5366,3 +5366,4 @@ m2yacademy\.com
 cloudiffic\.com
 innblockchain\.com
 cloudycoders\.com
+fayedhacker[\W_]*+tech
