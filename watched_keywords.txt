@@ -58554,3 +58554,4 @@
 1707851870	Jesse	ithackersofficial\.blogspot
 1707853838	Cow	talent\.lowes\.com
 1707854834	Makyen	nagakayu\.net
+1707854875	Makyen	nagakayu(?!\.net)
