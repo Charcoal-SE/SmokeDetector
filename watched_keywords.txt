@@ -58336,3 +58336,4 @@
 1707819128	VLAZ	reelush(?!\.com)
 1707819158	VLAZ	reed[\W_]*+lights
 1707819578	cigien	siis\.ca
+1707820444	tripleee	(?-i:^Juvana$)
