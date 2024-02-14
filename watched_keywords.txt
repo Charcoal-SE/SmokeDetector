@@ -58568,3 +58568,4 @@
 1707893747	Cow	mgtechsoft\.com
 1707895407	Cow	cuttingedger\.com
 1707896464	VLAZ	skywardwings\.com
+1707896495	VLAZ	skyward[\W_]*+wings(?!\.com(?<=skywardwings\.com))
