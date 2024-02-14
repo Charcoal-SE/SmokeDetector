@@ -58560,3 +58560,4 @@
 1707891140	Cow	pieseford\.ro
 1707892878	VLAZ	Neotonics
 1707892915	VLAZ	supplementsme\.com
+1707893102	VLAZ	@neotonicsskin(?#medium.com)
