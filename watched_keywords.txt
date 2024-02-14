@@ -58580,3 +58580,4 @@
 1707910814	Jeff Schaller	nileholiday\.com
 1707911166	tripleee	fintechzoomes(?!\.com)(?<!(?-i:^fintechzoomes$))
 1707911275	VLAZ	Alientogel
+1707912075	tripleee	softaid\.com\.au
