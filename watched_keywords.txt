@@ -58586,3 +58586,4 @@
 1707917764	Cow	apothekeme\.com
 1707919541	tripleee	businassist\.com
 1707925603	Jesse	ezulix\.com
+1707925732	Jesse	ezulix(?!\.com)
