@@ -58581,3 +58581,4 @@
 1707911166	tripleee	fintechzoomes(?!\.com)(?<!(?-i:^fintechzoomes$))
 1707911275	VLAZ	Alientogel
 1707912075	tripleee	softaid\.com\.au
+1707913634	Jeff Schaller	theautoexperts\.co\.uk
