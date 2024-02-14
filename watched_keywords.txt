@@ -22132,7 +22132,6 @@
 1599128674	Mast	damiestechnologies\.com
 1599128705	Mast	bhavyasteel\.in
 1599128451	Mast	ehealth102\.com
-1599125657	Mast	onlinereservationbooking\.com
 1599129095	Xnero	ehealth102(?!\.com)
 1599131189	Mast	cultfeeds\.com
 1599131976	tripleee	fuaktsoft
