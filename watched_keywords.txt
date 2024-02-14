@@ -58589,3 +58589,4 @@
 1707925732	Jesse	ezulix(?!\.com)
 1707926022	cigien	cafehfilm\.ir
 1707926217	Jesse	compostingwarehouse\.com
+1707926771	Jesse	github\.com/canseo
