@@ -58528,7 +58528,6 @@
 1707824175	VLAZ	oitclasses\.com
 1707824364	Jeff Schaller	howtostartprogramming\.in
 1707824551	tripleee	fintechzoomes\.com
-1707824570	tripleee	fintechzoomes(?!\.com)
 1707825960	Jeff Schaller	hindisahayak\.in
 1707827186	tripleee	(?-i:^JohnJames$)
 1707827423	tripleee	(?-i:^Aleyna Keleş$)
