@@ -5369,3 +5369,4 @@ cloudycoders\.com
 fayedhacker[\W_]*+tech
 wpnotch\.com
 accountinghelpline\.com
+highestspeedinternetinmyarea\.com
