@@ -58569,3 +58569,4 @@
 1707895407	Cow	cuttingedger\.com
 1707896464	VLAZ	skywardwings\.com
 1707896495	VLAZ	skyward[\W_]*+wings(?!\.com(?<=skywardwings\.com))
+1707896956	tripleee	iranseo\.top
