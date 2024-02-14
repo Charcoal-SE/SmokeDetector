@@ -58570,3 +58570,4 @@
 1707896464	VLAZ	skywardwings\.com
 1707896495	VLAZ	skyward[\W_]*+wings(?!\.com(?<=skywardwings\.com))
 1707896956	tripleee	iranseo\.top
+1707897323	Nick	onlinebettingid\.in
