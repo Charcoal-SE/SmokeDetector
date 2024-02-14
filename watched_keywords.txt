@@ -58566,5 +58566,4 @@
 1707893830	VLAZ	MicroGenesis
 1707894001	VLAZ	davitacols\/dataDisk(?#github reporitory)
 1707893747	Cow	mgtechsoft\.com
-1707894840	Cow	banuba\.com
 1707895407	Cow	cuttingedger\.com
