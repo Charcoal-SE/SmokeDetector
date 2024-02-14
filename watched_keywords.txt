@@ -58561,3 +58561,4 @@
 1707892878	VLAZ	Neotonics
 1707892915	VLAZ	supplementsme\.com
 1707893102	VLAZ	@neotonicsskin(?#medium.com)
+1707893484	VLAZ	pinnaclegenerators\.com
