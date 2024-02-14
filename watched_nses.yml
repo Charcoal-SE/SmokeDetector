@@ -2857,6 +2857,9 @@ items:
   - yichun.ns.cloudflare.com.
 - ns:
   - luciane.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
+  - luciane.ns.cloudflare.com.
   - oswald.ns.cloudflare.com.
 - ns:
   - luciane.ns.cloudflare.com.
