@@ -962,3 +962,4 @@ zoomcar India
 (?-i:^Jamel Cotte$)
 (?-i:^Stuart Sumasoft$)
 (?-i:^Saxenda weight loss$)
+(?-i:^fintechzoomes$)
