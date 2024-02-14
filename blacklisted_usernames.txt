@@ -961,3 +961,4 @@ zoomcar India
 (?-i:^Eva Anna$)
 (?-i:^Jamel Cotte$)
 (?-i:^Stuart Sumasoft$)
+(?-i:^Saxenda weight loss$)
