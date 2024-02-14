@@ -58562,3 +58562,4 @@
 1707892915	VLAZ	supplementsme\.com
 1707893102	VLAZ	@neotonicsskin(?#medium.com)
 1707893484	VLAZ	pinnaclegenerators\.com
+1707893654	VLAZ	pinnacle[\W_]*+generators(?!\.com(?<=pinnaclegenerators\.com))
