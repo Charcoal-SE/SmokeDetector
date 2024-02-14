@@ -58565,3 +58565,4 @@
 1707893654	VLAZ	pinnacle[\W_]*+generators(?!\.com(?<=pinnaclegenerators\.com))
 1707893830	VLAZ	MicroGenesis
 1707894001	VLAZ	davitacols\/dataDisk(?#github reporitory)
+1707893747	Cow	mgtechsoft\.com
