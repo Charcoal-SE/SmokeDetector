@@ -58630,3 +58630,4 @@
 1708004134	Jeff Schaller	iliteblue\.us
 1708004156	Jeff Schaller	ireceiptify\.com
 1708005383	Jeff Schaller	bridgecitycabs\.com
+1708005404	cigien	bridge[\W_]*+city[\W_]*+cabs(?!\.com(?<=bridgecitycabs\.com))
