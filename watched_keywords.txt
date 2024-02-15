@@ -58618,3 +58618,4 @@
 1707989157	Cow	mandptracker\.com
 1707989739	tripleee	rainandrainbow\.shop
 1707991217	tripleee	thecodingbus\.info
+1707991249	tripleee	thecodingbus(?!\.info)
