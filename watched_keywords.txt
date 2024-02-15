@@ -53252,7 +53252,6 @@
 1695786114	Jesse	scracked\.com
 1695800143	cigien	mastanfashion\.com
 1695802427	cigien	trustguarddigitalassetsrecovery(?:[\W_]*+(?:at[\W_]*+)?aol[\W_]*+(?:dot[\W_]*+)?com)?
-1695804806	Nick	craftyartapp\.com
 1695807581	cigien	vibes88\.lol
 1695807604	cigien	vibes88(?!\.lol)
 1695809898	cigien	forums\.hitched\.co\.uk
