@@ -58604,3 +58604,4 @@
 1707962946	Jeff Schaller	unduhperangkatku\.com
 1707963990	Nick	spyhackpro9(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1707975692	Nick	wellkinetics\.com\.my
+1707975895	Nick	nashealthcare\.ae
