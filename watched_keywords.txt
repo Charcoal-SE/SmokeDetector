@@ -58610,3 +58610,4 @@
 1707978926	Nick	meikle[\W_]*+motors(?!\.com\.au(?<=meiklemotors\.com\.au))
 1707980298	VLAZ	reflectwithin\.in
 1707980845	Nick	skillsquad\.io
+1707980915	Nick	skill[\W_]*+squad(?!\.io(?<=skillsquad\.io))
