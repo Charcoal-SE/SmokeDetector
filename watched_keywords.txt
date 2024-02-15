@@ -58631,3 +58631,4 @@
 1708004156	Jeff Schaller	ireceiptify\.com
 1708005383	Jeff Schaller	bridgecitycabs\.com
 1708005404	cigien	bridge[\W_]*+city[\W_]*+cabs(?!\.com(?<=bridgecitycabs\.com))
+1708005794	cigien	myshopprime\.com
