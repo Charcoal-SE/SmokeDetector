@@ -58626,3 +58626,4 @@
 1707994449	Jeff Schaller	getcid\.app
 1707994499	tripleee	(?-i:^Aryan Chaudhari$)
 1707995489	tripleee	weelliamdayer(?# github account involved in #drugs spam)
+1707998563	cigien	oudel(?!\.com)
