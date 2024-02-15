@@ -56277,7 +56277,6 @@
 1703339064	Jeff Schaller	sitewise\.team
 1703351024	Jesse	97win\.ltd
 1703351788	Makyen	97winltd
-1703350962	Jesse	yoofinder\.com
 1703376975	Nick	poyosurfclub\.com
 1703371062	Nick	Teleteg(?!\.com(?<=teleteg\.com))
 1703370961	Nick	teleteg\.com
