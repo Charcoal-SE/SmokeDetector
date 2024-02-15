@@ -1379,6 +1379,9 @@ items:
   - dahlia.ns.cloudflare.com.
   - vin.ns.cloudflare.com.
 - ns:
+  - daisy.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
   - dalary.ns.cloudflare.com.
   - pablo.ns.cloudflare.com.
 - ns:
