@@ -58633,3 +58633,4 @@
 1708005404	cigien	bridge[\W_]*+city[\W_]*+cabs(?!\.com(?<=bridgecitycabs\.com))
 1708005794	cigien	myshopprime\.com
 1708008397	cigien	modafinil\.pl
+1708008664	Jeff Schaller	cuttingline1\.wordpress
