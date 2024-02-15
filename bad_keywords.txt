@@ -2697,7 +2697,6 @@ vilitra
 sprintzeal
 digital[\W_]*+academy[\W_]*+360
 ignissta(?!\.com)
-modafinil
 cryptohopper(?!\.com)
 kirpal[\W_]*+export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
 adeena'?s[\W_]*+kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
