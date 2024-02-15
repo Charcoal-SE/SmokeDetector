@@ -58625,3 +58625,4 @@
 1707993935	tripleee	99exch(?![\W_]*+bet)
 1707994449	Jeff Schaller	getcid\.app
 1707994499	tripleee	(?-i:^Aryan Chaudhari$)
+1707995489	tripleee	weelliamdayer(?# github account involved in #drugs spam)
