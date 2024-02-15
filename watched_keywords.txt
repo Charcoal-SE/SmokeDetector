@@ -58622,3 +58622,4 @@
 1707992375	cigien	99exchbet\.com
 1707992403	cigien	99exch[\W_]*+bet(?!\.com(?<=99exchbet\.com))
 1707992423	cigien	fesbook\.daimend
+1707993935	tripleee	99exch(?![\W_]*+bet)
