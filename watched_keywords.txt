@@ -58620,3 +58620,4 @@
 1707991217	tripleee	thecodingbus\.info
 1707991249	tripleee	thecodingbus(?!\.info)
 1707992375	cigien	99exchbet\.com
+1707992403	cigien	99exch[\W_]*+bet(?!\.com(?<=99exchbet\.com))
