@@ -1046,6 +1046,9 @@ items:
   - carmelo.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
 - ns:
+  - carmelo.ns.cloudflare.com.
+  - kim.ns.cloudflare.com.
+- ns:
   - carol.ns.cloudflare.com.
   - chad.ns.cloudflare.com.
 - ns:
