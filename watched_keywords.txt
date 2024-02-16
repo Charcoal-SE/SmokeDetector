@@ -58679,3 +58679,4 @@
 1708082603	tripleee	super-bills\.com
 1708082901	tripleee	counterfeit[\W_]*+(?:banknotes|(?:(?:a?us|australian|canad(?:a|ian)) )?dollars|euros|money|(?:(?:british|gb|uk) )?pounds|emirati dirham)
 1708084064	Jeff Schaller	flipbooklets\.com
+1708084089	Jeff Schaller	flareonfashion\.blogspot
