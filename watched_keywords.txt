@@ -58656,3 +58656,4 @@
 1708067738	Nick	drumsforschools\.com
 1708067772	Nick	drums[\W_]*+for[\W_]*+schools(?!\.com(?<=drumsforschools\.com))
 1708069113	tripleee	Khilchand Bhangale
+1708069192	tripleee	genfxhghreleaser\.com
