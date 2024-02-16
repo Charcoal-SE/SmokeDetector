@@ -963,3 +963,4 @@ zoomcar India
 (?-i:^Stuart Sumasoft$)
 (?-i:^Saxenda weight loss$)
 (?-i:^fintechzoomes$)
+(?-i:^FundCanna$)
