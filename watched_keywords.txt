@@ -58669,3 +58669,4 @@
 1708076998	tripleee	(?-i:^istiak uddin$)
 1708077009	tripleee	dev-istiak-uddin\.pantheonsite\.io
 1708077220	tripleee	cloudzenix(?!\.(?:com|in))
+1708080568	Nick	1win\.net\.ua
