@@ -58647,3 +58647,4 @@
 1708060560	tripleee	(?-i:^Marcus Connon Evelyn$)
 1708060823	Nick	Embedded[\W_]*+Hash(?!\.in(?<=embeddedhash\.in))
 1708063171	Nick	stripesroofing\.com
+1708063941	Nick	7orangehospitals\.com
