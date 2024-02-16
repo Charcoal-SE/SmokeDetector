@@ -54622,7 +54622,6 @@
 1699183822	cigien	manmash\.consulting
 1699191066	Machavity	walczak\.it
 1699196138	Jeff Schaller	axishealth\.ca
-1699198894	Jeff Schaller	lumbarest\.com
 1699203701	Makyen	gary[\W_]*+mckinnon(?:[\W_]*+(?:at[\W_]*+)?technologist(?:[\W_]*+(?:dot[\W_]*+)?com)?)
 1699203729	Makyen	gary[\W_]*+mckinnon[\W_]*+recovery
 1699212436	Makyen	chandu[\W_]*+kanuri(?:[\W_]*+(?:unlimited|music)s?)*
