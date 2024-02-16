@@ -58695,3 +58695,4 @@
 1708102503	Jesse	immigrantinvest\.com
 1708112463	Makyen	(?-i:^Ukraine Tank$)
 1708113439	VLAZ	EvLFDEV_v7(?#t.me)
+1708113466	VLAZ	EVFLDEV(?#t.me)
