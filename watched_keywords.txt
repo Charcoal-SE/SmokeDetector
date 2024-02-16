@@ -52606,7 +52606,6 @@
 1694115341	Makyen	legit\.pk
 1694131031	Jesse	fullmatchreplay\.co
 1694131528	Makyen	fullmatchreplay(?!\.co)
-1694156729	Nick	embeddedhash\.in
 1694157908	cigien	tonosdellamadacanciones\.com
 1694157934	cigien	rakeshrajdevrajkot\.com
 1694157979	cigien	sonicmaniaplusapk\.com
