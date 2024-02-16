@@ -58644,3 +58644,4 @@
 1708058927	tripleee	dineroclaro\.es
 1708059295	Makyen	dineroclaro(?!\.es)
 1708059486	tripleee	wuchna\.com
+1708059908	tripleee	ai[\W_]*+automation[\W_]*+agency
