@@ -58650,3 +58650,4 @@
 1708063941	Nick	7orangehospitals\.com
 1708064031	Nick	7Orange[\W_]*+Hospital
 1708064214	VLAZ	cyberpunkers(?:[\W_]*+dot[\W_]*+org)?
+1708064881	VLAZ	cyberpunk[\W_]*+programmers?(?:[\W_]*+net)?
