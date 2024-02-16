@@ -2957,3 +2957,4 @@ coin[\W_]*+recovery[\W_]*+specialists(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[
 fredvalcyberghost(?:[\W_]*+(?:at?[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 modafinil(?!\.pl)
 fundcanna(?!\.com)(?<=(?-i:^FundCanna$))
+tech(?<!-tech)[\W_]*+center[\W_]*+(?:dot[\W_]*+)?com
