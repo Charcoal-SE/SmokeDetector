@@ -58667,3 +58667,4 @@
 1708076821	cigien	vasileffect\.blogspot
 1708076949	cigien	func\.live
 1708076998	tripleee	(?-i:^istiak uddin$)
+1708077009	tripleee	dev-istiak-uddin\.pantheonsite\.io
