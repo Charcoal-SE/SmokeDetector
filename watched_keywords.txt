@@ -58679,7 +58679,7 @@
 1708084089	Jeff Schaller	flareonfashion\.blogspot
 1708085833	tripleee	softura(?!\.com)
 1708017140	Cow	capcutpremium\.com
-1708087184	tripleee	(?<=^.{,72})iphones?
+1708087184	tripleee	iphone(?<=^.{0,72}iphone)s?
 1708087716	Cow	wildoakboutique\.com
 1708088050	cigien	modcarparking\.com
 1708088652	Jeff Schaller	swissairlinesflight\.com
