@@ -2247,7 +2247,7 @@ city_list = [
     "Indore",
     "Jaipur", "Jalandhar", "Jim Corbett",
     "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
-    "Kochi", "Kolkata", "Kota", "Kottayam",
+    "Kharghar", "Kochi", "Kolkata", "Kota", "Kottayam",
     "Lokhandwala", "Lonavala", "Lucknow", "Ludhiana",
     "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli", "Mayur Vihar",
     "Meerut", "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Multan", "Mulund", "Mumbai",
