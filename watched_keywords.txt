@@ -58679,3 +58679,4 @@
 1708084064	Jeff Schaller	flipbooklets\.com
 1708084089	Jeff Schaller	flareonfashion\.blogspot
 1708085833	tripleee	softura(?!\.com)
+1708086249	tripleee	^.{,72}\biphones?
