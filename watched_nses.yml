@@ -2898,6 +2898,9 @@ items:
   - malcolm.ns.cloudflare.com.
   - sureena.ns.cloudflare.com.
 - ns:
+  - marek.ns.cloudflare.com.
+  - nelci.ns.cloudflare.com.
+- ns:
   - maria.ns.cloudflare.com.
   - trey.ns.cloudflare.com.
 - ns:
