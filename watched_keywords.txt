@@ -58681,3 +58681,4 @@
 1708085833	tripleee	softura(?!\.com)
 1708017140	Cow	capcutpremium\.com
 1708087184	tripleee	(?<=^.{,72})iphones?
+1708087716	Cow	wildoakboutique\.com
