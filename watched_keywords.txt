@@ -47277,7 +47277,6 @@
 1676243321	Makyen	fortnitecheats\.z19\.web\.core\.windows\.net
 1676249365	Ethan	tiffany49983315
 1676250877	cocomac	live[\W_]*+reddit[\W_]*+tv
-1676265828	Makyen	medslike\.com
 1676265859	Makyen	a1gardeningsydney\.com\.au
 1676266176	Makyen	(?:plzcall2092320869)?katdenning(?:@gmail\.com)?
 1676270175	tripleee	pddon\.com
