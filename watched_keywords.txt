@@ -58655,3 +58655,4 @@
 1708065111	Nick	Dr[\W_]*+Khilchand[\W_]*+Bhangale(?!\.com(?<=drkhilchandbhangale\.com))
 1708067738	Nick	drumsforschools\.com
 1708067772	Nick	drums[\W_]*+for[\W_]*+schools(?!\.com(?<=drumsforschools\.com))
+1708069113	tripleee	Khilchand Bhangale
