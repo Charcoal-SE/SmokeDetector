@@ -58680,4 +58680,3 @@
 1708084089	Jeff Schaller	flareonfashion\.blogspot
 1708085833	tripleee	softura(?!\.com)
 1708017140	Cow	capcutpremium\.com
-1708087106	tripleee	(?<=^^.{,72})iphones?
