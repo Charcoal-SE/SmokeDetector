@@ -58652,3 +58652,4 @@
 1708064214	VLAZ	cyberpunkers(?:[\W_]*+dot[\W_]*+org)?
 1708064881	VLAZ	cyberpunk[\W_]*+programmers?(?:[\W_]*+net)?
 1708065063	Nick	drkhilchandbhangale\.com
+1708065111	Nick	Dr[\W_]*+Khilchand[\W_]*+Bhangale(?!\.com(?<=drkhilchandbhangale\.com))
