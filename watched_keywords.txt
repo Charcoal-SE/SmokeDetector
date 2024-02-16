@@ -58692,3 +58692,4 @@
 1708100702	VLAZ	hardeightscreenprinting\.com
 1708100724	VLAZ	hard[\W_]*+eight[\W_]*+screen[\W_]*+printing(?!\.com(?<=hardeightscreenprinting\.com))
 1708101164	VLAZ	thy-yow\.com
+1708102503	Jesse	immigrantinvest\.com
