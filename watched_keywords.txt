@@ -58690,3 +58690,4 @@
 1708098949	Jeff Schaller	2oddsbet\.com\.ng
 1708099748	cigien	treeswingstore\.com
 1708100702	VLAZ	hardeightscreenprinting\.com
+1708100724	VLAZ	hard[\W_]*+eight[\W_]*+screen[\W_]*+printing(?!\.com(?<=hardeightscreenprinting\.com))
