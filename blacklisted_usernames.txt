@@ -964,3 +964,4 @@ zoomcar India
 (?-i:^Saxenda weight loss$)
 (?-i:^fintechzoomes$)
 (?-i:^FundCanna$)
+(?-i:^Embedded Hash$)
