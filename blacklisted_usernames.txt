@@ -965,3 +965,4 @@ zoomcar India
 (?-i:^fintechzoomes$)
 (?-i:^FundCanna$)
 (?-i:^Embedded Hash$)
+(?-i:^Phone Email$)
