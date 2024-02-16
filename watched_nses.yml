@@ -3180,6 +3180,9 @@ items:
   - pablo.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
+  - pablo.ns.cloudflare.com.
+  - treasure.ns.cloudflare.com.
+- ns:
   - paityn.ns.cloudflare.com.
   - patryk.ns.cloudflare.com.
 - ns:
