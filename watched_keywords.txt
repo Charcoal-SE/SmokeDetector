@@ -58645,3 +58645,4 @@
 1708059486	tripleee	wuchna\.com
 1708059908	tripleee	ai[\W_]*+automation[\W_]*+agency
 1708060560	tripleee	(?-i:^Marcus Connon Evelyn$)
+1708060823	Nick	Embedded[\W_]*+Hash(?!\.in(?<=embeddedhash\.in))
