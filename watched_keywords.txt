@@ -58671,3 +58671,4 @@
 1708077220	tripleee	cloudzenix(?!\.(?:com|in))
 1708080568	Nick	1win\.net\.ua
 1708080759	Nick	usmanaliravian(?#blogspot.com)
+1708081137	tripleee	goodhousekeeping\.com
