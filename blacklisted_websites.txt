@@ -5382,3 +5382,4 @@ embeddedhash\.in
 medslike\.com
 workstatus\.io
 tech(?<!-tech)[\W_]*+center[\W_]*+(?:dot[\W_]*+)?com
+\boudel\.com
