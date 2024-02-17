@@ -58703,3 +58703,4 @@
 1708143346	cocomac	fernandesphotographer\.com
 1708149549	Nick	whitelabeldm\.com
 1708149600	Nick	White[\W_]*+Label[\W_]*+DM(?!\.com(?<=whitelabeldm\.com))
+1708151428	cocomac	naviforce\.com
