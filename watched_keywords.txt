@@ -58714,10 +58714,8 @@
 1708161116	Ryan M	kasif\.in
 1708161203	Cow	digianchal\.com
 1708162486	cigien	entropyclasses\.com
-1708170729	VLAZ	dotit\.io
 1708170851	Jeff Schaller	ahmetgunoglu\.com
 1708171115	Jeff Schaller	meacenter\.in
 1708169803	Cow	sga55sv\.com
-1708170135	Cow	dotit\.io
 1708170169	Cow	just\.edu\.ye
 1708170429	Cow	mindatpeace\.in
