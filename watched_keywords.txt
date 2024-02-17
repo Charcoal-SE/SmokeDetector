@@ -58702,3 +58702,4 @@
 1708141781	Nick	(?-i:gjtDL)(?#shorturl.at)
 1708143346	cocomac	fernandesphotographer\.com
 1708149549	Nick	whitelabeldm\.com
+1708149600	Nick	White[\W_]*+Label[\W_]*+DM(?!\.com(?<=whitelabeldm\.com))
