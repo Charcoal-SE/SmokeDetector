@@ -58618,7 +58618,6 @@
 1707994449	Jeff Schaller	getcid\.app
 1707994499	tripleee	(?-i:^Aryan Chaudhari$)
 1707995489	tripleee	weelliamdayer(?# github account involved in #drugs spam)
-1707998563	cigien	oudel(?!\.com)
 1708003411	Jeff Schaller	affotax\.com
 1708004104	Jeff Schaller	www-liteblue\.us
 1708004134	Jeff Schaller	iliteblue\.us
