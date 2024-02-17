@@ -58704,3 +58704,4 @@
 1708151428	cocomac	naviforce\.com
 1708152564	cigien	work[\W_]*+hours[\W_]*+calculator(?!\.net(?<=workhourscalculator\.net))
 1708153309	cocomac	pgsoftwares\.com
+1708153811	cocomac	i[\W_]{0,6}phone(?<=^.{0,72}i[\W_]{0,6}phone)s?
