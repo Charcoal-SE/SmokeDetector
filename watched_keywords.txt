@@ -58709,3 +58709,4 @@
 1708155237	cigien	essentialshoods\.us
 1708155450	cigien	essentials[\W_]*+hoodie
 1708155984	cocomac	abhasa\.in
+1708159990	Cow	thefontsgenerator\.com
