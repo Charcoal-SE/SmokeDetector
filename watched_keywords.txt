@@ -58734,3 +58734,4 @@
 1708209907	Vickel	lostrecoverymasters\.com
 1708215679	Vickel	trustwizardshackworld(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1708217351	Nick	trustwizards[\W_]*+hackwo(?:rld?)?
+1708239598	Jeff Schaller	farmingplan\.com
