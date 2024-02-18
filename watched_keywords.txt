@@ -58749,3 +58749,4 @@
 1708266947	Jeff Schaller	shortgo\.click
 1708271091	Jesse	salesforcemario\.com
 1708271203	Jesse	Lost[\W_]*+Recovery[\W_]*+Masters(?!\.com(?<=lostrecoverymasters\.com))
+1708272879	Jesse	(?-i:PYB6w0)(?#fiverr)
