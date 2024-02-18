@@ -58737,3 +58737,4 @@
 1708239598	Jeff Schaller	farmingplan\.com
 1708243914	cigien	spyrecovery\d*
 1708244142	cigien	xephas\.me
+1708247064	cigien	solartradesales\.co\.uk
