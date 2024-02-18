@@ -58732,3 +58732,4 @@
 1708198333	Vickel	thetyreshopharlow\.co\.uk
 1708203941	Vickel	service@vr-group\.io
 1708209907	Vickel	lostrecoverymasters\.com
+1708215679	Vickel	trustwizardshackworld(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
