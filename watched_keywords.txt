@@ -58754,3 +58754,4 @@
 1708274752	Vickel	metairdrop\.com
 1708275077	Vickel	Manta[\W_]*+New[\W_]*+Paradigm
 1708277622	cigien	apkwires\.com
+1708279586	Cow	tiktoksaverpro\.com
