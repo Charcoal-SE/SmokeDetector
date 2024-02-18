@@ -2959,3 +2959,4 @@ modafinil(?!\.pl)
 fundcanna(?!\.com)(?<=(?-i:^FundCanna$))
 \boudel(?!\.com)\b
 (?-i:Aa59ucCQxhw)(?#youtu.be)
+adrian[\W_]*+lamo[\W_]*+hacker(?:[\W_]*+tech)?
