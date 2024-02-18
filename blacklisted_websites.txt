@@ -5386,3 +5386,4 @@ tech(?<!-tech)[\W_]*+center[\W_]*+(?:dot[\W_]*+)?com
 stevewebservice\.com
 xephas\.me
 cupertino-icons\.web\.app
+thefontsgenerator\.com
