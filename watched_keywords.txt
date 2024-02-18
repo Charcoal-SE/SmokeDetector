@@ -58752,3 +58752,4 @@
 1708273458	cigien	fci\.aero
 1708273749	Jesse	Maye[\W_]*+Musk[\W_]*+Cyber[\W_]*+Security[\W_]*+Service
 1708274752	Vickel	metairdrop\.com
+1708275088	Vickel	Manta[\W_]*+New[\W_]*+Paradigm
