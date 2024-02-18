@@ -58748,3 +58748,4 @@
 1708266875	Jeff Schaller	shrt\.autos
 1708266904	Jeff Schaller	ysance-media\.prestashop\.com
 1708266926	Jeff Schaller	imeelee\.gouwu\.vip\.xunlei\.com
+1708266947	Jeff Schaller	shortgo\.click
