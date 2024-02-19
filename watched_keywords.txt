@@ -58774,3 +58774,4 @@
 1708340090	VLAZ	hostinghome\.in
 1708340112	VLAZ	hosting[\W_]*+home(?!\.in(?<=hostinghome\.in))
 1708340160	VLAZ	kalyanchart\.co\.in
+1708342237	tripleee	sangyoungjoo\.tistory\.com
