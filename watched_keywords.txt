@@ -58763,3 +58763,4 @@
 1708327007	Nick	nexivo\.co
 1708330412	cigien	hx-metalcasting\.com
 1708330648	Nick	Bank[\W_]*+Transfer[\W_]*+Hackers(?!\.su(?<=banktransferhackers\.su))
+1708330750	Nick	technokryon\.com
