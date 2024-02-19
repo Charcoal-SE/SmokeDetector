@@ -58786,4 +58786,3 @@
 1708356171	Jesse	palawanrentacar\.com
 1708356191	Jesse	carrentalpalawan\.com\.ph
 1708356221	Jesse	coolextremerentacar\.com
-1708356249	Jesse	Car[\W_]*+Rental[\W_]*+Palawan
