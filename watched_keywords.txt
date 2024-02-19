@@ -58794,3 +58794,4 @@
 1708365142	Jesse	Dynamic[\W_]*+Staffing[\W_]*+Services
 1708365741	Jesse	discoveringcs\.com
 1708365804	Jesse	sprintax\.com
+1708366336	Jesse	SkillShiksha?+(?!\.com(?<=skillshiksha\.com))
