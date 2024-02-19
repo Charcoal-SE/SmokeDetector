@@ -58500,7 +58500,6 @@
 1707815005	Cow	universalheatingsolutions\.co\.uk
 1707813663	Cow	makeupworldbd\.com
 1707816272	tripleee	sdreatech(?!\.com)
-1707816561	tripleee	cureus\.com
 1707817846	tripleee	addoncoupons\.com
 1707818967	VLAZ	reelush\.com
 1707819128	VLAZ	reelush(?!\.com)
