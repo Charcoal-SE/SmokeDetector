@@ -58768,3 +58768,4 @@
 1708334238	VLAZ	mt-db\.net
 1708334275	VLAZ	twsym\.com
 1708334300	VLAZ	mt-line\.com
+1708334589	Cow	airfarepolicies\.com
