@@ -582,6 +582,9 @@ items:
 - ns:
   - arch.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
+- ns:
+  - archer.ns.cloudflare.com.
+  - clara.ns.cloudflare.com.
 - comment: no 1-weight TPs 2023-04-28
   disable: true
   ns:
