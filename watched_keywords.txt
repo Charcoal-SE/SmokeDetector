@@ -58765,3 +58765,4 @@
 1708330648	Nick	Bank[\W_]*+Transfer[\W_]*+Hackers(?!\.su(?<=banktransferhackers\.su))
 1708330750	Nick	technokryon\.com
 1708332177	cigien	thestationerycompany\.pk
+1708334238	VLAZ	mt-db\.net
