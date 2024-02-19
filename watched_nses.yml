@@ -1998,9 +1998,6 @@ items:
   - gene.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
-  - gene.ns.cloudflare.com.
-  - robert.ns.cloudflare.com.
-- ns:
   - georgia.ns.cloudflare.com.
   - jose.ns.cloudflare.com.
 - ns:
