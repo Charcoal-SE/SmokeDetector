@@ -5389,3 +5389,4 @@ cupertino-icons\.web\.app
 thefontsgenerator\.com
 adeptclippingpath\.com
 cureus\.com
+gadgetsandaccessories\.com
