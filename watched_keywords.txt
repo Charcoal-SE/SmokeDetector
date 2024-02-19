@@ -58794,3 +58794,4 @@
 1708365091	Jesse	dss-hr\.com
 1708365142	Jesse	Dynamic[\W_]*+Staffing[\W_]*+Services
 1708365741	Jesse	discoveringcs\.com
+1708365804	Jesse	sprintax\.com
