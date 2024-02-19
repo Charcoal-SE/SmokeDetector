@@ -42045,7 +42045,6 @@
 1661512099	Cody Gray	shahgitlearning\.blogspot
 1661514560	Cody Gray	edulled\.com
 1661514961	Cody Gray	konark[\W_]*sun[\W_]*tea?mple
-1661515190	Jeff Schaller	templeofpermanenthealings
 1661516084	Cody Gray	xn--ergnzungenschweiz-sqb\.ch
 1661516106	Cody Gray	Diaetostat[\W_]*Schweiz
 1661525016	cigien	coinlize\.com
