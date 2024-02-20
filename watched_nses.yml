@@ -717,6 +717,9 @@ items:
   - bart.ns.cloudflare.com.
   - candy.ns.cloudflare.com.
 - ns:
+  - bart.ns.cloudflare.com.
+  - martha.ns.cloudflare.com.
+- ns:
   - bayan.ns.cloudflare.com.
   - keira.ns.cloudflare.com.
 - ns:
