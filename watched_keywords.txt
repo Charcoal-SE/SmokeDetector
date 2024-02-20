@@ -58811,3 +58811,4 @@
 1708407014	cocomac	nativeamericanbonechoker\.com
 1708407364	Makyen	tastyx\.in
 1708407695	Makyen	the-britannica\.com
+1708407716	Makyen	the-britannica(?!\.com(?<=the-britannica\.com))
