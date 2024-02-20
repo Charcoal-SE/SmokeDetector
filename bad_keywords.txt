@@ -2960,3 +2960,4 @@ fundcanna(?!\.com)(?<=(?-i:^FundCanna$))
 (?-i:Aa59ucCQxhw)(?#youtu.be)
 adrian[\W_]*+lamo[\W_]*+hacker(?:[\W_]*+tech)?
 4ftrfhi(?# rebrand.ly)
+sbobet\d*
