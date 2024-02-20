@@ -58851,3 +58851,4 @@
 1708436383	cigien	cubix\.co(?=\/blog\/)
 1708439558	cigien	avalonkbb\.co\.uk
 1708439658	Jeff Schaller	cashifylink\.com
+1708439852	General Grievance	belong\.net
