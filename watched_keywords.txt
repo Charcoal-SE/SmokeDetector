@@ -58835,3 +58835,4 @@
 1708418488	cigien	thegroomedstudio\.com
 1708422226	cigien	simcoepestx\.com
 1708422867	VLAZ	decorraza\.com
+1708422949	VLAZ	decor[\W_]*+raza(?!\.com(?<=decorraza\.com))
