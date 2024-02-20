@@ -2961,3 +2961,4 @@ fundcanna(?!\.com)(?<=(?-i:^FundCanna$))
 adrian[\W_]*+lamo[\W_]*+hacker(?:[\W_]*+tech)?
 4ftrfhi(?# rebrand.ly)
 sbobet\d*
+(?:link[\W_]*+)?liga[\W_]*+ciputra
