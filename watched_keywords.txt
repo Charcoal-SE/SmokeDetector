@@ -58866,3 +58866,4 @@
 1708455719	Vickel	vip[\W_]*+cleaning[\W_]*+company(?!\.com(?<=vipcleaningcompany\.com))
 1708457635	Jesse	macrovar\.com
 1708468662	Jesse	arlytrading\.nl
+1708468694	Jesse	ArlyToys
