@@ -2111,7 +2111,9 @@ items:
 - ip: 15.184.142.72
 - ip: 15.184.9.164
 - ip: 15.185.177.216
-- ip: 15.197.142.173
+- comment: disabled 2024-02-20; 53/327 TP but all but one of 1-weights are FP
+  disable: true
+  ip: 15.197.142.173
 - ip: 15.197.209.129
 - ip: 15.197.254.101
 - ip: 15.206.216.193
