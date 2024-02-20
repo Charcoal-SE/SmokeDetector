@@ -58837,3 +58837,4 @@
 1708422867	VLAZ	decorraza\.com
 1708422949	VLAZ	decor[\W_]*+raza(?!\.com(?<=decorraza\.com))
 1708423656	cigien	sbobet-168\.bet
+1708424162	cigien	innovify\.com
