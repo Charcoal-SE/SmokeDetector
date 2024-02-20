@@ -22499,7 +22499,7 @@
 1600240338	tripleee	dumps4free\.com
 1600240836	Mast	(?-i:^kirankumarpaita$)
 1600242147	Mast	cannabisgrowingcanada\.com
-1600244566	Ryan M	tech4allbymanishsaini(?# blogspot.com)
+1600244566	Ryan M	tech4allbymanishsaini\.blogspot
 1600245387	Ryan M	farhad-gallery\.com
 1600246285	Mast	tas\.edu\.vn
 1600247175	Mast	procurementresource\.com
@@ -53500,7 +53500,7 @@
 1695381042	Can O' Spam	mehmudalom726(?#@gmail.com)
 1696508233	cigien	hartfinancialrepairusa\.com
 1696515014	Can O' Spam	sprinterra\.com
-1696516070	Can O' Spam	tom00jerry(?#.blogspot.com)
+1696516070	Can O' Spam	tom00jerry\.blogspot
 1696521191	Can O' Spam	rankbrainmarketing\.link
 1696528520	Jeff Schaller	lotuscapital-invest\.com
 1696541865	Makyen	opchatgpt\.com
@@ -58404,7 +58404,8 @@
 1707609946	Vickel	tradingview-magical-keyboard-shortcuts\.com
 1707619493	Makyen	61550299165926(?#facebook.com)
 1707619785	Jeff Schaller	Texaco[\W_]*+Recovery
-1707624326	Nick	arcteche(?#blogspot.com)
+1707624326	Nick	arcteche\.blogspot
+1707624326	Nick	arcteche(?!\.blogspot)
 1707645257	rene	ios\.com
 1707646367	cigien	informationstime\.com
 1707648798	cigien	toyland\.toys
@@ -58658,7 +58659,7 @@
 1708077009	tripleee	dev-istiak-uddin\.pantheonsite\.io
 1708077220	tripleee	cloudzenix(?!\.(?:com|in))
 1708080568	Nick	1win\.net\.ua
-1708080759	Nick	usmanaliravian(?#blogspot.com)
+1708080759	Nick	usmanaliravian\.blogspot
 1708081137	tripleee	goodhousekeeping\.com
 1708081481	tripleee	northwindheating\.com
 1708081825	tripleee	aimlapi\.com
