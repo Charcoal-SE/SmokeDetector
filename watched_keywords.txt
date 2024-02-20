@@ -58863,3 +58863,4 @@
 1708455871	Vickel	usaexonacc\.com
 1708439852	General Grievance	belong\.net
 1708445608	Vickel	(?-i:wwGEhsj5)(?#cutt.ly)
+1708455719	Vickel	vip[\W_]*+cleaning[\W_]*+company(?!\.com(?<=vipcleaningcompany\.com))
