@@ -58829,3 +58829,4 @@
 1708412112	Nick	iphone[\W_]*+kings(?!\.net(?<=iphonekings\.net))
 1708414777	cigien	spotifypremiumapks\.org
 1708415358	Nick	sewamitra\.up\.gov\.in
+1708415407	Nick	Sewa[\W_]*+Mitra(?!\.up\.gov\.in(?<=sewamitra\.up\.gov\.in))
