@@ -58842,3 +58842,4 @@
 1708426459	Nick	bigencoders\.com
 1708428622	cigien	thepetethics\.com
 1708428653	cigien	the[\W_]*+pet[\W_]*+ethics(?!\.com(?<=thepetethics\.com))
+1708429050	tripleee	digi2\.agency
