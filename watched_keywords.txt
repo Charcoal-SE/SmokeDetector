@@ -48463,7 +48463,6 @@
 1679090075	Jeff Schaller	marnefesch\.co
 1679093652	Makyen	hackerbenj[\W_]*+009(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1679114206	Spevacus	ausguards\.com
-1679127373	Cody Gray	iid\.org\.in
 1679136027	Cody Gray	ajsadz
 1679137885	Cody Gray	ausgenericmeds\.com
 1679138123	Cody Gray	tuningcharts\.com
