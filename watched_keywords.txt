@@ -58814,3 +58814,4 @@
 1708407716	Makyen	the-britannica(?!\.com(?<=the-britannica\.com))
 1708407779	Makyen	sarjapur[\W_]*+road
 1708408206	Nick	wishglobalimmigrationservices\.com
+1708408263	Nick	wish[\W_]*+global[\W_]*+immigrations?
