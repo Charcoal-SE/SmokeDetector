@@ -58800,7 +58800,6 @@
 1708372999	Vickel	missbright\.in
 1708378902	Jeff Schaller	useviral\.pro
 1708378994	Jeff Schaller	UseviralPro
-1708381632	Nick	rohitazadmalik(?#blogspot.com)
 1708381653	Nick	front-end-developer(?#blogspot.in)
 1708387107	Nick	allcryptosoftware\.net
 1708387145	Nick	allcryptosoftware(?!\.net(?<=allcryptosoftware\.net))
