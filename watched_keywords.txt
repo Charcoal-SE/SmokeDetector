@@ -58827,3 +58827,4 @@
 1708411684	Nick	Seocompany2001
 1708411856	Nick	smuf\.in
 1708412035	Nick	iphonekings\.net
+1708412112	Nick	iphone[\W_]*+kings(?!\.net(?<=iphonekings\.net))
