@@ -5393,3 +5393,4 @@ skillshiksha\.com
 azurehowtos\.com
 iid\.org\.in
 \bengineer\.com
+cubix\.co(?!\/blog\/)
