@@ -595,7 +595,6 @@ prime[\W_]*+labs
 primal[\W_]*+growth
 slender[\W_]*+rx
 illuminati[\W_]*+(?:brotherhood|church|future|masons|society)\d*+(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|yahoo|hotmail)(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-sbobet
 primex
 stackt[\W_]*+360
 perlelux
