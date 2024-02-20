@@ -58804,3 +58804,4 @@
 1708387107	Nick	allcryptosoftware\.net
 1708387145	Nick	allcryptosoftware(?!\.net(?<=allcryptosoftware\.net))
 1708389754	Vickel	(?-i:DESAKB01)(?#tinyurl.com)
+1708399991	Makyen	rohitazadmalik\.blogspot
