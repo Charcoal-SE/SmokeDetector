@@ -58812,3 +58812,4 @@
 1708407364	Makyen	tastyx\.in
 1708407695	Makyen	the-britannica\.com
 1708407716	Makyen	the-britannica(?!\.com(?<=the-britannica\.com))
+1708407779	Makyen	sarjapur[\W_]*+road
