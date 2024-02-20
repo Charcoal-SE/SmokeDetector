@@ -58857,3 +58857,4 @@
 1708444015	cigien	drhewes\.com
 1708446386	Vickel	vrdigital\.com
 1708446476	Vickel	rpost\.com
+1708446786	Vickel	rpost(?!\.com(?<=rpost\.com))
