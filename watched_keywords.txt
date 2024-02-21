@@ -58904,3 +58904,4 @@
 1708529360	Jesse	taxlegit(?!\.com)
 1708529477	Jesse	Aquarius[\W_]*+Yacht(?!\.com(?<=aquarius-yacht\.com))
 1708529552	Jesse	Visual[\W_]*+CV[\W_]*+online
+1708530915	cigien	healeypackaging\.co\.uk
