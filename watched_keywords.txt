@@ -58891,3 +58891,4 @@
 1708513308	tripleee	asg[\W_]*+eye[\W_]*+hospital
 1708513418	tripleee	creator[\W_]*+backlinks
 1708514375	cigien	mdisite\.com
+1708516215	tripleee	justech24(?!\.com)(?<!(?-i:^justech24$))
