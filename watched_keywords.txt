@@ -58895,3 +58895,4 @@
 1708518674	Vickel	marknteladvisors\.com
 1708518787	Vickel	markntel[\W_]*+advisors(?!\.com(?<=marknteladvisors\.com))
 1708521546	cigien	networthhaven
+1708521857	cigien	mepcobillcheck\.pk
