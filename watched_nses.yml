@@ -3105,6 +3105,9 @@ items:
   - monika.ns.cloudflare.com.
   - sean.ns.cloudflare.com.
 - ns:
+  - monroe.ns.cloudflare.com.
+  - nash.ns.cloudflare.com.
+- ns:
   - morgan.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
