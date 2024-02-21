@@ -58893,3 +58893,4 @@
 1708516215	tripleee	justech24(?!\.com)(?<!(?-i:^justech24$))
 1708516394	tripleee	softura(?!\.com)(?<!(?-i:^Softura$))
 1708518674	Vickel	marknteladvisors\.com
+1708518787	Vickel	markntel[\W_]*+advisors(?!\.com(?<=marknteladvisors\.com))
