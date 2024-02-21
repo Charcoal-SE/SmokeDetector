@@ -58892,3 +58892,4 @@
 1708514375	cigien	mdisite\.com
 1708516215	tripleee	justech24(?!\.com)(?<!(?-i:^justech24$))
 1708516394	tripleee	softura(?!\.com)(?<!(?-i:^Softura$))
+1708518674	Vickel	marknteladvisors\.com
