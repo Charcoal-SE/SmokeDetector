@@ -58884,3 +58884,4 @@
 1708503598	tripleee	weddingmantras\.co\.in
 1708505417	VLAZ	176\.120\.64\.49
 1708505439	VLAZ	176\.120\.74\.5
+1708505918	cigien	marketsandata\.com
