@@ -51880,7 +51880,6 @@
 1692496322	Makyen	lisatheo225(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1692505204	Ryan M	gbwhatsappy\.com
 1692512304	Dragonrage	minmin\.co\.kr
-1692513963	Nisse Engström	fluttertutorialhub\.com
 1692521928	Dragonrage	apktoly\.com
 1692526415	Dragonrage	ucchire\.com
 1692544171	Jeff Schaller	mag-manager\.com
