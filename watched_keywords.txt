@@ -58887,3 +58887,4 @@
 1708507989	cigien	internettvwifi\.com
 1708508703	tripleee	(?-i:^Harry Disouza$)
 1708509424	tripleee	softura(?!\.com)(?<=(?-i:^Softura$))
+1708509850	tripleee	(?-i:^DC Kumawat$)
