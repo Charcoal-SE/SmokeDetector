@@ -58896,3 +58896,4 @@
 1708518787	Vickel	markntel[\W_]*+advisors(?!\.com(?<=marknteladvisors\.com))
 1708521546	cigien	networthhaven
 1708521857	cigien	mepcobillcheck\.pk
+1708523780	cigien	belgiumdriverservices\.be
