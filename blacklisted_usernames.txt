@@ -967,3 +967,4 @@ zoomcar India
 (?-i:^Embedded Hash$)
 (?-i:^Phone Email$)
 (?-i:^Karthik Balaji$)
+(?-i:^Softura$)
