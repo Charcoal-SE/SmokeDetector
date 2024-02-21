@@ -58886,7 +58886,6 @@
 1708505918	cigien	marketsandata\.com
 1708507989	cigien	internettvwifi\.com
 1708508703	tripleee	(?-i:^Harry Disouza$)
-1708509424	tripleee	softura(?!\.com)(?<=(?-i:^Softura$))
 1708509850	tripleee	(?-i:^DC Kumawat$)
 1708513308	tripleee	asg[\W_]*+eye[\W_]*+hospital
 1708513418	tripleee	creator[\W_]*+backlinks
