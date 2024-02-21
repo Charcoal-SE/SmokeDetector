@@ -58911,3 +58911,4 @@
 1708539165	Cow	globalizandotalentos\.com
 1708542321	Cow	techtipstation\.com
 1708544191	VLAZ	transportcatalog\.com
+1708544248	VLAZ	transportcatalog(?!\.com)
