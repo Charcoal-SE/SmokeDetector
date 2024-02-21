@@ -58891,3 +58891,4 @@
 1708513418	tripleee	creator[\W_]*+backlinks
 1708514375	cigien	mdisite\.com
 1708516215	tripleee	justech24(?!\.com)(?<!(?-i:^justech24$))
+1708516394	tripleee	softura(?!\.com)(?<!(?-i:^Softura$))
