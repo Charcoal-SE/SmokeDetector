@@ -2962,4 +2962,3 @@ adrian[\W_]*+lamo[\W_]*+hacker(?:[\W_]*+tech)?
 4ftrfhi(?# rebrand.ly)
 sbobet\d*
 (?:link[\W_]*+)?liga[\W_]*+ciputra
-NURS[\W_]*+FPX[\W_]*+40[\d]{2}(?:[\W_]*+Series)?(?:[\W_]*+Assessments?)?
