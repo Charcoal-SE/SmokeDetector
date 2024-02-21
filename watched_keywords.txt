@@ -58904,3 +58904,4 @@
 1708528458	cigien	sbs[\W_]*+digital(?!\.in(?<=sbsdigital\.in))
 1708528908	Jesse	qpmarketnetwork\.com
 1708529360	Jesse	taxlegit(?!\.com)
+1708529477	Jesse	Aquarius[\W_]*+Yacht(?!\.com(?<=aquarius-yacht\.com))
