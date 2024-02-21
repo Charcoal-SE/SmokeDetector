@@ -58912,3 +58912,4 @@
 1708544191	VLAZ	transportcatalog\.com
 1708544248	VLAZ	transportcatalog(?!\.com)
 1708548985	Jesse	crawlbase\.com
+1708549006	Jesse	crawlbase(?!\.com)
