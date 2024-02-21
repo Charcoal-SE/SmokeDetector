@@ -58875,3 +58875,4 @@
 1708496953	Nick	anythingdisplay\.com
 1708497019	Nick	monimaster\.com
 1708497364	tripleee	helpcargo\.com
+1708497570	tripleee	guriasoft\.com
