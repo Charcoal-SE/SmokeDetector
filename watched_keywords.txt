@@ -58666,7 +58666,6 @@
 1708082901	tripleee	counterfeit[\W_]*+(?:banknotes|(?:(?:a?us|australian|canad(?:a|ian)) )?dollars|euros|money|(?:(?:british|gb|uk) )?pounds|emirati dirham)
 1708084064	Jeff Schaller	flipbooklets\.com
 1708084089	Jeff Schaller	flareonfashion\.blogspot
-1708085833	tripleee	softura(?!\.com)
 1708017140	Cow	capcutpremium\.com
 1708087716	Cow	wildoakboutique\.com
 1708088050	cigien	modcarparking\.com
