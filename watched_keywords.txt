@@ -58901,3 +58901,4 @@
 1708526240	VLAZ	sbsdigital\.in
 1708528396	cigien	freeistockimage\.com
 1708528426	cigien	convato360\.com
+1708528458	cigien	sbs[\W_]*+digital(?!\.in(?<=sbsdigital\.in))
