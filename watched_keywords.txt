@@ -58913,4 +58913,3 @@
 1708544248	VLAZ	transportcatalog(?!\.com)
 1708548985	Jesse	crawlbase\.com
 1708549006	Jesse	crawlbase(?!\.com)
-1708550443	Jesse	NURS[\W_]*+FPX[\W_]*+4010(?:[\W_]*+Series)?(?:[\W_]*+Assessments?)?
