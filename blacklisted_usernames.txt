@@ -968,3 +968,4 @@ zoomcar India
 (?-i:^Phone Email$)
 (?-i:^Karthik Balaji$)
 (?-i:^Softura$)
+(?-i:^justech24$)
