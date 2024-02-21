@@ -58906,3 +58906,4 @@
 1708529552	Jesse	Visual[\W_]*+CV[\W_]*+online
 1708530915	cigien	healeypackaging\.co\.uk
 1708530936	cigien	healeypackaging(?!\.co\.uk)
+1708533867	cigien	vrdigital\.in
