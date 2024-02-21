@@ -724,9 +724,6 @@ items:
   - keira.ns.cloudflare.com.
 - ns:
   - bayan.ns.cloudflare.com.
-  - mia.ns.cloudflare.com.
-- ns:
-  - bayan.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
   - bayan.ns.cloudflare.com.
