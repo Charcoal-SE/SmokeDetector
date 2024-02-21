@@ -68,6 +68,9 @@ items:
   - amber.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
+  - anastasia.ns.cloudflare.com.
+  - damon.ns.cloudflare.com.
+- ns:
   - anirban.ns.cloudflare.com.
   - janet.ns.cloudflare.com.
 - ns:
