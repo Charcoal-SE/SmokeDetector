@@ -58939,3 +58939,4 @@
 1708589628	tripleee	loginmgo55
 1708590399	cigien	moderncopper\.com
 1708590420	cigien	modern[\W_]*+copper(?!\.com(?<=moderncopper\.com))
+1708590563	tripleee	dynoinsight\.com
