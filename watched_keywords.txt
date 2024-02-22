@@ -58951,3 +58951,4 @@
 1708603474	tripleee	brolly[\W_]*+academy(?!\.com(?<=brollyacademy\.com))
 1708604700	Cow	ponmankalhomes\.com
 1708606454	Jeff Schaller	profzambali\.com
+1708606955	cigien	cadhobby(?!\.com)
