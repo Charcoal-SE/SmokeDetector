@@ -58926,3 +58926,4 @@
 1708581529	tripleee	metal[\W_]*+supply\d*
 1708582610	tripleee	lumalabs\.ai
 1708582873	tripleee	cuzinha\.com
+1708583256	tripleee	social[\W_]*+theka(?!\.com(?<=socialtheka\.com))
