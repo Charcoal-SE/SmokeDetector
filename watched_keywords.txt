@@ -58949,3 +58949,4 @@
 1708602483	tripleee	mzmarts\.com
 1708602650	lyxal	allwaysgreenservices\.com
 1708603012	cigien	all[\W_]*+ways[\W_]*+green[\W_]*+services(?!\.com(?<=allwaysgreenservices\.com))
+1708603078	Cow	revolt\.chat
