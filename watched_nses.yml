@@ -1415,6 +1415,9 @@ items:
   - dale.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - damian.ns.cloudflare.com.
+  - rosa.ns.cloudflare.com.
+- ns:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
