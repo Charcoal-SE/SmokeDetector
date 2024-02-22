@@ -969,3 +969,4 @@ zoomcar India
 (?-i:^Karthik Balaji$)
 (?-i:^Softura$)
 (?-i:^justech24$)
+(?-i:^Vinsys)
