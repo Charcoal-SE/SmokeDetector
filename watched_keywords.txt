@@ -58928,3 +58928,4 @@
 1708582873	tripleee	cuzinha\.com
 1708583256	tripleee	social[\W_]*+theka(?!\.com(?<=socialtheka\.com))
 1708583300	Cow	canhcam\.au
+1708583487	Cow	wealthcarelawyer\.com
