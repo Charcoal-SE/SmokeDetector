@@ -37111,7 +37111,6 @@
 1648187974	Cody Gray	S[ıi]ra[\W_]*Bulucu
 1648189632	Cody Gray	(?-i:^Prestige Marigold$)
 1648189680	Cody Gray	brandingkan\.com
-1648189697	Cody Gray	essaycorp\.com
 1648189726	Cody Gray	EssayCorp(?!\.com(?<=essaycorp\.com))
 1648189781	Cody Gray	(?-i:^Brandingkan$)
 1648190149	Cody Gray	websi\.in
