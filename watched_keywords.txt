@@ -58175,7 +58175,6 @@
 1707146775	Jesse	money[\W_]*+fine[\W_]*+customer[\W_]*+care[\W_]*+number️
 1707146823	Jesse	casbasics\.com
 1707146890	Jesse	defos\.in
-1707147017	Jesse	FitSpresso
 1707147361	Jeff Schaller	hrzjob\.com
 1707147685	cigien	fitnesstips4you\.com
 1707153898	cigien	68gamecards\.bar
