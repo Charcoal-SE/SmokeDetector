@@ -58924,3 +58924,4 @@
 1708580780	Makyen	drvesnadentistrydubai\.ae
 1708580809	tripleee	itech[\W_]*+cloud[\W_]*+solution(?!\.com(?<=itechcloudsolution\.com))
 1708581529	tripleee	metal[\W_]*+supply\d*
+1708582610	tripleee	lumalabs\.ai
