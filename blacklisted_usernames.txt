@@ -970,3 +970,4 @@ zoomcar India
 (?-i:^Softura$)
 (?-i:^justech24$)
 (?-i:^Vinsys)
+(?-i:^srikanthbollu$)
