@@ -58977,3 +58977,4 @@
 1708656478	Makyen	umksupport\.nyc3\.cdn\.digitaloceanspaces\.com
 1708656498	Makyen	slotmania2024
 1708656519	Makyen	garansispesial
+1708656541	Makyen	prosescepat
