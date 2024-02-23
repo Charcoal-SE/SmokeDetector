@@ -2814,6 +2814,9 @@ items:
   - lilith.ns.cloudflare.com.
   - ray.ns.cloudflare.com.
 - ns:
+  - lilith.ns.cloudflare.com.
+  - rex.ns.cloudflare.com.
+- ns:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
