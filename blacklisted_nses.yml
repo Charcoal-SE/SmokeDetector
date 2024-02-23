@@ -483,6 +483,9 @@ items:
 - ns:
   - wns10.hostgator.in.
   - wns9.hostgator.in.
+- ns:
+  - ns1.md-in-62.hostgatorwebservers.com.
+  - ns2.md-in-62.hostgatorwebservers.com.
 - ns: allianzetechnologies.com.
 - ns: anujjindal.in.
 - ns:
