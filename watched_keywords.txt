@@ -59006,3 +59006,4 @@
 1708681946	tripleee	asusrouterguide\.com
 1708682711	tripleee	buypaintstrainers\.com
 1708682981	cigien	cfob\.org
+1708683012	cigien	cfob(?!\.org)
