@@ -971,3 +971,4 @@ zoomcar India
 (?-i:^justech24$)
 (?-i:^Vinsys)
 (?-i:^srikanthbollu$)
+(?-i:^Install Usd$)
