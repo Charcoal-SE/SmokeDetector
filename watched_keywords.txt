@@ -58981,3 +58981,4 @@
 1708656564	Nick	qodly\.com
 1708665208	Makyen	googiehost\.com
 1708665768	Makyen	aegiiz\.com
+1708665789	Makyen	aegiiz[\W_]*+technologies
