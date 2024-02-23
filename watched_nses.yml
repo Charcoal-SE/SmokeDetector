@@ -3596,6 +3596,7 @@ items:
 - ns:
   - ns1.md-in-65.hostgatorwebservers.com.
   - ns2.md-in-65.hostgatorwebservers.com.
+- ns: md-in-68.hostgatorwebservers.com
 - ns: md-in-80.hostgatorwebservers.com.
 - ns: md-in-88.hostgatorwebservers.com.
 - comment: no longer resolves 2020-08-27
