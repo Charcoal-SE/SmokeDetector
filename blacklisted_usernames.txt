@@ -972,3 +972,4 @@ zoomcar India
 (?-i:^Vinsys)
 (?-i:^srikanthbollu$)
 (?-i:^Install Usd$)
+(?-i:^Auto World International$)
