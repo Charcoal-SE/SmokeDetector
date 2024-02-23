@@ -59001,3 +59001,4 @@
 1708676923	VLAZ	ftebtech\.com
 1708679283	tripleee	honeywebsolutions\.com
 1708679337	tripleee	honey[\W_]*+web[\W_]*+solutions(?!\.com(?<=honeywebsolutions\.com))
+1708679662	tripleee	halleuk\.com
