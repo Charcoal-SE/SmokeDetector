@@ -58985,3 +58985,4 @@
 1708668743	tripleee	labourwala\.in
 1708669405	tripleee	install[\W_]*+usd(?!\.com(?<=installusd\.com))(?<!(?-i:^Install Usd$))
 1708669459	tripleee	(?-i:^Anuradha Gupta$)
+1708669477	tripleee	almabetter(?!\.com)
