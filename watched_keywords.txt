@@ -59029,3 +59029,4 @@
 1708705237	Jesse	sejarahindonesia\.web\.id
 1708708880	Makyen	(?-i:Topservices)(?#bit.ly)
 1708712867	Makyen	reminiapks\.org
+1708718077	Jeff Schaller	dnatherapysolutions\.com
