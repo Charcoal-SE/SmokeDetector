@@ -3714,6 +3714,9 @@ items:
   - cns6007.bigrock.com.
   - cns6008.bigrock.com.
 - ns:
+  - sns1.bigrock.com.
+  - sns2.bigrock.com.
+- ns:
   - sns3.bigrock.com.
   - sns4.bigrock.com.
 - ns:
