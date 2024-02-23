@@ -974,3 +974,4 @@ zoomcar India
 (?-i:^Install Usd$)
 (?-i:^Auto World International$)
 (?-i:^Dr\. Gorav Gupta$)
+(?-i:^Jameson scott$)

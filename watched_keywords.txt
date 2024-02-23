@@ -56979,7 +56979,6 @@
 1704880440	cigien	rectopages
 1704881262	cigien	alarab[\W_]*+transport(?!\.com(?<=alarabtransport\.com))
 1704881509	tripleee	educative\.io
-1704881624	tripleee	(?-i:^Jameson scott$)
 1704882781	tripleee	godaddysites\.com
 1704883387	tripleee	kphmedia\.in
 1704884820	cigien	ecompapi\.com\.au
