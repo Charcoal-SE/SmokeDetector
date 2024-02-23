@@ -59026,3 +59026,4 @@
 1708704972	Jesse	websolutioncode(?!\.com)
 1708705126	Jesse	43[\W_]*+Thu[\W_]*+Khoa[\W_]*+Huan(?#address)
 1708705202	Jesse	fenomenaalam\.web\.id
+1708705237	Jesse	sejarahindonesia\.web\.id
