@@ -58983,3 +58983,4 @@
 1708665789	Makyen	aegiiz[\W_]*+technologies
 1708667839	tripleee	thelivertransplant\.com
 1708668743	tripleee	labourwala\.in
+1708669405	tripleee	install[\W_]*+usd(?!\.com(?<=installusd\.com))(?<!(?-i:^Install Usd$))
