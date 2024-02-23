@@ -58820,7 +58820,6 @@
 1708415407	Nick	Sewa[\W_]*+Mitra(?!\.up\.gov\.in(?<=sewamitra\.up\.gov\.in))
 1708415665	Nick	cubvhs\.com
 1708415748	Nick	sewamitra\.up@gmail\.com
-1708418455	cigien	myrtlebeastocr\.com
 1708418488	cigien	thegroomedstudio\.com
 1708422226	cigien	simcoepestx\.com
 1708422867	VLAZ	decorraza\.com
