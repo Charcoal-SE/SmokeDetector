@@ -59002,3 +59002,4 @@
 1708679337	tripleee	honey[\W_]*+web[\W_]*+solutions(?!\.com(?<=honeywebsolutions\.com))
 1708679662	tripleee	halleuk\.com
 1708681689	cigien	splashnbounce\.com
+1708681710	cigien	splash[\W_]*+n[\W_]*+bounce(?!\.com(?<=splashnbounce\.com))
