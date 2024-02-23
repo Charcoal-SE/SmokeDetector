@@ -2668,6 +2668,9 @@ items:
   - vern.ns.cloudflare.com.
 - ns:
   - kurt.ns.cloudflare.com.
+  - noor.ns.cloudflare.com.
+- ns:
+  - kurt.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
   - kurt.ns.cloudflare.com.
