@@ -58851,7 +58851,6 @@
 1708439852	General Grievance	belong\.net
 1708445608	Vickel	(?-i:wwGEhsj5)(?#cutt.ly)
 1708455719	Vickel	vip[\W_]*+cleaning[\W_]*+company(?!\.com(?<=vipcleaningcompany\.com))
-1708457635	Jesse	macrovar\.com
 1708468662	Jesse	arlytrading\.nl
 1708468694	Jesse	ArlyToys
 1708473174	Jeff Schaller	lifexponline\.com
