@@ -59050,3 +59050,4 @@
 1708779679	Jeff Schaller	aurorastore\.org
 1708784474	Vickel	grafixxsea(?:@gmail\.com)?
 1708784554	Jeff Schaller	oneapp\.today
+1708784617	Jesse	pypi\.org/project/poetry-plugin-lambda-build/
