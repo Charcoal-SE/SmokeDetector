@@ -59053,3 +59053,4 @@
 1708784617	Jesse	pypi\.org/project/poetry-plugin-lambda-build/
 1708782443	Cow	theindustreebar\.com\.au
 1708784837	Jesse	developerflix\.com
+1708785217	Jesse	advantage\.institute
