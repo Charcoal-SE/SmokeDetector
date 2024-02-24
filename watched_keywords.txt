@@ -59062,3 +59062,4 @@
 1708789474	Makyen	bright[\W_]*+search[\W_]*+solutions(?!\.com(?<=brightsearchsolutions\.com))
 1708792587	Makyen	blog\.matthaa\.de
 1708794981	Mast	skima\.ai
+1708799823	Makyen	pi-dubai\.com
