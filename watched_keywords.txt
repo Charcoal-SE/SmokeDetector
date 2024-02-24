@@ -59047,3 +59047,4 @@
 1708777903	Jeff Schaller	webmagnethub\.com
 1708779621	Jeff Schaller	deltaexecutor\.io
 1708779646	Jeff Schaller	krnl\.vip
+1708779679	Jeff Schaller	aurorastore\.org
