@@ -59057,3 +59057,4 @@
 1708785289	Jesse	Advantage[\W_]*+Institute(?!(?<=advantage\.institute))
 1708785379	Jesse	plcrepairbd\.com
 1708785439	Jesse	eyecomtec\.com
+1708785507	Jesse	followstream\.live
