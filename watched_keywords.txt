@@ -59054,3 +59054,4 @@
 1708782443	Cow	theindustreebar\.com\.au
 1708784837	Jesse	developerflix\.com
 1708785217	Jesse	advantage\.institute
+1708785289	Jesse	Advantage[\W_]*+Institute(?!(?<=advantage\.institute))
