@@ -59038,3 +59038,4 @@
 1708758946	Cow	smartseller\.in
 1708759140	cigien	smart[\W_]*+seller(?!\.in(?<=smartseller\.in))
 1708758130	Cow	thcvapesstore\.co\.uk
+1708758300	Cow	bluelinks\.agency
