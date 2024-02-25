@@ -54137,7 +54137,6 @@
 1698434321	Spevacus	creddio\.com
 1698438433	Jeff Schaller	orgcostsavings\.com
 1698445521	Vickel	summitdental\.ch
-1698445243	Vickel	allegiant[\W_]*+pro[\W_]*+hacker
 1698373966	Nick	Taraftarium24
 1698352866	Vickel	lunchtimeprediction\.com
 1698352076	Vickel	uk49predictions\.com

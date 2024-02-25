@@ -2965,3 +2965,4 @@ sbobet\d*
 NURS[\W_]*+FPX[\W_]*+4\d{3}(?:[\W_]*+Series)?(?:[\W_]*+Assessments?)?
 FitSpresso
 skin[\W_]*+tag[\W_]*+remover(?<!(?:utopia|radiant[\W_]*+cutis)[\W_]*+skin[\W_]*+tag[\W_]*+remover)
+allegiant[\W_]*+pro[\W_]*+hacker
