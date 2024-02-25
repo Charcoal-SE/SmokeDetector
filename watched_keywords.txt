@@ -59072,3 +59072,4 @@
 1708865037	Jeff Schaller	digiendeavor\.com
 1708868295	Jeff Schaller	cashyourcaruae\.com
 1708869716	Makyen	credit[\W_]*+spark[\W_]*+loan
+1708870824	Makyen	jnut321@gmail\.com
