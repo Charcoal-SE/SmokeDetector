@@ -59074,3 +59074,4 @@
 1708869716	Makyen	credit[\W_]*+spark[\W_]*+loan
 1708870824	Makyen	jnut321@gmail\.com
 1708870845	Makyen	jeannette[\W_]*+irene[\W_]*+sauve
+1708871049	Makyen	devsarticles\.com
