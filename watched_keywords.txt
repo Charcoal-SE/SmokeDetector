@@ -59077,3 +59077,4 @@
 1708871049	Makyen	devsarticles\.com
 1708871639	Makyen	979[\W_]*+8864033456(?#ISBN)
 1708871846	Makyen	nflutter\.github\.io
+1708871953	Makyen	ehtishamali\.net
