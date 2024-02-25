@@ -59079,3 +59079,4 @@
 1708871846	Makyen	nflutter\.github\.io
 1708871953	Makyen	ehtishamali\.net
 1708872335	Makyen	jenzflare\.de
+1708872510	Makyen	(?-i:^Syys Sus6s7$)
