@@ -74,6 +74,9 @@ items:
   - anirban.ns.cloudflare.com.
   - janet.ns.cloudflare.com.
 - ns:
+  - anita.ns.cloudflare.com.
+  - rob.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
