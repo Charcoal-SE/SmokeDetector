@@ -59098,3 +59098,4 @@
 1708932475	Nick	prismengg\.com
 1708932962	cigien	prismengg(?!\.com)
 1708935356	tripleee	paysquare(?!\.com)(?<!(?-i:^paysquare$))
+1708937215	cigien	amitsellsrealestate\.com
