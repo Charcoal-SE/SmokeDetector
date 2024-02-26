@@ -1116,6 +1116,9 @@ items:
   - yew.ns.cloudflare.com.
 - ns:
   - celeste.ns.cloudflare.com.
+  - elmo.ns.cloudflare.com.
+- ns:
+  - celeste.ns.cloudflare.com.
   - langston.ns.cloudflare.com.
 - ns:
   - cesar.ns.cloudflare.com.
