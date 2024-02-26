@@ -59105,3 +59105,4 @@
 1708942962	cigien	waayupay\.com
 1708943827	Nick	electricianbali\.com
 1708943860	Nick	electrician[\W_]*+bali(?!\.com)
+1708944987	tripleee	ixsight\.com
