@@ -57899,7 +57899,6 @@
 1706603111	cigien	grandslots88gacor\.com
 1706603135	cigien	grandslot88
 1706604174	cigien	paysquare\.com
-1706604195	cigien	paysquare(?!\.com)
 1706606113	VLAZ	pattistars\.xyz
 1706606414	VLAZ	livehidevelopers\.com
 1706606437	VLAZ	livehi[\W_]*+developers(?!\.com(?<=livehidevelopers\.com))
