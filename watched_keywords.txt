@@ -59106,3 +59106,4 @@
 1708944987	tripleee	ixsight\.com
 1708946831	tripleee	(?-i:^smith morales$)
 1708946895	tripleee	bath[\W_]*+bomb[\W_]*packag(?:es?|ing)
+1708946938	cigien	electrician[\W_]*+bali(?!\.com(?<=electricianbali\.com))
