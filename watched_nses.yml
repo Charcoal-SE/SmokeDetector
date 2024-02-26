@@ -1356,6 +1356,9 @@ items:
   - nadia.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
+  - priscilla.ns.cloudflare.com.
+- ns:
+  - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
