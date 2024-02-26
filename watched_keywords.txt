@@ -59101,3 +59101,4 @@
 1708937215	cigien	amitsellsrealestate\.com
 1708937235	cigien	amit[\W_]*+sells[\W_]*+real[\W_]*+estate(?!\.com(?<=amitsellsrealestate\.com))
 1708939552	tripleee	virtualmetric\.com
+1708941960	tripleee	onlyspacetime\.com
