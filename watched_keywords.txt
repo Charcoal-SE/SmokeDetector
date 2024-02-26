@@ -59109,3 +59109,4 @@
 1708946938	cigien	electrician[\W_]*+bali(?!\.com(?<=electricianbali\.com))
 1708948017	VLAZ	validitdumps\.com
 1708949456	VLAZ	absoluteairflow\.com
+1708949717	VLAZ	grownowindigital\.com
