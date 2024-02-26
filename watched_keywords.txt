@@ -52904,7 +52904,6 @@
 1694984484	cigien	javadzone\.com
 1694984969	Makyen	javadzone(?!\.com)
 1695007012	Jesse	chuxueyun\.com
-1695019685	Dragonrage	phone\.email
 1695019705	Dragonrage	cn-susmed\.com
 1695019864	Dragonrage	appinnovix\.com
 1695019994	Dragonrage	suara77\.xn--6frz82g
