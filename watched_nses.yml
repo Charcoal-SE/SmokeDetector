@@ -420,6 +420,9 @@ items:
   - kami.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
+  - lucy.ns.cloudflare.com.
+- ns:
+  - amit.ns.cloudflare.com.
   - olga.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
