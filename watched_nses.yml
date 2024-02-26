@@ -3914,7 +3914,6 @@ items:
 - ns: chinahoster.com.
 - ns: niagahoster.com.
 - ns: megabytesserver.com.
-- ns: cms500.com.
 - ns: servers800.com.
 - comment: 2021-04-14 NXDOMAIN
   disable: true
