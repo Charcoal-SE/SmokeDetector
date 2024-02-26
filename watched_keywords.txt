@@ -59100,3 +59100,4 @@
 1708932276	VLAZ	obatperkasabogor\.com
 1708932315	VLAZ	obatperangsangbogormurah\.blogspot
 1708932475	Nick	prismengg\.com
+1708932962	cigien	prismengg(?!\.com)
