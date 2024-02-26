@@ -59111,3 +59111,4 @@
 1708949456	VLAZ	absoluteairflow\.com
 1708949717	VLAZ	grownowindigital\.com
 1708949741	VLAZ	readersquad\.com
+1708950126	VLAZ	junkrecolet\.com
