@@ -2968,3 +2968,4 @@ skin[\W_]*+tag[\W_]*+remover(?<!(?:utopia|radiant[\W_]*+cutis)[\W_]*+skin[\W_]*+
 allegiant[\W_]*+pro[\W_]*+hacker
 Credit[\W_]*+SPARK[\W_]*+(?:loan[\W_]*+)?(?:app[\W_]*+)?(?:c[\W_]*+u[\W_]*+s[\W_]*+T[\W_]*+o[\W_]*+m[\W_]*+e[\W_]*+r)?[\W_]*+care(?:[\W_]*+helpline)?(?:[\W_]*+service)?(?:[\W_]*+number)?
 chinadivision(?!\.com)
+If I could give them zero stars I would
