@@ -978,3 +978,4 @@ zoomcar India
 (?-i:^paysquare$)
 (?-i:^Syys Sus6s7$)
 (?-i:^Bridge City Cabs$)
+(?-i:^Rishabh Keshri$)
