@@ -59157,3 +59157,4 @@
 1709032877	Nick	shirley[\W_]*+monteiro
 1709033523	cigien	blrtools\.com
 1709033545	VLAZ	dumpsvilla\.com
+1709034184	Jeff Schaller	shopkiry\.com
