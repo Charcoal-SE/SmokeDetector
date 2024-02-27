@@ -461,7 +461,6 @@ items:
 - ns: mycyberhosting.com.
 - ns: thesecurededicatedserver.com.
 - ns: cloudnstools.com.
-- ns: supremedns.com.
 - ns:
   - cns3999.hostgator.in.
   - cns4000.hostgator.in.
