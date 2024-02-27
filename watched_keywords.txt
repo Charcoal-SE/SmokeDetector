@@ -59152,3 +59152,4 @@
 1709031075	Jeff Schaller	accessindustrial\.com
 1709032543	Nick	wortal\.co
 1709032583	Nick	Wortal(?!\.co)
+1709032787	Nick	myassuredhomenursing\.com
