@@ -59138,3 +59138,4 @@
 1709019577	Nick	unitedpro\.io
 1709019605	Nick	united[\W_]*+pro(?!\.io)
 1709020171	Nick	bungeefitnessnearme\.com
+1709020204	Nick	jollibeemenuprices\.com
