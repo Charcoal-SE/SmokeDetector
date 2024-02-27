@@ -59187,4 +59187,3 @@
 1709071870	Nick	aluminumglassrailings\.ca
 1709071924	Nick	experttutors\.info
 1709071972	General Grievance	frugalsheaven\.com
-1709074776	Jesse	A1[\W_]*+Wizard[\W_]*+Hackers?
