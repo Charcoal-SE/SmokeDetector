@@ -59137,3 +59137,4 @@
 1709017831	Nick	(?-i:zjkal)(?#github.com)
 1709019577	Nick	unitedpro\.io
 1709019605	Nick	united[\W_]*+pro(?!\.io)
+1709020171	Nick	bungeefitnessnearme\.com
