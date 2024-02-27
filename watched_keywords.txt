@@ -59130,3 +59130,4 @@
 1709000276	Nick	getbacklinks\.online
 1709011139	Spevacus	alignminds\.com
 1709014158	Makyen	alignminds(?!\.com)
+1709014296	Makyen	joint[\W_]*+plus[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|i|ies)|reviews|\d++|[\da-f]{5,}+)s?)*
