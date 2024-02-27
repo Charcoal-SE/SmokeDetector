@@ -59173,3 +59173,4 @@
 1709049388	Jesse	talkheap\.com
 1709049447	Jesse	gigde\.com
 1709049468	Jesse	amevape\.com
+1709049489	Jesse	amevape(?!\.com)
