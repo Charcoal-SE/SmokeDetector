@@ -59133,3 +59133,4 @@
 1709014296	Makyen	joint[\W_]*+plus[\W_]*+cbd(?:[\W_]*+(?:gumm(?:y|i|ies)|reviews|\d++|[\da-f]{5,}+)s?)*
 1709015233	Makyen	e2developers\.com
 1709016811	Nick	paybima\.com
+1709017230	VLAZ	armasight\.com
