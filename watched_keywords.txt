@@ -59182,3 +59182,4 @@
 1709054464	Makyen	unitedyoungrefugees(?:@gmail\.com)?
 1709054508	Makyen	givengain\.com
 1709056375	Makyen	buysmm[\W_]*+it(?!\.com(?<=buysmmit\.com))
+1709059238	Cow	freestun\.net
