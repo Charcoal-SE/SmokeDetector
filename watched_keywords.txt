@@ -59181,3 +59181,4 @@
 1709053630	VLAZ	Honista(?:[\W_]*+APK)?
 1709054464	Makyen	unitedyoungrefugees(?:@gmail\.com)?
 1709054508	Makyen	givengain\.com
+1709056375	Makyen	buysmm[\W_]*+it(?!\.com(?<=buysmmit\.com))
