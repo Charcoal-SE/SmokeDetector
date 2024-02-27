@@ -59153,3 +59153,4 @@
 1709032543	Nick	wortal\.co
 1709032583	Nick	Wortal(?!\.co)
 1709032787	Nick	myassuredhomenursing\.com
+1709032836	cigien	selnox\.com
