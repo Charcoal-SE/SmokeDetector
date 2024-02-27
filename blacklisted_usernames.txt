@@ -979,3 +979,4 @@ zoomcar India
 (?-i:^Syys Sus6s7$)
 (?-i:^Bridge City Cabs$)
 (?-i:^Rishabh Keshri$)
+(?-i:^Adya Kalhari$)
