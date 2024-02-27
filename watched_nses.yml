@@ -933,6 +933,9 @@ items:
   - earl.ns.cloudflare.com.
 - ns:
   - braelyn.ns.cloudflare.com.
+  - grant.ns.cloudflare.com.
+- ns:
+  - braelyn.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
