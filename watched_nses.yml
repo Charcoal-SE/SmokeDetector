@@ -3374,6 +3374,9 @@ items:
   - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
+  - skip.ns.cloudflare.com.
+  - zara.ns.cloudflare.com.
+- ns:
   - sloan.ns.cloudflare.com.
   - tate.ns.cloudflare.com.
 - ns:
