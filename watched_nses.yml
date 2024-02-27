@@ -2223,6 +2223,9 @@ items:
   - hope.ns.cloudflare.com.
   - neil.ns.cloudflare.com.
 - ns:
+  - houston.ns.cloudflare.com.
+  - maxine.ns.cloudflare.com.
+- ns:
   - howard.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
 - ns:
