@@ -244,6 +244,9 @@ items:
   - earl.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
 - ns:
+  - earl.ns.cloudflare.com.
+  - val.ns.cloudflare.com.
+- ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
