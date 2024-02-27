@@ -59127,3 +59127,4 @@
 1708989617	Nick	skyblogers\.com
 1708989687	Nick	mantledao\.top
 1708996268	Nick	scommerce-mage\.com
+1709000074	Nick	mangools(?!\.com)
