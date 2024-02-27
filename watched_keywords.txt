@@ -59146,3 +59146,4 @@
 1709028433	cigien	tnjobmart\.in
 1709028710	cigien	masterbatchin\.com
 1709028731	cigien	masterbatchin(?!\.com)
+1709028762	cigien	dearlotteryresultstoday\.in
