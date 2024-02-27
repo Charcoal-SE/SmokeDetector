@@ -59154,3 +59154,4 @@
 1709032583	Nick	Wortal(?!\.co)
 1709032787	Nick	myassuredhomenursing\.com
 1709032836	cigien	selnox\.com
+1709032877	Nick	shirley[\W_]*+monteiro
