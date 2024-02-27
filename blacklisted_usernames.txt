@@ -976,3 +976,4 @@ zoomcar India
 (?-i:^Dr\. Gorav Gupta$)
 (?-i:^Jameson scott$)
 (?-i:^paysquare$)
+(?-i:^Syys Sus6s7$)

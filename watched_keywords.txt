@@ -59070,7 +59070,6 @@
 1708871846	Makyen	nflutter\.github\.io
 1708871953	Makyen	ehtishamali\.net
 1708872335	Makyen	jenzflare\.de
-1708872510	Makyen	(?-i:^Syys Sus6s7$)
 1708876472	Jesse	i-win32diskimager\.com
 1708877018	Jesse	lihtroompre\.com
 1708883479	Vickel	hotstream10\.com
