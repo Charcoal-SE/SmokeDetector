@@ -59170,3 +59170,4 @@
 1709048790	Jesse	fermatstheory\.wordpress\.com
 1709049016	Jesse	giffywalls\.com
 1709049048	Jesse	giffywalls(?!\.com)
+1709049388	Jesse	talkheap\.com
