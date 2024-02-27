@@ -59141,7 +59141,6 @@
 1709020518	Nick	unitedexchange\.in
 1709025849	cigien	iirm\.ac\.in
 1709025879	cigien	iirm(?!\.ac\.in)
-1709027952	cigien	expoundcoderz\.com
 1709028433	cigien	tnjobmart\.in
 1709028710	cigien	masterbatchin\.com
 1709028731	cigien	masterbatchin(?!\.com)
