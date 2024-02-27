@@ -1464,6 +1464,9 @@ items:
   - sue.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
+  - garrett.ns.cloudflare.com.
+- ns:
+  - dana.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
