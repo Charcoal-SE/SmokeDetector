@@ -59184,3 +59184,4 @@
 1709056375	Makyen	buysmm[\W_]*+it(?!\.com(?<=buysmmit\.com))
 1709061106	Spevacus	by-lisa\.nl
 1709063310	cigien	familytexas\.com
+1709071870	Nick	aluminumglassrailings\.ca
