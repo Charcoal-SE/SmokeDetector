@@ -977,3 +977,4 @@ zoomcar India
 (?-i:^Jameson scott$)
 (?-i:^paysquare$)
 (?-i:^Syys Sus6s7$)
+(?-i:^Bridge City Cabs$)
