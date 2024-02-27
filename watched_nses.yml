@@ -224,6 +224,9 @@ items:
   - alan.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
 - ns:
+  - alan.ns.cloudflare.com.
+  - sureena.ns.cloudflare.com.
+- ns:
   - alaric.ns.cloudflare.com.
   - aria.ns.cloudflare.com.
 - ns:
