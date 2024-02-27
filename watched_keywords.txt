@@ -59150,3 +59150,4 @@
 1709028995	cigien	bilkish\.com
 1709029017	cigien	bilkish(?!\.com)
 1709031075	Jeff Schaller	accessindustrial\.com
+1709032543	Nick	wortal\.co
