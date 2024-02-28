@@ -59218,3 +59218,4 @@
 1709134194	Jesse	axis[\W_]*+logistics?(?:[\W_]*+services?+(?!\.com(?<=axislogisticservices\.com)))?
 1709140410	Jesse	spark-sports\.co\.uk
 1709140674	Makyen	spark[\W_]*+sports(?!\.co\.uk(?<=spark-sports\.co\.uk))
+1709141374	cigien	apkroms(?!\.net)
