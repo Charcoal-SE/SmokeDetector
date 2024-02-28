@@ -59215,4 +59215,3 @@
 1709131739	tripleee	pmkisanyojanastatus\.com
 1709132202	General Grievance	smm\.royalmedia\.in
 1709133650	Jesse	3dlifestyle\.pk
-1709134104	Jesse	axis[\W_]*+logistics?(?:[\W_]*+services?+(?!\.com(?<=axislogisticservices\.com)))?+
