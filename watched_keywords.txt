@@ -19497,7 +19497,6 @@
 1589983712	Machavity	3dprintbeginner\.com
 1589984030	Makyen	(?-i:fnHjl\.jpg)
 1589984060	Makyen	guys_software
-1589984138	Makyen	connect[\W_]*+infosoft(?!\.com(?<=connectinfosoft\.com))
 1589990217	Machavity	sarkarijob\.cc
 1590003653	Makyen	digitalsupreme\.in
 1590003750	Makyen	digital[\W_]*+supreme(?!\.in(?<=digitalsupreme\.in))
