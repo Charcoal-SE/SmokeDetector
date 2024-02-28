@@ -59224,3 +59224,4 @@
 1709145745	Makyen	logigear
 1709146518	Cow	medevel\.com
 1709150269	Cow	toptogging\.com
+1709150671	Makyen	toptogging(?!\.com)
