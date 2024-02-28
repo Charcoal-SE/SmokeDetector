@@ -59198,3 +59198,4 @@
 1709104363	Nick	voipexperts\.co\.uk
 1709104384	Nick	voip[\W_]*+experts(?!\.co\.uk(?<=voipexperts\.co\.uk))
 1709104748	Nick	thenewsfresh\.com
+1709106031	Nick	thefreshwaterpearlcompany\.com
