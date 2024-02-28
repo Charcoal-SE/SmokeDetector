@@ -588,6 +588,9 @@ items:
 - ns:
   - ns1267.websitewelcome.com.
   - ns1268.websitewelcome.com.
+- ns:
+  - ns1319.websitewelcome.com.
+  - ns1320.websitewelcome.com.
 - ns: daxa.net.
 - ns:
   - ns07.2cohost.com.
