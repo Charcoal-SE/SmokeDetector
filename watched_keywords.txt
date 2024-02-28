@@ -59194,3 +59194,4 @@
 1709098128	Nick	Infosky[\W_]*+Solutions(?!\.com)
 1709099927	Nick	oozelife\.com
 1709101849	Nick	networkershome\.com
+1709102350	Nick	routeshopping\.com
