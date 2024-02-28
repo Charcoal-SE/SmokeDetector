@@ -19493,7 +19493,6 @@
 1589970714	Xnero	homelight\.in
 1589977340	Machavity	jotform\.com/supplementreviews
 1589977829	double-beep	onlinesolution\.info
-1589978668	Xnero	connectinfosoft\.com
 1589981572	Xnero	kiddie\.in
 1589983712	Machavity	3dprintbeginner\.com
 1589984030	Makyen	(?-i:fnHjl\.jpg)
