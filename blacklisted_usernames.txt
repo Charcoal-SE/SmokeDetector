@@ -982,3 +982,4 @@ zoomcar India
 (?-i:^Adya Kalhari$)
 osea coupon
 Gray Walker
+(?-i:^Connect Infosoft Technologies$)
