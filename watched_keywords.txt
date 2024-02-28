@@ -59216,3 +59216,4 @@
 1709132202	General Grievance	smm\.royalmedia\.in
 1709133650	Jesse	3dlifestyle\.pk
 1709134194	Jesse	axis[\W_]*+logistics?(?:[\W_]*+services?+(?!\.com(?<=axislogisticservices\.com)))?
+1709140410	Jesse	spark-sports\.co\.uk
