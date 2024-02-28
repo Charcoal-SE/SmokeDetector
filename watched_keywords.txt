@@ -56886,7 +56886,6 @@
 1704725609	tripleee	solutiondesk\.live
 1704728161	Jesse	nowgoal14\.com
 1704728315	Jesse	yitit\.com
-1704728443	cigien	tvinternetdealsusa\.com
 1704728698	Jesse	Beleaf[\W_]*+Tech(?:nologies)?
 1704728793	Jesse	softfind\.net
 1704728952	cigien	salesforceforfresher\.wordpress\.com
