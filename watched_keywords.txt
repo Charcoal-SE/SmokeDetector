@@ -59206,3 +59206,4 @@
 1709114702	tripleee	(?-i:^andrew tate$)
 1709116557	cigien	bookpublishingcanada\.ca
 1709119903	cigien	spotiwire\.com
+1709121091	VLAZ	digitalashfak\.com
