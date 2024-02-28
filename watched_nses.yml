@@ -1721,6 +1721,9 @@ items:
   - keyla.ns.cloudflare.com.
 - ns:
   - doug.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
+  - doug.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
   - drew.ns.cloudflare.com.
