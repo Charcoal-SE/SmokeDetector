@@ -980,5 +980,4 @@ zoomcar India
 (?-i:^Bridge City Cabs$)
 (?-i:^Rishabh Keshri$)
 (?-i:^Adya Kalhari$)
-Gray[\W_]*+Walker
 osea coupon
