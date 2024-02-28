@@ -59194,3 +59194,4 @@
 1709102350	Nick	routeshopping\.com
 1709102800	tripleee	connect[\W_]*+infosoft(?!\.com(?<=connectinfosoft\.com))(?<!(?-i:^Connect Infosoft Technologies$))
 1709102904	tripleee	indiawalkthrough\.com
+1709103508	Nick	shanghaihaiyangdaxue@gmail\.com
