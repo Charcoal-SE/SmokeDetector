@@ -59219,3 +59219,4 @@
 1709140410	Jesse	spark-sports\.co\.uk
 1709140674	Makyen	spark[\W_]*+sports(?!\.co\.uk(?<=spark-sports\.co\.uk))
 1709141374	cigien	apkroms(?!\.net)
+1709141382	cigien	apkroms\.net
