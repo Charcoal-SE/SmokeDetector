@@ -1524,6 +1524,9 @@ items:
   - gina.ns.cloudflare.com.
 - ns:
   - dave.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
+  - dave.ns.cloudflare.com.
   - lorna.ns.cloudflare.com.
 - ns:
   - dave.ns.cloudflare.com.
