@@ -59193,3 +59193,4 @@
 1709099927	Nick	oozelife\.com
 1709101849	Nick	networkershome\.com
 1709102350	Nick	routeshopping\.com
+1709102800	tripleee	connect[\W_]*+infosoft(?!\.com(?<=connectinfosoft\.com))(?<!(?-i:^Connect Infosoft Technologies$))
