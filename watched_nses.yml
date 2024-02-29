@@ -3771,14 +3771,11 @@ items:
   - sns1.bigrock.com.
   - sns2.bigrock.com.
 - ns:
-  - sns3.bigrock.com.
-  - sns4.bigrock.com.
-- ns:
-  - sns7.bigrock.com.
-  - sns8.bigrock.com.
-- ns:
   - sns13.bigrock.com.
   - sns14.bigrock.com.
+- ns:
+  - sns3.bigrock.com.
+  - sns4.bigrock.com.
 - ns:
   - sns403.bigrock.com.
   - sns404.bigrock.com.
