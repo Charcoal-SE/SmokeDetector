@@ -59260,3 +59260,4 @@
 1709223537	Jesse	ibrahim30jr(?:@gmail\.com)?
 1709223584	Jesse	acdrainflo\.com
 1709223729	Jesse	cabbazar\.com
+1709223749	Jesse	cabbazar(?!\.com)
