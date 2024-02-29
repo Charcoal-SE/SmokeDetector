@@ -59255,3 +59255,4 @@
 1709220741	Jesse	devicebee(?!\.com)
 1709221025	Jesse	(?-i:_C6ONzdR764)(?#youtu.be)
 1709221642	Jesse	Global[\W_]*+Education[\W_]*+Institute
+1709222483	tripleee	tmregistrationusa\.com
