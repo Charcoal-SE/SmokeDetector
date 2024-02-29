@@ -4893,7 +4893,9 @@ items:
 - ns: srtechnofab.com.
 - ns: drwebhost.com.
 - ns: ebndns.com.
-- ns: splashserver.org.
+- comment: NXDOMAIN 2024-02-29
+  disable: true
+  ns: splashserver.org.
 - ns: aptcom.info.
 - ns: resellerone.host.
 - ns: pwh-r1.com.
