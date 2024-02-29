@@ -5426,3 +5426,4 @@ nadevelopers\.com
 ussmmstore[\W_]*+com
 tecng\.com
 economicshomeworkhelper\.com
+buysmmit\.com

@@ -56124,7 +56124,6 @@
 1702986741	lyxal	sanantoniospecial\.com
 1703001192	Spevacus	esurde\.com
 1703001738	Spevacus	(?-i:KSuTWfBnw5I)(?#youtu.be)
-1703006847	Jesse	buysmmit\.com
 1702999929	Jesse	4gspycamera\.com
 1702999943	Jesse	techsolidity\.com
 1703000091	Jesse	thomaswermuthbooks\.org
