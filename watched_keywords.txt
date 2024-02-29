@@ -59246,3 +59246,4 @@
 1709199197	tripleee	(?-i:^Albane Martin$)
 1709199343	cigien	crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
 1709199501	tripleee	(?-i:^Adams Green$)
+1709201730	tripleee	machinezip\.com
