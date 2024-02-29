@@ -5423,3 +5423,4 @@ genericmedsstore\.com
 australiarxmeds\.com
 cadhobby\.com
 nadevelopers\.com
+ussmmstore[\W_]*+com
