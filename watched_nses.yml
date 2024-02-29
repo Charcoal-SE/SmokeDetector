@@ -2961,6 +2961,9 @@ items:
   - macy.ns.cloudflare.com.
   - sean.ns.cloudflare.com.
 - ns:
+  - maeve.ns.cloudflare.com.
+  - porter.ns.cloudflare.com.
+- ns:
   - magdalena.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
