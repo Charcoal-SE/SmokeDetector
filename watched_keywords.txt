@@ -59262,3 +59262,4 @@
 1709223729	Jesse	cabbazar\.com
 1709223749	Jesse	cabbazar(?!\.com)
 1709225561	Jesse	github\.com/AndreyMashukov
+1709229538	Vickel	storiaphotovideo\.com
