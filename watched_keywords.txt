@@ -59250,3 +59250,4 @@
 1709201761	cigien	machinezip(?!\.com)
 1709204398	Nick	insightimm\.com
 1709204347	Cow	spdload\.com
+1709207754	cigien	parcelstrackings\.com
