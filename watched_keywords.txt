@@ -59237,3 +59237,4 @@
 1709180107	Jesse	tasrieit\.com
 1709184758	Cow	proleed\.academy
 1709189466	cigien	medzbox\.com
+1709189486	cigien	medzbox(?!\.com)
