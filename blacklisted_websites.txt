@@ -5424,3 +5424,4 @@ australiarxmeds\.com
 cadhobby\.com
 nadevelopers\.com
 ussmmstore[\W_]*+com
+tecng\.com
