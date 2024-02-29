@@ -59250,3 +59250,4 @@
 1709204347	Cow	spdload\.com
 1709207754	cigien	parcelstrackings\.com
 1709209472	Cow	intrasonictechnology\.com
+1709211788	Cow	azureautodetailing\.com
