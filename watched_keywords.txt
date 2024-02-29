@@ -57852,7 +57852,6 @@
 1706543824	Jesse	d7networks\.com
 1706545284	Makyen	slotgacor\.sale
 1706545389	Jeff Schaller	ejboudreaujr\.com
-1706546754	Jesse	nadevelopers\.com
 1706546791	Jesse	nadevelopers(?!\.com)
 1706549761	Jesse	Telgorithm(?!\.com)
 1706550535	Makyen	seotools\.fyi
