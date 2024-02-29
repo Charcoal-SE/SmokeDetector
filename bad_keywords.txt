@@ -2972,3 +2972,4 @@ If I could give them zero stars I would
 cadhobby(?!\.com)
 ussmmstore(?:@gmail com)?
 (?-i:32b76ba857700527)(?#skype)
+LOVE[\W_]*+(?:BACK[\W_]*+)?(?:MARRIAGE[\W_]*+)?(?:SPECIALIST[\W_]*+)?ASTROLOGER
