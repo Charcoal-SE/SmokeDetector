@@ -59247,3 +59247,4 @@
 1709198073	tripleee	hitpaw\.com
 1709198640	tripleee	artherwa\.com
 1709199197	tripleee	(?-i:^Albane Martin$)
+1709199343	cigien	crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
