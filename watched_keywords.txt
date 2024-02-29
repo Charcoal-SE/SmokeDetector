@@ -59239,3 +59239,4 @@
 1709189466	cigien	medzbox\.com
 1709189486	cigien	medzbox(?!\.com)
 1709192942	cigien	tikmate\.cc
+1709193997	Cow	starweddingevent\.com
