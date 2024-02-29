@@ -2970,3 +2970,4 @@ Credit[\W_]*+SPARK[\W_]*+(?:loan[\W_]*+)?(?:app[\W_]*+)?(?:c[\W_]*+u[\W_]*+s[\W_
 chinadivision(?!\.com)
 If I could give them zero stars I would
 cadhobby(?!\.com)
+ussmmstore(?:@gmail com)?
