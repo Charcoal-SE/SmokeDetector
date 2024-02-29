@@ -59249,3 +59249,4 @@
 1709201730	tripleee	machinezip\.com
 1709201761	cigien	machinezip(?!\.com)
 1709204398	Nick	insightimm\.com
+1709204347	Cow	spdload\.com
