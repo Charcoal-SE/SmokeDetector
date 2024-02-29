@@ -3779,9 +3779,6 @@ items:
 - ns:
   - sns403.bigrock.com.
   - sns404.bigrock.com.
-- ns:
-  - sns7.bigrock.com.
-  - sns8.bigrock.com.
 - ns: tenten.vn.
 - ns:
   - rush.easydns.com.
