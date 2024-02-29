@@ -59226,3 +59226,4 @@
 1709150269	Cow	toptogging\.com
 1709150671	Makyen	toptogging(?!\.com)
 1709156125	Vickel	ussmmstore
+1709147680	General Grievance	vittalabs\.in
