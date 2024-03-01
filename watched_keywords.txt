@@ -59291,3 +59291,4 @@
 1709307890	Jesse	oiklilu9(?:@gmail\.com)?
 1709309243	General Grievance	lightroompre\.com
 1709313665	Jeff Schaller	armatsoftware\.com
+1709317079	Jeff Schaller	capcuteditors\.com
