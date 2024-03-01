@@ -55949,7 +55949,6 @@
 1702494815	Jesse	topcaptionideas\.com
 1702505897	Jeff Schaller	onlineearning8084\.blogspot
 1702503099	Jesse	streamslide\.io
-1702526076	Spevacus	911proxy\.com
 1702529832	Makyen	aimrowrealty\.com
 1702529853	Makyen	beaconstac\.com
 1702529874	Makyen	beaconstac(?!\.com)
