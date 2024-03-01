@@ -2973,3 +2973,4 @@ cadhobby(?!\.com)
 (?-i:32b76ba857700527)(?#skype)
 LOVE[\W_]*+(?:BACK[\W_]*+)?(?:MARRIAGE[\W_]*+)?(?:SPECIALIST[\W_]*+)?ASTROLOGER
 buysmmit(?!\.com)
+ussmmstore(?![\W_]*+com)(?:@gmail[\W_]*+com)?
