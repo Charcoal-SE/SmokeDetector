@@ -2970,7 +2970,6 @@ Credit[\W_]*+SPARK[\W_]*+(?:loan[\W_]*+)?(?:app[\W_]*+)?(?:c[\W_]*+u[\W_]*+s[\W_
 chinadivision(?!\.com)
 If I could give them zero stars I would
 cadhobby(?!\.com)
-ussmmstore(?:@gmail com)?
 (?-i:32b76ba857700527)(?#skype)
 LOVE[\W_]*+(?:BACK[\W_]*+)?(?:MARRIAGE[\W_]*+)?(?:SPECIALIST[\W_]*+)?ASTROLOGER
 buysmmit(?!\.com)
