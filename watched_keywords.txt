@@ -59269,3 +59269,4 @@
 1709266465	Nick	hurry\.live
 1709268283	Makyen	(?-i:v5aB)(?<=s\.net\.vn/)
 1709273909	Cow	omegaproxy\.com
+1709275108	Cow	whimsihub\.com
