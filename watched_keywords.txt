@@ -59296,3 +59296,4 @@
 1709317144	Cow	aqglassshowerdoorsphoenix\.com
 1709320178	Cow	belleflame\.com
 1709323182	Makyen	reportprime\.com
+1709323204	Makyen	medical[\W_]*+membranes[\W_]*+market
