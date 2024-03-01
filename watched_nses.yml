@@ -4775,7 +4775,9 @@ items:
 - ns: vnn.vn.
 - ns: domain.com.
 - ns: thestudenthelpline.com.
-- ns: lambingansteleserye.xyz.
+- comment: NXDOMAIN 2024-03-01
+  disable: true
+  ns: lambingansteleserye.xyz.
 - ns: myshakti.com.
 - ns: armadaservers.com.
 - ns: secureclouddns.net.
