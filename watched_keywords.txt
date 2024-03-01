@@ -59298,3 +59298,4 @@
 1709323182	Makyen	reportprime\.com
 1709323204	Makyen	medical[\W_]*+membranes[\W_]*+market
 1709325831	Makyen	googleplay-apk\.com
+1709328307	Makyen	optimatravels\.com
