@@ -988,3 +988,4 @@ Gray Walker
 (?-i:^Henry Santner$)
 (?-i:^clinic morita$)
 (?-i:^The Next Tech$)
+(?-i:^Doyeip$)
