@@ -59300,3 +59300,4 @@
 1709325831	Makyen	googleplay-apk\.com
 1709328307	Makyen	optimatravels\.com
 1709328328	Makyen	optima[\W_]*+travels(?!\.com(?<=optimatravels\.com))
+1709332078	General Grievance	spotifypremiumapkk\.com
