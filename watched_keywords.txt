@@ -59319,3 +59319,4 @@
 1709380789	cigien	kitchenstrategic(?!\.com)
 1709384549	Mast	WhiteCodel[\W_]*+App[\W_]*+Share
 1709384715	Mast	syarifsoden\.xyz
+1709383402	Vickel	headhunter-duesseldorf\.com
