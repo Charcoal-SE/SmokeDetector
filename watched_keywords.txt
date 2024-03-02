@@ -59323,3 +59323,4 @@
 1709389948	Cow	epsiloan\.xyz
 1709390085	cigien	ep(?:is|si)loan(?!\.xyz)
 1709392506	Jesse	uselibris\.io
+1709393340	Jesse	alightmotionart\.com
