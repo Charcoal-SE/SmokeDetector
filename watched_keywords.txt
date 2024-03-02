@@ -59307,3 +59307,4 @@
 1709357031	Nick	intelligencevidyarthi\.in
 1709360255	Nick	thehelpe\.com
 1709360306	Nick	thehelpe(?!\.com)
+1709362728	Nick	couponzguru\.com
