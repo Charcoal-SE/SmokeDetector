@@ -2974,3 +2974,4 @@ cadhobby(?!\.com)
 LOVE[\W_]*+(?:BACK[\W_]*+)?(?:MARRIAGE[\W_]*+)?(?:SPECIALIST[\W_]*+)?ASTROLOGER
 buysmmit(?!\.com)
 ussmmstore(?![\W_]*+com)(?:@gmail[\W_]*+com)?
+chloe\.consultant1(?:@gmail\.com)?
