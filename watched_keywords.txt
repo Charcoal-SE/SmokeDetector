@@ -59320,3 +59320,4 @@
 1709384549	Mast	WhiteCodel[\W_]*+App[\W_]*+Share
 1709384715	Mast	syarifsoden\.xyz
 1709383402	Vickel	headhunter-duesseldorf\.com
+1709389972	Cow	twitter\.com/epsiloan_xyz
