@@ -59321,4 +59321,3 @@
 1709384715	Mast	syarifsoden\.xyz
 1709383402	Vickel	headhunter-duesseldorf\.com
 1709389948	Cow	epsiloan\.xyz
-1709390012	cigien	epsiloan(?!\.xyz)
