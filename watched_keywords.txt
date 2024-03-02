@@ -59325,3 +59325,4 @@
 1709393340	Jesse	alightmotionart\.com
 1709393372	Jesse	abortionpillsuae\.com
 1709395088	Cow	aglowd\.com
+1709395241	Jesse	Mrs[\W_]*+Olivia[\W_]*+Lopez
