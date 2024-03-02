@@ -59301,3 +59301,4 @@
 1709328307	Makyen	optimatravels\.com
 1709328328	Makyen	optima[\W_]*+travels(?!\.com(?<=optimatravels\.com))
 1709332078	General Grievance	spotifypremiumapkk\.com
+1709349539	Nick	hanabi88\.com
