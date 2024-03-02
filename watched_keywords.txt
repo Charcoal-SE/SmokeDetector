@@ -59317,3 +59317,4 @@
 1709376654	cigien	marveldrivers\.com
 1709380770	cigien	kitchenstrategic\.com
 1709380789	cigien	kitchenstrategic(?!\.com)
+1709384549	Mast	WhiteCodel[\W_]*+App[\W_]*+Share
