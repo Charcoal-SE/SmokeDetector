@@ -59327,3 +59327,4 @@
 1709395088	Cow	aglowd\.com
 1709395241	Jesse	Mrs[\W_]*+Olivia[\W_]*+Lopez
 1709395477	Makyen	aglowd(?!\.com)
+1709398716	Cow	lawatson\.itch\.io
