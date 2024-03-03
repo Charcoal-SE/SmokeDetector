@@ -59354,3 +59354,4 @@
 1709482698	cigien	devox[\W_]*+software(?!\.com(?<=devoxsoftware\.com))
 1709485968	Makyen	evcclinic\.net
 1709488924	Cow	cedarcreekroof\.com
+1709493332	Cow	harlemnaturalhairsalon\.com
