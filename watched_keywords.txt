@@ -59351,3 +59351,4 @@
 1709478900	cigien	aarnaconstructions\.com
 1709480258	Jesse	Daviceconsultant11(?:@gmail\.com)?
 1709480508	Jesse	kunlarat\.com
+1709482698	cigien	devox[\W_]*+software(?!\.com(?<=devoxsoftware\.com))
