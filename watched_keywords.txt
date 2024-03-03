@@ -59343,3 +59343,4 @@
 1709389972	Cow	twitter\.com/epsiloan_xyz
 1709457781	cigien	bikeia\.com
 1709457802	cigien	bikeia(?!\.com)
+1709458982	cigien	allessay\.org
