@@ -59344,3 +59344,4 @@
 1709457781	cigien	bikeia\.com
 1709457802	cigien	bikeia(?!\.com)
 1709458982	cigien	allessay\.org
+1709464062	Cow	moshiim\.com
