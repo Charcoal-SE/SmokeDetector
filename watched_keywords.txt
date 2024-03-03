@@ -59345,3 +59345,4 @@
 1709457802	cigien	bikeia(?!\.com)
 1709458982	cigien	allessay\.org
 1709477190	Jeff Schaller	devoxsoftware\.com
+1709477261	Jeff Schaller	pufflab\.ca
