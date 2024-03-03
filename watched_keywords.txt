@@ -59339,3 +59339,4 @@
 1709442548	Makyen	valcus\.in
 1709442568	Makyen	valcus[\W_]*+pvt[\W_]*+ltd
 1709452238	Cow	tzir\.org
+1709318959	General Grievance	i-store\.org
