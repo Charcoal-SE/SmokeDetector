@@ -59349,3 +59349,4 @@
 1709477333	Jeff Schaller	vortexassetagency
 1709478109	Jesse	pdfmergeapi\.com
 1709478900	cigien	aarnaconstructions\.com
+1709480258	Jesse	Daviceconsultant11(?:@gmail\.com)?
