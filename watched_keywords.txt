@@ -59353,3 +59353,4 @@
 1709480508	Jesse	kunlarat\.com
 1709482698	cigien	devox[\W_]*+software(?!\.com(?<=devoxsoftware\.com))
 1709485968	Makyen	evcclinic\.net
+1709488924	Cow	cedarcreekroof\.com
