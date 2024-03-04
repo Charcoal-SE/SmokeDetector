@@ -2884,6 +2884,9 @@ items:
   - zod.ns.cloudflare.com.
 - ns:
   - lindsey.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
+  - lindsey.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
   - lisa.ns.cloudflare.com.
