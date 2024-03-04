@@ -59395,3 +59395,4 @@
 1709566930	General Grievance	elegant-radiators\.co\.uk
 1709569260	cigien	hackingzones\.com
 1709569808	cigien	yebocab\.com
+1709569830	cigien	yebocab(?!\.com)
