@@ -59374,3 +59374,4 @@
 1709544706	cigien	skateboardsprint\.com
 1709547161	cigien	chomart\.com
 1709547190	cigien	chomart(?!\.com)
+1709549662	tripleee	nicolsquash\.com
