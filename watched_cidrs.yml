@@ -2161,6 +2161,7 @@ items:
 - comment: disabled 2024-02-20; 53/327 TP but all but one of 1-weights are FP
   disable: true
   ip: 15.197.142.173
+- ip: 15.197.148.33
 - ip: 15.197.209.129
 - ip: 15.197.254.101
 - ip: 15.206.216.193
@@ -4692,6 +4693,7 @@ items:
 - comment: 44/157 over a year, recently no 1-weights 2022-11-29
   disable: true
   ip: 3.33.152.147
+- ip: 3.33.130.190
 - ip: 3.33.191.88
 - ip: 3.6.1.124
 - ip: 3.6.158.69
