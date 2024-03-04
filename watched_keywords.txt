@@ -59357,3 +59357,4 @@
 1709505721	Jeff Schaller	crackdeck\.com
 1709512856	Makyen	blonde?[\W_]*+police
 1709525056	Jeff Schaller	eggycargame\.io
+1709527890	Cow	whitecodel\.com
