@@ -59373,3 +59373,4 @@
 1709543064	Cow	blackhawklimousine\.com
 1709544706	cigien	skateboardsprint\.com
 1709547161	cigien	chomart\.com
+1709547190	cigien	chomart(?!\.com)
