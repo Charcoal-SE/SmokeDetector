@@ -59397,6 +59397,5 @@
 1709569808	cigien	yebocab\.com
 1709569830	cigien	yebocab(?!\.com)
 1709575295	Cow	calculatoruniverse\.com
-1709577182	Jeff Schaller	%ed%88%b0%ec%bd%94-online\.com
 1709580200	Jeff Schaller	2bdigital\.ae
 1709594429	Makyen	ed%88%b0%ec%bd%94-online\.com
