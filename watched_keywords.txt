@@ -59360,3 +59360,4 @@
 1709527890	Cow	whitecodel\.com
 1709528829	tripleee	khiwasara[\W_]*+rupee
 1709529330	tripleee	topmagnetics\.com
+1709529701	tripleee	chatgp\.io
