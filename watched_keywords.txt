@@ -59378,3 +59378,4 @@
 1709552589	cigien	niveeta\.in
 1709552610	cigien	niveeta(?!\.in)
 1709552644	cigien	apakahbisa\.store
+1709553021	Cow	onlinefreespells\.com
