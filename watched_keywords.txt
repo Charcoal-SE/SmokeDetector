@@ -59330,7 +59330,6 @@
 1709398716	Cow	lawatson\.itch\.io
 1709399819	Makyen	grow[\W_]*+mechanical(?!\.com(?<=growmechanical\.com))
 1709400402	VLAZ	Import-JUnitToAzTestPlan
-1709409705	Makyen	(?-i:^Urkaine Taink$)
 1709417657	Nick	melbetph\.com
 1709428441	Makyen	calvetexpresscourrier\.com
 1709440184	Makyen	getcaptchasolution\.com

@@ -990,3 +990,4 @@ Gray Walker
 (?-i:^The Next Tech$)
 (?-i:^Doyeip$)
 (?-i:^Niagara Falls Airport Taxi Lim$)
+(?-i:^Urkaine Taink$)
