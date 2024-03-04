@@ -59396,3 +59396,4 @@
 1709569260	cigien	hackingzones\.com
 1709569808	cigien	yebocab\.com
 1709569830	cigien	yebocab(?!\.com)
+1709575295	Cow	calculatoruniverse\.com
