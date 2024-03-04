@@ -59380,3 +59380,4 @@
 1709553021	Cow	onlinefreespells\.com
 1709554816	tripleee	(?-i:^zubair khan$)
 1709555296	cigien	beekeeper-suit\.com
+1709555636	tripleee	foxy77plus\.online
