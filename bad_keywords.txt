@@ -2976,3 +2976,4 @@ buysmmit(?!\.com)
 ussmmstore(?![\W_]*+com)(?:@gmail[\W_]*+com)?
 chloe\.consultant1(?:@gmail\.com)?
 Grand[\W_]*+finserv[\W_]*+(?:loan)?(?:app)?
+no[\W_]*+blond[\W_]*+police
