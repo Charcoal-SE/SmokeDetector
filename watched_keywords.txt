@@ -59368,3 +59368,4 @@
 1709539837	tripleee	(?-i:DAq9oD)(?# fiverr)
 1709539958	Nick	physiook\.com
 1709539988	Nick	physiook(?!\.com)
+1709540634	Nick	veetrends\.com
