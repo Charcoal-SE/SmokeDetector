@@ -1844,6 +1844,9 @@ items:
   - nitin.ns.cloudflare.com.
 - ns:
   - elma.ns.cloudflare.com.
+  - rihana.ns.cloudflare.com.
+- ns:
+  - elma.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
   - elmo.ns.cloudflare.com.
