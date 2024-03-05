@@ -59414,3 +59414,4 @@
 1709624153	Cow	degreecoursesinoneyear\.in
 1709625420	Cow	fanmerchstore\.com
 1709626416	cigien	mbaonlinedegreecourse\.blogspot
+1709626480	cigien	wheelgames\.org
