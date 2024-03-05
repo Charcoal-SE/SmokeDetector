@@ -2947,6 +2947,9 @@ items:
   - vasilii.ns.cloudflare.com.
 - ns:
   - luciana.ns.cloudflare.com.
+  - nile.ns.cloudflare.com.
+- ns:
+  - luciana.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
   - luciane.ns.cloudflare.com.
