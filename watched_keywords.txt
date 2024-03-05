@@ -15083,7 +15083,6 @@
 1578243280	Makyen	(?-i:729794314601958291)(?#pinterest.com)
 1578244456	Makyen	forex\.pk
 1578245180	Eliah Kagan	chanakyamath
-1578259014	Makyen	croydoncar\.co\.uk
 1578261911	Makyen	houldsbraxton\.hatenablog\.com
 1578261928	Makyen	ketothinstateofficial2020\.blogspot
 1578261947	Makyen	pinterest\.com(?<!api\.pinterest\.com)(?<!assets\.pinterest\.com)(?<!developers\.pinterest\.com)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
