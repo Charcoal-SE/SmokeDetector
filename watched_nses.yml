@@ -2440,6 +2440,9 @@ items:
   - nia.ns.cloudflare.com.
 - ns:
   - jeff.ns.cloudflare.com.
+  - nina.ns.cloudflare.com.
+- ns:
+  - jeff.ns.cloudflare.com.
   - tiffany.ns.cloudflare.com.
 - ns:
   - jeff.ns.cloudflare.com.
