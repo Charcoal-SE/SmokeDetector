@@ -59412,3 +59412,4 @@
 1709622652	Cow	catla\.net
 1709622668	Cow	renkfm\.net
 1709623114	Cow	mcc-mnc\.com
+1709624153	Cow	degreecoursesinoneyear\.in
