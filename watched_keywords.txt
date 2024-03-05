@@ -59418,3 +59418,4 @@
 1709626504	cigien	sikariatech\.in
 1709626537	cigien	googiehost(?!\.com)
 1709626571	cigien	mario[\W_]*+shroomed(?!\.com(?<=marioshroomed\.com))
+1709627448	cigien	nikpu\.com
