@@ -44,6 +44,9 @@ items:
   - aiden.ns.cloudflare.com.
   - nelly.ns.cloudflare.com.
 - ns:
+  - ajay.ns.cloudflare.com.
+  - sierra.ns.cloudflare.com.
+- ns:
   - alan.ns.cloudflare.com.
   - sureena.ns.cloudflare.com.
 - ns:
