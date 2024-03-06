@@ -59445,3 +59445,4 @@
 1709707140	tripleee	saksham[\W_]*+digital(?!\.com(?<=sakshamdigital\.com))
 1709681421	General Grievance	norisk-agency0\.systeme\.io
 1709706841	Cow	searchengineland\.com
+1709710967	cigien	coorg[\W_]*+taxi(?:[\W_]*+service|trip)?
