@@ -59444,3 +59444,4 @@
 1709707091	tripleee	sakshhamdigital\.com
 1709707140	tripleee	saksham[\W_]*+digital(?!\.com(?<=sakshamdigital\.com))
 1709681421	General Grievance	norisk-agency0\.systeme\.io
+1709706841	Cow	searchengineland\.com
