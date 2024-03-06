@@ -41102,7 +41102,6 @@
 1659332132	tripleee	jaycar\.co\.nz
 1659333498	tripleee	quickbookstoolhub\.co
 1659334156	tripleee	picnic\.zone
-1659334483	tripleee	theweek\.in
 1659342437	tripleee	(?-i:3S4D0iH)(?# bit.ly)
 1659342504	tripleee	scanneradda\.com
 1659342562	tripleee	ca[\W_]*+foundation
