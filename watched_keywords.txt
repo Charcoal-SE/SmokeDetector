@@ -59442,3 +59442,4 @@
 1709665091	tripleee	pawpawsoft\.com
 1709665258	tripleee	lofar[\W_]*+cheat
 1709666895	General Grievance	pappumollik\.myoptosoftit\.com
+1709707091	tripleee	sakshhamdigital\.com
