@@ -5452,6 +5452,7 @@ items:
 - comment: no 1-weight hits over 1 year; dominantly FP - disabled 2023-03-22
   disable: true
   ip: 66.235.200.147
+- ip: 66.29.132.106
 - ip: 66.29.132.123
 - ip: 66.29.132.143
 - ip: 66.29.132.31
