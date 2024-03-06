@@ -59474,3 +59474,4 @@
 1709747545	tripleee	(?-i:^Raheem Jameel$)
 1709748769	tripleee	@gurujikirehmat1539(?# youtube)
 1709749915	Vickel	bonasgold\.net
+1709750010	cigien	bonas[\W_]*+gold(?!\.net(?<=bonasgold\.net))
