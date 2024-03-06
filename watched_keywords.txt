@@ -59472,3 +59472,4 @@
 1709733282	cigien	food[\W_]*+ordering[\W_]*+website(?!\.com(?<=foodorderingwebsite\.com))
 1709735183	General Grievance	surveyplanet\.com
 1709747545	tripleee	(?-i:^Raheem Jameel$)
+1709748769	tripleee	@gurujikirehmat1539(?# youtube)
