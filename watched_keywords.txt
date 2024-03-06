@@ -59448,3 +59448,4 @@
 1709710967	cigien	coorg[\W_]*+taxi(?:[\W_]*+service|trip)?
 1709711004	cigien	sudep\.shop
 1709711459	cigien	eduardolgot87642\.aioblogs\.com
+1709715396	tripleee	bhai4you\.com
