@@ -59462,3 +59462,4 @@
 1709725407	tripleee	esaal(?!\.me)
 1709727212	Jeff Schaller	empirecustomhomes\.ca
 1709726264	jps	av-canada\.com
+1709726255	Cow	rpminfotech\.com
