@@ -56492,7 +56492,6 @@
 1704043545	Jesse	interview\.dog
 1704058259	Jeff Schaller	earthgoglow\.in
 1704076146	Jeff Schaller	orangme\.com
-1704090934	Makyen	cochinsuraksha\.com
 1704091004	Makyen	karz[\W_]*+insurance
 1704091494	Makyen	flowforce[\W_]*+max\w*+
 1704091586	Makyen	mexicanpharmacystore\.org
