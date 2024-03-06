@@ -59443,3 +59443,4 @@
 1709665258	tripleee	lofar[\W_]*+cheat
 1709666895	General Grievance	pappumollik\.myoptosoftit\.com
 1709707091	tripleee	sakshhamdigital\.com
+1709707140	tripleee	saksham[\W_]*+digital(?!\.com(?<=sakshamdigital\.com))
