@@ -59446,3 +59446,4 @@
 1709681421	General Grievance	norisk-agency0\.systeme\.io
 1709706841	Cow	searchengineland\.com
 1709710967	cigien	coorg[\W_]*+taxi(?:[\W_]*+service|trip)?
+1709711004	cigien	sudep\.shop
