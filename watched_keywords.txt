@@ -59477,3 +59477,4 @@
 1709750010	cigien	bonas[\W_]*+gold(?!\.net(?<=bonasgold\.net))
 1709750470	tripleee	gurujikirehmat1539(?# youtube)
 1709756466	General Grievance	mindsetmakers\.in
+1709765270	Vickel	prorays\.me
