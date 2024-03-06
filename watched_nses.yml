@@ -2245,6 +2245,9 @@ items:
   - jade.ns.cloudflare.com.
 - ns:
   - hera.ns.cloudflare.com.
+  - huxley.ns.cloudflare.com.
+- ns:
+  - hera.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
   - hope.ns.cloudflare.com.
