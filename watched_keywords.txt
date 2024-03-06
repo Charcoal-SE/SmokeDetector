@@ -59453,3 +59453,4 @@
 1709715485	tripleee	essaywriters\.ae
 1709716038	tripleee	grammarvocab\.com
 1709717749	Cow	gammainnovationltd\.com
+1709718381	cigien	gamma[\W_]*+innovation[\W_]*+ltd(?!\.com(?<=gammainnovationltd\.com))
