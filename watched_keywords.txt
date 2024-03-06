@@ -59455,3 +59455,4 @@
 1709717231	Cow	tasmiarealestate\.com
 1709718442	cigien	tasmia[\W_]*+real[\W_]*+estate(?!\.com(?<=tasmiarealestate\.com))
 1709718513	cigien	gamma[\W_]*+innovation(?:[\W_]*+ltd)?+(?!\.com(?<=gammainnovationltd\.com))
+1709719191	cigien	wellbuddy\.com
