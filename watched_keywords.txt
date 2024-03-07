@@ -59496,3 +59496,4 @@
 1709804363	tripleee	livexp\.com
 1709804685	tripleee	allattestations\.com
 1709805359	tripleee	airporttaxiservices\.ca
+1709810292	Jeff Schaller	studiocityrehab\.com
