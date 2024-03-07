@@ -53279,7 +53279,6 @@
 1695974268	cigien	resume[\W_]*+forrest(?!\.com(?<=resumeforrest\.com))
 1695974519	cigien	slg[\W_]*+legal(?!\.in(?<=slglegal\.in))
 1695975131	cigien	msitpark\.org
-1695975279	cigien	alien[\W_]*+wizbot
 1695975869	cigien	ferntreeresort\.com
 1695975910	cigien	fern[\W_]*+tree[\W_]*+resorts?+(?!\.com(?<=ferntreeresort\.com))
 1695979942	cigien	akihi\.co\.in
