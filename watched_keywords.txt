@@ -59484,3 +59484,4 @@
 1709757910	CPlus	betking\.com
 1709792843	cigien	2pcbtechnology\.com
 1709792952	cigien	mortbuzz(?!\.in)
+1709793912	Cow	sohosg\.com
