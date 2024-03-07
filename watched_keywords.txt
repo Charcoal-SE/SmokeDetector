@@ -57275,7 +57275,7 @@
 1705517287	Makyen	3p6jpld(?#g.co)
 1705517312	Makyen	trend[\W_]*+house[\W_]*+studio
 1705517350	Makyen	trendhousestudio997(?:@gmail\.com)?
-1705518824	Makyen	call(?=\D{0,40}+(?:[\dsol][\W_]*+){6,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# when added: 3405 Total / 3265 TP, 95.89% TP / 127 FP / 8 NAA)
+1705518824	Makyen	call(?![\s-]+(?:(?:fail(?:ed)|originated|trace|max|last|dispatcher|blocker|protect|test|cancelled|notifications?)\b|=))(?!.{0,20}(?:<code>))(?=\D{0,40}+(?:[\dsol][\W_]{0,3}+){8,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# original version when added: 3405 Total / 3265 TP, 95.89% TP / 127 FP / 8 NAA; as updated on 07 Mar 2024 23:45:39 GMT was 3412 Total / 3299 TP (96.69% TP) / 107 FP / 6 NAA)
 1705523196	Jesse	sktdigitalsolutions\.com
 1705536759	Jesse	priestjaja7@mail\.com
 1705545713	Nick	daga88\.asia
