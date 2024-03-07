@@ -184,6 +184,9 @@ items:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
+  - cecelia.ns.cloudflare.com.
+  - pablo.ns.cloudflare.com.
+- ns:
   - cheryl.ns.cloudflare.com.
   - jonah.ns.cloudflare.com.
 - ns:
