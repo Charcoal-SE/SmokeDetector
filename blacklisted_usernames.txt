@@ -996,3 +996,4 @@ Gray Walker
 (?-i:^user23489630$)
 (?-i:^Cochin Suraksha fire protectio$)
 (?-i:^Zoey marie$)
+(?-i:^Global Exchange$)
