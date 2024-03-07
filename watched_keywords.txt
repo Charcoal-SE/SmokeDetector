@@ -48220,7 +48220,6 @@
 1678694049	tripleee	corefactors\.in
 1678694196	tripleee	sportyroots\.com
 1678696653	tripleee	selmanyetkin\.com
-1678701123	tripleee	genericcures\.com
 1678701234	tripleee	youtubestartend\.com
 1678702833	tripleee	quickwebsitefix\.com
 1678705016	Jeff Schaller	miamiturnupent\.com
