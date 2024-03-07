@@ -59479,3 +59479,4 @@
 1709785300	Makyen	startupmahakumbh\.org
 1709785321	Makyen	startup[\W_]*+mahakumbh(?!\.org(?<=startupmahakumbh\.org))
 1709757928	Vickel	ln\.run
+1709765270	Vickel	prorays\.me
