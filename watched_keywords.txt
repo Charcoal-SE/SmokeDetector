@@ -59498,3 +59498,4 @@
 1709805359	tripleee	airporttaxiservices\.ca
 1709810292	Jeff Schaller	studiocityrehab\.com
 1709810442	Cow	pelle-pelle\.com
+1709810793	cigien	pelle[\W_]*+pelle(?!\.com(?<=pelle-pelle\.com))
