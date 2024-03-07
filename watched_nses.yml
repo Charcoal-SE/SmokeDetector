@@ -2854,6 +2854,9 @@ items:
   - pete.ns.cloudflare.com.
 - ns:
   - lia.ns.cloudflare.com.
+  - rocky.ns.cloudflare.com.
+- ns:
+  - lia.ns.cloudflare.com.
   - vick.ns.cloudflare.com.
 - ns:
   - ligia.ns.cloudflare.com.
