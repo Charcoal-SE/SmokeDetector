@@ -59510,3 +59510,4 @@
 1709838402	Makyen	drpeterotakpaspellcaster09(?:@gmail\.com)?
 1709843073	Jeff Schaller	metridev\.com
 1709851712	Makyen	studio-waitlist-git-enable-zapier-for-testing\.preview\.spotter-dev\.com
+1709851742	Makyen	spotter-dev\.com
