@@ -334,6 +334,9 @@ items:
   - jonah.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - kallie.ns.cloudflare.com.
+  - olof.ns.cloudflare.com.
+- ns:
   - kay.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
