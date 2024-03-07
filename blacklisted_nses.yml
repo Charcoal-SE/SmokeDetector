@@ -322,6 +322,9 @@ items:
   - jay.ns.cloudflare.com.
   - jule.ns.cloudflare.com.
 - ns:
+  - jean.ns.cloudflare.com.
+  - nash.ns.cloudflare.com.
+- ns:
   - jeff.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
