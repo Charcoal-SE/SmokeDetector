@@ -27507,7 +27507,6 @@
 1616991355	Makyen	zebafeb(?:[\W_]*+(?:customer|care|number|\d++|[\da-f]{5,}+)s?)*
 1616993513	cigien	sinnrrr
 1616993545	cigien	ajmal0197
-1616996361	cigien	sensomaticloadcell\.com
 1617000720	Makyen	iseepassword\.com
 1617007911	tripleee	unexpectedreview\.net
 1617013350	double-beep	thegearhunt\.com
