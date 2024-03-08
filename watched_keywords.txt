@@ -59514,7 +59514,6 @@
 1709878675	VLAZ	phuminhquangtravel\.com
 1709879902	Cow	teaaza\.com
 1709877640	Cow	medicineandislam\.org
-1709877533	Cow	cossouq\.com
 1709881050	Cow	ecobeeremoval\.com
 1709882827	Cow	paraprojects\.in
 1709883734	cigien	para[\W_]*+projects(?!\.in(?<=paraprojects\.in))
