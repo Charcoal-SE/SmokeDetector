@@ -59522,3 +59522,4 @@
 1709883882	cigien	eco[\W_]*+bee[\W_]*+removal(?!\.com(?<=ecobeeremoval\.com))
 1709883903	cigien	pwcreator(?!\.com)
 1709883957	cigien	paramdigitalmarketing\.com
+1709884184	cigien	spotter-dev\.com
