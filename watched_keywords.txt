@@ -59519,3 +59519,4 @@
 1709851373	General Grievance	spotter-dev\.com
 1709881050	Cow	ecobeeremoval\.com
 1709882827	Cow	paraprojects\.in
+1709883734	cigien	para[\W_]*+projects(?!\.in(?<=paraprojects\.in))
