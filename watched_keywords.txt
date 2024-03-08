@@ -59537,3 +59537,4 @@
 1709919398	Spevacus	modkuy\.com
 1709919808	Jeff Schaller	xmudderwheel\.com
 1709921037	Vickel	naughtysonatofuck\.com
+1709921406	Vickel	naughty[\W_]*+sona[\W_]*+to[\W_]*+fuck(?!\.com(?<=naughtysonatofuck\.com))
