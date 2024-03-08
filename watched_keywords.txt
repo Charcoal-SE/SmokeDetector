@@ -59511,3 +59511,4 @@
 1709851712	Makyen	studio-waitlist-git-enable-zapier-for-testing\.preview\.spotter-dev\.com
 1709851742	Makyen	spotter-dev\.com
 1709866629	Makyen	s\.net\.vn(?<![^\W_]-s\.net\.vn)(?![.-][^\W_])\b
+1709877533	Cow	cossouq\.com
