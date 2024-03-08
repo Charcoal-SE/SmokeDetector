@@ -59521,3 +59521,4 @@
 1709882827	Cow	paraprojects\.in
 1709883734	cigien	para[\W_]*+projects(?!\.in(?<=paraprojects\.in))
 1709883756	cigien	dagangjudislotonline\.blogspot
+1709883882	cigien	eco[\W_]*+bee[\W_]*+removal(?!\.com(?<=ecobeeremoval\.com))
