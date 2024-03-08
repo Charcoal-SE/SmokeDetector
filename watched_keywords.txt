@@ -59512,3 +59512,4 @@
 1709851742	Makyen	spotter-dev\.com
 1709866629	Makyen	s\.net\.vn(?<![^\W_]-s\.net\.vn)(?![.-][^\W_])\b
 1709878230	VLAZ	github\.com\/ninjas-code-official\/food-delivery-multivendor
+1709878675	VLAZ	phuminhquangtravel\.com
