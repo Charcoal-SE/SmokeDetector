@@ -59514,3 +59514,4 @@
 1709878230	VLAZ	github\.com\/ninjas-code-official\/food-delivery-multivendor
 1709878675	VLAZ	phuminhquangtravel\.com
 1709879902	Cow	teaaza\.com
+1709877640	Cow	medicineandislam\.org
