@@ -59509,14 +59509,12 @@
 1709838402	Makyen	drpeterotakpaspellcaster09(?:@gmail\.com)?
 1709843073	Jeff Schaller	metridev\.com
 1709851712	Makyen	studio-waitlist-git-enable-zapier-for-testing\.preview\.spotter-dev\.com
-1709851742	Makyen	spotter-dev\.com
 1709866629	Makyen	s\.net\.vn(?<![^\W_]-s\.net\.vn)(?![.-][^\W_])\b
 1709878230	VLAZ	github\.com\/ninjas-code-official\/food-delivery-multivendor
 1709878675	VLAZ	phuminhquangtravel\.com
 1709879902	Cow	teaaza\.com
 1709877640	Cow	medicineandislam\.org
 1709877533	Cow	cossouq\.com
-1709851373	General Grievance	spotter-dev\.com
 1709881050	Cow	ecobeeremoval\.com
 1709882827	Cow	paraprojects\.in
 1709883734	cigien	para[\W_]*+projects(?!\.in(?<=paraprojects\.in))
