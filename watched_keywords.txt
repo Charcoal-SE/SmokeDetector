@@ -59540,3 +59540,4 @@
 1709921406	Vickel	naughty[\W_]*+sona[\W_]*+to[\W_]*+fuck(?!\.com(?<=naughtysonatofuck\.com))
 1709932367	Jeff Schaller	rabeh\.org
 1709932423	Jeff Schaller	keystoneinvestor\.com
+1709944385	Makyen	(?-i:6aQDz4Duygw)(?#YouTube)
