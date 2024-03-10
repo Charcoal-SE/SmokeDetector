@@ -59564,3 +59564,4 @@
 1710090023	Vickel	argonixhacktech\.com
 1710090998	Makyen	argonix[\W_]*+hack[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?job4u(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1710091018	Makyen	1 (206) 234‑9907
+1710108260	Jeff Schaller	trishflora2
