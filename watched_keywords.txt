@@ -59586,3 +59586,4 @@
 1710102063	Vickel	spyware(?:[\W_]*+(?:at[\W_]*+)?cybergal(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1710143172	Cow	mskinternational\.com\.pk
 1710148500	Cow	itsipl\.com
+1710149536	jps	corerex\.com
