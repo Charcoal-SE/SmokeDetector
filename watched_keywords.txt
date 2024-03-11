@@ -59575,3 +59575,4 @@
 1710140421	cigien	dsrv[\W_]*+india(?!\.com(?<=dsrvindia\.com))
 1710140515	cigien	resumesbrisbane\.com
 1710140565	cigien	artemisys
+1710143172	Cow	mskinternational\.com\.pk
