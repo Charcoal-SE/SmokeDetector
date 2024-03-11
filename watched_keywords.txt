@@ -59571,3 +59571,4 @@
 1710127796	Makyen	ico28\.com
 1710130451	Makyen	five-m\.org
 1710139164	cigien	seo[\W_]*+wagon(?!\.com(?<=seowagon\.com))
+1710139195	cigien	seowagon\.com
