@@ -59585,3 +59585,4 @@
 1710160664	lyxal	bestmigrationconsultant\.com
 1710102063	Vickel	spyware(?:[\W_]*+(?:at[\W_]*+)?cybergal(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1710143172	Cow	mskinternational\.com\.pk
+1710148500	Cow	itsipl\.com
