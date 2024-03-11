@@ -59573,3 +59573,4 @@
 1710139195	cigien	seowagon\.com
 1710140389	cigien	dsrvindia\.com
 1710140421	cigien	dsrv[\W_]*+india(?!\.com(?<=dsrvindia\.com))
+1710140515	cigien	resumesbrisbane\.com
