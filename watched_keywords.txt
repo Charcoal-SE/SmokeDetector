@@ -59589,3 +59589,4 @@
 1710149536	jps	corerex\.com
 1710161946	lyxal	sheelaa\.com
 1710149835	Cow	ottmaker\.com
+1710150015	Cow	avinatech\.com
