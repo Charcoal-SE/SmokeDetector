@@ -59572,3 +59572,4 @@
 1710139164	cigien	seo[\W_]*+wagon(?!\.com(?<=seowagon\.com))
 1710139195	cigien	seowagon\.com
 1710140389	cigien	dsrvindia\.com
+1710140421	cigien	dsrv[\W_]*+india(?!\.com(?<=dsrvindia\.com))
