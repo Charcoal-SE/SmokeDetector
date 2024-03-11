@@ -59583,3 +59583,4 @@
 1710159411	lyxal	pasadenanursingcenter\.com
 1710159544	cigien	wendinghao\.com
 1710160664	lyxal	bestmigrationconsultant\.com
+1710102063	Vickel	spyware(?:[\W_]*+(?:at[\W_]*+)?cybergal(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
