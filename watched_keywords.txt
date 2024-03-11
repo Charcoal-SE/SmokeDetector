@@ -59598,3 +59598,4 @@
 1710164542	jps	blastgrit\.com
 1710165574	Jeff Schaller	quantumai\.co
 1710166531	cigien	discountvouchers\.store
+1710166553	cigien	discountvouchers(?!\.store)
