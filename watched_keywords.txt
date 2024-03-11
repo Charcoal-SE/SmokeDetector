@@ -59600,3 +59600,4 @@
 1710166531	cigien	discountvouchers\.store
 1710166553	cigien	discountvouchers(?!\.store)
 1710166734	Jesse	(?-i:nkueass)(?#t.me)
+1710166766	Jesse	discountvoucher\.mysellix\.io
