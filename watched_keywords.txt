@@ -59627,3 +59627,4 @@
 1710229179	Cow	dccure\.com
 1710230266	cigien	www-ikrogerfeedback\.com
 1710233281	cigien	greythonresidential\.com
+1710233312	cigien	greython[\W_]*+residential(?!\.com(?<=greythonresidential\.com))
