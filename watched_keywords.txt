@@ -59624,3 +59624,4 @@
 1710227565	Nick	Indopipe(?!\.id)
 1710229655	Cow	divenaworld\.com
 1710229864	cigien	divena[\W_]*+world(?!\.com(?<=divenaworld\.com))
+1710229179	Cow	dccure\.com
