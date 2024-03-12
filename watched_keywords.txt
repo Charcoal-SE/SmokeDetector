@@ -59659,3 +59659,4 @@
 1710267376	Cow	intelliqit\.com
 1710269551	Makyen	intelliqittrainings(?:@gmail\.com)?
 1710267427	Cow	usukshop\.com
+1710268537	Vickel	onwavegroup\.com
