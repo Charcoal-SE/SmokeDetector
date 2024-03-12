@@ -59619,3 +59619,4 @@
 1710224100	Cow	moebot\.com\.au
 1710223967	Cow	qtacademy\.com
 1710225230	Cow	programiz\.pro
+1710226325	Cow	mayanklabels\.com
