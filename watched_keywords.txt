@@ -59617,3 +59617,4 @@
 1710223633	Makyen	national[\W_]*+executive[\W_]*+transfers(?!\.co\.uk(?<=nationalexecutivetransfers\.co\.uk))
 1710224878	Cow	drpkgupta\.in
 1710224100	Cow	moebot\.com\.au
+1710223967	Cow	qtacademy\.com
