@@ -59622,3 +59622,4 @@
 1710226325	Cow	mayanklabels\.com
 1710227500	Cow	indopipe\.id
 1710227565	Nick	Indopipe(?!\.id)
+1710229179	Cow	dccure\.com
