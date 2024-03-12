@@ -59631,3 +59631,4 @@
 1710234679	Cow	sexparter\.com
 1710234756	Cow	mcsolution\.com\.bd
 1710236985	cigien	mc[\W_]*+solution(?!\.com\.bd(?<=mcsolution\.com\.bd))
+1710237035	jps	iautomationtraininghub\.com
