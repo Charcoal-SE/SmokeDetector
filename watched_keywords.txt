@@ -59656,3 +59656,4 @@
 1710264059	Makyen	xo3d(?!\.co\.uk)
 1710264091	Makyen	minecraftbutiopenahotel
 1710264516	Makyen	oko[\W_]*+sh
+1710268537	Vickel	onwavegroup\.com
