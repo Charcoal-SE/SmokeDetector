@@ -59661,3 +59661,4 @@
 1710267427	Cow	usukshop\.com
 1710268537	Vickel	onwavegroup\.com
 1710268943	Vickel	On[\W_]*+Wave[\W_]*+Group(?!\.com(?<=onwavegroup\.com))
+1710270246	Vickel	charidy\.com
