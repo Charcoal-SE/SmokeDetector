@@ -59643,3 +59643,4 @@
 1710243208	Jeff Schaller	ship1psychedelic2clonecard3weed(?#t.me)
 1710245293	cigien	hiredeveloper\.dev
 1710246527	lyxal	trooplondon\.com
+1710247399	cigien	troop[\W_]*+london(?!\.com(?<=trooplondon\.com))
