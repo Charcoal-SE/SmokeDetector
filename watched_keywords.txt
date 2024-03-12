@@ -59654,3 +59654,4 @@
 1710258722	Makyen	wendingha[\W_]*+o\.com
 1710263452	Cow	xo3d\.co\.uk
 1710264059	Makyen	xo3d(?!\.co\.uk)
+1710264091	Makyen	minecraftbutiopenahotel
