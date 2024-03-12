@@ -59657,3 +59657,4 @@
 1710264091	Makyen	minecraftbutiopenahotel
 1710264516	Makyen	oko[\W_]*+sh
 1710267376	Cow	intelliqit\.com
+1710269551	Makyen	intelliqittrainings(?:@gmail\.com)?
