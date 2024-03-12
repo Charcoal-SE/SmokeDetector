@@ -59629,3 +59629,4 @@
 1710233281	cigien	greythonresidential\.com
 1710233312	cigien	greython[\W_]*+residential(?!\.com(?<=greythonresidential\.com))
 1710234679	Cow	sexparter\.com
+1710234756	Cow	mcsolution\.com\.bd
