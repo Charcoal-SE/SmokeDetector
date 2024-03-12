@@ -59621,3 +59621,4 @@
 1710225230	Cow	programiz\.pro
 1710226325	Cow	mayanklabels\.com
 1710227500	Cow	indopipe\.id
+1710227565	Nick	Indopipe(?!\.id)
