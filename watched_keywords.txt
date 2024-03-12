@@ -59633,3 +59633,4 @@
 1710236985	cigien	mc[\W_]*+solution(?!\.com\.bd(?<=mcsolution\.com\.bd))
 1710237035	jps	iautomationtraininghub\.com
 1710239126	cigien	avesfog\.com
+1710239147	cigien	aves[\W_]*+fog(?!\.com(?<=avesfog\.com))
