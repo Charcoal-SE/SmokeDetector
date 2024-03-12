@@ -59662,3 +59662,4 @@
 1710268537	Vickel	onwavegroup\.com
 1710268943	Vickel	On[\W_]*+Wave[\W_]*+Group(?!\.com(?<=onwavegroup\.com))
 1710270246	Vickel	charidy\.com
+1710287751	Makyen	async-futura\.com
