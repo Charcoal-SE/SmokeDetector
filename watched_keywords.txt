@@ -59644,3 +59644,4 @@
 1710246527	lyxal	trooplondon\.com
 1710247399	cigien	troop[\W_]*+london(?!\.com(?<=trooplondon\.com))
 1710247430	cigien	healey[\W_]*+packaging(?!\.co\.uk(?<=healeypackaging\.co\.uk))
+1710252546	Jesse	gabrielcorporativo1997(?:@gmail\.com)?
