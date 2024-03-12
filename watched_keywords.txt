@@ -59625,3 +59625,4 @@
 1710229655	Cow	divenaworld\.com
 1710229864	cigien	divena[\W_]*+world(?!\.com(?<=divenaworld\.com))
 1710229179	Cow	dccure\.com
+1710230266	cigien	www-ikrogerfeedback\.com
