@@ -59672,3 +59672,4 @@
 1710314541	cigien	elk[\W_]*+layer(?!\.com(?<=elklayer\.com))
 1710314573	cigien	kichking\.com
 1710323924	Jeff Schaller	getmehuman\.com
+1710324448	Jeff Schaller	japantoiletsound\.com
