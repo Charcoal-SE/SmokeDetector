@@ -59681,3 +59681,4 @@
 1710351406	General Grievance	instaapkeys\.com
 1710356478	Jeff Schaller	kiizys\.com
 1710372798	Jeff Schaller	pinsaver\.io
+1710372534	Vickel	World[\W_]*+Lоttеrу[\W_]*+Association
