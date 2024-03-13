@@ -5356,7 +5356,7 @@ t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+n[\W_]*+o[\W_]*+c[\W_]*+r[\W_]*+a[\W_]*+t[\W_]*+
 lawyerscorner\.net
 cyber[\W_]*+wizard[\W_]*+com\b
 openread\.net
-auctioneer\.net
+a[\W_]*+u[\W_]*+c[\W_]*+t[\W_]*+i[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+e[\W_]*+r[\W_]*+n[\W_]*+e[\W_]*+t(?#obfuscated auctioneer.net, seen with adwarerecoveryspecialist emails)
 Marketpeace\.net
 rasayanam\.in
 secretsinners\.co\.uk

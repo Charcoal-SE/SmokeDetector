@@ -2921,7 +2921,7 @@ chloe[\W_]*+consultant
 marie[\W_]*+consultancy(?:oz)?(?:@gmail\.com)?
 (?-i:WizardGhosthacker)(?#t.me)
 pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
-adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
+adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?a[\W_]*+u[\W_]*+c[\W_]*+t[\W_]*+i[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+e[\W_]*+r(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?n[\W_]*+e[\W_]*+t)?)?
 (?-i:owD4Gk3d)(?#cutt.ly)
 brunoe[\W_]*+quick[\W_]*+hack(?!\.com(?<=brunoequickhack\.com))(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+(?:[il][\W_]*+){2}(?:dot[\W_]*+)?com)?
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
