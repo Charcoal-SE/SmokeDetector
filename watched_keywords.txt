@@ -59670,3 +59670,4 @@
 1710311813	Nick	metricserp\.com
 1710312180	CPlus	filmsflix\.top
 1710314541	cigien	elk[\W_]*+layer(?!\.com(?<=elklayer\.com))
+1710314573	cigien	kichking\.com
