@@ -59722,3 +59722,4 @@
 1710425612	Jesse	dealia\.com
 1710425670	Jesse	veritasaccountingservices\.com
 1710425734	Jesse	Veritas[\W_]*+Accounting[\W_]*+services?(?!\.com(?<=veritasaccountingservices\.com))
+1710425805	Jesse	nostra\.gg
