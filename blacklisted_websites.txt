@@ -5122,7 +5122,7 @@ vcetests\.com(?!/200-355-vce\.html)
 ffstylishname\.com
 wallarm\.com(?<!docs\.wallarm\.com)(?<!lab\.wallarm\.com)
 fastestvpn\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?# exclude URL when in code)
-wizardwebrecovery\.net
+w[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+r[\W_]*+d[\W_]*+w[\W_]*+e[\W_]*+b[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+n[\W_]*+e[\W_]*+t(?# obfuscated wizardwebrecovery\.net)
 linkedai\.co
 creative-bioarray\.com
 pcpatchedup\.com
@@ -5447,4 +5447,4 @@ paramdigitalmarketing\.com
 coinsqueens\.com
 mathsassignmenthelp\.com
 the-next-tech\.com
-p[\W_]*+r[\W_]*+o[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m[\W_]*+m[\W_]*+e[\W_]*+r[\W_]*+n[\W_]*+e[\W_]*+t
+p[\W_]*+r[\W_]*+o[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m[\W_]*+m[\W_]*+e[\W_]*+r[\W_]*+n[\W_]*+e[\W_]*+t(?#obfuscated programmer.net)

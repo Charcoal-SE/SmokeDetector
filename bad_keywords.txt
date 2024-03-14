@@ -2862,7 +2862,7 @@ coco[\W_]*+cash[\W_]*+loan
 allcoco[\W_]*+cash[\W_]*+loan
 pagli[\W_]*+credit[\W_]*+loan
 d(?:octo)?r[\W_]*+mahlangu
-wizard[\W_]*+web[\W_]*+recovery(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|programmer)[\W_]*+(?:dot[\W_]*+)?(?:com|net))?(?:[\W_]*+(?:team|\d++|[\da-f]{5,}+)s?)*
+w[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+r[\W_]*+d[\W_]*+w[\W_]*+e[\W_]*+b[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?(?:g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l|p[\W_]*+r[\W_]*+o[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m[\W_]*+m[\W_]*+e[\W_]*+r)[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?(?:c[\W_]*+o[\W_]*+m|n[\W_]*+e[\W_]*+t))?(?:[\W_]*+(?:t[\W_]*+e[\W_]*+a[\W_]*+m|\d++|[\da-f]{5,}+)(?:[\W_]*+s)?)*(?# obfuscated wizard web recovery)
 alakmalak(?!\.com)
 pikashow
 reliablehacker\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?(?#seen: reliablehacker06)
