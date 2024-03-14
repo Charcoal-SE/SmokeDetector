@@ -59693,3 +59693,4 @@
 1710391074	Makyen	docktail[\W_]*+pontoon[\W_]*+caddy
 1710390783	CPlus	mswebdesigner\.com
 1710392769	Spevacus	lostinpress\.com
+1710392791	Spevacus	ledgerrlive\.com
