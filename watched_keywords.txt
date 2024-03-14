@@ -59732,3 +59732,4 @@
 1710446343	Makyen	englishhelponline\.me
 1710446481	Makyen	swapeasy\.net
 1710446750	Makyen	poliscio\.com
+1710446795	Makyen	promptsbible\.ai
