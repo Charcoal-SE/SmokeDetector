@@ -59725,3 +59725,4 @@
 1710425805	Jesse	nostra\.gg
 1710437695	Makyen	frontlinem(?!\.com)
 1710423802	Vickel	Bremer[\W_]*+Küchenstudio(?!\.de(?<=bremerkuechenstudio\.de))
+1710441218	Vickel	petssos\.com
