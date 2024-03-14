@@ -3826,6 +3826,7 @@ items:
   disable: true
   ns: dns-parking.net.
 - ns: dns-parking.com.
+  ignore_validation_errors: true
 - ns: host.com.pk.
 - ns: genxwhosting.com.
 - comment: 18/114 over 3 years; disabled 2023-01-27
