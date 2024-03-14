@@ -59690,3 +59690,4 @@
 1710388863	lyxal	docktailbar(?!\.com)
 1710388872	lyxal	docktailbar\.com
 1710390269	Nick	bullsindia187@gmail\.com
+1710390783	CPlus	mswebdesigner\.com
