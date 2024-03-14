@@ -59695,3 +59695,4 @@
 1710392769	Spevacus	lostinpress\.com
 1710392791	Spevacus	ledgerrlive\.com
 1710392812	Spevacus	my-ledgerlive\.com
+1710392849	Spevacus	nx-ledgerlive\.com
