@@ -59721,3 +59721,4 @@
 1710415358	jps	brandonwheelz\.com
 1710425612	Jesse	dealia\.com
 1710425670	Jesse	veritasaccountingservices\.com
+1710425734	Jesse	Veritas[\W_]*+Accounting[\W_]*+services?(?!\.com(?<=veritasaccountingservices\.com))
