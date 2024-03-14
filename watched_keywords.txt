@@ -59688,3 +59688,4 @@
 1710385744	lyxal	epytv\.com
 1710386992	Makyen	epytv(?!\.com)
 1710388863	lyxal	docktailbar(?!\.com)
+1710388872	lyxal	docktailbar\.com
