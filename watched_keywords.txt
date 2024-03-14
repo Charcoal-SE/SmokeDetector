@@ -59704,3 +59704,4 @@
 1710403607	cigien	insuranceproo\.com
 1710403630	cigien	try2service\.com
 1710403660	cigien	try2services?+(?!\.com)
+1710404064	cigien	sleepytimetracks\.com
