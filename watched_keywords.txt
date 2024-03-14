@@ -59706,3 +59706,4 @@
 1710403660	cigien	try2services?+(?!\.com)
 1710404064	cigien	sleepytimetracks\.com
 1710405353	cigien	routingnumberfinder\.org
+1710408468	cigien	perfectessaywriter\.ai
