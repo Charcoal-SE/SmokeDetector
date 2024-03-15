@@ -59759,3 +59759,4 @@
 1710485564	Nick	Atmosly(?!\.com)
 1710485805	Nick	samsparadisevape\.com
 1710485874	Nick	Sam'?s[\W_]*+Paradise[\W_]*+Vape(?!\.com(?<=samsparadisevape\.com))
+1710489069	Nick	brookefield[\W_]*+hospital
