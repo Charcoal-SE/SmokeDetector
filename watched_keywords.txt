@@ -59748,3 +59748,4 @@
 1710481126	Nick	kalopsia-uae\.com
 1710481152	Nick	kalopsia(?!-uae\.com)
 1710483081	Cow	theglamskinclinic\.com
+1710483937	Nick	smartsecures\.com
