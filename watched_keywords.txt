@@ -59741,3 +59741,4 @@
 1710459371	Makyen	(?-i:c05f3fd62)
 1710459393	Makyen	(?-i:akDtGPebAgE)(?#youtu.be)
 1710479194	Makyen	play3plusgames\.com
+1710479217	Makyen	ludo[\W_]*+(?:20)?rivals
