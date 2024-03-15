@@ -59772,3 +59772,4 @@
 1710500036	Jeff Schaller	emtutah\.com
 1710500593	Cow	studyatdurham\.microsoftcrmportals\.com
 1710500479	Cow	nana99asik\.com
+1710504317	cigien	emt[\W_]*+utah(?!\.com(?<=emtutah\.com))
