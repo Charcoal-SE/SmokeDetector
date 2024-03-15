@@ -59774,3 +59774,4 @@
 1710500479	Cow	nana99asik\.com
 1710504317	cigien	emt[\W_]*+utah(?!\.com(?<=emtutah\.com))
 1710504646	cigien	pinascasinos\.com
+1710506560	Makyen	(?-i:brookefieldhospitalbangalore1)(?#medium.com)
