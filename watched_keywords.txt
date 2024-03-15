@@ -59744,3 +59744,4 @@
 1710479217	Makyen	ludo[\W_]*+(?:20)?rivals
 1710479261	Makyen	shirazilaw\.com
 1710480672	Nick	webxeros\.com
+1710480698	Nick	webxeros(?!\.com)
