@@ -59786,3 +59786,4 @@
 1710529442	Vickel	smmpanelone\.com
 1710536886	VLAZ	#VapeDebate
 1710536922	VLAZ	#FlavorVsPotencyVsSmoothness
+1710544030	Nick	asmirvine\.com
