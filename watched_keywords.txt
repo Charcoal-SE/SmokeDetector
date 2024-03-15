@@ -59750,3 +59750,4 @@
 1710483081	Cow	theglamskinclinic\.com
 1710483937	Nick	smartsecures\.com
 1710483972	Nick	Smart[\W_]*+Secures(?!\.com)
+1710484725	cigien	the[\W_]*+glam[\W_]*+skin[\W_]*+clinic(?!\.com(?<=theglamskinclinic\.com))
