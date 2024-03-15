@@ -59762,3 +59762,4 @@
 1710489069	Nick	brookefield[\W_]*+hospital
 1710492086	Jeff Schaller	kwickpackaging\.com
 1710493970	cigien	dosepharmacy(?!\.com)
+1710495014	Cow	xususa\.com
