@@ -59793,3 +59793,4 @@
 1710556844	lyxal	idmcracksdl\.com
 1710567031	Nick	essentialnaturaloils\.com
 1710568158	Nick	medhz\.in
+1710568199	Nick	Medhz(?!\.in)
