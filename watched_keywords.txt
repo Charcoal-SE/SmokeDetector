@@ -59807,3 +59807,4 @@
 1710589171	Vickel	alacartetours\.net
 1710591803	lyxal	magicreview\.ai
 1710593444	Vickel	stucerts\.com
+1710593563	Vickel	stucerts(?!\.com)
