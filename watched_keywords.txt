@@ -59805,3 +59805,4 @@
 1710589716	Vickel	ocex\.com\.pk
 1710589271	Vickel	Alacarte[\W_]*+Tours(?!\.net(?<=alacartetours\.net))
 1710589171	Vickel	alacartetours\.net
+1710593444	Vickel	stucerts\.com
