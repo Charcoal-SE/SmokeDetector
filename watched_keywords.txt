@@ -59784,7 +59784,6 @@
 1710522234	Vickel	aceboater\.com
 1710525508	Vickel	(?-i:tu87ha)(?#rb.gy)
 1710529442	Vickel	smmpanelone\.com
-1710536886	VLAZ	#VapeDebate
 1710536922	VLAZ	#FlavorVsPotencyVsSmoothness
 1710544030	Nick	asmirvine\.com
 1710545338	Nick	instagbio\.in
