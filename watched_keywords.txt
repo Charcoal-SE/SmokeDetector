@@ -59814,3 +59814,4 @@
 1710604315	Makyen	t[\W_]*+developers(?!\.com(?<=t-developers\.com))
 1710606967	Jeff Schaller	jzab\.blogspot
 1710607587	Jeff Schaller	computermania\.com\.bd
+1710608690	Makyen	calculatoracute\.com
