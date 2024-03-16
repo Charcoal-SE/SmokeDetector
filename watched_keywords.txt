@@ -59809,3 +59809,4 @@
 1710593444	Vickel	stucerts\.com
 1710593563	Vickel	stucerts(?!\.com)
 1710600022	Cow	fyxsonmedical\.com
+1710603721	Makyen	friendstraveler\.com
