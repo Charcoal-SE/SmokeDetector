@@ -59812,3 +59812,4 @@
 1710603721	Makyen	friendstraveler\.com
 1710604162	Cow	t-developers\.com
 1710604315	Makyen	t[\W_]*+developers(?!\.com(?<=t-developers\.com))
+1710606967	Jeff Schaller	jzab\.blogspot
