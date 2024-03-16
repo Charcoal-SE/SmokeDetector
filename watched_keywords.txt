@@ -59806,3 +59806,4 @@
 1710589271	Vickel	Alacarte[\W_]*+Tours(?!\.net(?<=alacartetours\.net))
 1710589171	Vickel	alacartetours\.net
 1710591803	lyxal	magicreview\.ai
+1710593444	Vickel	stucerts\.com
