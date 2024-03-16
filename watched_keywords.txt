@@ -59804,3 +59804,4 @@
 1710590687	lyxal	furchildpets\.com
 1710589716	Vickel	ocex\.com\.pk
 1710589271	Vickel	Alacarte[\W_]*+Tours(?!\.net(?<=alacartetours\.net))
+1710589171	Vickel	alacartetours\.net
