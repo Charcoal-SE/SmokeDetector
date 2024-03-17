@@ -5448,3 +5448,4 @@ coinsqueens\.com
 mathsassignmenthelp\.com
 the-next-tech\.com
 p[\W_]*+r[\W_]*+o[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m[\W_]*+m[\W_]*+e[\W_]*+r[\W_]*+n[\W_]*+e[\W_]*+t(?#obfuscated programmer.net)
+brunoequickhack[\W_]*+com
