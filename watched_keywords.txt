@@ -59822,3 +59822,4 @@
 1710674201	Jeff Schaller	sonic-canvas\.com
 1710679618	Cow	c4pcut\.com
 1710688807	Makyen	national-naturalism\.org
+1710709857	Makyen	ancientspiritspellcast(?:@gmail\.com)?
