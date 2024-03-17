@@ -59825,3 +59825,4 @@
 1710709878	Makyen	priest[\W_]*+ade
 1710709899	Makyen	ancientspellcast\.wordpress\.com
 1710714186	Nick	remux\.app
+1710717023	lyxal	brigadia ?tech ?remikeable
