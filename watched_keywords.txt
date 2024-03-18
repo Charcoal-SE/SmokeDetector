@@ -18889,7 +18889,6 @@
 1588238607	tripleee	gemeiwaterpurifier\.com
 1588239853	Mithical	mt\.gox
 1588247283	Xnero	trakop\.com
-1588247514	Makyen	fleek[\W_]*+it[\W_]*+solutions(?!\.com(?<=fleekitsolutions\.com))
 1588247719	Makyen	(?-i:YNoI4\.jpg)
 1588247746	Makyen	blood[\W_]*+balance[\W_]*+formula(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1588247776	Makyen	hefei[\W_]*+gemei(?:[\W_]*+(?:electric|co|ltd|\d++|[\da-f]{4,}+))*
