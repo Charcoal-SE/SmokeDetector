@@ -59859,3 +59859,4 @@
 1710759693	tripleee	seeroo\.com
 1710759724	tripleee	seeroo(?!\.com)
 1710759637	jps	3tierwebsol\.com
+1710760237	tripleee	chesteremerepizza\.ca
