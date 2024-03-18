@@ -59869,3 +59869,4 @@
 1710767655	jps	geeksforgeeks\.org
 1710770088	tripleee	buzz[\W_]*+bar[\W_]*+smoke[\W_]*+shop(?!\.com(?<=buzzbarsmokeshop\.com))
 1710773895	tripleee	(?-i:^Mark daniel$)
+1710776633	cigien	bestdacchub\.com
