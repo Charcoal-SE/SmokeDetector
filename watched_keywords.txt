@@ -56802,7 +56802,6 @@
 1704645062	Makyen	ntx[\W_]*+max(?:[\W_]*+gummies)?
 1704645083	Makyen	(?-i:ZTIg_gIBEAA)(?#groups.google.com/c/microsoft.public.sharepoint.windowsservices)
 1704647536	Jesse	ua-offshore\.com
-1704649103	Jesse	web[\W_]*+genie[\W_]*+recovery
 1704650072	Jesse	activitiesinportugal\.com
 1704651073	Makyen	kutakutaeziza77(?:@gmail\.com)?
 1704651104	Makyen	gadgetbazar\.net
