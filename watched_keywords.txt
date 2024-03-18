@@ -59859,3 +59859,4 @@
 1710759724	tripleee	seeroo(?!\.com)
 1710759637	jps	3tierwebsol\.com
 1710760237	tripleee	chesteremerepizza\.ca
+1710760309	Nick	Chestermere[\W_]*+Pizza(?!\.ca(?<=chesteremerepizza\.ca))
