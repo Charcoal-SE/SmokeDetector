@@ -36988,7 +36988,6 @@
 1648003557	Makyen	motordeviajes\.com
 1648007782	Cody Gray	codecanyon(?<!preview\.codecanyon)codecanyon\.net/(?:user|item)/
 1648008073	Cody Gray	imagekit\.io\/\?utm_
-1648011917	Cody Gray	accountingadvice\.co
 1648014301	tripleee	(?-i:^Fakhri Huda Awalin$)
 1648014888	tripleee	uhamka
 1648017381	Cody Gray	ahmadzadeh\.academy
