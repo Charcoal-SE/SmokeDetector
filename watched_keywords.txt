@@ -59831,3 +59831,4 @@
 1710733647	Nick	thuockedon24h(?!\.com)
 1710737444	Makyen	zyceva
 1710737465	Makyen	erlotinib
+1710737486	Makyen	zydus[\W_]*+oncosciences
