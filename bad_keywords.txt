@@ -2979,3 +2979,4 @@ no[\W_]*+blond[\W_]*+police
 cochinsuraksha(?!\.com)
 alien[\W_]*+wizbot
 flixgrab
+A1[\W_]*+Wizard[\W_]*+Hacker?s?
