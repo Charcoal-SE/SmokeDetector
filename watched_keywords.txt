@@ -59840,3 +59840,4 @@
 1710744410	tripleee	ajgwillfixit\.com
 1710744542	tripleee	relizahub\.com
 1710745014	Nick	SEO[\W_]*+ICT[\W_]*+Circle
+1710746501	Nick	Ritvi[\W_]*+Jewels(?!\.com(?<=ritvijewels\.com))
