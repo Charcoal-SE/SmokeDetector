@@ -59885,3 +59885,4 @@
 1710805130	Makyen	web[\W_]*+genie[\W_]*+recovery(?!\.com(?<=webgenierecovery\.com))
 1710805172	Makyen	crackedkey\.org
 1710806286	Makyen	cid\.2b75b0cf1ce9bf69
+1710806340	Makyen	soacespy@hackermail\.com
