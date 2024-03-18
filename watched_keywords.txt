@@ -59842,3 +59842,4 @@
 1710745014	Nick	SEO[\W_]*+ICT[\W_]*+Circle
 1710746501	Nick	Ritvi[\W_]*+Jewels(?!\.com(?<=ritvijewels\.com))
 1710746300	Cow	ritvijewels\.com
+1710747752	Cow	thedesign-shop\.com
