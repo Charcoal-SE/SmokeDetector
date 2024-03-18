@@ -59858,3 +59858,4 @@
 1710760309	Nick	Chestermere[\W_]*+Pizza(?!\.ca(?<=chesteremerepizza\.ca))
 1710761370	Cow	directwholesale\.com\.au
 1710763425	tripleee	fleek[\W_]*+it[\W_]*+solutions(?!\.com(?<=fleekitsolutions\.com))(?<!^fleek[\W_]*+it[\W_]*+solutions$)
+1710765088	jps	harmonyrealestate\.com\.au
