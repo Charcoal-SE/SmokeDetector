@@ -59843,3 +59843,4 @@
 1710746501	Nick	Ritvi[\W_]*+Jewels(?!\.com(?<=ritvijewels\.com))
 1710746300	Cow	ritvijewels\.com
 1710747752	Cow	thedesign-shop\.com
+1710752122	Jeff Schaller	lyricszones\.com
