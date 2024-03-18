@@ -59850,3 +59850,4 @@
 1710754550	cigien	estawian[\W_]*+nasution
 1710754822	cigien	psilocybinworld\.net
 1710757944	Jeff Schaller	vyaparkranti\.com
+1710757980	Jeff Schaller	dallasautoglass\.net
