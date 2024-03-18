@@ -40056,7 +40056,6 @@
 1656132892	cigien	cronoz[\W_]*+shop(?!\.com(?<=cronozshop\.com))
 1656134161	cigien	sobhasentosa\.org\.in
 1656136205	cigien	(?-i:3n1WeqO)(?#bit.ly)
-1656139730	cigien	flixgrab
 1656142007	cigien	pranahithahospitals\.com
 1656143155	cigien	countrykebabz\.com\.au
 1656149403	Cody Gray	ufav10\.com
