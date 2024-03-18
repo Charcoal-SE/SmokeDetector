@@ -2932,7 +2932,7 @@ ibolt[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=iboltcyberhacker\.com))
 certsarea(?!\.com)
 (?:HAK)?5ISPY(?:HAK)?+(?!\.com(?<=5ISPYHAK\.COM))\d{0,5}
 petercaro@financier\.com
-t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+n[\W_]*+o[\W_]*+c[\W_]*+r[\W_]*+a[\W_]*+t[\W_]*+e?[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y(?![\W_]*+s[\W_]*+i[\W_]*+t[\W_]*+e)(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+n[\W_]*+t[\W_]*+r[\W_]*+a[\W_]*+c[\W_]*+t[\W_]*+o[\W_]*+r[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?n[\W_]*+e[\W_]*+t)?(?#obfuscated technocrate?[\W_]*+recovery including @contractor\.net, but excluding .site matches)
+(?:[a-z\d]++_)?t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+n[\W_]*+o[\W_]*+c[\W_]*+r[\W_]*+a[\W_]*+t[\W_]*+e?[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y(?![\W_]*+s[\W_]*+i[\W_]*+t[\W_]*+e)(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+n[\W_]*+t[\W_]*+r[\W_]*+a[\W_]*+c[\W_]*+t[\W_]*+o[\W_]*+r[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?n[\W_]*+e[\W_]*+t)?(?#obfuscated technocrate?[\W_]*+recovery including @contractor\.net, but excluding .site matches)
 blissparadoxrecovery
 C[\W_]*+d[\W_]*+1[\W_]*+9[\W_]*+2[\W_]*+2[\W_]*+1(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?
 Billionaire[\W_]*+Brain[\W_]*+Wave
