@@ -59875,3 +59875,4 @@
 1710782782	cigien	clickmedialab\.com
 1710782814	cigien	click[\W_]*+media[\W_]*+lab(?!\.com(?<=clickmedialab\.com))
 1710787632	Vickel	askviz\.com
+1710786200	Cow	mydelta8store\.com
