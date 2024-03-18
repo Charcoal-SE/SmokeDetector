@@ -59868,3 +59868,4 @@
 1710765731	tripleee	(?-i:^Sara Martin$)
 1710767548	jps	analyticsjobs\.in
 1710767655	jps	geeksforgeeks\.org
+1710770088	tripleee	buzz[\W_]*+bar[\W_]*+smoke[\W_]*+shop(?!\.com(?<=buzzbarsmokeshop\.com))
