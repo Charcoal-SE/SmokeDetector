@@ -59836,3 +59836,4 @@
 1710739352	Nick	wavlink[\W_]*+Powerline[\W_]*+Setup
 1710743289	Nick	frazersystems\.in
 1710743649	VLAZ	accountants[\W_]*+academy
+1710744352	tripleee	(?-i:^jamie M$)
