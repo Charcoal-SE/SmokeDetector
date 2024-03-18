@@ -59852,3 +59852,4 @@
 1710757944	Jeff Schaller	vyaparkranti\.com
 1710757980	Jeff Schaller	dallasautoglass\.net
 1710632062	Vickel	boabay\.net
+1710632033	Vickel	bitaceminer\.com
