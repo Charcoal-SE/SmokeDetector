@@ -59828,3 +59828,4 @@
 1710719659	Makyen	brigadia[\W_]*+tech[\W_]*+remikeable(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?
 1710733208	Nick	happy-wheels\.co
 1710733604	Nick	thuockedon24h\.com
+1710733647	Nick	thuockedon24h(?!\.com)
