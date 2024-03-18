@@ -59860,3 +59860,4 @@
 1710763425	tripleee	fleek[\W_]*+it[\W_]*+solutions(?!\.com(?<=fleekitsolutions\.com))(?<!^fleek[\W_]*+it[\W_]*+solutions$)
 1710765088	jps	harmonyrealestate\.com\.au
 1710764970	jps	noblehrc\.com
+1710278663	Vickel	codeium\.com
