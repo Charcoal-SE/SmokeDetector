@@ -59849,3 +59849,4 @@
 1710754121	cigien	veniceforums\.com
 1710754550	cigien	estawian[\W_]*+nasution
 1710754822	cigien	psilocybinworld\.net
+1710757944	Jeff Schaller	vyaparkranti\.com
