@@ -59873,3 +59873,4 @@
 1710779947	Vickel	wrangler\.com
 1710782747	cigien	aiwa-ai\.com
 1710782782	cigien	clickmedialab\.com
+1710782814	cigien	click[\W_]*+media[\W_]*+lab(?!\.com(?<=clickmedialab\.com))
