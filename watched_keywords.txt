@@ -59909,3 +59909,4 @@
 1710837436	tripleee	icanvasbooth\.com\.au
 1710840944	cigien	flughafen-transport\.de
 1710841343	lyxal	hituengineering\.com
+1710841379	cigien	hitu[\W_]*+engineering(?!\.com(?<=hituengineering\.com))
