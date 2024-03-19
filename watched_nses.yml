@@ -2902,6 +2902,9 @@ items:
   - ned.ns.cloudflare.com.
 - ns:
   - lisa.ns.cloudflare.com.
+  - norm.ns.cloudflare.com.
+- ns:
+  - lisa.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - ns:
   - lisa.ns.cloudflare.com.
