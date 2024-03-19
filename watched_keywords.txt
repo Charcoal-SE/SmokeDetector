@@ -59897,3 +59897,4 @@
 1710832871	Nick	Fitwell[\W_]*+Hub(?!\.pk(?<=fitwellhub\.pk))
 1710834586	tripleee	iprotech
 1710834680	tripleee	ormsystems\.com
+1710834861	tripleee	visacollect\.com
