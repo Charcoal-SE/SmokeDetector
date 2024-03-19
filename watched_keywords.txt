@@ -59936,3 +59936,4 @@
 1710872377	Makyen	africanacientspellscaster\.com
 1710876463	Vickel	labstats\.com
 1710890215	Makyen	labstats(?!\.com)
+1710879871	Vickel	merlinxl\.com
