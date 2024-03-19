@@ -59919,3 +59919,4 @@
 1710854252	cigien	lin\.ee
 1710857023	Makyen	ufa356
 1710857313	Makyen	(?-i:5vbs4WgqIx8)(?#YouTube)
+1710857345	Makyen	smart[\W_]*+hemp(?:[\W_]*+(?:cbd|gumm(?:ie?|y)|australia|au|buy|benefits|\d++|[\da-f]{5,}+)s?)+
