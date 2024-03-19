@@ -360,6 +360,9 @@ items:
   - gabe.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - langston.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - aliza.ns.cloudflare.com.
