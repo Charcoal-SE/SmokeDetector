@@ -1000,3 +1000,4 @@ Gray Walker
 (?-i:^Ukraine Tank$)
 (?-i:^Roshan Choudhary$)
 ^fleek[\W_]*+it[\W_]*+solutions$
+(?-i:^Gadgets and Accessories$)
