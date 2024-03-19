@@ -22662,7 +22662,6 @@
 1600786837	Spevacus	techwindows\.org
 1600776905	Spevacus	happyfestivals\.com
 1600778265	Spevacus	thetechheadlines\.com
-1600782124	Spevacus	iasiso-latinamerica\.com
 1600805208	Mast	bizloadsolutions\.wordpress\.com
 1600782868	Spevacus	cosmeticsreviewsworld\.com
 1600787480	Spevacus	lisakimberly(?:@gmail\.com)?

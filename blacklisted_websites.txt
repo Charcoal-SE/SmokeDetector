@@ -5452,3 +5452,4 @@ brunoequickhack[\W_]*+com
 accountingadvice\.co
 imperiumdynamics\.com
 argonixhacktech\.com
+iasiso-latinamerica\.com
