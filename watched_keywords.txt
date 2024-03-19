@@ -59899,3 +59899,4 @@
 1710834680	tripleee	ormsystems\.com
 1710834861	tripleee	visacollect\.com
 1710835420	tripleee	visa[\W_]*+collect(?!\.com(?<=visacollect\.com))
+1710835455	tripleee	shearlingland\.com
