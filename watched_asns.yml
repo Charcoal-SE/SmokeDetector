@@ -87,6 +87,7 @@ items:
   comment: 61/132 over a year
   disable: true
 - asn: '42831'
+- asn: '42846'
 - asn: '43317'
 - asn: '45012'
 - asn: '45538'
