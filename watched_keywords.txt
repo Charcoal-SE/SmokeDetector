@@ -59937,3 +59937,4 @@
 1710876463	Vickel	labstats\.com
 1710890215	Makyen	labstats(?!\.com)
 1710879871	Vickel	merlinxl\.com
+1710879964	Vickel	merlinxl(?!\.com)
