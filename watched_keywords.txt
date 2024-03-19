@@ -59903,3 +59903,4 @@
 1710835490	tripleee	lida-turkiye\.com
 1710835655	tripleee	sociolabs\.in
 1710835720	tripleee	socio[\W_]*+labs(?!\.in(?<=sociolabs\.in))
+1710836121	tripleee	ear[\W_]*+solutions
