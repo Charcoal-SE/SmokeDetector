@@ -59911,3 +59911,4 @@
 1710841343	lyxal	hituengineering\.com
 1710841379	cigien	hitu[\W_]*+engineering(?!\.com(?<=hituengineering\.com))
 1710842614	cigien	orionhousing\.com
+1710842653	cigien	orion[\W_]*+housing(?!\.com(?<=orionhousing\.com))
