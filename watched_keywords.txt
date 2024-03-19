@@ -59902,3 +59902,4 @@
 1710835455	tripleee	shearlingland\.com
 1710835490	tripleee	lida-turkiye\.com
 1710835655	tripleee	sociolabs\.in
+1710835720	tripleee	socio[\W_]*+labs(?!\.in(?<=sociolabs\.in))
