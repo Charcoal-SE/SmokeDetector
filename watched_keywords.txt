@@ -59890,3 +59890,4 @@
 1710808586	Makyen	redeem(?:ed)?[\W_]*+hacker[\W_]*+pro(?!\.com(?<=redeemedhackerpro\.com))(?!\.wixsite\.com(?<=redeemedhackerpro\.wixsite\.com))
 1710808612	Makyen	redeemedhackerpro\.wixsite\.com
 1710817333	lyxal	vinalifevietnam\.com\.vn
+1710817705	Makyen	vinalifevietnam(?!\.com\.vn)
