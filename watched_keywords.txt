@@ -59922,3 +59922,4 @@
 1710857345	Makyen	smart[\W_]*+hemp(?:[\W_]*+(?:cbd|gumm(?:ie?|y)|australia|au|buy|benefits|\d++|[\da-f]{5,}+)s?)+
 1710857407	Makyen	ufabet356
 1710857969	Makyen	peppynite(?!\.com)
+1710858235	cigien	bodapi\.com
