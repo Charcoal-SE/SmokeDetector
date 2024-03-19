@@ -59901,3 +59901,4 @@
 1710835420	tripleee	visa[\W_]*+collect(?!\.com(?<=visacollect\.com))
 1710835455	tripleee	shearlingland\.com
 1710835490	tripleee	lida-turkiye\.com
+1710835655	tripleee	sociolabs\.in
