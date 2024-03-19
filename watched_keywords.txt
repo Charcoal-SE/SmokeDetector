@@ -59929,3 +59929,4 @@
 1710861806	Makyen	gizmogo\.com
 1710861838	Makyen	gizmogo(?!\.com)
 1710862209	cigien	business-plan\.ir
+1710868401	Vickel	get@flybreeze\.com
