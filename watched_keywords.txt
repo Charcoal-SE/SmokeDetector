@@ -59888,3 +59888,4 @@
 1710806340	Makyen	soacespy@hackermail\.com
 1710806696	Vickel	redeemedhackerpro\.com
 1710808586	Makyen	redeem(?:ed)?[\W_]*+hacker[\W_]*+pro(?!\.com(?<=redeemedhackerpro\.com))(?!\.wixsite\.com(?<=redeemedhackerpro\.wixsite\.com))
+1710808612	Makyen	redeemedhackerpro\.wixsite\.com
