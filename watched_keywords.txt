@@ -59896,3 +59896,4 @@
 1710832445	tripleee	candidats
 1710832871	Nick	Fitwell[\W_]*+Hub(?!\.pk(?<=fitwellhub\.pk))
 1710834586	tripleee	iprotech
+1710834680	tripleee	ormsystems\.com
