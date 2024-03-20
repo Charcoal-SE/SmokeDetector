@@ -59940,3 +59940,4 @@
 1710879964	Vickel	merlinxl(?!\.com)
 1710890435	Makyen	freeds\.es
 1710896754	Makyen	bella[\W_]*+rose(?!$(?<=^bella rose$))
+1710899247	Jeff Schaller	paksimga\.info
