@@ -59956,3 +59956,4 @@
 1710916533	Nick	Tejomaya[\W_]*+resorts(?!\.com(?<=tejomayaresorts\.com))
 1710916969	Nick	fexle\.com
 1710917016	Nick	FEXLE[\W_]*+Services
+1710919355	cigien	cat[\W_]*+exotica(?!\.com(?<=catexotica\.com))
