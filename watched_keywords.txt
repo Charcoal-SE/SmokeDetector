@@ -59966,3 +59966,4 @@
 1710930658	cigien	safarifun\.netlify\.app
 1710931088	cigien	fruistrategy\.com
 1710931120	cigien	fruistrategy(?!\.com)
+1710931145	cigien	fruistragety
