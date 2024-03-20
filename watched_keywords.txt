@@ -59989,3 +59989,4 @@
 1710947529	Makyen	buytopple(?:usdt|bnb|cake)(?#tinyurl.com)
 1710947953	Makyen	health[\W_]*+and[\W_]*+fitz
 1710948510	cigien	mantaztech\.com
+1710948887	General Grievance	nhientra\.com
