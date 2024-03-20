@@ -59986,3 +59986,4 @@
 1710947464	Makyen	topple[\W_]*+token
 1710947486	Makyen	comprar[\W_]*+con
 1710947508	Makyen	(?-i:toppleprice)(?#tinyurl.com)
+1710947529	Makyen	buytopple(?:usdt|bnb|cake)(?#tinyurl.com)
