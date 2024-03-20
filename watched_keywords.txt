@@ -59954,3 +59954,4 @@
 1710916181	Nick	SUPRO[\W_]*+SECURITY[\W_]*+SERVICES(?!\.com(?<=suprosecurityservices\.com))
 1710916212	Nick	trippybabatours\.com
 1710916499	Nick	tejomayaresorts\.com
+1710916533	Nick	Tejomaya[\W_]*+resorts(?!\.com(?<=tejomayaresorts\.com))
