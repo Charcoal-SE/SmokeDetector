@@ -59983,3 +59983,4 @@
 1710945824	Makyen	spectra[\W_]*+laser[\W_]*+carbon[\W_]*+peel
 1710946143	VLAZ	blogsintra\.xyz
 1710946167	VLAZ	blogsintra(?!\.xyz)
+1710947464	Makyen	topple[\W_]*+token
