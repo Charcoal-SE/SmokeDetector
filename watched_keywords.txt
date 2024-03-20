@@ -59973,3 +59973,4 @@
 1710935733	cigien	hansraj[\W_]*+ventures(?!\.com(?<=hansrajventures\.com))
 1710935785	cigien	themepacific\.com
 1710935807	cigien	naucmese\.cz
+1710935829	cigien	byfc0396\.com
