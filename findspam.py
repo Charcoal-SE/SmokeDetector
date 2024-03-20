@@ -2295,7 +2295,7 @@ FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", re
                                              })
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
                                                  max_rep=52, max_score=5, skip_creation_sanity_check=True,
-                                                 rule_id="main blacklisted websites")
+                                                 username=True, rule_id="main blacklisted websites")
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
                                                   skip_creation_sanity_check=True,
