@@ -3896,7 +3896,6 @@ items:
 - comment: no longer resolves 2021-4-22
   disable: true
   ns: permainanceme.online.
-- ns: resourcesofnet.net.
 - ns: bh-20.webhostbox.net.
 - ns: bh-29.webhostbox.net.
 - ns: bh-40.webhostbox.net.
