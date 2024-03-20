@@ -59950,3 +59950,4 @@
 1710913926	Makyen	glenridge[\W_]*+animal[\W_]*+hospital(?!\.com(?<=glenridgeanimalhospital\.com))
 1710913978	Makyen	glenridgeah(?:@gmail\.com)?
 1710916055	Nick	finarbconsulting\.com
+1710916125	Nick	suprosecurityservices\.com
