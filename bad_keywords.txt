@@ -539,7 +539,6 @@ formula[\W_]*+focus
 dermedica
 follicle[\W_]*+rx
 tekmale
-bella[\W_]*+rose
 magnetique[\W_]*+hair
 slim[\W_]*+365
 test(?<=/test)factor(?:=[-/])
