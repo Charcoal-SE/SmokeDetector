@@ -59959,3 +59959,4 @@
 1710919355	cigien	cat[\W_]*+exotica(?!\.com(?<=catexotica\.com))
 1710920791	cigien	healthandfitz\.com
 1710922573	Nick	fabritual\.com
+1710922606	Nick	Fabritual(?!\.com(?<=fabritual\.com))
