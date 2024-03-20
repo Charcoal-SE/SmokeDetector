@@ -59958,3 +59958,4 @@
 1710917016	Nick	FEXLE[\W_]*+Services
 1710919355	cigien	cat[\W_]*+exotica(?!\.com(?<=catexotica\.com))
 1710920791	cigien	healthandfitz\.com
+1710922573	Nick	fabritual\.com
