@@ -975,6 +975,9 @@ items:
   - walt.ns.cloudflare.com.
 - ns:
   - bristol.ns.cloudflare.com.
+  - christian.ns.cloudflare.com.
+- ns:
+  - bristol.ns.cloudflare.com.
   - hasslo.ns.cloudflare.com.
 - ns:
   - brit.ns.cloudflare.com.
