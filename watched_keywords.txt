@@ -59942,3 +59942,4 @@
 1710896754	Makyen	bella[\W_]*+rose(?!$(?<=^bella rose$))
 1710899247	Jeff Schaller	paksimga\.info
 1710899277	Jeff Schaller	simownersdetails\.com
+1710899504	Vickel	additigupta\.in
