@@ -59980,3 +59980,4 @@
 1710941155	cigien	computermousejiggler\.com
 1710876552	Vickel	support@labstats\.com
 1710944470	jps	flixmax\.stream
+1710945824	Makyen	spectra[\W_]*+laser[\W_]*+carbon[\W_]*+peel
