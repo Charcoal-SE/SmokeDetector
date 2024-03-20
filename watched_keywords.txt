@@ -59955,3 +59955,4 @@
 1710916212	Nick	trippybabatours\.com
 1710916499	Nick	tejomayaresorts\.com
 1710916533	Nick	Tejomaya[\W_]*+resorts(?!\.com(?<=tejomayaresorts\.com))
+1710916969	Nick	fexle\.com
