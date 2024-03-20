@@ -59971,3 +59971,4 @@
 1710933982	lyxal	airlinerpro\.com
 1710935712	cigien	hansrajventures\.com
 1710935733	cigien	hansraj[\W_]*+ventures(?!\.com(?<=hansrajventures\.com))
+1710935785	cigien	themepacific\.com
