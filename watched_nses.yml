@@ -2043,6 +2043,9 @@ items:
   - gabe.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
+  - gabriel.ns.cloudflare.com.
+  - irma.ns.cloudflare.com.
+- ns:
   - gabriella.ns.cloudflare.com.
   - kaiser.ns.cloudflare.com.
 - ns:
