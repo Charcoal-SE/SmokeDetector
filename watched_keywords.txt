@@ -59963,3 +59963,4 @@
 1710928867	cigien	modernopticals\.com
 1710928934	cigien	accurate[\W_]*+capital[\W_]*+plus
 1710929165	cigien	byture\.com
+1710930658	cigien	safarifun\.netlify\.app
