@@ -59960,3 +59960,4 @@
 1710920791	cigien	healthandfitz\.com
 1710922573	Nick	fabritual\.com
 1710922606	Nick	Fabritual(?!\.com(?<=fabritual\.com))
+1710928867	cigien	modernopticals\.com
