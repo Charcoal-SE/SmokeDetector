@@ -59947,3 +59947,4 @@
 1710907900	Makyen	odmt\.in
 1710911913	Makyen	hamadslime\.com
 1710913894	Makyen	glenridgeanimalhospital\.com
+1710913926	Makyen	glenridge[\W_]*+animal[\W_]*+hospital(?!\.com(?<=glenridgeanimalhospital\.com))
