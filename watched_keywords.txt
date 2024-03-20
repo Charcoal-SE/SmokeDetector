@@ -59952,3 +59952,4 @@
 1710916055	Nick	finarbconsulting\.com
 1710916125	Nick	suprosecurityservices\.com
 1710916181	Nick	SUPRO[\W_]*+SECURITY[\W_]*+SERVICES(?!\.com(?<=suprosecurityservices\.com))
+1710916212	Nick	trippybabatours\.com
