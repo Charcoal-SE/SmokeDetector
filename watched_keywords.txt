@@ -59961,3 +59961,4 @@
 1710922573	Nick	fabritual\.com
 1710922606	Nick	Fabritual(?!\.com(?<=fabritual\.com))
 1710928867	cigien	modernopticals\.com
+1710928934	cigien	accurate[\W_]*+capital[\W_]*+plus
