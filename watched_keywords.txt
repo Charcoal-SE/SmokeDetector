@@ -60001,3 +60001,4 @@
 1710980664	Nick	MAC[\W_]*+WIKI[\W_]*+TEAM
 1710980736	Nick	macwikisupp?ort(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1710982921	Jeff Schaller	toolz\.store
+1710990818	Spevacus	pstmng88\.com
