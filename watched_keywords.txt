@@ -60006,3 +60006,4 @@
 1710995890	Makyen	pusat[\W_]*+menang
 1710999903	VLAZ	tomsfashion\.com
 1710999924	VLAZ	tom['’]?s[\W_]*+fashion(?!\.com(?<=tomsfashion\.com))
+1711004817	Nick	informaticamaestra\.com
