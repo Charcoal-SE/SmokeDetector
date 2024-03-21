@@ -60022,3 +60022,4 @@
 1711020443	cigien	smsdeals\.co\.in
 1711020475	cigien	sms[\W_]*+deals(?!\.co\.in(?<=smsdeals\.co\.in))
 1711030309	Can O' Spam	techmihabun\.blogspot
+1711031661	cigien	avijovo\.com
