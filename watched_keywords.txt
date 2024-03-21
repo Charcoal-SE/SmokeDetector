@@ -60023,3 +60023,4 @@
 1711030309	Can O' Spam	techmihabun\.blogspot
 1711031661	cigien	avijovo\.com
 1711031682	cigien	avijovo(?!\.com)
+1711042131	cigien	cctv-camerabd\.blogspot
