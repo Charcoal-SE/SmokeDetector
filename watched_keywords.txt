@@ -60018,3 +60018,4 @@
 1711015443	cigien	theglobalstardom\.com
 1711015503	cigien	indonesian-online\.com\.
 1711015536	cigien	indonesian[\W_]*+online(?!\.com(?<=indonesian-online\.com))
+1711018664	Jeff Schaller	voyagevista9\.com
