@@ -59998,3 +59998,4 @@
 1710963999	Mast	mostbet-partner\.com
 1710969194	Mast	iptolocation\.io
 1710972660	Mast	diamondsourcenyc\.com
+1710980664	Nick	MAC[\W_]*+WIKI[\W_]*+TEAM
