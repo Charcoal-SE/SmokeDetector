@@ -60025,3 +60025,4 @@
 1711031682	cigien	avijovo(?!\.com)
 1711042131	cigien	cctv-camerabd\.blogspot
 1711052237	Vickel	spoo-design\.de
+1711059136	Vickel	Anjani[\W_]*+Loan[\W_]*+App
