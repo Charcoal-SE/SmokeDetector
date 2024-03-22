@@ -60036,3 +60036,4 @@
 1711089157	Cow	rentalguidelines\.com
 1711099666	VLAZ	balroofingltd\.co\.uk
 1711099518	Cow	folklorecollections\.com
+1711100191	VLAZ	folklore[\W_]*+collections(?!\.com(?<=folklorecollections\.com))
