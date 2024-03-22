@@ -60051,3 +60051,4 @@
 1711109125	cigien	himalaiiasclasses\.com
 1711109156	cigien	himalai(?!\.in)
 1711109191	cigien	himalai\.in
+1711112152	cigien	mekansohbet\.com\.tr
