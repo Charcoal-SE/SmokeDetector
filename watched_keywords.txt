@@ -60052,3 +60052,4 @@
 1711109156	cigien	himalai(?!\.in)
 1711109191	cigien	himalai\.in
 1711112152	cigien	mekansohbet\.com\.tr
+1711112822	Cow	grantpharmacy\.com
