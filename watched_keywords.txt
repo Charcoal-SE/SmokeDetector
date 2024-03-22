@@ -60032,3 +60032,4 @@
 1711064839	Vickel	iboltcyber[\W_]*+hack(?:[\W_]*+(?:dot[\W_]*+)?com)?
 1711059136	Vickel	Anjani[\W_]*+Loan[\W_]*+App
 1711044737	Cow	medicusunion\.com
+1711096616	VLAZ	wings\.com\.vn
