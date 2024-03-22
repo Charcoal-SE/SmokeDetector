@@ -60047,3 +60047,4 @@
 1711107250	Nick	eagabriz\.com
 1711107359	Nick	onkenyanroads\.com
 1711107531	cigien	eagabriz(?!\.com)
+1711108185	cigien	thehouseplantfix\.com
