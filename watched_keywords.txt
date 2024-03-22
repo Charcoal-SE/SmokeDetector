@@ -60035,3 +60035,4 @@
 1711096616	VLAZ	wings\.com\.vn
 1711089157	Cow	rentalguidelines\.com
 1711099666	VLAZ	balroofingltd\.co\.uk
+1711099518	Cow	folklorecollections\.com
