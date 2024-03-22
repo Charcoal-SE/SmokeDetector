@@ -60057,3 +60057,4 @@
 1711113516	VLAZ	thecouriertracker\.com
 1711114096	Jeff Schaller	linuxcybersecurity\.com
 1711116406	cigien	linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
+1711132839	Cow	drcars\.ae
