@@ -5456,3 +5456,4 @@ iasiso-latinamerica\.com
 almabetter\.com
 infisign\.io
 cybegal\.net
+g\.page
