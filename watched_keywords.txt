@@ -60043,3 +60043,4 @@
 1711101833	Jeff Schaller	365chemists\.com
 1711101908	Jeff Schaller	tonixtools\.com
 1711103087	cigien	elune\.com\.ua
+1711103108	cigien	elune(?!\.com\.ua)
