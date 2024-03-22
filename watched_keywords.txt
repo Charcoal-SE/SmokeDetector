@@ -60056,3 +60056,4 @@
 1711113484	VLAZ	wetrackcourier\.com
 1711113516	VLAZ	thecouriertracker\.com
 1711114096	Jeff Schaller	linuxcybersecurity\.com
+1711116406	cigien	linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
