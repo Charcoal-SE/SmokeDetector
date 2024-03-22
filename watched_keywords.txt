@@ -60034,3 +60034,4 @@
 1711044737	Cow	medicusunion\.com
 1711096616	VLAZ	wings\.com\.vn
 1711089157	Cow	rentalguidelines\.com
+1711099518	Cow	folklorecollections\.com
