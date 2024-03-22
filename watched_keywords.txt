@@ -60038,3 +60038,4 @@
 1711099518	Cow	folklorecollections\.com
 1711100191	VLAZ	folklore[\W_]*+collections(?!\.com(?<=folklorecollections\.com))
 1711100767	Cow	brightinstitutemohali\.com
+1711101606	Jeff Schaller	elementsofcomputerscience\.com
