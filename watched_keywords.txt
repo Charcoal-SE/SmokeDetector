@@ -60061,3 +60061,4 @@
 1711133980	Vickel	findgst\.com\.au
 1711129976	Cow	limpanomesmr\.com\.br
 1711148744	Vickel	hernandezvideo\.com
+1711150299	Makyen	tonixtools(?!\.com)
