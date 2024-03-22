@@ -60030,3 +60030,4 @@
 1711093003	Cow	yukiemotors\.com
 1711095910	Nick	(?-i:CYIE1EiUigETEBM)(?#g.page)
 1711064839	Vickel	iboltcyber[\W_]*+hack(?:[\W_]*+(?:dot[\W_]*+)?com)?
+1711059136	Vickel	Anjani[\W_]*+Loan[\W_]*+App
