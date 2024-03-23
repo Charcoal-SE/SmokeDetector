@@ -45,3 +45,12 @@ dns_cache_cleanup_interval=300.0
 # being in the list. If no list is specified, then all detections are run.
 # Whitespace is not trimmed from the entries in the list.
 # valid_detection_reasons:potentially bad keyword in {};potentially bad IP for hostname in {}
+
+# Set an alternative prefix for chat messages posted by SD
+# chat_prefix=Demo
+
+# The name of the bot
+# smokedetector_name=SmokeDetector
+
+# The URL path of the repo
+# smokedetector_repo=Charcoal-SE/SmokeDetector
