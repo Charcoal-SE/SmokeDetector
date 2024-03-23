@@ -60066,3 +60066,4 @@
 1711168408	Nick	live-iptv\.co\.uk
 1711168430	Nick	best-iptv-4k\.store
 1711168451	Nick	sverige-iptv\.store
+1711168473	Nick	iptv-skandinavisk\.(?:shop|store)
