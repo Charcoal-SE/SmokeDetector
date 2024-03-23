@@ -2979,3 +2979,4 @@ cochinsuraksha(?!\.com)
 alien[\W_]*+wizbot
 flixgrab
 A1[\W_]*+Wizard[\W_]*+Hacker?s?
+hacknetcyberprofessor10(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
