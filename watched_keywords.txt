@@ -60081,3 +60081,4 @@
 1711191949	Cow	thebizguardian\.com
 1711197085	Vickel	brainlawsuit\.com
 1711208711	Robert Longson	collegeverse\.co\.in
+1711216593	Makyen	(?-i:Autodesk_Official1)(?#t.me)
