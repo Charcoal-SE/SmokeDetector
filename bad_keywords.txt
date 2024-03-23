@@ -21,7 +21,7 @@ Nitroxin
 Bowtrol
 slim[\W_]*+genix
 cleanse[\W_]*+efx
-alpha(?!\s*[=*(),.]\s*max)(?!\s*max\s*(?:is\s+\d|[=/+*;]))(?<!\\alpha)(?<!\{alpha)(?<!\(alpha)(?!_prime$)(?!(?-i: Prime(?<=^Alpha Prime))$)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)
+alpha(?!\s*[=*(),.]\s*max)(?!\s*max\s*(?:is\s+\d|[=/+*;]))(?<![\\{("]alpha)(?<![\s>]--alpha)(?!\](?<=\\\[alpha\]))(?!_prime$)(?!(?-i: Prime(?<=^Alpha Prime))$)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime(?![\W]*+(?:dev|lens(?:es)?)\b)|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)(?#alpha followed by multiple different words)(?#" syntax highlighting fodder)
 exoslim
 blackline[\W_]*+elite
 testcore[\W_]*+pro
