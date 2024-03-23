@@ -60069,3 +60069,4 @@
 1711168473	Nick	iptv-skandinavisk\.(?:shop|store)
 1711171810	Nick	personaltouchaesthetic\.com
 1711171874	Nick	Personal[\W_]*+Touch[\W_]*+Aesthetics?(?!\.com(?<=personaltouchaesthetic\.com))
+1711175956	VLAZ	1x99p(?#2ly.link)
