@@ -60103,3 +60103,4 @@
 1711303728	Makyen	mecci[\W_]*+engineer(?!\.com(?<=mecciengineer\.com))s?(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
 1711306996	VLAZ	trade11\.net
 1711307018	VLAZ	trade11\.io
+1711307064	VLAZ	trade11(?:official|io|net|beta)?(?!\.net|\.io(?<=trade11\.net|trade11\.io))
