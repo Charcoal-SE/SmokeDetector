@@ -60099,3 +60099,4 @@
 1711303614	Makyen	cdrforengineer(?!\.com)s?
 1711303646	Makyen	code2engineer(?!\.com)
 1711303670	Makyen	hiresqaengineer\.com
+1711303703	Makyen	hire[\W_]*+s?qa[\W_]*+engineer(?!\.com(?<=hiresqaengineer\.com))s?
