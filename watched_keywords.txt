@@ -60096,3 +60096,4 @@
 1711286835	cigien	ilyasmayo\.blogspot
 1711286940	Jeff Schaller	([A-Za-z0-9]{5}-){4}[A-Za-z0-9]{5}
 1711289684	Cow	ebexsoft\.com
+1711303614	Makyen	cdrforengineer(?!\.com)s?
