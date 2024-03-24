@@ -60101,3 +60101,4 @@
 1711303670	Makyen	hiresqaengineer\.com
 1711303703	Makyen	hire[\W_]*+s?qa[\W_]*+engineer(?!\.com(?<=hiresqaengineer\.com))s?
 1711303728	Makyen	mecci[\W_]*+engineer(?!\.com(?<=mecciengineer\.com))s?(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
+1711306996	VLAZ	trade11\.net
