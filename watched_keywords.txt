@@ -60089,3 +60089,4 @@
 1711248959	General Grievance	ideanest\.net
 1711258633	Makyen	extraphunceleb\.in
 1711260175	Nick	Approm[\W_]*+CC
+1711279696	Nick	kappasense\.com
