@@ -60109,3 +60109,4 @@
 1711311637	Makyen	controlmyfate\.com
 1711312313	Cow	naturadubai\.com
 1711312878	Makyen	naturadubai(?!\.com)
+1711316373	Jeff Schaller	(?-i:aauhMyTrU0A)(?#YouTube)
