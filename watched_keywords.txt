@@ -60108,3 +60108,4 @@
 1711311535	Makyen	dev-eagaming\.pantheonsite\.io
 1711311637	Makyen	controlmyfate\.com
 1711312313	Cow	naturadubai\.com
+1711312878	Makyen	naturadubai(?!\.com)
