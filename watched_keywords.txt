@@ -60083,3 +60083,4 @@
 1711208711	Robert Longson	collegeverse\.co\.in
 1711216593	Makyen	(?-i:Autodesk_Official1)(?#t.me)
 1711214198	Cow	iraniaz\.ir
+1711245291	Makyen	zeusbola(?:\.win)?(?#not a domain)
