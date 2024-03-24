@@ -60094,3 +60094,4 @@
 1711226240	Vickel	eldorado\.gg
 1711215534	Cow	immortalboost\.com
 1711286835	cigien	ilyasmayo\.blogspot
+1711286940	Jeff Schaller	([A-Za-z0-9]{5}-){4}[A-Za-z0-9]{5}
