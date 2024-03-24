@@ -60098,3 +60098,4 @@
 1711289684	Cow	ebexsoft\.com
 1711303614	Makyen	cdrforengineer(?!\.com)s?
 1711303646	Makyen	code2engineer(?!\.com)
+1711303670	Makyen	hiresqaengineer\.com
