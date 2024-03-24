@@ -60085,3 +60085,4 @@
 1711214198	Cow	iraniaz\.ir
 1711245291	Makyen	zeusbola(?:\.win)?(?#not a domain)
 1711247727	Nick	minervadb\.xyz
+1711248959	General Grievance	ideanest\.net
