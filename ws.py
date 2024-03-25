@@ -21,7 +21,7 @@ from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
 import chatcommunicate
-from datetime import datetime, timezone
+from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import (load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts,
@@ -230,7 +230,7 @@ def check_socket_connections():
     socket_failure = False
     with chatcommunicate._clients_lock:
         for client in chatcommunicate._clients.values():
-            if client.last_activity and (datetime.now(tz=timezone.utc) - client.last_activity).total_seconds() >= 60:
+            if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
                 socket_failure = True
     if socket_failure:
         exit_mode("socket_failure")
@@ -313,7 +313,7 @@ while not GlobalVars.no_se_activity_scan:
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
-        now = datetime.now(tz=timezone.utc)
+        now = datetime.utcnow()
         delta = now - GlobalVars.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()

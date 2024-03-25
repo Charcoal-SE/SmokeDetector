@@ -7,7 +7,7 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
-from datetime import datetime, timezone
+from datetime import datetime
 from string import punctuation
 import time
 import os
@@ -1358,7 +1358,7 @@ def purge_cache(cachevar, limit):
     '''
     oldest = sorted(cachevar, key=lambda k: cachevar[k]['timestamp'])[0:limit + 1]
     remaining = oldest.pop()
-    now = datetime.now(tz=timezone.utc)
+    now = datetime.utcnow()
     log('debug', 'purge_cache({0}): age of oldest entry is {1}'.format(
         limit, now - cachevar[oldest[0]]['timestamp']))
     log('debug', 'purge_cache({0}): oldest remaining entry is {1}'.format(
@@ -1372,7 +1372,7 @@ def purge_cache(cachevar, limit):
 def dns_query(label, qtype):
     # If there's no cache then assume *now* is important
     try:
-        starttime = datetime.now(tz=timezone.utc)
+        starttime = datetime.utcnow()
         # Extend lifetime if we are running a test
         extra_params = dict()
         if "pytest" in sys.modules:
@@ -1382,11 +1382,11 @@ def dns_query(label, qtype):
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
         else:
-            endtime = datetime.now(tz=timezone.utc)
+            endtime = datetime.utcnow()
             log('warning', 'DNS error {0} (duration: {1})'.format(
                 exc, endtime - starttime))
         return None
-    endtime = datetime.now(tz=timezone.utc)
+    endtime = datetime.utcnow()
     return answer
 
 
@@ -1652,7 +1652,7 @@ def post_links(post):
             log('debug', 'LINK_CACHE purged')
 
         linkset = set(links)
-        LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.now(tz=timezone.utc)}
+        LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.utcnow()}
         return linkset
 
 

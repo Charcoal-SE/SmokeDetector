@@ -5,7 +5,7 @@ import threading
 import copy
 from itertools import chain
 from operator import itemgetter
-from datetime import datetime, timezone
+from datetime import datetime
 
 import requests
 import psutil
@@ -182,7 +182,7 @@ class BodyFetcher:
 
                 # This line only works if we are using a dict in the self.queue[hostname] object, which we
                 # should be with the previous conversion code.
-                self.queue[hostname][str(question_id)] = datetime.now(tz=timezone.utc)
+                self.queue[hostname][str(question_id)] = datetime.utcnow()
                 flovis_dict = None
                 if GlobalVars.flovis is not None:
                     flovis_dict = {sk: list(sq.keys()) for sk, sq in self.queue.items()}
@@ -379,7 +379,7 @@ class BodyFetcher:
                     return None
                 self.cpu_starvation_warning_thread_launched()
                 special_sites = []
-                is_time_sensitive_time = datetime.now(tz=timezone.utc).hour in range(4, 12)
+                is_time_sensitive_time = datetime.utcnow().hour in range(4, 12)
                 with self.queue_lock:
                     sites_in_queue = {site: len(values) for site, values in self.queue.items()}
                 # Get sites listed in special cases and as time_sensitive
@@ -495,7 +495,7 @@ class BodyFetcher:
                                         {'site': site, 'posts': list(new_posts.keys())})
 
         # Add queue timing data
-        pop_time = datetime.now(tz=timezone.utc)
+        pop_time = datetime.utcnow()
         post_add_times = [(pop_time - v).total_seconds() for k, v in new_posts.items()]
         Tasks.do(add_queue_timing_data, site, post_add_times)
 
@@ -570,7 +570,7 @@ class BodyFetcher:
             if GlobalVars.api_backoff_time > time.time():
                 time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
             try:
-                time_request_made = datetime.now(tz=timezone.utc).strftime('%H:%M:%S')
+                time_request_made = datetime.utcnow().strftime('%H:%M:%S')
                 response = requests.get(url, params=params, timeout=20).json()
                 response_timestamp = time.time()
             except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
