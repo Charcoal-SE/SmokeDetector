@@ -1,5 +1,5 @@
 # coding=utf-8
-from datetime import datetime, timezone
+from datetime import datetime
 import os
 import traceback
 import threading
@@ -13,7 +13,7 @@ from globalvars import GlobalVars
 
 # noinspection PyProtectedMember
 def uncaught_exception(exctype, value, tb):
-    delta = datetime.now(tz=timezone.utc) - GlobalVars.startup_utc_date
+    delta = datetime.utcnow() - GlobalVars.startup_utc_date
     log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype not in \
             {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
