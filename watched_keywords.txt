@@ -60125,3 +60125,4 @@
 1711359990	cigien	autoaid\.in
 1711360009	cigien	auto[\W_]*+aid(?!\.in(?<=autoaid\.in))
 1711362491	Jeff Schaller	dragonpharmastore\.com
+1711367946	cigien	delaytiming\.com
