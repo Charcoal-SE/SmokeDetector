@@ -41953,7 +41953,6 @@
 1661317576	cigien	binarykitchen\.com
 1661325115	Robert Longson	com\.kotak\.neo
 1661325243	Robert Longson	dsi-me\.com
-1661337074	Cody Gray	quellxcode\.com
 1661337253	Cody Gray	quellxcode(?!\.com)
 1661337541	Cody Gray	super[\W_]*slim[\W_]*keto[\W_]*gummies
 1661339562	Cody Gray	AdPumb(?!\.com)
@@ -60113,3 +60112,20 @@
 1711316607	Jeff Schaller	technologyupdate421\.blogspot
 1711338809	lyxal	chancerychambers\.net
 1711339790	Makyen	chancery[\W_]*+chambers(?!\.net(?<=chancerychambers\.net))
+1711342297	Makyen	alyomhost\.com
+1711351911	tripleee	okkabeauty\.com
+1711351968	tripleee	okka[\W_]*+beauty(?!\.com(?<=okkabeauty\.com))(?:[\W_]*+dubai)?
+1711354028	cigien	allblacksvsfiji\.com
+1711354058	cigien	menzclinic\.com
+1711354079	cigien	bixbitusa\.io
+1711354105	cigien	bixbit\.io
+1711354134	cigien	bixbit(?!\.io)
+1711357020	VLAZ	irohub\.com
+1711359145	cigien	hajjandumrahexperts\.co\.uk
+1711359990	cigien	autoaid\.in
+1711360009	cigien	auto[\W_]*+aid(?!\.in(?<=autoaid\.in))
+1711362491	Jeff Schaller	dragonpharmastore\.com
+1711367946	cigien	delaytiming\.com
+1711371387	Jeff Schaller	brienstone02
+1711375463	cigien	codeyai\.com
+1711383115	Vickel	wmcasino\.cc
