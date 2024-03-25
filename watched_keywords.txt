@@ -60120,3 +60120,4 @@
 1711354058	cigien	menzclinic\.com
 1711354079	cigien	bixbitusa\.io
 1711354105	cigien	bixbit\.io
+1711354134	cigien	bixbit(?!\.io)
