@@ -60129,3 +60129,4 @@
 1711371387	Jeff Schaller	brienstone02
 1711375463	cigien	codeyai\.com
 1711383115	Vickel	wmcasino\.cc
+1711384644	Vickel	time[\W_]*+agency[\W_]*+group(?!\.com(?<=timeagencygroup\.com))
