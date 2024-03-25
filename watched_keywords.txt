@@ -60117,3 +60117,4 @@
 1711351911	tripleee	okkabeauty\.com
 1711351968	tripleee	okka[\W_]*+beauty(?!\.com(?<=okkabeauty\.com))(?:[\W_]*+dubai)?
 1711354028	cigien	allblacksvsfiji\.com
+1711354058	cigien	menzclinic\.com
