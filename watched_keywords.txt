@@ -60114,3 +60114,4 @@
 1711338809	lyxal	chancerychambers\.net
 1711339790	Makyen	chancery[\W_]*+chambers(?!\.net(?<=chancerychambers\.net))
 1711342297	Makyen	alyomhost\.com
+1711351911	tripleee	okkabeauty\.com
