@@ -60124,3 +60124,4 @@
 1711357020	VLAZ	irohub\.com
 1711359145	cigien	hajjandumrahexperts\.co\.uk
 1711359990	cigien	autoaid\.in
+1711360009	cigien	auto[\W_]*+aid(?!\.in(?<=autoaid\.in))
