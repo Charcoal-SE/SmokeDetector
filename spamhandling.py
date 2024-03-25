@@ -5,7 +5,7 @@ import findspam
 import datahandling
 import chatcommunicate
 from globalvars import GlobalVars
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import regex
 import parsing
 import metasmoke
@@ -27,7 +27,7 @@ def should_whitelist_prevent_alert(user_url, reasons):
 def sum_weight(reasons: list):
     if not GlobalVars.reason_weights:
         datahandling.update_reason_weights()
-    now = datetime.utcnow() - timedelta(minutes=15)
+    now = datetime.now(tz=timezone.utc) - timedelta(minutes=15)
     if 'last_updated' not in GlobalVars.reason_weights or \
             (now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1):
         Tasks.do(datahandling.update_reason_weights)
@@ -114,7 +114,7 @@ def handle_spam(post, reasons, why):
                               "repeating words in title" in reasons or
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
-        datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.utcnow()))
+        datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.now(tz=timezone.utc)))
 
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)
