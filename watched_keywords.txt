@@ -41062,7 +41062,6 @@
 1659214989	cigien	dubaibesharam\.com
 1659217893	cigien	expow72(?:@gmail\.com)?
 1659223466	cigien	indexlister[\W_]*+com
-1659228097	cigien	electedroyalty\.com
 1659228125	cigien	preacherblair(?:@gmail\.com)?
 1659229292	Makyen	(?-i:H3zfUnhiSznEqQChGWk2oU)(?#chat.whatsapp.com/)
 1659229326	Makyen	2058336801111771(?#facebook group)
