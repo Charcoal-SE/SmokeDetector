@@ -60146,3 +60146,4 @@
 1711380399	General Grievance	locallockscbr\.com
 1711384653	Vickel	time[\W_]*+agency[\W_]*+group(?!\.com(?<=timeagencygroup\.com))
 1711403580	Vickel	priestoguname(?:@gmail\.com)?
+1711444857	Cow	askondata\.com
