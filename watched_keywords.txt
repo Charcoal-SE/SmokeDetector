@@ -60133,3 +60133,4 @@
 1711415863	Spevacus	openassistantgpt\.io
 1711416590	Makyen	cyberark331(?:@gmail\.com)?
 1711418166	Makyen	swift\.hacker\.expert
+1711425515	Jesse	Photo[\W_]*+Clipping[\W_]*+Path[\W_]*+BD
