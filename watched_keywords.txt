@@ -60154,3 +60154,4 @@
 1711469193	Jeff Schaller	getnorxmeds\.com
 1711469762	Spevacus	Wizard[\W_]*+Asset[\W_]*+Recovery
 1711471605	Vickel	canvato\.net
+1711472035	Jeff Schaller	qazisharjeel\.com
