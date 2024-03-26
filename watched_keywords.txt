@@ -60140,3 +60140,4 @@
 1711433554	Nick	Tech[\W_]*+Ssa?lassh(?!\.com(?<=techsslassh\.com))
 1711433811	Nick	theseoservices\.net
 1711448863	Jeff Schaller	tdx\.biz
+1711452667	Jeff Schaller	infinitedigitalgroup\.com
