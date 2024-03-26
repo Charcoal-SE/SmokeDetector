@@ -663,7 +663,9 @@ items:
 - ns:
   - ns185148128233.a2dns.com.
   - ns185148128234.a2dns.com.
-- ns:
+- comment: NXDOMAIN 2024-03-26
+  disable: true
+  ns:
   - ns686624091.a2dns.com.
   - ns686624219.a2dns.com.
 - ns: rebel.com.
