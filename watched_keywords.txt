@@ -60134,3 +60134,4 @@
 1711418166	Makyen	swift\.hacker\.expert
 1711425515	Jesse	Photo[\W_]*+Clipping[\W_]*+Path[\W_]*+BD
 1711428327	tripleee	ergonomic[\W_]*+furniture
+1711428351	tripleee	seoserviceincheap(?# skype)
