@@ -60157,3 +60157,4 @@
 1711472035	Jeff Schaller	qazisharjeel\.com
 1711472981	Jeff Schaller	(?-i:^Owais Raza$)
 1711476653	Jeff Schaller	bio-restore\.com
+1711476762	Jeff Schaller	eviggroup\.com
