@@ -41969,7 +41969,6 @@
 1661360462	Welz	shmoggo\.com
 1661369774	cocomac	live[\W_]*+casino[\W_]*+games
 1661373195	Robert Longson	travelpremiumboutique\.com
-1661396135	Spevacus	photoclippingpathbd\.com
 1661396546	tripleee	reach out to BrowserStack Support
 1661400657	Cody Gray	kientrucdoorway\.com\.vn
 1661401230	Cody Gray	(?:my|your)[\W_]*ex[\W_]*lover
