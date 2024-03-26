@@ -60144,3 +60144,4 @@
 1711378090	General Grievance	brimixapp\.github\.io
 1711380305	General Grievance	smhdiamondclean\.com\.au
 1711380399	General Grievance	locallockscbr\.com
+1711384653	Vickel	time[\W_]*+agency[\W_]*+group(?!\.com(?<=timeagencygroup\.com))
