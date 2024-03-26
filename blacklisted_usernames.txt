@@ -914,7 +914,6 @@ nilesecurity
 (?-i:^Ashwani Sharma$)
 (?-i:^shah wali$)
 (?-i:^jacsparow$)
-(?-i:^Owais Raza$)
 (?-i:^Watch Anime$)
 (?-i:^sabaprofile$)
 (?-i:^MS ASIAN FILM ACADEMY$)
