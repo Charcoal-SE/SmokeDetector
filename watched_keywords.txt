@@ -60139,3 +60139,4 @@
 1711433507	Nick	techsslassh\.com
 1711433554	Nick	Tech[\W_]*+Ssa?lassh(?!\.com(?<=techsslassh\.com))
 1711433811	Nick	theseoservices\.net
+1711444857	Cow	askondata\.com
