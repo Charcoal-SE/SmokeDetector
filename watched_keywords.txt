@@ -60155,3 +60155,4 @@
 1711469762	Spevacus	Wizard[\W_]*+Asset[\W_]*+Recovery
 1711471605	Vickel	canvato\.net
 1711472035	Jeff Schaller	qazisharjeel\.com
+1711472981	Jeff Schaller	(?-i:^Owais Raza$)
