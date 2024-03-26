@@ -60132,3 +60132,4 @@
 1711388780	Jeff Schaller	winusb\.net
 1711415863	Spevacus	openassistantgpt\.io
 1711416590	Makyen	cyberark331(?:@gmail\.com)?
+1711418166	Makyen	swift\.hacker\.expert
