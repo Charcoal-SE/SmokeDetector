@@ -60162,3 +60162,4 @@
 1711499776	Nick	doramasflix
 1711511641	Nick	(?:tim[\W_]*+)viec[\W_]*+lam[\W_]*+tai[\W_]*+ha[\W_]*+noi
 1711514026	Nick	Seekho[\W_]*+Digital[\W_]*+India(?:[\W_]*+Academy)?(?!\.com(?<=seekhodigitalindia\.com))
+1711518880	VLAZ	junk-removaldubai\.com
