@@ -60173,3 +60173,4 @@
 1711530819	tripleee	emmawatson13113(?# medium.com)
 1711530885	tripleee	all[\W_]*+airlines(?:[\W_]*+office)?
 1711532952	Jeff Schaller	bdrsuite\.com
+1711536008	Jeff Schaller	carfast-express\.com
