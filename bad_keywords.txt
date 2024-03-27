@@ -2982,3 +2982,4 @@ A1[\W_]*+Wizard[\W_]*+Hacker?s?
 hacknetcyberprofessor10(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 electedroyalty\.com
 rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
+mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
