@@ -60167,3 +60167,4 @@
 1711523770	Nick	shaadibooks\.com
 1711523802	Nick	Shaadibooks(?!\.com(?<=shaadibooks\.com))
 1711525498	Nick	happypetstalk\.com
+1711525728	Nick	dichvugiupviechoanmy\.com
