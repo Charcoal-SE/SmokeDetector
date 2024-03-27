@@ -60186,3 +60186,4 @@
 1711551302	Makyen	bazar[\W_]*+motor[\W_]*+iran(?!\.ir(?<=bazarmotoriran\.ir))
 1711551820	Makyen	sulekha[\W_]*+holidays(?!\.com(?<=sulekhaholidays\.com))
 1711552058	Makyen	id[\W_]*+reddy[\W_]*+anna(?!\.in(?<=idreddyanna\.in))
+1711552079	Makyen	reddy[\W_]*+anna[\W_]*+id
