@@ -60183,3 +60183,4 @@
 1711543761	Jeff Schaller	shreemayuraservices\.co\.in
 1711547810	Spevacus	automationagencyindia\.com
 1711551270	Makyen	bazarmotoriran\.ir
+1711551302	Makyen	bazar[\W_]*+motor[\W_]*+iran(?!\.ir(?<=bazarmotoriran\.ir))
