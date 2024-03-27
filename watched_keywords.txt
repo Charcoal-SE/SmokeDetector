@@ -60184,3 +60184,4 @@
 1711547810	Spevacus	automationagencyindia\.com
 1711551270	Makyen	bazarmotoriran\.ir
 1711551302	Makyen	bazar[\W_]*+motor[\W_]*+iran(?!\.ir(?<=bazarmotoriran\.ir))
+1711551820	Makyen	sulekha[\W_]*+holidays(?!\.com(?<=sulekhaholidays\.com))
