@@ -60164,3 +60164,4 @@
 1711514026	Nick	Seekho[\W_]*+Digital[\W_]*+India(?:[\W_]*+Academy)?(?!\.com(?<=seekhodigitalindia\.com))
 1711518880	VLAZ	junk-removaldubai\.com
 1711520826	tripleee	jachtvloeren-enzo\.nl
+1711523770	Nick	shaadibooks\.com
