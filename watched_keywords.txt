@@ -39268,7 +39268,6 @@
 1654052075	tripleee	farmacialapasarela\.es
 1654055012	cigien	trumonde\.com
 1654058328	cigien	ultimate[\W_]*+life[\W_]*+clinic(?!\.com(?<=ultimatelifeclinic\.com))
-1654058642	tripleee	bookprintingchina\.com
 1654062829	tripleee	crm[\W_]*+masters(?!\.com(?<=crm-masters\.com))
 1654065159	tripleee	ourjharkhand\.com
 1654067500	tripleee	ets2indo\.com
