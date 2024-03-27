@@ -60174,3 +60174,4 @@
 1711530885	tripleee	all[\W_]*+airlines(?:[\W_]*+office)?
 1711532952	Jeff Schaller	bdrsuite\.com
 1711536008	Jeff Schaller	carfast-express\.com
+1711536047	jps	luxurygtaproperties\.com
