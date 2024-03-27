@@ -60161,3 +60161,4 @@
 1711477000	Makyen	bio[\W_]*+restore(?!\.com(?<=bio-restore\.com))
 1711499756	Nick	doramasmp4\.dev
 1711499776	Nick	doramasflix
+1711511135	Nick	vieclamtaihanoi
