@@ -60188,3 +60188,4 @@
 1711552058	Makyen	id[\W_]*+reddy[\W_]*+anna(?!\.in(?<=idreddyanna\.in))
 1711552079	Makyen	reddy[\W_]*+anna[\W_]*+id
 1711552210	Makyen	all[\W_]*+crack[\W_]*+software[\W_]*+solutions(?!\.com(?<=allcracksoftwaresolutions\.com))
+1711552275	Jeff Schaller	hostingprovider\.co\.in
