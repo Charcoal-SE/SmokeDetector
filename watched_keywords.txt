@@ -60165,3 +60165,4 @@
 1711518880	VLAZ	junk-removaldubai\.com
 1711520826	tripleee	jachtvloeren-enzo\.nl
 1711523770	Nick	shaadibooks\.com
+1711523802	Nick	Shaadibooks(?!\.com(?<=shaadibooks\.com))
