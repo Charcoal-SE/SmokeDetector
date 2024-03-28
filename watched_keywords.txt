@@ -60208,3 +60208,4 @@
 1711602374	Makyen	thesalesbridge\.com
 1711606864	VLAZ	umlgenius\.com
 1711606907	VLAZ	umlgenius(?!\.com)
+1711607147	VLAZ	rudhar\.in
