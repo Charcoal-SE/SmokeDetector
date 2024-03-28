@@ -60240,3 +60240,4 @@
 1711645872	Jeff Schaller	banktrustaccount\.com
 1711645901	Jeff Schaller	BankTrustAccount(?!\.com)
 1711648009	Vickel	visitorplans\.com
+1711647632	Vickel	worldwidechemicallabs\.us
