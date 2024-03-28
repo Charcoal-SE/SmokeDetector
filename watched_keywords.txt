@@ -60238,3 +60238,4 @@
 1711637588	Jeff Schaller	djmaccummings\.com
 1711637967	Vickel	contacthackadviser
 1711645872	Jeff Schaller	banktrustaccount\.com
+1711645901	Jeff Schaller	BankTrustAccount(?!\.com)
