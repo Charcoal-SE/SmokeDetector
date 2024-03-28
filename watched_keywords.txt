@@ -60218,3 +60218,4 @@
 1711623224	Jeff Schaller	bluebirdsolar\.com
 1711630095	Jeff Schaller	cleaningmachines\.ca
 1711630977	Makyen	newsofdesk\.com
+1711631008	Makyen	hearth[\W_]*+essence
