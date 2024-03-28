@@ -60241,3 +60241,4 @@
 1711645901	Jeff Schaller	BankTrustAccount(?!\.com)
 1711648009	Vickel	visitorplans\.com
 1711647632	Vickel	worldwidechemicallabs\.us
+1711651441	Jeff Schaller	cequens\.com
