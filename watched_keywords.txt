@@ -60221,3 +60221,4 @@
 1711631008	Makyen	hearth[\W_]*+essence
 1711631039	Makyen	earthessencecbd\.blogspot
 1711631060	Makyen	(?-i:2Vw29YYwcIU)(?#groups.google.com/c/earthessencecbdgummiesget)
+1711631086	Makyen	earth[\W_]*+essence[\W_]*+cbd(?!\.blogspot)(?:[\W_]*+(?:gumm(?:y|ie?)|review|must|read|get|\d++|[\da-f]{5,}+)s?)*
