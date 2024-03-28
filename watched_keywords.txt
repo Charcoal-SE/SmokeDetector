@@ -60219,3 +60219,4 @@
 1711630095	Jeff Schaller	cleaningmachines\.ca
 1711630977	Makyen	newsofdesk\.com
 1711631008	Makyen	hearth[\W_]*+essence
+1711631039	Makyen	earthessencecbd\.blogspot
