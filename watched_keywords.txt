@@ -46174,7 +46174,6 @@
 1673543128	Jeff Schaller	hindimin\.com
 1673543160	Jeff Schaller	mosbetuz\.com
 1673547214	Jeff Schaller	filebase\.com
-1673550298	Glorfindel	^durgesh\sgupta$
 1673551342	Jeff Schaller	(?-i:P2cQYDUQyhhkZDM8)(?#t.me)
 1673556405	Spevacus	turkeymedicals\.com
 1673560640	Cody Gray	(?-i:Skip a line and indent eight spaces)
