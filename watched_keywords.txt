@@ -60243,3 +60243,4 @@
 1711647632	Vickel	worldwidechemicallabs\.us
 1711651441	Jeff Schaller	cequens\.com
 1711653760	Vickel	3dsourcerer\.com
+1711666138	Vickel	!!/watch- tap[\W_]*+house[\W_]*+bourbon(?!\.com(?<=taphousebourbon\.com))
