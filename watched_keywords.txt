@@ -60235,3 +60235,4 @@
 1711634608	Jeff Schaller	arswebtech\.com
 1711635661	Vickel	phuispeed\.com
 1711637188	Makyen	(?-i:iruC1)(?<=\b(?<![^\W_]-)shorturl\.at\/iruC1)
+1711637588	Jeff Schaller	djmaccummings\.com
