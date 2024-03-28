@@ -60213,3 +60213,4 @@
 1711610809	Nick	contactmasterji\.com
 1711611572	Nick	adaksepehr\.com
 1711611623	Nick	netgearextendersetup\.com
+1711611656	Nick	Netgear[\W_]*+extender[\W_]*+setup(?!\.com(?<=netgearextendersetup\.com))
