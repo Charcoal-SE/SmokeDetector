@@ -60217,3 +60217,4 @@
 1711619446	Cow	sensexpanel\.in
 1711623224	Jeff Schaller	bluebirdsolar\.com
 1711630095	Jeff Schaller	cleaningmachines\.ca
+1711630977	Makyen	newsofdesk\.com
