@@ -60224,3 +60224,4 @@
 1711631086	Makyen	earth[\W_]*+essence[\W_]*+cbd(?!\.blogspot)(?:[\W_]*+(?:gumm(?:y|ie?)|review|must|read|get|\d++|[\da-f]{5,}+)s?)*
 1711631601	Makyen	abidintoto
 1711626938	Cow	entrynutrition\.com
+1711625584	General Grievance	theebookexperts\.com
