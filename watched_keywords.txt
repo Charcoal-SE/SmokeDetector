@@ -60248,3 +60248,4 @@
 1711671407	Vickel	justanotherpanel(?!\.com)
 1711674237	Jeff Schaller	trustedcompanyreviews\.com
 1711674431	Vickel	hverse\.com\.pk
+1711674695	Vickel	h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
