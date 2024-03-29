@@ -60252,3 +60252,4 @@
 1711676895	Vickel	batterieasus\.com
 1711686678	Nick	ssyoutube\.online
 1711692256	Nick	ariyadanesh\.com
+1711692284	Nick	quickanalytics\.pk
