@@ -60260,3 +60260,4 @@
 1711694215	Nick	Ambani[\W_]*+Travels(?!\.com(?<=ambanitravels\.com))
 1711695226	Nick	airlineguidelines\.com
 1711695258	Nick	airlineguidelines(?!\.com(?<=airlineguidelines\.com))
+1711700081	Nick	gstore\.cn
