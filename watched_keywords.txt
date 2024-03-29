@@ -60262,3 +60262,4 @@
 1711695258	Nick	airlineguidelines(?!\.com(?<=airlineguidelines\.com))
 1711700081	Nick	gstore\.cn
 1711706766	VLAZ	sbcglobalmails\.com
+1711706787	VLAZ	sbcglobal[\W_]*+(?:email|mail)s?+(?!\.com(?<=sbcglobalmails\.com))
