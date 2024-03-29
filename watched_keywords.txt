@@ -60245,3 +60245,4 @@
 1711653760	Vickel	3dsourcerer\.com
 1711666002	Vickel	taphousebourbon\.com
 1711671253	Vickel	justanotherpanel\.com
+1711671407	Vickel	justanotherpanel(?!\.com)
