@@ -60270,3 +60270,4 @@
 1711721871	VLAZ	thelendingmamba\.com
 1711724780	VLAZ	sportuniversaltv\.com
 1711734459	Cow	phengold\.com
+1711752446	Vickel	ELD[\W_]*+Mandate[\W_](?!\.biz(?<=eldmandate\.biz))
