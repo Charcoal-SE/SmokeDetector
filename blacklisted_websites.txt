@@ -5468,3 +5468,4 @@ webdescode\.com
 ibexpackaging\.com
 equitem\.blog
 gpscomputeracademy\.com
+padlet\.com(?!/giannanr63/)
