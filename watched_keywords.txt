@@ -60264,3 +60264,4 @@
 1711706787	VLAZ	sbcglobal[\W_]*+(?:email|mail)s?+(?!\.com(?<=sbcglobalmails\.com))
 1711710016	Jeff Schaller	gamesource\.pk
 1711711593	VLAZ	auzrentalcars\.com
+1711711522	Cow	acmeselfdrivecars\.com
