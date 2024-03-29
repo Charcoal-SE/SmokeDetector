@@ -60251,3 +60251,4 @@
 1711674695	Vickel	h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
 1711676895	Vickel	batterieasus\.com
 1711686678	Nick	ssyoutube\.online
+1711692256	Nick	ariyadanesh\.com
