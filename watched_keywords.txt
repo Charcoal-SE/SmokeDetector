@@ -60294,3 +60294,4 @@
 1711813131	Makyen	vscoosearch\.com
 1711813152	Makyen	vscoosearch(?!\.com)
 1711814714	Cow	tradegully\.com
+1711818721	Makyen	sbs[\W_]*+consulting
