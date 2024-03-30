@@ -60295,3 +60295,4 @@
 1711813152	Makyen	vscoosearch(?!\.com)
 1711814714	Cow	tradegully\.com
 1711818721	Makyen	sbs[\W_]*+consulting
+1711817639	Cow	thesandpaperpeople\.com
