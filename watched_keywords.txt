@@ -60271,3 +60271,4 @@
 1711724780	VLAZ	sportuniversaltv\.com
 1711734459	Cow	phengold\.com
 1711752015	Vickel	eldmandate\.biz
+1711753385	Vickel	ELD[\W_]*+Mandate(?!\.biz(?<=eldmandate\.biz))
