@@ -60297,3 +60297,4 @@
 1711818721	Makyen	sbs[\W_]*+consulting
 1711817639	Cow	thesandpaperpeople\.com
 1711824391	Cow	grum\.co
+1711842515	Makyen	drcars(?!\.ae)
