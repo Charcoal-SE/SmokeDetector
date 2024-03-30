@@ -60289,3 +60289,4 @@
 1711801971	Jeff Schaller	breakitdownsummarizer\.blogspot
 1711809440	Makyen	ethical[\W_]*+hacking[\W_]{0,20}+course
 1711803053	Vickel	cybersecurityacademy\.in
+1711803498	Vickel	cyber[\W_]*+security[\W_]*+academy(?!\.in(?<=cybersecurityacademy\.in))
