@@ -513,7 +513,6 @@ williamriver
 (?-i:^thearticlereview$)
 (?-i:^andystuart$)
 (?-i:^Anna Thomas$)
-(?-i:^Huhnkie Lee$)
 (?-i:^klay line$)
 (?-i:^Rude Warner$)
 (?-i:^Beack Kendall$)
