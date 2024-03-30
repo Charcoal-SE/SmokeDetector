@@ -60274,3 +60274,4 @@
 1711753385	Vickel	ELD[\W_]*+Mandate(?!\.biz(?<=eldmandate\.biz))
 1711760491	Nick	smmpanelreviews\.org
 1711770829	Makyen	(?-i:CS97LCdpTkTnEB0)
+1711778805	Nick	Databasehomeworkhelp
