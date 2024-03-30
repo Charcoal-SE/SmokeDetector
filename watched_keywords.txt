@@ -60287,3 +60287,4 @@
 1711783912	Nick	upvcwindowsjaipur\.com
 1711801869	Jeff Schaller	langka\.com
 1711801971	Jeff Schaller	breakitdownsummarizer\.blogspot
+1711809440	Makyen	ethical[\W_]*+hacking[\W_]{0,20}+course
