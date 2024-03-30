@@ -60285,3 +60285,4 @@
 1711779530	Nick	digitalchaabiacademy\.com
 1711779616	Nick	Carolina[\W_]*+family[\W_]*+Acupuncture(?!\.com(?<=carolinafamilyacupuncture\.com))
 1711783912	Nick	upvcwindowsjaipur\.com
+1711801869	Jeff Schaller	langka\.com
