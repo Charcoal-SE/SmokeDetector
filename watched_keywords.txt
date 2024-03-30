@@ -60293,3 +60293,4 @@
 1711807033	jps	picksfords\.com
 1711813131	Makyen	vscoosearch\.com
 1711813152	Makyen	vscoosearch(?!\.com)
+1711817639	Cow	thesandpaperpeople\.com
