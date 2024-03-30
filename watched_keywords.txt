@@ -60292,3 +60292,4 @@
 1711803498	Vickel	cyber[\W_]*+security[\W_]*+academy(?!\.in(?<=cybersecurityacademy\.in))
 1711807033	jps	picksfords\.com
 1711813131	Makyen	vscoosearch\.com
+1711813152	Makyen	vscoosearch(?!\.com)
