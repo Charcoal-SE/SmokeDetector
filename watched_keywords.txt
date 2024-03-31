@@ -60303,3 +60303,4 @@
 1711860973	Makyen	ibais[\W_]*+media
 1711885479	Mast	asrulheidi(?#facebook)
 1711888035	Vickel	simtech\.a-star\.edu\.sg
+1711880659	Cow	triveniworld\.com
