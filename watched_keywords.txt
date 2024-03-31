@@ -60302,3 +60302,4 @@
 1711860863	Makyen	bello4alerts\.com
 1711860973	Makyen	ibais[\W_]*+media
 1711885479	Mast	asrulheidi(?#facebook)
+1711888035	Vickel	simtech\.a-star\.edu\.sg
