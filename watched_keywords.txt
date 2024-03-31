@@ -60306,3 +60306,4 @@
 1711880659	Cow	triveniworld\.com
 1711874485	Cow	the-millet\.com
 1711793832	jps	pesktop\.org
+1711734985	Vickel	phengold(?!\.com)
