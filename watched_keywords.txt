@@ -60319,3 +60319,4 @@
 1711892300	Makyen	triveni[\W_]*+world(?!\.com(?<=triveniworld\.com))
 1711892505	Makyen	mallillinmakmak30(?:@gmail\.com)?
 1711900261	Makyen	steelprice\.org
+1711901800	Mast	thechesswarriors\.com
