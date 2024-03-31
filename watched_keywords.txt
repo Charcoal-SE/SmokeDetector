@@ -60311,3 +60311,4 @@
 1711655379	Vickel	calmpillsuk\.com
 1711666154	Vickel	tap[\W_]*+house[\W_]*+bourbon(?!\.com(?<=taphousebourbon\.com))
 1711890947	Cow	revisiontown\.com
+1711888546	Vickel	(?-i:gCXYiVT)(?#lnkd.in)
