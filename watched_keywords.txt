@@ -60316,3 +60316,4 @@
 1711891908	Makyen	(?-i:nekoinfo)(?#sites.google.com)
 1711892111	Makyen	kocce[\W_]*+palibu
 1711892166	Makyen	grandsavaldo(?:[\W_]*+(?:brotherhood|occult|\d++|[\da-f]{5,}+)s?)*
+1711892300	Makyen	triveni[\W_]*+world(?!\.com(?<=triveniworld\.com))
