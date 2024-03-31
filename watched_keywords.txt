@@ -60315,3 +60315,4 @@
 1711891861	Makyen	filipedeschamps\.com\.br
 1711891908	Makyen	(?-i:nekoinfo)(?#sites.google.com)
 1711892111	Makyen	kocce[\W_]*+palibu
+1711892166	Makyen	grandsavaldo(?:[\W_]*+(?:brotherhood|occult|\d++|[\da-f]{5,}+)s?)*
