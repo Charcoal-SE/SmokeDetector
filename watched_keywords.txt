@@ -60300,3 +60300,4 @@
 1711842515	Makyen	drcars(?!\.ae)
 1711851758	Makyen	cangkul88
 1711860863	Makyen	bello4alerts\.com
+1711860973	Makyen	ibais[\W_]*+media
