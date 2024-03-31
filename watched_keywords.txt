@@ -60309,3 +60309,4 @@
 1711734985	Vickel	phengold(?!\.com)
 1711732528	General Grievance	empirescort\.com
 1711655379	Vickel	calmpillsuk\.com
+1711666154	Vickel	tap[\W_]*+house[\W_]*+bourbon(?!\.com(?<=taphousebourbon\.com))
