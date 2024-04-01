@@ -60328,3 +60328,4 @@
 1711915934	Makyen	vertu[\W_]*+mobile(?!\.in(?<=vertumobile\.in))
 1711932994	Vickel	jeffsprojectsworkshop(?#youtube)
 1711936128	Makyen	hokaonsale\.us
+1711941647	Nick	manhquynhhome\.com
