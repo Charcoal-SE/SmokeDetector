@@ -60365,3 +60365,4 @@
 1711976360	Makyen	bvsegypt\.com
 1711976395	Makyen	askeva\.in
 1711976418	Makyen	ask[\W_]*+eva(?!\.in(?<=askeva\.in))
+1711974223	Cow	minitaq\.com
