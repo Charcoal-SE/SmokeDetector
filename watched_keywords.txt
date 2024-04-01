@@ -60348,3 +60348,4 @@
 1711957523	Nick	Bookmyblogs(?!\.com(?<=bookmyblogs\.com))
 1711957825	Nick	cheapdata\.ng
 1711957946	Nick	trucktempohire\.com
+1711958006	jps	dumpsperiod\.com
