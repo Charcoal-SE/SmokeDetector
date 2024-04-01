@@ -60357,3 +60357,4 @@
 1711970965	Cow	alldaygenericmeds\.com
 1711967174	Cow	airportsterminalguide\.com
 1711964284	Cow	forexlaunchpad\.com
+1711964249	Cow	lagecies\.blogspot
