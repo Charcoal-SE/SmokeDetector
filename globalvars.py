@@ -150,6 +150,7 @@ class GlobalVars:
     no_se_activity_scan = False
     no_deletion_watcher = False
     no_edit_watcher = False
+    no_chat_ws_activity_timeout = False
 
     ignore_no_se_websocket_activity_lock = threading.Lock()
     ignore_no_se_websocket_activity = False

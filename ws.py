@@ -201,6 +201,7 @@ GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
 GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
+GlobalVars.no_chat_ws_activity_timeout = 'no_chat_ws_activity_timeout' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
@@ -236,7 +237,8 @@ def check_socket_connections():
         exit_mode("socket_failure")
 
 
-Tasks.periodic(check_socket_connections, interval=90)
+if not GlobalVars.no_chat_ws_activity_timeout:
+    Tasks.periodic(check_socket_connections, interval=90)
 
 log('info', '{} active'.format(GlobalVars.location))
 log('info', 'MS host: {}'.format(GlobalVars.metasmoke_host))
