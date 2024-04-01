@@ -60334,3 +60334,4 @@
 1711945997	Makyen	thaituan\.com
 1711947123	Makyen	murugan[\W_]*+(?:supermarket|store)
 1711947185	VLAZ	fullbet888\.com
+1711947792	Makyen	smile[\W_]*+dentistry[\W_]*+toronto
