@@ -2949,29 +2949,5 @@ create_rule("potentially bad keyword in {}",
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=21,
             rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
-# Some non-bookended bad keywords
-create_rule("bad keyword in {}",
-            r"(?:"  # Begin group of non-bookended regexes
-            "" r"(?(DEFINE)"
-            "" "" r"(?<obfus_tag>(?-i:(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*))"
-            "" "" r"(?<obfus_tag_lc>(?-i:(?:[^A-Z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*))"
-            "" r")"
-            "" r"(?:"
-            "" "" r"K(?&obfus_tag)E(?&obfus_tag)M(?&obfus_tag)O(?&obfus_tag)N(?&obfus_tag)O(?&obfus_tag)"
-            "" "" r"P(?&obfus_tag)A(?&obfus_tag)N(?&obfus_tag)T(?&obfus_tag)S(?&obfus_tag)U"
-            "" "" r"|"
-            "" "" r"(?-i:"
-            "" "" "" r"(?:"
-            "" "" "" "" r"K(?&obfus_tag_lc)E(?&obfus_tag_lc)M(?&obfus_tag_lc)O(?&obfus_tag_lc)N(?&obfus_tag_lc)"
-            "" "" "" "" r"O(?&obfus_tag_lc)"
-            "" "" "" r")?P(?&obfus_tag_lc)A(?&obfus_tag_lc)N(?&obfus_tag_lc)T(?&obfus_tag_lc)S(?&obfus_tag_lc)U"
-            "" "" r")"
-            "" "" r"|K(?&obfus_tag)P(?&obfus_tag)P(?&obfus_tag)(?i:r(?&obfus_tag)o(?&obfus_tag)fessional)"
-            "" r")"
-            r")",
-            all=True,
-            username=True, body_summary=True,
-            max_rep=100, max_score=3,
-            rule_id="bad keywords: various with no bookending")
 
 FindSpam.reload_blacklists()
