@@ -60344,3 +60344,4 @@
 1711953568	Nick	Emerald[\W_]*+Whisper(?!\.com(?<=emeraldwhisper\.com))
 1711955237	Nick	himalayan-masters\.com
 1711955351	Nick	himalayan[\W_]*+masters5?(?!\.com(?<=himalayan-masters\.com))
+1711955940	Nick	techwithai1\.blogspot
