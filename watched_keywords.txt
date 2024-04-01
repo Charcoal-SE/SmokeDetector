@@ -60367,3 +60367,4 @@
 1711976418	Makyen	ask[\W_]*+eva(?!\.in(?<=askeva\.in))
 1711974223	Cow	minitaq\.com
 1711976541	Makyen	minitaq(?!\.com)
+1711984598	General Grievance	faroenewsfo\.biz
