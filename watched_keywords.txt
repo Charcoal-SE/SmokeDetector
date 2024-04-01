@@ -60341,3 +60341,4 @@
 1711950505	Nick	artusbrand\.com
 1711953228	Nick	webylinks\.com
 1711953525	Nick	emeraldwhisper\.com
+1711953568	Nick	Emerald[\W_]*+Whisper(?!\.com(?<=emeraldwhisper\.com))
