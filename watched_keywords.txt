@@ -60362,3 +60362,4 @@
 1711963039	Cow	futuresproptrading\.com
 1711972681	Cow	vapingcartstore\.com
 1711655706	Vickel	calm[\W_]*+pills[\W_]*+uk(?!\.com(?<=calmpills\.com))
+1711974159	Cow	lorimachining\.com
