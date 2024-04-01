@@ -60364,3 +60364,4 @@
 1711655706	Vickel	calm[\W_]*+pills[\W_]*+uk(?!\.com(?<=calmpills\.com))
 1711976360	Makyen	bvsegypt\.com
 1711976395	Makyen	askeva\.in
+1711976418	Makyen	ask[\W_]*+eva(?!\.in(?<=askeva\.in))
