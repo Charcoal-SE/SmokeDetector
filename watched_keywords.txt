@@ -60366,3 +60366,4 @@
 1711976395	Makyen	askeva\.in
 1711976418	Makyen	ask[\W_]*+eva(?!\.in(?<=askeva\.in))
 1711974223	Cow	minitaq\.com
+1711976541	Makyen	minitaq(?!\.com)
