@@ -60346,3 +60346,4 @@
 1711955351	Nick	himalayan[\W_]*+masters5?(?!\.com(?<=himalayan-masters\.com))
 1711955940	Nick	techwithai1\.blogspot
 1711957523	Nick	Bookmyblogs(?!\.com(?<=bookmyblogs\.com))
+1711957825	Nick	cheapdata\.ng
