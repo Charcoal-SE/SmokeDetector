@@ -60337,3 +60337,4 @@
 1711947792	Makyen	smile[\W_]*+dentistry[\W_]*+toronto
 1711947813	Makyen	d(?:octo)?r[\W_]*+savita[\W_]*+chaudhry(?!\.ca(?<=drsavitachaudhry\.ca))
 1711948484	Nick	digitalhimanshu\.online
+1711949603	Nick	exchangedesk\.ae
