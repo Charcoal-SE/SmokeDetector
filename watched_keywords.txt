@@ -60433,3 +60433,4 @@
 1712093840	Makyen	my[\W_]*+gs[\W_]*+store(?<!mygs\.store)
 1712095733	Nick	dragon[\W_]*+web[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
 1712098832	Jeff Schaller	barcodesaturdays\.com
+1712099436	Makyen	dbhawk\.com
