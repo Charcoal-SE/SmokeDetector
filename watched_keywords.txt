@@ -60378,3 +60378,4 @@
 1712032018	Makyen	ouros[\W_]*+jewels(?!\.com(?<=ourosjewels\.com))
 1712035627	VLAZ	igraty\.site
 1712037967	Nick	josephwcarrillo\.com
+1712038096	Nick	thrillh
