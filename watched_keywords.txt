@@ -60403,3 +60403,4 @@
 1712068932	Makyen	crypto[\W_]*+nightmare
 1712068954	Makyen	foolproof[\W_]*+investment[\W_]*+scheme
 1712068986	Makyen	posicionamiento-web-barcelona\.com
+1712070193	General Grievance	eastern-tobacco\.com
