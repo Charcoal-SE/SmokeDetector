@@ -5469,3 +5469,4 @@ ibexpackaging\.com
 equitem\.blog
 gpscomputeracademy\.com
 padlet\.com(?!/giannanr63/)
+dentalhealthclinic\.ca
