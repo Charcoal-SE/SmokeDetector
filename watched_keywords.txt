@@ -60423,3 +60423,4 @@
 1712052954	Cow	upload\.engrz\.com
 1712053152	Cow	ccubesuitetech\.com
 1712055678	Cow	pmpacademy\.in
+1712056197	Cow	minidoodlepets\.com
