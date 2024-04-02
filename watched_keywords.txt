@@ -60392,3 +60392,4 @@
 1712042584	tripleee	wordpress[\W_]*+speed
 1712044134	Nick	brainwaverealm\.com
 1712044835	Nick	eduworldstudymbbsabroad\.com
+1712045491	Nick	leapintolearningpreschools\.com
