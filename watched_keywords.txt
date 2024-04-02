@@ -60390,3 +60390,4 @@
 1712041284	Nick	mantan4d(?!\.vip(?<=mantan4d\.vip))
 1712042520	tripleee	pmpr\.ir
 1712042584	tripleee	wordpress[\W_]*+speed
+1712044134	Nick	brainwaverealm\.com
