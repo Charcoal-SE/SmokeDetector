@@ -60391,3 +60391,4 @@
 1712042520	tripleee	pmpr\.ir
 1712042584	tripleee	wordpress[\W_]*+speed
 1712044134	Nick	brainwaverealm\.com
+1712044835	Nick	eduworldstudymbbsabroad\.com
