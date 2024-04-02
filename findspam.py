@@ -2241,7 +2241,7 @@ city_list = [
     "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
     "Darjeeling", "Dehradun", "Dehrdun", "Delhi", "Dharamshala", "Dharamsala", "Durgapur",
-    "Ernakulam", "Faridabad",
+    "Ernakulam", "Etobicoke", "Faridabad",
     "Ghatkopar", "Ghaziabad", "Gurgaon", "Gurugram", "Guwahati",
     "Haldwani", "Haridwar", "Hyderabad",
     "Indore",
