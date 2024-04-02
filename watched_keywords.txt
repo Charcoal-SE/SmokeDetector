@@ -60396,3 +60396,4 @@
 1712045587	Nick	Leap[\W_]*+into[\W_]*+Learning(?:[\W_]*+Preschool)?(?!s\.com(?<=leapintolearningpreschools\.com))
 1712045899	Nick	evgroup\.vn
 1712046003	Nick	evg\.jsc(?#facebook profile page)
+1712046047	Nick	dropmee\.com
