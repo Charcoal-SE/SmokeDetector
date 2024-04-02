@@ -60377,3 +60377,4 @@
 1712030163	Makyen	100092259661499(?#Facebook profile ID)
 1712032018	Makyen	ouros[\W_]*+jewels(?!\.com(?<=ourosjewels\.com))
 1712035627	VLAZ	igraty\.site
+1712037967	Nick	josephwcarrillo\.com
