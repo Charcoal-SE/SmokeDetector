@@ -60422,3 +60422,4 @@
 1712051880	Cow	homespycamshop\.com
 1712052954	Cow	upload\.engrz\.com
 1712053152	Cow	ccubesuitetech\.com
+1712055678	Cow	pmpacademy\.in
