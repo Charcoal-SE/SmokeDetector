@@ -60389,3 +60389,4 @@
 1712040337	Nick	Grav[\W_]*+Web[\W_]*+Solution(?!\.com(?<=gravwebsolution\.com))
 1712041218	Nick	mantan4d\.vip
 1712041284	Nick	mantan4d(?!\.vip(?<=mantan4d\.vip))
+1712042520	tripleee	pmpr\.ir
