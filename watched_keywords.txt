@@ -60431,3 +60431,4 @@
 1712084304	Makyen	hair[\W_]*+free[\W_]*+hair[\W_]*+grow(?!\.com(?<=hairfreehairgrow\.com))
 1712093024	Vickel	mygs\.store
 1712093840	Makyen	my[\W_]*+gs[\W_]*+store(?<!mygs\.store)
+1712095733	Nick	dragon[\W_]*+web[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
