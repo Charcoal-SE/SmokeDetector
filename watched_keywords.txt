@@ -60373,3 +60373,4 @@
 1712024365	Jeff Schaller	webdevexpert\.online
 1712025218	Makyen	webdevexpert1
 1712028554	Makyen	behoshi[\W_]*+ki[\W_]*+spray
+1712028576	Makyen	offerdaraz\.com
