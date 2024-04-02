@@ -60427,3 +60427,4 @@
 1712070193	General Grievance	eastern-tobacco\.com
 1712076083	Makyen	scottishigh\.com
 1712076151	Makyen	scottish[\W_]*+high[\W_]*+international[\W_]*+school
+1712083088	Makyen	rubyradiance\.in
