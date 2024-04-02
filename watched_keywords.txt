@@ -60036,7 +60036,6 @@
 1711112822	Cow	grantpharmacy\.com
 1711113484	VLAZ	wetrackcourier\.com
 1711113516	VLAZ	thecouriertracker\.com
-1711116406	cigien	linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
 1711132839	Cow	drcars\.ae
 1711133980	Vickel	findgst\.com\.au
 1711129976	Cow	limpanomesmr\.com\.br
