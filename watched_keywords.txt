@@ -60429,3 +60429,4 @@
 1712076151	Makyen	scottish[\W_]*+high[\W_]*+international[\W_]*+school
 1712083088	Makyen	rubyradiance\.in
 1712084282	Makyen	hairfreehairgrow\.com
+1712084304	Makyen	hair[\W_]*+free[\W_]*+hair[\W_]*+grow(?!\.com(?<=hairfreehairgrow\.com))
