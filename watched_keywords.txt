@@ -60395,3 +60395,4 @@
 1712045491	Nick	leapintolearningpreschools\.com
 1712045587	Nick	Leap[\W_]*+into[\W_]*+Learning(?:[\W_]*+Preschool)?(?!s\.com(?<=leapintolearningpreschools\.com))
 1712045899	Nick	evgroup\.vn
+1712046003	Nick	evg\.jsc(?#facebook profile page)
