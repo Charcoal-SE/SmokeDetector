@@ -60404,3 +60404,4 @@
 1712068954	Makyen	foolproof[\W_]*+investment[\W_]*+scheme
 1712068986	Makyen	posicionamiento-web-barcelona\.com
 1712071960	Spevacus	penguinbookwriters\.com
+1711973312	Cow	store\.thirdbase\.co
