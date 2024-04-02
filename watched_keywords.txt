@@ -60393,3 +60393,4 @@
 1712044134	Nick	brainwaverealm\.com
 1712044835	Nick	eduworldstudymbbsabroad\.com
 1712045491	Nick	leapintolearningpreschools\.com
+1712045587	Nick	Leap[\W_]*+into[\W_]*+Learning(?:[\W_]*+Preschool)?(?!s\.com(?<=leapintolearningpreschools\.com))
