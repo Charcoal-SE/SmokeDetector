@@ -60407,3 +60407,4 @@
 1711973312	Cow	store\.thirdbase\.co
 1711974159	Cow	lorimachining\.com
 1711977152	Vickel	rivieramart\.com
+1711977312	Vickel	rivieramart(?!\.com)
