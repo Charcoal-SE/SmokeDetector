@@ -60450,3 +60450,4 @@
 1712139720	tripleee	oragetechnologies\.com
 1712139768	tripleee	kaam24(?!\.com)
 1712139795	tripleee	kaam24\.com
+1712148032	Makyen	online[\W_]*+pharmacy[\W_]*+4[\W_]*+(?:u|you)(?!\.co\.uk(?<=online-pharmacy4u\.co\.uk))
