@@ -59,10 +59,11 @@ SE_SITES_RE = r'(?:{sites})'.format(
         r'(?:{doms})\.com'.format(doms='|'.join(
             [r'askubuntu', r'superuser', r'serverfault', r'stackapps', r'imgur'])),
         r'mathoverflow\.net',
+        r'i\.sstatic\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
-                    'imgur.com']  # Frequently catching FP
+                    'imgur.com', 'sstatic.net']  # Frequently catching FP
 WHITELISTED_WEBSITES_REGEX = regex_compile_no_cache(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
@@ -2522,7 +2523,7 @@ create_rule("pattern-matching website in {}",
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
             r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|▶|→|Read More|Click Here).{0,20}"
-            r"https?://(?!i\.stack\.imgur\.com)(?=.{0,200}$)",
+            r"https?://(?!(?:i\.stack\.imgur\.com|i\.sstatic\.net))(?=.{0,200}$)",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
 create_rule("link at end of {}",
@@ -2903,7 +2904,7 @@ create_rule("link at beginning of {}",
             '' r'wso|merriam-webster|oracle|magento|example|apple|google|'
             '' r'github|imgur|'
             '' r'stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|'
-            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|'
+            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow|sstatic\.net)\.net)|'
             r'github\.io|youtu\.be|edu|'
             r'(?:(?:arxiv|drupal|python|isc|khronos|mongodb|open-std|dartlang|'
             '' r'apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
