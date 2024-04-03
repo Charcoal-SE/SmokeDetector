@@ -60454,3 +60454,4 @@
 1712148062	Makyen	nến thơm tự nhiên
 1712148097	Makyen	nenhomdieuhuong\.com
 1712148120	Makyen	az[\W_]*+dry[\W_]*+cleaners(?!\.co\.uk(?<=azdrycleaners\.co\.uk))
+1712148143	Makyen	sofagiaxuong\.com
