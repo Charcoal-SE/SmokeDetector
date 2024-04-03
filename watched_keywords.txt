@@ -60461,3 +60461,4 @@
 1712148413	Makyen	campushunt\.in
 1712146596	Vickel	thenavyandhraschool\.com
 1712148779	Makyen	(?:the[\W_]*+)?navyandhra[\W_]*+school(?!\.com(?<=thenavyandhraschool\.com))
+1712148948	Makyen	networktechblog\.com
