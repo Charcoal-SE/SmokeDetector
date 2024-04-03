@@ -60456,3 +60456,4 @@
 1712148120	Makyen	az[\W_]*+dry[\W_]*+cleaners(?!\.co\.uk(?<=azdrycleaners\.co\.uk))
 1712148143	Makyen	sofagiaxuong\.com
 1712148171	Makyen	blogfxpro\.com
+1712148207	Makyen	blogfxpro(?!\.com)
