@@ -60462,3 +60462,4 @@
 1712146596	Vickel	thenavyandhraschool\.com
 1712148779	Makyen	(?:the[\W_]*+)?navyandhra[\W_]*+school(?!\.com(?<=thenavyandhraschool\.com))
 1712148948	Makyen	networktechblog\.com
+1712150223	Makyen	organics4u\.farm
