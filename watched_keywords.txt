@@ -60473,3 +60473,4 @@
 1712157208	Makyen	estiawan[\W_]*+nasution
 1712157256	Makyen	charter[\W_]*+spectrum[\W_]*+internet
 1712159779	Cow	zuccherocanada\.ca
+1712163821	Cow	topusareview\.com
