@@ -60474,3 +60474,4 @@
 1712157256	Makyen	charter[\W_]*+spectrum[\W_]*+internet
 1712159779	Cow	zuccherocanada\.ca
 1712163821	Cow	topusareview\.com
+1712164160	Makyen	top[\W_]*+usa[\W_]*+review(?!\.com(?<=topusareview\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
