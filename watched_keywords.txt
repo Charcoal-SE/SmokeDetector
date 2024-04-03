@@ -60466,3 +60466,4 @@
 1712137356	jps	gyaanjyotieducation\.in
 1712147890	General Grievance	visiontechelevators\.com
 1712149009	Cow	emcdorexs\.com
+1712152586	Cow	mandli\.org
