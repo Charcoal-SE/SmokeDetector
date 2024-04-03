@@ -41474,7 +41474,6 @@
 1660296186	tripleee	sjhealthcare\.com\.cn
 1660296572	tripleee	phimvietsub18\.com
 1660296645	tripleee	arunasteel\.com
-1660296869	tripleee	kaam24
 1660302444	tripleee	healthtime\.xyz
 1660302496	tripleee	adclasses\.in
 1660302737	tripleee	igetvape\.store
