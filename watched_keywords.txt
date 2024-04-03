@@ -54804,7 +54804,6 @@
 1699857313	Jesse	Smarter[\W_]*+Feds[\W_]*+Retirement
 1699847920	Jesse	khoahoc\.news
 1699878971	Jeff Schaller	kytewayelearning\.com
-1699879009	Jeff Schaller	migrateclouddata\.com
 1699879056	Jeff Schaller	hometownstorageunit\.com
 1699881841	Jeff Schaller	eventsbymala\.com
 1699882135	Jeff Schaller	convertidordemp3\.com
