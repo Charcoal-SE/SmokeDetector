@@ -60471,3 +60471,4 @@
 1712157089	Makyen	bikroy\.com
 1712157125	Makyen	saptahikchakrirkhobor\.online
 1712157208	Makyen	estiawan[\W_]*+nasution
+1712157256	Makyen	charter[\W_]*+spectrum[\W_]*+internet
