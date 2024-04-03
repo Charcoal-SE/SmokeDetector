@@ -60452,3 +60452,4 @@
 1712139795	tripleee	kaam24\.com
 1712148032	Makyen	online[\W_]*+pharmacy[\W_]*+4[\W_]*+(?:u|you)(?!\.co\.uk(?<=online-pharmacy4u\.co\.uk))
 1712148062	Makyen	nến thơm tự nhiên
+1712148097	Makyen	nenhomdieuhuong\.com
