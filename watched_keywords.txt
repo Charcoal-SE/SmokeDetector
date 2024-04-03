@@ -60441,3 +60441,4 @@
 1712121183	VLAZ	edulandimmigration\.com
 1712122275	Makyen	hacoled\.com
 1712122295	Makyen	hacoled(?!\.com)
+1712122463	Makyen	eduland[\W_]*+immigration(?!\.com(?<=edulandimmigration\.com))
