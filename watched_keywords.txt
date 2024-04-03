@@ -60463,3 +60463,4 @@
 1712148948	Makyen	networktechblog\.com
 1712150223	Makyen	organics4u\.farm
 1712150245	Makyen	organics4u(?!\.farm)
+1712137356	jps	gyaanjyotieducation\.in
