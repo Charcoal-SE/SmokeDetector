@@ -60475,3 +60475,4 @@
 1712159779	Cow	zuccherocanada\.ca
 1712163821	Cow	topusareview\.com
 1712164160	Makyen	top[\W_]*+usa[\W_]*+review(?!\.com(?<=topusareview\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1712164784	Makyen	grandpastephen\.com
