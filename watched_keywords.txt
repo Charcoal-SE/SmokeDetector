@@ -60457,3 +60457,4 @@
 1712148143	Makyen	sofagiaxuong\.com
 1712148171	Makyen	blogfxpro\.com
 1712148207	Makyen	blogfxpro(?!\.com)
+1712148231	Makyen	tripscape\.ae
