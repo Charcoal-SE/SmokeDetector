@@ -60497,3 +60497,4 @@
 1712233213	Jeff Schaller	stylishfontgenerators\.com
 1712233247	Jeff Schaller	pro-ace-predictions\.co\.uk
 1712231850	Cow	pinki\.auk\.co\.in
+1712189731	Vickel	fologrow(?!\.com)
