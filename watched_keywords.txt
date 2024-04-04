@@ -60517,3 +60517,4 @@
 1712267194	Vickel	hospitalhub\.com\.pk
 1712266723	Vickel	party[\W_]*+time[\W_]*+ny(?!\.com(?<= partytimeny\.com))
 1712266584	Vickel	partytimeny\.com
+1712270953	Makyen	(?:7e)?0149c8b10486645558
