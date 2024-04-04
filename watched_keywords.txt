@@ -60514,3 +60514,4 @@
 1712257086	Vickel	kenstrat\.com
 1712262159	Makyen	cryptotrust09(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1712267570	Vickel	volleyballspikes\.com
+1712267290	Vickel	hospital[\W_]*+hub(?!\.com\.pk(?<=hospitalhub\.com\.pk))
