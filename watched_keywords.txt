@@ -60500,3 +60500,4 @@
 1712189731	Vickel	fologrow(?!\.com)
 1712241001	Jeff Schaller	bhuvneshblog\.com
 1712244320	Makyen	boxproof(?!\.com)
+1712244388	Makyen	zencortex
