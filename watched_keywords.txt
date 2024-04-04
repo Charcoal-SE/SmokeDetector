@@ -60507,3 +60507,4 @@
 1712252156	Makyen	k8414
 1712252180	Makyen	xm594
 1712255057	Cow	gackvel\.com
+1712256097	Makyen	vexanshop(?!\.com)
