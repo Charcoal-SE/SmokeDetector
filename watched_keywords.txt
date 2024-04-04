@@ -60517,3 +60517,4 @@
 1712267290	Vickel	hospital[\W_]*+hub(?!\.com\.pk(?<=hospitalhub\.com\.pk))
 1712267194	Vickel	hospitalhub\.com\.pk
 1712266723	Vickel	party[\W_]*+time[\W_]*+ny(?!\.com(?<= partytimeny\.com))
+1712266584	Vickel	partytimeny\.com
