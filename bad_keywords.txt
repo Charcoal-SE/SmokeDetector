@@ -2940,7 +2940,6 @@ albertgonzalezwizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)
 blockchainappsdeveloper(?!\.com)
 washingtonfarm
 wengui[\W_]*+guo
-Trust[\W_]*+Geeks[\W_]*+Hack[\W_]*+Expert
 rottgenraphael(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?!\.net(?<=revenantcyberhacker\.net))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 Guo[\W_]*+farm
