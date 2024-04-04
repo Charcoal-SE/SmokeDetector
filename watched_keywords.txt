@@ -60481,3 +60481,4 @@
 1712179378	Makyen	veilmail(?!\.io)
 1712187852	Makyen	canonizer\.com
 1712189258	Spevacus	fologrow\.com
+1712189731	Vickel	fologrow(?!\.com)
