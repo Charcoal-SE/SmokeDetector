@@ -60509,3 +60509,4 @@
 1712255057	Cow	gackvel\.com
 1712256097	Makyen	vexanshop(?!\.com)
 1712261614	Makyen	thc[\W_]*+vape(?:[\W_]*+products)
+1712261636	Makyen	thc(?:[\W_]*+online)?[\W_]*+vape[\W_]*+shop
