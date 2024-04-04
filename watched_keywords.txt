@@ -60511,3 +60511,4 @@
 1712261614	Makyen	thc[\W_]*+vape(?:[\W_]*+products)
 1712261636	Makyen	thc(?:[\W_]*+online)?[\W_]*+vape[\W_]*+shop
 1712262081	Makyen	trustgeekshackexpert\.com
+1712257086	Vickel	kenstrat\.com
