@@ -60499,3 +60499,4 @@
 1712231850	Cow	pinki\.auk\.co\.in
 1712189731	Vickel	fologrow(?!\.com)
 1712241001	Jeff Schaller	bhuvneshblog\.com
+1712244320	Makyen	boxproof(?!\.com)
