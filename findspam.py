@@ -2904,7 +2904,7 @@ create_rule("link at beginning of {}",
             '' r'wso|merriam-webster|oracle|magento|example|apple|google|'
             '' r'github|imgur|'
             '' r'stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|'
-            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow|sstatic\.net)\.net)|'
+            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow|sstatic)\.net)|'
             r'github\.io|youtu\.be|edu|'
             r'(?:(?:arxiv|drupal|python|isc|khronos|mongodb|open-std|dartlang|'
             '' r'apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
