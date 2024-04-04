@@ -2984,3 +2984,4 @@ electedroyalty\.com
 rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
 mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
 linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
+(?-i:jkfny87kk6)(?#t.me)
