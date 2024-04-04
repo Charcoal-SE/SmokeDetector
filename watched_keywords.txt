@@ -59879,7 +59879,6 @@
 1710835655	tripleee	sociolabs\.in
 1710835720	tripleee	socio[\W_]*+labs(?!\.in(?<=sociolabs\.in))
 1710836121	tripleee	ear[\W_]*+solutions
-1710836245	cigien	experienceloveevents\.com
 1710836279	tripleee	signia
 1710837436	tripleee	icanvasbooth\.com\.au
 1710840944	cigien	flughafen-transport\.de
