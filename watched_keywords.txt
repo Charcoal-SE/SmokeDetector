@@ -60538,3 +60538,4 @@
 1712341690	Jeff Schaller	volisoft\.org
 1712346256	Makyen	digitalnil\.com
 1712346278	Makyen	digital[\W_]*+nil(?!\.com(?<=digitalnil\.com))
+1712346299	Makyen	parablu(?!\.com)
