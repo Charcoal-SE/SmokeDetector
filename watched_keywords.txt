@@ -60523,3 +60523,4 @@
 1712297724	Nick	hawashim[\W_]*+curtain(?!\.ae(?<=hawashimcurtain\.ae))
 1712299987	tripleee	fultech\.org
 1712297962	Cow	claresholmagencies\.com
+1712304945	tripleee	tammynolan\.ca
