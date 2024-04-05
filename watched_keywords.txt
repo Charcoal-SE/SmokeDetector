@@ -60536,3 +60536,4 @@
 1712334992	Jeff Schaller	mdshahinali\.site
 1712335177	Vickel	md[\W_]*+shahin[\W_]*+ali(?!\.site(?<=mdshahinali\.site))
 1712341690	Jeff Schaller	volisoft\.org
+1712346256	Makyen	digitalnil\.com
