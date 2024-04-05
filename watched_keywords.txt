@@ -60532,3 +60532,4 @@
 1712316980	Vickel	emeriosoft(?!\.ae)
 1712317095	Jeff Schaller	parablu\.com
 1712317621	Jeff Schaller	rajkotdentist\.com
+1712318016	Jeff Schaller	thecliff\.co\.in
