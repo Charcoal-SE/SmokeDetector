@@ -60522,3 +60522,4 @@
 1712293426	Makyen	coincu\.com
 1712297604	Nick	hawashimcurtain\.ae
 1712297724	Nick	hawashim[\W_]*+curtain(?!\.ae(?<=hawashimcurtain\.ae))
+1712299363	tripleee	fultech\.com
