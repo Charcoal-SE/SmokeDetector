@@ -60527,3 +60527,4 @@
 1712304966	tripleee	concurrentmfg\.com
 1712306066	tripleee	smileagain\.in
 1712314329	VLAZ	certboltdumps\.com
+1712314349	VLAZ	cert[\W_]*+bolt[\W_]*+dumps(?!\.com(?<=certboltdumps\.com))
