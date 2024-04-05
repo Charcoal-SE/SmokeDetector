@@ -60528,3 +60528,4 @@
 1712306066	tripleee	smileagain\.in
 1712314329	VLAZ	certboltdumps\.com
 1712314349	VLAZ	cert[\W_]*+bolt[\W_]*+dumps(?!\.com(?<=certboltdumps\.com))
+1712316980	Vickel	emeriosoft(?!\.ae)
