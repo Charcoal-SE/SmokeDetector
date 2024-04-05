@@ -60530,3 +60530,4 @@
 1712314349	VLAZ	cert[\W_]*+bolt[\W_]*+dumps(?!\.com(?<=certboltdumps\.com))
 1712316917	Vickel	emeriosoft\.ae
 1712316980	Vickel	emeriosoft(?!\.ae)
+1712317095	Jeff Schaller	parablu\.com
