@@ -402,6 +402,9 @@ items:
   - seamus.ns.cloudflare.com.
 - ns:
   - amber.ns.cloudflare.com.
+  - bob.ns.cloudflare.com.
+- ns:
+  - amber.ns.cloudflare.com.
   - denver.ns.cloudflare.com.
 - ns:
   - amir.ns.cloudflare.com.
