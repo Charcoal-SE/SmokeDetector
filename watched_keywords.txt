@@ -60539,3 +60539,4 @@
 1712346256	Makyen	digitalnil\.com
 1712346278	Makyen	digital[\W_]*+nil(?!\.com(?<=digitalnil\.com))
 1712346299	Makyen	parablu(?!\.com)
+1712351510	Vickel	alightmotionsapps\.com
