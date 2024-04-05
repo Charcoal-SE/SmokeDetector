@@ -420,23 +420,6 @@ stackexchange.com:
         site: stackexchange.com
         room: 11540
 
-  109841:  # Smoke Detector Reports
-    commands: true
-    msg_types:
-        - site-travel.stackexchange.com
-        - site-travel.meta.stackexchange.com
-        - experimental-site-travel.stackexchange.com
-        - experimental-site-travel.meta.stackexchange.com
-        - site-outdoors.stackexchange.com
-        - site-outdoors.meta.stackexchange.com
-        - experimental-site-outdoors.stackexchange.com
-        - experimental-site-outdoors.meta.stackexchange.com
-        - no-offensive-mask
-
-    privileges:
-      - 17078244 # Xnero
-      # NOTICE: please don't add new users until you have Room Owner approval
-
   129590:  # CGCC Mod Office
     commands: true
     msg_types:
