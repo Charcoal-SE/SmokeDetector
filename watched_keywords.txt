@@ -60521,3 +60521,4 @@
 1712289571	Cow	s90home\.com
 1712293426	Makyen	coincu\.com
 1712297604	Nick	hawashimcurtain\.ae
+1712297724	Nick	hawashim[\W_]*+curtain(?!\.ae(?<=hawashimcurtain\.ae))
