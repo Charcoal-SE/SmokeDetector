@@ -58032,7 +58032,6 @@
 1706979187	VLAZ	Partner[\W_]*+Digital[\W_]*+Agency
 1706984755	Jesse	keyspider\.io
 1706984839	Jesse	technoguest\.com
-1706996397	Makyen	revenantcyberhacker\.net
 1706998870	Nick	Space[\W_]*+Spy[\W_]*+Recovery
 1707003503	Nick	hkrudanihostel\.com
 1707003529	Nick	hitechpavers\.com
