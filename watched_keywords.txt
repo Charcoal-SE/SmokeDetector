@@ -60536,3 +60536,4 @@
 1712328062	Cow	faux-api\.com
 1712334992	Jeff Schaller	mdshahinali\.site
 1712335177	Vickel	md[\W_]*+shahin[\W_]*+ali(?!\.site(?<=mdshahinali\.site))
+1712339335	Cow	ziscom\.in
