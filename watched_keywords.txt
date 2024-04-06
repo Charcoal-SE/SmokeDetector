@@ -60550,3 +60550,4 @@
 1712443537	Nick	davidayo(?!\.com(?<=davidayo\.com))
 1712445950	Nick	createfirefoxdesktopshortcut\.blogspot
 1712445845	Vickel	joldikhoka\.xyz
+1712446103	Makyen	girialok(?:@gmail\.com)?
