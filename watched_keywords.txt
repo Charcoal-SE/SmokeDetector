@@ -14806,7 +14806,6 @@
 1577501047	Eliah Kagan	sieuthibepsaigon\.com\.vn
 1577502028	Eliah Kagan	lewatinaja\.com
 1577502236	Eliah Kagan	award9ja\.com
-1577502301	Eliah Kagan	bluemap\.co
 1577514036	Makyen	alpha[\W_]*+dietary(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 1577514096	Makyen	ketotrin\.info
 1577515137	Makyen	topdietbrande
