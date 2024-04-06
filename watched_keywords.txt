@@ -60540,3 +60540,4 @@
 1712419720	Vickel	surah-al-waqiah\.com
 1712421518	Makyen	(?-i:pjAieZm)(?#goo.su)
 1712425641	Vickel	fazlerabbi\.org
+1712425817	Vickel	fazle[\W_]*+rabbi(?!\.org(?<=fazlerabbi\.org))
