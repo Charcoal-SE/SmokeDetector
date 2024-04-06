@@ -60531,3 +60531,4 @@
 1712351510	Vickel	alightmotionsapps\.com
 1712339335	Cow	ziscom\.in
 1712407924	Makyen	drh[\W_]*+sports(?!\.com(?<=drhsports\.com))
+1712418996	Vickel	masbangkit\.com
