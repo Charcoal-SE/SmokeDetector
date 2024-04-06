@@ -60533,3 +60533,4 @@
 1712407924	Makyen	drh[\W_]*+sports(?!\.com(?<=drhsports\.com))
 1712418971	Vickel	onest\.asia
 1712418981	Vickel	vegasdihati\.com
+1712418996	Vickel	masbangkit\.com
