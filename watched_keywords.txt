@@ -15284,7 +15284,6 @@
 1578721789	Makyen	cannabliss[\W_]*+(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
 1578721806	Makyen	nuleaf[\W_]*+naturals(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1578721848	Makyen	supplement4muscle(?!\.blogspot\b)(?!\.com)(?!\.hatenablog\.com)
-1578721877	Makyen	supplement4muscle\.blogspot
 1578723843	Machavity	xampp\.site
 1578732014	double-beep	bethelp247\.com
 1578738633	Eliah Kagan	(?-i:GljujCLixzE)(?#youtu\.be)
