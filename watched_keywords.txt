@@ -15699,7 +15699,6 @@
 1579642454	Makyen	xtreme-trader\.com
 1579642749	Makyen	xtreme[\W_]*+trader(?!\.com(?<=xtreme-trader\.com))(?:[\W_]*+(?:signals|\d++|[\da-f]{4,}+))*
 1579663189	Makyen	cryptocyberhacker(?:@gmail\.com)?
-1579670351	Shree	batplcbd\.com
 1579670380	Shree	plccourseindhaka\.com
 1579670644	Shree	parcelservicetoindia\.co\.uk
 1579673478	Shree	arscolors\.com
