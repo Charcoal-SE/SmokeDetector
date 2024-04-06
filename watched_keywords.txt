@@ -16850,7 +16850,6 @@
 1582267112	Makyen	(?-i:gdPeR3jyJ98)(?#youtu.be)
 1582267156	Makyen	fairprintindia\.com
 1582267269	Makyen	watsapweb\.net
-1582267432	Makyen	innovationdiet\.com
 1582267770	Makyen	(?-i:gZ5dcuBPQoY)(?#youtu.be)
 1582267792	Makyen	health[\W_]*+gold(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
 1582267831	Makyen	surajestate\.com
