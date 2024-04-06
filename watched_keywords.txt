@@ -16699,7 +16699,6 @@
 1581962253	Das_Geek	safefootballtickets\.com
 1581976598	Eliah Kagan	sipsgeneration\.blogspot
 1581980691	Das_Geek	websitepkvgames\.com
-1581984650	Makyen	padmanspell\.com
 1581984665	Makyen	padmanlovespell(?:@yahoo\.com)?
 1581991855	Eliah Kagan	thegreatherbalhealinghome(?:@gmail\.com)?
 1581991941	Eliah Kagan	d(?:octo)?r[\W_]*ofua[\W_]*ofure
