@@ -60549,3 +60549,4 @@
 1712443511	Nick	davidayo\.com
 1712443537	Nick	davidayo(?!\.com(?<=davidayo\.com))
 1712445950	Nick	createfirefoxdesktopshortcut\.blogspot
+1712445845	Vickel	joldikhoka\.xyz
