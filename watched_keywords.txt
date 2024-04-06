@@ -60542,3 +60542,4 @@
 1712425641	Vickel	fazlerabbi\.org
 1712425817	Vickel	fazle[\W_]*+rabbi(?!\.org(?<=fazlerabbi\.org))
 1712427265	Vickel	mrdigitalmeta\.com
+1712419056	Vickel	(?-i:karabuk-escort-2)(?#bit.ly)
