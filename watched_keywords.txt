@@ -60547,3 +60547,4 @@
 1712387831	Nick	Smart[\W_]*+Tech[\W_]*+Mukesh(?!\.com(?<=smarttechmukesh\.com))
 1712389486	Nick	newstechupdates\.com
 1712398397	Jeff Schaller	goo\.su
+1712398429	Jeff Schaller	kedarnathhelicopterpackages\.com
