@@ -15426,7 +15426,6 @@
 1578992766	tripleee	dtplabs\.com
 1578994029	tripleee	nagashare\.com
 1578994312	tripleee	live[\W_]*+plus
-1578994754	Eliah Kagan	obdkk\.com
 1578995218	Eliah Kagan	puresoftware\.com
 1578995685	Shree	aarakh\.com
 1578996789	Eliah Kagan	getdistributors\.com
