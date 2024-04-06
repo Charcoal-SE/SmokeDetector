@@ -60547,3 +60547,4 @@
 1712436255	Makyen	bukmacherzy(?!-polska\.com)
 1712438748	Jeff Schaller	vccspot\.com
 1712443511	Nick	davidayo\.com
+1712443537	Nick	davidayo(?!\.com(?<=davidayo\.com))
