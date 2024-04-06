@@ -1571,7 +1571,7 @@ voluminesse
 vitahair[\W_]*+max
 (?:up[\W_]*+a[\W_]*+cup.{0,40}?(?:breast|pills|bust|cream|</a>[\W_]*+)s?|(?:breast|pills|bust|cream|a>(?<=</a>)).{0,40}?up\W*a\W*cup)
 luma[\W_]*+slim
-supreme[\W_]*+x
+supreme[\W_]*+x(?!$(?<=^supreme x$))
 viva[\W_]*+x
 bhb[\W_]*+800
 keto[\W_]*+kinetics
