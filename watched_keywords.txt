@@ -18705,7 +18705,6 @@
 1587775777	Makyen	masktechspy(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1587775777	Makyen	besthack247(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1587793927	Makyen	geeky-toys\.com
-1587794857	Shree	guestpostingindia\.com
 1587803984	Nisse Engström	seoplusplus\.com
 1587804027	Nisse Engström	kamathcabs\.com
 1587804270	Nisse Engström	teknotikus\.com
