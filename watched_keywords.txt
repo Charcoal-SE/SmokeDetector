@@ -60557,3 +60557,4 @@
 1712465383	Nick	(?-i:43OtDtv)(?#bit.ly)
 1712482322	Cow	upload\.engrz
 1712492610	Cow	the-denticore\.com
+1712503335	Makyen	decode[\W_]*+hackers(?:@gmail\.com)?
