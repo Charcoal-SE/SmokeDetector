@@ -17357,7 +17357,6 @@
 1583562313	Makyen	techeglobal\.com
 1583562331	Makyen	techforgen\.com
 1583568703	Glorfindel	Sapiens\W*IAS
-1583573409	Eliah Kagan	puzl\.com
 1583583697	double-beep	fruition\.com\.au
 1583596160	Eliah Kagan	nperajkot\.com
 1583596381	Eliah Kagan	(?-i:yVH_SAlAJGY)(?#youtu.be)
