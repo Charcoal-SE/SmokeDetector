@@ -60556,3 +60556,4 @@
 1712464465	Nick	jiuyou\.ac
 1712465383	Nick	(?-i:43OtDtv)(?#bit.ly)
 1712482322	Cow	upload\.engrz
+1712492610	Cow	the-denticore\.com
