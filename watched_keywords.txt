@@ -60554,3 +60554,4 @@
 1712446123	Makyen	vccspot(?!\.com)
 1712446154	Makyen	vccspot111(?:@gmail\.com)?
 1712464465	Nick	jiuyou\.ac
+1712465383	Nick	(?-i:43OtDtv)(?#bit.ly)
