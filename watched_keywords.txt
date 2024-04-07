@@ -60553,3 +60553,4 @@
 1712446103	Makyen	girialok(?:@gmail\.com)?
 1712446123	Makyen	vccspot(?!\.com)
 1712446154	Makyen	vccspot111(?:@gmail\.com)?
+1712464465	Nick	jiuyou\.ac
