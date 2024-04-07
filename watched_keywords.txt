@@ -19365,7 +19365,6 @@
 1589617860	Makyen	maxlabca16(?#gumroad.com)
 1589617915	Makyen	(?-i:EOEqj\.jpg)
 1589622558	Makyen	usmovies24\.com
-1589627431	Makyen	thestandarddaily\.com
 1589631083	Xnero	apetaminstore\.co\.uk
 1589631192	Xnero	(?-i:Apetamin)
 1589631509	Xnero	reynoldshelp\.ca
