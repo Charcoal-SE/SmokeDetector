@@ -60550,3 +60550,4 @@
 1712516422	Makyen	realfavicongenerator\.net
 1712517314	Jeff Schaller	vbase\.com
 1712546849	Nick	huadongcable\.fr
+1712546893	Nick	huadong[\W_]*+cable(?!\.fr(?<=huadongcable\.fr))
