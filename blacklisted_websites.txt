@@ -5519,3 +5519,4 @@ latlong\.dev
 geekstopper\.blogspot
 optimusfox\.com
 barakatalan\.com
+free\.cc
