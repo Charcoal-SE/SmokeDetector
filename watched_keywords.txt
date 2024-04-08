@@ -60549,3 +60549,4 @@
 1712504153	Makyen	recovery[\W_]*+(?:expert(?<!db2 recovery expert)|specialist)s?
 1712516422	Makyen	realfavicongenerator\.net
 1712517314	Jeff Schaller	vbase\.com
+1712546849	Nick	huadongcable\.fr
