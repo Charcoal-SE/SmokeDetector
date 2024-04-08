@@ -60561,3 +60561,4 @@
 1712558001	Makyen	modshieldsb\.com
 1712558022	Makyen	modshieldsb(?!\.com)
 1712558321	Makyen	(?-i:N_LJFBJJKeQ)(?#youtu.be)
+1712558352	Makyen	(?-i:UCzMjtSYQiCK_jNEAo9fj0Sg)(?#YouTube channel)
