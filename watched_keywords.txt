@@ -19623,7 +19623,6 @@
 1590561153	Makyen	vaso[\W_]*+prime(?:[\W_]*+(?:rx|\d++|[\da-f]{4,}+))*
 1590561183	Makyen	readhostingreviews\.com
 1590561277	Makyen	renegade[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1590561302	Makyen	rplg\.co
 1590561328	Makyen	36294000(?#rplg.co)
 1590561353	Makyen	6182f850(?#rplg.co)
 1590561490	Makyen	b29985f0(?#rplg.co)
