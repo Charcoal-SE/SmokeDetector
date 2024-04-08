@@ -60577,3 +60577,4 @@
 1712578286	VLAZ	(?-i:2e98jkzL5-U)(?#youtu.be)
 1712578316	VLAZ	devsamurai\.com
 1712578349	VLAZ	devsamurai(?!\.com)
+1712580104	Jeff Schaller	custompatcheshub\.com
