@@ -60555,3 +60555,4 @@
 1712552852	VLAZ	(?-i:ajvFN)(?#shorturl.at)
 1712555160	Jeff Schaller	qadamstores\.com
 1712555458	Jeff Schaller	pueraria-mirifica\.co\.uk
+1712556083	Makyen	pueraria[\W_]*+mirifica(?!\.co\.uk)(?:[\W_]*+supplements)?
