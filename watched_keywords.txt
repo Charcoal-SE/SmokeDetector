@@ -19548,7 +19548,6 @@
 1590350363	user12986714	lidakmdali\.com
 1590351305	Makyen	lida[\W_]*zayıflama[\W_]*hapı
 1590356342	Makyen	jasonanonymoushacker\.wordpress\.com
-1590357165	Makyen	thecomputhub\.blogspot
 1590357191	Makyen	penningtonprimarycare\.com
 1590357219	Makyen	pennington[\W_]*+primary[\W_]*+care(?!\.com(?<=penningtonprimarycare\.com))
 1590357246	Makyen	techynickk\.com
