@@ -5518,3 +5518,4 @@ rplg\.co
 latlong\.dev
 geekstopper\.blogspot
 optimusfox\.com
+barakatalan\.com

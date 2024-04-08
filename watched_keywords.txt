@@ -20110,7 +20110,6 @@
 1592032530	Makyen	needlead\.business\.site
 1592033923	Makyen	xtremeads\.in
 1592040301	Makyen	wj995311(?:@gmail\.com)?
-1592041323	Eliah Kagan	barakatalan\.com
 1592041884	Makyen	barakatalan(?!\.com)
 1592042419	Makyen	getketobodytone(?#sites.google.com)
 1592056410	Nisse Engström	myprepaidcenters\.co
