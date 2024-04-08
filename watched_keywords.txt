@@ -20227,7 +20227,6 @@
 1592462411	Nisse Engström	quickpaydayonline\.com
 1592464194	Makyen	toolbox\.iskysoft\.com
 1592468875	Makyen	(?-i:5afb4214fedfd1df458d00ac5d427882)(?#apnews.com)
-1592488168	Machavity	computersciencejunction\.in
 1592493498	Machavity	(?-i:1U0_DTfspwo)(?#Youtube)
 1592504061	Machavity	rajabursa\.asia
 1592506461	Makyen	sartajseofreelancer\.com
