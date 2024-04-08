@@ -60580,3 +60580,4 @@
 1712588988	Cow	controlz\.world
 1712590533	Jeff Schaller	(?-i:^user1309786$)
 1712601623	Makyen	controlz(?!\.world)
+1712602359	Makyen	cipherspy[\W_]*+cyber[\W_]*+security[\W_]*+service
