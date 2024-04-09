@@ -60584,3 +60584,4 @@
 1712602390	Makyen	cipherspy(?![\W_]*+cyber[\W_]*+security[\W_]*+service)
 1712608425	General Grievance	siteground\.com
 1712619546	Nick	udidregistrations\.com
+1712624610	Jeff Schaller	xrdevlog\.com
