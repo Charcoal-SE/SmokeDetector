@@ -60621,3 +60621,4 @@
 1712681947	Makyen	hackathontechsolutions\.com
 1712681980	Makyen	hackathon[\W_]*+tech[\W_]*+solutions?(?!\.com(?<=hackathontechsolutions\.com))
 1712692006	Spevacus	(?-i:uzggehno5N3g1Gjj9)(?#forms.gle)
+1712705211	Vickel	petti[\W_]*+home(?!\.shop(?<=pettihome\.shop))
