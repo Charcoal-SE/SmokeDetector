@@ -60618,3 +60618,4 @@
 1712678973	Vickel	acetechnologies\.com
 1712680055	Cow	bloomlinen\.ca
 1712681894	Makyen	bloom[\W_]*+linen(?!\.ca(?<=bloomlinen\.ca))
+1712681947	Makyen	hackathontechsolutions\.com
