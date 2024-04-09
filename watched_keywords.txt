@@ -60600,3 +60600,4 @@
 1712647295	Mast	digitalspeed\.online
 1712647754	Cow	jinftry\.com
 1712648141	VLAZ	arabbusinessconsultant\.com
+1712648164	VLAZ	arab[\W_]*+business[\W_]*+consultant(?!\.com(?<=arabbusinessconsultant\.com))
