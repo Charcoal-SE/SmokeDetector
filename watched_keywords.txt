@@ -60603,3 +60603,4 @@
 1712648164	VLAZ	arab[\W_]*+business[\W_]*+consultant(?!\.com(?<=arabbusinessconsultant\.com))
 1712649605	Cow	keysnlock\.com
 1712660508	Jeff Schaller	divyarishi\.com
+1712660529	Jeff Schaller	nceducations\.com
