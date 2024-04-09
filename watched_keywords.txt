@@ -60585,3 +60585,4 @@
 1712608425	General Grievance	siteground\.com
 1712619546	Nick	udidregistrations\.com
 1712624610	Jeff Schaller	xrdevlog\.com
+1712624652	Jeff Schaller	enterjournals\.com
