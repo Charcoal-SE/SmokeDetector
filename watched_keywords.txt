@@ -60598,3 +60598,4 @@
 1712644496	Cow	struthaircare\.com\.au
 1712645883	Cow	coinography\.com
 1712647295	Mast	digitalspeed\.online
+1712647754	Cow	jinftry\.com
