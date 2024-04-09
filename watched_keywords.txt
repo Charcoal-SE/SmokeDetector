@@ -60617,3 +60617,4 @@
 1712678895	Vickel	baystateroofingmasonry\.com
 1712678973	Vickel	acetechnologies\.com
 1712680055	Cow	bloomlinen\.ca
+1712681894	Makyen	bloom[\W_]*+linen(?!\.ca(?<=bloomlinen\.ca))
