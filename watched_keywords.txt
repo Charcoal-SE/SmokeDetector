@@ -60620,3 +60620,4 @@
 1712681894	Makyen	bloom[\W_]*+linen(?!\.ca(?<=bloomlinen\.ca))
 1712681947	Makyen	hackathontechsolutions\.com
 1712681980	Makyen	hackathon[\W_]*+tech[\W_]*+solutions?(?!\.com(?<=hackathontechsolutions\.com))
+1712692006	Spevacus	(?-i:uzggehno5N3g1Gjj9)(?#forms.gle)
