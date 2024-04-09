@@ -60611,3 +60611,4 @@
 1712666888	Jeff Schaller	genericshub\.com
 1712671306	Makyen	(?-i:TechSupper)(?#YouTube channel)
 1712671583	Makyen	alpaca\.markets
+1712671616	Makyen	lumiwealth\.com
