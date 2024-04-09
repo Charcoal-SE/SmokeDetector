@@ -586,8 +586,8 @@ class FindSpam:
         blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
-        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)".format(
+            "|".join(GlobalVars.bad_keywords))
         try:
             del cls.rule_bad_keywords.compiled_regex
         except AttributeError:
@@ -2303,6 +2303,11 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
                                                   skip_creation_sanity_check=True,
                                                   rule_id="main blacklisted usernames")
 
+# Hardcoded bad keywords without a word boundary (from bad_keywords_nwb list above).
+create_rule("bad keyword in {}", regex=r"(?is){}".format("|".join(bad_keywords_nwb)),
+            username=True, body_summary=True,
+            max_rep=32, max_score=1,
+            rule_id="blacklisted keywords: bad_keywords_nwb")
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
