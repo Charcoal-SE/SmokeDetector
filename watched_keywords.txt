@@ -60615,3 +60615,4 @@
 1712672205	Makyen	checksourcecode\.com
 1712677290	Can O' Spam	ironhackgoogleform1\.com
 1712678895	Vickel	baystateroofingmasonry\.com
+1712679354	Vickel	ace[\W_]*+technologies(?!\.com(?<=acetechnologies\.com))
