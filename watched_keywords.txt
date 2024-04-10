@@ -60623,3 +60623,4 @@
 1712692006	Spevacus	(?-i:uzggehno5N3g1Gjj9)(?#forms.gle)
 1712679354	Vickel	ace[\W_]*+technologies(?!\.com(?<=acetechnologies\.com))
 1712687734	Vickel	thebugger\.us
+1712703017	Vickel	roydlondon\.com
