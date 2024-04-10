@@ -60630,3 +60630,4 @@
 1712713734	Spevacus	charlescrabtree\.com
 1712716344	Makyen	lee[\W_]*+ultimate(?:[\W_]*+hacker(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?)?
 1712716365	Makyen	petti[\W_]*+artigiani[\W_]*+italiani
+1712718973	Makyen	barcode[\W_]*+saturdays(?!\.com)
