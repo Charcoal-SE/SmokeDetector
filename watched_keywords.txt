@@ -60633,3 +60633,4 @@
 1712718973	Makyen	barcode[\W_]*+saturdays(?!\.com)
 1712719472	Makyen	techcary\.com
 1712733568	Mast	leadventgrp\.com
+1712737475	Nick	afte\.co\.in
