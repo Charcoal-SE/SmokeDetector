@@ -60647,3 +60647,4 @@
 1712762513	Makyen	seoindiatajtours
 1712774992	Makyen	1shayari\.in
 1712775014	Makyen	yesoul
+1712775091	Makyen	bolavita[\W_]*+slot
