@@ -60636,3 +60636,4 @@
 1712737475	Nick	afte\.co\.in
 1712750781	Makyen	immediate[\W_]*+(?:[\dx]+[\W_]*+)?alrex(?:[\W_]*+\d+)?
 1712751944	VLAZ	amazingworkplaces\.co
+1712752474	General Grievance	sazinga\.com
