@@ -60625,3 +60625,4 @@
 1712687734	Vickel	thebugger\.us
 1712703017	Vickel	roydlondon\.com
 1712703285	Vickel	roy[\W_]*+d[\W_]*+london(?!\.com(?<=roydlondon\.com))
+1712705891	Vickel	petty[\W_]*+home[\W_]*+shop(?<!pettihome\.shop)
