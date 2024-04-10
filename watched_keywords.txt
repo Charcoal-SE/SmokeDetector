@@ -60639,3 +60639,4 @@
 1712752562	Nick	aristavault\.com
 1712752474	General Grievance	sazinga\.com
 1712679218	Vickel	baystate[\W_]*+roofing
+1712746712	Vickel	medcohmg\.com
