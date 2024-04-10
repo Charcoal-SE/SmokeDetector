@@ -60624,3 +60624,4 @@
 1712679354	Vickel	ace[\W_]*+technologies(?!\.com(?<=acetechnologies\.com))
 1712687734	Vickel	thebugger\.us
 1712703017	Vickel	roydlondon\.com
+1712703285	Vickel	roy[\W_]*+d[\W_]*+london(?!\.com(?<=roydlondon\.com))
