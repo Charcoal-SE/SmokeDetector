@@ -60664,3 +60664,4 @@
 1712852678	Makyen	elationvisas\.com
 1712852710	Makyen	elation[\W_]*+visas(?!\.com(?<=elationvisas\.com))
 1712855308	Makyen	hack[\W_]*+savvy[\W_]*+technology[\W_]*+com
+1712855331	Makyen	hack[\W_]*+savvy[\W_]*+technology(?![\W_]*+com)
