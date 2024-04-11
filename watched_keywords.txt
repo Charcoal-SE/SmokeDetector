@@ -60651,3 +60651,4 @@
 1712775113	Makyen	vipakun\.pro
 1712775145	Makyen	(?-i:nj1Y6\.gif)
 1712787499	Jeff Schaller	Alexcryptofx
+1712803853	Makyen	fgr\.financialresources(?:@gmail\.com)?
