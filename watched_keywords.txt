@@ -60654,3 +60654,4 @@
 1712803853	Makyen	fgr\.financialresources(?:@gmail\.com)?
 1712824941	Nick	mdwistudienkolleg\.com
 1712826361	Nick	intelvisionedtech\.com
+1712830510	Jeff Schaller	ukgermanpharmaceuticals\.com
