@@ -60653,3 +60653,4 @@
 1712787499	Jeff Schaller	Alexcryptofx
 1712803853	Makyen	fgr\.financialresources(?:@gmail\.com)?
 1712824941	Nick	mdwistudienkolleg\.com
+1712826361	Nick	intelvisionedtech\.com
