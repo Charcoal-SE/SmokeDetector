@@ -60667,3 +60667,4 @@
 1712855331	Makyen	hack[\W_]*+savvy[\W_]*+technology(?![\W_]*+com)
 1712860128	Nisse Engström	asahitower\.net
 1712868162	Jeff Schaller	profitablegatecpm\.com
+1712874162	Jeff Schaller	teamhood\.com
