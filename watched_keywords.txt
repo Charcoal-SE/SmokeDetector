@@ -35409,7 +35409,6 @@
 1643622680	tripleee	(?-i:^3tJpWpk)(?# fiverr)
 1643625044	tripleee	ranchiescorts\.com
 1643625076	tripleee	punegirl\.com
-1643628066	tripleee	(?-i:^acl$)
 1643629602	tripleee	aims-academy\.com
 1643630051	tripleee	itcarlow\.ie
 1643631113	tripleee	playbadicecream\.com
