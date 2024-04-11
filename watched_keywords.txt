@@ -60662,3 +60662,4 @@
 1712840528	Jeff Schaller	bestlifegummies\.com
 1712841979	Jeff Schaller	allcloud\.in
 1712852678	Makyen	elationvisas\.com
+1712852710	Makyen	elation[\W_]*+visas(?!\.com(?<=elationvisas\.com))
