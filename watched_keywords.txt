@@ -60677,3 +60677,4 @@
 1712905023	Nick	musicfab\.org
 1712905060	Nick	MusicFab(?!\.org)
 1712906257	Nick	theamritlife\.com
+1712907237	Nick	iotellect\.com
