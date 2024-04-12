@@ -223,6 +223,9 @@ items:
   - dana.ns.cloudflare.com.
   - josh.ns.cloudflare.com.
 - ns:
+  - duke.ns.cloudflare.com.
+  - lana.ns.cloudflare.com.
+- ns:
   - dana.ns.cloudflare.com.
   - major.ns.cloudflare.com.
 - ns:
