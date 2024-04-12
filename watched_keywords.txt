@@ -28167,7 +28167,6 @@
 1619573595	cigien	esupplier[\W_]*+pk(?!(?<=esupplier\.pk))
 1619574448	cigien	homebtb\.com
 1619574463	cigien	homebtb(?!\.com)
-1619575539	hyper-neutrino	lapak303
 1619575631	cigien	magedelight\.com
 1619577857	cigien	tucankin(?!\.com)
 1619580608	cigien	muskanshayari\.in
