@@ -2557,7 +2557,6 @@ cóinbase[\W_]*+pro[\W_]*+login
 cetpa[\W_]*+infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
 patialalegitimate515
-techie[\W_]*+(?:dot[\W_]*+)?com
 amberlottotemple(?:@yahoo\.com)?
 quick[\W_]*+books[\W_]*+helpline
 dr[\W_]*+vinod[\W_]*+raina
