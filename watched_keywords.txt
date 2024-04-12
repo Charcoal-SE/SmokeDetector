@@ -28110,7 +28110,6 @@
 1619414334	Ryan M	sharkfeeds\.xyz
 1619414713	Ryan M	anji[\W_]*+safety[\W_]*+n[et]{2}s
 1619415518	Ryan M	Andromo(?!\.com)
-1619415779	Ryan M	mypixieset\.com
 1619415875	Ryan M	mistermpo
 1619416190	tripleee	andromo\.com
 1619416623	tripleee	irlegrand\.com

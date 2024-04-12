@@ -5527,3 +5527,4 @@ acte\.in
 revopoint3d\.com
 trustgeekshackexpert\.com
 hotdeals\.com
+mypixieset\.com
