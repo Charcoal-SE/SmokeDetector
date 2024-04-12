@@ -60458,7 +60458,6 @@
 1712256097	Makyen	vexanshop(?!\.com)
 1712261614	Makyen	thc[\W_]*+vape(?:[\W_]*+products)
 1712261636	Makyen	thc(?:[\W_]*+online)?[\W_]*+vape[\W_]*+shop
-1712262081	Makyen	trustgeekshackexpert\.com
 1712257086	Vickel	kenstrat\.com
 1712262159	Makyen	cryptotrust09(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1712267570	Vickel	volleyballspikes\.com
