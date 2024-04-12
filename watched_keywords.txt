@@ -60670,3 +60670,4 @@
 1712882033	Makyen	teamhood(?!\.com)
 1712882110	Makyen	(?-i:02lwAk)(?#fiverr.com)
 1712889829	Makyen	d(?:octo)?r[\W_]*+mkuru
+1712897634	Nick	nepalirudraksha\.com
