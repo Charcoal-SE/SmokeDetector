@@ -3267,6 +3267,9 @@ items:
   - nina.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
+  - nitin.ns.cloudflare.com.
+  - zoe.ns.cloudflare.com.
+- ns:
   - nolan.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
