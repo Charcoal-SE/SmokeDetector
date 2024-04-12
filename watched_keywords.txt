@@ -60678,3 +60678,4 @@
 1712905060	Nick	MusicFab(?!\.org)
 1712906257	Nick	theamritlife\.com
 1712907237	Nick	iotellect\.com
+1712907273	Nick	iotellect(?!\.com)
