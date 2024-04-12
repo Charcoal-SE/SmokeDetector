@@ -60679,3 +60679,4 @@
 1712906257	Nick	theamritlife\.com
 1712907237	Nick	iotellect\.com
 1712907273	Nick	iotellect(?!\.com)
+1712917519	Jeff Schaller	standesk\.eu
