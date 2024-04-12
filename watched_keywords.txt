@@ -60691,3 +60691,4 @@
 1712929349	Jeff Schaller	punequeens\.com
 1712929400	Jeff Schaller	vietnamtravel\.org\.vn
 1712929455	Jeff Schaller	tucsonstuccocontractors\.com
+1712931198	Jeff Schaller	powermatic\.co\.th
