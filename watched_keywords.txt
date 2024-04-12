@@ -60672,3 +60672,4 @@
 1712889829	Makyen	d(?:octo)?r[\W_]*+mkuru
 1712897634	Nick	nepalirudraksha\.com
 1712897719	Nick	Nepa(?:li)?[\W_]*+Rudraksha(?!\.com(?<=nepalirudraksha\.com))
+1712900012	Nick	wallankilmoretaxi\.com\.au
