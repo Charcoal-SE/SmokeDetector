@@ -932,6 +932,9 @@ items:
   - brad.ns.cloudflare.com.
   - sydney.ns.cloudflare.com.
 - ns:
+  - braden.ns.cloudflare.com.
+  - gigi.ns.cloudflare.com.
+- ns:
   - bradley.ns.cloudflare.com.
   - zelda.ns.cloudflare.com.
 - ns:
