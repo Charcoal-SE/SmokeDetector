@@ -60668,3 +60668,4 @@
 1712860128	Nisse Engström	asahitower\.net
 1712868162	Jeff Schaller	profitablegatecpm\.com
 1712874162	Jeff Schaller	teamhood\.com
+1712882033	Makyen	teamhood(?!\.com)
