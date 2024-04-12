@@ -60692,3 +60692,4 @@
 1712924291	tripleee	markalytics\.com
 1712925944	Jeff Schaller	php-scripts-form\.blogspot
 1712929349	Jeff Schaller	punequeens\.com
+1712929400	Jeff Schaller	vietnamtravel\.org\.vn
