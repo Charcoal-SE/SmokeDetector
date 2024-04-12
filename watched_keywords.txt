@@ -60669,3 +60669,4 @@
 1712874162	Jeff Schaller	teamhood\.com
 1712882033	Makyen	teamhood(?!\.com)
 1712882110	Makyen	(?-i:02lwAk)(?#fiverr.com)
+1712889829	Makyen	d(?:octo)?r[\W_]*+mkuru
