@@ -60632,7 +60632,6 @@
 1712752474	General Grievance	sazinga\.com
 1712679218	Vickel	baystate[\W_]*+roofing
 1712746712	Vickel	medcohmg\.com
-1712756899	Jeff Schaller	Easyreclaim0
 1712756930	Jeff Schaller	marblelifeproducts\.com
 1712761167	Jeff Schaller	free3dmodel\.org
 1712762480	Makyen	indiatajtours\.com
