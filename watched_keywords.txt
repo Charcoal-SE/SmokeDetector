@@ -60681,3 +60681,4 @@
 1712907273	Nick	iotellect(?!\.com)
 1712917519	Jeff Schaller	standesk\.eu
 1712917570	Jeff Schaller	theindianpharma\.com
+1712917940	Jeff Schaller	Bitget
