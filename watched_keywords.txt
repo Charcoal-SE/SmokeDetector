@@ -60686,3 +60686,4 @@
 1712918002	Jeff Schaller	table-manners\.co
 1712920989	Jeff Schaller	buildersmart\.in
 1712922760	Nick	auditbots\.com
+1712922790	Nick	AuditBOTs?(?!\.com)
