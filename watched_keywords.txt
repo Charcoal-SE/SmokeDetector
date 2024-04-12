@@ -3722,7 +3722,6 @@
 1530083455	tripleee	tutu-app\.com
 1530083455	tripleee	happychick\.vip
 1530083455	tripleee	showbox\.ooo
-1530087897	Rob	hotdeals\.com
 1530088659	tripleee	minkhair\.com
 1530094689	tripleee	vpntracker\.com
 1530097303	paper1111	radiustheme\.com
