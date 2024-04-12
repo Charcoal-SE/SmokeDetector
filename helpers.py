@@ -309,7 +309,10 @@ def reload_modules():
 def unshorten_link(url, request_type='GET', depth=10, timeout=15):
     orig_url = url
     response_code = 301
-    headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
+    # We use a valid Firefox User-Agent, because some services don't provide the forward when we tell them the
+    # request is from Smokedetector (e.g., cloudflare.com, which is used, as of 2024-04-12, by https://t.ly, which
+    # is one of the domains which we test in our CI testing).
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0'}
     for tries in range(depth):
         if response_code not in {301, 302, 303, 307, 308}:
             break
