@@ -60731,3 +60731,4 @@
 1712992184	Nick	Diamond[\W_]*+Collections(?!\.com(?<=DiamondCollections\.com))
 1712996536	Nick	smtfinmedia\.com
 1712996569	Nick	SMT[\W_]*+Finmedia(?!\.com(?<=smtfinmedia\.com))
+1712996636	Nick	puravaankara\.ind\.in
