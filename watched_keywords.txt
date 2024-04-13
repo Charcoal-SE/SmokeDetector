@@ -60713,3 +60713,4 @@
 1712974897	Nick	destinedtoberevealed\.com
 1712980993	Makyen	code[\W_]*+de[\W_]*+parrainage
 1712981075	Makyen	qsk6
+1712981096	Makyen	referans[\W_]*+kodu
