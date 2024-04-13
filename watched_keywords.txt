@@ -60588,7 +60588,6 @@
 1712640891	Cow	runrdp\.com
 1712645286	Mast	cellphonearea\.com
 1712644496	Cow	struthaircare\.com\.au
-1712645883	Cow	coinography\.com
 1712647295	Mast	digitalspeed\.online
 1712647754	Cow	jinftry\.com
 1712648141	VLAZ	arabbusinessconsultant\.com
