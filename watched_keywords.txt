@@ -60751,3 +60751,4 @@
 1713037109	Makyen	apkdrag\.com
 1713042703	Jeff Schaller	footrunway\.com
 1713049631	Makyen	maye[\W_]*+musk(?:[\W_]*+(?:recovery|company|wizard|hack(?:er|ing)?|service|\d++|[\da-f]{5,}+)s?)*
+1713051846	Jeff Schaller	frshpacksla\.com
