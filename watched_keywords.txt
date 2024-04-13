@@ -60711,3 +60711,4 @@
 1712974382	Makyen	бонус
 1712974430	Makyen	реферальный код
 1712974897	Nick	destinedtoberevealed\.com
+1712980993	Makyen	code[\W_]*+de[\W_]*+parrainage
