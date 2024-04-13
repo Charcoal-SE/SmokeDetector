@@ -60727,3 +60727,4 @@
 1712991877	Nick	bidbits\.org
 1712991914	Nick	BidBits(?!\.org)
 1712992085	Nick	optechsoft\.com
+1712992162	Nick	DiamondCollections\.com
