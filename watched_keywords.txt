@@ -60717,3 +60717,4 @@
 1712981118	Makyen	codice[\W_]*+referral
 1712981190	Makyen	紹介コード
 1712981683	Nick	multiversitystore\.com
+1712981731	Nick	Multiversity[\W_]*+Store(?!\.com(?<=multiversitystore\.com))
