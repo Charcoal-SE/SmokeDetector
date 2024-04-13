@@ -60743,3 +60743,4 @@
 1713029558	Cow	looksize\.com
 1713031554	Cow	mangamod\.com
 1713031773	Makyen	mangamod(?!\.com)
+1713033506	Cow	roayatech\.net
