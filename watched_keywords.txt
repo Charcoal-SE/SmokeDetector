@@ -60741,3 +60741,4 @@
 1713012940	Vickel	make[\W_]*+my[\W_]*+assignments(?!\.co\.nz(?<=makemyassignments\.co\.nz))
 1713028908	Makyen	assignments?[\W_]*+help
 1713029558	Cow	looksize\.com
+1713031554	Cow	mangamod\.com
