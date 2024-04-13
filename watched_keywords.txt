@@ -60738,3 +60738,4 @@
 1713009475	Vickel	indianpornpictures\.com
 1713012534	Nick	kapil[\W_]*+lokhande(?:123)?
 1713012670	Vickel	makemyassignments\.co\.nz
+1713012940	Vickel	make[\W_]*+my[\W_]*+assignments(?!\.co\.nz(?<=makemyassignments\.co\.nz))
