@@ -60729,3 +60729,4 @@
 1712992085	Nick	optechsoft\.com
 1712992162	Nick	DiamondCollections\.com
 1712992184	Nick	Diamond[\W_]*+Collections(?!\.com(?<=DiamondCollections\.com))
+1712996536	Nick	smtfinmedia\.com
