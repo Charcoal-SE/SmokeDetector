@@ -60736,3 +60736,4 @@
 1712997781	Nick	infos[\W_]*+connect(?!\.com(?<=infosconnect\.com))
 1713008109	Jeff Schaller	drainexpress\.ca
 1713009475	Vickel	indianpornpictures\.com
+1713012376	Vickel	au\.makemyassignments\.co\.nz
