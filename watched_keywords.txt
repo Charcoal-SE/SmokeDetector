@@ -60750,3 +60750,4 @@
 1713037102	Makyen	makeenmarketing\.com
 1713037109	Makyen	apkdrag\.com
 1713042703	Jeff Schaller	footrunway\.com
+1713049372	Makyen	maye[\W_]*+musk(?:[\W_]*+(?:recovery|company|hack(?:er|ing)?|service|\d++|[\da-f]{5,}+)s?)*
