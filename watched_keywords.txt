@@ -60745,3 +60745,4 @@
 1713031773	Makyen	mangamod(?!\.com)
 1713033506	Cow	roayatech\.net
 1713033716	Makyen	roayatech(?!\.net)
+1713033750	Makyen	سانج يونج
