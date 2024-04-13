@@ -60720,3 +60720,4 @@
 1712981731	Nick	Multiversity[\W_]*+Store(?!\.com(?<=multiversitystore\.com))
 1712988900	Nick	rainocode\.com
 1712988932	Nick	Rainocode(?!\.com)
+1712989072	Nick	nextbell\.com
