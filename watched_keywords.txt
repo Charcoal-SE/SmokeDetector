@@ -60726,3 +60726,4 @@
 1712989296	Nick	Gravitation_Gravitivity(?#youtube)
 1712991877	Nick	bidbits\.org
 1712991914	Nick	BidBits(?!\.org)
+1712992085	Nick	optechsoft\.com
