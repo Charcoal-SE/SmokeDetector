@@ -60755,3 +60755,4 @@
 1713084407	Makyen	zen[\W_]*+cortex(?:[\W_]*+(?:united|states|canada|australia|new|zealand|official|review|\d++|[\da-f]{5,}+)s?)*
 1713084428	Makyen	male[\W_]*+supplements?
 1713097903	VLAZ	gangguhk
+1713100541	Vickel	elitewebrecovery@cash4u\.com
