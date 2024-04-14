@@ -2990,3 +2990,4 @@ digital[\W_]*+hack[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?techie(?:[\W_]*+(?:dot[
 xổ\s*+số
 บาคาร่า
 share\Wmy\Wtestimony
+kartu\s+poker
