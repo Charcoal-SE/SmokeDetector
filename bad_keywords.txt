@@ -2989,3 +2989,4 @@ lapak303
 digital[\W_]*+hack[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?techie(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 xổ\s*+số
 บาคาร่า
+share\Wmy\Wtestimony
