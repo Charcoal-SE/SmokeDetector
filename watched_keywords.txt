@@ -60754,3 +60754,4 @@
 1713084385	Makyen	alpha[\W_]*+drive(?:[\W_]*+(?:united|states|canada|australia|new|zealand|official|review|\d++|[\da-f]{5,}+)s?)*
 1713084407	Makyen	zen[\W_]*+cortex(?:[\W_]*+(?:united|states|canada|australia|new|zealand|official|review|\d++|[\da-f]{5,}+)s?)*
 1713084428	Makyen	male[\W_]*+supplements?
+1713097699	Vickel	Ekdantam(?:[\W_]*+Dental)?[\W_]*+Clinic(?!\.com(?<=ekdantamclinic\.com))
