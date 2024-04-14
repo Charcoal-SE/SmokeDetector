@@ -60749,3 +60749,4 @@
 1713049631	Makyen	maye[\W_]*+musk(?:[\W_]*+(?:recovery|company|wizard|hack(?:er|ing)?|service|\d++|[\da-f]{5,}+)s?)*
 1713051846	Jeff Schaller	frshpacksla\.com
 1713075977	Jeff Schaller	rtpshienslots\.com
+1713083195	Cow	martelgold\.com
