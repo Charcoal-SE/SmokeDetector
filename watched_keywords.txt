@@ -60759,3 +60759,4 @@
 1713100351	Vickel	angelinachristopher1738@gmail\.com
 1713097699	Vickel	Ekdantam(?:[\W_]*+Dental)?[\W_]*+Clinic(?!\.com(?<=ekdantamclinic\.com))
 1713097210	Vickel	ekdantamclinic\.com
+1712938673	General Grievance	bytepadding\.com
