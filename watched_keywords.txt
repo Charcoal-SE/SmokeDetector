@@ -60751,3 +60751,4 @@
 1713075977	Jeff Schaller	rtpshienslots\.com
 1713083195	Cow	martelgold\.com
 1713083900	Makyen	mkdigita\.in
+1713084385	Makyen	alpha[\W_]*+drive(?:[\W_]*+(?:united|states|canada|australia|new|zealand|official|review|\d++|[\da-f]{5,}+)s?)*
