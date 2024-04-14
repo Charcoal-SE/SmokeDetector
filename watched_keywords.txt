@@ -20746,7 +20746,6 @@
 1594360979	Makyen	yo1\.com
 1594361154	Makyen	ravidhruv
 1594368747	Xnero	(?-i:UCHkPqeTrTlTvY23x3PwJzEA)(?#YouTube)
-1594370679	Makyen	xổ\s*+số
 1594370700	Makyen	blog\.xsvn\.com
 1594370901	Xnero	digi\.uma\.ac\.id
 1594371166	Makyen	bopmarket\.com
