@@ -31433,7 +31433,6 @@
 1630394095	tripleee	biggboss15todayepisode\.com
 1630394857	tripleee	(?-i:^Haris Institute$)
 1630404476	tripleee	(?-i:3gMhrlX)(?# bit.ly)
-1630404837	tripleee	getresponse\.com
 1630408297	tripleee	tdupy\.com
 1630408398	tripleee	my[\W_]*+bill[\W_]*+book(?!\.in)
 1630409851	tripleee	solutiondoodz\.blogspot
