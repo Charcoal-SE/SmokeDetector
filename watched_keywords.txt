@@ -60768,3 +60768,4 @@
 1713144930	Nick	WONG[\W_]*+BEST[\W_]*+WIZARD(?!service\.com(?<=wongbestwizardservice\.com))
 1713150421	Makyen	martelgold(?!\.com)
 1713150775	Makyen	文贵
+1713155572	Jeff Schaller	whatsenderpro\.com
