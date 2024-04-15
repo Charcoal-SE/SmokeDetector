@@ -60767,3 +60767,4 @@
 1713144856	Nick	wongbestwizardservice\.com
 1713144930	Nick	WONG[\W_]*+BEST[\W_]*+WIZARD(?!service\.com(?<=wongbestwizardservice\.com))
 1713150421	Makyen	martelgold(?!\.com)
+1713150775	Makyen	文贵
