@@ -35758,7 +35758,6 @@
 1644680906	cigien	riyadhmovers\.com
 1644680975	cigien	(?-i:EBcrBq4Nxt0)(?#youtu.be)
 1644680994	cigien	(?-i:hTXrH39UupY)(?#youtu.be)
-1644682128	cigien	(?-i:umw0lr)(?#rb.gy)
 1644682143	Robert Longson	elementtutorials\.com
 1644682498	cigien	happyeyes\.io
 1644682571	cigien	awesomus
@@ -40007,7 +40006,6 @@
 1656194032	cigien	scheupel\w*+
 1656195986	Makyen	jogloran
 1656223197	Cody Gray	(?-i:Gulshan[\W_]*Alam)
-1656227692	Cody Gray	(?-i:6d0NcUougD4)(?#youtube)
 1656228150	Cody Gray	windows11freedownloadactivatediso
 1656228172	Cody Gray	beedatimescrypto\.blogzet
 1656228225	Cody Gray	beeda[\W_]*(?:news|times)(?!crypto)
