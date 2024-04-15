@@ -60768,3 +60768,4 @@
 1713155572	Jeff Schaller	whatsenderpro\.com
 1713155615	Jeff Schaller	flyingcolour\.net
 1713158736	Makyen	accuratecapitalplus\.com
+1713158758	Makyen	accurate[\W_]*+capital[\W_]*+plus(?!\.com(?<=accuratecapitalplus\.com))
