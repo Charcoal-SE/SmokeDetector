@@ -60785,3 +60785,4 @@
 1713187762	Can O' Spam	kieutoc\.net
 1713190878	Jeff Schaller	getresponse\.com(?<!api\.getresponse\.com)(?<!apidocs\.getresponse\.com)
 1713191622	Jeff Schaller	sites\.google\.com/view/email-marketinghh
+1713191703	Can O' Spam	iproyal\.com
