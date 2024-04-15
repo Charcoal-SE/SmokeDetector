@@ -18107,7 +18107,7 @@
 1585813677	tripleee	sarweshwarintellectual\.in
 1585813706	Shree	tronserve\.com
 1585817149	Shree	vegus168gold\.com
-1585820496	tripleee	(?-i:5HqJ9p)(#! discord)
+1585820496	tripleee	(?-i:5HqJ9p)(?# discord)
 1585827296	tripleee	nitsa
 1585828540	Makyen	iasvignan\.com
 1585828565	Makyen	vignanias\.com
@@ -20872,7 +20872,7 @@
 1594815629	Machavity	youngevity\.me
 1594817257	Xnero	einfach-umzug\.com
 1594817302	Xnero	einfach\Wumzug(!\.com)
-1594817936	Xnero	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(#? obfuscated usmanovoilandgas60@mail.ru)
+1594817936	Xnero	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(?# obfuscated usmanovoilandgas60@mail.ru)
 1594818309	Xnero	fundayholidays\.com
 1594818599	Xnero	browseinfo\.in
 1594822520	Makyen	fbdon\.com
@@ -20917,7 +20917,7 @@
 1594988160	Jeff Schaller	ukrainiantvcompany\.com
 1594990041	Xnero	iairtickets\.com
 1594990060	Xnero	(?-i:Allegiant Airlines)
-1594993312	Xnero	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
+1594993312	Xnero	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(?# obfuscated brainhackers@aol.com)
 1594994918	Machavity	bestiefood\.com
 1594995601	Xnero	cboinfotech\.com
 1594997455	Xnero	amazing\.populiser\.com
@@ -21234,7 +21234,7 @@
 1596274198	Mast	dodungnoithat\.vn
 1596282168	Jeff Schaller	medhahosting\.com
 1596300329	Makyen	asiatechnova\.com
-1596307304	Xnero	(?-i:sp2728)(#?GitHub)
+1596307304	Xnero	(?-i:sp2728)(?#GitHub)
 1596307337	Xnero	saikiran1298(?:@gmail\.com)?
 1596325680	NobodyNada	impressorahpdrivers\.com
 1596345409	NobodyNada	Could\snot\sdetermine\sjava\sversion\sfrom\s'14\.0\.2'
@@ -24160,7 +24160,7 @@
 1606477967	tripleee	escalesolutions\.com
 1606478016	tripleee	aquafreshropurifier\.com
 1606480687	Mast	analaticg2(?:@gmail\.com)?
-1606483382	tripleee	(?-i:6d0NcUougD4)(#! youtube "consider the game" plagiarism post)
+1606483382	tripleee	(?-i:6d0NcUougD4)(?# youtube "consider the game" plagiarism post)
 1606483554	tripleee	apkonline\.net
 1606486443	Mast	bestonlineclasshelp\.com
 1606500226	Makyen	live-online-tvchannel\.blogspot
@@ -24741,7 +24741,7 @@
 1608707106	cigien	pillsdaddy\.com
 1608707568	tripleee	digidir\.com
 1608711024	Glorfindel	knifesgeek\.com
-1608711983	tripleee	(?-i: nkn41)(?# gg.gg redirect)
+1608711983	tripleee	(?-i:nkn41)(?# gg.gg redirect)
 1608714297	tripleee	akshartours\.us
 1608714794	tripleee	crackdj\.com
 1608716667	Glorfindel	ArmandaVape
@@ -27765,7 +27765,7 @@
 1618198073	cigien	krtech\.in
 1618209074	tripleee	techtipsguru\.com
 1618209925	tripleee	capitalmanage-inc\.com
-1618211265	tripleee	(?-i:nexF)(#? zurl.co redirect)
+1618211265	tripleee	(?-i:nexF)(?# zurl.co redirect)
 1618212349	Makyen	ricky[\W_]*+gervais[\W_]*+cbd(?:[\W_]*+(?:gum|gummies|price|buy|review|\d++|[\da-f]{5,}+)s?)*
 1618212483	Makyen	easyshiksha\.com
 1618218254	tripleee	TNHH[\W_]*+DANY
@@ -30766,7 +30766,7 @@
 1628066224	Ryan M	industrydataanalytics\.com
 1628069484	tripleee	findholidayplaces\.us
 1628070198	tripleee	squadsnews\.com
-1628070332	tripleee	(?-i: bPFm2)(?# urlzs.com)
+1628070332	tripleee	(?-i:bPFm2)(?# urlzs.com)
 1628073514	tripleee	(?-i:^Suhel Ahmad$)
 1628075204	tripleee	(?:full)?b[dr]rips?
 1628075292	tripleee	cheapestessaywritingservice\.com
@@ -30796,7 +30796,7 @@
 1628144364	Nisse Engström	dittocopies\.com
 1628147278	tripleee	radinservices\.com
 1628147462	tripleee	veerometals\.com
-1628149016	tripleee	(?-i: a0e59c7cd0)(?# fiverr)
+1628149016	tripleee	(?-i:a0e59c7cd0)(?# fiverr)
 1628150166	Makyen	mrsscientificinstruments\.com
 1628150197	Makyen	bookaflightdeals\.com
 1628153318	Ryan M	slidefrogs\.com
@@ -37323,8 +37323,8 @@
 1648806400	Cody Gray	gems(?:tone)?[\W_]*recommendations?
 1648806539	Cody Gray	(?-i:B5LKp\.jpg)(?# stack imgur)
 1648806970	Cody Gray	muh5z\.com
-1648807068	Cody Gray	#?mu[\W_]*khởi[\W_]*nguyên
-1648807092	Cody Gray	#?mu[\W_]*mới[\W_]*nhất
+1648807068	Cody Gray	mu[\W_]*khởi[\W_]*nguyên
+1648807092	Cody Gray	mu[\W_]*mới[\W_]*nhất
 1648807669	Cody Gray	walkermaster\.com
 1648807699	Cody Gray	best[\W_]*(?:bedside[\W_]*)?commodes?
 1648807792	Cody Gray	(?-i:^Valuefirst823$)
@@ -43077,7 +43077,7 @@
 1664348281	tripleee	imarku\.net
 1664350583	tripleee	scand\.com
 1664350628	tripleee	immipointvisa\.com
-1664350652	tripleee	!!/watch immipointvisa(?!\.com)
+1664350652	tripleee	immipointvisa(?!\.com)
 1664350677	tripleee	immipoint(?!visa)
 1664350709	tripleee	codemithra\.com
 1664350736	tripleee	codemithra(?!\.com)
@@ -43625,8 +43625,8 @@
 1665737426	tripleee	vaihe\.fi
 1665739834	tripleee	vioacademy\.edu\.vn
 1665740325	tripleee	luxcomsports\.com
-1665740609	Cody Gray	#?tiktokmarketing
-1665740644	Cody Gray	#?tichxanhtiktok(?:lagi)?
+1665740609	Cody Gray	tiktokmarketing
+1665740644	Cody Gray	tichxanhtiktok(?:lagi)?
 1665741099	tripleee	saphnixlifesciences\.com
 1665743687	Jeff Schaller	centriz\.ae
 1665744517	tripleee	smcinsurance\.com
@@ -46635,7 +46635,7 @@
 1674902316	Cody Gray	brandpc\.co
 1674902354	Cody Gray	vst-studio\.com
 1674907747	Cody Gray	Salon[\W_]*Parlor[\W_]*Services?
-1674908444	Cody Gray	(?-i:eBGIQ7ZuuiU)(# YouTube RickRoll)
+1674908444	Cody Gray	(?-i:eBGIQ7ZuuiU)(?# YouTube RickRoll)
 1674911299	Jeff Schaller	johntheplumberkansascity\.com
 1674912263	Cody Gray	Kansas[\W_]*City[\W_]*Plumber
 1674914816	Cody Gray	travelblog2434\.blogspot
@@ -54406,7 +54406,7 @@
 1698882128	Jeff Schaller	(?-i:irhlswbgl)(?# pastelink.net)
 1698882128	Jeff Schaller	(?-i:HwwtVoRs)(?#cutt.ly)
 1698882128	Jeff Schaller	(?-i:Kwwp8mWn)(?#cutt.ly)
-1698882128	Jeff Schaller	\bncyclopedia\.in(#? exclude innocent pokencyclopedia\.info)
+1698882128	Jeff Schaller	\bncyclopedia\.in(?# exclude innocent pokencyclopedia\.info)
 1698882486	Makyen	(?-i:fY8ZxAoc4Bk)(?#youtu.be)
 1698889099	Makyen	buyexceltemplates\.com
 1698889722	Jeff Schaller	smartpcfixer

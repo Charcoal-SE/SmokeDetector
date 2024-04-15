@@ -2565,7 +2565,7 @@ investmentpro[\W_]*+at[\W_]*+writeme[\W_]*+dot[\W_]*+com
 leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 lumineux[\W_]*+cream
 quickbooks[\W_]*+desktop[\W_]*+payroll
-(?-i:umw0lr)(#? rb.gy)
+(?-i:umw0lr)(?# rb.gy)
 victorstadeyhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 realsaintspyerhk(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 VanceAI(?!\.com)
