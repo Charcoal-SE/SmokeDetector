@@ -60776,3 +60776,4 @@
 1713165611	tripleee	aarvy[\W_]*+edutech(?!\.com(?<=aarvyedutech\.com))
 1713166136	Nick	booktaximelbourne\.com\.au
 1713166187	Nick	Book[\W_]*+Taxi[\W_]*+Melbourne(?!\.com\.au(?<=booktaximelbourne\.com\.au))
+1713176333	Jeff Schaller	khalidmodern\.com
