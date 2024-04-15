@@ -60773,3 +60773,4 @@
 1713159265	Makyen	pcongrp\.com
 1713165275	Cow	mymudra\.com
 1713165576	VLAZ	aarvyedutech\.com
+1713165611	tripleee	aarvy[\W_]*+edutech(?!\.com(?<=aarvyedutech\.com))
