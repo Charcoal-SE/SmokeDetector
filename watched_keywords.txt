@@ -60770,3 +60770,4 @@
 1713158736	Makyen	accuratecapitalplus\.com
 1713158758	Makyen	accurate[\W_]*+capital[\W_]*+plus(?!\.com(?<=accuratecapitalplus\.com))
 1713159071	Cow	beardeddragongeek\.com
+1713159265	Makyen	pcongrp\.com
