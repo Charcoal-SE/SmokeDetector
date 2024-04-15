@@ -60783,3 +60783,4 @@
 1713180724	Jeff Schaller	giffywalls\.co\.uk
 1713185557	Jeff Schaller	(?-i:aQDFYuTfnKeZesDF8)(?# forms.gle)
 1713187762	Can O' Spam	kieutoc\.net
+1713190878	Jeff Schaller	getresponse\.com(?<!api\.getresponse\.com)(?<!apidocs\.getresponse\.com)
