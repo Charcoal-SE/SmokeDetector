@@ -60795,3 +60795,4 @@
 1713258276	Jeff Schaller	abunayemofficial24
 1713260872	VLAZ	thanhtrungmobile\.vn
 1713261094	VLAZ	technaitra\.com
+1713261202	VLAZ	tech[\W_]*+naitra(?!\.com(?<=technaitra\.com))
