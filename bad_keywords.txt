@@ -2991,3 +2991,4 @@ xổ\s*+số
 บาคาร่า
 share\Wmy\Wtestimony
 kartu\s+poker
+(?-i:qsk6)
