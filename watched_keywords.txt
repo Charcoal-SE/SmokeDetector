@@ -60803,3 +60803,4 @@
 1713265028	Jeff Schaller	appticz\.com
 1713266696	Jeff Schaller	themovieapk\.com
 1713267104	Jeff Schaller	animationiconic\.com
+1713267941	Jeff Schaller	(?-i:uk49smresult)(?#sites.google.com)
