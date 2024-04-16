@@ -5525,7 +5525,7 @@ computersciencejunction\.in
 hpsupportphonenumbers\.com
 acte\.in
 revopoint3d\.com
-trustgeekshackexpert\.com
+trustgeekshackexpert[\W_]*+com
 hotdeals\.com
 mypixieset\.com
 vplayed\.com

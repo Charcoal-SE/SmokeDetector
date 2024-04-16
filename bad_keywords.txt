@@ -2983,7 +2983,7 @@ rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
 mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
 linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
 (?-i:jkfny87kk6)(?#t.me)
-trust[\W_]*+geeks?[\W_]*+hack[\W_]*+expert(?!\.com(?<=trustgeekshackexpert\.com))
+trust[\W_]*+geeks?[\W_]*+hack[\W_]*+expert(?![\W_]*+com(?<=trustgeekshackexpert[\W_]*+com))
 a[\W_]*+r[\W_]*+g[\W_]*+o[\W_]*+n[\W_]*+i[\W_]*+x[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+h(?!\.com(?<=argonixhacktech\.com))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?j[\W_]*+o[\W_]*+b[\W_]*+4[\W_]*+u(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?(?#obfuscated argonixhacktech@job4u.com)
 lapak303
 digital[\W_]*+hack[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?techie(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
