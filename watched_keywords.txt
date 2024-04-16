@@ -60815,3 +60815,4 @@
 1713284328	Mast	linkbox\.taekwondo427(?:@passionbox\.com)?
 1713287197	Jeff Schaller	hypestkey\.com
 1713287427	Jeff Schaller	stelotechnology\.com
+1713287474	Jeff Schaller	av-america\.com
