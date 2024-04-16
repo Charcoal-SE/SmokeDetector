@@ -60806,3 +60806,4 @@
 1713269026	Nick	arktek3d\.com
 1713269050	Nick	arktek3d(?!\.com)
 1713269092	Nick	Arktek[\W_]*+3D[\W_]*+Studio
+1713271747	Jeff Schaller	alchemy\.com
