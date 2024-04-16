@@ -60806,3 +60806,4 @@
 1713267941	Jeff Schaller	(?-i:uk49smresult)(?#sites.google.com)
 1713269026	Nick	arktek3d\.com
 1713269050	Nick	arktek3d(?!\.com)
+1713269092	Nick	Arktek[\W_]*+3D[\W_]*+Studio
