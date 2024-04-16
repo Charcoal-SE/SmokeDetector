@@ -60808,3 +60808,4 @@
 1713269092	Nick	Arktek[\W_]*+3D[\W_]*+Studio
 1713271747	Jeff Schaller	alchemy\.com
 1713275361	Jeff Schaller	jobs\.jointomart\.com
+1713277639	General Grievance	smartteller\.tech
