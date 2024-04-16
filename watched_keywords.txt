@@ -60797,3 +60797,4 @@
 1713261094	VLAZ	technaitra\.com
 1713261202	VLAZ	tech[\W_]*+naitra(?!\.com(?<=technaitra\.com))
 1713264491	Jeff Schaller	vapemall\.pk
+1713264629	Jeff Schaller	cheaptowtruck\.ca
