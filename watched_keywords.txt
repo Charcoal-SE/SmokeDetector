@@ -60831,3 +60831,4 @@
 1713333848	Jeff Schaller	varmahomes\.com
 1713334028	VLAZ	trizoneelectricals\.com
 1713334059	VLAZ	trizone[\W_]*+electricals(?!\.com(?<=trizoneelectricals\.com))
+1713338510	VLAZ	epiqinfo\.com
