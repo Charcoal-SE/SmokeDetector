@@ -60853,3 +60853,4 @@
 1713373249	Jeff Schaller	Bybit[\W_]*+Referral[\W_]*+Code
 1713378422	Makyen	kucoin\.com
 1713374497	Fastnlight	vblink\.download
+1713380642	Vickel	musixclan\.com
