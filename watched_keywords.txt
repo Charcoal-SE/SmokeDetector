@@ -55569,7 +55569,6 @@
 1701806481	Mast	techinblood\.com
 1701729300	Jesse	main-okewla\.com
 1701730140	Jesse	appguidepro\.com
-1701735881	Nick	GearHead[\W_]*+Engineers
 1701736609	Nick	gatographql\.com
 1701736817	Nick	BERNIE[\W_]*+DORAN([\W_]*+SIGNALS)?
 1701738170	Nick	usefixie\.com
