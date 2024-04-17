@@ -2950,5 +2950,26 @@ create_rule("potentially bad keyword in {}",
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=21,
             rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
+# mathoverflow.net: specific content in titles
+create_rule("bad keyword in {}",
+            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
+            r"(?:"
+            "" r"referral[\W_]*+code?"
+            "" r"|invite[\W_]*+code?"
+            "" r"|promo[\W_]*+code?"
+            "" r"|kodu"
+            "" r"|sign[\W_]*+up"
+            "" r"|parrainage"
+            "" r"|bonus"
+            "" r"|bono"
+            "" r"|referencia"
+            "" r"|推荐码"
+            "" r"|注册奖金"
+            r")"
+            r"(?:\b|(?w:\b)|$)",  # End bookending
+            all=False, sites=["mathoverflow.net"],
+            username=False, body_summary=False, body=False, title=True,
+            max_rep=93, max_score=21,
+            rule_id="bad keywords: various in titles: 2024-04 on mathoverflow.net")
 
 FindSpam.reload_blacklists()
