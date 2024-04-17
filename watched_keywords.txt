@@ -60851,3 +60851,4 @@
 1713368261	Makyen	kermanyadakyar\.ir
 1713368298	Makyen	tiktoksaverpro(?!\.com)
 1713373249	Jeff Schaller	Bybit[\W_]*+Referral[\W_]*+Code
+1713378422	Makyen	kucoin\.com
