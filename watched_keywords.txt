@@ -60824,3 +60824,4 @@
 1713316409	Makyen	adrianlamohackpro\.online
 1713316780	Jeff Schaller	MZ80T1
 1713317113	Makyen	gearheadengineers[\W_]*+org
+1713317170	Makyen	gearhead[\W_]*+engineers(?![\W_]*+org(?<=gearheadengineers[\W_]*+org))
