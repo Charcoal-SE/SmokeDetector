@@ -218,6 +218,7 @@ stackexchange.com:
       - 15725245 # Cow
       - 22084389 # mozway
       - 12413463 # stumblebee
+      - 26518992 # Fastnlight
 
   65945:  # Charcoal Test
     commands: true
