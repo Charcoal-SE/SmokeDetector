@@ -60832,3 +60832,4 @@
 1713334028	VLAZ	trizoneelectricals\.com
 1713334059	VLAZ	trizone[\W_]*+electricals(?!\.com(?<=trizoneelectricals\.com))
 1713338510	VLAZ	epiqinfo\.com
+1713338533	VLAZ	epiq[\W_]*+info(?!\.com(?<=epiqinfo\.com))(?:tech)?
