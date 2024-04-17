@@ -2954,22 +2954,27 @@ create_rule("potentially bad keyword in {}",
 create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
             r"(?:"
-            "" r"referral[\W_]*+code?"
-            "" r"|invite[\W_]*+code?"
-            "" r"|promo[\W_]*+code?"
-            "" r"|Реферальный(?:[\W_]*+код)?"
-            "" r"|referans(?:[\W_]*+kodu)?"
-            "" r"|kodu"
-            "" r"|sign[\W_]*+up"
-            "" r"|parrainage"
-            "" r"|bonus"
-            "" r"|bono"
-            "" r"|referencia"
-            "" r"|推荐码"
-            "" r"|注册奖金"
+            # referral[\W_]*+code?
+            "" r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+l[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"
+            # invite[\W_]*+code?
+            "" r"|i[\W_]*+n[\W_]*+v[\W_]*+i[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"
+            "" r"|p[\W_]*+r[\W_]*+o[\W_]*+m[\W_]*+o[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"  # promo[\W_]*+code?
+            # Реферальный(?:[\W_]*+код)?
+            "" r"|Р[\W_]*+е[\W_]*+ф[\W_]*+е[\W_]*+р[\W_]*+а[\W_]*+л[\W_]*+ь[\W_]*+н[\W_]*+ы[\W_]*+й"
+            "" r"(?:[\W_]*+к[\W_]*+о[\W_]*+д)?"
+            # referans(?:[\W_]*+kodu)?
+            "" r"|r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+a[\W_]*+n[\W_]*+s(?:[\W_]*+k[\W_]*+o[\W_]*+d[\W_]*+u)?"
+            "" r"|k[\W_]*+o[\W_]*+d[\W_]*+u"  # kodu
+            "" r"|s[\W_]*+i[\W_]*+g[\W_]*+n[\W_]*+u[\W_]*+p"  # sign[\W_]*+up
+            "" r"|p[\W_]*+a[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+i[\W_]*+n[\W_]*+a[\W_]*+g[\W_]*+e"  # parrainage
+            "" r"|b[\W_]*+o[\W_]*+n[\W_]*+u[\W_]*+s"  # bonus
+            "" r"|b[\W_]*+o[\W_]*+n[\W_]*+o"  # bono
+            "" r"|r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+c[\W_]*+i[\W_]*+a"  # referencia
+            "" r"|推[\W_]*+荐[\W_]*+码"  # 推荐码
+            "" r"|注[\W_]*+册[\W_]*+奖[\W_]*+金"  # 注册奖金
             r")"
             r"(?:\b|(?w:\b)|$)",  # End bookending
-            all=False, sites=["mathoverflow.net"],
+            all=False, sites=["mathoverflow.net", "meta.mathoverflow.net"],
             username=False, body_summary=False, body=False, title=True,
             max_rep=93, max_score=21,
             rule_id="bad keywords: various in titles: 2024-04 on mathoverflow.net")
