@@ -2957,6 +2957,8 @@ create_rule("bad keyword in {}",
             "" r"referral[\W_]*+code?"
             "" r"|invite[\W_]*+code?"
             "" r"|promo[\W_]*+code?"
+            "" r"|Реферальный(?:[\W_]*+код)?"
+            "" r"|referans(?:[\W_]*+kodu)?"
             "" r"|kodu"
             "" r"|sign[\W_]*+up"
             "" r"|parrainage"
