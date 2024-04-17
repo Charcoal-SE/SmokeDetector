@@ -60834,3 +60834,4 @@
 1713338510	VLAZ	epiqinfo\.com
 1713338533	VLAZ	epiq[\W_]*+info(?!\.com(?<=epiqinfo\.com))(?:tech)?
 1713338712	VLAZ	cloud4c\.com
+1713338732	VLAZ	cloud4c(?!\.com)
