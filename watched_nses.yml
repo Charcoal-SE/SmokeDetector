@@ -4579,7 +4579,9 @@ items:
   disable: true
   ns: centreserver.com.
 - ns: clover.host.
-- ns: bigbadshah.com.
+- comment: NXDOMAIN 2024-04-17
+  disable: true
+  ns: bigbadshah.com.
 - ns: shrisaitechsolutions.co.in.
 - ns: hearstnp.com.
 - ns: ardaaydogan.com.
