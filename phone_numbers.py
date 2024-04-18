@@ -11,7 +11,7 @@ from helpers import get_only_digits, remove_end_regex_comments
 #   we use multiple regular expressions, with each specifying an explicit length within the range in which we're
 #   interested and then combine the results.
 #   In order to make it more efficient, we combine those into a single regular expression using lookaheads and
-#   capture groups, which will put all of the different possibilites into capture groups, along with empty strings
+#   capture groups, which will put all of the different possibilities into capture groups, along with empty strings
 #   for each length which didn't match.
 # The use of separate Unicode and ASCII flagged versions of the regexes is also because they can result in different
 #   start and end points for the numbers. We continue to keep that separation for the NUMBER_REGEX,
