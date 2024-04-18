@@ -1004,3 +1004,4 @@ Gray Walker
 (?-i:^Shoviv$)
 (?-i:^Aqeel Ahmad$)
 (?-i:^Sym Stock$)
+(?-i:^DLTC TOOL FACTORY$)
