@@ -60860,3 +60860,4 @@
 1713387594	Fastnlight	vegasfoundations\.com
 1713400758	Nick	konveksibajumurah\.com
 1713401019	Nick	goodmanpharmaceuticals\.org
+1713401067	Nick	Goodman[\W_]*+Pharmaceuticals(?!\.org(?<=goodmanpharmaceuticals\.org))
