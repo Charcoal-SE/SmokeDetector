@@ -2520,7 +2520,7 @@ def false(feedback, msg, comment, alias_used="false"):
     result = "Registered " + post_type + " as false positive"
     if user is None:
         if feedback_type.blacklist:
-            # The command was to bloacklist the user, but we're unable to determine the user.
+            # The command was to blacklist the user, but we're unable to determine the user.
             raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
     else:
         if feedback_type.blacklist:
