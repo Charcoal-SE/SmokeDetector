@@ -60889,3 +60889,4 @@
 1713444300	Jeff Schaller	anabolicroid\.com
 1713445222	Jeff Schaller	artenspace\.com
 1713447741	Jeff Schaller	janusalive\.com
+1713456385	Vickel	akolkata[\W_]*+escorts(?!\.com(?<=akolkataescorts\.com))
