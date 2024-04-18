@@ -60892,3 +60892,4 @@
 1713457112	Makyen	a[\W_]*+kolkata[\W_]*+escorts(?!\.com(?<=akolkataescorts\.com))
 1713457184	Makyen	captaincontracting\.com
 1713458418	Cow	appsleagues\.com
+1713458551	Makyen	connectbiz
