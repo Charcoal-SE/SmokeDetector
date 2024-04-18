@@ -68,7 +68,7 @@ class BodyFetcher:
     ]
 
     # special_cases are the minimum number of posts, for each of the specified sites, which
-    # need to be in the queue prior to feching posts.
+    # need to be in the queue prior to fetching posts.
     # The number of questions we fetch each day per site is the total of
     #   new questions + new answers + edits.
     # Stack Overflow is handled specially. It's know that some SO edits/new posts don't
