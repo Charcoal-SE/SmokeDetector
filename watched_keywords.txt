@@ -60891,3 +60891,4 @@
 1713447741	Jeff Schaller	janusalive\.com
 1713456188	Vickel	akolkataescorts\.com
 1713457112	Makyen	a[\W_]*+kolkata[\W_]*+escorts(?!\.com(?<=akolkataescorts\.com))
+1713457184	Makyen	captaincontracting\.com
