@@ -2343,7 +2343,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
         # be the why as the second. This converts that output back into what they would be
         # if the post wasn't previously reported for the cases where we want to process it
         # as such.
-        # Expand real scan results from dirty returm value when not "!!/scan"
+        # Expand real scan results from dirty return value when not "!!/scan"
         # Presence of "scan_why" indicates the post IS spam but ignored
         if (operation != "scan" or is_forced) and (not scan_spam) and scan_why:
             scan_spam = True
@@ -2520,7 +2520,7 @@ def false(feedback, msg, comment, alias_used="false"):
     result = "Registered " + post_type + " as false positive"
     if user is None:
         if feedback_type.blacklist:
-            # The command was to bloacklist the user, but we're unable to determine the user.
+            # The command was to blacklist the user, but we're unable to determine the user.
             raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
     else:
         if feedback_type.blacklist:

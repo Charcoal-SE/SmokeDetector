@@ -692,7 +692,7 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
                 content_without_at_and_expected_links = regex.sub(sub_regex_text, '', content)
                 if len(content_without_at_and_expected_links) < 100:
                     # This is a "still alive" message which includes at least a link to one of the domains
-                    # and doesn't have much text other than the reply, and contains at lesat one  MS and/or SE domain.
+                    # and doesn't have much text other than the reply, and contains at least one MS and/or SE domain.
                     # So, we don't want to forward it as a comment to MS.
                     return
             Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd + get_attribution_for_message(reply),

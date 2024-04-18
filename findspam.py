@@ -2364,7 +2364,7 @@ create_rule("bad keyword in {}",
             rule_id="bad keywords: movies, free, skin care, training, not bodies")
 
 # Potentially bad keywords in titles and usernames, all sites
-# Not suffient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
+# Not sufficient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
 # Title Results: 398/TP:312/FP:81/NAA:3
 # Username Results: 17/TP:10/FP:8/NAA:0
 create_rule("potentially bad keyword in {}",
