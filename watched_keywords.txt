@@ -60877,3 +60877,4 @@
 1713423243	Nick	Trippovention(?!\.com)
 1713423311	Cow	dltctool\.com
 1713424149	Cow	blogginglover\.in
+1713426687	Nick	(?-i:bReqNW)(?#fiverr)
