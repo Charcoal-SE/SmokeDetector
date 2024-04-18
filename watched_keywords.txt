@@ -60899,3 +60899,4 @@
 1713461768	Makyen	paternityusa(?!\.com)
 1713461837	Jeff Schaller	rokneltamir\.com
 1713462056	Makyen	olivo[\W_]*+tech(?!\.com(?<=olivotech\.com))(?:nolog(?:y|ies))?
+1713464732	Fastnlight	smott\.world
