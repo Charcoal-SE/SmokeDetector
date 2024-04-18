@@ -60901,3 +60901,4 @@
 1713462056	Makyen	olivo[\W_]*+tech(?!\.com(?<=olivotech\.com))(?:nolog(?:y|ies))?
 1713477785	Fastnlight	flippa\.com
 1713464732	Fastnlight	smott\.world
+1713463299	Fastnlight	deedsign\.com
