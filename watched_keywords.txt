@@ -55573,7 +55573,6 @@
 1701738170	Nick	usefixie\.com
 1701796229	Jesse	sora168\.com
 1701807482	Makyen	(?:(?:recovery|hacker)[\W_]*+)*wizard[\W_]*+maye[\W_]*+musk(?:@\w++\.\w++)?
-1701807490	Makyen	recoverywizardmaye\.wixsite\.com
 1701831968	Jesse	skubiq\.com
 1701825435	Vickel	webscraping\.ai
 1701864136	Jeff Schaller	fasterthanlight\.me
