@@ -152,7 +152,7 @@ class GitManager:
 
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
-                return (False, 'Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
+                return (False, 'Already {}ed on line {} of {}.'.format(op, line, blacklist_file_name))
 
             watch_removed = False
             if blacklist_type not in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
@@ -193,7 +193,7 @@ class GitManager:
 
                 if ((GlobalVars.github_username is None or GlobalVars.github_password is None)
                         and (GlobalVars.github_access_token is None)):
-                    return (False, "Tell someone to set a GH token")
+                    return (False, "Tell someone to set a GH token.")
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
@@ -259,9 +259,9 @@ class GitManager:
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':
-            return (True, "Blacklisted `{0}`".format(item))
+            return (True, "Blacklisted `{0}`.".format(item))
         elif op == 'watch':
-            return (True, "Added `{0}` to watchlist".format(item))
+            return (True, "Added `{0}` to watchlist.".format(item))
 
     @classmethod
     def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
