@@ -60862,3 +60862,4 @@
 1713401019	Nick	goodmanpharmaceuticals\.org
 1713401067	Nick	Goodman[\W_]*+Pharmaceuticals(?!\.org(?<=goodmanpharmaceuticals\.org))
 1713405702	Jeff Schaller	mvhd24\.com
+1713409077	Nick	bedtimestoriess\.com
