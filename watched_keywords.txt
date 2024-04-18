@@ -60818,7 +60818,6 @@
 1713315790	Makyen	1 (909) 739‑0269
 1713316409	Makyen	adrianlamohackpro\.online
 1713316780	Jeff Schaller	MZ80T1
-1713317113	Makyen	gearheadengineers[\W_]*+org
 1713317170	Makyen	gearhead[\W_]*+engineers(?![\W_]*+org(?<=gearheadengineers[\W_]*+org))
 1713318151	Makyen	breaklineoptics\.com
 1713318598	Makyen	screentest\.app

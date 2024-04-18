@@ -5537,3 +5537,4 @@ pqrmedia\.com
 centurycyberhacker\.pro
 recoverywizardmaye\.wixsite\.com
 halachaonline\.com
+gearheadengineers[\W_]*+org
