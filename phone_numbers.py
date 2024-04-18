@@ -288,7 +288,7 @@ def get_deobfuscated_candidates(text):
 # North American phone numbers with fairly strict formatting
 # The goal here is to be sure about identification, even if that leaves ones which are not identified.
 # Without a 1. It must have a separator between the 334 groupings, like \d{3}\D\d{3}\D\d{4}, but with more
-# than just a single \D permited. The start can be our normal mix.
+# than just a single \D permitted. The start can be our normal mix.
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4}$'
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4}$'
 NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
@@ -298,7 +298,7 @@ NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS 
 NA_NUMBER_WITHOUT_ONE_REGEX = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITHOUT_ONE_LOOSE = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
 # With a 1. It must have a separator between the 334 groupings, like 1\d{3}\D\d{3}\D\d{4}, but with more
-# than just a single \D permited and a separator is permitted after the 1. The start can be our normal mix.
+# than just a single \D permitted and a separator is permitted after the 1. The start can be our normal mix.
 NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
                                  r']{1,2}1|1(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
                                  r']1|^1))(?:[\W_]*+|\D(?=\d))' + \
