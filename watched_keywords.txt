@@ -60886,3 +60886,4 @@
 1713439872	Jeff Schaller	edu123\.in
 1713443114	Makyen	(?-i:Wvm92EERUYbbU33H8)
 1713443136	Makyen	social[\W_]*+rahu(?!\.com(?<=socialrahu\.com))(?:@gmail\.com)?
+1713444300	Jeff Schaller	anabolicroid\.com
