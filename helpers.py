@@ -63,7 +63,7 @@ class ErrorLogs:
             db.commit()
         except (sqlite3.OperationalError):
             # In CI testing, it's possible for the table to be created in a different thread between when
-            # we first test for the table's existanceand when we try to create the table.
+            # we first test for the table's existance and when we try to create the table.
             if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
                 # Table 'error_logs' still doesn't exist
                 raise
