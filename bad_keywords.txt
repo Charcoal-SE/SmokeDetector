@@ -2993,5 +2993,4 @@ share\Wmy\Wtestimony
 kartu\s+poker
 (?-i:qsk6)
 qbsgyzz6
-gearhead(?:[\W_]*+(?:at[\W_]*+)?engineer(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 gearhead[\W_]*+engineers(?![\W_]*+org(?<=gearheadengineers[\W_]*+org))
