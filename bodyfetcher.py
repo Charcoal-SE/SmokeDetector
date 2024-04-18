@@ -419,7 +419,7 @@ class BodyFetcher:
                         return (site, new_posts)
                     else:
                         # We don't actually have any posts to process, so need to give up the site processing lock
-                        # we alreadying obtained.
+                        # we already obtained.
                         self.release_site_processing_lock(site_to_handle)
                         site_to_handle = None
                 # There's no site in the queue which has met the applicable threshold.
