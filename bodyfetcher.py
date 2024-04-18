@@ -164,7 +164,7 @@ class BodyFetcher:
                     self.queue[hostname] = {}
 
                 # Something about how the queue is being filled is storing Post IDs in a list.
-                # So, if we get here we need to make sure that the correct types are paseed.
+                # So, if we get here we need to make sure that the correct types are passed.
                 #
                 # If the item in self.queue[hostname] is a dict, do nothing.
                 # If the item in self.queue[hostname] is not a dict but is a list or a tuple, then convert to dict and
