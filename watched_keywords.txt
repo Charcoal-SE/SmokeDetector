@@ -60915,4 +60915,3 @@
 1713512599	VLAZ	worksent\.com
 1713514881	Nick	sree\.?group
 1713515054	Nick	goodmorningwishes\.in
-1713515096	Nick	Good[\W_]*+Morning[\W_]*+Wishes(?!\.com(?<=goodmorningwishes\.in))
