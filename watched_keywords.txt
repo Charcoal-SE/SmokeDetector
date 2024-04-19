@@ -60929,3 +60929,4 @@
 1713527520	Jeff Schaller	physioveda\.ae
 1713536159	Jeff Schaller	atlantic-heatingcooling\.com
 1713547070	Vickel	getanybus\.com
+1713547346	Makyen	souls[\W_]*+of[\W_]*+india(?!\.com(?<=soulsofindia\.com))\d*+
