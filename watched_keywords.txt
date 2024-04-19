@@ -60911,3 +60911,4 @@
 1713510333	Nick	renew-us\.us
 1713511933	VLAZ	mehndidesignworld\.com
 1713511953	VLAZ	mehndi*+desi[\W_]*+gnworld(?!\.com(?<=mehndidesignworld\.com))
+1713512395	Nick	litomatic\.com
