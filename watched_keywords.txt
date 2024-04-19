@@ -60932,3 +60932,4 @@
 1713547443	Vickel	majorvehicles(?:@gmail\.com)?
 1713550339	VLAZ	mehndi[\W_]*+design(?:[\W_]*+world(?!\.com(?<=mehndidesignworld\.com)))?
 1713550844	Makyen	homicide(?=.{0,40}rate)(?=.{0,40}somalia)
+1713554737	Jeff Schaller	hayabusafight\.com
