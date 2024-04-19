@@ -2078,7 +2078,7 @@ def report(msg, args, alias_used="report"):
     alias_used = alias_used or "report"
 
     argsraw = args.split(' "', 1)
-    urls = argsraw[0].split(' ')
+    urls = argsraw[0].split(sep=None)
 
     message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
 
