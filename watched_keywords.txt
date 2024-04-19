@@ -60916,3 +60916,4 @@
 1713514881	Nick	sree\.?group
 1713515054	Nick	goodmorningwishes\.in
 1713515146	Nick	Good[\W_]*+Morning[\W_]*+Wishes(?!\.in(?<=goodmorningwishes\.in))
+1713515969	Nick	dancingjuices\.com
