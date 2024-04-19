@@ -43584,7 +43584,6 @@
 1665680685	cigien	influicity(?!\.com)
 1665681638	Spevacus	hustledetective\.com
 1665683275	Ollie	seordev\.com
-1665684418	tripleee	peraichi\.com
 1665684475	tripleee	nbea\.org
 1665685292	tripleee	ghodasarabhaumik(?# medium)
 1665686659	tripleee	7r6\.com
