@@ -60918,3 +60918,4 @@
 1713515146	Nick	Good[\W_]*+Morning[\W_]*+Wishes(?!\.in(?<=goodmorningwishes\.in))
 1713515969	Nick	dancingjuices\.com
 1713522008	Jeff Schaller	howtoplaytexasholdempoker\.org
+1713522070	Jeff Schaller	theweightdr\.com
