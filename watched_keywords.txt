@@ -60931,4 +60931,3 @@
 1713547346	Makyen	souls[\W_]*+of[\W_]*+india(?!\.com(?<=soulsofindia\.com))\d*+
 1713547443	Vickel	majorvehicles(?:@gmail\.com)?
 1713549593	Makyen	homicide(?=\.{0,40}rate)(?=\.{0,40}somalia)
-1713549898	VLAZ	mehndi[\W_]*+design(?:[\W_]*+world(?!\.com(?<=mehndidesignworld\.com)))
