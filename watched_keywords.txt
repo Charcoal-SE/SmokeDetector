@@ -60931,3 +60931,4 @@
 1713547346	Makyen	souls[\W_]*+of[\W_]*+india(?!\.com(?<=soulsofindia\.com))\d*+
 1713547443	Vickel	majorvehicles(?:@gmail\.com)?
 1713550339	VLAZ	mehndi[\W_]*+design(?:[\W_]*+world(?!\.com(?<=mehndidesignworld\.com)))?
+1713550805	Fastnlight	chart\.scrippter\.com
