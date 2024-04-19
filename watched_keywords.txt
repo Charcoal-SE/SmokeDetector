@@ -60910,7 +60910,6 @@
 1713507247	Nick	leadsdubai\.com
 1713510333	Nick	renew-us\.us
 1713511933	VLAZ	mehndidesignworld\.com
-1713511953	VLAZ	mehndi*+desi[\W_]*+gnworld(?!\.com(?<=mehndidesignworld\.com))
 1713512395	Nick	litomatic\.com
 1713512599	VLAZ	worksent\.com
 1713514881	Nick	sree\.?group
