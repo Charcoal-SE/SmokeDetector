@@ -60958,3 +60958,4 @@
 1713597138	Nick	Sagar[\W_]*+Tech[\W_]*+Technical[\W_]*+Solution
 1713597181	Nick	sagartech\.co\.in
 1713597202	Nisse Engström	dukeroyal\.com\.cn
+1713597784	Nick	Energion[\W_]*+Power[\W_]*+Max
