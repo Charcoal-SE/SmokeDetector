@@ -60952,3 +60952,4 @@
 1713589060	Makyen	subhagruha[\W_]*+properties(?!\.com(?<=subhagruhaproperties\.com))
 1713589433	Makyen	odmt(?!\.in)
 1713596712	Nisse Engström	petpetcat\.com
+1713596980	Nick	balayar\.com
