@@ -60965,3 +60965,4 @@
 1713618614	Vickel	Nibav[\W_]*+(?:Home|house)[\W_]*+Lifts
 1713622479	Makyen	surushatutorials\.blogspot
 1713625711	Fastnlight	jamesastrong\.com
+1713628900	Fastnlight	bottleneckcalculator\.pro
