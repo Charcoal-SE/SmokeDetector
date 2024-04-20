@@ -2821,77 +2821,73 @@ create_rule("blacklisted username", r'(?i)^john$', disabled=True,
 # Workplace troll, 2020-03-28
 create_rule("blacklisted username",
             r"(?i)(?:"
-            r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
-            r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
-            r"Matthew Gaiser"
+            "" r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
+            "" r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
+            "" r"Matthew Gaiser"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
             max_rep=100, max_score=1,
             rule_id="blacklisted username: troll on workplace")
 create_rule("bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))"
-            r"(?:"  # Begin group of bookended regexes
-            r"n[i1]gg+[aeu][rh]?s?|negr[o0]s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
-            r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
-            r"|foreskins?|behead(?:ing|er|ed)"
-            r")"
-            r"(?:\b|(?w:\b)|$)",
+            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
+            "" r"n[i1]gg+[aeu][rh]?s?|negr[o0]s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
+            "" r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
+            "" r"|foreskins?|behead(?:ing|er|ed)"
+            r")(?:\b|(?w:\b)|$)",  # End bookending
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
             rule_id="bad keywords: various bad words, some overlap, workplace")
 # Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
 create_rule("potentially bad keyword in {}",
-            r"(?:"
-            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
-            r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
-            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
-            r"(?:\b|(?w:\b)|$)"  # End bookending
-            r")",
+            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
+            "" r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
+            "" r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
+            r")(?:\b|(?w:\b)|$)",  # End bookending
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
-            rule_id="Potentialy bad keywords: poop, smash, slash, behead, workplace")
+            rule_id="Potentialy bad keywords: on workplace: poop, smash, slash, behead")
 # Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
 # This is a separate rule, because it will consume up to 100 characters, which, if not separate,
 # will tend to mask other watch matches which we want to show up separately in the why data.
 create_rule("potentially bad keyword in {}",
             r"(?:"
-            r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
+            "" r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
-            rule_id="Potentialy bad keywords: only upercase and numbers, workplace")
+            rule_id="Potentialy bad keywords: on workplace: only upercase and numbers")
 # TWP: Watch for the re-use of the usernames of the top 100 users by reputation.
 create_rule("potentially bad keyword in {}",
             r"(?:"
-            r"Joe Strazzere|Kilisi|HLGEM|gnasher729|Kate Gregory|enderland"
-            r"|(?-i:^Neo$)"  # Too short/common, but the troll has used it.
-            r"|motosubatsu|bethlakshmi"
-            r"|Vietnhi Phuvan|nvoigt|Philip Kendall|Lilienthal|DarkCygnus|Wesley Long|DJClayworth|mhoran_psprep"
-            # r"|Monica Cellio"  # Too common
-            r"|AndreiROM|IDrinkandIKnowThings|Hilmar|Jane S|keshlam|dwizum|Chris E|Sourav Ghosh|Justin Cave"
-            r"|thursdaysgeek|sf02|paparazzo|Telastyn|The Wandering Dev Manager|berry120"
-            # r"|Myles"  # Too short/common
-            # r"|Erik"  # Too short/common
-            r"|Dan Pichelman|David K|Philipp|Stephan Branczyk"
-            # r"|rath"  # Too short/common
-            r"|Patricia Shanahan|Xavier J|O\. Jones|HorusKol|Magisch|PeteCon|NotMe|jcmeloni|mcknz"
-            # r"|Oded"  # Too short/common
-            r"|Kent A\.|blankip"
-            # r"|jmac"  # Too short/common
-            r"|GreenMatt|Gregory Currie|pdr|joeqwerty|maple_shaft|Matthew Gaiser"
-            # r"|Daniel"  # Too short/common
-            r"|Twyxz|BigMadAndy|teego1967|Ertai87|user1666620|Julia Hayward|alroc|Player One|kevin cline|Ben Barden"
-            # r"|Kevin"  # Too short/common
-            r"|virolino|solarflare|Fattie|Thomas Owens|sevensevens|jcmack|JB King"
-            # r"|Dan"  # Too short/common
-            r"|PagMax|bharal|SaggingRufus|Karl Bielefeldt|JohnHC|Ed Heal|Jim G\.|cdkMoose"
-            # r"|Peter"  # Too short/common
-            r"|MrFox|Bill Leeper|SZCZERZO KŁY|Tymoteusz Paul|mxyzplk - SE stop being evil|Sascha|Dawny33"
-            r"|A\. I\. Breveleri|Borgh|FrustratedWithFormsDesigner|Dukeling|jimm101"
+            "" r"Joe Strazzere|Kilisi|HLGEM|gnasher729|Kate Gregory|enderland"
+            "" r"|(?-i:^Neo$)"  # Too short/common, but the troll has used it.
+            "" r"|motosubatsu|bethlakshmi"
+            "" r"|Vietnhi Phuvan|nvoigt|Philip Kendall|Lilienthal|DarkCygnus|Wesley Long|DJClayworth|mhoran_psprep"
+            # "" r"|Monica Cellio"  # Too common
+            "" r"|AndreiROM|IDrinkandIKnowThings|Hilmar|Jane S|keshlam|dwizum|Chris E|Sourav Ghosh|Justin Cave"
+            "" r"|thursdaysgeek|sf02|paparazzo|Telastyn|The Wandering Dev Manager|berry120"
+            # "" r"|Myles"  # Too short/common
+            # "" r"|Erik"  # Too short/common
+            "" r"|Dan Pichelman|David K|Philipp|Stephan Branczyk"
+            # "" r"|rath"  # Too short/common
+            "" r"|Patricia Shanahan|Xavier J|O\. Jones|HorusKol|Magisch|PeteCon|NotMe|jcmeloni|mcknz"
+            # "" r"|Oded"  # Too short/common
+            "" r"|Kent A\.|blankip"
+            # "" r"|jmac"  # Too short/common
+            "" r"|GreenMatt|Gregory Currie|pdr|joeqwerty|maple_shaft|Matthew Gaiser"
+            # "" r"|Daniel"  # Too short/common
+            "" r"|Twyxz|BigMadAndy|teego1967|Ertai87|user1666620|Julia Hayward|alroc|Player One|kevin cline|Ben Barden"
+            # "" r"|Kevin"  # Too short/common
+            "" r"|virolino|solarflare|Fattie|Thomas Owens|sevensevens|jcmack|JB King"
+            # "" r"|Dan"  # Too short/common
+            "" r"|PagMax|bharal|SaggingRufus|Karl Bielefeldt|JohnHC|Ed Heal|Jim G\.|cdkMoose"
+            # "" r"|Peter"  # Too short/common
+            "" r"|MrFox|Bill Leeper|SZCZERZO KŁY|Tymoteusz Paul|mxyzplk - SE stop being evil|Sascha|Dawny33"
+            "" r"|A\. I\. Breveleri|Borgh|FrustratedWithFormsDesigner|Dukeling|jimm101"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
@@ -2921,9 +2917,9 @@ create_rule("potentially bad keyword in {}",
 # Non-bookended watch for usernames
 create_rule("potentially bad keyword in {}",
             r"(?i)(?:"
-            r"(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*"
-            r"(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*"
-            r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)"
+            "" r"(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*"
+            "" r"(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*"
+            "" r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)"
             r")",
             all=True,
             username=True, body_summary=False, body=False, title=False,
@@ -2952,8 +2948,7 @@ create_rule("potentially bad keyword in {}",
             rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
 # mathoverflow.net: specific content in titles
 create_rule("bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
-            r"(?:"
+            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
             # referral[\W_]*+code?
             "" r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+l[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"
             # invite[\W_]*+code?
@@ -2972,8 +2967,7 @@ create_rule("bad keyword in {}",
             "" r"|r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+c[\W_]*+i[\W_]*+a"  # referencia
             "" r"|推[\W_]*+荐[\W_]*+码"  # 推荐码
             "" r"|注[\W_]*+册[\W_]*+奖[\W_]*+金"  # 注册奖金
-            r")"
-            r"(?:\b|(?w:\b)|$)",  # End bookending
+            r")(?:\b|(?w:\b)|$)",  # End bookending
             all=False, sites=["mathoverflow.net", "meta.mathoverflow.net"],
             username=False, body_summary=False, body=False, title=True,
             max_rep=93, max_score=21,
