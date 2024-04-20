@@ -60966,3 +60966,4 @@
 1713622479	Makyen	surushatutorials\.blogspot
 1713625711	Fastnlight	jamesastrong\.com
 1713628900	Fastnlight	bottleneckcalculator\.pro
+1713630070	Vickel	bottleneck[\W_]*+calculator(?!\.pro(?<=bottleneckcalculator\.pro))
