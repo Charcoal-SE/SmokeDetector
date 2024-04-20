@@ -545,3 +545,17 @@ def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time)
         log('error', '{} failed to recover from a WebSocketException.'.format(which_ws))
         log_current_exception()
         raise
+
+
+# See PR 2322 for the reason for (?:^|\b) and (?:\b|$)
+# (?w:\b) is also useful
+KEYWORD_BOOKENDING_START = r"(?is)(?:^|\b|(?w:\b))"
+KEYWORD_BOOKENDING_END = r"(?:\b|(?w:\b)|$)"
+
+
+def keyword_bookend_regex_text(regex_text):
+    return r"{}(?:{}){}".format(KEYWORD_BOOKENDING_START, regex_text, KEYWORD_BOOKENDING_END)
+
+
+def get_bookended_keyword_regex_text_from_entries(entries):
+    return keyword_bookend_regex_text('|'.join(entries))
