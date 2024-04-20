@@ -60956,3 +60956,4 @@
 1713597012	Nick	balayar(?!\.com)
 1713597036	Nisse Engström	yolo247\.com
 1713597138	Nick	Sagar[\W_]*+Tech[\W_]*+Technical[\W_]*+Solution
+1713597181	Nick	sagartech\.co\.in
