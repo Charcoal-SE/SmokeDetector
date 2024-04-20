@@ -60946,3 +60946,4 @@
 1713571703	Vickel	faktabet(?!\.co)
 1713574024	Makyen	mitosbet
 1713582642	Fastnlight	asdecosg\.com
+1713582872	Makyen	as[\W_]*+deco[\W_]*+construction(?:[\W_]*+pte)?(?:[\W_]*+ltd)?
