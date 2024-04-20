@@ -60962,3 +60962,4 @@
 1713618249	Cow	damyno\.com
 1713618082	Vickel	nibavlifts\.ae
 1713560286	Fastnlight	(?-i:4aEo57O)(?#bit.ly)
+1713618614	Vickel	Nibav[\W_]*+(?:Home|house)[\W_]*+Lifts
