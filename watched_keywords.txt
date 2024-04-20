@@ -60954,3 +60954,4 @@
 1713596712	Nisse Engström	petpetcat\.com
 1713596980	Nick	balayar\.com
 1713597012	Nick	balayar(?!\.com)
+1713597036	Nisse Engström	yolo247\.com
