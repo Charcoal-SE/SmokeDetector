@@ -60953,3 +60953,4 @@
 1713589433	Makyen	odmt(?!\.in)
 1713596712	Nisse Engström	petpetcat\.com
 1713596980	Nick	balayar\.com
+1713597012	Nick	balayar(?!\.com)
