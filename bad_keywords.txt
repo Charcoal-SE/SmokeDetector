@@ -2995,3 +2995,4 @@ kartu\s+poker
 qbsgyzz6
 gearhead[\W_]*+engineers(?![\W_]*+org(?<=gearheadengineers[\W_]*+org))(?![\W_]*+com(?<=gearheadengineers[\W_]*+com))
 c15hjgn1
+aryaamoney
