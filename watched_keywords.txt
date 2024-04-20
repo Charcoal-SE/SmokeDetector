@@ -60943,3 +60943,4 @@
 1713568969	Vickel	michaelanddaniellewelch(?:@gmail\.com)?
 1713573987	Makyen	lauraref
 1713571395	Vickel	faktabet\.co
+1713571703	Vickel	faktabet(?!\.co)
