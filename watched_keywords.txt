@@ -60964,3 +60964,4 @@
 1713560286	Fastnlight	(?-i:4aEo57O)(?#bit.ly)
 1713618614	Vickel	Nibav[\W_]*+(?:Home|house)[\W_]*+Lifts
 1713622479	Makyen	surushatutorials\.blogspot
+1713625711	Fastnlight	jamesastrong\.com
