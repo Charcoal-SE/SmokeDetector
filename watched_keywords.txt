@@ -60938,3 +60938,4 @@
 1713560914	Fastnlight	akinsete\.blogspot
 1713562427	Makyen	(?-i:plf3x\.png)
 1713562875	Jeff Schaller	spanel\.sjv\.io
+1713571703	Vickel	faktabet(?!\.co)
