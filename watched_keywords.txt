@@ -60944,3 +60944,4 @@
 1713573987	Makyen	lauraref
 1713571395	Vickel	faktabet\.co
 1713571703	Vickel	faktabet(?!\.co)
+1713574024	Makyen	mitosbet
