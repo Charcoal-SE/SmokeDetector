@@ -60968,3 +60968,4 @@
 1713628900	Fastnlight	bottleneckcalculator\.pro
 1713630070	Vickel	bottleneck[\W_]*+calculator(?!\.pro(?<=bottleneckcalculator\.pro))
 1713631354	Fastnlight	eaziishop\.shop
+1713634445	Makyen	1 (770) 666–2531
