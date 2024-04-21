@@ -60970,3 +60970,4 @@
 1713642231	Vickel	slots777party\.net
 1713656567	Vickel	exceptionalhomebuilders\.com
 1713656841	Vickel	exceptional[\W_]*+home[\W_]*+builders(?!\.com(?<=exceptionalhomebuilders\.com))
+1713684845	Cow	vittavardhana\.com
