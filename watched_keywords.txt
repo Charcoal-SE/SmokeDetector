@@ -60501,7 +60501,6 @@
 1712443511	Nick	davidayo\.com
 1712443537	Nick	davidayo(?!\.com(?<=davidayo\.com))
 1712445950	Nick	createfirefoxdesktopshortcut\.blogspot
-1712445845	Vickel	joldikhoka\.xyz
 1712446103	Makyen	girialok(?:@gmail\.com)?
 1712446123	Makyen	vccspot(?!\.com)
 1712446154	Makyen	vccspot111(?:@gmail\.com)?
