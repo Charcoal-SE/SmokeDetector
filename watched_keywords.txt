@@ -60977,3 +60977,4 @@
 1713704806	Jeff Schaller	ae88ink0\.wordpress\.com
 1713721921	Makyen	jrfilocao\.medium\.com
 1713731294	Makyen	trangchuae888
+1713731335	Makyen	ae8{2,4}+(?!-(?<=-ae88-))(?!\.ink(?<=ae88\.ink))(?!\.webflow\.io(?<=ae8888\.webflow\.io))(?:[\W_]*+casino)?
