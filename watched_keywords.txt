@@ -60976,3 +60976,4 @@
 1713699252	Cow	ae88\.ink
 1713699557	Cow	ae88ink(?#@gmail.com)
 1713704806	Jeff Schaller	ae88ink0\.wordpress\.com
+1713701494	Vickel	ae88*(?:[W_]*+casino)?
