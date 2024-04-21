@@ -60972,3 +60972,4 @@
 1713656841	Vickel	exceptional[\W_]*+home[\W_]*+builders(?!\.com(?<=exceptionalhomebuilders\.com))
 1713684845	Cow	vittavardhana\.com
 1713686531	Jeff Schaller	myonigiri\.com
+1713701108	Vickel	ae88[W_]*+(?:casino)?
