@@ -61006,3 +61006,4 @@
 1713797618	Makyen	(?:ömür[\W_]*+boyu[\W_]*+)?komisyon(?:[\W_]*+indirimi)?(?#lifetime commission discount)
 1713812979	Makyen	odmttelugu\.com
 1713813000	Makyen	odmttelugu(?!\.com)
+1713824269	Vickel	glam[\W_]*+esthetics
