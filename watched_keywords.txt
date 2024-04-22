@@ -60986,3 +60986,4 @@
 1713766084	Makyen	gagepl\.com
 1713767870	Nick	Medi[\W_]*+Infotech
 1713768023	Nick	vrhearingclinic\.com
+1713768110	Nick	Vr[\W_]*+(?:Speech[\W_]*+And[\W_]*+)?Hearing[\W_]*+Clinic(?!\.com(?<=vrhearingclinic\.com))
