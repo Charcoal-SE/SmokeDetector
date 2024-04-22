@@ -60991,3 +60991,4 @@
 1713772230	VLAZ	evolpick\.com
 1713772265	VLAZ	evolpick(?!\.com)
 1713774461	tripleee	(?-i:^honeybee$)
+1713775847	Nick	prodentimpro\.site
