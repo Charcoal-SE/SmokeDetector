@@ -60984,3 +60984,4 @@
 1713749569	Makyen	swiftfoxcoder\.tech
 1713750802	Nick	javasavvy\.com
 1713766084	Makyen	gagepl\.com
+1713767870	Nick	Medi[\W_]*+Infotech
