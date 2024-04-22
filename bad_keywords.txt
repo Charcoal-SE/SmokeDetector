@@ -3002,3 +3002,4 @@ fylgrg
 maxwin[\W_]*+jackpot
 VO2P1RYP
 bingx(?!\.com)(?<!api bingx)(?!.{0,40}\b(?:api|documentation)\b)
+odmt(?!\.in)
