@@ -2999,3 +2999,4 @@ aryaamoney
 000\W*+worth\W*+of\W*+bitcoin
 fylgrg
 70937671
+BingX(?!\.com)
