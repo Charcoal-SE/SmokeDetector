@@ -60990,3 +60990,4 @@
 1713771218	Nick	bigfestival\.in
 1713772230	VLAZ	evolpick\.com
 1713772265	VLAZ	evolpick(?!\.com)
+1713774461	tripleee	(?-i:^honeybee$)
