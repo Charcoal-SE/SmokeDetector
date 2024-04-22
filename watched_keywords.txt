@@ -60995,3 +60995,4 @@
 1713776274	Nick	terusvn\.com
 1713778107	VLAZ	carparkingmultiplayerpro\.com
 1713779082	VLAZ	car[\W_]*+parking[\W_]*+multiplayer(?:[\W_]*+pro(?!\.com(?<=carparkingmultiplayerpro\.com)))?
+1713781458	Jeff Schaller	corpseed\.com
