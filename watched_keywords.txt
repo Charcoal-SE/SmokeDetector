@@ -60988,3 +60988,4 @@
 1713768023	Nick	vrhearingclinic\.com
 1713768110	Nick	Vr[\W_]*+(?:Speech[\W_]*+And[\W_]*+)?Hearing[\W_]*+Clinic(?!\.com(?<=vrhearingclinic\.com))
 1713768193	Nick	globerr\.in
+1713768828	Nick	honeymoonpackagesmanali\.in
