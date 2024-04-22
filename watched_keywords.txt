@@ -60981,3 +60981,4 @@
 1713744940	Nick	yandex-games\.com
 1713744989	Nick	Yandex[\W_]*+games(?!\.com)
 1713746753	Nick	youtestme\.com
+1713749569	Makyen	swiftfoxcoder\.tech
