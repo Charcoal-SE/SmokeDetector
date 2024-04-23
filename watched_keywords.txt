@@ -61021,3 +61021,4 @@
 1713851538	Jeff Schaller	genericpillmall\.com
 1713854501	Nick	thirumanancheri\.com
 1713854520	Nick	thirumanancheri(?!\.com)
+1713855775	Nick	transglobeacademy\.com
