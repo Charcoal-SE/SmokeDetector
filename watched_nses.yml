@@ -4504,7 +4504,9 @@ items:
 - ns: xmarthost.com.
 - ns: hostzet.com.
 - ns: tmdcloud.com.
-- ns: epik.com.
+- comment: dominantly FP 2024-04-23
+  disable: true
+  ns: epik.com.
 - ns: terabytesserver.com.
 - ns:
   - ns1cmt.name.com.
