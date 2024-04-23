@@ -1008,3 +1008,4 @@ Gray Walker
 (?-i:^Sharon bin$)
 (?-i:^Sylvia Bert$)
 (?-i:^Techsaga USA$)
+(?-i:^BIGOM$)
