@@ -61046,3 +61046,4 @@
 1713879051	tripleee	iptv[\W_]*+provider
 1713879072	tripleee	iptv[\W_]*+uk
 1713892479	Makyen	grabexpress\.co\.uk
+1713892500	Makyen	grabexpress(?!\.co\.uk)
