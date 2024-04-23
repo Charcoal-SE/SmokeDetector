@@ -61029,3 +61029,4 @@
 1713803502	Fastnlight	networthart\.com
 1713796723	General Grievance	risecommerce\.com
 1713795937	General Grievance	zamavpn\.com
+1713859612	tripleee	(?-i:^Judy Chen$)
