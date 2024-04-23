@@ -3008,3 +3008,4 @@ odmt(?!\.in)
 bingx[\W_]*+referral[\W_]*+code
 mexc[\W_]*+referral[\W_]*+code
 1hsxj
+okx[\W_]*+referral[\W_]*+code
