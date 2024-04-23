@@ -61025,3 +61025,4 @@
 1713855802	Nick	Transglobe[\W_]*+Academy(?!\.com(?<=transglobeacademy\.com))
 1713855970	Cow	twoscomplementcalculator\.com
 1713818715	Vickel	royalyachtsmiami\.com
+1713818948	Vickel	royal[\W_]*+yachts[\W_]*+miami(?!\.com(?<=royalyachtsmiami\.com))
