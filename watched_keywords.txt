@@ -61028,3 +61028,4 @@
 1713818948	Vickel	royal[\W_]*+yachts[\W_]*+miami(?!\.com(?<=royalyachtsmiami\.com))
 1713803502	Fastnlight	networthart\.com
 1713796723	General Grievance	risecommerce\.com
+1713795937	General Grievance	zamavpn\.com
