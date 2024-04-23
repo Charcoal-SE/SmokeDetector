@@ -61061,3 +61061,4 @@
 1713901782	Makyen	santé[\W_]*+naturelle
 1713903477	Vickel	cyberetrieve(?:@gmail\.com)?
 1713904763	Vickel	oceanpowerltd\.com
+1713906908	Fastnlight	a2cloudhostingservices\.com
