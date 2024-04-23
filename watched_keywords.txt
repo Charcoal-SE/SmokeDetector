@@ -61026,3 +61026,4 @@
 1713855970	Cow	twoscomplementcalculator\.com
 1713818715	Vickel	royalyachtsmiami\.com
 1713818948	Vickel	royal[\W_]*+yachts[\W_]*+miami(?!\.com(?<=royalyachtsmiami\.com))
+1713803502	Fastnlight	networthart\.com
