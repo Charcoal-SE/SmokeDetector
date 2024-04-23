@@ -61048,3 +61048,4 @@
 1713892479	Makyen	grabexpress\.co\.uk
 1713892500	Makyen	grabexpress(?!\.co\.uk)
 1713886604	Cow	tajalkenztech\.com
+1713892540	Makyen	tajalkenztech(?!\.com)
