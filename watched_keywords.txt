@@ -61023,3 +61023,4 @@
 1713854520	Nick	thirumanancheri(?!\.com)
 1713855775	Nick	transglobeacademy\.com
 1713855802	Nick	Transglobe[\W_]*+Academy(?!\.com(?<=transglobeacademy\.com))
+1713855970	Cow	twoscomplementcalculator\.com
