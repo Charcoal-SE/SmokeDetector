@@ -414,6 +414,9 @@ items:
   - dee.ns.cloudflare.com.
 - ns:
   - amir.ns.cloudflare.com.
+  - janet.ns.cloudflare.com.
+- ns:
+  - amir.ns.cloudflare.com.
   - kristina.ns.cloudflare.com.
 - ns:
   - amit.ns.cloudflare.com.
