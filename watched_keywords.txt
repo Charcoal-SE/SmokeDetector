@@ -61071,3 +61071,4 @@
 1713935664	Nick	info@bestadvertisingtruck\.com
 1713936434	Makyen	priceless[\W_]*+consulting(?:[\W_]*+llc(?!\.com(?<=pricelessconsultingllc\.com)))?
 1713936528	Nick	airports-guide\.com
+1713936571	Makyen	dat[\W_]*+media[\W_]*+fl(?!\.com(?<=datmediafl\.com))
