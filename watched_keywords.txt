@@ -61116,3 +61116,4 @@
 1713982284	Cow	sp2sinc\.com
 1713986407	Fastnlight	birdfeederworld\.com
 1713990123	Makyen	bird[\W_]*+feeder[\W_]*+world(?!\.com(?<=birdfeederworld\.com))
+1713991040	Jeff Schaller	nerdpdf\.com
