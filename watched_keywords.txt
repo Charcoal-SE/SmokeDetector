@@ -61073,3 +61073,4 @@
 1713936528	Nick	airports-guide\.com
 1713936571	Makyen	dat[\W_]*+media[\W_]*+fl(?!\.com(?<=datmediafl\.com))
 1713936681	Makyen	air[\W_]*+serbia[\W_]*+airlines[\W_]*+ams[\W_]*+terminal
+1713936909	Nick	huaxiao-stainless-steel\.com
