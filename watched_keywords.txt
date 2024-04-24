@@ -61075,3 +61075,4 @@
 1713936681	Makyen	air[\W_]*+serbia[\W_]*+airlines[\W_]*+ams[\W_]*+terminal
 1713936909	Nick	huaxiao-stainless-steel\.com
 1713936943	Nick	Huaxiao[\W_]*+Stainless[\W_]*+Steel(?!\.com(?<=huaxiao-stainless-steel\.com))
+1713937163	Nick	voiptechsolutions\.com
