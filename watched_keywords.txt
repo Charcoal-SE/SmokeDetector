@@ -61107,3 +61107,4 @@
 1713965170	Jeff Schaller	hbcu-plus\.com
 1713966198	tripleee	rcmumbai\.com
 1713966167	General Grievance	trucksimulatorultimateplay\.com
+1713966260	Makyen	dxb[\W_]*+apps(?!\.com(?<=dxbapps\.com))
