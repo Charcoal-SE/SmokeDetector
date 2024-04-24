@@ -61089,3 +61089,4 @@
 1713944471	tripleee	kwork\.com
 1713948539	tripleee	sim[\W_]*+shis[\W_]*+seo[\W_]*+services
 1713948619	tripleee	littleindiasg\.org
+1713952817	Jeff Schaller	dxbapps\.com
