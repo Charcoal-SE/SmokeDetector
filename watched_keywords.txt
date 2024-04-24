@@ -61112,3 +61112,4 @@
 1713966954	tripleee	(?-i:^Alexx Hales$)
 1713972299	Jeff Schaller	lsbuk\.com
 1713975806	Fastnlight	micro-lube\.com
+1713980965	Fastnlight	floorplanmapper\.com
