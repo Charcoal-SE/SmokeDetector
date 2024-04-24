@@ -61082,3 +61082,4 @@
 1713937362	Nick	myprodentim101\.com
 1713937405	Nick	Cleaning[\W_]*+wala(?!\.in(?<=cleaningwala\.in))
 1713938884	VLAZ	pinkroot\.in
+1713938924	VLAZ	pink[\W_]*+root(?:[\W_]*+india|(?!\.in(?<=pinkroot\.in)))
