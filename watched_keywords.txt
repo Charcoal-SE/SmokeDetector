@@ -61084,3 +61084,4 @@
 1713938884	VLAZ	pinkroot\.in
 1713938924	VLAZ	pink[\W_]*+root(?:[\W_]*+india|(?!\.in(?<=pinkroot\.in)))
 1713943229	Dragonrage	cunzite\.com
+1713943713	Dragonrage	ceeonindia\.co\.in
