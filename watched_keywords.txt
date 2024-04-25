@@ -61134,3 +61134,4 @@
 1714037396	tripleee	(?-i:^Musix Clan$)
 1714037801	tripleee	the[\W_]*+next[\W_]*+tech(?!\.com(!<=the-next-tech\.com))(?<!(?-i:^The Next Tech$))
 1714038778	tripleee	tekroi\.com
+1714038811	tripleee	tekroi(?!\.com)
