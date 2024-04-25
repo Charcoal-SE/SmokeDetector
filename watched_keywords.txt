@@ -61121,3 +61121,4 @@
 1714010316	Nick	dzwonkipl\.com
 1714010351	Nick	huyha\.xyz
 1714014996	Nick	wetetched\.com
+1714020187	Nick	Meetanshi(?!\.com)
