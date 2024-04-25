@@ -60751,7 +60751,6 @@
 1713150775	Makyen	文贵
 1713155572	Jeff Schaller	whatsenderpro\.com
 1713155615	Jeff Schaller	flyingcolour\.net
-1713158736	Makyen	accuratecapitalplus\.com
 1713158758	Makyen	accurate[\W_]*+capital[\W_]*+plus(?!\.com(?<=accuratecapitalplus\.com))
 1713159071	Cow	beardeddragongeek\.com
 1713159265	Makyen	pcongrp\.com
