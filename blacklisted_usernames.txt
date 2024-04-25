@@ -1010,3 +1010,4 @@ Gray Walker
 (?-i:^Techsaga USA$)
 (?-i:^BIGOM$)
 (?-i:^Mark Brio$)
+(?-i:^vicky singh$)
