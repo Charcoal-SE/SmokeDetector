@@ -61128,3 +61128,4 @@
 1714028962	VLAZ	piepie\.ai
 1714028983	VLAZ	piepie(?!\.ai)
 1714029278	tripleee	myremoteoffice\.co\.uk
+1714029468	Nick	my[\W_]*+remote[\W_]*+office(?!\.co\.uk(?<=myremoteoffice\.co\.uk))
