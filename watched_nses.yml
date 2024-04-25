@@ -3821,6 +3821,7 @@ items:
 - ns:
   - ns1.cp-in-12.bigrockservers.com.
   - ns2.cp-in-12.bigrockservers.com.
+- ns: cp-in-17.bigrockservers.com.
 - ns: 
   - ns1.md-97.bigrockservers.com.
   - ns2.md-97.bigrockservers.com.
