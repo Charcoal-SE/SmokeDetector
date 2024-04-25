@@ -3871,7 +3871,9 @@ items:
 - comment: timeout 2020-04-02
   disable: true
   ns: dns-parking.net.
-- ns: dns-parking.com.
+- comment: SERVFAIL 2024-04-25
+  disable: true
+  ns: dns-parking.com.
 - ns: host.com.pk.
 - ns: genxwhosting.com.
 - comment: 18/114 over 3 years; disabled 2023-01-27
