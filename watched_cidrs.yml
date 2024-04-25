@@ -4701,6 +4701,7 @@ items:
 - ip: 23.111.179.98
 - ip: 23.111.182.242
 - ip: 23.111.187.131
+- ip: 23.139.0.1
 - comment: dubious FP rate, 8/131
   disable: true
   ip: 23.185.0.4
