@@ -61137,3 +61137,4 @@
 1714038811	tripleee	tekroi(?!\.com)
 1714039233	tripleee	habiliteclinics\.com
 1714041001	tripleee	iifls\.com
+1714041198	Cow	digitalxscope\.com
