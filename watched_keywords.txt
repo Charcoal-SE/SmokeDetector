@@ -61131,3 +61131,4 @@
 1714029468	Nick	my[\W_]*+remote[\W_]*+office(?!\.co\.uk(?<=myremoteoffice\.co\.uk))
 1714030235	Nick	bizople\.com
 1714030276	Nick	Bizople(?!\.com)
+1714031254	Nick	charava\.co\.uk
