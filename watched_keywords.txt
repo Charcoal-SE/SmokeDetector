@@ -60626,7 +60626,6 @@
 1712834334	Jeff Schaller	thor89
 1712837450	VLAZ	outsoft\.eu
 1712838180	Jeff Schaller	rsmmultilink\.com
-1712839202	Can O' Spam	mjfinancials\.com
 1712841979	Jeff Schaller	allcloud\.in
 1712852678	Makyen	elationvisas\.com
 1712852710	Makyen	elation[\W_]*+visas(?!\.com(?<=elationvisas\.com))
