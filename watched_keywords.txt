@@ -58436,7 +58436,6 @@
 1707980845	Nick	skillsquad\.io
 1707980915	Nick	skill[\W_]*+squad(?!\.io(?<=skillsquad\.io))
 1707981097	VLAZ	prakharcash\.in
-1707982508	Nick	The[\W_]*+Next[\W_]*+Tech(?!\.com(?<=the-next-tech\.com))
 1707967559	Henry Ecker	hunarcourses\.com
 1707984125	Nick	yakobov-dev\.co\.il
 1707985311	Nick	cmf\.tn
