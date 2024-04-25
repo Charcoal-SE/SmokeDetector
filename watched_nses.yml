@@ -2454,6 +2454,9 @@ items:
   - jay.ns.cloudflare.com.
   - keira.ns.cloudflare.com.
 - ns:
+  - jay.ns.cloudflare.com.
+  - rosa.ns.cloudflare.com.
+- ns:
   - jean.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
