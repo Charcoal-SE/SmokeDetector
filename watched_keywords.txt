@@ -61151,3 +61151,4 @@
 1714052357	General Grievance	digitalzworld\.com
 1714060698	Fastnlight	products[\W_]*+in[\W_]*+india
 1714068716	Fastnlight	lyricssy\.com
+1714085935	Makyen	(?-i:1csst5B9PUX7YK9wuHHiwMF9oENAvjfbf)
