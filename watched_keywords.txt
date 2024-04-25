@@ -61132,3 +61132,4 @@
 1714030235	Nick	bizople\.com
 1714030276	Nick	Bizople(?!\.com)
 1714031254	Nick	charava\.co\.uk
+1714031907	Nick	giakecatech\.com
