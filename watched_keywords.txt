@@ -61177,3 +61177,4 @@
 1714128248	tripleee	powerappsportals\.us/forums/general-discussion
 1714130177	Cow	melbournecitycollege\.edu\.au
 1714131199	Cow	rsgfasteners\.com
+1714134528	Jeff Schaller	toolacademy\.com
