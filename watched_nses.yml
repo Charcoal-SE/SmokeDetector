@@ -3419,6 +3419,9 @@ items:
   - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - roan.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
+- ns:
   - roman.ns.cloudflare.com.
   - ursula.ns.cloudflare.com.
 - ns:
