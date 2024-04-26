@@ -56832,7 +56832,6 @@
 1704835524	Jeff Schaller	jameselements\.com
 1704837212	Jeff Schaller	alarabtransport\.com
 1704842574	Nick	stakecut\.com
-1704843933	Vickel	counterfeitmoney\.site
 1704857314	Jesse	StarBike\.org
 1704865347	tripleee	pgyer\.com
 1704865417	tripleee	(?-i:^OpenIM$)
