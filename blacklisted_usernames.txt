@@ -1012,3 +1012,4 @@ Gray Walker
 (?-i:^Mark Brio$)
 (?-i:^vicky singh$)
 (?-i:^mrevsyn$)
+(?-i:YCM MRC)
