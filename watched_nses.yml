@@ -234,6 +234,9 @@ items:
   - molly.ns.cloudflare.com.
 - ns:
   - alberto.ns.cloudflare.com.
+  - arushi.ns.cloudflare.com.
+- ns:
+  - alberto.ns.cloudflare.com.
   - demi.ns.cloudflare.com.
 - ns:
   - aldo.ns.cloudflare.com.
