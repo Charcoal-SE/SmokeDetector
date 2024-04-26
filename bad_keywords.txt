@@ -2900,7 +2900,6 @@ j[\W_]*+e[\W_]*+f[\W_]*+f[\W_]*+s[\W_]*+i[\W_]*+l[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+
 spinewise(?!\.ca)
 facepdf(?!\.com)
 UFC[\W_]*+\d{3}
-folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech[\W_]*+center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 McAfee[\W_]*+Customer[\W_]*+Service
 realexamcollection(?!\.com)
 nefar[\W_]*+tete(?!\.com(?<=nefartete\.com))
