@@ -61195,3 +61195,4 @@
 1714201336	Nick	kalaplugins\.com
 1714201365	Nick	Kala[\W_]*+Plugins(?!\.com(?<=kalaplugins\.com))
 1714203881	Nick	dpboss\.best
+1714204472	Nick	rentacheapcardubai\.com
