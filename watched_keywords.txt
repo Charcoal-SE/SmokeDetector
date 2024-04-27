@@ -61031,7 +61031,6 @@
 1713869799	Cow	crownroofingsolutions\.com
 1713871050	tripleee	autoinsighthub\.com
 1713872460	Cow	clinido\.com
-1713871839	Cow	grayhathacks(?#@contractor.net)
 1713879051	tripleee	iptv[\W_]*+provider
 1713879072	tripleee	iptv[\W_]*+uk
 1713892479	Makyen	grabexpress\.co\.uk
