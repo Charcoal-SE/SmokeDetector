@@ -61205,3 +61205,4 @@
 1714235504	Vickel	divorcelawyersnassaucounty\.com
 1714236575	Fastnlight	(?-i:harry47222)(?#telegram)
 1714244267	Makyen	folkwin[\W_]*+expert[\W_]*+recovery[\W_]*+(?:dot[\W_]*+)?com
+1714256247	Nick	webcraftio\.com
