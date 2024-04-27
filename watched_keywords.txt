@@ -61204,3 +61204,4 @@
 1714217335	Jeff Schaller	weedstrainsdispensary\.site
 1714218298	Jeff Schaller	thuvienphapluat\.vn
 1714219004	VLAZ	oddwayinternational\.com
+1714219025	VLAZ	oddway[\W_]*+international(?!\.com(?<=oddwayinternational\.com))
