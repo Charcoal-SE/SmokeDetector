@@ -56990,7 +56990,6 @@
 1705139444	Robert Longson	dishisjewels\.com
 1705139630	cigien	gasolineracercaubicaion\.com
 1705139795	cigien	cyberguru\.recovery(?:@gmail\.com)?
-1705139900	cigien	iboltcyberhacker\.com
 1705140926	Robert Longson	thermoshieldinsulation\.com
 1705141737	VLAZ	newsdailyfilm\.com
 1705142469	cigien	news[\W_]*+daily[\W_]*+film(?!\.com(?<=newsdailyfilm\.com))
