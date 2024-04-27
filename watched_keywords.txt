@@ -61206,3 +61206,4 @@
 1714219004	VLAZ	oddwayinternational\.com
 1714219025	VLAZ	oddway[\W_]*+international(?!\.com(?<=oddwayinternational\.com))
 1714233040	Fastnlight	printtester\.com
+1714232141	Vickel	gbr41(?:@yahoo\.com)?
