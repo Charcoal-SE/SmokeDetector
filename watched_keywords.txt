@@ -61188,3 +61188,4 @@
 1714170370	Jeff Schaller	wocketwallet\.com
 1714179430	Jeff Schaller	Dr[\W_]*+Mandla
 1714185579	Makyen	grayhathacks(?:@contractor\.net)?
+1714194260	cocomac	devean\.cn
