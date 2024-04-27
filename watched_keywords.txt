@@ -61193,3 +61193,4 @@
 1714200343	Nick	ikdevelopment\.co\.uk
 1714200512	Nick	cabkgoyal\.com
 1714201336	Nick	kalaplugins\.com
+1714201365	Nick	Kala[\W_]*+Plugins(?!\.com(?<=kalaplugins\.com))
