@@ -61189,3 +61189,4 @@
 1714179430	Jeff Schaller	Dr[\W_]*+Mandla
 1714185579	Makyen	grayhathacks(?:@contractor\.net)?
 1714194260	cocomac	devean\.cn
+1714198755	Mast	luminousprinting\.com\.sg
