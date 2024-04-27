@@ -55614,7 +55614,6 @@
 1701968216	cigien	viettelidc\.com
 1701968237	cigien	viettel[\W_]*+idc(?!\.com(?<=viettelidc\.com))
 1701971821	Jesse	keduplicatebill\.com\.pk
-1701886187	Jesse	gabrielmoraru\.com
 1701888360	Jesse	github\.com/avinashtare
 1701891594	Jesse	legalconsultantuae\.ae
 1701892107	Jesse	sunshinefinser\.com
