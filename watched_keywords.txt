@@ -61217,3 +61217,4 @@
 1714320849	Makyen	buylocalservice\.com
 1714321992	Makyen	itehil\.com
 1714322013	Makyen	itehil(?!\.com)
+1714326634	Cow	drainer\.shop
