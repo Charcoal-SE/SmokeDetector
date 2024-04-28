@@ -3014,3 +3014,4 @@ referans[\W_]*+kodu
 folkwin[\W_]*+expert[\W_]*+recovery(?![\W_]*+(?:dot[\W_]*+)?com(?<=folkwinexpertrecovery[\W_]*+(?:dot[\W_]*+)?com))(?:[\W_]*+(?:at[\W_]*+)?tech[\W_]*+center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 i[\W_]*+bolt[\W_]*+cyber[\W_]*+hack(?:er)?(?![\W_]*+(?:dot[\W_]*+)?com)
 shomorikaspelltemple0\.blogspot
+hackathon[\W_]*+tech[\W_]*+solution(?!s\.com(?<=hackathontechsolutions\.com))
