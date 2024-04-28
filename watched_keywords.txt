@@ -61207,3 +61207,4 @@
 1714244267	Makyen	folkwin[\W_]*+expert[\W_]*+recovery[\W_]*+(?:dot[\W_]*+)?com
 1714256247	Nick	webcraftio\.com
 1714280399	Nick	investingdrone\.com
+1714294786	Cow	qiblafinder\.withgoogle\.com
