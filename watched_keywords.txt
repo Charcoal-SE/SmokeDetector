@@ -61225,3 +61225,4 @@
 1714353239	Makyen	simply[\W_]*+soaperior(?!\.co\.uk(?<=simplysoaperior\.co\.uk))
 1714366822	Nick	digitalexponents\.in
 1714366921	Nick	Digital[\W_]*+Exponents(?!\.in(?<=digitalexponents\.in))
+1714367596	Nick	Vlog[\W_]*+Vibes
