@@ -61233,3 +61233,4 @@
 1714368263	Nick	one2note(?!\.com)
 1714372278	VLAZ	nivabupa\.com
 1714372314	VLAZ	niva[\W_]*+bupa(?!\.com(?<=nivabupa\.com))
+1714375828	Nick	antido\.in
