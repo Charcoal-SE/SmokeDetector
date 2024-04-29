@@ -61230,3 +61230,4 @@
 1714367876	Nick	Psychocare[\W_]*+Health
 1714368124	Cow	playdigital\.in
 1714368167	Cow	one2note\.com
+1714368263	Nick	one2note(?!\.com)
