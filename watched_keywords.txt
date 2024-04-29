@@ -61237,3 +61237,4 @@
 1714375956	Nick	allianzfirstaidtraining\.com\.au
 1714376021	Nick	Allianz[\W_]*+First[\W_]*+Aid[\W_]*+Training(?!\.com\.au(?<=allianzfirstaidtraining\.com\.au))
 1714381018	Nick	partyballoonsdelivery\.com
+1714382121	VLAZ	conscendo\.io
