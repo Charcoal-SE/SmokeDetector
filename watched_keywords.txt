@@ -61257,3 +61257,4 @@
 1714406718	Vickel	gogovictoria\.blogspot
 1714406798	Vickel	powerfulspells637(?:@gmail\.com)?
 1714418780	Makyen	gitar[\W_]*+100
+1714419339	Cow	handypay\.app
