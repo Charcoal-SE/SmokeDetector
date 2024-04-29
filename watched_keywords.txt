@@ -61239,3 +61239,4 @@
 1714381018	Nick	partyballoonsdelivery\.com
 1714382121	VLAZ	conscendo\.io
 1714382155	VLAZ	conscendo(?!\.io)(?:[\W]*+technologies)?
+1714382883	VLAZ	pantipadcodegenerator\.blogspot
