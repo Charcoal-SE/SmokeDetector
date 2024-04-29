@@ -61244,3 +61244,4 @@
 1714384951	VLAZ	hireva\.co
 1714384971	VLAZ	hireva(?!\.co)
 1714385012	VLAZ	investfikr\.com
+1714385045	VLAZ	evyahospitals\.in
