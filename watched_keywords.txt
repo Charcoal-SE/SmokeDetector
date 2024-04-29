@@ -61242,3 +61242,4 @@
 1714382883	VLAZ	pantipadcodegenerator\.blogspot
 1714383078	VLAZ	pantip(?:[\W_]*+ads?)?
 1714384951	VLAZ	hireva\.co
+1714384971	VLAZ	hireva(?!\.co)
