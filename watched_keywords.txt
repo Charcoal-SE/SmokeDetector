@@ -61227,3 +61227,4 @@
 1714366921	Nick	Digital[\W_]*+Exponents(?!\.in(?<=digitalexponents\.in))
 1714367596	Nick	Vlog[\W_]*+Vibes
 1714367825	Nick	psychocare\.biz
+1714367876	Nick	Psychocare[\W_]*+Health
