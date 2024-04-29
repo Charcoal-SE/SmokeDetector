@@ -61247,3 +61247,4 @@
 1714385045	VLAZ	evyahospitals\.in
 1714385125	VLAZ	evya[\W_]*+hospitals(?!\.in(?<=evyahospitals\.in))
 1714386196	VLAZ	flyobooking\.blogspot
+1714388107	Jeff Schaller	filehurry\.com
