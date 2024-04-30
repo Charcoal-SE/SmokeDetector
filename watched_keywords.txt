@@ -61272,3 +61272,4 @@
 1714453050	Nick	garagedoorrepairgroup\.com
 1714453075	Nick	bizkro\.com
 1714453097	Nick	reachbusinessdirect\.com
+1714453141	Nick	reach[\W_]*+business[\W_]*+direct(?!\.com(?<=reachbusinessdirect\.com))
