@@ -61277,3 +61277,4 @@
 1714454169	Nick	byreached\.com
 1714454191	Nick	byreached(?!\.com)
 1714455645	VLAZ	accnu\.co\.in
+1714455736	VLAZ	accnu(?!\.co\.in)
