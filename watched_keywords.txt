@@ -28674,7 +28674,6 @@
 1621375803	cigien	zainbo(?!\.com)
 1621375976	cigien	sheraton[\W_]*+luxuries(?!\.com(?<=sheratonluxuries\.com))
 1621382106	10 Rep	longboardpro\.com
-1621385224	Nick	nirvashare\.com
 1621390760	cigien	nirvashare(?!\.com)
 1621391897	lyxal	superhotplace\.com
 1621393510	Spevacus	theblogmagic\.com
