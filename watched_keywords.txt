@@ -61291,3 +61291,4 @@
 1714469018	tripleee	dr[\W_]*+mama[\W_]*+tango
 1714470741	tripleee	i5[\W_]*+joints?
 1714472142	Jeff Schaller	advanceslinux\.com
+1714472281	Jeff Schaller	kalingatmt\.in
