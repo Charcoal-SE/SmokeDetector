@@ -3945,7 +3945,6 @@ items:
 - ns: bh-in-10.webhostbox.net.
 - ns: bh-in-14.webhostbox.net.
 - ns: bh-in-20.webhostbox.net.
-- ns: bh-in-31.webhostbox.net.
 - ns: bh-in-33.webhostbox.net.
 - ns: bh-in-36.webhostbox.net.
 - comment: 5/9 over 7 months, all TPs overlap with other rules (2020-08-18)
