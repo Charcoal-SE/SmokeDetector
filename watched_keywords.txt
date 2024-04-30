@@ -60672,7 +60672,6 @@
 1712981190	Makyen	紹介コード
 1712981683	Nick	multiversitystore\.com
 1712981731	Nick	Multiversity[\W_]*+Store(?!\.com(?<=multiversitystore\.com))
-1712988900	Nick	rainocode\.com
 1712988932	Nick	Rainocode(?!\.com)
 1712989072	Nick	nextbell\.com
 1712989114	Nick	Next[\W_]*+Bell(?!\.com)
