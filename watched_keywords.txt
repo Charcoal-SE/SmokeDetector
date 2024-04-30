@@ -61275,3 +61275,4 @@
 1714453141	Nick	reach[\W_]*+business[\W_]*+direct(?!\.com(?<=reachbusinessdirect\.com))
 1714453258	Nick	Homoeo[\W_]*+Amigo(?!\.com(?<=homoeoamigo\.com))
 1714454169	Nick	byreached\.com
+1714454191	Nick	byreached(?!\.com)
