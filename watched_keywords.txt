@@ -57704,7 +57704,6 @@
 1706528802	cigien	proxymimarlik\.com
 1706529703	tripleee	derm[\W_]*+la[\W_]*+fleur(?:[\W_]*+deluxe)?
 1706529777	tripleee	articleshood\.com
-1706531828	Jeff Schaller	(?-i:^Mohit Singh$)
 1706533237	Vickel	aribasafety\.com
 1706533318	Vickel	ariba[\W_]*+safety(?!\.com)
 1706533755	cigien	lovecrm\.com\.br
