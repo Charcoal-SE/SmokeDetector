@@ -61292,3 +61292,4 @@
 1714470741	tripleee	i5[\W_]*+joints?
 1714472142	Jeff Schaller	advanceslinux\.com
 1714472281	Jeff Schaller	kalingatmt\.in
+1714472442	tripleee	greatlakesdp\.us
