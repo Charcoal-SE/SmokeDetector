@@ -17068,7 +17068,6 @@
 1582859841	Shree	alufoil\.cn
 1582861759	Makyen	(?-i:TyyDhvDJyL)(?#t.co)
 1582869281	Makyen	testovance
-1582872597	double-beep	nationalsafetyschool\.com
 1582872681	Shree	freesearch\.naukri\.com
 1582872886	double-beep	imarticus\.org
 1582873037	double-beep	carpetdubai\.ae
