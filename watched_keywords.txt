@@ -61290,3 +61290,4 @@
 1714467515	Nick	cartint\.ca
 1714468954	tripleee	abhasa(?!\.in)
 1714469018	tripleee	dr[\W_]*+mama[\W_]*+tango
+1714470603	tripleee	i5joints?
