@@ -2970,6 +2970,9 @@ items:
   - logan.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
 - ns:
+  - logan.ns.cloudflare.com.
+  - pearl.ns.cloudflare.com.
+- ns:
   - lola.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
