@@ -61288,3 +61288,4 @@
 1714467348	tripleee	(?-i:^Sunny roy$)
 1714467370	tripleee	hdpe[\W_]*+sheets
 1714467515	Nick	cartint\.ca
+1714468954	tripleee	abhasa(?!\.in)
