@@ -61299,3 +61299,4 @@
 1714478265	tripleee	swiftstall\.com
 1714478503	tripleee	(?-i:YDA5JS6U)(?# referral code)
 1714478612	Nick	samadidi\.com
+1714478656	Nick	sama[\W_]*+didi(?!\.com)
