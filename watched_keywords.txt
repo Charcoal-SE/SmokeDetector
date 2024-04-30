@@ -61300,4 +61300,3 @@
 1714478503	tripleee	(?-i:YDA5JS6U)(?# referral code)
 1714478612	Nick	samadidi\.com
 1714478656	Nick	sama[\W_]*+didi(?!\.com)
-1714478878	tripleee	(?-i:TXXS5I)(?# referral code)
