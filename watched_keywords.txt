@@ -49798,7 +49798,6 @@
 1682672152	tripleee	animalsnames\.in
 1682672173	tripleee	plantzzhub\.in
 1682672484	tripleee	halinotravel\.com
-1682673976	tripleee	(?-i:^johnwick$)
 1682674094	tripleee	cortexhair\.co\.in
 1682674244	tripleee	targaryen\.online
 1682674282	tripleee	advertising-page\.com
