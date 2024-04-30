@@ -61289,3 +61289,4 @@
 1714467370	tripleee	hdpe[\W_]*+sheets
 1714467515	Nick	cartint\.ca
 1714468954	tripleee	abhasa(?!\.in)
+1714469018	tripleee	dr[\W_]*+mama[\W_]*+tango
