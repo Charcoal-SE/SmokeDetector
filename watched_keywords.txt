@@ -61276,3 +61276,4 @@
 1714453258	Nick	Homoeo[\W_]*+Amigo(?!\.com(?<=homoeoamigo\.com))
 1714454169	Nick	byreached\.com
 1714454191	Nick	byreached(?!\.com)
+1714455645	VLAZ	accnu\.co\.in
