@@ -61273,3 +61273,4 @@
 1714453075	Nick	bizkro\.com
 1714453097	Nick	reachbusinessdirect\.com
 1714453141	Nick	reach[\W_]*+business[\W_]*+direct(?!\.com(?<=reachbusinessdirect\.com))
+1714453258	Nick	Homoeo[\W_]*+Amigo(?!\.com(?<=homoeoamigo\.com))
