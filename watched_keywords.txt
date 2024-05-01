@@ -61333,3 +61333,4 @@
 1714586783	Makyen	guruji[\W_]*+forex(?!\.com(?<=gurujiforex\.com))
 1714586852	Makyen	(?-i:N7NNscm4fk79PS3t6)(?#maps.app.goo.gl)
 1714589034	Jeff Schaller	emphorasoft\.com
+1714591257	Fastnlight	liveusalightshop(?:@gmail\.com)?
