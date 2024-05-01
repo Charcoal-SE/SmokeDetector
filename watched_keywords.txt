@@ -61323,3 +61323,4 @@
 1714564625	Nick	forexonwheels\.com
 1714564659	Nick	Grow4Sure
 1714564722	Nick	feednexus\.com
+1714564750	Nick	Feed[\W_]*+Nexus(?!\.com(?<=feednexus\.com))
