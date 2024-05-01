@@ -61325,3 +61325,4 @@
 1714564722	Nick	feednexus\.com
 1714564750	Nick	Feed[\W_]*+Nexus(?!\.com(?<=feednexus\.com))
 1714564813	Jeff Schaller	grow4sureconsulting\.com
+1714565283	Jeff Schaller	drlisacooney\.com
