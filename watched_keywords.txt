@@ -61326,3 +61326,4 @@
 1714564813	Jeff Schaller	grow4sureconsulting\.com
 1714565283	Jeff Schaller	drlisacooney\.com
 1714573182	Makyen	dragon[\W_]*+web[\W_]*+recovery(?!\.com(?<=dragonwebrecovery\.com ))(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
+1714573663	Jeff Schaller	cannapot\.com
