@@ -61317,3 +61317,4 @@
 1714548430	Nick	teenyfy\.com
 1714548471	Nick	Teeny[\W_]*+fy(?!\.com(?<=teenyfy\.com))
 1714557837	Jeff Schaller	topofests\.com
+1714557863	Jeff Schaller	spiralmantra\.com
