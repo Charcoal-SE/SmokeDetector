@@ -61315,3 +61315,4 @@
 1714546619	Nick	thewebpatriot\.com
 1714546689	Nick	bathroomrenovationsoshawa\.ca
 1714548430	Nick	teenyfy\.com
+1714548471	Nick	Teeny[\W_]*+fy(?!\.com(?<=teenyfy\.com))
