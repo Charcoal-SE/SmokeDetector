@@ -61328,3 +61328,4 @@
 1714573182	Makyen	dragon[\W_]*+web[\W_]*+recovery(?!\.com(?<=dragonwebrecovery\.com ))(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
 1714573663	Jeff Schaller	cannapot\.com
 1714576098	Jeff Schaller	yalla--shoote\.com
+1714583775	Fastnlight	pure-refresh\.fr
