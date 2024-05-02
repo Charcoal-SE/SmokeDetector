@@ -61351,3 +61351,4 @@
 1714643278	VLAZ	gotfreefax\.com
 1714643634	tripleee	bharathomeopathy\.com
 1714643687	tripleee	bharat[\W_]*+homeopathy(?!\.com(?<=bharathomeopathy\.com))
+1714643708	tripleee	ascenttunes\.com
