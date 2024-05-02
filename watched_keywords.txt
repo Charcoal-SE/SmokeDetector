@@ -61346,3 +61346,4 @@
 1714632462	Nick	District[\W_]*+Performance[\W_]*+Physio(?!\.com(?<=districtperformancephysio\.com))
 1714636897	Jeff Schaller	theoaklandpress\.com
 1714636944	Jeff Schaller	shipclues\.com
+1714637099	Jeff Schaller	blitzacademy\.org
