@@ -61338,3 +61338,4 @@
 1714619699	Nick	errorhero\.com
 1714620438	Spevacus	dehraduntaxiservices\.in
 1714621793	Makyen	dehradun[\W_]*+taxi[\W_]*+services(?!\.in(?<=dehraduntaxiservices\.in))
+1714622207	Makyen	(?:wzard[\W_]*+)?garry[\W_]*+speed[\W_]*+hack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
