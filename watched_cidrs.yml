@@ -5342,6 +5342,7 @@ items:
 - ip: 52.18.234.147
 - ip: 52.19.131.253
 - ip: 52.19.6.38
+- ip: 52.204.183.147
 - comment: git.io, ejabberd etc - don't watch
   disable: true
   ip: 52.204.242.176
