@@ -61335,3 +61335,4 @@
 1714589034	Jeff Schaller	emphorasoft\.com
 1714606089	Nick	yemreak\.com
 1714591190	Fastnlight	usalightshop\.com
+1714591257	Fastnlight	liveusalightshop(?:@gmail\.com)?
