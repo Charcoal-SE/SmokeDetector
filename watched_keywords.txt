@@ -39183,7 +39183,7 @@
 1653989640	tripleee	(?-i:^FSPCBA$)
 1653994997	Jeff Schaller	carryindia\.co\.in
 1653995319	tripleee	unitedmoversdubai\.ae
-1653995383	tripleee	oulhadjoday(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\_W]*+)?com)?
+1653995383	tripleee	oulhadjoday(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1653995723	tripleee	kudosayurveda\.com
 1653998843	Jeff Schaller	olivercoins\.com
 1654001012	Makyen	myvegblog\.com
