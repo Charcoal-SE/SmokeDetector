@@ -61338,3 +61338,4 @@
 1714591257	Fastnlight	liveusalightshop(?:@gmail\.com)?
 1714592423	Fastnlight	usalightshop(?!\.com)
 1714619699	Nick	errorhero\.com
+1714620438	Spevacus	dehraduntaxiservices\.in
