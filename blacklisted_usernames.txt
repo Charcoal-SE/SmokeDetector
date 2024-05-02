@@ -1014,3 +1014,4 @@ Gray Walker
 (?-i:^mrevsyn$)
 (?-i:YCM MRC)
 (?-i:^adree sheik$)
+(?-i:^Rajat\. edhacare$)
