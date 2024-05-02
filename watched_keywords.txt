@@ -61351,3 +61351,4 @@
 1714643687	tripleee	bharat[\W_]*+homeopathy(?!\.com(?<=bharathomeopathy\.com))
 1714643708	tripleee	ascenttunes\.com
 1714645087	Jeff Schaller	windsordoors\.co\.nz
+1714646094	Jeff Schaller	velcrackerssivakasi\.com
