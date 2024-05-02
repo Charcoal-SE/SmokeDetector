@@ -61342,3 +61342,4 @@
 1714630369	Nick	fastwebsitebuilder\.bigcartel\.com
 1714631434	Nick	trendsfort\.com
 1714631477	Nick	Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
+1714632411	Nick	districtperformancephysio\.com
