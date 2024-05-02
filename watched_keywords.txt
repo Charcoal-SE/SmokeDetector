@@ -61363,3 +61363,4 @@
 1714656797	tripleee	global[\W_]*+recovery[\W_]*+services
 1714656839	tripleee	globalrecoveryservicesgrs(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1714657128	tripleee	minimilitiamodapk\.org
+1714665457	General Grievance	redheadhomeproperties\.com
