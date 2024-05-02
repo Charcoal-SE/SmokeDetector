@@ -61339,3 +61339,4 @@
 1714592423	Fastnlight	usalightshop(?!\.com)
 1714619699	Nick	errorhero\.com
 1714620438	Spevacus	dehraduntaxiservices\.in
+1714621793	Makyen	dehradun[\W_]*+taxi[\W_]*+services(?!\.in(?<=dehraduntaxiservices\.in))
