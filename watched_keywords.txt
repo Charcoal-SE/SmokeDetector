@@ -61341,3 +61341,4 @@
 1714622238	Makyen	textcompare\.org
 1714630369	Nick	fastwebsitebuilder\.bigcartel\.com
 1714631434	Nick	trendsfort\.com
+1714631477	Nick	Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
