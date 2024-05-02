@@ -61339,3 +61339,4 @@
 1714620438	Spevacus	dehraduntaxiservices\.in
 1714621793	Makyen	dehradun[\W_]*+taxi[\W_]*+services(?!\.in(?<=dehraduntaxiservices\.in))
 1714622238	Makyen	textcompare\.org
+1714630369	Nick	fastwebsitebuilder\.bigcartel\.com
