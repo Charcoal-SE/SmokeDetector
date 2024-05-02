@@ -54399,7 +54399,6 @@
 1698918157	Makyen	garudaslotgacor[\W_]*+com
 1698918186	Makyen	garudaslot
 1698918215	Makyen	asalgacor(?!\.com)
-1698918245	Makyen	edha[\W_]*+care(?!\.com(?<=edhacare\.com))
 1698922044	Jeff Schaller	hopsworks\.ai
 1698921623	VLAZ	virteract\.com
 1698919931	VLAZ	nordenvation\.com

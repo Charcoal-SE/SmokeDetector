@@ -3019,3 +3019,4 @@ hack4wise(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 (?-i:TXXS5I)(?# referral code)
 imoij1
 (?:wzard[\W_]*+)?garry[\W_]*+speed[\W_]*+hack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+edha[\W_]*+care(?!\.com(?<=edhacare\.com))
