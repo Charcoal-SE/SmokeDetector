@@ -2230,9 +2230,6 @@ items:
   - mike.ns.cloudflare.com.
 - ns:
   - hank.ns.cloudflare.com.
-  - kiki.ns.cloudflare.com.
-- ns:
-  - hank.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
   - hans.ns.cloudflare.com.

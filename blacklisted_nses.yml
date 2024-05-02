@@ -304,6 +304,9 @@ items:
   - gordon.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
+  - hank.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
   - harleigh.ns.cloudflare.com.
   - jasper.ns.cloudflare.com.
 - ns:
