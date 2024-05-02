@@ -61344,3 +61344,4 @@
 1714631477	Nick	Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
 1714632411	Nick	districtperformancephysio\.com
 1714632462	Nick	District[\W_]*+Performance[\W_]*+Physio(?!\.com(?<=districtperformancephysio\.com))
+1714636897	Jeff Schaller	theoaklandpress\.com
