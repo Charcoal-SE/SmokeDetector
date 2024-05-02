@@ -19270,7 +19270,7 @@
 1589344287	tripleee	theugcnet\.blogspot
 1589344373	tripleee	cstcbd\.com
 1589347402	tripleee	chandigarhcareergroup\.in
-1589347433	tripleee	chandigarh[\_]*+career[\W_]*+group(?!\.in)
+1589347433	tripleee	chandigarh[\W_]*+career[\W_]*+group(?!\.in)
 1589348186	tripleee	acceptrequests\.com
 1589348311	tripleee	acceptrequest\.com
 1589350510	Makyen	getbefitketocut(?#facebook.com)
@@ -21581,7 +21581,7 @@
 1597645807	tripleee	justinchauffeurs\.co\.uk
 1597646033	tripleee	thesmsempire\.com
 1597646069	tripleee	the[\W_]*+sms[\W_]*+empire[\W_]*+(?!\.com)\w*+
-1597647432	tripleee	nova[\W_]*+keto[\_]*+avis
+1597647432	tripleee	nova[\W_]*+keto[\W_]*+avis
 1597649814	tripleee	aaaenos(?!\.com)
 1597650167	Mast	technobizzar\.com
 1597652175	tripleee	nozlapp\.com
@@ -35625,7 +35625,7 @@
 1644324794	tripleee	movingchamps\.com\.au
 1644324870	tripleee	(?-i:azLoiiCs9LA)(?# youtube)
 1644324906	tripleee	(?-i:LP5XzhtK-hE)(?# youtube)
-1644325134	tripleee	vinod(?<!dr[\W_]*+vinod)[\_W]*+raina
+1644325134	tripleee	vinod(?<!dr[\W_]*+vinod)[\W_]*+raina
 1644329856	cigien	surl\.li
 1644330065	cigien	topsport-coaching\.nl
 1644336394	tripleee	7nutrients\.com
@@ -39183,7 +39183,7 @@
 1653989640	tripleee	(?-i:^FSPCBA$)
 1653994997	Jeff Schaller	carryindia\.co\.in
 1653995319	tripleee	unitedmoversdubai\.ae
-1653995383	tripleee	oulhadjoday(?:[\W_]*+(?:at[\_W]*+)?gmail[\W_]*+(?:dot[\_W]*+)?com)?
+1653995383	tripleee	oulhadjoday(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\_W]*+)?com)?
 1653995723	tripleee	kudosayurveda\.com
 1653998843	Jeff Schaller	olivercoins\.com
 1654001012	Makyen	myvegblog\.com
@@ -47278,7 +47278,7 @@
 1676464538	cigien	deserts?+[\W_]*+safari(?!\.com(?<=desertssafari\.com))
 1676464750	cigien	kadambari[\W_]*+sangeet(?!\.com(?<=kadambarisangeet\.com))
 1676466136	blackgreen	solveerrors\.blogspot
-1676466699	tripleee	hightechcyberservices(?:[\_W]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1676466699	tripleee	hightechcyberservices(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1676467141	cigien	ibloggerz\.com
 1676467437	cigien	michael[\W_]*+jackson[\W_]*+outfits(?!\.com(?<=michaeljacksonoutfits\.com))
 1676479613	Jesse	cadifyservices\.com

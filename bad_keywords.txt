@@ -2583,7 +2583,7 @@ blockquote>\s*+<p>quote</p>\s*+</blockquote>$
 get your hands on this fantastic phone right now
 coinbase(?:_tech)?[\W_]*support
 helpline bookkeeping involves
-pre[\W_]*pc[\_W]*solutions?
+pre[\W_]*pc[\W_]*solutions?
 the certified experts directly get in touch with you
 (?:american?|alaskan?|copa|delta|spirit|southwest|united)[\W_]*+airlines['’]?[\W_]*+(?:booking|contact|manage|reservation|ticket)
 q(?:uick)?b(?:ooks)?[\W_]*proadvisors?
