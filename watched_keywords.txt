@@ -61372,3 +61372,4 @@
 1714673806	Fastnlight	zenflixx\.com
 1714708812	Makyen	paryasfoundation\.com
 1714711333	Makyen	paryash?[\W_]*+foundation(?!\.com(?<=paryasfoundation\.com))
+1714714375	tripleee	weicherthallmarks\.com
