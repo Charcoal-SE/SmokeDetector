@@ -61382,3 +61382,4 @@
 1714717829	Cow	hyperdynesoftware\.com
 1714718908	tripleee	(?-i:^Evya Vishnu$)
 1714717920	Cow	howwedrive\.com
+1714716965	Cow	alexxhopper10(?#@gmail.com)
