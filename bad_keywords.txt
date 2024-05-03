@@ -3022,3 +3022,4 @@ imoij1
 edha[\W_]*+care(?!\.com(?<=edhacare\.com))
 Bybit[\W_]*+Referral[\W_]*+Code
 wong[\W_]*+best[\W_]*+wizard
+F67K9GYX
