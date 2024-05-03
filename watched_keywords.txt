@@ -61375,3 +61375,4 @@
 1714714375	tripleee	weicherthallmarks\.com
 1714714668	tripleee	topguestposts\.com
 1714714739	tripleee	(?-i:^palash ghosh$)
+1714714957	tripleee	sahajnaturals\.com
