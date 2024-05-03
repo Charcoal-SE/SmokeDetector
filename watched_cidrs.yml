@@ -2215,7 +2215,9 @@ items:
 - comment: disabled 2024-02-20; 53/327 TP but all but one of 1-weights are FP
   disable: true
   ip: 15.197.142.173
-- ip: 15.197.148.33
+- comment: disabled 2024-05-03; 3/24 TP and all the 1-weights are FP
+  disable: true
+  ip: 15.197.148.33
 - ip: 15.197.209.129
 - ip: 15.197.254.101
 - ip: 15.206.216.193
