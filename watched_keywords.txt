@@ -27983,7 +27983,6 @@
 1619014994	Makyen	option[\W_]*+strategies[\W_]*+insider(?!\.com(?<=optionstrategiesinsider\.com))
 1619015031	Makyen	ulixy[\W_]*+cbd[\W_]*+gummies
 1619026367	Ollie	doramy-smotret\.ru
-1619040772	Makyen	nucleustechnologies\.com
 1619042409	Makyen	mushkmahal\.com
 1619047565	cigien	indirimkuponu\.com\.tr
 1619050913	cigien	fanaronline\.com
