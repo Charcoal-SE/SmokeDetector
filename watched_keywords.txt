@@ -61381,3 +61381,4 @@
 1714716667	Cow	hempinindia\.com
 1714717829	Cow	hyperdynesoftware\.com
 1714718908	tripleee	(?-i:^Evya Vishnu$)
+1714717920	Cow	howwedrive\.com
