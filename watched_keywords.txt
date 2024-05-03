@@ -61375,7 +61375,6 @@
 1714714957	tripleee	sahajnaturals\.com
 1714716469	Cow	writerakgandhi\.blogspot
 1714716509	Cow	meerut-amazing\.blogspot
-1714716667	Cow	hempinindia\.com
 1714717829	Cow	hyperdynesoftware\.com
 1714718908	tripleee	(?-i:^Evya Vishnu$)
 1714717920	Cow	howwedrive\.com
