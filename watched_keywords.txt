@@ -61393,3 +61393,4 @@
 1714739716	Jeff Schaller	annihilatorbroadheads\.com
 1714740962	Jeff Schaller	(?-i:^Yasir Nawaz$)
 1714745339	Jeff Schaller	travnook\.com
+1714747116	Jeff Schaller	speckn\.com
