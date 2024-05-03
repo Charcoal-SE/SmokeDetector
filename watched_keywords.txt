@@ -61371,4 +61371,3 @@
 1714690992	Fastnlight	hackspeed24(?#@gmail.com)
 1714673806	Fastnlight	zenflixx\.com
 1714708812	Makyen	paryasfoundation\.com
-1714708833	Makyen	paryas[\W_]*+foundation(?!\.com(?<=paryasfoundation\.com))
