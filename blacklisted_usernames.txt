@@ -302,7 +302,6 @@ lustresparasala
 (?-i:^bailing$)
 (?-i:^mrdev$)
 (?-i:^Pediatric[\W_]*+On[\W_]*+[Cc]all$)
-(?-i:^Yasir Nawaz$)
 (?-i:^handi fandi$)
 (?-i:^Robert john$)
 (?-i:^wyd1014$)
