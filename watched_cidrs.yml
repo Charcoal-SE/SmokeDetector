@@ -5187,7 +5187,9 @@ items:
 - ip: 45.40.145.201
 - ip: 45.40.154.139
 - ip: 45.56.100.107
-- ip: 45.56.79.23
+- comment: disabled after just a few days; overwhelmingly 1-weight FPs 2024-05-03
+  disable: true
+  ip: 45.56.79.23
 - ip: 45.56.99.101
 - ip: 45.56.99.230
 - ip: 45.58.142.21
