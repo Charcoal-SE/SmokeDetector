@@ -3024,3 +3024,4 @@ Bybit[\W_]*+Referral[\W_]*+Code
 wong[\W_]*+best[\W_]*+wizard
 F67K9GYX
 easyreclaim0(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+FASTFUND[\W_]*+RECOVERY
