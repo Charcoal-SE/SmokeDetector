@@ -4828,7 +4828,9 @@ items:
 - comment: 44/157 over a year, recently no 1-weights 2022-11-29
   disable: true
   ip: 3.33.152.147
-- ip: 3.33.130.190
+- comment: disabled 2024-05-03; 2/23 TP, 1-weights are all FP
+  disable: true
+  ip: 3.33.130.190
 - ip: 3.33.191.88
 - ip: 3.6.1.124
 - ip: 3.6.158.69
