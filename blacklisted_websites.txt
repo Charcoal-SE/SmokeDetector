@@ -5572,3 +5572,4 @@ sastechvision\.in
 nucleustechnologies\.com
 hempinindia\.com
 aelectroniz\.com
+cyber[\W_]*+wizard[\W_]*+(?:do?t[\W_]*+)?com
