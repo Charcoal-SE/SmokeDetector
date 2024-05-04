@@ -61403,3 +61403,4 @@
 1714788142	Jeff Schaller	petss-valley\.blogspot
 1714792077	Makyen	freeze[\W_]*+dried[\W_]*+sweets(?:[\W_]*+wholesale(?!\.com(?<=freezedriedsweetswholesaler\.com))r?)?
 1714793434	cocomac	digitaljunction\.in
+1714799289	Nick	apptagsolution\.com
