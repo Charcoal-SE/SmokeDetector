@@ -61441,3 +61441,4 @@
 1714829889	Vickel	naturachol\.com
 1714830321	Makyen	naturachol(?!\.com)
 1714834331	Makyen	kismaze33(?:@gmail\.com)?
+1714834352	Makyen	com\.kismaze(?#play.google.com)
