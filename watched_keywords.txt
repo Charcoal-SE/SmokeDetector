@@ -61450,3 +61450,4 @@
 1714856511	Makyen	mac4xp\.com
 1714856542	Makyen	mac4xp(?!\.com)
 1714858373	Makyen	masterbinary\.trade\.net
+1714858394	Makyen	(?-i:rULuff5k\.png)
