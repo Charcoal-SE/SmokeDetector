@@ -61415,3 +61415,4 @@
 1714829358	Makyen	hh8qxsgb
 1714829379	Makyen	trustregistrationindelhincr\.blogspot
 1714829399	Makyen	growup-india\.com
+1714829420	Makyen	growup[\W_]*+india(?!\.com(?<=growup-india\.com))
