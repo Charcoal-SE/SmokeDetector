@@ -61434,3 +61434,4 @@
 1714829919	Makyen	huntercharles\.com
 1714829957	Makyen	rute303
 1714829984	Makyen	ehandwriting\.net
+1714830009	Makyen	e[\W_]*+hand[\W_]*+writing(?!\.net(?<=ehandwriting\.net))
