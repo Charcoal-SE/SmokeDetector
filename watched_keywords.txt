@@ -61448,3 +61448,4 @@
 1714844407	Vickel	jamesrodriguez[\W_]*+(?:at[\W_]*+)?cyber-wizard(?:[\W_]*+(?:do?t[\W_]*+)?com)?
 1714853787	Makyen	002476ucbvmguh0h3crc0roe64(?#.hop.clickbank.net)
 1714856511	Makyen	mac4xp\.com
+1714856542	Makyen	mac4xp(?!\.com)
