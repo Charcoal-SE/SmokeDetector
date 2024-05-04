@@ -61405,3 +61405,4 @@
 1714793434	cocomac	digitaljunction\.in
 1714799289	Nick	apptagsolution\.com
 1714799308	Nick	apptagsolution(?!\.com)
+1714806941	Cow	newmetrocitylahore\.com
