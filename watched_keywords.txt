@@ -61424,3 +61424,4 @@
 1714829568	Makyen	store[\W_]*+shuddhi(?!\.com)
 1714829590	Makyen	led[\W_]*+truck[\W_]*+advertising
 1714829612	Makyen	red[\W_]*+satin[\W_]*+varsity[\W_]*+jacket
+1714829643	Makyen	bus[\W_]*+simulator[\W_]*+indonesia
