@@ -61442,3 +61442,4 @@
 1714830321	Makyen	naturachol(?!\.com)
 1714834331	Makyen	kismaze33(?:@gmail\.com)?
 1714834352	Makyen	com\.kismaze(?#play.google.com)
+1714834460	Makyen	stocknews\.com\.br
