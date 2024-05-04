@@ -61445,3 +61445,4 @@
 1714834460	Makyen	stocknews\.com\.br
 1714840197	Makyen	kiatoto
 1714840866	Vickel	muhammedrajif\.com
+1714844407	Vickel	jamesrodriguez[\W_]*+(?:at[\W_]*+)?cyber-wizard(?:[\W_]*+(?:do?t[\W_]*+)?com)?
