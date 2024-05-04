@@ -61401,3 +61401,4 @@
 1714762142	Jeff Schaller	bdasvm\.com
 1714777221	Fastnlight	Admin[\W_]*+HACKER
 1714788142	Jeff Schaller	petss-valley\.blogspot
+1714792077	Makyen	freeze[\W_]*+dried[\W_]*+sweets(?:[\W_]*+wholesale(?!\.com(?<=freezedriedsweetswholesaler\.com))r?)?
