@@ -61427,3 +61427,4 @@
 1714829643	Makyen	bus[\W_]*+simulator[\W_]*+indonesia
 1714829670	Makyen	auglinn\.com
 1714829693	Makyen	auglinn(?!\.com)
+1714829716	Makyen	(?-i:1lmLQwsyvyY)(?#youtu.be)
