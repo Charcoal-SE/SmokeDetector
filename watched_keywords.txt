@@ -61406,3 +61406,4 @@
 1714799289	Nick	apptagsolution\.com
 1714799308	Nick	apptagsolution(?!\.com)
 1714823598	Jeff Schaller	777pekka\.blogspot
+1714806729	Cow	ndmedia\.ai
