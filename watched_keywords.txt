@@ -61418,3 +61418,4 @@
 1714829420	Makyen	growup[\W_]*+india(?!\.com(?<=growup-india\.com))
 1714829441	Makyen	btbus
 1714829462	Makyen	kairatechnologies\.in
+1714829493	Makyen	kaira[\W_]*+technologies(?!\.in(?<=kairatechnologies\.in))
