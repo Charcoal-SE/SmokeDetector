@@ -61446,3 +61446,4 @@
 1714840197	Makyen	kiatoto
 1714840866	Vickel	muhammedrajif\.com
 1714844407	Vickel	jamesrodriguez[\W_]*+(?:at[\W_]*+)?cyber-wizard(?:[\W_]*+(?:do?t[\W_]*+)?com)?
+1714845821	Vickel	luv(?:[\W_]*+)?trise(?:\.com|\.org|\.net)?
