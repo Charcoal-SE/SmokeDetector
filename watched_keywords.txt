@@ -61483,3 +61483,4 @@
 1714932558	Makyen	\b(?<![^\W_]-)ok\.ru(?![.-][^\W_])\b
 1714940732	Makyen	(?-i:CHp-9aSQrk0)(?#YouTube)
 1714946509	Fastnlight	atlantaqualityconstruction\.com
+1714950059	Makyen	(?-i:zeecouz)(?#t.me)
