@@ -61453,3 +61453,4 @@
 1714876510	Spevacus	duskoflife\.in
 1714901853	tripleee	gonenglighting\.com
 1714901890	tripleee	saarah\.in
+1714910736	Vickel	(?:smm\.)?socialbumps\.in
