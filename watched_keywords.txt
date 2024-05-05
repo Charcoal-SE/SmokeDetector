@@ -61462,3 +61462,4 @@
 1714864159	Vickel	allenapptools\.com
 1714910145	Vickel	medicalbillingz\.com
 1714910736	Vickel	(?:smm\.)?socialbumps\.in
+1714910891	Vickel	zoroto\.live
