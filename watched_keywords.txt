@@ -61458,3 +61458,4 @@
 1714838341	Vickel	tecktrace\.com
 1714838377	Vickel	(?-i:o7ootd)(?#rb.gy)
 1714838584	Vickel	salaheddinebusiness10(?:@gmail\.com)?
+1714845821	Vickel	luv(?:[\W_]*+)?trise(?:\.com|\.org|\.net)?
