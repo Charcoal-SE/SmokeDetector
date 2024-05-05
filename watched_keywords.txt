@@ -61463,3 +61463,4 @@
 1714910145	Vickel	medicalbillingz\.com
 1714910736	Vickel	(?:smm\.)?socialbumps\.in
 1714910891	Vickel	zoroto\.live
+1714910950	Vickel	quranexplorer\.online
