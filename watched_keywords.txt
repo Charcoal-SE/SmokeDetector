@@ -61468,3 +61468,4 @@
 1714911189	Vickel	internationalquranacademy\.com
 1714911961	Vickel	quran[\W_]*+explorer(?!\.online(?<=quranexplorer\.online))
 1714914754	Makyen	wifiiwavlink\.com
+1714914995	Makyen	international[\W_]*+quran[\W_]*+academy(?!\.com(?<=internationalquranacademy\.com))
