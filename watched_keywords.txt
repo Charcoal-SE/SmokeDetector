@@ -61479,3 +61479,4 @@
 1714923567	Makyen	pngfre\.com
 1714924574	Spevacus	bariz\.tech
 1714928389	tripleee	morrison[\W_]*+recovery
+1714931934	Cow	ok\.ru
