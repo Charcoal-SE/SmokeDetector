@@ -59260,7 +59260,6 @@
 1709614641	General Grievance	marioshroomed\.com
 1709619357	Cow	nowgoal15\.com
 1709622334	Cow	perfectengineeringservices\.co\.in
-1709622397	Cow	blikai\.com
 1709622444	Cow	hangallery\.vn
 1709622503	Cow	labtron\.com
 1709622652	Cow	catla\.net
