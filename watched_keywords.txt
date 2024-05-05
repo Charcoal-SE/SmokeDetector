@@ -61470,3 +61470,4 @@
 1714914754	Makyen	wifiiwavlink\.com
 1714914995	Makyen	international[\W_]*+quran[\W_]*+academy(?!\.com(?<=internationalquranacademy\.com))
 1714915621	Machavity	onemindpoetry\.com
+1714916762	Makyen	shrena\.in
