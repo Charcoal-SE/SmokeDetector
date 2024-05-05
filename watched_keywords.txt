@@ -61461,3 +61461,4 @@
 1714845821	Vickel	luv(?:[\W_]*+)?trise(?:\.com|\.org|\.net)?
 1714864159	Vickel	allenapptools\.com
 1714910145	Vickel	medicalbillingz\.com
+1714910736	Vickel	(?:smm\.)?socialbumps\.in
