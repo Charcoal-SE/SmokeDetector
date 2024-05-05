@@ -61480,3 +61480,4 @@
 1714924574	Spevacus	bariz\.tech
 1714928389	tripleee	morrison[\W_]*+recovery
 1714932537	Makyen	filmehd\.se
+1714932558	Makyen	\b(?<![^\W_]-)ok\.ru(?![.-][^\W_])\b
