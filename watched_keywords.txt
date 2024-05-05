@@ -61466,3 +61466,4 @@
 1714910950	Vickel	quranexplorer\.online
 1714911069	Vickel	etpglobal660(?:@gmail\.com)?
 1714911189	Vickel	internationalquranacademy\.com
+1714911961	Vickel	quran[\W_]*+explorer(?!\.online(?<=quranexplorer\.online))
