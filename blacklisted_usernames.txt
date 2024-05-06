@@ -1017,3 +1017,4 @@ Gray Walker
 (?-i:^Leo Antonella$)
 (?-i:^Ethan carter$)
 (?-i:^Loan App$)
+(?-i:^hitclubdance$)
