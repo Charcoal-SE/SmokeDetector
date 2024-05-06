@@ -61511,3 +61511,4 @@
 1714997215	Nick	Trace[\W_]*+Shipments(?!\.com(?<=traceshipments\.com))
 1714997479	Nick	trackourparcel\.com
 1714997508	Nick	TrackourParcel(?!\.com)
+1714998013	Nick	TryProDentimUS
