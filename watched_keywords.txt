@@ -61496,3 +61496,4 @@
 1714983489	tripleee	endlessexistence\.com
 1714984529	Nick	Endless[\W_]*+Existence(?!\.com(?<=endlessexistence\.com))
 1714984787	Nick	whoisdb\.co
+1714988025	Jeff Schaller	dressusa\.net
