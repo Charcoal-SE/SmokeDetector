@@ -387,6 +387,9 @@ items:
   - piotr.ns.cloudflare.com.
 - ns:
   - amalia.ns.cloudflare.com.
+  - cosmin.ns.cloudflare.com.
+- ns:
+  - amalia.ns.cloudflare.com.
   - keenan.ns.cloudflare.com.
 - ns:
   - amanda.ns.cloudflare.com.
