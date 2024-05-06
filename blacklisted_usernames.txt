@@ -1019,3 +1019,4 @@ Gray Walker
 (?-i:^Loan App$)
 (?-i:^hitclubdance$)
 (?-i:^TechTrend Today$)
+(?-i:^Valcus PVT LTD$)
