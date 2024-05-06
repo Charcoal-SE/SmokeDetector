@@ -3028,3 +3028,4 @@ FASTFUND[\W_]*+RECOVERY
 yda5js6u
 totomacau
 crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
+Blue[\W_]*+meteor
