@@ -61516,3 +61516,4 @@
 1714998655	Vickel	ezoic\.com(?<!support\.ezoic\.com)
 1715000146	Vickel	webdigitalsphere\.com
 1715000767	tripleee	www-netbenefits\.com
+1715000933	Vickel	astiinfotech\.com
