@@ -1015,3 +1015,4 @@ Gray Walker
 (?-i:^adree sheik$)
 (?-i:^Rajat\. edhacare$)
 (?-i:^Leo Antonella$)
+(?-i:^Ethan carter$)
