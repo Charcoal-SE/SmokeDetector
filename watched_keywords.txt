@@ -61523,3 +61523,4 @@
 1715027205	Makyen	7 999 829‑50‑38
 1715039041	Jeff Schaller	kelasslot4d\.com
 1715039988	Makyen	dragon[\W_]*+web[\W_]*+recovery[\W_]*+com
+1715039996	Makyen	dragon[\W_]*+web[\W_]*+recovery(?![\W_]*+com)(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
