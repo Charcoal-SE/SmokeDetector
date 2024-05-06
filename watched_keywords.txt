@@ -61506,3 +61506,4 @@
 1714991349	tripleee	viperplay\.io
 1714991498	Jeff Schaller	recoveryheroes247\.co\.uk
 1714995787	Zoe	hyphenapi\.com
+1714995848	tripleee	si[\W_]*+paling[\W_]*gacor
