@@ -2547,9 +2547,6 @@ items:
   - jo.ns.cloudflare.com.
   - otto.ns.cloudflare.com.
 - ns:
-  - jo.ns.cloudflare.com.
-  - rob.ns.cloudflare.com.
-- ns:
   - joan.ns.cloudflare.com.
   - nile.ns.cloudflare.com.
 - ns:
