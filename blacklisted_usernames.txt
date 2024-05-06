@@ -1018,3 +1018,4 @@ Gray Walker
 (?-i:^Ethan carter$)
 (?-i:^Loan App$)
 (?-i:^hitclubdance$)
+(?-i:^TechTrend Today$)
