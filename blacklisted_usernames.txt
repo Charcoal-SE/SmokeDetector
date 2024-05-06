@@ -1016,3 +1016,4 @@ Gray Walker
 (?-i:^Rajat\. edhacare$)
 (?-i:^Leo Antonella$)
 (?-i:^Ethan carter$)
+(?-i:^Loan App$)
