@@ -2787,6 +2787,9 @@ items:
   - kyree.ns.cloudflare.com.
   - summer.ns.cloudflare.com.
 - ns:
+  - kyrie.ns.cloudflare.com.
+  - luciana.ns.cloudflare.com.
+- ns:
   - lady.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
