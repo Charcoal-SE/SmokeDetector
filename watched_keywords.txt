@@ -61508,3 +61508,4 @@
 1714995787	Zoe	hyphenapi\.com
 1714995848	tripleee	si[\W_]*+paling[\W_]*gacor
 1714997183	Nick	traceshipments\.com
+1714997215	Nick	Trace[\W_]*+Shipments(?!\.com(?<=traceshipments\.com))
