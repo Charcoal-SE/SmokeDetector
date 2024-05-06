@@ -61497,3 +61497,4 @@
 1714984529	Nick	Endless[\W_]*+Existence(?!\.com(?<=endlessexistence\.com))
 1714984787	Nick	whoisdb\.co
 1714988025	Jeff Schaller	dressusa\.net
+1714988757	Jeff Schaller	digitalradium\.com
