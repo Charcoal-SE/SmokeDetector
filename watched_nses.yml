@@ -1124,6 +1124,9 @@ items:
   - cartman.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
+  - cartman.ns.cloudflare.com.
+  - summer.ns.cloudflare.com.
+- ns:
   - carter.ns.cloudflare.com.
   - olga.ns.cloudflare.com.
 - ns:
