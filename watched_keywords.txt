@@ -61512,3 +61512,4 @@
 1714997479	Nick	trackourparcel\.com
 1714997508	Nick	TrackourParcel(?!\.com)
 1714998013	Nick	TryProDentimUS
+1715000146	Vickel	webdigitalsphere\.com
