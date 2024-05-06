@@ -462,6 +462,9 @@ items:
   - syeef.ns.cloudflare.com.
 - ns:
   - anderson.ns.cloudflare.com.
+  - wally.ns.cloudflare.com.
+- ns:
+  - anderson.ns.cloudflare.com.
   - yolanda.ns.cloudflare.com.
 - ns:
   - andronicus.ns.cloudflare.com.
