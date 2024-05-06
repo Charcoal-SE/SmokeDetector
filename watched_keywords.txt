@@ -61513,3 +61513,4 @@
 1714997508	Nick	TrackourParcel(?!\.com)
 1714998013	Nick	TryProDentimUS
 1714998996	Vickel	vmapu\.com
+1714998655	Vickel	ezoic\.com(?<!support\.ezoic\.com)
