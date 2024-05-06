@@ -61488,3 +61488,4 @@
 1714921314	Fastnlight	Morrison[\W_]*+recovery
 1714922589	Fastnlight	finaamarketing\.in
 1714922618	Fastnlight	techaura\.in
+1714922774	Cow	eenadu\.net
