@@ -1846,6 +1846,9 @@ items:
   - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - ns:
+  - elisa.ns.cloudflare.com.
+  - salvador.ns.cloudflare.com.
+- ns:
   - elisabeth.ns.cloudflare.com.
   - eugene.ns.cloudflare.com.
 - ns:
