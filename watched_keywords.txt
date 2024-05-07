@@ -61565,3 +61565,4 @@
 1715100884	Vickel	usatrustclub(?:@gmail\.com)?
 1715106824	Fastnlight	WebToNative
 1715112435	Jeff Schaller	kissasians\.nl
+1715119408	Vickel	(?:[\W_]*+)?Paten788(?:[\W]official)?(?!\.pro(?<=Paten788\.pro))
