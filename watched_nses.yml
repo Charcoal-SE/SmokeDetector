@@ -624,6 +624,9 @@ items:
   - aria.ns.cloudflare.com.
   - carter.ns.cloudflare.com.
 - ns:
+  - aria.ns.cloudflare.com.
+  - toby.ns.cloudflare.com.
+- ns:
   - ariella.ns.cloudflare.com.
   - julian.ns.cloudflare.com.
 - ns:
