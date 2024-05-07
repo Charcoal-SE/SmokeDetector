@@ -728,3 +728,6 @@ items:
 - ns: hostnownow.com.
 - ns: inet.vn.
 - ns: wizzyhost.com.
+- ns:
+  - ns22.securehostdns.com.
+  - ns23.securehostdns.com.
