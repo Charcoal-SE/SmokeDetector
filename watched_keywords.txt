@@ -61526,3 +61526,4 @@
 1715058460	Makyen	thefrenchperspective\.com
 1715059635	Makyen	brigadia[\W_]*+tech(?:[\W_]*+(?:recovery|experts|remikeable(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?|recovery|\d++|[\da-f]{5,}+)s?)*
 1715063834	VLAZ	theking420\.com
+1715063859	VLAZ	growdehumidifier\.com
