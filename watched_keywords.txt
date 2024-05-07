@@ -61548,3 +61548,4 @@
 1715016007	Vickel	njaginelson39(?:@gmail\.com)?
 1715016565	Cow	wpgeeks\.cloud
 1715017894	Cow	chomarunitrade\.com
+1715086742	Makyen	art[\W_]*+works[\W_]*+llc(?:[\W_]*+appliances?[\W_]*+repair)?
