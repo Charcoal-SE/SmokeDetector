@@ -61560,3 +61560,4 @@
 1715099970	Vickel	kidfirst[\W_]*+phone(?!\.com(?<=kidfirstphone\.com))
 1715099821	Vickel	kidfirstphone\.com
 1715100542	Vickel	ustrustclub\.com
+1715100843	Jeff Schaller	sabweb24\.blogspot
