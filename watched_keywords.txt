@@ -61550,3 +61550,4 @@
 1715017894	Cow	chomarunitrade\.com
 1715086742	Makyen	art[\W_]*+works[\W_]*+llc(?:[\W_]*+appliances?[\W_]*+repair)?
 1715018792	Cow	BlesterYT(?#youtube)
+1715019142	Cow	rummybo\.com
