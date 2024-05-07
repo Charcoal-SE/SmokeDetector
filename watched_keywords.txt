@@ -61543,3 +61543,4 @@
 1715076215	tripleee	stolen[\W_]*+crypto
 1715079332	VLAZ	rackbank([\W_]*+datacenter)?
 1715080667	tripleee	liamethan9205(?# medium.com)
+1715084837	Jeff Schaller	scoremycrypto\.com
