@@ -61528,3 +61528,4 @@
 1715069082	tripleee	canko\.app
 1715069154	tripleee	fairobserver\.com
 1715070268	tripleee	abroadgateway\.com
+1715070333	tripleee	visa[\W_]*consultant
