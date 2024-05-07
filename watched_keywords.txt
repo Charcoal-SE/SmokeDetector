@@ -61538,3 +61538,4 @@
 1715075021	tripleee	astrologysewa\.com
 1715075100	tripleee	bitpanda
 1715075521	tripleee	cybergoattechie[\W_]*+com
+1715075563	tripleee	callcentersolution\.in
