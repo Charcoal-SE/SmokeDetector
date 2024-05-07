@@ -61559,3 +61559,4 @@
 1715097524	Makyen	bitrushproject(?:@gmail\.com)?
 1715099970	Vickel	kidfirst[\W_]*+phone(?!\.com(?<=kidfirstphone\.com))
 1715099821	Vickel	kidfirstphone\.com
+1715100542	Vickel	ustrustclub\.com
