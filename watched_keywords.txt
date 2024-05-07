@@ -61524,3 +61524,4 @@
 1715039041	Jeff Schaller	kelasslot4d\.com
 1715043580	Fastnlight	testosil\.com
 1715047812	Makyen	testosil(?!\.com)
+1715058460	Makyen	thefrenchperspective\.com
