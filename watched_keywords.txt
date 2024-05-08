@@ -61567,7 +61567,6 @@
 1715147794	tripleee	neuphony\.com
 1715148289	Cow	ddregpharma\.com
 1715149122	tripleee	Paten788(?:[\W_]*+official)?(?!\.pro(?<=Paten788\.pro))
-1715150525	Nick	slideorbit\.com
 1715151331	Nick	immigrationagentadelaide\.com\.au
 1715151373	Nick	Immigration[\W_]*+Agent[\W_]*+Adelaide(?!\.com\.au(?<=immigrationagentadelaide\.com\.au))
 1715151592	Nick	discoverymall\.net
