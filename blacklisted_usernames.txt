@@ -1026,3 +1026,4 @@ Gray Walker
 (?-i:^Leather corsets$)
 (?-i:^Quran Explorer$)
 (?-i:^Otis Milburnn$)
+(?-i:^Jay Dunphy$)
