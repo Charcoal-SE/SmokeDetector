@@ -61598,3 +61598,4 @@
 1715193175	Cow	softwarexml\.com
 1715194208	Fastnlight	usa[\W_]*+top[\W_]*+seller(?!\.com(?<=usatopseller\.com))
 1715202972	Makyen	officialmichaelrichardblankatm(?:@gmail\.com)?
+1715206164	Makyen	bs234676(?:@gmail\.com)?
