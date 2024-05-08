@@ -61573,3 +61573,4 @@
 1715162939	tripleee	viweedy\.shop
 1715164019	Jeff Schaller	fullstacktutorialshub\.com
 1715165077	VLAZ	subwaylistens\.boats
+1715167667	tripleee	boats(?<=\.boats)
