@@ -1024,3 +1024,4 @@ Gray Walker
 (?-i:^janvi webunity$)
 (?-i:^exoticindiatours$)
 (?-i:^Leather corsets$)
+(?-i:^Quran Explorer$)
