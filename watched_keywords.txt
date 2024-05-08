@@ -61578,3 +61578,4 @@
 1715170304	tripleee	marcarian(?:[\W_]*+law[\W_]*+firm)?(?<!(?-i:^Marcarian Law Firm$))
 1715170468	tripleee	github\.com/DanDevel/
 1715171381	Nick	torpedotraffic\.com
+1715171427	Nick	almasaralsare3-ksa\.com
