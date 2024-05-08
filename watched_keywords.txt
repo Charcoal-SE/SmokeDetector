@@ -61566,3 +61566,4 @@
 1715146805	Cow	visagov\.com
 1715147794	tripleee	neuphony\.com
 1715148289	Cow	ddregpharma\.com
+1715149032	tripleee	Paten788(?:[\W]official)?(?!\.pro(?<=Paten788\.pro))
