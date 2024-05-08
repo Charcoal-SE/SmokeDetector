@@ -15899,7 +15899,6 @@
 1580119022	Shree	ganga420\.com
 1580119099	tripleee	og[\W_]*+kush
 1580119640	Shree	picknhook\.com
-1580124257	Shree	drsunnydsolution1(?:@gmail\.com)?
 1580125949	Shree	access-pk\.com
 1580133081	tripleee	bestfitwatch\.com
 1580134223	tripleee	tpsease\.co\.za
