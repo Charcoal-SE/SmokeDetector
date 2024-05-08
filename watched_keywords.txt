@@ -46147,7 +46147,6 @@
 1673679055	Cody Gray	Kolkata[\W_]*online[\W_]*florists?
 1673679400	cocomac	forefront-apartments\.com
 1673679493	Cody Gray	Forefront[\W_]*Apartments(?!\.com(?<=forefront-apartments\.com))
-1673679753	Cody Gray	saurabh[\W_]*shukla
 1673679837	cocomac	saurabhshukladigitalcreator\.tumblr\.com
 1673682146	Cody Gray	(?-i:abcya)(?!\.com)
 1673684119	Cody Gray	tiktokdownload\.club
