@@ -286,6 +286,9 @@ items:
   - fatima.ns.cloudflare.com.
   - houston.ns.cloudflare.com.
 - ns:
+  - fonzie.ns.cloudflare.com.
+  - sima.ns.cloudflare.com.
+- ns:
   - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
