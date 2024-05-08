@@ -56757,7 +56757,6 @@
 1704732881	cigien	gotoppr(?!\.com)
 1704732993	cigien	mmogah(?!\.com)
 1704733682	Jesse	drivewaykingusa\.com
-1704738930	Jeff Schaller	saclux[\W_]*+comptech[\W_]*+specialst(?:[\W_]*+(?:at[\W_]*+)?engineer(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1704738973	Jeff Schaller	serenitypsychotherapy\.org
 1704745287	Vickel	ghonay\.com
 1704745317	Vickel	hostileworld\.org
