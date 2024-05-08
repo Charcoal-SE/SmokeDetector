@@ -61592,3 +61592,4 @@
 1715188812	Jeff Schaller	bitcodesolution\.com
 1715190042	Fastnlight	pureiptv\.plus
 1715190380	Jeff Schaller	livesupport\.en-uk\.online
+1715190281	Fastnlight	(?-i:tbCSd)(?#cl.gy)
