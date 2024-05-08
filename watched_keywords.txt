@@ -61568,3 +61568,4 @@
 1715148289	Cow	ddregpharma\.com
 1715149122	tripleee	Paten788(?:[\W_]*+official)?(?!\.pro(?<=Paten788\.pro))
 1715150525	Nick	slideorbit\.com
+1715151331	Nick	immigrationagentadelaide\.com\.au
