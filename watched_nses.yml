@@ -1452,6 +1452,9 @@ items:
   - nelly.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
+  - curt.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
   - dahlia.ns.cloudflare.com.
