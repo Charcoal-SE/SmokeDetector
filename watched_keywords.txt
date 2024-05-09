@@ -61616,3 +61616,4 @@
 1715246983	VLAZ	brick2brick(?!\.in)
 1715249354	Cow	nirvanarecoveryaz\.com
 1715249322	Cow	zimed\.com
+1715247219	Cow	TryTheGeniusWave(?#facebook profile page)
