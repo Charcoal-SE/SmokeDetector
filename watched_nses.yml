@@ -5097,7 +5097,9 @@ items:
 - ns: netdns.net.
 - ns: dnshorizon.com.
 - ns: welldesignedgames.com.
-- ns: ozdomainnhost.com.
+- comment: NXDOMAIN 2024-05-09
+  disable: true
+  ns: ozdomainnhost.com.
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
