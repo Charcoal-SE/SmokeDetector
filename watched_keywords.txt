@@ -61603,3 +61603,4 @@
 1715215047	Nick	Roots[\W_]*+Decor[\W_]*+Co(?!\.com(?<=rootsdecorco\.com))
 1715225130	Makyen	itsallaboutblogsonline(?!\.com)
 1715231947	Makyen	alphabin(?!\.co)
+1715233589	VLAZ	brainence\.com
