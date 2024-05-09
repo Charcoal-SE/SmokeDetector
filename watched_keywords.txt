@@ -61605,3 +61605,4 @@
 1715231947	Makyen	alphabin(?!\.co)
 1715233589	VLAZ	brainence\.com
 1715234926	VLAZ	fajrtechnologies\.com
+1715235045	VLAZ	fajr[\W_]*+technologies(?!\.com(<=fajrtechnologies\.com))
