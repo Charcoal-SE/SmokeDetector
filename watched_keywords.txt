@@ -57243,7 +57243,6 @@
 1705673556	VLAZ	111tech\.online
 1705677219	Jesse	spellingbeeanswer\.org
 1705677291	Jesse	Spelling[\W_]*+Bee[\W_]*+Answer(?!\.org(?<=spellingbeeanswer\.org))
-1705677799	Jesse	theledgerlabs\.com
 1705677906	Jesse	wljmobai(?#@gmail.com)
 1705677933	Jesse	iec-telecom\.com
 1705677983	Jesse	IEC[\W_]*+Telecom(?!\.com(?<=iec-telecom\.com))
