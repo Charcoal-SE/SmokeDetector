@@ -61630,3 +61630,4 @@
 1715274033	Makyen	rosh[\W_]*+hashanah[\W_]*+2024(?!\.com(?<=roshhashanah2024\.com))
 1715275660	Jeff Schaller	gametorrentpc\.com
 1715280263	Makyen	(?-i:jxd8QD8E9tdBQQJa6)(?#forms.gle)
+1715282060	Gugu72	newyorkmvp\.us
