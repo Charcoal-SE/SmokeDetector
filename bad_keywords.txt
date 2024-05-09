@@ -1445,7 +1445,7 @@ yahoo-email(?<=/yahoo-email)
 VitalityTech(?:[\W_]*+Testosterone)?(?!\.com)
 terrapure[\W_]*+cbd
 retinollift[\W_]*+dk
-intell[\W_]*+x(?:[\W_]*+pro)?
+intell[\W_]*+x(?![\W_]*+86)(?:[\W_]*+pro)?
 rapid[\W_]*+trim(?:[\W_]*+keto)?
 htx[ -]me
 better[\W_]*+strength[\W_]*+maximizer
