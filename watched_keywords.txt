@@ -61615,3 +61615,4 @@
 1715242921	Cow	nocturnallabel\.com
 1715246962	VLAZ	brick2brick\.in
 1715246983	VLAZ	brick2brick(?!\.in)
+1715247219	Cow	TryTheGeniusWave(?#facebook profile page)
