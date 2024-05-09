@@ -61607,3 +61607,4 @@
 1715234926	VLAZ	fajrtechnologies\.com
 1715235045	VLAZ	fajr[\W_]*+technologies(?!\.com(<=fajrtechnologies\.com))
 1715236552	Nick	swedendrivingtest\.com
+1715240559	Cow	photoaistudio\.com
