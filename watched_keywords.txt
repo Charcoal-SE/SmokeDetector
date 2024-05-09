@@ -50775,10 +50775,6 @@
 1685112705	cigien	video1147
 1685118052	Makyen	apkwa\.net
 1685120518	Jeff Schaller	erpscope\.com
-1685125078	Makyen	 \W*+(?=\w*?leave[\W_]*+(?:se|stack[\W_]*+exchange)[\W_]*+forever)
-1685125079	Makyen	(?:^|\b[> \]])\W*+(?=(?-i:KP)(?:$|\b(?!['"*/=.])|_))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#syntax highlighting fodder:")
-1685125080	Makyen	(?:^|\b[> \]])\W*+(?=(?-i:\bX++D++\b)(?<!spring\WXD)(?<!adobe\WXD)(?:.{0,100}?(?-i:\bX++D++\b)(?<!spring\WXD)(?<!adobe\WXD)){3})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
-1685125081	Makyen	(?:^|\b[> \]])\W*+(?=\w*?unban(?<!\.unban)(?:.{0,300}?unban){2})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1685127787	Makyen	juzfit[\W_]*+acv(?:[\W_]*+(?:keto|gummies|\d++|[\da-f]{5,}+)s?)*
 1685152002	Makyen	emdigitiz(?!er\.com)(?:er?|ing)
 1685161229	Makyen	911vtvtc\.com
