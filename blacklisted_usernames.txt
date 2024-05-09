@@ -1027,3 +1027,4 @@ Gray Walker
 (?-i:^Quran Explorer$)
 (?-i:^Otis Milburnn$)
 (?-i:^Jay Dunphy$)
+^.*soyciety.*$
