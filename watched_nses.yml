@@ -540,6 +540,9 @@ items:
   - karsyn.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
+  - liz.ns.cloudflare.com.
+- ns:
+  - apollo.ns.cloudflare.com.
   - meadow.ns.cloudflare.com.
 - ns:
   - apollo.ns.cloudflare.com.
