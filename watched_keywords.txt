@@ -61614,3 +61614,4 @@
 1715243461	Cow	optimiseaccountants\.co\.uk
 1715242921	Cow	nocturnallabel\.com
 1715246962	VLAZ	brick2brick\.in
+1715246983	VLAZ	brick2brick(?!\.in)
