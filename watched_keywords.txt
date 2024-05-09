@@ -61600,3 +61600,4 @@
 1715202972	Makyen	officialmichaelrichardblankatm(?:@gmail\.com)?
 1715206164	Makyen	bs234676(?:@gmail\.com)?
 1715214982	Nick	rootsdecorco\.com
+1715215047	Nick	Roots[\W_]*+Decor[\W_]*+Co(?!\.com(?<=rootsdecorco\.com))
