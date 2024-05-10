@@ -1659,6 +1659,9 @@ items:
   - ivan.ns.cloudflare.com.
 - ns:
   - demi.ns.cloudflare.com.
+  - kai.ns.cloudflare.com.
+- ns:
+  - demi.ns.cloudflare.com.
   - kipp.ns.cloudflare.com.
 - ns:
   - denver.ns.cloudflare.com.
