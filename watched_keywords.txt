@@ -61672,3 +61672,4 @@
 1715348480	Fastnlight	marketing\.i3\.com\.ua
 1715349544	tripleee	^.{1,40}\bbacklinks\b.{0,25}$
 1715349669	tripleee	job[\W_]*+opportunities
+1715352286	VLAZ	alkhajamedicalcenter\.ae
