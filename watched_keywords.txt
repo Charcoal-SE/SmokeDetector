@@ -61669,5 +61669,4 @@
 1715346163	Vickel	happiestplants\.com
 1715346954	Vickel	24caratnews\.com
 1715347780	General Grievance	backlink
-1715349236	tripleee	^.{1,40}\bbacklinks\b{0,25}$
 1715348480	Fastnlight	marketing\.i3\.com\.ua
