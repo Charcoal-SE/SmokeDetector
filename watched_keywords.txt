@@ -61674,3 +61674,4 @@
 1715349669	tripleee	job[\W_]*+opportunities
 1715352286	VLAZ	alkhajamedicalcenter\.ae
 1715352713	VLAZ	al[\W_]*+khaja[\W_]*+medical(?:[\W_]*+center(?!\.ae(?<=alkhajamedicalcenter\.ae)))?
+1715358863	Fastnlight	sylvi\.in
