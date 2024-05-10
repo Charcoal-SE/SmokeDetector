@@ -1449,6 +1449,9 @@ items:
   - tanner.ns.cloudflare.com.
 - ns:
   - crystal.ns.cloudflare.com.
+  - elliot.ns.cloudflare.com.
+- ns:
+  - crystal.ns.cloudflare.com.
   - gordon.ns.cloudflare.com.
 - ns:
   - crystal.ns.cloudflare.com.
