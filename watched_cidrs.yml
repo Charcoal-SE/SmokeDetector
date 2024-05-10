@@ -2849,7 +2849,9 @@ items:
 - ip: 172.66.40.203
 - ip: 172.66.40.223
 - ip: 172.66.40.236
-- ip: 172.66.40.249
+- comment: dominantly FP, disabled 2024-05-10
+  disable: true
+  ip: 172.66.40.249
 - ip: 172.66.40.254
 - ip: 172.66.40.57
 - ip: 172.66.40.77
@@ -2886,7 +2888,9 @@ items:
 - ip: 172.66.43.33
 - ip: 172.66.43.53
 - ip: 172.66.43.56
-- ip: 172.66.43.7
+- comment: dominantly FP, disabled 2024-05-10
+  disable: true
+  ip: 172.66.43.7
 - comment: disabled 2024-02-21, mainly FPs
   disable: true
   ip: 172.66.43.90
