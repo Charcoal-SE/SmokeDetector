@@ -1027,3 +1027,4 @@ Gray Walker
 (?-i:^Otis Milburnn$)
 (?-i:^Jay Dunphy$)
 ^.*soyciety.*$
+(?-i:Netgear extender setup$)
