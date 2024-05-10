@@ -691,6 +691,9 @@ items:
   - maeve.ns.cloudflare.com.
 - ns:
   - arya.ns.cloudflare.com.
+  - maxim.ns.cloudflare.com.
+- ns:
+  - arya.ns.cloudflare.com.
   - paul.ns.cloudflare.com.
 - ns:
   - arya.ns.cloudflare.com.
