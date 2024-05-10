@@ -61665,3 +61665,4 @@
 1715344658	tripleee	zappify
 1715344739	tripleee	java[\W_]*burn
 1715345174	Jeff Schaller	sci-chemlabs\.com
+1715345762	Jeff Schaller	multisoftsystems\.com
