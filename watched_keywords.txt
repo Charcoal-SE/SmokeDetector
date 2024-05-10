@@ -61636,3 +61636,4 @@
 1715308494	Dragonrage	gogetfunding\.com
 1715314253	Ryan M	alpharoot\.com
 1715320603	VLAZ	sbhonlineid\.com
+1715321184	VLAZ	ĐỊNH[\W_]*+GIÁ[\W_]*+XE[\W_]*+SIÊU[\W_]*+TỐC
