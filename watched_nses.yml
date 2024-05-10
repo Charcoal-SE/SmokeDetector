@@ -3339,6 +3339,9 @@ items:
   - nitin.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
+  - noel.ns.cloudflare.com.
+  - sofia.ns.cloudflare.com.
+- ns:
   - nolan.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
