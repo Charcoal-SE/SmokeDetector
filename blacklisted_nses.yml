@@ -292,6 +292,9 @@ items:
   - gabe.ns.cloudflare.com.
   - pat.ns.cloudflare.com.
 - ns:
+  - gabriel.ns.cloudflare.com.
+  - irma.ns.cloudflare.com.
+- ns:
   - garret.ns.cloudflare.com.
   - liberty.ns.cloudflare.com.
 - ns:
