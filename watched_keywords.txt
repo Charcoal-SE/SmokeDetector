@@ -61638,3 +61638,4 @@
 1715320603	VLAZ	sbhonlineid\.com
 1715321184	VLAZ	ĐỊNH[\W_]*+GIÁ[\W_]*+XE[\W_]*+SIÊU[\W_]*+TỐC
 1715321205	VLAZ	dinh[\W_]*+gia[\W_]*+xe[\W_]*+sieu[\W_]*+toc
+1715321236	Cow	topcashforcarscanberra\.com\.au
