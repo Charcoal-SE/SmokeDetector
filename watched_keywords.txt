@@ -61675,3 +61675,4 @@
 1715352286	VLAZ	alkhajamedicalcenter\.ae
 1715352713	VLAZ	al[\W_]*+khaja[\W_]*+medical(?:[\W_]*+center(?!\.ae(?<=alkhajamedicalcenter\.ae)))?
 1715358863	Fastnlight	sylvi\.in
+1715364129	Fastnlight	tutevee\.com
