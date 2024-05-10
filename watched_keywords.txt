@@ -61662,3 +61662,4 @@
 1715344018	tripleee	(?-i:^Work Looper$)
 1715344560	Jeff Schaller	timessupplement\.com
 1715344054	Vickel	etnafes(?!\.com(?<=etnafes\.com))
+1715344658	tripleee	zappify
