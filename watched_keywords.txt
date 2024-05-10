@@ -61673,3 +61673,4 @@
 1715349544	tripleee	^.{1,40}\bbacklinks\b.{0,25}$
 1715349669	tripleee	job[\W_]*+opportunities
 1715352286	VLAZ	alkhajamedicalcenter\.ae
+1715352713	VLAZ	al[\W_]*+khaja[\W_]*+medical(?:[\W_]*+center(?!\.ae(?<=alkhajamedicalcenter\.ae)))?
