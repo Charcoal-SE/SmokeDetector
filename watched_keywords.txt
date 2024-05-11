@@ -61710,3 +61710,4 @@
 1715440231	Cow	uptowntech\.com\.bd
 1715443176	Makyen	swanknightdistillery\.com
 1715445017	Makyen	tvmobili\.com
+1715446840	Cow	techin\.pk
