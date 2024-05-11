@@ -61686,3 +61686,4 @@
 1715407469	Nick	Reddy[\W_]*+Anna(?:[\W_]*+Club)?(?!-id\.in(?<=reddyanna-id\.in))
 1715409878	Nick	thenamastespa\.in
 1715409908	Nick	bodymassagesparlours\.in
+1715409929	Nick	thenaturethaispa\.in
