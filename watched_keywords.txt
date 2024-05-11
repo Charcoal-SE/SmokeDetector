@@ -61714,3 +61714,4 @@
 1715440141	Cow	magic8ball-online\.com
 1715446840	Cow	techin\.pk
 1715452121	tripleee	escorts?[\W_]*+in[\W_]*+aerocity
+1715457451	Vickel	bliss[\W_]*+car[\W_]*+rentals(?!\.com(?<=blisscarrentals\.com))
