@@ -61695,3 +61695,4 @@
 1715388891	Vickel	Bonus[\W]*+de[\W]*+bienvenue
 1715412678	Cow	theblissspa\.in
 1715412649	Cow	scholarship\.cmgl-x\.com
+1715391036	Vickel	Illuminanetworktech(?:@gmail\.com)?
