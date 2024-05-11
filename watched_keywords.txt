@@ -61713,3 +61713,4 @@
 1715449100	Mast	project[\W_]*+nimbus
 1715448807	Cow	themedspawaco\.com
 1715440141	Cow	magic8ball-online\.com
+1715446840	Cow	techin\.pk
