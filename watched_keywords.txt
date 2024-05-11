@@ -61706,3 +61706,4 @@
 1715437125	Makyen	slot(?:777|888)
 1715437193	Makyen	normapiercearel\.com
 1715440119	Makyen	travelerroutes\.com
+1715440141	Cow	magic8ball-online\.com
