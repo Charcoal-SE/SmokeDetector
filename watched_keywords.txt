@@ -61692,3 +61692,4 @@
 1715428083	Jeff Schaller	vyvanse-for-adhd-online\.weebly\.com
 1715428115	Jeff Schaller	nationsecurity\.com
 1715388606	Vickel	Willkommensbonus
+1715388891	Vickel	Bonus[\W]*+de[\W]*+bienvenue
