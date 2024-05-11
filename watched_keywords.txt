@@ -61701,3 +61701,4 @@
 1715428595	Jeff Schaller	wlmok-web\.com
 1715433389	Jeff Schaller	tubemate\.click
 1715433733	Vickel	magicmoppers\.ae
+1715433847	Vickel	magic[\W_]*+moppers(?!\.ae(?<=magicmoppers\.ae))
