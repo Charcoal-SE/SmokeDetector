@@ -61711,3 +61711,4 @@
 1715443176	Makyen	swanknightdistillery\.com
 1715445017	Makyen	tvmobili\.com
 1715449100	Mast	project[\W_]*+nimbus
+1715448807	Cow	themedspawaco\.com
