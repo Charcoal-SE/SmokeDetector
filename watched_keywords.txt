@@ -61717,3 +61717,4 @@
 1715458970	Vickel	edaclinical\.com
 1715457359	Vickel	blisscarrentals\.com
 1715457451	Vickel	bliss[\W_]*+car[\W_]*+rentals(?!\.com(?<=blisscarrentals\.com))
+1715453064	Cow	adroittech\.eu
