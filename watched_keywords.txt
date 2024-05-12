@@ -61731,3 +61731,4 @@
 1715532031	Makyen	optimistichacker?gaius\.com
 1715532052	Makyen	optimistichackergaius(?!\.com)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
 1715556431	Makyen	teacuppoodlepuppies\.shop
+1715556451	Makyen	denvermagicmushroomstore\.us
