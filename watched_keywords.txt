@@ -61719,3 +61719,4 @@
 1715457451	Vickel	bliss[\W_]*+car[\W_]*+rentals(?!\.com(?<=blisscarrentals\.com))
 1715453064	Cow	adroittech\.eu
 1715475014	Jeff Schaller	autobotsrentacar\.com
+1715483293	Makyen	gamefylab\.com
