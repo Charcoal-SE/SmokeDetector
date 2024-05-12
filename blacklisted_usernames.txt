@@ -1029,3 +1029,4 @@ Gray Walker
 ^.*soyciety.*$
 (?-i:Netgear extender setup$)
 (?-i:^Flicker Candles$)
+(?-i:^FELINE_ENERGY$)
