@@ -61750,3 +61750,4 @@
 1715582115	Cow	mesothelioma-helpline\.com
 1715478930	Fastnlight	lost[\W_]*+cryptocurrency
 1715582168	Cow	consulting\.atqor\.com
+1715521896	Cow	moneyearndigital\.com
