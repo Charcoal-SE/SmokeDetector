@@ -61764,3 +61764,4 @@
 1715590518	tripleee	spiral[\W_]*+mantra(?!\.com(?<=spiralmantra\.com))
 1715591228	tripleee	solanadama\.xyz
 1715591494	Cow	noirbyocean\.com
+1715591559	Cow	anuationlabs\.com
