@@ -61740,3 +61740,4 @@
 1715570438	Makyen	dekorasi(?:indah|dinding)
 1715570750	Nick	viverse\.com
 1715577743	tripleee	(?-i:^Radix Analytics$)
+1715577799	tripleee	shishamdigital\.com
