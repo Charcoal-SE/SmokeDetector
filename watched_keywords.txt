@@ -61745,3 +61745,4 @@
 1715580087	tripleee	lifecarepills\.com
 1715580113	tripleee	tlooto\.com
 1715580135	tripleee	tlooto[\W_]*+ai
+1715580196	tripleee	sigspray\.com
