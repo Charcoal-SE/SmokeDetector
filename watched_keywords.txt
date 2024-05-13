@@ -61760,3 +61760,4 @@
 1715588199	tripleee	alaayan\.ae
 1715588456	tripleee	dumpsarena
 1715589677	tripleee	ligaciputra14semangatjaya\.com
+1715590286	tripleee	i[\W_]*+n[\W_]*+s[\W_]*+t[\W_]*+a[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m(?<!insta ?gram)
