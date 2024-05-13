@@ -61746,3 +61746,4 @@
 1715580113	tripleee	tlooto\.com
 1715580135	tripleee	tlooto[\W_]*+ai
 1715580196	tripleee	sigspray\.com
+1715580217	tripleee	hanspray
