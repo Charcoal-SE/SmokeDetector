@@ -61751,3 +61751,4 @@
 1715478930	Fastnlight	lost[\W_]*+cryptocurrency
 1715582168	Cow	consulting\.atqor\.com
 1715521896	Cow	moneyearndigital\.com
+1715586849	tripleee	pragmaticplaysgd\.com
