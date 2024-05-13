@@ -61735,3 +61735,4 @@
 1715556474	Makyen	coloradoshroomstore\.org
 1715556495	Makyen	paraxpharmacy\.com
 1715563851	Makyen	patech[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?(?:[\W_]*+(?:hacker|\d++|[\da-f]{5,}+)s?)*
+1715570076	Makyen	(?-i:Mukeshsharma1703)(?#t.me)
