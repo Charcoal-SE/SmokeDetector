@@ -5132,7 +5132,7 @@ yolasite\.com(?<!@yolasite\.com)
 visactor\.io
 90minsport\.live
 openteqgroup\.com
-teespring\.com(?![")])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#" syntax highlighting fodder)
+teespring\.com(?=/)(?!/(?:fr|en)/)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 \b(?<![^\W_]-)ello\.co(?![.-][^\W_])(?!, )\b
 wfmj\.com/story/(?!45079892)
 heylink\.me/
