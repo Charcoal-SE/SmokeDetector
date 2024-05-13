@@ -61742,3 +61742,4 @@
 1715577743	tripleee	(?-i:^Radix Analytics$)
 1715577799	tripleee	shishamdigital\.com
 1715578055	tripleee	salesforcefaqs\.com
+1715580087	tripleee	lifecarepills\.com
