@@ -157,6 +157,9 @@ items:
   - brett.ns.cloudflare.com.
   - jo.ns.cloudflare.com.
 - ns:
+  - brett.ns.cloudflare.com.
+  - mallory.ns.cloudflare.com.
+- ns:
   - brenda.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:
