@@ -185,6 +185,9 @@ items:
   - dara.ns.cloudflare.com.
 - ns:
   - carmelo.ns.cloudflare.com.
+  - kim.ns.cloudflare.com.
+- ns:
+  - carmelo.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
   - cass.ns.cloudflare.com.

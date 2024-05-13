@@ -1116,9 +1116,6 @@ items:
   - jill.ns.cloudflare.com.
 - ns:
   - carmelo.ns.cloudflare.com.
-  - kim.ns.cloudflare.com.
-- ns:
-  - carmelo.ns.cloudflare.com.
   - nova.ns.cloudflare.com.
 - ns:
   - carol.ns.cloudflare.com.
