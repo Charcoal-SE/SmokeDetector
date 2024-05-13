@@ -13432,7 +13432,6 @@
 1573580771	Das_Geek	dealscontinue\.com
 1573588225	Das_Geek	stackquery\.com
 1573588475	tripleee	realacademics\.co\.uk
-1573603356	Machavity	validexamdumps\.com
 1573620120	Nisse Engström	numberforhelp\.com
 1573625745	tripleee	edge[\W_]*+line[\W_]*+steel(?:[\W_]*+(?:pill|review|\d|[\da-f]{4,})s?)*
 1573625778	Makyen	rajuharry\.com
