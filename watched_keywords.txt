@@ -61763,3 +61763,4 @@
 1715590286	tripleee	i[\W_]*+n[\W_]*+s[\W_]*+t[\W_]*+a[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m(?<!insta ?gram)
 1715590518	tripleee	spiral[\W_]*+mantra(?!\.com(?<=spiralmantra\.com))
 1715591228	tripleee	solanadama\.xyz
+1715591494	Cow	noirbyocean\.com
