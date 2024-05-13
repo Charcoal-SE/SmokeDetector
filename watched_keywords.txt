@@ -61769,3 +61769,4 @@
 1715595150	VLAZ	towrecovery247\.co\.uk
 1715595201	VLAZ	tow[\W_]*+recovery[\W_]*+24[\W_]*+7(?!\.co\.uk(?<=towrecovery247\.co\.uk))
 1715596058	Jeff Schaller	seosmmbiz
+1715596159	Jeff Schaller	hitclub3\.cz
