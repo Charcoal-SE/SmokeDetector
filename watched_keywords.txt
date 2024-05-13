@@ -61748,3 +61748,4 @@
 1715580217	tripleee	hanspray
 1715580635	Cow	chatgptsvenska\.io
 1715582115	Cow	mesothelioma-helpline\.com
+1715478930	Fastnlight	lost[\W_]*+cryptocurrency
