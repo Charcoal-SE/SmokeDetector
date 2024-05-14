@@ -47758,7 +47758,6 @@
 1677650499	tripleee	2gn\.ru
 1677650541	tripleee	aairtickets\.com
 1677654347	tripleee	dumbwaystodie\.io
-1677656227	tripleee	dynamiclinic\.com
 1677656493	tripleee	[Аа]бузоустойчивый [Хх]остинг
 1677658817	tripleee	vitahaus\.com
 1677659701	tripleee	caplandebtsolutions\.ca
