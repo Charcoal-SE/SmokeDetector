@@ -61796,3 +61796,4 @@
 1715672040	VLAZ	fitskin\.net
 1715672449	VLAZ	sunisticsgroup\.com
 1715673534	VLAZ	asda[\W_]*+services(?:24@gmail\.com)?
+1715673619	VLAZ	flamesinsight\.com
