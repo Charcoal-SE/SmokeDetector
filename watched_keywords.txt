@@ -61800,3 +61800,4 @@
 1715673704	VLAZ	stromberrys\.com
 1715673726	VLAZ	stromberrys(?!\.com)
 1715678858	Cow	halfroundmachines\.com
+1715678916	Cow	jokerwigs\.in
