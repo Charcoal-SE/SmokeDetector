@@ -61799,3 +61799,4 @@
 1715673645	VLAZ	flamesinsight(?!\.com)
 1715673704	VLAZ	stromberrys\.com
 1715673726	VLAZ	stromberrys(?!\.com)
+1715679178	Cow	Live[\W_]*+Stream[\W_]*+online[\W_]*+IPL
