@@ -61777,3 +61777,4 @@
 1715623483	Cow	mfimedical\.com
 1715630494	Jeff Schaller	fineducke\.com
 1715639937	Fastnlight	recover[\W_]*+your[\W_]*+lost[\W_]*+Bitcoin
+1715645276	Fastnlight	doris[\W_]*+ashley[\W_]*+71(?#@gmail.com)
