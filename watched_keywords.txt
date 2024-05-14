@@ -61820,3 +61820,4 @@
 1715691739	Makyen	(?-i:qj0Ol)(?#shorter.me)
 1715691772	Makyen	pcsoftfiles\.com
 1715696201	Fastnlight	dchain\.foundation
+1715696443	Fastnlight	Swift[\W_]*+Hack[\W_]*+Expert
