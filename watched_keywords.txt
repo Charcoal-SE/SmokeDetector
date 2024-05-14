@@ -61786,3 +61786,4 @@
 1715663771	VLAZ	certpot\.com
 1715663812	VLAZ	cerpot(?:[\W_]*+learning)?
 1715663954	VLAZ	certpot(?!\.com)(?:[\W_]*+education[\W_]*+dumps?)?
+1715664583	Cow	spectra\.com
