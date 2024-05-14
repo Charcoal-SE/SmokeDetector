@@ -61813,3 +61813,4 @@
 1715682704	Cow	dadnrats\.com
 1715683697	VLAZ	easyreclaim
 1715683753	VLAZ	shd\.sanchorenews\.in
+1715684249	Jeff Schaller	mugnoir\.in
