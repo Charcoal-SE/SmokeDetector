@@ -61782,3 +61782,4 @@
 1715608515	Vickel	cutoutquick\.com
 1715643078	Vickel	psychdreams\.com
 1715648272	Makyen	yogic[\W_]*+retreat[\W_]*+spots(?!\.com(?<=yogicretreatspots\.com))
+1715645276	Fastnlight	doris[\W_]*+ashley[\W_]*+71(?#@gmail.com)
