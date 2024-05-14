@@ -61784,5 +61784,4 @@
 1715648272	Makyen	yogic[\W_]*+retreat[\W_]*+spots(?!\.com(?<=yogicretreatspots\.com))
 1715645276	Fastnlight	doris[\W_]*+ashley[\W_]*+71(?#@gmail.com)
 1715663771	VLAZ	certpot\.com
-1715663792	VLAZ	certpot(?!\.com)(?:[\W_*+]education[\W_]*+dumps?)?
 1715663812	VLAZ	cerpot(?:[\W_]*+learning)?
