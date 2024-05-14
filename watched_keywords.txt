@@ -61804,3 +61804,4 @@
 1715678989	Cow	pagcorgame\.ph
 1715679089	Cow	2cuong\.com
 1715679304	Cow	newshusk\.com
+1715679904	Cow	ampleoman\.com
