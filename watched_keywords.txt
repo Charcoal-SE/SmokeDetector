@@ -61778,3 +61778,4 @@
 1715630494	Jeff Schaller	fineducke\.com
 1715639937	Fastnlight	recover[\W_]*+your[\W_]*+lost[\W_]*+Bitcoin
 1715645947	Spevacus	serialeturcestiro\.com
+1715647851	Fastnlight	Cyber[\W_]*+Asset[\W_]*+Recovery
