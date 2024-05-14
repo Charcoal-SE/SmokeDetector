@@ -61806,3 +61806,4 @@
 1715679304	Cow	newshusk\.com
 1715679904	Cow	ampleoman\.com
 1715679143	Cow	Willow[\W_]*+TV
+1715679178	Cow	Live[\W_]*+Stream[\W_]*+online[\W_]*+IPL
