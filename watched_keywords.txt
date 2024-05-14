@@ -61787,3 +61787,4 @@
 1715663812	VLAZ	cerpot(?:[\W_]*+learning)?
 1715663954	VLAZ	certpot(?!\.com)(?:[\W_]*+education[\W_]*+dumps?)?
 1715667995	VLAZ	(?-i:^El D$)
+1715669772	Cow	vietkingtravel\.com
