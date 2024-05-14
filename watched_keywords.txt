@@ -61822,3 +61822,4 @@
 1715696201	Fastnlight	dchain\.foundation
 1715696443	Fastnlight	Swift[\W_]*+Hack[\W_]*+Expert
 1715705263	Cow	terbarufull\.com
+1715704916	Cow	jcmsonline\.uk
