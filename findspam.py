@@ -296,6 +296,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "stepik.org",
     "substrate.io",
     "sunfounder.cc",
+    "tampermonkey.net",
     "techmikael.com",
     "terraform.io",
     "this.how",
