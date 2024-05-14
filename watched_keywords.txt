@@ -61808,3 +61808,4 @@
 1715679143	Cow	Willow[\W_]*+TV
 1715679178	Cow	Live[\W_]*+Stream[\W_]*+online[\W_]*+IPL
 1715680708	Cow	HARVEYDONALD192
+1715680858	Cow	airlinespolicyhub\.com
