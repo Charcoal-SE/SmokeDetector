@@ -61790,3 +61790,4 @@
 1715664389	Cow	spiderindia\.com
 1715665801	Cow	myaarpmedicares\.us
 1715668716	Cow	businessmlmsoftware\.com
+1715669772	Cow	vietkingtravel\.com
