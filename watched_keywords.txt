@@ -61843,3 +61843,4 @@
 1715759445	tripleee	sutra69\.net
 1715759552	tripleee	saaspedia\.io
 1715739690	EJoshuaS - Stand with Ukraine	budgetuniformoman\.com
+1715718976	Fastnlight	Walmart[\W_]*+gift[\W_]*+card
