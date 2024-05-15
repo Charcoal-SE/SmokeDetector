@@ -61877,3 +61877,4 @@
 1715797626	Cow	fajshop\.ae
 1715804144	Vickel	tarpaulinsdirect\.co\.uk
 1715807162	Fastnlight	(?-i:4dFDvdB)(?#bit.ly)
+1715806622	Fastnlight	(?-i:checkwalmartgiftcardbalances)(?#sites.google.com)
