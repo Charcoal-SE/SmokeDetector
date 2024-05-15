@@ -61850,3 +61850,4 @@
 1715760894	Nick	(?-i:ZJuXMA29y6I)(?#youtube)
 1715761396	tripleee	kingsoutdoorlighting\.com
 1715763270	VLAZ	ashapurasoftech\.com
+1715764153	tripleee	bandar[\W_]*+bola\d*
