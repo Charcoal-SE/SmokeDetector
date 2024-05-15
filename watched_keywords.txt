@@ -61849,3 +61849,4 @@
 1715717453	Fastnlight	Personal[\W_]*+Memory[\W_]*+Curator
 1715760894	Nick	(?-i:ZJuXMA29y6I)(?#youtube)
 1715761396	tripleee	kingsoutdoorlighting\.com
+1715763270	VLAZ	ashapurasoftech\.com
