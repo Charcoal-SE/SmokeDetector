@@ -1496,6 +1496,9 @@ items:
   - damian.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
+  - damian.ns.cloudflare.com.
+  - ursula.ns.cloudflare.com.
+- ns:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
