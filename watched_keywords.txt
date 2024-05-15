@@ -61832,3 +61832,4 @@
 1715750944	VLAZ	ganendra[\W_]*+official[\W_]*+shop
 1715750965	VLAZ	blue[\W_]*+wizard[\W_]*+asli(?:[\W_]*+di[\W_]*+jakarta)?
 1715757574	Cow	majorleaguemommy\.com
+1715758058	Nick	majorleaguemommy(?!\.com)
