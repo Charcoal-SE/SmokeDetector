@@ -61864,4 +61864,3 @@
 1715771455	Jeff Schaller	Dtech[\W_]*+Corporation
 1715775137	VLAZ	tobeesuit\.com
 1715775532	Jeff Schaller	sunwinhealthcare\.in
-1715776464	Jeff Schaller	recovermyloss(000)?
