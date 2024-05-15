@@ -61851,3 +61851,4 @@
 1715761396	tripleee	kingsoutdoorlighting\.com
 1715763270	VLAZ	ashapurasoftech\.com
 1715764153	tripleee	bandar[\W_]*+bola\d*
+1715764292	tripleee	shadowteaminjector\.com
