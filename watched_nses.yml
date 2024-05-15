@@ -2007,6 +2007,9 @@ items:
   - etienne.ns.cloudflare.com.
   - marissa.ns.cloudflare.com.
 - ns:
+  - etienne.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
   - ethan.ns.cloudflare.com.
   - laylah.ns.cloudflare.com.
 - ns:
