@@ -61874,3 +61874,4 @@
 1715788086	Jeff Schaller	kucoin\.com(?<!docs\.kucoin\.com)(?<!api\.kucoin\.com)
 1715790630	VLAZ	612vermont\.com
 1715792810	Makyen	committing[\W_]*+genocide
+1715797626	Cow	fajshop\.ae
