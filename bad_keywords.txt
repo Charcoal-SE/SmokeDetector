@@ -3039,3 +3039,4 @@ __glaceon_pokemon_drawn_by_kemo_camotli__1db8d5e38a5cd312f6b32680e232f48b(?# NSF
 marketpeace[\W_]*+n[\W_]*+et
 grayhathacks
 genericbucket\d*(?!\.com(?<=genericbucket\.com))
+Project[\W_]*+Nimbus
