@@ -61861,3 +61861,4 @@
 1715768133	Jeff Schaller	websitesdoit\.co\.uk
 1715768977	Cow	hrinternational\.in
 1715769860	VLAZ	quora[\W_]*+spaces
+1715771455	Jeff Schaller	Dtech[\W_]*+Corporation
