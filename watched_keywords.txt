@@ -61830,3 +61830,4 @@
 1715717398	Fastnlight	Pavlokity(?#@gmail.com)
 1715745581	Makyen	wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?|(?:[\W_]*+(?:cyber|tech|crypto|recovery|expert|\d++|[\da-f]{5,}+)s?)*)
 1715750944	VLAZ	ganendra[\W_]*+official[\W_]*+shop
+1715750965	VLAZ	blue[\W_]*+wizard[\W_]*+asli(?:[\W_]*+di[\W_]*+jakarta)?
