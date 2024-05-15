@@ -5597,3 +5597,4 @@ img3\.gelbooru\.com
 ei\.phncdn\.com
 infogram\.com
 validexamdumps\.com
+lee[\W_]*+ultimate[\W_]*+hacker[\W_]*+(?:dot[\W_]*+)?com

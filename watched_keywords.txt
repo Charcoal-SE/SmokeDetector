@@ -61093,7 +61093,6 @@
 1714085957	Makyen	(?-i:0x4fe4d0f1abc6cee2e1f4f74cd1b626dd24b16406)
 1714085978	Makyen	10spike
 1714096382	Nick	maclinuxpro\.com
-1714097124	Makyen	lee[\W_]*+ultimate[\W_]*+hacker[\W_]*+(?:dot[\W_]*+)?com
 1714097268	Nick	myEmailVerifier(?!\.com(?<=myemailverifier\.com))
 1714097243	Fastnlight	myemailverifier\.com
 1714098829	Nick	dragonwaveltd\.com
