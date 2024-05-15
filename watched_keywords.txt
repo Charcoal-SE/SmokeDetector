@@ -61836,3 +61836,4 @@
 1715758373	Nick	Barcode[\W_]*+Live(?!\.org(?<=barcodelive\.org))
 1715758416	Nick	pcswaterproofing\.pk
 1715758443	Nick	Pak[\W_]*+Chemical[\W_]*+Services
+1715758759	Nick	rawnaqalibtisam\.com
