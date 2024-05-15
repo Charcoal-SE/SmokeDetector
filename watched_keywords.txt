@@ -61878,3 +61878,4 @@
 1715804144	Vickel	tarpaulinsdirect\.co\.uk
 1715807162	Fastnlight	(?-i:4dFDvdB)(?#bit.ly)
 1715806622	Fastnlight	(?-i:checkwalmartgiftcardbalances)(?#sites.google.com)
+1715806557	Fastnlight	walmartgiftcardbalance\.dorik\.io
