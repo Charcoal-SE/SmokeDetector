@@ -61896,3 +61896,4 @@
 1715846001	Cow	thepursequeen\.co
 1715846083	Cow	misskolkata4u\.com
 1715846059	Cow	(?-i:^Online Assignment Expert$)
+1715845822	Cow	Leather[\W_]*+Puffer
