@@ -61883,3 +61883,4 @@
 1715827856	Makyen	taigo88\.poker
 1715827876	Makyen	taigo88[\W_]*+poker(?!<taigo88\.poker)
 1715828083	Makyen	giogamer\.com
+1715828104	Makyen	iranwushufed\.ir
