@@ -61897,3 +61897,4 @@
 1715846083	Cow	misskolkata4u\.com
 1715846059	Cow	(?-i:^Online Assignment Expert$)
 1715845822	Cow	Leather[\W_]*+Puffer
+1715845793	Cow	Elevate[\W_]*+Your[\W_]*+Winter[\W_]*+Wardrobe
