@@ -1649,9 +1649,6 @@ items:
   - dee.ns.cloudflare.com.
   - lars.ns.cloudflare.com.
 - ns:
-  - delilah.ns.cloudflare.com.
-  - dilbert.ns.cloudflare.com.
-- ns:
   - demi.ns.cloudflare.com.
   - gerald.ns.cloudflare.com.
 - ns:
