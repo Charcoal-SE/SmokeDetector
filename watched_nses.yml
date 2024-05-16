@@ -2304,6 +2304,9 @@ items:
   - heather.ns.cloudflare.com.
   - kanye.ns.cloudflare.com.
 - ns:
+  - heather.ns.cloudflare.com.
+  - zod.ns.cloudflare.com.
+- ns:
   - heidi.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
