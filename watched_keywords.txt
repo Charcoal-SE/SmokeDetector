@@ -61878,3 +61878,4 @@
 1715806622	Fastnlight	(?-i:checkwalmartgiftcardbalances)(?#sites.google.com)
 1715806557	Fastnlight	walmartgiftcardbalance\.dorik\.io
 1715793415	Fastnlight	laitkor\.com
+1715822945	Jeff Schaller	(?-i:vRx8JAFKfQIwYjQ1)(?#t.me)
