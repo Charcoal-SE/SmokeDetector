@@ -61928,3 +61928,4 @@
 1715878229	Fastnlight	processingfoundation\.org
 1715866563	Fastnlight	No1AssignmentHelp[\W_]*+co[\W_]*+uk(?<!No1AssignmentHelp\.Co\.UK)
 1715882070	Cow	nanda\.ca
+1715891292	Vickel	buygoldonline256(?:@gmail\.com)?
