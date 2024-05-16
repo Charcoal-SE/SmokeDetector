@@ -61902,3 +61902,4 @@
 1715860347	tripleee	aaradhana[\W_]*+technology(?!\.com(?<=aaradhanatechnology\.com))
 1715853429	Cow	carpetshoponline\.co\.uk
 1715853626	Cow	namesandfacts\.com
+1715860067	Vickel	atlase-pro\.com
