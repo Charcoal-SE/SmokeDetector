@@ -61932,3 +61932,4 @@
 1715892467	Makyen	fastfundsrecovry
 1715892476	Makyen	fastfvndrecovery[\W_]*+com
 1715896186	Makyen	top[\W_]*+saas[\W_]*+web[\W_]*+design[\W_]*+agencies[\W_]*+lera[\W_]*+umen[\W_]*+1ekie
+1715898421	Vickel	zymak\.com\.bd
