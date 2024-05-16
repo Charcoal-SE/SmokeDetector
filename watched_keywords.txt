@@ -61882,3 +61882,4 @@
 1715823740	Jeff Schaller	iamhindu\.in
 1715827856	Makyen	taigo88\.poker
 1715827876	Makyen	taigo88[\W_]*+poker(?!<taigo88\.poker)
+1715828083	Makyen	giogamer\.com
