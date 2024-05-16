@@ -3042,3 +3042,4 @@ genericbucket\d*(?!\.com(?<=genericbucket\.com))
 Project[\W_]*+Nimbus
 accessrecoveryconsultant(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 hacker4wise
+d(?:octo)?r\w*temple(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?

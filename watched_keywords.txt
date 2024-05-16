@@ -39526,7 +39526,6 @@
 1654875170	cigien	datarecoveryvision\.com
 1654876993	cigien	sapphireassociate\.com
 1654880597	Makyen	d(?:octo)?r[\W_]*+abaka
-1654881341	Makyen	d(?:octo)?r\w*temple(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1654886833	cigien	(?-i:BDGrRVrB3LAXiFSXA)(?#google forms)
 1654887165	cigien	medium\.com/@userxdevelopers
 1654899826	Ollie	custom-cursor\.org
