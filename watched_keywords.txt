@@ -61904,3 +61904,4 @@
 1715853626	Cow	namesandfacts\.com
 1715860067	Vickel	atlase-pro\.com
 1715860259	Vickel	photo-to-text\.com
+1715860417	Vickel	247bettingid\.com
