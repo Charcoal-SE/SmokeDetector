@@ -61915,3 +61915,4 @@
 1715864439	tripleee	dr[\W_]*+chinnababu(?!\.com(?<=drchinnababu\.com))
 1715864468	tripleee	(?-i:^swapna$)
 1715865557	Jeff Schaller	meokapp\.info
+1715866155	Fastnlight	meloyelo\.nz
