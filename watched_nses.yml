@@ -2761,6 +2761,9 @@ items:
   - maria.ns.cloudflare.com.
 - ns:
   - keyla.ns.cloudflare.com.
+  - sam.ns.cloudflare.com.
+- ns:
+  - keyla.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
   - kia.ns.cloudflare.com.
