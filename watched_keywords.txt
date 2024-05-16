@@ -61899,3 +61899,4 @@
 1715845822	Cow	Leather[\W_]*+Puffer
 1715845793	Cow	Elevate[\W_]*+Your[\W_]*+Winter[\W_]*+Wardrobe
 1715845340	Cow	(?-i:^KlavierKreationStudios$)
+1715860067	Vickel	atlase-pro\.com
