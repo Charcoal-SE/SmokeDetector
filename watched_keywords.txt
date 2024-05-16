@@ -61910,3 +61910,4 @@
 1715861218	tripleee	github\.com/ilikeyi
 1715861655	tripleee	healthernutrition\.in
 1715861816	tripleee	forextradingtech\.com
+1715862467	Cow	planmedicaltourism\.com
