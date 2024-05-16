@@ -61905,3 +61905,4 @@
 1715860067	Vickel	atlase-pro\.com
 1715860259	Vickel	photo-to-text\.com
 1715860417	Vickel	247bettingid\.com
+1715860868	Vickel	247bettingid(?!\.com(?<=247bettingid\.com))
