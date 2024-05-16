@@ -61616,7 +61616,6 @@
 1715305298	Fastnlight	muabanxedaukeo
 1715306510	Fastnlight	daviddavidyes014(?#@gmail.com)
 1715308494	Dragonrage	gogetfunding\.com
-1715314253	Ryan M	alpharoot\.com
 1715320603	VLAZ	sbhonlineid\.com
 1715321184	VLAZ	ĐỊNH[\W_]*+GIÁ[\W_]*+XE[\W_]*+SIÊU[\W_]*+TỐC
 1715321205	VLAZ	dinh[\W_]*+gia[\W_]*+xe[\W_]*+sieu[\W_]*+toc
