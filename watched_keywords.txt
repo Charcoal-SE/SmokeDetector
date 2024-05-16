@@ -61923,3 +61923,4 @@
 1715866143	Fastnlight	computerdegreesonline\.org
 1715860868	Vickel	247bettingid(?!\.com(?<=247bettingid\.com))
 1715878289	Vickel	networthvilla(?!\.com)
+1715876599	Vickel	focus[\W_]*+construction[\W_]*+tn(?!\.com(?<=focusconstructiontn\.com))
