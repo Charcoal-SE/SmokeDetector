@@ -3195,6 +3195,9 @@ items:
   - maya.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
+  - mcgrory.ns.cloudflare.com.
+  - serenity.ns.cloudflare.com.
+- ns:
   - meera.ns.cloudflare.com.
   - owen.ns.cloudflare.com.
 - ns:
