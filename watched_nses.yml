@@ -2572,6 +2572,9 @@ items:
   - zod.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
+  - tate.ns.cloudflare.com.
+- ns:
+  - jewel.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
   - jill.ns.cloudflare.com.
