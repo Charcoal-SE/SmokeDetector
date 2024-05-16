@@ -61884,3 +61884,4 @@
 1715827876	Makyen	taigo88[\W_]*+poker(?!<taigo88\.poker)
 1715828083	Makyen	giogamer\.com
 1715828104	Makyen	iranwushufed\.ir
+1715838556	VLAZ	pvaprovider\.com
