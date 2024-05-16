@@ -61930,3 +61930,4 @@
 1715882070	Cow	nanda\.ca
 1715891292	Vickel	buygoldonline256(?:@gmail\.com)?
 1715892467	Makyen	fastfundsrecovry
+1715892476	Makyen	fastfvndrecovery[\W_]*+com
