@@ -61950,3 +61950,4 @@
 1715934117	Nick	cfo-recruit\.com
 1715934196	Nick	fitnesswarehouse(?!\.com)
 1715934278	Nick	fitnesswarehouse\.com\.au
+1715934419	Nick	cfo[\W_]*+recruit(?!\.com(?<=cfo-recruit\.com))
