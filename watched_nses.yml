@@ -1670,6 +1670,9 @@ items:
   - derek.ns.cloudflare.com.
   - elinore.ns.cloudflare.com.
 - ns:
+  - derek.ns.cloudflare.com.
+  - may.ns.cloudflare.com.
+- ns:
   - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
 - ns:
