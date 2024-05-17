@@ -4184,6 +4184,12 @@ items:
 - ns: epizy.com.
 - ns: hostingmadeeasy.com.
 - ns:
+  - bconglobal.com.
+  - ns-1216.awsdns-24.org.
+  - ns-1674.awsdns-17.co.uk.
+  - ns-54.awsdns-06.com.
+  - ns-991.awsdns-59.net.
+- ns:
   - mn.co.
   - ns-1048.awsdns-03.org.
   - ns-134.awsdns-16.com.
