@@ -61938,3 +61938,4 @@
 1715917572	Nick	sydneyabcfirstaid\.com\.au
 1715917597	Nick	sydneyabcfirstaid(?!\.com\.au)
 1715924752	VLAZ	account\.milesight\.com
+1715926537	Cow	Composite[\W_]*+decking[\W_]*+Singapore
