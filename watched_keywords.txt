@@ -61949,3 +61949,4 @@
 1715930486	tripleee	dreampariswedding\.com
 1715934117	Nick	cfo-recruit\.com
 1715934196	Nick	fitnesswarehouse(?!\.com)
+1715934278	Nick	fitnesswarehouse\.com\.au
