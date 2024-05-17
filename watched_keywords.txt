@@ -61971,3 +61971,4 @@
 1715953482	Cow	doc2lang\.com
 1715955919	tripleee	c2script\.com
 1715957836	Jeff Schaller	surahalmulk\.net
+1715977671	Fastnlight	Fast[\W_]*+Swift
