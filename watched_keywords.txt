@@ -61249,7 +61249,6 @@
 1714479595	VLAZ	proact-ims\.com
 1714482824	Vickel	pearlingstx
 1714485823	VLAZ	seosmmweb\.com
-1714495503	Makyen	cryptorecwizard\.com
 1714492954	Vickel	albertgonzalezcryptorecoverywi(?:@gmail\.com)?
 1714496217	Vickel	convicgmbh\.ch
 1714497148	Vickel	premiumtoners\.com
