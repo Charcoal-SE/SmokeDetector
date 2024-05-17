@@ -61960,3 +61960,4 @@
 1715941579	tripleee	nautamlalmehta\.com
 1715941798	tripleee	(?-i:^Haris aslam$)
 1715943191	Jeff Schaller	gouriekmeetdesigns\.com
+1715945321	Jeff Schaller	yepdesk\.com
