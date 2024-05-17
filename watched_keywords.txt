@@ -61944,3 +61944,4 @@
 1715925962	Cow	visapositive\.com
 1715926065	Cow	protocolten\.com
 1715926537	Cow	Composite[\W_]*+decking[\W_]*+Singapore
+1715927753	Cow	prevaj\.com
