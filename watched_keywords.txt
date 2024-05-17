@@ -61956,3 +61956,4 @@
 1715937762	tripleee	synthologic[\W_]*+innovations
 1715941477	tripleee	enavosoft
 1715941515	tripleee	iot[\W_]*+today
+1715941551	tripleee	karachi-fumigation\.com
