@@ -1032,3 +1032,4 @@ Gray Walker
 (?-i:^FELINE_ENERGY$)
 (?-i:^Michael Ponder$)
 Spammer[\W_]*+of[\W_]*+Many[\W_]*+Sites
+(?-i:^Reddy Anna$)
