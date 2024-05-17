@@ -61966,3 +61966,4 @@
 1715946520	Cow	shework\.in
 1715948623	Nick	rayminds\.com
 1715948649	Nick	Ray[\W_]*+Minds(?!\.com(?<=rayminds\.com))
+1715948753	Nick	bipankishore\.github\.io
