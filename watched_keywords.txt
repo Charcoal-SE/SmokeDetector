@@ -61942,3 +61942,4 @@
 1715911399	Fastnlight	khansaprinting\.com
 1715913652	Fastnlight	emisleuth\.com
 1715925962	Cow	visapositive\.com
+1715926065	Cow	protocolten\.com
