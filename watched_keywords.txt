@@ -61953,3 +61953,4 @@
 1715934419	Nick	cfo[\W_]*+recruit(?!\.com(?<=cfo-recruit\.com))
 1715937249	tripleee	thanhcongcraft\.com
 1715937468	tripleee	infinityfreeapp\.com
+1715937637	tripleee	adachspirit\.blogspot
