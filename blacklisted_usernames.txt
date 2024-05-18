@@ -1034,3 +1034,4 @@ Gray Walker
 Spammer[\W_]*+of[\W_]*+Many[\W_]*+Sites
 (?-i:^Reddy Anna$)
 (?-i:^Happiestplants backlinks$)
+(?-i:^FEJOHN$)

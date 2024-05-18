@@ -61990,7 +61990,6 @@
 1716040471	Makyen	baccaratwebsite168\.com
 1716040493	Makyen	outsourcedbackoffice\.com
 1716040514	Makyen	outsourced[\W_]*+back[\W_]*+office(?!\.com(?<=outsourcedbackoffice\.com))
-1716056804	Mast	(?-i:^FEJOHN$)
 1716057198	Makyen	stackoverflow\.co2024m
 1716057229	Makyen	gulfjobsy\.com
 1716057264	Makyen	australiaglycogencontrol
