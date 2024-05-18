@@ -61982,3 +61982,4 @@
 1716024696	Cow	myfedloan\.today
 1716025076	Mast	Margex[\W_]*+Referral[\W_]*+Code
 1716032950	Jeff Schaller	cialfosports\.com
+1716034468	Cow	riverandskytravel\.com
