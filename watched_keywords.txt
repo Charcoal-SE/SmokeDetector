@@ -61977,3 +61977,4 @@
 1716022472	Nick	Orchids[\W_]*+Emerald(?!\.com(?<=orchidsemerald\.com))
 1716022428	Cow	orchidsemerald\.com
 1716022404	Cow	essentialsshirts\.us
+1716023130	Cow	mapi\.com
