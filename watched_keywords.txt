@@ -61975,3 +61975,4 @@
 1716010165	Nick	grademiner\.co
 1716010189	Nick	grademiner(?!\.co)
 1716022472	Nick	Orchids[\W_]*+Emerald(?!\.com(?<=orchidsemerald\.com))
+1716022428	Cow	orchidsemerald\.com
