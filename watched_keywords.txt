@@ -61983,3 +61983,4 @@
 1716025076	Mast	Margex[\W_]*+Referral[\W_]*+Code
 1716032950	Jeff Schaller	cialfosports\.com
 1716034468	Cow	riverandskytravel\.com
+1716038513	Nick	hearfit\.ca
