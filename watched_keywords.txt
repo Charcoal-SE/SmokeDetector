@@ -62000,3 +62000,4 @@
 1716081160	Makyen	bitcoinrecovery\.info(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1715964342	Cow	2pdf\.io
 1716101792	Cow	gbibp\.com
+1716101167	Cow	fleetwoodwaste\.com
