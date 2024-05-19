@@ -62009,3 +62009,4 @@
 1715965906	Cow	RFID[\W_]*+solutions[\W_]*+in[\W_]*+Dubai
 1715979656	Fastnlight	Fast[\W]*+s[\W]*+wift(?=[\W]*+Cyber[\W]*+Services)
 1716135737	Makyen	lifo\.bconglobal\.com
+1716140451	Makyen	sydney[\W_]*+abc[\W_]*+first[\W_]*+aid(?!\.com\.au(?<=sydneyabcfirstaid\.com\.au))
