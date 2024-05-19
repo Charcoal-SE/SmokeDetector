@@ -62013,3 +62013,4 @@
 1716143983	Vickel	powish\.com
 1716144718	Glorfindel	^USER_SELF_HARM$
 1716144038	Vickel	americansportandfitness\.com
+1716145573	Makyen	asfa[\W_]*+fitness
