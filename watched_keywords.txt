@@ -61997,3 +61997,4 @@
 1716057643	Cow	isikolo-temple\.com
 1716062050	Cow	washclubtx\.com
 1716080480	Jeff Schaller	Narumol[\W_]*+Ngachaiyaphum
+1716081160	Makyen	bitcoinrecovery\.info(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
