@@ -62011,3 +62011,4 @@
 1716135737	Makyen	lifo\.bconglobal\.com
 1716140451	Makyen	sydney[\W_]*+abc[\W_]*+first[\W_]*+aid(?!\.com\.au(?<=sydneyabcfirstaid\.com\.au))
 1716143983	Vickel	powish\.com
+1716144038	Vickel	americansportandfitness\.com
