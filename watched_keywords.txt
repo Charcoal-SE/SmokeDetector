@@ -62007,3 +62007,4 @@
 1716120033	Vickel	(?-i:sabach90)(?#fiverr.com)
 1716121731	Nick	broxej\.com
 1715965906	Cow	RFID[\W_]*+solutions[\W_]*+in[\W_]*+Dubai
+1715979656	Fastnlight	Fast[\W]*+s[\W]*+wift(?=[\W]*+Cyber[\W]*+Services)
