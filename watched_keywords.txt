@@ -62012,3 +62012,4 @@
 1716140451	Makyen	sydney[\W_]*+abc[\W_]*+first[\W_]*+aid(?!\.com\.au(?<=sydneyabcfirstaid\.com\.au))
 1716143983	Vickel	powish\.com
 1716144718	Glorfindel	^USER_SELF_HARM$
+1716144038	Vickel	americansportandfitness\.com
