@@ -62015,3 +62015,4 @@
 1716144038	Vickel	americansportandfitness\.com
 1716145573	Makyen	asfa[\W_]*+fitness
 1716146963	Makyen	mightyhackerrecovery[\W_]*+com
+1716147030	Makyen	mighty[\W_]*+hacker[\W_]*+recovery(?![\W_]*+com(?<=mightyhackerrecovery[\W_]*+com))
