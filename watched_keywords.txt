@@ -62014,3 +62014,4 @@
 1716144718	Glorfindel	^USER_SELF_HARM$
 1716144038	Vickel	americansportandfitness\.com
 1716145573	Makyen	asfa[\W_]*+fitness
+1716146963	Makyen	mightyhackerrecovery[\W_]*+com
