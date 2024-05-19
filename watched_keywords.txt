@@ -62006,3 +62006,4 @@
 1716110952	Jeff Schaller	amplework\.com
 1716120033	Vickel	(?-i:sabach90)(?#fiverr.com)
 1716121731	Nick	broxej\.com
+1715965906	Cow	RFID[\W_]*+solutions[\W_]*+in[\W_]*+Dubai
