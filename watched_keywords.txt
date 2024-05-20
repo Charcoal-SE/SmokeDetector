@@ -62056,3 +62056,4 @@
 1716199597	VLAZ	sopforaustralia\.com
 1716199777	VLAZ	sop[\W_]*+for[\W_]*+australia(?!\.com(?<=sopforaustralia\.com))
 1716200500	tripleee	multiproroofing\.com
+1716201063	Jeff Schaller	yolo247\.net
