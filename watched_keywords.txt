@@ -62014,3 +62014,4 @@
 1716145573	Makyen	asfa[\W_]*+fitness
 1716146963	Makyen	mightyhackerrecovery[\W_]*+com
 1716147030	Makyen	mighty[\W_]*+hacker[\W_]*+recovery(?![\W_]*+com(?<=mightyhackerrecovery[\W_]*+com))
+1716169625	Vickel	stop[\W_]*+Elbit
