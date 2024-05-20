@@ -62023,3 +62023,4 @@
 1716176139	Makyen	rebate[\W_]*+coupon[\W_]*+codes(?!\.com(?<=rebatecouponcodes\.com))
 1716179795	Makyen	codetechguru\.com
 1716179816	Makyen	aoneoutsourcing\.com
+1716180582	Makyen	(?-i:arjun\.muralidharan2)(?#facebook.com)
