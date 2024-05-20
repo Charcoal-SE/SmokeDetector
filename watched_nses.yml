@@ -1409,6 +1409,9 @@ items:
   - cortney.ns.cloudflare.com.
   - dale.ns.cloudflare.com.
 - ns:
+  - cortney.ns.cloudflare.com.
+  - patrick.ns.cloudflare.com.
+- ns:
   - cory.ns.cloudflare.com.
   - evangeline.ns.cloudflare.com.
 - ns:
