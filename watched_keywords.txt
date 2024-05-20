@@ -62062,3 +62062,4 @@
 1716206683	tripleee	online[\W_]*+(?:[^\W_]++[\W_]++)?betting
 1716208492	Nick	richardsonplumbinginc\.com
 1716208593	Nick	amracasa\.com
+1716210906	Makyen	amracasa(?!\.com)
