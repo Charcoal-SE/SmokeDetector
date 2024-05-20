@@ -3044,3 +3044,4 @@ hacker4wise
 d(?:octo)?r\w*temple(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 usatopseller(?!\.com)
 wong[\W_]*+best[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+dantegideon(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
