@@ -62064,3 +62064,4 @@
 1716208593	Nick	amracasa\.com
 1716210906	Makyen	amracasa(?!\.com)
 1716221041	Fastnlight	kqsolicitors\.com
+1716231412	Fastnlight	Trust[\W_]*+Guard[\W_]*+Company
