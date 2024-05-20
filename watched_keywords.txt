@@ -62020,3 +62020,4 @@
 1716173856	Makyen	hec\.guerra1974(?:@gmail\.com)?
 1716173877	Makyen	hgpofficial74(?:@gmail\.com)?
 1716176117	Makyen	rebatecouponcodes\.com
+1716176139	Makyen	rebate[\W_]*+coupon[\W_]*+codes(?!\.com(?<=rebatecouponcodes\.com))
