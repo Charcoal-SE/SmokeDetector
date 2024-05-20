@@ -3315,6 +3315,9 @@ items:
   - monroe.ns.cloudflare.com.
   - nash.ns.cloudflare.com.
 - ns:
+  - mustafa.ns.cloudflare.com.
+  - ollie.ns.cloudflare.com.
+- ns:
   - morgan.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
