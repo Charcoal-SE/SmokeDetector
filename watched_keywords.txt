@@ -55453,7 +55453,6 @@
 1701465563	Vickel	(?-i:AjaxSoftware)(?#t.me)
 1701617711	Jesse	Sarvatra[\W_]*+Loan
 1701647016	Nick	marketing2advertising\.com
-1701650747	Nick	omegarecoveryspecialist
 1701689638	Jeff Schaller	lecturewala\.com
 1701688725	VLAZ	networthandage\.com
 1701688637	Nick	ecorprealestate\.com
