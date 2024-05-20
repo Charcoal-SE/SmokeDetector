@@ -1377,6 +1377,9 @@ items:
   - lady.ns.cloudflare.com.
 - ns:
   - coen.ns.cloudflare.com.
+  - gemma.ns.cloudflare.com.
+- ns:
+  - coen.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
 - ns:
   - coleman.ns.cloudflare.com.
