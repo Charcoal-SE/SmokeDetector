@@ -62036,3 +62036,4 @@
 1716122369	Vickel	jeux-argentropcher\.my\.canva\.site
 1716105360	Cow	myasiantv\.net\.lv
 1716169625	Vickel	stop[\W_]*+Elbit
+1716186960	cocomac	autoidindia\.com
