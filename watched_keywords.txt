@@ -62041,3 +62041,4 @@
 1716187563	Dragonrage	sharp409a\.com
 1716187604	Nick	Infinite[\W_]*+Fusion(?!\.online(?<=infinitefusion\.online))
 1716187662	Nick	Jack_Cam954
+1716188226	Dragonrage	compasslivemedia\.com
