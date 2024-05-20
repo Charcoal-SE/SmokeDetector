@@ -62022,3 +62022,4 @@
 1716180582	Makyen	(?-i:arjun\.muralidharan2)(?#facebook.com)
 1716181265	tripleee	bryanrecovery
 1716181962	VLAZ	Mekhi420psycho
+1716182861	tripleee	c[\W_]*+o[\W_]*+n[\W_]*+s[\W_]*+u[\W_]*+l[\W_]*+t[\W_]*+a[\W_]*+n[\W_]*+t[\W_]*+c[\W_]*+o[\W_]*+m(?<!consultant\.com)
