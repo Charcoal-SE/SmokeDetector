@@ -1557,6 +1557,9 @@ items:
   - ray.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
+  - terry.ns.cloudflare.com.
+- ns:
+  - dana.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
   - dane.ns.cloudflare.com.
