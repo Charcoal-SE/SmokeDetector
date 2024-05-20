@@ -62054,3 +62054,4 @@
 1716199030	Cow	deltaexploits\.com
 1716014832	Cow	exclaimer\.com
 1716199597	VLAZ	sopforaustralia\.com
+1716199777	VLAZ	sop[\W_]*+for[\W_]*+australia(?!\.com(?<=sopforaustralia\.com))
