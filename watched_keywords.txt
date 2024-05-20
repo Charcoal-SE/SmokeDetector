@@ -62038,3 +62038,4 @@
 1716169625	Vickel	stop[\W_]*+Elbit
 1716186960	cocomac	autoidindia\.com
 1716187510	Dragonrage	infinitefusion\.online
+1716187563	Dragonrage	sharp409a\.com
