@@ -42084,7 +42084,6 @@
 1661863806	Jeff Schaller	torontowiderestoration\.com
 1661864647	cigien	canopas\.com
 1661864998	Jeff Schaller	firassayah7
-1661865528	cigien	adamwilson[\W_]*+trading
 1661865564	cigien	phperrorcode\.com
 1661871791	Jeff Schaller	Innovativewebdesigning\.com
 1661872685	Ollie	techbullion\.com
