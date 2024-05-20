@@ -62015,3 +62015,4 @@
 1716146963	Makyen	mightyhackerrecovery[\W_]*+com
 1716147030	Makyen	mighty[\W_]*+hacker[\W_]*+recovery(?![\W_]*+com(?<=mightyhackerrecovery[\W_]*+com))
 1716173570	Makyen	bigshop79
+1716173814	Makyen	terra3sol13(?:@gmail\.com)?
