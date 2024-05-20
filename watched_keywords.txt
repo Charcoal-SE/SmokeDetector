@@ -62063,3 +62063,4 @@
 1716208492	Nick	richardsonplumbinginc\.com
 1716208593	Nick	amracasa\.com
 1716210906	Makyen	amracasa(?!\.com)
+1716220825	Fastnlight	OPTIMISTIC[\W_]*+HACKER[\W_]*+GAIUS
