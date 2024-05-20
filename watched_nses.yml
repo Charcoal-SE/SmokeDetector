@@ -1160,6 +1160,9 @@ items:
   - cash.ns.cloudflare.com.
   - ruth.ns.cloudflare.com.
 - ns:
+  - cass.ns.cloudflare.com.
+  - terin.ns.cloudflare.com.
+- ns:
   - cecelia.ns.cloudflare.com.
   - coen.ns.cloudflare.com.
 - ns:
