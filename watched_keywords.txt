@@ -62063,3 +62063,4 @@
 1716208492	Nick	richardsonplumbinginc\.com
 1716208593	Nick	amracasa\.com
 1716210906	Makyen	amracasa(?!\.com)
+1716217554	Cow	(?-i:^S8 Sjwmwj$)
