@@ -1248,6 +1248,9 @@ items:
   - kurt.ns.cloudflare.com.
 - ns:
   - chin.ns.cloudflare.com.
+  - nick.ns.cloudflare.com.
+- ns:
+  - chin.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
   - chip.ns.cloudflare.com.
