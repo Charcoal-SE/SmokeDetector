@@ -62039,3 +62039,4 @@
 1716186960	cocomac	autoidindia\.com
 1716187510	Dragonrage	infinitefusion\.online
 1716187563	Dragonrage	sharp409a\.com
+1716187604	Nick	Infinite[\W_]*+Fusion(?!\.online(?<=infinitefusion\.online))
