@@ -62043,3 +62043,4 @@
 1716187662	Nick	Jack_Cam954
 1716188226	Dragonrage	compasslivemedia\.com
 1716188759	Nick	swanispice\.com
+1716188867	Nick	swani[\W_]*+spice(?!\.com(?<=swanispice\.com))
