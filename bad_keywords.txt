@@ -3047,3 +3047,4 @@ wong[\W_]*+best[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+
 dantegideon(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 recovery[\W_]*my[\W_]*+funds
 adamwilson[\W_]*+trading
+b[\W_]*i[\W_]*t[\W_]*c[\W_]*o[\W_]*i[\W_]*n[\W_]*r[\W_]*e[\W_]*c[\W_]*o[\W_]*v[\W_]*e[\W_]*r[\W_]*y[\W_]*(?:a[\W_]*t[\W_]*)?c[\W_]*o[\W_]*n[\W_]*s[\W_]*u[\W_]*l[\W_]*t[\W_]*a[\W_]*n[\W_]*t[\W_]*(?:d[\W_]*o[\W_]*t[\W_]*)?c[\W_]*o[\W_]*m(?#obfuscated bitcoinrecovery@consultant.com)
