@@ -62130,3 +62130,4 @@
 1716312151	Makyen	beat[\W_]*+educations(?!\.ae(?<=beateducations\.ae))
 1716312320	Makyen	d(?:octo)?r[\W_]*+mama[\W_]*+amira
 1716312386	Makyen	sehatokart(?!\.com)
+1716312471	Makyen	mea[\W_]*+attestation
