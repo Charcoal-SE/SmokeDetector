@@ -62098,3 +62098,4 @@
 1716220682	Fastnlight	optimistichackegaius\.co
 1716220825	Fastnlight	OPTIMISTIC[\W_]*+HACKER[\W_]*+GAIUS
 1716225926	Fastnlight	studypointhometutorials\.com
+1716231098	Cow	spotsurv\.com
