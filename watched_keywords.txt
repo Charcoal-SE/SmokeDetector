@@ -62093,3 +62093,4 @@
 1716285536	tripleee	simplex[\W_]*+technology[\W_]*+solutions
 1716285577	tripleee	simplexts\.net
 1716285636	tripleee	simplextechnology\.blogspot
+1716285722	tripleee	kfcpakistan\.com
