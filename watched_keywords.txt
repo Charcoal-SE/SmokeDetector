@@ -62128,3 +62128,4 @@
 1716308870	Vickel	ways2well(?!\.com)
 1716311116	Vickel	xspaceme(?:@gmail\.com)?
 1716312151	Makyen	beat[\W_]*+educations(?!\.ae(?<=beateducations\.ae))
+1716312320	Makyen	d(?:octo)?r[\W_]*+mama[\W_]*+amira
