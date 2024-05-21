@@ -62131,3 +62131,4 @@
 1716312320	Makyen	d(?:octo)?r[\W_]*+mama[\W_]*+amira
 1716312386	Makyen	sehatokart(?!\.com)
 1716312471	Makyen	mea[\W_]*+attestation
+1716313899	General Grievance	transitionministriesgroup\.com
