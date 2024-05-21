@@ -3051,3 +3051,4 @@ b[\W_]*i[\W_]*t[\W_]*c[\W_]*o[\W_]*i[\W_]*n[\W_]*r[\W_]*e[\W_]*c[\W_]*o[\W_]*v[\
 omega[\W_]*+recovery(?:[\W_]*+specialist)?(?!\.com(?<=omegarecoveryspecialist\.com))
 omegaCryptos
 kwok[\W_]*+scam
+cyberpunk1
