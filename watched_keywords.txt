@@ -62124,3 +62124,4 @@
 1716301653	Makyen	charismaweb\.ir
 1716301784	Fastnlight	Franceschengenvisa\.co\.uk
 1716302453	Makyen	siliguri(?:[\W_]*+escorts)?
+1716308870	Vickel	ways2well(?!\.com)
