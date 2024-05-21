@@ -62133,3 +62133,4 @@
 1716312471	Makyen	mea[\W_]*+attestation
 1716313899	General Grievance	transitionministriesgroup\.com
 1716316253	Fastnlight	mmkelectricians\.ie
+1716319786	Cow	windocks\.com
