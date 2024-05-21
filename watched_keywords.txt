@@ -62077,3 +62077,4 @@
 1716271225	Cow	therapiva\.co\.in
 1716271291	Cow	JAPStudios(?#reddit)
 1716271326	Cow	(?-i:^JAPStudios$)
+1716271636	cocomac	azure\.atqor\.com
