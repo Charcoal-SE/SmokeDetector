@@ -62079,3 +62079,4 @@
 1716271326	Cow	(?-i:^JAPStudios$)
 1716271719	Makyen	atqor\.com
 1716271740	Makyen	atqor(?!\.com)
+1716274066	Dragonrage	businesshitech\.com
