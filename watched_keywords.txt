@@ -62101,3 +62101,4 @@
 1716231098	Cow	spotsurv\.com
 1716231412	Fastnlight	Trust[\W_]*+Guard[\W_]*+Company
 1716288214	tripleee	toptrendpk\.com
+1716232458	Fastnlight	sumadhurapalaisroyale\.org\.in
