@@ -425,6 +425,9 @@ items:
   - amir.ns.cloudflare.com.
   - kristina.ns.cloudflare.com.
 - ns:
+  - amir.ns.cloudflare.com.
+  - laila.ns.cloudflare.com.
+- ns:
   - amit.ns.cloudflare.com.
   - amy.ns.cloudflare.com.
 - ns:
