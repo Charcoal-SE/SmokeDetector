@@ -62127,3 +62127,4 @@
 1716308783	Vickel	ways2well\.com
 1716308870	Vickel	ways2well(?!\.com)
 1716311116	Vickel	xspaceme(?:@gmail\.com)?
+1716312151	Makyen	beat[\W_]*+educations(?!\.ae(?<=beateducations\.ae))
