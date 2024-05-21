@@ -62080,3 +62080,4 @@
 1716271719	Makyen	atqor\.com
 1716271740	Makyen	atqor(?!\.com)
 1716274066	Dragonrage	businesshitech\.com
+1716275203	Dragonrage	howtoincreasedomainauthority\.com
