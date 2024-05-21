@@ -62078,3 +62078,4 @@
 1716271291	Cow	JAPStudios(?#reddit)
 1716271326	Cow	(?-i:^JAPStudios$)
 1716271636	cocomac	azure\.atqor\.com
+1716271719	Makyen	atqor\.com
