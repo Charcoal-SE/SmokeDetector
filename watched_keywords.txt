@@ -62096,3 +62096,4 @@
 1716285722	tripleee	kfcpakistan\.com
 1716219228	Fastnlight	zindoit\.com
 1716220682	Fastnlight	optimistichackegaius\.co
+1716220825	Fastnlight	OPTIMISTIC[\W_]*+HACKER[\W_]*+GAIUS
