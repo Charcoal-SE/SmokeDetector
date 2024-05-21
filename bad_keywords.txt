@@ -3052,3 +3052,4 @@ omega[\W_]*+recovery(?:[\W_]*+specialist)?(?!\.com(?<=omegarecoveryspecialist\.c
 omegaCryptos
 kwok[\W_]*+scam
 cyberpunk1
+\A.{1,6}\bban me
