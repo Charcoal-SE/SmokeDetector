@@ -3540,6 +3540,9 @@ items:
   - tadeo.ns.cloudflare.com.
 - ns:
   - ruth.ns.cloudflare.com.
+  - vin.ns.cloudflare.com.
+- ns:
+  - ruth.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
   - ryleigh.ns.cloudflare.com.
