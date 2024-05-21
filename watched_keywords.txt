@@ -62076,3 +62076,4 @@
 1716271250	Cow	sfdcfilemanager\.com
 1716271225	Cow	therapiva\.co\.in
 1716271291	Cow	JAPStudios(?#reddit)
+1716271326	Cow	(?-i:^JAPStudios$)
