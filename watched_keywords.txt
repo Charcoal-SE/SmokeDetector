@@ -62091,3 +62091,4 @@
 1716284577	tripleee	cyberpunk[\W_]*+(?:recovery|service)
 1716284713	tripleee	heartveda
 1716285536	tripleee	simplex[\W_]*+technology[\W_]*+solutions
+1716285577	tripleee	simplexts\.net
