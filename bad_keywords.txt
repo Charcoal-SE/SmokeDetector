@@ -3053,3 +3053,4 @@ omegaCryptos
 kwok[\W_]*+scam
 cyberpunk1
 \A.{1,6}\bban me
+consider[\W_]*+banning[\W_]*+my[\W_]*+account
