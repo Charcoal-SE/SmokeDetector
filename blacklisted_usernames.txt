@@ -1038,4 +1038,3 @@ Spammer[\W_]*+of[\W_]*+Many[\W_]*+Sites
 (?-i:^USER_SELF_HARM$)
 (?-i:^LOLI$)
 (?-i:imtiaz ali$)
-(?-i:^Amaracasa$)
