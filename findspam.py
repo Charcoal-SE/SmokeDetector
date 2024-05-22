@@ -2257,7 +2257,7 @@ city_list = [
     "Palam", "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
     "Sarjapur", "Sivakasi", "Sonipat", "Srinagar", "Surat",
-    "Tembisa", "Telangana", "Thane", "Thembisa", "Thiruvananthapuram",
+    "Tembisa", "Telangana", "Thane", "Thembisa", "Thiruvananthapuram", "Thrissur",
     "Tiruchi", "Tiruchirappalli", "Tirupati",
     "Trichinopoly", "Trichy", "Trivandrum", "Tura",
     "Udaipur", "Uttarakhand",
