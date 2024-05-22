@@ -37476,7 +37476,6 @@
 1649313597	Glorfindel	euybike\.com
 1649313619	tripleee	clicbrics\.com
 1649314902	Ryan M	cleaningservis2022\.blogspot
-1649315130	tripleee	smmpakpanel\.com
 1649315338	tripleee	ereviewbiz\.com
 1649316561	Cody Gray	houstontxgaragedoorrepair\.com
 1649316620	Cody Gray	Garage[\W_]*Door[\W_]*Repair
