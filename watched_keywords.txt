@@ -62180,3 +62180,4 @@
 1716393680	Spevacus	mccp-coiffure-bio\.ch
 1716392773	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?+
 1716392589	Fastnlight	acq299507
+1716319786	Cow	windocks\.com
