@@ -62145,3 +62145,4 @@
 1716360092	Dragonrage	quickprinting\.ae
 1716360618	Dragonrage	sh2hab\.com
 1716363797	tripleee	fashis(?:m|t(?:ic|s)?)
+1716364065	tripleee	welcome[\W_]*+to[\W_]*+our[\W_]*+forum
