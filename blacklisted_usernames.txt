@@ -1041,3 +1041,4 @@ Spammer[\W_]*+of[\W_]*+Many[\W_]*+Sites
 (?-i:^Amracasa$)
 (?-i:^FE_REBIRTH$)
 smm[\W_]*+panel
+(?-i:^Catchy Digital Academy$)
