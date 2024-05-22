@@ -3468,6 +3468,9 @@ items:
   - pete.ns.cloudflare.com.
   - zara.ns.cloudflare.com.
 - ns:
+  - peyton.ns.cloudflare.com.
+  - rose.ns.cloudflare.com.
+- ns:
   - phil.ns.cloudflare.com.
   - sonia.ns.cloudflare.com.
 - ns:
