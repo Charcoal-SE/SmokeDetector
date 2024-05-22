@@ -62157,3 +62157,4 @@
 1716373833	tripleee	sanketlife\.in
 1716374177	tripleee	assignmentfox\.com
 1716374874	tripleee	bipinpurushothaman\.com
+1716376613	tripleee	(?-i:^Qamar$)
