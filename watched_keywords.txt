@@ -62178,3 +62178,4 @@
 1716389353	Makyen	m\.tech
 1716389411	Makyen	catchy[\W_]*+digital[\W_]*+academy
 1716393680	Spevacus	mccp-coiffure-bio\.ch
+1716392773	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?+
