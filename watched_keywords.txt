@@ -62181,3 +62181,4 @@
 1716392773	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?+
 1716392589	Fastnlight	acq299507
 1716319786	Cow	windocks\.com
+1716399664	Jeff Schaller	qpassablog\.blogspot
