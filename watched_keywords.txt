@@ -62158,3 +62158,4 @@
 1716374177	tripleee	assignmentfox\.com
 1716374874	tripleee	bipinpurushothaman\.com
 1716376613	tripleee	(?-i:^Qamar$)
+1716376820	tripleee	visualpakistan\.com
