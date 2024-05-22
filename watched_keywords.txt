@@ -62147,3 +62147,4 @@
 1716364065	tripleee	welcome[\W_]*+to[\W_]*+our[\W_]*+forum
 1716368817	tripleee	uneligne\.ch
 1716370117	tripleee	somewhereinblog\.net
+1716371197	tripleee	(?-i:^Himanshu Ratawal$)
