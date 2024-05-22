@@ -4079,6 +4079,9 @@ items:
   - rns29.webhostbox.net.
   - rns30.webhostbox.net.
 - ns:
+  - rns407.webhostbox.net.
+  - rns408.webhostbox.net.
+- ns:
   - rns41.webhostbox.net.
   - rns42.webhostbox.net.
 - ns:
