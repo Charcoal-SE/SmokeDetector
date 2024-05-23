@@ -1263,6 +1263,9 @@ items:
   - felipe.ns.cloudflare.com.
 - ns:
   - chloe.ns.cloudflare.com.
+  - jake.ns.cloudflare.com.
+- ns:
+  - chloe.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
 - ns:
   - chloe.ns.cloudflare.com.
