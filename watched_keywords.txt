@@ -62201,3 +62201,4 @@
 1716445454	Dragonrage	vydehiayurveda\.com
 1716445538	Makyen	vydehi[\W_]*+ayurveda(?!\.com(?<=vydehiayurveda\.com))
 1716446983	tripleee	codingwithfad\.com
+1716447102	tripleee	flights-sale\.com
