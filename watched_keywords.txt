@@ -62216,3 +62216,4 @@
 1716459894	tripleee	maxyfi(?!\.com)(?<!^maxyfi$)
 1716460415	tripleee	naukrifinder\.in
 1716461398	Jeff Schaller	electronifyindia\.com
+1716442481	Cow	swordskingdom\.co\.uk
