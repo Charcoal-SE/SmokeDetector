@@ -2365,6 +2365,9 @@ items:
   - kevin.ns.cloudflare.com.
 - ns:
   - hope.ns.cloudflare.com.
+  - huxley.ns.cloudflare.com.
+- ns:
+  - hope.ns.cloudflare.com.
   - neil.ns.cloudflare.com.
 - ns:
   - houston.ns.cloudflare.com.
