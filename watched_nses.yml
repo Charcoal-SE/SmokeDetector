@@ -2014,6 +2014,9 @@ items:
   - ken.ns.cloudflare.com.
 - ns:
   - erin.ns.cloudflare.com.
+  - oswald.ns.cloudflare.com.
+- ns:
+  - erin.ns.cloudflare.com.
   - vern.ns.cloudflare.com.
 - ns:
   - erin.ns.cloudflare.com.
