@@ -1043,3 +1043,4 @@ Spammer[\W_]*+of[\W_]*+Many[\W_]*+Sites
 smm[\W_]*+panel
 (?-i:^Catchy Digital Academy$)
 (?-i:^FELINE_GOLD$)
+(?-i:^Ledger Labs$)
