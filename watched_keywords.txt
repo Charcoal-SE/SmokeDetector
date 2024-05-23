@@ -43505,7 +43505,6 @@
 1665554472	cigien	coupongizer\.com
 1665558731	cigien	esellerhub\.com
 1665561883	Makyen	maxyfi\.com
-1665561918	Makyen	maxyfi(?!\.com)
 1665571137	tripleee	andersenlab\.de
 1665580801	Jeff Schaller	agensogwin\.com
 1665585579	Jeff Schaller	zenkoders\.com
