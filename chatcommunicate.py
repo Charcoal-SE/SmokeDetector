@@ -330,7 +330,6 @@ def on_msg(msg, client):
 
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
-    print("TESTING")
     message = msg.message
     room_ident = (client.host, message.room.id)
 
@@ -345,17 +344,7 @@ def on_msg(msg, client):
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
-    if message.parent:
-        try:
-            if message.parent.owner.id == client._br.user_id:
-                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
-                cmd = GlobalVars.parser.unescape(strip_mention)
-
-                result = dispatch_reply_command(message.parent, message, cmd)
-                send_reply_if_not_blank(room_ident, message.id, result)
-        except ValueError:
-            pass
-    elif message.content.lower().startswith("sd "):
+    if message.content.lower().startswith("sd "):
         result = dispatch_shorthand_command(message)
         send_reply_if_not_blank(room_ident, message.id, result)
     elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
