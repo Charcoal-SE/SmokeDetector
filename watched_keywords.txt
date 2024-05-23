@@ -62229,3 +62229,4 @@
 1716467442	tripleee	iot[\W_]*+today(?<!(?-i:^iot Today$))
 1716467600	tripleee	delhibazaar\.net
 1716467668	tripleee	google\.com/url\?q=https?
+1716467988	General Grievance	svasthvida\.com
