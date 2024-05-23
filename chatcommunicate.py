@@ -330,7 +330,7 @@ def on_msg(msg, client):
 
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
-
+    print("TESTING")
     message = msg.message
     room_ident = (client.host, message.room.id)
 
