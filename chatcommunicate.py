@@ -333,12 +333,6 @@ def on_msg(msg, client):
     message = msg.message
     room_ident = (client.host, message.room.id)
 
-    with _room_roles_lock:
-        if 'direct' in _room_roles and room_ident in _room_roles['direct']:
-            SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
-
-        return
-
     if message.content.startswith("<div class='partial'>"):
         message.content = message.content[21:]
         if message.content.endswith("</div>"):
