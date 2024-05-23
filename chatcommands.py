@@ -718,7 +718,7 @@ def reject(msg, args, alias_used="reject"):
     force = alias_used.split("-")[-1] == "force"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     pr_object = GitHubManager.get_pull_request(pr_id)
-    pr_body = pr_object['body']
+    pr_body = pr_object.json()['body']
     pr_author_id = regex.search(r"(?<=\/users\/)\d+", pr_body).group(0)
     self_reject = pr_author_id == msg.owner.id
     if not code_permissions and not self_reject:
