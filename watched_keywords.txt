@@ -49998,7 +49998,7 @@
 1683295298	Jeff Schaller	giveitaread\.net
 1683297444	Jeff Schaller	hobsonsbaydental\.com\.au
 1683298665	Jeff Schaller	eurostop\.com
-1683303314	tripleee	^Charcoal\w*+(?=.{0,32}$)(?!<(?-i:^charcoalblock$))
+1683303314	tripleee	^Charcoal\w*+(?=.{0,32}$)(?<!(?-i:^charcoalblock$))
 1683303673	tripleee	Solutionagent440(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1683303738	tripleee	of[\W_]*+fund[\W_]*+recovery
 1683316604	Spevacus	amritkrishna\.com
@@ -50317,7 +50317,7 @@
 1684134521	Makyen	bitcoin[\W_]*+recovery
 1684134556	Makyen	trustworth(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?
 1684134630	tripleee	auditzy\.com
-1684140840	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))(?!<(?-i:^MS ASIAN FILM ACADEMY$))
+1684140840	tripleee	ms[\W_]*+asian[\W_]*+film[\W_]*+academy(?!\.com(?<=msasianfilmacademy\.com))(?<!(?-i:^MS ASIAN FILM ACADEMY$))
 1684141090	tripleee	24×7(?<=\{24×7)(?=\})
 1684141422	tripleee	ezyro\.com
 1684142557	tripleee	journalpsij\.com
@@ -61049,7 +61049,7 @@
 1714031907	Nick	giakecatech\.com
 1714032772	Nick	lipobattery\.in
 1714037396	tripleee	(?-i:^Musix Clan$)
-1714037801	tripleee	the[\W_]*+next[\W_]*+tech(?!\.com(!<=the-next-tech\.com))(?<!(?-i:^The Next Tech$))
+1714037801	tripleee	the[\W_]*+next[\W_]*+tech(?!\.com(?!<the-next-tech\.com))(?<!(?-i:^The Next Tech$))
 1714038778	tripleee	tekroi\.com
 1714038811	tripleee	tekroi(?!\.com)
 1714039233	tripleee	habiliteclinics\.com
@@ -61862,7 +61862,7 @@
 1715822945	Jeff Schaller	(?-i:vRx8JAFKfQIwYjQ1)(?#t.me)
 1715823740	Jeff Schaller	iamhindu\.in
 1715827856	Makyen	taigo88\.poker
-1715827876	Makyen	taigo88[\W_]*+poker(?!<taigo88\.poker)
+1715827876	Makyen	taigo88[\W_]*+poker(?<!taigo88\.poker)
 1715828083	Makyen	giogamer\.com
 1715828104	Makyen	iranwushufed\.ir
 1715838556	VLAZ	pvaprovider\.com
