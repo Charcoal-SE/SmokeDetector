@@ -62236,3 +62236,4 @@
 1716471368	Spevacus	luxbisys\.com
 1716474382	Makyen	fst[\W_]*+india(?!\.in(?<=fstindia\.in))
 1716475612	General Grievance	woehler\.de
+1716477103	Xander Henderson	Beestar
