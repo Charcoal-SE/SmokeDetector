@@ -60604,7 +60604,6 @@
 1712964497	Jeff Schaller	BCSBONUS
 1712970456	Jeff Schaller	deedpolluk\.co\.uk
 1712974255	Makyen	empfehlungscode
-1712974382	Makyen	бонус
 1712974430	Makyen	реферальный код
 1712974897	Nick	destinedtoberevealed\.com
 1712980993	Makyen	code[\W_]*+de[\W_]*+parrainage
