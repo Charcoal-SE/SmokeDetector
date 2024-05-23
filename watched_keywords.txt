@@ -29383,7 +29383,6 @@
 1623421758	cigien	absolutereviewer\.co\.in
 1623437790	cigien	billingfreedom\.com
 1623437843	cigien	billing[\W_]*+freedom(?!\.com(?<=billingfreedom\.com))
-1623441462	Mast	buypackagingboxes\.co\.uk
 1623446944	Spevacus	ebnw\.net
 1623451145	Makyen	lgctoken\.com
 1623455062	cigien	docdroid\.com
