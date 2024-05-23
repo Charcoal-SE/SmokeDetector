@@ -1476,6 +1476,9 @@ items:
   - maxim.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
+  - hope.ns.cloudflare.com.
+- ns:
+  - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
