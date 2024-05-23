@@ -62199,3 +62199,4 @@
 1716444428	VLAZ	gembetasia\.com
 1716444448	VLAZ	gembet
 1716445454	Dragonrage	vydehiayurveda\.com
+1716445538	Makyen	vydehi[\W_]*+ayurveda(?!\.com(?<=vydehiayurveda\.com))
