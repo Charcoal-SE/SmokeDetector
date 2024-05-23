@@ -62231,3 +62231,4 @@
 1716467668	tripleee	google\.com/url\?q=https?
 1716467988	General Grievance	svasthvida\.com
 1716468811	tripleee	beautybybie\.com
+1716469816	tripleee	rohitkundale\.wordpress\.com
