@@ -2238,6 +2238,9 @@ items:
   - grannbo.ns.cloudflare.com.
   - lamar.ns.cloudflare.com.
 - ns:
+  - grannbo.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
+- ns:
   - greg.ns.cloudflare.com.
   - hera.ns.cloudflare.com.
 - ns:
