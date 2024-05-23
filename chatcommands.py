@@ -676,9 +676,8 @@ def approve(msg, pr_id):
             msg._client.host, msg.owner.id)
         comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
-            # The image of (blacklisters|approved) from PullApprove
-            "https://camo.githubusercontent.com/7d7689a88a6788541a0a87c6605c4fdc2475569f/68747470733a2f2f696d672e"
-            "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d617070726f7665642d627269676874677265656e")
+            # The image of (blacklisters|approved) from Shields.io
+            "https://img.shields.io/badge/blacklisters-approved-green")
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
@@ -722,10 +721,7 @@ def reject(msg, args, alias_used="reject"):
     if len(reason) < 20 and not force:
         raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
                            " can learn from their mistakes. Use `-force` to force the reject")
-    rejected_image = "https://camo.githubusercontent.com/" \
-                     "77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a" \
-                     "2f2f7261737465722e736869656c64732e696f2f62616467652f626c6" \
-                     "1636b6c6973746572732d72656a65637465642d7265642e706e67"
+    rejected_image = "https://img.shields.io/badge/blacklisters-rejected-red"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
