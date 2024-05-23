@@ -62196,3 +62196,4 @@
 1716444160	VLAZ	beyoustyles\.com
 1716444190	VLAZ	be[\W_]*+you[\W_]*+styles(?!\.com(?<=beyoustyles\.com))
 1716444245	Dragonrage	fstindia\.in
+1716444428	VLAZ	gembetasia\.com
