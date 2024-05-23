@@ -62213,3 +62213,4 @@
 1716456591	tripleee	nanglife\.com
 1716458964	tripleee	consult-ix\.vn
 1716459055	tripleee	123hpmart\.com
+1716459894	tripleee	maxyfi(?!\.com)(?<!^maxyfi$)
