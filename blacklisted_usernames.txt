@@ -1044,3 +1044,4 @@ smm[\W_]*+panel
 (?-i:^Catchy Digital Academy$)
 (?-i:^FELINE_GOLD$)
 (?-i:^Ledger Labs$)
+^maxyfi$
