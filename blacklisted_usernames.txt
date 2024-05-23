@@ -1045,3 +1045,4 @@ smm[\W_]*+panel
 (?-i:^FELINE_GOLD$)
 (?-i:^Ledger Labs$)
 ^maxyfi$
+(?-i:^Mama Jamal$)
