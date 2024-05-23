@@ -829,9 +829,6 @@ items:
   - kami.ns.cloudflare.com.
 - ns:
   - ben.ns.cloudflare.com.
-  - laila.ns.cloudflare.com.
-- ns:
-  - ben.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
   - ben.ns.cloudflare.com.

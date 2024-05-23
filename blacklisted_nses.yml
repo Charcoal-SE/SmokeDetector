@@ -131,6 +131,9 @@ items:
   - bayan.ns.cloudflare.com.
   - mia.ns.cloudflare.com.
 - ns:
+  - ben.ns.cloudflare.com.
+  - laila.ns.cloudflare.com.
+- ns:
   - betty.ns.cloudflare.com.
   - roman.ns.cloudflare.com.
 - ns:
