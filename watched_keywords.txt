@@ -62202,3 +62202,4 @@
 1716445538	Makyen	vydehi[\W_]*+ayurveda(?!\.com(?<=vydehiayurveda\.com))
 1716446983	tripleee	codingwithfad\.com
 1716447102	tripleee	flights-sale\.com
+1716450107	Nick	brandwithbase\.com
