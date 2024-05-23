@@ -48275,7 +48275,6 @@
 1678966283	Jeff Schaller	usaretreat\.com
 1678967710	Jeff Schaller	adelaideresumewriters\.com
 1678969229	tripleee	trustmainly@gmail\.com
-1678969681	tripleee	gunayydin\.com
 1678969965	tripleee	wpit18
 1678975041	Jeff Schaller	pintdd\.com
 1678975884	tripleee	pintdd(?!\.com)
