@@ -62223,3 +62223,4 @@
 1716462971	tripleee	hamrosan\.com
 1716464546	tripleee	mysanskritam\.com
 1716464589	tripleee	zempoza[\W_]*+blood[\W_]*+sugar[\W_]*+support
+1716465603	Jeff Schaller	atfglobals\.com
