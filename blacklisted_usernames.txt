@@ -1046,3 +1046,4 @@ smm[\W_]*+panel
 (?-i:^Ledger Labs$)
 ^maxyfi$
 (?-i:^Mama Jamal$)
+(?-i:^Mama Janal$)
