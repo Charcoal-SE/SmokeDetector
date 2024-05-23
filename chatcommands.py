@@ -720,8 +720,6 @@ def reject(msg, args, alias_used="reject"):
     pr_object = GitHubManager.get_pull_request(pr_id)
     pr_body = pr_object.json()['body']
     pr_author_id = regex.search(r"(?<=\/users\/)\d+", pr_body).group(0)
-    print(pr_author_id)
-    print(msg.owner.id)
     self_reject = int(pr_author_id) == int(msg.owner.id)
     if not code_permissions and not self_reject:
         raise CmdException("You need blacklist manager privileges to reject pull requests " \
