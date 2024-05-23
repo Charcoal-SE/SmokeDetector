@@ -722,7 +722,7 @@ def reject(msg, args, alias_used="reject"):
     pr_author_id = regex.search(r"(?<=\/users\/)\d+", pr_body).group(0)
     self_reject = int(pr_author_id) == int(msg.owner.id)
     if not code_permissions and not self_reject:
-        raise CmdException("You need blacklist manager privileges to reject pull requests " \
+        raise CmdException("You need blacklist manager privileges to reject pull requests "
                            "that aren't created by you.")
     if len(reason) < 20 and not force:
         raise CmdException("Please provide an adequate reason for rejection that is at least"
@@ -734,10 +734,10 @@ def reject(msg, args, alias_used="reject"):
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                        chat_user_profile_link, msg.room.name)
+                                                                    chat_user_profile_link, msg.room.name)
     if self_reject:
         rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                            chat_user_profile_link, msg.room.name)
+                                                                            chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
