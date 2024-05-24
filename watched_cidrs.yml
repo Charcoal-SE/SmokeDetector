@@ -4084,6 +4084,7 @@ items:
 - comment: git.io, ejabberd etc - don't watch
   disable: true
   ip: 18.205.36.100
+- ip: 18.205.45.38
 - ip: 18.209.216.199
 - ip: 18.210.4.247
 - ip: 18.211.207.209
