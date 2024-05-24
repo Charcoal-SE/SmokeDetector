@@ -1047,3 +1047,4 @@ smm[\W_]*+panel
 (?-i:^Mama Jamal$)
 (?-i:^Mama Janal$)
 (?-i:^iot Today$)
+(?-i:^TechTrends? Today$)
