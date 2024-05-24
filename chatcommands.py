@@ -724,7 +724,10 @@ def reject(msg, args, alias_used="reject"):
         pr_author_id = regex.search(r"(?<=\/users\/)\d+", pr_body).group(0)
         self_reject = int(pr_author_id) == int(msg.owner.id)
     except KeyError:
+        # This likely occurred because Git credentials aren't established
         pass
+    except Exception as e:
+        raise CmdException(str(e))
     if not code_permissions and not self_reject:
         raise CmdException("You need blacklist manager privileges to reject pull requests " \
                            "that aren't created by you.")
