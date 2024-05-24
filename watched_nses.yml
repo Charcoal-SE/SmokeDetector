@@ -494,6 +494,9 @@ items:
   - angela.ns.cloudflare.com.
   - austin.ns.cloudflare.com.
 - ns:
+  - angela.ns.cloudflare.com.
+  - eric.ns.cloudflare.com.
+- ns:
   - anirban.ns.cloudflare.com.
   - dee.ns.cloudflare.com.
 - ns:
