@@ -1017,7 +1017,6 @@ Gray Walker
 (?-i:^Ethan carter$)
 (?-i:^Loan App$)
 (?-i:^hitclubdance$)
-(?-i:^TechTrend Today$)
 (?-i:^Valcus PVT LTD$)
 (?-i:^RBV_1977$)
 (?-i:^janvi webunity$)
