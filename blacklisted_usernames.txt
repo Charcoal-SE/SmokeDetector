@@ -1048,3 +1048,4 @@ smm[\W_]*+panel
 (?-i:^Mama Janal$)
 (?-i:^iot Today$)
 (?-i:^TechTrends? Today$)
+(?-i:^Zarmadad Signs$)
