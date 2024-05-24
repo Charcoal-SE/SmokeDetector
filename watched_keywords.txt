@@ -62249,3 +62249,4 @@
 1716511602	Nick	Dada[\W_]*+Magical
 1716520408	Dragonrage	calibudsonlineshop\.com
 1716524598	Nick	pokemonfusioncalculator\.net
+1716525747	Cow	themoderntimesstoic\.com
