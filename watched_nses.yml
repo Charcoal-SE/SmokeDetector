@@ -2527,6 +2527,9 @@ items:
   - sofia.ns.cloudflare.com.
 - ns:
   - janet.ns.cloudflare.com.
+  - javon.ns.cloudflare.com.
+- ns:
+  - janet.ns.cloudflare.com.
   - lou.ns.cloudflare.com.
 - ns:
   - jarred.ns.cloudflare.com.
