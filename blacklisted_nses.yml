@@ -96,6 +96,9 @@ items:
   - toby.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
+  - connie.ns.cloudflare.com.
+- ns:
+  - aragorn.ns.cloudflare.com.
   - gwen.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
