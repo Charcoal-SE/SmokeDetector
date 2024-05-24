@@ -2127,6 +2127,9 @@ items:
   - fiona.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
+  - fish.ns.cloudflare.com.
+  - houston.ns.cloudflare.com.
+- ns:
   - frank.ns.cloudflare.com.
   - love.ns.cloudflare.com.
 - ns:
