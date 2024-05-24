@@ -371,6 +371,9 @@ items:
   - alina.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - alina.ns.cloudflare.com.
+  - patrick.ns.cloudflare.com.
+- ns:
   - aliza.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
