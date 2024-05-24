@@ -757,6 +757,9 @@ items:
   - jeff.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
+  - kip.ns.cloudflare.com.
+- ns:
+  - barbara.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
