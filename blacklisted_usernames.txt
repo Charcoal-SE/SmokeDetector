@@ -1049,3 +1049,4 @@ smm[\W_]*+panel
 (?-i:^iot Today$)
 (?-i:^TechTrends? Today$)
 (?-i:^Zarmadad Signs$)
+(?-i:^Surah Al-Mulk$)
