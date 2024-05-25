@@ -62299,3 +62299,4 @@
 1716639546	Cow	homelabels\.us
 1716640172	Cow	optimistic[\W_]*+hack[\W_]*+gaius
 1716640833	Cow	easydriveae\.com
+1716645814	Makyen	d(?:octo)?r[\W_]*+sikies(?:@gmail\.com)?(?:[\W_]*+herbs)?
