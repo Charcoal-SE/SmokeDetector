@@ -62302,3 +62302,4 @@
 1716645814	Makyen	d(?:octo)?r[\W_]*+sikies(?:@gmail\.com)?(?:[\W_]*+herbs)?
 1716646988	Makyen	kai[\W_]*+herbals(?!\.com(?<=kaiherbals\.com))
 1716655735	Makyen	canineproducts\.in
+1716662995	Makyen	okdermo
