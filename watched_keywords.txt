@@ -62278,3 +62278,4 @@
 1716590952	Makyen	raceias(?!\.com)
 1716589757	Vickel	datetimecheck\.com
 1716594887	Makyen	g[\W_]*+o[\W_]*+a[\W_]*+t[\W_]*+s[\W_]*+e[\W_]*+x
+1716603672	Jeff Schaller	synergycreationsdigital\.com
