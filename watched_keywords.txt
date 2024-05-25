@@ -62297,3 +62297,4 @@
 1716639050	Jeff Schaller	Leadsprovider756
 1716639072	Jeff Schaller	LeadsproviderUSA
 1716639546	Cow	homelabels\.us
+1716640172	Cow	optimistic[\W_]*+hack[\W_]*+gaius
