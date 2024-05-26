@@ -62314,3 +62314,4 @@
 1716700473	Makyen	(?-i:c0cofelon)(?#t.me)
 1716703834	Nick	ghumhaikisikeypyaarmein\.net
 1716703903	Nick	Ghum[\W_]*+Hai[\W_]*+Kisi[\W_]*+Ke[\W_]*+Pyar[\W_]*+Mein(?!\.net(?<=ghumhaikisikeypyaarmein\.net))
+1716704046	Nick	dramacool\.info\.tr
