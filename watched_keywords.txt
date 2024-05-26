@@ -62308,3 +62308,4 @@
 1716665002	Cow	royalcakeclub\.com
 1716687320	Makyen	ogrenci[\W_]*+gundemi(?!\.com)
 1716687342	Makyen	öğrenci[\W_]*+gündemi
+1716695467	Nick	eduhq\.pk
