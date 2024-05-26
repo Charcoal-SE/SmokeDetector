@@ -62316,3 +62316,4 @@
 1716703903	Nick	Ghum[\W_]*+Hai[\W_]*+Kisi[\W_]*+Ke[\W_]*+Pyar[\W_]*+Mein(?!\.net(?<=ghumhaikisikeypyaarmein\.net))
 1716704046	Nick	dramacool\.info\.tr
 1716705264	Makyen	lookscart\.com
+1716717201	Cow	abhishekkumar943006(?#@gmail)
