@@ -62310,3 +62310,4 @@
 1716687342	Makyen	öğrenci[\W_]*+gündemi
 1716695467	Nick	eduhq\.pk
 1716699226	Makyen	solarsgadget\.com
+1716699264	Makyen	cropa\.co\.nz
