@@ -62350,7 +62350,6 @@
 1716810934	tripleee	hunterbharat\.com
 1716811726	tripleee	absapex\.com
 1716811834	Vickel	wormtokyo\.com
-1716811932	tripleee	(?-i:^Jane$)
 1716811968	Vickel	poultryrecipes\.co\.in
 1716812117	Nick	Fly[\W_]*+fair[\W_]*+Travels(?!\.com(?<=flyfairtravels\.com))
 1716812890	Vickel	twoplusa\.com
