@@ -330,15 +330,33 @@ def on_msg(msg, client):
 
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
+
     message = msg.message
     room_ident = (client.host, message.room.id)
+
+    with _room_roles_lock:
+        if message.owner.id == client._br.user_id:
+            if 'direct' in _room_roles and room_ident in _room_roles['direct']:
+                SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+
+            return
 
     if message.content.startswith("<div class='partial'>"):
         message.content = message.content[21:]
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
-    if message.content.lower().startswith("sd "):
+    if message.parent:
+        try:
+            if message.parent.owner.id == client._br.user_id:
+                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
+                cmd = GlobalVars.parser.unescape(strip_mention)
+
+                result = dispatch_reply_command(message.parent, message, cmd)
+                send_reply_if_not_blank(room_ident, message.id, result)
+        except ValueError:
+            pass
+    elif message.content.lower().startswith("sd "):
         result = dispatch_shorthand_command(message)
         send_reply_if_not_blank(room_ident, message.id, result)
     elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
