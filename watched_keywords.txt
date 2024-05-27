@@ -62336,3 +62336,4 @@
 1716796735	tripleee	multi[\W_]*+wood
 1716798081	tripleee	texasbuckles\.com
 1716798702	Cow	mountviews\.co
+1716800536	tripleee	theressomusic\.com
