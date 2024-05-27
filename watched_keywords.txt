@@ -62357,3 +62357,4 @@
 1716813349	Vickel	upvctehranwin\.com
 1716814286	Vickel	sproutsitter\.com
 1716816159	Vickel	dreamtourtoindia\.com
+1716816507	Makyen	genericcures(?!\.com)
