@@ -739,10 +739,10 @@ def reject(msg, args, alias_used="reject"):
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                        chat_user_profile_link, msg.room.name)
+                                                                  chat_user_profile_link, msg.room.name)
     if self_reject:
         rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                            chat_user_profile_link, msg.room.name)
+                                                                           chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
