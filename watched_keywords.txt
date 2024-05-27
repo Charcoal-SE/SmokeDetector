@@ -62327,3 +62327,4 @@
 1716765374	Nick	Tobaccos?[\W_]*+Stock(?!\.com(?<=tobaccostock\.com))
 1716789207	Cow	oscenox\.com
 1716789831	Cow	dehradundirectory\.in
+1716790445	tripleee	(?-i:hhqiao)(?# t.me)
