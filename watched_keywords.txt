@@ -62330,3 +62330,4 @@
 1716791791	tripleee	viwizard\.com
 1716791219	Cow	vidyavinod\.com
 1716793327	tripleee	tradjenta
+1716793346	tripleee	(?-i:^zara khan$)
