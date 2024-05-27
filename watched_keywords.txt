@@ -62364,3 +62364,4 @@
 1716827688	Vickel	logicmount\.com
 1716828041	Vickel	logic[\W_]*+mount(?!\.com(?<=logicmount\.com))
 1716839612	Vickel	ajmanproperties\.ae
+1716852465	Vickel	pixaflip\.com
