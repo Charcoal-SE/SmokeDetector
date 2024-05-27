@@ -62326,3 +62326,4 @@
 1716750608	Vickel	searchtips\.online
 1716765203	Nick	tobaccostock\.com
 1716765374	Nick	Tobaccos?[\W_]*+Stock(?!\.com(?<=tobaccostock\.com))
+1716789207	Cow	oscenox\.com
