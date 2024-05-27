@@ -62340,3 +62340,4 @@
 1716803425	tripleee	(?-i:^lxin$)
 1716804146	tripleee	sekhlo\.pk
 1716804337	tripleee	detailingmachines\.com
+1716805262	Cow	flyfairtravels\.com
