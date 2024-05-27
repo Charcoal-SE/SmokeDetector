@@ -62332,3 +62332,4 @@
 1716793327	tripleee	tradjenta
 1716793346	tripleee	(?-i:^zara khan$)
 1716795230	tripleee	dumpmedia\.com
+1716795400	tripleee	smmpanelpro\.com
