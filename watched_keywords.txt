@@ -62337,3 +62337,4 @@
 1716798081	tripleee	texasbuckles\.com
 1716798702	Cow	mountviews\.co
 1716800536	tripleee	theressomusic\.com
+1716803122	tripleee	(?-i:^Layla Taylor$)
