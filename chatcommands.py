@@ -723,11 +723,11 @@ def reject(msg, args, alias_used="reject"):
         if 'body' in pr_json:
             contains_pr_author_id = regex.search(r"(?<=\/users\/)" + str(msg.owner.id),
                                                  pr_json['body'])
-            self_reject = not contains_pr_author_id is None
+            self_reject = contains_pr_author_id is not None
     except Exception as e:
         raise CmdException(str(e))
     if not code_permissions and not self_reject:
-        raise CmdException("You need blacklist manager privileges to reject pull requests " \
+        raise CmdException("You need blacklist manager privileges to reject pull requests "
                            "that aren't created by you.")
     if len(reason) < 20 and not force:
         raise CmdException("Please provide an adequate reason for rejection that is at least"
