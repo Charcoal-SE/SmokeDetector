@@ -62357,3 +62357,4 @@
 1716814286	Vickel	sproutsitter\.com
 1716816159	Vickel	dreamtourtoindia\.com
 1716816507	Makyen	genericcures(?!\.com)
+1716821355	Jeff Schaller	techhubgadgets\.com
