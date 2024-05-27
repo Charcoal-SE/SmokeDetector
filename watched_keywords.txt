@@ -54803,7 +54803,6 @@
 1700131717	cigien	wozbuz\.com
 1700131755	cigien	smartmentors\.net
 1700133566	Jeff Schaller	daboost\.io
-1700134212	Jeff Schaller	authorsbreeze\.com
 1700138949	Jeff Schaller	limoudxb\.com
 1700139495	cigien	richtasty\.com
 1700142524	Vickel	jontanconsulting\.com
