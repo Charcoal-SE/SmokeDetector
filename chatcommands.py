@@ -719,17 +719,15 @@ def reject(msg, args, alias_used="reject"):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     self_reject = False
     try:
-        pr_object = GitHubManager.get_pull_request(pr_id)
-        pr_body = pr_object.json()['body']
-        pr_author_id = regex.search(r"(?<=\/users\/)\d+", pr_body).group(0)
-        self_reject = int(pr_author_id) == int(msg.owner.id)
-    except KeyError:
-        # This likely occurred because Git credentials aren't established
-        pass
+        pr_json = GitHubManager.get_pull_request(pr_id).json()
+        if 'body' in pr_json:
+            contains_pr_author_id = regex.search(r"(?<=\/users\/)" + str(msg.owner.id),
+                                                 pr_json['body'])
+            self_reject = not contains_pr_author_id is None
     except Exception as e:
         raise CmdException(str(e))
     if not code_permissions and not self_reject:
-        raise CmdException("You need blacklist manager privileges to reject pull requests "
+        raise CmdException("You need blacklist manager privileges to reject pull requests " \
                            "that aren't created by you.")
     if len(reason) < 20 and not force:
         raise CmdException("Please provide an adequate reason for rejection that is at least"
@@ -741,10 +739,10 @@ def reject(msg, args, alias_used="reject"):
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                  chat_user_profile_link, msg.room.name)
+                        chat_user_profile_link, msg.room.name)
     if self_reject:
         rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                           chat_user_profile_link, msg.room.name)
+                            chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
