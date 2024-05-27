@@ -721,9 +721,9 @@ def reject(msg, args, alias_used="reject"):
     try:
         pr_json = GitHubManager.get_pull_request(pr_id).json()
         if 'body' in pr_json:
-            contains_pr_author_id = regex.search(r"(?<=\/users\/)" + str(msg.owner.id),
+            pr_authored_by_rejector = regex.search(r"(?<=\/users\/)" + str(msg.owner.id),
                                                  pr_json['body'])
-            self_reject = contains_pr_author_id is not None
+            self_reject = pr_authored_by_rejector is not None
     except Exception as e:
         raise CmdException(str(e))
     if not code_permissions and not self_reject:
