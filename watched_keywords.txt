@@ -62349,3 +62349,4 @@
 1716810737	tripleee	freeastrologyservice\.com
 1716810934	tripleee	hunterbharat\.com
 1716811726	tripleee	absapex\.com
+1716811838	tripleee	(^-i:^Jane$)
