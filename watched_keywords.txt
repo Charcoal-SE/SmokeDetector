@@ -62345,3 +62345,4 @@
 1716807891	tripleee	NAVTTC
 1716809219	tripleee	anant[\W_]*+equipment
 1716809266	tripleee	(?-i:kKv9Phx)(?# g.co)
+1716810441	tripleee	STOCKAXEL
