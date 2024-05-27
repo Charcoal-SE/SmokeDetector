@@ -4498,11 +4498,6 @@ items:
   - ns-318.awsdns-39.com.
   - ns-711.awsdns-24.net.
 - ns:
-  - ns-1342.awsdns-39.org.
-  - ns-1592.awsdns-07.co.uk.
-  - ns-510.awsdns-63.com.
-  - ns-750.awsdns-29.net.
-- ns:
   - ns-1323.awsdns-37.org.
   - ns-1548.awsdns-01.co.uk.
   - ns-230.awsdns-28.com.
@@ -4514,9 +4509,19 @@ items:
   - ns-568.awsdns-07.net.
 - ns:
   - ns-1342.awsdns-39.org.
+  - ns-1592.awsdns-07.co.uk.
+  - ns-510.awsdns-63.com.
+  - ns-750.awsdns-29.net.
+- ns:
+  - ns-1342.awsdns-39.org.
   - ns-1927.awsdns-48.co.uk.
   - ns-395.awsdns-49.com.
   - ns-743.awsdns-28.net.
+- ns:
+  - ns-1344.awsdns-40.org.
+  - ns-139.awsdns-17.com.
+  - ns-1726.awsdns-23.co.uk.
+  - ns-798.awsdns-35.net.
 - ns:
   - ns-1344.awsdns-40.org.
   - ns-1729.awsdns-24.co.uk.
