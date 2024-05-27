@@ -1131,7 +1131,7 @@ def customer_support_phrase(s, site):  # flexible detection of customer service
         ]))).sub('', s)
     shortened = excluded[0:300].lower()  # If applied to body, use just the beginning: otherwise many false positives.
     shortened = regex.sub(r"[^A-Za-z0-9\s]", "", shortened)   # deobfuscate
-    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
+    phrase = regex.compile(r"(tech(nical)? support)|((support|service|dealer|contact|help(line)?) (telephone|phone|"
                            r"number))").search(shortened)
     if phrase:
         return True, u"Key phrase: *{}*".format(phrase.group(0))
@@ -1149,7 +1149,7 @@ def scam_aimed_at_customers(s, site):  # Scams aimed at customers of specific co
     digits = len(regex.compile(r"\d").findall(s))
     if business and digits >= 5:
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
-                                 r"contact|tech|technical|telephone|number)\b").findall(s)
+                                 r"contact|dealer|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
             return True, u"Targeting *{}* customers. Keywords: *{}*".format(business.group(0), matches)
@@ -1323,7 +1323,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
 
     # FIXME/TODO: Remove "help" once WebApps has stopped being hit with gmail help spam. (added: Art, 2018-10-17)
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
-                            r"help|tech|technical|telephone|number)($| )")
+                            r"help|dealer|tech|technical|telephone|number)($| )")
     for link_text in links:
         keywords_match = keywords.search(link_text)
         if keywords_match:
@@ -2051,7 +2051,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "" r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|institutions?|consultants?"
     "" r"|automation|sex|services?|kindergarten|banks?"
     "" r"|services?|maintenance|clinic|surgeons?|treatments?|rehabilitation"
-    "" r"|studios?|designers?"
+    "" r"|studios?|designers?|dealers?"
     "" r"|restaurants?|food|cuisine|delicac(?:y|ies)"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
