@@ -55,6 +55,7 @@ items:
 - asn: '31863'
   comment: 32/76 over a year
   disable: true
+- asn: '31708'
 - asn: '32244'
   comment: 164/714 over 7 months
   disable: true
