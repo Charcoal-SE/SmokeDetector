@@ -62355,3 +62355,4 @@
 1716812117	Nick	Fly[\W_]*+fair[\W_]*+Travels(?!\.com(?<=flyfairtravels\.com))
 1716812890	Vickel	twoplusa\.com
 1716813349	Vickel	upvctehranwin\.com
+1716814286	Vickel	sproutsitter\.com
