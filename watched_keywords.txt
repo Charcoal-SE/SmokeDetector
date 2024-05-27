@@ -62350,3 +62350,4 @@
 1716810934	tripleee	hunterbharat\.com
 1716811726	tripleee	absapex\.com
 1716811834	Vickel	wormtokyo\.com
+1716811932	tripleee	(?-i:^Jane$)
