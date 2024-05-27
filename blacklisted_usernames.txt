@@ -1051,3 +1051,4 @@ smm[\W_]*+panel
 (?-i:^Zarmadad Signs$)
 (?-i:^Surah Al-Mulk$)
 (?-i:^business mlm software$)
+(?-i:^Imarticus Learning$)
