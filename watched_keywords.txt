@@ -56837,7 +56837,6 @@
 1704962352	cigien	mmj-docs\.com
 1704962587	cigien	vkommerce(?!\.com)
 1704962667	cigien	brampton[\W_]*+web[\W_]*+design(?!\.com(?<=bramptonwebdesign\.com))
-1704962690	cigien	ugc[\W_]*+net[\W_]*+coaching
 1704962910	cigien	sanmar[\W_]*+building[\W_]*+services(?!\.com(?<=sanmarbuildingservices\.com))
 1704964911	cigien	shape[\W_]*+kapseln(?!\.fr(?<=shapekapseln\.fr))
 1704964934	cigien	shapekapseln\.fr

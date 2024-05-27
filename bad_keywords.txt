@@ -3057,3 +3057,4 @@ consider[\W_]*+banning[\W_]*+my[\W_]*+account
 (?<=\.)company\.site/$
 (?-i:6d60c5964fff913b8c2dc63323ffd65a\.jpg)
 (?-i:wl8hgu3zrc)
+ugc[\W_]*+net[\W_]*+coaching
