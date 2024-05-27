@@ -2238,7 +2238,7 @@ pattern_websites = [
 ]
 city_list = [
     "Agra", "Ahmedabad", "Ajanta", "Aligarh", "Allahabad", "Almora", "Alwar", "Ambattur", "Amritsar",
-    "Anand Nagar", "Andheri", "Attingal",
+    "Anand Nagar", "Andheri", "Attingal", "Aurangabad",
     "Baddi", "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
     "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
