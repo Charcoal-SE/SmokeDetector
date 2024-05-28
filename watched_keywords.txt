@@ -62387,3 +62387,4 @@
 1716900684	VLAZ	skysailimmigration\.com
 1716900705	VLAZ	skysailimmigration(?!\.com(?<=skysailimmigration\.com))
 1716902073	Vickel	m-today\.net
+1716902017	Vickel	typewritertale\.com
