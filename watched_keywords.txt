@@ -62365,3 +62365,4 @@
 1716828041	Vickel	logic[\W_]*+mount(?!\.com(?<=logicmount\.com))
 1716839612	Vickel	ajmanproperties\.ae
 1716853752	Jeff Schaller	cyberconstableintelligence
+1716852465	Vickel	pixaflip\.com
