@@ -62367,3 +62367,4 @@
 1716853752	Jeff Schaller	cyberconstableintelligence
 1716852465	Vickel	pixaflip\.com
 1716849155	Vickel	mooore[\W_]*+david
+1716864297	Makyen	ajman[\W_]*+properties(?!\.ae(?<=ajmanproperties\.ae))
