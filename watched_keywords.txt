@@ -62395,3 +62395,4 @@
 1716903954	Makyen	kapconsult\.info(?:@gmail\.com)?
 1716915184	Vickel	certifiedumps\.com
 1716920227	Machavity	ChartExpo
+1716920121	Fastnlight	bestdealsseeker\.com
