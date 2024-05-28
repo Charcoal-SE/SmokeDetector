@@ -62376,3 +62376,4 @@
 1716885324	VLAZ	connectingdotserp\.in
 1716885420	VLAZ	abacusdatasys\.com
 1716885456	VLAZ	Abacus[\W_]*+Data[\W_]*+Systems
+1716889566	VLAZ	spotipremiumapps\.com
