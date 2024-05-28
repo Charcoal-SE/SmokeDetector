@@ -62371,3 +62371,4 @@
 1716875283	VLAZ	ckedge\.com
 1716876120	VLAZ	rabitzz\.wuaze\.com
 1716877248	Dragonrage	pin-prick\.com
+1716877304	Dragonrage	newtechinfosoft\.com
