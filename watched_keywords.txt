@@ -62370,3 +62370,4 @@
 1716864297	Makyen	ajman[\W_]*+properties(?!\.ae(?<=ajmanproperties\.ae))
 1716875283	VLAZ	ckedge\.com
 1716876120	VLAZ	rabitzz\.wuaze\.com
+1716877248	Dragonrage	pin-prick\.com
