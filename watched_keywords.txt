@@ -62392,3 +62392,4 @@
 1716903358	Makyen	온라인 게임(?#"online games" in Korean)
 1716903430	Makyen	(?:온라인 )?카지노(?#"online casino" in Korean)
 1716903932	Makyen	kanz[\W_]*+alshams[\W_]*+project[\W_]*+consultant
+1716903954	Makyen	kapconsult\.info(?:@gmail\.com)?
