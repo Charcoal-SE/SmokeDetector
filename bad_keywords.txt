@@ -3061,3 +3061,4 @@ ugc[\W_]*+net[\W_]*+coaching
 navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
 idealsmtp(?!\.com)
 pytoileur
+opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
