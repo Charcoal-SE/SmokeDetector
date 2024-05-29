@@ -62432,3 +62432,4 @@
 1716993842	Makyen	idealsmtp\.com
 1716994305	Jeff Schaller	pilotandcar\.ae
 1716997051	Spevacus	wpcommerz\.com
+1716997076	Spevacus	wpcommerz(?!\.com)
