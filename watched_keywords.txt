@@ -62403,3 +62403,4 @@
 1716949350	Makyen	navicosoft\.co\.uk
 1716949370	Makyen	navicosoft\.au
 1716952377	Makyen	chatgptportugues\.io
+1716952398	Makyen	chatgpt[\W_]*+portugues(?!\.io(?<=chatgptportugues\.io))
