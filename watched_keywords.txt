@@ -62425,3 +62425,4 @@
 1716978727	tripleee	(?-i:^Jane Willie$)
 1716978961	tripleee	(?-i:^Avni Sharma$)
 1716984611	tripleee	(?-i:Cs_MohdAhmadAlhakim)(?# t.me)
+1716985753	Vickel	ajahlife\.com
