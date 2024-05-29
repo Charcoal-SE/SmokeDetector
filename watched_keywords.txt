@@ -62071,7 +62071,6 @@
 1716285636	tripleee	simplextechnology\.blogspot
 1716285722	tripleee	kfcpakistan\.com
 1716219228	Fastnlight	zindoit\.com
-1716220825	Fastnlight	OPTIMISTIC[\W_]*+HACKER[\W_]*+GAIUS
 1716225926	Fastnlight	studypointhometutorials\.com
 1716231098	Cow	spotsurv\.com
 1716231412	Fastnlight	Trust[\W_]*+Guard[\W_]*+Company
