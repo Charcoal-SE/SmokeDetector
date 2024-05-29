@@ -62408,3 +62408,4 @@
 1716960662	Cow	nadinecollections\.com
 1716961269	Makyen	nadine[\W_]*+collection(?!\.com(?<=nadinecollections\.com))s?
 1716963651	Dragonrage	hindikahani\.in
+1716966698	tripleee	dreamgamingmy\.com
