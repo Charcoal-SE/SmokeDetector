@@ -1053,3 +1053,4 @@ smm[\W_]*+panel
 (?-i:^business mlm software$)
 (?-i:^Imarticus Learning$)
 (?-i:^nakshatra sane$)
+(?-i:^explore-all-techs$)
