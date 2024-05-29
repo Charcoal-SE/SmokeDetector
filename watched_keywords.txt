@@ -62419,3 +62419,4 @@
 1716972041	Nick	Indian[\W_]*+Relocation[\W_]*+Packers
 1716976375	tripleee	cryptobestlist\.com
 1716976511	tripleee	limosinn\.com
+1716976558	tripleee	com\.photomanager
