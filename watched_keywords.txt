@@ -61350,7 +61350,6 @@
 1714829462	Makyen	kairatechnologies\.in
 1714829493	Makyen	kaira[\W_]*+technologies(?!\.in(?<=kairatechnologies\.in))
 1714829514	Makyen	digitalaka
-1714829545	Makyen	idealsmtp(?!\.com)
 1714829568	Makyen	store[\W_]*+shuddhi(?!\.com)
 1714829590	Makyen	led[\W_]*+truck[\W_]*+advertising
 1714829612	Makyen	red[\W_]*+satin[\W_]*+varsity[\W_]*+jacket
