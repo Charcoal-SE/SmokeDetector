@@ -62414,3 +62414,4 @@
 1716969861	Nick	newdigitalhub(?!\.com)
 1716970465	Nick	credihealth\.com
 1716971026	Nick	free-cash-register\.net
+1716970608	Cow	odooconsultant\.com
