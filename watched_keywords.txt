@@ -62405,3 +62405,4 @@
 1716952377	Makyen	chatgptportugues\.io
 1716952398	Makyen	chatgpt[\W_]*+portugues(?!\.io(?<=chatgptportugues\.io))
 1716956833	Makyen	honey[\W_]*+iconics
+1716959844	Cow	kotorkitties\.org
