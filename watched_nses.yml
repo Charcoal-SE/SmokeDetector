@@ -3825,6 +3825,9 @@ items:
   - ns4039.hostgator.com.
   - ns4040.hostgator.com.
 - ns:
+  - cns519.hostgator.com.
+  - cns520.hostgator.com.
+- ns:
   - ns6057.hostgator.com.
   - ns6058.hostgator.com.
 - ns:
