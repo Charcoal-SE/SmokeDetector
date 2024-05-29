@@ -1529,6 +1529,9 @@ items:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
+  - damien.ns.cloudflare.com.
+  - ophelia.ns.cloudflare.com.
+- ns:
   - damiete.ns.cloudflare.com.
   - marlowe.ns.cloudflare.com.
 - ns:
