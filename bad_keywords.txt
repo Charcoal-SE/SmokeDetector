@@ -3059,3 +3059,4 @@ consider[\W_]*+banning[\W_]*+my[\W_]*+account
 (?-i:wl8hgu3zrc)
 ugc[\W_]*+net[\W_]*+coaching
 navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
+idealsmtp
