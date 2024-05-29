@@ -62402,3 +62402,4 @@
 1716937225	Vickel	pdu60\.com
 1716949350	Makyen	navicosoft\.co\.uk
 1716949370	Makyen	navicosoft\.au
+1716952377	Makyen	chatgptportugues\.io
