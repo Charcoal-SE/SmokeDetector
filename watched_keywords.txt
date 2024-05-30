@@ -62478,3 +62478,4 @@
 1717091978	Spevacus	rootkithacker1(?:@outlook\.com)?
 1717092296	Spevacus	daruliftaahlesunnat\.net
 1717092521	Spevacus	jkmentalhealth\.com
+1717093320	Vickel	rootkit[\W_]*+hacker(?:[\W_]*+firm)?
