@@ -62476,3 +62476,4 @@
 1717090218	Jeff Schaller	essentialshoodiesite\.org
 1717091821	VLAZ	reservationhelpdesks\.com
 1717091978	Spevacus	rootkithacker1(?:@outlook\.com)?
+1717092147	Vickel	ROOTKIT[\W_]*+HACKER?(?:[\W_]*+FIRM)?
