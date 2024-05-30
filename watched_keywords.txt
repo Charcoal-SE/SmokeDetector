@@ -62475,3 +62475,4 @@
 1717088123	Spevacus	applegenbrug\.dk
 1717090218	Jeff Schaller	essentialshoodiesite\.org
 1717091821	VLAZ	reservationhelpdesks\.com
+1717091978	Spevacus	rootkithacker1(?:@outlook\.com)?
