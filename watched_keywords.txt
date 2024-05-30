@@ -62460,3 +62460,4 @@
 1717073395	tripleee	(?-i:^Ryan Joseph$)
 1717074025	doppelgreener	hutko\.dev
 1717074347	doppelgreener	adaptsaplus\.com
+1717074423	tripleee	lapostexaminer\.com
