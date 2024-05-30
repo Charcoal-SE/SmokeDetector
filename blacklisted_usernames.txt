@@ -1054,3 +1054,4 @@ smm[\W_]*+panel
 (?-i:^Imarticus Learning$)
 (?-i:^nakshatra sane$)
 (?-i:^explore-all-techs$)
+carelab[sz]
