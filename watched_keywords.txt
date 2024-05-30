@@ -62470,3 +62470,4 @@
 1717079980	Makyen	hb88(?:casino|social)?
 1717080001	Makyen	nhacaihb88
 1717082866	Makyen	(?-i:eGnSX6jkN0U)
+1717085878	Cow	betbrasil\.org
