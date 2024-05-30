@@ -1055,3 +1055,4 @@ smm[\W_]*+panel
 (?-i:^nakshatra sane$)
 (?-i:^explore-all-techs$)
 carelab[sz]
+(?-i:^infiapp solution$)
