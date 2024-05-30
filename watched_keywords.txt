@@ -62437,3 +62437,4 @@
 1717015655	General Grievance	louismartincustomknives\.com
 1717025228	Vickel	budsculturestore\.com
 1717025482	Vickel	Buds[\W_]*+Culture[\W_]*+Store(?!\.com(?<=budsculturestore\.com))
+1717039384	Fastnlight	techboltify\.com
