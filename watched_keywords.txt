@@ -57632,7 +57632,6 @@
 1706513280	Nick	royalclinicdubai\.com
 1706513766	Nick	unitedpower\.in
 1706513800	VLAZ	capcutz\.com
-1706514227	Nick	lightingandsupplies\.com
 1706514278	Nick	Lightings?[\W_]*+And[\W_]*+Supplies(?!\.com(?<=lightingandsupplies\.com))
 1706514657	Nick	rexpayments\.com
 1706521820	Nick	univestinc\.com
