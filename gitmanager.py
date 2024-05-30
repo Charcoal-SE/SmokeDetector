@@ -66,8 +66,8 @@ class GitHubManager:
         return response.json()
 
     @classmethod
-    def comment_on_thread(cls, thread_id, body):
-        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, thread_id)
+    def comment_on_thread(cls, issue_id, body):
+        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, issue_id)
         payload = json.dumps({'body': body})
         response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
@@ -414,8 +414,8 @@ class GitManager:
             if response:
                 if response.json()["state"] == "closed":
                     git.push('-d', origin_or_auth, ref)
-                    return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})." +
-                            (" as a duplicate" if is_duplicate else "")).format(pr_id, GlobalVars.bot_repo_slug)
+                    return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})" +
+                            (" as a duplicate." if is_duplicate else ".")).format(pr_id, GlobalVars.bot_repo_slug)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
