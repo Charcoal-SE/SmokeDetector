@@ -66,15 +66,15 @@ class GitHubManager:
         return response.json()
 
     @classmethod
-    def comment_on_thread(cls, issue_id, body):
-        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, issue_id)
+    def comment_on_thread(cls, thread_id, body):
+        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, thread_id)
         payload = json.dumps({'body': body})
         response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
 
     @classmethod
     def label_issue(cls, issue_id, labels: list):
-        url = "https://api.github.com/repos/{}/issues/{}/labels".format(GlobalVars.bot_repo_slug, thread_id)
+        url = "https://api.github.com/repos/{}/issues/{}/labels".format(GlobalVars.bot_repo_slug, issue_id)
         payload = json.dumps({'labels': labels})
         response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
