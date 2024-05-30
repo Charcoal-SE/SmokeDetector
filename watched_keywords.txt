@@ -62483,3 +62483,4 @@
 1717072645	General Grievance	purduecart\.com
 1717072755	General Grievance	ryancreativeliving\.com
 1717075057	General Grievance	xicom\.biz
+1717113539	Jeff Schaller	keapoint\.com
