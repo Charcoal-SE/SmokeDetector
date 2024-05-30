@@ -62448,3 +62448,4 @@
 1717047693	Dragonrage	pmtrainingschool\.com
 1717047787	Dragonrage	smartvisitingcards\.com
 1717048185	Dragonrage	pact\.in
+1717048378	Dragonrage	buzzoid\.com\.co
