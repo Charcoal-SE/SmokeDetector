@@ -62439,3 +62439,4 @@
 1717025482	Vickel	Buds[\W_]*+Culture[\W_]*+Store(?!\.com(?<=budsculturestore\.com))
 1717037775	Henry Ecker	whatsappgroupslits\.com
 1717039384	Fastnlight	techboltify\.com
+1717040615	Dragonrage	a3ranking\.in
