@@ -62442,3 +62442,4 @@
 1717040615	Dragonrage	a3ranking\.in
 1717042274	Makyen	a3[\W_]*+ranking(?!\.in(?<=a3ranking\.in))
 1717044171	VLAZ	stream-4khd\.xyz
+1717044192	VLAZ	bankier\.pl
