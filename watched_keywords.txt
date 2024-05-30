@@ -62459,3 +62459,4 @@
 1717072734	tripleee	asetechnologies\.in
 1717073395	tripleee	(?-i:^Ryan Joseph$)
 1717074025	doppelgreener	hutko\.dev
+1717074347	doppelgreener	adaptsaplus\.com
