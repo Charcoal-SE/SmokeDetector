@@ -62459,3 +62459,4 @@
 1717068186	Jeff Schaller	fruitfarmer\.vn
 1717069971	Jeff Schaller	homestudiogenie\.com
 1717072734	tripleee	asetechnologies\.in
+1717073395	tripleee	(?-i:^Ryan Joseph$)
