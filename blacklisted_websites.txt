@@ -5637,3 +5637,4 @@ internalsecurity\.in
 deerdance\.com
 ijset\.in
 faux-api\.com
+magnetstore\.co\.uk
