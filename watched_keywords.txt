@@ -62488,3 +62488,4 @@
 1717116609	Vickel	lab-assets\.tech
 1717116790	Vickel	ASSETS[\W_]*+LAB[\W_]*+RECOVERY
 1717123149	Makyen	jayamachupicchu\.com
+1717123181	Makyen	jaya[\W_]*+suite[\W_]*+machupicchu
