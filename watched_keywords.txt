@@ -62517,3 +62517,4 @@
 1717174298	Jeff Schaller	guruhairinstruments\.com
 1717178349	Jeff Schaller	firstclaspharmacy\.com
 1717180727	VLAZ	priceninfo\.com
+1717180820	VLAZ	alphaslot\d*+
