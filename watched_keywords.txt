@@ -62510,3 +62510,4 @@
 1717093320	Vickel	rootkit[\W_]*+hacker(?:[\W_]*+firm)?
 1717159687	Jeff Schaller	appindentalsurgery\.com\.au
 1717160274	tripleee	(?-i:^Zara khan$)
+1717163200	Jeff Schaller	oillearner\.com
