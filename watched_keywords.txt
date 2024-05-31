@@ -62508,3 +62508,4 @@
 1717153962	Jeff Schaller	sattvayogaacademy\.com
 1717156496	Jeff Schaller	satyashaktifoundation\.org
 1717093320	Vickel	rootkit[\W_]*+hacker(?:[\W_]*+firm)?
+1717159687	Jeff Schaller	appindentalsurgery\.com\.au
