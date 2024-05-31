@@ -62505,3 +62505,4 @@
 1717150440	VLAZ	rightcheckin\.com
 1717151793	Jeff Schaller	shabdproduction\.com
 1717153107	Jeff Schaller	alphatextileco\.com
+1717153962	Jeff Schaller	sattvayogaacademy\.com
