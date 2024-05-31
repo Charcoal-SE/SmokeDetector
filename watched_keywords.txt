@@ -62487,3 +62487,4 @@
 1717115280	Vickel	baltimoremotorsports\.com
 1717116609	Vickel	lab-assets\.tech
 1717116790	Vickel	ASSETS[\W_]*+LAB[\W_]*+RECOVERY
+1717123149	Makyen	jayamachupicchu\.com
