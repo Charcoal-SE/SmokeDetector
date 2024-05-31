@@ -47327,7 +47327,6 @@
 1676634882	cigien	borewel\.com
 1676637082	cigien	translations\.co\.uk
 1676647539	tripleee	skntechnology\.in
-1676657539	Makyen	optimizedinfotech\.com
 1676657577	Makyen	optimized[\W_]*+infotech(?!\.com(?<=optimizedinfotech\.com))
 1676659204	cigien	smartpuka\.com
 1676662077	Pilot6	cryptocoinstokens\.com
