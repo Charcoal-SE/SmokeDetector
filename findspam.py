@@ -2256,7 +2256,7 @@ city_list = [
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Palam", "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
-    "Sarjapur", "Sivakasi", "Sonipat", "Srinagar", "Surat",
+    "Saket", "Sarjapur", "Sivakasi", "Sonipat", "Srinagar", "Surat",
     "Tembisa", "Telangana", "Thane", "Thembisa", "Thiruvananthapuram", "Thrissur",
     "Tiruchi", "Tiruchirappalli", "Tirupati",
     "Trichinopoly", "Trichy", "Trivandrum", "Tura",
@@ -2265,7 +2265,7 @@ city_list = [
     # not in India
     "Ajman", "Dubai", "Fujairah", "Hamad", "Lahore", "Lusail", "Portland", "Sharjah",
     # yes, these aren't cities but...
-    "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar",
+    "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar", "Rajasthan",
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
