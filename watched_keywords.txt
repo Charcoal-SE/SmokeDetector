@@ -62522,3 +62522,4 @@
 1717180863	VLAZ	gradedsolution(?!\.com)
 1717206021	Spevacus	abacustrainer\.com
 1717210820	Dragonrage	innicdata\.com
+1717211221	Dragonrage	innic(\s)*(data)?
