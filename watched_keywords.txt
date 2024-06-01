@@ -62541,3 +62541,4 @@
 1717232950	Dragonrage	agtindia\.online
 1717233083	Dragonrage	mqccert\.com
 1717248112	Jeff Schaller	paigebartholomew\.com
+1717251198	Makyen	jain[\W_]*+taxi[\W_]*+services(?!\.com(?<=jaintaxiservices\.com))
