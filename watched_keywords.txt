@@ -62520,3 +62520,4 @@
 1717180820	VLAZ	alphaslot\d*+
 1717180841	VLAZ	gradedsolution\.com
 1717180863	VLAZ	gradedsolution(?!\.com)
+1717206021	Spevacus	abacustrainer\.com
