@@ -62543,3 +62543,4 @@
 1717248112	Jeff Schaller	paigebartholomew\.com
 1717251198	Makyen	jain[\W_]*+taxi[\W_]*+services(?!\.com(?<=jaintaxiservices\.com))
 1717252520	Jeff Schaller	hireitexpert\.co\.uk
+1717252622	Makyen	james[\W_]*+mckay[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
