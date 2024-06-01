@@ -62545,3 +62545,4 @@
 1717252520	Jeff Schaller	hireitexpert\.co\.uk
 1717252622	Makyen	james[\W_]*+mckay[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1717252972	Makyen	beihua(?:[\W_]*+medical)?[\W_]*+university
+1717253346	Makyen	d(?:octo)?r[\W_]*+riaria(?!\.wixsite\.com(?<=drriaria\.wixsite\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
