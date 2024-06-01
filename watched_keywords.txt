@@ -62547,3 +62547,4 @@
 1717252972	Makyen	beihua(?:[\W_]*+medical)?[\W_]*+university
 1717253346	Makyen	d(?:octo)?r[\W_]*+riaria(?!\.wixsite\.com(?<=drriaria\.wixsite\.com))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1717255767	Jeff Schaller	karaoketrend\.com
+1717263630	Makyen	fbsmsacramento\.com
