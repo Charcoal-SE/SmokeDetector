@@ -62523,3 +62523,4 @@
 1717206021	Spevacus	abacustrainer\.com
 1717210820	Dragonrage	innicdata\.com
 1717211221	Dragonrage	innic(\s)*(data)?
+1717211431	Dragonrage	CYBER(\s)*CONSTABLE(\s)*INTELIGENCE
