@@ -62550,3 +62550,4 @@
 1717263630	Makyen	fbsmsacramento\.com
 1717263661	Makyen	fbsm[\W_]*+sacramento(?!\.com(?<=fbsmsacramento\.com))
 1717263683	Makyen	sacramento[\W_]*+fbsm
+1717263716	Makyen	(?-i:3MPMwiabE85ZfRe4E2HzwKLchPPSjET6NA)
