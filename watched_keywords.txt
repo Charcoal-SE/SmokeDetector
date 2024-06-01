@@ -62549,3 +62549,4 @@
 1717255767	Jeff Schaller	karaoketrend\.com
 1717263630	Makyen	fbsmsacramento\.com
 1717263661	Makyen	fbsm[\W_]*+sacramento(?!\.com(?<=fbsmsacramento\.com))
+1717263683	Makyen	sacramento[\W_]*+fbsm
