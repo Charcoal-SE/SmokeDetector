@@ -3062,3 +3062,4 @@ navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
 idealsmtp(?!\.com)
 pytoileur
 opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
+web[\W_]*+genie[\W_]*+recovery(?!\.com(?<=webgenierecovery\.com))s?(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|outlook|proton)(?:[\W_]*+(?:dot[\W_]*+)?(?:come?|me))?)?
