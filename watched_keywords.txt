@@ -62571,3 +62571,4 @@
 1717332055	Cow	datatoolbar\.com
 1717340934	Jeff Schaller	chandeliersltd\.com
 1717347763	Makyen	inistand(?:valed|walet)
+1717350330	Jeff Schaller	teraboxdownloader\.in
