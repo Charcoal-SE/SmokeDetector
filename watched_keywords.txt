@@ -62570,3 +62570,4 @@
 1717340934	Jeff Schaller	chandeliersltd\.com
 1717347763	Makyen	inistand(?:valed|walet)
 1717350330	Jeff Schaller	teraboxdownloader\.in
+1717368832	Vickel	scottgross\.works
