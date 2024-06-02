@@ -62570,3 +62570,4 @@
 1717330318	tripleee	waterpuretechnologies\.com
 1717332055	Cow	datatoolbar\.com
 1717340934	Jeff Schaller	chandeliersltd\.com
+1717347763	Makyen	inistand(?:valed|walet)
