@@ -62568,3 +62568,4 @@
 1717330231	tripleee	hackk[\W_]*+mann
 1717330262	tripleee	green[\W_]*+frenzy
 1717330318	tripleee	waterpuretechnologies\.com
+1717332055	Cow	datatoolbar\.com
