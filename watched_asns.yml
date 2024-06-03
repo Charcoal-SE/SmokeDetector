@@ -36,6 +36,7 @@ items:
   comment: Moderate FPs, don't double up
   disable: true
 - asn: '23352'
+- asn: '23535'
 - asn: '23957'
 - asn: '24309'
 - asn: '24778'
