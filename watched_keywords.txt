@@ -62578,3 +62578,4 @@
 1717391700	Makyen	(?-i:1FeexV6bAHb8ybZjqQMjJrcCrHGW9sb6uF)
 1717392866	tripleee	pim[\W_]*+industry[\W_]*+experts?
 1717393404	tripleee	(?-i:^Hans Frederik Jensen$)
+1717394024	tripleee	airrescuers\.com
