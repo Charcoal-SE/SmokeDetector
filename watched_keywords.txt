@@ -62597,3 +62597,4 @@
 1717404860	tripleee	(?<!https://(\w+\.)*microsoft\.com/(?:\w+(?:[-_]\w+)*/)+)dynamics[\W_]*+365[\W_]*+business[\W_]*+central
 1717405869	tripleee	lunasliver\.com
 1717407105	tripleee	halewellnessclinic\.com
+1717409725	VLAZ	cvmaker\.me
