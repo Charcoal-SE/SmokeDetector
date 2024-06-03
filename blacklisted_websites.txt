@@ -5640,3 +5640,4 @@ faux-api\.com
 magnetstore\.co\.uk
 optimizedinfotech\.com
 optimizedinfotech\.in
+torontocoachbuscharter\.ca
