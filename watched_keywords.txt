@@ -62593,3 +62593,4 @@
 1717401502	Dragonrage	solarpanelpricepakistan\.com
 1717402900	tripleee	raju[\W_]*+indian
 1717402990	Dragonrage	pakmakina\.com
+1717404436	tripleee	(?!<https://(\w+\.)*microsoft\.com/(\w+(?:_\w+)*/)+)dynamics[\W_]*+365[\W_]*+business[\W_]*+central
