@@ -62584,3 +62584,4 @@
 1717395020	VLAZ	HTX[\W]*+Referral[\W]*+Code
 1717395161	tripleee	supportingainain\.com
 1717395566	tripleee	snabb?[\W_]*+business
+1717395609	Dragonrage	(?-i:WalletUpdateBot)(?#t.me)
