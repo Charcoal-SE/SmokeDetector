@@ -3670,6 +3670,9 @@ items:
 - ns:
   - vern.ns.cloudflare.com.
   - zelda.ns.cloudflare.com.
+- ns:
+  - vida.ns.cloudflare.com.
+  - yadiel.ns.cloudflare.com.
 - comment: FPs, don't blacklist
   ns: mihanwebhost.com.
 - ns: offshoreracks.com.
