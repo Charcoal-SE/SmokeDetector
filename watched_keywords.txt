@@ -62594,3 +62594,4 @@
 1717402900	tripleee	raju[\W_]*+indian
 1717402990	Dragonrage	pakmakina\.com
 1717404586	tripleee	livenewz24\.com
+1717404632	tripleee	(?<!https://(\w+\.)*microsoft\.com/(\w+(?:_\w+)*/)+)dynamics[\W_]*+365[\W_]*+business[\W_]*+central
