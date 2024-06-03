@@ -1759,6 +1759,9 @@ items:
   - dina.ns.cloudflare.com.
   - sid.ns.cloudflare.com.
 - ns:
+  - dina.ns.cloudflare.com.
+  - tom.ns.cloudflare.com.
+- ns:
   - dion.ns.cloudflare.com.
   - dora.ns.cloudflare.com.
 - ns:
