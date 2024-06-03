@@ -62574,3 +62574,4 @@
 1717391364	Makyen	bestwebwizrecovery\.com
 1717391543	Makyen	bestwebwizardrecovery(?:@consultant\.com)?
 1717391652	Makyen	chatgptpolsku\.org
+1717391673	Makyen	chatgpt[\W_]*+polsku(?!\.org(?<=chatgptpolsku\.org))
