@@ -48751,7 +48751,6 @@
 1680021659	Jeff Schaller	gbic-shop\.de
 1680021770	Makyen	faqfa
 1680021811	Makyen	fox00[\W_]*+640[12]
-1680021886	Makyen	dynamics[\W_]*+365[\W_]*+business[\W_]*+central
 1680021928	Makyen	chartered[\W_]*+financial[\W_]*+(?:analyst|consultant)
 1680021968	Makyen	devblog\.xero\.com
 1680021998	Makyen	xero[\W_]*+eco(?:[\W_]*+system)?[\W_]*+survey(?:[\W_]*+2023)?
