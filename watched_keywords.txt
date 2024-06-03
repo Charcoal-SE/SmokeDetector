@@ -62581,3 +62581,4 @@
 1717394024	tripleee	airrescuers\.com
 1717394715	VLAZ	kesarisugar\.com
 1717394965	tripleee	(?-i:a9f26223)
+1717395020	VLAZ	HTX[\W]*+Referral[\W]*+Code
