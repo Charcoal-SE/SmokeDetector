@@ -62638,3 +62638,4 @@
 1717488232	Dragonrage	flowyline\.com
 1717494029	VLAZ	eyecloudai\.com
 1717494052	VLAZ	eyecloud\.ai
+1717494074	VLAZ	eye[\W_]*+cloud(?!\.ai(?<=eyecloud\.ai))
