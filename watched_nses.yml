@@ -4854,7 +4854,9 @@ items:
   disable: true
   ns: cprapid.com.
 - ns: globalitsuccess.com.
-- ns: interserver.net.
+- comment: dominantly FP (4/38); no 1-weight TPs 2024-06-04
+  disable: true
+  ns: interserver.net.
 - ns: rozblog.com.
 - ns: ukfast.net.
 - ns: netfirms.com.
