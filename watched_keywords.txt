@@ -27165,7 +27165,6 @@
 1616070373	tripleee	theinfohubs\.com
 1616070588	Spevacus	mahaastores\.com
 1616070888	tripleee	termmax\.net
-1616072533	Spevacus	dgroyals\.com
 1616075090	Spevacus	civicfitness\.com
 1616075773	Spevacus	jobsheadlines\.com
 1616079891	Makyen	strive[\W_]*+nutrition(?:[\W_]*+(?:healthy|brain|pill|review|pro|con|price|of|memory|enhancer|pills|\d++|[\da-f]{5,}+)s?)*
