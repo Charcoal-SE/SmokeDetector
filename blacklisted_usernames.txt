@@ -1056,3 +1056,4 @@ smm[\W_]*+panel
 carelab[sz]
 (?-i:^infiapp solution$)
 (?-i:^Amul Dark Chocolate Benefits$)
+(?-i:^Pual Becker$)
