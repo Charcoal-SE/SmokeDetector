@@ -1700,6 +1700,9 @@ items:
   - denver.ns.cloudflare.com.
   - elisabeth.ns.cloudflare.com.
 - ns:
+  - denver.ns.cloudflare.com.
+  - leia.ns.cloudflare.com.
+- ns:
   - derek.ns.cloudflare.com.
   - elinore.ns.cloudflare.com.
 - ns:
