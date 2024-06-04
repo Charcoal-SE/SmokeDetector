@@ -62621,3 +62621,4 @@
 1717456818	Vickel	Thorne[\W_]*+Ridge(?!\.com(?<=thorneridge\.com))
 1717480309	tripleee	(?-i:xXdzNLq)(?# fiverr)
 1717480345	tripleee	(?-i:m8ojc9)(?# rb.gy)
+1717480841	tripleee	iphi\.edu\.in
