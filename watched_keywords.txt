@@ -62644,3 +62644,4 @@
 1717503064	VLAZ	empowera\.net
 1717503143	VLAZ	empowera(?!\.net)
 1717504870	Vickel	allaboutpshyco\.com
+1717504814	Vickel	khalijiuwn24\.com
