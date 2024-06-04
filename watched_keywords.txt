@@ -62640,3 +62640,4 @@
 1717494074	VLAZ	eye[\W_]*+cloud(?!\.ai(?<=eyecloud\.ai))
 1717496581	Jeff Schaller	accurateestimates\.us
 1717497181	Jeff Schaller	idpeinture\.com
+1717499289	tripleee	(?-i:^Ahsan Ishtiaq$)
