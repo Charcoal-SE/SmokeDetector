@@ -62631,3 +62631,4 @@
 1717174913	Cow	maksud\.xyz
 1717425585	Cow	blog\.get-merit\.com
 1717429130	Fastnlight	Boning[\W_]*+Knife
+1717430137	Fastnlight	jtwhatsup\.com
