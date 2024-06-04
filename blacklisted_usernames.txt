@@ -1057,3 +1057,4 @@ carelab[sz]
 (?-i:^infiapp solution$)
 (?-i:^Amul Dark Chocolate Benefits$)
 (?-i:^Pual Becker$)
+(?-i:^Hi-Tech Polytechnic College$)
