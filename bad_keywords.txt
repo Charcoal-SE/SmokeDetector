@@ -3064,3 +3064,4 @@ opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?
 web[\W_]*+genie[\W_]*+recovery(?!\.com(?<=webgenierecovery\.com))s?(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|outlook|proton)(?:[\W_]*+(?:dot[\W_]*+)?(?:come?|me))?)?
 albertgonzalezcryptorecoverywi(?:@gmail\.com)?
 blue[\W_]*+meteor(?:[\W_]*+pim)?
+Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))

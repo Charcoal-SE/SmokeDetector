@@ -61253,7 +61253,6 @@
 1714621793	Makyen	dehradun[\W_]*+taxi[\W_]*+services(?!\.in(?<=dehraduntaxiservices\.in))
 1714622238	Makyen	textcompare\.org
 1714630369	Nick	fastwebsitebuilder\.bigcartel\.com
-1714631477	Nick	Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
 1714632411	Nick	districtperformancephysio\.com
 1714632462	Nick	District[\W_]*+Performance[\W_]*+Physio(?!\.com(?<=districtperformancephysio\.com))
 1714636897	Jeff Schaller	theoaklandpress\.com
