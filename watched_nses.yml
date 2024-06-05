@@ -4925,7 +4925,9 @@ items:
   ns: hostingplatform.net.au.
 - ns: gexhost.com.
 - ns: infotreeit.com.
-- ns: ureasyads.com.
+- comment: NXDOMAIN 2024-06-05
+  disable: true
+  ns: ureasyads.com.
 - ns: azdigi.com.
 - ns: penguinwebsecurity.com.
 - ns: hostlab.net.tr.
