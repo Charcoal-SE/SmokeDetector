@@ -62659,3 +62659,4 @@
 1717552937	Makyen	61552907003445(?#facebook profile ID)
 1717555968	Makyen	dynamics[\W_]*+365[\W_]*+business[\W_]*+central(?<!https://(?:\w++\.)*microsoft\.com/(?:\w+(?:[-_]\w+)*/)+dynamics[\W_]*+365[\W_]*+business[\W_]*+central)
 1717558728	Dragonrage	blogherenowworld\.com
+1717564441	Cow	asn73\.com
