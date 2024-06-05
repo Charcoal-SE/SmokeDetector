@@ -62693,3 +62693,4 @@
 1717605587	Jeff Schaller	alchemy\.com(?<!docs\.alchemy\.com)
 1717606236	Jeff Schaller	aooahk\.com
 1717608654	Cow	doordashblog\.site
+1717611867	Makyen	kinemasterappk\.com
