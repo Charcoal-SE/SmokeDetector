@@ -62692,3 +62692,4 @@
 1717601968	Makyen	favaz[\W_]*+mubarak(?!\.com(?<=favazmubarak\.com))
 1717605587	Jeff Schaller	alchemy\.com(?<!docs\.alchemy\.com)
 1717606236	Jeff Schaller	aooahk\.com
+1717608654	Cow	doordashblog\.site
