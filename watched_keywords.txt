@@ -62673,3 +62673,4 @@
 1717564717	Cow	bitcoin\.game
 1717565633	Cow	appnox\.ai
 1717568514	Cow	eviewporn\.com
+1717570003	Cow	ways2uni\.com
