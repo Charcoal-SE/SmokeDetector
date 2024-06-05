@@ -62660,3 +62660,4 @@
 1717555968	Makyen	dynamics[\W_]*+365[\W_]*+business[\W_]*+central(?<!https://(?:\w++\.)*microsoft\.com/(?:\w+(?:[-_]\w+)*/)+dynamics[\W_]*+365[\W_]*+business[\W_]*+central)
 1717558728	Dragonrage	blogherenowworld\.com
 1717565101	Dragonrage	sehgaltravel\.com
+1717565633	Cow	appnox\.ai
