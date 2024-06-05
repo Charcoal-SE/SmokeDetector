@@ -62628,7 +62628,6 @@
 1717425585	Cow	blog\.get-merit\.com
 1717429130	Fastnlight	Boning[\W_]*+Knife
 1717430137	Fastnlight	jtwhatsup\.com
-1717479421	Cow	Neoprofit[\W_]*+AI
 1717487436	tripleee	opensolr\.com
 1717488197	Dragonrage	jakartagardencity\.id
 1717488232	Dragonrage	flowyline\.com
