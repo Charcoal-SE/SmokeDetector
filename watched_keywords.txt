@@ -62691,3 +62691,4 @@
 1717591852	Vickel	Masarrat[\W_]*+Misbah
 1717599793	Makyen	projoint(?:[\W_]*+plus)?
 1717599815	Makyen	arthrogenix
+1717601968	Makyen	favaz[\W_]*+mubarak(?!\.com(?<=favazmubarak\.com))
