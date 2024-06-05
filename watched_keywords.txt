@@ -62702,3 +62702,4 @@
 1717622912	Jeff Schaller	haberwon\.com
 1717622933	Jeff Schaller	hayathaberleri\.com
 1717622965	Jeff Schaller	hayattanhaber\.com
+1717622986	Jeff Schaller	kentsporhaber\.com
