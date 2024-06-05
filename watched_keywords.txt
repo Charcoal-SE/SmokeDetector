@@ -62670,3 +62670,4 @@
 1717561773	Cow	iceriveroutlet\.com
 1717562205	Cow	datacloudgaze\.com
 1717564441	Cow	asn73\.com
+1717564717	Cow	bitcoin\.game
