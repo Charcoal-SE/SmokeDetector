@@ -62696,3 +62696,4 @@
 1717611867	Makyen	kinemasterappk\.com
 1717616071	Spevacus	pixalytix\.com
 1717616661	Makyen	pixalytix(?!\.com)
+1717622817	Jeff Schaller	supremecustomhomes\.com
