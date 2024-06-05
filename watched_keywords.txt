@@ -62674,3 +62674,4 @@
 1717565633	Cow	appnox\.ai
 1717568514	Cow	eviewporn\.com
 1717570003	Cow	ways2uni\.com
+1717576007	Cow	nextgclasses\.com
