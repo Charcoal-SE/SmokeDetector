@@ -62657,3 +62657,4 @@
 1717539104	VLAZ	s\.gigabet\.games
 1717552614	Makyen	neoprofit(?:[\W_]*+ai)?
 1717552937	Makyen	61552907003445(?#facebook profile ID)
+1717555968	Makyen	dynamics[\W_]*+365[\W_]*+business[\W_]*+central(?<!https://(?:\w++\.)*microsoft\.com/(?:\w+(?:[-_]\w+)*/)+dynamics[\W_]*+365[\W_]*+business[\W_]*+central)
