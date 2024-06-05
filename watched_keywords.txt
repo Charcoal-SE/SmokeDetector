@@ -62695,3 +62695,4 @@
 1717608654	Cow	doordashblog\.site
 1717611867	Makyen	kinemasterappk\.com
 1717616071	Spevacus	pixalytix\.com
+1717616661	Makyen	pixalytix(?!\.com)
