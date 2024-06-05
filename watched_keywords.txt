@@ -62667,3 +62667,4 @@
 1717573467	Cow	topcrewaviation\.com
 1717573822	Cow	untung33\.team
 1717509476	Vickel	cbd[\W_]*+boxes[\W_]*+us(?!\.com(?<=cbdboxesus\.com))
+1717561773	Cow	iceriveroutlet\.com
