@@ -62671,3 +62671,4 @@
 1717562205	Cow	datacloudgaze\.com
 1717564441	Cow	asn73\.com
 1717564717	Cow	bitcoin\.game
+1717565633	Cow	appnox\.ai
