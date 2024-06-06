@@ -62706,3 +62706,4 @@
 1717623007	Jeff Schaller	magazinhabertv\.com
 1717623029	Jeff Schaller	miohaber\.com
 1717632073	Makyen	assetrecovernet(?!(?:@gmail\.com)?)
+1717632094	Makyen	assetrecovernet(?:@gmail\.com)?
