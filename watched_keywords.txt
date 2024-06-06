@@ -62750,3 +62750,4 @@
 1717699328	Makyen	spider[\W_]*+hoodie
 1717701173	Cow	mdtsol\.com
 1717701806	Cow	goldenhiveholidays\.com
+1717702012	Makyen	(?-i:C73pfL_vqwZ)(?#instagram.com)
