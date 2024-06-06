@@ -62742,3 +62742,4 @@
 1717677955	Jeff Schaller	hocoindia\.net
 1717678529	Jeff Schaller	kinemastermodpro\.com
 1717679863	Jeff Schaller	narehsit\.com
+1717683137	Makyen	(?-i:KyWJe)(?<=\b(?<![^\W_]-)shorturl\.at\/KyWJe)
