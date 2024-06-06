@@ -59685,7 +59685,6 @@
 1710795322	Vickel	ochiea(?:@amazon\.com)?
 1710798590	Makyen	mama[\W_]*+bashiirah
 1710803905	lyxal	eagears\.com
-1710804907	Makyen	webgenierecovery\.com
 1710804613	Vickel	expressglobaldocs\.com
 1710805172	Makyen	crackedkey\.org
 1710806286	Makyen	cid\.2b75b0cf1ce9bf69
