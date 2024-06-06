@@ -62751,3 +62751,4 @@
 1717701173	Cow	mdtsol\.com
 1717701806	Cow	goldenhiveholidays\.com
 1717702012	Makyen	(?-i:C73pfL_vqwZ)(?#instagram.com)
+1717702043	Makyen	golden[\W_]*+hive[\W_]*+holidays(?!\.com(?<=goldenhiveholidays\.com))
