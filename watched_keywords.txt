@@ -62754,3 +62754,4 @@
 1717702043	Makyen	golden[\W_]*+hive[\W_]*+holidays(?!\.com(?<=goldenhiveholidays\.com))
 1717702561	Zoe	programguru\.org
 1717704287	Vickel	jbecker\.dev
+1717715232	Makyen	aci384098
