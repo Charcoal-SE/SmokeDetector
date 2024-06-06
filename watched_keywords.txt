@@ -62756,3 +62756,4 @@
 1717704287	Vickel	jbecker\.dev
 1717715232	Makyen	aci384098
 1717715263	Makyen	acr690202
+1717713014	Vickel	Temu[\W_]*+Coupon
