@@ -62745,3 +62745,4 @@
 1717683137	Makyen	(?-i:KyWJe)(?<=\b(?<![^\W_]-)shorturl\.at\/KyWJe)
 1717683299	Makyen	ugslot188
 1717686513	Spevacus	anshitha\.com
+1717690785	Jeff Schaller	spiderhoodiecom\.com
