@@ -62716,3 +62716,4 @@
 1717654840	Dragonrage	cowlingandwilcox\.com
 1717656695	Dragonrage	ptsuparmatbk\.com
 1717657938	Dragonrage	homecaremidlandtx\.com
+1717660975	tripleee	(?-i:^julie patterson$)
