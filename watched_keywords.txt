@@ -62779,3 +62779,4 @@
 1717756864	Dragonrage	innow8apps\.com
 1717756897	VLAZ	treekisan\.com
 1717756965	VLAZ	tree[\W_]kisan(?!\.com(?<=treekisan\.com))
+1717756987	Dragonrage	fairdealrubber\.com
