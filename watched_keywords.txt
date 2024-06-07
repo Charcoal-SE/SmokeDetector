@@ -62771,3 +62771,4 @@
 1717749862	tripleee	(?-i:^Kwa Bless$)
 1717751972	Dragonrage	roustaee\.com
 1717752361	Dragonrage	dishapublication\.com
+1717752581	Dragonrage	trueassetconsultancy\.com
