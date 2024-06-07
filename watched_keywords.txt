@@ -62769,3 +62769,4 @@
 1717746209	Dragonrage	veduapps\.in
 1717749818	tripleee	(?-i:^FAROOQ HELLO$)
 1717749862	tripleee	(?-i:^Kwa Bless$)
+1717751972	Dragonrage	roustaee\.com
