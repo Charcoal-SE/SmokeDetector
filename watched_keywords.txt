@@ -62788,3 +62788,4 @@
 1717761497	Jeff Schaller	gymyog\.co\.uk
 1717762561	Jeff Schaller	artc\.health
 1717762807	Jeff Schaller	vectorstock\.com
+1717763203	Vickel	FRANCISCO[\W_]*+HACK
