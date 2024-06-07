@@ -62768,3 +62768,4 @@
 1717746150	Dragonrage	gbwhatsapponline\.com
 1717746209	Dragonrage	veduapps\.in
 1717749818	tripleee	(?-i:^FAROOQ HELLO$)
+1717749862	tripleee	(?-i:^Kwa Bless$)
