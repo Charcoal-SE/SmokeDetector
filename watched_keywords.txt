@@ -62798,3 +62798,4 @@
 1717784954	Jeff Schaller	electronicbuildingdirectory\.com
 1717790302	Fastnlight	frc345228
 1717790296	Fastnlight	afh97457
+1717783243	Cow	Temu[\W_]*+codes
