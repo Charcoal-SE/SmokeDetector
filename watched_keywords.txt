@@ -62794,3 +62794,4 @@
 1717771673	VLAZ	157\.245\.32\.14
 1717771705	VLAZ	(?-i:challengepython)(?#t.me)
 1717774906	Jeff Schaller	acousticguitarstrings\.pro
+1717775912	Jeff Schaller	bridgecable\.com
