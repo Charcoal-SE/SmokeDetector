@@ -62788,3 +62788,4 @@
 1717761497	Jeff Schaller	gymyog\.co\.uk
 1717762561	Jeff Schaller	artc\.health
 1717762807	Jeff Schaller	vectorstock\.com
+1717763324	Makyen	synack[\W_]*+hackers(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?
