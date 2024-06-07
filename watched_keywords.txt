@@ -62767,3 +62767,4 @@
 1717736225	Cow	cyberassetrecovery\.pro
 1717746150	Dragonrage	gbwhatsapponline\.com
 1717746209	Dragonrage	veduapps\.in
+1717747526	Cow	QuickBooks[\W_]*+File[\W_]*+Doctor
