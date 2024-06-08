@@ -62826,3 +62826,4 @@
 1717861530	Fastnlight	iptvspotlight\.com
 1717861573	Fastnlight	iptvspotlight[\W_]*+com(?<!iptvspotlight\.com)
 1717738009	Cow	save[\W_]*+palestine
+1717864907	Fastnlight	CONTACTZATTECHRECOVERY
