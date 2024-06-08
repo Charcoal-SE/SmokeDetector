@@ -62826,7 +62826,6 @@
 1717861530	Fastnlight	iptvspotlight\.com
 1717861573	Fastnlight	iptvspotlight[\W_]*+com(?<!iptvspotlight\.com)
 1717738009	Cow	save[\W_]*+palestine
-1717864907	Fastnlight	CONTACTZATTECHRECOVERY
 1717867098	Jeff Schaller	thesunson\.com
 1717868512	Makyen	kalalovespell(?:@gmail\.com)?
 1717868532	Makyen	d(?:octo)?r[\W_]*+kala
