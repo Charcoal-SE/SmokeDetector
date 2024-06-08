@@ -62832,3 +62832,4 @@
 1717868799	Makyen	(?:contact[\W_]*+)?zat[\W_]*+tech[\W_]*+recovery(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1717869107	Makyen	d(?:octo)?r[\W_]*+marcus
 1717871355	Jeff Schaller	gridb2b\.com
+1717871923	Makyen	gridb2b(?!\.com)(?:[\W_]*+(?:agency|seo|\d++|[\da-f]{5,}+)s?)*
