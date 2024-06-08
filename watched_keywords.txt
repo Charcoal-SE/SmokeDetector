@@ -62824,3 +62824,4 @@
 1717849464	Vickel	colek77vip\.info
 1717747526	Cow	QuickBooks[\W_]*+File[\W_]*+Doctor
 1717861530	Fastnlight	iptvspotlight\.com
+1717861573	Fastnlight	iptvspotlight[\W_]*+com(?<!iptvspotlight\.com)
