@@ -41556,7 +41556,6 @@
 1660664924	Ollie	claudiapmsilva(?:@gmail\.com)?
 1660677982	Makyen	forumfr\.com
 1660680559	Makyen	develux(?!\.com)
-1660683189	cigien	drmacusspellcaster(?:@gmail\.com)
 1660683210	cigien	d(?:octo)?r[\W_]*+macus
 1660686524	Ollie	(?-i:currently-unava-ipaid-gmai-ebb)(?# sites.google.com)
 1660689838	Makyen	academicsconsultancy\.co\.uk
