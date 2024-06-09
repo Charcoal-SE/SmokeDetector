@@ -62874,3 +62874,4 @@
 1717956088	Mast	sex[\W_]*+chat
 1717956288	Makyen	globally[\W_]*+viz(?!\.com(?<=globallyviz\.com))
 1717960925	Makyen	etumax(?:[\W_]*+royal)?[\W_]*+honey
+1717971618	Vickel	onecloudnetworks\.com
