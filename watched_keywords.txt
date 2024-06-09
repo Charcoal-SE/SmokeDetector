@@ -62852,3 +62852,4 @@
 1717940457	Makyen	plumbing[\W_]*+hawaii(?!\.com(?<=plumbinghawaii\.com))
 1717940508	Makyen	abhishekchalil\.com
 1717941590	Makyen	nexgismo\.com
+1717943180	Jeff Schaller	bhive\.ae
