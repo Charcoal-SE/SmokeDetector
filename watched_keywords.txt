@@ -62865,3 +62865,4 @@
 1717891699	Fastnlight	Crypto[\W_]*+Recovery[\W_]*+Wizard
 1717947727	Vickel	sundaranails\.com
 1717949595	Makyen	equivtech\.com\.au
+1717949617	Makyen	psix[\W_]*+extractor
