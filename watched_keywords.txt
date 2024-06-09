@@ -62871,3 +62871,4 @@
 1717950341	Jeff Schaller	trackstatus\.in
 1717953588	Jeff Schaller	Globallyviz\.com
 1717954159	Jeff Schaller	(?-i:Amiya756)(?#t.me)
+1717956088	Mast	sex[\W_]*+chat
