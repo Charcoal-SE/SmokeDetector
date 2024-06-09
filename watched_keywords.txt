@@ -62844,3 +62844,4 @@
 1717914718	Makyen	cartel[\W_]*+software[\W_]*+pvt[\W_]*+ltd
 1717914739	Makyen	hacker[\W_]*+school
 1717914760	Makyen	jsonbody\.com
+1717915107	Makyen	wealthsnap
