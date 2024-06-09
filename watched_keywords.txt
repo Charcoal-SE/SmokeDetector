@@ -62870,3 +62870,4 @@
 1717949661	Makyen	p6etl(?!\.com)
 1717950341	Jeff Schaller	trackstatus\.in
 1717953588	Jeff Schaller	Globallyviz\.com
+1717954159	Jeff Schaller	(?-i:Amiya756)(?#t.me)
