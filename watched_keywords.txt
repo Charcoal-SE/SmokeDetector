@@ -62841,3 +62841,4 @@
 1717896594	Jeff Schaller	resultsport\.com
 1717914414	Makyen	(?-i:dinushikadiss)(?#fiverr.com)
 1717914696	Makyen	hackerschool\.in
+1717914718	Makyen	cartel[\W_]*+software[\W_]*+pvt[\W_]*+ltd
