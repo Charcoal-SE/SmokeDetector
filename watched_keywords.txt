@@ -62862,3 +62862,4 @@
 1717943864	Makyen	dleader\.org
 1717943886	Makyen	smukti\.com
 1717943667	Vickel	waktogel303\.blogspot
+1717891699	Fastnlight	Crypto[\W_]*+Recovery[\W_]*+Wizard
