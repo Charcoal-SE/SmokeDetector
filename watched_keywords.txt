@@ -62456,7 +62456,6 @@
 1717088123	Spevacus	applegenbrug\.dk
 1717090218	Jeff Schaller	essentialshoodiesite\.org
 1717091821	VLAZ	reservationhelpdesks\.com
-1717091978	Spevacus	rootkithacker1(?:@outlook\.com)?
 1717092296	Spevacus	daruliftaahlesunnat\.net
 1717092521	Spevacus	jkmentalhealth\.com
 1717094571	Spevacus	(?-i:M0YCA0IjnK4)(?#youtu.be)

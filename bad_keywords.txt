@@ -3068,3 +3068,4 @@ Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
 natural[\W_]*herbs[\W_]*centre(?!\.com)
 swift[\W_]*+hack[\W_]*+expert
 drmacusspellcaster(?:@gmail\.com)?
+rootkithacker1(?:@outlook\.com)?
