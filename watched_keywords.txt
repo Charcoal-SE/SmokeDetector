@@ -62882,3 +62882,4 @@
 1717998407	Cow	iptv1\.co\.za
 1717999127	Cow	polarbath\.com
 1717999789	tripleee	digitalmarketingcourseinhyderabad\.in
+1718000072	tripleee	classimonk\.com
