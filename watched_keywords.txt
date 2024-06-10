@@ -62876,3 +62876,4 @@
 1717971618	Vickel	onecloudnetworks\.com
 1717994154	Cow	raiseyourglam\.com
 1717995864	VLAZ	Femovers[\W_]*+Dubai
+1717997220	tripleee	folkwin[\W_]*+expert[\W_]*+recovery[\W_]*+(?:dot[\W_]*+)?com(?<!folkwinexpertrecovery\.com)
