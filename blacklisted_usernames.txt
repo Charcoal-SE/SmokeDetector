@@ -1062,3 +1062,4 @@ carelab[sz]
 (?-i:^Nisha Halder$)
 (?-i:^user25139895$)
 (?-i:^Felix Garg$)
+(?-i:^David Hessen$)
