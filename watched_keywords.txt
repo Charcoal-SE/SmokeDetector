@@ -62897,3 +62897,4 @@
 1718015032	tripleee	streameast
 1718015288	tripleee	hiringhood\.com
 1718015332	tripleee	(?-i:^Awan Sahib$)
+1718015748	tripleee	tutorialandexample\.com
