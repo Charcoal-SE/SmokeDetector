@@ -62911,3 +62911,4 @@
 1718022297	Cow	pentaics\.com
 1718024293	Jeff Schaller	globalhakrecovery
 1718061031	Makyen	123full\.vip
+1718061053	Makyen	123full(?!\.vip)
