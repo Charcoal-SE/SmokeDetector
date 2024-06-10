@@ -3474,6 +3474,9 @@ items:
   - nolan.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
+  - nolan.ns.cloudflare.com.
+  - ullis.ns.cloudflare.com.
+- ns:
   - nora.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
