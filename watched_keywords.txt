@@ -62914,3 +62914,4 @@
 1718061053	Makyen	123full(?!\.vip)
 1718061073	Makyen	(?-i:linkdaftar123full)(?#heylink.me)
 1718060890	Vickel	danfoodhealthy\.com
+1718061116	Makyen	dan[\W_]*+healthy[\W_]*+food
