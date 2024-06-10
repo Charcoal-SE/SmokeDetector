@@ -3424,6 +3424,9 @@ items:
   - nelly.ns.cloudflare.com.
 - ns:
   - nick.ns.cloudflare.com.
+  - pola.ns.cloudflare.com.
+- ns:
+  - nick.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
   - nico.ns.cloudflare.com.
