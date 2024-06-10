@@ -1059,3 +1059,4 @@ carelab[sz]
 (?-i:^Pual Becker$)
 (?-i:^Hi-Tech Polytechnic College$)
 (?-i:^POXO RFID AUTOMATION$)
+(?-i:^Nisha Halder$)
