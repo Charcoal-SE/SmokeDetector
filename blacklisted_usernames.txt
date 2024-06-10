@@ -1058,3 +1058,4 @@ carelab[sz]
 (?-i:^Amul Dark Chocolate Benefits$)
 (?-i:^Pual Becker$)
 (?-i:^Hi-Tech Polytechnic College$)
+(?-i:^POXO RFID AUTOMATION$)
