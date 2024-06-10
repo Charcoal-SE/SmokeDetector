@@ -62909,3 +62909,4 @@
 1718021450	Cow	(?-i:cognicarepro)(?#facebook)
 1718021496	Vickel	CogniCare[\W_]*+Pro
 1718021503	Cow	(?-i:neurobrain)(?#facebook)
+1718022297	Cow	pentaics\.com
