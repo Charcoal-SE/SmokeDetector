@@ -1838,6 +1838,9 @@ items:
   - ignacio.ns.cloudflare.com.
 - ns:
   - dorthy.ns.cloudflare.com.
+  - jack.ns.cloudflare.com.
+- ns:
+  - dorthy.ns.cloudflare.com.
   - jay.ns.cloudflare.com.
 - ns:
   - dorthy.ns.cloudflare.com.
