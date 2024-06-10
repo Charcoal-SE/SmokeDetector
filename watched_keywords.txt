@@ -62879,3 +62879,4 @@
 1717997220	tripleee	folkwin[\W_]*+expert[\W_]*+recovery[\W_]*+(?:dot[\W_]*+)?com(?<!folkwinexpertrecovery\.com)
 1717997206	Cow	ekantarfoundation\.com
 1717971943	Vickel	codesealer\.com
+1717998407	Cow	iptv1\.co\.za
