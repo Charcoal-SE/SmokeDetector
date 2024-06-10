@@ -62899,3 +62899,4 @@
 1718015332	tripleee	(?-i:^Awan Sahib$)
 1718015748	tripleee	tutorialandexample\.com
 1718015776	tripleee	lanadelreyjacket\.com
+1718016008	tripleee	max[\W_]*+tern
