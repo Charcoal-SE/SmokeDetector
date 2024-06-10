@@ -3216,6 +3216,9 @@ items:
   - marissa.ns.cloudflare.com.
   - mike.ns.cloudflare.com.
 - ns:
+  - margaret.ns.cloudflare.com.
+  - piers.ns.cloudflare.com.
+- ns:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
