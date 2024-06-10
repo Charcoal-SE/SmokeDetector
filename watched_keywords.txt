@@ -62906,3 +62906,4 @@
 1718018718	Cow	immersfy\.com
 1718019564	Jeff Schaller	voxestate\.com
 1718021372	Vickel	hmedicreviews\.com
+1718021450	Cow	(?-i:cognicarepro)(?#facebook)
