@@ -700,6 +700,9 @@ items:
   - maeve.ns.cloudflare.com.
 - ns:
   - arya.ns.cloudflare.com.
+  - dilbert.ns.cloudflare.com.
+- ns:
+  - arya.ns.cloudflare.com.
   - hans.ns.cloudflare.com.
 - ns:
   - arya.ns.cloudflare.com.
