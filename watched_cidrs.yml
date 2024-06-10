@@ -4968,6 +4968,7 @@ items:
   disable: true
   ip: 23.185.0.4
 - ip: 23.19.244.65
+- ip: 23.20.179.164
 - ip: 23.207.214.56
 - comment: dominantly FP, 3/27 2022-09-07
   disable: true
@@ -5699,6 +5700,7 @@ items:
   disable: true
   ip: 54.157.58.70
 - ip: 54.157.88.95
+- ip: 54.158.195.16
 - comment: git.io, ejabberd etc - don't watch
   disable: true
   ip: 54.162.128.250
