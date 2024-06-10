@@ -3525,6 +3525,9 @@ items:
   - pat.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - patrick.ns.cloudflare.com.
+  - vivienne.ns.cloudflare.com.
+- ns:
   - paul.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
