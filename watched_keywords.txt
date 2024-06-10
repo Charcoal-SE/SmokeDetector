@@ -62884,3 +62884,4 @@
 1717999789	tripleee	digitalmarketingcourseinhyderabad\.in
 1718000072	tripleee	classimonk\.com
 1718004854	tripleee	pvsbuilders\.com
+1718005750	Cow	mapog\.com
