@@ -62947,3 +62947,4 @@
 1718123791	Mast	prontowriters\.com
 1718127686	Makyen	drisya[\W_]*+kk(?!\.com(?<=drisyakk\.com))
 1718130848	Makyen	sunshinerxpharmacy\.com
+1718130869	Makyen	sunshine[\W_]*+rx[\W_]*+pharmacy(?!\.com(?<=sunshinerxpharmacy\.com))
