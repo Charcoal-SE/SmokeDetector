@@ -62941,3 +62941,4 @@
 1718114651	Makyen	quickboost[\W_]*+marketing[\W_]*+solutions(?!\.com(?<=quickboostmarketingsolutions\.com))
 1718114963	Jeff Schaller	bluehostreview\.in
 1718118625	Fastnlight	constructionestimations\.com
+1718118424	Fastnlight	halfpricepackaging\.com
