@@ -62950,3 +62950,4 @@
 1718130869	Makyen	sunshine[\W_]*+rx[\W_]*+pharmacy(?!\.com(?<=sunshinerxpharmacy\.com))
 1718133422	Vickel	click-tests\.com
 1718143273	Jeff Schaller	carianbistro\.com
+1718143884	Vickel	Carian[\W_]*+(?:s[\W_]*+)?Bistro[\W_]*+Chocolates
