@@ -3920,6 +3920,7 @@ items:
 - ns:
   - ns8603.hostgator.com.
   - ns8604.hostgator.com.
+- ns: cp-in-1.hostgatorwebservers.com.
 - ns: cp-in-18.hostgatorwebservers.com.
 - ns: md-ht-7.hostgatorwebservers.com.
 - ns: md-ht-8.hostgatorwebservers.com.
