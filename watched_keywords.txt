@@ -17181,7 +17181,6 @@
 1583218033	Makyen	(?-i:Pag111eQoIQ)(?#youtu.be)
 1583218073	Makyen	delta[\W_]*+tone[\W_]*+keto(?:[\W_]*+(?:lipase|\d++|[\da-f]{4,}+))*
 1583219876	Shree	uttrakhandtaxi\.com
-1583220337	Eliah Kagan	vakilsearch\.com
 1583224875	Shree	repairqberror\.com
 1583233481	tripleee	thuechuyensau\.com
 1583235094	Shree	logoin15minutes\.com
