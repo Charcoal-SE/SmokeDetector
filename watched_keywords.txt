@@ -62940,3 +62940,4 @@
 1718113514	Jeff Schaller	kentId75237297(?#t.me/haMster_kombat_bot)
 1718114651	Makyen	quickboost[\W_]*+marketing[\W_]*+solutions(?!\.com(?<=quickboostmarketingsolutions\.com))
 1718114963	Jeff Schaller	bluehostreview\.in
+1718118625	Fastnlight	constructionestimations\.com
