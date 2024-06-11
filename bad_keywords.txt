@@ -3069,3 +3069,4 @@ natural[\W_]*herbs[\W_]*centre(?!\.com)
 swift[\W_]*+hack[\W_]*+expert
 drmacusspellcaster(?:@gmail\.com)?
 rootkithacker1(?:@outlook\.com)?
+ossisto(?!\.com)

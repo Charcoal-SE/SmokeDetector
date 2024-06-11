@@ -39460,7 +39460,6 @@
 1654758249	tripleee	isharp[\W_]*+acad[ae]my(?<!(?-i:^isharp acadamy$))(?!\.in(?<=isharpacademy\.in))
 1654759942	tripleee	mubarakdeals\.com
 1654760189	tripleee	customcursor\.substack\.com
-1654760307	tripleee	ossisto(?!\.com)
 1654760525	tripleee	busymommy\.us
 1654760845	tripleee	13377x
 1654761283	tripleee	sonneriestelephone\.com
