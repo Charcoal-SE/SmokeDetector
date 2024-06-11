@@ -62945,3 +62945,4 @@
 1718119265	Jeff Schaller	intermulticanal\.com
 1718123751	Mast	drisyakk\.com
 1718123791	Mast	prontowriters\.com
+1718127686	Makyen	drisya[\W_]*+kk(?!\.com(?<=drisyakk\.com))
