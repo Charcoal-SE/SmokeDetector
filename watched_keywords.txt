@@ -62929,3 +62929,4 @@
 1718094935	tripleee	https://(?:[^\s<>"']*\b(?:torrent|crack|download|free|software)\b){3}
 1718097738	VLAZ	nanodefensepro24\.com
 1718099678	Jeff Schaller	madisports\.co\.uk
+1718099714	Jeff Schaller	virtualongroup\.com
