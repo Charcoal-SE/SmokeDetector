@@ -62916,3 +62916,4 @@
 1718060890	Vickel	danfoodhealthy\.com
 1718061116	Makyen	dan[\W_]*+healthy[\W_]*+food
 1718069621	Spevacus	(?-i:3QDlAuw)(?#bit.ly)
+1718080123	Makyen	btc\.tokenview\.io
