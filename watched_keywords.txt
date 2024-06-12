@@ -62958,3 +62958,4 @@
 1718133709	Vickel	Cps[\W_]*+Tester
 1718143884	Vickel	Carian[\W_]*+(?:s[\W_]*+)?Bistro[\W_]*+Chocolates
 1718176612	tripleee	support[\W_]*+(?:at[\W_]*+)?cyberpointrecovery(?:[\W_]*+(?:dot[\W_]*+)?com)?
+1718178575	tripleee	cuchi\.io
