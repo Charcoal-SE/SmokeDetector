@@ -2182,6 +2182,9 @@ items:
   - ryleigh.ns.cloudflare.com.
 - ns:
   - gabe.ns.cloudflare.com.
+  - wren.ns.cloudflare.com.
+- ns:
+  - gabe.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
   - gabriella.ns.cloudflare.com.
