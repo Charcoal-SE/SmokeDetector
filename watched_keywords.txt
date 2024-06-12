@@ -62978,3 +62978,4 @@
 1718194450	tripleee	(?-i:^Amelia Wilson$)
 1718197282	tripleee	(?-i:^Amelia Hedge$)
 1718197695	Jeff Schaller	igsglobal\.com
+1718197922	tripleee	softwareshopk\.com
