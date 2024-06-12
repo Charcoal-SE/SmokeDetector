@@ -2977,6 +2977,9 @@ items:
   - mckenzie.ns.cloudflare.com.
 - ns:
   - lars.ns.cloudflare.com.
+  - meera.ns.cloudflare.com.
+- ns:
+  - lars.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
   - laura.ns.cloudflare.com.
