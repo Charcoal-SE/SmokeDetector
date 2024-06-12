@@ -62956,3 +62956,4 @@
 1718174919	tripleee	weedx\.io
 1718174996	Dragonrage	skymettle\.com
 1718133709	Vickel	Cps[\W_]*+Tester
+1718143884	Vickel	Carian[\W_]*+(?:s[\W_]*+)?Bistro[\W_]*+Chocolates
