@@ -62977,3 +62977,4 @@
 1718194392	tripleee	komal[\W_]*+padalkar\d*
 1718194450	tripleee	(?-i:^Amelia Wilson$)
 1718197282	tripleee	(?-i:^Amelia Hedge$)
+1718197695	Jeff Schaller	igsglobal\.com
