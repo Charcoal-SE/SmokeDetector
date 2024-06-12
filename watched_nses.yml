@@ -78,6 +78,9 @@ items:
   - norm.ns.cloudflare.com.
 - ns:
   - adaline.ns.cloudflare.com.
+  - clyde.ns.cloudflare.com.
+- ns:
+  - adaline.ns.cloudflare.com.
   - earl.ns.cloudflare.com.
 - ns:
   - adaline.ns.cloudflare.com.
