@@ -1493,6 +1493,9 @@ items:
   - crystal.ns.cloudflare.com.
   - maxim.ns.cloudflare.com.
 - ns:
+  - cullen.ns.cloudflare.com.
+  - maleah.ns.cloudflare.com.
+- ns:
   - curt.ns.cloudflare.com.
   - hope.ns.cloudflare.com.
 - ns:
