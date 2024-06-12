@@ -62959,3 +62959,4 @@
 1718176612	tripleee	support[\W_]*+(?:at[\W_]*+)?cyberpointrecovery(?:[\W_]*+(?:dot[\W_]*+)?com)?
 1718178575	tripleee	cuchi\.io
 1718180033	tripleee	cardrivingsimulators\.com
+1718186040	Jeff Schaller	tnc\.com\.vn
