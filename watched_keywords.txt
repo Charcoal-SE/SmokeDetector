@@ -62964,3 +62964,4 @@
 1718186210	Jeff Schaller	Reddito[\W_]*+Capital
 1718186287	Jeff Schaller	gds-uae\.com
 1718188269	Jeff Schaller	aelinen\.co\.uk
+1718188298	Jeff Schaller	biblical-archaeology\.org
