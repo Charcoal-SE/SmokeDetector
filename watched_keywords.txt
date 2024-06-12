@@ -62982,3 +62982,4 @@
 1718199213	Jeff Schaller	thestumbleguyz\.com
 1718200235	General Grievance	huntattract\.com
 1718204569	Makyen	blitz[\W_]*+academy(?!\.org(?<=blitzacademy\.org))
+1718205751	Fastnlight	bizknowledges\.com
