@@ -1626,6 +1626,9 @@ items:
   - rudy.ns.cloudflare.com.
 - ns:
   - darl.ns.cloudflare.com.
+  - nelly.ns.cloudflare.com.
+- ns:
+  - darl.ns.cloudflare.com.
   - rihana.ns.cloudflare.com.
 - ns:
   - darwin.ns.cloudflare.com.
