@@ -2679,6 +2679,9 @@ items:
   - jim.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
+  - jim.ns.cloudflare.com.
+  - stevie.ns.cloudflare.com.
+- ns:
   - jimmy.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
