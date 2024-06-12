@@ -5653,3 +5653,4 @@ marveldrivers\.com
 rootkit[\W_]*+hacker(?:[\W_]*+firm)?
 takemyclasscheap\.com
 vakilsearch\.com
+torrentbrasil\.org
