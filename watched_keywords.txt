@@ -62984,3 +62984,4 @@
 1718204569	Makyen	blitz[\W_]*+academy(?!\.org(?<=blitzacademy\.org))
 1718205751	Fastnlight	bizknowledges\.com
 1718207004	Makyen	dodolan\.jogjakota\.go\.id
+1718207546	Makyen	koratvpr\.blogspot
