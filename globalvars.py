@@ -468,11 +468,10 @@ class GlobalVars:
     # to preserve leading whitespace, but also permit the string to contain those characters.
     additional_failover_text = regex.sub(r'''^['"](.*)['"]$''', r'\1', config.get("additional_failover_text", ""))
 
-    # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
-    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
+    bot_name = config.get("smokedetector_name", git_name)
+    bot_repo_slug = config.get("smokedetector_repo", git_user_repo)
     bot_repository = "//github.com/{}".format(bot_repo_slug)
-    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
+    chatmessage_prefix = config.get("chat_prefix", "[{}]({})".format(bot_name, bot_repository))
 
     valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 
