@@ -63010,3 +63010,4 @@
 1718279828	Jeff Schaller	bang188\.pro
 1718279874	Jeff Schaller	BANG188(?!\.pro)
 1718280939	Cow	rdpextra\.com
+1718282038	Jeff Schaller	RDPextra(?!\.com)
