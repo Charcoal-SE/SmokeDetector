@@ -3070,3 +3070,4 @@ swift[\W_]*+hack[\W_]*+expert
 drmacusspellcaster(?:@gmail\.com)?
 rootkithacker1(?:@outlook\.com)?
 ossisto(?!\.com)
+(?-i:crackeado)
