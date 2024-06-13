@@ -63025,3 +63025,4 @@
 1718308066	Jeff Schaller	cadireinigungsservice\.de
 1718310895	Ryan M	3gdMsPdbdG4(?# YouTube)
 1718310858	Vickel	Volaris[\W]*+LAX[\W]*+Terminal
+1718313777	Makyen	kuremal[\W_]*+kulfi(?!\.com(?<=kuremalkulfi\.com))
