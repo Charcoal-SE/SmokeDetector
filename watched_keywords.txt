@@ -63046,3 +63046,4 @@
 1718368579	Jeff Schaller	creativeboxes\.co\.uk
 1718369089	Jeff Schaller	(?-i:genYxkHiL.?)(?#forms.office.com)
 1718378254	Fastnlight	phonebotics\.net
+1718406011	Vickel	Party[\W_]*+on[\W_]*+Delivery(?!\.com(?<=partyondelivery\.com))
