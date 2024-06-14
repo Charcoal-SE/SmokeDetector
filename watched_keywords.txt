@@ -63027,3 +63027,4 @@
 1718310858	Vickel	Volaris[\W]*+LAX[\W]*+Terminal
 1718313777	Makyen	kuremal[\W_]*+kulfi(?!\.com(?<=kuremalkulfi\.com))
 1718329338	Jeff Schaller	xetaithanhhung\.vn
+1718353085	Cow	(?-i:QuickBooks)
