@@ -63047,3 +63047,4 @@
 1718369089	Jeff Schaller	(?-i:genYxkHiL.?)(?#forms.office.com)
 1718378254	Fastnlight	phonebotics\.net
 1718405892	Vickel	partyondelivery\.com
+1718406099	Makyen	party[\W_]*+on[\W_]*+delivery(?!\.com(?<=partyondelivery\.com))
