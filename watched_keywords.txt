@@ -63049,3 +63049,4 @@
 1718405892	Vickel	partyondelivery\.com
 1718406099	Makyen	party[\W_]*+on[\W_]*+delivery(?!\.com(?<=partyondelivery\.com))
 1718446167	VLAZ	fishelly\.com
+1718448727	VLAZ	mmsjo\.net
