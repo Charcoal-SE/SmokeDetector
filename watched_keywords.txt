@@ -63052,3 +63052,4 @@
 1718448727	VLAZ	mmsjo\.net
 1718450506	Jeff Schaller	sush25044\.livejournal\.com
 1718454440	Vickel	cookieclickerunblocked\.live
+1718454571	Vickel	Cookie[\W_]*+Clicker[\W_]*+Unblocked(?!\.live(?<=cookieclickerunblocked\.live))
