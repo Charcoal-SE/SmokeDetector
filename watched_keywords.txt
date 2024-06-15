@@ -62743,7 +62743,6 @@
 1717702043	Makyen	golden[\W_]*+hive[\W_]*+holidays(?!\.com(?<=goldenhiveholidays\.com))
 1717702561	Zoe	programguru\.org
 1717704287	Vickel	jbecker\.dev
-1717715232	Makyen	aci384098
 1717715263	Makyen	acr690202
 1717713014	Vickel	Temu[\W_]*+Coupon
 1717723196	Jeff Schaller	eternalusdt\.vip
