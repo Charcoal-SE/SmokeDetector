@@ -63055,3 +63055,4 @@
 1718454571	Vickel	Cookie[\W_]*+Clicker[\W_]*+Unblocked(?!\.live(?<=cookieclickerunblocked\.live))
 1718458139	Jeff Schaller	xonelec\.com
 1718459002	Jeff Schaller	ruhr-uni-bochum\.de
+1718464719	Makyen	thetrafficapk\.com
