@@ -63058,3 +63058,4 @@
 1718464719	Makyen	thetrafficapk\.com
 1718465765	Makyen	xon[\W_]*+electronics?
 1718467261	Makyen	dml[\W_]*+training
+1718467285	Makyen	angeelle\.fr
