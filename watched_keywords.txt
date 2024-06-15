@@ -62632,7 +62632,6 @@
 1717513796	Spevacus	stackarmor\.com
 1717514524	Spevacus	alphayogaschool\.com
 1717523875	Spevacus	(?-i:DBBzpaQ)(?#fiverr.com)
-1717530413	Fastnlight	cyber[\W_]*+constable[\W_]*+intelligence
 1717531634	Dragonrage	elitegtatowing\.com
 1717533820	VLAZ	epsonprintersupportpro\.us
 1717539104	VLAZ	s\.gigabet\.games
