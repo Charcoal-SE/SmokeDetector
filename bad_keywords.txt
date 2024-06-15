@@ -3072,3 +3072,4 @@ rootkithacker1(?:@outlook\.com)?
 ossisto(?!\.com)
 temu[\W_]*+coupon
 aci384098
+cyber[\W_]*+constable[\W_]*+intelligence(?![\W_]*+com)
