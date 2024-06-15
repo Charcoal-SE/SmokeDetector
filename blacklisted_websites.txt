@@ -5654,3 +5654,4 @@ rootkit[\W_]*+hacker(?:[\W_]*+firm)?
 takemyclasscheap\.com
 vakilsearch\.com
 torrentbrasil\.org
+cyber[\W_]*+constable[\W_]*+intelligence[\W_]*+com
