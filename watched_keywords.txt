@@ -63071,3 +63071,4 @@
 1718559047	Vickel	szamerch(?!\.shop)
 1718566311	Cow	persml\.com
 1718573183	Makyen	postzo\.store
+1718573215	Makyen	sophie[\W_]*+rain[\W_]*+nude
