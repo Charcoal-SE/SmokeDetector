@@ -61462,7 +61462,6 @@
 1715017894	Cow	chomarunitrade\.com
 1715086742	Makyen	art[\W_]*+works[\W_]*+llc(?:[\W_]*+appliances?[\W_]*+repair)?
 1715018792	Cow	BlesterYT(?#youtube)
-1715019142	Cow	rummybo\.com
 1715085097	General Grievance	3rdlinemusic\.de
 1715088251	Makyen	mncraftmod\.com
 1715088276	Makyen	globalistores\.com
