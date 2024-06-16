@@ -63066,3 +63066,4 @@
 1718547059	Makyen	ehsaas(?:[\W_]*+rashan)?[\W_]*+program(?!\.pk(?<=ehsaasrashanprogram\.pk))(?!\.pk(?<=ehsaas-programs\.pk))
 1718551974	Makyen	springfairdelhi\.com
 1718552005	Makyen	spring[\W_]*+fair[\W_]*+delhi(?!\.com(?<=springfairdelhi\.com))
+1718552429	Vickel	fuhrerscheinlegalkaufen\.de
