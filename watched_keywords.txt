@@ -63070,3 +63070,4 @@
 1718558869	Vickel	szamerch\.shop
 1718559047	Vickel	szamerch(?!\.shop)
 1718566311	Cow	persml\.com
+1718568971	Vickel	craigsbarnes78(?:@gmail\.com)?
