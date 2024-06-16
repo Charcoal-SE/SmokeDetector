@@ -63063,3 +63063,4 @@
 1718483716	Makyen	tghk1polygon(?:@gmail\.com)?
 1718534094	Jeff Schaller	alliancedigitalrecovery
 1718546486	Makyen	hacker[\W_]*+school(?!\.in(?<=hackerschool\.in))
+1718546661	Makyen	markastoto(?!\.ca)
