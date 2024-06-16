@@ -63064,3 +63064,4 @@
 1718534094	Jeff Schaller	alliancedigitalrecovery
 1718546486	Makyen	hacker[\W_]*+school(?!\.in(?<=hackerschool\.in))
 1718546661	Makyen	markastoto(?!\.ca)
+1718547059	Makyen	ehsaas(?:[\W_]*+rashan)?[\W_]*+program(?!\.pk(?<=ehsaasrashanprogram\.pk))(?!\.pk(?<=ehsaas-programs\.pk))
