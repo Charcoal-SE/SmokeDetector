@@ -2,7 +2,8 @@
 import os
 import sys
 import traceback
-from datetime import datetime
+from datetime import datetime, timezone
+import time
 import importlib
 import threading
 # termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
@@ -20,6 +21,7 @@ from termcolor import colored
 import requests
 import regex
 from regex.regex import _compile as regex_raw_compile
+import websocket
 
 from globalvars import GlobalVars
 
@@ -508,3 +510,38 @@ def get_se_api_default_params_questions_answers_posts_add_site(site):
 
 def get_se_api_url_for_route(route):
     return GlobalVars.se_api_url_base + route
+
+
+def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time):
+    from chatcommunicate import tell_rooms_with
+    current_time = time.time()
+    exception_only = ''.join(traceback.format_exception_only(type(exception), exception)).strip()
+    exception_message = "{}: {} WebSocket: Recovered from `{}`".format(GlobalVars.location, which_ws, exception_only)
+    exception_message += '.' if regex.search(r'\w`$', exception_message) is not None else ''
+    elapsed_from_connect = current_time - connect_time
+    time_from_connect_message = " {:.1f} seconds after connection;".format(elapsed_from_connect)
+    if hb_time:
+        elapsed_from_hb = current_time - hb_time
+        time_from_hb_message = " {:.1f} seconds after heartbeat.".format(elapsed_from_hb)
+    else:
+        time_from_hb_message = " No heartbeats have been received on the current WebSocket."
+    timestamp = "[{} UTC]: ".format(datetime.now(timezone.utc).isoformat()[0:19])
+    log('debug', '{} recovered from {}'.format(which_ws, exception_only))
+    tell_rooms_with('debug', timestamp + exception_message + time_from_connect_message +
+                    time_from_hb_message)
+
+
+def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time):
+    log_current_exception(log_level="warning")
+    if ws:
+        ws.close()  # Close the socket, if it's not already closed
+        ws = None
+    try:
+        ws = websocket.create_connection(GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout)
+        subscribe()
+        tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time)
+        return ws
+    except websocket.WebSocketException:
+        log('error', '{} failed to recover from a WebSocketException.'.format(which_ws))
+        log_current_exception()
+        raise
