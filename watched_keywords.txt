@@ -63078,3 +63078,4 @@
 1718602622	Cow	btroutfitters\.com
 1718605743	Cow	docopd\.com
 1718608753	Makyen	docopd(?!\.com)
+1718610349	Cow	trishulhomecare\.com
