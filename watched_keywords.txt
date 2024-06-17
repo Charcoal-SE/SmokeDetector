@@ -63092,3 +63092,4 @@
 1718479904	Vickel	xylostar\.com
 1718480138	Vickel	McWIN[\W_]*+iTECH
 1718480263	Vickel	bombitupapp\.in
+1718536792	Cow	selflinker\.com
