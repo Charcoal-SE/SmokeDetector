@@ -63076,3 +63076,4 @@
 1718588567	Makyen	d(?:octo)?r[\W_]*+alex
 1718601454	Cow	planforfreedom\.com
 1718602622	Cow	btroutfitters\.com
+1718605743	Cow	docopd\.com
