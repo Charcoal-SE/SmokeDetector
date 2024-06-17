@@ -63075,3 +63075,4 @@
 1718588545	Makyen	dr\.alexsolutiontemple01(?:@yahoo\.com)?
 1718588567	Makyen	d(?:octo)?r[\W_]*+alex
 1718601454	Cow	planforfreedom\.com
+1718602622	Cow	btroutfitters\.com
