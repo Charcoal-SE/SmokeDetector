@@ -63079,3 +63079,4 @@
 1718605743	Cow	docopd\.com
 1718608753	Makyen	docopd(?!\.com)
 1718610641	Dragonrage	trishulhomecare\.com
+1718621818	double-beep	premiertickets\.co
