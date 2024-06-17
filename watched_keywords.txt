@@ -63080,3 +63080,4 @@
 1718608753	Makyen	docopd(?!\.com)
 1718610641	Dragonrage	trishulhomecare\.com
 1718621818	double-beep	premiertickets\.co
+1718621868	double-beep	wisewaytec\.com
