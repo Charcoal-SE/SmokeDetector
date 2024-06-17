@@ -63074,3 +63074,4 @@
 1718573215	Makyen	sophie[\W_]*+rain[\W_]*+nude
 1718588545	Makyen	dr\.alexsolutiontemple01(?:@yahoo\.com)?
 1718588567	Makyen	d(?:octo)?r[\W_]*+alex
+1718602622	Cow	btroutfitters\.com
