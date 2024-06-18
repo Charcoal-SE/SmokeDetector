@@ -63107,6 +63107,5 @@
 1718691115	Cow	acp856709
 1718691327	Cow	techradiance\.in
 1718693525	Cow	air\.ind\.in
-1718699484	Cow	Cyber[\W_]*+Phantom
 1718713413	Cow	bandiztechnoz\.com
 1718718326	Makyen	d(?:octo)?r(?:[\W_]*+suresh)?[\W_]*+cheekatla

@@ -3074,3 +3074,4 @@ temu[\W_]*+coupon
 aci384098
 cyber[\W_]*+constable[\W_]*+intelligence(?![\W_]*+com)
 cyberphantom432(?:@gmail\.com)?
+Cyber[\W_]*+Phantom
