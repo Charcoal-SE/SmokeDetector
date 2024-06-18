@@ -63116,3 +63116,4 @@
 1718735174	Makyen	safeaeon(?!\.com)
 1718736582	Jeff Schaller	personalisedhoodiesuk\.co\.uk
 1718738035	Jeff Schaller	likelyabusiness\.com
+1718738234	Makyen	personalised[\W_]*+hoodies[\W_]*+uk(?!\.co\.uk(?<=personalisedhoodiesuk\.co\.uk))
