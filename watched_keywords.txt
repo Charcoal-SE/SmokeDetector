@@ -63112,3 +63112,4 @@
 1718722135	Makyen	econour(?!\.com)
 1718722347	Jeff Schaller	flightsdaddy\.com
 1718722851	Jeff Schaller	miloudi\.rf\.gd
+1718725438	Jeff Schaller	(?-i:51T2omYGJLmRnhq8A)(?#maps.app.goo.gl)
