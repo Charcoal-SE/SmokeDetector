@@ -63109,3 +63109,4 @@
 1718693525	Cow	air\.ind\.in
 1718699484	Cow	Cyber[\W_]*+Phantom
 1718699417	Cow	(?-i:cyberphantom432)
+1718713413	Cow	bandiztechnoz\.com
