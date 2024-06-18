@@ -63108,4 +63108,3 @@
 1718691327	Cow	techradiance\.in
 1718693525	Cow	air\.ind\.in
 1718709779	Jeff Schaller	responsinator\.com
-1718709808	Jeff Schaller	quirktools\.com
