@@ -63110,3 +63110,4 @@
 1718699484	Cow	Cyber[\W_]*+Phantom
 1718713413	Cow	bandiztechnoz\.com
 1718718326	Makyen	d(?:octo)?r(?:[\W_]*+suresh)?[\W_]*+cheekatla
+1718719176	Makyen	cyberphantom432(?:@gmail\.com)?
