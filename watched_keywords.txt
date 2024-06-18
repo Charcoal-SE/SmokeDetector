@@ -63097,5 +63097,4 @@
 1718611620	Cow	digitaldeeptech\.com
 1718643356	Cow	accessfixtures\.com
 1718664605	Makyen	sangoma
-1718672749	Spevacus	Greatsotuspell[\W_]*+(?:at[\W_]*+)?saintly(?:[\W_]*+(?:dot[\W_]*+)?com)?
 1718673100	Spevacus	safeaeon\.com
