@@ -63155,3 +63155,4 @@
 1718832924	Vickel	bashkatufka(?:@gmail\.com)?
 1718833264	Vickel	Terrascape[\W_]*+Cyber[\W_]*+Security
 1718833639	Jeff Schaller	office8@europe\.com
+1718834459	Vickel	oyunmedyasi\.com
