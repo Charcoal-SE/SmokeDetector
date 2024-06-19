@@ -63141,3 +63141,4 @@
 1718810309	Jeff Schaller	providerscarebilling\.com
 1718813258	Makyen	pune[\W_]*+escorts[\W_]*+babylon(?!\.com(?<=puneescortsbabylon\.com))
 1718813266	Makyen	viman[\W_]*+nagar[\W_]*+escorts?
+1718813512	Makyen	lyfe[\W_]*+medicare(?!\.com(?<=lyfemedicare\.com))(?:[\W_]*+cancer[\W_]*+center)?
