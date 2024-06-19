@@ -63125,3 +63125,4 @@
 1718776299	Cow	We[\W_]*+offer[\W_]*+the[\W_]*+best
 1718778956	Cow	ZumiUniform(?# facebook)
 1718779132	Cow	servicebuyusa(?:@gmail\.com)?
+1718779202	Cow	zumi\.com\.vn
