@@ -63118,3 +63118,4 @@
 1718738035	Jeff Schaller	likelyabusiness\.com
 1718738234	Makyen	personalised[\W_]*+hoodies[\W_]*+uk(?!\.co\.uk(?<=personalisedhoodiesuk\.co\.uk))
 1718753841	Spevacus	hdhindimovie22\.blogspot
+1718774582	Dragonrage	yourcareerpath\.in
