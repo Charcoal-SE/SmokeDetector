@@ -63152,3 +63152,4 @@
 1718831065	Vickel	Dmitry[\W_]*+Gunyashov(?!\.info(?<=dmitrygunyashov\.info))
 1718832618	Jeff Schaller	Wallshieldservice
 1718832578	Vickel	Wallshield[\W_]*+Cyber[\W_]*+Security[\W_]*+Service
+1718832924	Vickel	bashkatufka(?:@gmail\.com)?
