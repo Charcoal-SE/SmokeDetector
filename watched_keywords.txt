@@ -63146,3 +63146,4 @@
 1718813921	Makyen	young[\W_]*+money
 1718816438	Jeff Schaller	logo\.dev
 1718816730	Jeff Schaller	orangepillapp\.com
+1718821686	Vickel	anupamamaheshkumar\.com
