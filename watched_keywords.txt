@@ -63148,3 +63148,4 @@
 1718816730	Jeff Schaller	orangepillapp\.com
 1718821686	Vickel	anupamamaheshkumar\.com
 1718826763	Cow	rust-client\.ru
+1718831065	Vickel	Dmitry[\W_]*+Gunyashov(?!\.info(?<=dmitrygunyashov\.info))
