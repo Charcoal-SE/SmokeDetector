@@ -63154,3 +63154,4 @@
 1718832578	Vickel	Wallshield[\W_]*+Cyber[\W_]*+Security[\W_]*+Service
 1718832924	Vickel	bashkatufka(?:@gmail\.com)?
 1718833264	Vickel	Terrascape[\W_]*+Cyber[\W_]*+Security
+1718833639	Jeff Schaller	office8@europe\.com
