@@ -63137,3 +63137,4 @@
 1718799364	Jeff Schaller	mykreationz\.in
 1718800424	Vickel	networthbumper\.com
 1718800506	Vickel	networthbumper(?!\.com)
+1718809633	Cow	medmaxtechnologiesllc\.com
