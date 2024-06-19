@@ -63150,3 +63150,4 @@
 1718826763	Cow	rust-client\.ru
 1718829950	Fastnlight	dmitrygunyashov\.info
 1718831065	Vickel	Dmitry[\W_]*+Gunyashov(?!\.info(?<=dmitrygunyashov\.info))
+1718832578	Vickel	Wallshield[\W_]*+Cyber[\W_]*+Security[\W_]*+Service
