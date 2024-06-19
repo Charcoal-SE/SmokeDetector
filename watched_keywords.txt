@@ -63143,3 +63143,4 @@
 1718813266	Makyen	viman[\W_]*+nagar[\W_]*+escorts?
 1718813512	Makyen	lyfe[\W_]*+medicare(?!\.com(?<=lyfemedicare\.com))(?:[\W_]*+cancer[\W_]*+center)?
 1718813865	Makyen	black[\W_]*+lord[\W_]*+brotherhood
+1718813921	Makyen	young[\W_]*+money
