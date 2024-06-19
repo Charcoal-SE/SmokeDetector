@@ -63138,3 +63138,4 @@
 1718800424	Vickel	networthbumper\.com
 1718800506	Vickel	networthbumper(?!\.com)
 1718809633	Cow	medmaxtechnologiesllc\.com
+1718810309	Jeff Schaller	providerscarebilling\.com
