@@ -63126,3 +63126,4 @@
 1718778956	Cow	ZumiUniform(?# facebook)
 1718779132	Cow	servicebuyusa(?:@gmail\.com)?
 1718779202	Cow	zumi\.com\.vn
+1718707577	Cow	danny\.com
