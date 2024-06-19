@@ -63156,3 +63156,4 @@
 1718833264	Vickel	Terrascape[\W_]*+Cyber[\W_]*+Security
 1718833639	Jeff Schaller	office8@europe\.com
 1718834459	Vickel	oyunmedyasi\.com
+1718834578	Vickel	Oyun[\W_]*+Medyası(?!\.com(?<=oyunmedyasi\.com))
