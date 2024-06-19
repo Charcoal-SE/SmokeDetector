@@ -5147,7 +5147,9 @@ items:
   disable: true
   ns: lambingansteleserye.xyz.
 - ns: myshakti.com.
-- ns: armadaservers.com.
+- comment: intermittently LifetimeTimeout 2024-06-19 and earlier
+  disable: true
+  ns: armadaservers.com.
 - ns: secureclouddns.net.
 - ns: att-websites.com.
 - comment: NXDOMAIN 2023-08-05
