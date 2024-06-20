@@ -63197,3 +63197,4 @@
 1718894926	Makyen	clickme[\W_]*+pakistan(?!\.com(?<=clickmepakistan\.com))
 1718895261	Makyen	iptvmovistar\.es
 1718897291	Vickel	oceanicyoga\.com
+1718897576	Makyen	oceanic[\W_]*+yoga(?!\.com(?<=oceanicyoga\.com))
