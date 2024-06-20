@@ -63165,3 +63165,4 @@
 1718857577	Spevacus	healthcurepills\.com
 1718860213	Cow	toyomotorsco\.com
 1718861070	Cow	qr-payment-rust\.vercel
+1718861050	Cow	upipayment-navy\.vercel
