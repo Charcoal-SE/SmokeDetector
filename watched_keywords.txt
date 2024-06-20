@@ -63162,3 +63162,4 @@
 1718843491	Makyen	speedyrecoveryagency[\W_]*+com
 1718843512	Makyen	speedy[\W_]*+recovery[\W_]*+agency(?![\W_]*+com(?<=speedyrecoveryagency[\W_]*+com))
 1718846246	Jeff Schaller	formulanegocioonline\.digital
+1718856479	Cow	agorhash\.com
