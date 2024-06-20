@@ -63198,3 +63198,4 @@
 1718895261	Makyen	iptvmovistar\.es
 1718897291	Vickel	oceanicyoga\.com
 1718897576	Makyen	oceanic[\W_]*+yoga(?!\.com(?<=oceanicyoga\.com))
+1718900674	double-beep	vensenacademy\.in
