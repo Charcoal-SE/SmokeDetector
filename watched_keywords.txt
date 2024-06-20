@@ -63159,4 +63159,3 @@
 1718834578	Vickel	Oyun[\W_]*+Medyası(?!\.com(?<=oyunmedyasi\.com))
 1718835766	Vickel	getmp3\.one
 1718835913	Vickel	getmp3(?!\.one)
-1718843227	Jeff Schaller	speedyrecoveryagency
