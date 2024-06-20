@@ -63195,3 +63195,4 @@
 1718894657	Makyen	sehgal[\W_]*+travel(?!\.com(?<=sehgaltravel\.com))s?
 1718894833	Makyen	ytmp4(?!\.is)
 1718894926	Makyen	clickme[\W_]*+pakistan(?!\.com(?<=clickmepakistan\.com))
+1718895261	Makyen	iptvmovistar\.es
