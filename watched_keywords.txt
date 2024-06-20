@@ -63192,3 +63192,4 @@
 1718885689	Cow	bestonlinecasinoinkorea\.com
 1718890858	VLAZ	meek[\W_]*+opulent
 1718893443	Jeff Schaller	albaselco\.com
+1718894657	Makyen	sehgal[\W_]*+travel(?!\.com(?<=sehgaltravel\.com))s?
