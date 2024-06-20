@@ -63200,3 +63200,4 @@
 1718897576	Makyen	oceanic[\W_]*+yoga(?!\.com(?<=oceanicyoga\.com))
 1718900674	double-beep	vensenacademy\.in
 1718915497	Vickel	extremefencellc\.com
+1718915837	Vickel	extreme[\W_]*+fence[\W_]*+llc(?!\.com(?<=extremefencellc\.com))
