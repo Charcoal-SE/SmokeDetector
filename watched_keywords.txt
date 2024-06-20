@@ -63160,3 +63160,4 @@
 1718835766	Vickel	getmp3\.one
 1718835913	Vickel	getmp3(?!\.one)
 1718843491	Makyen	speedyrecoveryagency[\W_]*+com
+1718843512	Makyen	speedy[\W_]*+recovery[\W_]*+agency(?![\W_]*+com(?<=speedyrecoveryagency[\W_]*+com))
