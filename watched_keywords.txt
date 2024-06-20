@@ -63193,3 +63193,4 @@
 1718890858	VLAZ	meek[\W_]*+opulent
 1718893443	Jeff Schaller	albaselco\.com
 1718894657	Makyen	sehgal[\W_]*+travel(?!\.com(?<=sehgaltravel\.com))s?
+1718894833	Makyen	ytmp4(?!\.is)
