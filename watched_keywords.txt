@@ -63199,3 +63199,4 @@
 1718897291	Vickel	oceanicyoga\.com
 1718897576	Makyen	oceanic[\W_]*+yoga(?!\.com(?<=oceanicyoga\.com))
 1718900674	double-beep	vensenacademy\.in
+1718908558	Cow	fqps\.co\.uk
