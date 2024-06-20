@@ -62580,7 +62580,6 @@
 1717351206	Fastnlight	provideoads\.com
 1717368832	Vickel	scottgross\.works
 1717418643	General Grievance	paravisionlab\.co\.in
-1717419993	Vickel	microsyringepump\.com
 1717424025	Jeff Schaller	teceze\.com
 1717425830	Jeff Schaller	bmahesh\.com\.np
 1717426725	Fastnlight	osun-cat\.com
