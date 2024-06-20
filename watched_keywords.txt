@@ -63163,3 +63163,4 @@
 1718843512	Makyen	speedy[\W_]*+recovery[\W_]*+agency(?![\W_]*+com(?<=speedyrecoveryagency[\W_]*+com))
 1718846246	Jeff Schaller	formulanegocioonline\.digital
 1718857577	Spevacus	healthcurepills\.com
+1718860213	Cow	toyomotorsco\.com
