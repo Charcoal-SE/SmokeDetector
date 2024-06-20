@@ -63196,3 +63196,4 @@
 1718894833	Makyen	ytmp4(?!\.is)
 1718894926	Makyen	clickme[\W_]*+pakistan(?!\.com(?<=clickmepakistan\.com))
 1718895261	Makyen	iptvmovistar\.es
+1718897291	Vickel	oceanicyoga\.com
