@@ -63215,3 +63215,4 @@
 1718951726	Cow	rafieboutique\.wuaze\.com
 1718952290	Cow	plutotours\.in
 1718952559	Cow	toursntravelpro\.com
+1718954413	Cow	taxilla\.com
