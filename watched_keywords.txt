@@ -63225,3 +63225,4 @@
 1718967315	Cow	shauryag2002(?# Github)
 1718968937	Cow	67af1e1a33357354(?# skype)
 1718978692	Spevacus	aurrabyavleen\.net
+1718978847	Spevacus	vensen[\W_]*+academy(?!\.net)
