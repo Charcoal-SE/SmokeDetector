@@ -63227,3 +63227,4 @@
 1718978692	Spevacus	aurrabyavleen\.net
 1718978847	Spevacus	vensen[\W_]*+academy(?!\.net)
 1718982438	Makyen	divorce-lawyer
+1718982460	Makyen	aurra[\W_]*+by[\W_]*+avleen(?!\.net(?<=aurrabyavleen\.net))
