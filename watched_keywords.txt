@@ -63217,3 +63217,4 @@
 1718952559	Cow	toursntravelpro\.com
 1718954413	Cow	taxilla\.com
 1718954520	Cow	taxilla(?!\.com)
+1718954666	Cow	nhshospitals\.in
