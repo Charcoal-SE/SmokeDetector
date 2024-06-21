@@ -63229,3 +63229,4 @@
 1718982438	Makyen	divorce-lawyer
 1718982460	Makyen	aurra[\W_]*+by[\W_]*+avleen(?!\.net(?<=aurrabyavleen\.net))
 1718983068	Cow	pakscoops\.com
+1718987749	Cow	cotonmode\.co\.uk
