@@ -63235,3 +63235,4 @@
 1719002285	Vickel	chooseaaronservices\.com
 1719004249	Spevacus	quorablog\.co
 1719006283	Vickel	tropical[\W_]*+delight[\W_]*+recovery
+1719007511	Vickel	techarts\.net
