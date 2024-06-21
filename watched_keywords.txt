@@ -63204,3 +63204,4 @@
 1718908558	Cow	fqps\.co\.uk
 1718945322	VLAZ	blessingquotes\.org
 1718945376	VLAZ	converttools\.app
+1718945751	Cow	ltc1qldf0fsdqpcrd93gvczlc0y0m5vxesmk5ssc89p(?# Litecoin address)
