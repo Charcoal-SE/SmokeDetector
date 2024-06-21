@@ -63233,3 +63233,4 @@
 1718997993	Vickel	funnelliner\.com
 1719000297	Vickel	bookmytourflight\.com
 1719002285	Vickel	chooseaaronservices\.com
+1719004249	Spevacus	quorablog\.co
