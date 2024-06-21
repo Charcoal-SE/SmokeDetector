@@ -34279,7 +34279,6 @@
 1640096422	cigien	quickbookstool\.wordpress\.com
 1640096547	cigien	quickrecovery180(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1640096675	cigien	attariclasses\.in
-1640097384	cigien	nearlearn\.com
 1640099519	tripleee	cheapplumber\.ca
 1640100665	Spevacus	pandorabracelet\.co\.uk
 1640101535	cigien	ottawaplumbernow\.com
