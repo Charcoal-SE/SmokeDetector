@@ -63240,3 +63240,4 @@
 1719040506	VLAZ	gclcbe\.com
 1719040528	Mast	mediatek\.com
 1719043490	Makyen	mybl\.digital
+1719043513	Makyen	bareerah\.me
