@@ -63252,3 +63252,4 @@
 1719050201	Cow	panashi\.ae
 1719050014	Vickel	khoahochanhchinhnhansusaoviet(?:@gmail\.com)?
 1719052607	Cow	ezammart\.com
+1719049962	Vickel	hanhchinhnhansu\.edu\.vn
