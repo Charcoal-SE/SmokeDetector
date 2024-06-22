@@ -63244,3 +63244,4 @@
 1719043539	Makyen	gautam[\W_]*+solar(?!\.com(?<=gautamsolar\.com))
 1719044198	Makyen	61559577240930(?#facebook.com)
 1719044220	Makyen	bubaherbalmiraclem\.wixsite\.com
+1719045088	Makyen	quorablog(?!\.co)
