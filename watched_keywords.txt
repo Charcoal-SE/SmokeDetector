@@ -63250,3 +63250,4 @@
 1719050516	Vickel	chemxpert(?!\.com)
 1719050348	Vickel	chemxpert\.com
 1719050201	Cow	panashi\.ae
+1719050014	Vickel	khoahochanhchinhnhansusaoviet(?:@gmail\.com)?
