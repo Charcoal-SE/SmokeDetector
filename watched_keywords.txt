@@ -63264,3 +63264,4 @@
 1719067074	Makyen	astrologyint\.com
 1719068397	Makyen	futuristicdigital\.in
 1719068418	Makyen	futuristic[\W_]*+digital(?!\.in(?<=futuristicdigital\.in))
+1719075572	Dragonrage	casinos24\.cl
