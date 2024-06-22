@@ -63260,3 +63260,4 @@
 1719060425	Cow	monsoonesdlabtable\.com
 1719060052	Cow	Ogonn
 1719064019	Jeff Schaller	hdnude\.com
+1719064177	Makyen	nimble[\W_]*+wags(?!\.com(?<=nimblewags\.com))
