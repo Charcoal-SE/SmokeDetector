@@ -549,7 +549,7 @@ def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time)
 
 # See PR 2322 for the reason for (?:^|\b) and (?:\b|$)
 # (?w:\b) is also useful
-KEYWORD_BOOKENDING_START = r"(?is)(?:^|\b|(?w:\b))"
+KEYWORD_BOOKENDING_START = r"(?is)(?:^|\b|(?w:\b))(*PRUNE)"
 KEYWORD_BOOKENDING_END = r"(?:\b|(?w:\b)|$)"
 KEYWORD_NON_BOOKENDING_START = r"(?i)"
 KEYWORD_NON_BOOKENDING_END = r""
