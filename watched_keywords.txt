@@ -21454,7 +21454,6 @@
 1597218236	Mast	flexclip
 1597219806	Mast	peaceful-chandrasekhar-9a1b9a\.netlify\.app
 1597220873	tripleee	(?-i:^Ruth True$)
-1597221940	tripleee	carmax\.com
 1597221957	tripleee	wapcar\.my
 1597225032	Mast	numbersprime\.com
 1597231294	Makyen	hottubwiki\.com
