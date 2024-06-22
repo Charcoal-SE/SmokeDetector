@@ -63262,3 +63262,4 @@
 1719064019	Jeff Schaller	hdnude\.com
 1719064177	Makyen	nimble[\W_]*+wags(?!\.com(?<=nimblewags\.com))
 1719067074	Makyen	astrologyint\.com
+1719068397	Makyen	futuristicdigital\.in
