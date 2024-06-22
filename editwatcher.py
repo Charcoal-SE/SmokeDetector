@@ -89,7 +89,7 @@ class EditWatcher:
     def _subscribe_to_all_saved_posts(self):
         with self.posts_lock:
             for action in self.posts:
-                self._subscribe(self, action)
+                self._subscribe(action)
 
     def subscribe(self, post_url=None, hostname=None, site_id=None, question_id=None,
                   pickle=True, timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):

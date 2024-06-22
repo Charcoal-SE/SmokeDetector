@@ -100,7 +100,7 @@ class DeletionWatcher:
     def _subscribe_to_all_saved_posts(self):
         with self.posts_lock:
             for action in self.posts:
-                self._subscribe(self, action)
+                self._subscribe(action)
 
     def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
         if GlobalVars.no_deletion_watcher:
