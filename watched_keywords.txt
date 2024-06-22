@@ -63237,3 +63237,4 @@
 1719006283	Vickel	tropical[\W_]*+delight[\W_]*+recovery
 1719007511	Vickel	techarts\.net
 1719035409	VLAZ	poochtini\.com
+1719040506	VLAZ	gclcbe\.com
