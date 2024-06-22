@@ -63242,3 +63242,4 @@
 1719043490	Makyen	mybl\.digital
 1719043513	Makyen	bareerah\.me
 1719043539	Makyen	gautam[\W_]*+solar(?!\.com(?<=gautamsolar\.com))
+1719044198	Makyen	61559577240930(?#facebook.com)
