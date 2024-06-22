@@ -92,6 +92,8 @@ class GlobalVars:
     api_backoff_time = 0
     default_requests_timeout = 60
     deletion_watcher = None
+    se_websocket_url = "wss://qa.sockets.stackexchange.com/"
+    se_websocket_timeout = 7 * 60  # 7 minutes; heartbeats from SE are every 5 minutes
 
     not_privileged_warning = \
         "You are not a privileged user. Please see " \

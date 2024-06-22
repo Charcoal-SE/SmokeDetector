@@ -12,7 +12,7 @@ import websocket
 from globalvars import GlobalVars
 import chatcommunicate
 import datahandling
-from helpers import log, add_to_global_bodyfetcher_queue_in_new_thread
+from helpers import log, add_to_global_bodyfetcher_queue_in_new_thread, recover_websocket
 from parsing import fetch_post_id_and_site_from_url
 from tasks import Tasks
 
@@ -26,7 +26,7 @@ class EditWatcher:
         if GlobalVars.no_edit_watcher:
             self.socket = None
             return
-        # posts is a dict with the WebSocket action as keys {site_id}-question-{question_id} as keys
+        # posts is a dict with the WebSocket action, {site_id}-question-{question_id}, as keys
         # with each value being: (site_id, hostname, question_id, max_time)
         self.posts = {}
         self.posts_lock = threading.Lock()
@@ -34,10 +34,14 @@ class EditWatcher:
         self.save_handle_lock = threading.Lock()
 
         try:
-            self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+            self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
+                                                      timeout=GlobalVars.se_websocket_timeout)
+            self.connect_time = time.time()
+            self.hb_time = None
         except websocket.WebSocketException:
             self.socket = None
             log('error', 'EditWatcher failed to create a websocket connection')
+            return
 
         if datahandling.has_pickle(PICKLE_FILENAME):
             pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
@@ -53,25 +57,39 @@ class EditWatcher:
 
     def _start(self):
         while True:
-            msg = self.socket.recv()
+            try:
+                msg = self.socket.recv()
 
-            if msg:
-                msg = json.loads(msg)
-                action = msg["action"]
+                if msg:
+                    msg = json.loads(msg)
+                    action = msg["action"]
 
-                if action == "hb":
-                    self.socket.send("hb")
-                else:
-                    data = json.loads(msg["data"])
-                    now = time.time()
-                    with self.posts_lock:
-                        site_id, hostname, question_id, max_time = self.posts.get(action, (None, None, None, now))
-                        if site_id and max_time <= now:
-                            del self.posts[action]
-                            Tasks.do(self._unsubscribe, action)
-                    if max_time > now and data["a"] == "post-edit":
-                        add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False,
-                                                                      source="EditWatcher")
+                    if action == "hb":
+                        self.hb_time = time.time()
+                        self.socket.send("hb")
+                    else:
+                        data = json.loads(msg["data"])
+                        now = time.time()
+                        with self.posts_lock:
+                            site_id, hostname, question_id, max_time = self.posts.get(action, (None, None, None, now))
+                            if site_id and max_time <= now:
+                                del self.posts[action]
+                                Tasks.do(self._unsubscribe, action)
+                        if max_time > now and data["a"] == "post-edit":
+                            add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False,
+                                                                          source="EditWatcher")
+            except websocket.WebSocketException as e:
+                ws = self.socket
+                self.socket = None
+                self.socket = recover_websocket("EditWatcher", ws, self._subscribe_to_all_saved_posts, e,
+                                                self.connect_time, self.hb_time)
+                self.connect_time = time.time()
+                self.hb_time = None
+
+    def _subscribe_to_all_saved_posts(self):
+        with self.posts_lock:
+            for action in self.posts:
+                self._subscribe(self, action)
 
     def subscribe(self, post_url=None, hostname=None, site_id=None, question_id=None,
                   pickle=True, timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):
