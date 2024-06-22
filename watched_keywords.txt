@@ -63249,3 +63249,4 @@
 1719051268	Cow	wabm\.in
 1719050516	Vickel	chemxpert(?!\.com)
 1719050348	Vickel	chemxpert\.com
+1719050201	Cow	panashi\.ae
