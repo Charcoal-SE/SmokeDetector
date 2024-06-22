@@ -63266,3 +63266,4 @@
 1719068418	Makyen	futuristic[\W_]*+digital(?!\.in(?<=futuristicdigital\.in))
 1719075572	Dragonrage	casinos24\.cl
 1719077734	Dragonrage	(?-i:5eaZL9fh)(?#cutt.ly)
+1719077822	Dragonrage	nextweblogic\.com
