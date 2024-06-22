@@ -21207,7 +21207,6 @@
 1596180631	Nisse Engström	bonusbigpoker88\.com
 1596180921	Nisse Engström	ceriabet\.coffeecup\.com
 1596180956	Nisse Engström	pokerclick88\.coffeecup\.com
-1596181113	Nisse Engström	coffeecup\.com
 1596193546	Cody Gray	onlinehelpinhindi\.in
 1596196402	tripleee	healthtrendspills\.com
 1596196448	tripleee	mammoth[\W_]*+male
