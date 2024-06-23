@@ -63276,3 +63276,4 @@
 1719104692	Makyen	nestadu(?!\.com)
 1719121824	Ryan M	sunasusa\.com
 1719138741	Jeff Schaller	jomejourney\.com
+1719128202	Cow	YT7CRACKER(?:@gmail\.com)?
