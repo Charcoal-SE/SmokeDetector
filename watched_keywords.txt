@@ -63273,3 +63273,4 @@
 1719097157	Makyen	sensasibet77\.pro
 1719097180	Makyen	sensasibet77(?!\.pro)
 1719104670	Makyen	nestadu\.com
+1719104692	Makyen	nestadu(?!\.com)
