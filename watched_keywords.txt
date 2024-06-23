@@ -63280,3 +63280,4 @@
 1719089096	Vickel	vasily[\W_]*+mesheryakov(?!\.com(?<=vasily-mesheryakov\.com))
 1719142148	Jeff Schaller	(?-i:3RFVnf5)(?#fiverr)
 1719142177	Jeff Schaller	urgenthomeselling\.com
+1719148144	Cow	medallionfinancing2(?:@gmail\.com)?
