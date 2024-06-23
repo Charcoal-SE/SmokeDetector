@@ -63277,3 +63277,4 @@
 1719121824	Ryan M	sunasusa\.com
 1719138741	Jeff Schaller	jomejourney\.com
 1719128202	Cow	YT7CRACKER(?:@gmail\.com)?
+1719089096	Vickel	vasily[\W_]*+mesheryakov(?!\.com(?<=vasily-mesheryakov\.com))
