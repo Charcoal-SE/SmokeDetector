@@ -63275,3 +63275,4 @@
 1719104670	Makyen	nestadu\.com
 1719104692	Makyen	nestadu(?!\.com)
 1719121824	Ryan M	sunasusa\.com
+1719138741	Jeff Schaller	jomejourney\.com
