@@ -63289,3 +63289,4 @@
 1719153455	Makyen	stardewvalley-apk\.com
 1719153477	Makyen	stardew[\W_]*+valley(?!-apk\.com(?<=stardewvalley-apk\.com))
 1719153574	Makyen	webbycrown\.com
+1719153813	Makyen	captivix\.com
