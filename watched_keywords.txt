@@ -63299,3 +63299,4 @@
 1719160381	Makyen	voltron[\W_]*+operations(?!\.com(?<=voltronoperations\.com))
 1719160834	Cow	rootcodewave\.com
 1719169980	Makyen	use-router-with-events
+1719170002	Makyen	userouterwithevents
