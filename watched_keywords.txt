@@ -63297,3 +63297,4 @@
 1719155411	Jeff Schaller	ir-theme\.ir
 1719159389	Cow	voltronoperations\.com
 1719160381	Makyen	voltron[\W_]*+operations(?!\.com(?<=voltronoperations\.com))
+1719160834	Cow	rootcodewave\.com
