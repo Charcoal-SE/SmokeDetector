@@ -63290,3 +63290,4 @@
 1719153477	Makyen	stardew[\W_]*+valley(?!-apk\.com(?<=stardewvalley-apk\.com))
 1719153574	Makyen	webbycrown\.com
 1719153813	Makyen	captivix\.com
+1719155289	Jeff Schaller	esoal24\.com
