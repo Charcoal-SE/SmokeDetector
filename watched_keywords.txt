@@ -63288,3 +63288,4 @@
 1719153251	Makyen	8000072(?# not using a number watch, given the repetitive nature of the number)
 1719153455	Makyen	stardewvalley-apk\.com
 1719153477	Makyen	stardew[\W_]*+valley(?!-apk\.com(?<=stardewvalley-apk\.com))
+1719153574	Makyen	webbycrown\.com
