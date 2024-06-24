@@ -63342,3 +63342,4 @@
 1719241493	Cow	itrade-earners\.net
 1719247430	Fastnlight	HBBQFB0W
 1719250167	Makyen	mfi[\W_]*+medical(?!\.com(?<=mfimedical\.com))
+1719251555	Jeff Schaller	be10x\.in
