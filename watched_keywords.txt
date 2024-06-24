@@ -63310,3 +63310,4 @@
 1719208960	Cow	Gold[\W_]*+Pokket[\W_]*+LOAN
 1719209523	Cow	fikfapp\.org
 1719209795	Makyen	fikfapp(?!\.org)
+1719209905	Cow	premiumdesignstudio\.com
