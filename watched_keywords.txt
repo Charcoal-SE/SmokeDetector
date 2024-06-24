@@ -63304,3 +63304,4 @@
 1719170052	Makyen	beach[\W_]*+buggy[\W_]*+racing(?!\.net(?<=beachbuggyracing\.net))
 1719192682	Fastnlight	technicalpurnima\.in
 1719194832	Makyen	technicalpurnima(?!\.in)
+1719206616	Makyen	hummingbirdtechnical\.com
