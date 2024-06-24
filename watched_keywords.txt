@@ -63307,3 +63307,4 @@
 1719206616	Makyen	hummingbirdtechnical\.com
 1719206638	Makyen	humming[\W_]*+bird[\W_]*+technical(?!\.com(?<=hummingbirdtechnical\.com))
 1719207498	Makyen	topraksoyearthmantsuchimoto
+1719208960	Cow	Gold[\W_]*+Pokket[\W_]*+LOAN
