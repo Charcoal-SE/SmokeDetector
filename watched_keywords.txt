@@ -63344,3 +63344,4 @@
 1719250167	Makyen	mfi[\W_]*+medical(?!\.com(?<=mfimedical\.com))
 1719251555	Jeff Schaller	be10x\.in
 1719244455	Cow	travelwithhimani\.in
+1719252563	Jeff Schaller	smdreloaded\.com
