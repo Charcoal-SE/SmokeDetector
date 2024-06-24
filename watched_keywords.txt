@@ -63348,3 +63348,4 @@
 1719253982	Ryan M	javatechnote\.com
 1719258993	Makyen	vinylwindowsolutions\.com
 1719259014	Makyen	vinyl[\W_]*+window[\W_]*+solutions(?!\.com(?<=vinylwindowsolutions\.com))
+1719265184	Spevacus	coherence-free\.blogspot
