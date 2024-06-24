@@ -63337,3 +63337,4 @@
 1719225439	Cow	americanjainidentity
 1719226338	Cow	darkhatthacker(?:@gmail\.com)?
 1719227612	Cow	TOTO5000
+1719231336	Cow	Digigoplus
