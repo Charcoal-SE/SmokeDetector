@@ -63306,3 +63306,4 @@
 1719194832	Makyen	technicalpurnima(?!\.in)
 1719206616	Makyen	hummingbirdtechnical\.com
 1719206638	Makyen	humming[\W_]*+bird[\W_]*+technical(?!\.com(?<=hummingbirdtechnical\.com))
+1719207330	Cow	petir\.io
