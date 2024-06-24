@@ -63323,3 +63323,4 @@
 1719233309	VLAZ	bhagyag\.com
 1719233333	VLAZ	bhagyag(?!\.com)
 1719234263	VLAZ	super52\.com
+1719234366	Jeff Schaller	yumury\.dev
