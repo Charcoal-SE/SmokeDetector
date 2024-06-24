@@ -63349,3 +63349,4 @@
 1719258993	Makyen	vinylwindowsolutions\.com
 1719259014	Makyen	vinyl[\W_]*+window[\W_]*+solutions(?!\.com(?<=vinylwindowsolutions\.com))
 1719265184	Spevacus	coherence-free\.blogspot
+1719268016	Makyen	взлом(?:инстаграмм|вконтакте|ватсапа|аймлм|сети|ватцапа|соцсетей|вотсап|инстаграмма|страницы|щики|вацап|однокламссников|whatsapp|почты|инсты|вайбера)
