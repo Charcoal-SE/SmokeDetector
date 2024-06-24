@@ -63322,3 +63322,4 @@
 1719230725	Cow	eagerled\.com
 1719233309	VLAZ	bhagyag\.com
 1719233333	VLAZ	bhagyag(?!\.com)
+1719234263	VLAZ	super52\.com
