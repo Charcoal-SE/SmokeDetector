@@ -63384,3 +63384,4 @@
 1719266672	Vickel	89033500820\.vzlom(?:@gmail\.com)?
 1719266866	Vickel	(?-i:uslugi_vzloma)(?#mssg.me)
 1719314013	Vickel	airportsterminalguides\.com
+1719319483	Jeff Schaller	writepapers\.com
