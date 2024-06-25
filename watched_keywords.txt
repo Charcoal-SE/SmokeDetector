@@ -63391,3 +63391,4 @@
 1719320931	Vickel	x-on\.com\.au
 1719326685	Makyen	psdigitise(?!\.com)(?:[\W_]*+llp)?
 1719326937	Makyen	codetech[\W_]*+lab(?!\.com(?<=codetechlab\.com))
+1719327033	Makyen	maticz(?!\.com)(?:[\W_]*+technologies)?
