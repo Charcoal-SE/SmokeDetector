@@ -63356,3 +63356,4 @@
 1719274400	Fastnlight	situspildun2026\.blogspot
 1719274403	Fastnlight	agenpialadunia2026\.blogspot
 1719284411	Makyen	vdo[\W_]*+group
+1719284471	Makyen	công[\W_]*+ty[\W_]*+cổ[\W_]*+phần[\W_]*+vdo
