@@ -63380,3 +63380,4 @@
 1719318307	Jeff Schaller	apparelshopusa\.com
 1719318366	Jeff Schaller	airflyreservations\.com
 1719319050	Jeff Schaller	codetechlab\.com
+1719319214	Jeff Schaller	Bringbackmycrypto(?!\.com)
