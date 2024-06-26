@@ -48452,7 +48452,6 @@
 1679481545	tripleee	patentdrawingsservices\.com
 1679482918	tripleee	rmc[\W_]*edu(?:cation)?
 1679482946	tripleee	techilaservices\.com
-1679485848	Glorfindel	swsg\.co
 1679487536	Jeff Schaller	Smaaash\.in
 1679487596	Jeff Schaller	kidskingdomdaycare\.co\.uk
 1679488807	tripleee	spotit\.pk
