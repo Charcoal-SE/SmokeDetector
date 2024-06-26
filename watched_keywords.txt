@@ -63428,3 +63428,4 @@
 1719412505	Makyen	greatjaipurupvc(?:@gmail\.com)?
 1719417503	Makyen	bailey[\W_]*+44
 1719418407	double-beep	kfsystems\.in
+1719419179	Makyen	cheap\w*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=.{0,400}?service)
