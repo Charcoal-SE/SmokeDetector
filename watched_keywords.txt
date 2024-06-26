@@ -63429,3 +63429,4 @@
 1719417503	Makyen	bailey[\W_]*+44
 1719418407	double-beep	kfsystems\.in
 1719419179	Makyen	cheap\w*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=.{0,400}?service)
+1719426864	Fastnlight	PicsArt[\W_]*+mod
