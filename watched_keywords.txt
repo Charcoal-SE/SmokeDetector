@@ -58917,7 +58917,6 @@
 1709033523	cigien	blrtools\.com
 1709033545	VLAZ	dumpsvilla\.com
 1709034184	Jeff Schaller	shopkiry\.com
-1709035284	Jeff Schaller	fastbroadbandtv\.com
 1709035675	lyxal	lifeisperfect\.life
 1709035921	lyxal	spotisaver\.org
 1709036869	tripleee	codingninjas\.com(?!/studio/)
