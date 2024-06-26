@@ -63431,3 +63431,4 @@
 1719419179	Makyen	cheap\w*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=.{0,400}?service)
 1719429412	Cow	saveinstaa\.com
 1719426864	Fastnlight	PicsArt[\W_]*+mod
+1719430093	Fastnlight	hacker11tech
