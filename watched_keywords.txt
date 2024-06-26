@@ -63440,3 +63440,4 @@
 1719434433	Dragonrage	combodeals\.com
 1719434456	Dragonrage	smarttravels\.ae
 1719434735	Makyen	xpm[\W_]*+consulting(?!\.com(?<=xpmconsulting\.com))
+1719435423	Fastnlight	pro[\W_]*+ethical[\W_]*+tech[\W_]*+expert
