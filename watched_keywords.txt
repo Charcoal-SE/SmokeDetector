@@ -63442,3 +63442,4 @@
 1719434735	Makyen	xpm[\W_]*+consulting(?!\.com(?<=xpmconsulting\.com))
 1719435423	Fastnlight	pro[\W_]*+ethical[\W_]*+tech[\W_]*+expert
 1719445215	Dragonrage	libgenis\.net
+1719445341	Makyen	davidshawwebdesign\.com
