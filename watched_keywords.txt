@@ -63439,3 +63439,4 @@
 1719434410	Dragonrage	smartzettacademy\.com
 1719434433	Dragonrage	combodeals\.com
 1719434456	Dragonrage	smarttravels\.ae
+1719434735	Makyen	xpm[\W_]*+consulting(?!\.com(?<=xpmconsulting\.com))
