@@ -63417,3 +63417,4 @@
 1719403263	Vickel	coinfomania\.com
 1719403318	Jeff Schaller	drshreyjain\.com
 1719403345	Vickel	coinfomania(?!\.com)
+1719405049	Jeff Schaller	saasquare\.co
