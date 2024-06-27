@@ -63457,3 +63457,4 @@
 1719472813	Cow	Bizvertex(?# telegram)
 1719472837	Cow	mmumullana\.org
 1719473355	Cow	Sentry[\W_]*+Vantage[\W_]*+Hacker
+1719475033	Dragonrage	portsmouth-dailytimes\.com
