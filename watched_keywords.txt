@@ -63453,3 +63453,4 @@
 1719472258	Cow	everlasting-base\.com
 1719473095	Cow	coolcut\.tv
 1719473282	Cow	gepcoonlinebil\.pk
+1719473355	Cow	Sentry[\W_]*+Vantage[\W_]*+Hacker
