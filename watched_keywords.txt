@@ -63459,3 +63459,4 @@
 1719473355	Cow	Sentry[\W_]*+Vantage[\W_]*+Hacker
 1719475033	Dragonrage	portsmouth-dailytimes\.com
 1719484604	Jeff Schaller	virtualstategst\.com
+1719485823	Cow	edubenchmark\.com
