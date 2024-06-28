@@ -63489,3 +63489,4 @@
 1719552509	Cow	moneyblogworld\.com
 1719554816	Cow	checkuridea\.com
 1719556667	VLAZ	gmweighing\.com
+1719554865	Cow	wildhuntermedia(?:@gmail\.com)?
