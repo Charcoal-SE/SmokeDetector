@@ -63502,3 +63502,4 @@
 1719568337	Vickel	speedypaper\.com
 1719565094	Cow	uwinpc\.com
 1719578133	Cow	cubanbracelets\.com
+1719582062	Makyen	metabyte[\W_]*+marketing(?!\.com(?<=metabytemarketing\.com))
