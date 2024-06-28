@@ -63507,3 +63507,4 @@
 1719583276	Jeff Schaller	buyplaya\.co
 1719583316	Jeff Schaller	buyplaya(?!\.co)
 1719583724	Spevacus	official-tirangagames\.com
+1719584513	Makyen	tiranga[\W_]*+games(?!\.com(?<=official-tirangagames\.com))
