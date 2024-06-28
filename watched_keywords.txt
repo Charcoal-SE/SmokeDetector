@@ -63505,3 +63505,4 @@
 1719582062	Makyen	metabyte[\W_]*+marketing(?!\.com(?<=metabytemarketing\.com))
 1719582420	Makyen	leonard[\W_]*+illuminati[\W_]*+brotherhood(?:@gmail\.com)?
 1719583276	Jeff Schaller	buyplaya\.co
+1719583316	Jeff Schaller	buyplaya(?!\.co)
