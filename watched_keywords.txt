@@ -63509,3 +63509,4 @@
 1719583724	Spevacus	official-tirangagames\.com
 1719584513	Makyen	tiranga[\W_]*+games(?!\.com(?<=official-tirangagames\.com))
 1719589540	Jeff Schaller	ruksanakhan\.com
+1719590999	Cow	ghostwritingproficiency\.com
