@@ -63503,3 +63503,4 @@
 1719565094	Cow	uwinpc\.com
 1719578133	Cow	cubanbracelets\.com
 1719582062	Makyen	metabyte[\W_]*+marketing(?!\.com(?<=metabytemarketing\.com))
+1719582420	Makyen	leonard[\W_]*+illuminati[\W_]*+brotherhood(?:@gmail\.com)?
