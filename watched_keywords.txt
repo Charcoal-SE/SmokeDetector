@@ -63510,3 +63510,4 @@
 1719584513	Makyen	tiranga[\W_]*+games(?!\.com(?<=official-tirangagames\.com))
 1719589540	Jeff Schaller	ruksanakhan\.com
 1719590999	Cow	ghostwritingproficiency\.com
+1719580028	Cow	anwhatapps\.com
