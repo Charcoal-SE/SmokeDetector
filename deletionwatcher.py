@@ -47,7 +47,7 @@ class DeletionWatcher:
             self.hb_time = None
         except websocket.WebSocketException:
             self.socket = None
-            log('error', 'DeletionWatcher failed to create a websocket connection')
+            log('error', '{}: WebSocket: failed to create a websocket connection'.format(self.__class__.__name__))
             return
 
         if datahandling.has_pickle(PICKLE_FILENAME):
@@ -56,7 +56,7 @@ class DeletionWatcher:
                 self.subscribe(post_url, pickle=False)
             self._schedule_save()
 
-        threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
+        threading.Thread(name=self.__class__.__name__, target=self._start, daemon=True).start()
 
     def _start(self):
         while True:
@@ -92,7 +92,7 @@ class DeletionWatcher:
             except websocket.WebSocketException as e:
                 ws = self.socket
                 self.socket = None
-                self.socket = recover_websocket("DeletionWatcher", ws, self._subscribe_to_all_saved_posts, e,
+                self.socket = recover_websocket(self.__class__.__name__, ws, self._subscribe_to_all_saved_posts, e,
                                                 self.connect_time, self.hb_time)
                 self.connect_time = time.time()
                 self.hb_time = None
@@ -110,7 +110,8 @@ class DeletionWatcher:
         with GlobalVars.site_id_dict_lock:
             site_id = GlobalVars.site_id_dict.get(post_site, None)
         if not site_id:
-            log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url))
+            log("warning", "{}: unknown site {} when subscribing to {}".format(self.__class__.__name__, post_site,
+                                                                               post_url))
             return
 
         if post_type == "answer":
@@ -143,9 +144,10 @@ class DeletionWatcher:
             try:
                 self.socket.send(action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed to subscribe to {}'.format(action))
+                log('error', '{}: failed to subscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', 'DeletionWatcher tried to subscribe to {}, but no WebSocket available.'.format(action))
+            log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
+                                                                                              action))
 
     def _schedule_save(self):
         with self.save_handle_lock:
@@ -197,9 +199,10 @@ class DeletionWatcher:
             try:
                 self.socket.send("-" + action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed to unsubscribe to {}'.format(action))
+                log('error', '{}: failed to unsubscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', 'DeletionWatcher tried to unsubscribe to {}, but no WebSocket available.'.format(action))
+            log('warn', '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
+                                                                                             action))
 
     @staticmethod
     def _ignore(post_site_id):
