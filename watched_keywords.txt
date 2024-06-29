@@ -63528,3 +63528,4 @@
 1719675593	Makyen	top[\W_]*+(?:fx|forex)[\W_]*+brokers[\W_]*+review(?!\.com(?<=topfxbrokersreview\.com))
 1719676833	Makyen	彩票
 1719676931	Makyen	fc662[\W_]*+cc
+1719676953	Makyen	f1999[\W_]*+cc
