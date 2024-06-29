@@ -526,9 +526,9 @@ def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_t
     else:
         time_from_hb_message = " No heartbeats have been received on the current WebSocket."
     timestamp = "[{} UTC]: ".format(datetime.now(timezone.utc).isoformat()[0:19])
-    log('debug', '{} recovered from {}'.format(which_ws, exception_only))
-    tell_rooms_with('debug', timestamp + exception_message + time_from_connect_message +
-                    time_from_hb_message)
+    message_without_timestamp = exception_message + time_from_connect_message + time_from_hb_message
+    log('debug', message_without_timestamp)
+    tell_rooms_with('debug', timestamp + message_without_timestamp)
 
 
 def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time):
