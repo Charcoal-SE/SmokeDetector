@@ -63525,3 +63525,4 @@
 1719663603	Jeff Schaller	whambampest\.com\.au
 1719666313	double-beep	suraheyaseen\.com
 1719666448	double-beep	nerdovo\.com
+1719675593	Makyen	top[\W_]*+(?:fx|forex)[\W_]*+brokers[\W_]*+review(?!\.com(?<=topfxbrokersreview\.com))
