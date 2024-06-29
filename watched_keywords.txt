@@ -63515,3 +63515,4 @@
 1719599750	Cow	agecalculator\.page
 1719482584	Cow	vadzoimaging\.com
 1719604245	Cow	instantcustomboxes\.com
+1719620705	Jeff Schaller	mountalverniahospitals\.com
