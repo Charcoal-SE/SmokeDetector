@@ -63540,3 +63540,4 @@
 1719737071	Cow	h2muk\.co\.uk
 1719743204	Jeff Schaller	Move[\W_]*+2[\W_]*+Overseas
 1719760141	dbc	firstpointdental\.com
+1719760131	dbc	tdschicago\.com
