@@ -63544,3 +63544,4 @@
 1719772301	Makyen	nisarga[\W_]*+care(?!\.com(?<=nisargacare\.com))
 1719774782	Jeff Schaller	szyoda\.com
 1719775240	Cow	cibrvarsity\.uk
+1719785026	Vickel	deepwatch880(?:@outlook\.com)
