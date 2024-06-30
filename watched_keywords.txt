@@ -63539,3 +63539,4 @@
 1719738088	Cow	choangclub\.cfd
 1719737071	Cow	h2muk\.co\.uk
 1719743204	Jeff Schaller	Move[\W_]*+2[\W_]*+Overseas
+1719750955	Cow	buy[\W_]*+weed
