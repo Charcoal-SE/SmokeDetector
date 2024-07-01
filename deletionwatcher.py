@@ -36,9 +36,9 @@ class DeletionWatcher:
         #   Upon reboot, questions are not resubscribed to if the questions has either been deleted or the later
         #   of its creation or last edit date is >= 7200 seconds ago. Answers are never resubscribed to.
         self.posts = {}
-        self.posts_lock = threading.Lock()
+        self.posts_lock = threading.RLock()
         self.save_handle = None
-        self.save_handle_lock = threading.Lock()
+        self.save_handle_lock = threading.RLock()
 
         try:
             self.socket = websocket.create_connection(GlobalVars.se_websocket_url,

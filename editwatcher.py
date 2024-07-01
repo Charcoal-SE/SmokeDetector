@@ -29,9 +29,9 @@ class EditWatcher:
         # posts is a dict with the WebSocket action, {site_id}-question-{question_id}, as keys
         # with each value being: (site_id, hostname, question_id, max_time)
         self.posts = {}
-        self.posts_lock = threading.Lock()
+        self.posts_lock = threading.RLock()
         self.save_handle = None
-        self.save_handle_lock = threading.Lock()
+        self.save_handle_lock = threading.RLock()
 
         try:
             self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
