@@ -63559,3 +63559,4 @@
 1719731313	Cow	jollibeesg\.org
 1719731240	Cow	codecure\.codes
 1719749646	Vickel	Mrrglobalauss
+1719785059	Vickel	deepwatch880(?:@outlook\.com)?
