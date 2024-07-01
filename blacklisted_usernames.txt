@@ -1069,3 +1069,4 @@ carelab[sz]
 (?-i:^Erum Sumbul$)
 (?-i:^UnoGeeks Training$)
 (?-i:^Internal Security and Manpowe$)
+^commercial noida$
