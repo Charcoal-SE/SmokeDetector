@@ -63544,3 +63544,4 @@
 1719772301	Makyen	nisarga[\W_]*+care(?!\.com(?<=nisargacare\.com))
 1719774782	Jeff Schaller	szyoda\.com
 1719775240	Cow	cibrvarsity\.uk
+1719810980	Cow	spotify-pie\.com
