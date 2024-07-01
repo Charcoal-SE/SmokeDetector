@@ -30,7 +30,9 @@ from ast import literal_eval
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
     reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception, \
-    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
+    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route, \
+    get_bookended_keyword_regex_text_from_entries, get_non_bookended_keyword_regex_text_from_entries, \
+    keyword_bookend_regex_text, keyword_non_bookend_regex_text
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -1562,8 +1564,11 @@ def test(content, alias_used="test"):
 
 
 def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=False):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
-    formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
+    entries = [r for r, i in regexes]
+    if bookend:
+        formatted_regex = get_bookended_keyword_regex_text_from_entries(entries)
+    else:
+        formatted_regex = get_non_bookended_keyword_regex_text_from_entries(entries)
     start_time = time.time()
     compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
     match = compiled.search(test_text)
@@ -1592,13 +1597,15 @@ def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=
 
 
 def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     matches = []
     timeouts = []
     for expresion in regexes:
         start_time = time.time()
-        compiled = regex_compile_no_cache(regex_to_format.format(expresion[0]), city=findspam.city_list,
-                                          ignore_unused=True)
+        if bookend:
+            formatted_regex = keyword_bookend_regex_text(expresion[0])
+        else:
+            formatted_regex = keyword_non_bookend_regex_text(expresion[0])
+        compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
         match = compiled.search(test_text)
         seconds = time.time() - start_time
         timed_out = timeout is not None and seconds > timeout

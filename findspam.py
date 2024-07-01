@@ -24,7 +24,9 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements
+from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements, \
+    get_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, KEYWORD_BOOKENDING_START, \
+    get_non_bookended_keyword_regex_text_from_entries
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -584,31 +586,28 @@ class FindSpam:
         global bad_keywords_nwb
 
         blacklists.load_blacklists()
-        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
-        # (?w:\b) is also useful
-        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        cls.rule_bad_keywords.regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.bad_keywords)
         try:
             del cls.rule_bad_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_bad_keywords.sanity_check()
-        cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
+        cls.rule_watched_keywords.regex = \
+            get_bookended_keyword_regex_text_from_entries(GlobalVars.watched_keywords.keys())
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_watched_keywords.sanity_check()
-        cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
+        cls.rule_blacklisted_websites.regex = \
+            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_websites)
         try:
             del cls.rule_blacklisted_websites.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_websites.sanity_check()
-        cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
+        cls.rule_blacklisted_usernames.regex = \
+            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_usernames)
         try:
             del cls.rule_blacklisted_usernames.compiled_regex
         except AttributeError:
@@ -1123,12 +1122,11 @@ def check_watched_numbers(s, site):
 def customer_support_phrase(s, site):  # flexible detection of customer service
     # We don't want to double-detect phrases which the bad keywords list already detects,
     # so we remove anything that matches those from the string to test.
-    excluded = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)".format(
-        "|".join([
-            # This list contains entries from the bad keywords list which we shouldn't double-detect.
-            # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
-            r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
-        ]))).sub('', s)
+    excluded = regex.compile(get_bookended_keyword_regex_text_from_entries([
+        # This list contains entries from the bad keywords list which we shouldn't double-detect.
+        # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
+        r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
+    ])).sub('', s)
     shortened = excluded[0:300].lower()  # If applied to body, use just the beginning: otherwise many false positives.
     shortened = regex.sub(r"[^A-Za-z0-9\s]", "", shortened)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|dealer|contact|help(line)?) (telephone|phone|"
@@ -2303,6 +2301,11 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
                                                   skip_creation_sanity_check=True,
                                                   rule_id="main blacklisted usernames")
 
+# Hardcoded bad keywords without a word boundary (from bad_keywords_nwb list above).
+create_rule("bad keyword in {}", regex=r"(?is){}".format("|".join(bad_keywords_nwb)),
+            username=True, body_summary=True,
+            max_rep=32, max_score=1,
+            rule_id="blacklisted keywords: bad_keywords_nwb")
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
@@ -2310,7 +2313,7 @@ create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgrati
             rule_id="Potentialy bad keywords: gratis, not softwarerecs and es.SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # not medicalsciences, fitness, biology
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"),
             sites=['chemistry.stackexchange.com',
                    'medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
@@ -2321,13 +2324,13 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\
             rule_id="bad keywords: keto, not sciences and SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # Stack Overflow, but not in code
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"), all=False, stripcodeblocks=True,
             sites=['stackoverflow.com'],
             username=True, body_summary=True,
             max_rep=32, max_score=1,
             rule_id="bad keywords: keto, not in code, SO")
 # Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
+create_rule("potentially bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"), all=False,
             sites=['medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
                    'biology.stackexchange.com'],
@@ -2335,13 +2338,13 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: keto, not medicalsciences, fitness, biology")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+create_rule("potentially bad keyword in {}", r"{}(?-i:SEO|seo)$".format(KEYWORD_BOOKENDING_START),
             sites=['webmasters.stackexchange.com'],
             title=True, body=False, username=False,
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: SEO, titles only, not webmasters")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+create_rule("potentially bad keyword in {}", r"{}(?-i:SEO|seo)$".format(KEYWORD_BOOKENDING_START),
             title=False, body=False, username=True,
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: SEO, usernames only")
@@ -2484,8 +2487,8 @@ create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|d
             all=False, sites=["skeptics.stackexchange.com", "history.stackexchange.com"],
             rule_id="bad keywords: holocaust, not skeptics, history")
 # Online poker, except poker.SE
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
-            r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"(?:poker|casino)\W*online|online\W*(?:poker|casino)"),
+            all=True,
             sites=["poker.stackexchange.com"],
             rule_id="bad keywords: online poker, casino, not poker")
 # Category: Suspicious links
@@ -2830,22 +2833,28 @@ create_rule("blacklisted username",
             title=False, body=False, username=True,
             max_rep=100, max_score=1,
             rule_id="blacklisted username: troll on workplace")
-create_rule("bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
-            "" r"n[i1]gg+[aeu][rh]?s?|negr[o0]s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
-            "" r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
-            "" r"|foreskins?|behead(?:ing|er|ed)"
-            r")(?:\b|(?w:\b)|$)",  # End bookending
+create_rule("bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
+            r"n[i1]gg+[aeu][rh]?s?",
+            r"negr[o0]s?",
+            r"fag+(?:[oe]t)?s?",
+            r"semen",
+            r"mindless[\W_]*+morons?",
+            r"meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?",
+            r"foreskins?",
+            r"behead(?:ing|er|ed)",
+            ]),
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
             rule_id="bad keywords: various bad words, some overlap, workplace")
 # Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
-create_rule("potentially bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
-            "" r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
-            "" r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
-            r")(?:\b|(?w:\b)|$)",  # End bookending
+create_rule("potentially bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
+            r"(?:poo+p?(?:y|ie|ed|er)?s?",
+            r"piss+",
+            r"pee+",
+            r"(?:smash|slash|behead)(?:ing|ed)?",
+            r"vandali[sz](ing|ed?)?)",
+            ]),
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
@@ -2948,27 +2957,26 @@ create_rule("potentially bad keyword in {}",
             max_rep=93, max_score=21,
             rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
 # mathoverflow.net: specific content in titles
-create_rule("bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))(?:"  # Begin bookending
+create_rule("bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
             # referral[\W_]*+code?
-            "" r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+l[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+l[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",
             # invite[\W_]*+code?
-            "" r"|i[\W_]*+n[\W_]*+v[\W_]*+i[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"
-            "" r"|p[\W_]*+r[\W_]*+o[\W_]*+m[\W_]*+o[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?"  # promo[\W_]*+code?
+            r"i[\W_]*+n[\W_]*+v[\W_]*+i[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",
+            r"p[\W_]*+r[\W_]*+o[\W_]*+m[\W_]*+o[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",  # promo[\W_]*+code?
             # Реферальный(?:[\W_]*+код)?
-            "" r"|Р[\W_]*+е[\W_]*+ф[\W_]*+е[\W_]*+р[\W_]*+а[\W_]*+л[\W_]*+ь[\W_]*+н[\W_]*+ы[\W_]*+й"
-            "" r"(?:[\W_]*+к[\W_]*+о[\W_]*+д)?"
+            r"Р[\W_]*+е[\W_]*+ф[\W_]*+е[\W_]*+р[\W_]*+а[\W_]*+л[\W_]*+ь[\W_]*+н[\W_]*+ы[\W_]*+й"
+            "" r"(?:[\W_]*+к[\W_]*+о[\W_]*+д)?",
             # referans(?:[\W_]*+kodu)?
-            "" r"|r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+a[\W_]*+n[\W_]*+s(?:[\W_]*+k[\W_]*+o[\W_]*+d[\W_]*+u)?"
-            "" r"|k[\W_]*+o[\W_]*+d[\W_]*+u"  # kodu
-            "" r"|s[\W_]*+i[\W_]*+g[\W_]*+n[\W_]*+u[\W_]*+p"  # sign[\W_]*+up
-            "" r"|p[\W_]*+a[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+i[\W_]*+n[\W_]*+a[\W_]*+g[\W_]*+e"  # parrainage
-            "" r"|b[\W_]*+o[\W_]*+n[\W_]*+u[\W_]*+s"  # bonus
-            "" r"|b[\W_]*+o[\W_]*+n[\W_]*+o"  # bono
-            "" r"|r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+c[\W_]*+i[\W_]*+a"  # referencia
-            "" r"|推[\W_]*+荐[\W_]*+码"  # 推荐码
-            "" r"|注[\W_]*+册[\W_]*+奖[\W_]*+金"  # 注册奖金
-            r")(?:\b|(?w:\b)|$)",  # End bookending
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+a[\W_]*+n[\W_]*+s(?:[\W_]*+k[\W_]*+o[\W_]*+d[\W_]*+u)?",
+            r"k[\W_]*+o[\W_]*+d[\W_]*+u",  # kodu
+            r"s[\W_]*+i[\W_]*+g[\W_]*+n[\W_]*+u[\W_]*+p",  # sign[\W_]*+up
+            r"p[\W_]*+a[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+i[\W_]*+n[\W_]*+a[\W_]*+g[\W_]*+e",  # parrainage
+            r"b[\W_]*+o[\W_]*+n[\W_]*+u[\W_]*+s",  # bonus
+            r"b[\W_]*+o[\W_]*+n[\W_]*+o",  # bono
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+c[\W_]*+i[\W_]*+a",  # referencia
+            r"推[\W_]*+荐[\W_]*+码",  # 推荐码
+            r"注[\W_]*+册[\W_]*+奖[\W_]*+金",  # 注册奖金
+            ]),
             all=False, sites=["mathoverflow.net", "meta.mathoverflow.net"],
             username=False, body_summary=False, body=False, title=True,
             max_rep=93, max_score=21,
