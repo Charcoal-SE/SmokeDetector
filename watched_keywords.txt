@@ -63547,3 +63547,4 @@
 1719821058	Cow	mortgageminds\.co\.uk
 1719820519	Cow	Jalfagarci74(?:icloud\.com)
 1719820457	Cow	realtor\.com
+1719823529	Cow	yousantape\.com
