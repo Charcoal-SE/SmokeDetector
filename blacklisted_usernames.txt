@@ -1070,3 +1070,4 @@ carelab[sz]
 (?-i:^UnoGeeks Training$)
 (?-i:^Internal Security and Manpowe$)
 ^commercial noida$
+(?-i:^House of United$)
