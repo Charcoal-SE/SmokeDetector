@@ -63567,3 +63567,4 @@
 1719685809	Cow	archcorp\.biz
 1719844657	Spevacus	scholarshipup\.org
 1719852198	tripleee	captionstags\.com
+1719852397	tripleee	low[\W_]*+IQ
