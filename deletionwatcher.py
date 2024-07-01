@@ -37,8 +37,6 @@ class DeletionWatcher:
         #   of its creation or last edit date is >= 7200 seconds ago. Answers are never resubscribed to.
         self.posts = {}
         self.posts_lock = threading.RLock()
-        self.save_handle = None
-        self.save_handle_lock = threading.RLock()
 
         try:
             self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
@@ -53,8 +51,7 @@ class DeletionWatcher:
         if datahandling.has_pickle(PICKLE_FILENAME):
             pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
             for post_url in DeletionWatcher._check_batch(pickle_data):
-                self.subscribe(post_url, pickle=False)
-            self._schedule_save()
+                self.subscribe(post_url)
 
         threading.Thread(name=self.__class__.__name__, target=self._start, daemon=True).start()
 
@@ -102,7 +99,7 @@ class DeletionWatcher:
             for action in self.posts:
                 self._subscribe(action)
 
-    def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
+    def subscribe(self, post_url, callback=None, timeout=None):
         if GlobalVars.no_deletion_watcher:
             return
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
@@ -136,9 +133,6 @@ class DeletionWatcher:
             else:
                 return
 
-        if pickle:
-            self._schedule_save()
-
     def _subscribe(self, action):
         if self.socket:
             try:
@@ -148,12 +142,6 @@ class DeletionWatcher:
         else:
             log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
                                                                                               action))
-
-    def _schedule_save(self):
-        with self.save_handle_lock:
-            if self.save_handle:
-                self.save_handle.cancel()
-            save_handle = Tasks.do(self.save)
 
     def save(self):
         pickle_output = {}

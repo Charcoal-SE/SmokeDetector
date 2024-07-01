@@ -30,8 +30,6 @@ class EditWatcher:
         # with each value being: (site_id, hostname, question_id, max_time)
         self.posts = {}
         self.posts_lock = threading.RLock()
-        self.save_handle = None
-        self.save_handle_lock = threading.RLock()
 
         try:
             self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
@@ -48,7 +46,6 @@ class EditWatcher:
             with self.posts_lock:
                 self.posts = pickle_data
             self._subscribe_to_saved_posts()  # This expunges old entries, so we don't need to do that here.
-            self._schedule_save()
 
         threading.Thread(name=self.__class__.__name__, target=self._start, daemon=True).start()
 
@@ -105,7 +102,7 @@ class EditWatcher:
                 self._subscribe(action)
 
     def subscribe(self, post_url=None, hostname=None, site_id=None, question_id=None,
-                  pickle=True, timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):
+                  timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):
         if GlobalVars.no_edit_watcher:
             return
         if post_url and not ((hostname or site_id) and question_id):
@@ -145,7 +142,6 @@ class EditWatcher:
         if not max_time:
             max_time = now + timeout
 
-        updated = None
         to_subscribe = []
         with self.posts_lock:
             for question_id in question_ids:
@@ -157,14 +153,9 @@ class EditWatcher:
                     old_max_time = self.posts[action][2]
                     if max_time > old_max_time:
                         self.posts[action] = (site_id, hostname, question_id, max_time)
-                    elif updated is None:
-                        updated = False
 
         for action in to_subscribe:
             Tasks.do(self._subscribe, action)
-
-        if updated and pickle:
-            self._schedule_save()
 
     def _subscribe(self, action):
         if self.socket:
@@ -175,12 +166,6 @@ class EditWatcher:
         else:
             log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
                                                                                               action))
-
-    def _schedule_save(self):
-        with self.save_handle_lock:
-            if self.save_handle:
-                self.save_handle.cancel()
-            save_handle = Tasks.do(self.save)
 
     def save(self):
         with self.posts_lock:
