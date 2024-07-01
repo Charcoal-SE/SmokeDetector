@@ -63560,3 +63560,4 @@
 1719731240	Cow	codecure\.codes
 1719749646	Vickel	Mrrglobalauss
 1719785059	Vickel	deepwatch880(?:@outlook\.com)?
+1719785568	Vickel	lucioai\.com
