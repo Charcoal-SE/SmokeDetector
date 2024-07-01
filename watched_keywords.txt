@@ -38436,7 +38436,6 @@
 1652122509	Makyen	deko[\W_]*+sports(?:[\W_]*+uk)?
 1652157508	cigien	taimoorsattar\.dev
 1652159956	tripleee	hcm[\W_]*+training
-1652160577	tripleee	unogeeks(?!\.com)
 1652169819	tripleee	rare\.co\.uk
 1652169991	Ryan M	terrausd
 1652170756	Nick	gadgetrekt\.com
