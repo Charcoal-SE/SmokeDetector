@@ -63545,3 +63545,4 @@
 1719812530	Makyen	sunriseglass\.me
 1719812552	Makyen	sunrise[\W_]*+glass(?!\.me(?<=sunriseglass\.me))
 1719813933	Cow	mac-keylogger\.org
+1719814998	tripleee	unogeeks(?!\.com)(?<!(?-i:^UnoGeeks(?= Training$)))
