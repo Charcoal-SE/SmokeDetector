@@ -45,12 +45,9 @@ class EditWatcher:
 
         if datahandling.has_pickle(PICKLE_FILENAME):
             pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
-            now = time.time()
-            new_posts = {action: value for action, value in pickle_data if value[-1] > now}
             with self.posts_lock:
-                self.posts = new_posts
-            for action in new_posts.keys():
-                Tasks.do(self._subscribe, action)
+                self.posts = pickle_data
+            self._subscribe_to_saved_posts()  # This expunges old entries, so we don't need to do that here.
             self._schedule_save()
 
         threading.Thread(name=self.__class__.__name__, target=self._start, daemon=True).start()
@@ -78,15 +75,31 @@ class EditWatcher:
                         if max_time > now and data["a"] == "post-edit":
                             add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False,
                                                                           source=self.__class__.__name__)
+                    Tasks.do(self._unsubscribe_to_expired_posts_and_expunge)
             except websocket.WebSocketException as e:
                 ws = self.socket
                 self.socket = None
                 self.socket = recover_websocket(self.__class__.__name__, ws, e, self.connect_time, self.hb_time)
-                self._subscribe_to_all_saved_posts()
+                self._subscribe_to_saved_posts()
                 self.connect_time = time.time()
                 self.hb_time = None
 
-    def _subscribe_to_all_saved_posts(self):
+    def _unsubscribe_to_expired_posts_and_expunge(self):
+        now = time.time()
+        with self.posts_lock:
+            to_unsubscribe = list(action for action, value in self.posts.items() if value[-1] <= now)
+        self._expunge_expired_posts(now=now)
+        for action in to_unsubscribe:
+            self._unsubscribe(action)
+
+    def _expunge_expired_posts(self, now=None):
+        if now is None:
+            now = time.time()
+        with self.posts_lock:
+            self.posts = {action: value for action, value in self.posts.items() if value[-1] > now}
+
+    def _subscribe_to_saved_posts(self):
+        self._expunge_expired_posts()
         with self.posts_lock:
             for action in self.posts:
                 self._subscribe(action)
