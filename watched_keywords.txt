@@ -63556,3 +63556,4 @@
 1719841445	Makyen	communicadence(?!\.in)(?:[\W_]*+(?:india|software|unlimited))*
 1719737056	Cow	alopoost\.com
 1719732447	Cow	watch-wrestling2\.com
+1719731313	Cow	jollibeesg\.org
