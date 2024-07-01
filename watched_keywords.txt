@@ -63568,3 +63568,4 @@
 1719844657	Spevacus	scholarshipup\.org
 1719852198	tripleee	captionstags\.com
 1719852397	tripleee	low[\W_]*+IQ
+1719852665	tripleee	87040de27da5eadf(?# live.cid)
