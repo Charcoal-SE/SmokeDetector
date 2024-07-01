@@ -63553,3 +63553,4 @@
 1719836530	Cow	communicadence\.in
 1719835606	Cow	epitomehospitals\.com
 1719839835	General Grievance	softude\.com
+1719841445	Makyen	communicadence(?!\.in)(?:[\W_]*+(?:india|software|unlimited))*
