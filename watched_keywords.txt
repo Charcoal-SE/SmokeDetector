@@ -55210,7 +55210,6 @@
 1701149805	Jesse	gaintools\.com
 1701149363	Jesse	blacktogel711\.click
 1701168429	cigien	buytvinternetphone\.com
-1701168481	cigien	communicadence(?:[\W_]*+india[\W_]*+software)?
 1701168899	cigien	pumpsupplies\.co\.uk
 1701170805	Jeff Schaller	ibexeye\.com
 1701174221	cigien	snsinsider\.com
