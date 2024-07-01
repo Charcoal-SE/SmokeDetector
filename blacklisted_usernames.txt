@@ -1067,3 +1067,4 @@ carelab[sz]
 (?-i:^bapkoin$)
 (?-i:^thomasjack9654$)
 (?-i:^Erum Sumbul$)
+(?-i:^UnoGeeks Training$)
