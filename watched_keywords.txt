@@ -63548,3 +63548,4 @@
 1719820457	Cow	realtor\.com
 1719823529	Cow	yousantape\.com
 1719830905	Cow	publtd\.com
+1719831624	Cow	Solar[\W_]*+Safe
