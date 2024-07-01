@@ -63550,3 +63550,4 @@
 1719830905	Cow	publtd\.com
 1719831659	Cow	amincompany\.org
 1719831624	Cow	Solar[\W_]*+Safe
+1719836530	Cow	communicadence\.in
