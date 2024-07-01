@@ -1068,3 +1068,4 @@ carelab[sz]
 (?-i:^thomasjack9654$)
 (?-i:^Erum Sumbul$)
 (?-i:^UnoGeeks Training$)
+(?-i:^Internal Security and Manpowe$)
