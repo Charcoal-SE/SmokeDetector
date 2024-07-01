@@ -63552,3 +63552,4 @@
 1719831624	Cow	Solar[\W_]*+Safe
 1719838604	Jeff Schaller	emperiortech\.com
 1719836530	Cow	communicadence\.in
+1719835606	Cow	epitomehospitals\.com
