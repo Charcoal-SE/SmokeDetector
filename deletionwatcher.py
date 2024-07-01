@@ -153,9 +153,9 @@ class DeletionWatcher:
         with self.save_handle_lock:
             if self.save_handle:
                 self.save_handle.cancel()
-            save_handle = Tasks.do(self._save)
+            save_handle = Tasks.do(self.save)
 
-    def _save(self):
+    def save(self):
         pickle_output = {}
 
         with self.posts_lock:
