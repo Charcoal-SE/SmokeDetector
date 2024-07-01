@@ -63545,3 +63545,4 @@
 1719774782	Jeff Schaller	szyoda\.com
 1719775240	Cow	cibrvarsity\.uk
 1719812530	Makyen	sunriseglass\.me
+1719812552	Makyen	sunrise[\W_]*+glass(?!\.me(?<=sunriseglass\.me))
