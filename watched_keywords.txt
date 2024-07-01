@@ -63545,3 +63545,4 @@
 1719814998	tripleee	unogeeks(?!\.com)(?<!(?-i:^UnoGeeks(?= Training$)))
 1719816589	Dragonrage	kondoko\.com
 1719821058	Cow	mortgageminds\.co\.uk
+1719820519	Cow	Jalfagarci74(?:icloud\.com)
