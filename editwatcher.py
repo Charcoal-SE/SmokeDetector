@@ -81,8 +81,8 @@ class EditWatcher:
             except websocket.WebSocketException as e:
                 ws = self.socket
                 self.socket = None
-                self.socket = recover_websocket(self.__class__.__name__, ws, self._subscribe_to_all_saved_posts, e,
-                                                self.connect_time, self.hb_time)
+                self.socket = recover_websocket(self.__class__.__name__, ws, e, self.connect_time, self.hb_time)
+                self._subscribe_to_all_saved_posts()
                 self.connect_time = time.time()
                 self.hb_time = None
 

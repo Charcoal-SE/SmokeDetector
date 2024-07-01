@@ -531,14 +531,13 @@ def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_t
     tell_rooms_with('debug', timestamp + message_without_timestamp)
 
 
-def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time):
+def recover_websocket(which_ws, ws, exception, connect_time, hb_time):
     log_current_exception(log_level="warning")
     if ws:
         ws.close()  # Close the socket, if it's not already closed
         ws = None
     try:
         ws = websocket.create_connection(GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout)
-        subscribe()
         tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time)
         return ws
     except websocket.WebSocketException:
