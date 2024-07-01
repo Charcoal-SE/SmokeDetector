@@ -63546,3 +63546,4 @@
 1719775240	Cow	cibrvarsity\.uk
 1719812530	Makyen	sunriseglass\.me
 1719812552	Makyen	sunrise[\W_]*+glass(?!\.me(?<=sunriseglass\.me))
+1719813090	Cow	jpost\.com
