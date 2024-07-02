@@ -63599,3 +63599,4 @@
 1719750955	Cow	buy[\W_]*+weed
 1719923106	Jeff Schaller	savvydatacloudconsulting\.com
 1719807438	Cow	helicalinsight\.com
+1719924833	Ryan M	helical[\W_]*+insight(?!\.com(?<=helicalinsight\.com))
