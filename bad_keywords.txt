@@ -68,7 +68,6 @@ day[\W_]*+trading[\W_]*+academy
 folliplex
 yafei[\W_]*+cable
 uggs[\W_]*+on[\W_]*+sale
-phenq
 vigoraflo
 provasil
 slimera
