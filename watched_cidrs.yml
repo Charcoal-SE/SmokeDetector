@@ -1441,7 +1441,9 @@ items:
 - ip: 104.26.4.92
 - ip: 104.26.4.97
 - ip: 104.26.4.98
-- ip: 104.26.5.125
+- comment: FPs from doi.org
+  disable: true
+  ip: 104.26.5.125
 - ip: 104.26.5.132
 - ip: 104.26.5.137
 - ip: 104.26.5.154
@@ -3950,7 +3952,9 @@ items:
 - comment: FP-prone, shared between cubix.co (TP) and ionicframework.com (generally FP)
   disable: true
   ip: 172.67.69.29
-- ip: 172.67.69.3
+- comment: FPs from doi.org
+  disable: true
+  ip: 172.67.69.3
 - ip: 172.67.69.74
 - ip: 172.67.69.69
 - ip: 172.67.70.1
