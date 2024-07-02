@@ -63602,3 +63602,4 @@
 1719924833	Ryan M	helical[\W_]*+insight(?!\.com(?<=helicalinsight\.com))
 1719924939	Jeff Schaller	webtualglobal\.com
 1719925095	Jeff Schaller	tigren\.com
+1719925670	Vickel	greyspacecomputing\.com
