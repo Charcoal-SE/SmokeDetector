@@ -63614,3 +63614,4 @@
 1719932420	Cow	answaqar\.onnmuhammad\.9(?# facebook)
 1719932664	Jeff Schaller	hadley-search\.admen\.fr
 1719932698	Cow	cognition-solutions\.com
+1719932708	Cow	todaybanglanews\.com
