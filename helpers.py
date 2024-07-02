@@ -27,6 +27,7 @@ from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):
+    # This code is executed whenever we exit, even when the exit is caused by an exception.
     args = set(args)
 
     if not (args & {'standby', 'no_standby'}):
@@ -39,9 +40,29 @@ def exit_mode(*args, code=0):
 
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
-    datahandling.flush_queue_timings_data()
-    datahandling.store_post_scan_stats()
-    datahandling.store_recently_scanned_posts()
+    try:
+        datahandling.flush_queue_timings_data()
+    except Exception:
+        log_current_exception()
+    try:
+        datahandling.store_post_scan_stats()
+    except Exception:
+        log_current_exception()
+    try:
+        datahandling.store_recently_scanned_posts()
+    except Exception:
+        log_current_exception()
+    # Store other pickles as we exit
+    try:
+        if GlobalVars.edit_watcher:
+            GlobalVars.edit_watcher.save()
+    except Exception:
+        log_current_exception()
+    try:
+        if GlobalVars.deletion_watcher:
+            GlobalVars.deletion_watcher.save()
+    except Exception:
+        log_current_exception()
 
     # We have to use '_exit' here, because 'sys.exit' only exits the current
     # thread (not the current process).  Unfortunately, this results in
@@ -531,14 +552,13 @@ def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_t
     tell_rooms_with('debug', timestamp + message_without_timestamp)
 
 
-def recover_websocket(which_ws, ws, subscribe, exception, connect_time, hb_time):
+def recover_websocket(which_ws, ws, exception, connect_time, hb_time):
     log_current_exception(log_level="warning")
     if ws:
         ws.close()  # Close the socket, if it's not already closed
         ws = None
     try:
         ws = websocket.create_connection(GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout)
-        subscribe()
         tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time)
         return ws
     except websocket.WebSocketException:

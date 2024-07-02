@@ -36,9 +36,7 @@ class DeletionWatcher:
         #   Upon reboot, questions are not resubscribed to if the questions has either been deleted or the later
         #   of its creation or last edit date is >= 7200 seconds ago. Answers are never resubscribed to.
         self.posts = {}
-        self.posts_lock = threading.Lock()
-        self.save_handle = None
-        self.save_handle_lock = threading.Lock()
+        self.posts_lock = threading.RLock()
 
         try:
             self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
@@ -47,16 +45,15 @@ class DeletionWatcher:
             self.hb_time = None
         except websocket.WebSocketException:
             self.socket = None
-            log('error', 'DeletionWatcher failed to create a websocket connection')
+            log('error', '{}: WebSocket: failed to create a websocket connection'.format(self.__class__.__name__))
             return
 
         if datahandling.has_pickle(PICKLE_FILENAME):
             pickle_data = datahandling.load_pickle(PICKLE_FILENAME)
             for post_url in DeletionWatcher._check_batch(pickle_data):
-                self.subscribe(post_url, pickle=False)
-            self._schedule_save()
+                self.subscribe(post_url)
 
-        threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
+        threading.Thread(name=self.__class__.__name__, target=self._start, daemon=True).start()
 
     def _start(self):
         while True:
@@ -92,8 +89,8 @@ class DeletionWatcher:
             except websocket.WebSocketException as e:
                 ws = self.socket
                 self.socket = None
-                self.socket = recover_websocket("DeletionWatcher", ws, self._subscribe_to_all_saved_posts, e,
-                                                self.connect_time, self.hb_time)
+                self.socket = recover_websocket(self.__class__.__name__, ws, e, self.connect_time, self.hb_time)
+                self._subscribe_to_all_saved_posts()
                 self.connect_time = time.time()
                 self.hb_time = None
 
@@ -102,7 +99,7 @@ class DeletionWatcher:
             for action in self.posts:
                 self._subscribe(action)
 
-    def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
+    def subscribe(self, post_url, callback=None, timeout=None):
         if GlobalVars.no_deletion_watcher:
             return
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
@@ -110,7 +107,8 @@ class DeletionWatcher:
         with GlobalVars.site_id_dict_lock:
             site_id = GlobalVars.site_id_dict.get(post_site, None)
         if not site_id:
-            log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url))
+            log("warning", "{}: unknown site {} when subscribing to {}".format(self.__class__.__name__, post_site,
+                                                                               post_url))
             return
 
         if post_type == "answer":
@@ -135,25 +133,17 @@ class DeletionWatcher:
             else:
                 return
 
-        if pickle:
-            self._schedule_save()
-
     def _subscribe(self, action):
         if self.socket:
             try:
                 self.socket.send(action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed to subscribe to {}'.format(action))
+                log('error', '{}: failed to subscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', 'DeletionWatcher tried to subscribe to {}, but no WebSocket available.'.format(action))
+            log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
+                                                                                              action))
 
-    def _schedule_save(self):
-        with self.save_handle_lock:
-            if self.save_handle:
-                self.save_handle.cancel()
-            save_handle = Tasks.do(self._save)
-
-    def _save(self):
+    def save(self):
         pickle_output = {}
 
         with self.posts_lock:
@@ -197,9 +187,10 @@ class DeletionWatcher:
             try:
                 self.socket.send("-" + action)
             except websocket.WebSocketException:
-                log('error', 'DeletionWatcher failed to unsubscribe to {}'.format(action))
+                log('error', '{}: failed to unsubscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', 'DeletionWatcher tried to unsubscribe to {}, but no WebSocket available.'.format(action))
+            log('warn', '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
+                                                                                             action))
 
     @staticmethod
     def _ignore(post_site_id):
