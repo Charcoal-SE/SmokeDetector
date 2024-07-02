@@ -61888,7 +61888,6 @@
 1715951706	Spevacus	justahotels\.com
 1715953482	Cow	doc2lang\.com
 1715955919	tripleee	c2script\.com
-1715957836	Jeff Schaller	surahalmulk\.net
 1715985878	Fastnlight	mobile\.5g\.in
 1716010165	Nick	grademiner\.co
 1716010189	Nick	grademiner(?!\.co)
