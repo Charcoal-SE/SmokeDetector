@@ -63606,3 +63606,4 @@
 1719926003	Ryan M	droyenoyeherbalcure?
 1719927759	Jeff Schaller	doctortundeherbalhome(?:@gmail\.com)?
 1719927802	Jeff Schaller	doctorosasherbalhome(?:@gmail\.com)?
+1719928030	Jeff Schaller	wellviewcare\.org
