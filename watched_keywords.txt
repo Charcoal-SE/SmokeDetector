@@ -63598,3 +63598,4 @@
 1719750945	Cow	buy[\W_]*+cannabis
 1719750955	Cow	buy[\W_]*+weed
 1719923106	Jeff Schaller	savvydatacloudconsulting\.com
+1719807438	Cow	helicalinsight\.com
