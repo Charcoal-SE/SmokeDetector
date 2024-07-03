@@ -63609,7 +63609,6 @@
 1719928030	Jeff Schaller	wellviewcare\.org
 1719928101	Jeff Schaller	dr\.skhivhomefcure(?:@gmail\.com)?
 1719928143	Jeff Schaller	drskhivhomefcure(?:@outlook\.com)?
-1719929442	Cow	futeducation\.com
 1719932389	Jeff Schaller	scrapmetalsprices\.com
 1719932420	Cow	answaqar\.onnmuhammad\.9(?# facebook)
 1719932664	Jeff Schaller	hadley-search\.admen\.fr
