@@ -63644,3 +63644,4 @@
 1719995131	Cow	lussa\.io
 1719999440	VLAZ	lussa(?!\.io)
 1719999749	VLAZ	codebeck\.com
+1719999772	VLAZ	ictinnovations\.com
