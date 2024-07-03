@@ -63650,3 +63650,4 @@
 1720000469	VLAZ	Las[\W_]*+Taquerias(?:[\W_]*+de[\W_]*+Birra)?(?!\.com(?<=lastaquerias\.com))
 1720000501	tripleee	legal[\W_]*+window
 1720002213	VLAZ	onlive[\W_]*+server(?!\.com(?<=onliveserver\.com))
+1720002922	Cow	roznursing\.com
