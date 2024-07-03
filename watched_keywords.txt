@@ -63675,3 +63675,4 @@
 1720015639	Jeff Schaller	houseofwhiskyscotland\.com
 1720015665	Jeff Schaller	dutchdeliciousbakery\.com
 1720015693	Jeff Schaller	plastology\.ru
+1720018501	Makyen	ict[\W_]*+innovations(?!\.com(?<=ictinnovations\.com))
