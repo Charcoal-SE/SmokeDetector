@@ -63646,3 +63646,4 @@
 1719999749	VLAZ	codebeck\.com
 1719999772	VLAZ	ictinnovations\.com
 1719999795	VLAZ	ictbroadcast\.com
+1720000237	VLAZ	lastaquerias\.com
