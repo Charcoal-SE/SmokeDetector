@@ -63678,3 +63678,4 @@
 1720018501	Makyen	ict[\W_]*+innovations(?!\.com(?<=ictinnovations\.com))
 1720018616	Makyen	ict[\W_]*+broadcast(?!\.com(?<=ictbroadcast\.com))
 1720018787	Makyen	medical[\W_]*+aesthetics[\W_]*+market
+1720018992	Makyen	roots[\W_]*+analysis(?!\.com(?<=rootsanalysis\.com))
