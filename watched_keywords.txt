@@ -63642,3 +63642,4 @@
 1719996596	Cow	redevi\.io
 1719995149	Cow	pythononlinecompiler\.com
 1719995131	Cow	lussa\.io
+1719999440	VLAZ	lussa(?!\.io)
