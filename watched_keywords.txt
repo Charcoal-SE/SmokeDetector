@@ -63641,3 +63641,4 @@
 1719997279	Cow	MATADORBET
 1719996596	Cow	redevi\.io
 1719995149	Cow	pythononlinecompiler\.com
+1719995131	Cow	lussa\.io
