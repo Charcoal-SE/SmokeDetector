@@ -63652,3 +63652,4 @@
 1720002213	VLAZ	onlive[\W_]*+server(?!\.com(?<=onliveserver\.com))
 1720002146	Cow	yasacenter\.ir
 1720002922	Cow	roznursing\.com
+1720002106	Cow	sumitofficial\.com
