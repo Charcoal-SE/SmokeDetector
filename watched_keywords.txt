@@ -63647,3 +63647,4 @@
 1719999795	VLAZ	ictbroadcast\.com
 1720000237	VLAZ	lastaquerias\.com
 1720000271	tripleee	travelwithkasim\.com
+1720000469	VLAZ	Las[\W_]*+Taquerias(?:[\W_]*+de[\W_]*+Birra)?(?!\.com(?<=lastaquerias\.com))
