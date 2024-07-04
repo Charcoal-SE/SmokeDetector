@@ -63706,3 +63706,4 @@
 1720075615	Henry Ecker	ashafabs\.com
 1720071555	Cow	Ashadha[\W_]*+Amavasya
 1720070917	Cow	mrbusinessmagazine\.com
+1720070899	Cow	lucidgemstudio\.com
