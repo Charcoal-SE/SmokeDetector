@@ -63690,3 +63690,4 @@
 1720070588	VLAZ	ex4tomq4decompiler2024\.quora\.com
 1720072080	Makyen	dkscore\.com
 1720072102	Makyen	dkscore(?!\.com)
+1720072178	Makyen	(?-i:C8_GltCCD8z)(?# instagram)
