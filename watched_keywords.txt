@@ -63695,3 +63695,4 @@
 1720073303	VLAZ	diegomarynbergus(?# medium.com)
 1720071446	Cow	sb-components\.co\.uk
 1720076903	Makyen	syedomair\.github\.io
+1720079472	VLAZ	assignmentwriter\.io
