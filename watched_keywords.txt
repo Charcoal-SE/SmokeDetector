@@ -63707,3 +63707,4 @@
 1720071555	Cow	Ashadha[\W_]*+Amavasya
 1720070917	Cow	mrbusinessmagazine\.com
 1720070899	Cow	lucidgemstudio\.com
+1720089856	Cow	oneday\.com\.vn
