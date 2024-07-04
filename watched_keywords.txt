@@ -63714,3 +63714,4 @@
 1720067773	Cow	Modi[\W_]*+Chemical
 1720045136	Vickel	Odara[\W_]*+Essence
 1720022808	General Grievance	indnaamd
+1720090206	Vickel	venueindelhi\.com
