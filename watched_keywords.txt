@@ -63730,3 +63730,4 @@
 1720098598	Cow	vsccoapk\.com
 1720114791	Ollie	swiggy\.in
 1720114931	Ollie	boombvaping\.com
+1720118017	Makyen	traffic[\W_]*+rider[\W_]*+mod[\W_]*+apk
