@@ -63727,3 +63727,4 @@
 1720093390	Cow	lifeinsurancebazaar\.com
 1720094689	Cow	kernjewelers\.com
 1720098513	Cow	delbeautybox\.com
+1720098598	Cow	vsccoapk\.com
