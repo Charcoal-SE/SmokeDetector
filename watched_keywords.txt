@@ -63697,3 +63697,4 @@
 1720076903	Makyen	syedomair\.github\.io
 1720079472	VLAZ	assignmentwriter\.io
 1720082141	VLAZ	iqos888\.com
+1720082171	VLAZ	iqos888(?!\.com)
