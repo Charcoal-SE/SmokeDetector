@@ -63710,3 +63710,4 @@
 1720089856	Cow	oneday\.com\.vn
 1720069604	Cow	softmetrica\.ro
 1720069353	Cow	M-Kube[\W_]*+Enterprise
+1720068453	Cow	artify360\.com
