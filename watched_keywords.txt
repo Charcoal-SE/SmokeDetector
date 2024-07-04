@@ -5367,7 +5367,6 @@
 1539158676	Makyen	techbriefers\.com
 1539162961	Tetsuya Yamamoto	silverstarurgentcare\.com
 1539165320	Tetsuya Yamamoto	irfanvd\.com
-1539170241	tripleee	urbanclap\.ae
 1539172377	Tetsuya Yamamoto	amazer\.me
 1539178410	WELZ	pcsolutionhd\.com
 1539178454	WELZ	pc\W?solution\W?hd
