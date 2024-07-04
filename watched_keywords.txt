@@ -63717,3 +63717,4 @@
 1720090717	Cow	calendarkart\.com
 1720095100	Cow	printdigitalsolutionsindia\.com
 1720099748	Makyen	zebra[\W_]*+blinds
+1720099877	Makyen	blindstudio(?!\.ca)
