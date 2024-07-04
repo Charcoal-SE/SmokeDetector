@@ -63724,3 +63724,4 @@
 1720107217	Vickel	bigovo\.com\.ng
 1720107360	Vickel	holiday[\W_]*+esim(?!\.com(?<=holidayesim\.com))
 1720093268	Cow	wpswings\.com
+1720093390	Cow	lifeinsurancebazaar\.com
