@@ -63701,3 +63701,4 @@
 1720082223	VLAZ	legendarymarketar\.com
 1720084017	VLAZ	oneday\.co\.th
 1720085652	VLAZ	lizenzenland\.de
+1720086620	VLAZ	blindstudio\.ca
