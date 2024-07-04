@@ -63720,3 +63720,4 @@
 1720099877	Makyen	blindstudio(?!\.ca)
 1720100265	Makyen	urban[\W_]*+clap(?!\.ae(?<=urbanclap\.ae))
 1720101149	VLAZ	lybescientific\.com
+1720107276	Vickel	holidayesim\.com
