@@ -63691,3 +63691,4 @@
 1720072080	Makyen	dkscore\.com
 1720072102	Makyen	dkscore(?!\.com)
 1720072178	Makyen	(?-i:C8_GltCCD8z)(?# instagram)
+1720072022	Cow	creolestudios\.com
