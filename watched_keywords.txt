@@ -63688,3 +63688,4 @@
 1720069540	Makyen	digitalmarketingagency-consultant\.com
 1720069548	Makyen	digital[\W_]*+marketing[\W_]*+agency[\W_]*+consultant(?!\.com(?<=digitalmarketingagency-consultant\.com))
 1720070588	VLAZ	ex4tomq4decompiler2024\.quora\.com
+1720070917	Cow	mrbusinessmagazine\.com
