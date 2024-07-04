@@ -63712,3 +63712,4 @@
 1720069353	Cow	M-Kube[\W_]*+Enterprise
 1720068453	Cow	artify360\.com
 1720067773	Cow	Modi[\W_]*+Chemical
+1720045136	Vickel	Odara[\W_]*+Essence
