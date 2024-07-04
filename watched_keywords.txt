@@ -63686,3 +63686,4 @@
 1720059760	Jeff Schaller	COINRECLAIMSERVICE
 1720065748	Spevacus	camerasaigon24h\.com
 1720069540	Makyen	digitalmarketingagency-consultant\.com
+1720069548	Makyen	digital[\W_]*+marketing[\W_]*+agency[\W_]*+consultant(?!\.com(?<=digitalmarketingagency-consultant\.com))
