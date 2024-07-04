@@ -63718,3 +63718,4 @@
 1720095100	Cow	printdigitalsolutionsindia\.com
 1720099748	Makyen	zebra[\W_]*+blinds
 1720099877	Makyen	blindstudio(?!\.ca)
+1720100265	Makyen	urban[\W_]*+clap(?!\.ae(?<=urbanclap\.ae))
