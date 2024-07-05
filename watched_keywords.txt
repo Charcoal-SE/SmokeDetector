@@ -63733,3 +63733,4 @@
 1720118017	Makyen	traffic[\W_]*+rider[\W_]*+mod[\W_]*+apk
 1720130103	Ollie	ojodigital\.nl
 1720123382	Cow	vk-spam-master\.com
+1720144262	Jeff Schaller	Cyberbackersconsultant(?:@gmail\.com)
