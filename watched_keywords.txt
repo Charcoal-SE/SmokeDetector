@@ -63764,3 +63764,4 @@
 1720173864	Cow	Malabar[\W_]*+neem
 1720173667	Cow	(?-i:abr101)(?# fiverr)
 1720163736	Cow	vidiem\.in
+1720152442	Cow	(?-i:StarLinkBet88a)(?# heylink\.me)
