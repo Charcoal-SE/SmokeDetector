@@ -63740,3 +63740,4 @@
 1720158404	Cow	sisalcarpets\.ae
 1720158700	Cow	(?-i:8B4LwoGMNkh4NS6JA)(?# Google Maps)
 1720158765	Cow	physiotherapy[\W_]*+services[\W_]*+in[\W_]*+Hertfordshire
+1720159167	Cow	webclone\.in
