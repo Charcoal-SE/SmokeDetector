@@ -63747,3 +63747,4 @@
 1720168928	VLAZ	aman[\W_]*+digital[\W_]*+swag(?!\.in(?<=amandigitalswag\.in))
 1720174294	Cow	mentortechsystems\.com
 1720178124	Cow	kalmaz\.ma
+1720173922	Cow	treownut\.com
