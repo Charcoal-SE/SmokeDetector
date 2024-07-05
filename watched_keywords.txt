@@ -63745,3 +63745,4 @@
 1720161598	Cow	formativesports\.com
 1720168837	VLAZ	hidamt\.com
 1720168905	VLAZ	amandigitalswag\.in
+1720168928	VLAZ	aman[\W_]*+digital[\W_]*+swag(?!\.in(?<=amandigitalswag\.in))
