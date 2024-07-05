@@ -63751,3 +63751,4 @@
 1720173768	Cow	dextara\.com
 1720173604	Cow	eurowindow\.top
 1720164156	Cow	wilson-legal\.com
+1720164204	Cow	softzspot\.com
