@@ -63780,3 +63780,4 @@
 1720216722	Fastnlight	ppdit\.shop
 1720218646	Fastnlight	ediscostore\.com
 1720219574	Fastnlight	skyfarerules\.com
+1720249187	Cow	berkatkaruniajaya\.net
