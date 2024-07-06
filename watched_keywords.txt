@@ -63790,3 +63790,4 @@
 1720275031	Makyen	treownut(?!\.com)
 1720275141	Makyen	qualitythought(?!\.in)
 1720275410	Makyen	digitaltechguard[\W_]*+com
+1720275433	Makyen	digital[\W_]*+tech[\W_]*+guard(?!\.com(?<=digitaltechguard[\W_]*+com))(?:[\W_]*+recovery)?
