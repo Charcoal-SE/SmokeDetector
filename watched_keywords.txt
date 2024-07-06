@@ -63794,3 +63794,4 @@
 1720281887	double-beep	honistamod\.com
 1720283476	Nisse Engström	geniusjankari\.com
 1720288135	Cow	activeavenues\.com
+1720287728	Cow	(?-i:dmgovinna)
