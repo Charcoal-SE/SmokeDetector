@@ -63793,3 +63793,4 @@
 1720275433	Makyen	digital[\W_]*+tech[\W_]*+guard(?!\.com(?<=digitaltechguard[\W_]*+com))(?:[\W_]*+recovery)?
 1720281887	double-beep	honistamod\.com
 1720283476	Nisse Engström	geniusjankari\.com
+1720287703	Cow	sjp\.ac\.lk
