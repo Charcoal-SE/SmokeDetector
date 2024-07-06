@@ -63789,3 +63789,4 @@
 1720274248	Jeff Schaller	faatmashahana\.com
 1720275031	Makyen	treownut(?!\.com)
 1720275141	Makyen	qualitythought(?!\.in)
+1720275410	Makyen	digitaltechguard[\W_]*+com
