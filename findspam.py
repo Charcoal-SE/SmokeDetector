@@ -2304,6 +2304,7 @@ city_list = [
     "Ludhiana",
     "Madurai",
     "Malad",
+    "Malappuram",
     "Manalis",
     "Mangalore",
     "Mangaluru",
