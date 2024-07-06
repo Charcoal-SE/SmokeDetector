@@ -63776,3 +63776,4 @@
 1720199478	Fastnlight	pokieslab\.info
 1720214848	Fastnlight	frn085664
 1720214862	Fastnlight	frb085664
+1720215822	Fastnlight	pkcellpower\.com
