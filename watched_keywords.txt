@@ -63782,3 +63782,4 @@
 1720219574	Fastnlight	skyfarerules\.com
 1720249187	Cow	berkatkaruniajaya\.net
 1720249293	Cow	(?-i:hackerone975)(?# gmail)
+1720249381	Cow	imunkita(?# medium)
