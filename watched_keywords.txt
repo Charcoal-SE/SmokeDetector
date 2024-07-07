@@ -63811,3 +63811,4 @@
 1720249629	Cow	archlouvers\.com
 1720383364	Vickel	info-electrust(?:@gmail\.com)?
 1720383185	Vickel	electrust\.uk
+1720383179	Vickel	electrustelectrial\.blogspot
