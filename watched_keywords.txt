@@ -63807,3 +63807,4 @@
 1720363424	Makyen	superity[\W_]*+official(?!\.com(?<=superityofficial\.com))(?:@gmail\.com)?
 1720379733	Cow	buyawsaccount\.shop
 1720379828	Makyen	sonra\.io
+1720250238	Cow	interactiveschools\.com
