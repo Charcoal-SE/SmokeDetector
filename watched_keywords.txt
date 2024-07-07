@@ -63804,3 +63804,4 @@
 1720318005	Vickel	fascobill\.pk
 1720359757	double-beep	superityofficial\.com
 1720363294	Makyen	arriveddev\.com
+1720363424	Makyen	superity[\W_]*+official(?!\.com(?<=superityofficial\.com))(?:@gmail\.com)?
