@@ -63814,3 +63814,4 @@
 1720383179	Vickel	electrustelectrial\.blogspot
 1720383160	Vickel	electrustelectrical\.wordpress\.com
 1720383728	Makyen	(?:the[\W_]*+)?electrust[\W_]*+electric?al(?!\.blogspot(?<=electrustelectrial\.blogspot))(?!\.wordpress\.com(?<=electrustelectrical\.wordpress\.com))
+1720390125	Vickel	veneramed\.kz
