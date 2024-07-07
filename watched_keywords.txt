@@ -63803,3 +63803,4 @@
 1720316917	Makyen	d(?:octo)?r[\W_]*+osalu
 1720318005	Vickel	fascobill\.pk
 1720359757	double-beep	superityofficial\.com
+1720363294	Makyen	arriveddev\.com
