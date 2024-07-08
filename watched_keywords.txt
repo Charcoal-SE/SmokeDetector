@@ -63816,3 +63816,4 @@
 1720383728	Makyen	(?:the[\W_]*+)?electrust[\W_]*+electric?al(?!\.blogspot(?<=electrustelectrial\.blogspot))(?!\.wordpress\.com(?<=electrustelectrical\.wordpress\.com))
 1720403627	Ryan M	tclotterygame\.com
 1720403649	Ryan M	tc[\W_]*+lottery
+1720406923	Makyen	(?-i:43cffdf18f8e61af52d07\.jpg)
