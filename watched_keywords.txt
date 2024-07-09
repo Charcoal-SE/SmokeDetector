@@ -63869,3 +63869,4 @@
 1720496868	Cow	travelgear\.com\.au
 1720501363	Cow	neilalvindpereira(?:@gmail\.com)?
 1720538016	Jeff Schaller	digitalthrivehub\.blogspot
+1720503741	Cow	mycoveredcalifornia\.com
