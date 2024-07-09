@@ -63856,3 +63856,4 @@
 1720524730	Cow	airlines-terminal\.com
 1720524941	double-beep	minilecgroup\.com
 1720518179	Cow	matlabsolutions\.com
+1720527261	Jeff Schaller	qbcore\.shop
