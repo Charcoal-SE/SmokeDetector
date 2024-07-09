@@ -63880,3 +63880,4 @@
 1720531316	Cow	(?-i:DPnajjwnd1M)(?# youtu.be)
 1720531373	Cow	(?-i:mNSmlqv9q_c)(?# youtu.be)
 1720544176	Jeff Schaller	palmeradesignevents\.com
+1720544922	Cow	(?-i:093stJfh)(?# amzn.in)
