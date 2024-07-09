@@ -56862,7 +56862,6 @@
 1705057905	Nick	Smartmeta(?!\.net)
 1705058227	tripleee	Roshan_101(?# fiverr)
 1705058369	tripleee	buzzbarsmokeshop\.com
-1705059380	tripleee	boxesgen\.com
 1705059667	cigien	femwear(?!\.pk)
 1705060068	cigien	nibavlifts\.ca
 1705062359	cigien	thereporter\.com
