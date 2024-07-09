@@ -63853,3 +63853,4 @@
 1720521535	Jeff Schaller	flowerhutmcallentx\.com
 1720523147	Ryan M	buy(?:ing)?[\W_]*+facebook[\W_]*+reviews?
 1720524585	Cow	onlineshiaacademy\.com
+1720524693	double-beep	securemedz\.com
