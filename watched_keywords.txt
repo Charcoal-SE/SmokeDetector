@@ -63885,3 +63885,4 @@
 1720550715	Cow	ifood\.com\.br
 1720554917	Jeff Schaller	nowsingup\.center
 1720555827	Cow	milkiashailu\.com
+1720556813	Cow	(?-i:vitrant)(?# facebook.com)
