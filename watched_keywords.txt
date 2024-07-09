@@ -63854,3 +63854,4 @@
 1720523147	Ryan M	buy(?:ing)?[\W_]*+facebook[\W_]*+reviews?
 1720524585	Cow	onlineshiaacademy\.com
 1720524693	double-beep	securemedz\.com
+1720524730	Cow	airlines-terminal\.com
