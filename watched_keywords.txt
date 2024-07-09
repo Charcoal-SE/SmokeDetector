@@ -63883,3 +63883,4 @@
 1720544922	Cow	(?-i:093stJfh)(?# amzn.in)
 1720550356	General Grievance	menudale\.com
 1720550715	Cow	ifood\.com\.br
+1720554917	Jeff Schaller	nowsingup\.center
