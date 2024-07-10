@@ -63909,3 +63909,4 @@
 1720536871	General Grievance	interviews\.chat
 1720565173	Vickel	becky[\W_]*+shawver(?!\.com(?<=beckyshawver\.com))
 1720586043	Cow	yqoutdoorproduct\.com
+1720586492	Cow	crazytime\.app
