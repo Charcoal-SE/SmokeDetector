@@ -63914,3 +63914,4 @@
 1720590047	Cow	Vishwa[\W_]*+Connect
 1720609742	tripleee	prathvik[\W_]*+sankaliya
 1720597143	Cow	emblixsolutions\.com
+1720592356	Cow	seefashionality\.blogspot
