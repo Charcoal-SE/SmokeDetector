@@ -63939,3 +63939,4 @@
 1720621299	Machavity	apify\.com
 1720621479	Makyen	emblix[\W_]*+solutions(?!\.com(?<=emblixsolutions\.com))
 1720621691	Makyen	smart?[\W_]*+tv[\W_]*+master(?!\.com(?<=smarttvmaster\.com))
+1720626274	Jeff Schaller	rotorooterchatt\.com
