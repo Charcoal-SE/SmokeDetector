@@ -63927,3 +63927,4 @@
 1720607384	Cow	gyandhan\.com
 1720608074	Cow	realrelationships\.net
 1720608803	Cow	smileydentalclinic\.com
+1720611221	Cow	Tirumala[\W_]*+Tirupati[\W_]*+Cabs
