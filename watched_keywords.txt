@@ -63948,3 +63948,4 @@
 1720639055	Cow	ildwa\.com
 1720652640	Vickel	paradisemassagelv\.com
 1720644543	Cow	vernonleeknox\.com
+1720645955	Vickel	vernon[\W_]*+lee[\W_]*+knox(?!\.com(?<=vernonleeknox\.com))
