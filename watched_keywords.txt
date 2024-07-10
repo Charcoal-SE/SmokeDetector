@@ -63907,3 +63907,4 @@
 1720530887	Cow	(?-i:rec5ZNNynvrep2Y55)(?# blupry.com)
 1720530924	Cow	(?-i:recY32QVlP6dDzrnc)(?# blupry.com)
 1720536871	General Grievance	interviews\.chat
+1720565173	Vickel	becky[\W_]*+shawver(?!\.com(?<=beckyshawver\.com))
