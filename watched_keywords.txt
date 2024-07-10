@@ -63896,3 +63896,4 @@
 1720608950	Cow	zapvi\.in
 1720609134	tripleee	IBM[\W_]*+blockchain[\W_]*+foundation
 1720505062	Cow	(?-i:vFmAVJcx1yg1wWYf)(?# facebook)
+1720511614	Cow	(?-i:sIJ3ni4quAbTRs7QG)(?#docworkspace.com)
