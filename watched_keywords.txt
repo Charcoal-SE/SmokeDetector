@@ -63946,3 +63946,4 @@
 1720635026	Jeff Schaller	8c8xm-support-mohameds-familys-journey-to-safety(?#gofundme)
 1720639074	Cow	Ganobet
 1720639055	Cow	ildwa\.com
+1720645955	Vickel	vernon[\W_]*+lee[\W_]*+knox(?!\.com(?<=vernonleeknox\.com))
