@@ -2345,6 +2345,7 @@ items:
 - ip: 15.207.94.47
 - ip: 15.235.5.70
 - ip: 15.237.164.174
+- ip: 150.230.246.55
 - ip: 150.95.110.30
 - comment: lots of FPs, including api.flutter.dev
   disable: true
