@@ -5087,7 +5087,9 @@ items:
 - ns: dtinternational.in.
 - ns: bagful.net.
 - ns: pvtwebs.com.
-- ns: delhiescortgarima.com.
+- comment: NXDOMAIN 2024-07-10
+  disable: true
+  ns: delhiescortgarima.com.
 - ns: wwwebdesignstudios.com.
 - ns: mbatalks.in.
 - ns: blackbox.in.
