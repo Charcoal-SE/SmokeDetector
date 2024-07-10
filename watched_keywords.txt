@@ -63910,3 +63910,4 @@
 1720565173	Vickel	becky[\W_]*+shawver(?!\.com(?<=beckyshawver\.com))
 1720586043	Cow	yqoutdoorproduct\.com
 1720586492	Cow	crazytime\.app
+1720590002	Cow	7216673748760899584(?# linkedin.com)
