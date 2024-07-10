@@ -63932,3 +63932,4 @@
 1720611188	Cow	ananas\.sa
 1720611221	Cow	Tirumala[\W_]*+Tirupati[\W_]*+Cabs
 1720611271	Cow	tirumalatirupaticabs\.in
+1720612741	Cow	dudetheftwarsmod\.com
