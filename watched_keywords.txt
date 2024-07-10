@@ -63929,3 +63929,4 @@
 1720608803	Cow	smileydentalclinic\.com
 1720612309	Jeff Schaller	smarttvmaster\.com
 1720611144	Cow	skalet\.agency
+1720611188	Cow	ananas\.sa
