@@ -1072,3 +1072,4 @@ carelab[sz]
 ^commercial noida$
 (?-i:^House of United$)
 (?-i:^Grekkin Sliew$)
+(?-i:^Sky Exchange$)
