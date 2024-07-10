@@ -1920,7 +1920,9 @@ items:
 - ns:
   - eleanor.ns.cloudflare.com.
   - lewis.ns.cloudflare.com.
-- ns:
+- comment: empty response for nicholas.ns.cloudflare.com. 2024-07-10 (!?)
+  disable: true
+  ns:
   - eleanor.ns.cloudflare.com.
   - nicholas.ns.cloudflare.com.
 - ns:
