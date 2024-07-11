@@ -63950,3 +63950,4 @@
 1720644543	Cow	vernonleeknox\.com
 1720645955	Vickel	vernon[\W_]*+lee[\W_]*+knox(?!\.com(?<=vernonleeknox\.com))
 1720658620	Ollie	soundcloudto\.com
+1720674714	tripleee	goodsresponse\.com
