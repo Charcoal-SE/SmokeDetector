@@ -63973,3 +63973,4 @@
 1720704699	General Grievance	prateekgroup\.com
 1720705737	Jeff Schaller	zethic\.com
 1720706583	Makyen	my[\W_]*+holiday[\W_]*+happiness(?!\.com(?<=myholidayhappiness\.com))
+1720708182	Jeff Schaller	willowsparkllc
