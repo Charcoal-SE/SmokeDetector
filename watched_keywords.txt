@@ -63975,3 +63975,4 @@
 1720706583	Makyen	my[\W_]*+holiday[\W_]*+happiness(?!\.com(?<=myholidayhappiness\.com))
 1720708182	Jeff Schaller	willowsparkllc
 1720708466	Jeff Schaller	banzaaratravels\.com
+1720712943	Jeff Schaller	barrierstocommunication\.com
