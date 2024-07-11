@@ -63953,3 +63953,4 @@
 1720674714	tripleee	goodsresponse\.com
 1720641502	Cow	latexequation\.com
 1720675193	Cow	premjith\.wuaze\.com
+1720682743	tripleee	(?-i:^syntaptic anshu$)
