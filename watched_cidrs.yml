@@ -1448,7 +1448,9 @@ items:
 - comment: FPs from doi.org
   disable: true
   ip: 104.26.5.125
-- ip: 104.26.5.132
+- comment: FPs from doi.org
+  disable: true
+  ip: 104.26.5.132
 - ip: 104.26.5.137
 - ip: 104.26.5.154
 - ip: 104.26.5.162
