@@ -1074,3 +1074,4 @@ carelab[sz]
 (?-i:^Grekkin Sliew$)
 (?-i:^Sky Exchange$)
 (?-i:^Erivk Johnson$)
+(?-i:^Samsmith$)
