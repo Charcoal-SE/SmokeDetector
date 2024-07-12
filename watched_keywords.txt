@@ -64003,5 +64003,4 @@
 1720781359	tripleee	miwebenterrassa\.com
 1720781458	tripleee	my-fordbenefits\.com
 1720781748	tripleee	gauravkharya\.com
-1720781872	tripleee	giffywalls(?!\.(?:com|in))
 1720781910	tripleee	giffywalls\.in
