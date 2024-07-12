@@ -64001,3 +64001,4 @@
 1720779118	tripleee	(?-i:^Wink MOD APK$)
 1720779156	tripleee	(?-i:Lionel Velloz)
 1720780289	tripleee	smartmove2uk\.com
+1720780834	tripleee	(?-i:^THOR CHIB$)
