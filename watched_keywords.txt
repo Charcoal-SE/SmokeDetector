@@ -63982,3 +63982,4 @@
 1720740842	Vickel	mg\.digital
 1720731193	Vickel	lackyjet\.ru
 1720730871	Vickel	laky[\W_]*+jet
+1720730314	Fastnlight	razab\.com
