@@ -63983,3 +63983,4 @@
 1720731193	Vickel	lackyjet\.ru
 1720730871	Vickel	laky[\W_]*+jet
 1720730314	Fastnlight	razab\.com
+1720756896	Cow	extractease\.in
