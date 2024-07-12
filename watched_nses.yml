@@ -975,6 +975,9 @@ items:
   - nadia.ns.cloudflare.com.
 - ns:
   - brad.ns.cloudflare.com.
+  - olga.ns.cloudflare.com.
+- ns:
+  - brad.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
   - brad.ns.cloudflare.com.
