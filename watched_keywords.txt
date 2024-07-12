@@ -63981,3 +63981,4 @@
 1720713279	Jeff Schaller	halosheaven\.com
 1720740842	Vickel	mg\.digital
 1720731193	Vickel	lackyjet\.ru
+1720730871	Vickel	laky[\W_]*+jet
