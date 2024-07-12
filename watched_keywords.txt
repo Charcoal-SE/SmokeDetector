@@ -64006,3 +64006,4 @@
 1720781910	tripleee	giffywalls\.in
 1720781962	tripleee	giffywalls(?!\.(?:co(?:\.uk|m)|in))
 1720782356	tripleee	nuevostech\.com
+1720783087	double-beep	stemmedicaindia\.com
