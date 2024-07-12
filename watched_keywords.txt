@@ -63999,3 +63999,4 @@
 1720778596	tripleee	ivigo\.cc
 1720778943	tripleee	brightdigigold\.com
 1720779118	tripleee	(?-i:^Wink MOD APK$)
+1720779156	tripleee	(?-i:Lionel Velloz)
