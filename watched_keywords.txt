@@ -64004,3 +64004,4 @@
 1720781458	tripleee	my-fordbenefits\.com
 1720781748	tripleee	gauravkharya\.com
 1720781910	tripleee	giffywalls\.in
+1720781962	tripleee	giffywalls(?!\.(?:co(?:\.uk|m)|in))
