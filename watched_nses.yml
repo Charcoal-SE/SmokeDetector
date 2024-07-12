@@ -1268,6 +1268,9 @@ items:
   - chin.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
+  - chin.ns.cloudflare.com.
+  - will.ns.cloudflare.com.
+- ns:
   - chip.ns.cloudflare.com.
   - cruz.ns.cloudflare.com.
 - ns:
