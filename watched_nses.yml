@@ -2480,6 +2480,9 @@ items:
   - imani.ns.cloudflare.com.
   - leland.ns.cloudflare.com.
 - ns:
+  - indie.ns.cloudflare.com.
+  - roman.ns.cloudflare.com.
+- ns:
   - ines.ns.cloudflare.com.
   - marty.ns.cloudflare.com.
 - ns:
