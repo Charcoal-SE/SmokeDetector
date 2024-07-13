@@ -64024,3 +64024,4 @@
 1720817704	Makyen	blockchaintechs\.com
 1720827164	Vickel	venzy\.in
 1720827522	Vickel	cetient\.com
+1720827064	Vickel	logolyzer\.io
