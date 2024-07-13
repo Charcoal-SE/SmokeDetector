@@ -64047,3 +64047,4 @@
 1720873400	Cow	chalisahanuman\.com
 1720874338	Cow	recordbro\.com
 1720877192	Jeff Schaller	insightfulblogger3\.wordpress\.com
+1720885569	Jeff Schaller	dogsreviews\.com
