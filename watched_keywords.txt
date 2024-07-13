@@ -64052,3 +64052,4 @@
 1720889970	Cow	tehreekdawatefaqr\.org
 1720891823	Jeff Schaller	idb-crud-indexeddb-manage(?#chromewebstore)
 1720894391	Cow	perfsea\.com
+1720897412	Cow	youtubethumbnaildownloaderonline\.com
