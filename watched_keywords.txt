@@ -64070,3 +64070,4 @@
 1720962092	Fastnlight	hdmovie4u\.org
 1720966280	Jeff Schaller	setia100\.com
 1720968794	Makyen	atom[\W_]*+digital[\W_]*+kitchen(?:[\W_]*+(?:food|weighing|scale|\d++|[\da-f]{5,}+)s?)*
+1720968817	Makyen	(?-i:b1GMkkyDc1U)(?#groups.google.com/c/atom-digital-kitchen-food-weighing-scale)
