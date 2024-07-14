@@ -64072,3 +64072,4 @@
 1720968794	Makyen	atom[\W_]*+digital[\W_]*+kitchen(?:[\W_]*+(?:food|weighing|scale|\d++|[\da-f]{5,}+)s?)*
 1720968817	Makyen	(?-i:b1GMkkyDc1U)(?#groups.google.com/c/atom-digital-kitchen-food-weighing-scale)
 1720968839	Makyen	(?-i:oT-QecWbHa4)(?#groups.google.com/c/atom-digital-kitchen-food-weighing-scale)
+1720968861	Makyen	uothynerg(?#medium.com)
