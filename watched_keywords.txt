@@ -64066,3 +64066,4 @@
 1720950720	Jeff Schaller	injob\.ai
 1720951136	Jeff Schaller	navi\.com
 1720963951	Makyen	gavinray78(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1720962521	Fastnlight	revuze\.it
