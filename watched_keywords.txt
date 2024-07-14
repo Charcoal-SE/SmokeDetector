@@ -64059,3 +64059,4 @@
 1720907490	Dragonrage	bloxtor\.com
 1720914878	Dragonrage	msdynamicsconsulting\.com
 1720914929	Dragonrage	sqlskillz\.com
+1720906154	Vickel	GİRİŞ[\W_]*+İÇİN
