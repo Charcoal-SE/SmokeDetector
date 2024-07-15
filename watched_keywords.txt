@@ -64096,3 +64096,4 @@
 1721047557	double-beep	etutors\.us
 1721047817	Makyen	lorcet[\W_]*+online
 1721048838	Makyen	(?-i:ham_raza)(?#fiverr.com)
+1721049139	Makyen	microteknik\.net
