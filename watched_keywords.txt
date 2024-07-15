@@ -64079,3 +64079,4 @@
 1721011630	Makyen	soliiverse(?!\.com)(?:_sol)?
 1721014292	Makyen	vietgen\.vn
 1721014326	Makyen	adnvietgen\.bravesites\.com
+1721014388	Makyen	vietgen\.webflow\.io
