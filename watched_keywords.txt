@@ -64107,3 +64107,4 @@
 1721057758	Makyen	styloclothing\.com
 1721057786	Makyen	stylo[\W_]*+clothing(?!\.com(?<=styloclothing\.com))
 1721058404	Jeff Schaller	spiritualradar\.com
+1721059573	Fastnlight	premiermentalhealthhealingpathways\.net
