@@ -64100,3 +64100,4 @@
 1721049161	Makyen	microteknik(?!\.net)(?!\.com)
 1721049435	General Grievance	sonic-menus\.com
 1721049355	General Grievance	dotcom-tools\.com
+1721049730	Makyen	therapy[\W_]*+114(?!\.com(?<=therapy114\.com))
