@@ -64077,3 +64077,4 @@
 1721001952	Jeff Schaller	watchherestream\.com
 1721011609	Makyen	soliiverse\.com
 1721011630	Makyen	soliiverse(?!\.com)(?:_sol)?
+1721014292	Makyen	vietgen\.vn
