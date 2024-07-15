@@ -64103,3 +64103,4 @@
 1721049730	Makyen	therapy[\W_]*+114(?!\.com(?<=therapy114\.com))
 1721049804	Jeff Schaller	sparkyraj\.com\.au
 1720963020	Fastnlight	iptvfusionzone\.online
+1721055805	Jeff Schaller	moorleisure\.co\.uk
