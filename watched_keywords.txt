@@ -64106,3 +64106,4 @@
 1721055805	Jeff Schaller	moorleisure\.co\.uk
 1721057758	Makyen	styloclothing\.com
 1721057786	Makyen	stylo[\W_]*+clothing(?!\.com(?<=styloclothing\.com))
+1721058404	Jeff Schaller	spiritualradar\.com
