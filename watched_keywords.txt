@@ -64054,7 +64054,6 @@
 1720794019	Cow	baatraining\.com
 1720899449	Fastnlight	princesspalacerecovery\.com
 1720903167	Dragonrage	l24\.im
-1720907490	Dragonrage	bloxtor\.com
 1720914878	Dragonrage	msdynamicsconsulting\.com
 1720914929	Dragonrage	sqlskillz\.com
 1720906154	Vickel	GİRİŞ[\W_]*+İÇİN
