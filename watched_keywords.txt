@@ -64129,3 +64129,4 @@
 1721141353	Ollie	neoai\.bot
 1721141388	Ollie	niuliu285(?:@gmail\.com)?
 1721141993	Ollie	awoo\.git(?:@gmail\.com)?
+1721144512	Fastnlight	votesservice\.com
