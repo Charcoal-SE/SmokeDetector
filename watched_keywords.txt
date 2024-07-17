@@ -64143,3 +64143,4 @@
 1721180158	Makyen	taa85211
 1721194341	VLAZ	vectorhue\.com
 1721194364	VLAZ	vector[\W_]*+hue(?!\.com(?<=vectorhue\.com))
+1721195417	VLAZ	(?-i:LeeLeTE6)(?#cutt.ly)
