@@ -64159,3 +64159,4 @@
 1721227903	VLAZ	facelift[\W_]*+renovations(?!\.com\.au(?<=faceliftrenovations\.com\.au))
 1721229721	Jeff Schaller	buterup\.com
 1721230095	Jeff Schaller	rapidsolutionsint\.com
+1721238292	VLAZ	manoknapulamods\.com
