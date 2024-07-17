@@ -64142,3 +64142,4 @@
 1721169277	Vickel	precisionreloadingshop\.com
 1721180158	Makyen	taa85211
 1721194341	VLAZ	vectorhue\.com
+1721194364	VLAZ	vector[\W_]*+hue(?!\.com(?<=vectorhue\.com))
