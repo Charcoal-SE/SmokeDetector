@@ -41969,7 +41969,6 @@
 1661689353	cigien	gouravjavadevelopment42\.blogspot
 1661689402	cigien	mos078887(?:@gmail\.com)?
 1661689757	cigien	3dsculplab\.xyz
-1661689859	cigien	boldpreciousmetals\.com
 1661691540	cigien	pecattestation\.com
 1661691996	cigien	technorchid\.blogspot
 1661694269	cigien	top[\W_]*+bet[\W_]*+info
