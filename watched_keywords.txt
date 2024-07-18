@@ -64196,3 +64196,4 @@
 1721310200	Makyen	rejuvazen(?:[\W_]*+(?:cbd|gumm(?:ie|y)|\d++|[\da-f]{5,}+)s?)*
 1721310685	tripleee	macback\.co\.uk
 1721318164	Jeff Schaller	sainikexamcoaching\.com
+1721314739	Fastnlight	virtualmedicalassistant\.us
