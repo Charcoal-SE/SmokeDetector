@@ -64170,3 +64170,4 @@
 1721270484	Makyen	divdev\.biz\.id
 1721270505	Makyen	divdev[\W_]*+biz
 1721273295	Makyen	online[\W_]*+herbal[\W_]*+incense(?!\.com(?<=onlineherbalincense\.com))
+1721273413	Makyen	mrs[\W_]*+lisa[\W_]*+elizabeth
