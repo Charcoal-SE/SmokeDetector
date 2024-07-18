@@ -64194,3 +64194,4 @@
 1721309888	Makyen	vital[\W_]*+honey
 1721310003	Jeff Schaller	QDAL88
 1721310177	Makyen	multi\.engineering
+1721310200	Makyen	rejuvazen(?:[\W_]*+(?:cbd|gumm(?:ie|y)|\d++|[\da-f]{5,}+)s?)*
