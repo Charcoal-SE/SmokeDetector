@@ -64203,3 +64203,4 @@
 1721328083	Vickel	softwarezguru\.com
 1721328753	Vickel	cricfytv\.live
 1721328919	Vickel	cricfy[\W_]*+tv(?!\.live(?<=cricfytv\.live))
+1721335038	Jeff Schaller	countingtools\.com
