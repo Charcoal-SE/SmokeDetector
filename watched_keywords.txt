@@ -64178,3 +64178,4 @@
 1721285473	Makyen	wticabs\.com
 1721285507	Makyen	wti[\W_]*+cabs?(?!\.com(?<=wticabs\.com))
 1721285545	Makyen	infinitymarketresearch\.com
+1721285784	Makyen	forzamedi\.com
