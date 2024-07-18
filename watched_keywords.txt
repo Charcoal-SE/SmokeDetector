@@ -64181,3 +64181,4 @@
 1721285784	Makyen	forzamedi\.com
 1721285807	Makyen	forzamedi(?!\.com)
 1721285936	Makyen	chatgptdeutsch\.info
+1721285970	Makyen	chatgpt[\W_]*+deutsch(?!\.info(?<=chatgptdeutsch\.info))
