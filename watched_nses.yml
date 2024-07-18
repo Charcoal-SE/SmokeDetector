@@ -1385,6 +1385,9 @@ items:
   - coco.ns.cloudflare.com.
   - duke.ns.cloudflare.com.
 - ns:
+  - coby.ns.cloudflare.com.
+  - ziggy.ns.cloudflare.com.
+- ns:
   - coco.ns.cloudflare.com.
   - felicity.ns.cloudflare.com.
 - ns:
