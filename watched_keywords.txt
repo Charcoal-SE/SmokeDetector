@@ -64176,3 +64176,4 @@
 1721275904	Makyen	manhquynhhome(?!\.com)
 1721285327	Makyen	angelmarias\.com
 1721285473	Makyen	wticabs\.com
+1721285507	Makyen	wti[\W_]*+cabs?(?!\.com(?<=wticabs\.com))
