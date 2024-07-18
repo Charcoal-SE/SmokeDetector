@@ -343,6 +343,9 @@ items:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - indie.ns.cloudflare.com.
+  - roman.ns.cloudflare.com.
+- ns:
   - ines.ns.cloudflare.com.
   - joel.ns.cloudflare.com.
 - ns:
