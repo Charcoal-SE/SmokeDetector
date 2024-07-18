@@ -64173,3 +64173,4 @@
 1721273413	Makyen	mrs[\W_]*+lisa[\W_]*+elizabeth
 1721273465	Makyen	lisaellzabet[\W_]*+662(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1721275289	Spevacus	hoaviet247\.com
+1721275904	Makyen	manhquynhhome(?!\.com)
