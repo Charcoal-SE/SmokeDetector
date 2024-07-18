@@ -64195,3 +64195,4 @@
 1721310177	Makyen	multi\.engineering
 1721310200	Makyen	rejuvazen(?:[\W_]*+(?:cbd|gumm(?:ie|y)|\d++|[\da-f]{5,}+)s?)*
 1721310685	tripleee	macback\.co\.uk
+1721314739	Fastnlight	virtualmedicalassistant\.us
