@@ -64182,3 +64182,4 @@
 1721285936	Makyen	chatgptdeutsch\.info
 1721285970	Makyen	chatgpt[\W_]*+deutsch(?!\.info(?<=chatgptdeutsch\.info))
 1721287391	Makyen	foodspark(?!\.io)
+1721287764	Dragonrage	dice[\s]dreams
