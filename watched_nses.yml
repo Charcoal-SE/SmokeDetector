@@ -4866,7 +4866,9 @@ items:
   - ns-150-c.gandi.net.
   - ns-41-b.gandi.net.
   - ns-9-a.gandi.net.
-- ns: bluehosting.pk.
+- comment: 2024-07-17 NXDOMAIN
+  disable: true
+  ns: bluehosting.pk.
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
