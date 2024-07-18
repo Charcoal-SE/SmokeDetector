@@ -64180,3 +64180,4 @@
 1721285545	Makyen	infinitymarketresearch\.com
 1721285784	Makyen	forzamedi\.com
 1721285807	Makyen	forzamedi(?!\.com)
+1721285936	Makyen	chatgptdeutsch\.info
