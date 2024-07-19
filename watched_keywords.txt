@@ -64218,3 +64218,4 @@
 1721381925	Jeff Schaller	zuptek\.com
 1721387538	Jeff Schaller	shop\.bayara\.com
 1721387629	Jeff Schaller	goodwinfood\.ru
+1721387665	Jeff Schaller	typhonmachinery\.com
