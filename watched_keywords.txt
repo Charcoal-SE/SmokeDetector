@@ -64229,3 +64229,4 @@
 1721418087	Ryan M	routersetuphelp\.com
 1721403494	Cow	qcomm\.co
 1721413120	Cow	adsgun\.com
+1721415798	Vickel	adsgun(?!\.com)
