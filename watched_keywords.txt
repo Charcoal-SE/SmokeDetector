@@ -64225,3 +64225,4 @@
 1721399232	Makyen	brydan[\W_]*+woods(?!\.com\.au(?<=brydanwoods\.com\.au))
 1721399328	Jeff Schaller	heritagewithhistory\.com
 1721400573	VLAZ	directcrack\.info
+1721413120	Cow	adsgun\.com
