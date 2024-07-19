@@ -64230,3 +64230,4 @@
 1721403494	Cow	qcomm\.co
 1721413120	Cow	adsgun\.com
 1721415798	Vickel	adsgun(?!\.com)
+1721425622	Vickel	Angelina[\W]*+Christopher1738
