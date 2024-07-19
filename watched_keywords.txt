@@ -64214,3 +64214,4 @@
 1721348477	Vickel	spylord1110(?:@gmail\.com)?
 1721348581	Vickel	spylord\.online
 1721350145	Vickel	(?-i:ugbugan)(?#t.me)
+1721378673	Jeff Schaller	sarkarisresults\.com
