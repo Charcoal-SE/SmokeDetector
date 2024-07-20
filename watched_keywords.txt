@@ -64249,3 +64249,4 @@
 1721493102	Jeff Schaller	bnhywmug
 1721496527	VLAZ	marcopolosports\.com
 1721505849	Vickel	patty[\W]*+barton[\W]*+belle
+1721518081	Jeff Schaller	easyrecoveryassets(?:@gmail\.com)?
