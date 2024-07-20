@@ -64241,3 +64241,4 @@
 1721470501	Vickel	fashion[\W_]*+handbag[\W_]*+collections(?!\.com(?<=fashionhandbagcollections\.com))
 1721477667	Cow	todayalljob\.com
 1721474288	Cow	atlantisplus\.com
+1721474249	Cow	dooflix\.in
