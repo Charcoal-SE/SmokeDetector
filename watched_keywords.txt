@@ -64236,3 +64236,4 @@
 1721459735	double-beep	boldhim\.com
 1721459868	double-beep	allairoffices\.com
 1721459918	double-beep	simplestyle\.top
+1721470501	Vickel	fashion[\W_]*+handbag[\W_]*+collections(?!\.com(?<=fashionhandbagcollections\.com))
