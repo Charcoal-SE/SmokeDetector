@@ -64243,3 +64243,4 @@
 1721475156	Cow	maha66\.org
 1721475191	Cow	MAHA66
 1721483670	Makyen	(?-i:SimpleStyle)(?!\.top)
+1721484284	Vickel	tik4tat\.com
