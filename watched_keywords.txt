@@ -64244,3 +64244,4 @@
 1721475191	Cow	MAHA66
 1721483566	Makyen	angelina[\W_]*+christopher1738(?:@gmail\.com)?
 1721483670	Makyen	(?-i:SimpleStyle)(?!\.top)
+1721484350	Vickel	tik4tat(?!\.com)
