@@ -64234,3 +64234,4 @@
 1721432030	Vickel	maestro[\W]*+encrypter\W]*+financier
 1721459666	double-beep	unomindakart\.com
 1721459699	double-beep	nippondata\.com
+1721459735	double-beep	boldhim\.com
