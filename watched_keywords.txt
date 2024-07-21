@@ -64258,3 +64258,4 @@
 1721551929	Cow	allfunnypuns\.com
 1721575638	Jeff Schaller	Oblankfastservice
 1721499373	Cow	osobakehinde\.com\.ng
+1721559702	Cow	Palm[\W_]*+Hub[\W_]*+Mall[\W_]*+New[\W_]*+Cairo
