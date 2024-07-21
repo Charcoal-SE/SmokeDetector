@@ -64253,3 +64253,4 @@
 1721524590	Jeff Schaller	modpuro\.com
 1721524836	Makyen	modpuro(?!\.com)
 1721524858	Makyen	arceus[\W_]*+x
+1721546991	Nisse Engström	teasoft\.in
