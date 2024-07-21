@@ -64261,3 +64261,4 @@
 1721559702	Cow	Palm[\W_]*+Hub[\W_]*+Mall[\W_]*+New[\W_]*+Cairo
 1721564252	Cow	trafficriderr\.org
 1721566379	Cow	(?-i:3Y7FvWZ)(?#bit.ly)
+1721576288	Cow	(?-i:hichambenali)(?# fiverr.com)
