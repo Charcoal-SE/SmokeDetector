@@ -64254,3 +64254,4 @@
 1721524836	Makyen	modpuro(?!\.com)
 1721524858	Makyen	arceus[\W_]*+x
 1721546991	Nisse Engström	teasoft\.in
+1721547206	Cow	deepdivephp\.com
