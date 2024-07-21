@@ -64262,3 +64262,4 @@
 1721564252	Cow	trafficriderr\.org
 1721566379	Cow	(?-i:3Y7FvWZ)(?#bit.ly)
 1721576288	Cow	(?-i:hichambenali)(?# fiverr.com)
+1721581004	Cow	matkaji\.net
