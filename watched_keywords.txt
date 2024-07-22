@@ -64270,3 +64270,4 @@
 1721623453	Makyen	dino[\W_]*+safety[\W_]*+surfacing(?!\.com(?<=dinosafetysurfacing\.com))
 1721623944	VLAZ	sobiztrend\.com
 1721629454	VLAZ	hulu-com-activate\.com
+1721634494	Ryan M	mcdonaldspeisekarte\.de
