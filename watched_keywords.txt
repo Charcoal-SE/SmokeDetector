@@ -64268,3 +64268,4 @@
 1721586970	Vickel	miorjewels\.com
 1721607266	Jeff Schaller	dinosafetysurfacing\.com
 1721623453	Makyen	dino[\W_]*+safety[\W_]*+surfacing(?!\.com(?<=dinosafetysurfacing\.com))
+1721623944	VLAZ	sobiztrend\.com
