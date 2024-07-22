@@ -5010,7 +5010,9 @@ items:
 - ns: oldprohosting.com.
 - ns: seozonexperts.com.
 - ns: companieshostpro.com.
-- ns: digisignhost.com.
+- comment: NXDOMAIN 2024-07-22
+  disable: true
+  ns: digisignhost.com.
 - ns: clubmediamarketing.com.
 - ns: findmeahost.com.
 - ns: seahorseseo.com.
