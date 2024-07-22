@@ -142,10 +142,13 @@ class GitManager:
 
             now = str(int(time.time()))
 
+            type_friendly_name = blacklist
+
             if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
                 op = 'watch'
                 item = item_to_blacklist
                 item_to_blacklist = "\t".join([now, username, item])
+                type_friendly_name = blacklist.split('_')[1]
             else:
                 op = 'blacklist'
                 item = item_to_blacklist
@@ -195,7 +198,7 @@ class GitManager:
                         and (GlobalVars.github_access_token is None)):
                     return (False, "Tell someone to set a GH token.")
 
-                payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
+                payload = {"title": "{0}: {1} {2} {3}".format(username, op.title(), type_friendly_name, item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
                                    "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
