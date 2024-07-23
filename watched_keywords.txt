@@ -64296,3 +64296,4 @@
 1721684044	Makyen	q1339205081
 1721709604	Makyen	ibuytero\.com
 1721709625	Makyen	ibuytero(?!\.com)
+1721709847	VLAZ	fortishealthcare\.com
