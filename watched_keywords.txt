@@ -64312,3 +64312,4 @@
 1721731926	Cow	cricuthelpcenter\.com
 1721731252	Cow	thecurrent\.pk
 1721732889	Cow	raceecochain\.com
+1721733789	Cow	(?-i:cellucare\.australia)(?# facebook.com)
