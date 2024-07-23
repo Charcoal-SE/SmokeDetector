@@ -64297,3 +64297,4 @@
 1721709604	Makyen	ibuytero\.com
 1721709625	Makyen	ibuytero(?!\.com)
 1721709847	VLAZ	fortishealthcare\.com
+1721711041	Jeff Schaller	cuddables\.in
