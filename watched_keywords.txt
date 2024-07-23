@@ -64323,3 +64323,4 @@
 1721737663	double-beep	promobileprice\.com
 1721730884	Cow	xn--kavbe772-sxb\.com
 1721733630	Cow	sathyabama\.ac\.in
+1721742873	Jeff Schaller	marykayin-touch\.com
