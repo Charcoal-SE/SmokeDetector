@@ -64303,5 +64303,4 @@
 1721720460	double-beep	gomarketme\.co
 1721720575	double-beep	auth-analytics\.com
 1721688925	Vickel	go\.prmx\.co
-1721721010	double-beep	lmgaagro\.com
 1721719188	Cow	devopsden\.io
