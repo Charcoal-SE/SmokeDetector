@@ -64351,3 +64351,4 @@
 1721822737	Vickel	doodle(?:[\W]*+graffiti)?[\W]*+art[\W]*+roll
 1721824609	VLAZ	vajiraoiasacademy\.com
 1721824633	VLAZ	(?-i:0029VaZzoi4FSAtAUwyqE003)(?#whatsapp.com)
+1721824673	VLAZ	Vajirao[\W_]*+IAS[\W_]*+Academy(?!\.com(?<=vajiraoiasacademy\.com))
