@@ -64352,3 +64352,4 @@
 1721824633	VLAZ	(?-i:0029VaZzoi4FSAtAUwyqE003)(?#whatsapp.com)
 1721824673	VLAZ	Vajirao[\W_]*+IAS[\W_]*+Academy(?!\.com(?<=vajiraoiasacademy\.com))
 1721825850	Jeff Schaller	(?-i:4cWMJ4K)(?#bit.ly)
+1721825889	Jeff Schaller	(?-i:46mKW6y)(?#bit.ly)
