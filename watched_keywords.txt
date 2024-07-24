@@ -64373,3 +64373,4 @@
 1721847375	Cow	plastic-injectionmolding\.com
 1721726870	Cow	heavnn\.io
 1721850852	Cow	conversionfree\.com
+1721851133	Cow	Norse[\W_]*+Atlantic
