@@ -64350,3 +64350,4 @@
 1721820155	Jeff Schaller	assamjobs\.net
 1721822737	Vickel	doodle(?:[\W]*+graffiti)?[\W]*+art[\W]*+roll
 1721824609	VLAZ	vajiraoiasacademy\.com
+1721824633	VLAZ	(?-i:0029VaZzoi4FSAtAUwyqE003)(?#whatsapp.com)
