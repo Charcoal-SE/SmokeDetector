@@ -63670,7 +63670,6 @@
 1720082223	VLAZ	legendarymarketar\.com
 1720084017	VLAZ	oneday\.co\.th
 1720085652	VLAZ	lizenzenland\.de
-1720086620	VLAZ	blindstudio\.ca
 1720089755	VLAZ	shapedpillows\.co\.uk
 1720075615	Henry Ecker	ashafabs\.com
 1720071555	Cow	Ashadha[\W_]*+Amavasya
