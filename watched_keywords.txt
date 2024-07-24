@@ -64365,3 +64365,4 @@
 1721839288	Makyen	resultsattamatka\.com
 1721839316	Makyen	resultsattamatka(?!\.com)
 1721841707	Jeff Schaller	smeadvantage\.co\.uk
+1721841780	Jeff Schaller	patelsera\.com
