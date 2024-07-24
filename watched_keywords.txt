@@ -64348,3 +64348,4 @@
 1721815828	double-beep	eshwaraabhayafoundation\.com
 1721817548	double-beep	blognets\.com
 1721820155	Jeff Schaller	assamjobs\.net
+1721822737	Vickel	doodle(?:[\W]*+graffiti)?[\W]*+art[\W]*+roll
