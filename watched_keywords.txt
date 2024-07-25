@@ -64390,3 +64390,4 @@
 1721903658	Cow	oneupshroomchocolatebars\.com
 1721904047	Cow	epicelectricscrubber\.com
 1721904691	Jeff Schaller	grownmafia\.com
+1721905079	Cow	(?-i:ClaytonnRhodes)(?# t.me)
