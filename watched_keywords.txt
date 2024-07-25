@@ -20859,7 +20859,7 @@
 1594815629	Machavity	youngevity\.me
 1594817257	Xnero	einfach-umzug\.com
 1594817302	Xnero	einfach\Wumzug(!\.com)
-1594817936	Xnero	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(?# obfuscated usmanovoilandgas60@mail.ru)
+1594817936	Xnero	usmanovoilandgas60(?:[\W_]*+(?:at[\W_]*+)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)?)?(?# obfuscated usmanovoilandgas60@mail.ru)
 1594818309	Xnero	fundayholidays\.com
 1594818599	Xnero	browseinfo\.in
 1594822520	Makyen	fbdon\.com
