@@ -11309,7 +11309,6 @@
 1565980490	Makyen	ilanguage\W*translation
 1565980513	Makyen	ilanguageservice\.com
 1565980542	Makyen	ilanguageservice\.business\.site
-1565980582	Makyen	ilanguage\W*service(?!\.com(?<=ilanguageservice\.com))(?!\.business\.site(?<=ilanguageservice\.business\.site))
 1565990568	Makyen	mjoyon01(?:medium)
 1565990610	Makyen	awaretalks\W*com(?<!awaretalks\.com)
 1565990622	Makyen	slim[\W_]*36[\W_]*avis(?:[\W_]*\d+)*
