@@ -10866,7 +10866,6 @@
 1564481736	tripleee	viyoutube\.com
 1564483329	tripleee	apkplanet\.net
 1564487393	tripleee	a9t9\.com(?# requested by MartijnPieters)
-1564487418	tripleee	ocr\.space(?# requested by MartijnPieters)
 1564487437	tripleee	ui\.vision(?# requested by MartijnPieters)
 1564489426	tripleee	bakera(?:\W?it)?
 1564490182	tripleee	central\W?recruitment
