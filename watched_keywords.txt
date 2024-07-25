@@ -64383,3 +64383,4 @@
 1721896270	double-beep	logicsvalley\.com
 1721897534	double-beep	amrapali\.ac\.in
 1721899849	double-beep	nourishveda\.fit
+1721899948	double-beep	idasol-online\.com
