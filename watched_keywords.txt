@@ -64405,3 +64405,4 @@
 1721921173	General Grievance	tripmaker\.pk
 1721937395	Vickel	megasales\.com\.pk
 1721939910	Vickel	keysgeek\.com
+1721947301	Vickel	Remote[\W]*+Cybar[\W]*+Recovery
