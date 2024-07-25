@@ -64382,3 +64382,4 @@
 1721893492	double-beep	mustufask54(?:@gmail\.com)?
 1721893744	double-beep	human-benchmark\.org
 1721893883	double-beep	biyankastore\.com
+1721895485	double-beep	adzestudio\.com
