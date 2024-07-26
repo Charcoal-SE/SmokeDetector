@@ -52023,7 +52023,6 @@
 1693227619	Spevacus	connecting\.com\.au
 1693228726	cigien	yesornowheel\.org
 1693232356	Spevacus	rizetours\.com
-1693233398	Makyen	innotech(?!\.pt)
 1693233423	Makyen	innotech\.pt
 1693235509	cigien	chatgptjapan\.org
 1693239428	cigien	wholesale925silver\.com
