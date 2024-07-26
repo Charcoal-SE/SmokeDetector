@@ -64433,3 +64433,4 @@
 1721947301	Vickel	Remote[\W]*+Cybar[\W]*+Recovery
 1721773231	Vickel	tradingrouter\.com
 1721995589	Vickel	quapri\.in
+1721997907	Vickel	merchant-accounts\.ca
