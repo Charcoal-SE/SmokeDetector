@@ -64431,3 +64431,4 @@
 1721733697	Cow	2meghana\.elisetii(?:@gmail\.com)?
 1721733789	Cow	(?-i:cellucare\.australia)(?# facebook.com)
 1721947301	Vickel	Remote[\W]*+Cybar[\W]*+Recovery
+1721773231	Vickel	tradingrouter\.com
