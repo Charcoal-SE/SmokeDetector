@@ -63711,7 +63711,6 @@
 1720174294	Cow	mentortechsystems\.com
 1720178124	Cow	kalmaz\.ma
 1720173922	Cow	treownut\.com
-1720173768	Cow	dextara\.com
 1720173604	Cow	eurowindow\.top
 1720164156	Cow	wilson-legal\.com
 1720164204	Cow	softzspot\.com
