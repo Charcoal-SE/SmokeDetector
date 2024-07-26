@@ -64435,3 +64435,4 @@
 1721995589	Vickel	quapri\.in
 1721997907	Vickel	merchant-accounts\.ca
 1721998065	Vickel	pixomo(?:@gmail\.com)?
+1721998100	Vickel	(?-i:pimlicoHQ)(?#t.me)
