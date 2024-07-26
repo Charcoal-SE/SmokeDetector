@@ -64417,3 +64417,4 @@
 1721985293	double-beep	sharks[\W_]*of[\W_]*law(?!\.com)
 1721986206	double-beep	assignmenthelpuk\.io
 1721987779	double-beep	aartigyan\.com
+1721988969	double-beep	jewellerybymash\.com
