@@ -64429,3 +64429,4 @@
 1722000425	double-beep	gymequipmentremovals\.uk
 1721733687	Cow	1anshudiasyjas257(?:@gmail\.com)?
 1721733697	Cow	2meghana\.elisetii(?:@gmail\.com)?
+1721733789	Cow	(?-i:cellucare\.australia)(?# facebook.com)
