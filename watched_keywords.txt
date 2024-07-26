@@ -64437,3 +64437,4 @@
 1721998065	Vickel	pixomo(?:@gmail\.com)?
 1721998100	Vickel	(?-i:pimlicoHQ)(?#t.me)
 1722006575	double-beep	sutomjeu\.fr
+1722007895	double-beep	liogames\.com
