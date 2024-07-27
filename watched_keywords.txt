@@ -61560,7 +61560,6 @@
 1715379341	Fastnlight	earnmorecashtoday\.com
 1715381433	Vickel	ohioansforgunsafety\.com
 1715407329	Nick	Vedikant
-1715407469	Nick	Reddy[\W_]*+Anna(?:[\W_]*+Club)?(?!-id\.in(?<=reddyanna-id\.in))
 1715409878	Nick	thenamastespa\.in
 1715409908	Nick	bodymassagesparlours\.in
 1715409929	Nick	thenaturethaispa\.in
