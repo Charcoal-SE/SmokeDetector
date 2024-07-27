@@ -64479,3 +64479,4 @@
 1722107835	Cow	paraoan\.com
 1722105039	Cow	(?-i:careerbytecode)(?# substack.com)
 1722115273	Nisse Engström	listafarmacia\.com
+1722115304	Nisse Engström	bohatstvi\.com
