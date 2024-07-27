@@ -64451,3 +64451,4 @@
 1722042255	Ryan M	kora-extra\.live
 1722042588	Ryan M	products\b.{1,20}\bcheap(?:er)?
 1722042727	Ryan M	(?:buy|get|free)[\W_]*+tiktok[\W_]*+followers
+1722043970	Ryan M	gb[\W_]*+whatsapp[\W_]*+(?:pro[\W_]*+)?(?:apk|download)
