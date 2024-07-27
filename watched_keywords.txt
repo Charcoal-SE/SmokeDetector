@@ -64453,3 +64453,4 @@
 1722042727	Ryan M	(?:buy|get|free)[\W_]*+tiktok[\W_]*+followers
 1722043970	Ryan M	gb[\W_]*+whatsapp[\W_]*+(?:pro[\W_]*+)?(?:apk|download)
 1722044314	Ryan M	keenresearch\.com
+1722050081	Ryan M	khangdienhcm\.com
