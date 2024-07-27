@@ -64454,3 +64454,4 @@
 1722043970	Ryan M	gb[\W_]*+whatsapp[\W_]*+(?:pro[\W_]*+)?(?:apk|download)
 1722044314	Ryan M	keenresearch\.com
 1722050081	Ryan M	khangdienhcm\.com
+1722050214	Ryan M	indianyellowpage\.in
