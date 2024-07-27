@@ -64460,3 +64460,4 @@
 1722078974	Ryan M	reddyanna-id\.com
 1722079042	Ryan M	google\.com/maps\?cid=15512254314365082510
 1722079069	Ryan M	fun-box\.vip
+1722079097	Ryan M	derrada[\W_]*+financial[\W_]*+services
