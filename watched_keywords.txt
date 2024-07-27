@@ -64462,3 +64462,4 @@
 1722079069	Ryan M	fun-box\.vip
 1722079097	Ryan M	derrada[\W_]*+financial[\W_]*+services
 1722079219	Ryan M	amzmarketinghub\.com
+1722079264	Ryan M	duplicatewordfinder\.com
