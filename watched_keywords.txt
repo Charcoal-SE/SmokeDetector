@@ -64477,3 +64477,4 @@
 1722094545	Nisse Engström	sbo4k\.com
 1722109530	Cow	weniche\.com
 1722107835	Cow	paraoan\.com
+1722105039	Cow	(?-i:careerbytecode)(?# substack.com)
