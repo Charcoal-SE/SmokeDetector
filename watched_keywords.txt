@@ -64473,3 +64473,4 @@
 1722088038	Makyen	newman[\W_]*+(?:and[\W_]*+)?bright(?!\.co\.uk(?<=newmanandbright\.co\.uk))
 1722088078	Makyen	duplicate[\W_]*+word[\W_]*+finder(?!\.com(?<=duplicatewordfinder\.com))
 1722092109	Nisse Engström	78win\.eu
+1722092757	Nisse Engström	hakunamatata\.cloudslearner\.com
