@@ -59952,7 +59952,6 @@
 1711551302	Makyen	bazar[\W_]*+motor[\W_]*+iran(?!\.ir(?<=bazarmotoriran\.ir))
 1711551820	Makyen	sulekha[\W_]*+holidays(?!\.com(?<=sulekhaholidays\.com))
 1711552058	Makyen	id[\W_]*+reddy[\W_]*+anna(?!\.in(?<=idreddyanna\.in))
-1711552079	Makyen	reddy[\W_]*+anna[\W_]*+id
 1711552210	Makyen	all[\W_]*+crack[\W_]*+software[\W_]*+solutions(?!\.com(?<=allcracksoftwaresolutions\.com))
 1711552275	Jeff Schaller	hostingprovider\.co\.in
 1711552825	Makyen	yueueywl0djqlfh0iogq4tq0
