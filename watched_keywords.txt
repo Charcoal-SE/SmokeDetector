@@ -64469,3 +64469,4 @@
 1722087857	Makyen	rxslides\.com
 1722087917	Makyen	datoscan\.com
 1722087943	Makyen	dato[\W_]*+scan(?!\.com(?<=datoscan\.com))
+1722088013	Makyen	newmanandbright\.co\.uk
