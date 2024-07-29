@@ -62854,7 +62854,7 @@
 1718089771	tripleee	(?-i:^pcg digital$)
 1718092128	tripleee	titantroopers\.com
 1718092766	Dragonrage	mp4to\.com
-1718094935	tripleee	https://(?:[^\s<>"']*\b(?:torrent|crack|download|free|software)\b){3}
+1718094935	tripleee	https://(?:[^\s<>"']*\b(?:torrent|crack|download|free|software)\b){3}(?#" syntax highlighting fodder)
 1718097738	VLAZ	nanodefensepro24\.com
 1718099678	Jeff Schaller	madisports\.co\.uk
 1718099714	Jeff Schaller	virtualongroup\.com
