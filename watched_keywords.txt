@@ -64500,3 +64500,4 @@
 1722168986	VLAZ	flightmapper\.io
 1722194804	Cow	buyrouterswitch\.com
 1722205109	Vickel	bouquetsiptv\.com
+1722167024	Cow	tekemon\.com
