@@ -64501,3 +64501,4 @@
 1722194804	Cow	buyrouterswitch\.com
 1722205109	Vickel	bouquetsiptv\.com
 1722167024	Cow	tekemon\.com
+1722173792	Cow	stannobello\.com
