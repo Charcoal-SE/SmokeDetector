@@ -64526,3 +64526,4 @@
 1722260394	Makyen	tvg[\W_]*+migration(?!\.com(?<=tvgmigration\.com))
 1722260235	Vickel	tuitionhighway(?!\.com)
 1722260681	Makyen	d(?:octo)?r[\W_]*+gaurav[\W_]*+kharya
+1722267861	General Grievance	sleekbill\.in
