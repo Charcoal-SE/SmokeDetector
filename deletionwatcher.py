@@ -144,6 +144,8 @@ class DeletionWatcher:
                                                                                               action))
 
     def save(self):
+        if GlobalVars.no_deletion_watcher:
+            return
         pickle_output = {}
 
         with self.posts_lock:

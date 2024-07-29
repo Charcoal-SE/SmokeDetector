@@ -168,6 +168,8 @@ class EditWatcher:
                                                                                               action))
 
     def save(self):
+        if GlobalVars.no_edit_watcher:
+            return
         with self.posts_lock:
             copy = self.posts.copy()
 
