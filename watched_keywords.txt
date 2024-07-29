@@ -64537,3 +64537,4 @@
 1722265624	Cow	gercomtrustnetbank\.com
 1722274532	Cow	optimedia\.tv
 1722276554	Cow	snapchatplanetsofficial\.com
+1722277038	General Grievance	resources\.segnivo\.com
