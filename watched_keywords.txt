@@ -64503,3 +64503,4 @@
 1722167024	Cow	tekemon\.com
 1722173792	Cow	stannobello\.com
 1722178016	Cow	festivecoupon\.com
+1722180309	Cow	romantics\.com\.vn
