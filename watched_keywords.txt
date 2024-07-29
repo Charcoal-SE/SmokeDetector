@@ -64514,3 +64514,4 @@
 1722237214	Nisse Engström	- zipy\.ai
 1722245747	VLAZ	agentbolt\.com
 1722246115	Ryan M	dynastyresort\.com
+1722247259	Ryan M	(?-i)(?:[A-Z0-9]{5}-){4}[A-Z0-9]{5}
