@@ -64504,3 +64504,4 @@
 1722173792	Cow	stannobello\.com
 1722178016	Cow	festivecoupon\.com
 1722180309	Cow	romantics\.com\.vn
+1722184411	Fastnlight	oxfordinstitute\.in
