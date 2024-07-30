@@ -64587,3 +64587,4 @@
 1722365545	Fastnlight	demallorca\.wordpress\.com
 1722361752	Cow	filimo\.com
 1722357493	Fastnlight	immigrationquestion[\W_]*+com(?<!immigrationquestion\.com)
+1722377012	Fastnlight	instauppro\.com
