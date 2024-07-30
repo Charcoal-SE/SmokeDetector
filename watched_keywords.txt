@@ -64574,3 +64574,4 @@
 1722340503	VLAZ	Esse[\W_]*+India(?:[\W_]*+Immigration)?
 1722340932	VLAZ	elitasrcs\.com
 1722343376	VLAZ	goedmedicine\.com
+1722343495	Cow	replaceanything\.cc
