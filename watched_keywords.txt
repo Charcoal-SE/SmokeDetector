@@ -64567,3 +64567,4 @@
 1722333665	VLAZ	spinoneducation\.com
 1722334130	VLAZ	(?-i:KusruTelecomsirvis)(?#t.me)
 1722335961	VLAZ	newlooksdaily\.com
+1722336241	VLAZ	dreamaesthetics\.org
