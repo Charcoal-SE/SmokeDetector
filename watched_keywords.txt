@@ -64577,3 +64577,4 @@
 1722343708	Cow	gsmareya\.com
 1722343096	Cow	airtripgo\.com
 1722344569	Cow	tasconnectlogistics\.com\.au
+1722344507	Cow	(?-i:GEnkhaus)(?# Aol)
