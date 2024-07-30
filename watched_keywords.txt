@@ -64578,3 +64578,4 @@
 1722343096	Cow	airtripgo\.com
 1722344569	Cow	tasconnectlogistics\.com\.au
 1722344507	Cow	(?-i:GEnkhaus)(?# Aol)
+1722349894	Cow	(?-i:magicscript-app-store-con)(?# Chrome web store)
