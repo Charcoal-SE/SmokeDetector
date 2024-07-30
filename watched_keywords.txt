@@ -64573,3 +64573,4 @@
 1722340316	VLAZ	maogb\.com
 1722340503	VLAZ	Esse[\W_]*+India(?:[\W_]*+Immigration)?
 1722340932	VLAZ	elitasrcs\.com
+1722343219	Cow	askui\.com
