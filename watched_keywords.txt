@@ -64582,3 +64582,4 @@
 1722343984	General Grievance	fwebs\.in
 1722349894	Cow	(?-i:magicscript-app-store-con)(?# Chrome web store)
 1722350970	Spevacus	huongperfume\.com
+1722357493	Fastnlight	immigrationquestion[\W_]*+com(?<!immigrationquestion\.com)
