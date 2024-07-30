@@ -64564,3 +64564,4 @@
 1722330679	Jeff Schaller	suadientulimosa\.com
 1722333421	VLAZ	dentalseoservices\.net
 1722333608	VLAZ	Dental[\W_]*+SEO[\W_]*+Services(?!\.net(?<=dentalseoservices\.net))
+1722333665	VLAZ	spinoneducation\.com
