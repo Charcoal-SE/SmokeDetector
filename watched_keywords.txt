@@ -64586,3 +64586,4 @@
 1722364475	Cow	AngelinaChristopherson1738(?:@gmail\.com)?
 1722365545	Fastnlight	demallorca\.wordpress\.com
 1722361752	Cow	filimo\.com
+1722357493	Fastnlight	immigrationquestion[\W_]*+com(?<!immigrationquestion\.com)
