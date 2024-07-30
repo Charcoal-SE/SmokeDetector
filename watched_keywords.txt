@@ -64568,3 +64568,4 @@
 1722334130	VLAZ	(?-i:KusruTelecomsirvis)(?#t.me)
 1722335961	VLAZ	newlooksdaily\.com
 1722336241	VLAZ	dreamaesthetics\.org
+1722337289	Jeff Schaller	neurologik\.io
