@@ -64570,3 +64570,4 @@
 1722336241	VLAZ	dreamaesthetics\.org
 1722337289	Jeff Schaller	neurologik\.io
 1722338910	Ryan M	proxy\.cc(?=/)(?# Only match where this is not the root domain, avoiding things like www.nature.com.proxy.cc.uic.edu or C++ source files named proxy.cc)
+1722340316	VLAZ	maogb\.com
