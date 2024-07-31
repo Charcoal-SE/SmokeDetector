@@ -64633,3 +64633,4 @@
 1722444128	Ryan M	raiabot\.com
 1722446004	Fastnlight	creativewebssolutions\.com
 1722447474	General Grievance	chariotenergy\.com
+1722448043	Makyen	bello[\W_]*+alimentos[\W_]*+ltda(?!\.com(?<=belloalimentosltda\.com))
