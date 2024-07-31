@@ -64625,3 +64625,4 @@
 1722431995	General Grievance	lowfaresfinder\.com
 1722434585	VLAZ	anjaalihandlooms\.com
 1722434611	VLAZ	Anjaali[\W_]*+Handlooms(?!\.com(?<=anjaalihandlooms\.com))
+1722434533	General Grievance	townhalldental\.co\.uk
