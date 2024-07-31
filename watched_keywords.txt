@@ -64592,3 +64592,4 @@
 1722384533	Fastnlight	safefinancial111(?#@gmail.com)
 1722391922	Jeff Schaller	fourstarmoversandpackersuae\.com
 1722397950	Ryan M	bussimulatordownload\.com
+1722398261	Cow	artificial[\W_]*+diamonds
