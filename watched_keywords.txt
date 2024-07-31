@@ -64589,3 +64589,4 @@
 1722357493	Fastnlight	immigrationquestion[\W_]*+com(?<!immigrationquestion\.com)
 1722377012	Fastnlight	instauppro\.com
 1722384519	Fastnlight	safe[\W_]*+capital[\W_]*+finance
+1722384533	Fastnlight	safefinancial111(?#@gmail.com)
