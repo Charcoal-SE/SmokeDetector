@@ -64600,3 +64600,4 @@
 1722398180	Cow	apkinventory\.com
 1722398208	Cow	senzicare\.com
 1722398284	Cow	CVD[\W_]*+diamonds
+1722400161	cocomac	digitalservicehubs\.com
