@@ -64598,3 +64598,4 @@
 1722398129	Cow	wisedash\.app
 1722398160	Cow	avwgroup\.com\.au
 1722398180	Cow	apkinventory\.com
+1722398208	Cow	senzicare\.com
