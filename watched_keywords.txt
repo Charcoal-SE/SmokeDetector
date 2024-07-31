@@ -64627,3 +64627,4 @@
 1722434611	VLAZ	Anjaali[\W_]*+Handlooms(?!\.com(?<=anjaalihandlooms\.com))
 1722434533	General Grievance	townhalldental\.co\.uk
 1722436984	Spevacus	gembiratour\.com
+1722437032	Spevacus	lansingrecyclingcenter\.com
