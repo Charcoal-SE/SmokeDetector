@@ -64636,3 +64636,4 @@
 1722448043	Makyen	bello[\W_]*+alimentos[\W_]*+ltda(?!\.com(?<=belloalimentosltda\.com))
 1722448107	Makyen	são[\W_]*+salvador[\W_]*+alimentos
 1722448156	Makyen	chemsxpress(?!\.com)
+1722448204	Makyen	bubatzland(?!\.com)
