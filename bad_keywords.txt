@@ -3083,3 +3083,4 @@ vladimirjerrylee
 chiku[\W_]*+cab\d*(?!\.com(?<=chikucab\.com))
 CHAMP[\W_]*+Cloud[\W_]*+CRM
 angelina[\W_]*+christopher1738(?:@gmail\.com)?
+easyrecoveryassets(?:@gmail\.com)?
