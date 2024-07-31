@@ -64614,3 +64614,4 @@
 1722414700	Dragonrage	crash-gambling-canada\.com
 1722419008	Dragonrage	reselo\.in
 1722421348	Cow	prishatheexplorer\.com
+1722421389	Cow	(?-i:dankeu420)(?# Telegram)
