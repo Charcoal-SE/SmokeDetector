@@ -64596,3 +64596,4 @@
 1722398088	Cow	(?-i:5G0KgUzQZpI)(?# youtu.be)
 1722398112	Cow	easyaifixer\.com
 1722398129	Cow	wisedash\.app
+1722398160	Cow	avwgroup\.com\.au
