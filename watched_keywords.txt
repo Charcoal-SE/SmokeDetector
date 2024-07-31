@@ -64637,3 +64637,4 @@
 1722448107	Makyen	são[\W_]*+salvador[\W_]*+alimentos
 1722448156	Makyen	chemsxpress(?!\.com)
 1722448204	Makyen	bubatzland(?!\.com)
+1722448229	Cow	socket\.io
