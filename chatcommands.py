@@ -30,7 +30,9 @@ from ast import literal_eval
 import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
     reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception, \
-    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route
+    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route, \
+    get_bookended_keyword_regex_text_from_entries, get_non_bookended_keyword_regex_text_from_entries, \
+    keyword_bookend_regex_text, keyword_non_bookend_regex_text
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -676,9 +678,8 @@ def approve(msg, pr_id):
             msg._client.host, msg.owner.id)
         comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
-            # The image of (blacklisters|approved) from PullApprove
-            "https://camo.githubusercontent.com/7d7689a88a6788541a0a87c6605c4fdc2475569f/68747470733a2f2f696d672e"
-            "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d617070726f7665642d627269676874677265656e")
+            # The image of (blacklisters|approved) from Shields.io
+            "https://img.shields.io/badge/blacklisters-approved-green")
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
@@ -727,10 +728,7 @@ def reject(msg, args, alias_used="reject"):
     if len(reason) < 20 and not force and not duplicate:
         raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
                            " can learn from their mistakes. Use `-force` to force the reject")
-    rejected_image = "https://camo.githubusercontent.com/" \
-                     "77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a" \
-                     "2f2f7261737465722e736869656c64732e696f2f62616467652f626c6" \
-                     "1636b6c6973746572732d72656a65637465642d7265642e706e67"
+    rejected_image = "https://img.shields.io/badge/blacklisters-rejected-red"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = ("[Rejected]({})" + (" as a duplicate" if duplicate else "") + " by [{}]({}) in {}.").format(
@@ -1571,8 +1569,11 @@ def test(content, alias_used="test"):
 
 
 def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=False):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
-    formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
+    entries = [r for r, i in regexes]
+    if bookend:
+        formatted_regex = get_bookended_keyword_regex_text_from_entries(entries)
+    else:
+        formatted_regex = get_non_bookended_keyword_regex_text_from_entries(entries)
     start_time = time.time()
     compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
     match = compiled.search(test_text)
@@ -1601,13 +1602,15 @@ def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=
 
 
 def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     matches = []
     timeouts = []
     for expresion in regexes:
         start_time = time.time()
-        compiled = regex_compile_no_cache(regex_to_format.format(expresion[0]), city=findspam.city_list,
-                                          ignore_unused=True)
+        if bookend:
+            formatted_regex = keyword_bookend_regex_text(expresion[0])
+        else:
+            formatted_regex = keyword_non_bookend_regex_text(expresion[0])
+        compiled = regex_compile_no_cache(formatted_regex, city=findspam.city_list, ignore_unused=True)
         match = compiled.search(test_text)
         seconds = time.time() - start_time
         timed_out = timeout is not None and seconds > timeout
@@ -2348,7 +2351,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
         # be the why as the second. This converts that output back into what they would be
         # if the post wasn't previously reported for the cases where we want to process it
         # as such.
-        # Expand real scan results from dirty returm value when not "!!/scan"
+        # Expand real scan results from dirty return value when not "!!/scan"
         # Presence of "scan_why" indicates the post IS spam but ignored
         if (operation != "scan" or is_forced) and (not scan_spam) and scan_why:
             scan_spam = True
@@ -2525,7 +2528,7 @@ def false(feedback, msg, comment, alias_used="false"):
     result = "Registered " + post_type + " as false positive"
     if user is None:
         if feedback_type.blacklist:
-            # The command was to bloacklist the user, but we're unable to determine the user.
+            # The command was to blacklist the user, but we're unable to determine the user.
             raise CmdException(result + ', but could not get user from URL: `{0!r}`'.format(owner_url))
     else:
         if feedback_type.blacklist:

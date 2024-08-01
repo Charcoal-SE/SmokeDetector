@@ -7,7 +7,6 @@ dnspython>=2.0.0
 flake8~=6.1.0
 msgpack-python>=0.5.6
 packaging>=16.8
-Pbs>=0.110
 pep8-naming==0.7.0
 phonenumbers>=8.8.11
 psutil>=5.9.0

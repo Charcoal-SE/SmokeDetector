@@ -36,6 +36,7 @@ items:
   comment: Moderate FPs, don't double up
   disable: true
 - asn: '23352'
+- asn: '23535'
 - asn: '23957'
 - asn: '24309'
 - asn: '24778'
@@ -55,6 +56,7 @@ items:
 - asn: '31863'
   comment: 32/76 over a year
   disable: true
+- asn: '31708'
 - asn: '32244'
   comment: 164/714 over 7 months
   disable: true
@@ -87,6 +89,7 @@ items:
   comment: 61/132 over a year
   disable: true
 - asn: '42831'
+- asn: '42846'
 - asn: '43317'
 - asn: '45012'
 - asn: '45538'
@@ -110,6 +113,7 @@ items:
 - asn: '51468'
 - asn: '53667'
 - asn: '53755'
+- asn: '53810'
 - asn: '53889'
 - asn: '54290'
   comment: 22/58 over a year
@@ -174,6 +178,7 @@ items:
 - asn: '202053'
   comment: 272/326 but 242 of those are a single domain; disabling 2022-08-26
   disable: true
+- asn: '203020'
 - asn: '203226'
 - asn: '204213'
 - asn: '204601'
@@ -183,8 +188,11 @@ items:
 - asn: '209853'
 - asn: '210079'
 - asn: '210250'
+- asn: '211611'
 - asn: '262254'
 - asn: '393960'
+- asn: '395092'
 - asn: '395970'
 - asn: '397233'
 - asn: '397373'
+- asn: '397423'

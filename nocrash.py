@@ -38,8 +38,8 @@ console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(logging.Formatter(logging_format_string))
 logging.getLogger().addHandler(console_logger)
 
-# options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher", "no-git-user-check"}
-options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher"}
+options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher", "no_edit_watcher",
+           "no_chat_ws_activity_timeout"}
 persistent_arguments = sys.argv
 
 count = 0

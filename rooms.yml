@@ -210,13 +210,16 @@ stackexchange.com:
       - 12139977 # James Risner
       - 18275476 # Artur Meinild
       - 16352934 # NotTheDr01ds
-      - 21866301 # user16217248
+      - 21866301 # CPlus
       - 16785179 # Gugu72
       - 2000097  # Elements in Space
       - 4566097  # Can O' Spam
       - 5392262  # General Grievance (Calculuswhiz on MS)
       - 15725245 # Cow
       - 22084389 # mozway
+      - 12413463 # stumblebee
+      - 26518992 # Fastnlight
+      - 4617916 # dbc
 
   65945:  # Charcoal Test
     commands: true
@@ -244,6 +247,7 @@ stackexchange.com:
       - 18275476 # Artur Meinild
       - 16352934 # NotTheDr01ds
       - 22718731 # cocomac
+      - 12413463 # stumblebee
       # NOTICE: please don't add new users without approval from an Ask Ubuntu moderator.
       # When/if they choose to have SD privileges, BeastOfCaerbannog is pre-authorized to be added here.
 
@@ -417,23 +421,6 @@ stackexchange.com:
       inherit:
         site: stackexchange.com
         room: 11540
-
-  109841:  # Smoke Detector Reports
-    commands: true
-    msg_types:
-        - site-travel.stackexchange.com
-        - site-travel.meta.stackexchange.com
-        - experimental-site-travel.stackexchange.com
-        - experimental-site-travel.meta.stackexchange.com
-        - site-outdoors.stackexchange.com
-        - site-outdoors.meta.stackexchange.com
-        - experimental-site-outdoors.stackexchange.com
-        - experimental-site-outdoors.meta.stackexchange.com
-        - no-offensive-mask
-
-    privileges:
-      - 17078244 # Xnero
-      # NOTICE: please don't add new users until you have Room Owner approval
 
   129590:  # CGCC Mod Office
     commands: true
@@ -638,6 +625,9 @@ stackoverflow.com:
       - 72095    # Ryan M
       - 11421497 # cigien
       - 7156005  # Vega
+      - 15725245 # Cow
+      - 21866301 # CPlus
+      - 22718731 # cocomac
       # NOTICE: please don't add new users until you have Room Owner approval
 
   111347:  # SOBotics

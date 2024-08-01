@@ -36,7 +36,8 @@ import requests
 import dns.resolver
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import exit_mode, log, Helpers, log_exception, add_to_global_bodyfetcher_queue_in_new_thread
+from helpers import (exit_mode, log, Helpers, log_exception, add_to_global_bodyfetcher_queue_in_new_thread,
+                     tell_debug_rooms_recovered_websocket)
 from flovis import Flovis
 from tasks import Tasks
 
@@ -201,6 +202,7 @@ GlobalVars.standby_mode = "standby" in sys.argv
 GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 GlobalVars.no_deletion_watcher = 'no_deletion_watcher' in sys.argv
 GlobalVars.no_edit_watcher = 'no_edit_watcher' in sys.argv
+GlobalVars.no_chat_ws_activity_timeout = 'no_chat_ws_activity_timeout' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping_and_verify_scanning_if_active, interval=60)
@@ -236,7 +238,8 @@ def check_socket_connections():
         exit_mode("socket_failure")
 
 
-Tasks.periodic(check_socket_connections, interval=90)
+if not GlobalVars.no_chat_ws_activity_timeout:
+    Tasks.periodic(check_socket_connections, interval=90)
 
 log('info', '{} active'.format(GlobalVars.location))
 log('info', 'MS host: {}'.format(GlobalVars.metasmoke_host))
@@ -244,7 +247,7 @@ log('info', 'MS host: {}'.format(GlobalVars.metasmoke_host))
 
 def setup_websocket(attempt, max_attempts):
     try:
-        ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+        ws = websocket.create_connection(GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout)
         ws.send("155-questions-active")
         return ws
     except websocket.WebSocketException:
@@ -273,6 +276,8 @@ def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
 
 if not GlobalVars.no_se_activity_scan:
     ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
+    ws_connect_time = time.time()
+    ws_hb_time = None
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 GlobalVars.edit_watcher = EditWatcher()
@@ -292,6 +297,7 @@ while not GlobalVars.no_se_activity_scan:
             message = json.loads(a)
             action = message["action"]
             if action == "hb":
+                ws_hb_time = time.time()
                 ws.send("hb")
             if action == "155-questions-active":
                 data = json.loads(message['data'])
@@ -317,8 +323,7 @@ while not GlobalVars.no_se_activity_scan:
         delta = now - GlobalVars.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()
-        exception_only = ''.join(traceback.format_exception_only(type(e), e))\
-                           .strip()
+        exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
         n = os.linesep
         logged_msg = str(now) + " UTC" + n + exception_only + n + tr + n + n
         log('error', logged_msg)
@@ -327,10 +332,11 @@ while not GlobalVars.no_se_activity_scan:
             # noinspection PyProtectedMember
             exit_mode("early_exception")
         if not GlobalVars.no_se_activity_scan:
+            ws.close()  # Close the prior WebSocket, if open.
             ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
-
-        chatcommunicate.tell_rooms_with("debug", "{}: SE WebSocket: recovered from `{}`"
-                                                 .format(GlobalVars.location, exception_only))
+            tell_debug_rooms_recovered_websocket("main SE", e, ws_connect_time, ws_hb_time)
+            ws_connect_time = time.time()
+            ws_hb_time = None
 
 while GlobalVars.no_se_activity_scan:
     # Sleep for longer than the automatic restart

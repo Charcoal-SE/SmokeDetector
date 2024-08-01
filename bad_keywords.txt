@@ -21,7 +21,7 @@ Nitroxin
 Bowtrol
 slim[\W_]*+genix
 cleanse[\W_]*+efx
-alpha(?!\s*[=*(),.]\s*max)(?!\s*max\s*(?:is\s+\d|[=/+*;]))(?<!\\alpha)(?<!\{alpha)(?<!\(alpha)(?!_prime$)(?!(?-i: Prime(?<=^Alpha Prime))$)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)
+alpha(?!\s*[=*(),.]\s*max)(?!\s*max\s*(?:is\s+\d|[=/+*;]))(?<![\\{("]alpha)(?<![\s>]--alpha)(?!\](?<=\\\[alpha\]))(?!_prime$)(?!(?-i: Prime(?<=^Alpha Prime))$)[\W_]*+(?:x[\W_]*+)?(?:rush|fuel|xtrm|levo|max(?!\s*[:|=()*02-9\n\r,.\]])|prime(?![\W]*+(?:dev|lens(?:es)?)\b)|force[\W_]*+testo|monster[\W_]*+advanced|muscle|boost)(?#alpha followed by multiple different words)(?#" syntax highlighting fodder)
 exoslim
 blackline[\W_]*+elite
 testcore[\W_]*+pro
@@ -68,7 +68,6 @@ day[\W_]*+trading[\W_]*+academy
 folliplex
 yafei[\W_]*+cable
 uggs[\W_]*+on[\W_]*+sale
-phenq
 vigoraflo
 provasil
 slimera
@@ -539,7 +538,6 @@ formula[\W_]*+focus
 dermedica
 follicle[\W_]*+rx
 tekmale
-bella[\W_]*+rose
 magnetique[\W_]*+hair
 slim[\W_]*+365
 test(?<=/test)factor(?:=[-/])
@@ -595,7 +593,6 @@ prime[\W_]*+labs
 primal[\W_]*+growth
 slender[\W_]*+rx
 illuminati[\W_]*+(?:brotherhood|church|future|masons|society)\d*+(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|yahoo|hotmail)(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-sbobet
 primex
 stackt[\W_]*+360
 perlelux
@@ -1447,7 +1444,7 @@ yahoo-email(?<=/yahoo-email)
 VitalityTech(?:[\W_]*+Testosterone)?(?!\.com)
 terrapure[\W_]*+cbd
 retinollift[\W_]*+dk
-intell[\W_]*+x(?:[\W_]*+pro)?
+intell[\W_]*+x(?![\W_]*+86)(?:[\W_]*+pro)?
 rapid[\W_]*+trim(?:[\W_]*+keto)?
 htx[ -]me
 better[\W_]*+strength[\W_]*+maximizer
@@ -1573,7 +1570,7 @@ voluminesse
 vitahair[\W_]*+max
 (?:up[\W_]*+a[\W_]*+cup.{0,40}?(?:breast|pills|bust|cream|</a>[\W_]*+)s?|(?:breast|pills|bust|cream|a>(?<=</a>)).{0,40}?up\W*a\W*cup)
 luma[\W_]*+slim
-supreme[\W_]*+x
+supreme[\W_]*+x(?!$(?<=^supreme x$))
 viva[\W_]*+x
 bhb[\W_]*+800
 keto[\W_]*+kinetics
@@ -2559,7 +2556,6 @@ cóinbase[\W_]*+pro[\W_]*+login
 cetpa[\W_]*+infotech(?!\.com(?<=cetpainfotech\.com))
 (?-i:cinbaseprlgin)(?# sites.google.com)
 patialalegitimate515
-techie[\W_]*+(?:dot[\W_]*+)?com
 amberlottotemple(?:@yahoo\.com)?
 quick[\W_]*+books[\W_]*+helpline
 dr[\W_]*+vinod[\W_]*+raina
@@ -2568,7 +2564,7 @@ investmentpro[\W_]*+at[\W_]*+writeme[\W_]*+dot[\W_]*+com
 leonardomitnickhacking(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 lumineux[\W_]*+cream
 quickbooks[\W_]*+desktop[\W_]*+payroll
-(?-i:umw0lr)(#? rb.gy)
+(?-i:umw0lr)(?# rb.gy)
 victorstadeyhacker(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 realsaintspyerhk(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 VanceAI(?!\.com)
@@ -2586,7 +2582,7 @@ blockquote>\s*+<p>quote</p>\s*+</blockquote>$
 get your hands on this fantastic phone right now
 coinbase(?:_tech)?[\W_]*support
 helpline bookkeeping involves
-pre[\W_]*pc[\_W]*solutions?
+pre[\W_]*pc[\W_]*solutions?
 the certified experts directly get in touch with you
 (?:american?|alaskan?|copa|delta|spirit|southwest|united)[\W_]*+airlines['’]?[\W_]*+(?:booking|contact|manage|reservation|ticket)
 q(?:uick)?b(?:ooks)?[\W_]*proadvisors?
@@ -2689,7 +2685,7 @@ vissentials
 mailvita
 nbfc[\W_]*+advisory(?!\.com(?<=nbfcadvisory\.com))
 Fluxactive
-fayed[\W_]*+ha+ck(?:er)?\d*
+fayed[\W_]*+(?:expert[\W_]*+)?ha+ck(?:er)?\d*(?:[\W_]*+(?:at[\W_]*+)?solution4u(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 Ucchvas
 dribrahimspellcaster(?:@gmail\.com)?
 d(?:octo)?r[\W_]*+ibrahim
@@ -2697,7 +2693,6 @@ vilitra
 sprintzeal
 digital[\W_]*+academy[\W_]*+360
 ignissta(?!\.com)
-modafinil
 cryptohopper(?!\.com)
 kirpal[\W_]*+export(?!\.com(?<=kirpalexport\.com))(?:[\W_]*+overseas)?
 adeena'?s[\W_]*+kitchen(?!\.co\.uk(?<=adeenaskitchen\.co\.uk))
@@ -2864,7 +2859,7 @@ coco[\W_]*+cash[\W_]*+loan
 allcoco[\W_]*+cash[\W_]*+loan
 pagli[\W_]*+credit[\W_]*+loan
 d(?:octo)?r[\W_]*+mahlangu
-wizard[\W_]*+web[\W_]*+recovery(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|programmer)[\W_]*+(?:dot[\W_]*+)?(?:com|net))?
+w[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+r[\W_]*+d[\W_]*+w[\W_]*+e[\W_]*+b[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y(?!\.net(?<=wizardwebrecovery\.net))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?(?:g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l|p[\W_]*+r[\W_]*+o[\W_]*+g[\W_]*+r[\W_]*+a[\W_]*+m[\W_]*+m[\W_]*+e[\W_]*+r)[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?(?:c[\W_]*+o[\W_]*+m|n[\W_]*+e[\W_]*+t))?(?:[\W_]*+(?:t[\W_]*+e[\W_]*+a[\W_]*+m|\d++|[\da-f]{5,}+)(?:[\W_]*+s)?)*(?# obfuscated wizard web recovery)
 alakmalak(?!\.com)
 pikashow
 reliablehacker\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?(?#seen: reliablehacker06)
@@ -2880,7 +2875,6 @@ muckrack\.com/\w
 puppy\W*+bowl(?#the usual underscore seen with \W would pick up 3 FP)
 visactor(?!\.io)
 umzugsunternehmen(?!-meyer\.de)(?!\.de(?<=oberhausen-umzugsunternehmen\.de))
-chiku[\W_]*+cab(?!\.com(?<=chikucab\.com))
 ∜Ø,506129535
 earndriver\.today\/[\W\w]{1,200}?(?:driver|uber)\w*+(?#Abuse the keyword blacklist for more weight on these)
 daniel[\W_]*+meuli[\W_]*+web[\W_]*+e?recovery(?:[\W_]*+(?:at[\W_]*+)?email(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -2890,7 +2884,6 @@ fastapi-utilities
 yt-channel-scraper
 BITA[\W_]*+(?:IT[\W_]*+)?Academy(?!\.com(?<=bitaacademy\.com))
 123\.hp\.com
-programmer\.net
 ditm[\W_]*+college(?!\.in(?<=ditmcollege\.in))(?<!(?-i:^Ditm College$))
 lord[\W_]*+hacker[\W_]*+ultimate\w*+(?!\.wixsite\.com)
 l[\W_]*+h[\W_]*+ultimate(?:[\W_]*+(?:at[\W_]*+)?fastservice(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -2905,7 +2898,6 @@ j[\W_]*+e[\W_]*+f[\W_]*+f[\W_]*+s[\W_]*+i[\W_]*+l[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+
 spinewise(?!\.ca)
 facepdf(?!\.com)
 UFC[\W_]*+\d{3}
-folkwin[\W_]*+expert[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?tech[\W_]*+center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 McAfee[\W_]*+Customer[\W_]*+Service
 realexamcollection(?!\.com)
 nefar[\W_]*+tete(?!\.com(?<=nefartete\.com))
@@ -2923,7 +2915,7 @@ chloe[\W_]*+consultant
 marie[\W_]*+consultancy(?:oz)?(?:@gmail\.com)?
 (?-i:WizardGhosthacker)(?#t.me)
 pro[\W_]*wizard[\W_]*gilbert[\W_]*recovery
-adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))
+adware[\W_]*+recovery[\W_]*+specialist(?!\.expert(?<=adwarerecoveryspecialist\.expert))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?a[\W_]*+u[\W_]*+c[\W_]*+t[\W_]*+i[\W_]*+o[\W_]*+n[\W_]*+e[\W_]*+e[\W_]*+r(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?n[\W_]*+e[\W_]*+t)?)?
 (?-i:owD4Gk3d)(?#cutt.ly)
 brunoe[\W_]*+quick[\W_]*+hack(?!\.com(?<=brunoequickhack\.com))(?:[\W_]*(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+(?:[il][\W_]*+){2}(?:dot[\W_]*+)?com)?
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
@@ -2931,20 +2923,165 @@ captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
 khelraja(?!\.com)
 microprokey(?!\.com)(?!\.xyz)
-ibolt[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=iboltcyberhacker\.com))
 certsarea(?!\.com)
 (?:HAK)?5ISPY(?:HAK)?+(?!\.com(?<=5ISPYHAK\.COM))\d{0,5}
 petercaro@financier\.com
-technocrate?[\W_]*+recovery(?!(?<=technocraterecovery)[\W_]*+site)(?:[\W_]*+contractor\.net)?
+(?:[a-z\d]++_)?t[\W_]*+e[\W_]*+c[\W_]*+h[\W_]*+n[\W_]*+o[\W_]*+c[\W_]*+r[\W_]*+a[\W_]*+t[\W_]*+e?[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y(?![\W_]*+s[\W_]*+i[\W_]*+t[\W_]*+e)(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+n[\W_]*+t[\W_]*+r[\W_]*+a[\W_]*+c[\W_]*+t[\W_]*+o[\W_]*+r[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?n[\W_]*+e[\W_]*+t)?(?#obfuscated technocrate?[\W_]*+recovery including @contractor\.net, but excluding .site matches)
 blissparadoxrecovery
-C[\W_]*+d[\W_]*+1[\W_]*+9[\W_]*+2[\W_]*+2[\W_]*+1(?:[\W_]*+(?:at[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m)?
+C[\W_]*+d[\W_]*+1[\W_]*+9[\W_]*+2[\W_]*+2[\W_]*+1(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?
 Billionaire[\W_]*+Brain[\W_]*+Wave
 albert[\W_]*+gonzalez[\W]*+wizard(?<!albertgonzalezwizard)
 albertgonzalezwizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 blockchainappsdeveloper(?!\.com)
 washingtonfarm
 wengui[\W_]*+guo
-Trust[\W_]*+Geeks[\W_]*+Hack[\W_]*+Expert
 rottgenraphael(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 revenant[\W_]*+cyber[\W_]*+hacker(?!\.com(?<=revenantcyberhacker\.com))(?!\.net(?<=revenantcyberhacker\.net))(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 Guo[\W_]*+farm
+mangocityit(?!\.com)
+0xbeC44674020cCC2Bc9BE1EFF77213A49eB6ED9e0
+vitamin[\W_]*+dee(?:[\W_]*+(?:gumm(?:y|ie)|israel|review|in|il|must|read|vitamin|dee|me|pdf|south|africa|get|official|\d++|[\da-f]{5,}+)s?)*
+euphoria[\W_]*+green(?:[\W_]*+(?:cbd|gummies|\d++|[\da-f]{5,}+)s?)*
+coin[\W_]*+recovery[\W_]*+specialists(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+(?-i:f88tw)(?#mypaper.pchome.com.tw)
+fredvalcyberghost(?:[\W_]*+(?:at?[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+modafinil(?!\.pl)
+fundcanna(?!\.com)(?<=(?-i:^FundCanna$))
+\boudel(?!\.com)\b
+(?-i:Aa59ucCQxhw)(?#youtu.be)
+adrian[\W_]*+lamo[\W_]*+hacker(?:[\W_]*+tech)?
+4ftrfhi(?# rebrand.ly)
+sbobet\d*
+(?:link[\W_]*+)?liga[\W_]*+ciputra
+NURS[\W_]*+FPX[\W_]*+4\d{3}(?:[\W_]*+Series)?(?:[\W_]*+Assessments?)?
+FitSpresso
+skin[\W_]*+tag[\W_]*+remover(?<!(?:utopia|radiant[\W_]*+cutis)[\W_]*+skin[\W_]*+tag[\W_]*+remover)
+allegiant[\W_]*+pro[\W_]*+hacker
+Credit[\W_]*+SPARK[\W_]*+(?:loan[\W_]*+)?(?:app[\W_]*+)?(?:c[\W_]*+u[\W_]*+s[\W_]*+T[\W_]*+o[\W_]*+m[\W_]*+e[\W_]*+r)?[\W_]*+care(?:[\W_]*+helpline)?(?:[\W_]*+service)?(?:[\W_]*+number)?
+chinadivision(?!\.com)
+If I could give them zero stars I would
+cadhobby(?!\.com)
+(?-i:32b76ba857700527)(?#skype)
+LOVE[\W_]*+(?:BACK[\W_]*+)?(?:MARRIAGE[\W_]*+)?(?:SPECIALIST[\W_]*+)?ASTROLOGER
+buysmmit(?!\.com)
+ussmmstore(?![\W_]*+com)(?:@gmail[\W_]*+com)?
+chloe\.consultant1(?:@gmail\.com)?
+Grand[\W_]*+finserv[\W_]*+(?:loan)?(?:app)?
+no[\W_]*+blond[\W_]*+police
+cochinsuraksha(?!\.com)
+alien[\W_]*+wizbot
+flixgrab
+A1[\W_]*+Wizard[\W_]*+Hacker?s?
+hacknetcyberprofessor10(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+electedroyalty\.com
+rd[\W_]*+trend(?!\.in(?<=rdtrend\.in))
+mouse[\W_]*+hacker(?:[\W_]*+(?:crypto|currency|recovery|services|\d++|[\da-f]{5,}+)s?)*
+linux[\W_]*+cyber[\W_]*+security(?!\.com(?<=linuxcybersecurity\.com))
+(?-i:jkfny87kk6)(?#t.me)
+trust[\W_]*+geeks?[\W_]*+hack[\W_]*+expert(?![\W_]*+com(?<=trustgeekshackexpert[\W_]*+com))
+a[\W_]*+r[\W_]*+g[\W_]*+o[\W_]*+n[\W_]*+i[\W_]*+x[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+h(?!\.com(?<=argonixhacktech\.com))(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?j[\W_]*+o[\W_]*+b[\W_]*+4[\W_]*+u(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?(?#obfuscated argonixhacktech@job4u.com)
+lapak303
+digital[\W_]*+hack[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?techie(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+xổ\s*+số
+บาคาร่า
+share\Wmy\Wtestimony
+kartu\s+poker
+(?-i:qsk6)
+qbsgyzz6
+gearhead[\W_]*+engineers(?![\W_]*+org(?<=gearheadengineers[\W_]*+org))(?![\W_]*+com(?<=gearheadengineers[\W_]*+com))
+c15hjgn1
+aryaamoney
+000\W*+worth\W*+of\W*+bitcoin
+fylgrg
+70937671
+maxwin[\W_]*+jackpot
+VO2P1RYP
+bingx(?!\.com)(?<!api bingx)(?!.{0,40}\b(?:api|documentation)\b)
+odmt(?!\.in)
+1q1bf
+1bh83
+bingx[\W_]*+referral[\W_]*+code
+mexc[\W_]*+referral[\W_]*+code
+1hsxj
+okx[\W_]*+referral[\W_]*+code
+mexc[\W_]*+global
+binance referral code
+lee[\W_]*+ultimate(?:[\W_]*+hacker(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?(?![\W_]*+(?:dot[\W_]*+)?com))?
+referans[\W_]*+kodu
+folkwin[\W_]*+expert[\W_]*+recovery(?![\W_]*+(?:dot[\W_]*+)?com(?<=folkwinexpertrecovery[\W_]*+(?:dot[\W_]*+)?com))(?:[\W_]*+(?:at[\W_]*+)?tech[\W_]*+center(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+i[\W_]*+bolt[\W_]*+cyber[\W_]*+hack(?:er)?(?![\W_]*+(?:dot[\W_]*+)?com)
+shomorikaspelltemple0\.blogspot
+hackathon[\W_]*+tech[\W_]*+solution(?!s\.com(?<=hackathontechsolutions\.com))
+hack4wise(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+(?-i:TXXS5I)(?# referral code)
+imoij1
+(?:wzard[\W_]*+)?garry[\W_]*+speed[\W_]*+hack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+edha[\W_]*+care(?!\.com(?<=edhacare\.com))
+Bybit[\W_]*+Referral[\W_]*+Code
+F67K9GYX
+easyreclaim0(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+FASTFUND[\W_]*+RECOVERY
+yda5js6u
+totomacau
+crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
+dragon[\W_]*+web[\W_]*+recovery(?![\W_]*+com)(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
+drsunnydsolution1(?:@gmail\.com)?
+saclux[\W_]*+comptech[\W_]*+specialst(?:[\W_]*+(?:at[\W_]*+)?engineer(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+kag[\W_]*+industries
+a[\W_]*+kolkata[\W_]*+es[ck]orts
+aerocity[\W_]*+escorts
+__glaceon_pokemon_drawn_by_kemo_camotli__1db8d5e38a5cd312f6b32680e232f48b(?# NSFW image)
+marketpeace[\W_]*+n[\W_]*+et
+grayhathacks
+genericbucket\d*(?!\.com(?<=genericbucket\.com))
+Project[\W_]*+Nimbus
+accessrecoveryconsultant(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+hacker4wise
+d(?:octo)?r\w*temple(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+usatopseller(?!\.com)
+wong[\W_]*+best[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+dantegideon(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+recovery[\W_]*my[\W_]*+funds
+adamwilson[\W_]*+trading
+b[\W_]*i[\W_]*t[\W_]*c[\W_]*o[\W_]*i[\W_]*n[\W_]*r[\W_]*e[\W_]*c[\W_]*o[\W_]*v[\W_]*e[\W_]*r[\W_]*y[\W_]*(?:a[\W_]*t[\W_]*)?c[\W_]*o[\W_]*n[\W_]*s[\W_]*u[\W_]*l[\W_]*t[\W_]*a[\W_]*n[\W_]*t[\W_]*(?:d[\W_]*o[\W_]*t[\W_]*)?c[\W_]*o[\W_]*m(?#obfuscated bitcoinrecovery@consultant.com)
+omega[\W_]*+recovery(?:[\W_]*+specialist)?(?!\.com(?<=omegarecoveryspecialist\.com))
+omegaCryptos
+kwok[\W_]*+scam
+cyberpunk1
+\A.{1,6}\bban me
+consider[\W_]*+banning[\W_]*+my[\W_]*+account
+(?<=\.)company\.site/$
+(?-i:6d60c5964fff913b8c2dc63323ffd65a\.jpg)
+(?-i:wl8hgu3zrc)
+ugc[\W_]*+net[\W_]*+coaching
+navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
+idealsmtp(?!\.com)
+pytoileur
+opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
+web[\W_]*+genie[\W_]*+recovery(?!\.com(?<=webgenierecovery\.com))s?(?:[\W_]*+(?:at[\W_]*+)?(?:gmail|outlook|proton)(?:[\W_]*+(?:dot[\W_]*+)?(?:come?|me))?)?
+albertgonzalezcryptorecoverywi(?:@gmail\.com)?
+blue[\W_]*+meteor(?:[\W_]*+pim)?
+Trends[\W_]*+Fort(?!\.com(?<=trendsfort\.com))
+natural[\W_]*herbs[\W_]*centre(?!\.com)
+swift[\W_]*+hack[\W_]*+expert
+drmacusspellcaster(?:@gmail\.com)?
+rootkithacker1(?:@outlook\.com)?
+ossisto(?!\.com)
+temu[\W_]*+coupon
+aci384098
+cyber[\W_]*+constable[\W_]*+intelligence(?![\W_]*+com)
+cyberphantom432(?:@gmail\.com)?
+Cyber[\W_]*+Phantom
+brigadia[\W_]*+tech(?:[\W_]*+(?:recovery|experts|remikeable(?:[\W_]*+(?:at[\W_]*+)?proton(?:[\W_]*+(?:dot[\W_]*+)?me)?)?|recovery|\d++|[\da-f]{5,}+)s?)*
+act200019
+acp856709
+domino88
+Phen[\W]*Q[\W]*(Weight[\W]*Loss)?
+rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service(?!\.com(?<=rustikcyberhackservice\.com))
+easyreclaimer
+vladimirjerrylee
+chiku[\W_]*+cab\d*(?!\.com(?<=chikucab\.com))
+CHAMP[\W_]*+Cloud[\W_]*+CRM
+angelina[\W_]*+christopher1738(?:@gmail\.com)?
+easyrecoveryassets(?:@gmail\.com)?
+Amtrak[\W_]*+s?[\W_]*+customer[\W_]*+service

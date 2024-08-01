@@ -2,7 +2,8 @@
 import os
 import sys
 import traceback
-from datetime import datetime
+from datetime import datetime, timezone
+import time
 import importlib
 import threading
 # termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
@@ -20,11 +21,13 @@ from termcolor import colored
 import requests
 import regex
 from regex.regex import _compile as regex_raw_compile
+import websocket
 
 from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):
+    # This code is executed whenever we exit, even when the exit is caused by an exception.
     args = set(args)
 
     if not (args & {'standby', 'no_standby'}):
@@ -37,9 +40,29 @@ def exit_mode(*args, code=0):
 
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
-    datahandling.flush_queue_timings_data()
-    datahandling.store_post_scan_stats()
-    datahandling.store_recently_scanned_posts()
+    try:
+        datahandling.flush_queue_timings_data()
+    except Exception:
+        log_current_exception()
+    try:
+        datahandling.store_post_scan_stats()
+    except Exception:
+        log_current_exception()
+    try:
+        datahandling.store_recently_scanned_posts()
+    except Exception:
+        log_current_exception()
+    # Store other pickles as we exit
+    try:
+        if GlobalVars.edit_watcher:
+            GlobalVars.edit_watcher.save()
+    except Exception:
+        log_current_exception()
+    try:
+        if GlobalVars.deletion_watcher:
+            GlobalVars.deletion_watcher.save()
+    except Exception:
+        log_current_exception()
 
     # We have to use '_exit' here, because 'sys.exit' only exits the current
     # thread (not the current process).  Unfortunately, this results in
@@ -63,7 +86,7 @@ class ErrorLogs:
             db.commit()
         except (sqlite3.OperationalError):
             # In CI testing, it's possible for the table to be created in a different thread between when
-            # we first test for the table's existanceand when we try to create the table.
+            # we first test for the table's existence and when we try to create the table.
             if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
                 # Table 'error_logs' still doesn't exist
                 raise
@@ -309,7 +332,10 @@ def reload_modules():
 def unshorten_link(url, request_type='GET', depth=10, timeout=15):
     orig_url = url
     response_code = 301
-    headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
+    # We use a valid Firefox User-Agent, because some services don't provide the forward when we tell them the
+    # request is from Smokedetector (e.g., cloudflare.com, which is used, as of 2024-04-12, by https://t.ly, which
+    # is one of the domains which we test in our CI testing).
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0'}
     for tries in range(depth):
         if response_code not in {301, 302, 303, 307, 308}:
             break
@@ -505,3 +531,61 @@ def get_se_api_default_params_questions_answers_posts_add_site(site):
 
 def get_se_api_url_for_route(route):
     return GlobalVars.se_api_url_base + route
+
+
+def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time):
+    from chatcommunicate import tell_rooms_with
+    current_time = time.time()
+    exception_only = ''.join(traceback.format_exception_only(type(exception), exception)).strip()
+    exception_message = "{}: {} WebSocket: Recovered from `{}`".format(GlobalVars.location, which_ws, exception_only)
+    exception_message += '.' if regex.search(r'\w`$', exception_message) is not None else ''
+    elapsed_from_connect = current_time - connect_time
+    time_from_connect_message = " {:.1f} seconds after connection;".format(elapsed_from_connect)
+    if hb_time:
+        elapsed_from_hb = current_time - hb_time
+        time_from_hb_message = " {:.1f} seconds after heartbeat.".format(elapsed_from_hb)
+    else:
+        time_from_hb_message = " No heartbeats have been received on the current WebSocket."
+    timestamp = "[{} UTC]: ".format(datetime.now(timezone.utc).isoformat()[0:19])
+    message_without_timestamp = exception_message + time_from_connect_message + time_from_hb_message
+    log('debug', message_without_timestamp)
+    tell_rooms_with('debug', timestamp + message_without_timestamp)
+
+
+def recover_websocket(which_ws, ws, exception, connect_time, hb_time):
+    log_current_exception(log_level="warning")
+    if ws:
+        ws.close()  # Close the socket, if it's not already closed
+        ws = None
+    try:
+        ws = websocket.create_connection(GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout)
+        tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time)
+        return ws
+    except websocket.WebSocketException:
+        log('error', '{} failed to recover from a WebSocketException.'.format(which_ws))
+        log_current_exception()
+        raise
+
+
+# See PR 2322 for the reason for (?:^|\b) and (?:\b|$)
+# (?w:\b) is also useful
+KEYWORD_BOOKENDING_START = r"(?is)(?:^|\b|(?w:\b))(*PRUNE)"
+KEYWORD_BOOKENDING_END = r"(?:\b|(?w:\b)|$)"
+KEYWORD_NON_BOOKENDING_START = r"(?i)"
+KEYWORD_NON_BOOKENDING_END = r""
+
+
+def keyword_bookend_regex_text(regex_text):
+    return r"{}(?:{}){}".format(KEYWORD_BOOKENDING_START, regex_text, KEYWORD_BOOKENDING_END)
+
+
+def get_bookended_keyword_regex_text_from_entries(entries):
+    return keyword_bookend_regex_text('|'.join(entries))
+
+
+def keyword_non_bookend_regex_text(regex_text):
+    return r"{}(?:{}){}".format(KEYWORD_NON_BOOKENDING_START, regex_text, KEYWORD_NON_BOOKENDING_END)
+
+
+def get_non_bookended_keyword_regex_text_from_entries(entries):
+    return keyword_non_bookend_regex_text('|'.join(entries))

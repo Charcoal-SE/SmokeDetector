@@ -24,7 +24,9 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements
+from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements, \
+    get_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, KEYWORD_BOOKENDING_START, \
+    get_non_bookended_keyword_regex_text_from_entries
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -59,14 +61,16 @@ SE_SITES_RE = r'(?:{sites})'.format(
         r'(?:{doms})\.com'.format(doms='|'.join(
             [r'askubuntu', r'superuser', r'serverfault', r'stackapps', r'imgur'])),
         r'mathoverflow\.net',
+        r'i\.sstatic\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
-                    'imgur.com']  # Frequently catching FP
+                    'imgur.com', 'sstatic.net']  # Frequently catching FP
 WHITELISTED_WEBSITES_REGEX = regex_compile_no_cache(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
-    r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org", "regexr"
+    r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org", "regexr",
+    r"doi\.org"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for site in (
     '0i.is', '1b.yt', '1th.me', '92q.com', '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co',
@@ -295,6 +299,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "stepik.org",
     "substrate.io",
     "sunfounder.cc",
+    "tampermonkey.net",
     "techmikael.com",
     "terraform.io",
     "this.how",
@@ -582,31 +587,28 @@ class FindSpam:
         global bad_keywords_nwb
 
         blacklists.load_blacklists()
-        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
-        # (?w:\b) is also useful
-        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        cls.rule_bad_keywords.regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.bad_keywords)
         try:
             del cls.rule_bad_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_bad_keywords.sanity_check()
-        cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
+        cls.rule_watched_keywords.regex = \
+            get_bookended_keyword_regex_text_from_entries(GlobalVars.watched_keywords.keys())
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_watched_keywords.sanity_check()
-        cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
+        cls.rule_blacklisted_websites.regex = \
+            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_websites)
         try:
             del cls.rule_blacklisted_websites.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_websites.sanity_check()
-        cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
+        cls.rule_blacklisted_usernames.regex = \
+            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_usernames)
         try:
             del cls.rule_blacklisted_usernames.compiled_regex
         except AttributeError:
@@ -1121,15 +1123,14 @@ def check_watched_numbers(s, site):
 def customer_support_phrase(s, site):  # flexible detection of customer service
     # We don't want to double-detect phrases which the bad keywords list already detects,
     # so we remove anything that matches those from the string to test.
-    excluded = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)".format(
-        "|".join([
-            # This list contains entries from the bad keywords list which we shouldn't double-detect.
-            # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
-            r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
-        ]))).sub('', s)
+    excluded = regex.compile(get_bookended_keyword_regex_text_from_entries([
+        # This list contains entries from the bad keywords list which we shouldn't double-detect.
+        # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
+        r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
+    ])).sub('', s)
     shortened = excluded[0:300].lower()  # If applied to body, use just the beginning: otherwise many false positives.
     shortened = regex.sub(r"[^A-Za-z0-9\s]", "", shortened)   # deobfuscate
-    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
+    phrase = regex.compile(r"(tech(nical)? support)|((support|service|dealer|contact|help(line)?) (telephone|phone|"
                            r"number))").search(shortened)
     if phrase:
         return True, u"Key phrase: *{}*".format(phrase.group(0))
@@ -1147,7 +1148,7 @@ def scam_aimed_at_customers(s, site):  # Scams aimed at customers of specific co
     digits = len(regex.compile(r"\d").findall(s))
     if business and digits >= 5:
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
-                                 r"contact|tech|technical|telephone|number)\b").findall(s)
+                                 r"contact|dealer|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
             return True, u"Targeting *{}* customers. Keywords: *{}*".format(business.group(0), matches)
@@ -1321,7 +1322,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
 
     # FIXME/TODO: Remove "help" once WebApps has stopped being hit with gmail help spam. (added: Art, 2018-10-17)
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
-                            r"help|tech|technical|telephone|number)($| )")
+                            r"help|dealer|tech|technical|telephone|number)($| )")
     for link_text in links:
         keywords_match = keywords.search(link_text)
         if keywords_match:
@@ -2049,7 +2050,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "" r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|institutions?|consultants?"
     "" r"|automation|sex|services?|kindergarten|banks?"
     "" r"|services?|maintenance|clinic|surgeons?|treatments?|rehabilitation"
-    "" r"|studios?|designers?"
+    "" r"|studios?|designers?|dealers?"
     "" r"|restaurants?|food|cuisine|delicac(?:y|ies)"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
@@ -2235,36 +2236,155 @@ pattern_websites = [
     r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
-    "Agra", "Ahmedabad", "Ajanta", "Aligarh", "Allahabad", "Almora", "Alwar", "Ambattur", "Amritsar",
-    "Anand Nagar", "Andheri", "Attingal",
-    "Baddi", "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
-    "Calcutta", "Calicut", "Chandigarh",
-    "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
-    "Darjeeling", "Dehradun", "Dehrdun", "Delhi", "Dharamshala", "Dharamsala", "Durgapur",
-    "Ernakulam", "Faridabad",
-    "Ghatkopar", "Ghaziabad", "Gurgaon", "Gurugram", "Guwahati",
-    "Haldwani", "Haridwar", "Hyderabad",
+    "Agra",
+    "Ahmedabad",
+    "Ajanta",
+    "Aligarh",
+    "Allahabad",
+    "Almora",
+    "Alwar",
+    "Ambattur",
+    "Amritsar",
+    "Anand Nagar",
+    "Andheri",
+    "Attingal",
+    "Aurangabad",
+    "Baddi",
+    "Bangalore",
+    "Banswarabhiwadi",
+    "Bhilwara",
+    "Bhimtal",
+    "Bhiwandi",
+    "Bhopal",
+    "Calcutta",
+    "Calicut",
+    "Chandigarh",
+    "Chennai",
+    "Chittorgarh",
+    "Coimbatore",
+    "Colaba",
+    "Darjeeling",
+    "Dehradun",
+    "Dehrdun",
+    "Delhi",
+    "Dharamsala",
+    "Dharamshala",
+    "Durgapur",
+    "Ernakulam",
+    "Etobicoke",
+    "Faridabad",
+    "Ghatkopar",
+    "Ghaziabad",
+    "Gurgaon",
+    "Gurugram",
+    "Guwahati",
+    "Haldwani",
+    "Haridwar",
+    "Hyderabad",
     "Indore",
-    "Jaipur", "Jalandhar", "Jim Corbett",
-    "Kandivali", "Kangra", "Kanhangad", "Kanhanjad", "Kashmir", "Karnal", "Kerala",
-    "Kochi", "Kolkata", "Kota", "Kottayam",
-    "Lokhandwala", "Lonavala", "Lucknow", "Ludhiana",
-    "Madurai", "Malad", "Marine Lines", "Manalis", "Mangalore", "Mangaluru", "Marathahalli", "Mayur Vihar",
-    "Meghalaya", "Mehrauli", "Model Town", "Moti Nagar", "Multan", "Mulund", "Mumbai",
-    "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
-    "Palam", "Patna", "Pune",
-    "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
-    "Sarjapur", "Sonipat", "Srinagar", "Surat",
-    "Telangana", "Thane", "Thiruvananthapuram", "Tiruchi", "Tiruchirappalli", "Tirupati",
-    "Trichinopoly", "Trichy", "Trivandrum", "Tura",
-    "Udaipur", "Uttarakhand",
-    "Vadodara", "Vaishali", "Vasant Kunj", "Vasant Vihar", "Visakhapatnam", "Worli",
+    "Jaipur",
+    "Jalandhar",
+    "Jim Corbett",
+    "Kandivali",
+    "Kangra",
+    "Kanhangad",
+    "Kanhanjad",
+    "Karnal",
+    "Kashmir",
+    "Kerala",
+    "Kharghar",
+    "Kochi",
+    "Kolkata",
+    "Kollam",
+    "Kota",
+    "Kottayam",
+    "Kozhikode",
+    "Lokhandwala",
+    "Lonavala",
+    "Lucknow",
+    "Ludhiana",
+    "Madurai",
+    "Malad",
+    "Malappuram",
+    "Manalis",
+    "Mangalore",
+    "Mangaluru",
+    "Marathahalli",
+    "Marine Lines",
+    "Mayur Vihar",
+    "Meerut",
+    "Meghalaya",
+    "Mehrauli",
+    "Model Town",
+    "Moti Nagar",
+    "Multan",
+    "Mulund",
+    "Mumbai",
+    "Nagpur",
+    "Nainital",
+    "Nashik",
+    "Neemrana",
+    "Noida",
+    "Palam",
+    "Patna",
+    "Pune",
+    "Raipur",
+    "Rajkot",
+    "Ramnagar",
+    "Rishikesh",
+    "Rohini",
+    "Saket",
+    "Sarjapur",
+    "Sivakasi",
+    "Sonipat",
+    "Srinagar",
+    "Surat",
+    "Telangana",
+    "Tembisa",
+    "Thane",
+    "Thembisa",
+    "Thiruvananthapuram",
+    "Thrissur",
+    "Tiruchi",
+    "Tiruchirappalli",
+    "Tirupati",
+    "Trichinopoly",
+    "Trichy",
+    "Trivandrum",
+    "Tura",
+    "Udaipur",
+    "Uttarakhand",
+    "Vadodara",
+    "Vaishali",
+    "Vasant Kunj",
+    "Vasant Vihar",
+    "Visakhapatnam",
+    "Worli",
+
     # not in India
-    "Ajman", "Dubai", "Fujairah", "Hamad", "Lahore", "Lusail", "Portland", "Sharjah",
+    "Ajman",
+    "Dubai",
+    "Fujairah",
+    "Hamad",
+    "Lahore",
+    "Lusail",
+    "Portland",
+    "Sharjah",
+
     # yes, these aren't cities but...
-    "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar",
+    "Abu Dhabi",
+    "Abudhabi",
+    "India",
+    "Malaysia",
+    "Pakistan",
+    "Qatar",
+    "Rajasthan",
+
     # buyabans.com spammer uses creative variations
-    "Sri Lanka", "Srilanka", "Srilankan",
+    "Sri Lanka",
+    "Srilanka",
+    "Srilankan",
+
 ]
 
 
@@ -2294,12 +2414,17 @@ FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", re
                                              })
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
                                                  max_rep=52, max_score=5, skip_creation_sanity_check=True,
-                                                 rule_id="main blacklisted websites")
+                                                 username=True, rule_id="main blacklisted websites")
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
                                                   skip_creation_sanity_check=True,
                                                   rule_id="main blacklisted usernames")
 
+# Hardcoded bad keywords without a word boundary (from bad_keywords_nwb list above).
+create_rule("bad keyword in {}", regex=r"(?is){}".format("|".join(bad_keywords_nwb)),
+            username=True, body_summary=True,
+            max_rep=32, max_score=1,
+            rule_id="blacklisted keywords: bad_keywords_nwb")
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
@@ -2307,7 +2432,7 @@ create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgrati
             rule_id="Potentialy bad keywords: gratis, not softwarerecs and es.SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # not medicalsciences, fitness, biology
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"),
             sites=['chemistry.stackexchange.com',
                    'medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
@@ -2318,13 +2443,13 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\
             rule_id="bad keywords: keto, not sciences and SO")
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # Stack Overflow, but not in code
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"), all=False, stripcodeblocks=True,
             sites=['stackoverflow.com'],
             username=True, body_summary=True,
             max_rep=32, max_score=1,
             rule_id="bad keywords: keto, not in code, SO")
 # Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
+create_rule("potentially bad keyword in {}", keyword_bookend_regex_text(r"keto(?:nes?)?"), all=False,
             sites=['medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
                    'biology.stackexchange.com'],
@@ -2332,13 +2457,13 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: keto, not medicalsciences, fitness, biology")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+create_rule("potentially bad keyword in {}", r"{}(?-i:SEO|seo)$".format(KEYWORD_BOOKENDING_START),
             sites=['webmasters.stackexchange.com'],
             title=True, body=False, username=False,
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: SEO, titles only, not webmasters")
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+create_rule("potentially bad keyword in {}", r"{}(?-i:SEO|seo)$".format(KEYWORD_BOOKENDING_START),
             title=False, body=False, username=True,
             max_rep=32, max_score=1,
             rule_id="Potentialy bad keywords: SEO, usernames only")
@@ -2362,7 +2487,7 @@ create_rule("bad keyword in {}",
             rule_id="bad keywords: movies, free, skin care, training, not bodies")
 
 # Potentially bad keywords in titles and usernames, all sites
-# Not suffient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
+# Not sufficient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
 # Title Results: 398/TP:312/FP:81/NAA:3
 # Username Results: 17/TP:10/FP:8/NAA:0
 create_rule("potentially bad keyword in {}",
@@ -2481,8 +2606,8 @@ create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|d
             all=False, sites=["skeptics.stackexchange.com", "history.stackexchange.com"],
             rule_id="bad keywords: holocaust, not skeptics, history")
 # Online poker, except poker.SE
-create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
-            r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
+create_rule("bad keyword in {}", keyword_bookend_regex_text(r"(?:poker|casino)\W*online|online\W*(?:poker|casino)"),
+            all=True,
             sites=["poker.stackexchange.com"],
             rule_id="bad keywords: online poker, casino, not poker")
 # Category: Suspicious links
@@ -2521,7 +2646,7 @@ create_rule("pattern-matching website in {}",
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
             r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|▶|→|Read More|Click Here).{0,20}"
-            r"https?://(?!i\.stack\.imgur\.com)(?=.{0,200}$)",
+            r"https?://(?!(?:i\.stack\.imgur\.com|i\.sstatic\.net))(?=.{0,200}$)",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
 create_rule("link at end of {}",
@@ -2819,77 +2944,79 @@ create_rule("blacklisted username", r'(?i)^john$', disabled=True,
 # Workplace troll, 2020-03-28
 create_rule("blacklisted username",
             r"(?i)(?:"
-            r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
-            r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
-            r"Matthew Gaiser"
+            "" r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
+            "" r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
+            "" r"Matthew Gaiser"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
             max_rep=100, max_score=1,
             rule_id="blacklisted username: troll on workplace")
-create_rule("bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))"
-            r"(?:"  # Begin group of bookended regexes
-            r"n[i1]gg+[aeu][rh]?s?|negr[o0]s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
-            r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
-            r"|foreskins?|behead(?:ing|er|ed)"
-            r")"
-            r"(?:\b|(?w:\b)|$)",
+create_rule("bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
+            r"n[i1]gg+[aeu][rh]?s?",
+            r"negr[o0]s?",
+            r"fag+(?:[oe]t)?s?",
+            r"semen",
+            r"mindless[\W_]*+morons?",
+            r"meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?",
+            r"foreskins?",
+            r"behead(?:ing|er|ed)",
+            ]),
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
             rule_id="bad keywords: various bad words, some overlap, workplace")
 # Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
-create_rule("potentially bad keyword in {}",
-            r"(?:"
-            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
-            r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
-            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
-            r"(?:\b|(?w:\b)|$)"  # End bookending
-            r")",
+create_rule("potentially bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
+            r"(?:poo+p?(?:y|ie|ed|er)?s?",
+            r"piss+",
+            r"pee+",
+            r"(?:smash|slash|behead)(?:ing|ed)?",
+            r"vandali[sz](ing|ed?)?)",
+            ]),
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
-            rule_id="Potentialy bad keywords: poop, smash, slash, behead, workplace")
+            rule_id="Potentialy bad keywords: on workplace: poop, smash, slash, behead")
 # Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
 # This is a separate rule, because it will consume up to 100 characters, which, if not separate,
 # will tend to mask other watch matches which we want to show up separately in the why data.
 create_rule("potentially bad keyword in {}",
             r"(?:"
-            r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
+            "" r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1,
-            rule_id="Potentialy bad keywords: only upercase and numbers, workplace")
+            rule_id="Potentialy bad keywords: on workplace: only upercase and numbers")
 # TWP: Watch for the re-use of the usernames of the top 100 users by reputation.
 create_rule("potentially bad keyword in {}",
             r"(?:"
-            r"Joe Strazzere|Kilisi|HLGEM|gnasher729|Kate Gregory|enderland"
-            r"|(?-i:^Neo$)"  # Too short/common, but the troll has used it.
-            r"|motosubatsu|bethlakshmi"
-            r"|Vietnhi Phuvan|nvoigt|Philip Kendall|Lilienthal|DarkCygnus|Wesley Long|DJClayworth|mhoran_psprep"
-            # r"|Monica Cellio"  # Too common
-            r"|AndreiROM|IDrinkandIKnowThings|Hilmar|Jane S|keshlam|dwizum|Chris E|Sourav Ghosh|Justin Cave"
-            r"|thursdaysgeek|sf02|paparazzo|Telastyn|The Wandering Dev Manager|berry120"
-            # r"|Myles"  # Too short/common
-            # r"|Erik"  # Too short/common
-            r"|Dan Pichelman|David K|Philipp|Stephan Branczyk"
-            # r"|rath"  # Too short/common
-            r"|Patricia Shanahan|Xavier J|O\. Jones|HorusKol|Magisch|PeteCon|NotMe|jcmeloni|mcknz"
-            # r"|Oded"  # Too short/common
-            r"|Kent A\.|blankip"
-            # r"|jmac"  # Too short/common
-            r"|GreenMatt|Gregory Currie|pdr|joeqwerty|maple_shaft|Matthew Gaiser"
-            # r"|Daniel"  # Too short/common
-            r"|Twyxz|BigMadAndy|teego1967|Ertai87|user1666620|Julia Hayward|alroc|Player One|kevin cline|Ben Barden"
-            # r"|Kevin"  # Too short/common
-            r"|virolino|solarflare|Fattie|Thomas Owens|sevensevens|jcmack|JB King"
-            # r"|Dan"  # Too short/common
-            r"|PagMax|bharal|SaggingRufus|Karl Bielefeldt|JohnHC|Ed Heal|Jim G\.|cdkMoose"
-            # r"|Peter"  # Too short/common
-            r"|MrFox|Bill Leeper|SZCZERZO KŁY|Tymoteusz Paul|mxyzplk - SE stop being evil|Sascha|Dawny33"
-            r"|A\. I\. Breveleri|Borgh|FrustratedWithFormsDesigner|Dukeling|jimm101"
+            "" r"Joe Strazzere|Kilisi|HLGEM|gnasher729|Kate Gregory|enderland"
+            "" r"|(?-i:^Neo$)"  # Too short/common, but the troll has used it.
+            "" r"|motosubatsu|bethlakshmi"
+            "" r"|Vietnhi Phuvan|nvoigt|Philip Kendall|Lilienthal|DarkCygnus|Wesley Long|DJClayworth|mhoran_psprep"
+            # "" r"|Monica Cellio"  # Too common
+            "" r"|AndreiROM|IDrinkandIKnowThings|Hilmar|Jane S|keshlam|dwizum|Chris E|Sourav Ghosh|Justin Cave"
+            "" r"|thursdaysgeek|sf02|paparazzo|Telastyn|The Wandering Dev Manager|berry120"
+            # "" r"|Myles"  # Too short/common
+            # "" r"|Erik"  # Too short/common
+            "" r"|Dan Pichelman|David K|Philipp|Stephan Branczyk"
+            # "" r"|rath"  # Too short/common
+            "" r"|Patricia Shanahan|Xavier J|O\. Jones|HorusKol|Magisch|PeteCon|NotMe|jcmeloni|mcknz"
+            # "" r"|Oded"  # Too short/common
+            "" r"|Kent A\.|blankip"
+            # "" r"|jmac"  # Too short/common
+            "" r"|GreenMatt|Gregory Currie|pdr|joeqwerty|maple_shaft|Matthew Gaiser"
+            # "" r"|Daniel"  # Too short/common
+            "" r"|Twyxz|BigMadAndy|teego1967|Ertai87|user1666620|Julia Hayward|alroc|Player One|kevin cline|Ben Barden"
+            # "" r"|Kevin"  # Too short/common
+            "" r"|virolino|solarflare|Fattie|Thomas Owens|sevensevens|jcmack|JB King"
+            # "" r"|Dan"  # Too short/common
+            "" r"|PagMax|bharal|SaggingRufus|Karl Bielefeldt|JohnHC|Ed Heal|Jim G\.|cdkMoose"
+            # "" r"|Peter"  # Too short/common
+            "" r"|MrFox|Bill Leeper|SZCZERZO KŁY|Tymoteusz Paul|mxyzplk - SE stop being evil|Sascha|Dawny33"
+            "" r"|A\. I\. Breveleri|Borgh|FrustratedWithFormsDesigner|Dukeling|jimm101"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
@@ -2902,7 +3029,7 @@ create_rule("link at beginning of {}",
             '' r'wso|merriam-webster|oracle|magento|example|apple|google|'
             '' r'github|imgur|'
             '' r'stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|'
-            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|'
+            r'(?:(?:lvcharts|php|jsfiddle|mathoverflow|sstatic)\.net)|'
             r'github\.io|youtu\.be|edu|'
             r'(?:(?:arxiv|drupal|python|isc|khronos|mongodb|open-std|dartlang|'
             '' r'apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
@@ -2919,9 +3046,9 @@ create_rule("potentially bad keyword in {}",
 # Non-bookended watch for usernames
 create_rule("potentially bad keyword in {}",
             r"(?i)(?:"
-            r"(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*"
-            r"(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*"
-            r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)"
+            "" r"(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*"
+            "" r"(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*"
+            "" r"(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)"
             r")",
             all=True,
             username=True, body_summary=False, body=False, title=False,
@@ -2948,29 +3075,30 @@ create_rule("potentially bad keyword in {}",
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=21,
             rule_id="Potentialy bad keywords: usernames: kukel on japanese.se")
-# Some non-bookended bad keywords
-create_rule("bad keyword in {}",
-            r"(?:"  # Begin group of non-bookended regexes
-            "" r"(?(DEFINE)"
-            "" "" r"(?<obfus_tag>(?-i:(?:[^A-Za-z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*))"
-            "" "" r"(?<obfus_tag_lc>(?-i:(?:[^A-Z\d<]++|<(?![/A-Za-z])|</?[A-Za-z]++[^><]*+>|<(?=[/A-Za-z]))*))"
-            "" r")"
-            "" r"(?:"
-            "" "" r"K(?&obfus_tag)E(?&obfus_tag)M(?&obfus_tag)O(?&obfus_tag)N(?&obfus_tag)O(?&obfus_tag)"
-            "" "" r"P(?&obfus_tag)A(?&obfus_tag)N(?&obfus_tag)T(?&obfus_tag)S(?&obfus_tag)U"
-            "" "" r"|"
-            "" "" r"(?-i:"
-            "" "" "" r"(?:"
-            "" "" "" "" r"K(?&obfus_tag_lc)E(?&obfus_tag_lc)M(?&obfus_tag_lc)O(?&obfus_tag_lc)N(?&obfus_tag_lc)"
-            "" "" "" "" r"O(?&obfus_tag_lc)"
-            "" "" "" r")?P(?&obfus_tag_lc)A(?&obfus_tag_lc)N(?&obfus_tag_lc)T(?&obfus_tag_lc)S(?&obfus_tag_lc)U"
-            "" "" r")"
-            "" "" r"|K(?&obfus_tag)P(?&obfus_tag)P(?&obfus_tag)(?i:r(?&obfus_tag)o(?&obfus_tag)fessional)"
-            "" r")"
-            r")",
-            all=True,
-            username=True, body_summary=True,
-            max_rep=100, max_score=3,
-            rule_id="bad keywords: various with no bookending")
+# mathoverflow.net: specific content in titles
+create_rule("bad keyword in {}", get_bookended_keyword_regex_text_from_entries([
+            # referral[\W_]*+code?
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+l[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",
+            # invite[\W_]*+code?
+            r"i[\W_]*+n[\W_]*+v[\W_]*+i[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",
+            r"p[\W_]*+r[\W_]*+o[\W_]*+m[\W_]*+o[\W_]*+c[\W_]*+o[\W_]*+d(?:[\W_]*+e)?",  # promo[\W_]*+code?
+            # Реферальный(?:[\W_]*+код)?
+            r"Р[\W_]*+е[\W_]*+ф[\W_]*+е[\W_]*+р[\W_]*+а[\W_]*+л[\W_]*+ь[\W_]*+н[\W_]*+ы[\W_]*+й"
+            "" r"(?:[\W_]*+к[\W_]*+о[\W_]*+д)?",
+            # referans(?:[\W_]*+kodu)?
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+a[\W_]*+n[\W_]*+s(?:[\W_]*+k[\W_]*+o[\W_]*+d[\W_]*+u)?",
+            r"k[\W_]*+o[\W_]*+d[\W_]*+u",  # kodu
+            r"s[\W_]*+i[\W_]*+g[\W_]*+n[\W_]*+u[\W_]*+p",  # sign[\W_]*+up
+            r"p[\W_]*+a[\W_]*+r[\W_]*+r[\W_]*+a[\W_]*+i[\W_]*+n[\W_]*+a[\W_]*+g[\W_]*+e",  # parrainage
+            r"b[\W_]*+o[\W_]*+n[\W_]*+u[\W_]*+s",  # bonus
+            r"b[\W_]*+o[\W_]*+n[\W_]*+o",  # bono
+            r"r[\W_]*+e[\W_]*+f[\W_]*+e[\W_]*+r[\W_]*+e[\W_]*+n[\W_]*+c[\W_]*+i[\W_]*+a",  # referencia
+            r"推[\W_]*+荐[\W_]*+码",  # 推荐码
+            r"注[\W_]*+册[\W_]*+奖[\W_]*+金",  # 注册奖金
+            ]),
+            all=False, sites=["mathoverflow.net", "meta.mathoverflow.net"],
+            username=False, body_summary=False, body=False, title=True,
+            max_rep=93, max_score=21,
+            rule_id="bad keywords: various in titles: 2024-04 on mathoverflow.net")
 
 FindSpam.reload_blacklists()
