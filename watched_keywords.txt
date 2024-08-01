@@ -64665,3 +64665,4 @@
 1722514537	VLAZ	dubaiexcursions\.day
 1722514710	VLAZ	terminalsguides\.com
 1722514976	Vickel	ipnakkconsulting\.com
+1722514591	Vickel	lusciousleopard\.com
