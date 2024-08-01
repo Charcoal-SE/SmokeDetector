@@ -64650,3 +64650,4 @@
 1722490671	Makyen	tubros[\W_]*+technologies(?!\.com(?<=tubrostechnologies\.com))
 1722484622	Cow	teknokeun\.com
 1722493330	Nisse Engström	nganhanh\.com\.vn
+1722495374	Dragonrage	upgoalia\.com
