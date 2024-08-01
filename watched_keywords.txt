@@ -64668,3 +64668,4 @@
 1722514591	Vickel	lusciousleopard\.com
 1722514885	Vickel	Digilawyer
 1722516912	Jeff Schaller	researchlinkindia\.com
+1722516382	Vickel	wedding[\W_]*+halls[\W_]*+in[\W_]*+ecr(?!\.co\.in(?<=weddinghallsinecr\.co\.in))
