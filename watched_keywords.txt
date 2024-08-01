@@ -64648,3 +64648,4 @@
 1722471912	Spevacus	domin8squad\.com
 1722490646	Makyen	tubrostechnologies\.com
 1722490671	Makyen	tubros[\W_]*+technologies(?!\.com(?<=tubrostechnologies\.com))
+1722484622	Cow	teknokeun\.com
