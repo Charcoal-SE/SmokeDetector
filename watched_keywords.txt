@@ -64712,3 +64712,4 @@
 1722563352	Fastnlight	buysmmsale\.com
 1722607656	Fastnlight	sekillinickim\.com
 1722563119	Fastnlight	buysmmsale(?:@gmail\.com)?
+1722615022	Fastnlight	Yawho[\W_]*+wilug(?:@yahoo\.com)?
