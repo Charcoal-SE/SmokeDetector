@@ -64704,3 +64704,4 @@
 1722600423	Cow	laptoptitan\.vn
 1722600041	Cow	muabanlaptopcuhcm\.com
 1722599992	Cow	creativeindustrie\.in
+1722599974	Cow	corlubar\.com
