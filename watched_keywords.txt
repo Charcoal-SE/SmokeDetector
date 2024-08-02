@@ -64695,3 +64695,4 @@
 1722584408	Dragonrage	educatorsinn\.quora\.com
 1722584429	Dragonrage	educators\s?inn
 1722584463	Dragonrage	edu\s?pros\s?online\s?
+1722584578	Dragonrage	scideassolutions\.com
