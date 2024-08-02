@@ -64702,3 +64702,4 @@
 1722593465	VLAZ	wwwpchcomactnow\.com
 1722593721	VLAZ	smartwatermanagement\.in
 1722600423	Cow	laptoptitan\.vn
+1722600041	Cow	muabanlaptopcuhcm\.com
