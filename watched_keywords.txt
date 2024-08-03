@@ -64741,3 +64741,4 @@
 1722689236	Vickel	bicyclebooth\.com
 1722689316	Vickel	bicycle[\W_]*+booth(?!\.com(?<=bicyclebooth\.com))
 1722692357	Jeff Schaller	GTA[\W_]*+Tawuran[\W_]*+Anak[\W_]*+STM
+1722698228	Fastnlight	thespikegame\.com
