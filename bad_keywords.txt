@@ -3086,3 +3086,4 @@ angelina[\W_]*+christopher1738(?:@gmail\.com)?
 easyrecoveryassets(?:@gmail\.com)?
 Amtrak[\W_]*+s?[\W_]*+customer[\W_]*+service
 BlindStudio
+james[\W_]*+mckay[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
