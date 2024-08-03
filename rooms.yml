@@ -720,6 +720,7 @@ stackoverflow.com:
 
     msg_types:
       - debug
+      - debugwebsocket
       - dump
       - no-offensive-mask
 
