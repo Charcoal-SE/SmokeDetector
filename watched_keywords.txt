@@ -64735,3 +64735,4 @@
 1722685187	Jeff Schaller	devblogit\.com
 1722687945	Vickel	besplatnotreskatsya\.org
 1722687879	Vickel	airbags\.us
+1722615022	Fastnlight	Yawho[\W_]*+wilug(?:@yahoo\.com)?
