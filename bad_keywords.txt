@@ -3085,3 +3085,4 @@ CHAMP[\W_]*+Cloud[\W_]*+CRM
 angelina[\W_]*+christopher1738(?:@gmail\.com)?
 easyrecoveryassets(?:@gmail\.com)?
 Amtrak[\W_]*+s?[\W_]*+customer[\W_]*+service
+BlindStudio
