@@ -64745,3 +64745,4 @@
 1722707969	Fastnlight	Illuminatiofficial565(?:@gmail\.com)?
 1722708579	Makyen	bloomify\.pk
 1722708604	Makyen	bloomify(?!\.pk)
+1722707758	Vickel	newcapcutapk\.com
