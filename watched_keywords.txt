@@ -27459,7 +27459,6 @@
 1617087696	tripleee	ox599\.com
 1617092278	Glorfindel	memes-generator\.net
 1617094170	tripleee	onfield11\.blogspot
-1617103614	cigien	canhcam\.vn
 1617103953	cigien	koinbazar\.com
 1617104147	cigien	startupsguide\.co\.in
 1617104261	cigien	talabat\.com
