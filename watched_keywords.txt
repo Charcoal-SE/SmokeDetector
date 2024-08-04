@@ -64754,3 +64754,4 @@
 1722764283	VLAZ	ricoremedies\.com
 1722764308	VLAZ	allfalschgeld\.com
 1722764347	VLAZ	(?-i:easysales)(?#linktr.ee)
+1722769372	Vickel	laveekestates\.com
