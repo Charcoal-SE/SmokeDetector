@@ -25317,7 +25317,6 @@
 1610762465	cigien	(?-i:GermanAizek)(?#github)
 1610774659	Makyen	ultra[\W_]*+x[\W_]*+boost(?:[\W_]*+(?:supplement|diet|\d++|[\da-f]{5,}+)s?)*
 1610779877	ppwater	gwmdoor\.com
-1610780497	Nisse Engström	smee\.io
 1610780652	cigien	photographyarticle\.com
 1610780590	ppwater	ConstantinMariusNedelcu499(?:@gmail\.com)?
 1610781547	ppwater	(?-i:cashappgiftcardgive)(?#bit.ly)
