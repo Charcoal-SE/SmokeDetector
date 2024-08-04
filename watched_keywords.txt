@@ -64751,3 +64751,4 @@
 1722761359	Cow	polican\.gov\.al
 1722764232	VLAZ	eurofalschgeld\.com
 1722764258	VLAZ	echtfalschgeld\.com
+1722764283	VLAZ	ricoremedies\.com
