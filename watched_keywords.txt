@@ -39353,7 +39353,6 @@
 1654568515	cigien	acctekgroup\.com
 1654568734	cigien	livingintown(?!\.com)
 1654574097	cigien	ieasydevops(?#github)
-1654576266	tripleee	myanimelist\.net
 1654577044	Nisse Engström	bulkbanknotes\.com
 1654578919	Ryan M	dlinkaplocal-setup\.net
 1654580922	cigien	ncri\.com
