@@ -64753,3 +64753,4 @@
 1722764258	VLAZ	echtfalschgeld\.com
 1722764283	VLAZ	ricoremedies\.com
 1722764308	VLAZ	allfalschgeld\.com
+1722764347	VLAZ	(?-i:easysales)(?#linktr.ee)
