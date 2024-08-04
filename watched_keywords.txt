@@ -64747,3 +64747,4 @@
 1722708604	Makyen	bloomify(?!\.pk)
 1722707758	Vickel	newcapcutapk\.com
 1722715023	Cow	(?-i:id=100073208300354)(?# facebook.com)
+1722748639	Dragonrage	stoneegypt\.com
