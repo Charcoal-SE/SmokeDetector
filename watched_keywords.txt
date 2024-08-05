@@ -64777,3 +64777,4 @@
 1722830600	Makyen	world[\W_]*+of[\W_]*+cosmetic[\W_]*+surgeries[\W_]*+hair[\W_]*+transplants[\W_]*+clinic
 1722830347	Cow	inbaobituigiay\.com\.vn
 1722831860	Dragonrage	myaarpmedicarehealth\.com
+1722831975	Dragonrage	photolapseai\.com
