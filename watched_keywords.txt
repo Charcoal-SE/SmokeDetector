@@ -64774,3 +64774,4 @@
 1722815816	Makyen	(?-i:nCr9z4WLwFPb6547)(?#YouTube)
 1722830550	Makyen	d(?:octo)?r[\W_]*+bashar[\W_]*+bizrah
 1722830590	Makyen	bizrahmed
+1722830600	Makyen	world[\W_]*+of[\W_]*+cosmetic[\W_]*+surgeries[\W_]*+hair[\W_]*+transplants[\W_]*+clinic
