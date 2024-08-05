@@ -64790,3 +64790,4 @@
 1722852989	tripleee	grown[\W_]*+leo(?!\.com(?<=grownleo\.com))
 1722853374	tripleee	clickmasters\.pk
 1722853458	tripleee	handyrecovery\.com
+1722854194	Cow	pikashow\.tube
