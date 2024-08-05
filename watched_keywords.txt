@@ -64812,3 +64812,4 @@
 1722873471	Spevacus	lotterysambadresults\.co\.in
 1722878722	Vickel	xposehub\.com
 1722878811	Vickel	xposehub(?!\.com)
+1722881605	Cow	SPIRITUAL[\W_]*+TALISMAN[\W_]*+RINGS
