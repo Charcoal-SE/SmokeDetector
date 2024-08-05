@@ -64786,3 +64786,4 @@
 1722848632	Cow	oldmainmumbai\.co
 1722848845	Cow	(?-i:xm25AGkZZR84nnF19)(?# forms.gle)
 1722851865	Robert Longson	thalasiknitfab\.com
+1722852663	tripleee	cupid[\W_]*+baba(?!\.com(?<=cupidbaba\.com))
