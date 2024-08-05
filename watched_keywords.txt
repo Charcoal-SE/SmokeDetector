@@ -64776,3 +64776,4 @@
 1722830590	Makyen	bizrahmed
 1722830600	Makyen	world[\W_]*+of[\W_]*+cosmetic[\W_]*+surgeries[\W_]*+hair[\W_]*+transplants[\W_]*+clinic
 1722830347	Cow	inbaobituigiay\.com\.vn
+1722831860	Dragonrage	myaarpmedicarehealth\.com
