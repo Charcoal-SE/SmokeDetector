@@ -5718,3 +5718,4 @@ livemainnet\.en-gopd\.online
 monoindustries\.in
 canhcam\.vn
 smart\.sista\.ai
+chatgptportugues\.io
