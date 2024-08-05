@@ -64818,5 +64818,4 @@
 1722883553	Vickel	tumaquinaya(?!\.com)
 1722892031	Dragonrage	rashyhub\.com
 1722895925	Nisse Engström	modyedge\.com
-1722897441	Jeff Schaller	(?-i:^Hallumbrina Arrbrump$)
 1722897491	Fastnlight	grandnewswire\.com
