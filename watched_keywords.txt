@@ -64788,3 +64788,4 @@
 1722851865	Robert Longson	thalasiknitfab\.com
 1722852663	tripleee	cupid[\W_]*+baba(?!\.com(?<=cupidbaba\.com))
 1722852989	tripleee	grown[\W_]*+leo(?!\.com(?<=grownleo\.com))
+1722853374	tripleee	clickmasters\.pk
