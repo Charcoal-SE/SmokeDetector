@@ -64817,3 +64817,4 @@
 1722883390	Vickel	tumaquinaya\.com
 1722883553	Vickel	tumaquinaya(?!\.com)
 1722892031	Dragonrage	rashyhub\.com
+1722895925	Nisse Engström	modyedge\.com
