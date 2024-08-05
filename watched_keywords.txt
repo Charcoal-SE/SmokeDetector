@@ -64814,3 +64814,4 @@
 1722878811	Vickel	xposehub(?!\.com)
 1722881605	Cow	SPIRITUAL[\W_]*+TALISMAN[\W_]*+RINGS
 1722882461	Vickel	paradox[\W]*+recovery[\W]*+wizard
+1722883390	Vickel	tumaquinaya\.com
