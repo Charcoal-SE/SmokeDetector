@@ -40797,7 +40797,6 @@
 1658808550	tripleee	allblogsandarticles\.com
 1658816110	tripleee	besrey\.com
 1658816676	tripleee	(?-i:^Binda$)
-1658816771	tripleee	apptunix\.com
 1658821516	Robert Longson	cloudstakes\.com
 1658822391	tripleee	technofication\.com
 1658821716	Robert Longson	cxbox\.in
