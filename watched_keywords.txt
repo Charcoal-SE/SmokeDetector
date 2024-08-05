@@ -64816,3 +64816,4 @@
 1722882461	Vickel	paradox[\W]*+recovery[\W]*+wizard
 1722883390	Vickel	tumaquinaya\.com
 1722883553	Vickel	tumaquinaya(?!\.com)
+1722892031	Dragonrage	rashyhub\.com
