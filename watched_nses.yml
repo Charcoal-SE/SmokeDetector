@@ -2268,10 +2268,13 @@ items:
   - lou.ns.cloudflare.com.
 - ns:
   - grace.ns.cloudflare.com.
-  - quentin.ns.cloudflare.com.
+  - mario.ns.cloudflare.com.
 - ns:
   - grace.ns.cloudflare.com.
   - patryk.ns.cloudflare.com.
+- ns:
+  - grace.ns.cloudflare.com.
+  - quentin.ns.cloudflare.com.
 - ns:
   - grace.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
