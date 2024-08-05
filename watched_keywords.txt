@@ -64803,3 +64803,4 @@
 1722863329	Jeff Schaller	instaupak\.com
 1722864939	General Grievance	kohlsfeedback\.info
 1722865387	Makyen	opensea[\W_]*+clone[\W_]*+script
+1722866750	General Grievance	www-kynect\.com
