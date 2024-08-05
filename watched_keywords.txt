@@ -64805,3 +64805,4 @@
 1722865387	Makyen	opensea[\W_]*+clone[\W_]*+script
 1722866750	General Grievance	www-kynect\.com
 1722867069	General Grievance	www-newjetnet\.com
+1722866782	General Grievance	mgh-patientgateway\.com
