@@ -64809,3 +64809,4 @@
 1722866715	General Grievance	hpinstantink-hp\.com
 1722867016	General Grievance	www-indigocard\.com
 1722869970	VLAZ	dr[\W_]*+maa?majanice(?:spells(?:@gmail\.com)?)?
+1722870712	Jeff Schaller	shoesrepublic\.pk
