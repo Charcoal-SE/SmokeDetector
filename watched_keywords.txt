@@ -62557,7 +62557,6 @@
 1717509646	Jeff Schaller	earn54\.com
 1717510754	Jeff Schaller	blackcatstudio-lodz\.pl
 1717511374	Cow	bujuyollarda\.com
-1717511452	General Grievance	vairt\.com
 1717513492	Spevacus	crackeado-file\.com
 1717513796	Spevacus	stackarmor\.com
 1717514524	Spevacus	alphayogaschool\.com
