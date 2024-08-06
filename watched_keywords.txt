@@ -64837,3 +64837,4 @@
 1722923760	Cow	Real[\W_]*+Estate[\W_]*+Infographics[\W_]*+Services
 1722926545	Cow	godmarc\.com
 1722926814	Cow	keraherbal\.com
+1722927386	Cow	hurricanewindow\.com
