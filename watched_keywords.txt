@@ -64835,3 +64835,4 @@
 1722941936	Jeff Schaller	genxestate\.in
 1722941989	VLAZ	eduwisor\.com
 1722923760	Cow	Real[\W_]*+Estate[\W_]*+Infographics[\W_]*+Services
+1722926545	Cow	godmarc\.com
