@@ -64850,3 +64850,4 @@
 1722949273	Spevacus	ithbat\.om
 1722949651	Makyen	genx[\W_]*+estate(?!\.in(?<=genxestate\.in))
 1722949709	Makyen	eduwisor(?!\.com)
+1722953873	Spevacus	celebryciklub\.pl
