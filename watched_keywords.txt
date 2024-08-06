@@ -64817,7 +64817,6 @@
 1722892031	Dragonrage	rashyhub\.com
 1722895925	Nisse Engström	modyedge\.com
 1722897491	Fastnlight	grandnewswire\.com
-1722898161	Fastnlight	Cyberpoint[\W_]*+Recovery
 1722905489	Fastnlight	lrrapk\.com
 1722909896	Spevacus	termuxtools\.com
 1722910722	Jeff Schaller	metalroofingnames\.com

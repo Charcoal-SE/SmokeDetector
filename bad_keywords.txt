@@ -3089,3 +3089,4 @@ BlindStudio
 james[\W_]*+mckay[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+p[\W_]*+o[\W_]*+i[\W_]*+n[\W_]*+t[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?# obfuscated cyberpointrecovery.com)
 YT7CRACKER(?:@gmail\.com)?
+Cyberpoint[\W_]*+Recovery
