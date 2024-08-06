@@ -64841,3 +64841,4 @@
 1722927401	Cow	art-of-brass\.com
 1722931721	Cow	(?-i:zbicheva-minite)(?# calendly.com)
 1722931756	Cow	qualtricsxmf5gvzggdp\.qualtrics\.com
+1722937470	Cow	swiftproxy\.net
