@@ -64458,7 +64458,6 @@
 1722092109	Nisse Engström	78win\.eu
 1722092757	Nisse Engström	hakunamatata\.cloudslearner\.com
 1722094545	Nisse Engström	sbo4k\.com
-1722109530	Cow	weniche\.com
 1722107835	Cow	paraoan\.com
 1722105039	Cow	(?-i:careerbytecode)(?# substack.com)
 1722115273	Nisse Engström	listafarmacia\.com
