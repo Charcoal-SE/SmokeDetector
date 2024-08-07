@@ -64894,3 +64894,4 @@
 1723043248	Makyen	ithbat(?!\.om)
 1723043349	Makyen	222tg
 1723045896	General Grievance	generationit\.nl
+1723046218	Spevacus	salihuk\.vercel\.app
