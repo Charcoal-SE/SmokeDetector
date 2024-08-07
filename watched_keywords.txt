@@ -60123,7 +60123,6 @@
 1711655706	Vickel	calm[\W_]*+pills[\W_]*+uk(?!\.com(?<=calmpills\.com))
 1711976360	Makyen	bvsegypt\.com
 1711976395	Makyen	askeva\.in
-1711976418	Makyen	ask[\W_]*+eva(?!\.in(?<=askeva\.in))
 1711974223	Cow	minitaq\.com
 1711976541	Makyen	minitaq(?!\.com)
 1711989628	Thomas Ward	videointercomsystems\.com
