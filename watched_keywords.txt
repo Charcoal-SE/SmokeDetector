@@ -64895,3 +64895,4 @@
 1723043349	Makyen	222tg
 1723045896	General Grievance	generationit\.nl
 1723046218	Spevacus	salihuk\.vercel\.app
+1723047007	Spevacus	(?-i:STAKECLICKBOT)(?#t.me)
