@@ -984,6 +984,9 @@ items:
   - sydney.ns.cloudflare.com.
 - ns:
   - braden.ns.cloudflare.com.
+  - daniella.ns.cloudflare.com.
+- ns:
+  - braden.ns.cloudflare.com.
   - gigi.ns.cloudflare.com.
 - ns:
   - bradley.ns.cloudflare.com.
