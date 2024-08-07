@@ -1078,3 +1078,4 @@ carelab[sz]
 (?-i:^Sanjay Sanju$)
 (?-i:^1stepGrow$)
 (?-i:^Hallumbrina Arrbrump$)
+(?-i:^Danniel Georgia$)
