@@ -64900,3 +64900,4 @@
 1723047087	Spevacus	(?-i:stakesalebot)(?#t.me)
 1723052257	Cow	cursos-courses-online\.edu\.pl
 1723055057	Cow	digitalkavita\.in
+1723063228	Spevacus	whatcountyamiin\.org
