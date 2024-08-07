@@ -64872,3 +64872,4 @@
 1723018180	Cow	volquezkinshop\.com
 1723018897	Cow	htmlcodegenerator-tools\.com
 1723018954	Cow	masterclassofficial\.com
+1723018855	Cow	htmlcodegenerator\.blogspot
