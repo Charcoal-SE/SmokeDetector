@@ -64896,3 +64896,4 @@
 1723045896	General Grievance	generationit\.nl
 1723046218	Spevacus	salihuk\.vercel\.app
 1723047007	Spevacus	(?-i:STAKECLICKBOT)(?#t.me)
+1723047044	Spevacus	(?-i:STAKEclick)(?#t.me)
