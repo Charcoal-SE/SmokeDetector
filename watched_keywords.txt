@@ -64868,3 +64868,4 @@
 1723017188	Cow	tenpowercell\.com
 1723018003	double-beep	mr-stork\.org
 1723018027	Cow	roadrywalltx\.com
+1723018954	Cow	masterclassofficial\.com
