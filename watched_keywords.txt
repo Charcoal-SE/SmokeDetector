@@ -64885,3 +64885,4 @@
 1723034591	Cow	gymindustri\.com
 1723034917	tripleee	ask[\W_]*+eva(?!\.i[no](?<=askeva\.i[no]))
 1723034943	tripleee	askeva\.io
+1723036180	Jeff Schaller	dollartree-compass\.com
