@@ -64937,3 +64937,4 @@
 1723116652	Cow	big[\W_]*+apple[\W_]*+coins
 1723116738	Cow	(?-i:^Big Apple Coins$)
 1723118663	Cow	mzakharova1(?:@ya\.ru)?
+1723120433	Vickel	wwjojobet939\.com
