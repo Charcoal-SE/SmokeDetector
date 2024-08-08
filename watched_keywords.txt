@@ -64948,3 +64948,4 @@
 1723131565	Vickel	originaldocumentproviders\.com
 1723132126	Spevacus	orases\.com
 1723132152	Spevacus	app\.clickup\.com
+1723134363	Spevacus	drvpn\.net
