@@ -64908,3 +64908,4 @@
 1723084869	Spevacus	customviallabels\.com
 1723086450	Spevacus	mrjustcreation\.com
 1723090513	Makyen	unclear0
+1723094882	Cow	Konnect[\W_]*+AI[\W_]*+Technologies
