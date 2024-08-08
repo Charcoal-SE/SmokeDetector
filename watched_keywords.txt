@@ -64953,3 +64953,4 @@
 1723142080	Jeff Schaller	debugspot\.com
 1723147124	Jeff Schaller	icsconcretecoatings\.com
 1723151194	Dragonrage	spotypremium\.com
+1723155913	Vickel	(?-i:4bRWtvM)(?#bit.ly)
