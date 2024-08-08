@@ -64904,3 +64904,4 @@
 1723064082	Dragonrage	paymaxima\.com
 1723072747	Vickel	8171ehsaas-program\.pk
 1723067849	General Grievance	content-baer\.de
+1723078779	Jeff Schaller	000[\W_]*+worth[\W_]*+of[\W_]*+funds
