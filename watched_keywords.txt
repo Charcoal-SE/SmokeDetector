@@ -64920,3 +64920,4 @@
 1723099685	tripleee	epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
 1723100035	tripleee	my[\W_]*+wifi(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+(?:ext(?:ender)?|local|net(?:work)?|login|setup|support)s?)*\d*(?<!my wifi)(?!(?<=mywifiext)\.(?:cc|net|xyz))
 1723099418	Cow	thanosbook\.in
+1723098671	Cow	techforzone\.com
