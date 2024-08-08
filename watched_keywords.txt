@@ -64934,3 +64934,4 @@
 1723112665	double-beep	paintingsonline\.com\.au
 1723113471	Cow	(?-i:^nutritional elements$)
 1723119193	Vickel	futuresoftindia\.com
+1723116652	Cow	big[\W_]*+apple[\W_]*+coins
