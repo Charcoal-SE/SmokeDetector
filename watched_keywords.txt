@@ -64939,3 +64939,4 @@
 1723118724	Cow	dandelion[\W_]*+studio
 1723122005	double-beep	shobhitaesthetics\.com
 1723122309	Vickel	wheelsonrent\.ae
+1723122433	Vickel	wheels[\W_]*+on[\W_]*+rent(?!\.ae(?<=wheelsonrent\.ae))
