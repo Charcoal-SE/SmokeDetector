@@ -64919,3 +64919,4 @@
 1723098978	VLAZ	minigenix\d*(?!\.com(?<=minigenix\.com))
 1723099635	Makyen	simplidistance(?!\.com)
 1723099685	tripleee	epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
+1723100035	tripleee	my[\W_]*+wifi(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+(?:ext(?:ender)?|local|net(?:work)?|login|setup|support)s?)*\d*(?<!my wifi)(?!(?<=mywifiext)\.(?:cc|net|xyz))
