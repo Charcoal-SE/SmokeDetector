@@ -1082,3 +1082,4 @@ carelab[sz]
 (?-i:^tvg realtors$)
 (?-i:^Epitome Hospital$)
 (?-i:^Battery cell guy$)
+(?-i:^Lina Luice$)
