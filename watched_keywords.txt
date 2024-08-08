@@ -64939,3 +64939,4 @@
 1723118663	Cow	mzakharova1(?:@ya\.ru)?
 1723120433	Vickel	wwjojobet939\.com
 1723118724	Cow	dandelion[\W_]*+studio
+1723122005	double-beep	shobhitaesthetics\.com
