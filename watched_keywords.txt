@@ -50440,7 +50440,6 @@
 1684521503	Makyen	(?-i:FhKC97P)
 1684525071	Makyen	bans?\.(?:png|jpg|gif)
 1684525864	Makyen	alien[\W_]*+hybrid[\W_]*+god
-1684527972	Makyen	my[\W_]*+wifi(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+(?:ext(?:ender)?|local|net(?:work)?|login|setup|support)s?)*(?<!my wifi)(?!(?<=mywifiext)\.(?:cc|net|xyz))
 1684531640	Jeff Schaller	atscables\.com
 1684534281	Makyen	(?-i:JY6K3nppiMJMe9At5)(?#forms.gle)
 1684539534	Vickel	(?-i:UCIHIUd87jwvSFJ7A9TqKKFQ)
