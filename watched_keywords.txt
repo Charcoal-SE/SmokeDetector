@@ -64941,3 +64941,4 @@
 1723122309	Vickel	wheelsonrent\.ae
 1723122433	Vickel	wheels[\W_]*+on[\W_]*+rent(?!\.ae(?<=wheelsonrent\.ae))
 1723123811	Fastnlight	takemyclassonline\.net
+1723124629	Fastnlight	hvacmorgan\.com
