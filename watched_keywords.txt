@@ -2019,7 +2019,6 @@
 1517259678	Glorfindel	apkaabazar\.com
 1517286860	bwDraco	softwarepro
 1517299904	Glorfindel	onedollarwebhostings\.com
-1517300719	Glorfindel	ankaoutdoor\.com
 1517305953	Glorfindel	aitheinhealing\.com
 1517314363	Glorfindel	beyondschoolofbeauty\.com
 1517314614	Glorfindel	eaglesecurity\.in
