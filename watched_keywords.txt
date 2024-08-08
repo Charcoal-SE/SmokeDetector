@@ -31623,7 +31623,6 @@
 1631097973	tripleee	waytoeasylearn\.com
 1631099135	tripleee	(?-i:^Noah Centineo$)
 1631099356	tripleee	thehomedekor\.com\.au
-1631099451	tripleee	the[\W_]*+home[\W_]*+dekor(?!\.(?:in|com\.au)(?<=thehomedekor\.(?:in|com\.au)))
 1631100905	tripleee	the[\W_]*+design[\W_]*+trip(?!\.com(?<=thedesigntrip\.com))
 1631102215	tripleee	(?-i:^Kelsi Monore$)
 1631105024	tripleee	(?-i:^Addify CO$)
