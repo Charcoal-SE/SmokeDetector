@@ -1080,3 +1080,4 @@ carelab[sz]
 (?-i:^Hallumbrina Arrbrump$)
 (?-i:^Danniel Georgia$)
 (?-i:^tvg realtors$)
+(?-i:^Epitome Hospital$)
