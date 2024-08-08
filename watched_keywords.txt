@@ -64911,3 +64911,4 @@
 1723094581	Cow	omhealing\.com\.vn
 1723095881	Dragonrage	buyerspanel\.com
 1723094882	Cow	Konnect[\W_]*+AI[\W_]*+Technologies
+1723096625	Dragonrage	chickenfastmining
