@@ -20284,7 +20284,6 @@
 1592684592	Xnero	samsungfirmware\.net
 1592693709	Makyen	techviewz\.com
 1592693900	Makyen	artelliq\.com
-1592696767	user12986714	\w{0,30}assign(?:ments?)?[\W_]*+helps?\.[\w\.]*+
 1592695765	user12986714	theclassictools\.com
 1592695949	user12986714	theosnews\.xyz
 1592714130	Makyen	(?-i:2tkqc\.png)

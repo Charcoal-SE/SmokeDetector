@@ -3091,3 +3091,4 @@ c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+p[\W_]*+o[\W_]*+i[\W_]*+n[\W_]*+t[\W_]*+
 YT7CRACKER(?:@gmail\.com)?
 Cyberpoint[\W_]*+Recovery
 zeropromosi(?!\.com)
+\w{0,30}assign(?:ments?)?[\W_]*+helps?\.[\w\.]*+
