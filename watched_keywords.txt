@@ -64919,3 +64919,4 @@
 1723098872	Cow	minigenix\.com
 1723098978	VLAZ	minigenix\d*(?!\.com(?<=minigenix\.com))
 1723099635	Makyen	simplidistance(?!\.com)
+1723099685	tripleee	epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
