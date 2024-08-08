@@ -1320,6 +1320,9 @@ items:
   - kevin.ns.cloudflare.com.
 - ns:
   - clarissa.ns.cloudflare.com.
+  - corey.ns.cloudflare.com.
+- ns:
+  - clarissa.ns.cloudflare.com.
   - leif.ns.cloudflare.com.
 - ns:
   - clark.ns.cloudflare.com.
