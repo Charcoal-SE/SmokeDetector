@@ -64925,3 +64925,4 @@
 1723101349	tripleee	(?-i:^Công ty Công Nghiệp Sài Gòn$)
 1723101706	Dragonrage	abayastore\.pk
 1723102480	Dragonrage	huiguojiasuqi\.com
+1723104730	tripleee	love[\W_]*+problem[\W_]*+solution
