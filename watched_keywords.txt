@@ -64915,3 +64915,4 @@
 1723097692	Makyen	certvalue(?!\.com)
 1723098096	Dragonrage	codefrombasics\.com
 1723098310	Dragonrage	simplidistance\.com
+1723098872	Cow	minigenix\.com
