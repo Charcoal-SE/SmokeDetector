@@ -1081,3 +1081,4 @@ carelab[sz]
 (?-i:^Danniel Georgia$)
 (?-i:^tvg realtors$)
 (?-i:^Epitome Hospital$)
+(?-i:^Battery cell guy$)
