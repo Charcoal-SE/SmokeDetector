@@ -64918,3 +64918,4 @@
 1723098892	VLAZ	viacon\.io
 1723098872	Cow	minigenix\.com
 1723098978	VLAZ	minigenix\d*(?!\.com(?<=minigenix\.com))
+1723099418	Cow	thanosbook\.in
