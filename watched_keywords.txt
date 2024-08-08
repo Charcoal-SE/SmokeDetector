@@ -64906,3 +64906,4 @@
 1723067849	General Grievance	content-baer\.de
 1723078779	Jeff Schaller	000[\W_]*+worth[\W_]*+of[\W_]*+funds
 1723084869	Spevacus	customviallabels\.com
+1723086450	Spevacus	mrjustcreation\.com
