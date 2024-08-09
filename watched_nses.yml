@@ -2367,6 +2367,9 @@ items:
   - hasslo.ns.cloudflare.com.
 - ns:
   - gwen.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
+  - gwen.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
