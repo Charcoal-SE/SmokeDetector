@@ -64969,3 +64969,4 @@
 1723199610	Dragonrage	sparkouttech\.com
 1723200612	tripleee	(?-i:^Sachin Sharma$)
 1723201812	VLAZ	airwaysoffices\.com
+1723202823	Cow	wandersky\.in
