@@ -64978,3 +64978,4 @@
 1723217483	VLAZ	Innospectra(?!\.com\.sg)
 1723217540	VLAZ	giftone\.shop
 1723217602	Spevacus	halehomeservices\.com
+1723217916	double-beep	askbnf\.com
