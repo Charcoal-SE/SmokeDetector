@@ -1084,3 +1084,4 @@ carelab[sz]
 (?-i:^Battery cell guy$)
 (?-i:^Lina Luice$)
 (?-i:^mmsjo mmsjo$)
+(?-i:^Sửa Điện Lạnh Limosa$)
