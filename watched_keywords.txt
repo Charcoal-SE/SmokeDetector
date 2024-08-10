@@ -65005,3 +65005,4 @@
 1723297965	double-beep	kobalttoolsinfo\.com
 1723299023	Makyen	dumpstube\.com
 1723299363	Makyen	asvr[\W_]*+engineering(?!\.com(?<=asvrengineering\.com))
+1723303588	VLAZ	cruelty\.farm
