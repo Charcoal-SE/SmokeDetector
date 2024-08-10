@@ -65007,3 +65007,4 @@
 1723299363	Makyen	asvr[\W_]*+engineering(?!\.com(?<=asvrengineering\.com))
 1723303588	VLAZ	cruelty\.farm
 1723304939	Jeff Schaller	vastlyimportant\.com
+1723304996	Jeff Schaller	eventspro\.net
