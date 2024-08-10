@@ -60906,7 +60906,6 @@
 1713954506	Jeff Schaller	exuberantglobal\.co\.uk
 1713927737	General Grievance	gitysoft\.in
 1713905579	Fastnlight	crowdo\.net
-1713956505	Jeff Schaller	dafont\.style
 1713956541	Jeff Schaller	junotrip\.com
 1713957483	Jeff Schaller	imtcables\.com
 1713958427	Jeff Schaller	nsacom\.com
