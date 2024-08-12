@@ -65039,3 +65039,4 @@
 1723445322	Dragonrage	luxlineattire\.com
 1723445938	Dragonrage	ugaduw\.net
 1723446616	VLAZ	Lux[\W_]*+Line[\W_]*+Attire(?!\.com(?!<=luxlineattire\.com))
+1723447526	VLAZ	emojiegg\.com
