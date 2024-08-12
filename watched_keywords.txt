@@ -65038,4 +65038,3 @@
 1723442841	Dragonrage	turboautoparts\.com
 1723445322	Dragonrage	luxlineattire\.com
 1723445938	Dragonrage	ugaduw\.net
-1723446550	VLAZ	Lux[\W_]*+Line[\W_]*+Attire(?!\.com()?!<=luxlineattire\.com)
