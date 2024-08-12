@@ -65041,3 +65041,4 @@
 1723446616	VLAZ	Lux[\W_]*+Line[\W_]*+Attire(?!\.com(?!<=luxlineattire\.com))
 1723447526	VLAZ	emojiegg\.com
 1723449045	Dragonrage	we-fix-concrete\.com
+1723454044	double-beep	servicesprovidernetwork\.com
