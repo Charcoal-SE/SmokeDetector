@@ -49209,7 +49209,6 @@
 1681271016	tripleee	testomat\.io
 1681271045	tripleee	screenage\.com
 1681271296	tripleee	mytopbestblogger\.com
-1681271331	tripleee	wttr\.in
 1681271372	tripleee	enchantedgardenssoapery\.com
 1681273506	tripleee	travelguideideas\.com
 1681274949	tripleee	solis[\W_]*+tractors?
