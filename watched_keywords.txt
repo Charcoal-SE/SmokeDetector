@@ -65108,3 +65108,4 @@
 1723561257	Spevacus	supreme[\W_]*+perlite(?!\.com)
 1723565811	VLAZ	ltelixirreservepowai\.in
 1723568637	Dragonrage	synclite\.io
+1723567218	Cow	orlandojiujitsu\.com
