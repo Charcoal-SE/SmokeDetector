@@ -65085,3 +65085,4 @@
 1723533648	VLAZ	Naukri[\W_]*+Network(?!\.in(?<=naukrinetwork\.in))
 1723534103	Dragonrage	globalkeyinfosolution\.com
 1723534407	VLAZ	disneyplusdisney\.com
+1723537640	Dragonrage	hostbyte\.in
