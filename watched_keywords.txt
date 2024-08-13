@@ -65098,3 +65098,4 @@
 1723546538	VLAZ	vytcdc\.com
 1723546584	VLAZ	nicegras\.com
 1723529134	lyxal	forrest[\W_]*+inn[\W_]*+camping[\W_]*+resort
+1723548674	Jeff Schaller	ashlanchidester\.com
