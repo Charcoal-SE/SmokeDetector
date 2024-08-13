@@ -65073,3 +65073,4 @@
 1723511950	Spevacus	mycasa\.mx
 1723512482	Ryan M	monero_support_dev(?# Telegram)
 1723524112	lyxal	sketchplay\.co\.uk
+1723524119	lyxal	sketchplay(?!\.co\.uk)
