@@ -65117,3 +65117,4 @@
 1723578013	Dragonrage	alliance\Wdigital\Whack
 1723578313	Spevacus	fabcart\.pk
 1723578617	Cow	aioulearn\.pk
+1723581330	Spevacus	banninksolutions
