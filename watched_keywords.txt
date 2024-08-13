@@ -65107,3 +65107,4 @@
 1723560279	lyxal	supremeperlite\.com
 1723561257	Spevacus	supreme[\W_]*+perlite(?!\.com)
 1723565811	VLAZ	ltelixirreservepowai\.in
+1723567218	Cow	orlandojiujitsu\.com
