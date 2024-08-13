@@ -65104,3 +65104,4 @@
 1723553757	lyxal	ubcholding\.co
 1723555936	double-beep	ptaixout\.net
 1723556892	Makyen	globalchemicalsolutionusa(?:@gmail\.com)?
+1723556932	Makyen	global[\W_]*+chemical[\W_]*+solutions?
