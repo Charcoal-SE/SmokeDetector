@@ -65072,3 +65072,4 @@
 1723511649	lyxal	wordpress[\W_]*+rss[\W_]*+ai[\W_]*+auto[\W_]*+blogger
 1723511950	Spevacus	mycasa\.mx
 1723512482	Ryan M	monero_support_dev(?# Telegram)
+1723522897	lyxal	sketchplay(\.co\.uk)?
