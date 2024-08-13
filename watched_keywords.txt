@@ -65069,3 +65069,4 @@
 1723498781	General Grievance	healizm\.com
 1723503522	Vickel	sundamunda\.com
 1723506038	Jeff Schaller	homekitchentech\.com
+1723511649	lyxal	wordpress[\W_]*+rss[\W_]*+ai[\W_]*+auto[\W_]*+blogger
