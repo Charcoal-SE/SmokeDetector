@@ -65104,3 +65104,4 @@
 1723556892	Makyen	globalchemicalsolutionusa(?:@gmail\.com)?
 1723556932	Makyen	global[\W_]*+chemical[\W_]*+solutions?
 1723559589	Jeff Schaller	FLASHRECLAIM
+1723560299	lyxal	supreme[\W_]*+perlite
