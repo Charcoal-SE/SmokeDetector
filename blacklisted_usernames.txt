@@ -1085,3 +1085,4 @@ carelab[sz]
 (?-i:^Lina Luice$)
 (?-i:^mmsjo mmsjo$)
 (?-i:^Sửa Điện Lạnh Limosa$)
+(?-i:^Sachin Sharma$)
