@@ -5742,3 +5742,4 @@ cyberops\.in
 ligmanode\.com
 proact-ims\.com
 gts\.ai
+SimpliDistance\.com
