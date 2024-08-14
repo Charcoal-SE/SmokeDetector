@@ -1823,6 +1823,9 @@ items:
   - micah.ns.cloudflare.com.
 - ns:
   - diva.ns.cloudflare.com.
+  - santino.ns.cloudflare.com.
+- ns:
+  - diva.ns.cloudflare.com.
   - will.ns.cloudflare.com.
 - ns:
   - dolly.ns.cloudflare.com.
