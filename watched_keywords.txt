@@ -65130,3 +65130,4 @@
 1723624322	tripleee	cefroht\.org
 1723625063	tripleee	infyiot\.com
 1723626428	tripleee	fitspresso123\.ukit\.me
+1723627117	tripleee	capsicum[\W_]*+annum
