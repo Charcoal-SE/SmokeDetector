@@ -457,6 +457,9 @@ items:
   - mona.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
+  - monika.ns.cloudflare.com.
+  - sean.ns.cloudflare.com.
+- ns:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
