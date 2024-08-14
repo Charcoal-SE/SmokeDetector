@@ -65154,3 +65154,4 @@
 1723640082	tripleee	(?-i:^ Mahargha$)
 1723640116	tripleee	feb\.unrika\.ac\.id
 1723640404	double-beep	glomocosmetics\.com
+1723643664	tripleee	prettier_reg_exp
