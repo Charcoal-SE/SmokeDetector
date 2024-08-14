@@ -65156,3 +65156,4 @@
 1723640404	double-beep	glomocosmetics\.com
 1723643664	tripleee	prettier_reg_exp
 1723644031	tripleee	(?-i:^Myinstitutes$)
+1723646718	lyxal	codetrailblazer\.com
