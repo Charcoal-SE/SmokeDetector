@@ -47,6 +47,9 @@ items:
   - achiel.ns.cloudflare.com.
   - bristol.ns.cloudflare.com.
 - ns:
+  - achiel.ns.cloudflare.com.
+  - rosemary.ns.cloudflare.com.
+- ns:
   - abdullah.ns.cloudflare.com.
   - bella.ns.cloudflare.com.
 - ns:
