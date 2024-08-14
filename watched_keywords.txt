@@ -62857,7 +62857,6 @@
 1718186077	Jeff Schaller	m3m-gurgaon\.blogspot
 1718186210	Jeff Schaller	Reddito[\W_]*+Capital
 1718186287	Jeff Schaller	gds-uae\.com
-1718188269	Jeff Schaller	aelinen\.co\.uk
 1718188298	Jeff Schaller	biblical-archaeology\.org
 1718188330	Jeff Schaller	K6c0puzJyShhODQ1(?#t.me)
 1718188361	Jeff Schaller	mosam756(?#t.me)
