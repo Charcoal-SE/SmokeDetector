@@ -65157,3 +65157,4 @@
 1723643664	tripleee	prettier_reg_exp
 1723644031	tripleee	(?-i:^Myinstitutes$)
 1723646873	Spevacus	codetrailblazer\.com
+1723651957	Makyen	newtech[\W_]*+infosoft(?!\.com(?<=newtechinfosoft\.com))
