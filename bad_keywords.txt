@@ -3092,3 +3092,4 @@ YT7CRACKER(?:@gmail\.com)?
 Cyberpoint[\W_]*+Recovery
 zeropromosi(?!\.com)
 \w{0,30}assign(?:ments?)?[\W_]*+helps?\.[\w\.]*+
+simplidistance(?!\.com)
