@@ -65133,3 +65133,4 @@
 1723627117	tripleee	capsicum[\W_]*+annum
 1723627231	tripleee	panax[\W_]*+ginseng
 1723627278	tripleee	chromium[\W_]*+picolinate
+1723627412	tripleee	ethinfra\.com
