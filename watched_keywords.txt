@@ -54562,7 +54562,6 @@
 1699690235	Nisse Engström	silverishq\.com
 1699690444	Nisse Engström	helmetonly\.com
 1699694272	Nisse Engström	koeln-umzugsfirma\.de
-1699700479	cigien	espacioapk(?!\.tech)
 1699700558	cigien	apkinflux\.com
 1699700596	cigien	agentmrszafirah7(?#telegram)
 1699700688	cigien	androidrub\.com
