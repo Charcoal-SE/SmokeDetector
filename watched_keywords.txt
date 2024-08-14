@@ -65132,3 +65132,4 @@
 1723626428	tripleee	fitspresso123\.ukit\.me
 1723627117	tripleee	capsicum[\W_]*+annum
 1723627231	tripleee	panax[\W_]*+ginseng
+1723627278	tripleee	chromium[\W_]*+picolinate
