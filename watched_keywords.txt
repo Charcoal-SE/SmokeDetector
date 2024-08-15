@@ -65207,3 +65207,4 @@
 1723741491	Cow	ruthouano2(?:@www\.rotchecapuyanouano\.com\.ph)?
 1723741495	Cow	annabelquano(?:@gmail\.com)?
 1723741499	Cow	ruthouano(?:@yahoo\.com)?
+1723741503	Cow	rtampoa96(?:@yahoo\.com)?
