@@ -65205,3 +65205,4 @@
 1723741469	Cow	roseouano02(?:@gmail\.com)?
 1723741486	Cow	ruthouano(?:@yahoo\.com)?
 1723741491	Cow	ruthouano2(?:@www\.rotchecapuyanouano\.com\.ph)?
+1723741495	Cow	annabelquano(?:@gmail\.com)?
