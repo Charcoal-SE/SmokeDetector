@@ -65231,3 +65231,4 @@
 1723802450	Cody Gray	DoggyVille[\W_]*India(?!\.in)
 1723805478	Jeff Schaller	m3mjewelcommercial\.in
 1723806393	Jeff Schaller	stan\.vision
+1723806657	VLAZ	apothestore\.com
