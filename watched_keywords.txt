@@ -65223,3 +65223,4 @@
 1723787624	lyxal	whitegrizzly\.com
 1723787647	lyxal	whitegrizzly(?!\.com)
 1723788134	lyxal	cat[\W_]*+skiing[\W_]*+canada
+1723785583	lyxal	nd-center(?!\.com)
