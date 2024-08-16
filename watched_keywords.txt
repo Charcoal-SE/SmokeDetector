@@ -65259,3 +65259,4 @@
 1723850413	Vickel	nhenterprises\.pk
 1723849270	Vickel	smartproxy\.(fr|jp|in|es|ca)
 1723848800	Vickel	neolytica\.ai
+1723848567	Vickel	wanotifier\.com
