@@ -65228,3 +65228,4 @@
 1723792961	tripleee	callindo\.com
 1723792998	tripleee	callindo(?!\.com)(?:seo)?
 1723793992	Dragonrage	jdesigno\.com
+1723794539	Cow	cryptomarketbuz\.com
