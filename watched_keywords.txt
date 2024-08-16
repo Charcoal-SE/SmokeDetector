@@ -65226,3 +65226,4 @@
 1723785583	lyxal	nd-center(?!\.com)
 1723792901	tripleee	(?-i:^hellen wats$)
 1723792961	tripleee	callindo\.com
+1723792998	tripleee	callindo(?!\.com)(?:seo)?
