@@ -65257,3 +65257,4 @@
 1723842254	Vickel	aisosaagbonze1(?:@gmail\.com)?
 1723847813	Vickel	abrajaltaj\.com
 1723850413	Vickel	nhenterprises\.pk
+1723849270	Vickel	smartproxy\.(fr|jp|in|es|ca)
