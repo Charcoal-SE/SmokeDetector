@@ -65255,3 +65255,4 @@
 1723844619	Vickel	koozmo\.com
 1723844962	Vickel	ranzmovie\.com
 1723842254	Vickel	aisosaagbonze1(?:@gmail\.com)?
+1723847813	Vickel	abrajaltaj\.com
