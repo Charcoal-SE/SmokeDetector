@@ -65229,3 +65229,4 @@
 1723793992	Dragonrage	jdesigno\.com
 1723794539	Cow	cryptomarketbuz\.com
 1723802406	Cody Gray	doggyvilleindia\.in
+1723802450	Cody Gray	DoggyVille[\W_]*India(?!\.in)
