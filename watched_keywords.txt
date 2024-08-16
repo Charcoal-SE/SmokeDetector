@@ -65221,3 +65221,4 @@
 1723774738	lyxal	drosakaherbalhome99@gmail\.com
 1723774764	lyxal	drosakaherbalhome99(?!@gmail\.com)
 1723787164	lyxal	bagas31
+1723788134	lyxal	cat[\W_]*+skiing[\W_]*+canada
