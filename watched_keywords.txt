@@ -65230,3 +65230,4 @@
 1723802406	Cody Gray	doggyvilleindia\.in
 1723802450	Cody Gray	DoggyVille[\W_]*India(?!\.in)
 1723805478	Jeff Schaller	m3mjewelcommercial\.in
+1723806393	Jeff Schaller	stan\.vision
