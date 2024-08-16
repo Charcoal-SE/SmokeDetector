@@ -65240,3 +65240,4 @@
 1723809642	lyxal	abx[\W_]*+rentals
 1723816462	lyxal	realiqtestonline\.com
 1723816466	lyxal	realiqtestonline(?!\.com)
+1723811710	General Grievance	sugarcoat\.live
