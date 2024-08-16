@@ -65243,3 +65243,4 @@
 1723811710	General Grievance	sugarcoat\.live
 1723811080	lyxal	ukfurniturestore(?!\.co\.uk)
 1723810955	lyxal	fominsoap(?!\.com)
+1723813052	lyxal	wp-a2z\.org
