@@ -65217,3 +65217,4 @@
 1723778989	Dragonrage	beachbuggyracingapk\.net
 1723785429	Ryan M	tipsytiaras\.com
 1723786003	lyxal	castleappk\.org
+1723786011	lyxal	castleappk(?!\.org)
