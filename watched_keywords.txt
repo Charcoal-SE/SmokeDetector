@@ -28660,7 +28660,6 @@
 1621419878	Glorfindel	<a href="https://sites\.google\.com/[^>]*>\s*<strong>(?#" syntax highlighting fodder)
 1621420267	tripleee	allsaintsu\.org
 1621420475	Jeff Schaller	prophecymarketinsights\.com
-1621420529	tripleee	nisargacare\.com
 1621421016	tripleee	(?-i:^Emily sara$)
 1621421764	tripleee	baltimorebud\.com
 1621421780	tripleee	schumersoon\.com
