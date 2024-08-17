@@ -60657,7 +60657,6 @@
 1713420614	Nick	finanta\.io
 1713421886	Nick	socialrahu\.com
 1713421865	Cow	globepostalcodes\.com
-1713421722	Cow	hi-techpolytechnic\.org
 1713423203	Nick	trippovention\.com
 1713423243	Nick	Trippovention(?!\.com)
 1713423311	Cow	dltctool\.com
