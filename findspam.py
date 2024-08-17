@@ -2233,7 +2233,8 @@ pattern_websites = [
     "richestcelebrities",
     r"ufc\wfight\wnight",  # Chiesa vs Lee spam
     # football live streaming spam
-    r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
+    r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)",
+    r"assign(?:ments?)?[\W_]*+helps?\.[\w.]*+\b",
 ]
 city_list = [
     "Agra",
