@@ -65286,3 +65286,4 @@
 1723915369	Makyen	hi[\W_]*+tech[\W_]*+polytechnic[\W_]*+college
 1723915430	Makyen	buyteaburn2024
 1723923879	Cow	simplifyscript\.com
+1723931822	Dragonrage	72plus\.com
