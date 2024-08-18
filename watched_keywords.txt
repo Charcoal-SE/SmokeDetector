@@ -65304,3 +65304,4 @@
 1723998817	Fastnlight	affordablecabinetsofcapecod\.com
 1724006737	Cow	alfalahw\.org
 1724006934	Vickel	danielbakondi\.com
+1724006998	Vickel	danielbakondi(?!\.com)
