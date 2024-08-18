@@ -65299,3 +65299,4 @@
 1723983365	Cow	maximumvirtual\.com
 1723983369	Cow	betnexus
 1723993507	Fastnlight	bamboooye\.com
+1723993062	Cow	talk2plant\.com
