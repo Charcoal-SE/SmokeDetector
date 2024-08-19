@@ -65318,3 +65318,4 @@
 1724057153	double-beep	angelstrollers\.com
 1724057243	double-beep	thekamboshop\.com
 1724058479	tripleee	ideo[\W_]*+college
+1724058585	tripleee	(?-i:^Sumaira Yaseen$)
