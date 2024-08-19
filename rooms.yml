@@ -221,6 +221,7 @@ stackexchange.com:
       - 26518992 # Fastnlight
       - 4617916  # dbc
       - 32732911 # Anerdw
+      - 851      # Jeremy Banks
 
   65945:  # Charcoal Test
     commands: true
@@ -495,7 +496,6 @@ meta.stackexchange.com:
         - 2591787  # Sam
         - 15396644 # starball
         - 8163816  # forest
-        - 851      # Jeremy Banks
 
   1181:  # The Fire Department
     commands: true
