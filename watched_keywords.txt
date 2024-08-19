@@ -65320,3 +65320,4 @@
 1724058479	tripleee	ideo[\W_]*+college
 1724058585	tripleee	(?-i:^Sumaira Yaseen$)
 1724063031	Cow	bloggershub\.org
+1724062648	Cow	syswash\.com
