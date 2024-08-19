@@ -65327,3 +65327,4 @@
 1724066621	tripleee	wink[\W_]*video[\W_]*+retouch(?:ing)?
 1724068127	Cow	cooperslawyers\.com\.au
 1724069117	Cow	aswathychandran\.com
+1724069942	double-beep	outtechno\.com
