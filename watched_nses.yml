@@ -1170,6 +1170,9 @@ items:
   - dylan.ns.cloudflare.com.
 - ns:
   - carrera.ns.cloudflare.com.
+  - jake.ns.cloudflare.com.
+- ns:
+  - carrera.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
 - ns:
   - cartman.ns.cloudflare.com.
