@@ -65342,3 +65342,4 @@
 1724076239	General Grievance	warsawdentalcenter\.pl
 1724077701	lyxal	alpine[\W_]*+seed[\W_]*+group
 1724083593	Cow	geography-lesson\.net
+1724083451	Cow	geographyphy-lesson\.net
