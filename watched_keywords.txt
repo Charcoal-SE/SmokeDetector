@@ -65325,3 +65325,4 @@
 1724065269	Jeff Schaller	nadracardscentre\.co\.uk
 1724064900	Cow	planethive\.ai
 1724066621	tripleee	wink[\W_]*video[\W_]*+retouch(?:ing)?
+1724068127	Cow	cooperslawyers\.com\.au
