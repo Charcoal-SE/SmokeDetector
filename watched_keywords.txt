@@ -64886,7 +64886,6 @@
 1723098671	Cow	techforzone\.com
 1723100787	tripleee	almawsimtents\.com
 1723090281	Cow	skyfire\.xyz
-1723101349	tripleee	(?-i:^Công ty Công Nghiệp Sài Gòn$)
 1723101706	Dragonrage	abayastore\.pk
 1723102480	Dragonrage	huiguojiasuqi\.com
 1723104730	tripleee	love[\W_]*+problem[\W_]*+solution
