@@ -65343,3 +65343,4 @@
 1724083593	Cow	geography-lesson\.net
 1724083451	Cow	geographyphy-lesson\.net
 1724078461	lyxal	shengtangquartz\.com
+1724105353	Vickel	iFORCE[\W_]*+HACKER[\W_]*+RECOVERY
