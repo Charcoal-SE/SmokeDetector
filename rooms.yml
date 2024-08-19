@@ -495,6 +495,7 @@ meta.stackexchange.com:
         - 2591787  # Sam
         - 15396644 # starball
         - 8163816  # forest
+        - 851      # Jeremy Banks
 
   1181:  # The Fire Department
     commands: true
