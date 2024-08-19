@@ -42,6 +42,8 @@ items:
 - asn: '24778'
 - asn: '25369'
 - asn: '25697'
+  comment: over two years since previous 1-weight TP
+  disable: true
 - asn: '26496'
   comment: Massive FPs; do not watch
   disable: true
