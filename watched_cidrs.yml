@@ -2226,7 +2226,9 @@ items:
 - comment: 5/85 over 8 months, only one 1-weight 2022-11-23
   disable: true
   ip: 141.193.213.20
-- ip: 141.193.213.21
+- comment: mostly FP, overlaps with ASN watch 2024-08-19
+  disable: true
+  ip: 141.193.213.21
 - ip: 142.132.213.119
 - ip: 142.132.255.53
 - ip: 142.202.65.6
