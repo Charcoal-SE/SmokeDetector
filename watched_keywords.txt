@@ -65319,3 +65319,4 @@
 1724057243	double-beep	thekamboshop\.com
 1724058479	tripleee	ideo[\W_]*+college
 1724058585	tripleee	(?-i:^Sumaira Yaseen$)
+1724062648	Cow	syswash\.com
