@@ -65332,3 +65332,4 @@
 1724070846	Makyen	ready[\W_]*+mailing[\W_]*+team
 1724072873	tripleee	^spammer\d+$
 1724072917	Vickel	avinashkatta\.in
+1724072955	Vickel	fastbroadbandnow\.com
