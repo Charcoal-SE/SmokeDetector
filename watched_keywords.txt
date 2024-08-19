@@ -65329,3 +65329,4 @@
 1724069117	Cow	aswathychandran\.com
 1724069942	double-beep	outtechno\.com
 1724070820	Makyen	(?:elite[\W_]*+)?executive[\W_]*+assistant[\W_]*+email[\W_]*+list
+1724070846	Makyen	ready[\W_]*+mailing[\W_]*+team
