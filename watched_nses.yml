@@ -2606,6 +2606,9 @@ items:
   - jade.ns.cloudflare.com.
   - norman.ns.cloudflare.com.
 - ns:
+  - jaime.ns.cloudflare.com.
+  - lila.ns.cloudflare.com.
+- ns:
   - jake.ns.cloudflare.com.
   - macy.ns.cloudflare.com.
 - ns:
