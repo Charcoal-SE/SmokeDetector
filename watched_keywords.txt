@@ -61645,7 +61645,6 @@
 1715679143	Cow	Willow[\W_]*+TV
 1715679178	Cow	Live[\W_]*+Stream[\W_]*+online[\W_]*+IPL
 1715680708	Cow	HARVEYDONALD192
-1715680858	Cow	airlinespolicyhub\.com
 1715681078	Cow	aftershinecar\.com
 1715682704	Cow	dadnrats\.com
 1715683697	VLAZ	easyreclaim
