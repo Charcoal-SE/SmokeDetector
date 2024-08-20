@@ -65347,3 +65347,4 @@
 1724107895	Dragonrage	valhallavitality\.com
 1724125651	Makyen	sntechnologies\.co\.in
 1724125675	Makyen	sn[\W_]*+technologies(?!\.co\.in(?<=sntechnologies\.co\.in))
+1724125700	Makyen	cleantechcontrols\.com\.au
