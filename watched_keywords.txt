@@ -65360,3 +65360,4 @@
 1724137075	Dragonrage	02-33651599\.com\.tw
 1724137699	Dragonrage	umbrellatransfers\.com
 1724138246	Dragonrage	beequalityservices\.co\.uk
+1724139379	tripleee	(?-i:^viv das$)
