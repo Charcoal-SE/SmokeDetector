@@ -86,6 +86,9 @@ items:
   - anita.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - anuj.ns.cloudflare.com.
+  - sue.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
