@@ -65348,3 +65348,4 @@
 1724125651	Makyen	sntechnologies\.co\.in
 1724125675	Makyen	sn[\W_]*+technologies(?!\.co\.in(?<=sntechnologies\.co\.in))
 1724125700	Makyen	cleantechcontrols\.com\.au
+1724125724	Makyen	clean[\W_]*+tech[\W_]*+controls(?!\.com\.au(?<=cleantechcontrols\.com\.au))
