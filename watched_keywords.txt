@@ -65396,3 +65396,4 @@
 1724178097	Vickel	bhartiyarobotics\.com
 1724178224	Vickel	bhartiya[\W_]*+robotics(?!\.com(?<=bhartiyarobotics\.com))
 1724178698	Vickel	cncwebworld\.com
+1724181128	Vickel	vitaminsrevive\.com
