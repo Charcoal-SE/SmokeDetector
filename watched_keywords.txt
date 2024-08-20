@@ -65345,3 +65345,4 @@
 1724078461	lyxal	shengtangquartz\.com
 1724105353	Vickel	iFORCE[\W_]*+HACKER[\W_]*+RECOVERY
 1724107895	Dragonrage	valhallavitality\.com
+1724125651	Makyen	sntechnologies\.co\.in
