@@ -65376,3 +65376,4 @@
 1724155908	tripleee	orbitcurrency\.com
 1724155994	tripleee	proofofstatement(?:\.?com)?
 1724156199	VLAZ	blockcoaster\.com
+1724156227	VLAZ	blockcoaster(?!\.com)
