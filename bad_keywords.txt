@@ -3094,3 +3094,4 @@ zeropromosi(?!\.com)
 simplidistance(?!\.com)
 espacio[\W_]*+apk(?!\.tech)
 trust[\W_]*+guard[\W_]*+digital[\W_]*+assets[\W_]*+recovery
+beleafsofttech
