@@ -65363,3 +65363,4 @@
 1724139379	tripleee	(?-i:^viv das$)
 1724139435	tripleee	national[\W_]*+association[\W_]*+of[\W_]*+colleges[\W_]*+and[\W_]*+employers
 1724142145	double-beep	wishforbes\.com
+1724142609	tripleee	(?-i:^My Ngô$)
