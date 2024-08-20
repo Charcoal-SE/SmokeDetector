@@ -439,6 +439,9 @@ items:
   - meiling.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - melinda.ns.cloudflare.com.
+  - zeus.ns.cloudflare.com.
+- ns:
   - miki.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
