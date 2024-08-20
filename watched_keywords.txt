@@ -65378,3 +65378,4 @@
 1724156199	VLAZ	blockcoaster\.com
 1724156227	VLAZ	blockcoaster(?!\.com)
 1724156517	tripleee	dapps-exploresite\.web\.app
+1724156751	tripleee	oszusci2024(?# medium)
