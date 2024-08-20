@@ -1460,6 +1460,7 @@ items:
 - ip: 104.26.3.85
 - ip: 104.26.4.100
 - ip: 104.26.4.125
+- ip: 104.26.4.126
 - comment: FPs from doi.org
   disable: true
   ip: 104.26.4.132
@@ -1477,6 +1478,7 @@ items:
 - comment: FPs from doi.org
   disable: true
   ip: 104.26.5.125
+- ip: 104.26.5.126
 - comment: FPs from doi.org
   disable: true
   ip: 104.26.5.132
@@ -4024,6 +4026,7 @@ items:
 - ip: 172.67.68.131
 - ip: 172.67.68.139
 - ip: 172.67.68.140
+- ip: 172.67.68.186
 - ip: 172.67.68.220
 - ip: 172.67.68.238
 - ip: 172.67.68.243
