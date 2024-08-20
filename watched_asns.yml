@@ -7,6 +7,7 @@ items:
   disable: true
 - asn: '3595'
 - asn: '8455'
+- asn: '8650'
 - asn: '8622'
 - asn: '9498'
 - asn: '11042'
