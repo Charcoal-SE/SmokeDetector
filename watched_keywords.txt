@@ -65394,3 +65394,4 @@
 1724175733	double-beep	joyscore\.co
 1724176454	VLAZ	8171registrationonline\.pk
 1724178097	Vickel	bhartiyarobotics\.com
+1724178224	Vickel	bhartiya[\W_]*+robotics(?!\.com(?<=bhartiyarobotics\.com))
