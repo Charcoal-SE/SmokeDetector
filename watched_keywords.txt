@@ -65351,3 +65351,4 @@
 1724125724	Makyen	clean[\W_]*+tech[\W_]*+controls(?!\.com\.au(?<=cleantechcontrols\.com\.au))
 1724131833	Dragonrage	targetmol\.com
 1724131400	Cow	laptophub\.in
+1724132192	Dragonrage	totalenvironmentdownbythewater\.info
