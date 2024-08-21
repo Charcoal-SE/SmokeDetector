@@ -41445,7 +41445,6 @@
 1660551133	tripleee	(?-i:^Ruby Garage$)
 1660552979	tripleee	sixpackpower\.com
 1660553003	tripleee	(?-i:^Gregory Garvie$)
-1660558236	tripleee	drachen
 1660563846	Jeff Schaller	neek-reden-reading-glasses\.com
 1660564410	tripleee	syodolls*(?!\.com(?<=syodoll\.com))
 1660565875	tripleee	gallant156(?# fiverr)
