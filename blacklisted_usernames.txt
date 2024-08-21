@@ -1090,3 +1090,4 @@ carelab[sz]
 ^airlinespolicyhub$
 (?-i:^Pros Nearby$)
 (?-i:^Liza Liam$)
+(?-i:^Receipt Bot$)
