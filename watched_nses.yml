@@ -3480,6 +3480,9 @@ items:
   - raquel.ns.cloudflare.com.
 - ns:
   - naomi.ns.cloudflare.com.
+  - noel.ns.cloudflare.com.
+- ns:
+  - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
   - natasha.ns.cloudflare.com.
