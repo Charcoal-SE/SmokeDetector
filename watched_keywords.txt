@@ -65415,3 +65415,4 @@
 1724228870	tripleee	receipt[\W_]*+bot(?!\.com(?<=receipt-bot\.com))(?<!(?-i:^Receipt Bot$))
 1724230315	tripleee	trafficridermod\.me
 1724230780	tripleee	givehit\.com
+1724230825	tripleee	pms-vietnam\.com
