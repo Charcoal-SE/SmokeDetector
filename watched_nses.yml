@@ -5338,7 +5338,6 @@ items:
 - ns: webnames.ca.
 - ns: healthcareshopy.com.
 - ns: srtechnofab.com.
-- ns: drwebhost.com.
 - ns: ebndns.com.
 - comment: NXDOMAIN 2024-02-29
   disable: true
