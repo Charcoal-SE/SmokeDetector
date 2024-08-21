@@ -472,6 +472,9 @@ items:
   - noah.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
 - ns:
+  - patrick.ns.cloudflare.com.
+  - vivienne.ns.cloudflare.com.
+- ns:
   - pearl.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
