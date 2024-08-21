@@ -4908,8 +4908,7 @@ items:
 - ns: bluehost.in.
 - ns: just2trade.online.
 - ns: boxsecured.com.
-- comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but not resolving
-  disable: true
+- comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but occasionally not resolving
   ns: turhost.com.
 - ns: biswasdomain.com.
 - ns:
