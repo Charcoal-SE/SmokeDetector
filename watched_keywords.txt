@@ -65425,3 +65425,4 @@
 1724236276	Cow	tsxscreen\.com
 1724242226	tripleee	eco[\W_]*+green[\W_]*+it[\W_]*+recycling
 1724242596	tripleee	khoobsurat(?!\.in)
+1724242720	tripleee	fabtech[\W_]*+2024
