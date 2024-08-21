@@ -2648,6 +2648,9 @@ items:
   - jasper.ns.cloudflare.com.
   - jocelyn.ns.cloudflare.com.
 - ns:
+  - jasper.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
+- ns:
   - javon.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
