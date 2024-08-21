@@ -53957,7 +53957,6 @@
 1698655096	VLAZ	hilltopresorts\.com
 1698660081	cigien	hilltop[\W_]*+resorts?+(?!\.com(?<=hilltopresorts\.com))
 1698652383	Nick	receipt-bot\.com
-1698660195	cigien	receipt[\W_]*+bot(?!\.com(?<=receipt-bot\.com))
 1698651660	VLAZ	nsktglobal\.com
 1698660318	cigien	partsips\.com
 1698660387	cigien	bitlocker-recovery\.com
