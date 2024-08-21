@@ -65417,3 +65417,4 @@
 1724230780	tripleee	givehit\.com
 1724230825	tripleee	pms-vietnam\.com
 1724230864	tripleee	indooroopillydoctors\.com\.au
+1724231076	tripleee	health[\W_]*+care[\W_]*docs
