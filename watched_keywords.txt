@@ -65412,3 +65412,4 @@
 1724224839	tripleee	(?-i: gMOjD_Lt8qY)(?# youtube)
 1724224922	tripleee	(?-i:^Amanda willi$)
 1724227895	tripleee	dronesdeli\.com
+1724228425	tripleee	al[\W_]*+weam[\W_]*+transport
