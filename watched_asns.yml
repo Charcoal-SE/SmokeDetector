@@ -31,6 +31,7 @@ items:
 - asn: '20013'
   comment: FPs; do not watch
   disable: true
+- asn: '20454'
 - asn: '21501'
 - asn: '22611'
 - asn: '22612'
