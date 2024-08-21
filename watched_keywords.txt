@@ -65199,7 +65199,6 @@
 1723786011	lyxal	castleappk(?!\.org)
 1723774738	lyxal	drosakaherbalhome99@gmail\.com
 1723774764	lyxal	drosakaherbalhome99(?!@gmail\.com)
-1723787164	lyxal	bagas31
 1723787624	lyxal	whitegrizzly\.com
 1723787647	lyxal	whitegrizzly(?!\.com)
 1723788134	lyxal	cat[\W_]*+skiing[\W_]*+canada
