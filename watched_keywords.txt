@@ -22730,7 +22730,6 @@
 1601319121	tripleee	slackjaw(?# medium.com)
 1601324521	Mast	fakenamegenerator\.com
 1601344816	Makyen	docungtamlinh\.net
-1601346236	Machavity	shahid\.mbc\.net
 1601352834	Makyen	thedevskingdom\.xyz
 1601358068	tripleee	(?-i:_uD0NIqWtiM)(?# youtube)
 1601358095	tripleee	(?-i:4n988Oy5p9A)(?# youtube)
