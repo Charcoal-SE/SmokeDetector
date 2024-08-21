@@ -6243,7 +6243,9 @@ items:
   ip: 76.223.122.69
 - ip: 76.223.27.102
 - ip: 76.223.32.197
-- ip: 76.223.54.146
+- ip: comment: disabled after a few days, lots of FPs 2024-08-21
+  disable: true
+  76.223.54.146
 - comment: too high FP rate, 1/39
   disable: true
   ip: 76.76.21.123
