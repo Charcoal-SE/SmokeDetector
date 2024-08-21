@@ -49698,7 +49698,6 @@
 1682637129	Makyen	imlil-toubkal\.com
 1682637153	Makyen	imlil[\W_]*+toubkal(?!\.com(?<=imlil-toubkal\.com))
 1682655023	Jesse	cbainfotech\.com
-1682655164	Makyen	cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
 1682656544	tripleee	auto360\.website
 1682663324	tripleee	betonorganic\.com
 1682663988	tripleee	elafilador\.net
