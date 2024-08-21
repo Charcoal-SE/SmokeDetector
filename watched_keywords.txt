@@ -64029,7 +64029,6 @@
 1721102318	Dragonrage	basepaint\.xyz
 1721114999	Dragonrage	enkingint\.org
 1721123573	tripleee	monography\.ca
-1721123822	tripleee	(?-i:^Liza Liam$)
 1721124005	tripleee	91clubgameapp\.com
 1721124138	tripleee	xiao_hhpoker(?# t.me)
 1721124734	tripleee	m3areed\.com
