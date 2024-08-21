@@ -543,6 +543,9 @@ items:
 - ns: thesecurededicatedserver.com.
 - ns: cloudnstools.com.
 - ns:
+  - ns8511.hostgator.com.
+  - ns8512.hostgator.com.
+- ns:
   - cns3999.hostgator.in.
   - cns4000.hostgator.in.
 - ns:
