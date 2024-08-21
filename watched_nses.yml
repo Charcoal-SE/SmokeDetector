@@ -744,6 +744,9 @@ items:
   - athena.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
+  - athena.ns.cloudflare.com.
+  - tosana.ns.cloudflare.com.
+- ns:
   - audrey.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
 - ns:
