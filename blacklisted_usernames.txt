@@ -1091,3 +1091,4 @@ carelab[sz]
 (?-i:^Pros Nearby$)
 (?-i:^Liza Liam$)
 (?-i:^Receipt Bot$)
+(?-i:^Sakshi More$)
