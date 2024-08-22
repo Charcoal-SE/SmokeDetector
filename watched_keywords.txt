@@ -65457,3 +65457,4 @@
 1724326739	Jeff Schaller	prestigesouthernstar\.org\.in
 1724326871	double-beep	jeetubroadband\.in
 1724327518	Vickel	(?-i:4275aKR)(?# fiverr)
+1724329540	Cow	(?-i:TryNaganoFatBurningTonic)(?# facebook.com)
