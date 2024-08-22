@@ -30208,7 +30208,6 @@
 1626180386	cigien	360techexplorer\.com
 1626180619	cigien	nuvectra[\W_]*+medical(?!\.com(?<=nuvectramedical\.com))
 1626180882	cigien	waytomongolia\.com
-1626180920	Spevacus	indidigital\.in
 1626180952	cigien	blgdlab\.com
 1626183398	cigien	easyfirmwarez\.com
 1626186052	Ollie	novatec\.co\.in
