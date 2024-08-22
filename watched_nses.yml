@@ -492,6 +492,9 @@ items:
   - rose.ns.cloudflare.com.
 - ns:
   - andy.ns.cloudflare.com.
+  - betty.ns.cloudflare.com.
+- ns:
+  - andy.ns.cloudflare.com.
   - isla.ns.cloudflare.com.
 - ns:
   - andy.ns.cloudflare.com.
