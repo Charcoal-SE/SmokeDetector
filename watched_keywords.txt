@@ -65463,3 +65463,4 @@
 1724346469	Makyen	3d[\W_]*+sourcerer(?!\.com(?<=3dsourcerer\.com))
 1724346791	General Grievance	pearllemonweb\.com
 1724347520	Cow	maashaktiyogbali\.com
+1724357933	double-beep	bookwritinggenie\.com
