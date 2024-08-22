@@ -65435,3 +65435,4 @@
 1724293706	Spevacus	eu\.zonerama\.com
 1724299877	Cow	getgbwa\.in
 1724308274	VLAZ	bytearoo\.com
+1724308332	VLAZ	byte[\W_]*+aroo(?!\.com(?<=bytearoo\.com))
