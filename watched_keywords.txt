@@ -65458,3 +65458,4 @@
 1724326871	double-beep	jeetubroadband\.in
 1724327518	Vickel	(?-i:4275aKR)(?# fiverr)
 1724329540	Cow	(?-i:TryNaganoFatBurningTonic)(?# facebook.com)
+1724330856	Cow	armindindustries\.com
