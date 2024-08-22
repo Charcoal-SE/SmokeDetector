@@ -62534,7 +62534,6 @@
 1717570003	Cow	ways2uni\.com
 1717576007	Cow	nextgclasses\.com
 1717576080	Cow	educationsharingacademy\.cloud
-1717577011	Dragonrage	gbapkapp\.in
 1717579099	Dragonrage	streamsnowonline\.com
 1717579686	Dragonrage	htm261\.com
 1717580341	Cow	favazmubarak\.com
