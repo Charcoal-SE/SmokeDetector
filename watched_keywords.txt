@@ -47604,7 +47604,6 @@
 1677435490	Makyen	asocks\.com(?<=\basocks\.com)(?<![^\W_]-asocks\.com)(?![.-][^\W_])(?=\b)
 1677441722	Makyen	(?-i:P8pqB0u)(?#cutt.ly)
 1677442436	Makyen	(?-i:lDIP3)(?#shorturl.at)
-1677443418	Makyen	huggingface\.co/spaces
 1677443563	Ethan	getprocrackhere\.com
 1677443569	Ethan	propccrack\.net
 1677443578	Ethan	muzammilpc\.net
