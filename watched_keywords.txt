@@ -65458,3 +65458,4 @@
 1724329540	Cow	(?-i:TryNaganoFatBurningTonic)(?# facebook.com)
 1724330856	Cow	armindindustries\.com
 1724333780	tripleee	pokemoninfinitefusions\.us
+1724337384	lyxal	kraftstarmanagement(?!\.com)
