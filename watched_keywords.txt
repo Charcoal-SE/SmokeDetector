@@ -65438,3 +65438,4 @@
 1724308332	VLAZ	byte[\W_]*+aroo(?!\.com(?<=bytearoo\.com))
 1724308485	VLAZ	decodex\.io
 1724308540	Dragonrage	xtrapharmacy\.com
+1724310004	tripleee	ftechiz[\W_]*+solution(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
