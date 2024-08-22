@@ -65436,3 +65436,4 @@
 1724299877	Cow	getgbwa\.in
 1724308274	VLAZ	bytearoo\.com
 1724308332	VLAZ	byte[\W_]*+aroo(?!\.com(?<=bytearoo\.com))
+1724308485	VLAZ	decodex\.io
