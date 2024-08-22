@@ -3097,3 +3097,4 @@ trust[\W_]*+guard[\W_]*+digital[\W_]*+assets[\W_]*+recovery
 beleafsofttech
 beleaf[\W_]*+tech(?!\.com(?<=beleaftechnologies\.com))(?:nologies)?
 cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
+GBWhatsApp
