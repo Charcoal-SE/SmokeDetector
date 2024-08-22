@@ -65458,3 +65458,4 @@
 1724330856	Cow	armindindustries\.com
 1724333780	tripleee	pokemoninfinitefusions\.us
 1724337376	lyxal	kraftstarmanagement\.com
+1724341378	Makyen	lakshya[\W_]*+academy
