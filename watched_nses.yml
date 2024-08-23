@@ -2026,6 +2026,9 @@ items:
   - hank.ns.cloudflare.com.
 - ns:
   - elma.ns.cloudflare.com.
+  - maxim.ns.cloudflare.com.
+- ns:
+  - elma.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
 - ns:
   - elma.ns.cloudflare.com.
