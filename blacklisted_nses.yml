@@ -729,6 +729,9 @@ items:
 - ns:
   - ns313.ownmyserver.com.
   - ns314.ownmyserver.com.
+- ns:
+  - sg1.ownmyserver.com.
+  - sg2.ownmyserver.com.
 - ns: borntechy.com.
 - ns: yuvajobs.in.
 - ns:
