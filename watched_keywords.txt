@@ -65479,3 +65479,4 @@
 1724404850	Dragonrage	weaversdirect\.in
 1724404875	VLAZ	itechniq\.com
 1724403307	Cow	weavers[\W_]*+direct
+1724404409	Cow	youtubevanceds\.org
