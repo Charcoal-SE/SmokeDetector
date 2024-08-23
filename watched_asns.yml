@@ -105,6 +105,8 @@ items:
   comment: 4/24 over 10 months
   disable: true
 - asn: '46475'
+  comment: 61/239 over 2 years; no 1-weight reports
+  disable: true
 - asn: '46844'
 - asn: '47583'
 - asn: '48254'
