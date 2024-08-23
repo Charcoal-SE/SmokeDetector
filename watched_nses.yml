@@ -3300,6 +3300,9 @@ items:
   - trey.ns.cloudflare.com.
 - ns:
   - mariah.ns.cloudflare.com.
+  - nico.ns.cloudflare.com.
+- ns:
+  - mariah.ns.cloudflare.com.
   - rene.ns.cloudflare.com.
 - ns:
   - marissa.ns.cloudflare.com.
