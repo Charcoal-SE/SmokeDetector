@@ -65338,7 +65338,6 @@
 1724139435	tripleee	national[\W_]*+association[\W_]*+of[\W_]*+colleges[\W_]*+and[\W_]*+employers
 1724142145	double-beep	wishforbes\.com
 1724142609	tripleee	(?-i:^My Ngô$)
-1724143998	tripleee	prosnearby\.co\.uk
 1724144038	Dragonrage	fanxcelmanagement\.com
 1724144799	tripleee	healthservices123\.blogspot
 1724144822	tripleee	socialsocial\.social
