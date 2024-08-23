@@ -1092,3 +1092,4 @@ carelab[sz]
 (?-i:^Liza Liam$)
 (?-i:^Receipt Bot$)
 (?-i:^Sakshi More$)
+(?-i:^Devstringx Technologies$)
