@@ -3848,7 +3848,9 @@ items:
 - ip: 172.67.205.220
 - ip: 172.67.205.224
 - ip: 172.67.205.226
-- ip: 172.67.205.25
+- comment: gradle-wrapper.properties - 0/15 over 2 months
+  disable: true
+  ip: 172.67.205.25
 - ip: 172.67.205.252
 - ip: 172.67.205.28
 - ip: 172.67.205.5
