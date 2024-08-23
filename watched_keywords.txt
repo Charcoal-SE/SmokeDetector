@@ -65478,3 +65478,4 @@
 1724404810	Dragonrage	theliteblue\.com
 1724404850	Dragonrage	weaversdirect\.in
 1724404875	VLAZ	itechniq\.com
+1724403307	Cow	weavers[\W_]*+direct
