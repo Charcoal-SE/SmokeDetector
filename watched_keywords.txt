@@ -65481,3 +65481,4 @@
 1724403307	Cow	weavers[\W_]*+direct
 1724404409	Cow	youtubevanceds\.org
 1724405138	Cow	eexperts\.in
+1724406696	tripleee	altestcorp\.com
