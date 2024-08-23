@@ -445,7 +445,9 @@ items:
 - ip: 104.21.22.111
 - ip: 104.21.22.13
 - ip: 104.21.22.133
-- ip: 104.21.22.135
+- comment: gradle-wrapper.properties - 0/24 over 2 months
+  disable: true
+  ip: 104.21.22.135
 - ip: 104.21.22.138
 - ip: 104.21.22.146
 - ip: 104.21.22.200
