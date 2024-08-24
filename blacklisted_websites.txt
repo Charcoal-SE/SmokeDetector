@@ -5772,3 +5772,4 @@ getmehuman\.com
 devstringx\.com
 prosnearby\.co\.uk
 guides\.co
+sway\.cloud\.microsoft
