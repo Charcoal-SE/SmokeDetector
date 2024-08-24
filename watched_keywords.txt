@@ -65518,3 +65518,4 @@
 1724488835	Cow	konradstaniszewski\.com
 1724489900	Cody Gray	genius[\W_]*wave
 1724489948	Dragonrage	logipromptproacademy\.com
+1724490393	Cody Gray	logiprompt(?!proacademy\.com)
