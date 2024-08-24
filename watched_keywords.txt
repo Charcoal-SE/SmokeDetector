@@ -65529,3 +65529,4 @@
 1724522514	Makyen	skillwaala\.com
 1724524378	Dragonrage	downloadpcsoft\.info
 1724524700	Makyen	tcs(?:[\W_]*+tracking)?[\W_]*+office(?:[\W_]*+timings)?
+1724531534	Makyen	lisapricerecoverycompany
