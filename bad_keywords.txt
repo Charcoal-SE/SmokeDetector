@@ -3098,3 +3098,4 @@ beleafsofttech
 beleaf[\W_]*+tech(?!\.com(?<=beleaftechnologies\.com))(?:nologies)?
 cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
 complain\Won\WSwiggy
+phonepe[\W_]*+customer
