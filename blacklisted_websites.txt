@@ -5772,3 +5772,4 @@ devstringx\.com
 prosnearby\.co\.uk
 sway\.cloud\.microsoft
 prohealthguides\.com
+\b(?<![^\W_]-)guides\.co(?![.-][^\W_])\b
