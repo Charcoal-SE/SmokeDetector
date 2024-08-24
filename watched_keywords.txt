@@ -65511,3 +65511,4 @@
 1724476552	Jeff Schaller	prahost\.com
 1724479063	Dragonrage	genuineapks\.com
 1724479934	Dragonrage	hacknizertech\.info
+1724479971	Dragonrage	(?-i:haccknizer)(?#t.me)
