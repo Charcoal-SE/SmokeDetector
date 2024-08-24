@@ -65519,3 +65519,4 @@
 1724489948	Dragonrage	logipromptproacademy\.com
 1724490393	Cody Gray	logiprompt(?!proacademy\.com)
 1724490564	Cody Gray	mobikwik(?!\.com)
+1724490590	Cody Gray	mobikwik\.com
