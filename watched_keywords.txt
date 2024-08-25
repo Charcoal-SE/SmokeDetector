@@ -65544,3 +65544,4 @@
 1724562790	Makyen	riro[\W_]*+sports(?!\.com(?<=rirosports\.com))
 1724564021	Makyen	instaup
 1724564899	Dragonrage	rittoresource\.org
+1724569174	Dragonrage	zhangcatherine\.com
