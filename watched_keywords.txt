@@ -65553,3 +65553,4 @@
 1724576416	Cody Gray	YouTube[\W_]*+Vanceds?(?!\.org)
 1724577415	Cody Gray	(?-i:f2ocQL6t\.jpg)
 1724577481	Cody Gray	marykbeck190(?:@gmail\.com)?
+1724577797	Cody Gray	cred\.club
