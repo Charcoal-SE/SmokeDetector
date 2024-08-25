@@ -65550,3 +65550,4 @@
 1724573189	Dragonrage	hamsterkombat-daily\.com
 1724574041	Cody Gray	letscms\.com
 1724574574	Cody Gray	motcheck\.org
+1724576416	Cody Gray	YouTube[\W_]*+Vanceds?(?!\.org)
