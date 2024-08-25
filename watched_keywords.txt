@@ -65561,3 +65561,4 @@
 1724584447	VLAZ	128\.199\.137\.149
 1724591437	Cody Gray	fivemmlo\.net
 1724591465	Cody Gray	FiveM[\W_]*+MLO(?!\.net)
+1724597051	Spevacus	(?-i:HFWVSRS)(?# Survey Monkey)
