@@ -65563,3 +65563,4 @@
 1724591465	Cody Gray	FiveM[\W_]*+MLO(?!\.net)
 1724597051	Spevacus	(?-i:HFWVSRS)(?# Survey Monkey)
 1724523237	Cow	leanbkk\.net
+1724499074	Cow	100078106500760(?# facebook id)
