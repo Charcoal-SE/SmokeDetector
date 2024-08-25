@@ -65541,3 +65541,4 @@
 1724561625	Dragonrage	technonimaana\.com
 1724562626	Makyen	gruhalakshmischeme\.in
 1724562693	Dragonrage	rirosports\.com
+1724562790	Makyen	riro[\W_]*+sports(?!\.com(?<=rirosports\.com))
