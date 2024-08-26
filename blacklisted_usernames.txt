@@ -1093,5 +1093,4 @@ carelab[sz]
 (?-i:^Receipt Bot$)
 (?-i:^Sakshi More$)
 (?-i:^Devstringx Technologies$)
-(?-i:^Davis Smith$)
 (?-i:^Amber Lucy$)
