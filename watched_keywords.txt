@@ -65588,3 +65588,4 @@
 1724648539	VLAZ	(?-i:0271JrFY)(?# kiwify.app)
 1724648572	VLAZ	transformacao\.milionaria
 1724653378	Cow	advocateking\.com
+1724653893	tripleee	callinterview\.com
