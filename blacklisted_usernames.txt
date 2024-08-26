@@ -1094,3 +1094,4 @@ carelab[sz]
 (?-i:^Sakshi More$)
 (?-i:^Devstringx Technologies$)
 (?-i:^Davis Smith$)
+(?-i:^Amber Lucy$)
