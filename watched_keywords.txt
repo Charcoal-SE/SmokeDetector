@@ -65593,3 +65593,4 @@
 1724658489	Dragonrage	pvtaan\.com
 1724660002	Dragonrage	gromedcoir\.com
 1724662005	tripleee	baccana\.in
+1724662039	tripleee	baccana(?!\.in)
