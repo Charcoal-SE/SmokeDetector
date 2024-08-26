@@ -65599,3 +65599,4 @@
 1724670634	Cow	tik804\.com
 1724673340	Cow	okdigitalitfirm\.com
 1724676052	lyxal	harshithmanufacturers\.com
+1724676666	lyxal	shop[\W_]*+travis[\W_]*+scott(?!\.us)
