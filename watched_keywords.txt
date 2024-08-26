@@ -65603,3 +65603,4 @@
 1724676659	lyxal	shoptravisscottmerch\.us
 1724677657	lyxal	sassyos\.com
 1724679541	Jeff Schaller	ccd\.com\.pk
+1724676666	lyxal	shop[\W_]*+travis[\W_]*+scott(?!\.us)
