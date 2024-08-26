@@ -65605,3 +65605,4 @@
 1724679541	Jeff Schaller	ccd\.com\.pk
 1724676666	lyxal	shop[\W_]*+travis[\W_]*+scott(?!\.us)
 1724680769	Jeff Schaller	jeebr\.net
+1724681521	Jeff Schaller	(?-i:blazeotokpa)(?#x.com)
