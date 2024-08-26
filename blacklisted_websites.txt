@@ -5774,3 +5774,4 @@ sway\.cloud\.microsoft
 prohealthguides\.com
 \b(?<![^\W_]-)guides\.co(?![.-][^\W_])\b
 lisamorgampriceeco6\.wixsite\.com
+graywaretechservices\.com
