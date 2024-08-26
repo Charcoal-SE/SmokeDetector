@@ -65600,3 +65600,4 @@
 1724670455	tripleee	vertexsuite\.in
 1724670495	tripleee	vertex[\W_]*+suite(?!\.in(?<=vertexsuite\.in))
 1724670634	Cow	tik804\.com
+1724673340	Cow	okdigitalitfirm\.com
