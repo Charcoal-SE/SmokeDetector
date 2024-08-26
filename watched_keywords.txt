@@ -65609,3 +65609,4 @@
 1724689274	double-beep	astrongfitness\.com
 1724689309	double-beep	masrawysat111\.com
 1724704113	Mast	contact[\W_]*+Expedia
+1724715165	Dragonrage	gntvnews\.com
