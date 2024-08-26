@@ -65530,7 +65530,6 @@
 1724531534	Makyen	lisapricerecoverycompany
 1724531566	Makyen	recoveryhacker
 1724531600	Makyen	lisa[\W_]*+morgan[\W_]*+price[\W_]*+recovery[\W_]*+company
-1724531611	Makyen	lisamorgampriceeco6\.wixsite\.com
 1724532351	Dragonrage	action\.solscan\.io
 1724534863	Fastnlight	avairypshops\.com
 1724559875	Makyen	customer@phonpe\.co\.cvvv
