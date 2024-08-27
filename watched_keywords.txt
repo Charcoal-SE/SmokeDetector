@@ -65646,3 +65646,4 @@
 1724765610	tripleee	quartier[\W]*+studio
 1724765651	tripleee	quartier[\W_]*+interior(?!\.com(?<=quartierinterior\.com))
 1724767721	Vickel	crypto[\W_]*+pandemic[\W_]*+hunter
+1724770573	Jeff Schaller	jurgen\.best
