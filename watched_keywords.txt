@@ -65621,3 +65621,4 @@
 1724739573	Cow	thekrishinternational\.com
 1724740528	Dragonrage	smartnetsoftware\.com
 1724741179	tripleee	cpnursery\.in
+1724741199	tripleee	cp[\W_]*+nursery(?!\.in(?<=cpnursery\.in))
