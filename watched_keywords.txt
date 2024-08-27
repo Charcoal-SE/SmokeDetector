@@ -62626,7 +62626,6 @@
 1717756965	VLAZ	tree[\W_]kisan(?!\.com(?<=treekisan\.com))
 1717756987	Dragonrage	fairdealrubber\.com
 1717757979	VLAZ	bigbasket\.pk
-1717758485	Jeff Schaller	swiftstart\.com
 1717760070	Jeff Schaller	bestbuyhow\.com
 1717761465	Jeff Schaller	crystaldivine\.in
 1717761497	Jeff Schaller	gymyog\.co\.uk
