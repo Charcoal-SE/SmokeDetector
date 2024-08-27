@@ -65642,3 +65642,4 @@
 1724765058	Makyen	lizard[\W_]*+(?:ip)?tv(?!\.net(?<=lizardtv\.net))
 1724765136	Makyen	cnet[\W_]*+infosystem(?!\.com(?<=cnetinfosystem\.com))
 1724765304	tripleee	quartier|\W]*+studio
+1724765477	Makyen	skinqure(?:[\W_]*+hair[\W_]*+transplant(?!\.com(?<=skinqurehairtransplant\.com)))?
