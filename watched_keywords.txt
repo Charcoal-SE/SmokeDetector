@@ -65640,3 +65640,4 @@
 1724761269	tripleee	imperialintelligence\.co\.uk
 1724762081	double-beep	winteranma\.com
 1724765058	Makyen	lizard[\W_]*+(?:ip)?tv(?!\.net(?<=lizardtv\.net))
+1724765136	Makyen	cnet[\W_]*+infosystem(?!\.com(?<=cnetinfosystem\.com))
