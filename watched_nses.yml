@@ -3677,6 +3677,9 @@ items:
   - raphaela.ns.cloudflare.com.
   - razvan.ns.cloudflare.com.
 - ns:
+  - rene.ns.cloudflare.com.
+  - teresa.ns.cloudflare.com.
+- ns:
   - rex.ns.cloudflare.com.
   - sky.ns.cloudflare.com.
 - ns:
