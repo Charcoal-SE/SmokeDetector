@@ -42987,7 +42987,6 @@
 1664345224	tripleee	magentobrain\.com
 1664346692	Nick	deutschlandsupplements\.org
 1664347080	tripleee	cbmedx
-1664347115	tripleee	hackmd\.io
 1664347743	tripleee	bestonasia\.com
 1664347898	tripleee	beston[\W_]*+(?:asia[\W_]*+)?(?:group[\W_]*+)?(?:co)?(?!\.com(?<=bestonasia\.com))
 1664348281	tripleee	imarku\.net
