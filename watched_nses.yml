@@ -3755,6 +3755,9 @@ items:
   - woz.ns.cloudflare.com.
 - ns:
   - simon.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
+- ns:
+  - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
   - skip.ns.cloudflare.com.
