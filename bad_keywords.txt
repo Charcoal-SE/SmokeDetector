@@ -3109,3 +3109,4 @@ mighty[\W_]*+hacker[\W_]*+recovery
 mightyhackerrecovery
 fioricet
 genius[\W_]*wave
+Matlab[\W_]*+Assignment[\W_]*+Experts
