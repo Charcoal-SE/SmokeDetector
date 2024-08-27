@@ -3107,3 +3107,4 @@ PhonePe[\W_]*+executive
 How\Wdo\WI\Wspeak\Wto\Wsomeone\Wat\W𝔈𝔵𝔭𝔢𝔡𝔦𝔞
 mighty[\W_]*+hacker[\W_]*+recovery
 mightyhackerrecovery
+fioricet
