@@ -65615,3 +65615,4 @@
 1724725907	Fastnlight	BsbForensic\.com
 1724726012	Fastnlight	bsbforensic[\W_]*+c(?:o|0)m(?<!bsbforensic\.com)
 1724738811	tripleee	NDC 67386-501-52
+1724738834	tripleee	NDC 67386-501-55
