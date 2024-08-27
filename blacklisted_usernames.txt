@@ -1095,3 +1095,4 @@ carelab[sz]
 (?-i:^Devstringx Technologies$)
 (?-i:^Amber Lucy$)
 (?-i:^PSR Compliance$)
+(?-i:^Krish International$)
