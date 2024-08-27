@@ -3596,6 +3596,9 @@ items:
   - oswald.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
+  - otto.ns.cloudflare.com.
+  - sofia.ns.cloudflare.com.
+- ns:
   - pablo.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
