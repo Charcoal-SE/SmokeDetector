@@ -1728,6 +1728,9 @@ items:
   - drew.ns.cloudflare.com.
 - ns:
   - deb.ns.cloudflare.com.
+  - guss.ns.cloudflare.com.
+- ns:
+  - deb.ns.cloudflare.com.
   - malcolm.ns.cloudflare.com.
 - ns:
   - deborah.ns.cloudflare.com.
