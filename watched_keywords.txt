@@ -65648,3 +65648,4 @@
 1724767721	Vickel	crypto[\W_]*+pandemic[\W_]*+hunter
 1724770573	Jeff Schaller	jurgen\.best
 1724773074	tripleee	wirelesscosmic\.com
+1724773818	Jeff Schaller	armorthane\.com
