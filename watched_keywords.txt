@@ -38449,7 +38449,6 @@
 1652264827	tripleee	blucheez\.com\.bd
 1652266758	tripleee	todaynationnews\.com
 1652266950	tripleee	subsquid\.io
-1652266979	tripleee	anna[\W_]*+loginova\d*
 1652267215	tripleee	buchananreform\.org
 1652269159	tripleee	wavlinklogin\.com
 1652269937	tripleee	factmr\.com
