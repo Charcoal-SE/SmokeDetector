@@ -65630,3 +65630,4 @@
 1724754974	double-beep	srimukyapranadevaruastrobhavan\.com
 1724755886	double-beep	breedcoins\.com
 1724756132	tripleee	logitrain\.com\.au
+1724756328	tripleee	(?-i:^Freya James$)
