@@ -1096,3 +1096,4 @@ carelab[sz]
 (?-i:^Amber Lucy$)
 (?-i:^PSR Compliance$)
 (?-i:^Krish International$)
+(?-i:^Codeine UK24$)
