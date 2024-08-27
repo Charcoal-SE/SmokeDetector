@@ -1099,3 +1099,4 @@ carelab[sz]
 (?-i:^Codeine UK24$)
 (?-i:^Jaminson Watler$)
 (?-i:^All Hour Locksmith$)
+(?-i:^Mohamad Banna$)
