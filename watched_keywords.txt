@@ -65610,3 +65610,4 @@
 1724689309	double-beep	masrawysat111\.com
 1724704113	Mast	contact[\W_]*+Expedia
 1724715165	Dragonrage	gntvnews\.com
+1724726012	Fastnlight	bsbforensic[\W_]*+c(?:o|0)m(?<!bsbforensic\.com)
