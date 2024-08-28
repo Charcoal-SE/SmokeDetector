@@ -61668,7 +61668,6 @@
 1715769860	VLAZ	quora[\W_]*+spaces
 1715771455	Jeff Schaller	Dtech[\W_]*+Corporation
 1715775137	VLAZ	tobeesuit\.com
-1715775532	Jeff Schaller	sunwinhealthcare\.in
 1715776943	Jeff Schaller	recovermyloss(?:000)?
 1715778772	Spevacus	idepazh\.ir
 1715778118	General Grievance	peekup\.net
