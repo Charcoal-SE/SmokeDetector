@@ -65694,3 +65694,4 @@
 1724837413	Cody Gray	7[\W_]*+OH(?!-usa\.com)
 1724837534	Cody Gray	bizbooks[\W_]*+advice(?!\.com)
 1724838053	Cody Gray	OpenServ\.ai
+1724838564	Cody Gray	(?-i:SAHFALL2024)
