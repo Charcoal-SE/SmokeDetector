@@ -1104,3 +1104,4 @@ carelab[sz]
 (?-i:Stoffels Tittl$)
 (?-i:^IT education Center$)
 (?-i:^bizbooks advice$)
+(?-i:^Bump Legal$)
