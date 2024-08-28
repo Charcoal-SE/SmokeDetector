@@ -65699,3 +65699,4 @@
 1724839051	Cody Gray	programming[\W_]*+homework[\W_]*+help(?!\.com)
 1724839247	Cody Gray	sunwin[\W_]*+healthcare(?:PCD)?(?!\.in)
 1724840528	Dragonrage	glyters\.com
+1724840582	Cody Gray	glyters(?!\.com)
