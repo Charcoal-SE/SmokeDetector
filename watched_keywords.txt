@@ -65719,3 +65719,4 @@
 1724853877	Jeff Schaller	commport\.com
 1724854720	tripleee	persian[\W_]*+pishraneh
 1724854238	Cow	enterprisebot\.ai
+1724854631	Cow	a\.bonakdar(?:@gmail\.com)?
