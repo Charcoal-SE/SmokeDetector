@@ -3515,6 +3515,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - neil.ns.cloudflare.com.
+  - vita.ns.cloudflare.com.
+- ns:
   - nelci.ns.cloudflare.com.
   - patryk.ns.cloudflare.com.
 - ns:
