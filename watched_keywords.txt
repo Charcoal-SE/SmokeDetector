@@ -65734,3 +65734,4 @@
 1724866713	Cody Gray	meltonclassics(?!\.com)
 1724860948	Cow	toplinks\.one
 1724859414	General Grievance	mayermuskrecoveries\.com
+1724862670	Cow	(?-i:1PFvkOsDU4jSa9amsxcALs6soBMQThSQWOdEZKnoMFoE)(?# Google Spreadsheet)
