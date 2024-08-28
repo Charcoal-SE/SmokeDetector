@@ -1105,3 +1105,4 @@ carelab[sz]
 (?-i:^IT education Center$)
 (?-i:^bizbooks advice$)
 (?-i:^Bump Legal$)
+(?-i:^frostisland$)
