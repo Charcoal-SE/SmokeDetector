@@ -65721,3 +65721,4 @@
 1724854238	Cow	enterprisebot\.ai
 1724854631	Cow	a\.bonakdar(?:@gmail\.com)?
 1724857706	Makyen	ennovelas
+1724857735	Makyen	ennovelas1\.com
