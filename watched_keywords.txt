@@ -65740,3 +65740,4 @@
 1724869291	Cody Gray	cenforces\.us
 1724870192	Cody Gray	barca\.rf\.gd
 1724870253	Cody Gray	dyethin\.com
+1724872347	Vickel	alphanapkinmachines\.com #from spammy user profile and 1st spam attempt
