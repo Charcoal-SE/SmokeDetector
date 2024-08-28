@@ -65727,3 +65727,4 @@
 1724857830	Makyen	resume[\W_]*+folks(?!\.com(?<=resumefolks\.com))
 1724863542	Cow	statisticcalculatorhub\.com
 1724861021	Cow	toplinks\.one(?:@gmail\.com)?
+1724863011	Cow	vehiclecare\.in
