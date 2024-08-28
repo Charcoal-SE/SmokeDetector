@@ -65725,3 +65725,4 @@
 1724857767	Makyen	ennovelas1(?!\.cam)(?!\.com)
 1724857795	Makyen	golden[\W_]*+falcon(?:[\W_]*+(?:international|management)s?)*(?!\.com(?<=goldenfalconinternationals\.com))
 1724857830	Makyen	resume[\W_]*+folks(?!\.com(?<=resumefolks\.com))
+1724859414	General Grievance	mayermuskrecoveries\.com
