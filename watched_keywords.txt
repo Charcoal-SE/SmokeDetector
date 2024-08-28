@@ -65695,3 +65695,4 @@
 1724837534	Cody Gray	bizbooks[\W_]*+advice(?!\.com)
 1724838053	Cody Gray	OpenServ\.ai
 1724838564	Cody Gray	(?-i:SAHFALL2024)
+1724838800	VLAZ	ressoapkpro\.net
