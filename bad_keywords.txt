@@ -3112,3 +3112,4 @@ genius[\W_]*wave
 Matlab[\W_]*+Assignment[\W_]*+Experts
 reclaimeasy
 h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
+complaint?[\W_]*+(?:in|on|to)[\W_]*+Swiggy
