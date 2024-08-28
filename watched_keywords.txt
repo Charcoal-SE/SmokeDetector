@@ -65697,3 +65697,4 @@
 1724838564	Cody Gray	(?-i:SAHFALL2024)
 1724838800	VLAZ	ressoapkpro\.net
 1724839051	Cody Gray	programming[\W_]*+homework[\W_]*+help(?!\.com)
+1724839247	Cody Gray	sunwin[\W_]*+healthcare(?:PCD)?(?!\.in)
