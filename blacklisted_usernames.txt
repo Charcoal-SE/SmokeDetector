@@ -1101,3 +1101,4 @@ carelab[sz]
 (?-i:^All Hour Locksmith$)
 (?-i:^Mohamad Banna$)
 (?-i:^Kanzlei Banna$)
+(?-i:Stoffels Tittl$)
