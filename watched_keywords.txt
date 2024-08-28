@@ -65674,3 +65674,4 @@
 1724826847	VLAZ	xvip\.monster
 1724826876	VLAZ	xvip(?:monster)?
 1724827010	tripleee	(?-i:6YEbGpN)(?# fiverr)
+1724827072	Dragonrage	samyak\.com
