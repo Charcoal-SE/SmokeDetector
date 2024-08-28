@@ -65743,3 +65743,4 @@
 1724875172	Dragonrage	nsiaccounting\.com
 1724875933	Dragonrage	vapesvilla\.com
 1724882099	Jeff Schaller	digitechbd\.info
+1724882695	Fastnlight	VIRTUAL[\W_]*+FUNDS[\W_]*+RESURRECTION(?!\.info(?<=VIRTUALFUNDSRESURRECTION\.info))
