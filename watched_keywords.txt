@@ -65715,3 +65715,4 @@
 1724849545	Jeff Schaller	ridhastay\.com
 1724849921	tripleee	(?-i:^Keira Bryant$)
 1724851503	General Grievance	ngxui\.com
+1724851785	double-beep	neuralnexus\.com\.pk
