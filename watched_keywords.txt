@@ -38984,7 +38984,6 @@
 1653638699	tripleee	eyelogicsolutions\.com
 1653639471	Cody Gray	ayushchandak
 1653641648	tripleee	mekoong\.com
-1653644189	tripleee	xenangnhapkhau\.com
 1653644237	Cody Gray	songdownloadmp3d\.blogspot
 1653644534	tripleee	(?-i:^Secret World$)
 1653648116	Cody Gray	gardenparadiseseeds\.com
