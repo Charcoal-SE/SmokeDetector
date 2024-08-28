@@ -65745,3 +65745,4 @@
 1724882099	Jeff Schaller	digitechbd\.info
 1724882518	Vickel	virtualfundsresurrection\.info
 1724882587	Fastnlight	virtualfundsresurrection001(?:@zohomail\.com)?
+1724885143	Fastnlight	OPTIMUM[\W_]*+HACKERS[\W_]*+RECOVERY(?!\.com(?<=OPTIMUMHACKERSRECOVERY\.com))
