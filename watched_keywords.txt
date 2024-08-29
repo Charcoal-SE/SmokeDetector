@@ -65766,3 +65766,4 @@
 1724921579	tripleee	(?-i:BobXWu)
 1724921673	tripleee	temitope
 1724922174	Cody Gray	Bruno[\W_]*+Campana(?!\.engineer(?<=brunocampana\.engineer))
+1724922206	tripleee	(?-i:Shrink$)
