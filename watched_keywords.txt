@@ -65759,4 +65759,3 @@
 1724919504	Dragonrage	studyglobaltravel\.com
 1724919582	Cody Gray	61563538317155(?#Facebook profile ID)
 1724919614	Cody Gray	global_travelconsultants(?#Instagram)
-1724921313	Cody Gray	persian[\W_]*+pishraneh(?!\.com)
