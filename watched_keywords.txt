@@ -65775,3 +65775,4 @@
 1724924595	Cody Gray	ef\.com
 1724925607	tripleee	stephanarnas\.com
 1724926137	Cody Gray	Ashapura[\W_]*+softech(?!\.com(?<=ashapurasoftech\.com))
+1724927631	tripleee	wuaze\.com
