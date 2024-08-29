@@ -65771,3 +65771,4 @@
 1724923299	tripleee	(?-i:Trung Anh)
 1724923917	Cody Gray	Ujjawala[\W_]*+Chemicals
 1724924043	Cody Gray	papasfreezeriagame\.io
+1724924549	Cody Gray	Papa['’]?s[\W_]*+freezeria([\W_]*+game)?(?!\.io(?<=papasfreezeriagame\.io))
