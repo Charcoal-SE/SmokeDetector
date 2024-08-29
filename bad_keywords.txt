@@ -6,7 +6,6 @@ writing(?<!code\Wwriting)(?<!script\Wwriting)(?<!\bre\Wwriting)(?<!\bi'm\Wwritin
 tosterone
 we (?:offer|give out) (?:loans?|funds?|funding)
 skin[\W_]*+(?:endear|royale|cell[\W_]*+pro|opulent|ology|centric)
-(?:rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)[\W_]*+skin
 acne(?:[\W_]*+prone)?\Wskin
 (?:skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
@@ -345,7 +344,6 @@ luxlift
 erectimax
 forskolin
 stamina\Wfuel
-nuviante
 silkalike
 vitaeyes
 neutratone
@@ -498,7 +496,6 @@ i have also find out one good example
 sexual[\W_]*+decoder
 zyklon
 skin[\W_]*+fresh[\W_]*+md
-renuvica
 Max\WTest\WUltra
 herbal ?(?:doctor|center|centre|clinic)
 herbalife
@@ -1452,7 +1449,6 @@ rapid[\W_]*+spot
 surgexon
 lojesete
 top\Wshelf\Waaa\Wbuds
-nuvi
 legendz[\W_]*+xl
 ambrosina
 kidney[\W_]*+bean[\W_]*+extract
