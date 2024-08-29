@@ -65750,3 +65750,4 @@
 1724906445	VLAZ	alphanapkinmachines\.com
 1724908340	tripleee	(?-i:sZvrhXYuSng)(?# youtube)
 1724908589	tripleee	pdfsignify\.com
+1724909153	Dragonrage	blog\.wellit\.info
