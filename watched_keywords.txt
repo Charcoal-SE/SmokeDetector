@@ -65758,3 +65758,4 @@
 1724916776	Dragonrage	briskpe\.com
 1724916966	Cody Gray	Alpha[\W_]*+Napkin[\W_]*+Machines(?!\.com)
 1724917367	Dragonrage	wellit\.info
+1724919504	Dragonrage	studyglobaltravel\.com
