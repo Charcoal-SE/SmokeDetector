@@ -334,6 +334,9 @@ items:
   - gordon.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
 - ns:
+  - grannbo.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
+- ns:
   - hank.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
 - ns:
