@@ -378,6 +378,9 @@ items:
   - gabe.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - james.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - langston.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
