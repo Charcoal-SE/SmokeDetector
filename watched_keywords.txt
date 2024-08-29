@@ -65768,3 +65768,4 @@
 1724922174	Cody Gray	Bruno[\W_]*+Campana(?!\.engineer(?<=brunocampana\.engineer))
 1724922206	tripleee	(?-i:Shrink$)
 1724923080	tripleee	thammytrunganh\.com
+1724923299	tripleee	(?-i:Trung Anh)
