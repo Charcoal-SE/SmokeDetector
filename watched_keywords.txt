@@ -65795,3 +65795,4 @@
 1724971702	Cody Gray	purplle\.com
 1724972360	Cody Gray	garmin-Express\.Support
 1724972512	Cody Gray	maps?[\W_]*+updates(?!\.com(?<=maps-updates\.com))
+1724972885	Cody Gray	konaworld\.com
