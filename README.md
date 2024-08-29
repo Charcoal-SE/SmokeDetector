@@ -14,7 +14,7 @@ and accesses answers via the [Stack Exchange API](https://api.stackexchange.com/
 
 Example [chat post](https://chat.stackexchange.com/transcript/message/43579469):
 
-![Example chat post](https://i.stack.imgur.com/oLyfb.png)
+![Example chat post](https://i.sstatic.net/oLyfb.png)
 
 ## Documentation
 
