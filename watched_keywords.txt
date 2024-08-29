@@ -65762,3 +65762,4 @@
 1724921398	tripleee	persian[\W_]*+pishraneh(?!\.com(?<=persianpishraneh\.com))
 1724921427	tripleee	biooneeastatlanta\.com
 1724921459	tripleee	(?-i:^Jemini$)
+1724921489	Cody Gray	(?-i:^Amir Bonakdar$)
