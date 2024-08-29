@@ -65778,3 +65778,4 @@
 1724927856	Cody Gray	cgpa2percentage\.org
 1724931966	tripleee	damsole[\W_]*+technologies(?!\.com(?<=damsoletechnologies\.com))
 1724932057	tripleee	talk-recruitment\.co\.uk
+1724932506	tripleee	goexecutivetransfers\.com
