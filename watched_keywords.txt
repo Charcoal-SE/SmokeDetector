@@ -65579,7 +65579,6 @@
 1724668715	Cow	precimeasure\.com
 1724669476	tripleee	(?-i:^Halil Ibrahim$)
 1724669860	tripleee	incorrectquotegenerator\.xyz
-1724670330	tripleee	optimumhackersrecovery\.com
 1724670455	tripleee	vertexsuite\.in
 1724670495	tripleee	vertex[\W_]*+suite(?!\.in(?<=vertexsuite\.in))
 1724670634	Cow	tik804\.com
