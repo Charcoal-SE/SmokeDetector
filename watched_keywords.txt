@@ -65774,3 +65774,4 @@
 1724924549	Cody Gray	Papa['’]?s[\W_]*+freezeria([\W_]*+game)?(?!\.io(?<=papasfreezeriagame\.io))
 1724924595	Cody Gray	ef\.com
 1724925607	tripleee	stephanarnas\.com
+1724926137	Cody Gray	Ashapura[\W_]*+softech(?!\.com(?<=ashapurasoftech\.com))
