@@ -283,6 +283,9 @@ items:
   - donald.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
 - ns:
+  - dorthy.ns.cloudflare.com.
+  - earl.ns.cloudflare.com.
+- ns:
   - earl.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
 - ns:
