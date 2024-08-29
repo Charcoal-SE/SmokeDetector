@@ -65794,3 +65794,4 @@
 1724971178	Cody Gray	zeektek\.com
 1724971702	Cody Gray	purplle\.com
 1724972360	Cody Gray	garmin-Express\.Support
+1724972512	Cody Gray	maps?[\W_]*+updates(?!\.com(?<=maps-updates\.com))
