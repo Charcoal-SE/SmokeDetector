@@ -1107,3 +1107,4 @@ carelab[sz]
 (?-i:^Bump Legal$)
 (?-i:^frostisland$)
 (?-i:Amitsells Realestate$)
+(?-i:^Ashapura Softech$)
