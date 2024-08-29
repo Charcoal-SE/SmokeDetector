@@ -2432,6 +2432,9 @@ items:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - harleign.ns.cloudflare.com.
+  - matias.ns.cloudflare.com.
+- ns:
   - harley.ns.cloudflare.com.
   - leanna.ns.cloudflare.com.
 - ns:
