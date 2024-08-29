@@ -65748,3 +65748,4 @@
 1724882695	Fastnlight	VIRTUAL[\W_]*+FUNDS[\W_]*+RESURRECTION(?!\.info(?<=VIRTUALFUNDSRESURRECTION\.info))
 1724905984	VLAZ	pesvs\.com\.au
 1724906445	VLAZ	alphanapkinmachines\.com
+1724908340	tripleee	(?-i:sZvrhXYuSng)(?# youtube)
