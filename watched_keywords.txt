@@ -65760,3 +65760,4 @@
 1724919582	Cody Gray	61563538317155(?#Facebook profile ID)
 1724919614	Cody Gray	global_travelconsultants(?#Instagram)
 1724921398	tripleee	persian[\W_]*+pishraneh(?!\.com(?<=persianpishraneh\.com))
+1724921427	tripleee	biooneeastatlanta\.com
