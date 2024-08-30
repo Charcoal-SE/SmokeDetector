@@ -65820,3 +65820,4 @@
 1725011028	Cody Gray	KERA4D(?!testing\.com)
 1725011287	Cody Gray	bestassignmenthelp\.ca
 1725012536	Cody Gray	City[\W_]*+Intelligence(?!\.net(?<=cityintelligence\.net))
+1725013685	Cow	justsnap\.sg
