@@ -65835,3 +65835,4 @@
 1725017106	Cody Gray	Top[\W_]*+Crew[\W_]*+Aviation(?!\.com(?<=topcrewaviation\.com))
 1725018450	Cody Gray	skinq\.com
 1725018498	Cody Gray	Skin[\W_]*+Q(?!\.com(?<=skinq\.com))
+1725018692	Cody Gray	beyondaitech\.com
