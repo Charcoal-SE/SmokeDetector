@@ -65803,3 +65803,4 @@
 1724998054	Cow	lifelinefoundations\.win
 1724998881	VLAZ	forinsightsconsultancy\.com
 1724998918	VLAZ	for[\W_]*+insights[\W_]*+consultancy(?!\.com(?<=forinsightsconsultancy\.com))
+1724998946	Cow	aiorganics\.in
