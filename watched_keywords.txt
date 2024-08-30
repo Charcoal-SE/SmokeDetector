@@ -65807,3 +65807,4 @@
 1724998946	Cow	aiorganics\.in
 1725000370	VLAZ	ikorepilates\.com
 1725002595	VLAZ	aladean\.com
+1725002619	VLAZ	aladean(?!\.com)
