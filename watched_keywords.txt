@@ -65817,3 +65817,4 @@
 1725009953	Cody Gray	smartstepper
 1725010900	Cody Gray	donaplatemachine\.com
 1725010943	Cody Gray	donaplate[\W_]*+machine(?!\.com(?<=donaplatemachine\.com))
+1725010991	Cody Gray	MX[\W_]*+Player[\W_]*+(?:Mod[\W_]*+)?Apk(?!flames\.com(?<=mxplayer\.apkflames\.com))
