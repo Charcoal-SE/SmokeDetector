@@ -65805,3 +65805,4 @@
 1724998918	VLAZ	for[\W_]*+insights[\W_]*+consultancy(?!\.com(?<=forinsightsconsultancy\.com))
 1724998950	VLAZ	macwiki[\W_]*+proton[\W_]*+\.[\W_]*+me
 1724998946	Cow	aiorganics\.in
+1725000370	VLAZ	ikorepilates\.com
