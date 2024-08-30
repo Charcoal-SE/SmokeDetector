@@ -65827,3 +65827,4 @@
 1725015851	double-beep	fwddigi\.com
 1725015969	Cody Gray	luxand[\W_]*+cloud
 1725016017	Cody Gray	Victoria[\W_]*+University(?:[\W_]*+of[\W_]*+Wellington)?
+1725016189	Cody Gray	digiviru\.com
