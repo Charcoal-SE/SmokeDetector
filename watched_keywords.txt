@@ -65817,3 +65817,4 @@
 1725009565	Cody Gray	apkflames\.com
 1725009953	Cody Gray	smartstepper
 1725010900	Cody Gray	donaplatemachine\.com
+1725010943	Cody Gray	donaplate[\W_]*+machine(?!\.com(?<=donaplatemachine\.com))
