@@ -65830,3 +65830,4 @@
 1725016189	Cody Gray	digiviru\.com
 1725016175	Cow	locoldeal\.com
 1725016506	Cody Gray	DeskTrack
+1725016586	Cody Gray	verna[\W_]*+haywood(?!\.com(?<=verna-haywood\.com))
