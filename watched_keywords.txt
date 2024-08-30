@@ -65814,3 +65814,4 @@
 1725003342	Cow	dreamycoatspainting\.com
 1725001754	Cow	cpmrevenuegate\.com
 1725002509	Cow	refreshweb\.vn
+1725009521	Cody Gray	MX[\W_]*+Player[\W_]*+(?:Mod[\W_]*+)?Apk(?!flames\.com(?<=mxplayer.apkflames.com))
