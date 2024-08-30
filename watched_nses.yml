@@ -5345,7 +5345,9 @@ items:
 - ns:
   - ns57.1and1.com.
   - ns58.1and1.com.
-- ns: quickinfozone.com.
+- comment: NXDOMAIN 2024-08-29
+  disable: true
+  ns: quickinfozone.com.
 - ns: thedogmasoft.com.
 - ns: ixo.no.
 - ns: jasperit.net.
