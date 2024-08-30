@@ -65836,3 +65836,4 @@
 1725018450	Cody Gray	skinq\.com
 1725018498	Cody Gray	Skin[\W_]*+Q(?!\.com(?<=skinq\.com))
 1725018692	Cody Gray	beyondaitech\.com
+1725019244	Cody Gray	Jasonhuileee(?#GitHub)
