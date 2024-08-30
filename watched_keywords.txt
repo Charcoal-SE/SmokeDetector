@@ -65809,3 +65809,4 @@
 1725002595	VLAZ	aladean\.com
 1725002619	VLAZ	aladean(?!\.com)
 1725007864	Cody Gray	justngbbs(?:@gmail\.com)?
+1725005276	Cow	rummysultanofficial\.in
