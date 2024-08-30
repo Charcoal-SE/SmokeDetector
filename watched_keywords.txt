@@ -14872,7 +14872,6 @@
 1577706835	Glorfindel	officeplus\.us\.com
 1577706899	Glorfindel	avg\.com.?retail
 1577709343	tripleee	ambitionbox\.com
-1577709363	tripleee	sitejabber\.com
 1577712275	Eliah Kagan	samamedtour
 1577712956	Eliah Kagan	licenzarealeonline\.com
 1577714521	tripleee	instaplusapk\.com
