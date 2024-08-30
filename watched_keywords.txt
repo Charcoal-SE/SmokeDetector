@@ -65819,3 +65819,4 @@
 1725010991	Cody Gray	MX[\W_]*+Player[\W_]*+(?:Mod[\W_]*+)?Apk(?!flames\.com(?<=mxplayer\.apkflames\.com))
 1725011028	Cody Gray	KERA4D(?!testing\.com)
 1725011287	Cody Gray	bestassignmenthelp\.ca
+1725012536	Cody Gray	City[\W_]*+Intelligence(?!\.net(?<=cityintelligence\.net))
