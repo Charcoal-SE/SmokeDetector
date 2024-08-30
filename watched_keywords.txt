@@ -65806,3 +65806,4 @@
 1724998950	VLAZ	macwiki[\W_]*+proton[\W_]*+\.[\W_]*+me
 1724998946	Cow	aiorganics\.in
 1725000370	VLAZ	ikorepilates\.com
+1725002595	VLAZ	aladean\.com
