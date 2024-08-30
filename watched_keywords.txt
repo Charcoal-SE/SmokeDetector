@@ -65823,3 +65823,4 @@
 1725013685	Cow	justsnap\.sg
 1725013828	Cody Gray	JustSnap(?!\.sg)
 1725013866	Cody Gray	Armind[\W_]*+Industries(?!\.com(?<=armindindustries\.com))
+1725015009	Cow	implantablekidney\.org
