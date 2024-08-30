@@ -65822,3 +65822,4 @@
 1725012536	Cody Gray	City[\W_]*+Intelligence(?!\.net(?<=cityintelligence\.net))
 1725013685	Cow	justsnap\.sg
 1725013828	Cody Gray	JustSnap(?!\.sg)
+1725013866	Cody Gray	Armind[\W_]*+Industries(?!\.com(?<=armindindustries\.com))
