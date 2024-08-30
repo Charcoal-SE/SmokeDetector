@@ -65821,3 +65821,4 @@
 1725011287	Cody Gray	bestassignmenthelp\.ca
 1725012536	Cody Gray	City[\W_]*+Intelligence(?!\.net(?<=cityintelligence\.net))
 1725013685	Cow	justsnap\.sg
+1725013828	Cody Gray	JustSnap(?!\.sg)
