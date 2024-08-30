@@ -65825,3 +65825,4 @@
 1725013866	Cody Gray	Armind[\W_]*+Industries(?!\.com(?<=armindindustries\.com))
 1725015009	Cow	implantablekidney\.org
 1725015851	double-beep	fwddigi\.com
+1725015969	Cody Gray	luxand[\W_]*+cloud
