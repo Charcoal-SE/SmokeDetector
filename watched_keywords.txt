@@ -65858,3 +65858,4 @@
 1725100727	Nisse Engström	qrcodes\.live
 1725105442	Vickel	dognpet\.com
 1725105066	Vickel	dumpsgenious\.com
+1725105141	Vickel	dumpsgenious(?!\.com)
