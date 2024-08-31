@@ -3110,3 +3110,4 @@ reclaimeasy
 h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
 complaint?[\W_]*+(?:in|on|to)[\W_]*+Swiggy
 Recoveryeagles
+How[\W_]*do[\W_]*I[\W_]*raise[\W_]*a[\W_]*complaint[\W_]*in[\W_]*meesho
