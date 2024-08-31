@@ -65859,3 +65859,4 @@
 1725105442	Vickel	dognpet\.com
 1725105066	Vickel	dumpsgenious\.com
 1725105141	Vickel	dumpsgenious(?!\.com)
+1725103857	Cow	jetwebhackers(?:@gmail\.com)?
