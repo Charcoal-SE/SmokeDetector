@@ -65852,3 +65852,4 @@
 1725093418	Cody Gray	flowartepublicidad\.net
 1725094065	Cody Gray	chsmithlaw\.com
 1725094157	Cody Gray	Ch(?:arles)?[\W_]*+Smith[\W_]*+Law(?:yer)?(?!\.com(?<=chsmithlaw\.com))
+1725095531	Cody Gray	Assam[\W_]*+Jobs(?!\.net(?<=assamjobs\.net))
