@@ -65865,3 +65865,4 @@
 1725055074	Vickel	usatopvcc(?:@gmail\.com)?
 1725034311	General Grievance	encr\.pw
 1725043094	Cow	100077299344867(# facebook id)
+1725041479	Fastnlight	(?:support|service)[\W_]*+\d++
