@@ -65879,3 +65879,4 @@
 1725126510	VLAZ	tsgresorts\.in
 1725128302	Cow	risalafurniture\.ae
 1725127355	Cow	mightygrep
+1725125757	Cow	bsb[\W_]*+forensic
