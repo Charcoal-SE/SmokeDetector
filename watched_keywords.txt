@@ -65867,3 +65867,4 @@
 1725043094	Cow	100077299344867(# facebook id)
 1725041479	Fastnlight	(?:support|service)[\W_]*+\d++
 1725109234	VLAZ	(?:tellsirmetime)(?# t.me)
+1725107775	Cow	itexpertservices\.com
