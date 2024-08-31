@@ -65876,3 +65876,4 @@
 1725111474	Jeff Schaller	ach527802
 1725115778	Jeff Schaller	xavor\.com
 1725119775	Jeff Schaller	denizhalil\.com
+1725125757	Cow	bsb[\W_]*+forensic
