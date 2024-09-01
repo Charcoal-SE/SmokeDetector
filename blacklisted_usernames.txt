@@ -1108,6 +1108,5 @@ carelab[sz]
 (?-i:^frostisland$)
 (?-i:Amitsells Realestate$)
 (?-i:^Ashapura Softech$)
-(?-i:^Ruthwik Reddy$)
 (?-i:^kraud bilding$)
 (?-i:^Sneha Ahlawat$)
