@@ -65887,3 +65887,4 @@
 1725187916	tripleee	fecot[\W_]*igbobi
 1725188213	tripleee	z-axis\.in
 1725188251	Cody Gray	professional[\W_]*+locksmiths?
+1725199249	tripleee	spacetechnology\.com\.br
