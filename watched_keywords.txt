@@ -65881,3 +65881,4 @@
 1725127355	Cow	mightygrep
 1725125757	Cow	bsb[\W_]*+forensic
 1725170704	Nisse Engström	luminartechnolab\.com
+1725170754	Nisse Engström	allterracentral\.com
