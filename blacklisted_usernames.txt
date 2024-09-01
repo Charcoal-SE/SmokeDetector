@@ -1109,3 +1109,4 @@ carelab[sz]
 (?-i:Amitsells Realestate$)
 (?-i:^Ashapura Softech$)
 (?-i:^Ruthwik Reddy$)
+(?-i:^kraud bilding$)
