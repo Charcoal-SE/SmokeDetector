@@ -65880,3 +65880,4 @@
 1725128302	Cow	risalafurniture\.ae
 1725127355	Cow	mightygrep
 1725125757	Cow	bsb[\W_]*+forensic
+1725170704	Nisse Engström	luminartechnolab\.com
