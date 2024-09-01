@@ -65882,3 +65882,4 @@
 1725170704	Nisse Engström	luminartechnolab\.com
 1725170754	Nisse Engström	allterracentral\.com
 1725185558	tripleee	dalvikplanet
+1725186851	lyxal	in[\W_]*+shots[\W_]*+pro(?!\.com)(?#just the username not the existing website watch)
