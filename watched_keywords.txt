@@ -65889,4 +65889,3 @@
 1725199249	tripleee	spacetechnology\.com\.br
 1725206201	tripleee	attaqwaa\.com
 1725206705	tripleee	toplinks[\W_]*+one(?<!toplinks\.one)
-1725207012	tripleee	tenforums\.com
