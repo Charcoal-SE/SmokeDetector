@@ -65884,3 +65884,4 @@
 1725185558	tripleee	dalvikplanet
 1725186851	lyxal	in[\W_]*+shots[\W_]*+pro(?!\.com)(?#just the username not the existing website watch)
 1725187804	tripleee	federal[\W_]*+college[\W_]*+of[\W_]*+orthopaedic[\W_]*+technology
+1725187916	tripleee	fecot[\W_]*igbobi
