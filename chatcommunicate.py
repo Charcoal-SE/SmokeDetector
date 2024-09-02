@@ -194,7 +194,9 @@ def parse_room_config(path):
     with open(path, "r", encoding="utf-8") as room_config:
         room_dict = yaml.safe_load(room_config.read())
 
-    with open("users.yml", "r", encoding="utf-8") as user_config:
+    users_yml_path = "users_custom.yml" if os.path.exists("users_custom.yml") else "users.yml"
+
+    with open(users_yml_path, "r", encoding="utf-8") as user_config:
         user_data = yaml.safe_load(user_config.read())
 
     inherits = []
