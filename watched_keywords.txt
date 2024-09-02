@@ -65896,3 +65896,4 @@
 1725254842	tripleee	kubet11\.rent
 1725254892	tripleee	kubet\d*(?!\.rent(?<=kubet11\.rent))
 1725255401	Dragonrage	goniyo\.com
+1725255488	Dragonrage	castleemodapk\.org
