@@ -1110,3 +1110,4 @@ carelab[sz]
 (?-i:^Ashapura Softech$)
 (?-i:^kraud bilding$)
 (?-i:^Sneha Ahlawat$)
+(?-i:^business Seo$)
