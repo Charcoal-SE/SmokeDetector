@@ -65920,3 +65920,4 @@
 1725275494	Vickel	customboxesshop\.com
 1725275610	Vickel	citi977\.com\.np
 1725231919	Vickel	d?cyberayrecovery(?:@gmail\.com)?
+1725277970	tripleee	(?-i:ProxyMTproto2025)(?# telegram)
