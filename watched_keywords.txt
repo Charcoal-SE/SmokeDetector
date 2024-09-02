@@ -65911,3 +65911,4 @@
 1725269087	tripleee	technosmedia\.com
 1725269122	tripleee	digitrainers\.com
 1725276450	Vickel	sublimegroceria\.com
+1725276818	tripleee	(?-i:^John Wick$)
