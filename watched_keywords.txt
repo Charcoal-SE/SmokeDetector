@@ -65906,3 +65906,4 @@
 1725262502	double-beep	betpro360\.net
 1725263427	Anerdw	zorotv\.cam
 1725265105	tripleee	cellfina
+1725265131	tripleee	(?-i:^Maya Devi$)
