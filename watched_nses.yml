@@ -1621,7 +1621,9 @@ items:
 - ns:
   - dan.ns.cloudflare.com.
   - selah.ns.cloudflare.com.
-- ns:
+- comment: no meaningful TP hits for a long time 2024-09-02
+  disable: true
+  ns:
   - dan.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
