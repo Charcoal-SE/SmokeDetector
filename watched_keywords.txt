@@ -65891,3 +65891,4 @@
 1725209319	Makyen	(?-i:^Ruthwik Reddy$)
 1725211906	Cow	autofilljobs\.com
 1725246399	Makyen	hamdanitsolutions\.com
+1725246424	Makyen	hamdan[\W_]*+it[\W_]*+solutions(?!\.com(?<=hamdanitsolutions\.com))
