@@ -65904,3 +65904,4 @@
 1725260919	tripleee	lawcify\.com
 1725260965	tripleee	law[\W_]*+cify(?!\.com(?<=lawcify\.com))
 1725262502	double-beep	betpro360\.net
+1725263427	Anerdw	zorotv\.cam
