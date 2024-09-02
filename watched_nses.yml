@@ -431,6 +431,9 @@ items:
   - amber.ns.cloudflare.com.
   - denver.ns.cloudflare.com.
 - ns:
+  - amber.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
+- ns:
   - amir.ns.cloudflare.com.
   - cass.ns.cloudflare.com.
 - ns:
