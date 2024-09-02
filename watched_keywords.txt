@@ -65903,3 +65903,4 @@
 1725259015	tripleee	omaliwine(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1725260729	tripleee	dose[\W_]*+pharmacy(?!\.com(?<=dosepharmacy\.com))
 1725260919	tripleee	lawcify\.com
+1725260965	tripleee	law[\W_]*+cify(?!\.com(?<=lawcify\.com))
