@@ -65909,3 +65909,4 @@
 1725265131	tripleee	(?-i:^Maya Devi$)
 1725265295	double-beep	rusticandgold\.com
 1725269087	tripleee	technosmedia\.com
+1725269122	tripleee	digitrainers\.com
