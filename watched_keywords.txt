@@ -65902,3 +65902,4 @@
 1725257228	Dragonrage	puravankaramumbai\.in
 1725259015	tripleee	omaliwine(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1725260405	Anerdw	Lawcify
+1725260729	tripleee	dose[\W_]*+pharmacy(?!\.com(?<=dosepharmacy\.com))
