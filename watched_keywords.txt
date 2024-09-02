@@ -65893,3 +65893,4 @@
 1725246399	Makyen	hamdanitsolutions\.com
 1725246424	Makyen	hamdan[\W_]*+it[\W_]*+solutions(?!\.com(?<=hamdanitsolutions\.com))
 1725254733	Dragonrage	turkeyexim\.com
+1725254842	tripleee	kubet11\.rent
