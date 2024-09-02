@@ -65925,3 +65925,4 @@
 1725278118	lyxal	truevastu\.com
 1725278909	lyxal	apsetupusa\.online
 1725279397	tripleee	ap[\W_]*+extender
+1725279446	tripleee	wifi[\W_]*+extender[\W_]*+setup
