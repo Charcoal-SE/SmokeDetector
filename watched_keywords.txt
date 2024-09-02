@@ -65927,3 +65927,4 @@
 1725279446	tripleee	wifi[\W_]*+extender[\W_]*+setup
 1725281047	Cow	pdfquery\.ai
 1725280794	lyxal	nonazodiak(?!\.wixsite\.com)
+1725282649	Spevacus	goagamesin\.com
