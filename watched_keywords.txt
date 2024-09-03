@@ -65944,3 +65944,4 @@
 1725345276	Cow	mayurahospitals\.com
 1725346028	Makyen	abhyang?a
 1725346679	Cow	krishnah\.com
+1725346887	Makyen	krishnah(?!\.com)
