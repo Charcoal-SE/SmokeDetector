@@ -65941,3 +65941,4 @@
 1725342071	VLAZ	tellsirmetime(?# t.me)
 1725345762	Makyen	geoias\.com
 1725345787	Makyen	geo[\W_]*+ias(?!\.com(?<=geoias\.com))(?:[\W_]*+(?:coaching|institute)s?)*
+1725345276	Cow	mayurahospitals\.com
