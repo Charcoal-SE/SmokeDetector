@@ -64411,7 +64411,6 @@
 1722250151	Ryan M	theatretickets-london\.co\.uk
 1722250799	Jeff Schaller	basketrandom\.com
 1722254102	Jeff Schaller	kudalumpuh\.online
-1722254607	Jeff Schaller	businessraisers\.com
 1722257155	Jeff Schaller	adjecti\.com
 1722260168	Vickel	tuitionhighway\.com
 1722260394	Makyen	tvg[\W_]*+migration(?!\.com(?<=tvgmigration\.com))
