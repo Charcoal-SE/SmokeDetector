@@ -65949,3 +65949,4 @@
 1725358184	Vickel	jagatsinghhotels\.com
 1725358098	Vickel	australiansolarmesh\.com\.au
 1725348646	Cow	ktrust\.io
+1725348568	Cow	(?-i:zqktlwiuavvvqqt4ybvgvi7tyo4hjl5xgfuvpdf6otjiycgwqbym2qad)(?# onion url)
