@@ -65962,3 +65962,4 @@
 1725367430	Cow	trykintsugi\.com
 1725368549	Cow	mazor-rights\.co\.il
 1725370154	General Grievance	theeditorshub\.com
+1725370704	Jeff Schaller	(?-i:linkgacorinong)(?#heylink)
