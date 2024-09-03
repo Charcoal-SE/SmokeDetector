@@ -65946,3 +65946,4 @@
 1725346679	Cow	krishnah\.com
 1725346887	Makyen	krishnah(?!\.com)
 1725347150	Makyen	heng[\W_]*+lihong
+1725348646	Cow	ktrust\.io
