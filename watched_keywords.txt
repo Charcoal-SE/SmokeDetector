@@ -65943,3 +65943,4 @@
 1725345787	Makyen	geo[\W_]*+ias(?!\.com(?<=geoias\.com))(?:[\W_]*+(?:coaching|institute)s?)*
 1725345276	Cow	mayurahospitals\.com
 1725346028	Makyen	abhyang?a
+1725346695	Cow	hlh-js\.com
