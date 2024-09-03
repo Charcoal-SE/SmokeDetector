@@ -65939,3 +65939,4 @@
 1725334326	Anerdw	ssstt\.app
 1725341478	Makyen	sattainfo\.com
 1725342071	VLAZ	tellsirmetime(?# t.me)
+1725344645	Cow	dog[\W_]*+spa[\W_]*+singapore
