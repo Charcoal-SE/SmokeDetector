@@ -66008,3 +66008,4 @@
 1725448854	double-beep	brandimpact\.online
 1725448882	Cody Gray	Bus[\W_]*+Rental[\_W]*+Dubai(?!\.com(?<=busrentalindubai\.com))
 1725449019	Cody Gray	Brand[\W_]*+Impact(?!\.online(?<=brandimpact\.online))
+1725449250	Cody Gray	Tbilisi[\W_]*+State[\W_]*+Medical[\W_]*+University
