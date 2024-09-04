@@ -66013,3 +66013,4 @@
 1725450342	Cody Gray	thire[\W_]*+hotline[\W_]*+number
 1725451503	Cody Gray	available[\W_]*+24\/7
 1725454105	General Grievance	travelbusinessclasses\.com
+1725457292	tripleee	desydoor1(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
