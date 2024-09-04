@@ -65989,6 +65989,5 @@
 1725442238	tripleee	(?-i:fHxSpWJm5-M)(?# youtube)
 1725442201	Fastnlight	Kharee0911
 1725442391	Cody Gray	hdstreamz\.tv\.in
-1725442676	Cody Gray	paytm\.com
 1725442801	Cody Gray	zomato
 1725443014	Cody Gray	complain[\W_]*+to[\W_]*+Blinkit
