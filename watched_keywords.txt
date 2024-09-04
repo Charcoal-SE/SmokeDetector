@@ -66027,3 +66027,4 @@
 1725472933	Makyen	srisastha[\W_]*+builders(?!\.com(?<=srisasthabuilders\.com))
 1725473061	Makyen	aslamashraf\.com
 1725473423	Makyen	ekart
+1725473507	Makyen	(?-i:HebDAbLh)(?#cutt.ly)
