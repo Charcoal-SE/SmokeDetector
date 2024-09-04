@@ -494,7 +494,6 @@ vigfx
 muscle[\W_]*+rampage
 i have also find out one good example
 sexual[\W_]*+decoder
-zyklon
 skin[\W_]*+fresh[\W_]*+md
 Max\WTest\WUltra
 herbal ?(?:doctor|center|centre|clinic)
