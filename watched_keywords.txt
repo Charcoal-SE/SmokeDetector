@@ -66002,3 +66002,4 @@
 1725444774	Jeff Schaller	nessolar\.in
 1725444805	Cody Gray	The[\W_]*+Pets[\W_]*+Workshop(?!\.com\.sg(?<=thepetsworkshop\.com\.sg))
 1725445759	Cody Gray	call[\W_]*+us[\W_]*+on
+1725446214	Cody Gray	Dakshin[\W_]*+Gujarat[\W_]*+Vij
