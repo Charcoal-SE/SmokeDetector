@@ -65983,3 +65983,4 @@
 1725441945	Cow	(?-i:qAx1muGCWJg)(?# youtu.be)
 1725441787	Cow	edutrainex\.com
 1725442086	Cody Gray	smarkeda\.com
+1725442122	Cody Gray	smarkeda(?!\.com)
