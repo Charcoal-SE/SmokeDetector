@@ -66017,3 +66017,4 @@
 1725459359	VLAZ	estatebotics\.de
 1725459385	VLAZ	estate[\W_]*+botics(?!\.com(?<=estatebotics\.com))(?!\.de(?<=estatebotics\.de))
 1725461664	Fastnlight	j88dl\.lat
+1725461689	Fastnlight	j88dllat
