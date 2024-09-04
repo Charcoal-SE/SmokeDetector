@@ -66011,3 +66011,4 @@
 1725449543	Cody Gray	Low[\W_]*+Fare[\W_]*+Calendar
 1725450211	Cody Gray	citymall@gmail\.com
 1725450243	Cody Gray	City[\W_]*+Mall(?!@gmail\.com(?<=citymall@gmail\.com))
+1725450342	Cody Gray	thire[\W_]*+hotline[\W_]*+number
