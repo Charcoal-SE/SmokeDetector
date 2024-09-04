@@ -1114,3 +1114,4 @@ carelab[sz]
 (?-i:^TOTAL-X Software$)
 (?-i:^Amanda willi$)
 (?-i:^John Wick$)
+(?-i:^matinez lopez$)
