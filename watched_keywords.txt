@@ -66022,3 +66022,4 @@
 1725464325	Nisse Engström	chatwithapt\.com
 1725454193	General Grievance	nspglobaltech\.com
 1725467507	Fastnlight	englishlanguageandliterature\.com
+1725468778	Makyen	phonepe(?!\.com)(?!:)
