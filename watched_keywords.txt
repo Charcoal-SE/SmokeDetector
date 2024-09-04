@@ -66010,3 +66010,4 @@
 1725449019	Cody Gray	Brand[\W_]*+Impact(?!\.online(?<=brandimpact\.online))
 1725449250	Cody Gray	Tbilisi[\W_]*+State[\W_]*+Medical[\W_]*+University
 1725449543	Cody Gray	Low[\W_]*+Fare[\W_]*+Calendar
+1725450211	Cody Gray	citymall@gmail\.com
