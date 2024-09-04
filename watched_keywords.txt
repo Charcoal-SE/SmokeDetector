@@ -66024,3 +66024,4 @@
 1725467507	Fastnlight	englishlanguageandliterature\.com
 1725468778	Makyen	phonepe(?!\.com)(?!:)
 1725472031	Makyen	jar@gmail\.com
+1725472933	Makyen	srisastha[\W_]*+builders(?!\.com(?<=srisasthabuilders\.com))
