@@ -5796,3 +5796,4 @@ speakatoo\.com
 qadri-international\.com
 validexpressdocuments\.com
 planethive\.ai
+zalo\.me(?<!developers\.zalo\.me)
