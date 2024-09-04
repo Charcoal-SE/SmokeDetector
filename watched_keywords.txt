@@ -65987,3 +65987,4 @@
 1725442010	Fastnlight	anchorcomputersoftware\.com
 1725442169	Makyen	darkroom[\W_]*+agency
 1725442238	tripleee	(?-i:fHxSpWJm5-M)(?# youtube)
+1725442201	Fastnlight	Kharee0911
