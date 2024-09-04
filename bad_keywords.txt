@@ -3114,3 +3114,4 @@ Sentry[\W_]*+Vantage[\W_]*+Hacker
 phonepe[\W_]*+wrong
 fastwebrecovery
 complain[\W_]*+against[\W_]*+Paytm
+airtripgo(?!\.com)
