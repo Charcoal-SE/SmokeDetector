@@ -65985,3 +65985,4 @@
 1725442086	Cody Gray	smarkeda\.com
 1725442122	Cody Gray	smarkeda(?!\.com)
 1725442010	Fastnlight	anchorcomputersoftware\.com
+1725442169	Makyen	darkroom[\W_]*+agency
