@@ -42102,7 +42102,6 @@
 1662010752	Cody Gray	Domenico[\W_]*Calcaterra
 1662011840	Cody Gray	ekwik[\W_]*digital(?!\.com(?<=ekwikdigital\.com))
 1662015595	Cody Gray	digitalsanstha\.in
-1662016108	tripleee	speakatoo\.com
 1662016143	tripleee	speakatoo(?!\.com)
 1662016513	Cody Gray	homework[\W_]*help[\W_]*services?
 1662016542	Cody Gray	starprocombat\.co\.uk
