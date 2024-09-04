@@ -65975,3 +65975,4 @@
 1725438689	Cody Gray	support[\W_]*+team[\W_]*+contact
 1725439173	Cody Gray	marketinglagi
 1725439446	Cody Gray	Delhivery[\W_]*+PVT
+1725440106	tripleee	infogentech\.com
