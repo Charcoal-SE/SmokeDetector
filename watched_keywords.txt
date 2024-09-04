@@ -65980,3 +65980,4 @@
 1725441550	Cody Gray	kuku[\W_]*+fm
 1725441751	tripleee	(?-i:3ARXgA4)(?# bit.ly)
 1725441841	Cody Gray	noemiglobal\.com
+1725442010	Fastnlight	anchorcomputersoftware\.com
