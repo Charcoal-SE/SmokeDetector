@@ -66000,3 +66000,4 @@
 1725444213	Cody Gray	(?:call[\W_]*+)?kcpl[\W_]*+rupee
 1725344645	Cow	dog[\W_]*+spa[\W_]*+singapore
 1725444774	Jeff Schaller	nessolar\.in
+1725444805	Cody Gray	The[\W_]*+Pets[\W_]*+Workshop(?!\.com\.sg(?<=thepetsworkshop\.com\.sg))
