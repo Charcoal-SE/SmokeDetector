@@ -66007,3 +66007,4 @@
 1725448530	double-beep	taxjeeves\.com
 1725448854	double-beep	brandimpact\.online
 1725448882	Cody Gray	Bus[\W_]*+Rental[\_W]*+Dubai(?!\.com(?<=busrentalindubai\.com))
+1725449019	Cody Gray	Brand[\W_]*+Impact(?!\.online(?<=brandimpact\.online))
