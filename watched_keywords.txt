@@ -66046,3 +66046,4 @@
 1725526693	Dragonrage	vaseegaraoils\.in
 1725527863	tripleee	phenix295
 1725530086	tripleee	itz[\W]*+digital
+1725531429	tripleee	investment[\W_]*+opportunity
