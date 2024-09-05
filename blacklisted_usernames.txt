@@ -1118,3 +1118,4 @@ carelab[sz]
 (?-i:^Dubai E Visa Online$)
 (?-i:^Gracy Luis$)
 (?-i:^Andrew mathew$)
+(?-i:^ekta das$)
