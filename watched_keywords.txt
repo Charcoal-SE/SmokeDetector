@@ -39679,7 +39679,6 @@
 1655484263	Ollie	gurukripa\.ac\.in
 1655491389	cigien	techigai\.io
 1655491977	Ryan M	landmarkfinance\.org
-1655492386	Makyen	fastdup
 1655492475	cigien	al[\W_]*+fares
 1655492634	cigien	pc275\.com
 1655492797	cigien	(?-i:Y7-MGYx_dlo)(?#youtube)
