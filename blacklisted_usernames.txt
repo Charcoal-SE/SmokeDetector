@@ -1116,3 +1116,4 @@ carelab[sz]
 (?-i:^John Wick$)
 (?-i:^matinez lopez$)
 (?-i:^Dubai E Visa Online$)
+(?-i:^Gracy Luis$)
