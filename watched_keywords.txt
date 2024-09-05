@@ -66055,3 +66055,4 @@
 1725540047	Vickel	signbulb\.com
 1725540102	Vickel	signbulb(?!\.com)
 1725540891	General Grievance	kaakor\.com
+1725540246	Vickel	defesavegetal\.net
