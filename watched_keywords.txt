@@ -66054,3 +66054,4 @@
 1725538216	tripleee	(?-i:mRTtqhZQdhk)(?# youtube)
 1725540047	Vickel	signbulb\.com
 1725540102	Vickel	signbulb(?!\.com)
+1725540891	General Grievance	kaakor\.com
