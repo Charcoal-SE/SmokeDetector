@@ -211,6 +211,9 @@ items:
   - cecelia.ns.cloudflare.com.
   - pablo.ns.cloudflare.com.
 - ns:
+  - chelsea.ns.cloudflare.com.
+  - lakas.ns.cloudflare.com.
+- ns:
   - cheryl.ns.cloudflare.com.
   - jonah.ns.cloudflare.com.
 - ns:
