@@ -3117,3 +3117,4 @@ complain[\W_]*+against[\W_]*+Paytm
 airtripgo(?!\.com)
 𝐋𝐨𝐚𝐧
 customer[\W_]*+helpline[\W_]*+support
+dubai[\W_]*+e[\W_]*+visa[\W_]*+online\d*(?<!(?-i:^Dubai E Visa Online$))
