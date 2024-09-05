@@ -3116,3 +3116,4 @@ fastwebrecovery
 complain[\W_]*+against[\W_]*+Paytm
 airtripgo(?!\.com)
 𝐋𝐨𝐚𝐧
+customer[\W_]*+helpline[\W_]*+support
