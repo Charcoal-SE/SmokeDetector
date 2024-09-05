@@ -1115,3 +1115,4 @@ carelab[sz]
 (?-i:^Amanda willi$)
 (?-i:^John Wick$)
 (?-i:^matinez lopez$)
+(?-i:^Dubai E Visa Online$)
