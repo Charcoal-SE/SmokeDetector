@@ -2941,6 +2941,9 @@ items:
   - keenan.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
 - ns:
+  - ken.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
+- ns:
   - kenneth.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
