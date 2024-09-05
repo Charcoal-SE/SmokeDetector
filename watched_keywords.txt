@@ -66031,3 +66031,4 @@
 1725475471	Spevacus	lapink\.com
 1725480771	Makyen	^(?:\w*|\W*)(?:(?:how|where)[\W_]*+)?(?:(?:can|do)[\W_]*+(?:\w|we)[\W_]*+|to[\W_]*+)(?:(?:register|raise)[\W_]*+a[\W_]*+)?complaint?[\W_]*+(?:to|against|on|in|about|for|with)\W*+(?!(?:someone|my|co-worker|an?|being|misconduct|selective)\b)
 1725483456	Dragonrage	burialseniorinsurance\.com
+1725465910	Fastnlight	acq967436
