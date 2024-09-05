@@ -3361,9 +3361,6 @@ items:
   - mark.ns.cloudflare.com.
   - wren.ns.cloudflare.com.
 - ns:
-  - marty.ns.cloudflare.com.
-  - mimi.ns.cloudflare.com.
-- ns:
   - mary.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
