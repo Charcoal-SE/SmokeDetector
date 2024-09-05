@@ -66052,3 +66052,4 @@
 1725536210	tripleee	celebritychefnetwork\.com
 1725538153	tripleee	vyaparkranti(?!\.com)
 1725538216	tripleee	(?-i:mRTtqhZQdhk)(?# youtube)
+1725540047	Vickel	signbulb\.com
