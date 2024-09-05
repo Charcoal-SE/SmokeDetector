@@ -4376,7 +4376,9 @@ items:
 - ns: genhost.in.
 - ns: ayurhealthtips.com.
 - ns: hostmonster.com.
-- ns: dctshosting.com.
+- comment: 2024-09-04 NXDOMAIN
+  disable: true
+  ns: dctshosting.com.
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
