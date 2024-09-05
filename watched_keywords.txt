@@ -66038,3 +66038,4 @@
 1725510578	Makyen	chatgptgratuit(?!\.org)
 1725516035	cocomac	slotxogame365\.com
 1725513195	lyxal	jetblue[\W_]*+group[\W_]*+travel
+1725519975	micsthepick	dubai[\W_]*+visit[\W_]*+visa
