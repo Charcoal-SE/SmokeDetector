@@ -1120,4 +1120,3 @@ carelab[sz]
 (?-i:^Andrew mathew$)
 (?-i:^ekta das$)
 (?-i:^Tarun Chawla$)
-tim[\W_]*+cock
