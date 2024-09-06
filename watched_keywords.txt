@@ -66074,3 +66074,4 @@
 1725603126	tripleee	indifi(?!\.com)
 1725604389	tripleee	vizhil\.com
 1725604574	tripleee	jeecup[\W_]*+counselling
+1725607020	Dragonrage	bases-coc\.com
