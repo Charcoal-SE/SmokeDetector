@@ -66100,3 +66100,4 @@
 1725627598	Cow	businesschat\.io
 1725634557	Cow	Mantaz[\W_]*+in[\W_]*+Dubai
 1725642573	Cow	oxford[\W_]*+online[\W_]*+pharmacy
+1725644906	Cow	traderknows\.com
