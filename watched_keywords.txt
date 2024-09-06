@@ -66076,3 +66076,4 @@
 1725604574	tripleee	jeecup[\W_]*+counselling
 1725607020	Dragonrage	bases-coc\.com
 1725609616	Cow	limitlessbuddha\.com
+1725609732	micsthepick	limitlessbuddha(?!\.com)
