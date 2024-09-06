@@ -66073,3 +66073,4 @@
 1725594848	Cow	financialreports\.eu
 1725603126	tripleee	indifi(?!\.com)
 1725604389	tripleee	vizhil\.com
+1725604574	tripleee	jeecup[\W_]*+counselling
