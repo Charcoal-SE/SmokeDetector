@@ -3080,6 +3080,7 @@ items:
 - comment: disabled 2024-02-21, mainly FPs
   disable: true
   ip: 172.66.40.166
+- ip: 172.66.40.180
 - ip: 172.66.40.200
 - ip: 172.66.40.203
 - ip: 172.66.40.223
@@ -3133,6 +3134,7 @@ items:
 - comment: dominantly FP, disabled 2024-05-10
   disable: true
   ip: 172.66.43.7
+- ip: 172.66.43.76
 - comment: disabled 2024-02-21, mainly FPs
   disable: true
   ip: 172.66.43.90
