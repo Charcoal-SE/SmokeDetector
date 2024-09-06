@@ -244,6 +244,9 @@ items:
   - cruz.ns.cloudflare.com.
   - david.ns.cloudflare.com.
 - ns:
+  - damian.ns.cloudflare.com.
+  - ursula.ns.cloudflare.com.
+- ns:
   - dan.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
