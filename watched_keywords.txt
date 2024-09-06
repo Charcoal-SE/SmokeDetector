@@ -66078,3 +66078,4 @@
 1725609616	Cow	limitlessbuddha\.com
 1725609992	tripleee	limitless[\W_]*+buddha(?!\.com(?<=limitlessbuddha\.com))
 1725610064	Cow	apjtours\.com
+1725610082	Cow	veramedivf\.com
