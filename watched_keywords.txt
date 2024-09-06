@@ -66084,4 +66084,3 @@
 1725613993	micsthepick	dataxivi(?!\.com)
 1725615750	micsthepick	tim[\W_]*+cock
 1725617379	micsthepick	aspadol[\W_]*+\d{3,10}
-1725617436	micsthepick	aspadol[\W_]*+\D
