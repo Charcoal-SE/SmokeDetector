@@ -65846,7 +65846,7 @@
 1725055074	Vickel	usatopvcc(?:@gmail\.com)?
 1725034311	General Grievance	encr\.pw
 1725043094	Cow	100077299344867(# facebook id)
-1725041479	Fastnlight	(?:support|service)[\W_]*+\d++
+1725041479	Fastnlight	(?:support|service)[\W_]*+(?<!└─)\d++
 1725107775	Cow	itexpertservices\.com
 1725110226	VLAZ	Metaverse911
 1725110252	VLAZ	Mecversity
