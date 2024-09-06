@@ -66088,3 +66088,4 @@
 1725617543	micsthepick	aspadol(?![\W_]*+\d{3,10})
 1725619113	micsthepick	seounity\.in
 1725619375	tripleee	jc-precisionrivet\.com
+1725619790	tripleee	ixi\.studio
