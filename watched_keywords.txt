@@ -66067,3 +66067,4 @@
 1725552757	Cow	getenviropass\.com
 1725583839	Cody Gray	bajuslive\.com
 1725599554	tripleee	geo[\W_]*+bags?
+1725602280	Cow	fantafeat
