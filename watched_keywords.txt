@@ -66081,3 +66081,4 @@
 1725610082	Cow	veramedivf\.com
 1725613297	tripleee	dhams\.in
 1725613958	tripleee	dataxivi\.com
+1725613993	micsthepick	dataxivi(?!\.com)
