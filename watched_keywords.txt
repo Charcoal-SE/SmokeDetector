@@ -66093,3 +66093,4 @@
 1725622021	Cow	tekdezkurumsal\.com
 1725623415	Cody Gray	aljabalglobal\.com
 1725623447	Cody Gray	goshyda
+1725623312	Cow	(?-i:hTKlROU)(?# Amazon India)
