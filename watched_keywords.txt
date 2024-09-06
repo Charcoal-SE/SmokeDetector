@@ -66087,3 +66087,4 @@
 1725617498	Jeff Schaller	shopsy\.com
 1725617543	micsthepick	aspadol(?![\W_]*+\d{3,10})
 1725619113	micsthepick	seounity\.in
+1725619375	tripleee	jc-precisionrivet\.com
