@@ -66116,3 +66116,4 @@
 1725701611	Makyen	dm[\W_]*+pharma[\W_]*+global(?!\.com(?<=dmpharmaglobal\.com))
 1725702192	Cody Gray	gisellecubresis
 1725702217	Cody Gray	sproutsphereva
+1725702245	Dragonrage	controllertest\.com
