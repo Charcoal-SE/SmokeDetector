@@ -66126,3 +66126,4 @@
 1725708949	Cody Gray	32dental(?!\.com)
 1725709163	Cody Gray	91[\W_]*+Club(?!\.com(?<=91clubgameapp\.com))
 1725709216	Cody Gray	(?-i:^Anuj Singh$)
+1725709250	Cody Gray	Glasafe(?!\.com)
