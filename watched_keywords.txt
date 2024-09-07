@@ -66187,3 +66187,4 @@
 1725867376	Cow	tailormadejourney\.com
 1725868688	VLAZ	tailormade[\W_]*+journey(?!\.com(?<=tailormadejourney\.com))
 1725868974	VLAZ	airlinesofficedesk\.com
+1725673786	micsthepick	(?=\d(?!\d:|\d{4}-\d{5}:))(?:91|0)?[6-9]\d{4}(?<!\d\D\d{5})[^A-Za-z\d]*+\d{5}(?![\s,]++\d)[^A-Za-z\d]++(?:91|0)?[6-9]\d{4}[^A-Za-z\d]*+\d{5}(?![^A-Za-z\d]*+\d)(?=.{0,200}+\Z)
