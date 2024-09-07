@@ -66128,3 +66128,4 @@
 1725709216	Cody Gray	(?-i:^Anuj Singh$)
 1725709250	Cody Gray	Glasafe(?!\.com)
 1725711147	Cow	cgpatopercentages\.com
+1725711202	Cody Gray	gpa[\W_]*+calculator
