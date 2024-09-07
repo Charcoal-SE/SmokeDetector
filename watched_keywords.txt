@@ -39022,7 +39022,6 @@
 1653739905	Cody Gray	techmobius\.com
 1653739940	Cody Gray	TechMobius(?!\.com)
 1653747311	tripleee	megafamous\.com
-1653747539	tripleee	^ra+i+s+\d*$
 1653753971	cigien	graphql\.haraj\.com\.sa
 1653754145	Ollie	haraj\.com\.sa
 1653755264	cigien	polygon\.bitkeep\.com
