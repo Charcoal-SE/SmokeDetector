@@ -66133,3 +66133,4 @@
 1725720951	Cow	hotext\.es
 1725729032	Makyen	(?:support|service)(?!/)(?!(?:[^<]++|<(?!\/?code>))*+<\/code>)(?:\W++(?:\w(?<!\d))++)?[\W_]*+(?!\d\d(?:\d\d)?[:-]\d\d[:-]\d\d(?:\d\d)?\b)(?:2[\W_]*+4(?:[\W_]*+7)?|(?:\d[\W_]*+){6,12})
 1725735763	Cow	(?-i:WeQyIpWQ)(?# cutt.ly porn site)
+1725737276	Vickel	listforbes\.com
