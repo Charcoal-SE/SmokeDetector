@@ -66124,3 +66124,4 @@
 1725708671	Cow	32dental\.com
 1725708880	Cody Gray	swiftron(?!\.eu)
 1725708949	Cody Gray	32dental(?!\.com)
+1725709163	Cody Gray	91[\W_]*+Club(?!\.com(?<=91clubgameapp\.com))
