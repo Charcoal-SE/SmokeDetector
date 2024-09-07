@@ -66131,3 +66131,4 @@
 1725711250	Cody Gray	gpa[\W_]*+(?:in)?to[\W_]*+percent(?:age)?
 1725711608	Cow	(?-i:Heads_UPs)(?# telegram)
 1725715010	Cody Gray	^ra+i+s+\d*(?<!rais)$
+1725720951	Cow	hotext\.es
