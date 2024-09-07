@@ -66130,3 +66130,4 @@
 1725711147	Cow	cgpatopercentages\.com
 1725711202	Cody Gray	gpa[\W_]*+calculator
 1725711250	Cody Gray	gpa[\W_]*+(?:in)?to[\W_]*+percent(?:age)?
+1725711608	Cow	(?-i:Heads_UPs)
