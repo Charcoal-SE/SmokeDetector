@@ -66103,3 +66103,4 @@
 1725644906	Cow	traderknows\.com
 1725661759	micsthepick	paradox[\W]*+recovery(?![\W]*+wizard)
 1725664700	Vickel	illuminatisocietywealth(?:@gmail\.com)?
+1725681599	Dragonrage	vietnameseprivatetours\.com
