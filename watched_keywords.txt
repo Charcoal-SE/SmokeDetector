@@ -66123,3 +66123,4 @@
 1725708846	Cody Gray	swiftron\.eu
 1725708671	Cow	32dental\.com
 1725708880	Cody Gray	swiftron(?!\.eu)
+1725708949	Cody Gray	32dental(?!\.com)
