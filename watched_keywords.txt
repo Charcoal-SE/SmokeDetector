@@ -66147,3 +66147,4 @@
 1725792618	Cody Gray	vivalditech
 1725792688	Cody Gray	VIVALDI[\W_]*+CYBER[\W_]*+TECH
 1725792914	Cody Gray	yihiuman[\W_]*@[\W_]*vivaldi[\W_]*\.[\W_]*net
+1725795017	Cody Gray	devex\.com\/people\/
