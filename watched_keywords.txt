@@ -66148,3 +66148,4 @@
 1725792688	Cody Gray	VIVALDI[\W_]*+CYBER[\W_]*+TECH
 1725792914	Cody Gray	yihiuman[\W_]*@[\W_]*vivaldi[\W_]*\.[\W_]*net
 1725795017	Cody Gray	devex\.com\/people\/
+1725795178	Cody Gray	qatar[\W_]*+uk[\W_]*+help[\W_]*+line
