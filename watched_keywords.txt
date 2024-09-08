@@ -66152,3 +66152,4 @@
 1725795285	Cody Gray	qatar[\W_]*+(?:live[\W_]*+agent[\W_]*+)?UK
 1725795329	Cody Gray	indiapresslive\.com
 1725795377	Cody Gray	qatar[\W_]*+airways
+1725734576	Cow	ytrank\.ai
