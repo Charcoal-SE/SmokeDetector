@@ -1554,6 +1554,9 @@ items:
   - maxim.ns.cloudflare.com.
 - ns:
   - cullen.ns.cloudflare.com.
+  - kimora.ns.cloudflare.com.
+- ns:
+  - cullen.ns.cloudflare.com.
   - maleah.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
