@@ -1703,6 +1703,9 @@ items:
   - nicole.ns.cloudflare.com.
 - ns:
   - david.ns.cloudflare.com.
+  - keira.ns.cloudflare.com.
+- ns:
+  - david.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
 - ns:
   - david.ns.cloudflare.com.
