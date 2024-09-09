@@ -66204,3 +66204,4 @@
 1725883683	tripleee	booming[\W_]*+bulls
 1725883867	tripleee	DDS4U
 1725883940	tripleee	ginesys\.in
+1725883965	tripleee	ginesys(?!\.in)
