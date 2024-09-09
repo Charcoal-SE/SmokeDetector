@@ -5799,3 +5799,4 @@ planethive\.ai
 zalo\.me(?<!developers\.zalo\.me)
 camstore\.in
 janedoe\.fi
+geometrydashpro\.fun
