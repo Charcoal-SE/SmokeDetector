@@ -66163,3 +66163,4 @@
 1725826834	Vickel	bluetick1kennels\.com
 1725822599	Cow	(?-i:coder_ade)(?# fiverr.com)
 1725834497	Vickel	cyberinformationrewrite
+1725841149	Makyen	dr\.baba\.mkurulovespellcaster(?:@gmail\.com)?
