@@ -66179,3 +66179,4 @@
 1725862300	Cow	junari\.com
 1725862393	Cow	top[\W_]*+crm[\W_]*+solutions
 1725862474	tripleee	eclasess\.com
+1725862503	tripleee	eclasess(?!\.com)
