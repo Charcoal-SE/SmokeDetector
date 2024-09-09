@@ -66177,3 +66177,4 @@
 1725860817	Cow	24kbetsports\.com
 1725861371	tripleee	grow[\W_]*+agros
 1725862300	Cow	junari\.com
+1725862393	Cow	top[\W_]*+crm[\W_]*+solutions
