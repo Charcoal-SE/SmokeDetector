@@ -66202,5 +66202,4 @@
 1725883205	tripleee	crtechnologys\.com
 1725883639	Jeff Schaller	sandbox\.zenodo\.org
 1725883683	tripleee	booming[\W_]*+bulls
-1725883788	micsthepick	ginesis
 1725883817	micsthepick	ginesys
