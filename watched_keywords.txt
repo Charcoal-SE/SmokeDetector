@@ -66172,3 +66172,4 @@
 1725855484	Cow	alchemytesting\.com
 1725855723	Cow	dermalmd\.com
 1725859309	tripleee	sdlccorp\.com
+1725855882	Cow	dermalmd(?!\.com)
