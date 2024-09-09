@@ -66174,3 +66174,4 @@
 1725859309	tripleee	sdlccorp\.com
 1725855882	Cow	dermalmd(?!\.com)
 1725858909	Cow	kangennhatban\.com\.vn
+1725860817	Cow	24kbetsports\.com
