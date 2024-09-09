@@ -66207,3 +66207,4 @@
 1725883965	tripleee	ginesys(?!\.in)
 1725884064	tripleee	github\.com/naylor
 1725884409	Vickel	gracefulgaze\.online
+1725884871	Jeff Schaller	videos_and_images2024(?#shorten.ee)
