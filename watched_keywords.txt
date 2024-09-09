@@ -66194,3 +66194,4 @@
 1725877137	Jeff Schaller	(?-i:hitx5a)(?#rb.gy)
 1725877163	Jeff Schaller	autoaiassistant\.com
 1725878051	tripleee	crickbet\.co
+1725878076	tripleee	crickbet(?!\.co)
