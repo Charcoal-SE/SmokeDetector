@@ -66175,3 +66175,4 @@
 1725855882	Cow	dermalmd(?!\.com)
 1725858909	Cow	kangennhatban\.com\.vn
 1725861125	tripleee	my[\W_]*+care[\W_]*+labs(?!\.com(?<=mycarelabs\.com))
+1725860817	Cow	24kbetsports\.com
