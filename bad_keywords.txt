@@ -3121,4 +3121,3 @@ dubai[\W_]*+e[\W_]*+visa[\W_]*+online\d*(?<!(?-i:^Dubai E Visa Online$))
 br[\W_]*+softech(?!\.com(?<=brsoftech\.com))
 balmorex(?:[\W_]*+pro\w*+|(?<==balmorex)|\w++)
 𝐻𝑒𝓁𝓅𝒟𝑒𝓈𝓀
-(?:91|0)?[6-9]\d{4}(?<!\d\D\d{5})[^A-Za-z\d]*+\d{5}(?![\s,]++\d)[^A-Za-z\d]++(?:91|0)?[6-9]\d{4}[^A-Za-z\d]*+\d{5}(?![^A-Za-z\d]*+\d)(?=.{0,200}+\Z)
