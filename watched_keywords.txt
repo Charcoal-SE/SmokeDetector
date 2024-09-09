@@ -66217,3 +66217,4 @@
 1725891351	Spevacus	mrmint\.io
 1725892370	Jeff Schaller	plslocksmith\.net
 1725894140	Jeff Schaller	studyhardforsuccess\.com
+1725895891	tripleee	(?-i:SHSSILMCH)(?# telegram)
