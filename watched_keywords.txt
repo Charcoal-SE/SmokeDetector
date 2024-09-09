@@ -66165,3 +66165,4 @@
 1725834497	Vickel	cyberinformationrewrite
 1725841149	Makyen	dr\.baba\.mkurulovespellcaster(?:@gmail\.com)?
 1725841991	Jeff Schaller	robertresearchchemshop\.com
+1725855882	Cow	dermalmd(?!\.com)
