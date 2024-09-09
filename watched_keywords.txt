@@ -66188,3 +66188,4 @@
 1725868688	VLAZ	tailormade[\W_]*+journey(?!\.com(?<=tailormadejourney\.com))
 1725868974	VLAZ	airlinesofficedesk\.com
 1725871257	Cow	slot853
+1725872431	tripleee	giac\.org
