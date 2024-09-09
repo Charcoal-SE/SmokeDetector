@@ -66187,3 +66187,4 @@
 1725867376	Cow	tailormadejourney\.com
 1725868688	VLAZ	tailormade[\W_]*+journey(?!\.com(?<=tailormadejourney\.com))
 1725868974	VLAZ	airlinesofficedesk\.com
+1725871257	Cow	slot853
