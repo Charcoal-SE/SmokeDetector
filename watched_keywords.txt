@@ -66196,3 +66196,4 @@
 1725878051	tripleee	crickbet\.co
 1725878076	tripleee	crickbet(?!\.co)
 1725876329	Jenayah	"Arya Power Yoga Academy"
+1725878391	Jeff Schaller	primedigisol\.ae
