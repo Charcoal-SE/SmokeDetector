@@ -65669,7 +65669,6 @@
 1724840528	Dragonrage	glyters\.com
 1724840582	Cody Gray	glyters(?!\.com)
 1724840603	Dragonrage	programmersclub\.in
-1724841985	tripleee	(?-i:^lostmarien$)
 1724842885	double-beep	accesstrade\.vn
 1724844240	double-beep	recovermycryptofunds\.com
 1724844565	VLAZ	shahrsakhtafzar\.com
