@@ -1121,3 +1121,4 @@ carelab[sz]
 (?-i:^ekta das$)
 (?-i:^Tarun Chawla$)
 (?-i:^Catherine Lily$)
+(?-i:^Jani jan$)
