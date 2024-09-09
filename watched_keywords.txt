@@ -66181,3 +66181,4 @@
 1725862474	tripleee	eclasess\.com
 1725862503	tripleee	eclasess(?!\.com)
 1725864787	tripleee	(?-i:^Jbms$)
+1725864932	cocomac	panditingujarat\.com
