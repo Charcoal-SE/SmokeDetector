@@ -1340,6 +1340,9 @@ items:
   - chris.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
+  - christian.ns.cloudflare.com.
+  - erin.ns.cloudflare.com.
+- ns:
   - chuck.ns.cloudflare.com.
   - evangeline.ns.cloudflare.com.
 - ns:
