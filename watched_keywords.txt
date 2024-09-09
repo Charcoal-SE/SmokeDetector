@@ -66186,3 +66186,4 @@
 1725865868	tripleee	S3CloudHub(?# medium)
 1725867376	Cow	tailormadejourney\.com
 1725868688	VLAZ	tailormade[\W_]*+journey(?!\.com(?<=tailormadejourney\.com))
+1725868974	VLAZ	airlinesofficedesk\.com
