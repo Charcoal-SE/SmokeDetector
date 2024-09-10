@@ -66251,3 +66251,4 @@
 1725947793	VLAZ	w888(?:team)?(?!\.team(?<=w888\.team))
 1725947822	VLAZ	cnr3cettokcf(?# prezi.com)
 1725947847	VLAZ	W88-3dc7fe2a00aa4c3dbff2340e0f8ca785(?# notion.site)
+1725948852	Cow	accuratesteels\.com
