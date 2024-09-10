@@ -1965,6 +1965,9 @@ items:
   - earl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
 - ns:
+  - earl.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
+- ns:
   - ed.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
 - ns:
