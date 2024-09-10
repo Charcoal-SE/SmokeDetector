@@ -66231,3 +66231,4 @@
 1725929809	micsthepick	swift\w{1,12}?freights?(?!(?<=swiftgreenfreights)\.com)
 1725929959	micsthepick	standardbasecredit\.com
 1725930122	micsthepick	dsfabianitech\.com
+1725930407	micsthepick	zederick\.com
