@@ -5803,3 +5803,4 @@ onlinepharmasy\.com
 sonra\.io
 spiralmantra\.com
 sparkouttech\.com
+zalo\.me(?<!developers\.zalo\.me)(?<!openapi\.zalo\.me)
