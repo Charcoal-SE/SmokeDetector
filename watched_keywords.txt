@@ -66279,3 +66279,4 @@
 1725967199	tripleee	(?-i:^Imogen Fitzgerald$)
 1725968406	Vickel	gangaonlinebook\.com
 1725968549	Vickel	ganga[\W_]*+online[\W_]*+book(?!\.com(?<=gangaonlinebook\.com))
+1725968659	tripleee	hotel[^\W_]*+raj[^\W_]*+hans(?:[^\W_]*+international)?
