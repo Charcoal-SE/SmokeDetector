@@ -4528,6 +4528,11 @@ items:
   - ns-1972.awsdns-54.co.uk.
   - ns-839.awsdns-40.net.
 - ns:
+  - ns-1048.awsdns-03.org.
+  - ns-1593.awsdns-07.co.uk.
+  - ns-262.awsdns-32.com.
+  - ns-870.awsdns-44.net.
+- ns:
   - ns-1050.awsdns-03.org.
   - ns-1881.awsdns-43.co.uk.
   - ns-418.awsdns-52.com.
