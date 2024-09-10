@@ -66273,3 +66273,4 @@
 1725961719	VLAZ	POLKADOTBLISS
 1725961745	VLAZ	acceleratoraiacademy\.com
 1725961771	VLAZ	Accelerator[\W_]*+AI[\W_]*+Academy(?!\.com(?<=acceleratoraiacademy\.com))
+1725962511	Jeff Schaller	flexifyme\.com
