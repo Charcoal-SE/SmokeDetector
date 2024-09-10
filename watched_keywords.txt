@@ -66226,3 +66226,4 @@
 1725929362	micsthepick	openhills\.xyz
 1725929403	micsthepick	openhills(?!\.xyz)
 1725929434	micsthepick	zeulixbank\.com
+1725929459	micsthepick	zeulixbank(?!\.com)
