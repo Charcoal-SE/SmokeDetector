@@ -66299,3 +66299,4 @@
 1726004046	Vickel	drnadermomtaz\.com
 1725992156	Cow	(?-i:G4KySr05Xm0)(?# YouTube channel)
 1725998458	Vickel	apklinx\.com
+1726009294	Fastnlight	recoveryfundprovider(?:@gmail\.com)?
