@@ -66242,3 +66242,4 @@
 1725931340	micsthepick	infinitesavewise(?!\.com)
 1725931415	micsthepick	pxnbnk\.com
 1725931441	micsthepick	pxnbnk(?!\.com)
+1725932761	micsthepick	jericobd\.com
