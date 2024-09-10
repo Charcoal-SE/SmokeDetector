@@ -66238,3 +66238,4 @@
 1725931010	micsthepick	tpsmartlimited(?!\.com)
 1725931091	micsthepick	theofficialilluminatigroup(?!\.online)
 1725931132	micsthepick	theofficialilluminatigroup\.online
+1725931315	micsthepick	infinitesavewise\.com
