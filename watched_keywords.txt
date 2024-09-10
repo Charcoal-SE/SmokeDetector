@@ -66220,3 +66220,4 @@
 1725892307	General Grievance	trumcokhi\.com\.vn
 1725921708	Makyen	heliotile\.ca
 1725928271	micsthepick	orizainvest\.com
+1725928335	micsthepick	orizainvest(?!\.com)
