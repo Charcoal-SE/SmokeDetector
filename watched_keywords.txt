@@ -66224,3 +66224,4 @@
 1725929235	micsthepick	superfastlogisticsolutions\.ltd
 1725929262	micsthepick	superfastlogisticsolutions(?!\.ltd)
 1725929362	micsthepick	openhills\.xyz
+1725929403	micsthepick	openhills(?!\.xyz)
