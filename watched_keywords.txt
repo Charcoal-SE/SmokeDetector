@@ -66275,3 +66275,4 @@
 1725962511	Jeff Schaller	flexifyme\.com
 1725962606	Jeff Schaller	artemiscoin\.co
 1725962775	Jeff Schaller	cabexindia\.com
+1725964987	tripleee	(?-i:^Paula Young$)
