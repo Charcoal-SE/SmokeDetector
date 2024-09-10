@@ -66287,3 +66287,4 @@
 1725973255	Spevacus	thepackagesinfo\.com
 1725974480	tripleee	nanonets\.com
 1725974929	tripleee	scanbarcode\.org
+1725974959	tripleee	qrscanner\.org
