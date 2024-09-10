@@ -66222,3 +66222,4 @@
 1725928271	micsthepick	orizainvest\.com
 1725928335	micsthepick	orizainvest(?!\.com)
 1725929235	micsthepick	superfastlogisticsolutions\.ltd
+1725929262	micsthepick	superfastlogisticsolutions(?!\.ltd)
