@@ -1123,3 +1123,4 @@ carelab[sz]
 (?-i:^Catherine Lily$)
 (?-i:^Jani jan$)
 (?-i:^accuratesteels$)
+(?-i:^Cre8iveSkill$)
