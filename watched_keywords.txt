@@ -66255,3 +66255,4 @@
 1725949134	tripleee	accurate[\W_]*+steels?(?!\.com(?<=accuratesteels\.com))(?<!(?-i:^accuratesteels$))
 1725949604	Cow	ebillpk\.com
 1725951045	tripleee	cre8iveskill(?!\.com)(?<!(?-i:^Cre8iveSkill$))
+1725951129	Dragonrage	bachnghe\.com\.vn
