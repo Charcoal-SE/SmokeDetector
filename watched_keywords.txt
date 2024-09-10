@@ -66282,3 +66282,4 @@
 1725968659	tripleee	hotel[^\W_]*+raj[^\W_]*+hans(?:[^\W_]*+international)?
 1725968685	Jeff Schaller	whatlinko\.com
 1725969001	Cow	joeycebrero(?:@gmail\.com)?
+1725969307	tripleee	61557149861322(?# facebook ID)
