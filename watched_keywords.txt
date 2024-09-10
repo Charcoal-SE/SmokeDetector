@@ -66253,3 +66253,4 @@
 1725947847	VLAZ	W88-3dc7fe2a00aa4c3dbff2340e0f8ca785(?# notion.site)
 1725947491	Cow	jgseeds\.com
 1725948852	Cow	accuratesteels\.com
+1725949085	tripleee	accurate[\W_]*+steels(?!\.com(?<=accuratesteels\.com))(?<!(?-i:^accuratesteels$))
