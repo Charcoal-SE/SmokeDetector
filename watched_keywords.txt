@@ -66236,3 +66236,4 @@
 1725930593	micsthepick	chev(?:y|vy|rolet)wealth(?!(?<=chevwealth)\.com)
 1725930948	micsthepick	tpsmartlimited\.com
 1725931010	micsthepick	tpsmartlimited(?!\.com)
+1725931091	micsthepick	theofficialilluminatigroup(?!\.online)
