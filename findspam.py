@@ -2253,6 +2253,7 @@ city_list = [
     "Baddi",
     "Bangalore",
     "Banswarabhiwadi",
+    "Bhagalpur",
     "Bhilwara",
     "Bhimtal",
     "Bhiwandi",
