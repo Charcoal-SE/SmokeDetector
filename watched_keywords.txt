@@ -66249,3 +66249,4 @@
 1725941831	Anerdw	SCAMRECOVERYSITE[\W_]*+FIRM
 1725947742	VLAZ	w888\.team
 1725947793	VLAZ	w888(?:team)?(?!\.team(?<=w888\.team))
+1725947822	VLAZ	cnr3cettokcf(?# prezi.com)
