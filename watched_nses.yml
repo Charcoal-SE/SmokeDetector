@@ -287,6 +287,9 @@ items:
   - alexa.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
+  - alexa.ns.cloudflare.com.
+  - koa.ns.cloudflare.com.
+- ns:
   - alexia.ns.cloudflare.com.
   - donovan.ns.cloudflare.com.
 - ns:
