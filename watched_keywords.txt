@@ -66257,3 +66257,4 @@
 1725951045	tripleee	cre8iveskill(?!\.com)(?<!(?-i:^Cre8iveSkill$))
 1725951129	Dragonrage	bachnghe\.com\.vn
 1725952240	tripleee	fescoebill\.com\.pk
+1725952761	tripleee	Aadhaar[\W_]*+eKYC
