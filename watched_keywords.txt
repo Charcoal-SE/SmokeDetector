@@ -66289,3 +66289,4 @@
 1725974959	tripleee	qrscanner\.org
 1725975011	tripleee	(?-i:^shehzad baqir$)
 1725975855	tripleee	fixnblog\.com
+1725977093	Spevacus	semil\.mydt\.in
