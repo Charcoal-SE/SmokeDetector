@@ -66263,3 +66263,4 @@
 1725953652	tripleee	onewayticker\.com
 1725954890	tripleee	brisbaneepoxysuppliers\.com\.au
 1725956084	Dragonrage	artfulinterior\.mydt\.in
+1725956247	tripleee	ss[\W_]*+medicorp
