@@ -66229,3 +66229,4 @@
 1725929459	micsthepick	zeulixbank(?!\.com)
 1725929575	micsthepick	swiftgreenfreights\.com
 1725929600	micsthepick	swiftgreenfreights(?!\.com)
+1725929809	micsthepick	swift\w{1,12}?freights?(?!(?<=swiftgreenfreights)\.com)
