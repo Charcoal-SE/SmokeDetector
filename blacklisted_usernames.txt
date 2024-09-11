@@ -1124,3 +1124,4 @@ carelab[sz]
 (?-i:^Jani jan$)
 (?-i:^accuratesteels$)
 (?-i:^Cre8iveSkill$)
+(?-i:^The Mad House of spam$)
