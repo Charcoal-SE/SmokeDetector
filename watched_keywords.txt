@@ -66302,3 +66302,4 @@
 1726010236	Fastnlight	dana-claim-10jt\.digitall-com-ads\.biz\.id
 1726009294	Fastnlight	recoveryfundprovider(?:@gmail\.com)?
 1726020035	Fastnlight	daiphuong\.com\.vn
+1726022303	Fastnlight	suatulanhlimosa\.com
