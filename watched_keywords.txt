@@ -66306,3 +66306,4 @@
 1726022687	Jeff Schaller	cricketidadda\.com
 1726024393	Spevacus	xdigitalmedia\.co
 1726012712	Vickel	microdumpster\.com
+1726030380	tripleee	(?-i:^Khushi Gill$)
