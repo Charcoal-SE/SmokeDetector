@@ -1125,3 +1125,4 @@ carelab[sz]
 (?-i:^accuratesteels$)
 (?-i:^Cre8iveSkill$)
 (?-i:^The Mad House of spam$)
+(?-i:^Furdin-Alif$)
