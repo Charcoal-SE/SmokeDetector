@@ -37875,7 +37875,6 @@
 1650533165	Cody Gray	tetrogenusa\.com
 1650533254	Cody Gray	matchoffice\.fr
 1650537624	tripleee	(?-i:UCQw6XKrYLq0BILP2LQdfUFQ)(?# youtube)
-1650540596	tripleee	weeom\.com
 1650552185	Spevacus	ahcracks\.com
 1650556751	Ollie	info\.azgad(?:@gmail\.com)?
 1650562483	Ollie	henduohao\.com
