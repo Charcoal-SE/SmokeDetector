@@ -66339,3 +66339,4 @@
 1726076256	Jeff Schaller	sensesilk\.com\.vn
 1726079530	Cow	parasbuildtech\.co\.in
 1726086416	Jeff Schaller	azblogginghub\.com
+1726088754	Makyen	insure[\W_]*+finalexpense(?!\.com(?<=insurefinalexpense\.com))
