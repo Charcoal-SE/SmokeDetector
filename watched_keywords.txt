@@ -66313,3 +66313,4 @@
 1726031949	tripleee	treasury[\W_]*+analytica(?!\.(?:com|email))
 1726031886	Cow	guilhermusico(?:@gmail\.com)?
 1726033084	tripleee	findgeneraltrading\.com
+1726034732	Anerdw	(?-i:^bani rani$)
