@@ -66327,3 +66327,4 @@
 1726050170	Jeff Schaller	amibrokerchart\.com
 1726051306	Jeff Schaller	saatviknetralaya\.com
 1726051332	Jeff Schaller	qbookassist\.com
+1726054609	VLAZ	instanderlive\.com
