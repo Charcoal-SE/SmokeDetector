@@ -66337,3 +66337,4 @@
 1726068835	Jeff Schaller	monicanight\.in
 1726075415	Jeff Schaller	insurefinalexpense\.com
 1726076256	Jeff Schaller	sensesilk\.com\.vn
+1726080440	Cow	(?-i:mitchkahle)(?# substack.com)
