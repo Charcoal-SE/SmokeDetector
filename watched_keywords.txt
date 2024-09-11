@@ -66318,3 +66318,4 @@
 1726038800	tripleee	tulasi
 1726038854	Dragonrage	shekhawatihospital\.com
 1726039301	Dragonrage	inshotproplus\.com
+1726034732	Anerdw	(?-i:^bani rani$)
