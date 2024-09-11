@@ -66310,3 +66310,4 @@
 1726031517	tripleee	treasuryanalytica\.email
 1726031562	Cow	treasury[\W_]*+analytica(?!\.com)
 1726031637	Cow	(?-i:guicavalcanti)(?# g.dev)
+1726031356	Cow	treasuryanalytica\.com
