@@ -230,6 +230,9 @@ items:
   - raphaela.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
+  - hugh.ns.cloudflare.com.
+- ns:
+  - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
   - coleman.ns.cloudflare.com.
