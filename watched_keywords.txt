@@ -66308,3 +66308,4 @@
 1726012712	Vickel	microdumpster\.com
 1726030380	tripleee	(?-i:^Khushi Gill$)
 1726030877	tripleee	swiftdreamwebconsultant([\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1726031356	Cow	treasuryanalytica\.com
