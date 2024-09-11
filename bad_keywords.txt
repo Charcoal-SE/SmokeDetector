@@ -3125,3 +3125,4 @@ balmorex(?:[\W_]*+pro\w*+|(?<==balmorex)|\w++)
 filmyzilla
 jane[\W_]*+doe[\W_]*+finance
 epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
+myassignmenthelp(?!\.(io|live|com|expert))
