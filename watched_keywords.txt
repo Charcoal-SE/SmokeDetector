@@ -66370,3 +66370,4 @@
 1726135534	tripleee	electricalestimators-llc\.com
 1726136827	tripleee	(?-i:^Sophia Bliss$)
 1726136884	tripleee	CrisperWhisper
+1726137161	tripleee	clickhouse[\W_]*+backup
