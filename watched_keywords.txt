@@ -66361,4 +66361,3 @@
 1726126405	VLAZ	BOTOX[\W_]*+Louisville
 1726126433	VLAZ	(502) 974 3447
 1726126459	VLAZ	(502) 882 8680
-1726127239	tripleee	clean[^\W_]*+spy[^\W_]*+tech(?:[^\W_]*+(?:at[^\W_]*+)?gmail[^\W_]*+(?:dot[^\W_]*+)?com)?
