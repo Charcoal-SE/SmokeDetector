@@ -181,6 +181,9 @@ items:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - bruce.ns.cloudflare.com.
+  - megan.ns.cloudflare.com.
+- ns:
   - bryce.ns.cloudflare.com.
   - dina.ns.cloudflare.com.
 - ns:

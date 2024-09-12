@@ -1113,9 +1113,6 @@ items:
   - lina.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
-  - megan.ns.cloudflare.com.
-- ns:
-  - bruce.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
