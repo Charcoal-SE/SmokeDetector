@@ -66355,3 +66355,4 @@
 1726122321	Cow	(?-i:vinaychauhan34)(?# twitter.com)
 1726122487	Dragonrage	luxonsystems\.com
 1726119853	Cow	rhino\.bet
+1726124839	tripleee	(?-i:^vanish box$)
