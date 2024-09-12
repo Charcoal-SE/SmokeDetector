@@ -66361,3 +66361,4 @@
 1726126379	VLAZ	bodi[\W_]*+louisville(?!\.com(?<=bodilouisville\.com))
 1726126405	VLAZ	BOTOX[\W_]*+Louisville
 1726126433	VLAZ	(502) 974 3447
+1726126459	VLAZ	(502) 882 8680
