@@ -66347,3 +66347,4 @@
 1726118319	VLAZ	gogojili(?!\.org\.ph)
 1726080270	Cow	harkenmusic\.com
 1726118596	VLAZ	makeowntrips\.com
+1726080440	Cow	(?-i:mitchkahle)(?# substack.com)
