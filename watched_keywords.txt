@@ -66388,3 +66388,4 @@
 1726117651	Cow	siser\.com\.tr
 1726147188	tripleee	sahara[\W_]*+desert[\W_]*+kingdom(?!\.com(?<=saharadesertkingdom\.com))
 1726148801	Spevacus	soldbyhaley\.com
+1726149625	tripleee	shamaparveen\.mydt\.in
