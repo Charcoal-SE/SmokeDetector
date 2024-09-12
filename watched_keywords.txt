@@ -66369,3 +66369,4 @@
 1726134680	tripleee	chohki[\W_]*dhani(?!\.com(?<=chokhidhani\.com))
 1726135534	tripleee	electricalestimators-llc\.com
 1726136827	tripleee	(?-i:^Sophia Bliss$)
+1726136884	tripleee	CrisperWhisper
