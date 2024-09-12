@@ -66359,3 +66359,4 @@
 1726124947	tripleee	arya[\W_]*+college
 1726126353	VLAZ	bodilouisville\.com
 1726126379	VLAZ	bodi[\W_]*+louisville(?!\.com(?<=bodilouisville\.com))
+1726126405	VLAZ	BOTOX[\W_]*+Louisville
