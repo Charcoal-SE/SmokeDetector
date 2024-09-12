@@ -2557,6 +2557,9 @@ items:
   - ian.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
+  - ignacio.ns.cloudflare.com.
+  - rosalie.ns.cloudflare.com.
+- ns:
   - ignat.ns.cloudflare.com.
   - millie.ns.cloudflare.com.
 - ns:
