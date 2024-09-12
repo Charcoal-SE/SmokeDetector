@@ -66346,3 +66346,4 @@
 1726118295	VLAZ	gogojili\.org\.ph
 1726118319	VLAZ	gogojili(?!\.org\.ph)
 1726080270	Cow	harkenmusic\.com
+1726118596	VLAZ	makeowntrips\.com
