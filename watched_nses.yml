@@ -1436,17 +1436,14 @@ items:
   - clyde.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
-  - coco.ns.cloudflare.com.
-  - duke.ns.cloudflare.com.
-- ns:
   - coby.ns.cloudflare.com.
   - ziggy.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
-  - felicity.ns.cloudflare.com.
+  - duke.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
-  - hugh.ns.cloudflare.com.
+  - felicity.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
   - hunts.ns.cloudflare.com.
@@ -1964,6 +1961,9 @@ items:
 - ns:
   - earl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
+- ns:
+  - earl.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
 - ns:
   - ed.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
@@ -2777,6 +2777,9 @@ items:
   - zod.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
+  - santino.ns.cloudflare.com.
+- ns:
+  - jewel.ns.cloudflare.com.
   - tate.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
@@ -2931,6 +2934,9 @@ items:
 - ns:
   - kate.ns.cloudflare.com.
   - salvador.ns.cloudflare.com.
+- ns:
+  - kate.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
 - ns:
   - kay.ns.cloudflare.com.
   - owen.ns.cloudflare.com.
@@ -4314,6 +4320,9 @@ items:
   - rns407.webhostbox.net.
   - rns408.webhostbox.net.
 - ns:
+  - rns409.webhostbox.net.
+  - rns410.webhostbox.net.
+- ns:
   - rns41.webhostbox.net.
   - rns42.webhostbox.net.
 - ns:
@@ -4515,6 +4524,11 @@ items:
   - ns-132.awsdns-16.com.
   - ns-1972.awsdns-54.co.uk.
   - ns-839.awsdns-40.net.
+- ns:
+  - ns-1048.awsdns-03.org.
+  - ns-1593.awsdns-07.co.uk.
+  - ns-262.awsdns-32.com.
+  - ns-870.awsdns-44.net.
 - ns:
   - ns-1050.awsdns-03.org.
   - ns-1881.awsdns-43.co.uk.
@@ -5636,3 +5650,8 @@ items:
 - ns: hostarmada.net.
 - ns: edusum.com.
 - ns: bajika.co.
+- ns: seodns.one.
+- ns:
+  - o365ce-a6h6bhehe7ccd2be.a03.azurefd.net.
+  - shed.dual-low.s-part-0024.t-0009.t-msedge.net.
+  - s-part-0024.t-0009.t-msedge.net.
