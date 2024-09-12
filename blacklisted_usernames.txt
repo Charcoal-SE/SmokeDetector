@@ -1128,3 +1128,4 @@ carelab[sz]
 (?-i:^Furdin-Alif$)
 (?-i:^YourQuorum$)
 (?-i:^ISOCERT$)
+(?-i:^keshwaplay online$)
