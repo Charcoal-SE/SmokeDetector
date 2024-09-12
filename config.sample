@@ -1,0 +1,56 @@
+[Config]
+location=location_here
+
+# Set ChatExchange login credentials, environmental variables take precedence over here
+# ChatExchangeU=stackexchange_login@example.com
+# ChatExchangeP=p@55w0rd
+
+# Set the location for metasmoke here if you're running it. See https://github.com/Charcoal-SE/metasmoke.
+# metasmoke_host=https://metasmoke.erwaysoftware.com
+# metasmoke_ws_host=wss://metasmoke.erwaysoftware.com/cable
+
+# Set metasmoke_key if Smokey isn't running on the same machine (localhost) that metasmoke is
+# metasmoke_key=gibberish_here
+
+# Set GitHub keys
+# git_username=SmokeDetector
+# git_useremail=smokey@erwaysoftware.com
+# github_username=username@domain.com
+# github_password=p@55w0rd
+# github_access_token=some_token
+
+# Perspective API key
+# perspective_key=some_key
+
+# Manually add blacklist privileged users (primarily for testing):
+# se_blacklisters=<comma separated list of user IDs on chat.stackexchange>
+# mse_blacklisters=<comma separated list of user IDs on meta.chat.stackexchange>
+# so_blacklisters=<comma separated list of user IDs on chat.stackoverflow>
+
+# DNS settings can be adjusted here. This contains DNS cache functionality to enable/disable
+# the DNS cache, or to tweak the DNS cache rules.  This also controls which DNS resolver to use.
+# For dns_resolver, 'system' is the default, use a comma separated list of IPs if you want other
+# DNS resolvers for the DNS functions.
+# For dns_cache_enabled, 'True' is the default, use 'False' to disable DNS Caching
+# For dns_cache_cleanup_interval, default is 300.0 (5 minutes), but this is a Float value.
+dns_resolver=system
+dns_cache_enabled=True
+dns_cache_cleanup_interval=300.0
+
+# Run only the following specified detection reasons.
+# "valid_detection_reasons" is a semicolon separated list of detections which are permitted to run.
+# If the rule's "reason" has an exact match in the following list, then the rule is run. If the
+# rule's "reason" is not in the list, then it's not run.
+# Currently, "blacklisted user" is run separately, so is always run, regardless of it not
+# being in the list. If no list is specified, then all detections are run.
+# Whitespace is not trimmed from the entries in the list.
+# valid_detection_reasons:potentially bad keyword in {};potentially bad IP for hostname in {}
+
+# Set an alternative prefix for chat messages posted by SD
+# chat_prefix=Demo
+
+# The name of the bot
+# smokedetector_name=SmokeDetector
+
+# The URL path of the repo
+# smokedetector_repo=Charcoal-SE/SmokeDetector

@@ -1,0 +1,205 @@
+Schema: yaml_asn
+Schema_version: '2019120601'
+items:
+- asn: '3223'
+- asn: '3842'
+  comment: 122/284 over 1 year
+  disable: true
+- asn: '3595'
+- asn: '8455'
+- asn: '8650'
+- asn: '8622'
+- asn: '9498'
+- asn: '11042'
+- asn: '12488'
+- asn: '16509'
+  comment: FPs; do not watch
+  disable: true
+- asn: '17439'
+- asn: '18229'
+- asn: '18403'
+- asn: '18978'
+  disable: true
+- asn: '19318'
+  comment: '67/162 over a year'
+  disable: true
+- asn: '19551'
+  comment: '6/143 over three months'
+  disable: true
+- asn: '19624'
+- asn: '19969'
+- asn: '20013'
+  comment: FPs; do not watch
+  disable: true
+- asn: '20454'
+- asn: '21501'
+- asn: '22611'
+- asn: '22612'
+  comment: Moderate FPs, don't double up
+  disable: true
+- asn: '23352'
+- asn: '23535'
+- asn: '23957'
+- asn: '24309'
+- asn: '24778'
+- asn: '25369'
+- asn: '25697'
+  comment: over two years since previous 1-weight TP
+  disable: true
+- asn: '26496'
+  comment: Massive FPs; do not watch
+  disable: true
+- asn: '27176'
+- asn: '28753'
+- asn: '29066'
+- asn: '29073'
+- asn: '29802'
+- asn: '31083'
+  comment: 21/97 over a year
+  disable: true
+- asn: '31863'
+  comment: 32/76 over a year
+  disable: true
+- asn: '31708'
+- asn: '32244'
+  comment: 164/714 over 7 months
+  disable: true
+- asn: '32613'
+- asn: '32748'
+- asn: '33182'
+- asn: '34088'
+- asn: '34119'
+  comment: 32/173 over a year
+  disable: true
+- asn: '34282'
+- asn: '35916'
+- asn: '36007'
+- asn: '36024'
+  comment: 1/49 over a year, do not add back
+  disable: true
+- asn: '36351'
+  comment: 377/1288 over a year, very noisy
+  disable: true
+- asn: '36352'
+  comment: 48/140 over a year
+  disable: true
+- asn: '38001'
+- asn: '38142'
+- asn: '38719'
+- asn: '38880'
+- asn: '39962'
+- asn: '40021'
+- asn: '40676'
+  comment: 61/132 over a year
+  disable: true
+- asn: '42831'
+- asn: '42846'
+- asn: '43317'
+- asn: '45012'
+- asn: '45538'
+- asn: '45544'
+- asn: '45815'
+- asn: '45839'
+- asn: '46015'
+- asn: '46261'
+  comment: 4/24 over 10 months
+  disable: true
+- asn: '46475'
+  comment: 61/239 over 2 years; no 1-weight reports
+  disable: true
+- asn: '46844'
+- asn: '47583'
+- asn: '48254'
+- asn: '49335'
+- asn: '50613'
+- asn: '50673'
+  comment: 17/77 over 10 months
+  disable: true
+- asn: '51167'
+- asn: '51468'
+- asn: '53667'
+- asn: '53755'
+- asn: '53810'
+- asn: '53889'
+- asn: '54290'
+  comment: 22/58 over a year
+  disable: true
+- asn: '54600'
+- asn: '55002'
+  comment: 11/100 over a yeasr
+  disable: true
+- asn: '55293'
+- asn: '55470'
+- asn: '56110'
+- asn: '56485'
+- asn: '56851'
+- asn: '58061'
+- asn: '58110'
+- asn: '58640'
+- asn: '59253'
+- asn: '59441'
+- asn: '59922'
+- asn: '60144'
+- asn: '60631'
+- asn: '62134'
+- asn: '62729'
+- asn: '62731'
+- asn: '62838'
+- asn: '63068'
+- asn: '63410'
+- asn: '63760'
+- asn: '63930'
+- asn: '63956'
+- asn: '64425'
+- asn: '131392'
+- asn: '132203'
+  comment: no 1-weight hits since watch; disabled 2023-03-06
+  disable: true
+- asn: '132335'
+- asn: '132420'
+- asn: '133296'
+- asn: '133643'
+- asn: '133711'
+- asn: '134286'
+- asn: '135222'
+- asn: '135377'
+- asn: '135822'
+- asn: '135905'
+- asn: '135908'
+- asn: '135917'
+- asn: '135951'
+- asn: '137035'
+- asn: '138152'
+- asn: '138246'
+- asn: '139035'
+- asn: '140576'
+- asn: '140641'
+- asn: '140979'
+- asn: '141004'
+- asn: '141338'
+- asn: '141995'
+- asn: '197695'
+- asn: '198414'
+- asn: '200000'
+- asn: '201978'
+- asn: '202053'
+  comment: 272/326 but 242 of those are a single domain; disabling 2022-08-26
+  disable: true
+- asn: '203020'
+- asn: '203226'
+- asn: '204213'
+- asn: '204601'
+- asn: '206349'
+- asn: '208425'
+- asn: '209242'
+- asn: '209853'
+- asn: '210079'
+- asn: '210250'
+- asn: '211611'
+- asn: '262254'
+- asn: '393960'
+- asn: '395092'
+- asn: '395970'
+- asn: '397233'
+- asn: '397373'
+- asn: '397423'

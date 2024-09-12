@@ -1,0 +1,52 @@
+stackexchange.com:
+  11540:
+    commands: true
+    watcher: true
+
+    privileges:
+      - 3457374
+      - 297701
+
+    msg_types:
+      - debug
+      - all
+
+  30332:
+    commands: true
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+
+  3:
+    watcher: true
+
+  54445:
+    msg_types:
+      - all
+
+meta.stackexchange.com:
+  89:
+    commands: false
+    watcher: true
+
+    privileges:
+      - 3457374
+
+    msg_types:
+      - metatavern
+      - delay
+      - no-all-caps title
+
+stackoverflow.com:
+  111347:
+    commands: true
+    watcher: false
+
+    privileges:
+      - 3457374
+      - 297701
+
+    msg_types:
+      - all

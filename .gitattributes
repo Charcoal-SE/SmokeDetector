@@ -1,0 +1,13 @@
+*                             text=auto
+*.txt                         text
+bad_keywords.txt              text merge=union
+blacklisted_websites.txt      text merge=union
+blacklisted_usernames.txt     text merge=union
+blacklisted_numbers.txt       text merge=union
+watched_keywords.txt          text merge=union
+watched_numbers.txt           text merge=union
+*.py                          text
+*.yml                         text
+*.md                          text
+config.sample                 text
+*.sh                          text eol=lf

@@ -1,0 +1,23 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 31
+
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 1
+
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - "type: security"
+  - "status: pending"
+  - "status: confirmed"
+
+# Label to use when marking an issue as stale.
+staleLabel: "status: stale"
+
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: false
+
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: >
+  This issue has been closed because it has had no recent activity. If this is
+  still important, please add another comment and find someone with write permissions
+  to reopen the issue. Thank you for your contributions.

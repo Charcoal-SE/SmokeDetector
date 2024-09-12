@@ -1,0 +1,120 @@
+# Python cache
+*.py[cod]
+
+# Plugin (lol)
+/plugin.py
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+env/
+venv/
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.idea/
+.vscode
+
+# False positives, whitelisted/blacklisted users, ignored posts, etc.
+# - Old format text files:
+falsePositives.txt
+whitelistedUsers.txt
+blacklistedUsers.txt
+ignoredPosts.txt
+autoIgnoredPosts.txt
+users.txt
+notifications.txt
+whyData.txt
+whyDataAllspam.txt
+latestMessages.txt
+apiCalls.txt
+bodyfetcherQueue.txt
+bodyfetcherMaxIds.txt
+
+# - New format Pickle files:
+falsePositives.p
+whitelistedUsers.p
+blacklistedUsers.p
+ignoredPosts.p
+autoIgnoredPosts.p
+users.p
+notifications.p
+whyData.p
+whyDataAllspam.p
+latestMessages.p
+apiCalls.p
+apiCalls.pickle
+bodyfetcherQueue.p
+bodyfetcherQueueTimings.p
+bodyfetcherMaxIds.p
+messageData.p
+deletionIDs.p
+cookies.p
+
+# - Newer than newer format pickle files:
+pickles/
+
+# Temp files for communication between nocrash.py and ws.py
+launch.txt
+exit.txt
+
+# Settings files
+.settings/
+
+# Error logs
+errorLogs.db
+errorLogs.txt
+errorLogs.txt.*
+errorlog.txt
+errorLog.txt
+
+# Swap files
+*.swp
+
+# Cache
+.cache/
+
+# Configuration and credential files
+config
+rooms_custom.yml
+setp.sh
+
+# Ignore .DS_Store file (usually seen in Mac environments)
+.DS_Store
+
+.pytest_cache/
+
+# Editor backups
+*.bak
+
+# Extraneous files
+* shortcut *
+* link *
