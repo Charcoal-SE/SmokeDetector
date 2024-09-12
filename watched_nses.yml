@@ -5662,3 +5662,6 @@ items:
   - s-part-0024.t-0009.t-msedge.net.
 - ns: aviraweb.com.
 - ns: name-server.io.
+- ns:
+  - AMGTrade1.securehostdns.com.
+  - AMGTrade2.securehostdns.com.
