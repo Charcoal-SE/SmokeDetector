@@ -41746,7 +41746,6 @@
 1661168138	Makyen	cleveroad\.com
 1661168365	Jeff Schaller	eoreka\.it
 1661172363	cigien	printablebytes\.com
-1661172404	Spevacus	eximtradedata\.com
 1661172520	cigien	luuma[\W_]*+luxury(?!\.com(?<=luumaluxury\.com))
 1661172899	cigien	pdmc\.in
 1661173181	Spevacus	xscan\.io
