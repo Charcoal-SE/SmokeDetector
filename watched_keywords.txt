@@ -66342,3 +66342,4 @@
 1726095438	Vickel	ghostwritingassistance\.com
 1726106034	Jeff Schaller	jeffreyharrixx
 1726109894	Anerdw	tudongchat\.com
+1726110266	Makyen	tudongchat(?!\.com)
