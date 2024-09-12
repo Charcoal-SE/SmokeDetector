@@ -66383,3 +66383,4 @@
 1726141424	tripleee	lesco[\W_]*+bill
 1726141613	Cow	(?-i:desertsafarisdubai)(?# sites.google.com)
 1726142245	tripleee	tenderbang\.com
+1726145222	tripleee	devilhunter\.net
