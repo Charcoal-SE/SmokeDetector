@@ -66381,3 +66381,4 @@
 1726139120	Cow	keshwaplay\.net
 1726140026	Cow	markovate\.com
 1726141424	tripleee	lesco[\W_]*+bill
+1726141613	Cow	(?-i:desertsafarisdubai)(?# sites.google.com)
