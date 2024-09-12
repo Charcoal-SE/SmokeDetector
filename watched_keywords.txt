@@ -66344,3 +66344,4 @@
 1726109894	Anerdw	tudongchat\.com
 1726110266	Makyen	tudongchat(?!\.com)
 1726118295	VLAZ	gogojili\.org\.ph
+1726118319	VLAZ	gogojili(?!\.org\.ph)
