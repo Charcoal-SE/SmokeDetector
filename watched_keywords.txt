@@ -66363,3 +66363,4 @@
 1726126459	VLAZ	(502) 882 8680
 1726127391	tripleee	clean[\W_]*+spy[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1726127809	tripleee	custompatchesbybob\.com
+1726129988	Dragonrage	vapefastuae\.com
