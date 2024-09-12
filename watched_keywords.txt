@@ -55883,7 +55883,6 @@
 1703136012	Jesse	romtronic\.com
 1703166642	Jeff Schaller	(?-i:a5pz87)(?#fiverr)
 1703136082	Jesse	nesterenko\.site
-1703167037	Jeff Schaller	opstree\.com(?<!blog\.opstree\.com)
 1703152357	lyxal	ajees\.site
 1703142307	Nick	allconferencealert\.com
 1703167930	Jeff Schaller	advanz101\.com
