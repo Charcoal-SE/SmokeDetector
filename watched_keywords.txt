@@ -66356,3 +66356,4 @@
 1726122487	Dragonrage	luxonsystems\.com
 1726119853	Cow	rhino\.bet
 1726124839	tripleee	(?-i:^vanish box$)
+1726124947	tripleee	arya[\W_]*+college
