@@ -5807,4 +5807,3 @@ zalo\.me(?<!developers\.zalo\.me)(?<!openapi\.zalo\.me)
 nanonets\.com
 weeom\.com
 cyberpanel\.net
-opstree\.com
