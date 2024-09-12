@@ -66399,3 +66399,4 @@
 1726171505	Jeff Schaller	virajbhartiya\.com
 1726172596	Vickel	long169\.vip
 1726178469	Vickel	takipci\.al
+1726178869	Vickel	Takipçi[\W_]*+Al
