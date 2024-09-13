@@ -487,6 +487,9 @@ items:
   - monika.ns.cloudflare.com.
   - sean.ns.cloudflare.com.
 - ns:
+  - naomi.ns.cloudflare.com.
+  - noel.ns.cloudflare.com.
+- ns:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
