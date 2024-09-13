@@ -66433,3 +66433,4 @@
 1726233448	VLAZ	hindimylove\.shop
 1726234185	Spevacus	villiersjets\.com
 1726235160	Jeff Schaller	rangershockbike\.com
+1726236937	VLAZ	Lok[\W_]*+Lok(?:[\W_]*+App)?
