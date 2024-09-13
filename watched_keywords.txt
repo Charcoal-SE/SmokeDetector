@@ -66432,3 +66432,4 @@
 1726233029	VLAZ	vn88(?:claims)?(?!\.claims(?<=vn88\.claims))
 1726233448	VLAZ	hindimylove\.shop
 1726234185	Spevacus	villiersjets\.com
+1726235160	Jeff Schaller	rangershockbike\.com
