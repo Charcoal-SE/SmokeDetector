@@ -66406,3 +66406,4 @@
 1726204521	tripleee	davywriter10(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1726204976	tripleee	generativeaimasters\.in
 1726207802	Dragonrage	menanerds\.com
+1726208293	VLAZ	generative[\W_]*+ai[\W_]*+masters(?!\.in(?<=generativeaimasters\.in))
