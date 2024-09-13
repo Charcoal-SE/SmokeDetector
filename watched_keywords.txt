@@ -66435,3 +66435,4 @@
 1726235160	Jeff Schaller	rangershockbike\.com
 1726236937	VLAZ	Lok[\W_]*+Lok(?:[\W_]*+App)?
 1726237325	Jeff Schaller	lokapk\.com
+1726242128	Spevacus	wordleunlimited\.com\.co
