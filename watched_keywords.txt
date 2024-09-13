@@ -66430,3 +66430,4 @@
 1726229384	double-beep	srikita\.shop
 1726233001	VLAZ	vn88\.claims
 1726233029	VLAZ	vn88(?:claims)?(?!\.claims(?<=vn88\.claims))
+1726233448	VLAZ	hindimylove\.shop
