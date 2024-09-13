@@ -66429,3 +66429,4 @@
 1726227361	tripleee	(?-i:vRqlB8csZu8)(?# youtube)
 1726229384	double-beep	srikita\.shop
 1726233001	VLAZ	vn88\.claims
+1726233029	VLAZ	vn88(?:claims)?(?!\.claims(?<=vn88\.claims))
