@@ -66403,3 +66403,4 @@
 1726198967	Anerdw	quickassignmenthub\.com
 1726202480	Dragonrage	crackmak\.com
 1726204388	tripleee	(?-i:^Shimul singha$)
+1726204521	tripleee	davywriter10(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
