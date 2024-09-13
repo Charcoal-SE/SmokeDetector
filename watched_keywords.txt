@@ -66400,3 +66400,4 @@
 1726172596	Vickel	long169\.vip
 1726178469	Vickel	takipci\.al
 1726178869	Vickel	Takipçi[\W_]*+Al
+1726198967	Anerdw	quickassignmenthub\.com
