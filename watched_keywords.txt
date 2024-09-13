@@ -66415,3 +66415,4 @@
 1726212214	Dragonrage	freecoder\.dev
 1726212329	Dragonrage	elegantrooms\.ae
 1726213965	Dragonrage	(?-i:LinkAutoX1000)(?#bit.ly)
+1726213989	Dragonrage	(?-i:OfficialPromo138\/)(?#heylink.me)
