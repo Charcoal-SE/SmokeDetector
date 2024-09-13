@@ -57322,7 +57322,6 @@
 1706083616	Nick	The[\W_]*+Good[\W_]*+Steward
 1706083884	cigien	firstpolicy\.com
 1706086590	cigien	nba2k24apk\.com
-1706088375	tripleee	(?-i:^Anshul Kichara$)
 1706091077	tripleee	(?-i:^Anber_liang$)
 1706090104	Cow	give-engineering\.com
 1706091439	tripleee	gaatrading\.com
