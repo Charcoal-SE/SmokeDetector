@@ -66431,3 +66431,4 @@
 1726233001	VLAZ	vn88\.claims
 1726233029	VLAZ	vn88(?:claims)?(?!\.claims(?<=vn88\.claims))
 1726233448	VLAZ	hindimylove\.shop
+1726234185	Spevacus	villiersjets\.com
