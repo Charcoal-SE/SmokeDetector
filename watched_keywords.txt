@@ -66462,3 +66462,4 @@
 1726330995	Jeff Schaller	healthtimers\.com
 1726344110	Dragonrage	easy[\W_]*+reclaiming(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1726337922	Vickel	3dversedesign\.com
+1726352119	Jeff Schaller	mamachosen\.co\.za
