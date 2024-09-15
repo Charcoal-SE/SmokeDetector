@@ -66473,3 +66473,4 @@
 1726423065	Spevacus	SolarMate(?:[\W_]*+Energy)?
 1726427748	Vickel	traidmods\.com
 1726429754	Vickel	ACR767201
+1726429836	Vickel	roofingoshawa\.xyz
