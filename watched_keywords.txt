@@ -66472,3 +66472,4 @@
 1726421433	Cow	sastasmmpak\.com
 1726423065	Spevacus	SolarMate(?:[\W_]*+Energy)?
 1726427748	Vickel	traidmods\.com
+1726429836	Vickel	roofingoshawa\.xyz
