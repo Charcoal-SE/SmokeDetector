@@ -66497,3 +66497,4 @@
 1726476376	VLAZ	sunnyvale[\W_]*+dental[\W_]*+care(?!\net(?<=sunnyvaledentalcare\.net))
 1726476445	VLAZ	fortis[\W_]*+healthcare(?!\.com(?<=fortishealthcare\.com))
 1726476470	VLAZ	mibprint\.in
+1726476496	VLAZ	mib[\W_]*+print(?!\.in(?<=mibprint\.in))
