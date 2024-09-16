@@ -66524,3 +66524,4 @@
 1726510811	Jeff Schaller	findingschool\.com
 1726510973	Vickel	findingschool(?!\.com)
 1726510709	Fastnlight	ULTIMATE[\W_]*+HACKER[\W_]*+JACK
+1726517851	Dragonrage	electro-robot\.com
