@@ -66518,3 +66518,4 @@
 1726502294	VLAZ	manageengine\.com
 1726502327	VLAZ	mb66(?:v11com)?
 1726506117	Jeff Schaller	powerdirectorpremium\.com
+1726507436	Anerdw	AttaPoll
