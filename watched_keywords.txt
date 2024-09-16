@@ -66523,3 +66523,4 @@
 1726508032	Cow	pcbcompany\.co\.uk
 1726510811	Jeff Schaller	findingschool\.com
 1726510973	Vickel	findingschool(?!\.com)
+1726510709	Fastnlight	ULTIMATE[\W_]*+HACKER[\W_]*+JACK
