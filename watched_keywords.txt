@@ -66522,3 +66522,4 @@
 1726507436	Anerdw	AttaPoll
 1726508032	Cow	pcbcompany\.co\.uk
 1726510811	Jeff Schaller	findingschool\.com
+1726510973	Vickel	findingschool(?!\.com)
