@@ -66502,3 +66502,4 @@
 1726476960	VLAZ	pintohealer\.co\.za
 1726476854	Cow	(?-i:dvquangcaott)(?# flipboard)
 1726480795	VLAZ	halashopping\.com
+1726483707	Cow	gokulvalves\.com
