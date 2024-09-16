@@ -66500,3 +66500,4 @@
 1726476496	VLAZ	mib[\W_]*+print(?!\.in(?<=mibprint\.in))
 1726476902	VLAZ	dmvgroup\.vn
 1726476960	VLAZ	pintohealer\.co\.za
+1726476854	Cow	(?-i:dvquangcaott)(?# flipboard)
