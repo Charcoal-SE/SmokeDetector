@@ -66513,3 +66513,4 @@
 1726491771	Cow	cabinwala\.com
 1726493516	General Grievance	mb66v11\.com
 1726493618	Cow	mb66v11(?!\.com)
+1726496087	Jeff Schaller	zetradex\.com
