@@ -66492,3 +66492,4 @@
 1726473316	Dragonrage	globalguide\.in
 1726473962	Dragonrage	milliondarch\.it
 1726476282	VLAZ	lawchef\.com
+1726476307	VLAZ	lawchef(?!\.com)
