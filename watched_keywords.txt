@@ -66504,3 +66504,4 @@
 1726480795	VLAZ	halashopping\.com
 1726483707	Cow	gokulvalves\.com
 1726485572	Jeff Schaller	bizbooksadvic\.alboompro\.com
+1726485611	Jeff Schaller	connectionsgame\.org
