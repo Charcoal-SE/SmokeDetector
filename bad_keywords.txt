@@ -3127,3 +3127,4 @@ epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
 myassignmenthelp(?!\.(?:io|live|com|expert))
 opstree\.com(?<!blog\.opstree\.com)
 crafty[\W_]*+art\d*(?!app\.com(?<=craftyartapp\.com))
+act794606
