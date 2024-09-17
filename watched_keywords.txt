@@ -66554,3 +66554,4 @@
 1726563453	VLAZ	mysiponline(?!\.com(?<=mysiponline\.com))
 1726564172	VLAZ	7span(?!\.com)
 1726564405	Cow	vantagemdm\.com
+1726564492	VLAZ	vantagemdm(?!\.com)
