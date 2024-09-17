@@ -59670,7 +59670,6 @@
 1710999903	VLAZ	tomsfashion\.com
 1710999924	VLAZ	tom['’]?s[\W_]*+fashion(?!\.com(?<=tomsfashion\.com))
 1711004817	Nick	informaticamaestra\.com
-1711007021	VLAZ	singhalglobal\.com
 1711009112	cigien	multiwood\.ae
 1711009133	cigien	multiwood(?!\.ae)
 1711012420	Jeff Schaller	shcbs\.us
