@@ -66537,3 +66537,4 @@
 1726549155	VLAZ	artiwig\.com
 1726549181	VLAZ	arti[\W_]*+wig(?!\.com(?<=artiwig\.com))
 1726550200	Cow	vistasadindia\.com
+1726550239	Makyen	vistas[\W_]*+ad[\W_]*+media[\W_]*+communications
