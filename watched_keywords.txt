@@ -66552,3 +66552,4 @@
 1726563226	VLAZ	gogospells\.com
 1726563265	VLAZ	gogo[\W_]*+spells(?!\.com(?<=gogospells\.com))
 1726563453	VLAZ	mysiponline(?!\.com(?<=mysiponline\.com))
+1726564172	VLAZ	7span(?!\.com)
