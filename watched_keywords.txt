@@ -66560,3 +66560,4 @@
 1726569311	VLAZ	hackersprey\.com
 1726570134	VLAZ	apex[\W_]*+test[\W_]*+instruments(?!\.com(?<=apextestinstruments\.com))
 1726570468	Jeff Schaller	classicexperiences\.com
+1726572074	Cow	onlinequranclassesusa\.com
