@@ -66566,3 +66566,4 @@
 1726585589	Jeff Schaller	CryptocyberNet
 1726591328	Cow	bus[\W_]*+simulator[\W_]*+ultimate
 1726586049	Cow	refund[\W_]*+from[\W_]*+paytm
+1726597995	Fastnlight	Mamapinto2010(?:@gmail\.com)?
