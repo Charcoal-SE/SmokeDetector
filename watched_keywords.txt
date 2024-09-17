@@ -66532,3 +66532,4 @@
 1726529052	Makyen	designs[\W_]*+vertical(?!\.com(?<=designsvertical\.com))
 1726536044	Dragonrage	go88\.run
 1726547951	Nisse Engström	renixcare\.com
+1726548820	Nisse Engström	delizhang\.blogspot
