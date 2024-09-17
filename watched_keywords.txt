@@ -65081,7 +65081,6 @@
 1723721006	Jeff Schaller	logmeonce\.com
 1723723052	lyxal	psararegistration\.com
 1723724080	Jeff Schaller	laundrynearme\.ae
-1723667036	Fastnlight	multilogin\.com
 1723721203	Cow	yakinikulikesg\.org
 1723725208	lyxal	adsenseeligibilitychecker\.com
 1723725286	lyxal	adsenseeligibilitychecker(?!\.com)
