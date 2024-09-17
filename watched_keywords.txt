@@ -66535,3 +66535,4 @@
 1726548820	Nisse Engström	delizhang\.blogspot
 1726548998	Nisse Engström	sl-unik\.click
 1726549155	VLAZ	artiwig\.com
+1726549181	VLAZ	arti[\W_]*+wig(?!\.com(?<=artiwig\.com))
