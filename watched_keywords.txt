@@ -66565,3 +66565,4 @@
 1726583884	Jeff Schaller	ivgqd
 1726585589	Jeff Schaller	CryptocyberNet
 1726591328	Cow	bus[\W_]*+simulator[\W_]*+ultimate
+1726586049	Cow	refund[\W_]*+from[\W_]*+paytm
