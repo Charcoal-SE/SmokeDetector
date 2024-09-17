@@ -66531,3 +66531,4 @@
 1726521564	Vickel	joker[\W_]*+onepiece
 1726529052	Makyen	designs[\W_]*+vertical(?!\.com(?<=designsvertical\.com))
 1726536044	Dragonrage	go88\.run
+1726547951	Nisse Engström	renixcare\.com
