@@ -66564,3 +66564,4 @@
 1726583859	Jeff Schaller	RWDYA
 1726583884	Jeff Schaller	ivgqd
 1726585589	Jeff Schaller	CryptocyberNet
+1726586049	Cow	refund[\W_]*+from[\W_]*+paytm
