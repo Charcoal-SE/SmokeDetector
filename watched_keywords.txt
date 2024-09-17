@@ -66550,3 +66550,4 @@
 1726562730	Dragonrage	thirdeyegroups\.com
 1726563151	VLAZ	colabs\.pk
 1726563226	VLAZ	gogospells\.com
+1726563265	VLAZ	gogo[\W_]*+spells(?!\.com(?<=gogospells\.com))
