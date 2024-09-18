@@ -3129,3 +3129,4 @@ opstree\.com(?<!blog\.opstree\.com)
 crafty[\W_]*+art\d*(?!app\.com(?<=craftyartapp\.com))
 act794606
 Makeup[\W_]*+Artists?[\W_]*+in[\W_]*+Delhi
+(?:call[\W_]*+)?kcpl[\W_]*+rupee
