@@ -1678,6 +1678,9 @@ items:
   - daniella.ns.cloudflare.com.
   - isaac.ns.cloudflare.com.
 - ns:
+  - daniella.ns.cloudflare.com.
+  - olof.ns.cloudflare.com.
+- ns:
   - daphne.ns.cloudflare.com.
   - julio.ns.cloudflare.com.
 - ns:
