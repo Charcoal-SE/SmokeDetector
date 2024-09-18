@@ -1135,3 +1135,4 @@ carelab[sz]
 (?-i:^Udyam Webinfinix$)
 (?-i:^Sperm Blog$)
 (?-i:^Logiprompt Techno Solutions In$)
+(?-i:^Well IT and Consultancy Ltd$)
