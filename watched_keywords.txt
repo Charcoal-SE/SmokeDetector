@@ -66598,7 +66598,6 @@
 1726683286	Cow	best[\W_]*+dry[\W_]*+cleaning[\W_]*+services
 1726684477	Dragonrage	snaptubeapk\.com
 1726686602	Cow	mitfozzek\.net
-1726656657	Cow	(?-i:xzIP1)(?# shorturl.at weight loss spam)
 1726627866	Anerdw	bumbokart\.com
 1726687608	VLAZ	vizhil(?!\.com)
 1726660785	Cow	recoveryhacker101(?:@gmail\.com)?
