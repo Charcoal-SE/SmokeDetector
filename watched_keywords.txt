@@ -49322,7 +49322,6 @@
 1681754908	Jeff Schaller	aromancelifeinstitute\.com
 1681757130	Makyen	evercross[\W_]*+evo8e
 1681764167	Machavity	fromformulatocode\.com
-1681764208	Machavity	malked\.com
 1681764230	Machavity	nohsad\.com
 1681766978	Makyen	peshraw\.vercel\.app
 1681771444	Jesse	cyclostationarity\.com
