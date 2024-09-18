@@ -1134,3 +1134,4 @@ carelab[sz]
 (?-i:^Kiera Bryant$)
 (?-i:^Udyam Webinfinix$)
 (?-i:^Sperm Blog$)
+(?-i:^Logiprompt Techno Solutions In$)
