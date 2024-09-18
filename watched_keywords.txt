@@ -66588,3 +66588,4 @@
 1726652918	tripleee	dealsandstealstoday\.com
 1726655402	Jeff Schaller	moonazanzibartours\.com
 1726655508	Jeff Schaller	thecircuitbreakersource\.com
+1726656657	Cow	(?-i:xzIP1)(?# shorturl.at weight loss spam)
