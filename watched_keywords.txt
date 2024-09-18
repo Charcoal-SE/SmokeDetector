@@ -66601,3 +66601,4 @@
 1726656657	Cow	(?-i:xzIP1)(?# shorturl.at weight loss spam)
 1726627866	Anerdw	bumbokart\.com
 1726687608	VLAZ	vizhil(?!\.com)
+1726687638	VLAZ	13382
