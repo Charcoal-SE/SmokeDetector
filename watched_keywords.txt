@@ -66604,3 +66604,4 @@
 1726671161	General Grievance	mkbbespokeaudio\.com
 1726697442	Vickel	ufabetdirects\.com
 1726725165	VLAZ	Lots[\W_]*+of[\W_]*+Love[\W_]*+Pet[\W_]*+Products(?!\.com(?<=lotsoflovepetproducts\.com))
+1726725568	VLAZ	airlinesofficecounter\.com
