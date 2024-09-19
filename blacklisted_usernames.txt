@@ -1136,3 +1136,4 @@ carelab[sz]
 (?-i:^Sperm Blog$)
 (?-i:^Logiprompt Techno Solutions In$)
 (?-i:^Well IT and Consultancy Ltd$)
+(?-i:^queenaesthetics$)
