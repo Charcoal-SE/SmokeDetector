@@ -66606,3 +66606,4 @@
 1726725165	VLAZ	Lots[\W_]*+of[\W_]*+Love[\W_]*+Pet[\W_]*+Products(?!\.com(?<=lotsoflovepetproducts\.com))
 1726725568	VLAZ	airlinesofficecounter\.com
 1726725794	Dragonrage	techdynobd\.com
+1726726584	Dragonrage	bookroadtravel\.com
