@@ -66631,3 +66631,4 @@
 1726743272	Cow	electopten\.com
 1726747452	Jeff Schaller	Kinlights
 1726747876	VLAZ	rapidsilkscreenprinting\.com
+1726747902	VLAZ	Rapid[\W_]*+Silk[\W_]*+Screen[\W_]*+Printing(?!\.com(?<=rapidsilkscreenprinting\.com))
