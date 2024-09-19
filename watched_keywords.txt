@@ -66636,3 +66636,4 @@
 1726747955	VLAZ	charmandchic\.com
 1726747996	VLAZ	charm[\W_]*+and[\W_]*+chic(?!\.com(?<=charmandchic\.com))
 1726743199	Cow	probaltistani\.com
+1726749189	Cow	internxt
