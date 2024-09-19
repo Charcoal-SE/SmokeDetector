@@ -66633,3 +66633,4 @@
 1726747876	VLAZ	rapidsilkscreenprinting\.com
 1726747902	VLAZ	Rapid[\W_]*+Silk[\W_]*+Screen[\W_]*+Printing(?!\.com(?<=rapidsilkscreenprinting\.com))
 1726747928	VLAZ	(?-i:RSJAR)(?# shorturl.at)
+1726747955	VLAZ	charmandchic\.com
