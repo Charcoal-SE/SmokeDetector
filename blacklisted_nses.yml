@@ -838,3 +838,7 @@ items:
 - ns:
   - sharedhosting1.cloudhostdns.net.
   - sharedhosting2.cloudhostdns.net.
+- ns:
+  - ns162.herosite.pro.
+  - ns163.herosite.pro.
+  
