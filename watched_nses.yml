@@ -600,6 +600,9 @@ items:
   - johnathan.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
+  - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
