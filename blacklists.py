@@ -337,7 +337,7 @@ class YAMLParserNS(YAMLParserCIDR):
             return True
 
         host_regex = regex.compile(
-            r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORE)
+            r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORECASE)
         if 'ns' not in item:
             raise ValueError('Item must have member field "ns": {0!r}'.format(item))
         if isinstance(item['ns'], str):
