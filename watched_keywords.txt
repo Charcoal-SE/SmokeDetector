@@ -56879,7 +56879,6 @@
 1705345086	Jesse	groundx\.ai
 1705345220	Jesse	eyelevel\.ai
 1705372688	Jeff Schaller	nanomax\.com\.vn
-1705392515	VLAZ	laghuudyogindia\.com
 1705393265	cigien	thebookprinting\.co\.uk
 1705393288	cigien	onlinebachelordegree\.in
 1705393310	cigien	leeddev\.io
