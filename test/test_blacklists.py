@@ -225,11 +225,11 @@ def test_yaml_nses():
             ]}, y)
     blacklist = Blacklist(('test_nses.yml', YAMLParserNS))
     assert 'example.com.' in blacklist.parse()
-    assert 'EXAMPLE.COM.' not in blacklist.parse()
+    assert 'EXAMPLE!COM.' not in blacklist.parse()
     with pytest.raises(ValueError) as e:
         blacklist.add({'ns': 'example.com.'})
     with pytest.raises(ValueError) as e:
-        blacklist.add({'ns': 'EXAMPLE.COM.'})
+        blacklist.add({'ns': 'EXAMPLE!COM.'})
     assert 'example.net.' not in blacklist.parse()
     assert 'example.org.' in blacklist.parse()
     blacklist.remove({'ns': 'example.org.'})
