@@ -835,3 +835,6 @@ items:
   - ns176.eukdns.com.
   - ns177.eukdns.com.
 - ns: cloud-774886.managed-vps.net.
+- ns:
+  - sharedhosting1.cloudhostdns.net.
+  - sharedhosting2.cloudhostdns.net.
