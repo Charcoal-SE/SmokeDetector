@@ -1139,3 +1139,4 @@ carelab[sz]
 (?-i:^queenaesthetics$)
 (?-i:^Vima SEO$)
 (?-i:^SEO leelagreens$)
+(?-i:^Mama Pinto Kasamba$)
