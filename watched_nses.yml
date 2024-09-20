@@ -1374,6 +1374,9 @@ items:
   - leif.ns.cloudflare.com.
 - ns:
   - clark.ns.cloudflare.com.
+  - martha.ns.cloudflare.com.
+- ns:
+  - clark.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
 - ns:
   - clay.ns.cloudflare.com.
