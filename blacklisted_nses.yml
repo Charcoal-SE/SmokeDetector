@@ -748,7 +748,9 @@ items:
   - ns4ksy.name.com.
 - ns: staticking.com.
 - ns: masbz.com.
-- ns: sttdns.com.
+- comment: times out 2024-09-20
+  disable: true
+  ns: sttdns.com.
 - ns: supremepanel.com.
 - ns: clouddnstool.com.
 - ns: vivawebhost.com.
