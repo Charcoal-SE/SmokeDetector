@@ -1172,6 +1172,9 @@ items:
   - carlane.ns.cloudflare.com.
   - quentin.ns.cloudflare.com.
 - ns:
+  - carlos.ns.cloudflare.com.
+  - kristina.ns.cloudflare.com.
+- ns:
   - carmelo.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
 - ns:
