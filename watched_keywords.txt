@@ -2970,7 +2970,6 @@
 1525853717	Makyen	techcentrica\.com
 1525854377	Mithrandir	reliablemedstore\.com
 1525855086	Glorfindel	belfiorestores\.com
-1525859229	tripleee	indiancybersecuritysolutions\.com
 1525860415	Glorfindel	mockuptiger\.com
 1525867554	WELZ	wuinstall\.com
 1525867870	Glorfindel	tripbeam\.com
