@@ -66681,3 +66681,4 @@
 1726907110	Dragonrage	botswana[\W_]*+import[\W_]*+data
 1726908089	double-beep	sevatourism\.com
 1726909182	Dragonrage	mrfogofficialonlinestore\.com
+1726909705	VLAZ	acq523678(?# Temu promo code)
