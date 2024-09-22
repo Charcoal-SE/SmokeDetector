@@ -66695,3 +66695,4 @@
 1726982848	Cow	gym-flooring\.com
 1726982871	Cow	jps-extensions\.co\.uk
 1726986003	Nisse Engström	kwrds\.ai
+1726987631	Cow	faratan\.co
