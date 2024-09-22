@@ -1141,4 +1141,3 @@ carelab[sz]
 (?-i:^SEO leelagreens$)
 (?-i:^Mama Pinto Kasamba$)
 (?-i:^Jignesh Patel$)
-^(?-i)Two' Two'' Two''' Two''''\W?$
