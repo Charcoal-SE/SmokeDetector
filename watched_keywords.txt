@@ -65729,7 +65729,6 @@
 1724940240	VLAZ	trendycanva\.com
 1724942400	Spevacus	ftune\.in
 1724944571	Fastnlight	kupikod\.com
-1724946738	Fastnlight	picsartproapk\.com
 1724947428	Vickel	pranshulagrawal9269(?:@gmail\.com)?
 1724950216	Cow	motorglo\.com
 1724956395	Mast	churchofinitiationword(?:@gmail\.com)?

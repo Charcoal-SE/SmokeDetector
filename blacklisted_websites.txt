@@ -5820,3 +5820,4 @@ laghuudyogindia\.com
 mightyhackerrecovery[\W_]*+(?:dot[\W_]*+)?com
 flightsvilla\.com
 indiancybersecuritysolutions\.com
+picsartproapk\.com
