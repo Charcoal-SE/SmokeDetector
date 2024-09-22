@@ -66697,3 +66697,4 @@
 1726990181	VLAZ	notitimba2\.com
 1726990206	VLAZ	notitimba2?(?!\.com(?<=notitimba2\.com))
 1726982951	Cow	jps[\W_]*+extensions
+1726987631	Cow	faratan\.co
