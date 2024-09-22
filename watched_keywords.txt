@@ -66699,3 +66699,4 @@
 1726982951	Cow	jps[\W_]*+extensions
 1726987631	Cow	faratan\.co
 1726997137	Nisse Engström	techtie\.net
+1726994333	Cow	tacobellmenuprices\.us
