@@ -66708,3 +66708,4 @@
 1727002643	Cow	intellico\.me
 1727008619	Cow	fabianksa\.com
 1726991290	Cow	(?-i:g4mg4gwT)(?# discord invite id)
+1726991254	Cow	(?-i:DAOEvolve)(?# x.com Twitter)
