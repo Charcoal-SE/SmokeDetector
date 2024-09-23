@@ -66729,3 +66729,4 @@
 1727093297	Jeff Schaller	zoftwarehub\.com
 1727094368	double-beep	ctbeauties\.com
 1727094645	Vickel	umeacademy\.com
+1727095163	Vickel	fulminoussoftware\.com
