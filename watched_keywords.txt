@@ -66717,3 +66717,4 @@
 1727059104	Machavity	it4you\.dev
 1727073083	VLAZ	memoryreduct\.com
 1727073294	VLAZ	urbanyatra\.com
+1727073525	VLAZ	urban[\W_]*+yatra(?!\.com(?<=urbanyatra\.com))
