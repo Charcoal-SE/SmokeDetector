@@ -66734,3 +66734,4 @@
 1727095358	Vickel	fulminous[\W_]*+software(?!\.com(?<=fulminoussoftware\.com))
 1727095979	Jeff Schaller	importglobals\.com
 1727102406	Spevacus	drywallrepairboulder\.com
+1727103861	Spevacus	giadungstar\.com
