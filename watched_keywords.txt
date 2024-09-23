@@ -66722,3 +66722,4 @@
 1727076993	VLAZ	goadwordcompany(?:@gmail\.com)?
 1727080927	VLAZ	hostelbird\.com
 1727081012	VLAZ	hostelbird(?!\.com)
+1727087046	VLAZ	gs-it\.ae
