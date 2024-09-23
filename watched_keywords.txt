@@ -66720,3 +66720,4 @@
 1727073525	VLAZ	urban[\W_]*+yatra(?!\.com(?<=urbanyatra\.com))
 1727063814	Cow	espioninfotech\.com
 1727076993	VLAZ	goadwordcompany(?:@gmail\.com)?
+1727080927	VLAZ	hostelbird\.com
