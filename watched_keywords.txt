@@ -66723,3 +66723,4 @@
 1727080927	VLAZ	hostelbird\.com
 1727081012	VLAZ	hostelbird(?!\.com)
 1727087046	VLAZ	gs-it\.ae
+1727087090	Jeff Schaller	giantofferz\.com
