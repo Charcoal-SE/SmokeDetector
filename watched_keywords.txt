@@ -66718,3 +66718,4 @@
 1727073083	VLAZ	memoryreduct\.com
 1727073294	VLAZ	urbanyatra\.com
 1727073525	VLAZ	urban[\W_]*+yatra(?!\.com(?<=urbanyatra\.com))
+1727063814	Cow	espioninfotech\.com
