@@ -78,7 +78,8 @@ class GitHubManager:
         payload = json.dumps({'labels': labels})
         response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
-      
+
+    @classmethod
     def get_pull_request(cls, pr_id, payload=""):
         """ Get pull requests info. """
         url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
