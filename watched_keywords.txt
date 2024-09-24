@@ -66782,3 +66782,4 @@
 1727187666	Jeff Schaller	encsnetworks\.com
 1727188641	Spevacus	pixcap\.com
 1727191552	Spevacus	saleonplugins\.com
+1727192196	Spevacus	go\.apsteq\.com
