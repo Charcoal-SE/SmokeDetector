@@ -66775,3 +66775,4 @@
 1727179025	double-beep	quantumtechnology\.net
 1727179178	double-beep	validitexams\.com
 1727180109	Jeff Schaller	plugas20(?#telegram)
+1727181129	VLAZ	newsbrings\.com
