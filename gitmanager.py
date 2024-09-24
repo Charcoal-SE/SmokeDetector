@@ -78,9 +78,8 @@ class GitHubManager:
         payload = json.dumps({'labels': labels})
         response = requests.post(url, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
         return response.json()
-
-    @classmethod
-    def get_pull_request(cls, pr_id, payload):
+      
+    def get_pull_request(cls, pr_id, payload=""):
         """ Get pull requests info. """
         url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
         return cls.call_api("GET", url, payload)
@@ -387,7 +386,7 @@ class GitManager:
             cls.gitmanager_lock.release()
 
     @classmethod
-    def reject_pull_request(cls, pr_id, comment="", is_duplicate=False):
+    def reject_pull_request(cls, pr_id, comment="", self_reject=False, is_duplicate=False):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
                                 timeout=GlobalVars.default_requests_timeout)
         if not response:
@@ -414,6 +413,11 @@ class GitManager:
             if response:
                 if response.json()["state"] == "closed":
                     git.push('-d', origin_or_auth, ref)
+                    return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})" +
+                            (" as a duplicate." if is_duplicate else ".")).format(pr_id, GlobalVars.bot_repo_slug)
+                    if self_reject:
+                        return "You self-closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                            pr_id, GlobalVars.bot_repo_slug)
                     return ("Closed pull request [#{0}](https://github.com/{1}/pull/{0})" +
                             (" as a duplicate." if is_duplicate else ".")).format(pr_id, GlobalVars.bot_repo_slug)
 

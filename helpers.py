@@ -549,7 +549,7 @@ def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_t
     timestamp = "[{} UTC]: ".format(datetime.now(timezone.utc).isoformat()[0:19])
     message_without_timestamp = exception_message + time_from_connect_message + time_from_hb_message
     log('debug', message_without_timestamp)
-    tell_rooms_with('debug', timestamp + message_without_timestamp)
+    tell_rooms_with('debugwebsocket', timestamp + message_without_timestamp)
 
 
 def recover_websocket(which_ws, ws, exception, connect_time, hb_time):

@@ -86,6 +86,9 @@ items:
   - anita.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
 - ns:
+  - anuj.ns.cloudflare.com.
+  - sue.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
@@ -178,6 +181,9 @@ items:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - bruce.ns.cloudflare.com.
+  - megan.ns.cloudflare.com.
+- ns:
   - bryce.ns.cloudflare.com.
   - dina.ns.cloudflare.com.
 - ns:
@@ -202,11 +208,17 @@ items:
   - carmelo.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
+  - carrera.ns.cloudflare.com.
+  - jake.ns.cloudflare.com.
+- ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
   - cecelia.ns.cloudflare.com.
   - pablo.ns.cloudflare.com.
+- ns:
+  - chelsea.ns.cloudflare.com.
+  - lakas.ns.cloudflare.com.
 - ns:
   - cheryl.ns.cloudflare.com.
   - jonah.ns.cloudflare.com.
@@ -224,6 +236,9 @@ items:
   - raphaela.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
+  - hugh.ns.cloudflare.com.
+- ns:
+  - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
 - ns:
   - coleman.ns.cloudflare.com.
@@ -237,6 +252,9 @@ items:
 - ns:
   - cruz.ns.cloudflare.com.
   - david.ns.cloudflare.com.
+- ns:
+  - damian.ns.cloudflare.com.
+  - ursula.ns.cloudflare.com.
 - ns:
   - dan.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
@@ -279,6 +297,9 @@ items:
 - ns:
   - donald.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
+- ns:
+  - dorthy.ns.cloudflare.com.
+  - earl.ns.cloudflare.com.
 - ns:
   - earl.ns.cloudflare.com.
   - gail.ns.cloudflare.com.
@@ -330,6 +351,9 @@ items:
 - ns:
   - gordon.ns.cloudflare.com.
   - rosalyn.ns.cloudflare.com.
+- ns:
+  - grannbo.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
 - ns:
   - hank.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
@@ -427,6 +451,9 @@ items:
   - martha.ns.cloudflare.com.
   - sullivan.ns.cloudflare.com.
 - ns:
+  - marty.ns.cloudflare.com.
+  - mimi.ns.cloudflare.com.
+- ns:
   - maya.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
@@ -435,6 +462,9 @@ items:
 - ns:
   - meiling.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
+- ns:
+  - melinda.ns.cloudflare.com.
+  - zeus.ns.cloudflare.com.
 - ns:
   - miki.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
@@ -457,11 +487,20 @@ items:
   - mona.ns.cloudflare.com.
   - yichun.ns.cloudflare.com.
 - ns:
+  - monika.ns.cloudflare.com.
+  - sean.ns.cloudflare.com.
+- ns:
+  - naomi.ns.cloudflare.com.
+  - noel.ns.cloudflare.com.
+- ns:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
   - noah.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
+- ns:
+  - patrick.ns.cloudflare.com.
+  - vivienne.ns.cloudflare.com.
 - ns:
   - pearl.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
@@ -512,6 +551,7 @@ items:
 - ns: pakihosting.com.
 - ns: bh-74.webhostbox.net.
 - ns: bh-ht-1.webhostbox.net.
+- ns: bh-in-20.webhostbox.net.
 - ns: bh-in-21.webhostbox.net.
 - ns: bh-in-31.webhostbox.net.
 - ns: md-19.webhostbox.net.
@@ -532,6 +572,9 @@ items:
 - ns: mycyberhosting.com.
 - ns: thesecurededicatedserver.com.
 - ns: cloudnstools.com.
+- ns:
+  - ns8511.hostgator.com.
+  - ns8512.hostgator.com.
 - ns:
   - cns3999.hostgator.in.
   - cns4000.hostgator.in.
@@ -576,6 +619,11 @@ items:
   - ns-1670.awsdns-16.co.uk.
   - ns-308.awsdns-38.com.
   - ns-828.awsdns-39.net.
+- ns:
+  - ns-1104.awsdns-10.org.
+  - ns-1635.awsdns-12.co.uk.
+  - ns-289.awsdns-36.com.
+  - ns-797.awsdns-35.net.
 - ns:
   - ns-1117.awsdns-11.org.
   - ns-1994.awsdns-57.co.uk.
@@ -700,7 +748,9 @@ items:
   - ns4ksy.name.com.
 - ns: staticking.com.
 - ns: masbz.com.
-- ns: sttdns.com.
+- comment: times out 2024-09-20
+  disable: true
+  ns: sttdns.com.
 - ns: supremepanel.com.
 - ns: clouddnstool.com.
 - ns: vivawebhost.com.
@@ -708,6 +758,9 @@ items:
 - ns:
   - ns313.ownmyserver.com.
   - ns314.ownmyserver.com.
+- ns:
+  - sg1.ownmyserver.com.
+  - sg2.ownmyserver.com.
 - ns: borntechy.com.
 - ns: yuvajobs.in.
 - ns:
@@ -755,7 +808,9 @@ items:
 - ns: ns1-venus.ewebguru.com.
 - ns: alakmalak.com.
 - ns: dnsjani.com.
-- ns: fastnsdns.com.
+- comment: failing 2024-09-12, transient error?
+  disable: true
+  ns: fastnsdns.com.
 - ns: hostbreak.com.
 - ns: cms500.com.
 - ns: cms501.com.
@@ -764,9 +819,26 @@ items:
 - ns: inet.vn.
 - ns: wizzyhost.com.
 - ns:
+  - AMGTrade1.securehostdns.com.
+  - AMGTrade2.securehostdns.com.
+- ns:
   - ns22.securehostdns.com.
   - ns23.securehostdns.com.
 - ns: redserverhost.com.
 - ns: hostitbro.com.
 - ns: smoothdns.com.
 - ns: perfectdns.com.
+- ns: drwebhost.com.
+- ns: webpulsesolution.org.
+- ns: amitsellsrealestate.com.
+- ns:
+  - ns176.eukdns.com.
+  - ns177.eukdns.com.
+- ns: cloud-774886.managed-vps.net.
+- ns:
+  - sharedhosting1.cloudhostdns.net.
+  - sharedhosting2.cloudhostdns.net.
+- ns:
+  - ns162.herosite.pro.
+  - ns163.herosite.pro.
+  

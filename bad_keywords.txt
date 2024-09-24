@@ -6,7 +6,6 @@ writing(?<!code\Wwriting)(?<!script\Wwriting)(?<!\bre\Wwriting)(?<!\bi'm\Wwritin
 tosterone
 we (?:offer|give out) (?:loans?|funds?|funding)
 skin[\W_]*+(?:endear|royale|cell[\W_]*+pro|opulent|ology|centric)
-(?:rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)[\W_]*+skin
 acne(?:[\W_]*+prone)?\Wskin
 (?:skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
@@ -345,7 +344,6 @@ luxlift
 erectimax
 forskolin
 stamina\Wfuel
-nuviante
 silkalike
 vitaeyes
 neutratone
@@ -496,9 +494,7 @@ vigfx
 muscle[\W_]*+rampage
 i have also find out one good example
 sexual[\W_]*+decoder
-zyklon
 skin[\W_]*+fresh[\W_]*+md
-renuvica
 Max\WTest\WUltra
 herbal ?(?:doctor|center|centre|clinic)
 herbalife
@@ -1452,7 +1448,6 @@ rapid[\W_]*+spot
 surgexon
 lojesete
 top\Wshelf\Waaa\Wbuds
-nuvi
 legendz[\W_]*+xl
 ambrosina
 kidney[\W_]*+bean[\W_]*+extract
@@ -3023,7 +3018,6 @@ easyreclaim0(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 FASTFUND[\W_]*+RECOVERY
 yda5js6u
 totomacau
-crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
 dragon[\W_]*+web[\W_]*+recovery(?![\W_]*+com)(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
 drsunnydsolution1(?:@gmail\.com)?
 saclux[\W_]*+comptech[\W_]*+specialst(?:[\W_]*+(?:at[\W_]*+)?engineer(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -3085,3 +3079,56 @@ CHAMP[\W_]*+Cloud[\W_]*+CRM
 angelina[\W_]*+christopher1738(?:@gmail\.com)?
 easyrecoveryassets(?:@gmail\.com)?
 Amtrak[\W_]*+s?[\W_]*+customer[\W_]*+service
+BlindStudio
+james[\W_]*+mckay[\W_]*+wizard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+c[\W_]*+y[\W_]*+b[\W_]*+e[\W_]*+r[\W_]*+p[\W_]*+o[\W_]*+i[\W_]*+n[\W_]*+t[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?# obfuscated cyberpointrecovery.com)
+YT7CRACKER(?:@gmail\.com)?
+Cyberpoint[\W_]*+Recovery
+zeropromosi(?!\.com)
+simplidistance(?!\.com)
+espacio[\W_]*+apk(?!\.tech)
+trust[\W_]*+guard[\W_]*+digital[\W_]*+assets[\W_]*+recovery
+beleafsofttech
+beleaf[\W_]*+tech(?!\.com(?<=beleaftechnologies\.com))(?:nologies)?
+cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
+complain\Won\WSwiggy
+phonepe[\W_]?+customer
+Language:\WHindi\Wand\WEnglish
+How\Wcan\WI\Wspeak\Wto\W.{0,10}\Wexecutive
+PhonePe[\W_]*+(?:help[\W_]*+line|toll[\W_]*+free)[\W_]*+number
+PhonePe[\W_]*+executive
+^how[\W_]*+can[\W_]*+i[\W_]*+complain[\W_]*+(?:to|against|on)\W*+(?!someone\b|my\b)
+How\Wdo\WI\Wspeak\Wto\Wsomeone\Wat\W𝔈𝔵𝔭𝔢𝔡𝔦𝔞
+fioricet
+genius[\W_]*wave
+Matlab[\W_]*+Assignment[\W_]*+Experts
+reclaimeasy
+h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
+complaint?[\W_]*+(?:in|on|to)[\W_]*+Swiggy
+Recoveryeagles
+How[\W_]*do[\W_]*I[\W_]*raise[\W_]*a[\W_]*complaint[\W_]*in[\W_]*meesho
+Sentry[\W_]*+Vantage[\W_]*+Hacker
+phonepe[\W_]*+wrong
+fastwebrecovery
+complain[\W_]*+against[\W_]*+Paytm
+airtripgo(?!\.com)
+𝐋𝐨𝐚𝐧
+customer[\W_]*+helpline[\W_]*+support
+dubai[\W_]*+e[\W_]*+visa[\W_]*+online\d*(?<!(?-i:^Dubai E Visa Online$))
+br[\W_]*+softech(?!\.com(?<=brsoftech\.com))
+balmorex(?:[\W_]*+pro\w*+|(?<==balmorex)|\w++)
+𝐻𝑒𝓁𝓅𝒟𝑒𝓈𝓀
+(?:91|0)?[6-9]\d{4}(?<!\d\D\d{5})[^A-Za-z\d]*+\d{5}(?![\s,]++\d)[^A-Za-z\d]++(?<!["'], ["'])(?<!["'],["'])(?:91|0)?[6-9]\d{4}[^A-Za-z\d]*+\d{5}(?![^A-Za-z\d]*+\d)(?=.{0,200}+\Z)(?!(?:[^<]++|<(?!\/?code>))*+<\/code>)
+filmyzilla
+jane[\W_]*+doe[\W_]*+finance
+epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
+myassignmenthelp(?!\.(?:io|live|com|expert))
+opstree\.com(?<!blog\.opstree\.com)
+crafty[\W_]*+art\d*(?!app\.com(?<=craftyartapp\.com))
+act794606
+Makeup[\W_]*+Artists?[\W_]*+in[\W_]*+Delhi
+(?:call[\W_]*+)?kcpl[\W_]*+rupee
+Attapoll
+iFORCE[\W_]*+HACKER[\W_]*+RECOVERY
+mighty[\W_]*+hacker[\W_]*+recovery(?!(?<=mightyhackerrecovery)[\W_]*+(?:dot[\W_]*+)?com)
+mama[\W_]*+pinto

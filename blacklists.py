@@ -205,6 +205,9 @@ class YAMLParserCIDR(BlacklistParser):
         with open(self._filename, 'w', encoding='utf-8') as f:
             yaml.dump(d, f)
 
+    def _normalize(self, item):
+        return item.rstrip()
+
     def _validate(self, item):
         ip_regex = regex.compile(r'''
             (?(DEFINE)(?P<octet>
@@ -242,10 +245,11 @@ class YAMLParserCIDR(BlacklistParser):
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
+            item_normalized = self._normalize(item[prikey])
             for compare in d['items']:
-                if compare[prikey] == item[prikey]:
-                    raise ValueError('{0} already in list {1}'.format(
-                        item[prikey], d['items']))
+                if self._normalize(compare[prikey]) == item_normalized:
+                    raise KeyError('{0} already in list {1}'.format(
+                        compare[prikey], d['items']))
             d['items'].append(item)
 
         self._write(add_callback)
@@ -336,7 +340,8 @@ class YAMLParserNS(YAMLParserCIDR):
                     raise
             return True
 
-        host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
+        host_regex = regex.compile(
+            r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORECASE)
         if 'ns' not in item:
             raise ValueError('Item must have member field "ns": {0!r}'.format(item))
         if isinstance(item['ns'], str):
