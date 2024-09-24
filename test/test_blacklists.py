@@ -162,9 +162,9 @@ def test_yaml_blacklist():
         blacklist.add('1.3.34')
     with pytest.raises(ValueError) as e:
         blacklist.add({'ip': '1.3.4'})
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(KeyError) as e:
         blacklist.add({'ip': '1.2.3.4'})
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(KeyError) as e:
         blacklist.add({'ip': '2.3.4.5'})
     with pytest.raises(ValueError) as e:
         blacklist.remove({'ip': '34.45.56.67'})
@@ -195,9 +195,9 @@ def test_yaml_asn():
         blacklist.add('123')
     with pytest.raises(ValueError) as e:
         blacklist.add({'asn': 'invalid'})
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(KeyError) as e:
         blacklist.add({'asn': '123'})
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(KeyError) as e:
         blacklist.add({'asn': '234'})
     with pytest.raises(ValueError) as e:
         blacklist.remove({'asn': '9897'})
@@ -226,8 +226,10 @@ def test_yaml_nses():
     blacklist = Blacklist(('test_nses.yml', YAMLParserNS))
     assert 'example.com.' in blacklist.parse()
     assert 'EXAMPLE!COM.' not in blacklist.parse()
-    with pytest.raises(ValueError) as e:
+    with pytest.raises(KeyError) as e:
         blacklist.add({'ns': 'example.com.'})
+    with pytest.raises(KeyError) as e:
+        blacklist.add({'ns': 'EXAMPLE.COM.'})
     with pytest.raises(ValueError) as e:
         blacklist.add({'ns': 'EXAMPLE!COM.'})
     assert 'example.net.' not in blacklist.parse()
