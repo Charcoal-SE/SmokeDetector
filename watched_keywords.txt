@@ -66776,3 +66776,4 @@
 1727179178	double-beep	validitexams\.com
 1727180109	Jeff Schaller	plugas20(?#telegram)
 1727181129	VLAZ	newsbrings\.com
+1727182204	Jeff Schaller	harwelldesign\.com
