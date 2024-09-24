@@ -66767,3 +66767,4 @@
 1727173097	Vickel	spotifymodapkpro\.com
 1727173258	Vickel	getcctemplate\.com
 1727173570	Vickel	we2za1(?:@xmpp\.jp)?
+1727176611	Jeff Schaller	shienslotgroup\.store
