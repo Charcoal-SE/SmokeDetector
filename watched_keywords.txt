@@ -66762,3 +66762,4 @@
 1727160560	Dragonrage	icheck\.com\.vn
 1727167637	Dragonrage	tutodessiner\.fr
 1727167664	Dragonrage	tripzygo\.in
+1727173258	Vickel	getcctemplate\.com
