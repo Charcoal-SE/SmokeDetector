@@ -66768,3 +66768,4 @@
 1727173258	Vickel	getcctemplate\.com
 1727173570	Vickel	we2za1(?:@xmpp\.jp)?
 1727176611	Jeff Schaller	shienslotgroup\.store
+1727176655	Jeff Schaller	scootmobility\.in
