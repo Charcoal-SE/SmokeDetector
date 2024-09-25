@@ -66798,3 +66798,4 @@
 1727255659	Mast	guo[\W_]*+wengui
 1727258650	Jeff Schaller	eduyush\.com
 1727259633	double-beep	netsolwater\.com
+1727259525	Cow	2048-cupcakes\.org
