@@ -65126,7 +65126,6 @@
 1723811076	lyxal	ukfurniturestore\.co\.uk
 1723811105	lyxal	themagicwoodsuk@gmail\.com
 1723808432	Vickel	rjiv2725(?:@gmail\.com)?
-1723813339	lyxal	bookcaliforniatour\.com
 1723809642	lyxal	abx[\W_]*+rentals
 1723816462	lyxal	realiqtestonline\.com
 1723816466	lyxal	realiqtestonline(?!\.com)
