@@ -1340,9 +1340,6 @@ items:
   - chloe.ns.cloudflare.com.
   - ridge.ns.cloudflare.com.
 - ns:
-  - chloe.ns.cloudflare.com.
-  - sam.ns.cloudflare.com.
-- ns:
   - chris.ns.cloudflare.com.
   - hadlee.ns.cloudflare.com.
 - ns:
