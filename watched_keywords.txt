@@ -42259,7 +42259,6 @@
 1662401932	Spevacus	goldenglassdc\.com
 1662402449	Makyen	animaltaxi\.nl
 1662402727	Makyen	2jewellery
-1662402752	Makyen	huaweicloud\.com
 1662403173	Spevacus	navigationunlocker\.com
 1662403324	Spevacus	navigation[\W_]*+unlocker(?!\.com)
 1662409595	Jeff Schaller	cytotecobataborsi\.net
