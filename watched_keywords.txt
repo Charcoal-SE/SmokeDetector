@@ -66792,3 +66792,4 @@
 1727241626	VLAZ	bodyrxlouisville\.com
 1727241655	VLAZ	yourlapdaycalculator\.com
 1727249362	Cow	jodiplay\.com
+1727249528	Cow	webodoctor\.in
