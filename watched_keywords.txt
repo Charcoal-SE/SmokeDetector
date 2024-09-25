@@ -66818,3 +66818,4 @@
 1727284085	Vickel	usamedzz\.com
 1727283080	Vickel	himenus(?!\.com)
 1727265475	Vickel	bm[\W_]*+associates(?!\.com(?<=bmassociates\.com))
+1727247701	Cow	tech-rz\.com
