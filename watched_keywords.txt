@@ -66803,3 +66803,4 @@
 1727262920	Jeff Schaller	apnaaapan\.com
 1727265202	Jeff Schaller	whitescreentest\.net
 1727265299	Jeff Schaller	bmassociates\.com
+1727267013	Cow	devfied\.com
