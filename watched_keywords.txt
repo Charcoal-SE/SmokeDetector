@@ -66815,3 +66815,4 @@
 1727284278	Vickel	allairportsoffices\.com
 1727284225	Vickel	remove[\W_]*+a[\W_]*+pool(?!\.com(?<=removeapool\.com))
 1727284121	Vickel	removeapool\.com
+1727284085	Vickel	usamedzz\.com
