@@ -66807,3 +66807,4 @@
 1727269826	Jeff Schaller	alfalajwater\.com
 1727271380	Jeff Schaller	smfair\.com
 1727271547	Jeff Schaller	cnctoolstoragesolutions\.com
+1727280536	Spevacus	huaweicloud\.com(?<!repo\.huaweicloud\.com)
