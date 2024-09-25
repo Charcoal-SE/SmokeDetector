@@ -66817,3 +66817,4 @@
 1727284121	Vickel	removeapool\.com
 1727284085	Vickel	usamedzz\.com
 1727283080	Vickel	himenus(?!\.com)
+1727265475	Vickel	bm[\W_]*+associates(?!\.com(?<=bmassociates\.com))
