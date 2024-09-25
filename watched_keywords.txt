@@ -66810,3 +66810,4 @@
 1727280536	Spevacus	huaweicloud\.com(?<!repo\.huaweicloud\.com)
 1727282769	Jeff Schaller	ookaaz\.com
 1727285409	Jeff Schaller	themetaldetector\.us
+1727285259	Cow	seriale[\W_]*+turcest
