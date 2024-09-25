@@ -66819,3 +66819,4 @@
 1727283080	Vickel	himenus(?!\.com)
 1727265475	Vickel	bm[\W_]*+associates(?!\.com(?<=bmassociates\.com))
 1727247701	Cow	tech-rz\.com
+1727246178	Cow	(?-i:nqUEg2Nn112tdEia6)(?# Google Maps ID)
