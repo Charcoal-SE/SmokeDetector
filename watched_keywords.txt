@@ -66857,3 +66857,4 @@
 1727349001	VLAZ	etarat\.online
 1727349038	VLAZ	Et[ea]rat[\W_]*+Online(?<!eterat\.online)(?:[\W_]*+UAE)?
 1727349074	VLAZ	mediaglaze\.com
+1727349111	VLAZ	mediaglaze(?!\.com)
