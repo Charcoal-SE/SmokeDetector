@@ -66831,3 +66831,4 @@
 1727298826	Spevacus	transfers\.ski
 1727323018	Cow	jmchip\.com
 1727334570	Cow	ineubytes\.com
+1727333438	Cow	techanicinfotech\.com
