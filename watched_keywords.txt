@@ -66868,3 +66868,4 @@
 1727367132	Jeff Schaller	thinkgeo\.com
 1727372735	Jeff Schaller	signaturecarriage\.com
 1727379383	Vickel	providencefamilygroup\.com
+1727379496	Vickel	providence[\W_]*+family[\W_]*+group(?!\.com(?<=providencefamilygroup\.com))
