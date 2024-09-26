@@ -66847,3 +66847,4 @@
 1727341929	Cow	likesgeek\.com
 1727342642	VLAZ	likesship\.com
 1727343439	VLAZ	slopeunblockedd\.github\.io
+1727343505	VLAZ	slope[\W_]*+unblocked
