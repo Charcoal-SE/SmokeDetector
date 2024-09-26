@@ -66832,3 +66832,4 @@
 1727323018	Cow	jmchip\.com
 1727334570	Cow	ineubytes\.com
 1727333438	Cow	techanicinfotech\.com
+1727333078	Cow	wigfever\.com
