@@ -66858,3 +66858,4 @@
 1727349074	VLAZ	mediaglaze\.com
 1727349111	VLAZ	mediaglaze(?!\.com)
 1727356054	VLAZ	royalcyber\.com
+1727357756	tripleee	blinkexam\.com
