@@ -66855,3 +66855,4 @@
 1727348075	VLAZ	swattransport\.ae
 1727348920	VLAZ	WonderPay[\W_]*+Technologies
 1727349001	VLAZ	etarat\.online
+1727349038	VLAZ	Et[ea]rat[\W_]*+Online(?<!eterat\.online)(?:[\W_]*+UAE)?
