@@ -66869,3 +66869,4 @@
 1727372735	Jeff Schaller	signaturecarriage\.com
 1727379383	Vickel	providencefamilygroup\.com
 1727368400	Fastnlight	inshotme\.com
+1727379496	Vickel	providence[\W_]*+family[\W_]*+group(?!\.com(?<=providencefamilygroup\.com))
