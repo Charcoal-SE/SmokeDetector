@@ -66891,3 +66891,4 @@
 1727440609	Cow	snbcleaning\.com\.au
 1727440924	Jeff Schaller	digixvalley\.com
 1727441496	Jeff Schaller	qyresearch\.in
+1727444738	Jeff Schaller	dearit\.com\.bd
