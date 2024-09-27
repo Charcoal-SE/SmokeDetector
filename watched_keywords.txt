@@ -66887,3 +66887,4 @@
 1727433417	Cow	bgmgirl\.com
 1727423592	Cow	(?-i:jboepgdkcgchplagkfmgdhefadfahgda)(?# chromewebstore)
 1727436662	Cody Gray	rent[\W_]*+ez(?!\.in(?<=rentez\.in))
+1727439846	Cow	jarviscodinghub\.com
