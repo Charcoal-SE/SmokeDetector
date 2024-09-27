@@ -66877,3 +66877,4 @@
 1727411434	Cow	totalgaminghub(?!\.com)
 1727411943	Cow	whalesync\.com
 1727412698	Cow	unlimitedwebtools\.com
+1727414214	Cow	sybazzar\.com
