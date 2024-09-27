@@ -66871,3 +66871,4 @@
 1727368400	Fastnlight	inshotme\.com
 1727379496	Vickel	providence[\W_]*+family[\W_]*+group(?!\.com(?<=providencefamilygroup\.com))
 1727380635	Jeff Schaller	real-code-amazon-gift-card-generator-free-ways-get-all-cards-7n3yf(?#linkedin)
+1727400166	Jeff Schaller	ciberseguridadinternet\.com
