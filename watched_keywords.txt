@@ -66893,3 +66893,4 @@
 1727441496	Jeff Schaller	qyresearch\.in
 1727444738	Jeff Schaller	dearit\.com\.bd
 1727445655	Jeff Schaller	divingatlantis-tenerife\.com
+1727448860	Jeff Schaller	(?-i:briantel)(?#fiverr)
