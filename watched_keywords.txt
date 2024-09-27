@@ -66885,3 +66885,4 @@
 1727422549	VLAZ	jagannathtours\.com
 1727422618	VLAZ	abhiwan\.com
 1727424266	Dragonrage	cheenti\.com
+1727435310	Cody Gray	pixcap(?!\.com)
