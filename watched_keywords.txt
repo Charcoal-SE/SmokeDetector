@@ -66887,3 +66887,4 @@
 1727424266	Dragonrage	cheenti\.com
 1727435310	Cody Gray	pixcap(?!\.com)
 1727433417	Cow	bgmgirl\.com
+1727423592	Cow	(?-i:jboepgdkcgchplagkfmgdhefadfahgda)(?# chromewebstore)
