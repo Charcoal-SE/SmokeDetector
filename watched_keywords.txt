@@ -66901,3 +66901,4 @@
 1727456958	Fastnlight	buyusareview2023(?:@gmail\.com)?
 1727459466	Anerdw	filesplice\.com
 1727450629	Cow	aviftopngconvert\.com
+1727450555	Cow	(?-i:EthereumModerator)(?# Telegram)
