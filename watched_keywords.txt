@@ -66884,3 +66884,4 @@
 1727422519	VLAZ	theburningseasonmovie\.com
 1727422549	VLAZ	jagannathtours\.com
 1727422618	VLAZ	abhiwan\.com
+1727423592	Cow	(?-i:jboepgdkcgchplagkfmgdhefadfahgda)(?# chromewebstore)
