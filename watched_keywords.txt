@@ -66875,3 +66875,4 @@
 1727400208	Jeff Schaller	villabuild\.net
 1727411414	Cow	totalgaminghub\.com
 1727411434	Cow	totalgaminghub(?!\.com)
+1727411943	Cow	whalesync\.com
