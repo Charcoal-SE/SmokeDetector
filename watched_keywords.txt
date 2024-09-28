@@ -66921,3 +66921,4 @@
 1727532303	VLAZ	perftestpro\.com
 1727532350	VLAZ	thedigitalmithila\.com
 1727547775	Vickel	minediscover\.com
+1727557002	Vickel	mnjline\.com
