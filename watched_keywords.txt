@@ -66934,3 +66934,4 @@
 1727627918	VLAZ	astrologer[\W_]*+amar[\W_]*+sharma(?!\.com(?<=astrologeramarsharma\.com))
 1727628845	Vickel	seo-studio\.tools
 1727635999	Jeff Schaller	biancaspender\.com
+1727639532	Vickel	echtedoku\.com
