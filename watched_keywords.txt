@@ -66929,3 +66929,4 @@
 1727602164	VLAZ	rapidautohailrepair\.com
 1727610834	Jeff Schaller	kalamacademy\.org
 1727611690	Nisse Engström	adjust\.com
+1727627243	Jeff Schaller	(?-i:wkwekgq)(?#fiverr)
