@@ -5305,7 +5305,9 @@ items:
 - ns: mobilecoderz.com.
 - ns: superappscloud.com.
 - ns: hiya.digital.
-- ns: cloudserverdns.co.in.
+- comment: NXDOMAIN 2024-09-29
+  disable: true
+  ns: cloudserverdns.co.in.
 - ns: shotz.site.
 - ns: digitaldwarka.com.
 - ns: partohost.net.
