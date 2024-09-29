@@ -66923,3 +66923,4 @@
 1727547775	Vickel	minediscover\.com
 1727557002	Vickel	mnjline\.com
 1727557130	Vickel	mnj[\W_]*+line(?!\.com(?<=mnjline\.com))
+1727586042	Dragonrage	ativader\.com
