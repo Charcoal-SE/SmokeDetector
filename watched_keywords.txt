@@ -66925,3 +66925,4 @@
 1727557130	Vickel	mnj[\W_]*+line(?!\.com(?<=mnjline\.com))
 1727586042	Dragonrage	ativader\.com
 1727593079	Nisse Engström	thestandardclinic\.com
+1727601440	VLAZ	aceccgroup\.com
