@@ -66927,3 +66927,4 @@
 1727593079	Nisse Engström	thestandardclinic\.com
 1727601440	VLAZ	aceccgroup\.com
 1727602164	VLAZ	rapidautohailrepair\.com
+1727610834	Jeff Schaller	kalamacademy\.org
