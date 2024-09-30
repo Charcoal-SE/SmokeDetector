@@ -485,6 +485,9 @@ items:
   - amy.ns.cloudflare.com.
   - ram.ns.cloudflare.com.
 - ns:
+  - anahi.ns.cloudflare.com.
+  - rajeev.ns.cloudflare.com.
+- ns:
   - anastasia.ns.cloudflare.com.
   - rory.ns.cloudflare.com.
 - ns:
