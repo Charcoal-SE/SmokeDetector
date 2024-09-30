@@ -66986,3 +66986,4 @@
 1727719823	Jeff Schaller	minicooperind\.com
 1727719864	Jeff Schaller	minicooperindonesia\.co\.id
 1727719891	Jeff Schaller	mymitsubishi\.co\.id
+1727719918	Jeff Schaller	nikinoko\.com
