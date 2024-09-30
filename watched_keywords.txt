@@ -66967,3 +66967,4 @@
 1727719140	Jeff Schaller	dprd\.banjarkab\.go\.id
 1727719177	Jeff Schaller	buwanawijayaabadi\.com
 1727719201	Jeff Schaller	bydarista\.com
+1727719226	Jeff Schaller	dealerminicooperindonesia\.com
