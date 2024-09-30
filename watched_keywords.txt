@@ -66938,3 +66938,4 @@
 1727639532	Vickel	echtedoku\.com
 1727646457	Vickel	geovcoordinateshacker(?:@gmail\.com)?
 1727646939	Vickel	geo[\W_]*+coordinates[\W_]*+recovery[\W_]*+hacker
+1727665178	Anerdw	KEVINLEERECOVERYSERVICE@GMAIL\.COM
