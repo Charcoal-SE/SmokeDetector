@@ -67036,3 +67036,4 @@
 1727781300	tripleee	whitespots\.io
 1727781326	tripleee	whitespots(?!\.io)
 1727781352	tripleee	valid[\_W]*+it[\_W]*+exams(?!\.com(?<=validitexams\.com))
+1727783616	Jeff Schaller	rfchh\.com
