@@ -67038,3 +67038,4 @@
 1727781352	tripleee	valid[\_W]*+it[\_W]*+exams(?!\.com(?<=validitexams\.com))
 1727783616	Jeff Schaller	rfchh\.com
 1727785385	Vickel	americantowncar\.net
+1727785514	Vickel	american[\W_]*+town[\W_]*+car(?!\.net(?<=americantowncar\.net))
