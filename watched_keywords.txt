@@ -67012,3 +67012,4 @@
 1727760863	VLAZ	carsrenthyd\.in
 1727763894	VLAZ	appwars[\W_]*+technologies(?!\.com(?<=appwarstechnologies\.com))
 1727768550	tripleee	onendf\.com
+1727771290	tripleee	totalqualityexpress\.com
