@@ -1142,3 +1142,4 @@ carelab[sz]
 (?-i:^Mama Pinto Kasamba$)
 (?-i:^Jignesh Patel$)
 (?-i:^Two' Two'' Two''' Two''''\W?$)
+(?-i:^Tanya Aggarwal$)
