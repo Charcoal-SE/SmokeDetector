@@ -67023,3 +67023,4 @@
 1727777977	tripleee	nyggs
 1727778140	tripleee	glam[\W_]*+and[\W_]*+glow
 1727778186	tripleee	ahc5\.com
+1727778242	tripleee	macwiki[\W_]*+(?:at[\W_]*+)?proton[\W_]*+(?:dot[\W_]*+)?me
