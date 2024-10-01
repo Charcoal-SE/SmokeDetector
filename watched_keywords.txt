@@ -67010,3 +67010,4 @@
 1727760071	VLAZ	go886\.net
 1727760107	VLAZ	go886?(?!\.net(?<=go886\.net))
 1727756235	Anerdw	wingateconstruction\.com
+1727760826	VLAZ	gururo\.com
