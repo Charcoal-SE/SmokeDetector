@@ -1144,3 +1144,4 @@ carelab[sz]
 (?-i:^Two' Two'' Two''' Two''''\W?$)
 (?-i:^Tanya Aggarwal$)
 (?-i:^Corvids India$)
+(?-i:^Nội thất Đức Tú$)
