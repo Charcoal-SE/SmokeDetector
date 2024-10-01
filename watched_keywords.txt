@@ -67035,3 +67035,4 @@
 1727780937	tripleee	omc-stepperonline\.com
 1727781300	tripleee	whitespots\.io
 1727781326	tripleee	whitespots(?!\.io)
+1727781352	tripleee	valid[\_W]*+it[\_W]*+exams(?!\.com(?<=validitexams\.com))
