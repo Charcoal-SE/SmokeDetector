@@ -67021,3 +67021,4 @@
 1727777798	tripleee	dailynutritionnews\.com
 1727777947	tripleee	bankcloud\.io
 1727777977	tripleee	nyggs
+1727778140	tripleee	glam[\W_]*+and[\W_]*+glow
