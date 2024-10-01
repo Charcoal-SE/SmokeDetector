@@ -67041,3 +67041,4 @@
 1727785514	Vickel	american[\W_]*+town[\W_]*+car(?!\.net(?<=americantowncar\.net))
 1727785964	Jeff Schaller	pay\.reda\.one
 1727788096	Spevacus	wooqlaw\.com
+1727789822	Spevacus	dogrify\.com
