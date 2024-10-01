@@ -67026,3 +67026,4 @@
 1727778717	tripleee	nyggs(?!\.com)
 1727779348	tripleee	empower1
 1727779435	tripleee	searchmarketingservice\.com
+1727779462	tripleee	codia\.ai
