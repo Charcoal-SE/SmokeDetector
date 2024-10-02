@@ -67070,3 +67070,4 @@
 1727882989	Jeff Schaller	realestatesaudi\.com
 1727883032	Jeff Schaller	saralstudy\.com
 1727884186	Jeff Schaller	kodexia\.ai
+1727888141	Ryan M	kodexia(?!\.ai)
