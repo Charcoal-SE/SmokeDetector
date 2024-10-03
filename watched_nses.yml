@@ -1494,6 +1494,9 @@ items:
   - lilyana.ns.cloudflare.com.
 - ns:
   - cora.ns.cloudflare.com.
+  - elijah.ns.cloudflare.com.
+- ns:
+  - cora.ns.cloudflare.com.
   - jason.ns.cloudflare.com.
 - ns:
   - cora.ns.cloudflare.com.
