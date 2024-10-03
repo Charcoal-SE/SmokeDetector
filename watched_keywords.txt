@@ -67090,3 +67090,4 @@
 1727939501	VLAZ	desmoderm\.in
 1727939525	VLAZ	desmoderm(?!\.in)
 1727939608	Nisse Engström	cambioml\.com
+1727940027	Cow	pikashow\.com\.co
