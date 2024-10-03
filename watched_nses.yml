@@ -3664,6 +3664,9 @@ items:
   - otto.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
+  - owen.ns.cloudflare.com.
+  - rosa.ns.cloudflare.com.
+- ns:
   - pablo.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
