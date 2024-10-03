@@ -67087,3 +67087,4 @@
 1727936113	Cow	cdnsol\.com
 1727936863	Cow	qatartravelinfo\.com
 1727938755	Cow	tekskillsinc\.com
+1727939501	VLAZ	desmoderm\.in
