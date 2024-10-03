@@ -67100,3 +67100,4 @@
 1727946251	tripleee	zitel\.in
 1727946415	Cow	alvlaskurii\.fi
 1727940812	Cow	brilliantdirectories\.com
+1727948192	tripleee	(?-i:^mona naaktob$)
