@@ -67106,3 +67106,4 @@
 1727952073	VLAZ	sdetools\.io
 1727953068	Cow	bigbirdweb\.com
 1727955559	VLAZ	thevapepack\.co\.uk
+1727955955	Cow	fuhrerscheinemarkt\.com
