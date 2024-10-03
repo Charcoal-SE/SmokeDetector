@@ -67103,3 +67103,4 @@
 1727948192	tripleee	(?-i:^mona naaktob$)
 1727948225	Cow	budventure\.technology
 1727948388	Cow	digitalasb\.com
+1727949893	VLAZ	igmate\.com
