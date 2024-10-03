@@ -67105,3 +67105,4 @@
 1727950688	tripleee	bidinn\.in
 1727950774	tripleee	desinoir(?!\.com)
 1727952073	VLAZ	sdetools\.io
+1727953068	Cow	bigbirdweb\.com
