@@ -67124,3 +67124,4 @@
 1727983135	Cow	myandroid\.org
 1727992415	Vickel	winkmodsapk\.com
 1727992792	Vickel	wink[\W]*+mods?[\W]*+apk(?!\.com(?<=winkmodsapk\.com))
+1727999270	Vickel	InShot[\W]*+Mod[\W]*+APK
