@@ -67105,3 +67105,4 @@
 1727948388	Cow	digitalasb\.com
 1727949893	VLAZ	igmate\.com
 1727950688	tripleee	bidinn\.in
+1727950774	tripleee	desinoir(?!\.com)
