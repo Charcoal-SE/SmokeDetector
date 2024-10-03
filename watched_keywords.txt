@@ -34493,7 +34493,6 @@
 1640947308	tripleee	idigic
 1640949287	tripleee	softstings\.com
 1640951950	tripleee	comlinkbundle\.com
-1640952416	tripleee	nebosh
 1640961656	Makyen	imagupscaler
 1640962491	cigien	imgupscaler\.com
 1640962627	cigien	appdupe

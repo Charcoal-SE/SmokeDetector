@@ -3133,3 +3133,4 @@ iFORCE[\W_]*+HACKER[\W_]*+RECOVERY
 mighty[\W_]*+hacker[\W_]*+recovery(?!(?<=mightyhackerrecovery)[\W_]*+(?:dot[\W_]*+)?com)
 mama[\W_]*+pinto
 act892435
+nebosh
