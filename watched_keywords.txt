@@ -67139,3 +67139,4 @@
 1728026280	tripleee	studio[\W_]*+nepal
 1728030230	Cow	melity\.com
 1728030733	tripleee	(?-i:^Alexei Petrov$)
+1728031322	Cow	greenfogs\.com
