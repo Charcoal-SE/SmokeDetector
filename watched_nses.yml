@@ -1296,6 +1296,9 @@ items:
   - kiki.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
+  - chance.ns.cloudflare.com.
   - ullis.ns.cloudflare.com.
 - ns:
   - charles.ns.cloudflare.com.
