@@ -67125,3 +67125,4 @@
 1727992415	Vickel	winkmodsapk\.com
 1727992792	Vickel	wink[\W]*+mods?[\W]*+apk(?!\.com(?<=winkmodsapk\.com))
 1728014210	Cow	ramixiptv\.com
+1728018055	tripleee	sachinrbali(?# medium.com)
