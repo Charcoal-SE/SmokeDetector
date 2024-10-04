@@ -67140,3 +67140,4 @@
 1728030230	Cow	melity\.com
 1728030733	tripleee	(?-i:^Alexei Petrov$)
 1728031322	Cow	greenfogs\.com
+1728035027	Cow	cistanbul2023\.com
