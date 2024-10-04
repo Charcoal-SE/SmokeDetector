@@ -67130,3 +67130,4 @@
 1728018669	Cow	craxsrat\.tech
 1727999270	Vickel	InShot[\W]*+Mod[\W]*+APK
 1727999164	Vickel	cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1728021003	Anerdw	waysgifting\.in
