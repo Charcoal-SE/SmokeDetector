@@ -3134,3 +3134,4 @@ mighty[\W_]*+hacker[\W_]*+recovery(?!(?<=mightyhackerrecovery)[\W_]*+(?:dot[\W_]
 mama[\W_]*+pinto
 act892435
 nebosh
+jeffreyharrixx
