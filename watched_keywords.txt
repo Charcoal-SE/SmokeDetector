@@ -67152,3 +67152,4 @@
 1728043373	Vickel	sparshmedia\.com
 1728044130	tripleee	iimskills\.com
 1728045136	VLAZ	truthqapital\.com
+1728045163	VLAZ	truth[\W_]*+qapital(?!\.com(?<=truthqapital\.com))
