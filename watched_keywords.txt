@@ -67156,3 +67156,4 @@
 1728045193	VLAZ	AIRA[\W_s]*+workflows?
 1728045366	Vickel	sparshmedia(?!\.com)
 1728045850	Vickel	pinksalttiles\.com
+1728049371	double-beep	fishpodium\.com\.sg
