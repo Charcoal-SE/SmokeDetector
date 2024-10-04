@@ -1146,3 +1146,4 @@ carelab[sz]
 (?-i:^Corvids India$)
 (?-i:^Nội thất Đức Tú$)
 (?-i:^Spectra Technologies$)
+(?-i:^binhduong canhopicityskypark$)
