@@ -67135,3 +67135,4 @@
 1728023156	Cow	(?-i:RnbXx5)(?# start.me id)
 1728023223	Cow	equestrianbookfair\.com
 1728023264	VLAZ	solicy\.net
+1728023428	Cow	builtecaluminium\.com
