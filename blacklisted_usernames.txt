@@ -1145,3 +1145,4 @@ carelab[sz]
 (?-i:^Tanya Aggarwal$)
 (?-i:^Corvids India$)
 (?-i:^Nội thất Đức Tú$)
+(?-i:^Spectra Technologies$)
