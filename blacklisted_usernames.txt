@@ -1147,3 +1147,4 @@ carelab[sz]
 (?-i:^Nội thất Đức Tú$)
 (?-i:^Spectra Technologies$)
 (?-i:^binhduong canhopicityskypark$)
+(?-i:^Anthony Michael InteriorDesign$)
