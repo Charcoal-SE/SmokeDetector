@@ -67185,3 +67185,4 @@
 1728160010	Vickel	arko\.basu09(?#medium.com)
 1728160975	Vickel	weissbetgaming\.com
 1728162645	Vickel	mahabal\.com
+1728163365	Vickel	mahabal(?!\.com)
