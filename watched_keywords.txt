@@ -67171,3 +67171,4 @@
 1728114946	Cow	betwins\.in
 1728114992	Cow	betwins(?!\.in)
 1728115154	VLAZ	dan(?:iel|ny)\.?berger
+1728115191	VLAZ	microsoftsurface\.pro
