@@ -67172,3 +67172,4 @@
 1728114992	Cow	betwins(?!\.in)
 1728115154	VLAZ	dan(?:iel|ny)\.?berger
 1728115191	VLAZ	microsoftsurface\.pro
+1728124055	Jeff Schaller	kirklandsignatures\.us
