@@ -67169,3 +67169,4 @@
 1728076895	Vickel	happywheelsus\.com
 1728112552	Cow	frishay\.com
 1728114946	Cow	betwins\.in
+1728114992	Cow	betwins(?!\.in)
