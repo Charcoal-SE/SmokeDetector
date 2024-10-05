@@ -67180,3 +67180,4 @@
 1728139686	Jeff Schaller	sonicmenuspot\.com
 1728140003	Cow	ahrendaniel
 1728140183	Cow	aesfitness\.com
+1728144019	Cow	futurevideo\.tv
