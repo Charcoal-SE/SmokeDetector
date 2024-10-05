@@ -67186,3 +67186,4 @@
 1728160975	Vickel	weissbetgaming\.com
 1728162645	Vickel	mahabal\.com
 1728163365	Vickel	mahabal(?!\.com)
+1728169834	Jeff Schaller	sopnotechbd\.com
