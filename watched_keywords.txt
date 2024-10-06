@@ -67188,3 +67188,4 @@
 1728163365	Vickel	mahabal(?!\.com)
 1728169834	Jeff Schaller	sopnotechbd\.com
 1728178364	Jeff Schaller	fqrhost\.com
+1728178755	Jeff Schaller	printerwall\.com
