@@ -67221,3 +67221,4 @@
 1728229400	Cow	eternal[\W_]*+wig
 1728234508	Cow	menherb\.in
 1728234757	Cow	(?-i:o8xWeB4)(?# fiverr account)
+1728237325	Cow	mindfordigital\.in
