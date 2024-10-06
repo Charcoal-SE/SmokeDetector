@@ -67218,3 +67218,4 @@
 1728225269	Jeff Schaller	paddingtonluggagestorage\.com
 1728226427	Vickel	firecracks\.net
 1728229266	Cow	eternalwigs\.com
+1728229400	Cow	eternal[\W_]*+wig
