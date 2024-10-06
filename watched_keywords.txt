@@ -67225,3 +67225,4 @@
 1728237469	Cow	novelz\.pk
 1728242280	Cow	(?-i:1FAIpQLScya5vza4CKJo7o4eCwTmsdSNz7BP1SINngj1vtEDfBLmO9SQ)(?# Google forms)
 1728254015	Vickel	giftsmomwilllove\.com
+1728256949	Jeff Schaller	rondbooks\.com
