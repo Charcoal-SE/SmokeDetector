@@ -67201,3 +67201,4 @@
 1728201996	VLAZ	covid19filantropi\.id
 1728202019	VLAZ	ppknunram\.id
 1728202043	VLAZ	smkn6padang\.id
+1728202066	VLAZ	gayabarulima-desa\.id
