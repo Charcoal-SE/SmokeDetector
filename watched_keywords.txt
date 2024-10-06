@@ -67206,3 +67206,4 @@
 1728202475	VLAZ	rp8888-web\.com
 1728202731	Cow	tempurejobgrblorakab\.id
 1728202999	Cow	sudhiranjan\.com
+1728203886	VLAZ	digestsync(?:-coupons)?
