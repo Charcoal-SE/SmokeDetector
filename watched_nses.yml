@@ -2126,6 +2126,9 @@ items:
   - tony.ns.cloudflare.com.
 - ns:
   - emma.ns.cloudflare.com.
+  - eric.ns.cloudflare.com.
+- ns:
+  - emma.ns.cloudflare.com.
   - kellen.ns.cloudflare.com.
 - ns:
   - emma.ns.cloudflare.com.
