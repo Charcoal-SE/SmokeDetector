@@ -67239,3 +67239,4 @@
 1728282001	tripleee	\d+<(\w+)>\d+(?:[^\d<>]\d+)*(?!</\1>)
 1728282418	Cow	devaaj\.com
 1728282864	Cow	industrialcart\.in
+1728284745	tripleee	twenty[\W_]*+47
