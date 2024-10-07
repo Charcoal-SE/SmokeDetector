@@ -67241,3 +67241,4 @@
 1728284745	tripleee	twenty[\W_]*+47
 1728284949	Cow	artycraftz\.com
 1728284982	Cow	artycraftz(?!\.com)
+1728286119	tripleee	doforttech\.com
