@@ -1152,3 +1152,4 @@ carelab[sz]
 (?-i:^kingroomvn$)
 (?-i:^Journal Insights$)
 (?-i:^Bhanukumar$)
+(?-i:^arunburma29gmailcom$)
