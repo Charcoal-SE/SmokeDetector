@@ -67259,3 +67259,4 @@
 1728304329	Cow	(?-i:5845aea0706eb760)(?# Skype CID)
 1728304650	VLAZ	alter\.org
 1728304673	VLAZ	feri\.org
+1728304987	Cow	pdfquery(?!\.ai)
