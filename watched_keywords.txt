@@ -67242,3 +67242,4 @@
 1728284982	Cow	artycraftz(?!\.com)
 1728286119	tripleee	doforttech\.com
 1728290813	Cow	vostfr-streamings\.com
+1728290851	Cow	vostfr-streamings(?!\.com)
