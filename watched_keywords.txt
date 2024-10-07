@@ -65332,7 +65332,6 @@
 1724308540	Dragonrage	xtrapharmacy\.com
 1724310004	tripleee	ftechiz[\W_]*+solution(?:[\W_]*+pvt)?(?:[\W_]*+ltd)?
 1724310920	Dragonrage	starbucks-secretmenu\.com
-1724311704	tripleee	(?-i:^Bhanukumar$)
 1724299620	Cow	acmelocksmith\.com
 1724313159	tripleee	openvault\.com
 1724313769	Dragonrage	softeksquare\.com

@@ -1151,3 +1151,4 @@ carelab[sz]
 (?-i:^tech6g$)
 (?-i:^kingroomvn$)
 (?-i:^Journal Insights$)
+(?-i:^Bhanukumar$)
