@@ -1149,3 +1149,4 @@ carelab[sz]
 (?-i:^binhduong canhopicityskypark$)
 (?-i:^Anthony Michael InteriorDesign$)
 (?-i:^tech6g$)
+(?-i:^kingroomvn$)
