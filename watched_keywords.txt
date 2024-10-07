@@ -67248,3 +67248,4 @@
 1728291939	Cow	vostfr[\W_]*+streamings(?!\.com(?<=vostfr-streamings\.com))
 1728293461	tripleee	iroad\.co\.in
 1728296540	Cow	beiruthomeshishadelivery\.com
+1728296709	Cow	frekwencji\.pl
