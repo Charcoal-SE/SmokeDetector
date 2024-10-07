@@ -67244,3 +67244,4 @@
 1728290813	Cow	vostfr-streamings\.com
 1728290851	Cow	vostfr-streamings(?!\.com)
 1728291188	Cow	ezspaces\.in
+1728291227	Cow	ezspaces(?!\.in)
