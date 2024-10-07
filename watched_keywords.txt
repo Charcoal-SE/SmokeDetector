@@ -67245,3 +67245,4 @@
 1728291188	Cow	ezspaces\.in
 1728291227	Cow	ezspaces(?!\.in)
 1728291599	Cow	vostfr[\W_]*+streamings(?!\.com)
+1728291804	Cow	botanicavirgenmorena\.com
