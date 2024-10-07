@@ -67260,3 +67260,4 @@
 1728304650	VLAZ	alter\.org
 1728304673	VLAZ	feri\.org
 1728304987	Cow	pdfquery(?!\.ai)
+1728305541	Jeff Schaller	coinmedia\.live
