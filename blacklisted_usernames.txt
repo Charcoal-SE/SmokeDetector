@@ -1150,3 +1150,4 @@ carelab[sz]
 (?-i:^Anthony Michael InteriorDesign$)
 (?-i:^tech6g$)
 (?-i:^kingroomvn$)
+(?-i:^Journal Insights$)
