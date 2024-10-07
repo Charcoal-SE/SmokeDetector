@@ -64770,7 +64770,6 @@
 1723095881	Dragonrage	buyerspanel\.com
 1723094882	Cow	Konnect[\W_]*+AI[\W_]*+Technologies
 1723096625	Dragonrage	chickenfastmining
-1723097692	Makyen	certvalue(?!\.com)
 1723098892	VLAZ	viacon\.io
 1723098872	Cow	minigenix\.com
 1723098978	VLAZ	minigenix\d*(?!\.com(?<=minigenix\.com))

@@ -3135,3 +3135,4 @@ mama[\W_]*+pinto
 act892435
 nebosh
 jeffreyharrixx
+certvalue(?!\.com)
