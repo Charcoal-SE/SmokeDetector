@@ -67234,3 +67234,4 @@
 1728278587	Cow	northstaracad\.com
 1728279182	Cow	astroera\.in
 1728280475	Cow	journalsinsights\.com
+1728281144	Cow	rathorebc(?:@hotmail\.com)?
