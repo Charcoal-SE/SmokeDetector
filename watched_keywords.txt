@@ -67229,3 +67229,4 @@
 1728274208	tripleee	king[\W_]*+room(?:[\W_]*+vn)?(?<!(?-i:^kingroomvn$))
 1728275681	VLAZ	microsoftkeypro\.com
 1728275706	VLAZ	microsoftkeypro(?!\.com)
+1728276086	Ryan M	Tavern AI
