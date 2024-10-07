@@ -67227,4 +67227,3 @@
 1728254015	Vickel	giftsmomwilllove\.com
 1728256949	Jeff Schaller	rondbooks\.com
 1728274208	tripleee	king[\W_]*+room(?:[\W_]*+vn)?(?<!(?-i:^kingroomvn$))
-1728275579	VLAZ	MicrosoftKeyPro
