@@ -67235,3 +67235,4 @@
 1728279182	Cow	astroera\.in
 1728280475	Cow	journalsinsights\.com
 1728281144	Cow	rathorebc(?:@hotmail\.com)?
+1728281218	Cow	0009-0008-0097-2420(?# orcid.org)
