@@ -1153,3 +1153,4 @@ carelab[sz]
 (?-i:^Journal Insights$)
 (?-i:^Bhanukumar$)
 (?-i:^arunburma29gmailcom$)
+(?-i:^Dextara Digital$)
