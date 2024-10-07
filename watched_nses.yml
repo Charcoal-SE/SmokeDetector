@@ -829,6 +829,9 @@ items:
   - candy.ns.cloudflare.com.
 - ns:
   - bart.ns.cloudflare.com.
+  - iris.ns.cloudflare.com.
+- ns:
+  - bart.ns.cloudflare.com.
   - martha.ns.cloudflare.com.
 - ns:
   - bayan.ns.cloudflare.com.
