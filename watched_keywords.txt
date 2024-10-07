@@ -67250,3 +67250,4 @@
 1728296540	Cow	beiruthomeshishadelivery\.com
 1728296709	Cow	frekwencji\.pl
 1728297129	Cow	rescuetime\.com
+1728297499	tripleee	connectprinterviabluetooth\.com
