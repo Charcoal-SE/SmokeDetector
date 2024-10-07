@@ -67262,3 +67262,4 @@
 1728304987	Cow	pdfquery(?!\.ai)
 1728305541	Jeff Schaller	coinmedia\.live
 1728314950	double-beep	whitehacklabs\.com
+1728315369	double-beep	theespresso\.com\.vn
