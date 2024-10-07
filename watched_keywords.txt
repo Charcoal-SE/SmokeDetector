@@ -67230,3 +67230,4 @@
 1728275681	VLAZ	microsoftkeypro\.com
 1728275706	VLAZ	microsoftkeypro(?!\.com)
 1728276086	Ryan M	Tavern AI
+1728278428	Cow	helloalleva\.com
