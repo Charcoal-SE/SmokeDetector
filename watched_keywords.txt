@@ -67294,3 +67294,4 @@
 1728388193	Vickel	cheeserecipies\.com
 1728388738	tripleee	bgmitournament\.com
 1728391497	tripleee	thedapachecker\.com
+1728391600	tripleee	disha1explorosolutions(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
