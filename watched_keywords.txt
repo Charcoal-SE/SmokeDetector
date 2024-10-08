@@ -67272,3 +67272,4 @@
 1728346759	Fastnlight	nfocyberrecoveryinc(?:@gmail\.com)?
 1728330560	Anerdw	Star Vijay
 1728358894	tripleee	yuantuo[\W_]*+data[\W_]*+intelligence
+1728361779	Anerdw	whyps\.com
