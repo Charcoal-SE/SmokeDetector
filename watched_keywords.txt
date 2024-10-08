@@ -67306,3 +67306,4 @@
 1728406932	Vickel	kycbestshop\.com
 1728407111	Vickel	kyc[\W_]*+best[\W_]*+shop(?!\.com(?<=kycbestshop\.com))
 1728407935	Fastnlight	annonymous\.eu
+1728407938	Fastnlight	lunardetectives\.com
