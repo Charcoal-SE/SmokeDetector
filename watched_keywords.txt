@@ -66612,7 +66612,6 @@
 1726749189	Cow	internxt
 1726757045	Jeff Schaller	solidparking\.com
 1726756550	Fastnlight	jun88tc\.com
-1726758235	Jeff Schaller	lenovo\.com
 1726759296	Jeff Schaller	top-mc-servers\.net
 1726763414	Fastnlight	printersofflines\.com
 1726774284	Jeff Schaller	templated\.io
