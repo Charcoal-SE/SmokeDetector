@@ -67271,3 +67271,4 @@
 1728331750	Fastnlight	bc-game-casino-id\.com
 1728346759	Fastnlight	nfocyberrecoveryinc(?:@gmail\.com)?
 1728330560	Anerdw	Star Vijay
+1728358894	tripleee	yuantuo[\W_]*+data[\W_]*+intelligence
