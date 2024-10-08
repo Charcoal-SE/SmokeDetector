@@ -67292,3 +67292,4 @@
 1728383982	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)
 1728384006	Jeff Schaller	webtrainings\.com
 1728387416	Jeff Schaller	woodsidegroup\.com\.au
+1728388193	Vickel	cheeserecipies\.com
