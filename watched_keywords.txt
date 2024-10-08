@@ -67309,3 +67309,4 @@
 1728407938	Fastnlight	lunardetectives\.com
 1728407941	Fastnlight	robertlawgrp\.com
 1728411934	Cow	flalottery\.com
+1728412483	Anerdw	JKS[\W_]*Digital
