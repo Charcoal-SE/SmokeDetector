@@ -67281,3 +67281,4 @@
 1728371601	tripleee	diversetopic\.com
 1728371693	tripleee	gso188
 1728371947	tripleee	resetspaces\.in
+1728372007	tripleee	reset[\W_]*+spaces(?!\.in(?<=resetspaces\.in))
