@@ -67296,3 +67296,4 @@
 1728391497	tripleee	thedapachecker\.com
 1728391600	tripleee	disha1explorosolutions(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1728391657	tripleee	hiringalert
+1728391831	tripleee	(?-i:^Ravi Tailor$)
