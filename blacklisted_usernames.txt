@@ -1157,3 +1157,4 @@ carelab[sz]
 (?-i:^Mastanii$)
 (?-i:^Seo Services Philadephia$)
 (?-i:^Accounting Assignment$)
+(?-i:^techanicinfotech$)
