@@ -67274,3 +67274,4 @@
 1728358894	tripleee	yuantuo[\W_]*+data[\W_]*+intelligence
 1728361779	Anerdw	whyps\.com
 1728365581	VLAZ	gateway\.platoboost\.com
+1728366509	VLAZ	bermudaunicorn\.corn
