@@ -67305,3 +67305,4 @@
 1728405782	Spevacus	consultasprime\.com
 1728406932	Vickel	kycbestshop\.com
 1728407111	Vickel	kyc[\W_]*+best[\W_]*+shop(?!\.com(?<=kycbestshop\.com))
+1728407941	Fastnlight	robertlawgrp\.com
