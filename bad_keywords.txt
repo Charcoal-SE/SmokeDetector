@@ -3137,3 +3137,4 @@ nebosh
 jeffreyharrixx
 certvalue(?!\.com)
 kukufm
+bermuda[\W_]*+unicorn(?!\.co(?:rn|m)(?<=bermudaunicorn\.co(?:rn|m)))
