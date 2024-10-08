@@ -67284,3 +67284,4 @@
 1728372007	tripleee	reset[\W_]*+spaces(?!\.in(?<=resetspaces\.in))
 1728372031	VLAZ	escortsservice\.in
 1728373360	tripleee	aidiptv\.com
+1728373390	tripleee	aid[\W_]*+iptv(?!\.com(?<=aidiptv\.com))
