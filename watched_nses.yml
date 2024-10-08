@@ -2218,6 +2218,9 @@ items:
   - eva.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
+  - evan.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
+- ns:
   - eve.ns.cloudflare.com.
   - jimmy.ns.cloudflare.com.
 - ns:
