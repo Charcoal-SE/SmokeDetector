@@ -67285,3 +67285,4 @@
 1728372031	VLAZ	escortsservice\.in
 1728373360	tripleee	aidiptv\.com
 1728373390	tripleee	aid[\W_]*+iptv(?!\.com(?<=aidiptv\.com))
+1728379331	tripleee	elitebgrowth\.com
