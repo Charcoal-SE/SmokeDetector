@@ -66672,7 +66672,6 @@
 1726969513	Jeff Schaller	(?-i:RobertTappan)(?#t.me)
 1726982848	Cow	gym-flooring\.com
 1726982871	Cow	jps-extensions\.co\.uk
-1726986003	Nisse Engström	kwrds\.ai
 1726990181	VLAZ	notitimba2\.com
 1726990206	VLAZ	notitimba2?(?!\.com(?<=notitimba2\.com))
 1726982951	Cow	jps[\W_]*+extensions
