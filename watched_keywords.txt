@@ -67276,3 +67276,4 @@
 1728365581	VLAZ	gateway\.platoboost\.com
 1728366509	VLAZ	bermudaunicorn\.corn
 1728366562	VLAZ	luck8\.net
+1728366599	VLAZ	luck8\.com
