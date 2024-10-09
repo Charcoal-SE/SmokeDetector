@@ -67315,3 +67315,4 @@
 1728411934	Cow	flalottery\.com
 1728412483	Anerdw	JKS[\W_]*Digital
 1728449048	tripleee	celebblink\.com
+1728452765	Cow	lemontreehotels\.com
