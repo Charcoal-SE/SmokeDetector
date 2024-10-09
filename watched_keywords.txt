@@ -67352,3 +67352,4 @@
 1728488709	Anerdw	artisansignworks\.com
 1728491017	Vickel	dimsimlim\.com
 1728491912	Jeff Schaller	Near[\W_]*+Learn
+1728492164	Vickel	chris[\'’](s?)[\W_]*+better[\W_]*+softwash(?!\.net(?<=chrisbettersoftwash\.net))
