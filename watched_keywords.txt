@@ -67337,3 +67337,4 @@
 1728469284	VLAZ	theshakerdoorstore\.com
 1728469429	VLAZ	the[\W_]*+shaker[\W_]*+door[\W_]*+store(?!\.com(?<=theshakerdoorstore\.com))
 1728469975	tripleee	grade[\W_]*+spire(?!\.com(?<=gradespire\.com))
+1728470131	Jeff Schaller	sapientrealty\.com
