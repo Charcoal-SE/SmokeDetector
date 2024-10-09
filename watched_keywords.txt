@@ -67354,3 +67354,4 @@
 1728492164	Vickel	chris[\'’](s?)[\W_]*+better[\W_]*+softwash(?!\.net(?<=chrisbettersoftwash\.net))
 1728493076	Cow	ictsessionsjourney\.blogspot
 1728496057	Anerdw	phenomanmegummiesch\.blogspot
+1728501807	Vickel	peoplealsoask\.ai
