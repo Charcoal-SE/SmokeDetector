@@ -67331,3 +67331,4 @@
 1728460603	Cow	kunalseth\.in
 1728460887	VLAZ	hackers[\W_]*+prey(?!\.com(?<=hackersprey\.com))
 1728465291	tripleee	s3698\.com
+1728465585	VLAZ	blockchaincyberretrieve\.com
