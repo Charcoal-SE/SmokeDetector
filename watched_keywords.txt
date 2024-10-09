@@ -67339,3 +67339,4 @@
 1728469975	tripleee	grade[\W_]*+spire(?!\.com(?<=gradespire\.com))
 1728470131	Jeff Schaller	sapientrealty\.com
 1728470297	Jeff Schaller	(?-i:DN5UgTNDIjU)(?#youtube)
+1728470556	Jeff Schaller	notfallzertifikate\.com
