@@ -67327,3 +67327,4 @@
 1728459745	Cow	family[\W_]*+care[\W_]*+centers
 1728459958	Cow	bankingombudsman\.rbi
 1728460004	Cow	peachplumbingatlanta\.com
+1728460048	Cow	peachplumbingatlanta(?!\.com)
