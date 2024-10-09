@@ -67119,7 +67119,6 @@
 1727998403	Vickel	infocyberrecoveryinc(?:@gmail\.com)?
 1728018669	Cow	craxsrat\.tech
 1727999270	Vickel	InShot[\W]*+Mod[\W]*+APK
-1727999164	Vickel	cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1728021003	Anerdw	waysgifting\.in
 1728023055	Cow	idgame\.id
 1728023156	Cow	(?-i:RnbXx5)(?# start.me id)

@@ -3140,3 +3140,4 @@ kukufm
 bermuda[\W_]*+unicorn(?!\.co(?:rn|m)(?<=bermudaunicorn\.co(?:rn|m)))
 saa[\W_]*+c03[\W_]*+dumps
 جلب الحبيب
+cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
