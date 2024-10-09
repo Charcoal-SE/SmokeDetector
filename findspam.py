@@ -2286,6 +2286,7 @@ city_list = [
     "Indore",
     "Jaipur",
     "Jalandhar",
+    "Jeddah",
     "Jim Corbett",
     "Kandivali",
     "Kangra",
