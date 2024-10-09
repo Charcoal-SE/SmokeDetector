@@ -1611,6 +1611,9 @@ items:
   - vin.ns.cloudflare.com.
 - ns:
   - daisy.ns.cloudflare.com.
+  - hal.ns.cloudflare.com.
+- ns:
+  - daisy.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
   - dalary.ns.cloudflare.com.
