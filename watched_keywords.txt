@@ -67321,3 +67321,4 @@
 1728455449	Cow	explinks(?!\.com)
 1728455643	tripleee	aira\.fr
 1728456856	Cow	(?-i:H8oNaxM78IA)(?# YouTube ID)
+1728457473	tripleee	nterview\.me
