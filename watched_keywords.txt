@@ -67333,3 +67333,4 @@
 1728465291	tripleee	s3698\.com
 1728465585	VLAZ	blockchaincyberretrieve\.com
 1728465699	VLAZ	\bBLOCKCHAIN[\W_]*+CYBER[\W_]*+RETRIEVE\d*(?!\.com(?<=blockchaincyberretrieve\.com))\b
+1728467227	VLAZ	medicaladmissionhub\.com
