@@ -2334,6 +2334,7 @@ city_list = [
     "Rajkot",
     "Ramnagar",
     "Rishikesh",
+    "Riyadh",
     "Rohini",
     "Saket",
     "Sarjapur",
