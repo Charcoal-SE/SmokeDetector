@@ -67335,3 +67335,4 @@
 1728467439	VLAZ	cspressurecleaning\.com
 1728467588	VLAZ	BLOCKCHAIN[\W_]*+CYBER[\W_]*+RETRIEVE\d*(?!\.com(?<=blockchaincyberretrieve\.com))
 1728469284	VLAZ	theshakerdoorstore\.com
+1728469429	VLAZ	the[\W_]*+shaker[\W_]*+door[\W_]*+store(?!\.com(?<=theshakerdoorstore\.com))
