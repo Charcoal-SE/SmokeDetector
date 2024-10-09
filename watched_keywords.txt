@@ -67312,3 +67312,5 @@
 1728436793	Jeff Schaller	Betafort[\W_]*+Recovery
 1728441754	Anerdw	cheetahdistribution\.com
 1728443202	Anerdw	drojieasika(?:@gmail\.com)?
+1728411934	Cow	flalottery\.com
+1728412483	Anerdw	JKS[\W_]*Digital
