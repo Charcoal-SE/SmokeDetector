@@ -4236,6 +4236,7 @@ items:
 - ns: 
   - ns1.md-97.bigrockservers.com.
   - ns2.md-97.bigrockservers.com.
+- ns: md-ht-3.bigrockservers.com.
 - ns: md-in-83.bigrockservers.com.
 - ns:
   - cns1.bigrock.com.
