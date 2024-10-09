@@ -1163,6 +1163,9 @@ items:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - burt.ns.cloudflare.com.
+  - perla.ns.cloudflare.com.
+- ns:
   - byron.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
