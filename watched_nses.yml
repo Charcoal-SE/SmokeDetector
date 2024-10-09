@@ -3170,6 +3170,9 @@ items:
   - theo.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
+  - tom.ns.cloudflare.com.
+- ns:
+  - leah.ns.cloudflare.com.
   - vin.ns.cloudflare.com.
 - ns:
   - leanna.ns.cloudflare.com.
