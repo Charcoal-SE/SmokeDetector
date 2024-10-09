@@ -67334,3 +67334,4 @@
 1728465585	VLAZ	blockchaincyberretrieve\.com
 1728465699	VLAZ	\bBLOCKCHAIN[\W_]*+CYBER[\W_]*+RETRIEVE\d*(?!\.com(?<=blockchaincyberretrieve\.com))\b
 1728467227	VLAZ	medicaladmissionhub\.com
+1728467439	VLAZ	cspressurecleaning\.com
