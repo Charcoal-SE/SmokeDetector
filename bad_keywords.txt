@@ -3139,3 +3139,4 @@ certvalue(?!\.com)
 kukufm
 bermuda[\W_]*+unicorn(?!\.co(?:rn|m)(?<=bermudaunicorn\.co(?:rn|m)))
 saa[\W_]*+c03[\W_]*+dumps
+جلب الحبيب
