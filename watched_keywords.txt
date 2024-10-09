@@ -67325,3 +67325,4 @@
 1728459432	Cow	2manuals\.com
 1728459619	Cow	fccmg\.com
 1728459745	Cow	family[\W_]*+care[\W_]*+centers
+1728459958	Cow	bankingombudsman\.rbi
