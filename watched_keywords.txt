@@ -67351,3 +67351,4 @@
 1728487078	Vickel	chrisbettersoftwash\.net
 1728488709	Anerdw	artisansignworks\.com
 1728491017	Vickel	dimsimlim\.com
+1728491912	Jeff Schaller	Near[\W_]*+Learn
