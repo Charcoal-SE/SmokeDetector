@@ -67311,3 +67311,4 @@
 1728435139	Jeff Schaller	Blackhatcyber2020
 1728436793	Jeff Schaller	Betafort[\W_]*+Recovery
 1728441754	Anerdw	cheetahdistribution\.com
+1728443202	Anerdw	drojieasika(?:@gmail\.com)?
