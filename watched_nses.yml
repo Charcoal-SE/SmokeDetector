@@ -2099,6 +2099,9 @@ items:
   - elmo.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - elmo.ns.cloudflare.com.
+  - rosalyn.ns.cloudflare.com.
+- ns:
   - eloise.ns.cloudflare.com.
   - ian.ns.cloudflare.com.
 - ns:
