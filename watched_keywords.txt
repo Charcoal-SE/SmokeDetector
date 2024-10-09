@@ -67329,3 +67329,4 @@
 1728460004	Cow	peachplumbingatlanta\.com
 1728460048	Cow	peachplumbingatlanta(?!\.com)
 1728460603	Cow	kunalseth\.in
+1728460887	VLAZ	hackers[\W_]*+prey(?!\.com(?<=hackersprey\.com))
