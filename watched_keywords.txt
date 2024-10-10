@@ -67361,3 +67361,4 @@
 1728542615	tripleee	lccedu\.in
 1728542843	tripleee	dentalprofessionalportal\.com
 1728543078	tripleee	olllo\.top
+1728543123	tripleee	olllo(?!\.top)
