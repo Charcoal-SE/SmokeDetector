@@ -48684,7 +48684,6 @@
 1680075706	tripleee	mitrasuaritma\.com
 1680075813	tripleee	apkspare(?!\.com)
 1680075836	tripleee	apkspare\.com
-1680076088	tripleee	(?-i:^Naveen S$)
 1680077836	tripleee	(?-i:^Saumya Yadav$)
 1680082222	tripleee	naturawellnessfoods\.com
 1680083863	tripleee	(?-i:^quickwayinfosystems$)
