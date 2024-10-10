@@ -12611,7 +12611,6 @@
 1570562231	Makyen	jacobcreeves\.com
 1570562234	Makyen	innovativeflare\.com
 1570565355	Machavity	net2\.com
-1570565697	Machavity	(?-i:^Zezo$)
 1570566138	Machavity	buyprescriptionz(?:\.|\W*dot\W*)co
 1570590344	Nisse Engström	hitac-co\.com
 1570598110	Makyen	mygreatlakeslogin\.com
