@@ -67369,3 +67369,4 @@
 1728548641	Cow	abhyasamdefencegroup\.com
 1728549316	tripleee	hex2colorpicker\.com
 1728549990	tripleee	(?-i:^arslan arslan$)
+1728550691	Cow	saiconsultancyservice\.in
