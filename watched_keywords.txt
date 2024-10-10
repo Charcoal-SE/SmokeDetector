@@ -67389,3 +67389,4 @@
 1728566965	Cow	galaxyonknowledge\.blogspot
 1728567485	Cow	jio[\W_]*+customer[\W_]*+care
 1728567588	Cow	call[\W_]*+jio[\W_]*+customer[\W_]*+support
+1728572403	Anerdw	ambanimatka\.co\.in
