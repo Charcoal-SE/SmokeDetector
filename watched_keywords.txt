@@ -67388,3 +67388,4 @@
 1728565425	tripleee	(?-i:^william Tyler$)
 1728566965	Cow	galaxyonknowledge\.blogspot
 1728567485	Cow	jio[\W_]*+customer[\W_]*+care
+1728567588	Cow	call[\W_]*+jio[\W_]*+customer[\W_]*+support
