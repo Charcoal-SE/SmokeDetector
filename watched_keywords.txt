@@ -67367,3 +67367,4 @@
 1728546326	tripleee	cr[\W_]*+technolog(ys?|ies)(?!\.com(?<=crtechnologys\.com))
 1728546852	tripleee	(?-i:^Muhammed Ijas$)
 1728548641	Cow	abhyasamdefencegroup\.com
+1728549316	tripleee	hex2colorpicker\.com
