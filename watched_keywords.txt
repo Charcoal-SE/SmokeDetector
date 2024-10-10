@@ -67363,3 +67363,4 @@
 1728543078	tripleee	olllo\.top
 1728543123	tripleee	olllo(?!\.top)
 1728546185	Cow	namsecurities\.in
+1728546296	Cow	sgtamilan\.com
