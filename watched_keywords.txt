@@ -67394,3 +67394,4 @@
 1728573578	VLAZ	ngs[\W_]*+solution(?!\.com(?<=ngssolution\.com))
 1728576521	Cow	luquaygavit\.com
 1728576560	Cow	p2phero\.de
+1728576634	Fastnlight	seradoctor\.com
