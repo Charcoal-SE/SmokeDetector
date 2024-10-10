@@ -67364,3 +67364,4 @@
 1728543123	tripleee	olllo(?!\.top)
 1728546185	Cow	namsecurities\.in
 1728546296	Cow	sgtamilan\.com
+1728546326	tripleee	cr[\W_]*+technolog(ys?|ies)(?!\.com(?<=crtechnologys\.com))
