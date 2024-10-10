@@ -67385,3 +67385,4 @@
 1728561219	VLAZ	worklooper(?:[\W_]*+consultants)?(?!\.com(?<=worklooper\.com))
 1728561243	VLAZ	skyexchange\.site
 1728561379	VLAZ	(?-i:weYFcRKT)(?# cutt.ly)
+1728565425	tripleee	(?-i:^william Tyler$)
