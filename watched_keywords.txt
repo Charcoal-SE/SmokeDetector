@@ -67391,3 +67391,4 @@
 1728567588	Cow	call[\W_]*+jio[\W_]*+customer[\W_]*+support
 1728572403	Anerdw	ambanimatka\.co\.in
 1728573498	Fastnlight	ngssolution\.com
+1728573578	VLAZ	ngs[\W_]*+solution(?!\.com(?<=ngssolution\.com))
