@@ -1074,6 +1074,9 @@ items:
   - emily.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
+  - iris.ns.cloudflare.com.
+- ns:
+  - brian.ns.cloudflare.com.
   - nucum.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
