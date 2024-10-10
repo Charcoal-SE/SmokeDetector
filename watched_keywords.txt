@@ -67365,3 +67365,4 @@
 1728546185	Cow	namsecurities\.in
 1728546296	Cow	sgtamilan\.com
 1728546326	tripleee	cr[\W_]*+technolog(ys?|ies)(?!\.com(?<=crtechnologys\.com))
+1728546852	tripleee	(?-i:^Muhammed Ijas$)
