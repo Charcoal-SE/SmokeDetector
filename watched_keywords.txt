@@ -67362,3 +67362,4 @@
 1728542843	tripleee	dentalprofessionalportal\.com
 1728543078	tripleee	olllo\.top
 1728543123	tripleee	olllo(?!\.top)
+1728546185	Cow	namsecurities\.in
