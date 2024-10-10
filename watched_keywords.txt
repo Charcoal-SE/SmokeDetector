@@ -67371,3 +67371,4 @@
 1728549990	tripleee	(?-i:^arslan arslan$)
 1728550691	Cow	saiconsultancyservice\.in
 1728550758	Cow	sai[\W_]*+propmall
+1728550823	Cow	(?-i:GTMOCOMMUNITY)(?# Telegram)
