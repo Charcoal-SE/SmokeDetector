@@ -67370,3 +67370,4 @@
 1728549316	tripleee	hex2colorpicker\.com
 1728549990	tripleee	(?-i:^arslan arslan$)
 1728550691	Cow	saiconsultancyservice\.in
+1728550758	Cow	sai[\W_]*+propmall
