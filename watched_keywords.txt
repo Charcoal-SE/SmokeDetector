@@ -67373,3 +67373,4 @@
 1728550758	Cow	sai[\W_]*+propmall
 1728550823	Cow	(?-i:GTMOCOMMUNITY)(?# Telegram)
 1728551599	Cow	onecallbailbondingtennessee\.com
+1728553233	tripleee	(?-i:^Web seo member 11$)
