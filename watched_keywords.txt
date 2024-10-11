@@ -67428,3 +67428,4 @@
 1728643581	tripleee	zk[\W_]*+rollup
 1728644902	Cow	rentzeasy\.com
 1728645794	Cow	hicareqatar\.com
+1728648818	Cow	(?-i:3Xcy0vx)(?# bit.ly)
