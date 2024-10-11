@@ -768,6 +768,9 @@ items:
   - ashley.ns.cloudflare.com.
   - dan.ns.cloudflare.com.
 - ns:
+  - ashley.ns.cloudflare.com.
+  - trevor.ns.cloudflare.com.
+- ns:
   - ashton.ns.cloudflare.com.
   - kia.ns.cloudflare.com.
 - ns:
