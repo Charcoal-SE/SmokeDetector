@@ -3145,3 +3145,4 @@ wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail
 crypto[\W_]*+Venture
 money[\W_]*back[\W_]*from[\W_]*a[\W_]*wrong[\W_]*transaction
 spyrecovery36
+To[\W_]*+refund[\W_]*+money[\W_]*+from
