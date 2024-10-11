@@ -67430,3 +67430,4 @@
 1728645794	Cow	hicareqatar\.com
 1728648818	Cow	(?-i:3Xcy0vx)(?# bit.ly)
 1728649819	tripleee	pre[\W_]*+matrimonial[\W_]*+detective[\W_]*+agency
+1728649911	tripleee	sharon[\W_]*+paula
