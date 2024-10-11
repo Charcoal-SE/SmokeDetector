@@ -66035,7 +66035,6 @@
 1725627598	Cow	businesschat\.io
 1725634557	Cow	Mantaz[\W_]*+in[\W_]*+Dubai
 1725642573	Cow	oxford[\W_]*+online[\W_]*+pharmacy
-1725644906	Cow	traderknows\.com
 1725661759	micsthepick	paradox[\W]*+recovery(?![\W]*+wizard)
 1725664700	Vickel	illuminatisocietywealth(?:@gmail\.com)?
 1725681599	Dragonrage	vietnameseprivatetours\.com
