@@ -2093,6 +2093,9 @@ items:
   - elliot.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - elliott.ns.cloudflare.com.
+  - lilith.ns.cloudflare.com.
+- ns:
   - elle.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
