@@ -1133,6 +1133,9 @@ items:
   - brodie.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
+  - brodie.ns.cloudflare.com.
+  - stephan.ns.cloudflare.com.
+- ns:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
