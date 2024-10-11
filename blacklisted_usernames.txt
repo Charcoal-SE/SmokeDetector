@@ -1162,3 +1162,4 @@ carelab[sz]
 (?-i:^Explinks$)
 (?-i:^importglob030$)
 (?-i:^Maxsource Technologies$)
+(?-i:^Ace4sure$)
