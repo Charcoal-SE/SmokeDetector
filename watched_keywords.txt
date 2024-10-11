@@ -67427,3 +67427,4 @@
 1728643396	Cow	blockchain[\W_]*+techs
 1728643581	tripleee	zk[\W_]*+rollup
 1728644902	Cow	rentzeasy\.com
+1728645794	Cow	hicareqatar\.com
