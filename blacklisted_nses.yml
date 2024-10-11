@@ -819,8 +819,7 @@ items:
 - ns: ns1-venus.ewebguru.com.
 - ns: alakmalak.com.
 - ns: dnsjani.com.
-- comment: failing 2024-09-12, transient error?
-  disable: true
+- comment: failing 2024-09-12, transient error? enabled again 2024-10-11
   ns: fastnsdns.com.
 - ns: hostbreak.com.
 - ns: cms500.com.
