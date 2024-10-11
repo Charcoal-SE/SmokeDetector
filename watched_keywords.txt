@@ -67418,3 +67418,4 @@
 1728632140	Cow	onetouchfinance\.com
 1728632619	Cow	prayertime\.co\.uk
 1728634108	Cow	zacyberhary(?:@gmail\.com)?
+1728634553	Cow	brikitt\.com
