@@ -1161,3 +1161,4 @@ carelab[sz]
 (?-i:^kenbejamen$)
 (?-i:^Explinks$)
 (?-i:^importglob030$)
+(?-i:^Maxsource Technologies$)
