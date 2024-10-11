@@ -67436,3 +67436,4 @@
 1728654330	Jeff Schaller	osofo\.48hoursolutioncenter(?:@gmail\.com)?
 1728655836	Anerdw	taptobuynow\.com
 1728655816	Anerdw	Wedding[\W_]*Venues[\W_]*in[\W_]*Delhi
+1728656350	Anerdw	vtnetzwelt\.com
