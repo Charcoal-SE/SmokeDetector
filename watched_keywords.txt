@@ -67435,3 +67435,4 @@
 1728653506	Jeff Schaller	nyasa\.co\.in
 1728654330	Jeff Schaller	osofo\.48hoursolutioncenter(?:@gmail\.com)?
 1728655836	Anerdw	taptobuynow\.com
+1728655816	Anerdw	Wedding[\W_]*Venues[\W_]*in[\W_]*Delhi
