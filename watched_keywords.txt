@@ -67431,3 +67431,4 @@
 1728648818	Cow	(?-i:3Xcy0vx)(?# bit.ly)
 1728649819	tripleee	pre[\W_]*+matrimonial[\W_]*+detective[\W_]*+agency
 1728649911	tripleee	sharon[\W_]*+paula
+1728651358	tripleee	(?-i:^Alexis Joey$)
