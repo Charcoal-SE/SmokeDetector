@@ -67442,3 +67442,4 @@
 1728661698	Fastnlight	deer08177(?:@mailnuo\.com)?
 1728664280	Cow	marketnnova\.com
 1728669336	Vickel	gessearch\.com
+1728680243	Jeff Schaller	allgo\.xyz
