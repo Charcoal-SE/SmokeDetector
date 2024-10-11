@@ -67416,3 +67416,4 @@
 1728630309	Cow	seotrang1\.com
 1728630334	Cow	seotrang1(?!\.com)
 1728632140	Cow	onetouchfinance\.com
+1728632619	Cow	prayertime\.co\.uk
