@@ -315,6 +315,9 @@ items:
   - val.ns.cloudflare.com.
 - ns:
   - alfred.ns.cloudflare.com.
+  - millie.ns.cloudflare.com.
+- ns:
+  - alfred.ns.cloudflare.com.
   - princess.ns.cloudflare.com.
 - ns:
   - alfred.ns.cloudflare.com.
