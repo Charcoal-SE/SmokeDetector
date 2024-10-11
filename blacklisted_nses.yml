@@ -546,8 +546,7 @@ items:
 - comment: no longer in DNS 2021-11-04
   disable: true
   ns: letter.org.in.
-- comment: no longer in DNS 2020-04-02
-  disable: true
+- comment: disabled NXDOMAIN 2020-04-02; resolves again 2024-10-11
   ns: utecho.com.
 - ns: siteground.asia.
 - ns: ddos-guard.net.
@@ -562,16 +561,14 @@ items:
 - ns: bh-in-31.webhostbox.net.
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
-- comment: no longer in DNS 2020-12-30
-  disable: true
+- comment: NXDOMAIN 2020-12-30; resolves again 2024-10-11
   ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
 - comment: NXDOMAIN 2021-03-13
   disable: true
   ns: c67050.sgvps.net.
-- comment: NXDOMAIN 2023-01-24
-  disable: true
+- comment: NXDOMAIN 2023-01-24; resolves again 2024-10-11
   ns: dnschamp.com.
 - ns: hostblast.net.
 - ns: cetpainfotech.com.
