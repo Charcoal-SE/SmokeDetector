@@ -67437,3 +67437,4 @@
 1728655836	Anerdw	taptobuynow\.com
 1728655816	Anerdw	Wedding[\W_]*Venues[\W_]*in[\W_]*Delhi
 1728656350	Anerdw	vtnetzwelt\.com
+1728658471	Fastnlight	vnapkapp\.net
