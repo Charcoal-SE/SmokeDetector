@@ -1165,3 +1165,4 @@ carelab[sz]
 (?-i:^Ace4sure$)
 (?-i:^Himanshu Suri$)
 (?-i:^americantown car$)
+(?-i:^Doggy Ville$)
