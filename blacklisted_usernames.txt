@@ -1164,3 +1164,4 @@ carelab[sz]
 (?-i:^Maxsource Technologies$)
 (?-i:^Ace4sure$)
 (?-i:^Himanshu Suri$)
+(?-i:^americantown car$)
