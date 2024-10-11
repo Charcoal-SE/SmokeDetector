@@ -67415,3 +67415,4 @@
 1728626543	tripleee	dimehut\.com
 1728630309	Cow	seotrang1\.com
 1728630334	Cow	seotrang1(?!\.com)
+1728632140	Cow	onetouchfinance\.com
