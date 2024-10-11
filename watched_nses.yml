@@ -1178,6 +1178,9 @@ items:
   - carioca.ns.cloudflare.com.
   - gabriel.ns.cloudflare.com.
 - ns:
+  - carioca.ns.cloudflare.com.
+  - harvey.ns.cloudflare.com.
+- ns:
   - carl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
 - ns:
