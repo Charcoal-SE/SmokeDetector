@@ -1167,3 +1167,4 @@ carelab[sz]
 (?-i:^americantown car$)
 (?-i:^Doggy Ville$)
 (?-i:^patios now$)
+(?-i:^maashaktiyogbali$)
