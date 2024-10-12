@@ -67463,3 +67463,4 @@
 1728756960	Cow	freetechtoolbox\.com
 1728762856	Dragonrage	maa[\W_]*+shakti[\W_]*+yog(?!\.com(?<=maashaktiyogbali\.com))
 1728763027	Dragonrage	voodoolovespell\.com
+1728765905	Dragonrage	(?-i:1I1K4)(?#shorturl.at)
