@@ -67461,4 +67461,3 @@
 1728749117	Fastnlight	optimyzeus\.com
 1728755970	Vickel	(?-i:hCojxCR9cdd1GLvj6)(?#forms.gle)
 1728756960	Cow	freetechtoolbox\.com
-1728760870	Cow	maa[\W_]*+shakti[\W_]*+yog
