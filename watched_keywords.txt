@@ -67462,3 +67462,4 @@
 1728755970	Vickel	(?-i:hCojxCR9cdd1GLvj6)(?#forms.gle)
 1728756960	Cow	freetechtoolbox\.com
 1728762856	Dragonrage	maa[\W_]*+shakti[\W_]*+yog(?!\.com(?<=maashaktiyogbali\.com))
+1728763027	Dragonrage	voodoolovespell\.com
