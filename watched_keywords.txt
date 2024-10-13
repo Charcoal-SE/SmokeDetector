@@ -67473,3 +67473,4 @@
 1728811282	Cow	redmovie25(?!\.org(?<=redmovie25\.org))
 1728811363	Cow	(?-i:venomthelastdancemovie)(?# Facebook redmovie25)
 1728811397	Cow	(?-i:yourfaultmovie)(?# Facebook redmovie25)
+1728811419	Cow	(?-i:culpatuyapeliculacompleta)(?# Facebook redmovie25)
