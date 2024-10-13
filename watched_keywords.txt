@@ -67464,3 +67464,4 @@
 1728762856	Dragonrage	maa[\W_]*+shakti[\W_]*+yog(?!\.com(?<=maashaktiyogbali\.com))
 1728763027	Dragonrage	voodoolovespell\.com
 1728765905	Dragonrage	(?-i:1I1K4)(?#shorturl.at)
+1728787580	Anerdw	mohammedamine\.dridi\.esprit(?:@gmail\.com)?
