@@ -1168,3 +1168,4 @@ carelab[sz]
 (?-i:^Doggy Ville$)
 (?-i:^patios now$)
 (?-i:^maashaktiyogbali$)
+(?-i:^Mehwish Khan$)
