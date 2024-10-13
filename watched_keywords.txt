@@ -67485,3 +67485,4 @@
 1728827900	Fastnlight	capsapk\.com
 1728835814	Fastnlight	knowledgequran\.com
 1728836674	Fastnlight	talemytrip\.com
+1728843194	Nisse Engström	winkmod\.download
