@@ -67474,5 +67474,4 @@
 1728811363	Cow	(?-i:venomthelastdancemovie)(?# Facebook redmovie25)
 1728811397	Cow	(?-i:yourfaultmovie)(?# Facebook redmovie25)
 1728811419	Cow	(?-i:culpatuyapeliculacompleta)(?# Facebook redmovie25)
-1728811458	Cow	(?-i:pfbid02Cb5gVu2HcQ5bvfcQQCLdYg6igSEmuVPc819vwHpSQyx2TV2bwr4kfnMbMhtHjtYzl&id=61566861845706)(?# Facebook ID redmovie25)
 1728811510	Cow	(?-i:61566861845706)(?# Facebook userID redmovie25)
