@@ -2159,6 +2159,9 @@ items:
   - rocky.ns.cloudflare.com.
 - ns:
   - emily.ns.cloudflare.com.
+  - gannon.ns.cloudflare.com.
+- ns:
+  - emily.ns.cloudflare.com.
   - tony.ns.cloudflare.com.
 - ns:
   - emma.ns.cloudflare.com.
