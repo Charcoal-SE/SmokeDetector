@@ -67482,3 +67482,4 @@
 1728823223	Cow	allerdet\.frangam\.com
 1728824309	tripleee	geometry-dashscratch\.com
 1728824374	tripleee	geometry[\W_]*+dash[\W_]*+scratch(?!\.io(?<=geometrydashscratch\.io))(?!\.com(?<=geometry-dashscratch\.com))
+1728825787	Cow	fescoonlinebills\.pk
