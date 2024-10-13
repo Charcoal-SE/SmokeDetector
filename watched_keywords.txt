@@ -45932,7 +45932,6 @@
 1673435218	Cody Gray	masarujapanese\.com
 1673435302	Cody Gray	masaru[\W_]*japanese(?!\.com(?<=masarujapanese\.com))
 1673438103	Cody Gray	kyriossoftwareservices\.com
-1673438271	Cody Gray	kyrios[\W_]*software[\W_]*services(?!\.com(?<=kyriossoftwareservices\.com))
 1673438446	Cody Gray	qservices(?!it\.com)
 1673438818	Cody Gray	queentilwanacolson31(?:@gmail\.com)?
 1673439141	tripleee	wanghualian9(?# telegram)
