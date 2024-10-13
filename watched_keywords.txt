@@ -67484,3 +67484,4 @@
 1728825787	Cow	fescoonlinebills\.pk
 1728827900	Fastnlight	capsapk\.com
 1728835814	Fastnlight	knowledgequran\.com
+1728836674	Fastnlight	talemytrip\.com
