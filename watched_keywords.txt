@@ -67483,3 +67483,4 @@
 1728824374	tripleee	geometry[\W_]*+dash[\W_]*+scratch(?!\.io(?<=geometrydashscratch\.io))(?!\.com(?<=geometry-dashscratch\.com))
 1728825787	Cow	fescoonlinebills\.pk
 1728827900	Fastnlight	capsapk\.com
+1728835814	Fastnlight	knowledgequran\.com
