@@ -1511,6 +1511,9 @@ items:
   - colette.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
+  - colette.ns.cloudflare.com.
+  - zod.ns.cloudflare.com.
+- ns:
   - collins.ns.cloudflare.com.
   - jim.ns.cloudflare.com.
 - ns:
