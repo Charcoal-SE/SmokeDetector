@@ -67471,3 +67471,4 @@
 1728811034	Cow	redmovie25\.org
 1728811198	Cow	lookerstudio\.google\.com
 1728811282	Cow	redmovie25(?!\.org(?<=redmovie25\.org))
+1728811363	Cow	(?-i:venomthelastdancemovie)(?# Facebook redmovie25)
