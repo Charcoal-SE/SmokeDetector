@@ -67500,3 +67500,4 @@
 1728888088	Cow	morepcb\.com
 1728888130	Cow	morepcb(?!\.com)
 1728888301	Cow	d-habitat\.com
+1728888520	Cow	steroids-uk\.com
