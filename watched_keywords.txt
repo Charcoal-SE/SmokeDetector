@@ -58502,7 +58502,6 @@
 1708529360	Jesse	taxlegit(?!\.com)
 1708529477	Jesse	Aquarius[\W_]*+Yacht(?!\.com(?<=aquarius-yacht\.com))
 1708529552	Jesse	Visual[\W_]*+CV[\W_]*+online
-1708530915	cigien	healeypackaging\.co\.uk
 1708530936	cigien	healeypackaging(?!\.co\.uk)
 1708533867	cigien	vrdigital\.in
 1708539306	Makyen	agriculturalpilots
