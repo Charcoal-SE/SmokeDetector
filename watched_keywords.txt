@@ -67502,3 +67502,4 @@
 1728888520	Cow	steroids-uk\.com
 1728888771	Cow	powerful[\W_]*+anabolic[\W_]*+steroid
 1728889045	Cow	gatewaytechnosolutions\.com
+1728890079	Dragonrage	discountbuyblinds\.com
