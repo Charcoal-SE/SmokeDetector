@@ -1169,3 +1169,4 @@ carelab[sz]
 (?-i:^patios now$)
 (?-i:^maashaktiyogbali$)
 (?-i:^Mehwish Khan$)
+(?-i:^Samikhan$)
