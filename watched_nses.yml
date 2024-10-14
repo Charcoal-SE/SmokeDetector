@@ -3814,6 +3814,9 @@ items:
   - phoenix.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
+  - piotr.ns.cloudflare.com.
+  - vida.ns.cloudflare.com.
+- ns:
   - plato.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
