@@ -2618,6 +2618,9 @@ items:
   - nelly.ns.cloudflare.com.
 - ns:
   - hugh.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
+  - hugh.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
   - hugh.ns.cloudflare.com.
