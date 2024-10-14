@@ -2941,6 +2941,9 @@ items:
   - josh.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:
+  - journey.ns.cloudflare.com.
+  - marvin.ns.cloudflare.com.
+- ns:
   - julio.ns.cloudflare.com.
   - mckinley.ns.cloudflare.com.
 - ns:
