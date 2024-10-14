@@ -67521,3 +67521,4 @@
 1728906680	Cow	SHARONRECOVERINGEXPERTS
 1728906768	Cow	sharon[\W_]*+oneil
 1728906791	Cow	safeabortionpill\.co\.za
+1728906865	Cow	convickrash12(?:@gmail\.com)?
