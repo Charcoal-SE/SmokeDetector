@@ -2377,6 +2377,9 @@ items:
   - gerald.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
+  - gerald.ns.cloudflare.com.
+  - sureena.ns.cloudflare.com.
+- ns:
   - gerardo.ns.cloudflare.com.
   - sima.ns.cloudflare.com.
 - ns:
