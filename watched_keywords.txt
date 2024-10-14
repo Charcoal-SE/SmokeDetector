@@ -32187,7 +32187,6 @@
 1633005738	tripleee	(?-i:^The GoodWood$)
 1633007103	tripleee	argalon(?<!rahul argalon$)
 1633007252	tripleee	(?-i:3ARQW6q)(?# bit.ly)
-1633007415	tripleee	(?-i:^Henry Smith$)
 1633008554	cigien	vxav\.fr
 1633009456	Makyen	tonybright77
 1633012096	Ollie	ethan\.mccheyne(?:@94tech\.com)?
