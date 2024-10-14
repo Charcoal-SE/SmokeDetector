@@ -67522,3 +67522,4 @@
 1728906768	Cow	sharon[\W_]*+oneil
 1728906791	Cow	safeabortionpill\.co\.za
 1728906865	Cow	convickrash12(?:@gmail\.com)?
+1728908856	Cow	talkethereum\.org
