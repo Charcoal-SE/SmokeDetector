@@ -67499,3 +67499,4 @@
 1728886517	Cow	chanabfarms\.pk
 1728887606	Cow	literalnie-fun\.pl
 1728888088	Cow	morepcb\.com
+1728888130	Cow	morepcb(?!\.com)
