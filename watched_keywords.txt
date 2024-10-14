@@ -64592,7 +64592,6 @@
 1722769372	Vickel	laveekestates\.com
 1722771057	Vickel	raktive\.com
 1722771867	Jeff Schaller	clinmedjournals\.org
-1722770567	Vickel	drdrivingapk\.net
 1722772979	Vickel	beyondveda\.in
 1722773340	Jeff Schaller	universecover\.com
 1722774444	Vickel	alight\.link
