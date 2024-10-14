@@ -1170,3 +1170,4 @@ carelab[sz]
 (?-i:^maashaktiyogbali$)
 (?-i:^Mehwish Khan$)
 (?-i:^Samikhan$)
+(?-i:^Job in Ranchi$)
