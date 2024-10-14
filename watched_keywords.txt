@@ -67496,3 +67496,4 @@
 1728884235	Cow	seafoodindia\.in
 1728884465	Cow	learninternational\.ie
 1728886391	Cow	propertyplan\.com\.pk
+1728886517	Cow	chanabfarms\.pk
