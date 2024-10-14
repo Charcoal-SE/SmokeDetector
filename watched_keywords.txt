@@ -67530,3 +67530,4 @@
 1728930991	VLAZ	05963e7f370ef0cbf271becdc9d9a95da3fb73b1c1e9568bdb243e71d267f21e0a
 1728933463	Fastnlight	uktelecomdistribution\.co\.uk
 1728934590	Cow	(?-i:^hex py7$)
+1728935097	Fastnlight	winkmodapkk\.com
