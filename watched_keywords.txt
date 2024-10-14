@@ -34473,7 +34473,6 @@
 1640931771	tripleee	astrocall\.live
 1640931894	tripleee	(?-i:3HgbtVg)(?# bit.ly)
 1640931926	tripleee	(?-i:3sMjPji)(?# bit.ly)
-1640932041	tripleee	any-video-converter\.com
 1640932196	tripleee	splashthat\.com
 1640933198	Makyen	stjohnshebbal\.com
 1640936907	Makyen	(?-i:xfA1k\.jpg)
