@@ -67532,3 +67532,4 @@
 1728934590	Cow	(?-i:^hex py7$)
 1728935097	Fastnlight	winkmodapkk\.com
 1728939581	Vickel	ltshub\.com
+1728952028	Fastnlight	Plaza[\W_]*+Middle[\W_]*+East
