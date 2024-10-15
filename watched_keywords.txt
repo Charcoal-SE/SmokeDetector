@@ -67539,3 +67539,4 @@
 1728975382	Cow	indiantravelhouse\.com
 1728976414	Cow	deepijatel\.com
 1728976445	Cow	patelheating\.ca
+1728976507	Cow	patel[\W_]*+heating(?!\.ca(?<=patelheating\.ca))
