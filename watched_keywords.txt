@@ -67533,3 +67533,4 @@
 1728939581	Vickel	ltshub\.com
 1728952028	Fastnlight	Plaza[\W_]*+Middle[\W_]*+East
 1728970327	Cow	adiom\.io
+1728970685	Cow	koksen\.org
