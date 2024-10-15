@@ -67537,3 +67537,4 @@
 1728972831	Cow	neem[\W_]*+tulsi
 1728972882	Cow	cloudwater\.in
 1728975382	Cow	indiantravelhouse\.com
+1728976414	Cow	deepijatel\.com
