@@ -67542,3 +67542,4 @@
 1728976507	Cow	patel[\W_]*+heating(?!\.ca(?<=patelheating\.ca))
 1728979210	Cow	plo\.vn
 1728980762	Cow	shorten\.is
+1728980966	Cow	bombertoto
