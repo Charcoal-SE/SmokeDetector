@@ -1174,3 +1174,4 @@ carelab[sz]
 (?-i:^Mybusiness Hub$)
 ^ss[\W_]*+you[\W_]*+tube$
 (?-i:^hex py7$)
+(?-i:^EightEightEightEight 88888888$)
