@@ -67588,3 +67588,4 @@
 1729077563	Cow	glowroad\.com
 1729080474	Vickel	pdxelitetowncar\.com
 1729080586	Vickel	pdx[\W_]*+elite[\W_]*+town[\W_]*+car(?!\.com(?<=pdxelitetowncar\.com))
+1729081735	Jeff Schaller	siddhatva\.com
