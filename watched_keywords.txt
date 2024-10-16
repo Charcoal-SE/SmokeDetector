@@ -67580,3 +67580,4 @@
 1729069428	Cow	astuae\.com
 1729069560	Cow	best[\W_]*+digital[\W_]*+print[\W_]*+shop
 1729070841	VLAZ	Tiranga(?:[\W_]*+Game)?(?:[\W_]*+(?:App|Club))?
+1729072753	Jeff Schaller	floraindia\.com
