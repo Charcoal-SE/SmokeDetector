@@ -67577,3 +67577,4 @@
 1729063968	Dragonrage	kdsinternational\.org
 1729065562	Dragonrage	armchampionshipbelts\.com
 1729068795	Cow	gg[\W_]*+bazar\.com
+1729069428	Cow	astuae\.com
