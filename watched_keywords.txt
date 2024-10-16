@@ -67566,3 +67566,4 @@
 1729024693	Fastnlight	EmailBackup\.app
 1729033560	Vickel	klinikkecantikan\.jp\.net
 1729033747	Vickel	Top99bet
+1729039987	Fastnlight	(?-i:DADAechnology)(?#t.me)
