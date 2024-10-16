@@ -67582,3 +67582,4 @@
 1729070841	VLAZ	Tiranga(?:[\W_]*+Game)?(?:[\W_]*+(?:App|Club))?
 1729072753	Jeff Schaller	floraindia\.com
 1729072799	Jeff Schaller	deutschtimes\.de
+1729073696	VLAZ	fpeseals\.com
