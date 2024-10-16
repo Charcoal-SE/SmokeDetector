@@ -67592,3 +67592,4 @@
 1729083250	Cow	(?-i:fullreverseengine)(?# t.me)
 1729083848	double-beep	abasystech\.com
 1729085214	Jeff Schaller	amazingvapartners\.com
+1729087107	VLAZ	vnxoso\.nl
