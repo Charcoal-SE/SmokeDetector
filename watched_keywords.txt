@@ -67590,3 +67590,4 @@
 1729080586	Vickel	pdx[\W_]*+elite[\W_]*+town[\W_]*+car(?!\.com(?<=pdxelitetowncar\.com))
 1729081735	Jeff Schaller	siddhatva\.com
 1729083250	Cow	(?-i:fullreverseengine)(?# t.me)
+1729083848	double-beep	abasystech\.com
