@@ -67632,3 +67632,4 @@
 1729179726	tripleee	vickey[\W_]*+rajpoot
 1729182616	tripleee	aeiou[\W_]*+routing[\W_]*+Nick
 1729182692	tripleee	(?-i:^Nicholas Maleki$)
+1729186694	Cow	(?-i:3kqtk)(?# Shorturl.at)
