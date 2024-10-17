@@ -43996,7 +43996,6 @@
 1667318819	cigien	graceinteriorhub\.com
 1667319377	cigien	grace[\W_]*+interior[\W_]*+hub(?!\.com(?<=graceinteriorhub\.com))
 1667321139	cigien	bigstack\.dev
-1667321707	cigien	kashmiritours\.com
 1667324564	cigien	msmunify\.com
 1667324611	cigien	msm[\W_]*+unify(?!\.com(?<=msmunify\.com))
 1667328568	Jeff Schaller	dragcityapk\.com
