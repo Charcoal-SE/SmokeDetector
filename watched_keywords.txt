@@ -67619,3 +67619,4 @@
 1729160015	VLAZ	tradejini\.com
 1729160055	VLAZ	tradejini(?!\.com)
 1729160117	VLAZ	zimero\.in
+1729160813	tripleee	\w(?<=#\w)\w*(?:\W#\w+){2,}
