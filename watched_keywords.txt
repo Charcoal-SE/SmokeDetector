@@ -67613,3 +67613,4 @@
 1729155014	Dragonrage	mib[\W_]*+it[\W_]*+solutions(?!\.com(?<=mibitsolutions\.com))
 1729158308	tripleee	digitalreachexpert\.online
 1729158398	Cody Gray	ads[\W_]*+in[\W_]*+Ghaziabad
+1729158461	tripleee	printx\.ae
