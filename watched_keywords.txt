@@ -67625,3 +67625,4 @@
 1729167232	Vickel	americantranscriptionservices\.com
 1729167791	VLAZ	sg[\W_]*+tamilan(?!\.com(?<=sgtamilan\.com))
 1729170652	double-beep	shokohearamesh\.com
+1729171801	Jeff Schaller	amautorepair\.com
