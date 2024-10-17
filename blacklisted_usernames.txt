@@ -1175,3 +1175,4 @@ carelab[sz]
 ^ss[\W_]*+you[\W_]*+tube$
 (?-i:^hex py7$)
 (?-i:^EightEightEightEight 88888888$)
+(?-i:^emilye sages$)
