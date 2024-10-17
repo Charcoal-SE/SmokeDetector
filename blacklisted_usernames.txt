@@ -1180,3 +1180,4 @@ carelab[sz]
 (?-i:^Kobalt Tools$)
 (?-i:^Digital Marketing$)
 (?-i:^Sidra Basheer$)
+(?-i:^ImVickeyRajpoot$)
