@@ -67634,3 +67634,4 @@
 1729186694	Cow	(?-i:3kqtk)(?# Shorturl.at)
 1729186748	Cow	2di-rect\.com
 1729186798	Cow	abassdev\.com
+1729189095	Fastnlight	Mega[\W_]*+Transfers[\W_]*+Limited
