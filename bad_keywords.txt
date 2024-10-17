@@ -2916,7 +2916,6 @@ brunoe[\W_]*+quick[\W_]*+hack(?!\.com(?<=brunoequickhack\.com))(?:[\W_]*(?:at[\W
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
 captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
-khelraja(?!\.com)
 microprokey(?!\.com)(?!\.xyz)
 certsarea(?!\.com)
 (?:HAK)?5ISPY(?:HAK)?+(?!\.com(?<=5ISPYHAK\.COM))\d{0,5}
