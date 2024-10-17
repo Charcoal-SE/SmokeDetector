@@ -1177,3 +1177,4 @@ carelab[sz]
 (?-i:^EightEightEightEight 88888888$)
 (?-i:^emilye sages$)
 (?-i:^nshtare$)
+(?-i:^Kobalt Tools$)
