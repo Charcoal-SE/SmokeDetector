@@ -67611,3 +67611,4 @@
 1729154897	VLAZ	mibitsolutions\.com
 1729154944	Dragonrage	mis[\W_]*+it[\W_]*+solutions(?!\.com(?<=misitsolutions\.com))
 1729155014	Dragonrage	mib[\W_]*+it[\W_]*+solutions(?!\.com(?<=mibitsolutions\.com))
+1729158308	tripleee	digitalreachexpert\.online
