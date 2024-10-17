@@ -67623,3 +67623,4 @@
 1729165667	Jeff Schaller	georgiamarbleservices\.com
 1729165713	Jeff Schaller	eknowledgetree\.com
 1729167232	Vickel	americantranscriptionservices\.com
+1729167791	VLAZ	sg[\W_]*+tamilan(?!\.com(?<=sgtamilan\.com))
