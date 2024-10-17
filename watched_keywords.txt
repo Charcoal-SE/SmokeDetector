@@ -67624,3 +67624,4 @@
 1729165713	Jeff Schaller	eknowledgetree\.com
 1729167232	Vickel	americantranscriptionservices\.com
 1729167791	VLAZ	sg[\W_]*+tamilan(?!\.com(?<=sgtamilan\.com))
+1729170652	double-beep	shokohearamesh\.com
