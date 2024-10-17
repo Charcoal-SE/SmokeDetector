@@ -67616,3 +67616,4 @@
 1729158461	tripleee	printx\.ae
 1729159087	Cody Gray	liftwellenterprise\.in
 1729159130	Cody Gray	Liftwell[\W_]*+Enterprise(?!\.in(?<=liftwellenterprise\.in))
+1729160015	VLAZ	tradejini\.com
