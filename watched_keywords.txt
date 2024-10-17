@@ -67600,3 +67600,4 @@
 1729142421	Cow	emanate\.live
 1729144118	Cow	caratdiamonds\.com
 1729144757	Cow	kinaarajewels\.com
+1729144790	Cow	kinaarajewels(?!\.com)
