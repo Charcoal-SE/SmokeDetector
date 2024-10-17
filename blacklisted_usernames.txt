@@ -1178,3 +1178,4 @@ carelab[sz]
 (?-i:^emilye sages$)
 (?-i:^nshtare$)
 (?-i:^Kobalt Tools$)
+(?-i:^Digital Marketing$)
