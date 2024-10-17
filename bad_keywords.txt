@@ -3147,3 +3147,4 @@ spyrecovery36
 To[\W_]*+refund[\W_]*+money[\W_]*+from
 ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
 khel|\W_]*+raja(?!\.com)
+Cigati

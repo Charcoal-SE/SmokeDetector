@@ -28917,7 +28917,6 @@
 1622199087	tripleee	cfdstreamline\.com
 1622203785	Ryan M	megasoftonic\.com
 1622204397	Spevacus	kctradersindia\.com
-1622205738	Jeff Schaller	Cigati
 1622212636	Spevacus	integrateditsolutions\.com
 1622219619	Spevacus	zoomtechnetwork\.com
 1622227154	Spevacus	18650canada\.ca
