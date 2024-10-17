@@ -1176,3 +1176,4 @@ carelab[sz]
 (?-i:^hex py7$)
 (?-i:^EightEightEightEight 88888888$)
 (?-i:^emilye sages$)
+(?-i:^nshtare$)
