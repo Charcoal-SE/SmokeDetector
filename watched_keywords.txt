@@ -67631,3 +67631,4 @@
 1729178613	tripleee	سايتوتك
 1729179726	tripleee	vickey[\W_]*+rajpoot
 1729182616	tripleee	aeiou[\W_]*+routing[\W_]*+Nick
+1729182692	tripleee	(?-i:^Nicholas Maleki$)
