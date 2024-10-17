@@ -804,6 +804,9 @@ items:
   - audrey.ns.cloudflare.com.
   - trace.ns.cloudflare.com.
 - ns:
+  - augustus.ns.cloudflare.com.
+  - sandra.ns.cloudflare.com.
+- ns:
   - aurora.ns.cloudflare.com.
   - scott.ns.cloudflare.com.
 - ns:
