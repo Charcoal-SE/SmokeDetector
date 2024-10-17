@@ -67636,3 +67636,4 @@
 1729186798	Cow	abassdev\.com
 1729189095	Fastnlight	Mega[\W_]*+Transfers[\W_]*+Limited
 1729179050	Anerdw	capitalxtend\.com
+1729190081	Jeff Schaller	solopredict\.tips
