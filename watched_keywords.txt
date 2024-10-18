@@ -67661,3 +67661,4 @@
 1729247874	Cow	symmetrydentals\.com
 1729249182	Jeff Schaller	gghospitals\.in
 1729250044	Cow	deltaexecutors\.com
+1729250148	Jeff Schaller	safe-hand\.com
