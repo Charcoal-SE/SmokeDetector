@@ -67653,3 +67653,4 @@
 1729239034	Cow	(?-i:2ko4BNWViRdvAvgW8)(?# forms.gle)
 1729244177	VLAZ	sinceremechanic\.com
 1729244429	VLAZ	socalhotsauce\.com
+1729244453	VLAZ	so[\W_]*+cal[\W_]*+hot[\W_]*+sauce\.com(?!\.com(?<=socalhotsauce\.com))
