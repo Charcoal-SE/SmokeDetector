@@ -67651,3 +67651,4 @@
 1729236205	tripleee	genzdecor\.com\.vn
 1729236689	tripleee	kado[\W_]*+bar
 1729237150	tripleee	collectcent(?!\.com)
+1729239034	Cow	(?-i:2ko4BNWViRdvAvgW8)(?# forms.gle)
