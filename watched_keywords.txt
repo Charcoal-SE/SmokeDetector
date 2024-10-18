@@ -61388,7 +61388,6 @@
 1715343815	Vickel	etnafes\.com
 1715343931	tripleee	thistothat\.online
 1715343952	tripleee	linuxier\.com
-1715344018	tripleee	(?-i:^Work Looper$)
 1715344560	Jeff Schaller	timessupplement\.com
 1715344054	Vickel	etnafes(?!\.com(?<=etnafes\.com))
 1715344658	tripleee	zappify
