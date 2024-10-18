@@ -67630,7 +67630,6 @@
 1729186694	Cow	(?-i:3kqtk)(?# Shorturl.at)
 1729186748	Cow	2di-rect\.com
 1729186798	Cow	abassdev\.com
-1729189095	Fastnlight	Mega[\W_]*+Transfers[\W_]*+Limited
 1729179050	Anerdw	capitalxtend\.com
 1729190081	Jeff Schaller	solopredict\.tips
 1729201226	Vickel	pixelprometheus\.co\.uk
