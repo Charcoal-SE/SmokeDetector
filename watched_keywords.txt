@@ -67666,3 +67666,4 @@
 1729254751	VLAZ	platinadental\.com
 1729256148	VLAZ	reservationsale\.com
 1729258390	VLAZ	langloissafety\.com
+1729261153	Jeff Schaller	coderower\.com
