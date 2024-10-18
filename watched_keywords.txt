@@ -67649,3 +67649,4 @@
 1729232320	Cow	innovationmservices\.com
 1729236016	tripleee	ewayprint\.com
 1729236205	tripleee	genzdecor\.com\.vn
+1729236689	tripleee	kado[\W_]*+bar
