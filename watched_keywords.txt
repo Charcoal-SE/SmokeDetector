@@ -38508,7 +38508,6 @@
 1652429279	tripleee	airlines?[\W_]*+(?:(?:online|flight)[\W_]*+)*(?:booking|(?:cancell|reserv)ation)
 1652429516	tripleee	lechiffonvert\.ca
 1652432834	tripleee	matic-pc
-1652433500	tripleee	(?-i:^Q\d+[.):])
 1652440004	tripleee	uniprint\.net
 1652444122	tripleee	arpitsjava\.blogspot
 1652444786	tripleee	clavox
