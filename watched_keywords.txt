@@ -67657,3 +67657,4 @@
 1729246792	VLAZ	flyingrules\.com
 1729246843	tripleee	orthogonal-curvilinear-coordinates-book-ts\.com
 1729247391	Cow	headtoheadmatch\.com
+1729247754	Cow	(?-i:sd5yOb0priNF)(?# Skype)
