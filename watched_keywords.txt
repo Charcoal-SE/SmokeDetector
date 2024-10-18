@@ -67671,3 +67671,4 @@
 1729272225	Vickel	freelancingitcenter\.com
 1729274438	Fastnlight	legitpsn(?#sites.google.com)
 1729275547	Cow	daybecommerce\.com
+1729275889	Vickel	Mega[\W_]*+Transfers[\W_]*+Limited
