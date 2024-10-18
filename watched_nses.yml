@@ -4090,8 +4090,7 @@ items:
 - comment: 9/39 over a year
   disable: true
   ns: fatcow.com.
-- comment: NXDOMAIN 2023-01-24
-  disable: true
+- comment: NXDOMAIN 2023-01-24; re-enabled 2024-10-18
   ns: vedigitize.us.
 - ns: serverpars.com.
 - comment: disabled as "no longer responding" 2020-04-02 but added back; flapping
@@ -4110,8 +4109,7 @@ items:
   disable: true
   ns: justhost.com.
 - ns: stupidblogger.com.
-- comment: no longer responding 2020-11-06
-  disable: true
+- comment: no longer responding 2020-11-06; enabled again 2024-10-18
   ns: omnilinks.net.
 - ns: servconfig.com.
 - comment: unlike siteground.asia, this gets significant FPs, but also some weight 1; see also subdomains
@@ -4130,8 +4128,7 @@ items:
   ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
-- comment: no longer responding 2020-11-11
-  disable: true
+- comment: no longer responding 2020-11-11; enabled again 2024-10-18
   ns: specializedtest.com.
 - comment: 2022-07-01 NXDOMAIN
   disable: true
@@ -4238,8 +4235,7 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
-- comment: no longer responding 2021-07-27
-  disable: true
+- comment: no longer responding 2021-07-27; enabled again 2024-10-18
   ns: jawatankosong.biz.
 - comment: NXDOMAIN 2023-12-23 on GitHub Actions, but passing on CircleCI
   disable: true
@@ -4258,8 +4254,7 @@ items:
 - ns: rumahweb.org.
 - ns: rumahweb.biz.
 - ns: contabo.net.
-- comment: NXDOMAIN 2022-12-30
-  disable: true
+- comment: NXDOMAIN 2022-12-30; enabled again 2024-10-18
   ns: crazydomains.com.
 - ns: servers-servers.com.
 - ns: vhostplatform.com.
@@ -4297,8 +4292,7 @@ items:
 - ns: globat.com.
 - ns: idwebhost.id.
 - ns: a2dns.com.
-- comment: NXOMAIN 2023-04-18
-  disable: true
+- comment: NXDOMAIN 2023-04-18; enabled again 2024-10-18
   ns: flaunt7.com.
 - ns: ihc.ru.
 - ns: r53.com.ua.
@@ -4309,8 +4303,7 @@ items:
   ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
-- comment: no longer responding 2020-04-02
-  disable: true
+- comment: no longer responding 2020-04-02; enabled again 2024-10-18
   ns: onlinemenshop.com.
 - ns: mywahosting.com.
 - comment: timeout 2020-04-02
@@ -4409,8 +4402,7 @@ items:
 - ns: speedydns.net.
 - ns: webhost.pro.
 - ns: visiondns.net.
-- comment: 2021-08-03 SERVFAIL
-  disable: true
+- comment: 2021-08-03 SERVFAIL; eabled again 2024-10-18
   ns: matkaparivar.in.
 - ns: vdns.vn.
 - ns: ocyber.us.
@@ -4425,8 +4417,7 @@ items:
   disable: true
   ns: usm1804.sgded.com.
 - ns: stackdns.com.
-- comment: no longer resolves 2021-4-22
-  disable: true
+- comment: no longer resolves 2021-4-22; enabled again 2024-10-18
   ns: permainanceme.online.
 - ns: bh-20.webhostbox.net.
 - ns: bh-29.webhostbox.net.
@@ -4506,13 +4497,11 @@ items:
   ns: guruapk.com.
 - ns: netafraz.com.
 - ns: tidalworld.com.
-- comment: no longer resolves 2021-06-01
-  disable: true
+- comment: no longer resolves 2021-06-01; enabled again 2024-10-18
   ns: hostcloudstore.com.
 - ns: controlmyvps.com.au.
 - ns: wyservers.com.
-- comment: no longer resolves 2022-03-08
-  disable: true
+- comment: no longer resolves 2022-03-08; enabled again 2024-10-18
   ns: w3gb.com.
 - ns: ekkum.com.
 - comment: no longer resolves 2021-04-10
@@ -4524,8 +4513,7 @@ items:
 - comment: low value, majority FP
   disable:
   ns: stablehost.com.
-- comment: no longer resolves 2021-08-13
-  disable: true
+- comment: no longer resolves 2021-08-13; enabled again 2024-10-18
   ns: dedaddy.com.
 - ns: i2waves.com.
 - ns: myhostadmin.net.
@@ -4565,8 +4553,7 @@ items:
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
-- comment: no longer resolves 2020-08-27
-  disable: true
+- comment: no longer resolves 2020-08-27; enabled again 2024-10-18
   ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
@@ -4603,8 +4590,7 @@ items:
 - ns: hostingraja.org.
 - ns: bigwighosting.com.
 - ns: milesgator.com.
-- comment: 2021-11-02 SERVFAIL
-  disable: true
+- comment: 2021-11-02 SERVFAIL; enabled again 2024-10-18
   ns: main-hosting.eu.
 - comment: 2021-11-02 NXDOMAIN
   disable: true
@@ -5166,8 +5152,7 @@ items:
   - now1.dns.com.
   - now2.dns.com.
 - ns: thcservers.com.
-- comment: NXDOMAIN 2023-08-30
-  disable: true
+- comment: NXDOMAIN 2023-08-30; enabled again 2024-10-18
   ns: cloudxspeed.com.
 - ns: xmarthost.com.
 - ns: hostzet.com.
@@ -5220,14 +5205,12 @@ items:
   - ns-150-c.gandi.net.
   - ns-41-b.gandi.net.
   - ns-9-a.gandi.net.
-- comment: 2024-07-17 NXDOMAIN
-  disable: true
+- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18
   ns: bluehosting.pk.
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
-- comment: no longer resolves 2022-06-19
-  disable: true
+- comment: no longer resolves 2022-06-19; enabled again 2024-10-18
   ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
@@ -5236,8 +5219,7 @@ items:
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
-- comment: 2023-05-06 NXDOMAIN
-  disable: true
+- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18
   ns: concepts8.com.
 - ns: linuxpl.com.
 - ns: ndx9.com.
@@ -5329,8 +5311,7 @@ items:
 - ns: firestarthosting.com.
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
-- comment: NXDOMAIN 2022-12-03; potentially intermittent.
-  disable: true
+- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18
   ns: askbeen.com.
 - ns: hostever.com.
 - ns: sellvir.com.
@@ -5605,16 +5586,14 @@ items:
 - ns:
   - ns57.1and1.com.
   - ns58.1and1.com.
-- comment: NXDOMAIN 2024-08-29
-  disable: true
+- comment: NXDOMAIN 2024-08-29; enabled again 2024-10-18
   ns: quickinfozone.com.
 - ns: thedogmasoft.com.
 - ns: ixo.no.
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- comment: NXDOMAIN 2023-10-19
-  disable: true
+- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18
   ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
@@ -5646,8 +5625,7 @@ items:
 - ns: healthcareshopy.com.
 - ns: srtechnofab.com.
 - ns: ebndns.com.
-- comment: NXDOMAIN 2024-02-29
-  disable: true
+- comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18
   ns: splashserver.org.
 - ns: aptcom.info.
 - ns: resellerone.host.
@@ -5664,8 +5642,7 @@ items:
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- comment: nxdomain 2023-11-07
-  disable: true
+- comment: nxdomain 2023-11-07; enabled again 2024-10-18
   ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
@@ -5700,14 +5677,12 @@ items:
 - ns: netdns.net.
 - ns: dnshorizon.com.
 - ns: welldesignedgames.com.
-- comment: NXDOMAIN 2024-05-09
-  disable: true
+- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18
   ns: ozdomainnhost.com.
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- comment: NXDOMAIN 2023-09-03
-  disable: true
+- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18
   ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
