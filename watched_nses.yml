@@ -741,6 +741,9 @@ items:
   - arushi.ns.cloudflare.com.
   - vern.ns.cloudflare.com.
 - ns:
+  - arushi.ns.cloudflare.com.
+  - vicky.ns.cloudflare.com.
+- ns:
   - art.ns.cloudflare.com.
   - isla.ns.cloudflare.com.
 - ns:
