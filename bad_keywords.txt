@@ -3150,4 +3150,3 @@ khel|\W_]*+raja(?!\.com)
 Cigati
 richard[\W_]*+pryce[\W_]*+wizard
 prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
-Mega[\W_]*+Transfers[\W_]*+Limited
