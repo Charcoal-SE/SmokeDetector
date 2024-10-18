@@ -67642,3 +67642,4 @@
 1729210643	Vickel	indiedb\.com
 1729211594	Vickel	richardprycewizard2018(?:@yahoo\.com)?
 1729220268	Dragonrage	modilimitado\.io
+1729221259	Dragonrage	hackx[\W_]*+techn(?!\.com)(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?\.?c[o0]m)?
