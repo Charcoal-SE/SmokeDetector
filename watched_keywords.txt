@@ -67654,3 +67654,4 @@
 1729244177	VLAZ	sinceremechanic\.com
 1729244429	VLAZ	socalhotsauce\.com
 1729244453	VLAZ	so[\W_]*+cal[\W_]*+hot[\W_]*+sauce\.com(?!\.com(?<=socalhotsauce\.com))
+1729246792	VLAZ	flyingrules\.com
