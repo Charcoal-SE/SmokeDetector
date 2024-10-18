@@ -340,7 +340,6 @@ drivingdirectionss\.com
 (?-i:^Denni Jenni$)
 (?-i:^Iso KUWAIT$)
 (?-i:^Marco Desouza$)
-(?-i:^Ankit Rathi$)
 (?-i:^zega logo$)
 (?-i:^sehgalshreya$)
 Pound\W*define\W*MACRO
