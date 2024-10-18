@@ -3655,6 +3655,9 @@ items:
   - mira.ns.cloudflare.com.
   - peter.ns.cloudflare.com.
 - ns:
+  - mitch.ns.cloudflare.com.
+  - pam.ns.cloudflare.com.
+- ns:
   - mitchell.ns.cloudflare.com.
   - nancy.ns.cloudflare.com.
 - ns:
