@@ -67663,3 +67663,4 @@
 1729250044	Cow	deltaexecutors\.com
 1729250148	Jeff Schaller	safe-hand\.com
 1729250921	tripleee	sylvi[\W_]*+watch(?:es)?
+1729251300	Cow	krishnametlab\.com
