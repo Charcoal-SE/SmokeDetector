@@ -67652,3 +67652,4 @@
 1729237150	tripleee	collectcent(?!\.com)
 1729239034	Cow	(?-i:2ko4BNWViRdvAvgW8)(?# forms.gle)
 1729244177	VLAZ	sinceremechanic\.com
+1729244429	VLAZ	socalhotsauce\.com
