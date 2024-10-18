@@ -67664,4 +67664,3 @@
 1729250921	tripleee	sylvi[\W_]*+watch(?:es)?
 1729251300	Cow	krishnametlab\.com
 1729251720	VLAZ	byst\.org\.in
-1729252119	tripleee	prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))

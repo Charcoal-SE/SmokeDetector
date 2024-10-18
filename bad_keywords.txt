@@ -3149,3 +3149,4 @@ ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
 khel|\W_]*+raja(?!\.com)
 Cigati
 richard[\W_]*+pryce[\W_]*+wizard
+prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
