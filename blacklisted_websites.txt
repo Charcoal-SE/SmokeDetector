@@ -4538,7 +4538,6 @@ qbaccountingfirm\.com
 \bupdateerror\.co\b
 wordmaker\.info
 wakeposts\.com
-beacons\.ai
 thetopbestblogger\.com
 travelmykashmir\.com
 magenest\.com(?<!store\.magenest\.com)
