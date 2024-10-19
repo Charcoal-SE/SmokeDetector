@@ -67682,3 +67682,4 @@
 1729323799	Nisse Engström	ridexpress\.in
 1729325635	VLAZ	inventmodel\.com
 1729325659	VLAZ	InventModel(?:[\W_]*+Technology[\W_]*+Solution)?(?!\.com(?<=inventmodel\.com))
+1729325687	VLAZ	aci946900(?# Temu promo code)
