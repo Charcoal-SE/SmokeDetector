@@ -67684,3 +67684,4 @@
 1729325659	VLAZ	InventModel(?:[\W_]*+Technology[\W_]*+Solution)?(?!\.com(?<=inventmodel\.com))
 1729325687	VLAZ	aci946900(?# Temu promo code)
 1729335145	Vickel	faisalabadrealtors\.com
+1729336791	Jeff Schaller	travelturtle\.world
