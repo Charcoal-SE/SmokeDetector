@@ -67673,3 +67673,4 @@
 1729275547	Cow	daybecommerce\.com
 1729275889	Vickel	Mega[\W_]*+Transfers[\W_]*+Limited
 1729310054	Dragonrage	nesttrend\.blogspot
+1729312888	Anerdw	MintNews\.in
