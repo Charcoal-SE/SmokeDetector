@@ -67683,3 +67683,4 @@
 1729325635	VLAZ	inventmodel\.com
 1729325659	VLAZ	InventModel(?:[\W_]*+Technology[\W_]*+Solution)?(?!\.com(?<=inventmodel\.com))
 1729325687	VLAZ	aci946900(?# Temu promo code)
+1729335145	Vickel	faisalabadrealtors\.com
