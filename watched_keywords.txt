@@ -67709,3 +67709,4 @@
 1729418652	VLAZ	baothyfc\.net
 1729418696	VLAZ	flappybird\.in
 1729418720	VLAZ	(?:conggame|tai|dangnhap|dangky)?sun[\W_]*+win(?:casino|lauf1)?
+1729421631	Vickel	pocketapk\.net
