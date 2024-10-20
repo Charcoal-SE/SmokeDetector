@@ -67724,3 +67724,4 @@
 1729445916	VLAZ	RedeCanais
 1729448457	Cow	asphaltpavingpro\.com
 1729449094	Vickel	asphalt[\W_]*+paving[\W_]*+pro(?!\.com(?<=asphaltpavingpro\.com))
+1729453131	Vickel	(?-i:MCEKCBA7zGk)(?#youtu.be)
