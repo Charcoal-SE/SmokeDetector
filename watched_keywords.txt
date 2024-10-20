@@ -67707,3 +67707,4 @@
 1729418598	VLAZ	lauf1\.com
 1729418622	VLAZ	newme\.best
 1729418652	VLAZ	baothyfc\.net
+1729418696	VLAZ	flappybird\.in
