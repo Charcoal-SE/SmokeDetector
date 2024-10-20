@@ -67729,3 +67729,4 @@
 1729456819	Vickel	gsmneofrp\.website
 1729457813	Vickel	1[\W_]*+800[\W_]*+EXPEDIA
 1729458211	Vickel	try2link\.com
+1729464513	Fastnlight	trademarkregistration\.services
