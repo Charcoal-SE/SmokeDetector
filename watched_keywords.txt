@@ -67716,3 +67716,4 @@
 1729432464	Cow	optimizehq4\.wordpress\.com
 1729432731	Cow	cancel[\W_]*+your[\W_]*+Jio[\W_]*+Fiber
 1729436678	Fastnlight	theholytrips\.com
+1729440518	Cow	donardmorrisworld27(?:@gmail\.com)?
