@@ -67714,3 +67714,4 @@
 1729428669	Cow	(?-i:czarbit)(?# t.me)
 1729428701	Cow	(?-i:crypto_flashing_channel)(?# t.me)
 1729432464	Cow	optimizehq4\.wordpress\.com
+1729432731	Cow	cancel[\W_]*+your[\W_]*+Jio[\W_]*+Fiber
