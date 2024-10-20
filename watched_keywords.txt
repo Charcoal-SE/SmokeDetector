@@ -67712,3 +67712,4 @@
 1729421631	Vickel	pocketapk\.net
 1729422779	Jeff Schaller	travelpacks\.net
 1729428669	Cow	(?-i:czarbit)(?# t.me)
+1729428701	Cow	(?-i:crypto_flashing_channel)(?# t.me)
