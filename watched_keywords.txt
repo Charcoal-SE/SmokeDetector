@@ -67738,3 +67738,4 @@
 1729501342	VLAZ	telugurekhamarriagebureau\.in
 1729501372	VLAZ	telugurekhamarriagebureau(?!\.in)
 1729503134	VLAZ	furnishinghm\.net
+1729503239	VLAZ	MustSkills
