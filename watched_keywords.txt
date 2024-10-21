@@ -67734,3 +67734,4 @@
 1729488052	Cow	hirewpgeeks\.com
 1729489648	Cow	vinayvaletparking\.com
 1729489790	Cow	vinay[\W_]*+valet[\W_]*+parking(?!\.com(?<=vinayvaletparking\.com))
+1729491842	Cow	shootingzonehyderabad\.com
