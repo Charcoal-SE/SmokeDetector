@@ -67747,3 +67747,4 @@
 1729514346	VLAZ	geschehedyrecoverybitcoin\d*
 1729516856	VLAZ	pcsoftsfull\.org
 1729521339	Anerdw	portiva\.com
+1729517349	Anerdw	1wins\.com\.ph
