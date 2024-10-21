@@ -67733,3 +67733,4 @@
 1729484980	Dragonrage	learnifyeducation\.com
 1729488052	Cow	hirewpgeeks\.com
 1729489648	Cow	vinayvaletparking\.com
+1729489712	Cow	vinay[\W_]*+valet[\W_]*+parking
