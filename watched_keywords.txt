@@ -67735,3 +67735,4 @@
 1729489648	Cow	vinayvaletparking\.com
 1729489790	Cow	vinay[\W_]*+valet[\W_]*+parking(?!\.com(?<=vinayvaletparking\.com))
 1729491842	Cow	shootingzonehyderabad\.com
+1729501342	VLAZ	telugurekhamarriagebureau\.in
