@@ -67802,3 +67802,4 @@
 1729575660	Anerdw	sparkbyte\.ca
 1729614767	Nisse Engström	hokua-rf\.com
 1729615703	Cow	ehsaaswebportal\.pk
+1729616631	Anerdw	CYBERFINGER[\W_]*+INC
