@@ -67784,3 +67784,4 @@
 1729595396	Jeff Schaller	biendepso1\.vn
 1729597379	Vickel	(?-i:3ftsjn0)(?#bit.ly)
 1729597820	Jeff Schaller	(?-i:k7KLQRk1ykNr7D7G6)(?#forms.gle)
+1729598653	VLAZ	iim[\W_]*+skills(?!\.com(?<=iimskills\.com))
