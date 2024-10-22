@@ -67774,3 +67774,4 @@
 1729589606	VLAZ	airporthopper\.ie
 1729589659	VLAZ	airport[\W_]*+hopper(?!\.ie(?<=airporthopper\.ie))
 1729591569	VLAZ	laptopeveryone\.com
+1729591594	Vickel	ibrahimdamilola43(?:@gmail\.com)?
