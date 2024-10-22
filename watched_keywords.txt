@@ -67803,3 +67803,4 @@
 1729616631	Anerdw	CYBERFINGER[\W_]*+INC
 1729618197	Cow	JKS[\W_]*+Digital
 1729618493	Cow	Wedding[\W_]*+Venues[\W_]*+in[\W_]*+Delhi
+1729620574	Cow	elogic\.co
