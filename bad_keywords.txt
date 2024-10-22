@@ -3141,7 +3141,6 @@ saa[\W_]*+c03[\W_]*+dumps
 cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?|(?:[\W_]*+(?:cyber|tech|crypto|recovery|expert|\d++|[\da-f]{5,}+)s?)*)
 crypto[\W_]*+Venture
-money[\W_]*back[\W_]*from[\W_]*a[\W_]*wrong[\W_]*transaction
 spyrecovery36
 To[\W_]*+refund[\W_]*+money[\W_]*+from
 ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
