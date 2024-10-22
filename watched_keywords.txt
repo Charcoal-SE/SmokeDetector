@@ -67799,3 +67799,4 @@
 1729562153	Anerdw	pythonid\.com
 1729568564	Anerdw	choicemart\.co\.uk
 1729568598	Anerdw	CalculatorOnlineFree\.com
+1729575660	Anerdw	sparkbyte\.ca
