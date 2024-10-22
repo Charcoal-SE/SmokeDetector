@@ -67768,3 +67768,4 @@
 1729581280	VLAZ	itsiganony\.com
 1729586007	VLAZ	arcstainless\.in
 1729586058	VLAZ	(?-i:\+RWP8cbcoDgI5N2I0)(?#t.me)
+1729586093	VLAZ	(?-i:EKO7l9eJyQz8bRNORdDYHA)(?# facebook share)
