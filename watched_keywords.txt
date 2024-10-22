@@ -67805,3 +67805,4 @@
 1729618493	Cow	Wedding[\W_]*+Venues[\W_]*+in[\W_]*+Delhi
 1729620574	Cow	elogic\.co
 1729620757	Cow	codetocareer\.blogspot
+1729621261	General Grievance	python4physics\.in
