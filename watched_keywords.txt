@@ -67787,3 +67787,4 @@
 1729598653	VLAZ	iim[\W_]*+skills(?!\.com(?<=iimskills\.com))
 1729598771	VLAZ	zhkk8683
 1729600551	VLAZ	talentelgia\.com
+1729601435	Jeff Schaller	gouravdigitalclub\.com
