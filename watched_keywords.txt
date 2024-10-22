@@ -67797,3 +67797,4 @@
 1729611798	Vickel	hospitalbedrental\.ca
 1729612202	Vickel	hospital[\W_]*+bed[\W_]*+rental(?!\.ca(?<=hospitalbedrental\.ca))
 1729562153	Anerdw	pythonid\.com
+1729568564	Anerdw	choicemart\.co\.uk
