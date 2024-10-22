@@ -67773,3 +67773,4 @@
 1729589244	VLAZ	redbirddigital\.co
 1729589606	VLAZ	airporthopper\.ie
 1729589659	VLAZ	airport[\W_]*+hopper(?!\.ie(?<=airporthopper\.ie))
+1729591569	VLAZ	laptopeveryone\.com
