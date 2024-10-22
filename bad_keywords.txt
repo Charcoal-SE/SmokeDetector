@@ -3150,3 +3150,4 @@ richard[\W_]*+pryce[\W_]*+wizard
 prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
 (?-i:u6tj5rzc)(?#tinyurl.com)
 How[\W_]*+do[\W_]*+I[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+in[\W_]*+meesho
+money[\W_]*+back[\W_]*+from[\W_]*+a[\W_]*+wrong[\W_]*+transaction
