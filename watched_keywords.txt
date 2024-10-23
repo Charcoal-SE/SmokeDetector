@@ -67835,3 +67835,4 @@
 1729676851	VLAZ	synkli(?!\.com\.au)
 1729677437	VLAZ	stuffedinfo\.com
 1729678984	Vickel	(?-i:0eIS2CW2)(?#cutt.ly)
+1729679676	VLAZ	techventuresglobal\.com
