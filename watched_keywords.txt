@@ -67817,3 +67817,4 @@
 1729661027	Cow	erhastore\.co\.id
 1729661248	Cow	avoskinbeauty\.com
 1729661316	VLAZ	coffeeshopdekroon\.com
+1729661340	VLAZ	De[\W_]*+Kroon[\W_]*+Coffee[\W_]*+Shop
