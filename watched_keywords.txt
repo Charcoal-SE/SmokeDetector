@@ -67838,3 +67838,4 @@
 1729679676	VLAZ	techventuresglobal\.com
 1729679703	VLAZ	englishious\.in
 1729679781	VLAZ	englishious(?!\.in)
+1729679857	VLAZ	fabdivine\.com
