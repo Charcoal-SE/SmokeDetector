@@ -67831,3 +67831,4 @@
 1729673917	VLAZ	atntravel\.lt
 1729675596	Jeff Schaller	digitrends\.co
 1729676203	VLAZ	intui\.travel
+1729676815	VLAZ	synkli\.com\.au
