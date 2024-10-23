@@ -1184,3 +1184,4 @@ carelab[sz]
 (?-i:^Adhi Deva$)
 (?-i:^Mr\. Anup Sharma$)
 (?-i:^Work Looper$)
+(?-i:^Smart Contract Developer$)
