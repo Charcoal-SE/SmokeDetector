@@ -67829,3 +67829,4 @@
 1729670598	VLAZ	ag[\w_]*+(?:industries|organica)
 1729670645	VLAZ	cosmeticsmanufacturerindia\.com
 1729673917	VLAZ	atntravel\.lt
+1729675596	Jeff Schaller	digitrends\.co
