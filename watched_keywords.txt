@@ -67813,3 +67813,4 @@
 1729643648	Anerdw	dokterdini\.com
 1729643674	Anerdw	imajiweb\.com
 1729642116	Anerdw	areacalculator\.online
+1729645431	Fastnlight	(?-i:guvenliadres)(?#bit.ly)
