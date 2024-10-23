@@ -1187,3 +1187,4 @@ carelab[sz]
 (?-i:^Smart Contract Developer$)
 (?-i:^InRain Construction Pvt Ltd$)
 (?-i:^IROAD India$)
+(?-i:^manali packages$)
