@@ -3152,3 +3152,4 @@ prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
 How[\W_]*+do[\W_]*+I[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+in[\W_]*+meesho
 money[\W_]*+back[\W_]*+from[\W_]*+a[\W_]*+wrong[\W_]*+transaction
 crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
+Monopoly[\W_]*+GO[\W_]*+Free[\W_]*+Dice
