@@ -67810,3 +67810,4 @@
 1729636136	Vickel	bitexnests\.com
 1729636220	Vickel	bitexnests(?!\.com)
 1729643599	Anerdw	situsdokter\.com
+1729643648	Anerdw	dokterdini\.com
