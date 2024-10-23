@@ -191,6 +191,9 @@ items:
   - aiden.ns.cloudflare.com.
   - piper.ns.cloudflare.com.
 - ns:
+  - aila.ns.cloudflare.com.
+  - kyree.ns.cloudflare.com.
+- ns:
   - ainsley.ns.cloudflare.com.
   - andronicus.ns.cloudflare.com.
 - ns:
