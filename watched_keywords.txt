@@ -67851,3 +67851,4 @@
 1729697399	Jeff Schaller	altapestcontrol\.com
 1729698873	Fastnlight	echoapi(?!\.com)
 1729708298	Jeff Schaller	smarterlearning\.me
+1729720114	Vickel	dpboss\.page
