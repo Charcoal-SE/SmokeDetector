@@ -1868,6 +1868,9 @@ items:
   - may.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
+  - drew.ns.cloudflare.com.
+- ns:
+  - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
