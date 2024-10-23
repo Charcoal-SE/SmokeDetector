@@ -67841,3 +67841,4 @@
 1729679857	VLAZ	fabdivine\.com
 1729680293	Vickel	Cafe[\W_]*+Desire
 1729680492	Vickel	immigrationbazaar\.in
+1729683770	Vickel	hijjamaabudhabi\.com
