@@ -67825,3 +67825,4 @@
 1729669521	tripleee	ofofo\.io
 1729669587	VLAZ	brainiate\.show
 1729670523	tripleee	InRain[\W_]*+construction(?!\.com(?<=inrainconstruction\.com))(?<!(?-i:^InRain Construction(?= Pvt Ltd$)))
+1729670573	VLAZ	pureoilsindia\.com
