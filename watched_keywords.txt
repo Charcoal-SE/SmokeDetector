@@ -67827,3 +67827,4 @@
 1729670523	tripleee	InRain[\W_]*+construction(?!\.com(?<=inrainconstruction\.com))(?<!(?-i:^InRain Construction(?= Pvt Ltd$)))
 1729670573	VLAZ	pureoilsindia\.com
 1729670598	VLAZ	ag[\w_]*+(?:industries|organica)
+1729670645	VLAZ	cosmeticsmanufacturerindia\.com
