@@ -67820,3 +67820,4 @@
 1729661340	VLAZ	De[\W_]*+Kroon[\W_]*+Coffee[\W_]*+Shop
 1729664930	VLAZ	synaworldwebsiteuk\.com
 1729664971	VLAZ	syna[\W_]*+world
+1729665085	VLAZ	vaishalimade\.in
