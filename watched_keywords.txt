@@ -67816,3 +67816,4 @@
 1729645431	Fastnlight	(?-i:guvenliadres)(?#bit.ly)
 1729661027	Cow	erhastore\.co\.id
 1729661248	Cow	avoskinbeauty\.com
+1729661316	VLAZ	coffeeshopdekroon\.com
