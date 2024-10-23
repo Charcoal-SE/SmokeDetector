@@ -67821,3 +67821,4 @@
 1729664930	VLAZ	synaworldwebsiteuk\.com
 1729664971	VLAZ	syna[\W_]*+world
 1729665085	VLAZ	vaishalimade\.in
+1729667521	VLAZ	24x7servermanagement\.com
