@@ -67830,3 +67830,4 @@
 1729670645	VLAZ	cosmeticsmanufacturerindia\.com
 1729673917	VLAZ	atntravel\.lt
 1729675596	Jeff Schaller	digitrends\.co
+1729676141	VLAZ	en\.intui\.travel
