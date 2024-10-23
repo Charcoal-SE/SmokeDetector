@@ -67809,3 +67809,4 @@
 1729624534	Jeff Schaller	engineerstutorial\.com
 1729636136	Vickel	bitexnests\.com
 1729636220	Vickel	bitexnests(?!\.com)
+1729643648	Anerdw	dokterdini\.com
