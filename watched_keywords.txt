@@ -67828,3 +67828,4 @@
 1729670573	VLAZ	pureoilsindia\.com
 1729670598	VLAZ	ag[\w_]*+(?:industries|organica)
 1729670645	VLAZ	cosmeticsmanufacturerindia\.com
+1729673917	VLAZ	atntravel\.lt
