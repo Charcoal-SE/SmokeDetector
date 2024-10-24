@@ -67874,3 +67874,4 @@
 1729774443	VLAZ	anasol(?:[\W_]*+consultan[\W_]*+cyservices(?!\.com(?<=anasolconsultancyservices\.com)))?
 1729775287	tripleee	(?-i:^Steve Alan$)
 1729775444	VLAZ	klusterfirst\.com
+1729775468	VLAZ	klusterfirst(?!\.com)
