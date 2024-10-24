@@ -67868,3 +67868,4 @@
 1729766755	VLAZ	tom[\W_]*+s[\W_]*+fashion(?!\.com(?<=tomsfashion\.com))
 1729768000	VLAZ	fskindia\.com
 1729771764	VLAZ	proseo\.no
+1729773183	VLAZ	landbuygoa\.com
