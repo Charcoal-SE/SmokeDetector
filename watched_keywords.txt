@@ -67876,3 +67876,4 @@
 1729775444	VLAZ	klusterfirst\.com
 1729775468	VLAZ	klusterfirst(?!\.com)
 1729779510	tripleee	(?-i:^Classi Fied$)
+1729779706	tripleee	(?-i:^James101$)
