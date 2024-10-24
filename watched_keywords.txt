@@ -67878,3 +67878,4 @@
 1729779510	tripleee	(?-i:^Classi Fied$)
 1729779706	tripleee	(?-i:^James101$)
 1729780875	VLAZ	gestunbetmbahgotel\.com
+1729781985	Vickel	entrata\.com
