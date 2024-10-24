@@ -67865,3 +67865,4 @@
 1729765689	Jeff Schaller	aaveg\.com
 1729766184	VLAZ	psmarketresearch\.com
 1729766207	Jeff Schaller	nabses\.com\.vn
+1729766755	VLAZ	tom[\W_]*+s[\W_]*+fashion(?!\.com(?<=tomsfashion\.com))
