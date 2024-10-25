@@ -67905,3 +67905,4 @@
 1729852425	VLAZ	callconnectindia\.com
 1729852459	VLAZ	callconnectindia(?!\.com)
 1729852948	VLAZ	naturesisland\.in
+1729853742	VLAZ	appzoro(?!\.com(?<=appzoro\.com))(?:[\W_]*+technologies)?
