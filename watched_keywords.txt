@@ -67906,3 +67906,4 @@
 1729852459	VLAZ	callconnectindia(?!\.com)
 1729852948	VLAZ	naturesisland\.in
 1729853742	VLAZ	appzoro(?!\.com(?<=appzoro\.com))(?:[\W_]*+technologies)?
+1729854096	Jeff Schaller	(?-i:0eOKZbDj)(?#cutt.ly)
