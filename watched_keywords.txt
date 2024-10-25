@@ -67899,3 +67899,4 @@
 1729847423	tripleee	pengirimanalatberat\.com
 1729847456	tripleee	jasapengirimanbarang\.com
 1729847490	tripleee	pengirimanlewatkapal\.com
+1729847517	tripleee	ekspedisidisurabaya\.com
