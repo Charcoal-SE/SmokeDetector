@@ -67895,3 +67895,4 @@
 1729804148	Anerdw	worldbusinessesforsale\.com
 1729807400	Vickel	world[\W_]*+businesses[\W_]*+for[\W_]*+sale(?!\.com(?<=worldbusinessesforsale\.com))
 1729833696	Dragonrage	gemlightmachete\.com
+1729847217	tripleee	(?-i:^Candice chen$)
