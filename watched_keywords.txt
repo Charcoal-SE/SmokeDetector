@@ -67915,3 +67915,4 @@
 1729866726	Jeff Schaller	boxitpackages\.com
 1729887205	Vickel	vizjer\.site
 1729890920	Jeff Schaller	(?-i:6k2Y9)(?#shorturl)
+1729893211	Jeff Schaller	19216811(?!(?:\.(?:app|bid|cam|lol|mx|tel)|$))
