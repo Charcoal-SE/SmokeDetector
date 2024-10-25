@@ -67904,3 +67904,4 @@
 1729851052	VLAZ	samdeveloper77
 1729852425	VLAZ	callconnectindia\.com
 1729852459	VLAZ	callconnectindia(?!\.com)
+1729852948	VLAZ	naturesisland\.in
