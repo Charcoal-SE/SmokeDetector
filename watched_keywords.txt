@@ -67922,3 +67922,4 @@
 1729925493	Cow	call[\W_]*+our[\W_]*+customer[\W_]*+support
 1729926528	Cow	cancellation[\W_]*+policy[\W_]*+for
 1729927948	Cow	thietbisolaco\.com
+1729935247	Cow	(?-i:pighmn-fg)(?# tinyurl.com)
