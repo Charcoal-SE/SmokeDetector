@@ -587,33 +587,40 @@ class FindSpam:
         global bad_keywords_nwb
 
         blacklists.load_blacklists()
-        cls.rule_bad_keywords.regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.bad_keywords)
-        try:
-            del cls.rule_bad_keywords.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_bad_keywords.sanity_check()
-        cls.rule_watched_keywords.regex = \
-            get_bookended_keyword_regex_text_from_entries(GlobalVars.watched_keywords.keys())
-        try:
-            del cls.rule_watched_keywords.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_watched_keywords.sanity_check()
-        cls.rule_blacklisted_websites.regex = \
+        new_bad_keywords_regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.bad_keywords)
+        if new_bad_keywords_regex != cls.rule_bad_keywords.regex:
+            cls.rule_bad_keywords.regex = new_bad_keywords_regex
+            try:
+                del cls.rule_bad_keywords.compiled_regex
+            except AttributeError:
+                pass
+            cls.rule_bad_keywords.sanity_check()
+        new_watched_keywords_regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.watched_keywords.keys())
+        if new_watched_keywords_regex != cls.rule_watched_keywords.regex:
+            cls.rule_watched_keywords.regex = new_watched_keywords_regex
+            try:
+                del cls.rule_watched_keywords.compiled_regex
+            except AttributeError:
+                pass
+            cls.rule_watched_keywords.sanity_check()
+        new_blacklisted_websites_regex = \
             get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_websites)
-        try:
-            del cls.rule_blacklisted_websites.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_blacklisted_websites.sanity_check()
-        cls.rule_blacklisted_usernames.regex = \
+        if new_blacklisted_websites_regex != cls.rule_blacklisted_websites.regex:
+            cls.rule_blacklisted_websites.regex = new_blacklisted_websites_regex
+            try:
+                del cls.rule_blacklisted_websites.compiled_regex
+            except AttributeError:
+                pass
+            cls.rule_blacklisted_websites.sanity_check()
+        new_blacklisted_usernames_regex = \
             get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_usernames)
-        try:
-            del cls.rule_blacklisted_usernames.compiled_regex
-        except AttributeError:
-            pass
-        cls.rule_blacklisted_usernames.sanity_check()
+        if new_blacklisted_usernames_regex != cls.rule_blacklisted_usernames.regex:
+            cls.rule_blacklisted_usernames.regex = new_blacklisted_usernames_regex
+            try:
+                del cls.rule_blacklisted_usernames.compiled_regex
+            except AttributeError:
+                pass
+            cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers_full, GlobalVars.blacklisted_numbers, \
             GlobalVars.blacklisted_numbers_normalized = \
             phone_numbers.process_numlist(GlobalVars.blacklisted_numbers_raw)
