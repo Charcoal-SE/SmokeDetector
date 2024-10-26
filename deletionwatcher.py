@@ -167,19 +167,24 @@ class DeletionWatcher:
             uri = get_se_api_url_for_route("posts/{}".format(ids))
             params = get_se_api_default_params_questions_answers_posts_add_site(site)
             res = requests.get(uri, params=params, timeout=GlobalVars.default_requests_timeout)
-            json = res.json()
+            try:
+                response_data = res.json()
+            except json.decoder.JSONDecodeError:
+                log('warning',
+                    'DeletionWatcher API request received invalid JSON in response (code {})'.format(res.status_code))
+                log('warning', res.text)
+                continue
 
-            if 'backoff' in json:
-                DeletionWatcher.next_request_time = time.time() + json['backoff']
+            if 'backoff' in response_data:
+                DeletionWatcher.next_request_time = time.time() + response_data['backoff']
 
-            if "items" not in json:
+            if "items" not in response_data:
                 log('warning',
                     'DeletionWatcher API request received no items in response (code {})'.format(res.status_code))
                 log('warning', res.text)
-                # This really should do a better job of recovery, as we could retry and/or go to the next site.
-                return
+                continue
 
-            for post in json['items']:
+            for post in response_data['items']:
                 compare_date = post["last_edit_date"] if "last_edit_date" in post else post["creation_date"]
                 if time.time() - compare_date < 7200:
                     yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
