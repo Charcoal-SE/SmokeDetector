@@ -439,6 +439,7 @@ meta.stackexchange.com:
   89:  # Tavern on the Meta
     commands: true
     watcher: true
+
     msg_types:
       - all-sites
       - metatavern
@@ -457,6 +458,7 @@ meta.stackexchange.com:
       - no-no whitespace in body
       - no-no whitespace in answer
       - offensive-mask
+  
     privileges:
       inherit:
         site: stackexchange.com
