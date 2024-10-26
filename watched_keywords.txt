@@ -67918,3 +67918,4 @@
 1729894913	Vickel	(?-i:rn1kra)(?#bun.is)
 1729916099	Dragonrage	jharaphula\.com
 1729924292	Cow	meemacademia\.com
+1729925126	Cow	expedia[\W_]*+provides
