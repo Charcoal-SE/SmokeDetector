@@ -67930,3 +67930,4 @@
 1729937870	Cow	free.+?gift[\W_]*+cards?(?:[\W_]*+codes?)?
 1729940119	Jeff Schaller	mrfinancepk\.com
 1729940162	Jeff Schaller	totalfindz\.com
+1729941165	VLAZ	grapecounty\.in
