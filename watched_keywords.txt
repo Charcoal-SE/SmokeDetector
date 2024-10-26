@@ -67923,3 +67923,4 @@
 1729926528	Cow	cancellation[\W_]*+policy[\W_]*+for
 1729927948	Cow	thietbisolaco\.com
 1729935247	Cow	(?-i:pighmn-fg)(?# tinyurl.com)
+1729935963	Cow	digestsolicitorpolar\.com
