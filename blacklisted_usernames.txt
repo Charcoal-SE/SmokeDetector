@@ -1189,3 +1189,4 @@ carelab[sz]
 (?-i:^IROAD India$)
 (?-i:^manali packages$)
 (?-i:^The World 777 Admin$)
+(?-i:^TechEnthusiast$)
