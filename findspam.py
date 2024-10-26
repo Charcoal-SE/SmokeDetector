@@ -26,7 +26,7 @@ import chatcommunicate
 
 from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements, \
     get_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, KEYWORD_BOOKENDING_START, \
-    get_non_bookended_keyword_regex_text_from_entries
+    get_non_bookended_keyword_regex_text_from_entries, chunk_list
 import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
@@ -582,45 +582,46 @@ class FindSpam:
         ('warning', '**Very High** ', 30),  # > 30 s: Log a "warning" and output to chat as bold "Very High"
     ]
 
+    @staticmethod
+    def _update_a_blacklist_dual_rule(rule_list, regex_text_generator, entries):
+        entries = list(entries)
+        entries_length = len(entries)
+        if entries_length > 100:
+            # Get the length to the 100 below the current length
+            chunk_length = int(str(entries_length)[:-2] + '00')
+            entries_lists = chunk_list(entries, chunk_length)
+        else:
+            # With <= 100 entries, Use an entries_lists with all the entries first, then a regex that can never match
+            entries_lists = [entries]
+        if len(entries_lists) == 1:
+            entries_lists.append = [r'q(?<!q)']
+        for index in range(2):
+            new_regex_text = regex_text_generator(entries_lists[index])
+            if new_regex_text != rule_list[index].regex:
+                rule_list[index].regex = new_regex_text
+                try:
+                    del rule_list[index].compiled_regex
+                except AttributeError:
+                    pass
+                rule_list[index].sanity_check()
+
     @classmethod
     def reload_blacklists(cls):
         global bad_keywords_nwb
 
         blacklists.load_blacklists()
-        new_bad_keywords_regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.bad_keywords)
-        if new_bad_keywords_regex != cls.rule_bad_keywords.regex:
-            cls.rule_bad_keywords.regex = new_bad_keywords_regex
-            try:
-                del cls.rule_bad_keywords.compiled_regex
-            except AttributeError:
-                pass
-            cls.rule_bad_keywords.sanity_check()
-        new_watched_keywords_regex = get_bookended_keyword_regex_text_from_entries(GlobalVars.watched_keywords.keys())
-        if new_watched_keywords_regex != cls.rule_watched_keywords.regex:
-            cls.rule_watched_keywords.regex = new_watched_keywords_regex
-            try:
-                del cls.rule_watched_keywords.compiled_regex
-            except AttributeError:
-                pass
-            cls.rule_watched_keywords.sanity_check()
-        new_blacklisted_websites_regex = \
-            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_websites)
-        if new_blacklisted_websites_regex != cls.rule_blacklisted_websites.regex:
-            cls.rule_blacklisted_websites.regex = new_blacklisted_websites_regex
-            try:
-                del cls.rule_blacklisted_websites.compiled_regex
-            except AttributeError:
-                pass
-            cls.rule_blacklisted_websites.sanity_check()
-        new_blacklisted_usernames_regex = \
-            get_non_bookended_keyword_regex_text_from_entries(GlobalVars.blacklisted_usernames)
-        if new_blacklisted_usernames_regex != cls.rule_blacklisted_usernames.regex:
-            cls.rule_blacklisted_usernames.regex = new_blacklisted_usernames_regex
-            try:
-                del cls.rule_blacklisted_usernames.compiled_regex
-            except AttributeError:
-                pass
-            cls.rule_blacklisted_usernames.sanity_check()
+        cls._update_a_blacklist_dual_rule(cls.rule_bad_keywords,
+                                          get_bookended_keyword_regex_text_from_entries,
+                                          GlobalVars.bad_keywords)
+        cls._update_a_blacklist_dual_rule(cls.rule_watched_keywords,
+                                          get_bookended_keyword_regex_text_from_entries,
+                                          GlobalVars.watched_keywords.keys())
+        cls._update_a_blacklist_dual_rule(cls.rule_blacklisted_websites,
+                                          get_non_bookended_keyword_regex_text_from_entries,
+                                          GlobalVars.blacklisted_websites)
+        cls._update_a_blacklist_dual_rule(cls.rule_blacklisted_usernames,
+                                          get_non_bookended_keyword_regex_text_from_entries,
+                                          GlobalVars.blacklisted_usernames)
         GlobalVars.blacklisted_numbers_full, GlobalVars.blacklisted_numbers, \
             GlobalVars.blacklisted_numbers_normalized = \
             phone_numbers.process_numlist(GlobalVars.blacklisted_numbers_raw)
@@ -767,6 +768,14 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
             return decorator(func)
         else:  # real decorator mode
             return decorator
+
+
+def create_multiple_rules(*args, rule_quantity=1, rule_id=None, **kwargs):
+    rules = []
+    for index in range(rule_quantity):
+        index_rule_id = rule_id + ' index:' + str(index)
+        rules.append(create_rule(*args, rule_id=index_rule_id, **kwargs))
+    return rules
 
 
 def is_whitelisted_website(url):
@@ -2407,29 +2416,33 @@ city_list = [
 
 
 # General blacklists, regex will be filled at the reload_blacklist() call at the bottom
-FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
-                                         username=True, body_summary=True,
-                                         max_rep=32, max_score=1, skip_creation_sanity_check=True,
-                                         rule_id="main blacklisted keywords")
-FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
-                                             username=True, body_summary=True,
-                                             max_rep=32, max_score=1, skip_creation_sanity_check=True,
-                                             rule_id="main watchlist",
-                                             elapsed_time_reporting={
-                                                 'draw_attention_min': 20,
-                                                 'levels': [
-                                                     ('debug', '', 10),
-                                                     ('info', 'High ', 20),
-                                                     ('warning', '**Very High** ', 45),
-                                                 ],
-                                             })
-FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
-                                                 max_rep=52, max_score=5, skip_creation_sanity_check=True,
-                                                 username=True, rule_id="main blacklisted websites")
-FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
-                                                  title=False, body=False, username=True,
-                                                  skip_creation_sanity_check=True,
-                                                  rule_id="main blacklisted usernames")
+FindSpam.rule_bad_keywords = create_multiple_rules("bad keyword in {}", regex="",
+                                                   username=True, body_summary=True,
+                                                   max_rep=32, max_score=1, skip_creation_sanity_check=True,
+                                                   rule_id="main blacklisted keywords",
+                                                   rule_quantity=2)
+FindSpam.rule_watched_keywords = create_multiple_rules("potentially bad keyword in {}", regex="",
+                                                       username=True, body_summary=True,
+                                                       max_rep=32, max_score=1, skip_creation_sanity_check=True,
+                                                       rule_id="main watchlist",
+                                                       elapsed_time_reporting={
+                                                           'draw_attention_min': 20,
+                                                           'levels': [
+                                                               ('debug', '', 10),
+                                                               ('info', 'High ', 20),
+                                                               ('warning', '**Very High** ', 45),
+                                                           ],
+                                                       },
+                                                       rule_quantity=2)
+FindSpam.rule_blacklisted_websites = create_multiple_rules("blacklisted website in {}", regex="", body_summary=True,
+                                                           max_rep=52, max_score=5, skip_creation_sanity_check=True,
+                                                           username=True, rule_id="main blacklisted websites",
+                                                           rule_quantity=2)
+FindSpam.rule_blacklisted_usernames = create_multiple_rules("blacklisted username", regex="",
+                                                            title=False, body=False, username=True,
+                                                            skip_creation_sanity_check=True,
+                                                            rule_id="main blacklisted usernames",
+                                                            rule_quantity=2)
 
 # Hardcoded bad keywords without a word boundary (from bad_keywords_nwb list above).
 create_rule("bad keyword in {}", regex=r"(?is){}".format("|".join(bad_keywords_nwb)),
