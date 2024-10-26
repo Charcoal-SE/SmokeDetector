@@ -177,6 +177,7 @@ class GlobalVars:
     se_api_url_base = "https://api.stackexchange.com/2.4/"
     se_api_default_params = {
         'key': 'IAkbitmze4B8KpacUfLqkw((',
+        'pagesize': '100',
     }
     se_api_default_params_questions_answers_posts = se_api_default_params.copy()
     se_api_default_params_questions_answers_posts.update({

@@ -13,7 +13,7 @@ from globalvars import GlobalVars
 import metasmoke
 import datahandling
 from helpers import (log, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route,
-                     recover_websocket)
+                     recover_websocket, chunk_list)
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
 
@@ -163,26 +163,33 @@ class DeletionWatcher:
             time.sleep(DeletionWatcher.next_request_time - time.time())
 
         for site, posts in saved.items():
-            ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
-            uri = get_se_api_url_for_route("posts/{}".format(ids))
-            params = get_se_api_default_params_questions_answers_posts_add_site(site)
-            res = requests.get(uri, params=params, timeout=GlobalVars.default_requests_timeout)
-            json = res.json()
+            not_ignored_posts = [post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))]
+            for chunk in chunk_list(not_ignored_posts, 100):
+                ids = ";".join(chunk)
+                uri = get_se_api_url_for_route("posts/{}".format(ids))
+                params = get_se_api_default_params_questions_answers_posts_add_site(site)
+                res = requests.get(uri, params=params, timeout=GlobalVars.default_requests_timeout)
+                try:
+                    response_data = res.json()
+                except json.decoder.JSONDecodeError:
+                    log('warning',
+                        'DeletionWatcher SE API request: invalid JSON in response (code {})'.format(res.status_code))
+                    log('warning', res.text)
+                    continue
 
-            if 'backoff' in json:
-                DeletionWatcher.next_request_time = time.time() + json['backoff']
+                if 'backoff' in response_data:
+                    DeletionWatcher.next_request_time = time.time() + response_data['backoff']
 
-            if "items" not in json:
-                log('warning',
-                    'DeletionWatcher API request received no items in response (code {})'.format(res.status_code))
-                log('warning', res.text)
-                # This really should do a better job of recovery, as we could retry and/or go to the next site.
-                return
+                if "items" not in response_data:
+                    log('warning',
+                        'DeletionWatcher SE API request: no items in response (code {})'.format(res.status_code))
+                    log('warning', res.text)
+                    continue
 
-            for post in json['items']:
-                compare_date = post["last_edit_date"] if "last_edit_date" in post else post["creation_date"]
-                if time.time() - compare_date < 7200:
-                    yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
+                for post in response_data['items']:
+                    compare_date = post["last_edit_date"] if "last_edit_date" in post else post["creation_date"]
+                    if time.time() - compare_date < 7200:
+                        yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
 
     def _unsubscribe(self, action):
         if self.socket:
