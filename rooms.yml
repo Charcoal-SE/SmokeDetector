@@ -436,6 +436,66 @@ stackexchange.com:
 
 
 meta.stackexchange.com:
+  89:  # Tavern on the Meta
+    commands: true
+    watcher: true
+    msg_types:
+      - all-sites
+      - metatavern
+      - delay
+      - site-no-stackoverflow.com
+      - no-all-caps body
+      - no-all-caps answer
+      - no-repeating characters in body
+      - no-repeating characters in title
+      - no-repeating characters in answer
+      - no-few unique characters in body
+      - no-few unique characters in answer
+      - no-title has only one unique char
+      - no-phone number detected in title
+      - no-offensive body detected
+      - no-no whitespace in body
+      - no-no whitespace in answer
+      - offensive-mask
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+      additional:
+        - 212518   # Alexis King
+        - 1399708  # JNat
+        - 2052845  # Qantas 94 Heavy
+        - 531689   # J. Musser
+        - 3232583  # Ixrec
+        - 6551576  # SamsungNote7Plus
+        - 201110   # Shadow Wizard
+        - 1872335  # TGMCians
+        - 3310555  # misterManSam
+        - 6070438  # ASCIIThenANSI
+        - 4140743  # Pandya
+        - 3648514  # CRABOLO
+        - 1968644  # durron597
+        - 3572172  # Infinite Recursion
+        - 5423050  # kos
+        - 1960597  # Simon Klaver
+        - 3934463  # Unicode
+        - 2775391  # DroidDev
+        - 1279912  # Mooseman
+        - 2662014  # vaultah
+        - 2348349  # Ed Cottrell
+        - 2497975  # Sourav Ghosh
+        - 9739821  # DonQuiKong
+        - 974068   # rekire
+        - 4451090  # Unihedron
+        - 4101518  # AstroCB
+        - 466356   # Madara Uchiha
+        - 305991   # Jason C
+        - 2539078  # cybermonkey
+        - 3717584  # josliber
+        - 2591787  # Sam
+        - 15396644 # starball
+        - 8163816  # forest
+
   1181:  # The Fire Department
     commands: true
 
