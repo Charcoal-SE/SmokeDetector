@@ -67925,3 +67925,4 @@
 1729935247	Cow	(?-i:pighmn-fg)(?# tinyurl.com)
 1729935963	Cow	digestsolicitorpolar\.com
 1729936750	Cow	courseworkhelp\.uk
+1729937058	Cow	courseworkhelp(?!\.uk(?<=courseworkhelp\.uk))
