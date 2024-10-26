@@ -3158,3 +3158,4 @@ finger[\W_]*+loan[\W_]*+app
 Expedia[\W_]*+offers[\W_]*+refunds
 cancel[\W_]*+your[\W_]*+Jio
 american[\W_]*+airlines[\W_]*+refund
+free.+?gift[\W_]*+card[\W_]*+codes
