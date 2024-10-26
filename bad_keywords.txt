@@ -3155,3 +3155,4 @@ crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
 Monopoly[\W_]*+GO[\W_]*+Free[\W_]*+Dice
 سايتوتك
 finger[\W_]*+loan[\W_]*+app
+Expedia[\W_]*+offers[\W_]*+refunds
