@@ -67929,3 +67929,4 @@
 1729937159	Cow	(?-i:fdthnzdrgn)(?# tinyurl.com)
 1729937870	Cow	free.+?gift[\W_]*+cards?(?:[\W_]*+codes?)?
 1729940119	Jeff Schaller	mrfinancepk\.com
+1729940162	Jeff Schaller	totalfindz\.com
