@@ -67945,3 +67945,4 @@
 1730001367	Jeff Schaller	truthtablegen\.com
 1730008136	Dragonrage	lavie24h\.com
 1730014539	VLAZ	mochuongsac\.com
+1730018982	Cow	firexport\.dev
