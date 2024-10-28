@@ -30511,7 +30511,6 @@
 1627441074	cigien	timbermills\.co\.uk
 1627443200	cigien	provipbuy\.com
 1627449547	Makyen	believersias\.com
-1627449624	Makyen	the[\W_]*+student[\W_]*+helpline(?!\.com(?<=thestudenthelpline\.com))
 1627450026	cigien	apkfun\.com
 1627450076	cigien	getclat\.com
 1627455200	tripleee	(?-i:^Maria Costa$)
