@@ -67969,3 +67969,4 @@
 1730110524	tripleee	(?-i:^Syed Adil Ali$)
 1730110599	tripleee	saraswatiglobalschool\.com
 1730110911	tripleee	travel[\W_]*+turtle(?!\.world(?<=travelturtle\.world))
+1730110966	Jeff Schaller	astqatar\.com
