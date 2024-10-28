@@ -67992,3 +67992,4 @@
 1730138460	Cow	convert-db\.com
 1730139241	VLAZ	Hypestkey(?:-Software)?(?!\.com(?<=hypestkey\.com))
 1730140170	Anerdw	qrgenerate\.quest
+1730141364	Spevacus	nexoracle\.com
