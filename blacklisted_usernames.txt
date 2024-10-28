@@ -1190,3 +1190,4 @@ carelab[sz]
 (?-i:^manali packages$)
 (?-i:^The World 777 Admin$)
 (?-i:^TechEnthusiast$)
+(?-i:^Garvthakur Office$)
