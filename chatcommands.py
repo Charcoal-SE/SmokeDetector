@@ -2075,7 +2075,7 @@ def invite(msg, room_id, roles):
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=False, give_name=True,
-         aliases=["scan", "scan-force", "report-force", "report-direct"])
+         aliases=["scan", "scan-force", "report-force", "report-direct", "scan-time", "scan-force-time"])
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
@@ -2094,6 +2094,10 @@ def report(msg, args, alias_used="report"):
                            "one go.".format(alias_used, wait))
 
     alias_used = alias_used or "report"
+
+    is_timed = "-time" in alias_used
+    alias_used = alias_used.replace("-time", "")
+    start_time = time.time()
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
@@ -2122,6 +2126,8 @@ def report(msg, args, alias_used="report"):
     if output:
         if 1 < len(urls) > output.count("\n") + 1:
             add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
+        if is_timed:
+            output += "\nScanning took {} seconds.".format(round(time.time() - start_time, 3))
         return output
 
 
