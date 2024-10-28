@@ -5635,7 +5635,9 @@ items:
 - comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18
   ns: splashserver.org.
 - ns: aptcom.info.
-- ns: resellerone.host.
+- comment: 2024-10-28 NXDOMAIN
+  disable: true
+  ns: resellerone.host.
 - ns: pwh-r1.com.
 - ns: gitsys.co.in.
 - ns: hostatom.com.
