@@ -67980,3 +67980,4 @@
 1730120957	VLAZ	namiml\.com
 1730121766	tripleee	vijayrami(?# github.com)
 1730122207	Jeff Schaller	charmmagento\.blogspot
+1730123549	Jeff Schaller	Lulubox[\W_]*+Pro[\W_]*+APK
