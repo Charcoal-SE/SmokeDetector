@@ -67986,3 +67986,4 @@
 1730131612	Fastnlight	thaomoctamphuong\.com
 1730132425	Fastnlight	digitalsurjo\.com
 1730133205	Fastnlight	imrankhadim\.com
+1730134502	Cow	qrplanet\.com
