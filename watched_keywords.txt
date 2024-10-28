@@ -67978,4 +67978,3 @@
 1730118656	VLAZ	atomiq\.us
 1730119880	VLAZ	artify[\W_]*+360(\.com(?<=artify360\.com))
 1730120957	VLAZ	namiml\.com
-1730121678	tripleee	artify360(?!\.com)
