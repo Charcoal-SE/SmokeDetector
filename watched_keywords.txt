@@ -67958,4 +67958,3 @@
 1730085530	Anerdw	retrobowl-game\.io
 1730085767	Anerdw	fabulessweb\.com\.au
 1730092127	Cow	gravityresearchfoundation\.org
-1730092156	Cow	gsjournal\.net
