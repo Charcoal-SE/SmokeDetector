@@ -67959,3 +67959,4 @@
 1730085767	Anerdw	fabulessweb\.com\.au
 1730092127	Cow	gravityresearchfoundation\.org
 1730094370	VLAZ	lakheraglobalservices\.com
+1730094391	VLAZ	lakhera[\W_]*+global[\W_]*+services(?!\.com(?<=lakheraglobalservices\.com))
