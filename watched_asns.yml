@@ -109,6 +109,7 @@ items:
   comment: 61/239 over 2 years; no 1-weight reports
   disable: true
 - asn: '46844'
+- asn: '46874'
 - asn: '47583'
 - asn: '48254'
 - asn: '49335'
