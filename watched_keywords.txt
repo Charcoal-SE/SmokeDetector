@@ -67963,3 +67963,4 @@
 1730097121	Cow	talview\.com
 1730100318	VLAZ	batangquiapo\.pro
 1730101319	tripleee	gofundme[\W_]*+campaign
+1730102224	Cow	ramasat\.com
