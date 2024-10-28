@@ -67990,3 +67990,4 @@
 1730135477	Fastnlight	thespotifypremiumapks\.com
 1730136776	Cow	cgic\.org\.in
 1730138460	Cow	convert-db\.com
+1730139241	VLAZ	Hypestkey(?:-Software)?(?!\.com(?<=hypestkey\.com))
