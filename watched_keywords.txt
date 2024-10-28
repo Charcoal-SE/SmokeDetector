@@ -67961,3 +67961,4 @@
 1730094370	VLAZ	lakheraglobalservices\.com
 1730094391	VLAZ	lakhera[\W_]*+global[\W_]*+services(?!\.com(?<=lakheraglobalservices\.com))
 1730097121	Cow	talview\.com
+1730100318	VLAZ	batangquiapo\.pro
