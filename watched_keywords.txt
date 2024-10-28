@@ -67975,3 +67975,4 @@
 1730112219	tripleee	top[\W_]*+follows?[\W_]*+apk
 1730117125	VLAZ	the[\W_]*+student[\W_]*+helpline(?!\.com(?<=thestudenthelpline\.com)|\.co\.in(?<=thestudenthelpline\.co\.in))
 1730117146	VLAZ	thestudenthelpline\.co\.in
+1730118656	VLAZ	atomiq\.us
