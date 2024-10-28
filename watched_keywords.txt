@@ -67960,3 +67960,4 @@
 1730092127	Cow	gravityresearchfoundation\.org
 1730094370	VLAZ	lakheraglobalservices\.com
 1730094391	VLAZ	lakhera[\W_]*+global[\W_]*+services(?!\.com(?<=lakheraglobalservices\.com))
+1730097121	Cow	talview\.com
