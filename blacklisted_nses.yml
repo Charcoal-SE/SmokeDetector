@@ -301,6 +301,9 @@ items:
   - dina.ns.cloudflare.com.
   - mario.ns.cloudflare.com.
 - ns:
+  - dion.ns.cloudflare.com.
+  - dora.ns.cloudflare.com.
+- ns:
   - donald.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
 - ns:
