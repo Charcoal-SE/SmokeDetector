@@ -1969,6 +1969,9 @@ items:
   - edna.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
+  - nova.ns.cloudflare.com.
+- ns:
+  - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
