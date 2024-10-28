@@ -2903,6 +2903,9 @@ items:
   - lloyd.ns.cloudflare.com.
 - ns:
   - jessica.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
+  - jessica.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
