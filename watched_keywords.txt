@@ -67973,3 +67973,4 @@
 1730111291	tripleee	แจกโค้ดฟรี
 1730112013	tripleee	(?-i:^Ayesha Sagheer$)
 1730112219	tripleee	top[\W_]*+follows?[\W_]*+apk
+1730117125	VLAZ	the[\W_]*+student[\W_]*+helpline(?!\.com(?<=thestudenthelpline\.com)|\.co\.in(?<=thestudenthelpline\.co\.in))
