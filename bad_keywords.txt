@@ -3160,3 +3160,4 @@ cancel[\W_]*+your[\W_]*+Jio
 american[\W_]*+airlines[\W_]*+refund
 combiz[\W_]*+services[\W_]*+pvt[\W_]*+ltd
 vyapar[\W_]*+kranti
+wisetechhack(?:@gmail\.com)?

@@ -12669,7 +12669,6 @@
 1570776467	Makyen	next-cart\.com
 1570776475	Makyen	lonnuckerow
 1570776484	Makyen	smsindiahub\.in
-1570776508	Makyen	wisetechhack(?:@gmail\.com)?
 1570776529	Makyen	/@kyarascott
 1570776549	Makyen	kaspersky-login\.me
 1570776558	Makyen	freshly[\W_]*+bloom[\W_]*+keto
