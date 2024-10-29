@@ -68011,3 +68011,4 @@
 1730192988	VLAZ	nearestedge\.blogspot
 1730193087	VLAZ	nearestedge(?:platform)?(?!\.blogspot(?<=nearestedge\.blogspot))
 1730196332	tripleee	penetrate[\W_]*+me[\W_]*+if[\W_]*+you[\W_]*+can
+1730196818	tripleee	valid[\W_]*+it[\W_]*+exams(?!\.com(?<=validitexams\.com))(?<!(?-i:^validit exams$))
