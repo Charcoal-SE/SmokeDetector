@@ -68013,3 +68013,4 @@
 1730196818	tripleee	valid[\W_]*+it[\W_]*+exams(?!\.com(?<=validitexams\.com))(?<!(?-i:^validit exams$))
 1730197946	tripleee	ultimate[\W_]*hackar[\W_]*jerry(?!\.com(?<=ultimatehackarjerry\.com))
 1730198304	tripleee	prsdevs\.com
+1730199574	tripleee	sipl[\W_]*+smktg\d*+
