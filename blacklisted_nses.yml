@@ -277,6 +277,9 @@ items:
   - dana.ns.cloudflare.com.
   - jerome.ns.cloudflare.com.
 - ns:
+  - darl.ns.cloudflare.com.
+  - nelly.ns.cloudflare.com.
+- ns:
   - david.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
