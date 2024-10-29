@@ -68022,3 +68022,4 @@
 1730207141	tripleee	(?-i:^Print X$)
 1730213764	Jeff Schaller	(?-i:^Abeera Munawar$)
 1730213946	VLAZ	howtotech\.in
+1730213956	VLAZ	kolaxoprint\.pk
