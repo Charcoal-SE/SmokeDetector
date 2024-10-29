@@ -68016,3 +68016,4 @@
 1730199574	tripleee	sipl[\W_]*+smktg\d*+
 1730201104	VLAZ	iifym\.com
 1730201163	VLAZ	^(?-i:SEO Guru BD)$
+1730204018	tripleee	(?-i:^James Parker$)
