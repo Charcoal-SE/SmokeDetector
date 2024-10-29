@@ -68010,3 +68010,4 @@
 1730189704	tripleee	awsstartupcredit\.com
 1730190198	tripleee	kiswok\.com
 1730192988	VLAZ	nearestedge\.blogspot
+1730193087	VLAZ	nearestedge(?:platform)?(?!\.blogspot(?<=nearestedge\.blogspot))
