@@ -66715,7 +66715,6 @@
 1727177019	Jeff Schaller	rightenroll\.com
 1727178113	Jeff Schaller	EconomyDiaries\.com
 1727179025	double-beep	quantumtechnology\.net
-1727179178	double-beep	validitexams\.com
 1727180109	Jeff Schaller	plugas20(?#telegram)
 1727181129	VLAZ	newsbrings\.com
 1727182204	Jeff Schaller	harwelldesign\.com
