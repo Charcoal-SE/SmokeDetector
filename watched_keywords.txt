@@ -68007,3 +68007,4 @@
 1730185077	VLAZ	w2g[\W_]*+solutions(?!\.in(?<=w2gsolutions\.in))
 1730188225	VLAZ	goldiden\.in
 1730188237	VLAZ	topcutebaby\.com
+1730189704	tripleee	awsstartupcredit\.com
