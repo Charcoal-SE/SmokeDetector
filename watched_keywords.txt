@@ -68025,3 +68025,4 @@
 1730213956	VLAZ	kolaxoprint\.pk
 1730214524	VLAZ	adrosverse\.com
 1730216490	Cow	primefirewood\.co\.uk
+1730217359	VLAZ	vecfashion\.com
