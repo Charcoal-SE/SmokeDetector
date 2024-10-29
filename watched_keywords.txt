@@ -68020,3 +68020,4 @@
 1730206018	Jeff Schaller	edubrain\.ai
 1730206854	tripleee	liza[\W_]*+rose(?# onlyfans)
 1730207141	tripleee	(?-i:^Print X$)
+1730213764	Jeff Schaller	(?-i:^Abeera Munawar$)
