@@ -68018,3 +68018,4 @@
 1730201163	VLAZ	^(?-i:SEO Guru BD)$
 1730204018	tripleee	(?-i:^James Parker$)
 1730206018	Jeff Schaller	edubrain\.ai
+1730206854	tripleee	liza[\W_]*+rose(?# onlyfans)
