@@ -68023,3 +68023,4 @@
 1730213764	Jeff Schaller	(?-i:^Abeera Munawar$)
 1730213946	VLAZ	howtotech\.in
 1730213956	VLAZ	kolaxoprint\.pk
+1730214524	VLAZ	adrosverse\.com
