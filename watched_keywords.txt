@@ -68011,3 +68011,4 @@
 1730190198	tripleee	kiswok\.com
 1730192988	VLAZ	nearestedge\.blogspot
 1730193087	VLAZ	nearestedge(?:platform)?(?!\.blogspot(?<=nearestedge\.blogspot))
+1730196332	tripleee	penetrate[\W_]*+me[\W_]*+if[\W_]*+you[\W_]*+can
