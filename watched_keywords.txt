@@ -68004,3 +68004,4 @@
 1730181956	Cow	educationnest\.com
 1730183337	Dragonrage	blockchaincustomercare\.com
 1730184901	VLAZ	w2gsolutions\.in
+1730185077	VLAZ	w2g[\W_]*+solutions(?!\.in(?<=w2gsolutions\.in))
