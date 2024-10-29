@@ -1192,3 +1192,4 @@ carelab[sz]
 (?-i:^TechEnthusiast$)
 (?-i:^Garvthakur Office$)
 (?-i:^validit exams$)
+(?-i:^interactive touchscreen$)
