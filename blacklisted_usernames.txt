@@ -1191,3 +1191,4 @@ carelab[sz]
 (?-i:^The World 777 Admin$)
 (?-i:^TechEnthusiast$)
 (?-i:^Garvthakur Office$)
+(?-i:^validit exams$)
