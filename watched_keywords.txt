@@ -68021,3 +68021,4 @@
 1730206854	tripleee	liza[\W_]*+rose(?# onlyfans)
 1730207141	tripleee	(?-i:^Print X$)
 1730213764	Jeff Schaller	(?-i:^Abeera Munawar$)
+1730213946	VLAZ	howtotech\.in
