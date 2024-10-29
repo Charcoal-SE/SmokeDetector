@@ -1920,6 +1920,9 @@ items:
   - dilbert.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
+  - dimitris.ns.cloudflare.com.
+  - mimi.ns.cloudflare.com.
+- ns:
   - dina.ns.cloudflare.com.
   - etienne.ns.cloudflare.com.
 - ns:
