@@ -67547,7 +67547,6 @@
 1729057929	Cow	aayuwell\.com
 1729058039	Cow	actualupdater\.com
 1729063854	Dragonrage	superproposal\.com
-1729063879	Dragonrage	hashstudioz\.com
 1729063968	Dragonrage	kdsinternational\.org
 1729065562	Dragonrage	armchampionshipbelts\.com
 1729068795	Cow	gg[\W_]*+bazar\.com
