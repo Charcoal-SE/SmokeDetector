@@ -1194,3 +1194,4 @@ carelab[sz]
 (?-i:^validit exams$)
 (?-i:^interactive touchscreen$)
 (?-i:^kriti kapoor$)
+(?-i:^Beyond veda$)
