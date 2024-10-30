@@ -1193,3 +1193,4 @@ carelab[sz]
 (?-i:^Garvthakur Office$)
 (?-i:^validit exams$)
 (?-i:^interactive touchscreen$)
+(?-i:^kriti kapoor$)
