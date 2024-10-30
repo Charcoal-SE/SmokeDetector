@@ -3047,7 +3047,6 @@ consider[\W_]*+banning[\W_]*+my[\W_]*+account
 (?-i:6d60c5964fff913b8c2dc63323ffd65a\.jpg)
 (?-i:wl8hgu3zrc)
 ugc[\W_]*+net[\W_]*+coaching
-navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
 idealsmtp(?!\.com)
 pytoileur
 opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
