@@ -1195,3 +1195,4 @@ carelab[sz]
 (?-i:^interactive touchscreen$)
 (?-i:^kriti kapoor$)
 (?-i:^Beyond veda$)
+(?-i:^Morgan Alex$)
