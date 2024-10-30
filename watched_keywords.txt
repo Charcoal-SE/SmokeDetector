@@ -68045,3 +68045,4 @@
 1730283444	VLAZ	retrobistro\.in
 1730283795	VLAZ	bizflycloud\.vn
 1730283804	VLAZ	BizFly[\W_]*+CDN
+1730283851	VLAZ	comparisonjunction\.com
