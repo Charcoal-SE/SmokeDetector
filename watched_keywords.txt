@@ -68052,3 +68052,4 @@
 1730307717	VLAZ	UTCLI[\W_]*+Solutions
 1730308752	Cow	wearmartae\.com
 1730312220	Fastnlight	genkisystem\.org
+1730329963	Fastnlight	definest\.ai
