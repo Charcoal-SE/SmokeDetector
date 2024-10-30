@@ -68046,3 +68046,4 @@
 1730283804	VLAZ	BizFly[\W_]*+CDN
 1730283851	VLAZ	comparisonjunction\.com
 1730284795	Jeff Schaller	teraboxlapp\.com
+1730293491	tripleee	(?-i:^Surjo Sarkar$)
