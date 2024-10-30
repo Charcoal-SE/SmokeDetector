@@ -64824,7 +64824,6 @@
 1723295589	double-beep	softdeviser\.com
 1723296631	double-beep	lematang\.com
 1723297239	double-beep	primeqasolutions\.com
-1723297965	double-beep	kobalttoolsinfo\.com
 1723299023	Makyen	dumpstube\.com
 1723299363	Makyen	asvr[\W_]*+engineering(?!\.com(?<=asvrengineering\.com))
 1723303588	VLAZ	cruelty\.farm
