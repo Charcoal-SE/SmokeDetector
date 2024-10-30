@@ -68036,3 +68036,4 @@
 1730269765	Cow	buyandsellwebsite\.com\.ng
 1730269960	tripleee	imuscles\.in
 1730271982	Anerdw	ayurnirvana\.in
+1730274004	tripleee	syntaxscenarios\.com
