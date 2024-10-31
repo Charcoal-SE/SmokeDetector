@@ -68076,3 +68076,4 @@
 1730400610	Cow	tngmdstore\.com
 1730409827	Jeff Schaller	seiz\.com\.tr
 1730411996	VLAZ	ask\.baatkar\.com
+1730412032	VLAZ	apkwill\.com
