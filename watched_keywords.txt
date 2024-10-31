@@ -68070,3 +68070,4 @@
 1730376534	VLAZ	obd\.ae
 1730376566	VLAZ	topfx\.com\.sc
 1730382195	Spevacus	alkharashy\.com
+1730383008	Jeff Schaller	cartogeek\.com
