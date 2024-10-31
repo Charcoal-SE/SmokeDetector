@@ -68068,3 +68068,4 @@
 1730376499	VLAZ	pryurhealth\.com
 1730376518	VLAZ	calendly\.com\/seers
 1730376534	VLAZ	obd\.ae
+1730376566	VLAZ	topfx\.com\.sc
