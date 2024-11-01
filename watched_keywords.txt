@@ -68080,3 +68080,4 @@
 1730445933	Cow	cuetmock\.com
 1730451994	Cow	justtrytech\.com
 1730453238	Cow	txhospitals\.in
+1730459620	Cow	blockdag\.network
