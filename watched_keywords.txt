@@ -68081,3 +68081,4 @@
 1730451994	Cow	justtrytech\.com
 1730453238	Cow	txhospitals\.in
 1730459620	Cow	blockdag\.network
+1730459673	Cow	blockdag(?!\.network(?<=blockdag\.network))
