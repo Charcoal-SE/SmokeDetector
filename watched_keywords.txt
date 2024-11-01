@@ -68088,3 +68088,4 @@
 1730466884	Cow	name\.ma
 1730469002	VLAZ	voiceofviswanatha\.com
 1730479672	Cow	eradani\.com
+1730480105	Spevacus	thanhmocdan\.com
