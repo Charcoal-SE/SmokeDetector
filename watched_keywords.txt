@@ -68091,3 +68091,4 @@
 1730480105	Spevacus	thanhmocdan\.com
 1730480234	Cow	thanhmocdan\.cskh(?:@gmail\.com)?
 1730483823	Cow	bolandromaine\.com
+1730486151	Vickel	acfelementorcustomicons\.com
