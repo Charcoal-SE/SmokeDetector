@@ -68107,3 +68107,4 @@
 1730552171	Nisse Engström	urlgle\.com
 1730552833	Spevacus	solarprice\.info
 1730558672	Jeff Schaller	(?-i:nvamsl)(?#surl.li to youtube redirect)
+1730564591	Jeff Schaller	mintah\.net
