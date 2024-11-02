@@ -68102,3 +68102,4 @@
 1730538460	Cow	nsda\.gov\.bd
 1730541657	Jeff Schaller	giostarchicago\.com
 1730547242	Jeff Schaller	devscriptschool\.com
+1730547333	Jeff Schaller	frlegendsapk\.org
