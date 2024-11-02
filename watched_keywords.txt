@@ -68099,3 +68099,4 @@
 1730533742	VLAZ	adnoms\.com
 1730538329	Cow	drsheenamskinclinic(?:@gmail\.com)?
 1730538372	Cow	qarmid-grc-tarmim\.com
+1730538460	Cow	nsda\.gov\.bd
