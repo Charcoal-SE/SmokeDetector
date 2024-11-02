@@ -68106,3 +68106,4 @@
 1730547712	Jeff Schaller	prodnovate\.com
 1730552171	Nisse Engström	urlgle\.com
 1730552833	Spevacus	solarprice\.info
+1730558672	Jeff Schaller	(?-i:nvamsl)(?#surl.li to youtube redirect)
