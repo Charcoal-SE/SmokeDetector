@@ -68101,3 +68101,4 @@
 1730538372	Cow	qarmid-grc-tarmim\.com
 1730538460	Cow	nsda\.gov\.bd
 1730541657	Jeff Schaller	giostarchicago\.com
+1730547242	Jeff Schaller	devscriptschool\.com
