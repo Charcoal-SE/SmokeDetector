@@ -68126,3 +68126,4 @@
 1730697947	Anerdw	(?-i:CTG8M)(?#XM Partner Code)
 1730704307	VLAZ	dvsconsulting\.in
 1730705599	VLAZ	cloudsportek\.com
+1730712448	VLAZ	metodosimplex\.com
