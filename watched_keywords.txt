@@ -68120,3 +68120,4 @@
 1730662969	Cow	alizyspa\.com
 1730672555	Vickel	fidosfunplace\.com
 1730678452	Vickel	elegitex\.com
+1730678508	Vickel	elegitex(?!\.com)
