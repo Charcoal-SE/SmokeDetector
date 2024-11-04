@@ -68132,3 +68132,4 @@
 1730715550	VLAZ	brokersaathi\.com
 1730719065	VLAZ	wevaad\.com
 1730736204	Jeff Schaller	(?-i:DBKl4go)(?#fiverr)
+1730736665	Jeff Schaller	maxpowerbi\.pro
