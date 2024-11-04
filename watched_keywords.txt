@@ -68121,3 +68121,4 @@
 1730678452	Vickel	elegitex\.com
 1730678508	Vickel	elegitex(?!\.com)
 1730703241	VLAZ	638374264877(?# invite code)
+1730702221	Anerdw	PlotWalla
