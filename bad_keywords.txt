@@ -3161,3 +3161,4 @@ combiz[\W_]*+services[\W_]*+pvt[\W_]*+ltd
 vyapar[\W_]*+kranti
 wisetechhack(?:@gmail\.com)?
 wikihelpdesks
+Wizard[\W_]*+Asset[\W_]*+Recovery
