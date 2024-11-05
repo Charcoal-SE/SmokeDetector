@@ -68137,3 +68137,4 @@
 1730744778	Cow	deltaexeall\.com
 1730761197	Fastnlight	goldrateguru\.pk
 1730764124	Fastnlight	IPTV-CHANNELS\.COM
+1730764939	Fastnlight	albumanimator\.io
