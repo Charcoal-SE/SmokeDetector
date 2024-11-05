@@ -68154,3 +68154,4 @@
 1730811757	VLAZ	flowzai\.com
 1730813793	VLAZ	softellar\.com
 1730825795	Nisse Engström	lotuspsychiatryandwellness\.com
+1730825974	Vickel	lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
