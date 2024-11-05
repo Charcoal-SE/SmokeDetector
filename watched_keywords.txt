@@ -68159,3 +68159,4 @@
 1730828352	Cow	arabianmenu\.com
 1730828973	Cow	doctorsnetwork\.com
 1730829399	Vickel	33rap-mp3\.com
+1730829530	Vickel	33rap[\W_]*+mp3(?!\.com(?<=33rap-mp3\.com))
