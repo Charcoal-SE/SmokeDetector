@@ -68149,3 +68149,4 @@
 1730803590	Cow	photoeditingindia\.com
 1730803680	Cow	express-taxi\.nl
 1730803707	Cow	fondazionepescheria\.it
+1730807153	VLAZ	spedoo\.store
