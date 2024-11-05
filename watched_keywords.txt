@@ -68152,3 +68152,4 @@
 1730807153	VLAZ	spedoo\.store
 1730807227	VLAZ	progamestuff\.com
 1730811757	VLAZ	flowzai\.com
+1730813793	VLAZ	softellar\.com
