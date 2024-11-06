@@ -67583,7 +67583,6 @@
 1729155014	Dragonrage	mib[\W_]*+it[\W_]*+solutions(?!\.com(?<=mibitsolutions\.com))
 1729158308	tripleee	digitalreachexpert\.online
 1729158398	Cody Gray	ads[\W_]*+in[\W_]*+Ghaziabad
-1729158461	tripleee	printx\.ae
 1729159087	Cody Gray	liftwellenterprise\.in
 1729159130	Cody Gray	Liftwell[\W_]*+Enterprise(?!\.in(?<=liftwellenterprise\.in))
 1729160015	VLAZ	tradejini\.com
