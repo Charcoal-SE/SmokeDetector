@@ -68150,7 +68150,6 @@
 1730807227	VLAZ	progamestuff\.com
 1730811757	VLAZ	flowzai\.com
 1730813793	VLAZ	softellar\.com
-1730825795	Nisse Engström	lotuspsychiatryandwellness\.com
 1730825974	Vickel	lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
 1730828191	Cow	medium\.com/@nareshdevassist
 1730828352	Cow	arabianmenu\.com
