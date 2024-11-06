@@ -2335,6 +2335,7 @@ city_list = [
     "Meghalaya",
     "Mehrauli",
     "Model Town",
+    "Mohali",
     "Moti Nagar",
     "Multan",
     "Mulund",
