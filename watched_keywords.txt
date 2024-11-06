@@ -68177,3 +68177,4 @@
 1730884875	Dragonrage	blockawayproxy\.net
 1730887616	tripleee	popland\.info
 1730887627	tripleee	fadegranted\.com
+1730887816	Cow	(?-i:672b32b149274)(?# is3.xyz)
