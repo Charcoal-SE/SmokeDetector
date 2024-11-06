@@ -68197,3 +68197,4 @@
 1730903385	Cow	wrong[\W_]*+recharge[\W_]*+from
 1730913341	Cow	hackgate\.io
 1730918564	Cow	arabiantourpackages\.com
+1730920342	Anerdw	theliquoris\.com
