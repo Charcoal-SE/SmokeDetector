@@ -52520,7 +52520,6 @@
 1694763190	cigien	citdm2310\.com
 1694763356	cigien	fanzilla(?:[\W_]*+jackets)?+(?!\.com(?<=fanzillajackets\.com))
 1694763753	cigien	journals\.telkomuniversity\.ac\.id
-1694765244	Dragonrage	influence\.co
 1694766060	cigien	bloggingheros\.com
 1694766130	cigien	zingmind(?!\.com)
 1694766328	cigien	qiaobao\.com
