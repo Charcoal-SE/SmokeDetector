@@ -3165,3 +3165,4 @@ Wizard[\W_]*+Asset[\W_]*+Recovery
 (?-i:theimmediatematrix)(?# facebook.com group)
 recharged[\W_]*+wrong[\W_]*+number
 refund[\W_]*+a[\W_]*+wrong[\W_]*+transaction
+wrong[\W_]*+transaction[\W_]*+refund
