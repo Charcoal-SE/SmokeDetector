@@ -68184,3 +68184,4 @@
 1730892502	Cow	minelabz\.com
 1730895083	Cow	bollywoodfunda\.in
 1730895854	Cow	acutenetworks\.in
+1730895999	Cow	acute[\W_]*+networks(?!\.in(?<=acutenetworks\.in))
