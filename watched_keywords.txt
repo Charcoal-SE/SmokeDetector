@@ -68162,3 +68162,4 @@
 1730829530	Vickel	33rap[\W_]*+mp3(?!\.com(?<=33rap-mp3\.com))
 1730857511	Vickel	hungthanh\.vn
 1730858650	Fastnlight	sonext\.asia
+1730860163	Fastnlight	mobilemechanicmodesto\.com
