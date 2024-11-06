@@ -68187,3 +68187,4 @@
 1730895999	Cow	acute[\W_]*+networks(?!\.in(?<=acutenetworks\.in))
 1730896822	Cow	solitairemandvi\.com
 1730896842	Cow	purelabpaincare\.com
+1730897441	Cow	through[\W_]*+their[\W_]*+helpline
