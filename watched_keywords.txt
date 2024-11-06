@@ -68175,3 +68175,4 @@
 1730880760	VLAZ	economicshelpdesk\.com
 1730880769	VLAZ	economics[\W_]*+help[\W_]*+desk(?!\.com(?<=economicshelpdesk\.com))
 1730884875	Dragonrage	blockawayproxy\.net
+1730887616	tripleee	popland\.info
