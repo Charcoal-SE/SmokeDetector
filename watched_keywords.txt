@@ -68175,3 +68175,4 @@
 1730879964	VLAZ	ag[\W_]*+(?:industries(?!\.net(?<=agindustries\.net))|organica)
 1730880423	Dragonrage	mohammedrinshad\.com
 1730880760	VLAZ	economicshelpdesk\.com
+1730880769	VLAZ	economics[\W_]*+help[\W_]*+desk(?!\.com(?<=economicshelpdesk\.com))
