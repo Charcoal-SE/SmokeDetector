@@ -68232,3 +68232,4 @@
 1730986623	Cow	gmsh\.info
 1730988074	Anerdw	dogecoinplatform\.com
 1730995591	Cow	digital[\W_]*+resolution[\W_]*+services
+1731000981	Jeff Schaller	jobhire\.ai
