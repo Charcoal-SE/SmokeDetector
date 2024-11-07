@@ -68220,3 +68220,4 @@
 1730972289	Cow	bitdelta\.pro
 1730972393	Cow	facebookaudienceinsights
 1730972601	VLAZ	tci[\W_]*+express(?!\.in(?<=tciexpress\.in))
+1730972610	VLAZ	tciexpress\.in
