@@ -68231,3 +68231,4 @@
 1730984000	VLAZ	buddler\.com
 1730986623	Cow	gmsh\.info
 1730988074	Anerdw	dogecoinplatform\.com
+1730995529	Cow	digitalresolutionservices
