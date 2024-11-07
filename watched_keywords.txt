@@ -68242,3 +68242,4 @@
 1731010152	Jeff Schaller	myntra\.com
 1731011500	VLAZ	starbuckspartnerhoursus\.com
 1731015741	Vickel	AndersonFrankk(?#telegram)
+1731021385	Vickel	tradex4[\W_]*+company
