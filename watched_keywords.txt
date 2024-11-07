@@ -68226,3 +68226,4 @@
 1730974037	Cow	kleyl\.com
 1730975595	VLAZ	drgauravpande\.com
 1730976627	Jeff Schaller	junglesafarirajajinationalpark\.com
+1730977426	Jeff Schaller	mindnotix\.com
