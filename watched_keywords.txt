@@ -68214,3 +68214,4 @@
 1730965663	Cow	mayanksinghvi\.com
 1730965783	Cow	toanphatinfo\.com
 1730966040	Cow	toolsforhuman\.com
+1730966528	Cow	afflr\.io
