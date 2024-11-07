@@ -68211,3 +68211,4 @@
 1730964306	Cow	call[\W_]*+jio[\W_]*+care
 1730964584	Cow	how[\W_]*+do[\W_]*+i[\W_]*+complain
 1730965401	Cow	haihaisoft\.com
+1730965663	Cow	mayanksinghvi\.com
