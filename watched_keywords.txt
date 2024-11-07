@@ -68223,3 +68223,4 @@
 1730972610	VLAZ	tciexpress\.in
 1730972619	VLAZ	toskie\.com
 1730972627	VLAZ	toskie(?!\.com)
+1730974037	Cow	kleyl\.com
