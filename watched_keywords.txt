@@ -68221,3 +68221,4 @@
 1730972393	Cow	facebookaudienceinsights
 1730972601	VLAZ	tci[\W_]*+express(?!\.in(?<=tciexpress\.in))
 1730972610	VLAZ	tciexpress\.in
+1730972619	VLAZ	toskie\.com
