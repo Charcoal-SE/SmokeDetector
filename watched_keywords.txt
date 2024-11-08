@@ -65625,7 +65625,6 @@
 1724885466	General Grievance	925silverjewelry\.com
 1724882695	Fastnlight	VIRTUAL[\W_]*+FUNDS[\W_]*+RESURRECTION(?!\.info(?<=VIRTUALFUNDSRESURRECTION\.info))
 1724905984	VLAZ	pesvs\.com\.au
-1724906445	VLAZ	alphanapkinmachines\.com
 1724908340	tripleee	(?-i:sZvrhXYuSng)(?# youtube)
 1724908589	tripleee	pdfsignify\.com
 1724909814	Dragonrage	microtechenggco\.com
