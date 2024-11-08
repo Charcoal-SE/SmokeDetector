@@ -1196,3 +1196,4 @@ carelab[sz]
 (?-i:^kriti kapoor$)
 (?-i:^Beyond veda$)
 (?-i:^Morgan Alex$)
+(?-i:^Walter Meliksetyan$)
