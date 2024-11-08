@@ -68263,3 +68263,4 @@
 1731065703	Cow	leakedanything\.com
 1731065736	tripleee	scoreven\.com
 1731065888	tripleee	viral[\W_@]*+clip
+1731066549	Cow	click[\W_]*+here[\W_]*+to[\W_]*+link
