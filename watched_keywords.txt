@@ -68245,3 +68245,4 @@
 1731021385	Vickel	tradex4[\W_]*+company
 1731033545	Vickel	ohay\.tv
 1731033556	Vickel	stylowi\.pl
+1731033564	Vickel	app\.gitter\.im
