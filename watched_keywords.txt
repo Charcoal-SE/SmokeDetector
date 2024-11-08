@@ -68279,3 +68279,4 @@
 1731081982	VLAZ	simbye\.com
 1731085741	EJoshuaS - Stand with Ukraine	sprinters\.sh
 1731088464	Fastnlight	acebookpublishers\.com
+1731092809	Jeff Schaller	skunk420store(?:@gmail\.com)?
