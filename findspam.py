@@ -594,7 +594,7 @@ class FindSpam:
             # With <= 100 entries, Use an entries_lists with all the entries first, then a regex that can never match
             entries_lists = [entries]
         if len(entries_lists) == 1:
-            entries_lists.append = [r'q(?<!q)']
+            entries_lists.append([r'q(?<!q)'])
         for index in range(2):
             new_regex_text = regex_text_generator(entries_lists[index])
             if new_regex_text != rule_list[index].regex:
