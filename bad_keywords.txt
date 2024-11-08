@@ -3170,3 +3170,4 @@ bet168
 duplicatefilesdeleter
 wrong[\W_]*+recharge[\W_]*+on
 Jio[\W_]*+customer[\W_]*+support
+Bitget[\W_]*+Referral[\W_]*+Code
