@@ -478,6 +478,9 @@ items:
   - melinda.ns.cloudflare.com.
   - zeus.ns.cloudflare.com.
 - ns:
+  - merlin.ns.cloudflare.com.
+  - tia.ns.cloudflare.com.
+- ns:
   - miki.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:

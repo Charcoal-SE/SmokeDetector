@@ -3641,9 +3641,6 @@ items:
   - rafe.ns.cloudflare.com.
 - ns:
   - merlin.ns.cloudflare.com.
-  - tia.ns.cloudflare.com.
-- ns:
-  - merlin.ns.cloudflare.com.
   - treasure.ns.cloudflare.com.
 - ns:
   - mia.ns.cloudflare.com.
