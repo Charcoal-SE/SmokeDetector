@@ -68262,3 +68262,4 @@
 1731065368	Cow	singhal[\W_]*+industries
 1731065703	Cow	leakedanything\.com
 1731065736	tripleee	scoreven\.com
+1731065888	tripleee	viral[\W_@]*+clip
