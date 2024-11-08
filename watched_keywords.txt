@@ -68268,3 +68268,4 @@
 1731068203	Cow	leathericonic\.com
 1731072455	Jeff Schaller	phukienrainbow\.com
 1731075562	tripleee	ultrapro[\W_]*+exchange
+1731075796	tripleee	wendys-menuprice\.com
