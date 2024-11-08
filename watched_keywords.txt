@@ -68278,3 +68278,4 @@
 1731078627	VLAZ	archi[\W_]*+bo(?!\.de(?<=archibo\.de))
 1731081982	VLAZ	simbye\.com
 1731085741	EJoshuaS - Stand with Ukraine	sprinters\.sh
+1731088464	Fastnlight	acebookpublishers\.com
