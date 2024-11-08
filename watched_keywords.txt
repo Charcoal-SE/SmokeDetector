@@ -68254,3 +68254,4 @@
 1731054472	tripleee	squnk[\W_]*+store
 1731055497	Cow	dynamics[\W_]*+365[\W_]*+for[\W_]*+financial[\W_]*+services
 1731055660	Cow	stitchsway\.com
+1731055694	Cow	stitchsway(?!\.com(?<=stitchsway\.com))
