@@ -1197,3 +1197,4 @@ carelab[sz]
 (?-i:^Beyond veda$)
 (?-i:^Morgan Alex$)
 (?-i:^Walter Meliksetyan$)
+(?-i:^james folkner$)
