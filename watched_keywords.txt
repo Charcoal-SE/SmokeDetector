@@ -68274,3 +68274,4 @@
 1731078602	VLAZ	agilibo\.info
 1731078605	VLAZ	soildrs\.com
 1731078609	VLAZ	soil[\W_]*+drs(?!\.com(?<=soildrs\.com))
+1731078623	VLAZ	archibo\.de
