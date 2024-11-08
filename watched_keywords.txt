@@ -68259,3 +68259,4 @@
 1731062817	Cow	web2streams\.online
 1731063460	Cow	hiteshmalpani\.com
 1731064932	tripleee	[a-z]mktg\d+
+1731065368	Cow	singhal[\W_]*+industries
