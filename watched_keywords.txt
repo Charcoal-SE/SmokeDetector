@@ -68251,3 +68251,4 @@
 1731051665	Cow	wrong[\W_]*+recharge
 1731052248	Cow	starwaypackers\.com
 1731052877	tripleee	(?-i:YR0kmkR)(?# fiverr)
+1731054101	Cow	cali[\W_]*+weed
