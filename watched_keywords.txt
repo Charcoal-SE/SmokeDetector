@@ -68266,3 +68266,4 @@
 1731066549	Cow	click[\W_]*+here[\W_]*+to[\W_]*+link
 1731066776	Cow	binary-studio\.com
 1731068203	Cow	leathericonic\.com
+1731072455	Jeff Schaller	phukienrainbow\.com
