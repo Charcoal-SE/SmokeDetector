@@ -68255,3 +68255,4 @@
 1731055497	Cow	dynamics[\W_]*+365[\W_]*+for[\W_]*+financial[\W_]*+services
 1731055660	Cow	stitchsway\.com
 1731055694	Cow	stitchsway(?!\.com(?<=stitchsway\.com))
+1731058960	tripleee	trulykomal\.com
