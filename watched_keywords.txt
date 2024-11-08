@@ -68260,3 +68260,4 @@
 1731063460	Cow	hiteshmalpani\.com
 1731064932	tripleee	[a-z]mktg\d+
 1731065368	Cow	singhal[\W_]*+industries
+1731065703	Cow	leakedanything\.com
