@@ -68249,3 +68249,4 @@
 1731048491	Dragonrage	guaranteedrank\.com
 1731049263	VLAZ	sellerserviceprovider\.in
 1731051665	Cow	wrong[\W_]*+recharge
+1731052248	Cow	starwaypackers\.com
