@@ -68283,3 +68283,4 @@
 1731094333	Vickel	tylerskunkk(?#telegram)
 1731094671	Vickel	skunk\.40(?#signal)
 1731095327	Cow	(?-i:goldtraderwin)(?# t.me)
+1731095406	Cow	gold[\W_]*+empire
