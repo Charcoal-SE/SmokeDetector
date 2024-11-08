@@ -2362,6 +2362,7 @@ city_list = [
     "Surat",
     "Telangana",
     "Tembisa",
+    "Thalassery",
     "Thane",
     "Thembisa",
     "Thiruvananthapuram",
