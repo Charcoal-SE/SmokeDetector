@@ -68276,3 +68276,4 @@
 1731078609	VLAZ	soil[\W_]*+drs(?!\.com(?<=soildrs\.com))
 1731078623	VLAZ	archibo\.de
 1731078627	VLAZ	archi[\W_]*+bo(?!\.de(?<=archibo\.de))
+1731081982	VLAZ	simbye\.com
