@@ -68261,3 +68261,4 @@
 1731064932	tripleee	[a-z]mktg\d+
 1731065368	Cow	singhal[\W_]*+industries
 1731065703	Cow	leakedanything\.com
+1731065736	tripleee	scoreven\.com
