@@ -68253,3 +68253,4 @@
 1731052877	tripleee	(?-i:YR0kmkR)(?# fiverr)
 1731054101	Cow	cali[\W_]*+weed
 1731054472	tripleee	squnk[\W_]*+store
+1731055497	Cow	dynamics[\W_]*+365[\W_]*+for[\W_]*+financial[\W_]*+services
