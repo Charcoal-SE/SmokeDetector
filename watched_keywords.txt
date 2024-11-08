@@ -68265,3 +68265,4 @@
 1731065888	tripleee	viral[\W_@]*+clip
 1731066549	Cow	click[\W_]*+here[\W_]*+to[\W_]*+link
 1731066776	Cow	binary-studio\.com
+1731068203	Cow	leathericonic\.com
