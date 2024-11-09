@@ -68312,3 +68312,4 @@
 1731177414	Cow	qnews\.co\.id
 1731178623	Cow	follow[\W_]*+up[\W_]*+with[\W_]*+customer[\W_]*+support
 1731187538	Fastnlight	businesschannelmedia\.com\.tr
+1731193908	Laurel	dollarbuyonline\.com
