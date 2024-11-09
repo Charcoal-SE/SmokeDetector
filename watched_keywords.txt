@@ -68308,3 +68308,4 @@
 1731170435	Cow	outsourceautocaddrafting\.com
 1731173304	Vickel	outsource[\W_]*+AutoCAD[\W_]*+Drafting(?!\.com(?<=outsourceautocaddrafting\.com))
 1731174074	Cow	loan[\W_]*+app
+1731176473	Cow	to[\W_]*+the[\W_]*+support[\W_]*+support
