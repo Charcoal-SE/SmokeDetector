@@ -68285,3 +68285,4 @@
 1731095327	Cow	(?-i:goldtraderwin)(?# t.me)
 1731095406	Cow	gold[\W_]*+empire
 1731099330	Vickel	trapstar
+1731113899	Jeff Schaller	e-laeltd\.com
