@@ -68307,3 +68307,4 @@
 1731168204	Laurel	smokinbudsca\.com
 1731170435	Cow	outsourceautocaddrafting\.com
 1731173304	Vickel	outsource[\W_]*+AutoCAD[\W_]*+Drafting(?!\.com(?<=outsourceautocaddrafting\.com))
+1731174074	Cow	loan[\W_]*+app
