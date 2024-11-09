@@ -3173,3 +3173,4 @@ Jio[\W_]*+customer[\W_]*+support
 Bitget[\W_]*+Referral[\W_]*+Code
 digi[\W_]*+finance[\W_]*+loan
 credit[\W_]*+go[\W_]*+l𝗈𝖺𝗇
+Imran[\W_]*+Afzal
