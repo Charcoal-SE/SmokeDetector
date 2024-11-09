@@ -68295,3 +68295,4 @@
 1731140896	VLAZ	coexsys(?!\.com)
 1731140912	VLAZ	formathomes\.com\.au
 1731147639	VLAZ	bestgrowthpartners\.com
+1731148400	VLAZ	anvatnosay\.com
