@@ -68304,3 +68304,4 @@
 1731158366	Cow	you[\W_]*+can[\W_]*+call[\W_]*+this[\W_]*+number
 1731164655	Cow	cranixethicalsolutionshaven
 1731168150	Laurel	feedble\.com
+1731168204	Laurel	smokinbudsca\.com
