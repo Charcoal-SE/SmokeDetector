@@ -68292,3 +68292,4 @@
 1731137107	Cow	x2xlove\.top
 1731140863	VLAZ	dafabet
 1731140888	VLAZ	coexsys\.com
+1731140896	VLAZ	coexsys(?!\.com)
