@@ -68303,3 +68303,4 @@
 1731157465	Cow	nullsbrawl\.gg
 1731158366	Cow	you[\W_]*+can[\W_]*+call[\W_]*+this[\W_]*+number
 1731164655	Cow	cranixethicalsolutionshaven
+1731168204	Laurel	smokinbudsca\.com
