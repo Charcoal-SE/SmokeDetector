@@ -68311,3 +68311,4 @@
 1731176473	Cow	to[\W_]*+the[\W_]*+support[\W_]*+support
 1731177414	Cow	qnews\.co\.id
 1731178623	Cow	follow[\W_]*+up[\W_]*+with[\W_]*+customer[\W_]*+support
+1731187538	Fastnlight	businesschannelmedia\.com\.tr
