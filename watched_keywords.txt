@@ -68301,3 +68301,4 @@
 1731151796	VLAZ	(?-i:ht0sopiioj)(?# promo code)
 1731154150	Cow	should[\W_]*+immediately[\W_]*+contact
 1731157465	Cow	nullsbrawl\.gg
+1731158366	Cow	you[\W_]*+can[\W_]*+call[\W_]*+this[\W_]*+number
