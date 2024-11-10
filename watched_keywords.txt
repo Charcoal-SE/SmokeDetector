@@ -68316,3 +68316,4 @@
 1731199049	Anerdw	djgacor\.online
 1731209821	Anerdw	(?-i:^Juzzlicka Arrbrunk$)
 1731220944	VLAZ	rr88\.training
+1731224017	Cow	marcoligi\.com
