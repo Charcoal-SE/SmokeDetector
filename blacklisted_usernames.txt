@@ -1200,3 +1200,4 @@ carelab[sz]
 (?-i:^james folkner$)
 (?-i:^Terus Technology$)
 (?-i:^alltechelect$)
+(?-i:^CW Ticketing System$)
