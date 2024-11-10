@@ -68075,7 +68075,6 @@
 1730459673	Cow	blockdag(?!\.network(?<=blockdag\.network))
 1730460180	Cow	profitablecpmrate\.com
 1730463782	VLAZ	pafikotbureuh\.org
-1730464731	VLAZ	rhxjwpm
 1730466884	Cow	name\.ma
 1730469002	VLAZ	voiceofviswanatha\.com
 1730479672	Cow	eradani\.com
