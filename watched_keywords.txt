@@ -68323,7 +68323,6 @@
 1731238641	Cow	click[\W_]*+here[\W_]*+watch[\W_]*+now
 1731239187	Cow	online[\W_]*+chat[\W_]*+service
 1731248997	Cow	vnrom-bypass\.com
-1731249795	Fastnlight	voot-express-hd\.blogspot
 1731250706	Cow	customer[\W_]*+[\d\W_]*+support[\W_]*+team
 1731251368	Cow	help[\W_]*+or[\W_]*+support[\W_]*+section
 1731254003	Jeff Schaller	hackcode\.live
