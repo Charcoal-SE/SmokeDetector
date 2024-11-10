@@ -68323,3 +68323,4 @@
 1731232453	Cow	stacksgather\.com
 1731238506	VLAZ	(?-i:3CbK2OV)(?#bit.ly)
 1731238641	Cow	click[\W_]*+here[\W_]*+watch[\W_]*+now
+1731239187	Cow	online[\W_]*+chat[\W_]*+service
