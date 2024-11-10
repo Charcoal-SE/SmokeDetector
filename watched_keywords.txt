@@ -68320,3 +68320,4 @@
 1731225406	Cow	alltechelect\.com
 1731229378	VLAZ	teknowfeed\.com
 1731232333	Cow	politicalsciencesolution\.com
+1731232393	Cow	political[\W_]*+science[\W_]*+solution(?!\.com(?<=politicalsciencesolution\.com))
