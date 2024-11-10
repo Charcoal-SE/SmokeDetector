@@ -1198,3 +1198,4 @@ carelab[sz]
 (?-i:^Morgan Alex$)
 (?-i:^Walter Meliksetyan$)
 (?-i:^james folkner$)
+(?-i:^Terus Technology$)
