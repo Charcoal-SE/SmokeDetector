@@ -68325,3 +68325,4 @@
 1731248997	Cow	vnrom-bypass\.com
 1731249795	Fastnlight	voot-express-hd\.blogspot
 1731250706	Cow	customer[\W_]*+[\d\W_]*+support[\W_]*+team
+1731251368	Cow	help[\W_]*+or[\W_]*+support[\W_]*+section
