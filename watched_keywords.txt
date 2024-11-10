@@ -54574,7 +54574,6 @@
 1699990149	Jeff Schaller	squidsllc\.com
 1699996686	Jeff Schaller	BUFFETTGIVE
 1699996715	Jeff Schaller	rewenex[\W_]*+com
-1699997407	Nick	selar\.co
 1700006209	Makyen	bluehackangels407(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1700006104	Nick	MAVERICK[\W_]*+ANGELOS
 1700011962	Makyen	prestige88slot
