@@ -68318,3 +68318,4 @@
 1731220944	VLAZ	rr88\.training
 1731224017	Cow	marcoligi\.com
 1731225406	Cow	alltechelect\.com
+1731229378	VLAZ	teknowfeed\.com
