@@ -46408,7 +46408,6 @@
 1674722326	Cody Gray	(?:info@)?retailsoft\.in
 1674722411	Cody Gray	RetailSoft(?!\.in)
 1674725596	Cody Gray	Chen[\W_]*Wenru
-1674725651	Cody Gray	buymeacoffee\.com
 1674725687	Cody Gray	surveyduniya\.com
 1674731032	tripleee	tronpick\.io
 1674731213	tripleee	besteonlinecasinonl\.com
