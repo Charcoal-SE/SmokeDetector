@@ -68321,3 +68321,4 @@
 1731232333	Cow	politicalsciencesolution\.com
 1731232393	Cow	political[\W_]*+science[\W_]*+solution(?!\.com(?<=politicalsciencesolution\.com))
 1731232453	Cow	stacksgather\.com
+1731238506	VLAZ	(?-i:3CbK2OV)(?#bit.ly)
