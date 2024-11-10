@@ -1199,3 +1199,4 @@ carelab[sz]
 (?-i:^Walter Meliksetyan$)
 (?-i:^james folkner$)
 (?-i:^Terus Technology$)
+(?-i:^alltechelect$)
