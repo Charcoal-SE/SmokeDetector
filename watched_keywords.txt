@@ -66089,7 +66089,6 @@
 1725868688	VLAZ	tailormade[\W_]*+journey(?!\.com(?<=tailormadejourney\.com))
 1725868974	VLAZ	airlinesofficedesk\.com
 1725871257	Cow	slot853
-1725872431	tripleee	giac\.org
 1725872704	tripleee	baitalnokhada\.com
 1725877040	Jeff Schaller	kinlights\.com
 1725877081	Jeff Schaller	salesoperator\.net
