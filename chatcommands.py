@@ -15,7 +15,7 @@ from metasmoke import Metasmoke
 from blacklists import load_blacklists, Blacklist
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
-from gitmanager import GitManager
+from gitmanager import GitManager, GitHubManager
 import threading
 import random
 import requests
@@ -725,23 +725,38 @@ def reject(msg, args, alias_used="reject"):
         reason = ''
     force = alias_used.split("-")[-1] == "force"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
-    if not code_permissions:
-        raise CmdException("You need blacklist manager privileges to reject pull requests")
+    self_reject = False
+    try:
+        pr_json = GitHubManager.get_pull_request(pr_id).json()
+        if 'body' in pr_json:
+            pr_authored_by_rejector = regex.search(r"(?<=/users/)" + str(msg.owner.id),
+                                                   pr_json['body'])
+            self_reject = pr_authored_by_rejector is not None
+    except Exception as e:
+        raise CmdException(str(e))
+    if not code_permissions and not self_reject:
+        raise CmdException("You need blacklist manager privileges to reject pull requests "
+                           "that aren't created by you.")
     if len(reason) < 20 and not force:
-        raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
-                           " can learn from their mistakes. Use `-force` to force the reject")
+        raise CmdException("Please provide an adequate reason for rejection that is at least"
+                           " 20 characters long. Use `-force` to ignore this requirement.")
     rejected_image = "https://img.shields.io/badge/blacklisters-rejected-red"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
     rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
                                                                   chat_user_profile_link, msg.room.name)
+    if self_reject:
+        rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
+                                                                           chat_user_profile_link, msg.room.name)
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
     reject_reason_image_text = "\n\n![Rejected with SmokeyReject]({})".format(rejected_image)
+    if self_reject:
+        reject_reason_image_text = ""
     comment = rejected_by_text + reject_reason_text + reject_reason_image_text
     try:
-        message = GitManager.reject_pull_request(pr_id, comment)
+        message = GitManager.reject_pull_request(pr_id, comment, self_reject)
         return message
     except Exception as e:
         raise CmdException(str(e))
@@ -2067,7 +2082,7 @@ def invite(msg, room_id, roles):
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=False, give_name=True,
-         aliases=["scan", "scan-force", "report-force", "report-direct"])
+         aliases=["scan", "scan-force", "report-force", "report-direct", "scan-time", "scan-force-time"])
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
@@ -2086,6 +2101,10 @@ def report(msg, args, alias_used="report"):
                            "one go.".format(alias_used, wait))
 
     alias_used = alias_used or "report"
+
+    is_timed = "-time" in alias_used
+    alias_used = alias_used.replace("-time", "")
+    start_time = time.time()
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
@@ -2114,6 +2133,8 @@ def report(msg, args, alias_used="report"):
     if output:
         if 1 < len(urls) > output.count("\n") + 1:
             add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
+        if is_timed:
+            output += "\nScanning took {} seconds.".format(round(time.time() - start_time, 3))
         return output
 
 

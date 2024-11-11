@@ -4,7 +4,7 @@ items:
 - comment: has FPs, don't blacklist again
   ns: namecheaphosting.com.
 - ns:
-  - aaden.ns.cloudflare.com.
+  - aaden.ns.cloudflare.combro.
   - coraline.ns.cloudflare.com.
 - ns:
   - aaden.ns.cloudflare.com.
@@ -104,6 +104,9 @@ items:
   - addilyn.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
+  - addilyn.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
   - addyson.ns.cloudflare.com.
   - byron.ns.cloudflare.com.
 - ns:
@@ -187,6 +190,9 @@ items:
 - ns:
   - aiden.ns.cloudflare.com.
   - piper.ns.cloudflare.com.
+- ns:
+  - aila.ns.cloudflare.com.
+  - kyree.ns.cloudflare.com.
 - ns:
   - ainsley.ns.cloudflare.com.
   - andronicus.ns.cloudflare.com.
@@ -287,6 +293,9 @@ items:
   - alexa.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
+  - alexa.ns.cloudflare.com.
+  - koa.ns.cloudflare.com.
+- ns:
   - alexia.ns.cloudflare.com.
   - donovan.ns.cloudflare.com.
 - ns:
@@ -307,6 +316,9 @@ items:
 - ns:
   - alexis.ns.cloudflare.com.
   - val.ns.cloudflare.com.
+- ns:
+  - alfred.ns.cloudflare.com.
+  - millie.ns.cloudflare.com.
 - ns:
   - alfred.ns.cloudflare.com.
   - princess.ns.cloudflare.com.
@@ -378,6 +390,9 @@ items:
   - gabe.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
+  - james.ns.cloudflare.com.
+- ns:
+  - alina.ns.cloudflare.com.
   - langston.ns.cloudflare.com.
 - ns:
   - alina.ns.cloudflare.com.
@@ -428,6 +443,9 @@ items:
   - amber.ns.cloudflare.com.
   - denver.ns.cloudflare.com.
 - ns:
+  - amber.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
+- ns:
   - amir.ns.cloudflare.com.
   - cass.ns.cloudflare.com.
 - ns:
@@ -476,6 +494,12 @@ items:
   - amy.ns.cloudflare.com.
   - ram.ns.cloudflare.com.
 - ns:
+  - anahi.ns.cloudflare.com.
+  - rajeev.ns.cloudflare.com.
+- ns:
+  - anastasia.ns.cloudflare.com.
+  - anuj.ns.cloudflare.com.
+- ns:
   - anastasia.ns.cloudflare.com.
   - rory.ns.cloudflare.com.
 - ns:
@@ -490,6 +514,9 @@ items:
 - ns:
   - andronicus.ns.cloudflare.com.
   - rose.ns.cloudflare.com.
+- ns:
+  - andy.ns.cloudflare.com.
+  - betty.ns.cloudflare.com.
 - ns:
   - andy.ns.cloudflare.com.
   - isla.ns.cloudflare.com.
@@ -511,6 +538,9 @@ items:
 - ns:
   - angela.ns.cloudflare.com.
   - eric.ns.cloudflare.com.
+- ns:
+  - angelina.ns.cloudflare.com.
+  - lee.ns.cloudflare.com.
 - ns:
   - anirban.ns.cloudflare.com.
   - dee.ns.cloudflare.com.
@@ -541,9 +571,6 @@ items:
 - ns:
   - anuj.ns.cloudflare.com.
   - priscilla.ns.cloudflare.com.
-- ns:
-  - anuj.ns.cloudflare.com.
-  - sue.ns.cloudflare.com.
 - ns:
   - anuj.ns.cloudflare.com.
   - surina.ns.cloudflare.com.
@@ -591,6 +618,9 @@ items:
   - johnathan.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
+  - lars.ns.cloudflare.com.
+- ns:
+  - april.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - april.ns.cloudflare.com.
@@ -606,6 +636,12 @@ items:
 - ns:
   - ara.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
+- ns:
+  - ara.ns.cloudflare.com.
+  - vicky.ns.cloudflare.com.
+- ns:
+  - aragorn.ns.cloudflare.com.
+  - cloe.ns.cloudflare.com.
 - ns:
   - aragorn.ns.cloudflare.com.
   - may.ns.cloudflare.com.
@@ -669,6 +705,9 @@ items:
   - armando.ns.cloudflare.com.
   - elinore.ns.cloudflare.com.
 - ns:
+  - armando.ns.cloudflare.com.
+  - jean.ns.cloudflare.com.
+- ns:
   - armfazh.ns.cloudflare.com.
   - eleanor.ns.cloudflare.com.
 - ns:
@@ -691,6 +730,9 @@ items:
   - clay.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
+  - lynn.ns.cloudflare.com.
+- ns:
+  - aron.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
@@ -702,8 +744,14 @@ items:
   - arushi.ns.cloudflare.com.
   - vern.ns.cloudflare.com.
 - ns:
+  - arushi.ns.cloudflare.com.
+  - vicky.ns.cloudflare.com.
+- ns:
   - art.ns.cloudflare.com.
   - isla.ns.cloudflare.com.
+- ns:
+  - art.ns.cloudflare.com.
+  - monroe.ns.cloudflare.com.
 - ns:
   - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
@@ -732,11 +780,17 @@ items:
   - arya.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
+  - asa.ns.cloudflare.com.
+  - yoxall.ns.cloudflare.com.
+- ns:
   - ashley.ns.cloudflare.com.
   - clyde.ns.cloudflare.com.
 - ns:
   - ashley.ns.cloudflare.com.
   - dan.ns.cloudflare.com.
+- ns:
+  - ashley.ns.cloudflare.com.
+  - trevor.ns.cloudflare.com.
 - ns:
   - ashton.ns.cloudflare.com.
   - kia.ns.cloudflare.com.
@@ -747,6 +801,9 @@ items:
   - athena.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
+  - athena.ns.cloudflare.com.
+  - tosana.ns.cloudflare.com.
+- ns:
   - audrey.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
 - ns:
@@ -755,6 +812,12 @@ items:
 - ns:
   - audrey.ns.cloudflare.com.
   - trace.ns.cloudflare.com.
+- ns:
+  - augustus.ns.cloudflare.com.
+  - sandra.ns.cloudflare.com.
+- ns:
+  - aurora.ns.cloudflare.com.
+  - scott.ns.cloudflare.com.
 - ns:
   - austin.ns.cloudflare.com.
   - kia.ns.cloudflare.com.
@@ -794,6 +857,9 @@ items:
 - ns:
   - bart.ns.cloudflare.com.
   - candy.ns.cloudflare.com.
+- ns:
+  - bart.ns.cloudflare.com.
+  - iris.ns.cloudflare.com.
 - ns:
   - bart.ns.cloudflare.com.
   - martha.ns.cloudflare.com.
@@ -878,6 +944,9 @@ items:
 - ns:
   - beth.ns.cloudflare.com.
   - max.ns.cloudflare.com.
+- ns:
+  - bethany.ns.cloudflare.com.
+  - bjorn.ns.cloudflare.com.
 - ns:
   - betty.ns.cloudflare.com.
   - charles.ns.cloudflare.com.
@@ -1025,11 +1094,20 @@ items:
   - brenda.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - brenna.ns.cloudflare.com.
+  - johnathan.ns.cloudflare.com.
+- ns:
   - brian.ns.cloudflare.com.
   - dalary.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
   - emily.ns.cloudflare.com.
+- ns:
+  - brian.ns.cloudflare.com.
+  - iris.ns.cloudflare.com.
+- ns:
+  - brian.ns.cloudflare.com.
+  - nucum.ns.cloudflare.com.
 - ns:
   - brian.ns.cloudflare.com.
   - wally.ns.cloudflare.com.
@@ -1076,6 +1154,9 @@ items:
   - brodie.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
+  - brodie.ns.cloudflare.com.
+  - stephane.ns.cloudflare.com.
+- ns:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
@@ -1089,9 +1170,6 @@ items:
   - lina.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
-  - megan.ns.cloudflare.com.
-- ns:
-  - bruce.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
@@ -1099,6 +1177,9 @@ items:
 - ns:
   - bruce.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
+- ns:
+  - bryce.ns.cloudflare.com.
+  - clarissa.ns.cloudflare.com.
 - ns:
   - brynne.ns.cloudflare.com.
   - carter.ns.cloudflare.com.
@@ -1121,6 +1202,9 @@ items:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - burt.ns.cloudflare.com.
+  - perla.ns.cloudflare.com.
+- ns:
   - byron.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
@@ -1129,6 +1213,9 @@ items:
 - ns:
   - carioca.ns.cloudflare.com.
   - gabriel.ns.cloudflare.com.
+- ns:
+  - carioca.ns.cloudflare.com.
+  - harvey.ns.cloudflare.com.
 - ns:
   - carl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
@@ -1150,6 +1237,9 @@ items:
 - ns:
   - carlane.ns.cloudflare.com.
   - quentin.ns.cloudflare.com.
+- ns:
+  - carlos.ns.cloudflare.com.
+  - kristina.ns.cloudflare.com.
 - ns:
   - carmelo.ns.cloudflare.com.
   - jill.ns.cloudflare.com.
@@ -1227,6 +1317,9 @@ items:
   - wren.ns.cloudflare.com.
 - ns:
   - chad.ns.cloudflare.com.
+  - christina.ns.cloudflare.com.
+- ns:
+  - chad.ns.cloudflare.com.
   - daniella.ns.cloudflare.com.
 - ns:
   - chad.ns.cloudflare.com.
@@ -1257,6 +1350,9 @@ items:
   - kiki.ns.cloudflare.com.
 - ns:
   - chance.ns.cloudflare.com.
+  - oaklyn.ns.cloudflare.com.
+- ns:
+  - chance.ns.cloudflare.com.
   - ullis.ns.cloudflare.com.
 - ns:
   - charles.ns.cloudflare.com.
@@ -1276,9 +1372,6 @@ items:
 - ns:
   - chelsea.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
-- ns:
-  - chelsea.ns.cloudflare.com.
-  - lakas.ns.cloudflare.com.
 - ns:
   - cheryl.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
@@ -1313,14 +1406,14 @@ items:
   - chloe.ns.cloudflare.com.
   - ridge.ns.cloudflare.com.
 - ns:
-  - chloe.ns.cloudflare.com.
-  - sam.ns.cloudflare.com.
-- ns:
   - chris.ns.cloudflare.com.
   - hadlee.ns.cloudflare.com.
 - ns:
   - chris.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
+- ns:
+  - christian.ns.cloudflare.com.
+  - erin.ns.cloudflare.com.
 - ns:
   - chuck.ns.cloudflare.com.
   - evangeline.ns.cloudflare.com.
@@ -1338,10 +1431,10 @@ items:
   - kevin.ns.cloudflare.com.
 - ns:
   - clarissa.ns.cloudflare.com.
-  - corey.ns.cloudflare.com.
-- ns:
-  - clarissa.ns.cloudflare.com.
   - leif.ns.cloudflare.com.
+- ns:
+  - clark.ns.cloudflare.com.
+  - martha.ns.cloudflare.com.
 - ns:
   - clark.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
@@ -1406,17 +1499,14 @@ items:
   - clyde.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
-  - coco.ns.cloudflare.com.
-  - duke.ns.cloudflare.com.
-- ns:
   - coby.ns.cloudflare.com.
   - ziggy.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
-  - felicity.ns.cloudflare.com.
+  - duke.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
-  - hugh.ns.cloudflare.com.
+  - felicity.ns.cloudflare.com.
 - ns:
   - coco.ns.cloudflare.com.
   - hunts.ns.cloudflare.com.
@@ -1445,6 +1535,12 @@ items:
   - colette.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
 - ns:
+  - colette.ns.cloudflare.com.
+  - zod.ns.cloudflare.com.
+- ns:
+  - collins.ns.cloudflare.com.
+  - jim.ns.cloudflare.com.
+- ns:
   - connie.ns.cloudflare.com.
   - hal.ns.cloudflare.com.
 - ns:
@@ -1456,6 +1552,9 @@ items:
 - ns:
   - conrad.ns.cloudflare.com.
   - lilyana.ns.cloudflare.com.
+- ns:
+  - cora.ns.cloudflare.com.
+  - elijah.ns.cloudflare.com.
 - ns:
   - cora.ns.cloudflare.com.
   - jason.ns.cloudflare.com.
@@ -1527,6 +1626,9 @@ items:
   - maxim.ns.cloudflare.com.
 - ns:
   - cullen.ns.cloudflare.com.
+  - kimora.ns.cloudflare.com.
+- ns:
+  - cullen.ns.cloudflare.com.
   - maleah.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
@@ -1557,6 +1659,9 @@ items:
   - vin.ns.cloudflare.com.
 - ns:
   - daisy.ns.cloudflare.com.
+  - hal.ns.cloudflare.com.
+- ns:
+  - daisy.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
   - dalary.ns.cloudflare.com.
@@ -1573,9 +1678,6 @@ items:
 - ns:
   - damian.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
-- ns:
-  - damian.ns.cloudflare.com.
-  - ursula.ns.cloudflare.com.
 - ns:
   - damien.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
@@ -1603,7 +1705,9 @@ items:
 - ns:
   - dan.ns.cloudflare.com.
   - selah.ns.cloudflare.com.
-- ns:
+- comment: no meaningful TP hits for a long time 2024-09-02
+  disable: true
+  ns:
   - dan.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
@@ -1652,14 +1756,14 @@ items:
   - daniella.ns.cloudflare.com.
   - isaac.ns.cloudflare.com.
 - ns:
+  - daniella.ns.cloudflare.com.
+  - olof.ns.cloudflare.com.
+- ns:
   - daphne.ns.cloudflare.com.
   - julio.ns.cloudflare.com.
 - ns:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
-- ns:
-  - darl.ns.cloudflare.com.
-  - nelly.ns.cloudflare.com.
 - ns:
   - darl.ns.cloudflare.com.
   - rihana.ns.cloudflare.com.
@@ -1678,6 +1782,9 @@ items:
 - ns:
   - dave.ns.cloudflare.com.
   - nicole.ns.cloudflare.com.
+- ns:
+  - david.ns.cloudflare.com.
+  - keira.ns.cloudflare.com.
 - ns:
   - david.ns.cloudflare.com.
   - melinda.ns.cloudflare.com.
@@ -1714,6 +1821,9 @@ items:
 - ns:
   - deb.ns.cloudflare.com.
   - drew.ns.cloudflare.com.
+- ns:
+  - deb.ns.cloudflare.com.
+  - guss.ns.cloudflare.com.
 - ns:
   - deb.ns.cloudflare.com.
   - malcolm.ns.cloudflare.com.
@@ -1756,6 +1866,9 @@ items:
 - ns:
   - derek.ns.cloudflare.com.
   - may.ns.cloudflare.com.
+- ns:
+  - desi.ns.cloudflare.com.
+  - drew.ns.cloudflare.com.
 - ns:
   - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
@@ -1807,6 +1920,9 @@ items:
   - dilbert.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns:
+  - dimitris.ns.cloudflare.com.
+  - mimi.ns.cloudflare.com.
+- ns:
   - dina.ns.cloudflare.com.
   - etienne.ns.cloudflare.com.
 - ns:
@@ -1818,9 +1934,6 @@ items:
 - ns:
   - dina.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
-- ns:
-  - dion.ns.cloudflare.com.
-  - dora.ns.cloudflare.com.
 - ns:
   - dion.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
@@ -1847,10 +1960,16 @@ items:
   - logan.ns.cloudflare.com.
 - ns:
   - dolly.ns.cloudflare.com.
+  - kanye.ns.cloudflare.com.
+- ns:
+  - dolly.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
   - edna.ns.cloudflare.com.
+- ns:
+  - dom.ns.cloudflare.com.
+  - nova.ns.cloudflare.com.
 - ns:
   - dom.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
@@ -1881,9 +2000,6 @@ items:
 - ns:
   - dora.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
-- ns:
-  - dorthy.ns.cloudflare.com.
-  - earl.ns.cloudflare.com.
 - ns:
   - dorthy.ns.cloudflare.com.
   - ignacio.ns.cloudflare.com.
@@ -1926,6 +2042,9 @@ items:
 - ns:
   - earl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
+- ns:
+  - earl.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
 - ns:
   - ed.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
@@ -2004,6 +2123,9 @@ items:
   - elliot.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - elliott.ns.cloudflare.com.
+  - lilith.ns.cloudflare.com.
+- ns:
   - elle.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
@@ -2012,6 +2134,9 @@ items:
 - ns:
   - elma.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
+- ns:
+  - elma.ns.cloudflare.com.
+  - maxim.ns.cloudflare.com.
 - ns:
   - elma.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
@@ -2028,6 +2153,9 @@ items:
   - elmo.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - elmo.ns.cloudflare.com.
+  - rosalyn.ns.cloudflare.com.
+- ns:
   - eloise.ns.cloudflare.com.
   - ian.ns.cloudflare.com.
 - ns:
@@ -2036,6 +2164,9 @@ items:
 - ns:
   - elsa.ns.cloudflare.com.
   - miles.ns.cloudflare.com.
+- ns:
+  - elsa.ns.cloudflare.com.
+  - mitchell.ns.cloudflare.com.
 - ns:
   - elsa.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
@@ -2058,7 +2189,13 @@ items:
   - rocky.ns.cloudflare.com.
 - ns:
   - emily.ns.cloudflare.com.
+  - gannon.ns.cloudflare.com.
+- ns:
+  - emily.ns.cloudflare.com.
   - tony.ns.cloudflare.com.
+- ns:
+  - emma.ns.cloudflare.com.
+  - eric.ns.cloudflare.com.
 - ns:
   - emma.ns.cloudflare.com.
   - kellen.ns.cloudflare.com.
@@ -2121,6 +2258,9 @@ items:
   - marissa.ns.cloudflare.com.
 - ns:
   - etienne.ns.cloudflare.com.
+  - meilani.ns.cloudflare.com.
+- ns:
+  - etienne.ns.cloudflare.com.
   - oaklyn.ns.cloudflare.com.
 - ns:
   - ethan.ns.cloudflare.com.
@@ -2132,6 +2272,9 @@ items:
   - eugene.ns.cloudflare.com.
   - meilani.ns.cloudflare.com.
 - ns:
+  - eugene.ns.cloudflare.com.
+  - zara.ns.cloudflare.com.
+- ns:
   - eva.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:
@@ -2140,6 +2283,9 @@ items:
 - ns:
   - eva.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
+- ns:
+  - evan.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
 - ns:
   - eve.ns.cloudflare.com.
   - jimmy.ns.cloudflare.com.
@@ -2240,6 +2386,9 @@ items:
   - galilea.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - galilea.ns.cloudflare.com.
+  - osmar.ns.cloudflare.com.
+- ns:
   - gannon.ns.cloudflare.com.
   - linda.ns.cloudflare.com.
 - ns:
@@ -2255,11 +2404,23 @@ items:
   - georgia.ns.cloudflare.com.
   - jose.ns.cloudflare.com.
 - ns:
+  - georgia.ns.cloudflare.com.
+  - miguel.ns.cloudflare.com.
+- ns:
   - gerald.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
+  - gerald.ns.cloudflare.com.
+  - sureena.ns.cloudflare.com.
+- ns:
+  - gerardo.ns.cloudflare.com.
+  - sima.ns.cloudflare.com.
+- ns:
   - giancarlo.ns.cloudflare.com.
   - kayleigh.ns.cloudflare.com.
+- ns:
+  - gigi.ns.cloudflare.com.
+  - patryk.ns.cloudflare.com.
 - ns:
   - gigi.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
@@ -2284,6 +2445,9 @@ items:
 - ns:
   - glen.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
+- ns:
+  - glen.ns.cloudflare.com.
+  - kate.ns.cloudflare.com.
 - ns:
   - glen.ns.cloudflare.com.
   - lilith.ns.cloudflare.com.
@@ -2335,9 +2499,6 @@ items:
 - ns:
   - grannbo.ns.cloudflare.com.
   - otto.ns.cloudflare.com.
-- ns:
-  - grannbo.ns.cloudflare.com.
-  - remy.ns.cloudflare.com.
 - ns:
   - greg.ns.cloudflare.com.
   - hera.ns.cloudflare.com.
@@ -2414,6 +2575,9 @@ items:
   - hans.ns.cloudflare.com.
   - pam.ns.cloudflare.com.
 - ns:
+  - harleign.ns.cloudflare.com.
+  - matias.ns.cloudflare.com.
+- ns:
   - harley.ns.cloudflare.com.
   - leanna.ns.cloudflare.com.
 - ns:
@@ -2442,7 +2606,13 @@ items:
   - kanye.ns.cloudflare.com.
 - ns:
   - heather.ns.cloudflare.com.
+  - louis.ns.cloudflare.com.
+- ns:
+  - heather.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
+- ns:
+  - heidi.ns.cloudflare.com.
+  - jonah.ns.cloudflare.com.
 - ns:
   - heidi.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
@@ -2454,6 +2624,9 @@ items:
   - maya.ns.cloudflare.com.
 - ns:
   - henry.ns.cloudflare.com.
+  - indie.ns.cloudflare.com.
+- ns:
+  - henry.ns.cloudflare.com.
   - jade.ns.cloudflare.com.
 - ns:
   - hera.ns.cloudflare.com.
@@ -2461,6 +2634,9 @@ items:
 - ns:
   - hera.ns.cloudflare.com.
   - kevin.ns.cloudflare.com.
+- ns:
+  - holly.ns.cloudflare.com.
+  - johnny.ns.cloudflare.com.
 - ns:
   - hope.ns.cloudflare.com.
   - huxley.ns.cloudflare.com.
@@ -2479,6 +2655,9 @@ items:
 - ns:
   - howard.ns.cloudflare.com.
   - nelly.ns.cloudflare.com.
+- ns:
+  - hugh.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
 - ns:
   - hugh.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
@@ -2509,6 +2688,9 @@ items:
 - ns:
   - ian.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
+- ns:
+  - ignacio.ns.cloudflare.com.
+  - rosalie.ns.cloudflare.com.
 - ns:
   - ignat.ns.cloudflare.com.
   - millie.ns.cloudflare.com.
@@ -2606,6 +2788,9 @@ items:
   - jade.ns.cloudflare.com.
   - norman.ns.cloudflare.com.
 - ns:
+  - jaime.ns.cloudflare.com.
+  - lila.ns.cloudflare.com.
+- ns:
   - jake.ns.cloudflare.com.
   - macy.ns.cloudflare.com.
 - ns:
@@ -2644,6 +2829,9 @@ items:
 - ns:
   - jasper.ns.cloudflare.com.
   - jocelyn.ns.cloudflare.com.
+- ns:
+  - jasper.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
 - ns:
   - javon.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
@@ -2721,7 +2909,13 @@ items:
   - lloyd.ns.cloudflare.com.
 - ns:
   - jessica.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
+  - jessica.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
+- ns:
+  - jewel.ns.cloudflare.com.
+  - santino.ns.cloudflare.com.
 - ns:
   - jewel.ns.cloudflare.com.
   - tate.ns.cloudflare.com.
@@ -2791,6 +2985,9 @@ items:
 - ns:
   - josh.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
+- ns:
+  - journey.ns.cloudflare.com.
+  - marvin.ns.cloudflare.com.
 - ns:
   - julio.ns.cloudflare.com.
   - mckinley.ns.cloudflare.com.
@@ -2867,6 +3064,9 @@ items:
   - kareem.ns.cloudflare.com.
   - susan.ns.cloudflare.com.
 - ns:
+  - karina.ns.cloudflare.com.
+  - miles.ns.cloudflare.com.
+- ns:
   - karl.ns.cloudflare.com.
   - katja.ns.cloudflare.com.
 - ns:
@@ -2875,6 +3075,12 @@ items:
 - ns:
   - karsyn.ns.cloudflare.com.
   - louis.ns.cloudflare.com.
+- ns:
+  - kate.ns.cloudflare.com.
+  - salvador.ns.cloudflare.com.
+- ns:
+  - kate.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
 - ns:
   - kay.ns.cloudflare.com.
   - owen.ns.cloudflare.com.
@@ -2908,6 +3114,9 @@ items:
 - ns:
   - keenan.ns.cloudflare.com.
   - tani.ns.cloudflare.com.
+- ns:
+  - ken.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
 - ns:
   - kenneth.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
@@ -3060,6 +3269,9 @@ items:
   - theo.ns.cloudflare.com.
 - ns:
   - leah.ns.cloudflare.com.
+  - tom.ns.cloudflare.com.
+- ns:
+  - leah.ns.cloudflare.com.
   - vin.ns.cloudflare.com.
 - ns:
   - leanna.ns.cloudflare.com.
@@ -3100,6 +3312,9 @@ items:
 - ns:
   - leonard.ns.cloudflare.com.
   - rayne.ns.cloudflare.com.
+- ns:
+  - leonard.ns.cloudflare.com.
+  - tiffany.ns.cloudflare.com.
 - ns:
   - lex.ns.cloudflare.com.
   - miki.ns.cloudflare.com.
@@ -3218,6 +3433,9 @@ items:
   - louis.ns.cloudflare.com.
   - maleah.ns.cloudflare.com.
 - ns:
+  - louis.ns.cloudflare.com.
+  - miki.ns.cloudflare.com.
+- ns:
   - love.ns.cloudflare.com.
   - vasilii.ns.cloudflare.com.
 - ns:
@@ -3242,6 +3460,9 @@ items:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
+  - lynn.ns.cloudflare.com.
+  - wally.ns.cloudflare.com.
+- ns:
   - maciej.ns.cloudflare.com.
   - rita.ns.cloudflare.com.
 - ns:
@@ -3250,6 +3471,9 @@ items:
 - ns:
   - maeve.ns.cloudflare.com.
   - porter.ns.cloudflare.com.
+- ns:
+  - maeve.ns.cloudflare.com.
+  - ryan.ns.cloudflare.com.
 - ns:
   - magdalena.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
@@ -3280,6 +3504,9 @@ items:
 - ns:
   - maria.ns.cloudflare.com.
   - trey.ns.cloudflare.com.
+- ns:
+  - mariah.ns.cloudflare.com.
+  - nico.ns.cloudflare.com.
 - ns:
   - mariah.ns.cloudflare.com.
   - rene.ns.cloudflare.com.
@@ -3317,17 +3544,11 @@ items:
   - marlowe.ns.cloudflare.com.
   - milan.ns.cloudflare.com.
 - ns:
-  - marlowe.ns.cloudflare.com.
-  - salvador.ns.cloudflare.com.
-- ns:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
   - mark.ns.cloudflare.com.
   - wren.ns.cloudflare.com.
-- ns:
-  - marty.ns.cloudflare.com.
-  - mimi.ns.cloudflare.com.
 - ns:
   - mary.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
@@ -3404,9 +3625,6 @@ items:
   - melany.ns.cloudflare.com.
   - seamus.ns.cloudflare.com.
 - ns:
-  - melinda.ns.cloudflare.com.
-  - zeus.ns.cloudflare.com.
-- ns:
   - melissa.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
@@ -3452,11 +3670,17 @@ items:
   - millie.ns.cloudflare.com.
   - quentin.ns.cloudflare.com.
 - ns:
+  - mimi.ns.cloudflare.com.
+  - yoxall.ns.cloudflare.com.
+- ns:
   - mira.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
   - mira.ns.cloudflare.com.
   - peter.ns.cloudflare.com.
+- ns:
+  - mitch.ns.cloudflare.com.
+  - pam.ns.cloudflare.com.
 - ns:
   - mitchell.ns.cloudflare.com.
   - nancy.ns.cloudflare.com.
@@ -3491,6 +3715,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - neil.ns.cloudflare.com.
+  - vita.ns.cloudflare.com.
+- ns:
   - nelci.ns.cloudflare.com.
   - patryk.ns.cloudflare.com.
 - ns:
@@ -3517,6 +3744,9 @@ items:
 - ns:
   - nicolas.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
+- ns:
+  - nicole.ns.cloudflare.com.
+  - pranab.ns.cloudflare.com.
 - ns:
   - nikon.ns.cloudflare.com.
   - teresa.ns.cloudflare.com.
@@ -3569,6 +3799,15 @@ items:
   - oswald.ns.cloudflare.com.
   - sara.ns.cloudflare.com.
 - ns:
+  - otto.ns.cloudflare.com.
+  - sandy.ns.cloudflare.com.
+- ns:
+  - otto.ns.cloudflare.com.
+  - sofia.ns.cloudflare.com.
+- ns:
+  - owen.ns.cloudflare.com.
+  - rosa.ns.cloudflare.com.
+- ns:
   - pablo.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
 - ns:
@@ -3593,9 +3832,6 @@ items:
   - pat.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
-  - patrick.ns.cloudflare.com.
-  - vivienne.ns.cloudflare.com.
-- ns:
   - paul.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
 - ns:
@@ -3619,6 +3855,9 @@ items:
 - ns:
   - phoenix.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
+- ns:
+  - piotr.ns.cloudflare.com.
+  - vida.ns.cloudflare.com.
 - ns:
   - plato.ns.cloudflare.com.
   - rafe.ns.cloudflare.com.
@@ -3649,6 +3888,9 @@ items:
 - ns:
   - raphaela.ns.cloudflare.com.
   - razvan.ns.cloudflare.com.
+- ns:
+  - rene.ns.cloudflare.com.
+  - teresa.ns.cloudflare.com.
 - ns:
   - rex.ns.cloudflare.com.
   - sky.ns.cloudflare.com.
@@ -3729,6 +3971,9 @@ items:
 - ns:
   - sima.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
+- ns:
+  - simon.ns.cloudflare.com.
+  - violet.ns.cloudflare.com.
 - ns:
   - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
@@ -3872,8 +4117,7 @@ items:
 - comment: 9/39 over a year
   disable: true
   ns: fatcow.com.
-- comment: NXDOMAIN 2023-01-24
-  disable: true
+- comment: NXDOMAIN 2023-01-24; re-enabled 2024-10-18
   ns: vedigitize.us.
 - ns: serverpars.com.
 - comment: disabled as "no longer responding" 2020-04-02 but added back; flapping
@@ -3892,8 +4136,7 @@ items:
   disable: true
   ns: justhost.com.
 - ns: stupidblogger.com.
-- comment: no longer responding 2020-11-06
-  disable: true
+- comment: no longer responding 2020-11-06; enabled again 2024-10-18
   ns: omnilinks.net.
 - ns: servconfig.com.
 - comment: unlike siteground.asia, this gets significant FPs, but also some weight 1; see also subdomains
@@ -3912,8 +4155,7 @@ items:
   ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
-- comment: no longer responding 2020-11-11
-  disable: true
+- comment: no longer responding 2020-11-11; enabled again 2024-10-18
   ns: specializedtest.com.
 - comment: 2022-07-01 NXDOMAIN
   disable: true
@@ -3941,8 +4183,14 @@ items:
   - ns4039.hostgator.com.
   - ns4040.hostgator.com.
 - ns:
+  - cns523.hostgator.com.
+  - cns524.hostgator.com.
+- ns:
   - cns519.hostgator.com.
   - cns520.hostgator.com.
+- ns:
+  - ns2953.hostgator.com.
+  - ns2954.hostgator.com.
 - ns:
   - ns6057.hostgator.com.
   - ns6058.hostgator.com.
@@ -3976,9 +4224,6 @@ items:
 - ns:
   - ns8491.hostgator.com.
   - ns8492.hostgator.com.
-- ns:
-  - ns8511.hostgator.com.
-  - ns8512.hostgator.com.
 - ns:
   - ns8541.hostgator.com.
   - ns8542.hostgator.com.
@@ -4017,8 +4262,7 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
-- comment: no longer responding 2021-07-27
-  disable: true
+- comment: no longer responding 2021-07-27; enabled again 2024-10-18
   ns: jawatankosong.biz.
 - comment: NXDOMAIN 2023-12-23 on GitHub Actions, but passing on CircleCI
   disable: true
@@ -4037,8 +4281,7 @@ items:
 - ns: rumahweb.org.
 - ns: rumahweb.biz.
 - ns: contabo.net.
-- comment: NXDOMAIN 2022-12-30
-  disable: true
+- comment: NXDOMAIN 2022-12-30; enabled again 2024-10-18
   ns: crazydomains.com.
 - ns: servers-servers.com.
 - ns: vhostplatform.com.
@@ -4076,8 +4319,7 @@ items:
 - ns: globat.com.
 - ns: idwebhost.id.
 - ns: a2dns.com.
-- comment: NXOMAIN 2023-04-18
-  disable: true
+- comment: NXDOMAIN 2023-04-18; enabled again 2024-10-18
   ns: flaunt7.com.
 - ns: ihc.ru.
 - ns: r53.com.ua.
@@ -4088,8 +4330,7 @@ items:
   ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
-- comment: no longer responding 2020-04-02
-  disable: true
+- comment: no longer responding 2020-04-02; enabled again 2024-10-18
   ns: onlinemenshop.com.
 - ns: mywahosting.com.
 - comment: timeout 2020-04-02
@@ -4108,6 +4349,8 @@ items:
 - ns: 
   - ns1.md-97.bigrockservers.com.
   - ns2.md-97.bigrockservers.com.
+- ns: md-ht-3.bigrockservers.com.
+- ns: md-in-83.bigrockservers.com.
 - ns:
   - cns1.bigrock.com.
   - cns2.bigrock.com.
@@ -4186,8 +4429,7 @@ items:
 - ns: speedydns.net.
 - ns: webhost.pro.
 - ns: visiondns.net.
-- comment: 2021-08-03 SERVFAIL
-  disable: true
+- comment: 2021-08-03 SERVFAIL; eabled again 2024-10-18
   ns: matkaparivar.in.
 - ns: vdns.vn.
 - ns: ocyber.us.
@@ -4202,14 +4444,14 @@ items:
   disable: true
   ns: usm1804.sgded.com.
 - ns: stackdns.com.
-- comment: no longer resolves 2021-4-22
-  disable: true
+- comment: no longer resolves 2021-4-22; enabled again 2024-10-18
   ns: permainanceme.online.
 - ns: bh-20.webhostbox.net.
 - ns: bh-29.webhostbox.net.
 - ns: bh-40.webhostbox.net.
 - ns: bh-47.webhostbox.net.
 - ns: bh-63.webhostbox.net.
+- ns: bh-69.webhostbox.net.
 - ns: bh-76.webhostbox.net.
 - ns: bh-ht-10.webhostbox.net.
 - ns: bh-ht-11.webhostbox.net.
@@ -4246,6 +4488,9 @@ items:
   - rns407.webhostbox.net.
   - rns408.webhostbox.net.
 - ns:
+  - rns409.webhostbox.net.
+  - rns410.webhostbox.net.
+- ns:
   - rns41.webhostbox.net.
   - rns42.webhostbox.net.
 - ns:
@@ -4279,13 +4524,11 @@ items:
   ns: guruapk.com.
 - ns: netafraz.com.
 - ns: tidalworld.com.
-- comment: no longer resolves 2021-06-01
-  disable: true
+- comment: no longer resolves 2021-06-01; enabled again 2024-10-18
   ns: hostcloudstore.com.
 - ns: controlmyvps.com.au.
 - ns: wyservers.com.
-- comment: no longer resolves 2022-03-08
-  disable: true
+- comment: no longer resolves 2022-03-08; enabled again 2024-10-18
   ns: w3gb.com.
 - ns: ekkum.com.
 - comment: no longer resolves 2021-04-10
@@ -4297,8 +4540,7 @@ items:
 - comment: low value, majority FP
   disable:
   ns: stablehost.com.
-- comment: no longer resolves 2021-08-13
-  disable: true
+- comment: no longer resolves 2021-08-13; enabled again 2024-10-18
   ns: dedaddy.com.
 - ns: i2waves.com.
 - ns: myhostadmin.net.
@@ -4332,12 +4574,13 @@ items:
 - ns: genhost.in.
 - ns: ayurhealthtips.com.
 - ns: hostmonster.com.
-- ns: dctshosting.com.
+- comment: 2024-09-04 NXDOMAIN
+  disable: true
+  ns: dctshosting.com.
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
-- comment: no longer resolves 2020-08-27
-  disable: true
+- comment: no longer resolves 2020-08-27; enabled again 2024-10-18
   ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
@@ -4362,7 +4605,6 @@ items:
 - ns: webclickdigital.com.
 - ns: hostingtastic.com.
 - ns: techvillageco.com.
-- ns: nina.vn.
 - ns: mschosting.com.
 - ns: surveyzop.com.
 - ns: ablesales.com.au.
@@ -4375,8 +4617,7 @@ items:
 - ns: hostingraja.org.
 - ns: bigwighosting.com.
 - ns: milesgator.com.
-- comment: 2021-11-02 SERVFAIL
-  disable: true
+- comment: 2021-11-02 SERVFAIL; enabled again 2024-10-18
   ns: main-hosting.eu.
 - comment: 2021-11-02 NXDOMAIN
   disable: true
@@ -4431,6 +4672,11 @@ items:
   - ns-1887.awsdns-43.co.uk.
   - ns-891.awsdns-47.net.
 - ns:
+  - ns-1032.awsdns-01.org.
+  - ns-1582.awsdns-05.co.uk.
+  - ns-278.awsdns-34.com.
+  - ns-827.awsdns-39.net.
+- ns:
   - ns-1038.awsdns-01.org.
   - ns-1636.awsdns-12.co.uk.
   - ns-499.awsdns-62.com.
@@ -4446,10 +4692,20 @@ items:
   - ns-1972.awsdns-54.co.uk.
   - ns-839.awsdns-40.net.
 - ns:
+  - ns-1048.awsdns-03.org.
+  - ns-1593.awsdns-07.co.uk.
+  - ns-262.awsdns-32.com.
+  - ns-870.awsdns-44.net.
+- ns:
   - ns-1050.awsdns-03.org.
   - ns-1881.awsdns-43.co.uk.
   - ns-418.awsdns-52.com.
   - ns-966.awsdns-56.net.
+- ns:
+  - ns-1053.awsdns-03.org.
+  - ns-1863.awsdns-40.co.uk.
+  - ns-772.awsdns-32.net.
+  - ns-83.awsdns-10.com.
 - ns:
   - ns-106.awsdns-13.com.
   - ns-1309.awsdns-35.org.
@@ -4486,6 +4742,11 @@ items:
   - ns-1888.awsdns-44.co.uk.
   - ns-705.awsdns-24.net.
 - ns:
+  - ns-109.awsdns-13.com.
+  - ns-1516.awsdns-61.org.
+  - ns-1930.awsdns-49.co.uk.
+  - ns-858.awsdns-43.net.
+- ns:
   - ns-1095.awsdns-08.org.
   - ns-156.awsdns-19.com.
   - ns-1891.awsdns-44.co.uk.
@@ -4511,6 +4772,16 @@ items:
   - ns-359.awsdns-44.com.
   - ns-591.awsdns-09.net.
 - ns:
+  - ns-1149.awsdns-15.org.
+  - ns-1998.awsdns-57.co.uk.
+  - ns-250.awsdns-31.com.
+  - ns-867.awsdns-44.net.
+- ns:
+  - ns-1151.awsdns-15.org.
+  - ns-156.awsdns-19.com.
+  - ns-1711.awsdns-21.co.uk.
+  - ns-959.awsdns-55.net. 
+- ns:
   - ns-1158.awsdns-16.org.
   - ns-1552.awsdns-02.co.uk.
   - ns-234.awsdns-29.com.
@@ -4535,6 +4806,11 @@ items:
   - ns-2017.awsdns-60.co.uk.
   - ns-263.awsdns-32.com.
   - ns-627.awsdns-14.net.
+- ns:
+  - ns-1177.awsdns-19.org.
+  - ns-1634.awsdns-12.co.uk.
+  - ns-209.awsdns-26.com.
+  - ns-803.awsdns-36.net.
 - ns:
   - ns-1181.awsdns-19.org.
   - ns-1958.awsdns-52.co.uk.
@@ -4586,6 +4862,11 @@ items:
   - ns-473.awsdns-59.com.
   - ns-923.awsdns-51.net.
 - ns:
+  - ns-1239.awsdns-26.org.
+  - ns-1800.awsdns-33.co.uk.
+  - ns-334.awsdns-41.com.
+  - ns-780.awsdns-33.net.
+- ns:
   - ns-1240.awsdns-27.org.
   - ns-150.awsdns-18.com.
   - ns-1541.awsdns-00.co.uk.
@@ -4598,6 +4879,11 @@ items:
   - ns-a1.cloud.z.com.
   - ns-a2.cloud.z.com.
   - ns-a3.cloud.z.com.
+- ns:
+  - ns-1252.awsdns-28.org.
+  - ns-1901.awsdns-45.co.uk.
+  - ns-629.awsdns-14.net.
+  - ns-65.awsdns-08.com.
 - ns:
   - ns-1257.awsdns-29.org.
   - ns-1830.awsdns-36.co.uk.
@@ -4709,6 +4995,11 @@ items:
   - ns-378.awsdns-47.com.
   - ns-752.awsdns-30.net.
 - ns:
+  - ns-1406.awsdns-47.org.
+  - ns-1628.awsdns-11.co.uk.
+  - ns-370.awsdns-46.com.
+  - ns-915.awsdns-50.net.
+- ns:
   - ns-1407.awsdns-47.org.
   - ns-2003.awsdns-58.co.uk.
   - ns-548.awsdns-04.net.
@@ -4720,6 +5011,11 @@ items:
   - ns-921.awsdns-51.net.
   - ns47.domaincontrol.com.
   - ns48.domaincontrol.com.
+- ns:
+  - ns-1414.awsdns-48.org.
+  - ns-1872.awsdns-42.co.uk.
+  - ns-317.awsdns-39.com.
+  - ns-694.awsdns-22.net.
 - ns:
   - ns-1417.awsdns-49.org.
   - ns-2046.awsdns-63.co.uk.
@@ -4741,6 +5037,11 @@ items:
   - ns-313.awsdns-39.com.
   - ns-915.awsdns-50.net.
 - ns:
+  - ns-1430.awsdns-50.org.
+  - ns-163.awsdns-20.com.
+  - ns-1974.awsdns-54.co.uk.
+  - ns-934.awsdns-52.net.
+- ns:
   - ns-1436.awsdns-51.org.
   - ns-1841.awsdns-38.co.uk.
   - ns-258.awsdns-32.com.
@@ -4755,6 +5056,11 @@ items:
   - ns-1633.awsdns-12.co.uk.
   - ns-393.awsdns-49.com.
   - ns-864.awsdns-44.net.
+- ns:
+  - ns-1439.awsdns-51.org.
+  - ns-1678.awsdns-17.co.uk.
+  - ns-415.awsdns-51.com.
+  - ns-887.awsdns-46.net.
 - ns:
   - ns-1443.awsdns-52.org.
   - ns-1597.awsdns-07.co.uk.
@@ -4782,6 +5088,11 @@ items:
   - ns-569.awsdns-07.net.
 - ns:
   - ns-1485.awsdns-57.org.
+  - ns-1546.awsdns-01.co.uk.
+  - ns-468.awsdns-58.com.
+  - ns-656.awsdns-18.net.
+- ns:
+  - ns-1485.awsdns-57.org.
   - ns-1675.awsdns-17.co.uk.
   - ns-302.awsdns-37.com.
   - ns-541.awsdns-03.net.
@@ -4795,6 +5106,11 @@ items:
   - ns-1894.awsdns-44.co.uk.
   - ns-284.awsdns-35.com.
   - ns-669.awsdns-19.net.
+- ns:
+  - ns-1498.awsdns-59.org.
+  - ns-1669.awsdns-16.co.uk.
+  - ns-681.awsdns-21.net.
+  - ns-77.awsdns-09.com.
 - ns:
   - ns-1499.awsdns-59.org.
   - ns-1892.awsdns-44.co.uk.
@@ -4815,6 +5131,11 @@ items:
   - ns-1721.awsdns-23.co.uk.
   - ns-310.awsdns-38.com.
   - ns-636.awsdns-15.net.
+- ns:
+  - ns-1513.awsdns-61.org.
+  - ns-1715.awsdns-22.co.uk.
+  - ns-410.awsdns-51.com.
+  - ns-855.awsdns-42.net.
 - ns:
   - ns-1510.awsdns-60.org.
   - ns-2013.awsdns-59.co.uk.
@@ -4858,8 +5179,7 @@ items:
   - now1.dns.com.
   - now2.dns.com.
 - ns: thcservers.com.
-- comment: NXDOMAIN 2023-08-30
-  disable: true
+- comment: NXDOMAIN 2023-08-30; enabled again 2024-10-18
   ns: cloudxspeed.com.
 - ns: xmarthost.com.
 - ns: hostzet.com.
@@ -4905,22 +5225,19 @@ items:
 - ns: bluehost.in.
 - ns: just2trade.online.
 - ns: boxsecured.com.
-- comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but not resolving
-  disable: true
+- comment: several spam domains declare cpns1.turhost.com + cpns2.turhost.com but occasionally not resolving
   ns: turhost.com.
 - ns: biswasdomain.com.
 - ns:
   - ns-150-c.gandi.net.
   - ns-41-b.gandi.net.
   - ns-9-a.gandi.net.
-- comment: 2024-07-17 NXDOMAIN
-  disable: true
+- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18
   ns: bluehosting.pk.
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
-- comment: no longer resolves 2022-06-19
-  disable: true
+- comment: no longer resolves 2022-06-19; enabled again 2024-10-18
   ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
@@ -4929,8 +5246,7 @@ items:
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
-- comment: 2023-05-06 NXDOMAIN
-  disable: true
+- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18
   ns: concepts8.com.
 - ns: linuxpl.com.
 - ns: ndx9.com.
@@ -4943,7 +5259,6 @@ items:
 - ns: purvainfosystems.info.
 - ns: bwfdns.net.
 - ns: skb-enterprise.com.
-- ns: truehostdns.com.
 - ns: jinfo.net.
 - ns: ambitioncloud.org.
 - ns: ambitionhost.org.
@@ -5023,8 +5338,7 @@ items:
 - ns: firestarthosting.com.
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
-- comment: NXDOMAIN 2022-12-03; potentially intermittent.
-  disable: true
+- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18
   ns: askbeen.com.
 - ns: hostever.com.
 - ns: sellvir.com.
@@ -5145,7 +5459,9 @@ items:
 - ns: mobilecoderz.com.
 - ns: superappscloud.com.
 - ns: hiya.digital.
-- ns: cloudserverdns.co.in.
+- comment: NXDOMAIN 2024-09-29
+  disable: true
+  ns: cloudserverdns.co.in.
 - ns: shotz.site.
 - ns: digitaldwarka.com.
 - ns: partohost.net.
@@ -5297,21 +5613,20 @@ items:
 - ns:
   - ns57.1and1.com.
   - ns58.1and1.com.
-- ns: quickinfozone.com.
+- comment: NXDOMAIN 2024-08-29; enabled again 2024-10-18
+  ns: quickinfozone.com.
 - ns: thedogmasoft.com.
 - ns: ixo.no.
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- comment: NXDOMAIN 2023-10-19
-  disable: true
+- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18
   ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
 - ns: hostcats.com.
 - ns: websiteservername.com.
 - ns: myukcloud.com.
-- ns: webpulsesolution.org.
 - ns: gohostshop.com.
 - ns: sieutocviet.com.
 - ns: hostpapavps.net.
@@ -5336,13 +5651,13 @@ items:
 - ns: webnames.ca.
 - ns: healthcareshopy.com.
 - ns: srtechnofab.com.
-- ns: drwebhost.com.
 - ns: ebndns.com.
-- comment: NXDOMAIN 2024-02-29
-  disable: true
+- comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18
   ns: splashserver.org.
 - ns: aptcom.info.
-- ns: resellerone.host.
+- comment: 2024-10-28 NXDOMAIN
+  disable: true
+  ns: resellerone.host.
 - ns: pwh-r1.com.
 - ns: gitsys.co.in.
 - ns: hostatom.com.
@@ -5356,8 +5671,7 @@ items:
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- comment: nxdomain 2023-11-07
-  disable: true
+- comment: nxdomain 2023-11-07; enabled again 2024-10-18
   ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
@@ -5392,14 +5706,12 @@ items:
 - ns: netdns.net.
 - ns: dnshorizon.com.
 - ns: welldesignedgames.com.
-- comment: NXDOMAIN 2024-05-09
-  disable: true
+- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18
   ns: ozdomainnhost.com.
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- comment: NXDOMAIN 2023-09-03
-  disable: true
+- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18
   ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
@@ -5459,7 +5771,6 @@ items:
 - ns: hostagle.com.
 - ns: supremedns.com.
 - ns: my-hosting-panel.com.
-- ns: mizbanfadns.net.
 - ns: techgropse.com.
 - ns: iseencloud.com.
 - ns: bjsps.edu.in.
@@ -5485,7 +5796,7 @@ items:
 - ns: itconvergence.com.
 - ns: xnameserver.net.
 - ns: cdn300.cn.
-- ns: etisalatdomains.ae.
+- ns: ecompany.ae.
 - ns: tasjeel.ae.
 - ns: webreus.net.
 - ns: mypremiumdns.com.
@@ -5511,6 +5822,40 @@ items:
 - ns: hostinggujju.in.
 - ns: simplidistance.com.
 - ns: vietnix.net.
+- ns: vietnix.vn.
 - ns: greengeeks.net.
 - ns: movavi.net.
 - ns: apktunnel.com.
+- ns: dan.com.
+- ns: sprintsmsservice.com.
+- ns: 040services.net.
+- ns: globalhosting.in.
+- ns: varmahomes.com.
+- ns: iamemonline.com.
+- ns: wuaze.com.
+- ns: iaasdns.com.
+- ns: vagonsoft.com.
+- ns: hostarmada.net.
+- ns: edusum.com.
+- ns: bajika.co.
+- ns: seodns.one.
+- ns:
+  - o365ce-a6h6bhehe7ccd2be.a03.azurefd.net.
+  - shed.dual-low.s-part-0024.t-0009.t-msedge.net.
+  - s-part-0024.t-0009.t-msedge.net.
+- ns: aviraweb.com.
+- ns: name-server.io.
+- ns: diymysite.com.
+- ns: name.am.
+- ns: cnmsn.net.
+- ns: cloudswebserver.com.
+- ns: webinfomatrix.com.
+- ns: multivpshost.com.
+- ns: registerdomain.net.za.
+- ns: spaceship.net.
+- ns: combiz.org.
+- ns: whc.ca.
+- ns: azehosting.net.
+- ns: afeeshost.com.
+- ns: jitendermalik.com.
+- ns: digipowerdns.com.

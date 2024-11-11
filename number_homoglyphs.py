@@ -10,6 +10,8 @@ Convert number homoglyphs to ASCII numbers
 # which is Copyright (c) 2015 Rob Dawson under an MIT license:
 # https://github.com/codebox/homoglyph/blob/master/LICENSE
 
+BASIC_HTML_TAG_REGEX = regex.compile(r'</?[A-Za-z]+\d?>')
+
 # Hex numbers are primarily used below, due to the possibility of the characters becoming corrupted when the file
 # is edited in editors which don't fully support Unicode, or even just on different operating systems.
 equivalents = {
@@ -144,6 +146,9 @@ translate_table = str.maketrans(translate_dict)
 
 
 def normalize(text):
+    if len(text) > 3:
+        # Replace things that look like basic HTML tags with a space.
+        text = BASIC_HTML_TAG_REGEX.sub(' ', text)
     return text.translate(translate_table)
 
 
