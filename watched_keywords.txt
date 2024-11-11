@@ -68338,3 +68338,4 @@
 1731306275	VLAZ	gthtjj\.blogspot
 1731306433	Cow	zyyinstrument\.com
 1731307267	Cow	lekedvideo\.xyz
+1731307788	Cow	leaked[\W_]*+viral[\W_]*+video
