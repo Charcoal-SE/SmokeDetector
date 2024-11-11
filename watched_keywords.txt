@@ -68350,3 +68350,4 @@
 1731326031	VLAZ	newbealers?(?!\.com(?<=newbealers\.com))
 1731326156	Cow	rentyourmac\.com
 1731331872	Cow	phd[\W_]*+mastermind[\W_]*+support
+1731335714	Cow	limcypackaging\.com
