@@ -360,7 +360,7 @@ class YAMLParserNS(YAMLParserCIDR):
     def validate_list(self, list_to_validate):
         # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
         # it appeared to result in longer times and intermittent failures.
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        with ThreadPoolExecutor(max_workers=10) as executor:
             return list(executor.map(self._validate, list_to_validate, timeout=300))
 
     def validate(self):
