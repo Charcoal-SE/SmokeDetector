@@ -68347,4 +68347,3 @@
 1731321903	VLAZ	naganotonic1\.creatorlink\.net
 1731322680	VLAZ	aicsm\.com
 1731323651	Jeff Schaller	poolnoodles\.shop
-1731325995	VLAZ	newbealers?(?!\.com)
