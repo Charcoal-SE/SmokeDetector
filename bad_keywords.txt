@@ -379,7 +379,6 @@ marine\Wmuscle
 virility\Wex
 tru[\W_]*+allure
 tongkat\Wali
-(?:element[\W_]*+)?x[\W_]*+cbd
 ys\Wcream
 profollix
 mirage\Wimperial
