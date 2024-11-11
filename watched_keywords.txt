@@ -68351,3 +68351,4 @@
 1731326156	Cow	rentyourmac\.com
 1731331872	Cow	phd[\W_]*+mastermind[\W_]*+support
 1731335714	Cow	limcypackaging\.com
+1731336256	Cow	dailyhairstyle\.us
