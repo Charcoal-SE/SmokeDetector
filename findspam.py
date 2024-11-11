@@ -1393,7 +1393,7 @@ def dns_query(label, qtype):
         # Extend lifetime if we are running a test
         extra_params = dict()
         if "pytest" in sys.modules:
-            extra_params['lifetime'] = 60
+            extra_params['lifetime'] = 20
         answer = dns.resolver.resolve(label, qtype, search=True, **extra_params)
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
