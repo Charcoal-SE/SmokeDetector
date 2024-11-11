@@ -64493,7 +64493,6 @@
 1722584408	Dragonrage	educatorsinn\.quora\.com
 1722584429	Dragonrage	educators\s?inn
 1722584463	Dragonrage	edu\s?pros\s?online\s?
-1722584578	Dragonrage	scideassolutions\.com
 1722592885	VLAZ	crackorg\.com
 1722592995	VLAZ	infocareerindia\.com
 1722593130	VLAZ	makcrack\.com
