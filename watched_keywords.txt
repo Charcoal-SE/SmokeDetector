@@ -68335,3 +68335,4 @@
 1731305230	Cow	neutrogena\.com
 1731305275	Cow	supertails\.com
 1731306257	VLAZ	lekedvideoь\.xyz
+1731306266	VLAZ	(?-i:cGF4l)(?# goto.now)
