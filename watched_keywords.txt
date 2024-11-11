@@ -68340,3 +68340,4 @@
 1731307267	Cow	lekedvideo\.xyz
 1731307788	Cow	leaked[\W_]*+viral[\W_]*+video
 1731308216	VLAZ	marthub\.com
+1731308227	VLAZ	abdullahcarrecovery\.com
