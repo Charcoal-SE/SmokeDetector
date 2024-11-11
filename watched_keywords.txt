@@ -68348,3 +68348,4 @@
 1731322680	VLAZ	aicsm\.com
 1731323651	Jeff Schaller	poolnoodles\.shop
 1731326031	VLAZ	newbealers?(?!\.com(?<=newbealers\.com))
+1731326156	Cow	rentyourmac\.com
