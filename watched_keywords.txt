@@ -68333,3 +68333,4 @@
 1731302343	Cow	rmhomes\.in
 1731302380	Cow	spotilisening\.com
 1731305230	Cow	neutrogena\.com
+1731305275	Cow	supertails\.com
