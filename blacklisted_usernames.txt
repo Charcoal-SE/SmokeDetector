@@ -1201,3 +1201,4 @@ carelab[sz]
 (?-i:^Terus Technology$)
 (?-i:^alltechelect$)
 (?-i:^CW Ticketing System$)
+(?-i:^Juzzlicka Arrbrunk$)
