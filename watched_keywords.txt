@@ -68366,3 +68366,4 @@
 1731392449	Cow	call[\W_]*+[\w]+[\W_]*+customer[\W_]*+care
 1731392697	VLAZ	vifreehd\.com
 1731392906	VLAZ	(?-i:hubunganindonesia)(?# t.ly)
+1731392914	VLAZ	AT777
