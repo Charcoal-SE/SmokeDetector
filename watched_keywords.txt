@@ -68371,3 +68371,4 @@
 1731398235	Cow	callgirlsinraipur\.com
 1731399597	VLAZ	amansamrat\.com
 1731401683	Cow	couponreals\.com
+1731401735	Cow	coupon[\W_]*+reals(?!\.com(?<=couponreals\.com))
