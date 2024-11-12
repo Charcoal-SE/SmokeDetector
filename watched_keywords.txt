@@ -68381,3 +68381,4 @@
 1731414926	Cow	chat[\W_]*+with[\W_]*+customer[\W_]*+support[\d\W_]*+
 1731415496	Cow	support[\W_]*+or[\W_]*+help[\W_]*+section
 1731415829	Anerdw	nudify\.me
+1731415879	Cow	jio[\W_]*+app
