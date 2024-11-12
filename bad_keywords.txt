@@ -3182,3 +3182,4 @@ voot-express-hd\.blogspot
 hackerspytech
 our[\W_]*+dedicated[\W_]*+support[\W_]*+team
 cheapest[\W_]*+day[\W_]*+of[\W_]*+the[\W_]*+week
+lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
