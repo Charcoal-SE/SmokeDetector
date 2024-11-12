@@ -68364,3 +68364,4 @@
 1731391690	Cow	refund[\W_]*+contact[\W_]*+customer[\W_]*+support
 1731391974	Cow	cheapest[\W_]*+day[\W_]*+of[\W_]*+the[\W_]*+week
 1731392184	VLAZ	cardvcc\.com
+1731392449	Cow	call[\W_]*+[\w]+[\W_]*+customer[\W_]*+care
