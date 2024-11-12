@@ -68185,7 +68185,6 @@
 1730901300	VLAZ	adultswimlesson\.co\.uk
 1730901309	VLAZ	swimminglessonslondon\.co\.uk
 1730902385	VLAZ	deriscope\.com
-1730903385	Cow	wrong[\W_]*+recharge[\W_]*+from
 1730913341	Cow	hackgate\.io
 1730918564	Cow	arabiantourpackages\.com
 1730920342	Anerdw	theliquoris\.com
