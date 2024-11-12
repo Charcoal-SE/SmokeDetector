@@ -68374,3 +68374,4 @@
 1731408567	VLAZ	yowsap\.com
 1731408616	VLAZ	yo[\W_]*+whatsapp(?!\.org(?<=yowhatsapp\.org))
 1731408994	VLAZ	gkvideosplus\.blogspot
+1731409488	VLAZ	leaked[\W_]*+video
