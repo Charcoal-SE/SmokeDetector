@@ -68378,3 +68378,4 @@
 1731411274	Cow	tours-india\.com
 1731411385	Cow	simify\.com
 1731411402	Cow	simsdirect\.com\.au
+1731414926	Cow	chat[\W_]*+with[\W_]*+customer[\W_]*+support[\d\W_]*+
