@@ -68360,3 +68360,4 @@
 1731366406	Vickel	venom[\W_]*+3[\W_]*+ultimul
 1731372052	Makyen	dronihaspell(?:@yahoo\.com)?
 1731386885	Makyen	virtuenetz(?!\.pk)
+1731387479	Cow	truecriminalstories\.com
