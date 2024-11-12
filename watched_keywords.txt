@@ -44388,7 +44388,6 @@
 1668582576	tripleee	rambet[\W_]*+exchane?ge
 1668584857	tripleee	gmtasoftware\.com
 1668585569	cigien	gmta[\W_]*+software(?!\.com(?<=gmtasoftware\.com))
-1668586524	tripleee	yowhatsapp(?!\.org)
 1668587545	tripleee	digitalspec\.net
 1668588452	tripleee	king365-tv\.fr
 1668589412	tripleee	(?-i:^Shawn Fedrick$)
