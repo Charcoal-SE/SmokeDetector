@@ -68365,3 +68365,4 @@
 1731392184	VLAZ	cardvcc\.com
 1731392449	Cow	call[\W_]*+[\w]+[\W_]*+customer[\W_]*+care
 1731392697	VLAZ	vifreehd\.com
+1731392906	VLAZ	(?-i:hubunganindonesia)(?# t.ly)
