@@ -68377,3 +68377,4 @@
 1731409488	VLAZ	leaked[\W_]*+video
 1731411274	Cow	tours-india\.com
 1731411385	Cow	simify\.com
+1731411402	Cow	simsdirect\.com\.au
