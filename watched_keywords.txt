@@ -68413,3 +68413,4 @@
 1731502466	Cow	full[\W_]*+video[\W_]*+original
 1731503759	Jeff Schaller	want520\.net
 1731515182	Jeff Schaller	leadsflex\.com
+1731516315	VLAZ	spurmenu\.com
