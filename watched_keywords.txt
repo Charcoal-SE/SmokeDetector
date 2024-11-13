@@ -68402,3 +68402,4 @@
 1731492791	VLAZ	webinoco\.ir
 1731494730	VLAZ	waseemsays(?!\.com)
 1731496216	VLAZ	com\.geoflixzplus\.app(?# Google play store app)
+1731496246	VLAZ	sifx\.com
