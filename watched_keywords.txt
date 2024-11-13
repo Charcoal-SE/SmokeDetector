@@ -68411,3 +68411,4 @@
 1731498820	Cow	offplansearch\.ae
 1731498925	Cow	cash4u\.com
 1731500138	VLAZ	jobsacoo\.blogspot
+1731502466	Cow	full[\W_]*+video[\W_]*+original
