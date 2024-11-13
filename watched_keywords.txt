@@ -68400,3 +68400,4 @@
 1731484336	Cow	poweroffactorial\.in
 1731489149	Cow	studyworldonline\.com
 1731492791	VLAZ	webinoco\.ir
+1731494730	VLAZ	waseemsays(?!\.com)
