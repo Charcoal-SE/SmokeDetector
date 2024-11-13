@@ -68405,3 +68405,4 @@
 1731496246	VLAZ	sifx\.com
 1731496695	Jeff Schaller	prestigepeptides\.com
 1731496757	VLAZ	prestige[\W_]*+peptides(?!\.com(?<=prestigepeptides\.com))
+1731497773	Jeff Schaller	zamzamtravelsbd\.com
