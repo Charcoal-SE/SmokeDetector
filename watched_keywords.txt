@@ -68416,3 +68416,4 @@
 1731516315	VLAZ	spurmenu\.com
 1731517254	Vickel	transformlearningacademy\.com
 1731517342	VLAZ	transform[\W_]*+learning[\W_]*+academy(?!\.com(?<=transformlearningacademy\.com))
+1731518649	VLAZ	testleaf(?!\.com)
