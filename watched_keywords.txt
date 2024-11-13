@@ -68391,3 +68391,4 @@
 1731456238	Fastnlight	Hackspypivot\.Com
 1731456380	Fastnlight	Hackspypivot(?!\.com(?<=hackspypivot\.com))
 1731473863	Cow	selfbeingblog\.wordpress\.com
+1731476053	Makyen	groupfacebookads
