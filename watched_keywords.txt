@@ -68418,3 +68418,4 @@
 1731517342	VLAZ	transform[\W_]*+learning[\W_]*+academy(?!\.com(?<=transformlearningacademy\.com))
 1731518649	VLAZ	testleaf(?!\.com)
 1731526303	Glorfindel	cloudastra
+1731528068	Jeff Schaller	webwavemarket\.com
