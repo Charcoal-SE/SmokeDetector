@@ -68403,3 +68403,4 @@
 1731494730	VLAZ	waseemsays(?!\.com)
 1731496216	VLAZ	com\.geoflixzplus\.app(?# Google play store app)
 1731496246	VLAZ	sifx\.com
+1731496695	Jeff Schaller	prestigepeptides\.com
