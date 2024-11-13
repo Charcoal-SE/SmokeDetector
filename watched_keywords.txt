@@ -68415,3 +68415,4 @@
 1731515182	Jeff Schaller	leadsflex\.com
 1731516315	VLAZ	spurmenu\.com
 1731517254	Vickel	transformlearningacademy\.com
+1731517342	VLAZ	transform[\W_]*+learning[\W_]*+academy(?!\.com(?<=transformlearningacademy\.com))
