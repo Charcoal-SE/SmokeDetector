@@ -68395,3 +68395,4 @@
 1731479713	VLAZ	digitalerena\.com
 1731481504	Cow	ytshortsdown\.com
 1731481531	Cow	ytshortsdown(?!\.com(?<=ytshortsdown\.com))
+1731482175	Dragonrage	ultraproex\.com
