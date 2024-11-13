@@ -68397,3 +68397,4 @@
 1731481531	Cow	ytshortsdown(?!\.com(?<=ytshortsdown\.com))
 1731482175	Dragonrage	ultraproex\.com
 1731482372	Cow	vibrant\.co\.in
+1731483279	Dragonrage	dharmikmind\.com
