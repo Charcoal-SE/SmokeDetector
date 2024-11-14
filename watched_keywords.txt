@@ -68433,3 +68433,4 @@
 1731581649	VLAZ	craw\.in
 1731581703	VLAZ	kmerphone\.com
 1731582765	VLAZ	vape4smoke\.co\.uk
+1731582814	VLAZ	ictd\.gov\.bd
