@@ -29282,7 +29282,6 @@
 1623305987	cigien	fullphanmem\.com
 1623306238	cigien	wise\.deals
 1623306307	Ryan M	(?:full|tai)phanmem(?!\.com(?<=fullphanmem\.com))
-1623307178	cigien	mssg\.me
 1623308519	Ryan M	okjet\.com
 1623308684	Ryan M	sayngon\.com
 1623313144	Wai Ha Lee	aecotractors\.com
