@@ -3161,6 +3161,9 @@ items:
   - yew.ns.cloudflare.com.
 - ns:
   - kip.ns.cloudflare.com.
+  - lindsey.ns.cloudflare.com.
+- ns:
+  - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
   - kipp.ns.cloudflare.com.
