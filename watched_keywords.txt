@@ -68427,3 +68427,4 @@
 1731578160	tripleee	elegant\.fashion58(?# tiktok)
 1731581097	VLAZ	rpgguild\.shop
 1731581116	VLAZ	udli\.de
+1731581145	VLAZ	sapficohub\.com
