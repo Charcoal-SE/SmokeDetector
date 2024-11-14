@@ -68425,3 +68425,4 @@
 1731577602	tripleee	(?-i:^abuislam$)
 1731578116	tripleee	elegantfashion\.vn
 1731578160	tripleee	elegant\.fashion58(?# tiktok)
+1731581097	VLAZ	rpgguild\.shop
