@@ -68432,7 +68432,6 @@
 1731581649	VLAZ	craw\.in
 1731581703	VLAZ	kmerphone\.com
 1731582765	VLAZ	vape4smoke\.co\.uk
-1731582814	VLAZ	ictd\.gov\.bd
 1731584970	Jeff Schaller	dogcarseatco\.co\.uk
 1731586823	Jeff Schaller	jaiswalpharma\.com
 1731590028	VLAZ	WARNING:-DO-NOT-SHARE-THIS\.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items
