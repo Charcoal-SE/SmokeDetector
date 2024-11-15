@@ -68462,3 +68462,4 @@
 1731674809	tripleee	(?-i:^crmsoftware360$)
 1731675508	tripleee	(?-i:^Saransh Prajapati$)
 1731680207	tripleee	vuelosdesdelahabana\.es
+1731690357	Spevacus	onepagehoroscope\.com
