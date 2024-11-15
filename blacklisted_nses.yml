@@ -211,6 +211,9 @@ items:
   - carrera.ns.cloudflare.com.
   - jake.ns.cloudflare.com.
 - ns:
+  - carrera.ns.cloudflare.com.
+  - porter.ns.cloudflare.com.
+- ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
