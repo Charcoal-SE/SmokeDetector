@@ -68460,3 +68460,4 @@
 1731668201	tripleee	tstyle\.rf\.gd
 1731668273	tripleee	jimdofree\.com
 1731671852	VLAZ	ceumed\.com
+1731674809	tripleee	(?-i:^crmsoftware360$)
