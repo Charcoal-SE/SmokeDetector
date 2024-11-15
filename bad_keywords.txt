@@ -3186,3 +3186,4 @@ lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwel
 (?-i:fudplayprotect)(?# t.me)
 أركان المتحدة القطاع الصحي
 arkan[\W_]*united(?!\.com(?<=arkan-united\.com))(?!<(?-i:^arkan united$))
+custom[\W_]*+lapel[\W_]*+pins
