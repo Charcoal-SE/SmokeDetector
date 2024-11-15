@@ -1202,3 +1202,4 @@ carelab[sz]
 (?-i:^CW Ticketing System$)
 (?-i:^Juzzlicka Arrbrunk$)
 (?-i:^SEO Soho Tech$)
+(?-i:^arkan united$)
