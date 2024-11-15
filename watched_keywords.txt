@@ -68448,3 +68448,4 @@
 1731635313	Makyen	shiqi_cao(?<=medium\.com/@shiqi_cao)
 1731651029	Cow	sosjovo\.com
 1731651465	Cow	ketohub\.org
+1731651498	Cow	(?-i:ClarityBloomCBDGummiesOfficials)(?# facebook.com CBD Gummies spam)
