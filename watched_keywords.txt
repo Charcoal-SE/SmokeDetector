@@ -68450,3 +68450,4 @@
 1731651465	Cow	ketohub\.org
 1731651498	Cow	(?-i:ClarityBloomCBDGummiesOfficials)(?# facebook.com CBD Gummies spam)
 1731654355	Cow	digitalgearspot\.com
+1731651803	Anerdw	brownsofts\.com
