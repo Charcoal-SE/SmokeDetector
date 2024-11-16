@@ -68471,3 +68471,4 @@
 1731746666	Cow	milalan\.com
 1731746753	Cow	Phone[\W_]*+Pe
 1731749112	Cow	itacraked\.com
+1731750019	VLAZ	Laked[\W_]*+Video
