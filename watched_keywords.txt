@@ -68470,4 +68470,3 @@
 1731745290	Cow	win777okvip(?:@gmail\.com)?
 1731746666	Cow	milalan\.com
 1731746753	Cow	Phone[\W_]*+Pe
-1731749037	Cow	61435727931
