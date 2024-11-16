@@ -68472,3 +68472,4 @@
 1731746753	Cow	Phone[\W_]*+Pe
 1731749112	Cow	itacraked\.com
 1731750019	VLAZ	Laked[\W_]*+Video
+1731750748	VLAZ	abbottlyon\.com
