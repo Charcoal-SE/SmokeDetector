@@ -1205,3 +1205,4 @@ carelab[sz]
 (?-i:^arkan united$)
 (?-i:^Razib hossain$)
 (?-i:^Print X$)
+(?-i:^rankmysite$)
