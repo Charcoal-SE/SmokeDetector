@@ -68496,7 +68496,6 @@
 1731855165	Cow	raharjokurnainbudi
 1731855191	Cow	almirazakia71(?:@gmail\.com)?
 1731857664	Cow	giftsbyseven\.vn
-1731857769	Cow	(?-i:@cuahangquatang)(?# tiktok.com)
 1731857819	Cow	(?-i:gifts_byseven)(?# instagram.com)
 1731857891	Cow	gifts[\W_]*+by[\W_]*+seven(?!\.vn(?<=giftsbyseven\.vn))
 1731861716	Jeff Schaller	iptvsmarters4k\.us
