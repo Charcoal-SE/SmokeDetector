@@ -2606,6 +2606,9 @@ items:
   - louis.ns.cloudflare.com.
 - ns:
   - heather.ns.cloudflare.com.
+  - rex.ns.cloudflare.com.
+- ns:
+  - heather.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
   - heidi.ns.cloudflare.com.
