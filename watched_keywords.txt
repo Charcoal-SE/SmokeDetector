@@ -66032,7 +66032,6 @@
 1725777918	Dragonrage	medikit\.store
 1725778733	Dragonrage	shl\.com
 1725787870	Cody Gray	palestine-shirts\.com
-1725789909	double-beep	serialsofts\.com
 1725792618	Cody Gray	vivalditech
 1725792688	Cody Gray	VIVALDI[\W_]*+CYBER[\W_]*+TECH
 1725792914	Cody Gray	yihiuman[\W_]*@[\W_]*vivaldi[\W_]*\.[\W_]*net
