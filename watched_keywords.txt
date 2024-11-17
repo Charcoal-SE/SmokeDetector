@@ -68500,3 +68500,4 @@
 1731857891	Cow	gifts[\W_]*+by[\W_]*+seven(?!\.vn(?<=giftsbyseven\.vn))
 1731861716	Jeff Schaller	iptvsmarters4k\.us
 1731862323	Cow	(?-i:cuahangquatang)(?# tiktok.com)
+1731863578	Cow	studytechniques\.info
