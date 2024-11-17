@@ -68497,3 +68497,4 @@
 1731855191	Cow	almirazakia71(?:@gmail\.com)?
 1731857664	Cow	giftsbyseven\.vn
 1731857769	Cow	(?-i:@cuahangquatang)(?# tiktok.com)
+1731857819	Cow	(?-i:gifts_byseven)(?# instagram.com)
