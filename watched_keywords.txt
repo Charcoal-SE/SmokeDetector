@@ -68514,3 +68514,4 @@
 1731929633	VLAZ	thepetslover\.com
 1731929643	VLAZ	the[\W_]*+pets[\W_]*+lover(?!\.com(?<=thepetslover\.com))
 1731929707	VLAZ	cjcpa\.ca
+1731932914	Jeff Schaller	tibberkids\.com
