@@ -68525,3 +68525,4 @@
 1731954923	Cow	whollyshrink\.com
 1731955412	Nisse Engström	iranajil\.com
 1731955674	Cow	sohotechservices\.com
+1731955696	Cow	(?-i:GeneralArmistice)(?# t.me)
