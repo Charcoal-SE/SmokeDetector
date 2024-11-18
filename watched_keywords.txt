@@ -68512,3 +68512,4 @@
 1731928550	Jeff Schaller	dnyastainless\.com
 1731929128	VLAZ	samco\.in
 1731929633	VLAZ	thepetslover\.com
+1731929643	VLAZ	the[\W_]*+pets[\W_]*+lover(?!\.com(?<=thepetslover\.com))
