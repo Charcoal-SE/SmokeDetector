@@ -68507,3 +68507,4 @@
 1731919961	tripleee	bestpillsvendor\.us
 1731920084	tripleee	daman[\W_]*+games
 1731920109	tripleee	(?-i:EmMpO751895)(?# daman games invite code)
+1731928343	Jeff Schaller	shopdenled\.com\.vn
