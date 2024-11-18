@@ -1208,3 +1208,4 @@ carelab[sz]
 (?-i:^rankmysite$)
 ^carx[\W_]*+street(?:[\W_]*+drive)?$
 (?-i:^Kavya Saxena$)
+(?-i:^keerthi varsha$)
