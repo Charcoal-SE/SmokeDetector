@@ -68519,3 +68519,4 @@
 1731935589	VLAZ	chris[\W_]*+sails[\W_]*+(?:video(?:[\W_]*+viral)?|viral[\W_]*+video)
 1731937907	tripleee	dreamhomeassociates\.co\.in
 1731946296	tripleee	bodygym\.com
+1731946681	tripleee	linkedin\.com/jobs/view
