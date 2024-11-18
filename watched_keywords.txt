@@ -68517,3 +68517,4 @@
 1731932914	Jeff Schaller	tibberkids\.com
 1731935579	VLAZ	bbestblog\.com
 1731935589	VLAZ	chris[\W_]*+sails[\W_]*+(?:video(?:[\W_]*+viral)?|viral[\W_]*+video)
+1731937713	tripleee	amhomeassociates\.co\.in
