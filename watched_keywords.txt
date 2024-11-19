@@ -68557,3 +68557,4 @@
 1732031772	Cow	supsemi\.com
 1732032539	Cow	pbdropshipping\.com
 1732037574	Nisse Engström	paperub\.com
+1732037739	Cow	cancel[\W_]*+a[\W_]*+recharge
