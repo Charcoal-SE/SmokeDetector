@@ -68534,3 +68534,4 @@
 1732004341	Cow	hrbs\.com\.pk
 1732005081	Cow	quamitavn(?:@gmail\.com)?
 1732005333	Cow	elitejacket\.com
+1732007027	Cow	capprocutapk\.com
