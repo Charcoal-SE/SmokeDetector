@@ -68564,3 +68564,4 @@
 1732043452	VLAZ	(?-i:J62AKSTTABCGD1)(?# wa.me)
 1732045526	Jeff Schaller	giftcardshop\.atwebpages\.com
 1732056747	Fastnlight	(?-i:3CjNfft)(?#bit.ly)
+1732057542	Vickel	sir_lemus(?:@hotmail\.com)?
