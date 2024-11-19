@@ -68551,3 +68551,4 @@
 1732028821	Anerdw	Sirge[\W_]*+Alt[\W_]*+Text[\W_]*+Scan
 1731994860	Anerdw	paybyplatema\.lol
 1732031311	Cow	ffdipl\.com
+1732031325	Cow	miravella\.tn
