@@ -68530,3 +68530,4 @@
 1731988226	Makyen	chollada\.summa(?:@gmail\.com)?
 1731989952	Fastnlight	upliftersite\.blogspot
 1732002384	Cow	CoinCollectExperts
+1732004296	Cow	tajmahaldaytour\.net
