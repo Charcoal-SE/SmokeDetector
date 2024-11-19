@@ -68532,3 +68532,4 @@
 1732002384	Cow	CoinCollectExperts
 1732004296	Cow	tajmahaldaytour\.net
 1732004341	Cow	hrbs\.com\.pk
+1732005081	Cow	quamitavn(?:@gmail\.com)?
