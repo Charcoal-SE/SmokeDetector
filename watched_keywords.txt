@@ -56422,7 +56422,6 @@
 1704521940	Jesse	tradinhindi\.blogspot
 1704540871	Cow	mecciengineer\.com
 1704542317	Jeff Schaller	mohandessite\.com
-1704543017	VLAZ	Medzsquare\.com
 1704546158	Vickel	codingclavetechnologies\.com
 1704546247	Vickel	codingclave[\W_]*+technologies(?!\.com)
 1704546335	Jeff Schaller	fireboxtools\.com
