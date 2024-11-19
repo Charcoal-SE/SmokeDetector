@@ -68533,3 +68533,4 @@
 1732004296	Cow	tajmahaldaytour\.net
 1732004341	Cow	hrbs\.com\.pk
 1732005081	Cow	quamitavn(?:@gmail\.com)?
+1732005333	Cow	elitejacket\.com
