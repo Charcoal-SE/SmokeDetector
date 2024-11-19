@@ -68559,3 +68559,4 @@
 1732037574	Nisse Engström	paperub\.com
 1732037739	Cow	cancel[\W_]*+a[\W_]*+recharge
 1732038270	Nisse Engström	sanarhmn\.com
+1732042410	VLAZ	layerlogix\.com
