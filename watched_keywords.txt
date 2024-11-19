@@ -68537,3 +68537,4 @@
 1732007027	Cow	capprocutapk\.com
 1732009037	Cow	codebitmatrix\.com
 1732015438	VLAZ	buy-strip\.com
+1732015453	Jeff Schaller	bb-simon\.com
