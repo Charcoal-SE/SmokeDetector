@@ -68562,3 +68562,4 @@
 1732042410	VLAZ	layerlogix\.com
 1732042445	VLAZ	layer[\W_]*+logix(?!\.com(?<=layerlogix\.com))
 1732043452	VLAZ	(?-i:J62AKSTTABCGD1)(?# wa.me)
+1732045526	Jeff Schaller	giftcardshop\.atwebpages\.com
