@@ -68548,3 +68548,4 @@
 1732020120	VLAZ	DeskTrack(?!\.timentask\.com)
 1732025898	Jeff Schaller	watchbandexpert\.com
 1732028731	Anerdw	five-chain\.com
+1732028821	Anerdw	Sirge[\W_]*+Alt[\W_]*+Text[\W_]*+Scan
