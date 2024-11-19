@@ -68527,3 +68527,4 @@
 1731955696	Cow	(?-i:GeneralArmistice)(?# t.me)
 1731955935	Cow	nandomenu\.co\.uk
 1731967070	Anerdw	thegrowgarden\.com
+1731987908	Fastnlight	summa\.co\.th
