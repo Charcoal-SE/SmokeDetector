@@ -68545,3 +68545,4 @@
 1732018446	Cow	hinduastrology\.life
 1732019003	Cow	bangsaonline\.com
 1732019113	Jeff Schaller	binmile\.com
+1732020120	VLAZ	DeskTrack(?!\.timentask\.com)
