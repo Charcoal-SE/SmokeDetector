@@ -68545,3 +68545,4 @@
 1732016081	VLAZ	the[\W_]*+lotus[\W_]*+biotech(?!\.com(?<=thelotusbiotech\.com))
 1732018446	Cow	hinduastrology\.life
 1732019003	Cow	bangsaonline\.com
+1732019113	Jeff Schaller	binmile\.com
