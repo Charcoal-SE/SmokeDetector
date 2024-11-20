@@ -68573,3 +68573,4 @@
 1732082030	VLAZ	(?-i:1gAaGgQ)(?# sqzly.co)
 1732085477	VLAZ	qoricanchaexpeditions\.com
 1732086451	VLAZ	webjobwork\.com
+1732086808	VLAZ	s2material\.blogspot
