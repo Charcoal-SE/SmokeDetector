@@ -127,7 +127,7 @@ class TestRoomReports(TestCase):
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', True),
     ('', '', 'bagprada', '', True),
-    ('12 Month Loans quick @ https://www.quick12monthpaydayloans.co.uk/Elimination of collateral pledging', '', '', '', True),
+    ('12 Month Loans quick @ https://www.quick12monthpaydayloans.example.co.uk/Elimination of collateral pledging', '', '', '', True),
     ('support for yahoo mail 18669786819 @call for helpline number', '', '', '', True),
     ('yahoo email tech support 1 866 978 6819 Yahoo Customer Phone Number ,Shortest Wait', '', '', '', True),
     ('Not a phone number 192.168.0.1', 'Not a phone number 192.168.0.1', '', '', False),
