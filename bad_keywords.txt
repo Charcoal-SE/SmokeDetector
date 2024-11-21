@@ -3191,3 +3191,4 @@ fastfundrecovery8
 638374264877(?# invite code)
 enertech[\W_]*+ups
 91[\W_]*+club
+accidentally[\W_]*+recharged
