@@ -222,6 +222,7 @@ stackexchange.com:
       - 4617916  # dbc
       - 32732911 # Anerdw
       - 851      # Jeremy Banks
+      - 418284   # gre_gor
 
   65945:  # Charcoal Test
     commands: true
@@ -686,6 +687,7 @@ stackoverflow.com:
       - experimental-site-stackoverflow.com
       - experimental-site-meta.stackoverflow.com
       - no-offensive-mask
+      - long-rule-times
 
     privileges:
       - 270038   # Floern
