@@ -197,8 +197,9 @@ class GitManager:
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1{5}{6}) "
+                                   "and the Stack Exchange search "
+                                   "[in text](https://stackexchange.com/search?q=%22{7}%22)"
                                    ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
                                    ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
                                    ".\n"
