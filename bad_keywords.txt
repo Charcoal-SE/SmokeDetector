@@ -6,7 +6,6 @@ writing(?<!code\Wwriting)(?<!script\Wwriting)(?<!\bre\Wwriting)(?<!\bi'm\Wwritin
 tosterone
 we (?:offer|give out) (?:loans?|funds?|funding)
 skin[\W_]*+(?:endear|royale|cell[\W_]*+pro|opulent|ology|centric)
-(?:rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)[\W_]*+skin
 acne(?:[\W_]*+prone)?\Wskin
 (?:skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
@@ -345,7 +344,6 @@ luxlift
 erectimax
 forskolin
 stamina\Wfuel
-nuviante
 silkalike
 vitaeyes
 neutratone
@@ -381,7 +379,6 @@ marine\Wmuscle
 virility\Wex
 tru[\W_]*+allure
 tongkat\Wali
-(?:element[\W_]*+)?x[\W_]*+cbd
 ys\Wcream
 profollix
 mirage\Wimperial
@@ -496,9 +493,7 @@ vigfx
 muscle[\W_]*+rampage
 i have also find out one good example
 sexual[\W_]*+decoder
-zyklon
 skin[\W_]*+fresh[\W_]*+md
-renuvica
 Max\WTest\WUltra
 herbal ?(?:doctor|center|centre|clinic)
 herbalife
@@ -1452,7 +1447,6 @@ rapid[\W_]*+spot
 surgexon
 lojesete
 top\Wshelf\Waaa\Wbuds
-nuvi
 legendz[\W_]*+xl
 ambrosina
 kidney[\W_]*+bean[\W_]*+extract
@@ -1552,7 +1546,7 @@ veda[\W_]*+soothie
 nutri[\W_]*+sleep(?:[\W_]*+rx)?
 geno[\W_]*+drive
 naturalherbalgardens
-/(?<=:?//(?:[\w-]*\.)*[\w-]*(?<![./](?:stackexchange|stackoverflow)\.com)(?<![.\/]serverfault\.com)(?<![.\/](?:superuser|askubuntu|stackapps)\.com)(?<![.\/]mathoverflow\.net)(?<![.\/](?:costco|lenovo|github)\.com)(?<![.\/](?:imgur|epson|canon|apple)\.com)(?<![.\/]asus\.com)(?<![.\/]ibm\.com)(?<![.\/]bestbuy\.com)(?<![.\/]cnet\.com)(?<![.\/]drivereasy\.com)(?<![.\/]example\.com)(?<![.\/]flipkart\.com)(?<![.\/]localserver)(?<![.\/]michael-peeters\.blogspot\.ca)(?<![.\/]microsoft\.com)(?<![.\/]needrom\.com)(?<![.\/]paytmmall\.com)(?<![.\/]projektar\.hu)(?<![.\/]r1\.ilikewallpaper\.net)(?<![.\/]usccb\.org)(?<![.\/]robsworldoftech\.blogspot\.com\.au)(?<![.\/]www\.amazon\.co\.uk)(?<![.\/]www\.amazon\.in)(?<![.\/]www\.ebay\.com)(?<![.\/]www\.ebay\.fr)(?<![.\/]www\.johnlewis\.com)(?<![.\/]zoom\.cnews\.ru)/(?:[\w-]*/)*)(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lenovo|lexmark|quickbooks)-(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#XXX)
+/(?<=:?//(?:[\w-]*\.)*[\w-]*(?<![./](?:stackexchange|stackoverflow)\.com)(?<![.\/]serverfault\.com)(?<![.\/](?:superuser|askubuntu|stackapps)\.com)(?<![.\/]mathoverflow\.net)(?<![.\/](?:costco|lenovo|github)\.com)(?<![.\/](?:imgur|epson|canon|apple)\.com)(?<![.\/]asus\.com)(?<![.\/]ibm\.com)(?<![.\/]bestbuy\.com)(?<![.\/]cnet\.com)(?<![.\/]drivereasy\.com)(?<![.\/]example\.com)(?<![.\/]flipkart\.com)(?<![.\/]localserver)(?<![.\/]michael-peeters\.blogspot\.ca)(?<![.\/]microsoft\.com)(?<![.\/]needrom\.com)(?<![.\/]paytmmall\.com)(?<![.\/]projektar\.hu)(?<![.\/]r1\.ilikewallpaper\.net)(?<![.\/]usccb\.org)(?<![.\/]robsworldoftech\.blogspot\.com\.au)(?<![.\/]www\.amazon\.co\.uk)(?<![.\/]www\.amazon\.in)(?<![.\/]www\.ebay\.com)(?<![.\/]www\.ebay\.fr)(?<![.\/]www\.johnlewis\.com)(?<![.\/]zoom\.cnews\.ru)/(?:[\w-]*/)*)(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lexmark|quickbooks)-(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?#XXX)
 allavsoft(?!\.com)
 Apx[\W_]*+Me
 bella[\W_]*+pelle
@@ -2921,7 +2915,6 @@ brunoe[\W_]*+quick[\W_]*+hack(?!\.com(?<=brunoequickhack\.com))(?:[\W_]*(?:at[\W
 omega[\W_]*+crypto(?:[\W_]*+recovery)?
 captain[\W_]*+webgenesis
 wizard[\W_]*+james(?:[\W_]*+(?:wallet|recovery))+
-khelraja(?!\.com)
 microprokey(?!\.com)(?!\.xyz)
 certsarea(?!\.com)
 (?:HAK)?5ISPY(?:HAK)?+(?!\.com(?<=5ISPYHAK\.COM))\d{0,5}
@@ -3023,7 +3016,6 @@ easyreclaim0(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 FASTFUND[\W_]*+RECOVERY
 yda5js6u
 totomacau
-crafty[\W_]*+art(?!app\.com(?<=craftyartapp\.com))
 dragon[\W_]*+web[\W_]*+recovery(?![\W_]*+com)(?:[\W_]*+(?:at[\W_]*+)?tuta(?:[\W_]*+(?:dot[\W_]*+)?io)?)?
 drsunnydsolution1(?:@gmail\.com)?
 saclux[\W_]*+comptech[\W_]*+specialst(?:[\W_]*+(?:at[\W_]*+)?engineer(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -3054,7 +3046,6 @@ consider[\W_]*+banning[\W_]*+my[\W_]*+account
 (?-i:6d60c5964fff913b8c2dc63323ffd65a\.jpg)
 (?-i:wl8hgu3zrc)
 ugc[\W_]*+net[\W_]*+coaching
-navicosoft(?!\.com)(?!\.co\.uk)(?!\.au)
 idealsmtp(?!\.com)
 pytoileur
 opt?imist(?:ic)?[\W_]*+hacke?r?[\W_]*+gaius(?!\.c[om]++)(?:[\W_]*+(?:at[\W_]*+)?seznam(?:[\W_]*+(?:dot[\W_]*+)?cz)?)?
@@ -3094,3 +3085,108 @@ zeropromosi(?!\.com)
 simplidistance(?!\.com)
 espacio[\W_]*+apk(?!\.tech)
 trust[\W_]*+guard[\W_]*+digital[\W_]*+assets[\W_]*+recovery
+beleafsofttech
+beleaf[\W_]*+tech(?!\.com(?<=beleaftechnologies\.com))(?:nologies)?
+cba[\W_]*+infotech(?!\.com(?<=cbainfotech\.com))
+complain\Won\WSwiggy
+phonepe[\W_]?+customer
+Language:\WHindi\Wand\WEnglish
+How\Wcan\WI\Wspeak\Wto\W.{0,10}\Wexecutive
+PhonePe[\W_]*+(?:help[\W_]*+line|toll[\W_]*+free)[\W_]*+number
+PhonePe[\W_]*+executive
+^how[\W_]*+can[\W_]*+i[\W_]*+complain[\W_]*+(?:to|against|on)\W*+(?!someone\b|my\b)
+How\Wdo\WI\Wspeak\Wto\Wsomeone\Wat\W𝔈𝔵𝔭𝔢𝔡𝔦𝔞
+fioricet
+genius[\W_]*wave
+Matlab[\W_]*+Assignment[\W_]*+Experts
+reclaimeasy
+h[\W_]*+verse(?!\.com\.pk(?<=hverse\.com\.pk))
+complaint?[\W_]*+(?:in|on|to)[\W_]*+Swiggy
+Recoveryeagles
+Sentry[\W_]*+Vantage[\W_]*+Hacker
+phonepe[\W_]*+wrong
+fastwebrecovery
+complain[\W_]*+against[\W_]*+Paytm
+airtripgo(?!\.com)
+𝐋𝐨𝐚𝐧
+customer[\W_]*+helpline[\W_]*+support
+dubai[\W_]*+e[\W_]*+visa[\W_]*+online\d*(?<!(?-i:^Dubai E Visa Online$))
+br[\W_]*+softech(?!\.com(?<=brsoftech\.com))
+balmorex(?:[\W_]*+pro\w*+|(?<==balmorex)|\w++)
+𝐻𝑒𝓁𝓅𝒟𝑒𝓈𝓀
+(?:91|0)?[6-9]\d{4}(?<!\d\D\d{5})[^A-Za-z\d]*+\d{5}(?![\s,]++\d)[^A-Za-z\d]++(?<!["'], ["'])(?<!["'],["'])(?:91|0)?[6-9]\d{4}[^A-Za-z\d]*+\d{5}(?![^A-Za-z\d]*+\d)(?=.{0,200}+\Z)(?!(?:[^<]++|<(?!\/?code>))*+<\/code>)
+filmyzilla
+jane[\W_]*+doe[\W_]*+finance
+epitome[\W_]*+hospital(?<!(?-i:^Epitome Hospital$))
+myassignmenthelp(?!\.(?:io|live|com|expert))
+opstree\.com(?<!blog\.opstree\.com)
+crafty[\W_]*+art\d*(?!app\.com(?<=craftyartapp\.com))
+act794606
+Makeup[\W_]*+Artists?[\W_]*+in[\W_]*+Delhi
+(?:call[\W_]*+)?kcpl[\W_]*+rupee
+Attapoll
+iFORCE[\W_]*+HACKER[\W_]*+RECOVERY
+mighty[\W_]*+hacker[\W_]*+recovery(?!(?<=mightyhackerrecovery)[\W_]*+(?:dot[\W_]*+)?com)
+mama[\W_]*+pinto
+act892435
+nebosh
+jeffreyharrixx
+certvalue(?!\.com)
+kukufm
+bermuda[\W_]*+unicorn(?!\.co(?:rn|m)(?<=bermudaunicorn\.co(?:rn|m)))
+saa[\W_]*+c03[\W_]*+dumps
+جلب الحبيب
+cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?|(?:[\W_]*+(?:cyber|tech|crypto|recovery|expert|\d++|[\da-f]{5,}+)s?)*)
+crypto[\W_]*+Venture
+spyrecovery36
+To[\W_]*+refund[\W_]*+money[\W_]*+from
+ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
+khel|\W_]*+raja(?!\.com)
+Cigati
+richard[\W_]*+pryce[\W_]*+wizard
+prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
+(?-i:u6tj5rzc)(?#tinyurl.com)
+How[\W_]*+do[\W_]*+I[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+in[\W_]*+meesho
+money[\W_]*+back[\W_]*+from[\W_]*+a[\W_]*+wrong[\W_]*+transaction
+crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
+Monopoly[\W_]*+GO[\W_]*+Free[\W_]*+Dice
+سايتوتك
+finger[\W_]*+loan[\W_]*+app
+Expedia[\W_]*+offers[\W_]*+refunds
+cancel[\W_]*+your[\W_]*+Jio
+american[\W_]*+airlines[\W_]*+refund
+combiz[\W_]*+services[\W_]*+pvt[\W_]*+ltd
+vyapar[\W_]*+kranti
+wisetechhack(?:@gmail\.com)?
+wikihelpdesks
+Wizard[\W_]*+Asset[\W_]*+Recovery
+(?-i:theimmediatematrix)(?# facebook.com group)
+recharged[\W_]*+wrong[\W_]*+number
+refund[\W_]*+a[\W_]*+wrong[\W_]*+transaction
+wrong[\W_]*+transaction[\W_]*+refund
+bet168
+duplicatefilesdeleter
+wrong[\W_]*+recharge[\W_]*+on
+Jio[\W_]*+customer[\W_]*+support
+Bitget[\W_]*+Referral[\W_]*+Code
+digi[\W_]*+finance[\W_]*+loan
+credit[\W_]*+go[\W_]*+l𝗈𝖺𝗇
+Imran[\W_]*+Afzal
+full[\W_]*+viral[\W_]*+video
+online[\W_]*+complain[\W_]*+24[\W_]*+7
+customer[\W_]*+support[\W_]*+by[\W_]*+calling
+rhxjwpm
+how[\W_]*+can[\W_]*+i[\W_]*+complain[\W_]*+in
+voot-express-hd\.blogspot
+hackerspytech
+our[\W_]*+dedicated[\W_]*+support[\W_]*+team
+cheapest[\W_]*+day[\W_]*+of[\W_]*+the[\W_]*+week
+lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
+(?-i:fudplayprotect)(?# t.me)
+أركان المتحدة القطاع الصحي
+arkan[\W_]*united(?!\.com(?<=arkan-united\.com))(?!<(?-i:^arkan united$))
+custom[\W_]*+lapel[\W_]*+pins
+fastfundrecovery8
+638374264877(?# invite code)
+enertech[\W_]*+ups
