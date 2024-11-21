@@ -448,6 +448,9 @@ items:
   - linda.ns.cloudflare.com.
   - will.ns.cloudflare.com.
 - ns:
+  - lindsey.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
