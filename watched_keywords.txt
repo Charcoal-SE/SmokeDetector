@@ -68597,3 +68597,4 @@
 1732175675	Dragonrage	mayoworld\.com
 1732174909	Anerdw	mymmjdoctor\.com
 1732176739	Anerdw	queenasella(?:@yahoo\.com)?
+1732166850	Anerdw	Iris[\W_]*+English
