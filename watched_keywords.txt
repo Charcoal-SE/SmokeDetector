@@ -68593,3 +68593,4 @@
 1732170978	Makyen	justdatarecovery\.com
 1732172780	Dragonrage	rollrentcar\.com
 1732173981	Dragonrage	drsaritaraocardiologist\.com
+1732174116	Anerdw	Computeroids[\W_]*+Driver[\W_]*+Updater
