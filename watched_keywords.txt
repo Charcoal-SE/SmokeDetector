@@ -68595,3 +68595,4 @@
 1732173981	Dragonrage	drsaritaraocardiologist\.com
 1732174116	Anerdw	Computeroids[\W_]*+Driver[\W_]*+Updater
 1732175675	Dragonrage	mayoworld\.com
+1732176739	Anerdw	queenasella(?:@yahoo\.com)?
