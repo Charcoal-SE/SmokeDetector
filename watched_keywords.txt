@@ -68617,3 +68617,4 @@
 1732261833	Cow	(?-i:customerfeedbackmanagement)(?# tumblr.com seo spam)
 1732263128	Cow	(?-i:bozgzguGVbSasyCa8)(?# Google maps location spam)
 1732265018	Cow	eeshanya(?!\.com(?<=eeshanya\.com))
+1732267191	Cow	eye[\W_]*+checkups
