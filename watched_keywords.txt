@@ -68612,3 +68612,4 @@
 1732251464	Cow	(?-i:UFYKN5FSU63CK1)(?# wa.me message)
 1732258010	Cow	digitalmarketingseo\.rf\.gd
 1732261163	Cow	(?-i:1ohjB_sUNpK35b71S12QNfZ4iuxaftAfD_kAsQ_Iti_Y)(?# Google Docs exam spam)
+1732261485	Cow	vitrox\.com
