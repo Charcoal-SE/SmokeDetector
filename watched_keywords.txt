@@ -68618,3 +68618,4 @@
 1732263128	Cow	(?-i:bozgzguGVbSasyCa8)(?# Google maps location spam)
 1732265018	Cow	eeshanya(?!\.com(?<=eeshanya\.com))
 1732267191	Cow	eye[\W_]*+checkups
+1732268290	Cow	pinpoint\.careers
