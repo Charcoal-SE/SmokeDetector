@@ -68614,3 +68614,4 @@
 1732261163	Cow	(?-i:1ohjB_sUNpK35b71S12QNfZ4iuxaftAfD_kAsQ_Iti_Y)(?# Google Docs exam spam)
 1732261485	Cow	vitrox\.com
 1732261747	Cow	seotechinics\.wordpress\.com
+1732261833	Cow	(?-i:customerfeedbackmanagement)(?# tumblr.com seo spam)
