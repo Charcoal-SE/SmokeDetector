@@ -68616,3 +68616,4 @@
 1732261747	Cow	seotechinics\.wordpress\.com
 1732261833	Cow	(?-i:customerfeedbackmanagement)(?# tumblr.com seo spam)
 1732263128	Cow	(?-i:bozgzguGVbSasyCa8)(?# Google maps location spam)
+1732265018	Cow	eeshanya(?!\.com(?<=eeshanya\.com))
