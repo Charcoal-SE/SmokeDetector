@@ -66007,7 +66007,6 @@
 1725708671	Cow	32dental\.com
 1725708880	Cody Gray	swiftron(?!\.eu)
 1725708949	Cody Gray	32dental(?!\.com)
-1725709163	Cody Gray	91[\W_]*+Club(?!\.com(?<=91clubgameapp\.com))
 1725709250	Cody Gray	Glasafe(?!\.com)
 1725711147	Cow	cgpatopercentages\.com
 1725711202	Cody Gray	gpa[\W_]*+calculator
