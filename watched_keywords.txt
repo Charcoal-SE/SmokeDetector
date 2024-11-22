@@ -68615,3 +68615,4 @@
 1732261485	Cow	vitrox\.com
 1732261747	Cow	seotechinics\.wordpress\.com
 1732261833	Cow	(?-i:customerfeedbackmanagement)(?# tumblr.com seo spam)
+1732263128	Cow	(?-i:bozgzguGVbSasyCa8)(?# Google maps location spam)
