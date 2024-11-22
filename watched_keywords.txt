@@ -68620,3 +68620,4 @@
 1732267191	Cow	eye[\W_]*+checkups
 1732268290	Cow	pinpoint\.careers
 1732271960	Cow	accusticarts\.de
+1732272006	Cow	standincrowd\.com
