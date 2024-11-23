@@ -5715,7 +5715,8 @@ items:
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18
+- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18; NXDOMAIN again 2024-11-23
+  disable: true
   ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
