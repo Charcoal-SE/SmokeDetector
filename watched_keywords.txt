@@ -68635,3 +68635,4 @@
 1732294180	VLAZ	wink-apk\.pro
 1732304195	Fastnlight	nytsudoku\.net
 1732313314	Jeff Schaller	boredomarcade\.xyz
+1732324196	Vickel	polskieprawojazdy\.com
