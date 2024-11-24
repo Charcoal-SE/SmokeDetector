@@ -3193,3 +3193,4 @@ enertech[\W_]*+ups
 accidentally[\W_]*+recharged
 raise[\W_]*+a[\W_]*+complaint[\W_]*+in
 installturbotax\.com
+club[\W_]*+(?:invite|invitation)[\W_]*+code
