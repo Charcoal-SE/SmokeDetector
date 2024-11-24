@@ -1211,3 +1211,4 @@ carelab[sz]
 (?-i:^keerthi varsha$)
 (?-i:^drywall repair boulder$)
 (?-i:^Ronald[\W_]*+J[\W_]*+Zallman$)
+(?-i:^Alingo Dollar$)
