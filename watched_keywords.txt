@@ -68663,3 +68663,4 @@
 1732444504	Cow	nutslifehealthy\.com
 1732444764	Cow	nuts[\W_]*+life[\W_]*+healthy(?!\.com(nutslifehealthy\.com))
 1732444861	Cow	(?-i:^Life Healthy Nuts$)
+1732447408	Cow	qa-cs\.com
