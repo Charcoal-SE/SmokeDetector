@@ -68669,3 +68669,4 @@
 1732460052	Fastnlight	gauwoolly\.com
 1732462054	Jeff Schaller	drherbs420
 1732470829	Cow	chemenggcalc\.com
+1732471225	Makyen	chemenggcalc(?!\.com)
