@@ -68662,3 +68662,4 @@
 1732440668	Cow	RakotondrafaraMiantsaFanirina(?:@gmail\.com)?
 1732444504	Cow	nutslifehealthy\.com
 1732444764	Cow	nuts[\W_]*+life[\W_]*+healthy(?!\.com(nutslifehealthy\.com))
+1732444861	Cow	(?-i:^Life Healthy Nuts$)
