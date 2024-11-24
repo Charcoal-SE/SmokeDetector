@@ -68656,3 +68656,4 @@
 1732408713	Vickel	tvchannelpass\.live
 1732421192	Dragonrage	javatherapy\.in
 1732429877	Jeff Schaller	jisasoftech\.com
+1732429939	Jeff Schaller	softzcr\.college
