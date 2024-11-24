@@ -555,7 +555,6 @@ items:
 - comment: no longer in DNS 2020-04-02
   disable: true
   ns: aapkeaajanese.website.
-
 - comment: disabled NXDOMAIN 2024-11-24
   disable: true
   ns: healthymum.org.
