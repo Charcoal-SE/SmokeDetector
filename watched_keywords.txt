@@ -68254,7 +68254,6 @@
 1731088464	Fastnlight	acebookpublishers\.com
 1731092809	Jeff Schaller	skunk420store(?:@gmail\.com)?
 1731094333	Vickel	tylerskunkk(?#telegram)
-1731094671	Vickel	skunk\.40(?#signal)
 1731095327	Cow	(?-i:goldtraderwin)(?# t.me)
 1731095406	Cow	gold[\W_]*+empire
 1731099330	Vickel	trapstar
