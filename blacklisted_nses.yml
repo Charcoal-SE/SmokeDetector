@@ -555,7 +555,10 @@ items:
 - comment: no longer in DNS 2020-04-02
   disable: true
   ns: aapkeaajanese.website.
-- ns: healthymum.org.
+
+- comment: disabled NXDOMAIN 2024-11-24
+  disable: true
+  ns: healthymum.org.
 - ns: escortdomain.net.
 - ns: dnsdomen.com.
 - comment: no longer in DNS 2021-11-04
