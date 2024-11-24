@@ -68671,3 +68671,4 @@
 1732470829	Cow	chemenggcalc\.com
 1732471225	Makyen	chemenggcalc(?!\.com)
 1732476136	Cow	(?-i:tymilix3_med)(?# YouTube Channel)
+1732477810	Anerdw	projectserum\.com
