@@ -68665,3 +68665,4 @@
 1732444861	Cow	(?-i:^Life Healthy Nuts$)
 1732447408	Cow	qa-cs\.com
 1732457770	Fastnlight	natanicspvtltd\.com
+1732459932	Nisse Engström	deeyook\.com
