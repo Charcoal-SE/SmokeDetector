@@ -68691,3 +68691,4 @@
 1732524794	Cow	whatgroups\.com
 1732528245	Cow	luna[\W_]*+beauty[\W_]*+academy
 1732530063	VLAZ	polycomplasticinds\.com
+1732530236	VLAZ	preeti-patel\.com
