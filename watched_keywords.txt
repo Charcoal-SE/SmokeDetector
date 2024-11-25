@@ -68679,3 +68679,4 @@
 1732515096	Cow	mac[\W_]*+travels(?!\.net(?<=mactravels\.net))
 1732516485	Cow	animusphysique\.com
 1732516522	Cow	animus[\W_]*+physique(?!\.com(?<=animusphysique\.com))
+1732516808	Cow	apkcom\.net
