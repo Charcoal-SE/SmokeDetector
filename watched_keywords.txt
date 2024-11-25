@@ -68690,3 +68690,4 @@
 1732524003	Cow	green[\W_]*+line[\W_]*+cars(?!\.co\.uk(?<=greenlinecars\.co\.uk))
 1732524794	Cow	whatgroups\.com
 1732528245	Cow	luna[\W_]*+beauty[\W_]*+academy
+1732530063	VLAZ	polycomplasticinds\.com
