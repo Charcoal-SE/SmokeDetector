@@ -68684,3 +68684,4 @@
 1732520427	Cow	rclindia\.com
 1732521817	Cow	jellyfishtechnologies\.com
 1732521846	Cow	jellyfish[\W_]*+technologies(?!\.com(?<=jellyfishtechnologies\.com))
+1732521990	Cow	crudosportfishing\.com
