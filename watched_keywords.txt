@@ -68677,3 +68677,4 @@
 1732512651	Cow	deeppan[\W_]*+academy
 1732515053	Cow	mactravels\.net
 1732515096	Cow	mac[\W_]*+travels(?!\.net(?<=mactravels\.net))
+1732516485	Cow	animusphysique\.com
