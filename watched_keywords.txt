@@ -68698,3 +68698,4 @@
 1732533521	Cow	toneopfit\.com
 1732533817	Cow	koalageddon\.com
 1732537431	Cow	mynaildrill\.com
+1732537545	Cow	security[\W_]*+deposit[\W_]*+is[\W_]*+refundable
