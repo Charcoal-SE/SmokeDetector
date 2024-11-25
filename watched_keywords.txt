@@ -68687,3 +68687,4 @@
 1732521990	Cow	crudosportfishing\.com
 1732523720	Cow	dobrka\.com
 1732523972	Cow	greenlinecars\.co\.uk
+1732524003	Cow	green[\W_]*+line[\W_]*+cars(?!\.co\.uk(?<=greenlinecars\.co\.uk))
