@@ -3197,4 +3197,3 @@ club[\W_]*+(?:invite|invitation)[\W_]*+code
 skunk\.40(?#signal)
 recharged[\W_]*+a[\W_]*+wrong
 recharge[\W_]*+on[\W_]*+wrong
-best[\W_]*+immigration[\W_]*+(consultant|consultants|consultancy)
