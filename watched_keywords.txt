@@ -68680,3 +68680,4 @@
 1732516485	Cow	animusphysique\.com
 1732516522	Cow	animus[\W_]*+physique(?!\.com(?<=animusphysique\.com))
 1732516808	Cow	apkcom\.net
+1732520245	VLAZ	shriffle\.com
