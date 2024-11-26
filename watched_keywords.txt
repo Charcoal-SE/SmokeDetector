@@ -59410,7 +59410,6 @@
 1710604315	Makyen	t[\W_]*+developers(?!\.com(?<=t-developers\.com))
 1710606967	Jeff Schaller	jzab\.blogspot
 1710607587	Jeff Schaller	computermania\.com\.bd
-1710608690	Makyen	calculatoracute\.com
 1710612300	Mast	paklap\.pk
 1710617445	Vickel	darkwebentyk2elhhh6okholnrookap7zfbun2is7ouspzxcpkqjxxad\.onion
 1710623675	Jeff Schaller	XDebug\.HOST
