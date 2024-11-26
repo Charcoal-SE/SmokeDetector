@@ -68739,3 +68739,4 @@
 1732646562	Cow	tracgrabber\.com
 1732656606	Fastnlight	hrmflorida\.com
 1732657839	Fastnlight	pvnorm(?:@gmail\.com)?
+1732658729	Fastnlight	JEFFRY[\W_]*+WILLIAM[\W_]*+CYBER
