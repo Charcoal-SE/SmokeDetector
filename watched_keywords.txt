@@ -68716,3 +68716,4 @@
 1732600590	VLAZ	recommendationcrafter(?!\.com)
 1732603241	VLAZ	magicwebservices\.com
 1732603870	VLAZ	mastbanarasipaan\.com
+1732604327	VLAZ	apurple\.co
