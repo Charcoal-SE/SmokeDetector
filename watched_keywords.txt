@@ -68729,3 +68729,4 @@
 1732619462	VLAZ	dipsacademy\.com
 1732620210	Jeff Schaller	activate\.barenot\.com(?#sites.google.com)
 1732621176	VLAZ	online[\W_]*+generic[\W_]*+medicine(?!\.com(?<=onlinegenericmedicine\.com))
+1732625884	Vickel	vrishtech\.in
