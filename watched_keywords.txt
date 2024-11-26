@@ -68717,3 +68717,4 @@
 1732603241	VLAZ	magicwebservices\.com
 1732603870	VLAZ	mastbanarasipaan\.com
 1732604327	VLAZ	apurple\.co
+1732605865	VLAZ	IGENICS
