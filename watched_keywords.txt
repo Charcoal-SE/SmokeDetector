@@ -68715,3 +68715,4 @@
 1732600582	VLAZ	recommendationcrafter\.com
 1732600590	VLAZ	recommendationcrafter(?!\.com)
 1732603241	VLAZ	magicwebservices\.com
+1732603870	VLAZ	mastbanarasipaan\.com
