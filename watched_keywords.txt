@@ -68727,3 +68727,4 @@
 1732617467	VLAZ	monterail\.com
 1732619023	VLAZ	geekdive-corp\.com
 1732619462	VLAZ	dipsacademy\.com
+1732620210	Jeff Schaller	activate\.barenot\.com(?#sites.google.com)
