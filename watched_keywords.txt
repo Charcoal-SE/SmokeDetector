@@ -68713,3 +68713,4 @@
 1732596560	Dragonrage	elwa\.com\.au
 1732600179	VLAZ	hassan-brothers\.ae
 1732600582	VLAZ	recommendationcrafter\.com
+1732600590	VLAZ	recommendationcrafter(?!\.com)
