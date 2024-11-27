@@ -68744,3 +68744,4 @@
 1732668797	Fastnlight	flix-iptv\.dev
 1732668916	Vickel	driftboss\.games
 1732668925	Vickel	stickmanhook\.games
+1732668935	Vickel	1v1lol\.co
