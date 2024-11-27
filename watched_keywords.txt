@@ -68773,3 +68773,4 @@
 1732733373	Cow	themarketplacesolutions\.com
 1732748412	Jeff Schaller	ayrealtygroup\.com
 1732748453	Jeff Schaller	patent\.dev
+1732687260	Anerdw	(?-i:^The Anomaly$)
