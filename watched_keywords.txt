@@ -68742,3 +68742,4 @@
 1732658729	Fastnlight	JEFFRY[\W_]*+WILLIAM[\W_]*+CYBER
 1732663046	Fastnlight	Mustang[\W_]*+Recovery
 1732668797	Fastnlight	flix-iptv\.dev
+1732668916	Vickel	driftboss\.games
