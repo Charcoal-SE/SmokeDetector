@@ -18585,7 +18585,7 @@
 1587536700	tripleee	snoril
 1587538474	tripleee	(?-i:^Diljit singh$)
 1587538677	tripleee	(?:(?:Accenture|HDFC|Cisco|HCL|TCS|IBM|Reliance Capital|Capgemini|SAP|Pin click)\W+){4,}
-1587538726	tripleee	(?:(?:[CMX]AT|ATMA|CMAT)\W+){4,}
+1587538726	tripleee	(?:(?:[CMX]AT|ATMA|CMAT)(?<!cat(?=\W+cat))\W+){4,}
 1587540608	Makyen	myassignmenthelpau(?!\.com)
 1587544466	tripleee	skyhidev\.com
 1587549006	Glorfindel	winatslotmachine\.com
