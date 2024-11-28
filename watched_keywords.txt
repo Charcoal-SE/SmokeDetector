@@ -68806,3 +68806,4 @@
 1732807950	Cow	seminarppt\.com
 1732810470	Fastnlight	hillclimbracing-apk\.com
 1732821735	Vickel	pmalongcourse\.com
+1732821884	Vickel	pma[\W_]*+long[\W_]*+course(?!\.com(?<=pmalongcourse\.com))
