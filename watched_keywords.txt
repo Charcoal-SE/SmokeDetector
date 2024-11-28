@@ -68808,3 +68808,4 @@
 1732821884	Vickel	pma[\W_]*+long[\W_]*+course(?!\.com(?<=pmalongcourse\.com))
 1732822525	Vickel	secure\.shrib\.com
 1732830611	Vickel	brightrs\.com
+1732837662	Vickel	cryptorecovers\.com
