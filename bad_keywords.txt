@@ -3200,3 +3200,4 @@ recharge[\W_]*+on[\W_]*+wrong
 best[\W_]*+immigration[\W_]*+(?:consultant|consultants|consultancy|service|services)
 364153519157(?# club promo code)
 hydrolean[\W_]*+xt[\W_]*+gold
+app[\W_]*+was[\W_]*+recharged
