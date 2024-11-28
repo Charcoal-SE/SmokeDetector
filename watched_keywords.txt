@@ -68805,3 +68805,4 @@
 1732807677	Cow	recharge[\W_]*+once[\W_]*+successful
 1732807950	Cow	seminarppt\.com
 1732810470	Fastnlight	hillclimbracing-apk\.com
+1732821735	Vickel	pmalongcourse\.com
