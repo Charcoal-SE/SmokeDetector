@@ -1213,3 +1213,4 @@ carelab[sz]
 (?-i:^Ronald[\W_]*+J[\W_]*+Zallman$)
 (?-i:^Alingo Dollar$)
 (?-i:^Hyderabad Escorts$)
+(?-i:^Golam Qauser$)
