@@ -68786,3 +68786,4 @@
 1732776512	Cow	panambiresorts\.com
 1732777302	Cow	hinduismfaq\.com
 1732782064	Cow	kaafcreations\.com
+1732783388	Cow	galaxyeduworld\.com
