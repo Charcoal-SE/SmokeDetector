@@ -68438,7 +68438,6 @@
 1731666662	VLAZ	topsupplementnewz\.com
 1731666695	VLAZ	fioricetforpain\.jimdofree\.com
 1731667978	Cow	jdocs\.com
-1731668064	Cow	navigator\.online
 1731668201	tripleee	tstyle\.rf\.gd
 1731668273	tripleee	jimdofree\.com
 1731671852	VLAZ	ceumed\.com
