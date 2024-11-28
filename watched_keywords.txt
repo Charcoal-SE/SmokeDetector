@@ -68774,3 +68774,4 @@
 1732748412	Jeff Schaller	ayrealtygroup\.com
 1732748453	Jeff Schaller	patent\.dev
 1732687260	Anerdw	(?-i:^The Anomaly$)
+1732752613	Vickel	anthonydaviestech(?:@gmail\.com)?
