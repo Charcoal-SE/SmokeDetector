@@ -68775,3 +68775,4 @@
 1732748453	Jeff Schaller	patent\.dev
 1732687260	Anerdw	(?-i:^The Anomaly$)
 1732752613	Vickel	anthonydaviestech(?:@gmail\.com)?
+1732769028	Cow	avguides-help\.com
