@@ -68802,3 +68802,4 @@
 1732807250	Dragonrage	zeemedicalbilling\.com
 1732807258	Dragonrage	fibertechservices\.net
 1732807645	Cow	ipvts\.com
+1732807677	Cow	recharge[\W_]*+once[\W_]*+successful
