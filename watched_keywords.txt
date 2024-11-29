@@ -68828,3 +68828,4 @@
 1732893227	Jeff Schaller	pdfwordcounter\.io
 1732897998	Jeff Schaller	papaobasolutionhom\.wixsite\.com
 1732898032	Jeff Schaller	papa\.obasolutionhome(?:@gmail\.com)?
+1732898967	Jeff Schaller	tdtrg\.com
