@@ -68832,5 +68832,4 @@
 1732902425	Jeff Schaller	bloomhousemarketing\.com
 1732907425	Vickel	daviseyecare\.com
 1732907789	Vickel	lustigespruche\.com
-1732907950	Vickel	6277601207863752
 1732909290	Vickel	vakoemchhay(?:@gmail\.com)?
