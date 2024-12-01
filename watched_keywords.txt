@@ -68846,3 +68846,4 @@
 1732992350	Cow	technijian\.com
 1732998240	Nisse Engström	dogduck\.com
 1733001795	Jeff Schaller	appbitly\.com
+1733011558	Vickel	(?-i:vadpodunai)(?#t.me)
