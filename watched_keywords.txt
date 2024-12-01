@@ -68854,3 +68854,4 @@
 1733041460	Cow	raise[\W_]*+a[\W_]*+complaint[\W_]*+or[\W_]*+request
 1733045407	tripleee	aman[\W_]*+samrat
 1733056498	Cow	yourdailycoupon\.com
+1733062035	Cow	refund[\W_]*+money[\W_]*+open
