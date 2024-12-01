@@ -68851,3 +68851,4 @@
 1733012185	Vickel	uk[\W_]*+airport[\W_]*+transfer[\W_]*+services(?!\.co\.uk(?<=ukairporttransferservices\.co\.uk))
 1733014627	Vickel	planvoyages\.com
 1733040984	Cow	powerfinancecorporated24(?:@gmail\.com)?
+1733041460	Cow	raise[\W_]*+a[\W_]*+complaint[\W_]*+or[\W_]*+request
