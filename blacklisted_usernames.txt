@@ -1214,3 +1214,4 @@ carelab[sz]
 (?-i:^Alingo Dollar$)
 (?-i:^Hyderabad Escorts$)
 (?-i:^Golam Qauser$)
+(?-i:^Dubai Visa Center$)
