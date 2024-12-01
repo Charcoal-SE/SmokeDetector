@@ -68848,3 +68848,4 @@
 1733001795	Jeff Schaller	appbitly\.com
 1733011558	Vickel	(?-i:vadpodunai)(?#t.me)
 1733011640	Vickel	ukairporttransferservices\.co\.uk
+1733012185	Vickel	uk[\W_]*+airport[\W_]*+transfer[\W_]*+services(?!\.co\.uk(?<=ukairporttransferservices\.co\.uk))
