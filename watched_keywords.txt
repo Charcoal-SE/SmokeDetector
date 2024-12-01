@@ -68857,3 +68857,4 @@
 1733062035	Cow	refund[\W_]*+money[\W_]*+open
 1733062472	Cow	speczouae\.com
 1733070362	Vickel	apkepoch\.com
+1733070417	Vickel	adinserter\.pro
