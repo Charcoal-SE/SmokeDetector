@@ -3202,3 +3202,4 @@ best[\W_]*+immigration[\W_]*+(?:consultant|consultants|consultancy|service|servi
 hydrolean[\W_]*+xt[\W_]*+gold
 app[\W_]*+was[\W_]*+recharged
 reliable[\W_]*+taxi[\W_]*+(?:service|services)
+wrong[\W_]*+transaction[\W_]*+payment
