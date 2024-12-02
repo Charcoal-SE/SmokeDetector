@@ -68870,3 +68870,4 @@
 1733121693	Cow	mistakenly[\W_]*+sent[\W_]*+money[\W_]*+to
 1733122024	Cow	reverse[\W_]*+the[\W_]*+transaction[\W_]*+directly
 1733122625	Cow	pumpfunbot\.net
+1733122652	Cow	pump\.fun
