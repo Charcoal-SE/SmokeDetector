@@ -68880,3 +68880,4 @@
 1733129824	Cow	rhcsa\.guru
 1733130805	Cow	suffescom\.com
 1733131237	Cow	phddataanalysis\.com
+1733132326	Cow	caravanhirencr\.com
