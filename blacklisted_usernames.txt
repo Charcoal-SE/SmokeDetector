@@ -1216,3 +1216,4 @@ carelab[sz]
 (?-i:^Golam Qauser$)
 (?-i:^Dubai Visa Center$)
 (?-i:^PI PI PI PI LU LU LU LU$)
+(?-i:^Nig gaer$)
