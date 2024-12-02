@@ -68858,7 +68858,6 @@
 1733070362	Vickel	apkepoch\.com
 1733070417	Vickel	adinserter\.pro
 1733080073	Cow	minecraftcirclegenerate\.net
-1733107695	Fastnlight	c[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+er[\W_]*+y[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s[\W_]*+c[\W_]*+o[\W_]*+m(?#certifiedrrcoveryservices.com)
 1733110599	Jeff Schaller	lionstones\.in
 1733115111	Cow	generlinkcanada\.ca
 1733119424	Anerdw	opticalplazaarif\.com
