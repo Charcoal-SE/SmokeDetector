@@ -68867,3 +68867,4 @@
 1733119807	Cow	trophydeals\.com
 1733120874	Cow	to[\W_]*+reverse[\W_]*+a[\W_]*+wrong
 1733121161	Cow	reverse[\W_]*+a[\W_]*+transaction[\W_]*+on
+1733121693	Cow	mistakenly[\W_]*+sent[\W_]*+money[\W_]*+to
