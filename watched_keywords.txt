@@ -68889,3 +68889,4 @@
 1733144430	VLAZ	Playmatic(?:[\W_]*+video)?
 1733144438	VLAZ	paslechoix
 1733144446	VLAZ	(?-i:live:\.cid\.b83b4bd81c109c9e)(?# Skype ID)
+1733145452	Fastnlight	c[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?#certifiedrecoveryservices.com)
