@@ -68871,3 +68871,4 @@
 1733122024	Cow	reverse[\W_]*+the[\W_]*+transaction[\W_]*+directly
 1733122625	Cow	pumpfunbot\.net
 1733122652	Cow	pump\.fun
+1733122992	Cow	gacha-arts\.web\.app
