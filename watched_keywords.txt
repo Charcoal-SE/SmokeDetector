@@ -68888,3 +68888,4 @@
 1733139644	Cow	sahoullimo\.com
 1733141720	Cow	kulharchai\.com
 1733144430	VLAZ	Playmatic(?:[\W_]*+video)?
+1733144438	VLAZ	paslechoix
