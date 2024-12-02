@@ -68889,3 +68889,4 @@
 1733141720	Cow	kulharchai\.com
 1733144430	VLAZ	Playmatic(?:[\W_]*+video)?
 1733144438	VLAZ	paslechoix
+1733144446	VLAZ	(?-i:live:\.cid\.b83b4bd81c109c9e)(?# Skype ID)
