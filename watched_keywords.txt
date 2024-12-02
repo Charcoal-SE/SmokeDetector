@@ -68866,3 +68866,4 @@
 1733119757	Cow	(?-i:pabloestefan)(?# telegram drugs spam)
 1733119807	Cow	trophydeals\.com
 1733120874	Cow	to[\W_]*+reverse[\W_]*+a[\W_]*+wrong
+1733121161	Cow	reverse[\W_]*+a[\W_]*+transaction[\W_]*+on
