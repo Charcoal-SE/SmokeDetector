@@ -68882,3 +68882,4 @@
 1733131237	Cow	phddataanalysis\.com
 1733132326	Cow	caravanhirencr\.com
 1733132947	Cow	c3automation\.com
+1733133377	Cow	giga-steel\.ma
