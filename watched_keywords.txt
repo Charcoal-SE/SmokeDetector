@@ -68892,3 +68892,4 @@
 1733145452	Fastnlight	c[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?#certifiedrecoveryservices.com)
 1733152104	Jeff Schaller	yuktii\.com
 1733153726	Jeff Schaller	levelgeeks\.com
+1733156049	Fastnlight	barberclipperpoint\.co\.uk
