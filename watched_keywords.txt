@@ -68922,3 +68922,4 @@
 1733237385	ipodtouch0218	reducebounce\.com
 1733242422	ipodtouch0218	bacuridigital\.com
 1733245819	Cow	info-spot\.net
+1733246364	ipodtouch0218	doppus\.app
