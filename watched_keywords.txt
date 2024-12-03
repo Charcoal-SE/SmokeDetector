@@ -68913,3 +68913,4 @@
 1733228717	Vickel	amarketforce\.com
 1733228846	Vickel	amarketforce(?!\.com)
 1733229077	Jeff Schaller	mastergolfcart\.com
+1733229162	Jeff Schaller	move2edge\.com
