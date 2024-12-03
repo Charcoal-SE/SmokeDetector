@@ -68904,3 +68904,4 @@
 1733211085	Cow	idm[\W_]*+crack
 1733211770	Cow	fynzon\.com
 1733216568	Cow	ninjacrystalvapez\.com
+1733217403	Cow	findrightjob\.com
