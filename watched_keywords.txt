@@ -68926,3 +68926,4 @@
 1733246686	Cow	vicimis\.com
 1733248634	Cow	iconpsychologies\.com
 1733252785	Cow	michaelguth\.com
+1733252941	Vickel	michael[\W_]*+guth(?!\.com(?<=michaelguth\.com))
