@@ -68898,3 +68898,4 @@
 1733172290	Vickel	qiwa\.sa
 1733186911	Jeff Schaller	V[\W_]*+A[\W_]*+U[\W_]*+L[\W_]*+T[\W_]*+R[\W_]*+E[\W_]*+A[\W_]*+M
 1733196765	Fastnlight	QBSSSMBE
+1733202123	Spevacus	biofics\.co\.in
