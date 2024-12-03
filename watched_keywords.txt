@@ -68902,3 +68902,4 @@
 1733210637	Cow	kmspicopt\.site
 1733210931	Cow	albeliabd\.com
 1733211085	Cow	idm[\W_]*+crack
+1733211770	Cow	fynzon\.com
