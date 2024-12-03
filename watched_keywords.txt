@@ -68912,3 +68912,4 @@
 1733226123	Cow	whitescreen\.vip
 1733228717	Vickel	amarketforce\.com
 1733228846	Vickel	amarketforce(?!\.com)
+1733229077	Jeff Schaller	mastergolfcart\.com
