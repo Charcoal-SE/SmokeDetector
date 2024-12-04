@@ -68952,3 +68952,4 @@
 1733323774	Jeff Schaller	pathsocial\.com
 1733331932	Makyen	vapeitwholesale\.com
 1733331940	Makyen	vape[\W_]*+it[\W_]*+wholesale(?!\.com(?<=vapeitwholesale\.com))
+1733334418	Jeff Schaller	formguardjs-io\.web\.app
