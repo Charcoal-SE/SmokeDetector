@@ -68945,3 +68945,4 @@
 1733305688	Dragonrage	cryptictracetechnologies(?:\W*+zohomail\W*+\.\W*+com)?
 1733306174	Dragonrage	thedamacislands\.com
 1733309787	Dragonrage	vitalketogummiesofficial\.blogspot
+1733313424	Vickel	bookadesertsafaritrip\.com
