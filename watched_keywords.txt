@@ -68981,3 +68981,4 @@
 1733400539	Cow	holistic-medicare\.net
 1733400643	Cow	holistic[\W_]*+medicare(?!\.net(?<=holistic-medicare\.net))
 1733401889	Vickel	vogue[\W_]*+tourism
+1733402321	VLAZ	routerloginwiz\.net
