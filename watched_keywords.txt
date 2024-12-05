@@ -68979,4 +68979,3 @@
 1733398611	Vickel	dewakoin
 1733399731	Cow	quickimagetools\.com
 1733400539	Cow	holistic-medicare\.net
-1733400598	Cow	holistic[\W_]*+medicare(?!\.net(holistic-medicare\.net))
