@@ -68997,3 +68997,4 @@
 1733416775	Anerdw	aknniherbscentre\.com
 1733418663	Vickel	aknni[\W_]*+herbs[\W_]*+centre(?!\.com(?<=aknniherbscentre\.com))
 1733421147	Cow	(?-i:miH4ekVtcShG6gkSA)(?# forms.gle)
+1733421445	Cow	readymadeui\.com
