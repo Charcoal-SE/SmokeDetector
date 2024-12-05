@@ -68983,3 +68983,4 @@
 1733401889	Vickel	vogue[\W_]*+tourism
 1733402321	VLAZ	routerloginwiz\.net
 1733402330	VLAZ	routerlogin\.net
+1733402881	Vickel	proanalyticsservice\.com
