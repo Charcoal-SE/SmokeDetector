@@ -68994,6 +68994,5 @@
 1733411464	Cow	safe\.lviv\.ua
 1733415107	ipodtouch0218	educatorshub13
 1733415622	Fastnlight	yatherm\.com
-1733416768	Anerdw	aknniherbscentre(?!\.com)
 1733416775	Anerdw	aknniherbscentre\.com
 1733418008	Vickel	aknni[\W_]herbs[\W_]centre
