@@ -68993,3 +68993,4 @@
 1733411097	VLAZ	infocashloan
 1733411464	Cow	safe\.lviv\.ua
 1733415107	ipodtouch0218	educatorshub13
+1733415619	ipodtouch0218	yatherm\.com
