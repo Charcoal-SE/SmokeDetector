@@ -69009,3 +69009,4 @@
 1733479637	Cow	brandignite\.co
 1733480389	VLAZ	ticketsque\.com
 1733480851	VLAZ	fanaticspoint\.com
+1733481938	VLAZ	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))
