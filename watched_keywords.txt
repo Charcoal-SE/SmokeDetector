@@ -69011,3 +69011,4 @@
 1733480851	VLAZ	fanaticspoint\.com
 1733481938	VLAZ	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))
 1733485821	Cow	ispf\.co\.in
+1733486740	VLAZ	Disha[\W_]*+Consultants?
