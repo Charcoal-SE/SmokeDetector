@@ -3207,3 +3207,4 @@ contact[\W_]*+customer[\W_]*+(?:care|support)[\W_]*+call
 request[\W_]*+to[\W_]*+disable[\W_]*+auto[\W_]*+pay
 recharged[\W_]*+the[\W_]*+wrong[\W_]*+number
 refund[\W_]*+for[\W_]*+double[\W_]*+recharge
+Referral[\W_]*+Code[\W_]*+\d{4}+
