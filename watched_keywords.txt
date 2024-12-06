@@ -69017,3 +69017,4 @@
 1733497437	Cow	consumer[\W_]*+complaint[\W_]*+against
 1733498216	Jeff Schaller	airlineticketsbookings\.com
 1733498245	Robert Longson	deticoutlet\.com
+1733506417	ipodtouch0218	webtechnoz
