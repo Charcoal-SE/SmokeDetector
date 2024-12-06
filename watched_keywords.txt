@@ -69013,3 +69013,4 @@
 1733485821	Cow	ispf\.co\.in
 1733486740	VLAZ	Disha[\W_]*+Consultants?
 1733490114	VLAZ	mytikachi\.com
+1733497114	Cow	simply[\W_]*+dial[\W_]*+\d+
