@@ -69016,3 +69016,4 @@
 1733497114	Cow	simply[\W_]*+dial[\W_]*+\d+
 1733497437	Cow	consumer[\W_]*+complaint[\W_]*+against
 1733498216	Jeff Schaller	airlineticketsbookings\.com
+1733498245	Robert Longson	deticoutlet\.com
