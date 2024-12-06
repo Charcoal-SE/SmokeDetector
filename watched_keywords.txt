@@ -69008,3 +69008,4 @@
 1733475708	Cow	rasterbator\.net
 1733479637	Cow	brandignite\.co
 1733480389	VLAZ	ticketsque\.com
+1733480851	VLAZ	fanaticspoint\.com
