@@ -5457,7 +5457,9 @@ items:
 - ns: luutruso.net.
 - ns: designkug.com.
 - ns: byet.org.
-- ns: fusionlogicx.com.
+- comment: NXDOMAIN 2024-12-06
+  disable: true
+  ns: fusionlogicx.com.
 - ns: 2cohost.com.
 - ns: 24websitehosting.com.
 - ns: websiteservername.com.
