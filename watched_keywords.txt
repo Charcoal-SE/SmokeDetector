@@ -69033,3 +69033,4 @@
 1733559943	Cow	consecutive[\W_]*+recharges
 1733560861	Cow	bsnl[\W_]*+mtnl
 1733561112	Cow	southpole5eyeshackingandrecoveringcompany\.com
+1733570239	Cow	hackbursterrecovery\.weebly\.com
