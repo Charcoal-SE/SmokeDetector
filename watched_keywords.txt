@@ -69042,3 +69042,4 @@
 1733570617	Cow	KONOHA[\W_]*+TOTO78
 1733572067	Jeff Schaller	megawholesalerinc\.com
 1733578014	VLAZ	webclaw\.net
+1733585679	Cow	myjio[\W_]*+(?:app|plan)
