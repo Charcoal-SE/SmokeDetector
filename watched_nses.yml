@@ -5632,7 +5632,8 @@ items:
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18
+- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18; NXDOMAIN again 2024-12-07
+  disable: true
   ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
