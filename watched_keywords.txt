@@ -69030,3 +69030,4 @@
 1733555618	Nisse Engström	solutionshygiene\.ae
 1733556289	Nisse Engström	chatgptjapan\.com
 1733559739	Cow	recharge[\W_]*+a[\W_]*+number
+1733559943	Cow	consecutive[\W_]*+recharges
