@@ -3209,4 +3209,3 @@ recharged[\W_]*+the[\W_]*+wrong[\W_]*+number
 refund[\W_]*+for[\W_]*+double[\W_]*+recharge
 Referral[\W_]*+Code[\W_]*+\d{4}+
 your[\W_]*+jio[\W_]*+number
-(?:call|contact)[\W_]*+jio[\W_]*+customer[\W_]*+care
