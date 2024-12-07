@@ -3208,3 +3208,4 @@ request[\W_]*+to[\W_]*+disable[\W_]*+auto[\W_]*+pay
 recharged[\W_]*+the[\W_]*+wrong[\W_]*+number
 refund[\W_]*+for[\W_]*+double[\W_]*+recharge
 Referral[\W_]*+Code[\W_]*+\d{4}+
+your[\W_]*+jio[\W_]*+number
