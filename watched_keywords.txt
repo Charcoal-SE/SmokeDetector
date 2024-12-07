@@ -69031,3 +69031,4 @@
 1733556289	Nisse Engström	chatgptjapan\.com
 1733559739	Cow	recharge[\W_]*+a[\W_]*+number
 1733559943	Cow	consecutive[\W_]*+recharges
+1733560861	Cow	bsnl[\W_]*+mtnl
