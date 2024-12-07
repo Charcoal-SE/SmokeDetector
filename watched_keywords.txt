@@ -69036,3 +69036,4 @@
 1733570239	Cow	hackbursterrecovery\.weebly\.com
 1733570284	Cow	hack[\W_]*+burster[\W_]*+recovery
 1733570308	Cow	vtuit\.com
+1733570397	Cow	labeebcp\.com
