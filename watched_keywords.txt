@@ -33616,7 +33616,6 @@
 1637927484	tripleee	grab[\W_]*+taxi(?:[\W_]*+coupons?[\W_]*+code)?
 1637929183	tripleee	vspagy\.in
 1637930473	tripleee	aclmobile\.com
-1637935555	Cody Gray	\.emphasized text
 1637935625	Cody Gray	Custody[\W_]*Client
 1637936686	Ollie	techhelp28\.blogspot
 1637938220	Cody Gray	safe distant association
