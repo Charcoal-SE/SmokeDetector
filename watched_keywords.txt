@@ -69048,3 +69048,4 @@
 1733644753	VLAZ	tredomatix\.com
 1733645091	Cow	swatle\.ai
 1733661774	Nisse Engström	techsprintx\.com
+1733663770	Cow	contact[\W_]*+us[\W_]*+immediately[\W_]*+(?:to|for|at|so)
