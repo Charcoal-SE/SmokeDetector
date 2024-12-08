@@ -69050,3 +69050,4 @@
 1733663770	Cow	contact[\W_]*+us[\W_]*+immediately[\W_]*+(?:to|for|at|so)
 1733664290	Cow	joindevops\.com
 1733677172	Cow	emesta\.cz
+1733681387	Cow	umarmuqthar\.com
