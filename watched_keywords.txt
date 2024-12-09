@@ -69072,3 +69072,4 @@
 1733750892	Cow	beautycharms\.pk
 1733754250	Vickel	locked[\W_]*+facebook(?=.*code)
 1733759889	ipodtouch0218	twistlockdynamics\.com
+1733764039	Cow	24[\W_]*+hours?+[\W_]*+(?:cancellation|of|refund|free|risk[\W_]*+free)[\W_]*+(?:booking|policy|cancellation|calling)
