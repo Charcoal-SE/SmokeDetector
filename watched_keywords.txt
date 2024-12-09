@@ -69071,3 +69071,4 @@
 1733747648	Cow	(?:popular|online|scam|fake|cryptocurrency|fraudulent|reliable|properties[\W_]*+and)[\W_]*+investment[\W_]*+(?:platform|platforms|method|methods|opportunity|opportunities)
 1733750232	Cow	toolrify\.com
 1733750892	Cow	beautycharms\.pk
+1733754250	Vickel	locked[\W_]*+facebook(?=.*code)
