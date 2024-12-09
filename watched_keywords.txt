@@ -69058,3 +69058,4 @@
 1733729841	Cow	mybusinessvisual\.com
 1733733478	Cow	24[\W_]*+(?:hour|hours)[\W_]*+(?:cancellation|of|refund|free|risk[\W_]*+free)[\W_]*+(?:booking|policy|cancellation|calling)
 1733734797	Cow	alphapartners\.co
+1733735521	Cow	evisatraveller\.mfa\.ir
