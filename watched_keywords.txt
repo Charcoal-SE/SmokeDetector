@@ -68038,7 +68038,6 @@
 1730445933	Cow	cuetmock\.com
 1730451994	Cow	justtrytech\.com
 1730453238	Cow	txhospitals\.in
-1730459620	Cow	blockdag\.network
 1730459673	Cow	blockdag(?!\.network(?<=blockdag\.network))
 1730460180	Cow	profitablecpmrate\.com
 1730463782	VLAZ	pafikotbureuh\.org
