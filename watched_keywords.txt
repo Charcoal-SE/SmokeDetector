@@ -69073,3 +69073,4 @@
 1733759889	ipodtouch0218	twistlockdynamics\.com
 1733764039	Cow	24[\W_]*+hours?+[\W_]*+(?:cancellation|of|refund|free|risk[\W_]*+free)[\W_]*+(?:booking|policy|cancellation|calling)
 1733764179	Cow	(?:popular|online|scam|fake|cryptocurrency|fraudulent|reliable|properties[\W_]*+and)[\W_]*+investment[\W_]*+(?:platforms?+|methods?+|opportunit(?:y|ies))
+1733725450	Anerdw	(?-i:Vn1wQ)(?#shorturl.at)
