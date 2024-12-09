@@ -69072,3 +69072,4 @@
 1733750232	Cow	toolrify\.com
 1733750892	Cow	beautycharms\.pk
 1733754250	Vickel	locked[\W_]*+facebook(?=.*code)
+1733759889	ipodtouch0218	twistlockdynamics\.com
