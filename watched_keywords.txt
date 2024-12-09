@@ -69075,3 +69075,4 @@
 1733764179	Cow	(?:popular|online|scam|fake|cryptocurrency|fraudulent|reliable|properties[\W_]*+and)[\W_]*+investment[\W_]*+(?:platforms?+|methods?+|opportunit(?:y|ies))
 1733725450	Anerdw	(?-i:Vn1wQ)(?#shorturl.at)
 1733724281	Anerdw	harshidarahman\.com
+1733766109	ipodtouch0218	probottleneckcalculator\.com
