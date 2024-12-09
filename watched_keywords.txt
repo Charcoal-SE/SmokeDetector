@@ -69056,3 +69056,4 @@
 1733722841	Anerdw	bobcometalllc\.wordpress\.com
 1733729712	Cow	phones[\W_]*+4[\W_]*+u[\W_]*+repairs
 1733729841	Cow	mybusinessvisual\.com
+1733733478	Cow	24[\W_]*+(?:hour|hours)[\W_]*+(?:cancellation|of|refund|free|risk[\W_]*+free)[\W_]*+(?:booking|policy|cancellation|calling)
