@@ -1218,3 +1218,4 @@ carelab[sz]
 (?-i:^PI PI PI PI LU LU LU LU$)
 (?-i:^Nig gaer$)
 (?-i:^Vape It Wholesale$)
+(?-i:^Powerfull magiclovespells$)
