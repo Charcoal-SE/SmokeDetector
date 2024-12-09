@@ -69067,3 +69067,4 @@
 1733740143	VLAZ	toadubuilders\.com
 1733741418	Cow	flexato\.gr
 1733741883	Cow	deorwine\.com
+1733742563	Cow	copyeditingtraining\.in
