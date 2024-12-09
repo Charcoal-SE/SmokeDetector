@@ -5912,3 +5912,4 @@ s\.net\.vn
 devopsresourcehub\.com
 prismo\.pro
 compdf\.com
+speaksaga\.in
