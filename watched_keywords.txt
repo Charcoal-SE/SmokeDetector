@@ -56542,7 +56542,6 @@
 1704781958	Nick	maidoshop\.com
 1704783588	Nick	azzury\.id
 1704788322	tripleee	codingpromasters\.com
-1704792359	cigien	supplementcarts\.com
 1704792380	cigien	businessfinder\.me
 1704792400	cigien	business[\W_]*+finder(?!\.me(?<=businessfinder\.me))
 1704792423	cigien	primefocus\.com
