@@ -69096,3 +69096,4 @@
 1733831566	Cow	bagfultechnologies\.com
 1733831614	Cow	bagful[\W_]*+technologies(?!\.com(?<=bagfultechnologies\.com))
 1733834218	Jeff Schaller	000[\W_]*+in[\W_]*+BTC
+1733834358	VLAZ	(?-i:LKPTS55J4JT6H1)(?# wa.me)
