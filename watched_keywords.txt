@@ -69101,3 +69101,4 @@
 1733837421	VLAZ	vividkreations\.com
 1733837463	VLAZ	vivid[\W_]*+kreations(?!\.com(?<=vividkreations\.com))
 1733845872	ipodtouch0218	roaradventuretourism\.com
+1733848653	Fastnlight	ensureservices\.com
