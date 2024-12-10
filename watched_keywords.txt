@@ -69100,3 +69100,4 @@
 1733835130	VLAZ	larvesta(?!\.com)
 1733837421	VLAZ	vividkreations\.com
 1733837463	VLAZ	vivid[\W_]*+kreations(?!\.com(?<=vividkreations\.com))
+1733845872	ipodtouch0218	roaradventuretourism\.com
