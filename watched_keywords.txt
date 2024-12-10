@@ -69099,3 +69099,4 @@
 1733834358	VLAZ	(?-i:LKPTS55J4JT6H1)(?# wa.me)
 1733835130	VLAZ	larvesta(?!\.com)
 1733837421	VLAZ	vividkreations\.com
+1733837463	VLAZ	vivid[\W_]*+kreations(?!\.com(?<=vividkreations\.com))
