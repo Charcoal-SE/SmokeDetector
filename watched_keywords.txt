@@ -69108,3 +69108,4 @@
 1733850440	Vickel	xplormachupicchu\.com
 1733850448	Vickel	kenkoadventures\.com
 1733863179	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)(?<!download\.lenovo\.com)
+1733871575	Anerdw	(?-i:59F3DD5DF)(?#Mary Jewelry invite code)
