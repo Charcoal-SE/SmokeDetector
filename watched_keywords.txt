@@ -69094,3 +69094,4 @@
 1733827756	Cow	babafilmizlet\.com
 1733830209	Cow	metizsoftinc\.com
 1733831566	Cow	bagfultechnologies\.com
+1733831614	Cow	bagful[\W_]*+technologies(?!\.com(?<=bagfultechnologies\.com))
