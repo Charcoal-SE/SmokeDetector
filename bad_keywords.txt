@@ -3211,3 +3211,4 @@ your[\W_]*+jio[\W_]*+number
 (?:call|contact)[\W_]*+jio[\W_]*+customer[\W_]*+(?:care|support)
 (?:contact|call)[\W_]*+customer[\W_]*+(?:care|support)[\W_]*+(?:call|dial)
 computeroids
+bio[\W_]*+gen[\W_]*+x[\W_]*+blood[\W_]*+sugar[\W_]*+control
