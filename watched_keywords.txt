@@ -67205,7 +67205,6 @@
 1728379659	tripleee	24kbetaccount\.com
 1728380281	double-beep	garden\.cvt247\.net
 1728383109	VLAZ	webtrainings\.in
-1728383982	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)
 1728384006	Jeff Schaller	webtrainings\.com
 1728387416	Jeff Schaller	woodsidegroup\.com\.au
 1728388193	Vickel	cheeserecipies\.com
