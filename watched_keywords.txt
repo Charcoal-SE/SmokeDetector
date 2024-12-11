@@ -69118,7 +69118,6 @@
 1733910885	Cow	roshpack\.com
 1733912074	double-beep	revivagloww\.netlify\.app
 1733912924	double-beep	netarioinnovations\.com
-1733913165	double-beep	wistanomic(?!\.com)
 1733913349	double-beep	brendanmulhern\.blog
 1733914409	VLAZ	TicketsQue(?!\.com)
 1733914504	Cow	stewartmovingandstorage\.com
