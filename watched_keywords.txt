@@ -69126,3 +69126,4 @@
 1733916178	VLAZ	rtstvhub\.com
 1733916294	VLAZ	envirotechltd\.com
 1733916928	Cow	mycalpharm\.com
+1733917508	VLAZ	roshpack(?!\.com)
