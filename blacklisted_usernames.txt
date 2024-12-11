@@ -1219,3 +1219,4 @@ carelab[sz]
 (?-i:^Nig gaer$)
 (?-i:^Vape It Wholesale$)
 (?-i:^Powerfull magiclovespells$)
+(?-i:^Eight Eggs$)(?#rhxjwpm spam)
