@@ -69128,3 +69128,4 @@
 1733916928	Cow	mycalpharm\.com
 1733917508	VLAZ	roshpack(?!\.com)
 1733917516	VLAZ	RevivaGlow
+1733917548	VLAZ	Netario[\W_]*+Innovations(?!\.com(?<=netarioinnovations\.com))
