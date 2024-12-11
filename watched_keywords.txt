@@ -69114,3 +69114,4 @@
 1733898939	Cow	^Idiot Race$
 1733899101	Cow	bofc\.io
 1733900280	VLAZ	sekamaterigan900
+1733904936	Cow	offertake\.xyz
