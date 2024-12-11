@@ -69146,3 +69146,4 @@
 1733924516	VLAZ	fullz
 1733924524	VLAZ	deadfullz
 1733924532	VLAZ	deadfullzuk
+1733924962	VLAZ	guardianwatersports\.com
