@@ -69140,3 +69140,4 @@
 1733924466	VLAZ	Al[\W_]*+Mutakamela
 1733924474	VLAZ	selldeadfullz
 1733924482	VLAZ	ukdeadfullz
+1733924491	VLAZ	ukfullzdead
