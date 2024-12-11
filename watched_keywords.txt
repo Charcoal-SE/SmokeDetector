@@ -69154,3 +69154,4 @@
 1733931004	Fastnlight	fundsreclaimercompany\.com
 1733931089	Fastnlight	Funds[\W_]*+Reclaimer[\W_]*+Company(?!\.com(?<=fundsreclaimercompany\.com))
 1733931517	Spevacus	mitie\.com
+1733931525	Spevacus	guard-mark\.co\.uk
