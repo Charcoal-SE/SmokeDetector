@@ -61137,7 +61137,6 @@
 1714910891	Vickel	zoroto\.live
 1714910950	Vickel	quranexplorer\.online
 1714911069	Vickel	etpglobal660(?:@gmail\.com)?
-1714911189	Vickel	internationalquranacademy\.com
 1714911961	Vickel	quran[\W_]*+explorer(?!\.online(?<=quranexplorer\.online))
 1714914754	Makyen	wifiiwavlink\.com
 1714914995	Makyen	international[\W_]*+quran[\W_]*+academy(?!\.com(?<=internationalquranacademy\.com))
