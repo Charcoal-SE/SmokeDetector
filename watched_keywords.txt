@@ -69127,3 +69127,4 @@
 1733916294	VLAZ	envirotechltd\.com
 1733916928	Cow	mycalpharm\.com
 1733917508	VLAZ	roshpack(?!\.com)
+1733917516	VLAZ	RevivaGlow
