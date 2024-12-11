@@ -69130,3 +69130,4 @@
 1733917548	VLAZ	Netario[\W_]*+Innovations(?!\.com(?<=netarioinnovations\.com))
 1733917600	VLAZ	wistanomic(?!\.com|\.medium\.com)
 1733917844	Jeff Schaller	estradaci\.com
+1733918438	Cow	vireglobal\.com
