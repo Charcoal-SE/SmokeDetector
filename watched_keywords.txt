@@ -69153,3 +69153,4 @@
 1733930504	General Grievance	bernhard-travel-insurance\.com
 1733931004	Fastnlight	fundsreclaimercompany\.com
 1733931089	Fastnlight	Funds[\W_]*+Reclaimer[\W_]*+Company(?!\.com(?<=fundsreclaimercompany\.com))
+1733931517	Spevacus	mitie\.com
