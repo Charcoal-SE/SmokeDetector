@@ -69131,3 +69131,4 @@
 1733917600	VLAZ	wistanomic(?!\.com|\.medium\.com)
 1733917844	Jeff Schaller	estradaci\.com
 1733918438	Cow	vireglobal\.com
+1733918482	Cow	vire[\W_]*+global(?!\.com(?<=vireglobal\.com))
