@@ -69162,3 +69162,4 @@
 1733951197	Vickel	cryptoFX(?:[\W_]*+(?:at[\W_]*+)?writeme(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1733977182	Spevacus	kodeshcleaning\.com
 1733980009	Spevacus	sassyinfotech\.com
+1733980018	Spevacus	apnetv\.pro
