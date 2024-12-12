@@ -578,7 +578,8 @@ items:
 - ns: bh-in-31.webhostbox.net.
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
-- comment: NXDOMAIN 2020-12-30; resolves again 2024-10-11
+- comment: NXDOMAIN 2020-12-30; resolves again 2024-10-11; NXDOMAIN again 2024-12-12
+  disable: true
   ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
