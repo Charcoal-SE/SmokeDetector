@@ -69173,3 +69173,4 @@
 1733990528	VLAZ	rev9solutions\.com
 1733990569	VLAZ	rev9[\W_]*+solutions(?!\.com(?<=rev9solutions\.com))
 1733993241	double-beep	mpec\.vn
+1733993273	double-beep	dawaapharmaceuticals\.com
