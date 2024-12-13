@@ -68897,7 +68897,6 @@
 1733225444	Cow	egyptra\.pro
 1733225522	Cow	appverif\.com
 1733225560	Cow	gssglobalhub\.com
-1733225866	Cow	officeessence\.net
 1733226123	Cow	whitescreen\.vip
 1733228717	Vickel	amarketforce\.com
 1733228846	Vickel	amarketforce(?!\.com)
