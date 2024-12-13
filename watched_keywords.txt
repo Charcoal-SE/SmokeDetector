@@ -67147,7 +67147,6 @@
 1728280475	Cow	journalsinsights\.com
 1728281144	Cow	rathorebc(?:@hotmail\.com)?
 1728281218	Cow	0009-0008-0097-2420(?# orcid.org)
-1728282001	tripleee	\d+<(\w+)>\d+(?:[^\d<>]\d+)*(?!</\1>)
 1728282418	Cow	devaaj\.com
 1728282864	Cow	industrialcart\.in
 1728284745	tripleee	twenty[\W_]*+47
