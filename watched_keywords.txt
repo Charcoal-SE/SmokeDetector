@@ -69219,3 +69219,4 @@
 1734088942	Cow	magentowebdev\.com
 1734090119	Jeff Schaller	bluemountainloans\.com
 1734090157	Cow	blue[\W_]*+mountain[\W_]*+loans(?!\.com(?<=bluemountainloans\.com))
+1734091747	Cow	thewesternapparel\.com
