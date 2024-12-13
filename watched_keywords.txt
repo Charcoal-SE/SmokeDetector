@@ -69221,3 +69221,4 @@
 1734090157	Cow	blue[\W_]*+mountain[\W_]*+loans(?!\.com(?<=bluemountainloans\.com))
 1734091747	Cow	thewesternapparel\.com
 1734092370	Cow	nlcblottoresult\.com
+1734092392	Cow	fluxusteamexecutor\.com
