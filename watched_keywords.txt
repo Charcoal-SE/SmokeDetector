@@ -69227,3 +69227,4 @@
 1734098795	Cow	dunzo[\W_]*+app
 1734103838	Fastnlight	theorganicsstores\.com
 1734107387	Jeff Schaller	hinno-dentallab\.com
+1734108452	Cow	answersvlt\.blogspot
