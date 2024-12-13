@@ -69203,3 +69203,4 @@
 1734061221	Makyen	𝐍[\W_]*+𝐮[\W_]*+𝐦[\W_]*+𝐛[\W_]*+𝐞[\W_]*+𝐫(?#𝐍𝐮𝐦𝐛𝐞𝐫)
 1734069604	CPlus	nasiya\.digiwebi
 1734070662	Cow	celexity\.com
+1734072784	VLAZ	francevisaagent\.co\.uk
