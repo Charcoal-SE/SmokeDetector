@@ -69243,3 +69243,4 @@
 1734188848	Cow	bilmarlandscape\.com
 1734192468	Dragonrage	foundercodes\.com
 1734192823	Vickel	novamed-global\.com
+1734192962	Vickel	novamed[\W_]*+global(?!\.com(?<=novamed-global\.com))
