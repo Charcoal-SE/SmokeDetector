@@ -69246,3 +69246,4 @@
 1734192962	Vickel	novamed[\W_]*+global(?!\.com(?<=novamed-global\.com))
 1734195336	Makyen	foundercode(?!\.com)s?
 1734195694	Dragonrage	wordfeudcheatpro\.com
+1734195833	Dragonrage	input2docs\.com
