@@ -69240,3 +69240,4 @@
 1734175948	Vickel	galaxy-tourism\.com
 1734185018	Cow	how[\W_]*+(?:do[\W_]*+i|to|will[\W_]*+i|can[\W_]*+i)[\W_]*+(?:cancel|raise|complain|speak|refund|clear|get|stop|place|talk|file|reverse|deactivate|connect|change|ask|communicate|register|contact|recover|reach)[\W_]*+.{0,60}?(?:pay[\W_]*+tm|phone[\W_]*+(?:pe|pay)|kuku[\W_]*+fm|airlines?+|airways?+|meesho|zomato|hungama|ekart|swiggy|zepto|jio|jiofiber|robinhood|expedia|airtel|google[\W_]*+pay|gpay|flipkart|snapdeal|glowroad|blinkit|myntra|ixigo|dmart)
 1734188749	Cow	aweddingstory\.nz
+1734188848	Cow	bilmarlandscape\.com
