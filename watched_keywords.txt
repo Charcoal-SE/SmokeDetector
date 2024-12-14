@@ -69237,3 +69237,4 @@
 1734166324	Cow	dubai[\W_]*+visiting[\W_]*+card[\W_]*+printing
 1734166934	Cow	sportzfytv\.cc
 1734171090	Cow	apkhihe\.com
+1734175948	Vickel	galaxy-tourism\.com
