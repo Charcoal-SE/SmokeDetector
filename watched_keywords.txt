@@ -69024,7 +69024,6 @@
 1733561112	Cow	southpole5eyeshackingandrecoveringcompany\.com
 1733570239	Cow	hackbursterrecovery\.weebly\.com
 1733570284	Cow	hack[\W_]*+burster[\W_]*+recovery
-1733570308	Cow	vtuit\.com
 1733570397	Cow	labeebcp\.com
 1733570449	Cow	firazmuhammed\.com
 1733570473	Cow	firaz[\W_]*+muhammed(?!\.com(?<=firazmuhammed\.com))
