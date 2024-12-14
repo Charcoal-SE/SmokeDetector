@@ -69233,3 +69233,4 @@
 1734126428	Vickel	sharearchiver\.com
 1734126859	cocomac	peruandesdiscovery\.com
 1734068040	CPlus	ixsight
+1734162489	VLAZ	erexcel\.netlify\.app
