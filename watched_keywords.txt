@@ -65652,7 +65652,6 @@
 1724976907	Cody Gray	UniFab(?!\.ai)
 1724994665	Anerdw	dingdinghotpot\.com
 1724980439	Anerdw	BRISKPE
-1724998054	Cow	lifelinefoundations\.win
 1724998881	VLAZ	forinsightsconsultancy\.com
 1724998918	VLAZ	for[\W_]*+insights[\W_]*+consultancy(?!\.com(?<=forinsightsconsultancy\.com))
 1724998950	VLAZ	macwiki[\W_]*+proton[\W_]*+\.[\W_]*+me
