@@ -69235,3 +69235,4 @@
 1734162489	VLAZ	erexcel\.netlify\.app
 1734162547	VLAZ	erexcel(?!\.netlify\.app)
 1734164598	Cow	letsconvert\.io
+1734166324	Cow	dubai[\W_]*+visiting[\W_]*+card[\W_]*+printing
