@@ -69257,3 +69257,4 @@
 1734256633	VLAZ	tarathangka\.com
 1734263313	Cow	how[\W_]*+(?:do[\W_]*+i|to|will[\W_]*+i|can[\W_]*+i)[\W_]*+(?:cancel|raise|complain|speak|refund|clear|get|stop|place|talk|file|reverse|deactivate|connect|change|ask|communicate|register|contact|recover|reach|really)[\W_]*+.{0,60}?(?:pay[\W_]*+tm|phone[\W_]*+(?:pe|pay)|kuku[\W_]*+fm|airlines?+|airways?+|meesho|zomato|hungama|ekart|swiggy|zepto|jio|jiofiber|robinhood|expedia|airtel|google[\W_]*+pay|gpay|flipkart|snapdeal|glowroad|blinkit|myntra|ixigo|dmart|f[\W_]*+secure)
 1734264051	Cow	soilworx\.ca
+1734264773	Cow	sos-click\.com
