@@ -69252,3 +69252,4 @@
 1734240872	Makyen	recoveryaccesscode11(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1734240880	Makyen	reclaimwizardrecovery(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1734240895	Makyen	reclaimwizard
+1734244042	Nisse Engström	energyintelligence\.in
