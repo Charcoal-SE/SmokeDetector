@@ -69298,3 +69298,4 @@
 1734346573	VLAZ	aswebinfo\.com
 1734346657	VLAZ	thenamingzone\.com
 1734351363	VLAZ	Nicoya[\W_]*+PuraTea
+1734351818	VLAZ	thanecourtmarriageconsultant\.com
