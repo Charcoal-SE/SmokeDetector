@@ -69282,3 +69282,4 @@
 1734328403	Jeff Schaller	bookmarkeasier\.com
 1734329124	Jeff Schaller	dougsbugz\.com
 1734329515	Makyen	dougs[\W_]*+bugz(?!\.com(?<=dougsbugz\.com))
+1734329549	Makyen	myvi\.in
