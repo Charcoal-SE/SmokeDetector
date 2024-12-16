@@ -69286,3 +69286,4 @@
 1734329582	Makyen	christmas[\W_]*+sale[\W_]*+special[\W_]*+offers[\W_]*+in[\W_]*+california[\W_]*+puravive[\W_]*+weight[\W_]*+loss[\W_]*+deals[\W_]*+2024
 1734329996	Cow	LibonexBoostersGermany
 1734330014	Cow	libonextestosteronecapsules
+1734330036	Cow	DentaSmilePro
