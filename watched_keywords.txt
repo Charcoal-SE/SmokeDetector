@@ -69300,3 +69300,4 @@
 1734351363	VLAZ	Nicoya[\W_]*+PuraTea
 1734351818	VLAZ	thanecourtmarriageconsultant\.com
 1734352194	Vickel	axcrack\.org
+1734355446	Cow	sync\.blue
