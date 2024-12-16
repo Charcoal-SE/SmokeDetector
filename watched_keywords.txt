@@ -69299,3 +69299,4 @@
 1734346657	VLAZ	thenamingzone\.com
 1734351363	VLAZ	Nicoya[\W_]*+PuraTea
 1734351818	VLAZ	thanecourtmarriageconsultant\.com
+1734352194	Vickel	axcrack\.org
