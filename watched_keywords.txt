@@ -69289,3 +69289,4 @@
 1734330036	Cow	DentaSmilePro
 1734338154	VLAZ	codleo\.com
 1734338200	VLAZ	openkyber\.com(?# hiring spam)
+1734338340	VLAZ	weekname\.in
