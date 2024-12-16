@@ -69295,3 +69295,4 @@
 1734345209	Jeff Schaller	solarpanelinfo\.co\.za
 1734345984	VLAZ	themagistv\.com
 1734346531	VLAZ	nepalfilmproduction\.com
+1734346573	VLAZ	aswebinfo\.com
