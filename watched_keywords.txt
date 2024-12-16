@@ -69269,3 +69269,4 @@
 1734288885	Glorfindel	fastanswerfacts\.blogspot
 1734304523	Vickel	mgnregajobcardlist\.com
 1734304638	Vickel	mgnrega[\W_]*+job[\W_]*+card[\W_]*+list(?!\.com(?<=mgnregajobcardlist\.com))
+1734318060	Makyen	chatgpt[\W_]*+gratuit(?!\.org(?<=chatgptgratuit\.org))
