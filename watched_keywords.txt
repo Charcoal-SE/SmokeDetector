@@ -69271,3 +69271,4 @@
 1734304638	Vickel	mgnrega[\W_]*+job[\W_]*+card[\W_]*+list(?!\.com(?<=mgnregajobcardlist\.com))
 1734318060	Makyen	chatgpt[\W_]*+gratuit(?!\.org(?<=chatgptgratuit\.org))
 1734321927	Makyen	viralstyle\.com
+1734321935	Makyen	tayvoodoo
