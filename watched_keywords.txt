@@ -69317,3 +69317,4 @@
 1734414082	Makyen	forumfunctionalhealth\.com
 1734414090	Makyen	forum[\W_]*+functional[\W_]*+health(?!\.com(?<=forumfunctionalhealth\.com))
 1734415633	Cow	cettechnology\.com
+1734416276	Cow	trypinealguardian\.systeme\.io
