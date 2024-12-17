@@ -69334,3 +69334,4 @@
 1734439605	Jeff Schaller	betingshop\.com
 1734439634	Jeff Schaller	vipvpn_sale2(?#t.me)
 1734441997	Vickel	drinkmiron\.net
+1734442016	Vickel	(?-i:MironCoinLLC)(?#t.me)
