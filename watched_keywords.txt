@@ -69315,3 +69315,4 @@
 1734388388	Vickel	Recoveryrescue67(?:@gmail\.com)?
 1734396763	Fastnlight	Dominique[\W_]*+Recovery[\W_]*+Team
 1734414082	Makyen	forumfunctionalhealth\.com
+1734414090	Makyen	forum[\W_]*+functional[\W_]*+health(?!\.com(?<=forumfunctionalhealth\.com))
