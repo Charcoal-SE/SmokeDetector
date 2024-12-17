@@ -62808,7 +62808,6 @@
 1718608753	Makyen	docopd(?!\.com)
 1718610641	Dragonrage	trishulhomecare\.com
 1718621818	double-beep	premiertickets\.co
-1718621868	double-beep	wisewaytec\.com
 1718622046	double-beep	mhkthink\.com
 1718622523	double-beep	elitefurnaces\.com
 1718629902	Jeff Schaller	admintoto\.my\.id
