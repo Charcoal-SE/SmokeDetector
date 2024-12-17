@@ -69324,3 +69324,4 @@
 1734423827	VLAZ	astroera(?!\.in(?<=astroera\.in))
 1734425749	VLAZ	techmavesoftware\.com
 1734425760	VLAZ	kriteshenterprises\.co\.in
+1734426008	VLAZ	usasmmzillow
