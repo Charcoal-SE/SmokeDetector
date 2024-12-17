@@ -69341,3 +69341,4 @@
 1734454010	Anerdw	betsaga\.spacejoins\.net
 1734454614	General Grievance	moviesjuction\.xyz
 1734454743	Vickel	moviespyhd4\.com
+1734454850	Vickel	MovieSpyHD(?!\.com)
