@@ -69322,3 +69322,4 @@
 1734421418	VLAZ	calculator\.institute
 1734423692	VLAZ	skysolution\.com
 1734423827	VLAZ	astroera(?!\.in(?<=astroera\.in))
+1734425749	VLAZ	techmavesoftware\.com
