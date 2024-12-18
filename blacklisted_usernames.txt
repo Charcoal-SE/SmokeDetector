@@ -1221,3 +1221,4 @@ carelab[sz]
 (?-i:^Powerfull magiclovespells$)
 (?-i:^Eight Eggs$)(?#rhxjwpm spam)
 (?-i:^Djj Ejj$)
+(?-i:^Prunkellator 28371$)
