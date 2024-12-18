@@ -69344,4 +69344,3 @@
 1734454922	Dragonrage	shehashareef\.com
 1734468126	Fastnlight	forecastmigration\.com
 1734454760	Anerdw	(?-i:Fu2Bi)(?#shorturl.at)
-1734490988	Fastnlight	(?-i:^Prunkellator 28371$)
