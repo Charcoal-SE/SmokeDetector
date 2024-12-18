@@ -69361,3 +69361,4 @@
 1734507912	Dragonrage	happylocate\.com
 1734511048	VLAZ	vidyasagarpreschool\.edu\.in
 1734511126	VLAZ	vidyasagar[\W_]*+preschool(?!\.edu\.in(?<=vidyasagarpreschool\.edu\.in))
+1734511137	VLAZ	tnacanadaglobal\.com
