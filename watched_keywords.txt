@@ -3904,7 +3904,6 @@
 1531209912	Glorfindel	iactivate\W?host
 1531217612	Byte Commander	innostack\.in
 1531220631	Byte Commander	solutionremarks\.com
-1531249014	Glorfindel	mideo
 1531252556	Makyen	duckduckporn\.com
 1531260649	Makyen	followlikesocial\.com
 1531274725	Makyen	myofascialrelease\.com
