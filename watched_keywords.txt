@@ -69363,3 +69363,4 @@
 1734511126	VLAZ	vidyasagar[\W_]*+preschool(?!\.edu\.in(?<=vidyasagarpreschool\.edu\.in))
 1734511137	VLAZ	tnacanadaglobal\.com
 1734513948	Dragonrage	event\.vhunter\.vn
+1734517505	Dragonrage	searchenginestate\.com
