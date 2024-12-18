@@ -69382,3 +69382,4 @@
 1734548099	Cow	nennhasao\.com
 1734555590	Vickel	skyfareracademy\.com
 1734555689	Vickel	skyfarer[\W_]*+academy(?!\.com(?<=skyfareracademy\.com))
+1734563303	Vickel	skikoonews\.blogspot
