@@ -69350,3 +69350,4 @@
 1734502034	Cow	manyolo\.co\.nz
 1734502128	Dragonrage	(?-i:BirthdayBNV)(?#bit.ly)
 1734502163	Cow	gluconol-de\.com
+1734502190	Cow	dodkart\.com
