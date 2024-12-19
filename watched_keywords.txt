@@ -69413,3 +69413,4 @@
 1734625579	Fastnlight	gearfixing\.com
 1734625684	Fastnlight	toree\.xyz
 1734625712	Fastnlight	nullsbrawl\.cloud
+1734626164	Fastnlight	cryptojobsearch\.com
