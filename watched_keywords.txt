@@ -69402,3 +69402,4 @@
 1734608667	Vickel	Gluco[\W_]*+Extend(?:[\W_]*+reviews)?(?!\.sites\.kaltura\.com(?<=gluco-extend-reviews\.sites\.kaltura\.com))
 1734609118	Vickel	770283494553288704(?#tumblr.com)
 1734610438	Glorfindel	answerlabm\.blogspot
+1734611830	Cow	prodiverwalt
