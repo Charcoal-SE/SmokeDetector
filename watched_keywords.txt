@@ -69415,3 +69415,4 @@
 1734625712	Fastnlight	nullsbrawl\.cloud
 1734626164	Fastnlight	cryptojobsearch\.com
 1734627163	Vickel	heritagearchitects\.in
+1734627242	Cow	heritage[\W_]*+architect
