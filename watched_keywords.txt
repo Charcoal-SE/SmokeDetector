@@ -69400,3 +69400,4 @@
 1734608019	Dragonrage	powerlineindustries\.com
 1734608190	Dragonrage	growthorb
 1734608667	Vickel	Gluco[\W_]*+Extend(?:[\W_]*+reviews)?(?!\.sites\.kaltura\.com(?<=gluco-extend-reviews\.sites\.kaltura\.com))
+1734609118	Vickel	770283494553288704(?#tumblr.com)
