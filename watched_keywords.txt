@@ -69384,3 +69384,4 @@
 1734555689	Vickel	skyfarer[\W_]*+academy(?!\.com(?<=skyfareracademy\.com))
 1734563303	Vickel	skikoonews\.blogspot
 1734580112	Ryan M	iosgodsipa\.com
+1734583842	Spevacus	ko-loy-no-1\.com
