@@ -69415,3 +69415,4 @@
 1734627599	Cow	heritage[\W_]*+architects?+(?!\.in(?<=heritagearchitects\.in))
 1734637368	Cow	natasatech\.wordpress\.com
 1734668662	Anerdw	wiseselections\.in
+1734668778	Anerdw	pursuitphysiotherapy\.ca
