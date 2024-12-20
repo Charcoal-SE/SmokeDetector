@@ -69451,3 +69451,4 @@
 1734702622	VLAZ	santamev\.xyz
 1734707747	Cow	consumer[\W_]*+law[\W_]*+firm[\W_]*+center(?!\.com(?<=consumerlawfirmcenter\.com))
 1734712047	Fastnlight	24by7digitizing\.com
+1734716833	Vickel	giftsofloveforlover\.com
