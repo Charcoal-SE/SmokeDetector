@@ -3227,3 +3227,4 @@ how[\W_]*+to[\W_]*+speak[\W_]*+directly[\W_]*+at
 what[\W_]*+is[\W_]*+the[\W_]*+24[\W_]*+hour[\W_]*+rule
 worldwide[\W_]*+customer[\W_]*+support
 air[\W_]*+france[\W_]*+open[\W_]*+24[\W_]*+7
+cómo[\W_]*+llamar[\W_]*+a[\W_]*+iberia[\W_]*+en
