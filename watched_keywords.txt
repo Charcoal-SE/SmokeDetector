@@ -69419,3 +69419,4 @@
 1734668717	Anerdw	digitalputhra\.com
 1734668778	Anerdw	pursuitphysiotherapy\.ca
 1734673274	Cow	most[\W_]*+efficient[\W_]*+way[\W_]*+is[\W_]*+to[\W_]*+call[\W_]*+their
+1734673650	Cow	acevedoweddings\.com
