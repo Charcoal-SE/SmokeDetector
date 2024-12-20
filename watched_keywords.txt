@@ -69441,3 +69441,4 @@
 1734695081	VLAZ	techhelper\.in
 1734695206	Cow	SSDesignStudio
 1734695314	VLAZ	regal[\W_]*+interiors
+1734695799	Cow	theedgesingapore\.com
