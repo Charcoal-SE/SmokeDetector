@@ -3223,3 +3223,4 @@ how[\W_]*+do[\W_]*+I[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+from[\W_]*+dunzo
 (?-i:O9QYO3UJ)
 credit[\W_]*+loan[\W_]*+app
 soho[\W_]*+tech[\W_]*+services(?!\.com(?<=sohotechservices\.com))
+Spyr?ecovery36(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
