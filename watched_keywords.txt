@@ -69443,3 +69443,4 @@
 1734695314	VLAZ	regal[\W_]*+interiors
 1734695799	Cow	theedgesingapore\.com
 1734696036	Cow	hysses[\W_]*+wellness
+1734696171	Cow	topfood\.club
