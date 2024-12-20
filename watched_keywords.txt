@@ -69438,3 +69438,4 @@
 1734693758	VLAZ	techgear\.in\.net
 1734693789	Cow	damacverona\.com
 1734693922	Vickel	damac[\W_]*+verona(?!\.com(?<=damacverona\.com))
+1734695081	VLAZ	techhelper\.in
