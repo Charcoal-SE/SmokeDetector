@@ -69447,3 +69447,4 @@
 1734697265	Cow	westlinkconstructioncleaning\.com\.au
 1734699423	Vickel	attestationmea\.com
 1734699779	VLAZ	attestation[\W_]*+mea(?!\.com(?<=attestationmea\.com))
+1734700799	VLAZ	spotimod\.com
