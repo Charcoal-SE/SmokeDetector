@@ -69421,3 +69421,4 @@
 1734673274	Cow	most[\W_]*+efficient[\W_]*+way[\W_]*+is[\W_]*+to[\W_]*+call[\W_]*+their
 1734673650	Cow	acevedoweddings\.com
 1734673885	Cow	cómo[\W_]*+puedo[\W_]*+comunicarme[\W_]*+realmente[\W_]*+con
+1734674011	Cow	cómo[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
