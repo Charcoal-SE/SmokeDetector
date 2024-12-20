@@ -69440,3 +69440,4 @@
 1734693922	Vickel	damac[\W_]*+verona(?!\.com(?<=damacverona\.com))
 1734695081	VLAZ	techhelper\.in
 1734695206	Cow	SSDesignStudio
+1734695314	VLAZ	regal[\W_]*+interiors
