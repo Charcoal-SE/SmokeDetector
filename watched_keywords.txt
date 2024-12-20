@@ -69448,3 +69448,4 @@
 1734699423	Vickel	attestationmea\.com
 1734699779	VLAZ	attestation[\W_]*+mea(?!\.com(?<=attestationmea\.com))
 1734700799	VLAZ	spotimod\.com
+1734702622	VLAZ	santamev\.xyz
