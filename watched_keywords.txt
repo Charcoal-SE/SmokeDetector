@@ -69455,3 +69455,4 @@
 1734719036	Spevacus	lancedigital\.in
 1734720375	Vickel	cpaphil\.com
 1734722022	Vickel	Choose[\W_]*+Kinsta[\W_]*+Hosting
+1734723287	Vickel	(?-i:Alphaspynest)(?#t.me)
