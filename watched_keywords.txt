@@ -69416,3 +69416,4 @@
 1734637368	Cow	natasatech\.wordpress\.com
 1734668662	Anerdw	wiseselections\.in
 1734668708	Anerdw	chamber-testing\.com
+1734668717	Anerdw	digitalputhra\.com
