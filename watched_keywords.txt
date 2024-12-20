@@ -69428,3 +69428,4 @@
 1734678275	Cow	open[\W_]*+24[\W_]*+7[\W_]*+at
 1734678616	Cow	reddyannaboooks\.com
 1734678855	Cow	beautilook\.in
+1734679761	Cow	athen\.tech
