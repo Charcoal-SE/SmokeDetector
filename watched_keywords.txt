@@ -69414,3 +69414,4 @@
 1734627163	Vickel	heritagearchitects\.in
 1734627599	Cow	heritage[\W_]*+architects?+(?!\.in(?<=heritagearchitects\.in))
 1734637368	Cow	natasatech\.wordpress\.com
+1734668717	Anerdw	digitalputhra\.com
