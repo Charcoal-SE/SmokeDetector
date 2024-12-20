@@ -69424,3 +69424,4 @@
 1734674011	Cow	cómo[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
 1734675221	Cow	arsalanmovers\.com
 1734676318	Cow	\[direct[\W_]*+talk\]
+1734676586	Cow	live[\W_]*+person[\W_]*+at
