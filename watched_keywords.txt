@@ -69420,3 +69420,4 @@
 1734668778	Anerdw	pursuitphysiotherapy\.ca
 1734673274	Cow	most[\W_]*+efficient[\W_]*+way[\W_]*+is[\W_]*+to[\W_]*+call[\W_]*+their
 1734673650	Cow	acevedoweddings\.com
+1734673885	Cow	cómo[\W_]*+puedo[\W_]*+comunicarme[\W_]*+realmente[\W_]*+con
