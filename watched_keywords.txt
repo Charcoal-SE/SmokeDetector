@@ -69449,3 +69449,4 @@
 1734699779	VLAZ	attestation[\W_]*+mea(?!\.com(?<=attestationmea\.com))
 1734700799	VLAZ	spotimod\.com
 1734702622	VLAZ	santamev\.xyz
+1734707747	Cow	consumer[\W_]*+law[\W_]*+firm[\W_]*+center(?!\.com(?<=consumerlawfirmcenter\.com))
