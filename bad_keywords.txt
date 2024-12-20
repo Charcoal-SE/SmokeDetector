@@ -3226,3 +3226,4 @@ Spyr?ecovery36(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?
 how[\W_]*+to[\W_]*+speak[\W_]*+directly[\W_]*+at
 what[\W_]*+is[\W_]*+the[\W_]*+24[\W_]*+hour[\W_]*+rule
 worldwide[\W_]*+customer[\W_]*+support
+air[\W_]*+france[\W_]*+open[\W_]*+24[\W_]*+7
