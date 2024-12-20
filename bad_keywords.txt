@@ -3224,3 +3224,4 @@ credit[\W_]*+loan[\W_]*+app
 soho[\W_]*+tech[\W_]*+services(?!\.com(?<=sohotechservices\.com))
 Spyr?ecovery36(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 how[\W_]*+to[\W_]*+speak[\W_]*+directly[\W_]*+at
+what[\W_]*+is[\W_]*+the[\W_]*+24[\W_]*+hour[\W_]*+rule
