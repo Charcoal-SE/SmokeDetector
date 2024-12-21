@@ -69457,3 +69457,4 @@
 1734722022	Vickel	Choose[\W_]*+Kinsta[\W_]*+Hosting
 1734723287	Vickel	(?-i:Alphaspynest)(?#t.me)
 1734738945	Vickel	primestreams\.pro
+1734744931	Jeff Schaller	l1khonsh3ikh
