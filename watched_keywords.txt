@@ -69472,3 +69472,4 @@
 1734801405	Fastnlight	peterjohnclarkwizard(?:@gmail\.com)?+
 1734804900	Vickel	blacklabelbilliards\.com
 1734806687	Cow	yallashooot\.io
+1734819137	Vickel	(?-i:orangespritess)(?#t.me)
