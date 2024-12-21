@@ -69462,3 +69462,4 @@
 1734768397	Cow	techandkit\.blogspot
 1734768546	Cow	vantechnologies\.com
 1734768584	Cow	van[\W_]*+technologies(?!\.com(?<=vantechnologies\.com))
+1734768973	Cow	lescobil\.pk
