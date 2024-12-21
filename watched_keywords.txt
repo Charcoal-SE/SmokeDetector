@@ -49301,7 +49301,6 @@
 1681800478	tripleee	busbarmc\.com
 1681802020	tripleee	paylesser\.com
 1681802777	tripleee	sgtuniversity\.ac\.in
-1681803561	tripleee	integral-calculator\.com
 1681804829	tripleee	accountiod\.com
 1681804908	tripleee	msasianfilmacademy\.com
 1681805529	tripleee	saiayush\.in
