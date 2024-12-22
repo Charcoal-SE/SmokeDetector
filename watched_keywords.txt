@@ -69477,3 +69477,4 @@
 1734855756	Nisse Engström	parniannoclinic\.com
 1734866445	Cow	tentary\.com
 1734866675	Cow	searchhub\.rf\.gd
+1734866845	Cow	(?-i:AndymartinsP)(?# t.me)
