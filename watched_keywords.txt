@@ -69479,3 +69479,4 @@
 1734866675	Cow	searchhub\.rf\.gd
 1734866845	Cow	(?-i:AndymartinsP)(?# t.me)
 1734870589	Vickel	ilaw\.ae
+1734874020	VLAZ	electricbikez\.com
