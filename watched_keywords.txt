@@ -61770,7 +61770,6 @@
 1716271225	Cow	therapiva\.co\.in
 1716271291	Cow	JAPStudios(?#reddit)
 1716271326	Cow	(?-i:^JAPStudios$)
-1716271719	Makyen	atqor\.com
 1716271740	Makyen	atqor(?!\.com)
 1716274066	Dragonrage	businesshitech\.com
 1716275203	Dragonrage	howtoincreasedomainauthority\.com

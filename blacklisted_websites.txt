@@ -5931,3 +5931,4 @@ onlineclassassignment\.com
 astonjackets\.com
 devex\.com
 (?:^|[^-\w])contractor\.net
+atqor\.com
