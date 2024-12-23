@@ -69495,3 +69495,4 @@
 1734934597	Cow	cómo[\W_]*+puedo[\W_]*+conectarme[\W_]*+con[\W_]*+alguien[\W_]*+en
 1734935924	Cow	instadispatch\.com
 1734936375	Cow	examshome
+1734936823	Cow	alightmotionfx\.com
