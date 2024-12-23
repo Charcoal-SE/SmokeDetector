@@ -69499,3 +69499,4 @@
 1734937090	Cow	kinemasterapp\.xyz
 1734937157	Cow	como[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+agente[\W_]*+de
 1734938644	Cow	microsatacables\.com
+1734944882	Cow	purvaaerocity0\.wordpress\.com
