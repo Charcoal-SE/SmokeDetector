@@ -69491,3 +69491,4 @@
 1734903753	VLAZ	selfserver\.online
 1734932138	Cow	webfikir\.com
 1734933678	Cow	tileempirenashville\.com
+1734933832	Cow	cómo[\W_]*+hablo[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+real[\W_]*+en
