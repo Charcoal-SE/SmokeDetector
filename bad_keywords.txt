@@ -3230,3 +3230,4 @@ air[\W_]*+france[\W_]*+open[\W_]*+24[\W_]*+7
 cómo[\W_]*+llamar[\W_]*+a[\W_]*+iberia[\W_]*+en
 cómo[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+en
 you[\W_]*+have[\W_]*+24[\W_]*+hours[\W_]*+to[\W_]*+cancel
+club[\W_]*+(?:invite|inivatation)[\W_]*+code
