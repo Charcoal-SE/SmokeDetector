@@ -5932,3 +5932,4 @@ astonjackets\.com
 devex\.com
 (?:^|[^-\w])contractor\.net
 atqor\.com
+ourosjewels\.com
