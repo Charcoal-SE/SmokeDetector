@@ -69534,3 +69534,4 @@
 1735038840	Jeff Schaller	brucestreetanimalhospital\.ca
 1735039724	Vickel	rajeriya\.com
 1735039790	Vickel	rajeriya(?!\.com)
+1735044462	Jeff Schaller	argentineasado\.com
