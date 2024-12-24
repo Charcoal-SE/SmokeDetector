@@ -69419,7 +69419,6 @@
 1734673885	Cow	cómo[\W_]*+puedo[\W_]*+comunicarme[\W_]*+realmente[\W_]*+con
 1734674011	Cow	cómo[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
 1734675221	Cow	arsalanmovers\.com
-1734676318	Cow	\[direct[\W_]*+talk\]
 1734676586	Cow	live[\W_]*+person[\W_]*+at
 1734678275	Cow	open[\W_]*+24[\W_]*+7[\W_]*+at
 1734678616	Cow	reddyannaboooks\.com
