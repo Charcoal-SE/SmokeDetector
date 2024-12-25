@@ -69559,3 +69559,4 @@
 1735143228	Jeff Schaller	jalebino\.com
 1735144439	Makyen	johnericks1183@icloud\.com
 1735144532	Makyen	sandd?ancetyre(?!\.com)s?
+1735144846	Makyen	tesla[\W_]*+pi[\W_]*+phone(?!\.org(?<=teslapiphone\.org))
