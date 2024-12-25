@@ -69562,3 +69562,4 @@
 1735144846	Makyen	tesla[\W_]*+pi[\W_]*+phone(?!\.org(?<=teslapiphone\.org))
 1735145812	Makyen	capcutfx\.xyz
 1735146935	Fastnlight	Gwilliamsny11(?:@aol\.com)?+
+1735167419	Vickel	getcoins\.com\.au
