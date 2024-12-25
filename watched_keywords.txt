@@ -69561,3 +69561,4 @@
 1735144532	Makyen	sandd?ancetyre(?!\.com)s?
 1735144846	Makyen	tesla[\W_]*+pi[\W_]*+phone(?!\.org(?<=teslapiphone\.org))
 1735145812	Makyen	capcutfx\.xyz
+1735146935	Fastnlight	Gwilliamsny11(?:@aol\.com)?+
