@@ -69539,3 +69539,4 @@
 1735072719	VLAZ	Brian\.mcbride1983@icloud\.com
 1735073641	Cow	worldwide[\W_]*+customer[\W_]*+support
 1735073776	Cow	direct(?<=\[direct)[\W_]*+talk(?=\])
+1735102700	Jeff Schaller	pobal\.org
