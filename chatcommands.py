@@ -389,6 +389,13 @@ def do_blacklist(blacklist_type, msg, force=False):
     text_before_pattern = ''
     text_after_pattern = ''
 
+    # Block multiline chat messages to avoid corrupting the watchlist/blacklist file(s)
+    # Using -force should not bypass this, as that still results in file corruption
+    if '\n' in pattern:
+        raise CmdException("The watchlist/blacklist cannot be modified using multiline chat messages. If"
+                           " your desired change exceeds the length of a standard chat message, consider"
+                           " using Git to make the change (or ping someone who can).")
+
     other_issues = []
     if '\u202d' in pattern:
         other_issues.append("The pattern contains an invisible U+202D whitespace character.")
