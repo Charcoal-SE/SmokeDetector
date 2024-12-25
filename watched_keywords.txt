@@ -69556,3 +69556,4 @@
 1735126541	Cow	math-editor\.com
 1735126724	Cow	scd[\W_]*+company(?!\.com(?<=scd-company\.com))
 1735142017	Fastnlight	(?-i:pYXMZa5nzHTPJDcW7)(?#forms.gle)
+1735143228	Jeff Schaller	jalebino\.com
