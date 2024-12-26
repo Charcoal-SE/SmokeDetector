@@ -69596,3 +69596,4 @@
 1735232866	Fastnlight	peterjohnclarkwizard(?:@gmail\.com)?
 1735232914	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?
 1735232940	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?
+1735236268	Vickel	suicideboysshop\.us
