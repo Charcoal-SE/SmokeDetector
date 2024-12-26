@@ -69577,3 +69577,4 @@
 1735198047	Anerdw	maltabulletin\.mt
 1735200894	Anerdw	gogetatrip\.com
 1735201766	Anerdw	onlinequranacademy\.us
+1735201935	Anerdw	SR[\W_]*+University
