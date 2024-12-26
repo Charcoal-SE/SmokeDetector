@@ -69595,3 +69595,4 @@
 1735229714	Jeff Schaller	offer\.tq24k\.com
 1735232835	Fastnlight	Gwilliamsny11(?:@aol\.com)?
 1735232866	Fastnlight	peterjohnclarkwizard(?:@gmail\.com)?
+1735232914	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?
