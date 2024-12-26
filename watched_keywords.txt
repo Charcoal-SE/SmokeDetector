@@ -69582,3 +69582,4 @@
 1735210688	VLAZ	universalasylum\.com\.au
 1735210743	VLAZ	hubsofairports\.com
 1735210865	VLAZ	aiolith\.com
+1735210877	VLAZ	mangidik\.com
