@@ -69598,3 +69598,4 @@
 1735232940	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?
 1735236268	Vickel	suicideboysshop\.us
 1735244238	Fastnlight	namesgenerator\.site
+1735254538	Makyen	lilit[\W_]*+cafe(?!\.com(?<=lilitcafe\.com))
