@@ -61376,7 +61376,6 @@
 1715412678	Cow	theblissspa\.in
 1715412649	Cow	scholarship\.cmgl-x\.com
 1715391036	Vickel	Illuminanetworktech(?:@gmail\.com)?
-1715391054	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?+
 1715428562	Jeff Schaller	telesolutionscallcentral\.com
 1715428595	Jeff Schaller	wlmok-web\.com
 1715433389	Jeff Schaller	tubemate\.click
