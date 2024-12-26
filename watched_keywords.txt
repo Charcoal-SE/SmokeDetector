@@ -69597,3 +69597,4 @@
 1735232914	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?
 1735232940	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?
 1735236268	Vickel	suicideboysshop\.us
+1735244238	Fastnlight	namesgenerator\.site
