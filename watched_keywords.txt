@@ -69565,3 +69565,4 @@
 1735167419	Vickel	getcoins\.com\.au
 1735172199	Fastnlight	generalwebfixes\.web\.app
 1735191991	Dragonrage	rentcast\.io
+1735191999	Dragonrage	findvest\.io
