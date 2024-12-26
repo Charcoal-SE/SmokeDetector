@@ -778,7 +778,9 @@ items:
   - ns3cna.name.com.
   - ns4ksy.name.com.
 - ns: staticking.com.
-- ns: masbz.com.
+- comment: NXDOMAIN 2024-12-26
+  disable: true
+  ns: masbz.com.
 - comment: times out 2024-09-20
   disable: true
   ns: sttdns.com.
