@@ -69561,7 +69561,6 @@
 1735144532	Makyen	sandd?ancetyre(?!\.com)s?
 1735144846	Makyen	tesla[\W_]*+pi[\W_]*+phone(?!\.org(?<=teslapiphone\.org))
 1735145812	Makyen	capcutfx\.xyz
-1735146935	Fastnlight	Gwilliamsny11(?:@aol\.com)?+
 1735167419	Vickel	getcoins\.com\.au
 1735172199	Fastnlight	generalwebfixes\.web\.app
 1735191991	Dragonrage	rentcast\.io
