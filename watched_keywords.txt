@@ -69614,3 +69614,4 @@
 1735300017	Cow	aimluniverse\.in
 1735300638	Cow	hashzebra\.io
 1735300733	Vickel	hash[\W_]*+zebra(?!\.io(?<=hashzebra\.io))
+1735306119	Vickel	jobbers\.io
