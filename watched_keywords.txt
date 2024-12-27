@@ -69601,3 +69601,4 @@
 1735254538	Makyen	lilit[\W_]*+cafe(?!\.com(?<=lilitcafe\.com))
 1735276714	Cow	banana-anma\.com
 1735281433	Cow	abohassan\.vercel\.app
+1735284144	Cow	lhw95hak
