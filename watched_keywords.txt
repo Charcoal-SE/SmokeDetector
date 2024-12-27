@@ -69599,3 +69599,4 @@
 1735236268	Vickel	suicideboysshop\.us
 1735244238	Fastnlight	namesgenerator\.site
 1735254538	Makyen	lilit[\W_]*+cafe(?!\.com(?<=lilitcafe\.com))
+1735276714	Cow	banana-anma\.com
