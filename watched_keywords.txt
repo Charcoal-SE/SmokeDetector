@@ -69613,3 +69613,4 @@
 1735298359	Cow	adinfra\.co\.in
 1735300017	Cow	aimluniverse\.in
 1735300638	Cow	hashzebra\.io
+1735300733	Vickel	hash[\W_]*+zebra(?!\.io(?<=hashzebra\.io))
