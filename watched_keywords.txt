@@ -69608,3 +69608,4 @@
 1735293406	double-beep	wordcraft\.ae
 1735293830	double-beep	neptastic\.in
 1735295366	Jeff Schaller	learnaiforproft\.com
+1735295782	Jeff Schaller	curvedrywals\.com
