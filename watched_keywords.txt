@@ -69619,3 +69619,4 @@
 1735311049	Cow	defendca\.com
 1735311078	Cow	OpenTune
 1735313064	Fastnlight	mycastleapk\.com
+1735317059	Cow	approxikon\.de
