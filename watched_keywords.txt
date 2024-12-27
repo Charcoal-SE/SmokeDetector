@@ -69620,3 +69620,4 @@
 1735311078	Cow	OpenTune
 1735313064	Fastnlight	mycastleapk\.com
 1735317059	Cow	approxikon\.de
+1735319674	Vickel	cryptorecovsolution\.com
