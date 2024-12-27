@@ -69615,3 +69615,4 @@
 1735300733	Vickel	hash[\W_]*+zebra(?!\.io(?<=hashzebra\.io))
 1735306119	Vickel	jobbers\.io
 1735309016	Jeff Schaller	sarallegalsolutions\.com
+1735309047	Jeff Schaller	starbuckmenu\.uk
