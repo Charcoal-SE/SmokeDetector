@@ -3232,3 +3232,4 @@ you[\W_]*+have[\W_]*+24[\W_]*+hours[\W_]*+to[\W_]*+cancel
 club[\W_]*+(?:invite|inivatation)[\W_]*+code
 follow[\W_]*+the[\W_]*+automated[\W_]*+prompts
 to[\W_]*+speak[\W_]*+directly[\W_]*+with.{0,50}representative
+viral[\W_]*+video[\W_]*+leaked
