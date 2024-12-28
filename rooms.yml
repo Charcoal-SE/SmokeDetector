@@ -266,6 +266,9 @@ stackexchange.com:
     commands: false
     msg_types:
       - site-english.stackexchange.com
+      - experimental-site-english.stackexchange.com
+      - site-meta.english.stackexchange.com
+      - experimental-site-meta.english.stackexchange.com
       - offensive-mask
 
   388:  # Parenting chat
