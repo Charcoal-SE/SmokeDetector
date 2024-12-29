@@ -68901,7 +68901,6 @@
 1733257189	Vickel	podvape1\.com
 1733258241	Vickel	flowlinesmm\.com
 1733258376	Vickel	flowlinesmm(?!\.com)
-1733264508	Vickel	718283626646(?#In999 Invite Code)
 1733267979	Spevacus	(?-i:eaziishops)(?#t.me)
 1733294609	Dragonrage	damangame\.tech
 1733294685	Cow	kiwiirc\.com

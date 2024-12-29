@@ -3233,3 +3233,4 @@ club[\W_]*+(?:invite|inivatation)[\W_]*+code
 follow[\W_]*+the[\W_]*+automated[\W_]*+prompts
 to[\W_]*+speak[\W_]*+directly[\W_]*+with.{0,50}representative
 click[\W_]*+here[\W_]*+.{0,15}free[\W_]*+now
+718283626646(?#In999 Invite Code)
