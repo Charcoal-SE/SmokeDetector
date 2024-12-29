@@ -69654,3 +69654,4 @@
 1735480961	Jeff Schaller	talkingbees\.com
 1735481039	Makyen	talkingbees(?!\.com)
 1735481960	Anerdw	topserviceus\.com
+1735486390	Makyen	rankninja
