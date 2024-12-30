@@ -69680,3 +69680,4 @@
 1735544067	Cow	(?-i:^Danger Problem$)
 1735545962	Cow	flavourandspice\.com\.au
 1735548121	Cow	softkhabar\.com
+1735549659	Anerdw	darshanelderscare\.com
