@@ -69679,3 +69679,4 @@
 1735543765	Cow	(?-i:sh47supp)(?# tinyurl.com)
 1735544067	Cow	(?-i:^Danger Problem$)
 1735545962	Cow	flavourandspice\.com\.au
+1735548121	Cow	softkhabar\.com
