@@ -3235,3 +3235,4 @@ to[\W_]*+speak[\W_]*+directly[\W_]*+with.{0,50}representative
 click[\W_]*+here[\W_]*+.{0,15}free[\W_]*+now
 718283626646(?#In999 Invite Code)
 cómo[\W_]*+llamar[\W_]*+a[\W_]*+(?:sky|klm|air[\W_]*+canada|avianca|volaris|alaska|qatar|united|latam|aeromexico|aeroméxico|iberia|copa|delta|viva[\W_]*+aerobus|american|frontier|jetblue|expedia|british).{0,20}(?:méxico|colombia|perú|españa|cartagena|argentina|lima|estados[\W_]*+unidos|chile|costa[\W_]*+rica|español|eeuu|panamá|madrid)
+viral[\W_]*+(?:videos?+|leaked).{0,50}(?:trending|leaked|laked|videos?+|tiktok|link|onlyfans)
