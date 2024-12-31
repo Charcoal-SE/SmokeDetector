@@ -69700,3 +69700,4 @@
 1735582948	Cow	letsattract\.com
 1735586237	Cow	khanubais\.blogspot
 1735603128	Fastnlight	Peru[\W_]*+Andes[\W_]*+Discovery
+1735610601	Jeff Schaller	elitetrader\.com
