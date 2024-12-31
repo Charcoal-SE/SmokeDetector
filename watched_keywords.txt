@@ -69703,3 +69703,4 @@
 1735610601	Jeff Schaller	elitetrader\.com
 1735613164	Fastnlight	baobinhdinh\.vn
 1735613172	Fastnlight	sentoy\.vn
+1735613180	Fastnlight	flipboard\.com
