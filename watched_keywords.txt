@@ -69708,3 +69708,4 @@
 1735620808	Spevacus	magyarjogositvany\.com
 1735620817	Spevacus	permisdeconduceremoldovenesc\.com
 1735620825	Spevacus	inmatricularepermisdeconducereromaneasca\.com
+1735628644	Cow	brainiuminfotech\.co
