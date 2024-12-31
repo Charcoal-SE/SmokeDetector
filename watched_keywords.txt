@@ -69727,3 +69727,4 @@
 1735655895	Cow	gurbuziskele\.com\.tr
 1735656181	Jeff Schaller	ps\.anglerfox\.com
 1735656449	Nisse Engström	lamaisondenathalie\.org
+1735656833	Cow	kanzolquran\.org
