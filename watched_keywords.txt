@@ -69738,3 +69738,4 @@
 1735730965	Cow	bpointer\.com
 1735731733	Cow	jaredscottspeaks\.com
 1735734801	Cow	sacredsoulinsight\.com
+1735734822	Cow	sacredsoulinsight(?!\.com(?<=sacredsoulinsight\.com))
