@@ -69740,3 +69740,4 @@
 1735734801	Cow	sacredsoulinsight\.com
 1735734822	Cow	sacredsoulinsight(?!\.com(?<=sacredsoulinsight\.com))
 1735735213	Nisse Engström	evocode\.in
+1735738339	Nisse Engström	topbetlines\.com
