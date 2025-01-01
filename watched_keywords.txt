@@ -63479,7 +63479,6 @@
 1720173922	Cow	treownut\.com
 1720173604	Cow	eurowindow\.top
 1720164156	Cow	wilson-legal\.com
-1720164204	Cow	softzspot\.com
 1720163212	Cow	genericpillsaustralia\.com
 1720162497	Cow	localpoolinspections\.com
 1720180639	Cow	qualitythought\.in
