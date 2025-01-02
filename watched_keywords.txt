@@ -69785,3 +69785,4 @@
 1735827657	Makyen	tutorlix\.com
 1735830897	Nisse Engström	restassuredh\.com
 1735831659	Dan Getz	(?-i:^Dilip Kumar$)
+1735834083	Jeff Schaller	chipotlemenu\.site
