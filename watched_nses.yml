@@ -4429,7 +4429,8 @@ items:
 - ns: speedydns.net.
 - ns: webhost.pro.
 - ns: visiondns.net.
-- comment: 2021-08-03 SERVFAIL; eabled again 2024-10-18
+- comment: 2021-08-03 SERVFAIL; enabled again 2024-10-18; disabled again 2025-01-02
+  disable: true
   ns: matkaparivar.in.
 - ns: vdns.vn.
 - ns: ocyber.us.
