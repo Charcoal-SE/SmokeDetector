@@ -69763,3 +69763,4 @@
 1735796924	Cow	(?-i:ss8NXrKx)(?# discord invite link)
 1735796990	Cow	acedata\.cloud
 1735799424	Dragonrage	alloycarbonsteel\.com
+1735800502	Dragonrage	kanhasoft\.com
