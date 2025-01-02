@@ -5804,7 +5804,6 @@ sparkouttech\.com
 zalo\.me(?<!developers\.zalo\.me)(?<!openapi\.zalo\.me)
 nanonets\.com
 weeom\.com
-cyberpanel\.net
 eximtradedata\.com
 codefrombasics\.com
 multilogin\.com
