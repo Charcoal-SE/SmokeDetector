@@ -69759,3 +69759,4 @@
 1735794378	Cow	36crypto\.com
 1735796459	Cow	objectways\.com
 1735796574	Cow	genki[\W_]*+technique
+1735796895	Cow	(?-i:1uHIdYoAds)(?# surl.id)
