@@ -69761,3 +69761,4 @@
 1735796574	Cow	genki[\W_]*+technique
 1735796895	Cow	(?-i:1uHIdYoAds)(?# surl.id)
 1735796924	Cow	(?-i:ss8NXrKx)(?# discord invite link)
+1735796990	Cow	acedata\.cloud
