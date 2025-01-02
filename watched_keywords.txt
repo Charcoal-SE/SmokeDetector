@@ -69767,3 +69767,4 @@
 1735802380	Dragonrage	icon[\W_]*+medical[\W_]*+coding[\W_]*+institute
 1735805635	Dragonrage	woodleindia\.com
 1735805657	Dragonrage	prodigystudycentre\.com
+1735806296	Dragonrage	digittrix\.com
