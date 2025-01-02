@@ -69764,3 +69764,4 @@
 1735796990	Cow	acedata\.cloud
 1735799424	Dragonrage	alloycarbonsteel\.com
 1735800502	Dragonrage	kanhasoft\.com
+1735802380	Dragonrage	icon[\W_]*+medical[\W_]*+coding[\W_]*+institute
