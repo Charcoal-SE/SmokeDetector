@@ -69794,3 +69794,4 @@
 1735879509	Cow	theworldle\.com
 1735880803	Cow	glovermethod\.com
 1735885104	Cow	factpulse\.in
+1735887081	Cow	deccanodyssey\.co\.uk
