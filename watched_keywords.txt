@@ -69803,3 +69803,4 @@
 1735891307	Dragonrage	solitaryknight\.apk\.com
 1735891314	Dragonrage	crazydagger\.apk\.com
 1735892356	Dragonrage	dtfprintingservice\.ae
+1735895354	Dragonrage	terminal-guides\.com
