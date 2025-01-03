@@ -69822,3 +69822,4 @@
 1735911893	Cow	michigancustomsigns\.com
 1735921849	Cow	swift[\W_]*+dream
 1735922274	Spevacus	packersandmoversinudaipur\.in
+1735927146	Cow	jobarz\.com
