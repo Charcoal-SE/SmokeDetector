@@ -29356,7 +29356,6 @@
 1623654640	tripleee	pcsoftnew\.com
 1623661239	Ryan M	ProxyCrawl(?!\.com)
 1623663865	tripleee	mass[\W_]*+mail[\W_]*+servers?(?!\.net)
-1623664376	Xnero	woodenstreet\.com
 1623667983	double-beep	tunisie-chirurgie-esthetique\.com
 1623669774	double-beep	silcoautomotive\.in
 1623670634	tripleee	ecochem\.ind\.in
