@@ -69842,3 +69842,4 @@
 1736009181	Makyen	abl\.atlas\.pk
 1736009189	Makyen	atlas[\W_]*+battery
 1736012975	Cow	digitalvansh\.in
+1736013200	Cow	expresshacker99
