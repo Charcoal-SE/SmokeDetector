@@ -69840,3 +69840,4 @@
 1735997542	Cow	7281289549698256897(?# linkedin feed ID)
 1736008445	Nisse Engström	medicossonline\.com
 1736009181	Makyen	abl\.atlas\.pk
+1736009189	Makyen	atlas[\W_]*+battery
