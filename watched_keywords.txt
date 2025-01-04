@@ -69830,3 +69830,4 @@
 1735978913	Cow	maharajaexpress\.co\.uk
 1735979277	Cow	(?-i:nemanexopinie)(?# facebook.com)
 1735979336	Cow	cinemahd\.vip
+1735979475	Cow	airwaysofficeshubs\.com
