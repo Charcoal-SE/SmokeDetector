@@ -69848,3 +69848,4 @@
 1736020812	Cow	pawangslot\.monster
 1736027350	Vickel	next\.privat24\.ua
 1736027396	Vickel	livesu\.pports\.sbs
+1736028338	Makyen	availabler(?!\.com)
