@@ -69861,3 +69861,4 @@
 1736085046	Cow	codingjigs\.com
 1736091325	Cow	netflytv\.com
 1736093713	Nisse Engström	robottelepites\.hu
+1736097760	Cow	gold[\W_]*+silver[\W_]*+live[\W_]*+price[\W_]*+india
