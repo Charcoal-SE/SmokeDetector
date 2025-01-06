@@ -69876,3 +69876,4 @@
 1736163548	Cow	backb\.ca
 1736169273	Jeff Schaller	kalkikrivadna\.com
 1736169812	Cow	socialtechguru\.com
+1736170279	Cow	click[\W_]*+on[\W_]*+the[\W_]*+live[\W_]*+chat[\W_]*+icon
