@@ -3238,4 +3238,3 @@ cómo[\W_]*+llamar[\W_]*+a[\W_]*+(?:sky|klm|air[\W_]*+canada|avianca|volaris|ala
 viral[\W_]*+(?:videos?+|leaked).{0,50}(?:trending|leaked|laked|videos?+|tiktok|link|onlyfans)
 mobikwik[\W_]*+refund[\W_]*+money
 (?:support|using)[\W_]*+ticket.{0,10}tm\d+
-live[\W_]*+support[\W_]*+page[\W_]*+for[\W_]*+a[\W_]*+quick[\W_]*+resolution
