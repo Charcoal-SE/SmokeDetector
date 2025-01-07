@@ -69907,3 +69907,4 @@
 1736261026	Fastnlight	investguide\.fr
 1736261444	Fastnlight	iszbela-taskcontrol\.blogspot
 1736264990	Cow	com[\W_]*+grafto[\W_]*+artworkgrafix[\W_]*+festivalposter
+1736266355	Jeff Schaller	techeez\.com
