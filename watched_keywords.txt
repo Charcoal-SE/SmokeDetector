@@ -69904,3 +69904,4 @@
 1736250260	Jeff Schaller	chardhamtour\.in
 1736251092	Cow	msgconverter\.com
 1736253661	Cow	share[\W_]*+amazon[\W_]*+cart[\W_]*+more
+1736261026	Fastnlight	investguide\.fr
