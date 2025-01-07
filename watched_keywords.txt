@@ -69906,3 +69906,4 @@
 1736253661	Cow	share[\W_]*+amazon[\W_]*+cart[\W_]*+more
 1736261026	Fastnlight	investguide\.fr
 1736261444	Fastnlight	iszbela-taskcontrol\.blogspot
+1736264990	Cow	com[\W_]*+grafto[\W_]*+artworkgrafix[\W_]*+festivalposter
