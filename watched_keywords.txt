@@ -50783,7 +50783,6 @@
 1685599837	Cody Gray	(?-i:B0B65D41VS)(?# Amazon)
 1685600611	Cody Gray	amolatinanews\.com
 1685600637	Cody Gray	smile[\W_]*+dating(?:[\W_]*+test)?
-1685601401	Cody Gray	timechamp\.io
 1685601424	Cody Gray	timechamp(?!\.io)
 1685605376	Makyen	nifdo\.com
 1685605417	Makyen	nifdo(?!\.com(?<=nifdo\.com))(?:[\W_]*+(?:whitening|serum|\d++|[\da-f]{5,}+)s?)*
