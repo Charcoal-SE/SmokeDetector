@@ -69917,3 +69917,4 @@
 1736283416	double-beep	synthed-neonway\.com
 1736285011	Fastnlight	ytcroxyproxy\.com
 1736285546	Fastnlight	gourangapaul_sons(?:@yahoo\.in)?
+1736298602	Fastnlight	hirewikipediawriters\.com
