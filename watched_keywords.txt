@@ -69983,3 +69983,4 @@
 1736433142	ipodtouch0218	nurmadininoo(?:@gmail\.com)?
 1736433931	ipodtouch0218	ninonurmadi\.com
 1736433943	ipodtouch0218	ninonurmadi(?!\.com)
+1736439550	ipodtouch0218	lohusahamiel\.com
