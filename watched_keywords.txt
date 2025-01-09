@@ -69988,3 +69988,4 @@
 1736441919	ipodtouch0218	clipy\.online
 1736443063	General Grievance	chrome\.in
 1736445962	ipodtouch0218	infinityrealmteam\.official(?:@gmail\.com)?
+1736447341	Jeff Schaller	regularlighter\.com
