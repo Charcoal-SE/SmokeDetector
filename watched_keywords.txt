@@ -69972,3 +69972,4 @@
 1736408288	Cow	saifs\.ai
 1736409275	Cow	alfarahrestaurant\.com
 1736409872	Dragonrage	dutchbrosemenu\.com
+1736412930	Dragonrage	savingsays\.de
