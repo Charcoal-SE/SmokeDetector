@@ -70004,3 +70004,4 @@
 1736502623	Cow	mosami\.in
 1736502878	Cow	skylandigital\.com
 1736503023	Cody Gray	Northern[\W_]*+Ireland[\W_]*+hospitals?
+1736503535	Cow	(?-i:yG22WjncAo6EN4LT6)(?# Google maps)
