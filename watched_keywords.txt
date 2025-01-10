@@ -70006,3 +70006,4 @@
 1736503023	Cody Gray	Northern[\W_]*+Ireland[\W_]*+hospitals?
 1736503535	Cow	(?-i:yG22WjncAo6EN4LT6)(?# Google maps)
 1736504345	Cow	cyberpunkjacket\.com
+1736504375	Cody Gray	david[\W_]*+martinez[\W_]*+jacket
