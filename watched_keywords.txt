@@ -70028,3 +70028,4 @@
 1736612448	Vickel	cupcatapk\.com
 1736620952	Cow	live[\W_]*+support[\W_]*+agent
 1736623691	Jeff Schaller	photofixteam\.com
+1736629604	Jeff Schaller	rwcimplantclub\.com
