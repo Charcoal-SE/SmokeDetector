@@ -70038,3 +70038,4 @@
 1736697478	Jeff Schaller	easenotes\.com
 1736698339	Mast	Hitler[\W_]*+was[\W_]*+right
 1736700370	Vickel	buildcraftinteriors\.com
+1736702316	Vickel	blogongames7\.blogspot
