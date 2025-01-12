@@ -70041,3 +70041,4 @@
 1736702316	Vickel	blogongames7\.blogspot
 1736703422	Jeff Schaller	replaced-by\.ai
 1736705407	Cow	killing[\W_]*+palestinians
+1736707344	Jeff Schaller	com\.mytesters\.twentytester(?#play.google.com)
