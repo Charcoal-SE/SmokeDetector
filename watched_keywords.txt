@@ -70048,3 +70048,4 @@
 1736743761	Cow	worksvisa\.com
 1736748747	Cow	ganeshgreen\.com
 1736748808	Cow	onlinejungle\.in
+1736748840	Cow	elan-developer\.com
