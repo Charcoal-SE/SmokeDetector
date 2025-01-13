@@ -3239,3 +3239,4 @@ viral[\W_]*+(?:videos?+|leaked).{0,50}(?:trending|leaked|laked|videos?+|tiktok|l
 mobikwik[\W_]*+refund[\W_]*+money
 (?:support|using)[\W_]*+ticket.{0,10}tm\d+
 general[\W_]*+chain[\W_]*+link
+SpinCrush
