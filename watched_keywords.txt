@@ -70059,3 +70059,4 @@
 1736761663	Cow	(?-i:umairf17iiui)(?# medium.com)
 1736765730	VLAZ	cricscoops\.com
 1736766727	Jeff Schaller	bcmgroup\.in
+1736767400	Jeff Schaller	brandindia\.tech
