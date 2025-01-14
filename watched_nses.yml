@@ -1259,9 +1259,6 @@ items:
   - carrera.ns.cloudflare.com.
   - dylan.ns.cloudflare.com.
 - ns:
-  - carrera.ns.cloudflare.com.
-  - porter.ns.cloudflare.com.
-- ns:
   - cartman.ns.cloudflare.com.
   - paityn.ns.cloudflare.com.
 - ns:
@@ -2609,6 +2606,9 @@ items:
   - louis.ns.cloudflare.com.
 - ns:
   - heather.ns.cloudflare.com.
+  - rex.ns.cloudflare.com.
+- ns:
+  - heather.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
 - ns:
   - heidi.ns.cloudflare.com.
@@ -3161,6 +3161,9 @@ items:
   - yew.ns.cloudflare.com.
 - ns:
   - kip.ns.cloudflare.com.
+  - lindsey.ns.cloudflare.com.
+- ns:
+  - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
   - kipp.ns.cloudflare.com.
@@ -3366,9 +3369,6 @@ items:
 - ns:
   - linda.ns.cloudflare.com.
   - zod.ns.cloudflare.com.
-- ns:
-  - lindsey.ns.cloudflare.com.
-  - lloyd.ns.cloudflare.com.
 - ns:
   - lindsey.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
@@ -4429,7 +4429,8 @@ items:
 - ns: speedydns.net.
 - ns: webhost.pro.
 - ns: visiondns.net.
-- comment: 2021-08-03 SERVFAIL; eabled again 2024-10-18
+- comment: 2021-08-03 SERVFAIL; enabled again 2024-10-18; disabled again 2025-01-02
+  disable: true
   ns: matkaparivar.in.
 - ns: vdns.vn.
 - ns: ocyber.us.
@@ -4930,6 +4931,11 @@ items:
   - ns-230.awsdns-28.com.
   - ns-582.awsdns-08.net.
 - ns:
+  - ns-1328.awsdns-38.org.
+  - ns-1744.awsdns-26.co.uk.
+  - ns-69.awsdns-08.com.
+  - ns-902.awsdns-48.net.
+- ns:
   - ns-1337.awsdns-39.org.
   - ns-1728.awsdns-24.co.uk.
   - ns-449.awsdns-56.com.
@@ -5082,6 +5088,11 @@ items:
   - ns-285.awsdns-35.com.
   - ns-692.awsdns-22.net.
 - ns:
+  - ns-1479.awsdns-56.org.
+  - ns-2021.awsdns-60.co.uk.
+  - ns-447.awsdns-55.com.
+  - ns-648.awsdns-17.net.
+- ns:
   - ns-1481.awsdns-57.org.
   - ns-163.awsdns-20.com.
   - ns-1658.awsdns-15.co.uk.
@@ -5179,7 +5190,8 @@ items:
   - now1.dns.com.
   - now2.dns.com.
 - ns: thcservers.com.
-- comment: NXDOMAIN 2023-08-30; enabled again 2024-10-18
+- comment: NXDOMAIN 2023-08-30; enabled again 2024-10-18; disabled again 2024-11-24 (NXDOMAIN)
+  disable: true
   ns: cloudxspeed.com.
 - ns: xmarthost.com.
 - ns: hostzet.com.
@@ -5446,7 +5458,9 @@ items:
 - ns: luutruso.net.
 - ns: designkug.com.
 - ns: byet.org.
-- ns: fusionlogicx.com.
+- comment: NXDOMAIN 2024-12-06
+  disable: true
+  ns: fusionlogicx.com.
 - ns: 2cohost.com.
 - ns: 24websitehosting.com.
 - ns: websiteservername.com.
@@ -5572,7 +5586,6 @@ items:
 - ns: tino.org.
 - ns: hostinggujju.com.
 - ns: gloitsolutions.co.uk.
-- ns: mukhost.uk.
 - ns: spiritdomains.com.
 - ns: servername.online.
 - ns: guestdns.com.
@@ -5620,7 +5633,8 @@ items:
 - ns: jasperit.net.
 - ns: n0c.com.
 - ns: server-cpanel.com.
-- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18
+- comment: NXDOMAIN 2023-10-19; enabled again 2024-10-18; NXDOMAIN again 2024-12-07
+  disable: true
   ns: metalcloudserver.in.
 - ns: dnsowner.com.
 - ns: germanyvisa.co.uk.
@@ -5711,7 +5725,8 @@ items:
 - ns: brainbean.us.
 - ns: websitehostserver.net.
 - ns: 1stdomains.net.nz.
-- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18
+- comment: NXDOMAIN 2023-09-03; enabled again 2024-10-18; NXDOMAIN again 2024-11-23
+  disable: true
   ns: quickflyllc.com.
 - ns: vdc3.vn.
 - comment: exclusively FP since watching 2023-05-08
@@ -5859,3 +5874,5 @@ items:
 - ns: afeeshost.com.
 - ns: jitendermalik.com.
 - ns: digipowerdns.com.
+- ns: hostilica.net.
+- ns: diamonddistrictblock.com.

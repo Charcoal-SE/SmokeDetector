@@ -143,9 +143,9 @@ cpus: 0.5  # Recommend 2.0 or more for spam waves
 
 ## Requirements
 
-SmokeDetector only supports Stack Exchange logins,
-and runs on Python 3.7 or higher,
-for now.
+SmokeDetector only supports Stack Exchange logins.
+
+SmokeDetector supports the Python versions which are in the [supported phase of the Python life cycle](https://devguide.python.org/versions/) (as defined as between "First release" and "End of life"). We run CI testing on that span of versions. SmokeDetector may work on older versions of Python, but we don't support them and may, at any time, write code that prevents use in older, unsupported versions. We know SmokeDetector is broken on Python 3.6 and lower. While we don't support versions that haven't reached "First release", we're not adverse to hearing about changes in new Python versions which will require us to make changes to SmokeDetector's code, so we can make the transition to supporting new versions of Python smoother.
 
 To allow committing blacklist and watchlist modifications
 back to GitHub,

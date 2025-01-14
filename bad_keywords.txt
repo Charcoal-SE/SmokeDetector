@@ -3139,7 +3139,6 @@ saa[\W_]*+c03[\W_]*+dumps
 cryptospamhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?come?)?)?|(?:[\W_]*+(?:cyber|tech|crypto|recovery|expert|\d++|[\da-f]{5,}+)s?)*)
 crypto[\W_]*+Venture
-spyrecovery36
 To[\W_]*+refund[\W_]*+money[\W_]*+from
 ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
 khel|\W_]*+raja(?!\.com)
@@ -3147,7 +3146,6 @@ Cigati
 richard[\W_]*+pryce[\W_]*+wizard
 prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
 (?-i:u6tj5rzc)(?#tinyurl.com)
-How[\W_]*+do[\W_]*+I[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+in[\W_]*+meesho
 money[\W_]*+back[\W_]*+from[\W_]*+a[\W_]*+wrong[\W_]*+transaction
 crypto[\W_]*+recovery[\W_]*+services?(?:@[a-zA-Z]{4,8}\.com)?
 Monopoly[\W_]*+GO[\W_]*+Free[\W_]*+Dice
@@ -3181,3 +3179,64 @@ how[\W_]*+can[\W_]*+i[\W_]*+complain[\W_]*+in
 voot-express-hd\.blogspot
 hackerspytech
 our[\W_]*+dedicated[\W_]*+support[\W_]*+team
+cheapest[\W_]*+day[\W_]*+of[\W_]*+the[\W_]*+week
+lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
+(?-i:fudplayprotect)(?# t.me)
+أركان المتحدة القطاع الصحي
+arkan[\W_]*united(?!\.com(?<=arkan-united\.com))(?!<(?-i:^arkan united$))
+custom[\W_]*+lapel[\W_]*+pins
+fastfundrecovery8
+638374264877(?# invite code)
+enertech[\W_]*+ups
+91[\W_]*+club
+accidentally[\W_]*+recharged
+raise[\W_]*+a[\W_]*+complaint[\W_]*+in
+installturbotax\.com
+club[\W_]*+(?:invite|invitation)[\W_]*+code
+skunk\.40(?#signal)
+recharged[\W_]*+a[\W_]*+wrong
+recharge[\W_]*+on[\W_]*+wrong
+best[\W_]*+immigration[\W_]*+(?:consultant|consultants|consultancy|service|services)
+364153519157(?# club promo code)
+hydrolean[\W_]*+xt[\W_]*+gold
+app[\W_]*+was[\W_]*+recharged
+reliable[\W_]*+taxi[\W_]*+(?:service|services)
+wrong[\W_]*+transaction[\W_]*+payment
+request[\W_]*+to[\W_]*+disable[\W_]*+auto[\W_]*+pay
+recharged[\W_]*+the[\W_]*+wrong[\W_]*+number
+refund[\W_]*+for[\W_]*+double[\W_]*+recharge
+Referral[\W_]*+Code[\W_]*+\d{4}+
+your[\W_]*+jio[\W_]*+number
+(?:call|contact)[\W_]*+jio[\W_]*+customer[\W_]*+(?:care|support)
+(?:contact|call)[\W_]*+customer[\W_]*+(?:care|support)[\W_]*+(?:call|dial)
+computeroids
+bio[\W_]*+gen[\W_]*+x[\W_]*+blood[\W_]*+sugar[\W_]*+control
+fortune[\W_]*+infinitum
+to[\W_]*+file[\W_]*+a[\W_]*+complaint[\W_]*+with[\W_]*+swiggy
+how[\W_]*+will[\W_]*+I[\W_]*+get[\W_]*+refund[\W_]*+from[\W_]*+flipkart
+how[\W_]*+do[\W_]*+I[\W_]*+cancel[\W_]*+my[\W_]*+hungama
+how[\W_]*+do[\W_]*+I[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+from[\W_]*+zomato
+how[\W_]*+do[\W_]*+I[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+from[\W_]*+dunzo
+𝓢𝓸𝓾𝓽𝓱𝔀𝓮𝓼𝓽(?:𝓐𝓲𝓻𝔀𝓪𝔂𝓼)+
+ŘẸⓐ𝔩[\W_]*+ρ𝕖Ｒsόᑎ
+(?-i:O9QYO3UJ)
+credit[\W_]*+loan[\W_]*+app
+soho[\W_]*+tech[\W_]*+services(?!\.com(?<=sohotechservices\.com))
+Spyr?ecovery36(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
+how[\W_]*+to[\W_]*+speak[\W_]*+directly[\W_]*+at
+what[\W_]*+is[\W_]*+the[\W_]*+24[\W_]*+hour[\W_]*+rule
+air[\W_]*+france[\W_]*+open[\W_]*+24[\W_]*+7
+cómo[\W_]*+llamar[\W_]*+a[\W_]*+iberia[\W_]*+en
+cómo[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+en
+you[\W_]*+have[\W_]*+24[\W_]*+hours[\W_]*+to[\W_]*+cancel
+club[\W_]*+(?:invite|inivatation)[\W_]*+code
+follow[\W_]*+the[\W_]*+automated[\W_]*+prompts
+to[\W_]*+speak[\W_]*+directly[\W_]*+with.{0,50}representative
+click[\W_]*+here[\W_]*+.{0,15}free[\W_]*+now
+718283626646(?#In999 Invite Code)
+cómo[\W_]*+llamar[\W_]*+a[\W_]*+(?:sky|klm|air[\W_]*+canada|avianca|volaris|alaska|qatar|united|latam|aeromexico|aeroméxico|iberia|copa|delta|viva[\W_]*+aerobus|american|frontier|jetblue|expedia|british).{0,20}(?:méxico|colombia|perú|españa|cartagena|argentina|lima|estados[\W_]*+unidos|chile|costa[\W_]*+rica|español|eeuu|panamá|madrid)
+viral[\W_]*+(?:videos?+|leaked).{0,50}(?:trending|leaked|laked|videos?+|tiktok|link|onlyfans)
+mobikwik[\W_]*+refund[\W_]*+money
+(?:support|using)[\W_]*+ticket.{0,10}tm\d+
+general[\W_]*+chain[\W_]*+link
+SpinCrush

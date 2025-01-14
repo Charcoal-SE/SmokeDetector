@@ -3904,7 +3904,6 @@
 1531209912	Glorfindel	iactivate\W?host
 1531217612	Byte Commander	innostack\.in
 1531220631	Byte Commander	solutionremarks\.com
-1531249014	Glorfindel	mideo
 1531252556	Makyen	duckduckporn\.com
 1531260649	Makyen	followlikesocial\.com
 1531274725	Makyen	myofascialrelease\.com
@@ -6789,7 +6788,6 @@
 1546727315	Makyen	taylorswiftamericansingersongwriter\.blogspot
 1546727321	Makyen	eGAx7Al0Xe
 1546754212	Shree	artificialintelligenceinindia\.com
-1546757270	Makyen	quantinsti\.com
 1546767343	Shree	jasdomqq\.com
 1546767868	Makyen	coffeebaze\.com
 1546768061	Makyen	itsthelaststraw\.com
@@ -13327,7 +13325,6 @@
 1573216669	tripleee	cryptosana\.com
 1573219806	tripleee	cloudendure\.com
 1573219848	double-beep	hiotron\.com
-1573220027	tripleee	ke[\W_]*one
 1573241193	Xnero	sexypuss\.com
 1573242732	Jenayah	therapidhelp\.com
 1573263642	Makyen	master[\W_]*+race
@@ -18586,7 +18583,7 @@
 1587536700	tripleee	snoril
 1587538474	tripleee	(?-i:^Diljit singh$)
 1587538677	tripleee	(?:(?:Accenture|HDFC|Cisco|HCL|TCS|IBM|Reliance Capital|Capgemini|SAP|Pin click)\W+){4,}
-1587538726	tripleee	(?:(?:[CMX]AT|ATMA|CMAT)\W+){4,}
+1587538726	tripleee	(?:(?:[CMX]AT|ATMA|CMAT)(?<!cat(?=\W+cat))\W+){4,}
 1587540608	Makyen	myassignmenthelpau(?!\.com)
 1587544466	tripleee	skyhidev\.com
 1587549006	Glorfindel	winatslotmachine\.com
@@ -19611,7 +19608,6 @@
 1590605341	Machavity	warriormining\.com
 1590605874	Machavity	basthealthybost\.blogspot
 1590615250	Machavity	mtpolice\.site
-1590618177	Makyen	r\.honeygain\.me
 1590618203	Makyen	(?-i:KEVIN21CB4)(?#r.honeygain.me)
 1590618231	Makyen	(?-i:LINK_DIRECTO)(?#bit.ly)
 1590619818	Makyen	nektony\.com
@@ -29284,7 +29280,6 @@
 1623305987	cigien	fullphanmem\.com
 1623306238	cigien	wise\.deals
 1623306307	Ryan M	(?:full|tai)phanmem(?!\.com(?<=fullphanmem\.com))
-1623307178	cigien	mssg\.me
 1623308519	Ryan M	okjet\.com
 1623308684	Ryan M	sayngon\.com
 1623313144	Wai Ha Lee	aecotractors\.com
@@ -29361,7 +29356,6 @@
 1623654640	tripleee	pcsoftnew\.com
 1623661239	Ryan M	ProxyCrawl(?!\.com)
 1623663865	tripleee	mass[\W_]*+mail[\W_]*+servers?(?!\.net)
-1623664376	Xnero	woodenstreet\.com
 1623667983	double-beep	tunisie-chirurgie-esthetique\.com
 1623669774	double-beep	silcoautomotive\.in
 1623670634	tripleee	ecochem\.ind\.in
@@ -29616,7 +29610,6 @@
 1624423636	cigien	icodethat\.com
 1624423895	Ryan M	skinos\.in
 1624426737	Ryan M	everestedu\.co\.in
-1624427596	Ryan M	best[\W_]*+immigration[\W_]*+consultants
 1624427651	double-beep	laserhairremovaldelhi\.com
 1624427747	Ryan M	laser[\W_]*+hair[\W_]*+removal[\W_]*+clinic
 1624427781	Ryan M	best[\W_]*+laser[\W_]*+hair[\W_]*+removal
@@ -33620,7 +33613,6 @@
 1637927484	tripleee	grab[\W_]*+taxi(?:[\W_]*+coupons?[\W_]*+code)?
 1637929183	tripleee	vspagy\.in
 1637930473	tripleee	aclmobile\.com
-1637935555	Cody Gray	\.emphasized text
 1637935625	Cody Gray	Custody[\W_]*Client
 1637936686	Ollie	techhelp28\.blogspot
 1637938220	Cody Gray	safe distant association
@@ -34090,7 +34082,6 @@
 1639629217	cigien	nutriexpressonline\.com
 1639642596	tripleee	evopry\.com
 1639647291	tripleee	midnightpleasure\.in
-1639647362	tripleee	magicinepharma\.com
 1639650245	tripleee	vibranium\.co\.in
 1639652440	tripleee	nutrifymeals\.com
 1639652884	Makyen	trippypsychedelicshop\.com
@@ -35659,7 +35650,6 @@
 1644581084	tripleee	duartecarteirademotorista\.com
 1644583419	Jeff Schaller	ivermectin-uk\.com
 1644583440	tripleee	supa\.pk
-1644587663	Makyen	dubaivisa\.center
 1644596561	cigien	gaple78\.com
 1644600308	Ollie	kslegal\.co\.in
 1644601383	Ollie	baoveanninh24h\.net
@@ -38340,7 +38330,6 @@
 1652037501	Makyen	ctradee\.com
 1652043563	Makyen	niker\.ir
 1652054075	Nick	speedycarz\.com
-1652059165	cigien	selfgrowth\.com
 1652074862	cocomac	jeff[\W_]*+packer
 1652077627	tripleee	marijuanasolutioncentre\.com
 1652084495	tripleee	mmplus\.in
@@ -41267,7 +41256,6 @@
 1660128381	tripleee	ffont\.ru
 1660128764	tripleee	(?-i:^Samantha Martin$)
 1660128875	tripleee	wiseessays(?!\.com)
-1660129418	tripleee	newindiasolutions\.com
 1660129464	tripleee	new[\W_]*+india[\W_]*+solutions(?!\.com(?<=newindiasolutions\.com))
 1660132938	tripleee	munbyn\.com
 1660132982	tripleee	planetwired\.com
@@ -43231,7 +43219,6 @@
 1665141203	tripleee	companiesdata\.cloud
 1665141253	tripleee	token[\W_]*+migration
 1665142905	cigien	sunlifesolar\.com\.pk
-1665144786	tripleee	dynamicssquare\.com\.au
 1665145128	tripleee	(?-i:^Sharada Surgery Cryo- Surgery$)
 1665145214	cigien	getassignmentontime\.com
 1665147546	Jeff Schaller	bulksmscoimbatore\.co
@@ -44388,7 +44375,6 @@
 1668582576	tripleee	rambet[\W_]*+exchane?ge
 1668584857	tripleee	gmtasoftware\.com
 1668585569	cigien	gmta[\W_]*+software(?!\.com(?<=gmtasoftware\.com))
-1668586524	tripleee	yowhatsapp(?!\.org)
 1668587545	tripleee	digitalspec\.net
 1668588452	tripleee	king365-tv\.fr
 1668589412	tripleee	(?-i:^Shawn Fedrick$)
@@ -45475,7 +45461,6 @@
 1672222738	tripleee	(?-i:^muthu$)
 1672222940	Cody Gray	rezbookglobal\.com
 1672222974	Cody Gray	Rezbook[\W_]*Global(?!\.com(?<=rezbookglobal\.com))
-1672223272	Cody Gray	ourosjewels\.com
 1672225223	Cody Gray	aroapress\.com
 1672225859	Cody Gray	technowade\.com
 1672226252	Cody Gray	tecygig\.com
@@ -46468,7 +46453,6 @@
 1674891473	Cody Gray	theliquorbros\.com
 1674891502	Cody Gray	The[\W_]*Liquor[\W_]*Bros(?!\.com(?<=theliquorbros\.com))
 1674891537	Cody Gray	Ali65680988(?# t.me)
-1674894525	Cody Gray	compdf\.com
 1674894570	Cody Gray	ComPDF(?:Kit)?(?!\.com)
 1674898669	Cody Gray	varisu[\W_]*hindi[\W_]*movie
 1674898750	Cody Gray	(?-i:^NDLELA ELIJAH M FANISENI K$)
@@ -49312,7 +49296,6 @@
 1681800478	tripleee	busbarmc\.com
 1681802020	tripleee	paylesser\.com
 1681802777	tripleee	sgtuniversity\.ac\.in
-1681803561	tripleee	integral-calculator\.com
 1681804829	tripleee	accountiod\.com
 1681804908	tripleee	msasianfilmacademy\.com
 1681805529	tripleee	saiayush\.in
@@ -49896,7 +49879,6 @@
 1683445912	Nick	fitover40dallas\.com
 1683445783	Nick	inshotapps\.com
 1683447184	Nisse Engström	chrisownbeyfit\.com
-1683450618	Nisse Engström	univ-msila\.dz
 1683463923	Nick	careerdocumentshub\.com
 1683473802	Ollie	wishme\.us
 1683477471	Ollie	ff-tools\.blogspot
@@ -50801,7 +50783,6 @@
 1685599837	Cody Gray	(?-i:B0B65D41VS)(?# Amazon)
 1685600611	Cody Gray	amolatinanews\.com
 1685600637	Cody Gray	smile[\W_]*+dating(?:[\W_]*+test)?
-1685601401	Cody Gray	timechamp\.io
 1685601424	Cody Gray	timechamp(?!\.io)
 1685605376	Makyen	nifdo\.com
 1685605417	Makyen	nifdo(?!\.com(?<=nifdo\.com))(?:[\W_]*+(?:whitening|serum|\d++|[\da-f]{5,}+)s?)*
@@ -51910,7 +51891,6 @@
 1693227260	cigien	adour\.pk
 1693227619	Spevacus	connecting\.com\.au
 1693228726	cigien	yesornowheel\.org
-1693232356	Spevacus	rizetours\.com
 1693233423	Makyen	innotech\.pt
 1693235509	cigien	chatgptjapan\.org
 1693239428	cigien	wholesale925silver\.com
@@ -52272,7 +52252,6 @@
 1694065453	VLAZ	enablex\.io
 1694066414	Dragonrage	kombai\.com
 1694067646	Dragonrage	asiapacific\.edu
-1694068877	Dragonrage	deccanherald\.com
 1694069547	Dragonrage	tonosystems\.com
 1694070975	Dragonrage	nbdym\.com
 1694071930	Dragonrage	alshouroukajman\.com
@@ -52431,7 +52410,6 @@
 1694514507	Jeff Schaller	genciletisim\.com
 1694516435	Ryan M	roadtoheaven\.infinityfreeapp\.com
 1694516708	Jeff Schaller	thebulldog\.law
-1694516809	Jeff Schaller	abtosoftware\.com
 1694516923	Jeff Schaller	farstudio\.com
 1694516956	Jeff Schaller	rabha\.com
 1694518068	Jeff Schaller	auctiondaily\.com
@@ -53076,7 +53054,6 @@
 1696265818	cigien	cbdpackagingstore\.com
 1696265910	cigien	medium\.grid\.is
 1696282324	Spevacus	naplesfloridarentals\.com
-1696271259	Jesse	onlineclassassignment\.com
 1696295395	Dragonrage	djdownloader\.com
 1696295447	Dragonrage	trendifynews\.com
 1696289523	Nick	sagahoki\.com
@@ -56427,7 +56404,6 @@
 1704521940	Jesse	tradinhindi\.blogspot
 1704540871	Cow	mecciengineer\.com
 1704542317	Jeff Schaller	mohandessite\.com
-1704543017	VLAZ	Medzsquare\.com
 1704546158	Vickel	codingclavetechnologies\.com
 1704546247	Vickel	codingclave[\W_]*+technologies(?!\.com)
 1704546335	Jeff Schaller	fireboxtools\.com
@@ -56553,7 +56529,6 @@
 1704781958	Nick	maidoshop\.com
 1704783588	Nick	azzury\.id
 1704788322	tripleee	codingpromasters\.com
-1704792359	cigien	supplementcarts\.com
 1704792380	cigien	businessfinder\.me
 1704792400	cigien	business[\W_]*+finder(?!\.me(?<=businessfinder\.me))
 1704792423	cigien	primefocus\.com
@@ -56573,7 +56548,6 @@
 1704802838	Vickel	1stscenic\.co\.uk
 1704804075	Vickel	halaldua\.com
 1704807521	Jeff Schaller	topclassifieddeals\.com
-1704808139	Cow	skool\.com
 1704809230	cigien	mtcgame\.com
 1704811667	tripleee	bbobbler\.com
 1704812622	Jeff Schaller	charlesbinton896(?:@gmail\.com)?
@@ -57890,7 +57864,6 @@
 1707397087	cigien	wiccalovespelltools(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1707397233	cigien	creatorssuper30\.com
 1707397277	cigien	cp-h\.com
-1707403423	Jeff Schaller	fastfundrecovery8
 1707406111	Jeff Schaller	serviceprofessionalsnetwork\.com
 1707406151	Jeff Schaller	trickproblems\.com
 1707412793	Vickel	ugnaly\.com
@@ -58206,7 +58179,6 @@
 1708013732	Cow	csstotailwind\.com
 1708014043	VLAZ	psychedelicsforsaless(?#t.me)
 1708031845	Jesse	(?-i:Xg8gm3x0lnc)(?#youtu.be)
-1708038558	Vickel	striveenterprise\.com
 1708058687	tripleee	relaxcomfy\.com
 1708058728	tripleee	crclinics\.com\.au
 1708058927	tripleee	dineroclaro\.es
@@ -58303,7 +58275,6 @@
 1708215679	Vickel	trustwizardshackworld(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1708217351	Nick	trustwizards[\W_]*+hackwo(?:rld?)?
 1708239598	Jeff Schaller	farmingplan\.com
-1708243914	cigien	spyrecovery\d*
 1708247064	cigien	solartradesales\.co\.uk
 1708250856	cigien	truthtablegenerator\.net
 1708253311	cigien	skybluelovespells\.co\.za
@@ -58391,7 +58362,6 @@
 1708408263	Nick	wish[\W_]*+global[\W_]*+immigrations?
 1708409935	Nick	risalaflooring\.com
 1708410259	Nick	codenpaste\.com
-1708410435	VLAZ	Spyr?ecovery36(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1708411080	Nick	khaanapackaging\.com
 1708411120	Nick	khaana[\W_]*+packaging(?!\.com(?<=khaanapackaging\.com))
 1708411410	Nick	piraiinfo\.com
@@ -58799,7 +58769,6 @@
 1709121091	VLAZ	digitalashfak\.com
 1709122180	Jeff Schaller	golfmat\.us
 1709123342	General Grievance	reddashmedia\.com
-1709059238	Cow	freestun\.net
 1709127303	Jeff Schaller	johnsonpj\.com
 1709128124	tripleee	trex-iptv\.com
 1709129949	cigien	allheartroofing\.com
@@ -59100,7 +59069,6 @@
 1709796142	cigien	brainerhub\.com
 1709796504	cigien	perimeter-solutions\.co\.uk
 1709796548	cigien	perimeter[\W_]*+solutions(?!\.co\.uk(?<=perimeter-solutions\.co\.uk))
-1709796779	cigien	mycountrymobile\.com
 1709798464	tripleee	(?-i:^Harry Wilson$)
 1709804363	tripleee	livexp\.com
 1709804685	tripleee	allattestations\.com
@@ -59419,7 +59387,6 @@
 1710604315	Makyen	t[\W_]*+developers(?!\.com(?<=t-developers\.com))
 1710606967	Jeff Schaller	jzab\.blogspot
 1710607587	Jeff Schaller	computermania\.com\.bd
-1710608690	Makyen	calculatoracute\.com
 1710612300	Mast	paklap\.pk
 1710617445	Vickel	darkwebentyk2elhhh6okholnrookap7zfbun2is7ouspzxcpkqjxxad\.onion
 1710623675	Jeff Schaller	XDebug\.HOST
@@ -59929,7 +59896,6 @@
 1711732528	General Grievance	empirescort\.com
 1711655379	Vickel	calmpillsuk\.com
 1711666154	Vickel	tap[\W_]*+house[\W_]*+bourbon(?!\.com(?<=taphousebourbon\.com))
-1711890947	Cow	revisiontown\.com
 1711888546	Vickel	(?-i:gCXYiVT)(?#lnkd.in)
 1711891861	Makyen	filipedeschamps\.com\.br
 1711891908	Makyen	(?-i:nekoinfo)(?#sites.google.com)
@@ -60185,7 +60151,6 @@
 1712419007	Vickel	websignertech\.com
 1712419011	Vickel	yamboal\.com
 1712419053	Vickel	(?-i:batman-escort-2)(?#bit.ly)
-1712419720	Vickel	surah-al-waqiah\.com
 1712421518	Makyen	(?-i:pjAieZm)(?#goo.su)
 1712425641	Vickel	fazlerabbi\.org
 1712425817	Vickel	fazle[\W_]*+rabbi(?!\.org(?<=fazlerabbi\.org))
@@ -60509,7 +60474,6 @@
 1713348510	Jeff Schaller	y-axis\.ae
 1713348546	Jeff Schaller	swertresresultstoday\.ph
 1713348711	Jeff Schaller	taknikinc\.com
-1713352136	Jeff Schaller	Referral[\W_]*+Code[\W_]*+2024
 1713352191	Jeff Schaller	vectorize\.io
 1713361013	Jeff Schaller	guest-posting-sites\.com
 1713361083	Jeff Schaller	gibran-uk\.co\.uk
@@ -61156,7 +61120,6 @@
 1714910891	Vickel	zoroto\.live
 1714910950	Vickel	quranexplorer\.online
 1714911069	Vickel	etpglobal660(?:@gmail\.com)?
-1714911189	Vickel	internationalquranacademy\.com
 1714911961	Vickel	quran[\W_]*+explorer(?!\.online(?<=quranexplorer\.online))
 1714914754	Makyen	wifiiwavlink\.com
 1714914995	Makyen	international[\W_]*+quran[\W_]*+academy(?!\.com(?<=internationalquranacademy\.com))
@@ -61268,7 +61231,6 @@
 1715151373	Nick	Immigration[\W_]*+Agent[\W_]*+Adelaide(?!\.com\.au(?<=immigrationagentadelaide\.com\.au))
 1715151592	Nick	discoverymall\.net
 1715154357	tripleee	ssoidportal\.org
-1715158179	tripleee	kodesrc\.in
 1715158742	Nick	exoticindiatours\.co\.uk
 1715162939	tripleee	viweedy\.shop
 1715164019	Jeff Schaller	fullstacktutorialshub\.com
@@ -61405,7 +61367,6 @@
 1715412678	Cow	theblissspa\.in
 1715412649	Cow	scholarship\.cmgl-x\.com
 1715391036	Vickel	Illuminanetworktech(?:@gmail\.com)?
-1715391054	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?+
 1715428562	Jeff Schaller	telesolutionscallcentral\.com
 1715428595	Jeff Schaller	wlmok-web\.com
 1715433389	Jeff Schaller	tubemate\.click
@@ -61421,7 +61382,6 @@
 1715445017	Makyen	tvmobili\.com
 1715449100	Mast	project[\W_]*+nimbus
 1715448807	Cow	themedspawaco\.com
-1715440141	Cow	magic8ball-online\.com
 1715446840	Cow	techin\.pk
 1715452121	tripleee	escorts?[\W_]*+in[\W_]*+aerocity
 1715458970	Vickel	edaclinical\.com
@@ -61798,7 +61758,6 @@
 1716271225	Cow	therapiva\.co\.in
 1716271291	Cow	JAPStudios(?#reddit)
 1716271326	Cow	(?-i:^JAPStudios$)
-1716271719	Makyen	atqor\.com
 1716271740	Makyen	atqor(?!\.com)
 1716274066	Dragonrage	businesshitech\.com
 1716275203	Dragonrage	howtoincreasedomainauthority\.com
@@ -61900,7 +61859,6 @@
 1716389353	Makyen	m\.tech
 1716389411	Makyen	catchy[\W_]*+digital[\W_]*+academy
 1716393680	Spevacus	mccp-coiffure-bio\.ch
-1716392773	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?+
 1716392589	Fastnlight	acq299507
 1716319786	Cow	windocks\.com
 1716399664	Jeff Schaller	qpassablog\.blogspot
@@ -62007,7 +61965,6 @@
 1716603672	Jeff Schaller	synergycreationsdigital\.com
 1716611831	Nick	sourceit\.com\.sg
 1716621144	Jeff Schaller	fajservices\.ae
-1716621276	Jeff Schaller	drsikiesherbalcuremedicine\.weebly\.com
 1716621350	Jeff Schaller	marina\.com\.pk
 1716621394	Jeff Schaller	joypackindia\.com
 1716623728	Nick	pattuthoovala\.com
@@ -62636,7 +62593,6 @@
 1718011382	tripleee	expositarvr\.com
 1718011471	tripleee	m3mjewelgurgaon\.com
 1718014876	tripleee	miltonplasticsurgery\.ca
-1718014955	tripleee	bluebrix\.health
 1718014994	tripleee	couponsgreek\.com
 1718015032	tripleee	streameast
 1718015288	tripleee	hiringhood\.com
@@ -62831,7 +62787,6 @@
 1718608753	Makyen	docopd(?!\.com)
 1718610641	Dragonrage	trishulhomecare\.com
 1718621818	double-beep	premiertickets\.co
-1718621868	double-beep	wisewaytec\.com
 1718622046	double-beep	mhkthink\.com
 1718622523	double-beep	elitefurnaces\.com
 1718629902	Jeff Schaller	admintoto\.my\.id
@@ -63516,7 +63471,6 @@
 1720173922	Cow	treownut\.com
 1720173604	Cow	eurowindow\.top
 1720164156	Cow	wilson-legal\.com
-1720164204	Cow	softzspot\.com
 1720163212	Cow	genericpillsaustralia\.com
 1720162497	Cow	localpoolinspections\.com
 1720180639	Cow	qualitythought\.in
@@ -65496,7 +65450,6 @@
 1724754106	double-beep	skinqurehairtransplant\.com
 1724754483	tripleee	allhourlocksmith\.com
 1724754974	double-beep	srimukyapranadevaruastrobhavan\.com
-1724755886	double-beep	breedcoins\.com
 1724756132	tripleee	logitrain\.com\.au
 1724756328	tripleee	(?-i:^Freya James$)
 1724756935	VLAZ	ricssbe\.org
@@ -65675,7 +65628,6 @@
 1724976907	Cody Gray	UniFab(?!\.ai)
 1724994665	Anerdw	dingdinghotpot\.com
 1724980439	Anerdw	BRISKPE
-1724998054	Cow	lifelinefoundations\.win
 1724998881	VLAZ	forinsightsconsultancy\.com
 1724998918	VLAZ	for[\W_]*+insights[\W_]*+consultancy(?!\.com(?<=forinsightsconsultancy\.com))
 1724998950	VLAZ	macwiki[\W_]*+proton[\W_]*+\.[\W_]*+me
@@ -65706,7 +65658,6 @@
 1725016017	Cody Gray	Victoria[\W_]*+University(?:[\W_]*+of[\W_]*+Wellington)?
 1725016189	Cody Gray	digiviru\.com
 1725016175	Cow	locoldeal\.com
-1725016506	Cody Gray	DeskTrack
 1725016586	Cody Gray	verna[\W_]*+haywood(?!\.com(?<=verna-haywood\.com))
 1725016693	Cody Gray	wphandleiding\.nl
 1725017106	Cody Gray	Top[\W_]*+Crew[\W_]*+Aviation(?!\.com(?<=topcrewaviation\.com))
@@ -65989,7 +65940,6 @@
 1725623415	Cody Gray	aljabalglobal\.com
 1725623447	Cody Gray	goshyda
 1725623312	Cow	(?-i:hTKlROU)(?# Amazon India)
-1725624768	Cody Gray	amrozinstitute\.com
 1725624722	Cow	100073742064205(?# facebook id)
 1725625308	Jeff Schaller	students-service\.co\.uk
 1725627598	Cow	businesschat\.io
@@ -66019,7 +65969,6 @@
 1725708671	Cow	32dental\.com
 1725708880	Cody Gray	swiftron(?!\.eu)
 1725708949	Cody Gray	32dental(?!\.com)
-1725709163	Cody Gray	91[\W_]*+Club(?!\.com(?<=91clubgameapp\.com))
 1725709250	Cody Gray	Glasafe(?!\.com)
 1725711147	Cow	cgpatopercentages\.com
 1725711202	Cody Gray	gpa[\W_]*+calculator
@@ -66038,7 +65987,6 @@
 1725777918	Dragonrage	medikit\.store
 1725778733	Dragonrage	shl\.com
 1725787870	Cody Gray	palestine-shirts\.com
-1725789909	double-beep	serialsofts\.com
 1725792618	Cody Gray	vivalditech
 1725792688	Cody Gray	VIVALDI[\W_]*+CYBER[\W_]*+TECH
 1725792914	Cody Gray	yihiuman[\W_]*@[\W_]*vivaldi[\W_]*\.[\W_]*net
@@ -66597,7 +66545,6 @@
 1726867519	Jeff Schaller	konveksicelanakolor\.biz\.id
 1726896691	Nisse Engström	onelighthouse\.com
 1726897054	Nisse Engström	adkelectric1\.com
-1726862588	Vickel	yellowtail\.tech
 1726898340	Dragonrage	meteoxperts\.com
 1726899855	Dragonrage	networthbiohub\.com
 1726904123	Dragonrage	movie22uhd\.com
@@ -67035,7 +66982,6 @@
 1727946415	Cow	alvlaskurii\.fi
 1727940812	Cow	brilliantdirectories\.com
 1727948192	tripleee	(?-i:^mona naaktob$)
-1727948225	Cow	budventure\.technology
 1727948388	Cow	digitalasb\.com
 1727949893	VLAZ	igmate\.com
 1727950688	tripleee	bidinn\.in
@@ -67175,7 +67121,6 @@
 1728280475	Cow	journalsinsights\.com
 1728281144	Cow	rathorebc(?:@hotmail\.com)?
 1728281218	Cow	0009-0008-0097-2420(?# orcid.org)
-1728282001	tripleee	\d+<(\w+)>\d+(?:[^\d<>]\d+)*(?!</\1>)
 1728282418	Cow	devaaj\.com
 1728282864	Cow	industrialcart\.in
 1728284745	tripleee	twenty[\W_]*+47
@@ -67232,7 +67177,6 @@
 1728379659	tripleee	24kbetaccount\.com
 1728380281	double-beep	garden\.cvt247\.net
 1728383109	VLAZ	webtrainings\.in
-1728383982	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)
 1728384006	Jeff Schaller	webtrainings\.com
 1728387416	Jeff Schaller	woodsidegroup\.com\.au
 1728388193	Vickel	cheeserecipies\.com
@@ -67451,7 +67395,6 @@
 1728884465	Cow	learninternational\.ie
 1728886391	Cow	propertyplan\.com\.pk
 1728886517	Cow	chanabfarms\.pk
-1728887606	Cow	literalnie-fun\.pl
 1728888088	Cow	morepcb\.com
 1728888130	Cow	morepcb(?!\.com)
 1728888301	Cow	d-habitat\.com
@@ -67489,7 +67432,6 @@
 1728928079	Nisse Engström	finovers\.org
 1728930967	VLAZ	Smokie_city
 1728930991	VLAZ	05963e7f370ef0cbf271becdc9d9a95da3fb73b1c1e9568bdb243e71d267f21e0a
-1728933463	Fastnlight	uktelecomdistribution\.co\.uk
 1728935097	Fastnlight	winkmodapkk\.com
 1728939581	Vickel	ltshub\.com
 1728952028	Fastnlight	Plaza[\W_]*+Middle[\W_]*+East
@@ -67937,7 +67879,6 @@
 1730100318	VLAZ	batangquiapo\.pro
 1730101319	tripleee	gofundme[\W_]*+campaign
 1730102224	Cow	ramasat\.com
-1730102627	VLAZ	speaksaga\.in
 1730104251	VLAZ	marketingagencyindiaa\.com
 1730104942	tripleee	(?-i:^Yohanna Thomas$)
 1730106546	tripleee	android-test\.com
@@ -68001,7 +67942,6 @@
 1730204018	tripleee	(?-i:^James Parker$)
 1730206018	Jeff Schaller	edubrain\.ai
 1730206854	tripleee	liza[\W_]*+rose(?# onlyfans)
-1730207141	tripleee	(?-i:^Print X$)
 1730213764	Jeff Schaller	(?-i:^Abeera Munawar$)
 1730213946	VLAZ	howtotech\.in
 1730213956	VLAZ	kolaxoprint\.pk
@@ -68068,7 +68008,6 @@
 1730445933	Cow	cuetmock\.com
 1730451994	Cow	justtrytech\.com
 1730453238	Cow	txhospitals\.in
-1730459620	Cow	blockdag\.network
 1730459673	Cow	blockdag(?!\.network(?<=blockdag\.network))
 1730460180	Cow	profitablecpmrate\.com
 1730463782	VLAZ	pafikotbureuh\.org
@@ -68085,7 +68024,6 @@
 1730533742	VLAZ	adnoms\.com
 1730538329	Cow	drsheenamskinclinic(?:@gmail\.com)?
 1730538372	Cow	qarmid-grc-tarmim\.com
-1730538460	Cow	nsda\.gov\.bd
 1730541657	Jeff Schaller	giostarchicago\.com
 1730547242	Jeff Schaller	devscriptschool\.com
 1730547333	Jeff Schaller	frlegendsapk\.org
@@ -68108,7 +68046,6 @@
 1730672555	Vickel	fidosfunplace\.com
 1730678452	Vickel	elegitex\.com
 1730678508	Vickel	elegitex(?!\.com)
-1730703241	VLAZ	638374264877(?# invite code)
 1730702221	Anerdw	PlotWalla
 1730698724	Anerdw	ps290q\.com
 1730697947	Anerdw	(?-i:CTG8M)(?#XM Partner Code)
@@ -68142,7 +68079,6 @@
 1730807227	VLAZ	progamestuff\.com
 1730811757	VLAZ	flowzai\.com
 1730813793	VLAZ	softellar\.com
-1730825974	Vickel	lotus[\W_]*+psychiatry[\W_]*+and[\W_]*+wellness(?!\.com(?<=lotuspsychiatryandwellness\.com))
 1730828191	Cow	medium\.com/@nareshdevassist
 1730828352	Cow	arabianmenu\.com
 1730828973	Cow	doctorsnetwork\.com
@@ -68185,7 +68121,6 @@
 1730901300	VLAZ	adultswimlesson\.co\.uk
 1730901309	VLAZ	swimminglessonslondon\.co\.uk
 1730902385	VLAZ	deriscope\.com
-1730903385	Cow	wrong[\W_]*+recharge[\W_]*+from
 1730913341	Cow	hackgate\.io
 1730918564	Cow	arabiantourpackages\.com
 1730920342	Anerdw	theliquoris\.com
@@ -68275,7 +68210,6 @@
 1731088464	Fastnlight	acebookpublishers\.com
 1731092809	Jeff Schaller	skunk420store(?:@gmail\.com)?
 1731094333	Vickel	tylerskunkk(?#telegram)
-1731094671	Vickel	skunk\.40(?#signal)
 1731095327	Cow	(?-i:goldtraderwin)(?# t.me)
 1731095406	Cow	gold[\W_]*+empire
 1731099330	Vickel	trapstar
@@ -68359,3 +68293,1807 @@
 1731352760	Makyen	(?:element[\W_]*+)?x[\W_]*+cbd
 1731354846	Makyen	stophumantraffickingmo\.com
 1731366406	Vickel	venom[\W_]*+3[\W_]*+ultimul
+1731372052	Makyen	dronihaspell(?:@yahoo\.com)?
+1731386885	Makyen	virtuenetz(?!\.pk)
+1731387479	Cow	truecriminalstories\.com
+1731391690	Cow	refund[\W_]*+contact[\W_]*+customer[\W_]*+support
+1731392184	VLAZ	cardvcc\.com
+1731392449	Cow	call[\W_]*+[\w]+[\W_]*+customer[\W_]*+care
+1731392697	VLAZ	vifreehd\.com
+1731392906	VLAZ	(?-i:hubunganindonesia)(?# t.ly)
+1731392914	VLAZ	AT777
+1731397853	Cow	(?-i:3YZmu99)(?# bit.ly)
+1731398235	Cow	callgirlsinraipur\.com
+1731399597	VLAZ	amansamrat\.com
+1731401683	Cow	couponreals\.com
+1731401735	Cow	coupon[\W_]*+reals(?!\.com(?<=couponreals\.com))
+1731404966	Cow	financeinvestmentlegalteam(?:@gmail\.com)?
+1731408567	VLAZ	yowsap\.com
+1731408616	VLAZ	yo[\W_]*+whatsapp(?!\.org(?<=yowhatsapp\.org))
+1731408994	VLAZ	gkvideosplus\.blogspot
+1731409488	VLAZ	leaked[\W_]*+video
+1731411274	Cow	tours-india\.com
+1731411385	Cow	simify\.com
+1731411402	Cow	simsdirect\.com\.au
+1731415496	Cow	support[\W_]*+or[\W_]*+help[\W_]*+section
+1731415829	Anerdw	nudify\.me
+1731415879	Cow	jio[\W_]*+app
+1731417786	Cow	rahemodiran\.com
+1731427770	Jeff Schaller	virtualcodes\.net
+1731430587	Vickel	(?-i:psytrancemarket)(?#t.me)
+1731435281	Cow	chat[\W_]*+with[\W_]*+customer[\W_]*+support
+1731435983	Fastnlight	rbxscriptpro\.com
+1731438779	Jeff Schaller	urdushayrihere\.blogspot
+1731438800	Jeff Schaller	bestbitcoinprivatekeyrecovery\.org
+1731441812	Vickel	borgwarnerinc1(?:@gmail\.com)?
+1731456238	Fastnlight	Hackspypivot\.Com
+1731456380	Fastnlight	Hackspypivot(?!\.com(?<=hackspypivot\.com))
+1731476053	Makyen	groupfacebookads
+1731479713	VLAZ	digitalerena\.com
+1731481504	Cow	ytshortsdown\.com
+1731481531	Cow	ytshortsdown(?!\.com(?<=ytshortsdown\.com))
+1731482175	Dragonrage	ultraproex\.com
+1731482372	Cow	vibrant\.co\.in
+1731483279	Dragonrage	dharmikmind\.com
+1731484336	Cow	poweroffactorial\.in
+1731489149	Cow	studyworldonline\.com
+1731492791	VLAZ	webinoco\.ir
+1731494730	VLAZ	waseemsays(?!\.com)
+1731496216	VLAZ	com\.geoflixzplus\.app(?# Google play store app)
+1731496246	VLAZ	sifx\.com
+1731496695	Jeff Schaller	prestigepeptides\.com
+1731496757	VLAZ	prestige[\W_]*+peptides(?!\.com(?<=prestigepeptides\.com))
+1731497773	Jeff Schaller	zamzamtravelsbd\.com
+1731497803	Jeff Schaller	xperlet\.com
+1731498172	VLAZ	webhostingpromo\.com
+1731498820	Cow	offplansearch\.ae
+1731498925	Cow	cash4u\.com
+1731500138	VLAZ	jobsacoo\.blogspot
+1731502466	Cow	full[\W_]*+video[\W_]*+original
+1731503759	Jeff Schaller	want520\.net
+1731515182	Jeff Schaller	leadsflex\.com
+1731516315	VLAZ	spurmenu\.com
+1731517254	Vickel	transformlearningacademy\.com
+1731517342	VLAZ	transform[\W_]*+learning[\W_]*+academy(?!\.com(?<=transformlearningacademy\.com))
+1731518649	VLAZ	testleaf(?!\.com)
+1731526303	Glorfindel	cloudastra
+1731528068	Jeff Schaller	webwavemarket\.com
+1731530236	Jeff Schaller	cherrymagazines\.com
+1731533359	Vickel	casewise\.ai
+1731553413	Jeff Schaller	fenharxz\.com
+1731565982	VLAZ	je-amare-ghrina-kore\.blogspot
+1731570376	Cow	meghalayalottery\.online
+1731577602	tripleee	(?-i:^abuislam$)
+1731578116	tripleee	elegantfashion\.vn
+1731578160	tripleee	elegant\.fashion58(?# tiktok)
+1731581097	VLAZ	rpgguild\.shop
+1731581116	VLAZ	udli\.de
+1731581145	VLAZ	sapficohub\.com
+1731581184	VLAZ	academiaerp\.com
+1731581638	VLAZ	meg-steedle\.com
+1731581649	VLAZ	craw\.in
+1731581703	VLAZ	kmerphone\.com
+1731582765	VLAZ	vape4smoke\.co\.uk
+1731584970	Jeff Schaller	dogcarseatco\.co\.uk
+1731586823	Jeff Schaller	jaiswalpharma\.com
+1731590028	VLAZ	WARNING:-DO-NOT-SHARE-THIS\.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items
+1731590367	Cow	celebritynudeleaks\.online
+1731594656	Cow	gov\.bd
+1731597082	Cow	streamnow\.site
+1731597300	VLAZ	Imsha[\W_]*+Rehman
+1731598165	Cow	saintruman
+1731605364	Fastnlight	supportcenterbusiness\.com
+1731606899	VLAZ	royaltygt\.com
+1731607504	VLAZ	bphtb\.lombokbaratkab\.go\.id
+1731617407	Vickel	tivrok\.cfd
+1731618810	VLAZ	bashfortitudeaffability\.com
+1731635313	Makyen	shiqi_cao(?<=medium\.com/@shiqi_cao)
+1731651029	Cow	sosjovo\.com
+1731651465	Cow	ketohub\.org
+1731651498	Cow	(?-i:ClarityBloomCBDGummiesOfficials)(?# facebook.com CBD Gummies spam)
+1731654355	Cow	digitalgearspot\.com
+1731651803	Anerdw	brownsofts\.com
+1731655793	Cow	bestoffirestick\.com
+1731663538	VLAZ	twibbonize\.com
+1731666662	VLAZ	topsupplementnewz\.com
+1731666695	VLAZ	fioricetforpain\.jimdofree\.com
+1731667978	Cow	jdocs\.com
+1731668201	tripleee	tstyle\.rf\.gd
+1731668273	tripleee	jimdofree\.com
+1731671852	VLAZ	ceumed\.com
+1731674809	tripleee	(?-i:^crmsoftware360$)
+1731675508	tripleee	(?-i:^Saransh Prajapati$)
+1731680207	tripleee	vuelosdesdelahabana\.es
+1731690357	Spevacus	onepagehoroscope\.com
+1731699627	Nisse Engström	englishclub\.com
+1731733991	Spevacus	sapientamerica\.com
+1731741754	Nisse Engström	islam-answers\.com
+1731742054	Nisse Engström	pianoforall-vdkjpif\.gamma\.site
+1731745290	Cow	win777okvip(?:@gmail\.com)?
+1731746666	Cow	milalan\.com
+1731746753	Cow	Phone[\W_]*+Pe
+1731750019	VLAZ	Laked[\W_]*+Video
+1731750748	VLAZ	abbottlyon\.com
+1731752492	Nisse Engström	novatales\.com
+1731752933	tripleee	therutificador\.cl
+1731758032	VLAZ	afropride\.co\.uk
+1731766144	Jeff Schaller	thethinkingquill\.blogspot
+1731766611	VLAZ	bitly79\.blogspot
+1731766619	VLAZ	WATCH\s*░▒▓██►
+1731768377	Cow	screensaver\.top
+1731775633	Mast	Lâm[\W_]*+Fitness
+1731775967	Spevacus	fastlook\.xyz
+1731780638	Jeff Schaller	rei\.ae
+1731781714	Vickel	allsoftscr\.college
+1731782006	Fastnlight	kaze-nesia\.online
+1731783168	VLAZ	infopoint\.8171newspk\.com
+1731785683	Nisse Engström	xzroms\.com
+1731786014	Cow	takethenotes\.com
+1731786160	Fastnlight	ftkst\.com
+1731791897	Fastnlight	powerfullmotivation4\.blogspot
+1731833018	Cow	filmixtv\.com
+1731834741	Cow	buybookingreviews\.com
+1731843190	Mast	greendecorvn\.com
+1731850907	Jeff Schaller	gundarapumanikanta11\.odmtworld\.com
+1731855165	Cow	raharjokurnainbudi
+1731855191	Cow	almirazakia71(?:@gmail\.com)?
+1731857664	Cow	giftsbyseven\.vn
+1731857819	Cow	(?-i:gifts_byseven)(?# instagram.com)
+1731857891	Cow	gifts[\W_]*+by[\W_]*+seven(?!\.vn(?<=giftsbyseven\.vn))
+1731861716	Jeff Schaller	iptvsmarters4k\.us
+1731862323	Cow	(?-i:cuahangquatang)(?# tiktok.com)
+1731863578	Cow	studytechniques\.info
+1731874098	Anerdw	tviewsport\.blogspot
+1731880408	Jeff Schaller	hodlfm\.com
+1731910814	VLAZ	sbrwindyridge\.com
+1731910900	VLAZ	bestbirdfeederreview\.com
+1731912731	VLAZ	tathagatorganics\.com
+1731913909	VLAZ	shashikanth11\.odmtworld\.com
+1731914740	VLAZ	stardewvalleyapk\.net
+1731916713	tripleee	odmtworld\.com
+1731919961	tripleee	bestpillsvendor\.us
+1731920084	tripleee	daman[\W_]*+games
+1731920109	tripleee	(?-i:EmMpO751895)(?# daman games invite code)
+1731928343	Jeff Schaller	shopdenled\.com\.vn
+1731928423	Jeff Schaller	beautynetonline\.com
+1731928550	Jeff Schaller	dnyastainless\.com
+1731929128	VLAZ	samco\.in
+1731929633	VLAZ	thepetslover\.com
+1731929643	VLAZ	the[\W_]*+pets[\W_]*+lover(?!\.com(?<=thepetslover\.com))
+1731929707	VLAZ	cjcpa\.ca
+1731932914	Jeff Schaller	tibberkids\.com
+1731935579	VLAZ	bbestblog\.com
+1731935589	VLAZ	chris[\W_]*+sails[\W_]*+(?:video(?:[\W_]*+viral)?|viral[\W_]*+video)
+1731937907	tripleee	dreamhomeassociates\.co\.in
+1731946296	tripleee	bodygym\.com
+1731946681	tripleee	linkedin\.com/jobs/view
+1731951663	tripleee	un[\W_]*+mes[\W_]*+gratuito
+1731953538	VLAZ	seeinsta\.com
+1731954923	Cow	whollyshrink\.com
+1731955412	Nisse Engström	iranajil\.com
+1731955696	Cow	(?-i:GeneralArmistice)(?# t.me)
+1731955935	Cow	nandomenu\.co\.uk
+1731967070	Anerdw	thegrowgarden\.com
+1731987908	Fastnlight	summa\.co\.th
+1731988226	Makyen	chollada\.summa(?:@gmail\.com)?
+1731989952	Fastnlight	upliftersite\.blogspot
+1732002384	Cow	CoinCollectExperts
+1732004296	Cow	tajmahaldaytour\.net
+1732004341	Cow	hrbs\.com\.pk
+1732005081	Cow	quamitavn(?:@gmail\.com)?
+1732005333	Cow	elitejacket\.com
+1732007027	Cow	capprocutapk\.com
+1732009037	Cow	codebitmatrix\.com
+1732015438	VLAZ	buy-strip\.com
+1732015453	Jeff Schaller	bb-simon\.com
+1732015503	Jeff Schaller	damangame\.ink
+1732015526	VLAZ	wokhr\.com
+1732015621	VLAZ	lroomapk\.com
+1732015641	VLAZ	qbuildcon\.com
+1732016012	VLAZ	thelotusbiotech\.com
+1732016081	VLAZ	the[\W_]*+lotus[\W_]*+biotech(?!\.com(?<=thelotusbiotech\.com))
+1732018446	Cow	hinduastrology\.life
+1732019003	Cow	bangsaonline\.com
+1732019113	Jeff Schaller	binmile\.com
+1732020120	VLAZ	DeskTrack(?!\.timentask\.com)
+1732025898	Jeff Schaller	watchbandexpert\.com
+1732028731	Anerdw	five-chain\.com
+1732028821	Anerdw	Sirge[\W_]*+Alt[\W_]*+Text[\W_]*+Scan
+1731994860	Anerdw	paybyplatema\.lol
+1732031311	Cow	ffdipl\.com
+1732031325	Cow	miravella\.tn
+1732031377	Cow	ahmedtab425(?:@gmail\.com)?
+1732031397	Cow	muhammad\.ahmed\.4g(?:@gmail\.com)?
+1732031772	Cow	supsemi\.com
+1732032539	Cow	pbdropshipping\.com
+1732037574	Nisse Engström	paperub\.com
+1732037739	Cow	cancel[\W_]*+a[\W_]*+recharge
+1732038270	Nisse Engström	sanarhmn\.com
+1732042410	VLAZ	layerlogix\.com
+1732042445	VLAZ	layer[\W_]*+logix(?!\.com(?<=layerlogix\.com))
+1732043452	VLAZ	(?-i:J62AKSTTABCGD1)(?# wa.me)
+1732045526	Jeff Schaller	giftcardshop\.atwebpages\.com
+1732056747	Fastnlight	(?-i:3CjNfft)(?#bit.ly)
+1732057542	Vickel	sir_lemus(?:@hotmail\.com)?
+1732057585	Anerdw	up-community\.co
+1732057984	Vickel	techsayapa\.co
+1732080942	Spevacus	imgglobalinfotech\.com
+1732081124	Spevacus	getgulfjob\.com
+1732081807	VLAZ	curamaids\.com
+1732082030	VLAZ	(?-i:1gAaGgQ)(?# sqzly.co)
+1732085477	VLAZ	qoricanchaexpeditions\.com
+1732086451	VLAZ	webjobwork\.com
+1732086808	VLAZ	s2material\.blogspot
+1732090007	Dragonrage	alfiih\.com
+1732090989	Cow	dartcrossings\.co\.uk
+1732091429	Cow	cagoldcity\.com
+1732096959	Dragonrage	woodworkersshoppe\.com
+1732097804	Dragonrage	californialightworks\.com
+1732100523	Dragonrage	weboin\.com
+1732103175	Dragonrage	sahelemoradi\.com
+1732103333	Dragonrage	4kiptv\.tech
+1732106159	Jeff Schaller	cssplayer\.com
+1732106390	Dragonrage	rajadrivingschool\.co\.uk
+1732107401	Dragonrage	globalinsightservices\.com
+1732123860	Cow	(?-i:ncuaduBtkcMWGfGs7)(?# forms.gle)
+1732125876	Spevacus	myheavenmodels\.com
+1732127003	Jeff Schaller	honikid\.com
+1732127109	Cow	honikidvn(?:@gmail\.com)?
+1732132612	Cow	villapaintingservicesdubai\.ae
+1732165001	Cow	eldi\.co\.in
+1732165929	Cow	kerryparkdental\.co\.uk
+1732170978	Makyen	justdatarecovery\.com
+1732172780	Dragonrage	rollrentcar\.com
+1732173981	Dragonrage	drsaritaraocardiologist\.com
+1732174116	Anerdw	Computeroids[\W_]*+Driver[\W_]*+Updater
+1732175675	Dragonrage	mayoworld\.com
+1732174909	Anerdw	mymmjdoctor\.com
+1732176739	Anerdw	queenasella(?:@yahoo\.com)?
+1732166850	Anerdw	Iris[\W_]*+English
+1732166667	Anerdw	iris\.edu\.vn
+1732180439	Dragonrage	racontor\.com
+1732189454	Jeff Schaller	ibiyaya-usa\.com
+1732189736	Jeff Schaller	eeshanya\.com
+1732190179	Jeff Schaller	homehealthyremedy\.com
+1732158322	Anerdw	livesstream\.fun
+1732191106	Jeff Schaller	collagemaster\.com
+1732193532	Jeff Schaller	animixplay\.com\.mx
+1732197188	Cow	almarayacars\.com
+1732204515	Cow	zelluloza\.ru
+1732212001	Vickel	prakasheyehospital\.in
+1732241690	Vickel	unikeyic\.com
+1732251464	Cow	(?-i:UFYKN5FSU63CK1)(?# wa.me message)
+1732258010	Cow	digitalmarketingseo\.rf\.gd
+1732261163	Cow	(?-i:1ohjB_sUNpK35b71S12QNfZ4iuxaftAfD_kAsQ_Iti_Y)(?# Google Docs exam spam)
+1732261485	Cow	vitrox\.com
+1732261747	Cow	seotechinics\.wordpress\.com
+1732261833	Cow	(?-i:customerfeedbackmanagement)(?# tumblr.com seo spam)
+1732263128	Cow	(?-i:bozgzguGVbSasyCa8)(?# Google maps location spam)
+1732265018	Cow	eeshanya(?!\.com(?<=eeshanya\.com))
+1732267191	Cow	eye[\W_]*+checkups
+1732268290	Cow	pinpoint\.careers
+1732271960	Cow	accusticarts\.de
+1732272006	Cow	standincrowd\.com
+1732272238	Cow	larvesta\.com
+1732274121	Jeff Schaller	2softsolutions\.com
+1732274529	Jeff Schaller	sportsbyte\.net
+1732274548	Jeff Schaller	acegroupindiahanei\.com
+1732280691	VLAZ	scriptsusa\.com
+1732281826	Jeff Schaller	shrewsburymarbleandgranite\.com
+1732284263	Jeff Schaller	sbrewingcompany\.com
+1732284919	Jeff Schaller	onlineblackjack\.mobi
+1732285062	Makyen	theseoguys
+1732288513	Cow	(?-i:LwzmLc)(?# WeChat ID)
+1732289486	Fastnlight	tech[\W_]*+crypto[\W_]*+recovery
+1732294180	VLAZ	wink-apk\.pro
+1732304195	Fastnlight	nytsudoku\.net
+1732313314	Jeff Schaller	boredomarcade\.xyz
+1732324196	Vickel	polskieprawojazdy\.com
+1732324758	Vickel	imt-cartadeconducao\.com
+1732325088	Vickel	acheterpermis-conduire\.com
+1732341843	Makyen	therealrsooil\.com
+1732348294	Anerdw	r-hero\.ca
+1732348310	Anerdw	pae\.com\.bd
+1732349028	Cow	mc-magnetism\.com
+1732349386	Cow	floorwarehouse\.co\.uk
+1732349416	Cow	dumpscarders\.cc
+1732350214	Cow	pools-now\.com
+1732350971	Anerdw	eventsroyaleatl\.com
+1732351668	Cow	colourprediction\.co
+1732351619	Anerdw	in999\.club
+1732352930	VLAZ	shadowfightmodapk\.com
+1732375690	Nisse Engström	motivatesouls\.com
+1732375888	Jeff Schaller	thetoolx\.com
+1732379017	Fastnlight	goldencorralmenu\.us
+1732379779	Jeff Schaller	Mcpedlapk
+1732393010	Cow	supreme[\W_]*+peregrine[\W_]*+recovery
+1732408713	Vickel	tvchannelpass\.live
+1732421192	Dragonrage	javatherapy\.in
+1732429877	Jeff Schaller	jisasoftech\.com
+1732429939	Jeff Schaller	softzcr\.college
+1732436787	Cow	streamingcommunity
+1732436969	Cow	nullbrawl\.fr
+1732440668	Cow	RakotondrafaraMiantsaFanirina(?:@gmail\.com)?
+1732444504	Cow	nutslifehealthy\.com
+1732444764	Cow	nuts[\W_]*+life[\W_]*+healthy(?!\.com(nutslifehealthy\.com))
+1732444861	Cow	(?-i:^Life Healthy Nuts$)
+1732447408	Cow	qa-cs\.com
+1732457770	Fastnlight	natanicspvtltd\.com
+1732459932	Nisse Engström	deeyook\.com
+1732460052	Fastnlight	gauwoolly\.com
+1732462054	Jeff Schaller	drherbs420
+1732470829	Cow	chemenggcalc\.com
+1732471225	Makyen	chemenggcalc(?!\.com)
+1732476136	Cow	(?-i:tymilix3_med)(?# YouTube Channel)
+1732477810	Anerdw	projectserum\.com
+1732485411	Vickel	upstaff\.com
+1732485419	Makyen	upstaff(?!\.com)
+1732489940	Anerdw	growyourcorp\.com
+1732512651	Cow	deeppan[\W_]*+academy
+1732515053	Cow	mactravels\.net
+1732515096	Cow	mac[\W_]*+travels(?!\.net(?<=mactravels\.net))
+1732516485	Cow	animusphysique\.com
+1732516522	Cow	animus[\W_]*+physique(?!\.com(?<=animusphysique\.com))
+1732516808	Cow	apkcom\.net
+1732520245	VLAZ	shriffle\.com
+1732520427	Cow	rclindia\.com
+1732521817	Cow	jellyfishtechnologies\.com
+1732521846	Cow	jellyfish[\W_]*+technologies(?!\.com(?<=jellyfishtechnologies\.com))
+1732521990	Cow	crudosportfishing\.com
+1732523720	Cow	dobrka\.com
+1732523972	Cow	greenlinecars\.co\.uk
+1732524003	Cow	green[\W_]*+line[\W_]*+cars(?!\.co\.uk(?<=greenlinecars\.co\.uk))
+1732524794	Cow	whatgroups\.com
+1732528245	Cow	luna[\W_]*+beauty[\W_]*+academy
+1732530063	VLAZ	polycomplasticinds\.com
+1732530236	VLAZ	preeti-patel\.com
+1732531731	Cow	animesamaapks\.com
+1732532095	Cow	scchouston\.co
+1732533441	Jeff Schaller	wanywhere\.com
+1732533501	Cow	(?-i:bdzjedeb)(?# tinyurl.com)
+1732533521	Cow	toneopfit\.com
+1732533817	Cow	koalageddon\.com
+1732537431	Cow	mynaildrill\.com
+1732537545	Cow	security[\W_]*+deposit[\W_]*+is[\W_]*+refundable
+1732538962	Cow	dftech\.in
+1732542543	Cow	paradisealpha\.com
+1732544669	Cow	profitalliance\.online
+1732547338	Fastnlight	instaproapk\.su
+1732549597	Fastnlight	truoffgrid\.com
+1732554508	Fastnlight	theusedpartsgenie\.com
+1732562035	Anerdw	jasminesmarthomes\.com
+1732563399	Anerdw	gomaps\.pro
+1732567054	Fastnlight	hacktechspy(?:@gmail\.com)?
+1732579111	Fastnlight	ammarcabs\.com
+1732581229	Jeff Schaller	ammar[\W_]*+cabs
+1732583658	Vickel	bonkcash\.io
+1732596560	Dragonrage	elwa\.com\.au
+1732600179	VLAZ	hassan-brothers\.ae
+1732600582	VLAZ	recommendationcrafter\.com
+1732600590	VLAZ	recommendationcrafter(?!\.com)
+1732603241	VLAZ	magicwebservices\.com
+1732603870	VLAZ	mastbanarasipaan\.com
+1732604327	VLAZ	apurple\.co
+1732605865	VLAZ	IGENICS
+1732606477	VLAZ	radiconstructions\.com
+1732610897	VLAZ	geohoney\.com
+1732612026	VLAZ	giantchemistharbourtown\.com\.au
+1732612124	VLAZ	xtra-two\.vercel\.app
+1732617438	VLAZ	starnustech\.com
+1732617459	VLAZ	(?-i:yNs6FJKtWR82pPFs9)(?#forms.gle)
+1732617467	VLAZ	monterail\.com
+1732619023	VLAZ	geekdive-corp\.com
+1732619462	VLAZ	dipsacademy\.com
+1732620210	Jeff Schaller	activate\.barenot\.com(?#sites.google.com)
+1732621176	VLAZ	online[\W_]*+generic[\W_]*+medicine(?!\.com(?<=onlinegenericmedicine\.com))
+1732625884	Vickel	vrishtech\.in
+1732626911	Jeff Schaller	hellofaster\.com
+1732627001	Jeff Schaller	lighthousenewsnetwork\.com
+1732630524	Jeff Schaller	puuk\.desa\.id
+1732630803	Jeff Schaller	davidlloydmembershipcost\.uk
+1732636214	Jeff Schaller	karetrip\.com
+1732637504	Fastnlight	extraffairs\.com
+1732643070	Fastnlight	groupzone\.xyz
+1732646548	Cow	faisalmoversonline\.pk
+1732646562	Cow	tracgrabber\.com
+1732656606	Fastnlight	hrmflorida\.com
+1732657839	Fastnlight	pvnorm(?:@gmail\.com)?
+1732658729	Fastnlight	JEFFRY[\W_]*+WILLIAM[\W_]*+CYBER
+1732663046	Fastnlight	Mustang[\W_]*+Recovery
+1732668797	Fastnlight	flix-iptv\.dev
+1732668916	Vickel	driftboss\.games
+1732668925	Vickel	stickmanhook\.games
+1732668935	Vickel	1v1lol\.co
+1732668945	Vickel	ovo-unblocked76-games\.github\.io
+1732687835	Cow	snowflake-pricing-calculator\.onrender\.com
+1732694611	Dragonrage	dialexpress\.in
+1732697672	Dragonrage	rtpcasinos\.online
+1732705758	Dragonrage	besttourguider\.com
+1732707605	Vickel	drcracked\.com
+1732690910	Anerdw	watchshopbd\.com
+1732710243	Cow	migso\.io
+1732710408	Cow	pravin-gojamgunde\.blogspot
+1732710592	Cow	chudovo\.com
+1732710770	Cow	thailandtourexpert\.com
+1732710843	Cow	srichakrapeb\.com
+1732710897	Cow	alifsengineering\.com
+1732710971	Cow	360iresearch\.com
+1732711127	Cow	100001\.su
+1732712960	Jeff Schaller	acs670886
+1732713059	Jeff Schaller	nexusghostwriting\.co\.uk
+1732715454	Vickel	vapesquard\.co\.uk
+1732718019	Jeff Schaller	etbtoursegypt\.com
+1732720847	Cow	(?-i:alice-mutum-3b247b137)(?# linkedin digital marketing spam)
+1732722348	Jeff Schaller	kuyhaa-u\.info
+1732722644	Jeff Schaller	anyblogsview\.com
+1732726824	Cow	groodledog\.com
+1732728117	Spevacus	crawlfirst\.com
+1732733373	Cow	themarketplacesolutions\.com
+1732748412	Jeff Schaller	ayrealtygroup\.com
+1732748453	Jeff Schaller	patent\.dev
+1732687260	Anerdw	(?-i:^The Anomaly$)
+1732752613	Vickel	anthonydaviestech(?:@gmail\.com)?
+1732769028	Cow	avguides-help\.com
+1732773602	VLAZ	slepune\.com
+1732773680	Dragonrage	mychoize\.com
+1732773717	Dragonrage	inkahostperu\.com
+1732773725	Dragonrage	urpiweb\.com
+1732774062	Cow	hr365\.com
+1732775775	Cow	juaraitsolutions\.com
+1732776378	Dragonrage	thepastelpearls\.com
+1732776512	Cow	panambiresorts\.com
+1732777302	Cow	hinduismfaq\.com
+1732782064	Cow	kaafcreations\.com
+1732783388	Cow	galaxyeduworld\.com
+1732784862	Cow	(?-i:HydroLeanXTGold)(?# facebook.com weight loss spam)
+1732784906	Cow	(?-i:femiprocapsulesbuy)(?# facebook.com weight loss spam femipro)
+1732784931	Cow	femipro
+1732789627	Cow	smartsquarehmh\.net
+1732792094	Dragonrage	drishitapriyamsingh\.com
+1732792352	Dragonrage	jodoo\.com
+1732793387	Dragonrage	asapstumpgrinding\.com\.au
+1732793750	Dragonrage	aaav\.in
+1732797384	Dragonrage	bluehatcleaning\.com
+1732801269	Dragonrage	(?-i:bug_bountyhunters)(?#t.me)
+1732804206	Dragonrage	totheweb\.com
+1732807233	Dragonrage	eighty20\.me
+1732807250	Dragonrage	zeemedicalbilling\.com
+1732807258	Dragonrage	fibertechservices\.net
+1732807645	Cow	ipvts\.com
+1732807677	Cow	recharge[\W_]*+once[\W_]*+successful
+1732807950	Cow	seminarppt\.com
+1732810470	Fastnlight	hillclimbracing-apk\.com
+1732821735	Vickel	pmalongcourse\.com
+1732821884	Vickel	pma[\W_]*+long[\W_]*+course(?!\.com(?<=pmalongcourse\.com))
+1732822525	Vickel	secure\.shrib\.com
+1732830611	Vickel	brightrs\.com
+1732837662	Vickel	cryptorecovers\.com
+1732854147	EJoshuaS - Stand with Ukraine	serversrent\.com
+1732866150	Glorfindel	CastarSDK
+1732881301	Jeff Schaller	lawe\.sensacinema\.site
+1732881331	Jeff Schaller	watching\.nwsautodaily\.com
+1732881353	Jeff Schaller	optikalopticians\.com
+1732881502	Jeff Schaller	events\.scenethink\.com
+1732881575	Jeff Schaller	naturesremedyfungiremoverbuy\.blogspot
+1732881662	Jeff Schaller	polypackenterprises\.com
+1732881947	Jeff Schaller	investorsarthi\.com
+1732882045	Jeff Schaller	cryptoatmexpert\.com
+1732882085	Jeff Schaller	digitalcrackpro\.com
+1732882243	Jeff Schaller	gdrfad\.gov\.ae
+1732883927	double-beep	softapproachit\.com
+1732885255	Jeff Schaller	illusionstudio\.es
+1732886164	Jeff Schaller	get-free\.sbs
+1732887560	Jeff Schaller	brotherspressurewashing\.com
+1732892916	Jeff Schaller	tomenuprices\.com
+1732893227	Jeff Schaller	pdfwordcounter\.io
+1732897998	Jeff Schaller	papaobasolutionhom\.wixsite\.com
+1732898032	Jeff Schaller	papa\.obasolutionhome(?:@gmail\.com)?
+1732898967	Jeff Schaller	tdtrg\.com
+1732902425	Jeff Schaller	bloomhousemarketing\.com
+1732907425	Vickel	daviseyecare\.com
+1732907789	Vickel	lustigespruche\.com
+1732909290	Vickel	vakoemchhay(?:@gmail\.com)?
+1732959895	Cow	studyprofy\.com
+1732965282	Cow	vensen\.in
+1732965450	Cow	astrokamal\.com
+1732967977	Jeff Schaller	iiotdatareader\.com
+1732968712	Vickel	masterteenpatti\.org
+1732973491	Vickel	impetusorgansseparation\.com
+1732975654	Jeff Schaller	systemdesign\.one
+1732975679	Jeff Schaller	shopify-1094\.myspreadshop\.com
+1732981969	Jeff Schaller	bondedindustrial\.com\.au
+1732985622	Vickel	verypdf\.com
+1732992350	Cow	technijian\.com
+1732998240	Nisse Engström	dogduck\.com
+1733001795	Jeff Schaller	appbitly\.com
+1733011558	Vickel	(?-i:vadpodunai)(?#t.me)
+1733011640	Vickel	ukairporttransferservices\.co\.uk
+1733012185	Vickel	uk[\W_]*+airport[\W_]*+transfer[\W_]*+services(?!\.co\.uk(?<=ukairporttransferservices\.co\.uk))
+1733014627	Vickel	planvoyages\.com
+1733040984	Cow	powerfinancecorporated24(?:@gmail\.com)?
+1733041460	Cow	raise[\W_]*+a[\W_]*+complaint[\W_]*+or[\W_]*+request
+1733045407	tripleee	aman[\W_]*+samrat
+1733056498	Cow	yourdailycoupon\.com
+1733062035	Cow	refund[\W_]*+money[\W_]*+open
+1733062472	Cow	speczouae\.com
+1733070362	Vickel	apkepoch\.com
+1733070417	Vickel	adinserter\.pro
+1733080073	Cow	minecraftcirclegenerate\.net
+1733110599	Jeff Schaller	lionstones\.in
+1733115111	Cow	generlinkcanada\.ca
+1733119424	Anerdw	opticalplazaarif\.com
+1733119757	Cow	(?-i:pabloestefan)(?# telegram drugs spam)
+1733119807	Cow	trophydeals\.com
+1733120874	Cow	to[\W_]*+reverse[\W_]*+a[\W_]*+wrong
+1733121161	Cow	reverse[\W_]*+a[\W_]*+transaction[\W_]*+on
+1733121693	Cow	mistakenly[\W_]*+sent[\W_]*+money[\W_]*+to
+1733122024	Cow	reverse[\W_]*+the[\W_]*+transaction[\W_]*+directly
+1733122625	Cow	pumpfunbot\.net
+1733122992	Cow	gacha-arts\.web\.app
+1733123105	Cow	dmwin1\.org
+1733123208	Cow	pelisplusapk\.mx
+1733125769	Jeff Schaller	gsupertools\.com
+1733126333	Cow	if[\W_]*+wrong[\W_]*+transaction
+1733128020	Cow	edenvistarsmartpricepartners\.com
+1733129824	Cow	rhcsa\.guru
+1733130805	Cow	suffescom\.com
+1733131237	Cow	phddataanalysis\.com
+1733132326	Cow	caravanhirencr\.com
+1733132947	Cow	c3automation\.com
+1733133377	Cow	giga-steel\.ma
+1733136613	Cow	powerhack\.in
+1733136644	Cow	G5EScX
+1733138843	Jeff Schaller	allthingsdev\.co
+1733139644	Cow	sahoullimo\.com
+1733141720	Cow	kulharchai\.com
+1733144430	VLAZ	Playmatic(?:[\W_]*+video)?
+1733144438	VLAZ	paslechoix
+1733144446	VLAZ	(?-i:live:\.cid\.b83b4bd81c109c9e)(?# Skype ID)
+1733145452	Fastnlight	c[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+s[\W_]*+e[\W_]*+r[\W_]*+v[\W_]*+i[\W_]*+c[\W_]*+e[\W_]*+s[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m(?#certifiedrecoveryservices.com)
+1733152104	Jeff Schaller	yuktii\.com
+1733153726	Jeff Schaller	levelgeeks\.com
+1733156049	Fastnlight	barberclipperpoint\.co\.uk
+1733159677	Jeff Schaller	logintutor\.org
+1733162009	Vickel	vedansha\.com
+1733172290	Vickel	qiwa\.sa
+1733186911	Jeff Schaller	V[\W_]*+A[\W_]*+U[\W_]*+L[\W_]*+T[\W_]*+R[\W_]*+E[\W_]*+A[\W_]*+M
+1733196765	Fastnlight	QBSSSMBE
+1733202123	Spevacus	biofics\.co\.in
+1733210637	Cow	kmspicopt\.site
+1733210931	Cow	albeliabd\.com
+1733211085	Cow	idm[\W_]*+crack
+1733211770	Cow	fynzon\.com
+1733216568	Cow	ninjacrystalvapez\.com
+1733217403	Cow	findrightjob\.com
+1733225444	Cow	egyptra\.pro
+1733225522	Cow	appverif\.com
+1733225560	Cow	gssglobalhub\.com
+1733226123	Cow	whitescreen\.vip
+1733228717	Vickel	amarketforce\.com
+1733228846	Vickel	amarketforce(?!\.com)
+1733229077	Jeff Schaller	mastergolfcart\.com
+1733229162	Jeff Schaller	move2edge\.com
+1733231540	Jeff Schaller	wifeyuniversity\.com
+1733233074	tripleee	goynarkhoni\.com
+1733235842	Jeff Schaller	a2autocare\.com
+1733237130	VLAZ	dubaicarts\.org
+1733237385	ipodtouch0218	reducebounce\.com
+1733242422	ipodtouch0218	bacuridigital\.com
+1733245819	Cow	info-spot\.net
+1733246364	ipodtouch0218	doppus\.app
+1733246686	Cow	vicimis\.com
+1733248634	Cow	iconpsychologies\.com
+1733252785	Cow	michaelguth\.com
+1733252941	Vickel	michael[\W_]*+guth(?!\.com(?<=michaelguth\.com))
+1733257189	Vickel	podvape1\.com
+1733258241	Vickel	flowlinesmm\.com
+1733258376	Vickel	flowlinesmm(?!\.com)
+1733267979	Spevacus	(?-i:eaziishops)(?#t.me)
+1733294609	Dragonrage	damangame\.tech
+1733294685	Cow	kiwiirc\.com
+1733294949	Dragonrage	kastropgroup\.com
+1733295423	Dragonrage	nationaldieselgenerator\.in
+1733296343	Dragonrage	honeygred31(?:@gmail\.com)?
+1733296836	Dragonrage	vienna\.tours
+1733296985	Anerdw	marutdrones\.com
+1733299050	Dragonrage	niravsharma\.com
+1733299058	Dragonrage	custom-concept\.com
+1733302749	Dragonrage	tccuae\.com
+1733305688	Dragonrage	cryptictracetechnologies(?:\W*+zohomail\W*+\.\W*+com)?
+1733306174	Dragonrage	thedamacislands\.com
+1733309787	Dragonrage	vitalketogummiesofficial\.blogspot
+1733313424	Vickel	bookadesertsafaritrip\.com
+1733314144	Dragonrage	jewelorchard\.com
+1733321755	Jeff Schaller	vvcares\.com
+1733322836	Spevacus	sportzfyy\.net
+1733323202	VLAZ	sportzfy
+1733323774	Jeff Schaller	pathsocial\.com
+1733331932	Makyen	vapeitwholesale\.com
+1733331940	Makyen	vape[\W_]*+it[\W_]*+wholesale(?!\.com(?<=vapeitwholesale\.com))
+1733334418	Jeff Schaller	formguardjs-io\.web\.app
+1733335270	Spevacus	clovervibesdubai\.com
+1733348084	ipodtouch0218	solanastreaming\.com
+1733349895	ipodtouch0218	musesemi\.com
+1733359762	Vickel	answermyhomework\.com
+1733365785	Spevacus	myworthyhome\.com
+1733375416	cocomac	terminalspot\.com
+1733372218	Anerdw	polyesteracousticpanels\.com
+1733375639	Cow	acoolcode\.com
+1733375742	Cow	freecustom\.email
+1733376114	Cow	moho\.lostmarble\.com
+1733376226	Anerdw	sru\.edu\.in
+1733380116	Dragonrage	(?-i:kzf4EcCDCHKRcH5F7)(?#forms.gle)
+1733383651	Cow	toncigrgin\.blogspot
+1733385629	Cow	blackscreen\.onl
+1733386334	Cow	tasmidur\.medium\.com
+1733391211	Dragonrage	wpsmartsolutions\.com
+1733391551	cocomac	guidanceplus\.in
+1733395406	Dragonrage	bestdrivingschool\.co\.uk
+1733397894	Vickel	pathshala[\W_]*+hub
+1733398020	Jeff Schaller	zestminds\.com
+1733398080	Cow	retterworkwear\.com
+1733398353	Cow	carkoncepts\.com
+1733398365	Vickel	(?-i:nayem140)(?# fiverr)
+1733398611	Vickel	dewakoin
+1733399731	Cow	quickimagetools\.com
+1733400539	Cow	holistic-medicare\.net
+1733400643	Cow	holistic[\W_]*+medicare(?!\.net(?<=holistic-medicare\.net))
+1733401889	Vickel	vogue[\W_]*+tourism
+1733402321	VLAZ	routerloginwiz\.net
+1733402330	VLAZ	routerlogin\.net
+1733402881	Vickel	proanalyticsservice\.com
+1733404426	Cow	animepapa\.com
+1733404484	Cow	3pattiworld\.pk
+1733407791	Jeff Schaller	mihubalakrish(?<=medium\.com/@mihubalakrish)
+1733409163	Jeff Schaller	thehijabcompany\.pk
+1733409539	ipodtouch0218	fat-fat-360\.blogspot
+1733410038	Jeff Schaller	milkyway777\.pro
+1733411097	VLAZ	infocashloan
+1733411464	Cow	safe\.lviv\.ua
+1733415107	ipodtouch0218	educatorshub13
+1733415622	Fastnlight	yatherm\.com
+1733416775	Anerdw	aknniherbscentre\.com
+1733418663	Vickel	aknni[\W_]*+herbs[\W_]*+centre(?!\.com(?<=aknniherbscentre\.com))
+1733421147	Cow	(?-i:miH4ekVtcShG6gkSA)(?# forms.gle)
+1733421445	Cow	readymadeui\.com
+1733428803	ipodtouch0218	nfrstreams2743\.blogspot
+1733428676	ipodtouch0218	fanfanatics\.live
+1733443793	Fastnlight	MGCDTTV
+1733464416	Spevacus	paramounttechsolution\.com
+1733464552	Spevacus	kibhologin\.in
+1733465044	Spevacus	cbazaar\.com
+1733470497	Cow	dtskill\.com
+1733473047	Cow	caliberfocus\.com
+1733475708	Cow	rasterbator\.net
+1733479637	Cow	brandignite\.co
+1733480389	VLAZ	ticketsque\.com
+1733480851	VLAZ	fanaticspoint\.com
+1733481938	VLAZ	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))
+1733485821	Cow	ispf\.co\.in
+1733486740	VLAZ	Disha[\W_]*+Consultants?
+1733490114	VLAZ	mytikachi\.com
+1733497114	Cow	simply[\W_]*+dial[\W_]*+\d+
+1733497437	Cow	consumer[\W_]*+complaint[\W_]*+against
+1733498216	Jeff Schaller	airlineticketsbookings\.com
+1733498245	Robert Longson	deticoutlet\.com
+1733506417	ipodtouch0218	webtechnoz
+1733509942	ipodtouch0218	outdoorgearlab\.com
+1733519428	Anerdw	cara\.app
+1733519432	Anerdw	bento\.me
+1733520407	Laurel	^Asim Ahmed$
+1733528749	Jeff Schaller	Konversijuoptimizavimas\.lt
+1733534421	ipodtouch0218	realmapa\.com
+1733534436	ipodtouch0218	yephp\.net
+1733555047	Nisse Engström	amatoshi\.com
+1733555618	Nisse Engström	solutionshygiene\.ae
+1733556289	Nisse Engström	chatgptjapan\.com
+1733559739	Cow	recharge[\W_]*+a[\W_]*+number
+1733559943	Cow	consecutive[\W_]*+recharges
+1733560861	Cow	bsnl[\W_]*+mtnl
+1733561112	Cow	southpole5eyeshackingandrecoveringcompany\.com
+1733570239	Cow	hackbursterrecovery\.weebly\.com
+1733570284	Cow	hack[\W_]*+burster[\W_]*+recovery
+1733570397	Cow	labeebcp\.com
+1733570449	Cow	firazmuhammed\.com
+1733570473	Cow	firaz[\W_]*+muhammed(?!\.com(?<=firazmuhammed\.com))
+1733570617	Cow	KONOHA[\W_]*+TOTO78
+1733572067	Jeff Schaller	megawholesalerinc\.com
+1733578014	VLAZ	webclaw\.net
+1733585679	Cow	myjio[\W_]*+(?:app|plan)
+1733594264	Vickel	9inteydegree\.com
+1733594380	Vickel	filmfreeway\.com
+1733596457	Cow	nguyenkhanhmkt
+1733644753	VLAZ	tredomatix\.com
+1733645091	Cow	swatle\.ai
+1733661774	Nisse Engström	techsprintx\.com
+1733663770	Cow	contact[\W_]*+us[\W_]*+immediately[\W_]*+(?:to|for|at|so)
+1733664290	Cow	joindevops\.com
+1733677172	Cow	emesta\.cz
+1733681387	Cow	umarmuqthar\.com
+1733684648	Cow	geometrysspot\.com
+1733687304	Vickel	mnpmodapk\.com
+1733721319	Cow	juvishh\.com
+1733722841	Anerdw	bobcometalllc\.wordpress\.com
+1733729712	Cow	phones[\W_]*+4[\W_]*+u[\W_]*+repairs
+1733729841	Cow	mybusinessvisual\.com
+1733734797	Cow	alphapartners\.co
+1733735521	Cow	evisatraveller\.mfa\.ir
+1733736425	Cow	casaamore-international\.com
+1733736754	Cow	orexiburn
+1733737923	Cow	globalfitnessmart\.com
+1733740065	VLAZ	pass4future\.com
+1733740125	VLAZ	doinikdesheralo\.com
+1733740143	VLAZ	toadubuilders\.com
+1733741418	Cow	flexato\.gr
+1733741883	Cow	deorwine\.com
+1733742563	Cow	copyeditingtraining\.in
+1733745403	Cow	contentrheum\.com
+1733747609	Jeff Schaller	wolfcut\.org
+1733750232	Cow	toolrify\.com
+1733750892	Cow	beautycharms\.pk
+1733754250	Vickel	locked[\W_]*+facebook(?=.*code)
+1733759889	ipodtouch0218	twistlockdynamics\.com
+1733764039	Cow	24[\W_]*+hours?+[\W_]*+(?:cancellation|of|refund|free|risk[\W_]*+free)[\W_]*+(?:booking|policy|cancellation|calling)
+1733764179	Cow	(?:popular|online|scam|fake|cryptocurrency|fraudulent|reliable|properties[\W_]*+and)[\W_]*+investment[\W_]*+(?:platforms?+|methods?+|opportunit(?:y|ies))
+1733725450	Anerdw	(?-i:Vn1wQ)(?#shorturl.at)
+1733724281	Anerdw	harshidarahman\.com
+1733766109	ipodtouch0218	probottleneckcalculator\.com
+1733779811	ipodtouch0218	fappelo\.online
+1733797685	Jeff Schaller	HMXFT5
+1733807144	cocomac	collinsroadfamilydental\.com
+1733809966	Anerdw	nativeindianorganics\.com
+1733810863	Cow	kyky\.pro
+1733811205	Cow	water[\W_]*+loophole[\W_]*+recipe
+1733811969	cocomac	freewhatsappbot\.com
+1733812617	Cow	harrythemover\.com\.au
+1733812636	Cow	klover\.ai
+1733814784	Cow	courseecho\.com
+1733816784	Cow	rajabonanza88
+1733816840	Cow	framer\.ai
+1733819906	Cow	bugsink\.com
+1733821822	Cow	mortgageloancompany
+1733824608	Cow	maxelpay\.com
+1733824637	Cow	loanseloanwarehouse\.com
+1733827756	Cow	babafilmizlet\.com
+1733830209	Cow	metizsoftinc\.com
+1733831566	Cow	bagfultechnologies\.com
+1733831614	Cow	bagful[\W_]*+technologies(?!\.com(?<=bagfultechnologies\.com))
+1733834218	Jeff Schaller	000[\W_]*+in[\W_]*+BTC
+1733834358	VLAZ	(?-i:LKPTS55J4JT6H1)(?# wa.me)
+1733835130	VLAZ	larvesta(?!\.com)
+1733837421	VLAZ	vividkreations\.com
+1733837463	VLAZ	vivid[\W_]*+kreations(?!\.com(?<=vividkreations\.com))
+1733845872	ipodtouch0218	roaradventuretourism\.com
+1733848653	Fastnlight	ensureservices\.com
+1733850185	Dragonrage	dailynutraboost\.com
+1733850193	Dragonrage	watch\.liberty\.edu
+1733850423	Vickel	magicalcuscotravelagency\.com
+1733850431	Vickel	andeanroadperu\.com
+1733850440	Vickel	xplormachupicchu\.com
+1733850448	Vickel	kenkoadventures\.com
+1733863179	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)(?<!download\.lenovo\.com)
+1733871575	Anerdw	(?-i:59F3DD5DF)(?#Mary Jewelry invite code)
+1733884661	Jeff Schaller	bishwabazaar\.com
+1733894009	Cow	qualitydoor\.com
+1733898939	Cow	^Idiot Race$
+1733899101	Cow	bofc\.io
+1733900280	VLAZ	sekamaterigan900
+1733904936	Cow	offertake\.xyz
+1733907225	double-beep	sugardefender24\.com
+1733910885	Cow	roshpack\.com
+1733912074	double-beep	revivagloww\.netlify\.app
+1733912924	double-beep	netarioinnovations\.com
+1733913349	double-beep	brendanmulhern\.blog
+1733914409	VLAZ	TicketsQue(?!\.com)
+1733914504	Cow	stewartmovingandstorage\.com
+1733916064	Jeff Schaller	searchpin\.in
+1733916178	VLAZ	rtstvhub\.com
+1733916294	VLAZ	envirotechltd\.com
+1733916928	Cow	mycalpharm\.com
+1733917508	VLAZ	roshpack(?!\.com)
+1733917516	VLAZ	RevivaGlow
+1733917548	VLAZ	Netario[\W_]*+Innovations(?!\.com(?<=netarioinnovations\.com))
+1733917600	VLAZ	wistanomic(?!\.com|\.medium\.com)
+1733917844	Jeff Schaller	estradaci\.com
+1733918438	Cow	vireglobal\.com
+1733918482	Cow	vire[\W_]*+global(?!\.com(?<=vireglobal\.com))
+1733919218	Cow	recoveryexpert326
+1733920316	Cow	snapchatplanetsorder\.com
+1733920590	VLAZ	peoriaheightsplumbing\.com
+1733923201	Cow	bitro\.de
+1733923696	Jeff Schaller	gcpmasters\.in
+1733924466	VLAZ	Al[\W_]*+Mutakamela
+1733924474	VLAZ	selldeadfullz
+1733924482	VLAZ	ukdeadfullz
+1733924491	VLAZ	ukfullzdead
+1733924499	VLAZ	fullzukdeads
+1733924508	VLAZ	fullzdeaduk
+1733924516	VLAZ	fullz
+1733924524	VLAZ	deadfullz
+1733924532	VLAZ	deadfullzuk
+1733924962	VLAZ	guardianwatersports\.com
+1733927085	VLAZ	lightningproxies\.net
+1733927118	ipodtouch0218	pickvocab\.com
+1733930196	Jeff Schaller	bernhard-reise\.com
+1733930504	General Grievance	bernhard-travel-insurance\.com
+1733931004	Fastnlight	fundsreclaimercompany\.com
+1733931089	Fastnlight	Funds[\W_]*+Reclaimer[\W_]*+Company(?!\.com(?<=fundsreclaimercompany\.com))
+1733931517	Spevacus	mitie\.com
+1733931525	Spevacus	guard-mark\.co\.uk
+1733932889	Dragonrage	moremoney\.app
+1733943590	Cow	desidime\.com
+1733949371	Vickel	serhanos\.de
+1733951197	Vickel	cryptoFX(?:[\W_]*+(?:at[\W_]*+)?writeme(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1733977182	Spevacus	kodeshcleaning\.com
+1733980009	Spevacus	sassyinfotech\.com
+1733980018	Spevacus	apnetv\.pro
+1733983770	Cow	azaleatour\.com
+1733983795	Cow	sixthstartech\.com
+1733983867	Cow	bsis3a\.com
+1733984769	VLAZ	armstrongsteel\.com
+1733987077	Dragonrage	examshome\.com
+1733988176	Dragonrage	avivdigital\.in
+1733989722	cocomac	wildnettechnologies\.com
+1733990494	VLAZ	pacifictradingbd\.com
+1733990528	VLAZ	rev9solutions\.com
+1733990569	VLAZ	rev9[\W_]*+solutions(?!\.com(?<=rev9solutions\.com))
+1733993241	double-beep	mpec\.vn
+1733993273	double-beep	dawaapharmaceuticals\.com
+1733993291	double-beep	radonexhibition\.eu
+1733994531	double-beep	connectcareeronline\.com
+1733998210	double-beep	hoemirates\.com
+1734004052	Jeff Schaller	synclovis\.com
+1734004467	Cow	brceramics\.com
+1734004953	Cow	gold-rate\.today
+1734006850	VLAZ	Sprunkimods
+1734008238	Vickel	wtm365\.com
+1734008737	double-beep	brightwaterservicesinc\.com
+1734008854	VLAZ	sarfarajsarfaraj21969
+1734010131	Jeff Schaller	troubleshoot\.dev
+1734010251	Jeff Schaller	adelaidejap\.com\.au
+1734010462	Cow	jazzsim\.pk
+1733974144	Anerdw	Freeblankatm(?#@gmail.com)
+1734013988	Makyen	𝐏[\W_]*𝐚[\W_]*𝐲[\W_]*𝐭[\W_]*𝐦
+1734018427	Spevacus	etailforest\.com
+1734019776	Fastnlight	vegasvapor\.pk
+1734019795	Fastnlight	ruganijuice\.co\.za
+1734020963	ipodtouch0218	free-counters\.org
+1734020997	ipodtouch0218	acadoo\.de
+1734022772	Anerdw	emmamason\.com
+1734025646	VLAZ	traveltripbd\.com
+1734028846	Cow	undress\.cc
+1734041342	Vickel	number 782112531298
+1734060773	Jeff Schaller	srgholiday\.com
+1734061198	Makyen	𝐂[\W_]*+𝐔[\W_]*+𝐒[\W_]*+𝐓[\W_]*+𝐎[\W_]*+𝐌[\W_]*+𝐄[\W_]*+𝐑(?#𝐂𝐔𝐒𝐓𝐎𝐌𝐄𝐑)
+1734061206	Makyen	𝐂[\W_]*+𝐚[\W_]*+𝐫[\W_]*+𝐞(?#𝐂𝐚𝐫𝐞)
+1734061213	Makyen	𝐇[\W_]*+𝐞[\W_]*+𝐥[\W_]*+𝐩[\W_]*+𝐥[\W_]*+𝐢[\W_]*+𝐧[\W_]*+𝐞(?#𝐇𝐞𝐥𝐩𝐥𝐢𝐧𝐞)
+1734061221	Makyen	𝐍[\W_]*+𝐮[\W_]*+𝐦[\W_]*+𝐛[\W_]*+𝐞[\W_]*+𝐫(?#𝐍𝐮𝐦𝐛𝐞𝐫)
+1734069604	CPlus	nasiya\.digiwebi
+1734070662	Cow	celexity\.com
+1734072784	VLAZ	francevisaagent\.co\.uk
+1734072874	VLAZ	weoneaviation\.in
+1734074058	Cow	meds4go\.com
+1734074642	Cow	celebratethenewibis\.com
+1734074663	Cow	yournflstreams\.com
+1734074677	Cow	kebunjp\.com
+1734078224	cocomac	swremovals\.com\.au
+1734079823	Cow	flushfactorplus-us\.netlify\.app
+1734083158	Cow	binhminhrental\.vn
+1734086137	Cow	casefox\.com
+1734086148	Cow	finxl\.in
+1734087861	Cow	11xplay-id\.in
+1734088748	Cow	refpa7921972\.top
+1734088942	Cow	magentowebdev\.com
+1734090119	Jeff Schaller	bluemountainloans\.com
+1734090157	Cow	blue[\W_]*+mountain[\W_]*+loans(?!\.com(?<=bluemountainloans\.com))
+1734091747	Cow	thewesternapparel\.com
+1734092370	Cow	nlcblottoresult\.com
+1734092392	Cow	fluxusteamexecutor\.com
+1734098421	Cow	minhduckg0520
+1734098458	Cow	infinitube\.com
+1734098795	Cow	dunzo[\W_]*+app
+1734103838	Fastnlight	theorganicsstores\.com
+1734107387	Jeff Schaller	hinno-dentallab\.com
+1734108452	Cow	answersvlt\.blogspot
+1734114122	cocomac	hd-flash-event-tv-24\.blogspot
+1734120178	Vickel	bookmyboat\.com
+1734126428	Vickel	sharearchiver\.com
+1734126859	cocomac	peruandesdiscovery\.com
+1734068040	CPlus	ixsight
+1734162489	VLAZ	erexcel\.netlify\.app
+1734162547	VLAZ	erexcel(?!\.netlify\.app)
+1734164598	Cow	letsconvert\.io
+1734166324	Cow	dubai[\W_]*+visiting[\W_]*+card[\W_]*+printing
+1734166934	Cow	sportzfytv\.cc
+1734171090	Cow	apkhihe\.com
+1734175948	Vickel	galaxy-tourism\.com
+1734188749	Cow	aweddingstory\.nz
+1734188848	Cow	bilmarlandscape\.com
+1734192468	Dragonrage	foundercodes\.com
+1734192823	Vickel	novamed-global\.com
+1734192962	Vickel	novamed[\W_]*+global(?!\.com(?<=novamed-global\.com))
+1734195336	Makyen	foundercode(?!\.com)s?
+1734195694	Dragonrage	wordfeudcheatpro\.com
+1734195833	Dragonrage	input2docs\.com
+1734203688	Vickel	(?-i:tZhFYcsidFasDXRb6)(?#forms.gle)
+1734211931	Vickel	(?-i:3D0oAND)(?#bit.ly)
+1734240872	Makyen	recoveryaccesscode11(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1734240880	Makyen	reclaimwizardrecovery(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1734240895	Makyen	reclaimwizard
+1734244042	Nisse Engström	energyintelligence\.in
+1734244668	Nisse Engström	darkstrum\.com
+1734255625	Cow	successprinciple2022\.blogspot
+1734256633	VLAZ	tarathangka\.com
+1734263313	Cow	how[\W_]*+(?:do[\W_]*+i|to|will[\W_]*+i|can[\W_]*+i)[\W_]*+(?:cancel|raise|complain|speak|refund|clear|get|stop|place|talk|file|reverse|deactivate|connect|change|ask|communicate|register|contact|recover|reach|really)[\W_]*+.{0,60}?(?:pay[\W_]*+tm|phone[\W_]*+(?:pe|pay)|kuku[\W_]*+fm|airlines?+|airways?+|meesho|zomato|hungama|ekart|swiggy|zepto|jio|jiofiber|robinhood|expedia|airtel|google[\W_]*+pay|gpay|flipkart|snapdeal|glowroad|blinkit|myntra|ixigo|dmart|f[\W_]*+secure|real[\W_]*+person[\W_]*+at)
+1734264051	Cow	soilworx\.ca
+1734264773	Cow	sos-click\.com
+1734264833	Cow	5starseoexpert\.com
+1734266039	Cow	evergreencontents\.com
+1734267978	Cow	signfix\.ng
+1734268342	Cow	fasildigital\.com
+1734269189	Cow	k8686\.com
+1734272833	Jeff Schaller	handicrafts-shop\.com
+1734280402	Vickel	unoonlinefree\.com
+1734286643	Cow	cekici\.com
+1734288885	Glorfindel	fastanswerfacts\.blogspot
+1734304523	Vickel	mgnregajobcardlist\.com
+1734304638	Vickel	mgnrega[\W_]*+job[\W_]*+card[\W_]*+list(?!\.com(?<=mgnregajobcardlist\.com))
+1734318060	Makyen	chatgpt[\W_]*+gratuit(?!\.org(?<=chatgptgratuit\.org))
+1734321927	Makyen	viralstyle\.com
+1734321935	Makyen	tayvoodoo
+1734327821	Jeff Schaller	arswoodenflooring\.in
+1734328282	Jeff Schaller	us-pura-vive-us\.com
+1734328313	Jeff Schaller	pctroubleshooting\.ro
+1734328330	Jeff Schaller	bookmarkfame\.com
+1734328349	Jeff Schaller	bookmarkextent\.com
+1734328367	Jeff Schaller	bookmarkerz\.com
+1734328384	Jeff Schaller	bookmarkedblog\.com
+1734328403	Jeff Schaller	bookmarkeasier\.com
+1734329124	Jeff Schaller	dougsbugz\.com
+1734329515	Makyen	dougs[\W_]*+bugz(?!\.com(?<=dougsbugz\.com))
+1734329549	Makyen	myvi\.in
+1734329582	Makyen	christmas[\W_]*+sale[\W_]*+special[\W_]*+offers[\W_]*+in[\W_]*+california[\W_]*+puravive[\W_]*+weight[\W_]*+loss[\W_]*+deals[\W_]*+2024
+1734329996	Cow	LibonexBoostersGermany
+1734330014	Cow	libonextestosteronecapsules
+1734330036	Cow	DentaSmilePro
+1734338154	VLAZ	codleo\.com
+1734338200	VLAZ	openkyber\.com(?# hiring spam)
+1734338340	VLAZ	weekname\.in
+1734344840	Cow	magazinservis\.pp\.ua
+1734345186	Jeff Schaller	us-nicoyapuratea\.systeme\.io
+1734345209	Jeff Schaller	solarpanelinfo\.co\.za
+1734345984	VLAZ	themagistv\.com
+1734346531	VLAZ	nepalfilmproduction\.com
+1734346573	VLAZ	aswebinfo\.com
+1734346657	VLAZ	thenamingzone\.com
+1734351363	VLAZ	Nicoya[\W_]*+PuraTea
+1734351818	VLAZ	thanecourtmarriageconsultant\.com
+1734352194	Vickel	axcrack\.org
+1734355446	Cow	sync\.blue
+1734358078	Jeff Schaller	deltaskyhubz\.com
+1734359637	Jeff Schaller	lyrasalon\.in
+1734366282	Fastnlight	voltsbay\.com
+1734333324	Anerdw	plotbuygoa\.com
+1734331609	Anerdw	damangameregister\.org
+1734369613	Vickel	spikeproapk\.com
+1734370111	Fastnlight	Luigi[\W_]*+Mangione
+1734370775	Vickel	(?-i:okUrAfobtBStaZRr7)(?#forms.gle)
+1734374411	Fastnlight	nastyhookups\.com
+1734379994	Nisse Engström	hireonlineclasshelp\.com
+1734383321	Jeff Schaller	(?-i:hooman_devloper)(?#fiverr)
+1734388388	Vickel	Recoveryrescue67(?:@gmail\.com)?
+1734396763	Fastnlight	Dominique[\W_]*+Recovery[\W_]*+Team
+1734414082	Makyen	forumfunctionalhealth\.com
+1734414090	Makyen	forum[\W_]*+functional[\W_]*+health(?!\.com(?<=forumfunctionalhealth\.com))
+1734415633	Cow	cettechnology\.com
+1734416276	Cow	trypinealguardian\.systeme\.io
+1734418356	Jeff Schaller	cocukmasaloku\.com
+1734421418	VLAZ	calculator\.institute
+1734423692	VLAZ	skysolution\.com
+1734423827	VLAZ	astroera(?!\.in(?<=astroera\.in))
+1734425749	VLAZ	techmavesoftware\.com
+1734425760	VLAZ	kriteshenterprises\.co\.in
+1734426008	VLAZ	usasmmzillow
+1734427877	VLAZ	spacebar-clicker\.org
+1734431912	Jeff Schaller	astrologynews\.lunarastro\.com
+1734433711	Jeff Schaller	iaxservices\.ae
+1734436436	Cow	adglitz\.com
+1734437261	Jeff Schaller	saxenaservices\.com
+1734438338	Vickel	KDS[\W_]*+International
+1734438347	Jeff Schaller	ignouprojects\.in
+1734439605	Jeff Schaller	betingshop\.com
+1734439634	Jeff Schaller	vipvpn_sale2(?#t.me)
+1734441997	Vickel	drinkmiron\.net
+1734442016	Vickel	(?-i:MironCoinLLC)(?#t.me)
+1734451033	Nisse Engström	freelivesports360\.blogspot
+1734452101	VLAZ	(?-i:rCPJz)(?#shorturl.at)
+1734452332	Dragonrage	turbinesincorporated\.com
+1734452964	VLAZ	complete-money-347\.notion\.site
+1734454010	Anerdw	betsaga\.spacejoins\.net
+1734454614	General Grievance	moviesjuction\.xyz
+1734454743	Vickel	moviespyhd4\.com
+1734454850	Vickel	MovieSpyHD(?!\.com)
+1734454922	Dragonrage	shehashareef\.com
+1734468126	Fastnlight	forecastmigration\.com
+1734454760	Anerdw	(?-i:Fu2Bi)(?#shorturl.at)
+1734493962	Fastnlight	ULTIMATE[\W_]*+RECOVERY[\W_]*+FIRM
+1734496997	Anerdw	alnasasaqatar\.com
+1734500332	Spevacus	teraboxsmodapk\.com
+1734502034	Cow	manyolo\.co\.nz
+1734502128	Dragonrage	(?-i:BirthdayBNV)(?#bit.ly)
+1734502163	Cow	gluconol-de\.com
+1734502190	Cow	dodkart\.com
+1734502326	Cow	ketoflow\.com\.au
+1734502372	Dragonrage	asmatanha\.com
+1734502671	Dragonrage	cubecobra\.com
+1734502736	Dragonrage	manyolo\.com
+1734503244	Cow	digitalgraphiks\.ae
+1734505676	Dragonrage	oncomponents\.com
+1734507618	Dragonrage	matustikbuilders\.com
+1734507912	Dragonrage	happylocate\.com
+1734511048	VLAZ	vidyasagarpreschool\.edu\.in
+1734511126	VLAZ	vidyasagar[\W_]*+preschool(?!\.edu\.in(?<=vidyasagarpreschool\.edu\.in))
+1734511137	VLAZ	tnacanadaglobal\.com
+1734513948	Dragonrage	event\.vhunter\.vn
+1734517505	Dragonrage	searchenginestate\.com
+1734519588	Dragonrage	tamron\.in
+1734524460	Cow	onlineincomemethod508\.blogspot
+1734524494	Cow	emeraldjewelers\.com
+1734524774	Cow	haripriyan2003(?:@gmail\.com)?
+1734524836	Cow	skyraantrust\.org
+1734526968	Cow	countsword\.com
+1734528326	Jeff Schaller	(?-i:Mideo)
+1734528978	Jeff Schaller	vijaygoel\.net
+1734529274	Cow	videodownloads\.info
+1734533657	Dragonrage	docfield\.com
+1734535045	ipodtouch0218	erstudio\.com
+1734542079	Spevacus	wheretoaskthis\.blogspot
+1734543188	ipodtouch0218	policeclearances\.org
+1734544082	Jeff Schaller	erppeers\.com
+1734546354	Jeff Schaller	alshafaq\.us
+1734546625	Fastnlight	office[\W_]*+beacon
+1734548099	Cow	nennhasao\.com
+1734555590	Vickel	skyfareracademy\.com
+1734555689	Vickel	skyfarer[\W_]*+academy(?!\.com(?<=skyfareracademy\.com))
+1734563303	Vickel	skikoonews\.blogspot
+1734580112	Ryan M	iosgodsipa\.com
+1734583842	Spevacus	ko-loy-no-1\.com
+1734584115	Cow	giftcardcodeus\.com
+1734586502	Spevacus	sublimecodeintel\.com
+1734589254	Cow	bicads\.com
+1734597385	VLAZ	texastruck\.repair
+1734601400	Dragonrage	lbtravel\.co\.uk
+1734603040	Cow	shrimahalaxmiassociates\.com
+1734605654	Cow	rhillane\.com
+1734606504	Cow	bigbasket\.com
+1734606698	Dragonrage	flystar\.co\.in
+1734606862	Vickel	gluco-extend-reviews\.sites\.kaltura\.com
+1734607081	Dragonrage	olly\.social
+1734607533	Dragonrage	ultrezenzymes\.com
+1734607717	Dragonrage	buyclaritybloomcbdgummies\.blogspot
+1734608019	Dragonrage	powerlineindustries\.com
+1734608190	Dragonrage	growthorb
+1734608667	Vickel	Gluco[\W_]*+Extend(?:[\W_]*+reviews)?(?!\.sites\.kaltura\.com(?<=gluco-extend-reviews\.sites\.kaltura\.com))
+1734609118	Vickel	770283494553288704(?#tumblr.com)
+1734610438	Glorfindel	answerlabm\.blogspot
+1734612108	Vickel	prodiverwalt(?:@yahoo\.com)?
+1734612161	Cow	progeometrydashapk\.com
+1734618523	Anerdw	isproofing\.com
+1734619180	Dragonrage	golf\.com
+1734621316	Anerdw	tonthepsangchinh\.vn
+1734622348	Dragonrage	bsnwritingservices\.com
+1734620678	Anerdw	epemek\.net
+1734619959	ipodtouch0218	kineprohub\.com
+1734622834	Dragonrage	pluspointmart\.com
+1734624596	Vickel	96in\.com
+1734625579	Fastnlight	gearfixing\.com
+1734625684	Fastnlight	toree\.xyz
+1734625712	Fastnlight	nullsbrawl\.cloud
+1734626164	Fastnlight	cryptojobsearch\.com
+1734627163	Vickel	heritagearchitects\.in
+1734627599	Cow	heritage[\W_]*+architects?+(?!\.in(?<=heritagearchitects\.in))
+1734637368	Cow	natasatech\.wordpress\.com
+1734668662	Anerdw	wiseselections\.in
+1734668708	Anerdw	chamber-testing\.com
+1734668717	Anerdw	digitalputhra\.com
+1734668778	Anerdw	pursuitphysiotherapy\.ca
+1734673274	Cow	most[\W_]*+efficient[\W_]*+way[\W_]*+is[\W_]*+to[\W_]*+call[\W_]*+their
+1734673650	Cow	acevedoweddings\.com
+1734673885	Cow	cómo[\W_]*+puedo[\W_]*+comunicarme[\W_]*+realmente[\W_]*+con
+1734674011	Cow	cómo[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
+1734675221	Cow	arsalanmovers\.com
+1734676586	Cow	live[\W_]*+person[\W_]*+at
+1734678275	Cow	open[\W_]*+24[\W_]*+7[\W_]*+at
+1734678616	Cow	reddyannaboooks\.com
+1734678855	Cow	beautilook\.in
+1734679761	Cow	athen\.tech
+1734684282	VLAZ	fivestars\.agency
+1734686199	VLAZ	testers-hub\.com
+1734691711	Cow	ovaga\.com
+1734692080	Cow	ecogen\.co\.in
+1734692369	Cow	PASS4SUREXAMS
+1734692377	Jeff Schaller	rinnovaprorecensione\.it
+1734693758	VLAZ	techgear\.in\.net
+1734693789	Cow	damacverona\.com
+1734693922	Vickel	damac[\W_]*+verona(?!\.com(?<=damacverona\.com))
+1734695081	VLAZ	techhelper\.in
+1734695206	Cow	SSDesignStudio
+1734695314	VLAZ	regal[\W_]*+interiors
+1734695799	Cow	theedgesingapore\.com
+1734696036	Cow	hysses[\W_]*+wellness
+1734696171	Cow	topfood\.club
+1734697265	Cow	westlinkconstructioncleaning\.com\.au
+1734699423	Vickel	attestationmea\.com
+1734699779	VLAZ	attestation[\W_]*+mea(?!\.com(?<=attestationmea\.com))
+1734700799	VLAZ	spotimod\.com
+1734702622	VLAZ	santamev\.xyz
+1734707747	Cow	consumer[\W_]*+law[\W_]*+firm[\W_]*+center(?!\.com(?<=consumerlawfirmcenter\.com))
+1734712047	Fastnlight	24by7digitizing\.com
+1734716833	Vickel	giftsofloveforlover\.com
+1734719036	Spevacus	lancedigital\.in
+1734720375	Vickel	cpaphil\.com
+1734722022	Vickel	Choose[\W_]*+Kinsta[\W_]*+Hosting
+1734723287	Vickel	(?-i:Alphaspynest)(?#t.me)
+1734738945	Vickel	primestreams\.pro
+1734744931	Jeff Schaller	l1khonsh3ikh
+1734763630	Nisse Engström	norskukekalender\.com
+1734768397	Cow	techandkit\.blogspot
+1734768546	Cow	vantechnologies\.com
+1734768584	Cow	van[\W_]*+technologies(?!\.com(?<=vantechnologies\.com))
+1734768973	Cow	lescobil\.pk
+1734772223	double-beep	inoventive\.com
+1734776330	Cody Gray	suigasebills\.pk
+1734780496	Vickel	garagedoorsfixsydney\.com\.au
+1734780636	Vickel	garage[\W_]*+doors[\W_]*+fix[\W_]*+sydney(?!\.com\.au(?<=garagedoorsfixsydney\.com\.au))
+1734783281	Jeff Schaller	saundershoa\.com
+1734784975	Jeff Schaller	xylemlearning\.com
+1734791732	Cody Gray	onlineearningblo88\.blogspot
+1734804900	Vickel	blacklabelbilliards\.com
+1734806687	Cow	yallashooot\.io
+1734819137	Vickel	(?-i:orangespritess)(?#t.me)
+1734853259	Nisse Engström	envobyte\.com
+1734855756	Nisse Engström	parniannoclinic\.com
+1734866445	Cow	tentary\.com
+1734866675	Cow	searchhub\.rf\.gd
+1734866845	Cow	(?-i:AndymartinsP)(?# t.me)
+1734870589	Vickel	ilaw\.ae
+1734874020	VLAZ	electricbikez\.com
+1734883143	Nisse Engström	ladyboydatingsites\.com
+1734883690	Nisse Engström	dralicetinkaya\.com
+1734885370	Cow	ghettoff\.com
+1734885908	Dragonrage	robynskincare\.com
+1734887212	Dragonrage	djsidaymusic\.com
+1734893793	Cow	streamzipper\.com
+1734895811	Vickel	fixanyphoto\.com
+1734897514	Cow	61571177122715(?# facebook id)
+1734898923	Vickel	boostkungen\.se
+1734903753	VLAZ	selfserver\.online
+1734932138	Cow	webfikir\.com
+1734933678	Cow	tileempirenashville\.com
+1734933832	Cow	cómo[\W_]*+hablo[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+real[\W_]*+en
+1734934597	Cow	cómo[\W_]*+puedo[\W_]*+conectarme[\W_]*+con[\W_]*+alguien[\W_]*+en
+1734935924	Cow	instadispatch\.com
+1734936375	Cow	examshome
+1734936823	Cow	alightmotionfx\.com
+1734937090	Cow	kinemasterapp\.xyz
+1734937157	Cow	como[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+agente[\W_]*+de
+1734938644	Cow	microsatacables\.com
+1734944882	Cow	purvaaerocity0\.wordpress\.com
+1734945136	Cow	tirangaappgame\.com
+1734945658	Cow	marketing\.kmnn
+1734946756	double-beep	f88maxxx\.net
+1734949821	double-beep	catchycourt\.com
+1734953728	Cow	planetx\.pk
+1734954573	Cow	mukulagrawal\.com
+1734954863	Cow	medicalreviews\.com
+1734957572	Cow	brainstorminfotech\.co\.in
+1734957864	Cow	pass4future
+1734965648	ipodtouch0218	essentialshoodieco\.us
+1734967774	ipodtouch0218	dnatestamerica\.com
+1734967548	ipodtouch0218	lapruebadeadn\.com
+1734966866	ipodtouch0218	sajoki\.de
+1734976912	Vickel	hidkonem\.com\.ua
+1734980804	Vickel	(?-i:yhnvekfy)(?#tinyurl.com)
+1734988297	VLAZ	shiaonlinequranclass\.com
+1735003071	Jeff Schaller	southpole5eyeshackingandrecoveringcompany
+1735004129	Fastnlight	techspymax
+1735020096	Nisse Engström	khulani\.co\.za
+1735020196	Nisse Engström	tasbihdigital\.net
+1735020877	Nisse Engström	8171bispinfo\.com
+1735024617	double-beep	onepagebusinessplan\.co
+1735024676	double-beep	mitgroup\.vn
+1735024918	double-beep	infinigent\.com
+1735027359	Nisse Engström	genericusa\.com
+1735027917	Nisse Engström	abapgeeks\.com
+1735032071	Cow	lumberlookup\.com
+1735035345	Cow	ibrinfotech\.com
+1735035621	Cow	cricketid247\.com
+1735038416	Jeff Schaller	ghlindia\.com
+1735038513	Jeff Schaller	uptrendhome\.com
+1735038546	Jeff Schaller	narsipur\.in
+1735038805	Jeff Schaller	onlinequranacademy\.uk
+1735038840	Jeff Schaller	brucestreetanimalhospital\.ca
+1735039724	Vickel	rajeriya\.com
+1735039790	Vickel	rajeriya(?!\.com)
+1735044462	Jeff Schaller	argentineasado\.com
+1735056023	Jeff Schaller	countryhome\.ae
+1735067749	Vickel	hianime\.org\.lv
+1735072719	VLAZ	Brian\.mcbride1983@icloud\.com
+1735073641	Cow	worldwide[\W_]*+customer[\W_]*+support
+1735073776	Cow	direct(?<=\[direct)[\W_]*+talk(?=\])
+1735102700	Jeff Schaller	pobal\.org
+1735104269	Dragonrage	myinstafollow\.com
+1735104324	Dragonrage	parvatipackers\.com
+1735104332	Dragonrage	luckycarepackers\.com
+1735105940	Dragonrage	emaarurbanascentgurgaon\.com
+1735107646	Dragonrage	jewelhaque\.com
+1735108387	Dragonrage	sanddancetyre\.com
+1735117699	Cow	clansnames\.co\.za
+1735118577	Cow	yuvtrainings\.com
+1735118625	Cow	autocar\.co\.uk
+1735120224	Cow	ab33my6\.com
+1735120262	Cow	starbase-10\.de
+1735123426	Cow	teslapiphone\.org
+1735126528	Cow	scd-company\.com
+1735126541	Cow	math-editor\.com
+1735126724	Cow	scd[\W_]*+company(?!\.com(?<=scd-company\.com))
+1735142017	Fastnlight	(?-i:pYXMZa5nzHTPJDcW7)(?#forms.gle)
+1735143228	Jeff Schaller	jalebino\.com
+1735144439	Makyen	johnericks1183@icloud\.com
+1735144532	Makyen	sandd?ancetyre(?!\.com)s?
+1735144846	Makyen	tesla[\W_]*+pi[\W_]*+phone(?!\.org(?<=teslapiphone\.org))
+1735145812	Makyen	capcutfx\.xyz
+1735167419	Vickel	getcoins\.com\.au
+1735172199	Fastnlight	generalwebfixes\.web\.app
+1735191991	Dragonrage	rentcast\.io
+1735191999	Dragonrage	findvest\.io
+1735192055	Dragonrage	umegahomerepairs\.co\.uk
+1735192526	Dragonrage	zairalatha\.com
+1735193211	Dragonrage	touchwoodtechnologies\.com
+1735195076	Dragonrage	tinyzoned\.com
+1735195854	Dragonrage	deezerzone\.com
+1735196095	Dragonrage	carparkzone\.co\.za
+1735196109	Dragonrage	aadhaarcardseeding\.com
+1735197204	Anerdw	photoshopmockups\.wordpress\.com
+1735198047	Anerdw	maltabulletin\.mt
+1735200894	Anerdw	gogetatrip\.com
+1735201766	Anerdw	onlinequranacademy\.us
+1735201935	Anerdw	SR[\W_]*+University
+1735208358	double-beep	neukgratis\.be
+1735210688	VLAZ	universalasylum\.com\.au
+1735210743	VLAZ	hubsofairports\.com
+1735210865	VLAZ	aiolith\.com
+1735210877	VLAZ	mangidik\.com
+1735211270	VLAZ	shilohholidays\.com
+1735211290	VLAZ	sheayurveda\.com
+1735211313	VLAZ	dentalhospitalnearme\.in
+1735211325	VLAZ	smiledentalandimplantcentre\.com
+1735215035	Vickel	malmarzouqilaw\.com
+1735216492	Nisse Engström	americangarden\.us
+1735217642	Cow	copon5sm\.com
+1735218193	Jeff Schaller	emaarurbanascent\.co
+1735218314	Cow	(?-i:6eMTLFfQ)(?# cutt.ly)
+1735221482	Dragonrage	onlinestreamtv\.com
+1735227010	Vickel	mahasahmed23(?:@gmail\.com)?
+1735227312	Vickel	santexgroup\.com
+1735229714	Jeff Schaller	offer\.tq24k\.com
+1735232835	Fastnlight	Gwilliamsny11(?:@aol\.com)?
+1735232866	Fastnlight	peterjohnclarkwizard(?:@gmail\.com)?
+1735232914	Fastnlight	TEMU[\W_]*+Affiliate(?:[\W_]*+program)?
+1735232940	Fastnlight	Illumina[\W_]*+Network(?:[\W_]*+Recovery[\W_]*+Services)?
+1735236268	Vickel	suicideboysshop\.us
+1735244238	Fastnlight	namesgenerator\.site
+1735254538	Makyen	lilit[\W_]*+cafe(?!\.com(?<=lilitcafe\.com))
+1735276714	Cow	banana-anma\.com
+1735281433	Cow	abohassan\.vercel\.app
+1735284144	Cow	lhw95hak
+1735285811	Cow	macawtravels\.com
+1735289605	VLAZ	roserypoetry\.com
+1735290475	Cow	curveddrywalls\.com
+1735293406	double-beep	wordcraft\.ae
+1735293830	double-beep	neptastic\.in
+1735295366	Jeff Schaller	learnaiforproft\.com
+1735295782	Jeff Schaller	curvedrywals\.com
+1735297529	Cow	goodlicks\.in
+1735298359	Cow	adinfra\.co\.in
+1735300017	Cow	aimluniverse\.in
+1735300638	Cow	hashzebra\.io
+1735300733	Vickel	hash[\W_]*+zebra(?!\.io(?<=hashzebra\.io))
+1735306119	Vickel	jobbers\.io
+1735309016	Jeff Schaller	sarallegalsolutions\.com
+1735309047	Jeff Schaller	starbuckmenu\.uk
+1735311049	Cow	defendca\.com
+1735311078	Cow	OpenTune
+1735313064	Fastnlight	mycastleapk\.com
+1735317059	Cow	approxikon\.de
+1735319674	Vickel	cryptorecovsolution\.com
+1735320106	Dragonrage	cscannerapk\.com
+1735324064	Vickel	circketleagueapk\.com
+1735333413	ipodtouch0218	xiaospy1
+1735335012	ipodtouch0218	freebiesmockup\.com
+1735350464	Jeff Schaller	bastcar\.com
+1735374572	Nisse Engström	foottrooper-mx\.com
+1735376337	Cow	deewaniyat\.net
+1735377124	Cow	animotionsstudio\.com
+1735390474	Vickel	duplextech\.com
+1735406543	Cow	pravosleva\.pro
+1735410101	Vickel	easymeaning\.com
+1735412272	Vickel	foodfusionfrenzy\.com
+1735413321	Fastnlight	weunited\.us
+1735413330	Fastnlight	badcatsweekly\.com
+1735413337	Fastnlight	cachsongkhoe\.com
+1735413345	Fastnlight	fujibishi\.com
+1735413354	Fastnlight	depo25bonus25\.com\.co
+1735413363	Fastnlight	pvicard\.com
+1735413370	Fastnlight	tiengruoitv\.net
+1735413378	Fastnlight	ketridat\.com
+1735416015	Vickel	licenseplatelookup\.org
+1735416099	Vickel	(?-i:reMOCOM6)(?#cutt.ly)
+1735416129	Vickel	(?-i:new\-vidos)(?#tinyurl.com)
+1735419300	Fastnlight	(?-i:kirillfokus)(?#t.me)
+1735428686	Fastnlight	gamer-choice\.com
+1735458975	Nisse Engström	kemotech\.co\.uk
+1735459459	Nisse Engström	timebharat\.com
+1735463834	Nisse Engström	aroundbits\.com
+1735472258	Nisse Engström	itinvestrange\.com
+1735480917	Jeff Schaller	germedusa\.com
+1735480961	Jeff Schaller	talkingbees\.com
+1735481039	Makyen	talkingbees(?!\.com)
+1735481960	Anerdw	topserviceus\.com
+1735486390	Makyen	rankninja
+1735489002	Dragonrage	westwayride\.com
+1735489010	Dragonrage	minicabride\.com
+1735489018	Dragonrage	flyoncars\.co\.uk
+1735489027	Dragonrage	myairportstransfers\.com
+1735489092	Dragonrage	(?-i:linkbagan4d)(?#heylink.me)
+1735490925	Nisse Engström	cenraps\.org
+1735491132	Dragonrage	bloxecutor\.com
+1735491631	Dragonrage	bitslifeapk\.com
+1735494548	Jeff Schaller	essentialshoods\.ca
+1735494965	Jeff Schaller	yssofindia\.org
+1735504329	Nisse Engström	digitalwebavenue\.com
+1735505524	Jeff Schaller	kharidvpn\.shop
+1735528734	Jeff Schaller	xediaphuong\.com
+1735535533	Cow	thefinnav\.com
+1735535753	Cow	ilovepdf3\.com
+1735538247	Cow	iloveinstadownloader\.com
+1735538858	Cow	gardenmontessorischools\.com
+1735540214	Cow	katta\.co
+1735541610	Cow	strabo\.partners
+1735543319	Cow	fleetbarn\.com
+1735543372	Cow	applebeessmenu\.us
+1735543677	Cow	kennyhillsbakers\.com
+1735543765	Cow	(?-i:sh47supp)(?# tinyurl.com)
+1735544067	Cow	(?-i:^Danger Problem$)
+1735545962	Cow	flavourandspice\.com\.au
+1735548121	Cow	softkhabar\.com
+1735549656	Anerdw	darshanmedicare\.in
+1735549659	Anerdw	darshanelderscare\.com
+1735549928	Anerdw	sportsdunia\.com
+1735552331	Cow	mitoleyn\.com
+1735554635	Cow	colleges18\.com
+1735555308	Robert Longson	myperfectwords\.com
+1735555338	Robert Longson	propertyok\.com
+1735555744	Cow	lp\.s9\.game
+1735555860	Cow	s9game\.gold
+1735557815	Cow	(?-i:Mathur128)(?# x.com)
+1735558175	Cow	surveyjs\.io
+1735558294	Cow	venuelook\.com
+1735561402	Glorfindel	telelinkshub\.com
+1735565088	Cow	sketch-tech\.com
+1735569487	Jeff Schaller	tempmail100\.com
+1735576912	General Grievance	pcdeveloper\.net
+1735580204	Jeff Schaller	notworkingsolve\.com
+1735580242	Jeff Schaller	aiafta\.blogspot
+1735582948	Cow	letsattract\.com
+1735586237	Cow	khanubais\.blogspot
+1735603128	Fastnlight	Peru[\W_]*+Andes[\W_]*+Discovery
+1735610601	Jeff Schaller	elitetrader\.com
+1735613164	Fastnlight	baobinhdinh\.vn
+1735613172	Fastnlight	sentoy\.vn
+1735613180	Fastnlight	flipboard\.com
+1735620800	Spevacus	getaustraliandriverslicense\.com
+1735620808	Spevacus	magyarjogositvany\.com
+1735620817	Spevacus	permisdeconduceremoldovenesc\.com
+1735620825	Spevacus	inmatricularepermisdeconducereromaneasca\.com
+1735628644	Cow	brainiuminfotech\.co
+1735630166	Nisse Engström	besttodaynews\.com
+1735630279	Nisse Engström	mintcopy\.com
+1735632054	Nisse Engström	g2stechnology\.com
+1735632908	Nisse Engström	theyesnobutton\.com
+1735634017	Nisse Engström	recipetineats\.com
+1735634197	Cow	muthirai\.com
+1735634549	Cow	yoursoftwarekey\.com
+1735634619	Cow	simplewpevents\.com
+1735639186	double-beep	rfxleather\.com
+1735639612	Cow	shixxnote\.com
+1735641101	Cow	seriestreaming\.pw
+1735641200	Cow	sprunkiphasez\.com
+1735648328	Cow	undertheweatherpet\.com
+1735650757	Cow	alltechlabs\.blogspot
+1735652749	Cow	neonandlights\.com
+1735655106	Jeff Schaller	labbaikhajjumrah\.co\.uk
+1735655895	Cow	gurbuziskele\.com\.tr
+1735656181	Jeff Schaller	ps\.anglerfox\.com
+1735656449	Nisse Engström	lamaisondenathalie\.org
+1735656833	Cow	kanzolquran\.org
+1735659249	Jeff Schaller	jaspira\.in
+1735659280	Jeff Schaller	Moonboy459(?#t.me)
+1735667938	Spevacus	jamescargo\.com
+1735721932	Nisse Engström	cavamenudallas\.com
+1735722004	Nisse Engström	1OnlineMovies\.in
+1735722133	Nisse Engström	suprememobiles\.in
+1735730939	Cow	solar4all\.in
+1735730965	Cow	bpointer\.com
+1735731733	Cow	jaredscottspeaks\.com
+1735734801	Cow	sacredsoulinsight\.com
+1735734822	Cow	sacredsoulinsight(?!\.com(?<=sacredsoulinsight\.com))
+1735735213	Nisse Engström	evocode\.in
+1735738339	Nisse Engström	topbetlines\.com
+1735738559	Cow	(?-i:6dBbwDDA9pnprXbLA)(?# forms.gle)
+1735744274	Cow	mahaall\.com
+1735748107	Nisse Engström	britannica\.com
+1735750133	Nisse Engström	monthname\.in
+1735750243	Nisse Engström	fastrack\.in
+1735757766	Cow	naksaktraders\.blogspot
+1735763426	Fastnlight	lostlifeapk\.me
+1735767364	Nisse Engström	pakistanpostalcode\.org
+1735767524	Nisse Engström	downpint\.com
+1735767631	Nisse Engström	waspicompensationcalculator\.co\.uk
+1735767818	Vickel	Pamela[\W_]*+Experts
+1735786794	Jeff Schaller	ideasteamnames\.com
+1735790191	Jeff Schaller	dielederjacken\.de
+1735792669	Spevacus	robiulpro\.com
+1735793234	Cow	lexbax\.com
+1735793257	Cow	blog\.pavago\.co
+1735794378	Cow	36crypto\.com
+1735796459	Cow	objectways\.com
+1735796574	Cow	genki[\W_]*+technique
+1735796895	Cow	(?-i:1uHIdYoAds)(?# surl.id)
+1735796924	Cow	(?-i:ss8NXrKx)(?# discord invite link)
+1735796990	Cow	acedata\.cloud
+1735799424	Dragonrage	alloycarbonsteel\.com
+1735800502	Dragonrage	kanhasoft\.com
+1735802380	Dragonrage	icon[\W_]*+medical[\W_]*+coding[\W_]*+institute
+1735805635	Dragonrage	woodleindia\.com
+1735805657	Dragonrage	prodigystudycentre\.com
+1735806296	Dragonrage	digittrix\.com
+1735807776	Dragonrage	invoicedoor\.com
+1735809060	double-beep	theflowerroom\.com\.au
+1735809293	Dragonrage	urogun-official\.com
+1735809304	Dragonrage	jadaratechnology\.in
+1735809752	Dragonrage	destinyhrgroup\.com
+1735809841	Dragonrage	judi-bolaa\.netlify\.app
+1735810858	Dragonrage	farahatco\.net
+1735816749	Cow	proteq\.co\.in
+1735817218	Cow	healthblog\.co
+1735818980	double-beep	unmat-ched\.com
+1735819337	double-beep	culversmenu\.us
+1735821247	double-beep	cyberpanel\.net
+1735822116	Jeff Schaller	etechbuy\.com
+1735827596	Makyen	scottleon712(?:@gmail\.com)?
+1735827657	Makyen	tutorlix\.com
+1735830897	Nisse Engström	restassuredh\.com
+1735831659	Dan Getz	(?-i:^Dilip Kumar$)
+1735834083	Jeff Schaller	chipotlemenu\.site
+1735834184	Dan Getz	(?-i:^Abdur Rahman$)
+1735834876	Jeff Schaller	spukpill\.com
+1735836736	Cow	medex\.com\.bd
+1735842621	Fastnlight	homeimprovmentideas\.uk
+1735842751	Cow	nettechinfosys\.com
+1735879509	Cow	theworldle\.com
+1735880803	Cow	glovermethod\.com
+1735885104	Cow	factpulse\.in
+1735887081	Cow	deccanodyssey\.co\.uk
+1735887104	Cow	mithilaprop\.com
+1735888203	Cow	gamemodfree\.com
+1735888323	Cow	oraclecardsreader\.com
+1735891223	Dragonrage	daffodilsw\.com
+1735891253	Dragonrage	blog\.focusu\.com
+1735891307	Dragonrage	solitaryknight\.apk\.com
+1735891314	Dragonrage	crazydagger\.apk\.com
+1735892356	Dragonrage	dtfprintingservice\.ae
+1735895354	Dragonrage	terminal-guides\.com
+1735895412	Dragonrage	fadehaircutstyle\.com
+1735895673	Dragonrage	hillwaytravels\.com
+1735898777	Dragonrage	allsupplement\.org
+1735899612	Dragonrage	airportsterminalhub\.com
+1735899814	Cow	admirable-smakager-729141\.netlify\.app
+1735900037	Dragonrage	getpuravives\.com
+1735902896	Dragonrage	errormasters\.com
+1735903833	Cow	insulationmat\.in
+1735903877	Cow	keywordsfromurls\.com
+1735904136	Jeff Schaller	mc-powersports\.com
+1735904285	Vickel	aakruthiplasticsurgery\.com
+1735906004	Jeff Schaller	home-fashion\.in
+1735909064	Jeff Schaller	est-btp\.com
+1735909110	Jeff Schaller	travelinyourownway\.com
+1735909457	Jeff Schaller	yudiz\.com
+1735910902	Jeff Schaller	angelinafreeman
+1735911893	Cow	michigancustomsigns\.com
+1735921849	Cow	swift[\W_]*+dream
+1735922274	Spevacus	packersandmoversinudaipur\.in
+1735927146	Cow	jobarz\.com
+1735928438	Fastnlight	ls-autoparts\.com
+1735929312	ipodtouch0218	labs\.itassist\.com
+1735930969	Cow	reservasdevuelosdeaerolineas\.com
+1735933990	Nisse Engström	laetusinpraesens\.org
+1735972320	Spevacus	uae\.creativefloristdxb\.com
+1735978818	Cow	(?-i:yabujinyfhfh)(?# t.me)
+1735978913	Cow	maharajaexpress\.co\.uk
+1735979277	Cow	(?-i:nemanexopinie)(?# facebook.com)
+1735979336	Cow	cinemahd\.vip
+1735979475	Cow	airwaysofficeshubs\.com
+1735986941	Nisse Engström	hpserviceinchennai\.in
+1735987501	Nisse Engström	irctc\.co\.in
+1735989771	Jeff Schaller	rbdmachine\.com
+1735992721	Nisse Engström	semakanstr\.my
+1735993115	Cow	(?-i:1PLkvC8UBm3TOpYpBBQ-3N3aDPF2c8_nP_q1n8QHzvVE)(?# Google docs spam)
+1735993198	Cow	rrrogal\.com
+1735995185	Jeff Schaller	Coursesteach(?<=medium\.com/@Coursesteach)
+1735997542	Cow	7281289549698256897(?# linkedin feed ID)
+1736008445	Nisse Engström	medicossonline\.com
+1736009181	Makyen	abl\.atlas\.pk
+1736009189	Makyen	atlas[\W_]*+battery
+1736012975	Cow	digitalvansh\.in
+1736013200	Cow	expresshacker99
+1736015916	Fastnlight	dynamonsworldapkpro\.com
+1736016984	Cow	techzonetricks\.xyz
+1736020812	Cow	pawangslot\.monster
+1736027350	Vickel	next\.privat24\.ua
+1736028338	Makyen	availabler(?!\.com)
+1736041184	Jeff Schaller	bobateabubble\.com
+1736061601	Jeff Schaller	trushitkasodiya\.medium\.com
+1736057406	CPlus	fecoebil\.pk
+1736065096	Cow	internationalwriters\.us
+1736065265	Cow	centrallawagency\.com
+1736065279	Cow	dhofarislamic\.com
+1736066000	Cow	123totalwebsolutions\.com
+1736080157	Cow	smartphones\.london
+1736080188	Cow	bottleneckcalculatr\.com
+1736081995	Cow	codingcanvas\.io
+1736085046	Cow	codingjigs\.com
+1736091325	Cow	netflytv\.com
+1736093713	Nisse Engström	robottelepites\.hu
+1736097760	Cow	gold[\W_]*+silver[\W_]*+live[\W_]*+price[\W_]*+india
+1736098372	Cow	dawoodfalkshere(?:@gmail\.com)?
+1736100647	Vickel	datascientistsdiary\.com
+1736107569	Makyen	^russia[\W_]*+bottom$
+1736109005	Vickel	peggyjackson236(?:@gmail\.com)?
+1736112126	Jeff Schaller	209\.97\.164\.98
+1736118023	Vickel	couinbseetfrqg\.top
+1736122636	Jeff Schaller	ondappfixportal\.web\.app
+1736144784	Cow	(?-i:rebecalopez4908)(?# instagram profile)
+1736150241	Nisse Engström	reelsdownloader\.online
+1736150388	Nisse Engström	teksacademy\.com
+1736161930	Jeff Schaller	khadamatweb\.com
+1736163209	Jeff Schaller	wingsmenu\.co\.uk
+1736163548	Cow	backb\.ca
+1736169273	Jeff Schaller	kalkikrivadna\.com
+1736169812	Cow	socialtechguru\.com
+1736170279	Cow	click[\W_]*+on[\W_]*+the[\W_]*+live[\W_]*+chat[\W_]*+icon
+1736172514	Cow	(?-i:1jihBwYcHiRtDgTDQwiv2Zowe8cASRmq1WZSicmvzgZs)(?# Google docs voucher spam)
+1736176549	Nisse Engström	persiancybernett\.wordpress\.com
+1736180022	Anerdw	ftrecoveryy(?:@gmail\.com)?
+1736184571	Cow	letsfigerout\.online
+1736184627	Cow	realestatetalk\.online
+1736184812	Cow	buybharatbazar\.in
+1736188410	ipodtouch0218	hanumangi\.com
+1736189210	Jeff Schaller	pixelabapks\.com
+1736190539	Jeff Schaller	G1RrjInmt2ZmYzlk(?#t.me)
+1736228098	Cow	klarityeyecare\.com
+1736228245	Cow	wavex\.co\.in
+1736228294	Cow	procutlaser\.au
+1736228557	Cow	bestiptv\.solutions
+1736235783	Cow	jcpcarparts\.co\.nz
+1736240238	Cow	todaylink\.site
+1736241676	Cow	aussizultimatecardetailing\.com
+1736241782	Cow	mydentalcentre\.in
+1736243279	Cow	spicyshot\.net
+1736244766	Cow	lelobaba\.in
+1736246551	Cow	senseacademy\.co
+1736247713	Cow	conlonmotorsportsstalbert\.ca
+1736248386	Cow	nxgelectrical\.co\.nz
+1736248685	Cow	img4you\.com
+1736248955	Cow	zonemodapk\.com
+1736250260	Jeff Schaller	chardhamtour\.in
+1736251092	Cow	msgconverter\.com
+1736253661	Cow	share[\W_]*+amazon[\W_]*+cart[\W_]*+more
+1736261026	Fastnlight	investguide\.fr
+1736261444	Fastnlight	iszbela-taskcontrol\.blogspot
+1736264990	Cow	com[\W_]*+grafto[\W_]*+artworkgrafix[\W_]*+festivalposter
+1736266355	Jeff Schaller	techeez\.com
+1736266962	ipodtouch0218	bestpriceiptv\.com
+1736269887	Fastnlight	gabusinessandlifestyle\.com
+1736277334	ipodtouch0218	rsgisclub\.com
+1736283382	double-beep	passage-through-deserts\.com
+1736283391	double-beep	preesiader\.com
+1736283399	double-beep	aristocratic-hall\.com
+1736283407	double-beep	spangle-flight\.com
+1736283416	double-beep	synthed-neonway\.com
+1736285011	Fastnlight	ytcroxyproxy\.com
+1736285546	Fastnlight	gourangapaul_sons(?:@yahoo\.in)?
+1736298602	Fastnlight	hirewikipediawriters\.com
+1736297316	Dan Getz	mktsoftware\.net
+1736303041	Fastnlight	servergigabit\.com
+1736305212	Jeff Schaller	flashlightgo\.com
+1736319180	Dragonrage	docslyte\.com
+1736319207	Dragonrage	eoantechnologies\.com
+1736319768	Dragonrage	qrstaff\.in
+1736319997	Dragonrage	chipotlmenu\.com
+1736320125	Cow	balitouristic\.com
+1736321056	Dragonrage	holoware\.co
+1736323032	Dragonrage	knickglobal\.com
+1736326625	Dragonrage	civicplazadental\.com\.au
+1736327765	Dragonrage	kumplo\.com
+1736327994	Dragonrage	rankonix\.com
+1736328015	Dragonrage	yaleinfotech\.com
+1736328928	Dragonrage	web3newswire\.com
+1736330466	Dragonrage	occultscience\.in
+1736332196	Nisse Engström	whoopmobile\.com
+1736332932	Dragonrage	simranitservices\.com
+1736333818	Dragonrage	airlinetelefono\.com
+1736335375	Dragonrage	onlineclasshelp\.us\.com
+1736336979	Jeff Schaller	dhwaniastro\.com
+1736338455	Jeff Schaller	mujammel\.kesug\.com
+1736338864	Jeff Schaller	aolej\.com
+1736340578	Nisse Engström	locker20\.com
+1736340896	Jeff Schaller	adamohotels\.com
+1736341882	Jeff Schaller	glitzica\.com
+1736343851	Fastnlight	bestmicrojob\.com
+1736346282	General Grievance	techgrabber\.in
+1736348968	Jeff Schaller	nomorecaptchas\.com
+1736348983	Jeff Schaller	oxford-biochron\.com
+1736349046	Jeff Schaller	madrasbook\.com
+1736350704	Vickel	ClockHardware\.com
+1736353540	Nisse Engström	vibox\.co\.uk
+1736358530	Cow	articlegiants\.com
+1736361225	Nisse Engström	allsports52\.xyz
+1736361646	Dragonrage	cecanalytics\.com
+1736365134	Nisse Engström	pinoyflixsu\.com
+1736365158	Nisse Engström	pinoytambayanstv\.com
+1736368791	General Grievance	instantpotrecipe\.com
+1736369192	ipodtouch0218	loeh\.org
+1736373495	Jeff Schaller	tutun-galeata-punga\.ro
+1736373913	Nisse Engström	secureimagechain\.com
+1736377384	Vickel	take\.supersurvey\.com
+1736392987	Fastnlight	adhmt\.com
+1736398449	Cow	starsign6\.wordpress\.com
+1736403061	Cow	vinsport\.xyz
+1736403440	Cow	iimtindia\.net
+1736404427	Cow	fundraisingscript\.com
+1736404482	Cow	ebaytelemart\.pk
+1736405517	Cow	codeai\.net\.in
+1736405545	Cow	jappahomes\.com
+1736406699	Cow	bhutaninbound\.com
+1736407579	Cow	annotationbox\.com
+1736408288	Cow	saifs\.ai
+1736409275	Cow	alfarahrestaurant\.com
+1736409872	Dragonrage	dutchbrosemenu\.com
+1736412930	Dragonrage	savingsays\.de
+1736412960	Dragonrage	taskmenow\.com
+1736416352	Cow	electrospheree\.com
+1736417523	Cow	wegooo\.us
+1736421584	Vickel	indiatodaytimes\.com
+1736427944	Jeff Schaller	studiosamadhan\.com
+1736429402	Jeff Schaller	cloud-accounting\.io
+1736430397	Jeff Schaller	techsolvent\.in
+1736433142	ipodtouch0218	nurmadininoo(?:@gmail\.com)?
+1736433931	ipodtouch0218	ninonurmadi\.com
+1736433943	ipodtouch0218	ninonurmadi(?!\.com)
+1736439550	ipodtouch0218	lohusahamiel\.com
+1736441395	Vickel	thechroniclehub\.com
+1736441919	ipodtouch0218	clipy\.online
+1736443063	General Grievance	chrome\.in
+1736445962	ipodtouch0218	infinityrealmteam\.official(?:@gmail\.com)?
+1736447341	Jeff Schaller	regularlighter\.com
+1736447748	Nisse Engström	besterprovider\.shop
+1736455453	ipodtouch0218	theessayally\.com
+1736484592	Cow	glorywebs\.com
+1736484622	Cow	fijandesign\.com
+1736488319	Anerdw	q3edge\.com
+1736493537	Cow	jeluxa\.com
+1736493560	Cow	24x7exchange\.in
+1736493585	Cow	umrahcabservice\.com
+1736498496	Cow	d247signup\.com
+1736498574	Cow	pacorr\.com
+1736498703	Cow	demandifymedia\.com
+1736500775	Cow	ytbcomments\.com
+1736502623	Cow	mosami\.in
+1736502878	Cow	skylandigital\.com
+1736503023	Cody Gray	Northern[\W_]*+Ireland[\W_]*+hospitals?
+1736503535	Cow	(?-i:yG22WjncAo6EN4LT6)(?# Google maps)
+1736504345	Cow	cyberpunkjacket\.com
+1736504375	Cody Gray	david[\W_]*+martinez[\W_]*+jacket
+1736508853	Cow	innergrowthguides\.com
+1736509549	Jeff Schaller	tpspoolsvc\.com
+1736509721	Jeff Schaller	fortunetelleroracle\.com
+1736509750	Jeff Schaller	100topnews\.in
+1736521534	Cow	getcompressedgames\.com
+1736528533	Jeff Schaller	abcautocars\.com
+1736528563	Jeff Schaller	legacyonelimo\.com
+1736529078	Jeff Schaller	Dexdertprorecovery
+1736534326	Cow	coolgiftsfordad\.com
+1736547110	Nisse Engström	focusmedication\.com
+1736548877	Vickel	HistoryFactsMysteries(?#youtube)
+1736554916	Jeff Schaller	getsolidresearchchemicals\.com
+1736574041	Spevacus	cubiq\.in
+1736593620	Cow	intenggears\.com\.pk
+1736597073	Jeff Schaller	awesomeholidaysnepal\.com
+1736600531	Jeff Schaller	(?-i:qHzV8)(?#shorturl.at)
+1736600549	Jeff Schaller	tothefinance\.com
+1736602160	Jeff Schaller	getlowfare\.com
+1736603414	Cow	corporategyft\.com
+1736608072	Jeff Schaller	freejpgcompress\.com
+1736612448	Vickel	cupcatapk\.com
+1736620952	Cow	live[\W_]*+support[\W_]*+agent
+1736623691	Jeff Schaller	photofixteam\.com
+1736629604	Jeff Schaller	rwcimplantclub\.com
+1736636786	Thomas Ward	netmastertvonline\.com
+1736654914	Jeff Schaller	onlinequranlive\.com
+1736672167	Cow	youcinebr\.com
+1736678376	Jeff Schaller	mahamwheelchair\.com
+1736678400	Jeff Schaller	tv87\.in
+1736695259	Vickel	vividysaas\.site
+1736697478	Jeff Schaller	easenotes\.com
+1736698339	Mast	Hitler[\W_]*+was[\W_]*+right
+1736700370	Vickel	buildcraftinteriors\.com
+1736702316	Vickel	blogongames7\.blogspot
+1736703422	Jeff Schaller	replaced-by\.ai
+1736705407	Cow	killing[\W_]*+palestinians
+1736707344	Jeff Schaller	com\.mytesters\.twentytester(?#play.google.com)
+1736722463	Vickel	leticialeon3333(?:@gmail\.com)?
+1736727700	Jeff Schaller	66dslot\.xyz
+1736735387	Jeff Schaller	saigonsolar\.com\.vn
+1736743761	Cow	worksvisa\.com
+1736748747	Cow	ganeshgreen\.com
+1736748808	Cow	onlinejungle\.in
+1736748840	Cow	elan-developer\.com
+1736750789	Cow	westone\.com\.my
+1736759834	Cow	digitaldividedata\.com
+1736760114	Cow	h-spring\.com
+1736760138	Cow	dawnbridge\.vn
+1736760236	Cow	(?-i:XGQELEMENBRS)(?# hostiner referral code for Pakistan)
+1736760336	Cow	(?-i:48zQdssEV28bgfHz5)(?# forms.gle)
+1736760565	Cow	compressoraim\.com
+1736761663	Cow	(?-i:umairf17iiui)(?# medium.com)
+1736765730	VLAZ	cricscoops\.com
+1736766727	Jeff Schaller	bcmgroup\.in
+1736767400	Jeff Schaller	brandindia\.tech
+1736770544	Jeff Schaller	chatrecapai\.com
+1736774675	Jeff Schaller	jeelanilawempire\.com
+1736774702	Vickel	priyo2580\.blogspot
+1736780163	VLAZ	mohosinmiah1610\.medium\.com
+1736781512	Nisse Engström	sonofgalaxy\.shop
+1736781587	Jeff Schaller	anindaperde\.com
+1736783085	Jeff Schaller	story321\.com
+1736787301	Vickel	financeloan71(?:@gmail\.com)?
+1736789103	Cow	cvowl\.com
+1736789865	ipodtouch0218	skautobody\.com
+1736792439	Cow	columnsandbalustrades\.com
+1736793726	ipodtouch0218	gam-gec\.com
+1736807799	Fastnlight	wellsiteguard\.ca
+1736824790	Jeff Schaller	eswarkandregula-cz6ph(?#YouTube)
+1736835542	VLAZ	dentalgurgaon\.com
+1736837875	VLAZ	(?-i:^Nishantb$)
+1736838011	VLAZ	updatenews1998\.blogspot
+1736839608	VLAZ	wikas\.in
+1736843911	VLAZ	wakad\.shrutipune\.in
+1736843919	VLAZ	baner\.shrutipune\.in
+1736843928	VLAZ	hinjewadi\.shrutipune\.in
+1736850951	VLAZ	rubyshoes\.pk
+1736851508	VLAZ	finddates\.eu
+1736852921	VLAZ	topsmiledentalclinic\.com
+1736857762	Jeff Schaller	zazalandcounte(?#t.me)
+1736857796	Jeff Schaller	zazalandcounter5(?#t.me)
+1736858634	VLAZ	magistvs\.net
+1736861368	VLAZ	excel\.tv
+1736866416	VLAZ	lapdatinternetfpt\.net
+1736867094	ipodtouch0218	globalwizahub\.com
+1736867128	ipodtouch0218	codewithbisky\.com
+1736867949	ipodtouch0218	divihat\.com
+1736872116	Jeff Schaller	carxstreetapp\.com
+1736872384	Vickel	(?-i:ZEV112HTtxHfDjA2A)(?#forms.gle)
+1736873297	ipodtouch0218	examtopicspro\.com
+1736880077	Cow	unitskit\.com
+1736881811	Cow	freewallet

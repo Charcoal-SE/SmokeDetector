@@ -211,6 +211,9 @@ items:
   - carrera.ns.cloudflare.com.
   - jake.ns.cloudflare.com.
 - ns:
+  - carrera.ns.cloudflare.com.
+  - porter.ns.cloudflare.com.
+- ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
@@ -445,6 +448,9 @@ items:
   - linda.ns.cloudflare.com.
   - will.ns.cloudflare.com.
 - ns:
+  - lindsey.ns.cloudflare.com.
+  - lloyd.ns.cloudflare.com.
+- ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
@@ -549,7 +555,9 @@ items:
 - comment: no longer in DNS 2020-04-02
   disable: true
   ns: aapkeaajanese.website.
-- ns: healthymum.org.
+- comment: disabled NXDOMAIN 2024-11-24
+  disable: true
+  ns: healthymum.org.
 - ns: escortdomain.net.
 - ns: dnsdomen.com.
 - comment: no longer in DNS 2021-11-04
@@ -570,7 +578,8 @@ items:
 - ns: bh-in-31.webhostbox.net.
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
-- comment: NXDOMAIN 2020-12-30; resolves again 2024-10-11
+- comment: NXDOMAIN 2020-12-30; resolves again 2024-10-11; NXDOMAIN again 2024-12-12
+  disable: true
   ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
@@ -769,7 +778,9 @@ items:
   - ns3cna.name.com.
   - ns4ksy.name.com.
 - ns: staticking.com.
-- ns: masbz.com.
+- comment: NXDOMAIN 2024-12-26
+  disable: true
+  ns: masbz.com.
 - comment: times out 2024-09-20
   disable: true
   ns: sttdns.com.
@@ -867,3 +878,4 @@ items:
 - ns: mizbanfadns.net.
 - ns: nina.vn.
 - ns: etisalatdomains.ae.
+- ns: mukhost.uk.
