@@ -70079,3 +70079,4 @@
 1736838011	VLAZ	updatenews1998\.blogspot
 1736839608	VLAZ	wikas\.in
 1736843911	VLAZ	wakad\.shrutipune\.in
+1736843919	VLAZ	baner\.shrutipune\.in
