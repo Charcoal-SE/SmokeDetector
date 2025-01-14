@@ -70077,3 +70077,4 @@
 1736835542	VLAZ	dentalgurgaon\.com
 1736837875	VLAZ	(?-i:^Nishantb$)
 1736838011	VLAZ	updatenews1998\.blogspot
+1736839608	VLAZ	wikas\.in
