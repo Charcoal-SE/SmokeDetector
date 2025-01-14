@@ -70081,3 +70081,4 @@
 1736843911	VLAZ	wakad\.shrutipune\.in
 1736843919	VLAZ	baner\.shrutipune\.in
 1736843928	VLAZ	hinjewadi\.shrutipune\.in
+1736850951	VLAZ	rubyshoes\.pk
