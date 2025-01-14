@@ -70080,3 +70080,4 @@
 1736839608	VLAZ	wikas\.in
 1736843911	VLAZ	wakad\.shrutipune\.in
 1736843919	VLAZ	baner\.shrutipune\.in
+1736843928	VLAZ	hinjewadi\.shrutipune\.in
