@@ -70085,3 +70085,4 @@
 1736851508	VLAZ	finddates\.eu
 1736852921	VLAZ	topsmiledentalclinic\.com
 1736857762	Jeff Schaller	zazalandcounte(?#t.me)
+1736857796	Jeff Schaller	zazalandcounter5(?#t.me)
