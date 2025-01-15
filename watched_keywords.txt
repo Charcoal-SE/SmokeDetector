@@ -70109,3 +70109,4 @@
 1736924553	Cow	leading[\W_]*+cryptocurrency[\W_]*+exchanges
 1736929272	VLAZ	reloved\.in
 1736931321	Cow	nimbusstack\.com
+1736931929	Cow	_zeptonow\.com
