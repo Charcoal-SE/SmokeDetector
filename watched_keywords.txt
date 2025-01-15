@@ -70112,3 +70112,4 @@
 1736931929	Cow	_zeptonow\.com
 1736931987	Cow	sacglobe\.com
 1736933273	Cow	lesteelist\.com
+1736934569	VLAZ	(?-i:acy308027)(?# some coupon code)
