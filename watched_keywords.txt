@@ -70119,3 +70119,4 @@
 1736938313	Mast	zoopup\.com
 1736944817	VLAZ	nextgen\.com
 1736944826	VLAZ	athenahealth\.com
+1736944836	VLAZ	advancedmd\.com
