@@ -70121,3 +70121,4 @@
 1736944826	VLAZ	athenahealth\.com
 1736944836	VLAZ	advancedmd\.com
 1736944844	VLAZ	ragagroup\.com
+1736946509	VLAZ	apphitect\.ae
