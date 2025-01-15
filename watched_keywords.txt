@@ -70102,3 +70102,4 @@
 1736907903	Fastnlight	drharryherbs(?:@gmail\.com)?
 1736871757	General Grievance	sattasmatka143\.mobi
 1736890088	ipodtouch0218	codecall\.xyz
+1736916411	Cow	Zepto[\W_]*+app
