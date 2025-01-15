@@ -70104,3 +70104,4 @@
 1736890088	ipodtouch0218	codecall\.xyz
 1736916411	Cow	Zepto[\W_]*+app
 1736921167	Cow	udyogguru\.in
+1736921189	Cow	boconcept\.com
