@@ -70117,3 +70117,4 @@
 1736934922	Cow	(?-i:ZFNKRS7DfgrD2Mcm9)(?# soundcloud ID)
 1736935334	Cow	(?:cupom|coupon|cupon|kupon)[\W_]*+temu
 1736938313	Mast	zoopup\.com
+1736944817	VLAZ	nextgen\.com
