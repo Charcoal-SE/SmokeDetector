@@ -70125,3 +70125,4 @@
 1736946725	Cow	transfers-rome-civitavecchia\.com
 1736948935	VLAZ	szdflogwin\.com
 1736949314	Cow	arrowriver\.ca
+1736949672	Cow	naseerahspells\.com
