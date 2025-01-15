@@ -70123,3 +70123,4 @@
 1736944844	VLAZ	ragagroup\.com
 1736946509	VLAZ	apphitect\.ae
 1736946725	Cow	transfers-rome-civitavecchia\.com
+1736948935	VLAZ	szdflogwin\.com
