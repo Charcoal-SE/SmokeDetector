@@ -70160,3 +70160,4 @@
 1737022638	VLAZ	cashforcarremovalmelbourne\.com\.au
 1737023265	VLAZ	wickedtour\.net
 1737024391	VLAZ	smartwindows\.app
+1737024422	VLAZ	(?-i:S3JMZ)(?#shorturl.at)
