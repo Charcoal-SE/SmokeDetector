@@ -34,7 +34,12 @@ class PostData:
             'title': self.title,
             'body': self.body,
             'body_markdown': self.body_markdown,
-            'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep, 'account_id': self.owner_acct_id},
+            'owner': {
+                'display_name': self.owner_name,
+                'link': self.owner_url,
+                'reputation': self.owner_rep,
+                'account_id': self.owner_acct_id
+            },
             'site': self.site,
             'question_id': self.post_id,
             'link': self.post_url,

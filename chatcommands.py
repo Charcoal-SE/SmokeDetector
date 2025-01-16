@@ -71,7 +71,7 @@ def addblu(msg, user):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
         add_blacklisted_user((uid, val), message_url, "")
-        return "User blacklisted {}(`{}` on `{}`).".format("network-wide " if val == "stackexchange.com" else "", uid, val)
+        return f"User blacklisted {"network-wide " if val == "stackexchange.com" else ""}(`{uid}` on `{val}`)."
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
@@ -93,7 +93,7 @@ def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
         }
 
         return (lookup.get(user), 'stackexchange.com') in GlobalVars.blacklisted_users
-    
+
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(str)

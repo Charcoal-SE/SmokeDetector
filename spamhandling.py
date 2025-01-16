@@ -42,12 +42,14 @@ def sum_weight(reasons: list):
             pass  # s += 0
     return s
 
+
 def is_post_owner_net_blacklisted(post: Post) -> bool:
     """Check if the owner of a post is network-wide blacklisted"""
     for acct_id, site in GlobalVars.blacklisted_users.keys():
         if int(acct_id) == post.get_account_id() and site == "stackexchange.com":
             return True
     return False
+
 
 # noinspection PyMissingTypeHints
 def check_if_spam(post, dont_ignore_for=None):
