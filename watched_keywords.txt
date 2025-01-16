@@ -70155,3 +70155,4 @@
 1737020510	VLAZ	actcashforcar\.com\.au
 1737020706	VLAZ	bioroles\.com
 1737020714	VLAZ	airofficecounter\.com
+1737021134	VLAZ	(?-i:^Pin Beach2$)
