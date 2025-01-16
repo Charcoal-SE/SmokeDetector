@@ -70178,3 +70178,4 @@
 1737049513	Vickel	cali-limotransportation\.com
 1737049634	Vickel	cali[\W_]*+limo[\W_]*+transportation(?!\.com(?<=cali-limotransportation\.com))
 1737049675	Cow	sxvideos\.online
+1737050892	Cow	cur8residences\.com
