@@ -70181,3 +70181,4 @@
 1737050892	Cow	cur8residences\.com
 1737051220	Vickel	cur8[\W_]*+residences(?!\.com(?<=cur8residences\.com))
 1737052753	Vickel	healthtipsstory\.com
+1737054220	Cow	vellfinishfloors\.ca
