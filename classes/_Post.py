@@ -31,6 +31,7 @@ class Post:
         self._user_url = ""
         self._votes = {'downvotes': None, 'upvotes': None}
         self._edited = False
+        self._owner_account_id = None
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -143,7 +144,8 @@ class Post:
             'owner': {
                 'display_name': '_user_name',
                 'link': '_user_url',
-                'reputation': '_owner_rep'
+                'reputation': '_owner_rep',
+                'account_id': '_owner_account_id'
             },
             'question_id': '_post_id',
             'answer_id': '_post_id',
@@ -220,6 +222,10 @@ class Post:
     @property
     def post_score(self):
         return int(self._post_score)
+    
+    def get_account_id(self) -> int:
+        # TODO: should this have @property?
+        return int(self._owner_account_id)
 
     @property
     def post_site(self):

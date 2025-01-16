@@ -71,12 +71,29 @@ def addblu(msg, user):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
         add_blacklisted_user((uid, val), message_url, "")
-        return "User blacklisted (`{}` on `{}`).".format(uid, val)
+        return "User blacklisted {}(`{}` on `{}`).".format("network-wide " if val == "stackexchange.com" else "", uid, val)
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
         raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
 
+
+def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
+    """Given a user ID and a site, return if they are network-blacklisted"""
+    uid, val = user
+    # SE user passed
+    if val == "stackexchange.com":
+        return is_blacklisted_user(uid, val)
+    # site user passed
+    else:
+        # TODO: this part is (obviously) incomplete, but it gives me something
+        # to test with until it gets implemented correctly.
+        lookup: dict[tuple[str, str], int] = {
+            ('116162', "codegolf.stackexchange.com"): '27225587'
+        }
+
+        return (lookup.get(user), 'stackexchange.com') in GlobalVars.blacklisted_users
+    
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(str)
@@ -90,10 +107,22 @@ def isblu(user):
     uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
-        if is_blacklisted_user((uid, val)):
-            return "User is blacklisted (`{}` on `{}`).".format(uid, val)
+        is_site_wide: bool = is_blacklisted_user((uid, val))
+        is_network_wide: bool = is_user_net_blacklisted((uid, val))
+        # It could check what sites a user is blacklisted on, even if that
+        # site isn't passed. That functionality could be useful, but I didn't
+        # write the code to do that.
+
+        if is_site_wide and is_network_wide:
+            return f"User is blacklisted both on `{val}` and network-wide"
+        elif is_site_wide and not is_network_wide:
+            return f"User is blacklisted on `{val}`, but not network-wide"
+        elif not is_site_wide and is_network_wide:
+            return f"User is blacklisted network-wide, but not on `{val}`"
+        elif not is_site_wide and not is_network_wide:
+            return f"User is neither blacklisted on `{val}` nor network-wide"
         else:
-            return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
+            return "This should never be reached"
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
@@ -111,8 +140,9 @@ def rmblu(user):
     uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
+        net_wide: str = "network-wide " if (val == "stackexchange.com") else ""
         if remove_blacklisted_user((uid, val)):
-            return "The user has been removed from the user-blacklist (`{}` on `{}`).".format(uid, val)
+            return "The user has been removed from the {}user-blacklist (`{}` on `{}`).".format(net_wide, uid, val)
         else:
             return "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
                    "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
