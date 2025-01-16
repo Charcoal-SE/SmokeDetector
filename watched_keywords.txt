@@ -70162,3 +70162,4 @@
 1737024391	VLAZ	smartwindows\.app
 1737024422	VLAZ	(?-i:S3JMZ)(?#shorturl.at)
 1737027667	Jeff Schaller	neldrac\.com
+1737029263	VLAZ	tellbostonmarket\.buzz
