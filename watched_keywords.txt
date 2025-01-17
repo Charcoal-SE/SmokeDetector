@@ -70196,3 +70196,4 @@
 1737102347	VLAZ	offersfrog\.com
 1737100827	Anerdw	freerdps\.com
 1737106945	VLAZ	markekcertifications\.com
+1737107329	Cow	technopoleindustries\.com
