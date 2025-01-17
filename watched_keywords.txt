@@ -70217,3 +70217,4 @@
 1737138608	Cow	apvm\.ws
 1737144827	Cow	pawangslot\.digital
 1737144951	Cow	pawangslot(?!\.digital(?<=pawangslot\.digital))
+1737145036	Cow	pawangslot[\W_]*+vip
