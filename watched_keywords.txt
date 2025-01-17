@@ -70204,3 +70204,4 @@
 1737114024	Cody Gray	^Abu[\W_]*+Sayid$
 1737118377	VLAZ	vorsondigital\.com
 1737124883	VLAZ	nationaljobhiring\.us
+1737125104	VLAZ	goldenvape\.co\.uk
