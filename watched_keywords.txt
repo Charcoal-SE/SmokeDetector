@@ -70184,3 +70184,4 @@
 1737055745	Cow	enterprisepayrolldesk\.com
 1737056084	ipodtouch0218	SecureChainDFX(?#x.com)
 1737094455	Cow	audifab\.com
+1737094679	Cow	audifab(?!\.com(?<=audifab\.com))
