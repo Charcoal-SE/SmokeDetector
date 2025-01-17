@@ -70218,3 +70218,4 @@
 1737144827	Cow	pawangslot\.digital
 1737144951	Cow	pawangslot(?!\.digital(?<=pawangslot\.digital))
 1737145036	Cow	pawangslot[\W_]*+vip
+1737145534	Jeff Schaller	glose\.com
