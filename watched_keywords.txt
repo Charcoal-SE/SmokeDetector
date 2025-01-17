@@ -70202,3 +70202,4 @@
 1737113527	Cody Gray	support@shopify
 1737113932	Jeff Schaller	indianyogaassociation\.com
 1737114024	Cody Gray	^Abu[\W_]*+Sayid$
+1737118377	VLAZ	vorsondigital\.com
