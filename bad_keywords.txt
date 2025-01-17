@@ -3243,3 +3243,4 @@ SpinCrush
 how[\W_]*+do[\W_]*+i[\W_]*+complain[\W_]*+in[\W_]*+zepto
 Nadcab[\W_]*+Labs
 ibiyaya
+help[\W_]*+support[\W_]*+team[\W_]*+contact
