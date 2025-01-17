@@ -70187,4 +70187,3 @@
 1737094679	Cow	audifab(?!\.com(?<=audifab\.com))
 1737095023	VLAZ	makaansolutions\.com
 1737096010	VLAZ	studioezube\.com
-1737096526	VLAZ	aje\.com
