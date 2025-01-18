@@ -70230,3 +70230,4 @@
 1737201879	Cody Gray	aiguts\.com
 1737201929	Cody Gray	AI[\W_]*+Guts(?!\.com(?<=aiguts\.com))
 1737207432	Cody Gray	robertleeus77(?:@gmail(?:\.com)?)?
+1737207464	Cody Gray	(?-i:swaxtik_1127)(?#Instagram)
