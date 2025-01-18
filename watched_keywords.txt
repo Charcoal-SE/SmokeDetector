@@ -70228,3 +70228,4 @@
 1737196268	Mast	villa-world\.com
 1737200483	Cody Gray	wsongs\.co
 1737201879	Cody Gray	aiguts\.com
+1737201929	Cody Gray	AI[\W_]*+Guts(?!\.com(?<=aiguts\.com))
