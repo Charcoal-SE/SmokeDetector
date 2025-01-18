@@ -70220,3 +70220,4 @@
 1737145036	Cow	pawangslot[\W_]*+vip
 1737145534	Jeff Schaller	glose\.com
 1737145885	Cow	(?-i:ganeshbn21)(?# medium.com)
+1737162242	Vickel	ireminiapk\.com
