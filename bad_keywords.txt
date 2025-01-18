@@ -3245,3 +3245,4 @@ Nadcab[\W_]*+Labs
 ibiyaya
 help[\W_]*+support[\W_]*+team[\W_]*+contact
 (?:pioneer[\W_]*+finance|fashion[\W_]*+rupee|finlendia|finger|value[\W_]*+score|cv[\W_]*+manager|fun[\W_]*+rupee|sarvatra[\W_]*+(?:cash|kash)|credit[\W_]*+go|mpokket)[\W_]*+loan
+Value[\W_]*+Scrore[\W_]*+Loan
