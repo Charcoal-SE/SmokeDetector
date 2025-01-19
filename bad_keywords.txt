@@ -3257,3 +3257,4 @@ how[\W_]*+(?:do[\W_]*+i|can[\W_]*+i)[\W_]*+(?:send|dispute|recover|connect|conta
 phone[\W_]*+per[\W_]*+wrong[\W_]*+translation[\W_]*+memory
 ka[\W_]*+report[\W_]*+kaise[\W_]*+karun
 hot[\W_]*+porn
+how[\W_]*+to[\W_]*+contact[\W_]*+robinhood[\W_]*+immediately
