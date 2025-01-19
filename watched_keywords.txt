@@ -70245,3 +70245,4 @@
 1737301212	Cow	onlinequicktool\.com
 1737304491	Jeff Schaller	xxxfilm\.online
 1737306461	Cow	nakshatraresort\.in
+1737311669	Jeff Schaller	(?-i:DVFVQ7Vy)(?#discord)
