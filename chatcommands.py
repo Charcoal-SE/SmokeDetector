@@ -135,11 +135,15 @@ def isblu(user):
     if int(uid) > -1 and val != "":
         is_site_wide: bool = is_blacklisted_user((uid, val))
         is_network_wide: bool = is_user_net_blacklisted((uid, val))
+        is_se_acct: bool = val == "stackexchange.com"
         # It could check what sites a user is blacklisted on, even if that
         # site isn't passed. That functionality could be useful, but I didn't
         # write the code to do that.
-
-        if is_site_wide and is_network_wide:
+        if is_se_acct and is_network_wide:
+            return "User is blacklisted network-wide"
+        elif is_se_acct and not is_network_wide:
+            return "User is not blacklisted network-wide"
+        elif is_site_wide and is_network_wide:
             return f"User is blacklisted both on `{val}` (`{uid}`) and network-wide"
         elif is_site_wide and not is_network_wide:
             return f"User is blacklisted on `{val}` (`{uid}`), but not network-wide"
