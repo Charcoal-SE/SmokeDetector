@@ -70248,3 +70248,4 @@
 1737311669	Jeff Schaller	(?-i:DVFVQ7Vy)(?#discord)
 1737311799	Cow	usasmmnetwork\.com
 1737311862	Cow	usasmmnetwork(?!\.com(?<=usasmmnetwork\.com))
+1737314401	Cow	globalverifyed\.com
