@@ -71,28 +71,54 @@ def addblu(msg, user):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
         add_blacklisted_user((uid, val), message_url, "")
-        return f"User blacklisted {"network-wide " if val == "stackexchange.com" else ""}(`{uid}` on `{val}`)."
+        return f"User blacklisted {'network-wide ' if val == 'stackexchange.com' else ''}(`{uid}` on `{val}`)."
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
         raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
 
 
-def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
-    """Given a user ID and a site, return if they are network-blacklisted"""
+def user_to_net_acct_id(user: tuple[str, str]) -> str:
+    """Find the network account ID of a user (e.g., a site profile)"""
     uid, val = user
+
     # SE user passed
     if val == "stackexchange.com":
-        return is_blacklisted_user(uid, val)
-    # site user passed
+        return uid
+    # network user passed
     else:
-        # TODO: this part is (obviously) incomplete, but it gives me something
-        # to test with until it gets implemented correctly.
-        lookup: dict[tuple[str, str], int] = {
-            ('116162', "codegolf.stackexchange.com"): '27225587'
-        }
+        # based on the allspam code
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            request_url = get_se_api_url_for_route(f"users/{uid}")
+            params = get_se_api_default_params({
+                'filter': '!)scNT2zLcbOpD09vBxHM',
+                'site': val
+            })
+            res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
+        if 'items' not in res or len(res['items']) == 0:
+            raise CmdException("The specified user does not appear to exist.")
+        return str(res['items'][0]['account_id'])
 
-        return (lookup.get(user), 'stackexchange.com') in GlobalVars.blacklisted_users
+
+def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
+    """Given a user ID and a site, return if they are network-blacklisted"""
+    return (user_to_net_acct_id(user), 'stackexchange.com') in GlobalVars.blacklisted_users
+
+
+@command(str, whole_msg=True, privileged=True)
+def addnetblu(_msg, user):
+    """
+    Provides directions to blacklist a user network-wide
+    :return: A string
+    """
+    net_id: str = user_to_net_acct_id(get_user_from_list_command(user))
+
+    return f"`Run !!/addblu https://stackexchange.com/users/{net_id}`"
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -114,13 +140,13 @@ def isblu(user):
         # write the code to do that.
 
         if is_site_wide and is_network_wide:
-            return f"User is blacklisted both on `{val}` and network-wide"
+            return f"User is blacklisted both on `{val}` (`{uid}`) and network-wide"
         elif is_site_wide and not is_network_wide:
-            return f"User is blacklisted on `{val}`, but not network-wide"
+            return f"User is blacklisted on `{val}` (`{uid}`), but not network-wide"
         elif not is_site_wide and is_network_wide:
-            return f"User is blacklisted network-wide, but not on `{val}`"
+            return f"User is blacklisted network-wide, but not on `{val}` (`{uid}`)"
         elif not is_site_wide and not is_network_wide:
-            return f"User is neither blacklisted on `{val}` nor network-wide"
+            return f"User is neither blacklisted on `{val}` (`{uid}`) nor network-wide"
         else:
             return "This should never be reached"
     elif int(uid) == -2:

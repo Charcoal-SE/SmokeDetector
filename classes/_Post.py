@@ -223,9 +223,8 @@ class Post:
     def post_score(self):
         return int(self._post_score)
 
-    def get_account_id(self) -> int:
-        # TODO: should this have @property?
-        return int(self._owner_account_id)
+    def get_account_id(self) -> int | None:
+        return int(self._owner_account_id) if self._owner_account_id is not None else None
 
     @property
     def post_site(self):
