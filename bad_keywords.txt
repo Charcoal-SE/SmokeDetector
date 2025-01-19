@@ -3255,3 +3255,4 @@ care[\W_]*+to[\W_]*+request[\W_]*+a[\W_]*+reversal
 will[\W_]*+coinbase[\W_]*+refund[\W_]*+(?:money|if[\W_]*+scammed|if[\W_]*+hacked)
 how[\W_]*+(?:do[\W_]*+i|can[\W_]*+i)[\W_]*+(?:send|dispute|recover|connect|contact).{0,30}coinbase
 phone[\W_]*+per[\W_]*+wrong[\W_]*+translation[\W_]*+memory
+ka[\W_]*+report[\W_]*+kaise[\W_]*+karun
