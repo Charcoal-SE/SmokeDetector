@@ -72,7 +72,7 @@ def check_if_spam(post, dont_ignore_for=None):
                 why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
                     blacklisted_post_url, ms_url, blacklisted_by)
             if net_blacklisted:
-                why += "\nNetwork-wide blacklisted user"
+                why += f"\nNetwork-wide blacklisted user - blacklisted by {blacklisted_by}"
             else:
                 why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
