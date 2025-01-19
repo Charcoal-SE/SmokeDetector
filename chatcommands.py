@@ -111,14 +111,45 @@ def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
 
 
 @command(str, whole_msg=True, privileged=True)
-def addnetblu(_msg, user):
+def addnetblu(msg, user):
     """
-    Provides directions to blacklist a user network-wide
+    Adds a user to the network-wide blacklist
     :return: A string
     """
-    net_id: str = user_to_net_acct_id(get_user_from_list_command(user))
+    uid, val = get_user_from_list_command(user)
 
-    return f"`Run !!/addblu https://stackexchange.com/users/{net_id}`"
+    if int(uid) > -1 and val != "":
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        net_id: str = user_to_net_acct_id((uid, val))
+        add_blacklisted_user((net_id, "stackexchange.com"), message_url, "")
+        return f"User blacklisted network-wide (`{net_id}`)."
+    elif int(uid) == -2:
+        raise CmdException("Error: {}".format(val))
+    else:
+        raise CmdException("Invalid format. Valid format: `!!/addnetblu profileurl` *or* "
+                           "`!!/addnetblu userid stackexchange.com`.")
+
+
+@command(str, privileged=True)
+def rmnetblu(user):
+    """
+    Removes user from the network-wide blacklist
+    :param user:
+    :return: A string
+    """
+    uid, val = get_user_from_list_command(user)
+
+    if int(uid) > -1 and val != "":
+        net_id: str = user_to_net_acct_id((uid, val))
+        if remove_blacklisted_user((net_id, "stackexchange.com")):
+            return f"The user has been removed from the network-wide user-blacklist (`{net_id}`)."
+        else:
+            return "The user is not network-wide blacklisted."
+    elif int(uid) == -2:
+        raise CmdException("Error: {}".format(val))
+    else:
+        raise CmdException("Invalid format. Valid format: `!!/rmnetblu profileurl` "
+                           "*or* `!!/rmnetblu userid stackexchange.com`.")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
