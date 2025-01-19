@@ -2,7 +2,7 @@
 import json
 from helpers import log
 import html
-from typing import AnyStr, Union
+from typing import AnyStr, Union, Optional
 
 
 class PostParseError(Exception):
@@ -223,7 +223,7 @@ class Post:
     def post_score(self):
         return int(self._post_score)
 
-    def get_account_id(self) -> int | None:
+    def get_account_id(self) -> Optional[int]:
         return int(self._owner_account_id) if self._owner_account_id is not None else None
 
     @property
