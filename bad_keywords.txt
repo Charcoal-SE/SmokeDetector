@@ -3266,3 +3266,4 @@ how[\W_]*+to[\W_]*+cancel[\W_]*+fubo
 coinhub[\W_]*+atm[\W_]*+customer[\W_]*+service
 refund[\W_]*+money[\W_]*+if[\W_]*+scammed
 Fortnite[\W_]*+Skin[\W_]*+Code
+Fortnite[\W_]*+redeem[\W_]*+codes
