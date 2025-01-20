@@ -60674,7 +60674,6 @@
 1713866764	tripleee	fruitcups
 1713866907	tripleee	ridebuddy\.app
 1713867044	Dragonrage	elec28\.com
-1713867482	Dragonrage	dwello\.in
 1713868196	tripleee	blitzangebot
 1713868216	tripleee	Gutscheincode
 1713869831	Cow	softgentech\.com
