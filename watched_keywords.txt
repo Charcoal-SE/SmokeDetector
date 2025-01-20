@@ -70253,3 +70253,4 @@
 1737350115	Cow	(?-i:7GpUpvZGzwor9dE29)(?#forms.gle)
 1737352483	Cow	lvreplica\.is
 1737356040	Cow	jackbit\.com
+1737356048	Cow	7bit\.partners
