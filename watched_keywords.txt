@@ -70258,3 +70258,4 @@
 1737358140	VLAZ	digitines\.in
 1737358210	VLAZ	digitines(?!\.in)
 1737358809	VLAZ	telepathyinfotech\.com
+1737359097	VLAZ	chatfrancais\.org
