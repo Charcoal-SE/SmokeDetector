@@ -3259,3 +3259,4 @@ ka[\W_]*+report[\W_]*+kaise[\W_]*+karun
 hot[\W_]*+porn
 how[\W_]*+to[\W_]*+contact[\W_]*+robinhood[\W_]*+immediately
 does[\W_]*+blockchain[\W_]*+make[\W_]*+calls
+to[\W_]*+connect[\W_]*+with[\W_]*+blockchain[\W_]*+support
