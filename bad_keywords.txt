@@ -3258,3 +3258,4 @@ phone[\W_]*+per[\W_]*+wrong[\W_]*+translation[\W_]*+memory
 ka[\W_]*+report[\W_]*+kaise[\W_]*+karun
 hot[\W_]*+porn
 how[\W_]*+to[\W_]*+contact[\W_]*+robinhood[\W_]*+immediately
+does[\W_]*+blockchain[\W_]*+make[\W_]*+calls
