@@ -70250,3 +70250,4 @@
 1737311862	Cow	usasmmnetwork(?!\.com(?<=usasmmnetwork\.com))
 1737314401	Cow	globalverifyed\.com
 1737316600	Jeff Schaller	(?-i:^user194791$)
+1737350115	Cow	(?-i:7GpUpvZGzwor9dE29)(?#forms.gle)
