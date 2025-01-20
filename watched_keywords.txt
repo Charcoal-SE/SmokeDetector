@@ -70283,3 +70283,4 @@
 1737401783	Cow	proxyresidentrostel
 1737403899	Vickel	omanatimes\.com
 1737403921	Cow	omanatimes(?!\.com(?<=omanatimes\.com))
+1737403932	Cow	omana[\W_]*+times(?!\.com(?<=omanatimes\.com))
