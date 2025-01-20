@@ -70286,3 +70286,4 @@
 1737408007	Vickel	mon-chauffeur-prive\.com
 1737408290	Jeff Schaller	perfectstayz\.com
 1737408359	Vickel	mon[\W_]*+chauffeur[\W_]*+priv[eé](?!\.com(?<=mon-chauffeur-prive\.com))
+1737411864	Jeff Schaller	baybiltek\.com
