@@ -70278,3 +70278,4 @@
 1737393237	Cow	vectorgenz\.com
 1737393261	Cow	(?-i:billier5)(?#t.me)
 1737393305	Cow	uk49s\.org\.za
+1737396532	Jeff Schaller	gevas\.site
