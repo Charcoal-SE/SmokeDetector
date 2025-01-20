@@ -70269,3 +70269,4 @@
 1737376350	Vickel	techgig\.com
 1737378270	Cow	legalaction\.tech
 1737378468	Cow	satvdairy\.in
+1737382390	Vickel	forum\.ninjatrader\.com
