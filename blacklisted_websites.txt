@@ -5954,3 +5954,4 @@ CodingCanvas\.io
 imensosoftware\.com
 7span\.com
 secureimagechain\.com
+cloudprism\.in
