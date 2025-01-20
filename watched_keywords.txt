@@ -70256,3 +70256,4 @@
 1737356048	Cow	7bit\.partners
 1737357613	Cow	hellobizmia\.com
 1737358140	VLAZ	digitines\.in
+1737358210	VLAZ	digitines(?!\.in)
