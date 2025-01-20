@@ -70277,3 +70277,4 @@
 1737392932	Vickel	health1\.ae
 1737393237	Cow	vectorgenz\.com
 1737393261	Cow	(?-i:billier5)(?#t.me)
+1737393305	Cow	uk49s\.org\.za
