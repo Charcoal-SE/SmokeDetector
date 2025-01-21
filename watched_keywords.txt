@@ -70314,3 +70314,4 @@
 1737462142	Jeff Schaller	pluswallet\.app
 1737462207	Jeff Schaller	kingsedu\.ac
 1737462760	VLAZ	realorfakefiction\.online
+1737466001	Jeff Schaller	walshandpartners\.co\.uk
