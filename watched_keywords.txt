@@ -70312,3 +70312,4 @@
 1737459042	VLAZ	gemini[\W_]*+digital[\W_]*+agency(?!\.com(?<=geminidigitalagency\.com))
 1737461903	VLAZ	certs4exam\.com
 1737462142	Jeff Schaller	pluswallet\.app
+1737462207	Jeff Schaller	kingsedu\.ac
