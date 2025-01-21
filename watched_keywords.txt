@@ -70309,3 +70309,4 @@
 1737458493	Vickel	mitolynorder\.blogspot
 1737458829	Vickel	(?-i:y2dmnj9w)(?#tinyurl.com)
 1737458990	VLAZ	geminidigitalagency\.com
+1737459042	VLAZ	gemini[\W_]*+digital[\W_]*+agency(?!\.com(?<=geminidigitalagency\.com))
