@@ -70321,3 +70321,4 @@
 1737478785	Cow	guru[\W_]*+solutions(?!\.net(?<=guru-solutions\.net))
 1737481700	Anerdw	server\.4zfc\.com
 1737481704	Anerdw	43\.128\.214\.174
+1737485215	Spevacus	viralvideoimage620\.blogspot
