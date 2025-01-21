@@ -70319,3 +70319,4 @@
 1737474452	Spevacus	appoly\.co\.uk
 1737478742	Cow	guru-solutions\.net
 1737478785	Cow	guru[\W_]*+solutions(?!\.net(?<=guru-solutions\.net))
+1737481700	Anerdw	server\.4zfc\.com
