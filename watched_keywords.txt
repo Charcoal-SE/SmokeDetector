@@ -70318,3 +70318,4 @@
 1737467512	VLAZ	alogoosht\.com
 1737474452	Spevacus	appoly\.co\.uk
 1737478742	Cow	guru-solutions\.net
+1737478785	Cow	guru[\W_]*+solutions(?!\.net(?<=guru-solutions\.net))
