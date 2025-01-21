@@ -70292,3 +70292,4 @@
 1737440266	Anerdw	pokerstimes\.com
 1737440839	VLAZ	jidranmeat\.com
 1737441351	Cow	cars4me\.ru
+1737442787	Cow	promptcloud\.com
