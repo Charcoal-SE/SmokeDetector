@@ -53860,7 +53860,6 @@
 1698671016	Makyen	capsnip\.com
 1698672701	cigien	seshionshub\.com
 1698672725	cigien	surveymonkey\.de
-1698675720	Spevacus	boostmyclass\.com
 1698676122	cigien	loscabosairportshuttles\.com
 1698676147	cigien	los[\W_]*+cabos[\W_]*+airport[\W_]*+shuttles(?!\.com(?<=loscabosairportshuttles\.com))
 1698676407	Jeff Schaller	soundtakestudio\.com
