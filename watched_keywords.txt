@@ -70359,3 +70359,4 @@
 1737624137	VLAZ	predesigned-077-03445\.getresponsesite\.com
 1737625049	VLAZ	techlusion\.io
 1737625082	VLAZ	dravyaro\.com
+1737625134	VLAZ	dravyaro(?!\.com)
