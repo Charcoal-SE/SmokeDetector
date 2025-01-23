@@ -70365,3 +70365,4 @@
 1737629697	VLAZ	upinteriors\.com\.au
 1737629752	VLAZ	upinteriors(?!\.com\.au)
 1737629975	VLAZ	jsrgroupsuncity\.com
+1737630695	Jeff Schaller	experienceintegrators\.co\.in
