@@ -70364,3 +70364,4 @@
 1737628905	VLAZ	Indian[\W_]*+Institute[\W_]*+of[\W_]*+Digital[\W_]*+Education
 1737629697	VLAZ	upinteriors\.com\.au
 1737629752	VLAZ	upinteriors(?!\.com\.au)
+1737629975	VLAZ	jsrgroupsuncity\.com
