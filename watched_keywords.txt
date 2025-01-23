@@ -70384,3 +70384,4 @@
 1737655717	Cow	access[\W_]*+support[\W_]*+online
 1737656237	Cow	smart-play\.app
 1737656338	Cow	comcast[\W_]*+e[\W_]*+mail
+1737664924	Anerdw	Digital[\W_]*+Analyst[\W_]*+Team
