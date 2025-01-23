@@ -70351,3 +70351,4 @@
 1737614037	VLAZ	luympb\.online
 1737614050	VLAZ	xpressairlines\.com
 1737617118	VLAZ	yogurt86\.com
+1737617128	VLAZ	jaincollections\.com
