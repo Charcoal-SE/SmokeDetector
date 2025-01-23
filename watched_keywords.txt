@@ -70361,3 +70361,4 @@
 1737625082	VLAZ	dravyaro\.com
 1737625134	VLAZ	dravyaro(?!\.com)
 1737626537	VLAZ	wines123\.blogspot
+1737628905	VLAZ	Indian[\W_]*+Institute[\W_]*+of[\W_]*+Digital[\W_]*+Education
