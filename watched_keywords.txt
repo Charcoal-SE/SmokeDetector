@@ -70380,3 +70380,4 @@
 1737650185	Nisse Engström	revanced\.net
 1737654779	Cow	JOURNALWEBCONSULTANT
 1737655369	Cow	customer[\W_]*+service[\W_]*+line[\W_]*+at
+1737655430	Cow	chat[\W_]*+with[\W_]*+a[\W_]*+representative
