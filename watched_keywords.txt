@@ -70377,3 +70377,4 @@
 1737640038	VLAZ	shieldmedicalcenter\.ae
 1737640239	Machavity	pptssolutions\.com
 1737649497	VLAZ	laminance\.com
+1737650185	Nisse Engström	revanced\.net
