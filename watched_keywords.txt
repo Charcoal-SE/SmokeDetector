@@ -70387,3 +70387,4 @@
 1737664924	Anerdw	Digital[\W_]*+Analyst[\W_]*+Team
 1737694003	Cow	techtownweb\.com
 1737695756	Cow	100acress\.com
+1737695764	Cow	bminfotrade\.com
