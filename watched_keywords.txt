@@ -70401,3 +70401,4 @@
 1737711872	Cow	majdeeabdoalmajeed(?:@gmail\.com)?
 1737717239	VLAZ	edusquareconsulting\.com
 1737717563	Cow	constructionestimatingservices\.us
+1737718079	Jeff Schaller	tipinfotrove\.com
