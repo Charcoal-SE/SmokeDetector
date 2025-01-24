@@ -70416,3 +70416,4 @@
 1737736605	VLAZ	(?-i:aZIFf4WVne)(?#t.co)
 1737737605	Robert Longson	dexscreener\.com
 1737740599	ipodtouch0218	techdaytodayissue\.blogspot
+1737741775	Cow	(?:get[\W_]*+a[\W_]*+refund|free[\W_]*+cancellation|a[\W_]*+grace[\W_]*+period|(?:make|file)[\W_]*+a[\W_]*+claim|cheapest[\W_]*+day[\W_]*+to[\W_]*+book|change[\W_]*+my[\W_]*+guest[\W_]*+name|get[\W_]*+my[\W_]*+money|fully[\W_]*+refundable|get[\W_]*+a[\W_]*+human|refundable[\W_]*+option|speak[\W_]*+to[\W_]*+a[\W_]*+human).{0,60}expedia
