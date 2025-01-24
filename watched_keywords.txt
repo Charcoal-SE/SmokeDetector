@@ -70400,3 +70400,4 @@
 1737709638	VLAZ	BCM[\W_]*+Group(?!\.in(bcmgroup\.in))
 1737711872	Cow	majdeeabdoalmajeed(?:@gmail\.com)?
 1737717239	VLAZ	edusquareconsulting\.com
+1737717563	Cow	constructionestimatingservices\.us
