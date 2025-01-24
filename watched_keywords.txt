@@ -70421,3 +70421,4 @@
 1737747313	Cow	(?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+alguien[\W_]*+de
 1737754244	Jeff Schaller	eshikhon\.com
 1737758268	Jeff Schaller	(?-i:EAGLE_HACKER_2)(?#t.me)
+1737759608	Jeff Schaller	portalltechus\.com
