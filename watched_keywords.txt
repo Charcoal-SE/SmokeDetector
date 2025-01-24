@@ -70394,3 +70394,4 @@
 1737706191	VLAZ	in-homecare\.co\.uk
 1737706958	VLAZ	(?-i:priceline)(?#Domains)
 1737707401	VLAZ	airmasteremirates\.com
+1737708809	VLAZ	hohohealth24\.com
