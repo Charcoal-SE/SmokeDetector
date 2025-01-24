@@ -3272,3 +3272,4 @@ expedia.{0,20}(?:cancellation|free|charge|return|full|fully|allow|flights?+|canc
 comcast[\W_]*+about[\W_]*+e[\W_]*+mail[\W_]*+problems?+
 Priceline[\W_]*+flexible
 flexible[\W_]*+cancellation[\W_]*+on[\W_]*+priceline
+expedia[\W_]*+packages[\W_]*+refundable
