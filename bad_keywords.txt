@@ -3273,3 +3273,4 @@ comcast[\W_]*+about[\W_]*+e[\W_]*+mail[\W_]*+problems?+
 Priceline[\W_]*+flexible
 flexible[\W_]*+cancellation[\W_]*+on[\W_]*+priceline
 expedia[\W_]*+packages[\W_]*+refundable
+cancellation[\W_]*+fee[\W_]*+on[\W_]*+expedia
