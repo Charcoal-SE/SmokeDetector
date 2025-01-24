@@ -70388,3 +70388,4 @@
 1737695764	Cow	bminfotrade\.com
 1737700995	VLAZ	thedigitalwarehouse\.in
 1737701073	VLAZ	957 697 680
+1737702566	Glorfindel	leanware\.co
