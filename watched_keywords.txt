@@ -69935,7 +69935,6 @@
 1736346282	General Grievance	techgrabber\.in
 1736348968	Jeff Schaller	nomorecaptchas\.com
 1736348983	Jeff Schaller	oxford-biochron\.com
-1736349046	Jeff Schaller	madrasbook\.com
 1736350704	Vickel	ClockHardware\.com
 1736353540	Nisse Engström	vibox\.co\.uk
 1736358530	Cow	articlegiants\.com
