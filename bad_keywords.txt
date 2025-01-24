@@ -3271,3 +3271,4 @@ reversal[\W_]*+wrong[\W_]*+recharge
 expedia.{0,20}(?:cancellation|free|charge|return|full|fully|allow|flights?+|cancel|without|have|refundable|actually|services?+)[\W_]*+(?:fees?+|policy|cancellation|plan|refund|refundable|name[\W_]*+change|to[\W_]*+other[\W_]*+person|a[\W_]*+penalty|a[\W_]*+grace|expedia|for[\W_]*+cancellation|a[\W_]*+24[\W_]*+hour|give[\W_]*+refunds?+|us)
 comcast[\W_]*+about[\W_]*+e[\W_]*+mail[\W_]*+problems?+
 Priceline[\W_]*+flexible
+flexible[\W_]*+cancellation[\W_]*+on[\W_]*+priceline
