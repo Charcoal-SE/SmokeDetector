@@ -70399,3 +70399,4 @@
 1737709411	VLAZ	fazailequranonline\.com
 1737709525	VLAZ	codee\.com
 1737709638	VLAZ	BCM[\W_]*+Group(?!\.in(bcmgroup\.in))
+1737711872	Cow	majdeeabdoalmajeed(?:@gmail\.com)?
