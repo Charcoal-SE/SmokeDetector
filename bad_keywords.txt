@@ -3276,3 +3276,4 @@ expedia[\W_]*+packages[\W_]*+refundable
 cancellation[\W_]*+fee[\W_]*+on[\W_]*+expedia
 priceline[\W_]*+offers[\W_]*+a[\W_]*+general
 expedia[\W_]*+en[\W_]*+reembolsar
+Expedia[\W_]*+Teléfono
