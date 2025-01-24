@@ -70420,3 +70420,4 @@
 1737745218	Cow	sunsetcity\.ca
 1737747264	Cow	cryptoairhub\.com
 1737747313	Cow	(?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+alguien[\W_]*+de
+1737754244	Jeff Schaller	eshikhon\.com
