@@ -70386,3 +70386,4 @@
 1737656338	Cow	comcast[\W_]*+e[\W_]*+mail
 1737664924	Anerdw	Digital[\W_]*+Analyst[\W_]*+Team
 1737694003	Cow	techtownweb\.com
+1737695756	Cow	100acress\.com
