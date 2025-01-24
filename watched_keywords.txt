@@ -12499,7 +12499,6 @@
 1569932779	Glorfindel	wpthemesindia
 1569936460	Machavity	usefertilizer\.com
 1569943009	Machavity	grabz\.it
-1569950365	Machavity	(?-i:^G C$)
 1569957323	Machavity	techythought\.com
 1569971338	Makyen	drirosisolutioncenter(?:@gmail\.com)?
 1569990142	tripleee	pratiyogitakosh\.com
