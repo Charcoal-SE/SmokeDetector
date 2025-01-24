@@ -70411,3 +70411,4 @@
 1737725543	Cow	gummimattenkaufen\.de
 1737726228	Cow	networthsources\.com
 1737726715	Cow	roosters\.bet
+1737731571	Jeff Schaller	tastycookingblog\.com
