@@ -70405,3 +70405,4 @@
 1737719090	VLAZ	candlik\.com
 1737719675	Jeff Schaller	contus\.com
 1737720972	VLAZ	willantech\.com
+1737721390	Jeff Schaller	thewhitelistedestates\.in
