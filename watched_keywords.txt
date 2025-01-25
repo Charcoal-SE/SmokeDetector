@@ -70426,3 +70426,4 @@
 1737786493	Cow	booking[\W_]*+without[\W_]*+penalty
 1737786583	Cow	thinkster\.in
 1737786608	Cow	best[\W_]*+deals[\W_]*+on
+1737788690	Nisse Engström	jjavaburn\.com
