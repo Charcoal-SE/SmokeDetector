@@ -70424,3 +70424,4 @@
 1737759608	Jeff Schaller	portalltechus\.com
 1737786229	Cow	rocacookware\.com
 1737786493	Cow	booking[\W_]*+without[\W_]*+penalty
+1737786583	Cow	thinkster\.in
