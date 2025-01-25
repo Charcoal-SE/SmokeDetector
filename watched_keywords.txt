@@ -70439,3 +70439,4 @@
 1737807029	Cow	trendoye\.com
 1737811734	Cow	urlendcodedecode\.com
 1737812100	Cow	jcijjhagnmfocfhdeojadibbmndplibm(?# Chrome web store)
+1737812109	Cow	tempmail\.pk
