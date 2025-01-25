@@ -70441,3 +70441,4 @@
 1737812100	Cow	jcijjhagnmfocfhdeojadibbmndplibm(?# Chrome web store)
 1737812109	Cow	tempmail\.pk
 1737813833	VLAZ	traffikboosters\.com
+1737815041	Cow	(?-i:anonymousontopp)(?#t.me)
