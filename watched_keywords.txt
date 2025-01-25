@@ -70446,4 +70446,3 @@
 1737815607	Cow	biolink\.info
 1737815615	Cow	linkin\.bio
 1737815623	Cow	(?-i:kitabet138gacor\/)(?#heylink.me)
-1737815635	Cow	gravatar\.com
