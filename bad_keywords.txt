@@ -3281,3 +3281,4 @@ Expedia[\W_]*+for[\W_]*+free
 grace[\W_]*+period[\W_]*+for[\W_]*+expedia
 priceline.{0,20}(?:(?:give|give[\W_]*+you[\W_]*+a)[\W_]*+refunds?+|price[\W_]*+drops?+|flexible[\W_]*+cancellation|(?:cancellation|refund)[\W_]*+policy|refund[\W_]*+if[\W_]*+(?:price[\W_]*+drops|you[\W_]*+cancel)|refundable|good[\W_]*+with[\W_]*+refunds?+)
 customer[\W_]*+support[\W_]*+directly[\W_]*+at
+fully[\W_]*+refundable[\W_]*+property
