@@ -70427,3 +70427,4 @@
 1737786608	Cow	best[\W_]*+deals[\W_]*+on
 1737788690	Nisse Engström	jjavaburn\.com
 1737790024	Cow	cryptominerbros\.com
+1737790185	Cow	require[\W_]*+an[\W_]*+additional[\W_]*+fee
