@@ -70428,3 +70428,4 @@
 1737788690	Nisse Engström	jjavaburn\.com
 1737790024	Cow	cryptominerbros\.com
 1737790185	Cow	require[\W_]*+an[\W_]*+additional[\W_]*+fee
+1737790683	Cow	technonutty\.com
