@@ -70430,3 +70430,4 @@
 1737790185	Cow	require[\W_]*+an[\W_]*+additional[\W_]*+fee
 1737790683	Cow	technonutty\.com
 1737791075	Cow	(?:cómo|como)[\W_]*+hacer[\W_]*+una[\W_]*+(?:reclamación|reclamacion)[\W_]*+a
+1737797101	VLAZ	neevilas\.in
