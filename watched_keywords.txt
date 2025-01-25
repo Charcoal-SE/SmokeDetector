@@ -70456,3 +70456,4 @@
 1737827035	VLAZ	apkallgame\.com
 1737829092	VLAZ	spell-check-game\.online
 1737833114	VLAZ	alameenpartners\.com
+1737838262	VLAZ	kavramsalmakaleler\.net\.tr
