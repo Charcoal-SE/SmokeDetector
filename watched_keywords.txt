@@ -70438,3 +70438,4 @@
 1737806147	Jeff Schaller	devkabir\.com
 1737807029	Cow	trendoye\.com
 1737811734	Cow	urlendcodedecode\.com
+1737812050	Cow	chromewebstore\.google\.com
