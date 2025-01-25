@@ -70434,3 +70434,4 @@
 1737800785	Cow	(?:jetblue|justfly|allegiant|aeromexico|latam).{0,30}(?:cancellation|free|charge|change|return|full|fully|allow|flights?+|cancel|without|have|refundable|refund|actually|services?+)[\W_]*+(?:fees?+|policy|cancellation|plan|refund|refundable|name[\W_]*+change|to[\W_]*+other[\W_]*+person|a[\W_]*+penalty|a[\W_]*+grace|for[\W_]*+cancellation|a[\W_]*+24[\W_]*+hour|give[\W_]*+refunds?+|us)
 1737801927	Cow	universalavsolutions\.com
 1737803636	VLAZ	pro-zone\.xyz
+1737806123	Jeff Schaller	vibecrafts\.com
