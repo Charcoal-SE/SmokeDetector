@@ -70431,3 +70431,4 @@
 1737790683	Cow	technonutty\.com
 1737791075	Cow	(?:cómo|como)[\W_]*+hacer[\W_]*+una[\W_]*+(?:reclamación|reclamacion)[\W_]*+a
 1737797101	VLAZ	neevilas\.in
+1737800785	Cow	(?:jetblue|justfly|allegiant|aeromexico|latam).{0,30}(?:cancellation|free|charge|change|return|full|fully|allow|flights?+|cancel|without|have|refundable|refund|actually|services?+)[\W_]*+(?:fees?+|policy|cancellation|plan|refund|refundable|name[\W_]*+change|to[\W_]*+other[\W_]*+person|a[\W_]*+penalty|a[\W_]*+grace|for[\W_]*+cancellation|a[\W_]*+24[\W_]*+hour|give[\W_]*+refunds?+|us)
