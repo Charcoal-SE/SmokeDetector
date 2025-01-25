@@ -3283,3 +3283,4 @@ priceline.{0,20}(?:(?:give|give[\W_]*+you[\W_]*+a)[\W_]*+refunds?+|price[\W_]*+d
 customer[\W_]*+support[\W_]*+directly[\W_]*+at
 fully[\W_]*+refundable[\W_]*+property
 how[\W_]*+do[\W_]*+i[\W_]*+complain[\W_]*+to[\W_]*+flipkart
+money[\W_]*+back[\W_]*+from[\W_]*+priceline
