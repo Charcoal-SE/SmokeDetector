@@ -70473,3 +70473,4 @@
 1737911840	Cow	lucky101\.online
 1737914429	Jeff Schaller	cloudsdubai\.com
 1737914665	Cow	(?:recover|recovered).{0,20}(?:stolen|missing|lost|scammed|suspended).{0,20}bitcoin
+1737928482	Jeff Schaller	Xiaospyplatform
