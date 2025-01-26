@@ -3288,3 +3288,4 @@ can[\W_]*+i[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+on[\W_]*+priceline
 how[\W_]*+do[\W_]*+i[\W_]*+dispute[\W_]*+with[\W_]*+expedia
 (?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:airlines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa)
 IndWin7
+price[\W_]*+drop[\W_]*+claims
