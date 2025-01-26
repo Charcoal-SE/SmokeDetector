@@ -70462,3 +70462,4 @@
 1737877782	VLAZ	tnnewsbox\.com
 1737877882	VLAZ	(?-i:42t0FAQ)(?#bit.ly)
 1737877931	VLAZ	simcitybuilditapp\.com
+1737878350	Cow	priceline[\W_]*+offers
