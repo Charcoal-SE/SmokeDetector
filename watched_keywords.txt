@@ -70475,3 +70475,4 @@
 1737914665	Cow	(?:recover|recovered).{0,20}(?:stolen|missing|lost|scammed|suspended).{0,20}bitcoin
 1737928482	Jeff Schaller	Xiaospyplatform
 1737944996	Jeff Schaller	rent-mimi\.com
+1737953488	Cow	biwholesale\.com
