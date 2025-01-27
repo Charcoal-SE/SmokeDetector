@@ -3290,3 +3290,4 @@ how[\W_]*+do[\W_]*+i[\W_]*+dispute[\W_]*+with[\W_]*+expedia
 IndWin7
 price[\W_]*+drop[\W_]*+claims
 wrong[\W_]*+number.{0,10}phone[\W_]*+pe
+expedia[\W_]*+do[\W_]*+refundable[\W_]*+tickets
