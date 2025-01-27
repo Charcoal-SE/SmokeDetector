@@ -70497,3 +70497,4 @@
 1737965046	VLAZ	abudhabi-desert-safari\.com
 1737968295	VLAZ	ecohome\.md
 1737969655	Cow	punzify\.com
+1737969927	Cow	techbisen\.com
