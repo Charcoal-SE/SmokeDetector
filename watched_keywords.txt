@@ -70485,3 +70485,4 @@
 1737959730	Cow	koreanhomee\.com
 1737960563	Cow	nexevo\.in
 1737960623	Cow	what[\W_]*+fees[\W_]*+does[\W_]*+expedia[\W_]*+charge
+1737961014	Cow	(?-i:getgreenwarein)(?#Domains)
