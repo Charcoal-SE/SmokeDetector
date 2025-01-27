@@ -70488,3 +70488,4 @@
 1737961014	Cow	(?-i:getgreenwarein)(?#Domains)
 1737961696	VLAZ	maxlead\.in
 1737962771	VLAZ	thecodevision\.com
+1737962791	VLAZ	lexiconmile\.com
