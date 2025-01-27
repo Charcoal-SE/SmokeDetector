@@ -70512,3 +70512,4 @@
 1737980621	VLAZ	dmxlogistics\.ae
 1737983293	Jeff Schaller	dynamicssmartz\.com
 1737983326	Jeff Schaller	plumberservices-kuwait\.com
+1737983371	Jeff Schaller	alazezia8080\.click
