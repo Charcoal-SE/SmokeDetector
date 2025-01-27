@@ -70501,3 +70501,4 @@
 1737970222	Cow	globeflytrips\.com
 1737970861	Cow	find[\W_]*+a[\W_]*+better[\W_]*+price[\W_]*+within
 1737971242	VLAZ	nextgenroto\.com\.au
+1737971656	VLAZ	padelprofideutschland\.de
