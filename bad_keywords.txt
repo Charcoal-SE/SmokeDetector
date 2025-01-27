@@ -3294,3 +3294,4 @@ expedia[\W_]*+do[\W_]*+refundable[\W_]*+tickets
 borrow[\W_]*+from[\W_]*+cash[\W_]*+app
 finlandia[\W_]*+loan
 get[\W_]*+a[\W_]*+human[\W_]*+at[\W_]*+expedia
+expedia[\W_]*+really[\W_]*+refundable
