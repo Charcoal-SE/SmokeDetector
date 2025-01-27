@@ -70504,3 +70504,4 @@
 1737971656	VLAZ	padelprofideutschland\.de
 1737972881	VLAZ	hair-transplant-clinics\.co\.uk
 1737974132	VLAZ	register[\W_]*+karo(?!\.in(?<=registerkaro\.in))
+1737974164	VLAZ	diettox\.com
