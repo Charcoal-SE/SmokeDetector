@@ -3293,3 +3293,4 @@ wrong[\W_]*+number.{0,10}phone[\W_]*+pe
 expedia[\W_]*+do[\W_]*+refundable[\W_]*+tickets
 borrow[\W_]*+from[\W_]*+cash[\W_]*+app
 finlandia[\W_]*+loan
+get[\W_]*+a[\W_]*+human[\W_]*+at[\W_]*+expedia
