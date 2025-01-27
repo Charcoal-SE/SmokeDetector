@@ -70506,3 +70506,4 @@
 1737974132	VLAZ	register[\W_]*+karo(?!\.in(?<=registerkaro\.in))
 1737974164	VLAZ	diettox\.com
 1737977411	VLAZ	stagesync\.com\.au
+1737979148	VLAZ	sahibafabricator\.com
