@@ -70538,3 +70538,4 @@
 1738052070	VLAZ	luxor\.in
 1738052702	Cow	solskenenergy\.com
 1738054138	VLAZ	skyappzacademy\.com
+1738054625	Cow	📱
