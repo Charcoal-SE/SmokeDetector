@@ -70552,3 +70552,4 @@
 1738060763	VLAZ	slimfit\.health
 1738061721	VLAZ	apkvictory\.net
 1738063552	Jeff Schaller	papamango\.net
+1738066357	VLAZ	kanz-ul-madaris\.org
