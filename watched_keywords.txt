@@ -70547,3 +70547,4 @@
 1738057560	VLAZ	revopsglobal\.com
 1738057735	VLAZ	magicine[\W_]*+pharma(?!\.com(?<=magicinepharma\.com))
 1738057968	VLAZ	urbanteamhomes\.com
+1738058675	VLAZ	nextshopz\.com
