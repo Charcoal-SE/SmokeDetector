@@ -70541,3 +70541,4 @@
 1738054625	Cow	📱
 1738054670	Cow	rank-revolution\.com
 1738056303	VLAZ	sbwayout\.com
+1738056333	VLAZ	sb[\W_]*+wayout(?!\.com(?<=sbwayout\.com))
