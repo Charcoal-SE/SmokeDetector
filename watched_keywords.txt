@@ -70545,3 +70545,4 @@
 1738056494	VLAZ	paydayloanseloanwarehouse\.com\.co
 1738056844	VLAZ	bagwaninterior\.com
 1738057560	VLAZ	revopsglobal\.com
+1738057735	VLAZ	magicine[\W_]*+pharma(?!\.com(?<=magicinepharma\.com))
