@@ -70532,3 +70532,4 @@
 1738050584	Cow	immunosciences\.in
 1738050863	Cow	databasetown\.com
 1738051396	VLAZ	essentialsofficial\.de
+1738051588	VLAZ	certifiedtranslationservice\.in
