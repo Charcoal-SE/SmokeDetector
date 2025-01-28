@@ -70530,3 +70530,4 @@
 1738045513	VLAZ	blog\.thegamersmall\.com
 1738047506	VLAZ	ranimeyyammaihostel\.org
 1738050584	Cow	immunosciences\.in
+1738050863	Cow	databasetown\.com
