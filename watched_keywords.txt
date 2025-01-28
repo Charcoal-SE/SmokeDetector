@@ -70544,3 +70544,4 @@
 1738056333	VLAZ	sb[\W_]*+wayout(?!\.com(?<=sbwayout\.com))
 1738056494	VLAZ	paydayloanseloanwarehouse\.com\.co
 1738056844	VLAZ	bagwaninterior\.com
+1738057560	VLAZ	revopsglobal\.com
