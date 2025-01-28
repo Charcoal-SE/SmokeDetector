@@ -70548,3 +70548,4 @@
 1738057968	VLAZ	urbanteamhomes\.com
 1738058675	VLAZ	nextshopz\.com
 1738059610	VLAZ	(?-i:mozpkcom)(?#Domains)
+1738060442	VLAZ	asuslog\.com
