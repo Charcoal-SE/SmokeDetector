@@ -70534,3 +70534,4 @@
 1738051396	VLAZ	essentialsofficial\.de
 1738051588	VLAZ	certifiedtranslationservice\.in
 1738051944	VLAZ	Elizabeth[\W_]*+Park
+1738051993	VLAZ	kmwpodiatry\.com\.au
