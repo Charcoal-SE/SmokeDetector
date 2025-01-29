@@ -70585,3 +70585,4 @@
 1738142248	VLAZ	unirely\.com
 1738143443	Cow	vignataivfcenter\.com
 1738144300	Cow	publiixsurveey\.cfd
+1738145246	Cow	soporte[\W_]*+en[\W_]*+(?:línea|linea)
