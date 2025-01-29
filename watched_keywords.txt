@@ -70568,3 +70568,4 @@
 1738122629	Dan Getz	thepointcatford\.org\.uk
 1738131616	VLAZ	raybittechnologies\.com
 1738131635	VLAZ	utmlink\.io
+1738131895	VLAZ	vsureconsultancy\.com
