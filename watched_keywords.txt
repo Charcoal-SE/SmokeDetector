@@ -70583,3 +70583,4 @@
 1738138798	Cow	hacked[\W_]*+my[\W_]*+facebook
 1738139820	Cow	for[\W_]*+assistance[\W_]*+you[\W_]*+can[\W_]*+contact
 1738142248	VLAZ	unirely\.com
+1738143443	Cow	vignataivfcenter\.com
