@@ -70578,3 +70578,4 @@
 1738135155	Cow	at[\W_]*+priceline
 1738135183	Cow	what[\W_]*+does[\W_]*+flexible[\W_]*+cancellation[\W_]*+mean
 1738137284	Cow	frontendzone\.com
+1738137769	Cow	customer[\W_]*+service[\W_]*+by[\W_]*+calling
