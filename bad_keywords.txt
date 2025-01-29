@@ -3297,3 +3297,4 @@ get[\W_]*+a[\W_]*+human[\W_]*+at[\W_]*+expedia
 expedia[\W_]*+really[\W_]*+refundable
 how[\W_]*+to[\W_]*+escalate[\W_]*+an[\W_]*+issue[\W_]*+with[\W_]*+expedia
 Xiaospyplatform
+the[\W_]*+refundable[\W_]*+mean[\W_]*+on
