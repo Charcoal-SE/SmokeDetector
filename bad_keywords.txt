@@ -3300,3 +3300,4 @@ Xiaospyplatform
 the[\W_]*+refundable[\W_]*+mean[\W_]*+on
 support.{0,10}care[\W_]*+no
 lot[\W_]*+contact[\W_]*+center
+BESTCC50
