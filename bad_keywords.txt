@@ -3302,3 +3302,4 @@ support.{0,10}care[\W_]*+no
 lot[\W_]*+contact[\W_]*+center
 BESTCC50
 facebook\.com/hacked[\W_]*+immediately
+facebook[\W_]*+support[\W_]*+to[\W_]*+get[\W_]*+my[\W_]*+account[\W_]*+back
