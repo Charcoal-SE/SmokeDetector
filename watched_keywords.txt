@@ -70587,3 +70587,4 @@
 1738144300	Cow	publiixsurveey\.cfd
 1738145246	Cow	soporte[\W_]*+en[\W_]*+(?:línea|linea)
 1738145374	Cow	insightscaremagazine\.com
+1738145451	Cow	call[\W_]*+their[\W_]*+customer[\W_]*+service[\W_]*+at
