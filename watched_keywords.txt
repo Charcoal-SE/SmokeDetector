@@ -70595,3 +70595,4 @@
 1738150051	Cow	pbc88login-live\.com
 1738153832	Cow	tristatewaterproofing\.net
 1738155666	Cow	fmwatasa\.com
+1738156209	Cow	(?-i:oemn4w)(?# wa.link)
