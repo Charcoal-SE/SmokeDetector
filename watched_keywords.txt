@@ -70602,3 +70602,4 @@
 1738160247	Cow	have[\W_]*+a[\W_]*+refund[\W_]*+policy
 1738161469	VLAZ	suomiasiakaspalveluyhteystiedot\.com
 1738169246	ipodtouch0218	benenatifootcare\.com
+1738171517	Jeff Schaller	gearthrust\.com
