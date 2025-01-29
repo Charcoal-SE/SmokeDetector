@@ -70588,3 +70588,4 @@
 1738145374	Cow	insightscaremagazine\.com
 1738145451	Cow	call[\W_]*+their[\W_]*+customer[\W_]*+service[\W_]*+at
 1738145606	Cow	onelanesolution\.com
+1738146845	VLAZ	(?-i:1dszkUuqFFzwsQBmcVsGFF3ySIS4xHQ_E3OcMAvQnYQs)(?# Google doc)
