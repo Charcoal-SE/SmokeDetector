@@ -70592,3 +70592,4 @@
 1738149037	Cow	fintaxadvisory\.ae
 1738149309	Cow	rigpower\.ae
 1738149938	VLAZ	(?-i:Breedcoins)(?#t.me)
+1738150051	Cow	pbc88login-live\.com
