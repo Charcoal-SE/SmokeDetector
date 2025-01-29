@@ -70572,3 +70572,4 @@
 1738131959	VLAZ	vsure[\W_]*+consultancy(?!\.com(?<=vsureconsultancy\.com))
 1738132236	VLAZ	tbapk\.com
 1738134265	Dragonrage	softsvault\.viajes
+1738134382	VLAZ	jploft\.com
