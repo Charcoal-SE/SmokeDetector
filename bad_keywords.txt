@@ -3309,4 +3309,3 @@ facebook[\W_]*+about[\W_]*+a[\W_]*+hacked[\W_]*+account
 flexible[\W_]*+cancellation[\W_]*+typically[\W_]*+refers
 best[\W_]*+ways[\W_]*+to[\W_]*+rech
 draftkings[\W_]*+support[\W_]*+number
-flexible[\W_]*+cancellation[\W_]*+at[\W_]*+priceline
