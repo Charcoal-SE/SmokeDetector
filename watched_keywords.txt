@@ -70600,4 +70600,3 @@
 1738157798	VLAZ	zetlandcomputer\.com\.au
 1738158399	VLAZ	breed[\W_]*+coins
 1738160247	Cow	have[\W_]*+a[\W_]*+refund[\W_]*+policy
-1738160565	VLAZ	vstellar\.io
