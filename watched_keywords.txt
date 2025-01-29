@@ -70591,3 +70591,4 @@
 1738146845	VLAZ	(?-i:1dszkUuqFFzwsQBmcVsGFF3ySIS4xHQ_E3OcMAvQnYQs)(?# Google doc)
 1738149037	Cow	fintaxadvisory\.ae
 1738149309	Cow	rigpower\.ae
+1738149938	VLAZ	(?-i:Breedcoins)(?#t.me)
