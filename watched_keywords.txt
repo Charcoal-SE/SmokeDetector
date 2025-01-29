@@ -70581,3 +70581,4 @@
 1738137769	Cow	customer[\W_]*+service[\W_]*+by[\W_]*+calling
 1738138534	Dragonrage	shrichyawanayurved\.com
 1738138798	Cow	hacked[\W_]*+my[\W_]*+facebook
+1738138975	Dragonrage	meta\.com
