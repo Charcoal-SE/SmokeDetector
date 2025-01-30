@@ -3316,3 +3316,4 @@ what[\W_]*+is[\W_]*+(?:expedia[\W_]*+s|expedias?+)[\W_]*+change[\W_]*+policy
 non[\W_]*+refundable[\W_]*+in[\W_]*+expedia
 expert[\W_]*+assistance[\W_]*+anytime
 cancellation[\W_]*+fee[\W_]*+within[\W_]*+24[\W_]*+hours
+fully[\W_]*+refundable[\W_]*+mean[\W_]*+on
