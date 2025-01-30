@@ -70621,3 +70621,4 @@
 1738223895	VLAZ	indtrakcer\.com
 1738224236	VLAZ	ridalubs\.com
 1738224844	VLAZ	sumarfitness\.com
+1738225207	Cow	cheapest[\W_]*+day[\W_]*+to[\W_]*+buy[\W_]*+tickets[\W_]*+on
