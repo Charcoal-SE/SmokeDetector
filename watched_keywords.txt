@@ -70626,3 +70626,4 @@
 1738227956	VLAZ	pinkman\.ae
 1738228156	VLAZ	kasper[\W_]*+infotech(?!\.org(?<=kasperinfotech\.org))
 1738229305	VLAZ	sattvacity\.info
+1738230530	VLAZ	clinthora\.com
