@@ -70633,3 +70633,4 @@
 1738240304	VLAZ	(?-i:xvFZjo5PgG0)(?#youtube rickroll)
 1738241146	VLAZ	creative[\W_]*+media[\W_]*+house(?!\.ae(?<=creativemediahouse\.ae))
 1738241363	VLAZ	factorforyou\.com
+1738241761	Dragonrage	shedsandfence\.co\.uk
