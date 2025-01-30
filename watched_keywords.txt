@@ -70617,3 +70617,4 @@
 1738221528	Dragonrage	mitolyn\.com
 1738221638	VLAZ	us-mitolyen\.com
 1738221742	VLAZ	mitolyn(?!\.com)(?# weight loss supplement)
+1738223739	VLAZ	esseindia\.com
