@@ -70625,3 +70625,4 @@
 1738227352	Robert Longson	yorifoods\.com
 1738227360	VLAZ	trueassetsconsultancy\.com
 1738227956	VLAZ	pinkman\.ae
+1738228156	VLAZ	kasper[\W_]*+infotech(?!\.org(?<=kasperinfotech\.org))
