@@ -70618,3 +70618,4 @@
 1738221638	VLAZ	us-mitolyen\.com
 1738221742	VLAZ	mitolyn(?!\.com)(?# weight loss supplement)
 1738223739	VLAZ	esseindia\.com
+1738223895	VLAZ	indtrakcer\.com
