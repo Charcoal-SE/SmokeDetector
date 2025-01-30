@@ -70620,3 +70620,4 @@
 1738223739	VLAZ	esseindia\.com
 1738223895	VLAZ	indtrakcer\.com
 1738224236	VLAZ	ridalubs\.com
+1738224844	VLAZ	sumarfitness\.com
