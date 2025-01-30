@@ -70623,3 +70623,4 @@
 1738224844	VLAZ	sumarfitness\.com
 1738225207	Cow	cheapest[\W_]*+day[\W_]*+to[\W_]*+buy[\W_]*+tickets[\W_]*+on
 1738227352	Robert Longson	yorifoods\.com
+1738227360	VLAZ	trueassetsconsultancy\.com
