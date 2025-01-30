@@ -70634,3 +70634,4 @@
 1738241146	VLAZ	creative[\W_]*+media[\W_]*+house(?!\.ae(?<=creativemediahouse\.ae))
 1738241363	VLAZ	factorforyou\.com
 1738241761	Dragonrage	shedsandfence\.co\.uk
+1738242039	VLAZ	beastfitclub\.com
