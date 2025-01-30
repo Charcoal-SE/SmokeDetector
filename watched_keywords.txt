@@ -41112,7 +41112,6 @@
 1659743312	cigien	yazilimdnyasi\.wordpress\.com
 1659743449	cigien	cashlootera\.com
 1659743558	cigien	dogbraces\.net
-1659745043	Jeff Schaller	(?-i:xvFZjo5PgG0)(?#youtube)
 1659759572	cocomac	rndsoftech\.com
 1659764429	Makyen	academy\.akaybee\.com
 1659799856	Makyen	needinhome\.com
