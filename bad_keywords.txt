@@ -3325,3 +3325,4 @@ how[\W_]*+do[\W_]*+i[\W_]*+get[\W_]*+a[\W_]*+human[\W_]*+on
 ^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:get[\W_]*+a[\W_]*+human[\W_]*+on|grace[\W_]*+period|hacked[\W_]*+on|open[\W_]*+on[\W_]*+24[\W_]*+7|escalate[\W_]*+a[\W_]*+complaint[\W_]*+on)
 ^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:fully[\W_]*+refundable|get[\W_]*+a[\W_]*+refund[\W_]*+from|refundable[\W_]*+(?:option|policy)|refund[\W_]*+your[\W_]*+money|non[\W_]*+refundable|refund[\W_]*+if[\W_]*+price[\W_]*+drops?+|give[\W_]*+me[\W_]*+a[\W_]*+refund)
 supporting[\W_]*+24[\W_]*+7
+fully[\W_]*+24[\W_]*+7[\W_]*+platform
