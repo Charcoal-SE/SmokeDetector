@@ -3318,3 +3318,4 @@ expert[\W_]*+assistance[\W_]*+anytime
 cancellation[\W_]*+fee[\W_]*+within[\W_]*+24[\W_]*+hours
 fully[\W_]*+refundable[\W_]*+mean[\W_]*+on
 how[\W_]*+to[\W_]*+escalate[\W_]*+(?:a[\W_]*+complaint|an[\W_]*+issue)[\W_]*+with
+how[\W_]*+to[\W_]*+escalate[\W_]*+a.{0,15}airlines?+[\W_]*+complaint
