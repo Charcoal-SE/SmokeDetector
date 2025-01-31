@@ -70671,3 +70671,4 @@
 1738340493	VLAZ	350ppm\.co\.uk
 1738341501	Cow	(?:cómo|como)[\W_]*+me[\W_]*+comunico[\W_]*+con
 1738343207	Cow	tutordoctor\.ae
+1738344956	Jeff Schaller	automationqa\.co
