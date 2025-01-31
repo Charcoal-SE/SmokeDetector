@@ -3321,4 +3321,3 @@ how[\W_]*+to[\W_]*+escalate[\W_]*+(?:a[\W_]*+complaint|an[\W_]*+issue)[\W_]*+wit
 how[\W_]*+to[\W_]*+escalate[\W_]*+a.{0,15}airlines?+[\W_]*+complaint
 how[\W_]*+do[\W_]*+i[\W_]*+get[\W_]*+a[\W_]*+human[\W_]*+on
 ^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,30}24[\W_]*+hour[\W_]*+rule
-^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,30}(?:(?:free|flexible|charge[\W_]*+for)[\W_]*+cancellation|fully[\W_]*+refundable|cancellation[\W_]*+(?:fees?+|plan|policy))
