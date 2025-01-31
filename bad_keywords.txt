@@ -3328,3 +3328,4 @@ supporting[\W_]*+24[\W_]*+7
 fully[\W_]*+24[\W_]*+7[\W_]*+platform
 check[\W_]*+for[\W_]*+special[\W_]*+promotions
 cheapest[\W_]*+months?+[\W_]*+to[\W_]*+cruise
+how[\W_]*+much[\W_]*+is[\W_]*+the[\W_]*+penalty[\W_]*+fee[\W_]*+in
