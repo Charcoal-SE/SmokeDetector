@@ -70673,3 +70673,4 @@
 1738344956	Jeff Schaller	automationqa\.co
 1738345645	Dragonrage	newnetsa\.com
 1738346077	Fastnlight	teenpattilucky\.online
+1738355029	Cow	does[\W_]*+royal[\W_]*+caribbean[\W_]*+charge[\W_]*+for[\W_]*+name[\W_]*+change
