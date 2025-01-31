@@ -70672,3 +70672,4 @@
 1738341501	Cow	(?:cómo|como)[\W_]*+me[\W_]*+comunico[\W_]*+con
 1738343207	Cow	tutordoctor\.ae
 1738344956	Jeff Schaller	automationqa\.co
+1738345645	Dragonrage	newnetsa\.com
