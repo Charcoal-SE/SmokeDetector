@@ -1114,7 +1114,7 @@ def check_numbers(s, numlist, numlist_normalized=None):
         return False, ''
 
 
-@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
+@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=False)
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
@@ -1123,7 +1123,7 @@ def check_blacklisted_numbers(s, site):
     )
 
 
-@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True,
+@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=False,
              rule_id="potentially bad phone number")
 def check_watched_numbers(s, site):
     return check_numbers(
