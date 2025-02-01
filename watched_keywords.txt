@@ -70686,3 +70686,4 @@
 1738397946	Cow	mabhattilaw\.com
 1738398104	Cow	risk[\W_]*+free[\W_]*+cancellation
 1738401353	Cow	cartopinfo\.com
+1738406929	Nisse Engström	firstwatchh\.com
