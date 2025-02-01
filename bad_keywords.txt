@@ -3332,3 +3332,4 @@ how[\W_]*+much[\W_]*+is[\W_]*+the[\W_]*+penalty[\W_]*+fee[\W_]*+in
 how[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+royal[\W_]*+jordanian[\W_]*+from[\W_]*+the
 ^booking[\W_]*+(?:teléfono|telefono|asistant)
 how[\W_]*+to[\W_]*+refund[\W_]*+a[\W_]*+rj[\W_]*+ticket
+(?:do|does)[\W_]*+(?:air|expedia|copa|priceline|frontier|british[\W_]*+airways?+).{0,15}give[\W_]*+refunds?+
