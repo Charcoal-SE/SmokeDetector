@@ -70683,3 +70683,4 @@
 1738393821	VLAZ	phantomchromextension\.com
 1738394325	VLAZ	HikeMyTraffic
 1738396581	Cow	apeirosolutions\.com
+1738397946	Cow	mabhattilaw\.com
