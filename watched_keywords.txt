@@ -70687,3 +70687,4 @@
 1738398104	Cow	risk[\W_]*+free[\W_]*+cancellation
 1738401353	Cow	cartopinfo\.com
 1738406929	Nisse Engström	firstwatchh\.com
+1738408812	double-beep	easywaybd\.com
