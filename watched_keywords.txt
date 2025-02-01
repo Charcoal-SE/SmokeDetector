@@ -70682,3 +70682,4 @@
 1738393686	VLAZ	(?-i:maps\/CV3rJ2R8tedTzvfq9)(?#goo.gl)
 1738393821	VLAZ	phantomchromextension\.com
 1738394325	VLAZ	HikeMyTraffic
+1738396581	Cow	apeirosolutions\.com
