@@ -5685,7 +5685,8 @@ items:
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- comment: nxdomain 2023-11-07; enabled again 2024-10-18
+- comment: nxdomain 2023-11-07; enabled again 2024-10-18; re-disabled 2025-02-01
+  disable: true
   ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
