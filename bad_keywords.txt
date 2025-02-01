@@ -3337,3 +3337,4 @@ how[\W_]*+to[\W_]*+refund[\W_]*+a[\W_]*+rj[\W_]*+ticket
 (?:cuál|cual)[\W_]*+es[\W_]*+el[\W_]*+(?:teléfono|telefono)[\W_]*+de
 if[\W_]*+you[\W_]*+cancel[\W_]*+a[\W_]*+cruise
 cancel[\W_]*+a[\W_]*+royal[\W_]*+caribbean[\W_]*+cruise
+what[\W_]*+is[\W_]*+the[\W_]*+(?:spirits?+|priceline)[\W_]*+refund[\W_]*+policy
