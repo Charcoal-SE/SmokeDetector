@@ -70677,3 +70677,4 @@
 1738356284	Cow	the[\W_]*+cheapest[\W_]*+days?+[\W_]*+to[\W_]*+fly[\W_]*+on
 1738369970	Fastnlight	ogogmikes
 1738388964	Spevacus	cmrschoolkompally\.com
+1738392898	VLAZ	(?-i:3Ci0e1S)(?#bit.ly)
