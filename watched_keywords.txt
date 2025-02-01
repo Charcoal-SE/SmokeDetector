@@ -70695,3 +70695,4 @@
 1738427879	Cow	zerodeepseek\.com
 1738428568	Jeff Schaller	allin1dallas\.com
 1738428821	Cow	does.{0,20}have[\W_]*+refundable[\W_]*+deposits
+1738433452	Cow	contact[\W_]*+facebook[\W_]*+support
