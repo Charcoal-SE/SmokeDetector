@@ -3303,7 +3303,6 @@ BESTCC50
 facebook\.com/hacked[\W_]*+immediately
 facebook[\W_]*+support[\W_]*+to[\W_]*+get[\W_]*+my[\W_]*+account[\W_]*+back
 facebook[\W_]*+about[\W_]*+a[\W_]*+hacked[\W_]*+account
-(?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:airlines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart)
 (?:teléfono|telefono)[\W_]*+de[\W_]*+(?:atención|atencion)
 (?:cómo|como)[\W_]*+hago[\W_]*+una[\W_]*+pregunta[\W_]*+en
 flexible[\W_]*+cancellation[\W_]*+typically[\W_]*+refers
