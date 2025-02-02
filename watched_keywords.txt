@@ -70712,3 +70712,4 @@
 1738514261	Cow	chadwickmusic\.co\.uk
 1738516298	Cow	devtechera\.com
 1738520500	Cow	totheinnovation\.com
+1738522462	Cow	ti84calculators\.com
