@@ -3342,7 +3342,6 @@ royal[\W_]*+caribbean[\W_]*+customer[\W_]*+service
 hassle[\W_]*+free[\W_]*+service[\W_]*+provided
 give[\W_]*+us[\W_]*+a[\W_]*+call[\W_]*+today
 (?:cómo|como)[\W_]*+puedo[\W_]*+comunicarme[\W_]*+con
-(?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:airlines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz)
 does[\W_]*+coinbase[\W_]*+call[\W_]*+customers
 book[\W_]*+multiple[\W_]*+people[\W_]*+on
 facebook[\W_]*+support[\W_]*+for[\W_]*+account[\W_]*+recovery
