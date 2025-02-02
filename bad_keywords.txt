@@ -3352,3 +3352,4 @@ get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
 (?:qué|que)[\W_]*+tan[\W_]*+(?:rápido|rapido)[\W_]*+realiza[\W_]*+el[\W_]*+reembolso
 (?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:air[\W_]*+lines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz|lufthansa|wingo|delta)
 marca[\W_]*+el[\W_]*+(?:número|numero)[\W_]*+de[\W_]*+(?:atención|atencion)[\W_]*+al[\W_]*+cliente
+^[\W_]*+call[\W_]*+faqs[\W_]*+(?:how[\W_]*+do[\W_]*+i|what[\W_]*+(?:does|is[\W_]*+(?:a|the))|is[\W_]*+expedia)
