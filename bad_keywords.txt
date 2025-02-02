@@ -3349,3 +3349,4 @@ get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
 (?:cómo|como)[\W_]*+comunicarse[\W_]*+con[\W_]*+gol
 (?:cómo|como)[\W_]*+me[\W_]*+comunico[\W_]*+con[\W_]*+wingo
 (?:cómo|como)[\W_]*+ligar[\W_]*+para[\W_]*+a.{0,25}(?:air[\W_]*+lines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz|lufthansa|delta)
+(?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:air[\W_]*+lines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz|lufthansa)
