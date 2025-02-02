@@ -3356,3 +3356,4 @@ marca[\W_]*+el[\W_]*+(?:número|numero)[\W_]*+de[\W_]*+(?:atención|atencion)[\W
 full[\W_]*+refund[\W_]*+guarantee
 daman[\W_]*+games
 hBJlF2664170
+fashion[\W_]*+rupee
