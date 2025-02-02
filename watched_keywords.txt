@@ -70701,3 +70701,4 @@
 1738482249	Nisse Engström	gesimx\.com
 1738482368	Nisse Engström	midasbuy\.com
 1738483254	Cow	edumate\.tv
+1738483262	Cow	getfittrx\.com
