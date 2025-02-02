@@ -3354,3 +3354,4 @@ get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
 marca[\W_]*+el[\W_]*+(?:número|numero)[\W_]*+de[\W_]*+(?:atención|atencion)[\W_]*+al[\W_]*+cliente
 ^[\W_]*+call[\W_]*+faqs[\W_]*+(?:how[\W_]*+do[\W_]*+i|what[\W_]*+(?:does|is[\W_]*+(?:a|the))|is[\W_]*+expedia)
 full[\W_]*+refund[\W_]*+guarantee
+daman[\W_]*+games
