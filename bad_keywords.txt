@@ -3347,3 +3347,4 @@ book[\W_]*+multiple[\W_]*+people[\W_]*+on
 facebook[\W_]*+support[\W_]*+for[\W_]*+account[\W_]*+recovery
 get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
 (?:cómo|como)[\W_]*+comunicarse[\W_]*+con[\W_]*+gol
+(?:cómo|como|para)[\W_]*+llamar[\W_]*+a.{0,25}(?:airlines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz|lufthansa)
