@@ -3347,3 +3347,4 @@ does[\W_]*+coinbase[\W_]*+call[\W_]*+customers
 book[\W_]*+multiple[\W_]*+people[\W_]*+on
 facebook[\W_]*+support[\W_]*+for[\W_]*+account[\W_]*+recovery
 get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
+(?:cómo|como)[\W_]*+comunicarse[\W_]*+con[\W_]*+gol
