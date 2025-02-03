@@ -70722,7 +70722,6 @@
 1738558486	Cow	(?-i:3Em6vtS)(?#bit.ly)
 1738558529	Cow	moon3000\.com
 1738561315	Cow	heatmasterint\.com
-1738564864	VLAZ	himalayansaltexperts\.com
 1738565647	VLAZ	(?-i:b7ulq5)(?#rb.gy)
 1738566603	VLAZ	publicityport\.com
 1738570509	VLAZ	techietrend\.in
