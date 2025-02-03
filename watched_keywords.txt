@@ -70728,3 +70728,4 @@
 1738566603	VLAZ	publicityport\.com
 1738570509	VLAZ	techietrend\.in
 1738576509	VLAZ	tikitrik\.com
+1738576576	VLAZ	jessicafincorp\.com
