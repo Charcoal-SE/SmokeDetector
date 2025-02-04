@@ -3363,3 +3363,4 @@ lot[\W_]*+infolinia[\W_]*+polska
 robinhood[\W_]*+wallet[\W_]*+support
 bdg[\W_]*+game[\W_]*+invite[\W_]*+code
 (?:como|cómo)[\W_]*+ligar[\W_]*+gol[\W_]*+celular
+pro[\W_]*+loan[\W_]*+app
