@@ -3364,3 +3364,4 @@ robinhood[\W_]*+wallet[\W_]*+support
 bdg[\W_]*+game[\W_]*+invite[\W_]*+code
 (?:como|cómo)[\W_]*+ligar[\W_]*+gol[\W_]*+celular
 pro[\W_]*+loan[\W_]*+app
+o[\W_]*+que[\W_]*+significa[\W_]*+klm[\W_]*+no[\W_]*+whatsapp
