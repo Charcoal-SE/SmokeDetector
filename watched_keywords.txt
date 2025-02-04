@@ -70775,3 +70775,4 @@
 1738673675	doppelgreener	geometrydashmeltdown\.io
 1738673687	doppelgreener	blockblast\.org
 1738673914	VLAZ	maatromhrsolution\.com
+1738676062	Cow	studentenring\.de
