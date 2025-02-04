@@ -70763,3 +70763,4 @@
 1738658893	VLAZ	godrejplotindore\.com
 1738665484	VLAZ	datagaps\.com
 1738665608	VLAZ	blix\.in
+1738665655	VLAZ	wirelo\.com
