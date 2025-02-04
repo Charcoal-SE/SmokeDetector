@@ -70771,3 +70771,4 @@
 1738667894	VLAZ	Car[\W_]*+Rental[\W_]*+in[\W_]*+Dehradun
 1738667903	Cow	pestcontrolherbal\.com
 1738668565	Cow	whitecastlesurvey\.buzz
+1738669275	Cow	hugh-aluminum\.com
