@@ -70766,3 +70766,4 @@
 1738665655	VLAZ	wirelo\.com
 1738665670	VLAZ	wirelo(?!\.com)
 1738665825	VLAZ	facebook\.com/groups/1120524462902350
+1738666486	Vickel	bagwaninterior\.tumblr\.com
