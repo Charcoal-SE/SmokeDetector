@@ -70770,3 +70770,4 @@
 1738666674	VLAZ	gulabojaipur\.co
 1738667894	VLAZ	Car[\W_]*+Rental[\W_]*+in[\W_]*+Dehradun
 1738667903	Cow	pestcontrolherbal\.com
+1738668565	Cow	whitecastlesurvey\.buzz
