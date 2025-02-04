@@ -70769,3 +70769,4 @@
 1738666486	Vickel	bagwaninterior\.tumblr\.com
 1738666674	VLAZ	gulabojaipur\.co
 1738667894	VLAZ	Car[\W_]*+Rental[\W_]*+in[\W_]*+Dehradun
+1738667903	Cow	pestcontrolherbal\.com
