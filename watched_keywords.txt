@@ -70761,3 +70761,4 @@
 1738658674	VLAZ	lows-comsurvey\.info
 1738658771	VLAZ	ntpatiledu\.com
 1738658893	VLAZ	godrejplotindore\.com
+1738665484	VLAZ	datagaps\.com
