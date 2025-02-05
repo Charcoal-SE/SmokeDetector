@@ -70810,3 +70810,4 @@
 1738769853	Fastnlight	mallikphotography\.com
 1738771466	ipodtouch0218	onlinebuzz\.in
 1738773885	ipodtouch0218	strapcart\.net
+1738775050	Cow	(?-i:smintsmp)(?#t.me)
