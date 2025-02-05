@@ -70796,4 +70796,3 @@
 1738746735	VLAZ	depressivedating\.com
 1738747339	VLAZ	ma-mathlaulanwarpusat\.sch\.id
 1738749761	VLAZ	miracuves\.com
-1738750443	VLAZ	kairos[\W_]*+tech(?!\.com(kairostech\.com))
