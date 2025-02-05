@@ -70800,3 +70800,4 @@
 1738751958	VLAZ	zionurgentcare\.com
 1738753245	VLAZ	rslhelper\.com
 1738753276	VLAZ	rslhelper(?!\.com)
+1738755185	Jeff Schaller	bullxneoaccesscode\.io
