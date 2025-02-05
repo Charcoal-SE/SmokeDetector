@@ -70789,3 +70789,4 @@
 1738731248	Cow	creationwave\.com
 1738737590	VLAZ	(?-i:berita\-online)(?#heylink.me)
 1738737697	VLAZ	akkadconsultants\.com
+1738739393	VLAZ	gamestoreisb\.com
