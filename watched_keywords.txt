@@ -70823,3 +70823,4 @@
 1738779279	Jeff Schaller	expertsynk\.in
 1738780745	Cow	joinsymbiosis\.com
 1738786069	Cow	what[\W_]*+day[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+to[\W_]*+book
+1738789901	Jeff Schaller	superplug\.in
