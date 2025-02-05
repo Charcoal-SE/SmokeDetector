@@ -70799,3 +70799,4 @@
 1738750465	VLAZ	kairos[\W_]*+tech(?!\.com(?<=kairostech\.com))
 1738751958	VLAZ	zionurgentcare\.com
 1738753245	VLAZ	rslhelper\.com
+1738753276	VLAZ	rslhelper(?!\.com)
