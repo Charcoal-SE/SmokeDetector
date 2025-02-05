@@ -70795,3 +70795,4 @@
 1738746725	VLAZ	claimtime\.com
 1738746735	VLAZ	depressivedating\.com
 1738747339	VLAZ	ma-mathlaulanwarpusat\.sch\.id
+1738749761	VLAZ	miracuves\.com
