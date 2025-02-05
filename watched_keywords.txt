@@ -70815,3 +70815,4 @@
 1738775557	Cow	wongcoupon\.com
 1738775565	Cow	wong-ancestor\.web\.app
 1738775637	Cow	torpedo\.pt
+1738776047	Cow	basarat\.gitbooks\.io
