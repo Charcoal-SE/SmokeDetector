@@ -70802,3 +70802,4 @@
 1738753276	VLAZ	rslhelper(?!\.com)
 1738755185	Jeff Schaller	bullxneoaccesscode\.io
 1738755245	Jeff Schaller	passport-sahayata\.org
+1738755293	Jeff Schaller	ngnetworks\.in
