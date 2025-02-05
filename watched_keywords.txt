@@ -70811,3 +70811,4 @@
 1738771466	ipodtouch0218	onlinebuzz\.in
 1738773885	ipodtouch0218	strapcart\.net
 1738775050	Cow	(?-i:smintsmp)(?#t.me)
+1738775517	Cow	ayudhamabhishek(?:@gmail\.com)?
