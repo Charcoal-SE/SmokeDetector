@@ -70790,3 +70790,4 @@
 1738737590	VLAZ	(?-i:berita\-online)(?#heylink.me)
 1738737697	VLAZ	akkadconsultants\.com
 1738739393	VLAZ	gamestoreisb\.com
+1738740252	VLAZ	elyarsanat\.com
