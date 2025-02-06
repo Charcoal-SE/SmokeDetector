@@ -70845,3 +70845,4 @@
 1738838389	VLAZ	scanbot\.io
 1738838523	Cow	getmycollege\.com
 1738840038	Cow	fancy-jackets\.com
+1738840129	Cow	(?-i:arm0E)(?# hub.me)
