@@ -70850,3 +70850,4 @@
 1738840916	Jeff Schaller	tweakbuzz\.com
 1738841118	VLAZ	silverexchangebank\.org
 1738841514	VLAZ	miracuves(?!\.com)
+1738841924	Cow	clinchsoft\.com
