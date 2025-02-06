@@ -70858,3 +70858,4 @@
 1738843924	Jeff Schaller	trendx\.tech
 1738844001	Jeff Schaller	veecapclasses\.com
 1738844690	VLAZ	interactivemedia\.az
+1738844890	VLAZ	arbys-menus\.com
