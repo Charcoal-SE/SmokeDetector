@@ -3374,3 +3374,4 @@ budget[\W_]*+friendly[\W_]*+options[\W_]*+to[\W_]*+maximize[\W_]*+savings
 phonepe[\W_]*+rahul[\W_]*+kumar
 kucoin[\W_]*+referral[\W_]*+code
 best[\W_]*+referral[\W_]*+codes?+
+bdg[\W_]*+games?+
