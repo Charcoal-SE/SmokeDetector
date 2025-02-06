@@ -70881,3 +70881,4 @@
 1738871743	Cow	mailmergic\.com
 1738872445	Cow	AngelDrain
 1738872456	Cow	Exogator
+1738874644	ipodtouch0218	albertanews\.ca
