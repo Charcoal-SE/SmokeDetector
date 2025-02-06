@@ -70868,3 +70868,4 @@
 1738847993	VLAZ	hohohealth24\.weebly\.com
 1738848161	VLAZ	creditcaptain\.com
 1738848213	VLAZ	ho[\W_]*+ho[\W_]*+health[\W_]*+24
+1738849272	VLAZ	dramagrid\.com
