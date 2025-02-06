@@ -70847,3 +70847,4 @@
 1738840038	Cow	fancy-jackets\.com
 1738840129	Cow	(?-i:arm0E)(?# hub.me)
 1738840774	VLAZ	qppmips\.com
+1738840916	Jeff Schaller	tweakbuzz\.com
