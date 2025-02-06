@@ -70872,4 +70872,3 @@
 1738851507	Jeff Schaller	atulatech\.com
 1738854254	VLAZ	stripchat\.com
 1738854273	Cow	theprozentrechneronline\.de
-1738860371	ipodtouch0218	Kucoin[\W]*+Referral[\W]*+Code
