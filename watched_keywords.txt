@@ -70843,3 +70843,4 @@
 1738834154	Cow	datvetructuyen\.vn
 1738834345	Cow	factosecure\.com
 1738838389	VLAZ	scanbot\.io
+1738838523	Cow	getmycollege\.com
