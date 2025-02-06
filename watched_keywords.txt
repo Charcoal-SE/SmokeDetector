@@ -70841,3 +70841,4 @@
 1738833786	Dan Getz	ubitracer\.com
 1738834141	Cow	mexicanbowl\.ca
 1738834154	Cow	datvetructuyen\.vn
+1738834345	Cow	factosecure\.com
