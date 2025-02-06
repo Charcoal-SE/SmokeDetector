@@ -3372,4 +3372,3 @@ o[\W_]*+que[\W_]*+significa[\W_]*+klm[\W_]*+no[\W_]*+whatsapp
 budget[\W_]*+friendly[\W_]*+options[\W_]*+to[\W_]*+maximize[\W_]*+savings
 ^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}expedia
 phonepe[\W_]*+rahul[\W_]*+kumar
-Kucoin[\W]*+Referral[\W]*+Code
