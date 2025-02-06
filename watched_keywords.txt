@@ -70852,3 +70852,4 @@
 1738841514	VLAZ	miracuves(?!\.com)
 1738841924	Cow	clinchsoft\.com
 1738842196	VLAZ	speakerfixer\.net
+1738842375	Cow	tikdownloader\.uk
