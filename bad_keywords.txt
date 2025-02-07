@@ -3383,3 +3383,4 @@ robinhood[\W_]*+calls?+
 (?:best[\W_]*+way|airlines?+|facebook|cruise|telefono|teléfono|expedia|refunds?+|air[\W_]*+pen|wingo|aa[\W_]*+full|cancellation).{0,50}(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s)
 (?:frontier|knollage|expert[\W_]*+aa|refundable|period[\W_]*+free|alaska|24[\W_]*+hour[\W_]*+rule|wallet|propper|support[\W_]*+number).{0,50}(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s)
 gpay[\W_]*+phonepe[\W_]*+or[\W_]*+other[\W_]*+app
+redirect[\W_]*+(?:to|on)[\W_]*+gpay[\W_]*+phonePe
