@@ -3376,3 +3376,4 @@ best[\W_]*+referral[\W_]*+codes?+
 bdg[\W_]*+games?+
 pleasant[\W_]*+pera[\W_]*+loan
 best[\W_]*+code[\W_]*+for[\W_]*+lifetime
+^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:expedia|airlines?+)
