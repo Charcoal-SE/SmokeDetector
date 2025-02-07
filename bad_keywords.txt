@@ -3370,7 +3370,6 @@ o[\W_]*+que[\W_]*+significa[\W_]*+klm[\W_]*+no[\W_]*+whatsapp
 (?:cómo|como)[\W_]*+puedo[\W_]*+conseguir[\W_]*+un[\W_]*+humano[\W_]*+en
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+agente[\W_]*+en
 budget[\W_]*+friendly[\W_]*+options[\W_]*+to[\W_]*+maximize[\W_]*+savings
-^[\W_]*+(?:faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}expedia
 phonepe[\W_]*+rahul[\W_]*+kumar
 kucoin[\W_]*+referral[\W_]*+code
 best[\W_]*+referral[\W_]*+codes?+
