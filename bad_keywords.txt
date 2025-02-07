@@ -3376,3 +3376,4 @@ bdg[\W_]*+games?+
 pleasant[\W_]*+pera[\W_]*+loan
 best[\W_]*+code[\W_]*+for[\W_]*+lifetime
 ^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:expedia|airlines?+)
+^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:fully[\W_]*+refundable|get[\W_]*+a[\W_]*+refund[\W_]*+from|refundable[\W_]*+(?:option|policy)|refund[\W_]*+your[\W_]*+money|non[\W_]*+refundable|refund[\W_]*+if[\W_]*+price[\W_]*+drops?+|give[\W_]*+me[\W_]*+a[\W_]*+refund)
