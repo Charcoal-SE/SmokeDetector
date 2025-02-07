@@ -70895,3 +70895,4 @@
 1738911733	Cow	1800airtickets\.com
 1738914155	Cow	wurkbook\.com
 1738916098	Cow	airlineofficedetail\.com
+1738916164	Cow	cherryproxy\.com
