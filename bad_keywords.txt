@@ -3375,3 +3375,4 @@ phonepe[\W_]*+rahul[\W_]*+kumar
 kucoin[\W_]*+referral[\W_]*+code
 best[\W_]*+referral[\W_]*+codes?+
 bdg[\W_]*+games?+
+pleasant.{0,20}loan
