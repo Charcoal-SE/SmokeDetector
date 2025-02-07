@@ -3376,3 +3376,4 @@ kucoin[\W_]*+referral[\W_]*+code
 best[\W_]*+referral[\W_]*+codes?+
 bdg[\W_]*+games?+
 pleasant[\W_]*+pera[\W_]*+loan
+dispute[\W_]*+on[\W_]*+Expedia
