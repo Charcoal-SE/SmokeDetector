@@ -3377,3 +3377,4 @@ best[\W_]*+code[\W_]*+for[\W_]*+lifetime
 ^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:get[\W_]*+a[\W_]*+human[\W_]*+on|grace[\W_]*+period|hacked[\W_]*+on|open[\W_]*+on[\W_]*+24[\W_]*+7|escalate[\W_]*+a[\W_]*+complaint[\W_]*+on)
 ^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:(?:free|flexible|charge[\W_]*+for)[\W_]*+cancellation|fully[\W_]*+refundable|cancellation[\W_]*+(?:fees?+|plan|policy))
 ^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}24[\W_]*+hour[\W_]*+rule
+actually[\W_]*+fully[\W_]*+refundable
