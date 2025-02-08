@@ -67315,7 +67315,6 @@
 1728649911	tripleee	sharon[\W_]*+paula
 1728651358	tripleee	(?-i:^Alexis Joey$)
 1728653506	Jeff Schaller	nyasa\.co\.in
-1728654330	Jeff Schaller	osofo\.48hoursolutioncenter(?:@gmail\.com)?
 1728655836	Anerdw	taptobuynow\.com
 1728656350	Anerdw	vtnetzwelt\.com
 1728658471	Fastnlight	vnapkapp\.net
