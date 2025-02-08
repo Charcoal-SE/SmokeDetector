@@ -3386,3 +3386,4 @@ robinhood[\W_]*+calls?+
 dice[\W_]*+dreams?+[\W_]*+(?:free|rolls|cheats)
 91[\W_]*+𝐶𝑙𝑢𝑏[\W_]*+In𝑣ite[\W_]*+Code
 osofo\.48hoursolutioncenter(?:@gmail\.com)?
+get[\W_]*+exclusive[\W_]*+bonus[\W_]*+free
