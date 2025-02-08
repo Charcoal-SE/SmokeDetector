@@ -1225,3 +1225,4 @@ carelab[sz]
 ^28164815845$
 ^ええあうゐるいあん見えドア終えお入れオーあえホヌ医あえういお$
 (?-i:^Green Collect$)
+(?-i:^Seven Rolls of Sushi$)
