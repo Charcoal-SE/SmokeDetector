@@ -70888,7 +70888,6 @@
 1738874644	ipodtouch0218	albertanews\.ca
 1738880171	Jeff Schaller	zoople\.in
 1738883073	Jeff Schaller	limocarride\.com
-1738889893	ipodtouch0218	webdeskhubservice\.online
 1738908457	Cow	boilerhut\.co\.uk
 1738910386	Cow	kcex\.com
 1738911733	Cow	1800airtickets\.com
