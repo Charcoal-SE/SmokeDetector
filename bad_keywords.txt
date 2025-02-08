@@ -3384,3 +3384,4 @@ robinhood[\W_]*+calls?+
 (?:frontier|knollage|expert[\W_]*+aa|refundable|period[\W_]*+free|alaska|24[\W_]*+hour[\W_]*+rule|wallet|propper|support[\W_]*+number).{0,50}(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s)
 1[\W_]*+800[\W_]*+ALASKAAIR
 dice[\W_]*+dreams?+[\W_]*+(?:free|rolls|cheats)
+91[\W_]*+𝐶𝑙𝑢𝑏[\W_]*+In𝑣ite[\W_]*+Code
