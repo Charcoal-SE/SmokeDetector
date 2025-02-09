@@ -70933,3 +70933,4 @@
 1739028061	Cow	jfmdev\.github\.io
 1739031856	Cow	blog\.corrlabs\.com
 1739088389	Cow	digiboom\.in
+1739089654	Cow	airlines[\W_]*+tickets[\W_]*+are[\W_]*+non[\W_]*+transferable
