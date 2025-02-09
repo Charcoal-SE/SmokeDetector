@@ -70935,3 +70935,4 @@
 1739088389	Cow	digiboom\.in
 1739089654	Cow	airlines[\W_]*+tickets[\W_]*+are[\W_]*+non[\W_]*+transferable
 1739089934	Cow	cheapest[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+flights[\W_]*+on
+1739091368	Cow	kaphost\.com
