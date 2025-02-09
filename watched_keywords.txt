@@ -70942,3 +70942,4 @@
 1739105762	Cow	tg-user\.id
 1739110002	Cow	partnerprofitboost\.com
 1739110021	Cow	worldcupbetting\.co
+1739113950	Cow	focusdock\.eu
