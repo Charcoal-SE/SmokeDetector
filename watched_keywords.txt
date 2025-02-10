@@ -70952,3 +70952,4 @@
 1739170245	VLAZ	powerrangers\.com\.au
 1739172024	VLAZ	dayanahernandezz3p
 1739172076	VLAZ	J4Jacket(?!\.com)
+1739172696	VLAZ	(?-i:4hrffO3)(?# bit.ly)
