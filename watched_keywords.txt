@@ -70981,3 +70981,4 @@
 1739210565	Jeff Schaller	purewebsitedesign\.com
 1739212929	Cow	innovative[\W_]*+customer[\W_]*+support
 1739213721	Cow	customer[\W_]*+(?:support|service).{0,40}blockchain
+1739224274	ipodtouch0218	imperialpsychedelic(?!\.com)
