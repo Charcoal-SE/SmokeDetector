@@ -70968,3 +70968,4 @@
 1739191359	VLAZ	ecoboilergrants\.uk
 1739191390	VLAZ	eco[\W_]*+boiler[\W_]*+grants(?!\.uk(?<=ecoboilergrants\.uk))
 1739192230	VLAZ	verified\.email
+1739195559	Machavity	kingduke44
