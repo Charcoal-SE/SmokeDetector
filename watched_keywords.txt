@@ -2309,7 +2309,6 @@
 1521023141	iBug	anifar\.com
 1521023168	iBug	softsluz\.com
 1521029093	iBug	aceinvent\.com
-1521029413	WELZ	aecoverseas\.com
 1521042112	Glorfindel	cryptotaxprep\.com
 1521050518	K.Dᴀᴠɪs	teclogiq\.com
 1521061365	K.Dᴀᴠɪs	og-youtube\.com
