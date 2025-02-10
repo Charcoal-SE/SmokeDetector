@@ -3394,3 +3394,4 @@ what[\W_]*+does[\W_]*+non[\W_]*+refundable[\W_]*+ticket[\W_]*+on
 (?:cómo|como)[\W_]*+hablo[\W_]*+con[\W_]*+alguien[\W_]*+en[\W_]*+etihad
 best[\W_]*+benefits[\W_]*+2025
 how[\W_]*+do[\W_]*+i[\W_]*+connect[\W_]*+with[\W_]*+people[\W_]*+on
+how[\W_]*+do[\W_]*+i[\W_]*+fix[\W_]*+my[\W_]*+yahoo[\W_]*+mail[\W_]*+issue
