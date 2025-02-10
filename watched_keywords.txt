@@ -70964,3 +70964,4 @@
 1739186599	VLAZ	hadija[\W_]*+ameria(?!\.myportmoni\.com(?<=hadija-ameria\.myportmoni\.com))
 1739188811	VLAZ	(?-i:RD4mQrUSZYt2)(?# streamyard.com)
 1739190713	VLAZ	laptopsservice\.center
+1739191316	VLAZ	joripress\.com
