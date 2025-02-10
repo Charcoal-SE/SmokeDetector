@@ -70969,3 +70969,4 @@
 1739191390	VLAZ	eco[\W_]*+boiler[\W_]*+grants(?!\.uk(?<=ecoboilergrants\.uk))
 1739192230	VLAZ	verified\.email
 1739195559	Machavity	kingduke44
+1739196001	Jeff Schaller	arbeitszeitrechnerr\.de
