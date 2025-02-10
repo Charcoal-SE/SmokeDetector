@@ -70973,3 +70973,4 @@
 1739196755	Jeff Schaller	savefrom\.video
 1739197334	Jeff Schaller	depatieroof\.ca
 1739198120	Jeff Schaller	feyashah\.com
+1739198664	Cow	bugsmirror\.com
