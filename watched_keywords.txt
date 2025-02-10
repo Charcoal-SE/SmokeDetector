@@ -70968,7 +70968,6 @@
 1739191359	VLAZ	ecoboilergrants\.uk
 1739191390	VLAZ	eco[\W_]*+boiler[\W_]*+grants(?!\.uk(?<=ecoboilergrants\.uk))
 1739192230	VLAZ	verified\.email
-1739195559	Machavity	kingduke44
 1739196001	Jeff Schaller	arbeitszeitrechnerr\.de
 1739196755	Jeff Schaller	savefrom\.video
 1739197334	Jeff Schaller	depatieroof\.ca
