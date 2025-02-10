@@ -70953,3 +70953,4 @@
 1739172076	VLAZ	J4Jacket(?!\.com)
 1739172696	VLAZ	(?-i:4hrffO3)(?# bit.ly)
 1739174409	VLAZ	antoanviet\.vn
+1739174442	VLAZ	sattaking-uk\.com
