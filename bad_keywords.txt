@@ -3401,3 +3401,4 @@ kingduke44(?# telegram drugs)
 how[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+support[\W_]*+for[\W_]*+blockchain
 blockchain[\W_]*+customer[\W_]*+(?:support|service)
 easyrecovery[\W_]*+assets
+para[\W_]*+llamar[\W_]*+a[\W_]*+spirit[\W_]*+desde[\W_]*+colombia
