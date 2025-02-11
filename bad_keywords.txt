@@ -3404,3 +3404,4 @@ easyrecovery[\W_]*+assets
 para[\W_]*+llamar[\W_]*+a[\W_]*+spirit[\W_]*+desde[\W_]*+colombia
 (?:cómo|como)[\W_]*+obtengo[\W_]*+una[\W_]*+respuesta[\W_]*+de
 (?:puedo|puede)[\W_]*+llamar[\W_]*+a[\W_]*+jetsmart[\W_]*+desde[\W_]*+colombia
+electrum-wallet\.help
