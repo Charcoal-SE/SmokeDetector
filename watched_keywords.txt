@@ -70982,3 +70982,4 @@
 1739212929	Cow	innovative[\W_]*+customer[\W_]*+support
 1739213721	Cow	customer[\W_]*+(?:support|service).{0,40}blockchain
 1739225479	Jeff Schaller	renolink\.store
+1739233478	Jeff Schaller	playtruckultimate\.com
