@@ -70999,3 +70999,4 @@
 1739257867	VLAZ	Deligence[\W_]*+Technologies
 1739262652	Cow	electrum-wallet\.help
 1739262715	Cow	scarsocial\.com
+1739264338	VLAZ	asasociate\.com
