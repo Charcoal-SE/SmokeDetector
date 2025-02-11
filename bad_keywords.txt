@@ -3413,3 +3413,4 @@ speak[\W_]*+directly[\W_]*+to[\W_]*+robinhood
 money[\W_]*+from[\W_]*+robinhood[\W_]*+after[\W_]*+selling
 someone[\W_]*+hacked[\W_]*+(?:your|my)[\W_]*+facebook[\W_]*+and[\W_]*+changed[\W_]*+the[\W_]*+email[\W_]*+and[\W_]*+password
 refund[\W_]*+24[\W_]*+hours
+dispute.{1,20}on.{1,20}Expedia
