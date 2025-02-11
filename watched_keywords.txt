@@ -71000,3 +71000,4 @@
 1739262715	Cow	scarsocial\.com
 1739264338	VLAZ	asasociate\.com
 1739264391	VLAZ	kayakingtourabudhabi\.com
+1739265893	Cow	booking[\W_]*+is[\W_]*+non[\W_]*+refundable
