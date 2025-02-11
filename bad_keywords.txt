@@ -3408,3 +3408,4 @@ electrum-wallet\.help
 itself[\W_]*+does[\W_]*+not[\W_]*+charge[\W_]*+for[\W_]*+cancellations
 ^[\W_]*+(?:faq[\W_]*+s|faqs?+|faqss?+|faqs?+[\W_]*+s).{0,50}(?:24[\W_]*+hour[\W_]*+rule|spirit)
 easyrecoveryasset
+robinhood[\W_]*+have[\W_]*+24[\W_]*+hour[\W_]*+support
