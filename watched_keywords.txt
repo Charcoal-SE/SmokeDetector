@@ -70996,3 +70996,4 @@
 1739256319	VLAZ	carrentaldehradun\.com
 1739257603	VLAZ	Synthesis[\W_]*+Winding[\W_]*+Technologies
 1739257749	VLAZ	deligence\.com
+1739257867	VLAZ	Deligence[\W_]*+Technologies
