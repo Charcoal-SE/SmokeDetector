@@ -3410,3 +3410,4 @@ itself[\W_]*+does[\W_]*+not[\W_]*+charge[\W_]*+for[\W_]*+cancellations
 easyrecoveryasset
 robinhood[\W_]*+have[\W_]*+24[\W_]*+hour[\W_]*+support
 speak[\W_]*+directly[\W_]*+to[\W_]*+robinhood
+money[\W_]*+from[\W_]*+robinhood[\W_]*+after[\W_]*+selling
