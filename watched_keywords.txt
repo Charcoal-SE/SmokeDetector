@@ -70995,3 +70995,4 @@
 1739255529	Cow	rarelyexplored\.infy\.uk
 1739256319	VLAZ	carrentaldehradun\.com
 1739257603	VLAZ	Synthesis[\W_]*+Winding[\W_]*+Technologies
+1739257749	VLAZ	deligence\.com
