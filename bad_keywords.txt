@@ -3406,3 +3406,4 @@ para[\W_]*+llamar[\W_]*+a[\W_]*+spirit[\W_]*+desde[\W_]*+colombia
 (?:puedo|puede)[\W_]*+llamar[\W_]*+a[\W_]*+jetsmart[\W_]*+desde[\W_]*+colombia
 electrum-wallet\.help
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+latam[\W_]*+telefono
+itself[\W_]*+does[\W_]*+not[\W_]*+charge[\W_]*+for[\W_]*+cancellations
