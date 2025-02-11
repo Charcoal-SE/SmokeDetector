@@ -71001,3 +71001,4 @@
 1739264338	VLAZ	asasociate\.com
 1739264391	VLAZ	kayakingtourabudhabi\.com
 1739265893	Cow	booking[\W_]*+is[\W_]*+non[\W_]*+refundable
+1739267644	Cow	customer[\W_]*+service[\W_]*+will[\W_]*+assist
