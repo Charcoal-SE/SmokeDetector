@@ -71031,3 +71031,4 @@
 1739343512	VLAZ	carservicedc\.com
 1739345552	Cow	casaexotique\.com
 1739345694	VLAZ	Chirix[\W_]*+ERP
+1739347964	Dragonrage	remoteresource\.com
