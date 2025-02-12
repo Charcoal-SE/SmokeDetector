@@ -71055,3 +71055,4 @@
 1739389255	Cow	onpagexpert\.com
 1739389665	Cow	fluxytools\.com
 1739390272	Cow	onlineresult\.com\.pk
+1739390284	Cow	cineconhecimento\.com
