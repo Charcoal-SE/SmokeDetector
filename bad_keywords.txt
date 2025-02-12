@@ -3416,3 +3416,4 @@ refund[\W_]*+24[\W_]*+hours
 dispute.{1,20}on.{1,20}Expedia
 sage[\W_]*+50[\W_]*+quantum[\W_]*+support
 talk[\W_]*+to[\W_]*+people[\W_]*+on[\W_]*+robinhood
+(?:cuál|cual)[\W_]*+es[\W_]*+el[\W_]*+precio[\W_]*+de[\W_]*+las[\W_]*+maletas[\W_]*+en
