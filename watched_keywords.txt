@@ -71057,3 +71057,4 @@
 1739390272	Cow	onlineresult\.com\.pk
 1739390284	Cow	cineconhecimento\.com
 1739390306	Cow	nettotasca\.it
+1739391488	Jeff Schaller	totalwararena\.asia
