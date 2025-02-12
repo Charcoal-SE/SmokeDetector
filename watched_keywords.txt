@@ -4334,7 +4334,6 @@
 1533611664	tripleee	lofacts\.com
 1533623276	Makyen	[\w-]*factforhealth(?!\.com)[\w-]*
 1533625292	tripleee	apahouse\.com
-1533625614	Glorfindel	phdassistance\.com
 1533627283	Glorfindel	techseek\.org
 1533628275	tripleee	quickproaccounting\.com
 1533628843	Glorfindel	cheapflightstolisbon\.co
