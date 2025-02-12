@@ -71035,3 +71035,4 @@
 1739350291	VLAZ	annexustech\.ca
 1739350414	VLAZ	receiptifyofficials\.com
 1739351897	VLAZ	jazinfotech\.com
+1739352046	VLAZ	nxg[\W_]*+electrical(?!\.co\.nz(?<=nxgelectrical\.co\.nz))
