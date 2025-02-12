@@ -71040,3 +71040,4 @@
 1739353798	VLAZ	mitnepal\.edu\.np
 1739354027	VLAZ	mmorpg[\W_]*+dev[\W_]*+hub
 1739355917	VLAZ	ug2group\.com
+1739356544	VLAZ	pinekart\.com
