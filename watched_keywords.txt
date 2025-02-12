@@ -71041,3 +71041,4 @@
 1739354027	VLAZ	mmorpg[\W_]*+dev[\W_]*+hub
 1739355917	VLAZ	ug2group\.com
 1739356544	VLAZ	pinekart\.com
+1739356600	VLAZ	pinekart(?!\.com)
