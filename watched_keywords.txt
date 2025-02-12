@@ -71033,3 +71033,4 @@
 1739345694	VLAZ	Chirix[\W_]*+ERP
 1739347964	Dragonrage	remoteresource\.com
 1739350291	VLAZ	annexustech\.ca
+1739350414	VLAZ	receiptifyofficials\.com
