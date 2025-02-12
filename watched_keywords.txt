@@ -71038,3 +71038,4 @@
 1739352046	VLAZ	nxg[\W_]*+electrical(?!\.co\.nz(?<=nxgelectrical\.co\.nz))
 1739353335	VLAZ	isquarebs\.com
 1739353798	VLAZ	mitnepal\.edu\.np
+1739354027	VLAZ	mmorpg[\W_]*+dev[\W_]*+hub
