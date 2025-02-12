@@ -71043,3 +71043,4 @@
 1739356544	VLAZ	pinekart\.com
 1739356600	VLAZ	pinekart(?!\.com)
 1739357592	Dragonrage	4kiptvsubscription\.org
+1739357604	Dragonrage	sveinterior\.co\.in
