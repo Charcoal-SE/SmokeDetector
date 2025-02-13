@@ -3423,3 +3423,4 @@ how[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+blockchain
 fubo[\W_]*+free
 (?:cómo|como)[\W_]*+cambiar[\W_]*+tu[\W_]*+nombre[\W_]*+en[\W_]*+un[\W_]*+billete
 (?:cómo|como)[\W_]*+llamar[\W_]*+a[\W_]*+air[\W_]*+europa
+can[\W_]*+you[\W_]*+get[\W_]*+a[\W_]*+better[\W_]*+deal[\W_]*+by[\W_]*+calling
