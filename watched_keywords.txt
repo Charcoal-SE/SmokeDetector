@@ -71085,3 +71085,4 @@
 1739464937	Jeff Schaller	mymindmycare\.com
 1739467841	Cow	simple-platform\.com
 1739469414	Cow	my-ai-app\.netlify\.app
+1739470390	VLAZ	enyesmall\.com
