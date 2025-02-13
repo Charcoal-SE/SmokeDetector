@@ -3431,3 +3431,4 @@ you[\W_]*+need[\W_]*+to[\W_]*+enhance[\W_]*+your[\W_]*+trip
 how[\W_]*+do[\W_]*+i[\W_]*+talk[\W_]*+to[\W_]*+a[\W_]*+representative[\W_]*+fast
 how[\W_]*+can[\W_]*+i[\W_]*+talk[\W_]*+to[\W_]*+a[\W_]*+person[\W_]*+from
 (?:aeroméxico|aeromexico)[\W_]*+tiene[\W_]*+whatsapp
+es[\W_]*+realmente[\W_]*+totalmente[\W_]*+reembolsable
