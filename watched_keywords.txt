@@ -71076,3 +71076,4 @@
 1739436634	VLAZ	mpvchits?[\W_]*+funds(?!\.com(?<=mpvchitfunds\.com))
 1739438747	Cow	gemonediamond\.com
 1739443424	VLAZ	darkwebprogrammers
+1739446168	VLAZ	accentfuture\.com
