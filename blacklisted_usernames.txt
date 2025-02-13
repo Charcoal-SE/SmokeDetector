@@ -1227,3 +1227,4 @@ carelab[sz]
 (?-i:^Green Collect$)
 (?-i:^Seven Rolls of Sushi$)
 ^zontuss$
+^arf\Wbot$
