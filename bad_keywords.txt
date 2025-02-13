@@ -3425,3 +3425,4 @@ fubo[\W_]*+free
 (?:cómo|como)[\W_]*+llamar[\W_]*+a[\W_]*+air[\W_]*+europa
 can[\W_]*+you[\W_]*+get[\W_]*+a[\W_]*+better[\W_]*+deal[\W_]*+by[\W_]*+calling
 american[\W_]*+airlines?+[\W_]*+operates[\W_]*+flights[\W_]*+for[\W_]*+several
+contáctanos[\W_]*+aeromexico
