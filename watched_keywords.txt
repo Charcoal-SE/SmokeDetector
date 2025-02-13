@@ -71073,3 +71073,4 @@
 1739433964	VLAZ	dignira\.com
 1739434476	VLAZ	apkwaplus\.net
 1739436600	VLAZ	mpvchitfunds\.com
+1739436634	VLAZ	mpvchits?[\W_]*+funds(?!\.com(?<=mpvchitfunds\.com))
