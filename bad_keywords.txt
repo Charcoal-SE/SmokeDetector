@@ -3422,3 +3422,4 @@ use[\W_]*+the[\W_]*+link[\W_]*+below[\W_]*+to[\W_]*+reach[\W_]*+the[\W_]*+techni
 how[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+blockchain
 fubo[\W_]*+free
 (?:cómo|como)[\W_]*+cambiar[\W_]*+tu[\W_]*+nombre[\W_]*+en[\W_]*+un[\W_]*+billete
+(?:cómo|como)[\W_]*+llamar[\W_]*+a[\W_]*+air[\W_]*+europa
