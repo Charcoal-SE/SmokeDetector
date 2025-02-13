@@ -71074,3 +71074,4 @@
 1739434476	VLAZ	apkwaplus\.net
 1739436600	VLAZ	mpvchitfunds\.com
 1739436634	VLAZ	mpvchits?[\W_]*+funds(?!\.com(?<=mpvchitfunds\.com))
+1739438747	Cow	gemonediamond\.com
