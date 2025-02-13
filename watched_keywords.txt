@@ -71084,3 +71084,4 @@
 1739456408	Jeff Schaller	pillpluspharm\.com
 1739464937	Jeff Schaller	mymindmycare\.com
 1739467841	Cow	simple-platform\.com
+1739469414	Cow	my-ai-app\.netlify\.app
