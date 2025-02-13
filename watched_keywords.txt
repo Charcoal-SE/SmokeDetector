@@ -71063,3 +71063,4 @@
 1739408151	Fastnlight	givevalue\.io\.vn
 1739423411	Cow	legacyfamilytreehelp\.com
 1739425249	Cow	names4brands\.com
+1739428213	Cow	freshtableware\.in
