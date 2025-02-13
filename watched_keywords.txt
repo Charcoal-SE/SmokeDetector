@@ -71071,3 +71071,4 @@
 1739431081	VLAZ	bobcranes\.com
 1739433387	VLAZ	mrrc\.com\.pk
 1739433964	VLAZ	dignira\.com
+1739434476	VLAZ	apkwaplus\.net
