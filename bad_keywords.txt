@@ -3428,3 +3428,4 @@ american[\W_]*+airlines?+[\W_]*+operates[\W_]*+flights[\W_]*+for[\W_]*+several
 contáctanos[\W_]*+aeromexico
 you[\W_]*+need[\W_]*+to[\W_]*+enhance[\W_]*+your[\W_]*+trip
 (?:cómo|como)[\W_]*+hacer[\W_]*+un[\W_]*+reclamo[\W_]*+a
+how[\W_]*+do[\W_]*+i[\W_]*+talk[\W_]*+to[\W_]*+a[\W_]*+representative[\W_]*+fast
