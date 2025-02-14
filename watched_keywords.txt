@@ -71091,3 +71091,4 @@
 1739516471	VLAZ	^Данил Шилякин$
 1739517243	VLAZ	neuroqiet\.com
 1739517262	VLAZ	neuroqiet(?!\.com)
+1739517450	VLAZ	Formative[\W_]*+Engineering[\W_]*+(?:Private|Pvt)[\W_]*+(?:Limited|Ltd)
