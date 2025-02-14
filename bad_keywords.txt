@@ -3436,3 +3436,4 @@ expedia[\W_]*+non[\W_]*+refundable
 non[\W_]*+refundable[\W_]*+mean[\W_]*+on[\W_]*+expedia
 escalate[\W_]*+a[\W_]*+complaint[\W_]*+with[\W_]*+expedia
 talk[\W_]*+to[\W_]*+a[\W_]*+representative[\W_]*+fast
+12[\W_]*+pack[\W_]*+of[\W_]*+soda[\W_]*+on[\W_]*+royal[\W_]*+caribbean
