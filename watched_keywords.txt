@@ -71098,3 +71098,4 @@
 1739528628	VLAZ	incasol\.quora\.com
 1739528935	VLAZ	aviator-game-download\.app
 1739531137	Jeff Schaller	CzeKaj\.com\.pl
+1739531326	Jeff Schaller	litonlaser\.com
