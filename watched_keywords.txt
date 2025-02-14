@@ -71094,3 +71094,4 @@
 1739517450	VLAZ	Formative[\W_]*+Engineering[\W_]*+(?:Private|Pvt)[\W_]*+(?:Limited|Ltd)
 1739517891	VLAZ	akolahostels\.com
 1739517919	VLAZ	akola[\W_]*+hostels(?!\.com(?<=akolahostels\.com))
+1739520304	VLAZ	OnandSys
