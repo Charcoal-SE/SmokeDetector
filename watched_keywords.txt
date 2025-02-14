@@ -71109,3 +71109,4 @@
 1739550670	General Grievance	capcutify\.com
 1739555395	Cow	orbsoul\.com
 1739557015	Cow	diginexa\.org
+1739564421	VLAZ	bajao\.pk
