@@ -71095,3 +71095,4 @@
 1739517891	VLAZ	akolahostels\.com
 1739517919	VLAZ	akola[\W_]*+hostels(?!\.com(?<=akolahostels\.com))
 1739520304	VLAZ	OnandSys
+1739528628	VLAZ	incasol\.quora\.com
