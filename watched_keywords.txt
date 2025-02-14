@@ -71090,3 +71090,4 @@
 1739516393	VLAZ	radiantent\.in
 1739516471	VLAZ	^Данил Шилякин$
 1739517243	VLAZ	neuroqiet\.com
+1739517262	VLAZ	neuroqiet(?!\.com)
