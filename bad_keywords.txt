@@ -3440,3 +3440,4 @@ talk[\W_]*+to[\W_]*+a[\W_]*+representative[\W_]*+fast
 quick[\W_]*+tips[\W_]*+to[\W_]*+resolve[\W_]*+the[\W_]*+issue
 can[\W_]*+you[\W_]*+cancel[\W_]*+a[\W_]*+non[\W_]*+refundable
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+humano[\W_]*+en
+what[\W_]*+if[\W_]*+someone[\W_]*+hacked[\W_]*+my[\W_]*+facebook[\W_]*+and[\W_]*+changed
