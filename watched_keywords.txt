@@ -71106,4 +71106,3 @@
 1739536076	Cow	techfinna\.com
 1739536129	Cow	kryptoplanet\.de
 1739538083	Cow	graphic-design-institute\.com
-1739546857	Cow	recovery[\W_]*+fund[\W_]*+provider
