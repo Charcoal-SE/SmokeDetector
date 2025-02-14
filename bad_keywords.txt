@@ -3439,3 +3439,4 @@ talk[\W_]*+to[\W_]*+a[\W_]*+representative[\W_]*+fast
 12[\W_]*+pack[\W_]*+of[\W_]*+soda[\W_]*+on[\W_]*+royal[\W_]*+caribbean
 quick[\W_]*+tips[\W_]*+to[\W_]*+resolve[\W_]*+the[\W_]*+issue
 can[\W_]*+you[\W_]*+cancel[\W_]*+a[\W_]*+non[\W_]*+refundable
+(?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+humano[\W_]*+en
