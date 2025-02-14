@@ -3434,3 +3434,4 @@ how[\W_]*+can[\W_]*+i[\W_]*+talk[\W_]*+to[\W_]*+a[\W_]*+person[\W_]*+from
 es[\W_]*+realmente[\W_]*+totalmente[\W_]*+reembolsable
 expedia[\W_]*+non[\W_]*+refundable
 non[\W_]*+refundable[\W_]*+mean[\W_]*+on[\W_]*+expedia
+escalate[\W_]*+a[\W_]*+complaint[\W_]*+with[\W_]*+expedia
