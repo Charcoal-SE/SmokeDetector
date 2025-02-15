@@ -71119,3 +71119,4 @@
 1739604977	Nisse Engström	nirvanaeyehospital\.com
 1739610816	VLAZ	Rugbylivetv
 1739610979	VLAZ	Avano[\W_]*+Event[\W_]*+Decor
+1739611110	VLAZ	(?-i:ppdg01)(?# t.me)
