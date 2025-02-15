@@ -71122,3 +71122,4 @@
 1739611110	VLAZ	(?-i:ppdg01)(?# t.me)
 1739611162	VLAZ	MR_JAMES421
 1739611595	VLAZ	Amroz[\W_]*+Compo[\W_]*+Info[\W_]*+Institute
+1739612071	double-beep	enchantingmorocco\.com
