@@ -71134,3 +71134,4 @@
 1739641940	VLAZ	cpa009\.xyz
 1739644786	VLAZ	cashify\.in
 1739645376	VLAZ	excellentinfotech\.in
+1739645456	VLAZ	excellent[\W_]infotech(?!\.in(?<=excellentinfotech\.in))
