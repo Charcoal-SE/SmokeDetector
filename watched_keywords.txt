@@ -71124,3 +71124,4 @@
 1739611595	VLAZ	Amroz[\W_]*+Compo[\W_]*+Info[\W_]*+Institute
 1739612071	double-beep	enchantingmorocco\.com
 1739615545	VLAZ	identitatebrand\.ro
+1739615565	VLAZ	agrikarm\.com
