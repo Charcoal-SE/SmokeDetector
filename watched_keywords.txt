@@ -71118,3 +71118,4 @@
 1739604904	Nisse Engström	bluedottrip\.com
 1739604977	Nisse Engström	nirvanaeyehospital\.com
 1739610816	VLAZ	Rugbylivetv
+1739610979	VLAZ	Avano[\W_]*+Event[\W_]*+Decor
