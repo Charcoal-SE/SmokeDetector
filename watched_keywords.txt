@@ -71133,3 +71133,4 @@
 1739640713	Fastnlight	all\.megaofferus\.xyz
 1739641940	VLAZ	cpa009\.xyz
 1739644786	VLAZ	cashify\.in
+1739645376	VLAZ	excellentinfotech\.in
