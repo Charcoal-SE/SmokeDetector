@@ -71145,3 +71145,4 @@
 1739729106	dan1st	aerosolinternational\.com
 1739732000	dan1st	savastanc0\.cc
 1739742095	VLAZ	amacar\.ai
+1739742121	VLAZ	amacar(?!\.ai)
