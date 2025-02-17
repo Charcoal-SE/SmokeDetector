@@ -22194,7 +22194,6 @@
 1599732333	tripleee	happythanksgivingimages\.net
 1599732419	tripleee	thenikhilk
 1599732677	tripleee	karri-international\.com
-1599738300	tripleee	cloudtechtiq\.com
 1599738317	tripleee	cloudtechtiq(?!\.com)
 1599737541	Jeff Schaller	auroravista\.tech
 1599738062	Mast	destroyerbit(?:@gmail\.com)?
