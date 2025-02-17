@@ -71149,3 +71149,4 @@
 1739767362	Cow	freetoolsnap\.com
 1739767381	Cow	cbih\.com\.bd
 1739767648	Cow	licedoctors\.com
+1739767714	Cow	afterschools\.co\.in
