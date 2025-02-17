@@ -71158,3 +71158,4 @@
 1739773580	Cow	fairdeals\.ae
 1739774041	Cow	store\.ubqari\.org
 1739774212	Cow	mitolain\.com
+1739774220	Cow	mitoleans\.com
