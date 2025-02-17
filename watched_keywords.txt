@@ -71195,3 +71195,4 @@
 1739799011	Cow	kinemasterdl\.com
 1739811551	Cow	(?-i:aimistudio)(?#t.me)
 1739818443	Cow	garlicgardeningtips\.com
+1739822878	Jeff Schaller	embalamaisdobrasil\.com\.br
