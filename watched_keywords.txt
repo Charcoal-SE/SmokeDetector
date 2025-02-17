@@ -71190,3 +71190,4 @@
 1739795606	VLAZ	BYCODE(?# bybit referral code)
 1739795923	VLAZ	aviator-official\.app
 1739797715	Jeff Schaller	storeopinion-ca\.cfd
+1739797795	Jeff Schaller	quickappz\.com
