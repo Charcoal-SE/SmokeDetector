@@ -71191,3 +71191,4 @@
 1739795923	VLAZ	aviator-official\.app
 1739797715	Jeff Schaller	storeopinion-ca\.cfd
 1739797795	Jeff Schaller	quickappz\.com
+1739798405	VLAZ	repealrestaurant\.com
