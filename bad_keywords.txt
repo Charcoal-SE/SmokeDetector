@@ -3449,3 +3449,4 @@ fastest[\W_]*+way[\W_]*+to[\W_]*+contact[\W_]*+us
 1[\W_]*+888[\W_]*+EXPEDIA
 (?:cómo|como)[\W_]*+llamar[\W_]*+a[\W_]*+southwest[\W_]*+por[\W_]*+(?:teléfono|telefono)
 1[\W_]*+888[\W_]*+I[\W_]*+FLY[\W_]*+SWA
+senior[\W_]*+discount[\W_]*+age
