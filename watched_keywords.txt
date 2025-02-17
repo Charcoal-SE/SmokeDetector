@@ -71188,3 +71188,4 @@
 1739795589	VLAZ	f349a(?# htx referral code)
 1739795598	VLAZ	OKCODEX(?# okx referral code)
 1739795606	VLAZ	BYCODE(?# bybit referral code)
+1739795923	VLAZ	aviator-official\.app
