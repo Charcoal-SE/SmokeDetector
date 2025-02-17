@@ -71186,3 +71186,4 @@
 1739795573	VLAZ	GATECODE(?# gate io referral code)
 1739795581	VLAZ	KUCOINONE(?# kucoin referral code)
 1739795589	VLAZ	f349a(?# htx referral code)
+1739795598	VLAZ	OKCODEX(?# okx referral code)
