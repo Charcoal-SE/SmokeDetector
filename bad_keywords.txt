@@ -3444,3 +3444,4 @@ what[\W_]*+if[\W_]*+someone[\W_]*+hacked[\W_]*+my[\W_]*+facebook[\W_]*+and[\W_]*
 (?:cómo|como)[\W_]*+llamar[\W_]*+expedia
 recovery[\W_]*+fund[\W_]*+provider
 when[\W_]*+airlines[\W_]*+often[\W_]*+release[\W_]*+discounts
+frontier[\W_]*+offer[\W_]*+fully[\W_]*+refundable[\W_]*+tickets
