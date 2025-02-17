@@ -71193,3 +71193,4 @@
 1739797795	Jeff Schaller	quickappz\.com
 1739798405	VLAZ	repealrestaurant\.com
 1739799011	Cow	kinemasterdl\.com
+1739811551	Cow	(?-i:aimistudio)(?#t.me)
