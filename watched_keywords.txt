@@ -71155,3 +71155,4 @@
 1739770866	Cow	semenconch\.id
 1739772697	Cow	screencheckindia\.com
 1739772724	Cow	taxcutter\.us
+1739773580	Cow	fairdeals\.ae
