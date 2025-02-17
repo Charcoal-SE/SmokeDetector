@@ -71194,3 +71194,4 @@
 1739798405	VLAZ	repealrestaurant\.com
 1739799011	Cow	kinemasterdl\.com
 1739811551	Cow	(?-i:aimistudio)(?#t.me)
+1739818443	Cow	garlicgardeningtips\.com
