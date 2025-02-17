@@ -71184,3 +71184,4 @@
 1739795556	VLAZ	mexc-stake(?# mexc referral code)
 1739795564	VLAZ	W2L3VPB6(?# binance referral code)
 1739795573	VLAZ	GATECODE(?# gate io referral code)
+1739795581	VLAZ	KUCOINONE(?# kucoin referral code)
