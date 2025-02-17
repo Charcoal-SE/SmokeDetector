@@ -71148,3 +71148,4 @@
 1739742121	VLAZ	amacar(?!\.ai)
 1739767362	Cow	freetoolsnap\.com
 1739767381	Cow	cbih\.com\.bd
+1739767648	Cow	licedoctors\.com
