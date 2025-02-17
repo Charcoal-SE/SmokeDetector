@@ -71147,3 +71147,4 @@
 1739742095	VLAZ	amacar\.ai
 1739742121	VLAZ	amacar(?!\.ai)
 1739767362	Cow	freetoolsnap\.com
+1739767381	Cow	cbih\.com\.bd
