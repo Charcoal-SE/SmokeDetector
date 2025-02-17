@@ -71160,3 +71160,4 @@
 1739774212	Cow	mitolain\.com
 1739774220	Cow	mitoleans\.com
 1739774429	VLAZ	Sharbat[\W_]*+Elaichi
+1739774573	VLAZ	wingdingstranslator\.xyz
