@@ -71176,3 +71176,4 @@
 1739784988	VLAZ	westfleetcare\.com\.au
 1739785381	VLAZ	tidylockers\.com\.au
 1739786600	VLAZ	inls\.nl
+1739787833	VLAZ	techxmarketer\.com
