@@ -71227,3 +71227,4 @@
 1739879329	VLAZ	flightforus(?!\.co\.uk)
 1739879571	VLAZ	adwebcraft\.com
 1739882997	VLAZ	(?-i:96n5NtdttKwtgXEz8)(?#forms.gle)
+1739887159	Jeff Schaller	meteorelectrical\.com
