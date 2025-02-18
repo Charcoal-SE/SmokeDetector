@@ -71213,3 +71213,4 @@
 1739864496	VLAZ	DR[\W_]*+DEAK
 1739869240	Cow	assignmentguru\.co\.uk
 1739869590	Cow	weeklyinfo\.in
+1739870757	Cow	fxeinstein\.com
