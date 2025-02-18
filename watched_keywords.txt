@@ -71208,3 +71208,4 @@
 1739861127	VLAZ	aydo\.ai
 1739861142	VLAZ	aydo(?!\.ai)
 1739861320	VLAZ	pdfbolt\.com
+1739862475	VLAZ	ssu\.ac\.in
