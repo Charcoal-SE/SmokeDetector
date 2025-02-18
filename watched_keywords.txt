@@ -71214,3 +71214,4 @@
 1739869240	Cow	assignmentguru\.co\.uk
 1739869590	Cow	weeklyinfo\.in
 1739870757	Cow	fxeinstein\.com
+1739871995	lyxal	gamesupdate\.online
