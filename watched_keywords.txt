@@ -71215,3 +71215,4 @@
 1739869590	Cow	weeklyinfo\.in
 1739870757	Cow	fxeinstein\.com
 1739872111	VLAZ	idealsmiledentistry\.pk
+1739871995	lyxal	gamesupdate\.online
