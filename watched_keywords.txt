@@ -71225,3 +71225,4 @@
 1739879235	VLAZ	notebookprint\.com
 1739879315	VLAZ	flightforus\.co\.uk
 1739879329	VLAZ	flightforus(?!\.co\.uk)
+1739879571	VLAZ	adwebcraft\.com
