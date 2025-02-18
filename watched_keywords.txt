@@ -71212,3 +71212,4 @@
 1739863570	VLAZ	sigap168\.app
 1739864496	VLAZ	DR[\W_]*+DEAK
 1739869240	Cow	assignmentguru\.co\.uk
+1739869590	Cow	weeklyinfo\.in
