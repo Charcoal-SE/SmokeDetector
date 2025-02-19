@@ -3457,3 +3457,4 @@ reactivate[\W_]*+a[\W_]*+permanently[\W_]*+disabled[\W_]*+(?:fb|facebook)[\W_]*+
 get[\W_]*+hacked[\W_]*+on[\W_]*+(?:facebook|fb)
 complain[\W_]*+to[\W_]*+sbi
 how[\W_]*+do[\W_]*+i[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+on[\W_]*+blinkit
+care[\W_]*+through[\W_]*+the[\W_]*+app
