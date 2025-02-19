@@ -3451,3 +3451,4 @@ fastest[\W_]*+way[\W_]*+to[\W_]*+contact[\W_]*+us
 1[\W_]*+888[\W_]*+I[\W_]*+FLY[\W_]*+SWA
 senior[\W_]*+discount[\W_]*+age
 cómo[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+de
+how[\W_]*+do[\W_]*+i[\W_]*+escalate[\W_]*+a[\W_]*+complaint[\W_]*+with
