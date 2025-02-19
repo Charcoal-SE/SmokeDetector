@@ -3453,3 +3453,4 @@ senior[\W_]*+discount[\W_]*+age
 cómo[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+de
 how[\W_]*+do[\W_]*+i[\W_]*+escalate[\W_]*+a[\W_]*+complaint[\W_]*+with
 give[\W_]*+free[\W_]*+refunds
+(?:cómo|como)[\W_]*+puedo[\W_]*+cambiar[\W_]*+mi[\W_]*+vuelo[\W_]*+de
