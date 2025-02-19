@@ -3341,7 +3341,6 @@ give[\W_]*+us[\W_]*+a[\W_]*+call[\W_]*+today
 does[\W_]*+coinbase[\W_]*+call[\W_]*+customers
 book[\W_]*+multiple[\W_]*+people[\W_]*+on
 facebook[\W_]*+support[\W_]*+for[\W_]*+account[\W_]*+recovery
-get[\W_]*+hacked[\W_]*+on[\W_]*+facebook
 (?:cómo|como)[\W_]*+comunicarse[\W_]*+con[\W_]*+gol
 (?:cómo|como)[\W_]*+me[\W_]*+comunico[\W_]*+con[\W_]*+wingo
 (?:cómo|como)[\W_]*+ligar[\W_]*+para[\W_]*+a.{0,25}(?:air[\W_]*+lines?+|avianca|air[\W_]*+france|volaris|airways?+|latam|united|iberia|aerobus|american|frontier|copa|booking|sky|jetsmart|wizz|lufthansa|delta)
