@@ -5350,7 +5350,8 @@ items:
 - ns: firestarthosting.com.
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
-- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18
+- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18. Disabled again 2025-02-19
+  disable: true
   ns: askbeen.com.
 - ns: hostever.com.
 - ns: sellvir.com.
