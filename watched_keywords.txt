@@ -71301,3 +71301,4 @@
 1740057051	Cow	flograte\.com
 1740058356	Cow	^(?:\[{1,}|\{{1,}|\({1,})[\W_]*+(?:24[\W_]*+7|f{1,}a{1,}q{1,}(?:[\W_]*+s{0,}[\W_]*+s{0,})|guide|guiad|publics?+|system|(?:ex|[\W_]*+)[\W_]*+refunds?+|expedia|senior|aeromexico|agente|ask[\W_]*+help|avoid[\W_]*+fee|grace|some[\W_]*+steps|fly[\W_]*+todays?+|call[\W_]*+now|get[\W_]*+my)[^\[{(]{0,15}
 1740059014	Cow	apkbud\.net
+1740059614	Cow	ideacoworking\.com
