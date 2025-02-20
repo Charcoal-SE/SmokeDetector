@@ -71308,3 +71308,4 @@
 1740069518	VLAZ	pluxenix(?!\.com)
 1740076124	Cow	techpanda\.asia
 1740079117	Cow	crypto-recovery\.ch
+1740079155	Jeff Schaller	topfollow\.ws
