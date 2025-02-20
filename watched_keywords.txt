@@ -71293,3 +71293,4 @@
 1740048791	Cow	synergycodes\.com
 1740049315	VLAZ	info\.traderstecheurope
 1740050261	VLAZ	ajackus\.com
+1740050733	VLAZ	globaleducators\.co\.in
