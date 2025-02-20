@@ -71304,3 +71304,4 @@
 1740059614	Cow	ideacoworking\.com
 1740061107	Jeff Schaller	cellinolaw\.com
 1740065107	Cow	sprintcode\.pro
+1740069483	VLAZ	pluxenix\.com
