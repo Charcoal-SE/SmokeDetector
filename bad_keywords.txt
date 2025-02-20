@@ -3462,3 +3462,4 @@ deactivate[\W_]*+autopay[\W_]*+in[\W_]*+kuku
 (?:cómo|como)[\W_]*+puedo[\W_]*+hablar[\W_]*+(?:rápido|rapido)[\W_]*+con[\W_]*+un[\W_]*+representante
 how[\W_]*+to[\W_]*+find[\W_]*+out[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_]*+refundable
 (?:cómo|como)[\W_]*+cambiar[\W_]*+tu[\W_]*+nombre[\W_]*+en[\W_]*+un[\W_]*+billete[\W_]*+de
+puedo[\W_]*+transferir[\W_]*+mi[\W_]*+boleto[\W_]*+de
