@@ -71307,3 +71307,4 @@
 1740069483	VLAZ	pluxenix\.com
 1740069518	VLAZ	pluxenix(?!\.com)
 1740076124	Cow	techpanda\.asia
+1740079117	Cow	crypto-recovery\.ch
