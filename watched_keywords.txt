@@ -71290,3 +71290,4 @@
 1740044403	VLAZ	mediaofficers\.com
 1740047080	Cow	winpkr\.net\.pk
 1740048640	Cow	tradingbots\.net
+1740048791	Cow	synergycodes\.com
