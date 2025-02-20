@@ -71297,3 +71297,4 @@
 1740053071	Cow	keystrokeacademy\.org
 1740053199	Cow	geneva16th\.org
 1740053563	Cow	cosmetiklab-laboratoires\.com
+1740057036	Cow	alapk\.com
