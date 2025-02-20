@@ -3464,3 +3464,4 @@ how[\W_]*+to[\W_]*+find[\W_]*+out[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_
 (?:cómo|como)[\W_]*+cambiar[\W_]*+tu[\W_]*+nombre[\W_]*+en[\W_]*+un[\W_]*+billete[\W_]*+de
 puedo[\W_]*+transferir[\W_]*+mi[\W_]*+boleto[\W_]*+de
 faq[\W_]*+what[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+buy
+expedia[\W_]*+cruise[\W_]*+the[\W_]*+same[\W_]*+as[\W_]*+expedia[\W_]*+cruises
