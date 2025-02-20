@@ -71286,3 +71286,4 @@
 1740040070	VLAZ	4090graphicscard\.com
 1740040219	VLAZ	magicmushroomsporesusa\.com
 1740040225	VLAZ	magicmushroomgrowkits\.ca
+1740041734	Anerdw	getawayz\.net
