@@ -3460,3 +3460,4 @@ how[\W_]*+do[\W_]*+i[\W_]*+raise[\W_]*+a[\W_]*+complaint[\W_]*+on[\W_]*+blinkit
 care[\W_]*+through[\W_]*+the[\W_]*+app
 deactivate[\W_]*+autopay[\W_]*+in[\W_]*+kuku
 (?:cómo|como)[\W_]*+puedo[\W_]*+hablar[\W_]*+(?:rápido|rapido)[\W_]*+con[\W_]*+un[\W_]*+representante
+how[\W_]*+to[\W_]*+find[\W_]*+out[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_]*+refundable
