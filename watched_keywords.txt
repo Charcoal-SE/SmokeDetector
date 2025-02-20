@@ -71298,3 +71298,4 @@
 1740053199	Cow	geneva16th\.org
 1740053563	Cow	cosmetiklab-laboratoires\.com
 1740057036	Cow	alapk\.com
+1740057051	Cow	flograte\.com
