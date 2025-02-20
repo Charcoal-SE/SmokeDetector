@@ -71305,3 +71305,4 @@
 1740061107	Jeff Schaller	cellinolaw\.com
 1740065107	Cow	sprintcode\.pro
 1740069483	VLAZ	pluxenix\.com
+1740069518	VLAZ	pluxenix(?!\.com)
