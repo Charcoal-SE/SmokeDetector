@@ -71319,3 +71319,4 @@
 1740121816	VLAZ	enjoyliquors\.com
 1740121997	VLAZ	cc\.otan\.multiapp
 1740123063	VLAZ	MAVEN[\W_]*+TECHNOLOGY
+1740126560	VLAZ	iescobills\.com\.pk
