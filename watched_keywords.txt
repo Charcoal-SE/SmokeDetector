@@ -71329,3 +71329,4 @@
 1740132870	VLAZ	au2mobile(?!\.com)
 1740134929	VLAZ	goccoedu\.in
 1740135680	VLAZ	ammitservices\.com
+1740136577	Cow	we360\.ai
