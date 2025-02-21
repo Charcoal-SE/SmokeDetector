@@ -71316,3 +71316,4 @@
 1740119634	Cow	jurasikparkinn\.com
 1740121037	Cow	maventechie\.com
 1740121175	Cow	magfone\.com
+1740121816	VLAZ	enjoyliquors\.com
