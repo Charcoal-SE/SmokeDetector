@@ -71327,3 +71327,4 @@
 1740131995	VLAZ	facebook\.com/immediatezenx\.hu
 1740132056	VLAZ	apps\.shopify\.com/mix-and-match-products
 1740132851	VLAZ	au2mobile\.com
+1740132870	VLAZ	au2mobile(?!\.com)
