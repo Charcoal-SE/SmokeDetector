@@ -3476,3 +3476,4 @@ get[\W_]*+a[\W_]*+refund[\W_]*+if[\W_]*+you[\W_]*+cancel[\W_]*+on
 how[\W_]*+to[\W_]*+contact[\W_]*+(?:meta|facebook|meta[\W_]*+facebook)[\W_]*+for[\W_]*+account[\W_]*+recovery
 phone[\W_]*+pe[\W_]*+wrong[\W_]*+transactions[\W_]*+refund[\W_]*+(?:money|amount)
 infocyberrecoveryinc
+(?:facebook|recovery)[\W_]*+easy[\W_]*+direct[\W_]*+ways
