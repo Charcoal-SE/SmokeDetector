@@ -71325,3 +71325,4 @@
 1740129828	Cow	techlancersme\.com
 1740130002	Cow	airlineterminalservice\.com
 1740131995	VLAZ	facebook\.com/immediatezenx\.hu
+1740132056	VLAZ	apps\.shopify\.com/mix-and-match-products
