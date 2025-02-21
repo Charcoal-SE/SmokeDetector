@@ -3470,3 +3470,4 @@ will[\W_]*+(?:facebook|fb)[\W_]*+help[\W_]*+me[\W_]*+recover[\W_]*+my[\W_]*+acco
 fully[\W_]*+refundable[\W_]*+ticket[\W_]*+on[\W_]*+expedia
 cheapest[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+flights[\W_]*+on
 what[\W_]*+is[\W_]*+refunndable[\W_]*+option[\W_]*+on
+how[\W_]*+do[\W_]*+I[\W_]*+stop[\W_]*+auto[\W_]*+payment[\W_]*+on
