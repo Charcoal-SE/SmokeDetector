@@ -71334,3 +71334,4 @@
 1740137210	Cow	islampro\.net
 1740138673	Cow	corx\.ae
 1740138700	Cow	nutrax\.shop
+1740140434	VLAZ	ucanpack\.com
