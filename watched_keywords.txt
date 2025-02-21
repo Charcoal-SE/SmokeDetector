@@ -71332,3 +71332,4 @@
 1740136832	VLAZ	acg731031(?# coupon code)
 1740136874	VLAZ	AMM[\W_]*+Information[\W_]*+Technology
 1740137210	Cow	islampro\.net
+1740138673	Cow	corx\.ae
