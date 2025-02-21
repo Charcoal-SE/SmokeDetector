@@ -71314,4 +71314,3 @@
 1740112697	Cow	europeandriverslicense\.com
 1740112921	Cow	duytan\.edu\.vn
 1740119634	Cow	jurasikparkinn\.com
-1740120327	Cow	codebreaker\.xyz
