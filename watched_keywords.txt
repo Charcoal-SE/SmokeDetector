@@ -71323,3 +71323,4 @@
 1740126622	VLAZ	himalayandreamtreks\.in
 1740128239	Cow	global\.saicheng\.cn
 1740129828	Cow	techlancersme\.com
+1740130002	Cow	airlineterminalservice\.com
