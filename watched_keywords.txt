@@ -71324,3 +71324,4 @@
 1740128239	Cow	global\.saicheng\.cn
 1740129828	Cow	techlancersme\.com
 1740130002	Cow	airlineterminalservice\.com
+1740130824	Cow	mercury-t2\.phonepe\.com
