@@ -71346,4 +71346,3 @@
 1740168832	Cow	calculadoraigv\.com\.pe
 1740173191	Jeff Schaller	generalhub-issue\.web\.app
 1740175656	Jeff Schaller	reactiontimetest\.io
-1740177830	micsthepick	link-olxtoto-[a-zA-Z0-9]++\.pages\.dev
