@@ -3467,3 +3467,4 @@ faq[\W_]*+what[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+buy
 expedia[\W_]*+cruise[\W_]*+the[\W_]*+same[\W_]*+as[\W_]*+expedia[\W_]*+cruises
 will[\W_]*+(?:facebook|fb)[\W_]*+help[\W_]*+me[\W_]*+recover[\W_]*+my[\W_]*+account
 55[\W_]*+ace[\W_]*+game
+fully[\W_]*+refundable[\W_]*+ticket[\W_]*+on[\W_]*+expedia
