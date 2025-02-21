@@ -71342,3 +71342,4 @@
 1740162892	Cow	pranah\.site
 1740163696	Spevacus	erome\.news
 1740163703	Spevacus	pearllemonlegal\.com
+1740166705	Jeff Schaller	bantuan\.com
