@@ -3472,3 +3472,4 @@ cheapest[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+flights[\W_]*+on
 what[\W_]*+is[\W_]*+refunndable[\W_]*+option[\W_]*+on
 how[\W_]*+do[\W_]*+I[\W_]*+stop[\W_]*+auto[\W_]*+payment[\W_]*+on
 talk[\W_]*+to[\W_]*+someone[\W_]*+at[\W_]*+costco[\W_]*+travel
+get[\W_]*+a[\W_]*+refund[\W_]*+if[\W_]*+you[\W_]*+cancel[\W_]*+on
