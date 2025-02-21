@@ -71320,3 +71320,4 @@
 1740121997	VLAZ	cc\.otan\.multiapp
 1740123063	VLAZ	MAVEN[\W_]*+TECHNOLOGY
 1740126560	VLAZ	iescobills\.com\.pk
+1740126566	VLAZ	teacher\.desmos\.com
