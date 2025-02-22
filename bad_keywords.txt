@@ -3478,3 +3478,4 @@ phone[\W_]*+pe[\W_]*+wrong[\W_]*+transactions[\W_]*+refund[\W_]*+(?:money|amount
 infocyberrecoveryinc
 (?:facebook|recovery)[\W_]*+easy[\W_]*+direct[\W_]*+ways
 (?:cómo|como)[\W_]*+(?:hablar|puedo)[\W_]*+con[\W_]*+un[\W_]*+asesor
+customer[\W_]*+service[\W_]*+(?:24|24x)[\W_]*+(?:hrs?+|7)
