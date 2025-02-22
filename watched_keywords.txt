@@ -71349,3 +71349,4 @@
 1740178006	micsthepick	olxtoto
 1740209403	Cow	TBPL[\W_]*+Homes
 1740209452	Cow	(?-i:\+4cSGvMBVCFRiNzZk)(?#t.me)
+1740210551	Nisse Engström	pakistansolarpanelprices\.pk
