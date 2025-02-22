@@ -71342,7 +71342,6 @@
 1740163703	Spevacus	pearllemonlegal\.com
 1740166705	Jeff Schaller	bantuan\.com
 1740168832	Cow	calculadoraigv\.com\.pe
-1740173191	Jeff Schaller	generalhub-issue\.web\.app
 1740175656	Jeff Schaller	reactiontimetest\.io
 1740178006	micsthepick	olxtoto
 1740209403	Cow	TBPL[\W_]*+Homes
