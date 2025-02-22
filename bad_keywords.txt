@@ -3480,3 +3480,4 @@ infocyberrecoveryinc
 (?:cómo|como)[\W_]*+(?:hablar|puedo)[\W_]*+con[\W_]*+un[\W_]*+asesor
 customer[\W_]*+service[\W_]*+(?:24|24x)[\W_]*+(?:hrs?+|7)
 how[\W_]*+to[\W_]*+tell[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_]*+refundable
+customer[\W_]*+service[\W_]*+available[\W_]*+24[\W_]*+7
