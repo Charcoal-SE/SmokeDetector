@@ -71360,3 +71360,4 @@
 1740238991	VLAZ	Sears[\W_]*+Home[\W_]*+Services
 1740242949	Jeff Schaller	pcgamelab\.com
 1740245219	dan1st	^[{\[(<]{2,}[^}\])>]*+[}\]>)]
+1740249518	Jeff Schaller	ask4ideas\.com
