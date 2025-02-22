@@ -71362,3 +71362,4 @@
 1740249518	Jeff Schaller	ask4ideas\.com
 1740251568	Nisse Engström	encodian\.com
 1740251715	VLAZ	v0-hi-n2jrrd\.vercel\.app
+1740251746	VLAZ	bombitapk\.com
