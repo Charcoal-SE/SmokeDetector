@@ -71360,3 +71360,4 @@
 1740238345	Jeff Schaller	asistaa\.com
 1740238991	VLAZ	Sears[\W_]*+Home[\W_]*+Services
 1740242949	Jeff Schaller	pcgamelab\.com
+1740244242	dan1st	^[{\[(<]{2,}[^}\])>]{0,15}[}\]>)]
