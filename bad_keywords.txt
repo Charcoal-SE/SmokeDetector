@@ -3486,3 +3486,4 @@ is[\W_]*+611[\W_]*+AT[\W_]*+T[\W_]*+customer[\W_]*+service
 full[\W_]*+refund[\W_]*+from[\W_]*+priceline
 is[\W_]*+the[\W_]*+cancellation[\W_]*+fee[\W_]*+for[\W_]*+expedia
 cancel[\W_]*+royal[\W_]*+caribbean[\W_]*+cruise[\W_]*+without[\W_]*+penalty
+how[\W_]*+do[\W_]*+i[\W_]*+complain[\W_]*+to[\W_]*+urbanclap
