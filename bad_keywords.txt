@@ -3484,3 +3484,4 @@ customer[\W_]*+service[\W_]*+available[\W_]*+24[\W_]*+7
 does[\W_]*+coinbase[\W_]*+work[\W_]*+24[\W_]*+hours
 is[\W_]*+611[\W_]*+AT[\W_]*+T[\W_]*+customer[\W_]*+service
 full[\W_]*+refund[\W_]*+from[\W_]*+priceline
+is[\W_]*+the[\W_]*+cancellation[\W_]*+fee[\W_]*+for[\W_]*+expedia
