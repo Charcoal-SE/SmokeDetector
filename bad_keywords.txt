@@ -3493,3 +3493,4 @@ refundable[\W_]*+option[\W_]*+on[\W_]*+priceline
 expedia[\W_]*+refund[\W_]*+me[\W_]*+if[\W_]*+I[\W_]*+cancel
 expedia[\W_]*+refund[\W_]*+my[\W_]*+hotel[\W_]*+reservation
 1[\W_]*+855[\W_]*+EXPEDIA
+offer[\W_]*+senior[\W_]*+discounts[\W_]*+for[\W_]*+seniors
