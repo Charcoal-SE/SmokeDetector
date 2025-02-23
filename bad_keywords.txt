@@ -3490,3 +3490,4 @@ how[\W_]*+do[\W_]*+i[\W_]*+complain[\W_]*+to[\W_]*+urbanclap
 expedia[\W_]*+really[\W_]*+non[\W_]*+refundable
 flexible[\W_]*+cancellation[\W_]*+priceline
 refundable[\W_]*+option[\W_]*+on[\W_]*+priceline
+expedia[\W_]*+refund[\W_]*+me[\W_]*+if[\W_]*+I[\W_]*+cancel
