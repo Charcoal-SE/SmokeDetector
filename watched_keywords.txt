@@ -71387,3 +71387,4 @@
 1740337173	Cow	healthmedista\.com
 1740338034	VLAZ	(?-i:\+0zxA2JJgxylhODA1)(?#t.me)
 1740338041	VLAZ	asigpt\.ai
+1740349772	dan1st	github\.com/dex-checker
