@@ -71364,3 +71364,4 @@
 1740251715	VLAZ	v0-hi-n2jrrd\.vercel\.app
 1740251746	VLAZ	bombitapk\.com
 1740257458	Jeff Schaller	lucky-star-online\.org
+1740270274	Jeff Schaller	toursinallmorocco\.com
