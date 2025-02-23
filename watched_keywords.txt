@@ -71380,3 +71380,4 @@
 1740314160	Cow	paymentdates\.org
 1740320402	Cow	multitool\.org
 1740321954	Jeff Schaller	gcam\.co\.id
+1740322105	Jeff Schaller	happyhourbaltimore\.com
