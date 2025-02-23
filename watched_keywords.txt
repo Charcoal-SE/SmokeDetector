@@ -71369,3 +71369,4 @@
 1740296513	VLAZ	(?-i:qZpXaz8KkO8)(?#youtu.be)
 1740297255	VLAZ	techprofessional\.in
 1740297849	VLAZ	Franky[\W_]*+Tech
+1740298157	VLAZ	(?-i:x0Saudi)(?# t.me)
