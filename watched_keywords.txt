@@ -71371,3 +71371,4 @@
 1740297849	VLAZ	Franky[\W_]*+Tech
 1740298157	VLAZ	(?-i:x0Saudi)(?# t.me)
 1740299007	VLAZ	Meta[\W_]*+Stack[\W_]*+Live[\W_]*+Chat[\W_]*+Support|help[\W_]*+center[\W_]*+live[\W_]*+chat|Please[\W_]*+navigate[\W_]*+to[\W_]*+the[\W_]*+help[\W_]*+center[\W_]*+hub
+1740299014	VLAZ	For[\W_]*+further[\W_]*+assistance[\W_]*+on[\W_]*+this[\W_]*+issue
