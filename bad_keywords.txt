@@ -3489,3 +3489,4 @@ cancel[\W_]*+royal[\W_]*+caribbean[\W_]*+cruise[\W_]*+without[\W_]*+penalty
 how[\W_]*+do[\W_]*+i[\W_]*+complain[\W_]*+to[\W_]*+urbanclap
 expedia[\W_]*+really[\W_]*+non[\W_]*+refundable
 flexible[\W_]*+cancellation[\W_]*+priceline
+refundable[\W_]*+option[\W_]*+on[\W_]*+priceline
