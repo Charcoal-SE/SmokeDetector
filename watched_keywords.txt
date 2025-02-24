@@ -71393,3 +71393,4 @@
 1740381882	VLAZ	miltonkeynesmarketing\.uk
 1740382189	VLAZ	airmastertape\.com
 1740382249	VLAZ	iilife(?!\.live)
+1740382494	Cow	nutriotalk\.com
