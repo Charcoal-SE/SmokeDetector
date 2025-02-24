@@ -3500,3 +3500,4 @@ refund[\W_]*+money[\W_]*+from[\W_]*+wrong[\W_]*+transaction[\W_]*+SBI
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+jetsmart[\W_]*+colombia[\W_]*+por[\W_]*+teléfono
 refundable[\W_]*+mean[\W_]*+on[\W_]*+expedia[\W_]*+flight
 flexible[\W_]*+cancellation[\W_]*+on[\W_]*+car[\W_]*+rental
+booking[\W_]*+(?:teléfono|telefono)
