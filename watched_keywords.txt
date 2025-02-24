@@ -71396,3 +71396,4 @@
 1740382494	Cow	nutriotalk\.com
 1740383121	Cow	bunchups\.com\.au
 1740384047	Cow	ndure\.com
+1740386944	Cow	vtraffic\.io
