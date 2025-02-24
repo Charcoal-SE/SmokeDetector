@@ -71415,3 +71415,4 @@
 1740416634	Cow	github\.com/wy-z/vscode-vim-mode
 1740417062	Cow	shdowfght2apk\.com
 1740423669	Nisse Engström	mymovieboxpro\.com
+1740349772	dan1st	github\.com/dex-checker
