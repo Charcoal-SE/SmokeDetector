@@ -65553,7 +65553,6 @@
 1724909814	Dragonrage	microtechenggco\.com
 1724910444	Dragonrage	juyoungahn\.github\.io
 1724913389	Dragonrage	yuvaap\.com
-1724915405	Dragonrage	kasperinfotech\.com
 1724916776	Dragonrage	briskpe\.com
 1724916966	Cody Gray	Alpha[\W_]*+Napkin[\W_]*+Machines(?!\.com)
 1724917367	Dragonrage	wellit\.info
