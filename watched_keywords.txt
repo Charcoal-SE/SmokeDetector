@@ -71414,3 +71414,4 @@
 1740416409	VLAZ	studioedit\.in
 1740416416	VLAZ	cyprusvisa\.com\.cy
 1740416634	Cow	github\.com/wy-z/vscode-vim-mode
+1740417062	Cow	shdowfght2apk\.com
