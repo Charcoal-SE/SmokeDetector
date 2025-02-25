@@ -71437,3 +71437,4 @@
 1740476058	Cow	airbeastravel\.co\.uk
 1740477591	VLAZ	wordletoday\.cc
 1740480506	VLAZ	karamalnakhil\.com
+1740481633	Jeff Schaller	srjresearch\.com
