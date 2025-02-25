@@ -71433,3 +71433,4 @@
 1740473327	VLAZ	envertizacademy\.com
 1740473373	VLAZ	envertiz[\W_]*+academy(?!\.com(?<=envertizacademy\.com))
 1740474643	Cow	moonlit\.com\.vn
+1740475205	Cow	wallanza\.com
