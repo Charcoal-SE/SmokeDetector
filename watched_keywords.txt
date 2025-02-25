@@ -71440,3 +71440,4 @@
 1740481658	Jeff Schaller	certboosters\.com
 1740482768	Vickel	whatburgermenu\.us
 1740482902	Vickel	whatburger[\W_]*+menu(?!\.us(?<=whatburgermenu\.us))
+1740486265	Jeff Schaller	alhabibtravel\.co\.uk
