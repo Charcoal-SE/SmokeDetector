@@ -71432,4 +71432,3 @@
 1740472578	Ryan M	trailique\.ai
 1740473327	VLAZ	envertizacademy\.com
 1740473373	VLAZ	envertiz[\W_]*+academy(?!\.com(?<=envertizacademy\.com))
-1740474102	Cow	voicemeeter\.com
