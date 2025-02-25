@@ -71447,3 +71447,4 @@
 1740500928	VLAZ	cuirjackets\.com
 1740504885	Cow	smartdekho\.com
 1740505355	Cow	techidology\.com
+1740506836	Cow	foxwoodelectric\.ca
