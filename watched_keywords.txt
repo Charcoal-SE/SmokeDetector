@@ -71435,3 +71435,4 @@
 1740474643	Cow	moonlit\.com\.vn
 1740475205	Cow	wallanza\.com
 1740476058	Cow	airbeastravel\.co\.uk
+1740477591	VLAZ	wordletoday\.cc
