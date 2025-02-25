@@ -71431,3 +71431,4 @@
 1740471623	VLAZ	sukiennhanh\.com
 1740472578	Ryan M	trailique\.ai
 1740473327	VLAZ	envertizacademy\.com
+1740473373	VLAZ	envertiz[\W_]*+academy(?!\.com(?<=envertizacademy\.com))
