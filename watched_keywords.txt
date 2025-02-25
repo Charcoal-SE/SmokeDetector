@@ -71424,3 +71424,4 @@
 1740465795	VLAZ	hindustangoldcompany\.com
 1740465976	VLAZ	highgatepainting\.com
 1740465999	VLAZ	webspero\.com
+1740466079	VLAZ	medcorebrokerage\.com
