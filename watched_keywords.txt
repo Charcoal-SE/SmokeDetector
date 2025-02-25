@@ -71442,3 +71442,4 @@
 1740482902	Vickel	whatburger[\W_]*+menu(?!\.us(?<=whatburgermenu\.us))
 1740486265	Jeff Schaller	alhabibtravel\.co\.uk
 1740490395	Jeff Schaller	toolsbelts\.com
+1740492791	Jeff Schaller	geturtech\.com
