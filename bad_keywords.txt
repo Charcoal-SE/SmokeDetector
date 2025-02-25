@@ -3503,4 +3503,3 @@ flexible[\W_]*+cancellation[\W_]*+on[\W_]*+car[\W_]*+rental
 booking[\W_]*+(?:teléfono|telefono)
 (?:cómo|como)[\W_]*+contactar[\W_]*+con[\W_]*+booking
 SMTPget
-help[\W_]*+center[\W_]*+live[\W_]*+chat
