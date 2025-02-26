@@ -3511,3 +3511,4 @@ centro[\W_]*+de[\W_]*+ayuda[\W_]*+chat[\W_]*+en[\W_]*+vivo
 acs670886
 (?:cómo|como)[\W_]*+saber[\W_]*+el[\W_]*+(?:número|numero)[\W_]*+de[\W_]*+booking
 we[\W_]*+highly[\W_]*+recommend[\W_]*+using[\W_]*+our[\W_]*+live[\W_]*+chat[\W_]*+support
+Crypto[\W_]*+Assets[\W_]*+Recovery
