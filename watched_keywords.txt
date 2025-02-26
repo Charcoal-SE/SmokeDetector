@@ -71475,3 +71475,4 @@
 1740560513	VLAZ	superforms\.rocks
 1740560570	VLAZ	hdc-saudi\.com
 1740560593	VLAZ	kichnam\.com
+1740564182	VLAZ	blinkingcheckenginelight\.com
