@@ -71468,3 +71468,4 @@
 1740551759	Cow	elion\.co\.in
 1740552061	VLAZ	learnovative\.com
 1740552126	VLAZ	learnovative(?!\.com)
+1740554930	VLAZ	GlobalEntertainmentCompany\.com
