@@ -71455,3 +71455,4 @@
 1740522449	Jeff Schaller	beatzchord\.com
 1740528524	Fastnlight	turbogamesapk\.com
 1740529312	Fastnlight	intelligencecyberwizard(?:@mail\.com)?
+1740529527	Fastnlight	INTELLIGENCE[\W_]*+CYBER[\W_]*+WIZARD(?!@mail\.com(?<=intelligencecyberwizard@mail\.com))
