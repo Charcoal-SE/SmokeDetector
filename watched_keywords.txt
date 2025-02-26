@@ -71480,3 +71480,4 @@
 1740570307	Vickel	setonmedicalcenter38th\.com
 1740570333	Vickel	flyviatrip\.com
 1740570424	VLAZ	sterlingtax\.in
+1740570528	Vickel	seton[\W_]*+medical[\W_]*+center[\W_]*+38th(?!\.com(?<=setonmedicalcenter38th\.com))
