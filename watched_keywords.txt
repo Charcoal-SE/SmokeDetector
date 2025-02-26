@@ -71469,3 +71469,4 @@
 1740552061	VLAZ	learnovative\.com
 1740552126	VLAZ	learnovative(?!\.com)
 1740554930	VLAZ	GlobalEntertainmentCompany\.com
+1740554944	VLAZ	GlobalEntertainmentCompany(?!\.com)
