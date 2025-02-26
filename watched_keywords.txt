@@ -71474,3 +71474,4 @@
 1740556605	VLAZ	azmidigisol\.com
 1740560513	VLAZ	superforms\.rocks
 1740560570	VLAZ	hdc-saudi\.com
+1740560593	VLAZ	kichnam\.com
