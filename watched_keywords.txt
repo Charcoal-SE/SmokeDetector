@@ -71464,3 +71464,4 @@
 1740550758	VLAZ	smmstore\.co\.uk
 1740550829	VLAZ	offersrush\.com
 1740551691	Cow	jctechhub\.com
+1740551713	Cow	westbergint\.com
