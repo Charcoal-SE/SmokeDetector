@@ -670,7 +670,6 @@ megaxxl
 extagen
 zmass
 thrive[\W_]*+max
-max[\W_]*+rise
 prima[\W_]*+lift[\W_]*+skin
 muscle[\W_]*+boost[\W_]*+x
 luna[\W_]*+(?:il)?luminate
