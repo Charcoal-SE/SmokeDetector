@@ -71467,3 +71467,4 @@
 1740551713	Cow	westbergint\.com
 1740551759	Cow	elion\.co\.in
 1740552061	VLAZ	learnovative\.com
+1740552126	VLAZ	learnovative(?!\.com)
