@@ -71458,3 +71458,4 @@
 1740529527	Fastnlight	INTELLIGENCE[\W_]*+CYBER[\W_]*+WIZARD(?!@mail\.com(?<=intelligencecyberwizard@mail\.com))
 1740533227	Fastnlight	(?-i:Digitalva0lt)(?#t.me)
 1740534661	Jeff Schaller	atte81n\.com
+1740544490	Cow	scoreflood\.com
