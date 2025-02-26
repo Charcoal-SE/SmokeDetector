@@ -71462,3 +71462,4 @@
 1740549914	VLAZ	smartwebtools\.space
 1740550743	VLAZ	sivakumar\.dgweb\.co\.in
 1740550758	VLAZ	smmstore\.co\.uk
+1740550829	VLAZ	offersrush\.com
