@@ -71482,3 +71482,4 @@
 1740570424	VLAZ	sterlingtax\.in
 1740570528	Vickel	seton[\W_]*+medical[\W_]*+center[\W_]*+38th(?!\.com(?<=setonmedicalcenter38th\.com))
 1740570882	VLAZ	max[\W_]*+rise
+1740572838	Jeff Schaller	selfspin\.com
