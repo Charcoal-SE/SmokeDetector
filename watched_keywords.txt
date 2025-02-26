@@ -71471,3 +71471,4 @@
 1740554930	VLAZ	GlobalEntertainmentCompany\.com
 1740554944	VLAZ	GlobalEntertainmentCompany(?!\.com)
 1740556365	VLAZ	crackquant\.com
+1740556605	VLAZ	azmidigisol\.com
