@@ -71484,3 +71484,4 @@
 1740570882	VLAZ	max[\W_]*+rise
 1740572838	Jeff Schaller	selfspin\.com
 1740573879	VLAZ	virtualsoaring\.org
+1740576549	Jeff Schaller	wigboutiqueofficial\.com
