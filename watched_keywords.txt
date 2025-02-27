@@ -71495,3 +71495,4 @@
 1740631263	Cow	redox-nrg\.com
 1740631496	Cow	electrum-recovery\.org
 1740632708	Cow	DigitalVa0lt
+1740634433	VLAZ	spacehawkgps\.com
