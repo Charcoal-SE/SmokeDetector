@@ -71507,3 +71507,4 @@
 1740654721	VLAZ	vloggergoal\.com
 1740654844	VLAZ	theportfoliogroup\.co\.uk
 1740654939	VLAZ	smmbooster\.net
+1740654962	VLAZ	smmbooster(?!\.net)
