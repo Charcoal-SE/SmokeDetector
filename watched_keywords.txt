@@ -71514,3 +71514,4 @@
 1740666998	Jeff Schaller	mnserviceproviders\.com
 1740668492	Spevacus	hungrysharkmod\.info
 1740675009	VLAZ	embiz\.ae
+1740680029	Cow	automationinmotion\.net
