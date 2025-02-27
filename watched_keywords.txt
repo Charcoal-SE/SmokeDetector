@@ -71492,3 +71492,4 @@
 1740597412	Fastnlight	trafficriderapk\.app
 1740614511	Fastnlight	intihaldusurme\.com
 1740614517	Fastnlight	reduceturnitinscore\.com
+1740623889	Jeff Schaller	classroomoftraders\.com
