@@ -71509,3 +71509,4 @@
 1740654939	VLAZ	smmbooster\.net
 1740654962	VLAZ	smmbooster(?!\.net)
 1740655329	VLAZ	(?-i:live:\.cid\.d0a89434ac3eba49)(?# skype ID)
+1740657298	VLAZ	login\.com\.pk
