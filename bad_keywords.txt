@@ -3516,3 +3516,4 @@ what[\W_]*+is[\W_]*+a[\W_]*+customer[\W_]*+care[\W_]*+line[\W_]*+number
 how[\W_]*+to[\W_]*+check[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_]*+refundable
 recoverydarek
 DAREK[\W_]*+RECOVERY
+Find[\W_]*+Delta[\W_]*+Airlines[\W_]*+Student[\W_]*+Discount
