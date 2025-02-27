@@ -3517,3 +3517,4 @@ how[\W_]*+to[\W_]*+check[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_
 recoverydarek
 DAREK[\W_]*+RECOVERY
 Find[\W_]*+Delta[\W_]*+Airlines[\W_]*+Student[\W_]*+Discount
+what[\W_]*+days[\W_]*+are[\W_]*+spirit[\W_]*+discounts
