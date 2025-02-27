@@ -3519,3 +3519,4 @@ Find[\W_]*+Delta[\W_]*+Airlines[\W_]*+Student[\W_]*+Discount
 what[\W_]*+days[\W_]*+are[\W_]*+spirit[\W_]*+discounts
 what[\W_]*+is[\W_]*+the[\W_]*+3[\W_]*+1[\W_]*+1[\W_]*+rule[\W_]*+on
 what[\W_]*+is[\W_]*+delta[\W_]*+cancellation[\W_]*+policy
+bliss[\W_]*+paradox[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
