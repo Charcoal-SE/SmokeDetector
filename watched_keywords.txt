@@ -71511,3 +71511,4 @@
 1740657298	VLAZ	login\.com\.pk
 1740657342	Jeff Schaller	saudi-pdpl\.com
 1740657516	Jeff Schaller	robocraze\.com
+1740665447	VLAZ	zenz-solutions\.de
