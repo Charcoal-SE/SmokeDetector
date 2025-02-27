@@ -71500,3 +71500,4 @@
 1740635046	VLAZ	sandiario\.com
 1740635125	Cow	robotcartelcoin\.com
 1740635659	Cow	incentit\.com
+1740639039	Cow	empiresarmad\.ae
