@@ -71499,3 +71499,4 @@
 1740634763	Cow	platinum\.jewellery\.pk
 1740635046	VLAZ	sandiario\.com
 1740635125	Cow	robotcartelcoin\.com
+1740635659	Cow	incentit\.com
