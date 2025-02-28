@@ -3523,3 +3523,4 @@ bliss[\W_]*+paradox[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W
 how[\W_]*+do[\W_]*+i[\W_]*+call.{0,15}for[\W_]*+printer[\W_]*+support
 make[\W_]*+a[\W_]*+claim[\W_]*+with[\W_]*+Expedia
 how[\W_]*+do[\W_]*+I[\W_]*+actually[\W_]*+reach[\W_]*+frontier
+(?:cuál|cual)[\W_]*+es[\W_]*+la[\W_]*+(?:opción|opcion)[\W_]*+reembolsable[\W_]*+en
