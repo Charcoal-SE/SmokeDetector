@@ -71555,3 +71555,4 @@
 1740744120	Cow	qsmart\.qa
 1740745892	Cow	medium\.com/@Ahelectra
 1740746362	VLAZ	Sathaya[\W_]*+Travels
+1740747347	VLAZ	scaleowl\.com
