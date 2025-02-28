@@ -71537,3 +71537,4 @@
 1740731341	VLAZ	repairmalik\.com
 1740731357	VLAZ	red9systech\.com
 1740732253	VLAZ	kspasiafin\.com
+1740734382	Dan Getz	fitdietlaw\.com
