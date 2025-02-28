@@ -3525,3 +3525,4 @@ make[\W_]*+a[\W_]*+claim[\W_]*+with[\W_]*+Expedia
 how[\W_]*+do[\W_]*+I[\W_]*+actually[\W_]*+reach[\W_]*+frontier
 (?:cuál|cual)[\W_]*+es[\W_]*+la[\W_]*+(?:opción|opcion)[\W_]*+reembolsable[\W_]*+en
 (?:cómo|como)[\W_]*+puedo[\W_]*+contactar[\W_]*+con.{0,30}por[\W_]*+(?:teléfono|telefono)
+How[\W_]*+do[\W_]*+I[\W_]*+reach[\W_]*+Frontier
