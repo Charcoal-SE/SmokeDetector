@@ -71552,3 +71552,4 @@
 1740742699	Cow	sensixtech\.com
 1740742733	Cow	wokingtravelcentre\.co\.uk
 1740743542	Cow	albaiksamenu\.com
+1740744120	Cow	qsmart\.qa
