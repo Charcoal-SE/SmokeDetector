@@ -3520,3 +3520,4 @@ what[\W_]*+days[\W_]*+are[\W_]*+spirit[\W_]*+discounts
 what[\W_]*+is[\W_]*+the[\W_]*+3[\W_]*+1[\W_]*+1[\W_]*+rule[\W_]*+on
 what[\W_]*+is[\W_]*+delta[\W_]*+cancellation[\W_]*+policy
 bliss[\W_]*+paradox[\W_]*+recovery(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+how[\W_]*+do[\W_]*+i[\W_]*+call.{0,15}for[\W_]*+printer[\W_]*+support
