@@ -71535,3 +71535,4 @@
 1740728267	VLAZ	assignmentwriter\.net
 1740728287	VLAZ	bimservices\.net
 1740731341	VLAZ	repairmalik\.com
+1740731357	VLAZ	red9systech\.com
