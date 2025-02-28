@@ -71541,3 +71541,4 @@
 1740734382	Dan Getz	fitdietlaw\.com
 1740739855	VLAZ	unlockproslocksmithphoenix\.com
 1740739980	VLAZ	unlock[\W_]*+pros[\W_]*+locksmith[\W_]*+(?:in[\W_]*+)?phoenix(?!\.com(?<=unlockproslocksmithphoenix\.com))
+1740740394	VLAZ	techcareer\.in
