@@ -71559,3 +71559,4 @@
 1740747457	VLAZ	scale[\W_]*+owl(?!\.com(?<=scaleowl\.com))
 1740748842	Jeff Schaller	growrk\.com
 1740749156	Cow	codelabpro\.com
+1740749418	Cow	gg2\.net
