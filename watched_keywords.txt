@@ -71553,3 +71553,4 @@
 1740742733	Cow	wokingtravelcentre\.co\.uk
 1740743542	Cow	albaiksamenu\.com
 1740744120	Cow	qsmart\.qa
+1740745892	Cow	medium\.com/@Ahelectra
