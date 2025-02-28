@@ -71556,3 +71556,4 @@
 1740745892	Cow	medium\.com/@Ahelectra
 1740746362	VLAZ	Sathaya[\W_]*+Travels
 1740747347	VLAZ	scaleowl\.com
+1740747457	VLAZ	scale[\W_]*+owl(?!\.com(?<=scaleowl\.com))
