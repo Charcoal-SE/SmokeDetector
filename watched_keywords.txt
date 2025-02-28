@@ -71563,3 +71563,4 @@
 1740763348	Nisse Engström	pvcwaterstop\.in
 1740766692	Fastnlight	on[\W_]*+page[\W_]*+xpert(?!(?<=onpagexpert)\.com)
 1740771222	Dragonrage	marketcirculate\.com
+1740772069	Cow	asarayan\.com
