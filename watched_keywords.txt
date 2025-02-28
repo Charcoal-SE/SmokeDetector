@@ -71532,3 +71532,4 @@
 1740722131	VLAZ	sabrehelpdesk\.com
 1740724444	VLAZ	universitychalo\.com
 1740726540	Cow	craftcms\.in
+1740727098	VLAZ	the[\W_]*+palace[\W_]*+on[\W_]*+wheels(?!\.com(?<=thepalaceonwheels\.com))(?!\.org(?<=thepalaceonwheels\.org))
