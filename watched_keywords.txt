@@ -71551,3 +71551,4 @@
 1740742581	Cow	modibuilders\.com
 1740742699	Cow	sensixtech\.com
 1740742733	Cow	wokingtravelcentre\.co\.uk
+1740743542	Cow	albaiksamenu\.com
