@@ -71534,3 +71534,4 @@
 1740727098	VLAZ	the[\W_]*+palace[\W_]*+on[\W_]*+wheels(?!\.com(?<=thepalaceonwheels\.com))(?!\.org(?<=thepalaceonwheels\.org))
 1740728267	VLAZ	assignmentwriter\.net
 1740728287	VLAZ	bimservices\.net
+1740731341	VLAZ	repairmalik\.com
