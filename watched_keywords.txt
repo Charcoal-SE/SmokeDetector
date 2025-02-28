@@ -71565,3 +71565,4 @@
 1740771222	Dragonrage	marketcirculate\.com
 1740772069	Cow	asarayan\.com
 1740775725	Fastnlight	statisticalaid\.com
+1740776005	Jeff Schaller	statisticalaidwithti\.blogspot
