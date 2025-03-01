@@ -71575,3 +71575,4 @@
 1740826351	Cow	onewayairfl\.com
 1740826377	Cow	demircimedya\.com\.tr
 1740826434	Cow	octiot\.com
+1740828441	VLAZ	thepiacademy\.in
