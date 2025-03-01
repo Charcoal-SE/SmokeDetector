@@ -71573,3 +71573,4 @@
 1740813333	VLAZ	skv\.academy
 1740823031	Nisse Engström	dizitaladda\.com
 1740826351	Cow	onewayairfl\.com
+1740826377	Cow	demircimedya\.com\.tr
