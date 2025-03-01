@@ -71579,3 +71579,4 @@
 1740828571	VLAZ	hackerphoenix56
 1740835150	VLAZ	pyproxy\.com
 1740838054	Cow	tme\.edu\.pk
+1740838112	Cow	korevgames\.com
