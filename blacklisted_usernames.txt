@@ -1228,3 +1228,4 @@ carelab[sz]
 (?-i:^Seven Rolls of Sushi$)
 ^zontuss$
 ^gtr sk$
+^SixSixSixSixSixSix 666666$
