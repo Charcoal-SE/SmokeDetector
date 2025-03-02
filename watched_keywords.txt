@@ -71613,3 +71613,4 @@
 1740938803	Cow	(?-i:99R9QEe)(?# fiverr.com)
 1740946905	Jeff Schaller	kodalogic\.com
 1740952880	double-beep	phoenixroofingandrepair\.com
+1740959746	Jeff Schaller	fastusdts\.com
