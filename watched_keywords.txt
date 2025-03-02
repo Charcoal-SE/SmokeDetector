@@ -71611,3 +71611,4 @@
 1740933555	VLAZ	dvsitservices\.com
 1740937722	Jeff Schaller	offerxonline\.com
 1740938803	Cow	(?-i:99R9QEe)(?# fiverr.com)
+1740946905	Jeff Schaller	kodalogic\.com
