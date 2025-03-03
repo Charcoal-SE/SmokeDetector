@@ -71619,3 +71619,4 @@
 1740979856	Cow	geoattendance\.com
 1740981903	Cow	awwwards\.com
 1740982314	Cow	gooploo\.com\.au
+1740982459	Cow	jstoresau\.com
