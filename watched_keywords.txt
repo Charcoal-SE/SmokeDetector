@@ -71616,3 +71616,4 @@
 1740959746	Jeff Schaller	fastusdts\.com
 1740977215	Cow	crickmania\.net
 1740977365	Cow	(?-i:atracboy)(?#t.me)
+1740979856	Cow	geoattendance\.com
