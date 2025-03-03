@@ -71621,3 +71621,4 @@
 1740982314	Cow	gooploo\.com\.au
 1740982459	Cow	jstoresau\.com
 1740982800	Cow	locoaddon\.com
+1740985390	Cow	brainwareuniversity\.ac\.in
