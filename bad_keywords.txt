@@ -2245,7 +2245,7 @@ hacking[\W_]*+services
 devops[\W_]*+online[\W_]*+training
 hosting[\W_]*+ultraso(?!\.com)
 semenax
-streetinsider\.com\/(FMR\+Wire\/|(SI|CDN)\+Newswire)
+streetinsider\.com\/(?:FMR\+Wire\/|(?:SI|CDN)\+Newswire)
 w3softech(?!\.com)
 anti[\W_]*+ageing[\W_]*+cream
 ayurvedic[\W_]*+treatments?
@@ -2361,7 +2361,7 @@ peyton[\W_]*+manning[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|\d++|[\da-f]{5,}+)s?)*
 Erelive[\W_]*+(?:data[\W_]*+)?recovery
 dan[\W_]*+bongino[\W_]*+cbd(?:[\W_]*+(?:buy|oil|order|strength|boost|stamina|\d++|[\da-f]{5,}+)s?)*
 kl-skyline-gen-9-monitor
-if[\W*]+you[\W*]+don't[\W*]+(get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+images[\W*]+mentioned
+if[\W*]+you[\W*]+don't[\W*]+(?:get[\W*]+rid[\W*]+of|remove|delete)[\W*]+the[\W*]+images[\W*]+mentioned
 madarchod
 fat[\W_]+consuming[\W_]+supplement
 dietary[\W_]+upgrade
@@ -2753,7 +2753,7 @@ epson[\W_]*+printer[\W_]*+(?!-utility)(?:is[\W_]*+)?offline
 (?-i:epson-printer(?!-utility))
 Ramsay[\W_]*+MacDonald[\W_]*+(?:at[\W_]*+)?consultant[\W_]*+(?:dot[\W_]*+)?com
 LIVESTREAM@TV(?<=^\[LIVESTREAM@TV)
-puria[\W_]*+(serum|skin)
+puria[\W_]*+(?:serum|skin)
 Mustafa Shaikh GALLl
 spyware[\W_]*+cyber
 (?:fury(?:\W++\w++){0,4}[\W_]*+paul|paul(?:\W++\w++){0,4}[\W_]*+fury)(?:\W++\w++){0,4}(?:[\W_]*+(?:live|stream(?:ing)?|free|broadcast|show|fight|tonight)s?)+
@@ -3065,7 +3065,7 @@ brigadia[\W_]*+tech(?:[\W_]*+(?:recovery|experts|remikeable(?:[\W_]*+(?:at[\W_]*
 act200019
 acp856709
 domino88
-Phen[\W]*Q[\W]*(Weight[\W]*Loss)?
+Phen[\W]*Q[\W]*(?:Weight[\W]*Loss)?
 rustik[\W_]*+cyber[\W_]*+hack[\W_]*+service(?!\.com(?<=rustikcyberhackservice\.com))
 easyreclaimer
 vladimirjerrylee
@@ -3532,6 +3532,6 @@ buy[\W_]*+cocaine[\W_]*+in[\W_]*+london
 cancel[\W_]*+a[\W_]*+cruise[\W_]*+royal[\W_]*+caribbean[\W_]*+without[\W_]*+penalty
 signs[\W_]*+of[\W_]*+black[\W_]*+magic
 non[\W_]*+refundable[\W_]*+policy[\W_]*+on[\W_]*+Expedia
-^(the)?[\W_]*+refundable[\W_]*+(option|mean)?s?[\W_]*+(on)?[\W_]*+Expedia[\W_]*+(allow|refer|mean)?s?
+^(?:the)?[\W_]*+refundable[\W_]*+(?:option|mean)?s?[\W_]*+(?:on)?[\W_]*+Expedia[\W_]*+(?:allow|refer|mean)?s?
 refundable[\W_]*+option[\W_]*+on[\W_]*+Expedia
 claim[\W_]*+exclusive[\W_]*+bonus
