@@ -71625,3 +71625,4 @@
 1740987699	VLAZ	emedhub\.in
 1740989970	VLAZ	bhalo88\.site
 1740990204	VLAZ	bhalo88(?!\.site)
+1740990959	Cow	wisdomelectrical\.net
