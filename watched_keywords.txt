@@ -71623,3 +71623,4 @@
 1740982800	Cow	locoaddon\.com
 1740985390	Cow	brainwareuniversity\.ac\.in
 1740987699	VLAZ	emedhub\.in
+1740989970	VLAZ	bhalo88\.site
