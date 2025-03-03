@@ -3529,3 +3529,4 @@ How[\W_]*+do[\W_]*+I[\W_]*+reach[\W_]*+Frontier
 customer[\W_]*+community[\W_]*+is[\W_]*+here[\W_]*+to[\W_]*+help[\W_]*+you
 cancel[\W_]*+my[\W_]*+cruise[\W_]*+without[\W_]*+penalty
 buy[\W_]*+cocaine[\W_]*+in[\W_]*+london
+cancel[\W_]*+a[\W_]*+cruise[\W_]*+royal[\W_]*+caribbean[\W_]*+without[\W_]*+penalty
