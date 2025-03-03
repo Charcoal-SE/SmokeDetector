@@ -71617,3 +71617,4 @@
 1740977215	Cow	crickmania\.net
 1740977365	Cow	(?-i:atracboy)(?#t.me)
 1740979856	Cow	geoattendance\.com
+1740981903	Cow	awwwards\.com
