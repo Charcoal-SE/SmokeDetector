@@ -71615,3 +71615,4 @@
 1740952880	double-beep	phoenixroofingandrepair\.com
 1740959746	Jeff Schaller	fastusdts\.com
 1740977215	Cow	crickmania\.net
+1740977365	Cow	(?-i:atracboy)(?#t.me)
