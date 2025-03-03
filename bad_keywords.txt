@@ -3531,3 +3531,4 @@ cancel[\W_]*+my[\W_]*+cruise[\W_]*+without[\W_]*+penalty
 buy[\W_]*+cocaine[\W_]*+in[\W_]*+london
 cancel[\W_]*+a[\W_]*+cruise[\W_]*+royal[\W_]*+caribbean[\W_]*+without[\W_]*+penalty
 signs[\W_]*+of[\W_]*+black[\W_]*+magic
+non[\W_]*+refundable[\W_]*+policy[\W_]*+on[\W_]*+Expedia
