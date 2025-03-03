@@ -71632,3 +71632,4 @@
 1741000013	VLAZ	ufa747\.ink
 1741000321	VLAZ	socialviral\.ca
 1741000338	VLAZ	thispersondoesnotexist\.cc
+1741000431	VLAZ	icalcapcuttemplate\.com
