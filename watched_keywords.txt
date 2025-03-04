@@ -71659,3 +71659,4 @@
 1741073649	VLAZ	(?-i:^neartome SEO$)
 1741074269	VLAZ	hysanbalers\.com
 1741074286	VLAZ	fload\.app
+1741074491	VLAZ	sassacheckgov\.co\.za
