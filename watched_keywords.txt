@@ -45126,7 +45126,6 @@
 1670948987	tripleee	idp[\W_]*+education
 1670949327	Glorfindel	jojoy
 1670949749	tripleee	fluxus\.vip
-1670949932	tripleee	(?-i:^taril$)
 1670950362	Ollie	mightytips\.com
 1670958312	Vickel	imediasolutions\.in
 1670982855	Makyen	newcasualarticlesandblogs\.com
