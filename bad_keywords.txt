@@ -3540,3 +3540,4 @@ American[\W_]*+Airlines[\W_]*+have[\W_]*+a[\W_]*+senior[\W_]*+discount
 (?:cómo|como)[\W_]*+presentar[\W_]*+una[\W_]*+(?:reclamación|reclamacion)[\W_]*+ante
 (?:cómo|como)[\W_]*+cambio[\W_]*+mi[\W_]*+nombre[\W_]*+en
 (?:cuánto|cuanto)[\W_]*+cobra.{0,20}por[\W_]*+cambiar[\W_]*+un[\W_]*+vuelo
+change[\W_]*+my[\W_]*+guest[\W_]*+on[\W_]*+a[\W_]*+Royal[\W_]*+Caribbean[\W_]*+cruise
