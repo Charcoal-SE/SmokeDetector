@@ -71645,3 +71645,4 @@
 1741038530	VLAZ	geometrydash-apk\.com\.mx
 1741043344	Nisse Engström	karoseriambulance\.com
 1741053097	Fastnlight	quotner\.com
+1741063758	Cow	vaild\.work
