@@ -3537,3 +3537,4 @@ refundable[\W_]*+option[\W_]*+on[\W_]*+Expedia
 claim[\W_]*+exclusive[\W_]*+bonus
 American[\W_]*+Airlines[\W_]*+have[\W_]*+a[\W_]*+senior[\W_]*+discount
 (?:cómo|como)[\W_]*+hablo[\W_]*+con[\W_]*+un[\W_]*+humano[\W_]*+en
+(?:cómo|como)[\W_]*+presentar[\W_]*+una[\W_]*+(?:reclamación|reclamacion)[\W_]*+ante
