@@ -1229,3 +1229,4 @@ carelab[sz]
 ^zontuss$
 ^gtr sk$
 ^SixSixSixSixSixSix 666666$
+(?-i:^MathSEGuru$)
