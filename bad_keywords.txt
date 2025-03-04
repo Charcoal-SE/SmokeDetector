@@ -3535,3 +3535,4 @@ non[\W_]*+refundable[\W_]*+policy[\W_]*+on[\W_]*+Expedia
 ^(?:the)?[\W_]*+refundable[\W_]*+(?:option|mean)?s?[\W_]*+(?:on)?[\W_]*+Expedia[\W_]*+(?:allow|refer|mean)?s?
 refundable[\W_]*+option[\W_]*+on[\W_]*+Expedia
 claim[\W_]*+exclusive[\W_]*+bonus
+American[\W_]*+Airlines[\W_]*+have[\W_]*+a[\W_]*+senior[\W_]*+discount
