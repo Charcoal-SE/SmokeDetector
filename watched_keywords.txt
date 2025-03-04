@@ -71671,3 +71671,4 @@
 1741085568	VLAZ	theboredroomx\.com
 1741085581	VLAZ	lucknowcallgirlsx\.com
 1741086000	VLAZ	saveonairco\.com
+1741086771	VLAZ	dev\.lancers\.notifiyer
