@@ -71676,3 +71676,4 @@
 1741087927	VLAZ	meadechiropractic\.com
 1741088103	VLAZ	datascienceschool\.in
 1741088915	Jeff Schaller	selframework\.com
+1741089597	Jeff Schaller	cnelindia\.com
