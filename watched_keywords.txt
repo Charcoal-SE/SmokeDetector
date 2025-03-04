@@ -71677,3 +71677,4 @@
 1741088103	VLAZ	datascienceschool\.in
 1741088915	Jeff Schaller	selframework\.com
 1741089597	Jeff Schaller	cnelindia\.com
+1741092869	VLAZ	10637619299654140657(?# google maps id)
