@@ -71673,3 +71673,4 @@
 1741086000	VLAZ	saveonairco\.com
 1741086771	VLAZ	dev\.lancers\.notifiyer
 1741087901	VLAZ	jiten\.fun
+1741087927	VLAZ	meadechiropractic\.com
