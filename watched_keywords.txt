@@ -71648,3 +71648,4 @@
 1741063758	Cow	vaild\.work
 1741066647	Cow	opgendynamics\.com
 1741067332	Cow	emitechlogic\.com
+1741068742	VLAZ	(?-i:Washingtonrecoverypro)(?#t.me)
