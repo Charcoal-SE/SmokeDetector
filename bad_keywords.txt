@@ -3553,3 +3553,4 @@ Is[\W_]*+a[\W_]*+Royal[\W_]*+Jordanian[\W_]*+ticket[\W_]*+refundable
 Para[\W_]*+comunicarte[\W_]*+con[\W_]*+Frontier
 (?:cómo|como)[\W_]*+me[\W_]*+puedo[\W_]*+comunicar[\W_]*+con[\W_]*+Frontier
 how[\W_]*+to[\W_]*+complain[\W_]*+on[\W_]*+the[\W_]*+Gaana[\W_]*+app
+how[\W_]*+can[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+a.{0,20}representative[\W_]*+fast
