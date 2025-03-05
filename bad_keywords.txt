@@ -3560,3 +3560,4 @@ do[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+someone[\W_]*+at[\W_]*+sage
 Contact[\W_]*+Sage[\W_]*+50
 contact[\W_]*+Sage[\W_]*+technical[\W_]*+support
 (?-i:Breedcoins)(?#t.me)
+file[\W_]*+a[\W_]*+complaint[\W_]*+against[\W_]*+Expedia
