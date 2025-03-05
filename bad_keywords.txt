@@ -3559,3 +3559,4 @@ do[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+someone[\W_]*+at[\W_]*+sage
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
 Contact[\W_]*+Sage[\W_]*+50
 contact[\W_]*+Sage[\W_]*+technical[\W_]*+support
+(?-i:Breedcoins)(?#t.me)
