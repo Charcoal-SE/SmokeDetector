@@ -71720,3 +71720,4 @@
 1741201597	VLAZ	drifthunters\.net
 1741201716	VLAZ	(?-i:^Sohaib Malghani$)
 1741202544	VLAZ	schoolofoddthinkers\.com
+1741206934	Laurel	vogesey\.com
