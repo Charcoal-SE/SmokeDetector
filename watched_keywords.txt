@@ -71719,3 +71719,4 @@
 1741201229	VLAZ	tanktrouble\.net
 1741201597	VLAZ	drifthunters\.net
 1741201716	VLAZ	(?-i:^Sohaib Malghani$)
+1741202544	VLAZ	schoolofoddthinkers\.com
