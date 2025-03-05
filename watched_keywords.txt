@@ -71721,3 +71721,4 @@
 1741201716	VLAZ	(?-i:^Sohaib Malghani$)
 1741202544	VLAZ	schoolofoddthinkers\.com
 1741206934	Laurel	vogesey\.com
+1741218623	Jeff Schaller	orycta\.com
