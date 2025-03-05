@@ -71710,3 +71710,4 @@
 1741195572	VLAZ	Flux[\W_]*+Pro[\W_]*+AI
 1741195591	Cow	candllawncare\.com
 1741195630	Cow	Black[\W_]*+Forest[\W_]*+Labs
+1741195674	VLAZ	usabestsmmshop(?!\.com)
