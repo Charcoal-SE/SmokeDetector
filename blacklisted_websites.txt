@@ -6006,4 +6006,3 @@ taliastablebocaraton\.com
 onliveserver\.com
 malgotechnologies\.com
 leatherjacketblack\.com
-(?-i:Breedcoins)(?#t.me)
