@@ -3547,3 +3547,4 @@ can[\W_]*+I[\W_]*+get[\W_]*+my[\W_]*+money[\W_]*+back[\W_]*+from[\W_]*+Coinbase
 (?:cómo|como|para)[\W_]*+hablar[\W_]*+con[\W_]*+alguien[\W_]*+en
 Instant[\W_]*+Cancellation[\W_]*+Policy
 Airtel[\W_]*+recharge[\W_]*+be[\W_]*+refunded
+(?:cómo|como)[\W_]*+puedo[\W_]*+hacer[\W_]*+una[\W_]*+pregunta[\W_]*+en
