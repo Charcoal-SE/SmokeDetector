@@ -71715,3 +71715,4 @@
 1741197322	VLAZ	medicalglobalacademy\.com
 1741199841	Cow	ankararus\.net
 1741200751	Cow	ckandawrites\.online
+1741201222	VLAZ	geometrydash\.us
