@@ -71712,3 +71712,4 @@
 1741195630	Cow	Black[\W_]*+Forest[\W_]*+Labs
 1741195674	VLAZ	usabestsmmshop(?!\.com)
 1741197047	VLAZ	olymp-umzuege\.de
+1741197322	VLAZ	medicalglobalacademy\.com
