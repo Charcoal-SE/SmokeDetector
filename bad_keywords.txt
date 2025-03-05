@@ -3550,3 +3550,4 @@ Airtel[\W_]*+recharge[\W_]*+be[\W_]*+refunded
 (?:cómo|como)[\W_]*+puedo[\W_]*+hacer[\W_]*+una[\W_]*+pregunta[\W_]*+en
 Is[\W_]*+a[\W_]*+Royal[\W_]*+Jordanian[\W_]*+ticket[\W_]*+refundable
 (?:cómo|como)[\W_]*+puedo[\W_]*+cambiar[\W_]*+mi[\W_]*+nombre[\W_]*+en[\W_]*+un[\W_]*+boleto[\W_]*+de
+Para[\W_]*+comunicarte[\W_]*+con[\W_]*+Frontier
