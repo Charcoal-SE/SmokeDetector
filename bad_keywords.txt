@@ -3556,3 +3556,4 @@ how[\W_]*+to[\W_]*+complain[\W_]*+on[\W_]*+the[\W_]*+Gaana[\W_]*+app
 how[\W_]*+can[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+a.{0,20}representative[\W_]*+fast
 do[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+someone[\W_]*+at[\W_]*+sage
 (?:cómo|como)[\W_]*+hablar[\W_]*+directamente[\W_]*+en
+(?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+representante[\W_]*+de
