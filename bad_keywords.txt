@@ -3561,3 +3561,4 @@ Contact[\W_]*+Sage[\W_]*+50
 contact[\W_]*+Sage[\W_]*+technical[\W_]*+support
 (?-i:Breedcoins)(?#t.me)
 file[\W_]*+a[\W_]*+complaint[\W_]*+against[\W_]*+Expedia
+qu[ée][\W_]*+equipaje[\W_]*+permite.{0,20}(?:gratis|gratis[\W_]*+al)
