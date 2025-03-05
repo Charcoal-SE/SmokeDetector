@@ -52812,7 +52812,6 @@
 1695639623	Dragonrage	lion567\.com
 1695640161	cigien	lion567(?!\.com)
 1695640650	cigien	william[\W_]*+jacket(?!\.com(?<=williamjacket\.com))
-1695640676	cigien	leatherjacketblack\.com
 1695640701	cigien	leather[\W_]*+jacket[\W_]*+black(?!\.com(?<=leatherjacketblack\.com))
 1695640769	Jeff Schaller	oskarjacket\.com
 1695640815	cigien	oskar[\W_]*+jacket(?!\.com(?<=oskarjacket\.com))
