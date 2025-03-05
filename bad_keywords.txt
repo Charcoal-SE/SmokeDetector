@@ -3548,3 +3548,4 @@ can[\W_]*+I[\W_]*+get[\W_]*+my[\W_]*+money[\W_]*+back[\W_]*+from[\W_]*+Coinbase
 Instant[\W_]*+Cancellation[\W_]*+Policy
 Airtel[\W_]*+recharge[\W_]*+be[\W_]*+refunded
 (?:cómo|como)[\W_]*+puedo[\W_]*+hacer[\W_]*+una[\W_]*+pregunta[\W_]*+en
+Is[\W_]*+a[\W_]*+Royal[\W_]*+Jordanian[\W_]*+ticket[\W_]*+refundable
