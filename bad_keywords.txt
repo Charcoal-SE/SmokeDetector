@@ -3545,3 +3545,4 @@ much[\W_]*+is[\W_]*+the[\W_]*+change[\W_]*+fee[\W_]*+for[\W_]*+copa[\W_]*+airlin
 can[\W_]*+I[\W_]*+get[\W_]*+my[\W_]*+money[\W_]*+back[\W_]*+from[\W_]*+Coinbase
 (?:cómo|como)[\W_]*+hablar[\W_]*+con[\W_]*+un[\W_]*+agente[\W_]*+de
 (?:cómo|como|para)[\W_]*+hablar[\W_]*+con[\W_]*+alguien[\W_]*+en
+Instant[\W_]*+Cancellation[\W_]*+Policy
