@@ -71708,3 +71708,4 @@
 1741183152	Vickel	kingsdesertsafari\.com
 1741195268	Cow	usabestsmmshop\.com
 1741195572	VLAZ	Flux[\W_]*+Pro[\W_]*+AI
+1741195591	Cow	candllawncare\.com
