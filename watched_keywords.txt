@@ -71691,3 +71691,4 @@
 1741156120	VLAZ	thaifly\.com
 1741156401	VLAZ	razacompany\.com
 1741156460	VLAZ	careforyou04\.blogspot
+1741156751	VLAZ	acomputerinstitute\.in
