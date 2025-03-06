@@ -3568,3 +3568,4 @@ contact[\W_]*+Sage[\W_]*+100
 escalate[\W_]*+an[\W_]*+issue[\W_]*+with[\W_]*+Expedia
 Sage[\W_]*+200[\W_]*+Support
 Contact[\W_]*+Instagram[\W_]*+support[\W_]*+in[\W_]*+Iran
+resolve[\W_]*+sage[\W_]*+50
