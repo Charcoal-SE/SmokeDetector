@@ -71727,3 +71727,4 @@
 1741229527	Spevacus	(?-i:loginredmitoto\/)(?#heylink.me)
 1741236677	Cow	apollosimulation\.com
 1741241014	VLAZ	mineful\.org
+1741241508	VLAZ	Navismart[\W_]*+AI
