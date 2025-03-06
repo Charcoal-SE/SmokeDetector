@@ -5790,6 +5790,8 @@ items:
 - ns: my-hosting-panel.com.
 - ns: techgropse.com.
 - ns: iseencloud.com.
+- comment: NXDOMAIN 2025-03-06 disabled
+  disable: true
 - ns: bjsps.edu.in.
 - ns: jrodix.com.
 - ns: huaweicloud-dns.com.
