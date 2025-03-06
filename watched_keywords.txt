@@ -40885,7 +40885,6 @@
 1659278215	cigien	carbatteryexpertsadelaide\.com\.au
 1659279074	cigien	cyber[\W_]*+developer[\W_]*+bd(?!\.com(?<=cyberdeveloperbd\.com))
 1659279096	cigien	trendmoversdubai\.com
-1659282030	cigien	b2n\.ir
 1659283675	cigien	gbwhatsapp\.pk
 1659283708	cigien	(?-i:3cwke3e)(?#bit.ly)
 1659297615	cigien	babyhairstyles\.net
