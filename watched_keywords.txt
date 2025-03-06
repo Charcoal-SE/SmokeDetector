@@ -46817,7 +46817,6 @@
 1675852988	cigien	delhinight\.in
 1675853042	cigien	icrackpc\.com
 1675855073	tripleee	classicmarketers\.tech
-1675855332	tripleee	p2pexams\.com
 1675855481	tripleee	chromameds\.com
 1675855597	tripleee	ambien[\W_]*+generic
 1675855928	cigien	p2pexams(?!\.com)
