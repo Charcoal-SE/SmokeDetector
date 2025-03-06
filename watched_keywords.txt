@@ -71729,3 +71729,4 @@
 1741241685	VLAZ	testagentai\.com
 1741242633	Cow	livedaga\.com
 1741243597	VLAZ	(?-i:x89769)(?# b2n.ir)
+1741244116	Cow	cianalytics\.com
