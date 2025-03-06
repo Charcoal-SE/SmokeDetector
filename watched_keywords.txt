@@ -71754,3 +71754,4 @@
 1741281887	Cow	picsartmodeapk\.com
 1741282014	Cow	bitfunded\.com
 1741283866	Cow	roofsolarly\.com
+1741284528	Cow	goldfarbinc\.com
