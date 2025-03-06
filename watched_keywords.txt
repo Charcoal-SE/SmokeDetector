@@ -71739,3 +71739,4 @@
 1741252409	Cow	html2canvas\.net
 1741254695	Cow	webshopextension\.com
 1741256644	VLAZ	dragonsourcing\.com
+1741256686	VLAZ	starvalleyapk\.com
