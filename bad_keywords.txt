@@ -3566,3 +3566,4 @@ c[óo]mo[\W_]*+confirmo[\W_]*+mi[\W_]*+vuelo[\W_]*+en
 c[óo]mo[\W_]*+puedo[\W_]*+administrar[\W_]*+mi[\W_]*+viaje[\W_]*+con
 contact[\W_]*+Sage[\W_]*+100
 escalate[\W_]*+an[\W_]*+issue[\W_]*+with[\W_]*+Expedia
+Sage[\W_]*+200[\W_]*+Support
