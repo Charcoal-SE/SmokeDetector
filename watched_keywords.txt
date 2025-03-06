@@ -71738,3 +71738,4 @@
 1741251314	Dragonrage	thestone-evolution\.com
 1741252376	Cow	in\.sapil\.com
 1741252409	Cow	html2canvas\.net
+1741254695	Cow	webshopextension\.com
