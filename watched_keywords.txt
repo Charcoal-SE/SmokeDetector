@@ -71729,3 +71729,4 @@
 1741241014	VLAZ	mineful\.org
 1741241508	VLAZ	Navismart[\W_]*+AI
 1741241685	VLAZ	testagentai\.com
+1741242633	Cow	livedaga\.com
