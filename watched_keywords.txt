@@ -71740,3 +71740,4 @@
 1741254695	Cow	webshopextension\.com
 1741256644	VLAZ	dragonsourcing\.com
 1741256686	VLAZ	starvalleyapk\.com
+1741257487	VLAZ	gamelorehaven\.com
