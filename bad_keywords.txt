@@ -3570,3 +3570,4 @@ Sage[\W_]*+200[\W_]*+Support
 Contact[\W_]*+Instagram[\W_]*+support[\W_]*+in[\W_]*+Iran
 resolve[\W_]*+sage[\W_]*+50
 sage.{0,15}online[\W_]*+help[\W_]*+center
+Sage.{0,15}Data[\W_]*+Access
