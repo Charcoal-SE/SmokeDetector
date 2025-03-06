@@ -71750,3 +71750,4 @@
 1741271269	VLAZ	SK[\W_]*+Insurance
 1741275866	ipodtouch0218	saarrthiskybizzstudios\.com
 1741276477	ipodtouch0218	maharerait\.maharashtra\.gov\.in
+1741277523	ipodtouch0218	course-linkfreeus\.com
