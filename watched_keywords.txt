@@ -71744,6 +71744,5 @@
 1741260100	Cow	mazerspace\.com
 1741260162	Cow	altajchillervan\.com
 1741260271	VLAZ	cinegato\.tv
-1741263920	VLAZ	(?-i:@ikn99)(?# link.space)
 1741266337	Dragonrage	tmvt\.com
 1741269107	Dragonrage	quick[\W_]*+claim[\W_]*+processing
