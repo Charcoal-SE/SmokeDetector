@@ -71747,3 +71747,4 @@
 1741266337	Dragonrage	tmvt\.com
 1741269107	Dragonrage	quick[\W_]*+claim[\W_]*+processing
 1741270769	VLAZ	ikn99
+1741271269	VLAZ	SK[\W_]*+Insurance
