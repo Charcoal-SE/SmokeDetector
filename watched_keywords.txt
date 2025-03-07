@@ -71769,3 +71769,4 @@
 1741338463	VLAZ	Fokus?jitu
 1741338513	VLAZ	ctafiler\.com
 1741342736	VLAZ	swifdoo\.com
+1741342795	VLAZ	iapptechnologies\.com
