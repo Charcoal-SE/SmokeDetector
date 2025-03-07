@@ -71757,3 +71757,4 @@
 1741284528	Cow	goldfarbinc\.com
 1741286987	ipodtouch0218	sqheatingsolution\.co\.uk
 1741288724	Cow	SQ[\W_]*+Heating[\W_]*+Solution
+1741321313	Spevacus	jiliofficial\.ph
