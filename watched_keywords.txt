@@ -71770,3 +71770,4 @@
 1741338513	VLAZ	ctafiler\.com
 1741342736	VLAZ	swifdoo\.com
 1741342795	VLAZ	iapptechnologies\.com
+1741342869	VLAZ	iapp[\W_]*+technologies(?!\.com(?<= iapptechnologies\.com))
