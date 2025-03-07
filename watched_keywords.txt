@@ -71776,3 +71776,4 @@
 1741345574	VLAZ	metizsoft[\W_]*+inc(?!\.com(?<=metizsoftinc\.com))
 1741346447	VLAZ	gnginnovation\.com
 1741346471	VLAZ	G&G[\W_]*+Innovations
+1741346777	VLAZ	popeyesofficial\.com
