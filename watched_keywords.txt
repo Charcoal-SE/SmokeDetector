@@ -71774,3 +71774,4 @@
 1741345372	VLAZ	drivesexpert\.com
 1741345402	VLAZ	robloxproapk\.net
 1741345574	VLAZ	metizsoft[\W_]*+inc(?!\.com(?<=metizsoftinc\.com))
+1741346447	VLAZ	gnginnovation\.com
