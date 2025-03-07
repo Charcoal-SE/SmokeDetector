@@ -71765,3 +71765,4 @@
 1741329296	VLAZ	reinfosec\.com
 1741330590	VLAZ	datamyte\.com
 1741330596	VLAZ	datamyte(?!\.com)
+1741332228	VLAZ	pumpparts\.vn
