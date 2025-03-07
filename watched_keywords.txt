@@ -71762,7 +71762,6 @@
 1741323387	Cow	qrcodechamp\.com
 1741323409	Cow	salentocoffee\.ae
 1741327675	Cow	thefrlegendapk\.com
-1741327786	Cow	blog\.datamyte\.com
 1741329296	VLAZ	reinfosec\.com
 1741330320	VLAZ	pagesnap\.co
 1741330590	VLAZ	datamyte\.com
