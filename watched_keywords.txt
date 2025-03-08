@@ -71791,3 +71791,4 @@
 1741380475	Laurel	researchchem-market\.com
 1741382139	VLAZ	hosting-peru\.pe
 1741417940	VLAZ	smartscripts\.tech
+1741418095	VLAZ	(?-i:^R9ST SEO$)
