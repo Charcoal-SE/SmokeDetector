@@ -71797,3 +71797,4 @@
 1741421548	Cow	jennymodspro\.com
 1741422003	Cow	vsoulstore\.com
 1741422026	Cow	vsoulbrand
+1741422085	Cow	vsoul[\W_]*+store(?!\.com(?<=vsoulstore\.com))
