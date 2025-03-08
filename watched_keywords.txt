@@ -71799,3 +71799,4 @@
 1741422026	Cow	vsoulbrand
 1741422085	Cow	vsoul[\W_]*+store(?!\.com(?<=vsoulstore\.com))
 1741425448	VLAZ	udinsalim463
+1741428176	Cow	toolsdevil\.com
