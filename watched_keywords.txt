@@ -71796,3 +71796,4 @@
 1741419820	VLAZ	strokess(?!\.com)
 1741421548	Cow	jennymodspro\.com
 1741422003	Cow	vsoulstore\.com
+1741422026	Cow	vsoulbrand
