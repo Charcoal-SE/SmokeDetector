@@ -71793,3 +71793,4 @@
 1741418095	VLAZ	(?-i:^R9ST SEO$)
 1741418476	VLAZ	jiosewa\.com
 1741419795	VLAZ	strokess\.com
+1741419820	VLAZ	strokess(?!\.com)
