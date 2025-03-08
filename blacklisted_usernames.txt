@@ -1230,3 +1230,4 @@ carelab[sz]
 ^gtr sk$
 ^SixSixSixSixSixSix 666666$
 (?-i:^MathSEGuru$)
+(?-i:^neartome SEO$)
