@@ -71795,3 +71795,4 @@
 1741419795	VLAZ	strokess\.com
 1741419820	VLAZ	strokess(?!\.com)
 1741421548	Cow	jennymodspro\.com
+1741422003	Cow	vsoulstore\.com
