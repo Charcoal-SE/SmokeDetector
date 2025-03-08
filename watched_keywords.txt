@@ -71794,3 +71794,4 @@
 1741418476	VLAZ	jiosewa\.com
 1741419795	VLAZ	strokess\.com
 1741419820	VLAZ	strokess(?!\.com)
+1741421548	Cow	jennymodspro\.com
