@@ -71815,3 +71815,4 @@
 1741503660	Nisse Engström	darkoperator\.com
 1741517926	VLAZ	fscobill\.com\.pk
 1741522861	Nisse Engström	light-of-hope\.com
+1741524300	Cow	light-of-hope(?!\.com(?<=light-of-hope\.com))
