@@ -71817,3 +71817,4 @@
 1741522861	Nisse Engström	light-of-hope\.com
 1741524300	Cow	light-of-hope(?!\.com(?<=light-of-hope\.com))
 1741524660	Cow	balloonzonedubai\.com
+1741529755	Cow	a4t4\.com
