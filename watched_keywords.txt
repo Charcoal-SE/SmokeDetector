@@ -71824,3 +71824,4 @@
 1741540889	Spevacus	spotich\.com
 1741550384	VLAZ	darbune\.com
 1741552825	VLAZ	fashusdts\.com
+1741552832	VLAZ	(?-i:fashsusdtss)(?#t.me)
