@@ -71834,3 +71834,4 @@
 1741589442	VLAZ	thecapitalbox\.com
 1741591449	VLAZ	farmhousegurgaon\.com
 1741591782	VLAZ	getseosolution\.com
+1741591806	VLAZ	(?-i:awaiskhalidj)(?# fiverr)
