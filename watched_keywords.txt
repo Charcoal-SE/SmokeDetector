@@ -71841,3 +71841,4 @@
 1741597300	Jeff Schaller	freejobing\.com
 1741597670	VLAZ	ssl[\W_]*+certl[\W_]*+shop(?!\.com(?<=sslcertshop\.com))
 1741600516	VLAZ	chinarecipes\.com
+1741600976	VLAZ	aj-doors\.ca
