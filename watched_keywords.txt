@@ -71830,3 +71830,4 @@
 1741581699	Cow	free\.aazones\.com
 1741586645	Cow	samhathieducationalservices\.com
 1741586674	Cow	trueastrologys\.com
+1741587420	Cow	tharacosmetics\.kesug\.com
