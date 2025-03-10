@@ -71837,3 +71837,4 @@
 1741591839	VLAZ	(?-i:awaaisk)(?# kwork)
 1741591879	VLAZ	buyersnichemelbourne\.com\.au
 1741591957	VLAZ	Prava[\W_]*+Software[\W_]*+Solutions
+1741593528	VLAZ	collegelaundry\.co
