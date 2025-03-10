@@ -71842,3 +71842,4 @@
 1741597670	VLAZ	ssl[\W_]*+certl[\W_]*+shop(?!\.com(?<=sslcertshop\.com))
 1741600516	VLAZ	chinarecipes\.com
 1741600976	VLAZ	aj-doors\.ca
+1741601051	VLAZ	moneycages\.com
