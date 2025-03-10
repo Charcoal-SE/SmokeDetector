@@ -71852,3 +71852,4 @@
 1741614126	Cow	itprofiles\.com
 1741615162	ipodtouch0218	foxtrot\.com\.ua
 1741618562	VLAZ	ddm\.ro
+1741623541	VLAZ	effectiveratecpm\.com
