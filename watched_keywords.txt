@@ -71862,3 +71862,4 @@
 1741652298	Vickel	sudokusolver\.pro
 1741655274	Fastnlight	apex-intervention\.online
 1741655317	Fastnlight	APEX[\W_]*+INTERVENTION[\W_]*+LTD
+1741673650	VLAZ	reliancedigital\.in
