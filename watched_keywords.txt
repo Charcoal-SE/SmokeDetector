@@ -71869,3 +71869,4 @@
 1741674909	VLAZ	(?-i:^Hooks Bailey$)
 1741675024	VLAZ	axiomtrade\.xyz
 1741675061	VLAZ	ETE[\W_]*+Digital[\W_]*+Marketing
+1741675091	VLAZ	devte_chub
