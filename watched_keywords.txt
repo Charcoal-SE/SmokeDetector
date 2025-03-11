@@ -71867,3 +71867,4 @@
 1741674490	VLAZ	zordial\.com
 1741674523	Cow	sidat\.net
 1741674909	VLAZ	(?-i:^Hooks Bailey$)
+1741675024	VLAZ	axiomtrade\.xyz
