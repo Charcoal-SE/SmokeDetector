@@ -71872,3 +71872,4 @@
 1741675091	VLAZ	devte_chub
 1741675439	VLAZ	surepass\.io
 1741677156	VLAZ	alrasapestcontrol\.ae
+1741678845	VLAZ	texttofont\.com
