@@ -71868,3 +71868,4 @@
 1741674523	Cow	sidat\.net
 1741674909	VLAZ	(?-i:^Hooks Bailey$)
 1741675024	VLAZ	axiomtrade\.xyz
+1741675061	VLAZ	ETE[\W_]*+Digital[\W_]*+Marketing
