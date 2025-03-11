@@ -69940,7 +69940,6 @@
 1736493560	Cow	24x7exchange\.in
 1736493585	Cow	umrahcabservice\.com
 1736498496	Cow	d247signup\.com
-1736498574	Cow	pacorr\.com
 1736498703	Cow	demandifymedia\.com
 1736500775	Cow	ytbcomments\.com
 1736502623	Cow	mosami\.in
