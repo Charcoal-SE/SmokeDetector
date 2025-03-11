@@ -71861,3 +71861,4 @@
 1741645825	Nisse Engström	myexcelonline\.com
 1741652298	Vickel	sudokusolver\.pro
 1741655274	Fastnlight	apex-intervention\.online
+1741655317	Fastnlight	APEX[\W_]*+INTERVENTION[\W_]*+LTD
