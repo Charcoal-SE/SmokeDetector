@@ -5249,7 +5249,8 @@ items:
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
-- comment: no longer resolves 2022-06-19; enabled again 2024-10-18
+- comment: no longer resolves 2022-06-19; enabled again 2024-10-18; NXDOMAIN 2025-03-11
+  disable: true
   ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
