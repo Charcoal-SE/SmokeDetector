@@ -71910,3 +71910,4 @@
 1741767907	VLAZ	gopajak\.id
 1741767915	VLAZ	basics\.com\.co
 1741767922	VLAZ	novaalianca\.sp\.gov\.br
+1741767929	VLAZ	haji\.travel
