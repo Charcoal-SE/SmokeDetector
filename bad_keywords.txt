@@ -427,7 +427,7 @@ pinoy[\W_]*+tambayan
 crossroad[\W_]*+elf
 testo[\W_]*+ultra
 evelladerm
-t(?<!'t)[\W_]*+boost
+t(?<!['’]t)[ -]*boost(?!::)
 horlaxen
 derma[\W_]*+genetix
 download-tubemate
