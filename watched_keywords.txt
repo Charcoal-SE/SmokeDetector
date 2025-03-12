@@ -71924,3 +71924,4 @@
 1741790038	VLAZ	topcpu\.info
 1741793332	ipodtouch0218	afflinker\.com
 1741795804	Cow	NativePath[\W_]*+Native[\W_]*+Hydrate
+1741798631	Fastnlight	vulnme\.com
