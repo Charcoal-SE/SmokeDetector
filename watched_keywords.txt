@@ -71911,3 +71911,4 @@
 1741767915	VLAZ	basics\.com\.co
 1741767922	VLAZ	novaalianca\.sp\.gov\.br
 1741767929	VLAZ	haji\.travel
+1741767937	VLAZ	arsia\.travel
