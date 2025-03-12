@@ -71908,3 +71908,4 @@
 1741767893	VLAZ	(?-i:megawintv/1578)(?#t.me)
 1741767900	VLAZ	handayaninews\.id
 1741767907	VLAZ	gopajak\.id
+1741767915	VLAZ	basics\.com\.co
