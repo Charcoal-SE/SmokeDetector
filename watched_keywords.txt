@@ -71556,7 +71556,6 @@
 1740792153	Spevacus	wizardwebrecoveryservices\.com
 1740813260	VLAZ	keyboardtester\.click
 1740813333	VLAZ	skv\.academy
-1740823031	Nisse Engström	dizitaladda\.com
 1740826351	Cow	onewayairfl\.com
 1740826377	Cow	demircimedya\.com\.tr
 1740826434	Cow	octiot\.com
