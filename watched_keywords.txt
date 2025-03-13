@@ -71953,3 +71953,4 @@
 1741871578	VLAZ	deltaexecutorob\.com
 1741872893	VLAZ	ashalearnology\.com
 1741878251	Cow	mc3d\.cl
+1741878837	Cow	Michael[\W_]*+(?:Butterick[\W_]*+s|Buttericks?+)[\W_]*+Practical[\W_]*+Typography
