@@ -71933,3 +71933,4 @@
 1741842650	Cow	bedpage\.com
 1741842717	Cow	thebathvanities\.com
 1741843460	VLAZ	pb77-sg\.com
+1741843683	VLAZ	tpointtech\.blog5\.net
