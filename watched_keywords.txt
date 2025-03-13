@@ -71945,3 +71945,4 @@
 1741857612	VLAZ	slimsure\.dk
 1741857758	VLAZ	slim[\W_]*+sure(?!\.dk(?<=slimsure\.dk|slim-sure\.dk))
 1741860248	Jeff Schaller	modiretreat\.com
+1741860280	Jeff Schaller	solarconnect\.co\.in
