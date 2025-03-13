@@ -71956,3 +71956,4 @@
 1741879767	Cow	Michael[\W_]*+Butterick(?:[\W_]*+s)?[\W_]*+Practical[\W_]*+Typography
 1741884009	Cow	discordtree\.com
 1741886292	Cow	danchoicom
+1741887321	Jeff Schaller	bcgame-bcallloop2-mirror2\.com
