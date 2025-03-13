@@ -71936,3 +71936,4 @@
 1741843683	VLAZ	tpointtech\.blog5\.net
 1741843690	VLAZ	tpointtech\.blogdigy\.com
 1741843696	VLAZ	bipbaltimore\.com
+1741843704	VLAZ	pad\.p2p\.legal
