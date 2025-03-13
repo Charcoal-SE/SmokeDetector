@@ -71930,3 +71930,4 @@
 1741841140	Cow	tpointtech\.com
 1741841164	Cow	eatdrinkbefancy\.com
 1741841223	Cow	rentsolana\.com
+1741842650	Cow	bedpage\.com
