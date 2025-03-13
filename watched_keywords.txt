@@ -71935,3 +71935,4 @@
 1741843460	VLAZ	pb77-sg\.com
 1741843683	VLAZ	tpointtech\.blog5\.net
 1741843690	VLAZ	tpointtech\.blogdigy\.com
+1741843696	VLAZ	bipbaltimore\.com
