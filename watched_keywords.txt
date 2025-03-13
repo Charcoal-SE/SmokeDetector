@@ -71942,3 +71942,4 @@
 1741851293	Dragonrage	cricketidonline\.com
 1741856025	Dragonrage	finessetravel\.club
 1741857604	VLAZ	slim-sure\.dk
+1741857612	VLAZ	slimsure\.dk
