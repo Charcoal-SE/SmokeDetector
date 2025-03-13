@@ -71947,3 +71947,4 @@
 1741860902	VLAZ	gokubettingtips\.com
 1741861037	VLAZ	woodside[\W_]*+group(?!\.com\.au(?<=woodsidegroup\.com\.au))
 1741866212	Jeff Schaller	qiuqiu99pkv\.wiki
+1741867263	VLAZ	appsonair\.com
