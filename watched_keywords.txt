@@ -71962,3 +71962,4 @@
 1741927819	Cow	(?-i:3b93wxys)(?#tinyurl.com)
 1741928114	Cow	ijellh\.com
 1741928166	Cow	(?-i:wecodecrypto)(?#t.me)
+1741865395	Dan Getz	appsonair
