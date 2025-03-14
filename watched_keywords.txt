@@ -52216,7 +52216,6 @@
 1694021829	Jesse	pulwamastatus\.blogspot
 1694023218	cigien	thesafeairlines\.com
 1694030673	Jeff Schaller	pipeanddrapeusa\.com
-1694048378	Spevacus	bingx\.com
 1694048637	Makyen	veryfasthosting\.co\.uk
 1694065312	Dragonrage	royalgigoloclubs\.in
 1694065453	VLAZ	enablex\.io
