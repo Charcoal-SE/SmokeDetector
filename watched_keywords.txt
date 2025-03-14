@@ -71966,3 +71966,4 @@
 1741878837	Cow	Michael[\W_]*+(?:Butterick[\W_]*+s|Buttericks?+)[\W_]*+Practical[\W_]*+Typography
 1741879456	ipodtouch0218	ontario-business\.ca
 1741894443	ipodtouch0218	(?-i:oeqHmY9yTEaR9vnd7)(?#forms.gle)
+1741943235	Jeff Schaller	firetradesupplies\.com
