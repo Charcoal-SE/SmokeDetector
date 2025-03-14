@@ -71972,3 +71972,4 @@
 1741959158	Cow	modiranservices\.com
 1741974866	Jeff Schaller	Akinco\.ae
 1741985858	Jeff Schaller	pngdow\.com
+1741985891	Jeff Schaller	bingx\.com(?<!open-api\.bingx\.com)
