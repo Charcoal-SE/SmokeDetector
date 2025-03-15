@@ -71975,3 +71975,4 @@
 1741985891	Jeff Schaller	bingx\.com(?<!open-api\.bingx\.com)
 1742002142	Jeff Schaller	resolvedexk
 1742019371	Nisse Engström	houssed\.com
+1742020792	Nisse Engström	hzhmarine\.com
