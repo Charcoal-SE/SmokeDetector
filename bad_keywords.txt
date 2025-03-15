@@ -3588,3 +3588,4 @@ claim[\W_]*+rewards[\W_]*+rs
 signup[\W_]*+bonus[\W_]*+rs
 discounts?+[\W_]*+(?:for|to)[\W_]*+seniors
 nodemaven(?!\.com(?<=nodemaven\.com))
+Leanbiss123
