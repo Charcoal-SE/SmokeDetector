@@ -72000,3 +72000,4 @@
 1742110789	Cow	(?-i:md45688)(?#t.me)
 1742111842	Cow	bonorganik\.in
 1742122198	Cow	hitvapps\.com
+1742122216	Cow	motoreview\.web\.id
