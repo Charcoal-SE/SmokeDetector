@@ -3590,4 +3590,3 @@ discounts?+[\W_]*+(?:for|to)[\W_]*+seniors
 nodemaven(?!\.com(?<=nodemaven\.com))
 Leanbiss123
 cheapest[\W_]*+day[\W_]*+to[\W_]*+buy.{1,25}tickets
-what[\W_]*+days[\W_]*+are[\W_]*+\w+[\W_]*+(?:\w+[\W_]*+)?discounts
