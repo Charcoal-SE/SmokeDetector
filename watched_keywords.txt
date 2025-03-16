@@ -72007,3 +72007,4 @@
 1742148101	Jeff Schaller	anubhavkulshreshtha\.com
 1742149151	Vickel	cheetahlinkz\.com
 1742155164	Vickel	queendetox\.com
+1742155344	Vickel	queen[\W_]*+detox(?!\.com(?<=queendetox\.com))
