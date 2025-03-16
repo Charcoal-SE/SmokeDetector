@@ -71997,3 +71997,4 @@
 1742110293	Cow	freecine\.store
 1742110498	Cow	P2PCerts
 1742110624	Cow	programly0\.blogspot
+1742110789	Cow	(?-i:md45688)(?#t.me)
