@@ -72022,3 +72022,4 @@
 1742207690	Dan Getz	clickpeddles\.com
 1742211603	Cow	budgetiscape\.com
 1742211655	Cow	generateguid\.online
+1742211760	Cow	(?-i:wsac24)(?# linktr.ee)
