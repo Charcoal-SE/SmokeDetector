@@ -72008,3 +72008,4 @@
 1742155164	Vickel	queendetox\.com
 1742155344	Vickel	queen[\W_]*+detox(?!\.com(?<=queendetox\.com))
 1742158765	Jeff Schaller	cryptoaffairs\.online
+1742188428	Cow	oxper\.in
