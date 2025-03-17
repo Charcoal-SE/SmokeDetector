@@ -3594,3 +3594,4 @@ what[\W_]*+days[\W_]*+are[\W_]*+(?:\w++[\W_]++){1,2}discounts
 Quick[\W_]*+Cash[\W_]*+Loans
 ahrendaniel
 OnlyFans[\W_]*+Premium[\W_]*+content
+video[\W_]*+trending[\W_]*+on[\W_]*+twitter
