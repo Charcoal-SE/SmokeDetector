@@ -72035,3 +72035,4 @@
 1742234277	Cow	thetravelmotivation\.com
 1742235893	Cow	(?-i:FriXVeZS)(?#cutt.ly)
 1742239195	Cow	ostrichcyber-risk\.com
+1742244054	Jeff Schaller	go\.depot\.dev
