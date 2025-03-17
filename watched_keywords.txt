@@ -72019,3 +72019,4 @@
 1742202759	Glorfindel	vpnmag\.online
 1742207046	Jeff Schaller	upskillcareers\.com
 1742207234	Jeff Schaller	bet-pmi\.in
+1742207690	Dan Getz	clickpeddles\.com
