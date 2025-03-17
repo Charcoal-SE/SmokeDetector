@@ -72036,3 +72036,4 @@
 1742235893	Cow	(?-i:FriXVeZS)(?#cutt.ly)
 1742239195	Cow	ostrichcyber-risk\.com
 1742244054	Jeff Schaller	go\.depot\.dev
+1742252555	Jeff Schaller	ipptscore\.com
