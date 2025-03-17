@@ -72016,3 +72016,4 @@
 1742193280	Cow	avtarnashamuktikendra\.com
 1742195131	Cow	bellustouch\.com
 1742195946	Glorfindel	teamcamp\.app
+1742202759	Glorfindel	vpnmag\.online
