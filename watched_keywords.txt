@@ -72052,3 +72052,4 @@
 1742316223	VLAZ	b9gamedownload\.co
 1742363955	Cow	(?-i:pY3y8C)(?#qr.ae)
 1742364087	Cow	qwschool\.ca
+1742364183	Cow	monarchnahas\.com
