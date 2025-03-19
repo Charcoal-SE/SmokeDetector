@@ -72053,3 +72053,4 @@
 1742363955	Cow	(?-i:pY3y8C)(?#qr.ae)
 1742364087	Cow	qwschool\.ca
 1742364183	Cow	monarchnahas\.com
+1742354787	Dan Getz	wow[\W_]*+to[\W_]*+you[\W_]*+in
