@@ -72061,3 +72061,4 @@
 1742378518	Cow	expambit\.com
 1742378581	Cow	e42\.ai
 1742378616	Cow	alldaypills\.com
+1742378624	Cow	abovethehimalaya\.com
