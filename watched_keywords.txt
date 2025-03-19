@@ -72071,3 +72071,4 @@
 1742402398	ipodtouch0218	spaxc\.com
 1742403159	Cow	IAForGood
 1742403177	Cow	aistudent\.community
+1742404737	Cow	bca\.co\.id
