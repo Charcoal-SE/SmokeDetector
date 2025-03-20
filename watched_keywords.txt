@@ -72077,3 +72077,4 @@
 1742440874	Spevacus	vacranerental\.com
 1742446708	Cow	idea2app\.dev
 1742446991	Cow	wesamsa\.com
+1742447021	Cow	clavaa\.com
