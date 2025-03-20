@@ -72089,3 +72089,4 @@
 1742462067	Glorfindel	concretesrichmondva\.com
 1742465607	Robert Longson	ticketcutter\.com
 1742466102	Jeff Schaller	peptidewebmd\.com
+1742466547	Jeff Schaller	dreamcooder\.medium\.com
