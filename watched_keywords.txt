@@ -72124,3 +72124,4 @@
 1742562636	Cow	cabsoluit\.com
 1742546295	Dan Getz	llamacpp\.info
 1742564372	Cow	corporate\.one
+1742566605	Jeff Schaller	Snow-White-2025-Full
