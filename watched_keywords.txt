@@ -72116,3 +72116,4 @@
 1742554080	Jeff Schaller	bwselectricinc\.com
 1742554118	Jeff Schaller	BWS[\W_]*+Electrical
 1742555113	Glorfindel	poehub\.org
+1742555128	Glorfindel	llamacpp
