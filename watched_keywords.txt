@@ -72110,3 +72110,4 @@
 1742543501	Cow	what[\W_]*+days?+[\W_]*+does[\W_]*+(?:\w++[\W_]++){1,3}prices
 1742552786	Jeff Schaller	technodecor\.top
 1742552796	Mithical	bullishstocks\.in
+1742552824	Jeff Schaller	TechnoDecor(?!\.top)
