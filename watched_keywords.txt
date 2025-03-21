@@ -72114,3 +72114,4 @@
 1742553548	Jeff Schaller	vsthd\.com
 1742553565	Jeff Schaller	ano-boy\.org
 1742554080	Jeff Schaller	bwselectricinc\.com
+1742554118	Jeff Schaller	BWS[\W_]*+Electrical
