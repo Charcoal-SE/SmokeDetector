@@ -60033,7 +60033,6 @@
 1712189258	Spevacus	fologrow\.com
 1712211974	Nisse Engström	techietruck\.com
 1712212107	Nisse Engström	trueulymarket\.com
-1712212696	Nisse Engström	codsils\.com
 1712213112	Nisse Engström	ibaisindia\.com
 1712213472	Nisse Engström	soleitech\.com
 1712214113	Nisse Engström	xpertslegal\.com
