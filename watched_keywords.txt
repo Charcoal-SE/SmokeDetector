@@ -71246,7 +71246,6 @@
 1740040219	VLAZ	magicmushroomsporesusa\.com
 1740040225	VLAZ	magicmushroomgrowkits\.ca
 1740041734	Anerdw	getawayz\.net
-1740044403	VLAZ	mediaofficers\.com
 1740047080	Cow	winpkr\.net\.pk
 1740048640	Cow	tradingbots\.net
 1740048791	Cow	synergycodes\.com
