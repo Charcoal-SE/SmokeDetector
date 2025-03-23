@@ -72149,3 +72149,4 @@
 1742732191	Cow	enriquecatrabalhando\.com\.br
 1742734020	Cow	(?-i:EconomyDynamicsPaper00)(?#bit.ly)
 1742740434	Spevacus	armsmories\.com
+1742740670	Spevacus	digitalmarketingzone\.in
