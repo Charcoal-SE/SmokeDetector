@@ -72148,3 +72148,4 @@
 1742730666	Cow	soumissionscloture\.ca
 1742732191	Cow	enriquecatrabalhando\.com\.br
 1742734020	Cow	(?-i:EconomyDynamicsPaper00)(?#bit.ly)
+1742740434	Spevacus	armsmories\.com
