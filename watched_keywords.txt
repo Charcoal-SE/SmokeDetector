@@ -72154,3 +72154,4 @@
 1742742955	Cow	My[\W_]*+Laptop[\W_]*+Repair[\W_]*+Shop
 1742743298	Cow	sweekaarhospitality\.com
 1742749078	Vickel	shariefashish(?:@gmail\.com)?
+1742762338	Nisse Engström	jcweb\.es
