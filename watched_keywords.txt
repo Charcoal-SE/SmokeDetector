@@ -72151,3 +72151,4 @@
 1742740434	Spevacus	armsmories\.com
 1742740670	Spevacus	digitalmarketingzone\.in
 1742742658	Cow	reactiontimetest\.app
+1742742955	Cow	My[\W_]*+Laptop[\W_]*+Repair[\W_]*+Shop
