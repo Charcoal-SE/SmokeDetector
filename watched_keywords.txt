@@ -72169,3 +72169,4 @@
 1742798422	Cow	pitchpinemedia\.com
 1742808167	VLAZ	(?-i:^Virat Ray$)
 1742811939	Dragonrage	dunloptyres\.in
+1742813871	Jeff Schaller	globalairlinesupport\.com
