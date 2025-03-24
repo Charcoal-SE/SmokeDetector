@@ -72179,3 +72179,4 @@
 1742821562	General Grievance	sustaininsight\.com
 1742821978	Jeff Schaller	dreamstravelandtour\.com
 1742821993	Jeff Schaller	dreamstravelandtours\.com
+1742823702	Jeff Schaller	blog\.gettransfer\.com
