@@ -66058,7 +66058,6 @@
 1725952761	tripleee	Aadhaar[\W_]*+eKYC
 1725952985	tripleee	technewtime\.com
 1725953371	Dragonrage	danhbaonline\.vn
-1725953590	tripleee	(?-i:^Hoang Nguyen$)
 1725953652	tripleee	onewayticker\.com
 1725954890	tripleee	brisbaneepoxysuppliers\.com\.au
 1725956084	Dragonrage	artfulinterior\.mydt\.in
