@@ -72167,3 +72167,4 @@
 1742796626	Cow	vcommission\.com
 1742797814	Cow	sinsmarts\.com
 1742798422	Cow	pitchpinemedia\.com
+1742808167	VLAZ	(?-i:^Virat Ray$)
