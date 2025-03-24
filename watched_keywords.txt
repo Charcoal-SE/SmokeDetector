@@ -72169,3 +72169,4 @@
 1742808167	VLAZ	(?-i:^Virat Ray$)
 1742811939	Dragonrage	dunloptyres\.in
 1742813871	Jeff Schaller	globalairlinesupport\.com
+1742814124	Jeff Schaller	digigrowth\.net
