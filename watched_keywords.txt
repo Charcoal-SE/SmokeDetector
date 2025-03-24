@@ -72162,3 +72162,4 @@
 1742792722	Cow	roobet\.com
 1742793119	Cow	spamspamspamspamspameggsandspam\.com
 1742795457	Cow	satvikstore\.in
+1742795552	Cow	dopetshopgiare\.com
