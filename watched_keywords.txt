@@ -70476,7 +70476,6 @@
 1738051993	VLAZ	kmwpodiatry\.com\.au
 1738052070	VLAZ	luxor\.in
 1738052702	Cow	solskenenergy\.com
-1738054138	VLAZ	skyappzacademy\.com
 1738054625	Cow	📱
 1738054670	Cow	rank-revolution\.com
 1738056303	VLAZ	sbwayout\.com
