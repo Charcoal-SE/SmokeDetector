@@ -72210,3 +72210,4 @@
 1742897455	Jeff Schaller	ferrynav\.com
 1742897708	Cow	C[óo]mo[\W_]*+contactar[\W_]*+con
 1742898201	Jeff Schaller	umagamdrup\.dk
+1742898232	Jeff Schaller	neevcloud\.com
