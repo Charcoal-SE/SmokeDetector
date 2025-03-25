@@ -72206,3 +72206,4 @@
 1742894183	Cow	innoitlabs\.com
 1742896446	Cow	is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+fly[\W_]*+with
 1742897140	Cow	sleepbudsleep\.in
+1742897295	Cow	Come[\W_]*+parlare[\W_]*+con
