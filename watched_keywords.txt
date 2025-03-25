@@ -72218,3 +72218,4 @@
 1742903726	Cow	fb\.com/ptmmkt
 1742904251	Dan Getz	easytools\.website
 1742904358	Cow	fixisoft\.com
+1742904670	Cow	snrmenu\.ph
