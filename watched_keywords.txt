@@ -72192,3 +72192,4 @@
 1742883528	Cow	mifoneportal\.com\.mx
 1742884133	Cow	thewebtoolspro\.com
 1742884253	Cow	aerenlpo\.com
+1742884341	Cow	nicheagriculture\.com
