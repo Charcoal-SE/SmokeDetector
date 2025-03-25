@@ -72199,3 +72199,4 @@
 1742888453	VLAZ	aula[\W_]*+india(?!\.com(?<=aulaindia\.com))
 1742888694	VLAZ	buy[\W_]*+kundli(?!\.in(?<=buykundli\.in))
 1742893223	Cow	trustcapital\.com
+1742893331	Cow	njbusiness-attorney\.com
