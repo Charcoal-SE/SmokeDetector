@@ -72204,3 +72204,4 @@
 1742893363	Cow	saasverse\.in
 1742893439	Cow	ktonline\.my
 1742894183	Cow	innoitlabs\.com
+1742896446	Cow	is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+fly[\W_]*+with
