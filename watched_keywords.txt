@@ -72196,3 +72196,4 @@
 1742885938	Cow	arthajobboard\.com
 1742886338	Cow	stalliontech\.io
 1742888424	VLAZ	aulaindia\.com
+1742888453	VLAZ	aula[\W_]*+india(?!\.com(?<=aulaindia\.com))
