@@ -72198,3 +72198,4 @@
 1742888424	VLAZ	aulaindia\.com
 1742888453	VLAZ	aula[\W_]*+india(?!\.com(?<=aulaindia\.com))
 1742888694	VLAZ	buy[\W_]*+kundli(?!\.in(?<=buykundli\.in))
+1742893223	Cow	trustcapital\.com
