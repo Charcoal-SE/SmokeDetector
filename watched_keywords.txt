@@ -72254,3 +72254,4 @@
 1742984482	VLAZ	culko\.in
 1742984491	VLAZ	getaimonitor\.com
 1742984849	VLAZ	True[\W_]*+Value[\W_]*+Infosoft
+1742984981	VLAZ	supernic
