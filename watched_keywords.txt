@@ -72248,3 +72248,4 @@
 1742972590	Cow	minecraaft\.mx
 1742972679	Cow	sonic-happy-hour\.us
 1742973056	Cow	asuswifilogin\.com
+1742976913	Cow	luantravelperu\.com
