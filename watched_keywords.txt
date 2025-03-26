@@ -12003,7 +12003,6 @@
 1568301958	Xnero	haydash\.com
 1568323908	Makyen	golpokobitarkutir\.blogspot
 1568323917	Makyen	gingersoftware\.com
-1568343280	Makyen	eventdex\.com
 1568347590	Nisse Engström	hicary\.com
 1568350278	tripleee	search\W*tempest
 1568353331	Makyen	duaistikharaforlove\.com
