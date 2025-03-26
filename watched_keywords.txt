@@ -72263,3 +72263,4 @@
 1742991780	Cow	royalfalconlimos\.com
 1742996669	Dan Getz	cheapest[\W_]*+day
 1742997557	Cow	roodepoortabortionclinic\.online
+1743000866	VLAZ	(?-i:^1+ ONE(?: ONE)+|2+ TWO(?: TWO)+|3+ THREE(?: THREE)+|4+ FOUR(?: FOUR)+|5+ FIVE(?: FIVE)+|6+ SIX(?: SIX)+|7+ SEVEN(?: SEVEN)+|8+ EIGHT(?: EIGHT)+|9+ NINE(?: NINE)+$)
