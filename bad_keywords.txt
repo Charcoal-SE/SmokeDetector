@@ -3603,3 +3603,4 @@ c[óo]mo[\W_]*+hacer[\W_]*+un[\W_]*+reclamo[\W_]*+con
 𝕔𝕙𝕖𝕒𝕡𝕖𝕤𝕥
 uaeplug20
 dubplg\.12
+Come[\W_]*+posso[\W_]*+parlare[\W_]*+con[\W_]*+un[\W_]*+operatore
