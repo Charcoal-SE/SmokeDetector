@@ -72260,3 +72260,4 @@
 1742989857	VLAZ	sdengineering\.sa
 1742989907	VLAZ	academic[\W_]*+globe[\W_]*+services(?!\.com(?<=academicglobeservices\.com))
 1742990556	Jeff Schaller	codermasktech\.com
+1742990985	Cow	reactdevelopers\.io
