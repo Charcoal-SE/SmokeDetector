@@ -72267,3 +72267,4 @@
 1743008548	ipodtouch0218	theoneshotfilms\.com
 1743011277	VLAZ	(?-i:M6Zb38JUb4)(?#discord.gg)
 1743013067	Cow	apkdone\.com
+1743014629	Cow	How[\W_]*+do[\W_]*+I[\W_]*+contact[\W_]*+support[\W_]*+for
