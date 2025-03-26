@@ -3608,3 +3608,4 @@ senior[\W_]*+citizens[\W_]*+get[\W_]*+a[\W_]*+discount[\W_]*+on
 to[\W_]*+avoid[\W_]*+(?:\w++[\W_]++){0,2}cancellation[\W_]*+fee
 are[\W_]*+(?:\w++[\W_]++){1,2}flights[\W_]*+cheaper[\W_]*+on[\W_]*+(?:\w++[\W_]++){1,2}
 C[óo]mo[\W_]*+(?:puedo[\W_]*+llamar|llamar)[\W_]*+a[\W_]*+(?:\w++[\W_]++){1,2}desde[\W_]*+M[ée]xico
+Cu[áa]l[\W_]*+es[\W_]*+el[\W_]*+n[úu]mero[\W_]*+de[\W_]*+WhatsApp
