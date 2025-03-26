@@ -72238,3 +72238,4 @@
 1742965521	Cow	Mavenstouch
 1742966524	Cow	atlastools\.ir
 1742966702	Cow	moissaniteinindia\.com
+1742967555	Cow	medisuccess\.com\.au
