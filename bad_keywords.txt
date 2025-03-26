@@ -3605,3 +3605,4 @@ uaeplug20
 dubplg\.12
 Come[\W_]*+posso[\W_]*+parlare[\W_]*+con[\W_]*+un[\W_]*+operatore
 senior[\W_]*+citizens[\W_]*+get[\W_]*+a[\W_]*+discount[\W_]*+on
+to[\W_]*+avoid[\W_]*+(?:\w++[\W_]++){0,2}cancellation[\W_]*+fee
