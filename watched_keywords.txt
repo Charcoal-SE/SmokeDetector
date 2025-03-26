@@ -69118,7 +69118,6 @@
 1734083158	Cow	binhminhrental\.vn
 1734086137	Cow	casefox\.com
 1734086148	Cow	finxl\.in
-1734087861	Cow	11xplay-id\.in
 1734088748	Cow	refpa7921972\.top
 1734088942	Cow	magentowebdev\.com
 1734090119	Jeff Schaller	bluemountainloans\.com
