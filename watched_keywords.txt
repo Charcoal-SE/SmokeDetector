@@ -72246,3 +72246,4 @@
 1742972319	VLAZ	Mavens[\W_]*+touch
 1742972429	Cow	estpl\.in
 1742972590	Cow	minecraaft\.mx
+1742972679	Cow	sonic-happy-hour\.us
