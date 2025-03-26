@@ -72258,3 +72258,4 @@
 1742988829	VLAZ	medonsindia\.com
 1742989747	Jeff Schaller	academicglobeservices\.com
 1742989857	VLAZ	sdengineering\.sa
+1742989907	VLAZ	academic[\W_]*+globe[\W_]*+services(?!\.com(?<=academicglobeservices\.com))
