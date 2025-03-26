@@ -72252,3 +72252,4 @@
 1742979216	Cow	goldenaster\.net
 1742982793	VLAZ	leakvideos\.online
 1742984482	VLAZ	culko\.in
+1742984491	VLAZ	getaimonitor\.com
