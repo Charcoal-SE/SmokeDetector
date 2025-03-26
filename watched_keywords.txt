@@ -72255,3 +72255,4 @@
 1742984849	VLAZ	True[\W_]*+Value[\W_]*+Infosoft
 1742984981	VLAZ	supernic
 1742988180	VLAZ	goverdhanspokenenglish\.com
+1742988829	VLAZ	medonsindia\.com
