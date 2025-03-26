@@ -36085,7 +36085,6 @@
 1645867149	Makyen	homedoctorbook\.com
 1645878905	Robert Longson	cracktopc\.com
 1645879252	Jeff Schaller	ewaytickets\.com
-1645883642	tripleee	(?-i:^David Robertson$)
 1645884141	Ryan M	206\.72\.205\.50
 1645884157	Ryan M	ratingslot
 1645889019	cigien	crackedguru\.com
