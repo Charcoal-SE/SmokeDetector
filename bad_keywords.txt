@@ -3613,3 +3613,4 @@ Does[\W_]*+(?:\w++[\W_]++){0,2}Have[\W_]*+a[\W_]*+Free[\W_]*+Cancellation
 What[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+a[\W_]*+(?:\w++[\W_]++){1,2}flight
 What[\W_]*+day[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+to[\W_]*+buy[\W_]*+(?:\w++[\W_]++){0,2}tickets
 Does[\W_]*+(?:\w++[\W_]++){0,3}have[\W_]*+a[\W_]*+senior[\W_]*+discount
+how[\W_]*+to[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+in
