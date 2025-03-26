@@ -72244,3 +72244,4 @@
 1742971858	VLAZ	𝑽𝒊𝒔𝒊𝒐𝒏 *𝟏𝟏
 1742972029	Cow	geckodriver\.com
 1742972319	VLAZ	Mavens[\W_]*+touch
+1742972429	Cow	estpl\.in
