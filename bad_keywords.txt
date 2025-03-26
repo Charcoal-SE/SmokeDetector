@@ -3611,3 +3611,4 @@ C[óo]mo[\W_]*+(?:puedo[\W_]*+llamar|llamar)[\W_]*+a[\W_]*+(?:\w++[\W_]++){1,2}d
 Cu[áa]l[\W_]*+es[\W_]*+el[\W_]*+n[úu]mero[\W_]*+de[\W_]*+WhatsApp
 Does[\W_]*+(?:\w++[\W_]++){0,2}Have[\W_]*+a[\W_]*+Free[\W_]*+Cancellation
 What[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+a[\W_]*+(?:\w++[\W_]++){1,2}flight
+What[\W_]*+day[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+to[\W_]*+buy[\W_]*+(?:\w++[\W_]++){0,2}tickets
