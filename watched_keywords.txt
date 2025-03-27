@@ -72268,3 +72268,4 @@
 1743013067	Cow	apkdone\.com
 1743014629	Cow	How[\W_]*+do[\W_]*+I[\W_]*+contact[\W_]*+support[\W_]*+for
 1743018924	Fastnlight	uidaveomeiza(?:@gmail\.com)?
+1743040873	Jeff Schaller	upcomingupdate\.in
