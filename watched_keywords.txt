@@ -72300,3 +72300,4 @@
 1743071930	VLAZ	DizitalAdda
 1743072031	VLAZ	Atulya[\W_]*+Hotels
 1743073049	Jeff Schaller	theleatherstreet\.com
+1743073377	VLAZ	technocratplasma\.com
