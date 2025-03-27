@@ -72282,3 +72282,4 @@
 1743057324	Ryan M	jetpero\.com
 1743057351	VLAZ	aemds(?!\.org)
 1743057939	Dragonrage	cleartouch\.in
+1743058084	Cow	Is[\W_]*+it[\W_]*+possible[\W_]*+to[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+from
