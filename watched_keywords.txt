@@ -72296,3 +72296,4 @@
 1743068345	Dragonrage	whoofandmeow\.com
 1743068383	Dragonrage	cheezeebit\.com
 1743069961	Glorfindel	^Marketing AYAN$
+1743071770	VLAZ	cleverget\.jp
