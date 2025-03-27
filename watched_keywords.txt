@@ -72281,3 +72281,4 @@
 1743057303	VLAZ	com\.kvr\.app_android
 1743057324	Ryan M	jetpero\.com
 1743057351	VLAZ	aemds(?!\.org)
+1743057939	Dragonrage	cleartouch\.in
