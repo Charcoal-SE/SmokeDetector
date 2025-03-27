@@ -72276,3 +72276,4 @@
 1743056176	Cow	theyellowstrawberry\.com
 1743056751	Cow	apkmafias\.com
 1743057041	VLAZ	photo2video[\W_]*+ai
+1743057049	VLAZ	image[\W_]*+to[\W_]*+video[\W_]*+ai
