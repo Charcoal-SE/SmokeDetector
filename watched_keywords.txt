@@ -72270,3 +72270,4 @@
 1743018924	Fastnlight	uidaveomeiza(?:@gmail\.com)?
 1743040873	Jeff Schaller	upcomingupdate\.in
 1743052901	Dragonrage	cdraustraliawriter\.com
+1743052968	Dragonrage	(?-i:4hqRX)(?#shorturl.at)
