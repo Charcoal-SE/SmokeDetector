@@ -23937,7 +23937,6 @@
 1605767044	tripleee	docpulse\.com
 1605771911	tripleee	water[\W_]*+level[\W_]*+controllers?
 1605771933	tripleee	kavitha[\W_]*+ktronics
-1605772705	tripleee	apparelnbags\.com
 1605776507	tripleee	24hoursalcoholdelivery\.co\.uk
 1605777050	tripleee	netsolitsolution\.com
 1605777220	tripleee	mega888slots\.com
