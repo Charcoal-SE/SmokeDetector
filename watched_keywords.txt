@@ -72280,3 +72280,4 @@
 1743057057	VLAZ	dream[\W_]*+machine[\W_]*+ai
 1743057303	VLAZ	com\.kvr\.app_android
 1743057324	Ryan M	jetpero\.com
+1743057351	VLAZ	aemds(?!\.org)
