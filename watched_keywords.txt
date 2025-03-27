@@ -72295,3 +72295,4 @@
 1743066081	VLAZ	yummfood\.com\.vn
 1743068345	Dragonrage	whoofandmeow\.com
 1743068383	Dragonrage	cheezeebit\.com
+1743069961	Glorfindel	^Marketing AYAN$
