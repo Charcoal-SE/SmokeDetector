@@ -3616,3 +3616,4 @@ how[\W_]*+to[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+in
 How[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+(?:\w++[\W_]++){0,3}by[\W_]*+phone
 C[óo]mo[\W_]*+(?:puedo[\W_]*+llamar|llamar)[\W_]*+a[\W_]*+(?:\w++[\W_]++){0,3}desde[\W_]*+(?:m[ée]xico|chile|per[uú]|costa[\W_]*+rica|colombia|argentina|espa[ñn]a|estados[\W_]*+unidos|celular|ecuador|guatemala|panam[áa]|un[\W_]*+celular|rep[úu]blica|el[\W_]*+salvador|cartagena|eeuu|bolivia|brazil|guyana|paraguay|suriname|uruguay|venezuela)
 qu[ée][\W_]*+es[\W_]*+la[\W_]*+regla[\W_]*+de[\W_]*+las[\W_]*+24[\W_]*+horas[\W_]*+para
+What[\W_]*+month[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+to[\W_]*+fly[\W_]*+to
