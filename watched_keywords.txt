@@ -72299,3 +72299,4 @@
 1743071770	VLAZ	cleverget\.jp
 1743071930	VLAZ	DizitalAdda
 1743072031	VLAZ	Atulya[\W_]*+Hotels
+1743073049	Jeff Schaller	theleatherstreet\.com
