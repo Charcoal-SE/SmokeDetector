@@ -72301,3 +72301,4 @@
 1743072031	VLAZ	Atulya[\W_]*+Hotels
 1743073049	Jeff Schaller	theleatherstreet\.com
 1743073377	VLAZ	technocratplasma\.com
+1743079407	Cow	dqotsolutions\.com
