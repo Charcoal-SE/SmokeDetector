@@ -72275,3 +72275,4 @@
 1743055365	VLAZ	aemds\.org
 1743056176	Cow	theyellowstrawberry\.com
 1743056751	Cow	apkmafias\.com
+1743057041	VLAZ	photo2video[\W_]*+ai
