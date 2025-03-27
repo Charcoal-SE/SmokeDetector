@@ -72284,4 +72284,3 @@
 1743057939	Dragonrage	cleartouch\.in
 1743058084	Cow	Is[\W_]*+it[\W_]*+possible[\W_]*+to[\W_]*+get[\W_]*+a[\W_]*+refund[\W_]*+from
 1743058464	VLAZ	9631320620(?#no noram)
-1743058782	Dragonrage	𝙀𝙭𝙥𝙚𝙙𝙞𝙖
