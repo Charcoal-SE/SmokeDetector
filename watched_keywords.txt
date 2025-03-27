@@ -72304,3 +72304,4 @@
 1743079407	Cow	dqotsolutions\.com
 1743079659	Cow	icecric\.news
 1743084797	VLAZ	moviemaxtv\.site
+1743084804	VLAZ	moviesmax\.site
