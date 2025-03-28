@@ -72322,3 +72322,4 @@
 1743144105	VLAZ	admin-my8k\.me
 1743144113	VLAZ	iptvresellers\.pro
 1743144119	VLAZ	admin-nexon\.org\.com
+1743144126	VLAZ	resellerpanel\.pro
