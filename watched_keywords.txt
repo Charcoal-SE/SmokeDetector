@@ -72339,3 +72339,4 @@
 1743161826	VLAZ	ahb-lab\.com
 1743161925	VLAZ	nutroots\.com
 1743161941	VLAZ	nutroots(?!\.com)
+1743162381	Cow	Gxxgle\.hh
