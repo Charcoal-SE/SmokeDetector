@@ -71794,7 +71794,6 @@
 1741539443	Nisse Engström	pcbottleneckcalculator\.net
 1741540889	Spevacus	spotich\.com
 1741550384	VLAZ	darbune\.com
-1741552825	VLAZ	fashusdts\.com
 1741552832	VLAZ	(?-i:fashsusdtss)(?#t.me)
 1741552884	VLAZ	(?-i:5rR9k2k)(?# fiverr)
 1741569505	Jeff Schaller	apostillefbireport\.com
