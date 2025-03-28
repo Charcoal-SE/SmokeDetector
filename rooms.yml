@@ -225,6 +225,7 @@ stackexchange.com:
       - 418284   # gre_gor
       - 25911161 # ipodtouch0218
       - 3601683  # Dan Getz
+      - 3627446 # Vincent Thacker
 
   65945:  # Charcoal Test
     commands: true
