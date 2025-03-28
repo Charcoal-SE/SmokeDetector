@@ -72326,3 +72326,4 @@
 1743144132	VLAZ	admin-bqpanel\.com
 1743144506	VLAZ	red[\W)]*+produce[\W)]*+inc(?!\.com(?<=redproduceinc\.com))
 1743145889	Cow	wildernestdandeli\.com
+1743146625	VLAZ	saladsavage\.net
