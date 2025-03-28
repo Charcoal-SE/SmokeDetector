@@ -72341,3 +72341,4 @@
 1743161941	VLAZ	nutroots(?!\.com)
 1743162381	Cow	Gxxgle\.hh
 1743168719	Jeff Schaller	taketwotechnologies\.com
+1743176299	Dragonrage	(?-i:EEV417)(?#is.gd)
