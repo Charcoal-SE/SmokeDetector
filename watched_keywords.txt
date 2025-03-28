@@ -72340,3 +72340,4 @@
 1743161925	VLAZ	nutroots\.com
 1743161941	VLAZ	nutroots(?!\.com)
 1743162381	Cow	Gxxgle\.hh
+1743168719	Jeff Schaller	taketwotechnologies\.com
