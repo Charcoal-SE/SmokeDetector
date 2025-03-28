@@ -72321,3 +72321,4 @@
 1743144098	VLAZ	admin-tvpluspanel\.net
 1743144105	VLAZ	admin-my8k\.me
 1743144113	VLAZ	iptvresellers\.pro
+1743144119	VLAZ	admin-nexon\.org\.com
