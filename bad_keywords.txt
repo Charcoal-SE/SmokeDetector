@@ -3636,3 +3636,4 @@ breeze[\W_]*+refund[\W_]*+money
 ℂ𝕠𝕚𝕟𝕓𝕒𝕤𝕖
 Ｃｏｉｎｂａｓｅ
 Cómo[\W_]*+hablo[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+real[\W_]*+en
+C[óo]mo[\W_]*+se[\W_]*+marca[\W_]*+a[\W_]*+(?:\w++[\W_]++){0,3}desde[\W_]*+(?:m[ée]xico|chile|per[uú]|costa[\W_]*+rica|colombia|argentina|espa[ñn]a|estados[\W_]*+unidos|celular|ecuador|guatemala|panam[áa]|un[\W_]*+celular|rep[úu]blica|el[\W_]*+salvador|cartagena|eeuu|bolivia|brazil|guyana|paraguay|suriname|uruguay|venezuela)
