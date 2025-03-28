@@ -72328,3 +72328,4 @@
 1743146625	VLAZ	saladsavage\.net
 1743148617	Mast	cheapest[\W_]*+months[\W_]*+to[\W_]*+fly
 1743150512	Cow	furrmate\.com
+1743151694	Mast	4kbluray4u\.com
