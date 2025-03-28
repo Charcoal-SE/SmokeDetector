@@ -3635,3 +3635,4 @@ to[\W_]*+contact[\W_]*+sbcglobal[\W_]*+support
 breeze[\W_]*+refund[\W_]*+money
 ℂ𝕠𝕚𝕟𝕓𝕒𝕤𝕖
 Ｃｏｉｎｂａｓｅ
+Cómo[\W_]*+hablo[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+real[\W_]*+en
