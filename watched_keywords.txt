@@ -72348,3 +72348,4 @@
 1743237243	Cow	bpcorrect\.com
 1743243812	Cow	writesblog\.com
 1743243867	Cow	BeamNG[\W_]*+drive
+1743243905	Cow	thecaselawyer\.com
