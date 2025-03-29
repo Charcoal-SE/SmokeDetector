@@ -62284,7 +62284,6 @@
 1717497181	Jeff Schaller	idpeinture\.com
 1717499289	tripleee	(?-i:^Ahsan Ishtiaq$)
 1717501953	Jeff Schaller	rsdhope\.org
-1717502001	Jeff Schaller	contractor-state-license\.com
 1717503064	VLAZ	empowera\.net
 1717503143	VLAZ	empowera(?!\.net)
 1717504870	Vickel	allaboutpshyco\.com
