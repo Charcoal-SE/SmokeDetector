@@ -72346,3 +72346,4 @@
 1743232734	Cow	scamorlegit\.zendesk\.com
 1743232924	Cow	trekthehimalayas\.com
 1743237243	Cow	bpcorrect\.com
+1743243785	Cow	user-service\.example\.internal
