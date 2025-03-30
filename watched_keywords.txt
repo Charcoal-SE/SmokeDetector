@@ -72369,3 +72369,4 @@
 1743345984	Jeff Schaller	studypro\.com
 1743348046	Jeff Schaller	thedigitalmind\.in
 1743349838	Nisse Engström	doqlens\.com
+1743363494	Fastnlight	La[\W_]*+Densitae[\W_]*+Hair[\W_]*+Wig(?!(?<=LaDensitaeHairWig)\.com)
