@@ -3658,3 +3658,4 @@ resolvedexk
 𝙴𝚡𝚙𝚎𝚍𝚒𝚊
 ₍𝐉𝐞𝐭𝐁𝐥𝐮𝐞
 𝚀𝚊𝚝𝚊𝚛
+Expedia[\W_]*+Cruises[\W_]*+the[\W_]*+same[\W_]*+as[\W_]*+Expedia
