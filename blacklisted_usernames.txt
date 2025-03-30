@@ -1232,3 +1232,4 @@ carelab[sz]
 (?-i:^MathSEGuru$)
 (?-i:^neartome SEO$)
 ^R9ST SEO$
+(?-i:^55555 FIVE FIVE FIVE FIVE FIVE$)
