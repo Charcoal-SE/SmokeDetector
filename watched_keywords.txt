@@ -72364,3 +72364,4 @@
 1743335134	Cow	pdf-converter\.ai
 1743337768	Jeff Schaller	funriddlesforkids\.com
 1743339955	Jeff Schaller	jaztube\.site
+1743344408	Jeff Schaller	(?-i:019029cf6e0adb8fd4)(?#upwork.com/freelancers)
