@@ -72363,3 +72363,4 @@
 1743334871	Cow	vadebattery\.com
 1743335134	Cow	pdf-converter\.ai
 1743337768	Jeff Schaller	funriddlesforkids\.com
+1743339955	Jeff Schaller	jaztube\.site
