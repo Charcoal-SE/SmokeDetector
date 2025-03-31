@@ -3660,3 +3660,4 @@ resolvedexk
 𝚀𝚊𝚝𝚊𝚛
 Expedia[\W_]*+Cruises[\W_]*+the[\W_]*+same[\W_]*+as[\W_]*+Expedia
 𝚂𝚙𝚒𝚛𝚒𝚝
+𝙳𝚎𝚕𝚝𝚊
