@@ -26665,7 +26665,6 @@
 1614700601	Xnero	littleroboz(?!\.co\.uk)
 1614700775	Xnero	Magento[\W_]*2[\W_]*Membership[\W_]*Pro
 1614706049	Makyen	garmin\.com(?<![>"]https?://(?:[a-z\d-]\.)*garmin\.com)(?#" syntax highlighting fodder)
-1614697550	Spevacus	garmin\.com
 1614701436	Yatin	emergency-dental-365\.com
 1614742827	cigien	soikeo\.com
 1614742845	cigien	soikeo\.vn
