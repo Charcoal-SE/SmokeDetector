@@ -72380,3 +72380,4 @@
 1743395379	Cow	moodmantra\.in
 1743397431	Cow	energytradecentre\.com
 1743398546	Cow	mdigimarketing\.in
+1743401281	Cow	ayuryogpeeth\.com
