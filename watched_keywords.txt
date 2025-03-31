@@ -72387,3 +72387,4 @@
 1743407580	VLAZ	supremeindia\.com
 1743407600	VLAZ	supremehospital\.in
 1743408003	VLAZ	vyapinsoftware\.com
+1743415610	Jeff Schaller	squaresigns\.com
