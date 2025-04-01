@@ -72407,3 +72407,4 @@
 1743489930	VLAZ	pinalholidays\.com
 1743491092	VLAZ	gangotritravels\.com
 1743496215	VLAZ	(?-i:^Mayoanna$)
+1743498394	VLAZ	himalayanhero\.com
