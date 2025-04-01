@@ -72406,3 +72406,4 @@
 1743487108	VLAZ	muthirai(?!\.com)
 1743489930	VLAZ	pinalholidays\.com
 1743491092	VLAZ	gangotritravels\.com
+1743496215	VLAZ	(?-i:^Mayoanna$)
