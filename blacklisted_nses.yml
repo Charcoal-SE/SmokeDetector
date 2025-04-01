@@ -787,7 +787,9 @@ items:
 - ns: supremepanel.com.
 - ns: clouddnstool.com.
 - ns: vivawebhost.com.
-- ns: hostns.io.
+- comment: NXDOMAIN 2025-04-01
+  disable: true
+  ns: hostns.io.
 - ns:
   - ns313.ownmyserver.com.
   - ns314.ownmyserver.com.
