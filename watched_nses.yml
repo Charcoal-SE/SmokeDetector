@@ -4330,7 +4330,8 @@ items:
   ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
-- comment: no longer responding 2020-04-02; enabled again 2024-10-18
+- comment: no longer responding 2020-04-02; enabled again 2024-10-18; NXDOMAIN 2025-04-01
+  disable: true
   ns: onlinemenshop.com.
 - ns: mywahosting.com.
 - comment: timeout 2020-04-02
