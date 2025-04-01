@@ -72409,3 +72409,4 @@
 1743496215	VLAZ	(?-i:^Mayoanna$)
 1743498394	VLAZ	himalayanhero\.com
 1743498804	VLAZ	encone\.com
+1743498862	VLAZ	halesowendental\.co\.uk
