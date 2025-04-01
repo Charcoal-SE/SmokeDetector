@@ -72411,3 +72411,4 @@
 1743498804	VLAZ	encone\.com
 1743498862	VLAZ	halesowendental\.co\.uk
 1743501367	Glorfindel	The past tense of \w+ is \w+\.
+1743501421	Jeff Schaller	arpitasrithefortuneteller\.com
