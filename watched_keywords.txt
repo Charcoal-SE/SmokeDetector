@@ -72405,3 +72405,4 @@
 1743484698	cocomac	urgentincleaningservice\.com
 1743487108	VLAZ	muthirai(?!\.com)
 1743489930	VLAZ	pinalholidays\.com
+1743491092	VLAZ	gangotritravels\.com
