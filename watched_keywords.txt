@@ -72436,3 +72436,4 @@
 1743571851	Cow	codereadysoftware\.com
 1743578520	Cow	cdrforaustralia\.com
 1743578617	Cow	williamhill1\.it
+1743578681	Cow	wingreserve\.com
