@@ -72459,3 +72459,4 @@
 1743620420	ipodtouch0218	northvape\.us
 1743622336	Mast	government[\W_]*+mercenaries
 1743626588	ipodtouch0218	prontointerventoidraulicobergamo\.it
+1743652051	Cow	cloudkaramchari\.com
