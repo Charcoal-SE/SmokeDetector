@@ -25383,7 +25383,6 @@
 1611126683	cigien	jaguarsoftwareindia\.com
 1611127240	cigien	duro[\W_]*+xl(?:[\W_]*+(?:male|review|enhancement|\d++|[\da-f]{5,}+)s?)*
 1611127461	Ryan M	top[\W_]*+\d++\b.{0,50}\bcompanies
-1611129090	tripleee	travelogyindia\.com
 1611129396	Yatin	enter\.online
 1611129612	Yatin	macrocalculator\.org
 1611134151	Ryan M	bizzrun\.com
