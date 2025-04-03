@@ -72490,3 +72490,4 @@
 1743690521	Cow	alight-motion-apk\.com
 1743702655	Fastnlight	edicionespoligrafa\.com
 1743707675	VLAZ	(?-i:^allthingsgo$)
+1743708321	VLAZ	Fitness[\W_]*+Gram[\W_]*+Pacer
