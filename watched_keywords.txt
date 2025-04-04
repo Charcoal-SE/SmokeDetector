@@ -72499,3 +72499,4 @@
 1743746449	Cow	vivance\.com
 1743751512	Cow	bc-compagny\.fr
 1743751612	Cow	protyze\.com
+1743762478	Jeff Schaller	247ContentWriter\.com
