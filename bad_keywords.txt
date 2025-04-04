@@ -3681,3 +3681,4 @@ multistage[\W_]*+aerobic[\W_]*+capacity[\W_]*+test
 𝕯𝖊𝖑𝖙𝖆
 ℂ𝕒𝕤𝕙
 𝙲ash[\W_]*+App
+Refund[\W_]*+Me[\W_]*+If[\W_]*+I[\W_]*+Was[\W_]*+Scammed
