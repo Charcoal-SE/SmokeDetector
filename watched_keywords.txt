@@ -72496,3 +72496,4 @@
 1743739180	Cow	tiemquaxinh\.com\.vn
 1743729721	lyxal	vmedx\.com
 1743743148	Cow	blueberry-ai\.com
+1743746449	Cow	vivance\.com
