@@ -69158,7 +69158,6 @@
 1734267978	Cow	signfix\.ng
 1734268342	Cow	fasildigital\.com
 1734269189	Cow	k8686\.com
-1734272833	Jeff Schaller	handicrafts-shop\.com
 1734280402	Vickel	unoonlinefree\.com
 1734286643	Cow	cekici\.com
 1734288885	Glorfindel	fastanswerfacts\.blogspot
