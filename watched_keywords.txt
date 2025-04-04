@@ -72516,3 +72516,4 @@
 1743788585	ipodtouch0218	thietbidienchan\.com
 1743809270	Vickel	blogslight\.com
 1743809480	Vickel	theboxzilla\.com
+1743809708	Vickel	the[\W_]*+box[\W_]*+zilla(?!\.com(?<=theboxzilla\.com))
