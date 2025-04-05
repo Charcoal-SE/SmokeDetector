@@ -72532,3 +72532,4 @@
 1743852026	Cow	pelvini\.com
 1743853775	Jeff Schaller	proxyreviewhub\.com
 1743854725	Jeff Schaller	stocktwits\.com(?<!api\.stocktwits\.com)(?<!ql\.stocktwits\.com)
+1743854865	Jeff Schaller	supertool\.org
