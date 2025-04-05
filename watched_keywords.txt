@@ -72534,3 +72534,4 @@
 1743854725	Jeff Schaller	stocktwits\.com(?<!api\.stocktwits\.com)(?<!ql\.stocktwits\.com)
 1743854865	Jeff Schaller	supertool\.org
 1743855262	Jeff Schaller	allmachines\.com
+1743856158	Cow	web-tools\.online
