@@ -72518,7 +72518,6 @@
 1743809480	Vickel	theboxzilla\.com
 1743809708	Vickel	the[\W_]*+box[\W_]*+zilla(?!\.com(?<=theboxzilla\.com))
 1743829617	Nisse Engström	paytonviolins\.com
-1743836315	Glorfindel	^What is the opposite of \d+\??$
 1743838251	Cow	double9books\.com
 1743838407	Cow	^difference[\W_]*+between[\W_]*+(?:\w++[\W_]++and[\W_]++\w++){1,1}[\W_]*+$
 1743839046	Cow	cdrwriters\.io
