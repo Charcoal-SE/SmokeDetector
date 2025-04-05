@@ -72525,3 +72525,4 @@
 1743840410	Cow	what[\W_]*+is[\W_]*+the[\W_]*+opposite[\W_]*+of[\W_]*+\d+[\W_]*+
 1743840714	Cow	(?-i:eWmpCPhj12cXZSwE8)(?#forms.gle)
 1743840917	Cow	corteizfrance\.net
+1743849420	Cow	loadedmoney\.com
