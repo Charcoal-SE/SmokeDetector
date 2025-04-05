@@ -72522,3 +72522,4 @@
 1743838251	Cow	double9books\.com
 1743838407	Cow	^difference[\W_]*+between[\W_]*+(?:\w++[\W_]++and[\W_]++\w++){1,1}[\W_]*+$
 1743839046	Cow	cdrwriters\.io
+1743839058	Cow	farmhouseinnoida\.com
