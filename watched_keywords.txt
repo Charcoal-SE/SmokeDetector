@@ -41603,7 +41603,6 @@
 1660992475	tripleee	presto[\W_]*+group(?!\.com(?<=prestogroup\.com))
 1660993370	tripleee	intensedebate\.com
 1660993370	tripleee	gab\.com
-1660993370	tripleee	stocktwits\.com
 1660993370	tripleee	threadless\.com
 1660993370	tripleee	hulkshare\.com
 1660993370	tripleee	veoh\.com
