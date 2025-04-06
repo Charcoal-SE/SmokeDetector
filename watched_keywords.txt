@@ -72567,6 +72567,5 @@
 1743936176	VLAZ	tripleyourlist\.com
 1743940839	Cow	bussimulatorindonesia\.com
 1743947995	Mast	muslimlifepro\.com
-1743948359	Jeff Schaller	naat\.operaking\.in
 1743948367	Jeff Schaller	islam-globe\.com
 1743948413	Jeff Schaller	tech\.operaking\.in
