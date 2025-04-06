@@ -72579,3 +72579,4 @@
 1743961122	Cow	dailysabasbd\.com
 1743962327	Jeff Schaller	resizepanda\.com
 1743969591	Vickel	gamingbus\.my\.canva\.site
+1743969833	Vickel	gaming[\W_]*+bus
