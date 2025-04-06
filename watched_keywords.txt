@@ -72575,3 +72575,4 @@
 1743954704	Cow	runeravendynamics\.com
 1743955959	Vickel	Helios[\W_]*+Clinic
 1743959407	Cow	financenewstoday\.guru
+1743960331	Cow	clyte\.tech
