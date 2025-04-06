@@ -60737,7 +60737,6 @@
 1714052244	tripleee	myvtechnologies\.com
 1714052277	General Grievance	thechocobite\.in
 1714049328	General Grievance	astrologersanjaysharmaji\.com
-1714049228	General Grievance	busimulatorultimate\.com
 1714052357	General Grievance	digitalzworld\.com
 1714060698	Fastnlight	products[\W_]*+in[\W_]*+india
 1714068716	Fastnlight	lyricssy\.com
