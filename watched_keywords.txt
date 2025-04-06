@@ -72582,3 +72582,4 @@
 1743969833	Vickel	gaming[\W_]*+bus
 1743973601	Jeff Schaller	eminozturkhukuk\.com
 1743973725	Jeff Schaller	ssmshaadi\.com
+1743979129	Vickel	digitalwasi\.shop
