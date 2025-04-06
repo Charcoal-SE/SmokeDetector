@@ -72565,3 +72565,4 @@
 1743933860	Cow	taskflix\.online
 1743935248	Cow	xuqocbsr3roww76lfkvv5m6tfquoeanvqgzdl2ehnynqlvql36gppjyd\.onion
 1743936176	VLAZ	tripleyourlist\.com
+1743940839	Cow	bussimulatorindonesia\.com
