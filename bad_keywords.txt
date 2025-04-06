@@ -3687,3 +3687,4 @@ Refund[\W_]*+Me[\W_]*+If[\W_]*+I[\W_]*+Was[\W_]*+Scammed
 𝓕𝓪𝓬𝓮𝓫𝓸𝓸𝓴
 Pay[\W_]*+phone[\W_]*+pay
 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤
+VOODOO[\W_]*+SPELL[\W_]*+LOTTERY
