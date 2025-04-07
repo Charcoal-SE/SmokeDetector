@@ -67759,7 +67759,6 @@
 1729893211	Jeff Schaller	19216811(?!(?:\.(?:app|bid|cam|lol|mx|tel)|$))
 1729894913	Vickel	(?-i:rn1kra)(?#bun.is)
 1729916099	Dragonrage	jharaphula\.com
-1729924292	Cow	meemacademia\.com
 1729925126	Cow	expedia[\W_]*+provides
 1729925493	Cow	call[\W_]*+our[\W_]*+customer[\W_]*+support
 1729926528	Cow	cancellation[\W_]*+policy[\W_]*+for
