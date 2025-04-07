@@ -72597,3 +72597,4 @@
 1744022463	Jeff Schaller	fdownloaders\.com
 1744023251	Jeff Schaller	mfs-logistics\.com
 1744023287	Jeff Schaller	ceooutlookglobal\.com
+1744023388	Jeff Schaller	elitecaremedicalcentre\.ae
