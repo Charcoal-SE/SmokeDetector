@@ -72621,3 +72621,4 @@
 1744047305	Cow	v0-paypal-2\.vercel\.app
 1744048868	Jeff Schaller	mathtechlab\.com
 1744051118	Jeff Schaller	meta-marketing\.info
+1744063936	Fastnlight	bbest\.live
