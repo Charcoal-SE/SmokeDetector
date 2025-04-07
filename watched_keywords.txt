@@ -72593,3 +72593,4 @@
 1744020187	Jeff Schaller	globalgrowthinsights\.com
 1744022248	Ryan M	hfmsolar\.com
 1744022255	Ryan M	hfmsolar(?!\.com)
+1744022431	Jeff Schaller	thelakeviewfarms\.in
