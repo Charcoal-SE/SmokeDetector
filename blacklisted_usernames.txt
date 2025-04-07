@@ -1233,3 +1233,4 @@ carelab[sz]
 (?-i:^neartome SEO$)
 ^R9ST SEO$
 (?-i:^55555 FIVE FIVE FIVE FIVE FIVE$)
+^Hong se de guai guai$
