@@ -3689,3 +3689,4 @@ Pay[\W_]*+phone[\W_]*+pay
 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤
 VOODOO[\W_]*+SPELL[\W_]*+LOTTERY
 Scoreclimb[\W_]*+loan
+𝘍𝘳𝘰𝘯𝘵𝘪𝘦𝘳
