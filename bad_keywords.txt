@@ -3690,3 +3690,4 @@ Pay[\W_]*+phone[\W_]*+pay
 VOODOO[\W_]*+SPELL[\W_]*+LOTTERY
 Scoreclimb[\W_]*+loan
 𝘍𝘳𝘰𝘯𝘵𝘪𝘦𝘳
+Ｓｏｕｔｈｗｅｓｔ
