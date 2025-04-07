@@ -3701,3 +3701,4 @@ Scoreclimb[\W_]*+loan
 𝕶𝕷𝕸
 𝒦𝐿𝑀
 How[\W_]*+do[\W_]*+I[\W_]*+talk[\W_]*+directly[\W_]*+on[\W_]*+Robinhood
+𝐇𝐞𝐥𝐩𝐥𝐢𝐧𝐞
