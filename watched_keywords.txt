@@ -72616,3 +72616,4 @@
 1744042398	ipodtouch0218	usanews24\.xyz
 1744045912	Cow	robobinary\.blogspot
 1744045919	Cow	optiondigital\.com\.br
+1744045926	Cow	lucrotrader\.com
