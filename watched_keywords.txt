@@ -67759,7 +67759,6 @@
 1729893211	Jeff Schaller	19216811(?!(?:\.(?:app|bid|cam|lol|mx|tel)|$))
 1729894913	Vickel	(?-i:rn1kra)(?#bun.is)
 1729916099	Dragonrage	jharaphula\.com
-1729924292	Cow	meemacademia\.com
 1729925126	Cow	expedia[\W_]*+provides
 1729925493	Cow	call[\W_]*+our[\W_]*+customer[\W_]*+support
 1729926528	Cow	cancellation[\W_]*+policy[\W_]*+for
@@ -72584,3 +72583,42 @@
 1743973725	Jeff Schaller	ssmshaadi\.com
 1743979129	Vickel	digitalwasi\.shop
 1743983481	Fastnlight	vapecbdwholesaler\.co\.uk
+1743999342	Cow	carleasetips\.com
+1744004621	Cow	dheeragroup\.com
+1744006804	VLAZ	attitudemakeover\.com
+1744007502	cocomac	razofficialsite\.com
+1744009295	VLAZ	jurram\.com
+1744019892	Jeff Schaller	wikivp\.com
+1744020187	Jeff Schaller	globalgrowthinsights\.com
+1744022248	Ryan M	hfmsolar\.com
+1744022255	Ryan M	hfmsolar(?!\.com)
+1744022431	Jeff Schaller	thelakeviewfarms\.in
+1744022463	Jeff Schaller	fdownloaders\.com
+1744023251	Jeff Schaller	mfs-logistics\.com
+1744023287	Jeff Schaller	ceooutlookglobal\.com
+1744023388	Jeff Schaller	elitecaremedicalcentre\.ae
+1744023428	Jeff Schaller	cdonepricecleaners\.com
+1744023485	Jeff Schaller	gacor\.rtpug8live\.xyz
+1744023506	Jeff Schaller	southernlightrespite\.com\.au
+1744023530	Jeff Schaller	atsanalyzer\.com
+1744023582	Ryan M	itexpertsindya\.com
+1744023839	Jeff Schaller	webstatus247\.com
+1744023863	Jeff Schaller	saasberry\.io
+1744025470	Vickel	umzugshelfer-in-bremerhaven\.de
+1744025592	Jeff Schaller	uwrgtriangle\.com
+1744029113	Jeff Schaller	drupaldevelopersstudio\.com
+1744029661	Jeff Schaller	ailoitte\.com
+1744029821	Jeff Schaller	mivja\.com
+1744030534	Jeff Schaller	thepahadistory\.com
+1744030986	Jeff Schaller	infydots\.com
+1744035335	ipodtouch0218	CBGHK(?#promo code)
+1744042398	ipodtouch0218	usanews24\.xyz
+1744045912	Cow	robobinary\.blogspot
+1744045919	Cow	optiondigital\.com\.br
+1744045926	Cow	lucrotrader\.com
+1744046130	Cow	qurantutor\.ai
+1744047118	Cow	imagefixtools\.com
+1744047305	Cow	v0-paypal-2\.vercel\.app
+1744048868	Jeff Schaller	mathtechlab\.com
+1744051118	Jeff Schaller	meta-marketing\.info
+1744063936	Fastnlight	bbest\.live

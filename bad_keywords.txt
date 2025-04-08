@@ -3689,3 +3689,16 @@ Pay[\W_]*+phone[\W_]*+pay
 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤
 VOODOO[\W_]*+SPELL[\W_]*+LOTTERY
 Scoreclimb[\W_]*+loan
+𝘍𝘳𝘰𝘯𝘵𝘪𝘦𝘳
+Ｓｏｕｔｈｗｅｓｔ
+Ａｉｒｌｉｎｅｓ
+𝒮𝑜𝓊𝓉𝒽𝓌𝑒𝓈𝓉
+𝒜𝒾𝓇𝓁𝒾𝓃𝑒𝓈
+𝔄𝔩𝔞𝔰𝔨𝔞
+𝔄𝔦𝔯𝔩𝔦𝔫𝔢𝔰
+𝕂𝕃𝕄
+𝓚𝓛𝓜
+𝕶𝕷𝕸
+𝒦𝐿𝑀
+How[\W_]*+do[\W_]*+I[\W_]*+talk[\W_]*+directly[\W_]*+on[\W_]*+Robinhood
+𝐇𝐞𝐥𝐩𝐥𝐢𝐧𝐞
