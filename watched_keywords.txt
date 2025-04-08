@@ -72666,3 +72666,4 @@
 1744129584	VLAZ	w\s*+a\s*+l\s*+l\s*+e\s*+t\s*+c\s*+o\s*+n\s*+n\s*+e\s*+c\s*+t\s*+@\s*+u\s*+s\s*+a\s*+\.\s*+c\s*+o\s*+m
 1744130180	Cow	comsaythuankhanh\.com
 1744133359	Fastnlight	uandsolutions\.com
+1744134854	Fastnlight	official[\W_]*+and[\W_]*+real[\W_]*+number
