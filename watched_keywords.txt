@@ -72667,3 +72667,4 @@
 1744130180	Cow	comsaythuankhanh\.com
 1744133359	Fastnlight	uandsolutions\.com
 1744134854	Fastnlight	official[\W_]*+and[\W_]*+real[\W_]*+number
+1744148286	Vickel	shortlinkapp\.com
