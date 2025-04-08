@@ -72623,3 +72623,4 @@
 1744051118	Jeff Schaller	meta-marketing\.info
 1744063936	Fastnlight	bbest\.live
 1744073342	Fastnlight	identityzoo\.com
+1744078362	Jeff Schaller	selenium-finance\.gitbook\.io
