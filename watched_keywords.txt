@@ -43385,7 +43385,6 @@
 1665645578	cigien	central[\W_]*+bio[\W_]*+hub(?!\.de(?<=centralbiohub\.de))
 1665646163	cigien	zenkoders(?!\.com)
 1665646554	tripleee	dian[\W_]*+apps(?!\.com(?<=dianapps\.com))
-1665646582	tripleee	dianapps\.com
 1665647093	cigien	realityshowstorage\.com
 1665649695	cigien	pedramarmol\.com
 1665650207	tripleee	lys1998612@nuaa\.edu\.cn
