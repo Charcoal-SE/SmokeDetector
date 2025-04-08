@@ -72643,3 +72643,4 @@
 1744106832	Cow	sifytechnologies\.com
 1744106867	VLAZ	datamites\.com
 1744106876	Cow	igvcalculadoraperu\.com
+1744106916	Cow	uplandnexttech
