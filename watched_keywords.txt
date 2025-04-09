@@ -72696,3 +72696,4 @@
 1744195092	Mithical	weis-fedback\.info
 1744198239	VLAZ	rahdanoor\.com
 1744198378	VLAZ	momyom\.pk
+1744198497	VLAZ	shardaassociates\.in
