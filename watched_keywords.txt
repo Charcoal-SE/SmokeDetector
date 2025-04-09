@@ -72699,3 +72699,4 @@
 1744198497	VLAZ	shardaassociates\.in
 1744198693	VLAZ	ovza\.com
 1744199205	VLAZ	icslegal\.com
+1744202907	VLAZ	zatify-sa\.com
