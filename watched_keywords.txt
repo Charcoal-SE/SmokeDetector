@@ -72702,3 +72702,4 @@
 1744202907	VLAZ	zatify-sa\.com
 1744202918	VLAZ	randomchat\.today
 1744202929	VLAZ	jayadevrana\.com
+1744202960	VLAZ	metafoxtechnologies\.in
