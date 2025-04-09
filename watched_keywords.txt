@@ -72685,3 +72685,4 @@
 1744185307	VLAZ	qwireless\.ca
 1744185793	VLAZ	viralgraphs\.com
 1744185801	VLAZ	viralgraphs(?!\.com)
+1744187494	VLAZ	ongvang\.vn
