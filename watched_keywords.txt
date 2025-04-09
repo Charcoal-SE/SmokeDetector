@@ -72687,3 +72687,4 @@
 1744185801	VLAZ	viralgraphs(?!\.com)
 1744187494	VLAZ	ongvang\.vn
 1744189901	VLAZ	shubham\.co
+1744189933	VLAZ	ghiblistyleimage\.tech
