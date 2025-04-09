@@ -72708,3 +72708,4 @@
 1744205679	Vickel	yallaacoupon\.com
 1744205821	Vickel	yallaa[\W_]*+coupon(?!\.com(?<=yallaacoupon\.com))
 1744209277	Cow	foodsie\.app
+1744209949	Cow	BYDFI
