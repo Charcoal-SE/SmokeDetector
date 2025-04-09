@@ -72704,3 +72704,4 @@
 1744202929	VLAZ	jayadevrana\.com
 1744202960	VLAZ	metafoxtechnologies\.in
 1744203457	VLAZ	babarry\.com
+1744203570	VLAZ	cozyacorn\.com
