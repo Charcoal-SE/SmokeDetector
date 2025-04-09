@@ -72706,3 +72706,4 @@
 1744203457	VLAZ	babarry\.com
 1744203570	VLAZ	cozyacorn\.com
 1744205679	Vickel	yallaacoupon\.com
+1744205821	Vickel	yallaa[\W_]*+coupon(?!\.com(?<=yallaacoupon\.com))
