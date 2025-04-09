@@ -3706,3 +3706,4 @@ c[óo]mo[\W_]*+contactar[\W_]*+a[\W_]*+(?:\w++[\W_]++){1,3}teléfono
 c[oó]mo[\W_]*+solicitar[\W_]*+asistencia[\W_]*+en
 𝕌𝕟𝕚𝕥𝕖𝕕
 𝒬𝓊𝒾𝒸𝓀𝑒𝓃
+c[oó]mo[\W_]*+puedo[\W_]*+lograr[\W_]*+que[\W_]*+(?:\w++[\W_]++){1,2}responda
