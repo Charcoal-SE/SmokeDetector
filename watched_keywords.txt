@@ -72683,3 +72683,4 @@
 1744185179	VLAZ	mansirana\.com
 1744185252	VLAZ	mansi[\W_]*+rana(?!\.com(?<=mansirana\.com))
 1744185307	VLAZ	qwireless\.ca
+1744185793	VLAZ	viralgraphs\.com
