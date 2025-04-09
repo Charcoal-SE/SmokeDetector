@@ -72498,7 +72498,6 @@
 1743766125	Jeff Schaller	rn-gradient\.vercel\.app
 1743766292	Jeff Schaller	southernhomeownershipprograms\.com
 1743770249	Cow	Prwires
-1743771618	Cow	newrides\.es
 1743774831	Jeff Schaller	azlawnow\.com
 1743775869	Jeff Schaller	ebk\.tech
 1743775900	Jeff Schaller	moon\.ly
