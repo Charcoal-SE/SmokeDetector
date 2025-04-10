@@ -72734,3 +72734,4 @@
 1744278317	VLAZ	themagistvpro\.com
 1744278376	VLAZ	bloomer-mock\.org
 1744278491	VLAZ	lapetindia\.com
+1744278633	VLAZ	lapet[\W_]*+india(?!\.com(?<=lapetindia\.com))
