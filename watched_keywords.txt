@@ -72722,3 +72722,4 @@
 1744261530	VLAZ	kanohi\.ch
 1744263390	VLAZ	traffic9(?:[\W_]*+media(?!\.com(?<=traffic9media\.com)))?
 1744264381	Cow	benvarghese\.lovestoblog\.com
+1744267395	Dan Getz	spotypre\.com
