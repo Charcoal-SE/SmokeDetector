@@ -72736,3 +72736,4 @@
 1744278491	VLAZ	lapetindia\.com
 1744278633	VLAZ	lapet[\W_]*+india(?!\.com(?<=lapetindia\.com))
 1744278691	VLAZ	OpenxAI
+1744278799	VLAZ	heart[\W_]*+congress
