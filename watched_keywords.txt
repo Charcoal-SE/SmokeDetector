@@ -72739,3 +72739,4 @@
 1744278799	VLAZ	heart[\W_]*+congress
 1744281536	VLAZ	solidwooddecor\.com
 1744282686	Jeff Schaller	lostmaryofficialsite\.com
+1744268134	Dan Getz	yapstone\.org
