@@ -72724,7 +72724,6 @@
 1744264381	Cow	benvarghese\.lovestoblog\.com
 1744267395	Dan Getz	spotypre\.com
 1744268008	VLAZ	sachin\.garimainterior\.online
-1744269934	VLAZ	yapstone\.org
 1744270032	VLAZ	onlinejsonformatter\.com
 1744271643	VLAZ	spotiifyapk\.com
 1744272523	VLAZ	shriradharaman\.in
@@ -72739,4 +72738,3 @@
 1744278799	VLAZ	heart[\W_]*+congress
 1744281536	VLAZ	solidwooddecor\.com
 1744282686	Jeff Schaller	lostmaryofficialsite\.com
-1744268134	Dan Getz	yapstone\.org
