@@ -72717,3 +72717,4 @@
 1744256537	Cow	traffic9media\.com
 1744256991	Cow	powerdrill\.ai
 1744261023	Cow	dimoraarchitect\.com
+1744261115	Cow	lacelab\.com
