@@ -72767,3 +72767,4 @@
 1744350363	Cow	ajexplains\.com
 1744350653	Anerdw	foresightforum\.ru
 1744351656	Cow	jodogoairportassist\.com
+1744353871	VLAZ	Moksh[\W_]*+Spas
