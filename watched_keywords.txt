@@ -72769,3 +72769,4 @@
 1744351656	Cow	jodogoairportassist\.com
 1744353871	VLAZ	Moksh[\W_]*+Spas
 1744357570	VLAZ	kristosbeerandwine\.com
+1744357584	VLAZ	thelearnability\.com
