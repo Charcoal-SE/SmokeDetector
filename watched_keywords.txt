@@ -72786,3 +72786,4 @@
 1744371204	Jeff Schaller	yourcustomdeck\.com
 1744374656	Cow	airtop\.ai
 1744376034	Cow	fcai669\.com
+1744381206	Jeff Schaller	(?-i:SDET_Tech-IVP)(?#youtube)
