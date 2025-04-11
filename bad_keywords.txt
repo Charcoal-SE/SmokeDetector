@@ -3719,3 +3719,4 @@ Qᴜɪᴄᴋᴇɴ
 dwPtzS
 𝕆𝕜ℂ𝕦𝕡𝕚𝕕
 Get[\W_]*+Request[\W_]*+a[\W_]*+Refund
+𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡
