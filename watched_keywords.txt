@@ -72795,3 +72795,4 @@
 1744403851	Jeff Schaller	powersplay\.com
 1744407274	Vickel	alliptvnow\.com
 1744407374	Vickel	alliptvnow(?!\.com)
+1744407462	Jeff Schaller	gloriousbuilders\.com
