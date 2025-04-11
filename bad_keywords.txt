@@ -3722,3 +3722,4 @@ Get[\W_]*+Request[\W_]*+a[\W_]*+Refund
 𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡
 𝔈𝔵𝔭𝔢𝔡𝔦𝔞
 Can[\W_]*+I[\W_]*+cancel[\W_]*+an[\W_]*+MSC[\W_]*+cruise[\W_]*+without[\W_]*+penalty
+C[óo]mo[\W_]*+se[\W_]*+llama[\W_]*+el[\W_]*+agente[\W_]*+personal[\W_]*+de
