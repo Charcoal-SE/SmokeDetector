@@ -72802,3 +72802,4 @@
 1744417433	Vickel	gpt[\W_]*+aichat(?!\.ru(?<=gpt-aichat\.ru))
 1744438712	Nisse Engström	findairlineoffices\.com
 1744439454	Nisse Engström	urologynavimumbai\.in
+1744439606	Cow	animeflv\.org\.mx
