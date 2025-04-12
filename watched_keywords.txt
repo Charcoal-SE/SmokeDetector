@@ -72806,3 +72806,4 @@
 1744439713	Cow	telemadata\.com
 1744439826	Cow	atmosphereswitch\.com
 1744439835	Cow	erofdallastx\.com
+1744439921	Cow	wedgesandbarrels\.com
