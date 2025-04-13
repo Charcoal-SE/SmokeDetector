@@ -72819,3 +72819,4 @@
 1744483408	Cow	stickwarlegacypro\.com
 1744495111	Dan Getz	driedshroomsaustralia\.com\.au
 1744500707	Dan Getz	focusmedsrx\.com
+1744529043	Cow	cava-menus\.com
