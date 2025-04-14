@@ -72855,3 +72855,4 @@
 1744631709	Cow	CJC-1295
 1744631732	Cow	infoaboutanimals\.com
 1744631739	Cow	pothosplant\.org
+1744631747	Cow	doodlebreedexpert\.com
