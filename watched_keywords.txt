@@ -72854,3 +72854,4 @@
 1744631699	Cow	TB-500
 1744631709	Cow	CJC-1295
 1744631732	Cow	infoaboutanimals\.com
+1744631739	Cow	pothosplant\.org
