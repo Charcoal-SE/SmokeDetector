@@ -72838,3 +72838,4 @@
 1744616225	Jeff Schaller	goaid\.in
 1744617409	Jeff Schaller	nichebay\.com
 1744620386	Mithical	medfrontpharmacy\.com
+1744620513	Mithical	palm[\W_]*+beach[\W_]*+snow[\W_]*+club
