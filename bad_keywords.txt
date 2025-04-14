@@ -3735,3 +3735,4 @@ Where[\W_]*+can[\W_]*+I[\W_]*+complain[\W_]*+about[\W_]*+Expedia
 𝕼𝖆𝖙𝖆𝖗
 𝑨𝒊𝒓\s*+𝑭𝒓𝒂𝒏𝒄𝒆
 intelligencecyberwizard
+Weex[\W_]*+Referral[\W_]*+Code
