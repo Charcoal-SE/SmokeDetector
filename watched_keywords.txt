@@ -72840,3 +72840,4 @@
 1744620513	Mithical	palm[\W_]*+beach[\W_]*+snow[\W_]*+club
 1744620968	Mithical	arvinittechnology\.com
 1744623884	Cow	3patticrowne\.org
+1744623918	Cow	vayuz\.com
