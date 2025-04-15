@@ -72870,3 +72870,4 @@
 1744697074	Cow	website\.it\.kr
 1744699025	Cow	8pos\.vn
 1744699052	Cow	ourpcb\.com
+1744699059	Cow	wellpcb\.com
