@@ -72884,3 +72884,4 @@
 1744723358	Fastnlight	qualitetch\.com
 1744723364	Fastnlight	(?-i:xZANSwZ8cI0)(?#youtu.be)
 1744724445	Cow	hitech\.shop
+1744724451	Cow	steelsmart\.shop
