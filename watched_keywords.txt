@@ -72901,3 +72901,4 @@
 1744790790	Cow	apoorvaa\.co\.in
 1744791391	Cow	Tokopedia[\W_]*+care
 1744796679	Cow	colortesprint\.com
+1744798736	VLAZ	nalashaahealth\.com
