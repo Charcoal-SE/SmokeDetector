@@ -72903,3 +72903,4 @@
 1744796679	Cow	colortesprint\.com
 1744798736	VLAZ	nalashaahealth\.com
 1744799103	VLAZ	cropmarks\.lt
+1744799110	VLAZ	fasttrack\.lt
