@@ -72916,3 +72916,4 @@
 1744812990	Cow	saveplus\.ae
 1744818722	Cow	cryptopredic\.com
 1744818741	Cow	imperialfitnesshub\.com
+1744821311	Cow	roafly\.com
