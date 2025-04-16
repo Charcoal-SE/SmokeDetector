@@ -72921,3 +72921,4 @@
 1744825389	Cow	magicfactory\.tech
 1744827447	Cow	finalus\.in
 1744828036	Cow	dota2boosting\.com
+1744828734	Cow	intensocaphe\.com
