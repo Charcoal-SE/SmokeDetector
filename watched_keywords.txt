@@ -72908,3 +72908,4 @@
 1744800875	Cow	stapx\.com
 1744802252	Cow	dimarketo\.com
 1744804220	Cow	al-duaji\.com
+1744804906	Cow	byasaa\.com
