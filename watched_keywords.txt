@@ -72907,3 +72907,4 @@
 1744799117	VLAZ	codeacademycollege\.com
 1744800875	Cow	stapx\.com
 1744802252	Cow	dimarketo\.com
+1744804220	Cow	al-duaji\.com
