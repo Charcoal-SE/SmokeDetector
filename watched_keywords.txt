@@ -72909,3 +72909,4 @@
 1744802252	Cow	dimarketo\.com
 1744804220	Cow	al-duaji\.com
 1744804906	Cow	byasaa\.com
+1744805098	Cow	rightturnoverseas\.com
