@@ -72905,3 +72905,4 @@
 1744799103	VLAZ	cropmarks\.lt
 1744799110	VLAZ	fasttrack\.lt
 1744799117	VLAZ	codeacademycollege\.com
+1744800875	Cow	stapx\.com
