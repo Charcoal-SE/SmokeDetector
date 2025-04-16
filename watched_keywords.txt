@@ -72902,3 +72902,4 @@
 1744791391	Cow	Tokopedia[\W_]*+care
 1744796679	Cow	colortesprint\.com
 1744798736	VLAZ	nalashaahealth\.com
+1744799103	VLAZ	cropmarks\.lt
