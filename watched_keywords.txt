@@ -72914,3 +72914,4 @@
 1744811298	Cow	yestechsol\.com
 1744811305	Cow	adept-sol\.com
 1744812990	Cow	saveplus\.ae
+1744818722	Cow	cryptopredic\.com
