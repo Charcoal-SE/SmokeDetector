@@ -19155,7 +19155,6 @@
 1589174730	Makyen	developerm\.dev
 1589174784	Makyen	(?-i:A0TU20PQzlo)(?#YouTube)
 1589174808	Makyen	geekstocode\.com
-1589174846	Makyen	pressreleasepower\.com
 1589174875	Makyen	drahmedherbalist\.com
 1589174899	Makyen	acapglobal\.com
 1589174926	Makyen	cnctrend\.com
