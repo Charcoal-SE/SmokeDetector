@@ -3743,3 +3743,4 @@ Weex[\W_]*+Referral[\W_]*+Code
 𝐿𝓊𝒻𝓉𝒽𝒶𝓃𝓈𝒶
 ℝOBINHOOD
 top[\W_]*+quality[\W_]*+weed
+buy[\W_]*+thc[\W_]*+vapes?+
