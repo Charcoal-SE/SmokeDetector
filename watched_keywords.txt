@@ -71707,7 +71707,6 @@
 1741286987	ipodtouch0218	sqheatingsolution\.co\.uk
 1741288724	Cow	SQ[\W_]*+Heating[\W_]*+Solution
 1741321313	Spevacus	jiliofficial\.ph
-1741322754	Cow	cutedressup\.com
 1741323387	Cow	qrcodechamp\.com
 1741323409	Cow	salentocoffee\.ae
 1741327675	Cow	thefrlegendapk\.com
