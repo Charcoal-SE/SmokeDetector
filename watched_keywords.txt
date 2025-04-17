@@ -72941,3 +72941,4 @@
 1744880510	Cow	hosting[\W_]*+international
 1744880795	Cow	erpvits\.com
 1744882662	Cow	sonnerieportable\.fr
+1744889982	Cow	docs\.victoriametrics\.com
