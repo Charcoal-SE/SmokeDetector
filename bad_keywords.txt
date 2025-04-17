@@ -3747,4 +3747,3 @@ buy[\W_]*+thc[\W_]*+vapes?+
 Payroll[\W_]*+customer[\W_]*+support
 ＱｕｉｃｋＢｏｏｋｓ
 dr\.nkomes(?:@gmail\.com)?
-have[\W_]*+senior[\W_]*+discounts[\W_]*+for[\W_]*+seniors
