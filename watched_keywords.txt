@@ -72933,7 +72933,6 @@
 1744873327	Cow	globalfashexperts\.com
 1744873446	Cow	mr_magic(?:@gmail\.com)?
 1744873604	Cow	rankingrapid\.com
-1744873774	Cow	kioskengine\.io
 1744874200	Cow	evisasalbania\.com
 1744874206	Cow	evisaelsalvador\.com
 1744874831	Cow	piaproxy\.com
