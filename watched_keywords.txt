@@ -72942,3 +72942,4 @@
 1744880795	Cow	erpvits\.com
 1744882662	Cow	sonnerieportable\.fr
 1744889982	Cow	docs\.victoriametrics\.com
+1744890142	Cow	blazedream\.com
