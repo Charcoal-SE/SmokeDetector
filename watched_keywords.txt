@@ -72940,3 +72940,4 @@
 1744875797	Glorfindel	otherwaystosay\.info
 1744880329	Cow	hosting\.international
 1744880510	Cow	hosting[\W_]*+international
+1744880795	Cow	erpvits\.com
