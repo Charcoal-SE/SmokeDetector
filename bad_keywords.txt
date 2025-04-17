@@ -3746,3 +3746,4 @@ top[\W_]*+quality[\W_]*+weed
 buy[\W_]*+thc[\W_]*+vapes?+
 Payroll[\W_]*+customer[\W_]*+support
 ＱｕｉｃｋＢｏｏｋｓ
+dr\.nkomes(?:@gmail\.com)?
