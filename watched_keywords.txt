@@ -72934,3 +72934,4 @@
 1744873446	Cow	mr_magic(?:@gmail\.com)?
 1744873604	Cow	rankingrapid\.com
 1744873774	Cow	kioskengine\.io
+1744874200	Cow	evisasalbania\.com
