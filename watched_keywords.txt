@@ -72954,3 +72954,4 @@
 1744911702	Vickel	book\.heygoldie\.com
 1744911717	Mast	Tequila[\W_]*+Beauty
 1744912600	Cow	safeledger\.ae
+1744913767	Cow	hartantotri424(?:@gmail\.com)?
