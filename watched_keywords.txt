@@ -72932,3 +72932,4 @@
 1744873251	Cow	decoparlin\.ir
 1744873267	Cow	mathjax\.org
 1744873327	Cow	globalfashexperts\.com
+1744873446	Cow	mr_magic(?:@gmail\.com)?
