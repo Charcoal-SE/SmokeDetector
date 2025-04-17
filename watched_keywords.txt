@@ -72951,3 +72951,4 @@
 1744904688	Cow	premtales\.top
 1744909563	Cow	mansilla\.d1(?:@gmail\.com)?
 1744910585	Cow	en\.mrproblogger\.com
+1744911702	Vickel	book\.heygoldie\.com
