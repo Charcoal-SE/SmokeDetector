@@ -72945,3 +72945,4 @@
 1744890142	Cow	blazedream\.com
 1744890436	Cow	cashforsilver\.co\.in
 1744893058	Vickel	bommakgangaiahconvention\.com
+1744897780	Cow	AI[\W_]*+PDF[\W_]*+Summary
