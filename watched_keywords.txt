@@ -72948,3 +72948,4 @@
 1744897780	Cow	AI[\W_]*+PDF[\W_]*+Summary
 1744904002	Cow	bizodisha\.org
 1744904261	Cow	maniadecor\.com\.vn
+1744904688	Cow	premtales\.top
