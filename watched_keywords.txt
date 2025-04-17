@@ -72927,3 +72927,4 @@
 1744872435	Cow	tgtodata\.com
 1744872591	Cow	pc4download\.com
 1744872771	Cow	historicaldata\.net
+1744873022	Cow	listtodata\.com
