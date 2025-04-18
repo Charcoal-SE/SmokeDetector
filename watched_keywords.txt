@@ -72969,3 +72969,4 @@
 1744968587	Cow	github\.com/kaifcodec
 1744970738	Moo	geh688\.net
 1744970745	Moo	ozbix\.com
+1744970915	Moo	bitquery\.co\.site
