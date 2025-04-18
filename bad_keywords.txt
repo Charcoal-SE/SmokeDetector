@@ -3749,3 +3749,4 @@ Payroll[\W_]*+customer[\W_]*+support
 dr\.nkomes(?:@gmail\.com)?
 ProtopFin
 loan[\W_]*+customer[\W_]*+care
+loan[\W_]*+app[\W_]*+customer[\W_]*+care
