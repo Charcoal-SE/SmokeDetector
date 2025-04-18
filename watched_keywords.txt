@@ -72979,3 +72979,4 @@
 1744976810	Moo	blackdiamondmushroomchocolates\.com
 1744976891	Moo	Black[\W_]*+diamond[\W_]*+mushroom
 1744978145	Moo	loklokmods\.com
+1744979625	Fastnlight	winkmodpro\.com
