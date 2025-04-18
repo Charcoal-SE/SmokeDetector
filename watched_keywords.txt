@@ -72980,3 +72980,4 @@
 1744976891	Moo	Black[\W_]*+diamond[\W_]*+mushroom
 1744978145	Moo	loklokmods\.com
 1744979625	Fastnlight	winkmodpro\.com
+1744985238	Moo	talley\.Ross(?:@gmail\.com)?
