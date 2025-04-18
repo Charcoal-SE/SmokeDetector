@@ -72962,3 +72962,4 @@
 1744961047	Cow	wacarremovals\.com\.au
 1744961247	Cow	1sec-mail\.com
 1744961435	Cow	922proxy\.com
+1744961525	Cow	Signup[\W_]*+Bonus[\W_]*+Rupees
