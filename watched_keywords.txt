@@ -72965,3 +72965,4 @@
 1744961525	Cow	Signup[\W_]*+Bonus[\W_]*+Rupees
 1744962645	Cow	multiqos\.com
 1744962867	Cow	skyvia\.com
+1744963803	Cow	homeglowgasservices\.com
