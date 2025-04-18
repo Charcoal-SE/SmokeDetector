@@ -72960,3 +72960,4 @@
 1744959296	Cow	motionstamp\.com
 1744960964	Cow	tempmailusa\.com
 1744961047	Cow	wacarremovals\.com\.au
+1744961247	Cow	1sec-mail\.com
