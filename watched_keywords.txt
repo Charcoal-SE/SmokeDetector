@@ -72986,3 +72986,4 @@
 1745000242	Moo	bigbadtoystore\.com
 1745003143	Fastnlight	Bitsquery[\W_]*+Web[\W_]*+Retriever
 1745004954	Jeff Schaller	instaaups\.com
+1745005520	Jeff Schaller	Home[\W_]*+Tech[\W_]*+Nerves
