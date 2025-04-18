@@ -72985,3 +72985,4 @@
 1744999388	Moo	allfunnyjokes\.com
 1745000242	Moo	bigbadtoystore\.com
 1745003143	Fastnlight	Bitsquery[\W_]*+Web[\W_]*+Retriever
+1745004954	Jeff Schaller	instaaups\.com
