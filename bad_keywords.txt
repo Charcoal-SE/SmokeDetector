@@ -3748,3 +3748,4 @@ Payroll[\W_]*+customer[\W_]*+support
 ＱｕｉｃｋＢｏｏｋｓ
 dr\.nkomes(?:@gmail\.com)?
 ProtopFin
+loan[\W_]*+customer[\W_]*+care
