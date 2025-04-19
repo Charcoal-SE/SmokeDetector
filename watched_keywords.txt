@@ -72993,3 +72993,4 @@
 1745078284	Moo	(?-i:Oldironsidefakes_ID)(?#t.me)
 1745078398	Moo	meatravels\.com
 1745078431	Moo	digitalplanai\.com
+1745078454	Moo	blogs\.dentalkart\.com
