@@ -73004,3 +73004,4 @@
 1745063386	gre_gor	yekmusic\.com
 1745081879	Moo	ai-powered\.pro
 1745086623	Moo	www-tubidy\.ws
+1745088656	Moo	jparse\.com
