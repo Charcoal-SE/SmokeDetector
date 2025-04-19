@@ -5335,7 +5335,9 @@ items:
 - ns: gocheapweb.com.
 - ns: omnis.com.
 - ns: omnisdns.net.
-- ns: perfectsoftsolutionsltd.com.
+- comment: NXDOMAIN 2025-04-19
+  disable: true
+  ns: perfectsoftsolutionsltd.com.
 - ns: ghestineh.com.
 - ns: naoservers.com.
 - ns: virtualstacks.com.
