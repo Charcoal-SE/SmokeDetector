@@ -6068,3 +6068,4 @@ pressreleasepower\.com
 yotasoftware\.com
 kioskengine\.io
 reddyanna-id\.in
+nsda\.portal\.gov\.bd
