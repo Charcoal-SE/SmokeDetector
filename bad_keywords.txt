@@ -3771,3 +3771,4 @@ What[\W_]*+is[\W_]*+the[\W_]*+best[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+flights[\
 𝔻𝕖𝕝𝕥𝕒
 𝘼𝙞𝙧𝙬𝙖𝙮𝙨
 𝐀𝐢𝐫 𝐅𝐫𝐚𝐧𝐜𝐞
+How[\W_]*+do[\W_]*+I[\W_]*+get[\W_]*+(?:a?merican[\W_]*+a?irlines|Ticketmaster)[\W_]*+to[\W_]*+answer
