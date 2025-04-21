@@ -67954,7 +67954,6 @@
 1730599850	Jeff Schaller	study\.uxtweak\.com
 1730599923	Jeff Schaller	587zc0ax2c
 1730600501	Jeff Schaller	newstoday360\.com
-1730610396	Anerdw	(?-i:^Peter Austin$)
 1730638876	Jeff Schaller	cexpertvision\.com
 1730646409	Jeff Schaller	reminodownload\.com
 1730651831	Fastnlight	baburao\.vhankol(?:@gmail\.com)?
