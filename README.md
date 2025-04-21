@@ -152,6 +152,9 @@ back to GitHub,
 your system also needs Git 1.8 or higher,
 although we recommend Git 2.11+.
 
+## Requesting removal of a website from the blacklist
+If you are an official representative of the website/product which you desire to see removed, please see "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" for details as to how to request removal of your website from the blacklist.
+
 ## License
 
 Licensed under either of
