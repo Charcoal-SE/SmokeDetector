@@ -5577,7 +5577,9 @@ items:
   disable: true
   ns: hostandserver.com.
 - ns: onlinestreaming.us.
-- ns: vlrx.space.
+- comment: NXDOMAIN 2025-04-21
+  disable: true
+  ns: vlrx.space.
 - ns: nameserverseo.com.
 - ns: invenzasolutions.com.
 - ns: turnkeywebspace.net.
