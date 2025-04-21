@@ -54473,7 +54473,6 @@
 1699922577	Vickel	760Plus
 1699912666	Vickel	kviku\.ru
 1699937059	Jesse	geometrydash-unblocked\.com
-1699931524	Nick	saigontechnology\.com
 1699953916	Robert Longson	jackcliffelectrical\.com\.au
 1699954571	cigien	jack[\W_]*+cliff[\W_]*+electrical(?!\.com\.au(?<=jackcliffelectrical\.com\.au))
 1699954591	cigien	tafrii\.com
