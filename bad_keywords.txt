@@ -3765,7 +3765,6 @@ flashsbitcoins
 How[\W_]*+Do[\W_]*+I[\W_]*+Communicate[\W_]*+to[\W_]*+Expedia
 C[óo]mo[\W_]*+puedo[\W_]*+hablar[\W_]*+r[áa]pidamente[\W_]*+con[\W_]*+el[\W_]*+representante[\W_]*+de
 How[\W_]*+do[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+(?:\w++[\W_]++){1,2}customer[\W_]*+service
-How[\W_]*+do[\W_]*+I[\W_]*+get[\W_]*+(?:merican[\W_]*+irlines|American[\W_]*+Airlines|Ticketmaster)[\W_]*+to[\W_]*+answer
 What[\W_]*+is[\W_]*+the[\W_]*+cheapest[\W_]*+day[\W_]*+to[\W_]*+fly[\W_]*+on
 How[\W_]*+long[\W_]*+does[\W_]*+American[\W_]*+Airlines[\W_]*+take[\W_]*+to[\W_]*+reply
 What[\W_]*+is[\W_]*+the[\W_]*+best[\W_]*+day[\W_]*+to[\W_]*+book[\W_]*+flights[\W_]*+on(?:[\W_]++Delta|[\W_]++(?:Qatar|tar)[\W_]++Airways|[\W_]++Frontier|[\W_]++Air[\W_]++France)
