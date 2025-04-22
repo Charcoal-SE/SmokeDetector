@@ -73069,3 +73069,4 @@
 1745302588	Moo	Ähdus[\W_]*+Technology
 1745302840	Moo	flightd\.pro
 1745303433	Moo	dserve\.ai
+1745304546	Moo	travejar\.com
