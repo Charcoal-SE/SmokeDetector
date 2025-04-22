@@ -55239,7 +55239,6 @@
 1701773110	VLAZ	toptiamcurrent\.blogspot
 1701773064	VLAZ	(?-i:tEXZ7)(?#shorturl.at)
 1701772705	VLAZ	(?-i:nibung88)(?#urlink.id)
-1701779081	VLAZ	11xplay
 1701772647	VLAZ	nibungpoker\.com
 1701772640	VLAZ	cepat\.click
 1701768774	VLAZ	(?-i:44unwt2z)(?#tinyurl)
