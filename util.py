@@ -145,6 +145,30 @@ def util_blacklist_number(*args):
     findspam.FindSpam.reload_blacklists()
 
 
+def unblacklist(pattern):
+    for blacklist_name in ['KEYWORDS', 'WEBSITES', 'USERNAMES', 'NUMBERS']:
+        exists, _line = Blacklist(getattr(Blacklist, blacklist_name)).exists(pattern)
+        if exists:
+            ensure_blacklist_faked(blacklist_name)
+            Blacklist(getattr(Blacklist, blacklist_name)).remove(pattern)
+            return blacklist_name
+    return None
+
+
+@utility("unblacklist", "pretend it has been removed from the blacklists")
+def util_unblacklist(*args):
+    changes_made = False
+    for s in args:
+        removed_from = unblacklist(s)
+        if removed_from is not None:
+            print("Removed `{}` from {}.\n".format(s, removed_from))
+            changes_made = True
+        else:
+            print("No such item `{}` in blacklist.\n".format(s))
+    if changes_made:
+        findspam.FindSpam.reload_blacklists()
+
+
 @utility("exit", "exit this utility (interactive mode)")
 def util_exit():
     # delete all temporary blacklist copies
