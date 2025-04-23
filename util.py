@@ -30,6 +30,12 @@ def util_bisect(*args):
         print(chatcommands.bisect.__func__(None, s) + "\n")
 
 
+@utility("bisect-number", "finds out which number blacklist/watchlist item matches a number")
+def util_bisect_number(*args):
+    for s in args:
+        print(chatcommands.bisect_number.__func__(None, s) + "\n")
+
+
 @utility("exit", "exit this utility (interactive mode)")
 def util_exit():
     exit()
