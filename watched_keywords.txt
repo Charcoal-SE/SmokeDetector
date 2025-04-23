@@ -73109,3 +73109,4 @@
 1745406068	Jeff Schaller	avodahmugsandteas\.com
 1745409728	Jeff Schaller	aticoscientific\.com
 1745409764	Dan Getz	payagency
+1745410515	Dan Getz	intratel\.ca
