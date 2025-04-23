@@ -3781,3 +3781,4 @@ forreststonesolutions
 does[\W_]*+(?:\w++[\W_]++){1,2}offer[\W_]*+senior[\W_]*+discounts
 [\W_]*+How[\W_]*+to[\W_]*+speak[\W_]*+directly[\W_]*+at
 [\W_]*+How[\W_]*+do[\W_]*+I[\W_]*+file[\W_]*+a[\W_]*+complaint[\W_]*+with
+𝙇𝙪𝙛𝙩𝙝𝙖𝙣𝙨𝙖
