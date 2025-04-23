@@ -73105,3 +73105,4 @@
 1745393000	Moo	5kingz\.net
 1745393046	Moo	5[\W_]*+Kingz[\W_]*+Sports
 1745394079	Moo	ps2biosx\.com
+1745395916	Moo	digiuprise\.com
