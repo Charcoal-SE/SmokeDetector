@@ -36,6 +36,18 @@ def util_bisect_number(*args):
         print(chatcommands.bisect_number.__func__(None, s) + "\n")
 
 
+@utility("deobfuscate-number", "show the results of homoglyph deobfuscating, and number normalizations, for a number pattern")
+def util_deobfuscate_number(*args):
+    for s in args:
+        print(chatcommands.deobfuscate_number.__func__(None, s) + "\n")
+
+
+@utility("normalize-number", "show the number normalizations for a number pattern")
+def util_normalize_number(*args):
+    for s in args:
+        print(chatcommands.normalize_number.__func__(None, s) + "\n")
+
+
 @utility("exit", "exit this utility (interactive mode)")
 def util_exit():
     exit()
