@@ -2,18 +2,25 @@
 # coding=utf-8
 # A CLI utility for various Smokey functions
 
+import shutil
 import sys
 import os
 import shlex
 import inspect
+from tempfile import mkstemp
 
 import helpers
 helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 import chatcommands
+import findspam
+from blacklists import Blacklist
 
 
 # A utility is "name: (description, func)"
 utilities = {}
+
+# map from blacklist names to paths of temp files, to fake modifying them
+tmp_blacklist_paths = {}
 
 
 def utility(name, description):
@@ -84,8 +91,65 @@ def util_test_json(*args):
         print(chatcommands.test.__func__(s, alias_used='test-json') + "\n")
 
 
+# fake blacklist by copying it to a temporary file, so we can modify it
+# blacklist name is the name of a blacklist from blacklists.Blacklist,
+# i.e., "KEYWORDS" for blacklists.Blacklist.KEYWORDS
+def ensure_blacklist_faked(blacklist_name: str):
+    if blacklist_name not in tmp_blacklist_paths:
+        # get old blacklist definition
+        old_filename, blacklist_parser = getattr(Blacklist, blacklist_name)
+        # create temporary file as a copy of the real one
+        fd, path = mkstemp(prefix=old_filename)
+        os.close(fd)
+        shutil.copyfile(getattr(Blacklist, blacklist_name)[0], path)
+        tmp_blacklist_paths[blacklist_name] = path
+        # update blacklist definition to use temporary file instead of real file
+        setattr(Blacklist,
+                blacklist_name,
+                (path, blacklist_parser))
+
+
+@utility("blacklist-keyword", "pretend a keyword has been added to the blacklist")
+def util_blacklist_keyword(*args):
+    ensure_blacklist_faked('KEYWORDS')
+    blacklist = Blacklist(Blacklist.KEYWORDS)
+    for s in args:
+        blacklist.add(s)
+    findspam.FindSpam.reload_blacklists()
+
+
+@utility("blacklist-website", "pretend a website has been added to the blacklist")
+def util_blacklist_website(*args):
+    ensure_blacklist_faked('WEBSITES')
+    blacklist = Blacklist(Blacklist.WEBSITES)
+    for s in args:
+        blacklist.add(s)
+    findspam.FindSpam.reload_blacklists()
+
+
+@utility("blacklist-username", "pretend a username has been added to the blacklist")
+def util_blacklist_username(*args):
+    ensure_blacklist_faked('USERNAMES')
+    blacklist = Blacklist(Blacklist.USERNAMES)
+    for s in args:
+        blacklist.add(s)
+    findspam.FindSpam.reload_blacklists()
+
+
+@utility("blacklist-number", "pretend a number has been added to the blacklist")
+def util_blacklist_number(*args):
+    ensure_blacklist_faked('NUMBERS')
+    blacklist = Blacklist(Blacklist.NUMBERS)
+    for s in args:
+        blacklist.add(s)
+    findspam.FindSpam.reload_blacklists()
+
+
 @utility("exit", "exit this utility (interactive mode)")
 def util_exit():
+    # delete all temporary blacklist copies
+    for path in tmp_blacklist_paths.values():
+        os.unlink(path)
     exit()
 
 
