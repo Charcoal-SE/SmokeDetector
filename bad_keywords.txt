@@ -3779,7 +3779,6 @@ Referral[\W_]*+Code[\W_]*+in[\W_]*+20[1-9][1-9]
 forreststonesolutions
 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩
 does[\W_]*+(?:\w++[\W_]++){1,2}offer[\W_]*+senior[\W_]*+discounts
-[\W_]*+How[\W_]*+do[\W_]*+I[\W_]*+file[\W_]*+a[\W_]*+complaint[\W_]*+with
 𝙇𝙪𝙛𝙩𝙝𝙖𝙣𝙨𝙖
 𝐹𝒶𝒸𝑒𝒷𝑜𝑜𝓀
 𝙍𝙮𝙖𝙣𝙖𝙞𝙧
