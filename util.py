@@ -36,7 +36,7 @@ def util_bisect_number(*args):
         print(chatcommands.bisect_number.__func__(None, s) + "\n")
 
 
-@utility("deobfuscate-number", "show the results of homoglyph deobfuscating, and number normalizations, for a number pattern")
+@utility("deobfuscate-number", "homoglyph deobfuscate and normalize a number pattern")
 def util_deobfuscate_number(*args):
     for s in args:
         print(chatcommands.deobfuscate_number.__func__(None, s) + "\n")
@@ -46,6 +46,42 @@ def util_deobfuscate_number(*args):
 def util_normalize_number(*args):
     for s in args:
         print(chatcommands.normalize_number.__func__(None, s) + "\n")
+
+
+@utility("test-question", "test if text would be automatically reported as a question body")
+def util_test_question(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test-question') + "\n")
+
+
+@utility("test-answer", "test if text would be automatically reported as an answer body")
+def util_test_answer(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test-answer') + "\n")
+
+
+@utility("test-user", "test if text would be automatically reported as username")
+def util_test_user(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test-user') + "\n")
+
+
+@utility("test-title", "test if text would be automatically reported as a question title")
+def util_test_title(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test-title') + "\n")
+
+
+@utility("test", "test if text would be automatically reported as a post, title, or username")
+def util_test(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test') + "\n")
+
+
+@utility("test-json", "test if post, given in JSON, would be automatically reported")
+def util_test_json(*args):
+    for s in args:
+        print(chatcommands.test.__func__(s, alias_used='test-json') + "\n")
 
 
 @utility("exit", "exit this utility (interactive mode)")
