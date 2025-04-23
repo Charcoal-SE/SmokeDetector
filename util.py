@@ -61,7 +61,7 @@ def main_loop(args):
         return
 
     desc, func = utilities[name]
-    func_args = inspect.getargspec(func)
+    func_args = inspect.getfullargspec(func)
     min_args = len(func_args[0] or "") - len(func_args[3] or "")
     if len(args) < min_args:
         print("Too few arguments")
