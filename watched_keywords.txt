@@ -73106,3 +73106,4 @@
 1745393046	Moo	5[\W_]*+Kingz[\W_]*+Sports
 1745394079	Moo	ps2biosx\.com
 1745395916	Moo	digiuprise\.com
+1745406068	Jeff Schaller	avodahmugsandteas\.com
