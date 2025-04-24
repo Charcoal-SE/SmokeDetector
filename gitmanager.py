@@ -196,18 +196,24 @@ class GitManager:
                     return (False, "Tell someone to set a GH token.")
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
-                           "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
-                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
-                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
+                           "body": "[{username}]({user_link}) requests the {op} of the {blacklist} `{item}`"
+                                   ". See the MS search [here]"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{ms_search_option}{ms_search})"
+                                   " and the Stack Exchange search"
+                                   " [in text](https://stackexchange.com/search?q=%22{se_search}%22)"
+                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{se_search}%22)"
+                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{se_search}%22)"
                                    ".\n"
-                                   "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
-                                       username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                                       item, ms_search_option,                                    # 4 5
-                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
-                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
-                                       blacklist.upper()),                                        # 8
+                                   "<!-- METASMOKE-BLACKLIST-{BLACKLIST} {item} -->".format(
+                                       username=username,
+                                       user_link=chat_profile_link,
+                                       blacklist=blacklist,
+                                       BLACKLIST=blacklist.upper(),
+                                       op=op,
+                                       item=item,
+                                       ms_search_option=ms_search_option,
+                                       ms_search=quote_plus(_anchor(item, blacklist_type)),
+                                       se_search=quote_plus(item.replace("\\W", " ").replace("\\.", "."))),
                            "head": branch,
                            "base": "master"}
                 response = GitHubManager.create_pull_request(payload)
