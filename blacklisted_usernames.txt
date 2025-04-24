@@ -1234,3 +1234,4 @@ carelab[sz]
 ^R9ST SEO$
 (?-i:^55555 FIVE FIVE FIVE FIVE FIVE$)
 ^Hong se de guai guai$
+^Online quran classes$
