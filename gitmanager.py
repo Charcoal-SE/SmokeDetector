@@ -34,6 +34,24 @@ def _anchor(str_to_anchor, blacklist_type):
         return str_to_anchor
 
 
+def _metasmoke_search(item: str, blacklist_type) -> str:
+    """Returns a metasmoke search URL for the operation."""
+    quoted_text = quote_plus(_anchor(item, blacklist_type))
+    if blacklist_type == Blacklist.USERNAMES:
+        fields = ['username']
+        search = ""
+    else: # all other blacklists are searched in usernames, bodies, and question titles
+        fields = ["title", "body", "username"]
+        search = "&or_search=1"
+    # anything but a number is searched as a regex
+    is_regex = blacklist_type not in {Blacklist.NUMBERS, Blacklist.WATCHED_NUMBERS}
+    for field in fields:
+        search += "&" + field + "=" + quoted_text
+        if is_regex:
+            search += "&" + field + "_is_regex=1"
+    return "https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93" + search
+
+
 class GitHubManager:
     still_using_usernames = GlobalVars.github_access_token is None
 
@@ -113,22 +131,16 @@ class GitManager:
 
         if blacklist == "website":
             blacklist_type = Blacklist.WEBSITES
-            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "keyword":
             blacklist_type = Blacklist.KEYWORDS
-            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "username":
             blacklist_type = Blacklist.USERNAMES
-            ms_search_option = "&username_is_regex=1&username="
         elif blacklist == "number":
             blacklist_type = Blacklist.NUMBERS
-            ms_search_option = "&body="
         elif blacklist == "watch_keyword":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
-            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "watch_number":
             blacklist_type = Blacklist.WATCHED_NUMBERS
-            ms_search_option = "&body="
         else:
             return (False, 'GitManager: blacklist is not recognized. Blame a developer.')
 
@@ -198,8 +210,7 @@ class GitManager:
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{username}]({user_link}) requests the {op} of the {blacklist} `{item}`"
-                                   ". See the MS search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{ms_search_option}{ms_search})"
+                                   ". See the MS search [here]({ms_search})"
                                    " and the Stack Exchange search"
                                    " [in text](https://stackexchange.com/search?q=%22{se_search}%22)"
                                    ", [in URLs](https://stackexchange.com/search?q=url%3A%22{se_search}%22)"
@@ -212,8 +223,7 @@ class GitManager:
                                        BLACKLIST=blacklist.upper(),
                                        op=op,
                                        item=item,
-                                       ms_search_option=ms_search_option,
-                                       ms_search=quote_plus(_anchor(item, blacklist_type)),
+                                       ms_search=_metasmoke_search(item, blacklist_type),
                                        se_search=quote_plus(item.replace("\\W", " ").replace("\\.", "."))),
                            "head": branch,
                            "base": "master"}
