@@ -3796,3 +3796,4 @@ c[óo]mo[\W_]*+hablo[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+viva[\W_]*+en
 cu[áa]l[\W_]*+es[\W_]*+el[\W_]*+n[úu]mero[\W_]*+de[\W_]*+tel[ée]fono[\W_]*+de
 What[\W_]*+is[\W_]*+the[\W_]*+first[\W_]*+thing[\W_]*+you[\W_]*+should[\W_]*+change[\W_]*+if[\W_]*+you[\W_]*+are[\W_]*+hacked
 How[\W_]*+do[\W_]*+I[\W_]*+speak[\W_]*+to[\W_]*+a[\W_]*+human[\W_]*+at
+Cu[áa]l[\W_]*+es[\W_]*+el[\W_]*+(?:n[úu]mero|tel[eé]fono|whatsapp|plan[\W_]*+de|precio[\W_]*+de[\W_]*+las[\W_]*+maletas|d[íi]a[\W_]*+m[aá]s[\W_]*+barato[\W_]*+para|m[ée]xico)[\W_]*+(?:\w++[\W_]++){1,3}(?:tel[eé]fono|airlines|aerol[íi]neas|whatsapp|colombia|expedia|avianca|chile|airways|argentina)
