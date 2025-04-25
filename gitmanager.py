@@ -21,7 +21,7 @@ else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
 
-from helpers import log, log_current_exception, only_blacklists_changed
+from helpers import only_blacklists_changed, remove_regex_comments
 from blacklists import *
 
 
@@ -36,7 +36,7 @@ def _anchor(str_to_anchor, blacklist_type):
 
 def _metasmoke_search(item: str, blacklist_type) -> str:
     """Returns a metasmoke search URL for the operation."""
-    quoted_text = quote_plus(_anchor(item, blacklist_type))
+    quoted_text = quote_plus(_anchor(remove_regex_comments(item), blacklist_type))
     if blacklist_type == Blacklist.USERNAMES:
         fields = ['username']
         search = ""
@@ -50,6 +50,15 @@ def _metasmoke_search(item: str, blacklist_type) -> str:
         if is_regex:
             search += "&" + field + "_is_regex=1"
     return "https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93" + search
+
+
+def _se_search(item: str) -> str:
+    """Returns quoted text for the operation, to be searched on StackExchange search."""
+    return quote_plus('"' +
+                      remove_regex_comments(item)
+                      .replace("\\W", " ")
+                      .replace("\\.", ".")
+                      + '"')
 
 
 class GitHubManager:
@@ -212,9 +221,9 @@ class GitManager:
                            "body": "[{username}]({user_link}) requests the {op} of the {blacklist} `{item}`"
                                    ". See the MS search [here]({ms_search})"
                                    " and the Stack Exchange search"
-                                   " [in text](https://stackexchange.com/search?q=%22{se_search}%22)"
-                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{se_search}%22)"
-                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{se_search}%22)"
+                                   " [in text](https://stackexchange.com/search?q={se_search})"
+                                   ", [in URLs](https://stackexchange.com/search?q=url%3A{se_search})"
+                                   ", and [in code](https://stackexchange.com/search?q=code%3A{se_search})"
                                    ".\n"
                                    "<!-- METASMOKE-BLACKLIST-{BLACKLIST} {item} -->".format(
                                        username=username,
@@ -224,7 +233,7 @@ class GitManager:
                                        op=op,
                                        item=item,
                                        ms_search=_metasmoke_search(item, blacklist_type),
-                                       se_search=quote_plus(item.replace("\\W", " ").replace("\\.", "."))),
+                                       se_search=_se_search(item)),
                            "head": branch,
                            "base": "master"}
                 response = GitHubManager.create_pull_request(payload)
