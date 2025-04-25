@@ -3800,3 +3800,4 @@ Cu[áa]l[\W_]*+es[\W_]*+el[\W_]*+(?:n[úu]mero|tel[eé]fono|whatsapp|plan[\W_]*+
 weex[\W_]*+referral
 code[\W_]*+ckk0
 ℝ𝕠𝕓𝕚𝕟𝕙𝕠𝕠𝕕
+𝕮ash
