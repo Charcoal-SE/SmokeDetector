@@ -40,7 +40,7 @@ def _metasmoke_search(item: str, blacklist_type) -> str:
     if blacklist_type == Blacklist.USERNAMES:
         fields = ['username']
         search = ""
-    else: # all other blacklists are searched in usernames, bodies, and question titles
+    else:  # all other blacklists are searched in usernames, bodies, and question titles
         fields = ["title", "body", "username"]
         search = "&or_search=1"
     # anything but a number is searched as a regex
