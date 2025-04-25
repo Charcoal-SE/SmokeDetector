@@ -73167,3 +73167,4 @@
 1745565037	Moo	theplantsgardeninghub\.blogspot
 1745565688	Moo	Cura[\W_]*+Ball
 1745565695	Moo	sidewalkrepairqueens\.com
+1745566605	VLAZ	gandageneralcontractors\.com
