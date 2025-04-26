@@ -3658,7 +3658,6 @@
 1529855290	Zoe	shl500ewf
 1529855323	Zoe	gratis\W*drivstoff
 1529860116	Makyen	ingramer\.com
-1529869596	Makyen	upwork\.com(?!/api/)
 1529869617	Makyen	freelancer\.com
 1529870103	Makyen	smsuvo\.ahmed1
 1529870122	Makyen	mominsuvo\W*(?:AD|AT|@)\W*gmail\W*(?:Dot|\.)\W*com
