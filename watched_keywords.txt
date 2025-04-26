@@ -73197,3 +73197,4 @@
 1745658929	Nisse Engström	bitboxpc\.com
 1745659258	Nisse Engström	stundenrechneer\.de
 1745660665	Glorfindel	nicodigital\.com
+1745663097	Glorfindel	Helpdesk_Customer(?#telegram)
