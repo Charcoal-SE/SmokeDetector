@@ -73214,3 +73214,4 @@
 1745711221	Jeff Schaller	upwork\.com(?<!developers\.upwork\.com)(?<!api\.upwork\.com)(?!/api/)
 1745717942	Jeff Schaller	aeriedesign\.net
 1745725873	Dan Getz	Recoveryeagles009(?:@gmail\.com)?
+1745741868	Nisse Engström	pdfsail\.com
