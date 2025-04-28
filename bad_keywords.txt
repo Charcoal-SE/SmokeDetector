@@ -1868,7 +1868,7 @@ aegis\W*vitality(?:\W*+(?:keto|prior|\d++))*
 markmoelloanhouse(?:@hotmail\.com)?
 proline\W*+keto
 на\W*еду\W*+рублей
-(?:\w*hack[\W_]*+(?:\w+[\W_]*+)?(?:at[\W_]*+)?|\w+(?:@|(?:at[\W_]*+)))tutanota[\W_]*+(?:dot[\W_]*+)?com(?#XXX)
+(?:\w*hack[\W_]*+(?:\w+[\W_]*+)?(?:at[\W_]*+)?|\w+(?:@|(?:at[\W_]*+)))tutanota[\W_]*+(?:dot[\W_]*+)?com(?!(?:[^<]++|<(?!\/?code>))*+<\/code>)
 buy, sell and use Libra cryptocurrency. All information in one place
 supercut(?:[\W_]*+keto)?
 wizardcyprushacker(?:@gmail\.com)?
