@@ -73236,3 +73236,4 @@
 1745840238	Jeff Schaller	rq-request-a-quote-hide-price(?#shopify)
 1745844381	Jeff Schaller	solar-hut\.co\.uk
 1745844815	Moo	starhomefurniture\.com
+1745845805	Jeff Schaller	darrismanresearch\.com
