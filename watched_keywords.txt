@@ -21996,7 +21996,6 @@
 1599115362	Makyen	(?-i:scocs\.uet)(?#facebook.com)
 1599116628	tripleee	sir[\W_]*+syed[\W_]*+college
 1599116720	tripleee	pezeshka\.com
-1599117489	Mast	logelite\.com
 1599117624	Mast	biostem
 1599117426	Mast	subsmovies\.club
 1599118047	Mast	back[\W_]*+to[\W_]*+school[\W_]*+promo
