@@ -73253,3 +73253,4 @@
 1745922830	VLAZ	Crazy[\W_]*+Cattle[\W_]*+3D(?:[\W_]*+Unblocked)?
 1745922994	Moo	akratijewelsinc\.com
 1745924942	Vickel	coimbatorebabystudio\.com
+1745925115	Vickel	coimbatore[\W_]*+baby[\W_]*+studio(?!\.com(?<=coimbatorebabystudio\.com))
