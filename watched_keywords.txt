@@ -73245,3 +73245,4 @@
 1745917849	VLAZ	bpsvietnam\.vn
 1745917858	VLAZ	bpsvietnam(?!\.vn)
 1745920461	VLAZ	clairebriston\.com
+1745920469	VLAZ	pimapen-turkey\.com
