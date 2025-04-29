@@ -73256,3 +73256,4 @@
 1745925115	Vickel	coimbatore[\W_]*+baby[\W_]*+studio(?!\.com(?<=coimbatorebabystudio\.com))
 1745926172	VLAZ	irfacilities\.com
 1745929686	Jeff Schaller	swedentraveler\.se
+1745929716	Jeff Schaller	offerplox\.com
