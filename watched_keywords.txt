@@ -73250,3 +73250,4 @@
 1745921636	Jeff Schaller	meadowandbark\.com
 1745921671	Jeff Schaller	freesvgeditor\.com
 1745921743	VLAZ	VtreeAcademy(?# YouTube)
+1745922830	VLAZ	Crazy[\W_]*+Cattle[\W_]*+3D(?:[\W_]*+Unblocked)?
