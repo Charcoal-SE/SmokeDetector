@@ -73244,3 +73244,4 @@
 1745917704	VLAZ	fiveprogrammers\.com
 1745917849	VLAZ	bpsvietnam\.vn
 1745917858	VLAZ	bpsvietnam(?!\.vn)
+1745920461	VLAZ	clairebriston\.com
