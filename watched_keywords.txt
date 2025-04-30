@@ -73289,3 +73289,4 @@
 1746021854	Jeff Schaller	temu\.to
 1746022154	Glorfindel	^Suwaithi online$
 1746023981	ipodtouch0218	imagegeneration\.com
+1746025170	ipodtouch0218	awdhackd(?:@gmail\.com)?
