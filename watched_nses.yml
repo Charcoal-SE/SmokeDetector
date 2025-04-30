@@ -5276,7 +5276,9 @@ items:
 - ns: bwfdns.net.
 - ns: skb-enterprise.com.
 - ns: jinfo.net.
-- ns: ambitioncloud.org.
+- comment: NXDOMAIN 2025-04-30
+  disable: true
+  ns: ambitioncloud.org.
 - ns: ambitionhost.org.
 - comment: NXDOMAIN 2023-03-25
   disable: true
