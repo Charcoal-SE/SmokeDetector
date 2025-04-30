@@ -73271,3 +73271,4 @@
 1745991038	VLAZ	scclittleelm\.com
 1745991395	VLAZ	potvalet\.com
 1745991402	VLAZ	pot[\W_]*+valet(?!\.com(?<=potvalet\.com))
+1745993038	VLAZ	kumarijob\.com
