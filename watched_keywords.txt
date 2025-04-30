@@ -73272,3 +73272,4 @@
 1745991395	VLAZ	potvalet\.com
 1745991402	VLAZ	pot[\W_]*+valet(?!\.com(?<=potvalet\.com))
 1745993038	VLAZ	kumarijob\.com
+1745994656	VLAZ	cityandcountryshutters\.co\.uk
