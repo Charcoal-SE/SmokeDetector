@@ -73336,3 +73336,4 @@
 1746177699	Vickel	karparivartan\.com
 1746177770	Vickel	karparivartan(?!\.com)
 1746178471	VLAZ	nhakhoasing\.vn
+1746182498	VLAZ	buyoncomed\.com
