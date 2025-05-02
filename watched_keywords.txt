@@ -73343,3 +73343,4 @@
 1746182753	VLAZ	buyoncomed(?!\.com)
 1746186603	Dan Getz	solutions1313\.com
 1746186470	Dan Getz	shopsneakerdeals\.org
+1746188978	Dan Getz	fixdessertchocolate\.store
