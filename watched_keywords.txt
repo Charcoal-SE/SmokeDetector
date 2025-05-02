@@ -73334,3 +73334,4 @@
 1746176162	VLAZ	weednpills\.com
 1746177364	VLAZ	nilgam\.com
 1746177699	Vickel	karparivartan\.com
+1746177770	Vickel	karparivartan(?!\.com)
