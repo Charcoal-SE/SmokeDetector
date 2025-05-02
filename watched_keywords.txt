@@ -73327,3 +73327,4 @@
 1746171492	VLAZ	assessmenthelp\.io
 1746171510	VLAZ	hoteleleo\.com
 1746171606	VLAZ	upnt\.com
+1746171890	VLAZ	epicmovers\.com\.au
