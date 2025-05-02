@@ -73340,3 +73340,4 @@
 1746182547	VLAZ	iriscoders\.com
 1746182698	VLAZ	iriscoders(?!\.com)
 1746182727	VLAZ	Wormentel
+1746182753	VLAZ	buyoncomed(?!\.com)
