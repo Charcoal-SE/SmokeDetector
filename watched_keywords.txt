@@ -73356,3 +73356,4 @@
 1746207652	VLAZ	allevi8marketing\.com
 1746208348	Dan Getz	panda-fog\.com
 1746210338	Fastnlight	bitlifmodapk\.com
+1746227223	Fastnlight	TRACE[\W_]*+HACKER[\W_]*+S[\W_]*+CRYPTO[\W_]*+RECOVERY
