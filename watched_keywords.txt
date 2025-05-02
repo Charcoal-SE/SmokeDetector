@@ -73347,3 +73347,4 @@
 1746192868	Dan Getz	convexinteractive\.com
 1746190070	Dan Getz	thomascj\.com
 1746193538	Jeff Schaller	safflower[\W_]*+oil
+1746205165	Dan Getz	(?:their|our|support|service|care|dedicated|expert|professional|knowledgeable|friendly|24\W7)[\W_]*+team[\W_]*+is[\W_]*+ready
