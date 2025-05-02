@@ -73326,3 +73326,4 @@
 1746171297	VLAZ	webmastersgroup\.com\.au
 1746171492	VLAZ	assessmenthelp\.io
 1746171510	VLAZ	hoteleleo\.com
+1746171606	VLAZ	upnt\.com
