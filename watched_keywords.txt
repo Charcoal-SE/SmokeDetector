@@ -73338,3 +73338,4 @@
 1746178471	VLAZ	nhakhoasing\.vn
 1746182498	VLAZ	buyoncomed\.com
 1746182547	VLAZ	iriscoders\.com
+1746182698	VLAZ	iriscoders(?!\.com)
