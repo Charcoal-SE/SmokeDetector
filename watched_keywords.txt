@@ -73344,3 +73344,4 @@
 1746186470	Dan Getz	shopsneakerdeals\.org
 1746188947	Dan Getz	arcadegamemachines\.store
 1746188978	Dan Getz	fixdessertchocolate\.store
+1746190070	Dan Getz	thomascj\.com
