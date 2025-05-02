@@ -5770,7 +5770,9 @@ items:
 - ns: ju.edu.jo.
 - ns: xliil.com.
 - ns: noc77.com.
-- ns: accesget.com.
+- comment: no matches as of 2025-05-02, registry expired 2025-03-18
+  disable: true
+  ns: accesget.com.
 - ns: bunny.net.
 - ns: parsvds.com.
 - ns: tristarhost.com.
