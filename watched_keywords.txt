@@ -73328,3 +73328,4 @@
 1746171510	VLAZ	hoteleleo\.com
 1746171606	VLAZ	upnt\.com
 1746171890	VLAZ	epicmovers\.com\.au
+1746172942	VLAZ	cybernx\.com
