@@ -73329,3 +73329,4 @@
 1746171606	VLAZ	upnt\.com
 1746171890	VLAZ	epicmovers\.com\.au
 1746172942	VLAZ	cybernx\.com
+1746172950	VLAZ	cybernx(?!\.com)
