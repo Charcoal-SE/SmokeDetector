@@ -73360,3 +73360,4 @@
 1746251412	VLAZ	trycoco\.me
 1746251418	VLAZ	(?-i:its0xopsdev)(?#t.me)
 1746249839	Dan Getz	mysubs\.in
+1746247763	Dan Getz	nahi[\W_]*+hai[\W_][^n]*+nahi[\W_]*+hai
