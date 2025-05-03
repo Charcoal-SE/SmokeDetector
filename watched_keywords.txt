@@ -72902,7 +72902,6 @@
 1744818741	Cow	imperialfitnesshub\.com
 1744821311	Cow	roafly\.com
 1744821635	Cow	expertmoverpackers\.com
-1744825389	Cow	magicfactory\.tech
 1744827447	Cow	finalus\.in
 1744828036	Cow	dota2boosting\.com
 1744828734	Cow	intensocaphe\.com
