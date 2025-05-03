@@ -73374,3 +73374,4 @@
 1746276854	VLAZ	apartmentsingurugram\.com
 1746277209	VLAZ	ayzaltechnology\.com
 1746277579	Jeff Schaller	dryherbsvaporizer\.com
+1746278248	VLAZ	win[\W_]*+in[\W_]*+life[\W_]*+academy(?!\.com(?<=wininlifeacademy\.com))
