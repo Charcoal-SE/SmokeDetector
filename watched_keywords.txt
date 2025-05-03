@@ -73365,3 +73365,4 @@
 1746254166	VLAZ	bflix\.tube
 1746254173	VLAZ	bflix(?!\.tube)
 1746254292	VLAZ	fhlxecellgroup\.com
+1746255243	Dan Getz	ifixitoday\.com
