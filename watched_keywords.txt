@@ -73358,3 +73358,4 @@
 1746210338	Fastnlight	bitlifmodapk\.com
 1746227223	Fastnlight	TRACE[\W_]*+HACKER[\W_]*+S[\W_]*+CRYPTO[\W_]*+RECOVERY
 1746251412	VLAZ	trycoco\.me
+1746251418	VLAZ	(?-i:its0xopsdev)(?#t.me)
