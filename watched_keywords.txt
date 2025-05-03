@@ -73377,3 +73377,4 @@
 1746278248	VLAZ	win[\W_]*+in[\W_]*+life[\W_]*+academy(?!\.com(?<=wininlifeacademy\.com))
 1746278417	VLAZ	iNAIL[\W_]*+SUPPLY
 1746294391	VLAZ	wafflesmenu\.com
+1746304159	Jeff Schaller	sirbobbyyankee\.co\.uk
