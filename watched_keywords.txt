@@ -73375,3 +73375,4 @@
 1746277209	VLAZ	ayzaltechnology\.com
 1746277579	Jeff Schaller	dryherbsvaporizer\.com
 1746278248	VLAZ	win[\W_]*+in[\W_]*+life[\W_]*+academy(?!\.com(?<=wininlifeacademy\.com))
+1746278417	VLAZ	iNAIL[\W_]*+SUPPLY
