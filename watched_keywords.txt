@@ -73357,3 +73357,4 @@
 1746208348	Dan Getz	panda-fog\.com
 1746210338	Fastnlight	bitlifmodapk\.com
 1746227223	Fastnlight	TRACE[\W_]*+HACKER[\W_]*+S[\W_]*+CRYPTO[\W_]*+RECOVERY
+1746247763	Dan Getz	nahi[\W_]*+hai[\W_][^n]*+nahi[\W_]*+hai
