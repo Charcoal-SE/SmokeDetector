@@ -73392,3 +73392,4 @@
 1746377463	Nisse Engström	gtamob\.com
 1746378410	Nisse Engström	withwildabandon\.com
 1746388471	Jeff Schaller	(?-i:KeE62Zz)(?#fiverr)
+1746389476	Jeff Schaller	cognitiva[\W_]*+pills?
