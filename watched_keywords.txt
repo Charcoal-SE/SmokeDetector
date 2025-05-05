@@ -73420,3 +73420,4 @@
 1746446946	Jeff Schaller	zekaiqtesti\.tr
 1746448046	Jeff Schaller	mktplace\.io
 1746448973	VLAZ	loyalwings\.com
+1746449191	Jeff Schaller	WriteGenic\.ai
