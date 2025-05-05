@@ -73421,3 +73421,4 @@
 1746448973	VLAZ	loyalwings\.com
 1746449191	Jeff Schaller	WriteGenic\.ai
 1746450259	Makyen	writegenic[\W_]*+ai(?<!writegenic\.ai)
+1746451733	Jeff Schaller	softhear\.com
