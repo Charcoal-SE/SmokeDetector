@@ -48309,7 +48309,6 @@
 1679555147	tripleee	florencebook\.com
 1679555177	tripleee	poshtik[\W_]*+sutra
 1679555207	tripleee	skill-centre\.com
-1679555429	tripleee	(?-i:^Lalit Kumar$)
 1679557447	tripleee	wholesalepictureframes\.co\.uk
 1679557557	tripleee	ongocare\.com
 1679561363	tripleee	katalon\.com
