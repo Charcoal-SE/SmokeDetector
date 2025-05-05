@@ -73412,3 +73412,4 @@
 1746437602	VLAZ	ywe\.ae
 1746441063	Jeff Schaller	webrankpro\.com
 1746439676	Dan Getz	growtif\.com
+1746439730	Dan Getz	lsb\.edu\.in
