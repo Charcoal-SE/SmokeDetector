@@ -73399,3 +73399,4 @@
 1746425163	Dan Getz	radiantitservices\.in
 1746422152	Dan Getz	synergiseuk\.co\.uk
 1746426980	Jeff Schaller	vumez\.com
+1746427005	Jeff Schaller	worldexplorer\.blog
