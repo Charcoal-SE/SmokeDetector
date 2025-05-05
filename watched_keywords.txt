@@ -73407,3 +73407,4 @@
 1746428047	VLAZ	torgol\.com
 1746430369	VLAZ	chinabolt\.net
 1746430590	VLAZ	jingbang-tech\.com
+1746436760	VLAZ	ashahai\.com
