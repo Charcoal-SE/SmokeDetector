@@ -73410,3 +73410,4 @@
 1746436772	VLAZ	meritorious\.global
 1746437028	VLAZ	angelusdirect\.com
 1746437602	VLAZ	ywe\.ae
+1746439730	Dan Getz	lsb\.edu\.in
