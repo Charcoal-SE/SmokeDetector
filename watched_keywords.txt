@@ -72886,7 +72886,6 @@
 1744798736	VLAZ	nalashaahealth\.com
 1744799103	VLAZ	cropmarks\.lt
 1744799110	VLAZ	fasttrack\.lt
-1744799117	VLAZ	codeacademycollege\.com
 1744800875	Cow	stapx\.com
 1744802252	Cow	dimarketo\.com
 1744804220	Cow	al-duaji\.com
