@@ -73394,3 +73394,4 @@
 1746388471	Jeff Schaller	(?-i:KeE62Zz)(?#fiverr)
 1746389476	Jeff Schaller	cognitiva[\W_]*+pills?
 1746402428	Dan Getz	propgear(?#telegram)
+1746403861	Dan Getz	suhkingsley15(?#gmail.com)
