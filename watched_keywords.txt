@@ -73398,3 +73398,4 @@
 1746425305	Dan Getz	trxgas\.io
 1746425163	Dan Getz	radiantitservices\.in
 1746422152	Dan Getz	synergiseuk\.co\.uk
+1746426980	Jeff Schaller	vumez\.com
