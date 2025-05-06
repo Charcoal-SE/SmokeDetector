@@ -73436,3 +73436,4 @@
 1746505912	dbc	hrinnovatorsgroup\.com
 1746513092	Glorfindel	SnapPass\.ai
 1746523369	Vickel	nav-it\.com
+1746525890	Jeff Schaller	scootermenu\.us
