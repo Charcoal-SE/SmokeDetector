@@ -73445,3 +73445,4 @@
 1746531142	Jeff Schaller	extractmails\.com
 1746534349	Jeff Schaller	propero\.in
 1746534701	Jeff Schaller	Propero(?!\.ai)
+1746534731	Jeff Schaller	istanbulrealestate\.net
