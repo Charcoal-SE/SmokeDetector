@@ -73010,7 +73010,6 @@
 1745216906	Nisse Engström	fspnewzealand\.co\.nz
 1745217198	Nisse Engström	sktaxlawfirm\.com
 1745218179	Nisse Engström	mixpeek\.com
-1745199010	Dan Getz	mysecondline\.com
 1745219368	Nisse Engström	buyammunition\.store
 1745219419	Nisse Engström	offersloom\.com
 1745219514	Nisse Engström	dtcpack\.cn
