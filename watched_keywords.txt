@@ -73462,3 +73462,4 @@
 1746596269	VLAZ	nailmall\.com
 1746596406	VLAZ	crork\.io
 1746586584	Dan Getz	etedigital\.com
+1746591521	Dan Getz	para[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+(?:viva|en[\W_]*+vivo)[\W_]*+(?:de|en)
