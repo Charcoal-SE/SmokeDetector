@@ -73458,3 +73458,4 @@
 1746554036	Jeff Schaller	wicakglowup\.id
 1746558623	Dan Getz	knowithai\.com
 1746566839	Spevacus	custompackagingpro\.co\.uk
+1746591521	Dan Getz	para[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+(?:viva|en[\W_]*+vivo)[\W_]*+(?:de|en)
