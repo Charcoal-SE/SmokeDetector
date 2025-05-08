@@ -73512,3 +73512,4 @@
 1746687914	Dan Getz	(?<= )[a-z']{2,}+\?(?:[b-df-hj-np-tv-z]{2,}+(?<!html)(?<!css|php|wpf|sql|xml|csv)|(?:call|faq|info)[a-z]*+)$
 1746689938	VLAZ	notesmedia\.in
 1746689945	VLAZ	notesmedia(?!\.in)
+1746693991	VLAZ	angularjsindia\.com
