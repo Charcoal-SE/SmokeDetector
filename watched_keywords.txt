@@ -73513,3 +73513,4 @@
 1746689938	VLAZ	notesmedia\.in
 1746689945	VLAZ	notesmedia(?!\.in)
 1746693991	VLAZ	angularjsindia\.com
+1746695183	VLAZ	kasadara\.com
