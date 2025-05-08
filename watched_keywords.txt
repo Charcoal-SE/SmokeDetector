@@ -73504,7 +73504,6 @@
 1746683988	VLAZ	europeanflooring\.com
 1746684945	VLAZ	wearableoutfit\.com
 1746685024	VLAZ	aipowerups\.blogspot
-1746687312	VLAZ	razacomputers\.in
 1746687357	VLAZ	raza[\W_]*+computers(?!\.in(?<=razacomputers\.in))
 1746687390	VLAZ	budgetmart\.co\.uk
 1746687401	VLAZ	netlink\.com
@@ -73515,4 +73514,3 @@
 1746693991	VLAZ	angularjsindia\.com
 1746695183	VLAZ	kasadara\.com
 1746700303	Jeff Schaller	psiworks\.pt
-1746686910	Sonic -misses Shadow- Hedgehog	razacomputers\.in
