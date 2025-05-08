@@ -73503,3 +73503,4 @@
 1746682637	VLAZ	elsaspeak\.com
 1746683988	VLAZ	europeanflooring\.com
 1746684945	VLAZ	wearableoutfit\.com
+1746685024	VLAZ	aipowerups\.blogspot
