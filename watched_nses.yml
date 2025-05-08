@@ -4440,6 +4440,8 @@ items:
 - ns: matbao.net.
 - ns: matbao.vn.
 - ns: hostinger.vn.
+- comment: NXDOMAIN 2025-05-08
+  disable: true
 - ns: hostnac.com.
 - ns: iserverplanet.net.
 - comment: no longer responding 2020-11-11
