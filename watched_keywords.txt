@@ -73506,3 +73506,4 @@
 1746685024	VLAZ	aipowerups\.blogspot
 1746687312	VLAZ	razacomputers\.in
 1746687357	VLAZ	raza[\W_]*+computers(?!\.in(?<=razacomputers\.in))
+1746687390	VLAZ	budgetmart\.co\.uk
