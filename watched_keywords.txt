@@ -73523,3 +73523,4 @@
 1746735410	ipodtouch0218	schedulepsl\.pk
 1746741702	Jeff Schaller	thespringhilltimes\.com
 1746743643	Dan Getz	follow[\W_]*+(?:the[\W_]*+)?(?:automated[\W_]*+)?(?:IVR[\W_]*+)?(?:menu[\W_]*+)?prompts[\W_]*+to[\W_]*+(?:connect|get[\W_]*+connected)
+1746744577	Dan Getz	eromeoficial\.com
