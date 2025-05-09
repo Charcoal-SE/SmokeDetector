@@ -73537,3 +73537,4 @@
 1746786834	Jeff Schaller	bigbattery\.com
 1746787253	Jeff Schaller	softsms\.in
 1746798984	Jeff Schaller	gbwhtsapp\.pk
+1746808489	Dan Getz	passcodecyber(?:recovery)?(?#telegram, email, domain)
