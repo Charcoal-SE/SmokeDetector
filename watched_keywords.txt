@@ -73537,3 +73537,4 @@
 1746786834	Jeff Schaller	bigbattery\.com
 1746787253	Jeff Schaller	softsms\.in
 1746798984	Jeff Schaller	gbwhtsapp\.pk
+1746809443	Dan Getz	t[\W_]*+e[\W_]*+a[\W_]*+m[\W_]*+q[\W_]*+u[\W_]*+a[\W_]*+l[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+e[\W_]*+x[\W_]*+p[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+s[\W_]*+e(?#gmail with or without obfuscation)
