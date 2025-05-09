@@ -73525,3 +73525,4 @@
 1746743643	Dan Getz	follow[\W_]*+(?:the[\W_]*+)?(?:automated[\W_]*+)?(?:IVR[\W_]*+)?(?:menu[\W_]*+)?prompts[\W_]*+to[\W_]*+(?:connect|get[\W_]*+connected)
 1746744577	Dan Getz	eromeoficial\.com
 1746749586	Dan Getz	rushseller89(?#telegram)
+1746749600	Dan Getz	crunxh(?#telegram)
