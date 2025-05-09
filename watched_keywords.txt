@@ -73526,3 +73526,4 @@
 1746744577	Dan Getz	eromeoficial\.com
 1746749586	Dan Getz	rushseller89(?#telegram)
 1746749600	Dan Getz	crunxh(?#telegram)
+1746749805	Dan Getz	danielklosestore(?:@gmail\.com)?
