@@ -73531,3 +73531,4 @@
 1746772066	Mithical	Horizon[\W_]*+Electronics
 1746784252	Jeff Schaller	efirst\.ae
 1746784285	Jeff Schaller	rgdigitalsolutions\.com
+1746784420	Jeff Schaller	funcooplus\.com
