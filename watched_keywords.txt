@@ -73551,3 +73551,4 @@
 1746876655	Jeff Schaller	icovietnam\.com
 1746828628	Dan Getz	div-idy\.com
 1746877385	Jeff Schaller	philleywood\.com
+1746848264	Dan Getz	(?:91\W{,2}+|0)?+744[- ]?44[- ]?41[ -]?111
