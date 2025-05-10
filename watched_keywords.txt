@@ -73542,3 +73542,4 @@
 1746809375	Dan Getz	Q[\W_]*+u[\W_]*+a[\W_]*+l[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+E[\W_]*+x[\W_]*+p[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+e[\W_]*+s(?<!(?-i:qualified experties))
 1746814672	Dan Getz	procalculadoradehoras\.com
 1746825494	Dan Getz	(?-i:Gboard(?<=Welcome to Gboard) clipboard, any text(?: that)?+ you copy will be saved(?= here))
+1746856063	Nisse Engström	k4unisexsalon\.com
