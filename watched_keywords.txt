@@ -73556,3 +73556,4 @@
 1746887527	Dan Getz	kfcmenuph\.info
 1746887500	Dan Getz	ikonicsolution\.com
 1746889698	Nisse Engström	atipro\.in
+1746887017	Dan Getz	bankwellsfargo\.blogspot
