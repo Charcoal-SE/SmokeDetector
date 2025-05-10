@@ -73548,3 +73548,4 @@
 1746875436	Vickel	provitalehealth\.com
 1746875541	Vickel	provitale[\W_]*+health(?!\.com(?<=provitalehealth\.com))
 1746875733	Vickel	mineckraftapk\.com
+1746876655	Jeff Schaller	icovietnam\.com
