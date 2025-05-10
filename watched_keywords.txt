@@ -73543,3 +73543,4 @@
 1746814672	Dan Getz	procalculadoradehoras\.com
 1746825494	Dan Getz	(?-i:Gboard(?<=Welcome to Gboard) clipboard, any text(?: that)?+ you copy will be saved(?= here))
 1746856063	Nisse Engström	k4unisexsalon\.com
+1746856241	Nisse Engström	1winner137\.github\.io
