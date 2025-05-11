@@ -73567,4 +73567,3 @@
 1746978952	Nisse Engström	digitalank\.com
 1746980383	Vickel	seo-performance\.agency
 1746980390	Vickel	ignitedigital\.com
-1746980582	Vickel	ignite[\W_]*+digital(?!\.com(?<=ignitedigital\.com))
