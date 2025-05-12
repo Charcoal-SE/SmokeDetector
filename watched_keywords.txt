@@ -73596,3 +73596,4 @@
 1747061616	Jeff Schaller	cleaningserviceschicagoland\.com
 1747061635	Jeff Schaller	expresscleanco\.com
 1747061686	Jeff Schaller	cleaningserviceschi\.com
+1747062848	Jeff Schaller	watch Propero(?!\.in)
