@@ -73591,3 +73591,4 @@
 1747043425	VLAZ	vdo\.com\.vn
 1747043431	VLAZ	vdodata\.vn
 1747043438	VLAZ	vdoecommerce\.com
+1747043461	VLAZ	vdo\.vn
