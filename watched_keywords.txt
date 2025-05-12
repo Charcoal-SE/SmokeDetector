@@ -73579,3 +73579,4 @@
 1747027305	VLAZ	dubainewsweek\.com
 1747029355	VLAZ	lemariniercelticsalt\.com
 1747036987	Glorfindel	fixmyspeaker\.org
+1747038866	Dan Getz	aleynakelesseo\.wixsite
