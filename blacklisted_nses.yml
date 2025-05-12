@@ -828,7 +828,9 @@ items:
 - ns: cloudoon.org.
 - ns: aryaamoney.com.
 - ns: sify.net.
-- ns: unixplorer.com.
+- comment: unixplorer.com NXDOMAIN as of 2025-05-12
+  disable: true
+  ns: unixplorer.com.
 - ns:
   - win08ns1.dns-he.com.
   - win08ns2.dns-he.com.
