@@ -73590,3 +73590,4 @@
 1747043261	VLAZ	SEONutri
 1747043425	VLAZ	vdo\.com\.vn
 1747043431	VLAZ	vdodata\.vn
+1747043438	VLAZ	vdoecommerce\.com
