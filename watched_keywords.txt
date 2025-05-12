@@ -73596,3 +73596,4 @@
 1747059237	Dan Getz	[a-z']{2,}+\?(?:[b-df-hj-np-tv-z]{2,}+(?<!html)(?<!css|php|wpf|sql|xml|csv)|(?:call|faq|info)[a-z]*+)$
 1747061616	Jeff Schaller	cleaningserviceschicagoland\.com
 1747061635	Jeff Schaller	expresscleanco\.com
+1747061686	Jeff Schaller	cleaningserviceschi\.com
