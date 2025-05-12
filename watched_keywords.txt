@@ -73578,3 +73578,4 @@
 1747020247	Dan Getz	testduolingo6(?:@gmail\.com)?
 1747027305	VLAZ	dubainewsweek\.com
 1747029355	VLAZ	lemariniercelticsalt\.com
+1747036987	Glorfindel	fixmyspeaker\.org
