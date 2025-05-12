@@ -73588,3 +73588,4 @@
 1747041766	VLAZ	nexgentechsol\.com
 1747043222	VLAZ	nex[\W]*+gen[\W]*+techsol(?!\.com(?<=nexgentechsol\.com))
 1747043261	VLAZ	SEONutri
+1747043425	VLAZ	vdo\.com\.vn
