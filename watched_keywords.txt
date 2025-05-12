@@ -73586,3 +73586,4 @@
 1747038866	Dan Getz	aleynakelesseo\.wixsite
 1747041176	VLAZ	mbeautiful\.com\.au
 1747041766	VLAZ	nexgentechsol\.com
+1747043120	VLAZ	nexgen[\W]*+techsol(?!\.com(?<=nexgentechsol\.com))
