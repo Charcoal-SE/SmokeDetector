@@ -73574,3 +73574,4 @@
 1746960773	Dan Getz	partybusrentalsdc\.com
 1746993260	Nisse Engström	fashionsla\.com
 1746999269	Dan Getz	eqcpa\.com
+1747020247	Dan Getz	testduolingo6(?:@gmail\.com)?
