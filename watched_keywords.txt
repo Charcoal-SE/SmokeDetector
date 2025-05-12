@@ -73576,3 +73576,4 @@
 1746999269	Dan Getz	eqcpa\.com
 1747026220	Dan Getz	printsetupguide\.com
 1747020247	Dan Getz	testduolingo6(?:@gmail\.com)?
+1747027305	VLAZ	dubainewsweek\.com
