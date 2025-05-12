@@ -73592,3 +73592,4 @@
 1747043431	VLAZ	vdodata\.vn
 1747043438	VLAZ	vdoecommerce\.com
 1747043461	VLAZ	vdo\.vn
+1747043922	VLAZ	Hire[\W_]*+Kingdom
