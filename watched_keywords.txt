@@ -73613,3 +73613,4 @@
 1747097065	Dan Getz	monerohelp@gmail\.com
 1747112437	Dragonrage	digitalmarketingservice\.pk
 1747113302	Dragonrage	apexskyline\.ae
+1747098598	Dan Getz	Forensics[\W_]*+Detectors(?!\.com(?<!forensicsdetectors\.com))
