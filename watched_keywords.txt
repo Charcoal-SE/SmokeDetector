@@ -73615,3 +73615,4 @@
 1747113302	Dragonrage	apexskyline\.ae
 1747098598	Dan Getz	Forensics[\W_]*+Detectors(?!\.com(?<!forensicsdetectors\.com))
 1747124032	Glorfindel	izigames\.net
+1747126376	Moo	modalertaustralia\.com
