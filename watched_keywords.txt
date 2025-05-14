@@ -73639,3 +73639,4 @@
 1747207304	Dan Getz	(?:official|buy)?+lipojaro[a-z0-9-]*+
 1747207328	Dan Getz	onehealthgiant\.com
 1747217882	Jeff Schaller	turaingrp\.com
+1747217925	Jeff Schaller	turainsoft\.com
