@@ -73632,3 +73632,4 @@
 1747200255	Moo	tomtocvietnam\.com
 1747200351	Moo	indiasikho\.com
 1747205094	VLAZ	uktravelcompany\.com
+1747207304	Dan Getz	(?:official|buy)?+lipojaro[a-z0-9-]*+
