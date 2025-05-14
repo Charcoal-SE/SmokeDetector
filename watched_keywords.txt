@@ -73627,3 +73627,4 @@
 1747138713	Dan Getz	pavanneurocenter\.com
 1747173508	Dan Getz	josiahroche\.co
 1747170082	ipodtouch0218	chainrectification-dapp\.pages\.dev
+1747198106	Dan Getz	quickadvisorshub\.com
