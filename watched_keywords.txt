@@ -73637,3 +73637,4 @@
 1747206735	Dan Getz	cabinetsandremodelingdepot\.com
 1747206951	Dan Getz	anusaar\.com
 1747207304	Dan Getz	(?:official|buy)?+lipojaro[a-z0-9-]*+
+1747207328	Dan Getz	onehealthgiant\.com
