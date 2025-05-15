@@ -73676,3 +73676,4 @@
 1747334493	Jeff Schaller	bugwisepestcontrol\.co\.uk
 1747336868	Dan Getz	smmaccounthub(?!\.com)(?#telegram)
 1747336901	Dan Getz	smmachub\.92(?:@gmail\.com)?
+1747327725	Dan Getz	reviews?[\W_]*+20\d\d(?!\p{P}*+\s++(?:[\p{P}\s]*+[0-9]++){2}(?#-biblio cites))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
