@@ -73675,3 +73675,4 @@
 1747332968	Jeff Schaller	technologicaguru\.blogspot
 1747334493	Jeff Schaller	bugwisepestcontrol\.co\.uk
 1747336868	Dan Getz	smmaccounthub(?!\.com)(?#telegram)
+1747336901	Dan Getz	smmachub\.92(?:@gmail\.com)?
