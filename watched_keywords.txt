@@ -73674,3 +73674,4 @@
 1747325043	Dan Getz	maxwin12-d\.com
 1747332968	Jeff Schaller	technologicaguru\.blogspot
 1747334493	Jeff Schaller	bugwisepestcontrol\.co\.uk
+1747336868	Dan Getz	smmaccounthub(?!\.com)(?#telegram)
