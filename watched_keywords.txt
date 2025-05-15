@@ -73662,3 +73662,4 @@
 1747312217	Vickel	wearable[\W_]*+outfit(?!\.com(?<=wearableoutfit\.com))
 1747312883	Dan Getz	mediend\.com
 1747313135	Dan Getz	myresumentor\.com
+1747313424	Dan Getz	businesssetup\.com
