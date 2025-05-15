@@ -73672,3 +73672,4 @@
 1747319866	Dan Getz	thecalculator\.live
 1747321046	Fastnlight	safehealthpharmacy\.com
 1747325043	Dan Getz	maxwin12-d\.com
+1747327725	Dan Getz	reviews?[\W_]*+20\d\d(?!\p{P}*+\s++(?:[\p{P}\s]*+[0-9]++){2}(?#-biblio cites))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
