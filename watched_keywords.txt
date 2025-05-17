@@ -73716,3 +73716,4 @@
 1747511888	Dan Getz	router-switch\.com
 1747509939	Dan Getz	citypsychologicalservices\.com
 1747509851	Dan Getz	usdt-tla\.com
+1747509863	Dan Getz	tlausdtflash(?#telegram)
