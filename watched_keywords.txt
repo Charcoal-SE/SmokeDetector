@@ -73720,3 +73720,4 @@
 1747521746	Dan Getz	downloadtitokvideo\.com
 1747521756	Dan Getz	counter-words\.com
 1747521764	Dan Getz	volumesolver\.com
+1747525075	Vickel	I[\W_]*+found[\W_]*+a[\W_]*+super[\W_]*+handy[\W_]*+site
