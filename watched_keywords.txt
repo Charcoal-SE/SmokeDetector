@@ -73725,3 +73725,4 @@
 1747566385	Jeff Schaller	chetanclinic\.com
 1747567812	Jeff Schaller	tourmyodisha\.com
 1747569677	Jeff Schaller	allsuccesspath\.com
+1747574591	Dan Getz	(?-i:loadstring\s*+\(\s*+game\s*+:\s*+HttpGet)
