@@ -73727,3 +73727,4 @@
 1747569677	Jeff Schaller	allsuccesspath\.com
 1747575493	Vincent Thacker	tenetstream\.us
 1747574591	Dan Getz	(?-i:loadstring\s*+\(\s*+game\s*+:\s*+HttpGet)
+1747590629	Jeff Schaller	havingmart\.com
