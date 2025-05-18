@@ -73723,3 +73723,4 @@
 1747525075	Vickel	I[\W_]*+found[\W_]*+a[\W_]*+super[\W_]*+handy[\W_]*+site
 1747529549	Jeff Schaller	doctormurphhy(?:@yahoo\.com‎)?
 1747566385	Jeff Schaller	chetanclinic\.com
+1747567812	Jeff Schaller	tourmyodisha\.com
