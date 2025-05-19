@@ -73734,3 +73734,4 @@
 1747606441	Vickel	launchtokerns\.com
 1747606615	Vickel	solana\.fun
 1747619578	Dan Getz	quickadminsoftware\.com
+1747624493	Dan Getz	allthenticate\.com
