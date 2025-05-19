@@ -73754,3 +73754,4 @@
 1747657459	Jeff Schaller	autofix\.ae
 1747657793	Jeff Schaller	trustedmedz\.com
 1747658890	Jeff Schaller	bizzboost\.uk
+1747659228	Jeff Schaller	mobisoftinfotech(?!\.com)(?#dev.to)
