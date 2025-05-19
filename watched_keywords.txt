@@ -73738,3 +73738,4 @@
 1747638197	Mithical	atlanticdermatologyandlaser\.co\.za
 1747638226	Mithical	BBL[\W_]*+Hero
 1747638351	Mithical	accessflooring\.com
+1747626175	Dan Getz	shreemahayoga\.com
