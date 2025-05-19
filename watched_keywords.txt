@@ -73761,3 +73761,4 @@
 1747675874	Dan Getz	lunarastro\.org
 1747687083	Dan Getz	creativeitinstitute\.com
 1747692357	Dan Getz	usemounjaro\.com
+1747693596	Dan Getz	^[sdv]{4,}+$(?<!^(?:[^s]++|[^d]++|[^v]++)$)
