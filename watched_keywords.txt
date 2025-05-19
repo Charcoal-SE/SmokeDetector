@@ -73733,3 +73733,4 @@
 1747606235	Vickel	BKaVVkuzpn8c8tmRUxqj8vFACDVj2ngYZnjKZvD23RiU
 1747606441	Vickel	launchtokerns\.com
 1747606615	Vickel	solana\.fun
+1747615336	Dan Getz	(?-i:hyHy4kLDHMA)(?#youtube)
