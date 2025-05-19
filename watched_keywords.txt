@@ -73755,3 +73755,4 @@
 1747657793	Jeff Schaller	trustedmedz\.com
 1747658890	Jeff Schaller	bizzboost\.uk
 1747659228	Jeff Schaller	mobisoftinfotech(?!\.com)(?#dev.to)
+1747660409	Jeff Schaller	featuredeco\.co\.uk
