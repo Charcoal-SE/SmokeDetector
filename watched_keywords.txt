@@ -73742,3 +73742,4 @@
 1747651401	Jeff Schaller	accordhrm\.com
 1747651435	Jeff Schaller	software-athlete\.com
 1747651577	Jeff Schaller	elitestartup\.club
+1747630053	Dan Getz	loxmag\.com
