@@ -73756,3 +73756,4 @@
 1747658890	Jeff Schaller	bizzboost\.uk
 1747659228	Jeff Schaller	mobisoftinfotech(?!\.com)(?#dev.to)
 1747660409	Jeff Schaller	featuredeco\.co\.uk
+1747668128	Jeff Schaller	kronchocolatier\.com
