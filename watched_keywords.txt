@@ -73743,3 +73743,4 @@
 1747651435	Jeff Schaller	software-athlete\.com
 1747651577	Jeff Schaller	elitestartup\.club
 1747630053	Dan Getz	loxmag\.com
+1747630006	Dan Getz	stoleninspiration\.com
