@@ -73748,3 +73748,4 @@
 1747624493	Dan Getz	allthenticate\.com
 1747624171	Dan Getz	23digital\.com\.au
 1747651866	Jeff Schaller	ffmediation\.com
+1747615336	Dan Getz	(?-i:hyHy4kLDHMA)(?#youtube)
