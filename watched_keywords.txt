@@ -73758,3 +73758,4 @@
 1747660409	Jeff Schaller	featuredeco\.co\.uk
 1747668128	Jeff Schaller	kronchocolatier\.com
 1747672804	Vickel	gboard[\W_]*+clipboard
+1747675874	Dan Getz	lunarastro\.org
