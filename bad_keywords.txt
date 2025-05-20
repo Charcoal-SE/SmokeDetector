@@ -3816,3 +3816,4 @@ What[\W_]*+is[\W_]*+the[\W_]*+referral[\W_]*+code[\W_]*+for
 𝒫𝓇𝑜𝒷𝑜
 referral[\W_]*+code[\W_]*+in[\W_]*+20[2-9][0-9]
 referral[\W_]*+code[\W_]*+(?:\w++[\W_]++){0,3}20[2-9][0-9]
+to[\W_]*+gboard[\W_]*+clipboard
