@@ -73771,3 +73771,4 @@
 1747710161	Dan Getz	thegioidualuoi\.com
 1747710245	Dan Getz	thegioidualuoi(?!\.com)(?#fb, yt)
 1747711037	Dan Getz	amrtechinsights\.com
+1747714029	Dan Getz	SuperWAL(?!\.io)
