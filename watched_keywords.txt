@@ -73769,3 +73769,4 @@
 1747725871	Dragonrage	sohomod\.com
 1747707511	Dan Getz	pallmall-investments\.co\.uk
 1747710161	Dan Getz	thegioidualuoi\.com
+1747710245	Dan Getz	thegioidualuoi(?!\.com)(?#fb, yt)
