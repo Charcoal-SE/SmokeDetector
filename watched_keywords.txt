@@ -73790,3 +73790,4 @@
 1747759856	Vickel	thefrlapk\.com
 1747761691	Jeff Schaller	sigmabodyparts\.com
 1747744681	Dan Getz	savefast\.video
+1747780747	Dan Getz	jamiemcmanus(?<=@jamiemcmanus)
