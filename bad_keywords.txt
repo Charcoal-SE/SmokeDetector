@@ -3818,3 +3818,4 @@ referral[\W_]*+code[\W_]*+in[\W_]*+20[2-9][0-9]
 referral[\W_]*+code[\W_]*+(?:\w++[\W_]++){0,3}20[2-9][0-9]
 to[\W_]*+gboard[\W_]*+clipboard
 Allegiant[\W_]*+3[\W_]*+1[\W_]*+1[\W_]*+rule
+τROOηS?
