@@ -73802,3 +73802,4 @@
 1747827641	Vickel	amaizedigital\.com
 1747827805	Vickel	amaize[\W_]*+digital(?!\.com(?<=amaizedigital\.com))
 1747828691	Jeff Schaller	qatarhelplinegroup\.com
+1747823603	Dan Getz	formatjsononline\.com
