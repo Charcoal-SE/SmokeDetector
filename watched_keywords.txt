@@ -73800,3 +73800,4 @@
 1747826690	Dan Getz	k4security\.co\.uk
 1747826685	Dan Getz	noidaschoolofdigitalmarketing\.com
 1747827641	Vickel	amaizedigital\.com
+1747827805	Vickel	amaize[\W_]*+digital(?!\.com(?<=amaizedigital\.com))
