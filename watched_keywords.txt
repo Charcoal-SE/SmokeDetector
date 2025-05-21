@@ -73792,3 +73792,4 @@
 1747744681	Dan Getz	savefast\.video
 1747780747	Dan Getz	jamiemcmanus(?<=@jamiemcmanus)
 1747792200	Dan Getz	aptcore\.one
+1747795616	Dan Getz	baichychina\.com
