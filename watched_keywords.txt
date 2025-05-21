@@ -73791,3 +73791,4 @@
 1747761691	Jeff Schaller	sigmabodyparts\.com
 1747744681	Dan Getz	savefast\.video
 1747780747	Dan Getz	jamiemcmanus(?<=@jamiemcmanus)
+1747792200	Dan Getz	aptcore\.one
