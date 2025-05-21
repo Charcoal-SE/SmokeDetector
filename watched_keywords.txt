@@ -73794,3 +73794,4 @@
 1747792200	Dan Getz	aptcore\.one
 1747795616	Dan Getz	baichychina\.com
 1747812860	Cow	evolutionsolar\.net
+1747815406	Dan Getz	caffeinelattecafe\.lovestoblog\.com
