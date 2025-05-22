@@ -73386,7 +73386,6 @@
 1746378410	Nisse Engström	withwildabandon\.com
 1746388471	Jeff Schaller	(?-i:KeE62Zz)(?#fiverr)
 1746389476	Jeff Schaller	cognitiva[\W_]*+pills?
-1746402428	Dan Getz	propgear(?#telegram)
 1746403861	Dan Getz	suhkingsley15(?#gmail.com)
 1746425305	Dan Getz	trxgas\.io
 1746425163	Dan Getz	radiantitservices\.in
