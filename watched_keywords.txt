@@ -73837,3 +73837,4 @@
 1747914615	VLAZ	spiritualityanimals\.com
 1747916207	Vickel	bhartitec\.ae
 1747916826	Vickel	ecolandfarms\.in
+1747920308	Dan Getz	cyem\.sa
