@@ -73825,3 +73825,4 @@
 1747902537	VLAZ	mycarplanet\.com
 1747902779	VLAZ	aquatikangels\.com
 1747902787	VLAZ	aquatikangels(?!\.com)
+1747903381	VLAZ	knowhy\.social
