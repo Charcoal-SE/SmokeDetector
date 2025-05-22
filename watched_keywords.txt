@@ -73823,3 +73823,4 @@
 1747879081	dbc	3dcoretech\.com\.vn
 1747879227	Dan Getz	frpbypass\.io
 1747902537	VLAZ	mycarplanet\.com
+1747902779	VLAZ	aquatikangels\.com
