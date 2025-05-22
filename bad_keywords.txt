@@ -3820,3 +3820,4 @@ to[\W_]*+gboard[\W_]*+clipboard
 Allegiant[\W_]*+3[\W_]*+1[\W_]*+1[\W_]*+rule
 τROOηS?
 (?:[Μm][oοuυ][tτ]h[eϵ]r)?+f[uυ][cς][kκ](?<!fuck)\w*+
+propgear(?#telegram)
