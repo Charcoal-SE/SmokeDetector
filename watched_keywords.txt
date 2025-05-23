@@ -73847,3 +73847,4 @@
 1747940494	VLAZ	powerbandinspections\.com\.au
 1747951460	Thomas Ward	turrier\.fr
 1747971896	Cow	gptopenai\.fr
+1747977546	Dan Getz	thecarepharmacy\.com
