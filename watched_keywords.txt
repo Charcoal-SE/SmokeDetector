@@ -73849,3 +73849,4 @@
 1747971896	Cow	gptopenai\.fr
 1747984705	Mithical	gaffis\.com
 1747979876	Dan Getz	levontechno\.com
+1747996618	Jeff Schaller	ambesoft\.com
