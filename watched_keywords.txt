@@ -73856,3 +73856,4 @@
 1747998821	Dan Getz	zimsonwatches\.com
 1747977546	Dan Getz	thecarepharmacy\.com
 1748002119	Jeff Schaller	skillbabu\.co
+1748005103	Jeff Schaller	line\.me(?<!api\.line\.me)
