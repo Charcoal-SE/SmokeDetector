@@ -73858,3 +73858,4 @@
 1748002119	Jeff Schaller	skillbabu\.co
 1748005103	Jeff Schaller	line\.me(?<!api\.line\.me)
 1748005466	Jeff Schaller	nuhorizonremodeling\.com
+1748011536	Jeff Schaller	bitcoinpuzzle\.ru
