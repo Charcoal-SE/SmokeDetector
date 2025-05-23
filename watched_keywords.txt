@@ -73851,3 +73851,4 @@
 1747979876	Dan Getz	levontechno\.com
 1747996618	Jeff Schaller	ambesoft\.com
 1747996747	Dan Getz	lstconsultancy\.com
+1747997082	Jeff Schaller	mymediads\.com
