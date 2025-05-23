@@ -73852,3 +73852,4 @@
 1747996618	Jeff Schaller	ambesoft\.com
 1747996747	Dan Getz	lstconsultancy\.com
 1747997082	Jeff Schaller	mymediads\.com
+1747997507	Jeff Schaller	sqccertification\.com
