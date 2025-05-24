@@ -73879,3 +73879,4 @@
 1748083643	VLAZ	poppyplaytime3apk\.com
 1748083742	VLAZ	Vikash[\W_]*+Kalra
 1748084987	VLAZ	ambalpackersandmovers\.in
+1748088438	Jeff Schaller	fluffytouch\.in
