@@ -73871,3 +73871,4 @@
 1748076338	VLAZ	MaadiVeedu\.com
 1748076342	VLAZ	Maadi[\W_]*+Veedu(?!\.com(?<=MaadiVeedu\.com))
 1748076651	VLAZ	aplusdesign\.co\.in
+1748076789	VLAZ	nhakhoakhacghi\.com
