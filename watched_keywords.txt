@@ -73875,3 +73875,4 @@
 1748076796	VLAZ	Nha[\W_]*+Khoa[\W_]*+Khắc[\W_]*+Ghi
 1748076968	VLAZ	GarageOnCall\.com
 1748077657	VLAZ	drivecarrentaloman\.com
+1748081101	VLAZ	instrid\.sk
