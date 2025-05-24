@@ -73869,3 +73869,4 @@
 1748073109	Nisse Engström	ballexch\.com
 1748074938	VLAZ	kamalassociate\.com
 1748076338	VLAZ	MaadiVeedu\.com
+1748076342	VLAZ	Maadi[\W_]*+Veedu(?!\.com(?<=MaadiVeedu\.com))
