@@ -3826,3 +3826,4 @@ propgear(?#telegram)
 𝓙𝓮𝓽𝓫𝓵𝓾𝓮
 𝒥𝐸𝒯𝐵𝐿𝒰𝐸
 (?:(?:[kg]ya|hai|wo|bhi|nahi|baat|hua|boli|rhi|th[ia]|kar|ako|mga)[\W_]++(?:(?:t[ou]|[nh][ao]|k[ie]|sa)[\W_]++)*+){3,}
+(?:dedicated|support)[\W_]*+team[\W_]*+is[\W_]*+ready
