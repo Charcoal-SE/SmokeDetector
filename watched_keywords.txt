@@ -73532,7 +73532,6 @@
 1746809443	Dan Getz	t[\W_]*+e[\W_]*+a[\W_]*+m[\W_]*+q[\W_]*+u[\W_]*+a[\W_]*+l[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+r[\W_]*+e[\W_]*+c[\W_]*+o[\W_]*+v[\W_]*+e[\W_]*+r[\W_]*+y[\W_]*+e[\W_]*+x[\W_]*+p[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+s[\W_]*+e(?#gmail with or without obfuscation)
 1746809375	Dan Getz	Q[\W_]*+u[\W_]*+a[\W_]*+l[\W_]*+i[\W_]*+f[\W_]*+i[\W_]*+e[\W_]*+d[\W_]*+E[\W_]*+x[\W_]*+p[\W_]*+e[\W_]*+r[\W_]*+t[\W_]*+i[\W_]*+e[\W_]*+s(?<!(?-i:qualified experties))
 1746814672	Dan Getz	procalculadoradehoras\.com
-1746825494	Dan Getz	(?-i:Gboard(?<=Welcome to Gboard) clipboard, any text(?: that)?+ you copy will be saved(?= here))
 1746856063	Nisse Engström	k4unisexsalon\.com
 1746856241	Nisse Engström	1winner137\.github\.io
 1746874444	Vickel	damanclub\.ltd
