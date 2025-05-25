@@ -1,6 +1,7 @@
 # coding=utf-8
 import regex
 import string
+import unicodedata
 
 from helpers import regex_compile_no_cache
 
@@ -168,6 +169,7 @@ def compile_keyphrases(*keyphrases: (str, str | None)):
 
 
 def find_matches(compiled_keyphrases, text: str):
+    text = unicodedata.normalize('NFD', text)
     for keyphrase, keyphrase_regex, exclude_regex in compiled_keyphrases:
         seen = set()
         for match in filter(lambda m: m not in seen, keyphrase_regex.finditer(text)):

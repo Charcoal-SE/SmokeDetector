@@ -1,5 +1,6 @@
 # coding=utf-8
 import regex
+import unicodedata
 import letter_homoglyphs
 import pytest
 
@@ -30,11 +31,16 @@ import pytest
     ("test", "est|te", "t-ests or +.est's, or te sts", []),
     ("start", "", "$tart $ t a r t  ...$t ar t!", ["$tart", "$ t a r t", "$t ar t"]),
     ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e"]),
+    ("bad", "", "bád", ["bád"]),
+    ("the word", "", "dots in \u1e97\u0324he word", ["\u1e97\u0324he word"]),
+    ("Ice", "", "iCe, iÇe", ["iÇe"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
-    matches = [(m.group(), k) for m, k in letter_homoglyphs.find_matches(compiled, text)]
-    assert matches == [(m, keyphrase.replace('_', '')) for m in expected_matches]
+    matches = [(unicodedata.normalize('NFC', m.group()), k)
+               for m, k in letter_homoglyphs.find_matches(compiled, text)]
+    assert matches == [(unicodedata.normalize('NFC', m), keyphrase.replace('_', ''))
+                       for m in expected_matches]
 
 
 @pytest.mark.parametrize("keyphrase", [
