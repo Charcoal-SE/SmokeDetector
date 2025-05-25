@@ -73885,3 +73885,4 @@
 1748152473	Dan Getz	Unpinned clips will be deleted after 1 hour
 1748152627	Dan Getz	Tap on a clip to paste it in the text box
 1748152742	Dan Getz	tannehillstudios1\.wordpress\.com
+1748153115	Dan Getz	unbanned[\W_]*+show
