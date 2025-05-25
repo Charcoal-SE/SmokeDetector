@@ -44,9 +44,6 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
     # used for word breaks in keyphrase definitions
     # note that any non-word character will be accepted as non-obfuscation in matches
     '-': [ord('_')],
-
-    # used for accepting words ending in 's
-    "'": [ord('"'), ord("`")],
 }
 
 # include the same characters in upper and lower case
@@ -107,7 +104,7 @@ def is_keyphrase_space(c: str) -> bool:
 
 # The end of a keyphrase: optional plural or possessive s, then no immediate letter or number.
 # We don't use \b because it's possible the last "letter" was a lookalike that is technically non-word.
-KEYPHRASE_REGEX_END = "(?!(?!(?:" + build_equivalent_regex("'") + ")?+" + build_equivalent_regex("s") + r"(?!\w))\w)"
+KEYPHRASE_REGEX_END = "(?!(?!" + build_equivalent_regex("s") + r"(?!\w))\w)"
 
 
 def build_possible_separator_regex_charset(c: str) -> str | None:
