@@ -3825,3 +3825,4 @@ propgear(?#telegram)
 𝐭𝐫𝐚𝐧𝐧𝐢𝐞𝐬
 𝓙𝓮𝓽𝓫𝓵𝓾𝓮
 𝒥𝐸𝒯𝐵𝐿𝒰𝐸
+(?:(?:[kg]ya|hai|wo|bhi|nahi|baat|hua|boli|rhi|th[ia]|kar|ako|mga)[\W_]++(?:(?:t[ou]|[nh][ao]|k[ie]|sa)[\W_]++)*+){3,}
