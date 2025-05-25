@@ -2825,8 +2825,9 @@ def normalize_number(msg, pattern):
     :param pattern:
     :return: A string
     """
-    minimally_validate_content_source(msg)
-    pattern = get_pattern_from_content_source(msg)
+    if msg is not None:
+        minimally_validate_content_source(msg)
+        pattern = get_pattern_from_content_source(msg)
     full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
     return "Strict normalization: `" + phone_numbers.normalize(pattern) + \
            "`; Normalized numbers used by the number detections: `" + str(normalized) + "`"
@@ -2841,8 +2842,9 @@ def deobfuscate_number(msg, pattern):
     :param pattern:
     :return: A string
     """
-    minimally_validate_content_source(msg)
-    pattern = get_pattern_from_content_source(msg)
+    if msg is not None:
+        minimally_validate_content_source(msg)
+        pattern = get_pattern_from_content_source(msg)
     deobfuscated = phone_numbers.deobfuscate(pattern)
     normalized_deobfuscated = phone_numbers.normalize(deobfuscated)
     return "Deobfuscated: `" + deobfuscated + "`; deobfuscated and normalized: `" + normalized_deobfuscated + "`"
