@@ -73925,3 +73925,4 @@
 1748270502	Dan Getz	algosignal\.ai
 1748271836	Dan Getz	birttani\.com
 1748272611	VLAZ	cockapoo\.me
+1748272687	VLAZ	mishtel\.com
