@@ -73898,3 +73898,4 @@
 1748228683	dbc	ariston-net\.ariston\.com
 1748241464	Dan Getz	glocaladda\.com
 1748241819	Dan Getz	steelmans\.com
+1748241983	Dan Getz	localcreative\.co
