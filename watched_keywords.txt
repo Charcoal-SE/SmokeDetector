@@ -73902,3 +73902,4 @@
 1748242082	VLAZ	highwaytruckdrivingschool\.com\.au
 1748242162	Dan Getz	clatnlti\.com
 1748242202	VLAZ	calcoladoraalice\.com
+1748242333	VLAZ	kumarbuilders\.com
