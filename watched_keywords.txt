@@ -73899,3 +73899,4 @@
 1748241464	Dan Getz	glocaladda\.com
 1748241819	Dan Getz	steelmans\.com
 1748241983	Dan Getz	localcreative\.co
+1748242082	VLAZ	highwaytruckdrivingschool\.com\.au
