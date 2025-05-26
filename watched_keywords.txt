@@ -73894,3 +73894,4 @@
 1748202251	Dan Getz	unlock[\W_]*+(?:\w++[\W_]++)?opportunit(?:y|ies)
 1748204093	Dan Getz	(?:their|our|service|care|expert|professional|knowledgeable|friendly|24[\W_]*+7)[\W_]*+team[\W_]*+is[\W_]*+ready
 1748221101	Jeff Schaller	ghostengineer\.com
+1748223358	Jeff Schaller	Jeffersonluacs095(?:@gmail\.com)?
