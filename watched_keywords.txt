@@ -73926,3 +73926,4 @@
 1748271836	Dan Getz	birttani\.com
 1748272611	VLAZ	cockapoo\.me
 1748272687	VLAZ	mishtel\.com
+1748273064	VLAZ	careersportal\.danvast\.com
