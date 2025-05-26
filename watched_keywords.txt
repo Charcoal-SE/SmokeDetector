@@ -73909,3 +73909,4 @@
 1748247844	Dan Getz	eurofittyresltd\.co\.uk
 1748249425	Dan Getz	^\p{P}++(\w{2,}+(?<!:\d+|\[\d+\])\p{P}++){2,3}+\s*+¿?+(?-i:[A-Z]\p{Ll})\w*+\s++\w++
 1748250708	Dan Getz	paws-whiskers\.com
+1748255625	VLAZ	anova-lighting\.com
