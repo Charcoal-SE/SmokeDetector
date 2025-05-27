@@ -73156,7 +73156,6 @@
 1745574122	Moo	soundgallery\.al
 1745574227	Moo	snowball-analytics\.com
 1745575288	Ryan M	techhub\.asia
-1745577162	Jeff Schaller	pharmakarts\.com
 1745577246	Jeff Schaller	sunphotonics\.com
 1745578088	Jeff Schaller	beno\.com
 1745583483	Jeff Schaller	itservicesbd\.com
