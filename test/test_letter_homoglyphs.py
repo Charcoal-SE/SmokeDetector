@@ -34,6 +34,14 @@ import pytest
     ("bad", "", "bád", ["bád"]),
     ("the word", "", "dots in \u1e97\u0324he word", ["\u1e97\u0324he word"]),
     ("Ice", "", "iCe, iÇe", ["iÇe"]),
+    ("luck", "", "lvck", ["lvck"]),
+    ("Tricky", "", "(tr\U0001D6A4cky)", ["tr\U0001D6A4cky"]),
+    ("airlines", "", "𝘼𝙞𝙧𝙡𝙞𝙣𝙚𝙨", ["𝘼𝙞𝙧𝙡𝙞𝙣𝙚𝙨"]),
+    ("loan", "", "𝐋𝐨𝐚𝐧 𝐋oan L𝐨AN", ["𝐋𝐨𝐚𝐧", "𝐋oan", "L𝐨AN"]),
+    ("bad", "", "b\U0001D74Fd", ["b\U0001D74Fd"]),
+    ("best", "", "B𝟛st", ["B𝟛st"]),
+    ("A", "", "𝞐-𝜶-𝛢-α", ["𝞐", "𝜶", "𝛢", "α"]),
+    ("devious", "", "δΕνΙΘυs", ["δΕνΙΘυs"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))

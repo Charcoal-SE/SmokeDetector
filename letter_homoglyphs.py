@@ -1,4 +1,6 @@
 # coding=utf-8
+import itertools
+
 import regex
 import string
 import unicodedata
@@ -8,37 +10,179 @@ from helpers import regex_compile_no_cache
 # In this module our regexes are case-sensitive, and we make use of set subtraction
 REGEX_FLAGS = regex.U | regex.S | regex.V1
 
+# Latin letters which look like others (case-sensitive)
+LATIN_LOOKALIKE_LETTERS = {
+    'I': ['l', 'j', 'J'],
+    'L': ['I'],
+    'U': ['V', 'v'],
+    'V': ['U', 'u'],
+}
+
+# Letters which exist in "small dotless" versions
+LATIN_SMALL_DOTLESS = {
+    'I': ['i', 'j'],
+    'J': ['j'],
+    'L': ['i', 'j'],
+}
+
+# Names of letter styles used in Unicode
+UNICODE_LETTER_STYLE_NAMES = [
+    None,
+    'BOLD',
+    'ITALIC',
+    'BOLD ITALIC',
+    'SCRIPT',
+    'BOLD SCRIPT',
+    'FRAKTUR',
+    'BLACK-LETTER',
+    'DOUBLE-STRUCK',
+    'BOLD FRAKTUR',
+    'SANS-SERIF',
+    'SANS-SERIF BOLD',
+    'SANS-SERIF ITALIC',
+    'SANS-SERIF BOLD ITALIC',
+    'MONOSPACE',
+    # 'COMBINING',
+    'PARENTHESIZED',
+    'CIRCLED',
+    'FULLWIDTH',
+    'OUTLINED',
+    'TORTOISE SHELL BRACKETED',
+    'SQUARED',
+    'NEGATIVE CIRCLED',
+    'NEGATIVE SQUARED',
+    'CROSSED NEGATIVE SQUARED',
+]
+
+# Names of Greek letters which look like Latin letters (case-sensitive)
+GREEK_LOOKALIKE_NAMES = {
+    'A': ['ALPHA', 'DELTA', 'LAMBDA', 'alpha', 'lambda'],
+    'B': ['BETA', 'beta', 'beta symbol'],
+    'C': ['final sigma', 'zeta', 'LUNATE SIGMA SYMBOL', 'DOTTED LUNATE SIGMA SYMBOL'],
+    'D': ['delta'],
+    'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi'],
+    'F': ['DIGAMMA', 'digamma'],
+    'H': ['ETA', 'lambda'],
+    'I': ['IOTA', 'iota'],
+    'J': ['YOT', 'yot'],
+    'K': ['KAPPA', 'kappa', 'KAI SYMBOL'],
+    'L': ['IOTA', 'iota'],
+    'M': ['MU', 'SAN', 'san'],
+    'N': ['NU', 'lambda'],
+    'O': ['OMICRON', 'omicron', 'THETA', 'theta', 'sigma', 'DELTA', 'ARCHAIC KOPPA', 'archaic koppa'],
+    'P': ['RHO', 'rho'],
+    'Q': ['phi', 'ARCHAIC KOPPA', 'archaic koppa'],
+    'R': ['GAMMA'],
+    'T': ['TAU', 'tau', 'ARCHAIC SAMPI', 'archaic sampi'],
+    'U': ['mu', 'nu', 'upsilon'],
+    'V': ['mu', 'nu', 'upsilon'],
+    'W': ['omega'],
+    'X': ['CHI', 'chi'],
+    'Y': ['UPSILON', 'gamma'],
+    'Z': ['ZETA', 'zeta'],
+}
+
+# 1337 (digits which look like Latin letters)
+LETTER_LOOKALIKE_DIGITS = {
+    'A': [4],
+    'B': [8],
+    'E': [3],
+    'G': [6, 9],
+    'I': [1],
+    'L': [1],
+    'O': [0],
+    'Q': [9],
+    'S': [5],
+    'Z': [2],
+}
+
+# Some other names in Unicode which exist in multiple styles
+OTHER_LOOKALIKE_NAMES = {
+    'A': ['PARTIAL DIFFERENTIAL'],
+    'D': ['PARTIAL DIFFERENTIAL'],
+    'E': ['EPSILON SYMBOL'],
+    'O': ['PHI SYMBOL'],
+    'W': ['PI SYMBOL'],
+}
+
+
+def get_homoglyphs_by_unicode_names(*name_options):
+    for name in itertools.product(*name_options):
+        full_name = ' '.join(filter(None, name))
+        try:
+            yield ord(unicodedata.normalize('NFD', unicodedata.lookup(full_name))[0])
+        except KeyError:
+            pass
+
+
+def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_name):
+    for letter_name in letter_names:
+        yield from get_homoglyphs_by_unicode_names(
+            [None, 'MATHEMATICAL', 'MODIFIER LETTER'],
+            UNICODE_LETTER_STYLE_NAMES,
+            unicode_name_alphabet_options(alphabet_name),
+            [None, 'CAPITAL' if letter_name[0].isupper() else 'SMALL'],
+            [None, 'LETTER'],
+            [letter_name.upper()])
+
+
+def unicode_name_alphabet_options(alphabet_name):
+    return [None] if alphabet_name is None else [
+        None, alphabet_name,
+        'SUBSCRIPT ' + alphabet_name, alphabet_name + ' SUBSCRIPT',
+        'SUPERSCRIPT ' + alphabet_name, alphabet_name + ' SUPERSCRIPT']
+
+
+def get_digit_homoglyphs_by_unicode_name(digits):
+    for digit in digits:
+        digit_name = unicodedata.name(str(digit)).split()[-1]
+        yield from get_homoglyphs_by_unicode_names(
+            [None, 'MATHEMATICAL'],
+            UNICODE_LETTER_STYLE_NAMES,
+            [None, 'SUPERSCRIPT', 'SUBSCRIPT'],
+            [None, 'DIGIT'],
+            [digit_name])
+
+
+def get_other_homoglyphs_by_unicode_name(names):
+    for name in names:
+        yield from get_homoglyphs_by_unicode_names(
+            [None, 'MATHEMATICAL'],
+            UNICODE_LETTER_STYLE_NAMES,
+            [None, 'SUPERSCRIPT', 'SUBSCRIPT'],
+            [name])
+
+
 # An "equivalent" is either a case version of the letter, or a lookalike character.
 # Hex numbers are primarily used below, due to the possibility of the characters becoming corrupted when the file
 # is edited in editors which don't fully support Unicode, or even just on different operating systems.
-
 EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
-    'A': [ord('4'), ord('@')],
-    'B': [ord('8')],
+    'A': [ord('@')],
+    'B': [],
     'C': [ord('('), ord('[')],
     'D': [ord(')')],
-    'E': [ord('3')],
+    'E': [],
     'F': [],
-    'G': [ord('6'), ord('9')],
+    'G': [],
     'H': [],
-    'I': [ord('1'), ord('l'), ord('|'), ord('!')],
+    'I': [ord('|'), ord('!')],
     'J': [],
     'K': [],
-    'L': [ord('1'), ord('I'), ord('|'), ord('!')],
+    'L': [ord('|'), ord('!')],
     'M': [],
     'N': [],
-    'O': [ord('0'), ord('@')],
+    'O': [ord('@')],
     'P': [],
-    'Q': [ord('9')],
+    'Q': [],
     'R': [],
-    'S': [ord('5'), ord('$')],
-    'T': [ord('7'), ord('+')],
-    'U': [ord('v'), ord('V')],
-    'V': [ord('u'), ord('U')],
+    'S': [ord('$')],
+    'T': [ord('+')],
+    'U': [],
+    'V': [],
     'W': [],
     'X': [],
     'Y': [],
-    'Z': [ord('2')],
+    'Z': [],
 
     '.': [ord('*')],
 
@@ -47,12 +191,27 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
     '-': [ord('_')],
 }
 
+# add Unicode lookups to EQUIVALENTS_CODEPOINTS
+for letter in string.ascii_uppercase:
+    latin_names = [letter, letter.lower()]
+    if letter in LATIN_LOOKALIKE_LETTERS:
+        latin_names.extend(LATIN_LOOKALIKE_LETTERS[letter])
+    if letter in LATIN_SMALL_DOTLESS:
+        latin_names.extend('dotless ' + c for c in LATIN_SMALL_DOTLESS[letter])
+    EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
+        get_letter_homoglyphs_by_unicode_name(latin_names, 'LATIN'),
+        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), 'GREEK'),
+        get_other_homoglyphs_by_unicode_name(OTHER_LOOKALIKE_NAMES.get(letter, ())),
+        get_digit_homoglyphs_by_unicode_name(LETTER_LOOKALIKE_DIGITS.get(letter, ()))
+    ))
+
+
 # include the same characters in upper and lower case
 for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
     codepoints.append(ord(char.upper()))
     if char.lower() != char.upper():
         codepoints.append(ord(char.lower()))
-    codepoints.sort()
+    EQUIVALENTS_CODEPOINTS[char] = list(sorted(set(codepoints)))
 
 import number_homoglyphs
 for digit in string.digits:
