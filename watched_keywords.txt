@@ -73932,3 +73932,4 @@
 1748275659	Fastnlight	acceligize\.com
 1748291526	VLAZ	sayulitalocal\.com
 1748307739	Dan Getz	nullsbrawlpro\.net
+1748307746	Dan Getz	magicbrawl\.app
