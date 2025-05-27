@@ -52,6 +52,8 @@ import pytest
     ("vwx", "", "VWX \u2164WX V\U000118EFX VW\uA7B3", ["\u2164WX", "V\U000118EFX", "VW\uA7B3"]),
     ("yz", "", "YZ \U00016F43Z Y\uAB93", ["\U00016F43Z", "Y\uAB93"]),
     ("z.com", "", "z*com z.com z\uA60Ecom z*c0m", ["z*com", "z\uA60Ecom", "z*c0m"]),
+    ("looking", "", "are you lookiɴg for this", ["lookiɴg"]),
+    ("aha", "", "a\U00010796a", ["a\U00010796a"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))

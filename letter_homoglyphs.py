@@ -121,7 +121,8 @@ def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_name):
             [None, 'MATHEMATICAL', 'MODIFIER LETTER'],
             UNICODE_LETTER_STYLE_NAMES,
             unicode_name_alphabet_options(alphabet_name),
-            [None, 'CAPITAL' if letter_name[0].isupper() else 'SMALL'],
+            [None, 'LETTER'],
+            [None, 'CAPITAL', 'SMALL CAPITAL'] if letter_name[0].isupper() else [None, 'SMALL'],
             [None, 'LETTER'],
             [letter_name.upper()])
 
