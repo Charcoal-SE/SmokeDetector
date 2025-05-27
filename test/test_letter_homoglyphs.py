@@ -42,6 +42,16 @@ import pytest
     ("best", "", "B𝟛st", ["B𝟛st"]),
     ("A", "", "𝞐-𝜶-𝛢-α", ["𝞐", "𝜶", "𝛢", "α"]),
     ("devious", "", "δΕνΙΘυs", ["δΕνΙΘυs"]),
+    ("abc", "", "ABC \u13aaBC A\u0184C AB\U00010302", ["\u13aaBC", "A\u0184C", "AB\U00010302"]),
+    ("def", "", "DEF \u15deEF D\u212eF DE\U0001D213", ["\u15deEF", "D\u212eF", "DE\U0001D213"]),
+    ("ghi", "", "GHI \u13F3HI G\U000102cfI GH\u06F1", ["\u13F3HI", "G\U000102cfI", "GH\u06F1"]),
+    ("jkl", "", "JKL \u0458KL J\u16D5L JK\U000118A3", ["\u0458KL", "J\u16D5L", "JK\U000118A3"]),
+    ("mno", "", "MNO \u16D6NO M\uA4E0O MN\U000118D7", ["\u16D6NO", "M\uA4E0O", "MN\U000118D7"]),
+    ("pqr", "", "PQR \U00010295QR P\u2D55R PQ\uAB48", ["\U00010295QR", "P\u2D55R", "PQ\uAB48"]),
+    ("stu", "", "STU \U00010420TU S\u22A4U ST\u028B", ["\U00010420TU", "S\u22A4U", "ST\u028B"]),
+    ("vwx", "", "VWX \u2164WX V\U000118EFX VW\uA7B3", ["\u2164WX", "V\U000118EFX", "VW\uA7B3"]),
+    ("yz", "", "YZ \U00016F43Z Y\uAB93", ["\U00016F43Z", "Y\uAB93"]),
+    ("z.com", "", "z*com z.com z\uA60Ecom z*c0m", ["z*com", "z\uA60Ecom", "z*c0m"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
@@ -82,6 +92,7 @@ def test_build_exclude_regex_matches_keyphrase(keyphrase, exclude):
     ("some thing", "thing|abc", "some  .  thing", True),
     ("some thing", "thing|abc", "notsome  .  thing", True),
     ("some thing", "", "notsome  .  thing", False),
+    ("regex.dots", "", "regexNdots", False),
 ])
 def test_build_exclude_regex(keyphrase, exclude, text, match_expected):
     result = regex.search(letter_homoglyphs.build_exclude_regex(keyphrase, exclude), text, letter_homoglyphs.REGEX_FLAGS)
