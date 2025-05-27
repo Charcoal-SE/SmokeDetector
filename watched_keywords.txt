@@ -73934,3 +73934,4 @@
 1748307739	Dan Getz	nullsbrawlpro\.net
 1748307746	Dan Getz	magicbrawl\.app
 1748319722	VLAZ	getmoneyreward\.com
+1748320831	VLAZ	metaportalskw\.com
