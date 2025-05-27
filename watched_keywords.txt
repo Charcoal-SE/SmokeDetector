@@ -73949,3 +73949,4 @@
 1748339655	VLAZ	dev-story\.com
 1748341138	VLAZ	chinaexpeditiontours\.com
 1748341755	VLAZ	alfyi\.com
+1748344303	Jeff Schaller	truairfare\.com
