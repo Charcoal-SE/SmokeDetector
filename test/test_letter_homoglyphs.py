@@ -54,6 +54,7 @@ import pytest
     ("z.com", "", "z*com z.com z\uA60Ecom z*c0m", ["z*com", "z\uA60Ecom", "z*c0m"]),
     ("looking", "", "are you lookiɴg for this", ["lookiɴg"]),
     ("aha", "", "a\U00010796a", ["a\U00010796a"]),
+    ("spam r us", "", "spam-Я-us!", ["spam-Я-us"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))

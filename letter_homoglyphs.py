@@ -82,6 +82,27 @@ GREEK_LOOKALIKE_NAMES = {
     'Z': ['ZETA', 'zeta'],
 }
 
+# Names of Cyrillic letters which look like Latin letters (case-sensitive)
+CYRILLIC_LOOKALIKE_NAMES = {
+    'A': ['A', 'DE', 'a', 'de'],
+    'B': ['BE', 'VE', 'HARD SIGN', 'SOFT SIGN', 'be', 've', 'hard sign', 'soft sign'],
+    'C': ['ES', 'es'],
+    'E': ['IE', 'ZE', 'E', 'ie', 'ze', 'e', 'REVERSED ZE', 'reversed ze'],
+    'H': ['EN', 'en'],
+    'K': ['KA', 'ka'],
+    'M': ['EM', 'em'],
+    'N': ['I', 'i'],
+    'O': ['O', 'o'],
+    'P': ['ER', 'er'],
+    'Q': ['EF', 'ef'],
+    'R': ['GHE', 'YA', 'ghe', 'ya'],
+    'T': ['TE', 'te'],
+    'U': ['TSE', 'CHE', 'tse', 'che', 'REVERSED TSE', 'reversed tse'],
+    'W': ['SHA', 'SHCHA', 'sha', 'shcha'],
+    'X': ['HA', 'ZHE', 'zhe'],
+    'Y': ['U', 'u'],
+}
+
 # 1337 (digits which look like Latin letters)
 LETTER_LOOKALIKE_DIGITS = {
     'A': [4],
@@ -385,6 +406,7 @@ for letter in string.ascii_uppercase:
     EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
         get_letter_homoglyphs_by_unicode_name(latin_names, 'LATIN'),
         get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), 'GREEK'),
+        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), 'CYRILLIC'),
         get_other_homoglyphs_by_unicode_name(OTHER_LOOKALIKE_NAMES.get(letter, ())),
         get_digit_homoglyphs_by_unicode_name(LETTER_LOOKALIKE_DIGITS.get(letter, ()))
     ))
