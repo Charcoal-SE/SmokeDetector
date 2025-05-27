@@ -73933,3 +73933,4 @@
 1748291526	VLAZ	sayulitalocal\.com
 1748307739	Dan Getz	nullsbrawlpro\.net
 1748307746	Dan Getz	magicbrawl\.app
+1748319722	VLAZ	getmoneyreward\.com
