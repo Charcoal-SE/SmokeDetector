@@ -72426,7 +72426,6 @@
 1743653452	Anerdw	winmatejl\.online
 1743653455	Anerdw	winmatejl\.pro
 1743656931	Cow	eastmansolar\.in
-1743658453	Cow	v3cars\.com
 1743658827	Cow	vividkart\.com
 1743660244	Cow	wpnulled\.space
 1743663146	Cow	7mps\.in
