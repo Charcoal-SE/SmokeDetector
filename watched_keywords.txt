@@ -73962,3 +73962,4 @@
 1748386969	Fastnlight	smartseller\.com\.br
 1748391399	Dan Getz	seobank\.io
 1748402836	Dan Getz	wauly\.com
+1748405105	Dan Getz	cantonshoppingguide\.com
