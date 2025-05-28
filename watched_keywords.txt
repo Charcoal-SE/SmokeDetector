@@ -66502,7 +66502,6 @@
 1727032496	Vickel	26237729
 1727033971	Jeff Schaller	bikerentbd\.blogspot
 1727059104	Machavity	it4you\.dev
-1727073083	VLAZ	memoryreduct\.com
 1727073294	VLAZ	urbanyatra\.com
 1727073525	VLAZ	urban[\W_]*+yatra(?!\.com(?<=urbanyatra\.com))
 1727063814	Cow	espioninfotech\.com
