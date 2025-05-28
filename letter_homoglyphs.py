@@ -12,10 +12,14 @@ REGEX_FLAGS = regex.U | regex.S | regex.V1
 
 # Latin letters which look like others (case-sensitive)
 LATIN_LOOKALIKE_LETTERS = {
+    'B': ['SHARP S', 'sharp s'],
+    'D': ['ETH', 'eth'],
+    'H': ['HENG', 'heng'],
     'I': ['l', 'j', 'J'],
     'L': ['I'],
     'U': ['V', 'v'],
     'V': ['U', 'u'],
+    'X': ['CHI', 'chi'],
 }
 
 # Letters which exist in "small dotless" versions
@@ -25,7 +29,7 @@ LATIN_SMALL_DOTLESS = {
     'L': ['i', 'j'],
 }
 
-# Names of letter styles used in Unicode
+# Names of letter styles used in Unicode, which might also be in Mathematical style
 UNICODE_LETTER_STYLE_NAMES = [
     None,
     'BOLD',
@@ -42,16 +46,22 @@ UNICODE_LETTER_STYLE_NAMES = [
     'SANS-SERIF ITALIC',
     'SANS-SERIF BOLD ITALIC',
     'MONOSPACE',
+    'FULLWIDTH',
+]
+
+# Names of letter styles used in Unicode, which aren't in Mathematical style
+UNICODE_SPECIAL_LETTER_STYLE_NAMES = [
     # 'COMBINING',
     'PARENTHESIZED',
     'CIRCLED',
-    'FULLWIDTH',
     'OUTLINED',
     'TORTOISE SHELL BRACKETED',
     'SQUARED',
     'NEGATIVE CIRCLED',
     'NEGATIVE SQUARED',
     'CROSSED NEGATIVE SQUARED',
+    'REGIONAL INDICATOR SYMBOL',
+    'MODIFIER LETTER',
 ]
 
 # Names of Greek letters which look like Latin letters (case-sensitive)
@@ -60,7 +70,7 @@ GREEK_LOOKALIKE_NAMES = {
     'B': ['BETA', 'beta', 'beta symbol'],
     'C': ['final sigma', 'zeta', 'LUNATE SIGMA SYMBOL', 'DOTTED LUNATE SIGMA SYMBOL'],
     'D': ['delta'],
-    'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi'],
+    'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi', 'LUNATE EPSILON SYMBOL'],
     'F': ['DIGAMMA', 'digamma'],
     'H': ['ETA', 'lambda'],
     'I': ['IOTA', 'iota'],
@@ -68,8 +78,8 @@ GREEK_LOOKALIKE_NAMES = {
     'K': ['KAPPA', 'kappa', 'KAI SYMBOL'],
     'L': ['IOTA', 'iota'],
     'M': ['MU', 'SAN', 'san'],
-    'N': ['NU', 'lambda'],
-    'O': ['OMICRON', 'omicron', 'THETA', 'theta', 'sigma', 'DELTA', 'ARCHAIC KOPPA', 'archaic koppa'],
+    'N': ['NU', 'lambda', 'eta'],
+    'O': ['OMICRON', 'omicron', 'THETA', 'theta', 'THETA SYMBOL', 'sigma', 'DELTA', 'ARCHAIC KOPPA', 'archaic koppa'],
     'P': ['RHO', 'rho'],
     'Q': ['phi', 'ARCHAIC KOPPA', 'archaic koppa'],
     'R': ['GAMMA'],
@@ -87,8 +97,8 @@ CYRILLIC_LOOKALIKE_NAMES = {
     'A': ['A', 'DE', 'a', 'de'],
     'B': ['BE', 'VE', 'HARD SIGN', 'SOFT SIGN', 'be', 've', 'hard sign', 'soft sign'],
     'C': ['ES', 'es'],
-    'E': ['IE', 'ZE', 'E', 'ie', 'ze', 'e', 'REVERSED ZE', 'reversed ze'],
-    'H': ['EN', 'en'],
+    'E': ['IE', 'UKRAINIAN IE', 'ie', 'ukrainian ie', 'ZE', 'ze', 'E', 'e', 'REVERSED ZE', 'reversed ze'],
+    'H': ['EN', 'en', 'tshe'],
     'K': ['KA', 'ka'],
     'M': ['EM', 'em'],
     'N': ['I', 'i'],
@@ -121,10 +131,16 @@ LETTER_LOOKALIKE_DIGITS = {
 OTHER_LOOKALIKE_NAMES = {
     'A': ['PARTIAL DIFFERENTIAL'],
     'D': ['PARTIAL DIFFERENTIAL'],
-    'E': ['EPSILON SYMBOL'],
+    'E': ['EPSILON SYMBOL', 'N-ARY SUMMATION'],
     'O': ['PHI SYMBOL'],
     'W': ['PI SYMBOL'],
 }
+
+LATIN_ALPHABET_NAMES = [None, 'LATIN', 'SUPERSCRIPT LATIN', 'LATIN SUBSCRIPT']
+
+GREEK_ALPHABET_NAMES = [None, 'GREEK', 'GREEK SUBSCRIPT']
+
+CYRILLIC_ALPHABET_NAMES = ['CYRILLIC', 'CYRILLIC SUBSCRIPT']
 
 
 def get_homoglyphs_by_unicode_names(*name_options):
@@ -136,23 +152,23 @@ def get_homoglyphs_by_unicode_names(*name_options):
             pass
 
 
-def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_name):
+def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
     for letter_name in letter_names:
         yield from get_homoglyphs_by_unicode_names(
-            [None, 'MATHEMATICAL', 'MODIFIER LETTER'],
+            [None, 'MATHEMATICAL'],
             UNICODE_LETTER_STYLE_NAMES,
-            unicode_name_alphabet_options(alphabet_name),
+            alphabet_names,
             [None, 'LETTER'],
             [None, 'CAPITAL', 'SMALL CAPITAL'] if letter_name[0].isupper() else [None, 'SMALL'],
             [None, 'LETTER'],
             [letter_name.upper()])
-
-
-def unicode_name_alphabet_options(alphabet_name):
-    return [None] if alphabet_name is None else [
-        None, alphabet_name,
-        'SUBSCRIPT ' + alphabet_name, alphabet_name + ' SUBSCRIPT',
-        'SUPERSCRIPT ' + alphabet_name, alphabet_name + ' SUPERSCRIPT']
+        yield from get_homoglyphs_by_unicode_names(
+            UNICODE_SPECIAL_LETTER_STYLE_NAMES,
+            alphabet_names,
+            [None, 'LETTER'],
+            [None, 'CAPITAL', 'SMALL CAPITAL'] if letter_name[0].isupper() else [None, 'SMALL'],
+            [None, 'LETTER'],
+            [letter_name.upper()])
 
 
 def get_digit_homoglyphs_by_unicode_name(digits):
@@ -162,6 +178,12 @@ def get_digit_homoglyphs_by_unicode_name(digits):
             [None, 'MATHEMATICAL'],
             UNICODE_LETTER_STYLE_NAMES,
             [None, 'SUPERSCRIPT', 'SUBSCRIPT'],
+            [None, 'DIGIT'],
+            [digit_name])
+        yield from get_homoglyphs_by_unicode_names(
+            [None, 'DINGBAT'],
+            UNICODE_SPECIAL_LETTER_STYLE_NAMES,
+            UNICODE_LETTER_STYLE_NAMES,
             [None, 'DIGIT'],
             [digit_name])
 
@@ -186,6 +208,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d41a, 0x1d434, 0x1d44e, 0x1d468, 0x1d482, 0x1d49c, 0x1d4b6, 0x1d4d0, 0x1d4ea, 0x1d504, 0x1d51e, 0x1d538,
         0x1d552, 0x1d56c, 0x1d586, 0x1d5a0, 0x1d5ba, 0x1d5d4, 0x1d5ee, 0x1d608, 0x1d622, 0x1d63c, 0x1d656, 0x1d670,
         0x1d68a, 0x1d6a8, 0x1d6c2, 0x1d6e2, 0x1d6fc, 0x1d71c, 0x1d736, 0x1d756, 0x1d770, 0x1d790, 0x1d7aa,
+        # additional ones found
+        0x15C5, 0x15CB, 0x15E9, 0xaa,
     ],
     'B': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -193,6 +217,9 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x102a1, 0x10301, 0x1d401, 0x1d41b, 0x1d435, 0x1d44f, 0x1d469, 0x1d483, 0x1d4b7, 0x1d4d1, 0x1d4eb, 0x1d505,
         0x1d51f, 0x1d539, 0x1d553, 0x1d56d, 0x1d587, 0x1d5a1, 0x1d5bb, 0x1d5d5, 0x1d5ef, 0x1d609, 0x1d623, 0x1d63d,
         0x1d657, 0x1d671, 0x1d68b, 0x1d6a9, 0x1d6e3, 0x1d71d, 0x1d757, 0x1d791,
+        # additional ones found
+        0x10A6, 0x10AA, 0x1472, 0x15AF, 0x15B2, 0x15F7, 0x15F8, 0x15F9, 0x15FD, 0x15FE, 0x15FF, 0x1656, 0x1657, 0x1658,
+        0x165D, 0x165E, 0x165F, 0x1669, 0x166A, 0x166B,
     ],
     'C': [
         ord('('), ord('['),
@@ -201,6 +228,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0xff23, 0xff43, 0x102a2, 0x10302, 0x10415, 0x1043d, 0x1051c, 0x118e9, 0x118f2, 0x1d402, 0x1d41c, 0x1d436,
         0x1d450, 0x1d46a, 0x1d484, 0x1d49e, 0x1d4b8, 0x1d4d2, 0x1d4ec, 0x1d520, 0x1d554, 0x1d56e, 0x1d588, 0x1d5a2,
         0x1d5bc, 0x1d5d6, 0x1d5f0, 0x1d60a, 0x1d624, 0x1d63e, 0x1d658, 0x1d672, 0x1d68c, 0x1f74c,
+        # additional ones found
+        0x1455, 0x1566, 0xa2, 0xa9, 0x20AC,
     ],
     'D': [
         ord(')'),
@@ -208,6 +237,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x501, 0x13a0, 0x13e7, 0x146f, 0x15de, 0x15ea, 0x2145, 0x2146, 0x216e, 0x217e, 0xa4d2, 0xa4d3, 0x1d403, 0x1d41d,
         0x1d437, 0x1d451, 0x1d46b, 0x1d485, 0x1d49f, 0x1d4b9, 0x1d4d3, 0x1d4ed, 0x1d507, 0x1d521, 0x1d53b, 0x1d555,
         0x1d56f, 0x1d589, 0x1d5a3, 0x1d5bd, 0x1d5d7, 0x1d5f1, 0x1d60b, 0x1d625, 0x1d63f, 0x1d659, 0x1d673, 0x1d68d,
+        # additional ones found
+        0x146F, 0x15B1, 0x15DE, 0x15DF, 0x15E0, 0x15EA, 0x15EB, 0x15EC,
     ],
     'E': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -215,6 +246,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0xff45, 0x10286, 0x118a6, 0x118ae, 0x1d404, 0x1d41e, 0x1d438, 0x1d452, 0x1d46c, 0x1d486, 0x1d4d4, 0x1d4ee,
         0x1d508, 0x1d522, 0x1d53c, 0x1d556, 0x1d570, 0x1d58a, 0x1d5a4, 0x1d5be, 0x1d5d8, 0x1d5f2, 0x1d60c, 0x1d626,
         0x1d640, 0x1d65a, 0x1d674, 0x1d68e, 0x1d6ac, 0x1d6e6, 0x1d720, 0x1d75a, 0x1d794,
+        # additional ones found
+        0x15F4, 0x163F, 0x1653, 0x1666, 0x20AC, 0x2107,
     ],
     'F': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -228,6 +261,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x18d, 0x261, 0x50c, 0x581, 0x13c0, 0x13f3, 0x1d83, 0x210a, 0xa4d6, 0xff47, 0x1d406, 0x1d420, 0x1d43a, 0x1d454,
         0x1d46e, 0x1d488, 0x1d4a2, 0x1d4d6, 0x1d4f0, 0x1d50a, 0x1d524, 0x1d53e, 0x1d558, 0x1d572, 0x1d58c, 0x1d5a6,
         0x1d5c0, 0x1d5da, 0x1d5f4, 0x1d60e, 0x1d628, 0x1d642, 0x1d65c, 0x1d676, 0x1d690,
+        # additional ones found
+        0x10BA,
     ],
     'H': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -235,6 +270,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0xff48, 0x102cf, 0x1d407, 0x1d421, 0x1d43b, 0x1d46f, 0x1d489, 0x1d4bd, 0x1d4d7, 0x1d4f1, 0x1d525, 0x1d559,
         0x1d573, 0x1d58d, 0x1d5a7, 0x1d5c1, 0x1d5db, 0x1d5f5, 0x1d60f, 0x1d629, 0x1d643, 0x1d65d, 0x1d677, 0x1d691,
         0x1d6ae, 0x1d6e8, 0x1d722, 0x1d75c, 0x1d796,
+        # additional ones found
+        0x10AC, 0x10B9, 0x210F,
     ],
     'I': [
         ord('|'), ord('!'),
@@ -248,12 +285,16 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d62a, 0x1d62d, 0x1d644, 0x1d65e, 0x1d661, 0x1d678, 0x1d692, 0x1d695, 0x1d6a4, 0x1d6b0, 0x1d6ca, 0x1d6ea,
         0x1d704, 0x1d724, 0x1d73e, 0x1d75e, 0x1d778, 0x1d798, 0x1d7b2, 0x1d7cf, 0x1d7d9, 0x1d7e3, 0x1d7ed, 0x1d7f7,
         0x1e8c7, 0x1ee00, 0x1ee80, 0x1fbf1,
+        # additional ones found
+        0x1491, 0xa1,
     ],
     'J': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
         0x37f, 0x3f3, 0x408, 0x458, 0x13ab, 0x148d, 0x2149, 0xa4d9, 0xa7b2, 0xff2a, 0xff4a, 0x1d409, 0x1d423, 0x1d43d,
         0x1d457, 0x1d471, 0x1d48b, 0x1d4a5, 0x1d4bf, 0x1d4d9, 0x1d4f3, 0x1d50d, 0x1d527, 0x1d541, 0x1d55b, 0x1d575,
         0x1d58f, 0x1d5a9, 0x1d5c3, 0x1d5dd, 0x1d5f7, 0x1d611, 0x1d62b, 0x1d645, 0x1d65f, 0x1d679, 0x1d693,
+        # additional ones found
+        0x148D, 0x148E, 0x148F, 0x14A8, 0x14A9,
     ],
     'K': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -273,6 +314,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d591, 0x1d5a8, 0x1d5ab, 0x1d5c5, 0x1d5dc, 0x1d5df, 0x1d5f9, 0x1d610, 0x1d613, 0x1d62d, 0x1d644, 0x1d647,
         0x1d661, 0x1d678, 0x1d67b, 0x1d695, 0x1d6b0, 0x1d6ea, 0x1d724, 0x1d75e, 0x1d798, 0x1d7cf, 0x1d7d9, 0x1d7e3,
         0x1d7ed, 0x1d7f7, 0x1e8c7, 0x1ee00, 0x1ee80, 0x1fbf1,
+        # additional ones found
+        0x14AA,
     ],
     'M': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -280,6 +323,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x11700, 0x118e3, 0x1d40c, 0x1d426, 0x1d440, 0x1d45a, 0x1d474, 0x1d48e, 0x1d4c2, 0x1d4dc, 0x1d4f6, 0x1d510,
         0x1d52a, 0x1d544, 0x1d55e, 0x1d578, 0x1d592, 0x1d5ac, 0x1d5c6, 0x1d5e0, 0x1d5fa, 0x1d614, 0x1d62e, 0x1d648,
         0x1d662, 0x1d67c, 0x1d696, 0x1d6b3, 0x1d6ed, 0x1d727, 0x1d761, 0x1d79b,
+        # additional ones found
+        0x15F0, 0x163B, 0x164F, 0x1662,
     ],
     'N': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -287,6 +332,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d48f, 0x1d4a9, 0x1d4c3, 0x1d4dd, 0x1d4f7, 0x1d511, 0x1d52b, 0x1d55f, 0x1d579, 0x1d593, 0x1d5ad, 0x1d5c7,
         0x1d5e1, 0x1d5fb, 0x1d615, 0x1d62f, 0x1d649, 0x1d663, 0x1d67d, 0x1d697, 0x1d6b4, 0x1d6ee, 0x1d728, 0x1d762,
         0x1d79c,
+        # additional ones found
+        0x10B6, 0x144E, 0x1560, 0x1561, 0x1641,
     ],
     'O': [
         ord('@'),
@@ -309,12 +356,16 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d52d, 0x1d561, 0x1d57b, 0x1d595, 0x1d5af, 0x1d5c9, 0x1d5e3, 0x1d5fd, 0x1d617, 0x1d631, 0x1d64b, 0x1d665,
         0x1d67f, 0x1d699, 0x1d6b8, 0x1d6d2, 0x1d6e0, 0x1d6f2, 0x1d70c, 0x1d71a, 0x1d72c, 0x1d746, 0x1d754, 0x1d766,
         0x1d780, 0x1d78e, 0x1d7a0, 0x1d7ba, 0x1d7c8,
+        # additional ones found
+        0x10B2, 0x146D, 0x15B0, 0x2117,
     ],
     'Q': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
         0x51b, 0x563, 0x566, 0x211a, 0x2d55, 0x1d410, 0x1d42a, 0x1d444, 0x1d45e, 0x1d478, 0x1d492, 0x1d4ac, 0x1d4c6,
         0x1d4e0, 0x1d4fa, 0x1d514, 0x1d52e, 0x1d562, 0x1d57c, 0x1d596, 0x1d5b0, 0x1d5ca, 0x1d5e4, 0x1d5fe, 0x1d618,
         0x1d632, 0x1d64c, 0x1d666, 0x1d680, 0x1d69a,
+        # additional ones found
+        0x10AD, 0x146B, 0x15B3
     ],
     'R': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -322,6 +373,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x104b4, 0x16f35, 0x1d216, 0x1d411, 0x1d42b, 0x1d445, 0x1d45f, 0x1d479, 0x1d493, 0x1d4c7, 0x1d4e1, 0x1d4fb,
         0x1d52f, 0x1d563, 0x1d57d, 0x1d597, 0x1d5b1, 0x1d5cb, 0x1d5e5, 0x1d5ff, 0x1d619, 0x1d633, 0x1d64d, 0x1d667,
         0x1d681, 0x1d69b,
+        # additional ones found
+        0x10C1, 0x148B, 0x1586, 0x1587, 0x1588, 0x1589, 0xae,
     ],
     'S': [
         ord('$'),
@@ -330,6 +383,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x118c1, 0x16f3a, 0x1d412, 0x1d42c, 0x1d446, 0x1d460, 0x1d47a, 0x1d494, 0x1d4ae, 0x1d4c8, 0x1d4e2, 0x1d4fc,
         0x1d516, 0x1d530, 0x1d54a, 0x1d564, 0x1d57e, 0x1d598, 0x1d5b2, 0x1d5cc, 0x1d5e6, 0x1d600, 0x1d61a, 0x1d634,
         0x1d64e, 0x1d668, 0x1d682, 0x1d69c,
+        # additional ones found
+        0x10BD, 0x10C2, 0x10FD, 0x1511, 0x1513, 0x1515, 0x165A,
     ],
     'T': [
         ord('+'),
@@ -345,6 +400,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x104f6, 0x118b8, 0x118d8, 0x16f42, 0x1d414, 0x1d42e, 0x1d448, 0x1d462, 0x1d47c, 0x1d496, 0x1d4b0, 0x1d4ca,
         0x1d4e4, 0x1d4fe, 0x1d518, 0x1d532, 0x1d54c, 0x1d566, 0x1d580, 0x1d59a, 0x1d5b4, 0x1d5ce, 0x1d5e8, 0x1d602,
         0x1d61c, 0x1d636, 0x1d650, 0x1d66a, 0x1d684, 0x1d69e, 0x1d6d6, 0x1d710, 0x1d74a, 0x1d784, 0x1d7be,
+        # additional ones found
+        0x10AE, 0x10C0, 0x144C, 0x155E, 0x155F, 0x1640, 0xb5,
     ],
     'V': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -353,6 +410,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d463, 0x1d47d, 0x1d497, 0x1d4b1, 0x1d4cb, 0x1d4e5, 0x1d4ff, 0x1d519, 0x1d533, 0x1d54d, 0x1d567, 0x1d581,
         0x1d59b, 0x1d5b5, 0x1d5cf, 0x1d5e9, 0x1d603, 0x1d61d, 0x1d637, 0x1d651, 0x1d66b, 0x1d685, 0x1d69f, 0x1d6ce,
         0x1d708, 0x1d742, 0x1d77c, 0x1d7b6,
+        # additional ones found
+        0x10AE, 0x10C0, 0x1553,
     ],
     'W': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -360,6 +419,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x118ef, 0x1d416, 0x1d430, 0x1d44a, 0x1d464, 0x1d47e, 0x1d498, 0x1d4b2, 0x1d4cc, 0x1d4e6, 0x1d500, 0x1d51a,
         0x1d534, 0x1d54e, 0x1d568, 0x1d582, 0x1d59c, 0x1d5b6, 0x1d5d0, 0x1d5ea, 0x1d604, 0x1d61e, 0x1d638, 0x1d652,
         0x1d66c, 0x1d686, 0x1d6a0,
+        # additional ones found
+        0x15EF, 0x163A, 0x164E, 0x1661,
     ],
     'X': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -368,6 +429,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d417, 0x1d431, 0x1d44b, 0x1d465, 0x1d47f, 0x1d499, 0x1d4b3, 0x1d4cd, 0x1d4e7, 0x1d501, 0x1d51b, 0x1d535,
         0x1d54f, 0x1d569, 0x1d583, 0x1d59d, 0x1d5b7, 0x1d5d1, 0x1d5eb, 0x1d605, 0x1d61f, 0x1d639, 0x1d653, 0x1d66d,
         0x1d687, 0x1d6a1, 0x1d6be, 0x1d6f8, 0x1d732, 0x1d76c, 0x1d7a6,
+        # additional ones found
+        0x166D,
     ],
     'Y': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -376,6 +439,8 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d480, 0x1d49a, 0x1d4b4, 0x1d4ce, 0x1d4e8, 0x1d502, 0x1d51c, 0x1d536, 0x1d550, 0x1d56a, 0x1d584, 0x1d59e,
         0x1d5b8, 0x1d5d2, 0x1d5ec, 0x1d606, 0x1d620, 0x1d63a, 0x1d654, 0x1d66e, 0x1d688, 0x1d6a2, 0x1d6bc, 0x1d6c4,
         0x1d6f6, 0x1d6fe, 0x1d730, 0x1d738, 0x1d76a, 0x1d772, 0x1d7a4, 0x1d7ac,
+        # additional ones found
+        0x10B7, 0x10B8, 0x10BE, 0x10C4,
     ],
     'Z': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -404,9 +469,9 @@ for letter in string.ascii_uppercase:
     if letter in LATIN_SMALL_DOTLESS:
         latin_names.extend('dotless ' + c for c in LATIN_SMALL_DOTLESS[letter])
     EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
-        get_letter_homoglyphs_by_unicode_name(latin_names, 'LATIN'),
-        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), 'GREEK'),
-        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), 'CYRILLIC'),
+        get_letter_homoglyphs_by_unicode_name(latin_names, LATIN_ALPHABET_NAMES),
+        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), GREEK_ALPHABET_NAMES),
+        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), CYRILLIC_ALPHABET_NAMES),
         get_other_homoglyphs_by_unicode_name(OTHER_LOOKALIKE_NAMES.get(letter, ())),
         get_digit_homoglyphs_by_unicode_name(LETTER_LOOKALIKE_DIGITS.get(letter, ()))
     ))
@@ -421,8 +486,11 @@ for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
 
 import number_homoglyphs
 for digit in string.digits:
-    EQUIVALENTS_CODEPOINTS[digit] = [ord(digit)] + number_homoglyphs.equivalents[digit]
-    EQUIVALENTS_CODEPOINTS[digit].sort()
+    codepoints = EQUIVALENTS_CODEPOINTS.get(digit, [])
+    codepoints.append(ord(digit))
+    codepoints.extend(number_homoglyphs.equivalents[digit])
+    codepoints.extend(get_digit_homoglyphs_by_unicode_name(string.digits))
+    EQUIVALENTS_CODEPOINTS[digit] = sorted(set(codepoints))
 
 
 # Codepoints that could stand for either letters, or as punctuation/separators

@@ -55,6 +55,11 @@ import pytest
     ("looking", "", "are you lookiɴg for this", ["lookiɴg"]),
     ("aha", "", "a\U00010796a", ["a\U00010796a"]),
     ("spam r us", "", "spam-Я-us!", ["spam-Я-us"]),
+    ("customer service", "", "ᏟႮՏͲϴᎷᎬᎡ service", ["ᏟႮՏͲϴᎷᎬᎡ service"]),
+    ("price", "", "🇵🇷🇮🇨🇪", ["🇵🇷🇮🇨🇪"]),
+    ("ucsaw", "", "Ⴎᑕᔕᗩᗯ", ["Ⴎᑕᔕᗩᗯ"]),
+    ("he he", "", "HE he, ℏℇ ℎ€; ℋ℮ ℌℯ!", ["ℏℇ ℎ€", "ℋ℮ ℌℯ"]),
+    ("pkaicrucabdxdie", "", "℗KÅℹ©️®️µ¢ªßð×Ð¡⅀", ["℗KÅℹ©️®️µ¢ªßð×Ð¡⅀"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
