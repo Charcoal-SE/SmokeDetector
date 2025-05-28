@@ -540,3 +540,72 @@ def find_matches(compiled_keyphrases, text: str):
             if not exclude_regex.search(match.group()):
                 yield match, keyphrase
             seen.add(match)
+
+
+def possible_letters(char):
+    return [letter for letter, codepoints in EQUIVALENTS_CODEPOINTS.items() if ord(char) in codepoints]
+
+def analyze_text(text):
+    letter_options = []
+    unknown = set()
+    for char in unicodedata.normalize('NFD', text):
+        could_be = possible_letters(char)
+        if could_be:
+            letter_options.append(could_be)
+        elif char.isspace() or char in string.printable:
+            letter_options.append([char])
+        elif not regex.match(r'\p{M}', char):
+            letter_options.append(['?'])
+            unknown.add(char)
+    return letter_options, unknown
+
+
+def find_possible_words(text):
+    print("Analyzing %r for obfuscation" % text)
+    letter_options, unknown = analyze_text(text)
+    for letters in itertools.product(*letter_options):
+        print("Could be " + ''.join(letters))
+    print("Unknown chars: %r" % ''.join(sorted(unknown)))
+
+
+def find_unknown_chars(text):
+    print("Analyzing %r for obfuscation" % text)
+    letter_options, unknown = analyze_text(text)
+    print("Unknown chars: %r" % ''.join(sorted(unknown)))
+
+
+if __name__ == '__main__':
+    import sys
+    import random
+
+    def print_help():
+        print("Commands:", file=sys.stderr)
+        print("\tdecode TEXT\tFinds all possible decodings of TEXT", file=sys.stderr)
+        print("\tunknown TEXT\tFinds all unknown characters in TEXT", file=sys.stderr)
+        print("\tglyphs LETTER\tPrints all homoglyphs of LETTER", file=sys.stderr)
+        print("\transom TEXT\tConverts TEXT into random homoglyphs", file=sys.stderr)
+
+    if len(sys.argv) < 2 or sys.argv[1] in ['-h', '--help']:
+        print_help()
+        exit(2)
+
+    cmd = sys.argv[1]
+    arg = ' '.join(sys.argv[2:])
+    if cmd == 'decode':
+        find_possible_words(arg)
+    elif cmd == 'unknown':
+        find_unknown_chars(arg)
+    elif cmd == 'glyphs':
+        print(''.join(map(chr, EQUIVALENTS_CODEPOINTS[arg.upper()])))
+    elif cmd == 'ransom':
+        result = ''
+        for c in regex.sub(r'\p{M}++', '', unicodedata.normalize('NFD', arg)):
+            if c.upper() in EQUIVALENTS_CODEPOINTS:
+                result += chr(random.choice(EQUIVALENTS_CODEPOINTS[c.upper()]))
+            else:
+                result += c
+        print(result)
+    else:
+        print('Unknown command %r' % cmd)
+        print_help()
+        exit(2)
