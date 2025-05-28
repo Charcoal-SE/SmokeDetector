@@ -73968,3 +73968,4 @@
 1748412495	VLAZ	softreviewtime\.com
 1748412569	VLAZ	global-opportunities\.net
 1748413778	VLAZ	pepagora(?!\.com)
+1748415158	VLAZ	rozper\.com
