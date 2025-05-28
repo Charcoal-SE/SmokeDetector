@@ -3137,7 +3137,6 @@ wizard[\W_]*+hil(?:l|ton)(?:[\W_]*+cyber[\W_]*+tech(?:[\W_]*+(?:at[\W_]*+)?gmail
 crypto[\W_]*+Venture
 To[\W_]*+refund[\W_]*+money[\W_]*+from
 ace4sure(?!\.com)(?<!(?-i:^Ace4sure$))
-khel|\W_]*+raja(?!\.com)
 Cigati
 richard[\W_]*+pryce[\W_]*+wizard
 prompt[\W_]*+edify(?!\.com(?<=promptedify\.com))
