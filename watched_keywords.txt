@@ -73986,3 +73986,4 @@
 1748451986	VLAZ	airgasweldingsupplies\.com
 1748452884	VLAZ	buzzstream\.news
 1748455398	VLAZ	airfiesta\.com
+1748455414	VLAZ	beyondit\.blog
