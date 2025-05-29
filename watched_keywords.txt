@@ -73996,3 +73996,4 @@
 1748496213	VLAZ	peachplumbing\.ca
 1748496155	lyxal	tap[\W_]*+on[\W_]*+a[\W_]*+clip
 1748496309	lyxal	daniellewuphotography\.com
+1748497144	lyxal	himalayaheart\.com
