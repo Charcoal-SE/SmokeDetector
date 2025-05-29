@@ -171,23 +171,6 @@ def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
             [letter_name.upper()])
 
 
-def get_digit_homoglyphs_by_unicode_name(digits):
-    for digit in digits:
-        digit_name = unicodedata.name(str(digit)).split()[-1]
-        yield from get_homoglyphs_by_unicode_names(
-            [None, 'MATHEMATICAL'],
-            UNICODE_LETTER_STYLE_NAMES,
-            [None, 'SUPERSCRIPT', 'SUBSCRIPT'],
-            [None, 'DIGIT'],
-            [digit_name])
-        yield from get_homoglyphs_by_unicode_names(
-            [None, 'DINGBAT'],
-            UNICODE_SPECIAL_LETTER_STYLE_NAMES,
-            UNICODE_LETTER_STYLE_NAMES,
-            [None, 'DIGIT'],
-            [digit_name])
-
-
 def get_other_homoglyphs_by_unicode_name(names):
     for name in names:
         yield from get_homoglyphs_by_unicode_names(
@@ -461,6 +444,15 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
     '-': [ord('_')],
 }
 
+import number_homoglyphs
+for digit in string.digits:
+    if digit not in EQUIVALENTS_CODEPOINTS:
+        EQUIVALENTS_CODEPOINTS[digit] = []
+    EQUIVALENTS_CODEPOINTS[digit].append(ord(digit))
+    for codepoint, into in number_homoglyphs.translate_dict.items():
+        if into == digit:
+            EQUIVALENTS_CODEPOINTS[digit].append(codepoint)
+
 # add Unicode lookups to EQUIVALENTS_CODEPOINTS
 for letter in string.ascii_uppercase:
     latin_names = [letter, letter.lower()]
@@ -473,24 +465,18 @@ for letter in string.ascii_uppercase:
         get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), GREEK_ALPHABET_NAMES),
         get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), CYRILLIC_ALPHABET_NAMES),
         get_other_homoglyphs_by_unicode_name(OTHER_LOOKALIKE_NAMES.get(letter, ())),
-        get_digit_homoglyphs_by_unicode_name(LETTER_LOOKALIKE_DIGITS.get(letter, ()))
     ))
+    if letter in LETTER_LOOKALIKE_DIGITS:
+        for digit in LETTER_LOOKALIKE_DIGITS[letter]:
+            EQUIVALENTS_CODEPOINTS[letter].extend(EQUIVALENTS_CODEPOINTS[str(digit)])
 
-
-# include the same characters in upper and lower case
 for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
     codepoints.append(ord(char.upper()))
+    # include the same characters in upper and lower case
     if char.lower() != char.upper():
         codepoints.append(ord(char.lower()))
+    # deduplicate and sort
     EQUIVALENTS_CODEPOINTS[char] = list(sorted(set(codepoints)))
-
-import number_homoglyphs
-for digit in string.digits:
-    codepoints = EQUIVALENTS_CODEPOINTS.get(digit, [])
-    codepoints.append(ord(digit))
-    codepoints.extend(number_homoglyphs.equivalents[digit])
-    codepoints.extend(get_digit_homoglyphs_by_unicode_name(string.digits))
-    EQUIVALENTS_CODEPOINTS[digit] = sorted(set(codepoints))
 
 
 # Codepoints that could stand for either letters, or as punctuation/separators

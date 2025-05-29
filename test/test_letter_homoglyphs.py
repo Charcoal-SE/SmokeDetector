@@ -60,6 +60,8 @@ import pytest
     ("ucsaw", "", "Ⴎᑕᔕᗩᗯ", ["Ⴎᑕᔕᗩᗯ"]),
     ("he he", "", "HE he, ℏℇ ℎ€; ℋ℮ ℌℯ!", ["ℏℇ ℎ€", "ℋ℮ ℌℯ"]),
     ("pkaicrucabdxdie", "", "℗KÅℹ©️®️µ¢ªßð×Ð¡⅀", ["℗KÅℹ©️®️µ¢ªßð×Ð¡⅀"]),
+    ("easy", "", "③⁴₅y", ["③⁴₅y"]),
+    ("0123456789", "", "\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E", ["\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
