@@ -74008,3 +74008,4 @@
 1748507334	VLAZ	web-?whatsapp(?:online)?(?!\.com\.co(?<=webwhatsapp\.com\.co))(?# sites.google.com)
 1748507342	VLAZ	webwhatsapp\.com\.co
 1748508671	VLAZ	vital[\W_]*+promise[\W_]*+anti[\W_]*+wrinkle[\W_]*+cream
+1748513708	VLAZ	vibimglobal\.com
