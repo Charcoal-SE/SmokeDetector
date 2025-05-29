@@ -3828,3 +3828,4 @@ propgear(?#telegram)
 (?:dedicated|support)[\W_]*+team[\W_]*+is[\W_]*+ready
 𝔸𝕞𝕖𝕣𝕚𝕔𝕒𝕟
 khel[\W_]*+raja(?!\.com)
+𝐓𝐫𝐚𝐯𝐞𝐥𝐨𝐜𝐢𝐭𝐲
