@@ -74013,3 +74013,4 @@
 1748516931	VLAZ	solveredu\.com
 1748517301	VLAZ	designaspirants\.com
 1748517335	VLAZ	design[\W_]*+aspirants(?!\.com(?<=designaspirants\.com))
+1748518650	VLAZ	feelwell2dayy
