@@ -74009,3 +74009,4 @@
 1748507342	VLAZ	webwhatsapp\.com\.co
 1748508671	VLAZ	vital[\W_]*+promise[\W_]*+anti[\W_]*+wrinkle[\W_]*+cream
 1748513708	VLAZ	vibimglobal\.com
+1748515370	VLAZ	pinaunaeditora\.com\.br
