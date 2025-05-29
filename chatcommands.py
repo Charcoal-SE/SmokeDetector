@@ -520,7 +520,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
             if reasons:
-                already_caught_text = "That pattern looks like it's already caught by {}.".format(format_blacklist_reasons(reasons))
+                already_caught_text = "That pattern looks like it's already caught by " + \
+                                      format_blacklist_reasons(reasons)
                 raise CmdExceptionLongReply(" ".join(already_caught_text, other_issues_text, append_force_to_do))
 
         if other_issues_text:
