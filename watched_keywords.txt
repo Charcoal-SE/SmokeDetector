@@ -74011,3 +74011,4 @@
 1748513708	VLAZ	vibimglobal\.com
 1748515370	VLAZ	pinaunaeditora\.com\.br
 1748516931	VLAZ	solveredu\.com
+1748517301	VLAZ	designaspirants\.com
