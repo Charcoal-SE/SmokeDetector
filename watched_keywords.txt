@@ -73992,3 +73992,4 @@
 1748474999	Vickel	apkrbtv77\.com
 1748493710	dbc	sportbex\.com
 1748493611	dbc	thessoid\.com
+1748495523	VLAZ	Solace[\W_]*+Cyber[\W_]*+Workstations
