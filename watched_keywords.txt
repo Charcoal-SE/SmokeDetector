@@ -74006,3 +74006,4 @@
 1748507194	VLAZ	webhelpro\.com(?# sites.google.com)
 1748507218	VLAZ	webhelpcenter\.com(?# sites.google.com)
 1748507334	VLAZ	web-?whatsapp(?:online)?(?!\.com\.co(?<=webwhatsapp\.com\.co))(?# sites.google.com)
+1748507342	VLAZ	webwhatsapp\.com\.co
