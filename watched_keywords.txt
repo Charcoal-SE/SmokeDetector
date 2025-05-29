@@ -73994,3 +73994,4 @@
 1748493611	dbc	thessoid\.com
 1748495523	VLAZ	Solace[\W_]*+Cyber[\W_]*+Workstations
 1748496213	VLAZ	peachplumbing\.ca
+1748496155	lyxal	tap[\W_]*+on[\W_]*+a[\W_]*+clip
