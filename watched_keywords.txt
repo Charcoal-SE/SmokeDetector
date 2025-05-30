@@ -74037,3 +74037,4 @@
 1748618935	Dan Getz	spyhost\.wixsite\.com
 1748621980	VLAZ	deepnudefree\.online
 1748627491	Dan Getz	(?:\\_?\/\W*|w(?![^>]{0,39}+$)(?<!(?:ad{2})Ison[\W_].)(?!\W++else\W++(?!y)))+[\.\W]*(?:[eé3]+\W*(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3]\W*.?|.{0,40}[a@]t?(?:\\_?\/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)+
+1748636071	Jeff Schaller	propertymanagementcompany\.uk
