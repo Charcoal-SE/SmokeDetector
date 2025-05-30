@@ -74037,3 +74037,4 @@
 1748617879	Dan Getz	brindarte[\W_]*+(?:la|una)?+[\W_]*+(?:mejor[\W_]*+)?+(?:asistencia|atenci\w+n|ayuda)
 1748618023	Dan Getz	brindarte[\W_]*+(?:el|un)?+[\W_]*+(?:mejor+[\W_]*+)?(soporte|servicio|apoyo)
 1748618935	Dan Getz	spyhost\.wixsite\.com
+1748621980	VLAZ	deepnudefree\.online
