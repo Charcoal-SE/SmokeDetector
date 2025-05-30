@@ -74036,3 +74036,4 @@
 1748611947	VLAZ	dartfreezed\.tech
 1748612414	VLAZ	mobilityinfotech\.com
 1748617879	Dan Getz	brindarte[\W_]*+(?:la|una)?+[\W_]*+(?:mejor[\W_]*+)?+(?:asistencia|atenci\w+n|ayuda)
+1748618023	Dan Getz	brindarte[\W_]*+(?:el|un)?+[\W_]*+(?:mejor+[\W_]*+)?(soporte|servicio|apoyo)
