@@ -13219,7 +13219,6 @@
 1572935078	tripleee	rze[\W_]*+max
 1572936015	tripleee	2BGtCMi(?# bit.ly redirector from spammer's profile)
 1572938121	tripleee	do18\.net
-1572944761	Glorfindel	wordsdoctorate\.com
 1572945155	tripleee	izmirelen\.com
 1572946584	tripleee	giribaz\.com
 1572953078	Kulfy	peau-jeune-creme\.moonfruit\.com
