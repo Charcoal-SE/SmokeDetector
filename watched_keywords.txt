@@ -70929,7 +70929,6 @@
 1739339783	Cow	pureremedysolutions\.com
 1739340267	Cow	odoedev\.powerappsportals\.us
 1739342026	Cow	(?-i:SIaPcNwTkKs)(?#youtu.be)
-1739342306	Cow	nikitha\.com
 1739343512	VLAZ	carservicedc\.com
 1739345552	Cow	casaexotique\.com
 1739345694	VLAZ	Chirix[\W_]*+ERP
