@@ -1,33 +1,41 @@
 # coding=utf-8
 import itertools
-
-import regex
 import string
 import unicodedata
+
+import regex
 
 from helpers import regex_compile_no_cache
 
 # In this module our regexes are case-sensitive, and we make use of set subtraction
 REGEX_FLAGS = regex.U | regex.S | regex.V1
 
+def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_map):
+    for letter, uncased_names in case_insensitive_lookalike_map.items():
+        cased_names = lookalike_map.setdefault(letter, [])
+        cased_names.extend(map(str.upper, uncased_names))
+        cased_names.extend(map(str.lower, uncased_names))
+
+
 # Latin letters which look like others (case-sensitive)
 LATIN_LOOKALIKE_LETTERS = {
-    'B': ['SHARP S', 'sharp s'],
-    'D': ['ETH', 'eth'],
-    'H': ['HENG', 'heng'],
-    'I': ['l', 'j', 'J'],
-    'L': ['I'],
-    'U': ['V', 'v'],
-    'V': ['U', 'u'],
-    'X': ['CHI', 'chi'],
+    'F': ['long s'],
+    'I': ['l', 'j', 'J', 'broken l', 'dotless i', 'dotless j'],
+    'J': ['dotless j'],
+    'L': ['I', 'BROKEN L', 'broken l', 'dotless i', 'dotless j'],
 }
-
-# Letters which exist in "small dotless" versions
-LATIN_SMALL_DOTLESS = {
-    'I': ['i', 'j'],
-    'J': ['j'],
-    'L': ['i', 'j'],
-}
+add_case_insensitive_lookalikes(LATIN_LOOKALIKE_LETTERS, {
+    'A': ['ALPHA'],
+    'B': ['SHARP S', 'CLOSED REVERSED OPEN E'],
+    'C': ['STRETCHED C'],
+    'D': ['ETH'],
+    'E': ['OPEN E'],
+    'H': ['HENG'],
+    'N': ['ENG'],
+    'U': ['V'],
+    'V': ['U'],
+    'X': ['CHI'],
+})
 
 # Names of letter styles used in Unicode, which might also be in Mathematical style
 UNICODE_LETTER_STYLE_NAMES = [
@@ -66,52 +74,62 @@ UNICODE_SPECIAL_LETTER_STYLE_NAMES = [
 
 # Names of Greek letters which look like Latin letters (case-sensitive)
 GREEK_LOOKALIKE_NAMES = {
-    'A': ['ALPHA', 'DELTA', 'LAMBDA', 'alpha', 'lambda'],
-    'B': ['BETA', 'beta', 'beta symbol'],
+    'A': ['DELTA', 'LAMBDA', 'lambda'],
     'C': ['final sigma', 'zeta', 'LUNATE SIGMA SYMBOL', 'DOTTED LUNATE SIGMA SYMBOL'],
     'D': ['delta'],
     'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi', 'LUNATE EPSILON SYMBOL'],
-    'F': ['DIGAMMA', 'digamma'],
     'H': ['ETA', 'lambda'],
-    'I': ['IOTA', 'iota'],
-    'J': ['YOT', 'yot'],
-    'K': ['KAPPA', 'kappa', 'KAI SYMBOL'],
-    'L': ['IOTA', 'iota'],
+    'K': ['KAI SYMBOL'],
     'M': ['MU', 'SAN', 'san'],
     'N': ['NU', 'lambda', 'eta'],
-    'O': ['OMICRON', 'omicron', 'THETA', 'theta', 'THETA SYMBOL', 'sigma', 'DELTA', 'ARCHAIC KOPPA', 'archaic koppa'],
-    'P': ['RHO', 'rho'],
-    'Q': ['phi', 'ARCHAIC KOPPA', 'archaic koppa'],
+    'O': ['THETA SYMBOL', 'sigma', 'DELTA'],
+    'Q': ['phi'],
     'R': ['GAMMA'],
-    'T': ['TAU', 'tau', 'ARCHAIC SAMPI', 'archaic sampi'],
     'U': ['mu', 'nu', 'upsilon'],
     'V': ['mu', 'nu', 'upsilon'],
     'W': ['omega'],
-    'X': ['CHI', 'chi'],
     'Y': ['UPSILON', 'gamma'],
     'Z': ['ZETA', 'zeta'],
 }
+add_case_insensitive_lookalikes(GREEK_LOOKALIKE_NAMES, {
+    'A': ['ALPHA'],
+    'B': ['BETA', 'BETA SYMBOL'],
+    'F': ['DIGAMMA'],
+    'I': ['IOTA'],
+    'J': ['YOT'],
+    'K': ['KAPPA'],
+    'L': ['IOTA'],
+    'O': ['OMICRON', 'THETA', 'ARCHAIC KOPPA'],
+    'P': ['RHO'],
+    'Q': ['ARCHAIC KOPPA'],
+    'T': ['TAU', 'ARCHAIC SAMPI'],
+    'X': ['CHI'],
+})
 
 # Names of Cyrillic letters which look like Latin letters (case-sensitive)
 CYRILLIC_LOOKALIKE_NAMES = {
-    'A': ['A', 'DE', 'a', 'de'],
-    'B': ['BE', 'VE', 'HARD SIGN', 'SOFT SIGN', 'be', 've', 'hard sign', 'soft sign'],
-    'C': ['ES', 'es'],
-    'E': ['IE', 'UKRAINIAN IE', 'ie', 'ukrainian ie', 'ZE', 'ze', 'E', 'e', 'REVERSED ZE', 'reversed ze'],
-    'H': ['EN', 'en', 'tshe'],
-    'K': ['KA', 'ka'],
-    'M': ['EM', 'em'],
-    'N': ['I', 'i'],
-    'O': ['O', 'o'],
-    'P': ['ER', 'er'],
-    'Q': ['EF', 'ef'],
-    'R': ['GHE', 'YA', 'ghe', 'ya'],
-    'T': ['TE', 'te'],
-    'U': ['TSE', 'CHE', 'tse', 'che', 'REVERSED TSE', 'reversed tse'],
-    'W': ['SHA', 'SHCHA', 'sha', 'shcha'],
-    'X': ['HA', 'ZHE', 'zhe'],
-    'Y': ['U', 'u'],
+    'H': ['tshe'],
+    'X': ['HA'],
 }
+add_case_insensitive_lookalikes(CYRILLIC_LOOKALIKE_NAMES, {
+    'A': ['A', 'DE', 'SOFT DE', 'CLOSED LITTLE YUS'],
+    'B': ['BE', 'VE', 'HARD SIGN', 'SOFT SIGN'],
+    'C': ['ES', 'WIDE ES'],
+    'E': ['IE', 'UKRAINIAN IE', 'ZE', 'E', 'REVERSED ZE'],
+    'H': ['EN'],
+    'K': ['KA'],
+    'M': ['EM', 'SOFT EM'],
+    'N': ['I', 'SHORT I'],
+    'O': ['O', 'MONOCULAR O', 'BINOCULAR O', 'MULTIOCULAR O', 'NARROW O'],
+    'P': ['ER'],
+    'Q': ['EF'],
+    'R': ['GHE', 'YA'],
+    'T': ['TE'],
+    'U': ['TSE', 'CHE', 'REVERSED TSE'],
+    'W': ['SHA', 'SHCHA'],
+    'X': ['ZHE'],
+    'Y': ['U', 'SHORT U', 'STRAIGHT U'],
+})
 
 # 1337 (digits which look like Latin letters)
 LETTER_LOOKALIKE_DIGITS = {
@@ -458,8 +476,6 @@ for letter in string.ascii_uppercase:
     latin_names = [letter, letter.lower()]
     if letter in LATIN_LOOKALIKE_LETTERS:
         latin_names.extend(LATIN_LOOKALIKE_LETTERS[letter])
-    if letter in LATIN_SMALL_DOTLESS:
-        latin_names.extend('dotless ' + c for c in LATIN_SMALL_DOTLESS[letter])
     EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
         get_letter_homoglyphs_by_unicode_name(latin_names, LATIN_ALPHABET_NAMES),
         get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), GREEK_ALPHABET_NAMES),
