@@ -73489,7 +73489,6 @@
 1746687357	VLAZ	raza[\W_]*+computers(?!\.in(?<=razacomputers\.in))
 1746687390	VLAZ	budgetmart\.co\.uk
 1746687401	VLAZ	netlink\.com
-1746687816	Dan Getz	long\s++one\s++of\s++the\s++world\s++of\s++a
 1746689938	VLAZ	notesmedia\.in
 1746689945	VLAZ	notesmedia(?!\.in)
 1746693991	VLAZ	angularjsindia\.com

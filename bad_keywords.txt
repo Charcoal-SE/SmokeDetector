@@ -3842,3 +3842,4 @@ simplemente[\W_]*+marca([\W_]\D*+)?+\d(?:[\W_]*+\d){6,}+
 ^\s*+\p{P}[\W_]++FAQ\w*+
 ^\s*+\p{P}[\W_]++\w++\p{P}++guide(?=[\W_]*\p{P})
 engage[\W_]*+in[\W_]*+a[\W_]++live
+long\s++one\s++of\s++the\s++world\s++of\s++a
