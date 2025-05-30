@@ -71769,7 +71769,6 @@
 1741597300	Jeff Schaller	freejobing\.com
 1741597670	VLAZ	ssl[\W_]*+certl[\W_]*+shop(?!\.com(?<=sslcertshop\.com))
 1741600976	VLAZ	aj-doors\.ca
-1741601051	VLAZ	moneycages\.com
 1741606523	Jeff Schaller	plotsinnoida\.com
 1741606677	Jeff Schaller	loveliesstudio\.com
 1741607295	VLAZ	milkyvape\.shop
