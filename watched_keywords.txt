@@ -74032,3 +74032,4 @@
 1748606139	Dan Getz	webdatacrawler\.com
 1748609976	Dan Getz	disponible[\W_]*+las[\W_]*+24
 1748609984	Dan Getz	am[\W_]++a[\W_]++reper
+1748610381	Jeff Schaller	anthonyhenrymd6
