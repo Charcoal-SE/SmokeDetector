@@ -74040,3 +74040,4 @@
 1748636071	Jeff Schaller	propertymanagementcompany\.uk
 1748670163	Dan Getz	pakgamess\.com
 1748671504	Dan Getz	OTA(?<=\p{Ps}OTA)(?=\p{Pe})
+1748672921	Dan Getz	to[\W_]*+speak[\W_]*+with[\W_]*+an?+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
