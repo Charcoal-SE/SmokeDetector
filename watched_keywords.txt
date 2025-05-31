@@ -74043,3 +74043,4 @@
 1748672921	Dan Getz	to[\W_]*+speak[\W_]*+with[\W_]*+an?+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1748673905	Dan Getz	freesmo\.co\.uk
 1748675894	Nisse Engström	limoservicedallas\.com
+1748676372	Nisse Engström	nestthermostatsdubai\.com
