@@ -5264,7 +5264,8 @@ items:
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
-- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18
+- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18; NoAnswer 2025-05-31
+  disable: true
   ns: concepts8.com.
 - ns: linuxpl.com.
 - ns: ndx9.com.
