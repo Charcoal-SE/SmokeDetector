@@ -37,71 +37,37 @@ add_case_insensitive_lookalikes(LATIN_LOOKALIKE_LETTERS, {
     'X': ['CHI'],
 })
 
-# Names of letter styles used in Unicode, which might also be in Mathematical style
-UNICODE_LETTER_STYLE_NAMES = [
-    None,
-    'BOLD',
-    'ITALIC',
-    'BOLD ITALIC',
-    'SCRIPT',
-    'BOLD SCRIPT',
-    'FRAKTUR',
-    'BLACK-LETTER',
-    'DOUBLE-STRUCK',
-    'BOLD FRAKTUR',
-    'SANS-SERIF',
-    'SANS-SERIF BOLD',
-    'SANS-SERIF ITALIC',
-    'SANS-SERIF BOLD ITALIC',
-    'MONOSPACE',
-    'FULLWIDTH',
-]
-
-# Names of letter styles used in Unicode, which aren't in Mathematical style
-UNICODE_SPECIAL_LETTER_STYLE_NAMES = [
-    # 'COMBINING',
-    'PARENTHESIZED',
-    'CIRCLED',
-    'OUTLINED',
-    'TORTOISE SHELL BRACKETED',
-    'SQUARED',
-    'NEGATIVE CIRCLED',
-    'NEGATIVE SQUARED',
-    'CROSSED NEGATIVE SQUARED',
-    'REGIONAL INDICATOR SYMBOL',
-    'MODIFIER LETTER',
-]
-
 # Names of Greek letters which look like Latin letters (case-sensitive)
 GREEK_LOOKALIKE_NAMES = {
     'A': ['DELTA', 'LAMBDA', 'lambda'],
-    'C': ['final sigma', 'zeta', 'LUNATE SIGMA SYMBOL', 'DOTTED LUNATE SIGMA SYMBOL'],
+    'C': ['final sigma', 'zeta'],
     'D': ['delta'],
-    'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi', 'LUNATE EPSILON SYMBOL'],
+    'E': ['EPSILON', 'SIGMA', 'epsilon', 'xi'],
     'H': ['ETA', 'lambda'],
     'K': ['KAI SYMBOL'],
     'M': ['MU', 'SAN', 'san'],
     'N': ['NU', 'lambda', 'eta'],
-    'O': ['THETA SYMBOL', 'sigma', 'DELTA'],
-    'Q': ['phi'],
+    'O': ['sigma', 'DELTA', 'phi symbol'],
+    'Q': ['phi symbol'],
     'R': ['GAMMA'],
     'U': ['mu', 'nu', 'upsilon'],
     'V': ['mu', 'nu', 'upsilon'],
-    'W': ['omega'],
+    'W': ['omega', 'pi symbol'],
     'Y': ['UPSILON', 'gamma'],
     'Z': ['ZETA', 'zeta'],
 }
 add_case_insensitive_lookalikes(GREEK_LOOKALIKE_NAMES, {
     'A': ['ALPHA'],
-    'B': ['BETA', 'BETA SYMBOL'],
+    'B': ['BETA'],
+    'C': ['LUNATE SIGMA SYMBOL', 'DOTTED LUNATE SIGMA SYMBOL'],
     'F': ['DIGAMMA'],
     'I': ['IOTA'],
     'J': ['YOT'],
     'K': ['KAPPA'],
     'L': ['IOTA'],
-    'O': ['OMICRON', 'THETA', 'ARCHAIC KOPPA'],
+    'O': ['OMICRON', 'THETA', 'ARCHAIC KOPPA', 'PHI'],
     'P': ['RHO'],
-    'Q': ['ARCHAIC KOPPA'],
+    'Q': ['ARCHAIC KOPPA', 'PHI'],
     'T': ['TAU', 'ARCHAIC SAMPI'],
     'X': ['CHI'],
 })
@@ -145,22 +111,6 @@ LETTER_LOOKALIKE_DIGITS = {
     'Z': [2],
 }
 
-# Some other names in Unicode which exist in multiple styles
-OTHER_LOOKALIKE_NAMES = {
-    'A': ['PARTIAL DIFFERENTIAL'],
-    'D': ['PARTIAL DIFFERENTIAL'],
-    'E': ['EPSILON SYMBOL', 'N-ARY SUMMATION'],
-    'O': ['PHI SYMBOL'],
-    'W': ['PI SYMBOL'],
-}
-
-LATIN_ALPHABET_NAMES = [None, 'LATIN', 'SUPERSCRIPT LATIN', 'LATIN SUBSCRIPT']
-
-GREEK_ALPHABET_NAMES = [None, 'GREEK', 'GREEK SUBSCRIPT']
-
-CYRILLIC_ALPHABET_NAMES = ['CYRILLIC', 'CYRILLIC SUBSCRIPT']
-
-
 def get_homoglyphs_by_unicode_names(*name_options):
     for name in itertools.product(*name_options):
         full_name = ' '.join(filter(None, name))
@@ -173,29 +123,11 @@ def get_homoglyphs_by_unicode_names(*name_options):
 def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
     for letter_name in letter_names:
         yield from get_homoglyphs_by_unicode_names(
-            [None, 'MATHEMATICAL'],
-            UNICODE_LETTER_STYLE_NAMES,
             alphabet_names,
             [None, 'LETTER'],
             [None, 'CAPITAL', 'SMALL CAPITAL'] if letter_name[0].isupper() else [None, 'SMALL'],
             [None, 'LETTER'],
             [letter_name.upper()])
-        yield from get_homoglyphs_by_unicode_names(
-            UNICODE_SPECIAL_LETTER_STYLE_NAMES,
-            alphabet_names,
-            [None, 'LETTER'],
-            [None, 'CAPITAL', 'SMALL CAPITAL'] if letter_name[0].isupper() else [None, 'SMALL'],
-            [None, 'LETTER'],
-            [letter_name.upper()])
-
-
-def get_other_homoglyphs_by_unicode_name(names):
-    for name in names:
-        yield from get_homoglyphs_by_unicode_names(
-            [None, 'MATHEMATICAL'],
-            UNICODE_LETTER_STYLE_NAMES,
-            [None, 'SUPERSCRIPT', 'SUBSCRIPT'],
-            [name])
 
 
 # An "equivalent" is either a case version of the letter, or a lookalike character.
@@ -210,7 +142,7 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d552, 0x1d56c, 0x1d586, 0x1d5a0, 0x1d5ba, 0x1d5d4, 0x1d5ee, 0x1d608, 0x1d622, 0x1d63c, 0x1d656, 0x1d670,
         0x1d68a, 0x1d6a8, 0x1d6c2, 0x1d6e2, 0x1d6fc, 0x1d71c, 0x1d736, 0x1d756, 0x1d770, 0x1d790, 0x1d7aa,
         # additional ones found
-        0x15C5, 0x15CB, 0x15E9, 0xaa,
+        0x15C5, 0x15CB, 0x15E9, 0xaa, 0x2202,
     ],
     'B': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -239,7 +171,7 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d437, 0x1d451, 0x1d46b, 0x1d485, 0x1d49f, 0x1d4b9, 0x1d4d3, 0x1d4ed, 0x1d507, 0x1d521, 0x1d53b, 0x1d555,
         0x1d56f, 0x1d589, 0x1d5a3, 0x1d5bd, 0x1d5d7, 0x1d5f1, 0x1d60b, 0x1d625, 0x1d63f, 0x1d659, 0x1d673, 0x1d68d,
         # additional ones found
-        0x146F, 0x15B1, 0x15DE, 0x15DF, 0x15E0, 0x15EA, 0x15EB, 0x15EC,
+        0x146F, 0x15B1, 0x15DE, 0x15DF, 0x15E0, 0x15EA, 0x15EB, 0x15EC, 0x2202,
     ],
     'E': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -248,7 +180,7 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
         0x1d508, 0x1d522, 0x1d53c, 0x1d556, 0x1d570, 0x1d58a, 0x1d5a4, 0x1d5be, 0x1d5d8, 0x1d5f2, 0x1d60c, 0x1d626,
         0x1d640, 0x1d65a, 0x1d674, 0x1d68e, 0x1d6ac, 0x1d6e6, 0x1d720, 0x1d75a, 0x1d794,
         # additional ones found
-        0x15F4, 0x163F, 0x1653, 0x1666, 0x20AC, 0x2107,
+        0x15F4, 0x163F, 0x1653, 0x1666, 0x20AC, 0x2107, 0x2211,
     ],
     'F': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -477,14 +409,26 @@ for letter in string.ascii_uppercase:
     if letter in LATIN_LOOKALIKE_LETTERS:
         latin_names.extend(LATIN_LOOKALIKE_LETTERS[letter])
     EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
-        get_letter_homoglyphs_by_unicode_name(latin_names, LATIN_ALPHABET_NAMES),
-        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), GREEK_ALPHABET_NAMES),
-        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), CYRILLIC_ALPHABET_NAMES),
-        get_other_homoglyphs_by_unicode_name(OTHER_LOOKALIKE_NAMES.get(letter, ())),
+        get_letter_homoglyphs_by_unicode_name(latin_names, [None, 'LATIN']),
+        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), [None, 'GREEK']),
+        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), ['CYRILLIC']),
     ))
+    EQUIVALENTS_CODEPOINTS[letter].append(ord(unicodedata.lookup('REGIONAL INDICATOR SYMBOL LETTER ' + letter)))
     if letter in LETTER_LOOKALIKE_DIGITS:
         for digit in LETTER_LOOKALIKE_DIGITS[letter]:
             EQUIVALENTS_CODEPOINTS[letter].extend(EQUIVALENTS_CODEPOINTS[str(digit)])
+
+already_done = set(itertools.chain(*EQUIVALENTS_CODEPOINTS.values()))
+for codepoint in range(0x7f, 0x110000):
+    if codepoint in already_done:
+        continue
+    char = chr(codepoint)
+    nfkc = unicodedata.normalize('NFKC', char)
+    if len(nfkc) == 1 and nfkc != char and unicodedata.decomposition(nfkc) == '':
+        for letter, letter_codepoints in EQUIVALENTS_CODEPOINTS.items():
+            if ord(nfkc) in letter_codepoints:
+                EQUIVALENTS_CODEPOINTS[letter].append(codepoint)
+
 
 for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
     codepoints.append(ord(char.upper()))
