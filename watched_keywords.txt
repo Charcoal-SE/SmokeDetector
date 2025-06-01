@@ -74071,3 +74071,4 @@
 1748781890	Cody Gray	(?-i:mever15)
 1748784918	cigien	gadgetbazars\.com
 1748785331	cigien	gadget[\W_]*+bazars(?!\.com(?<=gadgetbazars\.com))
+1748786300	Jeff Schaller	budgetroots\.com
