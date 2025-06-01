@@ -74058,3 +74058,4 @@
 1748722956	VLAZ	dispenserobots\.com
 1748759875	Nisse Engström	magicwords\.in
 1748760129	VLAZ	crazycattle3dfree\.com
+1748760466	VLAZ	(?-i:Cartovia)(?#t.me)
