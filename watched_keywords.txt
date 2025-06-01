@@ -74073,3 +74073,4 @@
 1748785331	cigien	gadget[\W_]*+bazars(?!\.com(?<=gadgetbazars\.com))
 1748786300	Jeff Schaller	budgetroots\.com
 1748787850	Cody Gray	mixamo\.com
+1748795110	Vickel	goodwilloutletstore\.com
