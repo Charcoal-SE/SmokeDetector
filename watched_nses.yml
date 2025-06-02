@@ -5866,7 +5866,9 @@ items:
 - ns: iamemonline.com.
 - ns: wuaze.com.
 - ns: iaasdns.com.
-- ns: vagonsoft.com.
+- comment: NXDOMAIN 2023-06-02
+  disable: true
+  ns: vagonsoft.com.
 - ns: hostarmada.net.
 - ns: edusum.com.
 - ns: bajika.co.
