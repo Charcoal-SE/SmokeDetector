@@ -74085,3 +74085,4 @@
 1748849596	cigien	gohashinclude(?!\.com)
 1748853411	VLAZ	(?-i:onlinetechsupport)(?#linktr.ee)
 1748853443	VLAZ	Techiefixers
+1748853764	Jeff Schaller	keshking\.com
