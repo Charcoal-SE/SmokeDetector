@@ -74093,3 +74093,4 @@
 1748873894	VLAZ	compoundinterestcalculator\.money
 1748879702	Jeff Schaller	touristglobeblog\.com
 1748880334	Dan Getz	zenithflowtech\.com
+1748885461	Dan Getz	apps\.shopify\.com/esp-shipping-protection
