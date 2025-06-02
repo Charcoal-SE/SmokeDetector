@@ -136,7 +136,7 @@ def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
 # An "equivalent" is either a case version of the letter, or a lookalike character.
 # Hex numbers are primarily used below, due to the possibility of the characters becoming corrupted when the file
 # is edited in editors which don't fully support Unicode, or even just on different operating systems.
-EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
+EQUIVALENT_CODEPOINT_LISTS: {str: list[int]} = {
     'A': [
         ord('@'),
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -405,33 +405,49 @@ EQUIVALENTS_CODEPOINTS: {str: list[int]} = {
     '-': [ord('_')],
 }
 
+
+CODEPOINTS_FOR_LETTER: dict[str, set[int]] = {}
+
+LETTERS_FOR_CODEPOINT: dict[int, set[str]] = {}
+
+
+def add_equivalent(from_codepoint: int, to_letter: str):
+    to_letter = to_letter.upper()
+    LETTERS_FOR_CODEPOINT.setdefault(from_codepoint, set()).add(to_letter)
+    CODEPOINTS_FOR_LETTER.setdefault(to_letter, set()).add(from_codepoint)
+
+
+for letter, codepoints in EQUIVALENT_CODEPOINT_LISTS.items():
+    add_equivalent(ord(letter), letter)
+    for codepoint in codepoints:
+        add_equivalent(codepoint, letter)
+
 import number_homoglyphs
 for digit in string.digits:
-    if digit not in EQUIVALENTS_CODEPOINTS:
-        EQUIVALENTS_CODEPOINTS[digit] = []
-    EQUIVALENTS_CODEPOINTS[digit].append(ord(digit))
+    add_equivalent(ord(digit), digit)
     for codepoint, into in number_homoglyphs.translate_dict.items():
         if into == digit:
-            EQUIVALENTS_CODEPOINTS[digit].append(codepoint)
+            add_equivalent(codepoint, digit)
 
 # add Unicode lookups to EQUIVALENTS_CODEPOINTS
 for letter in string.ascii_uppercase:
     latin_names = [letter, letter.lower()]
     if letter in LATIN_LOOKALIKE_LETTERS:
         latin_names.extend(LATIN_LOOKALIKE_LETTERS[letter])
-    EQUIVALENTS_CODEPOINTS[letter].extend(itertools.chain(
+    for codepoint in itertools.chain(
         get_letter_homoglyphs_by_unicode_name(latin_names, [None, 'LATIN']),
         get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), [None, 'GREEK', 'LATIN']),
-        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), ['CYRILLIC']),
-    ))
-    EQUIVALENTS_CODEPOINTS[letter].append(ord(unicodedata.lookup('REGIONAL INDICATOR SYMBOL LETTER ' + letter)))
+        get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), ['CYRILLIC'])
+    ):
+        add_equivalent(codepoint, letter)
+    add_equivalent(ord(unicodedata.lookup('REGIONAL INDICATOR SYMBOL LETTER ' + letter)), letter)
     if letter in LETTER_LOOKALIKE_DIGITS:
         for digit in LETTER_LOOKALIKE_DIGITS[letter]:
-            EQUIVALENTS_CODEPOINTS[letter].extend(EQUIVALENTS_CODEPOINTS[str(digit)])
+            for codepoint in CODEPOINTS_FOR_LETTER[str(digit)]:
+                add_equivalent(codepoint, letter)
 
-already_done = set(itertools.chain(*EQUIVALENTS_CODEPOINTS.values()))
 for codepoint in range(0x7f, 0x110000):
-    if codepoint in already_done:
+    if codepoint in LETTERS_FOR_CODEPOINT:
         continue
     char = chr(codepoint)
     normalized = unicodedata.normalize('NFKC', char)
@@ -450,27 +466,17 @@ for codepoint in range(0x7f, 0x110000):
         except KeyError:
             continue
     if len(normalized) == 1 and unicodedata.decomposition(normalized) == '':
-        for letter, letter_codepoints in EQUIVALENTS_CODEPOINTS.items():
-            if ord(normalized) in letter_codepoints:
-                EQUIVALENTS_CODEPOINTS[letter].append(codepoint)
-
-
-for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
-    codepoints.append(ord(char.upper()))
-    # include the same characters in upper and lower case
-    if char.lower() != char.upper():
-        codepoints.append(ord(char.lower()))
-    # deduplicate and sort
-    EQUIVALENTS_CODEPOINTS[char] = list(sorted(set(codepoints)))
+        for letter in LETTERS_FOR_CODEPOINT.get(ord(normalized), ()):
+            add_equivalent(codepoint, letter)
 
 
 # Codepoints that could stand for either letters, or as punctuation/separators
-POSSIBLE_SEPARATOR_CODEPOINTS: list[int] = []
+POSSIBLE_SEPARATOR_CODEPOINTS: set[int] = set()
 
-for char, codepoints in EQUIVALENTS_CODEPOINTS.items():
+for letter, codepoints in CODEPOINTS_FOR_LETTER.items():
     for codepoint in codepoints:
         if regex.match(r'\W', chr(codepoint), flags=REGEX_FLAGS) and codepoint not in POSSIBLE_SEPARATOR_CODEPOINTS:
-            POSSIBLE_SEPARATOR_CODEPOINTS.append(codepoint)
+            POSSIBLE_SEPARATOR_CODEPOINTS.add(codepoint)
 
 
 # These are diacritical marks that are expressed as separate codepoints, but don't take extra space on the screen.
@@ -482,8 +488,8 @@ def build_regex_charset(codepoints, prefix='[', suffix=']'):
 
 
 def get_equivalent_codepoints(c: str) -> list[int]:
-    codepoints = EQUIVALENTS_CODEPOINTS.get(c.upper())
-    return codepoints if codepoints is not None else [ord(c)]
+    codepoints = CODEPOINTS_FOR_LETTER.get(c.upper())
+    return sorted(codepoints) if codepoints is not None else [ord(c)]
 
 
 def build_equivalent_charset_regex(c: str, **kwargs) -> str:
@@ -581,15 +587,11 @@ def find_matches(compiled_keyphrases, text: str):
             seen.add(match)
 
 
-def possible_letters(char):
-    return [letter for letter, codepoints in EQUIVALENTS_CODEPOINTS.items() if ord(char) in codepoints]
-
-
 def analyze_text(text):
     letter_options = []
     unknown = set()
     for char in unicodedata.normalize('NFD', text):
-        could_be = possible_letters(char)
+        could_be = list(LETTERS_FOR_CODEPOINT.get(ord(char), ()))
         if char.upper() not in could_be and (char.isspace() or char in string.printable):
             could_be.append(char)
         elif not could_be and not regex.match(r'\p{M}', char):
@@ -635,12 +637,12 @@ if __name__ == '__main__':
     elif cmd == 'unknown':
         find_unknown_chars(arg)
     elif cmd == 'glyphs':
-        print(''.join(map(chr, EQUIVALENTS_CODEPOINTS[arg.upper()])))
+        print(''.join(map(chr, CODEPOINTS_FOR_LETTER[arg.upper()])))
     elif cmd == 'ransom':
         result = ''
         for c in regex.sub(r'\p{M}++', '', unicodedata.normalize('NFD', arg)):
-            if c.upper() in EQUIVALENTS_CODEPOINTS:
-                result += chr(random.choice(EQUIVALENTS_CODEPOINTS[c.upper()]))
+            if c.upper() in CODEPOINTS_FOR_LETTER:
+                result += chr(random.choice(list(CODEPOINTS_FOR_LETTER[c.upper()])))
             else:
                 result += c
         print(result)
