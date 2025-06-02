@@ -10,6 +10,7 @@ from helpers import regex_compile_no_cache
 # In this module our regexes are case-sensitive, and we make use of set subtraction
 REGEX_FLAGS = regex.U | regex.S | regex.V1
 
+
 def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_map):
     for letter, uncased_names in case_insensitive_lookalike_map.items():
         cased_names = lookalike_map.setdefault(letter, [])
@@ -111,6 +112,7 @@ LETTER_LOOKALIKE_DIGITS = {
     'S': [5],
     'Z': [2],
 }
+
 
 def get_homoglyphs_by_unicode_names(*name_options):
     for name in itertools.product(*name_options):
@@ -581,6 +583,7 @@ def find_matches(compiled_keyphrases, text: str):
 
 def possible_letters(char):
     return [letter for letter, codepoints in EQUIVALENTS_CODEPOINTS.items() if ord(char) in codepoints]
+
 
 def analyze_text(text):
     letter_options = []

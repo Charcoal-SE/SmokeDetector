@@ -31,6 +31,7 @@ import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
 import phone_numbers
+import letter_homoglyphs
 
 
 if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
@@ -2785,103 +2786,247 @@ create_rule("messaging number in {}",
             stripcodeblocks=True)
 
 
-# Homoglyph obfuscation, used both by trolls and spammers
-obfuscation_keywords = [
+# Obfuscation entries are a pair of strings: (keyword, exclude)
+#
+# The keyword is the word (or phrase) to look for obfuscated.
+# Spaces, hyphens, and underscores in this will be treated as expected word breaks.
+# The "official" name will have the underscores removed.
+# So add underscores wherever someone might innocently break the word.
+# Only ASCII letters and numbers will be checked for obfuscated versions.
+#
+# No need to add plural forms unless they are irregular: they will still match if there's an extra "s" afterwards.
+# (Obfuscation will be accepted in that "s", to allow more matches, but won't trigger the rule by itself.)
+#
+# The second item is an exclude regex, which will be automatically bookended for word boundaries, and case insensitive.
+# If an obfuscation match also matches the exclude regex, it will not trigger the rule.
+# For example, to catch "+h1s" or "t h i s" as obfuscation of "this", but not "+ hi. 's'", exclude "hi".
+# Spaces and hyphens will be converted into optional word breaks, which will not be considered obfuscation.
+#
+# If you want to check for a word that normally contains a diacritic, like résumé, the best way is probably:
+#     ("resume", r"r\w+sum\w+")
+# This will trigger on "ré$sumé" and "r35um3", though unfortunately not on "r3sumé".
+
+# These will trigger "Obfuscated word in ..."
+obfuscation_keyphrases = [
     # Trolls && cussing
-    "c" + "ock",
-    "c" + "unt",
-    "d" + "ick",
-    "f" + "uck",
-    "mother" + "f" + "ucker",
-    "p" + "enis",
-    "p" + "ussy",
-    "w" + "hore",
-    "black helicopters",
-    "attack helicopters",
+    ("f" + "uck", ""),
+    ("f" + "ucker", ""),
+    ("f" + "ucking", ""),
+    ("mother_" + "f" + "ucker", ""),
+    ("mother_" + "f" + "ucking", ""),
+    ("c" + "ock", ""),
+    ("c" + "unt", ""),
+    ("d" + "ick", "ick"),
+    ("p" + "enis", "pen is"),
+    ("p" + "enises", ""),
+    ("p" + "ussy", ""),
+    ("p" + "ussie", ""),
+    ("w" + "hore", "who|ore"),
+    ("ni" + "gger", ""),
+    ("go" + "ok", "go|OK"),
+    ("chi" + "nk", "chin"),
+    ("tro" + "on", ""),
+    ("tran" + "ny", ""),
+    ("tran" + "nie", ""),
+    ("fa" + "ggot", ""),
+    ("black helicopter", ""),
+    ("attack helicopter", ""),
 
-    # Phone support scam
-    # Rule only covers single words for the time being
-    # Also, comment out really short ones to reduce chance for FPs
-    # "amazon prime",
-    # "avg",
-    "aofexpro.com",
-    "bellsouth",
-    "binance",
-    "crypto.com",
-    "coinbase",
-    "comcast",
-    # "ebay",
-    "earthlink",
-    "epson",
-    # "eset",
-    "gemini",
-    # "hp printer",
-    # "icloud",
-    "kraken",
-    "mozilla",
-    # "msn",
-    "norton",
-    "paypal",
-    "printer",  # maybe remove if we enable "hp printer"
-    "quickbooks",
-    "roadrunner",
-    # "sage",
-    "sbcglobal",
-    "ticketmaster",
-    # "trust wallet",
-    "turbotax",
-    "uphold",
-    "verizon",
-    "wallet",  # maybe remove if we enable "trust wallet"
+    # support scams - phrases
+    ("customer", "custom|tome"),
+    ("help desk", ""),
+    ("help line", ""),
+    ("prompt response", ""),
+    ("real person", ""),
+    ("service", ""),
+    ("support", ""),
 
-    "airlines",
-    "support",
-    "phone",
-    "number",
-    "helpline"
+    # support scams - companies
+    ("Am_track", "rack"),
+    ("Amazon Prime", ""),
+    ("Bell South", ""),
+    ("Com_cast", ""),
+    ("Earth_link", ""),
+    ("Face_book", ""),
+    ("Geek Squad", ""),
+    ("Google Pay", ""),
+    ("Life_Lock", ""),
+    ("MSN", "[MSN]"),
+    ("Mc_Afee", "fee"),
+    ("Mozilla", ""),
+    ("Norton", "n?or|t?on"),
+    ("Ok_Cupid", ""),
+    ("Quick_books", ""),
+    ("Quicken", "quick"),
+    ("Road_runner", ""),
+    ("SBC Global", ""),
+    ("Sage 50", "sag|age|so"),
+    ("Spectrum", ""),
+    ("Ticket_master", ""),
+    ("Turbo_tax", "bot"),
+    ("Verizon", ""),
+    ("Whats_App", ""),
+
+    # support scams - airline - phrases
+    ("best day", ""),
+    ("cancellation", ""),
+    ("cheap", ""),
+    ("cheaper", "cheap"),
+    ("cheapest", "cheap"),
+    ("day to book", ""),
+    ("day to fly", ""),
+    ("flight", "light"),
+    ("live agent", "age|gent"),
+    ("re_fund", "fun"),
+    ("re_fund_able", ""),
+    ("ticket", "tick"),
+
+    # support scams - airline - companies
+    ("Expedia", ""),
+    ("Price_line", ""),
+    ("Airline", "air|line"),
+    ("Airway", "air|way"),
+    ("Aero_mexico", r"Aerom\w+xico"),
+    ("Air France", ""),
+    ("Alaska", "alas|ask"),
+    ("Allegiant", ""),
+    ("American", "America|can"),
+    ("British Airways", ""),
+    ("Cathay Pacific", ""),
+    ("Copa", "cop|a"),
+    ("Delta", ""),
+    ("Frontier", ""),
+    ("Jet Blue", ""),
+    ("Jet SMART", ""),
+    ("KLM", "K[I1]M|[KLM]"),
+    ("Latam", "la|am|ata"),
+    ("Lufthansa", ""),
+    ("Qatar", "tar|at"),
+    ("Royal Caribbean", ""),
+    ("Ryan_air", ""),
+    ("Singapore Airlines", ""),
+    ("South_west", ""),
+    ("Spirit", ""),
+    ("T_A_P Portugal", ""),
+    ("Travelocity", ""),
+    ("United", "u?nite?|it|un"),
+    ("Volaris", ""),
+    ("WestJet", ""),
+    ("Win_go", ""),
+
+    # money & money support scams
+    ("bit_coin", "it|in"),
+    ("cash app", "ash"),
+    ("invite code", ""),
+    ("loan app", "an a"),
+    ("loan", "an"),
+    ("referral", "refer"),
+
+    # money scams - companies
+    ("91 club", ""),
+    ("Binance", ""),
+    ("Bybit", "by|bit"),
+    ("Coin_base", "in"),
+    ("Pay_Pal", ""),
+    ("Pay_tm", ""),
+    ("Phone_Pe", "one"),
+    ("Probo", "rob"),
+    ("Robin_hood", "rob|in"),
+    ("Trust Wallet", ""),
+    ("Zelle", "elle"),
+    ("aofexpro.com", ""),
+    ("crypto.com", ""),
 ]
+obfuscation_keyphrases_compiled = letter_homoglyphs.compile_keyphrases(*obfuscation_keyphrases)
+
+# These will trigger "Potentially bad keyword in ..." with the same report details as the "Obfuscated word in ..." rule
+obfuscation_watch_keyphrases = [
+    # Trolls && cussing
+    ("piss", "is"),
+    ("shit", "hi|it|hit"),
+    ("ki" + "ll yourself", ""),
+
+    # support scams - phrases
+    ("dispute", ""),
+    ("hacked", ""),
+    ("number", "numb"),
+    ("phone", "one"),
+    # es
+    ("atencion", r"atenci\w+n"),
+    ("con una persona", ""),
+    ("telefono", r"telef\w+n\w+"),
+    ("asistencia", ""),
+    ("numero", r"n\w+mer\w+"),
+
+    # support scams - companies
+    ("AVG", "[AVG]"),
+    ("ESET", "set|[EST]"),
+    ("Ebay", "e|bay"),
+    ("Epson", "son"),
+    ("Gemini", "gem|mini"),
+    ("H_P Printer", ""),
+    ("Hulu", ""),
+    ("Sage", "sag|age"),
+    ("Up_hold", "old"),
+    ("i_Cloud", ""),
+
+    # support scams - airline - phrases
+    # es
+    ("agente", ""),
+    ("cancelacion", r"cancelaci\w+n"),
+    ("devolucion", r"devoluci\w+n"),
+    ("queja", ""),
+    ("reclamacion", r"reclamaci\w+n"),
+    ("reembolso", r"r\w+mbolso"),
+    ("reserva", r"r\w+serv\w+"),
+
+    # support scams - airline - companies
+    ("T_A_P Air", ""),
+
+    # money & money support scams
+    ("cash", "ash"),
+    ("casino", "sin"),
+    ("credit", "red"),
+    ("lotteries", ""),
+    ("lottery", ""),
+    ("money", "one"),
+
+    # money scams - companies
+    ("Fin_wessy", ""),
+    ("Kraken", ""),
+    ("Kuku F_M", ""),
+    ("Meteor Rupee", ""),
+    ("Protop_Fin", ""),
+    ("Savv_Score", ""),
+]
+obfuscation_watch_keyphrases_compiled = letter_homoglyphs.compile_keyphrases(*obfuscation_watch_keyphrases)
 
 
-# Simple 1337 translator
-def create_1337_translation():
-    # It is currently relied upon that there are no translation differences between upper and lower case text.
-    simple_1337_mapping = {
-        '4': 'a',
-        '3': 'e',
-        '6': 'g',
-        '9': 'g',
-        '1': 'l',
-        '!': 'i',
-        '0': 'o',
-        '5': 's',
-        '$': 's',
-        '7': 't',
-        '2': 'z',
-    }
-    for p in punctuation:
-        if p not in simple_1337_mapping:
-            simple_1337_mapping[p] = ''
-    return "".maketrans(simple_1337_mapping)
-
-
-translation_1337 = create_1337_translation()
+def find_obfuscated_matches(compiled, s):
+    s = strip_urls_and_tags(s)
+    matches = []
+    for match, keyphrase in letter_homoglyphs.find_matches(obfuscation_keyphrases_compiled, s):
+        matches.append("%r is obfuscated %r" % (match.group(), keyphrase))
+    return matches
 
 
 @create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
 def obfuscated_word(s, site):
-    for word in regex.split(r'[-\s_]+', s):
-        # prevent FP on simple English possessive
-        if word[-2:] == "'s" and word[:-2] + "s" in obfuscation_keywords:
-            continue
-        # prevent FP on contraction of "who are"
-        if word == "who're":
-            continue
-        # prevent FP on stuff like 'I have this "number": 1111'
-        word = word.strip(punctuation).lower()
-        translated = word.translate(translation_1337)
-        if translated != word and translated in obfuscation_keywords:
-            return True, "%r is obfuscated %r" % (word, translated)
-    return False, ""
+    matches = find_obfuscated_matches(obfuscation_keyphrases_compiled, s)
+    if matches:
+        return True, ", ".join(matches)
+    else:
+        return False, ""
+
+
+@create_rule("potentially bad keyword in {}", max_rep=50, stripcodeblocks=True,
+             rule_id="Potentially bad keywords: obfuscation")
+def obfuscated_word_watch(s, site):
+    matches = find_obfuscated_matches(obfuscation_watch_keyphrases_compiled, s)
+    if matches:
+        return True, ", ".join(matches)
+    else:
+        return False, ""
 
 
 # Category: Trolling
