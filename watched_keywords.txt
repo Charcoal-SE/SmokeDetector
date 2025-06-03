@@ -74103,3 +74103,4 @@
 1748928020	cigien	genomi[\W_]*+rx(?!\.com(?<=genomirx\.com))
 1748928371	cigien	cearvol\.com
 1748929624	VLAZ	healthanza\.com
+1748930724	VLAZ	awscents\.co\.uk
