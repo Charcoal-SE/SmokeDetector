@@ -74116,3 +74116,4 @@
 1748941218	VLAZ	bestspecpro\.com
 1748942230	Glorfindel	laminationstation\.co\.uk
 1748942369	cigien	luxurytravelmagazine\.com
+1748942659	cigien	aipoemgenerator\.us
