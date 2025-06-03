@@ -74106,3 +74106,4 @@
 1748930724	VLAZ	awscents\.co\.uk
 1748930765	VLAZ	(?-i:Fastusdts)(?#t.me)
 1748931015	cigien	rentcarbros\.com
+1748931026	cigien	rentcarbros(?!\.com)
