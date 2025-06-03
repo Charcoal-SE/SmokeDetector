@@ -74119,3 +74119,4 @@
 1748942659	cigien	aipoemgenerator\.us
 1748942714	VLAZ	VLCVV1PWBA
 1748942899	cigien	ieeexpert\.com
+1748943454	cigien	finalert(?!\.com|\.net)
