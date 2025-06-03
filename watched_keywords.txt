@@ -74126,3 +74126,4 @@
 1748946467	VLAZ	gameseruterbaru\.com
 1748946813	Jeff Schaller	accordtechsolutions\.com
 1748948834	Jeff Schaller	strongboxit\.com
+1748948884	Jeff Schaller	naturepathherbalclinic(?!\.)
