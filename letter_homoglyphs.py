@@ -479,7 +479,9 @@ for codepoint in range(0x7f, 0x110000):
 
 
 # Codepoints that could stand for either letters, or as punctuation/separators
-POSSIBLE_SEPARATOR_CODEPOINTS: set[int] = set()
+POSSIBLE_SEPARATOR_CODEPOINTS: set[int] = {
+    0x1FBF1,
+}
 
 for letter, codepoints in CODEPOINTS_FOR_LETTER.items():
     for codepoint in codepoints:
@@ -502,6 +504,27 @@ def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     return r"(?i:\b(?:" + r + r")s?\b)"
 
 
+def fullchars(text: str) -> Iterator[tuple[str, int]]:
+    """Yields all the "full characters" of the string, plus an empty string at the end.
+
+    A "full character" takes up one character space when rendered, thus it includes the initial character and the
+    following combining characters.
+    """
+    fullchar = ''
+    fullchar_pos = 0
+    for text_pos, char in enumerate(text):
+        if not unicodedata.combining(char):
+            if fullchar:
+                yield fullchar, fullchar_pos
+            fullchar = char
+            fullchar_pos = text_pos
+        else:
+            fullchar += char
+    if fullchar:
+        yield fullchar, fullchar_pos
+    yield '', len(text)
+
+
 class ObfuscationFinder:
     def __init__(self, *keyphrases: (str, str | None)):
         self.match_trie = {}
@@ -516,8 +539,8 @@ class ObfuscationFinder:
         current_trie = self.match_trie
         for letter in letters:
             current_trie = current_trie.setdefault(letter, {})
-        current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(build_exclude_regex(keyphrase, exclude),
-                                                                                 REGEX_FLAGS)
+        current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(
+            build_exclude_regex(keyphrase, exclude), REGEX_FLAGS)
         if keyphrase[-1].upper() != 'S':
             self.add_keyphrase(keyphrase + '_S', exclude, keyphrase_name=keyphrase_name)
 
@@ -530,9 +553,14 @@ class ObfuscationFinder:
         old_candidates: list[tuple[dict, str, int]] = []
         new_candidates: list[tuple[dict, str, int]] = []
         already_found: set[tuple[int, str]] = set()
-        previous_char = ''
-        for text_pos, char in enumerate(itertools.chain(*text, ('',))):
-            if is_possible_word_end(previous_char, char):
+        previous_fullchar = ''
+        for fullchar, text_pos in fullchars(text):
+            if is_possible_separator(fullchar):
+                # optionally skip over the word separator
+                for candidate_trie, candidate_text, start_pos in old_candidates:
+                    new_candidates.append((candidate_trie, candidate_text + fullchar, start_pos))
+
+            if is_possible_word_break(previous_fullchar, fullchar):
                 # yield all finished current candidates
                 for candidate_trie, candidate_text, start_pos in old_candidates:
                     keyphrases = candidate_trie.get('')
@@ -544,30 +572,25 @@ class ObfuscationFinder:
                                        candidate_text,
                                        (start_pos, text_pos - 1))
                                 already_found.add((start_pos, keyphrase_name))
-
-            if is_possible_separator(previous_char, char):
-                # optionally skip over the word separator
-                for candidate_trie, candidate_text, start_pos in old_candidates:
-                    new_candidates.append((candidate_trie, candidate_text + char, start_pos))
-
-            if is_possible_word_start(previous_char, char):
+                # candidate for a new word starting here
                 old_candidates.append((match_trie, '', text_pos))
 
-            if char:
-                for letter in get_possible_letters(char):
+            if fullchar:
+                for letter in get_possible_letters(fullchar):
                     for candidate_trie, candidate_text, start_pos in old_candidates:
                         candidate_trie = candidate_trie.get(letter)
                         if candidate_trie is not None:
-                            new_candidate = (candidate_trie, candidate_text + char, start_pos)
+                            new_candidate = (candidate_trie, candidate_text + fullchar, start_pos)
                             if new_candidate not in new_candidates:
                                 new_candidates.append(new_candidate)
 
-            previous_char = char
+            previous_fullchar = fullchar
             new_candidates, old_candidates = old_candidates, new_candidates
             new_candidates.clear()
 
 
-def get_possible_letters(char: str):
+def get_possible_letters(fullchar: str):
+    char = fullchar[0]
     equivalents = LETTERS_FOR_CODEPOINT.get(ord(char))
     if equivalents is not None:
         yield from equivalents
@@ -576,16 +599,25 @@ def get_possible_letters(char: str):
     yield char
 
 
-def is_possible_word_start(previous_char: str, char: str) -> bool:
-    return not regex.match(r'\w', previous_char, flags=REGEX_FLAGS)
+def is_possible_word_break(previous_fullchar: str, fullchar: str) -> bool:
+    if not previous_fullchar or not fullchar:
+        return True
+    previous_category = unicodedata.category(previous_fullchar[0])
+    next_category = unicodedata.category(fullchar[0])
+    if next_category == 'Ll':
+        return previous_category not in ('Ll', 'Lu', 'Lt')
+    elif next_category in ('Lu', 'Lt'):
+        return previous_category != 'Lu'
+    elif previous_category in ('Nd', 'Nl'):
+        return next_category != previous_category
+    else:
+        return True
 
 
-def is_possible_word_end(previous_char: str, char: str) -> bool:
-    return not regex.match(r'\w', char, flags=REGEX_FLAGS)
-
-
-def is_possible_separator(previous_char: str, char: str) -> bool:
-    return char and (ord(char) in POSSIBLE_SEPARATOR_CODEPOINTS or not char.isalnum())
+def is_possible_separator(fullchar: str) -> bool:
+    return (fullchar
+            and (ord(fullchar[0]) in POSSIBLE_SEPARATOR_CODEPOINTS
+                 or not fullchar[0].isalnum()))
 
 
 def analyze_text(text):

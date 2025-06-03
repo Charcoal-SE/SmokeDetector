@@ -1,8 +1,11 @@
 # coding=utf-8
-import regex
+import string
 import unicodedata
-import letter_homoglyphs
+
+import regex
 import pytest
+
+import letter_homoglyphs
 
 
 @pytest.mark.parametrize("keyphrase, exclude, text, expected_matches", [
@@ -10,7 +13,7 @@ import pytest
     ("hello there", "", "hello th3re", ["hello th3re"]),
     ("hello there", "", " he11othere.", ["he11othere"]),
     ("hello", "", "h3llo there", ["h3llo"]),
-    ("hello", "", "hell0there", []),
+    ("hello", "", "helloth3re", []),
     ("there", "", "hello th3re", ["th3re"]),
     ("there", "", "hellothere", []),
     ("hello", "", "h3ll0 there", ["h3ll0"]),
@@ -31,7 +34,7 @@ import pytest
     ("test", "", "t e s ts and t_3_s_t's", ["t e s ts", "t_3_s_t"]),
     ("test", "est|te", "t-ests or +.est's, or te sts", []),
     ("start", "", "$tart $ t a r t  ...$t ar t!", ["$tart", "$ t a r t", "$t ar t"]),
-    ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e5"]),
+    ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e"]),
     ("bad", "", "bád", ["bád"]),
     ("the word", "", "dots in \u1e97\u0324he word", ["\u1e97\u0324he word"]),
     ("Ice", "", "iCe, iÇe", ["iÇe"]),
@@ -68,6 +71,10 @@ import pytest
     ("a b", "", "a\u0301b a \u0301b", ["a\u0301b"]),
     ("voila", "", "voi" + "|" * 10_000 + "a", ["voi" + "|" * 10_000 + "a"]),
     ("caller", "", "ca" + "|" * 10_000 + "er", ["ca" + "|" * 10_000 + "er"]),
+    ("x", "", "x\u0300", ["x\u0300"]),
+    ("camel case", "", "camelCase camelCдse", ["camelCдse"]),
+    ("pascal case", "", "pascalCase pascдlCase", ["pascдlCase"]),
+    ("numbers", "", "12nvmbers34", ["nvmbers"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     finder = letter_homoglyphs.ObfuscationFinder((keyphrase, exclude))
@@ -106,3 +113,62 @@ def test_build_exclude_regex(keyphrase, exclude, text, match_expected):
         assert result
     else:
         assert not result
+
+
+@pytest.mark.parametrize("text", [
+    "",
+    "abc",
+    "word word word",
+    "a-b-c-d",
+    string.printable,
+    "ᏟႮՏͲϴᎷᎬᎡ",
+])
+def test_fullchars_no_combining(text):
+    assert list(letter_homoglyphs.fullchars(text)) == [(c, p) for p, c in enumerate(text)] + [('', len(text))]
+
+
+@pytest.mark.parametrize("text, expected_fullchars", [
+    ("a\u0303bc\u0304d", [('a\u0303', 0), ('b', 2), ('c\u0304', 3), ('d', 5), ('', 6)]),
+    ("a\u0303\u0323b", [('a\u0303\u0323', 0), ('b', 3), ('', 4)]),
+    (" \u0303\u0323b", [(' \u0303\u0323', 0), ('b', 3), ('', 4)]),
+    ("a \u0303\u0323b", [('a', 0), (' \u0303\u0323', 1), ('b', 4), ('', 5)]),
+    ("\u0303\u0323b", [('\u0303\u0323', 0), ('b', 2), ('', 3)]),
+])
+def test_fullchars_with_combining(text, expected_fullchars):
+    assert list(letter_homoglyphs.fullchars(text)) == expected_fullchars
+
+
+@pytest.mark.parametrize("chars, is_possible", [
+    ("ab", False),
+    ("aB", True),
+    ("AB", False),
+    ("Ab", False),
+    ("a1", True),
+    ("A1", True),
+    ("1a", True),
+    ("1A", True),
+    ("12", False),
+    ("1 ", True),
+    (" 1", True),
+    ("A ", True),
+    (" A", True),
+    ("a ", True),
+    (" a", True),
+])
+def test_is_possible_word_break(chars, is_possible):
+    assert letter_homoglyphs.is_possible_word_break(*chars) == is_possible
+
+
+@pytest.mark.parametrize("chars, is_possible", [
+    (string.whitespace, True),
+    (string.punctuation, True),
+    (string.ascii_letters, False),
+    (string.digits, False),
+    ("\u02d7\u2010\u2012\u2013\u2043\u2212\u2796\uFE58", True),
+    ("\u2223\u23FD\U0001FBF1\uFFE8\u2016\u2551\u29DA", True),
+    ("\u201C\u201D\u201F\u2033\u2036\u3003\uFF02\u2018\u2019\u201B\u2032\u2035", True),
+    ("éàÕñÜ", False),
+])
+def test_is_possible_separator_true(chars, is_possible):
+    for char in chars:
+        assert letter_homoglyphs.is_possible_separator(char) == is_possible
