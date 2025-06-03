@@ -74135,3 +74135,4 @@
 1748956414	cigien	zontroy\.com
 1748960989	VLAZ	worldofsmm\.com
 1748971505	VLAZ	smmagencyhub\.com
+1748971522	VLAZ	smmagencyhub(?!\.com)
