@@ -74132,3 +74132,4 @@
 1748953017	cigien	punterkaadda\.com
 1748953025	cigien	punterkaadda(?!\.com)
 1748955067	Glorfindel	Namrata[\W_]*+Hinduja
+1748956414	cigien	zontroy\.com
