@@ -502,75 +502,69 @@ def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     return r"(?i:\b(?:" + r + r")s?\b)"
 
 
-def add_keyphrase(compiled_keyphrases, keyphrase, exclude, keyphrase_name=None):
-    """Adds one keyphrase to compiled_keyphrases."""
-    if keyphrase_name is None:
-        keyphrase_name = keyphrase.replace('_', '')
-    letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper(), flags=REGEX_FLAGS)
-    current_trie = compiled_keyphrases
-    for letter in letters:
-        current_trie = current_trie.setdefault(letter, {})
-    current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(build_exclude_regex(keyphrase, exclude),
-                                                                             REGEX_FLAGS)
-    if keyphrase[-1].upper() != 'S':
-        add_keyphrase(compiled_keyphrases, keyphrase + '_S', exclude, keyphrase_name=keyphrase_name)
+class ObfuscationFinder:
+    def __init__(self, *keyphrases: (str, str | None)):
+        self.match_trie = {}
+        for keyphrase, exclude in keyphrases:
+            self.add_keyphrase(keyphrase, exclude)
 
+    def add_keyphrase(self, keyphrase, exclude='', keyphrase_name=None):
+        """Adds one keyphrase to be searched for."""
+        if keyphrase_name is None:
+            keyphrase_name = keyphrase.replace('_', '')
+        letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper(), flags=REGEX_FLAGS)
+        current_trie = self.match_trie
+        for letter in letters:
+            current_trie = current_trie.setdefault(letter, {})
+        current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(build_exclude_regex(keyphrase, exclude),
+                                                                                 REGEX_FLAGS)
+        if keyphrase[-1].upper() != 'S':
+            self.add_keyphrase(keyphrase + '_S', exclude, keyphrase_name=keyphrase_name)
 
-def compile_keyphrases(*keyphrases: (str, str | None)):
-    """Compiles keyphrases for use with find_matches().
+    def find_matches(self, text: str) -> Iterator[tuple[str, str, tuple[int, int]]]:
+        """Searches the given text for obfuscated keyphrases.
 
-    Keyphrases must be specified as (keyphrase, exclude_regex) tuples.
-    """
-    match_trie = {}
-    for keyphrase, exclude in keyphrases:
-        add_keyphrase(match_trie, keyphrase, exclude)
-    return match_trie
-
-
-def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tuple[int, int]]]:
-    """Searches the given text for obfuscated keyphrases.
-
-    Yields resulting tuples of (keyphrase_name, obfuscated_text, (start_pos, end_pos))
-    """
-    match_trie = compiled_keyphrases
-    old_candidates: list[tuple[dict, str, int]] = []
-    new_candidates: list[tuple[dict, str, int]] = []
-    already_found: set[tuple[int, str]] = set()
-    previous_char = ''
-    for text_pos, char in enumerate(itertools.chain(*text, ('',))):
-        if is_possible_word_end(previous_char, char):
-            # yield all finished current candidates
-            for candidate_trie, candidate_text, start_pos in old_candidates:
-                keyphrases = candidate_trie.get('')
-                if keyphrases is not None:
-                    for keyphrase_name, exclude_regex in keyphrases.items():
-                        if ((start_pos, keyphrase_name) not in already_found
-                                and not exclude_regex.search(candidate_text)):
-                            yield (keyphrase_name,
-                                   candidate_text,
-                                   (start_pos, text_pos - 1))
-                            already_found.add((start_pos, keyphrase_name))
-
-        if is_possible_separator(previous_char, char):
-            # optionally skip over the word separator
-            for candidate_trie, candidate_text, start_pos in old_candidates:
-                new_candidates.append((candidate_trie, candidate_text + char, start_pos))
-
-        if is_possible_word_start(previous_char, char):
-            old_candidates.append((match_trie, '', text_pos))
-
-        if char:
-            for letter in get_possible_letters(char):
+        Yields resulting tuples of (keyphrase_name, obfuscated_text, (start_pos, end_pos))
+        """
+        match_trie = self.match_trie
+        old_candidates: list[tuple[dict, str, int]] = []
+        new_candidates: list[tuple[dict, str, int]] = []
+        already_found: set[tuple[int, str]] = set()
+        previous_char = ''
+        for text_pos, char in enumerate(itertools.chain(*text, ('',))):
+            if is_possible_word_end(previous_char, char):
+                # yield all finished current candidates
                 for candidate_trie, candidate_text, start_pos in old_candidates:
-                    candidate_trie = candidate_trie.get(letter)
-                    if candidate_trie is not None:
-                        new_candidate = (candidate_trie, candidate_text + char, start_pos)
-                        if new_candidate not in new_candidates:
-                            new_candidates.append(new_candidate)
+                    keyphrases = candidate_trie.get('')
+                    if keyphrases is not None:
+                        for keyphrase_name, exclude_regex in keyphrases.items():
+                            if ((start_pos, keyphrase_name) not in already_found
+                                    and not exclude_regex.search(candidate_text)):
+                                yield (keyphrase_name,
+                                       candidate_text,
+                                       (start_pos, text_pos - 1))
+                                already_found.add((start_pos, keyphrase_name))
 
-        previous_char = char
-        new_candidates, old_candidates = old_candidates, new_candidates
-        new_candidates.clear()
+            if is_possible_separator(previous_char, char):
+                # optionally skip over the word separator
+                for candidate_trie, candidate_text, start_pos in old_candidates:
+                    new_candidates.append((candidate_trie, candidate_text + char, start_pos))
+
+            if is_possible_word_start(previous_char, char):
+                old_candidates.append((match_trie, '', text_pos))
+
+            if char:
+                for letter in get_possible_letters(char):
+                    for candidate_trie, candidate_text, start_pos in old_candidates:
+                        candidate_trie = candidate_trie.get(letter)
+                        if candidate_trie is not None:
+                            new_candidate = (candidate_trie, candidate_text + char, start_pos)
+                            if new_candidate not in new_candidates:
+                                new_candidates.append(new_candidate)
+
+            previous_char = char
+            new_candidates, old_candidates = old_candidates, new_candidates
+            new_candidates.clear()
 
 
 def get_possible_letters(char: str):

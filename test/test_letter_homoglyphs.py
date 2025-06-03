@@ -70,9 +70,9 @@ import pytest
     ("caller", "", "ca" + "|" * 10_000 + "er", ["ca" + "|" * 10_000 + "er"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
-    compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
+    finder = letter_homoglyphs.ObfuscationFinder((keyphrase, exclude))
     matches = [(unicodedata.normalize('NFC', m), k)
-               for k, m, p in letter_homoglyphs.find_matches(compiled, text)]
+               for k, m, p in finder.find_matches(text)]
     assert matches == [(unicodedata.normalize('NFC', m), keyphrase.replace('_', ''))
                        for m in expected_matches]
 

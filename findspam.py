@@ -2937,7 +2937,7 @@ obfuscation_keyphrases = [
     ("aofexpro.com", ""),
     ("crypto.com", ""),
 ]
-obfuscation_keyphrases_compiled = letter_homoglyphs.compile_keyphrases(*obfuscation_keyphrases)
+obfuscation_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_keyphrases)
 
 # These will trigger "Potentially bad keyword in ..." with the same report details as the "Obfuscated word in ..." rule
 obfuscation_watch_keyphrases = [
@@ -2999,13 +2999,13 @@ obfuscation_watch_keyphrases = [
     ("Protop_Fin", ""),
     ("Savv_Score", ""),
 ]
-obfuscation_watch_keyphrases_compiled = letter_homoglyphs.compile_keyphrases(*obfuscation_watch_keyphrases)
+obfuscation_watch_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_watch_keyphrases)
 
 
-def find_obfuscated_matches(compiled, s):
+def find_obfuscated_matches(finder, s):
     s = strip_urls_and_tags(s)
     matches = []
-    for keyphrase, match, (pos_from, pos_to) in letter_homoglyphs.find_matches(compiled, s):
+    for keyphrase, match, (pos_from, pos_to) in finder.find_matches(s):
         matches.append("Position {}-{}: {!r} is obfuscated {!r}".format(pos_from, pos_to, match, keyphrase))
     return matches
 
