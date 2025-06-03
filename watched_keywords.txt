@@ -74107,3 +74107,4 @@
 1748931015	cigien	rentcarbros\.com
 1748931026	cigien	rentcarbros(?!\.com)
 1748932761	VLAZ	rekinysukcesu\.pl
+1748933511	cigien	famups(?!\.com)
