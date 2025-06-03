@@ -451,7 +451,7 @@ for codepoint in range(0x7f, 0x110000):
     if codepoint in LETTERS_FOR_CODEPOINT:
         continue
     char = chr(codepoint)
-    normalized = unicodedata.normalize('NFKC', char)
+    normalized = unicodedata.normalize('NFKD', char)
     if normalized == char:
         if unicodedata.category(char)[0] == 'C':
             continue
@@ -466,9 +466,11 @@ for codepoint in range(0x7f, 0x110000):
             normalized = unicodedata.lookup(normalized_name)
         except KeyError:
             continue
-    if len(normalized) == 1 and unicodedata.decomposition(normalized) == '':
-        for letter in LETTERS_FOR_CODEPOINT.get(ord(normalized), ()):
-            add_equivalent(codepoint, letter)
+    if len(normalized) > 1:
+        if any(unicodedata.category(c)[0] != 'M' for c in normalized[1:]):
+            continue
+    for letter in LETTERS_FOR_CODEPOINT.get(ord(normalized[0]), ()):
+        add_equivalent(codepoint, letter)
 
 
 # Codepoints that could stand for either letters, or as punctuation/separators
@@ -551,7 +553,6 @@ def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tup
     Yields resulting tuples of (keyphrase_name, obfuscated_text, (start_pos, end_pos))
     """
     match_trie = compiled_keyphrases
-    text = unicodedata.normalize('NFD', text)
     old_candidates: list[tuple[dict, str, int]] = []
     new_candidates: list[tuple[dict, str, int]] = []
     already_found: set[tuple[int, str]] = set()
@@ -566,7 +567,7 @@ def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tup
                         if (not exclude_regex.search(candidate_text)
                                 and (start_pos, keyphrase_name) not in already_found):
                             yield (keyphrase_name,
-                                   unicodedata.normalize('NFC', candidate_text),
+                                   candidate_text,
                                    (start_pos, text_pos - 1))
                             already_found.add((start_pos, keyphrase_name))
 
@@ -614,7 +615,7 @@ def is_possible_separator(previous_char: str, char: str) -> bool:
 def analyze_text(text):
     letter_options = []
     unknown = set()
-    for char in unicodedata.normalize('NFD', text):
+    for char in text:
         could_be = list(LETTERS_FOR_CODEPOINT.get(ord(char), ()))
         if char.upper() not in could_be and (char.isspace() or char in string.printable):
             could_be.append(char)
