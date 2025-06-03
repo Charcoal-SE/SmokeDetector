@@ -74121,3 +74121,4 @@
 1748942899	cigien	ieeexpert\.com
 1748943454	cigien	finalert(?!\.com|\.net)
 1748943508	cigien	logicsimplified\.com
+1748945100	VLAZ	astroleaf\.in
