@@ -16,7 +16,7 @@ import pytest
     ("hello", "", "h3ll0 there", ["h3ll0"]),
     ("test", "", "te$+", ["te$+"]),
     ("one two", "", "(on3\t tw0)", ["on3\t tw0"]),
-    ("word", "", "l0ts 0f w0rds", ["w0rd"]),
+    ("word", "", "l0ts 0f w0rds", ["w0rds"]),
     ("word", "", "l0ts 0f w0rd's", ["w0rd"]),
     ("word", "", "l0ts 0f w'0'r'd's", ["w'0'r'd"]),
     ("thing word", "", "th1ng.word", ["th1ng.word"]),
@@ -26,11 +26,12 @@ import pytest
     ("cash$money", "", "   c a s h $ m o n e y  ", ["c a s h $ m o n e y"]),
     ("cash$money", "", "cash5money", []),
     ("caller", "", "ca||er.ca| |er,call|er", ["ca||er", "ca| |er", "call|er"]),
+    ("caller", "", "ca|ller*ca||ller!cal||ler", ["ca|ller", "ca||ller", "cal||ler"]),
     ("caller", "all", "c a l l e r c all e r ca ll er", ["c a l l e r", "ca ll er"]),
-    ("test", "", "t e s ts and t_3_s_t's", ["t e s t", "t_3_s_t"]),
+    ("test", "", "t e s ts and t_3_s_t's", ["t e s ts", "t_3_s_t"]),
     ("test", "est|te", "t-ests or +.est's, or te sts", []),
     ("start", "", "$tart $ t a r t  ...$t ar t!", ["$tart", "$ t a r t", "$t ar t"]),
-    ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e"]),
+    ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e5"]),
     ("bad", "", "bád", ["bád"]),
     ("the word", "", "dots in \u1e97\u0324he word", ["\u1e97\u0324he word"]),
     ("Ice", "", "iCe, iÇe", ["iÇe"]),
@@ -58,7 +59,7 @@ import pytest
     ("customer service", "", "ᏟႮՏͲϴᎷᎬᎡ service", ["ᏟႮՏͲϴᎷᎬᎡ service"]),
     ("price", "", "🇵🇷🇮🇨🇪", ["🇵🇷🇮🇨🇪"]),
     ("ucsaw", "", "Ⴎᑕᔕᗩᗯ", ["Ⴎᑕᔕᗩᗯ"]),
-    ("he he", "", "HE he, ℏℇ ℎ€; ℋ℮ ℌℯ!", ["ℏℇ ℎ€", "ℋ℮ ℌℯ"]),
+    ("he he", "", "HE he, yes ℏℇ ℎ€; and furthermore ℋ℮ ℌℯ!", ["ℏℇ ℎ€", "ℋ℮ ℌℯ"]),
     ("pkaicrucabdxdie", "", "℗KÅℹ©️®️µ¢ªßð×Ð¡⅀", ["℗KÅℹ©️®️µ¢ªßð×Ð¡⅀"]),
     ("easy", "", "③⁴₅y", ["③⁴₅y"]),
     ("0123456789", "", "\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E", ["\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E"]),
@@ -67,20 +68,10 @@ import pytest
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
-    matches = [(unicodedata.normalize('NFC', m.group()), k)
-               for m, k in letter_homoglyphs.find_matches(compiled, text)]
+    matches = [(unicodedata.normalize('NFC', m), k)
+               for k, m, p in letter_homoglyphs.find_matches(compiled, text)]
     assert matches == [(unicodedata.normalize('NFC', m), keyphrase.replace('_', ''))
                        for m in expected_matches]
-
-
-@pytest.mark.parametrize("keyphrase", [
-    "a",
-    "bc",
-    "d e",
-])
-def test_build_keyphrase_regex_matches_keyphrase(keyphrase):
-    r = letter_homoglyphs.build_keyphrase_regex(keyphrase)
-    assert regex.search(r, keyphrase, letter_homoglyphs.REGEX_FLAGS)
 
 
 @pytest.mark.parametrize("keyphrase, exclude", [
@@ -125,18 +116,3 @@ def test_build_regex_charset(chars, non):
         assert regex.fullmatch(regex_charset, char, letter_homoglyphs.REGEX_FLAGS)
     for char in non:
         assert not regex.fullmatch(regex_charset, char, letter_homoglyphs.REGEX_FLAGS)
-
-
-@pytest.mark.parametrize("char", list("abCD90'.#"))
-def test_build_equivalent_regex_same(char):
-    assert regex.fullmatch(letter_homoglyphs.build_equivalent_regex(char), char, letter_homoglyphs.REGEX_FLAGS)
-
-
-@pytest.mark.parametrize("char", list("abyz"))
-def test_build_equivalent_regex_case_insensitive(char):
-    assert regex.fullmatch(letter_homoglyphs.build_equivalent_regex(char.lower()), char.upper(), letter_homoglyphs.REGEX_FLAGS)
-    assert regex.fullmatch(letter_homoglyphs.build_equivalent_regex(char.upper()), char.lower(), letter_homoglyphs.REGEX_FLAGS)
-
-
-def test_build_equivalent_regex_combining_modifiers():
-    assert regex.fullmatch(letter_homoglyphs.build_equivalent_regex('e'), "e\u0301", letter_homoglyphs.REGEX_FLAGS)

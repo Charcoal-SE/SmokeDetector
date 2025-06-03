@@ -3005,8 +3005,8 @@ obfuscation_watch_keyphrases_compiled = letter_homoglyphs.compile_keyphrases(*ob
 def find_obfuscated_matches(compiled, s):
     s = strip_urls_and_tags(s)
     matches = []
-    for match, keyphrase in letter_homoglyphs.find_matches(obfuscation_keyphrases_compiled, s):
-        matches.append("%r is obfuscated %r" % (match.group(), keyphrase))
+    for keyphrase, match, (pos_from, pos_to) in letter_homoglyphs.find_matches(compiled, s):
+        matches.append("Position {}-{}: {!r} is obfuscated {!r}".format(pos_from, pos_to, match, keyphrase))
     return matches
 
 

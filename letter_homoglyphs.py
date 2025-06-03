@@ -4,6 +4,7 @@ import string
 import unicodedata
 
 import regex
+from typing import Iterator
 
 from helpers import regex_compile_no_cache
 
@@ -500,11 +501,6 @@ def build_equivalent_charset_regex(c: str, **kwargs) -> str:
     return build_regex_charset(get_equivalent_codepoints(c), **kwargs)
 
 
-def build_equivalent_regex(c: str) -> str:
-    """Returns a regex string for any equivalent of the given character."""
-    return build_equivalent_charset_regex(c) + COMBINING_MARK_REGEX + "*+"
-
-
 # These are treated as potential word separators in keyphrases and exclude checks
 KEYPHRASE_SPACE_REGEX = build_equivalent_charset_regex("-", prefix=r'[\s')
 
@@ -513,78 +509,106 @@ def is_keyphrase_space(c: str) -> bool:
     return bool(regex.match(KEYPHRASE_SPACE_REGEX, c, flags=REGEX_FLAGS))
 
 
-# The end of a keyphrase: optional plural or possessive s, then no immediate letter or number.
-# We don't use \b because it's possible the last "letter" was a lookalike that is technically non-word.
-KEYPHRASE_REGEX_END = "(?!(?!" + build_equivalent_regex("s") + r"(?!\w))\w)"
-
-
-def build_possible_separator_regex_charset(c: str) -> str | None:
-    codepoints = list(filter(POSSIBLE_SEPARATOR_CODEPOINTS.__contains__, get_equivalent_codepoints(c)))
-    if codepoints:
-        return build_regex_charset(codepoints)
-    else:
-        return None
-
-
 SEPARATOR_REGEX = r"[\W_\s{}]".format(COMBINING_MARK_REGEX)
-
-
-def build_separator_regex(char_before: str, char_after: str) -> str:
-    """
-    Builds a regular expression string for the space between two keyword characters.
-    This space is made up of whitespace, other non-word characters, and optional combining marks.
-    """
-    if is_keyphrase_space(char_after):
-        return ""  # we will create the word separator when the space is char_before
-
-    # To avoid needing any backtracking, any non-letter characters that could possibly be obfuscated letters
-    # FOR THE NEXT EXPECTED LETTER ONLY are not counted as punctuation.
-    ambiguous_charset = build_possible_separator_regex_charset(char_after)
-    if ambiguous_charset:
-        return r"(?:[{}--{}])*+".format(SEPARATOR_REGEX, ambiguous_charset)
-    else:
-        return SEPARATOR_REGEX + "*+"
-
-
-def build_keyphrase_regex(keyphrase: str) -> str:
-    # We don't use \b, because it's possible the first "letter" will be a lookalike that is technically non-word.
-    # Instead, we do a lookbehind after we've matched the first letter.
-    r = build_equivalent_charset_regex(keyphrase[0]) + r"(?<!\w.){}*+".format(COMBINING_MARK_REGEX)
-    for next_idx in range(1, len(keyphrase)):
-        r += build_separator_regex(keyphrase[next_idx - 1], keyphrase[next_idx])
-        if not is_keyphrase_space(keyphrase[next_idx]):
-            r += build_equivalent_regex(keyphrase[next_idx])
-    return r + KEYPHRASE_REGEX_END
 
 
 def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     # Always exclude the keyphrase, regardless of changes in word breaks
-    r = ("^"
-         + (SEPARATOR_REGEX + "*+").join(map(regex.escape, regex.split(KEYPHRASE_SPACE_REGEX + "++", keyphrase)))
-         + "$")
+    r = (SEPARATOR_REGEX + "*+").join(map(regex.escape, regex.split(KEYPHRASE_SPACE_REGEX + "++", keyphrase)))
     if exclude:
-        r += r"|\b(?:" + exclude + r")\b"
-    return "(?i:" + r + ")"
+        r += r"|" + exclude
+    return r"(?i:\b(?:" + r + r")s?\b)"
+
+
+def add_keyphrase(compiled_keyphrases, keyphrase, exclude, keyphrase_name=None):
+    """Adds one keyphrase to compiled_keyphrases."""
+    if keyphrase_name is None:
+        keyphrase_name = keyphrase.replace('_', '')
+    letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper())
+    current_trie = compiled_keyphrases
+    for letter in letters:
+        current_trie = current_trie.setdefault(letter, {})
+    current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(build_exclude_regex(keyphrase, exclude),
+                                                                             REGEX_FLAGS)
+    if keyphrase[-1].upper() != 'S':
+        add_keyphrase(compiled_keyphrases, keyphrase + '_S', exclude, keyphrase_name=keyphrase_name)
 
 
 def compile_keyphrases(*keyphrases: (str, str | None)):
-    compiled = []
+    """Compiles keyphrases for use with find_matches().
+
+    Keyphrases must be specified as (keyphrase, exclude_regex) tuples.
+    """
+    match_trie = {}
     for keyphrase, exclude in keyphrases:
-        compiled.append((
-            keyphrase.replace('_', ''),
-            regex_compile_no_cache(build_keyphrase_regex(keyphrase), REGEX_FLAGS),
-            regex_compile_no_cache(build_exclude_regex(keyphrase, exclude), REGEX_FLAGS)))
-    return compiled
+        add_keyphrase(match_trie, keyphrase, exclude)
+    return match_trie
 
 
-def find_matches(compiled_keyphrases, text: str):
+def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tuple[int, int]]]:
+    """Searches the given text for obfuscated keyphrases.
+
+    Yields resulting tuples of (keyphrase_name, obfuscated_text, (start_pos, end_pos))
+    """
+    match_trie = compiled_keyphrases
     text = unicodedata.normalize('NFD', text)
-    for keyphrase, keyphrase_regex, exclude_regex in compiled_keyphrases:
-        seen = set()
-        for match in filter(lambda m: m not in seen, keyphrase_regex.finditer(text)):
-            if not exclude_regex.search(match.group()):
-                yield match, keyphrase
-            seen.add(match)
+    old_candidates: list[tuple[dict, str, int]] = []
+    new_candidates: list[tuple[dict, str, int]] = []
+    already_found: set[tuple[int, str]] = set()
+    previous_char = ''
+    for text_pos, char in enumerate(itertools.chain(*text, ('',))):
+        if is_possible_word_end(previous_char, char):
+            # yield all finished current candidates
+            for candidate_trie, candidate_text, start_pos in old_candidates:
+                keyphrases = candidate_trie.get('')
+                if keyphrases is not None:
+                    for keyphrase_name, exclude_regex in keyphrases.items():
+                        if (not exclude_regex.search(candidate_text)
+                                and (start_pos, keyphrase_name) not in already_found):
+                            yield (keyphrase_name,
+                                   unicodedata.normalize('NFC', candidate_text),
+                                   (start_pos, text_pos - 1))
+                            already_found.add((start_pos, keyphrase_name))
+
+        if is_possible_separator(previous_char, char):
+            # optionally skip over the word separator
+            for candidate_trie, candidate_text, start_pos in old_candidates:
+                new_candidates.append((candidate_trie, candidate_text + char, start_pos))
+
+        if is_possible_word_start(previous_char, char):
+            old_candidates.append((match_trie, '', text_pos))
+
+        if char:
+            for letter in get_possible_letters(char):
+                for candidate_trie, candidate_text, start_pos in old_candidates:
+                    candidate_trie = candidate_trie.get(letter)
+                    if candidate_trie is not None:
+                        new_candidates.append((candidate_trie, candidate_text + char, start_pos))
+
+        previous_char = char
+        new_candidates, old_candidates = old_candidates, new_candidates
+        new_candidates.clear()
+
+
+def get_possible_letters(char: str):
+    equivalents = LETTERS_FOR_CODEPOINT.get(ord(char))
+    if equivalents is not None:
+        yield from equivalents
+        if char.upper() in equivalents:
+            return
+    yield char
+
+
+def is_possible_word_start(previous_char: str, char: str) -> bool:
+    return not regex.match(r'\w', previous_char)
+
+
+def is_possible_word_end(previous_char: str, char: str) -> bool:
+    return not regex.match(r'\w', char)
+
+
+def is_possible_separator(previous_char: str, char: str) -> bool:
+    return char and (ord(char) in POSSIBLE_SEPARATOR_CODEPOINTS or not char.isalnum())
 
 
 def analyze_text(text):
