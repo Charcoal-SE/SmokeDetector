@@ -35440,7 +35440,6 @@
 1644086624	tripleee	leadbycode\.com
 1644124796	Makyen	codingyaar\.com
 1644136976	Makyen	(?-i:0rLmG2)(?#fiverr.com)
-1644142408	tripleee	vaporspirit\.ch
 1644142422	tripleee	vaporspirit(?!\.ch)
 1644142577	tripleee	cbd[\W_]*+kaufen
 1644153053	tripleee	applicationyak\.com
