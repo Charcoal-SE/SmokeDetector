@@ -74132,3 +74132,4 @@
 1748918980	Anerdw	cearvol\.com
 1748952607	cigien	techi\.com
 1748953017	cigien	punterkaadda\.com
+1748953025	cigien	punterkaadda(?!\.com)
