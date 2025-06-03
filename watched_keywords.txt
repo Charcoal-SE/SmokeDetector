@@ -74099,7 +74099,6 @@
 1748908354	Dan Getz	cytotecreal\.com
 1748927980	cigien	genomirx\.com
 1748928020	cigien	genomi[\W_]*+rx(?!\.com(?<=genomirx\.com))
-1748928371	cigien	cearvol\.com
 1748929624	VLAZ	healthanza\.com
 1748930724	VLAZ	awscents\.co\.uk
 1748930765	VLAZ	(?-i:Fastusdts)(?#t.me)
@@ -74129,7 +74128,6 @@
 1748948884	Jeff Schaller	naturepathherbalclinic(?!\.)
 1748948924	Jeff Schaller	shoes\.pk
 1748949435	VLAZ	qGdN3Z
-1748918980	Anerdw	cearvol\.com
 1748952607	cigien	techi\.com
 1748953017	cigien	punterkaadda\.com
 1748953025	cigien	punterkaadda(?!\.com)
