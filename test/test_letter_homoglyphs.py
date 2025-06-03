@@ -65,6 +65,9 @@ import pytest
     ("0123456789", "", "\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E", ["\U0001D7F6¹\U0001D7EE\U0001D7DB\U0001D7D2\u2464\u2479\u248E\u24FC\u277E"]),
     ("one", "", "ϴηϵ øᑎє", ["ϴηϵ", "øᑎє"]),
     ("q", "", "Q \u024a \u024b", ["\u024a", "\u024b"]),
+    ("a b", "", "a\u0301b a \u0301b", ["a\u0301b"]),
+    ("voila", "", "voi" + "|" * 10_000 + "a", ["voi" + "|" * 10_000 + "a"]),
+    ("caller", "", "ca" + "|" * 10_000 + "er", ["ca" + "|" * 10_000 + "er"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     compiled = letter_homoglyphs.compile_keyphrases((keyphrase, exclude))
@@ -103,16 +106,3 @@ def test_build_exclude_regex(keyphrase, exclude, text, match_expected):
         assert result
     else:
         assert not result
-
-
-@pytest.mark.parametrize("chars, non", [
-    ("a", "X"),
-    ("ABCDEFG", "123"),
-    ("ñó", "ẽºä"),
-])
-def test_build_regex_charset(chars, non):
-    regex_charset = letter_homoglyphs.build_regex_charset(map(ord, chars))
-    for char in chars:
-        assert regex.fullmatch(regex_charset, char, letter_homoglyphs.REGEX_FLAGS)
-    for char in non:
-        assert not regex.fullmatch(regex_charset, char, letter_homoglyphs.REGEX_FLAGS)

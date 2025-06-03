@@ -2,14 +2,14 @@
 import itertools
 import string
 import unicodedata
+from typing import Iterator
 
 import regex
-from typing import Iterator
 
 from helpers import regex_compile_no_cache
 
-# In this module our regexes are case-sensitive, and we make use of set subtraction
-REGEX_FLAGS = regex.U | regex.S | regex.V1
+# In this module our regexes default to case-sensitive
+REGEX_FLAGS = regex.U | regex.S
 
 
 def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_map):
@@ -22,6 +22,7 @@ def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_ma
 # Latin letters which look like others (case-sensitive)
 LATIN_LOOKALIKE_LETTERS = {
     'A': ['turned alpha', 'inverted alpha'],
+    'D': ['delta'],
     'F': ['long s'],
     'I': ['l', 'j', 'J', 'broken l', 'dotless i', 'dotless j'],
     'J': ['dotless j'],
@@ -29,14 +30,22 @@ LATIN_LOOKALIKE_LETTERS = {
     'Q': ['SMALL Q WITH HOOK TAIL']  # sic
 }
 add_case_insensitive_lookalikes(LATIN_LOOKALIKE_LETTERS, {
-    'B': ['SHARP S', 'CLOSED REVERSED OPEN E'],
+    'A': ['ALPHA', 'TURNED V'],
+    'B': ['BETA', 'SHARP S', 'CLOSED REVERSED OPEN E'],
     'C': ['STRETCHED C'],
-    'D': ['ETH'],
+    'D': ['ETH', 'TURNED ALPHA'],
     'E': ['OPEN E'],
-    'H': ['HENG'],
+    'H': ['HENG', 'HWAIR'],
+    'I': ['IOTA'],
+    'L': ['IOTA'],
     'N': ['ENG'],
-    'U': ['V'],
-    'V': ['U'],
+    'O': ['TAILLESS PHI'],
+    'P': ['WYNN'],
+    'U': ['V', 'UPSILON'],
+    'V': ['U', 'UPSILON', 'GAMMA', 'RAMS HORN', 'VEND'],
+    'W': ['OMEGA', 'CLOSED OMEGA', 'TURNED M', 'INVERTED M', 'VY'],
+    'X': ['CHI'],
+    'Y': ['GAMMA', 'VEND'],
 })
 
 # Names of Greek letters which look like Latin letters (case-sensitive)
@@ -336,7 +345,7 @@ EQUIVALENT_CODEPOINT_LISTS: {str: list[int]} = {
         0x1d54b, 0x1d565, 0x1d57f, 0x1d599, 0x1d5b3, 0x1d5cd, 0x1d5e7, 0x1d601, 0x1d61b, 0x1d635, 0x1d64f, 0x1d669,
         0x1d683, 0x1d69d, 0x1d6bb, 0x1d6f5, 0x1d72f, 0x1d769, 0x1d7a3, 0x1f768,
         # additional ones found
-        0x22BA, 0x271D, 0x271E, 0x271F, 0x2020,
+        0x22BA, 0x271D, 0x271E, 0x271F, 0x2020, 0x1F546, 0x1F547,
     ],
     'U': [
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
@@ -400,10 +409,6 @@ EQUIVALENT_CODEPOINT_LISTS: {str: list[int]} = {
         # confusables from https://util.unicode.org/UnicodeJsps/confusables.jsp
         0x660, 0x6f0, 0x701, 0x702, 0x2024, 0xa4f8, 0xa60e, 0x10a50, 0x1d16d,
     ],
-
-    # used for word breaks in keyphrase definitions
-    # note that any non-word character will be accepted as non-obfuscation in matches
-    '-': [ord('_')],
 }
 
 
@@ -437,7 +442,7 @@ for letter in string.ascii_uppercase:
         latin_names.extend(LATIN_LOOKALIKE_LETTERS[letter])
     for codepoint in itertools.chain(
         get_letter_homoglyphs_by_unicode_name(latin_names, [None, 'LATIN']),
-        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), [None, 'GREEK', 'LATIN']),
+        get_letter_homoglyphs_by_unicode_name(GREEK_LOOKALIKE_NAMES.get(letter, ()), [None, 'GREEK']),
         get_letter_homoglyphs_by_unicode_name(CYRILLIC_LOOKALIKE_NAMES.get(letter, ()), ['CYRILLIC'])
     ):
         add_equivalent(codepoint, letter)
@@ -459,7 +464,7 @@ for codepoint in range(0x7f, 0x110000):
             name = unicodedata.name(char)
         except ValueError:
             continue
-        normalized_name = regex.sub(r' (?:BARRED|CROSSED|LONG-LEGGED|WITH .*)', '', name)
+        normalized_name = regex.sub(r' (?:BARRED|CROSSED|LONG-LEGGED|WITH .*)', '', name, flags=REGEX_FLAGS)
         if normalized_name == name:
             continue
         try:
@@ -482,41 +487,16 @@ for letter, codepoints in CODEPOINTS_FOR_LETTER.items():
             POSSIBLE_SEPARATOR_CODEPOINTS.add(codepoint)
 
 
-# These are diacritical marks that are expressed as separate codepoints, but don't take extra space on the screen.
-COMBINING_MARK_REGEX = r"\p{Mn}"
+# Potential word separators in keyphrase and exclude check definitions
+KEYPHRASE_SPACE_REGEX = r'[\s\-_]++'
 
-
-def build_regex_charset(codepoints, prefix='[', suffix=']'):
-    return prefix + regex.escape(''.join(map(chr, codepoints))) + suffix
-
-
-def get_equivalent_codepoints(c: str) -> list[int]:
-    codepoints = CODEPOINTS_FOR_LETTER.get(c.upper())
-    return sorted(codepoints) if codepoints is not None else [ord(c)]
-
-
-def build_equivalent_charset_regex(c: str, **kwargs) -> str:
-    """
-    Returns a regex string, for a single character only, which is equivalent of the given character.
-    Does not match extra combining modifiers.
-    """
-    return build_regex_charset(get_equivalent_codepoints(c), **kwargs)
-
-
-# These are treated as potential word separators in keyphrases and exclude checks
-KEYPHRASE_SPACE_REGEX = build_equivalent_charset_regex("-", prefix=r'[\s')
-
-
-def is_keyphrase_space(c: str) -> bool:
-    return bool(regex.match(KEYPHRASE_SPACE_REGEX, c, flags=REGEX_FLAGS))
-
-
-SEPARATOR_REGEX = r"[\W_\s{}]".format(COMBINING_MARK_REGEX)
+# Potential word separators in exclude check regexes
+SEPARATOR_REGEX = r"(?:[\W_\s][\W_\s\p{Mn}]*+)?+"
 
 
 def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     # Always exclude the keyphrase, regardless of changes in word breaks
-    r = (SEPARATOR_REGEX + "*+").join(map(regex.escape, regex.split(KEYPHRASE_SPACE_REGEX + "++", keyphrase)))
+    r = SEPARATOR_REGEX.join(map(regex.escape, regex.split(KEYPHRASE_SPACE_REGEX, keyphrase, flags=REGEX_FLAGS)))
     if exclude:
         r += r"|" + exclude
     return r"(?i:\b(?:" + r + r")s?\b)"
@@ -526,7 +506,7 @@ def add_keyphrase(compiled_keyphrases, keyphrase, exclude, keyphrase_name=None):
     """Adds one keyphrase to compiled_keyphrases."""
     if keyphrase_name is None:
         keyphrase_name = keyphrase.replace('_', '')
-    letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper())
+    letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper(), flags=REGEX_FLAGS)
     current_trie = compiled_keyphrases
     for letter in letters:
         current_trie = current_trie.setdefault(letter, {})
@@ -564,8 +544,8 @@ def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tup
                 keyphrases = candidate_trie.get('')
                 if keyphrases is not None:
                     for keyphrase_name, exclude_regex in keyphrases.items():
-                        if (not exclude_regex.search(candidate_text)
-                                and (start_pos, keyphrase_name) not in already_found):
+                        if ((start_pos, keyphrase_name) not in already_found
+                                and not exclude_regex.search(candidate_text)):
                             yield (keyphrase_name,
                                    candidate_text,
                                    (start_pos, text_pos - 1))
@@ -584,7 +564,9 @@ def find_matches(compiled_keyphrases, text: str) -> Iterator[tuple[str, str, tup
                 for candidate_trie, candidate_text, start_pos in old_candidates:
                     candidate_trie = candidate_trie.get(letter)
                     if candidate_trie is not None:
-                        new_candidates.append((candidate_trie, candidate_text + char, start_pos))
+                        new_candidate = (candidate_trie, candidate_text + char, start_pos)
+                        if new_candidate not in new_candidates:
+                            new_candidates.append(new_candidate)
 
         previous_char = char
         new_candidates, old_candidates = old_candidates, new_candidates
@@ -601,11 +583,11 @@ def get_possible_letters(char: str):
 
 
 def is_possible_word_start(previous_char: str, char: str) -> bool:
-    return not regex.match(r'\w', previous_char)
+    return not regex.match(r'\w', previous_char, flags=REGEX_FLAGS)
 
 
 def is_possible_word_end(previous_char: str, char: str) -> bool:
-    return not regex.match(r'\w', char)
+    return not regex.match(r'\w', char, flags=REGEX_FLAGS)
 
 
 def is_possible_separator(previous_char: str, char: str) -> bool:
@@ -619,7 +601,7 @@ def analyze_text(text):
         could_be = list(LETTERS_FOR_CODEPOINT.get(ord(char), ()))
         if char.upper() not in could_be and (char.isspace() or char in string.printable):
             could_be.append(char)
-        elif not could_be and not regex.match(r'\p{M}', char):
+        elif not could_be and not regex.match(r'\p{M}', char, flags=REGEX_FLAGS):
             could_be.append('?')
             unknown.add(char)
         letter_options.append(could_be)
@@ -665,7 +647,7 @@ if __name__ == '__main__':
         print(''.join(map(chr, CODEPOINTS_FOR_LETTER[arg.upper()])))
     elif cmd == 'ransom':
         result = ''
-        for c in regex.sub(r'\p{M}++', '', unicodedata.normalize('NFD', arg)):
+        for c in regex.sub(r'\p{M}++', '', unicodedata.normalize('NFD', arg), flags=REGEX_FLAGS):
             if c.upper() in CODEPOINTS_FOR_LETTER:
                 result += chr(random.choice(list(CODEPOINTS_FOR_LETTER[c.upper()])))
             else:
