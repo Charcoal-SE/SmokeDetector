@@ -74151,3 +74151,4 @@
 1749048702	cigien	globaltravelpartners\.travel
 1749052682	Dan Getz	questera\.ai
 1749053044	cigien	questera(?!\.ai)
+1749060878	Glorfindel	fixixif\.livejournal\.com
