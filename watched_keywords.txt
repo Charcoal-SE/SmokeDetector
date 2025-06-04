@@ -74141,3 +74141,4 @@
 1749014177	VLAZ	Sataware[\W_]*+Technologies
 1749017216	VLAZ	carbikebhejo\.in
 1749017243	VLAZ	threadyourlogo\.com
+1749017502	cigien	maanavta\.in
