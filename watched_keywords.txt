@@ -74138,3 +74138,4 @@
 1748973838	cigien	globegolftcart\.com
 1749009642	Cow	(?-i:8ojG5NzB2aS3qR7b8)(?#forms.gle)
 1749012802	VLAZ	dockerhosting\.ru
+1749014177	VLAZ	Sataware[\W_]*+Technologies
