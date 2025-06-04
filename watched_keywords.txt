@@ -74142,3 +74142,4 @@
 1749017216	VLAZ	carbikebhejo\.in
 1749017243	VLAZ	threadyourlogo\.com
 1749017502	cigien	maanavta\.in
+1749017548	cigien	maanavta(?!\.in)
