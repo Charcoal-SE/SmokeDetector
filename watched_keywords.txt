@@ -74152,3 +74152,4 @@
 1749052682	Dan Getz	questera\.ai
 1749053044	cigien	questera(?!\.ai)
 1749060878	Glorfindel	fixixif\.livejournal\.com
+1749061710	Vickel	jassinsights\.com
