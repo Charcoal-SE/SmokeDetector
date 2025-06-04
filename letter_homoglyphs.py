@@ -2,7 +2,7 @@
 import itertools
 import string
 import unicodedata
-from typing import Iterator
+from typing import Iterator, Iterable
 
 import regex
 
@@ -10,6 +10,37 @@ from helpers import regex_compile_no_cache
 
 # In this module our regexes default to case-sensitive
 REGEX_FLAGS = regex.U | regex.S
+
+# Forward map from codepoints we encounter to what they might be intended to look like
+CODEPOINTS_FOR_LETTER: dict[str, set[int]] = {}
+
+# Backward map from ASCII alphanumerics, etc., to potential homoglyph codepoints
+LETTERS_FOR_CODEPOINT: dict[int, set[str]] = {}
+
+
+def add_equivalent(from_codepoint: int, to_letter: str):
+    """Registers from_codepoint as an equivalent of to_letter"""
+    return _add_equivalent_codepoints({from_codepoint}, to_letter)
+
+
+def add_equivalents(from_codepoints: Iterable[int], to_letters: Iterable[str]):
+    """Registers all combinations of the given codepoints and letters as equivalents"""
+    for letter in to_letters:
+        _add_equivalent_codepoints(from_codepoints, letter)
+
+
+def _add_equivalent_codepoints(from_codepoints: Iterable[int], to_letter: str):
+    to_letter = to_letter.upper()
+    old_codepoints = CODEPOINTS_FOR_LETTER.get(to_letter)
+    if old_codepoints:
+        new_codepoints = set(from_codepoints)
+        old_codepoints.update(new_codepoints)
+    else:
+        new_codepoints = {ord(to_letter), ord(to_letter.lower())}
+        new_codepoints.update(from_codepoints)
+        CODEPOINTS_FOR_LETTER[to_letter] = new_codepoints
+    for codepoint in new_codepoints:
+        LETTERS_FOR_CODEPOINT.setdefault(codepoint, set()).add(to_letter)
 
 
 def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_map):
@@ -23,10 +54,12 @@ def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_ma
 LATIN_LOOKALIKE_LETTERS = {
     'A': ['turned alpha', 'inverted alpha'],
     'D': ['delta'],
-    'F': ['long s'],
+    'E': ['ESH'],
+    'F': ['long s', 'esh with double bar'],
     'I': ['l', 'j', 'J', 'broken l', 'dotless i', 'dotless j'],
     'J': ['dotless j'],
     'L': ['I', 'BROKEN L', 'broken l', 'dotless i', 'dotless j'],
+    'S': ['esh'],
     'Q': ['SMALL Q WITH HOOK TAIL']  # sic
 }
 add_case_insensitive_lookalikes(LATIN_LOOKALIKE_LETTERS, {
@@ -124,6 +157,111 @@ LETTER_LOOKALIKE_DIGITS = {
 }
 
 
+# Manual definitions of equivalent codepoints for characters
+# Hex numbers are primarily used below, due to the possibility of the characters becoming corrupted when the file
+# is edited in editors which don't fully support Unicode, or even just on different operating systems.
+add_equivalents([
+    ord('@'),
+    0x15cb, 0x15e9, 0x2202, 0x2227,
+], "A")
+add_equivalents([
+    0x10a6, 0x10aa, 0x15b2, 0x15F8, 0x15F9, 0x15FD, 0x15FE, 0x15FF, 0x1656, 0x1657, 0x1658, 0x165D, 0x165E, 0x165F,
+    0x1669, 0x166A, 0x166B, 0x266D,
+], "B")
+add_equivalents([
+    ord('('), ord('['),
+    0x1455, 0x1566, 0xa9, 0x20AC, 0x2201, 0x2286, 0x228F, 0x2291, 0x22D0, 0x22E4,
+], "C")
+add_equivalents([
+    ord(')'),
+    0x15B1, 0x15DF, 0x15E0, 0x15EB, 0x15EC, 0x2202,
+], "D")
+add_equivalents([
+    0x15F4, 0x163F, 0x1653, 0x1666, 0x20AC, 0x2211, 0x2208, 0x220A, 0x2A0A,
+], "E")
+add_equivalents([
+    0x2A0D, 0x2A0E, 0x2A0F, 0x2A17,
+], "F")
+add_equivalents([
+    0x10BA, 0x13B6,
+], "G")
+add_equivalents([
+    0x10AC, 0x10B9,
+], "H")
+add_equivalents([
+    0x1491, 0xa1,
+], "I")
+add_equivalents([
+    ord('|'), ord('!'),
+], "IL")
+add_equivalents([
+    0x148E, 0x148F, 0x14A8, 0x14A9,
+], "J")
+add_equivalents([
+    0x221F, 0x2220,
+], "L")
+add_equivalents([
+    0x163B, 0x164F, 0x1662, 0x2A07,
+], "M")
+add_equivalents([
+    0x548, 0x10B6, 0x1560, 0x1561, 0x1641,
+], "N")
+add_equivalents([
+    ord('@'),
+    0x298, 0x2205, 0x2297, 0x2298, 0x229A, 0x229B, 0x229C, 0x274D, 0x102A8,
+], "O")
+add_equivalents([
+    0xb0, 0x16dc,
+], "O.")
+add_equivalents([
+    0x10B2, 0x15B0, 0x2117,
+], "P")
+add_equivalents([
+    0x10AD, 0x146B, 0x15B3,
+], "Q")
+add_equivalents([
+    0x10C1, 0x148B, 0x1586, 0x1588, 0x1589, 0xae,
+], "R")
+add_equivalents([
+    ord('$'),
+    0x283, 0x10BD, 0x10C2, 0x10FD, 0x1511, 0x1513, 0x1515, 0x165A, 0x222E, 0x2231, 0x2232, 0x2233,
+], "S")
+add_equivalents([
+    ord('+'),
+    0x22BA, 0x271D, 0x271E, 0x271F, 0x2020, 0x1F546, 0x1F547,
+], "T")
+add_equivalents([
+    0x155E, 0x155F, 0x1640, 0x2210, 0x228C, 0x228D, 0x228E, 0x2294, 0x22D3,
+], "U")
+add_equivalents([
+    0x10AE, 0x10C0,
+], "UV")
+add_equivalents([
+    0x1553, 0x221A, 0x22CE, 0x2705, 0x2713, 0x2714,
+], "V")
+add_equivalents([
+    0x460, 0x163A, 0x164E, 0x1661, 0x2A08,
+], "W")
+add_equivalents([
+    0x2A09, 0x274C, 0x274E,
+], "X")
+add_equivalents([
+    0x10B7, 0x10B8, 0x10BE, 0x10C4,
+], "Y")
+add_equivalents([
+    ord('*'),
+    0xb7, 0x22C6, 0x220E,
+], ".")
+
+
+import number_homoglyphs
+for digit in string.digits:
+    add_equivalents((codepoint
+                     for codepoint, into in number_homoglyphs.translate_dict.items()
+                     if into == digit),
+                    [digit])
+
+
 def get_homoglyphs_by_unicode_names(*name_options):
     for name in itertools.product(*name_options):
         full_name = ' '.join(filter(None, name))
@@ -143,134 +281,7 @@ def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
             [letter_name.upper()])
 
 
-# Manual definitions of equivalent codepoints for characters
-# Hex numbers are primarily used below, due to the possibility of the characters becoming corrupted when the file
-# is edited in editors which don't fully support Unicode, or even just on different operating systems.
-EQUIVALENT_CODEPOINT_LISTS: {str: list[int]} = {
-    'A': [
-        ord('@'),
-        0x15cb, 0x15e9, 0x2202, 0x2227, 0x22c0,
-    ],
-    'B': [
-        0x10a6, 0x10aa, 0x15b2, 0x15F7, 0x15F8, 0x15F9, 0x15FD, 0x15FE, 0x15FF, 0x1656, 0x1657, 0x1658, 0x165D, 0x165E,
-        0x165F, 0x1669, 0x166A, 0x166B, 0x266D,
-    ],
-    'C': [
-        ord('('), ord('['),
-        0x1455, 0x1566, 0xa2, 0xa9, 0x20AC, 0x2201, 0x2282, 0x2286, 0x228F, 0x2291, 0x22D0, 0x22E4,
-    ],
-    'D': [
-        ord(')'),
-        0x146F, 0x15B1, 0x15DE, 0x15DF, 0x15E0, 0x15EA, 0x15EB, 0x15EC, 0x2202,
-    ],
-    'E': [
-        0x15F4, 0x163F, 0x1653, 0x1666, 0x20AC, 0x2211, 0x2208, 0x220A, 0x22FF, 0x2A0A,
-    ],
-    'F': [
-        0x2A0D, 0x2A0E, 0x2A0F, 0x2A17,
-    ],
-    'G': [
-        0x10BA, 0x13B6,
-    ],
-    'H': [
-        0x10AC, 0x10B9,
-    ],
-    'I': [
-        ord('|'), ord('!'),
-        0x1491, 0xa1,
-    ],
-    'J': [
-        0x148E, 0x148F, 0x14A8, 0x14A9,
-    ],
-    'K': [
-    ],
-    'L': [
-        ord('|'), ord('!'),
-        0x221F, 0x2220,
-    ],
-    'M': [
-        0x163B, 0x164F, 0x1662, 0x2A07,
-    ],
-    'N': [
-        0x10B6, 0x144E, 0x1560, 0x1561, 0x1641, 0x22C2, 0x2229,
-    ],
-    'O': [
-        ord('@'),
-        0x298, 0x2205, 0x2295, 0x2296, 0x2297, 0x2298, 0x2299, 0x229A, 0x229B, 0x229C, 0x229D, 0x2A00, 0x2A01, 0x2A02,
-        0x274D,
-    ],
-    'P': [
-        0x10B2, 0x146D, 0x15B0, 0x2117,
-    ],
-    'Q': [
-        0x10AD, 0x146B, 0x15B3
-    ],
-    'R': [
-        0x10C1, 0x148B, 0x1586, 0x1587, 0x1588, 0x1589, 0xae,
-    ],
-    'S': [
-        ord('$'),
-        0x10BD, 0x10C2, 0x10FD, 0x1511, 0x1513, 0x1515, 0x165A, 0x222B, 0x222E, 0x2231, 0x2232, 0x2233,
-    ],
-    'T': [
-        ord('+'),
-        0x22BA, 0x271D, 0x271E, 0x271F, 0x2020, 0x1F546, 0x1F547,
-    ],
-    'U': [
-        0x10AE, 0x10C0, 0x144C, 0x155E, 0x155F, 0x1640, 0x2210, 0x22C1, 0x22C3, 0x228C, 0x228D, 0x228E, 0x2294,
-        0x22D3, 0x222A, 0x2A03, 0x2A04, 0x2A06,
-    ],
-    'V': [
-        0x10AE, 0x10C0, 0x1553, 0x22C3, 0x221A, 0x22CE, 0x2705, 0x2713, 0x2714,
-    ],
-    'W': [
-        0x15EF, 0x163A, 0x164E, 0x1661, 0x2A08,
-    ],
-    'X': [
-        0x166D, 0x2A09, 0x2A2F, 0x2215, 0x2216, 0x2217, 0x2218, 0x274C, 0x274E,
-    ],
-    'Y': [
-        0x10B7, 0x10B8, 0x10BE, 0x10C4, 0xa5,
-    ],
-    'Z': [
-    ],
-    '.': [
-        ord('*'),
-    ],
-}
-
-
-CODEPOINTS_FOR_LETTER: dict[str, set[int]] = {}
-
-LETTERS_FOR_CODEPOINT: dict[int, set[str]] = {}
-
-
-def add_equivalent(from_codepoint: int, to_letter: str):
-    """Registers from_codepoint as an equivalent of to_letter"""
-    to_letter = to_letter.upper()
-    LETTERS_FOR_CODEPOINT.setdefault(from_codepoint, set()).add(to_letter)
-    CODEPOINTS_FOR_LETTER.setdefault(to_letter, set()).add(from_codepoint)
-
-
-def add_equivalents(from_codepoints, to_letters):
-    """Registers all combinations of the given codepoints and letters as equivalents"""
-    for from_codepoint, to_letter in itertools.product(from_codepoints, to_letters):
-        add_equivalent(from_codepoint, to_letter)
-
-
-for letter, codepoints in EQUIVALENT_CODEPOINT_LISTS.items():
-    add_equivalent(ord(letter), letter)
-    add_equivalents(codepoints, [letter])
-
-import number_homoglyphs
-for digit in string.digits:
-    add_equivalent(ord(digit), digit)
-    add_equivalents((codepoint
-                     for codepoint, into in number_homoglyphs.translate_dict.items()
-                     if into == digit),
-                    [digit])
-
-# add Unicode lookups to EQUIVALENTS_CODEPOINTS
+# Look up Unicode characters by alphabet names and similar
 for letter in string.ascii_uppercase:
     latin_names = [letter, letter.lower()]
     if letter in LATIN_LOOKALIKE_LETTERS:
@@ -288,18 +299,14 @@ for letter in string.ascii_uppercase:
 
 def find_equivalents(char: str) -> set[str]:
     """Search for equivalents that we haven't manually defined"""
-    try:
-        # If it's already defined, stop looking
-        return LETTERS_FOR_CODEPOINT[ord(char)]
-    except KeyError:
-        pass
+    already_defined = LETTERS_FOR_CODEPOINT.get(ord(char))
+    if already_defined:
+        return already_defined
 
     # Look for new equivalents in both official confusables and decomposed forms
     found = set()
-    confusables = UNICODE_CONFUSABLES.get(char)
-    if confusables:
-        for confusable in confusables:
-            found |= find_equivalents(confusable)  # recurse to apply other techniques and look up
+    for confusable in UNICODE_CONFUSABLES.get(char, ()):
+        found |= find_equivalents(confusable)  # recurse to apply other techniques and look up
     stripped = strip_decomposed_diacritics(char)
     if stripped != char:
         found |= find_equivalents(stripped)  # recurse to apply other techniques and look up
@@ -327,7 +334,7 @@ def strip_decomposed_diacritics(char):
         return normalized[0]
 
 
-FLOURISH_REGEX = regex.compile(r' (?:BARRED|CROSSED|LONG-LEGGED|WITH .*+)', flags=REGEX_FLAGS)
+FLOURISH_REGEX = regex.compile(r' (?:WITH .*+|BARRED|CROSSED|LONG-LEGGED)', flags=REGEX_FLAGS)
 
 
 def strip_flourishes(char):
@@ -358,6 +365,7 @@ def load_confusables() -> dict[str, set[str]]:
                         confusable_map.setdefault(char_from, set()).add(chars_to[0])
         return confusable_map
 
+
 UNICODE_CONFUSABLES = load_confusables()
 
 
@@ -381,7 +389,7 @@ for codepoints in CODEPOINTS_FOR_LETTER.values():
 KEYPHRASE_SPACE_REGEX = r'[\s\-_]++'
 
 # Potential word separators in exclude check regexes
-SEPARATOR_REGEX = r"(?:[\W_\s]\p{Mn}*+)*"
+SEPARATOR_REGEX = r"(?:[\W_\s]\p{M}*+)*"
 
 
 def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
@@ -416,7 +424,7 @@ def fullchars(text: str) -> Iterator[tuple[str, int]]:
 
 
 class ObfuscationFinder:
-    def __init__(self, *keyphrases: (str, str | None)):
+    def __init__(self, *keyphrases: tuple[str, str | None]):
         self.match_trie = {}
         for keyphrase, exclude in keyphrases:
             self.add_keyphrase(keyphrase, exclude)
@@ -440,37 +448,38 @@ class ObfuscationFinder:
         Yields resulting tuples of (keyphrase_name, obfuscated_text, (start_pos, end_pos))
         """
         match_trie = self.match_trie
-        old_candidates: list[tuple[dict, str, int]] = []
-        new_candidates: list[tuple[dict, str, int]] = []
+        old_candidates: list[tuple[dict, int]] = []
+        new_candidates: list[tuple[dict, int]] = []
         already_found: set[tuple[int, str]] = set()
         previous_fullchar = ''
         for fullchar, text_pos in fullchars(text):
             if is_possible_separator(fullchar):
                 # optionally skip over the word separator
-                for candidate_trie, candidate_text, start_pos in old_candidates:
-                    new_candidates.append((candidate_trie, candidate_text + fullchar, start_pos))
+                new_candidates.extend(old_candidates)
 
             if is_possible_word_break(previous_fullchar, fullchar):
                 # yield all finished current candidates
-                for candidate_trie, candidate_text, start_pos in old_candidates:
+                for candidate_trie, start_pos in old_candidates:
                     keyphrases = candidate_trie.get('')
                     if keyphrases is not None:
+                        candidate_text = text[start_pos:text_pos]  # up to but not including fullchar
                         for keyphrase_name, exclude_regex in keyphrases.items():
-                            if ((start_pos, keyphrase_name) not in already_found
+                            found_key = (start_pos, keyphrase_name)
+                            if (found_key not in already_found
                                     and not exclude_regex.search(candidate_text)):
                                 yield (keyphrase_name,
                                        candidate_text,
                                        (start_pos, text_pos - 1))
-                                already_found.add((start_pos, keyphrase_name))
+                                already_found.add(found_key)
                 # candidate for a new word starting here
-                old_candidates.append((match_trie, '', text_pos))
+                old_candidates.append((match_trie, text_pos))
 
             if fullchar:
                 for letter in get_possible_letters(fullchar):
-                    for candidate_trie, candidate_text, start_pos in old_candidates:
+                    for candidate_trie, start_pos in old_candidates:
                         candidate_trie = candidate_trie.get(letter)
                         if candidate_trie is not None:
-                            new_candidate = (candidate_trie, candidate_text + fullchar, start_pos)
+                            new_candidate = (candidate_trie, start_pos)
                             if new_candidate not in new_candidates:
                                 new_candidates.append(new_candidate)
 
@@ -505,7 +514,7 @@ def is_possible_word_break(previous_fullchar: str, fullchar: str) -> bool:
 
 
 def is_possible_separator(fullchar: str) -> bool:
-    return (fullchar
+    return (bool(fullchar)
             and (ord(fullchar[0]) in POSSIBLE_SEPARATOR_CODEPOINTS
                  or not fullchar[0].isalnum()))
 
