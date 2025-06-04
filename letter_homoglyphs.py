@@ -493,12 +493,14 @@ for letter, codepoints in CODEPOINTS_FOR_LETTER.items():
 KEYPHRASE_SPACE_REGEX = r'[\s\-_]++'
 
 # Potential word separators in exclude check regexes
-SEPARATOR_REGEX = r"(?:[\W_\s][\W_\s\p{Mn}]*+)?+"
+SEPARATOR_REGEX = r"(?:[\W_\s]\p{Mn}*+)*"
 
 
 def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     # Always exclude the keyphrase, regardless of changes in word breaks
-    r = SEPARATOR_REGEX.join(map(regex.escape, regex.split(KEYPHRASE_SPACE_REGEX, keyphrase, flags=REGEX_FLAGS)))
+    r = SEPARATOR_REGEX.join(regex.escape(w)
+                             for w in split_at_possible_word_breaks(keyphrase)
+                             if not regex.fullmatch(KEYPHRASE_SPACE_REGEX, w, flags=REGEX_FLAGS))
     if exclude:
         r += r"|" + exclude
     return r"(?i:\b(?:" + r + r")s?\b)"
@@ -618,6 +620,18 @@ def is_possible_separator(fullchar: str) -> bool:
     return (fullchar
             and (ord(fullchar[0]) in POSSIBLE_SEPARATOR_CODEPOINTS
                  or not fullchar[0].isalnum()))
+
+
+def split_at_possible_word_breaks(text: str) -> Iterator[str]:
+    """Splits text using is_possible_word_break()"""
+    previous_fullchar = ''
+    word = ''
+    for fullchar, _text_pos in fullchars(text):
+        if word and is_possible_word_break(previous_fullchar, fullchar):
+            yield word
+            word = ''
+        word += fullchar
+        previous_fullchar = fullchar
 
 
 def analyze_text(text):

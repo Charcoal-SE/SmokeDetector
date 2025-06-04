@@ -2789,13 +2789,13 @@ create_rule("messaging number in {}",
 # Obfuscation entries are a pair of strings: (keyword, exclude)
 #
 # The keyword is the word (or phrase) to look for obfuscated.
-# Spaces, hyphens, and underscores in this will be treated as expected word breaks.
-# The "official" name will have the underscores removed.
+# Spaces, hyphens, and underscores in this will be treated as expected word breaks,
+# as will initialCapitals and word1number3boundaries.
+# The "official" name will have underscores removed.
 # So add underscores wherever someone might innocently break the word.
 # Only ASCII letters and numbers will be checked for obfuscated versions.
 #
 # No need to add plural forms unless they are irregular: they will still match if there's an extra "s" afterwards.
-# (Obfuscation will be accepted in that "s", to allow more matches, but won't trigger the rule by itself.)
 #
 # The second item is an exclude regex, which will be automatically bookended for word boundaries, and case insensitive.
 # If an obfuscation match also matches the exclude regex, it will not trigger the rule.
@@ -2842,30 +2842,30 @@ obfuscation_keyphrases = [
     ("support", ""),
 
     # support scams - companies
-    ("Am_track", "rack"),
+    ("Am_trak", ""),
     ("Amazon Prime", ""),
     ("Bell South", ""),
     ("Com_cast", ""),
-    ("Earth_link", ""),
+    ("EarthLink", ""),
     ("Face_book", ""),
     ("Geek Squad", ""),
     ("Google Pay", ""),
     ("Life_Lock", ""),
     ("MSN", "[MSN]"),
-    ("Mc_Afee", "fee"),
+    ("McAfee", "fee"),
     ("Mozilla", ""),
     ("Norton", "n?or|t?on"),
-    ("Ok_Cupid", ""),
-    ("Quick_books", ""),
+    ("OkCupid", ""),
+    ("QuickBooks", ""),
     ("Quicken", "quick"),
     ("Road_runner", ""),
     ("SBC Global", ""),
     ("Sage 50", "sag|age|so"),
     ("Spectrum", ""),
     ("Ticket_master", ""),
-    ("Turbo_tax", "bot"),
+    ("TurboTax", "bot"),
     ("Verizon", ""),
-    ("Whats_App", ""),
+    ("WhatsApp", ""),
 
     # support scams - airline - phrases
     ("best day", ""),
@@ -2896,10 +2896,10 @@ obfuscation_keyphrases = [
     ("Copa", "cop|a"),
     ("Delta", ""),
     ("Frontier", ""),
-    ("Jet Blue", ""),
-    ("Jet SMART", ""),
+    ("JetBlue", ""),
+    ("JetSMART", ""),
     ("KLM", "K[I1]M|[KLM]"),
-    ("Latam", "la|am|ata"),
+    ("LATAM", "la|am|ata"),
     ("Lufthansa", ""),
     ("Qatar", "tar|at"),
     ("Royal Caribbean", ""),
@@ -2927,9 +2927,9 @@ obfuscation_keyphrases = [
     ("Binance", ""),
     ("Bybit", "by|bit"),
     ("Coin_base", "in"),
-    ("Pay_Pal", ""),
+    ("PayPal", ""),
     ("Pay_tm", ""),
-    ("Phone_Pe", "one"),
+    ("PhonePe", "one"),
     ("Probo", "rob"),
     ("Robin_hood", "rob|in"),
     ("Trust Wallet", ""),
@@ -2961,14 +2961,14 @@ obfuscation_watch_keyphrases = [
     # support scams - companies
     ("AVG", "[AVG]"),
     ("ESET", "set|[EST]"),
-    ("Ebay", "e|bay"),
+    ("eBay", "e|bay"),
     ("Epson", "son"),
     ("Gemini", "gem|mini"),
     ("H_P Printer", ""),
     ("Hulu", ""),
     ("Sage", "sag|age"),
     ("Up_hold", "old"),
-    ("i_Cloud", ""),
+    ("iCloud", ""),
 
     # support scams - airline - phrases
     # es
@@ -2992,12 +2992,12 @@ obfuscation_watch_keyphrases = [
     ("money", "one"),
 
     # money scams - companies
-    ("Fin_wessy", ""),
+    ("FinWessy", ""),
     ("Kraken", ""),
-    ("Kuku F_M", ""),
+    ("Ku_ku F_M", ""),
     ("Meteor Rupee", ""),
-    ("Protop_Fin", ""),
-    ("Savv_Score", ""),
+    ("ProtopFin", ""),
+    ("SavvScore", ""),
 ]
 obfuscation_watch_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_watch_keyphrases)
 

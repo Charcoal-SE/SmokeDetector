@@ -106,6 +106,8 @@ def test_build_exclude_regex_matches_keyphrase(keyphrase, exclude):
     ("some thing", "thing|abc", "notsome  .  thing", True),
     ("some thing", "", "notsome  .  thing", False),
     ("regex.dots", "", "regexNdots", False),
+    ("a.b", "", "a.b", True),
+    ("a,b", "", "a,b", True),
 ])
 def test_build_exclude_regex(keyphrase, exclude, text, match_expected):
     result = regex.search(letter_homoglyphs.build_exclude_regex(keyphrase, exclude), text, letter_homoglyphs.REGEX_FLAGS)
@@ -172,3 +174,14 @@ def test_is_possible_word_break(chars, is_possible):
 def test_is_possible_separator_true(chars, is_possible):
     for char in chars:
         assert letter_homoglyphs.is_possible_separator(char) == is_possible
+
+
+@pytest.mark.parametrize("text, expected", [
+    ("Hello", ["Hello"]),
+    ("OneTwo", ["One", "Two"]),
+    ("oneTwo", ["one", "Two"]),
+    ("a2b", ["a", "2", "b"]),
+    ("a 21-b", ["a", " ", "21", "-", "b"]),
+])
+def test_split_at_possible_word_breaks(text, expected):
+    assert list(letter_homoglyphs.split_at_possible_word_breaks(text)) == expected
