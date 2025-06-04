@@ -74149,3 +74149,4 @@
 1749039235	VLAZ	radheindustriesindia\.com
 1749041530	Jeff Schaller	tranistics\.com
 1749048702	cigien	globaltravelpartners\.travel
+1749052682	Dan Getz	questera\.ai
