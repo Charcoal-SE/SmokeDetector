@@ -74144,3 +74144,4 @@
 1749017502	cigien	maanavta\.in
 1749017548	cigien	maanavta(?!\.in)
 1749019040	Anerdw	^อนุรักษ์ ศรีจันทรา$
+1749019525	Anerdw	accuratemovers\.co\.nz
