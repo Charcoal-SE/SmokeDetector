@@ -2921,6 +2921,7 @@ obfuscation_keyphrases = [
     ("loan app", "an a"),
     ("loan", "an"),
     ("referral", "refer"),
+    ("subscription", "script?"),
 
     # money scams - companies
     ("91 club", ""),
