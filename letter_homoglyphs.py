@@ -50,6 +50,10 @@ def add_case_insensitive_lookalikes(lookalike_map, case_insensitive_lookalike_ma
         cased_names.extend(map(str.lower, uncased_names))
 
 
+# NAMED CHARACTERS
+# These are defined case-sensitively as either 'UPPER CASE', 'lower case'.
+# To make them case-insensitive, use add_case_insensitive_lookalikes().
+
 # Latin letters which look like others (case-sensitive)
 LATIN_LOOKALIKE_LETTERS = {
     'A': ['turned alpha', 'inverted alpha'],
@@ -254,6 +258,7 @@ add_equivalents([
 ], ".")
 
 
+# support all homoglyphs that we support for phone numbers
 import number_homoglyphs
 for digit in string.digits:
     add_equivalents((codepoint
@@ -263,6 +268,11 @@ for digit in string.digits:
 
 
 def get_homoglyphs_by_unicode_names(*name_options):
+    """
+    Yields codepoints by creating possible Unicode names out of combinations of the input lists.
+
+    None can be added to an input list to allow it to be optionally skipped.
+    """
     for name in itertools.product(*name_options):
         full_name = ' '.join(filter(None, name))
         try:
@@ -272,6 +282,11 @@ def get_homoglyphs_by_unicode_names(*name_options):
 
 
 def get_letter_homoglyphs_by_unicode_name(letter_names, alphabet_names):
+    """
+    Yields codepoints for a given set of letter names and alphabet names.
+
+    None can be added to alphabet_names allow it to be optionally skipped.
+    """
     for letter_name in letter_names:
         yield from get_homoglyphs_by_unicode_names(
             alphabet_names,
@@ -369,6 +384,7 @@ def load_confusables() -> dict[str, set[str]]:
 UNICODE_CONFUSABLES = load_confusables()
 
 
+# Fill out the remaining equivalents that we can find automatically
 for codepoint in range(0x7f, 0x110000):
     if codepoint not in LETTERS_FOR_CODEPOINT:
         add_equivalents([codepoint], find_equivalents(chr(codepoint)))
@@ -546,34 +562,6 @@ def split_at_possible_word_breaks(text: str) -> Iterator[str]:
         previous_fullchar = fullchar
 
 
-def analyze_text(text):
-    letter_options = []
-    unknown = set()
-    for char in text:
-        could_be = list(LETTERS_FOR_CODEPOINT.get(ord(char), ()))
-        if char.upper() not in could_be and (char.isspace() or char in string.printable):
-            could_be.append(char)
-        elif not could_be and not regex.match(r'\p{M}', char, flags=REGEX_FLAGS):
-            could_be.append('?')
-            unknown.add(char)
-        letter_options.append(could_be)
-    return letter_options, unknown
-
-
-def find_possible_words(text):
-    print("Analyzing %r for obfuscation" % text)
-    letter_options, unknown = analyze_text(text)
-    for letters in itertools.product(*letter_options):
-        print("Could be " + ''.join(letters))
-    print("Unknown chars: %r" % ''.join(sorted(unknown)))
-
-
-def find_unknown_chars(text):
-    print("Analyzing %r for obfuscation" % text)
-    letter_options, unknown = analyze_text(text)
-    print("Unknown chars: %r" % ''.join(sorted(unknown)))
-
-
 if __name__ == '__main__':
     import sys
     import random
@@ -589,6 +577,31 @@ if __name__ == '__main__':
     if len(sys.argv) < 2 or sys.argv[1] in ['-h', '--help']:
         print_help()
         exit(2)
+
+    def analyze_text(text):
+        letter_options = []
+        unknown = set()
+        for char in text:
+            could_be = list(LETTERS_FOR_CODEPOINT.get(ord(char), ()))
+            if char.upper() not in could_be and (char.isspace() or char in string.printable):
+                could_be.append(char)
+            elif not could_be and not regex.match(r'\p{M}', char, flags=REGEX_FLAGS):
+                could_be.append('?')
+                unknown.add(char)
+            letter_options.append(could_be)
+        return letter_options, unknown
+
+    def find_possible_words(text):
+        print("Analyzing %r for obfuscation" % text)
+        letter_options, unknown = analyze_text(text)
+        for letters in itertools.product(*letter_options):
+            print("Could be " + ''.join(letters))
+        print("Unknown chars: %r" % ''.join(sorted(unknown)))
+
+    def find_unknown_chars(text):
+        print("Analyzing %r for obfuscation" % text)
+        letter_options, unknown = analyze_text(text)
+        print("Unknown chars: %r" % ''.join(sorted(unknown)))
 
     cmd = sys.argv[1]
     arg = ' '.join(sys.argv[2:])
