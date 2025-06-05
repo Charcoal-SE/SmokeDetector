@@ -76,6 +76,7 @@ import letter_homoglyphs
     ("pascal case", "", "pascalCase pascдlCase", ["pascдlCase"]),
     ("numbers", "", "12nvmbers34", ["nvmbers"]),
     ("a phrase", "", "_a_phrase__a_phra5e__", ["a_phra5e"]),
+    ("abc", "^[[:ASCII:]]+$", "abc +a+b+c+ дbc", ["дbc"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     finder = letter_homoglyphs.ObfuscationFinder((keyphrase, exclude))

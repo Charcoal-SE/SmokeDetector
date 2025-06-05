@@ -2851,7 +2851,7 @@ obfuscation_keyphrases = [
     ("Geek Squad", ""),
     ("Google Pay", ""),
     ("Life_Lock", ""),
-    ("MSN", "[MSN]"),
+    ("MSN", "^[[:ASCII:]]+$"),
     ("McAfee", "fee"),
     ("Mozilla", ""),
     ("Norton", "n?or|t?on"),
@@ -2898,7 +2898,7 @@ obfuscation_keyphrases = [
     ("Frontier", ""),
     ("JetBlue", ""),
     ("JetSMART", ""),
-    ("KLM", "K[I1]M|[KLM]"),
+    ("KLM", "^[[:ASCII:]]+$"),
     ("LATAM", "la|am|ata"),
     ("Lufthansa", ""),
     ("Qatar", "tar|at"),
@@ -2960,8 +2960,8 @@ obfuscation_watch_keyphrases = [
     ("numero", r"n\w+mer\w+"),
 
     # support scams - companies
-    ("AVG", "[AVG]"),
-    ("ESET", "set|[EST]"),
+    ("AVG", "^[[:ASCII:]]+$"),
+    ("ESET", "^[[:ASCII:]]+$"),
     ("eBay", "e|bay"),
     ("Epson", "son"),
     ("Gemini", "gem|mini"),
