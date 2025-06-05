@@ -2815,6 +2815,7 @@ obfuscation_keyphrases = [
     ("mother_" + "f" + "ucker", ""),
     ("mother_" + "f" + "ucking", ""),
     ("c" + "ock", ""),
+    ("c" + "oc" + "ksu" + "cker", ""),
     ("c" + "unt", ""),
     ("d" + "ick", "ick"),
     ("p" + "enis", "pen is"),
@@ -2838,6 +2839,8 @@ obfuscation_keyphrases = [
     ("help line", ""),
     ("prompt response", ""),
     ("real person", ""),
+    ("live person", ""),
+    ("live support", ""),
     ("service", ""),
     ("support", ""),
 
@@ -2860,7 +2863,11 @@ obfuscation_keyphrases = [
     ("Quicken", "quick"),
     ("Road_runner", ""),
     ("SBC Global", ""),
-    ("Sage 50", "sag|age|so"),
+    ("Sage 50", "sag|age|so|0"),
+    ("Sage 100", "sag|age|0"),
+    ("Sage 200", "sag|age|0"),
+    ("Sage 300", "sag|age|0"),
+    ("Sage support", "sag|age"),
     ("Spectrum", ""),
     ("Ticket_master", ""),
     ("TurboTax", "bot"),
@@ -2943,9 +2950,11 @@ obfuscation_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscati
 # These will trigger "Potentially bad keyword in ..." with the same report details as the "Obfuscated word in ..." rule
 obfuscation_watch_keyphrases = [
     # Trolls && cussing
-    ("piss", "is"),
+    ("piss", "^[[:ASCII:]]+$"),
+    ("piss off", "is"),
     ("shit", "hi|it|hit"),
     ("ki" + "ll yourself", ""),
+    ("ass_hole", ""),
 
     # support scams - phrases
     ("dispute", ""),
@@ -2967,7 +2976,7 @@ obfuscation_watch_keyphrases = [
     ("Gemini", "gem|mini"),
     ("H_P Printer", ""),
     ("Hulu", ""),
-    ("Sage", "sag|age"),
+    ("Sage", "^[[:ASCII:]]+$"),
     ("Up_hold", "old"),
     ("iCloud", ""),
 
