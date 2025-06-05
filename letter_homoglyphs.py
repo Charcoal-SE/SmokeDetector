@@ -392,14 +392,26 @@ KEYPHRASE_SPACE_REGEX = r'[\s\-_]++'
 SEPARATOR_REGEX = r"(?:[\W_\s]\p{M}*+)*"
 
 
+# Exclusions are case-insensitive, and should match at any word-ish boundary
+EXCLUDE_BOOKENDING_START = r"(?i:(?:\b|_|^)(?:"
+EXCLUDE_BOOKENDING_END = r")(?:\b|_|$))"
+
+# The default exclusion is to exclude the keyphrase itself, case-insensitively.
+EXCLUDE_BOOKENDING_DEFAULT_START = r"(?i:^"
+# If we've seen the entire phrase, we don't need to worry about anything on the end but combining marks
+EXCLUDE_BOOKENDING_DEFAULT_END = r"(?!\p{M}))"
+
+
 def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
     # Always exclude the keyphrase, regardless of changes in word breaks
-    r = SEPARATOR_REGEX.join(regex.escape(w)
-                             for w in split_at_possible_word_breaks(keyphrase)
-                             if not regex.fullmatch(KEYPHRASE_SPACE_REGEX, w, flags=REGEX_FLAGS))
+    r = (EXCLUDE_BOOKENDING_DEFAULT_START
+         + SEPARATOR_REGEX.join(regex.escape(w)
+                                for w in split_at_possible_word_breaks(keyphrase)
+                                if not regex.fullmatch(KEYPHRASE_SPACE_REGEX, w, flags=REGEX_FLAGS))
+         + EXCLUDE_BOOKENDING_DEFAULT_END)
     if exclude:
-        r += r"|" + exclude
-    return r"(?i:(?:\b|_|^)(?:" + r + r")s?(?:\b|_|$))"
+        r += r"|" + EXCLUDE_BOOKENDING_START + exclude + EXCLUDE_BOOKENDING_END
+    return r
 
 
 def fullchars(text: str) -> Iterator[tuple[str, int]]:
@@ -429,18 +441,21 @@ class ObfuscationFinder:
         for keyphrase, exclude in keyphrases:
             self.add_keyphrase(keyphrase, exclude)
 
-    def add_keyphrase(self, keyphrase, exclude='', keyphrase_name=None):
+    def add_keyphrase(self, keyphrase, exclude='', keyphrase_name=None, letters=None):
         """Adds one keyphrase to be searched for."""
         if keyphrase_name is None:
             keyphrase_name = keyphrase.replace('_', '')
-        letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper(), flags=REGEX_FLAGS)
+        if letters is None:
+            letters = regex.sub(KEYPHRASE_SPACE_REGEX, '', keyphrase.upper(), flags=REGEX_FLAGS)
         current_trie = self.match_trie
         for letter in letters:
             current_trie = current_trie.setdefault(letter, {})
+        # Store leaf nodes at '', and allow multiple keyphrases by storing them as a dict by keyphrase name
         current_trie.setdefault('', {})[keyphrase_name] = regex_compile_no_cache(
             build_exclude_regex(keyphrase, exclude), REGEX_FLAGS)
-        if keyphrase[-1].upper() != 'S':
-            self.add_keyphrase(keyphrase + '_S', exclude, keyphrase_name=keyphrase_name)
+        # Catch the word even if it has an "S" after it
+        if letters[-1] != 'S':
+            self.add_keyphrase(keyphrase, exclude, keyphrase_name=keyphrase_name, letters=letters + 'S')
 
     def find_matches(self, text: str) -> Iterator[tuple[str, str, tuple[int, int]]]:
         """Searches the given text for obfuscated keyphrases.

@@ -148,6 +148,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Obfuscation 03', "<p>Who're you to say who's hit the air lines? The pen is mightier.</p>", 'a username', 'superuser.com', False, False, False),
     ('Obfuscation 04 (Airlines)', "<p>Since you're fancy, we think you will like this one better: \U0001d468\U0001d48a\U0001d493\U0001d48d\U0001d48a\U0001d48f\U0001d486\U0001d494. How was that one?</p>", 'a username', 'superuser.com', False, False, True),
     ('Obfuscation 05', '<p>telefono teléfono telefonó</p>', 'a username', 'superuser.com', False, False, False),
+    ('Obfuscation 06', '<p>airway $ airway$ airway)$ airway}$</p>', 'a username', 'superuser.com', False, False, False),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,

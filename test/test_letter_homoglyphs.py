@@ -32,7 +32,7 @@ import letter_homoglyphs
     ("caller", "", "ca|ller*ca||ller!cal||ler", ["ca|ller", "ca||ller", "cal||ler"]),
     ("caller", "all", "c a l l e r c all e r ca ll er", ["c a l l e r", "ca ll er"]),
     ("test", "", "t e s ts and t_3_s_t's", ["t e s ts", "t_3_s_t"]),
-    ("test", "est|te", "t-ests or +.est's, or te sts", []),
+    ("test", "est|te", "t-est or +.est's, or te sts", []),
     ("start", "", "$tart $ t a r t  ...$t ar t!", ["$tart", "$ t a r t", "$t ar t"]),
     ("abcde", "", 'abcd3"s a b c d e`s a.b.c.d.e5', ["abcd3", "a b c d e", "a.b.c.d.e"]),
     ("bad", "", "bád", ["bád"]),
@@ -77,6 +77,7 @@ import letter_homoglyphs
     ("numbers", "", "12nvmbers34", ["nvmbers"]),
     ("a phrase", "", "_a_phrase__a_phra5e__", ["a_phra5e"]),
     ("abc", "^[[:ASCII:]]+$", "abc +a+b+c+ дbc", ["дbc"]),
+    ("innocent", "", "innocent$ innocent $ innocent)$ innocent's innocent 5", []),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     finder = letter_homoglyphs.ObfuscationFinder((keyphrase, exclude))
