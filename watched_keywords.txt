@@ -74176,3 +74176,4 @@
 1749141469	Dan Getz	petaleaf\.com
 1749146796	cigien	askpromptai\.com
 1749146834	cigien	askpromptai(?!\.com)
+1749163752	Dan Getz	lojadomecanico\.com\.br
