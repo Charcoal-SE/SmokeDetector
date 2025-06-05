@@ -58658,7 +58658,6 @@
 1709045644	tripleee	prowizardgilbertrecovery\.xyz
 1709048513	Jesse	mrswirl\.com
 1709048790	Jesse	fermatstheory\.wordpress\.com
-1709049016	Jesse	giffywalls\.com
 1709049388	Jesse	talkheap\.com
 1709049468	Jesse	amevape\.com
 1709049489	Jesse	amevape(?!\.com)
