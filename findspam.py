@@ -2954,7 +2954,7 @@ obfuscation_watch_keyphrases = [
     # es
     ("atencion", r"atenci\w+n"),
     ("con una persona", ""),
-    ("telefono", r"telef\w+n\w+"),
+    ("telefono", r"tel\w+fon\w+"),
     ("asistencia", ""),
     ("numero", r"n\w+mer\w+"),
 
