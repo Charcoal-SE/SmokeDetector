@@ -399,7 +399,7 @@ def build_exclude_regex(keyphrase: str, exclude: str | None) -> str:
                              if not regex.fullmatch(KEYPHRASE_SPACE_REGEX, w, flags=REGEX_FLAGS))
     if exclude:
         r += r"|" + exclude
-    return r"(?i:\b(?:" + r + r")s?\b)"
+    return r"(?i:(?:\b|_)(?:" + r + r")s?(?:\b|_))"
 
 
 def fullchars(text: str) -> Iterator[tuple[str, int]]:

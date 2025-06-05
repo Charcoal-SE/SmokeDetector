@@ -75,6 +75,7 @@ import letter_homoglyphs
     ("camel case", "", "camelCase camelCдse", ["camelCдse"]),
     ("pascal case", "", "pascalCase pascдlCase", ["pascдlCase"]),
     ("numbers", "", "12nvmbers34", ["nvmbers"]),
+    ("a phrase", "", "_a_phrase__a_phra5e__", ["a_phra5e"]),
 ])
 def test_find_matches(keyphrase, exclude, text, expected_matches):
     finder = letter_homoglyphs.ObfuscationFinder((keyphrase, exclude))
@@ -108,6 +109,7 @@ def test_build_exclude_regex_matches_keyphrase(keyphrase, exclude):
     ("regex.dots", "", "regexNdots", False),
     ("a.b", "", "a.b", True),
     ("a,b", "", "a,b", True),
+    ("abcd", "bc", "a__bc_d", True),
 ])
 def test_build_exclude_regex(keyphrase, exclude, text, match_expected):
     result = regex.search(letter_homoglyphs.build_exclude_regex(keyphrase, exclude), text, letter_homoglyphs.REGEX_FLAGS)
