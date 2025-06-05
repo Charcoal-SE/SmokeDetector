@@ -74170,3 +74170,4 @@
 1749122408	VLAZ	dauntogle\.com
 1749122573	VLAZ	dauntogel(?:[\W_]*+terbaru)?
 1749129406	Jeff Schaller	theinsightpartners\.com
+1749129546	Jeff Schaller	globessimregistration\.com
