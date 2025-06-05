@@ -74167,3 +74167,4 @@
 1749114918	VLAZ	plunes\.com
 1749120286	Jeff Schaller	halalnuske\.com
 1749122268	Jeff Schaller	Apexz[\W_]*+Access[\W_]*+Equipments
+1749122408	VLAZ	dauntogle\.com
