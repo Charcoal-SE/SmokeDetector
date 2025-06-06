@@ -45796,7 +45796,6 @@
 1673322121	Spevacus	tlsguns\.com
 1673316758	Ethan	apps2link\.store
 1673328638	tripleee	presenthem\.com
-1673328693	tripleee	drhsports\.com
 1673328746	tripleee	pickcheaplaptops\.com
 1673330948	Cody Gray	diamond[\W_]*trump
 1673334331	Cody Gray	best2in1laptops\.com
