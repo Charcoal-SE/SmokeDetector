@@ -74201,3 +74201,4 @@
 1749224215	Dan Getz	tw8497(?#LINE)
 1749230543	bertieb	sipantic\.blogspot
 1749235251	Dan Getz	setedit_text(?#t.me)
+1749224329	Dan Getz	M[\W_]*+S[\W_]*+C[\W_]*+Cruises?
