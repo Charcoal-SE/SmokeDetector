@@ -59008,7 +59008,6 @@
 1709810793	cigien	pelle[\W_]*+pelle(?!\.com(?<=pelle-pelle\.com))
 1709811535	cigien	mock-api\.net
 1709814869	tripleee	PL6CcjF4ecLOmZZTdywkyg0BSbV4MBK4_A(?# youtube playlist)
-1709816618	Jeff Schaller	enterslice\.com
 1709822768	tripleee	(?-i:^James Oliver$)
 1709835051	General Grievance	classconnectpro\.com
 1709831288	General Grievance	DataRecoveryLifeguard
