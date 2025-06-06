@@ -74199,3 +74199,4 @@
 1749221011	Dan Getz	plgos\.com
 1749223140	Glorfindel	hexacoder\.com
 1749224215	Dan Getz	tw8497(?#LINE)
+1749230543	bertieb	sipantic\.blogspot
