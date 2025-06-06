@@ -74202,3 +74202,4 @@
 1749230543	bertieb	sipantic\.blogspot
 1749235251	Dan Getz	setedit_text(?#t.me)
 1749224329	Dan Getz	M[\W_]*+S[\W_]*+C[\W_]*+Cruises?
+1749236280	Dan Getz	(?:(?:contact|call|center|customer|care|support|service)[\W_]*+)++Tokopedia
