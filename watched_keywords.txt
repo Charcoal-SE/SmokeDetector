@@ -74185,3 +74185,4 @@
 1749192200	VLAZ	ssdncanvas\.com
 1749192434	VLAZ	ssdn[\W_]*+(?:digital[\W_]*+)?canvas(?!\.com(?<=ssdncanvas\.com))
 1749192762	cigien	sy4norton\.com
+1749195923	Nisse Engström	moto-plac\.pl
