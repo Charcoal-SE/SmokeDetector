@@ -74182,3 +74182,4 @@
 1749188540	Cow	smtpwire\.com
 1749190507	VLAZ	landazzle\.com
 1749190525	VLAZ	netvorker\.com\.
+1749192200	VLAZ	ssdncanvas\.com
