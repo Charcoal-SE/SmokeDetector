@@ -6,7 +6,7 @@ import math
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime
 from string import punctuation
 import time
@@ -676,28 +676,41 @@ class FindSpam:
 
     @staticmethod
     def match_info(match):
+        """Formats a single regex match for "why" output including its character position span."""
         start, end = match.span()
         group = match.group().replace("\n", "")
         return "Position {}-{}: {}".format(start + 1, end, group)
 
     @staticmethod
-    def match_infos(matches):
-        spans = {}
-        for match in matches:
-            group = match.group().strip().replace("\n", "")
-            if group not in spans:
-                spans[group] = [match.span()]
-            else:
-                spans[group].append(match.span())
-        infos = [(sorted(spans[word]), word) for word in spans]
+    def match_infos(matches, max_display=13):
+        """Formats any number of regex matches for "why" output including their character position spans."""
+        return FindSpam.span_infos(
+            ((match.group(), match.span()) for match in matches),
+            max_display=max_display)
+
+    @staticmethod
+    def span_infos(spans, max_display=13):
+        """Formats any number of matches for "why" output including their character position spans.
+
+        Each span should be of the form (word, (start_pos, end_pos)).
+
+        Spans with the same word will be grouped together.
+
+        If more than max_display spans would be displayed for a single word, they're truncated to max_display - 1.
+        """
+        span_dict = defaultdict(list)
+        for text, span in spans:
+            span_dict[text.strip().replace("\n", "")].append(span)
+        infos = [(sorted(span_dict[word]), word) for word in span_dict]
         infos.sort(key=lambda info: info[0])  # Sort by positions of appearances
         return ", ".join([
             "Position{} {}: {}".format(
                 "s" if len(span) > 1 else "",
                 ", ".join(
                     ["{}-{}".format(a, b) for a, b in span]
-                    if len(span) < 14 else
-                    ["{}-{}".format(a, b) for a, b in span[:12]] + ["+{} more".format(len(span) - 12)]
+                    if len(span) <= max_display else
+                    (["{}-{}".format(a, b) for a, b in span[:max(max_display - 1, 1)]]
+                     + ["+{} more".format(len(span) - max(max_display - 1, 1))])
                 ),
                 word
             )
