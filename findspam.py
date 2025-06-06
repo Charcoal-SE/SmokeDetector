@@ -2854,6 +2854,7 @@ obfuscation_keyphrases = [
     ("real person", ""),
     ("live person", ""),
     ("live support", ""),
+    ("live help", ""),
     ("service", ""),
     ("support", ""),
 
@@ -2900,6 +2901,8 @@ obfuscation_keyphrases = [
     ("re_fund", "fun"),
     ("re_fund_able", ""),
     ("ticket", "tick"),
+    ("reservation", ""),
+    ("discount", ""),
 
     # support scams - airline - companies
     ("Expedia", ""),
