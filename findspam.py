@@ -3025,31 +3025,26 @@ obfuscation_watch_keyphrases = [
 obfuscation_watch_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_watch_keyphrases)
 
 
-def find_obfuscated_matches(finder, s):
+def run_obfuscation_rule(finder, s):
     s = strip_urls_and_tags(s)
     matches = []
-    for keyphrase, match, (pos_from, pos_to) in finder.find_matches(s):
-        matches.append("Position {}-{}: {!r} is obfuscated {!r}".format(pos_from, pos_to, match, keyphrase))
-    return matches
+    for keyphrase, match, span in finder.find_matches(s):
+        matches.append(("{!r} is obfuscated {!r}".format(match, keyphrase), span))
+    if matches:
+        return True, FindSpam.span_infos(matches)
+    else:
+        return False, ""
 
 
 @create_rule("obfuscated word in {}", max_rep=50, stripcodeblocks=True)
 def obfuscated_word(s, site):
-    matches = find_obfuscated_matches(obfuscation_keyphrases_compiled, s)
-    if matches:
-        return True, ", ".join(matches)
-    else:
-        return False, ""
+    return run_obfuscation_rule(obfuscation_keyphrases_compiled, s)
 
 
 @create_rule("potentially bad keyword in {}", max_rep=50, stripcodeblocks=True,
              rule_id="Potentially bad keywords: obfuscation")
 def obfuscated_word_watch(s, site):
-    matches = find_obfuscated_matches(obfuscation_watch_keyphrases_compiled, s)
-    if matches:
-        return True, ", ".join(matches)
-    else:
-        return False, ""
+    return run_obfuscation_rule(obfuscation_watch_keyphrases_compiled, s)
 
 
 # Category: Trolling
