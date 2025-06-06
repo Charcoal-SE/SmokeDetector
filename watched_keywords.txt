@@ -74207,3 +74207,4 @@
 1749247507	Dan Getz	warmupsmtp\.com
 1749248952	Vickel	slotresmiterbaru\.cyou
 1749248958	Vickel	slot-depositgopay\.cyou
+1749248966	Vickel	slot-depositqris\.cyou
