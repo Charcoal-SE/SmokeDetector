@@ -2846,7 +2846,13 @@ obfuscation_keyphrases = [
     ("black helicopter", ""),
     ("attack helicopter", ""),
 
-    # support scams - phrases
+    # phrases for sales, scams, support scams, etc.
+    ("bit_coin", "it|in"),
+    ("invite code", ""),
+    ("loan app", "an a"),
+    ("loan", "an"),
+    ("referral", "refer"),
+    ("subscription", "script?"),
     ("customer", "custom|tome"),
     ("help desk", ""),
     ("help line", ""),
@@ -2857,9 +2863,22 @@ obfuscation_keyphrases = [
     ("live help", ""),
     ("service", ""),
     ("support", ""),
+    ("best day", ""),
+    ("cancellation", ""),
+    ("cheap", ""),
+    ("cheaper", "cheap"),
+    ("cheapest", "cheap"),
+    ("day to book", ""),
+    ("day to fly", ""),
+    ("flight", "light"),
+    ("live agent", "age|gent"),
+    ("re_fund", "fun"),
+    ("re_fund_able", ""),
+    ("ticket", "tick"),
+    ("reservation", ""),
+    ("discount", ""),
 
-    # support scams - companies
-    ("Am_trak", ""),
+    # company names
     ("Amazon Prime", ""),
     ("Bell South", ""),
     ("Com_cast", ""),
@@ -2887,28 +2906,29 @@ obfuscation_keyphrases = [
     ("TurboTax", "bot"),
     ("Verizon", ""),
     ("WhatsApp", ""),
+    ("91 club", ""),
+    ("Cash App", "ash"),
+    ("Binance", ""),
+    ("Bybit", "by|bit"),
+    ("Coin_base", "in"),
+    ("PayPal", ""),
+    ("Pay_tm", ""),
+    ("PhonePe", "one"),
+    ("Probo", "rob"),
+    ("Robin_hood", "rob|in"),
+    ("Trust Wallet", ""),
+    ("Zelle", "elle"),
+    ("aofexpro.com", ""),
+    ("crypto.com", ""),
 
-    # support scams - airline - phrases
-    ("best day", ""),
-    ("cancellation", ""),
-    ("cheap", ""),
-    ("cheaper", "cheap"),
-    ("cheapest", "cheap"),
-    ("day to book", ""),
-    ("day to fly", ""),
-    ("flight", "light"),
-    ("live agent", "age|gent"),
-    ("re_fund", "fun"),
-    ("re_fund_able", ""),
-    ("ticket", "tick"),
-    ("reservation", ""),
-    ("discount", ""),
-
-    # support scams - airline - companies
+    # company names - travel
     ("Expedia", ""),
     ("Price_line", ""),
+    ("Travelocity", ""),
     ("Airline", "air|line"),
     ("Airway", "air|way"),
+
+    ("Am_trak", ""),
     ("Aero_mexico", r"Aerom\w+xico"),
     ("Air France", ""),
     ("Alaska", "alas|ask"),
@@ -2932,35 +2952,10 @@ obfuscation_keyphrases = [
     ("South_west", ""),
     ("Spirit", ""),
     ("T_A_P Portugal", ""),
-    ("Travelocity", ""),
     ("United", "u?nite?|it|un"),
     ("Volaris", ""),
     ("WestJet", ""),
     ("Win_go", ""),
-
-    # money & money support scams
-    ("bit_coin", "it|in"),
-    ("cash app", "ash"),
-    ("invite code", ""),
-    ("loan app", "an a"),
-    ("loan", "an"),
-    ("referral", "refer"),
-    ("subscription", "script?"),
-
-    # money scams - companies
-    ("91 club", ""),
-    ("Binance", ""),
-    ("Bybit", "by|bit"),
-    ("Coin_base", "in"),
-    ("PayPal", ""),
-    ("Pay_tm", ""),
-    ("PhonePe", "one"),
-    ("Probo", "rob"),
-    ("Robin_hood", "rob|in"),
-    ("Trust Wallet", ""),
-    ("Zelle", "elle"),
-    ("aofexpro.com", ""),
-    ("crypto.com", ""),
 ]
 obfuscation_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_keyphrases)
 
@@ -2972,20 +2967,34 @@ obfuscation_watch_keyphrases = [
     ("shit", "hi|it|hit"),
     ("ki" + "ll yourself", ""),
     ("ass_hole", ""),
+    ("arse_hole", ""),
 
-    # support scams - phrases
+    # phrases for sales, scams, support scams, etc.
     ("dispute", ""),
     ("hacked", ""),
     ("number", "numb"),
     ("phone", "one"),
+    ("cash", "ash"),
+    ("casino", "sin"),
+    ("credit", "red"),
+    ("lotteries", ""),
+    ("lottery", ""),
+    ("money", "one"),
     # es
     ("atencion", r"atenci\w+n"),
     ("con una persona", ""),
     ("telefono", r"tel\w+fon\w+"),
     ("asistencia", ""),
     ("numero", r"n\w+mer\w+"),
+    ("agente", ""),
+    ("cancelacion", r"cancelaci\w+n"),
+    ("devolucion", r"devoluci\w+n"),
+    ("queja", ""),
+    ("reclamacion", r"reclamaci\w+n"),
+    ("reembolso", r"r\w+mbolso"),
+    ("reserva", r"r\w+serv\w+"),
 
-    # support scams - companies
+    # company names
     ("AVG", "^[[:ASCII:]]+$"),
     ("ESET", "^[[:ASCII:]]+$"),
     ("eBay", "e|bay"),
@@ -2996,35 +3005,15 @@ obfuscation_watch_keyphrases = [
     ("Sage", "^[[:ASCII:]]+$"),
     ("Up_hold", "old"),
     ("iCloud", ""),
-
-    # support scams - airline - phrases
-    # es
-    ("agente", ""),
-    ("cancelacion", r"cancelaci\w+n"),
-    ("devolucion", r"devoluci\w+n"),
-    ("queja", ""),
-    ("reclamacion", r"reclamaci\w+n"),
-    ("reembolso", r"r\w+mbolso"),
-    ("reserva", r"r\w+serv\w+"),
-
-    # support scams - airline - companies
-    ("T_A_P Air", ""),
-
-    # money & money support scams
-    ("cash", "ash"),
-    ("casino", "sin"),
-    ("credit", "red"),
-    ("lotteries", ""),
-    ("lottery", ""),
-    ("money", "one"),
-
-    # money scams - companies
     ("FinWessy", ""),
     ("Kraken", ""),
     ("Ku_ku F_M", ""),
     ("Meteor Rupee", ""),
     ("ProtopFin", ""),
     ("SavvScore", ""),
+
+    # company names - travel
+    ("T_A_P Air", ""),
 ]
 obfuscation_watch_keyphrases_compiled = letter_homoglyphs.ObfuscationFinder(*obfuscation_watch_keyphrases)
 
