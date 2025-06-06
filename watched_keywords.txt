@@ -74183,3 +74183,4 @@
 1749190507	VLAZ	landazzle\.com
 1749190525	VLAZ	netvorker\.com\.
 1749192200	VLAZ	ssdncanvas\.com
+1749192434	VLAZ	ssdn[\W_]*+(?:digital[\W_]*+)?canvas(?!\.com(?<=ssdncanvas\.com))
