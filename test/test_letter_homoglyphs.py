@@ -57,7 +57,7 @@ import letter_homoglyphs
     ("yz", "", "YZ \U00016F43Z Y\uAB93", ["\U00016F43Z", "Y\uAB93"]),
     ("z.com", "", "z*com z.com z\uA60Ecom z*c0m", ["z*com", "z\uA60Ecom", "z*c0m"]),
     ("looking", "", "are you lookiɴg for this", ["lookiɴg"]),
-    ("aha", "", "a\U00010796a", ["a\U00010796a"]),
+    ("aha", "", "a\u029Ca", ["a\u029Ca"]),
     ("spam r us", "", "spam-Я-us!", ["spam-Я-us"]),
     ("customer service", "", "ᏟႮՏͲϴᎷᎬᎡ service", ["ᏟႮՏͲϴᎷᎬᎡ service"]),
     ("price", "", "🇵🇷🇮🇨🇪", ["🇵🇷🇮🇨🇪"]),
