@@ -74178,3 +74178,4 @@
 1749146834	cigien	askpromptai(?!\.com)
 1749163752	Dan Getz	lojadomecanico\.com\.br
 1749164831	Jeff Schaller	magepow\.net
+1749172679	Dan Getz	expolegit\.com
