@@ -74222,3 +74222,4 @@
 1749276973	Anerdw	jsonalign\.pro
 1749280908	VLAZ	fabfloorings\.ae
 1749284603	cigien	cryptowealthnet\.com
+1749285141	cigien	chopchic\.com
