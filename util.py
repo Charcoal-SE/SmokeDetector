@@ -23,10 +23,15 @@ utilities = {}
 tmp_blacklist_paths = {}
 
 
-def utility(name, description):
+def utility(name_s, description):
     def wrapper(func):
         global utilities
-        utilities[name] = (description, func)
+        if isinstance(name_s, str):
+            names = [name_s]
+        else:
+            names = list(name_s)
+        for name in names:
+            utilities[name] = (description, func)
         return func
     return wrapper
 
@@ -55,25 +60,25 @@ def util_normalize_number(*args):
         print(chatcommands.normalize_number.__func__(None, s) + "\n")
 
 
-@utility("test-question", "test if text would be automatically reported as a question body")
+@utility(["test-question", "test-q"], "test if text would be automatically reported as a question body")
 def util_test_question(*args):
     for s in args:
         print(chatcommands.test.__func__(s, alias_used='test-question') + "\n")
 
 
-@utility("test-answer", "test if text would be automatically reported as an answer body")
+@utility(["test-answer", "test-a"], "test if text would be automatically reported as an answer body")
 def util_test_answer(*args):
     for s in args:
         print(chatcommands.test.__func__(s, alias_used='test-answer') + "\n")
 
 
-@utility("test-user", "test if text would be automatically reported as username")
+@utility(["test-user", "test-u"], "test if text would be automatically reported as username")
 def util_test_user(*args):
     for s in args:
         print(chatcommands.test.__func__(s, alias_used='test-user') + "\n")
 
 
-@utility("test-title", "test if text would be automatically reported as a question title")
+@utility(["test-title", "test-t"], "test if text would be automatically reported as a question title")
 def util_test_title(*args):
     for s in args:
         print(chatcommands.test.__func__(s, alias_used='test-title') + "\n")
@@ -85,7 +90,7 @@ def util_test(*args):
         print(chatcommands.test.__func__(s, alias_used='test') + "\n")
 
 
-@utility("test-json", "test if post, given in JSON, would be automatically reported")
+@utility(["test-json", "test-j"], "test if post, given in JSON, would be automatically reported")
 def util_test_json(*args):
     for s in args:
         print(chatcommands.test.__func__(s, alias_used='test-json') + "\n")
