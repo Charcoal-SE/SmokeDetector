@@ -74226,3 +74226,4 @@
 1749287126	cigien	info\.7fdesign(?:@gmail\.com)?
 1749295360	VLAZ	evolution25\.com
 1749314647	Dan Getz	survey-remover\.com
+1749317712	Dan Getz	atemplate\.com
