@@ -74223,3 +74223,4 @@
 1749280908	VLAZ	fabfloorings\.ae
 1749284603	cigien	cryptowealthnet\.com
 1749285141	cigien	chopchic\.com
+1749287126	cigien	info\.7fdesign(?:@gmail\.com)?
