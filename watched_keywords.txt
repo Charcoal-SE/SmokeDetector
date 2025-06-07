@@ -74216,3 +74216,4 @@
 1749271516	Dan Getz	uslinctusstore\.com
 1749271531	Dan Getz	chemslab01@proton\.me
 1749273008	Dan Getz	airportsterminalslocation\.com
+1749273824	Dan Getz	laclasse\.in
