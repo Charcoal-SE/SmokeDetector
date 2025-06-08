@@ -74235,3 +74235,4 @@
 1749376479	VLAZ	gaursons\.kutumbrealtech\.in
 1749384865	cigien	potentialenergycalculator\.org
 1749386920	Jeff Schaller	oliyiukrayina\.com
+1749386944	Jeff Schaller	medizinfarmaci\.com
