@@ -8,11 +8,15 @@ import os
 import shlex
 from tempfile import mkstemp
 
+import requests
+
 import helpers
 helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 import chatcommands
 import findspam
+from apigetpost import api_get_post
 from blacklists import Blacklist
+from classes import Post
 
 
 # A utility is "name: (description, func)"
@@ -83,6 +87,26 @@ def util_test(arg):
 @utility(["test-json", "test-j"], "test if post, given in JSON, would be automatically reported")
 def util_test_json(arg):
     print(chatcommands.test.__func__(arg, alias_used='test-json') + "\n")
+
+
+@utility("scan", "load a post from a URL and test it")
+def util_scan(url):
+    try:
+        post = api_get_post(url)
+        if not post:
+            return
+    except requests.exceptions.RequestException as e:
+        print(e)
+        return
+    reasons, why_response = findspam.FindSpam.test_post(Post(api_response=vars(post)))
+
+    if len(reasons) == 0:
+        print("URL {} would not be caught.".format(url))
+    else:
+        print("> " + ", ".join(reasons).capitalize())
+        if why_response is not None and len(why_response) > 0:
+            print("----------")
+            print(why_response)
 
 
 # fake blacklist by copying it to a temporary file, so we can modify it
