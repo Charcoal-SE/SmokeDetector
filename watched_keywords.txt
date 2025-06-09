@@ -71414,7 +71414,6 @@
 1740655329	VLAZ	(?-i:live:\.cid\.d0a89434ac3eba49)(?# skype ID)
 1740657298	VLAZ	login\.com\.pk
 1740657342	Jeff Schaller	saudi-pdpl\.com
-1740657516	Jeff Schaller	robocraze\.com
 1740665447	VLAZ	zenz-solutions\.de
 1740666998	Jeff Schaller	mnserviceproviders\.com
 1740668492	Spevacus	hungrysharkmod\.info
