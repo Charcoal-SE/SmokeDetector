@@ -74252,3 +74252,4 @@
 1749466440	VLAZ	bitmernmining\.com
 1749466450	VLAZ	Bitmern
 1749466656	VLAZ	Vidhyut[\W_]*+Saathi(?!\.com(?<=vidhyutsaathi\.com))
+1749466662	VLAZ	vidhyutsaathi\.com
