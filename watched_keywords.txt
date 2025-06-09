@@ -73943,7 +73943,6 @@
 1748407317	Dan Getz	universalmicrobes\.com
 1748412495	VLAZ	softreviewtime\.com
 1748412569	VLAZ	global-opportunities\.net
-1748413778	VLAZ	pepagora(?!\.com)
 1748415158	VLAZ	rozper\.com
 1748421085	VLAZ	mywifiextlogn\.com
 1748421174	VLAZ	harmainglobal\.com
