@@ -74254,3 +74254,4 @@
 1749469337	VLAZ	(?-i:^sanjaay j$)
 1749472976	Glorfindel	Qualitest\W*Group
 1749474601	Jeff Schaller	appinventors\.com
+1749477692	cigien	infoworld\.com
