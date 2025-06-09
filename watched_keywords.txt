@@ -74254,3 +74254,4 @@
 1749472976	Glorfindel	Qualitest\W*Group
 1749474601	Jeff Schaller	appinventors\.com
 1749477692	cigien	infoworld\.com
+1749478263	Glorfindel	Tutorial\W*Consulting
