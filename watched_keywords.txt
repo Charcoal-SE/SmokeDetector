@@ -74245,3 +74245,4 @@
 1749462580	VLAZ	morringamagic\.com
 1749462587	VLAZ	flushfactoorplus\.com
 1749462595	VLAZ	carboafire\.com
+1749462602	VLAZ	quiatumplus\.com
