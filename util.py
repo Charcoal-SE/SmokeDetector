@@ -199,6 +199,13 @@ def run_full_commands(file=None, cmd=None):
         pass
 
 
+def run_null_terminated_commands(file, cmd=None):
+    for line in file.read().split('\0'):
+        name, arg = split_cmd_arg(line, cmd)
+        if name and arg:
+            run_command(name, arg)
+
+
 def run_command(name, arg):
     if name not in utilities:
         print("Error: function {!r} is not defined".format(name), file=sys.stderr)
@@ -215,14 +222,19 @@ def get_full_command(file=None, cmd=None):
 
     Returns None if the input was blank.
     """
-    arg = get_input(file)
+    cmd, arg = split_cmd_arg(get_input(file), cmd)
+    if arg and arg[0] in ('"', "'"):
+        arg = get_multiline_arg(file, arg)
+    return cmd, arg
+
+
+def split_cmd_arg(arg, cmd=None):
+    """Finds the command name in an argument, if a command name hasn't already been specified"""
     if cmd is None:
         arg_split = arg.split(maxsplit=1)
         if not arg_split:
-            return None
+            return None, None
         cmd, arg = arg_split[0], arg_split[1] if len(arg_split) > 1 else ''
-    if arg and arg[0] in ('"', "'"):
-        arg = get_multiline_arg(file, arg)
     return cmd, arg
 
 
@@ -288,6 +300,9 @@ if __name__ == "__main__":
     argv_parser.add_argument("-A", "--arg-file", metavar='FILE',
                              type=file_arg('A'), action='append', dest='file',
                              help="Load arguments from a file")
+    argv_parser.add_argument("--null", "-0", action='store_true',
+                             help="Use \"\\0\" as the separator in files, instead of newlines"
+                                  + "\nThis also helps with inputting a file as a single argument or command")
     argv_parser.add_argument("args", nargs='*',
                              help="The command followed by its arguments"
                                   + "\nOr just the arguments if the command is specified with -c")
@@ -321,7 +336,8 @@ if __name__ == "__main__":
         for file, file_type in options.file:
             if file_type == 'f':
                 file_type = 'A' if options.cmd else 'C'
-            run_full_commands(file=file, cmd=options.cmd if file_type == 'A' else None)
+            loop = run_null_terminated_commands if options.null else run_full_commands
+            loop(file=file, cmd=options.cmd if file_type == 'A' else None)
 
     if options.interactive:
         interactive_loop()
