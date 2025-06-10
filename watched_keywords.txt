@@ -74296,3 +74296,4 @@
 1749574184	Vickel	motorspied\.com
 1749577128	Dan Getz	son4d
 1749577679	cigien	petti[\W_]*+home[\W_]*+shop(?<!pettihome\.shop)
+1749578958	Vickel	arihantjewels\.in
