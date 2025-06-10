@@ -74294,3 +74294,4 @@
 1749571750	Dan Getz	(?:asistencia|ayuda|resoluci[óo]n|atenci[óo]n|soporte|soluci[óo]n|respuesta)[\W_]*+inmediat[oa]
 1749573995	Machavity	subwaysurferszone\.com
 1749574081	Machavity	mybeachwoodresort\.com
+1749574184	Vickel	motorspied\.com
