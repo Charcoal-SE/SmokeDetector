@@ -74295,3 +74295,4 @@
 1749574081	Machavity	mybeachwoodresort\.com
 1749574184	Vickel	motorspied\.com
 1749577128	Dan Getz	son4d
+1749577679	cigien	petti[\W_]*+home[\W_]*+shop(?<!pettihome\.shop)
