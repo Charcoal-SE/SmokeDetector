@@ -74287,3 +74287,4 @@
 1749562154	Jeff Schaller	minervahealthinc\.com
 1749565612	Dan Getz	^[\W_]*+\d++[\W_]*+ways([\W_]++\w++){2}
 1749566918	cigien	fuxinpcba\.com
+1749566927	cigien	emdadtoyota\.com
