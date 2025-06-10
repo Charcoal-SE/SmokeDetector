@@ -74285,3 +74285,4 @@
 1749555174	cigien	statusmobility\.com
 1749555312	cigien	cardan[\W_]*+shafts
 1749562154	Jeff Schaller	minervahealthinc\.com
+1749565612	Dan Getz	^[\W_]*+\d++[\W_]*+ways([\W_]++\w++){2}
