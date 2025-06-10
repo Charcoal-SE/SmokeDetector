@@ -74289,3 +74289,4 @@
 1749566918	cigien	fuxinpcba\.com
 1749566927	cigien	emdadtoyota\.com
 1749568722	Dan Getz	Urban[\W_]*+Company
+1749570565	Dan Getz	in[\W_]*+this[\W_]*+(?:blog(?:[\W_]*+(?:post|article))?+|article|guide)[\W_]*+(?:we|I)[\W_]*+(?:(?:wi)?+ll|a?+m|a?+re|explore|look|dive|delve|take|get)
