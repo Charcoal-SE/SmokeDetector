@@ -73105,7 +73105,6 @@
 1745509674	Spevacus	masareltamleek\.com\.sa
 1745509681	Spevacus	blog\.masareltamleek\.com
 1745509789	Moo	alpenlederhosen\.co\.uk
-1745511586	Moo	genuinedocumentscentre\.com
 1745512947	Moo	gta5mobile\.com\.co
 1745517619	Moo	worldhajj\.com
 1745518650	Vickel	hhacaaffeafea(?#GitHub)
