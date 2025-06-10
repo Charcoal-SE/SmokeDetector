@@ -61775,7 +61775,6 @@
 1716389293	Makyen	glitzycouture\.com
 1716389328	Makyen	publicpill(?:[\W_]*+(?:online|pharmacy|\d++|[\da-f]{5,}+)s?)*
 1716389353	Makyen	m\.tech
-1716389411	Makyen	catchy[\W_]*+digital[\W_]*+academy
 1716393680	Spevacus	mccp-coiffure-bio\.ch
 1716392589	Fastnlight	acq299507
 1716319786	Cow	windocks\.com
