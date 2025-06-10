@@ -74291,3 +74291,4 @@
 1749568722	Dan Getz	Urban[\W_]*+Company
 1749570565	Dan Getz	in[\W_]*+this[\W_]*+(?:blog(?:[\W_]*+(?:post|article))?+|article|guide)[\W_]*+(?:we|I)[\W_]*+(?:(?:wi)?+ll|a?+m|a?+re|explore|look|dive|delve|take|get)
 1749570864	Dan Getz	habl(?:ar|o|ate)[\W_]*+directamente[\W_]*+con
+1749571750	Dan Getz	(?:asistencia|ayuda|resoluci[óo]n|atenci[óo]n|soporte|soluci[óo]n|respuesta)[\W_]*+inmediat[oa]
