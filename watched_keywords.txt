@@ -74274,3 +74274,4 @@
 1749533075	VLAZ	officesupportcontact\.com
 1749533145	VLAZ	Gratisol[\W_]*+Labs
 1749534331	cigien	news\.mt\.co\.kr
+1749534627	cigien	catchy[\W_]*+digital[\W_]*+academy(?!\.com(?<=catchydigitalacademy\.com))
