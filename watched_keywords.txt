@@ -74278,7 +74278,6 @@
 1749540504	VLAZ	uspackagingboxes\.com
 1749540560	cigien	jet-ski-dubai\.com
 1749540571	cigien	digitalcourseai\.in
-1749546504	Glorfindel	Better[\W_]*+Business[\W_]*+Bureau
 1749548340	cigien	creatapoojaghar\.com
 1749548466	cigien	aixblock\.io
 1749548710	cigien	topcollegesadmission\.in
