@@ -74300,3 +74300,4 @@
 1749579017	cigien	growthwonders\.com
 1749579240	Vickel	growth[\W_]*+wonders(?!\.com(?<=growthwonders\.com))
 1749580921	Vickel	lucky-jety\.com
+1749581214	VLAZ	storyinstanavigation\.com
