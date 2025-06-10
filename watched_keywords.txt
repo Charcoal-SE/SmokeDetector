@@ -74273,3 +74273,4 @@
 1749532559	cigien	airlinesofficesexperts\.com
 1749533075	VLAZ	officesupportcontact\.com
 1749533145	VLAZ	Gratisol[\W_]*+Labs
+1749534331	cigien	news\.mt\.co\.kr
