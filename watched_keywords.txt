@@ -74298,3 +74298,4 @@
 1749577679	cigien	petti[\W_]*+home[\W_]*+shop(?<!pettihome\.shop)
 1749578958	Vickel	arihantjewels\.in
 1749579017	cigien	growthwonders\.com
+1749579240	Vickel	growth[\W_]*+wonders(?!\.com(?<=growthwonders\.com))
