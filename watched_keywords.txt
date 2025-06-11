@@ -74329,3 +74329,4 @@
 1749635110	Sabito	jo\.edu\.psut\.cs
 1749647069	Dan Getz	mintfares\.com
 1749647496	Dan Getz	(?-i:bejjibfmjohgpmipnfdllmmpbfbehdbo)(?#chromewebstore)
+1749652622	Dan Getz	patreon\.com/(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=\w)(?!api)(?!oauth2)(?!core-js)(?!zloirock)(?!deluge_cas)(?!nesdis)(?# add others found in log output)
