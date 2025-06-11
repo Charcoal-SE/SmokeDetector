@@ -74311,3 +74311,4 @@
 1749607262	Dan Getz	pictureai\.ai
 1749607277	Dan Getz	viddo\.ai
 1749607473	Dan Getz	humanizeai\.tools
+1749617111	cigien	pqube\.us
