@@ -10228,7 +10228,6 @@
 1562374142	Makyen	dr\.oyalospellhome(?:@hotmail\.com)?
 1562382288	Machavity	magetop\.com
 1562390646	Makyen	^MrHimmler$
-1562391275	Makyen	market\W*research\W*future(?!\.com(?<!marketresearchfuture\.com))
 1562392529	Makyen	starship\.store
 1562399143	Nisse Engström	jobriyaa\.in
 1562399605	Nisse Engström	crystalwaterpools\.com
