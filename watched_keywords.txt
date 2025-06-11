@@ -74302,3 +74302,4 @@
 1749581214	VLAZ	storyinstanavigation\.com
 1749581544	Vickel	webfix-protocol\.web\.app
 1749587656	Jeff Schaller	goldpriceqatar\.com
+1749600947	Fastnlight	Doctor[\W_]*+AGUNU
