@@ -74332,3 +74332,4 @@
 1749652622	Dan Getz	patreon\.com/(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=\w)(?!api)(?!oauth2)(?!core-js)(?!zloirock)(?!deluge_cas)(?!nesdis)(?# add others found in log output)
 1749652748	Dan Getz	recoverytechcryptocurrency(?:@yahoo\.com)?
 1749652766	Dan Getz	recovery[\W_]*+tech[\W_]*+solutions
+1749673742	Jeff Schaller	kodesavy\.com
