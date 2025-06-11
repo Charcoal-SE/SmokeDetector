@@ -74330,3 +74330,4 @@
 1749642869	cigien	sukoon\.com
 1749635110	Sabito	jo\.edu\.psut\.cs
 1749647069	Dan Getz	mintfares\.com
+1749647496	Dan Getz	(?-i:bejjibfmjohgpmipnfdllmmpbfbehdbo)(?#chromewebstore)
