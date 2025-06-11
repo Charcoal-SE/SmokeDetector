@@ -74312,3 +74312,4 @@
 1749607277	Dan Getz	viddo\.ai
 1749607473	Dan Getz	humanizeai\.tools
 1749617111	cigien	pqube\.us
+1749618472	Mithical	Plati-Market-Shop\.pw
