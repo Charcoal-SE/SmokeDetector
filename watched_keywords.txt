@@ -74359,3 +74359,4 @@
 1749727831	Jeff Schaller	AccentFuture(?!\.com)
 1749728016	cigien	^Shakib\W*Khan(pust)?$
 1749728628	cigien	otmetit\.com
+1749730410	Dan Getz	beyondzasya\.com
