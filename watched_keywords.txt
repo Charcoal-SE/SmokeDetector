@@ -74358,3 +74358,4 @@
 1749725441	cigien	maxtratechnologies\.com
 1749727831	Jeff Schaller	AccentFuture(?!\.com)
 1749728016	cigien	^Shakib\W*Khan(pust)?$
+1749728628	cigien	otmetit\.com
