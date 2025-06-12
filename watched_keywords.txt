@@ -74357,3 +74357,4 @@
 1749725422	cigien	meetrudani\.com
 1749725441	cigien	maxtratechnologies\.com
 1749727831	Jeff Schaller	AccentFuture(?!\.com)
+1749728016	cigien	^Shakib\W*Khan(pust)?$
