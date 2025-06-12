@@ -5663,7 +5663,9 @@ items:
 - ns: pixelshakers.com.
 - ns: techchef.in.
 - ns: ogletech.com.
-- ns: nsluckup.com.
+- comment: NXDOMAIN 2025-06-11
+  disable: true
+  ns: nsluckup.com.
 - ns: aeserver.com.
 - ns: hostiware.com.
 - ns: nexloc.ro.
