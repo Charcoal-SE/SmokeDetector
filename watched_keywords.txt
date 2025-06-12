@@ -74341,3 +74341,4 @@
 1749705384	lyxal	helios[\W_]*+custom[\W_]*+pickleball[\W_]*+paddles
 1749705387	lyxal	heliospickleball\.com
 1749705868	VLAZ	uniquehub47
+1749711422	cigien	grouptripo\.com
