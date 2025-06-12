@@ -74360,3 +74360,4 @@
 1749737636	Dan Getz	joyonthetreetopshinjewadi\.com
 1749742848	Dan Getz	cowchain\.io
 1749747426	Dan Getz	alightmotionproapks\.in
+1749754690	Dan Getz	ecofarmingdaily(?#medium)
