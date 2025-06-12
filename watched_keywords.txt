@@ -74363,3 +74363,4 @@
 1749754690	Dan Getz	ecofarmingdaily(?#medium)
 1749756433	Jeff Schaller	(?-i:43kMWwd)(?#amzn.to)
 1749762641	Jeff Schaller	vizionsolution\.com
+1749762670	Jeff Schaller	langik\.com
