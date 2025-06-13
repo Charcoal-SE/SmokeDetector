@@ -656,10 +656,11 @@ class Metasmoke:
         return response['items']
 
     @staticmethod
-    def get_post_from_ms(ms_id=None, ms_url=None):
-        """Loads a Post from Metasmoke
+    def get_posts_from_ms(ms_id=None, ms_url=None):
+        """Loads one or more Posts from Metasmoke, returning (Post, ms_id) pairs
 
-        Specify either ms_id or ms_url
+        Specify either ms_id or ms_url. URLs are only accepted which point to a single MS or SE post.
+        The hostname is ignored in the URL, and can be omitted.
         """
         if not GlobalVars.metasmoke_key or not GlobalVars.metasmoke_host or GlobalVars.MSStatus.is_down():
             return None
@@ -689,11 +690,11 @@ class Metasmoke:
             return None
 
         try:
-            response = response["items"][0]
-        except (KeyError, IndexError):
+            items = response["items"]
+        except KeyError:
             return None
         else:
-            return Post(ms_api_response=response)
+            return [(Post(ms_api_response=item), item["id"]) for item in items]
 
     @staticmethod
     def get_reason_weights():

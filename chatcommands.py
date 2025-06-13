@@ -1553,9 +1553,13 @@ def test(content, alias_used="test"):
         kind = "an answer" if fake_response['IsAnswer'] else "a question"
         fakepost = Post(api_response=fake_response)
     elif alias_used == "test-ms":
-        fakepost = Metasmoke.get_post_from_ms(ms_url=content)
-        if fakepost is None:
+        fakeposts = Metasmoke.get_posts_from_ms(ms_url=content)
+        if not fakeposts:
             return "Could not load URL {!r}".format(content)
+        elif len(fakeposts) > 1:
+            return "Multiple posts found: {}".format(", ".join("/post/{}".format(i) for post, i in fakeposts))
+        else:
+            fakepost = fakeposts[0][0]
     else:
         kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
