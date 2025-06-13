@@ -18,6 +18,7 @@ from apigetpost import api_get_post
 from blacklists import Blacklist
 from chatcommunicate import CmdException, CmdExceptionLongReply
 from classes import Post
+from globalvars import GlobalVars
 from metasmoke import Metasmoke
 
 
@@ -356,6 +357,10 @@ if __name__ == "__main__":
     argv_parser.add_argument("args", nargs='*',
                              help="The command followed by its arguments"
                                   "\nOr just the arguments if the command is specified with -c")
+    argv_parser.add_argument("--metasmoke-key", "--ms-key",
+                             help="URL for accessing Metasmoke")
+    argv_parser.add_argument("--metasmoke-host", "--ms-host",
+                             help="Metasmoke access key")
 
     options = argv_parser.parse_args()
     # load cmd from command line if not specified with an option
@@ -375,6 +380,13 @@ if __name__ == "__main__":
 
     if options.file and not options.cmd and any(file_type == 'A' for file, file_type in options.file):
         argv_parser.error("--arg-file specified, but no command specified")
+
+    if options.metasmoke_key:
+        GlobalVars.metasmoke_key = options.metasmoke_key
+    if options.metasmoke_host:
+        GlobalVars.metasmoke_host = options.metasmoke_host
+    elif not GlobalVars.metasmoke_host:
+        GlobalVars.metasmoke_host = "https://metasmoke.erwaysoftware.com"
 
     # Run command line commands
     if options.cmd:
