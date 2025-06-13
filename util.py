@@ -16,6 +16,7 @@ import chatcommands
 import findspam
 from apigetpost import api_get_post
 from blacklists import Blacklist
+from chatcommunicate import CmdException, CmdExceptionLongReply
 from classes import Post
 
 
@@ -41,52 +42,52 @@ def utility(name_s, description):
 
 @utility("bisect", "finds out which blacklist/watchlist item matches a string")
 def util_bisect(arg):
-    print(chatcommands.bisect.__func__(None, arg) + "\n")
+    return chatcommands.bisect.__func__(None, arg)
 
 
 @utility("bisect-number", "finds out which number blacklist/watchlist item matches a number")
 def util_bisect_number(arg):
-    print(chatcommands.bisect_number.__func__(None, arg) + "\n")
+    return chatcommands.bisect_number.__func__(None, arg)
 
 
 @utility("deobfuscate-number", "homoglyph deobfuscate and normalize a number pattern")
 def util_deobfuscate_number(arg):
-    print(chatcommands.deobfuscate_number.__func__(None, arg) + "\n")
+    return chatcommands.deobfuscate_number.__func__(None, arg)
 
 
 @utility("normalize-number", "show the number normalizations for a number pattern")
 def util_normalize_number(arg):
-    print(chatcommands.normalize_number.__func__(None, arg) + "\n")
+    return chatcommands.normalize_number.__func__(None, arg)
 
 
 @utility(["test-question", "test-q"], "test if text would be automatically reported as a question body")
 def util_test_question(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test-question') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test-question')
 
 
 @utility(["test-answer", "test-a"], "test if text would be automatically reported as an answer body")
 def util_test_answer(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test-answer') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test-answer')
 
 
 @utility(["test-user", "test-u"], "test if text would be automatically reported as username")
 def util_test_user(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test-user') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test-user')
 
 
 @utility(["test-title", "test-t"], "test if text would be automatically reported as a question title")
 def util_test_title(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test-title') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test-title')
 
 
 @utility("test", "test if text would be automatically reported as a post, title, or username")
 def util_test(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test')
 
 
 @utility(["test-json", "test-j"], "test if post, given in JSON, would be automatically reported")
 def util_test_json(arg):
-    print(chatcommands.test.__func__(arg, alias_used='test-json') + "\n")
+    return chatcommands.test.__func__(arg, alias_used='test-json')
 
 
 @utility("scan", "load a post from a URL and test it")
@@ -189,7 +190,7 @@ def util_exit(_arg=''):
 
 @utility("help", "display a list of available sub-commands")
 def util_help(_arg=''):
-    print(command_help_text())
+    return command_help_text()
 
 
 def command_help_text() -> str:
@@ -235,7 +236,14 @@ def run_command(name, arg):
         print("Error: function {!r} is not defined".format(name), file=sys.stderr)
         return
     desc, func = utilities[name]
-    func(arg)
+    try:
+        result = func(arg)
+        if result is not None:
+            print(result)
+    except CmdException as e:
+        print(e)
+    except CmdExceptionLongReply as e:
+        print('\n' + str(e).replace('\n', ' '))
 
 
 def get_full_command(file=None, cmd=None):
