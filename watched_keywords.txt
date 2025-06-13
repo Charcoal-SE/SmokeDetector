@@ -74366,3 +74366,4 @@
 1749762670	Jeff Schaller	langik\.com
 1749774540	Jeff Schaller	ayrshare\.com
 1749793750	cigien	myphamsassy\.com
+1749793781	Glorfindel	^agya vapis$
