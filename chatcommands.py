@@ -1472,7 +1472,7 @@ def standby(msg, location_search, alias_used="standby"):
 
 # noinspection PyIncorrectDocstring
 @command(str, aliases=["test-q", "test-question", "test-a", "test-answer", "test-u", "test-user",
-                       "test-t", "test-title", "test-j", "test-json"],
+                       "test-t", "test-title", "test-j", "test-json", "test-ms"],
          give_name=True)
 def test(content, alias_used="test"):
     """
@@ -1552,6 +1552,10 @@ def test(content, alias_used="test"):
         # Handle that pluralization bug
         kind = "an answer" if fake_response['IsAnswer'] else "a question"
         fakepost = Post(api_response=fake_response)
+    elif alias_used == "test-ms":
+        fakepost = Metasmoke.get_post_from_ms(ms_url=content)
+        if fakepost is None:
+            return "Could not load URL {!r}".format(content)
     else:
         kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
