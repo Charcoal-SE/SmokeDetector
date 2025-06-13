@@ -664,15 +664,20 @@ class Metasmoke:
         if not GlobalVars.metasmoke_key or not GlobalVars.metasmoke_host or GlobalVars.MSStatus.is_down():
             return None
 
-        if ms_id is None:
-            ms_id = int(regex.search(r'/post/(\d++)$', ms_url).group(1))
+        if ms_id is not None:
+            api_url = r'/api/v2.0/posts/{}'.format(ms_id)
+        else:
+            m = regex.search(r'/posts?/(\d++|uid/.*)$', ms_url, regex.IGNORECASE)
+            if not m:
+                return None
+            api_url = r'/api/v2.0/posts/{}'.format(m.group(1))
 
         payload = {
             'key': GlobalVars.metasmoke_key,
             'filter': 'F',  # Request everything. Currently the only way to get markdown
         }
         try:
-            response = Metasmoke.get('/api/v2.0/posts/{}'.format(ms_id), params=payload).json()
+            response = Metasmoke.get(api_url, params=payload).json()
         except AttributeError:
             return None
         except Exception as e:
@@ -683,7 +688,12 @@ class Metasmoke:
                                                      .format(GlobalVars.location, exception_only))
             return None
 
-        return Post(ms_api_response=response["items"][0])
+        try:
+            response = response["items"][0]
+        except (KeyError, IndexError):
+            return None
+        else:
+            return Post(ms_api_response=response)
 
     @staticmethod
     def get_reason_weights():
