@@ -74389,3 +74389,4 @@
 1749833753	cigien	upbasicschoolnews\.blogspot
 1749837610	Dan Getz	reach[\W_]*+a[\W_]*+live[\W_]*+(?:(?:customer[\W_]*+)?+(?:service|support)[\W_]*+)?+(?:agent|representative|person)
 1749843149	Dan Getz	wadav\.com
+1749845598	Dan Getz	greenpts\.com
