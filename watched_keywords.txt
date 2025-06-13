@@ -74384,3 +74384,4 @@
 1749816540	Jeff Schaller	va\.care
 1749817550	cigien	softwarediscountusa\.com
 1749818494	Glorfindel	Royale-TV\.com
+1749821411	Dan Getz	^\s*+<p>\s*+<a\s[^>]++>\s*+<code>
