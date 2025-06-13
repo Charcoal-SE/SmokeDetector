@@ -18,6 +18,7 @@ from apigetpost import api_get_post
 from blacklists import Blacklist
 from chatcommunicate import CmdException, CmdExceptionLongReply
 from classes import Post
+from metasmoke import Metasmoke
 
 
 # A utility is "name: (description, func)"
@@ -90,17 +91,8 @@ def util_test_json(arg):
     return chatcommands.test.__func__(arg, alias_used='test-json')
 
 
-@utility("scan", "load a post from a URL and test it")
-def util_scan(url):
-    try:
-        post = api_get_post(url)
-        if not post:
-            return
-    except requests.exceptions.RequestException as e:
-        print(e)
-        return
-    reasons, why_response = findspam.FindSpam.test_post(Post(api_response=vars(post)))
-
+def test_post(post, url):
+    reasons, why_response = findspam.FindSpam.test_post(post)
     if len(reasons) == 0:
         print("URL {} would not be caught.".format(url))
     else:
@@ -108,6 +100,32 @@ def util_scan(url):
         if why_response is not None and len(why_response) > 0:
             print("----------")
             print(why_response)
+
+
+@utility("test-ms", "load a post from a Metasmoke URL and test it")
+def util_test_ms(url):
+    try:
+        post = Metasmoke.get_post_from_ms(ms_url=url)
+        if not post:
+            print("Unable to load URL")
+            return
+    except Exception as e:
+        print(e)
+    else:
+        test_post(post, url)
+
+
+@utility("scan", "load a post from a URL and test it")
+def util_scan(url):
+    try:
+        response = api_get_post(url)
+        if not response:
+            print("Unable to load URL")
+            return
+    except requests.exceptions.RequestException as e:
+        print(e)
+    else:
+        test_post(Post(api_response=vars(response)), url)
 
 
 # fake blacklist by copying it to a temporary file, so we can modify it
@@ -322,7 +340,7 @@ if __name__ == "__main__":
                              help="Interactive mode (the default if no command or files are specified)")
     argv_parser.add_argument("-S", "--single", action='store_true',
                              help="Join further command line arguments into a single command argument"
-                                  + "\nOtherwise, they will be treated as individual arguments")
+                                  "\nOtherwise, they will be treated as individual arguments")
     argv_parser.add_argument("-f", "--file",
                              type=file_arg('f'), action='append',
                              help="Load commands or arguments from a file (guesses which you mean)")
@@ -334,10 +352,10 @@ if __name__ == "__main__":
                              help="Load arguments from a file")
     argv_parser.add_argument("--null", "-0", action='store_true',
                              help="Use \"\\0\" as the separator in files, instead of newlines"
-                                  + "\nThis also helps with inputting a file as a single argument or command")
+                                  "\nThis also helps with inputting a file as a single argument or command")
     argv_parser.add_argument("args", nargs='*',
                              help="The command followed by its arguments"
-                                  + "\nOr just the arguments if the command is specified with -c")
+                                  "\nOr just the arguments if the command is specified with -c")
 
     options = argv_parser.parse_args()
     # load cmd from command line if not specified with an option
