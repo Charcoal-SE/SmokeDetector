@@ -3859,3 +3859,4 @@ para[\W_]*+hablar[\W_]*+con[\W_]*+una[\W_]*+persona[\W_]*+(?:viva|en[\W_]*+vivo)
 follow[\W_]*+(?:the[\W_]*+)?(?:automated[\W_]*+)?(?:IVR[\W_]*+)?(?:menu[\W_]*+)?prompts[\W_]*+to[\W_]*+(?:connect|get[\W_]*+connected)
 (?-i:vector in our basis for some other column to)(?#copypasta)
 (?-i:on certain condition of the goal)(?#copypasta)
+one[\W_]*+I[\W_]*+sent[\W_]*+you[\W_]*+a[\W_]*+mood
