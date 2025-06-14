@@ -3860,3 +3860,4 @@ follow[\W_]*+(?:the[\W_]*+)?(?:automated[\W_]*+)?(?:IVR[\W_]*+)?(?:menu[\W_]*+)?
 (?-i:vector in our basis for some other column to)(?#copypasta)
 (?-i:on certain condition of the goal)(?#copypasta)
 one[\W_]*+I[\W_]*+sent[\W_]*+you[\W_]*+a[\W_]*+mood
+nature[\W_]*+path[\W_]*+herbal[\W_]*+clinic(?:\.[\W_]*+c[\W_]*+o[\W_]*+m)?
