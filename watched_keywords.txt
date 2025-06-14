@@ -74405,3 +74405,4 @@
 1749906340	Jeff Schaller	alazemlegal\.com
 1749908356	Dan Getz	senior[\W_]*+(?:citizen[\W_]*+)?+discounts?+[\W_]*+on
 1749913947	Vickel	couponztime\.com
+1749917685	Vickel	fitnessmart\.com\.bd
