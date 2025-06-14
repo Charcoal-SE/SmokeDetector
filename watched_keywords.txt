@@ -74396,3 +74396,4 @@
 1749882679	cigien	bestone[\W_]*+water(?!\.com(?<=bestonewater\.com))
 1749883397	cigien	masterybay\.com
 1749885358	Nisse Engström	wordscompare\.com
+1749885998	cigien	walgreenusa\.com
