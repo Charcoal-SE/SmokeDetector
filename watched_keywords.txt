@@ -74403,3 +74403,4 @@
 1749903600	Dan Getz	mahamayagangaaarti\.in
 1749905630	Dan Getz	cloudoku\.training
 1749906340	Jeff Schaller	alazemlegal\.com
+1749908356	Dan Getz	senior[\W_]*+(?:citizen[\W_]*+)?+discounts?+[\W_]*+on
