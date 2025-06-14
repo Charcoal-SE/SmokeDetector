@@ -74365,7 +74365,6 @@
 1749762670	Jeff Schaller	langik\.com
 1749774540	Jeff Schaller	ayrshare\.com
 1749793750	cigien	myphamsassy\.com
-1749793781	Glorfindel	^agya vapis$
 1749794034	cigien	pelicanwire\.com
 1749794109	cigien	ebizsolutionsindia\.com
 1749795108	cigien	widnerbuildershawaii\.com
