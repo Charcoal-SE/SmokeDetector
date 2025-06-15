@@ -39068,7 +39068,6 @@
 1654070842	tripleee	a2converter\.com
 1654071128	Ryan M	gosloto\.co\.za
 1654071192	Ryan M	gosloto\.co(?!\.za)
-1654074854	tripleee	(?-i:^muhammad imran$)
 1654075742	tripleee	it2\.tv
 1654080783	Mast	ukassignmenthelp\.uk
 1654081592	tripleee	(?-i:^horo$)
