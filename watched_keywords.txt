@@ -74414,3 +74414,4 @@
 1749992819	Vickel	browsergameshq\.com
 1749992939	Vickel	BrowserGamesHQ(?!\.com)
 1749993462	Vickel	influorise\.com
+1749996972	Jeff Schaller	iescoebill\.com\.pk
