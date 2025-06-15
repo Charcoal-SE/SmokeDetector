@@ -74413,3 +74413,4 @@
 1749981346	double-beep	infobal\.com\.ar
 1749986206	Jeff Schaller	giisraipur\.in
 1749992819	Vickel	browsergameshq\.com
+1749992939	Vickel	BrowserGamesHQ(?!\.com)
