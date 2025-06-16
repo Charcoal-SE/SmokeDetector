@@ -74449,3 +74449,4 @@
 1750097005	Nisse Engström	binary-options\.org
 1750098779	Spevacus	dbphar\.vn
 1750110384	Jeff Schaller	citadel\.co\.nz
+1750110480	Jeff Schaller	polkadotbarstore\.com
