@@ -74433,3 +74433,4 @@
 1750065326	cigien	brewedtogreed\.com
 1750068285	double-beep	flymaxis\.com
 1750070982	cigien	multicabz\.com
+1750071278	cigien	sportinn\.com\.tr
