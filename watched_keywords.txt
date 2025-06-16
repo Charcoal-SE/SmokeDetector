@@ -74438,3 +74438,4 @@
 1750074732	Dan Getz	westcapital-eg\.com
 1750075548	Dan Getz	orangehardwares\.com
 1750075740	Machavity	youandhouseproperties\.com
+1750076219	Dan Getz	medmall\.us
