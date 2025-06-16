@@ -74422,3 +74422,4 @@
 1750025845	Vickel	wigreal\.com
 1750026242	Vickel	wig[\W_]*+real(?!\.com(?<=wigreal\.com))
 1750036281	Jeff Schaller	painterslink\.com\.au
+1750054603	cigien	radmancellars\.com
