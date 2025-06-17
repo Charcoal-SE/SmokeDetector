@@ -74456,3 +74456,4 @@
 1750136630	Cow	(?-i:samohosting)(?#t.me)
 1750136729	Cow	runningrenos\.com
 1750138057	cigien	go-urinoct\.us
+1750138166	cigien	1kb\.link
