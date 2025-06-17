@@ -74473,3 +74473,4 @@
 1750156722	cigien	zoroto\.de
 1750156735	cigien	zoroto(?!\.de)
 1750158452	Jeff Schaller	quickridz\.com
+1750159627	Jeff Schaller	entandheadneckcancerclinic\.com
