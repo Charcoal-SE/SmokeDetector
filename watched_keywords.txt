@@ -70952,7 +70952,6 @@
 1739436634	VLAZ	mpvchits?[\W_]*+funds(?!\.com(?<=mpvchitfunds\.com))
 1739438747	Cow	gemonediamond\.com
 1739443424	VLAZ	darkwebprogrammers
-1739446168	VLAZ	accentfuture\.com
 1739447666	Cow	(?-i:0029Vb1BOo07z4km8jWXhw11)(?# WhatsApp channel)
 1739451975	VLAZ	private-investigator-toronto\.ca
 1739451984	Jeff Schaller	myflyi\.com
