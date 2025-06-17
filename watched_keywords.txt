@@ -68367,7 +68367,6 @@
 1732015526	VLAZ	wokhr\.com
 1732015621	VLAZ	lroomapk\.com
 1732015641	VLAZ	qbuildcon\.com
-1732016012	VLAZ	thelotusbiotech\.com
 1732016081	VLAZ	the[\W_]*+lotus[\W_]*+biotech(?!\.com(?<=thelotusbiotech\.com))
 1732018446	Cow	hinduastrology\.life
 1732019003	Cow	bangsaonline\.com
