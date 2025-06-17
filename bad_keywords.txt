@@ -3863,3 +3863,4 @@ one[\W_]*+I[\W_]*+sent[\W_]*+you[\W_]*+a[\W_]*+mood
 nature[\W_]*+path[\W_]*+herbal[\W_]*+clinic(?:\.[\W_]*+c[\W_]*+o[\W_]*+m)?
 inquire[\W_]*+more[\W_]*+about[\W_]*+a[\W_]*+senior[\W_]*+discount
 sophie[\W_]*+rain[\W_]*+spiderman
+Kasper[\W]*+Infotech
