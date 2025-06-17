@@ -74459,3 +74459,4 @@
 1750138166	cigien	1kb\.link
 1750138684	cigien	vrtwallets\.com
 1750138696	cigien	truthin\.ai
+1750144043	cigien	amityuniversity\.ae
