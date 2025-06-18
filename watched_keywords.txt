@@ -74495,3 +74495,4 @@
 1750232123	Dan Getz	SMTPwire(?!\.com)
 1750232222	Dan Getz	WarmupSMTP(?!\.com)
 1750232233	Dan Getz	DedicatedSMTPServer(?!\.com)
+1750232321	Dan Getz	infowbd\.com
