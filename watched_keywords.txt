@@ -74502,3 +74502,4 @@
 1750235595	Cow	vanarchain\.com
 1750239517	Dan Getz	vinyasayogaacademy\.com
 1750241163	Jeff Schaller	aarogyanaturals\.com
+1750242764	Dan Getz	plugbanks(?#telegram)
