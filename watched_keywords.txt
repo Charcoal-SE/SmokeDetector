@@ -74516,3 +74516,4 @@
 1750274815	cigien	et3lom\.com
 1750275548	cigien	pathshalahub\.com
 1750281428	Vickel	earthcureherbalclinic\.com
+1750281594	Vickel	earthcureherbalclinic(?!\.com)
