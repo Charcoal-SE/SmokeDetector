@@ -74517,3 +74517,4 @@
 1750275548	cigien	pathshalahub\.com
 1750281428	Vickel	earthcureherbalclinic\.com
 1750281594	Vickel	earthcureherbalclinic(?!\.com)
+1750288619	Dan Getz	qcotrack\.com
