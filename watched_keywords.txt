@@ -68802,7 +68802,6 @@
 1733391211	Dragonrage	wpsmartsolutions\.com
 1733391551	cocomac	guidanceplus\.in
 1733395406	Dragonrage	bestdrivingschool\.co\.uk
-1733397894	Vickel	pathshala[\W_]*+hub
 1733398020	Jeff Schaller	zestminds\.com
 1733398080	Cow	retterworkwear\.com
 1733398353	Cow	carkoncepts\.com
