@@ -74497,3 +74497,4 @@
 1750232233	Dan Getz	DedicatedSMTPServer(?!\.com)
 1750232321	Dan Getz	infowbd\.com
 1750232335	Dan Getz	tech9logy\.com
+1750232914	Glorfindel	kollegeapply\.com
