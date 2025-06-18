@@ -74494,3 +74494,4 @@
 1750229442	Dan Getz	developerspoint\.net
 1750232123	Dan Getz	SMTPwire(?!\.com)
 1750232222	Dan Getz	WarmupSMTP(?!\.com)
+1750232233	Dan Getz	DedicatedSMTPServer(?!\.com)
