@@ -74492,3 +74492,4 @@
 1750228876	Dan Getz	cannaclubco\.io
 1750229174	Dan Getz	DedicatedSMTPServer\.com
 1750229442	Dan Getz	developerspoint\.net
+1750232123	Dan Getz	SMTPwire(?!\.com)
