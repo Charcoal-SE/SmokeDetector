@@ -74503,3 +74503,4 @@
 1750239517	Dan Getz	vinyasayogaacademy\.com
 1750241163	Jeff Schaller	aarogyanaturals\.com
 1750242764	Dan Getz	plugbanks(?#telegram)
+1750243692	Jeff Schaller	iptvinsouthafrica\.com
