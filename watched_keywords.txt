@@ -74491,3 +74491,4 @@
 1750228698	Dan Getz	sntinternational\.co\.in
 1750228876	Dan Getz	cannaclubco\.io
 1750229174	Dan Getz	DedicatedSMTPServer\.com
+1750229442	Dan Getz	developerspoint\.net
