@@ -74521,3 +74521,4 @@
 1750302593	Dan Getz	prabhakar11\.odmtstudents\.com
 1750302694	Dan Getz	ketoanuuviet\.vn
 1750307454	Dan Getz	Why\s*+choose[^?\w]++(\w++(?:[^?\w]++\w++){0,6}+)[^?\w]*+\?[\W_]*+At[\W_]*+\1
+1750309487	Dan Getz	fobular\.services
