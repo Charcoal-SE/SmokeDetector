@@ -74518,3 +74518,4 @@
 1750281428	Vickel	earthcureherbalclinic\.com
 1750281594	Vickel	earthcureherbalclinic(?!\.com)
 1750288619	Dan Getz	qcotrack\.com
+1750295793	Dan Getz	babysleepmiracle\.org
