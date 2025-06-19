@@ -3865,3 +3865,4 @@ inquire[\W_]*+more[\W_]*+about[\W_]*+a[\W_]*+senior[\W_]*+discount
 sophie[\W_]*+rain[\W_]*+spiderman
 Kasper[\W]*+Infotech
 pathshala[\W_]*+hub(?!\.com(?<=pathshalahub\.com))
+how[\W_]*+much[\W_]*+is[\W_]*+a[\W_]*+seat[\W_]*+upgrade[\W_]*+on
