@@ -22937,7 +22937,6 @@
 1602380738	Ryan M	unlock\.zone
 1602381207	Ryan M	\://[\w\-]*(?:tube?|music|vid|video)[\w\-]++\.zone/
 1602398293	Nisse Engström	pawanshastri\.com
-1602402204	Mast	bcellphonelist\.com
 1602402233	Mast	vietnam-mobile-database?
 1602403883	Mast	arga-mag\.com
 1602409761	Mast	(?-i:^Richa Kedia$)
