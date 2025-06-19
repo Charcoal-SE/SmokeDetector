@@ -50578,7 +50578,6 @@
 1685264155	Cody Gray	Lawrenz[\W_]*+Contracting
 1685278932	Jeff Schaller	minwaa\.com
 1685282908	Makyen	breeze[\W_]*+ai(?<!breeze\.ai)
-1685282942	Makyen	emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
 1685288681	Ethan	socialsites\.in
 1685289057	Nisse Engström	insiderwp\.com
 1685297686	Jeff Schaller	capcutmodapk\.info

@@ -3866,3 +3866,4 @@ sophie[\W_]*+rain[\W_]*+spiderman
 Kasper[\W]*+Infotech
 pathshala[\W_]*+hub(?!\.com(?<=pathshalahub\.com))
 how[\W_]*+much[\W_]*+is[\W_]*+a[\W_]*+seat[\W_]*+upgrade[\W_]*+on
+emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
