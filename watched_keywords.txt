@@ -74549,3 +74549,4 @@
 1750398745	cigien	diamondexch\.pro\.in
 1750398841	cigien	360events\.in
 1750399008	cigien	tripleiconsulting\.com
+1750399398	cigien	tourstro(?!\.com)
