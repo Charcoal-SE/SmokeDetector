@@ -1235,3 +1235,4 @@ carelab[sz]
 ^Hong se de guai guai$
 ^Online quran classes$
 ^agya vapis$
+(?-i:^Cash vireet$)
