@@ -74228,7 +74228,6 @@
 1749466662	VLAZ	vidhyutsaathi\.com
 1749469337	VLAZ	(?-i:^sanjaay j$)
 1749472976	Glorfindel	Qualitest\W*Group
-1749474601	Jeff Schaller	appinventors\.com
 1749477692	cigien	infoworld\.com
 1749478263	Glorfindel	Tutorial\W*Consulting
 1749482133	VLAZ	theaccountant2stream
