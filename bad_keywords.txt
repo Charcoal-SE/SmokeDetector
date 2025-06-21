@@ -3869,3 +3869,4 @@ how[\W_]*+much[\W_]*+is[\W_]*+a[\W_]*+seat[\W_]*+upgrade[\W_]*+on
 emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
 instant[\W_]*+cash\b.{0,50}\bloans?+
 1?877[\W_]*+777[\W_]*+5946
+long[\W_]*+one[\W_]*+of[\W_]*+the[\W_]*+world
