@@ -74572,3 +74572,4 @@
 1750485988	Dan Getz	digitalmarketingworlg\.blogspot
 1750486930	Dan Getz	wacto\.in
 1750489907	Nisse Engström	analytics-model\.com
+1750490084	Dan Getz	cpubottleneckcalculator\.com
