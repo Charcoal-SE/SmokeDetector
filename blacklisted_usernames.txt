@@ -1236,3 +1236,4 @@ carelab[sz]
 ^Online quran classes$
 ^agya vapis$
 (?-i:^Cash vireet$)
+(?-i:^Cash vireet‭$)
