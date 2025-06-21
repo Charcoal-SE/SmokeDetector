@@ -74567,3 +74567,4 @@
 1750477962	Dan Getz	yamunadesistore\.com
 1750479317	Jeff Schaller	wafaicloud\.com
 1750479401	Dan Getz	macquariestreetdental\.com\.au
+1750482448	Dan Getz	easygradescalculator\.com
