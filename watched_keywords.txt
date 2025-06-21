@@ -74570,3 +74570,4 @@
 1750482448	Dan Getz	easygradescalculator\.com
 1750484868	Dan Getz	exclusive[\W_]*+(?:\w{3,15}[\W_]*+)?(?:offer|discount|prize|benefit|reward|deal|investment|opportunit|code|analys|feature|perk|savings)\w*+
 1750485988	Dan Getz	digitalmarketingworlg\.blogspot
+1750486930	Dan Getz	wacto\.in
