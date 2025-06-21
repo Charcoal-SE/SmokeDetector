@@ -72049,7 +72049,6 @@
 1742670097	Cow	innergrowthguides\.com
 1742671241	Cow	healthcareglowhub\.in
 1742672619	Dan Getz	refitglobal\.com
-1742714252	Nisse Engström	coderlegion\.com
 1742725805	Nisse Engström	caffeinatedinsights\.com
 1742730634	Cow	to-all\.com
 1742730666	Cow	soumissionscloture\.ca
