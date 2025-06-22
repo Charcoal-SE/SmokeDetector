@@ -74580,3 +74580,4 @@
 1750518132	Jeff Schaller	primarycaremedstore\.com
 1750521567	Dan Getz	adammag\.co\.uk
 1750545877	Dan Getz	prompttechrecovery
+1750565696	Dan Getz	(?:(?:kg|cm|dj|nc|gh|kh)(?:\s++[a-z]{2}(?<!kg|cm|dj|nc|gh|kh)){0,8}+\s++){4}
