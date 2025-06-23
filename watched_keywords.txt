@@ -74611,3 +74611,4 @@
 1750684836	Jeff Schaller	fonecaremobileservices\.in
 1750685255	Jeff Schaller	shabinmp\.com
 1750687627	Jeff Schaller	cookie-clicker\.one
+1750694705	Dan Getz	aiscorp\.ai
