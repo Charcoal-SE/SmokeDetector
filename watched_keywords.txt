@@ -70931,7 +70931,6 @@
 1739407497	Fastnlight	theembroider\.com
 1739408151	Fastnlight	givevalue\.io\.vn
 1739423411	Cow	legacyfamilytreehelp\.com
-1739425249	Cow	names4brands\.com
 1739428213	Cow	freshtableware\.in
 1739429010	Cow	hiretails\.com
 1739429238	Cow	shareasmiledental\.com
