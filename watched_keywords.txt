@@ -74593,3 +74593,4 @@
 1750655994	cigien	locationshub\.in
 1750656735	cigien	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))(?!\.co\.in(?<=daman-game\.co\.in))
 1750656742	cigien	daman-game\.co\.in
+1750657078	cigien	bisptrainings\.com
