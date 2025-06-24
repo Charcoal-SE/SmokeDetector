@@ -74637,3 +74637,4 @@
 1750766776	Dan Getz	cybex\.shopping
 1750768067	VLAZ	lumoraessential\.com
 1750769515	Dan Getz	madrasatelquran\.com
+1750769819	Dan Getz	radonexhibition\.com
