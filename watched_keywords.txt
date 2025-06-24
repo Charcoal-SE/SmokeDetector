@@ -74627,3 +74627,4 @@
 1750748342	VLAZ	ChanaJor
 1750753583	VLAZ	sqlchangeguard\.com
 1750753661	VLAZ	palscity\.com
+1750753709	VLAZ	allcrumblcookiesmenu\.com
