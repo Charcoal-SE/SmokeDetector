@@ -73849,7 +73849,6 @@
 1748242082	VLAZ	highwaytruckdrivingschool\.com\.au
 1748242162	Dan Getz	clatnlti\.com
 1748242202	VLAZ	calcoladoraalice\.com
-1748242333	VLAZ	kumarbuilders\.com
 1748242349	VLAZ	aseef\.co
 1748242458	VLAZ	winkapkdownload\.com
 1748243859	Dan Getz	chinchin-casino\.com
