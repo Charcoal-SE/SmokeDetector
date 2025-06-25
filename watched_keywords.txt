@@ -74661,5 +74661,4 @@
 1750845187	double-beep	ppthetraveller\.com
 1750847273	VLAZ	chatgptjp\.com
 1750847313	VLAZ	weblinx\.in
-1750849088	Jeff Schaller	elukelele\.com
 1750849133	Jeff Schaller	stselectric\.com
