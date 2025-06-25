@@ -3870,3 +3870,4 @@ emergen[\W_]*+research(?!\.com(?<=emergenresearch\.com))
 instant[\W_]*+cash\b.{0,50}\bloans?+
 1?877[\W_]*+777[\W_]*+5946
 long[\W_]*+one[\W_]*+of[\W_]*+the[\W_]*+world
+air[\W_]*+france[\W_]*+open[\W_]*+on[\W_]*+24
