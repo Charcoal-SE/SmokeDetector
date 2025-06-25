@@ -74662,3 +74662,4 @@
 1750847273	VLAZ	chatgptjp\.com
 1750847313	VLAZ	weblinx\.in
 1750849133	Jeff Schaller	stselectric\.com
+1750850136	VLAZ	sts[\W_]*+electric(?!\.com(?<=stselectric\.com))
