@@ -74654,3 +74654,4 @@
 1750837693	VLAZ	conferenceineurope\.org
 1750839471	Cow	geeksdan\.com
 1750840713	VLAZ	earthshinejewels\.com
+1750841152	VLAZ	abhiwan(?:[\W_]*+technology)?(?!\.com(?<=abhiwan\.com))
