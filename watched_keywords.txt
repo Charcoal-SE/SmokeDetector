@@ -74650,3 +74650,4 @@
 1750805072	Dan Getz	fasttracking\.com\.au
 1750826552	Dan Getz	dentalnook\.com\.au
 1750837085	VLAZ	getcoupons\.ae
+1750837413	VLAZ	fairnessforall\.com
