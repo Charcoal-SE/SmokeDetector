@@ -74665,3 +74665,4 @@
 1750850136	VLAZ	sts[\W_]*+electric(?!\.com(?<=stselectric\.com))
 1750850257	VLAZ	WP[\W_]*+Hide[\W_]*+Security[\W_]*+Enhancer
 1750851462	Jeff Schaller	pjrgajamalas\.in
+1750853107	Jeff Schaller	skylinescholar\.com
