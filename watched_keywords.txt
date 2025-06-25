@@ -74666,3 +74666,4 @@
 1750850257	VLAZ	WP[\W_]*+Hide[\W_]*+Security[\W_]*+Enhancer
 1750851462	Jeff Schaller	pjrgajamalas\.in
 1750853107	Jeff Schaller	skylinescholar\.com
+1750863397	Dan Getz	rawnakmc\.com
