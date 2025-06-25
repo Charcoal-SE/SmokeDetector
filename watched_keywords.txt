@@ -74649,3 +74649,4 @@
 1750801044	Dan Getz	myexpertify\.com
 1750805072	Dan Getz	fasttracking\.com\.au
 1750826552	Dan Getz	dentalnook\.com\.au
+1750837085	VLAZ	getcoupons\.ae
