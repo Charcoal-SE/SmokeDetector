@@ -74657,3 +74657,4 @@
 1750841152	VLAZ	abhiwan(?:[\W_]*+technology)?(?!\.com(?<=abhiwan\.com))
 1750841596	VLAZ	xole\.ai
 1750842004	VLAZ	quva\.in
+1750843155	VLAZ	thirumalaroofings\.com
