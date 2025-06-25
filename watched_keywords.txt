@@ -74655,3 +74655,4 @@
 1750839471	Cow	geeksdan\.com
 1750840713	VLAZ	earthshinejewels\.com
 1750841152	VLAZ	abhiwan(?:[\W_]*+technology)?(?!\.com(?<=abhiwan\.com))
+1750841596	VLAZ	xole\.ai
