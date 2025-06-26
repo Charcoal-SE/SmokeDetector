@@ -74680,3 +74680,4 @@
 1750923110	VLAZ	8171ehsaasprogram\.net
 1750923816	VLAZ	Brahmastra[\W_]*+Pharmacy[\W_]*+Power[\W_]*+pulse
 1750923832	VLAZ	bhavans\.courses
+1750923863	VLAZ	Bharatiya[\W_]*+Vidya[\W_]*+Bhavan
