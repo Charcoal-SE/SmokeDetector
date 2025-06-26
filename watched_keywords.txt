@@ -74685,3 +74685,4 @@
 1750927122	double-beep	blackbulltechnosoft\.com
 1750929812	VLAZ	couponfares\.com
 1750931463	VLAZ	medigrowtechnologies\.com
+1750931596	Jeff Schaller	bestratecheck\.com
