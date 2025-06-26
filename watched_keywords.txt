@@ -74678,3 +74678,4 @@
 1750912597	Dan Getz	[a-z']{2,}+\?(?:[b-df-hj-np-tv-z]{2,}+(?<!html)(?<!css|php|wpf|sql|xml|csv|\?ng)|(?:call|info)[a-z]*+)$
 1750913244	Dan Getz	worldwidepackshipandmail\.com
 1750923110	VLAZ	8171ehsaasprogram\.net
+1750923816	VLAZ	Brahmastra[\W_]*+Pharmacy[\W_]*+Power[\W_]*+pulse
