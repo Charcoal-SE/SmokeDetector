@@ -74684,3 +74684,4 @@
 1750924297	VLAZ	getmanufacturers\.com
 1750927122	double-beep	blackbulltechnosoft\.com
 1750929812	VLAZ	couponfares\.com
+1750931463	VLAZ	medigrowtechnologies\.com
