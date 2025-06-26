@@ -74699,3 +74699,4 @@
 1750941089	VLAZ	mashflu\.in
 1750942128	VLAZ	snoopchess\.com
 1750945739	cigien	bitget\.com
+1750945755	cigien	bitget(?!\.com)
