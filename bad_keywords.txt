@@ -3872,3 +3872,4 @@ instant[\W_]*+cash\b.{0,50}\bloans?+
 long[\W_]*+one[\W_]*+of[\W_]*+the[\W_]*+world
 air[\W_]*+france[\W_]*+open[\W_]*+on[\W_]*+24
 faq(?<=\?faq)s?+\s*+$
+reviews?[\W_]*+(?<!\w\/)20\d\d(?!\p{P}*+\s++(?:[\p{P}\s]*+[0-9]++){2})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
