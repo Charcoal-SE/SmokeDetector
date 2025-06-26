@@ -74704,3 +74704,4 @@
 1750954325	Jeff Schaller	odoie\.com
 1750957813	Dan Getz	alison\.com
 1750963856	Dan Getz	24[\W_]*+jam
+1750970105	Jeff Schaller	chuzefitness\.com
