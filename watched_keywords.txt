@@ -74683,3 +74683,4 @@
 1750923863	VLAZ	Bharatiya[\W_]*+Vidya[\W_]*+Bhavan
 1750924297	VLAZ	getmanufacturers\.com
 1750927122	double-beep	blackbulltechnosoft\.com
+1750929812	VLAZ	couponfares\.com
