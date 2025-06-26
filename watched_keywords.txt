@@ -74679,3 +74679,4 @@
 1750913244	Dan Getz	worldwidepackshipandmail\.com
 1750923110	VLAZ	8171ehsaasprogram\.net
 1750923816	VLAZ	Brahmastra[\W_]*+Pharmacy[\W_]*+Power[\W_]*+pulse
+1750923832	VLAZ	bhavans\.courses
