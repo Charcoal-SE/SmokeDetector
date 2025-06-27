@@ -74729,3 +74729,4 @@
 1751029787	VLAZ	(?-i:^safir truru$)
 1751032895	Jeff Schaller	nethues\.com
 1751032936	Jeff Schaller	automotozio\.com
+1751035066	Dan Getz	(?:(?:bantuan|layanan|menghubungi|pelanggan|pengaduan|petugas|pusat|resmi|Tokopedia|transaksi)[\W_]*+){2,}
