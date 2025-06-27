@@ -74731,3 +74731,4 @@
 1751032936	Jeff Schaller	automotozio\.com
 1751035066	Dan Getz	(?:(?:bantuan|layanan|menghubungi|pelanggan|pengaduan|petugas|pusat|resmi|Tokopedia|transaksi)[\W_]*+){2,}
 1751039667	Jeff Schaller	movies4u\.ws
+1751040344	cigien	wegocup\.pro
