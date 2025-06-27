@@ -74717,3 +74717,4 @@
 1751008821	cigien	salacaffe\.co
 1751009072	VLAZ	youtube-cover\.com
 1751009205	cigien	sakunfans\.com
+1751010166	cigien	cura123\.myshopify\.com
