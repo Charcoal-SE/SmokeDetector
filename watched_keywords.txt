@@ -74706,3 +74706,4 @@
 1750963856	Dan Getz	24[\W_]*+jam
 1750970105	Jeff Schaller	chuzefitness\.com
 1751000114	cigien	infiniteairsolutions\.net
+1751001201	VLAZ	greenleafsuites\.com
