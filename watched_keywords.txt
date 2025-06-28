@@ -74748,3 +74748,4 @@
 1751116429	Jeff Schaller	clearshield\.in
 1751122655	Fastnlight	Wizard[\W_]*+Larry[\W_]*+Recovery(?!\.com(?<=wizardlarryrecovery\.com))
 1751124685	gre_gor	ohpm\.openharmony\.cn
+1751149387	Vickel	equilhaul\.com
