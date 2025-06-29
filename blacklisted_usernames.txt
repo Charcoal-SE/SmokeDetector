@@ -1237,3 +1237,4 @@ carelab[sz]
 ^agya vapis$
 (?-i:^Cash vireet$)
 (?-i:^Cash vireet‭$)
+(?-i:^Room Room$)
