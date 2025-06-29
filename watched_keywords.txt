@@ -74754,3 +74754,4 @@
 1751180368	cigien	wellfoodonline\.com
 1751180585	cigien	FastSattaResult\.com
 1751180625	cigien	chatgptonl\.com
+1751180704	cigien	qed-ne\.com
