@@ -74769,3 +74769,4 @@
 1751256000	Dan Getz	(?:(?:ajaib|bantuan|layanan|(?:meng)?+hubungi(?:[\W_]*+cs\b)?+|pelanggan|pembatalan|pengaduan|petugas|pinjaman|pusat|resmi|Tokopedia|transaksi|call[\W_]*+cent(?:er|re)|customer[\W_]*+service)[\W_]*+){2,}
 1751256012	Dan Getz	berapa[\W_]*+nomor
 1751259244	Dan Getz	whiskyrumprice\.com
+1751259887	VLAZ	compareindia\.in
