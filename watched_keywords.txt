@@ -74781,3 +74781,4 @@
 1751268569	VLAZ	rameshfilmcity\.in
 1751268583	VLAZ	chitrageek\.com
 1751268590	VLAZ	serviceninjas\.in
+1751268597	VLAZ	ChitraGeek(?:[\W_]*+Studio)(?!\.com(chitrageek\.com))
