@@ -3510,7 +3510,6 @@ Crypto[\W_]*+Assets[\W_]*+Recovery
 what[\W_]*+is[\W_]*+a[\W_]*+customer[\W_]*+care[\W_]*+line[\W_]*+number
 how[\W_]*+to[\W_]*+check[\W_]*+if[\W_]*+a[\W_]*+united[\W_]*+ticket[\W_]*+is[\W_]*+refundable
 recoverydarek
-DAREK[\W_]*+RECOVERY
 Find[\W_]*+Delta[\W_]*+Airlines[\W_]*+Student[\W_]*+Discount
 what[\W_]*+days[\W_]*+are[\W_]*+spirit[\W_]*+discounts
 what[\W_]*+is[\W_]*+the[\W_]*+3[\W_]*+1[\W_]*+1[\W_]*+rule[\W_]*+on
