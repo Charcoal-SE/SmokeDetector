@@ -74779,7 +74779,6 @@
 1751268569	VLAZ	rameshfilmcity\.in
 1751268583	VLAZ	chitrageek\.com
 1751268590	VLAZ	serviceninjas\.in
-1751268597	VLAZ	ChitraGeek(?:[\W_]*+Studio)(?!\.com(chitrageek\.com))
 1751269226	VLAZ	essutumishis\.com
 1751271160	VLAZ	gatewaysglobal\.com
 1751275166	cigien	rapidairproducts\.com
