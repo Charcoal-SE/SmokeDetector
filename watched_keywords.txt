@@ -74766,4 +74766,3 @@
 1751222644	VLAZ	Jeffrycrackcyber
 1751241117	Dan Getz	comprediplomas\.com
 1751252500	Dan Getz	strong>[\W_]*+SysTools
-1751255035	Dan Getz	cara[\W_]*+menghubungi
