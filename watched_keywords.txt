@@ -74798,3 +74798,4 @@
 1751292110	Dan Getz	arakis\.com\.ua
 1751293011	Dan Getz	blogstride\.com
 1751293262	VLAZ	tiranga-gamee\.co
+1751296910	Dan Getz	(?-i:I)n[\W_]*+today[\W_]*+s[\W_]*+fast[\W_]*+paced[\W_]*+world
