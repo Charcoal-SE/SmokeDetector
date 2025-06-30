@@ -74800,3 +74800,4 @@
 1751293262	VLAZ	tiranga-gamee\.co
 1751296910	Dan Getz	(?-i:I)n[\W_]*+today[\W_]*+s[\W_]*+fast[\W_]*+paced[\W_]*+world
 1751297100	Dan Getz	am[\W_]*+a[\W_]*+little[\W_]*+more[\W_]*+about
+1751297905	VLAZ	Trishul[\W_]*+API
