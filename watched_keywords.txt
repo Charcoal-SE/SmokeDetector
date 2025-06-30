@@ -74795,3 +74795,4 @@
 1751286395	VLAZ	ChitraGeek(?:[\W_]*+Studio)?(?!\.com(?<=chitrageek\.com))
 1751291174	Dan Getz	downloadsofttech\.pro
 1751291710	Dan Getz	dhruvansh\.org
+1751292110	Dan Getz	arakis\.com\.ua
