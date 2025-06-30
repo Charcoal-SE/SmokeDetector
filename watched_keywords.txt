@@ -74784,3 +74784,4 @@
 1751268597	VLAZ	ChitraGeek(?:[\W_]*+Studio)(?!\.com(chitrageek\.com))
 1751269226	VLAZ	essutumishis\.com
 1751271160	VLAZ	gatewaysglobal\.com
+1751275166	cigien	rapidairproducts\.com
