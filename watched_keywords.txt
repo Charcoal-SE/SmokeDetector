@@ -64258,7 +64258,6 @@
 1722421348	Cow	prishatheexplorer\.com
 1722421389	Cow	(?-i:dankeu420)(?# Telegram)
 1722424781	Nisse Engström	mesatreeremovalservice\.com
-1722424839	Nisse Engström	saairatechnologies\.com
 1722427857	VLAZ	followershive\.de
 1722428162	Nisse Engström	gbhub\.org
 1722427844	General Grievance	weddinghallsinecr\.co\.in
