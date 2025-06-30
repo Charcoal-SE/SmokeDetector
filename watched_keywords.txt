@@ -74767,3 +74767,4 @@
 1751252500	Dan Getz	strong>[\W_]*+SysTools
 1751255369	Dan Getz	cara[\W_]*+(?:meng)?+hubungi
 1751256000	Dan Getz	(?:(?:ajaib|bantuan|layanan|(?:meng)?+hubungi(?:[\W_]*+cs\b)?+|pelanggan|pembatalan|pengaduan|petugas|pinjaman|pusat|resmi|Tokopedia|transaksi|call[\W_]*+cent(?:er|re)|customer[\W_]*+service)[\W_]*+){2,}
+1751256012	Dan Getz	berapa[\W_]*+nomor
