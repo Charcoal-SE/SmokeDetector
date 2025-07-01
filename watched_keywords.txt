@@ -74816,3 +74816,4 @@
 1751355388	VLAZ	penz\.co\.in
 1751358134	VLAZ	(?-i:3j3hyvk)(?#bit.ly)
 1751358211	VLAZ	epicx\.co\.uk
+1751358509	cigien	microcodesoftware\.com
