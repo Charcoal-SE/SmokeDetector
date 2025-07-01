@@ -74804,3 +74804,4 @@
 1751306241	cigien	frpbypse\.com
 1751340211	Dan Getz	legalizationservicecentre\.ca
 1751347106	Dan Getz	markdowntopdf\.com
+1751348333	VLAZ	vrt-calculator\.com
