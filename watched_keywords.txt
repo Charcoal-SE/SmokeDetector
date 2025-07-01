@@ -74813,3 +74813,4 @@
 1751352820	cigien	ecomsolutions\.services
 1751353641	VLAZ	hawkrown\.com
 1751355380	VLAZ	Penz[\W_]*+Solutions
+1751355388	VLAZ	penz\.co\.in
