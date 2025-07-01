@@ -74834,3 +74834,4 @@
 1751388609	VLAZ	faceitaccountfinder\.com
 1751389458	Dan Getz	dgitgrow\.com
 1751391498	Jeff Schaller	mauveverse\.com
+1751395810	VLAZ	ridersstudiostattoos\.com
