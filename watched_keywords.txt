@@ -74878,3 +74878,4 @@
 1751477450	VLAZ	rankkonic(?!\.site)
 1751483891	Dan Getz	northernriveradventures\.com
 1751484522	VLAZ	thetocaapk\.com
+1751488294	Dan Getz	empresadepintura\.app\.br
