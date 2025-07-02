@@ -74853,3 +74853,4 @@
 1751445503	cigien	bajajmachines\.com
 1751445513	VLAZ	digitalsourav\.com
 1751446568	VLAZ	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))(?!\.co\.in(?<=daman-game\.co\.in))(?!\.club(?<=damangame\.club))
+1751446576	VLAZ	damangame\.club
