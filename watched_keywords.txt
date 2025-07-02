@@ -74875,3 +74875,4 @@
 1751471406	Jeff Schaller	runfeigroup\.com
 1751474851	VLAZ	uniformessence\.in
 1751477208	Jeff Schaller	rankkonic\.site
+1751477450	VLAZ	rankkonic(?!\.site)
