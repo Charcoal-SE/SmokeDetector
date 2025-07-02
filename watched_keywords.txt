@@ -74865,3 +74865,4 @@
 1751455793	VLAZ	Tashan[\W_]*+Gaming
 1751455876	Jeff Schaller	BOL7
 1751459161	Jeff Schaller	langitnusa\.com
+1751459665	Jeff Schaller	net2secure\.com
