@@ -74877,3 +74877,4 @@
 1751477208	Jeff Schaller	rankkonic\.site
 1751477450	VLAZ	rankkonic(?!\.site)
 1751483891	Dan Getz	northernriveradventures\.com
+1751484522	VLAZ	thetocaapk\.com
