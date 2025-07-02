@@ -74852,3 +74852,4 @@
 1751443069	VLAZ	telelatinoapks\.com
 1751445503	cigien	bajajmachines\.com
 1751445513	VLAZ	digitalsourav\.com
+1751446568	VLAZ	daman[\W_]*+game(?!\.ink(?<=damangame\.ink))(?!\.co\.in(?<=daman-game\.co\.in))(?!\.club(?<=damangame\.club))
