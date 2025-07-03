@@ -74879,3 +74879,4 @@
 1751483891	Dan Getz	northernriveradventures\.com
 1751484522	VLAZ	thetocaapk\.com
 1751488294	Dan Getz	empresadepintura\.app\.br
+1751502681	Jeff Schaller	blog\.shivalahare\.live
