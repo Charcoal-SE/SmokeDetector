@@ -3876,3 +3876,4 @@ I[\W_]*+usually[\W_]*+use[\W_]*+the[\W_]*+dbForge(?#astroturfing campaign)
 darek[\W_]*+recoverys?
 𝒬𝒶𝓉𝒶𝓇
 𝒜𝒾𝓇𝓌𝒶𝓎𝓈
+𝔸𝕝𝕝𝕖𝕘𝕚𝕒𝕟𝕥
