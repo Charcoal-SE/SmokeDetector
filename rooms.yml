@@ -250,6 +250,7 @@ stackexchange.com:
       - experimental-site-askubuntu.com
       - experimental-site-meta.askubuntu.com
       - offensive-mask
+      - delay
 
     privileges:
       - 1911219  # karel
