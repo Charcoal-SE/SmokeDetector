@@ -74896,3 +74896,4 @@
 1751529058	VLAZ	svg-optimize\.com
 1751537492	VLAZ	geometry-dash\.org
 1751537706	VLAZ	ftstrade\.co\.uk
+1751537915	VLAZ	svs[\W_]*+aqua(?!\.com(?<=svsaqua\.com))
