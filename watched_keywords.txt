@@ -74899,3 +74899,4 @@
 1751537915	VLAZ	svs[\W_]*+aqua(?!\.com(?<=svsaqua\.com))
 1751537929	VLAZ	Manpowersupply\.ae
 1751538825	Dan Getz	expertmedikal\.com
+1751539231	Dan Getz	azizitechnologies\.ae
