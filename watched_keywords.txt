@@ -74904,3 +74904,4 @@
 1751541687	VLAZ	crxstk
 1751542516	VLAZ	ficode(?!\.co\.uk)(?!\.com)
 1751542523	VLAZ	ficode\.com
+1751545598	VLAZ	workify(?# co-working company)
