@@ -74942,3 +74942,4 @@
 1751656948	Dan Getz	weblaro\.com
 1751658775	Dan Getz	blogmazzi\.com
 1751662799	VLAZ	arabic-poems\.com
+1751663261	Dan Getz	disponible[\W_]*+para[\W_]*+ayudar[lt]e
