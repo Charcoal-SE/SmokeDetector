@@ -74918,3 +74918,4 @@
 1751612832	VLAZ	toolsriver\.com
 1751613188	VLAZ	Pearl[\W_]*+Dental[\W_]*+Clinics
 1751613448	VLAZ	codebrew\.ltd
+1751615997	VLAZ	geopostcodes\.com
