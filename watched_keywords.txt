@@ -63749,7 +63749,6 @@
 1721141353	Ollie	neoai\.bot
 1721141388	Ollie	niuliu285(?:@gmail\.com)?
 1721141993	Ollie	awoo\.git(?:@gmail\.com)?
-1721144515	Fastnlight	votesservice\.com
 1721148931	Spevacus	simcitybuiltitapk\.com
 1721153738	Jeff Schaller	devchatbotia\.com
 1721155356	Jeff Schaller	hosbeautifulgarden\.com
