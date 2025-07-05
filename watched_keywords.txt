@@ -74960,3 +74960,4 @@
 1751729508	VLAZ	krknaffncaslh62eiuw2cgbvytddteepmlog4fihxxkluesrcxvcpaid\.onion
 1751729515	VLAZ	(?-i:kraken_ssylka_i_zerkala)(?#t.me)
 1751732172	VLAZ	thecustomboxes\.com
+1751732267	VLAZ	(?-i:3rbxdwsk)(?#tinyurl.com)
