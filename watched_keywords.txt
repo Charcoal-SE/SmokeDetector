@@ -74949,3 +74949,4 @@
 1751701950	VLAZ	fleetable\.tech
 1751702577	VLAZ	tirangagameees\.stck\.me
 1751703128	VLAZ	tirangagamee+s?
+1751703204	VLAZ	mbbs-in-bangladesh\.in
