@@ -74958,3 +74958,4 @@
 1751724848	Jeff Schaller	kra39at\.top
 1751725764	Dan Getz	buy[\W_]*+india[\W_]*+homes(?!\.com(?<=buyindiahomes\.com))
 1751729508	VLAZ	krknaffncaslh62eiuw2cgbvytddteepmlog4fihxxkluesrcxvcpaid\.onion
+1751729515	VLAZ	(?-i:kraken_ssylka_i_zerkala)(?#t.me)
