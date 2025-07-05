@@ -74945,3 +74945,4 @@
 1751663261	Dan Getz	disponible[\W_]*+para[\W_]*+ayudar[lt]e
 1751663474	Dan Getz	coinledger\.blog
 1751667802	Jeff Schaller	marjefsblcls(?:@gmail\.com)?
+1751698097	Nisse Engström	hamper\.byethost32\.com
