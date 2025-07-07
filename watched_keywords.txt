@@ -74988,3 +74988,4 @@
 1751891393	VLAZ	saairatechnologies
 1751892110	Jeff Schaller	etbtours\.com
 1751893436	Jeff Schaller	latiyalinfotech\.com
+1751894818	VLAZ	storea2z(?!\.in)
