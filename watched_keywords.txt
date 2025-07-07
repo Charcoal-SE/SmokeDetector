@@ -74973,3 +74973,4 @@
 1751866043	VLAZ	tintsolutionstn\.com
 1751872009	VLAZ	uniqdentalclinic\.com
 1751881032	VLAZ	unikayoga\.com
+1751881077	VLAZ	unika[\W_]*+yoga(?!\.com(?<=unikayoga\.com))
