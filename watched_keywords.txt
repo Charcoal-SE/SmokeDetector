@@ -74971,3 +74971,4 @@
 1751864936	VLAZ	cscs\.uk\.com
 1751865722	VLAZ	dbtodata\.com
 1751866043	VLAZ	tintsolutionstn\.com
+1751872009	VLAZ	uniqdentalclinic\.com
