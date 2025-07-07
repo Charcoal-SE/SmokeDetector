@@ -74976,3 +74976,4 @@
 1751881077	VLAZ	unika[\W_]*+yoga(?!\.com(?<=unikayoga\.com))
 1751881163	VLAZ	Tranistics[\W_]*+Data[\W_]*+Technologies
 1751881355	VLAZ	startech\.com\.bd
+1751884331	VLAZ	thedunebuggydubai\.ae
