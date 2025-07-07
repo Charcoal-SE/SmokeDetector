@@ -74977,3 +74977,4 @@
 1751881163	VLAZ	Tranistics[\W_]*+Data[\W_]*+Technologies
 1751881355	VLAZ	startech\.com\.bd
 1751884331	VLAZ	thedunebuggydubai\.ae
+1751885261	VLAZ	wgustudentportal\.me
