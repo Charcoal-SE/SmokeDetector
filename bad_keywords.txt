@@ -3881,3 +3881,4 @@ darek[\W_]*+recoverys?
 𝓵𝓾𝓯𝓽𝓱𝓪𝓷𝓼𝓪
 𝓛𝓐𝓣𝓐𝓜
 𝓪𝓲𝓻𝓵𝓲𝓷𝓮𝓼
+Wizard[\W_]*+Larry[\W_]*+Recovery(?!\.com(?<=wizardlarryrecovery\.com))
