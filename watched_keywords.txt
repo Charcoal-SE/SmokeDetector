@@ -74972,3 +74972,4 @@
 1751865722	VLAZ	dbtodata\.com
 1751866043	VLAZ	tintsolutionstn\.com
 1751872009	VLAZ	uniqdentalclinic\.com
+1751881032	VLAZ	unikayoga\.com
