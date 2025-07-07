@@ -74989,3 +74989,4 @@
 1751892110	Jeff Schaller	etbtours\.com
 1751893436	Jeff Schaller	latiyalinfotech\.com
 1751894818	VLAZ	storea2z(?!\.in)
+1751896293	VLAZ	(?-i:D2LFHPhJm4hkQbWn6)(?#forms.gle)
