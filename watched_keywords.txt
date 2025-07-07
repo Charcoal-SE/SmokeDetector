@@ -74966,3 +74966,4 @@
 1751845687	Vickel	jphfeeds\.top
 1751848249	Dan Getz	[a-z0-9%-]*apk[a-z0-9%-]*+\.(?:[a-z0-9%-]++\.)*[a-z0-9%]{2,4}+\b(?<!\.(?:png|jpg|gif|svg)\b)(?<!\.(?:gz|sh)\b)(?<!\.(?:bat|git|jar|tar|txt|yml|zip)\b)(?<!\.(?:file|java)\b)(?<!\bwapka\.me\b)(?<!\bapkeh\.com\b)(?<!\btapkey\.io\b)(?<!\bapktom\.com\b)(?<!\bmapkit\.map\b)(?<!\bapkhigh\.com\b)(?<!\bapkcombo\.com\b)(?<!\bfreemodedapk\.com\b)(?<!\bmultiapkclub\.com\b)(?<!\bconfigure-apk-splits\.html\b)(?<!\bapkmirror\.com\b)(?<!\bApkAssets\.cpp\b)
 1751849085	Dan Getz	anthonyfoster507(?:@gmail\.com)?
+1751853012	Dan Getz	recuperotusdatos\.com
