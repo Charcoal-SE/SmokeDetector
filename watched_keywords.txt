@@ -74993,3 +74993,4 @@
 1751896719	VLAZ	correctscorepredictions\.com
 1751898185	VLAZ	megaresources\.co\.uk
 1751901059	Nisse Engström	tools-ecmw\.blogspot
+1751912135	Dan Getz	recib\w++[\W_]*+atenci[óo]n[\W_]*+personalizada
