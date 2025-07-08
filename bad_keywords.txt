@@ -3882,3 +3882,4 @@ darek[\W_]*+recoverys?
 𝓛𝓐𝓣𝓐𝓜
 𝓪𝓲𝓻𝓵𝓲𝓷𝓮𝓼
 Wizard[\W_]*+Larry[\W_]*+Recovery(?!\.com(?<=wizardlarryrecovery\.com))
+𝓐𝓶𝓮𝓻𝓲𝓬𝓪𝓷
