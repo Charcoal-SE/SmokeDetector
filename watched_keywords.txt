@@ -75052,3 +75052,4 @@
 1752060490	Jeff Schaller	ednex\.me
 1752060538	Jeff Schaller	bagelexperience\.click
 1752060750	VLAZ	official[\W_]*+customer[\W_]*+satisfaction[\W_]*+survey
+1752060847	Dan Getz	fotas\.samm\.com
