@@ -75037,3 +75037,4 @@
 1752045855	VLAZ	hrbponline\.com
 1752045924	VLAZ	basketballbros\.org
 1752046032	VLAZ	webcoir\.com
+1752046467	VLAZ	akuphecloud\.com
