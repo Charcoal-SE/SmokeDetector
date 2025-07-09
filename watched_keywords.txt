@@ -75049,3 +75049,4 @@
 1752053764	VLAZ	petcarezo(?!\.com)
 1752056479	Jeff Schaller	visualsclipping\.com
 1752056589	Jeff Schaller	taxiservice-schipholairport\.com
+1752060490	Jeff Schaller	ednex\.me
