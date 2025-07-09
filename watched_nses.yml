@@ -5860,7 +5860,7 @@ items:
 - ns: greengeeks.net.
 - ns: movavi.net.
 - comment: NXDOMAIN 2025-07-08
-  disabe: true
+  disable: true
   ns: apktunnel.com.
 - ns: dan.com.
 - ns: sprintsmsservice.com.
