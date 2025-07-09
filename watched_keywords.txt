@@ -75055,3 +75055,4 @@
 1752062097	VLAZ	bubbleworld\.in
 1752062227	VLAZ	official[\W_]*+customer[\W_]*+satisfaction[\W_]*+(?:survey|program)
 1752063416	lyxal	marveljacket\.com
+1752063968	lyxal	intensifyresearch\.com
