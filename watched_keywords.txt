@@ -75045,3 +75045,4 @@
 1752049932	VLAZ	varchasvega\.com
 1752050742	double-beep	interoffice\.vn
 1752053631	VLAZ	petcarezo\.com
+1752053757	VLAZ	maxtra[\W_]*+technolog(?:y|ies)(?!\.com(?<=maxtratechnologies\.com))
