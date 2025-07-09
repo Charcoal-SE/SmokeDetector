@@ -75031,3 +75031,4 @@
 1752025158	Dan Getz	locked4\.com
 1752034391	lyxal	goadword\.com
 1752037396	VLAZ	ishooter\.pro
+1752038036	VLAZ	Urban[\W_]*+Landscape[\W_]*+Design
