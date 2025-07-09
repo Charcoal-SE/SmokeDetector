@@ -75038,3 +75038,4 @@
 1752045924	VLAZ	basketballbros\.org
 1752046032	VLAZ	webcoir\.com
 1752046467	VLAZ	akuphecloud\.com
+1752048355	VLAZ	brightnis\.com
