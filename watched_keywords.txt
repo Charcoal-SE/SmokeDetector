@@ -75041,3 +75041,4 @@
 1752048355	VLAZ	brightnis\.com
 1752048565	VLAZ	momoproxy\.com
 1752048597	VLAZ	slimjarouss\.alboompro\.com
+1752048603	VLAZ	medium\.com
