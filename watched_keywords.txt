@@ -75033,3 +75033,4 @@
 1752037396	VLAZ	ishooter\.pro
 1752038036	VLAZ	Urban[\W_]*+Landscape[\W_]*+Design
 1752038130	VLAZ	Garett[\W_]*+McCorkle
+1752038904	VLAZ	makca\.co
