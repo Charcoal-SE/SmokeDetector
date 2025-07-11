@@ -75111,3 +75111,4 @@
 1752233093	VLAZ	inmotivise\.com
 1752234030	Jeff Schaller	randmvape-shop\.net
 1752238218	VLAZ	iotaledger\.help(?:@hotmail\.com)?
+1752211260	lyxal	theurbanpro\.com
