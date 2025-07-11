@@ -75116,3 +75116,4 @@
 1752239710	VLAZ	thithubanglai\.com
 1752244935	lyxal	baixaryoucine\.com
 1752245983	Jeff Schaller	armythlonindia\.com
+1752255093	Dan Getz	1[\p{Pd}\p{Ps}]*+8(?:[0O]{2}|33|44|55|66|77|88)[\p{Pd}\p{Pe}]*+(?!\d{5})[\p{L}0-9]{5,}
