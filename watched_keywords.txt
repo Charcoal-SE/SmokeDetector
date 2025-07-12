@@ -75118,3 +75118,4 @@
 1752245983	Jeff Schaller	armythlonindia\.com
 1752255093	Dan Getz	1[\p{Pd}\p{Ps}]*+8(?:[0O]{2}|33|44|55|66|77|88)[\p{Pd}\p{Pe}]*+(?!\d{5})[\p{L}0-9]{5,}
 1752274981	Dan Getz	buildsaltwall\.com
+1752298587	lyxal	y2mate\.now
