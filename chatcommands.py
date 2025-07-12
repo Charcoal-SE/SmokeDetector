@@ -117,7 +117,7 @@ def rmblu(user):
             return "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
                    "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
                    "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) " \
-                   "for more information about when users are added to or removed from the user-blacklist, which is" \
+                   "for more information about when users are added to or removed from the user-blacklist, which is " \
                    "primarily done with `tpu` and `fp` feedback."
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
@@ -381,7 +381,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
-    append_force_to_do = " Append `-force` to the command word(s) if you really want to add the pattern you provided."
+    append_force_to_do = "Append `-force` to the command word(s) if you really want to add the pattern you provided."
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
@@ -520,11 +520,12 @@ def do_blacklist(blacklist_type, msg, force=False):
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
             if reasons:
-                raise CmdExceptionLongReply("That pattern looks like it's already caught by " +
-                                            format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
+                already_caught_text = "That pattern looks like it's already caught by " + \
+                                      format_blacklist_reasons(reasons)
+                raise CmdExceptionLongReply(" ".join(already_caught_text, other_issues_text, append_force_to_do))
 
         if other_issues_text:
-            raise CmdExceptionLongReply(other_issues_text + append_force_to_do)
+            raise CmdExceptionLongReply(" ".join(other_issues_text, append_force_to_do))
 
     metasmoke_down = False
 
