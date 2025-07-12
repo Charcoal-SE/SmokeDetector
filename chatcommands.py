@@ -71,11 +71,85 @@ def addblu(msg, user):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
         add_blacklisted_user((uid, val), message_url, "")
-        return "User blacklisted (`{}` on `{}`).".format(uid, val)
+        return f"User blacklisted {'network-wide ' if val == 'stackexchange.com' else ''}(`{uid}` on `{val}`)."
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
         raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
+
+
+def user_to_net_acct_id(user: tuple[str, str]) -> str:
+    """Find the network account ID of a user (e.g., a site profile)"""
+    uid, val = user
+
+    # SE user passed
+    if val == "stackexchange.com":
+        return uid
+    # network user passed
+    else:
+        # based on the allspam code
+        with GlobalVars.api_request_lock:
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            request_url = get_se_api_url_for_route(f"users/{uid}")
+            params = get_se_api_default_params({
+                'filter': '!)scNT2zLcbOpD09vBxHM',
+                'site': val
+            })
+            res = requests.get(request_url, params=params, timeout=GlobalVars.default_requests_timeout).json()
+            if "backoff" in res:
+                if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + res["backoff"]
+        if 'items' not in res or len(res['items']) == 0:
+            raise CmdException("The specified user does not appear to exist.")
+        return str(res['items'][0]['account_id'])
+
+
+def is_user_net_blacklisted(user: tuple[str, str]) -> bool:
+    """Given a user ID and a site, return if they are network-blacklisted"""
+    return (user_to_net_acct_id(user), 'stackexchange.com') in GlobalVars.blacklisted_users
+
+
+@command(str, whole_msg=True, privileged=True)
+def addnetblu(msg, user):
+    """
+    Adds a user to the network-wide blacklist
+    :return: A string
+    """
+    uid, val = get_user_from_list_command(user)
+
+    if int(uid) > -1 and val != "":
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        net_id: str = user_to_net_acct_id((uid, val))
+        add_blacklisted_user((net_id, "stackexchange.com"), message_url, "")
+        return f"User blacklisted network-wide (`{net_id}`)."
+    elif int(uid) == -2:
+        raise CmdException("Error: {}".format(val))
+    else:
+        raise CmdException("Invalid format. Valid format: `!!/addnetblu profileurl` *or* "
+                           "`!!/addnetblu userid stackexchange.com`.")
+
+
+@command(str, privileged=True)
+def rmnetblu(user):
+    """
+    Removes user from the network-wide blacklist
+    :param user:
+    :return: A string
+    """
+    uid, val = get_user_from_list_command(user)
+
+    if int(uid) > -1 and val != "":
+        net_id: str = user_to_net_acct_id((uid, val))
+        if remove_blacklisted_user((net_id, "stackexchange.com")):
+            return f"The user has been removed from the network-wide user-blacklist (`{net_id}`)."
+        else:
+            return "The user is not network-wide blacklisted."
+    elif int(uid) == -2:
+        raise CmdException("Error: {}".format(val))
+    else:
+        raise CmdException("Invalid format. Valid format: `!!/rmnetblu profileurl` "
+                           "*or* `!!/rmnetblu userid stackexchange.com`.")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -90,10 +164,26 @@ def isblu(user):
     uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
-        if is_blacklisted_user((uid, val)):
-            return "User is blacklisted (`{}` on `{}`).".format(uid, val)
+        is_site_wide: bool = is_blacklisted_user((uid, val))
+        is_network_wide: bool = is_user_net_blacklisted((uid, val))
+        is_se_acct: bool = val == "stackexchange.com"
+        # It could check what sites a user is blacklisted on, even if that
+        # site isn't passed. That functionality could be useful, but I didn't
+        # write the code to do that.
+        if is_se_acct and is_network_wide:
+            return "User is blacklisted network-wide"
+        elif is_se_acct and not is_network_wide:
+            return "User is not blacklisted network-wide"
+        elif is_site_wide and is_network_wide:
+            return f"User is blacklisted both on `{val}` (`{uid}`) and network-wide"
+        elif is_site_wide and not is_network_wide:
+            return f"User is blacklisted on `{val}` (`{uid}`), but not network-wide"
+        elif not is_site_wide and is_network_wide:
+            return f"User is blacklisted network-wide, but not on `{val}` (`{uid}`)"
+        elif not is_site_wide and not is_network_wide:
+            return f"User is neither blacklisted on `{val}` (`{uid}`) nor network-wide"
         else:
-            return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
+            return "This should never be reached"
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
@@ -111,8 +201,9 @@ def rmblu(user):
     uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
+        net_wide: str = "network-wide " if (val == "stackexchange.com") else ""
         if remove_blacklisted_user((uid, val)):
-            return "The user has been removed from the user-blacklist (`{}` on `{}`).".format(uid, val)
+            return "The user has been removed from the {}user-blacklist (`{}` on `{}`).".format(net_wide, uid, val)
         else:
             return "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
                    "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
