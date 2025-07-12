@@ -75121,3 +75121,4 @@
 1752299223	lyxal	laptop[\W_]*+bags?[\W_]*+for[\W_]*+men
 1752298587	lyxal	y2mate\.now
 1752293944	lyxal	sitaramedicalcompany\.com
+1752299808	VLAZ	papelfalso\.com
