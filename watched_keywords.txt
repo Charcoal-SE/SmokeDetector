@@ -74965,7 +74965,6 @@
 1751853012	Dan Getz	recuperotusdatos\.com
 1751858470	Dan Getz	my[\W_]*+family[\W_]*+is[\W_]*+well[\W_]*+with[\W_]*+you
 1751864936	VLAZ	cscs\.uk\.com
-1751865722	VLAZ	dbtodata\.com
 1751866043	VLAZ	tintsolutionstn\.com
 1751872009	VLAZ	uniqdentalclinic\.com
 1751881032	VLAZ	unikayoga\.com
