@@ -75150,3 +75150,4 @@
 1752418024	VLAZ	apkludoking\.com
 1752428017	Jeff Schaller	BergerCPAFirst
 1752443800	Dan Getz	hairecho\.com
+1752443864	Dan Getz	starbucks-calorie-calculator\.us
