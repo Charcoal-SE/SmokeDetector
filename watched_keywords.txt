@@ -75140,3 +75140,4 @@
 1752373297	Vickel	jmajors\.com
 1752389768	VLAZ	indiatourpackages\.com
 1752390047	VLAZ	(?-i:getswitchmoney)(?#t.me)
+1752397094	VLAZ	packmycode\.com
