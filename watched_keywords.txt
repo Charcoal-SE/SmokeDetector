@@ -75144,3 +75144,4 @@
 1752404633	lyxal	htmltranslate\.com
 1752410318	lyxal	hleducation\.net
 1752411764	lyxal	cmitsolutions\.com
+1752412016	lyxal	photographersinlahore\.com
