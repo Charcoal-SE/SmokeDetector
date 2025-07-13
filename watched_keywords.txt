@@ -75139,3 +75139,4 @@
 1752343296	VLAZ	audiobookcalculator\.us
 1752373297	Vickel	jmajors\.com
 1752389768	VLAZ	indiatourpackages\.com
+1752390047	VLAZ	(?-i:getswitchmoney)(?#t.me)
