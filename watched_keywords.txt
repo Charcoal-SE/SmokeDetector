@@ -75151,3 +75151,4 @@
 1752443800	Dan Getz	hairecho\.com
 1752443864	Dan Getz	starbucks-calorie-calculator\.us
 1752450935	Vickel	tupbebektedavileri\.com
+1752471405	VLAZ	datavare(?!\.com)
