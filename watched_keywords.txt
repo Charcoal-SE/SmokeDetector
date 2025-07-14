@@ -75166,3 +75166,4 @@
 1752484072	VLAZ	camelback[\W_]*+resort(?!\.com(?<=camelbackresort\.com))
 1752484079	VLAZ	camelbackresort\.com
 1752488724	VLAZ	mslukltd\.co\.uk
+1752489815	Jeff Schaller	actizapharmaceutical\.com
