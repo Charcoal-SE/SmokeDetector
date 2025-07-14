@@ -75163,3 +75163,4 @@
 1752483293	VLAZ	whitecreative\.co\.il
 1752483822	VLAZ	instacare\.ae
 1752484064	VLAZ	Switchback[\W_]*+UTV[\W_]*+Tour
+1752484072	VLAZ	camelback[\W_]*+resort(?!\.com(?<=camelbackresort\.com))
