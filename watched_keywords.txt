@@ -75181,3 +75181,4 @@
 1752522977	Dan Getz	bestmedicalbilling\.com
 1752523819	Dan Getz	jsonconsole\.com
 1752526246	VLAZ	elewellcare\.com
+1752529947	Jeff Schaller	kra35cc\.org
