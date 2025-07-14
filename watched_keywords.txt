@@ -64593,7 +64593,6 @@
 1723122433	Vickel	wheels[\W_]*+on[\W_]*+rent(?!\.ae(?<=wheelsonrent\.ae))
 1723123811	Fastnlight	takemyclassonline\.net
 1723124629	Fastnlight	hvacmorgan\.com
-1723125826	tripleee	skyskinclinic\.in
 1723129750	Spevacus	chornvor\.myartsonline\.com
 1723130986	Spevacus	cybernet[\W_]*+surveillance(?:[\W_]*+(?:at[\W_]*+)?(?:g)?mail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1723131565	Vickel	originaldocumentproviders\.com
