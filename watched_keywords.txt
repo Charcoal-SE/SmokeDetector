@@ -75161,3 +75161,4 @@
 1752479623	Cow	spotifyfree\.net
 1752481586	VLAZ	Coding[\W_]*+Clave
 1752483293	VLAZ	whitecreative\.co\.il
+1752483822	VLAZ	instacare\.ae
