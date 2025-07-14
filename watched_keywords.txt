@@ -75164,3 +75164,4 @@
 1752483822	VLAZ	instacare\.ae
 1752484064	VLAZ	Switchback[\W_]*+UTV[\W_]*+Tour
 1752484072	VLAZ	camelback[\W_]*+resort(?!\.com(?<=camelbackresort\.com))
+1752484079	VLAZ	camelbackresort\.com
