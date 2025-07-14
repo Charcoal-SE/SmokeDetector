@@ -75160,3 +75160,4 @@
 1752478324	Cow	magistvs\.com\.mx
 1752479623	Cow	spotifyfree\.net
 1752481586	VLAZ	Coding[\W_]*+Clave
+1752483293	VLAZ	whitecreative\.co\.il
