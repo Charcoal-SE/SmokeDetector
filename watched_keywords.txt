@@ -75172,3 +75172,4 @@
 1752493291	VLAZ	uniquetravelpoint\.com
 1752493911	lyxal	herald\.exchange
 1752501730	VLAZ	darussalamstore\.com
+1752501738	VLAZ	darussalam\.uk
