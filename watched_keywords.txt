@@ -75177,3 +75177,4 @@
 1752505483	lyxal	hardikhospitality\.com
 1752510008	Dan Getz	clippingpathpartner\.com
 1752517848	Jeff Schaller	healthcareintegrations\.com
+1752517916	Jeff Schaller	lkcy\.cc
