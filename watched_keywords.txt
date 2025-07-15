@@ -75187,3 +75187,4 @@
 1752554827	Cow	kissnutra\.com
 1752555393	Cow	drpaishairgrowclinic\.in
 1752556961	lyxal	(?:(?:best|top)[\W_]*)?astrologer
+1752557040	lyxal	mycfavisitcom\.autos
