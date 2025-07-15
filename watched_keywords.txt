@@ -75217,3 +75217,4 @@
 1752593169	VLAZ	eprotech\.ai
 1752596428	VLAZ	(?-i:TKfgYyuoBEAkjbvsyfzQWRccHu1ogEBSxH)
 1752597076	VLAZ	enzointeriordesign\.com
+1752598225	Jeff Schaller	nurtureaura\.com
