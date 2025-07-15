@@ -75195,3 +75195,4 @@
 1752560193	Cow	uxuitalk\.com
 1752560200	Cow	technovationtunisia\.com
 1752560354	Cow	balajidentalcentre\.com
+1752562892	Cow	74mao\.com
