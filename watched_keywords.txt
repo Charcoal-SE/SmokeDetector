@@ -75189,3 +75189,4 @@
 1752556961	lyxal	(?:(?:best|top)[\W_]*)?astrologer
 1752557040	lyxal	mycfavisitcom\.autos
 1752557397	lyxal	better[\W_]*+cotton
+1752558331	lyxal	at-elog\.com
