@@ -75186,3 +75186,4 @@
 1752548271	Dan Getz	yingdapc\.com
 1752554827	Cow	kissnutra\.com
 1752555393	Cow	drpaishairgrowclinic\.in
+1752556766	lyxal	(?:(?:best|top)[\W_]*)?astrologer[\W_]*+in[\W_]*+ontario
