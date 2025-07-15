@@ -75214,3 +75214,4 @@
 1752588539	lyxal	miracleinteriors\.ca
 1752590600	lyxal	trophydevelopers\.com
 1752592107	lyxal	farmaitalia24\.to
+1752593169	VLAZ	eprotech\.ai
