@@ -75234,3 +75234,4 @@
 1752652198	Cow	mpemall\.com
 1752652206	Cow	chieusangphilips\.com\.vn
 1752652213	Cow	paragonmall\.vn
+1752652981	VLAZ	starlabsglassware\.com
