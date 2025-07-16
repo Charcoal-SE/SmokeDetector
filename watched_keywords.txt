@@ -75224,3 +75224,4 @@
 1752640066	VLAZ	envato\.com
 1752647684	Cow	dunkinrunsonyoucom\.cfd
 1752647997	Cow	kannur[\W_]*+town
+1752648124	Cow	dunkinrunsonyoucom(?!\.cfd(?<=dunkinrunsonyoucom\.cfd))
