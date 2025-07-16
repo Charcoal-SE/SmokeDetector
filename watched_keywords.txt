@@ -75258,3 +75258,4 @@
 1752695597	Dan Getz	mipromedio\.co
 1752695670	Dan Getz	thefaceproapk\.com
 1752702241	Fastnlight	dunamiscybersolution\.com
+1752702348	Fastnlight	DUNAMIS[\W_]*+CYBER[\W_]*+SOLUTION(?!(?<=DUNAMISCYBERSOLUTION)\.com)
