@@ -3883,3 +3883,4 @@ darek[\W_]*+recoverys?
 𝓪𝓲𝓻𝓵𝓲𝓷𝓮𝓼
 Wizard[\W_]*+Larry[\W_]*+Recovery(?!\.com(?<=wizardlarryrecovery\.com))
 𝓐𝓶𝓮𝓻𝓲𝓬𝓪𝓷
+(?-i:\+0W8vnHPwJLczYjRh)(?#t.me)
