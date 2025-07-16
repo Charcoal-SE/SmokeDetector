@@ -75026,7 +75026,6 @@
 1752037396	VLAZ	ishooter\.pro
 1752038036	VLAZ	Urban[\W_]*+Landscape[\W_]*+Design
 1752038130	VLAZ	Garett[\W_]*+McCorkle
-1752038904	VLAZ	makca\.co
 1752045855	VLAZ	hrbponline\.com
 1752045924	VLAZ	basketballbros\.org
 1752046032	VLAZ	webcoir\.com
