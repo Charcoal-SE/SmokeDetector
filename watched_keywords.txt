@@ -75220,3 +75220,4 @@
 1752598225	Jeff Schaller	nurtureaura\.com
 1752604886	Vickel	(?-i:TzGhU)(?#shorturl.at)
 1752617643	Dan Getz	crushnclex(?:@proton\.me)?
+1752625955	Jeff Schaller	penloom\.com
