@@ -75226,3 +75226,4 @@
 1752647997	Cow	kannur[\W_]*+town
 1752648124	Cow	dunkinrunsonyoucom(?!\.cfd(?<=dunkinrunsonyoucom\.cfd))
 1752649056	VLAZ	lotus365vip\.com
+1752649770	Cow	klmaxiva\.com
