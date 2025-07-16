@@ -75257,3 +75257,4 @@
 1752689923	Jeff Schaller	vagprogramming\.com
 1752695597	Dan Getz	mipromedio\.co
 1752695670	Dan Getz	thefaceproapk\.com
+1752702241	Fastnlight	dunamiscybersolution\.com
