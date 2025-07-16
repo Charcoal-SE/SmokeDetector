@@ -75236,3 +75236,4 @@
 1752652213	Cow	paragonmall\.vn
 1752652981	VLAZ	starlabsglassware\.com
 1752654365	Cow	bigtoyautomotive\.com
+1752654626	Cow	techvib\.com
