@@ -75255,3 +75255,4 @@
 1752677787	lyxal	usgrabber\.com
 1752683479	Jeff Schaller	hl-tourism\.com
 1752689923	Jeff Schaller	vagprogramming\.com
+1752695597	Dan Getz	mipromedio\.co
