@@ -75252,4 +75252,3 @@
 1752666415	VLAZ	craigbills87(?# t.me)
 1752666465	VLAZ	raymondshawn189\.wixsite\.com
 1752668202	lyxal	gatottech\.io
-1752669194	Dan Getz	^\d++[\W_]*+easy[\W_]*+ways
