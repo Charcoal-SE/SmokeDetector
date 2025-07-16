@@ -75254,3 +75254,4 @@
 1752668202	lyxal	gatottech\.io
 1752669294	Dan Getz	^[\W_]*+\d++[\W_]*+easy[\W_]*+ways
 1752677787	lyxal	usgrabber\.com
+1752683479	Jeff Schaller	hl-tourism\.com
