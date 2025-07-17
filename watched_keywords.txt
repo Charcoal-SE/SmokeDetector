@@ -75260,3 +75260,4 @@
 1752702241	Fastnlight	dunamiscybersolution\.com
 1752702348	Fastnlight	DUNAMIS[\W_]*+CYBER[\W_]*+SOLUTION(?!(?<=DUNAMISCYBERSOLUTION)\.com)
 1752708825	Dan Getz	craigbills5(?#t.me)
+1752716961	lyxal	artany\.ai
