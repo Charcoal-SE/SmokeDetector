@@ -75275,3 +75275,4 @@
 1752742501	VLAZ	workcroft
 1752744411	VLAZ	rfx[\W_]*+leather(?!\.com(?<=rfxleather\.com))
 1752745260	VLAZ	skilldux\.com
+1752745267	VLAZ	skilldux(?!\.com)
