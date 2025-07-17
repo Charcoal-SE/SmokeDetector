@@ -72714,7 +72714,6 @@
 1744417433	Vickel	gpt[\W_]*+aichat(?!\.ru(?<=gpt-aichat\.ru))
 1744439454	Nisse Engström	urologynavimumbai\.in
 1744439606	Cow	animeflv\.org\.mx
-1744439713	Cow	telemadata\.com
 1744439826	Cow	atmosphereswitch\.com
 1744439835	Cow	erofdallastx\.com
 1744439921	Cow	wedgesandbarrels\.com
