@@ -75274,4 +75274,3 @@
 1752739516	Cow	tqwid\.com
 1752742501	VLAZ	workcroft
 1752744411	VLAZ	rfx[\W_]*+leather(?!\.com(?<=rfxleather\.com))
-1752745104	VLAZ	journalfinder\.skilldux\.com
