@@ -75283,3 +75283,4 @@
 1752778919	VLAZ	(?-i:G9802174)
 1752778930	VLAZ	mmmmm\.cyou
 1752779096	VLAZ	mypmyojana\.com
+1752779103	VLAZ	mypmyojana(?!\.com)
