@@ -75262,3 +75262,4 @@
 1752708825	Dan Getz	craigbills5(?#t.me)
 1752716961	lyxal	artany\.ai
 1752717318	lyxal	recommendedaudiobooks\.com
+1752718779	Dan Getz	md-tool\.com
