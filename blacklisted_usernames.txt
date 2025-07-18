@@ -1238,3 +1238,4 @@ carelab[sz]
 (?-i:^Cash vireet$)
 (?-i:^Cash vireet‭$)
 (?-i:^Room Room$)
+(?-i:^NutraX Shop$)
