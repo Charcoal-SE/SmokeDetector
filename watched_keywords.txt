@@ -75294,3 +75294,4 @@
 1752818882	Cow	save-clip\.online
 1752824634	Jeff Schaller	techsnostalgia\.com
 1752825179	VLAZ	aestheticstudio\.in
+1752825187	VLAZ	theparivahansewa\.com
