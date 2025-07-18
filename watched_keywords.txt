@@ -75291,3 +75291,4 @@
 1752804265	lyxal	locatix\.io
 1752815546	lyxal	myrashigems\.com
 1752818467	Cow	schengenvisahelp\.co\.uk
+1752818882	Cow	save-clip\.online
