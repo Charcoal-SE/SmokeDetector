@@ -75306,3 +75306,4 @@
 1752846266	VLAZ	aimathsolver\.co
 1752848606	VLAZ	undergradresearch\.gatech\.edu
 1752849824	lyxal	brat-font\.com
+1752862443	Jeff Schaller	netcomlearning\.com
