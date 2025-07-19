@@ -75314,3 +75314,4 @@
 1752906076	lyxal	jawara88
 1752906137	lyxal	mcqsalert\.com
 1752907911	Dan Getz	fixerretrieval(?!\.com)
+1752907948	Dan Getz	fixer[\W_]*+wallet[\W_]*+retrieval
