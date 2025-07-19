@@ -75304,7 +75304,6 @@
 1752842199	Jeff Schaller	mccallent\.com
 1752843662	lyxal	glowfood\.vn
 1752846266	VLAZ	aimathsolver\.co
-1752848606	VLAZ	undergradresearch\.gatech\.edu
 1752849824	lyxal	brat-font\.com
 1752862443	Jeff Schaller	netcomlearning\.com
 1752867524	Dan Getz	mytribecounseling\.com
