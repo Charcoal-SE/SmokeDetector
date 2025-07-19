@@ -75320,3 +75320,4 @@
 1752912293	VLAZ	ahmadservicecenter\.com
 1752912344	VLAZ	pacificlegal\.ca
 1752912488	VLAZ	postcrack\.info
+1752913866	VLAZ	phonelist\.io
