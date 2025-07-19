@@ -75325,3 +75325,4 @@
 1752915610	VLAZ	_pura_travel_final_report
 1752917335	VLAZ	travel[\W_]*+storiz
 1752918781	VLAZ	innoapps(?!\.com)
+1752924279	VLAZ	(?-i:SBCZVC)
