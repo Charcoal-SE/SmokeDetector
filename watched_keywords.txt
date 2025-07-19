@@ -75323,3 +75323,4 @@
 1752913965	VLAZ	fifty-fifty\.handicraftsqde
 1752914958	VLAZ	smsmobileapi\.com
 1752915610	VLAZ	_pura_travel_final_report
+1752917335	VLAZ	travel[\W_]*+storiz
