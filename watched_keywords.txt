@@ -75313,3 +75313,4 @@
 1752906069	lyxal	galegordon\.com
 1752906076	lyxal	jawara88
 1752906137	lyxal	mcqsalert\.com
+1752907911	Dan Getz	fixerretrieval(?!\.com)
