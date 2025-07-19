@@ -75321,3 +75321,4 @@
 1752912344	VLAZ	pacificlegal\.ca
 1752912488	VLAZ	postcrack\.info
 1752913866	VLAZ	phonelist\.io
+1752913965	VLAZ	fifty-fifty\.handicraftsqde
