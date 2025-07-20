@@ -75344,3 +75344,4 @@
 1753027515	VLAZ	techforceservices\.com
 1753027581	VLAZ	techforce[\W_]*+services(?!\.com(?<=techforceservices\.com))
 1753027683	VLAZ	a1golden
+1753030517	Vickel	(?-i:pcinstallunique)(?#t.me)
