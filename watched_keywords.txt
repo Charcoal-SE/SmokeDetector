@@ -75312,7 +75312,6 @@
 1752906137	lyxal	mcqsalert\.com
 1752907911	Dan Getz	fixerretrieval(?!\.com)
 1752907948	Dan Getz	fixer[\W_]*+wallet[\W_]*+retrieval
-1752908216	lyxal	chinese[\W_]*+chess[\W_]*+\(xiangqi\)
 1752909880	Nisse Engström	dentrangtridanang\.net
 1752912293	VLAZ	ahmadservicecenter\.com
 1752912344	VLAZ	pacificlegal\.ca
