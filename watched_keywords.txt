@@ -75342,3 +75342,4 @@
 1753023261	lyxal	chinese[\W_]*+chess[\W_]*\(xiangqi\)
 1753027448	VLAZ	calculatorgst\.com\.au
 1753027515	VLAZ	techforceservices\.com
+1753027581	VLAZ	techforce[\W_]*+services(?!\.com(?<=techforceservices\.com))
