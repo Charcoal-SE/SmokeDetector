@@ -75340,3 +75340,4 @@
 1753018862	lyxal	dreamerscart\.com
 1753020032	lyxal	tazadiscover\.in
 1753023261	lyxal	chinese[\W_]*+chess[\W_]*\(xiangqi\)
+1753027448	VLAZ	calculatorgst\.com\.au
