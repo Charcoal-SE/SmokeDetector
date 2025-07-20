@@ -75339,3 +75339,4 @@
 1753016001	lyxal	festivos-colombia\.com(?:\.co)?
 1753018862	lyxal	dreamerscart\.com
 1753020032	lyxal	tazadiscover\.in
+1753023261	lyxal	chinese[\W_]*+chess[\W_]*\(xiangqi\)
