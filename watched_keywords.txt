@@ -75340,3 +75340,4 @@
 1752995799	VLAZ	(?-i:3v36fwes)(?#tinyurl.com)
 1752997110	VLAZ	sonabet\.com
 1753016001	lyxal	festivos-colombia\.com(?:\.co)?
+1753018862	lyxal	dreamerscart\.com
