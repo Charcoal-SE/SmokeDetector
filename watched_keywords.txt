@@ -75341,3 +75341,4 @@
 1752997110	VLAZ	sonabet\.com
 1753016001	lyxal	festivos-colombia\.com(?:\.co)?
 1753018862	lyxal	dreamerscart\.com
+1753020032	lyxal	tazadiscover\.in
