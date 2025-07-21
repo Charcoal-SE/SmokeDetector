@@ -75361,3 +75361,4 @@
 1753082548	Cow	dubaicannabisshop\.com
 1753089284	VLAZ	edpillsforever\.com
 1753094875	VLAZ	webivalue\.com
+1753094882	VLAZ	webivalue(?!\.com)
