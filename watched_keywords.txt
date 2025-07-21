@@ -75349,3 +75349,4 @@
 1753048976	Vickel	hungrysharkapk\.net
 1753056439	lyxal	alignedxmodel\.org
 1753070739	Dan Getz	Sprachcaffe
+1753071013	lyxal	77[\W_]*+ace[\W_]*+game
