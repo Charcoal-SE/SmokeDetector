@@ -75365,3 +75365,4 @@
 1753094929	VLAZ	getusait
 1753094955	VLAZ	newyonoupdate\.com
 1753095002	VLAZ	new[\W_]*+yono[\W_]*+update(?!\.com(?<=newyonoupdate\.com))
+1753095072	VLAZ	ctrack\.pk
