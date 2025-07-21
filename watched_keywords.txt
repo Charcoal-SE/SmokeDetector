@@ -75364,3 +75364,4 @@
 1753094882	VLAZ	webivalue(?!\.com)
 1753094929	VLAZ	getusait
 1753094955	VLAZ	newyonoupdate\.com
+1753095002	VLAZ	new[\W_]*+yono[\W_]*+update(?!\.com(?<=newyonoupdate\.com))
