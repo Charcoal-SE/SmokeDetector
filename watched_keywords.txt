@@ -75367,3 +75367,4 @@
 1753095002	VLAZ	new[\W_]*+yono[\W_]*+update(?!\.com(?<=newyonoupdate\.com))
 1753095072	VLAZ	ctrack\.pk
 1753096932	Jeff Schaller	mylongjohnsilversexperience\.click
+1753096976	Jeff Schaller	voip_siptrunk_provide
