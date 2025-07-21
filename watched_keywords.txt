@@ -73678,7 +73678,6 @@
 1747675874	Dan Getz	lunarastro\.org
 1747687083	Dan Getz	creativeitinstitute\.com
 1747692357	Dan Getz	usemounjaro\.com
-1747696691	Dan Getz	your[\W_]*+trusted[\W_]*+partners?+[\W_]*+(?:[io]n|for|at)
 1747693596	Dan Getz	^[sdv]{4,}+$(?<!^(?:[^s]++|[^d]++|[^v]++)$)
 1747697793	Dan Getz	elenaandreou\.com
 1747698887	Dan Getz	orbiloginet\.com
