@@ -75352,3 +75352,4 @@
 1753071178	lyxal	ace[\W_]*+game
 1753071339	lyxal	stickmanhookonline\.io
 1753072041	Dan Getz	(?-i)Languages\s*+Abroad
+1753074789	Dan Getz	helloswanky\.com
