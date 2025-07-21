@@ -75375,3 +75375,4 @@
 1753108976	VLAZ	panama[\W_]*+pacifico
 1753117007	Spevacus	vibrantskinbar\.com
 1753126871	Vickel	thepicsartsapk\.com
+1753131133	VLAZ	shuqaalemarketer\.com
