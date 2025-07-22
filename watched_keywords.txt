@@ -75384,5 +75384,4 @@
 1753165533	lyxal	chameleoonmedia\.com
 1753166094	Cow	qr-codes\.info
 1753166107	Cow	tgtube\.site
-1753167661	VLAZ	69intv
 1753167689	Cow	nuordic\.com
