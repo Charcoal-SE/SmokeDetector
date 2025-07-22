@@ -75417,3 +75417,4 @@
 1753182330	VLAZ	ci34h2ud3bggduse-94951178522\.shopifypreview\.com
 1753185788	VLAZ	yomabusinesssolutions\.com
 1753188049	VLAZ	psychicabijith\.com
+1753188069	VLAZ	psychicabijith(?!\.com)
