@@ -75396,3 +75396,4 @@
 1753168672	Cow	airlinesticketoffice\.com
 1753168686	Cow	trustinfo\.com\.ua
 1753169486	Cow	arriyadhroaster\.com
+1753170159	VLAZ	evtl[\W_]*+india
