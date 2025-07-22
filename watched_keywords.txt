@@ -75401,3 +75401,4 @@
 1753170805	VLAZ	3dmaxter(?!\.com)
 1753171570	Cow	coldwallet\.com
 1753172352	Cow	zeitgeist-project\.com
+1753172979	lyxal	https://toplistvotes\.com
