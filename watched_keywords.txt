@@ -75411,3 +75411,4 @@
 1753178105	Jeff Schaller	doctorathoteldubai\.ae
 1753178268	Jeff Schaller	hotspringsanimalhospital\.com
 1753179023	VLAZ	autoppt\.com
+1753179031	VLAZ	autoppt(?!\.com)
