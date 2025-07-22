@@ -75386,3 +75386,4 @@
 1753166107	Cow	tgtube\.site
 1753167689	Cow	nuordic\.com
 1753167727	VLAZ	69intv\.com
+1753167737	VLAZ	69intv(?!\.com)
