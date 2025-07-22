@@ -75402,3 +75402,4 @@
 1753171570	Cow	coldwallet\.com
 1753172352	Cow	zeitgeist-project\.com
 1753173003	lyxal	toplistvotes\.com
+1753174182	VLAZ	calculadora[\W_]*+alicia(?!\.net(?<=calculadora-alicia\.net))
