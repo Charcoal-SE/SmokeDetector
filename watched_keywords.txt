@@ -75392,3 +75392,4 @@
 1753167820	Cow	signalytics\.ai
 1753167898	VLAZ	mirak[\W_]*+event(?:[\W_]*+management)?
 1753168026	VLAZ	brandnexa(?!\.in)
+1753168067	VLAZ	69tv
