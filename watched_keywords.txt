@@ -75415,3 +75415,4 @@
 1753180645	lyxal	vicstarmetals\.com(?:\.au)?
 1753180934	VLAZ	cash[\W_]*+on[\W_]*+credit
 1753182330	VLAZ	ci34h2ud3bggduse-94951178522\.shopifypreview\.com
+1753185788	VLAZ	yomabusinesssolutions\.com
