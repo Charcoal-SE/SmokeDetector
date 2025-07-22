@@ -3888,3 +3888,4 @@ my[\W_]*+family[\W_]*+is[\W_]*+well[\W_]*+with[\W_]*+you
 am[\W_]*+a[\W_]*+little[\W_]*+more[\W_]*+about
 (?-i)photKaro
 your[\W_]*+trusted[\W_]*+partners?+[\W_]*+(?:[io]n|for|at)
+USA[\W_]*+Contact[\W_]*+Numbers
