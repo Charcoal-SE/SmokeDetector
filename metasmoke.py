@@ -12,6 +12,7 @@ except ImportError:
     from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
+import regex
 from regex import sub
 import sys
 import traceback
@@ -22,7 +23,7 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
-import classes
+from classes import Post
 import chatcommunicate
 from helpers import log, exit_mode, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_modules, log_current_exception
@@ -653,6 +654,36 @@ class Metasmoke:
             return None
 
         return response['items']
+
+    @staticmethod
+    def get_post_from_ms(ms_id=None, ms_url=None):
+        """Loads a Post from Metasmoke
+
+        Specify either ms_id or ms_url
+        """
+        if not GlobalVars.metasmoke_key or not GlobalVars.metasmoke_host or GlobalVars.MSStatus.is_down():
+            return None
+
+        if ms_id is None:
+            ms_id = int(regex.search(r'/post/(\d++)$', ms_url).group(1))
+
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'filter': 'F',  # Request everything. Currently the only way to get markdown
+        }
+        try:
+            response = Metasmoke.get('/api/v2.0/posts/{}'.format(ms_id), params=payload).json()
+        except AttributeError:
+            return None
+        except Exception as e:
+            log('error', '{}: {}'.format(type(e).__name__, e))
+            log_current_exception()
+            exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
+            chatcommunicate.tell_rooms_with("debug", "{}: In getting MS post information, recovered from `{}`"
+                                                     .format(GlobalVars.location, exception_only))
+            return None
+
+        return Post(ms_api_response=response["items"][0])
 
     @staticmethod
     def get_reason_weights():
