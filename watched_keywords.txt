@@ -75406,3 +75406,4 @@
 1753175743	VLAZ	prayagedu
 1753176709	VLAZ	itelabs\.in
 1753176717	VLAZ	itelabs(?!\.in)
+1753176826	VLAZ	upin[\W_]*+ipin[\W_]*+universe[\W_]*+apk
