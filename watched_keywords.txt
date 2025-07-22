@@ -75394,3 +75394,4 @@
 1753168026	VLAZ	brandnexa(?!\.in)
 1753168067	VLAZ	69tv
 1753168672	Cow	airlinesticketoffice\.com
+1753168686	Cow	trustinfo\.com\.ua
