@@ -75378,3 +75378,4 @@
 1753131133	VLAZ	shuqaalemarketer\.com
 1753150970	lyxal	speedbeedropship\.com
 1753160171	VLAZ	lukaspellportal
+1753160178	VLAZ	dr[\W_]*+luka
