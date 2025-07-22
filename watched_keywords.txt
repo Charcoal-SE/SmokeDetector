@@ -75399,3 +75399,4 @@
 1753170159	VLAZ	evtl[\W_]*+india
 1753170698	Cow	3dmaxter\.com
 1753170805	VLAZ	3dmaxter(?!\.com)
+1753171570	Cow	coldwallet\.com
