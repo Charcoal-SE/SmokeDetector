@@ -75389,3 +75389,4 @@
 1753167737	VLAZ	69intv(?!\.com)
 1753167747	Cow	brandnexa\.in
 1753167813	Cow	myamazonguy\.com
+1753167820	Cow	signalytics\.ai
