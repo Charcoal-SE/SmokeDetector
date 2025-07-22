@@ -75412,3 +75412,4 @@
 1753178268	Jeff Schaller	hotspringsanimalhospital\.com
 1753179023	VLAZ	autoppt\.com
 1753179031	VLAZ	autoppt(?!\.com)
+1753180645	lyxal	vicstarmetals\.com(?:\.au)?
