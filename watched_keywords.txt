@@ -75458,3 +75458,4 @@
 1753301372	Dan Getz	parseviewerx\.com
 1753301725	VLAZ	(?-i:fNfLwy+z6vm\.cfml)(?# bin.bloerg.net)
 1753301855	VLAZ	parseviewerx(?!\.com)
+1753310775	Vickel	militarypowerrankings\.com
