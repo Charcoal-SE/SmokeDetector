@@ -75444,3 +75444,4 @@
 1753261652	VLAZ	cyruswebtech\.com
 1753261667	VLAZ	(?-i:shopifydevelopershopifyexpert)(?# www.upwork.com)
 1753261720	VLAZ	cyrus[\W_]*+webtech(?!\.com(?<=cyruswebtech\.com))
+1753267017	Jeff Schaller	hustlingnaari\.com
