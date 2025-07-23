@@ -75446,3 +75446,4 @@
 1753261720	VLAZ	cyrus[\W_]*+webtech(?!\.com(?<=cyruswebtech\.com))
 1753267017	Jeff Schaller	hustlingnaari\.com
 1753269401	VLAZ	metrowestcarservice\.com
+1753271531	VLAZ	thelotus365id\.com
