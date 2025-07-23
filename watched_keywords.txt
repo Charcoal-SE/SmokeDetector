@@ -75441,3 +75441,4 @@
 1753256450	Mithical	shailicraft\.com
 1753256562	VLAZ	crecientech(?!\.com)
 1753256973	VLAZ	thelearnskills\.com
+1753257019	VLAZ	the[\W_]*+learn[\W_]*+skills(?!\.com(?<=thelearnskills\.com))
