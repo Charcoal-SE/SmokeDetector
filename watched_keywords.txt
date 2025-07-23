@@ -75454,3 +75454,4 @@
 1753289447	VLAZ	yoplay\.io
 1753289454	VLAZ	yoplay(?!\.io)
 1753291072	VLAZ	letsmakebeauty\.com
+1753299600	VLAZ	ah-bonus\.nl
