@@ -75443,3 +75443,4 @@
 1753257019	VLAZ	the[\W_]*+learn[\W_]*+skills(?!\.com(?<=thelearnskills\.com))
 1753261652	VLAZ	cyruswebtech\.com
 1753261667	VLAZ	(?-i:shopifydevelopershopifyexpert)(?# www.upwork.com)
+1753261720	VLAZ	cyrus[\W_]*+webtech(?!\.com(?<=cyruswebtech\.com))
