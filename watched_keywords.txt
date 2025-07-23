@@ -75431,3 +75431,4 @@
 1753206932	Jeff Schaller	smidovavorlikova(?:@gmail\.com)?
 1753208821	Vickel	dealsconverter\.in
 1753230839	lyxal	teztech
+1753248156	lyxal	(?-i:nQB_KmB8mcyZjBk)(?# t.me)
