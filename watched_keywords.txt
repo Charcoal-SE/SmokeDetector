@@ -75438,3 +75438,4 @@
 1753252609	Cow	indiandefenceacademy\.in
 1753253197	VLAZ	indian[\W_]*+defence[\W_]*+academy(?!\.in(?<=indiandefenceacademy\.in))
 1753255995	VLAZ	(?-i:j1l6rtRZOWRm3jmjG)(?# share.google)
+1753256450	Mithical	shailicraft\.com
