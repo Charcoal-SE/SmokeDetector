@@ -75436,3 +75436,4 @@
 1753248946	Cow	Goldenkey[\W_]*+Immigrations
 1753250823	lyxal	drnitinsinghalroboticsurgeon\.com
 1753252609	Cow	indiandefenceacademy\.in
+1753253197	VLAZ	indian[\W_]*+defence[\W_]*+academy(?!\.in(?<=indiandefenceacademy\.in))
