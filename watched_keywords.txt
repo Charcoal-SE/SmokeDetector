@@ -75455,3 +75455,4 @@
 1753289454	VLAZ	yoplay(?!\.io)
 1753291072	VLAZ	letsmakebeauty\.com
 1753299600	VLAZ	ah-bonus\.nl
+1753301372	Dan Getz	parseviewerx\.com
