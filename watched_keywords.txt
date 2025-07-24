@@ -75489,3 +75489,4 @@
 1753366012	Dan Getz	whatsiplus\.com
 1753366584	lyxal	businessbroadbandhub\.co(?:\.uk)?
 1753366621	Dan Getz	articlebasket\.com
+1753367144	lyxal	loftcompare\.co\.uk
