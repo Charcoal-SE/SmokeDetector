@@ -75467,3 +75467,4 @@
 1753346064	VLAZ	gangalaxmiivf\.com
 1753346127	VLAZ	ganga[\W_]*+laxmi[\W_]*+ivf(?!\.com(?<=gangalaxmiivf\.com))
 1753347283	VLAZ	learnoop\.app
+1753349468	VLAZ	fieldturflandscape\.com
