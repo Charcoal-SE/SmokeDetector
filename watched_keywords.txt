@@ -75468,3 +75468,4 @@
 1753346127	VLAZ	ganga[\W_]*+laxmi[\W_]*+ivf(?!\.com(?<=gangalaxmiivf\.com))
 1753347283	VLAZ	learnoop\.app
 1753349468	VLAZ	fieldturflandscape\.com
+1753350122	Jeff Schaller	fantasyimg\.ai
