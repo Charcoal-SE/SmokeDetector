@@ -75471,3 +75471,4 @@
 1753350122	Jeff Schaller	fantasyimg\.ai
 1753350280	Jeff Schaller	isieindia\.com
 1753351600	VLAZ	smeclabs\.com
+1753351609	VLAZ	smeclabs\.ac\.in
