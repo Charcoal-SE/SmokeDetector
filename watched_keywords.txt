@@ -75475,3 +75475,4 @@
 1753351648	VLAZ	perfectiongeeks\.com
 1753351655	VLAZ	perfectiongeeks(?!\.com)
 1753351683	VLAZ	yaseen\.digiimarketer\.in
+1753352284	Jeff Schaller	perfectseoagency\.com
