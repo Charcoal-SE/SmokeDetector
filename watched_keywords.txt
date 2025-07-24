@@ -75495,3 +75495,4 @@
 1753373456	VLAZ	dancingcreekfarm\.com
 1753380772	Dan Getz	srdreamit\.com
 1753383848	VLAZ	c[\W_]*+&[\W_]*+l[\W_]*+lawn[\W_]*+care
+1753385719	Jeff Schaller	canineworldboarding\.com
