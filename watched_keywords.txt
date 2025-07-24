@@ -75485,3 +75485,4 @@
 1753357921	VLAZ	apextraderfunding\.com
 1753358051	Jeff Schaller	hawkshield\.ai
 1753358155	VLAZ	apextraderfunding(?!\.com|\.global)
+1753359959	lyxal	gulfindustrialsupply\.com
