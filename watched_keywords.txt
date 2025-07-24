@@ -75484,3 +75484,4 @@
 1753357914	VLAZ	apextraderfunding\.global
 1753357921	VLAZ	apextraderfunding\.com
 1753358051	Jeff Schaller	hawkshield\.ai
+1753358155	VLAZ	apextraderfunding(?!\.com|\.global)
