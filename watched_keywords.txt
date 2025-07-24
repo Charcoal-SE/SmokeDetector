@@ -75422,7 +75422,6 @@
 1753190540	lyxal	slashford\.com
 1753190993	VLAZ	(?-i:0029VbAXiZn0bIdrcAnkgr1T)(?# whatsapp)
 1753193342	lyxal	erphubspot\.com
-1753194292	VLAZ	^(?-i:Dogherime Wall)$
 1753199288	Jeff Schaller	onlybyland\.com
 1753203811	Dragonrage	propertyregistrationinbangalore\.com
 1753206171	VLAZ	translationagencyusa\.com
