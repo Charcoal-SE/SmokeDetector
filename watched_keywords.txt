@@ -75460,3 +75460,4 @@
 1753301855	VLAZ	parseviewerx(?!\.com)
 1753310775	Vickel	militarypowerrankings\.com
 1753316072	lyxal	alqurandesk\.com
+1753319981	Dan Getz	growagardencalculator\.im
