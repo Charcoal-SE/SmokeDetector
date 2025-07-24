@@ -75465,3 +75465,4 @@
 1753343394	VLAZ	thedriver4u\.in
 1753343409	VLAZ	thedriver4u(?!\.in)
 1753346064	VLAZ	gangalaxmiivf\.com
+1753346127	VLAZ	ganga[\W_]*+laxmi[\W_]*+ivf(?!\.com(?<=gangalaxmiivf\.com))
