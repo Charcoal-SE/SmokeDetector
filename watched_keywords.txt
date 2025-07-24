@@ -75473,3 +75473,4 @@
 1753351600	VLAZ	smeclabs\.com
 1753351609	VLAZ	smeclabs\.ac\.in
 1753351648	VLAZ	perfectiongeeks\.com
+1753351655	VLAZ	perfectiongeeks(?!\.com)
