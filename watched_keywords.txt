@@ -75505,3 +75505,4 @@
 1753428046	lyxal	var-erase[\W_]*+lotion
 1753430058	VLAZ	omega89
 1753439181	VLAZ	wingstopcomsurvey\.autos
+1753439199	VLAZ	impactdigitizing\.com
