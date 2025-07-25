@@ -75500,3 +75500,4 @@
 1753410830	lyxal	yescaptcha\.com
 1753421084	VLAZ	aqeelindustries\.com
 1753427845	lyxal	bhakti[\W_]*+channel
+1753427852	VLAZ	bhakti[\W_]*+app
