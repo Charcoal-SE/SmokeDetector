@@ -75514,3 +75514,4 @@
 1753440639	VLAZ	quickguiderprovider\.com
 1753441321	VLAZ	hbittechnology\.com
 1753441329	VLAZ	hbit[\W_]*+technology(?!\.com(?<=hbittechnology\.com))
+1753441545	Jeff Schaller	theintuition\.in
