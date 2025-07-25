@@ -75518,3 +75518,4 @@
 1753442195	Dan Getz	bytetechnosys\.com
 1753442298	Dan Getz	superonemall\.com
 1753442968	Jeff Schaller	upshikacademy\.com
+1753449095	VLAZ	skillsitacademy\.com
