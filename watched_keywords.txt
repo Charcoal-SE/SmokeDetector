@@ -75521,3 +75521,4 @@
 1753449095	VLAZ	skillsitacademy\.com
 1753457337	VLAZ	(?-i:0xa069a4efa0a71477a99233042eb9db1b2c605ca1)(?# opensea.io)
 1753457365	VLAZ	square[\W_]*+mice[\W_]*+absinthe[\W_]*+visions
+1753458477	VLAZ	cloudtoggle\.com
