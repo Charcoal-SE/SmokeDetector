@@ -75511,3 +75511,4 @@
 1753439893	VLAZ	75[\W_]*+degree[\W_]*+ac
 1753439916	VLAZ	okwindownload\.com
 1753440554	VLAZ	the\.?hosting
+1753440639	VLAZ	quickguiderprovider\.com
