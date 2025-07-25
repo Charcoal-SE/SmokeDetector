@@ -75504,3 +75504,4 @@
 1753427874	VLAZ	unibeginner\.com
 1753428046	lyxal	var-erase[\W_]*+lotion
 1753430058	VLAZ	omega89
+1753439181	VLAZ	wingstopcomsurvey\.autos
