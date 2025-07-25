@@ -75506,3 +75506,4 @@
 1753430058	VLAZ	omega89
 1753439181	VLAZ	wingstopcomsurvey\.autos
 1753439199	VLAZ	impactdigitizing\.com
+1753439700	VLAZ	75[\W_]*+degree[\W_]*+ac[\W_]*+pecan[\W_]*+park
