@@ -75502,3 +75502,4 @@
 1753427845	lyxal	bhakti[\W_]*+channel
 1753427852	VLAZ	bhakti[\W_]*+app
 1753427874	VLAZ	unibeginner\.com
+1753428046	lyxal	var-erase[\W_]*+lotion
