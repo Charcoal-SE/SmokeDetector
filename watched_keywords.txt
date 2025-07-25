@@ -75509,3 +75509,4 @@
 1753439805	VLAZ	subhwanti\.com
 1753439818	VLAZ	globalphotoedit\.com
 1753439893	VLAZ	75[\W_]*+degree[\W_]*+ac
+1753439916	VLAZ	okwindownload\.com
