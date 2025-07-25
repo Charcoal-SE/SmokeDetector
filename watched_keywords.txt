@@ -75519,3 +75519,4 @@
 1753442298	Dan Getz	superonemall\.com
 1753442968	Jeff Schaller	upshikacademy\.com
 1753449095	VLAZ	skillsitacademy\.com
+1753457330	VLAZ	square[\W_]*+mice:[\W_]*+absinthe[\W_]*+visions
