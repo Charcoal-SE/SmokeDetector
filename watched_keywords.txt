@@ -75517,3 +75517,4 @@
 1753441545	Jeff Schaller	theintuition\.in
 1753442195	Dan Getz	bytetechnosys\.com
 1753442298	Dan Getz	superonemall\.com
+1753442968	Jeff Schaller	upshikacademy\.com
