@@ -75527,3 +75527,4 @@
 1753510016	Dan Getz	morse-coder\.com
 1753515476	VLAZ	c[\W_]*+l[\W_]*+lawn[\W_]*+care
 1753516123	VLAZ	birkanulusoy\.com\.tr
+1753517999	VLAZ	e-commerceplanners\.com
