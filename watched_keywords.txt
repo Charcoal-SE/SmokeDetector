@@ -75530,3 +75530,4 @@
 1753518400	VLAZ	us-audifort\.us
 1753521623	VLAZ	papa[\W_]*+s[\W_]*+freezeria(?:[\W_]*+game)?(?!\.io(?<=papasfreezeriagame\.io))(?!\.online(?<=papasfreezeria\.online))
 1753521639	VLAZ	papasfreezeria\.online
+1753525264	VLAZ	licensefarm\.com
