@@ -75538,3 +75538,4 @@
 1753557861	VLAZ	(?-i:E1Ywf)(?#shorturl.at)
 1753557920	VLAZ	chainxhackersolutions
 1753568764	Dan Getz	clicktranss\.com
+1753572450	Dragonrage	stardew[\W_]*+valley[\W_]*+apk(?!\.com(?<=stardewvalley-apk\.com))
