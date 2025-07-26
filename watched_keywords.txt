@@ -75525,3 +75525,4 @@
 1753481064	Jeff Schaller	AirlinesMap
 1753505373	lyxal	mentioned[\W_]*+balance
 1753510016	Dan Getz	morse-coder\.com
+1753515476	VLAZ	c[\W_]*+l[\W_]*+lawn[\W_]*+care
