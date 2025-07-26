@@ -65470,7 +65470,6 @@
 1724923299	tripleee	(?-i:Trung Anh)
 1724923917	Cody Gray	Ujjawala[\W_]*+Chemicals
 1724924043	Cody Gray	papasfreezeriagame\.io
-1724924549	Cody Gray	papa[\W_]*+s[\W_]*+freezeria(?:[\W_]*+game)?(?!\.io(?<=papasfreezeriagame\.io))
 1724924595	Cody Gray	ef\.com
 1724925607	tripleee	stephanarnas\.com
 1724926137	Cody Gray	ashapura[\W_]*+softech(?!\.com(?<=ashapurasoftech\.com))
