@@ -75538,3 +75538,4 @@
 1753551802	Dan Getz	wpressblog\.com
 1753557861	VLAZ	(?-i:E1Ywf)(?#shorturl.at)
 1753557920	VLAZ	chainxhackersolutions
+1753568764	Dan Getz	clicktranss\.com
