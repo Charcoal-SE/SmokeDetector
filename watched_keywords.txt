@@ -75537,3 +75537,4 @@
 1753540609	Glorfindel	asset\W*resolute
 1753551802	Dan Getz	wpressblog\.com
 1753557861	VLAZ	(?-i:E1Ywf)(?#shorturl.at)
+1753557920	VLAZ	chainxhackersolutions
