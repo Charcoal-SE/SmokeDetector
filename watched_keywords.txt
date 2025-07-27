@@ -75541,3 +75541,4 @@
 1753572450	Dragonrage	stardew[\W_]*+valley[\W_]*+apk(?!\.com(?<=stardewvalley-apk\.com))
 1753590169	lyxal	(?-i:Futfutebollouco)(?# www.youtube.com)
 1753591115	lyxal	es\.eurocityvape\.com
+1753596735	Glorfindel	thewetherspoonsmenu\.uk
