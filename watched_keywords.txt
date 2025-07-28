@@ -75567,3 +75567,4 @@
 1753692066	VLAZ	vividdental\.sg
 1753693574	VLAZ	lovemarriagessolution\.com
 1753694111	VLAZ	anolytics(?!\.ai)
+1753695437	VLAZ	gradehunt\.com
