@@ -75558,3 +75558,4 @@
 1753681431	VLAZ	tahviesepidar\.com
 1753681438	VLAZ	tahvie[\W_]*+sepidar(?!\.com(?<=tahviesepidar\.com))
 1753681787	VLAZ	le-deck\.in
+1753691175	VLAZ	aftermathinvestigations\.com
