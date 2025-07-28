@@ -75573,3 +75573,4 @@
 1753697907	VLAZ	freakyfontgenerator\.net
 1753699624	Glorfindel	zyonz\.ae
 1753701298	VLAZ	randianlabs\.com
+1753701370	Jeff Schaller	vaanilive\.com
