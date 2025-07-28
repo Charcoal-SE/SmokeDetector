@@ -75568,3 +75568,4 @@
 1753694111	VLAZ	anolytics(?!\.ai)
 1753695437	VLAZ	gradehunt\.com
 1753695536	VLAZ	75[\W_]*+degree[\W_]*+ac(?!\.com(?<=75degreeac\.com))
+1753695544	VLAZ	75degreeac\.com
