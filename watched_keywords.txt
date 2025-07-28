@@ -75556,3 +75556,4 @@
 1753680812	Dan Getz	mihijopet\.com
 1753681423	VLAZ	drabebeherbalremedies
 1753681431	VLAZ	tahviesepidar\.com
+1753681438	VLAZ	tahvie[\W_]*+sepidar(?!\.com(?<=tahviesepidar\.com))
