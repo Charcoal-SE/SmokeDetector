@@ -75570,3 +75570,4 @@
 1753695536	VLAZ	75[\W_]*+degree[\W_]*+ac(?!\.com(?<=75degreeac\.com))
 1753695544	VLAZ	75degreeac\.com
 1753695965	VLAZ	the[\W_]*+yellow[\W_]*+strawberry(?!\.com(?<=theyellowstrawberry\.com))
+1753697907	VLAZ	freakyfontgenerator\.net
