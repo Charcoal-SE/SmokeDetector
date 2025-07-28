@@ -75566,3 +75566,4 @@
 1753691789	VLAZ	mahindra[\W_]*+lifespaces
 1753692066	VLAZ	vividdental\.sg
 1753693574	VLAZ	lovemarriagessolution\.com
+1753694111	VLAZ	anolytics(?!\.ai)
