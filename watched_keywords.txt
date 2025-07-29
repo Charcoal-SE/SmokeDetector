@@ -75582,3 +75582,4 @@
 1753727268	Jeff Schaller	alh156358(?#temu)
 1753732045	Jeff Schaller	innovativeelectro\.com
 1753756414	Dan Getz	musicmaker\.im
+1753757944	Dan Getz	^(?-i:Stalin)$
