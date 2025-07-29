@@ -75592,3 +75592,4 @@
 1753782603	VLAZ	onetriptaxi\.com
 1753782610	VLAZ	one[\W_]*+trip[\W_]*+taxi(?!\.com(?<=onetriptaxi\.com))
 1753784803	Jeff Schaller	reddybook\.net\.in
+1753788831	Glorfindel	Montenegro to North Macedonia via
