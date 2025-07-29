@@ -75588,3 +75588,4 @@
 1753769861	VLAZ	bontii\.com
 1753769912	VLAZ	elevanaugust\.sg
 1753772283	VLAZ	pkbook99\.com
+1753772291	VLAZ	pkbook99(?!\.com)
