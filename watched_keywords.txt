@@ -75590,3 +75590,4 @@
 1753772283	VLAZ	pkbook99\.com
 1753772291	VLAZ	pkbook99(?!\.com)
 1753781172	VLAZ	dyvarcity\.com
+1753782603	VLAZ	onetriptaxi\.com
