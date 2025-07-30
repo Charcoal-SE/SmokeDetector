@@ -75613,3 +75613,4 @@
 1753854806	VLAZ	vedanshicabs\.com
 1753854835	VLAZ	cloudmailstore\.com
 1753855148	VLAZ	VIVA[\W_]*+LA[\W_]*+LIBERTARD[\W_]*+CARAJO
+1753856389	VLAZ	iies[\W_]*+bangalore
