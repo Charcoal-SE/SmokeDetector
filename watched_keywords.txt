@@ -75618,3 +75618,4 @@
 1753864292	VLAZ	starapotheke\.com
 1753869606	VLAZ	mykfcexperiencee\.click
 1753869627	VLAZ	tickerplay\.com
+1753869639	VLAZ	tickerplay(?!\.com)
