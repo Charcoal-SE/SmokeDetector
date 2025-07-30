@@ -75621,3 +75621,4 @@
 1753869639	VLAZ	tickerplay(?!\.com)
 1753870457	VLAZ	2020icareiweartx\.com
 1753870465	VLAZ	2020icareiweartx(?!\.com)
+1753870501	VLAZ	osttopstapp(?!\.com)
