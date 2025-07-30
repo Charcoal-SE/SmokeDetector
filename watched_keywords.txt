@@ -75616,3 +75616,4 @@
 1753856389	VLAZ	iies[\W_]*+bangalore
 1753857242	VLAZ	cloud[\W_]*+mail[\W_]*+store(?!\.com(?<=cloudmailstore\.com))
 1753864292	VLAZ	starapotheke\.com
+1753869606	VLAZ	mykfcexperiencee\.click
