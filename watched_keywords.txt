@@ -75609,3 +75609,4 @@
 1753808862	VLAZ	whitewolfpublishers\.com
 1753814625	Dan Getz	newsbullion\.com
 1753852556	VLAZ	gravityball\.top
+1753853196	VLAZ	mekari[\W_]*+qontak
