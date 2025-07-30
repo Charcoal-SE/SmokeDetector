@@ -75624,3 +75624,4 @@
 1753870501	VLAZ	osttopstapp(?!\.com)
 1753871929	Jeff Schaller	drillingsupplystore\.com
 1753874870	VLAZ	learnfle\.fr
+1753874894	VLAZ	neocane\.com
