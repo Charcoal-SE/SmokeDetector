@@ -75625,3 +75625,4 @@
 1753871929	Jeff Schaller	drillingsupplystore\.com
 1753874870	VLAZ	learnfle\.fr
 1753874894	VLAZ	neocane\.com
+1753874903	VLAZ	neocane(?!\.com)
