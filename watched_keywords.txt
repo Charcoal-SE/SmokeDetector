@@ -75640,3 +75640,4 @@
 1753939390	VLAZ	phonepeapk\.app
 1753942263	lyxal	tiktokemojis\.click
 1753942734	VLAZ	ajath\.com
+1753942769	VLAZ	(?-i:Ajath[\W_]*+Infotech)
