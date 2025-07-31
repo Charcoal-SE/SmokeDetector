@@ -75649,3 +75649,4 @@
 1753947984	VLAZ	telbox\.io
 1753949994	VLAZ	agentcore\.coreops\.ai
 1753954082	Glorfindel	Amquest
+1753954218	VLAZ	vaikunthastays\.com
