@@ -75658,3 +75658,4 @@
 1753955977	VLAZ	upshikacademy(?!\.com)
 1753958766	Glorfindel	disk[\W_]*+deleter
 1753959862	Jeff Schaller	bosoncell\.com
+1753962357	Jeff Schaller	smilesonwells\.com
