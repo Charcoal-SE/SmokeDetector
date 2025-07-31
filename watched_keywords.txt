@@ -75669,3 +75669,4 @@
 1753982866	Jeff Schaller	trashtalkersjunk\.com
 1753983193	Glorfindel	South Europe College
 1753983624	Dan Getz	southeurope\.edu\.mt
+1753986163	Dan Getz	(?-i:hhheioggabgpajbeiaphdiieafmkongm)(?# chromewebstore.google.com)
