@@ -75642,3 +75642,4 @@
 1753942734	VLAZ	ajath\.com
 1753942769	VLAZ	(?-i:Ajath[\W_]*+Infotech)
 1753944532	Glorfindel	Shrevya
+1753946103	VLAZ	javascriptninjas\.com
