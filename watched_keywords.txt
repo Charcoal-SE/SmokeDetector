@@ -75663,3 +75663,4 @@
 1753968734	Jeff Schaller	Mekari[\W_]*+Talenta
 1753968803	Glorfindel	nor to provide there is stain
 1753969352	Jeff Schaller	gooutdoorsne\.com
+1753972239	Dan Getz	digantadigital\.com
