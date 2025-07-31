@@ -75673,3 +75673,4 @@
 1753993688	VLAZ	salepager
 1753993769	VLAZ	ultrabetegiris\.com
 1753993776	VLAZ	ultrabetegiris\.net
+1753993783	VLAZ	ultrabet
