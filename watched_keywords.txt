@@ -75677,3 +75677,4 @@
 1754014445	Makyen	youcine[\W_]*+brasil
 1754026974	lyxal	aelumconsulting\.com
 1754027060	lyxal	aelum[\W_]*+consulting(?!\.com)
+1754027476	VLAZ	ejaw\.net
