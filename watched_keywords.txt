@@ -75692,3 +75692,4 @@
 1754050607	lyxal	thedreamworldbangkok\.com
 1754050850	VLAZ	eb2bmart
 1754051181	lyxal	dream[\W_]*+world[\W_]*+bangkok
+1754053645	VLAZ	zicapitampura\.com
