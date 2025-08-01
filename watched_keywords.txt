@@ -75679,3 +75679,4 @@
 1754027476	VLAZ	ejaw\.net
 1754027890	lyxal	aelum[\W_]*+consulting(?!\.com(?<=aelumconsulting\.com))
 1754032330	Dan Getz	abceramic\.in
+1754032723	Dan Getz	aktengineering\.com\.au
