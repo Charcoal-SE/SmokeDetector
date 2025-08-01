@@ -75688,3 +75688,4 @@
 1754042394	Dan Getz	wecareriteaidcom\.cfd
 1754042523	Dan Getz	hackdemon4(?:@gmail\.com)?
 1754048574	VLAZ	thefinopartners\.com
+1754048655	VLAZ	the[\W_]*+fino[\W_]*+partners(?!\.com(?<=thefinopartners\.com))
