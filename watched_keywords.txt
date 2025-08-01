@@ -75684,3 +75684,4 @@
 1754036097	Dan Getz	6live\.vn
 1754037100	VLAZ	featstart
 1754037459	VLAZ	globexfrance\.com
+1754039873	Dan Getz	footbaltoday\.com
