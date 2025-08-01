@@ -75685,3 +75685,4 @@
 1754037100	VLAZ	featstart
 1754037459	VLAZ	globexfrance\.com
 1754039873	Dan Getz	footbaltoday\.com
+1754042361	Dan Getz	lotusindiaholidays\.com
