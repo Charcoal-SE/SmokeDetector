@@ -75690,3 +75690,4 @@
 1754048574	VLAZ	thefinopartners\.com
 1754048655	VLAZ	the[\W_]*+fino[\W_]*+partners(?!\.com(?<=thefinopartners\.com))
 1754050607	lyxal	thedreamworldbangkok\.com
+1754050850	VLAZ	eb2bmart
