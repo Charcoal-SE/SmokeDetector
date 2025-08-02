@@ -75705,3 +75705,4 @@
 1754130950	Jeff Schaller	optioneducation\.ae
 1754131489	Jeff Schaller	telloutback\.biz
 1754134102	Jeff Schaller	littleparadise\.de
+1754142103	Dan Getz	refund[\W_]*+wealth
