@@ -75707,3 +75707,4 @@
 1754134102	Jeff Schaller	littleparadise\.de
 1754142103	Dan Getz	refund[\W_]*+wealth
 1754148782	VLAZ	shinepluscarpetcleaning\.co\.uk
+1754157431	Jeff Schaller	bigblindtheory\.com
