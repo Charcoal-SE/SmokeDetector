@@ -75725,3 +75725,4 @@
 1754231365	Jeff Schaller	mcd-breakfast-menu\.com
 1754241089	VLAZ	calculatorup\.com
 1754244849	VLAZ	dr[\W_]*+itua(?:stepven)?
+1754246934	Glorfindel	shinevss\.com
