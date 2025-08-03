@@ -3,6 +3,7 @@ import json
 from helpers import log
 import html
 from typing import AnyStr, Union
+import regex
 
 
 class PostParseError(Exception):
@@ -13,8 +14,8 @@ class PostParseError(Exception):
 
 
 class Post:
-    def __init__(self, json_data=None, api_response=None, parent=None):
-        # type: (AnyStr, dict, Post) -> None
+    def __init__(self, json_data=None, api_response=None, ms_api_response=None, parent=None):
+        # type: (AnyStr, dict, dict, Post) -> None
 
         self._body = ""
         self._body_is_summary = False
@@ -42,6 +43,8 @@ class Post:
             self._parse_json_post(json_data)
         elif api_response is not None:
             self._parse_api_post(api_response)
+        elif ms_api_response is not None:
+            self._parse_ms_api_post(ms_api_response)
         else:
             raise PostParseError("Must provide either JSON Data or an API Response object for Post object.")
 
@@ -148,6 +151,37 @@ class Post:
             'question_id': '_post_id',
             'answer_id': '_post_id',
             'edited': '_edited',
+        }
+
+        self._process_element_mapping(element_map, response, is_api_response=True)
+
+    def _parse_ms_api_post(self, response):
+        # type: (dict) -> None
+
+        if "title" not in response or "body" not in response or "link" not in response:
+            return
+
+        self._title = html.unescape(response["title"])
+        self._body = html.unescape(response["body"])
+        if "markdown" in response and response["markdown"] is not None:
+            self._markdown = html.unescape(response["markdown"])
+
+        m = regex.match(r'//([\w\.]++)/([aq])/\d++$', response["link"])
+        if m:
+            self._post_site = m.group(1)
+            self._is_answer = m.group(2) == 'a'
+
+        # Map response elements to the corresponding variable for the Post object internally.
+        element_map = {
+            'link': '_post_url',
+            'score': '_post_score',
+            'upvote_count': "_votes['upvotes']",
+            'downvote_count': "_votes['downvotes']",
+            'username': '_user_name',
+            'user_link': '_user_url',
+            'user_reputation': '_owner_rep',
+            'native_id': '_post_id',
+            'revision_count': '_edited',
         }
 
         self._process_element_mapping(element_map, response, is_api_response=True)
