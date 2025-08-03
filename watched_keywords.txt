@@ -75711,3 +75711,4 @@
 1754158598	VLAZ	(?-i:^QT aint even cute bro$)
 1754160876	Dan Getz	egyptunitedtours\.com
 1754171432	Dan Getz	snowlimitless\.com
+1754196299	Dan Getz	paint-3d\.com
