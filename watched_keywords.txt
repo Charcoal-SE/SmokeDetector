@@ -75718,3 +75718,4 @@
 1754208580	VLAZ	allstreetfood\.com
 1754209627	VLAZ	(?-i:dragonsakti88)(?#heylink.me)
 1754209685	VLAZ	qrhub\.live
+1754216387	VLAZ	findirectory\.xyz
