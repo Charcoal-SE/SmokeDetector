@@ -75727,3 +75727,4 @@
 1754244849	VLAZ	dr[\W_]*+itua(?:stepven)?
 1754246934	Glorfindel	shinevss\.com
 1754261368	Vickel	tsggordonvale\.com
+1754270218	Jeff Schaller	connecttech\.vn
