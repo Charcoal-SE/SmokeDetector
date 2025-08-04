@@ -55545,7 +55545,6 @@
 1702595333	Vickel	jobs\.bairesdev\.com
 1702608247	Jesse	digitstem\.com
 1702614999	Jesse	jurriaanpersyn\.com
-1702639605	Nick	pioneerpowers\.com
 1702618981	Nick	davidsmovingkc\.com
 1702619013	Nick	neologix\.io
 1702620596	Nick	jmllandscape\.com
