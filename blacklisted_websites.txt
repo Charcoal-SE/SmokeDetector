@@ -6166,3 +6166,4 @@ wisecodestudio\.com
 baixaryoucine\.com
 fastflashc\.com
 pioneerpowers\.com
+fixerretrieval[\W_]++com
