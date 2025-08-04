@@ -75747,3 +75747,4 @@
 1754302803	VLAZ	ai[\W_]*+tryon(?!\.art(?<=aitryon\.art))|tryon[\W_]*+ai
 1754305885	Jeff Schaller	aftermathbailbonds\.com
 1754308065	Jeff Schaller	masshvac\.mrcool\.com
+1754310172	VLAZ	mafeemushkil\.com
