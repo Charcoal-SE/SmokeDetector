@@ -6167,3 +6167,4 @@ baixaryoucine\.com
 fastflashc\.com
 pioneerpowers\.com
 fixerretrieval[\W_]*\.[\W_]*+com
+fixer[\W_]*\.[\W_]*+co[\W_]*\.[\W_]*+site
