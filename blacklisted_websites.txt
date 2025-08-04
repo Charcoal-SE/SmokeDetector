@@ -6166,5 +6166,4 @@ wisecodestudio\.com
 baixaryoucine\.com
 fastflashc\.com
 pioneerpowers\.com
-fixer[\W_]++co[\W_]++site
 fixerretrieval[\W_]*+\.[\W_]*+com
