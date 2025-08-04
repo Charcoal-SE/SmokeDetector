@@ -75745,3 +75745,4 @@
 1754302327	VLAZ	trustglobalg
 1754302535	VLAZ	aitryon\.art
 1754302803	VLAZ	ai[\W_]*+tryon(?!\.art(?<=aitryon\.art))|tryon[\W_]*+ai
+1754305885	Jeff Schaller	aftermathbailbonds\.com
