@@ -75742,3 +75742,4 @@
 1754300008	Nisse Engström	airporttoairlines\.com
 1754300200	Nisse Engström	photonplay\.com
 1754300592	VLAZ	photon[\W_]*+play(?!\.com(?<=photonplay\.com))
+1754302327	VLAZ	trustglobalg
