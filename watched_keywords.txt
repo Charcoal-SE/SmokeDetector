@@ -75752,3 +75752,4 @@
 1754311362	Jeff Schaller	ATS[\W_]*+PST[\W_]*+to[\W_]*+MBOX[\W_]*+Converter
 1754312299	VLAZ	(?-i:^Iosif$)
 1754314739	Jeff Schaller	ai-2027\.com
+1754314762	Jeff Schaller	idebasispaul(?#youtube)
