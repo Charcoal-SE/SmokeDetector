@@ -75750,3 +75750,4 @@
 1754310172	VLAZ	mafeemushkil\.com
 1754311186	Jeff Schaller	investmentestate\.in
 1754311362	Jeff Schaller	ATS[\W_]*+PST[\W_]*+to[\W_]*+MBOX[\W_]*+Converter
+1754312299	VLAZ	(?-i:^Iosif$)
