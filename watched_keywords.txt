@@ -75743,3 +75743,4 @@
 1754300200	Nisse Engström	photonplay\.com
 1754300592	VLAZ	photon[\W_]*+play(?!\.com(?<=photonplay\.com))
 1754302327	VLAZ	trustglobalg
+1754302535	VLAZ	aitryon\.art
