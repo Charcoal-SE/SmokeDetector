@@ -75773,3 +75773,4 @@
 1754391459	VLAZ	newswell\.info
 1754391468	VLAZ	dermosphere\.com
 1754391583	VLAZ	jacklistens\.cam
+1754393229	lyxal	hike[\W_]*+n[\W_]*+hills
