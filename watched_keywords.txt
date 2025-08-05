@@ -75777,3 +75777,4 @@
 1754393533	lyxal	thepallikoodam\.com
 1754395228	Dan Getz	rakshitam\.com
 1754396383	lyxal	chandigarhrentacar\.com
+1754399728	Glorfindel	^Merghad Amel$
