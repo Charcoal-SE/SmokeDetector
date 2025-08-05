@@ -75765,3 +75765,4 @@
 1754382436	VLAZ	shop4resellers\.com
 1754382443	VLAZ	shop4resellers(?!\.com)
 1754382451	VLAZ	localstak\.com
+1754382473	VLAZ	7th[\W_]*+growth[\W_]*+marketing
