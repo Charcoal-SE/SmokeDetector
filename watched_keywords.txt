@@ -75770,3 +75770,4 @@
 1754382713	VLAZ	planingo\.ai
 1754384420	VLAZ	photonplayinc\.com
 1754386839	VLAZ	5starclinicltd\.com
+1754391459	VLAZ	newswell\.info
