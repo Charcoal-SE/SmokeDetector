@@ -75757,3 +75757,4 @@
 1754368548	VLAZ	programacion365\.com
 1754369442	VLAZ	pawfun\.pet
 1754372127	VLAZ	searchhomesindia\.com
+1754375659	VLAZ	vega[\W_]*+turnkey
