@@ -75778,3 +75778,4 @@
 1754395228	Dan Getz	rakshitam\.com
 1754396383	lyxal	chandigarhrentacar\.com
 1754399728	Glorfindel	^Merghad Amel$
+1754399848	Jeff Schaller	apponward\.com
