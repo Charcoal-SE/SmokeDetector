@@ -75779,3 +75779,4 @@
 1754396383	lyxal	chandigarhrentacar\.com
 1754399728	Glorfindel	^Merghad Amel$
 1754399848	Jeff Schaller	apponward\.com
+1754400113	VLAZ	oculusproxies\.com
