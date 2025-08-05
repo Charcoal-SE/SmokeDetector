@@ -75769,3 +75769,4 @@
 1754382549	VLAZ	prospect-intelligence-ai\.replit\.app
 1754382713	VLAZ	planingo\.ai
 1754384420	VLAZ	photonplayinc\.com
+1754386839	VLAZ	5starclinicltd\.com
