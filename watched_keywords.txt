@@ -75760,3 +75760,4 @@
 1754375659	VLAZ	vega[\W_]*+turnkey
 1754377638	VLAZ	asph8pro\.com
 1754378666	Nisse Engström	vcaretechnicalinstitute\.com
+1754380582	VLAZ	fsddsk\.com
