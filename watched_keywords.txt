@@ -75755,3 +75755,4 @@
 1754316072	Jeff Schaller	cambodia\.maxbit(?#tiktok)
 1754337080	VLAZ	apkthespike\.com
 1754368548	VLAZ	programacion365\.com
+1754369442	VLAZ	pawfun\.pet
