@@ -75764,3 +75764,4 @@
 1754380635	VLAZ	61578261916259(?# facebook id)
 1754382436	VLAZ	shop4resellers\.com
 1754382443	VLAZ	shop4resellers(?!\.com)
+1754382451	VLAZ	localstak\.com
