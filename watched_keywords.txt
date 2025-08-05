@@ -75768,3 +75768,4 @@
 1754382473	VLAZ	7th[\W_]*+growth[\W_]*+marketing
 1754382549	VLAZ	prospect-intelligence-ai\.replit\.app
 1754382713	VLAZ	planingo\.ai
+1754384420	VLAZ	photonplayinc\.com
