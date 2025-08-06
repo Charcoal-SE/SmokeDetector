@@ -75812,3 +75812,4 @@
 1754513152	Nisse Engström	teletech360\.blog
 1754514725	VLAZ	get[\W_]*+tox[\W_]*+d
 1754514780	VLAZ	ez[\W_]*+local
+1754516257	VLAZ	bloomagency\.in
