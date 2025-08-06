@@ -75807,3 +75807,4 @@
 1754494758	VLAZ	officerepublic\.pk
 1754497002	Vickel	healrex\.com
 1754499685	Vickel	psxplay\.com
+1754510955	VLAZ	(?-i:vpngeniebot)(?#t.me)
