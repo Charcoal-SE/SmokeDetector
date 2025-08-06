@@ -75798,3 +75798,4 @@
 1754478626	VLAZ	theapparelfactory\.com
 1754480031	VLAZ	tripplannerpk\.com
 1754480071	Jeff Schaller	menshirts\.in
+1754480092	VLAZ	graphypix(?!\.com)
