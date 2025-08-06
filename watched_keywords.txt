@@ -75802,3 +75802,4 @@
 1754482148	Dan Getz	sweetgreenmenu\.us
 1754484312	lyxal	plugg_drop(?# telegram)
 1754485352	lyxal	mycertshub(?!\.com(?<=mycertshub\.com))
+1754485359	lyxal	mycertshub\.com
