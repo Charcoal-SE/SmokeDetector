@@ -75803,3 +75803,4 @@
 1754484312	lyxal	plugg_drop(?# telegram)
 1754485359	lyxal	mycertshub\.com
 1754487024	lyxal	mycertshub(?!\.com)
+1754490094	lyxal	privnotepad\.com
