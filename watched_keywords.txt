@@ -75800,3 +75800,4 @@
 1754480071	Jeff Schaller	menshirts\.in
 1754480092	VLAZ	graphypix(?!\.com)
 1754482148	Dan Getz	sweetgreenmenu\.us
+1754484312	lyxal	plugg_drop(?# telegram)
