@@ -75804,3 +75804,4 @@
 1754485359	lyxal	mycertshub\.com
 1754487024	lyxal	mycertshub(?!\.com)
 1754490094	lyxal	privnotepad\.com
+1754494758	VLAZ	officerepublic\.pk
