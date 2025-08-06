@@ -75796,3 +75796,4 @@
 1754474679	VLAZ	gracesoft\.com
 1754478591	VLAZ	myamazingcandle\.com
 1754478626	VLAZ	theapparelfactory\.com
+1754480031	VLAZ	tripplannerpk\.com
