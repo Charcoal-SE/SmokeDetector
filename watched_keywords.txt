@@ -75810,3 +75810,4 @@
 1754510955	VLAZ	(?-i:vpngeniebot)(?#t.me)
 1754511402	Glorfindel	Get[\W_]*+Tox’d
 1754513152	Nisse Engström	teletech360\.blog
+1754514725	VLAZ	get[\W_]*+tox[\W_]*+d
