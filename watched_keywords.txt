@@ -75830,3 +75830,4 @@
 1754581928	VLAZ	8171[\W_]*+check[\W_]*+online
 1754589183	Vickel	kbvisaconsultants\.com
 1754590180	VLAZ	ufax5\.com
+1754590187	VLAZ	member\.ufa99n\.fun
