@@ -75822,3 +75822,4 @@
 1754558550	VLAZ	zayanlifestyle\.com
 1754558572	VLAZ	betprocoders\.com
 1754560874	VLAZ	skychunks\.com
+1754560882	VLAZ	skychunks(?!\.com)
