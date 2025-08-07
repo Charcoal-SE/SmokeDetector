@@ -356,6 +356,8 @@ def on_msg(msg, client):
 
                 result = dispatch_reply_command(message.parent, message, cmd)
                 send_reply_if_not_blank(room_ident, message.id, result)
+        except requests.HTTPError:
+            log_current_exception(log_level='debug')
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
