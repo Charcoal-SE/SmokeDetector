@@ -75819,3 +75819,4 @@
 1754551191	VLAZ	journey[\W_]*+hoper(?!\.com(?<=journeyhoper\.com))
 1754551241	VLAZ	journeyhoper\.com
 1754556077	VLAZ	mann[\W_]*+media
+1754558550	VLAZ	zayanlifestyle\.com
