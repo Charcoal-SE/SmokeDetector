@@ -75815,3 +75815,4 @@
 1754516257	VLAZ	bloomagency\.in
 1754531442	lyxal	cambridgeelevating\.com
 1754532982	Dan Getz	indexstudio\.app
+1754543455	lyxal	luxuryfootballelite\.com
