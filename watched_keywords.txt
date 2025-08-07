@@ -75820,3 +75820,4 @@
 1754551241	VLAZ	journeyhoper\.com
 1754556077	VLAZ	mann[\W_]*+media
 1754558550	VLAZ	zayanlifestyle\.com
+1754558572	VLAZ	betprocoders\.com
