@@ -75814,3 +75814,4 @@
 1754514780	VLAZ	ez[\W_]*+local
 1754516257	VLAZ	bloomagency\.in
 1754531442	lyxal	cambridgeelevating\.com
+1754532982	Dan Getz	indexstudio\.app
