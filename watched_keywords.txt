@@ -75825,4 +75825,3 @@
 1754560882	VLAZ	skychunks(?!\.com)
 1754561633	VLAZ	tmsimregistrationph\.net
 1754561666	VLAZ	(?-i:mwarcudd)(?# tinyurl.com)
-1754569674	VLAZ	cucei\.udg\.mx
