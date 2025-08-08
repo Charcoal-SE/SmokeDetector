@@ -75857,3 +75857,4 @@
 1754640415	VLAZ	ribcobins\.com\.au
 1754640503	VLAZ	ribco[\W_]*+bins(?!\.com\.au(?<=ribcobins\.com\.au))
 1754647936	VLAZ	(?-i:^Marxist revolution$)
+1754652071	VLAZ	beelenhandmade\.com
