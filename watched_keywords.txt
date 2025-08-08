@@ -75853,3 +75853,4 @@
 1754636681	Nisse Engström	girlyveda\.com
 1754636853	VLAZ	girlyveda(?!\.com)
 1754637068	VLAZ	irvine-plumbers\.com
+1754638709	Glorfindel	techverdi\.com
