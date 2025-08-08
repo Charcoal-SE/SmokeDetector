@@ -75835,3 +75835,4 @@
 1754606179	Jeff Schaller	pdfquickly\.com
 1754608289	Jeff Schaller	spazto\.com
 1754620203	Dan Getz	(?-i:Mudel$)
+1754621467	Dan Getz	(?-i:^Customer Service$)
