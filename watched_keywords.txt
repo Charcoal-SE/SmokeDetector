@@ -75837,3 +75837,4 @@
 1754620203	Dan Getz	(?-i:Mudel$)
 1754621467	Dan Getz	(?-i:^Customer Service$)
 1754623067	Dan Getz	mgland\.vn
+1754623158	Dan Getz	(?-i:^Customer Care$)
