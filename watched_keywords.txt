@@ -75851,3 +75851,4 @@
 1754636483	VLAZ	delcoairhvac\.com
 1754636558	Nisse Engström	thegoldentheory\.com
 1754636681	Nisse Engström	girlyveda\.com
+1754636853	VLAZ	girlyveda(?!\.com)
