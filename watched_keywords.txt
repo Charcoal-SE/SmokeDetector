@@ -75863,3 +75863,4 @@
 1754669655	Dan Getz	officialvapecarts\.com
 1754671625	VLAZ	mysmartschool\.co\.in
 1754681735	VLAZ	rosidmalhdlive\.blogspot
+1754684653	VLAZ	globaldevsummit\.com
