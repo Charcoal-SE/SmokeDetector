@@ -75859,3 +75859,4 @@
 1754647936	VLAZ	(?-i:^Marxist revolution$)
 1754652071	VLAZ	beelenhandmade\.com
 1754652870	Nisse Engström	acreate\.in
+1754660638	Dan Getz	craftywoolshop\.com
