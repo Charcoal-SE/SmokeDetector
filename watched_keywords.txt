@@ -75865,3 +75865,4 @@
 1754681735	VLAZ	rosidmalhdlive\.blogspot
 1754684653	VLAZ	globaldevsummit\.com
 1754684729	VLAZ	global[\W_]*+dev[\W_]*+summit(?!\.com(<=globaldevsummit\.com))
+1754718535	Dan Getz	haramainfoods\.com
