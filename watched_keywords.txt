@@ -75867,3 +75867,4 @@
 1754684729	VLAZ	global[\W_]*+dev[\W_]*+summit(?!\.com(<=globaldevsummit\.com))
 1754718535	Dan Getz	haramainfoods\.com
 1754718997	Dan Getz	minecraftdownloadd\.com
+1754725106	Nisse Engström	ailinestudio\.com
