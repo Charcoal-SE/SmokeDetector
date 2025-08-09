@@ -75879,3 +75879,4 @@
 1754751376	VLAZ	contus[\W_]*+tech
 1754751418	VLAZ	apptha
 1754751426	VLAZ	apphitect
+1754754752	VLAZ	deuces\.com
