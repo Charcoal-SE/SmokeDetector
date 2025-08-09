@@ -75871,3 +75871,4 @@
 1754729388	VLAZ	vatcalc\.onl
 1754731045	VLAZ	themagistvgratis\.com
 1754733039	Glorfindel	islamic-dream\.com
+1754743922	Dan Getz	renewe\.fi
