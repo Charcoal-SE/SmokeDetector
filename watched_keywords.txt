@@ -75887,3 +75887,4 @@
 1754812274	VLAZ	cyberpentestx\.com
 1754812283	VLAZ	cyberpentestx(?!\.com)
 1754813504	VLAZ	trichy
+1754814090	VLAZ	universalmagzines\.com
