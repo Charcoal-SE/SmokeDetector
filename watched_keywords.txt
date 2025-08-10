@@ -75885,3 +75885,4 @@
 1754812191	VLAZ	partsquotehub\.org
 1754812264	VLAZ	kuromiwallpaper\.com
 1754812274	VLAZ	cyberpentestx\.com
+1754812283	VLAZ	cyberpentestx(?!\.com)
