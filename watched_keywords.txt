@@ -75912,3 +75912,4 @@
 1754907898	VLAZ	atomicnorth\.com
 1754907950	VLAZ	java[\W_]*+by[\W_]*+kiran
 1754907958	VLAZ	skills[\W_]*+it[\W_]*+academy
+1754908088	VLAZ	sunfireindia\.com
