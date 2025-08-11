@@ -75929,3 +75929,4 @@
 1754944252	VLAZ	deriv\.top
 1754953241	Dan Getz	tesgkm
 1754953249	Dan Getz	falschgeld
+1754953326	Dan Getz	gef[äa]lsch\w+
