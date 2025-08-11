@@ -75931,3 +75931,4 @@
 1754953249	Dan Getz	falschgeld
 1754953326	Dan Getz	gef[äa]lsch\w+
 1754953875	Dan Getz	ME[\W_]*+14[\W_]*+SOLUTIONS[\W_]*+LTD
+1754953970	Dan Getz	cryptogeneralfixes\.web\.app
