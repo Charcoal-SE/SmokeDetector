@@ -65679,7 +65679,6 @@
 1725441125	Cody Gray	coling[\W_]*+real[\W_]*+customers
 1725441330	Cody Gray	zyklon
 1725441360	Cody Gray	Use comments to ask for clarification, additional information, or improvements
-1725441550	Cody Gray	kuku[\W_]*+fm
 1725441751	tripleee	(?-i:3ARXgA4)(?# bit.ly)
 1725441841	Cody Gray	noemiglobal\.com
 1725441945	Cow	(?-i:qAx1muGCWJg)(?# youtu.be)
