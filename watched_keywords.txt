@@ -75910,3 +75910,4 @@
 1754907842	VLAZ	thecoinearn\.com
 1754907854	VLAZ	poojamoviecreations\.com
 1754907898	VLAZ	atomicnorth\.com
+1754907950	VLAZ	java[\W_]*+by[\W_]*+kiran
