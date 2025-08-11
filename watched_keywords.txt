@@ -75896,3 +75896,4 @@
 1754851189	Jeff Schaller	theparentingcipher\.com
 1754852804	Vickel	zeedoffer\.com
 1754877362	Jeff Schaller	ifanplus\.com
+1754879064	Dan Getz	loan[\W_]*+radar[\W_]*+limited
