@@ -75909,3 +75909,4 @@
 1754899643	VLAZ	mars66
 1754907842	VLAZ	thecoinearn\.com
 1754907854	VLAZ	poojamoviecreations\.com
+1754907898	VLAZ	atomicnorth\.com
