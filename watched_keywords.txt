@@ -75914,3 +75914,4 @@
 1754907958	VLAZ	skills[\W_]*+it[\W_]*+academy
 1754908088	VLAZ	sunfireindia\.com
 1754908099	VLAZ	sunfire[\W_]*+technologies
+1754908142	VLAZ	sunfire\.in
