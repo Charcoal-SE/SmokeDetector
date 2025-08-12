@@ -75934,3 +75934,4 @@
 1754953970	Dan Getz	cryptogeneralfixes\.web\.app
 1754971011	Dan Getz	cptzar
 1754974635	VLAZ	gtmail\.one
+1754974730	VLAZ	universityofalabama\.az1\.qualtrics\.com
