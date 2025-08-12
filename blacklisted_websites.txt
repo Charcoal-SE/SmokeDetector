@@ -6170,3 +6170,4 @@ fixerretrieval[\W_]*\.[\W_]*+com
 fixer[\W_]*\.[\W_]*+co[\W_]*\.[\W_]*+site
 bizbooksadvice\.com
 enstella\.com
+talkwithstranger\.com
