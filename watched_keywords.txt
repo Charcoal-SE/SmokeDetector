@@ -75960,3 +75960,4 @@
 1755012208	VLAZ	(?-i:^Mari Lance E$)
 1755013715	Spevacus	sks\.freemonye\.com
 1755017971	VLAZ	rechnario\.de
+1755019964	VLAZ	stumble-guyzapk\.com
