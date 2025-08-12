@@ -75957,3 +75957,4 @@
 1755007412	Jeff Schaller	countryrandomgenerator\.com
 1755008296	VLAZ	notex-web\.onrender\.com
 1755011445	VLAZ	pacific\.ai
+1755012208	VLAZ	(?-i:^Mari Lance E$)
