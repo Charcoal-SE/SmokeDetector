@@ -75958,3 +75958,4 @@
 1755008296	VLAZ	notex-web\.onrender\.com
 1755011445	VLAZ	pacific\.ai
 1755012208	VLAZ	(?-i:^Mari Lance E$)
+1755013715	Spevacus	sks\.freemonye\.com
