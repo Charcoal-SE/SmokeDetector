@@ -75933,3 +75933,4 @@
 1754953875	Dan Getz	ME[\W_]*+14[\W_]*+SOLUTIONS[\W_]*+LTD
 1754953970	Dan Getz	cryptogeneralfixes\.web\.app
 1754971011	Dan Getz	cptzar
+1754974635	VLAZ	gtmail\.one
