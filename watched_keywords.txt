@@ -75936,3 +75936,4 @@
 1754974635	VLAZ	gtmail\.one
 1754974730	VLAZ	universityofalabama\.az1\.qualtrics\.com
 1754975561	VLAZ	(?-i:cgqRGbXLQW6wCe858)(?#forms.gle)
+1754978702	CPlus	mywifiextlogsetup\.com
