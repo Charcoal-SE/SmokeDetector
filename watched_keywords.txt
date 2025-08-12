@@ -75941,3 +75941,4 @@
 1754981990	VLAZ	glp[\W_]*+lab[\W_]*+metabolic[\W_]*+balance(?:[\W_]*+be)?
 1754982053	Nisse Engström	505sanchez\.com
 1754983342	dbc	Cokonet
+1754987969	VLAZ	143\.248\.220\.50
