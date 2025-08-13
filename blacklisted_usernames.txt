@@ -1240,3 +1240,4 @@ carelab[sz]
 (?-i:^Room Room$)
 (?-i:^NutraX Shop$)
 ^(?-i:Dogherime Wall)$
+(?-i:^Pooja Rani$)
