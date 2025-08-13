@@ -75993,3 +75993,4 @@
 1755102889	VLAZ	clearhorizonlegalsolutions\.com
 1755103384	VLAZ	remitchoice\.com
 1755118119	VLAZ	heroqr
+1755119002	VLAZ	(?-i:^tmuaquestion$)
