@@ -75985,3 +75985,4 @@
 1755083343	VLAZ	atomic[\W_]*+north(?!\.com(?<=atomicnorth\.com))
 1755084114	VLAZ	emicalculator\.vip
 1755084615	Jeff Schaller	embeddable\.com
+1755086852	Jeff Schaller	ahinteriordecor\.com\.pk
