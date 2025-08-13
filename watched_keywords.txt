@@ -75990,3 +75990,4 @@
 1755091502	Jeff Schaller	kra36\.tel
 1755093112	VLAZ	(?-i:^Meon Technologies$)
 1755093156	Jeff Schaller	Meon[\W_]*+eSign[\W_]*+API
+1755100132	Dan Getz	centuryclubkochi\.com
