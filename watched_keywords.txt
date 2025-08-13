@@ -75972,3 +75972,4 @@
 1755066446	VLAZ	sagarsircoaching\.com
 1755066504	Dan Getz	osizlabs\.com
 1755066707	Dan Getz	netsoltech\.com
+1755067361	VLAZ	kakaotalk\.download\.beer
