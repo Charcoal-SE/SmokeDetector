@@ -75982,3 +75982,4 @@
 1755077820	VLAZ	racksinlahore\.com
 1755080149	VLAZ	medicineparkvacation\.com
 1755080169	VLAZ	gemstonesforsale\.com
+1755080245	VLAZ	rudram[\W_]*+soft
