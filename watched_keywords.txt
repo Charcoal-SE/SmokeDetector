@@ -75975,3 +75975,4 @@
 1755067361	VLAZ	kakaotalk\.download\.beer
 1755069789	VLAZ	tashanwinapp\.net
 1755070139	VLAZ	dr[\W_]*+pk[\W_]*+gupta(?:[\W_]*+s)?
+1755070147	VLAZ	drpkguptaclinic\.com
