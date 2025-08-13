@@ -75983,3 +75983,4 @@
 1755080169	VLAZ	gemstonesforsale\.com
 1755080245	VLAZ	rudram[\W_]*+soft
 1755083343	VLAZ	atomic[\W_]*+north(?!\.com(?<=atomicnorth\.com))
+1755084114	VLAZ	emicalculator\.vip
