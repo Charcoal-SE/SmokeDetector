@@ -76009,3 +76009,4 @@
 1755166116	VLAZ	primetechnologiesglobal\.com
 1755167071	Glorfindel	gbase\.cn
 1755170342	Jeff Schaller	automax4x4\.com
+1755171228	VLAZ	penny[\W_]*+appeal[\W_]*+usa
