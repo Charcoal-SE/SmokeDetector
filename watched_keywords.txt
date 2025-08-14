@@ -76008,3 +76008,4 @@
 1755166108	VLAZ	prime[\W_]*+technologies[\W_]*+global(?!\.com(?<=primetechnologiesglobal\.com))
 1755166116	VLAZ	primetechnologiesglobal\.com
 1755167071	Glorfindel	gbase\.cn
+1755170342	Jeff Schaller	automax4x4\.com
