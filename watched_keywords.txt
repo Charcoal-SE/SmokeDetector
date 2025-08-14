@@ -76011,3 +76011,4 @@
 1755170342	Jeff Schaller	automax4x4\.com
 1755171228	VLAZ	penny[\W_]*+appeal[\W_]*+usa
 1755171356	VLAZ	abundance[\W_]*+financial[\W_]*+brokers(?:[\W_]*+llc)?
+1755176814	Dan Getz	volkanarayici\.com
