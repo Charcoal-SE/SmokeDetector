@@ -76006,3 +76006,4 @@
 1755158305	VLAZ	baribaba
 1755165981	VLAZ	austinalloycast\.com
 1755166108	VLAZ	prime[\W_]*+technologies[\W_]*+global(?!\.com(?<=primetechnologiesglobal\.com))
+1755166116	VLAZ	primetechnologiesglobal\.com
