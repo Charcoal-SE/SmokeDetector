@@ -76019,3 +76019,4 @@
 1755234641	VLAZ	108-woods\.com
 1755236019	VLAZ	hashlock\.com
 1755236052	VLAZ	vampirekingdome666
+1755240303	Nisse Engström	ua\.chipsofttech\.com
