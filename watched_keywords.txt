@@ -71604,7 +71604,6 @@
 1741270769	VLAZ	ikn99
 1741271269	VLAZ	SK[\W_]*+Insurance
 1741275866	ipodtouch0218	saarrthiskybizzstudios\.com
-1741276477	ipodtouch0218	maharerait\.maharashtra\.gov\.in
 1741277523	ipodtouch0218	course-linkfreeus\.com
 1741281887	Cow	picsartmodeapk\.com
 1741282014	Cow	bitfunded\.com
