@@ -76022,3 +76022,4 @@
 1755240303	Nisse Engström	ua\.chipsofttech\.com
 1755241192	Glorfindel	tirafficridergame\.com
 1755243993	VLAZ	hashlock(?!\.com)
+1755248385	VLAZ	bravocalc\.com
