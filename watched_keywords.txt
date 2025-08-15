@@ -76024,3 +76024,4 @@
 1755243993	VLAZ	hashlock(?!\.com)
 1755248385	VLAZ	bravocalc\.com
 1755254143	Jeff Schaller	kra44\.xyz
+1755254153	Jeff Schaller	kra45\.xyz
