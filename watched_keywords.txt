@@ -76031,3 +76031,4 @@
 1755268693	VLAZ	abdimstore\.com
 1755270718	VLAZ	telepackages\.pk
 1755273765	Jeff Schaller	liv3ly\.com
+1755280815	Jeff Schaller	beautifiedyou\.com
