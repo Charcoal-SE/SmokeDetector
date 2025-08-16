@@ -76033,3 +76033,4 @@
 1755273765	Jeff Schaller	liv3ly\.com
 1755280815	Jeff Schaller	beautifiedyou\.com
 1755294113	Makyen	hackbridge(?:[\W_]*+cybersecurity)?
+1755304325	lyxal	jerry[\W_]*+li[mn]k[\W_]*+credit[\W_]*+group
