@@ -76043,3 +76043,4 @@
 1755348046	VLAZ	snapesim\.com
 1755348933	VLAZ	khangirestaurants\.com
 1755349948	VLAZ	persianroid\.com
+1755349957	VLAZ	kra37\.tel
