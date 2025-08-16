@@ -76034,3 +76034,4 @@
 1755294113	Makyen	hackbridge(?:[\W_]*+cybersecurity)?
 1755316869	Makyen	errorcodeqb\.com
 1755321493	Nisse Engström	countryblinds\.com\.au
+1755330336	VLAZ	capcuttemplate\.io
