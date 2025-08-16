@@ -5766,7 +5766,9 @@ items:
 - ns: 101domain.com.
 - ns: pscdc.in.
 - ns: sabaprofile.com.
-- ns: msofficedeals.com.
+- comment: NXDOMAIN 2025-08-16
+  disable: true
+  ns: msofficedeals.com.
 - ns: minaretsolutions.co.in.
 - ns: prosoccerstore.co.
 - ns: symbolhost.com.
