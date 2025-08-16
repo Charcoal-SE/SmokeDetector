@@ -3893,3 +3893,4 @@ fixer[\W_]*+wallet[\W_]*+retrieval
 kuku[\W_]*+fm
 reach[\W_]*+a[\W_]*+live[\W_]*+(?:(?:customer[\W_]*+)?+(?:service|support)[\W_]*+)?+(?:agent|representative|person)
 jerry[\W_]*+li[mn]k[\W_]*+credit[\W_]*+group
+credi[\W_]*+hisab
