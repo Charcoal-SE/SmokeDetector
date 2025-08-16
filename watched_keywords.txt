@@ -76041,3 +76041,4 @@
 1755343914	Jeff Schaller	keplertechllc\.com
 1755347927	Vickel	dumps[\W_]*+for[\W_]*+sure
 1755348046	VLAZ	snapesim\.com
+1755348933	VLAZ	khangirestaurants\.com
