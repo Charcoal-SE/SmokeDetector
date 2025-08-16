@@ -76047,3 +76047,4 @@
 1755352920	VLAZ	anikonlineshop\.com
 1755357129	VLAZ	dp[\W_]*+900
 1755361786	VLAZ	top5starshop99
+1755361793	VLAZ	rashistonesindia\.com
