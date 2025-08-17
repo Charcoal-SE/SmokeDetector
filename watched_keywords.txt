@@ -76058,3 +76058,4 @@
 1755426269	VLAZ	alquranstudy\.com
 1755429326	micsthepick	Fm[\W_]*टोल[\W_]*फ्री[\W_]*नंबर
 1755438354	Dan Getz	kinemasterzone\.com
+1755441346	Jeff Schaller	akonmobile\.com
