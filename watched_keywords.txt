@@ -76053,3 +76053,4 @@
 1755405706	lyxal	lacycles\.com
 1755405713	lyxal	12bet
 1755422401	Nisse Engström	codeitbro\.com
+1755425968	VLAZ	sharma[\W_]*+pharmacy(?!\.in(?<=sharmapharmacy\.in))(?!\.com(?<=sharmapharmacy\.com))
