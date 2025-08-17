@@ -76056,3 +76056,4 @@
 1755425968	VLAZ	sharma[\W_]*+pharmacy(?!\.in(?<=sharmapharmacy\.in))(?!\.com(?<=sharmapharmacy\.com))
 1755425974	VLAZ	sharmapharmacy\.com
 1755426269	VLAZ	alquranstudy\.com
+1755429326	micsthepick	Fm[\W_]*टोल[\W_]*फ्री[\W_]*नंबर
