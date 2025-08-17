@@ -76060,3 +76060,4 @@
 1755438354	Dan Getz	kinemasterzone\.com
 1755441346	Jeff Schaller	akonmobile\.com
 1755466842	Dan Getz	freelancingsite24\.blogspot
+1755470639	micsthepick	(?!freelancingsite(24\.blogspot|2022))freelancingsite(?:\d{2}[a-z\d%.-]{0,30}|[a-z\d%.-]{4,32})(?=[^a-z\d%.-]|$)
