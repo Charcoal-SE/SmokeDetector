@@ -76055,3 +76055,4 @@
 1755422401	Nisse Engström	codeitbro\.com
 1755425968	VLAZ	sharma[\W_]*+pharmacy(?!\.in(?<=sharmapharmacy\.in))(?!\.com(?<=sharmapharmacy\.com))
 1755425974	VLAZ	sharmapharmacy\.com
+1755426269	VLAZ	alquranstudy\.com
