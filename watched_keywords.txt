@@ -75832,7 +75832,6 @@
 1754623237	Machavity	howardinjurylaw\.com
 1754623585	Dan Getz	p999game\.com
 1754626725	Dan Getz	sharmapharmacy\.in
-1754626762	Dan Getz	sharma[\W_]*+pharmacy(?!\.in(?<=sharmapharmacy\.in))
 1754630323	VLAZ	cafeamoraa
 1754630377	VLAZ	(?-i:Keq86PY)(?# fiverr)
 1754631198	VLAZ	brandsexclusive\.com\.pk
