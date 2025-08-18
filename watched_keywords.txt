@@ -76068,3 +76068,4 @@
 1755494499	VLAZ	get[\W_]*+me[\W_]*+up[\W_]*+ads(?!\.in(?<=getmeupads\.in))
 1755494507	VLAZ	getmeupads\.in
 1755498086	VLAZ	mirayogashala\.com
+1755500270	Cow	promarketer\.it
