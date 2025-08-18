@@ -76087,3 +76087,4 @@
 1755518598	VLAZ	codeadroit(?!\.com)
 1755518702	VLAZ	airbow\.io
 1755520284	VLAZ	code[\W_]*+aroma(?!\.com(?<=codearoma\.com))
+1755523821	Jeff Schaller	Hiring[\W_-]*+Jet
