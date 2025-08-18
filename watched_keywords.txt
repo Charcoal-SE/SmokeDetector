@@ -76086,3 +76086,4 @@
 1755518590	VLAZ	codeadroit\.com
 1755518598	VLAZ	codeadroit(?!\.com)
 1755518702	VLAZ	airbow\.io
+1755520284	VLAZ	code[\W_]*+aroma(?!\.com(?<=codearoma\.com))
