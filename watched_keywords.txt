@@ -76065,3 +76065,4 @@
 1755480605	lyxal	bruce_55shop3(?# telegram)
 1755493451	VLAZ	brightlearners\.ae
 1755493538	lyxal	zuobisi[\W_]*+jewelry
+1755494499	VLAZ	get[\W_]*+me[\W_]*+up[\W_]*+ads(?!\.in(?<=getmeupads\.in))
