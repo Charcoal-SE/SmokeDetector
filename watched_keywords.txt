@@ -76084,3 +76084,4 @@
 1755515028	VLAZ	africala\.net
 1755516079	Jeff Schaller	powersmilesdental\.com
 1755518590	VLAZ	codeadroit\.com
+1755518598	VLAZ	codeadroit(?!\.com)
