@@ -76074,3 +76074,4 @@
 1755506044	VLAZ	starstormbizsetup\.com
 1755504791	DavidW	usingaspdotnet\.blogspot
 1755508864	VLAZ	codezion\.com
+1755513055	VLAZ	spotify[\W_]*+premium[\W_]*+apk
