@@ -76064,3 +76064,4 @@
 1755480378	Dan Getz	Tradecrypts
 1755480605	lyxal	bruce_55shop3(?# telegram)
 1755493451	VLAZ	brightlearners\.ae
+1755493538	lyxal	zuobisi[\W_]*+jewelry
