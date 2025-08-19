@@ -76101,3 +76101,4 @@
 1755581643	VLAZ	skribbliogame\.io
 1755583750	micsthepick	instan[\W_]*+money
 1755586710	VLAZ	bharatminers\.com
+1755586729	VLAZ	bharat[\W_]*+miners(?!\.com(?<=bharatminers\.com))
