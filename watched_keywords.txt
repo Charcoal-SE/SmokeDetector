@@ -76099,3 +76099,4 @@
 1755580469	VLAZ	aspenco\.in
 1755581611	Glorfindel	atishayjain\.vercel\.app
 1755581643	VLAZ	skribbliogame\.io
+1755583750	micsthepick	instan[\W_]*+money
