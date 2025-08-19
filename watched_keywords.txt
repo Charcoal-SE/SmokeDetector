@@ -76122,3 +76122,4 @@
 1755603385	Jeff Schaller	prabhatmaccare\.com
 1755604389	VLAZ	(?-i:^Lovely Baghel$)(?# ex-Olivia Reed, promotes the tool Workstatus)
 1755604409	Jeff Schaller	myonlinecoder\.com
+1755604541	VLAZ	mightyhackarrecovery\.com
