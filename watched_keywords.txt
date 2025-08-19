@@ -76104,3 +76104,4 @@
 1755586729	VLAZ	bharat[\W_]*+miners(?!\.com(?<=bharatminers\.com))
 1755588397	VLAZ	asicminingcentral\.com
 1755588946	VLAZ	processon\.io
+1755589815	VLAZ	mint[\W_]*+news(?!\.com(?<=mintnews\.com))
