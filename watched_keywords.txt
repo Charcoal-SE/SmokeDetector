@@ -76110,3 +76110,4 @@
 1755590307	VLAZ	longhornsurveycom(?!\.click)
 1755590720	VLAZ	rtist\.studio
 1755590779	VLAZ	rtist(?!\.studio)
+1755591235	VLAZ	inforiver\.com
