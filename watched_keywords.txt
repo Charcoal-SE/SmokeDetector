@@ -76136,3 +76136,4 @@
 1755613158	lyxal	fresh\.com
 1755613769	lyxal	connorhunter\.com
 1755613927	lyxal	connor[\W_]*+hunter[\W_]*+law[\W_]*+firm
+1755614227	micsthepick	thewidlarzgroup\.com
