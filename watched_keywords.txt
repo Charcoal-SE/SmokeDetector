@@ -76138,3 +76138,4 @@
 1755613927	lyxal	connor[\W_]*+hunter[\W_]*+law[\W_]*+firm
 1755614227	micsthepick	thewidlarzgroup\.com
 1755616569	Glorfindel	kingiptv\.nl
+1755619288	Dan Getz	plashy\.in
