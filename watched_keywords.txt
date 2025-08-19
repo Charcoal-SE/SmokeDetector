@@ -76111,3 +76111,4 @@
 1755590779	VLAZ	rtist(?!\.studio)
 1755591235	VLAZ	inforiver\.com
 1755593638	VLAZ	plumbersindubai\.com
+1755594332	VLAZ	octoparse\.com
