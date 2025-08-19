@@ -76107,3 +76107,4 @@
 1755589815	VLAZ	mint[\W_]*+news(?!\.com(?<=mintnews\.com))
 1755590004	VLAZ	realestatewithrajesh\.com
 1755590292	VLAZ	longhornsurveycom\.click
+1755590307	VLAZ	longhornsurveycom(?!\.click)
