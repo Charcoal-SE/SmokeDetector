@@ -76156,3 +76156,4 @@
 1755671389	micsthepick	ticker[\W_]*+play[\W_]*+systems
 1755671427	VLAZ	blogz\.life
 1755671513	VLAZ	saygionvi\.com
+1755671521	VLAZ	texcómaygionvi\.com
