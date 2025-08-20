@@ -76155,3 +76155,4 @@
 1755667140	VLAZ	mercatus\.com
 1755671389	micsthepick	ticker[\W_]*+play[\W_]*+systems
 1755671427	VLAZ	blogz\.life
+1755671513	VLAZ	saygionvi\.com
