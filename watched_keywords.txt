@@ -76154,3 +76154,4 @@
 1755665003	lyxal	black[\W_]*+opium
 1755667140	VLAZ	mercatus\.com
 1755671389	micsthepick	ticker[\W_]*+play[\W_]*+systems
+1755671427	VLAZ	blogz\.life
