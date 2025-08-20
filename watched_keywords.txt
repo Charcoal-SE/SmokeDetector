@@ -76169,3 +76169,4 @@
 1755686468	VLAZ	hvacshopdrawings\.net
 1755688324	VLAZ	softzen\.info
 1755691336	VLAZ	227enterprise\.com
+1755691992	Jeff Schaller	emailpoweruser\.com
