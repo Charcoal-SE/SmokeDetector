@@ -4262,7 +4262,7 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
-- comment: no longer responding 2021-07-27; enabled again 2024-10-18; no longer responding, causing build failures 2025-08-20
+- comment: no longer responding 2021-07-27; enabled again 2024-10-18; no longer responding, causing CI failures 2025-08-20
   disable: true
   ns: jawatankosong.biz.
 - comment: NXDOMAIN 2023-12-23 on GitHub Actions, but passing on CircleCI
