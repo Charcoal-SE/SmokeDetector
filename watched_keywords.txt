@@ -75597,7 +75597,6 @@
 1753864292	VLAZ	starapotheke\.com
 1753869606	VLAZ	mykfcexperiencee\.click
 1753869627	VLAZ	tickerplay\.com
-1753869639	VLAZ	tickerplay(?!\.com)
 1753870457	VLAZ	2020icareiweartx\.com
 1753870465	VLAZ	2020icareiweartx(?!\.com)
 1753870501	VLAZ	osttopstapp(?!\.com)
