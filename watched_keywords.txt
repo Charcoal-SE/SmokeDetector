@@ -66325,7 +66325,6 @@
 1726686602	Cow	mitfozzek\.net
 1726627866	Anerdw	bumbokart\.com
 1726687608	VLAZ	vizhil(?!\.com)
-1726660785	Cow	recoveryhacker101(?:@gmail\.com)?
 1726671161	General Grievance	mkbbespokeaudio\.com
 1726697442	Vickel	ufabetdirects\.com
 1726725165	VLAZ	Lots[\W_]*+of[\W_]*+Love[\W_]*+Pet[\W_]*+Products(?!\.com(?<=lotsoflovepetproducts\.com))
