@@ -76153,3 +76153,4 @@
 1755663834	VLAZ	seattlesmortgagebroker\.com
 1755665003	lyxal	black[\W_]*+opium
 1755667140	VLAZ	mercatus\.com
+1755671389	micsthepick	ticker[\W_]*+play[\W_]*+systems
