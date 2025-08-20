@@ -76159,5 +76159,4 @@
 1755671521	VLAZ	texcómaygionvi\.com
 1755671889	VLAZ	bukitbintang88a\.com
 1755671912	VLAZ	bukitbintang88
-1755672108	micsthepick	ticker[\W_]*+play(?![\W_]*+systems)
 1755672977	micsthepick	ticker[\W_]*+play(?!\.com(?<=tickerplay\.com))(?:[\W_]*+systems)?
