@@ -76180,3 +76180,4 @@
 1755714842	Vickel	shadowapk\.com
 1755717363	Vickel	downloderslides\.com
 1755717432	Jeff Schaller	stolen[\W_]*+from[\W_]*+my[\W_]*+wallet
+1755725318	Dan Getz	KrakenShopLinks(?# t.me)
