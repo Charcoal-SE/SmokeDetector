@@ -76168,3 +76168,4 @@
 1755686391	VLAZ	databridgemarketresearch\.com
 1755686468	VLAZ	hvacshopdrawings\.net
 1755688324	VLAZ	softzen\.info
+1755691336	VLAZ	227enterprise\.com
