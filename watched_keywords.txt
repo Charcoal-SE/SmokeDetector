@@ -76159,3 +76159,4 @@
 1755671912	VLAZ	bukitbintang88
 1755672977	micsthepick	ticker[\W_]*+play(?!\.com(?<=tickerplay\.com))(?:[\W_]*+systems)?
 1755674316	VLAZ	leylines\.com
+1755674840	VLAZ	devsense\.com
