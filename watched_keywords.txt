@@ -76213,3 +76213,4 @@
 1755789792	VLAZ	jjwin(?!\.com\.pk)
 1755790947	Nisse Engström	vapeuniverse\.co
 1755791219	Nisse Engström	jacoman\.com
+1755793653	VLAZ	apk-bitslife\.com
