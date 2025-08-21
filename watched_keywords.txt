@@ -76198,3 +76198,4 @@
 1755762163	VLAZ	chamundihillpalace\.org
 1755767673	VLAZ	lawsonfuses\.com
 1755768658	VLAZ	7[\W_]*+sky[\W_]*+consultant
+1755769824	VLAZ	greews\.com
