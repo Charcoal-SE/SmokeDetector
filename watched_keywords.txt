@@ -76200,3 +76200,4 @@
 1755768658	VLAZ	7[\W_]*+sky[\W_]*+consultant
 1755769824	VLAZ	greews\.com
 1755771882	Jeff Schaller	ocmod\.net
+1755773790	Jeff Schaller	whitecastlesurvey\.click
