@@ -76210,3 +76210,4 @@
 1755788834	VLAZ	BN55[\W_]*+Game
 1755788910	Dan Getz	manrajsinghglobal(?#medium)
 1755789781	VLAZ	jjwin\.com\.pk
+1755789792	VLAZ	jjwin(?!\.com\.pk)
