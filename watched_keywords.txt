@@ -76231,3 +76231,4 @@
 1755858759	VLAZ	gohighlevelexpert\.net
 1755858773	VLAZ	gohighlevel
 1755858896	Dan Getz	(?-i:^Carter Ruff$)
+1755858997	Dan Getz	(?-i:^Asna Shehr$)
