@@ -76248,3 +76248,4 @@
 1755863862	Jeff Schaller	thereformedgamers\.com
 1755865703	VLAZ	getfreed\.ai
 1755867629	VLAZ	truecalrmodapk\.com
+1755867736	VLAZ	(?-i:Python_1st)(?#t.me)
