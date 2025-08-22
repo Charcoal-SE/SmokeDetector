@@ -76244,3 +76244,4 @@
 1755861700	VLAZ	(?-i:YJ85)(?# shre.su)
 1755862164	VLAZ	shre\.su
 1755863566	VLAZ	codemechsolutions\.com
+1755863574	VLAZ	codemech[\W_]*+solutions(?!\.com(?<=codemechsolutions\.com))
