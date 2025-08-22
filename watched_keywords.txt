@@ -76250,3 +76250,4 @@
 1755867736	VLAZ	(?-i:Python_1st)(?#t.me)
 1755882815	Glorfindel	eerone\.com
 1755887720	Dan Getz	thehypicapk\.com
+1755890676	Glorfindel	maplity
