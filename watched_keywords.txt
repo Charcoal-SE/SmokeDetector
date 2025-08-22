@@ -76235,3 +76235,4 @@
 1755859007	VLAZ	churchschickenfeedbacks\.autos
 1755859106	VLAZ	airbridge\.io
 1755859668	VLAZ	bilibiliapk\.pro
+1755860013	Dan Getz	rivaya\.in
