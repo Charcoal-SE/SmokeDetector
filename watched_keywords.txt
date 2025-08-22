@@ -76229,3 +76229,4 @@
 1755855063	VLAZ	chandandiagnostic\.com
 1755858329	VLAZ	kediisimlerimerkezi\.tr
 1755858759	VLAZ	gohighlevelexpert\.net
+1755858773	VLAZ	gohighlevel
