@@ -76224,3 +76224,4 @@
 1755837518	VLAZ	khalsa-website-designers\.net
 1755837631	VLAZ	khalsa[\W_]*+website[\W_]*+designers(?!\.net(?<=khalsa-website-designers\.net))
 1755850905	VLAZ	stier-umzug\.de
+1755850991	VLAZ	stier[\W_]*+umzug(?!\.de(?<=stier-umzug\.de))
