@@ -76247,3 +76247,4 @@
 1755863574	VLAZ	codemech[\W_]*+solutions(?!\.com(?<=codemechsolutions\.com))
 1755863862	Jeff Schaller	thereformedgamers\.com
 1755865703	VLAZ	getfreed\.ai
+1755867629	VLAZ	truecalrmodapk\.com
