@@ -76227,3 +76227,4 @@
 1755850991	VLAZ	stier[\W_]*+umzug(?!\.de(?<=stier-umzug\.de))
 1755853046	VLAZ	quantumsofttechnologies\.com
 1755855063	VLAZ	chandandiagnostic\.com
+1755858329	VLAZ	kediisimlerimerkezi\.tr
