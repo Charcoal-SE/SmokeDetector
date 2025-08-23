@@ -76265,3 +76265,4 @@
 1755937914	VLAZ	hearing[\W_]*+specialist[\W_]*+near[\W_]*+me
 1755937937	VLAZ	garagedoorrepaircoralsprings-fl\.com
 1755940566	VLAZ	(?-i:1KNWWe2Q2WFgp92CN2iEYySZaDY4d87GTnBitcoin)
+1755944757	VLAZ	ddtarget\.com
