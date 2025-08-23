@@ -76252,3 +76252,4 @@
 1755887720	Dan Getz	thehypicapk\.com
 1755890676	Glorfindel	maplity
 1755901530	Dan Getz	fixerrec[\W_]++c[\W_]*+o[\W_]*+m
+1755909163	Dan Getz	dj[\W_]*+mix[\W_]*+veg
