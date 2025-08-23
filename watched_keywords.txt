@@ -76262,3 +76262,4 @@
 1755936175	VLAZ	paramounteservices\.com
 1755937211	VLAZ	aaispeechhearing\.com
 1755937270	VLAZ	vkgroupindia\.in
+1755937914	VLAZ	hearing[\W_]*+specialist[\W_]*+near[\W_]*+me
