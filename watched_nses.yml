@@ -5388,7 +5388,9 @@ items:
 - ns: hostlab.net.tr.
 - ns: ehosts.com.
 - ns: restoregreenlife.com.
-- ns: studentdatabase.co.in.
+- comment: caused CI errors on 2025-08-23
+  disable: true
+  ns: studentdatabase.co.in.
 - comment: disabled 2022-09-07, 10/162
   disable: true
   ns: vercel-dns.com.
