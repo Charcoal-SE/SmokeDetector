@@ -76293,3 +76293,4 @@
 1756046446	Jeff Schaller	smarttrand\.com
 1756048117	Jeff Schaller	320hd\.net
 1756048688	Jeff Schaller	dev-bloomway\.pantheonsite\.io
+1756052715	Jeff Schaller	(?-i:^Imran Faruq$)
