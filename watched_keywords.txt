@@ -76289,3 +76289,4 @@
 1756033641	VLAZ	amarkly\.com
 1756034098	VLAZ	(?-i:17Agm)(?# short-link.me)
 1756040219	Jeff Schaller	swastikbooks\.store
+1756041056	VLAZ	pax_pod(?# telegram)
