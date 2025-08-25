@@ -76320,3 +76320,4 @@
 1756126861	VLAZ	uridiumoutsourcing\.com
 1756127441	lyxal	rbtscarrentals\.com
 1756133766	VLAZ	coulon[\W_]*+stone
+1756134293	Jeff Schaller	vongtaytaru\.com
