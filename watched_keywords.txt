@@ -76313,3 +76313,4 @@
 1756120496	Jeff Schaller	11-x-play\.blogspot
 1756121365	VLAZ	webotix\.ae
 1756121389	VLAZ	apkjaka\.com
+1756121920	VLAZ	(?-i:^mama anika$)
