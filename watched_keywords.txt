@@ -76319,3 +76319,4 @@
 1756123933	VLAZ	(?-i:3XDvBLR)(?#bit.ly)
 1756126861	VLAZ	uridiumoutsourcing\.com
 1756127441	lyxal	rbtscarrentals\.com
+1756133766	VLAZ	coulon[\W_]*+stone
