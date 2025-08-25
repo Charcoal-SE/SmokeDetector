@@ -348,7 +348,14 @@ def on_msg(msg, client):
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
-    if message.parent:
+    if (msg.data.get('parent_id') and msg.data.get('show_parent')
+            and message.content.startswith('@{} '.format(client._br.user_name.replace(' ', '')))):
+        # show_parent indicates it's a direct reply, not an @mention assumed reply.
+        # For direct replies, the entire username is at the start of the reply, stripped of spaces.
+        # We test for the reply @mention matching our current user_name, because we want to avoid fetching the
+        # parent message from SE chat when we don't already have it and aren't actually interested in it.
+        # The parent message is fetched lazily, so not until we actually try to get data from it.
+        # ChatExchange currently fetches the transcript HTML page for the message, not the JSON events format.
         try:
             if message.parent.owner.id == client._br.user_id:
                 strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
@@ -358,6 +365,8 @@ def on_msg(msg, client):
                 send_reply_if_not_blank(room_ident, message.id, result)
         except requests.HTTPError:
             log_current_exception(log_level='debug')
+            send_reply_if_not_blank(room_ident, message.id, 'Processing of this message failed due to an HTTP error.'
+                                    ' See error logs for more details.')
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
