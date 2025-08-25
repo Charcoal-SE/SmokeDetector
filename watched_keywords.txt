@@ -76310,3 +76310,4 @@
 1756113468	VLAZ	oharapestcontrol\.com
 1756120095	Jeff Schaller	vedaacademy\.in
 1756120453	Jeff Schaller	pcpndtbangalore\.in
+1756120473	Jeff Schaller	pcpndtnews\.blogspot
