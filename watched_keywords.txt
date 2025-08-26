@@ -76333,3 +76333,4 @@
 1756190414	VLAZ	gitsniffer\.web\.app
 1756190421	VLAZ	gitsniffer
 1756190430	VLAZ	karunasri\.com
+1756193388	VLAZ	safewrite\.ai
