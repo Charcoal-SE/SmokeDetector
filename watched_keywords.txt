@@ -76345,3 +76345,4 @@
 1756210080	Jeff Schaller	neo108\.it\.com
 1756210104	Jeff Schaller	qualityconcept\.in
 1756219223	VLAZ	owizardtech
+1756219330	VLAZ	(?-i:owizardtechocto)(?#t.me)
