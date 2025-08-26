@@ -76347,3 +76347,4 @@
 1756219223	VLAZ	owizardtech
 1756219330	VLAZ	(?-i:owizardtechocto)(?#t.me)
 1756219337	VLAZ	wizard-octopus-recovery-portal\.lovable\.app
+1756219464	VLAZ	o?wizard[\W_]*+tech[\W_]*+octopus[\W_]*+recovery
