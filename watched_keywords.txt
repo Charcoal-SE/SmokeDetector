@@ -76335,3 +76335,4 @@
 1756193388	VLAZ	safewrite\.ai
 1756193396	VLAZ	resea\.ai
 1756196636	VLAZ	raising[\W_]*+cane[\W_]*+s[\W_]*+chicken[\W_]*+fingers
+1756198672	VLAZ	mytablon\.com
