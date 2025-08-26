@@ -76354,3 +76354,4 @@
 1756222621	Nisse Engström	bestgigjobs\.com
 1756223137	Dan Getz	learnspire\.tech
 1756231186	VLAZ	32dentalcare\.org
+1756234406	Glorfindel	^Luise$
