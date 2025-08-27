@@ -76379,3 +76379,4 @@
 1756296166	VLAZ	rapidecoenergy\.co\.uk
 1756296912	Jeff Schaller	knote\.com\.au
 1756300264	Dan Getz	minecraftcirclegenerators\.com
+1756303911	Dan Getz	drituasteven(?:\s*+@\s*+gmail\s*+\.\s*+com)?
