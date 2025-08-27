@@ -76381,3 +76381,4 @@
 1756300264	Dan Getz	minecraftcirclegenerators\.com
 1756303911	Dan Getz	drituasteven(?:\s*+@\s*+gmail\s*+\.\s*+com)?
 1756311214	Dan Getz	omniadigital\.in
+1756311429	Dan Getz	(?-i:XKzLu)(?# t.zsxq.com)
