@@ -76382,3 +76382,4 @@
 1756303911	Dan Getz	drituasteven(?:\s*+@\s*+gmail\s*+\.\s*+com)?
 1756311214	Dan Getz	omniadigital\.in
 1756311429	Dan Getz	(?-i:XKzLu)(?# t.zsxq.com)
+1756311831	Dan Getz	maaz12maaz\.myshopify\.com
