@@ -76017,7 +76017,6 @@
 1755270718	VLAZ	telepackages\.pk
 1755273765	Jeff Schaller	liv3ly\.com
 1755280815	Jeff Schaller	beautifiedyou\.com
-1755294113	Makyen	hackbridge(?:[\W_]*+cybersecurity)?
 1755316869	Makyen	errorcodeqb\.com
 1755321493	Nisse Engström	countryblinds\.com\.au
 1755330336	VLAZ	capcuttemplate\.io
