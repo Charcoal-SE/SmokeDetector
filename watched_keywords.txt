@@ -76419,3 +76419,4 @@
 1756394588	VLAZ	moss-tech\.com
 1756399108	Dan Getz	drituasteven(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1756403444	Dan Getz	(?-i:^GenesisKey$)
+1756405044	Dan Getz	rubi\.social
