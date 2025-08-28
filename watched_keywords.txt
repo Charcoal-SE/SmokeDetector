@@ -76407,3 +76407,4 @@
 1756376983	VLAZ	abeer[\W_]*+medicals
 1756380771	VLAZ	softtrix\.com
 1756382144	Jeff Schaller	marioind\.com
+1756385071	lyxal	ensignagency\.com
