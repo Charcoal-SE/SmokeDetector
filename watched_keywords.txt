@@ -76404,3 +76404,4 @@
 1756374457	VLAZ	embeddedsystems\.evontech\.com
 1756375348	VLAZ	skillcertexams
 1756376976	VLAZ	eyevog
+1756376983	VLAZ	abeer[\W_]*+medicals
