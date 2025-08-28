@@ -76415,3 +76415,4 @@
 1756388712	VLAZ	fescobill-pk\.com
 1756388734	VLAZ	utm_source=chatgpt\.com
 1756393301	Jeff Schaller	forsightvisioncare\.com
+1756393314	Spevacus	pikashowsapps\.org
