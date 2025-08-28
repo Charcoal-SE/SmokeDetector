@@ -76423,3 +76423,4 @@
 1756405064	Dan Getz	game-hub\.pro
 1756406879	Dan Getz	hackdigitalspy(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1756408300	Fastnlight	longhornsmenus\.com
+1756408405	Fastnlight	reviewnav\.com
