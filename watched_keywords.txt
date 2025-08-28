@@ -76414,3 +76414,4 @@
 1756387973	VLAZ	linkedhelper\.com
 1756388712	VLAZ	fescobill-pk\.com
 1756388734	VLAZ	utm_source=chatgpt\.com
+1756393301	Jeff Schaller	forsightvisioncare\.com
