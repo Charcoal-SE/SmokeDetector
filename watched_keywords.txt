@@ -76434,3 +76434,4 @@
 1756459669	VLAZ	ecoholidaysnepal\.com
 1756459696	VLAZ	unlock-urban\.org\.uk
 1756462629	VLAZ	truongdaotaolaixehcm\.com
+1756462660	VLAZ	hoclaixethanhcong[\W_]*+vn
