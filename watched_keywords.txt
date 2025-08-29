@@ -76437,3 +76437,4 @@
 1756462660	VLAZ	hoclaixethanhcong[\W_]*+vn
 1756462713	VLAZ	kimvi[\W_]*+daotaolaixehcm
 1756469249	VLAZ	thereviewsit\.com
+1756469319	VLAZ	myindifuels\.com
