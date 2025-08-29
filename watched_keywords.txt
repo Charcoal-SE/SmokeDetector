@@ -76438,3 +76438,4 @@
 1756462713	VLAZ	kimvi[\W_]*+daotaolaixehcm
 1756469249	VLAZ	thereviewsit\.com
 1756469319	VLAZ	myindifuels\.com
+1756469337	VLAZ	flyxcoin\.org
