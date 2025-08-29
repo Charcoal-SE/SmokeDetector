@@ -76436,3 +76436,4 @@
 1756462629	VLAZ	truongdaotaolaixehcm\.com
 1756462660	VLAZ	hoclaixethanhcong[\W_]*+vn
 1756462713	VLAZ	kimvi[\W_]*+daotaolaixehcm
+1756469249	VLAZ	thereviewsit\.com
