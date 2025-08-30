@@ -76457,3 +76457,4 @@
 1756542770	VLAZ	admissify\.com
 1756542879	VLAZ	dunkin-donutmenu\.com
 1756550772	Dan Getz	liftoffplatform\.com
+1756552769	VLAZ	propertyhandling\.com
