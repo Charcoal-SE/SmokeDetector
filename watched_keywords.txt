@@ -76450,3 +76450,4 @@
 1756497772	VLAZ	bigzonoffer\.com
 1756502686	Dan Getz	stickwarlegacy-modapk\.com
 1756517701	Dan Getz	brainhunter303(?:@gmail\.com)?
+1756517708	Dan Getz	Brain[\W_]*+Hunter(?!303(?<=brainhunter303))
