@@ -5700,7 +5700,10 @@ items:
 - ns: aheadwebhost.com.
 - ns: teammas.in.
 - ns: sectigoweb.com.
-- ns: quickfix8.com.
+- comment: nxdomain 2025-08-30 (clientHold)
+  disable: true
+  ns: quickfix8.com.
+- ns: quickfix20.com.
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
