@@ -76452,3 +76452,4 @@
 1756517701	Dan Getz	brainhunter303(?:@gmail\.com)?
 1756517708	Dan Getz	Brain[\W_]*+Hunter(?!303(?<=brainhunter303))
 1756517756	Dan Getz	not[\W_]*+a[\W_]*+scam
+1756536378	dbc	truckcrashlawyers\.exblog\.jp
