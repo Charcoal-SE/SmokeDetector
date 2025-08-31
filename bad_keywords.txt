@@ -3897,3 +3897,4 @@ credi[\W_]*+hisab
 Jio[\W_]*+Customer[\W_]*+Care
 _zeptonow\.com
 recoveryhacker101(?:@gmail\.com)?
+Treqora[\W_]*+Intel

@@ -76043,7 +76043,6 @@
 1755438354	Dan Getz	kinemasterzone\.com
 1755441346	Jeff Schaller	akonmobile\.com
 1755466842	Dan Getz	freelancingsite24\.blogspot
-1755477155	Jeff Schaller	Treqora[\W_]*+Intel
 1755480378	Dan Getz	Tradecrypts
 1755480605	lyxal	bruce_55shop3(?# telegram)
 1755493451	VLAZ	brightlearners\.ae
