@@ -76473,3 +76473,4 @@
 1756651373	Jeff Schaller	cheapsbestservices\.blogspot
 1756653373	VLAZ	who\.int
 1756658920	Dan Getz	infalytics\.com
+1756658933	Dan Getz	infalytics(?!\.com)
