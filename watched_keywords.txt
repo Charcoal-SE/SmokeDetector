@@ -76471,7 +76471,6 @@
 1756643748	VLAZ	balancecheck-ae\.com
 1756643781	VLAZ	houfercoffee\.com
 1756651373	Jeff Schaller	cheapsbestservices\.blogspot
-1756653373	VLAZ	who\.int
 1756658920	Dan Getz	infalytics\.com
 1756658933	Dan Getz	infalytics(?!\.com)
 1756660565	Dan Getz	gcalculate\.com
