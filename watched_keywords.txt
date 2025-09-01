@@ -76480,3 +76480,4 @@
 1756705920	VLAZ	zootwebagency\.com
 1756705931	VLAZ	zoot[\W_]*+digital
 1756706847	VLAZ	wplacepixelartconverter\.com
+1756710104	VLAZ	icat\.ac\.in
