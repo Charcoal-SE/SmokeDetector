@@ -76478,3 +76478,4 @@
 1756696317	Dan Getz	grantaura\.com
 1756704949	VLAZ	tedoraacademy\.com
 1756705920	VLAZ	zootwebagency\.com
+1756705931	VLAZ	zoot[\W_]*+digital
