@@ -76483,3 +76483,4 @@
 1756710104	VLAZ	icat\.ac\.in
 1756720459	Jeff Schaller	snaptiksaver\.com
 1756721647	Glorfindel	printersassist\.com
+1756724424	Glorfindel	advamed\.in
