@@ -76475,3 +76475,4 @@
 1756658933	Dan Getz	infalytics(?!\.com)
 1756660565	Dan Getz	gcalculate\.com
 1756660606	Dan Getz	aethersx2-apk\.com
+1756696317	Dan Getz	grantaura\.com
