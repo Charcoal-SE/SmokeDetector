@@ -76502,3 +76502,4 @@
 1756809166	Dan Getz	Frontlines[\W_]*+Edu[\W_]*+Tech
 1756809608	Jeff Schaller	nepsdwarka\.com
 1756809904	Jeff Schaller	asvkitchens\.com
+1756810073	Jeff Schaller	shreekrishnaenviroventure\.com
