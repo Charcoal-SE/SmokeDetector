@@ -76500,3 +76500,4 @@
 1756809032	Dan Getz	clarisco\.com
 1756809122	Dan Getz	fitacademy\.fit
 1756809166	Dan Getz	Frontlines[\W_]*+Edu[\W_]*+Tech
+1756809608	Jeff Schaller	nepsdwarka\.com
