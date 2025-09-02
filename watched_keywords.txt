@@ -76508,3 +76508,4 @@
 1756816423	Jeff Schaller	Krishna[\W_]*+Homes
 1756816470	Jeff Schaller	ideatosoftware\.com
 1756817414	Jeff Schaller	MyEngineeringBuddy(?!\.com)
+1756818627	Jeff Schaller	calculadoraparaiva\.com
