@@ -76506,3 +76506,4 @@
 1756814991	Jeff Schaller	Reclaiminstantcrypto
 1756816323	Jeff Schaller	expedigo\.in
 1756816423	Jeff Schaller	Krishna[\W_]*+Homes
+1756816470	Jeff Schaller	ideatosoftware\.com
