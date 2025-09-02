@@ -76507,3 +76507,4 @@
 1756816323	Jeff Schaller	expedigo\.in
 1756816423	Jeff Schaller	Krishna[\W_]*+Homes
 1756816470	Jeff Schaller	ideatosoftware\.com
+1756817414	Jeff Schaller	MyEngineeringBuddy(?!\.com)
