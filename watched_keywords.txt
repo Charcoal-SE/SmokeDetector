@@ -76515,3 +76515,4 @@
 1756827422	Jeff Schaller	trixyaviation\.com
 1756839342	Jeff Schaller	laptoplooms\.com
 1756841692	Jeff Schaller	urdujankari\.com
+1756868646	Dan Getz	scoopcost\.com
