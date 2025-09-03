@@ -4449,7 +4449,8 @@ items:
   disable: true
   ns: usm1804.sgded.com.
 - ns: stackdns.com.
-- comment: no longer resolves 2021-4-22; enabled again 2024-10-18
+- comment: no longer resolves 2021-4-22; enabled again 2024-10-18; disabled again 2025-09-02
+  disable: true
   ns: permainanceme.online.
 - ns: bh-20.webhostbox.net.
 - ns: bh-29.webhostbox.net.
