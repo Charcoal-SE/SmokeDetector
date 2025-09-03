@@ -4,14 +4,15 @@ import regex
 import globalvars
 import datahandling
 
+from typing import Optional, Tuple
 
-# noinspection PyMissingTypeHints
-def rebuild_str(s):
+
+def rebuild_str(s: str) -> str:
     return s.replace("\u200B", "").replace("\u200C", "")
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def get_user_from_url(url):
+# noinspection PyBroadException
+def get_user_from_url(url: Optional[str]) -> Optional[str]:
     if url is None:
         return None
     match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
@@ -25,8 +26,8 @@ def get_user_from_url(url):
         return None
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def get_api_sitename_from_url(url):
+# noinspection PyBroadException
+def get_api_sitename_from_url(url: str) -> Optional[str]:
     match = regex.compile(r"(?:https?:)?(?://)?([\w.]+)/?").search(url)
     if match is None:
         return None
@@ -37,8 +38,7 @@ def get_api_sitename_from_url(url):
         return None
 
 
-# noinspection PyMissingTypeHints
-def api_parameter_from_link(link):
+def api_parameter_from_link(link: str) -> str:
     match = regex.compile(
         r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
         r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)').search(link)
@@ -61,8 +61,7 @@ def api_parameter_from_link(link):
         return None
 
 
-# noinspection PyMissingTypeHints
-def post_id_from_link(link):
+def post_id_from_link(link: str) -> Optional[str]:
     match = regex.compile(r'(?:https?:)?//[^/]+/\w+/(\d+)').search(link)
     if match:
         return match[1]
@@ -70,8 +69,7 @@ def post_id_from_link(link):
         return None
 
 
-# noinspection PyMissingTypeHints
-def to_metasmoke_link(post_url, protocol=True):
+def to_metasmoke_link(post_url: str, protocol: bool = True) -> str:
     return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
         "https:" if protocol else "", api_parameter_from_link(post_url),
         post_id_from_link(post_url))
@@ -88,8 +86,8 @@ msg_parser_regex = (
 msg_parser = regex.compile(msg_parser_regex)
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def fetch_post_url_from_msg_content(content):
+# noinspection PyBroadException
+def fetch_post_url_from_msg_content(content: str) -> Optional[str]:
     match = msg_parser.search(content)
     if match is None:
         return None
@@ -99,8 +97,8 @@ def fetch_post_url_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException,PyUnusedLocal,PyRedundantParentheses,PyMissingTypeHints
-def fetch_post_id_and_site_from_url(url):
+# noinspection PyBroadException,PyUnusedLocal,PyRedundantParentheses
+def fetch_post_id_and_site_from_url(url: Optional[str]) -> Optional[str]:
     if url is None:
         return None
     trimmed_url = rebuild_str(url)
@@ -134,14 +132,13 @@ def fetch_post_id_and_site_from_url(url):
         return None
 
 
-# noinspection PyMissingTypeHints
-def fetch_post_id_and_site_from_msg_content(content):
+def fetch_post_id_and_site_from_msg_content(content: str) -> str:
     url = fetch_post_url_from_msg_content(content)
     return fetch_post_id_and_site_from_url(url)
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def fetch_owner_url_from_msg_content(content):
+# noinspection PyBroadException
+def fetch_owner_url_from_msg_content(content: str) -> Optional[str]:
     match = msg_parser.search(content)
     if match is None:
         return None
@@ -152,8 +149,8 @@ def fetch_owner_url_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def fetch_title_from_msg_content(content):
+# noinspection PyBroadException
+def fetch_title_from_msg_content(content: str) -> Optional[str]:
     match = msg_parser.search(content)
     if match is None:
         return None
@@ -163,8 +160,8 @@ def fetch_title_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException,PyMissingTypeHints
-def edited_message_after_postgone_command(content):
+# noinspection PyBroadException
+def edited_message_after_postgone_command(content: str) -> Optional[str]:
     match = msg_parser.search(content)
     if match is None:
         return None
@@ -175,23 +172,19 @@ def edited_message_after_postgone_command(content):
         return None
 
 
-# noinspection PyMissingTypeHints
-def unescape_title(title_escaped):
+def unescape_title(title_escaped: str) -> str:
     return globalvars.GlobalVars.parser.unescape(title_escaped).strip()
 
 
-# noinspection PyMissingTypeHints
-def escape_markdown(s):
+def escape_markdown(s: str) -> str:
     return regex.sub(r"([_*`\[\]])", r"\\\1", s)
 
 
-# noinspection PyMissingTypeHints
-def sanitize_title(title_unescaped):
+def sanitize_title(title_unescaped: str) -> str:
     return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', u'\u23CE'))
 
 
-# noinspection PyMissingTypeHints
-def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
+def get_user_from_list_command(cmd: str) -> Tuple[int, str]:  # for example, !!/addblu is a list command
     cmd_merged_spaces = regex.sub("\\s+", " ", cmd)
     cmd_parts = cmd_merged_spaces.split(" ")
 
@@ -219,8 +212,7 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
     return uid, site
 
 
-# noinspection PyMissingTypeHints
-def url_to_shortlink(url):
+def url_to_shortlink(url: str) -> str:
     id_and_site = fetch_post_id_and_site_from_url(url)
     if id_and_site is None:
         return None
@@ -234,16 +226,14 @@ def url_to_shortlink(url):
         return "https://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
-# noinspection PyMissingTypeHints
-def user_url_to_shortlink(url):
+def user_url_to_shortlink(url: str) -> str:
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
         return url
     return "https://{}/users/{}".format(user_id_and_site[1], user_id_and_site[0])
 
 
-# noinspection PyMissingTypeHints
-def to_protocol_relative(url):
+def to_protocol_relative(url: str) -> str:
     if url.startswith("http://"):
         return url[5:]
     elif url.startswith("https://"):
