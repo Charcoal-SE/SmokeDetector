@@ -76525,3 +76525,4 @@
 1756907014	Dan Getz	flighs\.io
 1756912705	Jeff Schaller	yoursignificantfigurescalculator\.com
 1756921977	Fastnlight	staneffect\.ai
+1756952445	Dan Getz	cortecfan\.com
