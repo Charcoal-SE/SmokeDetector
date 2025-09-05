@@ -76554,3 +76554,4 @@
 1757073694	cigien	virtualspheretechnologies\.in
 1757074411	Dan Getz	crunchyrollhub\.com
 1757075971	Jeff Schaller	benakagoldcompany\.com
+1757087313	Jeff Schaller	rivalsscript\.dev
