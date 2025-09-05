@@ -76547,3 +76547,4 @@
 1757035131	Dan Getz	impactpsychedelic\.com
 1757068612	Dan Getz	eezalign\.in
 1757068628	Dan Getz	samagralaw\.com
+1757068687	Dan Getz	bookclinics\.com
