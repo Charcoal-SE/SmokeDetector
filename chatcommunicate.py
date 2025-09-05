@@ -349,9 +349,9 @@ def on_msg(msg, client):
             message.content = message.content[:-6]
 
     if (msg.data.get('parent_id') and msg.data.get('show_parent')
-            and message.content.startswith('@{} '.format(client._br.user_name.replace(' ', '')))):
+            and msg.data.get('parent_username') == client._br.user_name):
         # show_parent indicates it's a direct reply, not an @mention assumed reply.
-        # For direct replies, the entire username is at the start of the reply, stripped of spaces.
+        # For direct replies, the entire username is in parent_username.
         # We test for the reply @mention matching our current user_name, because we want to avoid fetching the
         # parent message from SE chat when we don't already have it and aren't actually interested in it.
         # The parent message is fetched lazily, so not until we actually try to get data from it.
