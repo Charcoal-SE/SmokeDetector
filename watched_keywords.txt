@@ -76571,3 +76571,4 @@
 1757249972	Dan Getz	nekopoiapks\.com
 1757254217	Dan Getz	future-amino\.com
 1757258478	Dan Getz	palmhorizonksa\.com
+1757286052	Jeff Schaller	Driyayi48hourslovespell(?:@gmail\.com)?
