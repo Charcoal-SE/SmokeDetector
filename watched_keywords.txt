@@ -76580,3 +76580,4 @@
 1757331694	VLAZ	jacobopt\.com
 1757331722	VLAZ	jacobopt(?!\.com)
 1757334368	VLAZ	wendysmenuprices\.com
+1757334426	VLAZ	risingstarinfotech\.com
