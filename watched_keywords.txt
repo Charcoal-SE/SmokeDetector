@@ -76582,3 +76582,4 @@
 1757334368	VLAZ	wendysmenuprices\.com
 1757334426	VLAZ	risingstarinfotech\.com
 1757334529	VLAZ	neworlddevelopers\.com
+1757338632	Dan Getz	dragon1\.com
