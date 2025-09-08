@@ -76585,3 +76585,4 @@
 1757338632	Dan Getz	dragon1\.com
 1757338639	Dan Getz	endel\.digital
 1757341295	Dan Getz	^[\W_]*+📞
+1757341413	Dan Getz	winter[\W_]*+soldier[\W_]*+of[\W_]*+fortune
