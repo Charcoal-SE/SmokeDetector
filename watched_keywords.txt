@@ -76597,3 +76597,4 @@
 1757348053	Vickel	digital[\W_]*+redemption[\W_]*+agency(?!\.com(?<=digitalredemptionagency\.com))
 1757353250	Jeff Schaller	pearsonairportlimotaxiservice\.ca
 1757353276	Jeff Schaller	pearsonairportlimoandtaxiservice\.ca
+1757353294	Jeff Schaller	thelimotaxi\.ca
