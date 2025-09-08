@@ -76578,3 +76578,4 @@
 1757320630	VLAZ	findtruman\.io
 1757328506	Jeff Schaller	tempgmailer\.com
 1757331694	VLAZ	jacobopt\.com
+1757331722	VLAZ	jacobopt(?!\.com)
