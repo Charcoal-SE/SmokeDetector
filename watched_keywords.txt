@@ -76594,3 +76594,4 @@
 1757344221	Jeff Schaller	ancientextracts\.co\.uk
 1757346008	VLAZ	temu_offer\.pdf
 1757347878	Vickel	digitalredemptionagency\.com
+1757348053	Vickel	digital[\W_]*+redemption[\W_]*+agency(?!\.com(?<=digitalredemptionagency\.com))
