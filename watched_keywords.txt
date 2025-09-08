@@ -76593,3 +76593,4 @@
 1757342786	General Grievance	Rotche[\W_]*+Capuyan[\W_]*+Ouano
 1757344221	Jeff Schaller	ancientextracts\.co\.uk
 1757345964	VLAZ	s3-ap-southeast-2\.amazonaws\.com
+1757346008	VLAZ	temu_offer\.pdf
