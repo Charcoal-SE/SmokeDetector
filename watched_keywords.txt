@@ -76590,3 +76590,4 @@
 1757342340	Dan Getz	now[\W_]*+for[\W_]*+immediate[\W_]*+assistance
 1757342347	Dan Getz	for[\W_]*+immediate[\W_]*+assistance[\W_]*+call
 1757342361	Dan Getz	for(?<!now[\W_]for)[\W_]*+immediate[\W_]*+assistance(?![\W_]*+call)
+1757342786	General Grievance	Rotche[\W_]*+Capuyan[\W_]*+Ouano
