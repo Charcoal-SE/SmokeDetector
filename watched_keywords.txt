@@ -76586,3 +76586,4 @@
 1757338639	Dan Getz	endel\.digital
 1757341295	Dan Getz	^[\W_]*+📞
 1757341413	Dan Getz	winter[\W_]*+soldier[\W_]*+of[\W_]*+fortune
+1757341943	VLAZ	tellegramapk\.com
