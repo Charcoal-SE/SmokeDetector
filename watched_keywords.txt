@@ -76607,3 +76607,4 @@
 1757408632	VLAZ	supermarket\.webstackers\.net
 1757410575	VLAZ	(?-i:teamcryptocurrencyscript)(?# t.me)
 1757410688	VLAZ	seoagencybangalore\.com
+1757411399	Glorfindel	Meon[\W_]*+CRM
