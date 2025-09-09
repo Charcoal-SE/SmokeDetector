@@ -76622,3 +76622,4 @@
 1757427781	Dan Getz	fidhawordpress\.liveblog365\.com
 1757429286	Dan Getz	NxtWave
 1757430940	VLAZ	k2fusionshop\.com
+1757430947	VLAZ	(?-i:k2fusionshop)(?#t.me)
