@@ -48,6 +48,17 @@ CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
+
+# >>> statistics.mean(fp_data)
+# 4.69588761500174
+# >>> statistics.median(fp_data)
+# 4.693311429330979
+# >>> statistics.stdev(fp_data)
+# 0.3192297382531828
+# The following constants are calculated using 2stdev
+ENTROPY_TOO_LOW = 4.05
+ENTROPY_TOO_HIGH = 5.33
+
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex_compile_no_cache(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -912,6 +923,31 @@ def mostly_img(s, site):
     s_len_img = len_img_block(strip_code_elements(s))
     if s_len_img / len(s) > IMG_TXT_R_THRES:
         return True, "{:.4f} of the post is html image blocks".format(s_len_img / len(s))
+    return False, ""
+
+
+@create_rule("post is likely nonsense", title=False,
+             sites=["codegolf.stackexchange.com", "ru.stackoverflow.com",
+                    "stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com",
+                    "es.stackoverflow.com", "islam.stackexchange.com",
+                    "japanese.stackexchange.com", "anime.stackexchange.com",
+                    "hinduism.stackexchange.com", "judaism.stackexchange.com",
+                    "buddhism.stackexchange.com", "chinese.stackexchange.com",
+                    "french.stackexchange.com", "spanish.stackexchange.com",
+                    "portuguese.stackexchange.com", "korean.stackexchange.com",
+                    "ukrainian.stackexchange.com", "italian.stackexchange.com"],
+             max_rep=10000, max_score=10000)
+def nonsense(s, site):
+    if len(s) == 0:
+        return False, ""
+    if "pytest" in sys.modules:
+        return False, ""
+    s = regex.sub(r"\s\s+", " ", s)
+    probability = [float(s.count(x)) / len(s) for x in s]
+    entropy_per_char = -sum([math.log2(x) for x in probability]) / len(s)
+
+    if entropy_per_char < ENTROPY_TOO_LOW or entropy_per_char > ENTROPY_TOO_HIGH:
+        return True, "Entropy per char is {:.4f}".format(entropy_per_char)
     return False, ""
 
 
