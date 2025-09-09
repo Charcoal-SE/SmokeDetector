@@ -76599,3 +76599,4 @@
 1757389302	Dan Getz	for[\W_]*+immediate[\W_]*+assistance
 1757396618	VLAZ	aixqp\.com
 1757407072	Dan Getz	ringopus\.com
+1757407099	Dan Getz	celebrityheights\.org
