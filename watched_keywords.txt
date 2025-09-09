@@ -76586,7 +76586,6 @@
 1757338639	Dan Getz	endel\.digital
 1757341413	Dan Getz	winter[\W_]*+soldier[\W_]*+of[\W_]*+fortune
 1757341943	VLAZ	tellegramapk\.com
-1757342347	Dan Getz	for[\W_]*+immediate[\W_]*+assistance[\W_]*+call
 1757342786	General Grievance	Rotche[\W_]*+Capuyan[\W_]*+Ouano
 1757344221	Jeff Schaller	ancientextracts\.co\.uk
 1757346008	VLAZ	temu_offer\.pdf
