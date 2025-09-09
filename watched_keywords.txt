@@ -76605,3 +76605,4 @@
 1757408048	VLAZ	sitebeaver\.nl
 1757408055	VLAZ	sitebeaver\.io
 1757408632	VLAZ	supermarket\.webstackers\.net
+1757410575	VLAZ	(?-i:teamcryptocurrencyscript)(?# t.me)
