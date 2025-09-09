@@ -76619,3 +76619,4 @@
 1757424452	VLAZ	petzlover\.com
 1757424569	Jeff Schaller	scilindia\.org
 1757426372	VLAZ	mycompanysite\.com
+1757427781	Dan Getz	fidhawordpress\.liveblog365\.com
