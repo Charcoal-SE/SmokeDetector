@@ -76640,3 +76640,4 @@
 1757482503	Cow	breakingnews\.llc
 1757482522	VLAZ	machinerygeek\.com
 1757483138	VLAZ	nikitha[\W_]*+webdesign
+1757483217	VLAZ	apkonstream\.com
