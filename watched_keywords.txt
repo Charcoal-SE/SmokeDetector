@@ -76637,3 +76637,4 @@
 1757482463	VLAZ	photocat\.com
 1757482486	VLAZ	faceshapedetector\.ai
 1757482495	VLAZ	mywordle\.net
+1757482503	Cow	breakingnews\.llc
