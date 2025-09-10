@@ -76638,3 +76638,4 @@
 1757482486	VLAZ	faceshapedetector\.ai
 1757482495	VLAZ	mywordle\.net
 1757482503	Cow	breakingnews\.llc
+1757482522	VLAZ	machinerygeek\.com
