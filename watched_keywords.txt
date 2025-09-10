@@ -76633,3 +76633,4 @@
 1757481933	VLAZ	sv388\.spot
 1757482023	Cow	viessmann\.ae
 1757482030	VLAZ	wintersdaycalculator\.com
+1757482298	VLAZ	cricbabagames\.online
