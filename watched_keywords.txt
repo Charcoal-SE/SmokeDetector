@@ -76629,3 +76629,4 @@
 1757443400	VLAZ	teachjourney\.com
 1757463029	lyxal	startlit\.com
 1757470741	lyxal	drchiuneuro\.com
+1757481017	VLAZ	danvastproperty\.com
