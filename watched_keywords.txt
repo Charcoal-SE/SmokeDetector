@@ -76653,3 +76653,4 @@
 1757496225	VLAZ	rrfinance\.com
 1757497341	VLAZ	sigzen\.net
 1757498392	VLAZ	leadharvestor\.com
+1757500378	VLAZ	(?-i:d3v1og)(?#t.me)
