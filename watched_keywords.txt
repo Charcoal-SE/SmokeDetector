@@ -76658,3 +76658,4 @@
 1757500812	VLAZ	naya24(?!\.cloud)
 1757505253	Robert Longson	plixweb\.com
 1757506399	Dan Getz	cocoontecs\.com
+1757506465	Vickel	shukuenshinobi\.com
