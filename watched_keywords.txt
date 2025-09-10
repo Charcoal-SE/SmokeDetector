@@ -76656,3 +76656,4 @@
 1757500378	VLAZ	(?-i:d3v1og)(?#t.me)
 1757500616	VLAZ	naya24\.cloud
 1757500812	VLAZ	naya24(?!\.cloud)
+1757505253	Robert Longson	plixweb\.com
