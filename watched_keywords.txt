@@ -76655,3 +76655,4 @@
 1757498392	VLAZ	leadharvestor\.com
 1757500378	VLAZ	(?-i:d3v1og)(?#t.me)
 1757500616	VLAZ	naya24\.cloud
+1757500812	VLAZ	naya24(?!\.cloud)
