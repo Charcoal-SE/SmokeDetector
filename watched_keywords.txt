@@ -76635,3 +76635,4 @@
 1757482030	VLAZ	wintersdaycalculator\.com
 1757482298	VLAZ	cricbabagames\.online
 1757482463	VLAZ	photocat\.com
+1757482486	VLAZ	faceshapedetector\.ai
