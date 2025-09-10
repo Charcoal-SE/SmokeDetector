@@ -76631,3 +76631,4 @@
 1757481017	VLAZ	danvastproperty\.com
 1757481926	VLAZ	sv388(?!\.spot)
 1757481933	VLAZ	sv388\.spot
+1757482023	Cow	viessmann\.ae
