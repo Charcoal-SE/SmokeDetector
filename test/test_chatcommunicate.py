@@ -512,7 +512,7 @@ def test_on_msg(get_last_messages, post_msg):
                 },
 
                 "id": 1000,
-                "content": "@SmokeDetector why   "
+                "content": "why   "
             },
             "data": {
             }
@@ -520,6 +520,7 @@ def test_on_msg(get_last_messages, post_msg):
         msg5.data = {
             "parent_id": 100,
             "show_parent": True,
+            "parent_username": "SmokeDetector",
         }
 
         chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
@@ -545,7 +546,7 @@ def test_on_msg(get_last_messages, post_msg):
         post_msg.reset_mock()
         mock_command.reset_mock()
 
-        msg5.message.content = "@SmokeDetector why@!@#-"
+        msg5.message.content = "why@!@#-"
         chatcommunicate.on_msg(msg5, client)
 
         post_msg.assert_not_called()
