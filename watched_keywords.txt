@@ -76679,3 +76679,4 @@
 1757576213	VLAZ	midmweb\.com
 1757577361	Cow	serbyte\.net
 1757579290	Cow	dummyticket\.travel
+1757579675	VLAZ	doaguru[\W_]*+infosystems
