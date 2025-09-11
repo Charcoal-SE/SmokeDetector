@@ -76678,3 +76678,4 @@
 1757576131	VLAZ	betbhai\.fun
 1757576213	VLAZ	midmweb\.com
 1757577361	Cow	serbyte\.net
+1757579290	Cow	dummyticket\.travel
