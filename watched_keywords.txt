@@ -76682,3 +76682,4 @@
 1757579675	VLAZ	doaguru[\W_]*+infosystems
 1757582279	VLAZ	mark-digital\.co\.in
 1757585767	VLAZ	drjpetpreform\.com
+1757585778	VLAZ	digitalprisma\.com
