@@ -76663,3 +76663,4 @@
 1757510300	VLAZ	harta138
 1757533758	Jeff Schaller	floridacostestimating\.com
 1757546707	CPlus	(?-i:Pooja[\W_]*+rani)
+1757551322	Dan Getz	continentaldocs\.com
