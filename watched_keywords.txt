@@ -76697,3 +76697,4 @@
 1757611860	Jeff Schaller	fleckpublisher\.com
 1757613559	VLAZ	testeteclado\.com\.br
 1757615376	VLAZ	cali-build\.com
+1757616573	Fastnlight	themagistvapps\.com
