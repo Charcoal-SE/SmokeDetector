@@ -76681,3 +76681,4 @@
 1757579290	Cow	dummyticket\.travel
 1757579675	VLAZ	doaguru[\W_]*+infosystems
 1757582279	VLAZ	mark-digital\.co\.in
+1757585767	VLAZ	drjpetpreform\.com
