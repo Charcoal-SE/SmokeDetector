@@ -76693,3 +76693,4 @@
 1757604984	VLAZ	shadowfighter2\.com
 1757609330	VLAZ	theskilldeck\.com
 1757609404	VLAZ	sbo2u\.net
+1757611652	Jeff Schaller	tvdmedia\.vn
