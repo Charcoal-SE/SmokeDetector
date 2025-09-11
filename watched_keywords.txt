@@ -76674,3 +76674,4 @@
 1757569629	VLAZ	login360(?!\.in)
 1757571537	VLAZ	itsbot\.ai
 1757575923	VLAZ	reviamobility\.com
+1757575937	VLAZ	assuredesk\.com
