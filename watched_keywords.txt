@@ -76695,3 +76695,4 @@
 1757609404	VLAZ	sbo2u\.net
 1757611652	Jeff Schaller	tvdmedia\.vn
 1757611860	Jeff Schaller	fleckpublisher\.com
+1757613559	VLAZ	testeteclado\.com\.br
