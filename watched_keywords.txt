@@ -76692,3 +76692,4 @@
 1757603385	VLAZ	capkcutapk\.com
 1757604984	VLAZ	shadowfighter2\.com
 1757609330	VLAZ	theskilldeck\.com
+1757609404	VLAZ	sbo2u\.net
