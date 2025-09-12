@@ -52911,7 +52911,6 @@
 1695845779	Vickel	privaterooms\.net
 1695835166	Jesse	onloadify\.com
 1696081871	Jeff Schaller	cybercrime\.emergency
-1696091792	Jeff Schaller	gemini\.com(?<!api\.gemini\.com)
 1696092109	Jesse	saadidesign\.com
 1696093282	Jeff Schaller	Apksmoon\.com
 1696094856	Jeff Schaller	preply\.com(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
