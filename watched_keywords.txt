@@ -76718,3 +76718,4 @@
 1757672481	Dan Getz	qui\??$(?<=.{31}(?#title only))
 1757674281	VLAZ	allpasshub\.com
 1757674342	VLAZ	interllekt
+1757676103	VLAZ	health[\W_]*+beacon
