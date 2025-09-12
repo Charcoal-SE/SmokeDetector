@@ -44289,7 +44289,6 @@
 1668517033	tripleee	connectstaff\.ae
 1668517275	tripleee	companyformationsaudi\.com
 1668527141	tripleee	sanvitobusharing\.com
-1668534126	cigien	tutorialz\.tech
 1668542314	Ethan	x-embroidery\.com
 1668548142	Mast	blackmartz\.com
 1668551913	Spevacus	suplementosmaisbaratos\.com\.br
