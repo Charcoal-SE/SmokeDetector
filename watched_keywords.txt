@@ -76703,3 +76703,4 @@
 1757652636	VLAZ	jobs-search-realtime-data\.p\.rapidapi\.com
 1757652744	VLAZ	(?-i:2BYo)(?# go.linkify.ru)
 1757652796	VLAZ	medinain\.com
+1757652903	VLAZ	constructionleadpro\.com
