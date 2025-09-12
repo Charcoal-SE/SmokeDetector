@@ -76720,3 +76720,4 @@
 1757676103	VLAZ	health[\W_]*+beacon
 1757677766	Jeff Schaller	wiskundehulps\.nl
 1757678935	Dan Getz	mydogbreeds\.com
+1757681465	Jeff Schaller	gemini\.com(?<!api\.gemini\.com)(?<!api\.sandbox\.gemini\.com)
