@@ -314,7 +314,8 @@ def test_on_msg(get_last_messages, post_msg):
     with chatcommunicate._rooms_lock, chatcommunicate._prefix_commands_lock, chatcommunicate._reply_commands_lock:
         client = Fake({
             "_br": {
-                "user_id": 1337
+                "user_id": 1337,
+                "user_name": "SmokeDetector",
             },
 
             "host": "stackexchange.com"
@@ -337,8 +338,11 @@ def test_on_msg(get_last_messages, post_msg):
 
                 "parent": None,
                 "content": "shoutouts to simpleflips"
-            }
+            },
+            "data": {
+            },
         }, spec=chatcommunicate.events.MessagePosted)
+        msg1.data = {}
 
         chatcommunicate.on_msg(msg1, client)
 
@@ -355,8 +359,11 @@ def test_on_msg(get_last_messages, post_msg):
                 "id": 999,
                 "parent": None,
                 "content": "!!/not_actually_a_command"
-            }
+            },
+            "data": {
+            },
         }, spec=chatcommunicate.events.MessagePosted)
+        msg2.data = {}
 
         chatcommunicate.on_msg(msg2, client)
 
@@ -373,8 +380,11 @@ def test_on_msg(get_last_messages, post_msg):
                 "id": 999,
                 "parent": None,
                 "content": "!!/a_command"
-            }
+            },
+            "data": {
+            },
         }, spec=chatcommunicate.events.MessagePosted)
+        msg3.data = {}
 
         mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
         chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
@@ -475,8 +485,13 @@ def test_on_msg(get_last_messages, post_msg):
 
                 "id": 1000,
                 "content": "asdf"
-            }
+            },
+            "data": {
+            },
         }, spec=chatcommunicate.events.MessageEdited)
+        msg4.data = {
+            "parent_id": 100,
+        }
 
         chatcommunicate.on_msg(msg4, client)
 
@@ -497,9 +512,16 @@ def test_on_msg(get_last_messages, post_msg):
                 },
 
                 "id": 1000,
-                "content": "@SmokeDetector why   "
+                "content": "why   "
+            },
+            "data": {
             }
         }, spec=chatcommunicate.events.MessageEdited)
+        msg5.data = {
+            "parent_id": 100,
+            "show_parent": True,
+            "parent_username": "SmokeDetector",
+        }
 
         chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
 
@@ -524,7 +546,7 @@ def test_on_msg(get_last_messages, post_msg):
         post_msg.reset_mock()
         mock_command.reset_mock()
 
-        msg5.message.content = "@SmokeDetector why@!@#-"
+        msg5.message.content = "why@!@#-"
         chatcommunicate.on_msg(msg5, client)
 
         post_msg.assert_not_called()
@@ -543,8 +565,11 @@ def test_on_msg(get_last_messages, post_msg):
                 "id": 1000,
                 "parent": None,
                 "content": "sd why - 2why 2why- 2- why- "
-            }
+            },
+            "data": {
+            },
         }, spec=chatcommunicate.events.MessageEdited)
+        msg6.data = {}
 
         get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
         chatcommunicate.on_msg(msg6, client)

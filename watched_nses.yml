@@ -4262,7 +4262,8 @@ items:
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
-- comment: no longer responding 2021-07-27; enabled again 2024-10-18
+- comment: no longer responding 2021-07-27; enabled again 2024-10-18; no longer responding, causing CI failures 2025-08-20
+  disable: true
   ns: jawatankosong.biz.
 - comment: NXDOMAIN 2023-12-23 on GitHub Actions, but passing on CircleCI
   disable: true
@@ -4330,7 +4331,8 @@ items:
   ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
-- comment: no longer responding 2020-04-02; enabled again 2024-10-18
+- comment: no longer responding 2020-04-02; enabled again 2024-10-18; NXDOMAIN 2025-04-01
+  disable: true
   ns: onlinemenshop.com.
 - ns: mywahosting.com.
 - comment: timeout 2020-04-02
@@ -4439,13 +4441,16 @@ items:
 - ns: matbao.net.
 - ns: matbao.vn.
 - ns: hostinger.vn.
-- ns: hostnac.com.
+- comment: NXDOMAIN 2025-05-08
+  disable: true
+  ns: hostnac.com.
 - ns: iserverplanet.net.
 - comment: no longer responding 2020-11-11
   disable: true
   ns: usm1804.sgded.com.
 - ns: stackdns.com.
-- comment: no longer resolves 2021-4-22; enabled again 2024-10-18
+- comment: no longer resolves 2021-4-22; enabled again 2024-10-18; disabled again 2025-09-02
+  disable: true
   ns: permainanceme.online.
 - ns: bh-20.webhostbox.net.
 - ns: bh-29.webhostbox.net.
@@ -4552,7 +4557,9 @@ items:
 - ns: worldemart.com.
 - ns: chinahoster.com.
 - ns: niagahoster.com.
-- ns: megabytesserver.com.
+- comment: 2025-03-17 NXDOMAIN
+  disable: true
+  ns: megabytesserver.com.
 - ns: servers800.com.
 - comment: 2021-04-14 NXDOMAIN
   disable: true
@@ -5249,7 +5256,8 @@ items:
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
 - ns: hostingdokan.com.
-- comment: no longer resolves 2022-06-19; enabled again 2024-10-18
+- comment: no longer resolves 2022-06-19; enabled again 2024-10-18; NXDOMAIN 2025-03-11
+  disable: true
   ns: cloudsecurebox.com.
 - ns: yogasgroup.org.
 - ns: webeyesoft.com.
@@ -5258,7 +5266,8 @@ items:
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
 - ns: readymatrimony.com.
-- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18
+- comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18; NoAnswer 2025-05-31
+  disable: true
   ns: concepts8.com.
 - ns: linuxpl.com.
 - ns: ndx9.com.
@@ -5272,7 +5281,9 @@ items:
 - ns: bwfdns.net.
 - ns: skb-enterprise.com.
 - ns: jinfo.net.
-- ns: ambitioncloud.org.
+- comment: NXDOMAIN 2025-04-30
+  disable: true
+  ns: ambitioncloud.org.
 - ns: ambitionhost.org.
 - comment: NXDOMAIN 2023-03-25
   disable: true
@@ -5331,7 +5342,9 @@ items:
 - ns: gocheapweb.com.
 - ns: omnis.com.
 - ns: omnisdns.net.
-- ns: perfectsoftsolutionsltd.com.
+- comment: NXDOMAIN 2025-04-19
+  disable: true
+  ns: perfectsoftsolutionsltd.com.
 - ns: ghestineh.com.
 - ns: naoservers.com.
 - ns: virtualstacks.com.
@@ -5350,7 +5363,8 @@ items:
 - ns: firestarthosting.com.
 - ns: hostingseed.com.
 - ns: yuvajobs.com.
-- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18
+- comment: NXDOMAIN 2022-12-03; potentially intermittent. Enabled again 2024-10-18. Disabled again 2025-02-19
+  disable: true
   ns: askbeen.com.
 - ns: hostever.com.
 - ns: sellvir.com.
@@ -5375,7 +5389,9 @@ items:
 - ns: hostlab.net.tr.
 - ns: ehosts.com.
 - ns: restoregreenlife.com.
-- ns: studentdatabase.co.in.
+- comment: caused CI errors on 2025-08-23
+  disable: true
+  ns: studentdatabase.co.in.
 - comment: disabled 2022-09-07, 10/162
   disable: true
   ns: vercel-dns.com.
@@ -5570,7 +5586,9 @@ items:
   disable: true
   ns: hostandserver.com.
 - ns: onlinestreaming.us.
-- ns: vlrx.space.
+- comment: NXDOMAIN 2025-04-21
+  disable: true
+  ns: vlrx.space.
 - ns: nameserverseo.com.
 - ns: invenzasolutions.com.
 - ns: turnkeywebspace.net.
@@ -5649,7 +5667,9 @@ items:
 - ns: pixelshakers.com.
 - ns: techchef.in.
 - ns: ogletech.com.
-- ns: nsluckup.com.
+- comment: NXDOMAIN 2025-06-11
+  disable: true
+  ns: nsluckup.com.
 - ns: aeserver.com.
 - ns: hostiware.com.
 - ns: nexloc.ro.
@@ -5681,11 +5701,15 @@ items:
 - ns: aheadwebhost.com.
 - ns: teammas.in.
 - ns: sectigoweb.com.
-- ns: quickfix8.com.
+- comment: nxdomain 2025-08-30 (clientHold)
+  disable: true
+  ns: quickfix8.com.
+- ns: quickfix20.com.
 - ns: cbcamerica.org.
 - ns: wpdns.host.
 - ns: serverforme.xyz.
-- comment: nxdomain 2023-11-07; enabled again 2024-10-18
+- comment: nxdomain 2023-11-07; enabled again 2024-10-18; re-disabled 2025-02-01
+  disable: true
   ns: nccloud.shop.
 - ns: attorneyvirginiamaryland.com.
 - ns: dynamicsalessolutions.co.uk.
@@ -5749,7 +5773,9 @@ items:
 - ns: 101domain.com.
 - ns: pscdc.in.
 - ns: sabaprofile.com.
-- ns: msofficedeals.com.
+- comment: NXDOMAIN 2025-08-16
+  disable: true
+  ns: msofficedeals.com.
 - ns: minaretsolutions.co.in.
 - ns: prosoccerstore.co.
 - ns: symbolhost.com.
@@ -5758,7 +5784,9 @@ items:
 - ns: ju.edu.jo.
 - ns: xliil.com.
 - ns: noc77.com.
-- ns: accesget.com.
+- comment: no matches as of 2025-05-02, registry expired 2025-03-18
+  disable: true
+  ns: accesget.com.
 - ns: bunny.net.
 - ns: parsvds.com.
 - ns: tristarhost.com.
@@ -5840,7 +5868,9 @@ items:
 - ns: vietnix.vn.
 - ns: greengeeks.net.
 - ns: movavi.net.
-- ns: apktunnel.com.
+- comment: NXDOMAIN 2025-07-08
+  disable: true
+  ns: apktunnel.com.
 - ns: dan.com.
 - ns: sprintsmsservice.com.
 - ns: 040services.net.
@@ -5849,7 +5879,9 @@ items:
 - ns: iamemonline.com.
 - ns: wuaze.com.
 - ns: iaasdns.com.
-- ns: vagonsoft.com.
+- comment: NXDOMAIN 2023-06-02
+  disable: true
+  ns: vagonsoft.com.
 - ns: hostarmada.net.
 - ns: edusum.com.
 - ns: bajika.co.
