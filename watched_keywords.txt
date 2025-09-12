@@ -76723,3 +76723,4 @@
 1757681465	Jeff Schaller	gemini\.com(?<!api\.gemini\.com)(?<!api\.sandbox\.gemini\.com)
 1757681654	lyxal	bfr\.sate\.tools
 1757682108	VLAZ	beyondweb\.ind\.in
+1757683541	VLAZ	bobevansmenus\.us
