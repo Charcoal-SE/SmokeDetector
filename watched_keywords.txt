@@ -76704,3 +76704,4 @@
 1757652744	VLAZ	(?-i:2BYo)(?# go.linkify.ru)
 1757652796	VLAZ	medinain\.com
 1757652903	VLAZ	constructionleadpro\.com
+1757655286	Cow	amity\.edu
