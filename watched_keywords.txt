@@ -76715,3 +76715,4 @@
 1757667492	VLAZ	matchscoreboard\.com
 1757671978	Dan Getz	mavdrones\.com
 1757672178	VLAZ	unggultoto\.com
+1757672481	Dan Getz	qui\??$(?<=.{31}(?#title only))
