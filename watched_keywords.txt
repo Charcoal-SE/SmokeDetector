@@ -76713,3 +76713,4 @@
 1757665517	VLAZ	digital[\W_]*+infomatic(?!\.com(?<=digitalinfomatic\.com))
 1757665527	VLAZ	dreamticket\.co\.in
 1757667492	VLAZ	matchscoreboard\.com
+1757671978	Dan Getz	mavdrones\.com
