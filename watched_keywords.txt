@@ -76712,3 +76712,4 @@
 1757662766	VLAZ	tilakpolypack\.com
 1757665475	VLAZ	digitalinfomatic\.com
 1757665517	VLAZ	digital[\W_]*+infomatic(?!\.com(?<=digitalinfomatic\.com))
+1757665527	VLAZ	dreamticket\.co\.in
