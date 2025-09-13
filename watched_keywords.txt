@@ -76714,7 +76714,6 @@
 1757667492	VLAZ	matchscoreboard\.com
 1757671978	Dan Getz	mavdrones\.com
 1757672178	VLAZ	unggultoto\.com
-1757672481	Dan Getz	qui\??$(?<=.{31}(?#title only))
 1757674281	VLAZ	allpasshub\.com
 1757674342	VLAZ	interllekt
 1757676103	VLAZ	health[\W_]*+beacon
