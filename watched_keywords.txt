@@ -76736,3 +76736,4 @@
 1757723374	Dan Getz	qui\??$(?<=.{41}(?#title only))
 1757743250	Glorfindel	xiphiassuperfoods\.com
 1757744176	VLAZ	zjhaotianwelding\.com
+1757745120	VLAZ	mytourguru\.com
