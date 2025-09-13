@@ -76741,3 +76741,4 @@
 1757748500	VLAZ	gg1G6e9BR69UiDcSd(?# share.google)
 1757752013	VLAZ	mim\.mariancollege\.org
 1757759201	VLAZ	bhaktiudaybharat\.com
+1757765927	Dan Getz	getdrivezone\.com
