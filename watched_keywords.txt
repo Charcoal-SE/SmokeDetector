@@ -76733,3 +76733,4 @@
 1757701852	Jeff Schaller	vatcalculatorg\.com
 1757702089	VLAZ	sipcalculator\.ws
 1757702106	VLAZ	abduldev\.com
+1757723374	Dan Getz	qui\??$(?<=.{41}(?#title only))
