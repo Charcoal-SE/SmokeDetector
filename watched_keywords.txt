@@ -76744,3 +76744,4 @@
 1757765927	Dan Getz	getdrivezone\.com
 1757765950	Dan Getz	authentictechnologiesllc\.com
 1757770697	Dan Getz	morfred3747
+1757770794	Jeff Schaller	troll-winner\.com
