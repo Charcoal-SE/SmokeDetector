@@ -76742,3 +76742,4 @@
 1757752013	VLAZ	mim\.mariancollege\.org
 1757759201	VLAZ	bhaktiudaybharat\.com
 1757765927	Dan Getz	getdrivezone\.com
+1757765950	Dan Getz	authentictechnologiesllc\.com
