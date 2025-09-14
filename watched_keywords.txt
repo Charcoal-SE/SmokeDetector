@@ -76755,3 +76755,4 @@
 1757840272	VLAZ	telcoict\.com\.au
 1757840284	VLAZ	clippingpathca\.com
 1757848976	Vickel	utahcanyonhikes\.com
+1757860978	Dan Getz	prepareforcanada\.com
