@@ -76756,3 +76756,4 @@
 1757840284	VLAZ	clippingpathca\.com
 1757848976	Vickel	utahcanyonhikes\.com
 1757860978	Dan Getz	prepareforcanada\.com
+1757869752	Glorfindel	efile\.cpuc\.ca\.gov
