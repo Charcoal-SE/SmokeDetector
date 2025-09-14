@@ -76753,3 +76753,4 @@
 1757789694	Dan Getz	Cviya
 1757791833	VLAZ	doctorspirit67
 1757840272	VLAZ	telcoict\.com\.au
+1757840284	VLAZ	clippingpathca\.com
