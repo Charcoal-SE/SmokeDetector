@@ -76759,3 +76759,4 @@
 1757869752	Glorfindel	efile\.cpuc\.ca\.gov
 1757871570	VLAZ	kunaldigitalmakreter\.store
 1757880215	Dan Getz	kidsmomo\.com
+1757882403	Dan Getz	rr?777
