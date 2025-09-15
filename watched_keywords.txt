@@ -76776,3 +76776,4 @@
 1757926123	VLAZ	kwater\.com
 1757927961	VLAZ	joinmytutor\.com
 1757928027	VLAZ	cits-qatar\.com
+1757929278	VLAZ	technomaxme\.com
