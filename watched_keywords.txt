@@ -70383,7 +70383,6 @@
 1738131959	VLAZ	vsure[\W_]*+consultancy(?!\.com(?<=vsureconsultancy\.com))
 1738132236	VLAZ	tbapk\.com
 1738134265	Dragonrage	softsvault\.viajes
-1738134382	VLAZ	jploft\.com
 1738134919	VLAZ	monkoutsourcing\.com
 1738134954	Cow	what[\W_]*+does[\W_]*+refundable[\W_]*+mean[\W_]*+on
 1738135155	Cow	at[\W_]*+priceline
