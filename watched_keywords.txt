@@ -76780,3 +76780,4 @@
 1757932222	Vickel	the-lastprice\.com
 1757935167	VLAZ	(?-i:1HEXEePCSwhZspkh7)(?#forms.gle)
 1757935903	Jeff Schaller	texasroadhousemenue\.com
+1757937003	Dan Getz	socialadleads\.com
