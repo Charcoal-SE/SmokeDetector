@@ -76783,3 +76783,4 @@
 1757937003	Dan Getz	socialadleads\.com
 1757937053	Dan Getz	notiqoo\.com
 1757937140	Dan Getz	notiqoo(?!\.com)
+1757937681	Dan Getz	shelflifecalculator\.site
