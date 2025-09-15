@@ -76775,3 +76775,4 @@
 1757922541	VLAZ	op77
 1757926123	VLAZ	kwater\.com
 1757927961	VLAZ	joinmytutor\.com
+1757928027	VLAZ	cits-qatar\.com
