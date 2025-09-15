@@ -76784,3 +76784,4 @@
 1757937053	Dan Getz	notiqoo\.com
 1757937140	Dan Getz	notiqoo(?!\.com)
 1757937681	Dan Getz	shelflifecalculator\.site
+1757938164	VLAZ	paymenton-line\.blogspot
