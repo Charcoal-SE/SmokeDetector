@@ -76767,3 +76767,4 @@
 1757920544	VLAZ	invivobioscience\.com
 1757920577	VLAZ	fmeextensions
 1757920771	VLAZ	sculpt[\W_]*+aesthetics
+1757921041	VLAZ	(?-i:^ALLA Santosh Pavan Kumar$)
