@@ -76803,3 +76803,4 @@
 1758002421	VLAZ	icore[\W_]*+software[\W_]*+technologies
 1758002538	Cow	visioninfotech\.net
 1758004396	VLAZ	cloudsciencelabs\.com
+1758004621	Cow	zippylend\.com
