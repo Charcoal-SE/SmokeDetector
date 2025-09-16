@@ -39299,7 +39299,6 @@
 1654704211	cigien	buy-magic-mushrooms\.org
 1654704907	cigien	onlybrowsers\.com
 1654705060	cigien	malinipackersandmovers\.com
-1654706492	cigien	crantia(?!\.com)
 1654706810	cigien	allnurses
 1654714023	cigien	flashtravel\.info
 1654715792	Makyen	medstar4x\.blogspot
