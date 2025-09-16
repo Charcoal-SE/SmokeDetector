@@ -76816,3 +76816,4 @@
 1758018672	VLAZ	crantia(?!\.com|\.ae)
 1758018681	VLAZ	crania\.ae
 1758021386	Jeff Schaller	gatehouse\.org
+1758021425	Jeff Schaller	skyplanetholidays\.com
