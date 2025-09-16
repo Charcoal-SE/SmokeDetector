@@ -76800,3 +76800,4 @@
 1757999925	VLAZ	musconvtool
 1758000333	VLAZ	nexopdf\.com
 1758002322	VLAZ	aundigital\.ae
+1758002421	VLAZ	icore[\W_]*+software[\W_]*+technologies
