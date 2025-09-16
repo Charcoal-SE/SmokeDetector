@@ -76809,3 +76809,4 @@
 1758006958	Cow	tcdownloader\.com
 1758009697	Cow	theflightexpress\.com
 1758011953	VLAZ	pakgame\.io
+1758012299	VLAZ	(?-i:0GeLmc)(?# 1kb.link)
