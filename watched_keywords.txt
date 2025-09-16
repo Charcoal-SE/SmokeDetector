@@ -76807,3 +76807,4 @@
 1758005098	VLAZ	zippylend(?!\.com)
 1758005796	Cow	macautomation\.com
 1758006958	Cow	tcdownloader\.com
+1758009697	Cow	theflightexpress\.com
