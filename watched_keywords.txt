@@ -76806,3 +76806,4 @@
 1758004621	Cow	zippylend\.com
 1758005098	VLAZ	zippylend(?!\.com)
 1758005796	Cow	macautomation\.com
+1758006958	Cow	tcdownloader\.com
