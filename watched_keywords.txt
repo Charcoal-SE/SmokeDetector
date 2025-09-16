@@ -76804,3 +76804,4 @@
 1758002538	Cow	visioninfotech\.net
 1758004396	VLAZ	cloudsciencelabs\.com
 1758004621	Cow	zippylend\.com
+1758005098	VLAZ	zippylend(?!\.com)
