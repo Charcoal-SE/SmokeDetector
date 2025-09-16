@@ -76814,3 +76814,4 @@
 1758017374	VLAZ	jobfie\.es
 1758017387	VLAZ	garagedoorrepairdallasusa\.com
 1758018672	VLAZ	crantia(?!\.com|\.ae)
+1758018681	VLAZ	crania\.ae
