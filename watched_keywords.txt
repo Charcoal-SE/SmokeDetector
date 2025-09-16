@@ -76815,3 +76815,4 @@
 1758017387	VLAZ	garagedoorrepairdallasusa\.com
 1758018672	VLAZ	crantia(?!\.com|\.ae)
 1758018681	VLAZ	crania\.ae
+1758021386	Jeff Schaller	gatehouse\.org
