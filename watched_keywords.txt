@@ -76813,3 +76813,4 @@
 1758017297	VLAZ	ksatravels\.pk
 1758017374	VLAZ	jobfie\.es
 1758017387	VLAZ	garagedoorrepairdallasusa\.com
+1758018672	VLAZ	crantia(?!\.com|\.ae)
