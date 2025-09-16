@@ -76812,3 +76812,4 @@
 1758012299	VLAZ	(?-i:0GeLmc)(?# 1kb.link)
 1758012987	Glorfindel	dbotx\.com
 1758017297	VLAZ	ksatravels\.pk
+1758017374	VLAZ	jobfie\.es
