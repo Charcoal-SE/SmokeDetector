@@ -76824,3 +76824,4 @@
 1758035857	Jeff Schaller	psikiyatrirehberi\.com\.tr
 1758036622	Dan Getz	cstleapp\.com
 1758039386	VLAZ	world[\W_]*+rehabilitate[\W_]*+clinic
+1758041054	Dan Getz	seo-fast\.ru
