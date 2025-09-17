@@ -76852,3 +76852,4 @@
 1758114305	lyxal	bebeburp\.com
 1758115013	VLAZ	bebe[\W_]*+burp(?!\.com(?<=bebeburp\.com))
 1758121079	VLAZ	digipromox\.com
+1758122297	Jeff Schaller	icvcertificate\.com
