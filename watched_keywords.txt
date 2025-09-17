@@ -76840,3 +76840,4 @@
 1758107499	Jeff Schaller	thejunkthief\.com
 1758107546	Jeff Schaller	flyandsaildubai\.com
 1758107598	Jeff Schaller	proaibox\.com
+1758107682	Dan Getz	traditional-herbalist-healer\.webnode
