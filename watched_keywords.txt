@@ -76826,3 +76826,4 @@
 1758039386	VLAZ	world[\W_]*+rehabilitate[\W_]*+clinic
 1758041054	Dan Getz	seo-fast\.ru
 1758041347	VLAZ	bottleneckcalculatorr\.com
+1758074578	Dan Getz	startgoodluck\.com
