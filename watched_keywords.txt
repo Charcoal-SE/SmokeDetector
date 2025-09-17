@@ -76850,3 +76850,4 @@
 1758111551	Vickel	(?-i:jjWevqw)(?# fiverr)
 1758113766	VLAZ	certifiedumps
 1758114305	lyxal	bebeburp\.com
+1758115013	VLAZ	bebe[\W_]*+burp(?!\.com(?<=bebeburp\.com))
