@@ -76875,3 +76875,4 @@
 1758191345	VLAZ	thedigitalzilla\.com
 1758191369	VLAZ	australialawwriters\.com
 1758191478	VLAZ	healthsaftey3\.wordpress\.com
+1758192269	VLAZ	com\.agileworks\.chordwise
