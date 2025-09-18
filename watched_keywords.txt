@@ -76871,3 +76871,4 @@
 1758185421	VLAZ	spotiffyapk\.com
 1758186373	VLAZ	buzzofnews\.com
 1758186402	VLAZ	parsvnath[\W_]*+exotica
+1758191329	VLAZ	farelabs\.com
