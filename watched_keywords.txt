@@ -76880,3 +76880,4 @@
 1758195873	Jeff Schaller	dotnet-az\.blogspot
 1758196350	Jeff Schaller	airrestore\.co\.nz
 1758197656	VLAZ	treeamigos-satx\.com
+1758201366	Dan Getz	staple\.ai
