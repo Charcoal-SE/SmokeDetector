@@ -76868,3 +76868,4 @@
 1758178693	VLAZ	tfi[\W_]*+punjabi
 1758184553	VLAZ	quickproc\.in
 1758184567	VLAZ	zkp\.com
+1758184610	VLAZ	codersera
