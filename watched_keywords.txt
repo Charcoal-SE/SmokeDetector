@@ -76870,3 +76870,4 @@
 1758184610	VLAZ	codersera
 1758185421	VLAZ	spotiffyapk\.com
 1758186373	VLAZ	buzzofnews\.com
+1758186402	VLAZ	parsvnath[\W_]*+exotica
