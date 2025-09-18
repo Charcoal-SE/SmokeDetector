@@ -76867,3 +76867,4 @@
 1758178010	VLAZ	rekeyxpress\.com
 1758178693	VLAZ	tfi[\W_]*+punjabi
 1758184553	VLAZ	quickproc\.in
+1758184567	VLAZ	zkp\.com
