@@ -76872,3 +76872,4 @@
 1758186373	VLAZ	buzzofnews\.com
 1758186402	VLAZ	parsvnath[\W_]*+exotica
 1758191329	VLAZ	farelabs\.com
+1758191345	VLAZ	thedigitalzilla\.com
