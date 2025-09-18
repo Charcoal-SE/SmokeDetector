@@ -76866,3 +76866,4 @@
 1758177576	VLAZ	spotifycraccato\.com
 1758178010	VLAZ	rekeyxpress\.com
 1758178693	VLAZ	tfi[\W_]*+punjabi
+1758184553	VLAZ	quickproc\.in
