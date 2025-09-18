@@ -76876,3 +76876,4 @@
 1758191369	VLAZ	australialawwriters\.com
 1758191478	VLAZ	healthsaftey3\.wordpress\.com
 1758192269	VLAZ	com\.agileworks\.chordwise
+1758192276	VLAZ	chordwise\.app
