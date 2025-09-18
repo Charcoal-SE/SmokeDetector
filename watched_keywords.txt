@@ -76873,3 +76873,4 @@
 1758186402	VLAZ	parsvnath[\W_]*+exotica
 1758191329	VLAZ	farelabs\.com
 1758191345	VLAZ	thedigitalzilla\.com
+1758191369	VLAZ	australialawwriters\.com
