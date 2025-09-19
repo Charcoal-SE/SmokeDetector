@@ -76897,3 +76897,4 @@
 1758265613	VLAZ	icertglobal\.com
 1758266581	VLAZ	nhsnumber\.com
 1758267166	VLAZ	anrtaxfilings\.com
+1758267567	VLAZ	derma[\W_]*+vends
