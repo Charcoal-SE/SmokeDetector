@@ -76899,3 +76899,4 @@
 1758267567	VLAZ	derma[\W_]*+vends
 1758271632	VLAZ	tobydrop
 1758277697	Dan Getz	smartkeeda\.com
+1758278424	VLAZ	hafeezcentre\.pk
