@@ -76919,3 +76919,4 @@
 1758366173	Dan Getz	gbwhatsap\.id
 1758368459	Jeff Schaller	cayroshop\.com
 1758377720	Dan Getz	kami11361(?#t.me)
+1758378261	Dan Getz	mighty[\W_]*+hackar[\W_]*+recovery(?!\.com(?<=mightyhackarrecovery\.com))
