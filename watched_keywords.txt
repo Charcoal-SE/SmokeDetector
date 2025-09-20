@@ -76917,3 +76917,4 @@
 1758364892	VLAZ	mechatronrobotics\.com
 1758364990	VLAZ	dev[\W_]*+technosys(?!\.com(?<=devtechnosys\.com))
 1758366173	Dan Getz	gbwhatsap\.id
+1758368459	Jeff Schaller	cayroshop\.com
