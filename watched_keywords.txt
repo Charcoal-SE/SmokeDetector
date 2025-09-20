@@ -76912,3 +76912,4 @@
 1758352969	VLAZ	veda[\W_]*+academy(?!\.in(?<=vedaacademy\.in))
 1758360261	Nisse Engström	veineux\.com
 1758363672	Jeff Schaller	foodresearchlab\.com
+1758364158	Jeff Schaller	shine-stone\.ch
