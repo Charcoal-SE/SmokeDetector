@@ -76909,3 +76909,4 @@
 1758352142	VLAZ	promove\.au
 1758352153	VLAZ	dailymaxcleaningservices\.com
 1758352740	VLAZ	skillwint
+1758352969	VLAZ	veda[\W_]*+academy(?!\.in(?<=vedaacademy\.in))
