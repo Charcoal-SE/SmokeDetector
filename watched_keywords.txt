@@ -76910,3 +76910,4 @@
 1758352153	VLAZ	dailymaxcleaningservices\.com
 1758352740	VLAZ	skillwint
 1758352969	VLAZ	veda[\W_]*+academy(?!\.in(?<=vedaacademy\.in))
+1758360261	Nisse Engström	veineux\.com
