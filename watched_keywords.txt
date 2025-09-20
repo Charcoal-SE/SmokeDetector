@@ -76915,3 +76915,4 @@
 1758364158	Jeff Schaller	shine-stone\.ch
 1758364885	VLAZ	moonpreneur\.com
 1758364892	VLAZ	mechatronrobotics\.com
+1758364990	VLAZ	dev[\W_]*+technosys(?!\.com(?<=devtechnosys\.com))
