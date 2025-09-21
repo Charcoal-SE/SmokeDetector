@@ -76922,3 +76922,4 @@
 1758378261	Dan Getz	mighty[\W_]*+hackar[\W_]*+recovery(?!\.com(?<=mightyhackarrecovery\.com))
 1758385640	Dan Getz	simulatorsmodapk\.com
 1758390254	Dan Getz	theipptcalculator\.com
+1758419083	Dan Getz	loantapfinancial(?:@yahoo\.com)?
