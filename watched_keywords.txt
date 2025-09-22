@@ -76939,3 +76939,4 @@
 1758526307	VLAZ	hirestar(?!\.io)
 1758526314	VLAZ	hirestar\.io
 1758527778	VLAZ	shopkapaas\.in
+1758534212	VLAZ	cloudairy
