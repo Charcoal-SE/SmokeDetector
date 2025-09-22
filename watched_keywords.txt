@@ -76946,3 +76946,4 @@
 1758538025	VLAZ	appser\.it
 1758538765	VLAZ	thejournalpublications\.com
 1758539648	Cow	mysmartup\.in
+1758539715	Cow	salemmango\.com
