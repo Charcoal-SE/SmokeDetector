@@ -76941,3 +76941,4 @@
 1758527778	VLAZ	shopkapaas\.in
 1758534212	VLAZ	cloudairy
 1758534248	VLAZ	etg\.digital
+1758534564	VLAZ	hostingwala\.pk
