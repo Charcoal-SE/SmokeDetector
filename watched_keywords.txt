@@ -76937,3 +76937,4 @@
 1758524737	VLAZ	greennaturefarmscbdgummieswebsite\.blogspot
 1758524781	VLAZ	jobnextlevel\.team
 1758526307	VLAZ	hirestar(?!\.io)
+1758526314	VLAZ	hirestar\.io
