@@ -76965,3 +76965,4 @@
 1758601116	VLAZ	gowebdigitalmarketer\.com
 1758601123	VLAZ	go[\W_]*+web[\W_]*+digital[\W_]*+marketer(?!\.com(?<=gowebdigitalmarketer\.com))
 1758601411	VLAZ	tadatools\.com
+1758607369	Cow	supremeabrasives\.in
