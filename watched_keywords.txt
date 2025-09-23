@@ -76969,3 +76969,4 @@
 1758608064	VLAZ	doorbellgears\.com
 1758610046	Glorfindel	tadatools
 1758611275	Cow	marketplace\.uvation\.com
+1758612723	VLAZ	treety[\W_]*+foods
