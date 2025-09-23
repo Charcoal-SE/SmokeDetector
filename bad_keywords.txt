@@ -3904,3 +3904,4 @@ marriagehelper91(?#@gmail.com)
 𝑅𝑜𝒷𝒾𝓃𝒽𝑜𝑜𝒹
 P2PExams
 recoveryexpert326
+mighty[\W_]*+hackar[\W_]*+recovery(?!\.com(?<=mightyhackarrecovery\.com))
