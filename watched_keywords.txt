@@ -76980,3 +76980,4 @@
 1758632949	VLAZ	vessot\.tech
 1758633671	Jeff Schaller	Syntaxroom
 1758633716	Jeff Schaller	truebiddata\.com
+1758633771	VLAZ	knowledgecity
