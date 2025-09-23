@@ -76964,3 +76964,4 @@
 1758577055	Vickel	(?-i:bonuscasino_rus)(?#t.me)
 1758601116	VLAZ	gowebdigitalmarketer\.com
 1758601123	VLAZ	go[\W_]*+web[\W_]*+digital[\W_]*+marketer(?!\.com(?<=gowebdigitalmarketer\.com))
+1758601411	VLAZ	tadatools\.com
