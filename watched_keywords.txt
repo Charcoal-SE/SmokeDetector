@@ -76981,4 +76981,3 @@
 1758638320	VLAZ	paulscreationids\.com
 1758639666	VLAZ	pglive(?!\.sources)
 1758646327	Jeff Schaller	cybershield39(?:@gmail\.com)?
-1758646347	VLAZ	(?-i:CYBER[\W_]*+SHIELD[\W_]*+RECOVERY[\W_]*+TEAM)
