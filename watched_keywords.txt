@@ -41340,7 +41340,6 @@
 1660574776	cigien	itstalker\.ru
 1660574816	cigien	hrseoservices\.com
 1660576070	cigien	hassanbilal\.net
-1660579025	Makyen	pglive
 1660579185	cigien	pgslot\.link
 1660581674	Ollie	innovabc\.com\.ar
 1660587104	Makyen	fmwhatsapp[\W_]*+apk
