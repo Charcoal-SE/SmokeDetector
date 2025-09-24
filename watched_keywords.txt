@@ -77009,3 +77009,4 @@
 1758737952	Jeff Schaller	Alnaya[\W_]*+CSP[\W_]*+LLC
 1758743546	Fastnlight	exhibitorly\.com
 1758747156	Jeff Schaller	jennysmods\.com
+1758751683	Jeff Schaller	clickshop\.com\.pk
