@@ -76996,3 +76996,4 @@
 1758718721	VLAZ	7sim\.cc
 1758720592	VLAZ	bahiskurdu\.net
 1758721692	lyxal	nikaah\.pk
+1758721998	lyxal	studyvista\.pk
