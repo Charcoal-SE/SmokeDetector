@@ -74781,7 +74781,6 @@
 1751453846	Jeff Schaller	digiworldwordpress\.liveblog365\.com
 1751453882	Jeff Schaller	thereddybook\.org
 1751455100	VLAZ	heyconcrete\.com
-1751455176	VLAZ	mcdowellglass\.com
 1751455793	VLAZ	Tashan[\W_]*+Gaming
 1751455876	Jeff Schaller	BOL7
 1751459161	Jeff Schaller	langitnusa\.com
