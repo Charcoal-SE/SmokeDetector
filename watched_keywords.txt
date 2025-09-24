@@ -77004,3 +77004,4 @@
 1758723688	VLAZ	winity\.one
 1758723696	VLAZ	19457\.gameshere\.xyz
 1758725377	VLAZ	cinejackets\.com
+1758732243	VLAZ	(?:doctor|dr)[\W_]*+anushika
