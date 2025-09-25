@@ -77026,3 +77026,4 @@
 1758788898	Cow	real\.discount
 1758789175	Cow	asgame\.cloud
 1758793270	VLAZ	chameleogfxstudio\.com
+1758798876	Glorfindel	beckestimating\.com
