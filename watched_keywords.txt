@@ -77035,3 +77035,4 @@
 1758814822	VLAZ	finitdigital\.com
 1758814972	VLAZ	finit[\W_]*+digital\d*(?!\.com(?<=finitdigital\.com))
 1758816894	Vickel	mexicanmusiclibrary\.com
+1758821487	VLAZ	secretabudhabi\.ae
