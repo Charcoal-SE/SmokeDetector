@@ -77027,3 +77027,4 @@
 1758789175	Cow	asgame\.cloud
 1758793270	VLAZ	chameleogfxstudio\.com
 1758798876	Glorfindel	beckestimating\.com
+1758798946	Jeff Schaller	arrowwingsacademy\.com
