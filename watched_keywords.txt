@@ -76217,7 +76217,6 @@
 1755887720	Dan Getz	thehypicapk\.com
 1755890676	Glorfindel	maplity
 1755901530	Dan Getz	fixerrec[\W_]++c[\W_]*+o[\W_]*+m
-1755909163	Dan Getz	dj[\W_]*+mix[\W_]*+veg
 1755910403	Dan Getz	changedetection\.io
 1755910748	Dan Getz	monkeymart\.one
 1755917560	Dan Getz	(?-i:^Lan Daniel Key$)
