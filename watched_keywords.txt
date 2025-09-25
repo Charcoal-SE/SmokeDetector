@@ -77033,4 +77033,3 @@
 1758810092	Jeff Schaller	qtdrivingschool\.com
 1758812450	VLAZ	dotnetstuffs\.com
 1758814822	VLAZ	finitdigital\.com
-1758814902	VLAZ	finit[\W_]*+digital(?!\.com(?<=finitdigital\.com))
