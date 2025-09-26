@@ -77048,3 +77048,4 @@
 1758862854	VLAZ	(?-i:^Digitel Marketing Chameza$)
 1758866872	Cow	tattootech\.in
 1758869100	Cow	fixstlouis\.com
+1758869973	VLAZ	ourorganizedspaces\.net
