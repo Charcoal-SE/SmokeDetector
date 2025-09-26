@@ -77043,3 +77043,4 @@
 1758860874	VLAZ	(?-i:Ea82Vz5pk2Y7uH817)(?#forms.gle)
 1758860923	VLAZ	alboshiasafety\.com
 1758860961	VLAZ	crystal[\W_]*+zior
+1758860980	VLAZ	vapevapego\.com
