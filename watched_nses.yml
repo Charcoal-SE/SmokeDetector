@@ -5265,7 +5265,9 @@ items:
   disable: true
   ns: hostwithconfidence.com.
 - ns: weboasis.ae.
-- ns: readymatrimony.com.
+- comment: 2025-09-24 NXDOMAIN on CircleCI, but not GitHub Actions
+  disable: true
+  ns: readymatrimony.com.
 - comment: 2023-05-06 NXDOMAIN; enabled again 2024-10-18; NoAnswer 2025-05-31
   disable: true
   ns: concepts8.com.
