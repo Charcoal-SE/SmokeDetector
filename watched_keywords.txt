@@ -77047,3 +77047,4 @@
 1758861685	lyxal	turnkey[\W_]*+laboratory[\W_]*+installation
 1758862726	VLAZ	gradious\.com
 1758862854	VLAZ	(?-i:^Digitel Marketing Chameza$)
+1758866872	Cow	tattootech\.in
