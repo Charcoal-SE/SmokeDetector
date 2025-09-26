@@ -77063,3 +77063,4 @@
 1758900697	Jeff Schaller	thegermanfreak\.com
 1758906633	VLAZ	imtiazitpro\.blogspot
 1758912711	VLAZ	tekstream\.com
+1758925984	Dan Getz	d3d\.ai
