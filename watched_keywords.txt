@@ -77044,3 +77044,4 @@
 1758860923	VLAZ	alboshiasafety\.com
 1758860961	VLAZ	crystal[\W_]*+zior
 1758860980	VLAZ	vapevapego\.com
+1758861685	lyxal	turnkey[\W_]*+laboratory[\W_]*+installation
