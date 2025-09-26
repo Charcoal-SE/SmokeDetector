@@ -77040,3 +77040,4 @@
 1758839582	Vickel	in[\W_]*+the[\W_]*+world[\W_]*+to[\W_]*+the[\W_]*+world
 1758860861	VLAZ	external-cmo\.com
 1758860867	VLAZ	jicoo\.com
+1758860874	VLAZ	(?-i:Ea82Vz5pk2Y7uH817)(?#forms.gle)
