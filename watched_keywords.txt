@@ -77071,3 +77071,4 @@
 1758956541	VLAZ	recoverytools[\W_]*+msg[\W_]*+to[\W_]*+office[\W_]*+365[\W_]*+migrator
 1758957403	VLAZ	(?-i:nihaoiybot)(?#t.me)
 1758958273	VLAZ	aviatorcoats\.com
+1758960725	VLAZ	accessoriespark\.com
