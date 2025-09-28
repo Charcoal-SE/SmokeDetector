@@ -77089,3 +77089,4 @@
 1759061187	Vickel	kaiyunhk\.com
 1759064883	Vickel	theleomagazine\.com
 1759064985	Vickel	theleomagazine(?!\.com)
+1759082089	VLAZ	azscore(?!\.ng)(?!\.co\.it)
