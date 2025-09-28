@@ -77090,3 +77090,4 @@
 1759064883	Vickel	theleomagazine\.com
 1759064985	Vickel	theleomagazine(?!\.com)
 1759082089	VLAZ	azscore(?!\.ng)(?!\.co\.it)
+1759084596	Vickel	thelostgeneratorofficial\.com
