@@ -47537,7 +47537,6 @@
 1677689920	Jesse	v-mediaweb\.com
 1677692359	Jesse	dexnav\.com
 1677698738	Ryan M	azscore\.ng
-1677698772	Ryan M	azscore(?!\.ng)
 1677699404	Ryan M	socanadiancasino\.com
 1677700309	Makyen	fscore\.org\.uk
 1677711586	Nisse Engström	remodelersaustintx\.com
