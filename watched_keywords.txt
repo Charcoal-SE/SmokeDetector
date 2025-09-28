@@ -77091,3 +77091,4 @@
 1759064985	Vickel	theleomagazine(?!\.com)
 1759082089	VLAZ	azscore(?!\.ng)(?!\.co\.it)
 1759084596	Vickel	thelostgeneratorofficial\.com
+1759084895	Vickel	the[\W_]*+lost[\W_]*+generator[\W_]*+official(?!\.com(?<=thelostgeneratorofficial\.com))
