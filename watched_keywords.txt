@@ -77098,3 +77098,4 @@
 1759120493	VLAZ	ahbonus-kaart\.nl
 1759125403	Cow	bubbaco\.com\.au
 1759125461	Cow	nedesestimating\.com
+1759125907	VLAZ	fasalkranti\.in
