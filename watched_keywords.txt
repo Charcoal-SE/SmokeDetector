@@ -77102,3 +77102,4 @@
 1759126737	VLAZ	hdbfs
 1759126946	Cow	imobisoft\.co\.uk
 1759127509	Cow	ytthumbnailsgrab\.com
+1759129037	Cow	tuition\.pk
