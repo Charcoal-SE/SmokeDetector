@@ -77108,3 +77108,4 @@
 1759138165	Dan Getz	kanikadesign\.com
 1759138367	Dan Getz	faizantechcore\.com
 1759140638	VLAZ	alhalalcosmetics\.nl
+1759140705	VLAZ	psychic[\W_]*+smith
