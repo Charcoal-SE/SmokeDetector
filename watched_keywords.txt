@@ -77112,3 +77112,4 @@
 1759142072	VLAZ	bright[\W_]*+adverts
 1759142224	VLAZ	hiranandanikrisalatownships\.com
 1759142295	VLAZ	A52100019166
+1759142336	Jeff Schaller	larsmedicare\.com
