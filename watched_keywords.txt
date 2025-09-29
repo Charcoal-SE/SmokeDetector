@@ -77120,3 +77120,4 @@
 1759154283	Jeff Schaller	tvscube\.com
 1759155778	Jeff Schaller	kenoxisav\.com
 1759157505	Dan Getz	instantprofit\.com
+1759162702	Jeff Schaller	techadeptly\.com
