@@ -77100,3 +77100,4 @@
 1759125907	VLAZ	fasalkranti\.in
 1759126730	VLAZ	hdb[\W_]*+financial[\W_]*+services
 1759126737	VLAZ	hdbfs
+1759126946	Cow	imobisoft\.co\.uk
