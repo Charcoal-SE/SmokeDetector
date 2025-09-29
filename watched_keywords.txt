@@ -77096,3 +77096,4 @@
 1759119696	VLAZ	(?:dr|doctor)[\W_]*+intercessor
 1759120040	VLAZ	dr[\W_]*+jama
 1759120493	VLAZ	ahbonus-kaart\.nl
+1759125403	Cow	bubbaco\.com\.au
