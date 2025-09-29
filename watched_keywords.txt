@@ -77122,3 +77122,4 @@
 1759157505	Dan Getz	instantprofit\.com
 1759162702	Jeff Schaller	techadeptly\.com
 1759163875	Vickel	pixelwritingstudio\.com
+1759165758	Vickel	acronis\.com
