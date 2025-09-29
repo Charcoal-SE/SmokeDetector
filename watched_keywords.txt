@@ -59527,7 +59527,6 @@
 1711171810	Nick	personaltouchaesthetic\.com
 1711171874	Nick	Personal[\W_]*+Touch[\W_]*+Aesthetics?(?!\.com(?<=personaltouchaesthetic\.com))
 1711175956	VLAZ	1x99p(?#2ly.link)
-1711184602	Cow	tru-path\.org
 1711184625	Cow	flstudiocrack\.click
 1711186221	Nick	grammarpalette\.com
 1711186293	Nick	hellokhunmor\.com
