@@ -77093,3 +77093,4 @@
 1759084596	Vickel	thelostgeneratorofficial\.com
 1759084895	Vickel	the[\W_]*+lost[\W_]*+generator[\W_]*+official(?!\.com(?<=thelostgeneratorofficial\.com))
 1759119597	lyxal	terminalsworld\.com
+1759119696	VLAZ	(?:dr|doctor)[\W_]*+intercessor
