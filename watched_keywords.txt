@@ -77110,3 +77110,4 @@
 1759140638	VLAZ	alhalalcosmetics\.nl
 1759140705	VLAZ	psychic[\W_]*+smith
 1759142072	VLAZ	bright[\W_]*+adverts
+1759142224	VLAZ	hiranandanikrisalatownships\.com
