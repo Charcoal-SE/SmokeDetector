@@ -77109,3 +77109,4 @@
 1759138367	Dan Getz	faizantechcore\.com
 1759140638	VLAZ	alhalalcosmetics\.nl
 1759140705	VLAZ	psychic[\W_]*+smith
+1759142072	VLAZ	bright[\W_]*+adverts
