@@ -77147,3 +77147,4 @@
 1759233337	VLAZ	mathcheap\.xyz
 1759234449	VLAZ	stackmention\.com
 1759234851	VLAZ	rankmath
+1759253181	Dan Getz	aichmv\.com
