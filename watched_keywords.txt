@@ -77128,3 +77128,4 @@
 1759205680	VLAZ	amtraktrainstations\.com
 1759208638	lyxal	seqops\.io
 1759209250	lyxal	purecybin\.co\.uk
+1759211356	lyxal	skye-carrental\.com
