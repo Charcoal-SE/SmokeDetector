@@ -5206,7 +5206,9 @@ items:
 - comment: dominantly FP 2024-04-23
   disable: true
   ns: epik.com.
-- ns: terabytesserver.com.
+- comment: NXDOMAIN 2025-09-30
+  disable: true
+  ns: terabytesserver.com.
 - ns:
   - ns1cmt.name.com.
   - ns2gtx.name.com.
