@@ -77132,3 +77132,4 @@
 1759213346	VLAZ	oneunionsolutions\.com
 1759213361	VLAZ	ict\.net\.pk
 1759214292	VLAZ	Fasal[\W_]*+Kranti(?!\.in(?<=fasalkranti\.in))
+1759214569	VLAZ	snakequery\.com
