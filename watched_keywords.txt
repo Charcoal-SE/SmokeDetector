@@ -77133,3 +77133,4 @@
 1759213361	VLAZ	ict\.net\.pk
 1759214292	VLAZ	Fasal[\W_]*+Kranti(?!\.in(?<=fasalkranti\.in))
 1759214569	VLAZ	snakequery\.com
+1759215752	Glorfindel	transorg\.ai
