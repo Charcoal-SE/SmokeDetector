@@ -77135,3 +77135,4 @@
 1759214569	VLAZ	snakequery\.com
 1759215752	Glorfindel	transorg\.ai
 1759228280	Dan Getz	financesquire\.com
+1759228310	Dan Getz	abmedia-team\.com
