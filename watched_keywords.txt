@@ -77153,3 +77153,4 @@
 1759311743	VLAZ	inspidecor\.in
 1759313442	VLAZ	wirausahagroup\.com
 1759313449	VLAZ	wirausahagroup(?!\.com)
+1759315253	Jeff Schaller	tekchive\.com
