@@ -77164,3 +77164,4 @@
 1759323737	Jeff Schaller	lvlupboost\.com
 1759325637	lyxal	osteopilatesivrea\.it
 1759326574	lyxal	kitchen\.services
+1759326595	lyxal	(?-i:Kitchen[\W_]*+Services[\W_]*+Los[\W_]*+Angeles)
