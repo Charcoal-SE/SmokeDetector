@@ -6,7 +6,7 @@
 [![Open issues](https://img.shields.io/github/issues/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/issues)
 [![Open PRs](https://img.shields.io/github/issues-pr/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/pulls)
 
-Headless chatbot that detects spam and posts it to chatrooms.
+A headless chatbot that detects spam and posts it to chatrooms.
 Uses [ChatExchange](https://github.com/Manishearth/ChatExchange),
 takes questions from the Stack Exchange
 [realtime tab](https://stackexchange.com/questions?tab=realtime),
@@ -35,7 +35,7 @@ sudo pip3 install -r requirements.txt --upgrade
 pip3 install --user -r user_requirements.txt --upgrade
 ```
 
-Next, copy `config.sample` to a new file called `config`,
+Next, copy `config.sample` to a new file named `config`,
 and edit the values required.
 
 To run, use `python3 nocrash.py`
