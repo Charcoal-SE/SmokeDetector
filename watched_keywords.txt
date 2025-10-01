@@ -77158,3 +77158,4 @@
 1759317744	VLAZ	roknalthiqa\.com
 1759317846	VLAZ	serpnode\.com
 1759318511	Jeff Schaller	educationforyoungminds\.org
+1759320402	Dan Getz	UCMarkets
