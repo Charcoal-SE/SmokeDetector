@@ -77166,3 +77166,4 @@
 1759326595	lyxal	(?-i:Kitchen[\W_]*+Services[\W_]*+Los[\W_]*+Angeles)
 1759333538	VLAZ	linkterbaru\.info
 1759345214	Dan Getz	mydummyapi\.com
+1759350099	Jeff Schaller	Sleep[\W_]*+Lean
