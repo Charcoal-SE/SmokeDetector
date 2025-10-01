@@ -77168,3 +77168,4 @@
 1759345214	Dan Getz	mydummyapi\.com
 1759350099	Jeff Schaller	Sleep[\W_]*+Lean
 1759353644	Dan Getz	GlowTips
+1759355239	Vickel	(?-i:ycyu3hdd)(?#tinyurl.com)
