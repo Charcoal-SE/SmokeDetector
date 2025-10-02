@@ -77174,3 +77174,4 @@
 1759405852	VLAZ	cawdrec\.com
 1759414569	VLAZ	ja[\W_]*+rahe
 1759421765	Dan Getz	mangathrone\.com
+1759423451	Jeff Schaller	visaxpress\.ca
