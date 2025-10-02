@@ -77169,3 +77169,4 @@
 1759350099	Jeff Schaller	Sleep[\W_]*+Lean
 1759353644	Dan Getz	GlowTips
 1759355239	Vickel	(?-i:ycyu3hdd)(?#tinyurl.com)
+1759380073	VLAZ	luatnguyenle\.com
