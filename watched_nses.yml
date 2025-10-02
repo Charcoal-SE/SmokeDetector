@@ -4148,7 +4148,9 @@ items:
 - comment: 21/291 over 8 months (some weight 1)
   disable: true
   ns: hover.com.
-- ns: stechsky.com.
+- comment: 2025-10-02 NXDOMAIN
+  disable: true
+  ns: stechsky.com.
 - ns: loopbyte.com.
 - comment: no longer responding 2020-04-02
   disable: true
