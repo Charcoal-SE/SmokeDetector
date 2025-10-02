@@ -77173,3 +77173,4 @@
 1759393184	VLAZ	tmtpricetoday\.com
 1759405852	VLAZ	cawdrec\.com
 1759414569	VLAZ	ja[\W_]*+rahe
+1759421765	Dan Getz	mangathrone\.com
