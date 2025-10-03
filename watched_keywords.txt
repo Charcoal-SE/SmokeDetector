@@ -77190,3 +77190,4 @@
 1759487138	VLAZ	calmoura\.com
 1759487146	VLAZ	calmoura(?!\.com)
 1759489079	Jeff Schaller	mykohlscard\.click
+1759491740	Jeff Schaller	worldcitizenconsultants\.com
