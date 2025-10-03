@@ -77182,3 +77182,4 @@
 1759467138	VLAZ	sora[\W_]*+2
 1759471614	VLAZ	magixbowl\.com
 1759475774	VLAZ	bisonlifeusa\.com
+1759475890	VLAZ	drfamous\s*+@\s*+angelic\s*+\.\s*+com
