@@ -77180,3 +77180,4 @@
 1759441006	Dan Getz	referilink\.com
 1759441178	Dan Getz	3patti[a-z0-9-]*+\.[a-z]{2,}
 1759467138	VLAZ	sora[\W_]*+2
+1759471614	VLAZ	magixbowl\.com
