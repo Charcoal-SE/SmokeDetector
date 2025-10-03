@@ -4135,7 +4135,9 @@ items:
 - comment: 14/52 over a year
   disable: true
   ns: justhost.com.
-- ns: stupidblogger.com.
+- comment: 2025-10-03 NXDOMAIN on CircleCI, but not GitHub Actions
+  disable: true
+  ns: stupidblogger.com.
 - comment: no longer responding 2020-11-06; enabled again 2024-10-18
   ns: omnilinks.net.
 - ns: servconfig.com.
