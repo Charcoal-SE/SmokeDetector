@@ -77205,3 +77205,4 @@
 1759512565	Dan Getz	systoolssoftwareprivatelimited1632140387066(?#appsource.microsoft.com)
 1759514676	Fastnlight	92go55game\.com
 1759526767	Dan Getz	testartecladoonline\.com\.br
+1759531705	Fastnlight	circuitbasics\.com
