@@ -77188,3 +77188,4 @@
 1759486732	VLAZ	yicenprecision\.com
 1759487070	VLAZ	seaviewbuildingsolutions\.com
 1759487138	VLAZ	calmoura\.com
+1759487146	VLAZ	calmoura(?!\.com)
