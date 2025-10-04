@@ -77207,3 +77207,4 @@
 1759531705	Fastnlight	circuitbasics\.com
 1759564495	VLAZ	outbacksteakhousemenu\.us
 1759564716	VLAZ	finit[\W_]*+digital\d*+(?!\.com(?<=finitdigital\.com))
+1759573965	VLAZ	cozyabodeliving\.com
