@@ -77217,3 +77217,4 @@
 1759629553	Jeff Schaller	metalworksplus\.com
 1759629579	Jeff Schaller	ssprecision\.com\.cn
 1759629608	Jeff Schaller	newswineus\.xyz
+1759643524	VLAZ	analog-power-design\.com
