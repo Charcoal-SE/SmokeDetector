@@ -77215,3 +77215,4 @@
 1759579121	Dan Getz	tiptobuy\.com
 1759579543	Dan Getz	(?-i:^dhoni4455$)
 1759629553	Jeff Schaller	metalworksplus\.com
+1759629579	Jeff Schaller	ssprecision\.com\.cn
