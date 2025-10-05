@@ -77225,3 +77225,4 @@
 1759657823	VLAZ	(?-i:kirtidabhatt)(?# www.youtube.com)
 1759665192	Vickel	shodzur(?:@gmail\.com)?
 1759666874	VLAZ	o[\W_]*+p[\W_]*+painting
+1759670126	VLAZ	JO777
