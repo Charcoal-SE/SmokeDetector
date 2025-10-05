@@ -77232,3 +77232,4 @@
 1759681581	Vickel	puertabisagra\.es
 1759683374	Vickel	togel2win[\W_]*+music
 1759683569	VLAZ	(?-i:togel2win-utama)(?#heylink.me)
+1759683585	VLAZ	togel2win
