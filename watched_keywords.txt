@@ -77229,3 +77229,4 @@
 1759670829	VLAZ	alightmotionproapp\.com
 1759674655	Dan Getz	smmzoneusa(?!\.com)\d*+
 1759674666	Dan Getz	smmzoneusa\.com
+1759681581	Vickel	puertabisagra\.es
