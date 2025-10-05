@@ -77227,4 +77227,3 @@
 1759666874	VLAZ	o[\W_]*+p[\W_]*+painting
 1759670126	VLAZ	JO777
 1759670829	VLAZ	alightmotionproapp\.com
-1759674129	Dan Getz	smmzoneusa\d?
