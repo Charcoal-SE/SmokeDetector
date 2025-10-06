@@ -77255,3 +77255,4 @@
 1759749353	VLAZ	dohoralifestyle\.com
 1759749485	VLAZ	Sinarplus\d*+
 1759751863	VLAZ	shieldx\.dev
+1759751870	VLAZ	shieldx(?!\.dev)
