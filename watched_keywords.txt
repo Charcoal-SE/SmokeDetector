@@ -77247,3 +77247,4 @@
 1759742584	VLAZ	acebestbuy\.shop
 1759742661	VLAZ	mgormandental\.com
 1759742668	VLAZ	gorman[\W_]*+health[\W_]*+wellness
+1759743958	Dan Getz	digitalsetgo\.com
