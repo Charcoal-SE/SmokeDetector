@@ -77257,3 +77257,4 @@
 1759752196	VLAZ	yashrajsolutions\.com
 1759755413	Jeff Schaller	play-banda-two\.com
 1759764429	VLAZ	hriqtests\.com
+1759765864	VLAZ	gojatt\.com
