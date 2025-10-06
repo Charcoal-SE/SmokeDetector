@@ -77256,3 +77256,4 @@
 1759751863	VLAZ	shieldx\.dev
 1759751870	VLAZ	shieldx(?!\.dev)
 1759752196	VLAZ	yashrajsolutions\.com
+1759755413	Jeff Schaller	play-banda-two\.com
