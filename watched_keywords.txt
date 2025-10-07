@@ -77272,3 +77272,4 @@
 1759819140	VLAZ	candy[\W_]*+ai[\W_]*+clone
 1759820088	VLAZ	snaptroid2\.cc
 1759820466	VLAZ	snaptube-baixar\.com
+1759820793	VLAZ	vape[\W_]*+aah(?!\.co\.uk(?<=vapeaah\.co\.uk))
