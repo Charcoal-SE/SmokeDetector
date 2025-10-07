@@ -77289,3 +77289,4 @@
 1759854315	Dan Getz	adygen\.com
 1759856056	Jeff Schaller	lockmonster\.co\.uk
 1759863661	Jeff Schaller	lumea\.io
+1759866320	Vickel	fastiptools\.com
