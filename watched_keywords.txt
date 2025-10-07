@@ -77277,3 +77277,4 @@
 1759827034	VLAZ	(?-i:Lk3BAaNGToYHwxoL)(?# share.google)
 1759828606	VLAZ	draimenziadentalclinic\.ae
 1759830289	VLAZ	boombavest\.com
+1759830296	VLAZ	boombavest(?!\.com)
