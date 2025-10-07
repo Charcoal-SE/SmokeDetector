@@ -77268,3 +77268,4 @@
 1759810244	Cow	chartmekko\.com
 1759813779	Cow	btob\.scrt\.co\.uk
 1759815072	Cow	aromaflickcandle\.pk
+1759817098	Cow	viessmann-cold\.com
