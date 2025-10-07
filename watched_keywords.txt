@@ -77273,3 +77273,4 @@
 1759820466	VLAZ	snaptube-baixar\.com
 1759820793	VLAZ	vape[\W_]*+aah(?!\.co\.uk(?<=vapeaah\.co\.uk))
 1759821814	VLAZ	drgmedicalsolutions\.com
+1759826941	VLAZ	documentshred\.com\.au
