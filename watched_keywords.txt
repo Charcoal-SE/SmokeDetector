@@ -77282,3 +77282,4 @@
 1759832598	VLAZ	agilo[\W_]*+skill
 1759833953	Glorfindel	orderzup\.com
 1759835016	Dan Getz	angeldecorators\.com
+1759840019	Dan Getz	plumlogix\.com
