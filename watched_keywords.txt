@@ -77274,3 +77274,4 @@
 1759820793	VLAZ	vape[\W_]*+aah(?!\.co\.uk(?<=vapeaah\.co\.uk))
 1759821814	VLAZ	drgmedicalsolutions\.com
 1759826941	VLAZ	documentshred\.com\.au
+1759827034	VLAZ	(?-i:Lk3BAaNGToYHwxoL)(?# share.google)
