@@ -77279,3 +77279,4 @@
 1759830289	VLAZ	boombavest\.com
 1759830296	VLAZ	boombavest(?!\.com)
 1759831901	VLAZ	wclcouriers\.com
+1759832598	VLAZ	agilo[\W_]*+skill
