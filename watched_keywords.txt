@@ -77288,3 +77288,4 @@
 1759851549	VLAZ	lowfade-haircut\.com
 1759854315	Dan Getz	adygen\.com
 1759856056	Jeff Schaller	lockmonster\.co\.uk
+1759863661	Jeff Schaller	lumea\.io
