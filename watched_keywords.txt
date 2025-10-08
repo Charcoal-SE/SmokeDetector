@@ -77308,3 +77308,4 @@
 1759914039	VLAZ	tagshop[\W_]*+ai
 1759917150	VLAZ	shauryacreations\.com
 1759917160	VLAZ	shaurya[\W_]*+creations(?!\.com(?<=shauryacreations\.com))
+1759917953	VLAZ	btchackercyberservices
