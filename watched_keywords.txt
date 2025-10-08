@@ -77301,3 +77301,4 @@
 1759908457	VLAZ	Triple[\W_]*+Minds(?!\.co(?<=tripleminds\.co))
 1759908601	VLAZ	anitaku
 1759908619	VLAZ	apkshark\.io
+1759910850	VLAZ	creativeconceptspk\.com
