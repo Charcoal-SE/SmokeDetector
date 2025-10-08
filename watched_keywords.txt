@@ -77310,3 +77310,4 @@
 1759917160	VLAZ	shaurya[\W_]*+creations(?!\.com(?<=shauryacreations\.com))
 1759917953	VLAZ	btchackercyberservices
 1759918672	VLAZ	volarktiles\.com
+1759920840	Jeff Schaller	healthetc\.life
