@@ -77302,3 +77302,4 @@
 1759908601	VLAZ	anitaku
 1759908619	VLAZ	apkshark\.io
 1759910850	VLAZ	creativeconceptspk\.com
+1759912591	VLAZ	nail[\W_]*+and[\W_]*+beauty[\W_]*+college
