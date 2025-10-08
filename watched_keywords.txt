@@ -77306,3 +77306,4 @@
 1759913312	VLAZ	madworks\.in
 1759913334	VLAZ	vccworld\.com
 1759914039	VLAZ	tagshop[\W_]*+ai
+1759917150	VLAZ	shauryacreations\.com
