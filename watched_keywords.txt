@@ -77305,3 +77305,4 @@
 1759912591	VLAZ	nail[\W_]*+and[\W_]*+beauty[\W_]*+college
 1759913312	VLAZ	madworks\.in
 1759913334	VLAZ	vccworld\.com
+1759914039	VLAZ	tagshop[\W_]*+ai
