@@ -3905,3 +3905,4 @@ recoveryexpert326
 mighty[\W_]*+hackar[\W_]*+recovery(?!\.com(?<=mightyhackarrecovery\.com))
 dj[\W_]*+mix[\W_]*+veg
 ThePillBox007
+How[\W_]*+much[\W_]*+does[\W_]*+(?:\w++[\W_]++){1,3}charge[\W_]*+for[\W_]*+a[\W_]*+pet
