@@ -77337,3 +77337,4 @@
 1760005449	Dan Getz	diamant-software\.de
 1760005741	Jeff Schaller	diamant-software\.scaleunit\.de
 1760006705	Dan Getz	izeonittraining\.com
+1760007980	Jeff Schaller	thethinkingcap\.com\.au
