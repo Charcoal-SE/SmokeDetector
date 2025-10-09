@@ -77339,3 +77339,4 @@
 1760006705	Dan Getz	izeonittraining\.com
 1760007980	Jeff Schaller	thethinkingcap\.com\.au
 1760009602	Jeff Schaller	swipey\.ai
+1760013426	VLAZ	drodeshipowerfulspell
