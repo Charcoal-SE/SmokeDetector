@@ -77328,3 +77328,4 @@
 1759984001	VLAZ	lio\.com\.vn
 1759984037	VLAZ	sureinsure\.com\.au
 1759986042	VLAZ	olasquid\.com
+1759986782	Cow	smarttechhustle\.blogspot
