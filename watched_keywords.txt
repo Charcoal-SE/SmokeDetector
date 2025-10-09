@@ -77334,3 +77334,4 @@
 1759989534	VLAZ	suryaktelecom\.com
 1759993804	VLAZ	stockount\.com
 1759995822	VLAZ	samarthpurifier\.co\.in
+1760005449	Dan Getz	diamant-software\.de
