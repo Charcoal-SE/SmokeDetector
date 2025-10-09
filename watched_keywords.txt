@@ -77340,3 +77340,4 @@
 1760007980	Jeff Schaller	thethinkingcap\.com\.au
 1760009602	Jeff Schaller	swipey\.ai
 1760013426	VLAZ	drodeshipowerfulspell
+1760019051	Dan Getz	priesthannahsolutionhome(?:@gmail\.com)
