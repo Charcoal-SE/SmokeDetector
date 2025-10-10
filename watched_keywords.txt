@@ -77346,3 +77346,4 @@
 1760025975	Jeff Schaller	grabapp\.com
 1760071795	VLAZ	Without[\W_]*+putting[\W_]*+me
 1760073553	VLAZ	snaddevelopers\.com
+1760075781	VLAZ	doctorambulance\.com
