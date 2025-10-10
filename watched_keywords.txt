@@ -77345,3 +77345,4 @@
 1760024614	VLAZ	clicksgefuehle\.at
 1760025975	Jeff Schaller	grabapp\.com
 1760071795	VLAZ	Without[\W_]*+putting[\W_]*+me
+1760073553	VLAZ	snaddevelopers\.com
