@@ -77352,3 +77352,4 @@
 1760079257	VLAZ	fine[\W_]*+art[\W_]*+solutions
 1760081693	VLAZ	gafix\.ai
 1760088342	VLAZ	the[\W_]*+velvet[\W_]*+hanger
+1760093039	Dan Getz	technotym\.com
