@@ -77368,3 +77368,4 @@
 1760166840	VLAZ	rclip\.ru
 1760167185	VLAZ	advidesolutions\.com
 1760178881	Jeff Schaller	jnlelectric\.com
+1760188601	Dan Getz	tomasaconsulting\.com
