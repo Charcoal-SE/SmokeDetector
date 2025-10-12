@@ -6224,3 +6224,4 @@ gatecoachingarc\.com
 linksyncs\.pages\.dev
 mailmergic\.com
 martin-way-six\.com
+winity\.one
