@@ -77385,3 +77385,4 @@
 1760284819	VLAZ	michaelgardloanoffice
 1760290142	SamGibson	easyelecmodule\.com
 1760299127	VLAZ	beef-way-one\.com
+1760300042	VLAZ	just[W_]*+4[W_]*+fun
