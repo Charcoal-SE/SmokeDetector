@@ -77404,3 +77404,4 @@
 1760354424	Jeff Schaller	5XL[\W_]*+Nutrition
 1760358465	VLAZ	dunenectarwebexpert
 1760358501	Jeff Schaller	instanderapkin\.com
+1760369745	VLAZ	appsharing\.net
