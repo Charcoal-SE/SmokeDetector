@@ -77388,3 +77388,4 @@
 1760334659	VLAZ	medicaregt\.com
 1760336752	VLAZ	boundless[\W_]*+azure
 1760336939	VLAZ	doflixindia\.com
+1760341375	VLAZ	secretsantagenerator\.online
