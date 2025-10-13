@@ -77399,3 +77399,4 @@
 1760348888	Snow	ricliso\.com
 1760352613	VLAZ	cricbites\.com
 1760352787	VLAZ	codilar(?!\.com)(?!\.sa)
+1760353136	VLAZ	codilar\.sa
