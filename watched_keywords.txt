@@ -77406,3 +77406,4 @@
 1760358501	Jeff Schaller	instanderapkin\.com
 1760369745	VLAZ	appsharing\.net
 1760373502	VLAZ	clicksnips\.com
+1760377370	Dan Getz	textreverse\.net
