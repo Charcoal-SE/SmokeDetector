@@ -77425,3 +77425,4 @@
 1760428105	VLAZ	Saanvi[\W_]*+Tech(?:nology)?[\W_]*+Solutions
 1760429231	VLAZ	nzimmigration\.info
 1760440330	VLAZ	Kernel[\W_]*+Office[\W_]*+365(?# seems there is a suite of products that start with this name)
+1760441104	VLAZ	ssw\.org\.in
