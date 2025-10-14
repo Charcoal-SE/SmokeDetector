@@ -77428,3 +77428,4 @@
 1760441104	VLAZ	ssw\.org\.in
 1760442557	VLAZ	digital[\W_]*+dreamers
 1760443670	VLAZ	samkingpump\.com
+1760444139	VLAZ	advancedai\.in
