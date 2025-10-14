@@ -77418,3 +77418,4 @@
 1760419947	Cow	forwardair-cargo\.com
 1760422925	VLAZ	spider[\W_]*+fuser
 1760422934	VLAZ	asprcmsolutions\.com
+1760425873	Snow	etaportal\.uk
