@@ -77427,3 +77427,4 @@
 1760440330	VLAZ	Kernel[\W_]*+Office[\W_]*+365(?# seems there is a suite of products that start with this name)
 1760441104	VLAZ	ssw\.org\.in
 1760442557	VLAZ	digital[\W_]*+dreamers
+1760443670	VLAZ	samkingpump\.com
