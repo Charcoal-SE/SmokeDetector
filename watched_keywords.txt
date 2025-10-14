@@ -77432,3 +77432,4 @@
 1760448133	Dan Getz	mindpathtech\.com
 1760448400	VLAZ	bk789us\.net
 1760449653	VLAZ	honistaaofficial\.com
+1760455535	Dan Getz	telxi\.com
