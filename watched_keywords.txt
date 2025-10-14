@@ -77416,3 +77416,4 @@
 1760417407	Cow	trabalier\.com
 1760419144	Cow	sunnymoonproject\.com
 1760419947	Cow	forwardair-cargo\.com
+1760422925	VLAZ	spider[\W_]*+fuser
