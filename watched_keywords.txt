@@ -77429,3 +77429,4 @@
 1760442557	VLAZ	digital[\W_]*+dreamers
 1760443670	VLAZ	samkingpump\.com
 1760444139	VLAZ	advancedai\.in
+1760448133	Dan Getz	mindpathtech\.com
