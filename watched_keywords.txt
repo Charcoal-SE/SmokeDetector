@@ -77440,3 +77440,4 @@
 1760505864	VLAZ	nxuniq\.com
 1760505978	Cow	fkengineerings\.com
 1760509844	Cow	igssngo\.com
+1760511133	VLAZ	ruilabels\.com
