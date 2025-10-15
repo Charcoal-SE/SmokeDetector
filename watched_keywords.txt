@@ -77448,3 +77448,4 @@
 1760513769	Cow	acegroupdeveloper\.weebly\.com
 1760513900	VLAZ	businessflightbooking\.com
 1760516833	Cow	takepdf\.com
+1760523903	VLAZ	jsontotable\.net
