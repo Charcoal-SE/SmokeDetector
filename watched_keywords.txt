@@ -77437,3 +77437,4 @@
 1760503613	VLAZ	hstcalculator\.onl
 1760505483	Cow	iliveconnect\.com
 1760505828	Cow	santuraeng\.com
+1760505864	VLAZ	nxuniq\.com
