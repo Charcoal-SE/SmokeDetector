@@ -77447,3 +77447,4 @@
 1760513204	VLAZ	aus[\W_]*+vision[\W_]*+realty
 1760513769	Cow	acegroupdeveloper\.weebly\.com
 1760513900	VLAZ	businessflightbooking\.com
+1760516833	Cow	takepdf\.com
