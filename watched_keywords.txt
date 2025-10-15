@@ -77445,3 +77445,4 @@
 1760511186	VLAZ	promato\.co
 1760511892	VLAZ	promato(?!\.co)
 1760513204	VLAZ	aus[\W_]*+vision[\W_]*+realty
+1760513769	Cow	acegroupdeveloper\.weebly\.com
