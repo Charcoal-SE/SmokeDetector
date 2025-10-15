@@ -9502,7 +9502,6 @@
 1559384898	Shree	edwags\.com
 1559401685	Makyen	laptopservicemumbai\.com
 1559281571	double-beep	aniyasolutionhome(?:@gmail\.com)?
-1559286566	double-beep	indeedseo\.com
 1559315089	double-beep	raidofinance\.eu
 1559421722	Makyen	Не делайте вид что проблемы нeт!
 1559438908	Makyen	canli\.co
