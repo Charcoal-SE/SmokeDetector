@@ -77472,3 +77472,4 @@
 1760598159	VLAZ	rankingeek\.com
 1760600393	Snow	abinvarghses\.shop
 1760601564	VLAZ	webodoctor(?!\.com)
+1760602285	Snow	365wingame\.com\.pk
