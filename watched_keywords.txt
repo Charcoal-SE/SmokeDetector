@@ -77468,3 +77468,4 @@
 1760594729	Cow	membatalkan-pinjaman-easycash\.id
 1760594879	VLAZ	champetsfamily\.com
 1760595081	VLAZ	cynextgen\.com
+1760595746	Cow	unysh\.tech
