@@ -77481,3 +77481,4 @@
 1760609839	Cow	medium\.com/@marketingseo\.ims
 1760609854	Cow	zintilon\.com
 1760609304	Snow	chilljoytravels\.com
+1760609886	Cow	kasuo\.com
