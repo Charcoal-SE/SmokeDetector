@@ -77471,3 +77471,4 @@
 1760595746	Cow	unysh\.tech
 1760598159	VLAZ	rankingeek\.com
 1760600393	Snow	abinvarghses\.shop
+1760601564	VLAZ	webodoctor(?!\.com)
