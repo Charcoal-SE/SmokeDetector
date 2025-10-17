@@ -77507,3 +77507,4 @@
 1760688674	Cow	dubaiwaste\.com
 1760696305	Snow	theachub\.pk
 1760697450	VLAZ	ebr[\W_]*+software
+1760697158	Snow	duracabs\.com
