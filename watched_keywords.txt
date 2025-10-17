@@ -77493,3 +77493,4 @@
 1760657843	Jeff Schaller	consejosandroid\.mx
 1760657860	Jeff Schaller	androidconsejos\.mx
 1760669450	Dan Getz	online[\W_]*+quran[\W_]*+academy(?!\.us(?<=onlinequranacademy\.us))
+1760669592	Dan Getz	online[\W_]*+quran[\W_]*+(?:teaching|learning|class(?:es)?)
