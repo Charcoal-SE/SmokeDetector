@@ -77512,3 +77512,4 @@
 1760697864	VLAZ	pythongeeks(?!\.net)
 1760698337	VLAZ	biobotlifesciences\.com
 1760698672	Snow	learnwithseo\.com
+1760699090	VLAZ	learn[\W_]*+with[\W_]*+seo(?!\.com(?<=learnwithseo\.com))
