@@ -77511,3 +77511,4 @@
 1760697678	VLAZ	pythongeeks\.net
 1760697864	VLAZ	pythongeeks(?!\.net)
 1760698337	VLAZ	biobotlifesciences\.com
+1760698672	Snow	learnwithseo\.com
