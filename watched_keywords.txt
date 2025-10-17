@@ -77517,3 +77517,4 @@
 1760700362	VLAZ	bussimulatorid\.com
 1760707039	VLAZ	trishul[\W_]*+home(?:[\W_]*+care)?+(?!\.com(?<=trishulhomecare\.com))
 1760707253	Jeff Schaller	flyoment\.com
+1760708511	Snow	forevertourism\.com
