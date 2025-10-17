@@ -77501,3 +77501,4 @@
 1760684445	VLAZ	desuntechnology\.in
 1760684504	VLAZ	desun[\W_]*+technology(?!\.in(?<=desuntechnology\.in))
 1760684569	VLAZ	gozocabs\.com
+1760684617	VLAZ	gozo[\W_]*+cabs(\.com(?<=gozocabs\.com))
