@@ -77499,3 +77499,4 @@
 1760680915	Cow	officeviewer\.org
 1760681590	VLAZ	mi8899\.com
 1760684445	VLAZ	desuntechnology\.in
+1760684504	VLAZ	desun[\W_]*+technology(?!\.in(?<=desuntechnology\.in))
