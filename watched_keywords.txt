@@ -77504,3 +77504,4 @@
 1760684617	VLAZ	gozo[\W_]*+cabs(\.com(?<=gozocabs\.com))
 1760687334	VLAZ	clara[\W_]*+tours
 1760688359	VLAZ	alhomi\.com
+1760688674	Cow	dubaiwaste\.com
