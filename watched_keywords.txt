@@ -77506,3 +77506,4 @@
 1760688359	VLAZ	alhomi\.com
 1760688674	Cow	dubaiwaste\.com
 1760696305	Snow	theachub\.pk
+1760697450	VLAZ	ebr[\W_]*+software
