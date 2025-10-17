@@ -77515,3 +77515,4 @@
 1760699090	VLAZ	learn[\W_]*+with[\W_]*+seo(?!\.com(?<=learnwithseo\.com))
 1760699747	VLAZ	lume[\W_]*+chronos(?!\.com(?<=lumechronos\.com))
 1760699754	VLAZ	lumechronos\.com
+1760700362	VLAZ	bussimulatorid\.com
