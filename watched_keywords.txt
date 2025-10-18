@@ -77538,3 +77538,4 @@
 1760787358	Jeff Schaller	jiphinwordpress2\.liveblog365\.com
 1760797943	Jeff Schaller	moderndecorhub\.com
 1760808842	Dan Getz	analisi-logica\.com
+1760809844	Spevacus	cswebmedya\.com
