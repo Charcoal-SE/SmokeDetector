@@ -77540,3 +77540,4 @@
 1760808842	Dan Getz	analisi-logica\.com
 1760809844	Spevacus	cswebmedya\.com
 1760812742	Dan Getz	Ankara[\W_]*+SEO
+1760815032	Jeff Schaller	yashdynamics\.com
