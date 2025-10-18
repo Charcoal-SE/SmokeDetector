@@ -77541,3 +77541,4 @@
 1760809844	Spevacus	cswebmedya\.com
 1760812742	Dan Getz	Ankara[\W_]*+SEO
 1760815032	Jeff Schaller	yashdynamics\.com
+1760829000	Dan Getz	axelradclinic\.com
