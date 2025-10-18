@@ -77537,3 +77537,4 @@
 1760783076	VLAZ	(?-i:s4rwY24jmXhsaB6f9)(?#forms.gle)
 1760787358	Jeff Schaller	jiphinwordpress2\.liveblog365\.com
 1760797943	Jeff Schaller	moderndecorhub\.com
+1760808842	Dan Getz	analisi-logica\.com
