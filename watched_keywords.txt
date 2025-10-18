@@ -77529,3 +77529,4 @@
 1760766483	Nisse Engström	smartearningsacademy\.com
 1760769848	VLAZ	belmonange[\W_]*+social
 1760769855	VLAZ	xylexuslamarquejr
+1760770365	VLAZ	h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+e[\W_]*+r[\W_]*+s[\W_]*+p[\W_]*+y[\W_]*+t[\W_]*+e[\W_]*+c[\W_]*+h
