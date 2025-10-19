@@ -77546,3 +77546,4 @@
 1760864790	VLAZ	verhistoriasig\.com\.mx
 1760870304	VLAZ	Kaliba38
 1760870377	VLAZ	yeizon\.com
+1760875275	VLAZ	mama[\W_]*+joy
