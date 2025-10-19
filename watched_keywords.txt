@@ -77549,3 +77549,4 @@
 1760875275	VLAZ	mama[\W_]*+joy
 1760875885	VLAZ	lawnq\.com\.au
 1760879924	Dan Getz	pngtopdff\.com
+1760885781	Jeff Schaller	epsoldev\.com
