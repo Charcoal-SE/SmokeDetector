@@ -77548,7 +77548,6 @@
 1760870377	VLAZ	yeizon\.com
 1760875275	VLAZ	mama[\W_]*+joy
 1760875885	VLAZ	lawnq\.com\.au
-1760879924	Dan Getz	pngtopdff\.com
 1760885781	Jeff Schaller	epsoldev\.com
 1760890373	Jeff Schaller	schengen90\.com
 1760890415	Jeff Schaller	namesbites\.com
