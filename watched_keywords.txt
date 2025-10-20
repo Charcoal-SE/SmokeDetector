@@ -77565,3 +77565,4 @@
 1760974250	Snow	pilotgaragedoor\.com
 1760974377	Snow	focus-pakistan\.com\.pk
 1760980458	VLAZ	keylockdubai\.com
+1760980932	VLAZ	xforex\.sbs
