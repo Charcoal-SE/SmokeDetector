@@ -77563,3 +77563,4 @@
 1760969387	Jeff Schaller	curedentalclinics\.com
 1760973002	VLAZ	dr[\W_]*+ebedia
 1760974250	Snow	pilotgaragedoor\.com
+1760974377	Snow	focus-pakistan\.com\.pk
