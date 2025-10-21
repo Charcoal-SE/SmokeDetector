@@ -77588,3 +77588,4 @@
 1761050896	VLAZ	alaska\.egypt-official\.com
 1761054849	Snow	professionalwritershelp\.com
 1761057083	Snow	solutioninfotech\.org
+1761057160	VLAZ	solution[\W_]*+infotech(?!\.org(?<=solutioninfotech\.org))
