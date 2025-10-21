@@ -77570,3 +77570,4 @@
 1760988831	VLAZ	luckyblockin\.com
 1760993582	VLAZ	nexus-backpressure(?# github repo)
 1761026898	VLAZ	tomtoc\.co\.za
+1761026917	VLAZ	tomtoc(?!\.co\.za)
