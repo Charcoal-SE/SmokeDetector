@@ -77591,3 +77591,4 @@
 1761057160	VLAZ	solution[\W_]*+infotech(?!\.org(?<=solutioninfotech\.org))
 1761062626	Snow	aarong\.com
 1761063835	VLAZ	19ka\.ru
+1761075680	VLAZ	cryptonic240@gmail\.com
