@@ -77573,3 +77573,4 @@
 1761026917	VLAZ	tomtoc(?!\.co\.za)
 1761027263	VLAZ	mitwix\.com
 1761029724	VLAZ	screencheckme\.com
+1761030304	VLAZ	careerviet\.vn
