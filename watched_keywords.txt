@@ -77589,3 +77589,4 @@
 1761054849	Snow	professionalwritershelp\.com
 1761057083	Snow	solutioninfotech\.org
 1761057160	VLAZ	solution[\W_]*+infotech(?!\.org(?<=solutioninfotech\.org))
+1761062626	Snow	aarong\.com
