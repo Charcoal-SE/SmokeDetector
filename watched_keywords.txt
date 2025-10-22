@@ -77599,3 +77599,4 @@
 1761113204	VLAZ	fimssonipat\.com
 1761114557	Cow	reddyanna\.guru
 1761114837	VLAZ	Reddy[\W_]*+Anna(?:[\W_]*+Club)?(?!-id\.in(?<=reddyanna-id\.in))(?!-id\.com(?<=reddyanna-id\.com))(?!\.guru(?<=reddyanna\.guru))
+1761115136	Cow	illustrationx\.com
