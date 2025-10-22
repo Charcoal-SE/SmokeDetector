@@ -51166,7 +51166,6 @@
 1692007239	cigien	mehraffarin\.com
 1692007265	cigien	chatgptfrench\.org
 1692007289	cigien	shabu-sai\.org
-1692007492	cigien	febspot\.com
 1692007519	cigien	loftinflatiron\.com
 1692007571	cigien	learningall\.com
 1692007649	cigien	ngaytho\.me
