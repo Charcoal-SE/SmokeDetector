@@ -77609,3 +77609,4 @@
 1761129049	Snow	journal\.uwks\.ac\.id
 1761131302	Snow	jeetbuzz888\.online
 1761137455	VLAZ	paintpoint\.pk
+1761137770	Snow	cuthaven\.com
