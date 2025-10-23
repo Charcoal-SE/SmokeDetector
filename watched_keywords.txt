@@ -77623,3 +77623,4 @@
 1761202515	VLAZ	dtotoofficial\.com
 1761211711	VLAZ	gtddrivingschool\.co\.uk
 1761206303	Snow	comperepower\.com
+1761211829	VLAZ	digital[\W_]*+techworks
