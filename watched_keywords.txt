@@ -60492,7 +60492,6 @@
 1713771218	Nick	bigfestival\.in
 1713772230	VLAZ	evolpick\.com
 1713772265	VLAZ	evolpick(?!\.com)
-1713774461	tripleee	(?-i:^honeybee$)
 1713775847	Nick	prodentimpro\.site
 1713776274	Nick	terusvn\.com
 1713778107	VLAZ	carparkingmultiplayerpro\.com
