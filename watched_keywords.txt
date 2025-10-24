@@ -77640,3 +77640,4 @@
 1761281819	Cow	emeesha\.xyz
 1761283551	VLAZ	bk[\W_]*+growth[\W_]*+layers
 1761288288	VLAZ	modiguru\.com
+1761290000	VLAZ	allbankstatementconverter\.com
