@@ -77639,3 +77639,4 @@
 1761280352	VLAZ	natureexplorer\.pk
 1761281819	Cow	emeesha\.xyz
 1761283551	VLAZ	bk[\W_]*+growth[\W_]*+layers
+1761288288	VLAZ	modiguru\.com
