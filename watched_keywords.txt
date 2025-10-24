@@ -77652,3 +77652,4 @@
 1761312404	lyxal	perlglow\.com
 1761316261	Jeff Schaller	alphingladwin_hiring
 1761334831	VLAZ	rankingsfactor\.com
+1761334929	VLAZ	rankingsfactor(?!\.com)
