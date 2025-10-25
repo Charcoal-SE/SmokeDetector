@@ -77655,3 +77655,4 @@
 1761334929	VLAZ	rankingsfactor(?!\.com)
 1761336348	Fastnlight	onlinefontsgenerator\.com
 1761346189	Jeff Schaller	powerupstack\.com
+1761353810	Jeff Schaller	scannerhacktech\.com
