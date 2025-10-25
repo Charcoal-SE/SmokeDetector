@@ -77664,3 +77664,4 @@
 1761371177	VLAZ	bussimulator-apk\.com
 1761380228	VLAZ	yourscamreport\.com
 1761380303	VLAZ	drstrangespellcaster
+1761380337	VLAZ	vitalmeds\.co\.uk
