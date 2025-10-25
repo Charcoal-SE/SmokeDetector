@@ -6236,3 +6236,4 @@ indeedseo\.com
 pngtopdff\.com
 febspot\.com
 course1\.com
+\bfedus\.in\b
