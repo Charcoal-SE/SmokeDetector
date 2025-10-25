@@ -58522,7 +58522,6 @@
 1708927806	Nick	EssayPro(?!\.com)
 1708928252	tripleee	fishiding\.com
 1708928272	tripleee	spacebar\.i
-1708929009	Nick	fedus\.in
 1708929415	Cow	areinfraheights\.com
 1708929480	tripleee	centralfood\.in
 1708930023	tripleee	fishiding(?!\.com)
