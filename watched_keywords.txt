@@ -77660,3 +77660,4 @@
 1761370301	VLAZ	tenchat\.ru
 1761370315	VLAZ	songvietnam\.vn
 1761370709	VLAZ	capsquery\.com
+1761371149	VLAZ	yaywin\.app
