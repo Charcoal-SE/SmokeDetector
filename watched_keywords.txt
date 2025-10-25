@@ -77669,3 +77669,4 @@
 1761391453	VLAZ	groutstar\.ae
 1761391474	VLAZ	groutstar(?!\.ae)
 1761394674	Nisse Engström	mysainsburysinfo\.com
+1761394748	Nisse Engström	trikarsalegal\.com
