@@ -77688,5 +77688,4 @@
 1761500111	Dan Getz	gbwhatsproapp\.com
 1761500133	Dan Getz	thebambooinsider\.com
 1761505889	Jeff Schaller	hostomy\.com
-1761512566	Dan Getz	https://winvn\.poker/
 1761513663	Jeff Schaller	redision-royal\.com
