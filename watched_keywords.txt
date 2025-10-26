@@ -77676,3 +77676,4 @@
 1761407788	Dan Getz	ffmicalculator\.io
 1761421605	Vickel	pplx\.ai
 1761428258	VLAZ	365manhwa\.com
+1761445528	Jeff Schaller	tehranedu\.com
