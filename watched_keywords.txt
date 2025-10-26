@@ -77679,3 +77679,4 @@
 1761445528	Jeff Schaller	tehranedu\.com
 1761445564	Jeff Schaller	hallaplay\.com
 1761463741	VLAZ	kindproxy\.com
+1761463748	VLAZ	kindproxy(?!\.com)
