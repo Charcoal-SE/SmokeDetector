@@ -77681,3 +77681,4 @@
 1761463741	VLAZ	kindproxy\.com
 1761463748	VLAZ	kindproxy(?!\.com)
 1761469104	Nisse Engström	theabclinic\.com
+1761478339	VLAZ	teleapks\.com
