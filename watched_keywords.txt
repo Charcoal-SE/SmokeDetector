@@ -77697,3 +77697,4 @@
 1761549933	VLAZ	aljameatrading\.com
 1761550676	VLAZ	Global[\W_]*+Tour[\W_]*+Travels
 1761550749	VLAZ	smtping\.com
+1761551469	VLAZ	goodvapess\.com
