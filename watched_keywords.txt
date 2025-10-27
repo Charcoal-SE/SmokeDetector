@@ -77698,3 +77698,4 @@
 1761550676	VLAZ	Global[\W_]*+Tour[\W_]*+Travels
 1761550749	VLAZ	smtping\.com
 1761551469	VLAZ	goodvapess\.com
+1761552973	Snow	kampatour\.com
