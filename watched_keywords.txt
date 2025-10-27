@@ -77695,3 +77695,4 @@
 1761544564	VLAZ	hectorcodes\.xyz
 1761549869	VLAZ	citigravel\.ca
 1761549933	VLAZ	aljameatrading\.com
+1761550676	VLAZ	Global[\W_]*+Tour[\W_]*+Travels
