@@ -77692,3 +77692,4 @@
 1761513926	Jeff Schaller	posting-cars\.com
 1761543456	VLAZ	oppainting\.net
 1761543464	VLAZ	o[\W_]*+p[\W_]*+painting(?!\.net(?<=oppainting\.net))
+1761544564	VLAZ	hectorcodes\.xyz
