@@ -77728,3 +77728,4 @@
 1761632566	VLAZ	barrmarkm4
 1761641755	VLAZ	ovolite\.com
 1761641801	VLAZ	ovolite(?!\.com)
+1761643078	VLAZ	adwhssolutions\.ae
