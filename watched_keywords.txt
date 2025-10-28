@@ -77727,3 +77727,4 @@
 1761631777	VLAZ	forceusa\.in
 1761632566	VLAZ	barrmarkm4
 1761641755	VLAZ	ovolite\.com
+1761641801	VLAZ	ovolite(?!\.com)
