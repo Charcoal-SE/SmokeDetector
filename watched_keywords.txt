@@ -77723,3 +77723,4 @@
 1761629526	VLAZ	levelup[\W_]*+online[\W_]*+education
 1761629537	VLAZ	piim\.in
 1761629900	VLAZ	keratinstraighteningperth\.net\.au
+1761631553	VLAZ	icminc\.net
