@@ -77726,3 +77726,4 @@
 1761631553	VLAZ	icminc\.net
 1761631777	VLAZ	forceusa\.in
 1761632566	VLAZ	barrmarkm4
+1761641755	VLAZ	ovolite\.com
