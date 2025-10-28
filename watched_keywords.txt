@@ -77733,3 +77733,4 @@
 1761649635	VLAZ	videoexplainers\.com
 1761649854	Snow	quantacom\.com\.au
 1761653035	Dan Getz	myneemoe\.in
+1761653484	VLAZ	alpentandem\.de
