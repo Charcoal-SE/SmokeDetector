@@ -77745,3 +77745,4 @@
 1761674690	Dan Getz	bottleneckcalculatoronline\.com
 1761676039	Jeff Schaller	merilelo\.com
 1761677605	Jeff Schaller	oakderm\.com
+1761678160	Jeff Schaller	smartinsureme\.com
