@@ -77734,3 +77734,4 @@
 1761649854	Snow	quantacom\.com\.au
 1761653035	Dan Getz	myneemoe\.in
 1761653484	VLAZ	alpentandem\.de
+1761653703	Jeff Schaller	MyneeMoe(?!\.in)
