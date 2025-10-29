@@ -77785,3 +77785,4 @@
 1761764994	Vickel	oppa888\.app
 1761769861	VLAZ	careertuners\.com
 1761769869	VLAZ	career[\W_]*+tuners(?!\.com(?<=careertuners\.com))
+1761775367	Vickel	copy-cat\.in
