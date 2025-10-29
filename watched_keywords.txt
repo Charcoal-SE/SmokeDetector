@@ -77752,3 +77752,4 @@
 1761694017	Vickel	hsb\.041823(?:@gmail\.com)?
 1761712426	Dan Getz	chatiraq5\.chat
 1761714092	Dan Getz	foxmowing-nsw\.com\.au
+1761714471	Dan Getz	snowdaycalculators\.site
