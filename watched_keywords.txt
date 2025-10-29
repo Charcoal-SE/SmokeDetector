@@ -77784,3 +77784,4 @@
 1761759275	VLAZ	annaliving\.co\.uk
 1761764994	Vickel	oppa888\.app
 1761769861	VLAZ	careertuners\.com
+1761769869	VLAZ	career[\W_]*+tuners(?!\.com(?<=careertuners\.com))
