@@ -77758,3 +77758,4 @@
 1761715104	VLAZ	go-refer\.omio\.com
 1761715611	Dan Getz	cxfilexplorer\.pro
 1761715974	Dan Getz	giri\.in
+1761718446	Cow	findmyguru\.com
