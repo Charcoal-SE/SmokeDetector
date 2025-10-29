@@ -77773,3 +77773,4 @@
 1761735580	Cow	educationalroot\.com
 1761736312	Snow	orthosquare\.com
 1761736651	Cow	Garg[\W_]*+Brothers
+1761736690	Cow	Blocks[\W_]*+Manufacturers
