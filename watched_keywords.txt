@@ -77760,3 +77760,4 @@
 1761715974	Dan Getz	giri\.in
 1761718446	Cow	findmyguru\.com
 1761719854	Dan Getz	WebSpaceKit(?!\.com)
+1761719863	Dan Getz	webspacekit\.com
