@@ -77807,3 +77807,4 @@
 1761825402	VLAZ	558766\.com
 1761825488	VLAZ	mclub\.dev
 1761825667	VLAZ	mclubdev\d*+
+1761827957	VLAZ	godrejsigma3greaternoida\.com
