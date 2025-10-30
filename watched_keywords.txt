@@ -77814,3 +77814,4 @@
 1761834123	VLAZ	brandatory[\W_]*+marketing
 1761836289	Dan Getz	allpandaexpressmenu\.com
 1761837709	Snow	beautyplus\.com
+1761840407	Jeff Schaller	chipotalmenu\.com
