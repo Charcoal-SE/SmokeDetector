@@ -77786,3 +77786,4 @@
 1761769861	VLAZ	careertuners\.com
 1761769869	VLAZ	career[\W_]*+tuners(?!\.com(?<=careertuners\.com))
 1761775367	Vickel	copy-cat\.in
+1761788664	Jeff Schaller	GRUTWQCcf455(?#t.me)
