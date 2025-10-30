@@ -77812,3 +77812,4 @@
 1761831566	VLAZ	ebosehealer
 1761834105	VLAZ	thebrandatory\.com
 1761834123	VLAZ	brandatory[\W_]*+marketing
+1761836289	Dan Getz	allpandaexpressmenu\.com
