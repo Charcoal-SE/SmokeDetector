@@ -77852,3 +77852,4 @@
 1761924805	Snow	ssstiks\.io
 1761933217	VLAZ	growagardencalculatorco\.com
 1761936743	Dan Getz	ratnagems\.com
+1761936750	Dan Getz	ratna[\W_]*+gems(?!\.com(?<=ratnagems\.com))
