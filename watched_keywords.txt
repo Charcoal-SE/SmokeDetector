@@ -77827,3 +77827,4 @@
 1761889146	VLAZ	tishang\.net
 1761889259	VLAZ	theicstock\.com
 1761889267	VLAZ	happykb\.com
+1761889434	Cow	typingpractice\.org
