@@ -77822,3 +77822,4 @@
 1761881187	Dan Getz	apexcoupling\.com
 1761888498	VLAZ	cmp-punjab\.com\.pk
 1761888958	VLAZ	tech[\W_]*+savy[\W_]*+crew
+1761889039	VLAZ	itmacom\.com
