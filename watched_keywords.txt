@@ -77846,3 +77846,4 @@
 1761912274	Jeff Schaller	acuantoto\.com
 1761912759	Snow	pcrinsights\.com
 1761916639	Jeff Schaller	morneejewellery\.com
+1761917829	Dan Getz	^kathrin Infanta$
