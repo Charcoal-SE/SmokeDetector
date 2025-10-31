@@ -77831,3 +77831,4 @@
 1761890958	VLAZ	villagegreenalzheimerscare\.com
 1761891130	Cow	graylio\.com
 1761891514	VLAZ	(?-i:p6ruWx5fcADGKrE7k)(?# share.google)
+1761893365	Cow	edugrad\.in
