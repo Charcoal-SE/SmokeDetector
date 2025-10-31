@@ -77823,3 +77823,4 @@
 1761888498	VLAZ	cmp-punjab\.com\.pk
 1761888958	VLAZ	tech[\W_]*+savy[\W_]*+crew
 1761889039	VLAZ	itmacom\.com
+1761889047	VLAZ	appifan\.com
