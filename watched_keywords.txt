@@ -77855,3 +77855,4 @@
 1761936750	Dan Getz	ratna[\W_]*+gems(?!\.com(?<=ratnagems\.com))
 1761954638	Jeff Schaller	marvelbet\.site
 1761982959	VLAZ	buildiyo\.com
+1761982971	VLAZ	sportspotllc\.com
