@@ -77872,3 +77872,4 @@
 1762090680	Dan Getz	bestiptvwatch\.com
 1762093446	Jeff Schaller	surahalmulk\.org
 1762095502	Dan Getz	globalairporttaxi\.com
+1762096778	Dan Getz	l[\W_]*+i[\W_]*+s[\W_]*+a[\W_]*+e[\W_]*+l[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+b[\W_]*+e[\W_]*+t[\W_]*+6[\W_]*+6[\W_]*+3
