@@ -77876,3 +77876,4 @@
 1762097610	Dan Getz	zeusrecoveryservices[\W_]++c[\W_]*+o[\W_]*+m
 1762099672	Dan Getz	itsmearbaz\.in
 1762117758	Dan Getz	xmobiles\.app
+1762117846	Dan Getz	fdown\.pk
