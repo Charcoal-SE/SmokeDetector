@@ -77878,3 +77878,4 @@
 1762117758	Dan Getz	xmobiles\.app
 1762117846	Dan Getz	fdown\.pk
 1762127864	Vickel	flipacoinfree\.com
+1762128275	Vickel	Flip[\W_]*+a[\W_]*+Coin[\W_]*+Free
