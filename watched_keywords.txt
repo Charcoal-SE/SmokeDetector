@@ -77902,3 +77902,4 @@
 1762179883	VLAZ	arabiawheel\.com
 1762180020	Jeff Schaller	detroitdartclub\.com
 1762183336	VLAZ	^Hector\s*+Ferrera$
+1762185892	VLAZ	JO\s*+777
