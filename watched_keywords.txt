@@ -77896,3 +77896,4 @@
 1762167840	Dan Getz	healingpharmaonline\.com
 1762167877	Dan Getz	today[\W_]*+s[\W_]*+digital[\W_]*+world
 1762169194	Dan Getz	theinstaviewer\.com
+1762171433	VLAZ	bytelogicindia\.com
