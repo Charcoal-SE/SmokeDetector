@@ -77887,3 +77887,4 @@
 1762152094	VLAZ	tech-wave\.cloud
 1762152465	VLAZ	upwyse
 1762152809	Cow	sitefy\.co
+1762153643	VLAZ	therunningroom\.net
