@@ -77880,3 +77880,4 @@
 1762127864	Vickel	flipacoinfree\.com
 1762128600	Vickel	flip[\W_]*+a[\W_]*+coin[\W_]*+free(?!\.com(?<=flipacoinfree\.com))
 1762147833	VLAZ	okwingame\.io
+1762148906	VLAZ	iDigitalArpita
