@@ -77890,3 +77890,4 @@
 1762153643	VLAZ	therunningroom\.net
 1762154342	Cow	heavenandhomes\.co\.uk
 1762154636	VLAZ	heavenandhomes?(?!\.co\.uk(?<=heavenandhomes\.co\.uk))
+1762156222	VLAZ	theextremecardrivingsimulator\.com
