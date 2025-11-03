@@ -77893,3 +77893,4 @@
 1762156222	VLAZ	theextremecardrivingsimulator\.com
 1762165408	VLAZ	vic\.ai
 1762167160	VLAZ	qtnglobalservices\.com
+1762167840	Dan Getz	healingpharmaonline\.com
