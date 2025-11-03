@@ -77199,7 +77199,6 @@
 1759657699	VLAZ	kirticorp\.com
 1759657823	VLAZ	(?-i:kirtidabhatt)(?# www.youtube.com)
 1759665192	Vickel	shodzur(?:@gmail\.com)?
-1759670126	VLAZ	JO777
 1759670829	VLAZ	alightmotionproapp\.com
 1759674655	Dan Getz	smmzoneusa(?!\.com)\d*+
 1759674666	Dan Getz	smmzoneusa\.com
