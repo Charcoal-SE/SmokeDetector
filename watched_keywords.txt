@@ -77912,3 +77912,4 @@
 1762234399	VLAZ	chithra\.xyz
 1762237537	VLAZ	buildiyo\.store
 1762237545	VLAZ	buildiyo(?!\.store)(?!\.com)
+1762239755	VLAZ	ducatindia\.com
