@@ -77941,3 +77941,4 @@
 1762287627	VLAZ	babu88(?:global)?
 1762289053	VLAZ	2jbet\.game
 1762289079	VLAZ	2j[\W_]*+bet(?!\.game(?<=2jbet\.game))
+1762290579	Fastnlight	(?-i:J6sVG7qM1xbPGhUHA)(?#forms.gle)
