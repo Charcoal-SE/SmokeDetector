@@ -77934,3 +77934,4 @@
 1762260854	VLAZ	uc_mohito_bot
 1762264873	Vickel	mealmenalc\.com
 1762264894	Vickel	tropical-path\.com
+1762264903	Vickel	1wsmbl\.com
