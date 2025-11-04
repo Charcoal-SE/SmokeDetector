@@ -77924,3 +77924,4 @@
 1762253896	VLAZ	bdg[\W_]*+win
 1762254046	VLAZ	anitaku(?!\.com\.co)
 1762254056	VLAZ	anitaku\.com\.co
+1762255645	VLAZ	lovespun\.com
