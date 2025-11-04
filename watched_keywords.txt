@@ -77921,3 +77921,4 @@
 1762248750	VLAZ	phdwise\.com
 1762249000	VLAZ	greengainz\.in
 1762250232	VLAZ	dermastation\.com
+1762251545	VLAZ	boxagency\.co
