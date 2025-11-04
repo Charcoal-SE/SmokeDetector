@@ -77939,3 +77939,4 @@
 1762269226	VLAZ	olspanel\.com
 1762287550	VLAZ	babu88\.global
 1762287627	VLAZ	babu88(?:global)?
+1762289053	VLAZ	2jbet\.game
