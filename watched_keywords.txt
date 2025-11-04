@@ -77915,3 +77915,4 @@
 1762239755	VLAZ	ducatindia\.com
 1762241032	VLAZ	shopsmartlypro\.com
 1762241785	VLAZ	legalexperts\.ai
+1762241796	VLAZ	edps\.in
