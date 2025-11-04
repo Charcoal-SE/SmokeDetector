@@ -77922,3 +77922,4 @@
 1762250232	VLAZ	dermastation\.com
 1762251545	VLAZ	boxagency\.co
 1762253896	VLAZ	bdg[\W_]*+win
+1762254046	VLAZ	anitaku(?!\.com\.co)
