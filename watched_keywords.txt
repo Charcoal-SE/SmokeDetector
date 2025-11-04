@@ -77922,3 +77922,4 @@
 1762249000	VLAZ	greengainz\.in
 1762250232	VLAZ	dermastation\.com
 1762251545	VLAZ	boxagency\.co
+1762253896	VLAZ	bdg[\W_]*+win
