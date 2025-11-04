@@ -77277,7 +77277,6 @@
 1759902829	VLAZ	simuphish\.com
 1759903507	VLAZ	sbobet\.now
 1759908457	VLAZ	Triple[\W_]*+Minds(?!\.co(?<=tripleminds\.co))
-1759908601	VLAZ	anitaku
 1759908619	VLAZ	apkshark\.io
 1759910850	VLAZ	creativeconceptspk\.com
 1759912591	VLAZ	nail[\W_]*+and[\W_]*+beauty[\W_]*+college
