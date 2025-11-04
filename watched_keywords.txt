@@ -77914,3 +77914,4 @@
 1762237545	VLAZ	buildiyo(?!\.store)(?!\.com)
 1762239755	VLAZ	ducatindia\.com
 1762241032	VLAZ	shopsmartlypro\.com
+1762241785	VLAZ	legalexperts\.ai
