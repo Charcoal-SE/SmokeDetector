@@ -77926,3 +77926,4 @@
 1762254056	VLAZ	anitaku\.com\.co
 1762255645	VLAZ	lovespun\.com
 1762255833	VLAZ	sankalpafarms\.com
+1762257144	Snow	thedevscourse\.com
