@@ -77963,3 +77963,4 @@
 1762346429	Snow	inodetechnologies\.com
 1762349128	VLAZ	castleapkworld\.com
 1762349806	VLAZ	finraja\.com
+1762349817	VLAZ	finraja(?!\.com)
