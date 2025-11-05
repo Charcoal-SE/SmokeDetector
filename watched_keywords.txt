@@ -77956,3 +77956,4 @@
 1762332186	VLAZ	jobipo\.com
 1762332198	VLAZ	Origins[\W_]*+Advertising
 1762332209	VLAZ	jobipo(?!\.com)
+1762332217	VLAZ	origins\.co\.in
