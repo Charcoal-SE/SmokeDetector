@@ -77943,3 +77943,4 @@
 1762289079	VLAZ	2j[\W_]*+bet(?!\.game(?<=2jbet\.game))
 1762290579	Fastnlight	(?-i:J6sVG7qM1xbPGhUHA)(?#forms.gle)
 1762291973	VLAZ	(?-i:License - CC-BY-SA 4\.0)(?# attribution from copied code)
+1762302588	Dan Getz	caishen_Oysb(?# t.me)
