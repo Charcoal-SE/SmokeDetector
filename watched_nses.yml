@@ -5905,7 +5905,9 @@ items:
 - ns: cnmsn.net.
 - ns: cloudswebserver.com.
 - ns: webinfomatrix.com.
-- ns: multivpshost.com.
+- comment: NXDOMAIN 2025-11-05
+  disable: true
+  ns: multivpshost.com.
 - ns: registerdomain.net.za.
 - ns: spaceship.net.
 - ns: combiz.org.
