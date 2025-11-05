@@ -77974,3 +77974,4 @@
 1762370985	General Grievance	thecryptoblunt\.com
 1762372899	Vickel	dragaonobre7(?:@gmail\.com)?
 1762374411	Vickel	fineystjackets\.com
+1762374636	Vickel	fineyst[\W_]*+jackets(?!\.com(?<=fineystjackets\.com))
