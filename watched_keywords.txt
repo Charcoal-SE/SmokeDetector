@@ -77950,3 +77950,4 @@
 1762327730	Cow	tagheuerreplica\.io
 1762327863	Cow	(?-i:4oiYIip)(?#bit.ly)
 1762329073	Cow	janebondbbq\.com
+1762329804	Cow	crazeneurons\.com
