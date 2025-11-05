@@ -77965,3 +77965,4 @@
 1762349806	VLAZ	finraja\.com
 1762349817	VLAZ	finraja(?!\.com)
 1762352726	Snow	goldbathroom\.uk
+1762358907	VLAZ	(?-i:Br6jdRT3)(?#cutt.ly)
