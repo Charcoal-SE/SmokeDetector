@@ -77977,3 +77977,4 @@
 1762374636	Vickel	fineyst[\W_]*+jackets(?!\.com(?<=fineystjackets\.com))
 1762382626	Dan Getz	basementwaterstop\.net
 1762382664	Dan Getz	nysexytalentscout(?:@gmail\.com)?
+1762382759	Dan Getz	murderus[\W_]*+soundz
