@@ -77964,3 +77964,4 @@
 1762349128	VLAZ	castleapkworld\.com
 1762349806	VLAZ	finraja\.com
 1762349817	VLAZ	finraja(?!\.com)
+1762352726	Snow	goldbathroom\.uk
