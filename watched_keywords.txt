@@ -77988,3 +77988,4 @@
 1762410920	VLAZ	corteizstore\.com
 1762410961	VLAZ	youngstardefenceacademy\.com
 1762410985	VLAZ	hospitalitypartners\.ie
+1762412934	Cow	bnbtemplates\.com
