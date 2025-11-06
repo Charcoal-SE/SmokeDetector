@@ -78002,3 +78002,4 @@
 1762424437	VLAZ	parashifttech\.com
 1762427240	Snow	isdnshop\.com
 1762428598	lyxal	radicaleducation\.in
+1762428612	Jeff Schaller	solsofttech\.com
