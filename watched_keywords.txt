@@ -77987,3 +77987,4 @@
 1762410761	VLAZ	leighcarkeys\.co\.uk
 1762410920	VLAZ	corteizstore\.com
 1762410961	VLAZ	youngstardefenceacademy\.com
+1762410985	VLAZ	hospitalitypartners\.ie
