@@ -77998,3 +77998,4 @@
 1762422294	lyxal	roksy[\W_]*+meme[\W_]*+coin
 1762422675	lyxal	altahar[\W_]*+relaxing[\W_]*+drop
 1762423585	VLAZ	Delighted[\W_]*+Journey(?!\.com(?<=delightedjourney\.com))
+1762423594	VLAZ	delightedjourney\.com
