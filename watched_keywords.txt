@@ -78000,3 +78000,4 @@
 1762423585	VLAZ	Delighted[\W_]*+Journey(?!\.com(?<=delightedjourney\.com))
 1762423594	VLAZ	delightedjourney\.com
 1762424437	VLAZ	parashifttech\.com
+1762427240	Snow	isdnshop\.com
