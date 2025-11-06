@@ -77977,7 +77977,6 @@
 1762382626	Dan Getz	basementwaterstop\.net
 1762382664	Dan Getz	nysexytalentscout(?:@gmail\.com)?
 1762382759	Dan Getz	murderus[\W_]*+soundz
-1762392941	SamGibson	patekphilippereplica\.io
 1762399033	Dan Getz	tag[\W_]*+heuer[\W_]*+replica(?!\.io(?<=tagheuerreplica\.io))
 1762399851	Dan Getz	patek[\W_]*+philippe[\W_]*+replica(?!\.io(?<=patekphilippereplica\.io))
 1762407807	VLAZ	aps[\W_]*+bus[\W_]*+travel
