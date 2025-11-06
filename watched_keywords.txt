@@ -77993,3 +77993,4 @@
 1762418309	Snow	admissioninstitute\.com
 1762419994	VLAZ	aluminium[\W_]*+se[\W_]*+wire
 1762420029	VLAZ	jayly[\W_]*+flare
+1762421941	VLAZ	gotravel\.pk
