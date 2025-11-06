@@ -77981,3 +77981,4 @@
 1762399033	Dan Getz	tag[\W_]*+heuer[\W_]*+replica(?!\.io(?<=tagheuerreplica\.io))
 1762399851	Dan Getz	patek[\W_]*+philippe[\W_]*+replica(?!\.io(?<=patekphilippereplica\.io))
 1762407807	VLAZ	aps[\W_]*+bus[\W_]*+travel
+1762408097	VLAZ	forestlakedoctors\.com\.au
