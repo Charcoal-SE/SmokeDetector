@@ -77985,3 +77985,4 @@
 1762408484	VLAZ	questforexams\.co\.uk
 1762409208	VLAZ	powerbuildphysiotherapy\.com\.au
 1762410761	VLAZ	leighcarkeys\.co\.uk
+1762410920	VLAZ	corteizstore\.com
