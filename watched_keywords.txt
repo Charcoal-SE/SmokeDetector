@@ -77995,3 +77995,4 @@
 1762420029	VLAZ	jayly[\W_]*+flare
 1762421941	VLAZ	gotravel\.pk
 1762422198	lyxal	dhcongdoan\.vn
+1762422294	lyxal	roksy[\W_]*+meme[\W_]*+coin
