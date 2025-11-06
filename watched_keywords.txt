@@ -77991,3 +77991,4 @@
 1762412934	Cow	bnbtemplates\.com
 1762414448	Snow	socialmediainfinity\.ie
 1762418309	Snow	admissioninstitute\.com
+1762419994	VLAZ	aluminium[\W_]*+se[\W_]*+wire
