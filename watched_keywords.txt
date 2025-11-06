@@ -77996,3 +77996,4 @@
 1762421941	VLAZ	gotravel\.pk
 1762422198	lyxal	dhcongdoan\.vn
 1762422294	lyxal	roksy[\W_]*+meme[\W_]*+coin
+1762422675	lyxal	altahar[\W_]*+relaxing[\W_]*+drop
