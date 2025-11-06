@@ -77984,3 +77984,4 @@
 1762408106	VLAZ	forest[\W_]*+lake[\W_]*+doctors(?!\.com\.au(<=forestlakedoctors\.com\.au))
 1762408484	VLAZ	questforexams\.co\.uk
 1762409208	VLAZ	powerbuildphysiotherapy\.com\.au
+1762410761	VLAZ	leighcarkeys\.co\.uk
