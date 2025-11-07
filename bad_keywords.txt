@@ -3907,4 +3907,3 @@ How[\W_]*+much[\W_]*+does[\W_]*+(?:\w++[\W_]++){1,3}charge[\W_]*+for[\W_]*+a[\W_
 bdg[\W_]*+games?+(?!\.link(?<=bdggame\.link))
 bus[\W_]*+simulator[\W_]*+indonesia
 EnrgTech
-satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatkapro\.mobi))(?!z\.com(?<=sattamatkaz\.com))(?!\.day(?<=sattamatka\.day))\w*+
