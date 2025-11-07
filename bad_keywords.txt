@@ -2639,7 +2639,6 @@ guo[\W_]*+wengui
 idn[\W_]*+poker
 slim[\W_]*+tea
 business[\W_]*voip[\W_]*service
-satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatkapro\.mobi))(?!z\.com(?<=sattamatkaz\.com))\w*+
 edulete\.in/question
 edulete\.in/blog
 edulete\.in/quiz
