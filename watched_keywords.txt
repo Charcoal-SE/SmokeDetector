@@ -78009,3 +78009,4 @@
 1762454128	VLAZ	(?-i:License - CC BY-SA \d\.0)(?# attribution from copied code)
 1762456690	Jeff Schaller	fastenx\.com
 1762475816	Jeff Schaller	mymangaindex\.com
+1762478906	gre_gor	ponique\.se
