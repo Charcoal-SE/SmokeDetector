@@ -78074,3 +78074,4 @@
 1762770391	VLAZ	modernmullets\.com
 1762770499	VLAZ	super-bear-adventure-mod-apk\.s3\.sa-east-1\.amazonaws\.com
 1762772616	VLAZ	qcom\.ltd
+1762777912	Jeff Schaller	newsest\.com
