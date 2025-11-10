@@ -78056,3 +78056,4 @@
 1762754973	VLAZ	k[\W_]*+jewelry[\W_]*+accessories(?!\.com(?<=kjewelryaccessories\.com))
 1762755000	VLAZ	kjewelryaccessories\.com
 1762755160	VLAZ	edxskills\.com
+1762756112	VLAZ	nutrelanutrition\.com
