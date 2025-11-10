@@ -78081,3 +78081,4 @@
 1762782383	VLAZ	instacut\.studio
 1762784267	Jeff Schaller	coursocean\.co
 1762791692	VLAZ	virtuallifeapk\.com
+1762792017	VLAZ	shipixy\.com
