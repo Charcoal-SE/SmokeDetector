@@ -78078,3 +78078,4 @@
 1762779545	Jeff Schaller	elephantaexports\.com
 1762780711	Vickel	infomazeone\.com
 1762780832	Vickel	infomaze[\W_]*+one(?!\.com(?<=infomazeone\.com))
+1762782383	VLAZ	instacut\.studio
