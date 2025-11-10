@@ -78047,3 +78047,4 @@
 1762709121	VLAZ	converterpdffree\.com
 1762734349	Jeff Schaller	apiswhatsapp\.com
 1762752066	Dan Getz	laiformsc(?:@163\.com)?
+1762752138	Dan Getz	lanzoum\.com
