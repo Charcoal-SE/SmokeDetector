@@ -78077,3 +78077,4 @@
 1762777912	Jeff Schaller	newsest\.com
 1762779545	Jeff Schaller	elephantaexports\.com
 1762780711	Vickel	infomazeone\.com
+1762780832	Vickel	infomaze[\W_]*+one(?!\.com(?<=infomazeone\.com))
