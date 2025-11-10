@@ -78082,3 +78082,4 @@
 1762784267	Jeff Schaller	coursocean\.co
 1762791692	VLAZ	virtuallifeapk\.com
 1762792017	VLAZ	shipixy\.com
+1762795530	VLAZ	pureapk\.io
