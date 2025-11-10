@@ -78055,3 +78055,4 @@
 1762752238	VLAZ	(?-i:JXWEtGWuHLvKeGrTUSORkP)(?# chat.whatsapp.com)
 1762754973	VLAZ	k[\W_]*+jewelry[\W_]*+accessories(?!\.com(?<=kjewelryaccessories\.com))
 1762755000	VLAZ	kjewelryaccessories\.com
+1762755160	VLAZ	edxskills\.com
