@@ -78072,3 +78072,4 @@
 1762770338	VLAZ	xn88\.today
 1762770348	VLAZ	labtechnologies\.in
 1762770391	VLAZ	modernmullets\.com
+1762770499	VLAZ	super-bear-adventure-mod-apk\.s3\.sa-east-1\.amazonaws\.com
