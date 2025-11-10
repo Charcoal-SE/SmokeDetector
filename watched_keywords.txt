@@ -78083,3 +78083,4 @@
 1762791692	VLAZ	virtuallifeapk\.com
 1762792017	VLAZ	shipixy\.com
 1762795530	VLAZ	pureapk\.io
+1762800922	Dan Getz	artixio\.com
