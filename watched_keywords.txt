@@ -78064,3 +78064,4 @@
 1762758730	Cow	aqfindia\.com
 1762761598	VLAZ	advocaterahulbhardwaj\.com
 1762761660	VLAZ	aubongstore\.com
+1762770147	VLAZ	projectsdeal
