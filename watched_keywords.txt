@@ -78051,3 +78051,4 @@
 1762752174	VLAZ	wattco\.com
 1762752190	Dan Getz	towerpeak\.hk
 1762752203	Dan Getz	towerpeak\.cn
+1762752210	VLAZ	certcollections\.com
