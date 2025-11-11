@@ -78101,3 +78101,4 @@
 1762862069	Jeff Schaller	orangebiotech\.in
 1762863247	lyxal	whereairlinesare\.com
 1762863387	lyxal	skillhook\.in
+1762863395	lyxal	skillhook(?!\.in)
