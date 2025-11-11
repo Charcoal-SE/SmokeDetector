@@ -78095,3 +78095,4 @@
 1762845032	VLAZ	aedbs\.com
 1762845860	VLAZ	skf[\W_]*+decor
 1762846281	VLAZ	glstoneexpo\.com
+1762846475	VLAZ	koovers\.in
