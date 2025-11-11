@@ -78104,3 +78104,4 @@
 1762863395	lyxal	skillhook(?!\.in)
 1762863840	Jeff Schaller	seoai\.cloud
 1762853453	Snow	cricketerpoint\.com
+1762857557	Snow	touchcrypto\.org
