@@ -78094,3 +78094,4 @@
 1762844657	VLAZ	bitcoin-retro-vault\.lovable\.app
 1762845032	VLAZ	aedbs\.com
 1762845860	VLAZ	skf[\W_]*+decor
+1762846281	VLAZ	glstoneexpo\.com
