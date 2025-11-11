@@ -78091,3 +78091,4 @@
 1762840055	VLAZ	loadmate\.in
 1762840067	VLAZ	ptifabrication\.com
 1762841338	VLAZ	ira[\W_]*+tech[\W_]*+solutions
+1762844657	VLAZ	bitcoin-retro-vault\.lovable\.app
