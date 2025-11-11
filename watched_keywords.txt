@@ -78107,3 +78107,4 @@
 1762857557	Snow	touchcrypto\.org
 1762857566	Snow	(?-i:touchcrypto1)(?#t.me)
 1762865814	Dan Getz	syncforge\.io
+1762865827	Dan Getz	rgeudaipur\.com
