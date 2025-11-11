@@ -77155,7 +77155,6 @@
 1759475774	VLAZ	bisonlifeusa\.com
 1759475890	VLAZ	drfamous\s*+@\s*+angelic\s*+\.\s*+com
 1759476563	VLAZ	atcpestcontrol\.com
-1759482234	Jeff Schaller	thanhthaimotor\.com
 1759486732	VLAZ	yicenprecision\.com
 1759487070	VLAZ	seaviewbuildingsolutions\.com
 1759487138	VLAZ	calmoura\.com
