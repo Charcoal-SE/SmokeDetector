@@ -78129,3 +78129,4 @@
 1762935912	VLAZ	fastcadcoding\.in
 1762939286	VLAZ	b3advertisingagency\.in
 1762939299	VLAZ	etsytelemart\.com
+1762941383	VLAZ	car4deal\.com
