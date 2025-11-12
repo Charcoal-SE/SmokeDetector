@@ -78130,3 +78130,4 @@
 1762939286	VLAZ	b3advertisingagency\.in
 1762939299	VLAZ	etsytelemart\.com
 1762941383	VLAZ	car4deal\.com
+1762942614	VLAZ	beautywares\.in
