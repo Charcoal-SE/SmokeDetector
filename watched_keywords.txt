@@ -78131,3 +78131,4 @@
 1762939299	VLAZ	etsytelemart\.com
 1762941383	VLAZ	car4deal\.com
 1762942614	VLAZ	beautywares\.in
+1762944053	Snow	sayyesbedding\.com
