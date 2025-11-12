@@ -76140,7 +76140,6 @@
 1755786678	lyxal	parasprosenttilaskuri\.fi
 1755786984	VLAZ	apkluck\.com
 1755788794	VLAZ	7f777\.cloud
-1755788834	VLAZ	BN55[\W_]*+Game
 1755788910	Dan Getz	manrajsinghglobal(?#medium)
 1755789781	VLAZ	jjwin\.com\.pk
 1755789792	VLAZ	jjwin(?!\.com\.pk)
