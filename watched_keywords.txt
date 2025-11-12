@@ -78122,3 +78122,4 @@
 1762918860	Dan Getz	Cle[\W_]*+IPTV
 1762928543	VLAZ	ssoftsolutions\.in
 1762930209	Cow	network-consultancy\.com
+1762931114	Cow	jcfitness\.in
