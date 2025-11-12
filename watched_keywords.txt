@@ -78119,3 +78119,4 @@
 1762898283	Dan Getz	zast\.ai
 1762910621	Dan Getz	statwisecalculator\.com
 1762910637	Dan Getz	feedbackmcdonald\.de
+1762918860	Dan Getz	Cle[\W_]*+IPTV
