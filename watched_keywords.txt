@@ -78118,3 +78118,4 @@
 1762885938	VLAZ	ifixscreens[\W_]*+snellville
 1762898283	Dan Getz	zast\.ai
 1762910621	Dan Getz	statwisecalculator\.com
+1762910637	Dan Getz	feedbackmcdonald\.de
