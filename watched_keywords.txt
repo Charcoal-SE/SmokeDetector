@@ -78117,3 +78117,4 @@
 1762880812	VLAZ	generalphysicscorp\.com
 1762885938	VLAZ	ifixscreens[\W_]*+snellville
 1762898283	Dan Getz	zast\.ai
+1762910621	Dan Getz	statwisecalculator\.com
