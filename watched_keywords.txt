@@ -78146,3 +78146,4 @@
 1763012267	VLAZ	roblox\.al
 1763012508	VLAZ	digihubgroup\.com
 1763012518	VLAZ	tutorserviceinislamabad\.com
+1763018933	VLAZ	theelevatedigi\.com
