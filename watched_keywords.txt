@@ -78141,3 +78141,4 @@
 1762959169	Jeff Schaller	chothuexethaomy\.com
 1762962806	Vickel	bn55game\.net\.pk
 1762963080	Vickel	bn55[\W_]*+game(?!\.net\.pk(?<=bn55game\.net\.pk))
+1762993161	Vickel	(?-i:DGUb9PJxqJRjiMcd6)(?#forms.gle)
