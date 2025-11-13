@@ -78164,3 +78164,4 @@
 1763051984	VLAZ	evg[\W_]*+fine[\W_]*+check
 1763051993	VLAZ	emirates[\W_]*+vehicle[\W_]*+gate
 1763052514	VLAZ	bojanglesmenuprices\.us
+1763058019	Dan Getz	beautysupplie\.com
