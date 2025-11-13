@@ -78162,3 +78162,4 @@
 1763048224	VLAZ	dalfa\.co
 1763050451	VLAZ	imagemagixonline\.com
 1763051984	VLAZ	evg[\W_]*+fine[\W_]*+check
+1763051993	VLAZ	emirates[\W_]*+vehicle[\W_]*+gate
