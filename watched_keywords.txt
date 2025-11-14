@@ -78168,3 +78168,4 @@
 1763058348	VLAZ	neiontech\.com
 1763100859	VLAZ	happistargames\.online
 1763100986	VLAZ	ti84onlinecalc\.com
+1763101021	VLAZ	upreports\.com
