@@ -78194,3 +78194,4 @@
 1763121365	VLAZ	uprango(?!\.com)
 1763121374	VLAZ	uprango\.com
 1763121389	VLAZ	healthclic(?!\.co\.uk)
+1763121398	VLAZ	healthclic\.co\.uk
