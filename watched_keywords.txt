@@ -78191,3 +78191,4 @@
 1763120722	VLAZ	apzix\.com
 1763121327	VLAZ	iprogrammer\.com
 1763121338	VLAZ	iprogrammer(?!\.com)
+1763121365	VLAZ	uprango(?!\.com)
