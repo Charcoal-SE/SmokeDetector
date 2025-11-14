@@ -78198,3 +78198,4 @@
 1763122172	VLAZ	thevillagecounty\.in
 1763127172	lyxal	arka360\.com
 1763127346	lyxal	arka[\W_]*+360(?!\.com(?<=arka360\.com))
+1763128908	Snow	activecorefit\.com
