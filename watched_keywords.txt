@@ -78179,3 +78179,4 @@
 1763105585	VLAZ	fabcon-india\.com
 1763108126	VLAZ	chromglobal\.com
 1763108864	Cow	fxmacrodata\.com
+1763116197	Snow	envisionesl\.com
