@@ -78177,3 +78177,4 @@
 1763103758	VLAZ	nyender99\.website
 1763103767	VLAZ	nyender99(?!\.website)
 1763105585	VLAZ	fabcon-india\.com
+1763108126	VLAZ	chromglobal\.com
