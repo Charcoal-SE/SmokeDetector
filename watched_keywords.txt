@@ -78188,3 +78188,4 @@
 1763120562	VLAZ	alainpharmacy\.ae
 1763120571	VLAZ	emaginationz\.net
 1763120659	VLAZ	^(?-i:FloraFauna43)$
+1763120722	VLAZ	apzix\.com
