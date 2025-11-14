@@ -78196,3 +78196,4 @@
 1763121389	VLAZ	healthclic(?!\.co\.uk)
 1763121398	VLAZ	healthclic\.co\.uk
 1763122172	VLAZ	thevillagecounty\.in
+1763127172	lyxal	arka360\.com
