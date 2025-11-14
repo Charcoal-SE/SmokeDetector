@@ -78208,3 +78208,4 @@
 1763146700	VLAZ	curriculumconsults\.com
 1763147752	VLAZ	pathakhrk\.com
 1763147760	VLAZ	(?-i:vfiZfg2ywZU)(?#youtu.be)
+1763147769	VLAZ	pathakhrk(?!\.com)
