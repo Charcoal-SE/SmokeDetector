@@ -78175,3 +78175,4 @@
 1763103615	VLAZ	nexisops\.ai
 1763103733	VLAZ	uniformunicorn\.in
 1763103758	VLAZ	nyender99\.website
+1763103767	VLAZ	nyender99(?!\.website)
