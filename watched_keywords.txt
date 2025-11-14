@@ -78176,3 +78176,4 @@
 1763103733	VLAZ	uniformunicorn\.in
 1763103758	VLAZ	nyender99\.website
 1763103767	VLAZ	nyender99(?!\.website)
+1763105585	VLAZ	fabcon-india\.com
