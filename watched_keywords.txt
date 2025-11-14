@@ -78170,3 +78170,4 @@
 1763100986	VLAZ	ti84onlinecalc\.com
 1763101021	VLAZ	upreports\.com
 1763101064	VLAZ	garagedoorservicesokc\.com
+1763101196	VLAZ	com\.germanturkishapp
