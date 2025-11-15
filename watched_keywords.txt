@@ -78224,3 +78224,4 @@
 1763212740	VLAZ	pdf-to-jpg-tool\.com
 1763212788	VLAZ	banglashoppers(?!\.com)
 1763212795	VLAZ	banglashoppers\.com
+1763220957	Jeff Schaller	avenacloud\.com
