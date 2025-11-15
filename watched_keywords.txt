@@ -78216,3 +78216,4 @@
 1763194090	VLAZ	hianimes\.us
 1763196799	VLAZ	artplus\.cc
 1763208589	Jeff Schaller	singhajit\.com
+1763210227	Jeff Schaller	yakult\.co\.in
