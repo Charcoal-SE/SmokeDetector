@@ -78215,3 +78215,4 @@
 1763191591	VLAZ	magnifia[\W_]*+it[\W_]*+solutions
 1763194090	VLAZ	hianimes\.us
 1763196799	VLAZ	artplus\.cc
+1763208589	Jeff Schaller	singhajit\.com
