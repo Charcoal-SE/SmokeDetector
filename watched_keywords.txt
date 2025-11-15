@@ -78222,3 +78222,4 @@
 1763212468	VLAZ	raysglobalservices\.com
 1763212719	VLAZ	learnwebcraft\.com
 1763212740	VLAZ	pdf-to-jpg-tool\.com
+1763212788	VLAZ	banglashoppers(?!\.com)
