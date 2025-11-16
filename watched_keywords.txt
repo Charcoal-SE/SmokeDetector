@@ -78233,3 +78233,4 @@
 1763277149	VLAZ	vidsrc\.online
 1763277157	VLAZ	new-fmovies\.com
 1763277165	VLAZ	1movies\.info
+1763277173	VLAZ	netprime\.click
