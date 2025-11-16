@@ -78231,3 +78231,4 @@
 1763275635	VLAZ	social[\W_]*+swag[\W_]*+star
 1763277141	VLAZ	vidsrc\.store
 1763277149	VLAZ	vidsrc\.online
+1763277157	VLAZ	new-fmovies\.com
