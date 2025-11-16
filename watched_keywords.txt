@@ -78240,3 +78240,4 @@
 1763278141	VLAZ	ace-edit\.in
 1763288767	VLAZ	cprogrammingbookinhindi\.com
 1763288793	VLAZ	zaid\.pakproductpro\.com
+1763288905	VLAZ	aqeel[\W_]*+industries(?!\.com(?<=aqeelindustries\.com))
