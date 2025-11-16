@@ -78229,3 +78229,4 @@
 1763251894	Dan Getz	efiretemple\.com
 1763252791	Dan Getz	orionac\.in
 1763275635	VLAZ	social[\W_]*+swag[\W_]*+star
+1763277141	VLAZ	vidsrc\.store
