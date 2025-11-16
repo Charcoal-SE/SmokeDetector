@@ -78242,3 +78242,4 @@
 1763288793	VLAZ	zaid\.pakproductpro\.com
 1763288905	VLAZ	aqeel[\W_]*+industries(?!\.com(?<=aqeelindustries\.com))
 1763294194	VLAZ	xn--ogbbgt5h\.net
+1763305633	Dan Getz	totaltow\.ca
