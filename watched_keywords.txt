@@ -78250,4 +78250,3 @@
 1763341479	Dan Getz	spot\.fund
 1763342681	Dan Getz	saasdirectory\.app
 1763350926	Dan Getz	driftboss3d\.io
-1763356489	Dan Getz	arcticmeds\ com
