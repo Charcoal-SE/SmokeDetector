@@ -78253,3 +78253,4 @@
 1763356523	Dan Getz	arcticmeds\.com
 1763357551	VLAZ	aitrillion\.com
 1763362103	VLAZ	planet[\W_]*+beauty[\W_]*+salon
+1763362566	VLAZ	backlinksnepal\.space
