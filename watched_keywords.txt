@@ -78248,3 +78248,4 @@
 1763338829	Dan Getz	Inspiralegal
 1763339443	Dan Getz	vii[\W_]++iv[\W_]++vii[\W_]++iii[\W_]++ix[\W_]++vii[\W_]++viii[\W_]++v[\W_]++iv[\W_]++iii
 1763341479	Dan Getz	spot\.fund
+1763342681	Dan Getz	saasdirectory\.app
