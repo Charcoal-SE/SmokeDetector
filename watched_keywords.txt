@@ -77724,7 +77724,6 @@
 1761649635	VLAZ	videoexplainers\.com
 1761649854	Snow	quantacom\.com\.au
 1761653035	Dan Getz	myneemoe\.in
-1761653484	VLAZ	alpentandem\.de
 1761653703	Jeff Schaller	MyneeMoe(?!\.in)
 1761654094	VLAZ	clearwaterflconcretecontractor\.com
 1761659932	Snow	bankkomat\.cc
