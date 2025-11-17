@@ -78277,3 +78277,4 @@
 1763381824	VLAZ	(?-i:ZIeMHDkRtgA)(?# youtube)
 1763381834	VLAZ	tik[\W_]*+analyzer
 1763382254	Jeff Schaller	deltastark\.com
+1763387251	VLAZ	upsidedowntexts\.com
