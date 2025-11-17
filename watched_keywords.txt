@@ -78255,3 +78255,4 @@
 1763362103	VLAZ	planet[\W_]*+beauty[\W_]*+salon
 1763362566	VLAZ	backlinksnepal\.space
 1763362574	VLAZ	suryani\.com\.np
+1763362583	VLAZ	suryaniinternational\.com
