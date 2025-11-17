@@ -78257,3 +78257,4 @@
 1763362574	VLAZ	suryani\.com\.np
 1763362583	VLAZ	suryaniinternational\.com
 1763364150	VLAZ	aaa[\W_]*+biotech(?!\.com(?<=aaabiotech\.com))
+1763364200	VLAZ	itaservices\.in
