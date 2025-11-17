@@ -78283,3 +78283,4 @@
 1763397124	Snow	calendar-vibe\.com
 1763404808	VLAZ	psychedelicmedicineassociation\.org
 1763407350	VLAZ	achievingresumes\.com
+1763417152	Jeff Schaller	linuxsimplify\.com
