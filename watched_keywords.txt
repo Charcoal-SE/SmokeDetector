@@ -78306,3 +78306,4 @@
 1763482051	VLAZ	wintech[\W_]*+security
 1763482099	VLAZ	Swintech2
 1763485693	Dan Getz	pg8881\.net
+1763489909	Jeff Schaller	tapesntales\.com
