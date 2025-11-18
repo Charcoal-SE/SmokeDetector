@@ -78293,3 +78293,4 @@
 1763447816	VLAZ	oh[\W_]*+design[\W_]*+studio(?!\.com(?<=ohdesignstudio\.com))
 1763448222	VLAZ	gnexttechnologies\.in
 1763448656	VLAZ	amity[\W_]*+auto[\W_]*+glass(?!\.com(?<=amityautoglass\.com))
+1763448665	VLAZ	amityautoglass\.com
