@@ -78305,3 +78305,4 @@
 1763479855	Jeff Schaller	graphicsglow\.com
 1763482051	VLAZ	wintech[\W_]*+security
 1763482099	VLAZ	Swintech2
+1763485693	Dan Getz	pg8881\.net
