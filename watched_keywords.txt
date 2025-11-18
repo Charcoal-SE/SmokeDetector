@@ -78288,3 +78288,4 @@
 1763425220	Jeff Schaller	frq415973(?#temu)
 1763443033	Dan Getz	skonlineagency\.com
 1763445020	VLAZ	ignitio\.biz
+1763445035	VLAZ	indamadvisors\.com
