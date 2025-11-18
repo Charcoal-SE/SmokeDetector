@@ -78295,3 +78295,4 @@
 1763448656	VLAZ	amity[\W_]*+auto[\W_]*+glass(?!\.com(?<=amityautoglass\.com))
 1763448665	VLAZ	amityautoglass\.com
 1763450459	VLAZ	blockchainappmaker\.com
+1763453005	VLAZ	fiberglasswool\.com
