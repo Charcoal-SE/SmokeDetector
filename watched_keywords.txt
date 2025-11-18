@@ -78290,3 +78290,4 @@
 1763445020	VLAZ	ignitio\.biz
 1763445035	VLAZ	indamadvisors\.com
 1763447776	VLAZ	ohdesignstudio\.com
+1763447816	VLAZ	oh[\W_]*+design[\W_]*+studio(?!\.com(?<=ohdesignstudio\.com))
