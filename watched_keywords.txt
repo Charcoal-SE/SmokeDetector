@@ -78313,3 +78313,4 @@
 1763530120	VLAZ	hackshield91
 1763530583	VLAZ	viacation\.com
 1763530776	VLAZ	pixelpunch\.org
+1763532177	VLAZ	trailblazing[\W_]*+tails(?!\.com(?<=trailblazingtails\.com))
