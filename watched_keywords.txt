@@ -78354,3 +78354,4 @@
 1763579301	Dan Getz	u888\.net\.in
 1763579376	Dan Getz	ciaotool\.io
 1763579395	Dan Getz	ciaotool(?!\.io)
+1763581053	Jeff Schaller	hitclub1\.in\.net
