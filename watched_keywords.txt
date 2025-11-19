@@ -78332,3 +78332,4 @@
 1763540907	VLAZ	prankpays\.com
 1763541077	VLAZ	techqware\.com
 1763544428	VLAZ	celitix\.com
+1763544462	VLAZ	amazeind\.in
