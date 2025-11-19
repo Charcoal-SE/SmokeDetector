@@ -78322,3 +78322,4 @@
 1763533488	VLAZ	^(?-i:Rebound Hack)$
 1763533603	VLAZ	reliancejewels\.com
 1763537304	VLAZ	melbournedeluxechauffeurs\.com\.au
+1763537986	VLAZ	tackleit\.xyz
