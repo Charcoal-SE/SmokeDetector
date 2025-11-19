@@ -78344,3 +78344,4 @@
 1763556781	Glorfindel	ailoitte
 1763558361	VLAZ	zaxbyslistens\.com
 1763558369	VLAZ	zaxbyslistens(?!\.com)
+1763560297	Snow	blog\.mentormerlin\.com
