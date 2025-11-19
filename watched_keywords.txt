@@ -52659,7 +52659,6 @@
 1695377432	Jeff Schaller	comus\.store
 1695377512	Jeff Schaller	bestkitchenseller\.com
 1695382170	Can O' Spam	totalclassified\.ca
-1695382285	cigien	total[\W_]*+classified(?!\.ca(?<=totalclassified\.ca))
 1695380093	Can O' Spam	ityug247\.com
 1695382687	cigien	re[\W_]*+imaging[\W_]*+sc(?!\.com(?<=reimagingsc\.com))
 1695383054	cigien	flokii\.com
