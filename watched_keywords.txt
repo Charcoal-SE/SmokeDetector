@@ -78345,3 +78345,4 @@
 1763558369	VLAZ	zaxbyslistens(?!\.com)
 1763560297	Snow	blog\.mentormerlin\.com
 1763552873	Snow	transcriptsx\.com
+1763561506	VLAZ	tap\.bio
