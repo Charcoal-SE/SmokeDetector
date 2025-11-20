@@ -78362,3 +78362,4 @@
 1763631082	Cow	avanexa\.com
 1763628748	Snow	livecargame\.netlify\.app
 1763635260	Snow	embodiedsoulhypnosis\.com
+1763635283	Snow	pvkelectronic\.com
