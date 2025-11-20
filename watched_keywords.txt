@@ -78371,3 +78371,4 @@
 1763642146	VLAZ	cric99(?!\.co\.in)
 1763645402	VLAZ	sportbex(?!\.com)
 1763647252	VLAZ	prusaslicers\.com
+1763651534	VLAZ	topnhacai\.fit
