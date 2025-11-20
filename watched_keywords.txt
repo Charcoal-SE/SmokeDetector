@@ -78372,3 +78372,4 @@
 1763645402	VLAZ	sportbex(?!\.com)
 1763647252	VLAZ	prusaslicers\.com
 1763651534	VLAZ	topnhacai\.fit
+1763651568	VLAZ	topnhacaifit1
