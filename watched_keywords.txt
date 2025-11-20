@@ -78366,3 +78366,4 @@
 1763638654	VLAZ	medixway
 1763641157	VLAZ	martoo\.ae
 1763641172	VLAZ	islamtime\.pk
+1763641867	Dan Getz	acutevision\.in
