@@ -78375,3 +78375,4 @@
 1763651568	VLAZ	topnhacaifit1
 1763652704	Snow	lambdalaboratory\.com
 1763655907	Dan Getz	nobukojapan\.com
+1763663593	Dan Getz	purplesquareai\.com
