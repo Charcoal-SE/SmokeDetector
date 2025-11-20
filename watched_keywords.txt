@@ -78380,3 +78380,4 @@
 1763666670	VLAZ	every-seconds\.com
 1763667790	Dan Getz	uncrossablerush\.com
 1763667806	Dan Getz	slotcatalog\.com
+1763677641	Jeff Schaller	smoosense\.ai
