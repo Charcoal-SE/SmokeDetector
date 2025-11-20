@@ -78379,3 +78379,4 @@
 1763664969	Jeff Schaller	pineandpeaks\.in
 1763666670	VLAZ	every-seconds\.com
 1763667790	Dan Getz	uncrossablerush\.com
+1763667806	Dan Getz	slotcatalog\.com
