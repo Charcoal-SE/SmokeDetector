@@ -78368,3 +78368,4 @@
 1763641172	VLAZ	islamtime\.pk
 1763641867	Dan Getz	acutevision\.in
 1763641993	VLAZ	cric99\.co\.in
+1763642146	VLAZ	cric99(?!\.co\.in)
