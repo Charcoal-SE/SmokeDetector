@@ -78400,3 +78400,4 @@
 1763713730	VLAZ	ilsshospitals\.com
 1763718180	VLAZ	diuwins\.co
 1763721985	Nisse Engström	boothfabricators\.com
+1763723257	VLAZ	shaye\.co\.in
