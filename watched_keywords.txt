@@ -78397,3 +78397,4 @@
 1763704466	VLAZ	mr[\W_]*+asphalt(?!\.net\.au(?<=mrasphalt\.net\.au))
 1763707321	Cow	muhammedfajis\.com
 1763712221	VLAZ	amazing[\W_]*+grace[\W_]*+cleaning[\W_]*+service
+1763713730	VLAZ	ilsshospitals\.com
