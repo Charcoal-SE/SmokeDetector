@@ -78387,3 +78387,4 @@
 1763701686	Dan Getz	soltokenburner(?!\.com)
 1763701970	VLAZ	codeguardhost\.com
 1763701978	VLAZ	code[\W_]*+guard[\W_]*+host(?!\.com(?<=codeguardhost\.com))
+1763702352	VLAZ	dinsos\.kaltimprov\.go\.id
