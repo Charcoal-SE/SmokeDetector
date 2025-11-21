@@ -78382,3 +78382,4 @@
 1763667806	Dan Getz	slotcatalog\.com
 1763677641	Jeff Schaller	smoosense\.ai
 1763680603	Dan Getz	derivativecalculus\.com
+1763692975	Jeff Schaller	pathtogreenhomes\.com
