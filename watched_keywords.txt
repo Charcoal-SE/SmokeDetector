@@ -78385,3 +78385,4 @@
 1763692975	Jeff Schaller	pathtogreenhomes\.com
 1763701677	Dan Getz	soltokenburner\.com
 1763701686	Dan Getz	soltokenburner(?!\.com)
+1763701970	VLAZ	codeguardhost\.com
