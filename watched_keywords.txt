@@ -78390,3 +78390,4 @@
 1763702352	VLAZ	dinsos\.kaltimprov\.go\.id
 1763702360	VLAZ	clinicasestetik\.com
 1763704182	VLAZ	mirshahananadi\.liveblog365\.com
+1763704201	VLAZ	winjeet\.com
