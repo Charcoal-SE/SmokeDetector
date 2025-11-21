@@ -78396,3 +78396,4 @@
 1763704449	VLAZ	mike[\W_]*+rowley[\W_]*+asphalt[\W_]*+constructions
 1763704466	VLAZ	mr[\W_]*+asphalt(?!\.net\.au(?<=mrasphalt\.net\.au))
 1763707321	Cow	muhammedfajis\.com
+1763709233	dan1st	MakeBranded
