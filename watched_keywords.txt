@@ -78388,3 +78388,4 @@
 1763701970	VLAZ	codeguardhost\.com
 1763701978	VLAZ	code[\W_]*+guard[\W_]*+host(?!\.com(?<=codeguardhost\.com))
 1763702352	VLAZ	dinsos\.kaltimprov\.go\.id
+1763702360	VLAZ	clinicasestetik\.com
