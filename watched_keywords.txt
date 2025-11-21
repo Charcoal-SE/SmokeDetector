@@ -78389,3 +78389,4 @@
 1763701978	VLAZ	code[\W_]*+guard[\W_]*+host(?!\.com(?<=codeguardhost\.com))
 1763702352	VLAZ	dinsos\.kaltimprov\.go\.id
 1763702360	VLAZ	clinicasestetik\.com
+1763704182	VLAZ	mirshahananadi\.liveblog365\.com
