@@ -78418,3 +78418,4 @@
 1763808400	VLAZ	urbnleather\.com
 1763809427	VLAZ	hotspotvape\.ca
 1763809839	VLAZ	pestcontrolservices\.pk
+1763811491	VLAZ	mydailygoods
