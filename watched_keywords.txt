@@ -78422,3 +78422,4 @@
 1763815557	Jeff Schaller	radiumbox\.com
 1763822656	VLAZ	aistaircalculator\.com
 1763709233	dan1st	MakeBranded
+1763839538	VLAZ	7[\W_]*+brew[\W_]*+coffee
