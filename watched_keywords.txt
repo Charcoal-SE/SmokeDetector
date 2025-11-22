@@ -78424,3 +78424,4 @@
 1763709233	dan1st	MakeBranded
 1763841510	VLAZ	7[\W_]*+brew[\W_]*+coffee(?!-menus\.store)
 1763841520	VLAZ	7brewcoffee-menus\.store
+1763844802	Vickel	chocsahoy\.com
