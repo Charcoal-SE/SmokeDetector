@@ -78426,3 +78426,4 @@
 1763841520	VLAZ	7brewcoffee-menus\.store
 1763844802	Vickel	chocsahoy\.com
 1763844912	Vickel	chocsahoy(?!\.com)
+1763860011	Jeff Schaller	antalyaevdemasaj\.vip
