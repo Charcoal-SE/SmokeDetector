@@ -78444,3 +78444,4 @@
 1763969254	VLAZ	instavyapar\.com
 1763969916	VLAZ	uksresort(?!\.com)
 1763969924	VLAZ	uksresort\.com
+1763970113	VLAZ	whitespacealpha\.com
