@@ -78435,3 +78435,4 @@
 1763891970	VLAZ	cinebyhd\.app
 1763892048	VLAZ	meteryard\.com
 1763912521	VLAZ	locksmartclimatestorage\.com
+1763961445	VLAZ	scoopanalytics\.com
