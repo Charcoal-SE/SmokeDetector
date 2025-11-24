@@ -78439,3 +78439,4 @@
 1763961758	VLAZ	alsafyhandyman\.com\.au
 1763961907	VLAZ	tabscap\.com
 1763962267	VLAZ	microbitmedia\.io
+1763965841	Dan Getz	oscarbasmatirice\.com
