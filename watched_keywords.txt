@@ -78436,3 +78436,4 @@
 1763892048	VLAZ	meteryard\.com
 1763912521	VLAZ	locksmartclimatestorage\.com
 1763961445	VLAZ	scoopanalytics\.com
+1763961758	VLAZ	alsafyhandyman\.com\.au
