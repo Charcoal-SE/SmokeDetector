@@ -78452,3 +78452,4 @@
 1763973460	VLAZ	matrimom\.com
 1763973502	VLAZ	matrimom(?!\.com)
 1763977040	VLAZ	thinairexpedition\.com
+1763977089	VLAZ	astropackgulf\.com
