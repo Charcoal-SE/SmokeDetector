@@ -78453,3 +78453,4 @@
 1763973502	VLAZ	matrimom(?!\.com)
 1763977040	VLAZ	thinairexpedition\.com
 1763977089	VLAZ	astropackgulf\.com
+1763981492	VLAZ	atmadeep[\W_]*+yoga[\W_]*+garbh[\W_]*+sanskar
