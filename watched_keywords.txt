@@ -78447,3 +78447,4 @@
 1763970113	VLAZ	whitespacealpha\.com
 1763971034	VLAZ	urbancraftproperties\.in
 1763971046	VLAZ	dubaiislandproperties\.com
+1763973140	VLAZ	crantech\.uk
