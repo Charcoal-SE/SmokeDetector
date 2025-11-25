@@ -78472,3 +78472,4 @@
 1764051434	VLAZ	artisticks\.co\.in
 1764051575	VLAZ	farangroupofinstitutions\.in
 1764051951	VLAZ	cravess
+1764053233	VLAZ	insolare[\W_]*+energy
