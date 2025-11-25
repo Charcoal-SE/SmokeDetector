@@ -78494,3 +78494,4 @@
 1764096537	VLAZ	8171\.agahi\.org\.pk
 1764099141	VLAZ	beef-way-two\.com
 1764099148	VLAZ	23291\.call2me\.pro
+1764106829	Jeff Schaller	lkxa\.pro
