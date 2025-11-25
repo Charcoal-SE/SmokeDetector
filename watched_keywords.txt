@@ -78474,3 +78474,4 @@
 1764051951	VLAZ	cravess
 1764053233	VLAZ	insolare[\W_]*+energy
 1764059294	VLAZ	a2z[\W_]*+airport[\W_]*+assist
+1764059316	VLAZ	above40\.com
