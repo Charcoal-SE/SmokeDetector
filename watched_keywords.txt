@@ -78481,3 +78481,4 @@
 1764063852	VLAZ	Quest[\W_]*+Hotel[\W_]*+Manila
 1764064872	VLAZ	cureitherb\.com
 1764065297	Snow	desertxtremeadventures\.com
+1764067350	VLAZ	kefitech\.com
