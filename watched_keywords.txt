@@ -78471,3 +78471,4 @@
 1764051416	VLAZ	salesforce[\W_]*+digital[\W_]*+engagement
 1764051434	VLAZ	artisticks\.co\.in
 1764051575	VLAZ	farangroupofinstitutions\.in
+1764051951	VLAZ	cravess
