@@ -78476,3 +78476,4 @@
 1764059294	VLAZ	a2z[\W_]*+airport[\W_]*+assist
 1764059316	VLAZ	above40\.com
 1764059684	VLAZ	buildbrandbetter\.io
+1764062496	VLAZ	uvnetware\.com
