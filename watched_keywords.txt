@@ -78524,3 +78524,4 @@
 1764158574	VLAZ	info[\W_]*+at[\W_]*+thebarrycyberinvestigations[\W_]*+dot[\W_]*+com
 1764158749	Jeff Schaller	taxiserviceinnoida\.in
 1764158809	VLAZ	thebarrycyberinvestigations\.com
+1764159582	VLAZ	whitelinedubai\.com
