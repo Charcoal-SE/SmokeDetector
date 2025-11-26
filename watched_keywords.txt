@@ -78508,3 +78508,4 @@
 1764139780	VLAZ	reactfasttest\.com
 1764140471	VLAZ	luxeglamp\.com
 1764081848	Snow	bpmn2petrinet\.com
+1764141780	VLAZ	magiskmanager\.web\.app
