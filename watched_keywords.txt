@@ -78527,3 +78527,4 @@
 1764159582	VLAZ	whitelinedubai\.com
 1764159720	Snow	alfamedicoproducts\.com
 1764160136	VLAZ	alltripguide\.in
+1764166130	Snow	vaividyaevents\.in
