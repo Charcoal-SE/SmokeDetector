@@ -78513,3 +78513,4 @@
 1764145204	VLAZ	valuekitchens\.in
 1764145572	VLAZ	onlineitvidhya\.com
 1764146964	VLAZ	99pandit\.com
+1764147646	VLAZ	oodles[\W_]*+technologies
