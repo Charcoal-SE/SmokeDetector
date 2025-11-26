@@ -78534,3 +78534,4 @@
 1764186994	Dan Getz	salattimings\.com
 1764188163	Jeff Schaller	usvesta\.com
 1764190660	Dan Getz	cryptoinfa\.com
+1764194483	Dan Getz	slotscity\.ua
