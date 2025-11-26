@@ -78516,3 +78516,4 @@
 1764147646	VLAZ	oodles[\W_]*+technologies
 1764147982	Snow	reformbc\.net
 1764147986	Snow	vip79b\.life
+1764148975	VLAZ	jolliejewelz\.com
