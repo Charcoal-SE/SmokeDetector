@@ -78521,3 +78521,4 @@
 1764150156	VLAZ	bestinest\.com
 1764155979	VLAZ	acrepairindubai\.ae
 1764157871	Snow	thebarrycyberinvestigation\.com
+1764158574	VLAZ	info[\W_]*+at[\W_]*+thebarrycyberinvestigations[\W_]*+dot[\W_]*+com
