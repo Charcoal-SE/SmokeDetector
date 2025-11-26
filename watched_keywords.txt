@@ -78506,3 +78506,4 @@
 1764138336	Mast	oroslife\.com
 1764138506	Mast	EadsCo[\W_]*+Cleaning
 1764139780	VLAZ	reactfasttest\.com
+1764140471	VLAZ	luxeglamp\.com
