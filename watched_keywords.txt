@@ -78533,3 +78533,4 @@
 1764186983	Dan Getz	hvacinpueblocolorado\.com
 1764186994	Dan Getz	salattimings\.com
 1764188163	Jeff Schaller	usvesta\.com
+1764190660	Dan Getz	cryptoinfa\.com
