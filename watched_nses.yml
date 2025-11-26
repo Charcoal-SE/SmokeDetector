@@ -5735,7 +5735,9 @@ items:
 - ns: lyfsoft.com.
 - ns: hostyuga.net.
 - ns: hostiq.ua.
-- ns: attichosting.com.
+- comment: nxdomain 2025-11-26
+  disable: true
+  ns: attichosting.com.
 - ns: speakatoo.com.
 - ns: zoomnameserver.com.
 - ns: parastorage.com.
