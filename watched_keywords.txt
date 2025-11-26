@@ -78515,3 +78515,4 @@
 1764146964	VLAZ	99pandit\.com
 1764147646	VLAZ	oodles[\W_]*+technologies
 1764147982	Snow	reformbc\.net
+1764147986	Snow	vip79b\.life
