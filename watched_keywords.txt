@@ -78503,3 +78503,4 @@
 1764135805	VLAZ	easysourceindia\.com
 1764137690	VLAZ	Temperus\s*+Tantramus
 1764137707	VLAZ	cbsinfosys\.com
+1764138336	Mast	oroslife\.com
