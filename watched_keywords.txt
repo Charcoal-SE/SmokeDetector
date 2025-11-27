@@ -78548,3 +78548,4 @@
 1764226989	VLAZ	veo3io\.com
 1764227112	VLAZ	kapbe
 1764230579	VLAZ	blacksblinds\.com
+1764230601	VLAZ	leadercompany\.ge
