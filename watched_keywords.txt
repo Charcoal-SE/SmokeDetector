@@ -78566,3 +78566,4 @@
 1764260369	VLAZ	connecticut[\W_]*+personal[\W_]*+training
 1764260532	VLAZ	water[\W_]*+leak[\W_]*+detect[\W_]*+uae
 1764260718	VLAZ	ecbabies\.org
+1764260855	VLAZ	ronaldoq4(?:@gmail\.com)?
