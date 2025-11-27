@@ -78567,3 +78567,4 @@
 1764260532	VLAZ	water[\W_]*+leak[\W_]*+detect[\W_]*+uae
 1764260718	VLAZ	ecbabies\.org
 1764260855	VLAZ	ronaldoq4(?:@gmail\.com)?
+1764273502	Vickel	djr481144(?:@gmail\.com)?
