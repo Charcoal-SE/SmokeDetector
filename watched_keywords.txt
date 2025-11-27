@@ -78542,3 +78542,4 @@
 1764212899	Dan Getz	calculatefinalgrade\.com
 1764221641	VLAZ	marbeyacharm\.com
 1764221654	VLAZ	obioutfitters\.com
+1764222717	VLAZ	bazoocam\.onl
