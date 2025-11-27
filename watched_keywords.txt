@@ -78547,3 +78547,4 @@
 1764225829	VLAZ	rentaroomlondon\.co\.uk
 1764226989	VLAZ	veo3io\.com
 1764227112	VLAZ	kapbe
+1764230579	VLAZ	blacksblinds\.com
