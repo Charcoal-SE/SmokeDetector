@@ -78564,3 +78564,4 @@
 1764250894	Snow	redfieldcontracting\.com
 1764256181	Snow	downcs16\.top
 1764260369	VLAZ	connecticut[\W_]*+personal[\W_]*+training
+1764260532	VLAZ	water[\W_]*+leak[\W_]*+detect[\W_]*+uae
