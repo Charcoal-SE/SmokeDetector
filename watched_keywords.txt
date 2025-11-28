@@ -45376,7 +45376,6 @@
 1672217039	Cody Gray	Leather[\W_]*Jackets[\W_]*Manufacturers
 1672217084	Cody Gray	cbdforsleep\.net
 1672217127	Cody Gray	CBD[\W_]*for[\W_]*Sleep(?!\.net(?<=cbdforsleep\.net))
-1672222738	tripleee	(?-i:^muthu$)
 1672222940	Cody Gray	rezbookglobal\.com
 1672222974	Cody Gray	Rezbook[\W_]*Global(?!\.com(?<=rezbookglobal\.com))
 1672225223	Cody Gray	aroapress\.com
