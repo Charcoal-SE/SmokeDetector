@@ -78573,3 +78573,4 @@
 1764307984	VLAZ	teachertrainingmumbai\.com
 1764311037	VLAZ	freshers\.jobs
 1764311127	VLAZ	gstc\.com
+1764311163	VLAZ	stylezea\.com
