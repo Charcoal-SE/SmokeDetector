@@ -78580,3 +78580,4 @@
 1764313174	VLAZ	teemdrop\.com
 1764313709	VLAZ	simbatissue\.com
 1764315617	VLAZ	nextgeninvent\.com
+1764321410	VLAZ	app-clone\.com
