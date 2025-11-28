@@ -78575,3 +78575,4 @@
 1764311127	VLAZ	gstc\.com
 1764311163	VLAZ	stylezea\.com
 1764311584	VLAZ	stylezea(?!\.com)
+1764312241	VLAZ	adorbit\.page\.gd
