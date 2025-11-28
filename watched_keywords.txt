@@ -78582,3 +78582,4 @@
 1764315617	VLAZ	nextgeninvent\.com
 1764321410	VLAZ	app-clone\.com
 1764333400	Jeff Schaller	victorybrandagency\.com
+1764333441	Jeff Schaller	cloud2convert\.com
