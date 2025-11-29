@@ -78599,3 +78599,4 @@
 1764404691	VLAZ	maklogistic\.com
 1764404702	VLAZ	fischer\.in
 1764404846	VLAZ	pharmetglobal\.com
+1764406966	VLAZ	you-buy\.ca
