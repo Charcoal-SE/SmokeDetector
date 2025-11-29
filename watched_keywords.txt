@@ -78595,3 +78595,4 @@
 1764358618	Dan Getz	Guard0n
 1764388684	Dan Getz	dengyuemed\.com
 1764388716	Dan Getz	dengyuemed(?!\.com)
+1764390461	Dan Getz	andune\.in
