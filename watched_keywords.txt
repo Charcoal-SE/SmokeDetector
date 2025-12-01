@@ -78648,3 +78648,4 @@
 1764599345	VLAZ	monarchcontractingny\.com
 1764600567	VLAZ	hexrate\.io
 1764605402	Dan Getz	lendup\.com
+1764606381	Jeff Schaller	Red[\W_]*+Tag[\W_]*+Caterers
