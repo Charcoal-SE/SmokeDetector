@@ -78654,3 +78654,4 @@
 1764609817	Thomas Ward	dikshaasharma\.com
 1764611792	Dan Getz	admissiontheory\.com
 1764611852	VLAZ	mahanrestaurant\.com
+1764612002	VLAZ	(?-i:A00J0L7NA5YLNw)(?# temu.com)
