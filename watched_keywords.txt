@@ -78655,3 +78655,4 @@
 1764611792	Dan Getz	admissiontheory\.com
 1764611852	VLAZ	mahanrestaurant\.com
 1764612002	VLAZ	(?-i:A00J0L7NA5YLNw)(?# temu.com)
+1764626349	Jeff Schaller	techwoofer\.com
