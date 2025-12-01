@@ -78637,3 +78637,4 @@
 1764566923	VLAZ	exportpdftoexcel\.com
 1764566955	VLAZ	hoffnmazor\.com
 1764567192	VLAZ	astrobhaarat\.com
+1764571987	VLAZ	semakanstronline\.my
