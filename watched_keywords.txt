@@ -78651,3 +78651,4 @@
 1764606381	Jeff Schaller	Red[\W_]*+Tag[\W_]*+Caterers
 1764606417	Jeff Schaller	redtageventsplanner(?:@gmail\.com)?
 1764608395	VLAZ	ziverdokit\.us
+1764609817	Thomas Ward	dikshaasharma\.com
