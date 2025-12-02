@@ -78676,3 +78676,4 @@
 1764674107	Snow	solutionbowl\.com
 1764674860	Dan Getz	talktokfc\.click
 1764676262	Dan Getz	marccure\.com
+1764679208	Snow	topwindow\.app
