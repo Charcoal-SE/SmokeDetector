@@ -78681,3 +78681,4 @@
 1764685636	VLAZ	buganalyzr\.com
 1764707853	Jeff Schaller	Malisa72
 1764711020	Jeff Schaller	eventscookie\.com
+1764715596	Jeff Schaller	lucascutterrecovery(?:@gmail\.com)?
