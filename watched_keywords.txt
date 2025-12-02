@@ -34552,7 +34552,6 @@
 1641473096	cigien	constructivevisual\.com
 1641484109	Spevacus	pianochordes\.com
 1641484649	cigien	(?-i:r9VZoWik9c0)(?#youtube)
-1641491611	Machavity	panelook\.com
 1641491725	Makyen	(?-i:kKnRqWu0ATk)(?#youtube.com)
 1641492438	Mast	Coinbase[\W_]*+Customer[\W_]*+service
 1641493407	cigien	bestinternetsolution\.com
