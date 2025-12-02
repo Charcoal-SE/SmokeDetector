@@ -78663,3 +78663,4 @@
 1764656246	VLAZ	stuintern
 1764656273	VLAZ	zoople[\W_]*+technologies
 1764656751	VLAZ	gopayslot77\.com
+1764656763	VLAZ	gopayslot77(?!\.com)
