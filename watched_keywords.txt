@@ -78657,3 +78657,4 @@
 1764612002	VLAZ	(?-i:A00J0L7NA5YLNw)(?# temu.com)
 1764626349	Jeff Schaller	techwoofer\.com
 1764626371	Jeff Schaller	coinspot\.io
+1764635808	Dan Getz	ishotaphoto\.com
