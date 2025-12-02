@@ -22301,7 +22301,6 @@
 1600138177	Spevacus	webcontentonline\.com
 1600140012	NobodyNada	tetrisgame\.co
 1600142322	NobodyNada	siapurboexpress(?#facebook.com)
-1600145813	tripleee	(?-i:^Sam Paul$)
 1600146359	tripleee	trippy[\W_]*+plug\d*
 1600148987	tripleee	probestworld\.com
 1600149014	tripleee	phone[\W_]*+sex
