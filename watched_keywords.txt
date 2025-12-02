@@ -78665,3 +78665,4 @@
 1764656751	VLAZ	gopayslot77\.com
 1764656763	VLAZ	gopayslot77(?!\.com)
 1764659263	VLAZ	engvarta\.com
+1764664023	VLAZ	bucees-menu\.com
