@@ -78678,3 +78678,4 @@
 1764676262	Dan Getz	marccure\.com
 1764679208	Snow	topwindow\.app
 1764680126	VLAZ	moon[\W_]*+valley[\W_]*+resort
+1764685499	Vickel	ajaynova\.com
