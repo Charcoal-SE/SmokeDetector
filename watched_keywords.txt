@@ -78674,3 +78674,4 @@
 1764672715	Snow	mm99\.coupons
 1764674055	Snow	instabizfilings\.com
 1764674107	Snow	solutionbowl\.com
+1764674860	Dan Getz	talktokfc\.click
