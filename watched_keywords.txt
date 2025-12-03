@@ -78707,3 +78707,4 @@
 1764768521	Vickel	elite[\W_]*+frames[\W_]*+studio
 1764775403	VLAZ	tripawayjourney\.com
 1764780579	Jeff Schaller	vapetoy\.in
+1764782348	VLAZ	publichealthontario\.ca
