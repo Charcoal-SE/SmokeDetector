@@ -78690,3 +78690,4 @@
 1764743228	Cow	tradedoha(?!\.com(?<=tradedoha\.com))
 1764744226	VLAZ	harmonicjewels\.com
 1764744265	VLAZ	harmonic[\W_]*+jewels(?!\.com(?<=harmonicjewels\.com))
+1764745460	VLAZ	brandburp
