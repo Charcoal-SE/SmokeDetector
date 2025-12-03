@@ -78700,3 +78700,4 @@
 1764755235	VLAZ	salexxconstruction\.com
 1764755287	VLAZ	xcons
 1764755440	VLAZ	cinzelindia\.com
+1764757430	VLAZ	artsbreeze\.com
