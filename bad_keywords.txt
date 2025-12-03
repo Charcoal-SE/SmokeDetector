@@ -3908,3 +3908,4 @@ bdg[\W_]*+games?+(?!\.link(?<=bdggame\.link))
 bus[\W_]*+simulator[\W_]*+indonesia
 EnrgTech
 satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatkapro\.mobi))(?!z\.com(?<=sattamatkaz\.com))\w*+
+𝚀𝚞𝚒𝚌𝚔𝙱𝚘𝚘𝚔𝚜 𝙳𝚎𝚜𝚔𝚝𝚘𝚙
