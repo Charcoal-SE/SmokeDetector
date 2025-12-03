@@ -78704,3 +78704,4 @@
 1764760240	Jeff Schaller	einejagdlizenzkaufen\.it\.com
 1764765997	lyxal	seedlingschools\.com
 1764766091	Jeff Schaller	imd\.org
+1764768521	Vickel	elite[\W_]*+frames[\W_]*+studio
