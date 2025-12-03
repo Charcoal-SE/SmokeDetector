@@ -78687,3 +78687,4 @@
 1764737878	VLAZ	myluxuryflooring\.com
 1764741150	Dan Getz	Apptunix
 1764743148	Cow	tradedoha\.com
+1764743228	Cow	tradedoha(?!\.com(?<=tradedoha\.com))
