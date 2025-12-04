@@ -78733,3 +78733,4 @@
 1764859574	VLAZ	ingles\.com\.ar
 1764863041	Snow	zenestable\.com
 1764869757	VLAZ	arscooling\.in
+1764869775	VLAZ	ars[\W_]*+cooling[\W_]*+system
