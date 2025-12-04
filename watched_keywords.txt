@@ -78716,3 +78716,4 @@
 1764829222	Cow	key[\W_]*+dynamics[\W_]*+solutions(?!\.com(?<=keydynamicssolutions\.com))
 1764829466	Cow	spreadbrain\.com
 1764829851	VLAZ	attorney-rankings\.com
+1764830034	Cow	pentelumenae\.com
