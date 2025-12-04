@@ -78740,3 +78740,4 @@
 1764874961	Vickel	seomasteragency\.com
 1764876360	Vickel	seo[\W_]*+master[\W_]*+agency(?!\.com(?<=seomasteragency\.com))
 1764876904	Dan Getz	efikcoinstaking\.org
+1764878685	Dan Getz	unifytech\.com
