@@ -76955,7 +76955,6 @@
 1758732243	VLAZ	(?:doctor|dr)[\W_]*+anushika
 1758733690	VLAZ	mp-bhulekh\.info
 1758737952	Jeff Schaller	Alnaya[\W_]*+CSP[\W_]*+LLC
-1758743546	Fastnlight	exhibitorly\.com
 1758747156	Jeff Schaller	jennysmods\.com
 1758751683	Jeff Schaller	clickshop\.com\.pk
 1758753400	Vickel	23291\.gameshere\.xyz
