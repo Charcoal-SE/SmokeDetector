@@ -78735,3 +78735,4 @@
 1764869757	VLAZ	arscooling\.in
 1764869775	VLAZ	ars[\W_]*+cooling[\W_]*+system
 1764873123	Dan Getz	infonestin\.com
+1764873959	Dan Getz	turboda\.com
