@@ -78714,3 +78714,4 @@
 1764828781	Cow	loantap\.in
 1764829057	Cow	keydynamicssolutions\.com
 1764829222	Cow	key[\W_]*+dynamics[\W_]*+solutions(?!\.com(?<=keydynamicssolutions\.com))
+1764829466	Cow	spreadbrain\.com
