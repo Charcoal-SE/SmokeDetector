@@ -78760,3 +78760,4 @@
 1764945909	VLAZ	(?-i:qpDiwQTfv7sHcm7K8)(?#forms.gle)
 1764951036	Jeff Schaller	lov111vol\.com
 1764956882	VLAZ	soundpaint\.com
+1764960092	Jeff Schaller	chessnextmoveai\.com
