@@ -78750,3 +78750,4 @@
 1764917801	VLAZ	jarvis[\W_]*+reach
 1764925319	VLAZ	damdaroil\.com
 1764926490	VLAZ	benhvienthammygangwhoo\.vn
+1764928831	VLAZ	dollb2027(?:@gmail\.com)
