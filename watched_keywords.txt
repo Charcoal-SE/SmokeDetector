@@ -78762,3 +78762,4 @@
 1764956882	VLAZ	soundpaint\.com
 1764960092	Jeff Schaller	chessnextmoveai\.com
 1764961227	VLAZ	(?-i:44g2T71)(?# bit.ly)
+1764974956	Dan Getz	dubaipaintingservices\.ae
