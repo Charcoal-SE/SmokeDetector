@@ -78748,3 +78748,4 @@
 1764917180	VLAZ	fafaconcepts\.com
 1764917772	VLAZ	propertyonion\.com
 1764917801	VLAZ	jarvis[\W_]*+reach
+1764925319	VLAZ	damdaroil\.com
