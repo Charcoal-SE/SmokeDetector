@@ -78755,3 +78755,4 @@
 1764929906	VLAZ	locateparcels\.com
 1764933481	Jeff Schaller	yallarenovation\.com
 1764939307	Jeff Schaller	Kanchanpushp
+1764939747	Dan Getz	flask\.blog
