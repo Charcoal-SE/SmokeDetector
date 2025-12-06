@@ -78781,3 +78781,4 @@
 1765023183	VLAZ	recoveryassetteamfbi[\W_]*+outlook[\W_]*+com
 1765024796	Jeff Schaller	smithcryptoldinfoservices(?:@gmail\.com)?
 1765026684	Jeff Schaller	zingygifts\.com
+1765029705	Nisse Engström	clickasnap\.com
