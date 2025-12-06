@@ -78774,3 +78774,4 @@
 1765010001	VLAZ	emarketters
 1765010020	VLAZ	ransurgical\.com
 1765011782	VLAZ	mannucraneservices\.in
+1765013041	VLAZ	mcpfy\.ai
