@@ -78777,3 +78777,4 @@
 1765013041	VLAZ	mcpfy\.ai
 1765017467	VLAZ	vedicmeet\.com
 1765022570	Jeff Schaller	tentpicks\.com
+1765023175	VLAZ	recovery[\W_]*+asset[\W_]*+team
