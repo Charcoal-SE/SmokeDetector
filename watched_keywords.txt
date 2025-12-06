@@ -78776,3 +78776,4 @@
 1765011782	VLAZ	mannucraneservices\.in
 1765013041	VLAZ	mcpfy\.ai
 1765017467	VLAZ	vedicmeet\.com
+1765022570	Jeff Schaller	tentpicks\.com
