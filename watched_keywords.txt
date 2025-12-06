@@ -78779,3 +78779,4 @@
 1765022570	Jeff Schaller	tentpicks\.com
 1765023175	VLAZ	recovery[\W_]*+asset[\W_]*+team
 1765023183	VLAZ	recoveryassetteamfbi[\W_]*+outlook[\W_]*+com
+1765024796	Jeff Schaller	smithcryptoldinfoservices(?:@gmail\.com)?
