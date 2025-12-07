@@ -78796,3 +78796,4 @@
 1765110275	VLAZ	copycol\.net
 1765112144	lyxal	aljaziraac\.com
 1765129719	VLAZ	mymebel\.com\.ua
+1765139572	Dan Getz	aiverseapp\.com
