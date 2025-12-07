@@ -78795,3 +78795,4 @@
 1765109031	lyxal	gotosioc
 1765110275	VLAZ	copycol\.net
 1765112144	lyxal	aljaziraac\.com
+1765129719	VLAZ	mymebel\.com\.ua
