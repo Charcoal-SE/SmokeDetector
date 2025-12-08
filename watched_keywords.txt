@@ -78802,3 +78802,4 @@
 1765178699	VLAZ	lbmsolution\.com
 1765180087	VLAZ	kaizen[\W_]*+esign
 1765180095	VLAZ	iivs\.in
+1765181665	VLAZ	packwised\.com
