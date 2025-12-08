@@ -78811,3 +78811,4 @@
 1765201788	Jeff Schaller	todaynest\.us
 1765201564	Snow	nikssoft\.in
 1765201971	VLAZ	nikssoft(?!\.in)
+1765207638	VLAZ	humanec\.ai
