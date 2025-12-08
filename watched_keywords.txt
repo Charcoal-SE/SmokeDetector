@@ -78809,3 +78809,4 @@
 1765193281	VLAZ	pixel[\W_]*+guard[\W_]*+mobile
 1765200843	Jeff Schaller	dvla-check\.com
 1765201788	Jeff Schaller	todaynest\.us
+1765201564	Snow	nikssoft\.in
