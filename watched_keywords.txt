@@ -78813,3 +78813,4 @@
 1765201971	VLAZ	nikssoft(?!\.in)
 1765207638	VLAZ	humanec\.ai
 1765207646	VLAZ	humanec(?!\.ai)
+1765211195	Jeff Schaller	hellocustomboxes\.co\.uk
