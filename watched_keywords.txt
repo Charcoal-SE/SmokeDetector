@@ -78814,3 +78814,4 @@
 1765207646	VLAZ	humanec(?!\.ai)
 1765211195	Jeff Schaller	hellocustomboxes\.co\.uk
 1765225054	Jeff Schaller	truthforlife\.org
+1765225070	Jeff Schaller	moodymedia\.org
