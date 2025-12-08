@@ -78810,3 +78810,4 @@
 1765200843	Jeff Schaller	dvla-check\.com
 1765201788	Jeff Schaller	todaynest\.us
 1765201564	Snow	nikssoft\.in
+1765201971	VLAZ	nikssoft(?!\.in)
