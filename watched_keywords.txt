@@ -78816,3 +78816,4 @@
 1765225054	Jeff Schaller	truthforlife\.org
 1765225070	Jeff Schaller	moodymedia\.org
 1765225089	Jeff Schaller	olivetreeviews\.org
+1765232310	Dan Getz	vitisecurity\.com
