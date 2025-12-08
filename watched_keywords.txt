@@ -78806,3 +78806,4 @@
 1765187722	VLAZ	psalvan\.com
 1765189302	Snow	glpro-go\.com
 1765188302	Snow	orangeitsoftwares\.com
+1765193281	VLAZ	pixel[\W_]*+guard[\W_]*+mobile
