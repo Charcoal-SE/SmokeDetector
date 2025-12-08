@@ -6252,3 +6252,4 @@ ideamaker\.agency
 travelosei\.com
 optimistic[\W_]*(?:hacker|hackar)[\W_]*gaius(?:[\W_]*\.[\W_]*c[\W_]*o[\W_]*m)?
 exhibitorly\.com
+kingsresearch\.com
