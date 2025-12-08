@@ -78807,3 +78807,4 @@
 1765189302	Snow	glpro-go\.com
 1765188302	Snow	orangeitsoftwares\.com
 1765193281	VLAZ	pixel[\W_]*+guard[\W_]*+mobile
+1765200843	Jeff Schaller	dvla-check\.com
