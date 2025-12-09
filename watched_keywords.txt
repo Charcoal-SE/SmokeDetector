@@ -78823,3 +78823,4 @@
 1765261805	VLAZ	rajproperties\.com
 1765261821	VLAZ	heightfinders\.com
 1765263180	VLAZ	videocast\.solutions
+1765264722	Cow	redfoxeducation\.com
