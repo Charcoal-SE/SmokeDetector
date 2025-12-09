@@ -78830,3 +78830,4 @@
 1765272924	Snow	ceelectricalestimating\.com
 1765274560	Snow	magnuscare\.in
 1765278407	VLAZ	netfusion[\W_]*+designs
+1765279879	Jeff Schaller	nesinkoyleri\.org
