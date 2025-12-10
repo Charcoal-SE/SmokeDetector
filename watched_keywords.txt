@@ -78853,3 +78853,4 @@
 1765370780	VLAZ	circleofnature\.co
 1765380510	VLAZ	summertimesagasdl\.com
 1765383916	VLAZ	geometry-free\.com
+1765388783	VLAZ	verywelfit\.com
