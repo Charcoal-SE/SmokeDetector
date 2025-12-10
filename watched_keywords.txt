@@ -78848,3 +78848,4 @@
 1765358216	VLAZ	odoocompanies\.com
 1765362841	VLAZ	flowrage\.com
 1765364883	VLAZ	loanfasttrack\.com
+1765365930	VLAZ	tripscapetourism\.com
