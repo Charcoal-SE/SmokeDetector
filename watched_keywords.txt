@@ -78854,3 +78854,4 @@
 1765380510	VLAZ	summertimesagasdl\.com
 1765383916	VLAZ	geometry-free\.com
 1765388783	VLAZ	verywelfit\.com
+1765389155	VLAZ	aftcalculator\.io
