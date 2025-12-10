@@ -78843,4 +78843,3 @@
 1765334583	Jeff Schaller	conexdepotshipping\.com
 1765334616	Jeff Schaller	cdrwriters\.org
 1765344358	Dan Getz	coniaklifesciences\.com
-1765344523	VLAZ	coniak[\W_]*+lifesciences
