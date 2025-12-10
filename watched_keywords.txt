@@ -78851,3 +78851,4 @@
 1765365980	VLAZ	configarchitect\.com
 1765368774	VLAZ	webrocz\.com
 1765370780	VLAZ	circleofnature\.co
+1765380510	VLAZ	summertimesagasdl\.com
