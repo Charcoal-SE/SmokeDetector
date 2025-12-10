@@ -78852,3 +78852,4 @@
 1765368774	VLAZ	webrocz\.com
 1765370780	VLAZ	circleofnature\.co
 1765380510	VLAZ	summertimesagasdl\.com
+1765383916	VLAZ	geometry-free\.com
