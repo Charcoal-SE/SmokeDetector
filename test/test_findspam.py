@@ -143,6 +143,12 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('A title with a 4 digit 321-987-4.2.4.2 IP and numbers', 'body not checked', 'a username', 'superuser.com', False, False, True),
     ('A title with a 5 digit 321-987-4.2.4.23/2 IP and numbers', 'body not checked', 'a username', 'superuser.com', False, False, False),
     ('A title with a 5 digit 1.20.3.4/32 IP and numbers 182', 'body not checked', 'a username', 'superuser.com', False, False, False),
+    ('Obfuscation 01', '<p>You can use the h e l p d e s k! It will be very helpful.</p>', 'a username', 'superuser.com', False, False, True),
+    ('Obfuscation 02 (support)', '<p>How about some \u1e66\xda\u1fe5\u13e2\u1ed9\u027c\U0001d635? Everyone loves a ransom note.</p>', 'a username', 'superuser.com', False, False, True),
+    ('Obfuscation 03', "<p>Who're you to say who's hit the air lines? The pen is mightier.</p>", 'a username', 'superuser.com', False, False, False),
+    ('Obfuscation 04 (Airlines)', "<p>Since you're fancy, we think you will like this one better: \U0001d468\U0001d48a\U0001d493\U0001d48d\U0001d48a\U0001d48f\U0001d486\U0001d494. How was that one?</p>", 'a username', 'superuser.com', False, False, True),
+    ('Obfuscation 05', '<p>telefono teléfono telefonó</p>', 'a username', 'superuser.com', False, False, False),
+    ('Obfuscation 06', '<p>airway $ airway$ airway)$ airway}$</p>', 'a username', 'superuser.com', False, False, False),
 ])
 def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,
@@ -178,3 +184,38 @@ def test_ns(title, body, username, expected_spam):
     assert what is expected_spam
     if expected_spam:
         assert ' suspicious IP address {0} for NS'.format(blacklisted_ip) in why
+
+
+@pytest.mark.parametrize("spans, max_display, expected", [
+    ([("word", (3, 9))], 5, "Position 3-9: word"),
+    ([("with \nnewline", (3, 9))], 5, "Position 3-9: with newline"),
+    ([], 5, ""),
+    ([("one", (0, 3)),
+      ("two", (100, 103)),
+      ], 5, "Position 0-3: one, Position 100-103: two"),
+    ([("two", (100, 103)),
+      ("one", (0, 3)),
+      ], 5, "Position 0-3: one, Position 100-103: two"),
+    ([("it", (100, 103)),
+      ("it", (0, 3)),
+      ], 5, "Positions 0-3, 100-103: it"),
+    ([("first", (100, 103)),
+      ("first", (0, 3)),
+      ("second", (50, 55)),
+      ], 5, "Positions 0-3, 100-103: first, Position 50-55: second"),
+    ([("second", (50, 55)),
+      ("first", (100, 103)),
+      ("second", (200, 201)),
+      ("first", (0, 3)),
+      ("second", (222, 333)),
+      ("second", (150, 160)),
+      ], 3, "Positions 0-3, 100-103: first, Positions 50-55, 150-160, +2 more: second"),
+    ([("second", (50, 55)),
+      ("second", (200, 201)),
+      ("first", (2, 5)),
+      ("second", (222, 333)),
+      ("second", (150, 160)),
+      ], 1, "Position 2-5: first, Positions 50-55, +3 more: second"),
+])
+def test_span_infos(spans, max_display, expected):
+    assert FindSpam.span_infos(spans, max_display) == expected
