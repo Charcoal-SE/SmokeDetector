@@ -78845,3 +78845,4 @@
 1765344358	Dan Getz	coniaklifesciences\.com
 1765344584	VLAZ	coniak[\W_]*+lifesciences(?!\.com(?<=coniaklifesciences\.com))
 1765346264	VLAZ	jetblastintl\.com
+1765358216	VLAZ	odoocompanies\.com
