@@ -78849,3 +78849,4 @@
 1765362841	VLAZ	flowrage\.com
 1765364883	VLAZ	loanfasttrack\.com
 1765365930	VLAZ	tripscapetourism\.com
+1765365980	VLAZ	configarchitect\.com
