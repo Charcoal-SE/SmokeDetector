@@ -78857,4 +78857,3 @@
 1765389155	VLAZ	aftcalculator\.io
 1765389171	VLAZ	gymnation\.com
 1765393500	Jeff Schaller	7brewwmenu\.com
-1765411865	Vickel	ALL[\W_]}*+4[\W_]}*+YOU[\W_]}*+LiMiTED
