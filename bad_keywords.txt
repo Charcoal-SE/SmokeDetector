@@ -2470,7 +2470,6 @@ c[\W_]*+[0o][\W_]*+i[\W_]*+n[\W_]*+b[\W_]*+a[\W_]*+s[\W_]*+e(?:[\W_]*+(?:toll|fr
 C0inBasE_
 Supp0rt
 Customer[\W_]*Service[\W_]*Representative[\W_]*Resolve
-(?im)^Legal Officer$
 recbtc17
 Fanacoin
 quickbookss
