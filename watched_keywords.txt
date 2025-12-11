@@ -78865,3 +78865,4 @@
 1765434196	VLAZ	hiringgo\.com
 1765436276	VLAZ	EadsCo[\W_]*+Cleaning(?!\.com(?<=eadscocleaning\.com))
 1765436287	VLAZ	eadscocleaning\.com
+1765443192	Snow	thatsagoal\.com
