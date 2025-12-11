@@ -78861,3 +78861,4 @@
 1765418479	Vickel	powerful[\W_]*+aadami
 1765430120	VLAZ	msvbooks\.com
 1765424517	SamGibson	creamicpcbmanufacture\.com
+1765430177	VLAZ	terminalszone\.com
