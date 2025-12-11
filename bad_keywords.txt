@@ -3910,3 +3910,4 @@ EnrgTech
 satta[\W_]*+matka(?!\.company(?<=sattamatka\.company))(?!pro\.mobi(?<=sattamatkapro\.mobi))(?!z\.com(?<=sattamatkaz\.com))\w*+
 𝚀𝚞𝚒𝚌𝚔𝙱𝚘𝚘𝚔𝚜 𝙳𝚎𝚜𝚔𝚝𝚘𝚙
 Q̳u̳i̳c̳k̳B̳o̳o̳k̳s̳
+𝔉𝔯𝔬𝔫𝔱𝔦𝔢𝔯
