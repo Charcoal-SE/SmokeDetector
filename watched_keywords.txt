@@ -78860,3 +78860,4 @@
 1765412042	Vickel	ALL[\W_]*+4[\W_]*+YOU[\W_]*+LiMiTED
 1765418479	Vickel	powerful[\W_]*+aadami
 1765430120	VLAZ	msvbooks\.com
+1765424517	SamGibson	creamicpcbmanufacture\.com
