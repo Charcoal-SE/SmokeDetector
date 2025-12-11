@@ -78863,3 +78863,4 @@
 1765430177	VLAZ	terminalszone\.com
 1765430193	VLAZ	lawguidesingapore\.com
 1765434196	VLAZ	hiringgo\.com
+1765436276	VLAZ	EadsCo[\W_]*+Cleaning(?!\.com(?<=eadscocleaning\.com))
