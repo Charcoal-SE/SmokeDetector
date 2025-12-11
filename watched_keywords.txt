@@ -78859,3 +78859,4 @@
 1765393500	Jeff Schaller	7brewwmenu\.com
 1765412042	Vickel	ALL[\W_]*+4[\W_]*+YOU[\W_]*+LiMiTED
 1765418479	Vickel	powerful[\W_]*+aadami
+1765430120	VLAZ	msvbooks\.com
