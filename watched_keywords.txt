@@ -78889,3 +78889,4 @@
 1765533702	VLAZ	novell?vista
 1765536453	Snow	exportersworlds\.com
 1765537052	VLAZ	exporters[\W_]*+worlds(?!\.com(?<=exportersworlds\.com))
+1765537728	Snow	swagstardiamonds\.com
