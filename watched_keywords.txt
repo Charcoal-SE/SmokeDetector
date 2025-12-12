@@ -78883,3 +78883,4 @@
 1765524748	VLAZ	gsp[\W_]*+technologies(?!\.com(?<=gsptechnologies\.com))
 1765527972	VLAZ	a2z[\W_]*+airport[\W_]*+assist(?!\.com(?<=a2zairportassist\.com))
 1765527980	VLAZ	a2zairportassist\.com
+1765532606	VLAZ	apk[\W_]*+pure
