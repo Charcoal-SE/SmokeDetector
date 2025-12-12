@@ -65081,7 +65081,6 @@
 1724330856	Cow	armindindustries\.com
 1724333780	tripleee	pokemoninfinitefusions\.us
 1724337376	lyxal	kraftstarmanagement\.com
-1724341378	Makyen	lakshya[\W_]*+academy
 1724343003	Spevacus	techlokesh\.org
 1724345806	Cow	mangalvar\.com
 1724346469	Makyen	3d[\W_]*+sourcerer(?!\.com(?<=3dsourcerer\.com))
