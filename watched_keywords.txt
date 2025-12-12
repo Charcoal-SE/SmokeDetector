@@ -78881,3 +78881,4 @@
 1765524698	VLAZ	interior\.pathangedigital\.in
 1765524722	VLAZ	gsptechnologies\.com
 1765524748	VLAZ	gsp[\W_]*+technologies(?!\.com(?<=gsptechnologies\.com))
+1765527972	VLAZ	a2z[\W_]*+airport[\W_]*+assist(?!\.com(?<=a2zairportassist\.com))
