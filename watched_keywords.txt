@@ -78892,3 +78892,4 @@
 1765538786	Jeff Schaller	githubliveaction(?:@gmail\.com)?
 1765539630	VLAZ	lakshya[\W_]*+academy(?!\.co\.in(?<=lakshyaacademy\.co\.in))
 1765539638	VLAZ	lakshyaacademy\.co\.in
+1765542150	Jeff Schaller	factserp\.ae
