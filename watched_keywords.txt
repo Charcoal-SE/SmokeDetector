@@ -68113,7 +68113,6 @@
 1731415829	Anerdw	nudify\.me
 1731415879	Cow	jio[\W_]*+app
 1731417786	Cow	rahemodiran\.com
-1731427770	Jeff Schaller	virtualcodes\.net
 1731430587	Vickel	(?-i:psytrancemarket)(?#t.me)
 1731435281	Cow	chat[\W_]*+with[\W_]*+customer[\W_]*+support
 1731435983	Fastnlight	rbxscriptpro\.com
