@@ -54564,7 +54564,6 @@
 1700296427	Jeff Schaller	dksolutionshub\.com
 1700301251	cigien	outsourcingtrainingbd\.com
 1700301367	cigien	coursedecote\.info
-1700301745	cigien	chatgptfrancais\.org
 1700301764	cigien	chatgptx(?:online)?\.(?:de|nl|es|fr)
 1700303185	cigien	healthsupplement24x7\.com
 1700259677	Vickel	^Quanajah Pinnock$
