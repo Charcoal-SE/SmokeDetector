@@ -78908,3 +78908,4 @@
 1765630780	Jeff Schaller	ffte\.net
 1765633804	Dan Getz	(?-i:5NxYlzpOpvU)(?#youtu.be)
 1765645401	Dan Getz	premiumvcc\.com
+1765645640	Dan Getz	novaaerospace\.in
