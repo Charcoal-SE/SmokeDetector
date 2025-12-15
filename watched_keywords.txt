@@ -78938,3 +78938,4 @@
 1765805518	Snow	mbilgisayar\.com\.tr
 1765822498	Dan Getz	airtkt\.com
 1765832348	Jeff Schaller	gosportlive\.com
+1765832487	Dan Getz	ghosttrackhackers(?:\s*+@\s*+gmail\s*+\.\s*+com)?
