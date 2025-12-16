@@ -78940,3 +78940,4 @@
 1765832348	Jeff Schaller	gosportlive\.com
 1765832487	Dan Getz	ghosttrackhackers(?:\s*+@\s*+gmail\s*+\.\s*+com)?
 1765861021	Dan Getz	sabpaisa\.in
+1765863910	Dan Getz	captialewasterecycling\.com\.au
