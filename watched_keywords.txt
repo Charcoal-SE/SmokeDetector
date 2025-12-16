@@ -78944,3 +78944,4 @@
 1765863934	Dan Getz	sriramsoft\.com
 1765864408	Dan Getz	sites\.google\.com/view/comopuedohablarconalguienendel
 1765882982	Jeff Schaller	wooplix\.com
+1765883100	Jeff Schaller	jogosdehoje\.eu\.com
