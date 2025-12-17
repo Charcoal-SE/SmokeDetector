@@ -35967,7 +35967,6 @@
 1645616504	Jeff Schaller	friendstravelinfo\.com
 1645624649	Jeff Schaller	patriotstuccorepair\.com
 1645624777	Jeff Schaller	terality\.com
-1645620049	Someone	selfstudys\.com
 1645625685	Makyen	onlychainsaw\.com
 1645625783	Jeff Schaller	neginrasan\.ir
 1645625952	Makyen	(?-i:3h6AHdN)(?#fvrr.co)
