@@ -4097,7 +4097,9 @@ items:
   disable: true
   ns: vultr.com.
 - ns: directory92.com.
-- ns: offshoric.com.
+- comment: NXDOMAIN; expired 2025-11-04T20:57:17Z
+  disable: true
+  ns: offshoric.com.
 - ns: freehostia.com.
 - comment: has FPs, don't move to blacklist
   ns: hawkhost.com.
