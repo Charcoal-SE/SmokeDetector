@@ -78974,3 +78974,4 @@
 1765977933	Jeff Schaller	22rickycasinologin\.com
 1765985487	Snow	mariner-underwear\.com
 1765997967	Vickel	carzrent\.com
+1765998977	Vickel	CarzRent(?!\.com)
