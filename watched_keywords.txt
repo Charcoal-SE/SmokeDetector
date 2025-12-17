@@ -77342,7 +77342,6 @@
 1760282655	VLAZ	freecardsusa\.xyz
 1760284720	Dan Getz	alliantcreditunion\.org
 1760284819	VLAZ	michaelgardloanoffice
-1760290142	SamGibson	easyelecmodule\.com
 1760299127	VLAZ	beef-way-one\.com
 1760300042	VLAZ	just[W_]*+4[W_]*+fun
 1760311983	Dan Getz	betprologin\.co
