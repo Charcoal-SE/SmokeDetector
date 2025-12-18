@@ -78976,3 +78976,4 @@
 1765997967	Vickel	carzrent\.com
 1765998977	Vickel	CarzRent(?!\.com)
 1766058537	Jeff Schaller	janmanchtv\.com
+1766058704	Jeff Schaller	dstw\.ae
