@@ -79012,3 +79012,4 @@
 1766150825	Jeff Schaller	rrsteelfabrications\.com
 1766159018	Dan Getz	datatrade\.top
 1766162163	Dan Getz	Flamor
+1766163970	Jeff Schaller	learner\.ping-bd\.com
