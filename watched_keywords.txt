@@ -79014,3 +79014,4 @@
 1766162163	Dan Getz	Flamor
 1766163970	Jeff Schaller	learner\.ping-bd\.com
 1766168045	Dan Getz	tidal[\W_]*+wash[\W_]*+laundry
+1766174267	Dan Getz	BunElysiaReact(?#GitHub)
