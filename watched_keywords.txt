@@ -79028,3 +79028,4 @@
 1766264570	Jeff Schaller	thepartyplatform\.com
 1766264626	Jeff Schaller	waterleaftech\.com
 1766266143	Jeff Schaller	houseofdaadi\.com
+1766269424	Dan Getz	antesy\.io
