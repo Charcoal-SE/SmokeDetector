@@ -78331,7 +78331,6 @@
 1763560297	Snow	blog\.mentormerlin\.com
 1763552873	Snow	transcriptsx\.com
 1763561516	VLAZ	kasir777
-1763561810	Snow	bimascore\.com
 1763565158	Snow	leisuretoursasia\.com
 1763565680	Snow	commercestheories\.com
 1763569407	Jeff Schaller	dexarea\.com
