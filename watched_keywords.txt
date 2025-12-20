@@ -79016,3 +79016,4 @@
 1766168045	Dan Getz	tidal[\W_]*+wash[\W_]*+laundry
 1766174267	Dan Getz	BunElysiaReact(?#GitHub)
 1766180498	Jeff Schaller	risewithakshar\.com
+1766194200	Jeff Schaller	foodicted\.co\.uk
