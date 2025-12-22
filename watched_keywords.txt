@@ -79037,3 +79037,4 @@
 1766344016	Glorfindel	cbofinancial\.com
 1766347068	Dan Getz	sureshdas\.com
 1766379645	Jeff Schaller	itsupportsolutions\.ae
+1766379683	Jeff Schaller	technest\.com\.vn
