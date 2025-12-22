@@ -79057,3 +79057,4 @@
 1766414442	Dan Getz	lo4dgames\.org
 1766415845	Jeff Schaller	enewsexpress\.com
 1766418210	Dan Getz	gifttree\.us
+1766418222	Dan Getz	flyhugz\.co(?:\.nz)?
