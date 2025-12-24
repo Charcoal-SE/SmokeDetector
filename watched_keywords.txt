@@ -79102,3 +79102,4 @@
 1766594020	Jeff Schaller	findwordlehint\.com
 1766597782	Jeff Schaller	earnbnbnow\.top
 1766597800	Jeff Schaller	freebnb\.ai
+1766597834	Jeff Schaller	bnbup\.com
