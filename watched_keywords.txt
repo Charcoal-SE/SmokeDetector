@@ -79095,3 +79095,4 @@
 1766573756	Jeff Schaller	vgdsglobal\.com
 1766573793	Jeff Schaller	neetstock\.com
 1766573861	Jeff Schaller	mrfourtoeight3(?:@gmail\.com)?
+1766573927	Jeff Schaller	wydexmedia\.com
