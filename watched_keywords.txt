@@ -79118,3 +79118,4 @@
 1766747358	Jeff Schaller	gadiyahub\.com
 1766747385	Jeff Schaller	bulkly\.io
 1766747614	Jeff Schaller	jayaspecialityclinic\.com
+1766751311	Dan Getz	astrorudradev\.com
