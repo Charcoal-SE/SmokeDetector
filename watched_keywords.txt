@@ -79136,3 +79136,4 @@
 1766823862	Dan Getz	techpragna\.in
 1766824228	Dan Getz	car\.com
 1766826120	Dan Getz	nadavaramba[\W_]*+krishna[\W_]*+brothers
+1766826142	Dan Getz	digitalvtech\.com
