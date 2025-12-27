@@ -79141,3 +79141,4 @@
 1766827518	Dan Getz	raton\.download
 1766827665	Dan Getz	raton[\W_]*+download(?<!raton\.download)
 1766833816	Jeff Schaller	injectablestero\.com
+1766833855	Jeff Schaller	chemoresearchhub\.com
