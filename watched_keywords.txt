@@ -79192,3 +79192,4 @@
 1767021920	Jeff Schaller	jsonformatterhub\.com
 1767022341	Jeff Schaller	2ok9\.com
 1767022560	Dan Getz	nulsbrawl\.fr
+1767022593	Dan Getz	spotipremiums\.com
