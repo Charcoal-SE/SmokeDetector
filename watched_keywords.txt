@@ -79222,3 +79222,4 @@
 1767070577	Anerdw	Nikka[\W_]*+Instrumentation
 1767070545	Anerdw	Vighnaharta[\W_]*+Heart[\W_]*+Care
 1767116813	Jeff Schaller	augustagaconcretecontractor\.com
+1767122342	Dan Getz	marketingpara\.com\.br
