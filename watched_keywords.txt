@@ -79199,3 +79199,4 @@
 1767033066	Dan Getz	dahlcore\.com
 1767041793	Dan Getz	islegroup\.ca
 1767064026	Jeff Schaller	todaycalculator\.com
+1767070545	Anerdw	Vighnaharta[\W_]*+Heart[\W_]*+Care
