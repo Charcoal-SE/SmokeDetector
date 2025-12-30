@@ -79220,3 +79220,4 @@
 1767113407	Jeff Schaller	advancedvitalitygroup\.com
 1767115564	Anerdw	onlinedecentralizefix\.web\.app
 1767070577	Anerdw	Nikka[\W_]*+Instrumentation
+1767070545	Anerdw	Vighnaharta[\W_]*+Heart[\W_]*+Care
