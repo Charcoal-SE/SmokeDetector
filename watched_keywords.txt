@@ -79243,5 +79243,4 @@
 1767197313	Dan Getz	survivalschoolmichigan\.com
 1767199867	Dan Getz	ammoniteadventure\.com
 1767200904	Jeff Schaller	allgoodparts\.com\.au
-1767203861	Dan Getz	player\.vimeo\.com/video/1149098372
 1767203902	Dan Getz	1149098372(?#vimeo)
