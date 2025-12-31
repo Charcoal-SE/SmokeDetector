@@ -79241,3 +79241,4 @@
 1767194225	Jeff Schaller	raut059103
 1767196066	Jeff Schaller	timora\.com
 1767197313	Dan Getz	survivalschoolmichigan\.com
+1767199867	Dan Getz	ammoniteadventure\.com
