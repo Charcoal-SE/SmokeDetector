@@ -6262,3 +6262,4 @@ easyelecmodule\.com
 bimascore\.com
 quickassignmenthub\.com
 prlabs-api\.github\.io
+corpzo\.com
