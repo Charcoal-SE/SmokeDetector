@@ -79225,3 +79225,4 @@
 1767122342	Dan Getz	marketingpara\.com\.br
 1767132921	Jeff Schaller	181bet\.blog
 1767139122	Vickel	isyourwebsitedownrightnow\.com
+1767139423	Vickel	metrix\.finance
