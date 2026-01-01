@@ -79251,3 +79251,4 @@
 1767253931	cigien	(?-i:theabccool)(?#Domains)
 1767253994	cigien	curtainsinabudhabi\.ae
 1767254116	cigien	encrypts\.com
+1767263540	cigien	luxurycurtain\.ae
