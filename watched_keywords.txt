@@ -79249,3 +79249,4 @@
 1767253807	cigien	tripleplay\.in
 1767253913	cigien	paintingservices\.ae
 1767253931	cigien	(?-i:theabccool)(?#Domains)
+1767253994	cigien	curtainsinabudhabi\.ae
