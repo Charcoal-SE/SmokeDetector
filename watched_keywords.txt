@@ -79250,3 +79250,4 @@
 1767253913	cigien	paintingservices\.ae
 1767253931	cigien	(?-i:theabccool)(?#Domains)
 1767253994	cigien	curtainsinabudhabi\.ae
+1767254116	cigien	encrypts\.com
