@@ -70328,7 +70328,6 @@
 1738088141	Jeff Schaller	militaryveterandiscounts\.com
 1738088833	General Grievance	wawamenu\.org
 1738090801	Jeff Schaller	electricityforum\.com
-1738101267	Spevacus	gplinks\.co
 1738120106	Jeff Schaller	pandaexprescomfeedback\.info
 1738092715	ipodtouch0218	petozel\.com
 1738122629	Dan Getz	thepointcatford\.org\.uk
