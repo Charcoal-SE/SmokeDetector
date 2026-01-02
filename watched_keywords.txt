@@ -79274,3 +79274,4 @@
 1767368288	Jeff Schaller	VGDS[\W_]*+Global
 1767368304	Jeff Schaller	earvex\.online
 1767379464	Jeff Schaller	textnarts\.com
+1767379509	Jeff Schaller	shbet\.com\.de
