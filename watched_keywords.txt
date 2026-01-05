@@ -79304,3 +79304,4 @@
 1767595928	Cow	aeronshipping\.com
 1767595996	Cow	aeron[\W_]*+shipping(?!\.com)
 1767597346	Cow	gysmartwatch\.com
+1767597354	Cow	yunblaze\.com
