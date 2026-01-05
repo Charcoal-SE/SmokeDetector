@@ -79307,3 +79307,4 @@
 1767597354	Cow	yunblaze\.com
 1767608197	Snow	sipconinstrument\.com
 1767608168	Snow	lemonbook\.shop
+1767610884	Jeff Schaller	reportsinsights\.com
