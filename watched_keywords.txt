@@ -79305,3 +79305,4 @@
 1767595996	Cow	aeron[\W_]*+shipping(?!\.com)
 1767597346	Cow	gysmartwatch\.com
 1767597354	Cow	yunblaze\.com
+1767608168	Snow	lemonbook\.shop
