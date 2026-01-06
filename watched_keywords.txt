@@ -66568,7 +66568,6 @@
 1727436662	Cody Gray	rent[\W_]*+ez(?!\.in(?<=rentez\.in))
 1727439846	Cow	jarviscodinghub\.com
 1727440609	Cow	snbcleaning\.com\.au
-1727440924	Jeff Schaller	digixvalley\.com
 1727441496	Jeff Schaller	qyresearch\.in
 1727444738	Jeff Schaller	dearit\.com\.bd
 1727445655	Jeff Schaller	divingatlantis-tenerife\.com
