@@ -79320,3 +79320,4 @@
 1767665606	Jeff Schaller	doublecounter\.gg
 1767678005	Cow	leesspa\.com
 1767678013	Cow	boostsocial\.in
+1767678034	Cow	telesto-enterprise\.com
