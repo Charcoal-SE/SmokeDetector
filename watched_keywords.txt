@@ -68617,7 +68617,6 @@
 1733126333	Cow	if[\W_]*+wrong[\W_]*+transaction
 1733128020	Cow	edenvistarsmartpricepartners\.com
 1733129824	Cow	rhcsa\.guru
-1733130805	Cow	suffescom\.com
 1733131237	Cow	phddataanalysis\.com
 1733132326	Cow	caravanhirencr\.com
 1733132947	Cow	c3automation\.com
