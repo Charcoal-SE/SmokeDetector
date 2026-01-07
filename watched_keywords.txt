@@ -79349,3 +79349,4 @@
 1767788034	Dan Getz	luxuryridesllc\.com
 1767788130	Jeff Schaller	ChristopherWordsmith(?#telegram)
 1767788433	Jeff Schaller	swatiastroresearchcentre\.com
+1767790601	Jeff Schaller	samrx\.to
