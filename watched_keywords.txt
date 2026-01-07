@@ -79337,3 +79337,4 @@
 1767756272	Jeff Schaller	drwavaofspirituallovespells\.com
 1767761623	Dan Getz	ace[\W_]*+retrieve
 1767761857	Dan Getz	Mounjarovmsk(?#t.me)
+1767774718	Snow	davoodshop\.com
