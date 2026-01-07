@@ -79348,3 +79348,4 @@
 1767785282	Glorfindel	boardgametally
 1767785936	Jeff Schaller	kattu\.com\.pk
 1767788034	Dan Getz	luxuryridesllc\.com
+1767788130	Jeff Schaller	ChristopherWordsmith(?#telegram)
