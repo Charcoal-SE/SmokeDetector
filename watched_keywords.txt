@@ -79335,3 +79335,4 @@
 1767705022	Nisse Engström	swipingstory\.com
 1767723876	Jeff Schaller	hmluxuryconsultancy\.com
 1767756272	Jeff Schaller	drwavaofspirituallovespells\.com
+1767761623	Dan Getz	ace[\W_]*+retrieve
