@@ -79351,3 +79351,4 @@
 1767788433	Jeff Schaller	swatiastroresearchcentre\.com
 1767790601	Jeff Schaller	samrx\.to
 1767795339	Jeff Schaller	Luxury[\W_]*+Rides[\W_]*+LLC
+1767804586	Jeff Schaller	cakhiatv\.ac
