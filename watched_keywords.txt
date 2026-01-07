@@ -79344,3 +79344,4 @@
 1767779487	Snow	pvzfusionmod\.com
 1767784043	Jeff Schaller	checkmycar\.ae
 1767784077	Jeff Schaller	striveontech\.com
+1767784895	Jeff Schaller	newvisiondigital\.in
