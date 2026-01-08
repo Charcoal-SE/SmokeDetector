@@ -79368,3 +79368,4 @@
 1767882253	Vickel	CodeLoom[\W_]*+Technologies
 1767883603	Vickel	coinsfera\.com
 1767883686	Jeff Schaller	restaurantprofitsystems\.com
+1767885766	Jeff Schaller	lucas-jogos\.itch\.io
