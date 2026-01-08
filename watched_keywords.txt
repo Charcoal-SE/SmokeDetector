@@ -79366,3 +79366,4 @@
 1767877066	Jeff Schaller	xedulichhue\.vn
 1767876091	Snow	multi-weigh\.org
 1767882253	Vickel	CodeLoom[\W_]*+Technologies
+1767883603	Vickel	coinsfera\.com
