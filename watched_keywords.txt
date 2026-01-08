@@ -79367,3 +79367,4 @@
 1767876091	Snow	multi-weigh\.org
 1767882253	Vickel	CodeLoom[\W_]*+Technologies
 1767883603	Vickel	coinsfera\.com
+1767883686	Jeff Schaller	restaurantprofitsystems\.com
