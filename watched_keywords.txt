@@ -79381,3 +79381,4 @@
 1767954896	Jeff Schaller	quizard\.app
 1767955183	Jeff Schaller	qualitcert\.com
 1767955193	Jeff Schaller	quick-works\.com
+1767959816	Jeff Schaller	minecraftpatchdownload\.com
