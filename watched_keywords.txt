@@ -79401,3 +79401,4 @@
 1768084663	Dan Getz	cryptotracking\.online
 1768085187	Dan Getz	cyber[\W_]*+cryptocurrency[\W_]*+trace
 1768086007	Dan Getz	(?-i:^V alerie Paulson$)
+1768086402	Dan Getz	789win\.sbs
