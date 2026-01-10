@@ -79399,3 +79399,4 @@
 1768049180	Jeff Schaller	bidhelp\.co
 1768061523	Vickel	getonlinecalculator\.com
 1768084663	Dan Getz	cryptotracking\.online
+1768085187	Dan Getz	cyber[\W_]*+cryptocurrency[\W_]*+trace
