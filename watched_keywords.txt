@@ -79398,3 +79398,4 @@
 1768048675	Vickel	lokavihari\.com
 1768049180	Jeff Schaller	bidhelp\.co
 1768061523	Vickel	getonlinecalculator\.com
+1768084663	Dan Getz	cryptotracking\.online
