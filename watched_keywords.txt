@@ -79397,3 +79397,4 @@
 1768030444	Nisse Engström	shop\.garena\.sg
 1768048675	Vickel	lokavihari\.com
 1768049180	Jeff Schaller	bidhelp\.co
+1768061523	Vickel	getonlinecalculator\.com
