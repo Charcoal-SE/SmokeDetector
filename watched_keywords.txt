@@ -79400,3 +79400,4 @@
 1768061523	Vickel	getonlinecalculator\.com
 1768084663	Dan Getz	cryptotracking\.online
 1768085187	Dan Getz	cyber[\W_]*+cryptocurrency[\W_]*+trace
+1768086007	Dan Getz	(?-i:^V alerie Paulson$)
