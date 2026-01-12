@@ -79414,3 +79414,4 @@
 1768209262	VLAZ	appinventiv
 1768209349	VLAZ	pelladynamics\.com
 1768209561	VLAZ	susmitasahoo\.in
+1768209946	VLAZ	tinyprof\.com
