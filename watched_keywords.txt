@@ -79418,3 +79418,4 @@
 1768209955	VLAZ	tinyprof(?!\.com)
 1768210005	VLAZ	freewarelab\.com
 1768210013	VLAZ	freewarelab(?!\.com)
+1768210090	VLAZ	dinohunter\.in
