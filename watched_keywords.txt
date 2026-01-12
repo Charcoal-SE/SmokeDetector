@@ -79412,3 +79412,4 @@
 1768146182	Dan Getz	fin\.in\.net
 1768164600	Jeff Schaller	dgames\.online
 1768209262	VLAZ	appinventiv
+1768209349	VLAZ	pelladynamics\.com
