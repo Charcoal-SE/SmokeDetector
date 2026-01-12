@@ -79419,3 +79419,4 @@
 1768210013	VLAZ	freewarelab(?!\.com)
 1768210090	VLAZ	dinohunter\.in
 1768210151	VLAZ	budgetexcel\.com
+1768210868	VLAZ	cursor-history(?:-mcp)?
