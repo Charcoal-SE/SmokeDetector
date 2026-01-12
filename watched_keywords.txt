@@ -79422,3 +79422,4 @@
 1768210868	VLAZ	cursor-history(?:-mcp)?
 1768212989	VLAZ	cointrendo\.com
 1768218113	Jeff Schaller	floridalicenseplate\.com
+1768218191	Jeff Schaller	roxheating\.com
