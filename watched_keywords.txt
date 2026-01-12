@@ -79416,3 +79416,4 @@
 1768209561	VLAZ	susmitasahoo\.in
 1768209946	VLAZ	tinyprof\.com
 1768209955	VLAZ	tinyprof(?!\.com)
+1768210005	VLAZ	freewarelab\.com
