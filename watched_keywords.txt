@@ -79446,3 +79446,4 @@
 1768300830	VLAZ	vastoratech\.com
 1768302671	VLAZ	neurosurgeryinindia\.com
 1768304389	VLAZ	hmtl\.in
+1768305294	Dan Getz	fitnet\.in
