@@ -79453,3 +79453,4 @@
 1768306621	VLAZ	Dignifyd[\W_]*+Tech
 1768307089	VLAZ	strumyktv\.live
 1768308247	VLAZ	conleyjbeespy606[\W_]*+gmail[\W_]*+com
+1768308407	VLAZ	ytextractor\.com
