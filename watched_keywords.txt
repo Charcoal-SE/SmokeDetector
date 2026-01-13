@@ -79458,3 +79458,4 @@
 1768308611	VLAZ	softprobe
 1768308623	VLAZ	octalsoftware\.com
 1768312281	VLAZ	ppmcalculator\.net
+1768312303	VLAZ	yedsod\.net
