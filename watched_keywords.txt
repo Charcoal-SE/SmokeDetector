@@ -79454,3 +79454,4 @@
 1768307089	VLAZ	strumyktv\.live
 1768308247	VLAZ	conleyjbeespy606[\W_]*+gmail[\W_]*+com
 1768308407	VLAZ	ytextractor\.com
+1768308476	VLAZ	parkin\.pro
