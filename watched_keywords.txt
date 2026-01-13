@@ -79456,3 +79456,4 @@
 1768308407	VLAZ	ytextractor\.com
 1768308476	VLAZ	parkin\.pro
 1768308611	VLAZ	softprobe
+1768308623	VLAZ	octalsoftware\.com
