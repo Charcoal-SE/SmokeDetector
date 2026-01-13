@@ -79445,3 +79445,4 @@
 1768300822	VLAZ	vastora[\W_]*+tech(?!\.com((?<=vastoratech\.com)))
 1768300830	VLAZ	vastoratech\.com
 1768302671	VLAZ	neurosurgeryinindia\.com
+1768304389	VLAZ	hmtl\.in
