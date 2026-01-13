@@ -79451,3 +79451,4 @@
 1768306471	VLAZ	clearcrm\.com
 1768306539	VLAZ	zpldesign\.com
 1768306621	VLAZ	Dignifyd[\W_]*+Tech
+1768307089	VLAZ	strumyktv\.live
