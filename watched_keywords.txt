@@ -79464,3 +79464,4 @@
 1768325909	VLAZ	(?-i:7594897207950642462)(?# www.tiktok.com)
 1768331998	Fastnlight	whatisthesalary\.com
 1768339659	VLAZ	wizardhackersrecovery
+1768339701	VLAZ	markwizard23[\W_]*+gmail[\W_]*+com
