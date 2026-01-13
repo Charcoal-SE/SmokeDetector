@@ -79442,3 +79442,4 @@
 1768291477	VLAZ	easywebplansitllc\.com
 1768292283	VLAZ	isocertificationbahrain\.com
 1768299009	VLAZ	tylerestimating\.com
+1768300822	VLAZ	vastora[\W_]*+tech(?!\.com((?<=vastoratech\.com)))
