@@ -79449,3 +79449,4 @@
 1768305294	Dan Getz	fitnet\.in
 1768306269	VLAZ	uvtechnocrats\.com
 1768306471	VLAZ	clearcrm\.com
+1768306539	VLAZ	zpldesign\.com
