@@ -79465,3 +79465,4 @@
 1768331998	Fastnlight	whatisthesalary\.com
 1768339659	VLAZ	wizardhackersrecovery
 1768339701	VLAZ	markwizard23[\W_]*+gmail[\W_]*+com
+1768342059	Jeff Schaller	itemit\.com
