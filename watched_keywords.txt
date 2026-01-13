@@ -79459,3 +79459,4 @@
 1768308623	VLAZ	octalsoftware\.com
 1768312281	VLAZ	ppmcalculator\.net
 1768312303	VLAZ	yedsod\.net
+1768315310	Jeff Schaller	chonvietnam\.official
