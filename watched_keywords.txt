@@ -79440,3 +79440,4 @@
 1768287273	VLAZ	Business[\W_]*+Remedies
 1768289219	VLAZ	modstumblguys\.com
 1768291477	VLAZ	easywebplansitllc\.com
+1768292283	VLAZ	isocertificationbahrain\.com
