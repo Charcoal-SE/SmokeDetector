@@ -79485,3 +79485,4 @@
 1768395325	VLAZ	ytmods\.com
 1768395333	VLAZ	aakashchandran\.com
 1768395862	Dan Getz	crypto[\W_]*+protocol[\W_]*+ops
+1768397114	lyxal	nishasharma\.in
