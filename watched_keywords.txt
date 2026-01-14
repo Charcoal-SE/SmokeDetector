@@ -79487,3 +79487,4 @@
 1768395862	Dan Getz	crypto[\W_]*+protocol[\W_]*+ops
 1768397114	lyxal	nishasharma\.in
 1768399518	VLAZ	emavens\.com
+1768400431	Snow	bharathmrk\.com
