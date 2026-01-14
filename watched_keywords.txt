@@ -79477,3 +79477,4 @@
 1768379894	VLAZ	therpsllc\.com
 1768379936	VLAZ	therps[\W_]*+llc(?!\.com(?<=therpsllc\.com))
 1768381342	VLAZ	fouzan[\W_]*+qatar
+1768385061	VLAZ	wet[\W_]*+s[\W_]*+n[\W_]*+joy
