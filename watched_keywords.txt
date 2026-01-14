@@ -79475,3 +79475,4 @@
 1768379703	VLAZ	legitdocumentservice\.com
 1768379714	VLAZ	legitdocumentservice(?!\.com)
 1768379894	VLAZ	therpsllc\.com
+1768379902	VLAZ	therps[\W)]*+llc(?!\.com(?<=therpsllc\.com))
