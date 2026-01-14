@@ -79467,3 +79467,4 @@
 1768339701	VLAZ	markwizard23[\W_]*+gmail[\W_]*+com
 1768342059	Jeff Schaller	itemit\.com
 1768348913	Vickel	mysportsmylifegameday\.blogspot
+1768371775	VLAZ	youtubetranscript\.dev
