@@ -60,3 +60,17 @@ jobs:
           --dist loadgroup \
           --timeout=300 \
           test
+
+  release:
+    if: ${{ github.ref == 'master' }}
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+    - name: Fetch branches
+      run: |
+        git remote set-branches --add origin deploy
+        git fetch --all --depth=5
+    - name: Push to deploy
+      continue-on-error: true
+      run: |
+        git push origin HEAD:deploy
