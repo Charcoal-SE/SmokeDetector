@@ -79511,3 +79511,4 @@
 1768500410	Fastnlight	dzosoft\.com
 1768501015	Fastnlight	kayingoala5(?:@gmail\.com)?
 1768501803	Jeff Schaller	lazizgold\.com
+1768503196	Jeff Schaller	strongiptv\.live
