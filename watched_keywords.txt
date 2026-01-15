@@ -79497,3 +79497,4 @@
 1768474784	VLAZ	houseura(?!\.com)
 1768476045	Jeff Schaller	bytixstore\.com
 1768476124	VLAZ	difinitydigital\.com
+1768476433	lyxal	bloxsfruitscript\.com
