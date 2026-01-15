@@ -79502,3 +79502,4 @@
 1768479300	lyxal	oprezoindia\.com
 1768480317	lyxal	theperfectdetails\.com
 1768480535	VLAZ	kenza[\W_]*+tmt[\W_]*+bars
+1768481477	lyxal	apollosupplychain\.com
