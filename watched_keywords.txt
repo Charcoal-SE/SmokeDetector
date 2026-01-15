@@ -79494,3 +79494,4 @@
 1768460400	VLAZ	vitalisluxeclinic\.com
 1768465565	VLAZ	carpeter\.ae
 1768474776	VLAZ	houseura\.com
+1768474784	VLAZ	houseura(?!\.com)
