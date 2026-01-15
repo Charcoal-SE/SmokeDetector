@@ -79504,3 +79504,4 @@
 1768480535	VLAZ	kenza[\W_]*+tmt[\W_]*+bars
 1768481477	lyxal	apollosupplychain\.com
 1768482619	Vickel	apollo[\W_]*+supply[\W_]*+chain(?!\.com(?<=apollosupplychain\.com))
+1768488416	Jeff Schaller	clgpgt\.org
