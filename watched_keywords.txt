@@ -79505,3 +79505,4 @@
 1768481477	lyxal	apollosupplychain\.com
 1768482619	Vickel	apollo[\W_]*+supply[\W_]*+chain(?!\.com(?<=apollosupplychain\.com))
 1768488416	Jeff Schaller	clgpgt\.org
+1768493763	Jeff Schaller	anjanadas\.me
