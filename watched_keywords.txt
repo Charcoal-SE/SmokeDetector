@@ -79533,3 +79533,4 @@
 1768549532	Dan Getz	pertsol\.com
 1768553951	Dan Getz	onlineblockblastsolver\.com
 1768556061	Dan Getz	rehladigital\.com
+1768556296	Dan Getz	fuerte[\W_]*+developers
