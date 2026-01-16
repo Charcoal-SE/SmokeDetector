@@ -79351,7 +79351,6 @@
 1767790601	Jeff Schaller	samrx\.to
 1767795339	Jeff Schaller	Luxury[\W_]*+Rides[\W_]*+LLC
 1767804586	Jeff Schaller	cakhiatv\.ac
-1767818660	Jeff Schaller	nimblize\.com
 1767826040	Dan Getz	stickwarlgacy\.com
 1767852427	Dan Getz	fortunepaperproducts\.com
 1767859686	Snow	redddyanna\.com
