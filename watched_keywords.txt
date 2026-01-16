@@ -79535,3 +79535,4 @@
 1768556061	Dan Getz	rehladigital\.com
 1768556468	Dan Getz	fuerte[\W_]*+developers(?!\.com)
 1768556476	Snow	fuertedevelopers\.com
+1768558507	VLAZ	bintang88terbaru\.com
