@@ -79534,3 +79534,4 @@
 1768553951	Dan Getz	onlineblockblastsolver\.com
 1768556061	Dan Getz	rehladigital\.com
 1768556468	Dan Getz	fuerte[\W_]*+developers(?!\.com)
+1768556476	Snow	fuertedevelopers\.com
