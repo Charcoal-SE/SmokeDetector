@@ -79530,3 +79530,4 @@
 1768546803	VLAZ	auto[\W_]*+stylenn(?!\.com(?<=autostylenn\.com))
 1768546811	VLAZ	autostylenn\.com
 1768548423	Dan Getz	mssupport\.tech
+1768549532	Dan Getz	pertsol\.com
