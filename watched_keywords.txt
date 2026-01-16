@@ -79539,3 +79539,4 @@
 1768558552	VLAZ	voidstrap\.org
 1768562815	VLAZ	digitalizetheglobe\.com
 1768563375	lyxal	nectarlive\.in
+1768564963	VLAZ	arnasoftech\.com
