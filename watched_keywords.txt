@@ -79527,3 +79527,4 @@
 1768526013	Jeff Schaller	Swift[\W_]*+Fox[\W_]*+Coder
 1768541274	VLAZ	galonesalitro\.com
 1768546567	VLAZ	fairplayid\.shop
+1768546803	VLAZ	auto[\W_]*+stylenn(?!\.com(?<=autostylenn\.com))
