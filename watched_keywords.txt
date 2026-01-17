@@ -79555,3 +79555,4 @@
 1768647139	VLAZ	cloudapi\.co\.il
 1768650200	VLAZ	tanvixtechnologies\.com
 1768650296	VLAZ	egpsales\.com
+1768650839	lyxal	flatchahiye\.com
