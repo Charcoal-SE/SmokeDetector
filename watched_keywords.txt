@@ -79551,3 +79551,4 @@
 1768633273	VLAZ	active[\W_]*+designs[\W_]*+pvt[\W_]*+ltd
 1768638569	dan1st	highyieldcdcalculator\.com
 1768642829	VLAZ	ozosoft
+1768642934	VLAZ	com\.learnyn\.anyskill
