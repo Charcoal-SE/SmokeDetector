@@ -79552,3 +79552,4 @@
 1768638569	dan1st	highyieldcdcalculator\.com
 1768642829	VLAZ	ozosoft
 1768642934	VLAZ	com\.learnyn\.anyskill
+1768647139	VLAZ	cloudapi\.co\.il
