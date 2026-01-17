@@ -79563,3 +79563,4 @@
 1768666287	Anerdw	apkcloud\.com
 1768672158	VLAZ	pokefusionpro\.com
 1768676619	Jeff Schaller	Daklekkage[\W_]*+Rotterdam
+1768692382	Jeff Schaller	owlsenserecorders\.com
