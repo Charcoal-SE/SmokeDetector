@@ -79553,3 +79553,4 @@
 1768642829	VLAZ	ozosoft
 1768642934	VLAZ	com\.learnyn\.anyskill
 1768647139	VLAZ	cloudapi\.co\.il
+1768650200	VLAZ	tanvixtechnologies\.com
