@@ -79549,3 +79549,4 @@
 1768632126	VLAZ	yacinetvappz\.com
 1768633256	VLAZ	activedesigns\.in
 1768633273	VLAZ	active[\W_]*+designs[\W_]*+pvt[\W_]*+ltd
+1768638569	dan1st	highyieldcdcalculator\.com
