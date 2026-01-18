@@ -79569,3 +79569,4 @@
 1768725665	VLAZ	spotifeprimium\.com
 1768749744	VLAZ	topfarmaciaitaly\.com
 1768752969	VLAZ	techonomiq\.com
+1768764222	Anerdw	allbratgenerator\.com
