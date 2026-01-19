@@ -79573,3 +79573,4 @@
 1768770910	Dan Getz	step[\W_]*+2[\W_]*+agility
 1768771890	Jeff Schaller	valeconstructionva\.com
 1768789811	Anerdw	rojgarsangam\.in
+1768799695	lyxal	tempeimplantsandperio\.com
