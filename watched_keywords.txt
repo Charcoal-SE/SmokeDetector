@@ -79587,3 +79587,4 @@
 1768842037	VLAZ	nimblize(?!\.com)
 1768842469	VLAZ	freevpnplanet\.com
 1768843970	VLAZ	ambigramtools\.com
+1768844023	Jeff Schaller	fahdu\.com
