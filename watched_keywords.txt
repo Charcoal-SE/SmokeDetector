@@ -79602,3 +79602,4 @@
 1768898032	Snow	migratelinkimmigration\.com
 1768901974	VLAZ	eco[\W_]*+junk[\W_]*+haulers
 1768903398	Snow	passoverlistings\.com
+1768903385	Snow	sevyam\.in
