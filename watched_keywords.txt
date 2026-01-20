@@ -79605,3 +79605,4 @@
 1768904387	VLAZ	lanop\.co\.uk
 1768909155	VLAZ	rudraacksolutions\.com
 1768909562	Jeff Schaller	altportfunds\.com
+1768910496	Jeff Schaller	connect360\.in
