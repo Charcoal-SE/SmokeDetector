@@ -79611,3 +79611,4 @@
 1768915859	Machavity	thekingcheats\.xyz
 1768917876	VLAZ	ricoh\.ca
 1768918195	VLAZ	Creative[\W_]*+IT[\W_]*+Institute
+1768922666	Anerdw	sphinxdeclic\.com
