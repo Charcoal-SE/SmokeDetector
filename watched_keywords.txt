@@ -79613,3 +79613,4 @@
 1768918195	VLAZ	Creative[\W_]*+IT[\W_]*+Institute
 1768922666	Anerdw	sphinxdeclic\.com
 1768928775	Jeff Schaller	allgentools\.com
+1768940188	Jeff Schaller	risezonic\.com
