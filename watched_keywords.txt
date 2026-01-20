@@ -79588,3 +79588,4 @@
 1768842469	VLAZ	freevpnplanet\.com
 1768843970	VLAZ	ambigramtools\.com
 1768844023	Jeff Schaller	fahdu\.com
+1768869522	Jeff Schaller	nyweeklyinfo\.co\.uk
