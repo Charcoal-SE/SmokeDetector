@@ -79610,3 +79610,4 @@
 1768912525	lyxal	ssglobalservices\.in
 1768915859	Machavity	thekingcheats\.xyz
 1768917876	VLAZ	ricoh\.ca
+1768918195	VLAZ	Creative[\W_]*+IT[\W_]*+Institute
