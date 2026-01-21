@@ -79630,3 +79630,4 @@
 1768980731	VLAZ	curtainsonline\.ae
 1768980855	VLAZ	ronanis
 1768980939	VLAZ	tailor\.com
+1768981163	lyxal	highwaytravels\.in
