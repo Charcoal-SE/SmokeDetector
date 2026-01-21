@@ -79653,3 +79653,4 @@
 1768985731	VLAZ	pasindo\.id
 1768985785	VLAZ	moesmenu\.com
 1768985815	VLAZ	f5[\W_]*+network[\W_]*+solutions
+1768985895	VLAZ	ifcm\.in
