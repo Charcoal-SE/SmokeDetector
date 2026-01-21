@@ -79642,3 +79642,4 @@
 1768982498	VLAZ	almas(?!\.co\.il)
 1768982507	VLAZ	almaswebconsulting(?!\.com)
 1768982980	VLAZ	adhithyarnair\.com
+1768983244	VLAZ	risingspaces\.in
