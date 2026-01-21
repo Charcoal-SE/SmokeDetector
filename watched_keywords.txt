@@ -79650,3 +79650,4 @@
 1768985172	VLAZ	kantor-klikbantuan\.com
 1768985592	VLAZ	test[\W_]*+on[\W_]*+flash
 1768985638	VLAZ	macverify\.com
+1768985731	VLAZ	pasindo\.id
