@@ -79669,3 +79669,4 @@
 1768992992	VLAZ	comparemyairportparking\.com
 1768993887	VLAZ	risezonic(?!\.com)
 1768994214	VLAZ	kiwasoft[\W_]*+technologies
+1768995348	Jeff Schaller	powerdatarecovery\.com
