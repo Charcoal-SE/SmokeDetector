@@ -79672,3 +79672,4 @@
 1768995348	Jeff Schaller	powerdatarecovery\.com
 1768996349	Jeff Schaller	XTEN-AV
 1768997626	VLAZ	hectindia\.com
+1768997666	VLAZ	hect[\W_]*+india(?!\.com(?<=hectindia\.com))
