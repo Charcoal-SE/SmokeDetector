@@ -79634,3 +79634,4 @@
 1768981341	VLAZ	env-doctor
 1768981357	VLAZ	skyexchange\.social
 1768981405	VLAZ	testdebelleza\.com
+1768981427	VLAZ	wavy[\W_]*+solutions
