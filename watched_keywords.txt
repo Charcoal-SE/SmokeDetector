@@ -79682,3 +79682,4 @@
 1769011615	Jeff Schaller	Nu[\W_]*+Image[\W_]*+Detail
 1769013741	VLAZ	dphealth\.local
 1769014803	Jeff Schaller	o3spokenclasses\.com
+1769015050	VLAZ	fidoflush\.com
