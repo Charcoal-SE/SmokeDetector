@@ -66711,7 +66711,6 @@
 1727780330	Vickel	tourmyholiday\.com
 1727780754	tripleee	megazeene\.com
 1727780845	tripleee	web-style\.com\.pl
-1727780937	tripleee	omc-stepperonline\.com
 1727781300	tripleee	whitespots\.io
 1727781326	tripleee	whitespots(?!\.io)
 1727783616	Jeff Schaller	rfchh\.com
