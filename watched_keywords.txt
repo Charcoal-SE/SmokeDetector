@@ -79670,3 +79670,4 @@
 1768993887	VLAZ	risezonic(?!\.com)
 1768994214	VLAZ	kiwasoft[\W_]*+technologies
 1768995348	Jeff Schaller	powerdatarecovery\.com
+1768996349	Jeff Schaller	XTEN-AV
