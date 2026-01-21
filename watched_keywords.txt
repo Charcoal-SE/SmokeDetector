@@ -79639,3 +79639,4 @@
 1768981746	VLAZ	dsuccessed\.com
 1768981866	VLAZ	tgh[\W_]*+software[\W_]*+solutions
 1768982489	VLAZ	almas\.co\.il
+1768982498	VLAZ	almas(?!\.co\.il)
