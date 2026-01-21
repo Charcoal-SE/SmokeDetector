@@ -79660,3 +79660,4 @@
 1768987887	VLAZ	2050rehabcare\.com
 1768988103	VLAZ	jsonlify\.com
 1768989896	VLAZ	lemonsandolives\.com
+1768990186	VLAZ	detroitfurnishedrentals\.com
