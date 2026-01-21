@@ -79667,3 +79667,4 @@
 1768992663	VLAZ	fitbudd\.com
 1768992677	VLAZ	fitbudd(?!\.com)
 1768992992	VLAZ	comparemyairportparking\.com
+1768993887	VLAZ	risezonic(?!\.com)
