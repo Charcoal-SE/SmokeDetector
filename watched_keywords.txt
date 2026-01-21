@@ -79663,3 +79663,4 @@
 1768990186	VLAZ	detroitfurnishedrentals\.com
 1768990961	VLAZ	web[\W_]*+design[\W_]*+services?
 1768991835	VLAZ	mpilolucas337@gmail\.com
+1768992508	VLAZ	leatherpatches\.us
