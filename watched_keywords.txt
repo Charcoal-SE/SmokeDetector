@@ -79673,3 +79673,4 @@
 1768996349	Jeff Schaller	XTEN-AV
 1768997626	VLAZ	hectindia\.com
 1768997666	VLAZ	hect[\W_]*+india(?!\.com(?<=hectindia\.com))
+1768998319	lyxal	technic[\W_]*+infotech
