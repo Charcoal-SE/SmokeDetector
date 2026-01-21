@@ -79665,3 +79665,4 @@
 1768991835	VLAZ	mpilolucas337@gmail\.com
 1768992508	VLAZ	leatherpatches\.us
 1768992663	VLAZ	fitbudd\.com
+1768992677	VLAZ	fitbudd(?!\.com)
