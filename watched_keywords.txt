@@ -79675,3 +79675,4 @@
 1768997666	VLAZ	hect[\W_]*+india(?!\.com(?<=hectindia\.com))
 1768998319	lyxal	technic[\W_]*+infotech
 1769001346	lyxal	howtolookatahouse\.com
+1769001573	lyxal	droneasaservice\.com
