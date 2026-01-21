@@ -79681,3 +79681,4 @@
 1769011575	Jeff Schaller	nuimagedetail\.com
 1769011615	Jeff Schaller	Nu[\W_]*+Image[\W_]*+Detail
 1769013741	VLAZ	dphealth\.local
+1769014803	Jeff Schaller	o3spokenclasses\.com
