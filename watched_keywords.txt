@@ -79657,3 +79657,4 @@
 1768987701	VLAZ	contec[\W_]*+solutions
 1768987725	VLAZ	ezgradercalculator\.com
 1768987842	VLAZ	a2it\.mohali@gmail\.com
+1768987887	VLAZ	2050rehabcare\.com
