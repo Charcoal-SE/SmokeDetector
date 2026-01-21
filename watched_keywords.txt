@@ -79648,3 +79648,4 @@
 1768983433	Ryan M	ecampusapp\.com
 1768983488	VLAZ	ecampus[\W_]*+learning[\W_]*+management[\W_]*+system
 1768985172	VLAZ	kantor-klikbantuan\.com
+1768985592	VLAZ	test[\W_]*+on[\W_]*+flash
