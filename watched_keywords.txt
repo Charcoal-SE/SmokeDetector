@@ -79647,3 +79647,4 @@
 1768983420	VLAZ	zhengyimachine\.com
 1768983433	Ryan M	ecampusapp\.com
 1768983488	VLAZ	ecampus[\W_]*+learning[\W_]*+management[\W_]*+system
+1768985172	VLAZ	kantor-klikbantuan\.com
