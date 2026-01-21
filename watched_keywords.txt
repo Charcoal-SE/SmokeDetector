@@ -79644,3 +79644,4 @@
 1768982980	VLAZ	adhithyarnair\.com
 1768983244	VLAZ	risingspaces\.in
 1768983252	VLAZ	maxpinegroup\.in
+1768983420	VLAZ	zhengyimachine\.com
