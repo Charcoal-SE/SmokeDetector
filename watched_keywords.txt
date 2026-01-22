@@ -79687,3 +79687,4 @@
 1769062062	VLAZ	renderspoint\.com
 1769063457	Ryan M	toshgold
 1769073903	VLAZ	healthidea\.org
+1769074079	Snow	theintechgroup\.com
