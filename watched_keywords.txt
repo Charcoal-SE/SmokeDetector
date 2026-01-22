@@ -79684,3 +79684,4 @@
 1769015050	VLAZ	fidoflush\.com
 1769039513	Jeff Schaller	CYBERPUNK77220(?:@gmail\.com)?
 1769050450	Jeff Schaller	bulkprintouts\.com
+1769062062	VLAZ	renderspoint\.com
