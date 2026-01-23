@@ -79706,3 +79706,4 @@
 1769189909	Jeff Schaller	rpusa1-prlabs\.hf\.space
 1769190197	Dan Getz	PR[\W_]*+Labs
 1769190291	Jeff Schaller	golicense\.net
+1769198864	Vickel	cyber-sport\.io
