@@ -79700,3 +79700,4 @@
 1769168616	VLAZ	msatsecondary\.com
 1769173899	VLAZ	seattledentistry\.com
 1769177539	VLAZ	ncrypted\.net
+1769179004	VLAZ	cs2\.ad
