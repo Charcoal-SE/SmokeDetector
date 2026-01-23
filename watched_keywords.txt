@@ -79703,3 +79703,4 @@
 1769179004	VLAZ	cs2\.ad
 1769184439	VLAZ	(?-i:itzR73nm)(?#cutt.ly)
 1769188834	Dan Getz	rivercitypaintingsa\.com
+1769189909	Jeff Schaller	rpusa1-prlabs\.hf\.space
