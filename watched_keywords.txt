@@ -79705,3 +79705,4 @@
 1769188834	Dan Getz	rivercitypaintingsa\.com
 1769189909	Jeff Schaller	rpusa1-prlabs\.hf\.space
 1769190197	Dan Getz	PR[\W_]*+Labs
+1769190291	Jeff Schaller	golicense\.net
