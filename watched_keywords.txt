@@ -79711,3 +79711,4 @@
 1769236347	VLAZ	audimanualpro\.com
 1769236825	VLAZ	generalsolusindo\.com
 1769254207	VLAZ	directcyberrecovery[\W_]*+proton[\W_]*+me
+1769254263	VLAZ	directcyberrecover\.wixsite\.com
