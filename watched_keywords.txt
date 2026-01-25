@@ -79721,3 +79721,4 @@
 1769342053	VLAZ	s9game\.com\.co
 1769347829	Jeff Schaller	texttohandwriting\.tech
 1769353113	Dan Getz	aceofspadescarts\.com
+1769366820	VLAZ	blxfruitscript\.com
