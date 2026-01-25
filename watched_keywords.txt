@@ -79720,3 +79720,4 @@
 1769334535	Jeff Schaller	whiteland\.co\.in
 1769342015	VLAZ	planetroofingcompany\.com
 1769342053	VLAZ	s9game\.com\.co
+1769347829	Jeff Schaller	texttohandwriting\.tech
