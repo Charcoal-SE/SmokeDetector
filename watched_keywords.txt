@@ -79727,3 +79727,4 @@
 1769406418	VLAZ	themacollection\.com
 1769408417	VLAZ	hackedatmsellergroup[\W_]*+gmail[\W_]*+com
 1769408425	VLAZ	693f3883171c4\.site123\.me
+1769425886	VLAZ	bigelectronicstore\.com
