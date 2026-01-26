@@ -79732,3 +79732,4 @@
 1769428432	VLAZ	snapsaver\.cc
 1769435872	VLAZ	comstechitworld\.com
 1769436997	Jeff Schaller	txdecoder\.xyz
+1769446652	Jeff Schaller	arceapadel\.com
