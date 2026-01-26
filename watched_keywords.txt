@@ -79729,3 +79729,4 @@
 1769408425	VLAZ	693f3883171c4\.site123\.me
 1769425886	VLAZ	bigelectronicstore\.com
 1769426608	VLAZ	dataconvert\.net
+1769428432	VLAZ	snapsaver\.cc
