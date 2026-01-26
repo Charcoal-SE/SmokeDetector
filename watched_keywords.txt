@@ -79725,3 +79725,4 @@
 1769371188	Dan Getz	fiduscapitals\.com
 1769404782	VLAZ	sasastatuschek\.co\.za
 1769406418	VLAZ	themacollection\.com
+1769408417	VLAZ	hackedatmsellergroup[\W_]*+gmail[\W_]*+com
