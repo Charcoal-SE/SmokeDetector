@@ -79759,3 +79759,4 @@
 1769519471	lyxal	technicianmart\.com
 1769520801	VLAZ	seedling[\W_]*+public[\W_]*+school
 1769527455	Snow	kvadrat-granite\.pro
+1769532727	Dan Getz	citymove\.co\.nz
