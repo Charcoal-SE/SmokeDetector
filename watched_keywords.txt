@@ -79741,3 +79741,4 @@
 1769479792	Dan Getz	balap(?:an)?
 1769489989	VLAZ	lanyardkilat\.co\.id
 1769490081	VLAZ	Nigerman cotonpiker
+1769490230	Dan Getz	antwerpdiamondbusinessacademy\.com
