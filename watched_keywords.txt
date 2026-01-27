@@ -79756,3 +79756,4 @@
 1769510036	VLAZ	hirvagems\.com
 1769514553	VLAZ	indianleadershipacademy\.com
 1769518708	VLAZ	computaxsoftware\.com
+1769519471	lyxal	technicianmart\.com
