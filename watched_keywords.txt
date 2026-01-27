@@ -79760,3 +79760,4 @@
 1769520801	VLAZ	seedling[\W_]*+public[\W_]*+school
 1769527455	Snow	kvadrat-granite\.pro
 1769532727	Dan Getz	citymove\.co\.nz
+1769548092	Jeff Schaller	seules\.fr
