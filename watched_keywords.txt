@@ -79746,3 +79746,4 @@
 1769492809	VLAZ	nutsnjoy(?!\.com)
 1769494615	VLAZ	style10\.odoo\.com
 1769498880	VLAZ	theplanetsoft(?!\.com)
+1769498889	VLAZ	theplanetsoft\.com
