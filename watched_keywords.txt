@@ -79735,3 +79735,4 @@
 1769446652	Jeff Schaller	arceapadel\.com
 1769448353	Jeff Schaller	ojanbeauty\.com
 1769470848	Anerdw	dotcollab\.ai(?#comment spam)
+1769478026	Dan Getz	dmleadify\.com
