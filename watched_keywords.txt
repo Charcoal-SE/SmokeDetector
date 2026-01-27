@@ -79757,3 +79757,4 @@
 1769514553	VLAZ	indianleadershipacademy\.com
 1769518708	VLAZ	computaxsoftware\.com
 1769519471	lyxal	technicianmart\.com
+1769520801	VLAZ	seedling[\W_]*+public[\W_]*+school
