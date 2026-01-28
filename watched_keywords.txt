@@ -79776,3 +79776,4 @@
 1769602962	Dan Getz	simplitrain\.com
 1769618007	Seggan	silvyshanavas\.com
 1769619128	VLAZ	kaomoji\.one
+1769639400	Dan Getz	jlto-stakes\.com
