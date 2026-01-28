@@ -79771,3 +79771,4 @@
 1769584167	VLAZ	yomovies
 1769593804	VLAZ	networkblogsworld\.blogspot
 1769594966	VLAZ	thedecantden\.com
+1769595184	VLAZ	thewisdomglobe\.com
