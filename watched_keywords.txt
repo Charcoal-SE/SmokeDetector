@@ -79774,3 +79774,4 @@
 1769600280	VLAZ	earsolutions\.us
 1769601099	Dan Getz	DomainRacer
 1769602962	Dan Getz	simplitrain\.com
+1769618007	Seggan	silvyshanavas\.com
