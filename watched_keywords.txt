@@ -79772,3 +79772,4 @@
 1769594966	VLAZ	thedecantden\.com
 1769595184	VLAZ	thewisdomglobe\.com
 1769600272	VLAZ	ear[\W_]*+solutions(?!\.us(?<=earsolutions\.us))
+1769600280	VLAZ	earsolutions\.us
