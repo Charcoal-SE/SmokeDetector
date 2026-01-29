@@ -79790,3 +79790,4 @@
 1769689398	Dan Getz	kamsdesigner\.com
 1769692727	Dan Getz	voscart\.in
 1769695634	lyxal	freecell\.game
+1769700791	Snow	energie-und-wohnen\.at
