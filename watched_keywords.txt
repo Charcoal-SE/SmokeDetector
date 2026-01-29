@@ -9524,7 +9524,6 @@
 1559609920	Makyen	evneznaiko\.com
 1559610430	Sonic the Bracketed Hedgehog	timesbuzzer\.com
 1559613848	Makyen	trenddia\.com
-1559625466	tripleee	devtechnosys\.com
 1559626629	tripleee	freehelptips\.in
 1559627473	Makyen	mydriveconnect\.com\.au
 1559628265	tripleee	avg-com-retail\.us
