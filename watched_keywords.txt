@@ -79783,3 +79783,4 @@
 1769669349	VLAZ	dmebatiment\.fr
 1769671357	VLAZ	deskloft\.in
 1769671365	VLAZ	deskloft(?!\.in)
+1769681672	Cow	thegioidankinh\.com
