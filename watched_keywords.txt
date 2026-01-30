@@ -79796,3 +79796,4 @@
 1769727727	Jeff Schaller	faiirplaay\.com
 1769728947	Dan Getz	khabardtkom\.blogspot
 1769756560	lyxal	solvefire\.net
+1769770978	Dan Getz	acpro\.ae
