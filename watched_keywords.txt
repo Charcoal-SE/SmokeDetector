@@ -79801,3 +79801,4 @@
 1769777638	lyxal	openxcell\.com
 1769780003	lyxal	birthdaymarathiwish\.net
 1769788920	Dan Getz	psikologbul\.blogspot
+1769793167	Jeff Schaller	offerclime\.com
