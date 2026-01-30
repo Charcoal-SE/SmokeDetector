@@ -79053,7 +79053,6 @@
 1766460668	Jeff Schaller	duoplus\.net
 1766476048	Nisse Engström	forefront-technology\.com
 1766476075	Nisse Engström	askaboutcars\.com
-1766476098	Nisse Engström	vectortracingpro\.com
 1766487787	Jeff Schaller	chikupiku\.com
 1766487879	Jeff Schaller	dialdhamtari\.com
 1766487906	Jeff Schaller	dralsareii\.com
