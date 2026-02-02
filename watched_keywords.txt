@@ -79823,3 +79823,4 @@
 1770039369	VLAZ	jsonview\.us
 1770045127	VLAZ	baoquanlanhyte\.vn
 1770049340	VLAZ	talentrisetechnokrate\.com
+1770054050	Dan Getz	archmagesolutionhome
