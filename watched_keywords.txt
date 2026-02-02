@@ -79817,3 +79817,4 @@
 1770023467	VLAZ	saetagency\.com
 1770025118	VLAZ	talentrisetechnokrate\.online
 1770026553	VLAZ	coachproconsulting\.com
+1770026612	VLAZ	loventinesol\.xyz
