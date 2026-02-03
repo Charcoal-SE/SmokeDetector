@@ -6588,7 +6588,6 @@
 1545309912	doppelgreener	tool-battery\.co\.uk
 1545323734	Glorfindel	vanchuyencogioi\.com
 1545324127	Makyen	israhelli\W*foe
-1545324153	Makyen	princess\W*luna
 1545331351	Makyen	screenpresso\.com
 1545331370	Makyen	websystems-design\.com
 1545358152	Makyen	garciniabodyblast\.com
