@@ -79841,3 +79841,4 @@
 1770122361	VLAZ	jaanikaam\.omeka\.net
 1770122369	VLAZ	jaanikaam\.alboompro\.com
 1770122382	VLAZ	jovananne\.alboompro\.com
+1770123180	Dan Getz	woodenblindsdubai\.ae
