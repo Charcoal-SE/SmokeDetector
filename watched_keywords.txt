@@ -79844,3 +79844,4 @@
 1770123385	Glorfindel	lotter1
 1770123402	Glorfindel	1lotteryy\.io
 1770123962	VLAZ	sterlingnext(?!\.com)
+1770125970	VLAZ	detect-css\.vercel\.app
