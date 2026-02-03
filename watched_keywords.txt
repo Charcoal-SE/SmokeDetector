@@ -79843,3 +79843,4 @@
 1770123180	Dan Getz	woodenblindsdubai\.ae
 1770123385	Glorfindel	lotter1
 1770123402	Glorfindel	1lotteryy\.io
+1770123962	VLAZ	sterlingnext(?!\.com)
