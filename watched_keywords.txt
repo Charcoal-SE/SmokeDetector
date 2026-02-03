@@ -79830,3 +79830,4 @@
 1770102396	VLAZ	auxenprime\.com
 1770103982	VLAZ	bloomster\.com
 1770113009	Dan Getz	advantage\.se
+1770113036	Dan Getz	my-equipment\.com
