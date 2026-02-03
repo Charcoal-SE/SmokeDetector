@@ -79835,3 +79835,4 @@
 1770116384	Dan Getz	thewalkinjob\.com
 1770116440	Dan Getz	orange[\W_]*+outreach
 1770121853	Dan Getz	mobula\.io
+1770122170	VLAZ	fryaway\.co
