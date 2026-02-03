@@ -79829,3 +79829,4 @@
 1770100423	VLAZ	coachpro
 1770102396	VLAZ	auxenprime\.com
 1770103982	VLAZ	bloomster\.com
+1770113009	Dan Getz	advantage\.se
