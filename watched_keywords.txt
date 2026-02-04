@@ -79853,3 +79853,4 @@
 1770204046	VLAZ	sc88\.plus
 1770204129	VLAZ	intrinsicmachines\.com
 1770205922	Dan Getz	autotechrecoverycompany\.com
+1770206954	Jeff Schaller	infyc\.com
