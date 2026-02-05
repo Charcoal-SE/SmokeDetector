@@ -79857,3 +79857,4 @@
 1770207471	VLAZ	nexgenboxes\.com
 1770207709	VLAZ	brandmydispo\.com
 1770255285	Dan Getz	olivia[\W_]*+trader[\W_]*+44(?:[\W_]*+gmail\.com)?
+1770257791	Jeff Schaller	alluvimart\.com
