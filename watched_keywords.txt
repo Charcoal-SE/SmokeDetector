@@ -79871,3 +79871,4 @@
 1770275905	VLAZ	vivek[\W_]*+tiwari[\W_]*+co
 1770279356	VLAZ	statementsolver\.heybrodes\.com
 1770289119	VLAZ	careersfame\.com
+1770289293	VLAZ	mlns\.site
