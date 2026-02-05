@@ -79874,3 +79874,4 @@
 1770289293	VLAZ	mlns\.site
 1770298647	Dan Getz	jutacuan99\.com
 1770301850	Jeff Schaller	featherstitchny\.com
+1770309061	Jeff Schaller	tabdeck\.so
