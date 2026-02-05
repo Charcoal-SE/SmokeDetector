@@ -29818,7 +29818,6 @@
 1625237780	cigien	gasiweb\.com
 1625237795	cigien	hfixphones\.com
 1625237947	cigien	bookride\.co\.uk
-1625238138	cigien	qualityzoneinfotech\.com
 1625238155	cigien	quality[\W_]*+zone[\W_]*+infotech(?!\.com(?<=qualityzoneinfotech\.com))
 1625238422	cigien	678\.vn
 1625238458	cigien	mahziba\.com
