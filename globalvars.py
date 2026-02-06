@@ -232,7 +232,7 @@ class GlobalVars:
                             these_stats['max_scan_time_post'] = new_max_time_post
                         for stat_name, value in new_stats.items():
                             old_value = these_stats.get(stat_name, 0)
-                            if type(value) in [int, float]:
+                            if isinstance(value, (int, float)):
                                 these_stats[stat_name] = old_value + value
                             else:
                                 # There isn't any value currently used here which should be anything other than an int
