@@ -43,6 +43,7 @@ ci = [
 chatexchange = { git = "https://github.com/Charcoal-SE/ChatExchange.git" }
 
 [tool.ruff]
+preview = true
 line-length = 120
 exclude = [
     "ChatExchange/*",
@@ -109,5 +110,4 @@ select = [
     # Disabled:
     # "N801",  # class name should use CapWords
     # "N804",  # First argument of @classmethod should be 'cls'
-    "N999",  # Invalid module name: '_Post'
 ]
