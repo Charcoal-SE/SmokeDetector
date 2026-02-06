@@ -79892,3 +79892,4 @@
 1770397760	VLAZ	jatolovespell
 1770397848	VLAZ	unidayshop\.com
 1770400521	Dan Getz	rprogrammingbooks\.com
+1770405017	Jeff Schaller	migrate2powerplatform\.com
