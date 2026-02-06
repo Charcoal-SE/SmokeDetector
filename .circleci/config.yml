@@ -26,26 +26,20 @@ jobs:
           command: |
             python3 --version > ci_environment.txt
       - restore_cache:
-          key: pip-cache-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
+          key: pip-cache-cimg-python-{{ checksum "ci_environment.txt" }}-{{ checksum "uv.lock" }}
       - run:
           name: Install Python dependencies
           command: |
             ssh-keyscan github.com >> ~/.ssh/known_hosts
-            pip3 install -r requirements.txt --upgrade --upgrade-strategy eager
-            pip3 install -r user_requirements.txt --upgrade --upgrade-strategy eager
+            uv sync --frozen --group ci
+            uv cache prune --ci
       - save_cache:
-          key: pip-cache-cimg-python3.8-{{ checksum "ci_environment.txt" }}-{{ checksum "requirements.txt" }}-{{ checksum "user_requirements.txt" }}
+          key: pip-cache-cimg-python-{{ checksum "ci_environment.txt" }}-{{ checksum "uv.lock" }}
           paths:
-            - "/home/circleci/.cache/pip"
-      - run:
-          name: Lint ./tests
-          command: python3 -m flake8 --config=tox_tests.ini ./test/
-      - run:
-          name: Lint ./classes
-          command: python3 -m flake8 --config=tox_classes.ini ./classes/
+            - /home/circleci/.cache/uv
       - run:
           name: Lint code
-          command: python3 -m flake8 ./
+          command: uv run ruff check
       - run:
           name: Prepare Git for test
           command: |
