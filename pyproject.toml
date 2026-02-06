@@ -34,6 +34,10 @@ dev = [
     "pytest-xdist>=2.5.0",
     "ruff>=0.15.0",
 ]
+ci = [
+    "pytest-cov",
+    "coveralls",
+]
 
 [tool.uv.sources]
 chatexchange = { git = "https://github.com/Charcoal-SE/ChatExchange.git" }
