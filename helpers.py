@@ -297,7 +297,7 @@ core_files = {
     "classes/feedback.py",
     "_Git_Windows.py",
     "classes/__init__.py",
-    "classes/_Post.py",
+    "classes/post.py",
 
     # Before these are made reloadable
     "rooms.yml",
