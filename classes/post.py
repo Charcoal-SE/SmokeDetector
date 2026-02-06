@@ -43,7 +43,6 @@ class Post:
         else:
             raise PostParseError("Must provide either JSON Data or an API Response object for Post object.")
 
-
     def __repr__(self):
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
