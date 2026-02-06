@@ -79879,3 +79879,4 @@
 1770362175	VLAZ	zelta[\W_]*+media(?!\.com(?<=zeltamedia\.com))
 1770362495	VLAZ	tamam\.life
 1770363180	VLAZ	deltaexecuter\.com
+1770365037	VLAZ	praveenkldi\.com
