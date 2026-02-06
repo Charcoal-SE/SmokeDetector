@@ -79876,3 +79876,4 @@
 1770301850	Jeff Schaller	featherstitchny\.com
 1770309061	Jeff Schaller	tabdeck\.so
 1770356217	VLAZ	psychedelicsphere\.com
+1770362175	VLAZ	zelta[\W_]*+media(?!\.com(?<=zeltamedia\.com))
