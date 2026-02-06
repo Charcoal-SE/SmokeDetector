@@ -60,3 +60,7 @@ jobs:
           --dist loadgroup \
           --timeout=300 \
           test
+    - name: Coverage report
+      run: |
+        echo -e "## Coverage Report\n" >> "$GITHUB_STEP_SUMMARY"
+        coverage report --format=markdown -m >> "$GITHUB_STEP_SUMMARY"
