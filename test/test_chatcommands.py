@@ -21,7 +21,7 @@ else:
     from sh.contrib import git
 
 from fake import Fake
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 
 def rewrap_for_paramiterized_test_bisect():
@@ -383,8 +383,17 @@ def test_reject(monkeypatch):
     })
     msg.room._client = msg._client
 
+    def mock_get_pull_request(pr_id):
+        assert pr_id == 8888
+
+        mock_response = Mock(spec=Response)
+        mock_response.json.return_value = {"body": "[VLAZ](https://chat.stackexchange.com/users/162749) requests the watch of the watch_number `9950372060`."}
+        return mock_response
+
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
+    # Prevent GitHub API access
+    monkeypatch.setattr(GitHubManager, "get_pull_request", mock_get_pull_request)
     assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject").startswith("You need blacklist manager privileges")
 
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
