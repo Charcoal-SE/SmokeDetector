@@ -7,7 +7,7 @@ from chatcommunicate import add_room, block_room, CmdException, CmdExceptionLong
 from globalvars import GlobalVars
 import findspam
 # noinspection PyUnresolvedReferences
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
@@ -862,7 +862,7 @@ def wut():
 def hats():
     wb_start = datetime(2018, 12, 12, 0, 0, 0)
     wb_end = datetime(2019, 1, 2, 0, 0, 0)
-    now = datetime.now(UTC)
+    now = datetime.now(timezone.utc)
     return_string = ""
     if wb_start > now:
         diff = wb_start - now
@@ -1434,7 +1434,7 @@ def status():
     Returns the amount of time the application has been running
     :return: A string
     """
-    now = datetime.now(UTC)
+    now = datetime.now(timezone.utc)
     diff = now - GlobalVars.startup_utc_date
 
     return 'Running since {time} UTC ({relative})'.format(time=GlobalVars.startup_utc, relative=td_format(diff))

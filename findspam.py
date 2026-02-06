@@ -7,7 +7,7 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
-from datetime import datetime, UTC
+from datetime import datetime, timezone
 from string import punctuation
 import time
 import os
@@ -1375,7 +1375,7 @@ def purge_cache(cachevar, limit):
     '''
     oldest = sorted(cachevar, key=lambda k: cachevar[k]['timestamp'])[0:limit + 1]
     remaining = oldest.pop()
-    now = datetime.now(UTC)
+    now = datetime.now(timezone.utc)
     log('debug', 'purge_cache({0}): age of oldest entry is {1}'.format(
         limit, now - cachevar[oldest[0]]['timestamp']))
     log('debug', 'purge_cache({0}): oldest remaining entry is {1}'.format(
@@ -1389,7 +1389,7 @@ def purge_cache(cachevar, limit):
 def dns_query(label, qtype):
     # If there's no cache then assume *now* is important
     try:
-        starttime = datetime.now(UTC)
+        starttime = datetime.now(timezone.utc)
         # Extend lifetime if we are running a test
         extra_params = dict()
         if "pytest" in sys.modules:
@@ -1399,11 +1399,11 @@ def dns_query(label, qtype):
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
         else:
-            endtime = datetime.now(UTC)
+            endtime = datetime.now(timezone.utc)
             log('warning', 'DNS error {0} (duration: {1})'.format(
                 exc, endtime - starttime))
         return None
-    endtime = datetime.now(UTC)
+    endtime = datetime.now(timezone.utc)
     return answer
 
 
@@ -1669,7 +1669,7 @@ def post_links(post):
             log('debug', 'LINK_CACHE purged')
 
         linkset = set(links)
-        LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.now(UTC)}
+        LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.now(timezone.utc)}
         return linkset
 
 
@@ -2495,7 +2495,7 @@ create_rule("potentially bad keyword in {}", r"{}(?-i:SEO|seo)$".format(KEYWORD_
             rule_id="Potentialy bad keywords: SEO, usernames only")
 
 # Bad keywords in titles and usernames, all sites
-# %TP: 2020-06-27 01:00UTC: ~97.65%TP
+# %TP: 2020-06-27 01:00timezone.utc: ~97.65%TP
 # Title Results: 2925/TP:2864/FP:60/NAA:0
 # Username Results: 54/TP:45/FP:6/NAA:3
 create_rule("bad keyword in {}",
@@ -2513,7 +2513,7 @@ create_rule("bad keyword in {}",
             rule_id="bad keywords: movies, free, skin care, training, not bodies")
 
 # Potentially bad keywords in titles and usernames, all sites
-# Not sufficient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
+# Not sufficient %TP for blacklist: 2020-06-27 01:00timezone.utc: ~77.59%TP
 # Title Results: 398/TP:312/FP:81/NAA:3
 # Username Results: 17/TP:10/FP:8/NAA:0
 create_rule("potentially bad keyword in {}",
