@@ -13,7 +13,7 @@ class PostParseError(Exception):
 
 
 class Post:
-    def __init__(self, json_data: Optional[AnyStr]=None, api_response: Optional[dict]=None, parent: Optional["Post"]=None) -> None:
+    def __init__(self, json_data: Optional[AnyStr] = None, api_response: Optional[dict] = None, parent: Optional["Post"] = None) -> None:
         self._body = ""
         self._body_is_summary = False
         self._markdown = None
@@ -141,7 +141,7 @@ class Post:
 
         self._process_element_mapping(element_map, response, is_api_response=True)
 
-    def _process_element_mapping(self, element_map: dict, data: dict, is_api_response: bool=False) -> None:
+    def _process_element_mapping(self, element_map: dict, data: dict, is_api_response: bool = False) -> None:
         # Take the API response map, and start setting the elements (and sub-elements, where applicable)
         # to the attributes and variables in the object.
         for (element, varmap) in element_map.items():
