@@ -47,6 +47,8 @@ jobs:
     - name: Lint code
       run: python3 -m flake8 ./
     - name: Pytest
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       run: |
         python3 -W default::Warning -m pytest \
           --cov=chatcommunicate \

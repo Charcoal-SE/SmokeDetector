@@ -425,7 +425,7 @@ class GlobalVars:
 
     github_username = config.get("github_username")
     github_password = config.get("github_password")
-    github_access_token = config.get("github_access_token")
+    github_access_token = config.get("github_access_token", os.environ.get("GITHUB_TOKEN"))
 
     perspective_key = config.get("perspective_key")
 
