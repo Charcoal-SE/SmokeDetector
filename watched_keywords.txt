@@ -79884,3 +79884,4 @@
 1770379931	lyxal	prodigycreekside\.com
 1770380493	VLAZ	(?-i:4tt8jfx3)(?#tinyurl.com)
 1770381418	VLAZ	earnozo\.com
+1770381477	VLAZ	paradise[\W_]*+banquet(?!\.com(?<=paradisebanquet\.com))
