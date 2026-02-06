@@ -4,7 +4,7 @@ import chatcommunicate  # coverage
 import chatcommands
 from apigetpost import api_get_post
 from parsing import to_protocol_relative
-from classes._Post import Post
+from classes.post import Post
 from globalvars import GlobalVars
 from datahandling import remove_pickle
 

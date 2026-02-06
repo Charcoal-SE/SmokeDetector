@@ -2,7 +2,7 @@
 import json
 from helpers import log
 import html
-from typing import AnyStr, Union
+from typing import AnyStr, Optional, Union
 
 
 class PostParseError(Exception):
@@ -13,9 +13,7 @@ class PostParseError(Exception):
 
 
 class Post:
-    def __init__(self, json_data=None, api_response=None, parent=None):
-        # type: (AnyStr, dict, Post) -> None
-
+    def __init__(self, json_data: Optional[AnyStr] = None, api_response: Optional[dict] = None, parent: Optional["Post"] = None) -> None:
         self._body = ""
         self._body_is_summary = False
         self._markdown = None
@@ -45,8 +43,6 @@ class Post:
         else:
             raise PostParseError("Must provide either JSON Data or an API Response object for Post object.")
 
-        return  # Required for PEP484 compliance
-
     def __repr__(self):
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
@@ -55,23 +51,17 @@ class Post:
                    'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
-    def __setitem__(self, key, item):
-        # type: (str, Union[str, object]) -> None
+    def __setitem__(self, key: str, item: Union[str, object]) -> None:
         setattr(self, key, item)
-        return  # PEP compliance
 
-    def __getitem__(self, item):
-        # type: (str) -> object
+    def __getitem__(self, item: str) -> object:
         return getattr(self, item)
 
     # noinspection PyTypeChecker
-    def _get_title_ignore_type(self):
-        # type: () -> str
+    def _get_title_ignore_type(self) -> str:
         return self.parent.title if self.is_answer else self.title
 
-    def _parse_json_post(self, json_data):
-        # type: (str) -> None
-
+    def _parse_json_post(self, json_data: str) -> None:
         text_data = json.loads(json_data)["data"]
         if text_data == "hb":
             return
@@ -108,9 +98,7 @@ class Post:
 
         return  # PEP compliance
 
-    def _parse_api_post(self, response):
-        # type: (dict) -> None
-
+    def _parse_api_post(self, response: dict) -> None:
         if "title" not in response or "body" not in response:
             return
 
@@ -152,8 +140,7 @@ class Post:
 
         self._process_element_mapping(element_map, response, is_api_response=True)
 
-    def _process_element_mapping(self, element_map, data, is_api_response=False):
-        # type: (dict, dict, bool) -> None
+    def _process_element_mapping(self, element_map: dict, data: dict, is_api_response: bool = False) -> None:
         # Take the API response map, and start setting the elements (and sub-elements, where applicable)
         # to the attributes and variables in the object.
         for (element, varmap) in element_map.items():
@@ -178,7 +165,7 @@ class Post:
                 continue  # Go to next key
 
     @staticmethod
-    def _unescape_title(title):
+    def _unescape_title(title: str) -> str:
         return str(html.unescape(title).strip())
 
     @property
