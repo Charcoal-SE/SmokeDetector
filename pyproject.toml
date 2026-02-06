@@ -5,15 +5,12 @@ description = "Headless chatbot that detects spam and posts links to it in chatr
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "appdirs>=1.4.3",
+    #"appdirs>=1.4.3",  # appears unused
     "beautifulsoup4>=4.6.0",
     "chatexchange",
     "colorama>=0.4.1",
-    "coverage>=7.3.2",
     "dnspython>=2.0.0",
     "msgpack-python>=0.5.6",
-    "packaging>=16.8",
-    "pep8-naming==0.7.0",
     "phonenumbers>=8.8.11",
     "psutil>=5.9.0",
     "pyyaml>=3.12",
@@ -29,6 +26,9 @@ dependencies = [
 [dependency-groups]
 dev = [
     #"flake8~=6.1.0",  # Dropped in favor of ruff
+    "coverage>=7.3.2",
+    #"packaging>=16.8",  # unknown why this was included
+    #"pep8-naming==0.7.0",  # is a dependency of flake8
     "pytest>=4.1.0",
     "pytest-timeout>=2.1.0",
     "pytest-xdist>=2.5.0",

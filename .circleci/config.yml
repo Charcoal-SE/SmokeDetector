@@ -31,7 +31,7 @@ jobs:
           name: Install Python dependencies
           command: |
             ssh-keyscan github.com >> ~/.ssh/known_hosts
-            uv sync --locked --group ci
+            uv sync --locked --dev --group ci
             uv cache prune --ci
       - save_cache:
           key: pip-cache-cimg-python-{{ checksum "ci_environment.txt" }}-{{ checksum "uv.lock" }}
