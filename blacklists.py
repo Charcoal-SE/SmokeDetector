@@ -32,7 +32,7 @@ class BlacklistParser:
         self._filename = filename
 
     def parse(self):
-        return None
+        pass
 
     def add(self, item):
         pass
