@@ -79887,3 +79887,4 @@
 1770381477	VLAZ	paradise[\W_]*+banquet(?!\.com(?<=paradisebanquet\.com))
 1770381485	VLAZ	paradisebanquet\.com
 1770382797	Dan Getz	woolenjacket\.com
+1770384208	lyxal	tedekstra\.com
