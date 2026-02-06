@@ -79886,3 +79886,4 @@
 1770381418	VLAZ	earnozo\.com
 1770381477	VLAZ	paradise[\W_]*+banquet(?!\.com(?<=paradisebanquet\.com))
 1770381485	VLAZ	paradisebanquet\.com
+1770382797	Dan Getz	woolenjacket\.com
