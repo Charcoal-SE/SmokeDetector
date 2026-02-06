@@ -49,4 +49,4 @@ jobs:
           name: Pytest
           # Use 5 processes is intended to allow one DNS lookup bound long running test run
           # in parallel with most of the other tests which generally consume more CPU.
-          command: python3 -W default::Warning -m pytest -n 5 --dist loadgroup --timeout=300 test
+          command: uv run python3 -W default::Warning -m pytest -n 5 --dist loadgroup --timeout=300 test
