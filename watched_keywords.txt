@@ -79891,3 +79891,4 @@
 1770393740	Dan Getz	bestphotos\.ai
 1770397760	VLAZ	jatolovespell
 1770397848	VLAZ	unidayshop\.com
+1770400521	Dan Getz	rprogrammingbooks\.com
