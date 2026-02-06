@@ -20,7 +20,6 @@ from threading import Thread
 from termcolor import colored
 import requests
 import regex
-from regex.regex import _compile as regex_raw_compile
 import websocket
 
 from globalvars import GlobalVars
@@ -488,7 +487,7 @@ def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ign
 
 
 def regex_compile_no_cache(regex_text, flags=0, ignore_unused=False, **kwargs):
-    return regex_raw_compile(regex_text, flags, ignore_unused, kwargs, False)
+    return regex.compile(regex_text, flags, ignore_unused, cache_pattern=False, **kwargs)
 
 
 def color(text, color, attrs=None):

@@ -52,6 +52,8 @@ class GitHubManager:
             payload = json.dumps(payload)
         response = requests.request(method, route, data=payload, timeout=GlobalVars.default_requests_timeout,
                                     **cls.auth_args)
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
         return response
 
     @classmethod
