@@ -603,16 +603,16 @@ def test_blacklisted_users():
 
         # Format: !!/*blu profileurl
         assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
-            "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is neither blacklisted on `stackoverflow.com` (`4622463`) nor network-wide"
         assert chatcommands.addblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User blacklisted (`4622463` on `stackoverflow.com`)."
         # TODO: Edit command to check and not blacklist again, add test
         assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
-            "User is blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is blacklisted on `stackoverflow.com` (`4622463`), but not network-wide"
         assert chatcommands.rmblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "The user has been removed from the user-blacklist (`4622463` on `stackoverflow.com`)."
         assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
-            "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is neither blacklisted on `stackoverflow.com` (`4622463`) nor network-wide"
         assert chatcommands.rmblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
             "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
@@ -622,16 +622,16 @@ def test_blacklisted_users():
 
         # Format: !!/*blu userid sitename
         assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
-            "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is neither blacklisted on `stackoverflow.com` (`4622463`) nor network-wide"
         assert chatcommands.addblu("4622463 stackoverflow", original_msg=msg) == \
             "User blacklisted (`4622463` on `stackoverflow.com`)."
         # TODO: Add test here as well
         assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
-            "User is blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is blacklisted on `stackoverflow.com` (`4622463`), but not network-wide"
         assert chatcommands.rmblu("4622463 stackoverflow", original_msg=msg) == \
             "The user has been removed from the user-blacklist (`4622463` on `stackoverflow.com`)."
         assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
-            "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+            "User is neither blacklisted on `stackoverflow.com` (`4622463`) nor network-wide"
         assert chatcommands.rmblu("4622463 stackoverflow", original_msg=msg) == \
             "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
             "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \

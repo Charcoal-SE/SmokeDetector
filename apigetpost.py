@@ -16,6 +16,7 @@ class PostData:
         self.owner_url = None
         self.owner_name = None
         self.owner_rep = None
+        self.owner_acct_id = None
         self.title = None
         self.body = None
         self.body_markdown = None
@@ -33,7 +34,12 @@ class PostData:
             'title': self.title,
             'body': self.body,
             'body_markdown': self.body_markdown,
-            'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
+            'owner': {
+                'display_name': self.owner_name,
+                'link': self.owner_url,
+                'reputation': self.owner_rep,
+                'account_id': self.owner_acct_id
+            },
             'site': self.site,
             'question_id': self.post_id,
             'link': self.post_url,
@@ -82,6 +88,7 @@ def api_get_post(post_url):
         post_data.owner_name = html.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
+        post_data.owner_acct_id = item['owner']['account_id']
     else:
         post_data.owner_name = ""
         post_data.owner_url = ""

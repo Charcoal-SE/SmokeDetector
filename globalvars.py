@@ -173,7 +173,7 @@ class GlobalVars:
     # accurately from the correct route. However, for scanning posts, we also want the question data associated
     # with an answer.
     se_api_question_answer_post_filter = \
-        "!scxINmJWAnjuckNJkP9YfbG196DrCj)DDXQjRKUGfp-QzZ3b1nRh1Qitw7)FdyW_)iLrL8TBxFYZ1"
+        "!*b8DH81UdVw)kQyIDQMTMc9jrRZh7*x*46g(fPTyFh)C2d3Fp9kSnnFDHyiG5L3cG39qg66pgP63xLa74Uq"
     se_api_url_base = "https://api.stackexchange.com/2.4/"
     se_api_default_params = {
         'key': 'IAkbitmze4B8KpacUfLqkw((',

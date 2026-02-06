@@ -43,10 +43,19 @@ def sum_weight(reasons: list):
     return s
 
 
+def is_post_owner_net_blacklisted(post: Post) -> bool:
+    """Check if the owner of a post is network-wide blacklisted"""
+    for acct_id, site in GlobalVars.blacklisted_users.keys():
+        if int(acct_id) == post.get_account_id() and site == "stackexchange.com":
+            return True
+    return False
+
+
 # noinspection PyMissingTypeHints
 def check_if_spam(post, dont_ignore_for=None):
     test, why = findspam.FindSpam.test_post(post)
-    if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
+    net_blacklisted: bool = is_post_owner_net_blacklisted(post)
+    if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)) or net_blacklisted:
         test.append("blacklisted user")
         blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(post.user_url))
         if len(blacklisted_user_data) > 1:
@@ -62,6 +71,8 @@ def check_if_spam(post, dont_ignore_for=None):
                 ms_url = datahandling.resolve_ms_link(rel_url) or to_metasmoke_link(rel_url)
                 why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
                     blacklisted_post_url, ms_url, blacklisted_by)
+            if net_blacklisted:
+                why += f"\nNetwork-wide blacklisted user - blacklisted by {blacklisted_by}"
             else:
                 why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
