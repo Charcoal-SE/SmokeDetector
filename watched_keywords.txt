@@ -79889,3 +79889,4 @@
 1770382797	Dan Getz	woolenjacket\.com
 1770384208	lyxal	tedekstra\.com
 1770393740	Dan Getz	bestphotos\.ai
+1770397720	VLAZ	(?-i:JatoLoveSpel)(?# www.youtube.com)
