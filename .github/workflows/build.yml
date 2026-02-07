@@ -60,6 +60,7 @@ jobs:
           -n 3 \
           --dist loadgroup \
           --timeout=300 \
+          --durations=10 \
           test
     - name: Coverage report
       run: |
