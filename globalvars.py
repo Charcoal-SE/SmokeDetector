@@ -498,30 +498,19 @@ class GlobalVars:
 
         cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
-        cls.on_branch = git_ref()
-        cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+        s_prefix = "[ {} ] ".format(cls.chatmessage_prefix)
+        s_suffix = " at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
+            cls.commit_with_author_escaped, cls.bot_repository,
             cls.commit.id, cls.location, platform.python_version())
-        cls.s_reverted = \
-            "[ {} ] SmokeDetector started in [reverted mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_blacklists = \
-            "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_findspam = \
-            "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.standby_message = \
-            "[ {} ] SmokeDetector started in [standby mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
+
+        cls.on_branch = git_ref()
+        cls.s = s_prefix + "SmokeDetector started" + s_suffix
+        cls.s_reverted = s_prefix + "SmokeDetector started in [reverted mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode)" + s_suffix
+        cls.s_norestart_blacklists = s_prefix + "Blacklists reloaded" + s_suffix
+        cls.s_norestart_findspam = s_prefix + "FindSpam module reloaded" + s_suffix
+        cls.standby_message = s_prefix + "SmokeDetector started in [standby mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode)" + s_suffix
 
 
 for stats_set_key in ['all', 'uptime', 'ms']:

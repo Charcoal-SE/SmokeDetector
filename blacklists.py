@@ -1,4 +1,3 @@
-# coding=utf-8
 from typing import Union
 from concurrent.futures import ThreadPoolExecutor
 
@@ -28,7 +27,7 @@ def load_blacklists():
 
 
 class BlacklistParser:
-    def __init__(self, filename):
+    def __init__(self, filename: str):
         self._filename = filename
 
     def parse(self):
@@ -301,7 +300,7 @@ class YAMLParserNS(YAMLParserCIDR):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
-                    '{0} does not look like a valid host name'.format(item['ns']))
+                    '{0} does not look like a valid host name'.format(ns))
             if item.get('disable', None):
                 return False
             # Extend lifetime if we are running a test
@@ -430,7 +429,7 @@ class Blacklist:
     # ASNS = ('blacklisted_asns.yml', YAMLParserASN)
     WATCHED_ASNS = ('watched_asns.yml', YAMLParserASN)
 
-    def __init__(self, type):
+    def __init__(self, type: tuple[str, type[BlacklistParser]]):
         self._filename = type[0]
         self._parser = type[1](self._filename)
 

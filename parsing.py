@@ -11,11 +11,14 @@ def rebuild_str(s: str) -> str:
     return s.replace("\u200B", "").replace("\u200C", "")
 
 
+get_user_from_url_regex = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?")
+
+
 # noinspection PyBroadException
 def get_user_from_url(url: Optional[str]) -> Optional[str]:
     if url is None:
         return None
-    match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
+    match = get_user_from_url_regex.search(url)
     if match is None:
         return None
     try:
@@ -38,7 +41,7 @@ def get_api_sitename_from_url(url: str) -> Optional[str]:
         return None
 
 
-def api_parameter_from_link(link: str) -> str:
+def api_parameter_from_link(link: str) -> Optional[str]:
     match = regex.compile(
         r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
         r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)').search(link)
@@ -48,7 +51,7 @@ def api_parameter_from_link(link: str) -> str:
         'meta.askubuntu': 'meta.askubuntu',
         'mathoverflow': 'mathoverflow.net',
         'meta.mathoverflow': 'meta.mathoverflow.net',
-        'meta.stackexchange': 'meta'
+        'meta.stackexchange': 'meta',
     }
     if match:
         if match[1] in exceptions:

@@ -208,8 +208,6 @@ def test_yaml_asn():
     yaml_validate_existing('watched_asns.yml', YAMLParserASN)
 
 
-# test_yaml_nses currently takes 105s to run, so we want it to start up first, with everything else running in parallel.
-@pytest.mark.xdist_group(name="long_runner_1")
 def test_yaml_nses():
     with open('test_nses.yml', 'w') as y:
         yaml.dump({
@@ -235,5 +233,9 @@ def test_yaml_nses():
     assert 'example.org.' not in blacklist.parse()
     unlink('test_nses.yml')
 
+
+# test_yaml_nses currently takes 105s to run, so we want it to start up first, with everything else running in parallel.
+@pytest.mark.xdist_group(name="long_runner_1")
+def test_yaml_nses_validate():
     yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
     yaml_validate_existing('watched_nses.yml', YAMLParserNS)
