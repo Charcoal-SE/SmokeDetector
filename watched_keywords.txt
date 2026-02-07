@@ -79896,3 +79896,4 @@
 1770447449	Dan Getz	sreegovind\.page\.gd
 1770449366	Dan Getz	dubairubberflooring\.ae
 1770449412	Dan Getz	floormart\.ae
+1770472497	Dan Getz	artiqo\.in
