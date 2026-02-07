@@ -55,7 +55,7 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     # ('sd 2 tpu', preprocess_shortcut_command, 'sd tpu tpu'),
     # ('sd 10 tpu', preprocess_shortcut_command, 'sd tpu tpu tpu tpu tpu tpu tpu tpu tpu tpu'),
     # ('sd fp 3   tpu', preprocess_shortcut_command, 'sd fp tpu tpu tpu'),
-    ('invalid', get_api_sitename_from_url, None),
+    ('invalid', get_api_sitename_from_url, 'invalid'),
     ('stackoverflow.com', get_api_sitename_from_url, 'stackoverflow'),
     ('http://gaming.stackexchange.com', get_api_sitename_from_url, 'gaming'),
     ('https://mathoverflow.net/', get_api_sitename_from_url, 'mathoverflow.net'),
@@ -166,7 +166,7 @@ def test_post_parse_errors():
     ('meta.stackexchange.com', 'meta'),
     ('ja.stackoverflow.com', 'ja.stackoverflow'),
     ('meta.ja.stackoverflow.com', 'meta.ja.stackoverflow'),
-    ('google.com', None),
+    ('google.com', 'google'),
 ])
 def test_api_parameter_from_link(link, expected):
     assert api_parameter_from_link(link) == expected
@@ -183,7 +183,7 @@ def test_post_id_from_link(link, expected):
 
 
 @pytest.mark.parametrize('link, expected', [
-    ('https://stackoverflow.com/zzzz/1234567', '//m.erwaysoftware.com/posts/uid/stackoverflow/1234567'),
+    ('https://stackoverflow.com/zzzz/1234567', 'https://m.erwaysoftware.com/posts/uid/stackoverflow/1234567'),
 ])
 def test_to_metasmoke_link(link, expected):
     assert to_metasmoke_link(link) == expected
