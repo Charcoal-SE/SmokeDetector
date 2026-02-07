@@ -300,7 +300,7 @@ class YAMLParserNS(YAMLParserCIDR):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
-                    '{0} does not look like a valid host name'.format(item['ns']))
+                    '{0} does not look like a valid host name'.format(ns))
             if item.get('disable', None):
                 return False
             # Extend lifetime if we are running a test
