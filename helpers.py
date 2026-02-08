@@ -1,17 +1,30 @@
 # coding=utf-8
+
 import os
 import sys
-import traceback
-from datetime import datetime, timezone
 import time
+import traceback
 import importlib
 import threading
-# termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
 import platform
-platform_text = platform.platform().lower()
-if 'windows' in platform_text and 'cygwin' not in platform_text:
+import sqlite3
+from datetime import datetime, timezone
+from glob import glob
+from urllib.parse import quote, quote_plus
+
+import requests
+import regex
+from termcolor import colored
+from regex.regex import _compile as regex_raw_compile
+import websocket
+
+from globalvars import GlobalVars
+
+# Initialize colorama for Windows
+if 'windows' in platform.platform().lower() and 'cygwin' not in platform.platform().lower():
     from colorama import init as colorama_init
     colorama_init()
+
 from glob import glob
 import sqlite3
 from urllib.parse import quote, quote_plus
