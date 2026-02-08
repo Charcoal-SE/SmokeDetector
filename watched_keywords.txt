@@ -79903,3 +79903,4 @@
 1770480992	VLAZ	trendusai\.com
 1770497418	Dan Getz	arminfotech\.com
 1770514851	Dan Getz	eranol\.com
+1770519846	Jeff Schaller	astra\.pxi-fusion\.com
