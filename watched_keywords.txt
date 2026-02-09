@@ -79911,3 +79911,4 @@
 1770614492	VLAZ	sunteckproperties\.com
 1770634685	VLAZ	aiquinta\.ai
 1770634719	VLAZ	honistaapk-download\.com
+1770634749	VLAZ	morse-codetranslator\.com
