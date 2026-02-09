@@ -79913,3 +79913,4 @@
 1770634719	VLAZ	honistaapk-download\.com
 1770634749	VLAZ	morse-codetranslator\.com
 1770636442	Jeff Schaller	anchorupcpa\.com
+1770639320	Jeff Schaller	tagsen\.in
