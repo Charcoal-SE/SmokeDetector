@@ -79916,3 +79916,4 @@
 1770639320	Jeff Schaller	tagsen\.in
 1770641447	Jeff Schaller	Exicom[\W_]*+One
 1770643556	Dan Getz	jj-sploit\.ph
+1770644604	Dan Getz	realityanchor\.ai
