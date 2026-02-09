@@ -79915,3 +79915,4 @@
 1770636442	Jeff Schaller	anchorupcpa\.com
 1770639320	Jeff Schaller	tagsen\.in
 1770641447	Jeff Schaller	Exicom[\W_]*+One
+1770643556	Dan Getz	jj-sploit\.ph
