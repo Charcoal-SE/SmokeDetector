@@ -79939,3 +79939,4 @@
 1770727967	VLAZ	centurylivabangalore\.in
 1770728646	Dan Getz	sundas\.org
 1770736732	VLAZ	fastdiplomasonline\.com
+1770740997	VLAZ	mobile-game-editor\.paperform\.co
