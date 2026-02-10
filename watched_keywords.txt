@@ -79932,3 +79932,4 @@
 1770714682	VLAZ	alfarisgroup\.com
 1770714699	VLAZ	alfarisuae\.com
 1770717354	VLAZ	easy[\W_]*+web[\W_]*+plans
+1770723681	Dan Getz	allyonogames\.it\.com
