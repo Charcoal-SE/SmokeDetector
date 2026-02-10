@@ -79929,3 +79929,4 @@
 1770706109	VLAZ	gepco\.pk
 1770707337	VLAZ	app\.jisecure\.com
 1770712714	VLAZ	udhhyog\.com
+1770714682	VLAZ	alfarisgroup\.com
