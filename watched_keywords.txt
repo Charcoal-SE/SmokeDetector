@@ -79934,3 +79934,4 @@
 1770717354	VLAZ	easy[\W_]*+web[\W_]*+plans
 1770723681	Dan Getz	allyonogames\.it\.com
 1770723958	Jeff Schaller	Claricelouisa(?#telegram)
+1770727555	VLAZ	glpro\.pro
