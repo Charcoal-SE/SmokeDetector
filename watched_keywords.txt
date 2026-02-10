@@ -79938,3 +79938,4 @@
 1770727959	VLAZ	Century[\W_]*+Attur
 1770727967	VLAZ	centurylivabangalore\.in
 1770728646	Dan Getz	sundas\.org
+1770736732	VLAZ	fastdiplomasonline\.com
