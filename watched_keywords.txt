@@ -79948,3 +79948,4 @@
 1770809608	VLAZ	scientechworld\.com
 1770816411	VLAZ	digitalregenesys\.com
 1770816949	VLAZ	hc-digital-web\.com
+1770817940	Dan Getz	mytasbih\.com
