@@ -24,4 +24,4 @@ while ! check_ready; do
   sleep 1
 done
 
-exec python3 nocrash.py "$@"
+exec uv run python3 nocrash.py "$@"

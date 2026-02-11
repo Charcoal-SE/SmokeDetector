@@ -18,37 +18,25 @@ jobs:
           - '3.9'
           - '3.13'
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+      with:
+        enable-cache: true
     - name: Fetch branches
       run: |
         git remote set-branches --add origin deploy
         git fetch --depth=5 origin master deploy
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v6
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Setup cache
-      id: cache
-      uses: actions/cache@v4
-      with:
-        key: ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-${{ hashFiles('**/requirements.txt') }}}-${{ hashFiles('**/user_requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/user_requirements.txt') }}
-          ${{ runner.os }}-${{ env.pythonLocation }}-pip-cache-version-1-
-        path: |
-          ~/.cache/pip
     - name: Install Python dependencies
-      run: |
-        pip3 install -U wheel --upgrade-strategy eager
-        pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
-    - name: Lint ./tests
-      run: python3 -m flake8 --config=tox_tests.ini ./test/
-    - name: Lint ./classes
-      run: python3 -m flake8 --config=tox_classes.ini ./classes/
+      run: uv sync --locked --dev --group ci
     - name: Lint code
-      run: python3 -m flake8 ./
+      run: uv run ruff check
     - name: Pytest
       run: |
-        python3 -W default::Warning -m pytest \
+        uv run python3 -W default::Warning -m pytest \
           --cov=chatcommands \
           --cov=chatcommunicate \
           --cov=datahandling \
@@ -65,4 +53,4 @@ jobs:
     - name: Coverage report
       run: |
         echo -e "## Coverage Report\n" >> "$GITHUB_STEP_SUMMARY"
-        coverage report --format=markdown -m >> "$GITHUB_STEP_SUMMARY"
+        uv run coverage report --format=markdown -m >> "$GITHUB_STEP_SUMMARY"
