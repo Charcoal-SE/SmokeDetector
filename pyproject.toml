@@ -1,0 +1,76 @@
+[project]
+name = "SmokeDetector"
+version = "0.1.0"
+description = "Headless chatbot that detects spam and posts links to it in chatrooms for quick deletion."
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.ruff]
+preview = true
+line-length = 120
+exclude = [
+    "ChatExchange/*",
+    ".idea/*",
+    ".git/*",
+    # Covered in [tool.ruff.lint.per-file-ignores]
+    #"test/*",
+    #"classes/*",
+    ".env/",
+    ".venv/",
+    "env/*",
+    "env8/*",
+    "venv/*",
+    "plugin.py",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "E402",  # Module-level import not at top
+    "E741",  # Ambiguous variable name (l, O, I)
+    "F401",  # Imported but unused
+    "F403",  # from module import *
+    "F405",  # Name may be undefined from star import
+    "F841",  # Local variable assigned but never used
+    "N813",  # Camelcase imported as lowercase
+
+    # Not implemented by Ruff (and we're ignoring them anyway):
+    # https://github.com/astral-sh/ruff/issues/4125
+    #"W503",  # Line break before binary operator
+    #"W504",  # Line break after binary operator
+
+    # Not present in flake8
+    "N816",  # Variable in global scope should not be mixedCase
+    "N818",  # Exception name should be named with an Error suffix
+]
+
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "W",  # pycodestyle warnings
+    "N",  # pep8-naming
+]
+
+[tool.ruff.lint.per-file-ignores]
+"test/*" = [
+    "E402",
+    "E501",
+    #"E722", bare 'except:'
+    "E722",
+    #"E731", assigning lambda
+    "E731",
+    "F401",
+    "F403",
+    "F405",
+    "F841",
+]
+
+"classes/*" = [
+    "E402",
+    "E501",
+    "F401",
+    "F403",
+    "F405",
+    # Disabled:
+    # "N801",  # class name should use CapWords
+    # "N804",  # First argument of @classmethod should be 'cls'
+]
