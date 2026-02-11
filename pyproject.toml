@@ -54,10 +54,8 @@ select = [
 "test/*" = [
     "E402",
     "E501",
-    #"E722", bare 'except:'
-    "E722",
-    #"E731", assigning lambda
-    "E731",
+    "E722",  # bare 'except:'
+    "E731",  # assigning lambda
     "F401",
     "F403",
     "F405",
