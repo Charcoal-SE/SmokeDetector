@@ -79944,3 +79944,4 @@
 1770753177	Jeff Schaller	onlinebillsplit\.com
 1770774685	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)(?<!download\.lenovo\.com)(?<!forums\.lenovo\.com)
 1770787190	lyxal	remotestate\.com
+1770798308	VLAZ	digihexa\.in
