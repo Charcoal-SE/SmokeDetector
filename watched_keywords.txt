@@ -79953,3 +79953,4 @@
 1770832388	Dan Getz	8171-portal\.com\.pk
 1770862947	Dan Getz	proxyserverfreefire\.net
 1770883796	VLAZ	russpuss\.ru
+1770883804	VLAZ	asghar\.co
