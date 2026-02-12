@@ -79956,3 +79956,4 @@
 1770883804	VLAZ	asghar\.co
 1770885281	VLAZ	glidelimo\.com
 1770889000	VLAZ	enersidermedia\.com
+1770894260	Jeff Schaller	fluentechs\.com
