@@ -79963,3 +79963,4 @@
 1770911493	VLAZ	shieldstridehub[\W_]*+com
 1770928726	Dan Getz	adx\.ws
 1770937543	Dan Getz	payamaniproject\.com
+1770952812	Dan Getz	advintek\.com\.my
