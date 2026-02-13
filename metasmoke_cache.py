@@ -4,6 +4,7 @@ import metasmoke
 import globalvars
 import tasks
 from helpers import log
+from models import MetasmokeGenericPage
 
 
 class MetasmokeCache:
@@ -108,11 +109,11 @@ class MetasmokeCache:
                     raise
                 if resp is None or not resp.ok:
                     break
-                else:
-                    page = resp.json()
-                if 'items' in page:
-                    items.extend(page['items'])
-                if page['has_more'] is False:
+                page_data = resp.json()
+                page = MetasmokeGenericPage.from_dict(page_data)
+                if page.items:
+                    items.extend(page.items)
+                if page.has_more is False:
                     break
                 params['page'] += 1
             if property_as_list is None:

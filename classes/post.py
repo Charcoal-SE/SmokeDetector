@@ -1,8 +1,13 @@
 # coding=utf-8
 import json
 from helpers import log
+from models.se_api import StackExchangePostItem
 import html
 from typing import AnyStr, Optional, Union
+
+from models.se_api import StackExchangePostItem, StackExchangeOwner
+
+from models.se_api import StackExchangePostItem, StackExchangeOwner
 
 
 class PostParseError(Exception):
@@ -13,7 +18,7 @@ class PostParseError(Exception):
 
 
 class Post:
-    def __init__(self, json_data: Optional[AnyStr] = None, api_response: Optional[dict] = None, parent: Optional["Post"] = None) -> None:
+    def __init__(self, json_data: Optional[AnyStr] = None, api_response: Optional[Union[dict, StackExchangePostItem]] = None, parent: Optional["Post"] = None) -> None:
         self._body = ""
         self._body_is_summary = False
         self._markdown = None
@@ -98,47 +103,79 @@ class Post:
 
         return  # PEP compliance
 
-    def _parse_api_post(self, response: dict) -> None:
-        if "title" not in response or "body" not in response:
+    def _parse_api_post(self, response: Union[dict, StackExchangePostItem]) -> None:
+        if isinstance(response, dict):
+            if "title" not in response or "body" not in response:
+                return
+            # 兼容历史代码中将 get_user_from_url 返回的元组直接塞进 owner.display_name 的用法，
+            # 在构造 Pydantic 模型前，将非字符串 display_name 规范化为字符串，避免校验错误。
+            owner = response.get("owner")
+            if isinstance(owner, dict):
+                display_name = owner.get("display_name")
+                if display_name is not None and not isinstance(display_name, str):
+                    owner["display_name"] = str(display_name)
+            item = StackExchangePostItem.from_dict(response)
+        elif isinstance(response, StackExchangePostItem):
+            item = response
+        else:
+            raise TypeError("api_response must be a dict or StackExchangePostItem instance.")
+
+        # 标题与正文
+        if item.title is None or item.body is None:
             return
 
-        self._title = html.unescape(response["title"])
-        self._body = html.unescape(response["body"])
-        if "body_markdown" in response and response["body_markdown"] is not None:
-            self._markdown = html.unescape(response["body_markdown"])
+        self._title = html.unescape(item.title)
+        self._body = html.unescape(item.body)
 
-        if "IsAnswer" in response and response["IsAnswer"] is True:
+        if item.body_markdown is not None:
+            self._markdown = html.unescape(item.body_markdown)
+
+        # 回答/问题标记与子答案
+        if getattr(item, "IsAnswer", None):
             self._is_answer = True
         else:
-            if "answers" in response and response["answers"] != []:
-                self._answers = []
-                for answer in response["answers"]:
-                    self._answers.append(Post(api_response=answer))
-            else:
-                self._answers = []
+            answers = item.answers or []
+            self._answers = []
+            for answer_item in answers:
+                self._answers.append(Post(api_response=answer_item))
             self._is_answer = False
 
-        if "BodyIsSummary" in response and response["BodyIsSummary"] is True:
+        # 摘要标记
+        if getattr(item, "BodyIsSummary", None):
             self._body_is_summary = True
 
-        # Map response elements to the corresponding variable for the Post object internally.
-        element_map = {
-            'site': '_post_site',
-            'link': '_post_url',
-            'score': '_post_score',
-            'up_vote_count': "_votes['upvotes']",
-            'down_vote_count': "_votes['downvotes']",
-            'owner': {
-                'display_name': '_user_name',
-                'link': '_user_url',
-                'reputation': '_owner_rep'
-            },
-            'question_id': '_post_id',
-            'answer_id': '_post_id',
-            'edited': '_edited',
-        }
+        # 站点与链接
+        if item.site is not None:
+            self._post_site = item.site
+        if item.link is not None:
+            self._post_url = item.link
 
-        self._process_element_mapping(element_map, response, is_api_response=True)
+        # 分数与投票
+        if item.score is not None:
+            self._post_score = item.score
+        if item.up_vote_count is not None:
+            self._votes['upvotes'] = item.up_vote_count
+        if item.down_vote_count is not None:
+            self._votes['downvotes'] = item.down_vote_count
+
+        # 所有者信息
+        if item.owner is not None:
+            if item.owner.display_name is not None:
+                self._user_name = html.unescape(item.owner.display_name)
+            if item.owner.link is not None:
+                self._user_url = item.owner.link
+            if item.owner.reputation is not None:
+                self._owner_rep = item.owner.reputation
+
+        # 帖子 ID：保持先 question_id 后 answer_id 的顺序
+        if item.question_id is not None:
+            self._post_id = item.question_id
+        if item.answer_id is not None:
+            self._post_id = item.answer_id
+
+        # 编辑标记
+        if item.edited is not None:
+            self._edited = item.edited
 
     def _process_element_mapping(self, element_map: dict, data: dict, is_api_response: bool = False) -> None:
         # Take the API response map, and start setting the elements (and sub-elements, where applicable)

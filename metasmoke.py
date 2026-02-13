@@ -30,6 +30,7 @@ from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
 import metasmoke_cache
+from models import MetasmokeReasonsPage
 
 
 MS_WEBSOCKET_LONG_INTERVAL = 60
@@ -667,9 +668,15 @@ class Metasmoke:
         items = []
         try:
             while True:
-                response = Metasmoke.get('/api/v2.0/reasons', params=payload).json()
-                items.extend(response['items'])
-                if not response['has_more']:
+                resp = Metasmoke.get('/api/v2.0/reasons', params=payload)
+                if resp is None:
+                    break
+                page_data = resp.json()
+                page = MetasmokeReasonsPage.from_dict(page_data)
+                if not page.items:
+                    break
+                items.extend(page.items)
+                if page.has_more is False:
                     break
                 payload['page'] += 1
         except AttributeError:

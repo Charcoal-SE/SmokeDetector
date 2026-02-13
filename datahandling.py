@@ -18,6 +18,7 @@ import regex
 
 from globalvars import GlobalVars
 import metasmoke
+from models.se_api import StackExchangeSitesResponse
 from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
 from helpers import (ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params,
@@ -254,7 +255,11 @@ def update_reason_weights():
     if not items:
         return  # No update
     for item in items:
-        d[item['reason_name'].lower()] = item['weight']
+        reason_name = getattr(item, 'reason_name', None)
+        weight = getattr(item, 'weight', None)
+        if not reason_name:
+            continue
+        d[reason_name.lower()] = weight
     GlobalVars.reason_weights = d
     dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 
@@ -523,15 +528,19 @@ def refresh_sites():
         })
         response = requests.get(url, params=params, timeout=GlobalVars.default_requests_timeout)
 
-        data = response.json()
-        if "error_message" in data:
-            return False, data["error_message"]
-        if "items" not in data:
+        raw = response.json()
+        se_response = StackExchangeSitesResponse.from_dict(raw)
+
+        if se_response.error_message:
+            return False, se_response.error_message
+        if not se_response.items:
             return False, "`items` not in JSON data"
-        if "has_more" not in data:
+        if se_response.has_more is None:
             return False, "`has_more` not in JSON data"
-        GlobalVars.se_sites.extend(data["items"])
-        has_more = data["has_more"]
+
+        # 将站点条目模型缓存到 GlobalVars.se_sites，供后续站点名解析使用
+        GlobalVars.se_sites.extend(se_response.items)
+        has_more = se_response.has_more
         page += 1
     return True, "OK"
 
@@ -543,8 +552,8 @@ def check_site_and_get_full_name(site):
         if not refreshed:
             return False, "Could not fetch sites: " + msg
     for item in GlobalVars.se_sites:
-        full_name = regex.sub(r'https?://', '', item['site_url'])
-        short_name = item["api_site_parameter"]
+        full_name = regex.sub(r'https?://', '', item.site_url)
+        short_name = item.api_site_parameter
         if site == full_name or site == short_name:
             return True, full_name
     return False, "Could not find the given site."

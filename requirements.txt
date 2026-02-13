@@ -20,3 +20,4 @@ sh>=1.12.14
 termcolor>=1.1.0
 typing>=3.6.4
 websocket-client>=0.54.0
+pydantic>=2

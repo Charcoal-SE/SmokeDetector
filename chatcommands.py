@@ -8,7 +8,8 @@ from globalvars import GlobalVars
 import findspam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
-from apigetpost import api_get_post, PostData
+from apigetpost import api_get_post
+from models.se_api import StackExchangePostItem
 import datahandling
 from datahandling import *
 from metasmoke import Metasmoke
@@ -33,6 +34,7 @@ from helpers import exit_mode, only_blacklists_changed, only_modules_changed, lo
     get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route, \
     get_bookended_keyword_regex_text_from_entries, get_non_bookended_keyword_regex_text_from_entries, \
     keyword_bookend_regex_text, keyword_non_bookend_regex_text
+from models.se_api import StackExchangePostItem
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
@@ -2201,41 +2203,51 @@ def allspam(msg, url):
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
-        # TODO: Postdata refactor, figure out a better way to use apigetpost
+        # 将用户的每一个帖子转换为 StackExchangePostItem，后续直接传递模型
         for post in posts:
-            post_data = PostData()
-            post_data.post_id = post['post_id']
-            post_data.post_url = url_to_shortlink(post['link'])
-            *discard, post_data.site, post_data.post_type = fetch_post_id_and_site_from_url(
-                url_to_shortlink(post['link']))
-            post_data.title = unescape(post['title'])
-            post_data.owner_name = unescape(post['owner']['display_name'])
-            post_data.owner_url = post['owner']['link']
-            post_data.owner_rep = post['owner']['reputation']
-            post_data.body = post['body']
-            post_data.body_markdown = post['body_markdown']
-            post_data.score = post['score']
-            post_data.up_vote_count = post['up_vote_count']
-            post_data.down_vote_count = post['down_vote_count']
-            if post_data.post_type == "answer":
+            item = StackExchangePostItem.from_dict(post)
+
+            if not item.link:
+                # 没有有效链接的帖子无法进一步处理，跳过
+                continue
+
+            shortlink = url_to_shortlink(item.link)
+            if not shortlink:
+                continue
+
+            post_id, site, post_type = fetch_post_id_and_site_from_url(shortlink)
+            if post_id is None or site is None or post_type is None:
+                continue
+
+            # 归一化部分核心字段，便于后续使用
+            item.site = site
+            item.link = shortlink
+
+            if post_type == "answer":
+                item.IsAnswer = True
+                item.answer_id = post_id
                 # Annoyingly we have to make another request to get the question ID, since it is only returned by the
                 # /answers route
                 # Respect backoffs etc
                 with GlobalVars.api_request_lock:
                     if GlobalVars.api_backoff_time > time.time():
                         time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-                    # Fetch posts
-                    req_url = get_se_api_url_for_route("answers/{}".format(post['post_id']))
+                    req_url = get_se_api_url_for_route("answers/{}".format(post_id))
                     params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
                     answer_res = requests.get(req_url, params=params,
                                               timeout=GlobalVars.default_requests_timeout).json()
                     if "backoff" in answer_res:
                         if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
                             GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
-                # Finally, set the attribute
-                post_data.question_id = answer_res['items'][0]['question_id']
-                post_data.is_answer = True
-            user_posts.append(post_data)
+                try:
+                    item.question_id = answer_res['items'][0]['question_id']
+                except (KeyError, IndexError, TypeError):
+                    item.question_id = None
+            else:
+                item.IsAnswer = False
+                item.question_id = post_id
+
+            user_posts.append(item)
     if len(user_posts) == 0:
         raise CmdException("The specified user hasn't posted anything.")
     if len(user_posts) > 15:
@@ -2243,12 +2255,18 @@ def allspam(msg, url):
                            "for moderator attention, otherwise use !!/report on the posts individually.")
     why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
     # Handle all posts
-    for index, post in enumerate(user_posts, start=1):
+    for index, item in enumerate(user_posts, start=1):
         batch = ""
         if len(user_posts) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(user_posts))
-        handle_spam(post=Post(api_response=post.as_dict),
-                    reasons=["Manually reported " + post.post_type + batch],
+
+        post = Post(api_response=item)
+
+        # 基于帖子链接按需计算 post_type，用于理由文本
+        _, _, post_type = fetch_post_id_and_site_from_url(item.link)
+
+        handle_spam(post=post,
+                    reasons=["Manually reported " + post_type + batch],
                     why=why_info)
         time.sleep(2)  # Should this be implemented differently?
     if len(user_posts) > 2:
@@ -2309,32 +2327,47 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             output.append("Post {}: {}".format(index, url))
             continue
 
-        post_data = api_get_post(rebuild_str(url))
+        item = api_get_post(rebuild_str(url))
 
-        if post_data is None:
+        if item is None:
             output.append("Post {}: That does not look like a valid post URL.".format(index))
             continue
 
-        if post_data is False:
+        if item is False:
             output.append("Post {}: Could not find data for this post in the API. "
                           "It may already have been deleted.".format(index))
             continue
 
+        # 基于模型中的链接统一计算 post_id/site/post_type
+        if not item.link:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+
+        shortlink = url_to_shortlink(item.link)
+        if not shortlink:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+
+        post_id, site, post_type = fetch_post_id_and_site_from_url(shortlink)
+        if post_id is None or site is None or post_type is None:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+
         # Watch for edits on the associated question
         try:
-            if post_data.site and post_data.question_id:
-                Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=post_data.site, question_id=post_data.question_id)
+            if site and item.question_id:
+                Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=item.question_id)
         except AttributeError:
             # This happens in some CI testing, because GlobalVars.edit_watcher isn't set up.
             pass
 
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)) and not is_forced:
+        if has_already_been_posted(site, post_id, item.title) and not is_false_positive(
+                (post_id, site)) and not is_forced:
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
 
             if GlobalVars.metasmoke_key is not None:
-                se_link = to_protocol_relative(post_data.post_url)
+                se_link = to_protocol_relative(shortlink)
                 ms_link = resolve_ms_link(se_link) or to_metasmoke_link(se_link)
                 output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
                 continue
@@ -2342,14 +2375,17 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
                 output.append("Post {}: Already recently reported".format(index))
                 continue
 
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-        user = get_user_from_url(post_data.owner_url)
+        url = to_protocol_relative(shortlink)
+        post = Post(api_response=item)
 
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+        owner_link = item.owner.link if item.owner is not None else None
+        user = get_user_from_url(owner_link) if owner_link else None
+
+        if post_type == "answer":
+            parent_item = api_get_post("https://{}/q/{}".format(post.post_site, item.question_id))
             post._is_answer = True
-            post._parent = Post(api_response=parent_data.as_dict)
+            if parent_item not in (None, False):
+                post._parent = Post(api_response=parent_item)
 
         # if operation == "report-direct":
         #     scan_spam, scan_reasons, scan_why = False, [], ""
@@ -2359,7 +2395,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
 
         if operation in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
             if user is not None:
-                users_to_blacklist.append((user, blacklist_by, post_data.post_url))
+                users_to_blacklist.append((user, blacklist_by, shortlink))
 
         # scan_spam == False indicates that the post is not spam, but it is also set to False
         # when the post is spam, but has been previously reported. In that case, the scan_reasons
@@ -2395,7 +2431,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
 
             comment = report_info + why_append
             handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
+                        reasons=["Manually reported " + post_type + batch],
                         why=comment)
             if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)

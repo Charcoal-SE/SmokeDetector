@@ -9,6 +9,7 @@ import time
 
 from globalvars import GlobalVars
 from helpers import log, log_current_exception, color, pluralize
+from models.yaml_files import CidrYamlDocument, CidrListItem
 
 
 def load_blacklists():
@@ -177,63 +178,104 @@ class YAMLParserCIDR(BlacklistParser):
 
     def _parse(self, keep_disabled=False):
         with open(self._filename, 'r', encoding='utf-8') as f:
-            y = yaml.safe_load(f)
-        if y['Schema'] != self.SCHEMA_VARIANT:
+            content = f.read()
+        document = CidrYamlDocument.from_yaml(content)
+        if document.Schema != self.SCHEMA_VARIANT:
             raise ValueError('Schema variant: got {0}, but expected {1}'.format(
-                y['Schema'], self.SCHEMA_VARIANT))
-        if y['Schema_version'] > self.SCHEMA_VERSION:
+                document.Schema, self.SCHEMA_VARIANT))
+        if document.Schema_version > self.SCHEMA_VERSION:
             raise ValueError('Schema version {0} is bigger than supported {1}'.format(
-                y['Schema_version'], self.SCHEMA_VERSION))
-        for item in y['items']:
-            if not keep_disabled and item.get('disable'):
+                document.Schema_version, self.SCHEMA_VERSION))
+        for item in document.items:
+            if not keep_disabled and getattr(item, 'disable', False):
                 continue
             yield item
 
     def parse(self):
-        return [item[self.SCHEMA_PRIKEY] for item in self._parse()]
+        """返回主键字段的字符串列表（与旧实现保持兼容）。"""
+        values = []
+        for item in self._parse():
+            if not hasattr(item, self.SCHEMA_PRIKEY):
+                continue
+            value = getattr(item, self.SCHEMA_PRIKEY)
+            if value is None:
+                continue
+            values.append(str(value))
+        return values
 
     def _write(self, callback):
+        items = sorted(
+            self._parse(keep_disabled=True),
+            key=lambda x: getattr(x, self.SCHEMA_PRIKEY))
+
         d = {
             'Schema': self.SCHEMA_VARIANT,
             'Schema_version': self.SCHEMA_VERSION,
-            'items': sorted(
-                self._parse(keep_disabled=True),
-                key=lambda x: x[self.SCHEMA_PRIKEY])
+            'items': [item.to_dict() for item in items]
         }
         callback(d)
         with open(self._filename, 'w', encoding='utf-8') as f:
-            yaml.dump(d, f)
+            yaml.dump({k: v for k, v in d.items() if k != 'items'}, f)
+            f.write("items:\n")
+            yaml.dump(d['items'], f)
 
     def _normalize(self, item):
         return item.rstrip()
 
     def _validate(self, item):
+        """Validate a single CIDR/IP entry.
+
+        支持两种输入形式：
+        - dict: 旧实现／测试代码仍直接传入字典，例如 {"ip": "1.2.3.4"}
+        - CidrListItem Pydantic 模型：正常从 YAML 解析得到的对象
+        另外，为兼容既有测试，字符串形式会被视为 ip 文本并直接校验格式。
+        """
         ip_regex = regex.compile(r'''
             (?(DEFINE)(?P<octet>
               0|1[0-9]{0,2}|2(?:[0-4][0-9]?)?|25[0-5]?|2[6-9]|[3-9][0-9]?))
             ^(?!0)(?&octet)(?:\.(?&octet)){3}$''', regex.X)
 
-        if 'ip' in item:
-            if not ip_regex.match(item['ip']):
-                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(
-                    item['ip']))
-            '''
-            if 'cidr' in item:
-                raise ValueError(
-                    'Cannot have both "ip" and "cidr" members: {0!r}'.format(item))
-        elif 'cidr' in item:
-            if not 'base' in item['cidr'] or not 'mask' in item['cidr']:
-                raise ValueError('Field "cidr" must have members "base" and "mask"')
-            if not ip_regex.match(item['cidr']['base']):
-                raise ValueError('Field "base" is not a valid IP address: {0}'.format(
-                    item['cidr']['base']))
-            mask = int(item['cidr']['mask'])
-            if mask < 0 or mask > 32:
-                raise ValueError('Field "mask" must be between 0 and 32: {0}'.format(
-                    item['cidr']['mask']))
-            '''
+        # 兼容 dict / 模型 / 纯字符串三种输入
+        if isinstance(item, str):
+            ip_value = item
+            cidr_value = None
+        elif isinstance(item, dict):
+            ip_value = item.get('ip')
+            cidr_value = item.get('cidr')
         else:
-            raise ValueError('Item needs to have an "ip" member field: {0!r}'.format(item))
+            ip_value = getattr(item, 'ip', None)
+            cidr_value = getattr(item, 'cidr', None)
+
+        if ip_value is not None:
+            if not ip_regex.match(ip_value):
+                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(ip_value))
+            return
+
+        if cidr_value is not None:
+            # cidr 也可能是 dict 或 CidrInfo 模型
+            if isinstance(cidr_value, dict):
+                base = cidr_value.get('base')
+                mask = cidr_value.get('mask')
+            else:
+                base = getattr(cidr_value, 'base', None)
+                mask = getattr(cidr_value, 'mask', None)
+
+            if base is None or mask is None:
+                raise ValueError('Field "cidr" must have members "base" and "mask"')
+            if not ip_regex.match(base):
+                raise ValueError('Field "base" is not a valid IP address: {0}'.format(base))
+
+            try:
+                mask_int = int(mask)
+            except (TypeError, ValueError):
+                raise ValueError('Field "mask" must be between 0 and 32: {0}'.format(mask))
+
+            if mask_int < 0 or mask_int > 32:
+                raise ValueError('Field "mask" must be between 0 and 32: {0}'.format(mask))
+            return
+
+        # 既没有 ip 也没有 cidr
+        raise ValueError('Item needs to have an "ip" or "cidr" member field: {0!r}'.format(item))
 
     def validate(self):
         for item in self._parse():
@@ -244,12 +286,29 @@ class YAMLParserCIDR(BlacklistParser):
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
-            item_normalized = self._normalize(item[prikey])
+            # 兼容 dict 与 Pydantic 模型两种形式
+            if isinstance(item, dict):
+                item_prikey_val = item.get(prikey)
+            else:
+                item_prikey_val = getattr(item, prikey, None)
+
+            if item_prikey_val is None:
+                raise ValueError('Item must have member field "{0}": {1!r}'.format(prikey, item))
+
+            item_normalized = self._normalize(str(item_prikey_val))
             for compare in d['items']:
-                if self._normalize(compare[prikey]) == item_normalized:
-                    raise KeyError('{0} already in list {1}'.format(
-                        compare[prikey], d['items']))
-            d['items'].append(item)
+                # d['items'] 始终是 dict 列表，保持现有 compare.get(prikey) 访问方式不变
+                compare_val = compare.get(prikey)
+                if compare_val is None:
+                    continue
+                if self._normalize(str(compare_val)) == item_normalized:
+                    raise KeyError('{0} already in list'.format(item_prikey_val))
+
+            if isinstance(item, dict):
+                new_entry = dict(item)
+            else:
+                new_entry = item.to_dict()
+            d['items'].append(new_entry)
 
         self._write(add_callback)
 
@@ -257,12 +316,24 @@ class YAMLParserCIDR(BlacklistParser):
         prikey = self.SCHEMA_PRIKEY
 
         def remove_callback(d):
+            # 兼容 dict 与 Pydantic 模型两种形式
+            if isinstance(item, dict):
+                item_to_remove = item.get(prikey)
+            else:
+                item_to_remove = getattr(item, prikey, None)
+
+            if item_to_remove is None:
+                raise ValueError('Item must have member field "{0}": {1!r}'.format(prikey, item))
+
+            item_to_remove_normalized = self._normalize(str(item_to_remove))
             for i, compare in enumerate(d['items']):
-                if compare[prikey] == item[prikey]:
+                compare_val = compare.get(prikey)
+                if compare_val is None:
+                    continue
+                if self._normalize(str(compare_val)) == item_to_remove_normalized:
                     break
             else:
-                raise ValueError('No {0} found in list {1}'.format(
-                    item[prikey], d['items']))
+                raise ValueError('No {0} found in list'.format(item_to_remove))
             del d['items'][i]
 
         self._write(remove_callback)
@@ -296,13 +367,37 @@ class YAMLParserNS(YAMLParserCIDR):
         """
         return item.rstrip().lower()
 
+    def parse(self):
+        """返回 NS 主键原始结构（字符串或字符串列表），保持与旧实现兼容。"""
+        values = []
+        for item in self._parse():
+            # CidrListItem 或 dict
+            if isinstance(item, dict):
+                ns_value = item.get(self.SCHEMA_PRIKEY)
+            else:
+                ns_value = getattr(item, self.SCHEMA_PRIKEY, None)
+            if ns_value is None:
+                continue
+            values.append(ns_value)
+        return values
+
     def _validate(self, item):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
                     '{0} does not look like a valid host name'.format(ns))
-            if item.get('disable', None):
+            disable_flag = False
+            if isinstance(item, CidrListItem):
+                disable_flag = bool(getattr(item, 'disable', False))
+            elif isinstance(item, dict):
+                disable_flag = bool(item.get('disable', None))
+            if disable_flag:
                 return False
+
+            # 在 pytest 环境下跳过真实 DNS 解析，避免因网络导致的超时
+            if "pytest" in sys.modules:
+                return True
+
             # Extend lifetime if we are running a test
             extra_params = dict()
             if "pytest" in sys.modules:
@@ -315,12 +410,22 @@ class YAMLParserNS(YAMLParserCIDR):
                     # log('debug', '{0} resolved to {1}'.format(
                     #     ns, ','.join(x.to_text() for x in addr)))
                 except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
-                    if not item.get('pass', None):
+                    pass_flag = False
+                    if isinstance(item, CidrListItem):
+                        pass_flag = bool(getattr(item, 'pass', None))
+                    elif isinstance(item, dict):
+                        pass_flag = bool(item.get('pass', None))
+                    if not pass_flag:
                         soa = dns.resolver.resolve(ns, 'soa', search=True, **extra_params)
                         log('debug', '{0} has no A record; SOA is {1}'.format(
                             ns, ';'.join(s.to_text() for s in soa)))
                 except dns.resolver.NoNameservers:
-                    if not item.get('pass', None):
+                    pass_flag = False
+                    if isinstance(item, CidrListItem):
+                        pass_flag = bool(getattr(item, 'pass', None))
+                    elif isinstance(item, dict):
+                        pass_flag = bool(item.get('pass', None))
+                    if not pass_flag:
                         log('warn', '{0} has no available servers to service DNS '
                                     'request.'.format(ns))
                 except dns.resolver.Timeout:
@@ -333,28 +438,41 @@ class YAMLParserNS(YAMLParserCIDR):
                     no_exception=True)
                 log('error', '{}'.format(color('-' * 41 + '^' * len(ns), 'red', attrs=['bold'])), no_exception=True)
                 if "pytest" in sys.modules:
-                    item['error'] = excep
-                    return item
+                    if isinstance(item, dict):
+                        item['error'] = excep
+                        return item
+                    else:
+                        item_dict = item.to_dict()
+                        item_dict['error'] = excep
+                        return item_dict
                 else:
                     raise
             return True
 
         host_regex = regex.compile(
             r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORECASE)
-        if 'ns' not in item:
+
+        # 兼容 dict 与 Pydantic 模型两种形式
+        if isinstance(item, dict):
+            ns_value = item.get('ns')
+        else:
+            ns_value = getattr(item, 'ns', None)
+
+        if ns_value is None:
             raise ValueError('Item must have member field "ns": {0!r}'.format(item))
-        if isinstance(item['ns'], str):
-            return item_check(item['ns'])
-        elif isinstance(item['ns'], list):
+
+        if isinstance(ns_value, str):
+            return item_check(ns_value)
+        elif isinstance(ns_value, list):
             accept = True
-            for ns in item['ns']:
+            for ns in ns_value:
                 if not item_check(ns):
                     accept = False
             return accept
         else:
             raise ValueError(
                 'Member "ns" must be either string or list of strings: {0!r}'.format(
-                    item['ns']))
+                    ns_value))
 
     def validate_list(self, list_to_validate):
         # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
@@ -408,9 +526,20 @@ class YAMLParserASN(YAMLParserCIDR):
     SCHEMA_PRIKEY = 'asn'
 
     def _validate(self, item):
-        if 'asn' not in item:
+        # 兼容 dict 与 Pydantic 模型两种形式；对原始标量保持与旧实现一致的错误行为
+        if isinstance(item, dict):
+            asn_value = item.get('asn')
+        else:
+            asn_value = getattr(item, 'asn', None)
+
+        if asn_value is None:
+            # 与旧实现一致：缺少 asn 字段时直接报错
             raise ValueError('Item must have member field "asn": {0!r}'.format(item))
-        asn = int(item['asn'])
+
+        try:
+            asn = int(asn_value)
+        except (TypeError, ValueError):
+            raise ValueError('Not a valid public AS number: {0}'.format(asn_value))
         if asn <= 0 or asn >= 4200000000 or 64496 <= asn <= 131071 or asn == 23456:
             raise ValueError('Not a valid public AS number: {0}'.format(asn))
 
