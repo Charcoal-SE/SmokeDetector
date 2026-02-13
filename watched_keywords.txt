@@ -54401,7 +54401,6 @@
 1699953916	Robert Longson	jackcliffelectrical\.com\.au
 1699954571	cigien	jack[\W_]*+cliff[\W_]*+electrical(?!\.com\.au(?<=jackcliffelectrical\.com\.au))
 1699954591	cigien	tafrii\.com
-1699954621	cigien	myassignmentspro\.com
 1699954829	cigien	cloudmineinc\.com
 1699954856	cigien	teslatogel4d\.com
 1699944844	Nick	bedsdivans\.co\.uk
