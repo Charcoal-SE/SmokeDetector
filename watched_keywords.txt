@@ -79978,3 +79978,4 @@
 1771072600	Jeff Schaller	b9gameapps\.com\.pk
 1771072807	Jeff Schaller	alaskaspellcaster44(?:@gmail\.com)?
 1771078117	Dan Getz	landscapingserviceohio\.com
+1771078485	Dan Getz	decispher\.com
