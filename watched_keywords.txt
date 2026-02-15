@@ -79980,3 +79980,4 @@
 1771078485	Dan Getz	decispher\.com
 1771078801	Dan Getz	key-cms\.com
 1771092712	Dan Getz	brattgenerator\.id
+1771147002	Jeff Schaller	morsecode-generator\.com
