@@ -79617,7 +79617,6 @@
 1768981357	VLAZ	skyexchange\.social
 1768981405	VLAZ	testdebelleza\.com
 1768981427	VLAZ	wavy[\W_]*+solutions
-1768981716	VLAZ	bivs\.com
 1768981746	VLAZ	dsuccessed\.com
 1768981866	VLAZ	tgh[\W_]*+software[\W_]*+solutions
 1768982489	VLAZ	almas\.co\.il
