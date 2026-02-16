@@ -10208,7 +10208,6 @@
 1562339586	Makyen	ajagunlaaccienttemple(?:@gmail\.com)?
 1562339606	Makyen	dr\W*ajagunla
 1562342580	Machavity	ds4tech\.com
-1562345123	Makyen	alldayawake\.com
 1562345144	Makyen	floridalottery\.us
 1562345169	Makyen	(?-i:thOmmlRhqtw)
 1562345194	Makyen	ethical-hacking-course\.simdif\.com
