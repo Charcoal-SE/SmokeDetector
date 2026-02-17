@@ -80005,3 +80005,4 @@
 1771308850	Dan Getz	kanakbhuvan\.com
 1771310913	Dan Getz	datarecovee\.com
 1771310986	Dan Getz	brotherfiltration\.com
+1771314246	Jeff Schaller	effectualservices\.com
