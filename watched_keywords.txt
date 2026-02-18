@@ -80036,3 +80036,4 @@
 1771431067	Jeff Schaller	beautywien\.at
 1771431725	VLAZ	zydco(?:[\W_]*+erp)?
 1771433208	VLAZ	alostoratv\.app
+1771445281	VLAZ	harismkhalid\.com
