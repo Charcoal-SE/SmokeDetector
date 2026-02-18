@@ -80030,3 +80030,4 @@
 1771400600	Dan Getz	ncoder\.ai
 1771401991	Dan Getz	sumermetalcorp\.com
 1771402010	Dan Getz	momdigital\.io
+1771407931	VLAZ	abhifineproducts\.com
