@@ -80023,3 +80023,4 @@
 1771366188	Dan Getz	allaestheticfonts\.com
 1771376964	Dan Getz	kuronami\.co\.uk
 1771377100	Dan Getz	thefashionfolklore\.com
+1771388680	lyxal	thegrandchess9\.com
