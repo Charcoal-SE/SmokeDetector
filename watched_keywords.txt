@@ -80047,3 +80047,4 @@
 1771502252	VLAZ	dummyticketmaker\.com
 1771517718	Dan Getz	tagembed(?!\.com)
 1771528265	VLAZ	secretdrop\.dev
+1771534047	VLAZ	alertsleep\.com
