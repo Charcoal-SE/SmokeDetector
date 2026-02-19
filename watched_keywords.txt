@@ -80042,3 +80042,4 @@
 1771458750	Dan Getz	madamteresa\.int(?:@gmail\.com)?
 1771477164	Dan Getz	fatafatkolkata\.net
 1771499638	Jeff Schaller	learnwithaurevo\.blogspot
+1771499768	Jeff Schaller	disposalking\.com
