@@ -80041,3 +80041,4 @@
 1771455359	Jeff Schaller	esbern\.com
 1771458750	Dan Getz	madamteresa\.int(?:@gmail\.com)?
 1771477164	Dan Getz	fatafatkolkata\.net
+1771499638	Jeff Schaller	learnwithaurevo\.blogspot
