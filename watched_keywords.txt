@@ -80048,3 +80048,4 @@
 1771517718	Dan Getz	tagembed(?!\.com)
 1771528265	VLAZ	secretdrop\.dev
 1771534047	VLAZ	alertsleep\.com
+1771535740	VLAZ	playsalerts\.com
