@@ -80050,3 +80050,4 @@
 1771534047	VLAZ	alertsleep\.com
 1771535740	VLAZ	playsalerts\.com
 1771548115	Dan Getz	calculatorapp\.app
+1771585395	VLAZ	firstclasslaundryuae\.com
