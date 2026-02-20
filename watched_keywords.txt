@@ -80056,3 +80056,4 @@
 1771608861	Dan Getz	knivesarea\.com
 1771610373	VLAZ	visionsofitaly\.com
 1771625182	Jeff Schaller	rivo4k\.com
+1771627968	Dan Getz	mypremierpain\.com
