@@ -80066,3 +80066,4 @@
 1771742536	VLAZ	heictopng\.info
 1771755291	gparyani	goreto\.edu\.np
 1771761013	VLAZ	letrasdiferentestool\.com
+1771768555	Dan Getz	sites\.google\.com/view/minecraftpatchdownload
