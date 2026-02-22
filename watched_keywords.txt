@@ -80063,3 +80063,4 @@
 1771649815	lyxal	99tools\.net
 1771661311	VLAZ	sallimoservice(?!\.com)
 1771661445	VLAZ	trade\.study
+1771742536	VLAZ	heictopng\.info
