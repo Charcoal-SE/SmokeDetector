@@ -80073,3 +80073,4 @@
 1771841164	VLAZ	pcplbook\.com
 1771841172	VLAZ	jsautocast\.com
 1771841232	VLAZ	mathastu\.com
+1771844796	Jeff Schaller	Smart[\W_]*+Earnings[\W_]*+Academy
