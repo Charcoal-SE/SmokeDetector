@@ -80072,3 +80072,4 @@
 1771832148	VLAZ	australiancreditsolutions\.com\.au
 1771841164	VLAZ	pcplbook\.com
 1771841172	VLAZ	jsautocast\.com
+1771841232	VLAZ	mathastu\.com
