@@ -80074,3 +80074,4 @@
 1771841232	VLAZ	mathastu\.com
 1771844796	Jeff Schaller	Smart[\W_]*+Earnings[\W_]*+Academy
 1771847643	Jeff Schaller	eglobalindia\.com
+1771848651	Jeff Schaller	golfwmga\.com
