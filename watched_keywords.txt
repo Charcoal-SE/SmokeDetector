@@ -78689,7 +78689,6 @@
 1764833536	VLAZ	advocatesidhantdhingra\.com
 1764834095	VLAZ	aimediapixel\.com
 1764839722	Snow	foxedosports\.com
-1764841298	VLAZ	quastech\.in
 1764843565	VLAZ	infoprolearning\.com
 1764843995	VLAZ	ratingstor\.com
 1764846860	Dan Getz	chickensaladschickmenu\.com
