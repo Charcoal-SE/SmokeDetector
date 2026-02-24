@@ -80089,3 +80089,4 @@
 1771906724	Dan Getz	untappedlearning\.com
 1771920948	VLAZ	bizxfactor\.com
 1771929152	VLAZ	premiumqualitypatches\.com
+1771929174	VLAZ	playareamanufacturer\.com
