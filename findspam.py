@@ -916,6 +916,14 @@ def mostly_img(s, site):
     return False, ""
 
 
+@create_rule("invisible link in {}", max_rep=11, stripcodeblocks=True)
+def invisible_link(s, site):
+    occurences = regex.findall(r'<a href="(?!(?:(?:https?:)?\/\/)?i.stack.imgur.com\/)[^<"]*+"[^<>]*+>\s*+<\/a>', s)
+    if len(occurences):
+        return True, "{} occurences: {}".format(len(occurences), ", ".join(occurences))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
