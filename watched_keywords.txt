@@ -80096,3 +80096,4 @@
 1771937794	VLAZ	myspeakerfix\.com
 1771937856	VLAZ	thamara\.cloud
 1771937867	VLAZ	ismdelhi\.in
+1771939710	Dan Getz	logbytes\.work
