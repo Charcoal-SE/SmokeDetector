@@ -80087,3 +80087,4 @@
 1771872701	VLAZ	microespana\.com
 1771888805	Dan Getz	wallets-generator\.pw
 1771906724	Dan Getz	untappedlearning\.com
+1771920948	VLAZ	bizxfactor\.com
