@@ -80102,3 +80102,4 @@
 1771948473	VLAZ	flipiffy\.com
 1771950993	Jeff Schaller	surekhasuresh\.com
 1771963320	Jeff Schaller	2A40D477
+1771963453	Dan Getz	(?-i:nUs5BAUAAAAJ)(?# scholar.google.com)
