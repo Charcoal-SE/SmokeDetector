@@ -80118,3 +80118,4 @@
 1772016111	VLAZ	pizeonfly
 1772018619	VLAZ	pglobal\.ae
 1772020583	VLAZ	gatewayresearchacademy\.in
+1772023830	VLAZ	primecapitals\.in
