@@ -80122,3 +80122,4 @@
 1772023864	VLAZ	yakutta\.com
 1772033048	VLAZ	Divineland(?:[\W_]*+Pre[\W_]*+Primary)?[\W_]*+School
 1772038320	VLAZ	cricketidmahadev\.com
+1772038984	Jeff Schaller	Kwick[\W_]*+Packaging
