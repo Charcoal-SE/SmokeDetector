@@ -80121,3 +80121,4 @@
 1772023830	VLAZ	primecapitals\.in
 1772023864	VLAZ	yakutta\.com
 1772033048	VLAZ	Divineland(?:[\W_]*+Pre[\W_]*+Primary)?[\W_]*+School
+1772038320	VLAZ	cricketidmahadev\.com
