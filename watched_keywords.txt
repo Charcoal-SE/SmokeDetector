@@ -80120,3 +80120,4 @@
 1772020583	VLAZ	gatewayresearchacademy\.in
 1772023830	VLAZ	primecapitals\.in
 1772023864	VLAZ	yakutta\.com
+1772032942	VLAZ	Divineland(?:[\W_]*+Pre Primary)?[\W_]*+School
