@@ -80116,3 +80116,4 @@
 1772013099	VLAZ	coopalpower\.com
 1772013132	VLAZ	coopal[\W_]*+power(?!\.com(?<=coopalpower\.com))
 1772016111	VLAZ	pizeonfly
+1772018619	VLAZ	pglobal\.ae
