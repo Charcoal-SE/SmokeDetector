@@ -80114,3 +80114,4 @@
 1772009136	VLAZ	fellixspin\.com
 1772012528	VLAZ	seekhodigitalindia\.com
 1772013099	VLAZ	coopalpower\.com
+1772013132	VLAZ	coopal[\W_]*+power(?!\.com(?<=coopalpower\.com))
