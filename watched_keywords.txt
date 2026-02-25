@@ -80109,3 +80109,4 @@
 1772000408	VLAZ	essaymarket\.net
 1772000922	VLAZ	globalecomsynergies\.com
 1772002632	VLAZ	printerrepairmumbai\.com
+1772004046	VLAZ	gurutechnolabs\.com
