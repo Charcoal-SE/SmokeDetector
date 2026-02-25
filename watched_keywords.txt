@@ -80119,3 +80119,4 @@
 1772018619	VLAZ	pglobal\.ae
 1772020583	VLAZ	gatewayresearchacademy\.in
 1772023830	VLAZ	primecapitals\.in
+1772023864	VLAZ	yakutta\.com
