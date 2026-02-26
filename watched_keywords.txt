@@ -80141,3 +80141,4 @@
 1772138427	Dan Getz	ebikeshubusa\.com
 1772139975	Jeff Schaller	vaulttraces\.com
 1772141798	Dan Getz	freesoftl\.ink
+1772142649	Dan Getz	strathconaexcavating\.ca
