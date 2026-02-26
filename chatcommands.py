@@ -2133,13 +2133,20 @@ def report(msg, args, alias_used="report"):
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @command(str, whole_msg=True, privileged=True, aliases=['reportuser'])
-def allspam(msg, url):
+def allspam(msg, args):
     """
     Reports all of a user's posts as spam
+
+    Optionally allows for a custom reason, which should follow the URL and be
+    enclosed by double quotes.
+
     :param msg:
-    :param url: A user profile URL
+    :param args:
     :return:
     """
+
+    argsraw = args.split(' "', 1)
+    url = argsraw[0]
 
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
@@ -2241,7 +2248,14 @@ def allspam(msg, url):
     if len(user_posts) > 15:
         raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
                            "for moderator attention, otherwise use !!/report on the posts individually.")
+
     why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+    try:
+        custom_reason = argsraw[1][:-1] if argsraw[1].endswith('"') else argsraw[1]
+        why_info += "Reason: {}".format(custom_reason)
+    except IndexError:
+        pass
+
     # Handle all posts
     for index, post in enumerate(user_posts, start=1):
         batch = ""
