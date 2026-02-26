@@ -700,7 +700,11 @@ def approve(msg, pr_id):
         raise CmdException(str(e))
 
 
-@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
+@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close",
+                                                                        "reject-force",
+                                                                        "close-force",
+                                                                        "reject-duplicate",
+                                                                        "close-duplicate"])
 def reject(msg, args, alias_used="reject"):
     argsraw = args.split(' "', 1)
     try:
@@ -717,6 +721,7 @@ def reject(msg, args, alias_used="reject"):
     except IndexError:
         reason = ''
     force = alias_used.split("-")[-1] == "force"
+    duplicate = alias_used.split("-")[-1] == "duplicate"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     self_reject = False
     try:
@@ -736,8 +741,8 @@ def reject(msg, args, alias_used="reject"):
     rejected_image = "https://img.shields.io/badge/blacklisters-rejected-red"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
-    rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                  chat_user_profile_link, msg.room.name)
+    rejected_by_text = ("[Rejected]({})" + (" as a duplicate" if duplicate else "") + " by [{}]({}) in {}.").format(
+        message_url, msg.owner.name, chat_user_profile_link, msg.room.name)
     if self_reject:
         rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
                                                                            chat_user_profile_link, msg.room.name)
@@ -749,7 +754,7 @@ def reject(msg, args, alias_used="reject"):
         reject_reason_image_text = ""
     comment = rejected_by_text + reject_reason_text + reject_reason_image_text
     try:
-        message = GitManager.reject_pull_request(pr_id, comment, self_reject)
+        message = GitManager.reject_pull_request(pr_id, comment, self_reject, duplicate)
         return message
     except Exception as e:
         raise CmdException(str(e))
