@@ -80126,3 +80126,4 @@
 1772041538	VLAZ	urdupoetrycorner\.com
 1772068504	Dan Getz	kubaniess(?#marketplace.visualstudio.com)
 1772083292	VLAZ	kahfbrowser\.com
+1772083521	VLAZ	maalaxmitourandtravels\.in
