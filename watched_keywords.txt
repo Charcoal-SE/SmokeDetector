@@ -80124,3 +80124,4 @@
 1772038320	VLAZ	cricketidmahadev\.com
 1772038984	Jeff Schaller	Kwick[\W_]*+Packaging
 1772041538	VLAZ	urdupoetrycorner\.com
+1772068504	Dan Getz	kubaniess(?#marketplace.visualstudio.com)
