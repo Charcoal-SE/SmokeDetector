@@ -80136,3 +80136,4 @@
 1772111277	Dan Getz	heroshot
 1772111296	Dan Getz	converterwebtools\.com
 1772112142	Dan Getz	remove-numbers\.blogspot
+1772112653	VLAZ	thepatentdrawings\.com
