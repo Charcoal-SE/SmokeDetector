@@ -80161,3 +80161,4 @@
 1772193947	VLAZ	pcpl[\W_]*+book(?!\.com(?<=pcplbook\.com))
 1772194342	VLAZ	brand[\W_]*+animators
 1772194468	lyxal	mypuritour\.com
+1772199390	Jeff Schaller	tip-top\.bet
