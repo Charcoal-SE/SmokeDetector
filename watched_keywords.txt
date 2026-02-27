@@ -80157,3 +80157,4 @@
 1772180171	VLAZ	thedex(?!\.cloud)
 1772185944	VLAZ	chemcenterusa\.com
 1772186652	VLAZ	tamilnadutourism\.com
+1772190342	VLAZ	synergy-india\.in
