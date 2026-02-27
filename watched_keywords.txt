@@ -80149,3 +80149,4 @@
 1772168504	VLAZ	gbaapps\.net
 1772168512	VLAZ	realgbapps\.com
 1772168672	VLAZ	productionbest\.com
+1772168758	VLAZ	digi-texx\.com
