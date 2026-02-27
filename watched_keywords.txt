@@ -80155,3 +80155,4 @@
 1772176760	VLAZ	bestketodietrecipes\.com
 1772180163	VLAZ	thedex\.cloud
 1772180171	VLAZ	thedex(?!\.cloud)
+1772185944	VLAZ	chemcenterusa\.com
