@@ -80160,3 +80160,4 @@
 1772190342	VLAZ	synergy-india\.in
 1772193947	VLAZ	pcpl[\W_]*+book(?!\.com(?<=pcplbook\.com))
 1772194342	VLAZ	brand[\W_]*+animators
+1772194468	lyxal	mypuritour\.com
