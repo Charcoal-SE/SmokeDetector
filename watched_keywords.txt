@@ -80153,3 +80153,4 @@
 1772174992	VLAZ	nexusconsultants\.co\.in
 1772175475	VLAZ	anshinfotech\.org
 1772176760	VLAZ	bestketodietrecipes\.com
+1772180163	VLAZ	thedex\.cloud
