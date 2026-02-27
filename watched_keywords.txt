@@ -80150,3 +80150,4 @@
 1772168512	VLAZ	realgbapps\.com
 1772168672	VLAZ	productionbest\.com
 1772168758	VLAZ	digi-texx\.com
+1772174992	VLAZ	nexusconsultants\.co\.in
