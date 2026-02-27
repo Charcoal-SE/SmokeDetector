@@ -80158,3 +80158,4 @@
 1772185944	VLAZ	chemcenterusa\.com
 1772186652	VLAZ	tamilnadutourism\.com
 1772190342	VLAZ	synergy-india\.in
+1772193947	VLAZ	pcpl[\W_]*+book(?!\.com(?<=pcplbook\.com))
