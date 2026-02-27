@@ -80162,3 +80162,4 @@
 1772194342	VLAZ	brand[\W_]*+animators
 1772194468	lyxal	mypuritour\.com
 1772199390	Jeff Schaller	tip-top\.bet
+1772201468	Jeff Schaller	zero-pixels\.com
