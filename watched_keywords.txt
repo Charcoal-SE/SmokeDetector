@@ -80181,3 +80181,4 @@
 1772300317	Jeff Schaller	muktimantra\.com
 1772302444	VLAZ	icambomeassager\.org
 1772302452	VLAZ	icambo\.app\.com
+1772302460	VLAZ	(?-i:superations)(?#t.me)
