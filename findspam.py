@@ -50,6 +50,7 @@ REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex_compile_no_cache(EXCEPTION_RE)
+ANCHOR_REGEX = regex_compile_no_cache(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
@@ -966,7 +967,7 @@ def link_at_end(s, site):   # link at end of question, on selected sites
     "esperanto.stackexchange.com", "ukrainian.stackexchange.com"])
 def non_english_link(s, site):   # non-english link in short answer
     if len(s) < 600:
-        links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
+        links = ANCHOR_REGEX.findall(s)
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
@@ -1332,7 +1333,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|universit(?:y|ies)|college)|"
         r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
-    links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
+    links = ANCHOR_REGEX.findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
         r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
@@ -1606,13 +1607,29 @@ def is_offensive_post(s, site):
 def username_similar_website(post):
     body, username = post.body, post.user_name
     body_lowercase = body.lower()
-    sim_ratio, sim_webs = perform_similarity_checks(body, username)
+    sim_ratio, sim_webs = perform_similarity_checks_domain(body, username)
     if sim_ratio >= SIMILAR_THRESHOLD:
         return False, False, True, "Username `{}` similar to {}, ratio={}".format(
             username,
             ', '.join(['*{}* at position {}-{}'.format(w,
                                                        body_lowercase.index(w.lower()),
                                                        body_lowercase.index(w.lower()) + len(w)) for w in sim_webs]),
+            sim_ratio)
+    else:
+        return False, False, False, ""
+
+
+@create_rule("username similar to link-text in {}", title=False, body_summary=True, question=False, whole_post=True)
+def username_similar_anchor(post):
+    body, username = post.body, post.user_name
+    body_lowercase = body.lower()
+    sim_ratio, sim_webs = perform_similarity_checks_anchor(body, username)
+    if sim_ratio >= SIMILAR_THRESHOLD:
+        return False, False, True, u"Username `{}` similar to {}, ratio={}".format(
+            username,
+            u', '.join([u'*{}* at position {}-{}'.format(w,
+                                                         body_lowercase.index(w.lower()),
+                                                         body_lowercase.index(w.lower()) + len(w)) for w in sim_webs]),
             sim_ratio)
     else:
         return False, False, False, ""
@@ -1723,12 +1740,12 @@ def post_hosts(post, check_tld=False):
 
 
 # noinspection PyMissingTypeHints
-def perform_similarity_checks(post, name):
+def perform_similarity_checks_domain(post, name):
     """
     Performs 4 tests to determine similarity between links in the post and the user name
     :param post: Test of the post
     :param name: Username to compare against
-    :return: Float ratio of similarity
+    :return: Float ratio of similarity, List links that match
     """
     max_similarity, similar_links = 0.0, []
 
@@ -1752,6 +1769,34 @@ def perform_similarity_checks(post, name):
         max_similarity = max(max_similarity, similarity)
         if similarity >= SIMILAR_THRESHOLD:
             similar_links.append(domain)
+
+    return max_similarity, similar_links
+
+
+def perform_similarity_checks_anchor(post, name):
+    """
+    Performs 4 tests to determine similarity between link anchors in the post and the user name
+    :param post: Test of the post
+    :param name: Username to compare against
+    :return: Float ratio of similarity, List links that match
+    """
+    max_similarity, similar_links = 0.0, []
+
+    # Keep checking links until one is deemed "similar"
+    for link in ANCHOR_REGEX.findall(post):
+        # Straight comparison
+        s1 = similar_ratio(link, name)
+        # Strip all spaces
+        s2 = similar_ratio(link, name.replace(" ", ""))
+        # Strip all hyphens
+        s3 = similar_ratio(link.replace("-", ""), name.replace("-", ""))
+        # Strip all hyphens and all spaces
+        s4 = similar_ratio(link.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+
+        similarity = max(s1, s2, s3, s4)
+        max_similarity = max(max_similarity, similarity)
+        if similarity >= SIMILAR_THRESHOLD:
+            similar_links.append(link)
 
     return max_similarity, similar_links
 
