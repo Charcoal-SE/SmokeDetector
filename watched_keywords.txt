@@ -80186,3 +80186,4 @@
 1772331546	Jeff Schaller	trymp3\.com
 1772340829	Dan Getz	digital[\W_]*+asset[\W_]*+forensics
 1772346040	VLAZ	globalseoshop\.com
+1772375551	Dan Getz	mivaanrealities\.in
