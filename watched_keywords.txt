@@ -80187,3 +80187,4 @@
 1772340829	Dan Getz	digital[\W_]*+asset[\W_]*+forensics
 1772346040	VLAZ	globalseoshop\.com
 1772375551	Dan Getz	mivaanrealities\.in
+1772385219	Jeff Schaller	epicssolution\.com
