@@ -80184,3 +80184,4 @@
 1772302460	VLAZ	(?-i:superations)(?#t.me)
 1772304015	Dan Getz	siratguidance\.store
 1772331546	Jeff Schaller	trymp3\.com
+1772340829	Dan Getz	digital[\W_]*+asset[\W_]*+forensics
