@@ -80191,3 +80191,4 @@
 1772429703	VLAZ	purelymushroom\.com
 1772441476	VLAZ	5elementswindows\.com
 1772441500	VLAZ	tellyupdates\.org
+1772441565	VLAZ	phonixcharger\.com
