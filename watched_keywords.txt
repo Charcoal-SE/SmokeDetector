@@ -78432,7 +78432,6 @@
 1764049498	VLAZ	5mb\.host
 1764051404	VLAZ	360[\W_]*+sms[\W_]*+app
 1764051416	VLAZ	salesforce[\W_]*+digital[\W_]*+engagement
-1764051434	VLAZ	artisticks\.co\.in
 1764051575	VLAZ	farangroupofinstitutions\.in
 1764051951	VLAZ	cravess
 1764053233	VLAZ	insolare[\W_]*+energy
