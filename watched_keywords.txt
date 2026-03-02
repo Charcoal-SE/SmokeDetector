@@ -80192,3 +80192,4 @@
 1772441500	VLAZ	tellyupdates\.org
 1772441565	VLAZ	phonixcharger\.com
 1772448401	VLAZ	clippingpathking\.com
+1772450858	Dan Getz	com\.willworks\.skmob(?# play.google.com)
