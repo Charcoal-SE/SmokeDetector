@@ -80211,3 +80211,4 @@
 1772561815	Dan Getz	carparkingmultiapps\.com
 1772587147	Dan Getz	neuralsound\.org
 1772604471	VLAZ	suhail-muhammed\.com
+1772611033	VLAZ	ilovecruiser\.com\.au
