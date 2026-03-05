@@ -80229,3 +80229,4 @@
 1772709063	VLAZ	solutionsharks\.com
 1772709096	VLAZ	agent-gen\.com
 1772709234	VLAZ	noorul[\W_]*+quran[\W_]*+institute(?!\.com(?<=noorulquraninstitute\.com))
+1772709241	VLAZ	noorulquraninstitute\.com
