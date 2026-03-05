@@ -75247,7 +75247,6 @@
 1753131133	VLAZ	shuqaalemarketer\.com
 1753150970	lyxal	speedbeedropship\.com
 1753160171	VLAZ	lukaspellportal
-1753160178	VLAZ	dr[\W_]*+luka
 1753163273	VLAZ	mcdvoicee\.autos
 1753163651	VLAZ	invoicera(?!\.com)
 1753165533	lyxal	chameleoonmedia\.com
