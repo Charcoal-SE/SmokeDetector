@@ -80232,3 +80232,4 @@
 1772709290	VLAZ	noor[\W_]*+ul[\W_]*+quran[\W_]*+institute(?!\.com(?<=noorulquraninstitute\.com))
 1772713620	Jeff Schaller	seaya\.io
 1772720838	Jeff Schaller	cm88seo\.com
+1772739478	Dan Getz	chimneysolutionsplano\.com
