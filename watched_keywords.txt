@@ -80238,3 +80238,4 @@
 1772788720	VLAZ	qht[\W_]*+clinic(?!\.com(?<=qhtclinic\.com))
 1772788727	VLAZ	qhtclinic\.com
 1772789578	VLAZ	sarkarirojgar\.com\.in
+1772793738	VLAZ	birthdaywishinmarathi\.net
