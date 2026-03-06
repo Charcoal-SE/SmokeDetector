@@ -80236,3 +80236,4 @@
 1772779828	VLAZ	couponsclouds\.com
 1772779843	VLAZ	dubaiblindsco\.com
 1772788720	VLAZ	qht[\W_]*+clinic(?!\.com(?<=qhtclinic\.com))
+1772788727	VLAZ	qhtclinic\.com
