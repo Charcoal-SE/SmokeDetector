@@ -80243,3 +80243,4 @@
 1772802492	Dan Getz	zycus\.com
 1772820855	Jeff Schaller	milwin\.com\.pk
 1772825266	VLAZ	sofascore
+1772837341	Jeff Schaller	jtdata\.com
