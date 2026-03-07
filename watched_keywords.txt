@@ -80248,3 +80248,4 @@
 1772848391	Jeff Schaller	usaalarmservice\.com
 1772851525	Jeff Schaller	lovefactor\.com
 1772866715	VLAZ	sigmarf\.com
+1772866902	VLAZ	nvistech\.com
