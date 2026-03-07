@@ -80254,3 +80254,4 @@
 1772877921	Nisse Engström	kuwaithelplinegroup\.com
 1772883234	Jeff Schaller	trendsprouts\.com
 1772886553	Jeff Schaller	wondrx\.com
+1772894571	Dan Getz	kaigaikusuri\.com
