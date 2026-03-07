@@ -80255,3 +80255,4 @@
 1772883234	Jeff Schaller	trendsprouts\.com
 1772886553	Jeff Schaller	wondrx\.com
 1772894571	Dan Getz	kaigaikusuri\.com
+1772898754	Dan Getz	typingbits\.com
