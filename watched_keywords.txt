@@ -80257,3 +80257,4 @@
 1772894571	Dan Getz	kaigaikusuri\.com
 1772898754	Dan Getz	typingbits\.com
 1772898783	Dan Getz	adyayan\.com
+1772910562	Jeff Schaller	ffkipas\.my\.id
