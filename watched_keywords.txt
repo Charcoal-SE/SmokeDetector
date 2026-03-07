@@ -80256,3 +80256,4 @@
 1772886553	Jeff Schaller	wondrx\.com
 1772894571	Dan Getz	kaigaikusuri\.com
 1772898754	Dan Getz	typingbits\.com
+1772898783	Dan Getz	adyayan\.com
