@@ -80270,3 +80270,4 @@
 1773016053	Dan Getz	techchainconsult\.com
 1773035273	VLAZ	gamepinned\.com
 1773035464	VLAZ	(?-i:XdVkCbL2sRdONCEtb)(?# share.google)
+1773035485	VLAZ	boston[\W_]*+institute[\W_]*+of[\W_]*+analytics
