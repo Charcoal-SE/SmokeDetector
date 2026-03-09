@@ -80275,3 +80275,4 @@
 1773046934	VLAZ	efast[\W_]*+forward
 1773049484	VLAZ	leedscomputerlaptoprepairs\.co\.uk
 1773050199	VLAZ	technovax\.infy\.uk
+1773051640	Jeff Schaller	panen777id\.com
