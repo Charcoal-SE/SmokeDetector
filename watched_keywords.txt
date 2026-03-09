@@ -80272,3 +80272,4 @@
 1773035464	VLAZ	(?-i:XdVkCbL2sRdONCEtb)(?# share.google)
 1773035485	VLAZ	boston[\W_]*+institute[\W_]*+of[\W_]*+analytics
 1773035532	VLAZ	executordelta\.ph
+1773038890	VLAZ	electra-solution\.com
