@@ -80284,3 +80284,4 @@
 1773063082	VLAZ	napalarm
 1773077325	VLAZ	effectivegatecpm\.com
 1773079033	VLAZ	essentlpeo\.com
+1773084057	Dan Getz	calculatorica\.com
