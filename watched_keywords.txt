@@ -80273,3 +80273,4 @@
 1773035532	VLAZ	executordelta\.ph
 1773038890	VLAZ	electra-solution\.com
 1773046934	VLAZ	efast[\W_]*+forward
+1773049484	VLAZ	leedscomputerlaptoprepairs\.co\.uk
