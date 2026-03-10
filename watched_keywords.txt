@@ -80296,3 +80296,4 @@
 1773130249	VLAZ	nexonhost
 1773134281	VLAZ	uaerestaurantsmenu\.com
 1773136542	VLAZ	also\.as
+1773140142	Dan Getz	wpzone\.org
