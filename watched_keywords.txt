@@ -80300,3 +80300,4 @@
 1773140937	VLAZ	vonmorris\.com
 1773143742	Dan Getz	technoro(?!\.in)
 1773144326	Dan Getz	ioncosolutions\.com
+1773152847	Jeff Schaller	stoneempireegypt\.com
