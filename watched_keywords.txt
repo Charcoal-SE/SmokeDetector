@@ -80295,3 +80295,4 @@
 1773126510	VLAZ	quastech
 1773130249	VLAZ	nexonhost
 1773134281	VLAZ	uaerestaurantsmenu\.com
+1773136542	VLAZ	also\.as
