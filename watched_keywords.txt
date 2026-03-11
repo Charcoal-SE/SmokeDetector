@@ -80324,3 +80324,4 @@
 1773235850	VLAZ	mygraduatetutor\.com
 1773235857	VLAZ	californiagraduatetutor\.com
 1773235864	VLAZ	mytutornyc\.com
+1773235871	VLAZ	graduatestatistics\.com
