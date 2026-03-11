@@ -80325,3 +80325,4 @@
 1773235857	VLAZ	californiagraduatetutor\.com
 1773235864	VLAZ	mytutornyc\.com
 1773235871	VLAZ	graduatestatistics\.com
+1773238740	VLAZ	muridgame\.site
