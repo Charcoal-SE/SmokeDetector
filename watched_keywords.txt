@@ -80314,3 +80314,4 @@
 1773217390	VLAZ	sugsthwaz(?# referral code)
 1773220705	VLAZ	youstable[\W_]*+technology
 1773221069	VLAZ	thelutyensmohali\.com
+1773221078	VLAZ	velora[\W_]*+midtown[\W_]*+mohali
