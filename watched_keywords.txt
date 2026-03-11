@@ -80316,3 +80316,4 @@
 1773221069	VLAZ	thelutyensmohali\.com
 1773221078	VLAZ	velora[\W_]*+midtown[\W_]*+mohali
 1773224789	VLAZ	iconsgeek\.com
+1773224796	VLAZ	icons[\W_]*+geek(?!\.com(?<=iconsgeek\.com))
