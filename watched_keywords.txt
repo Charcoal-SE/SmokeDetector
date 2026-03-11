@@ -80318,3 +80318,4 @@
 1773224789	VLAZ	iconsgeek\.com
 1773224796	VLAZ	icons[\W_]*+geek(?!\.com(?<=iconsgeek\.com))
 1773226837	Jeff Schaller	ladyalba\.co\.kr
+1773228590	Dan Getz	pmaygraminn\.com
