@@ -80313,3 +80313,4 @@
 1773217383	VLAZ	kreditbee
 1773217390	VLAZ	sugsthwaz(?# referral code)
 1773220705	VLAZ	youstable[\W_]*+technology
+1773221069	VLAZ	thelutyensmohali\.com
