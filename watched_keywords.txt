@@ -80347,3 +80347,4 @@
 1773331569	Dan Getz	csvip\.me
 1773343767	Dan Getz	agentpatterns\.tech
 1773349351	Jeff Schaller	escortservicedhaka\.com
+1773349378	Jeff Schaller	vehiclewrappingcalculator\.com
