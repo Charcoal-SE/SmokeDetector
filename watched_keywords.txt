@@ -80342,3 +80342,4 @@
 1773305533	VLAZ	neoster[\W_]*+global
 1773314427	Jeff Schaller	ezoon\.co
 1773316865	VLAZ	brightmatic\.in
+1773321845	Dan Getz	phantomwalletdrained\.com
