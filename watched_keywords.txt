@@ -80332,3 +80332,4 @@
 1773296641	VLAZ	shalaadarpann\.com
 1773297025	VLAZ	emeraldwisdom
 1773299916	Cow	pm-kisangov\.com
+1773300259	Cow	printzcloud\.com
