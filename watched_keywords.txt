@@ -80340,3 +80340,4 @@
 1773304618	VLAZ	endlessdomains\.io
 1773305457	VLAZ	atrayente\.com
 1773305533	VLAZ	neoster[\W_]*+global
+1773314427	Jeff Schaller	ezoon\.co
