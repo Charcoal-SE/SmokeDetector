@@ -80344,3 +80344,4 @@
 1773316865	VLAZ	brightmatic\.in
 1773321845	Dan Getz	phantomwalletdrained\.com
 1773326695	Dan Getz	Chad[\W_]*+Scira(?<!(?-i:^Chad Scira$))
+1773331569	Dan Getz	csvip\.me
