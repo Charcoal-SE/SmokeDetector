@@ -80328,3 +80328,4 @@
 1773238740	VLAZ	muridgame\.site
 1773293430	VLAZ	lingocrafts\.com
 1773296120	VLAZ	qualityfolio\.dev
+1773296369	VLAZ	synoria\.ai
