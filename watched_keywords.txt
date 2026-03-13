@@ -80358,3 +80358,4 @@
 1773393922	VLAZ	radiant[\W_]*+it[\W_]*+services
 1773402355	Jeff Schaller	zynahrugs\.com
 1773407997	Jeff Schaller	cakecraftcompany\.com
+1773411160	VLAZ	(?-i:duPTJzMU)(?#lnkd.in)
