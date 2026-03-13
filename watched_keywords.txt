@@ -80355,3 +80355,4 @@
 1773381539	Cow	evolutioncasino\.app
 1773382730	Cow	sgpower\.co\.in
 1773387709	VLAZ	75way\.com
+1773393922	VLAZ	radiant[\W_]*+it[\W_]*+services
