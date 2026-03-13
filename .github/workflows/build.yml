@@ -39,13 +39,9 @@ jobs:
     - name: Install Python dependencies
       run: |
         pip3 install -U wheel --upgrade-strategy eager
-        pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls --upgrade-strategy eager
-    - name: Lint ./tests
-      run: python3 -m flake8 --config=tox_tests.ini ./test/
-    - name: Lint ./classes
-      run: python3 -m flake8 --config=tox_classes.ini ./classes/
+        pip3 install -U -r requirements.txt -r user_requirements.txt
     - name: Lint code
-      run: python3 -m flake8 ./
+      run: ruff check
     - name: Pytest
       run: |
         python3 -W default::Warning -m pytest \
