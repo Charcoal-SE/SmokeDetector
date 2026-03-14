@@ -80370,4 +80370,3 @@
 1773514563	VLAZ	tomatoanimesapp\.com\.br
 1773518722	Jeff Schaller	dotnetstudioai\.com
 1773521072	Jeff Schaller	travelingsters\.com
-1773526930	Dan Getz	flyairlinespolicy\.com
