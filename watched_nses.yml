@@ -4421,7 +4421,9 @@ items:
 - comment: does not exist, but is claimed by muthoottumini.com
   pass: true
   ns: multicshost.com.
-- ns: webzinfotech.in.
+- comment: NXDOMAIN 2026-03-15
+  disable: true
+  ns: webzinfotech.in.
 - ns: bluella.net.
 - ns: osplabs.com.
 - ns: hostomy.net.
@@ -5582,7 +5584,9 @@ items:
   disable: true
   ns: awxcom.com.
 - ns: thehost.com.ua.
-- ns: bitcoin-dns.com.
+- comment: NXDOMAIN 2026-03-15
+  disable: true
+  ns: bitcoin-dns.com.
 - ns: ultahost.com.
 - ns: rhostrh.com.
 - ns: cloudhost.id.
@@ -5696,7 +5700,8 @@ items:
 - ns: healthcareshopy.com.
 - ns: srtechnofab.com.
 - ns: ebndns.com.
-- comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18
+- comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18; NXDOMAIN again 2026-03-15
+  disable: true
   ns: splashserver.org.
 - ns: aptcom.info.
 - comment: 2024-10-28 NXDOMAIN
