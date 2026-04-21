@@ -124,7 +124,9 @@ ASN_WHITELISTED_WEBSITES = [
     "ntp.org", "cpu-world.com", "caniuse.com", "guru99.com", "fontawesome.com",
     "nirsoft.net", "sciencedirect.com",
     # Added to prevent having 3 detections on just the domain.
-    "writingexplained.org", "eitren.com"]
+    "writingexplained.org", "eitren.com",
+    # Added 2026-04-21 for many FPs
+    "falstad.com", "blueletterbible.org", "blueletterbible.com", "texdoc.org", "fftw.org", "alsa-project.org"]
 
 # Hostname whitelist for the "*bad IP for hostname in {}" detections (i.e. for ip_for_url_host)
 # Hostnames should be all lowercase, as the hostnames are obtained from
@@ -256,6 +258,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "kitgram.cn",
     "kitware.com",
     "ledsupply.com",
+    "libc.so",  # non-domain FPs
     "liberty-development.net",
     "linfo.org",
     "ludwig.guru",
@@ -275,6 +278,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "pcpartpicker.com",
     "pingcap.com",
     "pointclouds.org",
+    "projecteuler.net",
     "programming.vip",
     "qgistutorials.com",
     "qt.io",
