@@ -10,6 +10,7 @@ packaging>=16.8
 pep8-naming==0.7.0
 phonenumbers>=8.8.11
 psutil>=5.9.0
+pydantic>=2
 pytest-xdist>=2.5.0
 pytest-timeout>=2.1.0
 pytest>=4.1.0
@@ -20,4 +21,3 @@ sh>=1.12.14
 termcolor>=1.1.0
 typing>=3.6.4
 websocket-client>=0.54.0
-pydantic>=2
