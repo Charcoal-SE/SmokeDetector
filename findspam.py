@@ -145,6 +145,7 @@ WHITELISTED_IP_HOSTNAMES = [
     "log.info",
     "maindomain.com",
     "material.angular.io",
+    "minecraft.wiki",
     "model.fit",
     "newsite.com",
     "nextjs.org",
