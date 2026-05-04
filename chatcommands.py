@@ -234,8 +234,8 @@ def get_pattern_from_content_source(msg):
         raise CmdException("An invalid pattern was provided, please check your command. Was the command edited?")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
-    # Test the string and provide a warning message if it is already caught.
+def check_blacklist_duplicate(string_to_test, is_username, is_watchlist, is_phone):
+    """Tests the string and provides a warning message if it is already caught."""
     if is_username:
         question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
                                       'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
@@ -276,6 +276,138 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
         reasons = [reason for reason in reasons if all([x not in reason.lower() for x in filter_out])]
 
     return reasons
+
+
+def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -> list[str]:
+    """
+    Tests the string for some common blacklisting mistakes.
+    For some mistakes, raises `CmdException` to refuse to commit the blacklist or watch.
+    Returns a list of lesser issues, so that they can be reported to the user, or the commit allowed with -force.
+    """
+    is_watchlist = bool("watch" in blacklist_type)
+    other_issues = []
+
+    def get_normalized_on_list(list_type, extra=''):
+        return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
+               ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra) + \
+               ' `!!/bisect-number {}`'.format(pattern) + \
+               ' to determine which entries on the number lists match that pattern, which' + \
+               ' would tell you: ' + get_number_bisect(msg, pattern)
+
+    if '\u202d' in pattern:
+        other_issues.append("The pattern contains an invisible U+202D whitespace character.")
+
+    if regex.search(r"^\s+", pattern):
+        other_issues.append("The pattern starts with whitespace.")
+
+    if regex.search(r"blogspot\\.", pattern):
+        other_issues.append("The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
+                            " [For Blogspot, we prefer the TLD to not be included in"
+                            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
+
+    without_comments = remove_regex_comments(pattern)
+    if "number" not in blacklist_type:
+        # Test for . without \., but not in comments.
+        # Remove character sets, where . doesn't need to be escaped.
+        test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
+        if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
+            other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
+
+        try:
+            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
+        except regex._regex_core.error:
+            raise CmdException("An invalid pattern was provided, please check your command.")
+        if r.search(GlobalVars.valid_content) is not None:
+            raise CmdException("That pattern is probably too broad, refusing to commit." +
+                               " If you really want to add this pattern, you will need to manually submit a PR.")
+    else:
+        # When it's a blacklist command, blacklist_type only provides the type of blacklist, not the full command.
+        blacklist_command = 'blacklist-' + blacklist_type if not is_watchlist \
+            and 'blacklist' not in blacklist_type else blacklist_type
+        blacklist_command = blacklist_command.replace("_", "-")
+        exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
+        without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
+        full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
+        if commit_kwargs is not None:
+            commit_kwargs['after_pattern'] = ' normalized numbers: ' + str(normalized)
+        full_entry = full_entry_list[pattern]
+        processed = full_entry[0]
+        deobfuscated_processed = phone_numbers.deobfuscate(processed)
+        normalized_deobfuscated = phone_numbers.normalize(deobfuscated_processed)
+        pattern_matches_number_regex = phone_numbers.matches_number_regex(without_comments)
+        deobfuscated_matches_number_regex = phone_numbers.matches_number_regex(deobfuscated_processed)
+        digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
+                                                               phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
+        number_regex_requires = "Patterns for the number" + \
+                                " detections must match the `NUMBER_REGEX` in phone_numbers.py, at least" + \
+                                " when deobfuscated. In order to do so," + \
+                                " it needs to have " + digit_between_text + " and not include" + \
+                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." + \
+                                " Generally, you should watch/blacklist the non-obfuscated version of the number."
+        if not pattern_matches_number_regex and not deobfuscated_matches_number_regex:
+            digit_count = len(regex.findall(r'\d', pattern))
+            digit_count_text = ""
+            if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
+                digit_count_text = " The supplied pattern contains" + \
+                                   " {} digits, which doesn't meet the requirements.".format(digit_count)
+            raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
+                                        number_regex_requires + digit_count_text)
+        normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
+        if normalized & GlobalVars.blacklisted_numbers_normalized:
+            raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
+        if normalized & GlobalVars.watched_numbers_normalized:
+            # The following differentiates between watching and blacklisting, due to
+            # automatic movement of entries from the watchlist to the blacklist.  It's
+            # assumed any conflict with something being blacklisted which is an exact
+            # pattern match for an existing entry on the watchlist will be resolved by the
+            # automatic removal of the pattern from the watchlist when moved to the
+            # blacklist.  If it isn't resolved, CI testing will fail.
+            if is_watchlist:
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
+            elif pattern not in GlobalVars.watched_numbers_full:
+                extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
+                                                     ' to an existing entry on the number watchlist'
+                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
+        force_is_north_american, force_no_north_american = \
+            phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
+        unused_maybe_north_american_norm = \
+            phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
+        north_american_alt = phone_numbers.get_north_american_alternate_normalized(normalized_deobfuscated, force=True)
+        maybe_north_american_norm = north_american_alt[2]
+        if deobfuscated_processed != processed:
+            other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
+                                " use the non-obfuscated number. Perhaps try: " +
+                                "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed))
+        formatted_north_american = \
+            phone_numbers.get_north_american_with_separators_from_normalized(normalized_deobfuscated)
+        north_american_formatting = "use a format which starts with an optional `1` followed by" + \
+                                    " possible separator text and has the main" + \
+                                    " number in the format `{}`".format(formatted_north_american[-12:]) + \
+                                    " where `-` could be a single alpha character" + \
+                                    " or any `[\\W_]*+`. Alternately, you can add the comment `(?#IS NorAm)` to the" + \
+                                    " end of the pattern to force also using the alternate normalized form, or" + \
+                                    " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
+                                    " incorrectly recognized as one." + \
+                                    " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
+        if not force_no_north_american and unused_maybe_north_american_norm:
+            other_issues.append("That pattern may be a North American number. If it is, please " +
+                                north_american_formatting)
+        unused_na_on_list = 'That pattern may be a North American number and the alternate normalized verison' + \
+                            ' is already on the {}list. This indicates a potential conflict. Ideally, there should' + \
+                            ' be one entry which is automatically used normalized both with and without a "1". The' + \
+                            ' version which is already in use is: `{}`, but it\'s not automatically recognized as' + \
+                            ' a North American number.'
+        if unused_maybe_north_american_norm in GlobalVars.blacklisted_numbers_normalized:
+            other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
+        if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
+            other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
+        if not phone_numbers.matches_number_regex_start(without_comments):
+            other_issues.append(exact_match_text + 'begin with a digit' +
+                                ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
+        if not phone_numbers.matches_number_regex_end(without_comments):
+            other_issues.append(exact_match_text + 'end with a digit.')
+
+    return other_issues
 
 
 def format_blacklist_reasons(reasons):
@@ -371,13 +503,6 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
-    def get_normalized_on_list(list_type, extra=''):
-        return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
-               ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra) + \
-               ' `!!/bisect-number {}`'.format(pattern) + \
-               ' to determine which entries on the number lists match that pattern, which' + \
-               ' would tell you: ' + get_number_bisect(msg, pattern)
-
     minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
@@ -385,123 +510,9 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     pattern = get_pattern_from_content_source(msg)
     is_watchlist = bool("watch" in blacklist_type)
-    blacklist_or_watchlist = 'watchlist' if is_watchlist else 'blacklist'
-    text_before_pattern = ''
-    text_after_pattern = ''
+    commit_kwargs = {}
 
-    other_issues = []
-    if '\u202d' in pattern:
-        other_issues.append("The pattern contains an invisible U+202D whitespace character.")
-
-    if regex.search(r"^\s+", pattern):
-        other_issues.append("The pattern starts with whitespace.")
-
-    if regex.search(r"blogspot\\.", pattern):
-        other_issues.append("The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
-                            " [For Blogspot, we prefer the TLD to not be included in"
-                            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
-
-    without_comments = remove_regex_comments(pattern)
-    if "number" not in blacklist_type:
-        # Test for . without \., but not in comments.
-        # Remove character sets, where . doesn't need to be escaped.
-        test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
-        if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
-            other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
-
-        try:
-            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
-        except regex._regex_core.error:
-            raise CmdException("An invalid pattern was provided, please check your command.")
-        if r.search(GlobalVars.valid_content) is not None:
-            raise CmdException("That pattern is probably too broad, refusing to commit." +
-                               " If you really want to add this pattern, you will need to manually submit a PR.")
-    else:
-        # When it's a blacklist command, blacklist_type only provides the type of blacklist, not the full command.
-        blacklist_command = 'blacklist-' + blacklist_type if not is_watchlist \
-            and 'blacklist' not in blacklist_type else blacklist_type
-        blacklist_command = blacklist_command.replace("_", "-")
-        exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
-        without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
-        full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
-        text_after_pattern = ' normalized numbers: ' + str(normalized)
-        full_entry = full_entry_list[pattern]
-        processed = full_entry[0]
-        deobfuscated_processed = phone_numbers.deobfuscate(processed)
-        normalized_deobfuscated = phone_numbers.normalize(deobfuscated_processed)
-        pattern_matches_number_regex = phone_numbers.matches_number_regex(without_comments)
-        deobfuscated_matches_number_regex = phone_numbers.matches_number_regex(deobfuscated_processed)
-        digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
-                                                               phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
-        number_regex_requires = "Patterns for the number" + \
-                                " detections must match the `NUMBER_REGEX` in phone_numbers.py, at least" + \
-                                " when deobfuscated. In order to do so," + \
-                                " it needs to have " + digit_between_text + " and not include" + \
-                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." + \
-                                " Generally, you should watch/blacklist the non-obfuscated version of the number."
-        if not pattern_matches_number_regex and not deobfuscated_matches_number_regex:
-            digit_count = len(regex.findall(r'\d', pattern))
-            digit_count_text = ""
-            if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
-                digit_count_text = " The supplied pattern contains" + \
-                                   " {} digits, which doesn't meet the requirements.".format(digit_count)
-            raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
-                                        number_regex_requires + digit_count_text)
-        normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
-        if normalized & GlobalVars.blacklisted_numbers_normalized:
-            raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
-        if normalized & GlobalVars.watched_numbers_normalized:
-            # The following differentiates between watching and blacklisting, due to
-            # automatic movement of entries from the watchlist to the blacklist.  It's
-            # assumed any conflict with something being blacklisted which is an exact
-            # pattern match for an existing entry on the watchlist will be resolved by the
-            # automatic removal of the pattern from the watchlist when moved to the
-            # blacklist.  If it isn't resolved, CI testing will fail.
-            if is_watchlist:
-                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
-            elif pattern not in GlobalVars.watched_numbers_full:
-                extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
-                                                     ' to an existing entry on the number watchlist'
-                raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
-        force_is_north_american, force_no_north_american = \
-            phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
-        unused_maybe_north_american_norm = \
-            phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
-        north_american_alt = phone_numbers.get_north_american_alternate_normalized(normalized_deobfuscated, force=True)
-        maybe_north_american_norm = north_american_alt[2]
-        if deobfuscated_processed != processed:
-            other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
-                                " use the non-obfuscated number. Perhaps try: " +
-                                "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed))
-        formatted_north_american = \
-            phone_numbers.get_north_american_with_separators_from_normalized(normalized_deobfuscated)
-        north_american_formatting = "use a format which starts with an optional `1` followed by" + \
-                                    " possible separator text and has the main" + \
-                                    " number in the format `{}`".format(formatted_north_american[-12:]) + \
-                                    " where `-` could be a single alpha character" + \
-                                    " or any `[\\W_]*+`. Alternately, you can add the comment `(?#IS NorAm)` to the" + \
-                                    " end of the pattern to force also using the alternate normalized form, or" + \
-                                    " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
-                                    " incorrectly recognized as one." + \
-                                    " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
-        if not force_no_north_american and unused_maybe_north_american_norm:
-            other_issues.append("That pattern may be a North American number. If it is, please " +
-                                north_american_formatting)
-        unused_na_on_list = 'That pattern may be a North American number and the alternate normalized verison' + \
-                            ' is already on the {}list. This indicates a potential conflict. Ideally, there should' + \
-                            ' be one entry which is automatically used normalized both with and without a "1". The' + \
-                            ' version which is already in use is: `{}`, but it\'s not automatically recognized as' + \
-                            ' a North American number.'
-        if unused_maybe_north_american_norm in GlobalVars.blacklisted_numbers_normalized:
-            other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
-        if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
-            other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
-        if not phone_numbers.matches_number_regex_start(without_comments):
-            other_issues.append(exact_match_text + 'begin with a digit' +
-                                ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
-        if not phone_numbers.matches_number_regex_end(without_comments):
-            other_issues.append(exact_match_text + 'end with a digit.')
-
+    other_issues = check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg, commit_kwargs=commit_kwargs)
     other_issues_text = ' '.join(other_issues)
     if len(other_issues_text) > 350:
         other_issues_text = '\n'.join(other_issues) + '\n'
@@ -516,9 +527,9 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         concretized_pattern = get_test_text_from_regex(pattern)
 
-        for username in False, True:
-            reasons = check_blacklist(
-                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
+        for is_username in False, True:
+            reasons = check_blacklist_duplicate(
+                concretized_pattern, is_username=is_username, is_watchlist=is_watchlist, is_phone=is_phone)
             if reasons:
                 raise CmdExceptionLongReply("That pattern looks like it's already caught by " +
                                             format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
@@ -541,8 +552,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         chat_profile_link=chat_user_profile_link,
         code_permissions=code_permissions,
         metasmoke_down=metasmoke_down,
-        before_pattern=text_before_pattern,
-        after_pattern=text_after_pattern
+        **commit_kwargs
     )
 
     if not _status:
