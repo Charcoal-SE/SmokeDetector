@@ -3,6 +3,7 @@
 import chatcommunicate  # coverage
 import chatcommands
 from apigetpost import api_get_post
+from chatcommunicate import CmdException, CmdExceptionLongReply
 from parsing import to_protocol_relative
 from classes.post import Post
 from globalvars import GlobalVars
@@ -886,3 +887,40 @@ def test_inqueue():
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
     assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
+
+
+@pytest.mark.parametrize("pattern, blacklist_type, expected_error_msg", [
+    ('(?-i:^Some spammer\u202d$)', "watch", "whitespace"),
+    (r' keyword', "keyword", "whitespace"),
+    (r'keyword another', "keyword", None),
+    (r'something\.blogspot\.com', "watch", "blogspot"),
+    (r'something\.blogspot', "watch", None),
+    (r'(invalidregex', "watch", "invalid"),
+    (r'something.com', "watch", "."),
+    (r'something\.com', "watch", None),
+    (r'something[.,-]com', "watch", None),
+])
+def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
+    msg = Fake({
+        "owner": {
+            "name": "name",
+            "id": 123,
+            "is_moderator": False
+        },
+        "room": {
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 11540
+        },
+        "content_source": None
+    })
+    try:
+        issues = chatcommands.check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg, commit_kwargs={})
+        if expected_error_msg:
+            assert any(expected_error_msg in issue
+                       for issue in issues), f"Didn't find {expected_error_msg} in {issues}"
+        else:
+            assert issues == []
+    except (CmdException, CmdExceptionLongReply) as e:
+        assert expected_error_msg and expected_error_msg in str(e)
