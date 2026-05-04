@@ -899,6 +899,16 @@ def test_inqueue():
     (r'something.com', "watch", "."),
     (r'something\.com', "watch", None),
     (r'something[.,-]com', "watch", None),
+    ('19998887777', "number", None),
+    ('9998887777', "number", "NorAm"),
+    ('9998887777(?#is noram)', "number", None),
+    ('9998887777(?#no noram)', "number", None),
+    ('999-888-7777', "number", None),
+    ('O999888777l7', "number", "obfuscated"),
+    ('12345', "number", "digits"),
+    ('123456789012345678901234567890', "number", "digits"),
+    ('notanumber18002223333', "number", "digit"),
+    ('18002223333notanumber', "number", "digit"),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({
