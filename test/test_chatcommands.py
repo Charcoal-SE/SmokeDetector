@@ -917,6 +917,12 @@ def test_inqueue():
     (r'stuff(?<=test)testing', "keyword", None),
     (r'stuff(?!test)testing', "keyword", None),
     (r'stuff(?<!test)testing', "keyword", None),
+    (r'(?-i)caseInsensitIve', "watch", "invalid"),
+    (r'(?-i:caseInsensitIve)', "watch", None),
+    (r'ok(?a)oops', "keyword", "flag"),
+    (r'ok(?a:ok\d)', "keyword", None),
+    (r'(?r)ohno', "watch", "flag"),
+    (r'(?V1)yay', "watch", "flag"),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({

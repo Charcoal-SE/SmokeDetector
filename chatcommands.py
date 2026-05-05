@@ -314,6 +314,11 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
                                 " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
         # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
 
+    if regex.search(r"\(\?(?:[afiLmsuxwbepr]|V\d)\)", pattern):
+        # See https://github.com/mrabarnett/mrab-regex#flags
+        other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
+                            " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
+
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
