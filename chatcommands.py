@@ -305,6 +305,15 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
                             " [For Blogspot, we prefer the TLD to not be included in"
                             " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
 
+    if pattern.startswith("(?"):
+        if pattern.startswith("(?!"):
+            other_issues.append("The pattern starts with a negative lookahead, which will match on most characters."
+                                " For performance reasons, this should almost always be avoided.")
+        elif pattern.startswith("(?<"):
+            other_issues.append("The pattern starts with a lookbehind."
+                                " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
+        # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
+
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.

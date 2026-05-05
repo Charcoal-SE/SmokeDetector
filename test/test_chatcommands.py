@@ -909,6 +909,14 @@ def test_inqueue():
     ('123456789012345678901234567890', "number", "digits"),
     ('notanumber18002223333', "number", "digit"),
     ('18002223333notanumber', "number", "digit"),
+    (r'(?!test)testing', "watch", "lookahead"),
+    (r'(?<=test)testing', "watch", "lookbehind"),
+    (r'(?<!test)testing', "keyword", "lookbehind"),
+    (r'(?=test)testing', "keyword", None),
+    (r'stuff(?=test)testing', "keyword", None),
+    (r'stuff(?<=test)testing', "keyword", None),
+    (r'stuff(?!test)testing', "keyword", None),
+    (r'stuff(?<!test)testing', "keyword", None),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({
