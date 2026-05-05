@@ -81112,3 +81112,4 @@
 1777978277	Jeff Schaller	habiledata\.com
 1777985532	Jeff Schaller	modernmountainbuilders\.com
 1777987511	Dan Getz	(?-i:^DBL03$)
+1778011110	Dan Getz	mitaliverse\.com
