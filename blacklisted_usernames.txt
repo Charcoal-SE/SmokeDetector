@@ -1236,7 +1236,6 @@ carelab[sz]
 ^Online quran classes$
 ^agya vapis$
 (?-i:^Cash vireet$)
-(?-i:^Cash vireet‭$)
 (?-i:^Room Room$)
 (?-i:^NutraX Shop$)
 ^(?-i:Dogherime Wall)$
