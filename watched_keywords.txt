@@ -81126,3 +81126,4 @@
 1778083784	Dan Getz	ourtoolkit\.online
 1778090877	Jeff Schaller	trendvibeacademy\.com
 1778091077	Jeff Schaller	a[\W_]*+frame[\W_]*+custom[\W_]*+signs
+1778094452	Dan Getz	mytdeecalculatorpro\.com
