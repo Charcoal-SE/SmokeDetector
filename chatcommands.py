@@ -319,6 +319,9 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
         other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
                             " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
 
+    if regex.search(r"\(\*[A-Z]++\)", pattern):
+        other_issues.append("Control verb found in pattern. These might have global effects.")
+
     try:
         # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
         # (thus not a single character). Make sure to include its repetition.

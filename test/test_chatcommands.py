@@ -900,7 +900,7 @@ def test_inqueue():
     (r'something\.com', "watch", None),
     (r'something[.,-]com', "watch", None),
     ('19998887777', "number", None),
-    ('9998887777', "number", "NorAm"),
+    ('9998887777', "number", "noram"),
     ('9998887777(?#is noram)', "number", None),
     ('9998887777(?#no noram)', "number", None),
     ('999-888-7777', "number", None),
@@ -938,6 +938,9 @@ def test_inqueue():
     (r'[a-z\W]++x', "watch", "expensive"),
     (r'(?=[\W_]*)\W\Wxyz', "watch", "expensive"),
     (r'(?!.{0,20}no)yes', "watch", "expensive"),
+    (r'abc(?:(*FAIL))?def', "watch", "control verb"),
+    (r'abc(?:(*F))?def', "watch", "control verb"),
+    (r'abc(?:(*SKIP))?def', "watch", "control verb"),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({
@@ -957,7 +960,7 @@ def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     try:
         issues = chatcommands.check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg, commit_kwargs={})
         if expected_error_msg:
-            assert any(expected_error_msg in issue
+            assert any(expected_error_msg in issue.lower()
                        for issue in issues), f"Didn't find {expected_error_msg} in {issues}"
         else:
             assert issues == []
