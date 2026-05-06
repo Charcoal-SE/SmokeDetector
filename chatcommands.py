@@ -314,12 +314,12 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
                                 " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
         # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
 
-    if regex.search(r"\(\?(?:[afiLmsuxwbepr]|V\d)\)", pattern):
+    if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:[afiLmsuxwbepr]|V\d)\)", pattern):
         # See https://github.com/mrabarnett/mrab-regex#flags
         other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
                             " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
 
-    if regex.search(r"\(\*[A-Z]++\)", pattern):
+    if regex.search(r"(?<!\\)(?:\\\\)*+\(\*[A-Z]++\)", pattern):
         other_issues.append("Control verb found in pattern. These might have global effects.")
 
     try:
@@ -348,7 +348,7 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
         # Test for . without \., but not in comments.
         # Remove character sets, where . doesn't need to be escaped.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
-        if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
+        if regex.search(r"(?<!\\)(?:\\\\)*+\.", test_for_unescaped_dot):
             other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
 
         try:
