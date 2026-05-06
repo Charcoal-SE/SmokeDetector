@@ -81125,3 +81125,4 @@
 1778081945	Dan Getz	downloadervideos\.com
 1778083784	Dan Getz	ourtoolkit\.online
 1778090877	Jeff Schaller	trendvibeacademy\.com
+1778091077	Jeff Schaller	a[\W_]*+frame[\W_]*+custom[\W_]*+signs
