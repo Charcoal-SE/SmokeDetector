@@ -322,10 +322,11 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
     try:
         # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
         # (thus not a single character). Make sure to include its repetition.
-        initial_pattern_match = regex.match(r"(?:\\\w|\.|\[.*?\]|\(.*?\))(?:\{.*?\})?[*+?]*+", pattern)
+        # If it starts with a lookaround, try check the first element of that lookaround instead.
+        initial_pattern_match = regex.match(r"(?:\(\?<?[=!])?((?:\\\w|\.|\[.*?\]|\((?!\?<?[=!])?.*?\))(?:\{.*?\})?[*+?]*+)", pattern)
         if initial_pattern_match:
             # Check if this matches long-bounded nonword character strings.
-            initial_regex = regex_compile_no_cache(initial_pattern_match.group(), regex.I | regex.S | regex.U)
+            initial_regex = regex_compile_no_cache(initial_pattern_match.group(1), regex.I | regex.S | regex.U)
             matches_repetition_of = [nonword_char for nonword_char in " \t\n-._—"
                                      if all(initial_regex.fullmatch(nonword_char * nonword_len)
                                             for nonword_len in range(1, 9))]

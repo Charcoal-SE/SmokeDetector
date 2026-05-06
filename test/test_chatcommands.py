@@ -936,6 +936,8 @@ def test_inqueue():
     (r'\s*+why++', "watch", "expensive"),
     (r'(?:q|\S)++trickier', "watch", "expensive"),
     (r'[a-z\W]++x', "watch", "expensive"),
+    (r'(?=[\W_]*)\W\Wxyz', "watch", "expensive"),
+    (r'(?!.{0,20}no)yes', "watch", "expensive"),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({
