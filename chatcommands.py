@@ -300,49 +300,6 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
     if regex.search(r"^\s+", pattern):
         other_issues.append("The pattern starts with whitespace.")
 
-    if regex.search(r"blogspot\\.", pattern):
-        other_issues.append("The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
-                            " [For Blogspot, we prefer the TLD to not be included in"
-                            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
-
-    if pattern.startswith("(?"):
-        if pattern.startswith("(?!"):
-            other_issues.append("The pattern starts with a negative lookahead, which will match on most characters."
-                                " For performance reasons, this should almost always be avoided.")
-        elif pattern.startswith("(?<"):
-            other_issues.append("The pattern starts with a lookbehind."
-                                " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
-        # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
-
-    if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:[afiLmsuxwbepr]|V\d)\)", pattern):
-        # See https://github.com/mrabarnett/mrab-regex#flags
-        other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
-                            " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
-
-    if regex.search(r"(?<!\\)(?:\\\\)*+\(\*[A-Z]++\)", pattern):
-        other_issues.append("Control verb found in pattern. These might have global effects.")
-
-    try:
-        # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
-        # (thus not a single character). Make sure to include its repetition.
-        # If it starts with a lookaround, try check the first element of that lookaround instead.
-        initial_pattern_match = regex.match(r"(?:\(\?<?[=!])?((?:\\\w|\.|\[.*?\]|\((?!\?<?[=!])?.*?\))(?:\{.*?\})?[*+?]*+)", pattern)
-        if initial_pattern_match:
-            # Check if this matches long-bounded nonword character strings.
-            initial_regex = regex_compile_no_cache(initial_pattern_match.group(1), regex.I | regex.S | regex.U)
-            matches_repetition_of = [nonword_char for nonword_char in " \t\n-._—"
-                                     if all(initial_regex.fullmatch(nonword_char * nonword_len)
-                                            for nonword_len in range(1, 9))]
-            if len(matches_repetition_of) > 2:
-                # If so, this prefix might be similar to [\W_]*+
-                other_issues.append("Starting a pattern with a repetition over all non-word characters, like `[\\W_]*+`,"
-                                    " can be computationally expensive, due to the Unicode `\\b` in the bookending,"
-                                    " and is often unnecessary.")
-    except regex.error:
-        # Invalid regexes will be caught later when the whole pattern is compiled,
-        # so we can ignore a compilation error for the prefix.
-        pass
-
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
@@ -350,6 +307,52 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", without_comments)
         if regex.search(r"(?<!\\)(?:\\\\)*+\.", test_for_unescaped_dot):
             other_issues.append('The regex contains an unescaped "`.`", which should be "`\\.`" in most cases.')
+
+        if regex.search(r"blogspot\\.", without_comments):
+            other_issues.append(
+                "The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
+                " [For Blogspot, we prefer the TLD to not be included in"
+                " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
+
+        if without_comments.startswith("(?"):
+            if without_comments.startswith("(?!"):
+                other_issues.append("The pattern starts with a negative lookahead, which will match on most characters."
+                                    " For performance reasons, this should almost always be avoided.")
+            elif without_comments.startswith("(?<"):
+                other_issues.append("The pattern starts with a lookbehind."
+                                    " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
+            # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
+
+        if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:[afiLmsuxwbepr]|V\d)\)", without_comments):
+            # See https://github.com/mrabarnett/mrab-regex#flags
+            other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
+                                " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
+
+        if regex.search(r"(?<!\\)(?:\\\\)*+\(\*[A-Z]++\)", without_comments):
+            other_issues.append("Control verb found in pattern. These might have global effects.")
+
+        try:
+            # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
+            # (thus not a single character). Make sure to include its repetition.
+            # If it starts with a lookaround, try check the first element of that lookaround instead.
+            initial_pattern_match = regex.match(
+                r"(?:\(\?<?[=!])?((?:\\\w|\.|\[.*?\]|\((?!\?<?[=!])?.*?\))(?:\{.*?\})?[*+?]*+)", without_comments)
+            if initial_pattern_match:
+                # Check if this matches long-bounded nonword character strings.
+                initial_regex = regex_compile_no_cache(initial_pattern_match.group(1), regex.I | regex.S | regex.U)
+                matches_repetition_of = [nonword_char for nonword_char in " \t\n-._—"
+                                         if all(initial_regex.fullmatch(nonword_char * nonword_len)
+                                                for nonword_len in range(1, 9))]
+                if len(matches_repetition_of) > 2:
+                    # If so, this prefix might be similar to [\W_]*+
+                    other_issues.append(
+                        "Starting a pattern with a repetition over all non-word characters, like `[\\W_]*+`,"
+                        " can be computationally expensive, due to the Unicode `\\b` in the bookending,"
+                        " and is often unnecessary.")
+        except regex.error:
+            # Invalid regexes will be caught later when the whole pattern is compiled,
+            # so we can ignore a compilation error for the prefix.
+            pass
 
         try:
             r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
