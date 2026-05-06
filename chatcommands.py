@@ -319,6 +319,26 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
         other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
                             " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
 
+    try:
+        # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
+        # (thus not a single character). Make sure to include its repetition.
+        initial_pattern_match = regex.match(r"(?:\\\w|\.|\[.*?\]|\(.*?\))(?:\{.*?\})?[*+?]*+", pattern)
+        if initial_pattern_match:
+            # Check if this matches long-bounded nonword character strings.
+            initial_regex = regex_compile_no_cache(initial_pattern_match.group(), regex.I | regex.S | regex.U)
+            matches_repetition_of = [nonword_char for nonword_char in " \t\n-._—"
+                                     if all(initial_regex.fullmatch(nonword_char * nonword_len)
+                                            for nonword_len in range(1, 9))]
+            if len(matches_repetition_of) > 2:
+                # If so, this prefix might be similar to [\W_]*+
+                other_issues.append("Starting a pattern with a repetition over all non-word characters, like `[\\W_]*+`,"
+                                    " can be computationally expensive, due to the Unicode `\\b` in the bookending,"
+                                    " and is often unnecessary.")
+    except regex.error:
+        # Invalid regexes will be caught later when the whole pattern is compiled,
+        # so we can ignore a compilation error for the prefix.
+        pass
+
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.

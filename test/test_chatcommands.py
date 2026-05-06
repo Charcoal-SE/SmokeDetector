@@ -923,6 +923,19 @@ def test_inqueue():
     (r'ok(?a:ok\d)', "keyword", None),
     (r'(?r)ohno', "watch", "flag"),
     (r'(?V1)yay', "watch", "flag"),
+    (r'[\W_]*+First', "watch", "expensive"),
+    (r'.{0,20}and\s+then', "watch", "expensive"),
+    (r'\W*+First', "watch", "expensive"),
+    (r'[\W_]*First', "watch", "expensive"),
+    (r'\W*First', "watch", "expensive"),
+    (r'First[\W_]*+second', "watch", None),
+    (r'(?:[\W_]*+)?First', "watch", "expensive"),
+    (r'[^h]*+ello', "watch", "expensive"),
+    (r'\W123', "watch", None),
+    (r'\w*123', "watch", None),
+    (r'\s*+why++', "watch", "expensive"),
+    (r'(?:q|\S)++trickier', "watch", "expensive"),
+    (r'[a-z\W]++x', "watch", "expensive"),
 ])
 def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
     msg = Fake({
@@ -947,4 +960,6 @@ def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
         else:
             assert issues == []
     except (CmdException, CmdExceptionLongReply) as e:
-        assert expected_error_msg and expected_error_msg in str(e)
+        if not expected_error_msg:
+            raise e
+        assert expected_error_msg in str(e)
