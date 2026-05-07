@@ -81129,3 +81129,4 @@
 1778138680	Dan Getz	brain\W?power(?<=^.{0,211})
 1778139486	Dan Getz	quraninstituteonline\.com
 1778142375	Dan Getz	ayaauavpower\.com
+1778142394	Dan Getz	timeliner\.io
