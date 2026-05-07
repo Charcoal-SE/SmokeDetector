@@ -81127,3 +81127,4 @@
 1778138419	Dan Getz	SHAMMAclinic\.com
 1778138479	Dan Getz	mtravis039(?:@gmail\.com)?
 1778138605	Dan Getz	kala\s*+jadu\w*+
+1778138680	Dan Getz	brain\W?power(?<=^.{0,211})
