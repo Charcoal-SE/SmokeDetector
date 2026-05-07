@@ -81128,3 +81128,4 @@
 1778138605	Dan Getz	kala\s*+jadu\w*+
 1778138680	Dan Getz	brain\W?power(?<=^.{0,211})
 1778139486	Dan Getz	quraninstituteonline\.com
+1778142375	Dan Getz	ayaauavpower\.com
