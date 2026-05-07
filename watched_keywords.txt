@@ -81127,4 +81127,3 @@
 1778138479	Dan Getz	mtravis039(?:@gmail\.com)?
 1778138605	Dan Getz	kala\s*+jadu\w*+
 1778138680	Dan Getz	brain\W?power(?<=^.{0,211})
-1778138780	Dan Getz	systems?\.com
