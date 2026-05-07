@@ -81128,3 +81128,4 @@
 1778091077	Jeff Schaller	a[\W_]*+frame[\W_]*+custom[\W_]*+signs
 1778094452	Dan Getz	mytdeecalculatorpro\.com
 1778128069	Dan Getz	catssaymeow\.org
+1778133597	Dan Getz	theaiorange\.com
