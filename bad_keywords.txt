@@ -3915,3 +3915,4 @@ Q̳u̳i̳c̳k̳B̳o̳o̳k̳s̳
 Apakah[\W_]*+Tokopedia
 Tiranga(?:[\W_]*+Game)?(?:[\W_]*+(?:App|Club))?
 digitalaka
+gmail\.com(?<=loanfirm@gmail\.com)
