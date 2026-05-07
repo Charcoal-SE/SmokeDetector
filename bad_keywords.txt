@@ -3915,3 +3915,4 @@ Tiranga(?:[\W_]*+Game)?(?:[\W_]*+(?:App|Club))?
 digitalaka
 gmail\.com(?<=loanfirm@gmail\.com)
 huffingtonpost\.com/\S+/healthy-school-lunches
+c[óo]mo[\W_]*+hablar[\W_]*+a.{0,25}airways[\W_]*+desde
