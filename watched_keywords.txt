@@ -81127,3 +81127,4 @@
 1778135965	Dan Getz	pawa\.zone
 1778136523	Dan Getz	btlme\.com
 1778138315	Dan Getz	webomates(?<!\bcom\.webomates)(?!\.com)
+1778138419	Dan Getz	SHAMMAclinic\.com
