@@ -1390,7 +1390,6 @@ alpha[\W_]*+xr
 new[\W_]*+power[\W_]*+girls
 retro[\W_]*+lean
 snore[\W_]*+be?[\W_]*+gone
-huffingtonpost.com/\S+/healthy-school-lunches
 selfgrowth\.com/\S+/healthy_school_lunches
 custom[\W_]*+made[\W_]*+patch(?:es)?
 testro[\W_]*+x(?:[\W_]*+ultra)?
