@@ -324,7 +324,7 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
             # Initial positive lookaheads, unless they themselves are poorly written,
             # ought to be less of a performance issue.
 
-        if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:[afiLmsuxwbepr]|V\d)\)", without_comments):
+        if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:-?[afiLmsuxwbepr]|V\d)\)", without_comments):
             # See https://github.com/mrabarnett/mrab-regex#flags
             other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
                                 " Use the `(?-i:...)` style to limit your change in flags to only the entry"
