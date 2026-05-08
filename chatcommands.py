@@ -319,21 +319,23 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
                 other_issues.append("The pattern starts with a negative lookahead, which will match on most characters."
                                     " For performance reasons, this should almost always be avoided.")
             elif without_comments.startswith("(?<"):
-                other_issues.append("The pattern starts with a lookbehind."
-                                    " For performance reasons, lookarounds should be as far into the regex as reasonably possible.")
-            # Initial positive lookaheads, unless they themselves are poorly written, ought to be less of a performance issue.
+                other_issues.append("The pattern starts with a lookbehind. For performance reasons,"
+                                    " lookarounds should be as far into the regex as reasonably possible.")
+            # Initial positive lookaheads, unless they themselves are poorly written,
+            # ought to be less of a performance issue.
 
         if regex.search(r"(?<!\\)(?:\\\\)*+\(\?(?:[afiLmsuxwbepr]|V\d)\)", without_comments):
             # See https://github.com/mrabarnett/mrab-regex#flags
             other_issues.append("Please don't globally set regex flags in watch/blacklist entries."
-                                " Use the `(?-i:...)` style to limit your change in flags to only the entry you are adding.")
+                                " Use the `(?-i:...)` style to limit your change in flags to only the entry"
+                                " you are adding.")
 
         if regex.search(r"(?<!\\)(?:\\\\)*+\(\*[A-Z]++\)", without_comments):
             other_issues.append("Control verb found in pattern. These might have global effects.")
 
         try:
-            # Try to clip out the first element of the pattern, if it seems to start with a class, set, or more complicated group
-            # (thus not a single character). Make sure to include its repetition.
+            # Try to clip out the first element of the pattern, if it seems to start with a class, set,
+            # or more complicated group (thus not a single character). Make sure to include its repetition.
             # If it starts with a lookaround, try check the first element of that lookaround instead.
             initial_pattern_match = regex.match(
                 r"(?:\(\?<?[=!])?((?:\\\w|\.|\[.*?\]|\((?!\?<?[=!])?.*?\))(?:\{.*?\})?[*+?]*+)", without_comments)
@@ -553,7 +555,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     is_watchlist = bool("watch" in blacklist_type)
     commit_kwargs = {}
 
-    other_issues = check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg, commit_kwargs=commit_kwargs)
+    other_issues = check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg,
+                                            commit_kwargs=commit_kwargs)
     other_issues_text = ' '.join(other_issues)
     if len(other_issues_text) > 350:
         other_issues_text = '\n'.join(other_issues) + '\n'
