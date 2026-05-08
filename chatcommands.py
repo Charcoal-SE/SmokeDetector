@@ -284,7 +284,7 @@ def check_blacklist_mistakes(pattern: str, blacklist_type, msg, commit_kwargs) -
     For some mistakes, raises `CmdException` to refuse to commit the blacklist or watch.
     Returns a list of lesser issues, so that they can be reported to the user, or the commit allowed with -force.
     """
-    is_watchlist = bool("watch" in blacklist_type)
+    is_watchlist = "watch" in blacklist_type
     other_issues = []
 
     def get_normalized_on_list(list_type, extra=''):
@@ -552,7 +552,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = " Append `-force` to the command word(s) if you really want to add the pattern you provided."
 
     pattern = get_pattern_from_content_source(msg)
-    is_watchlist = bool("watch" in blacklist_type)
+    is_watchlist = "watch" in blacklist_type
     commit_kwargs = {}
 
     other_issues = check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg,
