@@ -81142,3 +81142,4 @@
 1778240559	Dan Getz	solvezi\.com
 1778240807	Dan Getz	carncash\.in
 1778240985	Dan Getz	ngopibetme\.com
+1778241016	Dan Getz	wealthupp
