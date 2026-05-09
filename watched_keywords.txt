@@ -80726,7 +80726,6 @@
 1775815663	VLAZ	newbuyermortgage\.com
 1775819185	Jeff Schaller	yan3d\.org
 1775819270	Jeff Schaller	doubleslitexperiment\.app
-1775820802	Jeff Schaller	PassCertHub(?!\.com)
 1775823236	Jeff Schaller	metablocktech\.com
 1775823487	Dan Getz	pdf365\.cloud
 1775827131	VLAZ	pynfinity\.com
