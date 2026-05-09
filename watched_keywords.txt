@@ -81148,3 +81148,4 @@
 1778241428	Dan Getz	raja[\W_]*+bhojanalayato
 1778246879	Jeff Schaller	mrinvites\.com
 1778288295	Jeff Schaller	sircles\.com
+1778296658	Dan Getz	solve24game\.com
