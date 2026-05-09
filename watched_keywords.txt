@@ -81156,3 +81156,4 @@
 1778331616	Dan Getz	l[ea]dger[_-]?com(?:[_-]?start)?
 1778332138	Jeff Schaller	areascode\.us
 1778333309	Dan Getz	rawdatalibrary\.com
+1778335728	lyxal	react-datatable\.com
