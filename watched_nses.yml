@@ -5763,7 +5763,8 @@ items:
 - ns: netdns.net.
 - ns: dnshorizon.com.
 - ns: welldesignedgames.com.
-- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18
+- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18; NXDOMAIN 2026-05-09
+  disable: true
   ns: ozdomainnhost.com.
 - ns: brainbean.us.
 - ns: websitehostserver.net.
