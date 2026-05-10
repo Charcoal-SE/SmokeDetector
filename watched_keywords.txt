@@ -81106,7 +81106,6 @@
 1778062831	Dan Getz	leatherbond\.co
 1778062893	Dan Getz	kumbakonamcoffeeindia\.com
 1778062921	Dan Getz	msnotebook\.com\.br
-1778063053	Dan Getz	vietthanh\.vn
 1778065124	Dan Getz	mhcockpit\.com
 1778067727	Dan Getz	sfinterviewpro\.com
 1778076523	Jeff Schaller	goseffecon\.ru
