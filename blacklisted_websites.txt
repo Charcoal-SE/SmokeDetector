@@ -6305,3 +6305,4 @@ supplement4world\.hatenablog\.com
 \b(?<![^\W_]-)ica\.in(?![.-][^\W_])\b
 oxpahat\.org(?<!services@oxpahat\.org)(?#The email address is covered by a keyword)
 vietthanh\.vn
+api-prlabs\.workers\.dev
