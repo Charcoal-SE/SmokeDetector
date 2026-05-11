@@ -81172,3 +81172,4 @@
 1778475587	Anerdw	fundsrecoveryagent\.com
 1778476858	lyxal	kisangroup\.com
 1778485949	VLAZ	kanhasoft(?!\.com)
+1778485976	VLAZ	theshadowgps
