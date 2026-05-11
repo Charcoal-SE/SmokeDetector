@@ -81175,3 +81175,4 @@
 1778485976	VLAZ	theshadowgps
 1778486126	VLAZ	overite(?!\.co)
 1778486133	VLAZ	overite\.co
+1778487291	VLAZ	cardiotacademy\.com
