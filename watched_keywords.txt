@@ -81177,3 +81177,4 @@
 1778486133	VLAZ	overite\.co
 1778487291	VLAZ	cardiotacademy\.com
 1778487382	VLAZ	cardiot[\W_]*+academy(?!\.com(?<=cardiotacademy\.com))
+1778495136	Jeff Schaller	blackstones\.vn
