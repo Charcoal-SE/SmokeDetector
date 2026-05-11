@@ -81182,3 +81182,4 @@
 1778495459	VLAZ	langfuse\.com
 1778500331	Dan Getz	apifreaks\.com
 1778503055	VLAZ	windowscanada\.com
+1778504121	Dan Getz	wellnessliving\.com
