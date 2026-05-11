@@ -81184,3 +81184,4 @@
 1778503055	VLAZ	windowscanada\.com
 1778504121	Dan Getz	wellnessliving\.com
 1778504131	Dan Getz	mixer\.lat
+1778508550	lyxal	k21academy\.com
