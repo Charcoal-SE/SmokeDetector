@@ -81176,3 +81176,4 @@
 1778486126	VLAZ	overite(?!\.co)
 1778486133	VLAZ	overite\.co
 1778487291	VLAZ	cardiotacademy\.com
+1778487382	VLAZ	cardiot[\W_]*+academy(?!\.com(?<=cardiotacademy\.com))
