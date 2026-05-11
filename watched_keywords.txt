@@ -81171,3 +81171,4 @@
 1778465476	Dan Getz	maza365\.bar
 1778475587	Anerdw	fundsrecoveryagent\.com
 1778476858	lyxal	kisangroup\.com
+1778485949	VLAZ	kanhasoft(?!\.com)
