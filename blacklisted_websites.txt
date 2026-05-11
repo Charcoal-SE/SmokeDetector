@@ -6307,3 +6307,4 @@ oxpahat\.org(?<!services@oxpahat\.org)(?#The email address is covered by a keywo
 vietthanh\.vn
 api-prlabs\.workers\.dev
 rpusa1-prlabs\.hf\.space
+ichizenn\.com
