@@ -3917,4 +3917,3 @@ c[óo]mo[\W_]*+hablar[\W_]*+a.{0,25}airways[\W_]*+desde
 c[óo]mo[\W_]*+me[\W_]*+comunico[\W_]*+con.{0,20}airways
 company\.site/$(?<=\.company\.site/)
 PassCertHub(?!\.com)
-info[\W_]*+whispershackerrecovery[\W_]*+com
