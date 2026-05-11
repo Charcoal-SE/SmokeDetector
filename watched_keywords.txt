@@ -81174,3 +81174,4 @@
 1778485949	VLAZ	kanhasoft(?!\.com)
 1778485976	VLAZ	theshadowgps
 1778486126	VLAZ	overite(?!\.co)
+1778486133	VLAZ	overite\.co
