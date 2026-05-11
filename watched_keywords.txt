@@ -81186,5 +81186,4 @@
 1778504131	Dan Getz	mixer\.lat
 1778508550	lyxal	k21academy\.com
 1778509427	Dan Getz	greenboxcapital\.ca
-1778511860	VLAZ	info[\W_]*+whispershackerrecovery[\W_]*+com
 1778511888	VLAZ	sygnaapp\.pl
