@@ -81200,3 +81200,4 @@
 1778580889	VLAZ	misti[\W_]*+movers[\W_]*+and[\W_]*+packers
 1778581475	VLAZ	addressbox\.com
 1778584820	VLAZ	iemojis\.com
+1778586678	Jeff Schaller	Serrax[\W_]*+Technologies
