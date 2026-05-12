@@ -81189,3 +81189,4 @@
 1778511888	VLAZ	sygnaapp\.pl
 1778511944	VLAZ	whispershackerrecovery[\W_]*+com
 1778533500	Dan Getz	a-zfoodrecepies\.com
+1778552936	Dan Getz	what[\W_]*+is[\W_]*+search[\W_]*+engine[\W_]*+optimization
