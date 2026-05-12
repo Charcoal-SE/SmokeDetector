@@ -81209,3 +81209,4 @@
 1778601754	Dan Getz	miniastrotarot
 1778604488	Dan Getz	platforms?+\s++like\s++(?:[^\.<]*+(?:\.\w|<(?!\/p))?)*+\.?\s*+<\/p>\s*+$
 1778612256	Jeff Schaller	dreammeaningnow\.com
+1778612882	Jeff Schaller	calculatorapp\.me
