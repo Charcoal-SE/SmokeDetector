@@ -81208,3 +81208,4 @@
 1778599939	VLAZ	cannottell\.com
 1778601754	Dan Getz	miniastrotarot
 1778604488	Dan Getz	platforms?+\s++like\s++(?:[^\.<]*+(?:\.\w|<(?!\/p))?)*+\.?\s*+<\/p>\s*+$
+1778612256	Jeff Schaller	dreammeaningnow\.com
