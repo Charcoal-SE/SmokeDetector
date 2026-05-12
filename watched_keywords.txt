@@ -81195,3 +81195,4 @@
 1778557425	VLAZ	agentsaitools\.com
 1778563157	VLAZ	peptidecalcu\.com
 1778563398	VLAZ	dc-solenoid\.com
+1778569260	VLAZ	thefootmovement\.com\.au
