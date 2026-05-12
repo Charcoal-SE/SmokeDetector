@@ -81210,3 +81210,4 @@
 1778604488	Dan Getz	platforms?+\s++like\s++(?:[^\.<]*+(?:\.\w|<(?!\/p))?)*+\.?\s*+<\/p>\s*+$
 1778612256	Jeff Schaller	dreammeaningnow\.com
 1778612882	Jeff Schaller	calculatorapp\.me
+1778620280	Dan Getz	tavo\.eu\.com
