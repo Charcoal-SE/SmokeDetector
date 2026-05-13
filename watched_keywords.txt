@@ -81235,3 +81235,4 @@
 1778695861	SamGibson	empiresignanddesign\.com
 1778697747	Jeff Schaller	gotalky\.net
 1778704400	Jeff Schaller	ziptopdf\.org
+1778706885	Dan Getz	thaspruce\.com
