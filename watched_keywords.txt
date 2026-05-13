@@ -81233,3 +81233,4 @@
 1778683059	Dan Getz	calculadorradehoras\.com\.br
 1778692712	Jeff Schaller	skyscaperoofing\.com
 1778695861	SamGibson	empiresignanddesign\.com
+1778697747	Jeff Schaller	gotalky\.net
