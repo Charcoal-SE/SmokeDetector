@@ -81226,3 +81226,4 @@
 1778668318	Jeff Schaller	obsiusfb\.com
 1778671186	Jeff Schaller	ps2biosonlines\.com
 1778672727	Jeff Schaller	emiratesvisa\.in
+1778674744	Dan Getz	indus[\W_]*+appstore
