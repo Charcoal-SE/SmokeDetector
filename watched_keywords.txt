@@ -81228,3 +81228,4 @@
 1778672727	Jeff Schaller	emiratesvisa\.in
 1778674744	Dan Getz	indus[\W_]*+appstore
 1778676287	Jeff Schaller	mediworldrx\.com
+1778677464	Jeff Schaller	siporead\.com
