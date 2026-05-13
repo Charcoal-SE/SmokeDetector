@@ -81230,3 +81230,4 @@
 1778676287	Jeff Schaller	mediworldrx\.com
 1778677464	Jeff Schaller	siporead\.com
 1778682407	Jeff Schaller	rfsemya\.ru
+1778683059	Dan Getz	calculadorradehoras\.com\.br
