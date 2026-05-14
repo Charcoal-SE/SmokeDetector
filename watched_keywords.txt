@@ -81239,3 +81239,4 @@
 1778706912	Dan Getz	silverfish-info\.com
 1778713580	Jeff Schaller	sabrentreview\.website3\.me
 1778716937	Jeff Schaller	mcpsafe\.io
+1778722512	Jeff Schaller	magicshine\.com
