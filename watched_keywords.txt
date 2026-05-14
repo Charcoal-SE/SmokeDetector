@@ -81238,3 +81238,4 @@
 1778706885	Dan Getz	thaspruce\.com
 1778706912	Dan Getz	silverfish-info\.com
 1778713580	Jeff Schaller	sabrentreview\.website3\.me
+1778716937	Jeff Schaller	mcpsafe\.io
