@@ -81248,3 +81248,4 @@
 1778761688	VLAZ	boldandbeyond\.in
 1778763357	VLAZ	instantlikes\.us
 1778764431	VLAZ	prbusinesswires\.com
+1778777738	Dan Getz	njgroutman\.com
