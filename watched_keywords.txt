@@ -81245,3 +81245,4 @@
 1778756496	SamGibson	pcbassemblymfg\.com
 1778759184	Dan Getz	parktravel\.co\.in
 1778761386	VLAZ	stylebeds\.co\.uk
+1778761688	VLAZ	boldandbeyond\.in
