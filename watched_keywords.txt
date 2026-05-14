@@ -81250,3 +81250,4 @@
 1778764431	VLAZ	prbusinesswires\.com
 1778777738	Dan Getz	njgroutman\.com
 1778780972	Dan Getz	bike-price\.in
+1778782452	Dan Getz	sqlserverperformace\.blogspot
