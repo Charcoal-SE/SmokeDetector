@@ -81278,3 +81278,4 @@
 1778922342	VLAZ	moviebox21\.com
 1778922349	VLAZ	moviebox21(?!\.com)
 1778924028	VLAZ	softileo\.com
+1778924037	VLAZ	softileo(?!\.com)
