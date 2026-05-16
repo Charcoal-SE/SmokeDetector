@@ -81280,3 +81280,4 @@
 1778924028	VLAZ	softileo\.com
 1778924037	VLAZ	softileo(?!\.com)
 1778924939	VLAZ	thereddybookss\.com
+1778927727	VLAZ	orivellesverige\.com
