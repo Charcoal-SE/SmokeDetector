@@ -81282,3 +81282,4 @@
 1778924939	VLAZ	thereddybookss\.com
 1778927727	VLAZ	orivellesverige\.com
 1778927843	VLAZ	ytdescriptionextractor\.com
+1778930083	Jeff Schaller	iasm\.in
