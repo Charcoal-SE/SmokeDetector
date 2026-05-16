@@ -81285,3 +81285,4 @@
 1778930083	Jeff Schaller	iasm\.in
 1778931907	lyxal	psira-verification\.com
 1778952630	VLAZ	physalia-courses\.org
+1778956522	VLAZ	fareschoices\.com
