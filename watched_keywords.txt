@@ -81292,3 +81292,4 @@
 1779000166	VLAZ	(?-i:Spaztofast)(?#t.me)
 1779000508	VLAZ	growappwithme\.com
 1779000515	VLAZ	grow[\W_]*+app[\W_]*+with[\W_]*+me(?!\.com(?<=growappwithme\.com))
+1779007530	VLAZ	75mmq\.vip
