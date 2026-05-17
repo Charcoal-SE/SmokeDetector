@@ -81289,3 +81289,4 @@
 1778973009	Jeff Schaller	tiktokhijack\.com
 1778976939	Dan Getz	lexi-glow\.com
 1778990166	lyxal	stocksifting\.com
+1779000166	VLAZ	(?-i:Spaztofast)(?#t.me)
