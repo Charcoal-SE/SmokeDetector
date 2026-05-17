@@ -81291,3 +81291,4 @@
 1778990166	lyxal	stocksifting\.com
 1779000166	VLAZ	(?-i:Spaztofast)(?#t.me)
 1779000508	VLAZ	growappwithme\.com
+1779000515	VLAZ	grow[\W_]*+app[\W_]*+with[\W_]*+me(?!\.com(?<=growappwithme\.com))
