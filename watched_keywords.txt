@@ -81294,3 +81294,4 @@
 1779000515	VLAZ	grow[\W_]*+app[\W_]*+with[\W_]*+me(?!\.com(?<=growappwithme\.com))
 1779007530	VLAZ	75mmq\.vip
 1779007537	VLAZ	(?-i:qdr0518)(?# referral code)
+1779017718	lyxal	lacalculadora-dealicia\.com
