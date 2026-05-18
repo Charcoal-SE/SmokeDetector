@@ -81300,3 +81300,4 @@
 1779079884	VLAZ	home[\W_]*+office[\W_]*+translations[\W_]*+uk
 1779091745	VLAZ	blockonomics\.co
 1779091764	VLAZ	theglowinsider\.com
+1779092102	VLAZ	dubairubbermats\.com
