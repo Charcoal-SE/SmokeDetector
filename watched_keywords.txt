@@ -80942,7 +80942,6 @@
 1776966264	Dan Getz	stundenlohnrechnerr\.de
 1776966279	Dan Getz	houseinteriorblog\.com
 1776971521	Jeff Schaller	sharexzone\.com
-1776988649	Dan Getz	idea2dev\.com
 1777027492	Jeff Schaller	workmanservices\.com\.pk
 1777027531	Jeff Schaller	dostwinlogo\.in\.net
 1777027611	Jeff Schaller	nexcenz\.com
