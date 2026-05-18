@@ -81303,3 +81303,4 @@
 1779092102	VLAZ	dubairubbermats\.com
 1779092113	VLAZ	syncalgorithmdapps\.com
 1779105311	lyxal	punchng\.com
+1779118021	Dan Getz	parkmedicalbilling\.com
