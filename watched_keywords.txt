@@ -81297,3 +81297,4 @@
 1779040493	Jeff Schaller	ytzolo\.com
 1779074312	dbc	vegastars1\.co\.com
 1779078492	VLAZ	trustedplumbingheating\.com
+1779079884	VLAZ	home[\W_]*+office[\W_]*+translations[\W_]*+uk
