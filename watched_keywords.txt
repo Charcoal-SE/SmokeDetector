@@ -47131,7 +47131,6 @@
 1676789525	Cody Gray	top[\W_]*+\d*+[\W_]*+web[\W_]*+host(?:s|ing)?
 1676790478	cigien	pixrron\.in
 1676791723	cigien	betkadeh\.org
-1676792858	Cody Gray	^levi[\W_]*+athan$
 1676796095	cigien	btecz\.com
 1676801090	cigien	ozgurhaberler\.com
 1676804856	cigien	flash-speed\.com
