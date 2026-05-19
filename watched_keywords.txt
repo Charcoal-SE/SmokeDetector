@@ -81312,3 +81312,4 @@
 1779184961	VLAZ	iptvsmartertv\.fr
 1779184969	VLAZ	iptvsmarterstv\.com
 1779184976	VLAZ	worktual\.co\.uk
+1779186905	VLAZ	tabdeltaqa\.com
