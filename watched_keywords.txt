@@ -81307,3 +81307,4 @@
 1779134628	Dan Getz	morsecodetranslatr\.com
 1779165687	VLAZ	letrasbonitasbr\.com
 1779168285	VLAZ	craitrix\.com
+1779173202	VLAZ	urbanflooring\.ae
