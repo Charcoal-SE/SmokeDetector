@@ -81311,3 +81311,4 @@
 1779184408	Glorfindel	Sabin[\W_]*+Enterprises
 1779184961	VLAZ	iptvsmartertv\.fr
 1779184969	VLAZ	iptvsmarterstv\.com
+1779184976	VLAZ	worktual\.co\.uk
