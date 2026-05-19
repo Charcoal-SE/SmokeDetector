@@ -81315,3 +81315,4 @@
 1779186905	VLAZ	tabdeltaqa\.com
 1779187102	VLAZ	web-hook\.ru
 1779188630	VLAZ	services4home\.in
+1779199358	Dan Getz	oncredit-vn\.com
