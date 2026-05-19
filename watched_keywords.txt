@@ -81309,3 +81309,4 @@
 1779168285	VLAZ	craitrix\.com
 1779173202	VLAZ	urbanflooring\.ae
 1779184408	Glorfindel	Sabin[\W_]*+Enterprises
+1779184961	VLAZ	iptvsmartertv\.fr
