@@ -81329,3 +81329,4 @@
 1779275879	lyxal	yourtechlegal\.com
 1779277300	VLAZ	ogfarming\.com
 1779277403	VLAZ	dfwretx\.com
+1779277570	VLAZ	jbs\.ac\.in
