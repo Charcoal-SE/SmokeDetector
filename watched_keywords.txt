@@ -81324,3 +81324,4 @@
 1779215059	Dan Getz	myloginguideusa\.com
 1779215384	Dan Getz	swarmcli
 1779237946	Dan Getz	publicationsoffice\.com
+1779240022	Dan Getz	devicefixzone\.com
