@@ -81325,3 +81325,4 @@
 1779237946	Dan Getz	publicationsoffice\.com
 1779240022	Dan Getz	devicefixzone\.com
 1779251678	VLAZ	fastflashtrade\.com
+1779251685	VLAZ	(?-i:fastflashtrade)(?#t.me)
