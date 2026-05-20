@@ -81334,3 +81334,4 @@
 1779281076	lyxal	lumidainvest\.com
 1779281223	lyxal	revoracers\.com
 1779288083	VLAZ	williams[\W_]*+towing(?!\.ca(?<=williamstowing\.ca))
+1779288090	VLAZ	williamstowing\.ca
