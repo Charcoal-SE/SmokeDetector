@@ -81336,3 +81336,4 @@
 1779288083	VLAZ	williams[\W_]*+towing(?!\.ca(?<=williamstowing\.ca))
 1779288090	VLAZ	williamstowing\.ca
 1779299620	VLAZ	lines\.com
+1779300161	Dan Getz	kingdom-hospitality\.net
