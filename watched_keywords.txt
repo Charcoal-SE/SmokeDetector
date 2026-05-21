@@ -81347,3 +81347,4 @@
 1779361770	VLAZ	wetherspoonsmenuprices\.co\.uk
 1779364434	lyxal	starbucksmenus\.uk
 1779369585	lyxal	verifiedprohackers?
+1779373821	Dan Getz	suffescom(?:[\W_]*+solutions)?
