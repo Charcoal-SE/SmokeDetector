@@ -81344,3 +81344,4 @@
 1779332710	Dan Getz	manvision\.net
 1779357763	VLAZ	ism[\W_]*+delhi
 1779358510	VLAZ	skillogic\.com
+1779361770	VLAZ	wetherspoonsmenuprices\.co\.uk
