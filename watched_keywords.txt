@@ -81340,3 +81340,4 @@
 1779307750	Jeff Schaller	thememreduct\.com
 1779317397	Dan Getz	airportfasttransfer\.com
 1779323358	Jeff Schaller	terminalus\.dev
+1779328740	Dan Getz	(?-i:gihmknkabkkghpiocgnoiejagngdegea)(?# chromewebstore.google.com)
