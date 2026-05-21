@@ -4596,7 +4596,8 @@ items:
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
-- comment: no longer resolves 2020-08-27; enabled again 2024-10-18
+- comment: no longer resolves 2020-08-27; enabled again 2024-10-18; disabled again on 2026-05-21
+  disable: true
   ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
@@ -5748,7 +5749,9 @@ items:
   disable: true
   ns: attichosting.com.
 - ns: speakatoo.com.
-- ns: zoomnameserver.com.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: zoomnameserver.com.
 - ns: parastorage.com.
 - ns: quicns.com.
 - ns: serveriai.lt.
@@ -5816,7 +5819,9 @@ items:
 - ns: actualizar.net.
 - ns: aamad.org.
 - ns: bloomchemag.com.
-- ns: agconsulting.in.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: agconsulting.in.
 - ns: abuildtech.com.
 - ns: ambicaairvent.com.
 - ns: nishaaircon.com.
@@ -5897,7 +5902,9 @@ items:
 - ns: globalhosting.in.
 - ns: varmahomes.com.
 - ns: iamemonline.com.
-- ns: wuaze.com.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: wuaze.com.
 - ns: iaasdns.com.
 - comment: NXDOMAIN 2023-06-02
   disable: true
