@@ -81342,3 +81342,4 @@
 1779323358	Jeff Schaller	terminalus\.dev
 1779328740	Dan Getz	(?-i:gihmknkabkkghpiocgnoiejagngdegea)(?# chromewebstore.google.com)
 1779332710	Dan Getz	manvision\.net
+1779357763	VLAZ	ism[\W_]*+delhi
