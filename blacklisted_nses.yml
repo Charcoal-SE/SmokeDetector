@@ -865,7 +865,9 @@ items:
 - ns: redserverhost.com.
 - ns: hostitbro.com.
 - ns: smoothdns.com.
-- ns: perfectdns.com.
+- comment: NXDOMAIN 2026-05-21
+  disable: true
+  ns: perfectdns.com.
 - ns: drwebhost.com.
 - ns: webpulsesolution.org.
 - ns: amitsellsrealestate.com.
