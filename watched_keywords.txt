@@ -81348,3 +81348,4 @@
 1779364434	lyxal	starbucksmenus\.uk
 1779369585	lyxal	verifiedprohackers?
 1779373821	Dan Getz	suffescom(?:[\W_]*+solutions)?
+1779377949	VLAZ	tm[\W_]*+signs[\W_]*+and[\W_]*+graphics
