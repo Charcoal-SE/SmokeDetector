@@ -474,6 +474,7 @@ class Metasmoke:
             headers = {'content-type': 'application/json'}
             response = Metasmoke.post("/status-update.json",
                                       data=json.dumps(payload), headers=headers, ignore_down=True)
+            response.raise_for_status()
 
             try:
                 response = response.json()
@@ -516,7 +517,9 @@ class Metasmoke:
         headers = {'Content-type': 'application/json'}
         try:
             response = Metasmoke.get("/api/users/code_privileged",
-                                     data=json.dumps(payload), headers=headers).json()['items']
+                                     data=json.dumps(payload), headers=headers)
+            response.raise_for_status()
+            response = response.json()['items']
         except Exception as e:
             log('error', e)
             return
@@ -543,7 +546,9 @@ class Metasmoke:
             'urls': post_url
         }
         try:
-            response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=payload)
+            response.raise_for_status()
+            response = response.json()
         except Exception as e:
             log('error', e)
             return False, []
@@ -555,7 +560,9 @@ class Metasmoke:
             id = str(response["items"][-1]["id"])
             payload = {'key': GlobalVars.metasmoke_key}
 
-            flags = Metasmoke.get("/api/v2.0/posts/" + id + "/flags", params=payload).json()
+            flags = Metasmoke.get("/api/v2.0/posts/" + id + "/flags", params=payload)
+            flags.raise_for_status()
+            flags = flags.json()
 
             if len(flags["items"]) > 0:
                 return True, [user["username"] for user in flags["items"][0]["autoflagged"]["users"]]
@@ -610,14 +617,18 @@ class Metasmoke:
 
         if url is not None:
             params = {"key": GlobalVars.metasmoke_key, "urls": url, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
-            response = Metasmoke.get("/api/v2.0/posts/urls", params=params).json()
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=params)
+            response.raise_for_status()
+            response = response.json()
         elif ids is not None:
             post_id, site = ids
             site = parsing.api_parameter_from_link(site)
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
             try:
-                response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params).json()
+                response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params)
+                response.raise_for_status()
+                response = response.json()
             except AttributeError:
                 response = None
 
@@ -641,7 +652,9 @@ class Metasmoke:
             'urls': parsing.to_protocol_relative(post_url)
         }
         try:
-            response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
+            response = Metasmoke.get('/api/v2.0/posts/urls', params=payload)
+            response.raise_for_status()
+            response = response.json()
         except AttributeError:
             return None
         except Exception as e:
