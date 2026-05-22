@@ -81354,3 +81354,4 @@
 1779425767	VLAZ	bir[\W_]*+billing[\W_]*+paragliding[\W_]*+rudra
 1779428767	lyxal	aatmanclinic\.com
 1779434542	VLAZ	thexflats\.com
+1779445270	Jeff Schaller	sparsh-clinic\.com
