@@ -13,7 +13,7 @@ GitError = sp.CalledProcessError
 
 def _call_process(execcmd, _ok_code=None, return_data=True, return_tuple=False):
     execcmd = ('git',) + execcmd
-    proc = sp.Popen(execcmd, stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
+    proc = sp.Popen(execcmd, stdout=sp.PIPE, stderr=sp.PIPE, shell=False)
     (stdout, stderr) = proc.communicate()
     retcode = proc.returncode
     if retcode != 0:
