@@ -81365,3 +81365,4 @@
 1779468854	Dan Getz	flash[\W_]*+usdt
 1779481526	Dan Getz	mahatma[\W_]*+post
 1779491311	Jeff Schaller	swiftlifts\.com
+1779492397	Dan Getz	wagamamamenuhub\.co\.uk
