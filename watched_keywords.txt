@@ -81350,3 +81350,4 @@
 1779373821	Dan Getz	suffescom(?:[\W_]*+solutions)?
 1779377949	VLAZ	tm[\W_]*+signs[\W_]*+and[\W_]*+graphics
 1779388358	Dan Getz	peptides\.io
+1779425752	VLAZ	birbillingparagliding\.com
