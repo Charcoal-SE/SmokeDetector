@@ -81362,3 +81362,4 @@
 1779466424	Dan Getz	f2ei6(?#redotpay code)
 1779467177	VLAZ	redotpay
 1779468838	Dan Getz	usdt[\W_]*+flash
+1779468854	Dan Getz	flash[\W_]*+usdt
