@@ -81352,3 +81352,4 @@
 1779388358	Dan Getz	peptides\.io
 1779425752	VLAZ	birbillingparagliding\.com
 1779425767	VLAZ	bir[\W_]*+billing[\W_]*+paragliding[\W_]*+rudra
+1779428767	lyxal	aatmanclinic\.com
