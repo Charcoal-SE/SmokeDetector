@@ -81351,3 +81351,4 @@
 1779377949	VLAZ	tm[\W_]*+signs[\W_]*+and[\W_]*+graphics
 1779388358	Dan Getz	peptides\.io
 1779425752	VLAZ	birbillingparagliding\.com
+1779425767	VLAZ	bir[\W_]*+billing[\W_]*+paragliding[\W_]*+rudra
