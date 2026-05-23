@@ -81374,3 +81374,4 @@
 1779540240	Dan Getz	cyborgateuk-arch
 1779544757	lyxal	loop-ux\.com
 1779554742	Dan Getz	dpriver\.com(?!/blog)
+1779554998	Dan Getz	thesmartscaleai\.com
