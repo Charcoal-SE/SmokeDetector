@@ -81375,3 +81375,4 @@
 1779544757	lyxal	loop-ux\.com
 1779554742	Dan Getz	dpriver\.com(?!/blog)
 1779554998	Dan Getz	thesmartscaleai\.com
+1779555006	Dan Getz	invideo[\W_]*+ai
