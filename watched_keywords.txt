@@ -81380,3 +81380,4 @@
 1779559985	Dan Getz	emoji_id_extractor_bot
 1779627863	lyxal	argent-asher\.com
 1779602309	gparyani	com\.offlinew\.gplt
+1779602472	gparyani	com\.offlinew\.gppro
