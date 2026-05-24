@@ -81382,3 +81382,4 @@
 1779602309	gparyani	com\.offlinew\.gplt
 1779602472	gparyani	com\.offlinew\.gppro
 1779635163	Jeff Schaller	pk365game\.pk
+1779642113	Jeff Schaller	kinemasterapp\.co
