@@ -81397,3 +81397,4 @@
 1779781664	VLAZ	palmcityproject\.com
 1779782431	VLAZ	microbitmedia
 1779787183	VLAZ	az24\.vn
+1779787213	VLAZ	daysneo\.com
