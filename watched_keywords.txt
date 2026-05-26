@@ -81409,3 +81409,4 @@
 1779812417	VLAZ	ricchezzacoin\.com
 1779812458	VLAZ	ricchezza[\W_]*+coin(?!\.com(?<=ricchezzacoin\.com))
 1779815392	Dan Getz	tichop\.com
+1779839514	Dan Getz	supremacylovespell01
