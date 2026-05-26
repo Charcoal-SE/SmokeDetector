@@ -81408,3 +81408,4 @@
 1779808774	VLAZ	vartikasoftware\.com
 1779812417	VLAZ	ricchezzacoin\.com
 1779812458	VLAZ	ricchezza[\W_]*+coin(?!\.com(?<=ricchezzacoin\.com))
+1779815392	Dan Getz	tichop\.com
