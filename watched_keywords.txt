@@ -81404,3 +81404,4 @@
 1779789113	VLAZ	lexyta\.com
 1779789121	VLAZ	lexyta(?!\.com)
 1779790102	Jeff Schaller	linkremovalfromsearch\.com
+1779793637	VLAZ	worldsindia\.com
