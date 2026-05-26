@@ -81403,3 +81403,4 @@
 1779788859	VLAZ	aischolars\.in
 1779789113	VLAZ	lexyta\.com
 1779789121	VLAZ	lexyta(?!\.com)
+1779790102	Jeff Schaller	linkremovalfromsearch\.com
