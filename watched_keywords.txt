@@ -81394,3 +81394,4 @@
 1779771909	VLAZ	neuramonks\.com
 1779773909	VLAZ	dennyjohnson696[\W_]*+gmail[\W_]*+com
 1779774804	VLAZ	laurapowell922[\W_]*+gmail[\W_]*+com
+1779781664	VLAZ	palmcityproject\.com
