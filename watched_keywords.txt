@@ -81396,3 +81396,4 @@
 1779774804	VLAZ	laurapowell922[\W_]*+gmail[\W_]*+com
 1779781664	VLAZ	palmcityproject\.com
 1779782431	VLAZ	microbitmedia
+1779787183	VLAZ	az24\.vn
