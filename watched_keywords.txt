@@ -81406,3 +81406,4 @@
 1779790102	Jeff Schaller	linkremovalfromsearch\.com
 1779793637	VLAZ	worldsindia\.com
 1779808774	VLAZ	vartikasoftware\.com
+1779812417	VLAZ	ricchezzacoin\.com
