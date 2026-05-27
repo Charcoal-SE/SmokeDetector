@@ -81414,3 +81414,4 @@
 1779860956	VLAZ	kapoxcosmetics\.com
 1779864612	VLAZ	realhairhouse\.com
 1779866767	VLAZ	skyncareclinic\.com
+1779868342	VLAZ	Planixo[\W_]*+Events
