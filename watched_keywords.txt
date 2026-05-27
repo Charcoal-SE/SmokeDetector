@@ -81417,3 +81417,4 @@
 1779868342	VLAZ	Planixo[\W_]*+Events
 1779868920	VLAZ	grapes[\W_]*+innovative[\W_]*+solutions
 1779869355	VLAZ	starindiatours(?!\.com)
+1779873678	VLAZ	tractorchoice\.in
