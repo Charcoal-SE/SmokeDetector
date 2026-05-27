@@ -81415,3 +81415,4 @@
 1779864612	VLAZ	realhairhouse\.com
 1779866767	VLAZ	skyncareclinic\.com
 1779868342	VLAZ	Planixo[\W_]*+Events
+1779868920	VLAZ	grapes[\W_]*+innovative[\W_]*+solutions
