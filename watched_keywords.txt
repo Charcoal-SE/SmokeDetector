@@ -81419,3 +81419,4 @@
 1779869355	VLAZ	starindiatours(?!\.com)
 1779873678	VLAZ	tractorchoice\.in
 1779875606	VLAZ	luminarneo\.de
+1779877467	VLAZ	alamarbio\.com
