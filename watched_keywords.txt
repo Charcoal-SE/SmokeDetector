@@ -81438,3 +81438,4 @@
 1779958838	VLAZ	dalathub\.vn
 1779959087	VLAZ	benoit[\W_]*+technologies
 1779959095	VLAZ	btlme
+1779959106	VLAZ	prayersa\.com
