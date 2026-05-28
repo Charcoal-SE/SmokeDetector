@@ -81436,3 +81436,4 @@
 1779952086	VLAZ	migso(?!\.com)
 1779954879	Cow	startwithaitools\.com
 1779958838	VLAZ	dalathub\.vn
+1779959087	VLAZ	benoit[\W_]*+technologies
