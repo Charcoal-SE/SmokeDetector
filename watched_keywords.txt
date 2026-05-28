@@ -81441,3 +81441,4 @@
 1779959106	VLAZ	prayersa\.com
 1779959184	VLAZ	hire[\W_]*+himachal[\W_]*+cab(?!\.com(?<=hirehimachalcab\.com))
 1779959193	VLAZ	hirehimachalcab\.com
+1779963489	VLAZ	trangnhoaccessories\.com
