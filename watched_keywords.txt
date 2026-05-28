@@ -81433,3 +81433,4 @@
 1779950929	VLAZ	mzxbtc\.com
 1779950937	VLAZ	(?-i:mzx6666)(?#t.me)
 1779950994	VLAZ	seoauthori\.com
+1779952086	VLAZ	migso(?!\.com)
