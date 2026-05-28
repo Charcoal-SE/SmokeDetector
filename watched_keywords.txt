@@ -61345,7 +61345,6 @@
 1715764292	tripleee	shadowteaminjector\.com
 1715764315	tripleee	daydesigner\.in
 1715764351	tripleee	revolut\.com/referral
-1715764452	VLAZ	Agentmrszafirah77
 1715764485	tripleee	driverstest\.ch
 1715764517	tripleee	mrs[\W_]*zafirah
 1715766961	Jeff Schaller	tehbotol\.online
