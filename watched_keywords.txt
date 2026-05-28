@@ -81435,3 +81435,4 @@
 1779950994	VLAZ	seoauthori\.com
 1779952086	VLAZ	migso(?!\.com)
 1779954879	Cow	startwithaitools\.com
+1779958838	VLAZ	dalathub\.vn
