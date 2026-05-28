@@ -81439,3 +81439,4 @@
 1779959087	VLAZ	benoit[\W_]*+technologies
 1779959095	VLAZ	btlme
 1779959106	VLAZ	prayersa\.com
+1779959184	VLAZ	hire[\W_]*+himachal[\W_]*+cab(?!\.com(?<=hirehimachalcab\.com))
