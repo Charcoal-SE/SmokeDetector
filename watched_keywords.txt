@@ -81431,3 +81431,4 @@
 1779940746	Dan Getz	smartplayhub\.com\.br
 1779944748	VLAZ	sla9\.com
 1779950929	VLAZ	mzxbtc\.com
+1779950937	VLAZ	(?-i:mzx6666)(?#t.me)
