@@ -81458,3 +81458,4 @@
 1780041530	VLAZ	gbc-engineers\.com
 1780048668	Jeff Schaller	wmlink2step\.co
 1780048939	Jeff Schaller	joinkumo\.co
+1780052188	Dan Getz	laburnumdevelopers\.com
