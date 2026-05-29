@@ -81457,3 +81457,4 @@
 1780040132	VLAZ	vitacmeric
 1780041530	VLAZ	gbc-engineers\.com
 1780048668	Jeff Schaller	wmlink2step\.co
+1780048939	Jeff Schaller	joinkumo\.co
