@@ -81449,3 +81449,4 @@
 1780028285	VLAZ	acaloencuentras\.com
 1780028435	VLAZ	nycfloorpro\.com
 1780032548	lyxal	glassagencies\.com
+1780032567	lyxal	glass[\W_]*+agencies(?!\.com(?<=glassagencies\.com))
