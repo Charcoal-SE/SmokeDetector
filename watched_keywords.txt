@@ -81454,3 +81454,4 @@
 1780039797	VLAZ	ennote\.io
 1780040093	VLAZ	zorixai\.app
 1780040100	VLAZ	vananherbal\.eu
+1780040132	VLAZ	vitacmeric
