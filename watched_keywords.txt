@@ -81452,3 +81452,4 @@
 1780032567	lyxal	glass[\W_]*+agencies(?!\.com(?<=glassagencies\.com))
 1780032718	lyxal	agarwalestates\.com
 1780039797	VLAZ	ennote\.io
+1780040093	VLAZ	zorixai\.app
