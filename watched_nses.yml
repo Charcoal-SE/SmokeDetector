@@ -4171,7 +4171,9 @@ items:
   ns: inmotionhosting.com.
 - ns: myhostindia.com.
 - ns: lfmserver.com.
-- ns: symbolhostpremiumdns.com.
+- comment: 2026-05-26 NXDOMAIN
+  disable: true
+  ns: symbolhostpremiumdns.com.
 - ns: hostgator.in.
 - ns:
   - cns2023.hostgator.com.
