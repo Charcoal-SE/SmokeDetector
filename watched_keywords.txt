@@ -81477,3 +81477,4 @@
 1780311441	Dan Getz	risingmax
 1780313527	Dan Getz	fixzi\.ai
 1780317022	Dan Getz	recoveryfix
+1780319335	Dan Getz	notarydirect\.se
