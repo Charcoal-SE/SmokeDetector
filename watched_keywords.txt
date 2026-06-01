@@ -81479,3 +81479,4 @@
 1780317022	Dan Getz	recoveryfix
 1780319335	Dan Getz	notarydirect\.se
 1780332180	Jeff Schaller	gisgp\.com
+1780353294	Jeff Schaller	lexingtonappliancerepairky\.com
