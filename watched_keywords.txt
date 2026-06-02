@@ -81487,3 +81487,4 @@
 1780395996	Jeff Schaller	and-villa\.jp
 1780396039	Jeff Schaller	selectech\.com\.sg
 1780397481	lyxal	quick[\W_]*+heal
+1780410869	Dan Getz	block[\W_]*+recovery[\W_]*+team
