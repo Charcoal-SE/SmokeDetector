@@ -67896,7 +67896,6 @@
 1730964584	Cow	how[\W_]*+do[\W_]*+i[\W_]*+complain
 1730965401	Cow	haihaisoft\.com
 1730965663	Cow	mayanksinghvi\.com
-1730965783	Cow	toanphatinfo\.com
 1730966040	Cow	toolsforhuman\.com
 1730966528	Cow	afflr\.io
 1730970915	Cow	365tinthethao\.com
