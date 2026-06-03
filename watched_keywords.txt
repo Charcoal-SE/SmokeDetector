@@ -81509,3 +81509,4 @@
 1780510935	Dan Getz	inertix\.pro
 1780515031	Dan Getz	metered\.ca
 1780515234	Dan Getz	wordscountertool\.com
+1780526269	Dan Getz	corretordetextopro\.com\.br
