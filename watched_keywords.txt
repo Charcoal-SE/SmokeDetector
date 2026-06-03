@@ -81492,3 +81492,4 @@
 1780428414	Dan Getz	bestpaldesign\.com
 1780431016	Dan Getz	gitclips\.com
 1780440789	Dan Getz	dorld\.tech
+1780451956	Dan Getz	thenewway\.vn
