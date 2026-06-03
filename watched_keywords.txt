@@ -81500,3 +81500,4 @@
 1780483399	Dan Getz	indexbolt\.com
 1780484371	Jeff Schaller	yardrestaurantmenu\.us
 1780488650	Dan Getz	pink-socials\.com
+1780490757	Dan Getz	rootlearning\.in
