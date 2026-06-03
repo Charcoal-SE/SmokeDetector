@@ -81503,3 +81503,4 @@
 1780490757	Dan Getz	rootlearning\.in
 1780491675	Jeff Schaller	windowinstallation-el-paso\.com
 1780494424	Jeff Schaller	pindown\.com\.br
+1780502609	Dan Getz	^ภัทรพล แสนกล้า$
