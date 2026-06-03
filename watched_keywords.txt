@@ -81504,3 +81504,4 @@
 1780491675	Jeff Schaller	windowinstallation-el-paso\.com
 1780494424	Jeff Schaller	pindown\.com\.br
 1780502609	Dan Getz	^ภัทรพล แสนกล้า$
+1780505313	Dan Getz	levipmorocco\.com
