@@ -81510,3 +81510,4 @@
 1780515031	Dan Getz	metered\.ca
 1780515234	Dan Getz	wordscountertool\.com
 1780526269	Dan Getz	corretordetextopro\.com\.br
+1780531624	Dan Getz	matchupwise\.com
