@@ -81515,3 +81515,4 @@
 1780554416	VLAZ	midas[\W_]*+wellness[\W_]*+hub(?!\.com(?<=midaswellnesshub\.com))
 1780554423	VLAZ	midaswellnesshub\.com
 1780557489	VLAZ	cybermarkagency(?!\.com)
+1780557497	VLAZ	cybermarkagency\.com
