@@ -81512,3 +81512,4 @@
 1780526269	Dan Getz	corretordetextopro\.com\.br
 1780531624	Dan Getz	matchupwise\.com
 1780553924	VLAZ	cancunairporttransportations\.com
+1780554416	VLAZ	midas[\W_]*+wellness[\W_]*+hub(?!\.com(?<=midaswellnesshub\.com))
