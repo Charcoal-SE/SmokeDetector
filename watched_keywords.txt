@@ -81538,3 +81538,4 @@
 1780654198	VLAZ	thefuturistics\.com
 1780656769	VLAZ	dulux\.com\.my
 1780660594	Dan Getz	skyexchangeco\.com
+1780660718	VLAZ	astroma\.co
