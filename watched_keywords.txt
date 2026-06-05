@@ -81542,3 +81542,4 @@
 1780672224	VLAZ	lightheartedwanderer\.com
 1780674288	Ryan M	chawn\.com
 1780679267	Jeff Schaller	realignchirophysio\.ca
+1780691700	Dan Getz	tachiyomi\.io
