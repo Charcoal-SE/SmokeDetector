@@ -81533,3 +81533,4 @@
 1780653190	VLAZ	almac\.co\.in
 1780653845	VLAZ	eurospcflooring\.com
 1780653857	VLAZ	vsspower\.com
+1780654106	VLAZ	aymanalemd[\W_]*+(?:at)?[\W_]*+gmail[\W_]*+(?:dot)?[\W_]*+com
