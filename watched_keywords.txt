@@ -81536,3 +81536,4 @@
 1780654106	VLAZ	aymanalemd[\W_]*+(?:at)?[\W_]*+gmail[\W_]*+(?:dot)?[\W_]*+com
 1780654121	VLAZ	sibnetworks\.com
 1780654198	VLAZ	thefuturistics\.com
+1780656769	VLAZ	dulux\.com\.my
