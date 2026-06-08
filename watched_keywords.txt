@@ -81565,3 +81565,4 @@
 1780855721	Dan Getz	tokencut\.org
 1780855731	Dan Getz	markitdown-pro\.com
 1780871690	Jeff Schaller	primeauthenticsdocs\.com
+1780896617	VLAZ	tiranga-game\.games
