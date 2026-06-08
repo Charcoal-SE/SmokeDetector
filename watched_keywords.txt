@@ -81578,3 +81578,4 @@
 1780920899	Dan Getz	genzpromarketing\.com
 1780920921	Dan Getz	e1od
 1780922409	Jeff Schaller	cdkeycompares\.com
+1780923443	Jeff Schaller	fxpelectricfan\.com
