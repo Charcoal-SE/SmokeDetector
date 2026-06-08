@@ -81582,3 +81582,4 @@
 1780930716	Jeff Schaller	SalvageAsset(?#telegram)
 1780936395	Jeff Schaller	pvamarketplace\.com
 1780936471	Jeff Schaller	bcrexpertsolution\.com
+1780962410	Jeff Schaller	bitcrack\.co\.site
