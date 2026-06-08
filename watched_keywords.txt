@@ -81566,3 +81566,4 @@
 1780855731	Dan Getz	markitdown-pro\.com
 1780871690	Jeff Schaller	primeauthenticsdocs\.com
 1780896617	VLAZ	tiranga-game\.games
+1780901811	VLAZ	fpsstructures\.com
