@@ -81568,3 +81568,4 @@
 1780896617	VLAZ	tiranga-game\.games
 1780901811	VLAZ	fpsstructures\.com
 1780904470	VLAZ	Antier(?# some crypto company, there are a few FP hits in Spanish)
+1780904487	VLAZ	northstonegroup\.org
