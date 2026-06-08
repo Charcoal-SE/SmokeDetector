@@ -81567,3 +81567,4 @@
 1780871690	Jeff Schaller	primeauthenticsdocs\.com
 1780896617	VLAZ	tiranga-game\.games
 1780901811	VLAZ	fpsstructures\.com
+1780904470	VLAZ	Antier(?# some crypto company, there are a few FP hits in Spanish)
