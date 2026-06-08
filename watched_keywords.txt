@@ -81572,3 +81572,4 @@
 1780904524	VLAZ	northstone[\W_]*+group(?!\.org(?<=northstonegroup\.org))
 1780904538	VLAZ	kingscfo\.com
 1780905730	VLAZ	galosi
+1780912541	Dan Getz	newhiketech\.com
