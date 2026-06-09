@@ -81601,3 +81601,4 @@
 1781021809	VLAZ	money-snap\.com
 1781023116	VLAZ	packagist\.org/packages/ashararsi
 1781023195	VLAZ	free[\W_]*+esim[\W_]*+trial(?!\.net(?<=freeesimtrial\.net))
+1781023203	VLAZ	freeesimtrial\.net
