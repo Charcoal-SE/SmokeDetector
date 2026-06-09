@@ -81595,3 +81595,4 @@
 1781000195	Jeff Schaller	wholesaleboosterpokemon\.com
 1781001123	Dan Getz	studyhours\.com
 1781005139	Dan Getz	beaconmohali\.com
+1781005153	Dan Getz	gosol\.in
