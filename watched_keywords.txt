@@ -81585,3 +81585,4 @@
 1780962410	Jeff Schaller	bitcrack\.co\.site
 1780979206	VLAZ	roco\.global
 1780979531	VLAZ	bicrack[\W_]*+recovery[\W_]*+solutions
+1780982648	VLAZ	bricksconsultancy\.com
