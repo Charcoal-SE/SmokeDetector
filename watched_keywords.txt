@@ -81603,3 +81603,4 @@
 1781023195	VLAZ	free[\W_]*+esim[\W_]*+trial(?!\.net(?<=freeesimtrial\.net))
 1781023203	VLAZ	freeesimtrial\.net
 1781033156	Jeff Schaller	limousineservicetoronto\.co
+1781038679	Dan Getz	wordlynest\.com
