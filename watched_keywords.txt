@@ -81586,3 +81586,4 @@
 1780979206	VLAZ	roco\.global
 1780979531	VLAZ	bicrack[\W_]*+recovery[\W_]*+solutions
 1780982648	VLAZ	bricksconsultancy\.com
+1780982694	VLAZ	bricks[\W_]*+consultancy(?!\.com(?<=bricksconsultancy\.com))
