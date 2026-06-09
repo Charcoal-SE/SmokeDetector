@@ -81593,3 +81593,4 @@
 1780989863	VLAZ	jobsecuritymeter\.com
 1781000168	Jeff Schaller	airvance-solutions\.com
 1781000195	Jeff Schaller	wholesaleboosterpokemon\.com
+1781001123	Dan Getz	studyhours\.com
