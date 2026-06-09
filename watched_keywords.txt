@@ -81597,3 +81597,4 @@
 1781005139	Dan Getz	beaconmohali\.com
 1781005153	Dan Getz	gosol\.in
 1781008626	Jeff Schaller	sapba8\.com
+1781021163	Dan Getz	effectivecpmnetwork\.com
