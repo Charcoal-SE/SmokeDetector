@@ -81589,3 +81589,4 @@
 1780982694	VLAZ	bricks[\W_]*+consultancy(?!\.com(?<=bricksconsultancy\.com))
 1780986560	VLAZ	shiraverse(?!\.com)
 1780989702	VLAZ	purchasing-orbit\.com
+1780989725	VLAZ	levydentalarts\.com
