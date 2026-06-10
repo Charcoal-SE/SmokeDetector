@@ -81607,3 +81607,4 @@
 1781069401	VLAZ	platedlibrary\.com
 1781069990	Dan Getz	cssawwwards\.com
 1781071472	VLAZ	jploft(?!\.com)
+1781073114	VLAZ	insulation[\W_]*+removal[\W_]*+buckeye[\W_]*+az
