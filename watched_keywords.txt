@@ -81606,3 +81606,4 @@
 1781038679	Dan Getz	wordlynest\.com
 1781069401	VLAZ	platedlibrary\.com
 1781069990	Dan Getz	cssawwwards\.com
+1781071472	VLAZ	jploft(?!\.com)
