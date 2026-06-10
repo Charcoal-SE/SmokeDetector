@@ -81612,3 +81612,4 @@
 1781077631	Dan Getz	aipowereddigital\.marketing
 1781077640	Dan Getz	snackdlhub\.com
 1781081316	Dan Getz	wififix\.ae
+1781081344	Dan Getz	tennis-api\.com
