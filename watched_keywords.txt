@@ -81625,3 +81625,4 @@
 1781097846	Dan Getz	(?-i:^beware of geeks\.\.\.$)
 1781103112	VLAZ	archiet\.com
 1781103121	VLAZ	archiet(?!\.com)
+1781103156	VLAZ	point2space\.com
