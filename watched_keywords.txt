@@ -81616,3 +81616,4 @@
 1781081351	Dan Getz	tennis-api(?!\.com)
 1781083769	Ryan M	moracle-korea\.com
 1781085785	Jeff Schaller	superelmech\.com
+1781090748	VLAZ	ktech[\W_]*+home[\W_]*+appliances
