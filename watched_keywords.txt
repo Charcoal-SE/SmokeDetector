@@ -81624,3 +81624,4 @@
 1781094162	Jeff Schaller	wwoeic\.com
 1781097846	Dan Getz	(?-i:^beware of geeks\.\.\.$)
 1781103112	VLAZ	archiet\.com
+1781103121	VLAZ	archiet(?!\.com)
