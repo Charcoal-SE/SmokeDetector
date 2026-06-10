@@ -81623,3 +81623,4 @@
 1781093069	VLAZ	arvinddairy\.com
 1781094162	Jeff Schaller	wwoeic\.com
 1781097846	Dan Getz	(?-i:^beware of geeks\.\.\.$)
+1781103037	VLAZ	archiet
