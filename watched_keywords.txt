@@ -81614,3 +81614,4 @@
 1781081316	Dan Getz	wififix\.ae
 1781081344	Dan Getz	tennis-api\.com
 1781081351	Dan Getz	tennis-api(?!\.com)
+1781083769	Ryan M	moracle-korea\.com
