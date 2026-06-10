@@ -81629,3 +81629,4 @@
 1781103164	VLAZ	point2space(?!\.com)
 1781109277	Jeff Schaller	stepabovemassage\.com
 1781110290	VLAZ	jackleathers\.com
+1781117508	VLAZ	locksmithaikensc\.com
