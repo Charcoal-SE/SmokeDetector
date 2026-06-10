@@ -81609,3 +81609,4 @@
 1781071472	VLAZ	jploft(?!\.com)
 1781073114	VLAZ	insulation[\W_]*+removal[\W_]*+buckeye[\W_]*+az
 1781073254	VLAZ	top5creditrepair\.com
+1781077631	Dan Getz	aipowereddigital\.marketing
