@@ -81617,3 +81617,4 @@
 1781083769	Ryan M	moracle-korea\.com
 1781085785	Jeff Schaller	superelmech\.com
 1781090748	VLAZ	ktech[\W_]*+home[\W_]*+appliances
+1781090858	VLAZ	serpspur
