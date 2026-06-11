@@ -81638,3 +81638,4 @@
 1781166735	VLAZ	ibsindia\.org
 1781172368	VLAZ	techlte[\W_]*+world(?!\.com(?<=techlteworld\.com))
 1781172688	VLAZ	igrammar\.app
+1781175571	Jeff Schaller	bigland-promo\.icu
