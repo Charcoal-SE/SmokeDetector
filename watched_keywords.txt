@@ -81631,3 +81631,4 @@
 1781110290	VLAZ	jackleathers\.com
 1781117508	VLAZ	locksmithaikensc\.com
 1781151196	Anerdw	leverup\.xyz
+1781150980	Anerdw	Git[\W_]*+Loupe
