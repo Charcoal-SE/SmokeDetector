@@ -81632,3 +81632,4 @@
 1781117508	VLAZ	locksmithaikensc\.com
 1781151196	Anerdw	leverup\.xyz
 1781150980	Anerdw	Git[\W_]*+Loupe
+1781158545	VLAZ	krogarfeedback\.org
