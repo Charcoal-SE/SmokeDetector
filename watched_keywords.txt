@@ -81647,3 +81647,4 @@
 1781182853	Jeff Schaller	GAI[\W_]*+Insights
 1781185859	Jeff Schaller	anvearya\.com
 1781193893	VLAZ	faireviews\.com
+1781193901	VLAZ	faireviews(?!\.com)
