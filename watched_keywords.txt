@@ -81640,3 +81640,4 @@
 1781172688	VLAZ	igrammar\.app
 1781175571	Jeff Schaller	bigland-promo\.icu
 1781176745	VLAZ	innomax-solutions\.com
+1781176828	VLAZ	(?-i:polymarket_bot_alpha)(?#t.me)
