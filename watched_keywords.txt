@@ -81644,3 +81644,4 @@
 1781178125	Jeff Schaller	sohanaeyehospital\.com
 1781178311	Dan Getz	ibookingholidays\.com
 1781179950	Jeff Schaller	infs\.com
+1781182853	Jeff Schaller	GAI[\W_]*+Insights
