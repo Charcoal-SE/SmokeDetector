@@ -81642,3 +81642,4 @@
 1781176745	VLAZ	innomax-solutions\.com
 1781176828	VLAZ	(?-i:polymarket_bot_alpha)(?#t.me)
 1781178125	Jeff Schaller	sohanaeyehospital\.com
+1781178311	Dan Getz	ibookingholidays\.com
