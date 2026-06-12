@@ -81650,3 +81650,4 @@
 1781193901	VLAZ	faireviews(?!\.com)
 1781239646	CPlus	sapsanti\.com
 1781257728	Dan Getz	opsbash\.com
+1781257752	Dan Getz	sleepnetshop\.com
