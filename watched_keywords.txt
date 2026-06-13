@@ -81664,3 +81664,4 @@
 1781329223	VLAZ	worxmate\.ai
 1781330072	VLAZ	firewall-prediction-demonstrate-membrane\.trycloudflare\.com
 1781330321	VLAZ	thegioi-esim\.com
+1781330739	VLAZ	fj-techtools\.com
