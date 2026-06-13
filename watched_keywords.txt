@@ -81662,3 +81662,4 @@
 1781302012	Dan Getz	wifishop\.org
 1781309874	Jeff Schaller	leodisrandle41(?:@gmail\.com)?
 1781329223	VLAZ	worxmate\.ai
+1781330072	VLAZ	firewall-prediction-demonstrate-membrane\.trycloudflare\.com
