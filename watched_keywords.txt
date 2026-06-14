@@ -81684,3 +81684,4 @@
 1781416895	Dan Getz	dnipornombrespe\.com
 1781416944	VLAZ	queensmedicalcenter\.ae
 1781439234	Dan Getz	bitcrack[\W_]*+recovery
+1781439267	Dan Getz	(?-i:20635796)(?# zenodo.org)
