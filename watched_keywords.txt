@@ -81685,3 +81685,4 @@
 1781416944	VLAZ	queensmedicalcenter\.ae
 1781439234	Dan Getz	bitcrack[\W_]*+recovery
 1781439267	Dan Getz	(?-i:20635796)(?# zenodo.org)
+1781442410	Dan Getz	docimgscan\.com
