@@ -81686,3 +81686,4 @@
 1781439234	Dan Getz	bitcrack[\W_]*+recovery
 1781439267	Dan Getz	(?-i:20635796)(?# zenodo.org)
 1781442410	Dan Getz	docimgscan\.com
+1781444626	Jeff Schaller	roofrepairsincentralcoast\.com
