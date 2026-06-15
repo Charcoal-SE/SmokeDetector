@@ -81691,3 +81691,4 @@
 1781499255	VLAZ	omdesign\.agency
 1781502317	Ryan M	xboluna/remote-run-llm
 1781510700	Ryan M	tropical-casino\.com
+1781512095	DavidW	aiblogmind\.com
