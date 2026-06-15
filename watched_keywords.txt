@@ -81693,3 +81693,4 @@
 1781510700	Ryan M	tropical-casino\.com
 1781512095	DavidW	aiblogmind\.com
 1781516635	Dan Getz	revamp[\W_]*+weddings
+1781516656	Dan Getz	monkey555\.com
