@@ -81702,3 +81702,4 @@
 1781525599	VLAZ	(?-i:9xMlDSUZyciI2JT7C)(?# share.google)
 1781530502	Jeff Schaller	basiccodingconcepts\.net
 1781533880	Dan Getz	birdeye\.so
+1781533959	Dan Getz	cryptosnearby
