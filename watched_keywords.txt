@@ -81690,7 +81690,6 @@
 1781460169	Jeff Schaller	hayes-accountants\.co\.uk
 1781499255	VLAZ	omdesign\.agency
 1781502317	Ryan M	xboluna/remote-run-llm
-1781510700	Ryan M	tropical-casino\.com
 1781512095	DavidW	aiblogmind\.com
 1781516635	Dan Getz	revamp[\W_]*+weddings
 1781516656	Dan Getz	monkey555\.com
