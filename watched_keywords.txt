@@ -79626,7 +79626,6 @@
 1769001346	lyxal	howtolookatahouse\.com
 1769001573	lyxal	droneasaservice\.com
 1769003255	lyxal	bestiptvservice4k\.com
-1769010156	VLAZ	cleverhumanizer\.ai
 1769011575	Jeff Schaller	nuimagedetail\.com
 1769011615	Jeff Schaller	Nu[\W_]*+Image[\W_]*+Detail
 1769013741	VLAZ	dphealth\.local
