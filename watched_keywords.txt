@@ -81714,3 +81714,4 @@
 1781596550	VLAZ	apollozen(?# promo code)
 1781596557	VLAZ	apollo[\W_]*+neuro
 1781596564	VLAZ	essentialwellnessaz\.com
+1781603314	Ryan M	funkeeper\.in
