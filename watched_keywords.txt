@@ -81705,3 +81705,4 @@
 1781533959	Dan Getz	cryptosnearby
 1781537198	Dan Getz	online-gerber-viewer\.com
 1781551679	Jeff Schaller	nabvio\.co\.uk
+1781588183	VLAZ	foodpanda\.pk
