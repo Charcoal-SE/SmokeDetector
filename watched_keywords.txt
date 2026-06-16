@@ -81721,3 +81721,4 @@
 1781610990	Jeff Schaller	msmtravelegypt\.com
 1781611750	Dan Getz	goldrateinpakistan\.pk
 1781614276	Dan Getz	noorsa\.center
+1781615770	Jeff Schaller	pocketspeedometer\.com
