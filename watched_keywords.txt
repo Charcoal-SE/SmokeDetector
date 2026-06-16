@@ -81716,3 +81716,4 @@
 1781596564	VLAZ	essentialwellnessaz\.com
 1781603314	Ryan M	funkeeper\.in
 1781607581	VLAZ	dinomepaintingservices\.com
+1781609540	Dan Getz	foundersbar\.com
