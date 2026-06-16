@@ -81712,3 +81712,4 @@
 1781589929	VLAZ	tezion-studio\.com
 1781591226	VLAZ	arna[\W_]*+softech(?!\.com(?<=arnasoftech\.com))
 1781596550	VLAZ	apollozen(?# promo code)
+1781596557	VLAZ	apollo[\W_]*+neuro
