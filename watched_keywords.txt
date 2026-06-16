@@ -81722,3 +81722,4 @@
 1781611750	Dan Getz	goldrateinpakistan\.pk
 1781614276	Dan Getz	noorsa\.center
 1781615770	Jeff Schaller	pocketspeedometer\.com
+1781618683	Jeff Schaller	solanaairdrop\.fun
