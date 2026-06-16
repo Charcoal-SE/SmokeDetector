@@ -81708,3 +81708,4 @@
 1781588183	VLAZ	foodpanda\.pk
 1781588233	VLAZ	namazvaxtiaz\.com
 1781588540	VLAZ	clickzenix
+1781588548	VLAZ	myviq\.com
