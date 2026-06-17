@@ -81724,3 +81724,4 @@
 1781615770	Jeff Schaller	pocketspeedometer\.com
 1781618683	Jeff Schaller	solanaairdrop\.fun
 1781648166	Jeff Schaller	evtxparser\.com
+1781669810	VLAZ	(?-i:brutal77/)(?#heylink.me)
