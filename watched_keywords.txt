@@ -81732,3 +81732,4 @@
 1781683459	VLAZ	furnishmeister\.com
 1781686922	VLAZ	worksbuddy(?!\.ai)
 1781691160	Dan Getz	matapdp88\.com
+1781695676	Jeff Schaller	stoahub\.com
