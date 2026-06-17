@@ -81733,3 +81733,4 @@
 1781686922	VLAZ	worksbuddy(?!\.ai)
 1781691160	Dan Getz	matapdp88\.com
 1781695676	Jeff Schaller	stoahub\.com
+1781696389	Jeff Schaller	Hangar[\W_]*+Trader
