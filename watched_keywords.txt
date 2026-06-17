@@ -81734,3 +81734,4 @@
 1781691160	Dan Getz	matapdp88\.com
 1781695676	Jeff Schaller	stoahub\.com
 1781696389	Jeff Schaller	Hangar[\W_]*+Trader
+1781709759	Dan Getz	digitraffichub\.com
