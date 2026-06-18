@@ -81740,3 +81740,4 @@
 1781741971	Jeff Schaller	socalspyteam(?:@gmail\.com)?
 1781746393	Ryan M	dacsanbinhminh\.com
 1781750897	Dan Getz	(?-i:pLZlrWjjl8g)(?#youtube)
+1781756666	VLAZ	trustedspellscaster\.simdif\.com
