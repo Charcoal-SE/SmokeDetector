@@ -81744,3 +81744,4 @@
 1781761680	VLAZ	redington[\W_]*+limited
 1781761702	VLAZ	flexlendcapital\.com
 1781763232	VLAZ	iyrinhealth\.com
+1781764387	VLAZ	digitalalig\.com
