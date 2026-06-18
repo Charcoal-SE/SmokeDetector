@@ -81742,3 +81742,4 @@
 1781750897	Dan Getz	(?-i:pLZlrWjjl8g)(?#youtube)
 1781756666	VLAZ	trustedspellscaster\.simdif\.com
 1781761680	VLAZ	redington[\W_]*+limited
+1781761702	VLAZ	flexlendcapital\.com
