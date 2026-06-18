@@ -81746,3 +81746,4 @@
 1781763232	VLAZ	iyrinhealth\.com
 1781764387	VLAZ	digitalalig\.com
 1781777252	Jeff Schaller	PineGen[\W_]*+AI
+1781779923	Jeff Schaller	nakshamastro\.com
