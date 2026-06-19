@@ -81753,3 +81753,4 @@
 1781783376	Dan Getz	assignmentwriters\.com\.au
 1781784775	Dan Getz	outranko\.com
 1781849546	VLAZ	qmlogics\.com
+1781849567	VLAZ	qm[\W_]*+logics(?!\.com(?<=qmlogics\.com))
