@@ -81754,3 +81754,4 @@
 1781784775	Dan Getz	outranko\.com
 1781849546	VLAZ	qmlogics\.com
 1781849567	VLAZ	qm[\W_]*+logics(?!\.com(?<=qmlogics\.com))
+1781852976	VLAZ	lipomaremovals\.com
