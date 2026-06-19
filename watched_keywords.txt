@@ -81756,3 +81756,4 @@
 1781849567	VLAZ	qm[\W_]*+logics(?!\.com(?<=qmlogics\.com))
 1781852976	VLAZ	lipomaremovals\.com
 1781853152	Dan Getz	iiag\.co\.in
+1781853163	VLAZ	sleekbill\.org
