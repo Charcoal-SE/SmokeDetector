@@ -81764,3 +81764,4 @@
 1781929494	Dan Getz	businessmapglobal\.com
 1781931382	VLAZ	nasdisks\.com
 1781945919	VLAZ	theglobe360\.com
+1781952310	VLAZ	quickguide\.in
