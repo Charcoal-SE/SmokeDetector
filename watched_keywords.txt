@@ -81766,3 +81766,4 @@
 1781945919	VLAZ	theglobe360\.com
 1781952310	VLAZ	quickguide\.in
 1781952317	VLAZ	36128\.com
+1781957900	Dan Getz	nexura\.ltd
