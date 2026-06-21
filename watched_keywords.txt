@@ -81769,3 +81769,4 @@
 1781957900	Dan Getz	nexura\.ltd
 1781964125	Dan Getz	nrichlearning\.com\.au
 1782002192	Jeff Schaller	pandaxpressnutrition\.com
+1782019566	VLAZ	doabarrelroll\.online
