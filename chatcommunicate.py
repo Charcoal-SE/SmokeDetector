@@ -343,10 +343,15 @@ def on_msg(msg, client):
 
             return
 
+    check_ending_div = False
     if message.content.startswith("<div class='partial'>"):
         message.content = message.content[21:]
-        if message.content.endswith("</div>"):
-            message.content = message.content[:-6]
+        check_ending_div = True
+    elif message.content.startswith("<div class='full'>"):
+        message.content = message.content[18:]
+        check_ending_div = True
+    if check_ending_div and message.content.endswith("</div>"):
+        message.content = message.content[:-6]
 
     if (msg.data.get('parent_id') and msg.data.get('show_parent')
             and msg.data.get('parent_username') == client._br.user_name):
