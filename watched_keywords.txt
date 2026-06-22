@@ -81791,3 +81791,4 @@
 1782141298	Jeff Schaller	scopetakeoff\.com
 1782141349	Jeff Schaller	Flooring[\W_]*+Takeoff[\W_]*+Software
 1782142100	Dan Getz	(?:Best|Top)(?-i:(?:[\W_]++[A-Z][a-z-]{2,}+){3,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1782147807	Jeff Schaller	ffastutebetaserver\.com
