@@ -81780,3 +81780,4 @@
 1782115106	Ryan M	antidetect\.org
 1782117410	VLAZ	myoneway\.cab
 1782123569	Jeff Schaller	redsandgroup\.in
+1782123595	Jeff Schaller	gadgetxpedia\.com
