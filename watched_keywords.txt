@@ -81785,3 +81785,4 @@
 1782123860	Jeff Schaller	buecheljakob\.studio
 1782124852	Jeff Schaller	markdownconvertors\.com
 1782125966	Jeff Schaller	aseemsinghal\.com
+1782133428	VLAZ	mauricettecalcul\.fr
