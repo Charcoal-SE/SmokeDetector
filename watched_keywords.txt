@@ -81795,3 +81795,4 @@
 1782150391	VLAZ	magnalitecookwareinc\.com
 1782188598	VLAZ	sourccy(?# telegram)
 1782193665	VLAZ	drseerapani\.in
+1782205002	VLAZ	paperanimators\.in
