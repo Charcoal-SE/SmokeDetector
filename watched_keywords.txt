@@ -81814,3 +81814,4 @@
 1782224133	Dan Getz	generadordepalabra\.com
 1782229346	Dan Getz	dbrosmenu\.com
 1782229497	Dan Getz	wafflemenu\.com
+1782241786	Dan Getz	lenovo\.com(?<!support\.lenovo\.com)(?<!download\.lenovo\.com)(?<!forums\.lenovo\.com)
