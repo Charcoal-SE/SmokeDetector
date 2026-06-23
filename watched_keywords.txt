@@ -81805,3 +81805,4 @@
 1782205603	VLAZ	paper[\W_]*+animators(?!\.in(?<=paperanimators\.in))
 1782205642	VLAZ	fake[\W_]*+usdt[\W_]*+sender
 1782210288	Jeff Schaller	aaroyaa\.com
+1782212287	Dan Getz	phdservices\.org
