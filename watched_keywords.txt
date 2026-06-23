@@ -81803,3 +81803,4 @@
 1782205310	VLAZ	ncdrclawyers\.com
 1782205317	VLAZ	sonjukta\.com
 1782205603	VLAZ	paper[\W_]*+animators(?!\.in(?<=paperanimators\.in))
+1782205642	VLAZ	fake[\W_]*+usdt[\W_]*+sender
