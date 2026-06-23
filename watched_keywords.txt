@@ -81813,3 +81813,4 @@
 1782215395	VLAZ	winston[\W_]*+ai
 1782224114	Dan Getz	armynavymenu\.com
 1782224133	Dan Getz	generadordepalabra\.com
+1782229346	Dan Getz	dbrosmenu\.com
