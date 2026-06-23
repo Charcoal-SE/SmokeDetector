@@ -81812,3 +81812,4 @@
 1782215350	VLAZ	snk[\W_]*+surfaces(?!\.com(?<=snksurfaces\.com))
 1782215395	VLAZ	winston[\W_]*+ai
 1782224114	Dan Getz	armynavymenu\.com
+1782224133	Dan Getz	generadordepalabra\.com
