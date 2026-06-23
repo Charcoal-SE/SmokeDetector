@@ -81810,3 +81810,4 @@
 1782215114	VLAZ	boxes\.buzz
 1782215224	VLAZ	snksurfaces\.com
 1782215350	VLAZ	snk[\W_]*+surfaces(?!\.com(?<=snksurfaces\.com))
+1782215395	VLAZ	winston[\W_]*+ai
