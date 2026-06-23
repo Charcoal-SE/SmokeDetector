@@ -79900,7 +79900,6 @@
 1770748719	Dan Getz	aibyig
 1770750495	Jeff Schaller	gold4africa\.com
 1770753177	Jeff Schaller	onlinebillsplit\.com
-1770774685	Jeff Schaller	lenovo\.com(?<!pcsupport\.lenovo\.com)(?<!download\.lenovo\.com)(?<!forums\.lenovo\.com)
 1770787190	lyxal	remotestate\.com
 1770798308	VLAZ	digihexa\.in
 1770798564	VLAZ	dreamholidayskerala123@gmail\.com
