@@ -81816,3 +81816,4 @@
 1782241786	Dan Getz	lenovo\.com(?<!support\.lenovo\.com)(?<!download\.lenovo\.com)(?<!forums\.lenovo\.com)
 1782250499	Dan Getz	arabprograms\.site
 1782264116	Dan Getz	(?:best|top)(?-i:(?:\s++(?:[A-Z][a-z-]{2,}+|&)){3,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1782274795	lyxal	atscada\.com
