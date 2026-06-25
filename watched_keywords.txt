@@ -81844,3 +81844,4 @@
 1782394704	dbc	singaemasmanagement\.com
 1782394978	VLAZ	singa[\W_]*+emas[\W_]*+management(?!\.com(?<=singaemasmanagement\.com))
 1782394986	VLAZ	singaemasmanagementcompany\.wordpress\.com
+1782398630	Dan Getz	dp-?boss[a-z]*+(?:[-.][a-z]++)++
