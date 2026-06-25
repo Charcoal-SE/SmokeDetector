@@ -81835,3 +81835,4 @@
 1782366343	VLAZ	shaadiplatform\.com
 1782369588	VLAZ	appliancerepairin-pensacola\.com
 1782372338	VLAZ	adultseo\.company
+1782375755	VLAZ	varbs[\W_]*+alliance
