@@ -81841,3 +81841,4 @@
 1782390383	VLAZ	shreebalajidetchem\.com
 1782393346	VLAZ	surveyingindia\.in
 1782393900	VLAZ	zplpreview\.com
+1782394704	dbc	singaemasmanagement\.com
