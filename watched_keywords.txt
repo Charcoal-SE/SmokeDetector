@@ -81850,3 +81850,4 @@
 1782400842	Dan Getz	samtekmachinery\.com
 1782404701	VLAZ	askcurator\.io
 1782413297	Glorfindel	mated\.gg
+1782421929	Dan Getz	bhowra\.ink(?#nuget)
