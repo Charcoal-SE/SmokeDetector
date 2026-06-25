@@ -81847,3 +81847,4 @@
 1782398630	Dan Getz	dp-?boss[a-z]*+(?:[-.][a-z]++)++
 1782400176	Dan Getz	totalshiftleft\.ai
 1782400615	Dan Getz	airlinepolicy\.us
+1782400842	Dan Getz	samtekmachinery\.com
