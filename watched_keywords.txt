@@ -81853,3 +81853,4 @@
 1782421929	Dan Getz	bhowra\.ink(?#nuget)
 1782428507	Dan Getz	ptias\.com
 1782457919	Anerdw	heyyxu\.com
+1782464753	Dan Getz	shoparroo\.com
