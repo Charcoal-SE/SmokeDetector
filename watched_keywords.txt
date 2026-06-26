@@ -81861,3 +81861,4 @@
 1782477771	VLAZ	essaymindset(?!\.com)
 1782477945	VLAZ	sonicindustries\.in
 1782483349	Dan Getz	NIF[\W_]*+Ahmedabad
+1782498635	Vickel	eventuniversity\.in
