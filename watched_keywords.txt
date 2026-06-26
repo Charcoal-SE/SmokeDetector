@@ -81858,3 +81858,4 @@
 1782471524	Dan Getz	paradisefishingcharters\.com\.au
 1782474150	Jeff Schaller	gcodex\.tech
 1782477763	VLAZ	essaymindset\.com
+1782477771	VLAZ	essaymindset(?!\.com)
