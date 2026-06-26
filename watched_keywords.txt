@@ -81862,3 +81862,4 @@
 1782477945	VLAZ	sonicindustries\.in
 1782483349	Dan Getz	NIF[\W_]*+Ahmedabad
 1782498635	Vickel	eventuniversity\.in
+1782499729	Jeff Schaller	firstconnectworldwide\.com
