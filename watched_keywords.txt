@@ -81857,3 +81857,4 @@
 1782470307	Dan Getz	bursaslotofficial\.id
 1782471001	Jeff Schaller	educationkhoj\.com
 1782471524	Dan Getz	paradisefishingcharters\.com\.au
+1782474150	Jeff Schaller	gcodex\.tech
