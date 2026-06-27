@@ -81866,3 +81866,4 @@
 1782501521	Dan Getz	readradius\.com
 1782502599	Ryan M	linkayi\.com
 1782502828	Ryan M	luckypatchers\.com\.br(?# not the official website)
+1782520003	Jeff Schaller	talently\.tech
