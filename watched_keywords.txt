@@ -81868,3 +81868,4 @@
 1782502828	Ryan M	luckypatchers\.com\.br(?# not the official website)
 1782520003	Jeff Schaller	talently\.tech
 1782541937	VLAZ	shayarimagic\.com
+1782541944	VLAZ	gtrdirect\.ca
