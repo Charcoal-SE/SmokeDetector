@@ -81870,3 +81870,4 @@
 1782541937	VLAZ	shayarimagic\.com
 1782541944	VLAZ	gtrdirect\.ca
 1782541955	VLAZ	movieall365\.blogspot
+1782541981	VLAZ	micro[\W_]*+tech[\W_]*+sols
