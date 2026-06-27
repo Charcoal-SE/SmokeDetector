@@ -81879,3 +81879,4 @@
 1782569650	Jeff Schaller	theonstreamapp\.co\.za
 1782572086	Jeff Schaller	bankstatementtoexcelconverter\.com
 1782572200	Jeff Schaller	doubleupcryptomarket\.com
+1782579119	Dan Getz	api-football\.com
