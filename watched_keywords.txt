@@ -81873,3 +81873,4 @@
 1782541981	VLAZ	micro[\W_]*+tech[\W_]*+sols
 1782543540	VLAZ	onstreamza\.com
 1782555383	Jeff Schaller	kowal\.store
+1782558074	Dan Getz	AllTimeIPTV
