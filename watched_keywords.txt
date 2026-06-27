@@ -81872,3 +81872,4 @@
 1782541955	VLAZ	movieall365\.blogspot
 1782541981	VLAZ	micro[\W_]*+tech[\W_]*+sols
 1782543540	VLAZ	onstreamza\.com
+1782555383	Jeff Schaller	kowal\.store
