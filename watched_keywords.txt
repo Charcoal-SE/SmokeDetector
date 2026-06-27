@@ -81878,4 +81878,3 @@
 1782559478	Dan Getz	boyausta\.com
 1782569650	Jeff Schaller	theonstreamapp\.co\.za
 1782572086	Jeff Schaller	bankstatementtoexcelconverter\.com
-1782572151	Jeff Schaller	cryptomarket\.com
