@@ -81875,3 +81875,4 @@
 1782555383	Jeff Schaller	kowal\.store
 1782558074	Dan Getz	AllTimeIPTV
 1782558128	Dan Getz	StrategicERP
+1782559478	Dan Getz	boyausta\.com
