@@ -81894,3 +81894,4 @@
 1782663167	Dan Getz	fontstylepro\.com
 1782665412	Dan Getz	techsolving\.net
 1782676658	VLAZ	auto[\W_]*+shelf[\W_]*+mac
+1782677051	VLAZ	ai[\W_]*+online[\W_]*+audit(?:ors?|ing|s)?
