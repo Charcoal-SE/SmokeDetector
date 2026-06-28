@@ -81886,3 +81886,4 @@
 1782638710	VLAZ	sheetbeam\.com
 1782640911	VLAZ	broadwaypizza\.com\.pk
 1782645968	Jeff Schaller	vbmstyle\.com
+1782650680	Dan Getz	polarfreights\.com
