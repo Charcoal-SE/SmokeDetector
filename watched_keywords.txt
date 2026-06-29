@@ -81898,3 +81898,4 @@
 1782707172	VLAZ	anshidkk\.in
 1782709235	VLAZ	proerpsolution\.com
 1782710743	VLAZ	nithra\.health
+1782715946	Dan Getz	expertrating\.com
