@@ -81897,3 +81897,4 @@
 1782677051	VLAZ	ai[\W_]*+online[\W_]*+audit(?:ors?|ing|s)?
 1782707172	VLAZ	anshidkk\.in
 1782709235	VLAZ	proerpsolution\.com
+1782710743	VLAZ	nithra\.health
