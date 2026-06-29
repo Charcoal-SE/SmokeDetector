@@ -81913,3 +81913,4 @@
 1782736245	Dan Getz	Optimar[\W_]*+Precon
 1782738901	Dan Getz	garypedia\.com
 1782743295	VLAZ	bettingexchangeids\.com
+1782744452	VLAZ	deltaplumbersinc\.com
