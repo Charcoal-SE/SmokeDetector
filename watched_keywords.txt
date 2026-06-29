@@ -81896,3 +81896,4 @@
 1782676658	VLAZ	auto[\W_]*+shelf[\W_]*+mac
 1782677051	VLAZ	ai[\W_]*+online[\W_]*+audit(?:ors?|ing|s)?
 1782707172	VLAZ	anshidkk\.in
+1782709235	VLAZ	proerpsolution\.com
