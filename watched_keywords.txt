@@ -79103,7 +79103,6 @@
 1766927286	Nisse Engström	ambrosiabd\.com
 1766936658	Dan Getz	ittca\.net
 1766938328	Dan Getz	mombeing\.com
-1766941945	Dan Getz	ghostscript\.com
 1766941965	Dan Getz	krono-metre\.tr
 1766948487	Nisse Engström	alkareemtravel\.co\.uk
 1766950861	dbc	okiguards\.com
