@@ -81902,3 +81902,4 @@
 1782718716	VLAZ	avaroz[\W_]*+digital(?!\.com(?<=avarozdigital\.com))
 1782718724	VLAZ	avarozdigital\.com
 1782721437	VLAZ	pvacodes\.com
+1782727062	Jeff Schaller	Aqva[\W_]*+Marketing
