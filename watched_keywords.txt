@@ -81899,3 +81899,4 @@
 1782709235	VLAZ	proerpsolution\.com
 1782710743	VLAZ	nithra\.health
 1782715946	Dan Getz	expertrating\.com
+1782718716	VLAZ	avaroz[\W_]*+digital(?!\.com(?<=avarozdigital\.com))
