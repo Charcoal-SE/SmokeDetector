@@ -81918,3 +81918,4 @@
 1782747235	VLAZ	obxalethia\.art
 1782749170	Dan Getz	MirrorFly
 1782751704	Dan Getz	formsuite\.dev
+1782765835	Jeff Schaller	fapcraftx\.com
