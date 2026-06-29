@@ -81901,3 +81901,4 @@
 1782715946	Dan Getz	expertrating\.com
 1782718716	VLAZ	avaroz[\W_]*+digital(?!\.com(?<=avarozdigital\.com))
 1782718724	VLAZ	avarozdigital\.com
+1782721437	VLAZ	pvacodes\.com
