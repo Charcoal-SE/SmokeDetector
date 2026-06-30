@@ -81924,3 +81924,4 @@
 1782795511	VLAZ	jinojoseph\.xo\.je
 1782799854	VLAZ	sharmascientificindustries\.com
 1782799871	VLAZ	shalimarengineering\.co\.in
+1782802444	VLAZ	tradingviewai\.dev
