@@ -81927,3 +81927,4 @@
 1782802444	VLAZ	tradingviewai\.dev
 1782805111	VLAZ	digierra\.com
 1782811995	VLAZ	seo[\W_]*+bix(?!\.com(?<=seobix\.com))
+1782812003	VLAZ	seobix\.com
