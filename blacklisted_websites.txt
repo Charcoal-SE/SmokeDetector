@@ -6322,3 +6322,4 @@ sonmatypingexpert\.com
 text-differ\.com
 quickguide\.in
 \bprocesson\.io\b
+digihubgroup\.com
