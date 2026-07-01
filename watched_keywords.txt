@@ -81954,3 +81954,4 @@
 1782903488	VLAZ	en-us-en-prostapeeak\.com
 1782905647	Jeff Schaller	rrmittal\.com
 1782912797	Jeff Schaller	phyfundamentals\.org
+1782919239	VLAZ	aurix-gold\.vercel\.app
