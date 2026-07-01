@@ -81941,3 +81941,4 @@
 1782842612	Dan Getz	airportcheapparking\.co\.uk
 1782849571	VLAZ	eraxon\.com
 1782881784	VLAZ	webhopers\.com
+1782881794	VLAZ	webhopers(?!\.com)([\W_]+infotech)?
