@@ -81944,3 +81944,4 @@
 1782881794	VLAZ	webhopers(?!\.com)([\W_]+infotech)?
 1782883113	VLAZ	freecolortool\.com
 1782883925	Dan Getz	purevivegummies\.com
+1782883937	Dan Getz	lumilean\.co\.uk
