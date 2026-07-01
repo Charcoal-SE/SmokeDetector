@@ -81942,3 +81942,4 @@
 1782849571	VLAZ	eraxon\.com
 1782881784	VLAZ	webhopers\.com
 1782881794	VLAZ	webhopers(?!\.com)([\W_]+infotech)?
+1782883113	VLAZ	freecolortool\.com
