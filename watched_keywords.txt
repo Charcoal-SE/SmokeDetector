@@ -81963,3 +81963,4 @@
 1782971243	VLAZ	lescobillchecker\.com
 1782972057	VLAZ	guiformat\.io
 1782978780	Ryan M	github\.com/jrenish710-ui
+1782979272	VLAZ	shivautocare\.com
