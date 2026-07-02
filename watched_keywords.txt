@@ -81969,3 +81969,4 @@
 1782983615	VLAZ	anicine\.xyz
 1782988782	VLAZ	abvcalculator\.org
 1782988958	Dan Getz	guid-generators\.com
+1782994767	Dan Getz	newpunjabidhaba\.com
