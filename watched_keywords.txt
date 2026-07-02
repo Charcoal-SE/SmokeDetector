@@ -81967,3 +81967,4 @@
 1782979593	VLAZ	connectwell\.com
 1782979611	VLAZ	harbor365\.com
 1782983615	VLAZ	anicine\.xyz
+1782988782	VLAZ	abvcalculator\.org
