@@ -3918,3 +3918,4 @@ c[óo]mo[\W_]*+me[\W_]*+comunico[\W_]*+con.{0,20}airways
 company\.site/$(?<=\.company\.site/)
 PassCertHub(?!\.com)
 Agentmrszafirah77
+(?-i:Pluranceteck)(?# telegram.me)
