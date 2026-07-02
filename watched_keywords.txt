@@ -81960,3 +81960,4 @@
 1782964573	Dan Getz	(?-i:B0H48C2ZGV)(?#Amazon)
 1782968257	VLAZ	fnaf1game\.io
 1782970252	VLAZ	titanv\.org
+1782971243	VLAZ	lescobillchecker\.com
