@@ -81958,3 +81958,4 @@
 1782923071	VLAZ	thealostoratv\.com
 1782940510	Dan Getz	thespikevolleyballgame\.com
 1782964573	Dan Getz	(?-i:B0H48C2ZGV)(?#Amazon)
+1782968257	VLAZ	fnaf1game\.io
