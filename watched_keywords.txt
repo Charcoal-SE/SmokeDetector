@@ -80848,7 +80848,6 @@
 1776460374	Jeff Schaller	kiranbedi\.com
 1776471544	Dan Getz	repriced\.ai
 1776477513	Jeff Schaller	genericoncology\.com
-1776517778	SamGibson	fixmyspeakercleaner\.net
 1776523886	Dan Getz	thepaint3d\.com
 1776526553	VLAZ	hathanhmotor\.com
 1776527590	VLAZ	hifamiapp\.com
