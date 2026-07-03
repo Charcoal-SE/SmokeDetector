@@ -6324,3 +6324,4 @@ quickguide\.in
 \bprocesson\.io\b
 digihubgroup\.com
 fixmyspeakercleaner\.net
+gangaonlinebook\.com
