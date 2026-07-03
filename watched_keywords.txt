@@ -81983,3 +81983,4 @@
 1783070503	VLAZ	skillindiaprogram\.com
 1783073025	VLAZ	gardenstatesoapstone\.com
 1783073471	Dan Getz	portoslateimporters\.com
+1783075404	Dan Getz	qality\.dev
