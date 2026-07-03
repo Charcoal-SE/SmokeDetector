@@ -81988,3 +81988,4 @@
 1783077948	VLAZ	hyvago\.com
 1783078032	VLAZ	hyvago(?!\.com)
 1783078885	Dan Getz	mrcabby\.in
+1783079003	Dan Getz	77cyberspy(?:[\W_]*+gmail[\W_]*+com)?
