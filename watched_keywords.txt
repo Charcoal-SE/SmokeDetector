@@ -82027,3 +82027,4 @@
 1783323877	VLAZ	adorahomes\.in
 1783324747	VLAZ	rawalmedicalhall\.vercel\.app
 1783325243	VLAZ	(?-i:^Jericho Blanco$)
+1783325997	Ryan M	xn--wrdle-vua\.com
