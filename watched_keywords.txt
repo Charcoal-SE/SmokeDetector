@@ -82028,3 +82028,4 @@
 1783325243	VLAZ	(?-i:^Jericho Blanco$)
 1783325997	Ryan M	xn--wrdle-vua\.com
 1783331793	VLAZ	kenfra\.in
+1783335196	VLAZ	juliandate\.net
