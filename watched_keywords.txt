@@ -82018,3 +82018,4 @@
 1783317075	VLAZ	liveistikhara\.co\.uk
 1783318644	VLAZ	barkscoop\.com
 1783318797	VLAZ	camp[\W_]*+exotica
+1783321249	VLAZ	cofynd\.com
