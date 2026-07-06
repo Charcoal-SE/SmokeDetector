@@ -82024,3 +82024,4 @@
 1783321863	VLAZ	b2cdatabase\.co
 1783323864	VLAZ	nagent\.ai
 1783323870	VLAZ	nagent(?!\.ai)
+1783323877	VLAZ	adorahomes\.in
