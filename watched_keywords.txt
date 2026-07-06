@@ -82019,3 +82019,4 @@
 1783318644	VLAZ	barkscoop\.com
 1783318797	VLAZ	camp[\W_]*+exotica
 1783321249	VLAZ	cofynd\.com
+1783321255	VLAZ	cofynd(?!\.com)
