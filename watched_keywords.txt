@@ -82034,3 +82034,4 @@
 1783344775	VLAZ	dizzyfeet\.co\.uk
 1783351494	Jeff Schaller	longxinlaser\.com
 1783363105	Jeff Schaller	aniwatch\.com\.ng
+1783372369	Dan Getz	securev2auth\.com
