@@ -82023,3 +82023,4 @@
 1783321489	VLAZ	b2c[\W_]*+database(?!\.co(?<=b2cdatabase\.co))
 1783321863	VLAZ	b2cdatabase\.co
 1783323864	VLAZ	nagent\.ai
+1783323870	VLAZ	nagent(?!\.ai)
