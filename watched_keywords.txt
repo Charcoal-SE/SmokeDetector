@@ -82032,3 +82032,4 @@
 1783337021	Jeff Schaller	interactink\.vercel\.app
 1783344757	VLAZ	HC[\W_]*+Robotics
 1783344775	VLAZ	dizzyfeet\.co\.uk
+1783351494	Jeff Schaller	longxinlaser\.com
