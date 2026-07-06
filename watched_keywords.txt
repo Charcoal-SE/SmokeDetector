@@ -82025,5 +82025,4 @@
 1783323864	VLAZ	nagent\.ai
 1783323870	VLAZ	nagent(?!\.ai)
 1783323877	VLAZ	adorahomes\.in
-1783324730	VLAZ	(?-i:^Jericho[\W_]*+Blanco$)
 1783324747	VLAZ	rawalmedicalhall\.vercel\.app
