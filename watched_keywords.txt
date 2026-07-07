@@ -82040,3 +82040,4 @@
 1783395643	Dan Getz	ClaimMateAI\.pro
 1783395662	Dan Getz	ClaimMate[\W_]*+AI(?!\.pro(?<=ClaimMateAI\.pro))
 1783396877	Dan Getz	(?-i:APK(?<=[>\s]APK))(?=\s*+(?:</[a-z]++(?<!/a)>\s*+)*+</a>)
+1783401135	VLAZ	kenwangtoys\.com
