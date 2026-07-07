@@ -82053,3 +82053,4 @@
 1783422614	VLAZ	connect2learn\.online
 1783424381	VLAZ	bulkdevices\.com
 1783424500	VLAZ	yuktiherbs\.com
+1783440614	VLAZ	physicsfundamentals\.us
