@@ -82044,3 +82044,4 @@
 1783401164	VLAZ	pench[\W_]*+booking(?!\.com(?<=penchbooking\.com))
 1783405278	VLAZ	visapoint\.com\.au
 1783406112	VLAZ	etyping\.org
+1783408771	Ryan M	FuseCake
