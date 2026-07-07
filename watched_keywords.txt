@@ -82038,3 +82038,4 @@
 1783375707	Jeff Schaller	slotvegascz\.com
 1783383154	Dan Getz	geometryrydash\.com
 1783395643	Dan Getz	ClaimMateAI\.pro
+1783395662	Dan Getz	ClaimMate[\W_]*+AI(?!\.pro(?<=ClaimMateAI\.pro))
