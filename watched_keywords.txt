@@ -82037,3 +82037,4 @@
 1783372369	Dan Getz	securev2auth\.com
 1783375707	Jeff Schaller	slotvegascz\.com
 1783383154	Dan Getz	geometryrydash\.com
+1783395643	Dan Getz	ClaimMateAI\.pro
