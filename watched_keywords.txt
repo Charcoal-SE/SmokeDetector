@@ -82042,3 +82042,4 @@
 1783396877	Dan Getz	(?-i:APK(?<=[>\s]APK))(?=\s*+(?:</[a-z]++(?<!/a)>\s*+)*+</a>)
 1783401135	VLAZ	kenwangtoys\.com
 1783401142	VLAZ	penchbooking\.com
+1783401164	VLAZ	pench[\W_]*+booking(?!\.com(?<=penchbooking\.com))
