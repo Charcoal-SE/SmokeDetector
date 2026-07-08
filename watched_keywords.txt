@@ -82072,3 +82072,4 @@
 1783513585	Dan Getz	cveezi
 1783518704	Jeff Schaller	thanemarriageregistration\.com
 1783518724	Jeff Schaller	newlifesteel\.com
+1783524479	VLAZ	orefinder\.io
