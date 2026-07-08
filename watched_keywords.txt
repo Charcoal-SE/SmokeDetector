@@ -82074,3 +82074,4 @@
 1783518724	Jeff Schaller	newlifesteel\.com
 1783524479	VLAZ	orefinder\.io
 1783532957	Dan Getz	bwestbuilders\.com
+1783541962	Dan Getz	marriagebiodatahub\.com
