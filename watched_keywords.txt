@@ -82062,3 +82062,4 @@
 1783487650	VLAZ	envisionmarketingagency\.com
 1783496156	VLAZ	flycohub\.com
 1783502781	Vickel	digiboostra\.com
+1783502866	Vickel	optimizeaisearch\.com
