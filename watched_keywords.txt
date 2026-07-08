@@ -82065,3 +82065,4 @@
 1783502866	Vickel	optimizeaisearch\.com
 1783506467	Dan Getz	bloxxfruits\.com
 1783506570	VLAZ	itechgrc\.com
+1783506937	Dan Getz	enatyam\.com
