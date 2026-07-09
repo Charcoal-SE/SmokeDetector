@@ -82076,3 +82076,4 @@
 1783532957	Dan Getz	bwestbuilders\.com
 1783541962	Dan Getz	marriagebiodatahub\.com
 1783558574	Jeff Schaller	Digital[\W_]*+Assets[\W_]*+Forensics
+1783570732	VLAZ	superprofile\.bio
