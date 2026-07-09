@@ -82089,3 +82089,4 @@
 1783589539	Jeff Schaller	thebikefitting\.com
 1783591545	VLAZ	thaivalleygrill\.com
 1783591671	VLAZ	lemacau
+1783595687	VLAZ	techyassist\.net
