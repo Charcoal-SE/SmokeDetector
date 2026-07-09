@@ -82098,3 +82098,4 @@
 1783603087	VLAZ	ad786-game\.com\.pk
 1783610494	Dan Getz	agecalculatorsa\.com
 1783617798	VLAZ	allfontconverter\.com
+1783617975	VLAZ	delta-iosexecuter\.com
