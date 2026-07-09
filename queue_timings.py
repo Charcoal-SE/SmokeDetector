@@ -3,11 +3,11 @@
 # queue_timings.py
 # Analysis script for bodyfetcher queue timings. Call from the command line using Python 3 in the pickles directory.
 
+import math
 import os.path
 # noinspection PyPep8Naming
 import pickle
 import warnings
-import math
 
 
 def main():

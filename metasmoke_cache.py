@@ -1,7 +1,8 @@
 import time
+
 import datahandling
-import metasmoke
 import globalvars
+import metasmoke
 import tasks
 from helpers import log
 

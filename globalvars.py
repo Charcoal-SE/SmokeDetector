@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
-
-import sys
-import os
-from collections import namedtuple
-from datetime import datetime
-from html.parser import HTMLParser
-from html import unescape
-from hashlib import md5
-from configparser import NoOptionError, ConfigParser
-import threading
-import subprocess as sp
-import platform
 import copy
+import os
+import platform
+import subprocess as sp
+import sys
+import threading
+from collections import namedtuple
+from configparser import ConfigParser, NoOptionError
+from datetime import datetime
+from hashlib import md5
+from html import unescape
+from html.parser import HTMLParser
 
 # noinspection PyCompatibility
 import regex
+
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
-    from _Git_Windows import git, GitError
+    from _Git_Windows import GitError, git
 else:
     # noinspection PyUnresolvedReferences
     from sh.contrib import git

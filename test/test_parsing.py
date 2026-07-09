@@ -1,6 +1,8 @@
 # coding=utf-8
-from parsing import *
 import pytest
+
+from parsing import *
+
 
 test_data_inputs = []
 with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:

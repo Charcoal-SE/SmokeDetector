@@ -1,35 +1,37 @@
 # coding=utf-8
-import json
-import requests
 import importlib  # for .reload()
-from globalvars import GlobalVars
+import json
+import os
+import subprocess as sp
+import sys
 import threading
-# noinspection PyPackageRequirements
-import websocket
+import time
+import traceback
 try:
     from collections.abc import Iterable
 except ImportError:
     from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
+
+import requests
+# noinspection PyPackageRequirements
+import websocket
 from regex import sub
-import sys
-import traceback
-import time
-import os
-import subprocess as sp
-import datahandling
-import parsing
+
 import apigetpost
-import spamhandling
-import classes
 import chatcommunicate
-from helpers import log, exit_mode, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_modules, log_current_exception
-from gitmanager import GitManager
+import classes
+import datahandling
 import findspam
-from socketscience import SocketScience
 import metasmoke_cache
+import parsing
+import spamhandling
+from gitmanager import GitManager
+from globalvars import GlobalVars
+from helpers import (blacklist_integrity_check, exit_mode, log, log_current_exception,
+                     only_blacklists_changed, only_modules_changed, reload_modules)
+from socketscience import SocketScience
 
 
 MS_WEBSOCKET_LONG_INTERVAL = 60

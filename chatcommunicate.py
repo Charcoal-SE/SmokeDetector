@@ -1,30 +1,32 @@
 # coding=utf-8
-from chatexchange import events
-from chatexchange.browser import LoginError
-from chatexchange.messages import Message
-from chatexchange_extension import Client
 import collections
+import copy
 import itertools
 import os
 import os.path
 import queue
 import regex
 import requests
+import shlex
 import sys
 import threading
 import time
-import yaml
-import shlex
-import copy
 
+import yaml
+from chatexchange import events
+from chatexchange.browser import LoginError
+from chatexchange.messages import Message
+
+import classes.feedback
 import datahandling
 import metasmoke
-import classes.feedback
-from helpers import log, redact_passwords, log_current_exception
+from chatexchange_extension import Client
 from globalvars import GlobalVars
-from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
-from tasks import Tasks
+from helpers import log, log_current_exception, redact_passwords
+from parsing import fetch_owner_url_from_msg_content, fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content
 from socketscience import SocketScience
+from tasks import Tasks
+
 
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 

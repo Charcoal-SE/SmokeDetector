@@ -1,9 +1,11 @@
 # coding=utf-8
-import time
-import random
 import base64
+import random
+import time
+
 import msgpack
 import regex
+
 import chatcommunicate
 from globalvars import GlobalVars
 from helpers import log

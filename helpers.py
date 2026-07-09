@@ -1,28 +1,29 @@
 # coding=utf-8
+import importlib
 import os
+import platform
+import sqlite3
 import sys
+import threading
+import time
 import traceback
 from datetime import datetime, timezone
-import time
-import importlib
-import threading
+from glob import glob
+from threading import Thread
+from urllib.parse import quote, quote_plus
+
+import regex
+import requests
+import websocket
+
+from globalvars import GlobalVars
+
+from termcolor import colored
 # termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
-import platform
 platform_text = platform.platform().lower()
 if 'windows' in platform_text and 'cygwin' not in platform_text:
     from colorama import init as colorama_init
     colorama_init()
-from glob import glob
-import sqlite3
-from urllib.parse import quote, quote_plus
-from threading import Thread
-
-from termcolor import colored
-import requests
-import regex
-import websocket
-
-from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):

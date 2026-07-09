@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-
-from datahandling import append_pings, SmokeyTransfer
-from globalvars import GlobalVars
 import pytest
+
+from datahandling import SmokeyTransfer, append_pings
+from globalvars import GlobalVars
 
 
 # noinspection PyMissingTypeHints

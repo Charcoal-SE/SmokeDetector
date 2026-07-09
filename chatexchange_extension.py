@@ -1,7 +1,9 @@
 # coding=utf-8
-from chatexchange import client, events, rooms
-import sys
 from datetime import datetime
+import sys
+
+from chatexchange import client, events, rooms
+
 from helpers import log
 
 

@@ -1,3 +1,5 @@
+from typing import List
+
 import dns
 import dns.resolver
 import dns.rdatatype
