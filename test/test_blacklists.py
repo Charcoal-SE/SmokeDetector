@@ -1,4 +1,5 @@
 import yaml
+import os
 from os import unlink
 import regex
 from globalvars import GlobalVars
@@ -140,8 +141,8 @@ def test_remote_diff():
     assert not files_changed(false_diff, file_set)
 
 
-def yaml_validate_existing(filename, cls):
-    return Blacklist((filename, cls)).validate()
+def yaml_validate_existing(filename, cls, *args, **kwargs):
+    return Blacklist((filename, cls)).validate(*args, **kwargs)
 
 
 def test_yaml_blacklist():
@@ -234,8 +235,14 @@ def test_yaml_nses():
     unlink('test_nses.yml')
 
 
+@pytest.mark.skipif(not os.environ.get("SD_TEST_NS_DNS"), reason="These DNS failures don't cause improper operation")
 # test_yaml_nses currently takes 105s to run, so we want it to start up first, with everything else running in parallel.
 @pytest.mark.xdist_group(name="long_runner_1")
-def test_yaml_nses_validate():
-    yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
-    yaml_validate_existing('watched_nses.yml', YAMLParserNS)
+def test_yaml_nses_validate_dns():
+    yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS, validate_dns=True)
+    yaml_validate_existing('watched_nses.yml', YAMLParserNS, validate_dns=True)
+
+
+def test_yaml_nses_validate_quick():
+    yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS, validate_dns=False)
+    yaml_validate_existing('watched_nses.yml', YAMLParserNS, validate_dns=False)
