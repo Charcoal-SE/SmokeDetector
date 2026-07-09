@@ -82105,3 +82105,4 @@
 1783619841	VLAZ	qbitjwt\.com
 1783619850	VLAZ	qbitjwt(?!\.com)
 1783625517	Vickel	arthurhouse\.com
+1783627342	Ryan M	barbashatsusa\.com
