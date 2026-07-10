@@ -82107,3 +82107,4 @@
 1783625517	Vickel	arthurhouse\.com
 1783627342	Ryan M	barbashatsusa\.com
 1783627390	VLAZ	aryawebstudio\.com
+1783656216	Dan Getz	satelllite\.com
