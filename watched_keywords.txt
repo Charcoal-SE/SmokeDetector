@@ -82118,3 +82118,4 @@
 1783680254	VLAZ	v5si\.com
 1783680412	VLAZ	dive-technician\.com
 1783688730	Jeff Schaller	techflux\.in
+1783688759	Jeff Schaller	livestatemobile\.unaux\.com
