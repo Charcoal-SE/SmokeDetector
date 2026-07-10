@@ -82116,3 +82116,4 @@
 1783670218	VLAZ	zentronix
 1783671151	VLAZ	briwonacademy\.com
 1783680254	VLAZ	v5si\.com
+1783680412	VLAZ	dive-technician\.com
