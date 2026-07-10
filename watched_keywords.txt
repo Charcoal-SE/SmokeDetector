@@ -82121,3 +82121,4 @@
 1783688759	Jeff Schaller	livestatemobile\.unaux\.com
 1783690100	VLAZ	cubiccalculators\.com
 1783692311	VLAZ	baseline[\W_]*+it[\W_]*+development(?!\.com(?<=baselineitdevelopment\.com))
+1783696425	VLAZ	gorhinostore\.com
