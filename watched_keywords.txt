@@ -82132,3 +82132,4 @@
 1783760899	VLAZ	myvirtualtalent\.com
 1783760934	VLAZ	certstopic\.com
 1783760977	VLAZ	influencergonewild\.ink
+1783769433	VLAZ	eneedly\.com
