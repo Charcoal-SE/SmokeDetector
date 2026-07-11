@@ -82130,3 +82130,4 @@
 1783748771	VLAZ	worklifebuddy\.blogspot
 1783753318	VLAZ	aschrms\.com
 1783760899	VLAZ	myvirtualtalent\.com
+1783760934	VLAZ	certstopic\.com
