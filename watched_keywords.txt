@@ -82138,3 +82138,4 @@
 1783770205	VLAZ	lacalculadoradealicia\.com\.mx
 1783773324	Dan Getz	digitalgrowthgurus\.in
 1783789595	Dan Getz	blackbirdme\.com
+1783787515	Anerdw	password-generator-app-pink\.vercel\.app
