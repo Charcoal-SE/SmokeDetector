@@ -82136,3 +82136,4 @@
 1783770134	VLAZ	technoaccess\.ca
 1783770190	VLAZ	sib[\W_]*+networks(?!\.com(?<=sibnetworks\.com))
 1783770205	VLAZ	lacalculadoradealicia\.com\.mx
+1783773324	Dan Getz	digitalgrowthgurus\.in
