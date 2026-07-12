@@ -82147,3 +82147,4 @@
 1783854629	VLAZ	buygvoice(?!\.com)
 1783865048	Jeff Schaller	onsitedrapery-cleaning\.com
 1783865095	Jeff Schaller	zocalculator\.com
+1783891107	Dan Getz	json2code\.com
