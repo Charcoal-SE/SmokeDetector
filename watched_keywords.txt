@@ -82142,3 +82142,4 @@
 1783800114	Vickel	apkglobal\.pk
 1783822398	Jeff Schaller	betiran\.vip
 1783836609	VLAZ	fixpilot\.tech
+1783848708	VLAZ	truthordaresquestion\.com
