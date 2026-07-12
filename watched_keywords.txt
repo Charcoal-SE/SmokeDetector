@@ -82145,3 +82145,4 @@
 1783848708	VLAZ	truthordaresquestion\.com
 1783854622	VLAZ	buygvoice\.com
 1783854629	VLAZ	buygvoice(?!\.com)
+1783865048	Jeff Schaller	onsitedrapery-cleaning\.com
