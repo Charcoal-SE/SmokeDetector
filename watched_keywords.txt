@@ -82158,3 +82158,4 @@
 1783931798	VLAZ	vietls\.com
 1783931823	VLAZ	thegrandhotram\.com
 1783931881	VLAZ	nelsonps\.online
+1783931888	VLAZ	nelson[\W_]*+ps(?!\.online(?<=nelsonps\.online))
