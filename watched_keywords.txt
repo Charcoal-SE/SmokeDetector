@@ -82170,3 +82170,4 @@
 1783948586	VLAZ	customjerseys\.co\.uk
 1783948620	VLAZ	lenzmagicstudios\.com
 1783948869	VLAZ	reddyannaaplay\.com
+1783956394	VLAZ	eagle[\W_]*+cash[\W_]*+buyers
