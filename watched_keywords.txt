@@ -82167,3 +82167,4 @@
 1783938283	VLAZ	apibara\.tech
 1783939568	VLAZ	thetaptempo\.com
 1783948549	VLAZ	pokergurgaon\.com
+1783948569	VLAZ	rajput[\W_]*+travel[\W_]*+and[\W_]*+tourism
