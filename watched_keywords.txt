@@ -82164,3 +82164,4 @@
 1783933189	VLAZ	signature[\W_]*+asphalt[\W_]*+maintenance
 1783935917	VLAZ	baboodigital\.com
 1783936499	VLAZ	baboo[\W_]*+digital(?!\.com(?<=baboodigital\.com))
+1783938283	VLAZ	apibara\.tech
