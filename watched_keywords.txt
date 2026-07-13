@@ -82156,3 +82156,4 @@
 1783925354	Dan Getz	thai[\W_]*+visa[\W_]*+centre
 1783925454	Dan Getz	fcremedies\.com
 1783931798	VLAZ	vietls\.com
+1783931823	VLAZ	thegrandhotram\.com
