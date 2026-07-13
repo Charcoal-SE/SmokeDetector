@@ -82151,3 +82151,4 @@
 1783915378	Dan Getz	prabhustudio\.com
 1783916749	VLAZ	uae[\W_]*+repairs
 1783917049	Dan Getz	hashpays
+1783917331	Dan Getz	pikashowreal\.com
