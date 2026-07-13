@@ -82168,3 +82168,4 @@
 1783939568	VLAZ	thetaptempo\.com
 1783948549	VLAZ	pokergurgaon\.com
 1783948569	VLAZ	rajput[\W_]*+travel[\W_]*+and[\W_]*+tourism
+1783948586	VLAZ	customjerseys\.co\.uk
