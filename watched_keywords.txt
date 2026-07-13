@@ -82161,3 +82161,4 @@
 1783931888	VLAZ	nelson[\W_]*+ps(?!\.online(?<=nelsonps\.online))
 1783931951	VLAZ	stateguard[\W_]*+security
 1783931971	VLAZ	progrenflooring\.ae
+1783933189	VLAZ	signature[\W_]*+asphalt[\W_]*+maintenance
