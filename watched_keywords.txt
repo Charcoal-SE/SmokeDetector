@@ -82152,3 +82152,4 @@
 1783916749	VLAZ	uae[\W_]*+repairs
 1783917049	Dan Getz	hashpays
 1783917331	Dan Getz	pikashowreal\.com
+1783924096	Dan Getz	alzdigitalco\.com
