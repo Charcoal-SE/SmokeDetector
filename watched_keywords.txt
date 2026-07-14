@@ -82197,3 +82197,4 @@
 1784030580	Jeff Schaller	isearchgo\.com
 1784037298	VLAZ	reframex\.ai
 1784037621	VLAZ	reframex(?!\.ai)
+1784047236	VLAZ	wheelofnames\.ing
