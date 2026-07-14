@@ -82187,3 +82187,4 @@
 1784019354	VLAZ	dunkinndonutsmenu\.com
 1784019365	VLAZ	hoteltherivanta\.com
 1784019381	VLAZ	royalbikeriders\.com
+1784023695	VLAZ	emptrakr\.com
