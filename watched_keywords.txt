@@ -82181,3 +82181,4 @@
 1784008856	VLAZ	infinitypallet\.com
 1784009548	VLAZ	thejasraj\.com
 1784010315	VLAZ	Dr[\W_]*+Sudheer
+1784011218	VLAZ	shuklaambulanceservice\.com
