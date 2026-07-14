@@ -82173,3 +82173,4 @@
 1783956394	VLAZ	eagle[\W_]*+cash[\W_]*+buyers
 1783970047	Vickel	indicoworks\.com
 1783971760	Vickel	coast-fire-calc\.com
+1783994993	Jeff Schaller	thechoosenhacklord
