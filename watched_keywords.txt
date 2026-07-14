@@ -82199,3 +82199,4 @@
 1784037621	VLAZ	reframex(?!\.ai)
 1784047236	VLAZ	wheelofnames\.ing
 1784047459	VLAZ	dewa234\.site
+1784047472	VLAZ	dewa234(?!\.site)
