@@ -82194,3 +82194,4 @@
 1784028985	VLAZ	factoravenue\.com
 1784028992	VLAZ	factoravenue(?!\.com)
 1784029923	Jeff Schaller	safedesignsandconstructions\.com
+1784030580	Jeff Schaller	isearchgo\.com
