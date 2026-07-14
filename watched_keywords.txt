@@ -82193,3 +82193,4 @@
 1784027201	VLAZ	car[\W_]*+tours[\W_]*+jodhpur(?!\.com(?<=cartoursjodhpur\.com))
 1784028985	VLAZ	factoravenue\.com
 1784028992	VLAZ	factoravenue(?!\.com)
+1784029923	Jeff Schaller	safedesignsandconstructions\.com
