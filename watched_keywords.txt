@@ -82190,3 +82190,4 @@
 1784023695	VLAZ	emptrakr\.com
 1784024012	VLAZ	buildwithvini\.com
 1784027147	VLAZ	cartoursjodhpur\.com
+1784027201	VLAZ	car[\W_]*+tours[\W_]*+jodhpur(?!\.com(?<=cartoursjodhpur\.com))
