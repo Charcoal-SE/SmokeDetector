@@ -82223,3 +82223,4 @@
 1784128424	Dan Getz	vebapi\.com
 1784130897	VLAZ	theinfinitygroups\.com
 1784137199	VLAZ	bathtide\.42web\.io
+1784137215	VLAZ	bathtide(?!\.42web\.io)
