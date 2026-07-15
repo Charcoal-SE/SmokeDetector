@@ -82220,3 +82220,4 @@
 1784114203	VLAZ	stagelevators\.com
 1784114301	VLAZ	bigstartransports\.com
 1784114527	VLAZ	gatherin\.net
+1784128424	Dan Getz	vebapi\.com
