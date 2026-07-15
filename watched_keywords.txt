@@ -82210,3 +82210,4 @@
 1784099110	VLAZ	lekh[\W_]*+ai(?!\.app(?<=lekhai\.app))
 1784098627	Anerdw	worldofdigitallearning\.com
 1784098636	Anerdw	globetaxis\.com
+1784099882	VLAZ	bloomivf-mumbai\.com
