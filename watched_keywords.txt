@@ -82201,3 +82201,4 @@
 1784047459	VLAZ	dewa234\.site
 1784047472	VLAZ	dewa234(?!\.site)
 1784056884	Dan Getz	insightits\.com
+1784089666	Dan Getz	xianshangdangpu\.loan
