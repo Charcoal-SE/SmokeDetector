@@ -82218,3 +82218,4 @@
 1784109553	VLAZ	ikshana
 1784110333	VLAZ	blockblastsolverss\.com
 1784114203	VLAZ	stagelevators\.com
+1784114301	VLAZ	bigstartransports\.com
