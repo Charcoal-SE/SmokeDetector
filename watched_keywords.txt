@@ -82213,3 +82213,4 @@
 1784099882	VLAZ	bloomivf-mumbai\.com
 1784100349	VLAZ	fajralquran\.com
 1784102325	VLAZ	lakeshoresf\.com
+1784108972	VLAZ	aipersonic\.com
