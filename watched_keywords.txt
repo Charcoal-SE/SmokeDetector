@@ -82239,3 +82239,4 @@
 1784196740	VLAZ	doctor247\.ie
 1784196784	VLAZ	dabetf\.co
 1784199137	VLAZ	collarcheck\.com
+1784201230	Jeff Schaller	sparxnode\.com
