@@ -82233,3 +82233,4 @@
 1784179322	Dan Getz	themorselab\.com
 1784186596	VLAZ	yepapi\.com
 1784187667	VLAZ	sakshimahajan\.in
+1784196406	VLAZ	regulus\.org
