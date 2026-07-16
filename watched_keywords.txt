@@ -82247,3 +82247,4 @@
 1784212098	Dan Getz	techfix\.ae
 1784212515	Dan Getz	ampcus[\W_]*+cyber
 1784221835	VLAZ	united[\W_]*+state[\W_]*+solutions
+1784230033	Jeff Schaller	droisemudiamenherbalremedy\.blogspot
