@@ -82245,3 +82245,4 @@
 1784204610	VLAZ	techanicinfotech\.ae
 1784208042	VLAZ	happydrive\.ae
 1784212098	Dan Getz	techfix\.ae
+1784212515	Dan Getz	ampcus[\W_]*+cyber
