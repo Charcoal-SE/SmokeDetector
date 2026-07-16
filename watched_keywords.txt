@@ -82244,3 +82244,4 @@
 1784204391	VLAZ	yuminutrition\.com
 1784204610	VLAZ	techanicinfotech\.ae
 1784208042	VLAZ	happydrive\.ae
+1784212098	Dan Getz	techfix\.ae
