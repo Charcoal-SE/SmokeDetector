@@ -82241,3 +82241,4 @@
 1784199137	VLAZ	collarcheck\.com
 1784201230	Jeff Schaller	sparxnode\.com
 1784204366	VLAZ	medical[\W_]*+edge[\W_]*+billing
+1784204391	VLAZ	yuminutrition\.com
