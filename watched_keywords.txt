@@ -82248,3 +82248,4 @@
 1784212515	Dan Getz	ampcus[\W_]*+cyber
 1784221835	VLAZ	united[\W_]*+state[\W_]*+solutions
 1784230033	Jeff Schaller	droisemudiamenherbalremedy\.blogspot
+1784240305	Jeff Schaller	aquacare\.ae
