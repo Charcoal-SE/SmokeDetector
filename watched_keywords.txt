@@ -82237,3 +82237,4 @@
 1784196415	VLAZ	zainimedia\.com
 1784196674	VLAZ	code48h\.com
 1784196740	VLAZ	doctor247\.ie
+1784196784	VLAZ	dabetf\.co
