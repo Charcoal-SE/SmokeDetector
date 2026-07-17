@@ -82254,3 +82254,4 @@
 1784268064	VLAZ	homefix-uae\.com
 1784268908	VLAZ	gokuldhammahatirth\.org
 1784272130	VLAZ	linxmed\.com
+1784274488	VLAZ	akada-hardware\.com
