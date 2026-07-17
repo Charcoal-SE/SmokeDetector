@@ -82256,3 +82256,4 @@
 1784272130	VLAZ	linxmed\.com
 1784274488	VLAZ	akada-hardware\.com
 1784284221	Jeff Schaller	uplandstrategy\.co
+1784286023	Jeff Schaller	hotspan\.com
