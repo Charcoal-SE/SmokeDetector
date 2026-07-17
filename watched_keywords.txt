@@ -82258,3 +82258,4 @@
 1784284221	Jeff Schaller	uplandstrategy\.co
 1784286023	Jeff Schaller	hotspan\.com
 1784286114	Jeff Schaller	Unstop[\W_]*+Growth
+1784288130	Jeff Schaller	hndassignmentwriter\.co\.uk
