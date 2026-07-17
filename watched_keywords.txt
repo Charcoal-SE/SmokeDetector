@@ -82265,3 +82265,4 @@
 1784296642	Dan Getz	(?:(?:ajaib|bantuan|layanan|(?:meng)?+hubungi(?:[\W_]*+cs\b)?+|pelanggan|pembatalan|pengaduan|petugas|pinjaman|pusat|resmi|Tokopedia|transaksi|(?:call|contact)[\W_]*+cent(?:er|re)|customer[\W_]*+service)[\W_]*+){2,}
 1784311191	Jeff Schaller	bhaktishala\.store
 1784312592	Dan Getz	de-vipluck\.com
+1784316086	Jeff Schaller	avartarworldmod\.com
