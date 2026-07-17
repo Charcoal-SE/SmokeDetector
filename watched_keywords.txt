@@ -82259,3 +82259,4 @@
 1784286023	Jeff Schaller	hotspan\.com
 1784286114	Jeff Schaller	Unstop[\W_]*+Growth
 1784288130	Jeff Schaller	hndassignmentwriter\.co\.uk
+1784288994	VLAZ	papacarrental\.com
