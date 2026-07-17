@@ -82253,3 +82253,4 @@
 1784267868	VLAZ	minifycssjs\.com
 1784268064	VLAZ	homefix-uae\.com
 1784268908	VLAZ	gokuldhammahatirth\.org
+1784272130	VLAZ	linxmed\.com
