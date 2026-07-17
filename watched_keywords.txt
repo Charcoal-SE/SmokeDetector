@@ -82251,3 +82251,4 @@
 1784240305	Jeff Schaller	aquacare\.ae
 1784267552	VLAZ	(?-i:jUEhP0nnUtQ)(?# www.youtube.com)
 1784267868	VLAZ	minifycssjs\.com
+1784268064	VLAZ	homefix-uae\.com
