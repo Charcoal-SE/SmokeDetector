@@ -82262,3 +82262,4 @@
 1784288994	VLAZ	papacarrental\.com
 1784289104	VLAZ	Snap[\W_]*+Loom
 1784293505	VLAZ	techworksdigitalmarketing\.com
+1784293637	Jeff Schaller	Umrah[\W_]*+Companions
