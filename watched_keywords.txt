@@ -82262,3 +82262,4 @@
 1784289104	VLAZ	Snap[\W_]*+Loom
 1784293505	VLAZ	techworksdigitalmarketing\.com
 1784293637	Jeff Schaller	Umrah[\W_]*+Companions
+1784296642	Dan Getz	(?:(?:ajaib|bantuan|layanan|(?:meng)?+hubungi(?:[\W_]*+cs\b)?+|pelanggan|pembatalan|pengaduan|petugas|pinjaman|pusat|resmi|Tokopedia|transaksi|(?:call|contact)[\W_]*+cent(?:er|re)|customer[\W_]*+service)[\W_]*+){2,}
