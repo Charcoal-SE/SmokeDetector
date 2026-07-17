@@ -5708,7 +5708,9 @@ items:
 - comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18; NXDOMAIN again 2026-03-15
   disable: true
   ns: splashserver.org.
-- ns: aptcom.info.
+- comment: 2026-07-16 NXDOMAIN
+  disable: true
+  ns: aptcom.info.
 - comment: 2024-10-28 NXDOMAIN
   disable: true
   ns: resellerone.host.
