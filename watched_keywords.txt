@@ -82249,3 +82249,4 @@
 1784221835	VLAZ	united[\W_]*+state[\W_]*+solutions
 1784230033	Jeff Schaller	droisemudiamenherbalremedy\.blogspot
 1784240305	Jeff Schaller	aquacare\.ae
+1784267552	VLAZ	(?-i:jUEhP0nnUtQ)(?# www.youtube.com)
