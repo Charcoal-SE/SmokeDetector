@@ -82275,3 +82275,4 @@
 1784357864	VLAZ	sfpindia\.com
 1784384325	Dan Getz	xthe\.com
 1784385455	Dan Getz	barbecuesgalore\.ca
+1784389299	VLAZ	bhowra(?!\.ink)
