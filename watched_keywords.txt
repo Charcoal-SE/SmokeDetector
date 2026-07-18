@@ -82278,3 +82278,4 @@
 1784389523	VLAZ	y9\.com\.pk
 1784394084	Jeff Schaller	musechem\.com
 1784396869	VLAZ	bhowra(?!\.ink)(?!\.com)
+1784396876	VLAZ	bhowra\.com
