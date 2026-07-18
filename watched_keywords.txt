@@ -82274,3 +82274,4 @@
 1784357689	Dan Getz	house[\W_]*+of[\W_]*+vibes
 1784357864	VLAZ	sfpindia\.com
 1784384325	Dan Getz	xthe\.com
+1784385455	Dan Getz	barbecuesgalore\.ca
