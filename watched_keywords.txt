@@ -82270,3 +82270,4 @@
 1784355968	VLAZ	dubaivisitorvisa\.com
 1784356026	VLAZ	dubaivisitorvisa(?!\.com)
 1784356221	Dan Getz	calculatorarchive\.com
+1784357154	Dan Getz	checkmail1\.com
