@@ -82268,3 +82268,4 @@
 1784316086	Jeff Schaller	avartarworldmod\.com
 1784352543	VLAZ	mediabangladesh\.net
 1784355968	VLAZ	dubaivisitorvisa\.com
+1784356026	VLAZ	dubaivisitorvisa(?!\.com)
