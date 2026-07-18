@@ -82269,3 +82269,4 @@
 1784352543	VLAZ	mediabangladesh\.net
 1784355968	VLAZ	dubaivisitorvisa\.com
 1784356026	VLAZ	dubaivisitorvisa(?!\.com)
+1784356221	Dan Getz	calculatorarchive\.com
