@@ -82294,3 +82294,4 @@
 1784468379	Jeff Schaller	explore-liverpool\.com
 1784472373	Makyen	ambermap\.com
 1784478239	Dan Getz	quantum[\W_]*+vault[\W_]*+recuperation
+1784478368	Dan Getz	blocktraceforensics\.com
