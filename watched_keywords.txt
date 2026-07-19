@@ -82296,3 +82296,4 @@
 1784478239	Dan Getz	quantum[\W_]*+vault[\W_]*+recuperation
 1784478368	Dan Getz	blocktraceforensics\.com
 1784479583	Jeff Schaller	vivek\.local
+1784491829	Jeff Schaller	karajshabake\.ir
