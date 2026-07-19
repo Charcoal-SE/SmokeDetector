@@ -82284,3 +82284,4 @@
 1784438773	VLAZ	pkhorse\.com
 1784438780	VLAZ	glow786\.com
 1784441994	Dan Getz	Chad[\W_]*+(Vincent[\W_]*+)?Scira(?<!(?-i:^Chad Scira$))
+1784442069	Dan Getz	issa[\W_]*+compass
