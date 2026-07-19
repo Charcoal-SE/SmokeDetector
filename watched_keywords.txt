@@ -82283,3 +82283,4 @@
 1784420954	Jeff Schaller	apexitalianacademy\.it
 1784432032	Dan Getz	vacationstyleguide\.com
 1784435574	Dan Getz	whiteboards\.org
+1784438773	VLAZ	pkhorse\.com
