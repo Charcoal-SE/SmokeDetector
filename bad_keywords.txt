@@ -3919,3 +3919,4 @@ company\.site/$(?<=\.company\.site/)
 PassCertHub(?!\.com)
 Agentmrszafirah77
 (?-i:Pluranceteck)(?# telegram.me)
+thai[\W_]*+visa[\W_]*+centre
