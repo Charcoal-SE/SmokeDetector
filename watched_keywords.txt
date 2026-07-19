@@ -82281,3 +82281,4 @@
 1784396876	VLAZ	bhowra\.com
 1784403460	VLAZ	pulptechmalta\.com
 1784420954	Jeff Schaller	apexitalianacademy\.it
+1784432032	Dan Getz	vacationstyleguide\.com
