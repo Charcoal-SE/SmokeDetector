@@ -82288,3 +82288,4 @@
 1784444962	Dan Getz	(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.*\bscira
 1784446473	Dan Getz	(?-i:^babaganush$)
 1784446792	Dan Getz	nullxbrawl\.com
+1784447564	Dan Getz	bet\.br
