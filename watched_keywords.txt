@@ -82308,3 +82308,4 @@
 1784527249	VLAZ	scopycode\.com
 1784527256	VLAZ	scopycode(?!\.com)
 1784532316	VLAZ	ngadm\.com
+1784537691	VLAZ	expertchoice\.com
