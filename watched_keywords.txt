@@ -82310,3 +82310,4 @@
 1784532316	VLAZ	ngadm\.com
 1784537691	VLAZ	expertchoice\.com
 1784537826	VLAZ	supercabletray\.in
+1784541737	VLAZ	unfluke(?!\.in)
