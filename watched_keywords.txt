@@ -82306,3 +82306,4 @@
 1784527007	VLAZ	globussoft\.ai
 1784527025	VLAZ	globussoft(?!\.ai)
 1784527249	VLAZ	scopycode\.com
+1784527256	VLAZ	scopycode(?!\.com)
