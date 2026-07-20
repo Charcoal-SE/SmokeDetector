@@ -82316,3 +82316,4 @@
 1784554418	Jeff Schaller	urgentairconservicing\.sg
 1784557680	VLAZ	zoya[\W_]*+seo
 1784557815	VLAZ	fastsavemedia\.com
+1784561829	VLAZ	kayfuae\.com
