@@ -82317,3 +82317,4 @@
 1784557680	VLAZ	zoya[\W_]*+seo
 1784557815	VLAZ	fastsavemedia\.com
 1784561829	VLAZ	kayfuae\.com
+1784576586	Dan Getz	thim\b.*\bscira|(?:chad[\W_]*+)?scira\b.*\bthim
