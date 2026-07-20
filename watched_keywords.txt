@@ -82304,3 +82304,4 @@
 1784525718	VLAZ	victory[\W_]*+heights[\W_]*+nursery
 1784525725	VLAZ	thevhnursery\.com
 1784527007	VLAZ	globussoft\.ai
+1784527025	VLAZ	globussoft(?!\.ai)
