@@ -3920,3 +3920,4 @@ PassCertHub(?!\.com)
 Agentmrszafirah77
 (?-i:Pluranceteck)(?# telegram.me)
 thai[\W_]*+visa[\W_]*+centre
+(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.{1,300}\b(?:scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)|(?:(?:chad[\W_]*+)?scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)\b.{1,300}\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
