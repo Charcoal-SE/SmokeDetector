@@ -3,6 +3,7 @@
 import chatcommunicate  # coverage
 import chatcommands
 from apigetpost import api_get_post
+from chatcommunicate import CmdException, CmdExceptionLongReply
 from parsing import to_protocol_relative
 from classes.post import Post
 from globalvars import GlobalVars
@@ -886,3 +887,104 @@ def test_inqueue():
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
     assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
+
+
+@pytest.mark.parametrize("pattern, blacklist_type, expected_error_msg", [
+    ('(?-i:^Some spammer\u202d$)', "watch", "whitespace"),
+    (r' keyword', "keyword", "whitespace"),
+    (r'keyword another', "keyword", None),
+    (r'something\.blogspot\.com', "watch", "blogspot"),
+    (r'something\.blogspot', "watch", None),
+    (r'(invalidregex', "watch", "invalid"),
+    (r'\(okwithescaping', "watch", None),
+    (r'something.com', "watch", "unescaped"),
+    (r'something\.com', "watch", None),
+    (r'something\\.com', "watch", "unescaped"),
+    (r'something\\\\\.com', "watch", None),
+    (r'something[.,-]com', "watch", None),
+    ('19998887777', "number", None),
+    ('9998887777', "number", "noram"),
+    ('9998887777(?#is noram)', "number", None),
+    ('9998887777(?#no noram)', "number", None),
+    ('999-888-7777', "number", None),
+    ('O999888777l7', "number", "obfuscated"),
+    ('12345', "number", "digits"),
+    ('123456789012345678901234567890', "number", "digits"),
+    ('notanumber18002223333', "number", "digit"),
+    ('18002223333notanumber', "number", "digit"),
+    (r'(?!test)testing', "watch", "lookahead"),
+    (r'(?<=test)testing', "watch", "lookbehind"),
+    (r'(?<!test)testing', "keyword", "lookbehind"),
+    (r'(?=test)testing', "keyword", None),
+    (r'stuff(?=test)testing', "keyword", None),
+    (r'stuff(?<=test)testing', "keyword", None),
+    (r'stuff(?!test)testing', "keyword", None),
+    (r'stuff(?<!test)testing', "keyword", None),
+    (r'\(?!test\)testing', "watch", None),
+    (r'(\?<=test)testing', "watch", None),
+    (r'\(\?<!test\)testing', "keyword", None),
+    (r'(?-i)caseInsensitIve', "watch", "flag"),
+    (r'(?-i:caseInsensitIve)', "watch", None),
+    (r'ok(?a)oops', "keyword", "flag"),
+    (r'ok(?-a)oops', "keyword", "flag"),
+    (r'ok(?a:ok\d)', "keyword", None),
+    (r'ok(?-u:ok\d)', "keyword", None),
+    (r'(?r)ohno', "watch", "flag"),
+    (r'(?V1)yay', "watch", "flag"),
+    (r'(ok\(?a)fine', "watch", None),
+    (r'(ok\(?-a)fine', "watch", None),
+    (r'ok\\(?a)oops', "keyword", "flag"),
+    (r'ok\\(?-a)oops', "keyword", "flag"),
+    (r'(ok\\\(?a)fine', "watch", None),
+    (r'(ok\\\(?-a)fine', "watch", None),
+    (r'(\?r)no prob', "watch", None),
+    (r'(\?-i)no prob', "watch", None),
+    (r'[\W_]*+First', "watch", "expensive"),
+    (r'.{0,20}and\s+then', "watch", "expensive"),
+    (r'\W*+First', "watch", "expensive"),
+    (r'[\W_]*First', "watch", "expensive"),
+    (r'\W*First', "watch", "expensive"),
+    (r'First[\W_]*+second', "watch", None),
+    (r'(?:[\W_]*+)?First', "watch", "expensive"),
+    (r'[^h]*+ello', "watch", "expensive"),
+    (r'\W123', "watch", None),
+    (r'\w*123', "watch", None),
+    (r'\s*+why++', "watch", "expensive"),
+    (r'(?:q|\S)++trickier', "watch", "expensive"),
+    (r'[a-z\W]++x', "watch", "expensive"),
+    (r'(?=[\W_]*)\W\Wxyz', "watch", "expensive"),
+    (r'(?!.{0,20}no)yes', "watch", "expensive"),
+    (r'\([\W_]*+\)', "watch", None),
+    (r'abc(?:(*FAIL))?def', "watch", "control verb"),
+    (r'abc(?:(*F))?def', "watch", "control verb"),
+    (r'abc(?:(*SKIP))?def', "watch", "control verb"),
+    (r'(\(*INNOCENT)', "watch", None),
+    (r'(\\\(*INNOCENT)', "watch", None),
+    (r'abc(?:\\(*F))?def', "watch", "control verb"),
+])
+def test_check_blacklist_mistakes(pattern, blacklist_type, expected_error_msg):
+    msg = Fake({
+        "owner": {
+            "name": "name",
+            "id": 123,
+            "is_moderator": False
+        },
+        "room": {
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 11540
+        },
+        "content_source": None
+    })
+    try:
+        issues = chatcommands.check_blacklist_mistakes(pattern, blacklist_type=blacklist_type, msg=msg, commit_kwargs={})
+        if expected_error_msg:
+            assert any(expected_error_msg in issue.lower()
+                       for issue in issues), f"Didn't find {expected_error_msg} in {issues}"
+        else:
+            assert issues == []
+    except (CmdException, CmdExceptionLongReply) as e:
+        if not expected_error_msg:
+            raise e
+        assert expected_error_msg in str(e)
