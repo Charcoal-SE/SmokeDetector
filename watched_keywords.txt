@@ -82341,3 +82341,4 @@
 1784636737	Dan Getz	thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
 1784637308	Dan Getz	(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.{1,300}\b(?:scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)|(?:(?:chad[\W_]*+)?scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)\b.{1,300}\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
 1784640598	Jeff Schaller	beehivesoftware\.com
+1784641116	VLAZ	digitalmarkethubs\.com
