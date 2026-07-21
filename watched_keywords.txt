@@ -82343,3 +82343,4 @@
 1784640598	Jeff Schaller	beehivesoftware\.com
 1784641116	VLAZ	digitalmarkethubs\.com
 1784643209	VLAZ	clari[\W_]*+cosmetics
+1784645975	Dan Getz	kodingcamp\.com
