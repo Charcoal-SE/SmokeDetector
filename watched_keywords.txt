@@ -82323,3 +82323,4 @@
 1784607456	VLAZ	1tnt\.app
 1784608028	VLAZ	gogowalletrecovery[\W_]*+gmail(?:[\W_]*+com)?
 1784609969	VLAZ	drugfreecountry\.com
+1784611524	VLAZ	mentorslearning\.com
