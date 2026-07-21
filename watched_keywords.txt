@@ -82326,3 +82326,4 @@
 1784611524	VLAZ	mentorslearning\.com
 1784611533	VLAZ	gioconews\.it
 1784619640	VLAZ	beaconcoders\.com
+1784619683	VLAZ	sai[\W_]*+flower
