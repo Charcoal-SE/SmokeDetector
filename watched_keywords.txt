@@ -82339,3 +82339,4 @@
 1784635126	Dan Getz	pt\.33
 1784635707	Dan Getz	tvc\.co\.th
 1784635748	Dan Getz	agents\.co\.th
+1784636737	Dan Getz	thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
