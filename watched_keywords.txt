@@ -82320,3 +82320,4 @@
 1784576644	Dan Getz	(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.*\b(?:scira|bann(?:ed|ing)|satan\w++|corrupt(?:ion))|(?:(?:chad[\W_]*+)?scira|bann(?:ed|ing)|satan\w++|corrupt(?:ion))\b.*\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
 1784576870	Dan Getz	bioknox
 1784582407	Dan Getz	floridamechanical\.net
+1784607456	VLAZ	1tnt\.app
