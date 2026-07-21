@@ -83,7 +83,7 @@ class TestRoomReports(TestCase):
 
     def setUp(self):
         print('\n\n-------------------------------Set up test------------------------------------')
-        chatcommunicate.tell_rooms.reset_mock
+        chatcommunicate.tell_rooms.reset_mock()
         # .reset_mock counts as a call. We don't want that.
         chatcommunicate.tell_rooms.call_count = 0
 
