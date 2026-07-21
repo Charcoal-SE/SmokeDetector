@@ -82315,7 +82315,6 @@
 1784557680	VLAZ	zoya[\W_]*+seo
 1784557815	VLAZ	fastsavemedia\.com
 1784561829	VLAZ	kayfuae\.com
-1784576586	Dan Getz	thim\b.*\bscira|(?:chad[\W_]*+)?scira\b.*\bthim
 1784576644	Dan Getz	(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.*\b(?:scira|bann(?:ed|ing)|satan\w++|corrupt(?:ion))|(?:(?:chad[\W_]*+)?scira|bann(?:ed|ing)|satan\w++|corrupt(?:ion))\b.*\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
 1784576870	Dan Getz	bioknox
 1784582407	Dan Getz	floridamechanical\.net
