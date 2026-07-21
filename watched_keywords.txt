@@ -82322,3 +82322,4 @@
 1784582407	Dan Getz	floridamechanical\.net
 1784607456	VLAZ	1tnt\.app
 1784608028	VLAZ	gogowalletrecovery[\W_]*+gmail(?:[\W_]*+com)?
+1784609969	VLAZ	drugfreecountry\.com
