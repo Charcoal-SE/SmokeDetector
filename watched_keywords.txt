@@ -82329,3 +82329,4 @@
 1784619683	VLAZ	sai[\W_]*+flower
 1784620875	VLAZ	rudrakshkingston\.com
 1784627238	VLAZ	mymodalert\.com
+1784627624	VLAZ	dreamspaark\.com
