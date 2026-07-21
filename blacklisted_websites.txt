@@ -6330,3 +6330,4 @@ stitchpatches\.ca
 luxarylucky\.rf\.gd
 bracely\.in
 betiran\.vip
+\b(?<![^\W_]-)weed\.th\b(?![.-][^\W_])
