@@ -80223,7 +80223,6 @@
 1772950957	VLAZ	(?-i:iYsB8Gwu4zzXKRS67)(?#forms.gle)
 1772956074	VLAZ	markdownpreviewonline\.com
 1772975991	Jeff Schaller	sectorposts\.com
-1772982227	Dan Getz	weed\.th
 1772987378	Jeff Schaller	pacifyproject\.netlify\.app
 1772998203	Dan Getz	topstream-hd\.fr
 1773016036	Dan Getz	TechchainConsult(?!\.com)
