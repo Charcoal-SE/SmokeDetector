@@ -82344,3 +82344,4 @@
 1784641116	VLAZ	digitalmarkethubs\.com
 1784643209	VLAZ	clari[\W_]*+cosmetics
 1784645975	Dan Getz	kodingcamp\.com
+1784650655	Jeff Schaller	calmedequipment\.com
