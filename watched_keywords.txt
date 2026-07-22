@@ -82348,3 +82348,4 @@
 1784659131	Dan Getz	ninee\.ai
 1784666193	Ryan M	lifetoolkit\.tech
 1784698825	VLAZ	(?-i:buildwithblockpi)(?# promo code)
+1784698832	VLAZ	blockpi\.io
