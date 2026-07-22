@@ -82364,3 +82364,4 @@
 1784716899	VLAZ	ssnc[\W_]*+direct(?!\.com(?<=ssncdirect\.com))
 1784719208	Jeff Schaller	threatcop\.com
 1784720346	VLAZ	eazzbooks\.com
+1784720369	VLAZ	eazz[\W_]*+books(?!\.com(?<=eazzbooks\.com))
