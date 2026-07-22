@@ -82357,3 +82357,4 @@
 1784703730	VLAZ	vmninstitutions\.com
 1784706418	Ryan M	nursingessaywriter\.co\.uk
 1784716656	VLAZ	dhanvardhanply\.com
+1784716676	VLAZ	dhanvardhan[\W_]*+ply(?!\.com(?<=dhanvardhanply\.com))
