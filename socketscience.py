@@ -93,12 +93,16 @@ class SocketScience:
 
     @classmethod
     def check_recent_pings(cls):
-        recent = cls._pings.sort(key=lambda p: p["timestamp"]).reverse()
-        if len(recent) >= 1:
-            most_recent = recent[0]["timestamp"]
-            now = time.time()
+        cls._pings.sort(key=lambda p: p["timestamp"], reverse=True)
 
-        if now - most_recent >= 90 or len(recent) == 0:
+        if len(cls._pings) >= 1:
+            most_recent = cls._pings[0]["timestamp"]
+            now = time.time()
+            no_recent_pings = (now - most_recent) >= 90
+        else:
+            no_recent_pings = True
+
+        if no_recent_pings:
             # No active Smokeys. Wait a random number of seconds, then switch to active.
             sleep = random.randint(0, 30)
             cls._switch_task = Tasks.later(SocketScience.switch_to_active, after=sleep)
