@@ -82366,3 +82366,4 @@
 1784720346	VLAZ	eazzbooks\.com
 1784720369	VLAZ	eazz[\W_]*+books(?!\.com(?<=eazzbooks\.com))
 1784720789	VLAZ	rakeback52\.com
+1784721450	VLAZ	lasercleanexpert\.com
