@@ -82350,3 +82350,4 @@
 1784698825	VLAZ	(?-i:buildwithblockpi)(?# promo code)
 1784698832	VLAZ	blockpi\.io
 1784698841	VLAZ	quickestimate\.co
+1784700778	VLAZ	aoiwashi\.in
