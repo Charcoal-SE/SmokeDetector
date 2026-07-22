@@ -82360,3 +82360,4 @@
 1784716676	VLAZ	dhanvardhan[\W_]*+ply(?!\.com(?<=dhanvardhanply\.com))
 1784716752	VLAZ	mysudokuworld\.com
 1784716792	VLAZ	nixxz\.vn
+1784716882	VLAZ	ssncdirect\.com
