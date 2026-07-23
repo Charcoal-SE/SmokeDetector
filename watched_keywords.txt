@@ -82384,4 +82384,3 @@
 1784786167	Dan Getz	rajasthali\.org\.in
 1784788792	VLAZ	vanquishe\.com
 1784791744	VLAZ	doon[\W_]*+school
-1784793362	VLAZ	Priniti[\W_]*+Food
