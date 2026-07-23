@@ -82377,3 +82377,4 @@
 1784784298	Dan Getz	miladruciarnia\.pl
 1784784347	Dan Getz	speedx-tracking\.com
 1784784379	Dan Getz	edfinancialus\.com
+1784784892	Dan Getz	stepfinity\.com
