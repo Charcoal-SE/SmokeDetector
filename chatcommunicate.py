@@ -715,7 +715,17 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
 def dispatch_shorthand_command(msg):
     try:
         commands = shlex.split(GlobalVars.parser.unescape(msg.content).lower())[1:]
-    except ValueError:
+        processed_commands = []
+
+        for cmd in commands:
+            count, cmd = regex.match(r"^(\d*)(.*)", cmd).groups()
+
+            if count and not cmd:
+                return "A space cannot follow a number in a shorthand command."
+
+            for _ in range(int(count) if count else 1):
+                processed_commands.append(cmd)
+    except Exception:
         log_current_exception(log_level='debug')
         return "That shorthand command produced an error when I tried to parse it."
 
@@ -723,13 +733,6 @@ def dispatch_shorthand_command(msg):
         return
 
     output = []
-    processed_commands = []
-
-    for cmd in commands:
-        count, cmd = regex.match(r"^(\d*)(.*)", cmd).groups()
-
-        for _ in range(int(count) if count else 1):
-            processed_commands.append(cmd)
 
     should_return_output = False
 
