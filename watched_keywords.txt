@@ -82391,3 +82391,4 @@
 1784797478	VLAZ	iyrinhealth(?!\.com)
 1784798083	VLAZ	bestlin
 1784802495	Jeff Schaller	phoenixshowertilepros\.com
+1784803329	VLAZ	maninder[\W_]*+wave
