@@ -6332,3 +6332,4 @@ bracely\.in
 betiran\.vip
 \b(?<![^\W_]-)weed\.th\b(?![.-][^\W_])
 \blimousine\.in\.th\b
+melbet1\.lovable\.app
