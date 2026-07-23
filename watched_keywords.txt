@@ -82386,3 +82386,4 @@
 1784791744	VLAZ	doon[\W_]*+school
 1784793406	VLAZ	Priniti[\W_]*+Foods
 1784795361	VLAZ	mrsteamkingston\.ca
+1784795816	VLAZ	leml\.ist
