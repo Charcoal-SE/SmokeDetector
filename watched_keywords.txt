@@ -82379,3 +82379,4 @@
 1784784379	Dan Getz	edfinancialus\.com
 1784784892	Dan Getz	stepfinity\.com
 1784784905	Dan Getz	botscraper\.com
+1784785073	Dan Getz	ignaitra\.us
