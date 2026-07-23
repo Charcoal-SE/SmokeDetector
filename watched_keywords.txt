@@ -82382,3 +82382,4 @@
 1784785073	Dan Getz	ignaitra\.us
 1784785499	Dan Getz	popularcert\.com
 1784786167	Dan Getz	rajasthali\.org\.in
+1784788792	VLAZ	vanquishe\.com
