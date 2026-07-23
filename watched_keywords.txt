@@ -82328,7 +82328,6 @@
 1784627238	VLAZ	mymodalert\.com
 1784627624	VLAZ	dreamspaark\.com
 1784628605	VLAZ	agmworkshop\.vn
-1784632849	Dan Getz	limousine\.in\.th
 1784634066	Dan Getz	di\.co\.th
 1784634481	Dan Getz	og\.th
 1784634830	Dan Getz	eta\.in\.th
@@ -82348,3 +82347,61 @@
 1784659122	Dan Getz	thecalculadoraalicia\.com
 1784659131	Dan Getz	ninee\.ai
 1784666193	Ryan M	lifetoolkit\.tech
+1784698825	VLAZ	(?-i:buildwithblockpi)(?# promo code)
+1784698832	VLAZ	blockpi\.io
+1784698841	VLAZ	quickestimate\.co
+1784700778	VLAZ	aoiwashi\.in
+1784701874	VLAZ	detailingunlimited\.in
+1784701887	VLAZ	srbequipment\.ca
+1784703397	VLAZ	etripto\.in
+1784703730	VLAZ	vmninstitutions\.com
+1784706418	Ryan M	nursingessaywriter\.co\.uk
+1784716656	VLAZ	dhanvardhanply\.com
+1784716676	VLAZ	dhanvardhan[\W_]*+ply(?!\.com(?<=dhanvardhanply\.com))
+1784716752	VLAZ	mysudokuworld\.com
+1784716792	VLAZ	nixxz\.vn
+1784716882	VLAZ	ssncdirect\.com
+1784716899	VLAZ	ssnc[\W_]*+direct(?!\.com(?<=ssncdirect\.com))
+1784719208	Jeff Schaller	threatcop\.com
+1784720346	VLAZ	eazzbooks\.com
+1784720369	VLAZ	eazz[\W_]*+books(?!\.com(?<=eazzbooks\.com))
+1784720789	VLAZ	rakeback52\.com
+1784721450	VLAZ	lasercleanexpert\.com
+1784723767	VLAZ	arthana9777[\W_]*+gmail[\W_]*+com
+1784726491	VLAZ	chex\.ai
+1784751677	Jeff Schaller	leanlife\.com\.vn
+1784751702	Jeff Schaller	decidal\.com
+1784763873	Jeff Schaller	proxy\.sb
+1784783279	VLAZ	farrukhhafeez\.dev
+1784783911	VLAZ	theglowzi\.com
+1784784298	Dan Getz	miladruciarnia\.pl
+1784784347	Dan Getz	speedx-tracking\.com
+1784784379	Dan Getz	edfinancialus\.com
+1784784892	Dan Getz	stepfinity\.com
+1784784905	Dan Getz	botscraper\.com
+1784785073	Dan Getz	ignaitra\.us
+1784785499	Dan Getz	popularcert\.com
+1784786167	Dan Getz	rajasthali\.org\.in
+1784788792	VLAZ	vanquishe\.com
+1784791744	VLAZ	doon[\W_]*+school
+1784793406	VLAZ	Priniti[\W_]*+Foods
+1784795361	VLAZ	mrsteamkingston\.ca
+1784795816	VLAZ	leml\.ist
+1784797441	VLAZ	bluemoonmarketing\.com\.au
+1784797478	VLAZ	iyrinhealth(?!\.com)
+1784798083	VLAZ	bestlin
+1784802495	Jeff Schaller	phoenixshowertilepros\.com
+1784803329	VLAZ	maninder[\W_]*+wave
+1784803354	VLAZ	angeliccareafh\.com
+1784803704	Jeff Schaller	topnotchcv\.co\.uk
+1784804625	Jeff Schaller	movie-boxapp\.com
+1784806670	Jeff Schaller	cosmiccoring\.com
+1784807460	Jeff Schaller	zoikosema\.com
+1784809504	Dan Getz	infiverse\.ai
+1784809523	Dan Getz	girikon\.com
+1784809695	VLAZ	ais[\W_]*+business[\W_]*+corp
+1784811076	VLAZ	pixxen\.com
+1784811475	VLAZ	tmcountertopsphoenix\.com
+1784832669	Jeff Schaller	getunitvapp\.com
+1784839784	Jeff Schaller	superblogmedia\.com
+1784841384	Jeff Schaller	Manik[\W_]*+Printpack
