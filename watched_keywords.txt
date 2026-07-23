@@ -82401,3 +82401,4 @@
 1784809523	Dan Getz	girikon\.com
 1784809695	VLAZ	ais[\W_]*+business[\W_]*+corp
 1784811076	VLAZ	pixxen\.com
+1784811475	VLAZ	tmcountertopsphoenix\.com
