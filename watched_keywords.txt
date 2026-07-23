@@ -82399,3 +82399,4 @@
 1784807460	Jeff Schaller	zoikosema\.com
 1784809504	Dan Getz	infiverse\.ai
 1784809523	Dan Getz	girikon\.com
+1784809695	VLAZ	ais[\W_]*+business[\W_]*+corp
