@@ -82398,3 +82398,4 @@
 1784806670	Jeff Schaller	cosmiccoring\.com
 1784807460	Jeff Schaller	zoikosema\.com
 1784809504	Dan Getz	infiverse\.ai
+1784809523	Dan Getz	girikon\.com
