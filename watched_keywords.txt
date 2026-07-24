@@ -82415,3 +82415,4 @@
 1784883087	VLAZ	vasspectrometers\.com
 1784883095	VLAZ	rvadventureaustralia\.com\.au
 1784883102	VLAZ	scan5\.com
+1784883111	VLAZ	dinkumcalibration\.com\.au
