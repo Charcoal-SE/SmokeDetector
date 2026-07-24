@@ -82420,3 +82420,4 @@
 1784883913	VLAZ	buyivermectinaustralia\.com
 1784884802	VLAZ	secondskinacademy\.com
 1784889660	VLAZ	profitprotip\.blogspot
+1784889797	VLAZ	satoshi[\W_]*+naka-?moto
