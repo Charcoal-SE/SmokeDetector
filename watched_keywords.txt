@@ -82427,3 +82427,4 @@
 1784895750	VLAZ	jareena\.com
 1784896864	VLAZ	safevccpro(?!\.com)
 1784904094	VLAZ	ffbeta\.games
+1784904390	VLAZ	wordlelimericks\.com
