@@ -82417,3 +82417,4 @@
 1784883111	VLAZ	dinkumcalibration\.com\.au
 1784883143	VLAZ	safarimasters\.com
 1784883263	VLAZ	new[\W_]*+view[\W_]*+wellness
+1784883913	VLAZ	buyivermectinaustralia\.com
