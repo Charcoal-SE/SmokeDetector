@@ -82429,3 +82429,4 @@
 1784904094	VLAZ	ffbeta\.games
 1784904390	VLAZ	wordlelimericks\.com
 1784906156	VLAZ	abroh[\W_]*+shield
+1784906234	VLAZ	snowdaycalculator\.io
