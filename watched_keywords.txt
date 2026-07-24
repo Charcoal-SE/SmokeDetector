@@ -82414,3 +82414,4 @@
 1784872923	VLAZ	arthryon\.com
 1784883087	VLAZ	vasspectrometers\.com
 1784883095	VLAZ	rvadventureaustralia\.com\.au
+1784883102	VLAZ	scan5\.com
