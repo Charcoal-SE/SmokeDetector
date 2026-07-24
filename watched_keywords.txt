@@ -82431,4 +82431,3 @@
 1784906156	VLAZ	abroh[\W_]*+shield
 1784906234	VLAZ	snowdaycalculator\.io
 1784906612	VLAZ	dynamixsystems\.co\.uk
-1784906844	VLAZ	saleoid
