@@ -82425,5 +82425,4 @@
 1784893119	VLAZ	tech[\W_]*+midia[\W_]*+square
 1784894630	VLAZ	aspireghostwriting\.com
 1784895750	VLAZ	jareena\.com
-1784896824	VLAZ	(?-i:SafeVCCPro)(?#t.me)
 1784896864	VLAZ	safevccpro(?!\.com)
