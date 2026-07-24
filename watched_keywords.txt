@@ -82418,3 +82418,4 @@
 1784883143	VLAZ	safarimasters\.com
 1784883263	VLAZ	new[\W_]*+view[\W_]*+wellness
 1784883913	VLAZ	buyivermectinaustralia\.com
+1784884802	VLAZ	secondskinacademy\.com
