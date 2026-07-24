@@ -82422,3 +82422,4 @@
 1784889660	VLAZ	profitprotip\.blogspot
 1784889797	VLAZ	satoshi[\W_]*+naka-?moto
 1784891871	VLAZ	bikebarta\.com
+1784893119	VLAZ	tech[\W_]*+midia[\W_]*+square
