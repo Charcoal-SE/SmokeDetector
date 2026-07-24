@@ -82409,3 +82409,4 @@
 1784871734	VLAZ	parseformat\.com
 1784872127	VLAZ	thechasencompany\.com
 1784872134	VLAZ	suikaen\.com
+1784872311	Dan Getz	techmidiasquare\.com
