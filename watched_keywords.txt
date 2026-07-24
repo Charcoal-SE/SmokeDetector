@@ -82428,3 +82428,4 @@
 1784896864	VLAZ	safevccpro(?!\.com)
 1784904094	VLAZ	ffbeta\.games
 1784904390	VLAZ	wordlelimericks\.com
+1784906156	VLAZ	abroh[\W_]*+shield
