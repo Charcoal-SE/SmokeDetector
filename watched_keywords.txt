@@ -82419,3 +82419,4 @@
 1784883263	VLAZ	new[\W_]*+view[\W_]*+wellness
 1784883913	VLAZ	buyivermectinaustralia\.com
 1784884802	VLAZ	secondskinacademy\.com
+1784889660	VLAZ	profitprotip\.blogspot
