@@ -82434,3 +82434,4 @@
 1784906874	VLAZ	saleoid\.com
 1784906882	VLAZ	saleoid(?!\.com)
 1784908324	Dan Getz	multicalculators\.com
+1784908335	Dan Getz	markntech\.com
