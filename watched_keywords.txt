@@ -82432,3 +82432,4 @@
 1784906234	VLAZ	snowdaycalculator\.io
 1784906612	VLAZ	dynamixsystems\.co\.uk
 1784906874	VLAZ	saleoid\.com
+1784906882	VLAZ	saleoid(?!\.com)
