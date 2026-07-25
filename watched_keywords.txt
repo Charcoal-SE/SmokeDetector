@@ -82442,3 +82442,4 @@
 1784957791	VLAZ	vedicarehealth\.com
 1784977486	Jeff Schaller	calculatorzkit\.com
 1784977525	Jeff Schaller	yuvclothing\.in
+1784978579	Jeff Schaller	Tender[\W_]*+Tree[\W_]*+Montessori
