@@ -82444,3 +82444,4 @@
 1784977525	Jeff Schaller	yuvclothing\.in
 1784978579	Jeff Schaller	Tender[\W_]*+Tree[\W_]*+Montessori
 1784980247	Jeff Schaller	servostabilizer-india\.com
+1784988119	Jeff Schaller	horizonosc\.com
