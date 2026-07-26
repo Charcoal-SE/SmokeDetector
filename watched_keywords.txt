@@ -82454,3 +82454,4 @@
 1784998315	Jeff Schaller	seopremiumshop
 1785002261	Jeff Schaller	arfsk9team\.com\.ng
 1785035388	Dan Getz	com\.livwell(?# play.google.com)
+1785035529	Dan Getz	zavzaseal\.com
