@@ -82456,3 +82456,4 @@
 1785035388	Dan Getz	com\.livwell(?# play.google.com)
 1785035529	Dan Getz	zavzaseal\.com
 1785059305	VLAZ	buypvastore
+1785059604	VLAZ	usaeliteservice
