@@ -82459,3 +82459,4 @@
 1785059604	VLAZ	usaeliteservice
 1785059646	VLAZ	sanukrishna\.online
 1785059690	VLAZ	tamhed\.sa
+1785059841	VLAZ	b2bxit
