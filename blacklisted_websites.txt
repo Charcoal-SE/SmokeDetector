@@ -6336,3 +6336,4 @@ melbet1\.lovable\.app
 sharmascientificindustries\.com
 creativeitinstitute\.com
 tdac\.in\.th
+\beta\.in\.th\b
