@@ -82483,3 +82483,4 @@
 1785147784	VLAZ	topgames\.gg
 1785149504	Jeff Schaller	paysomeonetotakemyonlineclass\.us
 1785150739	Jeff Schaller	GetPaisaBack
+1785150912	VLAZ	alkon[\W_]*+disc
