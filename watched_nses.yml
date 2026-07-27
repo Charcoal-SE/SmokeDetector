@@ -5264,7 +5264,8 @@ items:
   - ns-150-c.gandi.net.
   - ns-41-b.gandi.net.
   - ns-9-a.gandi.net.
-- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18
+- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18; expired again 2026-07-16
+  disable: true
   ns: bluehosting.pk.
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
