@@ -82476,3 +82476,4 @@
 1785140559	VLAZ	tomodachiliferom\.com
 1785142401	VLAZ	cozicafe\.com
 1785146553	VLAZ	farhanaebrahim\.com
+1785146580	VLAZ	farhana[\W_]*+ebrahim(?!\.com(?<=farhanaebrahim\.com))
