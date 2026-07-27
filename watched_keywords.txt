@@ -82490,3 +82490,4 @@
 1785160559	VLAZ	bestbathroomrenovation\.com\.au
 1785161589	VLAZ	xperlet(?!\.com)
 1785170428	Dan Getz	storyofsolar\.com
+1785179809	Jeff Schaller	minecrft\.app
