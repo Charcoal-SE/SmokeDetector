@@ -82471,3 +82471,4 @@
 1785136787	VLAZ	ttiktokio\.id
 1785137236	VLAZ	stopwatch\.jp
 1785137310	VLAZ	myskinsommelier\.com
+1785137342	VLAZ	ertikaa\.com
