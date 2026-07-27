@@ -82480,3 +82480,4 @@
 1785147029	VLAZ	zktecousa\.com
 1785147052	VLAZ	zkteco[\W_]*+usa(?!\.com(?<=zktecousa\.com))
 1785147618	VLAZ	aicharalab\.com
+1785147784	VLAZ	topgames\.gg
