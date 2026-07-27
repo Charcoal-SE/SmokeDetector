@@ -82486,3 +82486,4 @@
 1785150912	VLAZ	alkon[\W_]*+disc
 1785151756	Jeff Schaller	gold365online\.com
 1785154236	Dan Getz	priscilla[\W_]*+yeung
+1785155058	Jeff Schaller	gtracademy\.org
