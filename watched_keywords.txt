@@ -82479,3 +82479,4 @@
 1785146580	VLAZ	farhana[\W_]*+ebrahim(?!\.com(?<=farhanaebrahim\.com))
 1785147029	VLAZ	zktecousa\.com
 1785147052	VLAZ	zkteco[\W_]*+usa(?!\.com(?<=zktecousa\.com))
+1785147618	VLAZ	aicharalab\.com
