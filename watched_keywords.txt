@@ -82470,3 +82470,4 @@
 1785129650	Dan Getz	menulonghorn\.com
 1785136787	VLAZ	ttiktokio\.id
 1785137236	VLAZ	stopwatch\.jp
+1785137310	VLAZ	myskinsommelier\.com
