@@ -82512,3 +82512,4 @@
 1785252641	Dan Getz	heictools\.io
 1785252759	Dan Getz	itematlas\.com
 1785252822	Dan Getz	(?-i:Item\s*+ATLAS)(?!\.com(?<=itematlas\.com))
+1785274412	Dan Getz	Mylar[\W_]*+Bags[\W_]*+Pro
