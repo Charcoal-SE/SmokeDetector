@@ -82497,3 +82497,4 @@
 1785209544	Dan Getz	mod(?:erator)?s?[\W_]*+o[nf][\W_]*+(?-i:TSE)
 1785209928	Dan Getz	at[\W_]*+competitive[\W_]*+prices(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1785212637	Dan Getz	lumminor\.in
+1785220686	Dan Getz	manergy\.co\.uk
