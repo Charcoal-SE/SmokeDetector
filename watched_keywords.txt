@@ -82495,3 +82495,4 @@
 1785183238	Dan Getz	papillonglow\.com
 1785209471	Dan Getz	(?-i:TSE)[\W_]*+mod(?:erator)?s?
 1785209544	Dan Getz	mod(?:erator)?s?[\W_]*+o[nf][\W_]*+(?-i:TSE)
+1785209928	Dan Getz	at[\W_]*+competitive[\W_]*+prices(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
