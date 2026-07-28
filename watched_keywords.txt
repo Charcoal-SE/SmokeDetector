@@ -82510,3 +82510,4 @@
 1785242282	VLAZ	manikprintpack\.com
 1785242290	VLAZ	manik[\W_]*+printpack(?!\.com(?<=manikprintpack\.com))
 1785252641	Dan Getz	heictools\.io
+1785252759	Dan Getz	itematlas\.com
