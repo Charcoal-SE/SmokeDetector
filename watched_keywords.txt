@@ -82503,3 +82503,4 @@
 1785222462	Dan Getz	tudordressing\.com
 1785234519	VLAZ	zmediaads\.in
 1785234638	VLAZ	dcnglobalexhibitions\.com
+1785234660	VLAZ	fntmanagement\.com
