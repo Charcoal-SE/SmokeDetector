@@ -82508,3 +82508,4 @@
 1785239851	Dan Getz	dataqix\.com
 1785242148	Jeff Schaller	drvikasmittal\.com
 1785242282	VLAZ	manikprintpack\.com
+1785242290	VLAZ	manik[\W_]*+printpack(?!\.com(?<=manikprintpack\.com))
