@@ -82494,3 +82494,4 @@
 1785181458	Jeff Schaller	sreeashtalakshmi\.com
 1785183238	Dan Getz	papillonglow\.com
 1785209471	Dan Getz	(?-i:TSE)[\W_]*+mod(?:erator)?s?
+1785209544	Dan Getz	mod(?:erator)?s?[\W_]*+o[nf][\W_]*+(?-i:TSE)
