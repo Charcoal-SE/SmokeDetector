@@ -82499,3 +82499,4 @@
 1785212637	Dan Getz	lumminor\.in
 1785220686	Dan Getz	manergy\.co\.uk
 1785220729	Dan Getz	quikapp\.co
+1785220751	Dan Getz	quikapp(?!\.co)
