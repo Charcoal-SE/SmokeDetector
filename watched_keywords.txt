@@ -82493,3 +82493,4 @@
 1785179809	Jeff Schaller	minecrft\.app
 1785181458	Jeff Schaller	sreeashtalakshmi\.com
 1785183238	Dan Getz	papillonglow\.com
+1785209471	Dan Getz	(?-i:TSE)[\W_]*+mod(?:erator)?s?
