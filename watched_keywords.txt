@@ -82504,3 +82504,4 @@
 1785234519	VLAZ	zmediaads\.in
 1785234638	VLAZ	dcnglobalexhibitions\.com
 1785234660	VLAZ	fntmanagement\.com
+1785234860	VLAZ	ampleservq\.com
