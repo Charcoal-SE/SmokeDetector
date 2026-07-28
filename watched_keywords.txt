@@ -82506,3 +82506,4 @@
 1785234660	VLAZ	fntmanagement\.com
 1785234860	VLAZ	ampleservq\.com
 1785236723	VLAZ	buffstreams\.co\.uk
+1785239851	Dan Getz	dataqix\.com
