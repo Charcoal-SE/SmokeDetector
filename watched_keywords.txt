@@ -82501,3 +82501,4 @@
 1785220729	Dan Getz	quikapp\.co
 1785220751	Dan Getz	quikapp(?!\.co)
 1785222462	Dan Getz	tudordressing\.com
+1785234519	VLAZ	zmediaads\.in
