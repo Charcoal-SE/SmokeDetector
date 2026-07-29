@@ -82519,3 +82519,4 @@
 1785318217	VLAZ	goree[\W_]*+beauty[\W_]*+cream
 1785318333	VLAZ	esferasoft\.com
 1785319137	VLAZ	atriauniversity\.edu\.in
+1785319967	VLAZ	atria[\W_]*+university(?!\.edu\.in(?<=atriauniversity\.edu\.in))
