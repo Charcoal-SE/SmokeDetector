@@ -82521,3 +82521,4 @@
 1785319967	VLAZ	atria[\W_]*+university(?!\.edu\.in(?<=atriauniversity\.edu\.in))
 1785325482	Jeff Schaller	wkitchens\.ae
 1785326694	Jeff Schaller	Surefunmi2(?:@gmail\.com)?
+1785327661	Jeff Schaller	haindavam\.org
