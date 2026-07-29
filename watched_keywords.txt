@@ -82515,3 +82515,4 @@
 1785274412	Dan Getz	Mylar[\W_]*+Bags[\W_]*+Pro
 1785300430	VLAZ	iroyalssystems\.in
 1785304891	VLAZ	abdullaalfarabi\.infinityfree\.me
+1785315435	VLAZ	ottawa-renovation\.ca
