@@ -82331,7 +82331,6 @@
 1784634909	Dan Getz	90day\.in\.th
 1784634930	Dan Getz	dtv\.in\.th
 1784634993	Dan Getz	retainingwallandlandscaping\.com\.au
-1784635126	Dan Getz	pt\.33
 1784635707	Dan Getz	tvc\.co\.th
 1784636737	Dan Getz	thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
 1784640598	Jeff Schaller	beehivesoftware\.com
