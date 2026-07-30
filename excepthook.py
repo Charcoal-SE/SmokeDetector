@@ -1,14 +1,16 @@
 # coding=utf-8
-from datetime import datetime
 import os
-import traceback
-import threading
 import sys
+import threading
+import traceback
+from datetime import datetime
+
+import requests
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
-import requests
-from helpers import exit_mode, log, log_exception
+
 from globalvars import GlobalVars
+from helpers import exit_mode, log, log_exception
 
 
 # noinspection PyProtectedMember

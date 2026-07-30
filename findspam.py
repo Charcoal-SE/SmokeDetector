@@ -1,36 +1,36 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
-import sys
 import math
-from difflib import SequenceMatcher
-from urllib.parse import urlparse, unquote_plus
-from itertools import chain
-from collections import Counter
-from datetime import datetime
-from string import punctuation
-import time
 import os
 import os.path as path
+import sys
 import threading
+import time
+from collections import Counter
+from datetime import datetime
+from difflib import SequenceMatcher
+from itertools import chain
+from string import punctuation
+from urllib.parse import unquote_plus, urlparse
 
+import dns.resolver
+import phonenumbers
 import regex
+import requests
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
-import phonenumbers
-import dns.resolver
-import requests
-import chatcommunicate
 
-from helpers import log, regex_compile_no_cache, strip_pre_and_code_elements, strip_code_elements, \
-    get_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, KEYWORD_BOOKENDING_START, \
-    get_non_bookended_keyword_regex_text_from_entries, chunk_list
-import metasmoke_cache
-from globalvars import GlobalVars
 import blacklists
+import chatcommunicate
+import metasmoke_cache
 import phone_numbers
+from globalvars import GlobalVars
+from helpers import (KEYWORD_BOOKENDING_START, chunk_list, get_bookended_keyword_regex_text_from_entries,
+                     get_non_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, log,
+                     regex_compile_no_cache, strip_code_elements, strip_pre_and_code_elements)
 
 
 if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):

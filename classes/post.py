@@ -1,8 +1,9 @@
 # coding=utf-8
-import json
-from helpers import log
 import html
+import json
 from typing import AnyStr, Optional, Union
+
+from helpers import log
 
 
 class PostParseError(Exception):

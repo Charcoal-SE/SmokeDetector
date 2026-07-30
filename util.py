@@ -2,15 +2,16 @@
 # coding=utf-8
 # A CLI utility for various Smokey functions
 
-import sys
+import inspect
 import os
 import shlex
-import inspect
+import sys
 
-import helpers
-helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 import chatcommands
+import helpers
 
+
+helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 
 # A utility is "name: (description, func)"
 utilities = {}

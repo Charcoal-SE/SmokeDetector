@@ -1,46 +1,48 @@
 # coding=utf-8
-# noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, CmdExceptionLongReply, command, get_report_data, \
-    is_privileged, message, \
-    tell_rooms, tell_rooms_with, get_message, is_self
-# noinspection PyUnresolvedReferences
-from globalvars import GlobalVars
-import findspam
-# noinspection PyUnresolvedReferences
-from datetime import datetime
-from apigetpost import api_get_post, PostData
-import datahandling
-from datahandling import *
-from metasmoke import Metasmoke
-from blacklists import load_blacklists, Blacklist
-from parsing import *
-from spamhandling import check_if_spam, handle_spam
-from gitmanager import GitManager, GitHubManager
-import threading
-import random
-import requests
-import sys
-import os
-import time
 import collections
+import os
+import random
 import subprocess
-from html import unescape
+import sys
+import threading
+import time
 from ast import literal_eval
+from datetime import datetime
+from html import unescape
+
+import dns.resolver
 # noinspection PyCompatibility
 import regex
-from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list, remove_regex_comments, regex_compile_no_cache, log_current_exception, \
-    get_se_api_default_params, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route, \
-    get_bookended_keyword_regex_text_from_entries, get_non_bookended_keyword_regex_text_from_entries, \
-    keyword_bookend_regex_text, keyword_non_bookend_regex_text
+import requests
+from dns.exception import DNSException
+
+import datahandling
+import findspam
+import number_homoglyphs
+import phone_numbers
+# noinspection PyUnresolvedReferences
+from apigetpost import PostData, api_get_post
+from blacklists import Blacklist, load_blacklists
+# noinspection PyUnresolvedReferences
+from chatcommunicate import (CmdException, CmdExceptionLongReply, add_room, block_room, command, get_message,
+                             get_report_data, is_privileged, is_self, message, tell_rooms, tell_rooms_with)
 from classes import Post
 from classes.feedback import *
 from classes.dns import dns_resolve
+from datahandling import *
+from gitmanager import GitHubManager, GitManager
+# noinspection PyUnresolvedReferences
+from globalvars import GlobalVars
+from helpers import (chunk_list, exit_mode, expand_shorthand_link, get_bookended_keyword_regex_text_from_entries,
+                     get_non_bookended_keyword_regex_text_from_entries, get_se_api_default_params,
+                     get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route,
+                     keyword_bookend_regex_text, keyword_non_bookend_regex_text, log, log_current_exception,
+                     only_blacklists_changed, only_modules_changed, regex_compile_no_cache, reload_modules,
+                     remove_regex_comments)
+from metasmoke import Metasmoke
+from parsing import *
+from spamhandling import check_if_spam, handle_spam
 from tasks import Tasks
-import dns.resolver
-from dns.exception import DNSException
-import number_homoglyphs
-import phone_numbers
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check

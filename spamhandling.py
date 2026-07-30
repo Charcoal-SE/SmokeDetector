@@ -1,16 +1,18 @@
 # coding=utf-8
-import sys
 import random
-import findspam
-import datahandling
-import chatcommunicate
-from globalvars import GlobalVars
+import sys
 from datetime import datetime, timedelta
+
 import regex
-import parsing
-import metasmoke
+
+import chatcommunicate
+import datahandling
 import excepthook
+import findspam
+import metasmoke
+import parsing
 from classes import Post, PostParseError
+from globalvars import GlobalVars
 from helpers import log, escape_format
 from parsing import to_metasmoke_link
 from tasks import Tasks
