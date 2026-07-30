@@ -617,7 +617,7 @@ def test_blacklisted_users():
             "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
             "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
             "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) " \
-            "for more information about when users are added to or removed from the user-blacklist, which is" \
+            "for more information about when users are added to or removed from the user-blacklist, which is " \
             "primarily done with `tpu` and `fp` feedback."
 
         # Format: !!/*blu userid sitename
@@ -636,7 +636,7 @@ def test_blacklisted_users():
             "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
             "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
             "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) " \
-            "for more information about when users are added to or removed from the user-blacklist, which is" \
+            "for more information about when users are added to or removed from the user-blacklist, which is " \
             "primarily done with `tpu` and `fp` feedback."
 
         # Invalid input
