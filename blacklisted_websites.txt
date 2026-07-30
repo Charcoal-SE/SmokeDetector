@@ -6338,3 +6338,4 @@ creativeitinstitute\.com
 tdac\.in\.th
 \beta\.in\.th\b
 agents\.co\.th
+\b(?<![^\W_]-)og\.th\b(?![.-][^\W_])
