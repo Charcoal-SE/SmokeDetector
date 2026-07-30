@@ -6339,3 +6339,4 @@ tdac\.in\.th
 \beta\.in\.th\b
 agents\.co\.th
 \b(?<![^\W_]-)og\.th\b(?![.-][^\W_])
+c[\W_]*+h[\W_]*+r[\W_]*+o[\W_]*+n[\W_]*+u[\W_]*+s[\W_]*+a[\W_]*+i[\W_]*+r[\W_]*+g[\W_]*+a[\W_]*+p[\W_]*+[\W_]*+(?:dot[\W_]*+)?c[\W_]*+o[\W_]*+m(?#chronusairgap.com obfuscated)
