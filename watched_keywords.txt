@@ -82327,7 +82327,6 @@
 1784627624	VLAZ	dreamspaark\.com
 1784628605	VLAZ	agmworkshop\.vn
 1784634066	Dan Getz	di\.co\.th
-1784634481	Dan Getz	og\.th
 1784634909	Dan Getz	90day\.in\.th
 1784634930	Dan Getz	dtv\.in\.th
 1784634993	Dan Getz	retainingwallandlandscaping\.com\.au
