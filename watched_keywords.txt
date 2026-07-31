@@ -82566,3 +82566,4 @@
 1785501923	Dan Getz	arhantayoga\.org
 1785504368	Dan Getz	sbs[\W_]*+university
 1785504384	Dan Getz	koiae\.com
+1785506929	Jeff Schaller	wdko_rp(?#t.me)
