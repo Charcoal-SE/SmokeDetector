@@ -81774,7 +81774,6 @@
 1782125966	Jeff Schaller	aseemsinghal\.com
 1782133428	VLAZ	mauricettecalcul\.fr
 1782134313	VLAZ	goldentreehotel\.in
-1782138800	VLAZ	consultantlm\.uk
 1782141298	Jeff Schaller	scopetakeoff\.com
 1782141349	Jeff Schaller	Flooring[\W_]*+Takeoff[\W_]*+Software
 1782147807	Jeff Schaller	ffastutebetaserver\.com
