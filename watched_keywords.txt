@@ -82567,3 +82567,4 @@
 1785504368	Dan Getz	sbs[\W_]*+university
 1785504384	Dan Getz	koiae\.com
 1785506929	Jeff Schaller	wdko_rp(?#t.me)
+1785531796	Vickel	revolutionauto\.ca
