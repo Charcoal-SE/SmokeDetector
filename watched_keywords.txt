@@ -82555,3 +82555,4 @@
 1785491611	VLAZ	sngpl-bill\.pk
 1785492376	VLAZ	cloud[\W_]*+patrons[\W_]*+info[\W_]*+solutions
 1785492383	Jeff Schaller	platino\.co\.in
+1785492403	Jeff Schaller	nrskitchen\.com
