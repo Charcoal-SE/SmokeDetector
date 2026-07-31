@@ -82565,3 +82565,4 @@
 1785501513	Dan Getz	ardentpest\.com\.sg
 1785501923	Dan Getz	arhantayoga\.org
 1785504368	Dan Getz	sbs[\W_]*+university
+1785504384	Dan Getz	koiae\.com
