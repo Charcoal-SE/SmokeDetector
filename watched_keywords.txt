@@ -82550,3 +82550,4 @@
 1785487935	VLAZ	usasmmlive(?!\.com)
 1785488778	VLAZ	white[\W_]*+bunnie
 1785489181	Glorfindel	mysudokuworld
+1785491582	VLAZ	indiancarpets\.in
