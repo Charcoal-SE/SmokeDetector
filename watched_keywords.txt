@@ -82559,3 +82559,4 @@
 1785493871	VLAZ	jvsnutbolt\.in
 1785495804	VLAZ	yambite\.com
 1785495812	VLAZ	yambite(?!\.com)
+1785496865	Jeff Schaller	investorsavenue\.co\.in
