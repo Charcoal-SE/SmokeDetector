@@ -82553,3 +82553,4 @@
 1785491582	VLAZ	indiancarpets\.in
 1785491593	VLAZ	trafficridermod\.org
 1785491611	VLAZ	sngpl-bill\.pk
+1785492376	VLAZ	cloud[\W_]*+patrons[\W_]*+info[\W_]*+solutions
