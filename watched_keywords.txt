@@ -82548,3 +82548,4 @@
 1785487838	VLAZ	daltaios\.com
 1785487927	VLAZ	usasmmlive\.com
 1785487935	VLAZ	usasmmlive(?!\.com)
+1785488778	VLAZ	white[\W_]*+bunnie
