@@ -82592,3 +82592,4 @@
 1785677166	Dan Getz	mrfixs\.net
 1785677180	Jeff Schaller	stickwarlegacies\.com
 1785678489	Dan Getz	elninoguide\.com
+1785683939	Jeff Schaller	betproexchg\.com
