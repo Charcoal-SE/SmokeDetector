@@ -82593,3 +82593,4 @@
 1785677180	Jeff Schaller	stickwarlegacies\.com
 1785678489	Dan Getz	elninoguide\.com
 1785683939	Jeff Schaller	betproexchg\.com
+1785685071	Dan Getz	clock[\W_]*+widgets[\W_]*+homescreen
