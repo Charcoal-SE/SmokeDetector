@@ -82579,7 +82579,6 @@
 1785585658	Dan Getz	copyfonty\.com
 1785586472	Dan Getz	webnumbr\.com
 1785588394	Dan Getz	pepscrypto\.com
-1785590165	Dan Getz	gemblerhomes\.com
 1785597355	Jeff Schaller	freefirenation\.com
 1785600434	Dan Getz	upasanalamba\.com
 1785602303	Dan Getz	receptenkamer\.nl
