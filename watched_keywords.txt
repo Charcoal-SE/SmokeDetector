@@ -82595,3 +82595,4 @@
 1785683939	Jeff Schaller	betproexchg\.com
 1785685071	Dan Getz	clock[\W_]*+widgets[\W_]*+homescreen
 1785685729	Dan Getz	codhaus\.com
+1785722004	Jeff Schaller	youart\.ai
