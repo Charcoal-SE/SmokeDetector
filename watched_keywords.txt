@@ -82611,3 +82611,4 @@
 1785772409	Jeff Schaller	buddhadailywisdom\.com
 1785776323	Jeff Schaller	ecogovtest\.com
 1785789670	Jeff Schaller	masecurite\.interieur\.gouv\.fr
+1785793967	Dan Getz	medoccstore(?:@gmail\.com)?
