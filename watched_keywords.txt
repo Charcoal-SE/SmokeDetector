@@ -82598,3 +82598,4 @@
 1785722004	Jeff Schaller	youart\.ai
 1785738527	Dan Getz	flyingbee\.com
 1785738536	Dan Getz	flyingbee(?!\.com)
+1785738584	Dan Getz	maltafamilytreemaker\.com
