@@ -82610,3 +82610,4 @@
 1785766483	Dan Getz	vaportiser\.co\.uk
 1785772409	Jeff Schaller	buddhadailywisdom\.com
 1785776323	Jeff Schaller	ecogovtest\.com
+1785789670	Jeff Schaller	masecurite\.interieur\.gouv\.fr
