@@ -82628,3 +82628,4 @@
 1785841905	Dan Getz	\(\.\)th
 1785843124	Jeff Schaller	ksclegal\.co\.uk
 1785843858	Dan Getz	ollasuper\.com
+1785843865	Dan Getz	ollasuper(?!\.com)
