@@ -82637,3 +82637,4 @@
 1785857780	Jeff Schaller	ollawrite\.com
 1785857800	Jeff Schaller	olladns\.com
 1785860830	Dan Getz	infinityti\.org
+1785861078	Dan Getz	scam[\W_]*+networks?
