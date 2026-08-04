@@ -82632,3 +82632,4 @@
 1785844598	Dan Getz	sock[\W_]*+puppet[\W_]*+network
 1785844605	Dan Getz	network[\W_]*+of[\W_]*+sock[\W_]*+puppets
 1785845193	Dan Getz	elevateinterio\.com
+1785847509	Jeff Schaller	jeemya\.com
