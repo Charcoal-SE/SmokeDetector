@@ -82616,3 +82616,4 @@
 1785795245	Jeff Schaller	pspeptides\.com
 1785800708	Jeff Schaller	jato\.ae
 1785804075	Dan Getz	ps[\W_]*+peptides(?!\.com(?<=pspeptides\.com))
+1785839239	Jeff Schaller	fostechnos\.com
