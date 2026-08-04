@@ -82618,3 +82618,4 @@
 1785804075	Dan Getz	ps[\W_]*+peptides(?!\.com(?<=pspeptides\.com))
 1785839239	Jeff Schaller	fostechnos\.com
 1785839366	Jeff Schaller	arista-ai\.com
+1785839429	Jeff Schaller	admarkbranding\.com
