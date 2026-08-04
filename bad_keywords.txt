@@ -3925,3 +3925,4 @@ what[\W_]*+is[\W_]*+digital[\W_]*+marketing(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 chad[\W_]*+scira[\W_]*+sock[\W_]*+puppet
 chronos[\W_]*+airgap[\W_]*+recovery
 quantum[\W_]*+vault[\W_]*+recuperation
+thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
