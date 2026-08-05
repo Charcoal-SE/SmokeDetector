@@ -296,13 +296,15 @@ class YAMLParserNS(YAMLParserCIDR):
         """
         return item.rstrip().lower()
 
-    def _validate(self, item):
+    def _validate(self, item, validate_dns=True):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
                     '{0} does not look like a valid host name'.format(ns))
             if item.get('disable', None):
                 return False
+            if not validate_dns:
+                return True
             # Extend lifetime if we are running a test
             extra_params = dict()
             if "pytest" in sys.modules:
@@ -362,8 +364,12 @@ class YAMLParserNS(YAMLParserCIDR):
         with ThreadPoolExecutor(max_workers=10) as executor:
             return list(executor.map(self._validate, list_to_validate, timeout=300))
 
-    def validate(self):
+    def validate(self, validate_dns=True):
         parsed_list = self._parse()
+        if not validate_dns:
+            for item in parsed_list:
+                self._validate(item, validate_dns=False)
+            return
         log('info', 'Validation Pass 1:')  # Just a blank line
         results_pass1 = self.validate_list(parsed_list)
         entries_with_exception = [entry for entry in results_pass1 if entry is not True]
@@ -448,5 +454,5 @@ class Blacklist:
     def exists(self, item):
         return self._parser.exists(item)
 
-    def validate(self):
-        return self._parser.validate()
+    def validate(self, *args, **kwargs):
+        return self._parser.validate(*args, **kwargs)
