@@ -82639,3 +82639,4 @@
 1785861078	Dan Getz	scam[\W_]*+networks?
 1785861304	Dan Getz	scam[\W_]*+alerts?
 1785872700	Jeff Schaller	aiboxify\.com
+1785889921	Jeff Schaller	CYBERBERSPY
