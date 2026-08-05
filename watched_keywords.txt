@@ -82667,3 +82667,4 @@
 1785950769	Dan Getz	techondicase\.com
 1785958444	Dan Getz	plcworld\.com\.au
 1785960596	Jeff Schaller	mytimelyhealth\.com
+1785965509	Jeff Schaller	Lunna_jamso1(?#telegram)
