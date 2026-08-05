@@ -82659,3 +82659,4 @@
 1785932316	Dan Getz	ExpertRating
 1785934910	Jeff Schaller	grouptripgo\.com
 1785937574	Dan Getz	engineerzcorner\.com
+1785940945	Jeff Schaller	idatascientist\.ca
