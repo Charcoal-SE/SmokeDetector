@@ -82656,3 +82656,4 @@
 1785929194	Dan Getz	phor[\W_]*+thor[\W_]*+33
 1785929784	Jeff Schaller	tritiyajewels\.com
 1785930935	Dan Getz	Agents[\W_]*+Co[\W_]*+Ltd
+1785932316	Dan Getz	ExpertRating
