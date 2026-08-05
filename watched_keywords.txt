@@ -82657,3 +82657,4 @@
 1785929784	Jeff Schaller	tritiyajewels\.com
 1785930935	Dan Getz	Agents[\W_]*+Co[\W_]*+Ltd
 1785932316	Dan Getz	ExpertRating
+1785934910	Jeff Schaller	grouptripgo\.com
