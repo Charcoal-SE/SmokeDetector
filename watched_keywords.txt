@@ -82654,3 +82654,4 @@
 1785926849	Jeff Schaller	us-lungreset\.com
 1785928121	Jeff Schaller	thecostaricalist\.com
 1785929194	Dan Getz	phor[\W_]*+thor[\W_]*+33
+1785929784	Jeff Schaller	tritiyajewels\.com
