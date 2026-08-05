@@ -82666,3 +82666,4 @@
 1785950222	Dan Getz	photofixal\.com
 1785950769	Dan Getz	techondicase\.com
 1785958444	Dan Getz	plcworld\.com\.au
+1785960596	Jeff Schaller	mytimelyhealth\.com
