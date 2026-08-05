@@ -82662,3 +82662,4 @@
 1785940945	Jeff Schaller	idatascientist\.ca
 1785943505	Dan Getz	code>(?<=<code>)\s*+https://www\.reddit\.com/r/[a-z0-9.-/_]++(?:[?#][^\s<]*+)?\s*+<\/code
 1785943607	Dan Getz	code>(?<=<code>)\s*+https://travel\.stackexchange\.com/[a-z0-9.-/_]++(?:[?#][^\s<]*+)?\s*+<\/code
+1785948153	Dan Getz	ozaare\.com
