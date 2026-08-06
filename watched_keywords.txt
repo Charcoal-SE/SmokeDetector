@@ -82675,3 +82675,4 @@
 1785983005	Dan Getz	sheetsgeocoder\.com
 1786012203	Jeff Schaller	kfcmenus\.pk
 1786020501	Jeff Schaller	premierdissertations\.com
+1786023039	Jeff Schaller	gouthamkrishnar\.com
