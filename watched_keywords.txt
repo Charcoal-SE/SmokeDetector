@@ -82677,3 +82677,4 @@
 1786020501	Jeff Schaller	premierdissertations\.com
 1786023039	Jeff Schaller	gouthamkrishnar\.com
 1786038811	Jeff Schaller	texasestimators\.com
+1786052361	Dan Getz	medsavage[\W_]*+67
