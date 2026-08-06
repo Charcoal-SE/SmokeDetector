@@ -82674,3 +82674,4 @@
 1785977732	Jeff Schaller	learningquranacademy\.online
 1785983005	Dan Getz	sheetsgeocoder\.com
 1786012203	Jeff Schaller	kfcmenus\.pk
+1786020501	Jeff Schaller	premierdissertations\.com
