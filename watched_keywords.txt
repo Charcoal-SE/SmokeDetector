@@ -82691,3 +82691,4 @@
 1786105154	Jeff Schaller	airlineofficesinfo\.com
 1786106757	Dan Getz	zoikovertex\.com
 1786106765	Dan Getz	zoiko[\W_]*+vertex(?!\.com(?<=zoikovertex\.com))
+1786117182	Dan Getz	bitsorchestra\.com
