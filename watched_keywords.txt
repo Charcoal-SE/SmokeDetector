@@ -82679,3 +82679,4 @@
 1786038811	Jeff Schaller	texasestimators\.com
 1786052361	Dan Getz	medsavage[\W_]*+67
 1786093701	Dan Getz	desertsafariabudhabi\.abudhabi
+1786093735	Dan Getz	talktofriend\.in
