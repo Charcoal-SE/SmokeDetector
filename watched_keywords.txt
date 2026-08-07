@@ -82690,3 +82690,4 @@
 1786105128	Jeff Schaller	arinstrumed\.com
 1786105154	Jeff Schaller	airlineofficesinfo\.com
 1786106757	Dan Getz	zoikovertex\.com
+1786106765	Dan Getz	zoiko[\W_]*+vertex(?!\.com(?<=zoikovertex\.com))
