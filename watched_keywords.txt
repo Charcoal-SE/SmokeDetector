@@ -82702,3 +82702,4 @@
 1786189025	Dan Getz	surfai\.app
 1786189289	Dan Getz	lydiadesignstudio\.com
 1786190455	Dan Getz	clothingstridex(?:@gmail\.com)
+1786192001	Dan Getz	latestinteriors\.com
