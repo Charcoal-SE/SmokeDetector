@@ -82699,3 +82699,4 @@
 1786160647	Dan Getz	code-market\.dev
 1786164480	Dan Getz	melalui(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1786188338	Dan Getz	iloeinsuranceae\.com
+1786188409	Dan Getz	kapsul4d
