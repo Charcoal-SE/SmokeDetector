@@ -82695,3 +82695,4 @@
 1786137631	Dan Getz	olla(?!ma)[a-z0-9-]{2,}+(?:\.[a-z-]{2,}+)++
 1786149307	Dan Getz	quantumtreaty\.com
 1786149339	Dan Getz	prodada7(?:@gmail\.com)?
+1786152636	Jeff Schaller	bingo101\.com
