@@ -82701,3 +82701,4 @@
 1786188409	Dan Getz	kapsul4d
 1786188455	Dan Getz	kapsul4dvvip\.vercel\.app
 1786189025	Dan Getz	surfai\.app
+1786189289	Dan Getz	lydiadesignstudio\.com
