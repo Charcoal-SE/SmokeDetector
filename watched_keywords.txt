@@ -82708,3 +82708,4 @@
 1786196787	Dan Getz	private[\W_]*+drive[\W_]*+livery(?!\.com(?<=privatedrivelivery\.com))
 1786196795	Dan Getz	privatedrivelivery\.com
 1786196873	Dan Getz	xpertbookspro\.com
+1786196881	Dan Getz	ben-accounting-consulting-llc\.blogspot
