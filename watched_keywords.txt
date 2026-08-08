@@ -82700,3 +82700,4 @@
 1786164480	Dan Getz	melalui(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1786188338	Dan Getz	iloeinsuranceae\.com
 1786188409	Dan Getz	kapsul4d
+1786188455	Dan Getz	kapsul4dvvip\.vercel\.app
