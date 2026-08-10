@@ -82739,3 +82739,4 @@
 1786374244	Dan Getz	networkers[\W_]*+home(?!\.com(?<=networkershome\.com))
 1786374509	Dan Getz	techyblasts\.com
 1786378493	Dan Getz	aasiff\.online
+1786387570	Dan Getz	seeking[\W_]*+reliable(?![\W_]++(?:way|source|information|reference|confession))
