@@ -82738,3 +82738,4 @@
 1786374203	Dan Getz	freefreecv(?!\.com)
 1786374244	Dan Getz	networkers[\W_]*+home(?!\.com(?<=networkershome\.com))
 1786374509	Dan Getz	techyblasts\.com
+1786378493	Dan Getz	aasiff\.online
