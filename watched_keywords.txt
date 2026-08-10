@@ -82743,3 +82743,4 @@
 1786388117	Dan Getz	explore(?<!['"]explore)[\W_]*+our[\W_]*+services(?!['"])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1786388744	Dan Getz	usecalcnow\.com
 1786390443	Dan Getz	happypawsus\.com
+1786393197	Jeff Schaller	primeinternational\.ca
