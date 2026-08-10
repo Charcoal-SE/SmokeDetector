@@ -82719,3 +82719,4 @@
 1786288824	Dan Getz	jolta
 1786290135	Dan Getz	oneappplatform\.github\.io
 1786307260	Dan Getz	github\.com/Kunal10k
+1786333534	Dan Getz	ldj\.com
