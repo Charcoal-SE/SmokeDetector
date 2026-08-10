@@ -82734,3 +82734,4 @@
 1786370749	Jeff Schaller	tiemnhoshop\.store
 1786373107	Jeff Schaller	c2marketing\.co\.uk
 1786373391	Dan Getz	sagitt?arr?ius[\W_]*+cypher[\W_]*+cyber
+1786374183	Dan Getz	freefreecv\.com
