@@ -3927,3 +3927,4 @@ chronos[\W_]*+airgap[\W_]*+recovery
 quantum[\W_]*+vault[\W_]*+recuperation
 thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
 hacker[\W_]*+chad[\W_]*+scira
+IPTVGREAT
