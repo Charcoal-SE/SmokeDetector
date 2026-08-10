@@ -82736,3 +82736,4 @@
 1786373391	Dan Getz	sagitt?arr?ius[\W_]*+cypher[\W_]*+cyber
 1786374183	Dan Getz	freefreecv\.com
 1786374203	Dan Getz	freefreecv(?!\.com)
+1786374244	Dan Getz	networkers[\W_]*+home(?!\.com(?<=networkershome\.com))
