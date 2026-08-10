@@ -82742,3 +82742,4 @@
 1786387570	Dan Getz	seeking[\W_]*+reliable(?![\W_]++(?:way|source|information|reference|confession))
 1786388117	Dan Getz	explore(?<!['"]explore)[\W_]*+our[\W_]*+services(?!['"])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1786388744	Dan Getz	usecalcnow\.com
+1786390443	Dan Getz	happypawsus\.com
