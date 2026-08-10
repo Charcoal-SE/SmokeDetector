@@ -82741,3 +82741,4 @@
 1786378493	Dan Getz	aasiff\.online
 1786387570	Dan Getz	seeking[\W_]*+reliable(?![\W_]++(?:way|source|information|reference|confession))
 1786388117	Dan Getz	explore(?<!['"]explore)[\W_]*+our[\W_]*+services(?!['"])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1786388744	Dan Getz	usecalcnow\.com
