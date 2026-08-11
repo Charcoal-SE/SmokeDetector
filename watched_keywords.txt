@@ -82769,3 +82769,4 @@
 1786455714	Jeff Schaller	fogervapeflavors\.com
 1786459944	Jeff Schaller	scentiqueamor\.com
 1786466835	Dan Getz	voicute(?!\.com)
+1786466845	Dan Getz	voicute\.com
