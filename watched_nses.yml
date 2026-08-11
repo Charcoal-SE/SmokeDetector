@@ -4161,7 +4161,8 @@ items:
   ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
-- comment: no longer responding 2020-11-11; enabled again 2024-10-18
+- comment: no longer responding 2020-11-11; enabled again 2024-10-18; disabled again 2026-08-11 for NXDOMAIN
+  disable: true
   ns: specializedtest.com.
 - comment: 2022-07-01 NXDOMAIN
   disable: true
