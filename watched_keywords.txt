@@ -82772,3 +82772,4 @@
 1786466845	Dan Getz	voicute\.com
 1786466986	Dan Getz	techanic[\W_]*+infotech
 1786468048	Jeff Schaller	3a889\.com
+1786470766	Jeff Schaller	robertbtcservice(?:@gmail\.com)?
