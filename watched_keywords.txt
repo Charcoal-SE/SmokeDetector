@@ -82757,3 +82757,4 @@
 1786446660	Jeff Schaller	mysgmenu\.com
 1786447607	Jeff Schaller	authentizity\.com
 1786450162	Dan Getz	thaivisaservice\.com
+1786450702	Dan Getz	tse[\W_]*+deserves
