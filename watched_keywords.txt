@@ -82775,3 +82775,4 @@
 1786470766	Jeff Schaller	robertbtcservice(?:@gmail\.com)?
 1786474652	Dan Getz	1500[0-9]{3}\D{1,30}(?:0|62)[\W_]*+8(?:[\W_]*+[0-9]){7,}
 1786475586	Jeff Schaller	ecotechwindows\.ca
+1786479408	Jeff Schaller	icedrive\.site
