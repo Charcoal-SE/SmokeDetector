@@ -82759,3 +82759,4 @@
 1786450162	Dan Getz	thaivisaservice\.com
 1786450702	Dan Getz	tse[\W_]*+deserves
 1786451154	Dan Getz	willeke\b.{1,200}\brory\b.{1,200}\bjonathan
+1786451492	Dan Getz	theffmicalculator\.com
