@@ -82768,3 +82768,4 @@
 1786454324	Jeff Schaller	authenticator-app\.begamob\.com
 1786455714	Jeff Schaller	fogervapeflavors\.com
 1786459944	Jeff Schaller	scentiqueamor\.com
+1786466835	Dan Getz	voicute(?!\.com)
