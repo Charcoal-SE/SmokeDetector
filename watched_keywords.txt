@@ -82797,3 +82797,4 @@
 1786557672	Dan Getz	gagcalculatorvalue\.com
 1786558839	Dan Getz	locksmithhighlandranch\.com
 1786565212	Jeff Schaller	Aamelia82(?#t.me)
+1786575122	Dan Getz	flash[\W_]*+btc
