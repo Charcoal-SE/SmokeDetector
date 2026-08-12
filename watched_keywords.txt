@@ -82782,3 +82782,4 @@
 1786527350	Dan Getz	aviationstack\.com
 1786527392	Dan Getz	runout[\W_]*+poker
 1786527427	Dan Getz	nbiappointmentsonline\.com
+1786527776	Dan Getz	videoad\.top
