@@ -82792,3 +82792,4 @@
 1786538621	Dan Getz	stayingapi
 1786538845	Jeff Schaller	doublesure\.health
 1786546764	Dan Getz	zoiko
+1786547886	Jeff Schaller	sgpatopercent\.com
