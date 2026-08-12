@@ -82788,3 +82788,4 @@
 1786530517	Dan Getz	geotaggingphotos\.com
 1786530956	Dan Getz	dilipniwas\.com
 1786531261	Dan Getz	classyplumbers\.co\.za
+1786536371	Jeff Schaller	loungeinsider\.com
