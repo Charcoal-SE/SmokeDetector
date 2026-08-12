@@ -82800,3 +82800,4 @@
 1786575122	Dan Getz	flash[\W_]*+btc
 1786575133	Dan Getz	flash[\W_]*+bitcoin
 1786575155	Dan Getz	btc[\W_]*+flash
+1786575165	Dan Getz	printedsoapboxes\.com
