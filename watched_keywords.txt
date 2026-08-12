@@ -82791,3 +82791,4 @@
 1786536371	Jeff Schaller	loungeinsider\.com
 1786537149	Dan Getz	alluvinl\.com
 1786538621	Dan Getz	stayingapi
+1786538845	Jeff Schaller	doublesure\.health
