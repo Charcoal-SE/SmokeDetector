@@ -82823,3 +82823,4 @@
 1786643399	Dan Getz	cssawwwards(?!\.com)
 1786643808	Dan Getz	alphaamc\.com
 1786645534	Dan Getz	markupmojo\.com
+1786646787	Dan Getz	sarathemarketer\.online
