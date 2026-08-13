@@ -82802,3 +82802,4 @@
 1786575155	Dan Getz	btc[\W_]*+flash
 1786575165	Dan Getz	printedsoapboxes\.com
 1786585658	Dan Getz	metalroofersaustintx\.com
+1786585997	Dan Getz	cryptocasino\.com
