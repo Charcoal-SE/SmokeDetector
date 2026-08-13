@@ -82819,3 +82819,4 @@
 1786640624	Jeff Schaller	rajabets\.world
 1786640653	Jeff Schaller	10circ\.com
 1786599138	Anerdw	Bar[\W_]*+Juice[\W_]*+5000
+1786599162	Anerdw	How[\W*+]To[\W*+]Vape[\W*+]UK
