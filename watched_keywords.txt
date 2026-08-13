@@ -82808,3 +82808,4 @@
 1786617876	Jeff Schaller	myassignment\.services
 1786617891	Jeff Schaller	drrahulguptaneuro\.com
 1786617929	Jeff Schaller	kyptec-lifestyle\.com
+1786618063	Jeff Schaller	howtovape\.co\.uk
