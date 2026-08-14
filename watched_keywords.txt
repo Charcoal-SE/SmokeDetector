@@ -82832,3 +82832,4 @@
 1786707555	Jeff Schaller	Celebration[\W_]*+Wellness[\W_]*+Spa
 1786708452	Jeff Schaller	usahearingexperts\.com
 1786709169	Jeff Schaller	altitudeglobal\.in
+1786709216	Jeff Schaller	aadyacare\.in
