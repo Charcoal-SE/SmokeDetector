@@ -82834,3 +82834,4 @@
 1786709169	Jeff Schaller	altitudeglobal\.in
 1786709216	Jeff Schaller	aadyacare\.in
 1786711653	Jeff Schaller	see\.telkomuniversity\.ac\.id
+1786711851	Dan Getz	cannabis[\W_]*+flower
