@@ -79,6 +79,20 @@ def lock_clear_and_restore_all_chatcommunicate_global_values():
     return decorator
 
 
+def shorthand_message(content):
+    return Fake({"content": content, "room": Mock()})
+
+
+def assert_shorthand_standalone_number_error(content):
+    with patch("chatcommunicate.get_last_messages") as get_last_messages, \
+            patch("chatcommunicate.dispatch_reply_command") as dispatch_reply_command:
+        result = chatcommunicate.dispatch_shorthand_command(shorthand_message(content))
+
+    assert result == "A space cannot follow a number in a shorthand command."
+    get_last_messages.assert_not_called()
+    dispatch_reply_command.assert_not_called()
+
+
 def test_validate_yaml():
     rooms_file_content = ''
     users_file_content = ''
@@ -576,6 +590,53 @@ def test_on_msg(get_last_messages, post_msg):
 
         assert post_msg.call_count == 1
         assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
+
+
+def test_dispatch_shorthand_command_rejects_space_after_number():
+    assert_shorthand_standalone_number_error("sd 2 k")
+
+
+def test_dispatch_shorthand_command_rejects_standalone_number():
+    assert_shorthand_standalone_number_error("sd 3")
+
+
+def test_dispatch_shorthand_command_repeats_numbered_commands():
+    msg = shorthand_message("sd 2k")
+    messages = [Fake({"id": 1}), Fake({"id": 2})]
+
+    with patch("chatcommunicate.get_last_messages", return_value=messages) as get_last_messages, \
+            patch("chatcommunicate.dispatch_reply_command", return_value="hi") as dispatch_reply_command:
+        result = chatcommunicate.dispatch_shorthand_command(msg)
+
+    assert result == "[:1] hi\n[:2] hi"
+    get_last_messages.assert_called_once_with(msg.room, 2)
+    assert dispatch_reply_command.call_count == 2
+
+    for i, call_args in enumerate(dispatch_reply_command.call_args_list):
+        assert call_args[0] == (messages[i], msg, "k")
+        assert call_args[1] == {"comment": False}
+
+
+def test_dispatch_shorthand_command_skips_numbered_commands():
+    msg = shorthand_message("sd 2-")
+    messages = [Fake({"id": 1}), Fake({"id": 2})]
+
+    with patch("chatcommunicate.get_last_messages", return_value=messages) as get_last_messages, \
+            patch("chatcommunicate.dispatch_reply_command") as dispatch_reply_command:
+        result = chatcommunicate.dispatch_shorthand_command(msg)
+
+    assert result is None
+    get_last_messages.assert_called_once_with(msg.room, 2)
+    dispatch_reply_command.assert_not_called()
+
+
+def test_dispatch_shorthand_command_catches_parse_exceptions():
+    with patch("chatcommunicate.shlex.split", side_effect=IndexError), \
+            patch("chatcommunicate.log_current_exception") as log_current_exception:
+        result = chatcommunicate.dispatch_shorthand_command(shorthand_message("sd why"))
+
+    assert result == "That shorthand command produced an error when I tried to parse it."
+    log_current_exception.assert_called_once_with(log_level='debug')
 
 
 def test_message_type():
