@@ -82844,3 +82844,4 @@
 1786740787	Dan Getz	premium[\W_]*+bio[\W_]*+peptides
 1786740885	Dan Getz	peptides[\W_]*+online
 1786743560	Jeff Schaller	dreamcaredirection\.org
+1786743605	Jeff Schaller	Dream[\W_]*+Care[\W_]*+Direction(?!\.org)
