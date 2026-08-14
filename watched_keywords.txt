@@ -82836,3 +82836,4 @@
 1786711653	Jeff Schaller	see\.telkomuniversity\.ac\.id
 1786711851	Dan Getz	cannabis[\W_]*+flower
 1786712352	Dan Getz	aiflowreviews\.online
+1786712448	Dan Getz	theglycomode\.com
