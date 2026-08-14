@@ -82827,3 +82827,4 @@
 1786648789	Dan Getz	saadihg\.com
 1786652215	Jeff Schaller	tankbirthday\.com
 1786680720	Dan Getz	mulgravelaw\.co\.uk
+1786680821	Dan Getz	dappfort(?!\.com)
