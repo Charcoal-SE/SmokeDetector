@@ -82829,3 +82829,4 @@
 1786680720	Dan Getz	mulgravelaw\.co\.uk
 1786680821	Dan Getz	dappfort(?!\.com)
 1786704263	Jeff Schaller	clawbrowser\.ai
+1786707555	Jeff Schaller	Celebration[\W_]*+Wellness[\W_]*+Spa
