@@ -82831,3 +82831,4 @@
 1786704263	Jeff Schaller	clawbrowser\.ai
 1786707555	Jeff Schaller	Celebration[\W_]*+Wellness[\W_]*+Spa
 1786708452	Jeff Schaller	usahearingexperts\.com
+1786709169	Jeff Schaller	altitudeglobal\.in
