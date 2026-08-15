@@ -82850,3 +82850,4 @@
 1786805062	Jeff Schaller	editra\.in
 1786812128	Dan Getz	smmstay\.xyz
 1786821118	Dan Getz	hydraxrd\.com
+1786821126	Dan Getz	hydraxrd(?!\.com)
