@@ -82847,3 +82847,4 @@
 1786743605	Jeff Schaller	Dream[\W_]*+Care[\W_]*+Direction(?!\.org)
 1786785584	Dan Getz	rodentdefensesantabarbara\.com
 1786802807	Jeff Schaller	getspikegame\.com
+1786805062	Jeff Schaller	editra\.in
