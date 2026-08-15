@@ -82852,3 +82852,4 @@
 1786821118	Dan Getz	hydraxrd\.com
 1786821126	Dan Getz	hydraxrd(?!\.com)
 1786821134	Dan Getz	hydraswap
+1786821160	Dan Getz	radixlist\.com
