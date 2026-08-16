@@ -82866,3 +82866,4 @@
 1786902118	Jeff Schaller	streamappsfr\.com
 1786917266	Dan Getz	slimarax\.uk
 1786924180	Dan Getz	peptaura\.com
+1786924188	Dan Getz	peptaura(?!\.com)
