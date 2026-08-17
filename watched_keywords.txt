@@ -82891,3 +82891,4 @@
 1786978643	Jeff Schaller	myhelper394(?:@gmail\.com)?
 1786981171	Jeff Schaller	offendersearch\.app
 1786982172	Dan Getz	bespoke[\W_]*+limo
+1786984276	Dan Getz	dr\.alfred118(?:@gmail\.com)?
