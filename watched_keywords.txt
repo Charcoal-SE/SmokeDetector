@@ -41837,7 +41837,6 @@
 1661819995	Makyen	fuji12345
 1661820035	Makyen	wangzhao15728044358
 1661833069	Cody Gray	Q[\W_]*(?:the|is a)?[\W_]*finite set of states
-1661833151	Cody Gray	epsilon[\W_]*(move?|transition)s?
 1661834563	Cody Gray	(?-i:^dinhthaihoang$)
 1661835181	cocomac	trickknowledge\.com
 1661836895	Cody Gray	thegingamebroadway\.com
