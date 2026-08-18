@@ -82909,3 +82909,4 @@
 1787054945	VLAZ	levantleather\.com
 1787055269	Jeff Schaller	a1lab\.tech
 1787059062	VLAZ	kinemastter\.com
+1787064831	VLAZ	fiatxpay\.com
