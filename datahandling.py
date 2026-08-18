@@ -1,28 +1,29 @@
 # coding=utf-8
+import base64
+import copy
+import json
+import math
 import os
 import pickle
 import sys
-import zlib
-import base64
-from datetime import datetime
-import json
-import time
-import math
 import threading
-import copy
+import time
+import zlib
+from datetime import datetime
 from pathlib import Path
 
-import requests
 # noinspection PyCompatibility
 import regex
+import requests
 
-from globalvars import GlobalVars
-import metasmoke
-from parsing import api_parameter_from_link, post_id_from_link
 import blacklists
-from helpers import (ErrorLogs, log, log_current_exception, redact_passwords, get_se_api_default_params,
-                     get_se_api_url_for_route)
+import metasmoke
+import parsing
+from globalvars import GlobalVars
+from helpers import (ErrorLogs, get_se_api_default_params, get_se_api_url_for_route, log,
+                     log_current_exception, redact_passwords)
 from tasks import Tasks
+
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -260,7 +261,7 @@ def update_reason_weights():
 
 
 def resolve_ms_link(post_url):
-    identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
+    identifier = (parsing.api_parameter_from_link(post_url), parsing.post_id_from_link(post_url))
     if identifier in GlobalVars.metasmoke_ids:
         if isinstance(GlobalVars.metasmoke_ids[identifier], int):
             ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(

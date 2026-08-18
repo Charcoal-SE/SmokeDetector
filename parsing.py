@@ -1,10 +1,11 @@
 # coding=utf-8
 # noinspection PyCompatibility
-import regex
-import globalvars
-import datahandling
+from typing import Optional, Tuple
 
-from typing import Optional
+import regex
+
+import datahandling
+import globalvars
 
 
 def rebuild_str(s: str) -> str:

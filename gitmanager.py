@@ -1,28 +1,26 @@
 # coding=utf-8
-
-import sys
-import platform
-import time
 import json
+import platform
+import sys
+import time
 from datetime import datetime
 from threading import Lock
+from urllib.parse import quote, quote_plus
 
 import regex
 import requests
 from requests.auth import HTTPBasicAuth
 
-from urllib.parse import quote_plus
-from urllib.parse import quote
+from blacklists import *
 from globalvars import GlobalVars
+from helpers import log, log_current_exception, only_blacklists_changed
+
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from _Git_Windows import git, GitError
+    from _Git_Windows import GitError, git
 else:
-    from sh.contrib import git
     from sh import ErrorReturnCode as GitError
-
-from helpers import log, log_current_exception, only_blacklists_changed
-from blacklists import *
+    from sh.contrib import git
 
 
 def _anchor(str_to_anchor, blacklist_type):

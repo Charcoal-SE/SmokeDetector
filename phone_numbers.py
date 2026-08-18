@@ -1,7 +1,9 @@
 # coding=utf-8
 import regex
+
 import number_homoglyphs
 from helpers import get_only_digits, remove_end_regex_comments
+
 
 # The NUMBER_REGEXes are used to obtain strings within a post which are considered to be a single "number". While
 #   it would be nice to be able to just use a single regular expression like:

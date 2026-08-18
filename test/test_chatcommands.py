@@ -1,27 +1,28 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-import chatcommunicate  # coverage
-import chatcommands
-from apigetpost import api_get_post
-from parsing import to_protocol_relative
-from classes.post import Post
-from globalvars import GlobalVars
-from datahandling import remove_pickle
-
 import datetime
 import os
+import types
+from unittest.mock import Mock, patch
+
 import pytest
 import regex
-import types
 import requests
+
+import chatcommands
+import chatcommunicate  # coverage
+from apigetpost import api_get_post
+from classes.post import Post
+from datahandling import remove_pickle
+from fake import Fake
+from globalvars import GlobalVars
+from parsing import to_protocol_relative
+
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
     from _Git_Windows import git
 else:
     from sh.contrib import git
-
-from fake import Fake
-from unittest.mock import Mock, patch
 
 
 def rewrap_for_paramiterized_test_bisect():
