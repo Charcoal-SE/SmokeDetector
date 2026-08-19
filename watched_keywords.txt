@@ -82931,3 +82931,4 @@
 1787153213	Dan Getz	atau[\W_]*+live[\W_]*+chat
 1787154452	Jeff Schaller	letrasbonitass\.com\.mx
 1787165716	Dan Getz	wjb\.pro
+1787169703	Dan Getz	hapymod\.id
