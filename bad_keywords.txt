@@ -3924,6 +3924,5 @@ thai[\W_]*+visa[\W_]*+centre
 what[\W_]*+is[\W_]*+digital[\W_]*+marketing(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 chronos[\W_]*+airgap[\W_]*+recovery
 quantum[\W_]*+vault[\W_]*+recuperation
-hacker[\W_]*+chad[\W_]*+scira
 IPTVGREAT
 AllTimeIPTV
