@@ -3922,7 +3922,6 @@ Agentmrszafirah77
 thai[\W_]*+visa[\W_]*+centre
 (?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.{1,300}\b(?:scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)|(?:(?:chad[\W_]*+)?scira|bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)\b.{1,300}\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
 what[\W_]*+is[\W_]*+digital[\W_]*+marketing(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
-chad[\W_]*+scira[\W_]*+sock[\W_]*+puppet
 chronos[\W_]*+airgap[\W_]*+recovery
 quantum[\W_]*+vault[\W_]*+recuperation
 thim\b.{1,300}\bscira|(?:chad[\W_]*+)?scira\b.{1,300}\bthim
