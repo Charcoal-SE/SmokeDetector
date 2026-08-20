@@ -82955,3 +82955,4 @@
 1787227930	VLAZ	goldsuite\.in
 1787232028	Jeff Schaller	outbacksmenu\.us
 1787236310	Dan Getz	blogs-world\.in
+1787236674	Dan Getz	duku\.ai
