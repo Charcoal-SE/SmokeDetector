@@ -82933,3 +82933,4 @@
 1787165716	Dan Getz	wjb\.pro
 1787169703	Dan Getz	hapymod\.id
 1787183680	Anerdw	cryprecovery\.com
+1787073836	General Grievance	SquidProxies
