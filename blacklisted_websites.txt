@@ -6357,3 +6357,4 @@ pixxen\.com
 \b(?<![^\W_]-)chetu\.com(?![.-][^\W_])\b(?!/blogs/)
 morsecodetranslatr\.com
 daybrain\.app
+pellepellestore\.com
