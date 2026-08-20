@@ -82948,3 +82948,4 @@
 1787211317	VLAZ	cameyshop\.com
 1787213731	Jeff Schaller	scopusjournalsupport\.com
 1787224803	VLAZ	digitalbrainstech\.com
+1787224811	VLAZ	digital[\W_]*+brains[\W_]*+tech(?!\.com(?<=digitalbrainstech\.com))
