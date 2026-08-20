@@ -82954,3 +82954,4 @@
 1787224869	VLAZ	mamo[\W_]*+technolabs(?!\.com(?<=mamotechnolabs\.com))
 1787227930	VLAZ	goldsuite\.in
 1787232028	Jeff Schaller	outbacksmenu\.us
+1787236310	Dan Getz	blogs-world\.in
