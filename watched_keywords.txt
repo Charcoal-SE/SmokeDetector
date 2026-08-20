@@ -82950,3 +82950,4 @@
 1787224803	VLAZ	digitalbrainstech\.com
 1787224811	VLAZ	digital[\W_]*+brains[\W_]*+tech(?!\.com(?<=digitalbrainstech\.com))
 1787224819	VLAZ	indiawest\.com
+1787224862	VLAZ	mamotechnolabs\.com
