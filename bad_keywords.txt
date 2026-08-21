@@ -3926,3 +3926,4 @@ quantum[\W_]*+vault[\W_]*+recuperation
 IPTVGREAT
 AllTimeIPTV
 (?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.{1,300}\b(?:bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)|(?:bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)\b.{1,300}\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
+apnews\.com/press-release
