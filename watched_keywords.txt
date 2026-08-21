@@ -82963,3 +82963,4 @@
 1787293117	VLAZ	penspendrive\.in
 1787297333	VLAZ	alcolite\.in
 1787299343	VLAZ	bhoomi[\W_]*+techzone(?!\.com(?<=bhoomitechzone\.com))
+1787299351	VLAZ	bhoomitechzone\.com
