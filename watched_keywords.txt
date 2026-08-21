@@ -82968,3 +82968,4 @@
 1787305322	VLAZ	dan\.stanger@ieee\.org
 1787308713	Jeff Schaller	gonukkad\.com
 1787314358	Jeff Schaller	cubeaccountingsolutions\.com
+1787327826	Dan Getz	quantumminer
