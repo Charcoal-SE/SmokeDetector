@@ -82976,3 +82976,4 @@
 1787347969	Jeff Schaller	apnews\.com(?!/press-release)
 1787370436	Dan Getz	hotmart\.host
 1787371737	Dan Getz	truckeeplumber\.com
+1787371967	Dan Getz	cert[\W_]*+mage
