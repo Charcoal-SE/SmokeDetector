@@ -82977,3 +82977,4 @@
 1787370436	Dan Getz	hotmart\.host
 1787371737	Dan Getz	truckeeplumber\.com
 1787371967	Dan Getz	cert[\W_]*+mage
+1787380551	VLAZ	flyterminals\.com
