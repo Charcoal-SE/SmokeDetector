@@ -82975,3 +82975,4 @@
 1787345702	Ryan M	fahahu\.com
 1787347969	Jeff Schaller	apnews\.com(?!/press-release)
 1787370436	Dan Getz	hotmart\.host
+1787371737	Dan Getz	truckeeplumber\.com
