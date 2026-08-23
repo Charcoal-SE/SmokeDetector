@@ -82989,3 +82989,4 @@
 1787466118	Dan Getz	techtester\.online
 1787466604	Dan Getz	gdfplaypl\.org
 1787467410	Dan Getz	golearnindia
+1787489618	Dan Getz	batteriecalc\.com
