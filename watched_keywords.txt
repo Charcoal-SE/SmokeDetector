@@ -82996,3 +82996,4 @@
 1787494442	Dan Getz	firstmedtransit\.com
 1787495624	Dan Getz	broadcastlivevideo\.com
 1787495633	Dan Getz	videonow\.live
+1787495642	Dan Getz	videosharevod\.com
