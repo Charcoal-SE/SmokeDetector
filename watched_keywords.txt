@@ -82993,3 +82993,4 @@
 1787494094	Dan Getz	turnkey[\W_]*+clone(?!\.com(?<=turnkeyclone\.com))
 1787494102	Dan Getz	turnkeyclone\.com
 1787494230	Dan Getz	webrtchost\.com
+1787494442	Dan Getz	firstmedtransit\.com
