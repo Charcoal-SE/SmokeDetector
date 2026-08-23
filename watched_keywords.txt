@@ -82990,3 +82990,4 @@
 1787466604	Dan Getz	gdfplaypl\.org
 1787467410	Dan Getz	golearnindia
 1787489618	Dan Getz	batteriecalc\.com
+1787494094	Dan Getz	turnkey[\W_]*+clone(?!\.com(?<=turnkeyclone\.com))
