@@ -83003,3 +83003,4 @@
 1787495676	Dan Getz	promptaur\.com
 1787495683	Dan Getz	fanpaysite\.com
 1787495692	Dan Getz	videowhisper(?!\.com)
+1787495700	Dan Getz	videowhisper\.com
