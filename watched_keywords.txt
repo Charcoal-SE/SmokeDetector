@@ -83026,3 +83026,4 @@
 1787567573	VLAZ	qte[\W_]*+technologies
 1787570008	Jeff Schaller	flsc\.co\.uk
 1787570547	VLAZ	faradpay\.com
+1787572257	Dan Getz	taaqo
