@@ -83023,3 +83023,4 @@
 1787559233	VLAZ	littleleagueworldbaseball\.com
 1787559614	VLAZ	doraemonxgame\.com\.co
 1787565639	VLAZ	cogitotech\.com
+1787567573	VLAZ	qte[\W_]*+technologies
