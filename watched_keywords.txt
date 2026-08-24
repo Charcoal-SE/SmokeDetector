@@ -83016,3 +83016,4 @@
 1787550111	VLAZ	laravelcompany\.com
 1787552741	VLAZ	datasciencewizards\.ai
 1787553770	VLAZ	aec[\W_]*+sastra
+1787557293	VLAZ	writoholics\.com
