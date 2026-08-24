@@ -83014,5 +83014,4 @@
 1787550047	VLAZ	supercargiftdays\.com
 1787550104	VLAZ	laravel[\W_]*+company(?!\.com(?<=laravelcompany\.com))
 1787550111	VLAZ	laravelcompany\.com
-1787552664	VLAZ	autodesk[\W_]*+revit
 1787552741	VLAZ	datasciencewizards\.ai
