@@ -83029,3 +83029,4 @@
 1787572279	Dan Getz	taaqoscan\.com
 1787572301	Dan Getz	zeenyo\.com
 1787572651	Dan Getz	taaqo\.com
+1787572666	Dan Getz	taaqo(?!\.com)
