@@ -83038,3 +83038,4 @@
 1787597726	Dan Getz	new-u\.io
 1787601112	Dan Getz	baixarvideodoinsta\.com
 1787602592	VLAZ	toolsque\.com
+1787613124	Dan Getz	quickdevbox\.com
