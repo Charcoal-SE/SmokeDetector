@@ -83061,3 +83061,4 @@
 1787662978	Dan Getz	textcompare\.me
 1787663774	Dan Getz	johnautos\.com
 1787673834	Dan Getz	growspherexmedia\.com
+1787679067	Dan Getz	protopond\.com
