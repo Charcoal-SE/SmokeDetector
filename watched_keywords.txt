@@ -83045,3 +83045,4 @@
 1787643733	VLAZ	xm[\W_]*+partner[\W_]*+code
 1787643740	VLAZ	wt446(?# promo code)
 1787645727	VLAZ	snake-game\.io
+1787651321	VLAZ	propshop[\W_]*+india
