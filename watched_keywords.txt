@@ -83056,3 +83056,4 @@
 1787659393	Jeff Schaller	eracore\.com
 1787660076	VLAZ	diginatives(?!\.io)
 1787660084	VLAZ	diginatives\.io
+1787662128	Dan Getz	soltokenlaunch\.com
