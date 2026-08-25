@@ -83055,3 +83055,4 @@
 1787659346	Jeff Schaller	theakracing\.com
 1787659393	Jeff Schaller	eracore\.com
 1787660076	VLAZ	diginatives(?!\.io)
+1787660084	VLAZ	diginatives\.io
