@@ -83042,3 +83042,4 @@
 1787630031	VLAZ	allsubconverter\.com
 1787630079	VLAZ	pdfannotations\.com
 1787643660	VLAZ	studentsbazaar\.in
+1787643733	VLAZ	xm[\W_]*+partner[\W_]*+code
