@@ -83057,3 +83057,4 @@
 1787660076	VLAZ	diginatives(?!\.io)
 1787660084	VLAZ	diginatives\.io
 1787662128	Dan Getz	soltokenlaunch\.com
+1787662136	Dan Getz	solana-token-creator\.com
