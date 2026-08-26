@@ -83074,3 +83074,4 @@
 1787743468	VLAZ	windowcleansanclemente\.com
 1787745073	Dan Getz	bettercv\.com
 1787763922	Jeff Schaller	copyshrugmoji\.com
+1787772192	Jeff Schaller	advanced-aminoformula\.carrd\.co
