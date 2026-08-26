@@ -83066,3 +83066,4 @@
 1787726131	VLAZ	960k\.com
 1787728064	VLAZ	futbol-libre\.futbol
 1787732527	VLAZ	lacalculators\.com
+1787733441	VLAZ	fota\.io
