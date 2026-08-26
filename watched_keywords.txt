@@ -83072,3 +83072,4 @@
 1787739116	Dan Getz	ricepuritytestscores\.com
 1787742659	VLAZ	webmetadataextractor\.com
 1787743468	VLAZ	windowcleansanclemente\.com
+1787745073	Dan Getz	bettercv\.com
