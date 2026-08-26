@@ -83067,3 +83067,4 @@
 1787728064	VLAZ	futbol-libre\.futbol
 1787732527	VLAZ	lacalculators\.com
 1787733441	VLAZ	fota\.io
+1787738744	Dan Getz	xapps\.co
