@@ -83075,3 +83075,4 @@
 1787745073	Dan Getz	bettercv\.com
 1787763922	Jeff Schaller	copyshrugmoji\.com
 1787772192	Jeff Schaller	advanced-aminoformula\.carrd\.co
+1787780702	Dan Getz	bunagames\.com
