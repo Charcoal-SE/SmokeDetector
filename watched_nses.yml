@@ -5940,6 +5940,8 @@ items:
 - ns: azehosting.net.
 - ns: afeeshost.com.
 - ns: jitendermalik.com.
-- ns: digipowerdns.com.
+- comment: NXDOMAIN 2026-08-24
+  disable: true
+  ns: digipowerdns.com.
 - ns: hostilica.net.
 - ns: diamonddistrictblock.com.
