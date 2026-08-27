@@ -792,7 +792,6 @@ aphroditera
 biotrim(?:[\W_]*+(?:e?xtreme|lab(?:oratorie)?s))?
 xtrcut
 dermiva
-.{0,12}loanfirm@gmail\.com
 testo[\W_]*+ampx
 hca[\W_]*+slim
 hot[\W_]*+goat
@@ -1391,7 +1390,6 @@ alpha[\W_]*+xr
 new[\W_]*+power[\W_]*+girls
 retro[\W_]*+lean
 snore[\W_]*+be?[\W_]*+gone
-huffingtonpost.com/\S+/healthy-school-lunches
 selfgrowth\.com/\S+/healthy_school_lunches
 custom[\W_]*+made[\W_]*+patch(?:es)?
 testro[\W_]*+x(?:[\W_]*+ultra)?
@@ -3036,7 +3034,6 @@ kwok[\W_]*+scam
 cyberpunk1
 \A.{1,6}\bban me
 consider[\W_]*+banning[\W_]*+my[\W_]*+account
-(?<=\.)company\.site/$
 (?-i:6d60c5964fff913b8c2dc63323ffd65a\.jpg)
 (?-i:wl8hgu3zrc)
 ugc[\W_]*+net[\W_]*+coaching
@@ -3564,8 +3561,6 @@ resolve[\W_]*+sage[\W_]*+50
 sage.{0,15}online[\W_]*+help[\W_]*+center
 Sage.{0,15}Data[\W_]*+Access
 Sage[\W_]*+Business[\W_]*+Works
-.{0,20}c[óo]mo[\W_]*+me[\W_]*+comunico[\W_]*+con.{0,20}airways
-.{0,20}c[óo]mo[\W_]*+hablar[\W_]*+a.{0,25}airways[\W_]*+desde
 Contact[\W_]*+Sage[\W_]*+Support[\W_]*+Number
 how[\W_]*+do[\W_]*+i[\W_]*+contact[\W_]*+sage
 speak[\W_]*+to[\W_]*+someone[\W_]*+at[\W_]*+sage
@@ -3916,3 +3911,19 @@ Q̳u̳i̳c̳k̳B̳o̳o̳k̳s̳
 Apakah[\W_]*+Tokopedia
 Tiranga(?:[\W_]*+Game)?(?:[\W_]*+(?:App|Club))?
 digitalaka
+gmail\.com(?<=loanfirm@gmail\.com)
+huffingtonpost\.com/\S+/healthy-school-lunches
+c[óo]mo[\W_]*+hablar[\W_]*+a.{0,25}airways[\W_]*+desde
+c[óo]mo[\W_]*+me[\W_]*+comunico[\W_]*+con.{0,20}airways
+company\.site/$(?<=\.company\.site/)
+PassCertHub(?!\.com)
+Agentmrszafirah77
+(?-i:Pluranceteck)(?# telegram.me)
+thai[\W_]*+visa[\W_]*+centre
+what[\W_]*+is[\W_]*+digital[\W_]*+marketing(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+chronos[\W_]*+airgap[\W_]*+recovery
+quantum[\W_]*+vault[\W_]*+recuperation
+IPTVGREAT
+AllTimeIPTV
+(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)\b.{1,300}\b(?:bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)|(?:bann(?:ed|ing)|satan\w++|censor\w*+|corrupt(?:ion)?)\b.{1,300}\b(?:rory[\W_]*+alsop|jonathan[\W_]*+reez)
+apnews\.com/press-release

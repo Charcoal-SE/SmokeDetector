@@ -4161,7 +4161,8 @@ items:
   ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
-- comment: no longer responding 2020-11-11; enabled again 2024-10-18
+- comment: no longer responding 2020-11-11; enabled again 2024-10-18; disabled again 2026-08-11 for NXDOMAIN
+  disable: true
   ns: specializedtest.com.
 - comment: 2022-07-01 NXDOMAIN
   disable: true
@@ -4171,7 +4172,9 @@ items:
   ns: inmotionhosting.com.
 - ns: myhostindia.com.
 - ns: lfmserver.com.
-- ns: symbolhostpremiumdns.com.
+- comment: 2026-05-26 NXDOMAIN
+  disable: true
+  ns: symbolhostpremiumdns.com.
 - ns: hostgator.in.
 - ns:
   - cns2023.hostgator.com.
@@ -4596,7 +4599,8 @@ items:
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
-- comment: no longer resolves 2020-08-27; enabled again 2024-10-18
+- comment: no longer resolves 2020-08-27; enabled again 2024-10-18; disabled again on 2026-05-21
+  disable: true
   ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
@@ -5261,7 +5265,8 @@ items:
   - ns-150-c.gandi.net.
   - ns-41-b.gandi.net.
   - ns-9-a.gandi.net.
-- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18
+- comment: 2024-07-17 NXDOMAIN; enabled again 2024-10-18; expired again 2026-07-16
+  disable: true
   ns: bluehosting.pk.
 - ns: crystalwebhosting.com.
 - ns: just2trade.online.
@@ -5705,7 +5710,9 @@ items:
 - comment: NXDOMAIN 2024-02-29; enabled again 2024-10-18; NXDOMAIN again 2026-03-15
   disable: true
   ns: splashserver.org.
-- ns: aptcom.info.
+- comment: 2026-07-16 NXDOMAIN
+  disable: true
+  ns: aptcom.info.
 - comment: 2024-10-28 NXDOMAIN
   disable: true
   ns: resellerone.host.
@@ -5748,7 +5755,9 @@ items:
   disable: true
   ns: attichosting.com.
 - ns: speakatoo.com.
-- ns: zoomnameserver.com.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: zoomnameserver.com.
 - ns: parastorage.com.
 - ns: quicns.com.
 - ns: serveriai.lt.
@@ -5763,7 +5772,8 @@ items:
 - ns: netdns.net.
 - ns: dnshorizon.com.
 - ns: welldesignedgames.com.
-- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18
+- comment: NXDOMAIN 2024-05-09; enabled again 2024-10-18; NXDOMAIN 2026-05-09
+  disable: true
   ns: ozdomainnhost.com.
 - ns: brainbean.us.
 - ns: websitehostserver.net.
@@ -5815,7 +5825,9 @@ items:
 - ns: actualizar.net.
 - ns: aamad.org.
 - ns: bloomchemag.com.
-- ns: agconsulting.in.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: agconsulting.in.
 - ns: abuildtech.com.
 - ns: ambicaairvent.com.
 - ns: nishaaircon.com.
@@ -5896,7 +5908,9 @@ items:
 - ns: globalhosting.in.
 - ns: varmahomes.com.
 - ns: iamemonline.com.
-- ns: wuaze.com.
+- comment: 2026-05-21 NXDOMAIN
+  disable: true
+  ns: wuaze.com.
 - ns: iaasdns.com.
 - comment: NXDOMAIN 2023-06-02
   disable: true
@@ -5926,6 +5940,8 @@ items:
 - ns: azehosting.net.
 - ns: afeeshost.com.
 - ns: jitendermalik.com.
-- ns: digipowerdns.com.
+- comment: NXDOMAIN 2026-08-24
+  disable: true
+  ns: digipowerdns.com.
 - ns: hostilica.net.
 - ns: diamonddistrictblock.com.
