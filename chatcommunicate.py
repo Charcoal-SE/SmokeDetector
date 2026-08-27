@@ -51,11 +51,7 @@ _prefix_commands_lock = threading.RLock()
 _reply_commands = {}
 _reply_commands_lock = threading.RLock()
 
-_clients = {
-    "stackexchange.com": None,
-    "stackoverflow.com": None,
-    "meta.stackexchange.com": None
-}
+_clients = {"stackexchange.com": None, "stackoverflow.com": None, "meta.stackexchange.com": None}
 _clients_lock = threading.RLock()
 
 _room_roles = {}
@@ -147,9 +143,12 @@ def init(username, password, try_cookies=True):
                         # The situations where the problem is on our end rather than on SE's end tend to be when
                         # the SD instance owner is already watching the console.
                         sleep_time = 30 * (retry + 1)
-                        log('warning', 'Login to SE appears unavailable. Can be caused by: SD config issue,' +
-                            ' bad network connection, or Stack Exchange is down/read-only.' +
-                            ' Sleeping for {} seconds.'.format(sleep_time))
+                        log(
+                            'warning',
+                            'Login to SE appears unavailable. Can be caused by: SD config issue,'
+                            + ' bad network connection, or Stack Exchange is down/read-only.'
+                            + ' Sleeping for {} seconds.'.format(sleep_time),
+                        )
                         time.sleep(sleep_time)
             else:
                 raise Exception("Failed to log into " + site + ", max retries exceeded")
@@ -211,11 +210,14 @@ def parse_room_config(path):
                 # print("Process {}".format(room_identifier))
                 rooms[room_identifier] = room
                 if "privileges" in room and "inherit" in room["privileges"]:
-                    inherits.append({'from': (room["privileges"]["inherit"]["site"],
-                                              room["privileges"]["inherit"]["room"]), 'to': room_identifier})
+                    inherits.append({
+                        'from': (room["privileges"]["inherit"]["site"], room["privileges"]["inherit"]["room"]),
+                        'to': room_identifier,
+                    })
                     if "additional" in room["privileges"]:
-                        _privileges[room_identifier] =\
-                            set([user_data[x][host_fields[site]] for x in room["privileges"]["additional"]])
+                        _privileges[room_identifier] = set([
+                            user_data[x][host_fields[site]] for x in room["privileges"]["additional"]
+                        ])
                 elif "privileges" in room:
                     _privileges[room_identifier] = set([user_data[x][host_fields[site]] for x in room["privileges"]])
                 else:
@@ -244,8 +246,12 @@ def parse_room_config(path):
                 else:
                     _privileges[inherit["to"]] = inherit_from
             else:
-                log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
-                    inherit["to"][1], inherit["to"][1], inherit["from"][1]))
+                log(
+                    'warn',
+                    'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
+                        inherit["to"][1], inherit["to"][1], inherit["from"][1]
+                    ),
+                )
 
 
 def add_room(room, roles):
@@ -340,7 +346,7 @@ def on_msg(msg, client):
     with _room_roles_lock:
         if message.owner.id == client._br.user_id:
             if 'direct' in _room_roles and room_ident in _room_roles['direct']:
-                SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+                SocketScience.receive(message.content_source.replace("\u200b", "").replace("\u200c", ""))
 
             return
 
@@ -349,8 +355,11 @@ def on_msg(msg, client):
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
-    if (msg.data.get('parent_id') and msg.data.get('show_parent')
-            and msg.data.get('parent_username') == client._br.user_name):
+    if (
+        msg.data.get('parent_id')
+        and msg.data.get('show_parent')
+        and msg.data.get('parent_username') == client._br.user_name
+    ):
         # show_parent indicates it's a direct reply, not an @mention assumed reply.
         # For direct replies, the entire username is in parent_username.
         # We test for the reply @mention matching our current user_name, because we want to avoid fetching the
@@ -366,8 +375,11 @@ def on_msg(msg, client):
                 send_reply_if_not_blank(room_ident, message.id, result)
         except requests.HTTPError:
             log_current_exception(log_level='debug')
-            send_reply_if_not_blank(room_ident, message.id, 'Processing of this message failed due to an HTTP error.'
-                                    ' See error logs for more details.')
+            send_reply_if_not_blank(
+                room_ident,
+                message.id,
+                'Processing of this message failed due to an HTTP error. See error logs for more details.',
+            )
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
@@ -379,7 +391,7 @@ def on_msg(msg, client):
     else:
         with _room_roles_lock:
             if 'direct' in _room_roles and room_ident in _room_roles['direct']:
-                SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+                SocketScience.receive(message.content_source.replace("\u200b", "").replace("\u200c", ""))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -429,10 +441,9 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
             room = _rooms[room_id]
 
             if notify_site:
-                pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
-                                                                         room.room.id,
-                                                                         notify_site,
-                                                                         room.room._client)
+                pings = datahandling.get_user_names_on_notification_list(
+                    room.room._client.host, room.room.id, notify_site, room.room._client
+                )
 
                 msg_pings = datahandling.append_pings(msg, pings)
             else:
@@ -444,6 +455,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
                 is_global_block_before_timestamp = _global_block < timestamp
             if room.block_time < timestamp and is_global_block_before_timestamp:
                 if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
+
                     def callback(room=room, msg=msg_pings):
                         post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
 
@@ -501,8 +513,9 @@ def block_room(room_id, site, time):
 
 
 class ChatCommand:
-    def __init__(self, type_signature, reply=False, whole_msg=False, privileged=False,
-                 arity=None, aliases=None, give_name=False):
+    def __init__(
+        self, type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False
+    ):
         self.type_signature = type_signature
         self.reply = reply
         self.whole_msg = whole_msg
@@ -533,8 +546,7 @@ class ChatCommand:
 
         try:
             try:
-                processed_args.extend(
-                    [(coerce(arg) if arg else arg) for coerce, arg in zip(self.type_signature, args)])
+                processed_args.extend([(coerce(arg) if arg else arg) for coerce, arg in zip(self.type_signature, args)])
             except ValueError as e:
                 return "Invalid input type given for an argument"
 
@@ -553,12 +565,16 @@ class ChatCommand:
             return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
     def __repr__(self):
-        return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})" \
-            .format(
-                self.__class__.__name__, ", ".join([s.__name__ for s in self.type_signature]), self.reply,
-                self.whole_msg, self.privileged,
-                self.arity, self.aliases, self.give_name
-            )
+        return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})".format(
+            self.__class__.__name__,
+            ", ".join([s.__name__ for s in self.type_signature]),
+            self.reply,
+            self.whole_msg,
+            self.privileged,
+            self.arity,
+            self.aliases,
+            self.give_name,
+        )
 
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
@@ -609,13 +625,12 @@ def dispatch_command(msg):
         else:
             command_parts[0] = command_parts[0][3:]
     except IndexError:
-        return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" +\
-               " to run command `cmd_name`."
+        return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" + " to run command `cmd_name`."
 
     if len(command_parts) == 2:
         cmd, args = command_parts
     else:
-        cmd, = command_parts
+        (cmd,) = command_parts
         args = ""
 
     if cmd == "":
@@ -659,8 +674,9 @@ def get_attribution_for_message(msg):
     host_url = 'https://chat.{}/'.format(msg._client.host)
     message_url = '{}transcript/message/{}'.format(host_url, msg.id)
     user_url = '{}users/{}/{}'.format(host_url, msg.owner.id, msg.owner.name)
-    return ' – from a <a href="{}">chat message</a> by <a href="{}">{}</a>'.format(message_url, user_url,
-                                                                                   msg.owner.name)
+    return ' – from a <a href="{}">chat message</a> by <a href="{}">{}</a>'.format(
+        message_url, user_url, msg.owner.name
+    )
 
 
 def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
@@ -669,7 +685,7 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
     if len(command_parts) == 2:
         cmd, args = command_parts
     else:
-        cmd, = command_parts
+        (cmd,) = command_parts
         args = ""
 
     cmd = cmd.lower()
@@ -698,8 +714,10 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
         post_data = get_report_data(message_replied_to)
 
         if post_data:
-            expected_domains = (r'\b(?:erwaysoftware\.com|stackexchange\.com|stackoverflow\.com|serverfault\.com'
-                                r'|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net)\b')
+            expected_domains = (
+                r'\b(?:erwaysoftware\.com|stackexchange\.com|stackoverflow\.com|serverfault\.com'
+                r'|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net)\b'
+            )
             content = reply.content
             if regex.search(r'(?i)\bstill[\W_]+(?:alive|up)\b', content) is not None:
                 sub_regex_text = r'(?i)(?:^@\S*|<a href="[^/]*//[^/]*{}[^<]*</a>)'.format(expected_domains)
@@ -709,8 +727,12 @@ def dispatch_reply_command(message_replied_to, reply, full_cmd, comment=True):
                     # and doesn't have much text other than the reply, and contains at least one MS and/or SE domain.
                     # So, we don't want to forward it as a comment to MS.
                     return
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd + get_attribution_for_message(reply),
-                     reply.owner, url=post_data[0])
+            Tasks.do(
+                metasmoke.Metasmoke.post_auto_comment,
+                full_cmd + get_attribution_for_message(reply),
+                reply.owner,
+                url=post_data[0],
+            )
 
 
 def dispatch_shorthand_command(msg):

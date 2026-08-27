@@ -9,7 +9,7 @@ import globalvars
 
 
 def rebuild_str(s: str) -> str:
-    return s.replace("\u200B", "").replace("\u200C", "")
+    return s.replace("\u200b", "").replace("\u200c", "")
 
 
 get_user_from_url_regex = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?")
@@ -45,7 +45,8 @@ def get_api_sitename_from_url(url: str) -> Optional[str]:
 def api_parameter_from_link(link: str) -> Optional[str]:
     match = regex.compile(
         r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
-        r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)').search(link)
+        r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)'
+    ).search(link)
     exceptions = {
         'meta.superuser': 'meta.superuser',
         'meta.serverfault': 'meta.serverfault',
@@ -75,8 +76,8 @@ def post_id_from_link(link: str) -> Optional[str]:
 
 def to_metasmoke_link(post_url: str, protocol: bool = True) -> str:
     return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
-        "https:" if protocol else "", api_parameter_from_link(post_url),
-        post_id_from_link(post_url))
+        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url)
+    )
 
 
 # Use (?P<name>) so we're not in the danger of messing up numeric groups
@@ -185,7 +186,7 @@ def escape_markdown(s: str) -> str:
 
 
 def sanitize_title(title_unescaped: str) -> str:
-    return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', u'\u23CE'))
+    return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', '\u23ce'))
 
 
 def get_user_from_list_command(cmd: str) -> tuple[int, str]:  # for example, !!/addblu is a list command

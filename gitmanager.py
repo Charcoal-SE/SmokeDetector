@@ -24,7 +24,7 @@ else:
 
 
 def _anchor(str_to_anchor, blacklist_type):
-    """ Anchor a string according to the operation. """
+    """Anchor a string according to the operation."""
     if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
         return r"(?s:\b" + str_to_anchor + r"\b)"
     else:
@@ -35,9 +35,11 @@ class GitHubManager:
     still_using_usernames = GlobalVars.github_access_token is None
 
     if still_using_usernames:
-        still_using_usernames_nudge = " By the way, tell my owner to [set up personal access tokens]" \
-                                      "(//chat.stackexchange.com/transcript/message/55007870#55007870)" \
-                                      " when they have time :)"
+        still_using_usernames_nudge = (
+            " By the way, tell my owner to [set up personal access tokens]"
+            "(//chat.stackexchange.com/transcript/message/55007870#55007870)"
+            " when they have time :)"
+        )
         if GlobalVars.github_username or GlobalVars.github_password:
             auth_args = {"auth": HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)}
         else:
@@ -48,11 +50,12 @@ class GitHubManager:
 
     @classmethod
     def call_api(cls, method, route, payload):
-        """ Perform API calls. """
+        """Perform API calls."""
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.request(method, route, data=payload, timeout=GlobalVars.default_requests_timeout,
-                                    **cls.auth_args)
+        response = requests.request(
+            method, route, data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args
+        )
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         return response
@@ -64,8 +67,12 @@ class GitHubManager:
         """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
-                                 data=payload, timeout=GlobalVars.default_requests_timeout, **cls.auth_args)
+        response = requests.post(
+            "https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
+            data=payload,
+            timeout=GlobalVars.default_requests_timeout,
+            **cls.auth_args,
+        )
         return response.json()
 
     @classmethod
@@ -77,15 +84,16 @@ class GitHubManager:
 
     @classmethod
     def get_pull_request(cls, pr_id, payload=""):
-        """ Get pull requests info. """
+        """Get pull requests info."""
         url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
         return cls.call_api("GET", url, payload)
 
     @classmethod
     def update_pull_request(cls, pr_id, payload):
-        """ Update pull requests' status (open/closed). """
+        """Update pull requests' status (open/closed)."""
         url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
         return cls.call_api("PATCH", url, payload)
+
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 
@@ -97,14 +105,23 @@ class GitManager:
     def get_origin_or_auth():
         git_url = git.config("--get", "remote.origin.url").strip()
         if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_access_token:
-            preformat_url = ('https://{}:{}@github.com/' + git_url[19:])
+            preformat_url = 'https://{}:{}@github.com/' + git_url[19:]
             return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_access_token))
         else:
             return "origin"
 
     @classmethod
-    def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False, metasmoke_down=False, before_pattern='', after_pattern=''):
+    def add_to_blacklist(
+        cls,
+        blacklist='',
+        item_to_blacklist='',
+        username='',
+        chat_profile_link='',
+        code_permissions=False,
+        metasmoke_down=False,
+        before_pattern='',
+        after_pattern='',
+    ):
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
 
@@ -176,13 +193,18 @@ class GitManager:
             if watch_removed:
                 git.add('watched_keywords.txt', 'watched_numbers.txt')
 
-            git("-c", "user.name=" + GlobalVars.git_name,
-                "-c", "user.email=" + GlobalVars.git_email,
+            git(
+                "-c",
+                "user.name=" + GlobalVars.git_name,
+                "-c",
+                "user.email=" + GlobalVars.git_email,
                 "commit",
                 "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
-                "-m", "Auto {0} of{before_pattern} `{1}`{after_pattern} by {2}".format(op, item, username,
-                                                                                       before_pattern=before_pattern,
-                                                                                       after_pattern=after_pattern))
+                "-m",
+                "Auto {0} of{before_pattern} `{1}`{after_pattern} by {2}".format(
+                    op, item, username, before_pattern=before_pattern, after_pattern=after_pattern
+                ),
+            )
 
             origin_or_auth = cls.get_origin_or_auth()
             if code_permissions:
@@ -194,25 +216,33 @@ class GitManager:
                 git.push(origin_or_auth, branch)
                 git.checkout("master")
 
-                if ((GlobalVars.github_username is None or GlobalVars.github_password is None)
-                        and (GlobalVars.github_access_token is None)):
+                if (GlobalVars.github_username is None or GlobalVars.github_password is None) and (
+                    GlobalVars.github_access_token is None
+                ):
                     return (False, "Tell someone to set a GH token.")
 
-                payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
-                           "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
-                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
-                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
-                                   ".\n"
-                                   "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
-                                       username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                                       item, ms_search_option,                                    # 4 5
-                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
-                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
-                                       blacklist.upper()),                                        # 8
-                           "head": branch,
-                           "base": "master"}
+                payload = {
+                    "title": "{0}: {1} {2}".format(username, op.title(), item),
+                    "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
+                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
+                    "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
+                    ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
+                    ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
+                    ".\n"
+                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
+                        username,
+                        chat_profile_link,
+                        op,
+                        blacklist,  # 0 1 2 3
+                        item,
+                        ms_search_option,  # 4 5
+                        quote_plus(_anchor(item, blacklist_type)),  # 6
+                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
+                        blacklist.upper(),
+                    ),  # 8
+                    "head": branch,
+                    "base": "master",
+                }
                 response = GitHubManager.create_pull_request(payload)
                 log('debug', response)
                 try:
@@ -221,15 +251,21 @@ class GitManager:
                     url, pr_num = response["html_url"], response["number"]
 
                     if metasmoke_down:
-                        return (True,
-                                "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
-                                "I've [created PR#{1} for you]({0}).{2}".format(
-                                    url, pr_num, GitHubManager.still_using_usernames_nudge))
+                        return (
+                            True,
+                            "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
+                            "I've [created PR#{1} for you]({0}).{2}".format(
+                                url, pr_num, GitHubManager.still_using_usernames_nudge
+                            ),
+                        )
                     else:
-                        return (True,
-                                "You don't have blacklist manager privileges, "
-                                "but I've [created PR#{1} for you]({0}).{2}"
-                                .format(url, pr_num, GitHubManager.still_using_usernames_nudge))
+                        return (
+                            True,
+                            "You don't have blacklist manager privileges, "
+                            "but I've [created PR#{1} for you]({0}).{2}".format(
+                                url, pr_num, GitHubManager.still_using_usernames_nudge
+                            ),
+                        )
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
@@ -251,8 +287,10 @@ class GitManager:
                         return (False, "Something is wrong with the GH credentials, tell someone to check them.")
                     else:
                         # Capture any other invalid response cases.
-                        return (False, "A bad or invalid reply was received from GH, the message was: %s" %
-                                response['message'])
+                        return (
+                            False,
+                            "A bad or invalid reply was received from GH, the message was: %s" % response['message'],
+                        )
         except Exception as err:
             log_current_exception()
             return (False, "Git functions failed for unspecified reasons, details may be in error log.")
@@ -270,12 +308,17 @@ class GitManager:
     def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
             if metasmoke_down:
-                return False, "MS is offline, and I can't determine if you are a blacklist manager or not. " \
-                              "If you are a blacklist manager, then wait for MS to be back up before running " \
-                              "this command."
+                return (
+                    False,
+                    "MS is offline, and I can't determine if you are a blacklist manager or not. "
+                    "If you are a blacklist manager, then wait for MS to be back up before running "
+                    "this command.",
+                )
             else:
-                return False, "Ask a blacklist manager to run that for you. Use `!!/whois blacklister` to find " \
-                              "out who's here."
+                return (
+                    False,
+                    "Ask a blacklist manager to run that for you. Use `!!/whois blacklister` to find out who's here.",
+                )
 
         try:
             cls.gitmanager_lock.acquire()
@@ -312,11 +355,16 @@ class GitManager:
             manager.remove(item)
 
             git.add(file_name)
-            git("-c", "user.name=" + GlobalVars.git_name,
-                "-c", "user.email=" + GlobalVars.git_email,
+            git(
+                "-c",
+                "user.name=" + GlobalVars.git_name,
+                "-c",
+                "user.email=" + GlobalVars.git_email,
                 "commit",
                 "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
-                '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username))
+                '-m',
+                'Auto un{} of `{}` by {}'.format(blacklist_type, item, username),
+            )
 
             git.checkout('master')
             git.merge(branch)
@@ -343,8 +391,10 @@ class GitManager:
 
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
-                                timeout=GlobalVars.default_requests_timeout)
+        response = requests.get(
+            "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
+            timeout=GlobalVars.default_requests_timeout,
+        )
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
@@ -365,11 +415,17 @@ class GitManager:
             git.checkout('master')
             origin_or_auth = cls.get_origin_or_auth()
             git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
-            git("-c", "user.name=" + GlobalVars.git_name,
-                "-c", "user.email=" + GlobalVars.git_email,
+            git(
+                "-c",
+                "user.name=" + GlobalVars.git_name,
+                "-c",
+                "user.email=" + GlobalVars.git_email,
                 "merge",
-                'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
-                    pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+                'FETCH_HEAD',
+                '--no-ff',
+                '-m',
+                'Merge pull request #{} from {}/{}'.format(pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
+            )
             git.push(origin_or_auth, 'master')
             try:
                 git.push('-d', origin_or_auth, ref)
@@ -377,15 +433,18 @@ class GitManager:
                 # TODO: PR merged, but branch deletion has something wrong, generate some text
                 pass
             return "Merged pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                pr_id, GlobalVars.bot_repo_slug)
+                pr_id, GlobalVars.bot_repo_slug
+            )
         finally:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment="", self_reject=False):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
-                                timeout=GlobalVars.default_requests_timeout)
+        response = requests.get(
+            "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id),
+            timeout=GlobalVars.default_requests_timeout,
+        )
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
@@ -410,9 +469,11 @@ class GitManager:
                     git.push('-d', origin_or_auth, ref)
                     if self_reject:
                         return "You self-closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                            pr_id, GlobalVars.bot_repo_slug)
+                            pr_id, GlobalVars.bot_repo_slug
+                        )
                     return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                        pr_id, GlobalVars.bot_repo_slug)
+                        pr_id, GlobalVars.bot_repo_slug
+                    )
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
@@ -438,7 +499,8 @@ class GitManager:
             local_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(local_ref)).strip()
             remote_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(remote_ref)).strip()
             return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
-                local_log, remote_log)
+                local_log, remote_log
+            )
 
         return True, None
 

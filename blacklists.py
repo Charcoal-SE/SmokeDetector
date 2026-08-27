@@ -52,8 +52,7 @@ class BasicListParser(BlacklistParser):
 
     def parse(self):
         with open(self._filename, 'r', encoding='utf-8') as f:
-            return [self._normalize(line)
-                    for line in f if len(line.rstrip()) > 0 and line[0] != '#']
+            return [self._normalize(line) for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
     def add(self, item: str):
         with open(self._filename, 'a+', encoding='utf-8') as f:
@@ -125,8 +124,9 @@ class TSVDictParser(BlacklistParser):
 
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
-            items = [x for x in items if ('\t' not in x) or
-                     (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
+            items = [
+                x for x in items if ('\t' not in x) or (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)
+            ]
             f.seek(0)
             f.truncate()
             f.writelines(items)
@@ -167,6 +167,7 @@ class YAMLParserCIDR(BlacklistParser):
 
     Base class for parsers for YAML files with simple schema validation.
     """
+
     # Remember to update the schema version if any of this needs to be changed
     SCHEMA_VERSION = '2019120601'  # yyyy mm dd id
     SCHEMA_VARIANT = 'yaml_cidr'
@@ -179,11 +180,11 @@ class YAMLParserCIDR(BlacklistParser):
         with open(self._filename, 'r', encoding='utf-8') as f:
             y = yaml.safe_load(f)
         if y['Schema'] != self.SCHEMA_VARIANT:
-            raise ValueError('Schema variant: got {0}, but expected {1}'.format(
-                y['Schema'], self.SCHEMA_VARIANT))
+            raise ValueError('Schema variant: got {0}, but expected {1}'.format(y['Schema'], self.SCHEMA_VARIANT))
         if y['Schema_version'] > self.SCHEMA_VERSION:
-            raise ValueError('Schema version {0} is bigger than supported {1}'.format(
-                y['Schema_version'], self.SCHEMA_VERSION))
+            raise ValueError(
+                'Schema version {0} is bigger than supported {1}'.format(y['Schema_version'], self.SCHEMA_VERSION)
+            )
         for item in y['items']:
             if not keep_disabled and item.get('disable'):
                 continue
@@ -196,9 +197,7 @@ class YAMLParserCIDR(BlacklistParser):
         d = {
             'Schema': self.SCHEMA_VARIANT,
             'Schema_version': self.SCHEMA_VERSION,
-            'items': sorted(
-                self._parse(keep_disabled=True),
-                key=lambda x: x[self.SCHEMA_PRIKEY])
+            'items': sorted(self._parse(keep_disabled=True), key=lambda x: x[self.SCHEMA_PRIKEY]),
         }
         callback(d)
         with open(self._filename, 'w', encoding='utf-8') as f:
@@ -208,15 +207,17 @@ class YAMLParserCIDR(BlacklistParser):
         return item.rstrip()
 
     def _validate(self, item):
-        ip_regex = regex.compile(r'''
+        ip_regex = regex.compile(
+            r'''
             (?(DEFINE)(?P<octet>
               0|1[0-9]{0,2}|2(?:[0-4][0-9]?)?|25[0-5]?|2[6-9]|[3-9][0-9]?))
-            ^(?!0)(?&octet)(?:\.(?&octet)){3}$''', regex.X)
+            ^(?!0)(?&octet)(?:\.(?&octet)){3}$''',
+            regex.X,
+        )
 
         if 'ip' in item:
             if not ip_regex.match(item['ip']):
-                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(
-                    item['ip']))
+                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(item['ip']))
             '''
             if 'cidr' in item:
                 raise ValueError(
@@ -247,8 +248,7 @@ class YAMLParserCIDR(BlacklistParser):
             item_normalized = self._normalize(item[prikey])
             for compare in d['items']:
                 if self._normalize(compare[prikey]) == item_normalized:
-                    raise KeyError('{0} already in list {1}'.format(
-                        compare[prikey], d['items']))
+                    raise KeyError('{0} already in list {1}'.format(compare[prikey], d['items']))
             d['items'].append(item)
 
         self._write(add_callback)
@@ -261,8 +261,7 @@ class YAMLParserCIDR(BlacklistParser):
                 if compare[prikey] == item[prikey]:
                     break
             else:
-                raise ValueError('No {0} found in list {1}'.format(
-                    item[prikey], d['items']))
+                raise ValueError('No {0} found in list {1}'.format(item[prikey], d['items']))
             del d['items'][i]
 
         self._write(remove_callback)
@@ -287,6 +286,7 @@ class YAMLParserNS(YAMLParserCIDR):
     """
     YAML parser for name server blacklists.
     """
+
     SCHEMA_VARIANT = 'yaml_ns'
     SCHEMA_PRIKEY = 'ns'
 
@@ -299,8 +299,7 @@ class YAMLParserNS(YAMLParserCIDR):
     def _validate(self, item):
         def item_check(ns):
             if not host_regex.match(ns):
-                raise ValueError(
-                    '{0} does not look like a valid host name'.format(ns))
+                raise ValueError('{0} does not look like a valid host name'.format(ns))
             if item.get('disable', None):
                 return False
             # Extend lifetime if we are running a test
@@ -317,20 +316,24 @@ class YAMLParserNS(YAMLParserCIDR):
                 except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                     if not item.get('pass', None):
                         soa = dns.resolver.resolve(ns, 'soa', search=True, **extra_params)
-                        log('debug', '{0} has no A record; SOA is {1}'.format(
-                            ns, ';'.join(s.to_text() for s in soa)))
+                        log('debug', '{0} has no A record; SOA is {1}'.format(ns, ';'.join(s.to_text() for s in soa)))
                 except dns.resolver.NoNameservers:
                     if not item.get('pass', None):
-                        log('warn', '{0} has no available servers to service DNS '
-                                    'request.'.format(ns))
+                        log('warn', '{0} has no available servers to service DNS request.'.format(ns))
                 except dns.resolver.Timeout:
                     log('warn', '{0}: DNS lookup timed out.'.format(ns))
             except Exception as excep:
                 log_current_exception()
                 log('error', '{}'.format(color('-' * 41 + 'v' * len(ns), 'red', attrs=['bold'])), no_exception=True)
-                log('error', ('validate YAML: Failed NS validation for:'
-                              ' {} in {}'.format(color(ns, 'white', attrs=['bold']), self._filename)),
-                    no_exception=True)
+                log(
+                    'error',
+                    (
+                        'validate YAML: Failed NS validation for: {} in {}'.format(
+                            color(ns, 'white', attrs=['bold']), self._filename
+                        )
+                    ),
+                    no_exception=True,
+                )
                 log('error', '{}'.format(color('-' * 41 + '^' * len(ns), 'red', attrs=['bold'])), no_exception=True)
                 if "pytest" in sys.modules:
                     item['error'] = excep
@@ -339,8 +342,7 @@ class YAMLParserNS(YAMLParserCIDR):
                     raise
             return True
 
-        host_regex = regex.compile(
-            r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORECASE)
+        host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$', flags=regex.IGNORECASE)
         if 'ns' not in item:
             raise ValueError('Item must have member field "ns": {0!r}'.format(item))
         if isinstance(item['ns'], str):
@@ -352,9 +354,7 @@ class YAMLParserNS(YAMLParserCIDR):
                     accept = False
             return accept
         else:
-            raise ValueError(
-                'Member "ns" must be either string or list of strings: {0!r}'.format(
-                    item['ns']))
+            raise ValueError('Member "ns" must be either string or list of strings: {0!r}'.format(item['ns']))
 
     def validate_list(self, list_to_validate):
         # 20 max_workers appeared to be reasonable. When 30 or 50 workers were tried,
@@ -373,8 +373,12 @@ class YAMLParserNS(YAMLParserCIDR):
         if pass1_error_count == 0:
             # Everything passed
             return
-        log('info', 'Validation Pass 1 had {} {}. Waiting 6 seconds'.format(pass1_error_count,
-                                                                            pluralize(pass1_error_count, 'error', 's')))
+        log(
+            'info',
+            'Validation Pass 1 had {} {}. Waiting 6 seconds'.format(
+                pass1_error_count, pluralize(pass1_error_count, 'error', 's')
+            ),
+        )
         time.sleep(6)
         log('debug', '(blank lines)\n\n\n\n\n\n')  # Just blank lines
         log('info', 'Validation Pass 2:')  # Just a blank line
@@ -385,25 +389,33 @@ class YAMLParserNS(YAMLParserCIDR):
             entry_plural = pluralize(number_failed_to_validate, 'entr', 'ies', 'y')
             exception_entries_text = [
                 color('{}'.format(entry.get('ns', 'NO NS')), 'white', attrs=['bold'])
-                + ' in {} for {}'.format(self._filename,
-                                         '{}.{}'.format(entry['error'].__class__.__module__,
-                                                        entry['error'].__class__.__name__)
-                                         if entry.get('error', None) is not None else '')
-                for entry in entries_with_exception2]
-            exception_entries_indented = '\n    {}'. format('\n    '.join(exception_entries_text))
-            problems_text_colored = (color('{} which failed to validate twice:'.format(entry_plural.capitalize()),
-                                           'red', attrs=['bold'])
-                                     + exception_entries_indented)
+                + ' in {} for {}'.format(
+                    self._filename,
+                    '{}.{}'.format(entry['error'].__class__.__module__, entry['error'].__class__.__name__)
+                    if entry.get('error', None) is not None
+                    else '',
+                )
+                for entry in entries_with_exception2
+            ]
+            exception_entries_indented = '\n    {}'.format('\n    '.join(exception_entries_text))
+            problems_text_colored = (
+                color('{} which failed to validate twice:'.format(entry_plural.capitalize()), 'red', attrs=['bold'])
+                + exception_entries_indented
+            )
             log('debug', '(blank lines)\n\n\n')  # Just blank lines
             log('error', problems_text_colored)
-            raise Exception('{} {} failed to validate in {}{}'.format(number_failed_to_validate, entry_plural,
-                                                                      self._filename, exception_entries_indented))
+            raise Exception(
+                '{} {} failed to validate in {}{}'.format(
+                    number_failed_to_validate, entry_plural, self._filename, exception_entries_indented
+                )
+            )
 
 
 class YAMLParserASN(YAMLParserCIDR):
     """
     YAML parser for ASN blacklists.
     """
+
     SCHEMA_VARIANT = 'yaml_asn'
     SCHEMA_PRIKEY = 'asn'
 

@@ -26,9 +26,13 @@ NUMBER_REGEX_MAXIMUM_DIGITS = 20
 NUMBER_REGEX_RANGE_LOW = NUMBER_REGEX_MINIMUM_DIGITS - 2
 NUMBER_REGEX_RANGE_HIGH = NUMBER_REGEX_MAXIMUM_DIGITS - 2
 VALID_NON_DIGIT_START_CHARACTERS = r'(+{['
-NUMBER_REGEX_START_TEXT = r'(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
-                          r']{1,2}\d|\d(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
-                          r']\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+NUMBER_REGEX_START_TEXT = (
+    r'(?:['
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r']{1,2}\d|\d(?<=[^\d'
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r']\d|^\d))(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+)
 NUMBER_REGEX_MIDDLE_TEXT = r'(?:\d(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))){{{}}}'
 NUMBER_REGEX_END_TEXT = r'\d(?=\D|$)'
 
@@ -54,15 +58,15 @@ for number_regex_length in range(NUMBER_REGEX_RANGE_LOW, NUMBER_REGEX_RANGE_HIGH
 #   blacklists.
 NUMBER_REGEX = {
     'unicode': regex.compile(NUMBER_REGEX_TEXT, flags=regex.UNICODE),
-    'ascii': regex.compile(NUMBER_REGEX_TEXT, flags=regex.ASCII)
+    'ascii': regex.compile(NUMBER_REGEX_TEXT, flags=regex.ASCII),
 }
 NUMBER_REGEX_START = {
     'unicode': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.UNICODE),
-    'ascii': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.ASCII)
+    'ascii': regex.compile(r'^' + NUMBER_REGEX_START_TEXT, flags=regex.ASCII),
 }
 NUMBER_REGEX_END = {
     'unicode': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.UNICODE),
-    'ascii': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.ASCII)
+    'ascii': regex.compile(NUMBER_REGEX_END_TEXT + r'$', flags=regex.ASCII),
 }
 
 
@@ -292,25 +296,34 @@ def get_deobfuscated_candidates(text):
 # than just a single \D permitted. The start can be our normal mix.
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX = r'(?<=\D)[2-9]\d{2}(?:[\W_]*+|\D(?=\d))(?<=\D)\d{4}$'
 NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE = r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))\d{4}$'
-NA_NUMBER_WITHOUT_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
-                                    r']{1,2}[2-9]|[2-9](?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
-                                    r'][2-9]|^[2-9]))\d{2}' + \
-                                    r'(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+NA_NUMBER_WITHOUT_ONE_REGEX_START = (
+    r'^(?:['
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r']{1,2}[2-9]|[2-9](?<=[^\d'
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r'][2-9]|^[2-9]))\d{2}'
+    + r'(?:[\W_]*+|\D(?:(?=\d)|(?<=\d\D)))'
+)
 NA_NUMBER_WITHOUT_ONE_REGEX = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITHOUT_ONE_LOOSE = NA_NUMBER_WITHOUT_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
 # With a 1. It must have a separator between the 334 groupings, like 1\d{3}\D\d{3}\D\d{4}, but with more
 # than just a single \D permitted and a separator is permitted after the 1. The start can be our normal mix.
-NA_NUMBER_WITH_ONE_REGEX_START = r'^(?:[' + VALID_NON_DIGIT_START_CHARACTERS + \
-                                 r']{1,2}1|1(?<=[^\d' + VALID_NON_DIGIT_START_CHARACTERS + \
-                                 r']1|^1))(?:[\W_]*+|\D(?=\d))' + \
-                                 r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
+NA_NUMBER_WITH_ONE_REGEX_START = (
+    r'^(?:['
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r']{1,2}1|1(?<=[^\d'
+    + VALID_NON_DIGIT_START_CHARACTERS
+    + r']1|^1))(?:[\W_]*+|\D(?=\d))'
+    + r'[2-9]\d{2}(?:[\W_]*+|\D(?=\d))'
+)
 # There's a trend to using a straight format of "+12345678900", which should be considered a NA number.
 NA_NUMBER_WITH_ONE_NO_SEPARATORS_REGEX = r'^\+?1[2-9]\d{2}[2-9]\d{2}\d{4}$'
 NA_NUMBER_WITH_ONE_AREA_CODE_SHORT_SEPARATORS_REGEX = r'^\+?1\D{0,2}[2-9]\d{2}\D{0,2}[2-9]\d{2}\d{4}$'
 NA_NUMBER_WITH_ONE_REGEX = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_REGEX
 NA_NUMBER_WITH_ONE_LOOSE = NA_NUMBER_WITH_ONE_REGEX_START + NA_NUMBER_CENTRAL_OFFICE_AND_LINE_LOOSE
-NA_NUMBER_WITH_ONE_OR_ONE_NO_SEPARATORS_REGEX = '(?:' + NA_NUMBER_WITH_ONE_REGEX + '|' + \
-                                                NA_NUMBER_WITH_ONE_AREA_CODE_SHORT_SEPARATORS_REGEX + ')'
+NA_NUMBER_WITH_ONE_OR_ONE_NO_SEPARATORS_REGEX = (
+    '(?:' + NA_NUMBER_WITH_ONE_REGEX + '|' + NA_NUMBER_WITH_ONE_AREA_CODE_SHORT_SEPARATORS_REGEX + ')'
+)
 
 
 def is_north_american_phone_number_with_one(text):
@@ -341,10 +354,12 @@ def get_north_american_with_separators_from_normalized(normalized):
 
 def get_maybe_north_american_not_in_normalized_but_in_all(pattern, normalized, all_normalized=None):
     without_comments, comments = split_processed_and_comments(pattern)
-    north_american_extra, north_american_add_type, maybe_north_american_extra = \
-        get_north_american_alternate_normalized(normalize(deobfuscate(without_comments)), force=True)
-    if maybe_north_american_extra not in normalized and \
-            (all_normalized is None or maybe_north_american_extra in all_normalized):
+    north_american_extra, north_american_add_type, maybe_north_american_extra = get_north_american_alternate_normalized(
+        normalize(deobfuscate(without_comments)), force=True
+    )
+    if maybe_north_american_extra not in normalized and (
+        all_normalized is None or maybe_north_american_extra in all_normalized
+    ):
         return maybe_north_american_extra
     return ''
 
@@ -413,8 +428,9 @@ def process_numlist(numlist, processed=None, normalized=None):
         normalized_deobfuscated = normalize(deobfuscated)
         this_entry_normalized.add(normalized_deobfuscated)
         if not force_no_north_american:
-            north_american_extra, north_american_add_type, maybe_north_american_extra = \
+            north_american_extra, north_american_add_type, maybe_north_american_extra = (
                 get_north_american_alternate_normalized(deobfuscated, normalized_deobfuscated, force_is_north_american)
+            )
             if maybe_north_american_extra and force_is_north_american:
                 north_american_extra = maybe_north_american_extra
                 maybe_north_american_extra = ''

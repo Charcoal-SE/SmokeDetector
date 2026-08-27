@@ -33,8 +33,9 @@ class EditWatcher:
         self.posts_lock = threading.RLock()
 
         try:
-            self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
-                                                      timeout=GlobalVars.se_websocket_timeout)
+            self.socket = websocket.create_connection(
+                GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout
+            )
             self.connect_time = time.time()
             self.hb_time = None
         except websocket.WebSocketException:
@@ -71,8 +72,9 @@ class EditWatcher:
                                 del self.posts[action]
                                 Tasks.do(self._unsubscribe, action)
                         if max_time > now and data["a"] == "post-edit":
-                            add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, False,
-                                                                          source=self.__class__.__name__)
+                            add_to_global_bodyfetcher_queue_in_new_thread(
+                                hostname, question_id, False, source=self.__class__.__name__
+                            )
                     Tasks.do(self._unsubscribe_to_expired_posts_and_expunge)
             except websocket.WebSocketException as e:
                 ws = self.socket
@@ -102,8 +104,16 @@ class EditWatcher:
             for action in self.posts:
                 self._subscribe(action)
 
-    def subscribe(self, post_url=None, hostname=None, site_id=None, question_id=None,
-                  timeout=DEFAULT_TIMEOUT, max_time=None, from_time=None):
+    def subscribe(
+        self,
+        post_url=None,
+        hostname=None,
+        site_id=None,
+        question_id=None,
+        timeout=DEFAULT_TIMEOUT,
+        max_time=None,
+        from_time=None,
+    ):
         if GlobalVars.no_edit_watcher:
             return
         if post_url and not ((hostname or site_id) and question_id):
@@ -111,16 +121,23 @@ class EditWatcher:
             if post_type == "answer":
                 question_id = datahandling.get_post_site_id_link((post_id, hostname, post_type))
                 if question_id is None:
-                    log("warning", "{}: Unable to get question ID when subscribing to: hostname: "
-                                   "{} :: post ID:{} when subscribing to {}".format(self.__class__.__name__, hostname,
-                                                                                    post_id, post_url))
+                    log(
+                        "warning",
+                        "{}: Unable to get question ID when subscribing to: hostname: "
+                        "{} :: post ID:{} when subscribing to {}".format(
+                            self.__class__.__name__, hostname, post_id, post_url
+                        ),
+                    )
                     return
             else:
                 question_id = post_id
             if post_type != "question":
-                log("warning", "{}: tried to edit-watch non-question: hostname: "
-                               "{} :: post ID:{} when subscribing to {}".format(self.__class__.__name__, hostname,
-                                                                                question_id, post_url))
+                log(
+                    "warning",
+                    "{}: tried to edit-watch non-question: hostname: {} :: post ID:{} when subscribing to {}".format(
+                        self.__class__.__name__, hostname, question_id, post_url
+                    ),
+                )
                 return
         if not site_id or not hostname:
             with GlobalVars.site_id_dict_lock:
@@ -129,9 +146,13 @@ class EditWatcher:
                 if site_id and not hostname:
                     hostname = GlobalVars.site_id_dict_by_id.get(site_id)
         if not site_id or not hostname:
-            log("warning", "{}: unable to determine a valid site ID or hostname when subscribing to question ID "
-                           "{}:: site_id:{}::  hostname:{}::  post_url:{}".format(self.__class__.__name__, question_id,
-                                                                                  site_id, hostname, post_url))
+            log(
+                "warning",
+                "{}: unable to determine a valid site ID or hostname when subscribing to question ID "
+                "{}:: site_id:{}::  hostname:{}::  post_url:{}".format(
+                    self.__class__.__name__, question_id, site_id, hostname, post_url
+                ),
+            )
             return
 
         question_ids = question_id
@@ -165,8 +186,10 @@ class EditWatcher:
             except websocket.WebSocketException:
                 log('error', '{}: failed to subscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
-                                                                                              action))
+            log(
+                'warning',
+                '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__, action),
+            )
 
     def save(self):
         if GlobalVars.no_edit_watcher:
@@ -183,5 +206,7 @@ class EditWatcher:
             except websocket.WebSocketException:
                 log('error', '{}: failed to unsubscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warn', '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
-                                                                                             action))
+            log(
+                'warn',
+                '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__, action),
+            )

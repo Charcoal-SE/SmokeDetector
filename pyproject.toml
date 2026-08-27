@@ -23,6 +23,10 @@ exclude = [
     "plugin.py",
 ]
 
+[tool.ruff.format]
+preview = true
+quote-style = "preserve"
+
 [tool.ruff.lint]
 # Rules: https://docs.astral.sh/ruff/rules/
 ignore = [

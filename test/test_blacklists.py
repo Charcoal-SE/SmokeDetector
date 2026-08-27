@@ -54,16 +54,27 @@ def test_number_lists():
             (processed_pattern, this_normalized) = number_list[pattern]
             unique_normalized = this_normalized - this_list_all_normalized
             duplicate_normalized = this_normalized - unique_normalized
-            maybe_north_american_not_in_all = get_maybe_north_american_not_in_normalized_but_in_all(processed_pattern, this_normalized, this_list_all_normalized)
+            maybe_north_american_not_in_all = get_maybe_north_american_not_in_normalized_but_in_all(
+                processed_pattern, this_normalized, this_list_all_normalized
+            )
             if maybe_north_american_not_in_all:
-                maybe_north_american_already.append(entry_description + "has maybe North American form already in all normalized: {}".format(maybe_north_american_not_in_all))
+                maybe_north_american_already.append(
+                    entry_description
+                    + "has maybe North American form already in all normalized: {}".format(
+                        maybe_north_american_not_in_all
+                    )
+                )
             this_list_all_normalized |= unique_normalized
             digit_count = len(regex.findall(r'\d', processed_pattern))
             digit_count_text = " ({} digits is OK)".format(digit_count)
             if not is_digit_count_in_number_regex_range(digit_count):
-                digit_count_text = ": {} digits is not >= {} and <= {}".format(digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS)
+                digit_count_text = ": {} digits is not >= {} and <= {}".format(
+                    digit_count, NUMBER_REGEX_MINIMUM_DIGITS, NUMBER_REGEX_MAXIMUM_DIGITS
+                )
             if not matches_number_regex(processed_pattern):
-                errors['fails_number_regex'].append(entry_description + "fails NUMBER_REGEX{}::{}".format(digit_count_text, processed_pattern))
+                errors['fails_number_regex'].append(
+                    entry_description + "fails NUMBER_REGEX{}::{}".format(digit_count_text, processed_pattern)
+                )
             else:
                 this_no_exacts = []
                 if not matches_number_regex_start(processed_pattern):
@@ -73,14 +84,23 @@ def test_number_lists():
                 if len(this_no_exacts) > 0:
                     no_exacts.append(entry_description + " ".join(this_no_exacts) + digit_count_text + "::" + pattern)
             if not unique_normalized:
-                errors['no_unique'].append(entry_description + "has no unique normalized entries. Duplicate normalized entries: {}".format(duplicate_normalized))
+                errors['no_unique'].append(
+                    entry_description
+                    + "has no unique normalized entries. Duplicate normalized entries: {}".format(duplicate_normalized)
+                )
                 lines_no_unique.append(str(line_number))
             if blacklist_normalized:
                 this_normalized_in_blacklist = this_normalized & blacklist_normalized
                 this_normalized_not_in_blacklist = this_normalized - blacklist_normalized
                 if this_normalized_in_blacklist:
-                    not_in_blacklist_text = ":: normalized not in blacklist: {}".format(this_normalized_not_in_blacklist)
-                    error_text = entry_description + "has duplicate normalized entries on the blacklist: {}".format(this_normalized_in_blacklist) + not_in_blacklist_text
+                    not_in_blacklist_text = ":: normalized not in blacklist: {}".format(
+                        this_normalized_not_in_blacklist
+                    )
+                    error_text = (
+                        entry_description
+                        + "has duplicate normalized entries on the blacklist: {}".format(this_normalized_in_blacklist)
+                        + not_in_blacklist_text
+                    )
                     if this_normalized_not_in_blacklist:
                         lines_duplicate_blacklist_with_unique.append(str(line_number))
                         errors['blacklist_dup_with_unique'].append(error_text)
@@ -88,7 +108,9 @@ def test_number_lists():
                         lines_duplicate_blacklist_with_no_unique.append(str(line_number))
                         errors['blacklist_dup_with_no_unique'].append(error_text)
             if duplicate_normalized:
-                errors['duplicate_normializations'].append(entry_description + "Has duplicate normalized entries: {}".format(duplicate_normalized))
+                errors['duplicate_normializations'].append(
+                    entry_description + "Has duplicate normalized entries: {}".format(duplicate_normalized)
+                )
         lines_no_unique.reverse()
         deletion_list = []
         for error_group in errors:
@@ -98,10 +120,14 @@ def test_number_lists():
                 # It's intended use is in the transition from not checking normalizations to applying homoglyphs and checking normalizations.
                 line_list = [error.split('(')[1].split(')')[0] for error in errors[error_group]]
                 line_list.reverse()
-                deletion_list.append('{}: to remove {}: {}'.format(list_type, error_group, 'Gdd'.join(line_list) + 'Gdd'))
-        if (deletion_list):
+                deletion_list.append(
+                    '{}: to remove {}: {}'.format(list_type, error_group, 'Gdd'.join(line_list) + 'Gdd')
+                )
+        if deletion_list:
             print('\n')
-            print('USE ONLY ONE OF THE FOLLOWING PER RUN OF THESE TESTS. Using more than one will result in the wrong lines being deleted:')
+            print(
+                'USE ONLY ONE OF THE FOLLOWING PER RUN OF THESE TESTS. Using more than one will result in the wrong lines being deleted:'
+            )
             print('\n'.join(deletion_list))
             print('\n\n')
         return all_processed, this_list_all_normalized
@@ -113,13 +139,22 @@ def test_number_lists():
     test_a_number_list("watched", GlobalVars.watched_numbers_full, blacklist_normalized=blacklist_normalized)
     all_errors.extend(get_sorted_current_errors_and_clear_errors())
     no_exacts_count = len(no_exacts)
-    if (no_exacts_count > 0):
+    if no_exacts_count > 0:
         pluralize = "" if no_exacts_count == 1 else "s"
         print("\n\t".join(["{} pattern{} can't match exactly:".format(no_exacts_count, pluralize)] + no_exacts))
     maybe_north_american_already_count = len(maybe_north_american_already)
-    if (maybe_north_american_already_count > 0):
+    if maybe_north_american_already_count > 0:
         pluralize = "" if maybe_north_american_already_count == 1 else "s"
-        print("\n\t".join(["{} pattern{} are maybe North American with the alternate version already in all normalized:".format(maybe_north_american_already_count, pluralize)] + maybe_north_american_already))
+        print(
+            "\n\t".join(
+                [
+                    "{} pattern{} are maybe North American with the alternate version already in all normalized:".format(
+                        maybe_north_american_already_count, pluralize
+                    )
+                ]
+                + maybe_north_american_already
+            )
+        )
     error_count = len(all_errors)
     if error_count > 0:
         pluralize = "" if error_count == 1 else "s"
@@ -130,7 +165,16 @@ def test_number_lists():
         #   wait until after this is merged to enable the potential for failures here and perform the needed changes to those
         #   files.
         # The output which is provided here and above should make it substantially easier to make the needed changes.
-        pytest.fail("\n\t".join(["{} error{} have occurred (NOTE: you should find the normalized duplicate entry and decide which is better to keep):".format(error_count, pluralize)] + all_errors))
+        pytest.fail(
+            "\n\t".join(
+                [
+                    "{} error{} have occurred (NOTE: you should find the normalized duplicate entry and decide which is better to keep):".format(
+                        error_count, pluralize
+                    )
+                ]
+                + all_errors
+            )
+        )
 
 
 def test_blacklist_integrity():
@@ -156,14 +200,18 @@ def yaml_validate_existing(filename, cls):
 
 def test_yaml_blacklist():
     with open('test_ip.yml', 'w') as y:
-        yaml.dump({
-            'Schema': 'yaml_cidr',
-            'Schema_version': '2019120601',
-            'items': [
-                {'ip': '1.2.3.4'},
-                {'ip': '2.3.4.5', 'disable': True},
-                {'ip': '3.4.5.6', 'comment': 'comment'},
-            ]}, y)
+        yaml.dump(
+            {
+                'Schema': 'yaml_cidr',
+                'Schema_version': '2019120601',
+                'items': [
+                    {'ip': '1.2.3.4'},
+                    {'ip': '2.3.4.5', 'disable': True},
+                    {'ip': '3.4.5.6', 'comment': 'comment'},
+                ],
+            },
+            y,
+        )
     blacklist = Blacklist(('test_ip.yml', YAMLParserCIDR))
     with pytest.raises(ValueError) as e:
         blacklist.add('1.3.34')
@@ -189,14 +237,18 @@ def test_yaml_blacklist():
 
 def test_yaml_asn():
     with open('test_asn.yml', 'w') as y:
-        yaml.dump({
-            'Schema': 'yaml_asn',
-            'Schema_version': '2019120601',
-            'items': [
-                {'asn': '123'},
-                {'asn': '234', 'disable': True},
-                {'asn': '345', 'comment': 'comment'},
-            ]}, y)
+        yaml.dump(
+            {
+                'Schema': 'yaml_asn',
+                'Schema_version': '2019120601',
+                'items': [
+                    {'asn': '123'},
+                    {'asn': '234', 'disable': True},
+                    {'asn': '345', 'comment': 'comment'},
+                ],
+            },
+            y,
+        )
     blacklist = Blacklist(('test_asn.yml', YAMLParserASN))
     with pytest.raises(ValueError) as e:
         blacklist.add('123')
@@ -220,14 +272,18 @@ def test_yaml_asn():
 
 def test_yaml_nses():
     with open('test_nses.yml', 'w') as y:
-        yaml.dump({
-            'Schema': 'yaml_ns',
-            'Schema_version': '2019120601',
-            'items': [
-                {'ns': 'example.com.'},
-                {'ns': 'example.net.', 'disable': True},
-                {'ns': 'example.org.', 'comment': 'comment'},
-            ]}, y)
+        yaml.dump(
+            {
+                'Schema': 'yaml_ns',
+                'Schema_version': '2019120601',
+                'items': [
+                    {'ns': 'example.com.'},
+                    {'ns': 'example.net.', 'disable': True},
+                    {'ns': 'example.org.', 'comment': 'comment'},
+                ],
+            },
+            y,
+        )
     blacklist = Blacklist(('test_nses.yml', YAMLParserNS))
     assert 'example.com.' in blacklist.parse()
     assert 'EXAMPLE!COM.' not in blacklist.parse()

@@ -21,6 +21,7 @@ def utility(name, description):
         global utilities
         utilities[name] = (description, func)
         return func
+
     return wrapper
 
 

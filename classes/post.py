@@ -10,11 +10,14 @@ class PostParseError(Exception):
     """
     Error raised when a JSON entry could not be parsed.
     """
+
     pass
 
 
 class Post:
-    def __init__(self, json_data: Optional[AnyStr] = None, api_response: Optional[dict] = None, parent: Optional["Post"] = None) -> None:
+    def __init__(
+        self, json_data: Optional[AnyStr] = None, api_response: Optional[dict] = None, parent: Optional["Post"] = None
+    ) -> None:
         self._body = ""
         self._body_is_summary = False
         self._markdown = None
@@ -46,10 +49,18 @@ class Post:
 
     def __repr__(self):
         type_name = type(self).__name__
-        dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
-                   'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
-                   'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
-                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
+        dataset = [
+            'title=' + self.title,
+            'body=' + self.body,
+            'user_name=' + self.user_name,
+            'user_url=' + self.user_url,
+            'post_site=' + self.post_site,
+            'post_id=' + self.post_id,
+            'is_answer=' + str(self.is_answer),
+            'body_is_summary=' + str(self.body_is_summary),
+            'owner_rep=' + str(self.owner_rep),
+            'post_score=' + str(self.post_score),
+        ]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def __setitem__(self, key: str, item: Union[str, object]) -> None:
@@ -70,7 +81,7 @@ class Post:
         try:
             data = json.loads(text_data)
         except ValueError:
-            log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
+            log('error', "Encountered ValueError parsing the following:\n{0}".format(json_data))
             return
 
         if "ownerUrl" not in data:
@@ -132,7 +143,7 @@ class Post:
             'owner': {
                 'display_name': '_user_name',
                 'link': '_user_url',
-                'reputation': '_owner_rep'
+                'reputation': '_owner_rep',
             },
             'question_id': '_post_id',
             'answer_id': '_post_id',
@@ -144,13 +155,16 @@ class Post:
     def _process_element_mapping(self, element_map: dict, data: dict, is_api_response: bool = False) -> None:
         # Take the API response map, and start setting the elements (and sub-elements, where applicable)
         # to the attributes and variables in the object.
-        for (element, varmap) in element_map.items():
+        for element, varmap in element_map.items():
             try:
                 if is_api_response and element == 'owner':
-                    for (subelement, subvarmap) in element_map['owner'].items():
+                    for subelement, subvarmap in element_map['owner'].items():
                         try:
-                            self[subvarmap] = (html.unescape(data['owner'][subelement]) if subelement == 'display_name'
-                                               else data['owner'][subelement])
+                            self[subvarmap] = (
+                                html.unescape(data['owner'][subelement])
+                                if subelement == 'display_name'
+                                else data['owner'][subelement]
+                            )
                         except KeyError:
                             # Go to next subkey
                             continue

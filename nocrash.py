@@ -27,10 +27,7 @@ PY_EXECUTABLE = sys.executable
 
 # Log to errorLog.txt so that the file shows reboots
 logging_format_string = '%(asctime)s:%(levelname)s:%(message)s'
-logging.basicConfig(
-    filename='errorLog.txt',
-    level=logging.INFO,
-    format=logging_format_string)
+logging.basicConfig(filename='errorLog.txt', level=logging.INFO, format=logging_format_string)
 logging.Formatter.converter = gmtime
 # Also log to the console, so SD runners can look at consolidated output in the console.
 console_logger = logging.StreamHandler()
@@ -38,8 +35,14 @@ console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(logging.Formatter(logging_format_string))
 logging.getLogger().addHandler(console_logger)
 
-options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher", "no_edit_watcher",
-           "no_chat_ws_activity_timeout"}
+options = {
+    "standby",
+    "--loglevel",
+    "no_se_activity_scan",
+    "no_deletion_watcher",
+    "no_edit_watcher",
+    "no_chat_ws_activity_timeout",
+}
 persistent_arguments = sys.argv
 
 count = 0

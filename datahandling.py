@@ -166,9 +166,11 @@ def load_files():
             log("debug", "Loaded {} entries into ms_ajax_queue".format(len(metasmoke.Metasmoke.ms_ajax_queue)))
     if has_pickle("seSiteIds.p"):
         with GlobalVars.site_id_dict_lock:
-            (GlobalVars.site_id_dict_timestamp,
-             GlobalVars.site_id_dict_issues_into_chat_timestamp,
-             GlobalVars.site_id_dict) = load_pickle("seSiteIds.p", encoding='utf-8')
+            (
+                GlobalVars.site_id_dict_timestamp,
+                GlobalVars.site_id_dict_issues_into_chat_timestamp,
+                GlobalVars.site_id_dict,
+            ) = load_pickle("seSiteIds.p", encoding='utf-8')
             fill_site_id_dict_by_id_from_site_id_dict()
     if has_pickle("recentlyScannedPosts.p"):
         with GlobalVars.recently_scanned_posts_lock:
@@ -194,6 +196,7 @@ def filter_auto_ignored_posts():
 
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
+
 
 # noinspection PyMissingTypeHints
 def is_false_positive(postid_site_tuple):
@@ -269,8 +272,7 @@ def resolve_ms_link(post_url):
     identifier = (parsing.api_parameter_from_link(post_url), parsing.post_id_from_link(post_url))
     if identifier in GlobalVars.metasmoke_ids:
         if isinstance(GlobalVars.metasmoke_ids[identifier], int):
-            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
-                GlobalVars.metasmoke_ids[identifier])
+            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(GlobalVars.metasmoke_ids[identifier])
             return ms_url
         else:
             del GlobalVars.metasmoke_ids[identifier]
@@ -504,9 +506,10 @@ def fetch_lines_from_error_log(count):
     logs = ErrorLogs.fetch_last(count)
     s = '\n'.join([
         "### {2} on {0} at {1}Z: {3}\n{4}".format(
-            GlobalVars.location, datetime.utcfromtimestamp(time).isoformat()[:-7],
-            name, message, tb)
-        for time, name, message, tb in logs])
+            GlobalVars.location, datetime.utcfromtimestamp(time).isoformat()[:-7], name, message, tb
+        )
+        for time, name, message, tb in logs
+    ])
     if s:
         return redact_passwords(s)
     else:
@@ -522,11 +525,7 @@ def refresh_sites():
     page = 1
     url = get_se_api_url_for_route("sites")
     while has_more:
-        params = get_se_api_default_params({
-            'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
-            'page': page,
-            'pagesize': 500
-        })
+        params = get_se_api_default_params({'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI', 'page': page, 'pagesize': 500})
         response = requests.get(url, params=params, timeout=GlobalVars.default_requests_timeout)
 
         data = response.json()
@@ -564,6 +563,7 @@ def check_site_and_get_full_name(site):
 # notification_tuple = (int(user_id), chat_site, int(room_id), se_site, always_ping)
 # always_ping is used to indicate if the user should always be pinged, or only pinged
 # when they are present in the room.
+
 
 # noinspection PyMissingTypeHints
 def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=True):
@@ -641,9 +641,12 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
             except Exception:
                 # The user is probably deleted, or we're having communication problems with chat.
                 log_current_exception()
-                log('warn', 'ChatExchange failed to get user for a report notification. '
-                            'See Error log for more details. Tried client.host: '
-                            '{}:: user_id: {}:: chat_site: {}'.format(client.host, user_id, chat_site))
+                log(
+                    'warn',
+                    'ChatExchange failed to get user for a report notification. '
+                    'See Error log for more details. Tried client.host: '
+                    '{}:: user_id: {}:: chat_site: {}'.format(client.host, user_id, chat_site),
+                )
         else:
             non_always_ids.append(user_id)
 
@@ -665,8 +668,11 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
             # It should be noted that this *could* be caused by a discontinuity between room_id and
             # client.
             log_current_exception()
-            log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
-                        'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
+            log(
+                'warn',
+                'ChatExchange failed to get current users. See Error log for more details. Tried '
+                'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site),
+            )
             current_users = []
 
         for i in non_always_ids:
@@ -681,10 +687,11 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
 # noinspection PyMissingTypeHints
 def append_pings(original_message, names):
     if len(names) != 0:
-        new_message = u"{0} ({1})".format(original_message, " ".join("@" + x.replace(" ", "") for x in names))
+        new_message = "{0} ({1})".format(original_message, " ".join("@" + x.replace(" ", "") for x in names))
         if len(new_message) <= 500:
             return new_message
     return original_message
+
 
 # method to check if a post has been bumped by Community
 
@@ -699,6 +706,7 @@ def has_community_bumped_post(post_url, post_content):
     except (requests.exceptions.ConnectionError, ValueError):
         return False  # MS is down, so assume it is not bumped
 
+
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
 # (to avoid SmokeDetector's chat messages to be rate-limited too much)
 
@@ -707,8 +715,11 @@ def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
     user_id = str(user_id)
     for i in range(len(GlobalVars.multiple_reporters)):
         if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
-            GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0],
-                                                GlobalVars.multiple_reporters[i][1], time_integer)
+            GlobalVars.multiple_reporters[i] = (
+                GlobalVars.multiple_reporters[i][0],
+                GlobalVars.multiple_reporters[i][1],
+                time_integer,
+            )
             return 1
     GlobalVars.multiple_reporters.append((user_id, chat_host, time_integer))
 
@@ -745,12 +756,14 @@ class SmokeyTransfer:
     @classmethod
     def dump(cls):
         # Trust Python's GIL here
-        data = {'_metadata': {
-            'time': time.time(),
-            'location': GlobalVars.location,
-            'rev': GlobalVars.commit.id_full,
-            'lengths': {},  # can be used for validation
-        }}  # some metadata, in case they're useful
+        data = {
+            '_metadata': {
+                'time': time.time(),
+                'location': GlobalVars.location,
+                'rev': GlobalVars.commit.id_full,
+                'lengths': {},  # can be used for validation
+            }
+        }  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
             key, obj, attr, obj_type, _ = item_info
             item = getattr(obj, attr)
@@ -773,9 +786,8 @@ class SmokeyTransfer:
 
         chunk_size = 64  # The same value as GnuPG armored output
         s = "{}\n\n{}\n\n{}".format(
-            cls.HEADER,
-            '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
-            cls.ENDING)
+            cls.HEADER, '\n'.join([b64_s[i : i + chunk_size] for i in range(0, len(b64_s), chunk_size)]), cls.ENDING
+        )
         return s, data['_metadata']
 
     @classmethod
@@ -784,7 +796,7 @@ class SmokeyTransfer:
             # While it generates a blank line after the header and before the ending,
             # it should also accept data that does not contain the blank lines
             lbound, rbound = s.index(cls.HEADER + "\n"), s.rindex("\n" + cls.ENDING)
-            s = s[lbound + len(cls.HEADER):rbound].strip()
+            s = s[lbound + len(cls.HEADER) : rbound].strip()
         except ValueError:
             raise ValueError("Invalid data (invalid header or ending)")
         s = ''.join(s.split())  # Clear whitespaces
@@ -808,8 +820,11 @@ class SmokeyTransfer:
                 except TypeError:
                     length = None
                 if length != data['_metadata']['lengths'][key]:
-                    warnings.append("Length of {!r} mismatch (recorded {}, actual {})".format(
-                        key, data['_metadata']['lengths'][key], length))
+                    warnings.append(
+                        "Length of {!r} mismatch (recorded {}, actual {})".format(
+                            key, data['_metadata']['lengths'][key], length
+                        )
+                    )
                 setattr(obj, attr, item)
             if warnings:
                 raise Warning("Warning: " + ', '.join(warnings))
@@ -819,9 +834,11 @@ class SmokeyTransfer:
 
 def store_site_id_dict():
     with GlobalVars.site_id_dict_lock:
-        to_dump = (GlobalVars.site_id_dict_timestamp,
-                   GlobalVars.site_id_dict_issues_into_chat_timestamp,
-                   GlobalVars.site_id_dict.copy())
+        to_dump = (
+            GlobalVars.site_id_dict_timestamp,
+            GlobalVars.site_id_dict_issues_into_chat_timestamp,
+            GlobalVars.site_id_dict.copy(),
+        )
     dump_pickle("seSiteIds.p", to_dump)
 
 
@@ -830,8 +847,10 @@ def fill_site_id_dict_by_id_from_site_id_dict():
 
 
 def refresh_site_id_dict():
-    message = requests.get('https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites',
-                           timeout=GlobalVars.default_requests_timeout)
+    message = requests.get(
+        'https://meta.stackexchange.com/topbar/site-switcher/all-pinnable-sites',
+        timeout=GlobalVars.default_requests_timeout,
+    )
     data = json.loads(message.text)
     site_ids_dict = {entry['hostname']: entry['siteid'] for entry in data}
     if len(site_ids_dict) >= SE_SITE_IDS_MINIMUM_VALID_LENGTH:
@@ -860,14 +879,19 @@ def refresh_site_id_dict_if_needed_and_get_issues():
             # We ignore any problems with getting or refreshing the list of SE sites, as we handle it by
             # testing to see if we have valid data (i.e. SD doesn't need to fail for an exception here).
             log_current_exception()
-            issues.append("An exception occurred when trying to get the SE site ID list."
-                          " See the error log for details.")
+            issues.append(
+                "An exception occurred when trying to get the SE site ID list. See the error log for details."
+            )
         if is_se_site_id_list_length_valid():
             store_site_id_dict()
     if is_se_site_id_list_out_of_date():
         issues.insert(0, "The site ID list is more than a day old.")
     if not is_se_site_id_list_length_valid():
         with GlobalVars.site_id_dict_lock:
-            issues.insert(0, "The SE site ID list has "
-                             "{} entries, which isn't considered valid.".format(len(GlobalVars.site_id_dict)))
+            issues.insert(
+                0,
+                "The SE site ID list has {} entries, which isn't considered valid.".format(
+                    len(GlobalVars.site_id_dict)
+                ),
+            )
     return issues

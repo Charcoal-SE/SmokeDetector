@@ -144,11 +144,13 @@ def rmblu(user):
         if remove_blacklisted_user((uid, val)):
             return "The user has been removed from the user-blacklist (`{}` on `{}`).".format(uid, val)
         else:
-            return "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please " \
-                   "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]" \
-                   "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) " \
-                   "for more information about when users are added to or removed from the user-blacklist, which is" \
-                   "primarily done with `tpu` and `fp` feedback."
+            return (
+                "The user is not blacklisted. Perhaps they have already been removed from the blacklist. Please "
+                "see: [Blacklists, watchlists, and the user-whitelist: User-blacklist and user-whitelist]"
+                "(https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands#user-blacklist-and-user-whitelist) "
+                "for more information about when users are added to or removed from the user-blacklist, which is"
+                "primarily done with `tpu` and `fp` feedback."
+            )
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
@@ -224,10 +226,12 @@ def blacklist(_):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    raise CmdException("The `!!/blacklist` command has been deprecated. "
-                       "Please use `!!/blacklist-website`, `!!/blacklist-username`, "
-                       "`!!/blacklist-keyword`, or perhaps `!!/watch-keyword`. "
-                       "Remember to escape dots in URLs using \\.")
+    raise CmdException(
+        "The `!!/blacklist` command has been deprecated. "
+        "Please use `!!/blacklist-website`, `!!/blacklist-username`, "
+        "`!!/blacklist-keyword`, or perhaps `!!/watch-keyword`. "
+        "Remember to escape dots in URLs using \\."
+    )
 
 
 def minimally_validate_content_source(msg):
@@ -267,20 +271,48 @@ def get_pattern_from_content_source(msg):
 def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
-        question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                      'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                    'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+        question = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': 'Valid body',
+                'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                'site': "",
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
+        answer = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': 'Valid body',
+                'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                'site': "",
+                'IsAnswer': True,
+                'score': 0,
+            }
+        )
 
     else:
-        question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                    'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+        question = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': string_to_test,
+                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                'site': "",
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
+        answer = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': string_to_test,
+                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                'site': "",
+                'IsAnswer': True,
+                'score': 0,
+            }
+        )
 
     question_reasons, _ = findspam.FindSpam.test_post(question)
     answer_reasons, _ = findspam.FindSpam.test_post(answer)
@@ -289,8 +321,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    filter_out = ["potentially bad ns", "potentially bad asn", "potentially problematic",
-                  "potentially bad ip"]
+    filter_out = ["potentially bad ns", "potentially bad asn", "potentially problematic", "potentially bad ip"]
     if not is_watchlist:
         filter_out.append("potentially bad keyword")
     # Ignore "Mostly non-latin body/answer" for phone number watches
@@ -300,8 +331,15 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Filter out some reasons which commonly find the things added to the watch/blacklists
     # If these are detected, then the user should almost always -force. Showing them gets people too used
     # to just automatically using -force. Maybe a better UX strategy would be to have other reasons shown in bold.
-    filter_out.extend(["pattern-matching email", "pattern-matching website", "bad keyword with email",
-                       "bad ns for domain", "bad ip for hostname", "mostly punctuation marks", "mostly non-latin"])
+    filter_out.extend([
+        "pattern-matching email",
+        "pattern-matching website",
+        "bad keyword with email",
+        "bad ns for domain",
+        "bad ip for hostname",
+        "mostly punctuation marks",
+        "mostly non-latin",
+    ])
     if filter_out:
         reasons = [reason for reason in reasons if all([x not in reason.lower() for x in filter_out])]
 
@@ -334,7 +372,7 @@ def sub_to_unchanged(reg_exp, replace, text, max_passes=10, count=0, flags=0):
     """
     prev_text = ""
     max_passes = max_passes + 1 if max_passes else max_passes
-    while (text and text != prev_text and max_passes != 1):
+    while text and text != prev_text and max_passes != 1:
         prev_text = text
         text = regex.sub(reg_exp, replace, text, count=count, flags=flags)
         max_passes -= 1
@@ -369,8 +407,9 @@ def get_test_text_from_regex(pattern):
     # Remove lookarounds.
     pattern = sub_to_unchanged(r"\(\?<?[!=](?:[^\(\)]|(?<=\\)[()])*\)", "", pattern)
     # Remove () and (?:) from non-optional groupings
-    pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))((?:[^\(\)]|(?<=\\)[()])*)\)(?![*?][+?]?|\{0?,\d+\}[+?]?)",
-                               r"\1", pattern)
+    pattern = sub_to_unchanged(
+        r"\((?:\?:|(?!\?))((?:[^\(\)]|(?<=\\)[()])*)\)(?![*?][+?]?|\{0?,\d+\}[+?]?)", r"\1", pattern
+    )
     # Remove optional groups (still want to test this text)
     # pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))(?:[^\(\)]|(?<=\\)[()])*\)(?:[*?][+?]?|\{0?,\d+\}[+?]?)",
     #                            "", pattern)
@@ -402,15 +441,17 @@ def do_blacklist(blacklist_type, msg, force=False):
     """
 
     def get_normalized_on_list(list_type, extra=''):
-        return 'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped) + \
-               ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra) + \
-               ' `!!/bisect-number {}`'.format(pattern) + \
-               ' to determine which entries on the number lists match that pattern, which' + \
-               ' would tell you: ' + get_number_bisect(msg, pattern)
+        return (
+            'A normalized version, `{}`, of that pattern'.format(normalized_format_escaped)
+            + ' is already on the number {}list{extra}. You can use'.format(list_type, extra=extra)
+            + ' `!!/bisect-number {}`'.format(pattern)
+            + ' to determine which entries on the number lists match that pattern, which'
+            + ' would tell you: '
+            + get_number_bisect(msg, pattern)
+        )
 
     minimally_validate_content_source(msg)
-    chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
-                                                                     id=msg.owner.id)
+    chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host, id=msg.owner.id)
     append_force_to_do = " Append `-force` to the command word(s) if you really want to add the pattern you provided."
 
     pattern = get_pattern_from_content_source(msg)
@@ -427,9 +468,11 @@ def do_blacklist(blacklist_type, msg, force=False):
         other_issues.append("The pattern starts with whitespace.")
 
     if regex.search(r"blogspot\\.", pattern):
-        other_issues.append("The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
-                            " [For Blogspot, we prefer the TLD to not be included in"
-                            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731).")
+        other_issues.append(
+            "The pattern is for a blogspot domain, but keeps the top level domain (TLD; e.g. `.com`)."
+            " [For Blogspot, we prefer the TLD to not be included in"
+            " watchlist/blacklist entries](//chat.stackexchange.com/transcript/message/61694731)."
+        )
 
     without_comments = remove_regex_comments(pattern)
     if "number" not in blacklist_type:
@@ -444,12 +487,15 @@ def do_blacklist(blacklist_type, msg, force=False):
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
-            raise CmdException("That pattern is probably too broad, refusing to commit." +
-                               " If you really want to add this pattern, you will need to manually submit a PR.")
+            raise CmdException(
+                "That pattern is probably too broad, refusing to commit."
+                + " If you really want to add this pattern, you will need to manually submit a PR."
+            )
     else:
         # When it's a blacklist command, blacklist_type only provides the type of blacklist, not the full command.
-        blacklist_command = 'blacklist-' + blacklist_type if not is_watchlist \
-            and 'blacklist' not in blacklist_type else blacklist_type
+        blacklist_command = (
+            'blacklist-' + blacklist_type if not is_watchlist and 'blacklist' not in blacklist_type else blacklist_type
+        )
         blacklist_command = blacklist_command.replace("_", "-")
         exact_match_text = 'In order for a "number" to make an exact match, the pattern must '
         without_comments, comments = phone_numbers.split_processed_and_comments(pattern)
@@ -461,22 +507,30 @@ def do_blacklist(blacklist_type, msg, force=False):
         normalized_deobfuscated = phone_numbers.normalize(deobfuscated_processed)
         pattern_matches_number_regex = phone_numbers.matches_number_regex(without_comments)
         deobfuscated_matches_number_regex = phone_numbers.matches_number_regex(deobfuscated_processed)
-        digit_between_text = "between {} and {} digits".format(phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS,
-                                                               phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS)
-        number_regex_requires = "Patterns for the number" + \
-                                " detections must match the `NUMBER_REGEX` in phone_numbers.py, at least" + \
-                                " when deobfuscated. In order to do so," + \
-                                " it needs to have " + digit_between_text + " and not include" + \
-                                " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)." + \
-                                " Generally, you should watch/blacklist the non-obfuscated version of the number."
+        digit_between_text = "between {} and {} digits".format(
+            phone_numbers.NUMBER_REGEX_MINIMUM_DIGITS, phone_numbers.NUMBER_REGEX_MAXIMUM_DIGITS
+        )
+        number_regex_requires = (
+            "Patterns for the number"
+            + " detections must match the `NUMBER_REGEX` in phone_numbers.py, at least"
+            + " when deobfuscated. In order to do so,"
+            + " it needs to have "
+            + digit_between_text
+            + " and not include"
+            + " more than one consecutive alpha character (i.e. matching `[A-Za-z]`)."
+            + " Generally, you should watch/blacklist the non-obfuscated version of the number."
+        )
         if not pattern_matches_number_regex and not deobfuscated_matches_number_regex:
             digit_count = len(regex.findall(r'\d', pattern))
             digit_count_text = ""
             if not phone_numbers.is_digit_count_in_number_regex_range(digit_count):
-                digit_count_text = " The supplied pattern contains" + \
-                                   " {} digits, which doesn't meet the requirements.".format(digit_count)
-            raise CmdExceptionLongReply("That pattern can't be detected by the number detections. " +
-                                        number_regex_requires + digit_count_text)
+                digit_count_text = (
+                    " The supplied pattern contains"
+                    + " {} digits, which doesn't meet the requirements.".format(digit_count)
+                )
+            raise CmdExceptionLongReply(
+                "That pattern can't be detected by the number detections. " + number_regex_requires + digit_count_text
+            )
         normalized_format_escaped = str(normalized).replace('{', '{{').replace('}', '}}')
         if normalized & GlobalVars.blacklisted_numbers_normalized:
             raise CmdExceptionLongReply(get_normalized_on_list('black', extra=''))
@@ -490,45 +544,60 @@ def do_blacklist(blacklist_type, msg, force=False):
             if is_watchlist:
                 raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=''))
             elif pattern not in GlobalVars.watched_numbers_full:
-                extra_blacklisting_non_exact_match = ' and the pattern you provided is not an exact match' + \
-                                                     ' to an existing entry on the number watchlist'
+                extra_blacklisting_non_exact_match = (
+                    ' and the pattern you provided is not an exact match'
+                    + ' to an existing entry on the number watchlist'
+                )
                 raise CmdExceptionLongReply(get_normalized_on_list('watch', extra=extra_blacklisting_non_exact_match))
-        force_is_north_american, force_no_north_american = \
-            phone_numbers.get_north_american_forced_or_no_from_pattern(pattern)
-        unused_maybe_north_american_norm = \
-            phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(processed, normalized)
+        force_is_north_american, force_no_north_american = phone_numbers.get_north_american_forced_or_no_from_pattern(
+            pattern
+        )
+        unused_maybe_north_american_norm = phone_numbers.get_maybe_north_american_not_in_normalized_but_in_all(
+            processed, normalized
+        )
         north_american_alt = phone_numbers.get_north_american_alternate_normalized(normalized_deobfuscated, force=True)
         maybe_north_american_norm = north_american_alt[2]
         if deobfuscated_processed != processed:
-            other_issues.append("That pattern appears to be homoglyph obfuscated. It's better to" +
-                                " use the non-obfuscated number. Perhaps try: " +
-                                "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed))
-        formatted_north_american = \
-            phone_numbers.get_north_american_with_separators_from_normalized(normalized_deobfuscated)
-        north_american_formatting = "use a format which starts with an optional `1` followed by" + \
-                                    " possible separator text and has the main" + \
-                                    " number in the format `{}`".format(formatted_north_american[-12:]) + \
-                                    " where `-` could be a single alpha character" + \
-                                    " or any `[\\W_]*+`. Alternately, you can add the comment `(?#IS NorAm)` to the" + \
-                                    " end of the pattern to force also using the alternate normalized form, or" + \
-                                    " `(?#NO NorAm)` if it's not a North American phone number and it's" + \
-                                    " incorrectly recognized as one." + \
-                                    " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
+            other_issues.append(
+                "That pattern appears to be homoglyph obfuscated. It's better to"
+                + " use the non-obfuscated number. Perhaps try: "
+                + "`!!/{} {}`.".format(blacklist_command, deobfuscated_processed)
+            )
+        formatted_north_american = phone_numbers.get_north_american_with_separators_from_normalized(
+            normalized_deobfuscated
+        )
+        north_american_formatting = (
+            "use a format which starts with an optional `1` followed by"
+            + " possible separator text and has the main"
+            + " number in the format `{}`".format(formatted_north_american[-12:])
+            + " where `-` could be a single alpha character"
+            + " or any `[\\W_]*+`. Alternately, you can add the comment `(?#IS NorAm)` to the"
+            + " end of the pattern to force also using the alternate normalized form, or"
+            + " `(?#NO NorAm)` if it's not a North American phone number and it's"
+            + " incorrectly recognized as one."
+            + " Perhaps try \n`!!/{} {}`.\n".format(blacklist_command, formatted_north_american)
+        )
         if not force_no_north_american and unused_maybe_north_american_norm:
-            other_issues.append("That pattern may be a North American number. If it is, please " +
-                                north_american_formatting)
-        unused_na_on_list = 'That pattern may be a North American number and the alternate normalized verison' + \
-                            ' is already on the {}list. This indicates a potential conflict. Ideally, there should' + \
-                            ' be one entry which is automatically used normalized both with and without a "1". The' + \
-                            ' version which is already in use is: `{}`, but it\'s not automatically recognized as' + \
-                            ' a North American number.'
+            other_issues.append(
+                "That pattern may be a North American number. If it is, please " + north_american_formatting
+            )
+        unused_na_on_list = (
+            'That pattern may be a North American number and the alternate normalized verison'
+            + ' is already on the {}list. This indicates a potential conflict. Ideally, there should'
+            + ' be one entry which is automatically used normalized both with and without a "1". The'
+            + ' version which is already in use is: `{}`, but it\'s not automatically recognized as'
+            + ' a North American number.'
+        )
         if unused_maybe_north_american_norm in GlobalVars.blacklisted_numbers_normalized:
             other_issues.append(unused_na_on_list.format("black", unused_maybe_north_american_norm))
         if unused_maybe_north_american_norm in GlobalVars.watched_numbers_normalized:
             other_issues.append(unused_na_on_list.format("watch", unused_maybe_north_american_norm))
         if not phone_numbers.matches_number_regex_start(without_comments):
-            other_issues.append(exact_match_text + 'begin with a digit' +
-                                ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.')
+            other_issues.append(
+                exact_match_text
+                + 'begin with a digit'
+                + ' or up to two of `+`,`(`,`[`, or `{` immediately followed by a digit.'
+            )
         if not phone_numbers.matches_number_regex_end(without_comments):
             other_issues.append(exact_match_text + 'end with a digit.')
 
@@ -538,8 +607,9 @@ def do_blacklist(blacklist_type, msg, force=False):
         other_issues_text = other_issues_text.replace('\n\n', '\n')
 
     if not force:
-        if "number" in blacklist_type or \
-                regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
+        if "number" in blacklist_type or regex.match(
+            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern
+        ):
             is_phone = True
         else:
             is_phone = False
@@ -548,10 +618,15 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         for username in False, True:
             reasons = check_blacklist(
-                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
+                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone
+            )
             if reasons:
-                raise CmdExceptionLongReply("That pattern looks like it's already caught by " +
-                                            format_blacklist_reasons(reasons) + other_issues_text + append_force_to_do)
+                raise CmdExceptionLongReply(
+                    "That pattern looks like it's already caught by "
+                    + format_blacklist_reasons(reasons)
+                    + other_issues_text
+                    + append_force_to_do
+                )
 
         if other_issues_text:
             raise CmdExceptionLongReply(other_issues_text + append_force_to_do)
@@ -572,7 +647,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         code_permissions=code_permissions,
         metasmoke_down=metasmoke_down,
         before_pattern=text_before_pattern,
-        after_pattern=text_after_pattern
+        after_pattern=text_after_pattern,
     )
 
     if not _status:
@@ -593,31 +668,45 @@ def do_blacklist(blacklist_type, msg, force=False):
                 return None
             except Exception:
                 pass
-        additional_state = (" However, the blacklists were not reloaded at this time. The most likely issue"
-                            " is another change was made on SD's master branch on GitHub and everything"
-                            " is waiting for CI to pass and MS to update the deploy branch.")
+        additional_state = (
+            " However, the blacklists were not reloaded at this time. The most likely issue"
+            " is another change was made on SD's master branch on GitHub and everything"
+            " is waiting for CI to pass and MS to update the deploy branch."
+        )
         if GlobalVars.MSStatus.is_down():
-            additional_state += (" But, metasmoke is currently down, so that won't happen. Someone with write"
-                                 " permission to SD's GitHub reository will need to manually update the deploy"
-                                 " branch. Usually, this means you should ping an MS admin.")
+            additional_state += (
+                " But, metasmoke is currently down, so that won't happen. Someone with write"
+                " permission to SD's GitHub reository will need to manually update the deploy"
+                " branch. Usually, this means you should ping an MS admin."
+            )
         else:
-            additional_state += (" That could take a few to several minutes. If SD doesn't automatically reload"
-                                 " the blacklists or automatically reboot after that time, then someone should"
-                                 " investigate why that hasn't happened.")
+            additional_state += (
+                " That could take a few to several minutes. If SD doesn't automatically reload"
+                " the blacklists or automatically reboot after that time, then someone should"
+                " investigate why that hasn't happened."
+            )
         return result + additional_state
     else:
         return result
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
-                                                                        "blacklist-website",
-                                                                        "blacklist-username",
-                                                                        "blacklist-number",
-                                                                        "blacklist-keyword-force",
-                                                                        "blacklist-website-force",
-                                                                        "blacklist-username-force",
-                                                                        "blacklist-number-force"])
+@command(
+    str,
+    whole_msg=True,
+    privileged=True,
+    give_name=True,
+    aliases=[
+        "blacklist-keyword",
+        "blacklist-website",
+        "blacklist-username",
+        "blacklist-number",
+        "blacklist-keyword-force",
+        "blacklist-website-force",
+        "blacklist-username-force",
+        "blacklist-number-force",
+    ],
+)
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a pattern to the blacklist and commits/pushes to GitHub
@@ -631,9 +720,13 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True,
-         aliases=["watch-keyword", "watch-force", "watch-keyword-force",
-                  "watch-number", "watch-number-force"])
+@command(
+    str,
+    whole_msg=True,
+    privileged=True,
+    give_name=True,
+    aliases=["watch-keyword", "watch-force", "watch-keyword-force", "watch-number", "watch-number-force"],
+)
 def watch(msg, pattern, alias_used="watch"):
     """
     Adds a pattern to the watched keywords list and commits/pushes to GitHub
@@ -642,8 +735,9 @@ def watch(msg, pattern, alias_used="watch"):
     :return: A string
     """
 
-    return do_blacklist("watch_number" if "number" in alias_used else "watch_keyword",
-                        msg, force=alias_used.split("-")[-1] == "force")
+    return do_blacklist(
+        "watch_number" if "number" in alias_used else "watch_keyword", msg, force=alias_used.split("-")[-1] == "force"
+    )
 
 
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
@@ -672,8 +766,8 @@ def unblacklist(msg, item, alias_used="unwatch"):
 
     pattern = get_pattern_from_content_source(msg)
     _status, result = GitManager.remove_from_blacklist(
-        rebuild_str(pattern), msg.owner.name, blacklist_type,
-        code_privileged=code_privs, metasmoke_down=metasmoke_down)
+        rebuild_str(pattern), msg.owner.name, blacklist_type, code_privileged=code_privs, metasmoke_down=metasmoke_down
+    )
 
     if not _status:
         raise CmdException(result)
@@ -704,12 +798,15 @@ def approve(msg, pr_id):
     # Forward this, because checks are better placed in gitmanager.py
     try:
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-        chat_user_profile_link = "https://chat.{}/users/{}".format(
-            msg._client.host, msg.owner.id)
+        chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
         comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
-            message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
+            message_url,
+            msg.owner.name,
+            chat_user_profile_link,
+            msg.room.name,
             # The image of (blacklisters|approved) from Shields.io
-            "https://img.shields.io/badge/blacklisters-approved-green")
+            "https://img.shields.io/badge/blacklisters-approved-green",
+        )
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
@@ -752,25 +849,27 @@ def reject(msg, args, alias_used="reject"):
     try:
         pr_json = GitHubManager.get_pull_request(pr_id).json()
         if 'body' in pr_json:
-            pr_authored_by_rejector = regex.search(r"(?<=/users/)" + str(msg.owner.id),
-                                                   pr_json['body'])
+            pr_authored_by_rejector = regex.search(r"(?<=/users/)" + str(msg.owner.id), pr_json['body'])
             self_reject = pr_authored_by_rejector is not None
     except Exception as e:
         raise CmdException(str(e))
     if not code_permissions and not self_reject:
-        raise CmdException("You need blacklist manager privileges to reject pull requests "
-                           "that aren't created by you.")
+        raise CmdException("You need blacklist manager privileges to reject pull requests that aren't created by you.")
     if len(reason) < 20 and not force:
-        raise CmdException("Please provide an adequate reason for rejection that is at least"
-                           " 20 characters long. Use `-force` to ignore this requirement.")
+        raise CmdException(
+            "Please provide an adequate reason for rejection that is at least"
+            " 20 characters long. Use `-force` to ignore this requirement."
+        )
     rejected_image = "https://img.shields.io/badge/blacklisters-rejected-red"
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
     chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
-    rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                  chat_user_profile_link, msg.room.name)
+    rejected_by_text = "[Rejected]({}) by [{}]({}) in {}.".format(
+        message_url, msg.owner.name, chat_user_profile_link, msg.room.name
+    )
     if self_reject:
-        rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(message_url, msg.owner.name,
-                                                                           chat_user_profile_link, msg.room.name)
+        rejected_by_text = "[Self-rejected]({}) by [{}]({}) in {}.".format(
+            message_url, msg.owner.name, chat_user_profile_link, msg.room.name
+        )
     reject_reason_text = " No rejection reason was provided.\n\n"
     if reason:
         reject_reason_text = " Reason: '{}'".format(reason)
@@ -787,8 +886,9 @@ def reject(msg, args, alias_used="reject"):
 
 @command(privileged=True, aliases=["remote-diff"])
 def remotediff():
-    will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
-                                "{}".format(str(not only_blacklists_changed(GitManager.get_remote_diff())))
+    will_require_full_restart = "SmokeDetector will require a full restart to pull changes: {}".format(
+        str(not only_blacklists_changed(GitManager.get_remote_diff()))
+    )
 
     return "{}\n\n{}".format(GitManager.get_remote_diff(), will_require_full_restart)
 
@@ -799,23 +899,26 @@ def blame(msg):
     unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
 
     return "It's [{}](https://chat.{}/users/{})'s fault.".format(
-        unlucky_victim.name, msg._client.host, unlucky_victim.id)
+        unlucky_victim.name, msg._client.host, unlucky_victim.id
+    )
 
 
-@command(str, whole_msg=True, aliases=["blame\u180E"])
+@command(str, whole_msg=True, aliases=["blame\u180e"])
 def blame2(msg, x):
-    base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
+    base = {"\u180e": 0, "\u200b": 1, "\u200c": 2, "\u200d": 3, "\u2060": 4, "\u2063": 5, "\ufeff": 6}
     try:
-        user = sum([(len(base)**i) * base[char] for i, char in enumerate(reversed(x))])
+        user = sum([(len(base) ** i) * base[char] for i, char in enumerate(reversed(x))])
 
         unlucky_victim = msg._client.get_user(user)
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(
-            unlucky_victim.name, msg._client.host, unlucky_victim.id)
+            unlucky_victim.name, msg._client.host, unlucky_victim.id
+        )
 
     except (KeyError, requests.exceptions.HTTPError):
         unlucky_victim = msg.owner
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(
-            unlucky_victim.name, msg._client.host, unlucky_victim.id)
+            unlucky_victim.name, msg._client.host, unlucky_victim.id
+        )
 
 
 # noinspection PyIncorrectDocstring
@@ -958,9 +1061,16 @@ def unblock(msg, room_id):
 
 # --- Administration Commands --- #
 ALIVE_MSG = [
-    'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
-    'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
-    'You should totally drop that and use jQuery', r'¯\\_(ツ)\_/¯', '... good question',
+    'Yup',
+    'You doubt me?',
+    'Of course',
+    '... did I miss something?',
+    'plz send teh coffee',
+    'Watching this endless list of new questions *never* gets boring',
+    'Kinda sorta',
+    'You should totally drop that and use jQuery',
+    r'¯\\_(ツ)\_/¯',
+    '... good question',
 ]
 
 
@@ -989,10 +1099,12 @@ def errorlogs(count):
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
-                                                                       id=GlobalVars.location),
-            "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
-                                                                         id=GlobalVars.location),
+            "metasmoke is up. Current failure count: {} ({id})".format(
+                GlobalVars.MSStatus.get_failure_count(), id=GlobalVars.location
+            ),
+            "metasmoke is down. Current failure count: {} ({id})".format(
+                GlobalVars.MSStatus.get_failure_count(), id=GlobalVars.location
+            ),
         ]
         if GlobalVars.MSStatus.is_up():
             # True = 1 and False = 0 is a legacy feature
@@ -1013,15 +1125,22 @@ def metasmoke(msg, alias_used):
         Metasmoke.set_ms_up()
     else:
         Metasmoke.set_ms_down()
-    return "Metasmoke status is now: **{}**;".format("up" if to_up else "down") +\
-           " Auto status switch: **{}abled**.".format("dis" if forced else "en")
+    return "Metasmoke status is now: **{}**;".format(
+        "up" if to_up else "down"
+    ) + " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
-@command(str, str, str, give_name=True, arity=(0, 3), privileged=True, aliases=["stats", "scan-stat", "statistics",
-                                                                                "stats-force", "scan-stat-force",
-                                                                                "statistics-force", "stat-force"])
+@command(
+    str,
+    str,
+    str,
+    give_name=True,
+    arity=(0, 3),
+    privileged=True,
+    aliases=["stats", "scan-stat", "statistics", "stats-force", "scan-stat-force", "statistics-force", "stat-force"],
+)
 def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
-    """ Return post scan statistics. """
+    """Return post scan statistics."""
     # As of Python 3.6+, dicts are iterated in insertion order.
     report_order_with_defaults = {
         'posts_scanned': 0,
@@ -1068,8 +1187,9 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
     ]
     from_stats = '' if from_stats is None else from_stats
     to_stats = '' if to_stats is None else to_stats
-    problem_text = 'The options you supplied ("{}", "{}", "{}") were not understood.'.format(operation, from_stats,
-                                                                                             to_stats)
+    problem_text = 'The options you supplied ("{}", "{}", "{}") were not understood.'.format(
+        operation, from_stats, to_stats
+    )
     if operation not in known_operations:
         if from_stats or to_stats:
             return problem_text
@@ -1078,9 +1198,11 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         else:
             from_stats = 'uptime'
         operation = 'get'
-    not_permitted_text = ('The operation you requested,'
-                          ' {}, is not permitted on the stats you specified: {}, {}').format(operation, from_stats,
-                                                                                             to_stats).rstrip(' ,')
+    not_permitted_text = (
+        ('The operation you requested, {}, is not permitted on the stats you specified: {}, {}')
+        .format(operation, from_stats, to_stats)
+        .rstrip(' ,')
+    )
     response_from_stats_only = 'The {} operation succeeded on {}.'.format(operation, from_stats)
     response = ''
     error_text = ''
@@ -1093,8 +1215,9 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
             already_exists = from_stats in GlobalVars.PostScanStat.get_set_keys()
             if operation in ['create'] and already_exists and not is_forced:
                 error_text = 'The {} stats set already exists.'.format(from_stats)
-            elif ((operation in ['clear', 'delete', 'reset'] and not already_exists and not is_forced)
-                    or (operation in ['lock', 'unlock'] and not already_exists)):
+            elif (operation in ['clear', 'delete', 'reset'] and not already_exists and not is_forced) or (
+                operation in ['lock', 'unlock'] and not already_exists
+            ):
                 error_text = "The {} stats set doesn't exist.".format(from_stats)
             if operation in ['clear', 'create', 'reset']:
                 operation = 'reset'
@@ -1118,12 +1241,15 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         if site_post:
             site, _, post_id = site_post.partition('/')
             stats['max_scan_time_post'] = '[{}](//{}/q/{})'.format(site_post, site, post_id)
-        posts_questions_answers_scanned = tuple(stats.pop(key + '_scanned', 0) for key in ['posts', 'questions',
-                                                                                           'answers'])
+        posts_questions_answers_scanned = tuple(
+            stats.pop(key + '_scanned', 0) for key in ['posts', 'questions', 'answers']
+        )
         stats['posts_scanned'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scanned)
-        posts_questions_answers_scantime = (round(stats.pop('scan_time', 0), 2),
-                                            round(stats.pop('scan_question', 0), 2),
-                                            round(stats.pop('scan_answer', 0), 2))
+        posts_questions_answers_scantime = (
+            round(stats.pop('scan_time', 0), 2),
+            round(stats.pop('scan_question', 0), 2),
+            round(stats.pop('scan_answer', 0), 2),
+        )
         stats['scan_time'] = '{}, Q({}), A({})'.format(*posts_questions_answers_scantime)
         q_and_a_unchanged = tuple(stats.pop('unchanged_' + key, 0) for key in ['questions', 'answers'])
         stats['unchanged_posts'] = '{}, Q({}), A({})'.format(sum(q_and_a_unchanged), *q_and_a_unchanged)
@@ -1131,12 +1257,13 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
         limited_threads = sum(threads_limited_so_non_so)
         total_threads = stats.pop('thread_count', 0)
         api_calls = stats.pop('api_calls', 0)
-        stats['threads'] = ('{}, API({}), 155QA({})'
-                            ', EW({}), BFrr({})').format(total_threads,
-                                                         api_calls,
-                                                         stats.pop('source_155-questions-active', 0),
-                                                         stats.pop('source_EditWatcher', 0),
-                                                         stats.pop('source_BF_re-reqest', 0))
+        stats['threads'] = ('{}, API({}), 155QA({}), EW({}), BFrr({})').format(
+            total_threads,
+            api_calls,
+            stats.pop('source_155-questions-active', 0),
+            stats.pop('source_EditWatcher', 0),
+            stats.pop('source_BF_re-reqest', 0),
+        )
         stats['site_limited'] = '{}, SO({}), nonSO({})'.format(limited_threads, *threads_limited_so_non_so)
         # Round all the floats to 2 digits after the decimal point
         for key, value in stats.items():
@@ -1150,13 +1277,16 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
             stats['locked'] = locked_timestamp.isoformat()
         # For the stats we have a defined order; use that order.
         # We're not using .capitalize() on the entire key, so any internal capitalization is preserved.
-        messages = ['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), stats.get(key, default_value))
-                    for key, default_value in report_order_with_defaults.items()]
+        messages = [
+            '{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), stats.get(key, default_value))
+            for key, default_value in report_order_with_defaults.items()
+        ]
         for key in report_order_with_defaults.keys():
             stats.pop(key, None)
         # Add any additional stats we don't have in report_order_with_defaults
-        messages.extend(['{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), value)
-                         for key, value in stats.items()])
+        messages.extend([
+            '{}: {}'.format(key[0].capitalize() + key[1:].replace('_', ' '), value) for key, value in stats.items()
+        ])
 
         return '"{}" stats: '.format(from_stats) + '; '.join(messages)
     else:
@@ -1170,7 +1300,7 @@ def stat(operation, from_stats=None, to_stats=None, alias_used="stats"):
 
 @command(aliases=["counter", "internal-counter", "ping-failure"])
 def ping_failure_counter():
-    """ Return ping failure counter value of Metasmoke: AutoSwitch. """
+    """Return ping failure counter value of Metasmoke: AutoSwitch."""
     counter = Metasmoke.AutoSwitch.get_ping_failure()
     return "Current ping failure counter value: {}".format(counter)
 
@@ -1182,10 +1312,11 @@ def info():
     Returns the help text
     :return: A string
     """
-    return "I'm " + GlobalVars.chatmessage_prefix +\
-           ", a bot that detects spam and offensive posts on the network and"\
-           " posts alerts to chat."\
-           " [A command list is available here](https://t.ly/zP_E)."
+    return (
+        "I'm " + GlobalVars.chatmessage_prefix + ", a bot that detects spam and offensive posts on the network and"
+        " posts alerts to chat."
+        " [A command list is available here](https://t.ly/zP_E)."
+    )
 
 
 # noinspection PyIncorrectDocstring
@@ -1197,9 +1328,11 @@ def welcome(msg, other_user):
     :param other_user:
     :return: A string
     """
-    w_msg = ("Welcome to {room}{user}! I'm {me}, a bot that detects spam and offensive posts on the network, "
-             "and posts alerts to chat. You can find more about me on the "
-             "[Charcoal website](https://charcoal-se.org/).")
+    w_msg = (
+        "Welcome to {room}{user}! I'm {me}, a bot that detects spam and offensive posts on the network, "
+        "and posts alerts to chat. You can find more about me on the "
+        "[Charcoal website](https://charcoal-se.org/)."
+    )
     if other_user is None:
         raise CmdException(w_msg.format(room=msg.room.name, user="", me=GlobalVars.chatmessage_prefix))
     else:
@@ -1232,12 +1365,15 @@ def pull(alias_used='pull'):
         tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
         return
 
-    request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
-        GlobalVars.bot_repo_slug), timeout=GlobalVars.default_requests_timeout)
+    request = requests.get(
+        'https://api.github.com/repos/{}/git/refs/heads/deploy'.format(GlobalVars.bot_repo_slug),
+        timeout=GlobalVars.default_requests_timeout,
+    )
     latest_sha = request.json()["object"]["sha"]
     request = requests.get(
         'https://api.github.com/repos/{}/commits/{}/statuses'.format(GlobalVars.bot_repo_slug, latest_sha),
-        timeout=GlobalVars.default_requests_timeout)
+        timeout=GlobalVars.default_requests_timeout,
+    )
     states = []
     for ci_status in request.json():
         state = ci_status["state"]
@@ -1273,10 +1409,12 @@ def sync_remote(msg, alias_used='pull-sync'):
     return GitManager.sync_remote()[1]
 
 
-@command(whole_msg=True, privileged=True, give_name=True, aliases=['pull-sync-hard',
-                                                                   'pull-sync-hard-force',
-                                                                   'pull-sync-hard-reboot',
-                                                                   'pull-sync-hard-reboot-force'])
+@command(
+    whole_msg=True,
+    privileged=True,
+    give_name=True,
+    aliases=['pull-sync-hard', 'pull-sync-hard-force', 'pull-sync-hard-reboot', 'pull-sync-hard-reboot-force'],
+)
 def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     """
     Force a branch sync from origin/master and origin/deploy
@@ -1297,9 +1435,9 @@ def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     return git_response + " You'll probably want to !!/reboot now."
 
 
-@command(privileged=True, give_name=True, aliases=[
-    "gitstatus", "git-status", "git-help", "git-merge-abort", "git-reset"
-])
+@command(
+    privileged=True, give_name=True, aliases=["gitstatus", "git-status", "git-help", "git-merge-abort", "git-reset"]
+)
 def git(alias_used="git"):
     if alias_used == "git":
         raise CmdException("Bad alias. Try another command")
@@ -1324,8 +1462,9 @@ def reboot(msg, alias_used="reboot"):
     :return: None
     """
     if alias_used in {"reboot", "restart"}:
-        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
-                   ("debug", (msg._client.host, msg.room.id)), ())
+        tell_rooms(
+            "{}: Goodbye, cruel world".format(GlobalVars.location), ("debug", (msg._client.host, msg.room.id)), ()
+        )
         time.sleep(3)
         exit_mode("reboot")
     elif False and alias_used in {"reload"}:
@@ -1426,8 +1565,7 @@ def stappit(msg, location_search):
     :return: None
     """
     if location_search is None or location_search.lower() in GlobalVars.location.lower():
-        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
-                   ((msg._client.host, msg.room.id)), ())
+        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location), ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
         exit_mode("shutdown", code=6)
@@ -1442,7 +1580,7 @@ def td_format(td_object):
         ('day', 60 * 60 * 24),
         ('hour', 60 * 60),
         ('minute', 60),
-        ('second', 1)
+        ('second', 1),
     ]
 
     strings = []
@@ -1493,17 +1631,34 @@ def standby(msg, location_search, alias_used="standby"):
 
     # Use `!=` as Logical XOR
     if match != reverse_search:
-        tell_rooms("{location} is switching to standby".format(location=GlobalVars.location),
-                   ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
+        tell_rooms(
+            "{location} is switching to standby".format(location=GlobalVars.location),
+            ("debug", (msg._client.host, msg.room.id)),
+            (),
+            notify_site="/standby",
+        )
 
         time.sleep(3)
         exit_mode("standby", code=7)
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-question", "test-a", "test-answer", "test-u", "test-user",
-                       "test-t", "test-title", "test-j", "test-json"],
-         give_name=True)
+@command(
+    str,
+    aliases=[
+        "test-q",
+        "test-question",
+        "test-a",
+        "test-answer",
+        "test-u",
+        "test-user",
+        "test-t",
+        "test-title",
+        "test-j",
+        "test-json",
+    ],
+    give_name=True,
+)
 def test(content, alias_used="test"):
     """
     Test content provided in chat to determine if it'd be automatically reported
@@ -1525,24 +1680,52 @@ def test(content, alias_used="test"):
 
     if alias_used in ["test-q", "test-question"]:
         kind = "a question"
-        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': site, 'IsAnswer': False, 'score': 0})
+        fakepost = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': content,
+                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                'site': site,
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
     elif alias_used in ["test-a", "test-answer"]:
         kind = "an answer"
-        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': site, 'IsAnswer': True, 'score': 0})
+        fakepost = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': content,
+                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                'site': site,
+                'IsAnswer': True,
+                'score': 0,
+            }
+        )
     elif alias_used in ["test-u", "test-user"]:
         kind = "a username"
-        fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
-                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': site, 'IsAnswer': False, 'score': 0})
+        fakepost = Post(
+            api_response={
+                'title': 'Valid title',
+                'body': "Valid question body",
+                'owner': {'display_name': content, 'reputation': 1, 'link': ''},
+                'site': site,
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
     elif alias_used in ["test-t", "test-title"]:
         kind = "a title"
-        fakepost = Post(api_response={'title': content, 'body': "Valid question body",
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': site, 'IsAnswer': False, 'score': 0})
+        fakepost = Post(
+            api_response={
+                'title': content,
+                'body': "Valid question body",
+                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                'site': site,
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
     elif alias_used in ["test-j", "test-json"]:
         # Only load legit json object
         try:
@@ -1553,19 +1736,29 @@ def test(content, alias_used="test"):
             raise CmdException("Only accepts a json object as input")
         # List of valid keys and their corresponding classes
         valid_keys = [
-            ('title', str), ('body', str), ('username', str), ('type', str),
-            ('reputation', int), ('score', int)
+            ('title', str),
+            ('body', str),
+            ('username', str),
+            ('type', str),
+            ('reputation', int),
+            ('score', int),
         ]
         right_types = list(filter(lambda p: p[0] in json_obj and isinstance(json_obj[p[0]], p[1]), valid_keys))
         wrong_types = list(filter(lambda p: p[0] in json_obj and not isinstance(json_obj[p[0]], p[1]), valid_keys))
         # Alert if valid key is of wrong class
         if len(wrong_types) > 0:
-            raise CmdException("Invalid type: {}".format(", ".join(
-                ["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types])))
+            raise CmdException(
+                "Invalid type: {}".format(
+                    ", ".join(["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types])
+                )
+            )
         # Alert if none of the valid keys are used
         elif len(right_types) == 0:
-            raise CmdException("At least one of the following keys needed: {}".format(", ".join(
-                ["{} ({})".format(x, y.__name__) for (x, y) in valid_keys])))
+            raise CmdException(
+                "At least one of the following keys needed: {}".format(
+                    ", ".join(["{} ({})".format(x, y.__name__) for (x, y) in valid_keys])
+                )
+            )
         # Craft a fake response
         fake_response = {
             'title': json_obj['title'] if 'title' in json_obj else 'Valid post title',
@@ -1573,20 +1766,27 @@ def test(content, alias_used="test"):
             'owner': {
                 'display_name': json_obj['username'] if 'username' in json_obj else 'Valid username',
                 'reputation': json_obj['reputation'] if 'reputation' in json_obj else 0,
-                'link': ''
+                'link': '',
             },
             'IsAnswer': 'type' in json_obj and not json_obj['type'] == "question",
             'site': site,
-            'score': json_obj['score'] if 'score' in json_obj else 0
+            'score': json_obj['score'] if 'score' in json_obj else 0,
         }
         # Handle that pluralization bug
         kind = "an answer" if fake_response['IsAnswer'] else "a question"
         fakepost = Post(api_response=fake_response)
     else:
         kind = "a post, title or username"
-        fakepost = Post(api_response={'title': content, 'body': content,
-                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': site, 'IsAnswer': False, 'score': 0})
+        fakepost = Post(
+            api_response={
+                'title': content,
+                'body': content,
+                'owner': {'display_name': content, 'reputation': 1, 'link': ''},
+                'site': site,
+                'IsAnswer': False,
+                'score': 0,
+            }
+        )
 
     reasons, why_response = findspam.FindSpam.test_post(fakepost)
 
@@ -1631,7 +1831,7 @@ def bisect_regex(test_text, regexes, bookend=True, timeout=None, force_log_time=
         return {'matches': regexes, 'timeouts': timeouts}
 
     mid_len = (len(regexes) - 1).bit_length() - 1
-    mid = 2 ** mid_len
+    mid = 2**mid_len
     half1_result = bisect_regex(test_text, regexes[:mid], bookend=bookend, timeout=timeout, force_log_time=timed_out)
     half2_result = bisect_regex(test_text, regexes[mid:], bookend=bookend, timeout=timeout, force_log_time=timed_out)
     both_matches = half1_result['matches'] + half2_result['matches']
@@ -1690,8 +1890,9 @@ def bisect_number_list(s, full_number_list, filename):
     for raw_number in full_number_list:
         line_number += 1
         (processed, normalized_set) = full_number_list[raw_number]
-        line_matches = findspam.get_number_matches(candidates, normalized_candidates, deobfuscated_candidates,
-                                                   set([processed]), normalized_set)
+        line_matches = findspam.get_number_matches(
+            candidates, normalized_candidates, deobfuscated_candidates, set([processed]), normalized_set
+        )
         types_list = list({types_regex.search(match)[0] for match in line_matches})
         types_list.sort(key=type_sort)
         types = ', '.join(types_list)
@@ -1704,8 +1905,10 @@ def get_watch_and_blacklist_number_bisects(s):
     number_matching = []
     number_matching.extend(bisect_number_list(s, GlobalVars.blacklisted_numbers_full, 'blacklisted_numbers.txt'))
     number_matching.extend(bisect_number_list(s, GlobalVars.watched_numbers_full, 'watched_numbers.txt'))
-    number_matching = [(raw_pattern, line_and_filename, ' matched ' + match_types, full_match_list)
-                       for (raw_pattern, line_and_filename, match_types, full_match_list) in number_matching]
+    number_matching = [
+        (raw_pattern, line_and_filename, ' matched ' + match_types, full_match_list)
+        for (raw_pattern, line_and_filename, match_types, full_match_list) in number_matching
+    ]
     return number_matching
 
 
@@ -1734,8 +1937,7 @@ def bisect(msg, s):
     # If there is a regex which needs more than this, feel free to adjust the timeout. However,
     # it would be better to look at how the regex might be rewritten.
     results_bookended = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=timeout)
-    results_non_bookended = bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False,
-                                                          timeout=timeout)
+    results_non_bookended = bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=timeout)
     matches.extend(results_bookended['matches'])
     matches.extend(results_non_bookended['matches'])
     timeouts.extend(results_bookended['timeouts'])
@@ -1745,8 +1947,10 @@ def bisect(msg, s):
         formatted_timeouts = []
         for value in timeouts:
             seconds = '%9.5f' % value['seconds']
-            regexes_formatted_text = ['`{}` on line {} of {}'.format(raw_pattern, line_number, filename)
-                                      for raw_pattern, (line_number, filename) in value['regexes']]
+            regexes_formatted_text = [
+                '`{}` on line {} of {}'.format(raw_pattern, line_number, filename)
+                for raw_pattern, (line_number, filename) in value['regexes']
+            ]
             formatted_timeouts.append('{} s: {}'.format(seconds, (';\n' + ' ' * 15).join(regexes_formatted_text)))
         indented_timeout_list_text = '  {}'.format('\n  '.join(formatted_timeouts))
         timeout_error_message = 'bisect excessive regex processing time:\n{}'.format(indented_timeout_list_text)
@@ -1767,14 +1971,21 @@ def bisect(msg, s):
         raw_pattern, (line_number, filename), match_type, unused = matches[0]
         if match_type and 'matched' not in match_type:
             match_type = " matched " + match_type
-        return ("Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
-            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type)
-            + timeout_error_message)
+        return (
+            "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}){5}".format(
+                raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id, match_type
+            )
+            + timeout_error_message
+        )
     else:
-        return ("Matched by the following:\n" + "\n".join(
-            "{}{types} on line {} of {}".format(raw_pattern, line_number, filename, types=types)
-            for raw_pattern, (line_number, filename), types, unused in matches)
-            + timeout_error_message)
+        return (
+            "Matched by the following:\n"
+            + "\n".join(
+                "{}{types} on line {} of {}".format(raw_pattern, line_number, filename, types=types)
+                for raw_pattern, (line_number, filename), types, unused in matches
+            )
+            + timeout_error_message
+        )
 
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
@@ -1795,12 +2006,18 @@ def bisect_number(msg, s):
         raw_pattern, (line_number, filename), match_type, full_match_list = matching[0]
         match_type = " matched " + match_type if match_type else ''
         return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1}): {5}".format(
-            raw_pattern, line_number, filename, GlobalVars.bot_repo_slug, GlobalVars.commit.id,
-            '; '.join(full_match_list))
+            raw_pattern,
+            line_number,
+            filename,
+            GlobalVars.bot_repo_slug,
+            GlobalVars.commit.id,
+            '; '.join(full_match_list),
+        )
     else:
         return "Matched by the following:\n" + "\n".join(
             "{} on line {} of {}: {}".format(raw_pattern, line_number, filename, '; '.join(full_match_list))
-            for raw_pattern, (line_number, filename), unused, full_match_list in matching)
+            for raw_pattern, (line_number, filename), unused, full_match_list in matching
+        )
 
 
 # noinspection PyIncorrectDocstring
@@ -1831,7 +2048,7 @@ def version():
         id=GlobalVars.location,
         commit_name=GlobalVars.commit_with_author_escaped,
         commit_code=GlobalVars.commit.id,
-        repository=GlobalVars.bot_repository
+        repository=GlobalVars.bot_repository,
     )
 
 
@@ -1876,13 +2093,17 @@ def notify(msg, room_id, se_site, always_ping):
     """
     # TODO: Add check whether smokey reports in that room
     always_ping = always_ping if always_ping is not None else True
-    response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site,
-                                                   always_ping=always_ping)
+    response, full_site = add_to_notification_list(
+        msg.owner.id, msg._client.host, room_id, se_site, always_ping=always_ping
+    )
     in_room_text = "" if always_ping else ", but only when you're in that room"
     if response == 0:
-        return "You'll now get pings from me if I report a post on `{site}`, in room "\
-               "`{room}` on `chat.{domain}`{in_room}.".format(site=se_site, room=room_id, domain=msg._client.host,
-                                                              in_room=in_room_text)
+        return (
+            "You'll now get pings from me if I report a post on `{site}`, in room "
+            "`{room}` on `chat.{domain}`{in_room}.".format(
+                site=se_site, room=room_id, domain=msg._client.host, in_room=in_room_text
+            )
+        )
     elif response == -1:
         raise CmdException("That notification configuration is already registered.")
     elif response == -2:
@@ -1918,8 +2139,9 @@ def unnotify_all(msg):
 
 def user_must_be_an_admin(msg):
     if not is_user_an_admin(msg):
-        raise CmdException('You do not have permission to use this command.'
-                           ' Only metasmoke admins may use this command.')
+        raise CmdException(
+            'You do not have permission to use this command. Only metasmoke admins may use this command.'
+        )
 
 
 def is_user_an_admin(msg):
@@ -1927,11 +2149,7 @@ def is_user_an_admin(msg):
     if GlobalVars.metasmoke_key is None or GlobalVars.metasmoke_host is None:
         raise CmdException('Either the host or API key for metasmoke is not defined. This command requires both.')
     ms_route = "/api/v2.0/users/with_role/admin"
-    params = {
-        'filter': 'HMMKFJ',
-        'key': GlobalVars.metasmoke_key,
-        'per_page': 100
-    }
+    params = {'filter': 'HMMKFJ', 'key': GlobalVars.metasmoke_key, 'per_page': 100}
     user_response = Metasmoke.get(ms_route, params=params)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
@@ -1979,8 +2197,9 @@ def unnotify(msg, room_id, se_site):
     response = remove_from_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
     if response:
-        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
-               "on `chat.{domain}`.".format(site=se_site, room=room_id, domain=msg._client.host)
+        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` on `chat.{domain}`.".format(
+            site=se_site, room=room_id, domain=msg._client.host
+        )
 
     raise CmdException("That configuration doesn't exist.")
 
@@ -2002,13 +2221,15 @@ def willbenotified(msg, room_id, se_site):
 
 
 RETURN_NAMES = {"admin": ["admin", "admins"], "blacklist_manager": ["blacklist manager", "blacklist managers"]}
-VALID_ROLES = {"admin": "admin",
-               "code_admin": "blacklist_manager",
-               "admins": "admin",
-               "codeadmins": "blacklist_manager",
-               "blacklist_manager": "blacklist_manager",
-               "blacklister": "blacklist_manager",
-               "blacklisters": "blacklist_manager"}
+VALID_ROLES = {
+    "admin": "admin",
+    "code_admin": "blacklist_manager",
+    "admins": "admin",
+    "codeadmins": "blacklist_manager",
+    "blacklist_manager": "blacklist_manager",
+    "blacklister": "blacklist_manager",
+    "blacklisters": "blacklist_manager",
+}
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -2021,15 +2242,12 @@ def whois(msg, role):
     :return: A string
     """
     if role not in VALID_ROLES:
-        raise CmdException("That is not a user level I can check. "
-                           "I know about {0}".format(", ".join(set(VALID_ROLES.values()))))
+        raise CmdException(
+            "That is not a user level I can check. I know about {0}".format(", ".join(set(VALID_ROLES.values())))
+        )
 
     ms_route = "/api/v2.0/users/with_role/{}".format(VALID_ROLES[role])
-    params = {
-        'filter': 'HMMKFJ',
-        'key': GlobalVars.metasmoke_key,
-        'per_page': 100
-    }
+    params = {'filter': 'HMMKFJ', 'key': GlobalVars.metasmoke_key, 'per_page': 100}
     user_response = Metasmoke.get(ms_route, params=params)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
@@ -2051,30 +2269,42 @@ def whois(msg, role):
     admins_in_room = list(set(admin_ids) & set(all_users_in_room))
     admins_not_in_room = list(set(admin_ids) - set(admins_in_room))
 
-    admins_list = [(admin,
-                    msg._client.get_user(admin).name,
-                    msg._client.get_user(admin).last_message,
-                    msg._client.get_user(admin).last_seen)
-                   for admin in admin_ids]
+    admins_list = [
+        (
+            admin,
+            msg._client.get_user(admin).name,
+            msg._client.get_user(admin).last_message,
+            msg._client.get_user(admin).last_seen,
+        )
+        for admin in admin_ids
+    ]
 
-    admins_in_room_list = [(admin,
-                            msg._client.get_user(admin).name,
-                            msg._client.get_user(admin).last_message,
-                            msg._client.get_user(admin).last_seen)
-                           for admin in admins_in_room]
+    admins_in_room_list = [
+        (
+            admin,
+            msg._client.get_user(admin).name,
+            msg._client.get_user(admin).last_message,
+            msg._client.get_user(admin).last_seen,
+        )
+        for admin in admins_in_room
+    ]
 
-    admins_not_in_room_list = [(admin,
-                                msg._client.get_user(admin).name,
-                                msg._client.get_user(admin).last_message,
-                                msg._client.get_user(admin).last_seen)
-                               for admin in admins_not_in_room]
+    admins_not_in_room_list = [
+        (
+            admin,
+            msg._client.get_user(admin).name,
+            msg._client.get_user(admin).last_message,
+            msg._client.get_user(admin).last_seen,
+        )
+        for admin in admins_not_in_room
+    ]
 
     return_name = RETURN_NAMES[VALID_ROLES[role]][0 if len(admin_ids) == 1 else 1]
 
     response = "I am aware of {} {}".format(len(admin_ids), return_name)
 
     if admins_in_room_list:
-        admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
+        admins_in_room_list.sort(key=lambda x: x[2])  # Sort by last message (last seen = x[3])
         response += ". Currently in this room: **"
         for admin in admins_in_room_list:
             response += "{}, ".format(admin[1])
@@ -2098,14 +2328,21 @@ def whois(msg, role):
 def invite(msg, room_id, roles):
     add_room((msg._client.host, room_id), roles.split(","))
 
-    return "I'll now send messages with types `{}` to room `{}` on `{}`." \
-           " (Note that this will not persist after restarts.)".format(roles, room_id, msg._client.host)
+    return (
+        "I'll now send messages with types `{}` to room `{}` on `{}`."
+        " (Note that this will not persist after restarts.)".format(roles, room_id, msg._client.host)
+    )
 
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=False, give_name=True,
-         aliases=["scan", "scan-force", "report-force", "report-direct", "scan-time", "scan-force-time"])
+@command(
+    str,
+    whole_msg=True,
+    privileged=False,
+    give_name=True,
+    aliases=["scan", "scan-force", "report-force", "report-direct", "scan-time", "scan-force-time"],
+)
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
@@ -2117,11 +2354,13 @@ def report(msg, args, alias_used="report"):
 
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/{} command again in {} seconds. "
-                           "To avoid one user sending lots of reports in a few commands and "
-                           "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(alias_used, wait))
+        raise CmdException(
+            "You can execute the !!/{} command again in {} seconds. "
+            "To avoid one user sending lots of reports in a few commands and "
+            "slowing SmokeDetector down due to rate-limiting, you have to "
+            "wait 30 seconds after you've reported multiple posts in "
+            "one go.".format(alias_used, wait)
+        )
 
     alias_used = alias_used or "report"
 
@@ -2145,10 +2384,12 @@ def report(msg, args, alias_used="report"):
         custom_reason = None
 
     if len(urls) > 5:
-        raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
-                           "{} at most 5 posts at a time. This is to avoid "
-                           "SmokeDetector's chat messages getting rate-limited too much, "
-                           "which would slow down reports.".format(alias_used))
+        raise CmdException(
+            "To avoid SmokeDetector reporting posts too slowly, you can "
+            "{} at most 5 posts at a time. This is to avoid "
+            "SmokeDetector's chat messages getting rate-limited too much, "
+            "which would slow down reports.".format(alias_used)
+        )
 
     # report_posts(urls, reported_by_owner, reported_in, blacklist_by, operation="report", custom_reason=None):
     output = report_posts(urls, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
@@ -2173,11 +2414,13 @@ def allspam(msg, url):
 
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/allspam command again in {} seconds. "
-                           "To avoid one user sending lots of reports in a few commands and "
-                           "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(wait))
+        raise CmdException(
+            "You can execute the !!/allspam command again in {} seconds. "
+            "To avoid one user sending lots of reports in a few commands and "
+            "slowing SmokeDetector down due to rate-limiting, you have to "
+            "wait 30 seconds after you've reported multiple posts in "
+            "one go.".format(wait)
+        )
     user = get_user_from_url(url)
     if user is None:
         raise CmdException("That doesn't look like a valid user URL.")
@@ -2201,8 +2444,10 @@ def allspam(msg, url):
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
-            raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging "
-                               "for moderator attention, otherwise use !!/report on the user's posts individually.")
+            raise CmdException(
+                "The specified user has an abnormally high number of accounts. Please consider flagging "
+                "for moderator attention, otherwise use !!/report on the user's posts individually."
+            )
         # Add accounts with posts
         for site in res['items']:
             if site['question_count'] > 0 or site['answer_count'] > 0:
@@ -2226,8 +2471,10 @@ def allspam(msg, url):
             raise CmdException("The specified user has no posts on this site.")
         posts = res['items']
         if posts[0]['owner']['reputation'] > 100:
-            raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for "
-                               "moderator attention, otherwise use !!/report on the posts individually.")
+            raise CmdException(
+                "The specified user's reputation is abnormally high. Please consider flagging for "
+                "moderator attention, otherwise use !!/report on the posts individually."
+            )
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
@@ -2237,7 +2484,8 @@ def allspam(msg, url):
             post_data.post_id = post['post_id']
             post_data.post_url = url_to_shortlink(post['link'])
             *discard, post_data.site, post_data.post_type = fetch_post_id_and_site_from_url(
-                url_to_shortlink(post['link']))
+                url_to_shortlink(post['link'])
+            )
             post_data.title = unescape(post['title'])
             post_data.owner_name = unescape(post['owner']['display_name'])
             post_data.owner_url = post['owner']['link']
@@ -2257,8 +2505,9 @@ def allspam(msg, url):
                     # Fetch posts
                     req_url = get_se_api_url_for_route("answers/{}".format(post['post_id']))
                     params = get_se_api_default_params_questions_answers_posts_add_site(u_site)
-                    answer_res = requests.get(req_url, params=params,
-                                              timeout=GlobalVars.default_requests_timeout).json()
+                    answer_res = requests.get(
+                        req_url, params=params, timeout=GlobalVars.default_requests_timeout
+                    ).json()
                     if "backoff" in answer_res:
                         if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
                             GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
@@ -2269,17 +2518,19 @@ def allspam(msg, url):
     if len(user_posts) == 0:
         raise CmdException("The specified user hasn't posted anything.")
     if len(user_posts) > 15:
-        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
-                           "for moderator attention, otherwise use !!/report on the posts individually.")
-    why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+        raise CmdException(
+            "The specified user has an abnormally high number of spam posts. Please consider flagging "
+            "for moderator attention, otherwise use !!/report on the posts individually."
+        )
+    why_info = "User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
     # Handle all posts
     for index, post in enumerate(user_posts, start=1):
         batch = ""
         if len(user_posts) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(user_posts))
-        handle_spam(post=Post(api_response=post.as_dict),
-                    reasons=["Manually reported " + post.post_type + batch],
-                    why=why_info)
+        handle_spam(
+            post=Post(api_response=post.as_dict), reasons=["Manually reported " + post.post_type + batch], why=why_info
+        )
         time.sleep(2)  # Should this be implemented differently?
     if len(user_posts) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
@@ -2346,8 +2597,9 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             continue
 
         if post_data is False:
-            output.append("Post {}: Could not find data for this post in the API. "
-                          "It may already have been deleted.".format(index))
+            output.append(
+                "Post {}: Could not find data for this post in the API. It may already have been deleted.".format(index)
+            )
             continue
 
         # Watch for edits on the associated question
@@ -2358,8 +2610,11 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             # This happens in some CI testing, because GlobalVars.edit_watcher isn't set up.
             pass
 
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)) and not is_forced:
+        if (
+            has_already_been_posted(post_data.site, post_data.post_id, post_data.title)
+            and not is_false_positive((post_data.post_id, post_data.site))
+            and not is_forced
+        ):
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
 
@@ -2418,15 +2673,17 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
 
             if scan_spam:
-                why_append = "This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                    '\n' + scan_why
+                why_append = (
+                    "This post would have also been caught for: "
+                    + ", ".join(scan_reasons).capitalize()
+                    + '\n'
+                    + scan_why
+                )
             else:
                 why_append = "This post would not have been caught otherwise."
 
             comment = report_info + why_append
-            handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
-                        why=comment)
+            handle_spam(post=post, reasons=["Manually reported " + post_data.post_type + batch], why=comment)
             if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
@@ -2519,11 +2776,13 @@ def delete(msg):
     """
 
     if msg.room.id == 11540:
-        return "Messages/reports from SmokeDetector in Charcoal HQ are generally kept "\
-               "as records. If you really need to delete a message, please use "\
-               "`sd delete-force`. See [this note on message deletion]"\
-               "(https://charcoal-se.org/smokey/Commands"\
-               "#a-note-on-message-deletion) for more details."
+        return (
+            "Messages/reports from SmokeDetector in Charcoal HQ are generally kept "
+            "as records. If you really need to delete a message, please use "
+            "`sd delete-force`. See [this note on message deletion]"
+            "(https://charcoal-se.org/smokey/Commands"
+            "#a-note-on-message-deletion) for more details."
+        )
     else:
         try:
             msg.delete()
@@ -2548,8 +2807,16 @@ def postgone(msg):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys(),
-         arity=(1, 2))
+@command(
+    message,
+    str,
+    reply=True,
+    privileged=True,
+    whole_msg=True,
+    give_name=True,
+    aliases=FALSE_FEEDBACKS.keys(),
+    arity=(1, 2),
+)
 def false(feedback, msg, comment, alias_used="false"):
     """
     Marks a post as a false positive
@@ -2626,8 +2893,16 @@ def ignore(feedback, msg, comment, alias_used="ignore"):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys(),
-         arity=(1, 2))
+@command(
+    message,
+    str,
+    reply=True,
+    privileged=True,
+    whole_msg=True,
+    give_name=True,
+    aliases=NAA_FEEDBACKS.keys(),
+    arity=(1, 2),
+)
 def naa(feedback, msg, comment, alias_used="naa"):
     """
     Marks a post as NAA
@@ -2658,8 +2933,16 @@ def naa(feedback, msg, comment, alias_used="naa"):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys(),
-         arity=(1, 2))
+@command(
+    message,
+    str,
+    reply=True,
+    privileged=True,
+    whole_msg=True,
+    give_name=True,
+    aliases=TRUE_FEEDBACKS.keys(),
+    arity=(1, 2),
+)
 def true(feedback, msg, comment, alias_used="true"):
     """
     Marks a post as a true positive
@@ -2722,8 +3005,9 @@ def why(msg):
         if why_info:
             return why_info
         else:
-            raise CmdException("I don't have the `why` data for that post (anymore?). "
-                               "You should be able to find it on metasmoke.")
+            raise CmdException(
+                "I don't have the `why` data for that post (anymore?). You should be able to find it on metasmoke."
+            )
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -2821,12 +3105,15 @@ def dnscheck(domain) -> str:
     sdres = sdresolver.query(domain)
 
     if googleres.rrset != sdres.rrset:
-        response = "**Differing DNS Results for {}!**\n\nGoogle DNS:\n{}" \
-                   "\n\nSmokeDetector:{}".format(domain, googleres.rrset, sdres.rrset)
+        response = "**Differing DNS Results for {}!**\n\nGoogle DNS:\n{}\n\nSmokeDetector:{}".format(
+            domain, googleres.rrset, sdres.rrset
+        )
     else:
-        response = "There is no discrepancy between the DNS records for {} based on " \
-                   "a comparison of the current DNS used by SmokeDetector and Google DNS.\n\n" \
-                   "{}".format(domain, sdres.rrset)
+        response = (
+            "There is no discrepancy between the DNS records for {} based on "
+            "a comparison of the current DNS used by SmokeDetector and Google DNS.\n\n"
+            "{}".format(domain, sdres.rrset)
+        )
 
     return response
 
@@ -2858,8 +3145,13 @@ def normalize_number(msg, pattern):
     minimally_validate_content_source(msg)
     pattern = get_pattern_from_content_source(msg)
     full_entry_list, processed_as_set, normalized = phone_numbers.process_numlist([pattern])
-    return "Strict normalization: `" + phone_numbers.normalize(pattern) + \
-           "`; Normalized numbers used by the number detections: `" + str(normalized) + "`"
+    return (
+        "Strict normalization: `"
+        + phone_numbers.normalize(pattern)
+        + "`; Normalized numbers used by the number detections: `"
+        + str(normalized)
+        + "`"
+    )
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
