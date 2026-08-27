@@ -83083,3 +83083,4 @@
 1787806047	VLAZ	scriptoagency\.com
 1787808148	VLAZ	healthcarebd\.com
 1787815826	VLAZ	fumigationservices\.pk
+1787815830	VLAZ	karachifumigationservice\.com
