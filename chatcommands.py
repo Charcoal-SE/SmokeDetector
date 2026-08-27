@@ -73,11 +73,10 @@ from parsing import *
 from spamhandling import check_if_spam, handle_spam
 from tasks import Tasks
 
-
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
 #
-#
 # System command functions below here
+
 
 # This "null" command is just bypass for the "unrecognized command" message,
 # so that pingbot can respond instead.
