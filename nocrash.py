@@ -3,20 +3,20 @@
 
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
-import platform
-import os
-import subprocess as sp
-from time import sleep, gmtime
 import logging
+import os
+import platform
+import subprocess as sp
 import sys
+from time import gmtime, sleep
 
 on_windows = 'windows' in platform.platform().lower()
-
 if on_windows:
     # noinspection PyPep8Naming
     from _Git_Windows import git
 else:
     from sh.contrib import git
+
 
 if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
     raise RuntimeError("Requires Python version 3.5 or newer.")

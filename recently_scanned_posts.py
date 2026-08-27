@@ -5,7 +5,6 @@ from globalvars import GlobalVars
 from helpers import log
 from tasks import Tasks
 
-
 POST_STRAIGHT_COPY_KEYS = [
     'response_timestamp',
     'last_edit_date',

@@ -24,6 +24,7 @@ exclude = [
 ]
 
 [tool.ruff.lint]
+# Rules: https://docs.astral.sh/ruff/rules/
 ignore = [
     "E402",  # Module-level import not at top
     "E741",  # Ambiguous variable name (l, O, I)
@@ -48,6 +49,7 @@ select = [
     "F",  # pyflakes
     "W",  # pycodestyle warnings
     "N",  # pep8-naming
+    "I",  # isort
 ]
 
 [tool.ruff.lint.per-file-ignores]

@@ -1,7 +1,8 @@
 # coding=utf-8
+import platform
 import shlex
 import subprocess as sp
-import platform
+
 # We need to not import any other files from SD, because this is used in nocrash.py.
 
 if 'windows' not in platform.platform().lower():

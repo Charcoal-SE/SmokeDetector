@@ -1,21 +1,21 @@
 # coding=utf-8
-import chatcommunicate
-import chatcommands
-from globalvars import GlobalVars
-from datahandling import has_pickle, remove_pickle
-from pprint import pprint
-
 import collections
 import io
 import os
 import os.path
-import pytest
 import threading
 import time
-import yaml
-
-from fake import Fake
+from pprint import pprint
 from unittest.mock import Mock, patch
+
+import pytest
+import yaml
+from fake import Fake
+
+import chatcommands
+import chatcommunicate
+from datahandling import has_pickle, remove_pickle
+from globalvars import GlobalVars
 
 
 def parse_test_rooms():

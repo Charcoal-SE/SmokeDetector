@@ -1,5 +1,6 @@
 # coding=utf-8
 import regex
+
 import number_homoglyphs
 from helpers import get_only_digits, remove_end_regex_comments
 

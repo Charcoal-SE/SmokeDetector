@@ -1,9 +1,10 @@
 # coding=utf-8
 import itertools
+
 import regex
 
-from tasks import Tasks
 import metasmoke
+from tasks import Tasks
 
 
 class Feedback:

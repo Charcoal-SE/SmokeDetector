@@ -1,6 +1,7 @@
 # coding=utf-8
-from socketscience import SocketScience
 import pytest
+
+from socketscience import SocketScience
 
 
 @pytest.mark.parametrize('content', [
