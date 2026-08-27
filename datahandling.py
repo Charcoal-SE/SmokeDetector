@@ -20,10 +20,15 @@ import blacklists
 import metasmoke
 import parsing
 from globalvars import GlobalVars
-from helpers import (ErrorLogs, get_se_api_default_params, get_se_api_url_for_route, log,
-                     log_current_exception, redact_passwords)
+from helpers import (
+    ErrorLogs,
+    get_se_api_default_params,
+    get_se_api_url_for_route,
+    log,
+    log_current_exception,
+    redact_passwords,
+)
 from tasks import Tasks
-
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"

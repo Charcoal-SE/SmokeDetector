@@ -10,11 +10,11 @@ from unittest.mock import Mock, patch
 
 import pytest
 import yaml
+from fake import Fake
 
 import chatcommands
 import chatcommunicate
 from datahandling import has_pickle, remove_pickle
-from fake import Fake
 from globalvars import GlobalVars
 
 

@@ -13,7 +13,7 @@ import metasmoke
 import parsing
 from classes import Post, PostParseError
 from globalvars import GlobalVars
-from helpers import log, escape_format
+from helpers import escape_format, log
 from parsing import to_metasmoke_link
 from tasks import Tasks
 

@@ -11,6 +11,7 @@ from datetime import datetime
 from html import unescape
 
 import dns.resolver
+
 # noinspection PyCompatibility
 import regex
 import requests
@@ -20,25 +21,53 @@ import datahandling
 import findspam
 import number_homoglyphs
 import phone_numbers
+
 # noinspection PyUnresolvedReferences
 from apigetpost import PostData, api_get_post
 from blacklists import Blacklist, load_blacklists
+
 # noinspection PyUnresolvedReferences
-from chatcommunicate import (CmdException, CmdExceptionLongReply, add_room, block_room, command, get_message,
-                             get_report_data, is_privileged, is_self, message, tell_rooms, tell_rooms_with)
+from chatcommunicate import (
+    CmdException,
+    CmdExceptionLongReply,
+    add_room,
+    block_room,
+    command,
+    get_message,
+    get_report_data,
+    is_privileged,
+    is_self,
+    message,
+    tell_rooms,
+    tell_rooms_with,
+)
 from classes import Post
-from classes.feedback import *
 from classes.dns import dns_resolve
+from classes.feedback import *
 from datahandling import *
 from gitmanager import GitHubManager, GitManager
+
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
-from helpers import (chunk_list, exit_mode, expand_shorthand_link, get_bookended_keyword_regex_text_from_entries,
-                     get_non_bookended_keyword_regex_text_from_entries, get_se_api_default_params,
-                     get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route,
-                     keyword_bookend_regex_text, keyword_non_bookend_regex_text, log, log_current_exception,
-                     only_blacklists_changed, only_modules_changed, regex_compile_no_cache, reload_modules,
-                     remove_regex_comments)
+from helpers import (
+    chunk_list,
+    exit_mode,
+    expand_shorthand_link,
+    get_bookended_keyword_regex_text_from_entries,
+    get_non_bookended_keyword_regex_text_from_entries,
+    get_se_api_default_params,
+    get_se_api_default_params_questions_answers_posts_add_site,
+    get_se_api_url_for_route,
+    keyword_bookend_regex_text,
+    keyword_non_bookend_regex_text,
+    log,
+    log_current_exception,
+    only_blacklists_changed,
+    only_modules_changed,
+    regex_compile_no_cache,
+    reload_modules,
+    remove_regex_comments,
+)
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import check_if_spam, handle_spam

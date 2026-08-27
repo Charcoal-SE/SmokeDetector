@@ -10,7 +10,6 @@ import sys
 import chatcommands
 import helpers
 
-
 helpers.log = lambda *args, **kwargs: None  # Override log() for less verbosity
 
 # A utility is "name: (description, func)"

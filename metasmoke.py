@@ -7,6 +7,7 @@ import sys
 import threading
 import time
 import traceback
+
 try:
     from collections.abc import Iterable
 except ImportError:
@@ -15,6 +16,7 @@ from datetime import datetime, timedelta
 from glob import glob
 
 import requests
+
 # noinspection PyPackageRequirements
 import websocket
 from regex import sub
@@ -29,10 +31,16 @@ import parsing
 import spamhandling
 from gitmanager import GitManager
 from globalvars import GlobalVars
-from helpers import (blacklist_integrity_check, exit_mode, log, log_current_exception,
-                     only_blacklists_changed, only_modules_changed, reload_modules)
+from helpers import (
+    blacklist_integrity_check,
+    exit_mode,
+    log,
+    log_current_exception,
+    only_blacklists_changed,
+    only_modules_changed,
+    reload_modules,
+)
 from socketscience import SocketScience
-
 
 MS_WEBSOCKET_LONG_INTERVAL = 60
 MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL = 5

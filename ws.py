@@ -6,7 +6,6 @@ import sys
 
 from excepthook import install_thread_excepthook, uncaught_exception
 
-
 sys.excepthook = uncaught_exception
 install_thread_excepthook()
 
@@ -16,37 +15,49 @@ install_thread_excepthook()
 # Hence, please avoid adding code before this comment; if it's necessary,
 # test it thoroughly.
 
+import json
 import os
 import platform
-import traceback
-import json
 import time
+import traceback
 from datetime import datetime
 from threading import Thread
 
 import dns.resolver
 import requests
-from tld.utils import TldIOError, update_tld_names
+
 # noinspection PyPackageRequirements
 import websocket
+from tld.utils import TldIOError, update_tld_names
 
 import chatcommands
 import chatcommunicate
 from bodyfetcher import BodyFetcher
-from datahandling import (PICKLE_STORAGE, filter_auto_ignored_posts, load_files, load_pickle,
-                          refresh_site_id_dict_if_needed_and_get_issues)
+from datahandling import (
+    PICKLE_STORAGE,
+    filter_auto_ignored_posts,
+    load_files,
+    load_pickle,
+    refresh_site_id_dict_if_needed_and_get_issues,
+)
 from deletionwatcher import DeletionWatcher
 from editwatcher import EditWatcher
 from flovis import Flovis
 from globalvars import GlobalVars
-from helpers import (Helpers, add_to_global_bodyfetcher_queue_in_new_thread, exit_mode, log, log_exception,
-                     tell_debug_rooms_recovered_websocket)
+from helpers import (
+    Helpers,
+    add_to_global_bodyfetcher_queue_in_new_thread,
+    exit_mode,
+    log,
+    log_exception,
+    tell_debug_rooms_recovered_websocket,
+)
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from spamhandling import check_if_spam_json
+
 # noinspection PyPackageRequirements
 from tasks import Tasks
-
 
 MAX_SE_WEBSOCKET_RETRIES = 5
 # Python 3.6.0 is the bare minimum needed to run SmokeDetector.

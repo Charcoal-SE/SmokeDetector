@@ -8,13 +8,13 @@ from unittest.mock import Mock, patch
 import pytest
 import regex
 import requests
+from fake import Fake
 
 import chatcommands
 import chatcommunicate  # coverage
 from apigetpost import api_get_post
 from classes.post import Post
 from datahandling import remove_pickle
-from fake import Fake
 from globalvars import GlobalVars
 from parsing import to_protocol_relative
 

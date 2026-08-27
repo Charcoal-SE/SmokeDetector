@@ -15,10 +15,10 @@ from urllib.parse import quote, quote_plus
 import regex
 import requests
 import websocket
+from termcolor import colored
 
 from globalvars import GlobalVars
 
-from termcolor import colored
 # termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
 platform_text = platform.platform().lower()
 if 'windows' in platform_text and 'cygwin' not in platform_text:

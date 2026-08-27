@@ -6,6 +6,7 @@ import time
 from urllib.parse import urlparse
 
 import requests
+
 # noinspection PyPackageRequirements
 import websocket
 

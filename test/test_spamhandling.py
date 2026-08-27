@@ -14,7 +14,6 @@ from globalvars import GlobalVars
 from parsing import get_user_from_url
 from spamhandling import check_if_spam, check_if_spam_json, handle_spam
 
-
 load_blacklists()
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:

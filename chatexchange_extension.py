@@ -1,6 +1,6 @@
 # coding=utf-8
-from datetime import datetime
 import sys
+from datetime import datetime
 
 from chatexchange import client, events, rooms
 

@@ -18,8 +18,10 @@ import dns.resolver
 import phonenumbers
 import regex
 import requests
+
 # noinspection PyPackageRequirements
 import tld
+
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 
@@ -28,10 +30,17 @@ import chatcommunicate
 import metasmoke_cache
 import phone_numbers
 from globalvars import GlobalVars
-from helpers import (KEYWORD_BOOKENDING_START, chunk_list, get_bookended_keyword_regex_text_from_entries,
-                     get_non_bookended_keyword_regex_text_from_entries, keyword_bookend_regex_text, log,
-                     regex_compile_no_cache, strip_code_elements, strip_pre_and_code_elements)
-
+from helpers import (
+    KEYWORD_BOOKENDING_START,
+    chunk_list,
+    get_bookended_keyword_regex_text_from_entries,
+    get_non_bookended_keyword_regex_text_from_entries,
+    keyword_bookend_regex_text,
+    log,
+    regex_compile_no_cache,
+    strip_code_elements,
+    strip_pre_and_code_elements,
+)
 
 if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
     raise ImportError(

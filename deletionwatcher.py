@@ -6,17 +6,22 @@ import time
 from urllib.parse import urlparse
 
 import requests
+
 # noinspection PyPackageRequirements
 import websocket
 
 import datahandling
 import metasmoke
 from globalvars import GlobalVars
-from helpers import (chunk_list, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route,
-                     log, recover_websocket)
+from helpers import (
+    chunk_list,
+    get_se_api_default_params_questions_answers_posts_add_site,
+    get_se_api_url_for_route,
+    log,
+    recover_websocket,
+)
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
-
 
 PICKLE_FILENAME = "deletionIDs.p"
 DELETION_WATCH_MIN_SECONDS = 7200
