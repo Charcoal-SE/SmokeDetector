@@ -1204,10 +1204,12 @@ def pull(alias_used='pull'):
 
     request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
         GlobalVars.bot_repo_slug), timeout=GlobalVars.default_requests_timeout)
+    request.raise_for_status()
     latest_sha = request.json()["object"]["sha"]
     request = requests.get(
         'https://api.github.com/repos/{}/commits/{}/statuses'.format(GlobalVars.bot_repo_slug, latest_sha),
         timeout=GlobalVars.default_requests_timeout)
+    request.raise_for_status()
     states = []
     for ci_status in request.json():
         state = ci_status["state"]
@@ -1903,6 +1905,7 @@ def is_user_an_admin(msg):
         'per_page': 100
     }
     user_response = Metasmoke.get(ms_route, params=params)
+    user_response.raise_for_status()
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
     chat_host = msg._client.host
@@ -2001,6 +2004,7 @@ def whois(msg, role):
         'per_page': 100
     }
     user_response = Metasmoke.get(ms_route, params=params)
+    user_response.raise_for_status()
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
 
