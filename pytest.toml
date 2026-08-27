@@ -1,5 +1,4 @@
 [pytest]
 filterwarnings = [
-    'ignore:datetime.datetime.utcnow:DeprecationWarning',
     'ignore:use of fork\(\):DeprecationWarning',
 ]
