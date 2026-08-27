@@ -83086,3 +83086,4 @@
 1787815830	VLAZ	karachifumigationservice\.com
 1787816880	VLAZ	geeklink\.dev
 1787819588	VLAZ	lineonline\.me
+1787819595	VLAZ	vidou\.ai
