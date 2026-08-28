@@ -28,7 +28,6 @@ preview = true
 quote-style = "preserve"
 exclude = [
   "findspam.py",
-  "number_homoglyphs.py",
   "test/test_chatcommands.py",
   "test/test_chatcommunicate.py",
   "test/test_findspam.py",

@@ -47,6 +47,7 @@ if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
         'Need regex >= 2020.6.8 (internal version number 2.5.82; got %s)' %
         regex.__version__)
 
+# fmt: off
 LINK_CACHE = dict()
 LINK_CACHE_lock = threading.RLock()
 LEVEN_DOMAIN_DISTANCE = 3
@@ -135,7 +136,8 @@ ASN_WHITELISTED_WEBSITES = [
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org", "eitren.com",
     # Added 2026-04-21 for many FPs
-    "falstad.com", "blueletterbible.org", "blueletterbible.com", "texdoc.org", "fftw.org", "alsa-project.org"]
+    "falstad.com", "blueletterbible.org", "blueletterbible.com", "texdoc.org", "fftw.org", "alsa-project.org",
+]
 
 # Hostname whitelist for the "*bad IP for hostname in {}" detections (i.e. for ip_for_url_host)
 # Hostnames should be all lowercase, as the hostnames are obtained from
@@ -397,9 +399,10 @@ ENGLISH = {
     'v': -4.759276833451455,
     'z': -5.036594538526155,
     'x': -5.137009730369897,
-    'q': -5.624531280146579
+    'q': -5.624531280146579,
 }
 ENGLISH_PRIOR = math.log(4 / 5)
+# fmt: on
 
 
 class PostFilter:

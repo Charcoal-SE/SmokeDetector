@@ -72,8 +72,7 @@ equivalents = {
     '78': [0x215e],
     '110': [0x2152],
     '111': [0x2162, 0x2172],
-
-}
+}  # fmt: skip
 
 sequences = [
     # (number_start, number_end, number_increment, code_point_start, code_point_increment)
@@ -127,7 +126,7 @@ sequences = [
     (1, 10, 1, 0x278A, 1),
     # DIGIT ZERO COMMA: 0 -> 9, start 0x1F101
     (0, 9, 1, 0x1F101, 1),
-]
+]  # fmt: skip
 
 translate_dict = {}
 
@@ -153,9 +152,20 @@ def normalize(text):
     return text.translate(translate_table)
 
 
-def table_as_regex(table=None, hex_prefix='', hex_sufix='', separator='', range_separator='-', prefix='[', sufix=']',
-                   as_characters=False, max_value=None, included_obfuscations=None, zero_padding=None,
-                   uppercase_hex=None):
+def table_as_regex(
+    table=None,
+    hex_prefix='',
+    hex_sufix='',
+    separator='',
+    range_separator='-',
+    prefix='[',
+    sufix=']',
+    as_characters=False,
+    max_value=None,
+    included_obfuscations=None,
+    zero_padding=None,
+    uppercase_hex=None,
+):
     """
     Returns a regular expression character class of all the characters in the provided translation table.
     :param table:            The table to operate upon. Defaults to translate_table.
@@ -219,8 +229,9 @@ def table_as_regex(table=None, hex_prefix='', hex_sufix='', separator='', range_
     return '{}{}{}'.format(prefix, separator.join(escapes), sufix)
 
 
-def table_as_ms_search_regex(table=None, max_value=0xffff, included_obfuscations=None, as_characters=False,
-                             with_digits=False, extra_escape=None):
+def table_as_ms_search_regex(
+    table=None, max_value=0xFFFF, included_obfuscations=None, as_characters=False, with_digits=False, extra_escape=None
+):
     r"""
     For MS search: Returns a regular expression character class of all the characters in the provided translation table.
     :param table:            The table to operate upon. Defaults to translate_table.
@@ -233,12 +244,20 @@ def table_as_ms_search_regex(table=None, max_value=0xffff, included_obfuscations
     """
     hex_prefix = r'\\x{' if extra_escape else r'\x{'
     prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
-    return table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='}', max_value=max_value,
-                          included_obfuscations=included_obfuscations, as_characters=as_characters)
+    return table_as_regex(
+        table=table,
+        prefix=prefix,
+        hex_prefix=hex_prefix,
+        hex_sufix='}',
+        max_value=max_value,
+        included_obfuscations=included_obfuscations,
+        as_characters=as_characters,
+    )
 
 
-def table_as_ms_regexp_regex(table=None, max_value=0xffff, included_obfuscations=None, as_characters=False,
-                             with_digits=False, extra_escape=None):
+def table_as_ms_regexp_regex(
+    table=None, max_value=0xFFFF, included_obfuscations=None, as_characters=False, with_digits=False, extra_escape=None
+):
     r"""
     For MS Regexp: Returns a regular expression character set of all the characters in the provided translation table.
     :param table:            The table to operate upon. Defaults to translate_table.
@@ -251,12 +270,26 @@ def table_as_ms_regexp_regex(table=None, max_value=0xffff, included_obfuscations
     """
     hex_prefix = r'\\u' if extra_escape else r'\u'
     prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
-    return table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='', max_value=max_value,
-                          included_obfuscations=included_obfuscations, zero_padding=4, as_characters=as_characters)
+    return table_as_regex(
+        table=table,
+        prefix=prefix,
+        hex_prefix=hex_prefix,
+        hex_sufix='',
+        max_value=max_value,
+        included_obfuscations=included_obfuscations,
+        zero_padding=4,
+        as_characters=as_characters,
+    )
 
 
-def table_as_sd_regex(table=None, max_value=0xffffffff, included_obfuscations=None, as_characters=False,
-                      with_digits=False, extra_escape=None):
+def table_as_sd_regex(
+    table=None,
+    max_value=0xFFFFFFFF,
+    included_obfuscations=None,
+    as_characters=False,
+    with_digits=False,
+    extra_escape=None,
+):
     r"""
     For SD regex: Returns a regular expression character set of all the characters in the provided translation table.
     :param table:            The table to operate upon. Defaults to translate_table.
@@ -269,9 +302,16 @@ def table_as_sd_regex(table=None, max_value=0xffffffff, included_obfuscations=No
     """
     hex_prefix = r'\\U' if extra_escape else r'\U'
     prefix = get_prefix_with_digit_and_extra_escape(with_digits, extra_escape)
-    long_u_escape = table_as_regex(table=table, prefix=prefix, hex_prefix=hex_prefix, hex_sufix='', max_value=max_value,
-                                   included_obfuscations=included_obfuscations, zero_padding=8,
-                                   as_characters=as_characters)
+    long_u_escape = table_as_regex(
+        table=table,
+        prefix=prefix,
+        hex_prefix=hex_prefix,
+        hex_sufix='',
+        max_value=max_value,
+        included_obfuscations=included_obfuscations,
+        zero_padding=8,
+        as_characters=as_characters,
+    )
     # The regex package does its own parsing of escapes, even on the replace-with string. So, the extra escape on
     # the '\\u' is needed, just like it is on the '\\U' in the regex pattern.
     return regex.sub(r'\\U0000(?=[\dA-Fa-f]{4})', r'\\u', long_u_escape)
