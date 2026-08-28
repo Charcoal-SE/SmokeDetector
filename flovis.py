@@ -1,11 +1,13 @@
 # coding=utf-8
-import websocket
+import json
 import socket
 import ssl
-import json
 import time
 import uuid
 from threading import Thread
+
+import websocket
+
 from helpers import log
 
 
@@ -74,7 +76,7 @@ class Flovis:
         if data is not None:
             msg_data['data'] = data
 
-        for retries in range(1, 5):
+        for retries in range(1, 6):
             try:
                 if self.ws is not None:
                     self.ws.send(json.dumps(msg_data))

@@ -1,29 +1,30 @@
 # coding=utf-8
+import importlib
 import os
+import platform
+import sqlite3
 import sys
+import threading
+import time
 import traceback
 from datetime import datetime, timezone
-import time
-import importlib
-import threading
+from glob import glob
+from threading import Thread
+from urllib.parse import quote, quote_plus
+
+import regex
+import requests
+import websocket
+from termcolor import colored
+
+from globalvars import GlobalVars
+
 # termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
-import platform
 platform_text = platform.platform().lower()
 if 'windows' in platform_text and 'cygwin' not in platform_text:
     from colorama import init as colorama_init
+
     colorama_init()
-from glob import glob
-import sqlite3
-from urllib.parse import quote, quote_plus
-from threading import Thread
-
-from termcolor import colored
-import requests
-import regex
-from regex.regex import _compile as regex_raw_compile
-import websocket
-
-from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):
@@ -40,6 +41,7 @@ def exit_mode(*args, code=0):
 
     # Flush any buffered queue timing data
     import datahandling  # this must not be a top-level import in order to avoid a circular import
+
     try:
         datahandling.flush_queue_timings_data()
     except Exception:
@@ -81,10 +83,11 @@ class ErrorLogs:
     if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
         # Table 'error_logs' doesn't exist
         try:
-            db.execute("CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT,"
-                       " traceback TEXT)")
+            db.execute(
+                "CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT, traceback TEXT)"
+            )
             db.commit()
-        except (sqlite3.OperationalError):
+        except sqlite3.OperationalError:
             # In CI testing, it's possible for the table to be created in a different thread between when
             # we first test for the table's existence and when we try to create the table.
             if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
@@ -114,8 +117,7 @@ class ErrorLogs:
         message = redact_passwords(message)
         traceback = redact_passwords(traceback)
         db = cls.get_db()
-        db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)",
-                   (time, classname, message, traceback))
+        db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)", (time, classname, message, traceback))
         db.commit()
 
     @classmethod
@@ -132,8 +134,9 @@ class ErrorLogs:
         """
         db = cls.get_db()
         cursor = db.execute(
-            "DELETE FROM error_logs WHERE time IN "
-            "(SELECT time FROM error_logs ORDER BY time DESC LIMIT -1 OFFSET ?)", (int(n),))
+            "DELETE FROM error_logs WHERE time IN (SELECT time FROM error_logs ORDER BY time DESC LIMIT -1 OFFSET ?)",
+            (int(n),),
+        )
         db.commit()
         data = cursor.fetchall()
         return data
@@ -164,9 +167,12 @@ def expand_shorthand_link(s):
 
 def redact_text(text, redact_str, replace_with):
     if redact_str:
-        return text.replace(redact_str, replace_with) \
-                   .replace(quote(redact_str), replace_with) \
-                   .replace(quote_plus(redact_str), replace_with)
+        return (
+            text
+            .replace(redact_str, replace_with)
+            .replace(quote(redact_str), replace_with)
+            .replace(quote_plus(redact_str), replace_with)
+        )
     return text
 
 
@@ -190,7 +196,7 @@ def log(log_level, *args, and_file=False, no_exception=False):
         'info': [1, 'cyan'],
         'warning': [2, 'yellow'],
         'warn': [2, 'yellow'],
-        'error': [3, 'red']
+        'error': [3, 'red'],
     }
 
     level = levels[log_level][0]
@@ -198,9 +204,10 @@ def log(log_level, *args, and_file=False, no_exception=False):
         return
 
     color = levels[log_level][1] if log_level in levels else 'white'
-    log_str = "{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
-                                     color, attrs=['bold']),
-                             redact_passwords("  ".join([str(x) for x in args])))
+    log_str = "{} {}".format(
+        colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]), color, attrs=['bold']),
+        redact_passwords("  ".join([str(x) for x in args])),
+    )
     print(log_str, file=sys.stderr)
 
     if level == 3 and not no_exception:
@@ -221,8 +228,11 @@ def log_file(log_level, *args):
     if levels[log_level] < Helpers.min_log_level:
         return
 
-    log_str = redact_passwords("[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
-                                                    log_level.upper(), "  ".join([str(x) for x in args])))
+    log_str = redact_passwords(
+        "[{}] {}: {}".format(
+            datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(), "  ".join([str(x) for x in args])
+        )
+    )
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
 
@@ -294,12 +304,12 @@ core_files = {
     "spamhandling.py",
     "tasks.py",
     "ws.py",
-
+    #
     "classes/feedback.py",
     "_Git_Windows.py",
     "classes/__init__.py",
-    "classes/_Post.py",
-
+    "classes/post.py",
+    #
     # Before these are made reloadable
     "rooms.yml",
 }
@@ -382,13 +392,18 @@ def blacklist_integrity_check():
                         except Exception:
                             (exctype, value, traceback_or_message) = sys.exc_info()
                             exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
-                            errors.append("{0}:{1}:Regex fails to compile:r'''{2}''':{3}".format(bl_file, lineno,
-                                                                                                 line.rstrip('\n'),
-                                                                                                 exception_only))
+                            errors.append(
+                                "{0}:{1}:Regex fails to compile:r'''{2}''':{3}".format(
+                                    bl_file, lineno, line.rstrip('\n'), exception_only
+                                )
+                            )
                     line = pcre_comment.sub("", line)
                     if line in seen:
-                        errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
-                            bl_file, lineno, line.rstrip('\n'), seen[line]))
+                        errors.append(
+                            '{0}:{1}:Duplicate entry {2} (also {3})'.format(
+                                bl_file, lineno, line.rstrip('\n'), seen[line]
+                            )
+                        )
                     else:
                         seen[line] = '{0}:{1}'.format(bl_file, lineno)
                     previous_line = line
@@ -411,7 +426,7 @@ def chunk_list(list_in, chunk_size):
     """
     Split a list into chunks.
     """
-    return [list_in[i:i + chunk_size] for i in range(0, len(list_in), chunk_size)]
+    return [list_in[i : i + chunk_size] for i in range(0, len(list_in), chunk_size)]
 
 
 class SecurityError(Exception):
@@ -438,9 +453,11 @@ def add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, should_
     source_text = ""
     if source:
         source_text = " from {}".format(source)
-    t = Thread(name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
-               target=GlobalVars.bodyfetcher.add_to_queue,
-               args=(hostname, question_id, should_check_site, source))
+    t = Thread(
+        name="bodyfetcher post enqueuing: {}/{}{}".format(hostname, question_id, source_text),
+        target=GlobalVars.bodyfetcher.add_to_queue,
+        args=(hostname, question_id, should_check_site, source),
+    )
     t.start()
 
 
@@ -488,7 +505,7 @@ def convert_new_scan_to_spam_result_if_new_reasons(new_info, old_info, match_ign
 
 
 def regex_compile_no_cache(regex_text, flags=0, ignore_unused=False, **kwargs):
-    return regex_raw_compile(regex_text, flags, ignore_unused, kwargs, False)
+    return regex.compile(regex_text, flags, ignore_unused, cache_pattern=False, **kwargs)
 
 
 def color(text, color, attrs=None):
@@ -535,6 +552,7 @@ def get_se_api_url_for_route(route):
 
 def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_time):
     from chatcommunicate import tell_rooms_with
+
     current_time = time.time()
     exception_only = ''.join(traceback.format_exception_only(type(exception), exception)).strip()
     exception_message = "{}: {} WebSocket: Recovered from `{}`".format(GlobalVars.location, which_ws, exception_only)
@@ -549,7 +567,7 @@ def tell_debug_rooms_recovered_websocket(which_ws, exception, connect_time, hb_t
     timestamp = "[{} UTC]: ".format(datetime.now(timezone.utc).isoformat()[0:19])
     message_without_timestamp = exception_message + time_from_connect_message + time_from_hb_message
     log('debug', message_without_timestamp)
-    tell_rooms_with('debug', timestamp + message_without_timestamp)
+    tell_rooms_with('debugwebsocket', timestamp + message_without_timestamp)
 
 
 def recover_websocket(which_ws, ws, exception, connect_time, hb_time):

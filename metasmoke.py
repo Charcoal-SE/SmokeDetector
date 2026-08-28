@@ -1,36 +1,46 @@
 # coding=utf-8
-import json
-import requests
 import importlib  # for .reload()
-from globalvars import GlobalVars
+import json
+import os
+import subprocess as sp
+import sys
 import threading
-# noinspection PyPackageRequirements
-import websocket
+import time
+import traceback
+
 try:
     from collections.abc import Iterable
 except ImportError:
     from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
-from regex import sub
-import sys
-import traceback
-import time
-import os
-import subprocess as sp
-import datahandling
-import parsing
-import apigetpost
-import spamhandling
-import classes
-import chatcommunicate
-from helpers import log, exit_mode, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_modules, log_current_exception
-from gitmanager import GitManager
-import findspam
-from socketscience import SocketScience
-import metasmoke_cache
 
+import requests
+
+# noinspection PyPackageRequirements
+import websocket
+from regex import sub
+
+import apigetpost
+import chatcommunicate
+import classes
+import datahandling
+import findspam
+import metasmoke_cache
+import parsing
+import spamhandling
+from gitmanager import GitManager
+from globalvars import GlobalVars
+from helpers import (
+    blacklist_integrity_check,
+    exit_mode,
+    log,
+    log_current_exception,
+    only_blacklists_changed,
+    only_modules_changed,
+    reload_modules,
+)
+from socketscience import SocketScience
 
 MS_WEBSOCKET_LONG_INTERVAL = 60
 MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL = 5
@@ -53,7 +63,8 @@ class Metasmoke:
     ms_ajax_queue = []
 
     class AutoSwitch:
-        """ Automatically switch metasmoke status """
+        """Automatically switch metasmoke status"""
+
         MAX_FAILURES = 10  # More than 10 failures == ms down
         MAX_SUCCESSES = 1  # More than 1 success == ms up
         ping_failure_counter = 0  # Negative values indicate consecutive successes
@@ -62,7 +73,7 @@ class Metasmoke:
 
         @staticmethod
         def ping_failed():
-            """ Indicate a metasmoke status ping connection failure """
+            """Indicate a metasmoke status ping connection failure"""
             with Metasmoke.AutoSwitch.rw_lock:
                 if Metasmoke.AutoSwitch.ping_failure_counter < 0:
                     # Consecutive counter. Switch sign.
@@ -71,18 +82,23 @@ class Metasmoke:
                 current_counter = Metasmoke.AutoSwitch.ping_failure_counter
                 current_auto = Metasmoke.AutoSwitch.autoswitch_is_on
             # MAX_FAILURES is constant so no lock.
-            if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and\
-               GlobalVars.MSStatus.is_up() and current_auto:
-                log("warning", "Last {} connection(s) to metasmoke failed".format(current_counter) +
-                               " Setting metasmoke status to down.")
-                chatcommunicate.tell_rooms_with("debug", "**Warning**: {}: ".format(GlobalVars.location) +
-                                                         "Last {} connection(s) to metasmoke".format(current_counter) +
-                                                         " failed. Setting metasmoke status to **down**.")
+            if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and GlobalVars.MSStatus.is_up() and current_auto:
+                log(
+                    "warning",
+                    "Last {} connection(s) to metasmoke failed".format(current_counter)
+                    + " Setting metasmoke status to down.",
+                )
+                chatcommunicate.tell_rooms_with(
+                    "debug",
+                    "**Warning**: {}: ".format(GlobalVars.location)
+                    + "Last {} connection(s) to metasmoke".format(current_counter)
+                    + " failed. Setting metasmoke status to **down**.",
+                )
                 Metasmoke.set_ms_down(tell=False)
 
         @staticmethod
         def ping_succeeded():
-            """ Indicate a metasmoke status ping connection success """
+            """Indicate a metasmoke status ping connection success"""
             with Metasmoke.AutoSwitch.rw_lock:
                 if Metasmoke.AutoSwitch.ping_failure_counter > 0:
                     # Consecutive counter. Switch sign.
@@ -92,19 +108,24 @@ class Metasmoke:
                 current_counter = -Metasmoke.AutoSwitch.ping_failure_counter
                 current_auto = Metasmoke.AutoSwitch.autoswitch_is_on
             # MAX_SUCCESSES is constant so no lock.
-            if current_counter > Metasmoke.AutoSwitch.MAX_SUCCESSES and\
-               GlobalVars.MSStatus.is_down() and current_auto:
+            if current_counter > Metasmoke.AutoSwitch.MAX_SUCCESSES and GlobalVars.MSStatus.is_down() and current_auto:
                 # Why use warning? Because some action may be needed if people don't think metasmoke is up.
-                log("warning", "Last {} connection(s) to metasmoke succeeded".format(current_counter) +
-                               " Setting metasmoke status to up.")
-                chatcommunicate.tell_rooms_with("debug", "**Notice**: {}: ".format(GlobalVars.location) +
-                                                         "Last {} connection(s) to metasmoke".format(current_counter) +
-                                                         " succeeded. Setting metasmoke status to **up**.")
+                log(
+                    "warning",
+                    "Last {} connection(s) to metasmoke succeeded".format(current_counter)
+                    + " Setting metasmoke status to up.",
+                )
+                chatcommunicate.tell_rooms_with(
+                    "debug",
+                    "**Notice**: {}: ".format(GlobalVars.location)
+                    + "Last {} connection(s) to metasmoke".format(current_counter)
+                    + " succeeded. Setting metasmoke status to **up**.",
+                )
                 Metasmoke.set_ms_up(tell=False)
 
         @staticmethod
         def enable_autoswitch(to_enable):
-            """ Enable or disable auto status switch """
+            """Enable or disable auto status switch"""
             switch_auto_msg = ""
             with Metasmoke.AutoSwitch.rw_lock:
                 if Metasmoke.AutoSwitch.autoswitch_is_on is not to_enable:
@@ -118,20 +139,20 @@ class Metasmoke:
 
         @staticmethod
         def get_ping_failure():
-            """ Get ping failure count. Negative number is ping success count. """
+            """Get ping failure count. Negative number is ping success count."""
             with Metasmoke.AutoSwitch.rw_lock:
                 return Metasmoke.AutoSwitch.ping_failure_counter
 
         @staticmethod
         def reset_switch():
-            """ Reset class Metasmoke.AutoSwitch to default values """
+            """Reset class Metasmoke.AutoSwitch to default values"""
             with Metasmoke.AutoSwitch.rw_lock:
                 Metasmoke.AutoSwitch.ping_failure_counter = 0
                 Metasmoke.AutoSwitch.autoswitch_is_on = True
 
     @staticmethod
     def set_ms_up(tell=True):
-        """ Switch metasmoke status to up """
+        """Switch metasmoke status to up"""
         # We must first set metasmoke to up, then say that metasmoke is up, not the other way around.
         ms_msg = ""
         if GlobalVars.MSStatus.is_down():
@@ -145,7 +166,7 @@ class Metasmoke:
 
     @staticmethod
     def set_ms_down(tell=True):
-        """ Switch metasmoke status to down """
+        """Switch metasmoke status to down"""
         ms_msg = ""
         if GlobalVars.MSStatus.is_up():
             ms_msg = "Metasmoke status: set to down."
@@ -158,11 +179,13 @@ class Metasmoke:
 
     @staticmethod
     def connect_websocket():
-        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                              origin=GlobalVars.metasmoke_host)
-        payload = json.dumps({"command": "subscribe",
-                              "identifier": "{\"channel\":\"SmokeDetectorChannel\","
-                              "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
+        GlobalVars.metasmoke_ws = websocket.create_connection(
+            GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host
+        )
+        payload = json.dumps({
+            "command": "subscribe",
+            "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}",
+        })
         GlobalVars.metasmoke_ws.send(payload)
         GlobalVars.metasmoke_ws.settimeout(10)
 
@@ -194,10 +217,10 @@ class Metasmoke:
                 if not has_succeeded:
                     failed_connection_attempts += 1
                     if failed_connection_attempts == MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
-                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket."
-                                                                 " Continuing to retry at longer intervals.")
-                        log('warning', "Cannot initiate MS websocket."
-                                       " Continuing to retry at longer intervals.")
+                        chatcommunicate.tell_rooms_with(
+                            "debug", "Cannot initiate MS websocket. Continuing to retry at longer intervals."
+                        )
+                        log('warning', "Cannot initiate MS websocket. Continuing to retry at longer intervals.")
                     if failed_connection_attempts >= MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
                         time.sleep(MS_WEBSOCKET_LONG_INTERVAL)
                     else:
@@ -221,19 +244,28 @@ class Metasmoke:
             # Temporarily allow this to be handled by the MS relay instance
             return
             from_ms = message['message']
-            if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
-                                   " continuous-integration/travis-ci/push")):
-                from_ms = from_ms.replace(": ",
-                                          ", or the [SD wiki](//t.ly/AqjA)"
-                                          " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
+            if from_ms.startswith(
+                "[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
+                " continuous-integration/travis-ci/push"
+            ):
+                from_ms = from_ms.replace(
+                    ": ",
+                    ", or the [SD wiki](//github.com/Charcoal-SE/SmokeDetector)"
+                    " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ",
+                    1,
+                )
             # Use protocol-relative links
             from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)
             chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "autoflag_fp" in message:
             event = message["autoflag_fp"]
 
-            chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
-                                       ("no-site-" + event["site"],), notify_site="/autoflag_fp")
+            chatcommunicate.tell_rooms(
+                event["message"],
+                ("debug", "site-" + event["site"]),
+                ("no-site-" + event["site"],),
+                notify_site="/autoflag_fp",
+            )
         elif "exit" in message:
             exit_mode(code=message["exit"])
         elif "blacklist" in message:
@@ -252,22 +284,26 @@ class Metasmoke:
             datahandling.add_false_positive(post_site_id[0:2])
         elif "report" in message:
             import chatcommands  # Do it here
-            chatcommands.report_posts([message["report"]["post_link"]], message["report"]["user"],
-                                      True, "the metasmoke API")
+
+            chatcommands.report_posts(
+                [message["report"]["post_link"]], message["report"]["user"], True, "the metasmoke API"
+            )
         elif "deploy_updated" in message:
             return  # Disabled
             sha = message["deploy_updated"]["head_commit"]["id"]
             if sha != os.popen('git log -1 --pretty="%H"').read():
                 if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                     if only_blacklists_changed(GitManager.get_remote_diff()):
-                        commit_md = "[`{0}`](https://github.com/{1}/commit/{0})" \
-                                    .format(sha[:7], GlobalVars.bot_repo_slug)
+                        commit_md = "[`{0}`](https://github.com/{1}/commit/{0})".format(
+                            sha[:7], GlobalVars.bot_repo_slug
+                        )
                         integrity = blacklist_integrity_check()
                         if len(integrity) == 0:  # No issues
                             GitManager.pull_remote()
                             findspam.reload_blacklists()
-                            chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
-                                                            " reloaded.".format(commit_md))
+                            chatcommunicate.tell_rooms_with(
+                                "debug", "No code modified in {0}, only blacklists reloaded.".format(commit_md)
+                            )
                         else:
                             integrity.append("please fix before pulling.")
                             chatcommunicate.tell_rooms_with("debug", ", ".join(integrity))
@@ -279,11 +315,17 @@ class Metasmoke:
                 return  # Same rev, or earlier rev (e.g. when watching things faster than CI completes), nothing to do
 
             if c["status"] == "success":
-                if "autopull" in c["commit_message"] or c["commit_message"].startswith("!") or \
-                        c["commit_message"].startswith("Auto "):
-                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/" \
+                if (
+                    "autopull" in c["commit_message"]
+                    or c["commit_message"].startswith("!")
+                    or c["commit_message"].startswith("Auto ")
+                ):
+                    s = (
+                        "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/"
                         "commit/{commit_sha}) succeeded. Message contains 'autopull', pulling...".format(
-                            ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
+                            ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha
+                        )
+                    )
                     remote_diff = GitManager.get_remote_diff()
                     if only_blacklists_changed(remote_diff):
                         GitManager.pull_remote()
@@ -308,13 +350,16 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                         exit_mode("pull_update")
                 else:
-                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
+                    s = (
+                        "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) "
                         "succeeded.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
+                    )
 
                     chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
             elif c["status"] == "failure":
-                s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
-                    "failed.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
+                s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) failed.".format(
+                    ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha
+                )
 
                 chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
         elif "everything_is_broken" in message:
@@ -336,28 +381,45 @@ class Metasmoke:
         datahandling.store_ms_ajax_queue()
 
     @staticmethod
-    def send_stats_on_post(title, link, reasons, body, markdown, username, user_link, why, owner_rep,
-                           post_score, up_vote_count, down_vote_count, ms_ajax_timestamp=0):
+    def send_stats_on_post(
+        title,
+        link,
+        reasons,
+        body,
+        markdown,
+        username,
+        user_link,
+        why,
+        owner_rep,
+        post_score,
+        up_vote_count,
+        down_vote_count,
+        ms_ajax_timestamp=0,
+    ):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Would have reported post to metasmoke, but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            Metasmoke.add_call_to_metasmoke_queue("send_stats_on_post", ms_ajax_timestamp, {
-                "kwargs": {
-                    "title": title,
-                    "link": link,
-                    "reasons": reasons,
-                    "body": body,
-                    "markdown": markdown,
-                    "username": username,
-                    "user_link": user_link,
-                    "why": why,
-                    "owner_rep": owner_rep,
-                    "post_score": post_score,
-                    "up_vote_count": up_vote_count,
-                    "down_vote_count": down_vote_count,
-                }
-            })
+            Metasmoke.add_call_to_metasmoke_queue(
+                "send_stats_on_post",
+                ms_ajax_timestamp,
+                {
+                    "kwargs": {
+                        "title": title,
+                        "link": link,
+                        "reasons": reasons,
+                        "body": body,
+                        "markdown": markdown,
+                        "username": username,
+                        "user_link": user_link,
+                        "why": why,
+                        "owner_rep": owner_rep,
+                        "post_score": post_score,
+                        "up_vote_count": up_vote_count,
+                        "down_vote_count": down_vote_count,
+                    }
+                },
+            )
             log('warning', "Metasmoke down, not sending stats now, but queued it for later.")
             return
 
@@ -367,10 +429,20 @@ class Metasmoke:
             if len(why) > 4096:
                 why = why[:2048] + ' ... ' + why[-2043:]  # Basic maths
 
-            post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'markdown': markdown,
-                    'username': username, 'user_link': user_link,
-                    'why': why, 'user_reputation': owner_rep, 'score': post_score,
-                    'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
+            post = {
+                'title': title,
+                'link': link,
+                'reasons': reasons,
+                'body': body,
+                'markdown': markdown,
+                'username': username,
+                'user_link': user_link,
+                'why': why,
+                'user_reputation': owner_rep,
+                'score': post_score,
+                'upvote_count': up_vote_count,
+                'downvote_count': down_vote_count,
+            }
 
             # Remove None values (if they somehow manage to get through)
             post = {k: v for k, v in post.items() if v}
@@ -387,15 +459,19 @@ class Metasmoke:
             log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            Metasmoke.add_call_to_metasmoke_queue("send_feedback_for_post", ms_ajax_timestamp, {
-                "kwargs": {
-                    "post_link": post_link,
-                    "feedback_type": feedback_type,
-                    "user_name": user_name,
-                    "user_id": user_id,
-                    "chat_host": chat_host,
-                }
-            })
+            Metasmoke.add_call_to_metasmoke_queue(
+                "send_feedback_for_post",
+                ms_ajax_timestamp,
+                {
+                    "kwargs": {
+                        "post_link": post_link,
+                        "feedback_type": feedback_type,
+                        "user_name": user_name,
+                        "user_id": user_id,
+                        "chat_host": chat_host,
+                    }
+                },
+            )
             log('warning', "Metasmoke is down, not sending feedback now, but queued it for later.")
             return
 
@@ -408,9 +484,9 @@ class Metasmoke:
                     'chat_user_id': user_id,
                     'chat_host': chat_host,
                     'feedback_type': feedback_type,
-                    'post_link': post_link
+                    'post_link': post_link,
                 },
-                'key': metasmoke_key
+                'key': metasmoke_key,
             }
 
             headers = {'Content-type': 'application/json'}
@@ -425,25 +501,23 @@ class Metasmoke:
             log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
             return
         elif GlobalVars.MSStatus.is_down():
-            Metasmoke.add_call_to_metasmoke_queue("send_deletion_stats_for_post", ms_ajax_timestamp, {
-                "kwargs": {
-                    "post_link": post_link,
-                    "is_deleted": is_deleted,
-                }
-            })
+            Metasmoke.add_call_to_metasmoke_queue(
+                "send_deletion_stats_for_post",
+                ms_ajax_timestamp,
+                {
+                    "kwargs": {
+                        "post_link": post_link,
+                        "is_deleted": is_deleted,
+                    }
+                },
+            )
             log('warning', "Metasmoke is down, not sending deletion stats now, but queued it for later.")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {
-                'deletion_log': {
-                    'is_deleted': is_deleted,
-                    'post_link': post_link
-                },
-                'key': metasmoke_key
-            }
+            payload = {'deletion_log': {'is_deleted': is_deleted, 'post_link': post_link}, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
             Metasmoke.post("/deletion_logs.json", data=json.dumps(payload), headers=headers)
@@ -456,10 +530,7 @@ class Metasmoke:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
         elif GlobalVars.MSStatus.is_down():
-            payload = {
-                "location": GlobalVars.location,
-                "timestamp": time.time()
-            }
+            payload = {"location": GlobalVars.location, "timestamp": time.time()}
             SocketScience.send(payload)
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -468,12 +539,13 @@ class Metasmoke:
             payload = {
                 'location': GlobalVars.location,
                 'key': metasmoke_key,
-                'standby': GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
+                'standby': GlobalVars.standby_mode or GlobalVars.no_se_activity_scan,
             }
 
             headers = {'content-type': 'application/json'}
-            response = Metasmoke.post("/status-update.json",
-                                      data=json.dumps(payload), headers=headers, ignore_down=True)
+            response = Metasmoke.post(
+                "/status-update.json", data=json.dumps(payload), headers=headers, ignore_down=True
+            )
 
             try:
                 response = response.json()
@@ -482,18 +554,21 @@ class Metasmoke:
                     log('info', "Received pull command from MS ping response")
                     exit_mode("pull_update")
 
-                if ('failover' in response and GlobalVars.standby_mode and not GlobalVars.no_se_activity_scan):
+                if 'failover' in response and GlobalVars.standby_mode and not GlobalVars.no_se_activity_scan:
                     # If we're not scanning, then we don't want to become officially active due to failover.
                     if response['failover']:
                         GlobalVars.standby_mode = False
 
-                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal."
-                                                        + GlobalVars.additional_failover_text,
-                                                        notify_site="/failover")
+                        chatcommunicate.tell_rooms_with(
+                            "debug",
+                            GlobalVars.location + " received failover signal." + GlobalVars.additional_failover_text,
+                            notify_site="/failover",
+                        )
 
                 if response.get('standby', False):
-                    chatcommunicate.tell_rooms_with("debug",
-                                                    GlobalVars.location + " entering metasmoke-forced standby.")
+                    chatcommunicate.tell_rooms_with(
+                        "debug", GlobalVars.location + " entering metasmoke-forced standby."
+                    )
                     time.sleep(2)
                     exit_mode("standby")
 
@@ -515,8 +590,9 @@ class Metasmoke:
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
         try:
-            response = Metasmoke.get("/api/users/code_privileged",
-                                     data=json.dumps(payload), headers=headers).json()['items']
+            response = Metasmoke.get("/api/users/code_privileged", data=json.dumps(payload), headers=headers).json()[
+                'items'
+            ]
         except Exception as e:
             log('error', e)
             return
@@ -540,7 +616,7 @@ class Metasmoke:
         payload = {
             'key': GlobalVars.metasmoke_key,
             'filter': 'GFGJGHFMHGOLMMJMJJJGHIGOMKFKKILF',  # id and autoflagged
-            'urls': post_url
+            'urls': post_url,
         }
         try:
             response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
@@ -567,8 +643,7 @@ class Metasmoke:
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
 
-        Metasmoke.post("/flagging/smokey_disable",
-                       data=json.dumps(payload), headers=headers)
+        Metasmoke.post("/flagging/smokey_disable", data=json.dumps(payload), headers=headers)
 
     @staticmethod
     def send_statistics():
@@ -581,9 +656,10 @@ class Metasmoke:
         GlobalVars.apiquota_rw_lock.release()
 
         posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stats_for_ms(reset=True)
-        payload = {'key': GlobalVars.metasmoke_key,
-                   'statistic': {'posts_scanned': posts_scanned,
-                                 'api_quota': current_apiquota}}
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'statistic': {'posts_scanned': posts_scanned, 'api_quota': current_apiquota},
+        }
         if posts_per_second:
             # Send scan rate as well, if applicable.
             payload['statistic']['post_scan_rate'] = posts_per_second
@@ -592,11 +668,14 @@ class Metasmoke:
 
         if GlobalVars.metasmoke_host is not None:
             log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
-            Metasmoke.post("/statistics.json",
-                           data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/statistics.json", data=json.dumps(payload), headers=headers)
         else:
-            log('info', 'Would have sent statistics to metasmoke, but metasmoke_host is undefined.'
-                        ' Ignoring. Stats would have been: ', payload['statistic'])
+            log(
+                'info',
+                'Would have sent statistics to metasmoke, but metasmoke_host is undefined.'
+                ' Ignoring. Stats would have been: ',
+                payload['statistic'],
+            )
 
     @staticmethod
     def post_auto_comment(msg, user, url=None, ids=None):
@@ -623,10 +702,12 @@ class Metasmoke:
 
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
-            params = {"key": GlobalVars.metasmoke_key,
-                      "text": msg[:1].upper() + msg[1:],  # Capitalise the first letter of the comment
-                      "chat_user_id": user.id,
-                      "chat_host": user._client.host}
+            params = {
+                "key": GlobalVars.metasmoke_key,
+                "text": msg[:1].upper() + msg[1:],  # Capitalise the first letter of the comment
+                "chat_user_id": user.id,
+                "chat_host": user._client.host,
+            }
 
             Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
 
@@ -638,7 +719,7 @@ class Metasmoke:
         payload = {
             'key': GlobalVars.metasmoke_key,
             'filter': 'GHOOIJGNLKHIIOIKGILKIJGHFMNKKGFJ',  # posts.id, posts.body, posts.created_at
-            'urls': parsing.to_protocol_relative(post_url)
+            'urls': parsing.to_protocol_relative(post_url),
         }
         try:
             response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
@@ -648,8 +729,10 @@ class Metasmoke:
             log('error', '{}: {}'.format(type(e).__name__, e))
             log_current_exception()
             exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
-            chatcommunicate.tell_rooms_with("debug", "{}: In getting MS post information, recovered from `{}`"
-                                                     .format(GlobalVars.location, exception_only))
+            chatcommunicate.tell_rooms_with(
+                "debug",
+                "{}: In getting MS post information, recovered from `{}`".format(GlobalVars.location, exception_only),
+            )
             return None
 
         return response['items']
@@ -697,8 +780,9 @@ class Metasmoke:
                 if method is requests.post and url not in Metasmoke.MS_URLS_TO_NOT_QUEUE:
                     # This is a POST. It's failed, and this is not a URL to which we care to send later.
                     kwargs['ignore_down'] = ignore_down
-                    Metasmoke.add_call_to_metasmoke_queue("post", ms_ajax_timestamp,
-                                                          {"args": tuple([url]) + args, "kwargs": kwargs})
+                    Metasmoke.add_call_to_metasmoke_queue(
+                        "post", ms_ajax_timestamp, {"args": tuple([url]) + args, "kwargs": kwargs}
+                    )
                     log('warning', "A POST to metasmoke URL: {} failed. It has been queued for later.".format(url))
                 # No need to log here because it's re-raised
                 raise  # Maintain minimal difference to the original get/post methods
@@ -709,6 +793,7 @@ class Metasmoke:
                     Metasmoke.AutoSwitch.ping_succeeded()
 
             return response
+
         return func
 
     get = request_sender.__func__(requests.get)
@@ -717,8 +802,9 @@ class Metasmoke:
     @staticmethod
     def send_status_ping_and_verify_scanning_if_active():
         def reboot_or_standby(action):
-            error_message = "There's been no scan activity for {} status pings. Going to {}." \
-                            .format(Metasmoke.status_pings_since_scan_activity, action)
+            error_message = "There's been no scan activity for {} status pings. Going to {}.".format(
+                Metasmoke.status_pings_since_scan_activity, action
+            )
             log('error', error_message)
             chatcommunicate.tell_rooms_with("debug", error_message)
             if action == "standby":
@@ -747,8 +833,11 @@ class Metasmoke:
                     reboot_or_standby("standby")
                 elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REPORT:
                     # Something might be wrong. Let people in debug rooms know.
-                    status_message = "There's been no scan activity for {} status pings. There may be a problem." \
-                                     .format(Metasmoke.status_pings_since_scan_activity)
+                    status_message = (
+                        "There's been no scan activity for {} status pings. There may be a problem.".format(
+                            Metasmoke.status_pings_since_scan_activity
+                        )
+                    )
                     log('warning', status_message)
                     chatcommunicate.tell_rooms_with("debug", status_message)
             else:

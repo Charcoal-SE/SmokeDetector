@@ -1,7 +1,8 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-import phone_numbers
 import pytest
+
+import phone_numbers
 
 
 @pytest.mark.parametrize("text, expected_unprocessed, expected_normalized, expected_deobfuscated", [

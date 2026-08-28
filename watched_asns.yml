@@ -7,10 +7,12 @@ items:
   disable: true
 - asn: '3595'
 - asn: '8455'
+- asn: '8650'
 - asn: '8622'
 - asn: '9498'
 - asn: '11042'
 - asn: '12488'
+- asn: '14670'
 - asn: '16509'
   comment: FPs; do not watch
   disable: true
@@ -30,6 +32,7 @@ items:
 - asn: '20013'
   comment: FPs; do not watch
   disable: true
+- asn: '20454'
 - asn: '21501'
 - asn: '22611'
 - asn: '22612'
@@ -42,6 +45,8 @@ items:
 - asn: '24778'
 - asn: '25369'
 - asn: '25697'
+  comment: over two years since previous 1-weight TP
+  disable: true
 - asn: '26496'
   comment: Massive FPs; do not watch
   disable: true
@@ -50,6 +55,7 @@ items:
 - asn: '29066'
 - asn: '29073'
 - asn: '29802'
+- asn: '30083'
 - asn: '31083'
   comment: 21/97 over a year
   disable: true
@@ -101,7 +107,10 @@ items:
   comment: 4/24 over 10 months
   disable: true
 - asn: '46475'
+  comment: 61/239 over 2 years; no 1-weight reports
+  disable: true
 - asn: '46844'
+- asn: '46874'
 - asn: '47583'
 - asn: '48254'
 - asn: '49335'
@@ -165,6 +174,7 @@ items:
 - asn: '137035'
 - asn: '138152'
 - asn: '138246'
+- asn: '139035'
 - asn: '140576'
 - asn: '140641'
 - asn: '140979'
@@ -180,6 +190,7 @@ items:
   disable: true
 - asn: '203020'
 - asn: '203226'
+- asn: '204196'
 - asn: '204213'
 - asn: '204601'
 - asn: '206349'

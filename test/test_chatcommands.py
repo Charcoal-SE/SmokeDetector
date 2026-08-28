@@ -1,27 +1,28 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-import chatcommunicate  # coverage
-import chatcommands
-from apigetpost import api_get_post
-from parsing import to_protocol_relative
-from classes._Post import Post
-from globalvars import GlobalVars
-from datahandling import remove_pickle
-
 import datetime
 import os
+import types
+from unittest.mock import Mock, patch
+
 import pytest
 import regex
-import types
 import requests
+from fake import Fake
+
+import chatcommands
+import chatcommunicate  # coverage
+from apigetpost import api_get_post
+from classes.post import Post
+from datahandling import remove_pickle
+from globalvars import GlobalVars
+from parsing import to_protocol_relative
+
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
     from _Git_Windows import git
 else:
     from sh.contrib import git
-
-from fake import Fake
-from unittest.mock import patch
 
 
 def rewrap_for_paramiterized_test_bisect():
@@ -383,18 +384,32 @@ def test_reject(monkeypatch):
     })
     msg.room._client = msg._client
 
+    def mock_get_pull_request_with_pr_id(assert_pr_id):
+        def f(pr_id):
+            assert pr_id == assert_pr_id
+
+            mock_response = Mock(spec=requests.Response)
+            mock_response.json.return_value = {"body": "[VLAZ](https://chat.stackexchange.com/users/162749) requests the watch of the watch_number `9950372060`."}
+            return mock_response
+        return f
+
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
-    assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject").startswith("You need blacklist manager privileges")
+    with monkeypatch.context() as m:
+        # Prevent GitHub API access
+        m.setattr(chatcommands.GitHubManager, "get_pull_request", mock_get_pull_request_with_pr_id(8888))
+        assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject").startswith("You need blacklist manager privileges")
 
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:
         # Oh no GitHub is down
-        original_get = requests.get
         m.setattr("requests.get", lambda *args, **kwargs: None)
         assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject-force") == "Cannot connect to GitHub API"
-        m.setattr("requests.get", original_get)
-    assert chatcommands.reject('2518 "test"', original_msg=msg, alias_used="close").startswith("Please provide")
+
+    with monkeypatch.context() as m:
+        # Prevent GitHub API access
+        m.setattr(chatcommands.GitHubManager, "get_pull_request", mock_get_pull_request_with_pr_id(2518))
+        assert chatcommands.reject('2518 "test"', original_msg=msg, alias_used="close").startswith("Please provide")
 
 
 @patch("chatcommands.handle_spam")

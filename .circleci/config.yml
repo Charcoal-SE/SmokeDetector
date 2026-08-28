@@ -2,19 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/python:3.8
+      - image: cimg/python:3.11
     branches:
       ignore: deploy
     steps:
       - restore_cache:
           # Restore a basic .git to prevent needing to download the whole thing.
           keys:
-            - git-cimg-python3.8-{{ .Branch }}
-            - git-cimg-python3.8
+            - git-cimg-python3.11-{{ .Branch }}
+            - git-cimg-python3.11
             - git
       - checkout
       - save_cache:
-          key: git-cimg-python3.8-{{ .Branch }}
+          key: git-cimg-python3.11-{{ .Branch }}
           paths:
             - ".git"
       - run:
@@ -38,14 +38,8 @@ jobs:
           paths:
             - "/home/circleci/.cache/pip"
       - run:
-          name: Lint ./tests
-          command: python3 -m flake8 --config=tox_tests.ini ./test/
-      - run:
-          name: Lint ./classes
-          command: python3 -m flake8 --config=tox_classes.ini ./classes/
-      - run:
           name: Lint code
-          command: python3 -m flake8 ./
+          command: ruff check
       - run:
           name: Prepare Git for test
           command: |
@@ -55,4 +49,4 @@ jobs:
           name: Pytest
           # Use 5 processes is intended to allow one DNS lookup bound long running test run
           # in parallel with most of the other tests which generally consume more CPU.
-          command: python3 -W default::Warning -m pytest -n 5 --dist loadgroup --timeout=300 test
+          command: python3 -W default::Warning -m pytest -n 5 --dist loadgroup --timeout=300 --durations=10 test

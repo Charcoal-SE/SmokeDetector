@@ -1,11 +1,11 @@
-import dns
-import dns.resolver
-import dns.rdatatype
-
 from typing import List
 
+import dns
+import dns.rdatatype
+import dns.resolver
 
-def dns_resolve(domain: str, records: List[str] = ['A', 'AAAA']) -> list:
+
+def dns_resolve(domain: str, records: list[str] = ['A', 'AAAA']) -> list:
     addrs = []
 
     resolver = dns.resolver.Resolver(configure=False)

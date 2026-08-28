@@ -6,7 +6,7 @@
 [![Open issues](https://img.shields.io/github/issues/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/issues)
 [![Open PRs](https://img.shields.io/github/issues-pr/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/pulls)
 
-Headless chatbot that detects spam and posts it to chatrooms.
+A headless chatbot that detects spam and posts it to chatrooms.
 Uses [ChatExchange](https://github.com/Manishearth/ChatExchange),
 takes questions from the Stack Exchange
 [realtime tab](https://stackexchange.com/questions?tab=realtime),
@@ -14,7 +14,7 @@ and accesses answers via the [Stack Exchange API](https://api.stackexchange.com/
 
 Example [chat post](https://chat.stackexchange.com/transcript/message/43579469):
 
-![Example chat post](https://i.stack.imgur.com/oLyfb.png)
+![Example chat post](https://i.sstatic.net/oLyfb.png)
 
 ## Documentation
 
@@ -35,7 +35,7 @@ sudo pip3 install -r requirements.txt --upgrade
 pip3 install --user -r user_requirements.txt --upgrade
 ```
 
-Next, copy `config.sample` to a new file called `config`,
+Next, copy `config.sample` to a new file named `config`,
 and edit the values required.
 
 To run, use `python3 nocrash.py`
@@ -143,14 +143,17 @@ cpus: 0.5  # Recommend 2.0 or more for spam waves
 
 ## Requirements
 
-SmokeDetector only supports Stack Exchange logins,
-and runs on Python 3.7 or higher,
-for now.
+SmokeDetector only supports Stack Exchange logins.
+
+SmokeDetector supports the Python versions which are in the [supported phase of the Python life cycle](https://devguide.python.org/versions/) (as defined as between "First release" and "End of life"). We run CI testing on that span of versions. SmokeDetector may work on older versions of Python, but we don't support them and may, at any time, write code that prevents use in older, unsupported versions. We know SmokeDetector is broken on Python 3.6 and lower. While we don't support versions that haven't reached "First release", we're not adverse to hearing about changes in new Python versions which will require us to make changes to SmokeDetector's code, so we can make the transition to supporting new versions of Python smoother.
 
 To allow committing blacklist and watchlist modifications
 back to GitHub,
 your system also needs Git 1.8 or higher,
 although we recommend Git 2.11+.
+
+## Requesting removal of a website from the blacklist
+If you are an official representative of the website/product which you desire to see removed, please see "[Process for blacklist removal](https://charcoal-se.org/smokey/Process-for-blacklist-removal)" for details as to how to request removal of your website from the blacklist.
 
 ## License
 

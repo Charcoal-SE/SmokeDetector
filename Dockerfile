@@ -1,5 +1,4 @@
-# Keep this Python image version manually maintained
-FROM python:3.10
+FROM python:3
 
 RUN adduser --disabled-password smokey --gecos smokey && \
     su --login smokey sh -c '\

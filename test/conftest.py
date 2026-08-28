@@ -1,6 +1,6 @@
-from unittest.mock import MagicMock
 import os
 import sys
+from unittest.mock import MagicMock
 
 
 def raise_system_exit(code):

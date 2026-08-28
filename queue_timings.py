@@ -3,19 +3,21 @@
 # queue_timings.py
 # Analysis script for bodyfetcher queue timings. Call from the command line using Python 3 in the pickles directory.
 
+import math
 import os.path
+
 # noinspection PyPep8Naming
 import pickle
 import warnings
-import math
 
 
 def main():
     queue_data = {}
     found_timing = False
     if os.path.isfile("bodyfetcherQueueTimings.p"):
-        warnings.warn("Timing data in pickle format is deprecated; use the plain text format instead.",
-                      DeprecationWarning)
+        warnings.warn(
+            "Timing data in pickle format is deprecated; use the plain text format instead.", DeprecationWarning
+        )
         found_timing = True
         try:
             with open("bodyfetcherQueueTimings.p", "rb") as f:
@@ -52,9 +54,11 @@ def main():
             min98 = max(mean - 2 * stddev, min(times))
             max98 = min(mean + 2 * stddev, max(times))
 
-            print("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}"
-                  .format(site.split(".")[0], min(times), max(times), mean, q1, median,
-                          q3, stddev, len(times), min98, max98))
+            print(
+                "{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}".format(
+                    site.split(".")[0], min(times), max(times), mean, q1, median, q3, stddev, len(times), min98, max98
+                )
+            )
 
     else:
         print("bodyfetcherQueueTimings.txt doesn't exist. No data to analyse.")
