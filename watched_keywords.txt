@@ -83102,3 +83102,4 @@
 1787911922	VLAZ	talktofriend(?!\.in)
 1787934988	Jeff Schaller	staybnb\.org
 1787942600	Dan Getz	thorfortune\.ca
+1787945678	Dan Getz	wpfixagent\.com
