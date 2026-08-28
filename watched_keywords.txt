@@ -83096,3 +83096,4 @@
 1787849383	Jeff Schaller	corporationoptimizer\.ts
 1787854467	Dan Getz	catloversg(?#github)
 1787856105	Dan Getz	egyptdaytrips\.com
+1787888815	Dan Getz	appele[zr][\W_]*+directement
