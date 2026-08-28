@@ -5,7 +5,6 @@ from globalvars import GlobalVars
 from helpers import log
 from tasks import Tasks
 
-
 POST_STRAIGHT_COPY_KEYS = [
     'response_timestamp',
     'last_edit_date',
@@ -23,8 +22,12 @@ def get_key_for_post(post):
     if post_id is None:
         post_id = post.get('question_id', None)
     if site is None or post_id is None:
-        log('warn', 'Unable to determine site or post_id for recently scanned post:'
-                    ' site:{}:: post_id: {}:: post:{}'.format(site, post_id, post))
+        log(
+            'warn',
+            'Unable to determine site or post_id for recently scanned post: site:{}:: post_id: {}:: post:{}'.format(
+                site, post_id, post
+            ),
+        )
         return None
     return "{}/{}".format(site, post_id)
 
@@ -35,9 +38,14 @@ def add_post(post, is_spam=None, reasons=None, why=None, scan_time=None, have_lo
     new_key = post['post_key']
     if new_key is None:
         raise KeyError('post key is None')
-    new_record = {'post': post, 'scan_timestamp': time.time(),
-                  'is_spam': is_spam, 'reasons': reasons, 'why': why,
-                  'scan_time': scan_time}
+    new_record = {
+        'post': post,
+        'scan_timestamp': time.time(),
+        'is_spam': is_spam,
+        'reasons': reasons,
+        'why': why,
+        'scan_time': scan_time,
+    }
     if have_lock:
         GlobalVars.recently_scanned_posts[new_key] = new_record
     else:
@@ -98,8 +106,9 @@ def compare_posts(post, scanned_post):
     result['is_grace_edit'] = False
     if not is_unchanged and post_equality_data[0] == scanned_equality_data[0]:
         # This should be a grace period edit
-        what_changed = [post_equality_data[count] == scanned_equality_data[count]
-                        for count in range(len(post_equality_data))]
+        what_changed = [
+            post_equality_data[count] == scanned_equality_data[count] for count in range(len(post_equality_data))
+        ]
         post_key = post.get('post_key', None)
         log('debug', 'GRACE period edit: {}::  matching(ED,T,U,MD):{}::  '.format(post_key, what_changed))
         result['is_grace_edit'] = True
@@ -165,8 +174,12 @@ def expire_posts():
         for key in keys_to_delete:
             rs_posts.pop(key, None)
         new_length = len(rs_posts)
-        log('debug', 'Expire recently scanned posts: start: '
-                     '{}::  now: {}:: expired: {}'.format(original_length, new_length, original_length - new_length))
+        log(
+            'debug',
+            'Expire recently scanned posts: start: {}::  now: {}:: expired: {}'.format(
+                original_length, new_length, original_length - new_length
+            ),
+        )
 
 
 Tasks.periodic(expire_posts, interval=POSTS_EXPIRE_INTERVAL)

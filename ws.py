@@ -2,8 +2,10 @@
 # coding=utf-8
 # requires https://pypi.python.org/pypi/websocket-client/
 
-from excepthook import uncaught_exception, install_thread_excepthook
 import sys
+
+from excepthook import install_thread_excepthook, uncaught_exception
+
 sys.excepthook = uncaught_exception
 install_thread_excepthook()
 
@@ -13,36 +15,49 @@ install_thread_excepthook()
 # Hence, please avoid adding code before this comment; if it's necessary,
 # test it thoroughly.
 
+import json
 import os
 import platform
+import time
+import traceback
+from datetime import datetime
+from threading import Thread
+
+import dns.resolver
+import requests
+
 # noinspection PyPackageRequirements
 import websocket
-from threading import Thread
-import traceback
-from bodyfetcher import BodyFetcher
-import chatcommunicate
-from datetime import datetime
-from spamhandling import check_if_spam_json
-from globalvars import GlobalVars
-from datahandling import (load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts,
-                          refresh_site_id_dict_if_needed_and_get_issues)
-from metasmoke import Metasmoke
-from metasmoke_cache import MetasmokeCache
-from deletionwatcher import DeletionWatcher
-from editwatcher import EditWatcher
-import json
-import time
-import requests
-import dns.resolver
-# noinspection PyPackageRequirements
-from tld.utils import update_tld_names, TldIOError
-from helpers import (exit_mode, log, Helpers, log_exception, add_to_global_bodyfetcher_queue_in_new_thread,
-                     tell_debug_rooms_recovered_websocket)
-from flovis import Flovis
-from tasks import Tasks
+from tld.utils import TldIOError, update_tld_names
 
 import chatcommands
+import chatcommunicate
+from bodyfetcher import BodyFetcher
+from datahandling import (
+    PICKLE_STORAGE,
+    filter_auto_ignored_posts,
+    load_files,
+    load_pickle,
+    refresh_site_id_dict_if_needed_and_get_issues,
+)
+from deletionwatcher import DeletionWatcher
+from editwatcher import EditWatcher
+from flovis import Flovis
+from globalvars import GlobalVars
+from helpers import (
+    Helpers,
+    add_to_global_bodyfetcher_queue_in_new_thread,
+    exit_mode,
+    log,
+    log_exception,
+    tell_debug_rooms_recovered_websocket,
+)
+from metasmoke import Metasmoke
+from metasmoke_cache import MetasmokeCache
+from spamhandling import check_if_spam_json
 
+# noinspection PyPackageRequirements
+from tasks import Tasks
 
 MAX_SE_WEBSOCKET_RETRIES = 5
 # Python 3.6.0 is the bare minimum needed to run SmokeDetector.
@@ -67,12 +82,7 @@ if os.path.isfile("plugin.py"):
         log('warning', "Error while importing plugin:\n" + error_msg)
         # Ignore and move on
 
-levels = {
-    'debug': 0,
-    'info': 1,
-    'warning': 2,
-    'error': 3
-}
+levels = {'debug': 0, 'info': 1, 'warning': 2, 'error': 3}
 if any('--loglevel' in x for x in sys.argv):
     idx = ['--loglevel' in x for x in sys.argv].index(True)
     arg = sys.argv[idx].split('=')
@@ -90,17 +100,22 @@ if THIS_PYTHON_VERSION < MIN_PYTHON_VERSION:
 # However, 3.5 is already deprecated so we need to prepare for this
 # with a warning in the logs about it.
 if THIS_PYTHON_VERSION < MIN_TESTED_PYTHON_VERSION:
-    msg = ('SmokeDetector is tested on the latest released version of Python {0}.{1}.'
-           ' SmokeDetector may or may not work with Python versions earlier than that.'
-           ' Code changes which break SmokeDetector in earlier Python versions may be'
-           ' made without notice.'
-           ' Please consider upgrading your instances of'
-           ' SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*MIN_TESTED_PYTHON_VERSION))
+    msg = (
+        'SmokeDetector is tested on the latest released version of Python {0}.{1}.'
+        ' SmokeDetector may or may not work with Python versions earlier than that.'
+        ' Code changes which break SmokeDetector in earlier Python versions may be'
+        ' made without notice.'
+        ' Please consider upgrading your instances of'
+        ' SmokeDetector to use Python {0}.{1}.{2} or newer.'.format(*MIN_TESTED_PYTHON_VERSION)
+    )
     log('warning', msg)
 
 if not GlobalVars.metasmoke_host:
-    log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
-        "See https://github.com/Charcoal-SE/metasmoke.")
+    log(
+        'info',
+        "metasmoke host not found. Set it as metasmoke_host in the config file. "
+        "See https://github.com/Charcoal-SE/metasmoke.",
+    )
 if not GlobalVars.metasmoke_key:
     log('info', "No metasmoke key found, which is okay if both are running on the same host")
 if not GlobalVars.metasmoke_ws_host:
@@ -150,12 +165,16 @@ except TldIOError as ioerr:
     strerror = str(ioerr)
     if "permission denied:" in strerror.lower():
         if "/usr/local/lib/python" in strerror and "/dist-packages/" in strerror:
-            err_msg = "WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not " \
-                      "user-level installed.  Skipping TLD names update. \n"
+            err_msg = (
+                "WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
+                "user-level installed.  Skipping TLD names update. \n"
+            )
 
         if "/home/" in strerror and ".local/lib/python" in strerror and "/site-packages/tld/" in strerror:
-            err_msg = "WARNING: Cannot read/write to user-space `tld` installation, check permissions on the " \
-                      "path.  Skipping TLD names update. \n"
+            err_msg = (
+                "WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
+                "path.  Skipping TLD names update. \n"
+            )
 
         else:
             err_msg = strerror
@@ -217,7 +236,7 @@ if GlobalVars.standby_mode:
     chatcommunicate.join_command_rooms()
 
 se_site_id_issues = refresh_site_id_dict_if_needed_and_get_issues()
-if (se_site_id_issues):
+if se_site_id_issues:
     send_se_site_id_issues_to_chat = False
     with GlobalVars.site_id_dict_lock:
         if GlobalVars.site_id_dict_issues_into_chat_timestamp + MIN_ELAPSED_SEND_SITE_ID_ISSUES_TO_CHAT >= time.time():
@@ -313,8 +332,9 @@ while not GlobalVars.no_se_activity_scan:
                     # The site will, however, be behind any site which is already queued.
                     is_spam, reason, why = check_if_spam_json(a)
 
-                add_to_global_bodyfetcher_queue_in_new_thread(hostname, question_id, True if is_spam else None,
-                                                              source="155-questions-active")
+                add_to_global_bodyfetcher_queue_in_new_thread(
+                    hostname, question_id, True if is_spam else None, source="155-questions-active"
+                )
                 GlobalVars.edit_watcher.subscribe(hostname=hostname, question_id=question_id)
 
     except Exception as e:

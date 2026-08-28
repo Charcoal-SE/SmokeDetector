@@ -1,22 +1,27 @@
 # coding=utf-8
 import json
 import os.path
-import time
 import threading
+import time
 from urllib.parse import urlparse
 
 import requests
+
 # noinspection PyPackageRequirements
 import websocket
 
-from globalvars import GlobalVars
-import metasmoke
 import datahandling
-from helpers import (log, get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route,
-                     recover_websocket, chunk_list)
+import metasmoke
+from globalvars import GlobalVars
+from helpers import (
+    chunk_list,
+    get_se_api_default_params_questions_answers_posts_add_site,
+    get_se_api_url_for_route,
+    log,
+    recover_websocket,
+)
 from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
-
 
 PICKLE_FILENAME = "deletionIDs.p"
 DELETION_WATCH_MIN_SECONDS = 7200
@@ -41,8 +46,9 @@ class DeletionWatcher:
         self.posts_lock = threading.RLock()
 
         try:
-            self.socket = websocket.create_connection(GlobalVars.se_websocket_url,
-                                                      timeout=GlobalVars.se_websocket_timeout)
+            self.socket = websocket.create_connection(
+                GlobalVars.se_websocket_url, timeout=GlobalVars.se_websocket_timeout
+            )
             self.connect_time = time.time()
             self.hb_time = None
         except websocket.WebSocketException:
@@ -131,8 +137,10 @@ class DeletionWatcher:
         with GlobalVars.site_id_dict_lock:
             site_id = GlobalVars.site_id_dict.get(post_site, None)
         if not site_id:
-            log("warning", "{}: unknown site {} when subscribing to {}".format(self.__class__.__name__, post_site,
-                                                                               post_url))
+            log(
+                "warning",
+                "{}: unknown site {} when subscribing to {}".format(self.__class__.__name__, post_site, post_url),
+            )
             return
 
         if post_type == "answer":
@@ -159,8 +167,15 @@ class DeletionWatcher:
             if callback:
                 callbacks.append((callback, max_time))
             # This is fully replaced in order to update the max_watch_time
-            self.posts[action][post_id] = (post_id, post_site, post_type, post_url, question_id,
-                                           now + DELETION_WATCH_MIN_SECONDS, callbacks)
+            self.posts[action][post_id] = (
+                post_id,
+                post_site,
+                post_type,
+                post_url,
+                question_id,
+                now + DELETION_WATCH_MIN_SECONDS,
+                callbacks,
+            )
         if needs_subscribe:
             Tasks.do(self._subscribe, action)
 
@@ -171,8 +186,10 @@ class DeletionWatcher:
             except websocket.WebSocketException:
                 log('error', '{}: failed to subscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warning', '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
-                                                                                              action))
+            log(
+                'warning',
+                '{}: tried to subscribe to {}, but no WebSocket available.'.format(self.__class__.__name__, action),
+            )
 
     def save(self):
         # We save a copy of the self.posts data, but with the calbacks removed.
@@ -210,8 +227,10 @@ class DeletionWatcher:
                 try:
                     response_data = res.json()
                 except json.decoder.JSONDecodeError:
-                    log('warning',
-                        'DeletionWatcher SE API request: invalid JSON in response (code {})'.format(res.status_code))
+                    log(
+                        'warning',
+                        'DeletionWatcher SE API request: invalid JSON in response (code {})'.format(res.status_code),
+                    )
                     log('warning', res.text)
                     continue
 
@@ -219,8 +238,10 @@ class DeletionWatcher:
                     DeletionWatcher.next_request_time = time.time() + response_data['backoff']
 
                 if "items" not in response_data:
-                    log('warning',
-                        'DeletionWatcher SE API request: no items in response (code {})'.format(res.status_code))
+                    log(
+                        'warning',
+                        'DeletionWatcher SE API request: no items in response (code {})'.format(res.status_code),
+                    )
                     log('warning', res.text)
                     continue
 
@@ -236,10 +257,15 @@ class DeletionWatcher:
             except websocket.WebSocketException:
                 log('error', '{}: failed to unsubscribe to {}'.format(self.__class__.__name__, action))
         else:
-            log('warn', '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__,
-                                                                                             action))
+            log(
+                'warn',
+                '{}: tried to unsubscribe to {}, but no WebSocket available.'.format(self.__class__.__name__, action),
+            )
 
     @staticmethod
     def _ignore(post_site_id):
-        return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
-            datahandling.is_auto_ignored_post(post_site_id)
+        return (
+            datahandling.is_false_positive(post_site_id)
+            or datahandling.is_ignored_post(post_site_id)
+            or datahandling.is_auto_ignored_post(post_site_id)
+        )

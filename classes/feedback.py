@@ -1,9 +1,10 @@
 # coding=utf-8
 import itertools
+
 import regex
 
-from tasks import Tasks
 import metasmoke
+from tasks import Tasks
 
 
 class Feedback:
@@ -26,11 +27,12 @@ class Feedback:
 
 
 TRUE_FEEDBACKS = {
+    # True without flags
     "true": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
     "tp": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
     "trueu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
     "tpu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
-
+    # True and flags
     "k": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "spam": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "rude": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
@@ -38,10 +40,11 @@ TRUE_FEEDBACKS = {
     "abusive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "offensive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "r/a": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
-
+    #
+    #  Vandalism
     "v": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
     "vand": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
-    "vandalism": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False)
+    "vandalism": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
 }
 
 FALSE_FEEDBACKS = {
@@ -49,7 +52,6 @@ FALSE_FEEDBACKS = {
     "fp": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=False),
     "falseu": Feedback(Feedback.FALSE_POSITIVE, blacklist=True, always_silent=False),
     "fpu": Feedback(Feedback.FALSE_POSITIVE, blacklist=True, always_silent=False),
-
     "f": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=True),
     "notspam": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=True),
 }
@@ -59,6 +61,8 @@ NAA_FEEDBACKS = {
     "n": Feedback(Feedback.NAA, blacklist=False, always_silent=True),
 }
 
-FEEDBACK_REGEX = regex.compile(r"(?i)\b({})\b".format("|".join(itertools.chain(TRUE_FEEDBACKS.keys(),
-                                                                               FALSE_FEEDBACKS.keys(),
-                                                                               NAA_FEEDBACKS.keys()))))
+FEEDBACK_REGEX = regex.compile(
+    r"(?i)\b({})\b".format(
+        "|".join(itertools.chain(TRUE_FEEDBACKS.keys(), FALSE_FEEDBACKS.keys(), NAA_FEEDBACKS.keys()))
+    )
+)

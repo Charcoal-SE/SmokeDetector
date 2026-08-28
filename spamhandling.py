@@ -1,17 +1,19 @@
 # coding=utf-8
-import sys
 import random
-import findspam
-import datahandling
-import chatcommunicate
-from globalvars import GlobalVars
+import sys
 from datetime import datetime, timedelta
+
 import regex
-import parsing
-import metasmoke
+
+import chatcommunicate
+import datahandling
 import excepthook
+import findspam
+import metasmoke
+import parsing
 from classes import Post, PostParseError
-from helpers import log, escape_format
+from globalvars import GlobalVars
+from helpers import escape_format, log
 from parsing import to_metasmoke_link
 from tasks import Tasks
 
@@ -28,8 +30,9 @@ def sum_weight(reasons: list):
     if not GlobalVars.reason_weights:
         datahandling.update_reason_weights()
     now = datetime.utcnow() - timedelta(minutes=15)
-    if 'last_updated' not in GlobalVars.reason_weights or \
-            (now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1):
+    if 'last_updated' not in GlobalVars.reason_weights or (
+        now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1
+    ):
         Tasks.do(datahandling.update_reason_weights)
     s = 0
     weights = GlobalVars.reason_weights
@@ -61,9 +64,10 @@ def check_if_spam(post, dont_ignore_for=None):
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
                 ms_url = datahandling.resolve_ms_link(rel_url) or to_metasmoke_link(rel_url)
                 why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
-                    blacklisted_post_url, ms_url, blacklisted_by)
+                    blacklisted_post_url, ms_url, blacklisted_by
+                )
             else:
-                why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
+                why += "\n" + "Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
         result = None
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
@@ -77,7 +81,7 @@ def check_if_spam(post, dont_ignore_for=None):
         elif datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
             result = "post is automatically ignored"
         elif datahandling.has_community_bumped_post(post.post_url, post.body):
-            result = "post is bumped by Community \u2666\uFE0F"
+            result = "post is bumped by Community \u2666\ufe0f"
         # Dirty approach
         if result is None or (dont_ignore_for is not None and result in dont_ignore_for):  # Post not ignored
             return True, test, why
@@ -96,8 +100,7 @@ def check_if_spam_json(json_data):
     try:
         post = Post(json_data=json_data)
     except PostParseError as err:
-        log('error', 'Parse error {0} when parsing json_data {1!r}'.format(
-            err, json_data))
+        log('error', 'Parse error {0} when parsing json_data {1!r}'.format(err, json_data))
         return False, '', ''
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
@@ -107,13 +110,15 @@ def check_if_spam_json(json_data):
 def handle_spam(post, reasons, why):
     datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title if not post.is_answer else "")
 
-    if len(reasons) == 1 and ("all-caps title" in reasons or
-                              "repeating characters in title" in reasons or
-                              "repeating characters in body" in reasons or
-                              "repeating characters in answer" in reasons or
-                              "repeating words in title" in reasons or
-                              "repeating words in body" in reasons or
-                              "repeating words in answer" in reasons):
+    if len(reasons) == 1 and (
+        "all-caps title" in reasons
+        or "repeating characters in title" in reasons
+        or "repeating characters in body" in reasons
+        or "repeating characters in answer" in reasons
+        or "repeating words in title" in reasons
+        or "repeating words in body" in reasons
+        or "repeating words in answer" in reasons
+    ):
         datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.utcnow()))
 
     if why is not None and why != "":
@@ -130,10 +135,21 @@ def handle_spam(post, reasons, why):
         else:
             username = post.user_name.strip()
 
-        Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
-                 post.title_ignore_type, post_url, reasons, post.body, post.markdown,
-                 username, post.user_link, why, post.owner_rep, post.post_score,
-                 post.up_vote_count, post.down_vote_count)
+        Tasks.do(
+            metasmoke.Metasmoke.send_stats_on_post,
+            post.title_ignore_type,
+            post_url,
+            reasons,
+            post.body,
+            post.markdown,
+            username,
+            post.user_link,
+            why,
+            post.owner_rep,
+            post.post_score,
+            post.up_vote_count,
+            post.down_vote_count,
+        )
 
         offensive_mask = 'offensive title detected' in reasons
         message = build_message(post, reasons)
@@ -146,22 +162,38 @@ def handle_spam(post, reasons, why):
 
         without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
 
-        if set(reasons) - GlobalVars.experimental_reasons == set() and \
-                not why.startswith("Post manually "):
-            chatcommunicate.tell_rooms(message, ("experimental-all-sites", "experimental-site-" + post.post_site),
-                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+        if set(reasons) - GlobalVars.experimental_reasons == set() and not why.startswith("Post manually "):
+            chatcommunicate.tell_rooms(
+                message,
+                ("experimental-all-sites", "experimental-site-" + post.post_site),
+                without_roles,
+                notify_site=post.post_site,
+                report_data=(post_url, poster_url),
+            )
         else:
             if offensive_mask:
-                chatcommunicate.tell_rooms(message, ("all-sites", "site-" + post.post_site),
-                                           without_roles + ("offensive-mask",), notify_site=post.post_site,
-                                           report_data=(post_url, poster_url))
-                chatcommunicate.tell_rooms(clean_message, ("all-sites", "site-" + post.post_site),
-                                           without_roles + ("no-offensive-mask",), notify_site=post.post_site,
-                                           report_data=(post_url, poster_url))
+                chatcommunicate.tell_rooms(
+                    message,
+                    ("all-sites", "site-" + post.post_site),
+                    without_roles + ("offensive-mask",),
+                    notify_site=post.post_site,
+                    report_data=(post_url, poster_url),
+                )
+                chatcommunicate.tell_rooms(
+                    clean_message,
+                    ("all-sites", "site-" + post.post_site),
+                    without_roles + ("no-offensive-mask",),
+                    notify_site=post.post_site,
+                    report_data=(post_url, poster_url),
+                )
             else:
-                chatcommunicate.tell_rooms(message, ("all-sites", "site-" + post.post_site),
-                                           without_roles, notify_site=post.post_site,
-                                           report_data=(post_url, poster_url))
+                chatcommunicate.tell_rooms(
+                    message,
+                    ("all-sites", "site-" + post.post_site),
+                    without_roles,
+                    notify_site=post.post_site,
+                    report_data=(post_url, poster_url),
+                )
     except Exception as e:
         excepthook.uncaught_exception(*sys.exc_info())
 
@@ -169,7 +201,7 @@ def handle_spam(post, reasons, why):
 def build_message(post, reasons):
     # This is the main report format. Username and user link are deliberately not separated as with title and post
     # link, because we may want to use "by a deleted user" rather than a username+link.
-    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}\u202D]({post_url}) by {user} on `{site}`"
+    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}\u202d]({post_url}) by {user} on `{site}`"
 
     # Post URL, user URL, and site details are all easy - just data from the post object, transformed a bit
     # via datahandling.
@@ -180,10 +212,11 @@ def build_message(post, reasons):
     # Message prefix. There's always a link to SmokeDetector; if we have a metasmoke key, there's also a link to the
     # post's MS record. If we *don't* have a MS key, it's a fair assumption that the post won't be in metasmoke as
     # we didn't have a key to create a record for it.
-    prefix = u"[ [SmokeDetector](//github.com/Charcoal-SE/SmokeDetector) ]"
+    prefix = "[ [SmokeDetector](//github.com/Charcoal-SE/SmokeDetector) ]"
     if GlobalVars.metasmoke_key:
-        prefix = u"[ [SmokeDetector](//github.com/Charcoal-SE/SmokeDetector) | [MS]({}) ]".format(
-            to_metasmoke_link(post_url, protocol=False))
+        prefix = "[ [SmokeDetector](//github.com/Charcoal-SE/SmokeDetector) | [MS]({}) ]".format(
+            to_metasmoke_link(post_url, protocol=False)
+        )
 
     # If we have reason weights cached (GlobalVars.reason_weights) we can calculate total weight for this report;
     # likewise, if we have a MS key, we can fetch the weights and then calculate. If we have neither, tough luck.
@@ -201,7 +234,7 @@ def build_message(post, reasons):
     sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
     sanitized_title = escape_format(sanitized_title).strip()
     if post.edited:  # Append a pencil emoji for edited posts
-        sanitized_title += ' \u270F\uFE0F'
+        sanitized_title += ' \u270f\ufe0f'
 
     # If we have user details available, we'll linkify the username. If we don't, we call it a deleted user.
     if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
@@ -209,12 +242,18 @@ def build_message(post, reasons):
     else:
         username = post.user_name.strip()
         escaped_username = escape_format(parsing.escape_markdown(username))
-        user = "[{}\u202D]({})".format(escaped_username, poster_url)
+        user = "[{}\u202d]({})".format(escaped_username, poster_url)
 
     # Build the main body of the message. The next step is to insert the reason list while keeping the message
     # under 500 characters long.
-    message = message_format.format(prefix_ms=prefix, reason_weight=reason_weight, title=sanitized_title,
-                                    post_url=post_url, user=user, site=shortened_site)
+    message = message_format.format(
+        prefix_ms=prefix,
+        reason_weight=reason_weight,
+        title=sanitized_title,
+        post_url=post_url,
+        user=user,
+        site=shortened_site,
+    )
 
     for reason_count in range(5, 0, -1):
         reason = ", ".join(reasons[:reason_count])

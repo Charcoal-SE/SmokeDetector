@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
-
-import sys
-import os
-from collections import namedtuple
-from datetime import datetime
-from html.parser import HTMLParser
-from html import unescape
-from hashlib import md5
-from configparser import NoOptionError, ConfigParser
-import threading
-import subprocess as sp
-import platform
 import copy
+import os
+import platform
+import subprocess as sp
+import sys
+import threading
+from collections import namedtuple
+from configparser import ConfigParser, NoOptionError
+from datetime import datetime
+from hashlib import md5
+from html import unescape
+from html.parser import HTMLParser
 
 # noinspection PyCompatibility
 import regex
+
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
-    from _Git_Windows import git, GitError
+    from _Git_Windows import GitError, git
 else:
     # noinspection PyUnresolvedReferences
     from sh.contrib import git
@@ -34,8 +34,9 @@ if git_url[0:19] == "https://github.com/":
 
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%h%n%H%n%an%n%s', 'HEAD'],
-                               stderr=sp.STDOUT).decode('utf-8')
+        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%h%n%H%n%an%n%s', 'HEAD'], stderr=sp.STDOUT).decode(
+            'utf-8'
+        )
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
     _, abbrev_id, full_id, author, message = data.strip().split("\n")
@@ -96,10 +97,11 @@ class GlobalVars:
     se_websocket_url = "wss://qa.sockets.stackexchange.com/"
     se_websocket_timeout = 7 * 60  # 7 minutes; heartbeats from SE are every 5 minutes
 
-    not_privileged_warning = \
-        "You are not a privileged user. Please see " \
-        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
+    not_privileged_warning = (
+        "You are not a privileged user. Please see "
+        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for "
         "information on what privileges are and what is expected of privileged users."
+    )
 
     experimental_reasons = {  # Don't widely report these
         "potentially bad keyword in answer",
@@ -172,8 +174,9 @@ class GlobalVars:
     # The best case is that we know or guess that the post is either a question or answer and we request it
     # accurately from the correct route. However, for scanning posts, we also want the question data associated
     # with an answer.
-    se_api_question_answer_post_filter = \
+    se_api_question_answer_post_filter = (
         "!scxINmJWAnjuckNJkP9YfbG196DrCj)DDXQjRKUGfp-QzZ3b1nRh1Qitw7)FdyW_)iLrL8TBxFYZ1"
+    )
     se_api_url_base = "https://api.stackexchange.com/2.4/"
     se_api_default_params = {
         'key': 'IAkbitmze4B8KpacUfLqkw((',
@@ -186,7 +189,8 @@ class GlobalVars:
     })
 
     class PostScanStat:
-        """ Tracking post scanning data """
+        """Tracking post scanning data"""
+
         # All stats in a key are reported into chat using the !!/stats command. The report_order_with_defaults
         # variable in the code for that command shows what's expected to be here, but other values could exist.
         # Stats are accumulated unless the stats set is locked.
@@ -216,7 +220,7 @@ class GlobalVars:
 
         @staticmethod
         def add(new_stats):
-            """ Add post scanning data """
+            """Add post scanning data"""
             with GlobalVars.PostScanStat.rw_lock:
                 dict_of_stat_sets = GlobalVars.PostScanStat.stats
                 # First, deal with all stats which are not simple accumulators
@@ -232,7 +236,7 @@ class GlobalVars:
                             these_stats['max_scan_time_post'] = new_max_time_post
                         for stat_name, value in new_stats.items():
                             old_value = these_stats.get(stat_name, 0)
-                            if type(value) in [int, float]:
+                            if isinstance(value, (int, float)):
                                 these_stats[stat_name] = old_value + value
                             else:
                                 # There isn't any value currently used here which should be anything other than an int
@@ -241,14 +245,14 @@ class GlobalVars:
 
         @staticmethod
         def get_stats_for_ms(reset=False):
-            """ Get post scanning statistics for reporting to MS """
+            """Get post scanning statistics for reporting to MS"""
             stats_copy = GlobalVars.PostScanStat.get('ms', reset=reset)
             # MS wants only posts_scanned, scan_time, posts_per_second
             return (stats_copy.get(key, 0) for key in ['posts_scanned', 'scan_time', 'posts_per_second'])
 
         @staticmethod
         def get(stats_set_key='uptime', reset=False):
-            """ Get post scanning statistics from a stat set, including derived data, start and lock timestamps. """
+            """Get post scanning statistics from a stat set, including derived data, start and lock timestamps."""
             with GlobalVars.PostScanStat.rw_lock:
                 stats_set = copy.deepcopy(GlobalVars.PostScanStat.stats[stats_set_key])
                 if reset is True:
@@ -270,56 +274,56 @@ class GlobalVars:
 
         @staticmethod
         def _reset(stats_set_key):
-            """ Resets/clears/creates post scanning data in a stats set without getting the rw_lock """
+            """Resets/clears/creates post scanning data in a stats set without getting the rw_lock"""
             GlobalVars.PostScanStat.stats[stats_set_key] = {}
             GlobalVars.PostScanStat.stats[stats_set_key]['stats'] = GlobalVars.PostScanStat.default_stats.copy()
             GlobalVars.PostScanStat.stats[stats_set_key]['start_timestamp'] = datetime.utcnow()
 
         @staticmethod
         def reset(stats_set_key):
-            """ Resets/clears/creates post scanning data in a stats set """
+            """Resets/clears/creates post scanning data in a stats set"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat._reset(stats_set_key)
 
         @staticmethod
         def lock(stats_set_key):
-            """ Locks post scanning data in a stats set """
+            """Locks post scanning data in a stats set"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.stats[stats_set_key]['locked_timestamp'] = datetime.utcnow()
 
         @staticmethod
         def unlock(stats_set_key):
-            """ Unlocks post scanning data in a stats set """
+            """Unlocks post scanning data in a stats set"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.stats[stats_set_key].pop('locked_timestamp', None)
 
         @staticmethod
         def delete(stats_set_key):
-            """ Deletes a stats set """
+            """Deletes a stats set"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.stats.pop(stats_set_key, None)
 
         @staticmethod
         def copy(from_type, to_type):
-            """ Copies the contents of a stat set to another stat set key """
+            """Copies the contents of a stat set to another stat set key"""
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.stats[to_type] = copy.deepcopy(GlobalVars.PostScanStat.stats[from_type])
 
         @staticmethod
         def create(stats_set_key):
-            """ Creates a stat set (identical to a reset) """
+            """Creates a stat set (identical to a reset)"""
             GlobalVars.PostScanStat.reset[stats_set_key]
 
         @staticmethod
         def get_set_keys():
-            """ Get a list of the available stat set keys """
+            """Get a list of the available stat set keys"""
             with GlobalVars.PostScanStat.rw_lock:
                 keys = list(GlobalVars.PostScanStat.stats.keys())
             return keys
 
         @staticmethod
         def reset_ms_stats():
-            """ Reset post scanning data for MS """
+            """Reset post scanning data for MS"""
             GlobalVars.PostScanStat.reset('ms')
 
     config_parser = ConfigParser(interpolation=None)
@@ -353,35 +357,36 @@ class GlobalVars:
     dns_cache_interval = config.getfloat("dns_cache_cleanup_interval", fallback=300.0)
 
     class MSStatus:
-        """ Tracking metasmoke status """
+        """Tracking metasmoke status"""
+
         ms_is_up = True
         counter = 0
         rw_lock = threading.Lock()
 
         @staticmethod
         def set_up():
-            """ Set metasmoke status to up """
+            """Set metasmoke status to up"""
             # Private to metasmoke.py
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = True
 
         @staticmethod
         def set_down():
-            """ Set metasmoke status to down """
+            """Set metasmoke status to down"""
             # Private to metasmoke.py
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = False
 
         @staticmethod
         def is_up():
-            """ Query if metasmoke status is up """
+            """Query if metasmoke status is up"""
             with GlobalVars.MSStatus.rw_lock:
                 current_ms_status = GlobalVars.MSStatus.ms_is_up
             return current_ms_status
 
         @staticmethod
         def is_down():
-            """ Query if metasmoke status is down """
+            """Query if metasmoke status is down"""
             return not GlobalVars.MSStatus.is_up()
 
         # Why implement failed() and succeeded() here, as they will only be called in metasmoke.py?
@@ -389,26 +394,26 @@ class GlobalVars:
         # to implement failed() and succeeded() here.
         @staticmethod
         def failed():
-            """ Indicate a metasmoke connection failure """
+            """Indicate a metasmoke connection failure"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.counter += 1
 
         @staticmethod
         def succeeded():
-            """ Indicate a metasmoke connection success """
+            """Indicate a metasmoke connection success"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.counter = 0
 
         @staticmethod
         def get_failure_count():
-            """ Get consecutive metasmoke connection failure count """
+            """Get consecutive metasmoke connection failure count"""
             with GlobalVars.MSStatus.rw_lock:
                 failure_count = GlobalVars.MSStatus.counter
             return failure_count
 
         @staticmethod
         def reset_ms_status():
-            """ Reset class GlobalVars.MSStatus to default values """
+            """Reset class GlobalVars.MSStatus to default values"""
             with GlobalVars.MSStatus.rw_lock:
                 GlobalVars.MSStatus.ms_is_up = True
                 GlobalVars.MSStatus.counter = 0
@@ -483,8 +488,7 @@ class GlobalVars:
     def reload(cls):
         cls.commit = commit = git_commit_info()
 
-        cls.commit_with_author = "`{}` ({}: {})".format(
-            commit.id, commit.author, commit.message)
+        cls.commit_with_author = "`{}` ({}: {})".format(commit.id, commit.author, commit.message)
 
         # We don't want to escape `[` and `]` when they are within code.
         split_commit_with_author = cls.commit_with_author.split('`')
@@ -498,30 +502,23 @@ class GlobalVars:
 
         cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
+        s_prefix = "[ {} ] ".format(cls.chatmessage_prefix)
+        s_suffix = " at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
+            cls.commit_with_author_escaped, cls.bot_repository, cls.commit.id, cls.location, platform.python_version()
+        )
+
         cls.on_branch = git_ref()
-        cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-            cls.commit.id, cls.location, platform.python_version())
-        cls.s_reverted = \
-            "[ {} ] SmokeDetector started in [reverted mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_blacklists = \
-            "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.s_norestart_findspam = \
-            "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
-        cls.standby_message = \
-            "[ {} ] SmokeDetector started in [standby mode](" \
-            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
-            "at [rev {}]({}/commit/{}) (running on {})".format(
-                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
-                cls.commit.id, cls.location)
+        cls.s = s_prefix + "SmokeDetector started" + s_suffix
+        cls.s_reverted = (
+            s_prefix + "SmokeDetector started in [reverted mode]("
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode)" + s_suffix
+        )
+        cls.s_norestart_blacklists = s_prefix + "Blacklists reloaded" + s_suffix
+        cls.s_norestart_findspam = s_prefix + "FindSpam module reloaded" + s_suffix
+        cls.standby_message = (
+            s_prefix + "SmokeDetector started in [standby mode]("
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode)" + s_suffix
+        )
 
 
 for stats_set_key in ['all', 'uptime', 'ms']:
