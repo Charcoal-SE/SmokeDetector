@@ -83106,3 +83106,4 @@
 1787945713	Dan Getz	nexurasecurity\.com
 1787996486	Vickel	royeditors\.com
 1788001501	Jeff Schaller	cryptopresalenews\.com
+1788014033	Dan Getz	conversordelettras\.com
