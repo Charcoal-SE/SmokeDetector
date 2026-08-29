@@ -83104,3 +83104,4 @@
 1787942600	Dan Getz	thorfortune\.ca
 1787945678	Dan Getz	wpfixagent\.com
 1787945713	Dan Getz	nexurasecurity\.com
+1787996486	Vickel	royeditors\.com
