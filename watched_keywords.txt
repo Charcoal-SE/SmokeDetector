@@ -83122,3 +83122,4 @@
 1788172397	VLAZ	Nuzha[\W_]*+Summer[\W_]*+Valley[\W_]*+Resort
 1788173103	VLAZ	rankbrainmarketing\.in
 1788174796	VLAZ	premiumgrips\.com
+1788183107	VLAZ	Connect2learn
