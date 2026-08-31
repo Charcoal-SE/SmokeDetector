@@ -83124,3 +83124,4 @@
 1788174796	VLAZ	premiumgrips\.com
 1788183107	VLAZ	Connect2learn
 1788186259	Dan Getz	openlynk
+1788202210	Jeff Schaller	smdatum\.com
