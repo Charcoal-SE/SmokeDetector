@@ -83142,3 +83142,4 @@
 1788262112	VLAZ	windows419(?!\.com)
 1788262589	Dan Getz	oooooooooo\.se
 1788267066	VLAZ	getintomypc\.vip
+1788278244	Jeff Schaller	malaevents\.com
