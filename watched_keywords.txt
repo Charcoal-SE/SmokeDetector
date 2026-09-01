@@ -83140,3 +83140,4 @@
 1788262091	VLAZ	roofing419\.com
 1788262104	VLAZ	windows419\.com
 1788262112	VLAZ	windows419(?!\.com)
+1788262589	Dan Getz	oooooooooo\.se
