@@ -83133,3 +83133,4 @@
 1788240982	VLAZ	91porna(?!\.com)
 1788241733	VLAZ	sliding[\W_]*+door[\W_]*+squad(?!\.com(?<=slidingdoorsquad\.com))
 1788256940	VLAZ	indianbikesdriving3d\.net
+1788257009	VLAZ	ennomark\.co\.uk
