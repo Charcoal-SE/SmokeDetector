@@ -83137,3 +83137,4 @@
 1788257136	VLAZ	allianzi\.co\.uk
 1788257146	VLAZ	nucot\.co\.in
 1788259101	VLAZ	moji[\W_]*+delight(?!\.com(?<=mojidelight\.com))
+1788262091	VLAZ	roofing419\.com
