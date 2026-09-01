@@ -83138,3 +83138,4 @@
 1788257146	VLAZ	nucot\.co\.in
 1788259101	VLAZ	moji[\W_]*+delight(?!\.com(?<=mojidelight\.com))
 1788262091	VLAZ	roofing419\.com
+1788262104	VLAZ	windows419\.com
