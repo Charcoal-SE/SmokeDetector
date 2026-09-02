@@ -83151,3 +83151,4 @@
 1788342047	VLAZ	shecosmetics\.pk
 1788346652	VLAZ	ISOPARA
 1788351026	Dan Getz	corsetlifestyle\.com
+1788354686	Jeff Schaller	Diginyze
