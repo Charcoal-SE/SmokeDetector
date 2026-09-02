@@ -83150,3 +83150,4 @@
 1788338534	VLAZ	letras-diferentes\.co
 1788342047	VLAZ	shecosmetics\.pk
 1788346652	VLAZ	ISOPARA
+1788351026	Dan Getz	corsetlifestyle\.com
