@@ -83144,3 +83144,4 @@
 1788267066	VLAZ	getintomypc\.vip
 1788278244	Jeff Schaller	malaevents\.com
 1788286381	Dan Getz	18445925(?#zenodo)
+1788328147	VLAZ	kirethresearch\.org
