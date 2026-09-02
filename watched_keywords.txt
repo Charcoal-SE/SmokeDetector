@@ -83154,3 +83154,4 @@
 1788354776	Jeff Schaller	diginyze\.com
 1788354784	Jeff Schaller	diginyze(?!\.com)
 1788355382	Jeff Schaller	cndrumbrakes\.com
+1788357063	Dan Getz	qkrbiz\.com
