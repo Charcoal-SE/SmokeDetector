@@ -83176,3 +83176,4 @@
 1788448217	Dan Getz	jfqzr(?:_v\d++)?(?# doi.org, osf.io)
 1788452088	Dan Getz	mcguiremfg\.com
 1788456034	Dan Getz	daiilypuzzle\.com
+1788456719	VLAZ	casiiiiiinooooo\.com
