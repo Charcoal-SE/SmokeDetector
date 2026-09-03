@@ -83167,3 +83167,4 @@
 1788432300	Dan Getz	passportsdk\.ai
 1788432646	Jeff Schaller	didmvaranasi\.com
 1788432710	Jeff Schaller	rightguruji\.com
+1788432799	Dan Getz	alexfigueirasseo\.com
