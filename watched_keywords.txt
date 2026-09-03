@@ -83174,3 +83174,4 @@
 1788440692	Jeff Schaller	inletbase\.com
 1788444394	Jeff Schaller	you can shut up until you show data
 1788448217	Dan Getz	jfqzr(?:_v\d++)?(?# doi.org, osf.io)
+1788452088	Dan Getz	mcguiremfg\.com
