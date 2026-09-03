@@ -83166,3 +83166,4 @@
 1788432086	Dan Getz	logostream\.dev
 1788432300	Dan Getz	passportsdk\.ai
 1788432646	Jeff Schaller	didmvaranasi\.com
+1788432710	Jeff Schaller	rightguruji\.com
