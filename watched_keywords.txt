@@ -47991,7 +47991,6 @@
 1678952351	Makyen	cincinnatidentalservices\.org
 1678953057	Cody Gray	japanartpress\.com
 1678953086	Jeff Schaller	faisaliteb\.com
-1678953312	Cody Gray	Social[\W_]*+Media[\W_]*+Auto[\W_]*+Publish(?:[\W_]*+plug[\W_]*+in)?
 1678955113	tripleee	mipacademy\.in
 1678955996	tripleee	transformingtravels\.com
 1678956419	tripleee	disjournel\.com
