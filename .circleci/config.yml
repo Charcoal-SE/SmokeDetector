@@ -1,20 +1,20 @@
-version: 2
+version: '2.1'
 jobs:
   build:
     docker:
-      - image: cimg/python:3.11
+      - image: cimg/python:3.14
     branches:
       ignore: deploy
     steps:
       - restore_cache:
           # Restore a basic .git to prevent needing to download the whole thing.
           keys:
-            - git-cimg-python3.11-{{ .Branch }}
-            - git-cimg-python3.11
+            - git-cimg-python3.14-{{ .Branch }}
+            - git-cimg-python3.14
             - git
       - checkout
       - save_cache:
-          key: git-cimg-python3.11-{{ .Branch }}
+          key: git-cimg-python3.14-{{ .Branch }}
           paths:
             - ".git"
       - run:
