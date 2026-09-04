@@ -1,10 +1,15 @@
 version: '2.1'
+workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: deploy
 jobs:
   build:
     docker:
       - image: cimg/python:3.14
-    branches:
-      ignore: deploy
     steps:
       - restore_cache:
           # Restore a basic .git to prevent needing to download the whole thing.
