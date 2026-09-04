@@ -1,13 +1,33 @@
 # coding=utf-8
+
 import importlib
 import os
 import platform
 import sqlite3
 import sys
-import threading
 import time
 import traceback
+import importlib
+import threading
+import platform
+import sqlite3
 from datetime import datetime, timezone
+from glob import glob
+from urllib.parse import quote, quote_plus
+
+import requests
+import regex
+from termcolor import colored
+from regex.regex import _compile as regex_raw_compile
+import websocket
+
+from globalvars import GlobalVars
+
+# Initialize colorama for Windows
+if 'windows' in platform.platform().lower() and 'cygwin' not in platform.platform().lower():
+    from colorama import init as colorama_init
+    colorama_init()
+
 from glob import glob
 from threading import Thread
 from urllib.parse import quote, quote_plus
