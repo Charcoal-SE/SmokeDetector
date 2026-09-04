@@ -83180,3 +83180,4 @@
 1788461428	VLAZ	myglobejourney\.com
 1788471500	Jeff Schaller	letsfixit\.ae
 1788482926	Dan Getz	jlcmc\.com
+1788495591	VLAZ	deckaura\.com
