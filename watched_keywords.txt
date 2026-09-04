@@ -83176,7 +83176,6 @@
 1788448217	Dan Getz	jfqzr(?:_v\d++)?(?# doi.org, osf.io)
 1788452088	Dan Getz	mcguiremfg\.com
 1788456034	Dan Getz	daiilypuzzle\.com
-1788456719	VLAZ	casiiiiiinooooo\.com
 1788461428	VLAZ	myglobejourney\.com
 1788471500	Jeff Schaller	letsfixit\.ae
 1788482926	Dan Getz	jlcmc\.com
