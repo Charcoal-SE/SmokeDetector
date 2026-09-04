@@ -25,31 +25,8 @@ Detailed documentation for
 
 ### Basic setup
 
-To set up SmokeDetector, please use
-
-```shell
-git clone https://github.com/Charcoal-SE/SmokeDetector.git
-cd SmokeDetector
-git checkout deploy
-sudo pip3 install -r requirements.txt --upgrade
-pip3 install --user -r user_requirements.txt --upgrade
-```
-
-Next, copy `config.sample` to a new file named `config`,
-and edit the values required.
-
-To run, use `python3 nocrash.py`
-(preferably in a daemon-able mode, like a `screen` session.)
-You can also use `python3 ws.py`,
-but then SmokeDetector will be shut down after 6 hours;
-when running from `nocrash.py`, it will be restarted.
-(This is to be sure that closed websockets, if any, are reopened.)
-
-### Virtual environment setup
-
-Running in a [virtual environment](https://docs.python.org/3/tutorial/venv.html)
-is a good way to isolate dependency packages from your local system.
-To set up SmokeDetector in a virtual environment, you can use
+To set up SmokeDetector, please [install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
+and use
 
 ```shell
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
@@ -57,21 +34,18 @@ cd SmokeDetector
 git config user.email "smokey@erwaysoftware.com"
 git config user.name "SmokeDetector"
 git checkout deploy
-
-python3 -m venv env
-env/bin/pip3 install -r requirements.txt --upgrade
-env/bin/pip3 install --user -r user_requirements.txt --upgrade
+uv sync --locked
 ```
 
-Next, copy the config file and edit as said above.
-To run SmokeDetector in this virtual environment, use
-`env/bin/python3 nocrash.py`.
+Next, copy `config.sample` to a new file named `config`,
+and edit the values required.
 
-[Note: On some systems (e.g. Mac's and Linux), some circumstances may
-require the `--user` option to be removed from the last `pip3`
-command line in the above instructions. However, the `--user` option is
-known to be necessary in other circumstances. Further testing is
-necessary to resolve the discrepancy.]
+To run, use `uv run python3 nocrash.py`
+(preferably in a daemon-able mode, like a `screen` session.)
+You can also use `uv run python3 ws.py`,
+but then SmokeDetector will be shut down after 6 hours;
+when running from `nocrash.py`, it will be restarted.
+(This is to be sure that closed websockets, if any, are reopened.)
 
 ### Docker setup
 
