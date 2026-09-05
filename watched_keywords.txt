@@ -83195,3 +83195,4 @@
 1788612554	Jeff Schaller	theumrahpackage\.com
 1788619430	VLAZ	wordle-unlimited\.app
 1788631628	Glorfindel	speakerscleaner\.com
+1788637646	Dan Getz	bitumencalcpro\.com
