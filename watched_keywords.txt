@@ -83186,7 +83186,6 @@
 1788553094	VLAZ	y888gameapp\.com\.pk
 1788594647	VLAZ	plumbjournal\.com
 1788598573	Dan Getz	calculatingdistance\.com
-1788598887	Dan Getz	lizecheng\.net
 1788599000	Dan Getz	intertechnumberlogythailand
 1788599033	Dan Getz	percivalclo\.com
 1788599093	Dan Getz	calcolonettostipendio\.com
