@@ -83196,3 +83196,4 @@
 1788619430	VLAZ	wordle-unlimited\.app
 1788631628	Glorfindel	speakerscleaner\.com
 1788637646	Dan Getz	bitumencalcpro\.com
+1788642704	Dan Getz	h55game\.com\.pk
