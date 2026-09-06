@@ -83205,3 +83205,4 @@
 1788722195	Dan Getz	ziyanmarketer\.com
 1788722404	VLAZ	ashekur\.com
 1788722658	VLAZ	barrysfurniture\.com\.pk
+1788722783	Dan Getz	mgmotorstucson\.com
