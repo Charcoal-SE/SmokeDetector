@@ -83201,3 +83201,4 @@
 1788662562	Dan Getz	one[\W_]*+nation[\W_]*+travel
 1788673416	VLAZ	riazdadu\.com
 1788705002	Jeff Schaller	chatwhole\.com
+1788710538	Dan Getz	alsaifkitchen\.com
