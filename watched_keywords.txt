@@ -83200,3 +83200,4 @@
 1788642803	Dan Getz	interconnectd\.com
 1788662562	Dan Getz	one[\W_]*+nation[\W_]*+travel
 1788673416	VLAZ	riazdadu\.com
+1788705002	Jeff Schaller	chatwhole\.com
