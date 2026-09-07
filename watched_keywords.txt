@@ -83218,3 +83218,4 @@
 1788763233	Dan Getz	green[\W_]*+milk[\W_]*+concept
 1788763841	Dan Getz	invendoaiacademy\.com
 1788763984	Dan Getz	tranerentalmea\.com
+1788764001	Dan Getz	otper\.com
