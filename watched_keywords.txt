@@ -83211,3 +83211,4 @@
 1788738994	Dan Getz	aqarsky\.com
 1788745622	Dan Getz	restoretechsolution(?:@gmail[\W_]++com)?
 1788762993	Dan Getz	subhanpicks\.site
+1788763025	Dan Getz	bioradmedisys\.com
