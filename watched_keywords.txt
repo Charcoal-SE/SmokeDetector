@@ -83216,3 +83216,4 @@
 1788763133	Dan Getz	sfy18\.com
 1788763174	Dan Getz	aitoolhunt\.io
 1788763233	Dan Getz	green[\W_]*+milk[\W_]*+concept
+1788763841	Dan Getz	invendoaiacademy\.com
