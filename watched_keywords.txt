@@ -83222,3 +83222,4 @@
 1788765989	Dan Getz	cenforcehq\.com
 1788766391	Dan Getz	excedify\.com
 1788766400	Dan Getz	excedify(?!\.com)
+1788766431	Dan Getz	classpot\.com
