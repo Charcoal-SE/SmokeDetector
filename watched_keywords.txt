@@ -83226,3 +83226,4 @@
 1788766467	Dan Getz	(?-i:Class\s*+Spot)
 1788767402	Dan Getz	neuraxhost\.ca
 1788768688	Dan Getz	misterappliancerepair\.ca
+1788769555	Dan Getz	orrog\.com
