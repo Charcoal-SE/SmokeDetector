@@ -83224,3 +83224,4 @@
 1788766400	Dan Getz	excedify(?!\.com)
 1788766431	Dan Getz	classpot\.com
 1788766467	Dan Getz	(?-i:Class\s*+Spot)
+1788767402	Dan Getz	neuraxhost\.ca
