@@ -83245,3 +83245,4 @@
 1788836134	Dan Getz	coinminutesvietnam
 1788836182	Dan Getz	coinminutesvn
 1788836354	Dan Getz	tuduyseokhacbiet\.org
+1788841020	VLAZ	thedailycryptic\.com
