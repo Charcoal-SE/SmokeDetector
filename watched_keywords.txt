@@ -83254,3 +83254,4 @@
 1788846862	VLAZ	ivf[\W_]*+new[\W_]*+life(?!\.com(?<=ivfnewlife\.com))
 1788846869	VLAZ	altburn\.org
 1788849600	VLAZ	drsarada\.com
+1788852133	VLAZ	pixeld\.store
