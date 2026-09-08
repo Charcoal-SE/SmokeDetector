@@ -83241,3 +83241,4 @@
 1788787586	Dan Getz	drssoftech\.com
 1788824313	Jeff Schaller	dandiesdoodles\.com
 1788824571	Dan Getz	stuckpixelfixer\.help
+1788836126	Dan Getz	coinminutes
