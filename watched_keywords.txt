@@ -83280,3 +83280,4 @@
 1788876005	Dan Getz	mcguire[\W_]*+manufacturing
 1788876826	Dan Getz	Mind[\W_]*+Mingles
 1788880899	Dan Getz	dolphegd(?:\.github\.io)?
+1788880965	Dan Getz	dolpheverse
