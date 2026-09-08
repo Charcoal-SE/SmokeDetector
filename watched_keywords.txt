@@ -83281,3 +83281,4 @@
 1788876826	Dan Getz	Mind[\W_]*+Mingles
 1788880899	Dan Getz	dolphegd(?:\.github\.io)?
 1788880965	Dan Getz	dolpheverse
+1788885571	Dan Getz	absolutez\.infinityfree\.io
