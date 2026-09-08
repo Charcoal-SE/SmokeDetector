@@ -83264,3 +83264,4 @@
 1788855318	VLAZ	doctor[\W_]*+thikana
 1788859961	VLAZ	3pshipping\.net
 1788860301	VLAZ	drjyotsna\.com
+1788862876	VLAZ	franzph\.pro
