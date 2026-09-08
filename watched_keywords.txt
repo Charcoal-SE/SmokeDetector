@@ -83277,3 +83277,4 @@
 1788872271	Jeff Schaller	brabusresidence\.com
 1788872294	Jeff Schaller	m3mprojects\.net\.in
 1788872347	VLAZ	sagittariuscyphercyberintelligence\.com
+1788876005	Dan Getz	mcguire[\W_]*+manufacturing
