@@ -83259,3 +83259,4 @@
 1788852154	VLAZ	joinilluminatitoday\.co\.za
 1788852162	VLAZ	illuminatisecretsocieties\.co\.za
 1788852169	VLAZ	papanaide\.co\.za
+1788852225	VLAZ	drkiranpeddi\.com
