@@ -83252,3 +83252,4 @@
 1788844496	VLAZ	drmadhusumacancerfoundation\.com
 1788846854	VLAZ	ivfnewlife\.com
 1788846862	VLAZ	ivf[\W_]*+new[\W_]*+life(?!\.com(?<=ivfnewlife\.com))
+1788846869	VLAZ	altburn\.org
