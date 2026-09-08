@@ -83282,3 +83282,4 @@
 1788880899	Dan Getz	dolphegd(?:\.github\.io)?
 1788880965	Dan Getz	dolpheverse
 1788885571	Dan Getz	absolutez\.infinityfree\.io
+1788886002	Dan Getz	cogsnug\.com
