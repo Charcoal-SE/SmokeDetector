@@ -83263,3 +83263,4 @@
 1788852548	VLAZ	plomentor\.com
 1788855318	VLAZ	doctor[\W_]*+thikana
 1788859961	VLAZ	3pshipping\.net
+1788860301	VLAZ	drjyotsna\.com
