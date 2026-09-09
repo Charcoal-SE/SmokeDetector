@@ -83302,3 +83302,4 @@
 1788941330	VLAZ	ussmmshop\.com
 1788942079	VLAZ	primemangummy\.com
 1788942110	VLAZ	elitepokerguide\.io
+1788942118	VLAZ	elitepokerguide(?!\.io)
