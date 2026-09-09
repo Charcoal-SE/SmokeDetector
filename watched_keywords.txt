@@ -83295,3 +83295,4 @@
 1788928984	VLAZ	factfilterhub\.com
 1788934061	VLAZ	ur8game\.com
 1788934086	VLAZ	colour[\W_]*+valley[\W_]*+wall[\W_]*+paint
+1788934097	VLAZ	redzhubscriptss\.com
