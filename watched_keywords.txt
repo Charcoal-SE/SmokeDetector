@@ -83316,3 +83316,4 @@
 1788957744	Dan Getz	nuthatchmontessori\.com
 1788959497	Jeff Schaller	kbame\.com
 1788961195	VLAZ	manomav\.com
+1788961204	VLAZ	manomav(?!\.com)
