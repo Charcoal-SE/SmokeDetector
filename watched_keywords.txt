@@ -83317,3 +83317,4 @@
 1788959497	Jeff Schaller	kbame\.com
 1788961195	VLAZ	manomav\.com
 1788961204	VLAZ	manomav(?!\.com)
+1788962048	VLAZ	vision3d\.in
