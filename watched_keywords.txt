@@ -83320,3 +83320,4 @@
 1788962048	VLAZ	vision3d\.in
 1788965902	Jeff Schaller	aiotagen\.com
 1788969925	Jeff Schaller	techscar\.com
+1788976004	Dan Getz	zenithcalis\.info
