@@ -83304,3 +83304,4 @@
 1788942110	VLAZ	elitepokerguide\.io
 1788942118	VLAZ	elitepokerguide(?!\.io)
 1788944449	VLAZ	tarchomes\.com
+1788945058	VLAZ	thamesremovals\.co\.uk
