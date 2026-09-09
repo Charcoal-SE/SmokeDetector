@@ -83307,3 +83307,4 @@
 1788945058	VLAZ	thamesremovals\.co\.uk
 1788947221	VLAZ	tooledbyai\.xyz
 1788947243	VLAZ	tooled[\W_]*+by[\W_]*+ai(?!\.xyz(?<=tooledbyai\.xyz))
+1788950171	Dan Getz	pintvideoindir\.com
