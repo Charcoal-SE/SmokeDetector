@@ -83319,3 +83319,4 @@
 1788961204	VLAZ	manomav(?!\.com)
 1788962048	VLAZ	vision3d\.in
 1788965902	Jeff Schaller	aiotagen\.com
+1788969925	Jeff Schaller	techscar\.com
