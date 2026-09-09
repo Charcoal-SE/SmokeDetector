@@ -83297,3 +83297,4 @@
 1788934086	VLAZ	colour[\W_]*+valley[\W_]*+wall[\W_]*+paint
 1788934097	VLAZ	redzhubscriptss\.com
 1788934107	VLAZ	nivrabyniranjana\.online
+1788935644	VLAZ	drophelia\.com
