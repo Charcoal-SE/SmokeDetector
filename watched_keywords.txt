@@ -83327,3 +83327,4 @@
 1789033437	VLAZ	swastha\.life
 1789033463	VLAZ	coloristy\.com
 1789033471	VLAZ	coloristy(?!\.com)
+1789033482	VLAZ	bostoncolleges\.in
