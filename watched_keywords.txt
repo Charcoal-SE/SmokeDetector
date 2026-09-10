@@ -83325,3 +83325,4 @@
 1789020485	VLAZ	mansio\.store
 1789033423	VLAZ	advanced-workplace\.com
 1789033437	VLAZ	swastha\.life
+1789033463	VLAZ	coloristy\.com
