@@ -83328,3 +83328,4 @@
 1789033463	VLAZ	coloristy\.com
 1789033471	VLAZ	coloristy(?!\.com)
 1789033482	VLAZ	bostoncolleges\.in
+1789033664	VLAZ	hrdattestation\.in
