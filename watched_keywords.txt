@@ -83346,3 +83346,4 @@
 1789155031	Jeff Schaller	Royal[\W_]*+Rider[\W_]*+Bus[\W_]*+Rentals
 1789156245	Dan Getz	mytruelovecalculator\.com
 1789157552	Dan Getz	metareachmarketing\.com
+1789162655	Jeff Schaller	smartclaclabs\.com
