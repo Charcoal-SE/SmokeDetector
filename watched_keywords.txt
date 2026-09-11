@@ -83338,3 +83338,4 @@
 1789069362	Dan Getz	latestdeltaexecutor\.com
 1789084743	Jeff Schaller	anniecookspiritualmedium\.com
 1789102878	Dan Getz	digitalhatacademy\.com
+1789102954	Dan Getz	digital[\W_]*+hat[\W_]*+academy(?!\.com(?<=digitalhatacademy\.com))
