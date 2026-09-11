@@ -83343,3 +83343,4 @@
 1789128659	Jeff Schaller	rung\.guru
 1789137097	Jeff Schaller	phase1pixels\.ng
 1789153703	Dan Getz	predictsnowday\.com
+1789155031	Jeff Schaller	Royal[\W_]*+Rider[\W_]*+Bus[\W_]*+Rentals
