@@ -83341,3 +83341,4 @@
 1789102954	Dan Getz	digital[\W_]*+hat[\W_]*+academy(?!\.com(?<=digitalhatacademy\.com))
 1789115679	VLAZ	hasnainabdi\.space-z\.ai
 1789128659	Jeff Schaller	rung\.guru
+1789137097	Jeff Schaller	phase1pixels\.ng
