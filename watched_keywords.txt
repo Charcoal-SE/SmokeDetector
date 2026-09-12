@@ -83356,3 +83356,4 @@
 1789213163	Dan Getz	caebikestore\.com
 1789213202	Dan Getz	talariamotousa\.com
 1789213228	Dan Getz	dmtvapeshopusa\.com
+1789213253	Dan Getz	dmtcartshouse\.com
