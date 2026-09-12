@@ -83351,3 +83351,4 @@
 1789210184	Jeff Schaller	carpooldubaitoabudhabi\.com
 1789210564	Dan Getz	orange[\W_]*+hardware
 1789210752	Dan Getz	Bathroom[\W_]*+Shop[\W_]*+UK(?!\.co\.uk(?<=bathroomshopuk\.co\.uk))
+1789210882	Dan Getz	expdiacustomerservice\.site
