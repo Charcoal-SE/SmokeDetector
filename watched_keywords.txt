@@ -83354,3 +83354,4 @@
 1789210882	Dan Getz	expdiacustomerservice\.site
 1789213115	Dan Getz	sportzfy4u\.app
 1789213163	Dan Getz	caebikestore\.com
+1789213202	Dan Getz	talariamotousa\.com
