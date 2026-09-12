@@ -83357,3 +83357,4 @@
 1789213202	Dan Getz	talariamotousa\.com
 1789213228	Dan Getz	dmtvapeshopusa\.com
 1789213253	Dan Getz	dmtcartshouse\.com
+1789213300	Dan Getz	bowlingballstore\.com
