@@ -83367,3 +83367,4 @@
 1789218640	Dan Getz	Coinbase\s*+®️
 1789219219	Dan Getz	eb1aexperts\.com
 1789221055	Dan Getz	apoint\.co\.il
+1789229139	Dan Getz	ipptcalcpro\.com
