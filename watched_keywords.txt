@@ -83365,3 +83365,4 @@
 1789215183	Dan Getz	dmt[\W_]*+(?:vape|cart|shop|pen)[sz]?[a-z-_\.]*
 1789218189	Dan Getz	your concerns are handled quickly
 1789218640	Dan Getz	Coinbase\s*+®️
+1789219219	Dan Getz	eb1aexperts\.com
