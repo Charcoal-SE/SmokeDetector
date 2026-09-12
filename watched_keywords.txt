@@ -83362,3 +83362,4 @@
 1789213356	Dan Getz	dmtshopusa\.com
 1789213378	Dan Getz	lunacycleshop\.com
 1789213397	Dan Getz	talariashop\.com
+1789215183	Dan Getz	dmt[\W_]*+(?:vape|cart|shop|pen)[sz]?[a-z-_\.]*
