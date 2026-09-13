@@ -83373,3 +83373,4 @@
 1789241021	Dan Getz	primeportacabinjeddah\.com
 1789242052	Dan Getz	blackcarserviceschicago\.com
 1789242651	Dan Getz	flakyapi\.dev
+1789267850	Dan Getz	briefiq\.io
