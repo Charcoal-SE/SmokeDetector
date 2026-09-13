@@ -83382,3 +83382,4 @@
 1789312289	Dan Getz	noviqralab\.com
 1789312825	Dan Getz	slskit\.it\.com
 1789316316	Dan Getz	it\.com(?![.-])(?<![a-z]-it\.com)
+1789316995	Dan Getz	live(?<=\p{Ps}live)[\W_]*+person(?=\p{Pe})
