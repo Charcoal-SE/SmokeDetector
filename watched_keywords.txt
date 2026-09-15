@@ -83417,3 +83417,4 @@
 1789473648	Dan Getz	firenomics\.com
 1789473675	Dan Getz	durablepicks\.com
 1789474370	Dan Getz	supercoloring\.com
+1789474880	Dan Getz	supercoloring(?!\.com)
