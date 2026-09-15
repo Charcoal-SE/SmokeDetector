@@ -83401,3 +83401,4 @@
 1789415768	Jeff Schaller	fontblast(?!\.com)(?!er)
 1789432168	Jeff Schaller	reliableradonproducts\.com
 1789451277	VLAZ	vellumhealth\.com
+1789451284	VLAZ	vellum[\W_]*+health(?!\.com(?<=vellumhealth\.com))
