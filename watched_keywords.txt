@@ -83403,3 +83403,4 @@
 1789451277	VLAZ	vellumhealth\.com
 1789451284	VLAZ	vellum[\W_]*+health(?!\.com(?<=vellumhealth\.com))
 1789468332	Jeff Schaller	tcssecurity\.net
+1789468355	Jeff Schaller	tracepointindia\.in
