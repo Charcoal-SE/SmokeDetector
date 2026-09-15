@@ -83409,3 +83409,4 @@
 1789469183	VLAZ	iasgurukul\.com
 1789469195	VLAZ	ias[\W_]*+gurukul(?!\.com(?<=iasgurukul\.com))
 1789470428	VLAZ	vinetaro
+1789472614	Jeff Schaller	imagesolutionsindia\.com
