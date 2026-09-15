@@ -83418,3 +83418,4 @@
 1789473675	Dan Getz	durablepicks\.com
 1789474370	Dan Getz	supercoloring\.com
 1789474880	Dan Getz	supercoloring(?!\.com)
+1789475249	Jeff Schaller	RoamingRouteTravel
