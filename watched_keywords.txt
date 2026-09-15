@@ -83428,3 +83428,4 @@
 1789491996	Dan Getz	(?:the)?(?:pro)?geom[a-z-]*dash[a-z-]*+(?:\.[a-z]{2,})++
 1789492498	Dan Getz	(?-i:^Scrap Labs$)
 1789493757	Dan Getz	princeagency\.blogspot
+1789496662	Jeff Schaller	passaicemergencyroof\.com
