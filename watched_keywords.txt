@@ -83426,3 +83426,4 @@
 1789487943	DavidW	shopifystoreauditor\.liquidwebdevelopers\.com
 1789489918	Dan Getz	seqrite\.com
 1789491996	Dan Getz	(?:the)?(?:pro)?geom[a-z-]*dash[a-z-]*+(?:\.[a-z]{2,})++
+1789492498	Dan Getz	(?-i:^Scrap Labs$)
