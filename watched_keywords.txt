@@ -83423,3 +83423,4 @@
 1789484670	Dan Getz	AI[\W_]*+Tool[\W_]*+Hunt
 1789484838	Dan Getz	werent[\W_]*+kyrgyzstan
 1789486278	Dan Getz	fixmycv-za\.onrender\.com
+1789487943	DavidW	shopifystoreauditor\.liquidwebdevelopers\.com
