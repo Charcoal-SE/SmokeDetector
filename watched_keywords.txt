@@ -83407,3 +83407,4 @@
 1789468410	Jeff Schaller	getvinetaro\.com
 1789468635	Jeff Schaller	calculadorabolsafamilia\.com
 1789469183	VLAZ	iasgurukul\.com
+1789469195	VLAZ	ias[\W_]*+gurukul(?!\.com(?<=iasgurukul\.com))
