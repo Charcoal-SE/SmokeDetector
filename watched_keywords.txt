@@ -83421,3 +83421,4 @@
 1789475249	Jeff Schaller	RoamingRouteTravel
 1789479797	Jeff Schaller	telelatinoo\.org
 1789484670	Dan Getz	AI[\W_]*+Tool[\W_]*+Hunt
+1789484838	Dan Getz	werent[\W_]*+kyrgyzstan
