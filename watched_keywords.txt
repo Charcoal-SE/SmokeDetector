@@ -83438,3 +83438,4 @@
 1789543575	VLAZ	inventoryaccounting\.online
 1789552710	VLAZ	hexhearth\.live
 1789552724	VLAZ	casagrandepropcare\.com
+1789555588	Jeff Schaller	kor4e\.com
