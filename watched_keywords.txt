@@ -83432,3 +83432,4 @@
 1789499253	Dan Getz	wincdkey\.com
 1789500624	Jeff Schaller	techsky\.vn
 1789529503	Dan Getz	calcdesk\.app
+1789542313	VLAZ	vmarchitects\.net\.in
