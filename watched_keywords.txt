@@ -83450,3 +83450,4 @@
 1789627998	VLAZ	rajalottery\.sbs
 1789628006	VLAZ	raja[\W_]*+lottery(?!\.sbs(?<=rajalottery\.sbs))
 1789643522	Jeff Schaller	plume-message\.com
+1789643570	Jeff Schaller	scsrd\.co\.za
