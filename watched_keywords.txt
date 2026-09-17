@@ -83448,3 +83448,4 @@
 1789610500	Dan Getz	consultvida\.com\.br
 1789622784	VLAZ	nbiclear\.ph
 1789627998	VLAZ	rajalottery\.sbs
+1789628006	VLAZ	raja[\W_]*+lottery(?!\.sbs(?<=rajalottery\.sbs))
