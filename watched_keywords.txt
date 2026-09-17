@@ -81925,7 +81925,6 @@
 1782903079	VLAZ	deliverable\.agency
 1782903488	VLAZ	en-us-en-prostapeeak\.com
 1782905647	Jeff Schaller	rrmittal\.com
-1782912797	Jeff Schaller	phyfundamentals\.org
 1782919239	VLAZ	aurix-gold\.vercel\.app
 1782923071	VLAZ	thealostoratv\.com
 1782940510	Dan Getz	thespikevolleyballgame\.com
