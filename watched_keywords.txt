@@ -83476,3 +83476,4 @@
 1789809559	VLAZ	rowslice\.com
 1789814978	VLAZ	markleyo\.com
 1789814986	VLAZ	markleyo(?!\.com)
+1789815003	VLAZ	ccubetechnologies\.com
