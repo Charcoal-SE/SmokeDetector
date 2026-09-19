@@ -83479,3 +83479,4 @@
 1789831325	Dan Getz	quickmorse\.com
 1789838081	VLAZ	tipstutoriales\.com
 1789838118	VLAZ	drishinfo\.com
+1789839971	Dan Getz	codaspect\.com
