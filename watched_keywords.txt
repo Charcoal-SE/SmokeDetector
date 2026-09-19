@@ -83475,3 +83475,4 @@
 1789799164	VLAZ	afoqtpracticetest\.net
 1789809559	VLAZ	rowslice\.com
 1789814978	VLAZ	markleyo\.com
+1789814986	VLAZ	markleyo(?!\.com)
