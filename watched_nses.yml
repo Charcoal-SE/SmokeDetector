@@ -5659,7 +5659,9 @@ items:
 - ns: skynyxserver.com.
 - ns: ignissta.com.
 - ns: fluxus.vip.
-- ns: iiifun.com.
+- comment: NoAnswer 2026-09-20
+  disable: true
+  ns: iiifun.com.
 - ns: whirltechindia.com.
 - ns: eukdns.com.
 - ns:
