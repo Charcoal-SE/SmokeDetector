@@ -83486,3 +83486,4 @@
 1789859632	Dan Getz	5letterwordfindertool\.com
 1789859646	Dan Getz	killeenlawnservicecompany\.com
 1789914348	Jeff Schaller	enyesmallbig\.com
+1789914364	Jeff Schaller	enyesmallbigcopypaste\.com
