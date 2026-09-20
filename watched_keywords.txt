@@ -83485,3 +83485,4 @@
 1789839993	Dan Getz	simedge\.bet
 1789859632	Dan Getz	5letterwordfindertool\.com
 1789859646	Dan Getz	killeenlawnservicecompany\.com
+1789914348	Jeff Schaller	enyesmallbig\.com
