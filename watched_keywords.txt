@@ -83495,3 +83495,4 @@
 1789989258	VLAZ	p999-games\.pk
 1789992448	Jeff Schaller	levista\.in
 1789992497	Jeff Schaller	potain-majidi\.ir
+1789996602	Jeff Schaller	databridgecrm\.com
