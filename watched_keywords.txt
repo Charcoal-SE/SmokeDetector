@@ -83497,3 +83497,4 @@
 1789996602	Jeff Schaller	databridgecrm\.com
 1789999234	Dan Getz	weaversweb\.com
 1790000122	VLAZ	mocklingo\.com
+1790007518	VLAZ	pixpulse\.net
