@@ -83499,3 +83499,4 @@
 1790000122	VLAZ	mocklingo\.com
 1790007518	VLAZ	pixpulse\.net
 1790007526	VLAZ	motortriage\.com
+1790007540	VLAZ	fontgener\.com
