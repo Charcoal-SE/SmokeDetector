@@ -83511,3 +83511,4 @@
 1790053382	VLAZ	muse\.ai
 1790053389	VLAZ	(?-i:ZJQIC6)(?# invite code)
 1790053426	VLAZ	guest[\W_]*+posting[\W_]*+guru
+1790056285	VLAZ	forexinfohub\.com
