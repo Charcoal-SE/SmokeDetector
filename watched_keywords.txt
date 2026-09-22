@@ -83522,3 +83522,4 @@
 1790079725	Dan Getz	whimsitoons\.com
 1790079741	Dan Getz	zodiac[\W_]*+gallop
 1790088284	Dan Getz	junaid[\W_]*+jamshed
+1790098303	Dan Getz	NARIKJSON
