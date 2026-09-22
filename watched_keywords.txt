@@ -83520,3 +83520,4 @@
 1790077025	Dan Getz	mycompanysite\.com
 1790077781	Dan Getz	cyberledger[\W_]*+solutions
 1790079725	Dan Getz	whimsitoons\.com
+1790079741	Dan Getz	zodiac[\W_]*+gallop
