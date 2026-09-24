@@ -83557,3 +83557,4 @@
 1790233736	VLAZ	pragya[\W_]*+refrigeration(?!\.in(?<=pragyarefrigeration\.in))
 1790233745	VLAZ	pragyarefrigeration\.in
 1790233777	VLAZ	raeesabdurahiman\.com
+1790235844	VLAZ	shadhilcoin\.com
