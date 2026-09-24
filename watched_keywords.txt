@@ -83564,3 +83564,4 @@
 1790250841	Dan Getz	USAtomated
 1790252662	VLAZ	fantasygemsgamee\.com\.pk
 1790253726	VLAZ	imqrscan\.com
+1790256635	VLAZ	bearingnorthai\.com
