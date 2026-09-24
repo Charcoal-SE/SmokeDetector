@@ -83566,3 +83566,4 @@
 1790253726	VLAZ	imqrscan\.com
 1790256635	VLAZ	bearingnorthai\.com
 1790271744	VLAZ	fathimahibadesigns\.com
+1790273103	Dan Getz	krydsordsvar\.dk
