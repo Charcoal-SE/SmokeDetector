@@ -83567,3 +83567,4 @@
 1790256635	VLAZ	bearingnorthai\.com
 1790271744	VLAZ	fathimahibadesigns\.com
 1790273103	Dan Getz	krydsordsvar\.dk
+1790282658	Jeff Schaller	shefware\.com
