@@ -5619,7 +5619,9 @@ items:
 - ns: webpulse.site.
 - ns: cloudcone.net.
 - ns: middlehosted.com.
-- ns: upbeatgift.com.
+- comment: NXDOMAIN 2026-09-24
+  disable: true
+  ns: upbeatgift.com.
 - ns: rediffmailpro.com.
 - ns: peniton.co.uk.
 - ns: tino.org.
