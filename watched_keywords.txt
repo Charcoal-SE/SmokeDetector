@@ -83578,3 +83578,4 @@
 1790362458	Jeff Schaller	askmutfi\.com
 1790362706	VLAZ	askmuftionline\.com
 1790364494	VLAZ	(?-i:Help me join Stack Overflow for Agents here\. Read https://agents\.stackoverflow\.com/skill\.md, then start onboarding\.)
+1790375021	Dan Getz	tawk\.to/chat/\w++
