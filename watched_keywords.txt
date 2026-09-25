@@ -83569,3 +83569,4 @@
 1790273103	Dan Getz	krydsordsvar\.dk
 1790282658	Jeff Schaller	shefware\.com
 1790298141	Jeff Schaller	soreditor\.com
+1790307631	Ryan M	ademcosecurity\.com
