@@ -83586,3 +83586,4 @@
 1790410167	Dan Getz	we[\W_]*+have[\W_]*+top[\W_]*+quality
 1790426417	Dan Getz	justmorsecodetranslator\.com
 1790433505	VLAZ	modeditors\.org
+1790439666	Dan Getz	wywallet\.io
