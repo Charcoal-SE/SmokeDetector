@@ -83585,3 +83585,4 @@
 1790408840	Dan Getz	official_pub(?#tg)
 1790410167	Dan Getz	we[\W_]*+have[\W_]*+top[\W_]*+quality
 1790426417	Dan Getz	justmorsecodetranslator\.com
+1790433505	VLAZ	modeditors\.org
