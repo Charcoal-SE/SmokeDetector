@@ -83587,3 +83587,4 @@
 1790426417	Dan Getz	justmorsecodetranslator\.com
 1790433505	VLAZ	modeditors\.org
 1790439666	Dan Getz	wywallet\.io
+1790473740	Jeff Schaller	trustsentinel\.store
