@@ -83608,3 +83608,4 @@
 1790591268	VLAZ	ai[\W_]*+shopify[\W_]*+store[\W_]*+auditor
 1790592913	Dan Getz	cashstatearn\.pages\.dev
 1790594927	Dan Getz	superteam\.fun
+1790594943	Dan Getz	careergirls\.org
