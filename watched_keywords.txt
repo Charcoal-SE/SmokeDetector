@@ -83602,3 +83602,4 @@
 1790579052	Dan Getz	ClickTraces
 1790579368	Dan Getz	mergepdf\.click
 1790581213	Dan Getz	thecinebench\.com
+1790581222	Dan Getz	ricepuritytesthq\.com
