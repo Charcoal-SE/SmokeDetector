@@ -83599,3 +83599,4 @@
 1790571572	VLAZ	infiniteyield-script\.com
 1790572239	Dan Getz	TheCodeStory
 1790572254	Dan Getz	jazzmonthlypackages\.com
+1790579052	Dan Getz	ClickTraces
