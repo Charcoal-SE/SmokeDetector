@@ -83605,3 +83605,4 @@
 1790581222	Dan Getz	ricepuritytesthq\.com
 1790589431	Jeff Schaller	fnaffree\.io
 1790591220	VLAZ	tokenplant
+1790591268	VLAZ	ai[\W_]*+shopify[\W_]*+store[\W_]*+auditor
