@@ -83627,3 +83627,4 @@
 1790678384	Jeff Schaller	mippedia\.org
 1790680010	Dan Getz	astutebetas\.com
 1790680158	Dan Getz	cara[\W_]*+aktivasi
+1790683204	Dan Getz	swapfile\.live
