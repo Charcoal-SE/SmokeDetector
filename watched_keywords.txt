@@ -83626,3 +83626,4 @@
 1790678295	Jeff Schaller	counterclicker\.net
 1790678384	Jeff Schaller	mippedia\.org
 1790680010	Dan Getz	astutebetas\.com
+1790680158	Dan Getz	cara[\W_]*+aktivasi
