@@ -83629,3 +83629,4 @@
 1790680158	Dan Getz	cara[\W_]*+aktivasi
 1790683204	Dan Getz	swapfile\.live
 1790687689	Jeff Schaller	kylopeptides\.com
+1790691752	Dan Getz	warrgyizmorsch\.com
