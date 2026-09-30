@@ -83645,3 +83645,4 @@
 1790777782	Dan Getz	mr[\W_]*+shark(?!\.com\.au(?<=mrshark\.com\.au))
 1790780645	Dan Getz	mateslotsau\.com
 1790789862	Jeff Schaller	textsmallgen\.com
+1790807244	Dan Getz	patrickgendotti\.info
