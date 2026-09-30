@@ -83643,3 +83643,4 @@
 1790765030	Dan Getz	mrshark\.com\.au
 1790765044	Dan Getz	todaygoldprice\.info
 1790777782	Dan Getz	mr[\W_]*+shark(?!\.com\.au(?<=mrshark\.com\.au))
+1790780645	Dan Getz	mateslotsau\.com
