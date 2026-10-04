@@ -83683,3 +83683,4 @@
 1791121390	Dan Getz	canyam\.com
 1791133579	Dan Getz	junkremoval-hemet\.com
 1791156760	Dan Getz	moncommerce
+1791156769	Dan Getz	highdarktech(?#telegram)
