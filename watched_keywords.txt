@@ -83676,3 +83676,4 @@
 1791036113	VLAZ	wasphere\.com
 1791036134	VLAZ	rosemont[\W_]*+residency
 1791118681	Dan Getz	getbootup\.vercel\.app
+1791118724	Dan Getz	clipzun\.com
