@@ -83692,3 +83692,4 @@
 1791199519	Dan Getz	2ix2tv\.net
 1791199570	Dan Getz	italymillionday\.co\.za
 1791199659	Dan Getz	sportsmicro
+1791206001	Dan Getz	clutch[\W_]*+vape
