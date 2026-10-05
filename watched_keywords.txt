@@ -83697,3 +83697,4 @@
 1791215171	VLAZ	perfect[\W_]*+umrah
 1791215535	VLAZ	saveredgif\.com
 1791216807	Dan Getz	castleapp\.com\.in
+1791226641	SamGibson	86[\W_]*+York
