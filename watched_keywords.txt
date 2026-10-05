@@ -83696,3 +83696,4 @@
 1791213693	VLAZ	keybackrecovery\.com
 1791215171	VLAZ	perfect[\W_]*+umrah
 1791215535	VLAZ	saveredgif\.com
+1791216807	Dan Getz	castleapp\.com\.in
