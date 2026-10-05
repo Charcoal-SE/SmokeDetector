@@ -83687,3 +83687,4 @@
 1791181159	VLAZ	bidninjas\.ai
 1791191260	VLAZ	theveronafirm\.com
 1791196668	Dan Getz	dumpingcloud\.com
+1791197206	VLAZ	comment-intelligence-playground-fverdfa3eycja9de\.polandcentral-01\.azurewebsites\.net
