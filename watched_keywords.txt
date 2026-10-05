@@ -83685,3 +83685,4 @@
 1791156760	Dan Getz	moncommerce
 1791156769	Dan Getz	highdarktech(?#telegram)
 1791181159	VLAZ	bidninjas\.ai
+1791191260	VLAZ	theveronafirm\.com
