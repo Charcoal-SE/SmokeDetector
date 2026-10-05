@@ -83695,3 +83695,4 @@
 1791206001	Dan Getz	clutch[\W_]*+vape
 1791213693	VLAZ	keybackrecovery\.com
 1791215171	VLAZ	perfect[\W_]*+umrah
+1791215535	VLAZ	saveredgif\.com
