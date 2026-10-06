@@ -83707,3 +83707,4 @@
 1791264673	VLAZ	alishanraza\.com
 1791267401	VLAZ	hobby[\W_]*+central(?!\.net\.au(?<=hobbycentral\.net\.au))
 1791267409	VLAZ	hobbycentral\.net\.au
+1791267870	VLAZ	smartsplay\.com
