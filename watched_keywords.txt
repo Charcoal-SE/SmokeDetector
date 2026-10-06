@@ -83712,3 +83712,4 @@
 1791272858	VLAZ	meinespeisekarten\.de
 1791275240	VLAZ	pixporter\.site
 1791281536	VLAZ	bonga[\W_]*+models
+1791283632	Dan Getz	ukfreelottery\.co\.za
