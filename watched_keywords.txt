@@ -83711,3 +83711,4 @@
 1791269812	VLAZ	intervalskillx\.com
 1791272858	VLAZ	meinespeisekarten\.de
 1791275240	VLAZ	pixporter\.site
+1791281536	VLAZ	bonga[\W_]*+models
