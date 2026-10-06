@@ -83705,3 +83705,4 @@
 1791262763	VLAZ	iptvfollow
 1791264617	VLAZ	nurseparsian\.com
 1791264673	VLAZ	alishanraza\.com
+1791267401	VLAZ	hobby[\W_]*+central(?!\.net\.au(?<=hobbycentral\.net\.au))
