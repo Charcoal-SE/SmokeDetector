@@ -83723,3 +83723,4 @@
 1791303649	Dan Getz	developerbazaar\.com
 1791304072	Dan Getz	bilibilidownloader\.co
 1791306017	Ryan M	jetpacglobal\.com
+1791310883	Dan Getz	powakadata\.com
