@@ -5891,7 +5891,9 @@ items:
 - ns: natrohost.com.
 - ns: ragaddenge.com.
 - ns: hostupon.com.
-- ns: dechosting.com.
+- comment: NXDOMAIN 2026-10-01
+  disable: true
+  ns: dechosting.com.
 - ns: supercdnzone.com.
 - ns: glance-internal.inmobi.com.
 - ns: indiandns.net.
