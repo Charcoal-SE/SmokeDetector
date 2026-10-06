@@ -83709,3 +83709,4 @@
 1791267409	VLAZ	hobbycentral\.net\.au
 1791267870	VLAZ	smartsplay\.com
 1791269812	VLAZ	intervalskillx\.com
+1791272858	VLAZ	meinespeisekarten\.de
