@@ -83728,3 +83728,4 @@
 1791381141	VLAZ	techisness(?!\.com)
 1791381149	VLAZ	techisness\.com
 1791382833	Jeff Schaller	daac\.in
+1791395484	Jeff Schaller	meinprozentrechner\.com
