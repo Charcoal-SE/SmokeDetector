@@ -83726,3 +83726,4 @@
 1791344295	Dan Getz	popeyesmenuss\.us
 1791364061	Jeff Schaller	hoothrt\.com
 1791381141	VLAZ	techisness(?!\.com)
+1791381149	VLAZ	techisness\.com
