@@ -83744,3 +83744,4 @@
 1791477040	VLAZ	royal[\W_]*+group[\W_]*+hotels
 1791482100	Jeff Schaller	resumebuilder\.pk
 1791483153	Jeff Schaller	niewidzialnyznak\.com
+1791487746	Jeff Schaller	anointingbook\.com
