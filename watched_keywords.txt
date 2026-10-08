@@ -83742,3 +83742,4 @@
 1791464905	VLAZ	z999\.pk
 1791470507	Jeff Schaller	veteranroofingsystems\.com
 1791477040	VLAZ	royal[\W_]*+group[\W_]*+hotels
+1791482100	Jeff Schaller	resumebuilder\.pk
