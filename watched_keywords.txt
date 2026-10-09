@@ -83751,3 +83751,4 @@
 1791534109	VLAZ	varanasipackage\.com
 1791543190	VLAZ	aethersx2\.online
 1791545696	Jeff Schaller	betacalendars\.com
+1791545966	VLAZ	airfaretravelinfo\.com
