@@ -83775,3 +83775,4 @@
 1791628176	Jeff Schaller	syncranker\.com
 1791633938	Dan Getz	whitescreen\.dev
 1791640120	Dan Getz	indglobal\.in
+1791646295	VLAZ	indglobal(?!\.in)
