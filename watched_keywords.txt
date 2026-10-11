@@ -83777,3 +83777,4 @@
 1791646295	VLAZ	indglobal(?!\.in)
 1791647293	Dan Getz	adopted[\W_]*+adults
 1791656347	Dan Getz	flowscripthq\.blogspot
+1791682197	Dan Getz	opusflow\.com\.br
