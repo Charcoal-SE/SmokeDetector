@@ -83778,3 +83778,4 @@
 1791647293	Dan Getz	adopted[\W_]*+adults
 1791656347	Dan Getz	flowscripthq\.blogspot
 1791682197	Dan Getz	opusflow\.com\.br
+1791720193	Dan Getz	vowelnvault\.com
