@@ -83807,3 +83807,4 @@
 1791815772	VLAZ	ikkayees\.co\.uk
 1791815779	VLAZ	ikkayees(?!\.co\.uk)
 1791818438	VLAZ	techyest(?!\.co\.uk)
+1791824805	VLAZ	com\.dbpoint\.visainformation
