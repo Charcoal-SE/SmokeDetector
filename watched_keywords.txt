@@ -83795,3 +83795,4 @@
 1791793799	VLAZ	visionacademy\.info
 1791798883	VLAZ	techmexa\.com
 1791798956	VLAZ	shahzadishaq\.site
+1791799092	VLAZ	clarisco
