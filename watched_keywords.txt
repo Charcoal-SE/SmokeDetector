@@ -83798,3 +83798,4 @@
 1791799092	VLAZ	clarisco
 1791801534	VLAZ	HunDown
 1791801760	VLAZ	faiza[\W_]*+aroma(?!\.com(?<=faizaaroma\.com))
+1791801768	VLAZ	faizaaroma\.com
