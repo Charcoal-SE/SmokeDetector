@@ -83806,3 +83806,4 @@
 1791813711	Jeff Schaller	shahanap\.com
 1791815772	VLAZ	ikkayees\.co\.uk
 1791815779	VLAZ	ikkayees(?!\.co\.uk)
+1791818438	VLAZ	techyest(?!\.co\.uk)
