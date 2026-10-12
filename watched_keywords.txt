@@ -83569,7 +83569,6 @@
 1790298141	Jeff Schaller	soreditor\.com
 1790307631	Ryan M	ademcosecurity\.com
 1790313287	VLAZ	(?-i:License - CC BY-SA \d\.\d)(?# attribution from copied code)
-1790328124	VLAZ	86york\.com
 1790330589	VLAZ	prospeclabs\.in
 1790345696	Dan Getz	optimummtv\.com
 1790358259	Jeff Schaller	warebills\.com
