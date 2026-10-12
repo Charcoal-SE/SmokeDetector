@@ -83792,3 +83792,4 @@
 1791788560	VLAZ	brisbanescrapmetalbuyers\.com\.au
 1791793601	VLAZ	scrapmycaruk\.com
 1791793617	VLAZ	scrap[\W_]*+my[\W_]*+car[\W_]*+uk(?!\.com(?<=scrapmycaruk\.com))
+1791793799	VLAZ	visionacademy\.info
