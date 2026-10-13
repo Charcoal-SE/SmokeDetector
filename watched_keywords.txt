@@ -83823,3 +83823,4 @@
 1791878891	VLAZ	baker[\W_]*+tilly(?!\.in(?<=bakertilly\.in))
 1791878952	VLAZ	kytics\.in
 1791879665	VLAZ	thnagroup\.com
+1791879678	VLAZ	thna[\W_*+]group(?!\.com(?<=thnagroup\.com))
