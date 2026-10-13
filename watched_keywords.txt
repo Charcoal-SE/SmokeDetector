@@ -83810,3 +83810,4 @@
 1791824815	VLAZ	immigration[\W_]*+guide[\W_]*+visa[\W_]*+pr
 1791853336	Dan Getz	animixplay\.ro
 1791853361	Dan Getz	samehadaku\.pk
+1791869597	VLAZ	alr432778(?# promo code)
