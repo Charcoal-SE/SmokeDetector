@@ -83821,3 +83821,4 @@
 1791877613	VLAZ	rangerpointstore\.com
 1791878875	VLAZ	bakertilly\.in
 1791878891	VLAZ	baker[\W_]*+tilly(?!\.in(?<=bakertilly\.in))
+1791878952	VLAZ	kytics\.in
