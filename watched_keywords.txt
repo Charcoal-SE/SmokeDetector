@@ -83839,4 +83839,3 @@
 1791909258	VLAZ	farmingtonnmlocksmith\.com
 1791912544	VLAZ	dualidentitycenter\.com
 1791916757	VLAZ	petrosky\.io
-1791919408	VLAZ	(?-i:Read\smore:\s<a\shref="https://claude\.ai/share/)
