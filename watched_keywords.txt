@@ -83832,3 +83832,4 @@
 1791888343	VLAZ	hae[\W_]*+digital(?!\.com(?<=haedigital\.com))
 1791890422	VLAZ	fabrik\.io
 1791895429	Jeff Schaller	getyoutify\.com
+1791900099	Dan Getz	debugbear\.com
