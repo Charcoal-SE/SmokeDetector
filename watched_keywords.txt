@@ -83808,3 +83808,4 @@
 1791818438	VLAZ	techyest(?!\.co\.uk)
 1791824805	VLAZ	com\.dbpoint\.visainformation
 1791824815	VLAZ	immigration[\W_]*+guide[\W_]*+visa[\W_]*+pr
+1791853336	Dan Getz	animixplay\.ro
