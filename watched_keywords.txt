@@ -83826,3 +83826,4 @@
 1791879678	VLAZ	thna[\W_*+]group(?!\.com(?<=thnagroup\.com))
 1791886966	Dan Getz	webdesignelpasotx\.com
 1791886981	Dan Getz	edglobalacademy\.com
+1791887032	Dan Getz	stickerburrroller\.com
