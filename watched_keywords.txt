@@ -83824,3 +83824,4 @@
 1791878952	VLAZ	kytics\.in
 1791879665	VLAZ	thnagroup\.com
 1791879678	VLAZ	thna[\W_*+]group(?!\.com(?<=thnagroup\.com))
+1791886966	Dan Getz	webdesignelpasotx\.com
