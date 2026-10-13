@@ -83829,3 +83829,4 @@
 1791887032	Dan Getz	stickerburrroller\.com
 1791887945	VLAZ	realitytrending\.com
 1791888335	VLAZ	haedigital\.com
+1791888343	VLAZ	hae[\W_]*+digital(?!\.com(?<=haedigital\.com))
