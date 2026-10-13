@@ -83838,3 +83838,4 @@
 1791908998	VLAZ	online[\W_]*+quran[\W_]*+teacher
 1791909258	VLAZ	farmingtonnmlocksmith\.com
 1791912544	VLAZ	dualidentitycenter\.com
+1791916757	VLAZ	petrosky\.io
