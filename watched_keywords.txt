@@ -83843,3 +83843,4 @@
 1791924774	Dan Getz	inferthat\.com
 1791925201	Jeff Schaller	edisoncoatings\.com
 1791946140	Dan Getz	delta[\W_]*+executor
+1791954949	VLAZ	indiancad\.com
