@@ -83847,3 +83847,4 @@
 1791957004	VLAZ	brillica[\W_]*+services(?!\.com(?<=brillicaservices\.com))
 1791959944	VLAZ	whitestorksoft\.com
 1791959952	VLAZ	WhiteStork[\W_]*+Soft(?:ware[\W_]*+Solutions)?(?!\.com(?<=whitestorksoft\.com))
+1791970307	VLAZ	growthcraft07\.com
