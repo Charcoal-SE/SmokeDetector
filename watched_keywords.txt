@@ -83842,3 +83842,4 @@
 1791919463	VLAZ	(?-i:Read\s+more:\s+<a\s+href="https://claude\.ai/share/)
 1791924774	Dan Getz	inferthat\.com
 1791925201	Jeff Schaller	edisoncoatings\.com
+1791946140	Dan Getz	delta[\W_]*+executor
