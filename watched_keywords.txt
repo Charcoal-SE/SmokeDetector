@@ -83846,3 +83846,4 @@
 1791954949	VLAZ	indiancad\.com
 1791957004	VLAZ	brillica[\W_]*+services(?!\.com(?<=brillicaservices\.com))
 1791959944	VLAZ	whitestorksoft\.com
+1791959952	VLAZ	WhiteStork[\W_]*+Soft(?:ware[\W_]*+Solutions)?(?!\.com(?<=whitestorksoft\.com))
