@@ -83849,3 +83849,4 @@
 1791959952	VLAZ	WhiteStork[\W_]*+Soft(?:ware[\W_]*+Solutions)?(?!\.com(?<=whitestorksoft\.com))
 1791970307	VLAZ	growthcraft07\.com
 1791970321	VLAZ	barqsol\.com
+1791975539	Jeff Schaller	ecotone\.in
