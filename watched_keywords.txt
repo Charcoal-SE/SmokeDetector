@@ -83874,3 +83874,4 @@
 1792083926	VLAZ	smtpcart\.com
 1792084009	VLAZ	coolstylishname\.com
 1792084114	VLAZ	rechnerwelt24\.de
+1792086610	VLAZ	craftloop\.co\.in
