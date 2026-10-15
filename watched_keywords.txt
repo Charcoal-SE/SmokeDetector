@@ -83866,3 +83866,4 @@
 1792051792	VLAZ	ambert\.ae
 1792061677	VLAZ	calcolastipendionetto\.it
 1792067338	VLAZ	solvecaptcha\.com
+1792068664	Jeff Schaller	dev-wallets\.xyz
