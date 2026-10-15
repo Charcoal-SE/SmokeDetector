@@ -83860,3 +83860,4 @@
 1792041648	VLAZ	nesabamedia\.org
 1792042402	VLAZ	allunitconverts\.com
 1792042663	VLAZ	sevenwellsconstruction\.com
+1792046773	VLAZ	kolorax\.ai
