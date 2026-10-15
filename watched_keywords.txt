@@ -83869,3 +83869,4 @@
 1792081954	Makyen	platinum[\W_]*+chain[\W_]*+brotherhood[\W_]*+society(?:@gmail\.com)?
 1792082175	Makyen	dominant[\W_]*+billionaires
 1792082183	Makyen	secret[\W_]*+brotherhood[\W_]*+society
+1792082805	VLAZ	arisemarktech\.com
