@@ -83861,3 +83861,4 @@
 1792042402	VLAZ	allunitconverts\.com
 1792042663	VLAZ	sevenwellsconstruction\.com
 1792046773	VLAZ	kolorax\.ai
+1792046856	VLAZ	generateurdepseudo\.com
