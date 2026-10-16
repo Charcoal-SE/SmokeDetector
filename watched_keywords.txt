@@ -83880,3 +83880,4 @@
 1792114905	Dan Getz	studyvillas\.com
 1792127041	VLAZ	phoenixhomeremodelcompany\.com
 1792133769	VLAZ	rodentcontrolpharr\.com
+1792135350	VLAZ	edutik\.app
