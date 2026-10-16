@@ -83887,3 +83887,4 @@
 1792152729	VLAZ	new[\W_]*+image[\W_]*+leasing(?!\.com(?<=newimageleasing\.com))
 1792152737	VLAZ	newimageleasing\.com
 1792160211	Jeff Schaller	snipnet\.africa
+1792163038	Dan Getz	geovanguard(?:_qgis)?
