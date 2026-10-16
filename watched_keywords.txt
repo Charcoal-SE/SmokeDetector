@@ -83875,3 +83875,4 @@
 1792084114	VLAZ	rechnerwelt24\.de
 1792086610	VLAZ	craftloop\.co\.in
 1792090090	VLAZ	turbodm
+1792113089	Dan Getz	surfsky\.io
