@@ -83884,3 +83884,4 @@
 1792135512	VLAZ	kitchenremodelingnj\.us
 1792143760	VLAZ	zaicalife\.com
 1792145653	VLAZ	creationanddevelopment\.com
+1792152729	VLAZ	new[\W_]*+image[\W_]*+leasing(?!\.com(?<=newimageleasing\.com))
