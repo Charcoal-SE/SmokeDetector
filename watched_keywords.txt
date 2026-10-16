@@ -83883,3 +83883,4 @@
 1792135350	VLAZ	edutik\.app
 1792135512	VLAZ	kitchenremodelingnj\.us
 1792143760	VLAZ	zaicalife\.com
+1792145653	VLAZ	creationanddevelopment\.com
