@@ -83888,3 +83888,4 @@
 1792152737	VLAZ	newimageleasing\.com
 1792160211	Jeff Schaller	snipnet\.africa
 1792163038	Dan Getz	geovanguard(?:_qgis)?
+1792164198	VLAZ	tdeecalculator\.blog
