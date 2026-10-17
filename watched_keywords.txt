@@ -83891,3 +83891,4 @@
 1792164198	VLAZ	tdeecalculator\.blog
 1792224920	VLAZ	52id\.org
 1792224929	VLAZ	screamzonetattoo\.com
+1792225308	VLAZ	lumenore\.com
