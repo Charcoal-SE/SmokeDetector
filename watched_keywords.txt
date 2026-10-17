@@ -83894,3 +83894,4 @@
 1792225308	VLAZ	lumenore\.com
 1792226559	VLAZ	gemstonewellness\.com
 1792231752	VLAZ	armeniaex\.com
+1792248924	VLAZ	flick\.network
