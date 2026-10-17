@@ -83899,3 +83899,4 @@
 1792248958	VLAZ	qiwek(?!\.com)
 1792256730	Vickel	discoverindiabycar\.com
 1792272472	Dan Getz	kavro\.pro
+1792272484	Dan Getz	kavro(?!\.pro)
