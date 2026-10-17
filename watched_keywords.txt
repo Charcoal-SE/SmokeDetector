@@ -83895,3 +83895,4 @@
 1792226559	VLAZ	gemstonewellness\.com
 1792231752	VLAZ	armeniaex\.com
 1792248924	VLAZ	flick\.network
+1792248951	VLAZ	qiwek\.com
