@@ -83896,3 +83896,4 @@
 1792231752	VLAZ	armeniaex\.com
 1792248924	VLAZ	flick\.network
 1792248951	VLAZ	qiwek\.com
+1792248958	VLAZ	qiwek(?!\.com)
