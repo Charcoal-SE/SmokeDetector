@@ -83912,3 +83912,4 @@
 1792339826	VLAZ	zplarchive\.ferlabelnext\.it
 1792340020	Dan Getz	\.pk(?<=games?(?:\.com)?\.pk)
 1792340410	Dan Getz	oportomenuau\.com
+1792340518	Dan Getz	bdglog\.in\.net
