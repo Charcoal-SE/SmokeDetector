@@ -83907,3 +83907,4 @@
 1792326685	VLAZ	accnexus(?!\.xyz)
 1792334003	VLAZ	aftertax\.org\.uk
 1792336253	Jeff Schaller	pathtoflowhq\.com
+1792338610	Dan Getz	do[\W_]*+this[\W_]*+lingo
