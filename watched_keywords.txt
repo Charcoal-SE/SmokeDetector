@@ -83910,3 +83910,4 @@
 1792338610	Dan Getz	do[\W_]*+this[\W_]*+lingo
 1792339388	Dan Getz	greta\.sh
 1792339826	VLAZ	zplarchive\.ferlabelnext\.it
+1792339876	Dan Getz	\.com\.pk(?<=game\.com\.pk)
