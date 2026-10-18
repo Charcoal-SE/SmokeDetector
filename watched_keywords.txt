@@ -83906,3 +83906,4 @@
 1792326675	VLAZ	accnexus\.xyz
 1792326685	VLAZ	accnexus(?!\.xyz)
 1792334003	VLAZ	aftertax\.org\.uk
+1792336253	Jeff Schaller	pathtoflowhq\.com
