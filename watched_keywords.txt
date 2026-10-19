@@ -83934,3 +83934,4 @@
 1792427200	VLAZ	solacesoftware\.smilingface\.cloud
 1792428421	VLAZ	uaefreezones\.com
 1792428465	VLAZ	mediaruntime\.com
+1792429708	VLAZ	learnwithdigital(?!\.info)
