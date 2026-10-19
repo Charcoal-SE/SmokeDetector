@@ -83057,7 +83057,6 @@
 1787732527	VLAZ	lacalculators\.com
 1787733441	VLAZ	fota\.io
 1787738744	Dan Getz	xapps\.co
-1787738969	Dan Getz	unitedpress\.uk
 1787739116	Dan Getz	ricepuritytestscores\.com
 1787742659	VLAZ	webmetadataextractor\.com
 1787743468	VLAZ	windowcleansanclemente\.com
