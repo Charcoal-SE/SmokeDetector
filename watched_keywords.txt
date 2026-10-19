@@ -83936,3 +83936,4 @@
 1792428465	VLAZ	mediaruntime\.com
 1792429708	VLAZ	learnwithdigital(?!\.info)
 1792429717	VLAZ	learnwithdigital\.info
+1792432523	Jeff Schaller	ebookwritingservicesusa\.com
