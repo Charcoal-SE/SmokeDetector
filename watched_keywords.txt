@@ -83929,3 +83929,4 @@
 1792414292	VLAZ	inductive-logic-inv\.dreamwidth\.org
 1792414578	Jeff Schaller	foxbc\.com
 1792421894	Jeff Schaller	calcgravel\.com
+1792426901	Jeff Schaller	jadethreadandwax\.ca
