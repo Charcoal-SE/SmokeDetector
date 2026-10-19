@@ -83933,3 +83933,4 @@
 1792426927	VLAZ	txttopdfconverter\.com
 1792427200	VLAZ	solacesoftware\.smilingface\.cloud
 1792428421	VLAZ	uaefreezones\.com
+1792428465	VLAZ	mediaruntime\.com
