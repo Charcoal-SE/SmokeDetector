@@ -83949,3 +83949,4 @@
 1792490023	VLAZ	telemetrysolutions\.com
 1792490880	VLAZ	edutik(?!\.app)
 1792491165	VLAZ	huynhlong\.com\.vn
+1792495702	VLAZ	coynn\.com
