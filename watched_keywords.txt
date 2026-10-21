@@ -83978,3 +83978,4 @@
 1792602092	Dan Getz	dailypuzzlehint\.com
 1792604219	Glorfindel	mathproven\.com
 1792604235	Glorfindel	useopenslot\.com
+1792604249	Glorfindel	everydaytechreviews\.com
