@@ -83960,3 +83960,4 @@
 1792548422	Dan Getz	juenikz\.17(?:@gmail\.com)?
 1792549308	Dan Getz	baskettbalzerocodes\.com
 1792562433	VLAZ	(?-i:VNfDT)(?#shorturl.at)
+1792562462	VLAZ	australian-labradoodles\.co\.uk
