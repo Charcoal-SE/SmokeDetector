@@ -83975,3 +83975,4 @@
 1792600354	Dan Getz	calculatricemauricette\.com
 1792600549	Dan Getz	edu\.com
 1792602039	Dan Getz	thecavamenus\.com
+1792602092	Dan Getz	dailypuzzlehint\.com
