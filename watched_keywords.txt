@@ -83959,3 +83959,4 @@
 1792519103	Dan Getz	terralinklogistics\.com
 1792548422	Dan Getz	juenikz\.17(?:@gmail\.com)?
 1792549308	Dan Getz	baskettbalzerocodes\.com
+1792562433	VLAZ	(?-i:VNfDT)(?#shorturl.at)
