@@ -83977,3 +83977,4 @@
 1792602039	Dan Getz	thecavamenus\.com
 1792602092	Dan Getz	dailypuzzlehint\.com
 1792604219	Glorfindel	mathproven\.com
+1792604235	Glorfindel	useopenslot\.com
