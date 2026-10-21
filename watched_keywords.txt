@@ -83973,3 +83973,4 @@
 1792595670	VLAZ	metabettvbo\.com
 1792600326	Dan Getz	neoleaf\.science
 1792600354	Dan Getz	calculatricemauricette\.com
+1792600549	Dan Getz	edu\.com
