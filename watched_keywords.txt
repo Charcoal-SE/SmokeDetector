@@ -84000,3 +84000,4 @@
 1792682808	Dan Getz	sharkly\.ai
 1792686669	Dan Getz	automaticfillingmachine\.com
 1792688592	Jeff Schaller	testdeteclado\.com\.br
+1792689861	Dan Getz	scorenfo\.com
