@@ -83988,3 +83988,4 @@
 1792658292	VLAZ	digiunits\.com
 1792658419	VLAZ	digiunits(?!\.com)
 1792660168	VLAZ	asdckanpur\.com
+1792660861	VLAZ	themedetective\.com
