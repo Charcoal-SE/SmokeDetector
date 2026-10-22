@@ -83998,3 +83998,4 @@
 1792681098	VLAZ	orbitone
 1792681159	VLAZ	Mantaz[\W_]*+Technologies
 1792682808	Dan Getz	sharkly\.ai
+1792686669	Dan Getz	automaticfillingmachine\.com
