@@ -84014,3 +84014,4 @@
 1792766106	VLAZ	paramountbooks\.com\.pk
 1792766587	VLAZ	(?-i:Help me join Stack Overflow for Agents here\. Read <a href="https://agents\.stackoverflow\.com/skill\.md" rel="nofollow noreferrer">https://agents\.stackoverflow\.com/skill\.md</a>, then start onboarding\.)
 1792772415	Dan Getz	unctech\.co
+1792786784	Jeff Schaller	drirshadmalik\.com
