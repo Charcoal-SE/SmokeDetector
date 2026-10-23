@@ -84002,3 +84002,4 @@
 1792688592	Jeff Schaller	testdeteclado\.com\.br
 1792689861	Dan Getz	scorenfo\.com
 1792692452	Jeff Schaller	aliciacalcula\.com
+1792721507	Jeff Schaller	dngservice\.com
