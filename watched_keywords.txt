@@ -5203,7 +5203,6 @@
 1538393658	Glorfindel	wyvernchuck
 1538396337	Glorfindel	getasmurf\.com
 1538396549	Glorfindel	w9toys\.com
-1538412551	Makyen	e\.foundation(?#domain)
 1538438676	Makyen	kevinmitnick(?:@cyber-wizard\.com)?
 1538451028	Makyen	latinrose66(?:@gmail\.com)?
 1538455458	Tetsuya Yamamoto	surveyguide\.net
