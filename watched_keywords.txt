@@ -84021,3 +84021,4 @@
 1792917073	VLAZ	xs\d++\.com
 1792917416	VLAZ	tl\d++\.com
 1792919568	VLAZ	keysavior\.com
+1792919812	VLAZ	pdffixnow\.com
