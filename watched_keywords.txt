@@ -84016,3 +84016,4 @@
 1792786784	Jeff Schaller	drirshadmalik\.com
 1792848784	Dan Getz	(?-i:^Carlos alexandre Almeida santo$)
 1792891473	Dan Getz	finecalculators\.com
+1792915282	VLAZ	drehicure\.github\.io
