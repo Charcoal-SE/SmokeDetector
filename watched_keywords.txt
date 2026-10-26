@@ -84038,3 +84038,4 @@
 1793016363	Jeff Schaller	engtoolworks\.com
 1793016929	VLAZ	it[\W_]*+path[\W_]*+solutions(?!\.com(?<=itpathsolutions\.com))
 1793016936	VLAZ	itpathsolutions\.com
+1793018267	Jeff Schaller	dataandthebeast\.com
