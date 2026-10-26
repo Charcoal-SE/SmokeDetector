@@ -84037,3 +84037,4 @@
 1792998418	VLAZ	backlinksproject\.com
 1793016363	Jeff Schaller	engtoolworks\.com
 1793016929	VLAZ	it[\W_]*+path[\W_]*+solutions(?!\.com(?<=itpathsolutions\.com))
+1793016936	VLAZ	itpathsolutions\.com
