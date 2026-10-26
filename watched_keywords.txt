@@ -84039,3 +84039,4 @@
 1793016929	VLAZ	it[\W_]*+path[\W_]*+solutions(?!\.com(?<=itpathsolutions\.com))
 1793016936	VLAZ	itpathsolutions\.com
 1793018267	Jeff Schaller	dataandthebeast\.com
+1793024568	Jeff Schaller	pneumation\.ca
