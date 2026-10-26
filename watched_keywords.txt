@@ -84040,3 +84040,4 @@
 1793016936	VLAZ	itpathsolutions\.com
 1793018267	Jeff Schaller	dataandthebeast\.com
 1793024568	Jeff Schaller	pneumation\.ca
+1793026939	Dan Getz	bagas31[\W_]*+pw
