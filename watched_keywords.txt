@@ -84032,3 +84032,4 @@
 1792984052	Dan Getz	hugogaragedoorrepair\.com
 1792993373	VLAZ	qubitlink\.co
 1792993381	VLAZ	qubitlink(?!\.co)
+1792993737	VLAZ	applenxt_bot(?# t.me)
