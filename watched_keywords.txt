@@ -84031,3 +84031,4 @@
 1792935640	Dan Getz	discover\b(?:[^.]|\.\S){5,300}\bdesigned
 1792984052	Dan Getz	hugogaragedoorrepair\.com
 1792993373	VLAZ	qubitlink\.co
+1792993381	VLAZ	qubitlink(?!\.co)
