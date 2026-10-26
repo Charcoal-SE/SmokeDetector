@@ -84033,3 +84033,4 @@
 1792993373	VLAZ	qubitlink\.co
 1792993381	VLAZ	qubitlink(?!\.co)
 1792993737	VLAZ	applenxt_bot(?# t.me)
+1792998405	VLAZ	transcript-yt\.com
