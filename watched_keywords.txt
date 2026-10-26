@@ -84030,3 +84030,4 @@
 1792934172	Dan Getz	999vapp\.com\.pk
 1792935640	Dan Getz	discover\b(?:[^.]|\.\S){5,300}\bdesigned
 1792984052	Dan Getz	hugogaragedoorrepair\.com
+1792993373	VLAZ	qubitlink\.co
