@@ -84051,3 +84051,4 @@
 1793094022	Ryan M	vizloft\.com
 1793094519	VLAZ	lupinetravel\.co\.uk
 1793101856	VLAZ	themediaspaces(?!\.com)
+1793101864	VLAZ	themediaspaces\.com
