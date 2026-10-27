@@ -84045,3 +84045,4 @@
 1793039713	VLAZ	signalhire\.com
 1793079105	VLAZ	cubitcalculator\.com
 1793086037	VLAZ	aniketblog7731\.blogspot
+1793086342	VLAZ	ivytech\.asia
