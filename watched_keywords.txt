@@ -84062,3 +84062,4 @@
 1793110030	VLAZ	clarkdevlin_84
 1793113310	Dan Getz	kcpdentistry\.com
 1793113373	Dan Getz	nuredin-kurtovic(?#github)
+1793113389	Dan Getz	longping\.dev
