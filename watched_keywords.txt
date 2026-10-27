@@ -84052,3 +84052,4 @@
 1793094519	VLAZ	lupinetravel\.co\.uk
 1793101856	VLAZ	themediaspaces(?!\.com)
 1793101864	VLAZ	themediaspaces\.com
+1793103130	VLAZ	scheduloom\.com
