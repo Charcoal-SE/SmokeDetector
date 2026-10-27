@@ -84050,3 +84050,4 @@
 1793091816	VLAZ	calculadorhoraspro\.com
 1793094022	Ryan M	vizloft\.com
 1793094519	VLAZ	lupinetravel\.co\.uk
+1793101856	VLAZ	themediaspaces(?!\.com)
