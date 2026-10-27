@@ -84043,3 +84043,4 @@
 1793026939	Dan Getz	bagas31[\W_]*+pw
 1793037415	Dan Getz	sourcey\.com(?=/?")
 1793039713	VLAZ	signalhire\.com
+1793079105	VLAZ	cubitcalculator\.com
