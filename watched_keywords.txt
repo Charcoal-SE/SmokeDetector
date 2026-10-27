@@ -84058,3 +84058,4 @@
 1793105136	VLAZ	asap[\W_]*+military[\W_]*+supplies
 1793105497	VLAZ	breathediviinty\.com
 1793106597	VLAZ	boostfollowers24\.com
+1793108189	Dan Getz	mxltvapp\.com
