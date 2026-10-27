@@ -84056,3 +84056,4 @@
 1793103574	Jeff Schaller	tusoftware\.es
 1793105053	VLAZ	game-padtester\.com
 1793105136	VLAZ	asap[\W_]*+military[\W_]*+supplies
+1793105497	VLAZ	breathediviinty\.com
