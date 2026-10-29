@@ -84094,3 +84094,4 @@
 1793292859	VLAZ	instaviewstories\.com
 1793295874	VLAZ	alarmclock\.web\.tr
 1793295932	VLAZ	chooch\.com
+1793300766	VLAZ	heyteamenuu\.com
