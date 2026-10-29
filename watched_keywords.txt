@@ -84088,3 +84088,4 @@
 1793266464	VLAZ	gfx[\W_]*+al[\W_]*+bashar
 1793269830	VLAZ	greenmyna\.com
 1793275527	VLAZ	(?-i:448a36346)(?# linked.in profile ID)
+1793275945	VLAZ	jaspalgupta27-arch
