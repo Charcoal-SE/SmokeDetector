@@ -84085,3 +84085,4 @@
 1793266183	Ryan M	debutinfotech\.com
 1793266319	VLAZ	nexus[\W_]*+iq[\W_]*+solutions
 1793266348	VLAZ	theresearchexpert\.ae
+1793266464	VLAZ	gfx[\W_]*+al[\W_]*+bashar
