@@ -84097,3 +84097,4 @@
 1793300766	VLAZ	heyteamenuu\.com
 1793339795	VLAZ	conquest[\W_]*+pest[\W_]*+services(?!\.com(?<=conquestpestservices\.com))
 1793339802	VLAZ	conquestpestservices\.com
+1793349632	VLAZ	newjerseydrones\.net
