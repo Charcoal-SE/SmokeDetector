@@ -84101,3 +84101,4 @@
 1793349683	VLAZ	com\.background_remover_app\.photobackgroundremoverr
 1793361001	VLAZ	percentoffcalculator\.org
 1793385723	VLAZ	eg[\W_]*+kantawalla
+1793394487	Dan Getz	texashousemenu\.com
