@@ -84095,3 +84095,4 @@
 1793295874	VLAZ	alarmclock\.web\.tr
 1793295932	VLAZ	chooch\.com
 1793300766	VLAZ	heyteamenuu\.com
+1793339723	VLAZ	conquest[\W_]*+pest[\W_]*+services
