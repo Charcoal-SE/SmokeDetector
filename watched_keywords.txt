@@ -84098,3 +84098,4 @@
 1793339795	VLAZ	conquest[\W_]*+pest[\W_]*+services(?!\.com(?<=conquestpestservices\.com))
 1793339802	VLAZ	conquestpestservices\.com
 1793349632	VLAZ	newjerseydrones\.net
+1793349683	VLAZ	com\.background_remover_app\.photobackgroundremoverr
