@@ -84100,3 +84100,4 @@
 1793349632	VLAZ	newjerseydrones\.net
 1793349683	VLAZ	com\.background_remover_app\.photobackgroundremoverr
 1793361001	VLAZ	percentoffcalculator\.org
+1793385723	VLAZ	eg[\W_]*+kantawalla
