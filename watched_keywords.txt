@@ -83914,7 +83914,6 @@
 1792341822	Dan Getz	777cxvip\.pk
 1792348463	Dan Getz	theflaremagazine\.co\.uk
 1792386600	CPlus	flumentos\.info
-1792392055	VLAZ	world[\W_]*+digital[\W_]*+hub
 1792404982	Dan Getz	earthypapers\.com
 1792405767	Dan Getz	80877\.tv
 1792405821	Dan Getz	5470331(?#wechat)
