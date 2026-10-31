@@ -84111,3 +84111,4 @@
 1793444927	VLAZ	stellargridaero(?!\.com)
 1793449022	VLAZ	worlddigitalhub\.info
 1793449029	VLAZ	world[\W_]*+digital[\W_]*+hub(?!\.info(?<=worlddigitalhub\.info))
+1793452725	Dan Getz	attendi\.in
