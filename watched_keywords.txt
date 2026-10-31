@@ -84105,3 +84105,4 @@
 1793406781	Jeff Schaller	downloadunlocktool\.com
 1793432144	VLAZ	letrasdiferentes\.online
 1793432267	VLAZ	tampa[\W_]*+home[\W_]*+wash
+1793439598	VLAZ	talktoihops\.cfd
