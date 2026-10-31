@@ -84109,3 +84109,4 @@
 1793444795	VLAZ	onlinedevelopertool\.com
 1793444920	VLAZ	stellargridaero\.com
 1793444927	VLAZ	stellargridaero(?!\.com)
+1793449022	VLAZ	worlddigitalhub\.info
