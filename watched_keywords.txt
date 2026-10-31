@@ -84113,3 +84113,4 @@
 1793449029	VLAZ	world[\W_]*+digital[\W_]*+hub(?!\.info(?<=worlddigitalhub\.info))
 1793452725	Dan Getz	attendi\.in
 1793453646	Dan Getz	letras[\W_]*+bonitas
+1793453980	Dan Getz	cftbaze(?#telegram)
