@@ -84115,3 +84115,4 @@
 1793453646	Dan Getz	letras[\W_]*+bonitas
 1793453980	Dan Getz	cftbaze(?#telegram)
 1793457306	Dan Getz	redeagle\.tech
+1793471969	Glorfindel	speedchess\.de
