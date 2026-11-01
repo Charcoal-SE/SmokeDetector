@@ -84118,3 +84118,4 @@
 1793471969	Glorfindel	speedchess\.de
 1793472252	VLAZ	alioneisahisahaliisah
 1793524125	VLAZ	(?-i:^Brent\s*Lakin$)
+1793526019	VLAZ	ctrlshift\.com\.tr
