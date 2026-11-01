@@ -84121,3 +84121,4 @@
 1793526019	VLAZ	ctrlshift\.com\.tr
 1793538216	Dan Getz	yantramedia\.co\.in
 1793545565	Dan Getz	(?-i:^(?:user518450|Upload)$)(?#temporary)
+1793545594	Dan Getz	(?-i:^user518412$)(?#temporary)
