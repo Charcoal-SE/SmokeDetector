@@ -84124,3 +84124,4 @@
 1793545594	Dan Getz	(?-i:^user518412$)(?#temporary)
 1793556435	VLAZ	freeasphaltcalculators\.com
 1793596134	VLAZ	dmfirst\.link
+1793596248	VLAZ	lauritz[\W_]*+knudsen[\W_]*+smartshop
