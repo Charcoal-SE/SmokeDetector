@@ -84134,3 +84134,4 @@
 1793638819	VLAZ	cvsplanet\.com
 1793641055	VLAZ	taptempotool\.com
 1793644742	Dan Getz	bg678game\.online
+1793652524	VLAZ	gamingworld\.com\.pk
