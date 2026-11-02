@@ -84125,3 +84125,4 @@
 1793556435	VLAZ	freeasphaltcalculators\.com
 1793596134	VLAZ	dmfirst\.link
 1793596292	VLAZ	lauritz[\W_]*+knudsen(?:[\W_]*+smartshop)?
+1793602764	VLAZ	divyadainika\.com
