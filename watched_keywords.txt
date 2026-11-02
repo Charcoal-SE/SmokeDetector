@@ -84127,3 +84127,4 @@
 1793596292	VLAZ	lauritz[\W_]*+knudsen(?:[\W_]*+smartshop)?
 1793602764	VLAZ	divyadainika\.com
 1793602778	VLAZ	monthlyinternet\.co\.uk
+1793615690	VLAZ	pestcontrolinbend\.com
