@@ -84138,3 +84138,4 @@
 1793680645	VLAZ	content24(?!\.ai)
 1793680652	VLAZ	content24\.ai
 1793682040	VLAZ	sseducationsfoundation\.com
+1793685445	VLAZ	omfoundations\.com
