@@ -595,10 +595,13 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
 
 # noinspection PyMissingTypeHints
 def will_i_be_notified(user_id, chat_site, room_id, se_site):
-    exists, site = check_site_and_get_full_name(se_site)
-    if not exists:
-        return False
-    notification_tuple = (int(user_id), chat_site, int(room_id), site, Any())
+    # Non-site values (e.g. "/standby") are stored as given, so only look up real sites,
+    # the same as add_to_notification_list() and remove_from_notification_list() do.
+    if se_site[0] != "/":
+        exists, se_site = check_site_and_get_full_name(se_site)
+        if not exists:
+            return False
+    notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
     return notification_tuple in GlobalVars.notifications
 
 
