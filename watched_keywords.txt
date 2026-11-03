@@ -84144,3 +84144,4 @@
 1793728510	Dan Getz	(?-i:3HLDkipdKmJKGjbgCD8moo3GyhEY4DWdZ7JAgSpMysHp)
 1793738957	VLAZ	chittithera\.com
 1793738964	VLAZ	chitti[\W_]*+thera(?!\.com(?<=chittithera\.com))
+1793741058	VLAZ	financenestblog\.com
