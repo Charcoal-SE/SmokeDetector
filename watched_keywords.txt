@@ -84136,3 +84136,4 @@
 1793644742	Dan Getz	bg678game\.online
 1793652524	VLAZ	gamingworld\.com\.pk
 1793680645	VLAZ	content24(?!\.ai)
+1793680652	VLAZ	content24\.ai
