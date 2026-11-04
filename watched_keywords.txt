@@ -84156,3 +84156,4 @@
 1793785436	VLAZ	blueprint[\W_]*+exhibits
 1793788111	VLAZ	calculatorstarbuckscalories\.com
 1793792119	VLAZ	prepbolt
+1793797924	Jeff Schaller	Home[\W_]*+Comfort[\W_]*+Alliance
