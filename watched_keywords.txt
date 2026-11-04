@@ -84154,3 +84154,4 @@
 1793780873	VLAZ	kgtostoneandpounds\.uk
 1793782843	VLAZ	terapage\.ai
 1793785436	VLAZ	blueprint[\W_]*+exhibits
+1793788111	VLAZ	calculatorstarbuckscalories\.com
