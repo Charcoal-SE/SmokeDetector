@@ -84150,3 +84150,4 @@
 1793774644	VLAZ	abound[\W_]*+transport[\W_]*+group
 1793774759	VLAZ	chapter[\W_]*+choice
 1793775850	VLAZ	thepngtojpg\.com
+1793779726	VLAZ	nexchemintelligence\.com
