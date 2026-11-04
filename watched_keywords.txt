@@ -84147,3 +84147,4 @@
 1793741058	VLAZ	financenestblog\.com
 1793769812	VLAZ	630644350@qq\.com
 1793769826	VLAZ	shenzhen[\W_]*+heming[\W_]*+rongchuang[\W_]*+technology
+1793774644	VLAZ	abound[\W_]*+transport[\W_]*+group
