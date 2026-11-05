@@ -84162,3 +84162,4 @@
 1793856725	VLAZ	lakewoodgarmentcare\.com
 1793878257	Dan Getz	dionocarseat\.com
 1793883680	VLAZ	nvedyabuildcon\.com
+1793883688	VLAZ	nvedya[\W_]*+buildcon(?!\.com(?<=nvedyabuildcon\.com))
