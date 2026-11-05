@@ -84163,3 +84163,4 @@
 1793883680	VLAZ	nvedyabuildcon\.com
 1793883688	VLAZ	nvedya[\W_]*+buildcon(?!\.com(?<=nvedyabuildcon\.com))
 1793896909	VLAZ	work[\W_]*+hours[\W_]*+calculator(?!\.net(?<=workhourscalculator\.net))(?!\.com(?<=workhours-calculator\.com))
+1793896918	VLAZ	workhours-calculator\.com
