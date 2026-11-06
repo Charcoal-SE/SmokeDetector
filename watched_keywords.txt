@@ -84165,3 +84165,4 @@
 1793896909	VLAZ	work[\W_]*+hours[\W_]*+calculator(?!\.net(?<=workhourscalculator\.net))(?!\.com(?<=workhours-calculator\.com))
 1793896918	VLAZ	workhours-calculator\.com
 1793943160	VLAZ	warpimage\.com
+1793943197	VLAZ	resultadosanguila\.com
