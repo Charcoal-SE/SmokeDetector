@@ -84170,3 +84170,4 @@
 1793952231	VLAZ	vectorseek\.com
 1793963665	Jeff Schaller	allcarhistory\.com
 1793965698	VLAZ	contraware\.blogspot
+1793965706	VLAZ	Tabshell
