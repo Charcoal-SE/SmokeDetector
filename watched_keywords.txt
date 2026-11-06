@@ -84174,3 +84174,4 @@
 1793965871	VLAZ	itelearn\.com
 1793965897	VLAZ	itelearn(?!\.com)
 1793969073	VLAZ	kurateai\.com
+1793980139	Dan Getz	thryveclinic\.com
