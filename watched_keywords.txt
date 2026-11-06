@@ -84168,3 +84168,4 @@
 1793943197	VLAZ	resultadosanguila\.com
 1793951218	VLAZ	finlawassociates\.com
 1793952231	VLAZ	vectorseek\.com
+1793963665	Jeff Schaller	allcarhistory\.com
