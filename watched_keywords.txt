@@ -84176,3 +84176,4 @@
 1793969073	VLAZ	kurateai\.com
 1793980139	Dan Getz	thryveclinic\.com
 1793999591	Jeff Schaller	typingskillpro\.com
+1794043872	Dan Getz	olle\.tech
