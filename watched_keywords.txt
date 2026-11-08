@@ -84183,3 +84183,4 @@
 1794048664	VLAZ	odbus\.in
 1794048683	VLAZ	odbus(?!\.in)
 1794084419	Ryan M	faisalnadeem\.net
+1794140869	Jeff Schaller	jaeno\.ai
