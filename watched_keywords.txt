@@ -84192,3 +84192,4 @@
 1794224111	Dan Getz	thecyberseal\.com
 1794235284	Dan Getz	cloudcostwise\.io
 1794236288	Jeff Schaller	pomonawaterdamagepro\.com
+1794245943	Jeff Schaller	vappods\.ae
