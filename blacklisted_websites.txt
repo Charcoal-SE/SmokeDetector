@@ -6374,3 +6374,4 @@ clipzun\.com
 86york\.com
 canyam\.com
 unitedpress\.uk
+\b(?<![^\W_]-)astroma\.co\b(?![.-][^\W_])
