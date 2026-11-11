@@ -84208,3 +84208,4 @@
 1794387717	Dan Getz	bhoomirtckarnataka\.com
 1794389937	Dan Getz	Celotech
 1794389944	Dan Getz	urbankitchenfinds\.com
+1794403612	Jeff Schaller	yanseva\.com
