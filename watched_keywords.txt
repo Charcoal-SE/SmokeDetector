@@ -84199,3 +84199,4 @@
 1794337662	Dan Getz	hisab-alomr\.com
 1794338605	Dan Getz	alphagrowth\.io
 1794347393	Dan Getz	ruststudio\.org
+1794380549	VLAZ	snackvideosdownloader\.id
