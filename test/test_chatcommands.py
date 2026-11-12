@@ -865,6 +865,20 @@ def test_notifications():
             "You'll now get pings from me if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`."
         assert chatcommands.notify("11540", "codegolf", "False", original_msg=msg1) == \
             "That notification configuration is already registered."
+
+        # Non-site values, such as "/standby", are not looked up as SE sites
+        assert chatcommands.willbenotified("11540", "/standby", original_msg=msg1) == \
+            "No, you won't be notified for that site in that room."
+        assert chatcommands.notify("11540", "/standby", None, original_msg=msg1) == \
+            "You'll now get pings from me if I report a post on `/standby`, in room `11540` on `chat.stackexchange.com`."
+        assert chatcommands.willbenotified("11540", "/standby", original_msg=msg1) == \
+            "Yes, you will be notified for that site in that room."
+        assert chatcommands.willbenotified("11540", "/standby", original_msg=msg2) == \
+            "No, you won't be notified for that site in that room."
+        assert chatcommands.unnotify("11540", "/standby", original_msg=msg1) == \
+            "I will no longer ping you if I report a post on `/standby`, in room `11540` on `chat.stackexchange.com`."
+        assert chatcommands.willbenotified("11540", "/standby", original_msg=msg1) == \
+            "No, you won't be notified for that site in that room."
     finally:
         # Cleanup
         remove_pickle("notifications.p")
