@@ -84229,3 +84229,4 @@
 1794622038	Dan Getz	fontgrid\.top
 1794650205	Jeff Schaller	sgsherbals\.com
 1794657447	Jeff Schaller	fishduck\.com
+1794661242	Jeff Schaller	betalifesci\.com
