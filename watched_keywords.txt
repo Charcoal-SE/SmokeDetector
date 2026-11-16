@@ -84257,3 +84257,4 @@
 1794792208	Dan Getz	blooio\.com
 1794827749	Dan Getz	(?-i:lgoJDjW9dkM)(?# www.youtube.com)
 1794827762	Dan Getz	hua\.edu
+1794828058	Dan Getz	comparecloudcosts\.com
