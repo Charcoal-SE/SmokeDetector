@@ -84254,3 +84254,4 @@
 1794785920	Dan Getz	microsolderingpk\.com
 1794785927	Dan Getz	phoneplanetltd\.com
 1794791049	Dan Getz	skillwaala(?!\.com)
+1794792208	Dan Getz	blooio\.com
