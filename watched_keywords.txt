@@ -84273,3 +84273,4 @@
 1794929621	Dan Getz	menusbook\.com
 1794929685	Dan Getz	next-cart(?!\.com)
 1794937894	Dan Getz	skanndar\.top
+1794943907	Dan Getz	envy[\W_]*+us
