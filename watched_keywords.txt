@@ -84271,3 +84271,4 @@
 1794929544	Dan Getz	certsprime
 1794929608	Dan Getz	homeyardo\.com
 1794929621	Dan Getz	menusbook\.com
+1794929685	Dan Getz	next-cart(?!\.com)
