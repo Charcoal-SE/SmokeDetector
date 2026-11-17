@@ -84268,3 +84268,4 @@
 1794895873	Ryan M	watkinsbailbonds\.com
 1794914206	Jeff Schaller	vk\.ru
 1794916527	VLAZ	thedressoutlet\.com
+1794916534	VLAZ	thedressoutlet(?!\.com)
