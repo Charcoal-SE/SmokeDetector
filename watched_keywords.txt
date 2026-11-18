@@ -84288,3 +84288,4 @@
 1795016759	Dan Getz	pactman\.org
 1795016768	Dan Getz	nonprofit[\W_]*+check[\W_]*+plus
 1795028149	Dan Getz	gemsliintimates\.com
+1795032177	Jeff Schaller	chilismenuprices\.us
