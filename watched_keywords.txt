@@ -84283,3 +84283,4 @@
 1795000227	VLAZ	otpaycalculator\.com
 1795001666	Jeff Schaller	evigrxplus\.com
 1795002895	Jeff Schaller	affordableoutfitter\.com
+1795013516	Jeff Schaller	ibotta\.onelink\.me
