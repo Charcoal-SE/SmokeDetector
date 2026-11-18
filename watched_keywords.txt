@@ -84286,3 +84286,4 @@
 1795013538	Jeff Schaller	RIWKCGX(?#referral code)
 1795014811	Jeff Schaller	hostxit\.com
 1795016759	Dan Getz	pactman\.org
+1795016768	Dan Getz	nonprofit[\W_]*+check[\W_]*+plus
