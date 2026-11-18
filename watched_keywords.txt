@@ -84085,7 +84085,6 @@
 1793275945	VLAZ	jaspalgupta27-arch
 1793278650	Jeff Schaller	rajasthanchaupad\.com
 1793285593	Jeff Schaller	onlinecalculatar\.com
-1793292859	VLAZ	instaviewstories\.com
 1793295874	VLAZ	alarmclock\.web\.tr
 1793295932	VLAZ	chooch\.com
 1793300766	VLAZ	heyteamenuu\.com
