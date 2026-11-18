@@ -6377,3 +6377,4 @@ unitedpress\.uk
 \b(?<![^\W_]-)astroma\.co\b(?![.-][^\W_])
 mahirapolyglobal\.com
 skanndar\.top
+alpenature\.com

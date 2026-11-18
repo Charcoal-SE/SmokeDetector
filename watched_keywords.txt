@@ -40042,7 +40042,6 @@
 1656949100	Ollie	jarin\.ir
 1656949146	Ollie	towardsiot\.com
 1656949232	Ollie	thietkeinanktp\.com
-1656949426	Ollie	alpenature\.com
 1656949559	Ollie	beefsteakveg\.com
 1656953685	Ollie	kdetools\.com
 1656954763	cigien	djangoloadstatic\.com
