@@ -84294,3 +84294,4 @@
 1795055537	Dan Getz	supervids\.ai
 1795062837	Dan Getz	moneysymbol\.com
 1795086857	Dan Getz	snaptikk\.io
+1795086886	Dan Getz	veye\.com\.au
