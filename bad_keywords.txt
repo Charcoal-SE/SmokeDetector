@@ -3929,3 +3929,4 @@ avigdor[\W_]*+cybertech
 dr\.alfred118(?:@gmail\.com)?
 menghubungi[\W_]*+layanan
 hubungi[\W_]*+layanan
+(?:(?:ij|start)[\W_]*+)++can+on(?:[\W_]*+(?:ij|start))*+\w{0,5}(?<!ij\.start\.canon)(?<!https://cam\.start\.canon)
