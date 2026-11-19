@@ -84291,3 +84291,4 @@
 1795032177	Jeff Schaller	chilismenuprices\.us
 1795039758	Dan Getz	zipnest\.site
 1795052823	Jeff Schaller	publentra\.com
+1795055537	Dan Getz	supervids\.ai
