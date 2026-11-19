@@ -84302,3 +84302,4 @@
 1795114773	Dan Getz	fakeiduk\.co\.uk
 1795114850	Dan Getz	uk[\W_]*+id[\W_]*+pro
 1795121591	Jeff Schaller	agewise-life-lens\.lovable\.app
+1795121608	Jeff Schaller	reelsave-guide\.hatchable\.site
