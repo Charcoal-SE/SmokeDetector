@@ -84304,3 +84304,4 @@
 1795121591	Jeff Schaller	agewise-life-lens\.lovable\.app
 1795121608	Jeff Schaller	reelsave-guide\.hatchable\.site
 1795121630	Jeff Schaller	calculator-net-hub\.netlify\.app
+1795121650	Jeff Schaller	babycenter-us\.netlify\.app
