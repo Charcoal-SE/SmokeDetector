@@ -84300,3 +84300,4 @@
 1795088894	Jeff Schaller	yanseva(?!\.com)
 1795089095	Jeff Schaller	dextrodelight\.com\.au
 1795114773	Dan Getz	fakeiduk\.co\.uk
+1795114850	Dan Getz	uk[\W_]*+id[\W_]*+pro
