@@ -4,6 +4,43 @@ version = "0.1.0"
 description = "Headless chatbot that detects spam and posts links to it in chatrooms for quick deletion."
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = [
+    #"appdirs>=1.4.3",  # appears unused
+    "beautifulsoup4>=4.6.0",
+    "chatexchange",
+    "colorama>=0.4.1",
+    "dnspython>=2.0.0",
+    "msgpack-python>=0.5.6",
+    "phonenumbers>=8.8.11",
+    "psutil>=5.9.0",
+    "pyyaml>=3.12",
+    "regex>=2020.10.23",
+    "requests>=2.18.4",
+    "sh>=1.12.14",
+    "termcolor>=1.1.0",
+    "tld~=0.12",
+    "typing>=3.6.4",
+    "websocket-client>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    #"flake8~=6.1.0",  # Dropped in favor of ruff
+    "coverage>=7.3.2",
+    #"packaging>=16.8",  # unknown why this was included
+    #"pep8-naming==0.7.0",  # is a dependency of flake8
+    "pytest>=4.1.0",
+    "pytest-timeout>=2.1.0",
+    "pytest-xdist>=2.5.0",
+    "ruff>=0.15.0",
+]
+ci = [
+    "pytest-cov",
+    "coveralls",
+]
+
+[tool.uv.sources]
+chatexchange = { git = "https://github.com/Charcoal-SE/ChatExchange.git" }
 
 [tool.ruff]
 preview = true
