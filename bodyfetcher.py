@@ -1,25 +1,36 @@
 # coding=utf-8
-import json
-import time
-import threading
 import copy
+import json
+import threading
+import time
+from datetime import datetime
 from itertools import chain
 from operator import itemgetter
-from datetime import datetime
 
-import requests
 import psutil
+import requests
 
-from globalvars import GlobalVars
-from spamhandling import handle_spam, check_if_spam
-from datahandling import (add_or_update_api_data, clear_api_data, schedule_store_bodyfetcher_queue,
-                          schedule_store_bodyfetcher_max_ids, add_queue_timing_data)
+import recently_scanned_posts as rsp
 from chatcommunicate import tell_rooms_with
 from classes import Post, PostParseError
-from helpers import (log, log_current_thread, append_to_current_thread_name,
-                     convert_new_scan_to_spam_result_if_new_reasons, add_to_global_bodyfetcher_queue_in_new_thread,
-                     get_se_api_default_params_questions_answers_posts_add_site, get_se_api_url_for_route)
-import recently_scanned_posts as rsp
+from datahandling import (
+    add_or_update_api_data,
+    add_queue_timing_data,
+    clear_api_data,
+    schedule_store_bodyfetcher_max_ids,
+    schedule_store_bodyfetcher_queue,
+)
+from globalvars import GlobalVars
+from helpers import (
+    add_to_global_bodyfetcher_queue_in_new_thread,
+    append_to_current_thread_name,
+    convert_new_scan_to_spam_result_if_new_reasons,
+    get_se_api_default_params_questions_answers_posts_add_site,
+    get_se_api_url_for_route,
+    log,
+    log_current_thread,
+)
+from spamhandling import check_if_spam, handle_spam
 from tasks import Tasks
 
 
@@ -114,9 +125,15 @@ class BodyFetcher:
         #    as of 2020-11-01.
     }
 
-    time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
-                      "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
-                      "arduino.stackexchange.com", "workplace.stackexchange.com"]
+    time_sensitive = [
+        "security.stackexchange.com",
+        "movies.stackexchange.com",
+        "mathoverflow.net",
+        "gaming.stackexchange.com",
+        "webmasters.stackexchange.com",
+        "arduino.stackexchange.com",
+        "workplace.stackexchange.com",
+    ]
 
     threshold = 1
 
@@ -138,8 +155,8 @@ class BodyFetcher:
     def add_to_queue(self, hostname, question_id, should_check_site=False, source=None):
         # For the Sandbox questions on MSE, we choose to ignore the entire question and all answers.
         ignored_mse_questions = [
-            3122,    # Formatting Sandbox
-            51812,   # The API sandbox
+            3122,  # Formatting Sandbox
+            51812,  # The API sandbox
             296077,  # Sandbox archive
         ]
         if question_id in ignored_mse_questions and hostname == "meta.stackexchange.com":
@@ -196,9 +213,12 @@ class BodyFetcher:
                 if not have_scan_thread_count_lock:
                     # There are already too many scan threads.
                     if not self.send_thread_starvation_warning_if_appropriate():
-                        log_current_thread('info', "Already at maximum scan threads"
-                                                   + " ({}).".format(self.max_scan_thread_count)
-                                                   + " Not starting an additional scan thread.")
+                        log_current_thread(
+                            'info',
+                            "Already at maximum scan threads"
+                            + " ({}).".format(self.max_scan_thread_count)
+                            + " Not starting an additional scan thread.",
+                        )
                     thread_stats['thread_limit'] += 1
                     return
                 if should_check_site:
@@ -243,8 +263,9 @@ class BodyFetcher:
     def make_api_call_for_site_and_restore_thread_name(self, site, new_posts, thread_stats):
         self.thread_starvation_warning_thread_launched()
         current_thread = threading.current_thread()
-        append_to_current_thread_name(('\n --> processing site:'
-                                       ' {}:: posts: {}').format(site, [key for key in new_posts.keys()]))
+        append_to_current_thread_name(
+            ('\n --> processing site: {}:: posts: {}').format(site, [key for key in new_posts.keys()])
+        )
         thread_name_to_restore = current_thread.name
         self.make_api_call_for_site(site, new_posts, thread_stats)
         current_thread.name = thread_name_to_restore
@@ -293,11 +314,11 @@ class BodyFetcher:
                 }
                 return False
             launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
-            if (launched_timestamp < min_time and chat_timestamp < min_time):
+            if launched_timestamp < min_time and chat_timestamp < min_time:
                 record['chat_timestamp'] = now
-                message = ("Unable to launch scan thread due to exhausted general thread limit"
-                           " of {} for {} seconds.").format(self.max_scan_thread_count,
-                                                            round(now - launched_timestamp, 2))
+                message = (
+                    "Unable to launch scan thread due to exhausted general thread limit of {} for {} seconds."
+                ).format(self.max_scan_thread_count, round(now - launched_timestamp, 2))
                 Tasks.do(tell_rooms_with, "debug", message)
                 log('error', message)
                 return True
@@ -319,11 +340,11 @@ class BodyFetcher:
             }
             return False
         launched_timestamp, chat_timestamp = (record[key] for key in ['launched_timestamp', 'chat_timestamp'])
-        if (launched_timestamp < min_time and chat_timestamp < min_time):
+        if launched_timestamp < min_time and chat_timestamp < min_time:
             record[site]['chat_timestamp'] = now
-            message = ("Unable to launch scan thread for {} due to exhausted thread limit"
-                       " of {} for {} seconds.").format(site, self.get_site_thread_limit(site),
-                                                        round(now - launched_timestamp, 2))
+            message = (
+                "Unable to launch scan thread for {} due to exhausted thread limit of {} for {} seconds."
+            ).format(site, self.get_site_thread_limit(site), round(now - launched_timestamp, 2))
             Tasks.do(tell_rooms_with, "debug", message)
             log('error', message)
             return True
@@ -343,10 +364,11 @@ class BodyFetcher:
             self.cpu_starvation_posted_in_chat_timestamp = now
             return False
         chat_timestamp = self.cpu_starvation_posted_in_chat_timestamp
-        if (not_launched_timestamp < min_time and chat_timestamp < min_time):
+        if not_launched_timestamp < min_time and chat_timestamp < min_time:
             self.cpu_starvation_posted_in_chat_timestamp = now
-            message = ("High CPU use has prevented launching additional scan threads for"
-                       " {} seconds.").format(round(now - not_launched_timestamp, 2))
+            message = ("High CPU use has prevented launching additional scan threads for {} seconds.").format(
+                round(now - not_launched_timestamp, 2)
+            )
             Tasks.do(tell_rooms_with, "debug", message)
             log('error', message)
             return True
@@ -373,8 +395,11 @@ class BodyFetcher:
                     # We are already maxing out the CPU.
                     # Having additional threads processing posts is counterproductive.
                     if not self.send_cpu_starvation_warning_if_appropriate():
-                        log_current_thread('warning', 'CPU use is {}'.format(cpu_use)
-                                                      + ', which is too high to launch an additional scan thread.')
+                        log_current_thread(
+                            'warning',
+                            'CPU use is {}'.format(cpu_use)
+                            + ', which is too high to launch an additional scan thread.',
+                        )
                     thread_stats['high_CPU'] += 1
                     return None
                 self.cpu_starvation_warning_thread_launched()
@@ -452,10 +477,13 @@ class BodyFetcher:
                 return True
             post_lock_owner = post_dict.get('owner', None)
             if post_lock_owner == ident:
-                post_dict['recent_timestamp'] = time.time(),
+                post_dict['recent_timestamp'] = (time.time(),)
                 return True
-            log('info', 'Processing prevented in thread ',
-                        '{} for Post {}/{}: being processed by {}'.format(ident, site, post_id, post_lock_owner))
+            log(
+                'info',
+                'Processing prevented in thread ',
+                '{} for Post {}/{}: being processed by {}'.format(ident, site, post_id, post_lock_owner),
+            )
             if site not in self.SITES_NOT_TO_REREQUEST_POST_DUE_TO_POST_SCAN_CONFLICT:
                 # For sites where we're getting all recently active questions every time, and where they have
                 # substantial activity (i.e. effectively guaranteed to be within the additional time-window
@@ -477,8 +505,9 @@ class BodyFetcher:
                 return False
             if post_dict.get('owner', None) == ident:
                 if post_dict.get('rescan_requested', None) is True:
-                    add_to_global_bodyfetcher_queue_in_new_thread(site, question_id, False,
-                                                                  source="BodyFetcher re-request")
+                    add_to_global_bodyfetcher_queue_in_new_thread(
+                        site, question_id, False, source="BodyFetcher re-request"
+                    )
                 site_dict.pop(post_id, None)
                 return True
             # There's really nothing for us to do here. We could raise an error, but it's
@@ -491,8 +520,9 @@ class BodyFetcher:
 
         if GlobalVars.flovis is not None:
             for post_id in new_post_ids:
-                GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
-                                        {'site': site, 'posts': list(new_posts.keys())})
+                GlobalVars.flovis.stage(
+                    'bodyfetcher/api_request', site, post_id, {'site': site, 'posts': list(new_posts.keys())}
+                )
 
         # Add queue timing data
         pop_time = datetime.utcnow()
@@ -508,7 +538,7 @@ class BodyFetcher:
                 # We don't want to go over the 100-post API cutoff, so take the last
                 # (100-len(new_post_ids)) from intermediate_posts
 
-                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)):]
+                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)) :]
 
                 # new_post_ids could contain edited posts, so merge it back in
                 combined = chain(intermediate_posts, new_post_ids)
@@ -552,7 +582,7 @@ class BodyFetcher:
 
                 pagesize_modifier = {
                     'pagesize': pagesize,
-                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_S_TO_FETCH, 0))
+                    'min': str(max(self.last_activity_date - self.ACTIVITY_DATE_EXTRA_EARLIER_S_TO_FETCH, 0)),
                 }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
@@ -590,15 +620,21 @@ class BodyFetcher:
             with GlobalVars.apiquota_rw_lock:
                 if "quota_remaining" in response:
                     quota_remaining = response["quota_remaining"]
-                    if (quota_remaining - GlobalVars.apiquota >= self.QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE
-                            and GlobalVars.apiquota >= 0
-                            and quota_remaining > self.QUOTA_ROLLOVER_DETECTION_THRESHOLD):
-                        tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
-                                                 "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                              quota_remaining))
+                    if (
+                        quota_remaining - GlobalVars.apiquota >= self.QUOTA_ROLLOVER_DETECTION_MINIMUM_DIFFERENCE
+                        and GlobalVars.apiquota >= 0
+                        and quota_remaining > self.QUOTA_ROLLOVER_DETECTION_THRESHOLD
+                    ):
+                        tell_rooms_with(
+                            "debug",
+                            "API quota rolled over with {0} requests remaining. Current quota: {1}.".format(
+                                GlobalVars.apiquota, quota_remaining
+                            ),
+                        )
 
-                        sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
-                                                       reverse=True)
+                        sorted_calls_per_site = sorted(
+                            GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True
+                        )
                         api_quota_used_per_site = ""
                         for site_name, quota_used in sorted_calls_per_site:
                             sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
@@ -611,8 +647,7 @@ class BodyFetcher:
                         tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
                         tell_rooms_with("debug", str(response))  # No code format for now?
                     if GlobalVars.apiquota == -1:
-                        tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                                 .format(quota=quota_remaining))
+                        tell_rooms_with("debug", "Restart: API quota is {quota}.".format(quota=quota_remaining))
                     GlobalVars.apiquota = quota_remaining
                 else:
                     message_hq = "The quota_remaining property was not in the API response."
@@ -670,8 +705,10 @@ class BodyFetcher:
             nonlocal current_thread
             nonlocal scan_stats_text
             now = time.time()
-            scan_stats_text = ('elapsed time: {}; scanned: {}, Q({}), A({});'
-                               ' unchanged: Q({}), A({}); no post lock: {}; post errors: {}')
+            scan_stats_text = (
+                'elapsed time: {}; scanned: {}, Q({}), A({});'
+                ' unchanged: Q({}), A({}); no post lock: {}; post errors: {}'
+            )
             scan_stats_text = scan_stats_text.format(
                 round(now - full_start_time, 2),
                 scan_stats.get('posts_scanned', 0),
@@ -680,11 +717,13 @@ class BodyFetcher:
                 scan_stats.get('unchanged_questions', 0),
                 scan_stats.get('unchanged_answers', 0),
                 scan_stats.get('no_post_lock', 0),
-                scan_stats.get('post_errors', 0))
+                scan_stats.get('post_errors', 0),
+            )
 
         def set_thread_name():
-            current_thread.name = (base_thread_name + '\n' + scan_stats_text + posts_processed_text
-                                   + post_processing_text)
+            current_thread.name = (
+                base_thread_name + '\n' + scan_stats_text + posts_processed_text + post_processing_text
+            )
 
         def start_post(type_of_post, post_id):
             nonlocal post_stats
@@ -712,9 +751,12 @@ class BodyFetcher:
                     if type(post_value) in [int, float]:
                         scan_stats[stat_name] = scan_stats.get(stat_name, 0) + post_stat_dict['value']
                     else:
-                        log('warning', "BodyFetcher post stats: stat {} is {} with value: {}".format(stat_name,
-                                                                                                     type(post_value),
-                                                                                                     post_value))
+                        log(
+                            'warning',
+                            "BodyFetcher post stats: stat {} is {} with value: {}".format(
+                                stat_name, type(post_value), post_value
+                            ),
+                        )
             started_post_stat_ident = None
             post_stats = {}
             build_scan_stats()
@@ -742,8 +784,9 @@ class BodyFetcher:
             build_post_thread_name_text()
             set_thread_name()
 
-        def end_post_stat_time_and_start_new(new_ident=None, short_text=None, no_low_output=True,
-                                             dont_include_in_scan_stats=False, ident=None):
+        def end_post_stat_time_and_start_new(
+            new_ident=None, short_text=None, no_low_output=True, dont_include_in_scan_stats=False, ident=None
+        ):
             nonlocal post_stats
             nonlocal started_post_stat_ident
             now = time.time()
@@ -781,12 +824,17 @@ class BodyFetcher:
         def build_post_thread_name_text():
             nonlocal post_processing_text
             build_post_thread_name_post_id()
-            shorts_values = [[entry['short_text'], entry.get('value', '')] for entry in post_stats.values()
-                             if not entry['no_low_output'] or entry.get('value', None) is None
-                             or entry.get('value', 0) > self.POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD]
+            shorts_values = [
+                [entry['short_text'], entry.get('value', '')]
+                for entry in post_stats.values()
+                if not entry['no_low_output']
+                or entry.get('value', None) is None
+                or entry.get('value', 0) > self.POST_SCAN_PERFORMANCE_LOW_VALUE_DISPLAY_THRESHOLD
+            ]
 
-            shorts_values = [[short_text, round(value, 2) if type(value) is float else value]
-                             for short_text, value in shorts_values]
+            shorts_values = [
+                [short_text, round(value, 2) if type(value) is float else value] for short_text, value in shorts_values
+            ]
             texts = ['{}({})'.format(short_text, value) for short_text, value in shorts_values]
             post_processing_text += ';'.join(texts)
 
@@ -855,7 +903,7 @@ class BodyFetcher:
             post['site'] = site
             post['response_timestamp'] = response_timestamp
             try:
-                post['edited'] = (post['creation_date'] != post['last_edit_date'])
+                post['edited'] = post['creation_date'] != post['last_edit_date']
             except KeyError:
                 post['edited'] = False  # last_edit_date not present = not edited
 
@@ -865,8 +913,9 @@ class BodyFetcher:
                 Tasks.do(GlobalVars.edit_watcher.subscribe, hostname=site, question_id=question_id)
             try:
                 start_post_stat_time('post_processing_lock', '<Qplk')
-                have_question_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
-                                                                                             site, question_id)
+                have_question_processing_lock = self.claim_post_in_process_or_request_rescan(
+                    current_thread_ident, site, question_id
+                )
                 if have_question_processing_lock:
                     end_post_stat_time_and_start_new('check_unchanged', '<Qchkun')
                     compare_info = rsp.atomic_compare_update_and_get_spam_data(post)
@@ -893,9 +942,7 @@ class BodyFetcher:
                 if not question_doesnt_need_scan:
                     end_post_stat_time_and_start_new('scan_question', ' scan', no_low_output=False)
                     is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
-                        check_if_spam(post_),
-                        compare_info,
-                        match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                        check_if_spam(post_), compare_info, match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
                     )
                     scan_time = end_post_stat_time_and_start_new()
                     rsp.add_post(post, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
@@ -903,16 +950,22 @@ class BodyFetcher:
                     if is_spam:
                         try:
                             if do_flovis:
-                                GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, question_id,
-                                                        {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                            handle_spam(post=post_,
-                                        reasons=reason,
-                                        why=why)
+                                GlobalVars.flovis.stage(
+                                    'bodyfetcher/api_response/spam',
+                                    site,
+                                    question_id,
+                                    {'post': pnb, 'check_if_spam': [is_spam, reason, why]},
+                                )
+                            handle_spam(post=post_, reasons=reason, why=why)
                         except Exception as e:
                             log('error', "Exception in handle_spam:", e)
                     elif do_flovis:
-                        GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, question_id,
-                                                {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
+                        GlobalVars.flovis.stage(
+                            'bodyfetcher/api_response/not_spam',
+                            site,
+                            question_id,
+                            {'post': pnb, 'check_if_spam': [is_spam, reason, why]},
+                        )
                     post_was_scanned()
             except Exception:
                 post_had_error()
@@ -920,8 +973,9 @@ class BodyFetcher:
             finally:
                 if have_question_processing_lock:
                     have_question_processing_lock = False
-                    self.release_post_in_process_and_recan_if_requested(current_thread_ident, site, question_id,
-                                                                        question_id)
+                    self.release_post_in_process_and_recan_if_requested(
+                        current_thread_ident, site, question_id, question_id
+                    )
 
             try:
                 if "answers" not in post:
@@ -938,15 +992,16 @@ class BodyFetcher:
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
                         try:
-                            answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
+                            answer['edited'] = answer['creation_date'] != answer['last_edit_date']
                         except KeyError:
                             answer['edited'] = False  # last_edit_date not present = not edited
                         answer_id = answer.get('answer_id', None)
                         start_post('answer', answer_id)
                         try:
                             start_post_stat_time('post_processing_lock', '<Aplk')
-                            answer_processing_lock = self.claim_post_in_process_or_request_rescan(current_thread_ident,
-                                                                                                  site, answer_id)
+                            answer_processing_lock = self.claim_post_in_process_or_request_rescan(
+                                current_thread_ident, site, answer_id
+                            )
                             if answer_processing_lock:
                                 end_post_stat_time_and_start_new('check_unchanged', '<Achkun')
                                 compare_info = rsp.atomic_compare_update_and_get_spam_data(answer)
@@ -965,7 +1020,7 @@ class BodyFetcher:
                             is_spam, reason, why = convert_new_scan_to_spam_result_if_new_reasons(
                                 check_if_spam(answer_),
                                 compare_info,
-                                match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM
+                                match_ignore=self.IGNORED_IGNORED_SPAM_CHECKS_IF_WORSE_SPAM,
                             )
                             scan_time = end_post_stat_time_and_start_new()
                             rsp.add_post(answer, is_spam=is_spam, reasons=reason, why=why, scan_time=scan_time)
@@ -974,24 +1029,31 @@ class BodyFetcher:
                                 do_flovis = GlobalVars.flovis is not None and answer_id is not None
                                 try:
                                     if do_flovis:
-                                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, answer_id,
-                                                                {'post': anb, 'check_if_spam': [is_spam, reason, why]})
-                                    handle_spam(answer_,
-                                                reasons=reason,
-                                                why=why)
+                                        GlobalVars.flovis.stage(
+                                            'bodyfetcher/api_response/spam',
+                                            site,
+                                            answer_id,
+                                            {'post': anb, 'check_if_spam': [is_spam, reason, why]},
+                                        )
+                                    handle_spam(answer_, reasons=reason, why=why)
                                 except Exception as e:
                                     log('error', "Exception in handle_spam:", e)
                             elif do_flovis:
-                                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, answer_id,
-                                                        {'post': anb, 'check_if_spam': [is_spam, reason, why]})
+                                GlobalVars.flovis.stage(
+                                    'bodyfetcher/api_response/not_spam',
+                                    site,
+                                    answer_id,
+                                    {'post': anb, 'check_if_spam': [is_spam, reason, why]},
+                                )
                             post_was_scanned()
                         except Exception:
                             raise
                         finally:
                             if answer_processing_lock:
                                 answer_processing_lock = False
-                                self.release_post_in_process_and_recan_if_requested(current_thread_ident, site,
-                                                                                    answer_id, question_id)
+                                self.release_post_in_process_and_recan_if_requested(
+                                    current_thread_ident, site, answer_id, question_id
+                                )
 
             except Exception as e:
                 post_had_error()

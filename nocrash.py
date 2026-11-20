@@ -3,20 +3,20 @@
 
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
-import platform
-import os
-import subprocess as sp
-from time import sleep, gmtime
 import logging
+import os
+import platform
+import subprocess as sp
 import sys
+from time import gmtime, sleep
 
 on_windows = 'windows' in platform.platform().lower()
-
 if on_windows:
     # noinspection PyPep8Naming
     from _Git_Windows import git
 else:
     from sh.contrib import git
+
 
 if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
     raise RuntimeError("Requires Python version 3.5 or newer.")
@@ -27,10 +27,7 @@ PY_EXECUTABLE = sys.executable
 
 # Log to errorLog.txt so that the file shows reboots
 logging_format_string = '%(asctime)s:%(levelname)s:%(message)s'
-logging.basicConfig(
-    filename='errorLog.txt',
-    level=logging.INFO,
-    format=logging_format_string)
+logging.basicConfig(filename='errorLog.txt', level=logging.INFO, format=logging_format_string)
 logging.Formatter.converter = gmtime
 # Also log to the console, so SD runners can look at consolidated output in the console.
 console_logger = logging.StreamHandler()
@@ -38,8 +35,14 @@ console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(logging.Formatter(logging_format_string))
 logging.getLogger().addHandler(console_logger)
 
-options = {"standby", "--loglevel", "no_se_activity_scan", "no_deletion_watcher", "no_edit_watcher",
-           "no_chat_ws_activity_timeout"}
+options = {
+    "standby",
+    "--loglevel",
+    "no_se_activity_scan",
+    "no_deletion_watcher",
+    "no_edit_watcher",
+    "no_chat_ws_activity_timeout",
+}
 persistent_arguments = sys.argv
 
 count = 0

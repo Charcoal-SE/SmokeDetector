@@ -1,11 +1,13 @@
 # coding=utf-8
-import websocket
+import json
 import socket
 import ssl
-import json
 import time
 import uuid
 from threading import Thread
+
+import websocket
+
 from helpers import log
 
 

@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-
-from datahandling import append_pings, SmokeyTransfer
-from globalvars import GlobalVars
 import pytest
+
+from datahandling import SmokeyTransfer, append_pings
+from globalvars import GlobalVars
 
 
 # noinspection PyMissingTypeHints
 def test_append_pings():
     assert append_pings("foo", ["user1", "some user"]) == "foo (@user1 @someuser)"
-    assert append_pings("foo", [u"Doorknob 冰"]) == u"foo (@Doorknob冰)"
+    assert append_pings("foo", ["Doorknob 冰"]) == "foo (@Doorknob冰)"
 
 
 def test_smokey_transfer(monkeypatch):

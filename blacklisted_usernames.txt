@@ -69,7 +69,6 @@ daily\W?news
 fauk\W?usa
 michael\W?david\W?mills
 Hurriyet\W?Daily\W?News
-bablo.ru
 istanbul\W?hair\W?transplant
 away\W?days
 Racist
@@ -1236,8 +1235,9 @@ carelab[sz]
 ^Online quran classes$
 ^agya vapis$
 (?-i:^Cash vireet$)
-(?-i:^Cash vireet‭$)
 (?-i:^Room Room$)
 (?-i:^NutraX Shop$)
 ^(?-i:Dogherime Wall)$
 (?-i:^Credi Hisab$)
+bablo\.ru
+^betiran\d*$

@@ -1,17 +1,18 @@
 # coding=utf-8
-from spamhandling import check_if_spam, check_if_spam_json, handle_spam
-from datahandling import add_blacklisted_user, add_whitelisted_user, remove_pickle
-from blacklists import load_blacklists
-from parsing import get_user_from_url
-import pytest
-import os
 import json
-from classes import Post
+import os
 from unittest import TestCase
-from unittest.mock import MagicMock, call, ANY, DEFAULT
-import chatcommunicate
-from globalvars import GlobalVars
+from unittest.mock import ANY, DEFAULT, MagicMock, call
 
+import pytest
+
+import chatcommunicate
+from blacklists import load_blacklists
+from classes import Post
+from datahandling import add_blacklisted_user, add_whitelisted_user, remove_pickle
+from globalvars import GlobalVars
+from parsing import get_user_from_url
+from spamhandling import check_if_spam, check_if_spam_json, handle_spam
 
 load_blacklists()
 test_data_inputs = []
@@ -83,7 +84,7 @@ class TestRoomReports(TestCase):
 
     def setUp(self):
         print('\n\n-------------------------------Set up test------------------------------------')
-        chatcommunicate.tell_rooms.reset_mock
+        chatcommunicate.tell_rooms.reset_mock()
         # .reset_mock counts as a call. We don't want that.
         chatcommunicate.tell_rooms.call_count = 0
 

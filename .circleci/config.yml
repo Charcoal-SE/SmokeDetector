@@ -1,20 +1,25 @@
-version: 2
+version: '2.1'
+workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: deploy
 jobs:
   build:
     docker:
-      - image: cimg/python:3.11
-    branches:
-      ignore: deploy
+      - image: cimg/python:3.14
     steps:
       - restore_cache:
           # Restore a basic .git to prevent needing to download the whole thing.
           keys:
-            - git-cimg-python3.11-{{ .Branch }}
-            - git-cimg-python3.11
+            - git-cimg-python3.14-{{ .Branch }}
+            - git-cimg-python3.14
             - git
       - checkout
       - save_cache:
-          key: git-cimg-python3.11-{{ .Branch }}
+          key: git-cimg-python3.14-{{ .Branch }}
           paths:
             - ".git"
       - run:
@@ -38,14 +43,8 @@ jobs:
           paths:
             - "/home/circleci/.cache/pip"
       - run:
-          name: Lint ./tests
-          command: python3 -m flake8 --config=tox_tests.ini ./test/
-      - run:
-          name: Lint ./classes
-          command: python3 -m flake8 --config=tox_classes.ini ./classes/
-      - run:
           name: Lint code
-          command: python3 -m flake8 ./
+          command: ruff check
       - run:
           name: Prepare Git for test
           command: |
