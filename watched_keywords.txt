@@ -84314,3 +84314,4 @@
 1795174806	Dan Getz	heyynazzl\.com
 1795177787	Jeff Schaller	apaivatours\.com
 1795182082	Dan Getz	farearena
+1795188234	Dan Getz	fortifie\.xyz
