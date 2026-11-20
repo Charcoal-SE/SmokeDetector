@@ -84308,3 +84308,4 @@
 1795143219	Jeff Schaller	AxpeedDB
 1795173022	Jeff Schaller	xecureshop\.com
 1795173416	Jeff Schaller	prakashsecurityservices\.com
+1795173983	Dan Getz	handwritingtofont\.com
