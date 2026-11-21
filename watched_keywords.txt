@@ -84321,3 +84321,4 @@
 1795219930	Dan Getz	vite-mv3-sw-compile-persist
 1795247685	VLAZ	3fe5d6ugt8dy5oalppy12r8y7l\.hop\.clickbank\.net
 1795248089	VLAZ	vishesh\.myamrozinstitute\.com
+1795248469	VLAZ	happymod\.co\.im
