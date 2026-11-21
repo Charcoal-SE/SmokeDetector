@@ -84279,7 +84279,6 @@
 1795000227	VLAZ	otpaycalculator\.com
 1795001666	Jeff Schaller	evigrxplus\.com
 1795002895	Jeff Schaller	affordableoutfitter\.com
-1795013516	Jeff Schaller	ibotta\.onelink\.me
 1795014811	Jeff Schaller	hostxit\.com
 1795016759	Dan Getz	pactman\.org
 1795016768	Dan Getz	nonprofit[\W_]*+check[\W_]*+plus

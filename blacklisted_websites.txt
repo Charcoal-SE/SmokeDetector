@@ -6382,3 +6382,4 @@ corpseed\.com
 thecyberseal\.com
 quapri\.in
 \bamrozinstitute\.com\b
+ibotta\.onelink\.me
