@@ -84334,3 +84334,4 @@
 1795384939	Jeff Schaller	passportphotofit\.com
 1795414893	VLAZ	elactree\.com
 1795432037	Jeff Schaller	Little[\W_]*+Feet[\W_]*+Playgroup
+1795433593	Dan Getz	staietech\.com
