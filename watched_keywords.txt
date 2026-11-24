@@ -76738,7 +76738,6 @@
 1758197656	VLAZ	treeamigos-satx\.com
 1758201366	Dan Getz	staple\.ai
 1758201820	lyxal	polestaruae\.com
-1758202311	VLAZ	first\.org
 1758202323	VLAZ	chothysbuilders\.com
 1758206591	VLAZ	1homebuilders\.com
 1758208800	Dan Getz	modhello\.io
