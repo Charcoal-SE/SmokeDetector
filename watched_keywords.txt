@@ -84345,3 +84345,4 @@
 1795515398	VLAZ	utho\.com
 1795515530	VLAZ	malaysiadigitalarrivalcard\.com
 1795515571	VLAZ	gosubtitle\.com
+1795515691	VLAZ	github\.com/greatwithtech
