@@ -857,7 +857,9 @@ items:
 - ns: resourcesofnet.net.
 - ns: hostnownow.com.
 - ns: inet.vn.
-- ns: wizzyhost.com.
+- comment: NXDOMAIN 2026-11-13
+  disable: true
+  ns: wizzyhost.com.
 - ns:
   - AMGTrade1.securehostdns.com.
   - AMGTrade2.securehostdns.com.
