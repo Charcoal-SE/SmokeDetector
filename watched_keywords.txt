@@ -84351,3 +84351,4 @@
 1795517394	VLAZ	dizzy[\W_]*+feet(?!\.co\.uk(?<=dizzyfeet\.co\.uk))
 1795519730	VLAZ	ecommadvize\.com
 1795519756	VLAZ	pkr365gamer\.pk
+1795527579	Jeff Schaller	foodvoyageur\.com
