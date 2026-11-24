@@ -84347,3 +84347,4 @@
 1795515571	VLAZ	gosubtitle\.com
 1795515691	VLAZ	github\.com/greatwithtech
 1795516249	VLAZ	dailygrouplinks\.com
+1795516636	VLAZ	craigraucher\.com
