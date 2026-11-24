@@ -84349,3 +84349,4 @@
 1795516249	VLAZ	dailygrouplinks\.com
 1795516636	VLAZ	craigraucher\.com
 1795517394	VLAZ	dizzy[\W_]*+feet(?!\.co\.uk(?<=dizzyfeet\.co\.uk))
+1795519730	VLAZ	ecommadvize\.com
