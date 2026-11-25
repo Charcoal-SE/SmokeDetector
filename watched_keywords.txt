@@ -84355,4 +84355,3 @@
 1795536143	Dan Getz	accuweb\.cloud(?<!(?-i:^Accuweb\.cloud$))
 1795541584	Dan Getz	bhoomi[\W_]*+rtc
 1795572032	Jeff Schaller	egycdn\.net
-1795587239	VLAZ	ahmcallgirl\.aishaansari\.com
