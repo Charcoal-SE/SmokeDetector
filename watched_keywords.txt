@@ -84356,3 +84356,4 @@
 1795541584	Dan Getz	bhoomi[\W_]*+rtc
 1795572032	Jeff Schaller	egycdn\.net
 1795587327	VLAZ	aishaansari\.com
+1795587877	VLAZ	eandmmaintenance\.com
