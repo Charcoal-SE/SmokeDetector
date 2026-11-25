@@ -84366,3 +84366,4 @@
 1795615666	VLAZ	key'link
 1795615801	VLAZ	elmemar\.com
 1795624714	Dan Getz	pdfbureau\.com
+1795625026	Dan Getz	pdfvillage\.com
