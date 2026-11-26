@@ -84375,3 +84375,4 @@
 1795699787	VLAZ	SharpBetX
 1795702361	VLAZ	securecodingpractices\.com
 1795703330	VLAZ	pihunow\.com
+1795708062	Dan Getz	downcheckr\.com
