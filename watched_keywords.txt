@@ -84376,3 +84376,4 @@
 1795702361	VLAZ	securecodingpractices\.com
 1795703330	VLAZ	pihunow\.com
 1795708062	Dan Getz	downcheckr\.com
+1795726272	Jeff Schaller	customboxeszone\.ca
