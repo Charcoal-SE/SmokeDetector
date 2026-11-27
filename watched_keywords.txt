@@ -84378,3 +84378,4 @@
 1795726272	Jeff Schaller	customboxeszone\.ca
 1795764388	VLAZ	growziva\.com
 1795775155	VLAZ	triwize\.com
+1795775166	VLAZ	triwize(?!\.com)
